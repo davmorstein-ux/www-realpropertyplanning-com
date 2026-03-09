@@ -16,6 +16,7 @@ const secondaryLinks = [
   { href: "/executors", label: "Executors" },
   { href: "/attorney-referral", label: "Referral Resource" },
   { href: "/how-we-work", label: "How We Work" },
+  { href: "/counties", label: "Counties" },
   { href: "/faq", label: "Q & A" },
   { href: "/terminology", label: "Terminology" },
 ];
