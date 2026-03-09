@@ -11,6 +11,7 @@ import daveHeadshot from "@/assets/dave-headshot.jpg";
 import daveHeadshot2 from "@/assets/dave-headshot-2.jpg";
 import coupleWritingWill from "@/assets/couple-writing-will.png";
 import logo from "@/assets/logo.png";
+import expRealtyLogo2 from "@/assets/exp-realty-logo-2.png";
 
 const services = [
   {
@@ -114,7 +115,10 @@ const Index = () => {
                 <img src={logo} alt="Real Property Planning Logo" className="h-[512px] md:h-[640px] w-auto" />
                 <div className="flex flex-col items-center">
                   <img src={daveHeadshot2} alt="David Stein" className="h-[256px] md:h-[320px] w-auto rounded-2xl object-cover shadow-lg" />
-                  <p className="mt-3 font-serif text-lg font-semibold text-foreground">David Stein</p>
+                  <div className="mt-3 flex items-center gap-3">
+                    <p className="font-serif text-lg font-semibold text-foreground">David Stein</p>
+                    <img src={expRealtyLogo2} alt="eXp Realty" className="h-6 md:h-7 w-auto" />
+                  </div>
                 </div>
               </div>
 
