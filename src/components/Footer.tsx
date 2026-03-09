@@ -96,7 +96,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="border-t border-primary-foreground/10 mt-8 pt-4">
-          <p className="text-primary-foreground/40 text-xs text-center">
+          <p className="text-primary-foreground/40 text-sm text-center">
             © {new Date().getFullYear()} David Stein Estate Property Advisory. Professional Real Estate Broker & State Certified Appraiser.
           </p>
         </div>
