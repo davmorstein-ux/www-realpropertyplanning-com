@@ -14,7 +14,7 @@ const Footer = () => {
                 David Stein <span className="text-gold">Estate Property Advisory</span>
               </span>
             </Link>
-            <p className="text-primary-foreground/60 text-sm leading-relaxed mb-4">
+            <p className="text-primary-foreground/60 text-base leading-relaxed mb-4">
               Discreet, experienced real estate guidance for estate, probate, trust, and senior property transitions.
             </p>
             <div className="flex flex-col gap-2 text-base">
