@@ -36,7 +36,7 @@ const CTASection = () => {
           
           <div className="flex items-center justify-center gap-2 text-muted-foreground">
             <Mail className="w-4 h-4" />
-            <span>dave.stein@exprealty.com</span>
+            <span>david@realpropertyplanning.com</span>
           </div>
         </div>
       </div>

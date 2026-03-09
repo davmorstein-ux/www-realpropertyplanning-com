@@ -21,9 +21,9 @@ const Footer = () => {
                 <Phone className="w-4 h-4" />
                 (206) 900-3015
               </a>
-              <a href="mailto:david@davidsteinestate.com" className="text-primary-foreground/70 hover:text-gold flex items-center gap-2">
+              <a href="mailto:david@realpropertyplanning.com" className="text-primary-foreground/70 hover:text-gold flex items-center gap-2">
                 <Mail className="w-4 h-4" />
-                david@davidsteinestate.com
+                david@realpropertyplanning.com
               </a>
             </div>
           </div>
