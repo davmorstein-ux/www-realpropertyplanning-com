@@ -11,6 +11,7 @@ import daveHeadshot from "@/assets/dave-headshot.jpg";
 import daveHeadshot2 from "@/assets/dave-headshot-2.jpg";
 import coupleWritingWill from "@/assets/couple-writing-will.png";
 import logo from "@/assets/logo.png";
+import expRealtyLogo2 from "@/assets/exp-realty-logo-2.png";
 
 const services = [
   {
