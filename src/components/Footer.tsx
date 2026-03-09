@@ -53,7 +53,7 @@ const Footer = () => {
           {/* Service Areas */}
           <div>
             <h4 className="text-primary-foreground font-serif text-lg font-medium mb-4">Service Areas</h4>
-            <ul className="space-y-2.5 text-primary-foreground/60 text-sm">
+            <ul className="space-y-2.5 text-primary-foreground/60 text-base">
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
                 <span>Greater Seattle Area</span>
