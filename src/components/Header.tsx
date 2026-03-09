@@ -9,6 +9,7 @@ const navLinks = [
   { href: "/probate-estate-sales", label: "Probate & Estate Sales" },
   { href: "/senior-transitions", label: "Senior Transitions" },
   { href: "/for-attorneys", label: "For Attorneys & Fiduciaries" },
+  { href: "/attorney-referral", label: "Referral Resource" },
   { href: "/how-we-work", label: "How We Work" },
   { href: "/about", label: "About" },
   { href: "/faq", label: "Q & A" },
