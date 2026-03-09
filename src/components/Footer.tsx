@@ -32,7 +32,7 @@ const Footer = () => {
           {/* Services */}
           <div>
             <h4 className="text-primary-foreground font-serif text-lg font-medium mb-4">Services</h4>
-            <ul className="space-y-2.5 text-primary-foreground/60 text-sm">
+            <ul className="space-y-2.5 text-primary-foreground/60 text-base">
               <li><Link to="/probate-estate-sales" className="hover:text-gold transition-colors">Probate & Estate Sales</Link></li>
               <li><Link to="/senior-transitions" className="hover:text-gold transition-colors">Senior Transitions</Link></li>
               <li><Link to="/for-attorneys" className="hover:text-gold transition-colors">Attorney & Fiduciary Support</Link></li>
