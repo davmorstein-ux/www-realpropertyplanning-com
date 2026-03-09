@@ -115,9 +115,12 @@ const Index = () => {
                 <img src={logo} alt="Real Property Planning Logo" className="h-[512px] md:h-[640px] w-auto" />
                 <div className="flex flex-col items-center">
                   <img src={daveHeadshot2} alt="David Stein" className="h-[256px] md:h-[320px] w-auto rounded-2xl object-cover shadow-lg" />
-                  <div className="mt-3 flex items-center gap-3">
-                    <p className="font-serif text-lg font-semibold text-foreground">David Stein</p>
-                    <img src={expRealtyLogo2} alt="eXp Realty" className="h-6 md:h-7 w-auto" />
+                  <div className="mt-3 flex flex-col items-center">
+                    <div className="flex items-center gap-3">
+                      <p className="font-serif text-lg font-semibold text-foreground">David Stein</p>
+                      <img src={expRealtyLogo2} alt="eXp Realty" className="h-6 md:h-7 w-auto" />
+                    </div>
+                    <p className="text-xs text-muted-foreground mt-1">License #113972</p>
                   </div>
                 </div>
               </div>
