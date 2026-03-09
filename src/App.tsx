@@ -14,6 +14,11 @@ import About from "./pages/About";
 import FAQ from "./pages/FAQ";
 import Terminology from "./pages/Terminology";
 import Contact from "./pages/Contact";
+import Counties from "./pages/Counties";
+import KingCounty from "./pages/counties/KingCounty";
+import SnohomishCounty from "./pages/counties/SnohomishCounty";
+import PierceCounty from "./pages/counties/PierceCounty";
+import KitsapCounty from "./pages/counties/KitsapCounty";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
