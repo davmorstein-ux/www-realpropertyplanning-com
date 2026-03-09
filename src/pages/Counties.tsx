@@ -84,9 +84,6 @@ const Counties = () => {
               ))}
             </div>
 
-            <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mt-12">
-              Each county page speaks directly to local clients and referral sources while reinforcing David Stein's role as a real estate broker and Washington state certified real estate appraiser focused on important property transitions.
-            </p>
           </div>
         </div>
       </section>
