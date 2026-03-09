@@ -8,6 +8,7 @@ import ProbateEstateSales from "./pages/ProbateEstateSales";
 import SeniorTransitions from "./pages/SeniorTransitions";
 import ForAttorneys from "./pages/ForAttorneys";
 import HowWeWork from "./pages/HowWeWork";
+import AttorneyReferral from "./pages/AttorneyReferral";
 import About from "./pages/About";
 import FAQ from "./pages/FAQ";
 import Terminology from "./pages/Terminology";
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/senior-transitions" element={<SeniorTransitions />} />
           <Route path="/for-attorneys" element={<ForAttorneys />} />
           <Route path="/how-we-work" element={<HowWeWork />} />
+          <Route path="/attorney-referral" element={<AttorneyReferral />} />
           <Route path="/about" element={<About />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/terminology" element={<Terminology />} />
