@@ -9,6 +9,7 @@ import SeniorTransitions from "./pages/SeniorTransitions";
 import ForAttorneys from "./pages/ForAttorneys";
 import About from "./pages/About";
 import FAQ from "./pages/FAQ";
+import Terminology from "./pages/Terminology";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
