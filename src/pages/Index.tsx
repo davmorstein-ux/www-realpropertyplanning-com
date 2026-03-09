@@ -326,7 +326,7 @@ const Index = () => {
         <div className="container px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-gold font-medium tracking-widest uppercase mb-3 text-xs">
+              <p className="text-gold font-bold tracking-widest uppercase mb-3 text-base">
                 Clients & Partners
               </p>
               <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-6">
