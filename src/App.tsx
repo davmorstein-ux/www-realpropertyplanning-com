@@ -9,6 +9,7 @@ import SeniorTransitions from "./pages/SeniorTransitions";
 import ForAttorneys from "./pages/ForAttorneys";
 import HowWeWork from "./pages/HowWeWork";
 import AttorneyReferral from "./pages/AttorneyReferral";
+import Executors from "./pages/Executors";
 import About from "./pages/About";
 import FAQ from "./pages/FAQ";
 import Terminology from "./pages/Terminology";
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/for-attorneys" element={<ForAttorneys />} />
           <Route path="/how-we-work" element={<HowWeWork />} />
           <Route path="/attorney-referral" element={<AttorneyReferral />} />
+          <Route path="/executors" element={<Executors />} />
           <Route path="/about" element={<About />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/terminology" element={<Terminology />} />
