@@ -111,20 +111,7 @@ const Index = () => {
             <div>
               {/* Logo & Brand */}
               <div className="flex items-center gap-3.5 mb-6">
-                <svg width="62" height="62" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Real Property Planning Logo">
-                  <rect x="2" y="2" width="64" height="64" rx="16" fill="hsl(var(--navy))"/>
-                  <path d="M18 36L34 22L50 36" stroke="hsl(var(--gold))" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M23 34.5V48H45V34.5" stroke="hsl(var(--primary-foreground))" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M30 48V40H38V48" stroke="hsl(var(--gold))" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-                <div>
-                  <div className="font-serif text-[30px] font-bold text-foreground leading-none">
-                    Real Property Planning
-                  </div>
-                  <div className="text-xs text-muted-foreground tracking-[2px] uppercase mt-1.5">
-                    Estate • Probate • Property Transitions
-                  </div>
-                </div>
+                <img src={logo} alt="Real Property Planning Logo" className="h-16 w-auto" />
               </div>
 
               <h1 className="font-serif text-4xl md:text-5xl lg:text-[54px] text-foreground font-bold leading-[1.08] mb-5">
