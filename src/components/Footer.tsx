@@ -5,7 +5,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
             <span className="font-serif text-xl text-primary-foreground font-medium mb-4 block">
-              Puget Sound <span className="text-gold">Probate</span> Realty
+              Real Property <span className="text-gold">Planning</span>
             </span>
             <p className="text-primary-foreground/60 text-sm">
               The trusted authority in probate and estate real estate for the greater Puget Sound region.
