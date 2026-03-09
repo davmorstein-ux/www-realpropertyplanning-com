@@ -110,9 +110,10 @@ const Index = () => {
         <div className="container px-6 lg:px-8 pt-20">
           <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-10 lg:gap-11 items-center">
             <div>
-              {/* Logo & Brand */}
-              <div className="flex justify-center mb-8">
+              {/* Logo & Headshot */}
+              <div className="flex items-center justify-center gap-8 mb-8">
                 <img src={logo} alt="Real Property Planning Logo" className="h-[512px] md:h-[640px] w-auto" />
+                <img src={daveHeadshot2} alt="David Stein" className="h-[512px] md:h-[640px] w-auto rounded-2xl object-cover shadow-lg" />
               </div>
 
               <h1 className="font-serif text-4xl md:text-5xl lg:text-[54px] text-foreground font-bold leading-[1.08] mb-5">
@@ -154,27 +155,28 @@ const Index = () => {
                 ))}
               </div>
             </div>
+          </div>
 
-            {/* Right Column: Info Card */}
-            <div className="hidden lg:block">
-              <div className="bg-card border border-border rounded-3xl p-8 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
-                <h2 className="font-serif text-[28px] font-bold text-foreground mb-5">
-                  A professional resource during complex property transitions
-                </h2>
-                <div className="grid gap-3.5">
-                  {[
-                    "Guidance for executors and personal representatives",
-                    "Coordination with attorneys and trusted advisors",
-                    "Property valuation, preparation, and sale strategy",
-                    "Discreet, compassionate, and experienced representation"
-                  ].map((item, i) => (
-                    <div key={i} className="px-4 py-3.5 bg-secondary rounded-xl text-muted-foreground text-sm">
-                      {item}
-                    </div>
-                  ))}
-                </div>
+          {/* Info Card below */}
+          <div className="mt-12 max-w-3xl mx-auto">
+            <div className="bg-card border border-border rounded-3xl p-8 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
+              <h2 className="font-serif text-[28px] font-bold text-foreground mb-5">
+                A professional resource during complex property transitions
+              </h2>
+              <div className="grid gap-3.5">
+                {[
+                  "Guidance for executors and personal representatives",
+                  "Coordination with attorneys and trusted advisors",
+                  "Property valuation, preparation, and sale strategy",
+                  "Discreet, compassionate, and experienced representation"
+                ].map((item, i) => (
+                  <div key={i} className="px-4 py-3.5 bg-secondary rounded-xl text-muted-foreground text-sm">
+                    {item}
+                  </div>
+                ))}
               </div>
             </div>
+          </div>
           </div>
         </div>
       </section>
