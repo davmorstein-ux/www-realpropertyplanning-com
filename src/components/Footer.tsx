@@ -43,7 +43,7 @@ const Footer = () => {
           {/* Resources */}
           <div>
             <h4 className="text-primary-foreground font-serif text-lg font-medium mb-4">Resources</h4>
-            <ul className="space-y-2.5 text-primary-foreground/60 text-sm">
+            <ul className="space-y-2.5 text-primary-foreground/60 text-base">
               <li><Link to="/about" className="hover:text-gold transition-colors">About David Stein</Link></li>
               <li><Link to="/faq" className="hover:text-gold transition-colors">FAQ</Link></li>
               <li><Link to="/contact" className="hover:text-gold transition-colors">Contact</Link></li>
