@@ -233,6 +233,55 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Professional Focus Section */}
+      <section className="py-20 lg:py-28 bg-ivory">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-8 text-center">
+              A Real Estate and Valuation Professional Focused on Important Property Transitions
+            </h2>
+            <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
+              <p>
+                David Stein is a professional real estate broker and state certified appraiser with over 20 years of experience helping people make informed property decisions during significant life transitions.
+              </p>
+              <p>
+                His work is focused on estate property sales, probate real estate matters, trust-related property transitions, and senior housing changes. These situations often require a careful balance of market knowledge, valuation insight, communication, discretion, and practical coordination.
+              </p>
+              <p>
+                David works with attorneys, fiduciaries, executors, personal representatives, trustees, seniors, and families who need experienced guidance on property value, sale timing, preparation strategy, and the process of bringing a property to market. His goal is to reduce confusion, protect value, and help clients move forward with confidence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Personal Commitment Section */}
+      <section className="py-24 lg:py-32" style={{ background: 'linear-gradient(180deg, hsl(var(--secondary)) 0%, hsl(var(--background)) 100%)' }}>
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <div className="w-16 h-px bg-gold mx-auto mb-10" />
+            <h2 className="font-serif text-3xl md:text-[38px] text-foreground font-semibold mb-10 text-center leading-snug">
+              A Personal Commitment to Serving Families with Care and Perspective
+            </h2>
+            <div className="space-y-6 text-muted-foreground text-[17px] leading-[1.85]">
+              <p>
+                For David, this work is not simply professional — it is deeply personal.
+              </p>
+              <p>
+                After the loss of his mother, he experienced the probate process firsthand and gained a clear understanding of how complex and emotionally demanding real property decisions can be during times of grief. He has also served as power of attorney for an elderly neighbor, helping coordinate a transition into an adult family home and remaining closely involved throughout that chapter of life. Those experiences reinforced his belief that when families face significant property transitions, they need more than market knowledge and transactional guidance — they need a trusted professional who brings patience, compassion, and sound judgment to the process.
+              </p>
+              <p>
+                Throughout his career, David has worked alongside clients, family members, and professional advisors to evaluate property, prepare homes for market, coordinate sale details, and guide transactions from beginning to completion with care and discretion. His involvement often extends beyond the traditional scope of real estate services, reflecting both his commitment to those he serves and the trust placed in him during life's more sensitive transitions.
+              </p>
+              <p>
+                He believes that most families will, at some point, face important decisions related to aging, incapacity, loss, and the future of real property. Thoughtful planning can make an extraordinary difference. When that time comes, David's goal is to help reduce stress, protect value, ease the burden on loved ones, and provide the kind of steady guidance that allows families to move forward with greater clarity and confidence.
+              </p>
+            </div>
+            <div className="w-16 h-px bg-gold mx-auto mt-10" />
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section className="py-20 lg:py-28 bg-ivory">
         <div className="container px-6 lg:px-8">
