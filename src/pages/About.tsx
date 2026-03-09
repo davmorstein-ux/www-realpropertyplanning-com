@@ -98,6 +98,62 @@ const About = () => {
         </div>
       </section>
 
+      {/* Professional Affiliations */}
+      <section className="py-20 lg:py-28 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <p className="text-gold font-medium tracking-widest uppercase mb-3 text-xs">
+              Professional Affiliations
+            </p>
+            <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-10">
+              Organizations & Memberships
+            </h2>
+            <ul className="space-y-6">
+              {[
+                {
+                  name: "National Association of Realtors",
+                  detail: "Member",
+                  url: "https://www.nar.realtor/"
+                },
+                {
+                  name: "Aging Life Care Association — Western Region",
+                  detail: null,
+                  url: "https://www.aginglifecare.org/ALCAWEB/ALCAWEB/Chapters/Western_Region_Chapter/Western_Region_Chapter_Local_Unit_Groups.aspx"
+                },
+                {
+                  name: "National Association of Senior & Specialty Move Managers",
+                  detail: "Associated with members in the Puget Sound area of Washington State",
+                  url: "https://www.nasmm.org/"
+                },
+                {
+                  name: "East King County Estate Planning Council",
+                  detail: "Membership applied",
+                  url: "https://www.ekcepc.org/"
+                }
+              ].map((org, index) => (
+                <li key={index} className="flex items-start gap-4 group">
+                  <div className="w-2 h-2 rounded-full bg-gold mt-2.5 shrink-0" />
+                  <div>
+                    <a
+                      href={org.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-foreground font-medium hover:text-gold transition-colors inline-flex items-center gap-1.5"
+                    >
+                      {org.name}
+                      <ExternalLink className="w-3.5 h-3.5 opacity-40 group-hover:opacity-100 transition-opacity" />
+                    </a>
+                    {org.detail && (
+                      <p className="text-muted-foreground text-sm mt-1">{org.detail}</p>
+                    )}
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
