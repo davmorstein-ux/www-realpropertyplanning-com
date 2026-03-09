@@ -122,7 +122,7 @@ const Terminology = () => {
       <section className="bg-primary pt-24 pb-16 md:pt-32 md:pb-20 lg:pb-24">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl">
-            <p className="text-gold font-medium tracking-[0.2em] uppercase mb-3.5 text-xs">
+            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
               Probate Real Estate Resource
             </p>
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">

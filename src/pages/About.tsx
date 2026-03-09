@@ -23,7 +23,7 @@ const About = () => {
       <section className="bg-navy pt-32 pb-20 lg:pb-28">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl">
-            <p className="text-gold font-medium tracking-widest uppercase mb-4 text-xs">
+            <p className="text-gold font-bold tracking-widest uppercase mb-4 text-base">
               About David Stein
             </p>
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
@@ -102,7 +102,7 @@ const About = () => {
       <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <p className="text-gold font-medium tracking-widest uppercase mb-3 text-xs">
+            <p className="text-gold font-bold tracking-widest uppercase mb-3 text-base">
               Professional Affiliations
             </p>
             <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-10">

@@ -29,7 +29,7 @@ const WhyChooseSection = () => {
       <div className="container px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <p className="text-gold font-medium tracking-wider uppercase mb-3 text-sm">
+            <p className="text-gold font-bold tracking-wider uppercase mb-3 text-base">
               Why Work With Me
             </p>
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-medium mb-6">
@@ -67,7 +67,7 @@ const WhyChooseSection = () => {
                 <div className="font-serif text-3xl text-foreground font-medium mb-2">
                   {item.stat}
                 </div>
-                <p className="text-muted-foreground text-sm">
+                <p className="text-muted-foreground text-base">
                   {item.label}
                 </p>
               </div>
