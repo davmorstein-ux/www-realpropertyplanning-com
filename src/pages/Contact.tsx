@@ -152,6 +152,9 @@ const Contact = () => {
               <div className="bg-card rounded-lg border border-border p-8 lg:p-10">
                 <h3 className="font-serif text-2xl text-foreground font-semibold mb-2">
                   Tell Us About Your Situation
+                </h3>
+                <p className="text-muted-foreground mb-8">
+                  Provide a few details below and David Stein will follow up to discuss your property and goals.
                 </p>
                 
                 <form onSubmit={handleSubmit} className="space-y-6">
