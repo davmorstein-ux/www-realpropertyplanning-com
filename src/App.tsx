@@ -8,6 +8,7 @@ import ProbateEstateSales from "./pages/ProbateEstateSales";
 import SeniorTransitions from "./pages/SeniorTransitions";
 import ForAttorneys from "./pages/ForAttorneys";
 import HowWeWork from "./pages/HowWeWork";
+import AttorneyReferral from "./pages/AttorneyReferral";
 import About from "./pages/About";
 import FAQ from "./pages/FAQ";
 import Terminology from "./pages/Terminology";
