@@ -110,8 +110,8 @@ const Index = () => {
           <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-10 lg:gap-11 items-center">
             <div>
               {/* Logo & Brand */}
-              <div className="flex items-center gap-3.5 mb-6">
-                <img src={logo} alt="Real Property Planning Logo" className="h-16 w-auto" />
+              <div className="flex justify-center mb-8">
+                <img src={logo} alt="Real Property Planning Logo" className="h-32 md:h-40 w-auto" />
               </div>
 
               <h1 className="font-serif text-4xl md:text-5xl lg:text-[54px] text-foreground font-bold leading-[1.08] mb-5">
