@@ -148,6 +148,7 @@ const ForAttorneys = () => {
         </div>
       </section>
 
+      <DisclaimerSection />
       <Footer />
     </div>
   );

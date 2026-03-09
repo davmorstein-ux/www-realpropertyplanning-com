@@ -109,6 +109,7 @@ const SeniorTransitions = () => {
         </div>
       </section>
 
+      <DisclaimerSection />
       <Footer />
     </div>
   );

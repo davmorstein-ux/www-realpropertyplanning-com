@@ -96,6 +96,7 @@ const ProbateEstateSales = () => {
         </div>
       </section>
 
+      <DisclaimerSection />
       <Footer />
     </div>
   );

@@ -504,6 +504,7 @@ const Index = () => {
         </div>
       </section>
 
+      <DisclaimerSection />
       <Footer />
     </div>
   );

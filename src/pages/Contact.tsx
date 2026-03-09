@@ -249,6 +249,7 @@ const Contact = () => {
         </div>
       </section>
 
+      <DisclaimerSection />
       <Footer />
     </div>
   );
