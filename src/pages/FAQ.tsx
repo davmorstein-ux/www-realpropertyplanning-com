@@ -252,6 +252,7 @@ const FAQ = () => {
         </div>
       </section>
 
+      <DisclaimerSection />
       <Footer />
     </div>
   );
