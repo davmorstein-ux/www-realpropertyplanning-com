@@ -34,8 +34,8 @@ const Header = () => {
               <Link
                 key={link.href}
                 to={link.href}
-                className={`text-sm text-primary-foreground/80 hover:text-gold transition-colors ${
-                  location.pathname === link.href ? "text-gold" : ""
+                className={`text-sm transition-colors hover:text-gold ${
+                  location.pathname === link.href ? "text-gold" : isHomePage ? "text-foreground/70" : "text-primary-foreground/80"
                 }`}
               >
                 {link.label}
@@ -44,7 +44,7 @@ const Header = () => {
             <Link to="/contact">
               <Button 
                 size="sm"
-                className="bg-gold hover:bg-gold-light text-navy font-medium ml-2"
+                className="bg-gold hover:bg-gold-light text-foreground font-medium ml-2"
               >
                 <Phone className="w-4 h-4 mr-2" />
                 Consultation
@@ -54,7 +54,7 @@ const Header = () => {
           
           {/* Mobile Menu Button */}
           <button 
-            className="lg:hidden text-primary-foreground p-2"
+            className={`lg:hidden p-2 ${isHomePage ? "text-foreground" : "text-primary-foreground"}`}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
