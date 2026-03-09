@@ -107,8 +107,7 @@ const Index = () => {
       
       {/* Hero Section */}
       <section className="relative py-16 lg:py-24" style={{ background: 'linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--muted)) 100%)' }}>
-        <div className="container px-6 lg:px-8 pt-20">
-          <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-10 lg:gap-11 items-center">
+         <div className="container px-6 lg:px-8 pt-20">
             <div>
               {/* Logo & Headshot */}
               <div className="flex items-center justify-center gap-8 mb-8">
@@ -116,15 +115,15 @@ const Index = () => {
                 <img src={daveHeadshot2} alt="David Stein" className="h-[512px] md:h-[640px] w-auto rounded-2xl object-cover shadow-lg" />
               </div>
 
-              <h1 className="font-serif text-4xl md:text-5xl lg:text-[54px] text-foreground font-bold leading-[1.08] mb-5">
+              <h1 className="font-serif text-4xl md:text-5xl lg:text-[54px] text-foreground font-bold leading-[1.08] mb-5 text-center">
                 Trusted real estate guidance for executors, attorneys, personal representatives, and families
               </h1>
 
-              <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-[760px] mb-8">
+              <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-[760px] mx-auto mb-8 text-center">
                 Led by David Stein, Real Property Planning helps coordinate, prepare, value, market, and sell residential real property during estate, probate, and later-life transitions with professionalism, discretion, and care.
               </p>
 
-              <div className="flex flex-wrap gap-3.5 mb-8">
+              <div className="flex flex-wrap justify-center gap-3.5 mb-8">
                 <Link to="/contact">
                   <Button 
                     size="lg" 
@@ -144,7 +143,7 @@ const Index = () => {
                 </Link>
               </div>
 
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap justify-center gap-3">
                 {["Estate Sales", "Probate Support", "Property Preparation", "Broker Guidance"].map((tag) => (
                   <span 
                     key={tag}
@@ -155,30 +154,28 @@ const Index = () => {
                 ))}
               </div>
             </div>
-          </div>
 
-          {/* Info Card below */}
-          <div className="mt-12 max-w-3xl mx-auto">
-            <div className="bg-card border border-border rounded-3xl p-8 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
-              <h2 className="font-serif text-[28px] font-bold text-foreground mb-5">
-                A professional resource during complex property transitions
-              </h2>
-              <div className="grid gap-3.5">
-                {[
-                  "Guidance for executors and personal representatives",
-                  "Coordination with attorneys and trusted advisors",
-                  "Property valuation, preparation, and sale strategy",
-                  "Discreet, compassionate, and experienced representation"
-                ].map((item, i) => (
-                  <div key={i} className="px-4 py-3.5 bg-secondary rounded-xl text-muted-foreground text-sm">
-                    {item}
-                  </div>
-                ))}
+            {/* Info Card below */}
+            <div className="mt-12 max-w-3xl mx-auto">
+              <div className="bg-card border border-border rounded-3xl p-8 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
+                <h2 className="font-serif text-[28px] font-bold text-foreground mb-5">
+                  A professional resource during complex property transitions
+                </h2>
+                <div className="grid gap-3.5">
+                  {[
+                    "Guidance for executors and personal representatives",
+                    "Coordination with attorneys and trusted advisors",
+                    "Property valuation, preparation, and sale strategy",
+                    "Discreet, compassionate, and experienced representation"
+                  ].map((item, i) => (
+                    <div key={i} className="px-4 py-3.5 bg-secondary rounded-xl text-muted-foreground text-sm">
+                      {item}
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
-          </div>
-        </div>
       </section>
 
       {/* Trust Strip */}
