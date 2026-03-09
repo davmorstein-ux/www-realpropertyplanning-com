@@ -112,7 +112,10 @@ const Index = () => {
               {/* Logo & Headshot */}
               <div className="flex items-center justify-center gap-8 mb-8">
                 <img src={logo} alt="Real Property Planning Logo" className="h-[512px] md:h-[640px] w-auto" />
-                <img src={daveHeadshot2} alt="David Stein" className="h-[512px] md:h-[640px] w-auto rounded-2xl object-cover shadow-lg" />
+                <div className="flex flex-col items-center">
+                  <img src={daveHeadshot2} alt="David Stein" className="h-[256px] md:h-[320px] w-auto rounded-2xl object-cover shadow-lg" />
+                  <p className="mt-3 font-serif text-lg font-semibold text-foreground">David Stein</p>
+                </div>
               </div>
 
               <h1 className="font-serif text-4xl md:text-5xl lg:text-[54px] text-foreground font-bold leading-[1.08] mb-5 text-center">
