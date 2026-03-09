@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/select";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { useState } from "react";
+import expRealtyLogo from "@/assets/exp-realty-logo.png";
 import { useToast } from "@/hooks/use-toast";
 
 const roleOptions = [
@@ -134,9 +135,13 @@ const Contact = () => {
 
               {/* Brokerage Info */}
               <div className="mt-10 pt-8 border-t border-border">
-                <h3 className="font-serif text-xl text-foreground font-semibold mb-4">
-                  Brokerage Information
-                </h3>
+                <div className="flex flex-col items-center md:items-start mb-5">
+                  <img 
+                    src={expRealtyLogo} 
+                    alt="eXp Realty" 
+                    className="w-[95px] md:w-[120px] h-auto"
+                  />
+                </div>
                 <div className="space-y-2 text-sm text-muted-foreground">
                   <p className="font-medium text-foreground">David Stein</p>
                   <p>Licensed Real Estate Broker, Washington State</p>
