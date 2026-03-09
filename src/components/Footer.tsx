@@ -33,7 +33,7 @@ const Footer = () => {
         
         <div className="border-t border-primary-foreground/10 pt-8">
           <p className="text-primary-foreground/40 text-sm text-center">
-            © {new Date().getFullYear()} Puget Sound Probate Realty. All rights reserved.
+            © {new Date().getFullYear()} Real Property Planning — David Stein, Licensed Real Estate Broker & Certified Appraiser. License held by eXp Realty.
           </p>
         </div>
       </div>

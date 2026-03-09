@@ -14,7 +14,7 @@ const HeroSection = () => {
       <div className="container relative z-10 px-6 lg:px-8">
         <div className="max-w-3xl">
           <p className="text-gold font-medium tracking-wider uppercase mb-4 text-sm">
-            Puget Sound's Trusted Expert
+            David Stein — Licensed Broker & Certified Appraiser
           </p>
           
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-primary-foreground font-medium leading-tight mb-6">
