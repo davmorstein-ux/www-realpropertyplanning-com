@@ -214,7 +214,7 @@ const Index = () => {
                 Real estate tied to estate settlement, probate, trust administration, or late-life housing transitions requires more than a typical home sale approach. These situations often involve legal timelines, multiple stakeholders, property condition questions, personal belongings, deferred maintenance, and emotionally difficult decisions.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                David Stein helps bring clarity and structure to the real estate side of the process. With over 20 years of experience as a professional real estate broker and state certified appraiser, he provides informed guidance for attorneys, executors, personal representatives, trustees, and families who need a capable, calm, and responsive professional to help coordinate the next steps.
+                David Stein helps bring clarity and structure to the real estate side of the process — serving as a capable, calm, and responsive professional who can help coordinate the next steps with care and discretion.
               </p>
             </div>
             <div className="flex flex-col items-center">
