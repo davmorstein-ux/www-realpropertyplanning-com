@@ -34,7 +34,7 @@ const TestimonialsSection = () => {
             className="bg-primary hover:bg-navy-dark text-primary-foreground font-semibold"
           >
             <a 
-              href="https://www.zillow.com/profile/dstein2112" 
+              href="https://www.zillow.com/profile/dstein2112#reviews" 
               target="_blank" 
               rel="noopener noreferrer"
             >
