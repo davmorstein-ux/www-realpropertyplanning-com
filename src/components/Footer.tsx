@@ -86,6 +86,9 @@ const Footer = () => {
           <p className="text-primary-foreground/40 text-xs text-center mt-1">
             Mailing Address: PO Box 1462, Woodinville, WA 98072
           </p>
+          <p className="text-primary-foreground/40 text-xs text-center mt-1">
+            Office Address: 1455 NW Leary Way, Seattle, WA 98107
+          </p>
         </div>
 
         {/* Copyright */}
