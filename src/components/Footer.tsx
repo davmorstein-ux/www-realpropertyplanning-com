@@ -74,7 +74,12 @@ const Footer = () => {
         </div>
         
         {/* Brokerage Compliance */}
-        <div className="border-t border-primary-foreground/10 pt-6 mb-4">
+        <div className="border-t border-primary-foreground/10 pt-10 pb-2 flex flex-col items-center">
+          <img 
+            src={expRealtyLogo} 
+            alt="eXp Realty" 
+            className="w-[95px] md:w-[120px] h-auto mb-4"
+          />
           <p className="text-primary-foreground/50 text-xs text-center leading-relaxed">
             David Stein | Licensed Real Estate Broker, Washington State | eXp Realty
           </p>
@@ -84,7 +89,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-primary-foreground/10 pt-4">
+        <div className="border-t border-primary-foreground/10 mt-8 pt-4">
           <p className="text-primary-foreground/40 text-xs text-center">
             © {new Date().getFullYear()} David Stein Estate Property Advisory. Professional Real Estate Broker & State Certified Appraiser.
           </p>
