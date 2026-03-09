@@ -131,6 +131,30 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
+
+              {/* Brokerage Info */}
+              <div className="mt-10 pt-8 border-t border-border">
+                <h3 className="font-serif text-xl text-foreground font-semibold mb-4">
+                  Brokerage Information
+                </h3>
+                <div className="space-y-2 text-sm text-muted-foreground">
+                  <p className="font-medium text-foreground">David Stein</p>
+                  <p>Licensed Real Estate Broker, Washington State</p>
+                  <p className="font-medium text-foreground">eXp Realty</p>
+                  <p>Mailing Address: PO Box 1462, Woodinville, WA 98072</p>
+                  <p>Office Address: 1455 NW Leary Way, Seattle, WA 98107</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Contact Form */}
+            <div className="lg:col-span-2">
+              <div className="bg-card rounded-lg border border-border p-8 lg:p-10">
+                <h3 className="font-serif text-2xl text-foreground font-semibold mb-2">
+                  Tell Us About Your Situation
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Contact Form */}
