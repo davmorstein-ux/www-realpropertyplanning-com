@@ -35,7 +35,7 @@ const ForAttorneys = () => {
       <section className="bg-navy pt-32 pb-20 lg:pb-28">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl">
-            <p className="text-gold font-medium tracking-widest uppercase mb-4 text-xs">
+            <p className="text-gold font-bold tracking-widest uppercase mb-4 text-base">
               For Attorneys, Executors & Fiduciaries
             </p>
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
