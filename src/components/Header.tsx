@@ -11,6 +11,7 @@ const navLinks = [
   { href: "/for-attorneys", label: "For Attorneys & Fiduciaries" },
   { href: "/about", label: "About" },
   { href: "/faq", label: "FAQ" },
+  { href: "/terminology", label: "Terminology" },
   { href: "/contact", label: "Contact" },
 ];
 
