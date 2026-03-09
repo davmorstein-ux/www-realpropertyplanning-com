@@ -13,7 +13,7 @@ const CTASection = () => {
             Ready to Get Expert Guidance?
           </h2>
           <p className="text-muted-foreground text-lg mb-10 max-w-2xl mx-auto">
-            Whether you're an attorney seeking a reliable real estate partner, an executor navigating probate, or a family caring for aging parents, I'm here to help.
+            Whether you're an attorney seeking a reliable real estate partner, an executor navigating probate, or a family caring for aging parents — David Stein is here to help.
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
