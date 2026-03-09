@@ -214,7 +214,7 @@ const Index = () => {
                 Real estate tied to estate settlement, probate, trust administration, or late-life housing transitions requires more than a typical home sale approach. These situations often involve legal timelines, multiple stakeholders, property condition questions, personal belongings, deferred maintenance, and emotionally difficult decisions.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                David Stein helps bring clarity and structure to the real estate side of the process. With over 20 years of experience as a professional real estate broker and state certified appraiser, he provides informed guidance for attorneys, executors, personal representatives, trustees, and families who need a capable, calm, and responsive professional to help coordinate the next steps.
+                David Stein helps bring clarity and structure to the real estate side of the process — serving as a capable, calm, and responsive professional who can help coordinate the next steps with care and discretion.
               </p>
             </div>
             <div className="flex flex-col items-center">
@@ -245,10 +245,7 @@ const Index = () => {
                 David Stein is a professional real estate broker and state certified appraiser with over 20 years of experience helping people make informed property decisions during significant life transitions.
               </p>
               <p>
-                His work is focused on estate property sales, probate real estate matters, trust-related property transitions, and senior housing changes. These situations often require a careful balance of market knowledge, valuation insight, communication, discretion, and practical coordination.
-              </p>
-              <p>
-                David works with attorneys, fiduciaries, executors, personal representatives, trustees, seniors, and families who need experienced guidance on property value, sale timing, preparation strategy, and the process of bringing a property to market. His goal is to reduce confusion, protect value, and help clients move forward with confidence.
+                His work centers on estate property sales, probate real estate matters, trust-related property transitions, and senior housing changes — situations that require a careful balance of market knowledge, valuation insight, communication, and practical coordination. His goal is to reduce confusion, protect value, and help clients move forward with confidence.
               </p>
             </div>
           </div>
