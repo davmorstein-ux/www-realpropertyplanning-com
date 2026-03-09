@@ -111,7 +111,7 @@ const Index = () => {
             <div>
               {/* Logo & Brand */}
               <div className="flex justify-center mb-8">
-                <img src={logo} alt="Real Property Planning Logo" className="h-32 md:h-40 w-auto" />
+                <img src={logo} alt="Real Property Planning Logo" className="h-[512px] md:h-[640px] w-auto" />
               </div>
 
               <h1 className="font-serif text-4xl md:text-5xl lg:text-[54px] text-foreground font-bold leading-[1.08] mb-5">
