@@ -17,7 +17,7 @@ const Footer = () => {
             <p className="text-primary-foreground/60 text-sm leading-relaxed mb-4">
               Discreet, experienced real estate guidance for estate, probate, trust, and senior property transitions.
             </p>
-            <div className="flex flex-col gap-2 text-sm">
+            <div className="flex flex-col gap-2 text-base">
               <a href="tel:2069003015" className="text-primary-foreground/70 hover:text-gold flex items-center gap-2">
                 <Phone className="w-4 h-4" />
                 (206) 900-3015
