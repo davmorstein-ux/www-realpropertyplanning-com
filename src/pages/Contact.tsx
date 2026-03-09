@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/select";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { useState } from "react";
+import expRealtyLogo from "@/assets/exp-realty-logo.png";
 import { useToast } from "@/hooks/use-toast";
 
 const roleOptions = [
