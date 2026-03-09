@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Phone, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import logo from "@/assets/logo.png";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -23,9 +24,7 @@ const Header = () => {
       <div className="container px-6 lg:px-8">
         <div className="flex items-center justify-between py-5">
           <Link to="/" className="flex items-center">
-            <span className={`font-serif text-lg md:text-xl font-semibold tracking-tight ${isHomePage ? "text-foreground" : "text-primary-foreground"}`}>
-              David Stein <span className="text-gold font-medium">Estate Property Advisory</span>
-            </span>
+            <img src={logo} alt="Real Property Planning" className="h-12 w-auto" />
           </Link>
           
           {/* Desktop Navigation */}
