@@ -83,13 +83,13 @@ const Footer = () => {
             alt="eXp Realty" 
             className="w-[95px] md:w-[120px] h-auto mb-4"
           />
-          <p className="text-primary-foreground/50 text-xs text-center leading-relaxed">
+          <p className="text-primary-foreground/50 text-sm text-center leading-relaxed">
             David Stein | Licensed Real Estate Broker, Washington State | eXp Realty
           </p>
-          <p className="text-primary-foreground/40 text-xs text-center mt-1">
+          <p className="text-primary-foreground/40 text-sm text-center mt-1">
             Mailing Address: PO Box 1462, Woodinville, WA 98072
           </p>
-          <p className="text-primary-foreground/40 text-xs text-center mt-1">
+          <p className="text-primary-foreground/40 text-sm text-center mt-1">
             Office Address: 1455 NW Leary Way, Seattle, WA 98107
           </p>
         </div>
