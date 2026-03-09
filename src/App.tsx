@@ -9,6 +9,7 @@ import SeniorTransitions from "./pages/SeniorTransitions";
 import ForAttorneys from "./pages/ForAttorneys";
 import About from "./pages/About";
 import FAQ from "./pages/FAQ";
+import Terminology from "./pages/Terminology";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/for-attorneys" element={<ForAttorneys />} />
           <Route path="/about" element={<About />} />
           <Route path="/faq" element={<FAQ />} />
+          <Route path="/terminology" element={<Terminology />} />
           <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
