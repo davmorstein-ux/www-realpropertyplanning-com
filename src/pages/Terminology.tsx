@@ -208,6 +208,7 @@ const Terminology = () => {
         </div>
       </section>
 
+      <DisclaimerSection />
       <Footer />
     </div>
   );
