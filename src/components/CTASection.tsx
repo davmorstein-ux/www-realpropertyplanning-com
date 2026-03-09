@@ -22,7 +22,7 @@ const CTASection = () => {
               className="bg-primary hover:bg-navy-dark text-primary-foreground font-semibold px-8"
             >
               <Phone className="w-5 h-5 mr-2" />
-              (206) 555-0123
+              (206) 900-3015
             </Button>
             <Button 
               size="lg" 
