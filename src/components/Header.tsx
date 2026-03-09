@@ -74,7 +74,7 @@ const Header = () => {
         </div>
 
         {/* Desktop Secondary Row */}
-        <div className="hidden lg:flex items-center justify-end gap-6 pb-3 -mt-1">
+        <div className="hidden lg:flex items-center justify-center gap-6 pb-3 -mt-1">
           {secondaryLinks.map((link) => (
             <Link key={link.href} to={link.href} className={linkClass(link.href)}>
               {link.label}
