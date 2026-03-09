@@ -13,7 +13,7 @@ const CTASection = () => {
             Ready to Get Expert Guidance?
           </h2>
           <p className="text-muted-foreground text-lg mb-10 max-w-2xl mx-auto">
-            Whether you're an attorney seeking a reliable real estate partner, an executor navigating probate, or a family caring for aging parents, I'm here to help.
+            Whether you're an attorney seeking a reliable real estate partner, an executor navigating probate, or a family caring for aging parents — David Stein is here to help.
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
@@ -22,7 +22,7 @@ const CTASection = () => {
               className="bg-primary hover:bg-navy-dark text-primary-foreground font-semibold px-8"
             >
               <Phone className="w-5 h-5 mr-2" />
-              (206) 555-0123
+              (206) 900-3015
             </Button>
             <Button 
               size="lg" 
@@ -36,7 +36,7 @@ const CTASection = () => {
           
           <div className="flex items-center justify-center gap-2 text-muted-foreground">
             <Mail className="w-4 h-4" />
-            <span>expert@pugetsoundprobate.com</span>
+            <span>dave.stein@exprealty.com</span>
           </div>
         </div>
       </div>

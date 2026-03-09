@@ -36,10 +36,10 @@ const WhyChooseSection = () => {
               The Authority on Probate & Estate Real Estate
             </h2>
             <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
-              When families face the complex intersection of real estate and estate administration, they need more than a real estate agent—they need a specialist who understands both the legal intricacies and the emotional journey.
+              When families face the complex intersection of real estate and estate administration, they need more than a real estate agent — they need a licensed broker and certified appraiser who understands both the legal intricacies and the emotional journey.
             </p>
             <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-              I've dedicated my career to becoming the Puget Sound region's most trusted expert in probate and estate property transactions. My deep relationships with attorneys, title companies, and the court system ensure your transaction proceeds smoothly.
+              I'm David Stein, and I've dedicated my career to becoming the Puget Sound region's most trusted expert in probate and estate property transactions. As both a licensed real estate broker and a Washington State Certified Real Estate Appraiser, I bring a unique dual perspective that ensures accurate valuations and optimal outcomes. My license is held by eXp Realty.
             </p>
             
             <div className="space-y-4">

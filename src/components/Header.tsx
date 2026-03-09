@@ -11,7 +11,7 @@ const Header = () => {
         <div className="flex items-center justify-between py-6">
           <div className="flex items-center">
             <span className="font-serif text-xl md:text-2xl text-primary-foreground font-medium">
-              Puget Sound <span className="text-gold">Probate</span> Realty
+              Real Property <span className="text-gold">Planning</span>
             </span>
           </div>
           
