@@ -245,10 +245,7 @@ const Index = () => {
                 David Stein is a professional real estate broker and state certified appraiser with over 20 years of experience helping people make informed property decisions during significant life transitions.
               </p>
               <p>
-                His work is focused on estate property sales, probate real estate matters, trust-related property transitions, and senior housing changes. These situations often require a careful balance of market knowledge, valuation insight, communication, discretion, and practical coordination.
-              </p>
-              <p>
-                David works with attorneys, fiduciaries, executors, personal representatives, trustees, seniors, and families who need experienced guidance on property value, sale timing, preparation strategy, and the process of bringing a property to market. His goal is to reduce confusion, protect value, and help clients move forward with confidence.
+                His work centers on estate property sales, probate real estate matters, trust-related property transitions, and senior housing changes — situations that require a careful balance of market knowledge, valuation insight, communication, and practical coordination. His goal is to reduce confusion, protect value, and help clients move forward with confidence.
               </p>
             </div>
           </div>
