@@ -15,7 +15,7 @@ const HeroSection = () => {
       <div className="container relative z-10 px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <p className="text-gold font-medium tracking-wider uppercase mb-4 text-sm">
+            <p className="text-gold font-bold tracking-wider uppercase mb-4 text-base">
               David Stein — Licensed Broker & Certified Appraiser
             </p>
             
