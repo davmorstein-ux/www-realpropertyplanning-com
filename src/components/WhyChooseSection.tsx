@@ -67,7 +67,7 @@ const WhyChooseSection = () => {
                 <div className="font-serif text-3xl text-foreground font-medium mb-2">
                   {item.stat}
                 </div>
-                <p className="text-muted-foreground text-sm">
+                <p className="text-muted-foreground text-base">
                   {item.label}
                 </p>
               </div>

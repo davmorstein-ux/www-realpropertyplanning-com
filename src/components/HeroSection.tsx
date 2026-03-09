@@ -46,12 +46,12 @@ const HeroSection = () => {
             </div>
             
             <div className="mt-12 pt-8 border-t border-primary-foreground/20">
-              <p className="text-primary-foreground/60 text-sm mb-3">Proudly Serving</p>
+              <p className="text-primary-foreground/60 text-base mb-3">Proudly Serving</p>
               <div className="flex flex-wrap gap-3">
                 {["King County", "Snohomish County", "Pierce County", "Kitsap County"].map((county) => (
                   <span 
                     key={county}
-                    className="px-4 py-2 bg-primary-foreground/10 rounded-full text-primary-foreground/90 text-sm"
+                    className="px-4 py-2 bg-primary-foreground/10 rounded-full text-primary-foreground/90 text-base"
                   >
                     {county}
                   </span>

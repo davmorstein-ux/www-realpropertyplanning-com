@@ -10,7 +10,7 @@ const DisclaimerSection = () => {
             <h2 className="font-serif text-xl md:text-2xl text-foreground font-semibold mb-[18px]">
               Professional Disclaimer
             </h2>
-            <div className="space-y-[14px] text-muted-foreground text-[15px] leading-[1.8]">
+            <div className="space-y-[14px] text-muted-foreground text-base leading-[1.8]">
               <p>
                 David Stein is a licensed real estate broker in the State of Washington and a Washington state certified real estate appraiser. He is not an attorney, CPA, or tax advisor, and does not provide legal, tax, or accounting advice.
               </p>

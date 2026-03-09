@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <Link to="/" className="block mb-4">
               <span className="font-serif text-xl text-primary-foreground font-semibold">
-                David Stein <span className="text-gold">Estate Property Advisory</span>
+                David Stein <span className="text-gold font-bold">Estate Property Advisory</span>
               </span>
             </Link>
             <p className="text-primary-foreground/60 text-base leading-relaxed mb-4">

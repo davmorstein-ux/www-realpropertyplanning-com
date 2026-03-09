@@ -38,7 +38,7 @@ const ServicesSection = () => {
     <section className="py-20 lg:py-28 bg-background">
       <div className="container px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <p className="text-gold font-medium tracking-wider uppercase mb-3 text-sm">
+          <p className="text-gold font-bold tracking-wider uppercase mb-3 text-base">
             Comprehensive Services
           </p>
           <h2 className="font-serif text-3xl md:text-4xl text-foreground font-medium mb-4">

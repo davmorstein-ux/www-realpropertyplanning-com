@@ -6,7 +6,7 @@ const CTASection = () => {
     <section className="py-20 lg:py-28 bg-background">
       <div className="container px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-gold font-medium tracking-wider uppercase mb-3 text-sm">
+          <p className="text-gold font-bold tracking-wider uppercase mb-3 text-base">
             Let's Talk
           </p>
           <h2 className="font-serif text-3xl md:text-4xl text-foreground font-medium mb-6">
