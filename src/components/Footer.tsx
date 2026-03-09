@@ -25,8 +25,8 @@ const Footer = () => {
           <div>
             <h4 className="text-primary-foreground font-medium mb-4">Contact</h4>
             <ul className="space-y-2 text-primary-foreground/60 text-sm">
-              <li>(206) 555-0123</li>
-              <li>expert@pugetsoundprobate.com</li>
+              <li>(206) 900-3015</li>
+              <li>dave.stein@exprealty.com</li>
             </ul>
           </div>
         </div>
