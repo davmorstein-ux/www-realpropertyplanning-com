@@ -71,6 +71,9 @@ const Footer = () => {
           <p className="text-primary-foreground/40 text-xs leading-relaxed max-w-4xl">
             David Stein provides real estate brokerage and valuation-related guidance based on his experience as a professional real estate broker and state certified appraiser. Legal, tax, and probate-specific advice should be obtained from qualified legal and tax professionals.
           </p>
+          <p className="text-primary-foreground/40 text-xs leading-relaxed max-w-4xl mt-3">
+            David Stein is a licensed real estate broker in the State of Washington and a Washington state certified real estate appraiser. He is not an attorney, CPA, or tax advisor and does not provide legal, tax, or accounting advice. Information provided is for general informational and real-estate-related purposes only.
+          </p>
         </div>
         
         {/* Brokerage Compliance */}
