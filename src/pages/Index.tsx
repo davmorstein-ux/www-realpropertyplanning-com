@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import daveHeadshot from "@/assets/dave-headshot.jpg";
 import coupleWritingWill from "@/assets/couple-writing-will.png";
+import logo from "@/assets/logo.png";
 
 const services = [
   {
