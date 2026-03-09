@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { Phone, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "@/assets/logo.png";
 
 const primaryLinks = [
   { href: "/", label: "Home" },
@@ -41,11 +40,7 @@ const Header = () => {
     <header className={`${isHomePage ? "absolute" : "relative bg-primary"} top-0 left-0 right-0 z-50`}>
       <div className="container px-6 lg:px-8">
         {/* Primary row */}
-        <div className="flex items-center justify-between py-4">
-          <Link to="/" className="flex items-center">
-            <img src={logo} alt="Real Property Planning" className="h-12 w-auto" />
-          </Link>
-
+        <div className="flex items-center justify-center py-4 relative">
           {/* Desktop Primary Nav */}
           <nav className="hidden lg:flex items-center gap-6">
             {primaryLinks.map((link) => (
@@ -66,7 +61,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className={`lg:hidden p-2 ${isHomePage ? "text-foreground" : "text-primary-foreground"}`}
+            className={`lg:hidden p-2 absolute right-0 ${isHomePage ? "text-foreground" : "text-primary-foreground"}`}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
