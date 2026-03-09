@@ -1,30 +1,427 @@
 import Header from "@/components/Header";
-import HeroSection from "@/components/HeroSection";
-import ServicesSection from "@/components/ServicesSection";
-import WhyChooseSection from "@/components/WhyChooseSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
-import ServiceAreasSection from "@/components/ServiceAreasSection";
-import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { 
+  Phone, Mail, Scale, Heart, Home, FileText, Clock, Shield, 
+  CheckCircle, Users, Briefcase, ArrowRight, ChevronRight,
+  Star, Award, Building, Handshake
+} from "lucide-react";
+import daveHeadshot from "@/assets/dave-headshot.jpg";
+
+const services = [
+  {
+    icon: Scale,
+    title: "Probate Real Estate",
+    description: "Guidance for properties involved in probate, estate administration, and inherited real estate matters."
+  },
+  {
+    icon: Building,
+    title: "Estate Property Sales",
+    description: "Strategic support for preparing, pricing, marketing, and selling real property held by an estate or trust."
+  },
+  {
+    icon: Heart,
+    title: "Senior Real Estate Transitions",
+    description: "Professional help for downsizing, relocation, assisted living transitions, and family home sales."
+  },
+  {
+    icon: FileText,
+    title: "Valuation Insight",
+    description: "Broker and state certified appraiser experience to help inform important property decisions."
+  },
+  {
+    icon: Handshake,
+    title: "Attorney & Fiduciary Collaboration",
+    description: "A reliable real estate resource for attorneys, trustees, fiduciaries, and referral partners."
+  },
+  {
+    icon: Home,
+    title: "Property Preparation Coordination",
+    description: "Help coordinating clean-out, repairs, staging, hauling, and other pre-sale services."
+  }
+];
+
+const trustIndicators = [
+  "20+ Years of Experience",
+  "Professional Real Estate Broker",
+  "State Certified Appraiser",
+  "Estate, Probate & Trust Guidance",
+  "Senior Transition Support",
+  "Trusted by Attorneys & Families"
+];
+
+const processSteps = [
+  {
+    step: "01",
+    title: "Initial Consultation",
+    description: "Review the property, timeline, parties involved, and current circumstances."
+  },
+  {
+    step: "02",
+    title: "Property Assessment",
+    description: "Evaluate condition, marketability, likely buyer profile, and possible sale approaches."
+  },
+  {
+    step: "03",
+    title: "Value & Strategy Guidance",
+    description: "Discuss pricing considerations, as-is versus improvement options, timing, and likely next steps."
+  },
+  {
+    step: "04",
+    title: "Preparation Coordination",
+    description: "Coordinate clean-out, repairs, vendor access, staging, and sale-readiness as needed."
+  },
+  {
+    step: "05",
+    title: "Marketing & Sale Execution",
+    description: "Launch with a strategic sales plan designed to attract qualified buyers and maximize exposure."
+  },
+  {
+    step: "06",
+    title: "Transaction Management",
+    description: "Guide the transaction from listing through closing with consistent communication and oversight."
+  }
+];
+
+const audiences = [
+  "Estate planning attorneys",
+  "Probate attorneys",
+  "Executors",
+  "Personal representatives",
+  "Estate administrators",
+  "Trustees",
+  "Fiduciaries",
+  "Adult children helping parents transition",
+  "Seniors planning a move",
+  "Families selling inherited property"
+];
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background">
       <Header />
-      <main>
-        <HeroSection />
-        <div id="services">
-          <ServicesSection />
+      
+      {/* Hero Section */}
+      <section className="relative min-h-[95vh] flex items-center bg-navy">
+        <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy to-navy-dark" />
+        <div className="absolute inset-0 opacity-[0.03]" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+        }} />
+        
+        <div className="container relative z-10 px-6 lg:px-8 pt-24">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div className="max-w-2xl">
+              <p className="text-gold font-medium tracking-widest uppercase mb-5 text-xs">
+                Professional Real Estate Broker & State Certified Appraiser
+              </p>
+              
+              <h1 className="font-serif text-4xl md:text-5xl lg:text-[3.5rem] text-primary-foreground font-semibold leading-[1.1] mb-6">
+                Estate, Probate, Trust & Senior Real Estate Guidance With Experience and Discretion
+              </h1>
+              
+              <p className="text-lg text-primary-foreground/80 mb-6 leading-relaxed">
+                David Stein is a professional real estate broker and state certified appraiser with over 20 years of experience helping attorneys, fiduciaries, executors, personal representatives, trustees, and families navigate complex property transitions with clarity, professionalism, and care.
+              </p>
+              
+              <p className="text-primary-foreground/70 mb-8 leading-relaxed">
+                When real property is part of an estate, probate proceeding, trust administration, or senior life transition, the decisions involved can be complex and emotionally demanding. David Stein provides experienced guidance on property value, sale strategy, preparation, coordination, and marketing to help clients move forward with confidence.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link to="/contact">
+                  <Button 
+                    size="lg" 
+                    className="bg-gold hover:bg-gold-light text-navy font-semibold px-8 w-full sm:w-auto"
+                  >
+                    <Phone className="w-5 h-5 mr-2" />
+                    Schedule a Consultation
+                  </Button>
+                </Link>
+                <Link to="/for-attorneys">
+                  <Button 
+                    size="lg" 
+                    variant="outline" 
+                    className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 w-full sm:w-auto"
+                  >
+                    For Attorneys & Fiduciaries
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            <div className="hidden lg:flex justify-center">
+              <div className="relative">
+                <div className="w-80 h-[420px] rounded-lg overflow-hidden border-2 border-gold/20 shadow-2xl">
+                  <img
+                    src={daveHeadshot}
+                    alt="David Stein - Professional Real Estate Broker & State Certified Appraiser"
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
+                <div className="absolute -bottom-3 -right-3 w-80 h-[420px] rounded-lg border border-gold/10 -z-10" />
+              </div>
+            </div>
+          </div>
         </div>
-        <div id="about">
-          <WhyChooseSection />
+      </section>
+
+      {/* Trust Strip */}
+      <section className="bg-ivory border-y border-border py-6">
+        <div className="container px-6 lg:px-8">
+          <div className="flex flex-wrap justify-center gap-x-8 gap-y-3">
+            {trustIndicators.map((indicator, index) => (
+              <div key={index} className="flex items-center gap-2 text-sm text-muted-foreground">
+                <CheckCircle className="w-4 h-4 text-gold" />
+                <span>{indicator}</span>
+              </div>
+            ))}
+          </div>
         </div>
-        <TestimonialsSection />
-        <div id="areas">
-          <ServiceAreasSection />
+      </section>
+
+      {/* Intro Section */}
+      <section className="py-20 lg:py-28 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-6">
+              A Trusted Resource for Sensitive Property Matters
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              Real estate tied to estate settlement, probate, trust administration, or late-life housing transitions requires more than a typical home sale approach. These situations often involve legal timelines, multiple stakeholders, property condition questions, personal belongings, deferred maintenance, and emotionally difficult decisions.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              David Stein helps bring clarity and structure to the real estate side of the process. With over 20 years of experience as a professional real estate broker and state certified appraiser, he provides informed guidance for attorneys, executors, personal representatives, trustees, and families who need a capable, calm, and responsive professional to help coordinate the next steps.
+            </p>
+          </div>
         </div>
-        <CTASection />
-      </main>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-20 lg:py-28 bg-ivory">
+        <div className="container px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <p className="text-gold font-medium tracking-widest uppercase mb-3 text-xs">
+              Specialized Services
+            </p>
+            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-4">
+              Specialized Real Estate Services for Estate and Senior Property Transitions
+            </h2>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((service, index) => (
+              <div 
+                key={index}
+                className="group p-8 bg-card rounded-lg border border-border hover:border-gold/30 hover:shadow-lg transition-all duration-300"
+              >
+                <div className="w-12 h-12 rounded-full bg-navy/5 flex items-center justify-center mb-5 group-hover:bg-gold/10 transition-colors">
+                  <service.icon className="w-6 h-6 text-navy group-hover:text-gold transition-colors" />
+                </div>
+                <h3 className="font-serif text-xl text-foreground font-semibold mb-3">
+                  {service.title}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed text-sm">
+                  {service.description}
+                </p>
+              </div>
+            ))}
+          </div>
+          
+          <div className="text-center mt-10">
+            <Link to="/probate-estate-sales">
+              <Button variant="outline" className="border-navy text-navy hover:bg-navy hover:text-primary-foreground">
+                Explore Services
+                <ChevronRight className="w-4 h-4 ml-1" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Who We Serve */}
+      <section className="py-20 lg:py-28 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="text-gold font-medium tracking-widest uppercase mb-3 text-xs">
+                Clients & Partners
+              </p>
+              <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-6">
+                Who David Stein Works With
+              </h2>
+              <p className="text-muted-foreground leading-relaxed mb-8">
+                David Stein serves a select range of clients and referral partners who need experienced real estate guidance during complex property transitions.
+              </p>
+              <div className="grid sm:grid-cols-2 gap-3">
+                {audiences.map((audience, index) => (
+                  <div key={index} className="flex items-center gap-3 py-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-gold" />
+                    <span className="text-foreground text-sm">{audience}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="bg-navy rounded-lg p-10 lg:p-12">
+              <Award className="w-10 h-10 text-gold mb-6" />
+              <h3 className="font-serif text-2xl text-primary-foreground font-semibold mb-4">
+                Why Professionals and Families Refer David Stein
+              </h3>
+              <p className="text-primary-foreground/80 leading-relaxed mb-6 text-sm">
+                Estate-related real estate decisions often require careful judgment, discretion, and the ability to coordinate multiple moving parts. David Stein brings a steady, experienced approach to each matter, helping clients understand their options, evaluate value, decide on preparation strategy, and move toward a successful sale with greater clarity.
+              </p>
+              <ul className="space-y-3">
+                {[
+                  "Over 20 years of relevant experience",
+                  "Professional real estate broker",
+                  "State certified appraiser",
+                  "High-trust communication style",
+                  "Experienced with complex property transitions",
+                  "Practical guidance from consultation through closing"
+                ].map((point, index) => (
+                  <li key={index} className="flex items-start gap-3 text-primary-foreground/90 text-sm">
+                    <CheckCircle className="w-4 h-4 text-gold mt-0.5 shrink-0" />
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="py-20 lg:py-28 bg-ivory">
+        <div className="container px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <p className="text-gold font-medium tracking-widest uppercase mb-3 text-xs">
+              The Process
+            </p>
+            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold">
+              A Clear Process During a Complex Time
+            </h2>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {processSteps.map((item, index) => (
+              <div key={index} className="bg-card p-8 rounded-lg border border-border">
+                <span className="text-gold font-serif text-3xl font-semibold">{item.step}</span>
+                <h3 className="font-serif text-lg text-foreground font-semibold mt-4 mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Attorney Feature */}
+      <section className="py-20 lg:py-28 bg-navy">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <Briefcase className="w-12 h-12 text-gold mx-auto mb-6" />
+            <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
+              A Real Estate Resource Attorneys and Fiduciaries Can Refer With Confidence
+            </h2>
+            <p className="text-primary-foreground/80 leading-relaxed mb-8">
+              Attorneys, fiduciaries, and trustees often need a real estate professional who understands the importance of communication, timelines, discretion, and sound judgment. David Stein works collaboratively with professional advisors and their clients to help manage the real estate component of estate and senior property transitions with professionalism and care.
+            </p>
+            <Link to="/for-attorneys">
+              <Button className="bg-gold hover:bg-gold-light text-navy font-semibold">
+                For Attorneys & Fiduciaries
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Preview */}
+      <section className="py-20 lg:py-28 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold">
+              Frequently Asked Questions
+            </h2>
+          </div>
+          
+          <div className="max-w-3xl mx-auto space-y-6">
+            <div className="bg-card p-6 rounded-lg border border-border">
+              <h3 className="font-serif text-lg text-foreground font-semibold mb-2">
+                What types of clients do you work with?
+              </h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                David Stein works with attorneys, executors, personal representatives, trustees, seniors, adult children, and families handling estate, probate, trust, and transition-related property matters.
+              </p>
+            </div>
+            <div className="bg-card p-6 rounded-lg border border-border">
+              <h3 className="font-serif text-lg text-foreground font-semibold mb-2">
+                Can a property be sold as-is?
+              </h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Yes. In many cases, selling as-is is a practical option. In other cases, selective improvements may help maximize value. David helps clients evaluate both approaches.
+              </p>
+            </div>
+            <div className="bg-card p-6 rounded-lg border border-border">
+              <h3 className="font-serif text-lg text-foreground font-semibold mb-2">
+                Do you help coordinate clean-out and repairs?
+              </h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Yes. David can help coordinate the services needed to prepare a property for sale, including clean-out, repairs, hauling, landscaping, and staging.
+              </p>
+            </div>
+          </div>
+          
+          <div className="text-center mt-10">
+            <Link to="/faq">
+              <Button variant="outline" className="border-navy text-navy hover:bg-navy hover:text-primary-foreground">
+                View All FAQs
+                <ChevronRight className="w-4 h-4 ml-1" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="py-20 lg:py-28 bg-ivory">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-6">
+              Need Guidance on an Estate, Probate, Trust, or Senior Property Matter?
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              Start with a confidential conversation. David Stein provides experienced, practical guidance tailored to the property, the circumstances, and the people involved.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/contact">
+                <Button 
+                  size="lg" 
+                  className="bg-navy hover:bg-navy-light text-primary-foreground font-semibold px-8 w-full sm:w-auto"
+                >
+                  <Phone className="w-5 h-5 mr-2" />
+                  Speak With David Stein
+                </Button>
+              </Link>
+              <Link to="/contact">
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-navy text-navy hover:bg-navy hover:text-primary-foreground w-full sm:w-auto"
+                >
+                  <Mail className="w-5 h-5 mr-2" />
+                  Contact David Stein
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );

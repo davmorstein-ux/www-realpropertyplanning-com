@@ -1,44 +1,62 @@
 import { Button } from "@/components/ui/button";
 import { Phone, Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+
+const navLinks = [
+  { href: "/", label: "Home" },
+  { href: "/probate-estate-sales", label: "Probate & Estate Sales" },
+  { href: "/senior-transitions", label: "Senior Transitions" },
+  { href: "/for-attorneys", label: "For Attorneys & Fiduciaries" },
+  { href: "/about", label: "About" },
+  { href: "/faq", label: "FAQ" },
+  { href: "/contact", label: "Contact" },
+];
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
 
   return (
-    <header className="absolute top-0 left-0 right-0 z-50">
+    <header className={`${isHomePage ? "absolute" : "relative bg-navy"} top-0 left-0 right-0 z-50`}>
       <div className="container px-6 lg:px-8">
-        <div className="flex items-center justify-between py-6">
-          <div className="flex items-center">
-            <span className="font-serif text-xl md:text-2xl text-primary-foreground font-medium">
-              Real Property <span className="text-gold">Planning</span>
+        <div className="flex items-center justify-between py-5">
+          <Link to="/" className="flex items-center">
+            <span className="font-serif text-lg md:text-xl text-primary-foreground font-semibold tracking-tight">
+              David Stein <span className="text-gold font-medium">Estate Property Advisory</span>
             </span>
-          </div>
+          </Link>
           
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
-            <a href="#services" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-              Services
-            </a>
-            <a href="#about" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-              About
-            </a>
-            <a href="#areas" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-              Service Areas
-            </a>
-            <Button 
-              size="sm"
-              className="bg-gold hover:bg-gold-light text-primary font-semibold"
-            >
-              <Phone className="w-4 h-4 mr-2" />
-              Contact
-            </Button>
+          <nav className="hidden lg:flex items-center gap-6">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                to={link.href}
+                className={`text-sm text-primary-foreground/80 hover:text-gold transition-colors ${
+                  location.pathname === link.href ? "text-gold" : ""
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+            <Link to="/contact">
+              <Button 
+                size="sm"
+                className="bg-gold hover:bg-gold-light text-navy font-medium ml-2"
+              >
+                <Phone className="w-4 h-4 mr-2" />
+                Consultation
+              </Button>
+            </Link>
           </nav>
           
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden text-primary-foreground"
+            className="lg:hidden text-primary-foreground p-2"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -46,23 +64,28 @@ const Header = () => {
         
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden pb-6">
-            <nav className="flex flex-col gap-4">
-              <a href="#services" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors py-2">
-                Services
-              </a>
-              <a href="#about" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors py-2">
-                About
-              </a>
-              <a href="#areas" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors py-2">
-                Service Areas
-              </a>
-              <Button 
-                className="bg-gold hover:bg-gold-light text-primary font-semibold w-full"
-              >
-                <Phone className="w-4 h-4 mr-2" />
-                Contact
-              </Button>
+          <div className="lg:hidden pb-6 border-t border-primary-foreground/10 pt-4">
+            <nav className="flex flex-col gap-3">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  className={`text-primary-foreground/80 hover:text-gold transition-colors py-2 text-sm ${
+                    location.pathname === link.href ? "text-gold" : ""
+                  }`}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>
+                <Button 
+                  className="bg-gold hover:bg-gold-light text-navy font-medium w-full mt-2"
+                >
+                  <Phone className="w-4 h-4 mr-2" />
+                  Schedule Consultation
+                </Button>
+              </Link>
             </nav>
           </div>
         )}
