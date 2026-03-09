@@ -185,16 +185,30 @@ const Index = () => {
       {/* Intro Section */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-6">
-              A Trusted Resource for Sensitive Property Matters
-            </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Real estate tied to estate settlement, probate, trust administration, or late-life housing transitions requires more than a typical home sale approach. These situations often involve legal timelines, multiple stakeholders, property condition questions, personal belongings, deferred maintenance, and emotionally difficult decisions.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              David Stein helps bring clarity and structure to the real estate side of the process. With over 20 years of experience as a professional real estate broker and state certified appraiser, he provides informed guidance for attorneys, executors, personal representatives, trustees, and families who need a capable, calm, and responsive professional to help coordinate the next steps.
-            </p>
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div>
+              <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-6">
+                A Trusted Resource for Sensitive Property Matters
+              </h2>
+              <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+                Real estate tied to estate settlement, probate, trust administration, or late-life housing transitions requires more than a typical home sale approach. These situations often involve legal timelines, multiple stakeholders, property condition questions, personal belongings, deferred maintenance, and emotionally difficult decisions.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                David Stein helps bring clarity and structure to the real estate side of the process. With over 20 years of experience as a professional real estate broker and state certified appraiser, he provides informed guidance for attorneys, executors, personal representatives, trustees, and families who need a capable, calm, and responsive professional to help coordinate the next steps.
+              </p>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="rounded-lg overflow-hidden border border-border shadow-lg">
+                <img
+                  src={coupleWritingWill}
+                  alt="A couple writing a will together, planning their estate"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              <p className="text-muted-foreground text-sm italic mt-4 text-center">
+                A will is essential to ensure your assets are distributed according to your wishes
+              </p>
+            </div>
           </div>
         </div>
       </section>
