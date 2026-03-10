@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
+import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Phone, MessageSquare } from "lucide-react";
@@ -84,6 +85,10 @@ const valuationFeatures = [
 const Executors = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Guidance for Executors, Personal Representatives & Trustees | David Stein"
+        description="David Stein helps executors, personal representatives, trustees, and families navigate inherited property, probate real estate, and estate-related home sales in King, Snohomish, Pierce, and Kitsap Counties."
+      />
       <Header />
 
       {/* Section 1: Hero */}

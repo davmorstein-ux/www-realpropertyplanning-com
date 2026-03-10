@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
+import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -64,6 +65,10 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Contact David Stein — Probate Real Estate Consultation | Western Washington"
+        description="Contact David Stein for a confidential consultation about probate property, inherited homes, trust-owned real estate, senior transitions, or estate-related home sales in King, Snohomish, Pierce, and Kitsap Counties."
+      />
       <Header />
       
       {/* Hero */}

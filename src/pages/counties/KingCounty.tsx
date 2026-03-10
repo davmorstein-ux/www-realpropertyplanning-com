@@ -2,6 +2,8 @@ import CountyPageTemplate from "@/components/CountyPageTemplate";
 
 const KingCounty = () => (
   <CountyPageTemplate
+    seoTitle="Probate Real Estate and Inherited Property Guidance in King County | David Stein"
+    seoDescription="David Stein provides probate real estate, inherited property, and trust-owned home sale guidance for attorneys, executors, trustees, and families throughout King County, Washington."
     eyebrow="King County Service Area"
     headline="Probate Real Estate and Inherited Property Guidance in King County"
     leadParagraph="David Stein helps attorneys, executors, trustees, fiduciaries, personal representatives, heirs, and families navigate probate property, inherited homes, trust-owned real estate, and estate-related property transitions throughout King County. His work is grounded in over 20 years of real estate experience, valuation insight, and a practical understanding of important property decisions."

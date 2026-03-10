@@ -1,11 +1,14 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
+import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Phone, MessageSquare } from "lucide-react";
 
 interface CountyPageProps {
+  seoTitle: string;
+  seoDescription: string;
   eyebrow: string;
   headline: string;
   leadParagraph: string;
@@ -24,7 +27,17 @@ interface CountyPageProps {
   ctaSecondaryLabel: string;
 }
 
+const relatedLinks = [
+  { href: "/how-the-process-works", label: "How the Process Works" },
+  { href: "/why-valuation-matters", label: "Why Valuation Matters" },
+  { href: "/faq", label: "Frequently Asked Questions" },
+  { href: "/cities-we-serve", label: "Cities We Serve" },
+  { href: "/contact", label: "Contact David Stein" },
+];
+
 const CountyPageTemplate = ({
+  seoTitle,
+  seoDescription,
   eyebrow,
   headline,
   leadParagraph,
@@ -44,6 +57,7 @@ const CountyPageTemplate = ({
 }: CountyPageProps) => {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead title={seoTitle} description={seoDescription} />
       <Header />
 
       {/* Hero */}
@@ -161,6 +175,28 @@ const CountyPageTemplate = ({
                   </h3>
                   <p className="text-muted-foreground leading-[1.75]">{item.text}</p>
                 </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Resources */}
+      <section className="pt-10 pb-10 md:pt-14 md:pb-14 bg-secondary">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-[1140px] mx-auto">
+            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-sm">
+              Related Resources
+            </p>
+            <div className="flex flex-wrap gap-3">
+              {relatedLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm"
+                >
+                  {link.label}
+                </Link>
               ))}
             </div>
           </div>

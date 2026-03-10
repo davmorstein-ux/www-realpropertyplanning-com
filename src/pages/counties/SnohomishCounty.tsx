@@ -2,6 +2,8 @@ import CountyPageTemplate from "@/components/CountyPageTemplate";
 
 const SnohomishCounty = () => (
   <CountyPageTemplate
+    seoTitle="Probate Real Estate and Inherited Property Guidance in Snohomish County | David Stein"
+    seoDescription="David Stein provides probate real estate, inherited property, and trust-owned home sale guidance for attorneys, executors, trustees, and families throughout Snohomish County, Washington."
     eyebrow="Snohomish County Service Area"
     headline="Probate Real Estate and Inherited Property Guidance in Snohomish County"
     leadParagraph="David Stein helps attorneys, executors, trustees, fiduciaries, personal representatives, heirs, and families navigate probate property, inherited homes, trust-owned real estate, and estate-related property transitions throughout Snohomish County. He brings over 20 years of real estate experience, valuation insight, and a practical approach to important property decisions."

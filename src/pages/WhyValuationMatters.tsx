@@ -1,7 +1,7 @@
-import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
+import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Phone, MessageSquare } from "lucide-react";
@@ -64,21 +64,12 @@ const clarityFeatures = [
 ];
 
 const WhyValuationMatters = () => {
-  useEffect(() => {
-    document.title = "Why Valuation Matters in Probate and Inherited Property Sales | David Stein";
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) {
-      meta.setAttribute("content", "Learn why valuation matters when selling probate property, inherited homes, and trust-owned real estate in King, Snohomish, Pierce, and Kitsap Counties.");
-    } else {
-      const newMeta = document.createElement("meta");
-      newMeta.name = "description";
-      newMeta.content = "Learn why valuation matters when selling probate property, inherited homes, and trust-owned real estate in King, Snohomish, Pierce, and Kitsap Counties.";
-      document.head.appendChild(newMeta);
-    }
-  }, []);
-
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Why Valuation Matters in Probate and Inherited Property Sales | David Stein"
+        description="Understand why valuation expertise matters when selling probate property, inherited homes, and trust-owned real estate. David Stein combines brokerage and certified appraisal credentials in King, Snohomish, Pierce, and Kitsap Counties."
+      />
       <Header />
 
       {/* Hero */}

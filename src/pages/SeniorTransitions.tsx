@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
+import SEOHead from "@/components/SEOHead";
 import nursingHome from "@/assets/nursing-home.png";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -18,6 +19,10 @@ const situations = [
 const SeniorTransitions = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Senior Real Estate Transitions and Downsizing Help | David Stein"
+        description="David Stein provides patient, professional real estate guidance for seniors and families navigating downsizing, relocation, assisted living transitions, and family home sales in Western Washington."
+      />
       <Header />
       
       {/* Hero */}

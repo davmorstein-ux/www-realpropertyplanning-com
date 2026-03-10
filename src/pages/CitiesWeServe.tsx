@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
+import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Phone, MessageSquare } from "lucide-react";
@@ -59,6 +60,10 @@ const CityGrid = ({ cities }: { cities: string[] }) => (
 const CitiesWeServe = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Cities We Serve for Probate and Inherited Property Guidance | David Stein"
+        description="David Stein serves cities across King, Snohomish, Pierce, and Kitsap Counties for probate real estate, inherited property, trust-owned homes, and estate-related sales in Western Washington."
+      />
       <Header />
 
       {/* Hero */}

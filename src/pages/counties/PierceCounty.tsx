@@ -2,6 +2,8 @@ import CountyPageTemplate from "@/components/CountyPageTemplate";
 
 const PierceCounty = () => (
   <CountyPageTemplate
+    seoTitle="Probate Real Estate and Inherited Property Guidance in Pierce County | David Stein"
+    seoDescription="David Stein provides probate real estate, inherited property, and trust-owned home sale guidance for attorneys, executors, trustees, and families throughout Pierce County, Washington."
     eyebrow="Pierce County Service Area"
     headline="Probate Real Estate and Inherited Property Guidance in Pierce County"
     leadParagraph="David Stein helps attorneys, executors, trustees, fiduciaries, personal representatives, heirs, and families navigate probate property, inherited homes, trust-owned real estate, and estate-related property transitions throughout Pierce County. He provides experienced real estate guidance informed by valuation perspective and an understanding of complex property decisions."
