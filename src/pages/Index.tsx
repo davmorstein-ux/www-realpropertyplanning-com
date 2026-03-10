@@ -559,6 +559,9 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Client Reviews */}
+      <TestimonialsSection />
+
       {/* FAQ Preview — Natural-Language AI-Style Questions */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
