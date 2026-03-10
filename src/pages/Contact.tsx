@@ -83,6 +83,11 @@ const Contact = () => {
         </div>
       </section>
 
+      {/* Image */}
+      <div className="flex justify-center py-10 bg-background">
+        <img src={typingImage} alt="Professional at desk" className="w-1/4 rounded-lg shadow-lg" />
+      </div>
+
       {/* Contact Content */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
