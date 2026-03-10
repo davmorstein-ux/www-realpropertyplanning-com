@@ -9,57 +9,79 @@ import { Phone, MessageSquare } from "lucide-react";
 const whyPlannersInvolveRE = [
   {
     heading: "Sale Versus Hold Decisions",
-    text: "When a client inherits property or holds real estate within a trust or estate, deciding whether to sell or hold often depends on condition, carrying costs, market timing, and broader planning goals. David Stein provides the practical real estate perspective that helps inform that analysis.",
+    text: "Clients sometimes need to decide whether to sell, retain, or further evaluate a property before making larger planning decisions. Understanding how the market is likely to view the property can help shape that conversation.",
   },
   {
-    heading: "Inherited Property Evaluation",
-    text: "Inherited homes often carry deferred maintenance, personal belongings, outdated finishes, or condition questions that affect value and next steps. David helps clients understand the property's realistic market position before making decisions.",
+    heading: "Value and Marketability Questions",
+    text: "A property's likely value is important, but so is its likely marketability. Condition, location, buyer expectations, and preparation needs can all affect timing and overall outcome.",
   },
   {
-    heading: "Trust-Related Real Estate",
-    text: "Trust-owned properties may need to be evaluated, prepared, or sold as part of broader administrative or planning goals. David Stein helps trustees and beneficiaries navigate these transitions with clarity and professionalism.",
+    heading: "Downsizing and Senior Housing Changes",
+    text: "Later-life housing decisions often involve both personal and financial considerations. When a home sale is part of the transition, practical real estate guidance helps clarify next steps.",
   },
   {
-    heading: "Timing, Preparation, and Marketability",
-    text: "The timing, presentation, and preparation of a property sale can meaningfully affect the outcome. David helps clients and their advisors understand how these factors interact with value and market conditions in Western Washington.",
+    heading: "Estate and Trust Property Transitions",
+    text: "Inherited homes, trust-owned properties, and estate assets often require coordination among family members and professional advisors. Real estate guidance can help reduce uncertainty during those transitions.",
   },
 ];
 
 const howHelpsBlocks = [
   {
     heading: "Practical Real Estate Guidance",
-    text: "David Stein helps clients and their advisors understand property condition, likely market position, preparation options, and the practical steps involved in bringing real estate to market during important transitions.",
+    text: "David helps clients understand what the property is, what may affect its value, how buyers are likely to respond, and what sale strategy may make the most sense.",
   },
   {
     heading: "Valuation-Informed Perspective",
-    text: "As both a licensed real estate broker and a Washington state certified real estate appraiser, David brings added insight into pricing, marketability, and property positioning that supports more informed decision-making.",
+    text: "As both a Washington-licensed real estate broker and a Washington state certified real estate appraiser, David Stein brings added insight to questions of pricing, condition, marketability, and positioning.",
   },
   {
     heading: "Preparation Strategy",
-    text: "Not every property needs renovation. David helps clients evaluate whether preparation, cleanup, or an as-is approach makes the most sense given condition, cost, and expected market response.",
+    text: "Some homes benefit from cleanup, repairs, or limited improvements before going to market. Others are best sold as-is. David helps clients think through those choices with care and realism.",
   },
   {
     heading: "Local Market Awareness",
-    text: "David Stein serves clients throughout King County, Snohomish County, Pierce County, and Kitsap County with local market knowledge that helps inform pricing, timing, and strategy across different communities.",
+    text: "David Stein serves King County, Snohomish County, Pierce County, and Kitsap County, with local insight that helps inform decisions in a wide range of neighborhoods and property types.",
   },
   {
     heading: "Support for Families and Decision-Makers",
-    text: "Property transitions often involve multiple stakeholders — trustees, heirs, spouses, and family members. David communicates clearly and helps reduce friction throughout the process.",
+    text: "Many planner clients are also working with trustees, heirs, fiduciaries, adult children, or other decision-makers. David helps bring clarity and practical structure to the real-estate side of the process.",
   },
   {
-    heading: "Important Property Transitions in Western Washington",
-    text: "Whether the situation involves probate, inheritance, trust administration, downsizing, or senior housing changes, David Stein helps clients navigate the real estate side of these transitions with practical, experienced guidance.",
+    heading: "Experience With Important Property Transitions",
+    text: "Probate property, inherited homes, trust-owned real estate, downsizing, and estate-related sales often require more than a standard listing approach. David helps clients move forward with greater confidence and a better understanding of their options.",
   },
 ];
 
 const commonSituations = [
-  "Inherited homes requiring evaluation and sale guidance",
-  "Trust-owned real estate transitions",
+  "Inherited homes",
+  "Trust-owned real estate",
   "Probate property sales",
-  "Senior transitions and downsizing",
-  "Longtime family homes where condition and value need assessment",
+  "Senior transitions",
+  "Downsizing",
+  "Longtime family homes",
   "Properties requiring cleanup, preparation, or as-is decisions",
-  "Homes where value and timing affect broader financial planning",
+  "Homes where likely value and timing affect broader planning conversations",
+  "Estate-related home sales",
+  "Clients seeking clarity about marketability, preparation, and next-step strategy",
+];
+
+const benefitFeatures = [
+  {
+    heading: "Realistic Market Understanding",
+    text: "Property decisions are stronger when they are grounded in current market conditions, likely buyer response, and practical preparation considerations.",
+  },
+  {
+    heading: "Clearer Next Steps",
+    text: "Clients often feel overwhelmed when real estate becomes part of a larger planning conversation. Practical guidance helps make the situation more manageable.",
+  },
+  {
+    heading: "Better Coordination Among Professionals",
+    text: "When financial planners, attorneys, fiduciaries, and real estate professionals each contribute within their own role, clients often receive clearer and more effective guidance.",
+  },
+  {
+    heading: "More Confident Decision-Making",
+    text: "When clients better understand the likely value, marketability, and sale strategy of a property, they are often able to move forward with greater confidence and less uncertainty.",
+  },
 ];
 
 const ForFinancialPlanners = () => {
@@ -86,7 +108,7 @@ const ForFinancialPlanners = () => {
       />
       <Header />
 
-      {/* Section 1: Hero */}
+      {/* Hero */}
       <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl">
@@ -120,7 +142,7 @@ const ForFinancialPlanners = () => {
         </div>
       </section>
 
-      {/* Section 2: Why Financial Planners May Involve a Real Estate Professional */}
+      {/* Why Financial Planners May Involve a Real Estate Professional */}
       <section className="pt-12 pb-12 md:pt-16 md:pb-16 lg:pt-[84px] lg:pb-[84px] bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-[1140px] mx-auto">
@@ -131,7 +153,7 @@ const ForFinancialPlanners = () => {
               Why Financial Planners May Involve a Real Estate Professional
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mb-10">
-              Financial planners may need real estate insight when a client's broader planning goals intersect with property decisions that require experienced market perspective, valuation awareness, and practical guidance.
+              Real estate can play a major role in broader planning decisions, especially when clients are dealing with inheritance, trust administration, downsizing, later-life housing transitions, or a property that may need to be sold as part of a larger financial plan. In those situations, market-aware property guidance can be valuable.
             </p>
             <div className="grid md:grid-cols-2 gap-5 lg:gap-6">
               {whyPlannersInvolveRE.map((card, index) => (
@@ -147,7 +169,7 @@ const ForFinancialPlanners = () => {
         </div>
       </section>
 
-      {/* Section 3: How David Stein Helps Financial Planner Clients */}
+      {/* How David Stein Helps Financial Planner Clients */}
       <section className="pt-12 pb-12 md:pt-16 md:pb-16 lg:pt-[84px] lg:pb-[84px] bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-[1140px] mx-auto">
@@ -158,7 +180,7 @@ const ForFinancialPlanners = () => {
               How David Stein Helps Financial Planner Clients
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mb-10">
-              David Stein provides practical, valuation-informed real estate guidance that helps financial planner clients and their families navigate important property transitions with greater clarity and confidence.
+              David Stein helps planner clients understand the real-estate side of important property decisions in a way that is grounded, organized, and informed by both market knowledge and valuation perspective.
             </p>
             <div className="grid md:grid-cols-2 gap-5 lg:gap-6">
               {howHelpsBlocks.map((block, index) => (
@@ -174,7 +196,7 @@ const ForFinancialPlanners = () => {
         </div>
       </section>
 
-      {/* Section 4: Common Real Estate Situations */}
+      {/* Common Real Estate Situations */}
       <section className="pt-12 pb-12 md:pt-16 md:pb-16 lg:pt-[84px] lg:pb-[84px] bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-[1140px] mx-auto">
@@ -185,9 +207,9 @@ const ForFinancialPlanners = () => {
               Common Real Estate Situations That Affect Financial Planning
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mb-10">
-              Financial planners and their clients encounter a range of property-related situations where experienced real estate guidance can support better-informed planning decisions.
+              Real estate is often one of the most significant assets a client owns or inherits. David Stein helps clients and their advisors navigate situations where property decisions meaningfully affect broader planning.
             </p>
-            <div className="grid md:grid-cols-2 gap-x-8 gap-y-4 mb-10">
+            <div className="grid md:grid-cols-2 gap-x-8 gap-y-4 mb-6">
               {commonSituations.map((situation, index) => (
                 <div key={index} className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-gold mt-2.5 shrink-0" />
@@ -195,7 +217,10 @@ const ForFinancialPlanners = () => {
                 </div>
               ))}
             </div>
-            <div className="flex flex-wrap gap-3 mt-8">
+            <p className="text-muted-foreground leading-relaxed max-w-3xl mb-8">
+              Whether the property is part of an inheritance, a trust, a downsizing decision, or a broader transition in later life, David Stein helps clients make better-informed decisions with a clearer understanding of the real-estate side of the process.
+            </p>
+            <div className="flex flex-wrap gap-3">
               <Link to="/how-the-process-works" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">How the Process Works</Link>
               <span className="text-muted-foreground/40">·</span>
               <Link to="/why-valuation-matters" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Why Valuation Matters</Link>
@@ -208,32 +233,37 @@ const ForFinancialPlanners = () => {
         </div>
       </section>
 
-      {/* Section 5: Experienced Property Guidance */}
+      {/* Why Clients Benefit From Experienced Property Guidance */}
       <section className="pt-12 pb-12 md:pt-16 md:pb-16 lg:pt-[84px] lg:pb-[84px] bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-[1140px] mx-auto">
-            <div className="max-w-3xl">
-              <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
-                Experienced Perspective
-              </p>
-              <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-[22px]">
-                Why Clients Benefit From Experienced Property Guidance
-              </h2>
-              <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                Clients are often better served when property-related decisions are approached with realistic market perspective, practical planning, and coordination among the professionals involved. When a financial planner, attorney, fiduciary, and real estate professional each contribute within their area of expertise, the client benefits from a more informed and well-organized process.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                David Stein values the trust that financial planners place in him when referring a client. He aims to reflect well on the professionals who involve him by providing thoughtful, experienced, and discreet real estate guidance throughout every property transition.
-              </p>
+            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
+              Experienced Perspective
+            </p>
+            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-[22px]">
+              Why Clients Benefit From Experienced Property Guidance
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mb-10">
+              Clients are often better served when property-related decisions are approached with realistic market perspective, practical planning, and coordination among the professionals involved.
+            </p>
+            <div className="grid md:grid-cols-2 gap-5 lg:gap-6">
+              {benefitFeatures.map((feature, index) => (
+                <div key={index} className="bg-secondary border border-border rounded-[18px] px-7 py-8 md:px-8 md:py-9">
+                  <h3 className="font-serif text-xl md:text-[22px] text-foreground font-semibold mb-3">
+                    {feature.heading}
+                  </h3>
+                  <p className="text-muted-foreground leading-[1.75]">{feature.text}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Section 6: Disclaimer */}
+      {/* Disclaimer */}
       <DisclaimerSection />
 
-      {/* Section 7: Final CTA */}
+      {/* Final CTA */}
       <section className="pt-12 pb-16 md:pt-16 md:pb-20 lg:pt-[84px] lg:pb-[104px] bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-[1140px] mx-auto">
