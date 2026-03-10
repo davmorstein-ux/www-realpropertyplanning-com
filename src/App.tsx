@@ -13,6 +13,8 @@ import HowTheProcessWorks from "./pages/HowTheProcessWorks";
 import WhyValuationMatters from "./pages/WhyValuationMatters";
 import AttorneyReferral from "./pages/AttorneyReferral";
 import Executors from "./pages/Executors";
+import ForCPAs from "./pages/ForCPAs";
+import ForFinancialPlanners from "./pages/ForFinancialPlanners";
 import About from "./pages/About";
 import FAQ from "./pages/FAQ";
 import Terminology from "./pages/Terminology";
