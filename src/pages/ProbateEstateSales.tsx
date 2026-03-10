@@ -25,7 +25,6 @@ const ProbateEstateSales = () => {
       {/* Hero */}
       <section className="bg-navy pt-32 pb-20 lg:pb-28">
         <div className="container px-6 lg:px-8">
-          <div className="flex items-start justify-between gap-8">
           <div className="max-w-3xl">
             <p className="text-gold font-bold tracking-widest uppercase mb-4 text-base">
               Probate Real Estate Services
@@ -42,14 +41,6 @@ const ProbateEstateSales = () => {
                 Request a Property Review
               </Button>
             </Link>
-          </div>
-          <div className="hidden lg:block shrink-0">
-            <img
-              src={stampImage}
-              alt="Vintage estate property stamp"
-              className="w-64 xl:w-72 rounded-lg shadow-lg"
-            />
-          </div>
           </div>
         </div>
       </section>
@@ -69,18 +60,27 @@ const ProbateEstateSales = () => {
                 David Stein helps clients and referral partners navigate the real estate side of the process with professionalism and practical guidance. His work includes helping assess the property, understand likely market value, determine the best sale approach, coordinate needed preparation, and manage the transaction through closing.
               </p>
             </div>
-            <div className="bg-ivory rounded-lg p-8 lg:p-10">
-              <h3 className="font-serif text-xl text-foreground font-semibold mb-6">
-                Services Include
-              </h3>
-              <ul className="space-y-4">
-                {services.map((service, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-gold mt-0.5 shrink-0" />
-                    <span className="text-foreground">{service}</span>
-                  </li>
-                ))}
-              </ul>
+            <div className="space-y-8">
+              <div className="hidden lg:flex justify-center">
+                <img
+                  src={stampImage}
+                  alt="Vintage estate property stamp"
+                  className="w-64 xl:w-72 rounded-lg shadow-lg"
+                />
+              </div>
+              <div className="bg-ivory rounded-lg p-8 lg:p-10">
+                <h3 className="font-serif text-xl text-foreground font-semibold mb-6">
+                  Services Include
+                </h3>
+                <ul className="space-y-4">
+                  {services.map((service, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-gold mt-0.5 shrink-0" />
+                      <span className="text-foreground">{service}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </div>
