@@ -85,6 +85,10 @@ const differentiators = [
 const AttorneyReferral = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Attorney and Professional Referral Resource for Probate Real Estate | David Stein"
+        description="David Stein is a real estate and valuation resource for attorneys, trustees, executors, and fiduciaries handling probate, trust, and estate property matters in King, Snohomish, Pierce, and Kitsap Counties."
+      />
       <Header />
 
       {/* Section 1: Hero */}
