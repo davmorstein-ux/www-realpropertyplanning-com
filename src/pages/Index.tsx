@@ -112,10 +112,10 @@ const Index = () => {
          <div className="container px-6 lg:px-8 pt-20">
             <div>
               {/* Logo & Headshot */}
-              <div className="flex items-center justify-center gap-8 mb-8">
-                <img src={logo} alt="Real Property Planning Logo" className="h-[512px] md:h-[640px] w-auto" />
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 mb-8">
+                <img src={logo} alt="Real Property Planning Logo" className="h-[280px] sm:h-[400px] md:h-[512px] lg:h-[640px] w-auto" />
                 <div className="flex flex-col items-center">
-                  <img src={daveHeadshot2} alt="David Stein" className="h-[256px] md:h-[320px] w-auto rounded-2xl object-cover shadow-lg" />
+                  <img src={daveHeadshot2} alt="David Stein" className="h-[180px] sm:h-[220px] md:h-[256px] lg:h-[320px] w-auto rounded-2xl object-cover shadow-lg" />
                   <div className="mt-3 flex flex-col items-center">
                     <div className="flex items-center gap-3">
                       <p className="font-serif text-lg font-semibold text-foreground">David Stein</p>
