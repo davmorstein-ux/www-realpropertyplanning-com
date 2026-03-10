@@ -10,6 +10,8 @@ const primaryLinks = [
     { href: "/senior-transitions", label: "Senior Transitions" },
     { href: "/for-attorneys", label: "For Attorneys & Fiduciaries" },
     { href: "/executors", label: "For Executors" },
+    { href: "/for-cpas", label: "For CPAs" },
+    { href: "/for-financial-planners", label: "For Financial Planners" },
     { href: "/how-the-process-works", label: "How the Process Works" },
     { href: "/why-valuation-matters", label: "Why Valuation Matters" },
   ]},

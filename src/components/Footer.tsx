@@ -37,6 +37,8 @@ const Footer = () => {
               <li><Link to="/senior-transitions" className="hover:text-gold transition-colors">Senior Transitions</Link></li>
               <li><Link to="/for-attorneys" className="hover:text-gold transition-colors">For Attorneys & Fiduciaries</Link></li>
               <li><Link to="/executors" className="hover:text-gold transition-colors">For Executors</Link></li>
+              <li><Link to="/for-cpas" className="hover:text-gold transition-colors">For CPAs</Link></li>
+              <li><Link to="/for-financial-planners" className="hover:text-gold transition-colors">For Financial Planners</Link></li>
               <li><Link to="/why-valuation-matters" className="hover:text-gold transition-colors">Why Valuation Matters</Link></li>
               <li><Link to="/how-the-process-works" className="hover:text-gold transition-colors">How the Process Works</Link></li>
             </ul>

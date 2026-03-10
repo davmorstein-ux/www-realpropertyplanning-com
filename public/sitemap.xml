@@ -36,6 +36,16 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://realpropertyplanning.com/for-cpas</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://realpropertyplanning.com/for-financial-planners</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://realpropertyplanning.com/attorney-referral</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

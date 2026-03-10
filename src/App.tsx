@@ -13,6 +13,8 @@ import HowTheProcessWorks from "./pages/HowTheProcessWorks";
 import WhyValuationMatters from "./pages/WhyValuationMatters";
 import AttorneyReferral from "./pages/AttorneyReferral";
 import Executors from "./pages/Executors";
+import ForCPAs from "./pages/ForCPAs";
+import ForFinancialPlanners from "./pages/ForFinancialPlanners";
 import About from "./pages/About";
 import FAQ from "./pages/FAQ";
 import Terminology from "./pages/Terminology";
@@ -44,6 +46,8 @@ const App = () => (
           <Route path="/why-valuation-matters" element={<WhyValuationMatters />} />
           <Route path="/attorney-referral" element={<AttorneyReferral />} />
           <Route path="/executors" element={<Executors />} />
+          <Route path="/for-cpas" element={<ForCPAs />} />
+          <Route path="/for-financial-planners" element={<ForFinancialPlanners />} />
           <Route path="/about" element={<About />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/terminology" element={<Terminology />} />
