@@ -99,8 +99,9 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Desktop Secondary Row */}
-        <div className="hidden lg:flex items-center justify-center gap-6 pb-3 -mt-1">
+        {/* Desktop Secondary Row — offset to align with primary text links */}
+        <div className="hidden lg:flex items-center justify-center pb-3 -mt-1">
+          <div className="flex items-center gap-6 pr-[140px]">
           {secondaryLinks.map((link) => (
             <Link key={link.href} to={link.href} className={linkClass(link.href)}>
               {link.label}
@@ -137,6 +138,7 @@ const Header = () => {
                 ))}
               </div>
             )}
+          </div>
           </div>
         </div>
 
