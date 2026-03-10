@@ -36,6 +36,10 @@ const contentBlocks = [
 const HowWeWork = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="How David Stein Works With Attorneys, Executors, Trustees & Families | Western Washington"
+        description="Learn how David Stein collaborates with attorneys, executors, trustees, and families to provide real estate guidance, valuation insight, and practical coordination during probate, trust, and estate property transitions."
+      />
       <Header />
 
       {/* Hero */}
