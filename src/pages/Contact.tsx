@@ -86,12 +86,9 @@ const Contact = () => {
       {/* Contact Content */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
-          <div className="flex justify-center mb-10">
-            <img src={typingImage} alt="Professional at desk" className="w-[12.5%] rounded-lg shadow-lg" />
-          </div>
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Contact Info */}
-            <div className="-mt-[calc(12.5vw*0.75+2.5rem)]">
+            <div>
               <h2 className="font-serif text-2xl text-foreground font-semibold mb-6">
                 Start With a Conversation
               </h2>
