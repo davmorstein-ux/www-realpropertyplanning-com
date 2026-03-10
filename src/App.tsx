@@ -46,6 +46,8 @@ const App = () => (
           <Route path="/why-valuation-matters" element={<WhyValuationMatters />} />
           <Route path="/attorney-referral" element={<AttorneyReferral />} />
           <Route path="/executors" element={<Executors />} />
+          <Route path="/for-cpas" element={<ForCPAs />} />
+          <Route path="/for-financial-planners" element={<ForFinancialPlanners />} />
           <Route path="/about" element={<About />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/terminology" element={<Terminology />} />
