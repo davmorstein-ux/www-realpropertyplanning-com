@@ -28,6 +28,11 @@ const featuredReviews = [
     label: "Family Review",
     situation: "Inherited home and sale preparation",
   },
+  {
+    text: "David's dual background in brokerage and appraisal gave us confidence that the property was priced correctly. He made a complicated situation feel manageable.",
+    label: "Professional Referral",
+    situation: "Probate property sale coordination",
+  },
 ];
 
 const TestimonialsSection = () => {
