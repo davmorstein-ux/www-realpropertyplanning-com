@@ -133,9 +133,20 @@ const ForAttorneys = () => {
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-6">
               How David Supports Attorneys and Fiduciaries
             </h2>
-            <p className="text-muted-foreground leading-relaxed text-lg">
+            <p className="text-muted-foreground leading-relaxed text-lg mb-8">
               David Stein aims to be a dependable extension of the advisory team. He helps clients understand their options, reduces friction in the real estate process, and maintains clear communication throughout the matter. Whether the property should be sold as-is, prepared for market, or evaluated more carefully before a decision is made, David helps bring clarity and forward motion to the process.
             </p>
+            <div className="flex flex-wrap gap-3">
+              <Link to="/for-cpas" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For CPAs</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/for-financial-planners" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Financial Planners</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/executors" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Executors</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/how-the-process-works" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">How the Process Works</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/why-valuation-matters" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Why Valuation Matters</Link>
+            </div>
           </div>
         </div>
       </section>
