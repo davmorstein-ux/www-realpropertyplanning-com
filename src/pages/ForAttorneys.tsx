@@ -163,7 +163,7 @@ const ForAttorneys = () => {
             </p>
             <Link to="/contact">
               <Button size="lg" className="bg-gold hover:bg-gold-light text-navy font-semibold">
-                Start a Confidential Conversation
+                Discuss a Referral Opportunity
               </Button>
             </Link>
           </div>

@@ -242,8 +242,12 @@ const Index = () => {
                 Probate Real Estate, Inherited Property & Estate Sale Guidance in Western Washington
               </h1>
 
-              <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-[760px] mx-auto mb-8 text-center">
-                David Stein works with attorneys, executors, trustees, CPAs, financial planners, and families to navigate the sale of probate property, inherited homes, trust-owned real estate, and estate properties across King, Snohomish, Pierce, and Kitsap Counties.
+              <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-[760px] mx-auto mb-4 text-center">
+                David Stein is a licensed real estate broker and Washington state certified real estate appraiser who works with attorneys, executors, trustees, CPAs, financial planners, and families to navigate the sale of probate property, inherited homes, trust-owned real estate, and estate properties across King, Snohomish, Pierce, and Kitsap Counties.
+              </p>
+
+              <p className="text-base text-muted-foreground/80 leading-relaxed max-w-[680px] mx-auto mb-8 text-center">
+                Unlike a typical listing agent, David combines brokerage expertise with certified appraisal credentials and over 20 years of experience to provide valuation-informed guidance during sensitive property transitions.
               </p>
 
               <div className="flex flex-wrap justify-center gap-3.5 mb-8">
@@ -252,7 +256,7 @@ const Index = () => {
                     size="lg" 
                     className="bg-foreground hover:bg-foreground/90 text-background font-bold px-6 rounded-xl text-base h-[52px]"
                   >
-                    Schedule a Consultation
+                    Request a Confidential Consultation
                   </Button>
                 </Link>
                 <Link to="/probate-estate-sales">
@@ -267,7 +271,7 @@ const Index = () => {
               </div>
 
               <div className="flex flex-wrap justify-center gap-3">
-                {["Probate Property", "Inherited Homes", "Trust Real Estate", "Estate Sales"].map((tag) => (
+                {["Probate Property", "Inherited Homes", "Trust Real Estate", "Estate Sales", "Senior Transitions"].map((tag) => (
                   <span 
                     key={tag}
                     className="bg-card border border-border rounded-full px-4 py-2.5 text-sm text-muted-foreground"
@@ -278,20 +282,26 @@ const Index = () => {
               </div>
             </div>
 
-            {/* Info Card below */}
+            {/* Who This Helps */}
             <div className="mt-12 max-w-3xl mx-auto">
               <div className="bg-card border border-border rounded-3xl p-8 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
-                <h2 className="font-serif text-[28px] font-bold text-foreground mb-5">
-                  A professional resource during complex property transitions
+                <p className="text-gold font-bold tracking-[0.2em] uppercase mb-2 text-xs">
+                  Who This Helps
+                </p>
+                <h2 className="font-serif text-[26px] font-bold text-foreground mb-5">
+                  A professional resource for people navigating complex property transitions
                 </h2>
-                <div className="grid gap-3.5">
+                <div className="grid sm:grid-cols-2 gap-3">
                   {[
-                    "Guidance for executors and personal representatives",
-                    "Coordination with attorneys and trusted advisors",
-                    "Property valuation, preparation, and sale strategy",
-                    "Discreet, compassionate, and experienced representation"
+                    "Attorneys and fiduciaries",
+                    "Executors and personal representatives",
+                    "Trustees and estate administrators",
+                    "CPAs and financial planners",
+                    "Heirs, families, and adult children",
+                    "Seniors and out-of-area decision-makers"
                   ].map((item, i) => (
-                    <div key={i} className="px-4 py-3.5 bg-secondary rounded-xl text-muted-foreground text-sm">
+                    <div key={i} className="flex items-center gap-3 px-4 py-3 bg-secondary rounded-xl text-muted-foreground text-sm">
+                      <CheckCircle className="w-4 h-4 text-gold shrink-0" />
                       {item}
                     </div>
                   ))}
