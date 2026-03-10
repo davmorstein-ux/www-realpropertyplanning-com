@@ -21,7 +21,7 @@ const About = () => {
       <Header />
       
       {/* Hero */}
-      <section className="bg-navy pt-32 pb-20 lg:pb-28">
+      <section className="bg-navy pt-16 pb-12 lg:pt-32 lg:pb-28">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="text-gold font-bold tracking-widest uppercase mb-4 text-base">

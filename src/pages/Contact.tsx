@@ -67,16 +67,16 @@ const Contact = () => {
       <Header />
       
       {/* Hero */}
-      <section className="bg-navy pt-32 pb-20 lg:pb-28">
+      <section className="bg-navy pt-20 pb-10 lg:pt-32 lg:pb-28">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="text-gold font-bold tracking-widest uppercase mb-4 text-base">
               Contact David Stein
             </p>
-            <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
+            <h1 className="font-serif text-3xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-4 md:mb-6">
               Contact David Stein
             </h1>
-            <p className="text-xl text-primary-foreground/80 leading-relaxed">
+            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed">
               Confidential, experienced guidance for estate, probate, trust, and senior real estate matters
             </p>
           </div>
@@ -84,7 +84,7 @@ const Contact = () => {
       </section>
 
       {/* Contact Content */}
-      <section className="py-20 lg:py-28 bg-background">
+      <section className="py-12 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Contact Info */}
@@ -157,9 +157,9 @@ const Contact = () => {
             {/* Contact Form */}
             <div className="lg:col-span-2">
               <div className="flex justify-center mb-8">
-                <img src={typingImage} alt="Professional at desk" className="w-1/4 rounded-lg shadow-lg" />
+                <img src={typingImage} alt="Professional at desk" className="w-1/3 sm:w-1/4 lg:w-1/4 rounded-lg shadow-lg" />
               </div>
-              <div className="bg-card rounded-lg border border-border p-8 lg:p-10">
+              <div className="bg-card rounded-lg border border-border p-6 sm:p-8 lg:p-10">
                 <h3 className="font-serif text-2xl text-foreground font-semibold mb-2">
                   Tell Us About Your Situation
                 </h3>
