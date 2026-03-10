@@ -159,7 +159,7 @@ const Contact = () => {
               <div className="flex justify-center mb-8">
                 <img src={typingImage} alt="Professional at desk" className="w-1/3 sm:w-1/4 lg:w-1/4 rounded-lg shadow-lg" />
               </div>
-              <div className="bg-card rounded-lg border border-border p-8 lg:p-10">
+              <div className="bg-card rounded-lg border border-border p-6 sm:p-8 lg:p-10">
                 <h3 className="font-serif text-2xl text-foreground font-semibold mb-2">
                   Tell Us About Your Situation
                 </h3>
