@@ -212,7 +212,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Probate Real Estate & Estate Property Sales | David Stein — King, Snohomish, Pierce & Kitsap Counties"
+        title="Probate Real Estate, Inherited Property & Estate Sale Guidance in Western Washington | David Stein"
         description="David Stein provides probate real estate, inherited property, trust-owned real estate, and estate sale guidance in King, Snohomish, Pierce, and Kitsap Counties. Licensed Washington real estate broker and state certified appraiser."
         jsonLd={jsonLd}
       />
