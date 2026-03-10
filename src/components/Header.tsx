@@ -82,7 +82,7 @@ const Header = () => {
             <Link to="/contact">
               <Button
                 size="sm"
-                className="bg-gold hover:bg-gold-light text-foreground font-medium ml-2"
+                className="bg-gold hover:bg-gold-light text-foreground font-medium"
               >
                 <Phone className="w-4 h-4 mr-2" />
                 Consultation
