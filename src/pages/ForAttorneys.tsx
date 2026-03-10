@@ -4,6 +4,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Phone, CheckCircle, Briefcase, Mail } from "lucide-react";
+import attorneyImage from "@/assets/attorney.png";
 
 const reasons = [
   "Over 20 years of real estate experience",
