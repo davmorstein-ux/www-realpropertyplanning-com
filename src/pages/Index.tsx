@@ -155,6 +155,8 @@ const audiences = [
   "Estate administrators",
   "Trustees",
   "Fiduciaries",
+  "CPAs",
+  "Financial planners",
   "Adult children helping parents transition",
   "Seniors planning a move",
   "Families selling inherited property"
