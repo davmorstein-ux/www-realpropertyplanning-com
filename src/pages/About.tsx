@@ -19,6 +19,10 @@ const values = [
 const About = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="About David Stein — Probate Real Estate Broker & Certified Appraiser | Western Washington"
+        description="David Stein is a licensed real estate broker and Washington state certified appraiser with over 20 years of experience helping attorneys, executors, trustees, and families with probate, inherited, and estate property transitions."
+      />
       <Header />
       
       {/* Hero */}
