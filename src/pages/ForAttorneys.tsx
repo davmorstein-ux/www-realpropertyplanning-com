@@ -33,8 +33,8 @@ const ForAttorneys = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Real Estate Resource for Attorneys, Trustees & Fiduciaries | David Stein"
-        description="David Stein serves as a trusted real estate and valuation resource for attorneys, trustees, executors, and fiduciaries handling probate, estate, and trust property matters in Western Washington."
+        title="Real Estate Guidance for Attorneys and Fiduciaries | David Stein"
+        description="David Stein is a trusted real estate and valuation resource for attorneys, trustees, executors, and fiduciaries handling probate, estate, trust, and inherited property matters in King, Snohomish, Pierce, and Kitsap Counties."
       />
       <Header />
       

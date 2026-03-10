@@ -77,7 +77,7 @@ const TestimonialsSection = () => {
         </div>
 
         {/* Featured Reviews — Premium Cards */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-14">
+        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-14">
           {featuredReviews.map((review, i) => (
             <div key={i} className="bg-background rounded-2xl p-10 border border-border relative">
               <Quote className="w-10 h-10 text-gold/20 absolute top-8 right-8" />
