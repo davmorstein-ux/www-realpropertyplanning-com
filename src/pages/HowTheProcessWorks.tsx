@@ -4,6 +4,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Phone, MessageSquare } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 const steps = [
   {
