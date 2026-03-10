@@ -60,6 +60,10 @@ const reassuranceCards = [
 const HowTheProcessWorks = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>How the Process Works for Probate and Inherited Property Sales | David Stein</title>
+        <meta name="description" content="Learn how David Stein helps clients navigate probate property, inherited homes, trust-owned real estate, and estate sales in King, Snohomish, Pierce, and Kitsap Counties." />
+      </Helmet>
       <Header />
 
       {/* Hero */}
