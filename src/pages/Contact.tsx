@@ -15,6 +15,7 @@ import {
 import { Phone, Mail, MapPin } from "lucide-react";
 import { useState } from "react";
 import expRealtyLogo from "@/assets/exp-realty-logo.png";
+import typingImage from "@/assets/typing.png";
 import { useToast } from "@/hooks/use-toast";
 
 const roleOptions = [
@@ -156,6 +157,9 @@ const Contact = () => {
             {/* Contact Form */}
             <div className="lg:col-span-2">
               <div className="bg-card rounded-lg border border-border p-8 lg:p-10">
+                <div className="flex justify-center mb-6">
+                  <img src={typingImage} alt="Professional at desk" className="w-1/4 rounded-lg shadow-lg" />
+                </div>
                 <h3 className="font-serif text-2xl text-foreground font-semibold mb-2">
                   Tell Us About Your Situation
                 </h3>
