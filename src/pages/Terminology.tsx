@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
+import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Phone, MessageSquare } from "lucide-react";
@@ -116,6 +117,10 @@ const glossaryData: GlossaryCategory[] = [
 const Terminology = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Wills, Probate & Real Property Glossary | David Stein"
+        description="A clear glossary of wills, probate, inheritance, and real property terms to help attorneys, executors, trustees, and families understand the process of managing and selling estate-related real estate."
+      />
       <Header />
 
       {/* Hero */}

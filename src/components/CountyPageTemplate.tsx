@@ -189,14 +189,16 @@ const CountyPageTemplate = ({
               Related Resources
             </p>
             <div className="flex flex-wrap gap-3">
-              {relatedLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  to={link.href}
-                  className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm"
-                >
-                  {link.label}
-                </Link>
+              {relatedLinks.map((link, i) => (
+                <span key={link.href} className="flex items-center gap-3">
+                  {i > 0 && <span className="text-muted-foreground/40">·</span>}
+                  <Link
+                    to={link.href}
+                    className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm"
+                  >
+                    {link.label}
+                  </Link>
+                </span>
               ))}
             </div>
           </div>

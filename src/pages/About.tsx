@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
+import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Phone, CheckCircle, ExternalLink } from "lucide-react";
@@ -18,6 +19,10 @@ const values = [
 const About = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="About David Stein — Probate Real Estate Broker & Certified Appraiser | Western Washington"
+        description="David Stein is a licensed real estate broker and Washington state certified appraiser with over 20 years of experience helping attorneys, executors, trustees, and families with probate, inherited, and estate property transitions."
+      />
       <Header />
       
       {/* Hero */}
@@ -171,6 +176,26 @@ const About = () => {
                 Contact David Stein
               </Button>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Resources */}
+      <section className="pt-10 pb-10 md:pt-14 md:pb-14 bg-ivory">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-sm">Related Resources</p>
+            <div className="flex flex-wrap gap-3">
+              <Link to="/for-attorneys" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Attorneys & Fiduciaries</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/how-the-process-works" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">How the Process Works</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/why-valuation-matters" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Why Valuation Matters</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/faq" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">FAQ</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/contact" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Contact</Link>
+            </div>
           </div>
         </div>
       </section>

@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
+import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Phone, MessageSquare } from "lucide-react";
@@ -84,6 +85,10 @@ const differentiators = [
 const AttorneyReferral = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Attorney and Professional Referral Resource for Probate Real Estate | David Stein"
+        description="David Stein is a real estate and valuation resource for attorneys, trustees, executors, and fiduciaries handling probate, trust, and estate property matters in King, Snohomish, Pierce, and Kitsap Counties."
+      />
       <Header />
 
       {/* Section 1: Hero */}
@@ -244,9 +249,22 @@ const AttorneyReferral = () => {
                 </div>
               ))}
             </div>
-            <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl">
+            <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mb-8">
               For attorneys, fiduciaries, executors, trustees, and families seeking a knowledgeable real estate resource in King County, Snohomish County, Pierce County, or Kitsap County, David Stein offers experience that extends beyond a conventional listing approach.
             </p>
+            <div className="flex flex-wrap gap-3">
+              <Link to="/for-attorneys" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Attorneys & Fiduciaries</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/for-cpas" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For CPAs</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/for-financial-planners" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Financial Planners</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/how-the-process-works" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">How the Process Works</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/faq" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">FAQ</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/contact" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Contact</Link>
+            </div>
           </div>
         </div>
       </section>
