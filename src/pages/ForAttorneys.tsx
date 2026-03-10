@@ -36,29 +36,34 @@ const ForAttorneys = () => {
       {/* Hero */}
       <section className="bg-navy pt-32 pb-20 lg:pb-28">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <p className="text-gold font-bold tracking-widest uppercase mb-4 text-base">
-              For Attorneys, Executors & Fiduciaries
-            </p>
-            <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
-              A Trusted Real Estate Resource for Attorneys, Fiduciaries, and High-Trust Referrals
-            </h1>
-            <p className="text-xl text-primary-foreground/80 leading-relaxed mb-8">
-              David Stein works with attorneys, trustees, executors, personal representatives, and fiduciaries who need an experienced real estate professional capable of handling sensitive property matters with discretion, responsiveness, and sound judgment.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/contact">
-                <Button size="lg" className="bg-gold hover:bg-gold-light text-navy font-semibold w-full sm:w-auto">
-                  <Phone className="w-5 h-5 mr-2" />
-                  Discuss a Client Matter
-                </Button>
-              </Link>
-              <Link to="/contact">
-                <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 w-full sm:w-auto">
-                  <Mail className="w-5 h-5 mr-2" />
-                  Request Confidential Consultation
-                </Button>
-              </Link>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="text-gold font-bold tracking-widest uppercase mb-4 text-base">
+                For Attorneys, Executors & Fiduciaries
+              </p>
+              <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
+                A Trusted Real Estate Resource for Attorneys, Fiduciaries, and High-Trust Referrals
+              </h1>
+              <p className="text-xl text-primary-foreground/80 leading-relaxed mb-8">
+                David Stein works with attorneys, trustees, executors, personal representatives, and fiduciaries who need an experienced real estate professional capable of handling sensitive property matters with discretion, responsiveness, and sound judgment.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link to="/contact">
+                  <Button size="lg" className="bg-gold hover:bg-gold-light text-navy font-semibold w-full sm:w-auto">
+                    <Phone className="w-5 h-5 mr-2" />
+                    Discuss a Client Matter
+                  </Button>
+                </Link>
+                <Link to="/contact">
+                  <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 w-full sm:w-auto">
+                    <Mail className="w-5 h-5 mr-2" />
+                    Request Confidential Consultation
+                  </Button>
+                </Link>
+              </div>
+            </div>
+            <div className="hidden lg:flex justify-center">
+              <img src={attorneyImage} alt="Professional attorneys signing documents" className="w-80 xl:w-96 rounded-lg shadow-lg" />
             </div>
           </div>
         </div>
