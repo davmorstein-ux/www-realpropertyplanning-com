@@ -34,7 +34,7 @@ const ForAttorneys = () => {
       <Header />
       
       {/* Hero */}
-      <section className="bg-navy pt-32 pb-20 lg:pb-28">
+      <section className="bg-navy pt-16 pb-12 lg:pt-32 lg:pb-28">
         <div className="container px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
