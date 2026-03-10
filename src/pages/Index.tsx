@@ -155,6 +155,8 @@ const audiences = [
   "Estate administrators",
   "Trustees",
   "Fiduciaries",
+  "CPAs",
+  "Financial planners",
   "Adult children helping parents transition",
   "Seniors planning a move",
   "Families selling inherited property"
@@ -242,7 +244,7 @@ const Index = () => {
               </h1>
 
               <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-[760px] mx-auto mb-8 text-center">
-                David Stein helps attorneys, executors, trustees, and families navigate the sale of probate property, inherited homes, trust-owned real estate, and estate properties across King, Snohomish, Pierce, and Kitsap Counties.
+                David Stein works with attorneys, executors, trustees, CPAs, financial planners, and families to navigate the sale of probate property, inherited homes, trust-owned real estate, and estate properties across King, Snohomish, Pierce, and Kitsap Counties.
               </p>
 
               <div className="flex flex-wrap justify-center gap-3.5 mb-8">
