@@ -85,7 +85,7 @@ const Contact = () => {
 
       {/* Image */}
       <div className="flex justify-center py-10 bg-background">
-        <img src={typingImage} alt="Professional at desk" className="w-1/4 rounded-lg shadow-lg" />
+        <img src={typingImage} alt="Professional at desk" className="w-[12.5%] rounded-lg shadow-lg" />
       </div>
 
       {/* Contact Content */}
