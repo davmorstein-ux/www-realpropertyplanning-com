@@ -47,6 +47,9 @@ const SeniorTransitions = () => {
       <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
+            <div className="flex justify-center mb-8">
+              <img src={nursingHome} alt="Senior living community" className="w-80 md:w-96 rounded-lg shadow-lg" />
+            </div>
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-6">
               Real Estate Guidance for a Major Life Transition
             </h2>
