@@ -9,6 +9,7 @@ import {
   CheckCircle, Users, Briefcase, ArrowRight, ChevronRight,
   Star, Award, Building, Handshake, MapPin
 } from "lucide-react";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import daveHeadshot from "@/assets/dave-headshot.jpg";
 import daveHeadshot2 from "@/assets/dave-headshot-2.jpg";
 import coupleWritingWill from "@/assets/couple-writing-will.png";
@@ -558,6 +559,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Client Reviews */}
+      <TestimonialsSection />
 
       {/* FAQ Preview — Natural-Language AI-Style Questions */}
       <section className="py-20 lg:py-28 bg-background">
