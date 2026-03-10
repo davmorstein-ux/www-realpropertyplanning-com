@@ -25,6 +25,7 @@ const ProbateEstateSales = () => {
       {/* Hero */}
       <section className="bg-navy pt-32 pb-20 lg:pb-28">
         <div className="container px-6 lg:px-8">
+          <div className="flex items-start justify-between gap-8">
           <div className="max-w-3xl">
             <p className="text-gold font-bold tracking-widest uppercase mb-4 text-base">
               Probate Real Estate Services
