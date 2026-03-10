@@ -15,6 +15,7 @@ import {
 import { Phone, Mail, MapPin } from "lucide-react";
 import { useState } from "react";
 import expRealtyLogo from "@/assets/exp-realty-logo.png";
+import typingImage from "@/assets/typing.png";
 import { useToast } from "@/hooks/use-toast";
 
 const roleOptions = [
