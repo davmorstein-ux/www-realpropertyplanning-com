@@ -139,6 +139,7 @@ const Header = () => {
               </div>
             )}
           </div>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
