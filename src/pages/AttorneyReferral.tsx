@@ -249,9 +249,22 @@ const AttorneyReferral = () => {
                 </div>
               ))}
             </div>
-            <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl">
+            <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mb-8">
               For attorneys, fiduciaries, executors, trustees, and families seeking a knowledgeable real estate resource in King County, Snohomish County, Pierce County, or Kitsap County, David Stein offers experience that extends beyond a conventional listing approach.
             </p>
+            <div className="flex flex-wrap gap-3">
+              <Link to="/for-attorneys" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Attorneys & Fiduciaries</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/for-cpas" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For CPAs</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/for-financial-planners" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Financial Planners</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/how-the-process-works" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">How the Process Works</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/faq" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">FAQ</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/contact" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Contact</Link>
+            </div>
           </div>
         </div>
       </section>
