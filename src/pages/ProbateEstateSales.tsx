@@ -4,6 +4,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Phone, CheckCircle, ArrowRight } from "lucide-react";
+import stampImage from "@/assets/stamp.png";
 
 const services = [
   "Property review and sale strategy",
