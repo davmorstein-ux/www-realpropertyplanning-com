@@ -11,11 +11,11 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <Link to="/" className="block mb-4">
               <span className="font-serif text-xl text-primary-foreground font-semibold">
-                David Stein <span className="text-gold font-bold">Estate Property Advisory</span>
+                David Stein <span className="text-gold font-bold">Real Property Planning</span>
               </span>
             </Link>
             <p className="text-primary-foreground/60 text-base leading-relaxed mb-4">
-              Discreet, experienced real estate guidance for estate, probate, trust, and senior property transitions.
+              Probate real estate, inherited property, trust-owned real estate, and estate sale guidance in Western Washington.
             </p>
             <div className="flex flex-col gap-2 text-base">
               <a href="tel:2069003015" className="text-primary-foreground/70 hover:text-gold flex items-center gap-2">
@@ -35,8 +35,10 @@ const Footer = () => {
             <ul className="space-y-2.5 text-primary-foreground/60 text-base">
               <li><Link to="/probate-estate-sales" className="hover:text-gold transition-colors">Probate & Estate Sales</Link></li>
               <li><Link to="/senior-transitions" className="hover:text-gold transition-colors">Senior Transitions</Link></li>
-              <li><Link to="/for-attorneys" className="hover:text-gold transition-colors">Attorney & Fiduciary Support</Link></li>
-              <li><Link to="/faq" className="hover:text-gold transition-colors">Property Valuation</Link></li>
+              <li><Link to="/for-attorneys" className="hover:text-gold transition-colors">For Attorneys & Fiduciaries</Link></li>
+              <li><Link to="/executors" className="hover:text-gold transition-colors">For Executors</Link></li>
+              <li><Link to="/why-valuation-matters" className="hover:text-gold transition-colors">Why Valuation Matters</Link></li>
+              <li><Link to="/how-the-process-works" className="hover:text-gold transition-colors">How the Process Works</Link></li>
             </ul>
           </div>
           
@@ -46,6 +48,9 @@ const Footer = () => {
             <ul className="space-y-2.5 text-primary-foreground/60 text-base">
               <li><Link to="/about" className="hover:text-gold transition-colors">About David Stein</Link></li>
               <li><Link to="/faq" className="hover:text-gold transition-colors">FAQ</Link></li>
+              <li><Link to="/how-we-work" className="hover:text-gold transition-colors">How We Work</Link></li>
+              <li><Link to="/attorney-referral" className="hover:text-gold transition-colors">Referral Resource</Link></li>
+              <li><Link to="/terminology" className="hover:text-gold transition-colors">Terminology</Link></li>
               <li><Link to="/contact" className="hover:text-gold transition-colors">Contact</Link></li>
             </ul>
           </div>
@@ -56,12 +61,13 @@ const Footer = () => {
             <ul className="space-y-2.5 text-primary-foreground/60 text-base">
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
-                <span>Greater Seattle Area</span>
+                <span>Greater Seattle & Puget Sound</span>
               </li>
-              <li>King County</li>
-              <li>Snohomish County</li>
-              <li>Pierce County</li>
-              <li>Kitsap County</li>
+              <li><Link to="/counties/king" className="hover:text-gold transition-colors">King County</Link></li>
+              <li><Link to="/counties/snohomish" className="hover:text-gold transition-colors">Snohomish County</Link></li>
+              <li><Link to="/counties/pierce" className="hover:text-gold transition-colors">Pierce County</Link></li>
+              <li><Link to="/counties/kitsap" className="hover:text-gold transition-colors">Kitsap County</Link></li>
+              <li><Link to="/counties" className="hover:text-gold transition-colors">Cities We Serve</Link></li>
             </ul>
           </div>
         </div>
@@ -72,7 +78,7 @@ const Footer = () => {
             David Stein provides real estate brokerage and valuation-related guidance based on his experience as a professional real estate broker and state certified appraiser. Legal, tax, and probate-specific advice should be obtained from qualified legal and tax professionals.
           </p>
           <p className="text-primary-foreground/40 text-sm leading-relaxed max-w-4xl mt-3">
-            David Stein is a licensed real estate broker in the State of Washington and a Washington state certified real estate appraiser. He is not an attorney, CPA, or tax advisor and does not provide legal, tax, or accounting advice. Information provided is for general informational and real-estate-related purposes only.
+            David Stein is a licensed real estate broker in the State of Washington and a Washington state certified real estate appraiser. He is not an attorney, CPA, or tax advisor and does not provide legal, tax, or accounting advice.
           </p>
         </div>
         
@@ -97,7 +103,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="border-t border-primary-foreground/10 mt-8 pt-4">
           <p className="text-primary-foreground/40 text-sm text-center">
-            © {new Date().getFullYear()} David Stein Estate Property Advisory. Professional Real Estate Broker & State Certified Appraiser.
+            © {new Date().getFullYear()} Real Property Planning — David Stein. Professional Real Estate Broker & State Certified Appraiser.
           </p>
         </div>
       </div>
