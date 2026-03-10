@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
@@ -58,6 +59,19 @@ const reassuranceCards = [
 ];
 
 const HowTheProcessWorks = () => {
+  useEffect(() => {
+    document.title = "How the Process Works for Probate and Inherited Property Sales | David Stein";
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta) {
+      meta.setAttribute("content", "Learn how David Stein helps clients navigate probate property, inherited homes, trust-owned real estate, and estate sales in King, Snohomish, Pierce, and Kitsap Counties.");
+    } else {
+      const newMeta = document.createElement("meta");
+      newMeta.name = "description";
+      newMeta.content = "Learn how David Stein helps clients navigate probate property, inherited homes, trust-owned real estate, and estate sales in King, Snohomish, Pierce, and Kitsap Counties.";
+      document.head.appendChild(newMeta);
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
