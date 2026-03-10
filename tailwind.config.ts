@@ -52,7 +52,9 @@ export default {
           light: "hsl(var(--gold-light))",
         },
         navy: {
+          DEFAULT: "hsl(var(--navy))",
           dark: "hsl(var(--navy-dark))",
+          light: "hsl(var(--navy-light))",
         },
         cream: "hsl(var(--cream))",
         sidebar: {
