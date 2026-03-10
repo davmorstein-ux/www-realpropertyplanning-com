@@ -2,6 +2,8 @@ import CountyPageTemplate from "@/components/CountyPageTemplate";
 
 const KitsapCounty = () => (
   <CountyPageTemplate
+    seoTitle="Probate Real Estate and Inherited Property Guidance in Kitsap County | David Stein"
+    seoDescription="David Stein provides probate real estate, inherited property, and trust-owned home sale guidance for attorneys, executors, trustees, and families throughout Kitsap County, Washington."
     eyebrow="Kitsap County Service Area"
     headline="Probate Real Estate and Inherited Property Guidance in Kitsap County"
     leadParagraph="David Stein helps attorneys, executors, trustees, fiduciaries, personal representatives, heirs, and families navigate probate property, inherited homes, trust-owned real estate, and estate-related property transitions throughout Kitsap County. His work is grounded in experienced real estate guidance, valuation insight, and a practical understanding of important property decisions."

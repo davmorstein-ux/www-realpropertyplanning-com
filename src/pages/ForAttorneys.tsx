@@ -32,6 +32,10 @@ const referralSituations = [
 const ForAttorneys = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Real Estate Resource for Attorneys, Trustees & Fiduciaries | David Stein"
+        description="David Stein serves as a trusted real estate and valuation resource for attorneys, trustees, executors, and fiduciaries handling probate, estate, and trust property matters in Western Washington."
+      />
       <Header />
       
       {/* Hero */}

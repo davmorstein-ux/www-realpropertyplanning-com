@@ -56,6 +56,10 @@ const countyData = [
 const Counties = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Probate Real Estate and Inherited Property Guidance by County | David Stein"
+        description="David Stein provides probate real estate, inherited property, and estate sale guidance organized by county across King, Snohomish, Pierce, and Kitsap Counties in Western Washington."
+      />
       <Header />
 
       {/* Hero */}

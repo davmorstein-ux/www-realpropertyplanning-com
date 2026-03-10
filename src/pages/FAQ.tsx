@@ -176,6 +176,10 @@ Many clients begin by simply needing clarity on value, timing, preparation strat
 const FAQ = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Frequently Asked Questions About Probate and Inherited Property | David Stein"
+        description="Answers to common questions about selling probate property, inherited homes, trust-owned real estate, and estate sales in King, Snohomish, Pierce, and Kitsap Counties."
+      />
       <Header />
       
       {/* Hero */}

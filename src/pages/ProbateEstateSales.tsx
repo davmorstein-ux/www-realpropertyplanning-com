@@ -21,6 +21,10 @@ const services = [
 const ProbateEstateSales = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Probate and Estate Property Sales in Western Washington | David Stein"
+        description="Experienced guidance for probate property sales, estate-owned homes, and inherited real estate in King, Snohomish, Pierce, and Kitsap Counties. David Stein helps attorneys, executors, and families navigate the sale process."
+      />
       <Header />
       
       {/* Hero */}

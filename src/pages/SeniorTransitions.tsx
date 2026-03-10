@@ -19,6 +19,10 @@ const situations = [
 const SeniorTransitions = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Senior Real Estate Transitions and Downsizing Help | David Stein"
+        description="David Stein provides patient, professional real estate guidance for seniors and families navigating downsizing, relocation, assisted living transitions, and family home sales in Western Washington."
+      />
       <Header />
       
       {/* Hero */}

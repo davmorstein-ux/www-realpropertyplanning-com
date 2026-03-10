@@ -56,12 +56,10 @@ const services = [
 ];
 
 const trustIndicators = [
-  "20+ Years of Experience",
-  "Professional Real Estate Broker",
-  "State Certified Appraiser",
-  "Estate, Probate & Trust Guidance",
-  "Senior Transition Support",
-  "Trusted by Attorneys & Families"
+  "Licensed Real Estate Broker in Washington",
+  "Washington State Certified Real Estate Appraiser",
+  "Over 20 Years of Experience",
+  "Serving King, Snohomish, Pierce & Kitsap Counties",
 ];
 
 const processSteps = [
