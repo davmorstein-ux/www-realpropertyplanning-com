@@ -67,16 +67,16 @@ const Contact = () => {
       <Header />
       
       {/* Hero */}
-      <section className="bg-navy pt-32 pb-20 lg:pb-28">
+      <section className="bg-navy pt-24 pb-12 lg:pt-32 lg:pb-28">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="text-gold font-bold tracking-widest uppercase mb-4 text-base">
               Contact David Stein
             </p>
-            <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
+            <h1 className="font-serif text-3xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-4 md:mb-6">
               Contact David Stein
             </h1>
-            <p className="text-xl text-primary-foreground/80 leading-relaxed">
+            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed">
               Confidential, experienced guidance for estate, probate, trust, and senior real estate matters
             </p>
           </div>
