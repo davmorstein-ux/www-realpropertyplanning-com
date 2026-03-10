@@ -30,6 +30,9 @@ interface CountyPageProps {
 const relatedLinks = [
   { href: "/how-the-process-works", label: "How the Process Works" },
   { href: "/why-valuation-matters", label: "Why Valuation Matters" },
+  { href: "/for-attorneys", label: "For Attorneys & Fiduciaries" },
+  { href: "/for-cpas", label: "For CPAs" },
+  { href: "/for-financial-planners", label: "For Financial Planners" },
   { href: "/faq", label: "Frequently Asked Questions" },
   { href: "/cities-we-serve", label: "Cities We Serve" },
   { href: "/contact", label: "Contact David Stein" },
