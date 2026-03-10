@@ -162,9 +162,6 @@ const Contact = () => {
             {/* Contact Form */}
             <div className="lg:col-span-2">
               <div className="bg-card rounded-lg border border-border p-8 lg:p-10">
-                <div className="flex justify-center mb-6">
-                  <img src={typingImage} alt="Professional at desk" className="w-1/4 rounded-lg shadow-lg" />
-                </div>
                 <h3 className="font-serif text-2xl text-foreground font-semibold mb-2">
                   Tell Us About Your Situation
                 </h3>
