@@ -4,6 +4,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Phone, CheckCircle, ArrowRight } from "lucide-react";
+import stampImage from "@/assets/stamp.png";
 
 const services = [
   "Property review and sale strategy",
@@ -24,6 +25,7 @@ const ProbateEstateSales = () => {
       {/* Hero */}
       <section className="bg-navy pt-32 pb-20 lg:pb-28">
         <div className="container px-6 lg:px-8">
+          <div className="flex items-start justify-between gap-8">
           <div className="max-w-3xl">
             <p className="text-gold font-bold tracking-widest uppercase mb-4 text-base">
               Probate Real Estate Services
@@ -40,6 +42,14 @@ const ProbateEstateSales = () => {
                 Request a Property Review
               </Button>
             </Link>
+          </div>
+          <div className="hidden lg:block shrink-0">
+            <img
+              src={stampImage}
+              alt="Vintage estate property stamp"
+              className="w-64 xl:w-72 rounded-lg shadow-lg"
+            />
+          </div>
           </div>
         </div>
       </section>
