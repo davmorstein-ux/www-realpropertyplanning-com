@@ -227,9 +227,20 @@ const Executors = () => {
                 </div>
               ))}
             </div>
-            <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl">
+            <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mb-8">
               For executors, personal representatives, trustees, heirs, and families, the goal is not simply to sell a property. The goal is to understand what it is, what it may be worth, what should be done before sale, and how to move forward in a way that protects value and reduces unnecessary stress.
             </p>
+            <div className="flex flex-wrap gap-3">
+              <Link to="/how-the-process-works" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">How the Process Works</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/why-valuation-matters" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Why Valuation Matters</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/for-attorneys" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Attorneys & Fiduciaries</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/faq" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Frequently Asked Questions</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/contact" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Contact David Stein</Link>
+            </div>
           </div>
         </div>
       </section>

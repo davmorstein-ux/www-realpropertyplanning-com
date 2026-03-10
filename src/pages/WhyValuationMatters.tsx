@@ -219,6 +219,26 @@ const WhyValuationMatters = () => {
         </div>
       </section>
 
+      {/* Related Resources */}
+      <section className="pt-10 pb-10 md:pt-14 md:pb-14 bg-secondary">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-[1140px] mx-auto">
+            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-sm">Related Resources</p>
+            <div className="flex flex-wrap gap-3">
+              <Link to="/how-the-process-works" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">How the Process Works</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/executors" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Executors</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/for-attorneys" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Attorneys</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/faq" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">FAQ</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/contact" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Contact</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Disclaimer */}
       <DisclaimerSection />
 

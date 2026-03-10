@@ -50,6 +50,26 @@ const ProbateEstateSales = () => {
         </div>
       </section>
 
+      {/* AI Summary + Who This Helps */}
+      <section className="py-10 lg:py-14 bg-secondary">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <p className="text-muted-foreground text-base leading-relaxed mb-4">
+              This page is for attorneys, executors, personal representatives, trustees, fiduciaries, heirs, and families who need experienced real estate guidance for selling property involved in probate, estate settlement, trust administration, or inheritance in King, Snohomish, Pierce, and Kitsap Counties, Washington.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <Link to="/for-attorneys" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Attorneys</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/executors" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Executors</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/how-the-process-works" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">How the Process Works</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/why-valuation-matters" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Why Valuation Matters</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Intro */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">

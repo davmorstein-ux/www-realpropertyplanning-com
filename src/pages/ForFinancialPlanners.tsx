@@ -225,6 +225,10 @@ const ForFinancialPlanners = () => {
               <span className="text-muted-foreground/40">·</span>
               <Link to="/why-valuation-matters" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Why Valuation Matters</Link>
               <span className="text-muted-foreground/40">·</span>
+              <Link to="/for-attorneys" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Attorneys & Fiduciaries</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/for-cpas" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For CPAs</Link>
+              <span className="text-muted-foreground/40">·</span>
               <Link to="/faq" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Frequently Asked Questions</Link>
               <span className="text-muted-foreground/40">·</span>
               <Link to="/contact" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Contact David Stein</Link>
