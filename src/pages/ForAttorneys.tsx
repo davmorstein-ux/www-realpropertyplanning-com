@@ -30,11 +30,32 @@ const referralSituations = [
 ];
 
 const ForAttorneys = () => {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: "David Stein — Real Estate Resource for Attorneys and Fiduciaries",
+    description: "David Stein is a trusted real estate and valuation resource for attorneys, trustees, executors, and fiduciaries handling probate, estate, trust, and inherited property matters in King, Snohomish, Pierce, and Kitsap Counties.",
+    url: "https://realpropertyplanning.com/for-attorneys",
+    provider: {
+      "@type": "RealEstateAgent",
+      name: "David Stein",
+      url: "https://realpropertyplanning.com",
+      jobTitle: "Real Estate Broker & State Certified Appraiser",
+    },
+    areaServed: [
+      { "@type": "AdministrativeArea", name: "King County, WA" },
+      { "@type": "AdministrativeArea", name: "Snohomish County, WA" },
+      { "@type": "AdministrativeArea", name: "Pierce County, WA" },
+      { "@type": "AdministrativeArea", name: "Kitsap County, WA" },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Real Estate Guidance for Attorneys and Fiduciaries | David Stein"
         description="David Stein is a trusted real estate and valuation resource for attorneys, trustees, executors, and fiduciaries handling probate, estate, trust, and inherited property matters in King, Snohomish, Pierce, and Kitsap Counties."
+        jsonLd={jsonLd}
       />
       <Header />
       
