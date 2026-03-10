@@ -84,7 +84,7 @@ const Contact = () => {
       </section>
 
       {/* Contact Content */}
-      <section className="py-20 lg:py-28 bg-background">
+      <section className="py-12 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Contact Info */}
