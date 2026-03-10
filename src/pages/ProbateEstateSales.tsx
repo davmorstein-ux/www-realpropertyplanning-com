@@ -43,6 +43,14 @@ const ProbateEstateSales = () => {
               </Button>
             </Link>
           </div>
+          <div className="hidden lg:block shrink-0">
+            <img
+              src={stampImage}
+              alt="Vintage estate property stamp"
+              className="w-64 xl:w-72 rounded-lg shadow-lg"
+            />
+          </div>
+          </div>
         </div>
       </section>
 
