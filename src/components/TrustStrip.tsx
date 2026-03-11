@@ -8,7 +8,7 @@ const trustIndicators = [
 ];
 
 const TrustStrip = () => (
-  <section className="bg-secondary border-y border-border py-5">
+  <section data-nosnippet className="bg-secondary border-y border-border py-5">
     <div className="container px-6 lg:px-8">
       <div className="flex flex-wrap justify-center gap-x-8 gap-y-3">
         {trustIndicators.map((indicator, index) => (

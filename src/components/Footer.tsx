@@ -4,7 +4,7 @@ import expRealtyLogo from "@/assets/exp-realty-logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-navy-dark py-16">
+    <footer data-nosnippet className="bg-navy-dark py-16">
       <div className="container px-6 lg:px-8">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand */}

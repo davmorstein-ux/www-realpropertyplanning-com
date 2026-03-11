@@ -34,6 +34,7 @@ const SEOHead = ({ title, description, canonical, jsonLd }: SEOHeadProps) => {
     setMeta("og:type", "website", "property");
     setMeta("twitter:title", title, "name");
     setMeta("twitter:description", description, "name");
+    setMeta("robots", "index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1");
 
     // Canonical link
     let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
@@ -66,3 +67,4 @@ const SEOHead = ({ title, description, canonical, jsonLd }: SEOHeadProps) => {
 };
 
 export default SEOHead;
+
