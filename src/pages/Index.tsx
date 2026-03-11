@@ -208,8 +208,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Probate Real Estate & Inherited Property Guidance | David Stein Washington"
-        description="David Stein helps attorneys, executors, trustees, and families handle probate real estate, inherited homes, estate property sales, and senior transitions throughout Western Washington."
+        title="Probate Real Estate & Inherited Property Guidance | Real Property Planning"
+        description="Real Property Planning helps attorneys, executors, trustees, fiduciaries, and families navigate probate real estate, inherited homes, estate sales, and senior transitions throughout Western Washington."
         jsonLd={jsonLd}
       />
       <Header />
