@@ -163,10 +163,10 @@ const ForAttorneys = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-              Why Referral Partners Value Working with David
+              Why Referral Partners Value Working with Real Property Planning
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Referral partners often need a dependable real estate resource who will communicate professionally, treat clients with patience and respect, and understand that these transactions are rarely routine. David's goal is to make attorneys look well-supported by helping the real estate side move forward in an organized and thoughtful way.
+              Referral partners often need a dependable real estate resource who will communicate professionally, treat clients with patience and respect, and understand that these transactions are rarely routine. The goal is to make attorneys look well-supported by helping the real estate side move forward in an organized and thoughtful way.
             </p>
           </div>
         </div>
