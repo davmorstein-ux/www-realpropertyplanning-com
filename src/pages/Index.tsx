@@ -19,38 +19,38 @@ import expRealtyLogo2 from "@/assets/exp-realty-logo-2.png";
 const services = [
   {
     icon: Scale,
-    title: "Probate Real Estate",
+    title: "Probate & Estate Sales",
     description: "Guidance for properties involved in probate, estate administration, and inherited real estate matters.",
     link: "/probate-estate-sales"
   },
   {
-    icon: Building,
-    title: "Estate Property Sales",
-    description: "Strategic support for preparing, pricing, marketing, and selling real property held by an estate or trust.",
-    link: "/probate-estate-sales"
-  },
-  {
-    icon: Heart,
-    title: "Senior Real Estate Transitions",
-    description: "Professional help for downsizing, relocation, assisted living transitions, and family home sales.",
-    link: "/senior-transitions"
-  },
-  {
-    icon: FileText,
-    title: "Valuation Insight",
-    description: "Broker and state certified appraiser experience to help inform important property decisions.",
-    link: "/why-valuation-matters"
+    icon: Users,
+    title: "For Executors",
+    description: "Practical real estate support for executors, personal representatives, and estate administrators.",
+    link: "/executors"
   },
   {
     icon: Handshake,
-    title: "Attorney & Fiduciary Collaboration",
+    title: "For Attorneys & Fiduciaries",
     description: "A reliable real estate resource for attorneys, trustees, fiduciaries, and referral partners.",
     link: "/for-attorneys"
   },
   {
-    icon: Home,
-    title: "Property Preparation Coordination",
-    description: "Help coordinating clean-out, repairs, staging, hauling, and other pre-sale services.",
+    icon: FileText,
+    title: "Why Valuation Matters",
+    description: "Broker and state certified appraiser experience to help inform important property decisions.",
+    link: "/why-valuation-matters"
+  },
+  {
+    icon: Heart,
+    title: "Senior Transitions",
+    description: "Professional help for downsizing, relocation, assisted living transitions, and family home sales.",
+    link: "/senior-transitions"
+  },
+  {
+    icon: Clock,
+    title: "How the Process Works",
+    description: "A clear overview of the steps involved from initial consultation through closing.",
     link: "/how-the-process-works"
   }
 ];
@@ -120,29 +120,24 @@ const serviceAreas = [
 
 const homepageFaqs = [
   {
-    question: "Who helps sell inherited homes in Washington State?",
-    answer: "David Stein is a licensed real estate broker and state certified appraiser who helps families, executors, trustees, and personal representatives sell inherited homes throughout King, Snohomish, Pierce, and Kitsap Counties. He provides practical guidance on property value, preparation strategy, and market positioning.",
+    question: "Do I need probate before selling an inherited home in Washington?",
+    answer: "It depends on how the property is titled and the estate structure. In many cases, probate or letters testamentary are required before a sale can proceed. David Stein helps families and executors understand what's needed and how to move forward efficiently.",
     link: "/faq"
   },
   {
-    question: "Can a house be sold during probate in Washington?",
-    answer: "In many cases, yes — but the answer depends on legal authority, estate structure, and documentation. David Stein helps clients prepare for the real estate side of probate sales by evaluating the property, understanding market value, and building a sale strategy.",
+    question: "Can a trustee sell a house without court involvement?",
+    answer: "In most cases, a trustee can sell trust-owned real estate without going through probate court, as long as the trust document grants that authority. David works with trustees and their attorneys to coordinate the real estate side of these transactions.",
     link: "/faq"
   },
   {
-    question: "What should I do first if I inherited a house?",
-    answer: "Start by understanding who has legal authority, the property's condition, and whether there are title or occupancy issues. David helps clients in Western Washington evaluate inherited property with a clear, practical process.",
-    link: "/faq"
-  },
-  {
-    question: "Why does valuation expertise matter in a probate property sale?",
-    answer: "Pricing mistakes can create major problems — too high and the property stalls, too low and value is lost. David's dual background as a broker and certified appraiser helps clients understand what affects value and how buyers will respond.",
+    question: "How do I determine the right price for estate property?",
+    answer: "Pricing estate property requires understanding condition, market dynamics, and buyer expectations. David's dual background as a broker and certified appraiser helps clients avoid the costly mistakes of overpricing or underpricing inherited and estate-held homes.",
     link: "/why-valuation-matters"
   },
   {
-    question: "How does David Stein work with attorneys and trustees?",
-    answer: "David serves as a real estate and valuation resource during important property transitions, providing experienced market perspective, practical sale planning, and clear communication that professional advisors need.",
-    link: "/for-attorneys"
+    question: "What if the home needs repairs or cleanout before sale?",
+    answer: "Many estate and inherited properties need cleanout, repairs, or preparation before going to market. David helps coordinate vendors, assess what improvements are worth making, and develop a practical plan to get the property sale-ready.",
+    link: "/how-the-process-works"
   }
 ];
 
@@ -213,8 +208,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Probate Real Estate, Inherited Property, and Estate Sale Guidance in Western Washington | David Stein"
-        description="David Stein provides probate real estate, inherited property, trust-owned real estate, and estate sale guidance for attorneys, executors, trustees, fiduciaries, and families in King, Snohomish, Pierce, and Kitsap Counties."
+        title="Probate Real Estate & Inherited Property Guidance | David Stein Washington"
+        description="David Stein helps attorneys, executors, trustees, and families handle probate real estate, inherited homes, estate property sales, and senior transitions throughout Western Washington."
         jsonLd={jsonLd}
       />
       <Header />
@@ -239,35 +234,41 @@ const Index = () => {
               </div>
 
               <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[54px] text-foreground font-bold leading-[1.08] mb-5 text-center">
-                Probate Real Estate, Inherited Property & Estate Sale Guidance in Western Washington
+                A Trusted Real Estate Resource for Probate, Inherited Property, and Important Home Transitions
               </h1>
 
               <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-[760px] mx-auto mb-4 text-center">
-                David Stein is a licensed real estate broker and Washington state certified real estate appraiser who works with attorneys, executors, trustees, CPAs, financial planners, and families to navigate the sale of probate property, inherited homes, trust-owned real estate, and estate properties across King, Snohomish, Pierce, and Kitsap Counties.
+                When a property is part of an estate, trust, probate matter, or major family transition, the real estate side often requires more than a standard home sale approach. David Stein helps attorneys, executors, trustees, fiduciaries, personal representatives, and families navigate inherited property, estate sales, senior transitions, valuation-related decisions, and complex sale preparation throughout Western Washington.
               </p>
 
               <p className="text-base text-muted-foreground/80 leading-relaxed max-w-[680px] mx-auto mb-8 text-center">
-                Unlike a typical listing agent, David combines brokerage expertise with certified appraisal credentials and over 20 years of experience to provide valuation-informed guidance during sensitive property transitions.
+                As a Washington real estate broker and state certified residential appraiser with more than 20 years of experience, David brings a practical understanding of pricing, property condition, communication, coordination, and next-step planning in situations that often involve legal, emotional, and logistical complexity.
               </p>
 
-              <div className="flex flex-wrap justify-center gap-3.5 mb-8">
-                <Link to="/contact">
-                  <Button 
-                    size="lg" 
-                    className="bg-foreground hover:bg-foreground/90 text-background font-bold px-6 rounded-xl text-base h-[52px]"
-                  >
-                    Request a Confidential Consultation
-                  </Button>
-                </Link>
-                <Link to="/probate-estate-sales">
-                  <Button 
-                    size="lg" 
-                    variant="outline" 
-                    className="border-border bg-card text-foreground hover:bg-muted font-bold px-6 rounded-xl text-base h-[52px]"
-                  >
-                    Explore Services
-                  </Button>
-                </Link>
+              {/* Top CTA */}
+              <div className="bg-card border border-border rounded-2xl p-6 max-w-[620px] mx-auto mb-8">
+                <p className="text-foreground font-serif text-lg font-semibold mb-4 text-center">
+                  Need help with a property tied to probate, inheritance, a trust, or a major life transition?
+                </p>
+                <div className="flex flex-wrap justify-center gap-3.5">
+                  <Link to="/contact">
+                    <Button 
+                      size="lg" 
+                      className="bg-foreground hover:bg-foreground/90 text-background font-bold px-6 rounded-xl text-base h-[52px]"
+                    >
+                      Schedule a Consultation
+                    </Button>
+                  </Link>
+                  <Link to="/contact">
+                    <Button 
+                      size="lg" 
+                      variant="outline" 
+                      className="border-border bg-card text-foreground hover:bg-muted font-bold px-6 rounded-xl text-base h-[52px]"
+                    >
+                      Contact David
+                    </Button>
+                  </Link>
+                </div>
               </div>
 
               <div className="flex flex-wrap justify-center gap-3">
@@ -282,23 +283,18 @@ const Index = () => {
               </div>
             </div>
 
-            {/* Who This Helps */}
+            {/* Why Clients Reach Out */}
             <div className="mt-12 max-w-3xl mx-auto">
               <div className="bg-card border border-border rounded-3xl p-8 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
                 <p className="text-gold font-bold tracking-[0.2em] uppercase mb-2 text-xs">
-                  Who This Helps
+                  Why Clients and Referral Partners Reach Out
                 </p>
-                <h2 className="font-serif text-[26px] font-bold text-foreground mb-5">
-                  A professional resource for people navigating complex property transitions
-                </h2>
                 <div className="grid sm:grid-cols-2 gap-3">
                   {[
-                    "Attorneys and fiduciaries",
-                    "Executors and personal representatives",
-                    "Trustees and estate administrators",
-                    "CPAs and financial planners",
-                    "Heirs, families, and adult children",
-                    "Seniors and out-of-area decision-makers"
+                    "20+ years of real estate and valuation experience",
+                    "Support for attorneys, executors, trustees, fiduciaries, and families",
+                    "Guidance for probate property, inherited homes, estate sales, and senior transitions",
+                    "Service across King, Snohomish, Pierce, and Kitsap Counties"
                   ].map((item, i) => (
                     <div key={i} className="flex items-center gap-3 px-4 py-3 bg-secondary rounded-xl text-muted-foreground text-sm">
                       <CheckCircle className="w-4 h-4 text-gold shrink-0" />
@@ -373,10 +369,10 @@ const Index = () => {
         <div className="container px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <p className="text-gold font-bold tracking-widest uppercase mb-3 text-base">
-              Specialized Services
+              How David Can Help
             </p>
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-4">
-              Probate, Estate & Senior Real Estate Services
+              Explore Services & Resources
             </h2>
           </div>
           
