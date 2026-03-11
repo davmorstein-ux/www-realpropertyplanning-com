@@ -19,38 +19,38 @@ import expRealtyLogo2 from "@/assets/exp-realty-logo-2.png";
 const services = [
   {
     icon: Scale,
-    title: "Probate Real Estate",
+    title: "Probate & Estate Sales",
     description: "Guidance for properties involved in probate, estate administration, and inherited real estate matters.",
     link: "/probate-estate-sales"
   },
   {
-    icon: Building,
-    title: "Estate Property Sales",
-    description: "Strategic support for preparing, pricing, marketing, and selling real property held by an estate or trust.",
-    link: "/probate-estate-sales"
-  },
-  {
-    icon: Heart,
-    title: "Senior Real Estate Transitions",
-    description: "Professional help for downsizing, relocation, assisted living transitions, and family home sales.",
-    link: "/senior-transitions"
-  },
-  {
-    icon: FileText,
-    title: "Valuation Insight",
-    description: "Broker and state certified appraiser experience to help inform important property decisions.",
-    link: "/why-valuation-matters"
+    icon: Users,
+    title: "For Executors",
+    description: "Practical real estate support for executors, personal representatives, and estate administrators.",
+    link: "/executors"
   },
   {
     icon: Handshake,
-    title: "Attorney & Fiduciary Collaboration",
+    title: "For Attorneys & Fiduciaries",
     description: "A reliable real estate resource for attorneys, trustees, fiduciaries, and referral partners.",
     link: "/for-attorneys"
   },
   {
-    icon: Home,
-    title: "Property Preparation Coordination",
-    description: "Help coordinating clean-out, repairs, staging, hauling, and other pre-sale services.",
+    icon: FileText,
+    title: "Why Valuation Matters",
+    description: "Broker and state certified appraiser experience to help inform important property decisions.",
+    link: "/why-valuation-matters"
+  },
+  {
+    icon: Heart,
+    title: "Senior Transitions",
+    description: "Professional help for downsizing, relocation, assisted living transitions, and family home sales.",
+    link: "/senior-transitions"
+  },
+  {
+    icon: Clock,
+    title: "How the Process Works",
+    description: "A clear overview of the steps involved from initial consultation through closing.",
     link: "/how-the-process-works"
   }
 ];
