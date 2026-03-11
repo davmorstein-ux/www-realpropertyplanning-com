@@ -91,8 +91,8 @@ const ForFinancialPlanners = () => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: "David Stein — Real Estate Guidance for Financial Planners",
-    description: "David Stein provides probate real estate, inherited property, trust-owned real estate, and estate sale guidance for financial planners and their clients in King, Snohomish, Pierce, and Kitsap Counties.",
+    name: "Real Property Planning — Real Estate Guidance for Financial Planners",
+    description: "Real Property Planning provides probate real estate, inherited property, trust-owned real estate, and estate sale guidance for financial planners and their clients in King, Snohomish, Pierce, and Kitsap Counties.",
     url: "https://realpropertyplanning.com/for-financial-planners",
     areaServed: [
       { "@type": "AdministrativeArea", name: "King County, WA" },
