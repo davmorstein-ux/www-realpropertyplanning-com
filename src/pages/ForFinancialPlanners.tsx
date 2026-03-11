@@ -132,7 +132,7 @@ const ForFinancialPlanners = () => {
               <Link to="/contact">
                 <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold px-7 py-4 h-auto rounded-lg w-full sm:w-auto">
                   <Phone className="w-4 h-4 mr-2" />
-                  Discuss a Client Situation
+                  Schedule a Consultation
                 </Button>
               </Link>
               <Link to="/contact">
