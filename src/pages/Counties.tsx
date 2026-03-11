@@ -7,53 +7,28 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Phone } from "lucide-react";
+import { MapPin } from "lucide-react";
 
-const countyData = [
+const countyCards = [
   {
     county: "King County",
     href: "/counties/king",
-    cities: [
-      "Seattle", "Bellevue", "Kirkland", "Redmond", "Bothell", "Shoreline",
-      "Mercer Island", "Kenmore", "Woodinville", "Sammamish", "Issaquah",
-      "Renton", "Kent", "Auburn", "Federal Way", "Burien", "Tukwila",
-      "SeaTac", "Maple Valley", "Covington", "Newcastle", "Medina",
-      "Clyde Hill", "Yarrow Point", "Hunts Point", "Beaux Arts Village",
-      "Normandy Park", "Des Moines", "Snoqualmie", "North Bend",
-      "Fall City", "Carnation", "Duvall", "Vashon Island",
-    ],
+    intro: "Support for inherited homes, estate property, and major home transitions throughout the Eastside, Seattle, and surrounding areas.",
   },
   {
     county: "Snohomish County",
     href: "/counties/snohomish",
-    cities: [
-      "Everett", "Edmonds", "Lynnwood", "Bothell", "Mill Creek",
-      "Mukilteo", "Snohomish", "Lake Stevens", "Marysville", "Arlington",
-      "Mountlake Terrace", "Brier", "Woodway", "Stanwood", "Monroe",
-      "Sultan", "Gold Bar", "Index", "Granite Falls", "Darrington",
-      "Tulalip", "Silvana", "Lake Roesiger", "Cathcart",
-    ],
+    intro: "Guidance for probate and inherited property sales in communities ranging from Edmonds and Lynnwood to Everett, Mukilteo, and beyond.",
   },
   {
     county: "Pierce County",
     href: "/counties/pierce",
-    cities: [
-      "Tacoma", "Gig Harbor", "University Place", "Puyallup", "Lakewood",
-      "Bonney Lake", "Sumner", "Fircrest", "Steilacoom", "DuPont",
-      "Orting", "Buckley", "Eatonville", "Graham", "Spanaway",
-      "Parkland", "Edgewood", "Milton", "Pacific", "Ruston",
-      "Fox Island", "Anderson Island", "Key Peninsula",
-    ],
+    intro: "Experienced help with estate sales, trust-owned homes, and transition-related property decisions throughout Pierce County.",
   },
   {
     county: "Kitsap County",
     href: "/counties/kitsap",
-    cities: [
-      "Bremerton", "Silverdale", "Poulsbo", "Bainbridge Island",
-      "Port Orchard", "Kingston", "Suquamish", "Indianola",
-      "Seabeck", "Hansville", "Keyport", "Tracyton", "Gorst",
-      "Manchester", "Olalla", "Southworth",
-    ],
+    intro: "Practical real estate guidance for inherited homes and estate-related sales across key Kitsap communities.",
   },
 ];
 
@@ -61,8 +36,8 @@ const Counties = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Probate Real Estate and Inherited Property Guidance by County | David Stein"
-        description="David Stein provides probate real estate, inherited property, and estate sale guidance organized by county across King, Snohomish, Pierce, and Kitsap Counties in Western Washington."
+        title="Service Areas | Probate Real Estate in King, Snohomish, Pierce & Kitsap Counties"
+        description="David Stein provides probate real estate, inherited property, estate sale, valuation guidance, and senior transition support across King, Snohomish, Pierce, and Kitsap Counties."
       />
       <BreadcrumbSchema items={[{ name: "Counties", url: "/counties" }]} />
       <Header />
@@ -75,50 +50,36 @@ const Counties = () => {
               Local Service Areas
             </p>
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-[22px]">
-              Probate Real Estate Guidance by County in Western Washington
+              Service Areas Throughout Western Washington
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-5">
-              Real estate markets vary dramatically from county to county — and even neighborhood to neighborhood — across Western Washington. A probate property in Seattle requires a different pricing and preparation strategy than an inherited home in Tacoma, Bremerton, or Everett. David Stein's local knowledge helps clients and professionals make better-informed decisions.
+              David Stein provides real estate guidance for probate property, inherited homes, estate sales, trust-owned real estate, valuation-related decisions, and senior transitions throughout key Western Washington markets.
             </p>
-            <p className="text-lg text-primary-foreground/70 leading-relaxed mb-8">
-              As a licensed Washington real estate broker and state certified residential appraiser with over 20 years of experience, David serves attorneys, executors, trustees, and families across all four counties listed below.
+            <p className="text-lg text-primary-foreground/70 leading-relaxed">
+              Whether the property is in King County, Snohomish County, Pierce County, or Kitsap County, clients and referral partners benefit from experienced local market knowledge combined with practical support for sensitive property situations.
             </p>
-            <Link to="/contact">
-              <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold px-7 py-4 h-auto rounded-lg">
-                <Phone className="w-4 h-4 mr-2" />
-                Schedule a Consultation
-              </Button>
-            </Link>
           </div>
         </div>
       </section>
 
       <TrustStrip />
 
-      {/* County Sections */}
-      <section className="pt-12 pb-12 md:pt-16 md:pb-16 lg:pt-[84px] lg:pb-[84px] bg-background">
+      {/* County Cards */}
+      <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-[1140px] mx-auto space-y-14 md:space-y-[72px]">
-            {countyData.map((county) => (
-              <div key={county.county}>
-                <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-6">
-                  <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold">
-                    {county.county}
-                  </h2>
-                  <Link to={county.href}>
-                    <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-medium rounded-lg w-full sm:w-auto">
-                      Explore {county.county}
-                    </Button>
-                  </Link>
-                </div>
-                <div className="bg-secondary border border-border rounded-[18px] px-7 py-8 md:px-8 md:py-9">
-                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-6 gap-y-3">
-                    {county.cities.map((city) => (
-                      <p key={city} className="text-muted-foreground leading-relaxed">{city}</p>
-                    ))}
+          <div className="max-w-[900px] mx-auto grid md:grid-cols-2 gap-6">
+            {countyCards.map((card) => (
+              <Link key={card.county} to={card.href} className="group">
+                <div className="bg-card border border-border rounded-[18px] px-7 py-8 h-full hover:border-gold/30 hover:shadow-lg transition-all">
+                  <div className="flex items-center gap-3 mb-3">
+                    <MapPin className="w-5 h-5 text-gold shrink-0" />
+                    <h2 className="font-serif text-xl text-foreground font-semibold group-hover:text-gold transition-colors">
+                      {card.county}
+                    </h2>
                   </div>
+                  <p className="text-muted-foreground leading-relaxed text-sm">{card.intro}</p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -126,24 +87,16 @@ const Counties = () => {
 
       <RelatedServices currentPath="/counties" />
 
-      {/* CTA */}
-      <section className="py-16 lg:py-24 bg-primary">
+      {/* Bottom CTA */}
+      <section className="py-20 lg:py-28 bg-primary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-serif text-2xl md:text-3xl text-primary-foreground font-semibold mb-4">
-              Discuss a Local Property Transition
+            <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
+              Need help with a property in one of these counties?
             </h2>
-            <p className="text-primary-foreground/80 leading-relaxed mb-8">
-              David Stein provides experienced guidance for probate, inherited, and trust property sales across all four counties.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <div className="flex justify-center">
               <Link to="/contact">
                 <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold">
-                  Schedule a Consultation
-                </Button>
-              </Link>
-              <Link to="/contact">
-                <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
                   Contact David
                 </Button>
               </Link>
