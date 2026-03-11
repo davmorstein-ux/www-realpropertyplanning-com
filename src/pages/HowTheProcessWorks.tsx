@@ -62,8 +62,8 @@ const HowTheProcessWorks = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="How the Process Works for Probate & Inherited Property Sales | David Stein"
-        description="Learn David Stein's step-by-step process for helping attorneys, executors, trustees, and families handle probate property, inherited homes, and estate sales in Western Washington."
+        title="How the Process Works for Probate & Inherited Property Sales | Real Property Planning"
+        description="Learn the step-by-step process Real Property Planning uses to help attorneys, executors, trustees, and families handle probate property and inherited homes in Western Washington."
       />
       <BreadcrumbSchema items={[{ name: "How the Process Works", url: "/how-the-process-works" }]} />
       <Header />
