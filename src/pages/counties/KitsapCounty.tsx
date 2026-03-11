@@ -38,6 +38,8 @@ const KitsapCounty = () => (
     ctaHeadline="Discuss a Kitsap County Property Transition With David Stein"
     ctaText="If you are handling probate property, inherited real estate, trust-owned property, or an estate-related home sale in Kitsap County, David Stein provides experienced guidance grounded in local market knowledge, valuation insight, and a practical understanding of important property transitions."
     ctaSecondaryLabel="Discuss a Kitsap County Property"
+    countyName="Kitsap County"
+    countyPath="/counties/kitsap"
   />
 );
 

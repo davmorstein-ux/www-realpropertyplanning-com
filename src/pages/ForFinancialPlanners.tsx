@@ -2,6 +2,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
+import TrustStrip from "@/components/TrustStrip";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import RelatedServices from "@/components/RelatedServices";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Phone, MessageSquare } from "lucide-react";
@@ -106,6 +109,7 @@ const ForFinancialPlanners = () => {
         description="David Stein provides probate real estate, inherited property, trust-owned real estate, and estate sale guidance for financial planners and their clients in King, Snohomish, Pierce, and Kitsap Counties."
         jsonLd={jsonLd}
       />
+      <BreadcrumbSchema items={[{ name: "For Financial Planners", url: "/for-financial-planners" }]} />
       <Header />
 
       {/* Hero */}
@@ -128,7 +132,7 @@ const ForFinancialPlanners = () => {
               <Link to="/contact">
                 <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold px-7 py-4 h-auto rounded-lg w-full sm:w-auto">
                   <Phone className="w-4 h-4 mr-2" />
-                  Discuss a Client Situation
+                  Schedule a Consultation
                 </Button>
               </Link>
               <Link to="/contact">
@@ -141,6 +145,8 @@ const ForFinancialPlanners = () => {
           </div>
         </div>
       </section>
+
+      <TrustStrip />
 
       {/* Why Financial Planners May Involve a Real Estate Professional */}
       <section className="pt-12 pb-12 md:pt-16 md:pb-16 lg:pt-[84px] lg:pb-[84px] bg-secondary">
