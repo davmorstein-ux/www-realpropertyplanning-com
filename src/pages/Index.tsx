@@ -288,23 +288,18 @@ const Index = () => {
               </div>
             </div>
 
-            {/* Who This Helps */}
+            {/* Why Clients Reach Out */}
             <div className="mt-12 max-w-3xl mx-auto">
               <div className="bg-card border border-border rounded-3xl p-8 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
                 <p className="text-gold font-bold tracking-[0.2em] uppercase mb-2 text-xs">
-                  Who This Helps
+                  Why Clients and Referral Partners Reach Out
                 </p>
-                <h2 className="font-serif text-[26px] font-bold text-foreground mb-5">
-                  A professional resource for people navigating complex property transitions
-                </h2>
                 <div className="grid sm:grid-cols-2 gap-3">
                   {[
-                    "Attorneys and fiduciaries",
-                    "Executors and personal representatives",
-                    "Trustees and estate administrators",
-                    "CPAs and financial planners",
-                    "Heirs, families, and adult children",
-                    "Seniors and out-of-area decision-makers"
+                    "20+ years of real estate and valuation experience",
+                    "Support for attorneys, executors, trustees, fiduciaries, and families",
+                    "Guidance for probate property, inherited homes, estate sales, and senior transitions",
+                    "Service across King, Snohomish, Pierce, and Kitsap Counties"
                   ].map((item, i) => (
                     <div key={i} className="flex items-center gap-3 px-4 py-3 bg-secondary rounded-xl text-muted-foreground text-sm">
                       <CheckCircle className="w-4 h-4 text-gold shrink-0" />
