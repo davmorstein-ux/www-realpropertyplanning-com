@@ -77,10 +77,10 @@ const Executors = () => {
               Guidance for Executors, Personal Representatives, Trustees, and Families
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-5">
-              If you are responsible for a home after a death or major family transition, you may be dealing with legal steps, family communication, property condition issues, deadlines, and uncertainty about what to do next. David Stein helps executors, personal representatives, trustees, and families understand the real estate side of the process and move forward with confidence.
+              Real Property Planning helps executors, personal representatives, trustees, and families understand the real estate side of inherited property, estate home sales, and major home transitions.
             </p>
             <p className="text-lg text-primary-foreground/70 leading-relaxed mb-[30px]">
-              Whether the property will be sold soon, prepared for sale later, evaluated for decision-making, or simply needs a knowledgeable next-step plan, David provides practical guidance shaped by more than 20 years of experience in real estate and valuation.
+              If you are responsible for a property after a death or major life event, you may be dealing with timing issues, legal questions, family communication, property condition concerns, and uncertainty about what to do next. David Stein brings practical guidance shaped by more than 20 years of real estate and valuation experience.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Link to="/contact">
