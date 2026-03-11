@@ -72,7 +72,7 @@ const ForAttorneys = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Real Estate Resource for Attorneys & Fiduciaries | Real Property Planning"
-        description="Real Property Planning supports attorneys and fiduciaries with probate real estate, inherited property sales, valuation insight, sale coordination, and practical guidance throughout Western Washington."
+        description="Real Property Planning supports attorneys and fiduciaries with probate real estate, inherited property sales, trust-owned homes, valuation insight, and coordinated property guidance throughout Western Washington."
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema items={[{ name: "For Attorneys & Fiduciaries", url: "/for-attorneys" }]} />
