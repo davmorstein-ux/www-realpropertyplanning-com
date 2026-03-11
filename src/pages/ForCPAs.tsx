@@ -109,6 +109,7 @@ const ForCPAs = () => {
         description="David Stein provides probate real estate, inherited property, trust-owned real estate, and estate sale guidance for CPAs and their clients in King, Snohomish, Pierce, and Kitsap Counties."
         jsonLd={jsonLd}
       />
+      <BreadcrumbSchema items={[{ name: "For CPAs", url: "/for-cpas" }]} />
       <Header />
 
       {/* Hero */}
