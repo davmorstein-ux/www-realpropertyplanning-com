@@ -36,8 +36,8 @@ const Counties = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Service Areas | Probate Real Estate in King, Snohomish, Pierce & Kitsap Counties"
-        description="David Stein provides probate real estate, inherited property, estate sale, valuation guidance, and senior transition support across King, Snohomish, Pierce, and Kitsap Counties."
+        title="Service Areas | Real Property Planning"
+        description="Real Property Planning provides probate real estate, inherited property, estate sale, valuation guidance, and senior transition support across King, Snohomish, Pierce, and Kitsap Counties."
       />
       <BreadcrumbSchema items={[{ name: "Counties", url: "/counties" }]} />
       <Header />
