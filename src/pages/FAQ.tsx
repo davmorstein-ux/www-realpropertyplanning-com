@@ -55,8 +55,8 @@ const faqs = [
     answer: `Real Property Planning serves clients throughout King County, Snohomish County, Pierce County, and Kitsap County in Western Washington. Each county has its own market dynamics, pricing patterns, and buyer expectations. Local knowledge helps clients make better-informed decisions about probate property, inherited homes, estate sales, and senior transitions.\n\n${softCta}`,
   },
   {
-    question: "Can David help with senior transitions and downsizing decisions?",
-    answer: `Yes. David works with seniors, adult children, attorneys, and trusted advisors navigating housing transitions including downsizing, moves to assisted living, and the sale of a longtime family home. He provides patient, practical guidance focused on timing, value, preparation, and clear communication throughout the process.\n\n${softCta}`,
+    question: "Can Real Property Planning help with senior transitions and downsizing decisions?",
+    answer: `Yes. Real Property Planning works with seniors, adult children, attorneys, and trusted advisors navigating housing transitions including downsizing, moves to assisted living, and the sale of a longtime family home. David Stein provides patient, practical guidance focused on timing, value, preparation, and clear communication throughout the process.\n\n${softCta}`,
   },
 ];
 
