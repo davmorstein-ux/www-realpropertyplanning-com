@@ -74,7 +74,7 @@ const CountyPageTemplate = ({
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-              How David Helps in {countyName}
+              How Real Property Planning Helps in {countyName}
             </h2>
             <ul className="space-y-4">
               {howDavidHelps.map((item, index) => (
