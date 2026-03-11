@@ -21,7 +21,7 @@ const areas = [
 
 const ServiceAreasSection = () => {
   return (
-    <section className="py-20 lg:py-28 bg-primary">
+    <section data-nosnippet className="py-20 lg:py-28 bg-primary">
       <div className="container px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <p className="text-gold font-bold tracking-wider uppercase mb-3 text-base">

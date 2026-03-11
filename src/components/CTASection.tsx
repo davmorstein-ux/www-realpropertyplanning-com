@@ -3,7 +3,7 @@ import { Phone, Mail, Calendar } from "lucide-react";
 
 const CTASection = () => {
   return (
-    <section className="py-20 lg:py-28 bg-background">
+    <section data-nosnippet className="py-20 lg:py-28 bg-background">
       <div className="container px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-gold font-bold tracking-wider uppercase mb-3 text-base">
