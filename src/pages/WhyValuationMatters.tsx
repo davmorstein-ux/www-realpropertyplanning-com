@@ -46,8 +46,8 @@ const WhyValuationMatters = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Why Valuation Matters for Probate, Inherited Property & Estate Sales | David Stein"
-        description="Learn why accurate valuation matters for probate real estate, inherited homes, estate sales, trusts, pricing decisions, and family coordination throughout Western Washington."
+        title="Why Valuation Matters for Probate & Inherited Property | Real Property Planning"
+        description="Learn why accurate valuation matters for probate real estate, inherited homes, estate sales, trust-owned property, and pricing decisions throughout Western Washington."
       />
       <BreadcrumbSchema items={[{ name: "Why Valuation Matters", url: "/why-valuation-matters" }]} />
       <Header />
