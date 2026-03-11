@@ -369,7 +369,7 @@ const Index = () => {
         <div className="container px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <p className="text-gold font-bold tracking-widest uppercase mb-3 text-base">
-              How David Can Help
+              How Real Property Planning Can Help
             </p>
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-4">
               Explore Services & Resources
