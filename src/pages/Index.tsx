@@ -333,7 +333,7 @@ const Index = () => {
                 Real estate tied to estate settlement, probate, trust administration, or senior housing transitions requires more than a typical home sale approach. These situations often involve legal timelines, multiple stakeholders, property condition questions, and emotionally difficult decisions.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                David Stein helps bring clarity and structure to the real estate side of the process — serving as a capable, calm, and responsive professional who can help coordinate the next steps with care and discretion.
+                Real Property Planning helps bring clarity and structure to the real estate side of the process — providing capable, calm, and responsive guidance to help coordinate next steps with care and discretion.
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link to="/how-the-process-works">
