@@ -90,10 +90,10 @@ const ForAttorneys = () => {
                 A Real Estate Resource for Attorneys, Fiduciaries, and High-Trust Referrals
               </h1>
               <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
-                Attorneys involved in probate, trust administration, elder-related planning, guardianship matters, and other property-related transitions often need a real estate professional who communicates clearly, understands sensitive situations, and can help move the property side forward with professionalism.
+                Real Property Planning supports attorneys and fiduciaries who need practical help with the real estate side of probate, trust administration, inherited property, senior-related housing transitions, and other complex property matters.
               </p>
               <p className="text-lg text-primary-foreground/70 leading-relaxed mb-8">
-                David Stein works with attorneys and referral partners who need practical guidance related to inherited homes, estate property sales, trust-owned real estate, sale preparation, pricing strategy, property condition concerns, and coordination with families and decision-makers.
+                These situations often require a real estate resource who communicates clearly, understands sensitive circumstances, and helps move the property side forward in a steady and professional way. David Stein brings more than 20 years of experience as a Washington real estate broker and state certified residential appraiser.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/contact">
