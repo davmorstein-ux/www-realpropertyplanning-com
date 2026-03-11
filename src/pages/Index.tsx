@@ -120,29 +120,24 @@ const serviceAreas = [
 
 const homepageFaqs = [
   {
-    question: "Who helps sell inherited homes in Washington State?",
-    answer: "David Stein is a licensed real estate broker and state certified appraiser who helps families, executors, trustees, and personal representatives sell inherited homes throughout King, Snohomish, Pierce, and Kitsap Counties. He provides practical guidance on property value, preparation strategy, and market positioning.",
+    question: "Do I need probate before selling an inherited home in Washington?",
+    answer: "It depends on how the property is titled and the estate structure. In many cases, probate or letters testamentary are required before a sale can proceed. David Stein helps families and executors understand what's needed and how to move forward efficiently.",
     link: "/faq"
   },
   {
-    question: "Can a house be sold during probate in Washington?",
-    answer: "In many cases, yes — but the answer depends on legal authority, estate structure, and documentation. David Stein helps clients prepare for the real estate side of probate sales by evaluating the property, understanding market value, and building a sale strategy.",
+    question: "Can a trustee sell a house without court involvement?",
+    answer: "In most cases, a trustee can sell trust-owned real estate without going through probate court, as long as the trust document grants that authority. David works with trustees and their attorneys to coordinate the real estate side of these transactions.",
     link: "/faq"
   },
   {
-    question: "What should I do first if I inherited a house?",
-    answer: "Start by understanding who has legal authority, the property's condition, and whether there are title or occupancy issues. David helps clients in Western Washington evaluate inherited property with a clear, practical process.",
-    link: "/faq"
-  },
-  {
-    question: "Why does valuation expertise matter in a probate property sale?",
-    answer: "Pricing mistakes can create major problems — too high and the property stalls, too low and value is lost. David's dual background as a broker and certified appraiser helps clients understand what affects value and how buyers will respond.",
+    question: "How do I determine the right price for estate property?",
+    answer: "Pricing estate property requires understanding condition, market dynamics, and buyer expectations. David's dual background as a broker and certified appraiser helps clients avoid the costly mistakes of overpricing or underpricing inherited and estate-held homes.",
     link: "/why-valuation-matters"
   },
   {
-    question: "How does David Stein work with attorneys and trustees?",
-    answer: "David serves as a real estate and valuation resource during important property transitions, providing experienced market perspective, practical sale planning, and clear communication that professional advisors need.",
-    link: "/for-attorneys"
+    question: "What if the home needs repairs or cleanout before sale?",
+    answer: "Many estate and inherited properties need cleanout, repairs, or preparation before going to market. David helps coordinate vendors, assess what improvements are worth making, and develop a practical plan to get the property sale-ready.",
+    link: "/how-the-process-works"
   }
 ];
 
