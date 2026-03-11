@@ -1,3 +1,14 @@
-/sitemap.xml  /sitemap.xml  200!
-/robots.txt   /robots.txt   200!
-/*            /index.html   200
+/sitemap.xml               /sitemap.xml                200!
+/robots.txt                /robots.txt                 200!
+/for-attorneys             /for-attorneys/index.html   200
+/executors                 /executors/index.html       200
+/probate-estate-sales      /probate-estate-sales/index.html 200
+/why-valuation-matters     /why-valuation-matters/index.html 200
+/senior-transitions        /senior-transitions/index.html 200
+/how-the-process-works     /how-the-process-works/index.html 200
+/counties                  /counties/index.html        200
+/counties/king             /counties/king/index.html   200
+/counties/snohomish        /counties/snohomish/index.html 200
+/counties/pierce           /counties/pierce/index.html 200
+/counties/kitsap           /counties/kitsap/index.html 200
+/*                         /index.html                 200

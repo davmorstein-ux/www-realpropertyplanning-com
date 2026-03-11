@@ -5,26 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "postbuild": "react-snap",
+    "build": "vite build && node scripts/generate-route-metadata.mjs",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest"
-  },
-  "reactSnap": {
-    "source": "dist",
-    "include": [
-      "/",
-      "/for-attorneys",
-      "/executors",
-      "/probate-estate-sales",
-      "/why-valuation-matters",
-      "/senior-transitions",
-      "/how-the-process-works",
-      "/counties/king"
-    ]
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
