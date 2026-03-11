@@ -183,10 +183,10 @@ const ForFinancialPlanners = () => {
               Practical Real Estate Guidance
             </p>
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-[22px]">
-              How David Stein Helps Financial Planner Clients
+              How Real Property Planning Helps Financial Planner Clients
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mb-10">
-              David Stein helps planner clients understand the real-estate side of important property decisions in a way that is grounded, organized, and informed by both market knowledge and valuation perspective.
+              Real Property Planning helps planner clients understand the real-estate side of important property decisions in a way that is grounded, organized, and informed by both market knowledge and valuation perspective.
             </p>
             <div className="grid md:grid-cols-2 gap-5 lg:gap-6">
               {howHelpsBlocks.map((block, index) => (
