@@ -69,7 +69,7 @@ const Header = () => {
     }`;
 
   return (
-    <header className={`${isHomePage ? "absolute" : "relative bg-primary"} top-0 left-0 right-0 z-50`}>
+    <header data-nosnippet className={`${isHomePage ? "absolute" : "relative bg-primary"} top-0 left-0 right-0 z-50`}>
       <div className="container px-6 lg:px-8">
         <div className="flex items-center justify-center py-4 relative" ref={dropdownRef}>
           <nav className="hidden lg:flex items-center gap-7">
