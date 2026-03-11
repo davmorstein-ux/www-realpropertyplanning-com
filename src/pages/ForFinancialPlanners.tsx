@@ -146,6 +146,8 @@ const ForFinancialPlanners = () => {
         </div>
       </section>
 
+      <TrustStrip />
+
       {/* Why Financial Planners May Involve a Real Estate Professional */}
       <section className="pt-12 pb-12 md:pt-16 md:pb-16 lg:pt-[84px] lg:pb-[84px] bg-secondary">
         <div className="container px-6 lg:px-8">
