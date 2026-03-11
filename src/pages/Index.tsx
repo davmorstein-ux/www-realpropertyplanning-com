@@ -126,7 +126,7 @@ const homepageFaqs = [
   },
   {
     question: "Can a trustee sell a house without court involvement?",
-    answer: "In most cases, a trustee can sell trust-owned real estate without going through probate court, as long as the trust document grants that authority. David works with trustees and their attorneys to coordinate the real estate side of these transactions.",
+    answer: "In most cases, a trustee can sell trust-owned real estate without going through probate court, as long as the trust document grants that authority. Real Property Planning works with trustees and their attorneys to coordinate the real estate side of these transactions.",
     link: "/faq"
   },
   {
