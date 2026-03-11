@@ -91,8 +91,8 @@ const ForCPAs = () => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: "David Stein — Real Estate Guidance for CPAs",
-    description: "David Stein provides probate real estate, inherited property, trust-owned real estate, and estate sale guidance for CPAs and their clients in King, Snohomish, Pierce, and Kitsap Counties.",
+    name: "Real Property Planning — Real Estate Guidance for CPAs",
+    description: "Real Property Planning provides probate real estate, inherited property, trust-owned real estate, and estate sale guidance for CPAs and their clients in King, Snohomish, Pierce, and Kitsap Counties.",
     url: "https://realpropertyplanning.com/for-cpas",
     areaServed: [
       { "@type": "AdministrativeArea", name: "King County, WA" },
