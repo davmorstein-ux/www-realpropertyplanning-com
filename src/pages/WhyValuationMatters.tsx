@@ -2,6 +2,10 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
+import TrustStrip from "@/components/TrustStrip";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import RelatedServices from "@/components/RelatedServices";
+import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Phone, MessageSquare } from "lucide-react";
@@ -9,57 +13,72 @@ import { Phone, MessageSquare } from "lucide-react";
 const valuationCards = [
   {
     title: "Pricing Strategy Matters",
-    text: "If a property is priced too high, it may sit on the market, lose momentum, and create frustration for heirs, executors, trustees, or other decision-makers. If it is priced too low, value may be left behind. A stronger valuation perspective helps create a more responsible and realistic pricing strategy.",
+    text: "If a property is priced too high, it may sit on the market and lose momentum. If priced too low, value may be left behind. A stronger valuation perspective helps create a more responsible pricing strategy.",
   },
   {
     title: "Condition Affects Marketability",
-    text: "Many inherited and estate properties are not move-in ready. Deferred maintenance, outdated finishes, cleanup issues, vacant condition, or years of accumulated belongings can all affect buyer response. Understanding how condition influences marketability helps clients decide whether improvements make sense or whether an as-is strategy is more appropriate.",
+    text: "Many inherited and estate properties are not move-in ready. Understanding how condition influences marketability helps clients decide whether improvements make sense or whether an as-is strategy is more appropriate.",
   },
   {
     title: "Preparation Decisions Should Be Informed",
-    text: "Some properties benefit from targeted cleanup, repairs, presentation work, or selective updates before going to market. Others do not. A valuation-informed approach helps clients think more carefully about where effort and money may improve outcome and where it may not.",
+    text: "Some properties benefit from targeted cleanup, repairs, or updates before going to market. A valuation-informed approach helps clients think more carefully about where effort and money may improve outcome.",
   },
   {
     title: "Local Market Context Changes Everything",
-    text: "A property in Seattle, Bellevue, Kirkland, Everett, Tacoma, Gig Harbor, Bremerton, Bainbridge Island, or another local community may need a different strategy depending on the surrounding market. Value is not determined in a vacuum. Local buyer behavior, neighborhood expectations, inventory, and property type all matter.",
+    text: "A property in Seattle, Bellevue, Everett, Tacoma, or Bremerton may need a different strategy. Value is not determined in a vacuum — local buyer behavior, inventory, and property type all matter.",
   },
 ];
 
 const brokerageFeatures = [
   {
     title: "More Than a Typical Listing Perspective",
-    text: "David Stein helps clients think beyond simply putting a property on the market. He helps them consider likely value, property condition, buyer expectations, timing, and sale strategy in a broader and more practical way.",
+    text: "David Stein helps clients consider likely value, property condition, buyer expectations, timing, and sale strategy in a broader and more practical way.",
   },
   {
     title: "Useful Perspective for Sensitive Property Decisions",
-    text: "Probate, inherited, and trust-owned properties often involve multiple decision-makers, emotional complexity, and the need for careful judgment. A stronger valuation perspective can help make those conversations more grounded and more productive.",
+    text: "Probate, inherited, and trust-owned properties often involve multiple decision-makers and emotional complexity. A stronger valuation perspective can help make those conversations more productive.",
   },
   {
     title: "Local Market Awareness Across Multiple Counties",
-    text: "David Stein serves King County, Snohomish County, Pierce County, and Kitsap County, with local knowledge that helps inform value-related decisions in a range of urban, suburban, waterfront, estate, and neighborhood-specific markets.",
+    text: "David Stein serves King, Snohomish, Pierce, and Kitsap Counties with local knowledge that helps inform value-related decisions across urban, suburban, waterfront, and neighborhood-specific markets.",
   },
   {
     title: "Guidance Grounded in Real Property Reality",
-    text: "Value is shaped by more than square footage and location alone. Condition, layout, deferred maintenance, lot characteristics, buyer demand, presentation, and competing inventory all affect how a property is likely to perform in the market.",
+    text: "Value is shaped by more than square footage and location alone. Condition, layout, deferred maintenance, lot characteristics, buyer demand, and competing inventory all affect market performance.",
   },
 ];
 
 const clarityFeatures = [
   {
     title: "A More Realistic Starting Point",
-    text: "Understanding likely market position helps clients begin the process with clearer expectations and a better framework for decision-making.",
+    text: "Understanding likely market position helps clients begin the process with clearer expectations.",
   },
   {
     title: "Better Preparation Choices",
-    text: "Not every property needs the same level of work before sale. Valuation insight helps clients decide what is likely to matter and what may not.",
+    text: "Not every property needs the same level of work before sale. Valuation insight helps clients decide what is likely to matter.",
   },
   {
     title: "More Informed Conversations",
-    text: "Executors, trustees, heirs, attorneys, and family members often need a common point of reference. A stronger value perspective helps support more constructive decision-making.",
+    text: "Executors, trustees, heirs, and attorneys often need a common point of reference. A stronger value perspective helps support more constructive decision-making.",
   },
   {
     title: "Greater Confidence Moving Forward",
-    text: "When clients better understand what affects value and marketability, they are often able to move forward with greater clarity, stronger preparation, and more confidence in the overall strategy.",
+    text: "When clients better understand what affects value and marketability, they can move forward with stronger preparation and more confidence.",
+  },
+];
+
+const faqs = [
+  {
+    question: "Why is valuation expertise important when selling probate property?",
+    answer: "Probate properties are often in non-standard condition — outdated, deferred maintenance, cluttered, or vacant. Accurate valuation helps avoid pricing too high (stalling the sale) or too low (leaving value behind). David's dual credentials as broker and certified appraiser provide deeper insight than a standard comparative market analysis.",
+  },
+  {
+    question: "Does David Stein provide formal appraisals?",
+    answer: "David is a Washington state certified residential appraiser and can discuss valuation matters in depth. His primary role in most client engagements is as a real estate broker, providing pricing strategy and sale execution. Formal appraisal services are available separately when needed.",
+  },
+  {
+    question: "How does David's appraisal background improve the sale process?",
+    answer: "Understanding how appraisers evaluate property helps David anticipate buyer financing challenges, price properties more accurately, and identify condition issues that could affect value — all before the property hits the market.",
   },
 ];
 
@@ -68,8 +87,9 @@ const WhyValuationMatters = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Why Valuation Matters in Probate and Inherited Property Sales | David Stein"
-        description="Understand why valuation expertise matters when selling probate property, inherited homes, and trust-owned real estate. David Stein combines brokerage and certified appraisal credentials in King, Snohomish, Pierce, and Kitsap Counties."
+        description="Understand why valuation expertise matters when selling probate property, inherited homes, and trust-owned real estate. David Stein combines brokerage and certified appraisal credentials serving King, Snohomish, Pierce, and Kitsap Counties."
       />
+      <BreadcrumbSchema items={[{ name: "Why Valuation Matters", url: "/why-valuation-matters" }]} />
       <Header />
 
       {/* Hero */}
@@ -80,32 +100,25 @@ const WhyValuationMatters = () => {
               Valuation and Market Perspective
             </p>
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-[22px]">
-              Why Valuation Matters
+              Why Valuation Matters in Probate and Estate Property Sales
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-4">
-              When a home or other real estate is part of a probate matter, trust administration, inherited property transition, or estate-related sale, valuation becomes one of the most important parts of the decision-making process. Accurate valuation helps attorneys, executors, trustees, fiduciaries, personal representatives, heirs, and families make more informed decisions about pricing, preparation, timing, and sale strategy.
+              Pricing mistakes are one of the most costly errors in estate-related real estate. A property priced too high stalls on the market and erodes confidence; priced too low, value is permanently lost. David Stein's dual credentials as a licensed broker and state certified appraiser provide the valuation depth that probate, trust, and inherited property sales demand.
             </p>
-            <p className="text-lg md:text-xl text-primary-foreground/70 leading-relaxed mb-[30px]">
-              David Stein is a licensed real estate broker in the State of Washington and a Washington state certified real estate appraiser. His work combines real estate brokerage experience with valuation insight to help clients better understand how property condition, location, buyer expectations, and local market realities affect important property transitions throughout King County, Snohomish County, Pierce County, and Kitsap County.
+            <p className="text-lg text-primary-foreground/70 leading-relaxed mb-[30px]">
+              With over 20 years of experience serving King, Snohomish, Pierce, and Kitsap Counties, David helps attorneys, executors, trustees, and families understand not just what a property may be worth — but why, and how to position it for the strongest result.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Link to="/contact">
-                <Button
-                  size="lg"
-                  className="bg-gold hover:bg-gold-light text-foreground font-medium px-7 py-4 h-auto rounded-lg w-full sm:w-auto"
-                >
+                <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-medium px-7 py-4 h-auto rounded-lg w-full sm:w-auto">
                   <Phone className="w-4 h-4 mr-2" />
-                  Request a Confidential Consultation
+                  Schedule a Consultation
                 </Button>
               </Link>
               <Link to="/contact">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-medium px-7 py-4 h-auto rounded-lg w-full sm:w-auto"
-                >
+                <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-medium px-7 py-4 h-auto rounded-lg w-full sm:w-auto">
                   <MessageSquare className="w-4 h-4 mr-2" />
-                  Discuss a Property Transition
+                  Request a Call
                 </Button>
               </Link>
             </div>
@@ -113,47 +126,20 @@ const WhyValuationMatters = () => {
         </div>
       </section>
 
-      {/* Intro: Important Property Decisions */}
-      <section className="pt-12 pb-12 md:pt-16 md:pb-16 lg:pt-[84px] lg:pb-[84px] bg-secondary">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-[1140px] mx-auto">
-            <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-[22px]">
-              Important Property Decisions Begin With Clearer Value Perspective
-            </h2>
-            <div className="max-w-[900px] space-y-5 text-muted-foreground text-base md:text-[17px] leading-[1.8]">
-              <p>
-                Estate-related real estate decisions often carry financial, legal, practical, and emotional weight. A property may be one of the most important assets in an estate or trust, and decisions about whether to sell, how to price, whether to improve the home, and how to position it in the market are all influenced by value.
-              </p>
-              <p>
-                Without a realistic understanding of value, people may delay unnecessarily, spend money in the wrong places, set unrealistic expectations, or move forward without a clear strategy. A thoughtful valuation perspective helps create a more informed starting point.
-              </p>
-              <p>
-                David Stein helps clients understand not only what may affect value, but also how buyers are likely to respond to the property in its current condition and in its local market context.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <TrustStrip />
 
       {/* Why Valuation Matters Cards */}
       <section className="pt-12 pb-12 md:pt-16 md:pb-16 lg:pt-[84px] lg:pb-[84px] bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-[1140px] mx-auto">
-            <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-10 md:mb-14">
+            <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-10">
               Why Valuation Matters in Probate, Inherited, and Trust-Related Property Decisions
             </h2>
             <div className="grid md:grid-cols-2 gap-5 lg:gap-6">
               {valuationCards.map((card, i) => (
-                <div
-                  key={i}
-                  className="bg-card border border-border rounded-[18px] px-7 py-8 md:px-8 md:py-9"
-                >
-                  <h3 className="font-serif text-xl md:text-[22px] text-foreground font-semibold mb-3">
-                    {card.title}
-                  </h3>
-                  <p className="text-muted-foreground leading-[1.75] text-base md:text-[17px]">
-                    {card.text}
-                  </p>
+                <div key={i} className="bg-card border border-border rounded-[18px] px-7 py-8 md:px-8 md:py-9">
+                  <h3 className="font-serif text-xl md:text-[22px] text-foreground font-semibold mb-3">{card.title}</h3>
+                  <p className="text-muted-foreground leading-[1.75]">{card.text}</p>
                 </div>
               ))}
             </div>
@@ -161,28 +147,18 @@ const WhyValuationMatters = () => {
         </div>
       </section>
 
-      {/* Brokerage + Valuation Insight */}
+      {/* Brokerage + Valuation */}
       <section className="pt-12 pb-12 md:pt-16 md:pb-16 lg:pt-[84px] lg:pb-[84px] bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-[1140px] mx-auto">
-            <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-3">
+            <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-10">
               Brokerage Experience Combined With Valuation Insight
             </h2>
-            <p className="text-muted-foreground text-base md:text-[17px] leading-[1.8] max-w-[900px] mb-10 md:mb-14">
-              Many real estate professionals can market a property. Far fewer bring both brokerage experience and Washington state certified appraisal credentials to estate-related real property decisions. That combination can be especially useful when a property needs to be evaluated not only as a listing, but as an important asset requiring sound judgment.
-            </p>
             <div className="grid md:grid-cols-2 gap-5 lg:gap-6">
               {brokerageFeatures.map((card, i) => (
-                <div
-                  key={i}
-                  className="bg-card border border-border rounded-[18px] px-7 py-8 md:px-8 md:py-9"
-                >
-                  <h3 className="font-serif text-xl md:text-[22px] text-foreground font-semibold mb-3">
-                    {card.title}
-                  </h3>
-                  <p className="text-muted-foreground leading-[1.75] text-base md:text-[17px]">
-                    {card.text}
-                  </p>
+                <div key={i} className="bg-card border border-border rounded-[18px] px-7 py-8 md:px-8 md:py-9">
+                  <h3 className="font-serif text-xl md:text-[22px] text-foreground font-semibold mb-3">{card.title}</h3>
+                  <p className="text-muted-foreground leading-[1.75]">{card.text}</p>
                 </div>
               ))}
             </div>
@@ -190,28 +166,18 @@ const WhyValuationMatters = () => {
         </div>
       </section>
 
-      {/* Clarity Before Major Decisions */}
+      {/* Clarity */}
       <section className="pt-12 pb-12 md:pt-16 md:pb-16 lg:pt-[84px] lg:pb-[84px] bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-[1140px] mx-auto">
-            <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-3">
+            <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-10">
               Clarity Before Major Decisions
             </h2>
-            <p className="text-muted-foreground text-base md:text-[17px] leading-[1.8] max-w-[900px] mb-10 md:mb-14">
-              For many clients, the goal is not to become experts in valuation. The goal is to make better-informed property decisions with less uncertainty and less avoidable risk.
-            </p>
             <div className="grid md:grid-cols-2 gap-5 lg:gap-6">
               {clarityFeatures.map((card, i) => (
-                <div
-                  key={i}
-                  className="bg-card border border-border rounded-[18px] px-7 py-8 md:px-8 md:py-9"
-                >
-                  <h3 className="font-serif text-xl md:text-[22px] text-foreground font-semibold mb-3">
-                    {card.title}
-                  </h3>
-                  <p className="text-muted-foreground leading-[1.75] text-base md:text-[17px]">
-                    {card.text}
-                  </p>
+                <div key={i} className="bg-card border border-border rounded-[18px] px-7 py-8 md:px-8 md:py-9">
+                  <h3 className="font-serif text-xl md:text-[22px] text-foreground font-semibold mb-3">{card.title}</h3>
+                  <p className="text-muted-foreground leading-[1.75]">{card.text}</p>
                 </div>
               ))}
             </div>
@@ -219,61 +185,34 @@ const WhyValuationMatters = () => {
         </div>
       </section>
 
-      {/* Related Resources */}
-      <section className="pt-10 pb-10 md:pt-14 md:pb-14 bg-secondary">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-[1140px] mx-auto">
-            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-sm">Related Resources</p>
-            <div className="flex flex-wrap gap-3">
-              <Link to="/how-the-process-works" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">How the Process Works</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/executors" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Executors</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/for-attorneys" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Attorneys</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/faq" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">FAQ</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/contact" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Contact</Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageFAQ faqs={faqs} heading="Valuation FAQs" />
 
-      {/* Disclaimer */}
+      <RelatedServices currentPath="/why-valuation-matters" />
+
       <DisclaimerSection />
 
       {/* Final CTA */}
-      <section className="pt-12 pb-16 md:pt-16 md:pb-20 lg:pt-[84px] lg:pb-[88px] bg-secondary">
+      <section className="pt-12 pb-16 md:pt-16 md:pb-20 lg:pt-[84px] lg:pb-[88px] bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-[1060px] mx-auto">
-            <div className="bg-card border border-border rounded-[18px] px-7 py-9 md:px-10 md:py-11 text-center">
-              <p className="text-muted-foreground/60 font-bold tracking-[0.2em] uppercase text-xs mb-3.5">
-                Confidential Consultation
-              </p>
+            <div className="bg-secondary border border-border rounded-[18px] px-7 py-9 md:px-10 md:py-11 text-center">
               <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-4">
                 Discuss a Property Transition With David Stein
               </h2>
               <p className="text-muted-foreground leading-relaxed text-base md:text-lg max-w-3xl mx-auto mb-8">
-                If you are handling probate property, inherited real estate, trust-owned property, or an estate-related home sale in King County, Snohomish County, Pierce County, or Kitsap County, David Stein provides experienced guidance grounded in market knowledge, valuation insight, and a practical understanding of important property transitions.
+                If you need valuation-informed guidance for probate property, inherited real estate, or trust-owned property, David Stein can help.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
                 <Link to="/contact">
-                  <Button
-                    size="lg"
-                    className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium px-7 py-4 h-auto rounded-lg w-full sm:w-auto"
-                  >
+                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium px-7 py-4 h-auto rounded-lg w-full sm:w-auto">
                     <Phone className="w-4 h-4 mr-2" />
-                    Request a Confidential Consultation
+                    Schedule a Consultation
                   </Button>
                 </Link>
                 <Link to="/contact">
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-medium px-7 py-4 h-auto rounded-lg w-full sm:w-auto"
-                  >
+                  <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-medium px-7 py-4 h-auto rounded-lg w-full sm:w-auto">
                     <MessageSquare className="w-4 h-4 mr-2" />
-                    Discuss a Property Transition
+                    Contact David
                   </Button>
                 </Link>
               </div>
