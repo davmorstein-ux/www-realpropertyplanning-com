@@ -29,7 +29,7 @@ const steps = [
   {
     number: "04",
     title: "Preparation and Coordination",
-    text: "If needed, David helps guide the next steps related to cleanout, repairs, contractors, staging, or readiness for market.",
+    text: "If needed, Real Property Planning helps guide the next steps related to cleanout, repairs, contractors, staging, or readiness for market.",
   },
   {
     number: "05",
