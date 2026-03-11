@@ -2,6 +2,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import TrustStrip from "@/components/TrustStrip";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -16,7 +18,6 @@ import {
 import { Phone, Mail, MapPin } from "lucide-react";
 import { useState } from "react";
 import expRealtyLogo from "@/assets/exp-realty-logo.png";
-import typingImage from "@/assets/typing.png";
 import { useToast } from "@/hooks/use-toast";
 
 const roleOptions = [
@@ -28,7 +29,7 @@ const roleOptions = [
   "Family Member",
   "Senior Homeowner",
   "Adult Child Assisting Parent",
-  "Other"
+  "Other",
 ];
 
 const situationOptions = [
@@ -40,7 +41,7 @@ const situationOptions = [
   "Assisted Living Transition",
   "Property Valuation Guidance",
   "Property Preparation",
-  "Other"
+  "Other",
 ];
 
 const Contact = () => {
@@ -50,15 +51,14 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
+
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
     toast({
       title: "Message Sent",
       description: "Thank you for your inquiry. David Stein will be in touch shortly.",
     });
-    
+
     setIsSubmitting(false);
     (e.target as HTMLFormElement).reset();
   };
@@ -66,42 +66,38 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Contact David Stein — Probate Real Estate Consultation | Western Washington"
-        description="Contact David Stein for a confidential consultation about probate property, inherited homes, trust-owned real estate, senior transitions, or estate-related home sales in King, Snohomish, Pierce, and Kitsap Counties."
+        title="Contact David Stein | Probate Real Estate & Inherited Property Guidance"
+        description="Contact David Stein for help with probate real estate, inherited property, estate sales, valuation-related questions, and senior transitions in Western Washington."
       />
+      <BreadcrumbSchema items={[{ name: "Contact", url: "/contact" }]} />
       <Header />
-      
+
       {/* Hero */}
-      <section className="bg-navy pt-20 pb-10 lg:pt-32 lg:pb-28">
+      <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl">
-            <p className="text-gold font-bold tracking-widest uppercase mb-4 text-base">
-              Contact David Stein
+            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
+              Get in Touch
             </p>
-            <h1 className="font-serif text-3xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-4 md:mb-6">
+            <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-[22px]">
               Contact David Stein
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed">
-              Confidential, experienced guidance for estate, probate, trust, and senior real estate matters
+              If you are dealing with probate property, inherited real estate, a trust-owned home, a senior transition, or an estate-related sale decision, David welcomes your call or message.
             </p>
           </div>
         </div>
       </section>
 
+      <TrustStrip />
+
       {/* Contact Content */}
-      <section className="py-12 lg:py-28 bg-background">
+      <section className="py-16 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Contact Info */}
             <div>
-              <h2 className="font-serif text-2xl text-foreground font-semibold mb-6">
-                Start With a Conversation
-              </h2>
-              <p className="text-muted-foreground leading-relaxed mb-8">
-                Whether you are an attorney, fiduciary, executor, trustee, family member, or senior homeowner, David Stein can help you think through the property, the circumstances, and the next steps.
-              </p>
-              
-              <div className="space-y-6">
+              <div className="space-y-6 mb-8">
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center shrink-0">
                     <Phone className="w-5 h-5 text-gold" />
@@ -113,7 +109,7 @@ const Contact = () => {
                     </a>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center shrink-0">
                     <Mail className="w-5 h-5 text-gold" />
@@ -125,7 +121,7 @@ const Contact = () => {
                     </a>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center shrink-0">
                     <MapPin className="w-5 h-5 text-gold" />
@@ -133,21 +129,20 @@ const Contact = () => {
                   <div>
                     <p className="font-medium text-foreground mb-1">Service Areas</p>
                     <p className="text-muted-foreground">
-                      Greater Seattle Area<br />
                       King, Snohomish, Pierce & Kitsap Counties
                     </p>
                   </div>
                 </div>
               </div>
 
+              <p className="text-muted-foreground text-sm leading-relaxed mb-8">
+                Consultations are welcomed for attorneys, executors, fiduciaries, and families navigating property decisions.
+              </p>
+
               {/* Brokerage Info */}
-              <div className="mt-10 pt-8 border-t border-border">
+              <div className="pt-8 border-t border-border">
                 <div className="flex flex-col items-center md:items-start mb-5">
-                  <img 
-                    src={expRealtyLogo} 
-                    alt="eXp Realty" 
-                    className="w-[95px] md:w-[120px] h-auto"
-                  />
+                  <img src={expRealtyLogo} alt="eXp Realty" className="w-[95px] md:w-[120px] h-auto" />
                 </div>
                 <div className="space-y-2 text-sm text-muted-foreground">
                   <p className="font-medium text-foreground">David Stein</p>
@@ -161,17 +156,11 @@ const Contact = () => {
 
             {/* Contact Form */}
             <div className="lg:col-span-2">
-              <div className="flex justify-center mb-8">
-                <img src={typingImage} alt="Professional at desk" className="w-1/3 sm:w-1/4 lg:w-1/4 rounded-lg shadow-lg" />
-              </div>
               <div className="bg-card rounded-lg border border-border p-6 sm:p-8 lg:p-10">
-                <h3 className="font-serif text-2xl text-foreground font-semibold mb-2">
-                  Tell Us About Your Situation
-                </h3>
-                <p className="text-muted-foreground mb-8">
-                  Provide a few details below and David Stein will follow up to discuss your property and goals.
+                <p className="text-muted-foreground mb-6">
+                  Tell us a little about the property or situation, and David will follow up.
                 </p>
-                
+
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-2">
@@ -183,7 +172,7 @@ const Contact = () => {
                       <Input id="email" name="email" type="email" required placeholder="your@email.com" />
                     </div>
                   </div>
-                  
+
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="phone">Phone Number</Label>
@@ -197,7 +186,7 @@ const Contact = () => {
                         </SelectTrigger>
                         <SelectContent>
                           {roleOptions.map((role) => (
-                            <SelectItem key={role} value={role.toLowerCase().replace(/\s+/g, '-')}>
+                            <SelectItem key={role} value={role.toLowerCase().replace(/\s+/g, "-")}>
                               {role}
                             </SelectItem>
                           ))}
@@ -205,7 +194,7 @@ const Contact = () => {
                       </Select>
                     </div>
                   </div>
-                  
+
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="address">Property Address</Label>
@@ -219,7 +208,7 @@ const Contact = () => {
                         </SelectTrigger>
                         <SelectContent>
                           {situationOptions.map((situation) => (
-                            <SelectItem key={situation} value={situation.toLowerCase().replace(/\s+/g, '-')}>
+                            <SelectItem key={situation} value={situation.toLowerCase().replace(/\s+/g, "-")}>
                               {situation}
                             </SelectItem>
                           ))}
@@ -227,25 +216,25 @@ const Contact = () => {
                       </Select>
                     </div>
                   </div>
-                  
+
                   <div className="space-y-2">
                     <Label htmlFor="message">Message</Label>
-                    <Textarea 
-                      id="message" 
-                      name="message" 
+                    <Textarea
+                      id="message"
+                      name="message"
                       rows={5}
                       placeholder="Please share any additional details about your situation..."
                     />
                   </div>
-                  
+
                   <div>
-                    <Button 
-                      type="submit" 
+                    <Button
+                      type="submit"
                       size="lg"
-                      className="bg-navy hover:bg-navy-light text-primary-foreground font-semibold w-full md:w-auto"
+                      className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold w-full md:w-auto"
                       disabled={isSubmitting}
                     >
-                      {isSubmitting ? "Sending..." : "Request a Confidential Consultation"}
+                      {isSubmitting ? "Sending..." : "Send Message"}
                     </Button>
                     <p className="text-muted-foreground text-sm mt-4">
                       All inquiries are handled with professionalism and discretion.
