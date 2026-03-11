@@ -64,8 +64,8 @@ const ProbateEstateSales = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Probate Real Estate & Estate Property Sales in Western Washington | David Stein"
-        description="Experienced guidance for probate real estate, estate property sales, inherited homes, and trust-owned homes throughout King, Snohomish, Pierce, and Kitsap Counties."
+        title="Probate Real Estate & Estate Property Sales | Real Property Planning"
+        description="Real Property Planning provides experienced guidance for probate real estate, estate property sales, inherited homes, and trust-owned homes throughout Western Washington."
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema items={[{ name: "Probate & Estate Sales", url: "/probate-estate-sales" }]} />
