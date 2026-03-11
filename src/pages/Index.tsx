@@ -612,8 +612,8 @@ const Index = () => {
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-6">
               Need Guidance on a Probate, Estate, Trust, or Senior Property Matter?
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Start with a confidential conversation. David Stein provides experienced, practical guidance tailored to the property, the circumstances, and the people involved.
+              <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              Start with a confidential conversation. Real Property Planning provides experienced, practical guidance tailored to the property, the circumstances, and the people involved.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">
