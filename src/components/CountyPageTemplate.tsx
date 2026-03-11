@@ -42,7 +42,7 @@ const CountyPageTemplate = ({
     <div className="min-h-screen bg-background">
       <SEOHead
         title={`${countyName} Probate Real Estate & Inherited Property Guidance | Real Property Planning`}
-        description={`Real Property Planning provides practical real estate guidance for inherited property, probate real estate, estate sales, trust-owned homes, and senior transitions in ${countyName}, Washington.`}
+        description={`Real Property Planning helps clients and referral partners with probate real estate, inherited homes, estate sales, trust-owned property, and senior transitions in ${countyName}, Washington.`}
       />
       <BreadcrumbSchema items={breadcrumbItems} />
       <Header />
