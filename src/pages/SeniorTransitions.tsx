@@ -81,10 +81,10 @@ const SeniorTransitions = () => {
               Thoughtful Real Estate Support for Senior Transitions
             </h1>
             <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
-              Senior transitions often involve far more than a sale. Families may be making decisions about timing, care, relocation, downsizing, property preparation, and what to do with a long-held home during an emotional and sometimes urgent period of change.
+              Real Property Planning helps seniors, adult children, fiduciaries, and trusted advisors navigate housing decisions during major life transitions.
             </p>
             <p className="text-lg text-primary-foreground/70 leading-relaxed mb-8">
-              David Stein helps seniors, adult children, attorneys, fiduciaries, and trusted advisors navigate these housing decisions with patience, professionalism, and a practical plan.
+              Senior transitions often involve more than a sale. Families may be making decisions about care, timing, relocation, downsizing, property preparation, and what to do with a long-held home. David Stein provides a calm, practical approach grounded in more than 20 years of experience.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/contact">
