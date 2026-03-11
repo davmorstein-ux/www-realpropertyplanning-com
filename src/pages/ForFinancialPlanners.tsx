@@ -105,8 +105,8 @@ const ForFinancialPlanners = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Real Estate Guidance for Financial Planners and Their Clients | David Stein"
-        description="David Stein provides probate real estate, inherited property, trust-owned real estate, and estate sale guidance for financial planners and their clients in King, Snohomish, Pierce, and Kitsap Counties."
+        title="Real Estate Guidance for Financial Planners and Their Clients | Real Property Planning"
+        description="Real Property Planning provides probate real estate, inherited property, trust-owned real estate, and estate sale guidance for financial planners and their clients in King, Snohomish, Pierce, and Kitsap Counties."
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema items={[{ name: "For Financial Planners", url: "/for-financial-planners" }]} />
