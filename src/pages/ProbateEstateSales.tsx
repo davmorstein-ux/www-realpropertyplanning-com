@@ -2,6 +2,10 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
+import TrustStrip from "@/components/TrustStrip";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import RelatedServices from "@/components/RelatedServices";
+import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Phone, CheckCircle, ArrowRight } from "lucide-react";
@@ -15,20 +19,55 @@ const services = [
   "Repair and vendor coordination",
   "Staging and presentation recommendations",
   "Strategic marketing and sale execution",
-  "Ongoing communication with involved parties"
+  "Ongoing communication with involved parties",
 ];
+
+const faqs = [
+  {
+    question: "How long does it take to sell a probate property in Washington?",
+    answer: "Timelines vary depending on legal authority, property condition, preparation needs, and market conditions. Some probate properties sell within weeks of listing; others may take longer due to cleanup, repairs, or coordination among multiple parties. David Stein helps create a realistic timeline based on each situation.",
+  },
+  {
+    question: "Can an estate property be sold as-is?",
+    answer: "Yes. Many estate and probate properties are sold in as-is condition, especially when time, budget, or logistics make preparation impractical. David helps clients evaluate whether an as-is sale or targeted preparation will produce the best overall result.",
+  },
+  {
+    question: "What costs are involved in selling a probate property?",
+    answer: "Common costs include clean-out, minor repairs, staging, real estate commissions, closing costs, and any title-related expenses. David helps executors and families understand likely costs upfront so there are no surprises during the process.",
+  },
+  {
+    question: "Does the executor need court approval to sell estate property in Washington?",
+    answer: "It depends on the estate structure and the authority granted. In many cases, a personal representative has authority under the will or court appointment to sell without additional court confirmation. Legal questions should always be directed to the estate attorney.",
+  },
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "David Stein — Probate & Estate Property Sales",
+  description: "Experienced guidance for probate property sales, estate-owned homes, and inherited real estate in King, Snohomish, Pierce, and Kitsap Counties.",
+  url: "https://realpropertyplanning.com/probate-estate-sales",
+  areaServed: [
+    { "@type": "AdministrativeArea", name: "King County, WA" },
+    { "@type": "AdministrativeArea", name: "Snohomish County, WA" },
+    { "@type": "AdministrativeArea", name: "Pierce County, WA" },
+    { "@type": "AdministrativeArea", name: "Kitsap County, WA" },
+  ],
+};
 
 const ProbateEstateSales = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Probate and Estate Property Sales in Western Washington | David Stein"
-        description="Experienced guidance for probate property sales, estate-owned homes, and inherited real estate in King, Snohomish, Pierce, and Kitsap Counties. David Stein helps attorneys, executors, and families navigate the sale process."
+        description="David Stein provides experienced guidance for selling probate property, estate-owned homes, and inherited real estate. Licensed broker and certified appraiser serving King, Snohomish, Pierce, and Kitsap Counties."
+        jsonLd={jsonLd}
       />
+      <BreadcrumbSchema items={[{ name: "Probate & Estate Sales", url: "/probate-estate-sales" }]} />
       <Header />
-      
+
       {/* Hero */}
-      <section className="bg-navy pt-16 pb-12 lg:pt-32 lg:pb-28">
+      <section className="bg-primary pt-16 pb-12 lg:pt-32 lg:pb-28">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="text-gold font-bold tracking-widest uppercase mb-4 text-base">
@@ -37,38 +76,30 @@ const ProbateEstateSales = () => {
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
               Experienced Guidance for Probate and Estate Property Sales
             </h1>
-            <p className="text-xl text-primary-foreground/80 leading-relaxed mb-8">
-              Helping attorneys, executors, personal representatives, trustees, and families navigate the sale of real property tied to probate, estate administration, and inherited property matters.
+            <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
+              Selling real estate tied to probate, estate administration, or inheritance involves legal timelines, multiple decision-makers, property condition concerns, and pricing complexity that most agents are not equipped to handle. David Stein specializes in exactly these situations.
             </p>
-            <Link to="/contact">
-              <Button size="lg" className="bg-gold hover:bg-gold-light text-navy font-semibold">
-                <Phone className="w-5 h-5 mr-2" />
-                Request a Property Review
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* AI Summary + Who This Helps */}
-      <section className="py-10 lg:py-14 bg-secondary">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <p className="text-muted-foreground text-base leading-relaxed mb-4">
-              This page is for attorneys, executors, personal representatives, trustees, fiduciaries, heirs, and families who need experienced real estate guidance for selling property involved in probate, estate settlement, trust administration, or inheritance in King, Snohomish, Pierce, and Kitsap Counties, Washington.
+            <p className="text-lg text-primary-foreground/70 leading-relaxed mb-8">
+              As a licensed Washington real estate broker and state certified residential appraiser with over 20 years of experience, David helps attorneys, executors, trustees, and families navigate the sale process from initial property review through closing — with a valuation-informed approach that protects value and reduces stress.
             </p>
-            <div className="flex flex-wrap gap-3">
-              <Link to="/for-attorneys" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Attorneys</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/executors" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Executors</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/how-the-process-works" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">How the Process Works</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/why-valuation-matters" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Why Valuation Matters</Link>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link to="/contact">
+                <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold w-full sm:w-auto">
+                  <Phone className="w-5 h-5 mr-2" />
+                  Schedule a Consultation
+                </Button>
+              </Link>
+              <Link to="/contact">
+                <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 w-full sm:w-auto">
+                  Request a Call
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
       </section>
+
+      <TrustStrip />
 
       {/* Intro */}
       <section className="py-20 lg:py-28 bg-background">
@@ -85,14 +116,10 @@ const ProbateEstateSales = () => {
                 David Stein helps clients and referral partners navigate the real estate side of the process with professionalism and practical guidance. His work includes helping assess the property, understand likely market value, determine the best sale approach, coordinate needed preparation, and manage the transaction through closing.
               </p>
               <div className="hidden lg:flex justify-center">
-                <img
-                  src={stampImage}
-                  alt="Vintage estate property stamp"
-                  className="w-64 xl:w-72 rounded-lg shadow-lg"
-                />
+                <img src={stampImage} alt="Vintage estate property stamp" className="w-64 xl:w-72 rounded-lg shadow-lg" />
               </div>
             </div>
-            <div className="bg-ivory rounded-lg p-8 lg:p-10">
+            <div className="bg-secondary rounded-lg p-8 lg:p-10">
               <h3 className="font-serif text-xl text-foreground font-semibold mb-6">
                 Services Include
               </h3>
@@ -109,8 +136,12 @@ const ProbateEstateSales = () => {
         </div>
       </section>
 
+      <PageFAQ faqs={faqs} heading="Probate & Estate Sale FAQs" />
+
+      <RelatedServices currentPath="/probate-estate-sales" />
+
       {/* CTA */}
-      <section className="py-20 lg:py-28 bg-navy">
+      <section className="py-20 lg:py-28 bg-primary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
@@ -119,12 +150,19 @@ const ProbateEstateSales = () => {
             <p className="text-primary-foreground/80 text-lg leading-relaxed mb-8">
               David Stein can help you evaluate the property, understand the likely options, and create a practical path forward.
             </p>
-            <Link to="/contact">
-              <Button size="lg" className="bg-gold hover:bg-gold-light text-navy font-semibold">
-                Discuss the Property
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-            </Link>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <Link to="/contact">
+                <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold">
+                  Schedule a Consultation
+                </Button>
+              </Link>
+              <Link to="/contact">
+                <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+                  Contact David
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>

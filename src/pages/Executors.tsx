@@ -2,6 +2,10 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
+import TrustStrip from "@/components/TrustStrip";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import RelatedServices from "@/components/RelatedServices";
+import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Phone, MessageSquare } from "lucide-react";
@@ -82,16 +86,47 @@ const valuationFeatures = [
   },
 ];
 
+const faqs = [
+  {
+    question: "What is the first thing an executor should do with estate property?",
+    answer: "Start by understanding who has legal authority to act, securing the property, and getting a realistic assessment of its condition and likely value. David Stein can help with the real estate evaluation while you work with your attorney on the legal side.",
+  },
+  {
+    question: "How does David Stein help executors who live out of state?",
+    answer: "Many executors are managing property from a distance. David provides hands-on local support — evaluating the property, coordinating access, managing cleanup and preparation, and overseeing the sale process so out-of-area executors can stay informed without needing to be physically present.",
+  },
+  {
+    question: "Should an executor make repairs before selling estate property?",
+    answer: "It depends on the property, the market, and the likely return. Some repairs meaningfully improve value; others are not worth the cost. David helps executors evaluate repair decisions with a practical, market-informed perspective.",
+  },
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "David Stein — Guidance for Executors & Trustees",
+  description: "David Stein helps executors, personal representatives, trustees, and families navigate inherited property, probate real estate, and estate-related home sales in King, Snohomish, Pierce, and Kitsap Counties.",
+  url: "https://realpropertyplanning.com/executors",
+  areaServed: [
+    { "@type": "AdministrativeArea", name: "King County, WA" },
+    { "@type": "AdministrativeArea", name: "Snohomish County, WA" },
+    { "@type": "AdministrativeArea", name: "Pierce County, WA" },
+    { "@type": "AdministrativeArea", name: "Kitsap County, WA" },
+  ],
+};
+
 const Executors = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Guidance for Executors, Personal Representatives & Trustees | David Stein"
         description="David Stein helps executors, personal representatives, trustees, and families navigate inherited property, probate real estate, and estate-related home sales in King, Snohomish, Pierce, and Kitsap Counties."
+        jsonLd={jsonLd}
       />
+      <BreadcrumbSchema items={[{ name: "For Executors", url: "/executors" }]} />
       <Header />
 
-      {/* Section 1: Hero */}
+      {/* Hero */}
       <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl">
@@ -102,22 +137,22 @@ const Executors = () => {
               Guidance for Executors, Personal Representatives, Trustees, and Families Handling Real Property
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-5">
-              When a home or other real estate becomes part of an estate, trust, or inherited property transition, the responsibility can feel overwhelming. Executors, personal representatives, trustees, heirs, and family members are often expected to make important decisions about value, timing, preparation, cleanup, sale strategy, and next steps during an already stressful time.
+              Being named executor or personal representative means taking on real estate decisions you may have never faced before — from determining property value and coordinating cleanup to managing a sale with multiple stakeholders. David Stein helps executors and families cut through the confusion with experienced, step-by-step guidance.
             </p>
             <p className="text-lg text-primary-foreground/70 leading-relaxed mb-[30px]">
-              David Stein is a licensed real estate broker in the State of Washington and a Washington state certified real estate appraiser with over 20 years of experience helping clients navigate probate property, inherited homes, trust-owned real estate, and estate-related property transitions throughout King County, Snohomish County, Pierce County, and Kitsap County. He helps clients move from uncertainty toward a more informed, organized, and manageable process.
+              As a licensed Washington real estate broker and state certified residential appraiser with over 20 years of experience, David works with executors, trustees, heirs, and families throughout King, Snohomish, Pierce, and Kitsap Counties to move from uncertainty toward an organized, informed, and manageable process.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Link to="/contact">
                 <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold px-7 py-4 h-auto rounded-lg w-full sm:w-auto">
                   <Phone className="w-4 h-4 mr-2" />
-                  Request a Confidential Consultation
+                  Schedule a Consultation
                 </Button>
               </Link>
               <Link to="/contact">
                 <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-medium px-7 py-4 h-auto rounded-lg w-full sm:w-auto">
                   <MessageSquare className="w-4 h-4 mr-2" />
-                  Discuss a Property Transition
+                  Request a Call
                 </Button>
               </Link>
             </div>
@@ -125,8 +160,10 @@ const Executors = () => {
         </div>
       </section>
 
-      {/* Section 2: What Executors Face */}
-      <section className="pt-12 pb-12 md:pt-16 md:pb-16 lg:pt-[84px] lg:pb-[84px] bg-secondary">
+      <TrustStrip />
+
+      {/* What Executors Face */}
+      <section className="pt-12 pb-12 md:pt-16 md:pb-16 lg:pt-[84px] lg:pb-[84px] bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-[1140px] mx-auto">
             <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
@@ -140,7 +177,7 @@ const Executors = () => {
             </p>
             <div className="grid md:grid-cols-2 gap-5 lg:gap-6">
               {challengeCards.map((card, index) => (
-                <div key={index} className="bg-card border border-border rounded-[18px] px-7 py-8 md:px-8 md:py-9">
+                <div key={index} className="bg-secondary border border-border rounded-[18px] px-7 py-8 md:px-8 md:py-9">
                   <h3 className="font-serif text-xl md:text-[22px] text-foreground font-semibold mb-3">
                     {card.heading}
                   </h3>
@@ -152,22 +189,19 @@ const Executors = () => {
         </div>
       </section>
 
-      {/* Section 3: How David Helps */}
-      <section className="pt-12 pb-12 md:pt-16 md:pb-16 lg:pt-[84px] lg:pb-[84px] bg-background">
+      {/* How David Helps */}
+      <section className="pt-12 pb-12 md:pt-16 md:pb-16 lg:pt-[84px] lg:pb-[84px] bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-[1140px] mx-auto">
             <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
               Practical Real Estate Guidance
             </p>
-            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-[22px]">
+            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-10">
               How David Stein Helps Executors, Trustees, and Families
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mb-10">
-              David Stein helps clients understand the real-estate side of important property transitions. His role is to provide practical guidance on value, preparation, sale strategy, market timing, and the steps required to bring a property to market in a way that is organized, informed, and responsive to the client's goals.
-            </p>
             <div className="grid md:grid-cols-2 gap-5 lg:gap-6">
               {howHelpsBlocks.map((block, index) => (
-                <div key={index} className="bg-secondary border border-border rounded-[18px] px-7 py-8 md:px-8 md:py-9">
+                <div key={index} className="bg-card border border-border rounded-[18px] px-7 py-8 md:px-8 md:py-9">
                   <h3 className="font-serif text-xl md:text-[22px] text-foreground font-semibold mb-3">
                     {block.heading}
                   </h3>
@@ -179,20 +213,17 @@ const Executors = () => {
         </div>
       </section>
 
-      {/* Section 4: Common Situations */}
-      <section className="pt-12 pb-12 md:pt-16 md:pb-16 lg:pt-[84px] lg:pb-[84px] bg-secondary">
+      {/* Common Situations */}
+      <section className="pt-12 pb-12 md:pt-16 md:pb-16 lg:pt-[84px] lg:pb-[84px] bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-[1140px] mx-auto">
             <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
               Representative Situations
             </p>
-            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-[22px]">
+            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-10">
               Common Situations and Decisions
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mb-10">
-              Every property and family situation is different, but many executors, trustees, and heirs face similar questions. David Stein helps clients navigate a wide range of real-estate-related concerns during estate and inherited property transitions.
-            </p>
-            <div className="grid md:grid-cols-2 gap-x-8 gap-y-4 mb-10">
+            <div className="grid md:grid-cols-2 gap-x-8 gap-y-4">
               {situations.map((situation, index) => (
                 <div key={index} className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-gold mt-2.5 shrink-0" />
@@ -200,15 +231,12 @@ const Executors = () => {
                 </div>
               ))}
             </div>
-            <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl">
-              Whether the property is a longtime family residence, an outdated inherited home, a trust-owned asset, or a probate property that needs to be evaluated and prepared for sale, David Stein helps clients make better-informed decisions with greater clarity and confidence.
-            </p>
           </div>
         </div>
       </section>
 
-      {/* Section 5: Valuation & Local Knowledge */}
-      <section className="pt-12 pb-12 md:pt-16 md:pb-16 lg:pt-[84px] lg:pb-[84px] bg-background">
+      {/* Valuation & Local Knowledge */}
+      <section className="pt-12 pb-12 md:pt-16 md:pb-16 lg:pt-[84px] lg:pb-[84px] bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-[1140px] mx-auto">
             <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
@@ -217,9 +245,9 @@ const Executors = () => {
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-10">
               Why Valuation and Local Market Knowledge Matter
             </h2>
-            <div className="grid lg:grid-cols-3 gap-5 lg:gap-6 mb-10">
+            <div className="grid lg:grid-cols-3 gap-5 lg:gap-6">
               {valuationFeatures.map((item, index) => (
-                <div key={index} className="bg-secondary border border-border rounded-[18px] px-7 py-8 md:px-8 md:py-9">
+                <div key={index} className="bg-card border border-border rounded-[18px] px-7 py-8 md:px-8 md:py-9">
                   <h3 className="font-serif text-xl md:text-[22px] text-foreground font-semibold mb-3">
                     {item.heading}
                   </h3>
@@ -227,56 +255,38 @@ const Executors = () => {
                 </div>
               ))}
             </div>
-            <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mb-8">
-              For executors, personal representatives, trustees, heirs, and families, the goal is not simply to sell a property. The goal is to understand what it is, what it may be worth, what should be done before sale, and how to move forward in a way that protects value and reduces unnecessary stress.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <Link to="/how-the-process-works" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">How the Process Works</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/why-valuation-matters" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Why Valuation Matters</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/for-attorneys" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Attorneys & Fiduciaries</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/for-cpas" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For CPAs</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/for-financial-planners" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Financial Planners</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/faq" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Frequently Asked Questions</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/contact" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Contact David Stein</Link>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* Section 6: Disclaimer */}
+      <PageFAQ faqs={faqs} heading="Executor & Trustee FAQs" />
+
+      <RelatedServices currentPath="/executors" />
+
       <DisclaimerSection />
 
-      {/* Section 7: Final CTA */}
+      {/* Final CTA */}
       <section className="pt-12 pb-16 md:pt-16 md:pb-20 lg:pt-[84px] lg:pb-[104px] bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-[1140px] mx-auto">
             <div className="bg-secondary border border-border rounded-[18px] px-7 py-9 md:px-10 md:py-11 text-center">
-              <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
-                Confidential Consultation
-              </p>
               <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-4">
                 Discuss a Property Transition With David Stein
               </h2>
               <p className="text-muted-foreground leading-relaxed text-base md:text-lg max-w-3xl mx-auto mb-8">
-                If you are an executor, personal representative, trustee, heir, or family member dealing with probate property, inherited real estate, trust-owned property, or an estate-related home sale in King County, Snohomish County, Pierce County, or Kitsap County, David Stein provides experienced guidance grounded in market knowledge, valuation insight, and a practical understanding of important property transitions.
+                If you are an executor, personal representative, trustee, heir, or family member dealing with probate property, inherited real estate, or an estate-related home sale, David Stein provides experienced guidance grounded in market knowledge and valuation insight.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
                 <Link to="/contact">
                   <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-7 py-4 h-auto rounded-lg w-full sm:w-auto">
                     <Phone className="w-4 h-4 mr-2" />
-                    Request a Confidential Consultation
+                    Schedule a Consultation
                   </Button>
                 </Link>
                 <Link to="/contact">
                   <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-medium px-7 py-4 h-auto rounded-lg w-full sm:w-auto">
                     <MessageSquare className="w-4 h-4 mr-2" />
-                    Discuss a Property Transition
+                    Contact David
                   </Button>
                 </Link>
               </div>

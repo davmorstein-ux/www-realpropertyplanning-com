@@ -2,20 +2,24 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
+import TrustStrip from "@/components/TrustStrip";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import RelatedServices from "@/components/RelatedServices";
+import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Phone, CheckCircle, Briefcase, Mail } from "lucide-react";
+import { Phone, CheckCircle, Briefcase, ArrowRight } from "lucide-react";
 import attorneyImage from "@/assets/attorney.png";
 
 const reasons = [
   "Over 20 years of real estate experience",
   "Professional real estate broker",
-  "State certified appraiser",
+  "State certified residential appraiser",
   "Strong understanding of value, pricing, and marketability",
   "Calm and professional communication style",
   "Experience coordinating sensitive, multi-party matters",
   "Hands-on assistance with property preparation and sale execution",
-  "Referral-oriented professionalism and discretion"
+  "Referral-oriented professionalism and discretion",
 ];
 
 const referralSituations = [
@@ -26,41 +30,62 @@ const referralSituations = [
   "Senior housing transitions",
   "Properties requiring clean-out or preparation",
   "Properties needing thoughtful pricing and strategy guidance",
-  "Sensitive family situations requiring discretion"
+  "Sensitive family situations requiring discretion",
 ];
 
-const ForAttorneys = () => {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    name: "David Stein — Real Estate Resource for Attorneys and Fiduciaries",
-    description: "David Stein is a trusted real estate and valuation resource for attorneys, trustees, executors, and fiduciaries handling probate, estate, trust, and inherited property matters in King, Snohomish, Pierce, and Kitsap Counties.",
-    url: "https://realpropertyplanning.com/for-attorneys",
-    provider: {
-      "@type": "RealEstateAgent",
-      name: "David Stein",
-      url: "https://realpropertyplanning.com",
-      jobTitle: "Real Estate Broker & State Certified Appraiser",
-    },
-    areaServed: [
-      { "@type": "AdministrativeArea", name: "King County, WA" },
-      { "@type": "AdministrativeArea", name: "Snohomish County, WA" },
-      { "@type": "AdministrativeArea", name: "Pierce County, WA" },
-      { "@type": "AdministrativeArea", name: "Kitsap County, WA" },
-    ],
-  };
+const faqs = [
+  {
+    question: "Why should an attorney refer estate property matters to a specialist instead of a general real estate agent?",
+    answer: "Estate and probate properties involve legal timelines, fiduciary duties, multiple decision-makers, and condition issues that general agents may not be prepared for. David Stein combines brokerage expertise with certified appraisal credentials to evaluate value, coordinate preparation, and manage the transaction in a way that reflects well on the referring professional.",
+  },
+  {
+    question: "How does David Stein communicate with attorneys during a probate property sale?",
+    answer: "David provides clear, direct communication throughout the process — including property updates, market feedback, offer analysis, and transaction progress. He understands that attorneys need a real estate professional who follows through, respects timelines, and avoids unnecessary confusion.",
+  },
+  {
+    question: "What types of properties does David Stein handle for attorney referrals?",
+    answer: "David works with probate properties, estate-owned homes, trust-owned real estate, inherited homes, senior transitions, and other property matters where attorneys, trustees, executors, or fiduciaries need an experienced and discreet real estate resource.",
+  },
+  {
+    question: "Does David Stein provide formal appraisals for estate property?",
+    answer: "David is a Washington state certified residential appraiser and can discuss valuation matters, but his primary role in attorney referrals is as a real estate broker — helping with pricing strategy, property preparation, marketing, and sale execution. Formal appraisal services are available separately when needed.",
+  },
+];
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "David Stein — Real Estate Resource for Attorneys and Fiduciaries",
+  description:
+    "David Stein provides real estate guidance for attorneys and fiduciaries handling probate property, inherited homes, trust-owned real estate, and estate-related property transitions in King, Snohomish, Pierce, and Kitsap Counties.",
+  url: "https://realpropertyplanning.com/for-attorneys",
+  provider: {
+    "@type": "RealEstateAgent",
+    name: "David Stein",
+    url: "https://realpropertyplanning.com",
+    jobTitle: "Real Estate Broker & State Certified Appraiser",
+  },
+  areaServed: [
+    { "@type": "AdministrativeArea", name: "King County, WA" },
+    { "@type": "AdministrativeArea", name: "Snohomish County, WA" },
+    { "@type": "AdministrativeArea", name: "Pierce County, WA" },
+    { "@type": "AdministrativeArea", name: "Kitsap County, WA" },
+  ],
+};
+
+const ForAttorneys = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Real Estate Guidance for Attorneys and Fiduciaries | David Stein"
-        description="David Stein is a trusted real estate and valuation resource for attorneys, trustees, executors, and fiduciaries handling probate, estate, trust, and inherited property matters in King, Snohomish, Pierce, and Kitsap Counties."
+        description="David Stein provides real estate guidance for attorneys and fiduciaries handling probate property, inherited homes, trust-owned real estate, and estate-related property transitions in King, Snohomish, Pierce, and Kitsap Counties."
         jsonLd={jsonLd}
       />
+      <BreadcrumbSchema items={[{ name: "For Attorneys & Fiduciaries", url: "/for-attorneys" }]} />
       <Header />
-      
+
       {/* Hero */}
-      <section className="bg-navy pt-16 pb-12 lg:pt-32 lg:pb-28">
+      <section className="bg-primary pt-16 pb-12 lg:pt-32 lg:pb-28">
         <div className="container px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -68,22 +93,25 @@ const ForAttorneys = () => {
                 For Attorneys, Executors & Fiduciaries
               </p>
               <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
-                A Trusted Real Estate Resource for Attorneys, Fiduciaries, and High-Trust Referrals
+                A Trusted Real Estate Resource for Attorneys and Fiduciaries
               </h1>
-              <p className="text-xl text-primary-foreground/80 leading-relaxed mb-8">
-                David Stein works with attorneys, trustees, executors, personal representatives, and fiduciaries who need an experienced real estate professional capable of handling sensitive property matters with discretion, responsiveness, and sound judgment.
+              <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
+                Attorneys, trustees, and fiduciaries handling probate, trust, and estate property matters need a real estate professional who understands legal timelines, sensitive family dynamics, and the importance of sound valuation. David Stein serves as that resource across King, Snohomish, Pierce, and Kitsap Counties.
+              </p>
+              <p className="text-lg text-primary-foreground/70 leading-relaxed mb-8">
+                With dual credentials as a licensed Washington real estate broker and state certified residential appraiser, David brings over 20 years of experience evaluating property condition, pricing strategy, and sale coordination for estate-related matters — so the professionals who refer him can do so with confidence.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/contact">
-                  <Button size="lg" className="bg-gold hover:bg-gold-light text-navy font-semibold w-full sm:w-auto">
+                  <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold w-full sm:w-auto">
                     <Phone className="w-5 h-5 mr-2" />
-                    Discuss a Client Matter
+                    Schedule a Consultation
                   </Button>
                 </Link>
                 <Link to="/contact">
                   <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 w-full sm:w-auto">
-                    <Mail className="w-5 h-5 mr-2" />
-                    Request Confidential Consultation
+                    <ArrowRight className="w-5 h-5 mr-2" />
+                    Discuss a Referral
                   </Button>
                 </Link>
               </div>
@@ -95,25 +123,10 @@ const ForAttorneys = () => {
         </div>
       </section>
 
-      {/* Intro */}
-      <section className="py-20 lg:py-28 bg-background">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-6">
-              Professional Support for the Real Estate Side of Estate and Senior Matters
-            </h2>
-            <p className="text-muted-foreground leading-relaxed mb-6 text-lg">
-              Legal and fiduciary professionals often need a real estate resource who understands more than the mechanics of a standard listing. Estate, probate, trust, and senior-transition properties frequently involve emotional complexity, logistical challenges, multiple interested parties, condition concerns, and important timing considerations.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              David Stein provides experienced support in evaluating the property, shaping the sale strategy, coordinating preparation, and managing the transaction in a way that reflects well on the professionals who refer him.
-            </p>
-          </div>
-        </div>
-      </section>
+      <TrustStrip />
 
       {/* Why Professionals Refer */}
-      <section className="py-20 lg:py-28 bg-ivory">
+      <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
@@ -148,36 +161,25 @@ const ForAttorneys = () => {
       </section>
 
       {/* How David Supports */}
-      <section className="py-20 lg:py-28 bg-background">
+      <section className="py-20 lg:py-28 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-6">
               How David Supports Attorneys and Fiduciaries
             </h2>
-            <p className="text-muted-foreground leading-relaxed text-lg mb-8">
+            <p className="text-muted-foreground leading-relaxed text-lg mb-4">
               David Stein aims to be a dependable extension of the advisory team. He helps clients understand their options, reduces friction in the real estate process, and maintains clear communication throughout the matter. Whether the property should be sold as-is, prepared for market, or evaluated more carefully before a decision is made, David helps bring clarity and forward motion to the process.
             </p>
-            <div className="flex flex-wrap gap-3">
-              <Link to="/for-cpas" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For CPAs</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/for-financial-planners" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Financial Planners</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/executors" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Executors</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/how-the-process-works" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">How the Process Works</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/why-valuation-matters" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Why Valuation Matters</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/faq" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">FAQ</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/contact" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Contact</Link>
-            </div>
           </div>
         </div>
       </section>
 
+      <PageFAQ faqs={faqs} heading="Attorney & Fiduciary FAQs" />
+
+      <RelatedServices currentPath="/for-attorneys" />
+
       {/* CTA */}
-      <section className="py-20 lg:py-28 bg-navy">
+      <section className="py-20 lg:py-28 bg-primary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
@@ -186,11 +188,18 @@ const ForAttorneys = () => {
             <p className="text-primary-foreground/80 text-lg leading-relaxed mb-8">
               David Stein provides a high-trust, experienced approach designed to support both the referring professional and the client.
             </p>
-            <Link to="/contact">
-              <Button size="lg" className="bg-gold hover:bg-gold-light text-navy font-semibold">
-                Discuss a Referral Opportunity
-              </Button>
-            </Link>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <Link to="/contact">
+                <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold">
+                  Schedule a Consultation
+                </Button>
+              </Link>
+              <Link to="/contact">
+                <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+                  Request a Call
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
