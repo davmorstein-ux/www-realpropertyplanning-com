@@ -107,7 +107,7 @@ const Executors = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-              How David Helps Executors and Families
+              How Real Property Planning Helps Executors and Families
             </h2>
             <ul className="space-y-4">
               {howHelps.map((item, index) => (
