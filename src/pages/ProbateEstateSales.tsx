@@ -130,7 +130,7 @@ const ProbateEstateSales = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-              David Can Help With
+              Real Property Planning Can Help With
             </h2>
             <ul className="space-y-4">
               {davidCanHelp.map((item, index) => (
