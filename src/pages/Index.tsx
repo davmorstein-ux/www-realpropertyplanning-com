@@ -121,7 +121,7 @@ const serviceAreas = [
 const homepageFaqs = [
   {
     question: "Do I need probate before selling an inherited home in Washington?",
-    answer: "It depends on how the property is titled and the estate structure. In many cases, probate or letters testamentary are required before a sale can proceed. David Stein helps families and executors understand what's needed and how to move forward efficiently.",
+    answer: "It depends on how the property is titled and the estate structure. In many cases, probate or letters testamentary are required before a sale can proceed. Real Property Planning helps families and executors understand what's needed and how to move forward efficiently.",
     link: "/faq"
   },
   {
