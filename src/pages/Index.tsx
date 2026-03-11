@@ -239,7 +239,7 @@ const Index = () => {
               </div>
 
               <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[54px] text-foreground font-bold leading-[1.08] mb-5 text-center">
-                Probate Real Estate, Inherited Property & Estate Sale Guidance in Western Washington
+                A Trusted Real Estate Resource for Probate, Inherited Property, and Important Home Transitions
               </h1>
 
               <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-[760px] mx-auto mb-4 text-center">
