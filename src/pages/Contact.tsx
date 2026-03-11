@@ -67,7 +67,7 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Contact Real Property Planning | Probate Real Estate Guidance"
-        description="Contact Real Property Planning for help with probate real estate, inherited property, estate sales, valuation-related questions, and senior transitions in Western Washington."
+        description="Contact Real Property Planning for help with probate real estate, inherited property, estate sales, valuation-related questions, and senior transitions throughout Western Washington."
       />
       <BreadcrumbSchema items={[{ name: "Contact", url: "/contact" }]} />
       <Header />
