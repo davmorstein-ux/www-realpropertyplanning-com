@@ -5,9 +5,8 @@ const KitsapCounty = () => (
     countyName="Kitsap County"
     countyPath="/counties/kitsap"
     cities={[
-      "Bremerton", "Silverdale", "Poulsbo", "Bainbridge Island",
-      "Port Orchard", "Kingston", "Suquamish", "Indianola",
-      "Seabeck", "Hansville", "Keyport",
+      "Bainbridge Island", "Poulsbo", "Silverdale", "Bremerton",
+      "Port Orchard", "Kingston", "Suquamish",
     ]}
   />
 );

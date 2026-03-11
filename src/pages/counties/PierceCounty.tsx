@@ -5,10 +5,8 @@ const PierceCounty = () => (
     countyName="Pierce County"
     countyPath="/counties/pierce"
     cities={[
-      "Tacoma", "Gig Harbor", "University Place", "Puyallup", "Lakewood",
-      "Bonney Lake", "Sumner", "Fircrest", "Steilacoom", "DuPont",
-      "Orting", "Buckley", "Edgewood", "Milton", "Ruston",
-      "Fox Island", "Key Peninsula",
+      "Tacoma", "University Place", "Gig Harbor", "Puyallup", "Bonney Lake",
+      "Lakewood", "Sumner", "Fircrest", "Milton",
     ]}
   />
 );
