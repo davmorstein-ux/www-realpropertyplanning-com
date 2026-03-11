@@ -7,62 +7,43 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Phone, MessageSquare } from "lucide-react";
+import { CheckCircle, MapPin } from "lucide-react";
+
+const howDavidHelps = [
+  "Probate and estate property sales",
+  "Inherited home sale planning",
+  "Trust-owned real estate guidance",
+  "Pricing and market strategy",
+  "Senior transition support",
+  "Help for attorneys, executors, trustees, and families",
+];
 
 interface CountyPageProps {
-  seoTitle: string;
-  seoDescription: string;
-  eyebrow: string;
-  headline: string;
-  leadParagraph: string;
-  supportingParagraph: string;
-  secondaryButtonLabel: string;
-  section2Headline: string;
-  section2Text: string;
-  section3Headline: string;
-  helpBlocks: { heading: string; text: string }[];
-  section4Headline: string;
-  situations: string[];
-  section5Headline: string;
-  features: { heading: string; text: string }[];
-  ctaHeadline: string;
-  ctaText: string;
-  ctaSecondaryLabel: string;
-  /** Used for breadcrumb and related links exclusion */
-  countyName?: string;
-  countyPath?: string;
+  countyName: string;
+  countyPath: string;
+  cities: string[];
+  localParagraph?: string;
 }
 
 const CountyPageTemplate = ({
-  seoTitle,
-  seoDescription,
-  eyebrow,
-  headline,
-  leadParagraph,
-  supportingParagraph,
-  secondaryButtonLabel,
-  section2Headline,
-  section2Text,
-  section3Headline,
-  helpBlocks,
-  section4Headline,
-  situations,
-  section5Headline,
-  features,
-  ctaHeadline,
-  ctaText,
-  ctaSecondaryLabel,
   countyName,
   countyPath,
+  cities,
+  localParagraph,
 }: CountyPageProps) => {
   const breadcrumbItems = [
     { name: "Counties", url: "/counties" },
-    ...(countyName && countyPath ? [{ name: countyName, url: countyPath }] : []),
+    { name: countyName, url: countyPath },
   ];
+
+  const defaultLocalParagraph = `Every county has its own market patterns, housing stock, buyer demand, and practical sale considerations. David combines broad experience with local awareness to help clients make informed property decisions in ${countyName}.`;
 
   return (
     <div className="min-h-screen bg-background">
-      <SEOHead title={seoTitle} description={seoDescription} />
+      <SEOHead
+        title={`${countyName} Probate Real Estate & Inherited Property Guidance | David Stein`}
+        description={`David Stein helps clients and referral partners with probate real estate, inherited homes, estate sales, trust-owned property, and senior transitions in ${countyName}, Washington.`}
+      />
       <BreadcrumbSchema items={breadcrumbItems} />
       <Header />
 
@@ -70,54 +51,55 @@ const CountyPageTemplate = ({
       <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl">
-            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">{eyebrow}</p>
+            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
+              {countyName} Service Area
+            </p>
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-[22px]">
-              {headline}
+              Probate Real Estate and Inherited Property Guidance in {countyName}
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-5">{leadParagraph}</p>
-            <p className="text-lg text-primary-foreground/70 leading-relaxed mb-[30px]">{supportingParagraph}</p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <Link to="/contact">
-                <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold px-7 py-4 h-auto rounded-lg w-full sm:w-auto">
-                  <Phone className="w-4 h-4 mr-2" />
-                  Schedule a Consultation
-                </Button>
-              </Link>
-              <Link to="/contact">
-                <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-medium px-7 py-4 h-auto rounded-lg w-full sm:w-auto">
-                  <MessageSquare className="w-4 h-4 mr-2" />
-                  {secondaryButtonLabel}
-                </Button>
-              </Link>
-            </div>
+            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-5">
+              David Stein provides practical real estate guidance for inherited property, probate real estate, estate sales, trust-owned homes, valuation-related decisions, and senior transitions throughout {countyName}, Washington.
+            </p>
+            <p className="text-lg text-primary-foreground/70 leading-relaxed">
+              Whether the property needs preparation, pricing strategy, family coordination, or a full sale plan, David helps clients and referral partners move forward with local market insight and experienced support.
+            </p>
           </div>
         </div>
       </section>
 
       <TrustStrip />
 
-      {/* Section 2 */}
-      <section className="pt-12 pb-12 md:pt-16 md:pb-16 lg:pt-[84px] lg:pb-[84px] bg-background">
+      {/* How David Helps */}
+      <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-[1140px] mx-auto">
-            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">Why Local Knowledge Matters</p>
-            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-[22px]">{section2Headline}</h2>
-            <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl">{section2Text}</p>
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
+              How David Helps in {countyName}
+            </h2>
+            <ul className="space-y-4">
+              {howDavidHelps.map((item, index) => (
+                <li key={index} className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-gold mt-0.5 shrink-0" />
+                  <span className="text-foreground">{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
 
-      {/* Section 3 */}
-      <section className="pt-12 pb-12 md:pt-16 md:pb-16 lg:pt-[84px] lg:pb-[84px] bg-secondary">
+      {/* Communities Served */}
+      <section className="py-20 lg:py-28 bg-secondary">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-[1140px] mx-auto">
-            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">How David Helps</p>
-            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-10">{section3Headline}</h2>
-            <div className="grid md:grid-cols-2 gap-5 lg:gap-6">
-              {helpBlocks.map((block, index) => (
-                <div key={index} className="bg-card border border-border rounded-[18px] px-7 py-8 md:px-8 md:py-9">
-                  <h3 className="font-serif text-xl md:text-[22px] text-foreground font-semibold mb-3">{block.heading}</h3>
-                  <p className="text-muted-foreground leading-[1.75]">{block.text}</p>
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
+              Communities Served in {countyName}
+            </h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-3">
+              {cities.map((city) => (
+                <div key={city} className="flex items-center gap-2">
+                  <MapPin className="w-3.5 h-3.5 text-gold shrink-0" />
+                  <span className="text-muted-foreground">{city}</span>
                 </div>
               ))}
             </div>
@@ -125,72 +107,38 @@ const CountyPageTemplate = ({
         </div>
       </section>
 
-      {/* Section 4 */}
-      <section className="pt-12 pb-12 md:pt-16 md:pb-16 lg:pt-[84px] lg:pb-[84px] bg-background">
+      {/* Local Paragraph */}
+      <section className="py-16 lg:py-20 bg-background">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-[1140px] mx-auto">
-            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">Representative Situations</p>
-            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-10">{section4Headline}</h2>
-            <div className="grid md:grid-cols-2 gap-x-8 gap-y-4">
-              {situations.map((situation, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-gold mt-2.5 shrink-0" />
-                  <p className="text-foreground leading-relaxed">{situation}</p>
-                </div>
-              ))}
-            </div>
+          <div className="max-w-3xl mx-auto">
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              {localParagraph || defaultLocalParagraph}
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Section 5 */}
-      <section className="pt-12 pb-12 md:pt-16 md:pb-16 lg:pt-[84px] lg:pb-[84px] bg-secondary">
+      <RelatedServices currentPath={countyPath} />
+
+      {/* Bottom CTA */}
+      <section className="py-20 lg:py-28 bg-primary">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-[1140px] mx-auto">
-            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">Why David Stein</p>
-            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-10">{section5Headline}</h2>
-            <div className="grid lg:grid-cols-3 gap-5 lg:gap-6">
-              {features.map((item, index) => (
-                <div key={index} className="bg-card border border-border rounded-[18px] px-7 py-8 md:px-8 md:py-9">
-                  <h3 className="font-serif text-xl md:text-[22px] text-foreground font-semibold mb-3">{item.heading}</h3>
-                  <p className="text-muted-foreground leading-[1.75]">{item.text}</p>
-                </div>
-              ))}
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
+              Need help with a property in {countyName}?
+            </h2>
+            <div className="flex justify-center">
+              <Link to="/contact">
+                <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold">
+                  Request a Call
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
       </section>
-
-      <RelatedServices currentPath={countyPath || "/counties"} />
 
       <DisclaimerSection />
-
-      {/* Final CTA */}
-      <section className="pt-12 pb-16 md:pt-16 md:pb-20 lg:pt-[84px] lg:pb-[104px] bg-background">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-[1140px] mx-auto">
-            <div className="bg-secondary border border-border rounded-[18px] px-7 py-9 md:px-10 md:py-11 text-center">
-              <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-4">{ctaHeadline}</h2>
-              <p className="text-muted-foreground leading-relaxed text-base md:text-lg max-w-3xl mx-auto mb-8">{ctaText}</p>
-              <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
-                <Link to="/contact">
-                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-7 py-4 h-auto rounded-lg w-full sm:w-auto">
-                    <Phone className="w-4 h-4 mr-2" />
-                    Schedule a Consultation
-                  </Button>
-                </Link>
-                <Link to="/contact">
-                  <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-medium px-7 py-4 h-auto rounded-lg w-full sm:w-auto">
-                    <MessageSquare className="w-4 h-4 mr-2" />
-                    {ctaSecondaryLabel}
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <Footer />
     </div>
   );
