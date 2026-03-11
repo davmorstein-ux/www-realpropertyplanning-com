@@ -2,63 +2,61 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import TrustStrip from "@/components/TrustStrip";
+import RelatedServices from "@/components/RelatedServices";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Phone, CheckCircle, ExternalLink } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 import daveHeadshot from "@/assets/dave-headshot.jpg";
 
-const values = [
-  "Professionalism",
-  "Responsiveness",
-  "Clear communication",
-  "Sound judgment",
-  "Respect for sensitive situations",
-  "Practical guidance from start to finish"
+const whoWorksWith = [
+  "Attorneys",
+  "Executors",
+  "Personal representatives",
+  "Trustees",
+  "Fiduciaries",
+  "Adult children and family members",
+  "Seniors and households navigating major home transitions",
 ];
 
 const About = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="About David Stein — Probate Real Estate Broker & Certified Appraiser | Western Washington"
-        description="David Stein is a licensed real estate broker and Washington state certified appraiser with over 20 years of experience helping attorneys, executors, trustees, and families with probate, inherited, and estate property transitions."
+        title="About David Stein | Washington Real Estate Broker & Certified Appraiser"
+        description="Learn more about David Stein, a Washington real estate broker and state certified residential appraiser focused on probate real estate, inherited property, and major home transitions."
       />
+      <BreadcrumbSchema items={[{ name: "About", url: "/about" }]} />
       <Header />
-      
+
       {/* Hero */}
-      <section className="bg-navy pt-16 pb-12 lg:pt-32 lg:pb-28">
+      <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl">
-            <p className="text-gold font-bold tracking-widest uppercase mb-4 text-base">
-              About David Stein
+            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
+              About
             </p>
-            <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
+            <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight">
               About David Stein
             </h1>
-            <p className="text-xl text-primary-foreground/80 leading-relaxed">
-              Experienced, professional guidance for estate, probate, trust, and senior real estate matters
-            </p>
           </div>
         </div>
       </section>
 
-      {/* Main Bio */}
+      <TrustStrip />
+
+      {/* Bio */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="grid lg:grid-cols-3 gap-12 items-start">
             <div className="lg:col-span-2">
-              <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-6">
-                A Real Estate and Valuation Professional Focused on Important Property Transitions
-              </h2>
-              <div className="space-y-6 text-muted-foreground leading-relaxed">
+              <div className="space-y-6 text-muted-foreground leading-relaxed text-lg">
                 <p>
-                  David Stein is a professional real estate broker and state certified appraiser with over 20 years of experience helping people make informed property decisions during significant life transitions.
+                  David Stein is a Washington real estate broker and state certified residential appraiser with more than 20 years of experience helping people make informed property decisions during important life transitions.
                 </p>
                 <p>
-                  His work is focused on estate property sales, probate real estate matters, trust-related property transitions, and senior housing changes. These situations often require a careful balance of market knowledge, valuation insight, communication, discretion, and practical coordination.
-                </p>
-                <p>
-                  David works with attorneys, fiduciaries, executors, personal representatives, trustees, seniors, and families who need experienced guidance on property value, sale timing, preparation strategy, and the process of bringing a property to market. His goal is to reduce confusion, protect value, and help clients move forward with confidence.
+                  His work is focused on probate real estate, inherited homes, estate sales, trust-related property matters, valuation-related decisions, and senior housing transitions. These situations often require more than a standard sale process. They require clarity, patience, communication, and practical judgment.
                 </p>
               </div>
             </div>
@@ -66,7 +64,7 @@ const About = () => {
               <div className="rounded-lg overflow-hidden border-2 border-gold/20 shadow-lg">
                 <img
                   src={daveHeadshot}
-                  alt="David Stein - Professional Real Estate Broker & State Certified Appraiser"
+                  alt="David Stein — Washington Real Estate Broker and Certified Appraiser"
                   className="w-full h-auto object-cover"
                 />
               </div>
@@ -75,84 +73,18 @@ const About = () => {
         </div>
       </section>
 
-      {/* Short Bio & Values */}
-      <section className="py-20 lg:py-28 bg-ivory">
-        <div className="container px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12">
-            <div>
-              <h2 className="font-serif text-2xl text-foreground font-semibold mb-6">
-                Short Professional Bio
-              </h2>
-              <p className="text-muted-foreground leading-relaxed">
-                David Stein is a professional real estate broker and state certified appraiser with over 20 years of experience helping attorneys, executors, trustees, fiduciaries, seniors, and families coordinate, prepare, value, and sell real property related to estate, probate, trust, and senior transitions.
-              </p>
-            </div>
-            <div className="bg-card rounded-lg p-8 border border-border">
-              <h3 className="font-serif text-xl text-foreground font-semibold mb-6">
-                Core Values
-              </h3>
-              <ul className="space-y-4">
-                {values.map((value, index) => (
-                  <li key={index} className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-gold shrink-0" />
-                    <span className="text-foreground">{value}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Professional Affiliations */}
-      <section className="py-20 lg:py-28 bg-background">
+      {/* Who David Works With */}
+      <section className="py-20 lg:py-28 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <p className="text-gold font-bold tracking-widest uppercase mb-3 text-base">
-              Professional Affiliations
-            </p>
-            <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-10">
-              Organizations & Memberships
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
+              Who David Works With
             </h2>
-            <ul className="space-y-6">
-              {[
-                {
-                  name: "National Association of Realtors",
-                  detail: "Member",
-                  url: "https://www.nar.realtor/"
-                },
-                {
-                  name: "Aging Life Care Association — Western Region",
-                  detail: null,
-                  url: "https://www.aginglifecare.org/ALCAWEB/ALCAWEB/Chapters/Western_Region_Chapter/Western_Region_Chapter_Local_Unit_Groups.aspx"
-                },
-                {
-                  name: "National Association of Senior & Specialty Move Managers",
-                  detail: "Associated with members in the Puget Sound area of Washington State",
-                  url: "https://www.nasmm.org/"
-                },
-                {
-                  name: "East King County Estate Planning Council",
-                  detail: "Membership applied",
-                  url: "https://www.ekcepc.org/"
-                }
-              ].map((org, index) => (
-                <li key={index} className="flex items-start gap-4 group">
-                  <div className="w-2 h-2 rounded-full bg-gold mt-2.5 shrink-0" />
-                  <div>
-                    <a
-                      href={org.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-foreground font-medium hover:text-gold transition-colors inline-flex items-center gap-1.5"
-                    >
-                      {org.name}
-                      <ExternalLink className="w-3.5 h-3.5 opacity-40 group-hover:opacity-100 transition-opacity" />
-                    </a>
-                    {org.detail && (
-                      <p className="text-muted-foreground text-sm mt-1">{org.detail}</p>
-                    )}
-                  </div>
+            <ul className="space-y-4">
+              {whoWorksWith.map((item, index) => (
+                <li key={index} className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-gold mt-0.5 shrink-0" />
+                  <span className="text-foreground">{item}</span>
                 </li>
               ))}
             </ul>
@@ -160,41 +92,32 @@ const About = () => {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 lg:py-28 bg-background">
+      {/* Closing */}
+      <section className="py-16 lg:py-20 bg-background">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-6">
-              Ready to Connect?
-            </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              David Stein is available to discuss your property matter and how he may be able to help.
+          <div className="max-w-3xl mx-auto">
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              David's goal is to be a calm, knowledgeable, and dependable resource when property decisions carry legal, emotional, financial, or logistical weight.
             </p>
-            <Link to="/contact">
-              <Button size="lg" className="bg-navy hover:bg-navy-light text-primary-foreground font-semibold">
-                <Phone className="w-5 h-5 mr-2" />
-                Contact David Stein
-              </Button>
-            </Link>
           </div>
         </div>
       </section>
 
-      {/* Related Resources */}
-      <section className="pt-10 pb-10 md:pt-14 md:pb-14 bg-ivory">
+      <RelatedServices currentPath="/about" />
+
+      {/* Bottom CTA */}
+      <section className="py-20 lg:py-28 bg-primary">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-sm">Related Resources</p>
-            <div className="flex flex-wrap gap-3">
-              <Link to="/for-attorneys" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Attorneys & Fiduciaries</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/how-the-process-works" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">How the Process Works</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/why-valuation-matters" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Why Valuation Matters</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/faq" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">FAQ</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/contact" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Contact</Link>
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
+              Ready to connect?
+            </h2>
+            <div className="flex justify-center">
+              <Link to="/contact">
+                <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold">
+                  Contact David
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
