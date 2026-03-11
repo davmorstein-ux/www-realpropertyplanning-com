@@ -66,8 +66,8 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Contact David Stein | Probate Real Estate & Inherited Property Guidance"
-        description="Contact David Stein for help with probate real estate, inherited property, estate sales, valuation-related questions, and senior transitions in Western Washington."
+        title="Contact Real Property Planning | Probate Real Estate Guidance"
+        description="Contact Real Property Planning for help with probate real estate, inherited property, estate sales, valuation-related questions, and senior transitions in Western Washington."
       />
       <BreadcrumbSchema items={[{ name: "Contact", url: "/contact" }]} />
       <Header />
