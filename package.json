@@ -6,11 +6,25 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "postbuild": "react-snap",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest"
+  },
+  "reactSnap": {
+    "source": "dist",
+    "include": [
+      "/",
+      "/for-attorneys",
+      "/executors",
+      "/probate-estate-sales",
+      "/why-valuation-matters",
+      "/senior-transitions",
+      "/how-the-process-works",
+      "/counties/king"
+    ]
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
@@ -56,6 +70,7 @@
     "react-hook-form": "^7.61.1",
     "react-resizable-panels": "^2.1.9",
     "react-router-dom": "^6.30.1",
+    "react-snap": "^1.23.0",
     "recharts": "^2.15.4",
     "sonner": "^1.7.4",
     "tailwind-merge": "^2.6.0",
