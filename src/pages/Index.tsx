@@ -213,8 +213,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Probate Real Estate, Inherited Property, and Estate Sale Guidance in Western Washington | David Stein"
-        description="David Stein provides probate real estate, inherited property, trust-owned real estate, and estate sale guidance for attorneys, executors, trustees, fiduciaries, and families in King, Snohomish, Pierce, and Kitsap Counties."
+        title="Probate Real Estate & Inherited Property Guidance | David Stein Washington"
+        description="David Stein helps attorneys, executors, trustees, and families handle probate real estate, inherited homes, estate property sales, and senior transitions throughout Western Washington."
         jsonLd={jsonLd}
       />
       <Header />
