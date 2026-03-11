@@ -250,24 +250,30 @@ const Index = () => {
                 As a Washington real estate broker and state certified residential appraiser with more than 20 years of experience, David brings a practical understanding of pricing, property condition, communication, coordination, and next-step planning in situations that often involve legal, emotional, and logistical complexity.
               </p>
 
-              <div className="flex flex-wrap justify-center gap-3.5 mb-8">
-                <Link to="/contact">
-                  <Button 
-                    size="lg" 
-                    className="bg-foreground hover:bg-foreground/90 text-background font-bold px-6 rounded-xl text-base h-[52px]"
-                  >
-                    Request a Confidential Consultation
-                  </Button>
-                </Link>
-                <Link to="/probate-estate-sales">
-                  <Button 
-                    size="lg" 
-                    variant="outline" 
-                    className="border-border bg-card text-foreground hover:bg-muted font-bold px-6 rounded-xl text-base h-[52px]"
-                  >
-                    Explore Services
-                  </Button>
-                </Link>
+              {/* Top CTA */}
+              <div className="bg-card border border-border rounded-2xl p-6 max-w-[620px] mx-auto mb-8">
+                <p className="text-foreground font-serif text-lg font-semibold mb-4 text-center">
+                  Need help with a property tied to probate, inheritance, a trust, or a major life transition?
+                </p>
+                <div className="flex flex-wrap justify-center gap-3.5">
+                  <Link to="/contact">
+                    <Button 
+                      size="lg" 
+                      className="bg-foreground hover:bg-foreground/90 text-background font-bold px-6 rounded-xl text-base h-[52px]"
+                    >
+                      Schedule a Consultation
+                    </Button>
+                  </Link>
+                  <Link to="/contact">
+                    <Button 
+                      size="lg" 
+                      variant="outline" 
+                      className="border-border bg-card text-foreground hover:bg-muted font-bold px-6 rounded-xl text-base h-[52px]"
+                    >
+                      Contact David
+                    </Button>
+                  </Link>
+                </div>
               </div>
 
               <div className="flex flex-wrap justify-center gap-3">
