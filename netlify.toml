@@ -14,61 +14,270 @@
   from = "/for-attorneys"
   to = "/for-attorneys/index.html"
   status = 200
+  force = true
+
+[[redirects]]
+  from = "/for-attorneys/"
+  to = "/for-attorneys/index.html"
+  status = 200
+  force = true
 
 [[redirects]]
   from = "/executors"
   to = "/executors/index.html"
   status = 200
+  force = true
+
+[[redirects]]
+  from = "/executors/"
+  to = "/executors/index.html"
+  status = 200
+  force = true
 
 [[redirects]]
   from = "/probate-estate-sales"
   to = "/probate-estate-sales/index.html"
   status = 200
+  force = true
+
+[[redirects]]
+  from = "/probate-estate-sales/"
+  to = "/probate-estate-sales/index.html"
+  status = 200
+  force = true
 
 [[redirects]]
   from = "/why-valuation-matters"
   to = "/why-valuation-matters/index.html"
   status = 200
+  force = true
+
+[[redirects]]
+  from = "/why-valuation-matters/"
+  to = "/why-valuation-matters/index.html"
+  status = 200
+  force = true
 
 [[redirects]]
   from = "/senior-transitions"
   to = "/senior-transitions/index.html"
   status = 200
+  force = true
+
+[[redirects]]
+  from = "/senior-transitions/"
+  to = "/senior-transitions/index.html"
+  status = 200
+  force = true
 
 [[redirects]]
   from = "/how-the-process-works"
   to = "/how-the-process-works/index.html"
   status = 200
+  force = true
+
+[[redirects]]
+  from = "/how-the-process-works/"
+  to = "/how-the-process-works/index.html"
+  status = 200
+  force = true
 
 [[redirects]]
   from = "/counties"
   to = "/counties/index.html"
   status = 200
+  force = true
+
+[[redirects]]
+  from = "/counties/"
+  to = "/counties/index.html"
+  status = 200
+  force = true
 
 [[redirects]]
   from = "/counties/king"
   to = "/counties/king/index.html"
   status = 200
+  force = true
+
+[[redirects]]
+  from = "/counties/king/"
+  to = "/counties/king/index.html"
+  status = 200
+  force = true
 
 [[redirects]]
   from = "/counties/snohomish"
   to = "/counties/snohomish/index.html"
   status = 200
+  force = true
+
+[[redirects]]
+  from = "/counties/snohomish/"
+  to = "/counties/snohomish/index.html"
+  status = 200
+  force = true
 
 [[redirects]]
   from = "/counties/pierce"
   to = "/counties/pierce/index.html"
   status = 200
+  force = true
+
+[[redirects]]
+  from = "/counties/pierce/"
+  to = "/counties/pierce/index.html"
+  status = 200
+  force = true
 
 [[redirects]]
   from = "/counties/kitsap"
   to = "/counties/kitsap/index.html"
   status = 200
+  force = true
+
+[[redirects]]
+  from = "/counties/kitsap/"
+  to = "/counties/kitsap/index.html"
+  status = 200
+  force = true
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
+[[redirects]]
+  from = "/for-attorneys"
+  to = "/for-attorneys/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/for-attorneys/"
+  to = "/for-attorneys/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/executors"
+  to = "/executors/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/executors/"
+  to = "/executors/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/probate-estate-sales"
+  to = "/probate-estate-sales/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/probate-estate-sales/"
+  to = "/probate-estate-sales/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/why-valuation-matters"
+  to = "/why-valuation-matters/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/why-valuation-matters/"
+  to = "/why-valuation-matters/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/senior-transitions"
+  to = "/senior-transitions/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/senior-transitions/"
+  to = "/senior-transitions/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/how-the-process-works"
+  to = "/how-the-process-works/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/how-the-process-works/"
+  to = "/how-the-process-works/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/counties"
+  to = "/counties/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/counties/"
+  to = "/counties/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/counties/king"
+  to = "/counties/king/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/counties/king/"
+  to = "/counties/king/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/counties/snohomish"
+  to = "/counties/snohomish/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/counties/snohomish/"
+  to = "/counties/snohomish/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/counties/pierce"
+  to = "/counties/pierce/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/counties/pierce/"
+  to = "/counties/pierce/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/counties/kitsap"
+  to = "/counties/kitsap/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/counties/kitsap/"
+  to = "/counties/kitsap/index.html"
+  status = 200
+  force = true
 
 [[headers]]
   for = "/sitemap.xml"
