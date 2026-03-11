@@ -183,10 +183,10 @@ const ForCPAs = () => {
               Practical Real Estate Guidance
             </p>
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-[22px]">
-              How David Stein Helps CPA Clients
+              How Real Property Planning Helps CPA Clients
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mb-10">
-              David Stein helps CPA clients understand the real-estate side of important property decisions in a way that is calm, practical, and valuation-informed. His role is to help clarify what the property is, how the market is likely to view it, and what options may make the most sense.
+              Real Property Planning helps CPA clients understand the real-estate side of important property decisions in a way that is calm, practical, and valuation-informed — clarifying what the property is, how the market is likely to view it, and what options may make the most sense.
             </p>
             <div className="grid md:grid-cols-2 gap-5 lg:gap-6">
               {howHelpsBlocks.map((block, index) => (
