@@ -123,10 +123,10 @@ const ForFinancialPlanners = () => {
               Real Estate Guidance for Financial Planners and Their Clients
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-5">
-              Financial planners are often helping clients think through major decisions involving inherited property, trust-owned homes, estate transitions, downsizing, senior housing changes, and the sale of real estate that may affect broader planning goals. In many cases, it helps to involve an experienced real estate and valuation professional who can provide practical guidance on property condition, likely value, timing, preparation, and market strategy.
+              Real Property Planning supports financial planners and their clients when major decisions involve inherited property, trust-owned homes, estate transitions, downsizing, senior housing changes, and the sale of real estate that may affect broader planning goals.
             </p>
             <p className="text-lg text-primary-foreground/70 leading-relaxed mb-[30px]">
-              David Stein is a licensed real estate broker in the State of Washington and a Washington state certified real estate appraiser. He helps clients and their advisors navigate probate property, inherited homes, trust-owned real estate, estate-related sales, and other important property transitions throughout King County, Snohomish County, Pierce County, and Kitsap County.
+              David Stein brings more than 20 years of experience as a Washington real estate broker and state certified residential appraiser, helping clients and their advisors navigate property decisions with practical, valuation-informed guidance throughout King, Snohomish, Pierce, and Kitsap Counties.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Link to="/contact">
