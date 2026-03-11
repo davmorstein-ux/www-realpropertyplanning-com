@@ -234,15 +234,15 @@ const Index = () => {
               </div>
 
               <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[54px] text-foreground font-bold leading-[1.08] mb-5 text-center">
-                A Trusted Real Estate Resource for Probate, Inherited Property, and Important Home Transitions
+                A Trusted Resource for Probate, Inherited Property, and Important Home Transitions
               </h1>
 
               <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-[760px] mx-auto mb-4 text-center">
-                When a property is part of an estate, trust, probate matter, or major family transition, the real estate side often requires more than a standard home sale approach. David Stein helps attorneys, executors, trustees, fiduciaries, personal representatives, and families navigate inherited property, estate sales, senior transitions, valuation-related decisions, and complex sale preparation throughout Western Washington.
+                Real Property Planning helps attorneys, executors, trustees, fiduciaries, personal representatives, and families navigate probate real estate, inherited property, estate sales, senior transitions, and valuation-related decisions throughout Western Washington.
               </p>
 
               <p className="text-base text-muted-foreground/80 leading-relaxed max-w-[680px] mx-auto mb-8 text-center">
-                As a Washington real estate broker and state certified residential appraiser with more than 20 years of experience, David brings a practical understanding of pricing, property condition, communication, coordination, and next-step planning in situations that often involve legal, emotional, and logistical complexity.
+                Founded around the experience of David Stein, a Washington real estate broker and state certified residential appraiser with more than 20 years of experience, Real Property Planning was created to provide practical guidance in property situations that often involve legal, emotional, financial, and logistical complexity.
               </p>
 
               {/* Top CTA */}
