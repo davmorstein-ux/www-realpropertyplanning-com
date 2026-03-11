@@ -29,7 +29,7 @@ const steps = [
   {
     number: "04",
     title: "Preparation and Coordination",
-    text: "If needed, David helps guide the next steps related to cleanout, repairs, contractors, staging, or readiness for market.",
+    text: "If needed, Real Property Planning helps guide the next steps related to cleanout, repairs, contractors, staging, or readiness for market.",
   },
   {
     number: "05",
@@ -39,7 +39,7 @@ const steps = [
   {
     number: "06",
     title: "Contract to Closing",
-    text: "David helps guide the transaction through negotiations, contingency management, communication, and closing coordination.",
+    text: "The team helps guide the transaction through negotiations, contingency management, communication, and closing coordination.",
   },
 ];
 
@@ -62,8 +62,8 @@ const HowTheProcessWorks = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="How the Process Works for Probate & Inherited Property Sales | David Stein"
-        description="Learn David Stein's step-by-step process for helping attorneys, executors, trustees, and families handle probate property, inherited homes, and estate sales in Western Washington."
+        title="How the Process Works for Probate & Inherited Property Sales | Real Property Planning"
+        description="Learn the step-by-step process Real Property Planning uses to help attorneys, executors, trustees, and families handle probate property and inherited homes in Western Washington."
       />
       <BreadcrumbSchema items={[{ name: "How the Process Works", url: "/how-the-process-works" }]} />
       <Header />
@@ -78,8 +78,11 @@ const HowTheProcessWorks = () => {
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-[22px]">
               How the Process Works
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-[30px]">
-              When a property is connected to probate, inheritance, a trust, or a major life transition, most people want to know what happens next. David Stein uses a clear, steady process designed to reduce uncertainty and help clients move from confusion to action.
+            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-4">
+              Real Property Planning uses a clear, steady process to help clients and referral partners move from uncertainty to action when a property is connected to probate, inheritance, a trust, or a major life transition.
+            </p>
+            <p className="text-lg text-primary-foreground/70 leading-relaxed mb-[30px]">
+              David Stein helps simplify what can otherwise feel overwhelming by combining practical guidance, strong communication, market knowledge, and thoughtful coordination.
             </p>
             <Link to="/contact">
               <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-medium px-7 py-4 h-auto rounded-lg">

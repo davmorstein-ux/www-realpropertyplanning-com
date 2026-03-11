@@ -36,13 +36,13 @@ const CountyPageTemplate = ({
     { name: countyName, url: countyPath },
   ];
 
-  const defaultLocalParagraph = `Every county has its own market patterns, housing stock, buyer demand, and practical sale considerations. David combines broad experience with local awareness to help clients make informed property decisions in ${countyName}.`;
+  const defaultLocalParagraph = `Every county has its own market patterns, housing stock, buyer demand, and practical sale considerations. Real Property Planning combines broad experience with local awareness to help clients make informed property decisions in ${countyName}.`;
 
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title={`${countyName} Probate Real Estate & Inherited Property Guidance | David Stein`}
-        description={`David Stein helps clients and referral partners with probate real estate, inherited homes, estate sales, trust-owned property, and senior transitions in ${countyName}, Washington.`}
+        title={`${countyName} Probate Real Estate & Inherited Property Guidance | Real Property Planning`}
+        description={`Real Property Planning provides practical real estate guidance for inherited property, probate real estate, estate sales, trust-owned homes, and senior transitions in ${countyName}, Washington.`}
       />
       <BreadcrumbSchema items={breadcrumbItems} />
       <Header />
@@ -58,10 +58,10 @@ const CountyPageTemplate = ({
               Probate Real Estate and Inherited Property Guidance in {countyName}
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-5">
-              David Stein provides practical real estate guidance for inherited property, probate real estate, estate sales, trust-owned homes, valuation-related decisions, and senior transitions throughout {countyName}, Washington.
+              Real Property Planning provides practical real estate guidance for inherited property, probate real estate, estate sales, trust-owned homes, valuation-related decisions, and senior transitions throughout {countyName}, Washington.
             </p>
             <p className="text-lg text-primary-foreground/70 leading-relaxed">
-              Whether the property needs preparation, pricing strategy, family coordination, or a full sale plan, David helps clients and referral partners move forward with local market insight and experienced support.
+              Whether the property needs preparation, pricing strategy, family coordination, or a full sale plan, clients and referral partners benefit from local market insight and experienced support. David Stein brings more than 20 years of real estate and valuation experience to these important transitions.
             </p>
           </div>
         </div>
@@ -74,7 +74,7 @@ const CountyPageTemplate = ({
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-              How David Helps in {countyName}
+              How Real Property Planning Helps in {countyName}
             </h2>
             <ul className="space-y-4">
               {howDavidHelps.map((item, index) => (

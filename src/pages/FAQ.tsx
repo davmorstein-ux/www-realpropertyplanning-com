@@ -47,16 +47,16 @@ const faqs = [
     answer: `It depends on the property, the local market, and the likely return. Some properties benefit meaningfully from targeted cleanup, paint, flooring, or landscaping. Others are better sold as-is, especially when time or budget constraints make preparation impractical. David Stein helps clients evaluate these options with a practical, market-informed perspective.\n\n${softCta}`,
   },
   {
-    question: "How can an attorney or fiduciary refer a client to David?",
-    answer: `Attorneys and fiduciaries can reach David directly by phone or through the contact page. David works as a real estate resource for professional referral partners, providing experienced guidance on property value, sale preparation, market strategy, and transaction coordination. His goal is to make the referring professional look well-supported throughout the process.\n\n${softCta}`,
+    question: "How can an attorney or fiduciary refer a client to Real Property Planning?",
+    answer: `Attorneys and fiduciaries can reach out directly by phone or through the contact page. Real Property Planning works as a real estate resource for professional referral partners, providing experienced guidance on property value, sale preparation, market strategy, and transaction coordination. The goal is to make the referring professional look well-supported throughout the process.\n\n${softCta}`,
   },
   {
-    question: "What counties does David serve?",
-    answer: `David Stein serves clients throughout King County, Snohomish County, Pierce County, and Kitsap County in Western Washington. Each county has its own market dynamics, pricing patterns, and buyer expectations. David's local knowledge helps clients make better-informed decisions about probate property, inherited homes, estate sales, and senior transitions.\n\n${softCta}`,
+    question: "What counties does Real Property Planning serve?",
+    answer: `Real Property Planning serves clients throughout King County, Snohomish County, Pierce County, and Kitsap County in Western Washington. Each county has its own market dynamics, pricing patterns, and buyer expectations. Local knowledge helps clients make better-informed decisions about probate property, inherited homes, estate sales, and senior transitions.\n\n${softCta}`,
   },
   {
-    question: "Can David help with senior transitions and downsizing decisions?",
-    answer: `Yes. David works with seniors, adult children, attorneys, and trusted advisors navigating housing transitions including downsizing, moves to assisted living, and the sale of a longtime family home. He provides patient, practical guidance focused on timing, value, preparation, and clear communication throughout the process.\n\n${softCta}`,
+    question: "Can Real Property Planning help with senior transitions and downsizing decisions?",
+    answer: `Yes. Real Property Planning works with seniors, adult children, attorneys, and trusted advisors navigating housing transitions including downsizing, moves to assisted living, and the sale of a longtime family home. David Stein provides patient, practical guidance focused on timing, value, preparation, and clear communication throughout the process.\n\n${softCta}`,
   },
 ];
 
@@ -93,7 +93,7 @@ const FAQ = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="FAQ | Probate Real Estate, Inherited Property & Estate Sales | David Stein"
+        title="FAQ | Probate Real Estate, Inherited Property & Estate Sales | Real Property Planning"
         description="Answers to common questions about probate real estate, inherited homes, estate sales, trust-owned property, valuation, executors, and senior transitions in Washington."
       />
       <BreadcrumbSchema items={[{ name: "FAQ", url: "/faq" }]} />

@@ -91,8 +91,8 @@ const ForCPAs = () => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: "David Stein — Real Estate Guidance for CPAs",
-    description: "David Stein provides probate real estate, inherited property, trust-owned real estate, and estate sale guidance for CPAs and their clients in King, Snohomish, Pierce, and Kitsap Counties.",
+    name: "Real Property Planning — Real Estate Guidance for CPAs",
+    description: "Real Property Planning provides probate real estate, inherited property, trust-owned real estate, and estate sale guidance for CPAs and their clients in King, Snohomish, Pierce, and Kitsap Counties.",
     url: "https://realpropertyplanning.com/for-cpas",
     areaServed: [
       { "@type": "AdministrativeArea", name: "King County, WA" },
@@ -105,8 +105,8 @@ const ForCPAs = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Real Estate Guidance for CPAs and Their Clients | David Stein"
-        description="David Stein provides probate real estate, inherited property, trust-owned real estate, and estate sale guidance for CPAs and their clients in King, Snohomish, Pierce, and Kitsap Counties."
+        title="Real Estate Guidance for CPAs and Their Clients | Real Property Planning"
+        description="Real Property Planning provides probate real estate, inherited property, trust-owned real estate, and estate sale guidance for CPAs and their clients in King, Snohomish, Pierce, and Kitsap Counties."
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema items={[{ name: "For CPAs", url: "/for-cpas" }]} />
@@ -123,10 +123,10 @@ const ForCPAs = () => {
               Real Estate Guidance for CPAs and Their Clients
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-5">
-              CPAs are often involved when clients are making important financial decisions related to inherited property, estate settlement, trust administration, probate matters, downsizing, or the sale of real estate during major life transitions. In these situations, it can be helpful to have an experienced real estate and valuation resource who understands how property condition, market timing, preparation strategy, and likely value affect decision-making.
+              Real Property Planning supports CPAs and their clients when important financial decisions involve inherited property, estate settlement, trust administration, probate matters, downsizing, or the sale of real estate during major life transitions.
             </p>
             <p className="text-lg text-primary-foreground/70 leading-relaxed mb-[30px]">
-              David Stein is a licensed real estate broker in the State of Washington and a Washington state certified real estate appraiser. He helps clients and their advisors navigate probate property, inherited homes, trust-owned real estate, estate-related home sales, and other important real property transitions throughout King County, Snohomish County, Pierce County, and Kitsap County.
+              David Stein brings more than 20 years of experience as a Washington real estate broker and state certified residential appraiser, helping clients and their advisors navigate property decisions with a practical, valuation-informed approach throughout King, Snohomish, Pierce, and Kitsap Counties.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Link to="/contact">
@@ -183,10 +183,10 @@ const ForCPAs = () => {
               Practical Real Estate Guidance
             </p>
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-[22px]">
-              How David Stein Helps CPA Clients
+              How Real Property Planning Helps CPA Clients
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mb-10">
-              David Stein helps CPA clients understand the real-estate side of important property decisions in a way that is calm, practical, and valuation-informed. His role is to help clarify what the property is, how the market is likely to view it, and what options may make the most sense.
+              Real Property Planning helps CPA clients understand the real-estate side of important property decisions in a way that is calm, practical, and valuation-informed — clarifying what the property is, how the market is likely to view it, and what options may make the most sense.
             </p>
             <div className="grid md:grid-cols-2 gap-5 lg:gap-6">
               {howHelpsBlocks.map((block, index) => (
@@ -210,10 +210,10 @@ const ForCPAs = () => {
               Representative Situations
             </p>
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-[22px]">
-              Common Situations Where David Stein Can Help
+              Common Situations Where Real Property Planning Can Help
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mb-10">
-              Real estate becomes relevant in many financial and estate-related situations. David Stein helps CPA clients navigate a wide range of property matters that affect timing, decision-making, and value.
+              Real estate becomes relevant in many financial and estate-related situations. Real Property Planning helps CPA clients navigate a wide range of property matters that affect timing, decision-making, and value.
             </p>
             <div className="grid md:grid-cols-2 gap-x-8 gap-y-4 mb-6">
               {commonSituations.map((situation, index) => (

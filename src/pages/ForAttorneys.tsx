@@ -49,9 +49,9 @@ const faqs = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  name: "David Stein — Real Estate Resource for Attorneys and Fiduciaries",
+  name: "Real Property Planning — Real Estate Resource for Attorneys and Fiduciaries",
   description:
-    "David Stein supports attorneys and fiduciaries with probate real estate, inherited property sales, valuation insight, sale coordination, and practical guidance throughout Western Washington.",
+    "Real Property Planning supports attorneys and fiduciaries with probate real estate, inherited property sales, valuation insight, sale coordination, and practical guidance throughout Western Washington.",
   url: "https://realpropertyplanning.com/for-attorneys",
   provider: {
     "@type": "RealEstateAgent",
@@ -71,8 +71,8 @@ const ForAttorneys = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Real Estate Resource for Attorneys, Fiduciaries & Estate Matters | David Stein"
-        description="David Stein supports attorneys and fiduciaries with probate real estate, inherited property sales, valuation insight, sale coordination, and practical guidance throughout Western Washington."
+        title="Real Estate Resource for Attorneys & Fiduciaries | Real Property Planning"
+        description="Real Property Planning supports attorneys and fiduciaries with probate real estate, inherited property sales, valuation insight, sale coordination, and practical guidance throughout Western Washington."
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema items={[{ name: "For Attorneys & Fiduciaries", url: "/for-attorneys" }]} />
@@ -90,10 +90,10 @@ const ForAttorneys = () => {
                 A Real Estate Resource for Attorneys, Fiduciaries, and High-Trust Referrals
               </h1>
               <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
-                Attorneys involved in probate, trust administration, elder-related planning, guardianship matters, and other property-related transitions often need a real estate professional who communicates clearly, understands sensitive situations, and can help move the property side forward with professionalism.
+                Real Property Planning supports attorneys and fiduciaries who need practical help with the real estate side of probate, trust administration, inherited property, senior-related housing transitions, and other complex property matters.
               </p>
               <p className="text-lg text-primary-foreground/70 leading-relaxed mb-8">
-                David Stein works with attorneys and referral partners who need practical guidance related to inherited homes, estate property sales, trust-owned real estate, sale preparation, pricing strategy, property condition concerns, and coordination with families and decision-makers.
+                These situations often require a real estate resource who communicates clearly, understands sensitive circumstances, and helps move the property side forward in a steady and professional way. David Stein brings more than 20 years of experience as a Washington real estate broker and state certified residential appraiser.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/contact">
@@ -125,7 +125,7 @@ const ForAttorneys = () => {
           <div className="max-w-3xl mx-auto">
             <Briefcase className="w-10 h-10 text-gold mb-6" />
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-              How David Supports Attorneys
+              How Real Property Planning Supports Attorneys
             </h2>
             <ul className="space-y-4">
               {howDavidSupports.map((item, index) => (
@@ -163,10 +163,10 @@ const ForAttorneys = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-              Why Referral Partners Value Working with David
+              Why Referral Partners Value Working with Real Property Planning
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Referral partners often need a dependable real estate resource who will communicate professionally, treat clients with patience and respect, and understand that these transactions are rarely routine. David's goal is to make attorneys look well-supported by helping the real estate side move forward in an organized and thoughtful way.
+              Referral partners often need a dependable real estate resource who will communicate professionally, treat clients with patience and respect, and understand that these transactions are rarely routine. The goal is to make attorneys look well-supported by helping the real estate side move forward in an organized and thoughtful way.
             </p>
           </div>
         </div>

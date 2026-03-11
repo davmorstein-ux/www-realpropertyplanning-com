@@ -91,8 +91,8 @@ const ForFinancialPlanners = () => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: "David Stein — Real Estate Guidance for Financial Planners",
-    description: "David Stein provides probate real estate, inherited property, trust-owned real estate, and estate sale guidance for financial planners and their clients in King, Snohomish, Pierce, and Kitsap Counties.",
+    name: "Real Property Planning — Real Estate Guidance for Financial Planners",
+    description: "Real Property Planning provides probate real estate, inherited property, trust-owned real estate, and estate sale guidance for financial planners and their clients in King, Snohomish, Pierce, and Kitsap Counties.",
     url: "https://realpropertyplanning.com/for-financial-planners",
     areaServed: [
       { "@type": "AdministrativeArea", name: "King County, WA" },
@@ -105,8 +105,8 @@ const ForFinancialPlanners = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Real Estate Guidance for Financial Planners and Their Clients | David Stein"
-        description="David Stein provides probate real estate, inherited property, trust-owned real estate, and estate sale guidance for financial planners and their clients in King, Snohomish, Pierce, and Kitsap Counties."
+        title="Real Estate Guidance for Financial Planners and Their Clients | Real Property Planning"
+        description="Real Property Planning provides probate real estate, inherited property, trust-owned real estate, and estate sale guidance for financial planners and their clients in King, Snohomish, Pierce, and Kitsap Counties."
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema items={[{ name: "For Financial Planners", url: "/for-financial-planners" }]} />
@@ -123,10 +123,10 @@ const ForFinancialPlanners = () => {
               Real Estate Guidance for Financial Planners and Their Clients
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-5">
-              Financial planners are often helping clients think through major decisions involving inherited property, trust-owned homes, estate transitions, downsizing, senior housing changes, and the sale of real estate that may affect broader planning goals. In many cases, it helps to involve an experienced real estate and valuation professional who can provide practical guidance on property condition, likely value, timing, preparation, and market strategy.
+              Real Property Planning supports financial planners and their clients when major decisions involve inherited property, trust-owned homes, estate transitions, downsizing, senior housing changes, and the sale of real estate that may affect broader planning goals.
             </p>
             <p className="text-lg text-primary-foreground/70 leading-relaxed mb-[30px]">
-              David Stein is a licensed real estate broker in the State of Washington and a Washington state certified real estate appraiser. He helps clients and their advisors navigate probate property, inherited homes, trust-owned real estate, estate-related sales, and other important property transitions throughout King County, Snohomish County, Pierce County, and Kitsap County.
+              David Stein brings more than 20 years of experience as a Washington real estate broker and state certified residential appraiser, helping clients and their advisors navigate property decisions with practical, valuation-informed guidance throughout King, Snohomish, Pierce, and Kitsap Counties.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Link to="/contact">
@@ -183,10 +183,10 @@ const ForFinancialPlanners = () => {
               Practical Real Estate Guidance
             </p>
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-[22px]">
-              How David Stein Helps Financial Planner Clients
+              How Real Property Planning Helps Financial Planner Clients
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mb-10">
-              David Stein helps planner clients understand the real-estate side of important property decisions in a way that is grounded, organized, and informed by both market knowledge and valuation perspective.
+              Real Property Planning helps planner clients understand the real-estate side of important property decisions in a way that is grounded, organized, and informed by both market knowledge and valuation perspective.
             </p>
             <div className="grid md:grid-cols-2 gap-5 lg:gap-6">
               {howHelpsBlocks.map((block, index) => (
@@ -213,7 +213,7 @@ const ForFinancialPlanners = () => {
               Common Real Estate Situations That Affect Financial Planning
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mb-10">
-              Real estate is often one of the most significant assets a client owns or inherits. David Stein helps clients and their advisors navigate situations where property decisions meaningfully affect broader planning.
+              Real estate is often one of the most significant assets a client owns or inherits. Real Property Planning helps clients and their advisors navigate situations where property decisions meaningfully affect broader planning.
             </p>
             <div className="grid md:grid-cols-2 gap-x-8 gap-y-4 mb-6">
               {commonSituations.map((situation, index) => (

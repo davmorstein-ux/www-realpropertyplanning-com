@@ -44,8 +44,8 @@ const faqs = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  name: "David Stein — Guidance for Executors & Trustees",
-  description: "Guidance for executors, trustees, personal representatives, and families handling inherited property, estate home sales, and real estate decisions in Western Washington.",
+  name: "Real Property Planning — Guidance for Executors & Trustees",
+  description: "Real Property Planning helps executors, trustees, personal representatives, and families handle inherited property, estate home sales, and real estate decisions throughout Western Washington.",
   url: "https://realpropertyplanning.com/executors",
   areaServed: [
     { "@type": "AdministrativeArea", name: "King County, WA" },
@@ -59,8 +59,8 @@ const Executors = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Guidance for Executors, Trustees & Personal Representatives | David Stein"
-        description="Guidance for executors, trustees, personal representatives, and families handling inherited property, estate home sales, and real estate decisions in Western Washington."
+        title="Guidance for Executors, Trustees & Personal Representatives | Real Property Planning"
+        description="Real Property Planning helps executors, trustees, personal representatives, and families handle inherited property, estate home sales, and real estate decisions throughout Western Washington."
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema items={[{ name: "For Executors", url: "/executors" }]} />
@@ -77,10 +77,10 @@ const Executors = () => {
               Guidance for Executors, Personal Representatives, Trustees, and Families
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-5">
-              If you are responsible for a home after a death or major family transition, you may be dealing with legal steps, family communication, property condition issues, deadlines, and uncertainty about what to do next. David Stein helps executors, personal representatives, trustees, and families understand the real estate side of the process and move forward with confidence.
+              Real Property Planning helps executors, personal representatives, trustees, and families understand the real estate side of inherited property, estate home sales, and major home transitions.
             </p>
             <p className="text-lg text-primary-foreground/70 leading-relaxed mb-[30px]">
-              Whether the property will be sold soon, prepared for sale later, evaluated for decision-making, or simply needs a knowledgeable next-step plan, David provides practical guidance shaped by more than 20 years of experience in real estate and valuation.
+              If you are responsible for a property after a death or major life event, you may be dealing with timing issues, legal questions, family communication, property condition concerns, and uncertainty about what to do next. David Stein brings practical guidance shaped by more than 20 years of real estate and valuation experience.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Link to="/contact">
@@ -107,7 +107,7 @@ const Executors = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-              How David Helps Executors and Families
+              How Real Property Planning Helps Executors and Families
             </h2>
             <ul className="space-y-4">
               {howHelps.map((item, index) => (

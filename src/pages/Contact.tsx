@@ -66,8 +66,8 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Contact David Stein | Probate Real Estate & Inherited Property Guidance"
-        description="Contact David Stein for help with probate real estate, inherited property, estate sales, valuation-related questions, and senior transitions in Western Washington."
+        title="Contact Real Property Planning | Probate Real Estate Guidance"
+        description="Contact Real Property Planning for help with probate real estate, inherited property, estate sales, valuation-related questions, and senior transitions in Western Washington."
       />
       <BreadcrumbSchema items={[{ name: "Contact", url: "/contact" }]} />
       <Header />
@@ -80,10 +80,13 @@ const Contact = () => {
               Get in Touch
             </p>
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-[22px]">
-              Contact David Stein
+              Contact Real Property Planning
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed">
-              If you are dealing with probate property, inherited real estate, a trust-owned home, a senior transition, or an estate-related sale decision, David welcomes your call or message.
+            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-4">
+              If you are dealing with probate property, inherited real estate, a trust-owned home, a senior transition, or an estate-related sale decision, Real Property Planning welcomes your call or message.
+            </p>
+            <p className="text-lg text-primary-foreground/70 leading-relaxed">
+              David Stein works with attorneys, executors, fiduciaries, trustees, and families throughout Western Washington and welcomes inquiries about next steps, timing, pricing, preparation, and sale strategy.
             </p>
           </div>
         </div>

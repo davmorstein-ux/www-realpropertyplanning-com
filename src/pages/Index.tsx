@@ -121,22 +121,22 @@ const serviceAreas = [
 const homepageFaqs = [
   {
     question: "Do I need probate before selling an inherited home in Washington?",
-    answer: "It depends on how the property is titled and the estate structure. In many cases, probate or letters testamentary are required before a sale can proceed. David Stein helps families and executors understand what's needed and how to move forward efficiently.",
+    answer: "It depends on how the property is titled and the estate structure. In many cases, probate or letters testamentary are required before a sale can proceed. Real Property Planning helps families and executors understand what's needed and how to move forward efficiently.",
     link: "/faq"
   },
   {
     question: "Can a trustee sell a house without court involvement?",
-    answer: "In most cases, a trustee can sell trust-owned real estate without going through probate court, as long as the trust document grants that authority. David works with trustees and their attorneys to coordinate the real estate side of these transactions.",
+    answer: "In most cases, a trustee can sell trust-owned real estate without going through probate court, as long as the trust document grants that authority. Real Property Planning works with trustees and their attorneys to coordinate the real estate side of these transactions.",
     link: "/faq"
   },
   {
     question: "How do I determine the right price for estate property?",
-    answer: "Pricing estate property requires understanding condition, market dynamics, and buyer expectations. David's dual background as a broker and certified appraiser helps clients avoid the costly mistakes of overpricing or underpricing inherited and estate-held homes.",
+    answer: "Pricing estate property requires understanding condition, market dynamics, and buyer expectations. Real Property Planning's dual brokerage and certified appraisal background helps clients avoid the costly mistakes of overpricing or underpricing inherited and estate-held homes.",
     link: "/why-valuation-matters"
   },
   {
     question: "What if the home needs repairs or cleanout before sale?",
-    answer: "Many estate and inherited properties need cleanout, repairs, or preparation before going to market. David helps coordinate vendors, assess what improvements are worth making, and develop a practical plan to get the property sale-ready.",
+    answer: "Many estate and inherited properties need cleanout, repairs, or preparation before going to market. Real Property Planning helps coordinate vendors, assess what improvements are worth making, and develop a practical plan to get the property sale-ready.",
     link: "/how-the-process-works"
   }
 ];
@@ -159,8 +159,8 @@ const audiences = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "RealEstateAgent",
-  "name": "David Stein — Real Property Planning",
-  "description": "Probate real estate, inherited property, trust-owned real estate, and estate sale guidance in King, Snohomish, Pierce, and Kitsap Counties, Washington.",
+  "name": "Real Property Planning",
+  "description": "Real Property Planning provides probate real estate, inherited property, trust-owned real estate, and estate sale guidance in King, Snohomish, Pierce, and Kitsap Counties, Washington.",
   "url": "https://realpropertyplanning.com",
   "telephone": "+12069003015",
   "email": "david@realpropertyplanning.com",
@@ -208,8 +208,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Probate Real Estate & Inherited Property Guidance | David Stein Washington"
-        description="David Stein helps attorneys, executors, trustees, and families handle probate real estate, inherited homes, estate property sales, and senior transitions throughout Western Washington."
+        title="Probate Real Estate & Inherited Property Guidance | Real Property Planning"
+        description="Real Property Planning helps attorneys, executors, trustees, fiduciaries, and families navigate probate real estate, inherited homes, estate sales, and senior transitions throughout Western Washington."
         jsonLd={jsonLd}
       />
       <Header />
@@ -234,15 +234,15 @@ const Index = () => {
               </div>
 
               <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[54px] text-foreground font-bold leading-[1.08] mb-5 text-center">
-                A Trusted Real Estate Resource for Probate, Inherited Property, and Important Home Transitions
+                A Trusted Resource for Probate, Inherited Property, and Important Home Transitions
               </h1>
 
               <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-[760px] mx-auto mb-4 text-center">
-                When a property is part of an estate, trust, probate matter, or major family transition, the real estate side often requires more than a standard home sale approach. David Stein helps attorneys, executors, trustees, fiduciaries, personal representatives, and families navigate inherited property, estate sales, senior transitions, valuation-related decisions, and complex sale preparation throughout Western Washington.
+                Real Property Planning helps attorneys, executors, trustees, fiduciaries, personal representatives, and families navigate probate real estate, inherited property, estate sales, senior transitions, and valuation-related decisions throughout Western Washington.
               </p>
 
               <p className="text-base text-muted-foreground/80 leading-relaxed max-w-[680px] mx-auto mb-8 text-center">
-                As a Washington real estate broker and state certified residential appraiser with more than 20 years of experience, David brings a practical understanding of pricing, property condition, communication, coordination, and next-step planning in situations that often involve legal, emotional, and logistical complexity.
+                Founded around the experience of David Stein, a Washington real estate broker and state certified residential appraiser with more than 20 years of experience, Real Property Planning was created to provide practical guidance in property situations that often involve legal, emotional, financial, and logistical complexity.
               </p>
 
               {/* Top CTA */}
@@ -333,7 +333,7 @@ const Index = () => {
                 Real estate tied to estate settlement, probate, trust administration, or senior housing transitions requires more than a typical home sale approach. These situations often involve legal timelines, multiple stakeholders, property condition questions, and emotionally difficult decisions.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                David Stein helps bring clarity and structure to the real estate side of the process — serving as a capable, calm, and responsive professional who can help coordinate the next steps with care and discretion.
+                Real Property Planning helps bring clarity and structure to the real estate side of the process — providing capable, calm, and responsive guidance to help coordinate next steps with care and discretion.
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link to="/how-the-process-works">
@@ -369,7 +369,7 @@ const Index = () => {
         <div className="container px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <p className="text-gold font-bold tracking-widest uppercase mb-3 text-base">
-              How David Can Help
+              How Real Property Planning Can Help
             </p>
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-4">
               Explore Services & Resources
@@ -457,11 +457,11 @@ const Index = () => {
               <p className="text-gold font-bold tracking-widest uppercase mb-3 text-base">
                 Clients & Partners
               </p>
-              <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-6">
-                Who David Stein Works With
+               <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-6">
+                Who Real Property Planning Works With
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                David Stein serves clients and referral partners who need experienced real estate guidance during complex property transitions across Western Washington.
+                Real Property Planning serves clients and referral partners who need experienced real estate guidance during complex property transitions across Western Washington.
               </p>
               <div className="grid sm:grid-cols-2 gap-3">
                 {audiences.map((audience, index) => (
@@ -612,8 +612,8 @@ const Index = () => {
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-6">
               Need Guidance on a Probate, Estate, Trust, or Senior Property Matter?
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Start with a confidential conversation. David Stein provides experienced, practical guidance tailored to the property, the circumstances, and the people involved.
+              <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              Start with a confidential conversation. Real Property Planning provides experienced, practical guidance tailored to the property, the circumstances, and the people involved.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">

@@ -49,8 +49,8 @@ const faqs = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  name: "David Stein — Probate & Estate Property Sales",
-  description: "Experienced guidance for probate real estate, estate property sales, inherited homes, and trust-owned homes throughout King, Snohomish, Pierce, and Kitsap Counties.",
+  name: "Real Property Planning — Probate & Estate Property Sales",
+  description: "Real Property Planning provides experienced guidance for probate real estate, estate property sales, inherited homes, and trust-owned homes throughout Western Washington.",
   url: "https://realpropertyplanning.com/probate-estate-sales",
   areaServed: [
     { "@type": "AdministrativeArea", name: "King County, WA" },
@@ -64,8 +64,8 @@ const ProbateEstateSales = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Probate Real Estate & Estate Property Sales in Western Washington | David Stein"
-        description="Experienced guidance for probate real estate, estate property sales, inherited homes, and trust-owned homes throughout King, Snohomish, Pierce, and Kitsap Counties."
+        title="Probate Real Estate & Estate Property Sales | Real Property Planning"
+        description="Real Property Planning provides experienced guidance for probate real estate, estate property sales, inherited homes, and trust-owned homes throughout Western Washington."
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema items={[{ name: "Probate & Estate Sales", url: "/probate-estate-sales" }]} />
@@ -82,10 +82,10 @@ const ProbateEstateSales = () => {
               Experienced Guidance for Probate and Estate Property Sales
             </h1>
             <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
-              Selling a property tied to probate, inheritance, or estate administration often involves more complexity than a typical listing. The home may need cleanout, deferred maintenance review, pricing analysis, family coordination, or communication with attorneys, fiduciaries, or personal representatives before it is ready for the market.
+              Real Property Planning helps clients and referral partners navigate probate real estate, inherited homes, estate property sales, and trust-owned property with a practical, steady approach.
             </p>
             <p className="text-lg text-primary-foreground/70 leading-relaxed mb-8">
-              David Stein helps clients and referral partners navigate probate real estate and estate property sales with a practical, steady approach focused on preparation, value, market strategy, and thoughtful execution.
+              These transactions often involve more complexity than a typical home sale. The property may need cleanout, preparation, deferred maintenance review, pricing analysis, or coordination among family members, fiduciaries, and legal professionals. David Stein provides experienced guidance shaped by both brokerage and valuation experience.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/contact">
@@ -130,7 +130,7 @@ const ProbateEstateSales = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-              David Can Help With
+              Real Property Planning Can Help With
             </h2>
             <ul className="space-y-4">
               {davidCanHelp.map((item, index) => (
