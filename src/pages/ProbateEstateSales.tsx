@@ -8,18 +8,23 @@ import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Phone, CheckCircle, ArrowRight } from "lucide-react";
-import stampImage from "@/assets/stamp.png";
+import { Phone, CheckCircle } from "lucide-react";
 
-const services = [
-  "Property review and sale strategy",
-  "Market-based pricing guidance",
-  "As-is versus improvement analysis",
-  "Clean-out coordination",
-  "Repair and vendor coordination",
-  "Staging and presentation recommendations",
-  "Strategic marketing and sale execution",
-  "Ongoing communication with involved parties",
+const whatMakesDifferent = [
+  "Legal authority and timing may affect when a sale can occur",
+  "Family communication can affect decision-making",
+  "The home may need preparation before market exposure",
+  "Pricing must reflect condition, timing, and market reality",
+  "Some properties require a more careful strategy due to deferred maintenance or occupancy issues",
+];
+
+const davidCanHelp = [
+  "Inherited homes",
+  "Probate property",
+  "Trust-owned real estate",
+  "Vacant estate homes",
+  "Deferred-maintenance property",
+  "Sale preparation and market strategy",
 ];
 
 const faqs = [
@@ -45,7 +50,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   name: "David Stein — Probate & Estate Property Sales",
-  description: "Experienced guidance for probate property sales, estate-owned homes, and inherited real estate in King, Snohomish, Pierce, and Kitsap Counties.",
+  description: "Experienced guidance for probate real estate, estate property sales, inherited homes, and trust-owned homes throughout King, Snohomish, Pierce, and Kitsap Counties.",
   url: "https://realpropertyplanning.com/probate-estate-sales",
   areaServed: [
     { "@type": "AdministrativeArea", name: "King County, WA" },
@@ -59,8 +64,8 @@ const ProbateEstateSales = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Probate and Estate Property Sales in Western Washington | David Stein"
-        description="David Stein provides experienced guidance for selling probate property, estate-owned homes, and inherited real estate. Licensed broker and certified appraiser serving King, Snohomish, Pierce, and Kitsap Counties."
+        title="Probate Real Estate & Estate Property Sales in Western Washington | David Stein"
+        description="Experienced guidance for probate real estate, estate property sales, inherited homes, and trust-owned homes throughout King, Snohomish, Pierce, and Kitsap Counties."
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema items={[{ name: "Probate & Estate Sales", url: "/probate-estate-sales" }]} />
@@ -77,10 +82,10 @@ const ProbateEstateSales = () => {
               Experienced Guidance for Probate and Estate Property Sales
             </h1>
             <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
-              Selling real estate tied to probate, estate administration, or inheritance involves legal timelines, multiple decision-makers, property condition concerns, and pricing complexity that most agents are not equipped to handle. David Stein specializes in exactly these situations.
+              Selling a property tied to probate, inheritance, or estate administration often involves more complexity than a typical listing. The home may need cleanout, deferred maintenance review, pricing analysis, family coordination, or communication with attorneys, fiduciaries, or personal representatives before it is ready for the market.
             </p>
             <p className="text-lg text-primary-foreground/70 leading-relaxed mb-8">
-              As a licensed Washington real estate broker and state certified residential appraiser with over 20 years of experience, David helps attorneys, executors, trustees, and families navigate the sale process from initial property review through closing — with a valuation-informed approach that protects value and reduces stress.
+              David Stein helps clients and referral partners navigate probate real estate and estate property sales with a practical, steady approach focused on preparation, value, market strategy, and thoughtful execution.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/contact">
@@ -101,37 +106,56 @@ const ProbateEstateSales = () => {
 
       <TrustStrip />
 
-      {/* Intro */}
+      {/* What Makes Estate Property Sales Different */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-            <div>
-              <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-6">
-                Real Estate Support for Estate Settlement and Probate Matters
-              </h2>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                Selling a property after the death of an owner often involves more than listing a home for sale. There may be legal procedures, title considerations, multiple heirs, personal property, deferred maintenance, and uncertainty about timing or strategy.
-              </p>
-              <p className="text-muted-foreground leading-relaxed mb-8">
-                David Stein helps clients and referral partners navigate the real estate side of the process with professionalism and practical guidance. His work includes helping assess the property, understand likely market value, determine the best sale approach, coordinate needed preparation, and manage the transaction through closing.
-              </p>
-              <div className="hidden lg:flex justify-center">
-                <img src={stampImage} alt="Vintage estate property stamp" className="w-64 xl:w-72 rounded-lg shadow-lg" />
-              </div>
-            </div>
-            <div className="bg-secondary rounded-lg p-8 lg:p-10">
-              <h3 className="font-serif text-xl text-foreground font-semibold mb-6">
-                Services Include
-              </h3>
-              <ul className="space-y-4">
-                {services.map((service, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-gold mt-0.5 shrink-0" />
-                    <span className="text-foreground">{service}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
+              What Makes Estate Property Sales Different
+            </h2>
+            <ul className="space-y-4">
+              {whatMakesDifferent.map((item, index) => (
+                <li key={index} className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
+                  <span className="text-muted-foreground">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* David Can Help With */}
+      <section className="py-20 lg:py-28 bg-secondary">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
+              David Can Help With
+            </h2>
+            <ul className="space-y-4">
+              {davidCanHelp.map((item, index) => (
+                <li key={index} className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-gold mt-0.5 shrink-0" />
+                  <span className="text-foreground">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Strip */}
+      <section className="py-16 bg-primary">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="font-serif text-2xl md:text-3xl text-primary-foreground font-semibold mb-6">
+              Need guidance on preparing, pricing, or selling an estate-related property?
+            </h2>
+            <Link to="/contact">
+              <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold">
+                Schedule a Consultation
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -139,33 +163,6 @@ const ProbateEstateSales = () => {
       <PageFAQ faqs={faqs} heading="Probate & Estate Sale FAQs" />
 
       <RelatedServices currentPath="/probate-estate-sales" />
-
-      {/* CTA */}
-      <section className="py-20 lg:py-28 bg-primary">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
-              Need Help With a Probate or Estate Property?
-            </h2>
-            <p className="text-primary-foreground/80 text-lg leading-relaxed mb-8">
-              David Stein can help you evaluate the property, understand the likely options, and create a practical path forward.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link to="/contact">
-                <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold">
-                  Schedule a Consultation
-                </Button>
-              </Link>
-              <Link to="/contact">
-                <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
-                  Contact David
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <DisclaimerSection />
       <Footer />
