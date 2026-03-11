@@ -125,7 +125,7 @@ const ForAttorneys = () => {
           <div className="max-w-3xl mx-auto">
             <Briefcase className="w-10 h-10 text-gold mb-6" />
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-              How David Supports Attorneys
+              How Real Property Planning Supports Attorneys
             </h2>
             <ul className="space-y-4">
               {howDavidSupports.map((item, index) => (
