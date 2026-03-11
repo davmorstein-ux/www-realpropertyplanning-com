@@ -159,8 +159,8 @@ const audiences = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "RealEstateAgent",
-  "name": "David Stein — Real Property Planning",
-  "description": "Probate real estate, inherited property, trust-owned real estate, and estate sale guidance in King, Snohomish, Pierce, and Kitsap Counties, Washington.",
+  "name": "Real Property Planning",
+  "description": "Real Property Planning provides probate real estate, inherited property, trust-owned real estate, and estate sale guidance in King, Snohomish, Pierce, and Kitsap Counties, Washington.",
   "url": "https://realpropertyplanning.com",
   "telephone": "+12069003015",
   "email": "david@realpropertyplanning.com",
