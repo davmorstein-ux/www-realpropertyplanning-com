@@ -58,7 +58,7 @@ const CountyPageTemplate = ({
               Probate Real Estate and Inherited Property Guidance in {countyName}
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-5">
-              Real Property Planning provides practical real estate guidance for inherited property, probate real estate, estate sales, trust-owned homes, valuation-related decisions, and senior transitions throughout {countyName}, Washington.
+              Real Property Planning provides practical real estate guidance for probate property, inherited homes, estate sales, trust-owned homes, and senior transitions throughout {countyName}, Washington.
             </p>
             <p className="text-lg text-primary-foreground/70 leading-relaxed">
               Whether the property needs preparation, pricing strategy, family coordination, or a full sale plan, clients and referral partners benefit from local market insight and experienced support. David Stein brings more than 20 years of real estate and valuation experience to these important transitions.

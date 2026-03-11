@@ -60,7 +60,7 @@ const Executors = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Guidance for Executors, Trustees & Personal Representatives | Real Property Planning"
-        description="Real Property Planning helps executors, trustees, personal representatives, and families handle inherited property, estate home sales, and real estate decisions throughout Western Washington."
+        description="Real Property Planning helps executors, trustees, personal representatives, and families handle inherited property, estate home sales, and next-step real estate decisions throughout Western Washington."
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema items={[{ name: "For Executors", url: "/executors" }]} />

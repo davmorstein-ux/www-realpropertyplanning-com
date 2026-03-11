@@ -109,6 +109,9 @@ const FAQ = () => {
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-[22px]">
               Frequently Asked Questions
             </h1>
+            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed">
+              Find answers to common questions about probate real estate, inherited property, estate sales, valuation, executors, trustees, and senior transitions in Washington.
+            </p>
           </div>
         </div>
       </section>

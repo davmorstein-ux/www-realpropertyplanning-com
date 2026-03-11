@@ -63,7 +63,7 @@ const WhyValuationMatters = () => {
               Why Valuation Matters in Probate and Inherited Property Decisions
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-4">
-              Real Property Planning helps clients and referral partners make better decisions by bringing clarity to value, pricing, condition, and market positioning.
+              Real Property Planning helps clients and referral partners make more informed decisions by bringing clarity to value, pricing, property condition, and market positioning.
             </p>
             <p className="text-lg text-primary-foreground/70 leading-relaxed mb-[30px]">
               In probate, inherited property, and estate-related situations, a well-informed understanding of value can shape sale strategy, family communication, repair decisions, buyout discussions, and overall planning. David Stein offers the perspective of both a Washington real estate broker and state certified residential appraiser.

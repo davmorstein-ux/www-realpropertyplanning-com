@@ -83,7 +83,7 @@ const Contact = () => {
               Contact Real Property Planning
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-4">
-              If you are dealing with probate property, inherited real estate, a trust-owned home, a senior transition, or an estate-related sale decision, Real Property Planning welcomes your call or message.
+              Contact Real Property Planning for guidance with probate property, inherited real estate, trust-owned homes, senior transitions, and estate-related sale decisions.
             </p>
             <p className="text-lg text-primary-foreground/70 leading-relaxed">
               David Stein works with attorneys, executors, fiduciaries, trustees, and families throughout Western Washington and welcomes inquiries about next steps, timing, pricing, preparation, and sale strategy.
