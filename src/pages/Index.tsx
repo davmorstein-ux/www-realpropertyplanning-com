@@ -131,7 +131,7 @@ const homepageFaqs = [
   },
   {
     question: "How do I determine the right price for estate property?",
-    answer: "Pricing estate property requires understanding condition, market dynamics, and buyer expectations. David's dual background as a broker and certified appraiser helps clients avoid the costly mistakes of overpricing or underpricing inherited and estate-held homes.",
+    answer: "Pricing estate property requires understanding condition, market dynamics, and buyer expectations. Real Property Planning's dual brokerage and certified appraisal background helps clients avoid the costly mistakes of overpricing or underpricing inherited and estate-held homes.",
     link: "/why-valuation-matters"
   },
   {
