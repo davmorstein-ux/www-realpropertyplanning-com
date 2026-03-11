@@ -2,8 +2,12 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
+import TrustStrip from "@/components/TrustStrip";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import RelatedServices from "@/components/RelatedServices";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { Phone } from "lucide-react";
 
 const countyData = [
   {
@@ -60,6 +64,7 @@ const Counties = () => {
         title="Probate Real Estate and Inherited Property Guidance by County | David Stein"
         description="David Stein provides probate real estate, inherited property, and estate sale guidance organized by county across King, Snohomish, Pierce, and Kitsap Counties in Western Washington."
       />
+      <BreadcrumbSchema items={[{ name: "Counties", url: "/counties" }]} />
       <Header />
 
       {/* Hero */}
@@ -70,20 +75,28 @@ const Counties = () => {
               Local Service Areas
             </p>
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-[22px]">
-              Cities We Serve
+              Probate Real Estate Guidance by County in Western Washington
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-5">
-              David Stein provides probate real estate, inherited property, trust-owned real estate, and estate property guidance throughout key counties in Western Washington. Because local market conditions, pricing patterns, buyer expectations, preparation strategy, and neighborhood dynamics can vary from community to community, local knowledge helps clients and referring professionals make more informed real property decisions.
+              Real estate markets vary dramatically from county to county — and even neighborhood to neighborhood — across Western Washington. A probate property in Seattle requires a different pricing and preparation strategy than an inherited home in Tacoma, Bremerton, or Everett. David Stein's local knowledge helps clients and professionals make better-informed decisions.
             </p>
-            <p className="text-lg text-primary-foreground/70 leading-relaxed">
-              The cities and communities listed below are organized by county for attorneys, executors, trustees, fiduciaries, personal representatives, heirs, and family members who need experienced real estate and valuation guidance related to probate property, inherited homes, trust-owned real estate, and estate-related home sales across the Puget Sound region.
+            <p className="text-lg text-primary-foreground/70 leading-relaxed mb-8">
+              As a licensed Washington real estate broker and state certified residential appraiser with over 20 years of experience, David serves attorneys, executors, trustees, and families across all four counties listed below.
             </p>
+            <Link to="/contact">
+              <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold px-7 py-4 h-auto rounded-lg">
+                <Phone className="w-4 h-4 mr-2" />
+                Schedule a Consultation
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
 
+      <TrustStrip />
+
       {/* County Sections */}
-      <section className="pt-12 pb-12 md:pt-16 md:pb-16 lg:pt-[84px] lg:pb-[84px] bg-secondary">
+      <section className="pt-12 pb-12 md:pt-16 md:pb-16 lg:pt-[84px] lg:pb-[84px] bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-[1140px] mx-auto space-y-14 md:space-y-[72px]">
             {countyData.map((county) => (
@@ -93,20 +106,15 @@ const Counties = () => {
                     {county.county}
                   </h2>
                   <Link to={county.href}>
-                    <Button
-                      variant="outline"
-                      className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-medium rounded-lg w-full sm:w-auto"
-                    >
+                    <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-medium rounded-lg w-full sm:w-auto">
                       Explore {county.county}
                     </Button>
                   </Link>
                 </div>
-                <div className="bg-card border border-border rounded-[18px] px-7 py-8 md:px-8 md:py-9">
+                <div className="bg-secondary border border-border rounded-[18px] px-7 py-8 md:px-8 md:py-9">
                   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-6 gap-y-3">
                     {county.cities.map((city) => (
-                      <p key={city} className="text-muted-foreground leading-relaxed">
-                        {city}
-                      </p>
+                      <p key={city} className="text-muted-foreground leading-relaxed">{city}</p>
                     ))}
                   </div>
                 </div>
@@ -116,27 +124,29 @@ const Counties = () => {
         </div>
       </section>
 
-      {/* Related Resources */}
-      <section className="pt-10 pb-10 md:pt-14 md:pb-14 bg-background">
+      <RelatedServices currentPath="/counties" />
+
+      {/* CTA */}
+      <section className="py-16 lg:py-24 bg-primary">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-[1140px] mx-auto">
-            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-sm">Related Resources</p>
-            <div className="flex flex-wrap gap-3">
-              <Link to="/cities-we-serve" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Cities We Serve</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/for-attorneys" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Attorneys & Fiduciaries</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/for-cpas" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For CPAs</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/for-financial-planners" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Financial Planners</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/how-the-process-works" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">How the Process Works</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/why-valuation-matters" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Why Valuation Matters</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/faq" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">FAQ</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/contact" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Contact</Link>
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="font-serif text-2xl md:text-3xl text-primary-foreground font-semibold mb-4">
+              Discuss a Local Property Transition
+            </h2>
+            <p className="text-primary-foreground/80 leading-relaxed mb-8">
+              David Stein provides experienced guidance for probate, inherited, and trust property sales across all four counties.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <Link to="/contact">
+                <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold">
+                  Schedule a Consultation
+                </Button>
+              </Link>
+              <Link to="/contact">
+                <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+                  Contact David
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

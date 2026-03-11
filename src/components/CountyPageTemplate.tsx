@@ -2,6 +2,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
+import TrustStrip from "@/components/TrustStrip";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import RelatedServices from "@/components/RelatedServices";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Phone, MessageSquare } from "lucide-react";
@@ -25,18 +28,10 @@ interface CountyPageProps {
   ctaHeadline: string;
   ctaText: string;
   ctaSecondaryLabel: string;
+  /** Used for breadcrumb and related links exclusion */
+  countyName?: string;
+  countyPath?: string;
 }
-
-const relatedLinks = [
-  { href: "/how-the-process-works", label: "How the Process Works" },
-  { href: "/why-valuation-matters", label: "Why Valuation Matters" },
-  { href: "/for-attorneys", label: "For Attorneys & Fiduciaries" },
-  { href: "/for-cpas", label: "For CPAs" },
-  { href: "/for-financial-planners", label: "For Financial Planners" },
-  { href: "/faq", label: "Frequently Asked Questions" },
-  { href: "/cities-we-serve", label: "Cities We Serve" },
-  { href: "/contact", label: "Contact David Stein" },
-];
 
 const CountyPageTemplate = ({
   seoTitle,
@@ -57,33 +52,35 @@ const CountyPageTemplate = ({
   ctaHeadline,
   ctaText,
   ctaSecondaryLabel,
+  countyName,
+  countyPath,
 }: CountyPageProps) => {
+  const breadcrumbItems = [
+    { name: "Counties", url: "/counties" },
+    ...(countyName && countyPath ? [{ name: countyName, url: countyPath }] : []),
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <SEOHead title={seoTitle} description={seoDescription} />
+      <BreadcrumbSchema items={breadcrumbItems} />
       <Header />
 
       {/* Hero */}
       <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl">
-            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
-              {eyebrow}
-            </p>
+            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">{eyebrow}</p>
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-[22px]">
               {headline}
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-5">
-              {leadParagraph}
-            </p>
-            <p className="text-lg text-primary-foreground/70 leading-relaxed mb-[30px]">
-              {supportingParagraph}
-            </p>
+            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-5">{leadParagraph}</p>
+            <p className="text-lg text-primary-foreground/70 leading-relaxed mb-[30px]">{supportingParagraph}</p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Link to="/contact">
                 <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold px-7 py-4 h-auto rounded-lg w-full sm:w-auto">
                   <Phone className="w-4 h-4 mr-2" />
-                  Request a Confidential Consultation
+                  Schedule a Consultation
                 </Button>
               </Link>
               <Link to="/contact">
@@ -97,39 +94,29 @@ const CountyPageTemplate = ({
         </div>
       </section>
 
-      {/* Section 2: Why Local Knowledge Matters */}
-      <section className="pt-12 pb-12 md:pt-16 md:pb-16 lg:pt-[84px] lg:pb-[84px] bg-secondary">
+      <TrustStrip />
+
+      {/* Section 2 */}
+      <section className="pt-12 pb-12 md:pt-16 md:pb-16 lg:pt-[84px] lg:pb-[84px] bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-[1140px] mx-auto">
-            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
-              Why Local Knowledge Matters
-            </p>
-            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-[22px]">
-              {section2Headline}
-            </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl">
-              {section2Text}
-            </p>
+            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">Why Local Knowledge Matters</p>
+            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-[22px]">{section2Headline}</h2>
+            <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl">{section2Text}</p>
           </div>
         </div>
       </section>
 
-      {/* Section 3: How David Helps */}
-      <section className="pt-12 pb-12 md:pt-16 md:pb-16 lg:pt-[84px] lg:pb-[84px] bg-background">
+      {/* Section 3 */}
+      <section className="pt-12 pb-12 md:pt-16 md:pb-16 lg:pt-[84px] lg:pb-[84px] bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-[1140px] mx-auto">
-            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
-              How David Helps
-            </p>
-            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-10">
-              {section3Headline}
-            </h2>
+            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">How David Helps</p>
+            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-10">{section3Headline}</h2>
             <div className="grid md:grid-cols-2 gap-5 lg:gap-6">
               {helpBlocks.map((block, index) => (
-                <div key={index} className="bg-secondary border border-border rounded-[18px] px-7 py-8 md:px-8 md:py-9">
-                  <h3 className="font-serif text-xl md:text-[22px] text-foreground font-semibold mb-3">
-                    {block.heading}
-                  </h3>
+                <div key={index} className="bg-card border border-border rounded-[18px] px-7 py-8 md:px-8 md:py-9">
+                  <h3 className="font-serif text-xl md:text-[22px] text-foreground font-semibold mb-3">{block.heading}</h3>
                   <p className="text-muted-foreground leading-[1.75]">{block.text}</p>
                 </div>
               ))}
@@ -138,16 +125,12 @@ const CountyPageTemplate = ({
         </div>
       </section>
 
-      {/* Section 4: Common Situations */}
-      <section className="pt-12 pb-12 md:pt-16 md:pb-16 lg:pt-[84px] lg:pb-[84px] bg-secondary">
+      {/* Section 4 */}
+      <section className="pt-12 pb-12 md:pt-16 md:pb-16 lg:pt-[84px] lg:pb-[84px] bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-[1140px] mx-auto">
-            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
-              Representative Situations
-            </p>
-            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-10">
-              {section4Headline}
-            </h2>
+            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">Representative Situations</p>
+            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-10">{section4Headline}</h2>
             <div className="grid md:grid-cols-2 gap-x-8 gap-y-4">
               {situations.map((situation, index) => (
                 <div key={index} className="flex items-start gap-3">
@@ -160,22 +143,16 @@ const CountyPageTemplate = ({
         </div>
       </section>
 
-      {/* Section 5: Why Choose David */}
-      <section className="pt-12 pb-12 md:pt-16 md:pb-16 lg:pt-[84px] lg:pb-[84px] bg-background">
+      {/* Section 5 */}
+      <section className="pt-12 pb-12 md:pt-16 md:pb-16 lg:pt-[84px] lg:pb-[84px] bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-[1140px] mx-auto">
-            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
-              Why David Stein
-            </p>
-            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-10">
-              {section5Headline}
-            </h2>
+            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">Why David Stein</p>
+            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-10">{section5Headline}</h2>
             <div className="grid lg:grid-cols-3 gap-5 lg:gap-6">
               {features.map((item, index) => (
-                <div key={index} className="bg-secondary border border-border rounded-[18px] px-7 py-8 md:px-8 md:py-9">
-                  <h3 className="font-serif text-xl md:text-[22px] text-foreground font-semibold mb-3">
-                    {item.heading}
-                  </h3>
+                <div key={index} className="bg-card border border-border rounded-[18px] px-7 py-8 md:px-8 md:py-9">
+                  <h3 className="font-serif text-xl md:text-[22px] text-foreground font-semibold mb-3">{item.heading}</h3>
                   <p className="text-muted-foreground leading-[1.75]">{item.text}</p>
                 </div>
               ))}
@@ -184,31 +161,8 @@ const CountyPageTemplate = ({
         </div>
       </section>
 
-      {/* Related Resources */}
-      <section className="pt-10 pb-10 md:pt-14 md:pb-14 bg-secondary">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-[1140px] mx-auto">
-            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-sm">
-              Related Resources
-            </p>
-            <div className="flex flex-wrap gap-3">
-              {relatedLinks.map((link, i) => (
-                <span key={link.href} className="flex items-center gap-3">
-                  {i > 0 && <span className="text-muted-foreground/40">·</span>}
-                  <Link
-                    to={link.href}
-                    className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm"
-                  >
-                    {link.label}
-                  </Link>
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      <RelatedServices currentPath={countyPath || "/counties"} />
 
-      {/* Disclaimer */}
       <DisclaimerSection />
 
       {/* Final CTA */}
@@ -216,20 +170,13 @@ const CountyPageTemplate = ({
         <div className="container px-6 lg:px-8">
           <div className="max-w-[1140px] mx-auto">
             <div className="bg-secondary border border-border rounded-[18px] px-7 py-9 md:px-10 md:py-11 text-center">
-              <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
-                Confidential Consultation
-              </p>
-              <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-4">
-                {ctaHeadline}
-              </h2>
-              <p className="text-muted-foreground leading-relaxed text-base md:text-lg max-w-3xl mx-auto mb-8">
-                {ctaText}
-              </p>
+              <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-4">{ctaHeadline}</h2>
+              <p className="text-muted-foreground leading-relaxed text-base md:text-lg max-w-3xl mx-auto mb-8">{ctaText}</p>
               <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
                 <Link to="/contact">
                   <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-7 py-4 h-auto rounded-lg w-full sm:w-auto">
                     <Phone className="w-4 h-4 mr-2" />
-                    Request a Confidential Consultation
+                    Schedule a Consultation
                   </Button>
                 </Link>
                 <Link to="/contact">
