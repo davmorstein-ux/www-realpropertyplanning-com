@@ -109,6 +109,7 @@ const ForFinancialPlanners = () => {
         description="David Stein provides probate real estate, inherited property, trust-owned real estate, and estate sale guidance for financial planners and their clients in King, Snohomish, Pierce, and Kitsap Counties."
         jsonLd={jsonLd}
       />
+      <BreadcrumbSchema items={[{ name: "For Financial Planners", url: "/for-financial-planners" }]} />
       <Header />
 
       {/* Hero */}
