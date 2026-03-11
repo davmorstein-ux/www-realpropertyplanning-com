@@ -238,7 +238,7 @@ const Index = () => {
               </h1>
 
               <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-[760px] mx-auto mb-4 text-center">
-                Real Property Planning helps attorneys, executors, trustees, fiduciaries, personal representatives, and families navigate probate real estate, inherited property, estate sales, senior transitions, and valuation-related decisions throughout Western Washington.
+                Real Property Planning is a trusted resource for probate real estate, inherited property, estate sales, senior transitions, and valuation-related housing decisions throughout Western Washington.
               </p>
 
               <p className="text-base text-muted-foreground/80 leading-relaxed max-w-[680px] mx-auto mb-8 text-center">

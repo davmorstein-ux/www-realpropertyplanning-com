@@ -72,7 +72,7 @@ const ForAttorneys = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Real Estate Resource for Attorneys & Fiduciaries | Real Property Planning"
-        description="Real Property Planning supports attorneys and fiduciaries with probate real estate, inherited property sales, valuation insight, sale coordination, and practical guidance throughout Western Washington."
+        description="Real Property Planning supports attorneys and fiduciaries with probate real estate, inherited property sales, trust-owned homes, valuation insight, and coordinated property guidance throughout Western Washington."
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema items={[{ name: "For Attorneys & Fiduciaries", url: "/for-attorneys" }]} />
@@ -90,7 +90,7 @@ const ForAttorneys = () => {
                 A Real Estate Resource for Attorneys, Fiduciaries, and High-Trust Referrals
               </h1>
               <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
-                Real Property Planning supports attorneys and fiduciaries who need practical help with the real estate side of probate, trust administration, inherited property, senior-related housing transitions, and other complex property matters.
+                Real Property Planning supports attorneys, fiduciaries, and referral partners who need practical help with probate real estate, inherited property, trust-owned homes, and other sensitive property transitions.
               </p>
               <p className="text-lg text-primary-foreground/70 leading-relaxed mb-8">
                 These situations often require a real estate resource who communicates clearly, understands sensitive circumstances, and helps move the property side forward in a steady and professional way. David Stein brings more than 20 years of experience as a Washington real estate broker and state certified residential appraiser.

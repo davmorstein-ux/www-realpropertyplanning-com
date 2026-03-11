@@ -36,8 +36,8 @@ const Counties = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Service Areas | Real Property Planning"
-        description="Real Property Planning provides probate real estate, inherited property, estate sale, valuation guidance, and senior transition support across King, Snohomish, Pierce, and Kitsap Counties."
+        title="Service Areas for Probate Real Estate | Real Property Planning"
+        description="Real Property Planning provides probate real estate, inherited property, estate sale, valuation, and senior transition support across King, Snohomish, Pierce, and Kitsap Counties."
       />
       <BreadcrumbSchema items={[{ name: "Counties", url: "/counties" }]} />
       <Header />
@@ -53,7 +53,7 @@ const Counties = () => {
               Service Areas Throughout Western Washington
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-5">
-              Real Property Planning provides real estate guidance for probate property, inherited homes, estate sales, trust-owned real estate, valuation-related decisions, and senior transitions throughout key Western Washington markets.
+              Real Property Planning provides probate real estate and inherited property guidance throughout key Western Washington counties, including King, Snohomish, Pierce, and Kitsap.
             </p>
             <p className="text-lg text-primary-foreground/70 leading-relaxed">
               Clients and referral partners benefit from experienced support backed by David Stein, a Washington real estate broker and state certified residential appraiser with more than 20 years of experience.
