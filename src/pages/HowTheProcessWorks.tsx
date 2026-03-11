@@ -78,8 +78,11 @@ const HowTheProcessWorks = () => {
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-[22px]">
               How the Process Works
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-[30px]">
-              When a property is connected to probate, inheritance, a trust, or a major life transition, most people want to know what happens next. David Stein uses a clear, steady process designed to reduce uncertainty and help clients move from confusion to action.
+            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-4">
+              Real Property Planning uses a clear, steady process to help clients and referral partners move from uncertainty to action when a property is connected to probate, inheritance, a trust, or a major life transition.
+            </p>
+            <p className="text-lg text-primary-foreground/70 leading-relaxed mb-[30px]">
+              David Stein helps simplify what can otherwise feel overwhelming by combining practical guidance, strong communication, market knowledge, and thoughtful coordination.
             </p>
             <Link to="/contact">
               <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-medium px-7 py-4 h-auto rounded-lg">
