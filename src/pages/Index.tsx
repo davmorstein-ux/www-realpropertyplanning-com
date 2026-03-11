@@ -457,11 +457,11 @@ const Index = () => {
               <p className="text-gold font-bold tracking-widest uppercase mb-3 text-base">
                 Clients & Partners
               </p>
-              <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-6">
-                Who David Stein Works With
+               <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-6">
+                Who Real Property Planning Works With
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                David Stein serves clients and referral partners who need experienced real estate guidance during complex property transitions across Western Washington.
+                Real Property Planning serves clients and referral partners who need experienced real estate guidance during complex property transitions across Western Washington.
               </p>
               <div className="grid sm:grid-cols-2 gap-3">
                 {audiences.map((audience, index) => (
