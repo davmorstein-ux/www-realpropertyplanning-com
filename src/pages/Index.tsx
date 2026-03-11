@@ -243,11 +243,11 @@ const Index = () => {
               </h1>
 
               <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-[760px] mx-auto mb-4 text-center">
-                David Stein is a licensed real estate broker and Washington state certified real estate appraiser who works with attorneys, executors, trustees, CPAs, financial planners, and families to navigate the sale of probate property, inherited homes, trust-owned real estate, and estate properties across King, Snohomish, Pierce, and Kitsap Counties.
+                When a property is part of an estate, trust, probate matter, or major family transition, the real estate side often requires more than a standard home sale approach. David Stein helps attorneys, executors, trustees, fiduciaries, personal representatives, and families navigate inherited property, estate sales, senior transitions, valuation-related decisions, and complex sale preparation throughout Western Washington.
               </p>
 
               <p className="text-base text-muted-foreground/80 leading-relaxed max-w-[680px] mx-auto mb-8 text-center">
-                Unlike a typical listing agent, David combines brokerage expertise with certified appraisal credentials and over 20 years of experience to provide valuation-informed guidance during sensitive property transitions.
+                As a Washington real estate broker and state certified residential appraiser with more than 20 years of experience, David brings a practical understanding of pricing, property condition, communication, coordination, and next-step planning in situations that often involve legal, emotional, and logistical complexity.
               </p>
 
               <div className="flex flex-wrap justify-center gap-3.5 mb-8">
