@@ -82,10 +82,10 @@ const ProbateEstateSales = () => {
               Experienced Guidance for Probate and Estate Property Sales
             </h1>
             <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
-              Selling a property tied to probate, inheritance, or estate administration often involves more complexity than a typical listing. The home may need cleanout, deferred maintenance review, pricing analysis, family coordination, or communication with attorneys, fiduciaries, or personal representatives before it is ready for the market.
+              Real Property Planning helps clients and referral partners navigate probate real estate, inherited homes, estate property sales, and trust-owned property with a practical, steady approach.
             </p>
             <p className="text-lg text-primary-foreground/70 leading-relaxed mb-8">
-              David Stein helps clients and referral partners navigate probate real estate and estate property sales with a practical, steady approach focused on preparation, value, market strategy, and thoughtful execution.
+              These transactions often involve more complexity than a typical home sale. The property may need cleanout, preparation, deferred maintenance review, pricing analysis, or coordination among family members, fiduciaries, and legal professionals. David Stein provides experienced guidance shaped by both brokerage and valuation experience.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/contact">
