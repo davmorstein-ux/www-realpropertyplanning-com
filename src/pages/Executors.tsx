@@ -44,8 +44,8 @@ const faqs = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  name: "David Stein — Guidance for Executors & Trustees",
-  description: "Guidance for executors, trustees, personal representatives, and families handling inherited property, estate home sales, and real estate decisions in Western Washington.",
+  name: "Real Property Planning — Guidance for Executors & Trustees",
+  description: "Real Property Planning helps executors, trustees, personal representatives, and families handle inherited property, estate home sales, and real estate decisions throughout Western Washington.",
   url: "https://realpropertyplanning.com/executors",
   areaServed: [
     { "@type": "AdministrativeArea", name: "King County, WA" },

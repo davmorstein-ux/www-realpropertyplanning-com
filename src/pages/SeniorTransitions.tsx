@@ -48,8 +48,8 @@ const faqs = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  name: "David Stein — Senior Real Estate Transitions",
-  description: "Thoughtful real estate support for senior transitions, downsizing, relocation, assisted living moves, and family housing decisions throughout Western Washington.",
+  name: "Real Property Planning — Senior Real Estate Transitions",
+  description: "Real Property Planning provides thoughtful real estate support for senior transitions, downsizing, relocation, assisted living moves, and family housing decisions throughout Western Washington.",
   url: "https://realpropertyplanning.com/senior-transitions",
   areaServed: [
     { "@type": "AdministrativeArea", name: "King County, WA" },

@@ -213,7 +213,7 @@ const ForFinancialPlanners = () => {
               Common Real Estate Situations That Affect Financial Planning
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mb-10">
-              Real estate is often one of the most significant assets a client owns or inherits. David Stein helps clients and their advisors navigate situations where property decisions meaningfully affect broader planning.
+              Real estate is often one of the most significant assets a client owns or inherits. Real Property Planning helps clients and their advisors navigate situations where property decisions meaningfully affect broader planning.
             </p>
             <div className="grid md:grid-cols-2 gap-x-8 gap-y-4 mb-6">
               {commonSituations.map((situation, index) => (

@@ -63,10 +63,10 @@ const WhyValuationMatters = () => {
               Why Valuation Matters in Probate and Inherited Property Decisions
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-4">
-              Valuation is one of the most important parts of an inherited property, probate real estate, or estate sale decision. Without a well-informed understanding of value, families and fiduciaries can struggle with pricing, timing, repairs, buyout discussions, sale strategy, and overall decision-making.
+              Real Property Planning helps clients and referral partners make better decisions by bringing clarity to value, pricing, condition, and market positioning.
             </p>
             <p className="text-lg text-primary-foreground/70 leading-relaxed mb-[30px]">
-              As both a Washington real estate broker and state certified residential appraiser, David Stein brings a perspective that helps clients and referral partners think more clearly about market value, property condition, positioning, and sale strategy.
+              In probate, inherited property, and estate-related situations, a well-informed understanding of value can shape sale strategy, family communication, repair decisions, buyout discussions, and overall planning. David Stein offers the perspective of both a Washington real estate broker and state certified residential appraiser.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Link to="/contact">

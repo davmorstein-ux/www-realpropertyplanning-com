@@ -49,9 +49,9 @@ const faqs = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  name: "David Stein — Real Estate Resource for Attorneys and Fiduciaries",
+  name: "Real Property Planning — Real Estate Resource for Attorneys and Fiduciaries",
   description:
-    "David Stein supports attorneys and fiduciaries with probate real estate, inherited property sales, valuation insight, sale coordination, and practical guidance throughout Western Washington.",
+    "Real Property Planning supports attorneys and fiduciaries with probate real estate, inherited property sales, valuation insight, sale coordination, and practical guidance throughout Western Washington.",
   url: "https://realpropertyplanning.com/for-attorneys",
   provider: {
     "@type": "RealEstateAgent",

@@ -36,7 +36,7 @@ const CountyPageTemplate = ({
     { name: countyName, url: countyPath },
   ];
 
-  const defaultLocalParagraph = `Every county has its own market patterns, housing stock, buyer demand, and practical sale considerations. David combines broad experience with local awareness to help clients make informed property decisions in ${countyName}.`;
+  const defaultLocalParagraph = `Every county has its own market patterns, housing stock, buyer demand, and practical sale considerations. Real Property Planning combines broad experience with local awareness to help clients make informed property decisions in ${countyName}.`;
 
   return (
     <div className="min-h-screen bg-background">

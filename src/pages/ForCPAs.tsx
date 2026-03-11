@@ -210,10 +210,10 @@ const ForCPAs = () => {
               Representative Situations
             </p>
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-[22px]">
-              Common Situations Where David Stein Can Help
+              Common Situations Where Real Property Planning Can Help
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mb-10">
-              Real estate becomes relevant in many financial and estate-related situations. David Stein helps CPA clients navigate a wide range of property matters that affect timing, decision-making, and value.
+              Real estate becomes relevant in many financial and estate-related situations. Real Property Planning helps CPA clients navigate a wide range of property matters that affect timing, decision-making, and value.
             </p>
             <div className="grid md:grid-cols-2 gap-x-8 gap-y-4 mb-6">
               {commonSituations.map((situation, index) => (

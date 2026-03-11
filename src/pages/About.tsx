@@ -53,10 +53,10 @@ const About = () => {
             <div className="lg:col-span-2">
               <div className="space-y-6 text-muted-foreground leading-relaxed text-lg">
                 <p>
-                  David Stein is a Washington real estate broker and state certified residential appraiser with more than 20 years of experience helping people make informed property decisions during important life transitions.
+                  David Stein is the professional behind Real Property Planning, a service focused on probate real estate, inherited homes, estate sales, trust-related property matters, valuation-related decisions, and senior housing transitions throughout Western Washington.
                 </p>
                 <p>
-                  His work is focused on probate real estate, inherited homes, estate sales, trust-related property matters, valuation-related decisions, and senior housing transitions. These situations often require more than a standard sale process. They require clarity, patience, communication, and practical judgment.
+                  As a Washington real estate broker and state certified residential appraiser with more than 20 years of experience, David provides practical guidance in situations that often require more than a standard sale process.
                 </p>
               </div>
             </div>

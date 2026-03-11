@@ -39,7 +39,7 @@ const steps = [
   {
     number: "06",
     title: "Contract to Closing",
-    text: "David helps guide the transaction through negotiations, contingency management, communication, and closing coordination.",
+    text: "The team helps guide the transaction through negotiations, contingency management, communication, and closing coordination.",
   },
 ];
 

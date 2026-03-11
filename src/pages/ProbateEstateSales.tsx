@@ -49,8 +49,8 @@ const faqs = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  name: "David Stein — Probate & Estate Property Sales",
-  description: "Experienced guidance for probate real estate, estate property sales, inherited homes, and trust-owned homes throughout King, Snohomish, Pierce, and Kitsap Counties.",
+  name: "Real Property Planning — Probate & Estate Property Sales",
+  description: "Real Property Planning provides experienced guidance for probate real estate, estate property sales, inherited homes, and trust-owned homes throughout Western Washington.",
   url: "https://realpropertyplanning.com/probate-estate-sales",
   areaServed: [
     { "@type": "AdministrativeArea", name: "King County, WA" },

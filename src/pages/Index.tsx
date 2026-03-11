@@ -136,7 +136,7 @@ const homepageFaqs = [
   },
   {
     question: "What if the home needs repairs or cleanout before sale?",
-    answer: "Many estate and inherited properties need cleanout, repairs, or preparation before going to market. David helps coordinate vendors, assess what improvements are worth making, and develop a practical plan to get the property sale-ready.",
+    answer: "Many estate and inherited properties need cleanout, repairs, or preparation before going to market. Real Property Planning helps coordinate vendors, assess what improvements are worth making, and develop a practical plan to get the property sale-ready.",
     link: "/how-the-process-works"
   }
 ];
