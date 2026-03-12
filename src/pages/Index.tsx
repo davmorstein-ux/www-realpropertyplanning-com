@@ -158,37 +158,34 @@ const audiences = [
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "RealEstateAgent",
+  "@type": "ProfessionalService",
   "name": "Real Property Planning",
-  "description": "Real Property Planning provides probate real estate, inherited property, trust-owned real estate, and estate sale guidance in King, Snohomish, Pierce, and Kitsap Counties, Washington.",
   "url": "https://realpropertyplanning.com",
-  "telephone": "+12069003015",
-  "email": "david@realpropertyplanning.com",
+  "logo": "https://realpropertyplanning.com/logo.png",
+  "description": "Real Property Planning helps attorneys, executors, trustees, fiduciaries, and families navigate probate real estate, inherited homes, estate property sales, and senior transitions throughout Western Washington.",
+  "areaServed": [
+    "King County WA",
+    "Snohomish County WA",
+    "Pierce County WA",
+    "Kitsap County WA"
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "David Stein",
+    "jobTitle": "Real Estate Broker and State Certified Residential Appraiser"
+  },
+  "serviceType": [
+    "Probate real estate services",
+    "Inherited property sales",
+    "Trust-owned home sales",
+    "Estate property guidance",
+    "Senior housing transitions"
+  ],
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "PO Box 1462",
-    "addressLocality": "Woodinville",
     "addressRegion": "WA",
-    "postalCode": "98072",
     "addressCountry": "US"
-  },
-  "areaServed": [
-    { "@type": "AdministrativeArea", "name": "King County, Washington" },
-    { "@type": "AdministrativeArea", "name": "Snohomish County, Washington" },
-    { "@type": "AdministrativeArea", "name": "Pierce County, Washington" },
-    { "@type": "AdministrativeArea", "name": "Kitsap County, Washington" }
-  ],
-  "knowsAbout": [
-    "Probate real estate",
-    "Inherited property sales",
-    "Trust-owned real estate",
-    "Estate property sales",
-    "Senior real estate transitions",
-    "Real estate appraisal"
-  ],
-  "sameAs": [
-    "https://www.zillow.com/profile/dstein2112"
-  ]
+  }
 };
 
 const faqJsonLd = {
