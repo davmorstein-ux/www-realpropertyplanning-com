@@ -48,7 +48,7 @@ const About = () => {
               About David Stein
             </h1>
             <p className="text-lg text-primary-foreground/70 leading-relaxed mt-4">
-              The broker, certified appraiser, and professional behind Real Property Planning.
+              Over 20 years as a licensed broker and state certified appraiser — focused on probate, inherited, and estate-related property.
             </p>
           </div>
         </div>
