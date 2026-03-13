@@ -8,15 +8,15 @@ const PierceCounty = () => (
       "Tacoma", "University Place", "Gig Harbor", "Puyallup", "Bonney Lake",
       "Lakewood", "Sumner", "Fircrest", "Milton",
     ]}
-    localInsight="Pierce County offers a distinct market with wide variation in property types and values — from Gig Harbor waterfront homes to established Tacoma neighborhoods. David brings local awareness and experienced judgment to estate property decisions throughout the county."
-    localParagraph="Pierce County's real estate market includes a broad range of property types, values, and buyer expectations. Estate properties in Tacoma may involve older homes with character and deferred maintenance, while Gig Harbor properties often carry higher values and specific buyer expectations. University Place, Puyallup, and Lakewood each have their own market dynamics. David helps families, executors, and attorneys navigate these differences with practical, market-informed guidance."
+    localInsight="Pierce County's real estate market stretches from Tacoma's historic neighborhoods to Gig Harbor's waterfront properties — with wide variation in home values, buyer expectations, and property condition. David Stein works with executors, families, and attorneys throughout Pierce County, bringing practical experience with older homes, estate cleanouts, and realistic pricing in a market that rewards informed preparation."
+    localParagraph="Estate properties in Pierce County frequently involve older homes with character details and deferred maintenance — the kind of properties that automated valuation tools consistently misprice. Tacoma's North End and Stadium District homes attract a different buyer than properties in Puyallup or Lakewood, and Gig Harbor waterfront listings demand specialized marketing. David's appraisal background helps him price each property based on its actual condition and specific market context, not generic comps from across the county."
     typicalSituations={[
-      "Probate properties in Tacoma's historic and established neighborhoods",
-      "Inherited homes in University Place and Fircrest requiring condition assessment",
-      "Waterfront and view properties in Gig Harbor with unique valuation considerations",
-      "Estate properties in Puyallup and Bonney Lake involving family coordination",
-      "Senior transitions in Lakewood and surrounding communities",
-      "Trust-owned homes where the trustee needs sale planning and market strategy",
+      "Older Tacoma homes with character features but significant deferred maintenance",
+      "Inherited properties in University Place or Fircrest needing condition assessment before listing",
+      "Gig Harbor waterfront or view homes with unique valuation and marketing needs",
+      "Family coordination for estate properties in Puyallup or Bonney Lake",
+      "Trust-owned homes in Lakewood where the trustee needs sale planning guidance",
+      "Senior transitions from longtime Pierce County homes to smaller residences",
     ]}
   />
 );

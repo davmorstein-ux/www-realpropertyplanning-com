@@ -8,15 +8,15 @@ const SnohomishCounty = () => (
       "Everett", "Edmonds", "Lynnwood", "Mukilteo", "Mill Creek", "Bothell",
       "Snohomish", "Lake Stevens", "Marysville", "Monroe", "Arlington",
     ]}
-    localInsight="Snohomish County's mix of waterfront communities, suburban neighborhoods, and rural acreage means every estate property requires a market-specific approach. David's local experience spans the full range — from Edmonds waterfront homes to Lake Stevens family properties."
-    localParagraph="Snohomish County continues to grow, with strong demand in communities like Edmonds, Mill Creek, and Mukilteo, while areas like Lake Stevens, Marysville, and Monroe offer different market dynamics. Estate properties here often include longtime family homes with decades of personal belongings, deferred maintenance, and outdated systems. David understands the nuances of this market and helps families and professionals make informed decisions about preparation, timing, and pricing strategy."
+    localInsight="Snohomish County spans waterfront communities like Edmonds and Mukilteo, established suburbs like Mill Creek and Bothell, and growing towns like Lake Stevens and Monroe — each with its own buyer pool and pricing dynamics. David Stein has worked with estate properties across this full range, helping executors and families navigate the local market with realistic expectations and a clear plan."
+    localParagraph="Estate and inherited homes in Snohomish County often include longtime family properties with decades of accumulated belongings, outdated systems, and deferred repairs. Some sit in highly desirable neighborhoods where the lot value alone drives strong buyer interest; others require careful preparation and strategic pricing to attract the right buyers. David provides hands-on coordination — managing cleanout vendors, assessing repair-versus-sell-as-is decisions, and communicating consistently with out-of-state executors who cannot be on-site."
     typicalSituations={[
-      "Inherited homes in Edmonds and Mukilteo with waterfront or view premiums",
-      "Probate properties in Everett and Lynnwood requiring cleanout and preparation",
-      "Rural or acreage properties in Snohomish, Monroe, or Arlington",
-      "Longtime family homes in Mill Creek and Bothell needing market-readiness planning",
-      "Estate sales coordinated with out-of-state executors or multiple heirs",
-      "Senior downsizing from suburban family homes to senior living communities",
+      "Waterfront or view properties in Edmonds and Mukilteo requiring specialized marketing",
+      "Probate homes in Everett or Lynnwood that need cleanout, repairs, and preparation",
+      "Rural acreage properties in Snohomish, Monroe, or Arlington with unique appraisal considerations",
+      "Estate sales in Mill Creek or Bothell coordinated with out-of-state family members",
+      "Inherited homes where siblings disagree about whether to sell or hold",
+      "Senior transitions from suburban family homes to smaller residences or care communities",
     ]}
   />
 );

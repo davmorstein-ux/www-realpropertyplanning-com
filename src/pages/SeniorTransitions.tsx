@@ -70,7 +70,7 @@ const SeniorTransitions = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Senior Home Sales & Downsizing Support | Real Property Planning"
-        description="Helping seniors and families sell a longtime home with patience, respect, and experienced coordination. David Stein manages preparation, pricing, and the sale so the transition feels manageable."
+        description="When a parent or loved one needs to sell the family home, the process should feel steady — not rushed. David Stein works at the family's pace, handling preparation, pricing, and the sale with patience and care."
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema items={[{ name: "Senior Transitions", url: "/senior-transitions" }]} />
@@ -87,10 +87,10 @@ const SeniorTransitions = () => {
               Selling a Longtime Home Is About More Than Real Estate
             </h1>
             <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
-              A family home of 30 or 40 years holds more than market value — it holds memories, routines, and a lifetime of belonging. When it is time to sell, the process deserves someone who understands that. David Stein provides experienced, patient guidance that puts the family's needs first.
+              After 30 or 40 years in the same home, selling is never just a transaction. It means letting go of the place where children grew up, holidays happened, and a lifetime of memories accumulated. When that moment comes — whether it is planned or sudden — the process deserves someone who treats it with the weight it carries.
             </p>
             <p className="text-lg text-primary-foreground/70 leading-relaxed mb-8">
-              Whether a senior is downsizing, moving to assisted living, or a family is coordinating a transition on a parent's behalf, David works at their pace — managing the preparation, pricing, and sale so the experience feels organized rather than overwhelming.
+              David Stein works at the family's pace, not a sales quota. He manages the preparation, coordinates with care professionals and family members, prices the home based on real market data, and handles the sale with the kind of steady communication that keeps everyone informed and comfortable.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/contact">

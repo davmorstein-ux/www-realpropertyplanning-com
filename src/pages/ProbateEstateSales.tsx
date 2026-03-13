@@ -87,7 +87,7 @@ const ProbateEstateSales = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Probate Property Sales & Estate Real Estate | Real Property Planning"
-        description="Probate property sales involve legal timelines, fiduciary duties, and properties in non-standard condition. David Stein manages assessment, preparation, pricing, and sale execution for executors and families in Washington."
+        description="Probate sales involve court timelines, fiduciary duties, deferred maintenance, and family coordination. David Stein manages the entire real estate process so executors and attorneys can focus on what they do best."
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema items={[{ name: "Probate & Estate Sales", url: "/probate-estate-sales" }]} />
@@ -104,10 +104,10 @@ const ProbateEstateSales = () => {
               Selling Probate Property Requires a Different Kind of Expertise
             </h1>
             <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
-              A probate property sale is fundamentally different from listing a family home. The executor may need court authority before acting. The home may have years of deferred maintenance. Multiple heirs may disagree about timing or price. And the property itself often needs significant preparation before a single buyer walks through the door.
+              When a home is part of a probate case, nothing about the sale follows the normal playbook. Court authority may need to be granted before the property can be listed. The house itself may have been vacant for months, with deferred maintenance that standard market comparisons cannot account for. And the executor, attorney, and family members all need to stay informed without stepping on each other's timelines.
             </p>
             <p className="text-lg text-primary-foreground/70 leading-relaxed mb-8">
-              David Stein specializes in exactly these situations — bringing the perspective of both a licensed broker and a certified appraiser to help executors, attorneys, and families navigate the process with clarity and confidence.
+              David Stein brings a rare combination of brokerage skill and certified appraisal knowledge to these situations — giving executors defensible pricing, attorneys a reliable point of coordination, and families the confidence that the property is being handled with care.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/contact">
