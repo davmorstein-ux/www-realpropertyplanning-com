@@ -179,6 +179,18 @@ const SeniorTransitions = () => {
         </div>
       </section>
 
+      {/* Testimonial */}
+      <section className="py-14 lg:py-16 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-foreground text-lg italic leading-relaxed mb-4">
+              "We appreciated David's patience, thoughtful communication, and realistic guidance throughout the sale of our family property."
+            </p>
+            <p className="text-muted-foreground text-sm font-medium">— Family Review · Inherited home and sale preparation</p>
+          </div>
+        </div>
+      </section>
+
       <PageFAQ faqs={faqs} heading="Senior Transition FAQs" />
 
       <RelatedServices currentPath="/senior-transitions" />

@@ -216,6 +216,18 @@ const ProbateEstateSales = () => {
         </div>
       </section>
 
+      {/* Testimonial */}
+      <section className="py-14 lg:py-16 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-foreground text-lg italic leading-relaxed mb-4">
+              "David's dual background in brokerage and appraisal gave us confidence that the property was priced correctly. He made a complicated situation feel manageable."
+            </p>
+            <p className="text-muted-foreground text-sm font-medium">— Professional Referral · Probate property sale coordination</p>
+          </div>
+        </div>
+      </section>
+
       <PageFAQ faqs={faqs} heading="Probate & Estate Sale FAQs" />
 
       <RelatedServices currentPath="/probate-estate-sales" />
