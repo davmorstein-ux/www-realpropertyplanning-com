@@ -20,46 +20,39 @@ const services = [
   {
     icon: Scale,
     title: "Probate & Estate Sales",
-    description: "Guidance for properties involved in probate, estate administration, and inherited real estate matters.",
+    description: "Strategic guidance for properties in probate, active estate administration, and court-supervised sales.",
     link: "/probate-estate-sales"
   },
   {
     icon: Users,
-    title: "For Executors",
-    description: "Practical real estate support for executors, personal representatives, and estate administrators.",
+    title: "For Executors & Trustees",
+    description: "Step-by-step property support for executors, personal representatives, and trustees managing estate real estate.",
     link: "/executors"
   },
   {
     icon: Handshake,
     title: "For Attorneys & Fiduciaries",
-    description: "A reliable real estate resource for attorneys, trustees, fiduciaries, and referral partners.",
+    description: "A dependable referral resource for estate planning, probate, and elder law professionals.",
     link: "/for-attorneys"
   },
   {
     icon: FileText,
     title: "Why Valuation Matters",
-    description: "Broker and state certified appraiser experience to help inform important property decisions.",
+    description: "How broker and certified appraiser expertise prevents costly pricing mistakes in estate property.",
     link: "/why-valuation-matters"
   },
   {
     icon: Heart,
     title: "Senior Transitions",
-    description: "Professional help for downsizing, relocation, assisted living transitions, and family home sales.",
+    description: "Compassionate support for downsizing, assisted living moves, and family home sales during life changes.",
     link: "/senior-transitions"
   },
   {
     icon: Clock,
     title: "How the Process Works",
-    description: "A clear overview of the steps involved from initial consultation through closing.",
+    description: "A transparent, six-step process from initial consultation through closing day.",
     link: "/how-the-process-works"
   }
-];
-
-const trustIndicators = [
-  "Licensed Real Estate Broker in Washington",
-  "Washington State Certified Real Estate Appraiser",
-  "Over 20 Years of Experience",
-  "Serving King, Snohomish, Pierce & Kitsap Counties",
 ];
 
 const processSteps = [
@@ -131,7 +124,7 @@ const homepageFaqs = [
   },
   {
     question: "How do I determine the right price for estate property?",
-    answer: "Pricing estate property requires understanding condition, market dynamics, and buyer expectations. Real Property Planning's dual brokerage and certified appraisal background helps clients avoid the costly mistakes of overpricing or underpricing inherited and estate-held homes.",
+    answer: "Pricing estate property requires understanding condition, market dynamics, and buyer expectations. David Stein's dual brokerage and certified appraisal background helps clients avoid the costly mistakes of overpricing or underpricing inherited and estate-held homes.",
     link: "/why-valuation-matters"
   },
   {
@@ -141,19 +134,20 @@ const homepageFaqs = [
   }
 ];
 
-const audiences = [
-  "Estate planning attorneys",
-  "Probate attorneys",
-  "Executors",
-  "Personal representatives",
-  "Estate administrators",
-  "Trustees",
-  "Fiduciaries",
-  "CPAs",
-  "Financial planners",
-  "Adult children helping parents transition",
-  "Seniors planning a move",
-  "Families selling inherited property"
+const howIHelp = [
+  { text: "Assess property condition, value, and marketability", icon: Home },
+  { text: "Develop a sale strategy tailored to legal and family timelines", icon: Clock },
+  { text: "Coordinate cleanout, repairs, staging, and preparation", icon: Building },
+  { text: "Provide pricing guidance informed by appraisal-level insight", icon: Scale },
+  { text: "Communicate clearly with all parties throughout the process", icon: Users },
+  { text: "Manage the sale from listing through closing", icon: Shield },
+];
+
+const whoIWorkWith = [
+  { group: "Legal Professionals", members: "Estate planning attorneys, probate attorneys, elder law attorneys, fiduciaries" },
+  { group: "Estate Representatives", members: "Executors, personal representatives, trustees, estate administrators" },
+  { group: "Financial Advisors", members: "CPAs, financial planners, wealth managers" },
+  { group: "Families & Individuals", members: "Adult children, heirs, seniors planning a move, families selling inherited property" },
 ];
 
 const jsonLd = {
@@ -162,7 +156,7 @@ const jsonLd = {
   "name": "Real Property Planning",
   "url": "https://realpropertyplanning.com",
   "logo": "https://realpropertyplanning.com/logo.png",
-  "description": "Real Property Planning helps attorneys, executors, trustees, fiduciaries, and families navigate probate real estate, inherited homes, estate property sales, and senior transitions throughout Western Washington.",
+  "description": "Real Property Planning provides experienced real estate guidance for probate property, inherited homes, estate sales, trust-owned real estate, and senior transitions throughout Western Washington.",
   "areaServed": [
     "King County WA",
     "Snohomish County WA",
@@ -205,8 +199,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Probate Real Estate & Inherited Property Guidance | Real Property Planning"
-        description="Real Property Planning helps attorneys, executors, trustees, fiduciaries, and families navigate probate real estate, inherited homes, estate sales, and senior transitions throughout Western Washington."
+        title="Probate Real Estate & Inherited Property Sales | Real Property Planning"
+        description="David Stein provides experienced real estate guidance for probate property, inherited homes, estate sales, and senior transitions across King, Snohomish, Pierce & Kitsap Counties. Broker + certified appraiser."
         jsonLd={jsonLd}
       />
       <Header />
@@ -231,21 +225,21 @@ const Index = () => {
               </div>
 
               <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[54px] text-foreground font-bold leading-[1.08] mb-5 text-center">
-                A Trusted Resource for Probate, Inherited Property, and Important Home Transitions
+                Experienced Real Estate Guidance for Probate, Inherited Property & Life Transitions
               </h1>
 
               <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-[760px] mx-auto mb-4 text-center">
-                Real Property Planning is a trusted resource for probate real estate, inherited property, estate sales, senior transitions, and valuation-related housing decisions throughout Western Washington.
+                When a property is tied to probate, an inheritance, a trust, or a major life change, the decisions are rarely simple. David Stein brings clarity, structure, and over two decades of hands-on experience to every situation.
               </p>
 
               <p className="text-base text-muted-foreground/80 leading-relaxed max-w-[680px] mx-auto mb-8 text-center">
-                Founded around the experience of David Stein, a Washington real estate broker and state certified residential appraiser with more than 20 years of experience, Real Property Planning was created to provide practical guidance in property situations that often involve legal, emotional, financial, and logistical complexity.
+                As both a licensed Washington real estate broker and a state certified residential appraiser, David combines market insight with valuation expertise — a rare combination that helps clients price accurately, prepare strategically, and sell confidently.
               </p>
 
               {/* Top CTA */}
               <div className="bg-card border border-border rounded-2xl p-6 max-w-[620px] mx-auto mb-8">
                 <p className="text-foreground font-serif text-lg font-semibold mb-4 text-center">
-                  Need help with a property tied to probate, inheritance, a trust, or a major life transition?
+                  Dealing with a property tied to probate, inheritance, a trust, or a family transition?
                 </p>
                 <div className="flex flex-wrap justify-center gap-3.5">
                   <Link to="/contact">
@@ -253,6 +247,7 @@ const Index = () => {
                       size="lg" 
                       className="bg-foreground hover:bg-foreground/90 text-background font-bold px-6 rounded-xl text-base h-[52px]"
                     >
+                      <Phone className="w-5 h-5 mr-2" />
                       Schedule a Consultation
                     </Button>
                   </Link>
@@ -262,7 +257,8 @@ const Index = () => {
                       variant="outline" 
                       className="border-border bg-card text-foreground hover:bg-muted font-bold px-6 rounded-xl text-base h-[52px]"
                     >
-                      Contact David
+                      <Mail className="w-5 h-5 mr-2" />
+                      Send a Message
                     </Button>
                   </Link>
                 </div>
@@ -284,14 +280,14 @@ const Index = () => {
             <div className="mt-12 max-w-3xl mx-auto">
               <div className="bg-card border border-border rounded-3xl p-8 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
                 <p className="text-gold font-bold tracking-[0.2em] uppercase mb-2 text-xs">
-                  Why Clients and Referral Partners Reach Out
+                  Why Clients and Referral Partners Choose Real Property Planning
                 </p>
                 <div className="grid sm:grid-cols-2 gap-3">
                   {[
-                    "20+ years of real estate and valuation experience",
-                    "Support for attorneys, executors, trustees, fiduciaries, and families",
-                    "Guidance for probate property, inherited homes, estate sales, and senior transitions",
-                    "Service across King, Snohomish, Pierce, and Kitsap Counties"
+                    "Dual-credentialed: broker + state certified appraiser",
+                    "Trusted by attorneys, executors, trustees, and families",
+                    "Specialized in probate, estates, trusts, and senior transitions",
+                    "Local expertise across four Western Washington counties"
                   ].map((item, i) => (
                     <div key={i} className="flex items-center gap-3 px-4 py-3 bg-secondary rounded-xl text-muted-foreground text-sm">
                       <CheckCircle className="w-4 h-4 text-gold shrink-0" />
@@ -308,7 +304,12 @@ const Index = () => {
       <section className="bg-ivory border-y border-border py-6">
         <div className="container px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-3">
-            {trustIndicators.map((indicator, index) => (
+            {[
+              "Licensed Real Estate Broker — Washington State",
+              "State Certified Residential Appraiser",
+              "20+ Years of Real Estate & Valuation Experience",
+              "King · Snohomish · Pierce · Kitsap Counties",
+            ].map((indicator, index) => (
               <div key={index} className="flex items-center gap-2 text-base text-muted-foreground">
                 <CheckCircle className="w-4 h-4 text-gold" />
                 <span>{indicator}</span>
@@ -318,58 +319,99 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Intro Section */}
+      {/* How I Help */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <p className="text-gold font-bold tracking-widest uppercase mb-3 text-base">
+              What Real Property Planning Does
+            </p>
+            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-4">
+              How David Stein Helps With Complex Property Decisions
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              Estate-related property sales require a different approach — one that accounts for legal timelines, family dynamics, deferred maintenance, and careful pricing.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {howIHelp.map((item, index) => (
+              <div key={index} className="flex items-start gap-4 p-6 bg-card rounded-lg border border-border">
+                <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center shrink-0">
+                  <item.icon className="w-5 h-5 text-gold" />
+                </div>
+                <p className="text-foreground leading-relaxed">{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Who I Work With */}
+      <section className="py-20 lg:py-28 bg-ivory">
+        <div className="container px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
+              <p className="text-gold font-bold tracking-widest uppercase mb-3 text-base">
+                Clients & Referral Partners
+              </p>
               <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-6">
-                Experienced Guidance for Probate, Estate & Trust Property Decisions
+                Who I Work With
               </h2>
-              <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-                Real estate tied to estate settlement, probate, trust administration, or senior housing transitions requires more than a typical home sale approach. These situations often involve legal timelines, multiple stakeholders, property condition questions, and emotionally difficult decisions.
+              <p className="text-muted-foreground leading-relaxed mb-8">
+                Real Property Planning serves professionals and families across Western Washington who need experienced real estate guidance during estate settlement, inheritance, trust administration, or a significant housing change.
               </p>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                Real Property Planning helps bring clarity and structure to the real estate side of the process — providing capable, calm, and responsive guidance to help coordinate next steps with care and discretion.
-              </p>
-              <div className="flex flex-wrap gap-3">
-                <Link to="/how-the-process-works">
-                  <Button variant="outline" size="sm" className="border-border text-foreground hover:bg-muted">
-                    How the Process Works <ChevronRight className="w-4 h-4 ml-1" />
-                  </Button>
-                </Link>
-                <Link to="/executors">
-                  <Button variant="outline" size="sm" className="border-border text-foreground hover:bg-muted">
-                    Guide for Executors <ChevronRight className="w-4 h-4 ml-1" />
-                  </Button>
-                </Link>
+              <div className="space-y-6">
+                {whoIWorkWith.map((category, index) => (
+                  <div key={index}>
+                    <h3 className="font-serif text-lg text-foreground font-semibold mb-2">{category.group}</h3>
+                    <p className="text-muted-foreground text-sm">{category.members}</p>
+                  </div>
+                ))}
               </div>
             </div>
-            <div className="flex flex-col items-center">
-              <div className="rounded-lg overflow-hidden border border-border shadow-lg">
-                <img
-                  src={coupleWritingWill}
-                  alt="A couple writing a will together, planning their estate"
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-              <p className="text-muted-foreground text-sm italic mt-4 text-center">
-                A will is essential to ensure your assets are distributed according to your wishes
+            <div className="bg-navy rounded-lg p-10 lg:p-12">
+              <Award className="w-10 h-10 text-gold mb-6" />
+              <h3 className="font-serif text-2xl text-primary-foreground font-semibold mb-4">
+                Why Professionals Refer David Stein
+              </h3>
+              <p className="text-primary-foreground/80 leading-relaxed mb-6 text-sm">
+                Estate-related real estate demands careful judgment, discretion, and coordination across multiple parties. David's dual credentials and two decades of focused experience make him a natural fit for high-trust referrals.
               </p>
+              <ul className="space-y-3">
+                {[
+                  "Broker + certified appraiser — rare dual perspective",
+                  "Calm, steady communication in sensitive situations",
+                  "Experienced with multi-party coordination",
+                  "Practical guidance from first call through closing",
+                  "Trusted by attorneys, CPAs, and financial planners"
+                ].map((point, index) => (
+                  <li key={index} className="flex items-start gap-3 text-primary-foreground/90 text-sm">
+                    <CheckCircle className="w-4 h-4 text-gold mt-0.5 shrink-0" />
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-6">
+                <Link to="/for-attorneys">
+                  <Button size="sm" className="bg-gold hover:bg-gold-light text-navy font-semibold">
+                    Attorney & Fiduciary Resources <ArrowRight className="w-4 h-4 ml-2" />
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-20 lg:py-28 bg-ivory">
+      <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <p className="text-gold font-bold tracking-widest uppercase mb-3 text-base">
-              How Real Property Planning Can Help
+              Resources & Services
             </p>
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-4">
-              Explore Services & Resources
+              Explore How Real Property Planning Can Help
             </h2>
           </div>
           
@@ -390,14 +432,45 @@ const Index = () => {
               </Link>
             ))}
           </div>
-          
-          <div className="text-center mt-10">
-            <Link to="/probate-estate-sales">
-              <Button variant="outline" className="border-navy text-navy hover:bg-navy hover:text-primary-foreground">
-                Explore All Services
-                <ChevronRight className="w-4 h-4 ml-1" />
-              </Button>
-            </Link>
+        </div>
+      </section>
+
+      {/* Intro Section */}
+      <section className="py-20 lg:py-28 bg-ivory">
+        <div className="container px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div>
+              <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-6">
+                Why Estate Property Requires a Different Approach
+              </h2>
+              <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+                Selling a home tied to an estate, trust, or family transition is fundamentally different from a conventional sale. Legal authority may limit timing. Multiple decision-makers may disagree. The property itself may have years of deferred maintenance.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                David Stein brings both the market knowledge of an experienced broker and the analytical eye of a certified appraiser — helping clients navigate these situations with clarity, realistic expectations, and a workable plan.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <Link to="/how-the-process-works">
+                  <Button variant="outline" size="sm" className="border-border text-foreground hover:bg-muted">
+                    See the Process <ChevronRight className="w-4 h-4 ml-1" />
+                  </Button>
+                </Link>
+                <Link to="/why-valuation-matters">
+                  <Button variant="outline" size="sm" className="border-border text-foreground hover:bg-muted">
+                    Why Valuation Matters <ChevronRight className="w-4 h-4 ml-1" />
+                  </Button>
+                </Link>
+              </div>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="rounded-lg overflow-hidden border border-border shadow-lg">
+                <img
+                  src={coupleWritingWill}
+                  alt="A couple reviewing estate planning documents together"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -410,10 +483,10 @@ const Index = () => {
               Service Areas
             </p>
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-4">
-              Serving King, Snohomish, Pierce & Kitsap Counties
+              Serving Four Western Washington Counties
             </h2>
             <p className="text-primary-foreground/70 text-lg">
-              Local market expertise across four Western Washington counties for probate, estate, and trust property transitions.
+              Local market knowledge for probate, estate, trust, and transition-related property sales.
             </p>
           </div>
           
@@ -438,7 +511,7 @@ const Index = () => {
           <div className="text-center mt-10">
             <Link to="/counties">
               <Button variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
-                View All Cities We Serve
+                View All Service Areas
                 <ChevronRight className="w-4 h-4 ml-1" />
               </Button>
             </Link>
@@ -446,72 +519,15 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Who We Serve */}
-      <section className="py-20 lg:py-28 bg-background">
-        <div className="container px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="text-gold font-bold tracking-widest uppercase mb-3 text-base">
-                Clients & Partners
-              </p>
-               <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-6">
-                Who Real Property Planning Works With
-              </h2>
-              <p className="text-muted-foreground leading-relaxed mb-8">
-                Real Property Planning serves clients and referral partners who need experienced real estate guidance during complex property transitions across Western Washington.
-              </p>
-              <div className="grid sm:grid-cols-2 gap-3">
-                {audiences.map((audience, index) => (
-                  <div key={index} className="flex items-center gap-3 py-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-gold" />
-                    <span className="text-foreground text-sm">{audience}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="bg-navy rounded-lg p-10 lg:p-12">
-              <Award className="w-10 h-10 text-gold mb-6" />
-              <h3 className="font-serif text-2xl text-primary-foreground font-semibold mb-4">
-                Why Professionals Refer David Stein
-              </h3>
-              <p className="text-primary-foreground/80 leading-relaxed mb-6 text-sm">
-                Estate-related real estate decisions require careful judgment, discretion, and coordination. David brings a steady, experienced approach to each matter.
-              </p>
-              <ul className="space-y-3">
-                {[
-                  "Over 20 years of relevant experience",
-                  "Professional real estate broker",
-                  "State certified appraiser",
-                  "High-trust communication style",
-                  "Practical guidance from consultation through closing"
-                ].map((point, index) => (
-                  <li key={index} className="flex items-start gap-3 text-primary-foreground/90 text-sm">
-                    <CheckCircle className="w-4 h-4 text-gold mt-0.5 shrink-0" />
-                    <span>{point}</span>
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-6">
-                <Link to="/attorney-referral">
-                  <Button size="sm" className="bg-gold hover:bg-gold-light text-navy font-semibold">
-                    Referral Resource <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Process Section */}
-      <section className="py-20 lg:py-28 bg-ivory">
+      <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <p className="text-gold font-bold tracking-widest uppercase mb-3 text-base">
               The Process
             </p>
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold">
-              A Clear Process During a Complex Time
+              A Clear Path Through a Complex Time
             </h2>
           </div>
           
@@ -546,14 +562,14 @@ const Index = () => {
           <div className="max-w-3xl mx-auto text-center">
             <Briefcase className="w-12 h-12 text-gold mx-auto mb-6" />
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
-              A Real Estate Resource Attorneys and Fiduciaries Can Refer With Confidence
+              A Referral Resource Attorneys Trust
             </h2>
             <p className="text-primary-foreground/80 leading-relaxed mb-8">
-              Attorneys, fiduciaries, and trustees need a real estate professional who understands communication, timelines, discretion, and sound judgment. David works collaboratively with professional advisors to help manage the real estate component of estate and senior transitions.
+              Estate planning and probate attorneys need a real estate professional who understands discretion, multi-party communication, and the importance of getting the property side right. David works collaboratively with legal professionals to reduce friction and support their clients through sensitive property transitions.
             </p>
             <Link to="/for-attorneys">
               <Button className="bg-gold hover:bg-gold-light text-navy font-semibold">
-                For Attorneys & Fiduciaries
+                Attorney & Fiduciary Resources
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </Link>
@@ -564,7 +580,7 @@ const Index = () => {
       {/* Client Reviews */}
       <TestimonialsSection />
 
-      {/* FAQ Preview — Natural-Language AI-Style Questions */}
+      {/* FAQ Preview */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -572,7 +588,7 @@ const Index = () => {
               Common Questions
             </p>
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold">
-              Questions People Ask About Probate & Inherited Property
+              Answers to Questions About Probate & Inherited Property
             </h2>
           </div>
           
@@ -607,10 +623,10 @@ const Index = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-6">
-              Need Guidance on a Probate, Estate, Trust, or Senior Property Matter?
+              Ready to Discuss a Property Situation?
             </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Start with a confidential conversation. Real Property Planning provides experienced, practical guidance tailored to the property, the circumstances, and the people involved.
+              Start with a confidential conversation. Whether you are an attorney, executor, trustee, family member, or financial professional, David Stein provides clear, experienced guidance tailored to your situation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">
@@ -629,7 +645,7 @@ const Index = () => {
                   className="border-navy text-navy hover:bg-navy hover:text-primary-foreground w-full sm:w-auto"
                 >
                   <Mail className="w-5 h-5 mr-2" />
-                  Contact David Stein
+                  Send a Message
                 </Button>
               </Link>
             </div>
@@ -644,4 +660,3 @@ const Index = () => {
 };
 
 export default Index;
-

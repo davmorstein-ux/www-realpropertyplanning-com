@@ -8,43 +8,62 @@ import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Phone, CheckCircle, Briefcase, ArrowRight, MapPin } from "lucide-react";
+import { Phone, CheckCircle, ArrowRight, MapPin, Shield, Users, Scale } from "lucide-react";
 import attorneyImage from "@/assets/attorney.png";
 
-const supportBullets = [
-  "Practical guidance for probate real estate and inherited property",
-  "Support for trust-owned homes and estate-related sales",
-  "Communication with executors, trustees, fiduciaries, and family members",
-  "Insight on pricing, property condition, marketability, and timing",
-  "Help coordinating preparation, cleanout, repairs, and sale readiness",
-  "A calm and professional approach in sensitive situations",
+const whenToRefer = [
+  "A probate property needs to be evaluated, prepared, and sold",
+  "A trust-owned home requires market analysis before a distribution or sale decision",
+  "An inherited property has deferred maintenance, cleanout needs, or condition concerns",
+  "Family members or co-heirs disagree about timing, pricing, or sale strategy",
+  "A fiduciary needs a reliable, professional resource for the real estate side of a matter",
+  "A senior client's housing transition involves selling a longtime home",
 ];
 
-const referralSituations = [
-  "A probate property needs to be prepared, priced, and sold",
-  "A trust-owned home needs guidance before going to market",
-  "Family members disagree about repairs, timing, or sale strategy",
-  "An inherited home has deferred maintenance or cleanout needs",
-  "A fiduciary needs a reliable property resource for next-step planning",
-  "A senior-related housing transition involves a home sale decision",
+const howISupport = [
+  "Provide honest property assessments — condition, value, and realistic sale expectations",
+  "Coordinate preparation, cleanout, repairs, and staging without burdening your client",
+  "Communicate directly with executors, trustees, family members, and other parties",
+  "Offer pricing insight informed by certified appraisal experience",
+  "Manage the listing, marketing, negotiation, and closing process from start to finish",
+  "Keep you informed at key milestones without unnecessary noise",
+];
+
+const commonSituations = [
+  {
+    title: "Probate Property Sales",
+    description: "Properties requiring legal authority to sell, often with deferred maintenance, occupancy concerns, or family coordination needs.",
+  },
+  {
+    title: "Trust-Owned Real Estate",
+    description: "Homes held in revocable or irrevocable trusts where the trustee needs market guidance, valuation perspective, or a full sale plan.",
+  },
+  {
+    title: "Inherited Homes With Multiple Heirs",
+    description: "Situations involving disagreement, distance, or uncertainty about how to handle a family property.",
+  },
+  {
+    title: "Senior Transition Homes",
+    description: "Longtime residences where a move to assisted living or a family member's care requires a thoughtful, well-timed sale.",
+  },
 ];
 
 const faqs = [
   {
     question: "When should an attorney involve a real estate professional in a probate or trust matter?",
-    answer: "It is often helpful to involve a real estate professional early, especially when there are questions about property condition, likely marketability, timing, preparation, pricing strategy, or next-step planning. Early guidance can help clients avoid delays and make more informed decisions.",
+    answer: "Early involvement often prevents delays. When there are questions about property condition, likely value, preparation needs, or sale timing, a knowledgeable real estate resource can help your client make faster, better-informed decisions.",
   },
   {
-    question: "Can Real Property Planning help with inherited homes that need repairs or cleanout?",
-    answer: "Yes. Many inherited and estate-related homes need preparation before they are ready for the market. Real Property Planning can help evaluate the situation, identify likely next steps, and coordinate a practical plan for sale readiness.",
+    question: "How does David communicate with attorneys during a transaction?",
+    answer: "David provides updates at key milestones — property assessment, listing, offers, and closing — and is available by phone or email for questions between updates. He understands the importance of keeping legal counsel informed without creating unnecessary complexity.",
   },
   {
-    question: "Do you work directly with executors, trustees, and family members?",
-    answer: "Yes. Real Property Planning regularly works with executors, trustees, fiduciaries, adult children, and families who are involved in inherited property, trust-owned homes, and estate-related sales.",
+    question: "Can David help with properties that need significant preparation?",
+    answer: "Yes. Many estate and inherited homes need cleanout, repairs, or staging before they are ready for the market. David coordinates vendors, evaluates which improvements are worth the investment, and manages the process so your client doesn't have to.",
   },
   {
-    question: "Can you help provide value guidance before a sale decision is made?",
-    answer: "Yes. Because David Stein is both a Washington real estate broker and state certified residential appraiser, Real Property Planning can offer informed guidance related to pricing, property condition, market positioning, and valuation-related decision-making.",
+    question: "Does David provide formal appraisals?",
+    answer: "David is a Washington state certified residential appraiser and can discuss valuation matters in depth. His primary role in most client engagements is as a real estate broker providing pricing strategy and sale execution. Formal appraisals are available separately when needed.",
   },
 ];
 
@@ -53,7 +72,7 @@ const jsonLd = {
   "@type": "ProfessionalService",
   name: "Real Property Planning — Real Estate Resource for Attorneys and Fiduciaries",
   description:
-    "Real Property Planning supports attorneys and fiduciaries with probate real estate, inherited property sales, valuation insight, sale coordination, and practical guidance throughout Western Washington.",
+    "David Stein provides probate real estate guidance, inherited property sales support, and practical coordination for estate planning attorneys, probate attorneys, elder law professionals, and fiduciaries across Western Washington.",
   url: "https://realpropertyplanning.com/for-attorneys",
   provider: {
     "@type": "RealEstateAgent",
@@ -73,8 +92,8 @@ const ForAttorneys = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Real Estate Resource for Attorneys & Fiduciaries | Real Property Planning"
-        description="Real Property Planning supports attorneys and fiduciaries with probate real estate, inherited property sales, trust-owned homes, valuation insight, and coordinated property guidance throughout Western Washington."
+        title="Probate Real Estate Resource for Attorneys & Fiduciaries | Real Property Planning"
+        description="Estate planning, probate, and elder law attorneys trust David Stein to handle the real estate side of sensitive property matters — from assessment through closing. Broker + certified appraiser."
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema items={[{ name: "For Attorneys & Fiduciaries", url: "/for-attorneys" }]} />
@@ -89,25 +108,25 @@ const ForAttorneys = () => {
                 For Attorneys & Fiduciaries
               </p>
               <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
-                A Real Estate Resource for Attorneys, Fiduciaries, and High-Trust Referrals
+                A Real Estate Partner You Can Refer With Confidence
               </h1>
               <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
-                Real Property Planning supports attorneys, fiduciaries, and referral partners who need practical help with probate real estate, inherited property, trust-owned homes, senior-related housing transitions, and other sensitive property matters.
+                Estate planning attorneys, probate attorneys, elder law professionals, and fiduciaries need a real estate resource who reduces friction, communicates clearly, and handles the property side with professionalism and discretion.
               </p>
               <p className="text-lg text-primary-foreground/70 leading-relaxed mb-8">
-                These situations often require a real estate resource who communicates clearly, understands the complexity of family and property transitions, and helps move the real estate side forward in a steady and professional way. David Stein brings more than 20 years of experience as a Washington real estate broker and state certified residential appraiser.
+                David Stein brings the rare combination of a licensed Washington real estate broker and a state certified residential appraiser — with over 20 years of experience navigating the intersection of property, family, and fiduciary responsibility.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/contact">
                   <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold w-full sm:w-auto">
                     <Phone className="w-5 h-5 mr-2" />
-                    Schedule a Consultation
+                    Discuss a Referral
                   </Button>
                 </Link>
                 <Link to="/contact">
                   <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 w-full sm:w-auto">
                     <ArrowRight className="w-5 h-5 mr-2" />
-                    Discuss a Referral
+                    Schedule a Consultation
                   </Button>
                 </Link>
               </div>
@@ -121,22 +140,40 @@ const ForAttorneys = () => {
 
       <TrustStrip />
 
-      {/* How RPP Supports Attorneys */}
+      {/* When to Refer a Client */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <Briefcase className="w-10 h-10 text-gold mb-6" />
-            <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-              How Real Property Planning Supports Attorneys and Fiduciaries
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
+              When to Refer a Client
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-              Real Property Planning is designed to support professionals who need a dependable real estate resource in matters involving inherited homes, estate property sales, trust-owned real estate, valuation-related decisions, and transition planning.
-            </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Attorneys and fiduciaries often need more than a traditional listing agent. They need a knowledgeable professional who can help assess property condition, advise on likely marketability, coordinate preparation steps, communicate clearly with decision-makers, and provide steady guidance in situations that may involve grief, family tension, deferred maintenance, or uncertainty about next steps.
+              Consider involving Real Property Planning when a client's property situation includes any of the following:
             </p>
             <ul className="space-y-4">
-              {supportBullets.map((item, index) => (
+              {whenToRefer.map((item, index) => (
+                <li key={index} className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
+                  <span className="text-muted-foreground">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* How I Support Attorneys and Their Clients */}
+      <section className="py-20 lg:py-28 bg-secondary">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
+              How I Support Attorneys and Their Clients
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              David handles the real estate side so you can focus on the legal side. Here is what that looks like in practice:
+            </p>
+            <ul className="space-y-4">
+              {howISupport.map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-gold mt-0.5 shrink-0" />
                   <span className="text-foreground">{item}</span>
@@ -147,43 +184,57 @@ const ForAttorneys = () => {
         </div>
       </section>
 
-      {/* Common Referral Situations */}
-      <section className="py-20 lg:py-28 bg-secondary">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-              Common Referral Situations
-            </h2>
-            <ul className="space-y-4">
-              {referralSituations.map((situation, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <div className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
-                  <span className="text-muted-foreground">{situation}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Referral Partners Value This Resource */}
+      {/* Why My Background Matters */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-              Why Referral Partners Value This Resource
+              Why My Background Matters
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-              Real Property Planning is built to help referral partners feel confident that the property side of a matter is being handled with professionalism, discretion, and practical judgment. The goal is to reduce friction, improve communication, and help clients move forward with a clearer plan.
-            </p>
+            <div className="grid sm:grid-cols-3 gap-6 mb-8">
+              <div className="bg-card border border-border rounded-xl p-6 text-center">
+                <Scale className="w-8 h-8 text-gold mx-auto mb-3" />
+                <h3 className="font-serif text-lg font-semibold text-foreground mb-2">Dual Credentials</h3>
+                <p className="text-muted-foreground text-sm">Licensed broker and state certified appraiser — a combination that provides deeper insight into pricing and value.</p>
+              </div>
+              <div className="bg-card border border-border rounded-xl p-6 text-center">
+                <Shield className="w-8 h-8 text-gold mx-auto mb-3" />
+                <h3 className="font-serif text-lg font-semibold text-foreground mb-2">20+ Years Focused</h3>
+                <p className="text-muted-foreground text-sm">Two decades of experience in real estate and valuation, with a focus on estate, probate, and trust property situations.</p>
+              </div>
+              <div className="bg-card border border-border rounded-xl p-6 text-center">
+                <Users className="w-8 h-8 text-gold mx-auto mb-3" />
+                <h3 className="font-serif text-lg font-semibold text-foreground mb-2">Professional Discretion</h3>
+                <p className="text-muted-foreground text-sm">Experienced in working alongside attorneys, trustees, and families during sensitive and high-stakes transitions.</p>
+              </div>
+            </div>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Because David Stein also brings the perspective of a state certified residential appraiser, attorneys and fiduciaries benefit from guidance that is informed not only by sales strategy, but also by valuation awareness, property condition analysis, and market context.
+              Most agents can sell a house. Few understand the dynamics of estate settlement — legal timelines, fiduciary duties, family tension, and the importance of accurate valuation. That understanding is what sets this practice apart and why attorneys continue to refer with confidence.
             </p>
           </div>
         </div>
       </section>
 
-      <PageFAQ faqs={faqs} heading="Frequently Asked Questions" eyebrow="Common Questions" />
+      {/* Common Property Situations I Help Resolve */}
+      <section className="py-20 lg:py-28 bg-secondary">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-8">
+              Common Property Situations I Help Resolve
+            </h2>
+            <div className="space-y-6">
+              {commonSituations.map((situation, index) => (
+                <div key={index} className="bg-card border border-border rounded-xl p-6">
+                  <h3 className="font-serif text-lg text-foreground font-semibold mb-2">{situation.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{situation.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <PageFAQ faqs={faqs} heading="Questions Attorneys Commonly Ask" eyebrow="FAQ" />
 
       {/* Service Area */}
       <section className="py-20 lg:py-28 bg-background">
@@ -191,10 +242,13 @@ const ForAttorneys = () => {
           <div className="max-w-3xl mx-auto">
             <MapPin className="w-10 h-10 text-gold mb-6" />
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-              Serving Referral Partners Throughout Western Washington
+              Serving Attorneys Throughout Western Washington
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed">
-              Real Property Planning serves attorneys, fiduciaries, and families throughout King, Snohomish, Pierce, and Kitsap Counties, with a focus on probate real estate, inherited property, trust-owned homes, valuation-related questions, and major housing transitions.
+            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+              David works with attorneys and fiduciaries across <Link to="/counties/king" className="text-accent hover:text-gold underline underline-offset-4">King</Link>, <Link to="/counties/snohomish" className="text-accent hover:text-gold underline underline-offset-4">Snohomish</Link>, <Link to="/counties/pierce" className="text-accent hover:text-gold underline underline-offset-4">Pierce</Link>, and <Link to="/counties/kitsap" className="text-accent hover:text-gold underline underline-offset-4">Kitsap</Link> Counties.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              Whether the property is in downtown Seattle, suburban Bellevue, or a smaller community across the region, David brings local market knowledge and consistent professionalism to every engagement.
             </p>
           </div>
         </div>
@@ -207,17 +261,23 @@ const ForAttorneys = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
-              Need a dependable real estate resource for a probate, trust, inherited property, or senior-related housing matter?
+              Have a client with a property that needs professional guidance?
             </h2>
-            <div className="flex justify-center mb-8">
+            <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
               <Link to="/contact">
-                <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold">
-                  Contact David
+                <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold w-full sm:w-auto">
+                  <Phone className="w-5 h-5 mr-2" />
+                  Discuss a Referral
+                </Button>
+              </Link>
+              <Link to="/contact">
+                <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 w-full sm:w-auto">
+                  Schedule a Consultation
                 </Button>
               </Link>
             </div>
             <p className="text-primary-foreground/70 text-lg leading-relaxed">
-              If you would like to discuss a property, referral situation, or client need, Real Property Planning welcomes the conversation.
+              Confidential consultations are always welcome. David will follow up promptly to discuss the situation and how he can help.
             </p>
           </div>
         </div>

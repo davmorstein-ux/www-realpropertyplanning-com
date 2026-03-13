@@ -8,37 +8,60 @@ import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Phone, CheckCircle } from "lucide-react";
+import { Phone, CheckCircle, AlertTriangle, Scale } from "lucide-react";
 
 const whyMatters = [
-  "Helps support more confident pricing decisions",
-  "Reduces avoidable disagreement among heirs or family members",
-  "Clarifies whether repairs are likely to improve outcomes",
-  "Helps attorneys, executors, and trustees make better-informed recommendations",
-  "Improves sale planning and market positioning",
+  "Supports confident pricing decisions that reflect the property's true condition and market position",
+  "Reduces disagreements among heirs, co-owners, or family members about what a home is worth",
+  "Clarifies whether repairs or improvements will meaningfully affect the sale outcome",
+  "Helps attorneys, executors, and trustees fulfill fiduciary responsibilities with better-informed recommendations",
+  "Improves sale planning by aligning price expectations with realistic market conditions",
+];
+
+const pricingMistakes = [
+  {
+    title: "Overpricing an Estate Property",
+    consequence: "The home sits on the market for months, accumulating carrying costs, losing buyer interest, and eventually selling for less than it would have at a realistic price. Heirs and executors grow frustrated.",
+  },
+  {
+    title: "Underpricing an Inherited Home",
+    consequence: "The property sells quickly, but the estate leaves tens of thousands of dollars on the table. In fiduciary situations, this can create legal and ethical concerns.",
+  },
+  {
+    title: "Ignoring Condition in Pricing",
+    consequence: "A price based on comparable homes that are in updated condition leads to appraisal failures, buyer financing issues, and deals that fall apart after weeks under contract.",
+  },
+  {
+    title: "Using Online Estimates for Estate Property",
+    consequence: "Automated valuation tools do not account for deferred maintenance, functional obsolescence, or the unique challenges of estate properties. The resulting number may be misleading to families and decision-makers.",
+  },
 ];
 
 const situations = [
-  "Inherited homes with outdated condition",
-  "Family buyout conversations",
-  "Trust-owned property sale planning",
-  "Homes with deferred maintenance",
-  "Pricing disagreements",
-  "Decisions about whether to sell as-is or improve before listing",
+  "Inherited homes with outdated kitchens, bathrooms, or systems",
+  "Family buyout discussions where siblings disagree on value",
+  "Trust-owned properties that need a sale or distribution plan",
+  "Homes with deferred maintenance that standard comparisons don't capture",
+  "Properties where the decision is whether to sell as-is or invest in improvements",
+  "Estate properties where the executor needs defensible pricing for fiduciary purposes",
 ];
 
 const faqs = [
   {
-    question: "Why is valuation expertise important when selling probate property?",
-    answer: "Probate properties are often in non-standard condition — outdated, deferred maintenance, cluttered, or vacant. Accurate valuation helps avoid pricing too high (stalling the sale) or too low (leaving value behind). David's dual credentials as broker and certified appraiser provide deeper insight than a standard comparative market analysis.",
+    question: "Why is valuation expertise especially important in probate situations?",
+    answer: "Probate properties are often in non-standard condition — outdated, cluttered, vacant, or in need of repair. Standard comparative market analyses may not account for these factors. David's dual credentials as a broker and certified appraiser allow him to evaluate properties with greater accuracy and nuance.",
   },
   {
-    question: "Does David Stein provide formal appraisals?",
-    answer: "David is a Washington state certified residential appraiser and can discuss valuation matters in depth. His primary role in most client engagements is as a real estate broker, providing pricing strategy and sale execution. Formal appraisal services are available separately when needed.",
+    question: "Does David provide formal appraisals?",
+    answer: "David is a Washington state certified residential appraiser and can discuss valuation matters in depth. In most client engagements, his primary role is as a real estate broker providing pricing strategy and sale execution. Formal appraisal services are available separately when needed.",
   },
   {
     question: "How does David's appraisal background improve the sale process?",
-    answer: "Understanding how appraisers evaluate property helps David anticipate buyer financing challenges, price properties more accurately, and identify condition issues that could affect value — all before the property hits the market.",
+    answer: "Understanding how appraisers evaluate property helps David anticipate buyer financing challenges, price properties more accurately, and identify condition issues that could affect value — all before the property reaches the market. This reduces surprises and improves outcomes.",
+  },
+  {
+    question: "Can David help when family members disagree about a property's value?",
+    answer: "Yes. Pricing disagreements are common in inherited and estate situations. David provides objective, market-grounded perspective that helps families move past disagreement toward a realistic plan — often by explaining the factors that drive actual buyer behavior and appraised value.",
   },
 ];
 
@@ -46,8 +69,8 @@ const WhyValuationMatters = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Why Valuation Matters for Probate & Inherited Property | Real Property Planning"
-        description="Learn why accurate valuation matters for probate real estate, inherited homes, estate sales, trust-owned property, pricing strategy, and family decision-making in Western Washington."
+        title="Why Pricing & Valuation Matter in Estate Property Sales | Real Property Planning"
+        description="Incorrect pricing costs estates thousands. David Stein combines broker expertise with certified appraiser credentials to help executors, attorneys, and families price probate and inherited property accurately."
       />
       <BreadcrumbSchema items={[{ name: "Why Valuation Matters", url: "/why-valuation-matters" }]} />
       <Header />
@@ -57,22 +80,22 @@ const WhyValuationMatters = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
-              Valuation and Market Perspective
+              Pricing & Valuation Expertise
             </p>
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-[22px]">
-              Why Valuation Matters in Probate and Inherited Property Decisions
+              Why Accurate Pricing Is the Most Important Decision in Estate Property Sales
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-4">
-              Real Property Planning helps clients and referral partners make more informed decisions by bringing clarity to value, pricing, property condition, and market positioning.
+              In probate, inherited, and trust-related property situations, the right price protects the estate, reduces family conflict, and prevents costly delays. The wrong price can create problems that ripple through the entire process.
             </p>
             <p className="text-lg text-primary-foreground/70 leading-relaxed mb-[30px]">
-              In probate, inherited property, and estate-related situations, a well-informed understanding of value can shape sale strategy, family communication, repair decisions, buyout discussions, and overall planning. David Stein offers the perspective of both a Washington real estate broker and state certified residential appraiser.
+              David Stein is one of the few professionals in Western Washington who brings both a broker's market knowledge and a state certified appraiser's analytical discipline to estate property pricing — a combination that helps clients make better decisions and avoid expensive mistakes.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Link to="/contact">
                 <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-medium px-7 py-4 h-auto rounded-lg w-full sm:w-auto">
                   <Phone className="w-4 h-4 mr-2" />
-                  Schedule a Consultation
+                  Discuss a Property
                 </Button>
               </Link>
             </div>
@@ -86,6 +109,7 @@ const WhyValuationMatters = () => {
       <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
+            <Scale className="w-10 h-10 text-gold mb-6" />
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
               Why Accurate Value Guidance Matters
             </h2>
@@ -101,12 +125,35 @@ const WhyValuationMatters = () => {
         </div>
       </section>
 
-      {/* Situations Where Valuation Becomes Especially Important */}
+      {/* What Can Go Wrong */}
       <section className="py-20 lg:py-28 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
+            <AlertTriangle className="w-10 h-10 text-gold mb-6" />
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
+              What Happens When Pricing Goes Wrong
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              Pricing mistakes in estate situations create consequences that go beyond just dollars:
+            </p>
+            <div className="space-y-5">
+              {pricingMistakes.map((mistake, index) => (
+                <div key={index} className="bg-card border border-border rounded-xl p-6">
+                  <h3 className="font-serif text-lg text-foreground font-semibold mb-2">{mistake.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{mistake.consequence}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Situations Where Valuation Is Critical */}
+      <section className="py-20 lg:py-28 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-              Situations Where Valuation Becomes Especially Important
+              When Valuation Expertise Becomes Critical
             </h2>
             <ul className="space-y-4">
               {situations.map((item, index) => (
@@ -116,11 +163,14 @@ const WhyValuationMatters = () => {
                 </li>
               ))}
             </ul>
+            <p className="text-muted-foreground mt-8 leading-relaxed">
+              Executors and trustees can learn more about <Link to="/executors" className="text-accent hover:text-gold underline underline-offset-4">how David supports the sale process</Link>. Attorneys may also find value in the <Link to="/for-attorneys" className="text-accent hover:text-gold underline underline-offset-4">attorney referral resources</Link>.
+            </p>
           </div>
         </div>
       </section>
 
-      <PageFAQ faqs={faqs} heading="Valuation FAQs" />
+      <PageFAQ faqs={faqs} heading="Valuation & Pricing FAQs" />
 
       <RelatedServices currentPath="/why-valuation-matters" />
 
@@ -129,12 +179,16 @@ const WhyValuationMatters = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
-              Need experienced pricing and value guidance before making a property decision?
+              Need experienced pricing guidance for an estate, inherited, or trust-owned property?
             </h2>
+            <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
+              David provides honest, market-grounded assessments that help clients and fiduciaries make confident pricing decisions.
+            </p>
             <div className="flex justify-center">
               <Link to="/contact">
                 <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold">
-                  Contact David
+                  <Phone className="w-5 h-5 mr-2" />
+                  Discuss a Property
                 </Button>
               </Link>
             </div>
