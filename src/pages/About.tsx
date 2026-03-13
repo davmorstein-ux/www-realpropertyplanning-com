@@ -32,7 +32,7 @@ const About = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="About David Stein — Broker & Certified Appraiser | Real Property Planning"
-        description="David Stein is a Washington real estate broker and state certified appraiser with 20+ years of experience helping attorneys, executors, trustees, and families with probate and inherited property."
+        description="Meet David Stein — the Washington broker and certified appraiser behind Real Property Planning. Over 20 years of focused experience helping attorneys, executors, and families with estate property."
       />
       <BreadcrumbSchema items={[{ name: "About", url: "/about" }]} />
       <Header />
