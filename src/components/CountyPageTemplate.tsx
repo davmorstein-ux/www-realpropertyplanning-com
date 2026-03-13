@@ -53,8 +53,8 @@ const CountyPageTemplate = ({
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title={`${countyName} Probate & Inherited Property Sales | Real Property Planning`}
-        description={`David Stein provides experienced real estate guidance for probate property, inherited homes, estate sales, and senior transitions in ${countyName}, Washington. Broker + certified appraiser.`}
+        title={`${countyName} Estate & Inherited Property Sales | Real Property Planning`}
+        description={`Selling an inherited home, probate property, or trust-owned real estate in ${countyName}? David Stein provides hands-on guidance with local market knowledge and dual broker-appraiser credentials.`}
       />
       <BreadcrumbSchema items={breadcrumbItems} />
       <Header />
@@ -67,12 +67,9 @@ const CountyPageTemplate = ({
               {countyName} Service Area
             </p>
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-[22px]">
-              Probate & Inherited Property Sales in {countyName}
+              Estate & Inherited Property Sales in {countyName}
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-5">
-              David Stein provides practical, experienced real estate guidance for probate property, inherited homes, trust-owned real estate, and senior transitions throughout {countyName}, Washington.
-            </p>
-            <p className="text-lg text-primary-foreground/70 leading-relaxed">
               {localInsight || `Whether the property needs assessment, preparation, pricing strategy, or a full sale plan, clients and referral partners in ${countyName} benefit from David's dual credentials as a licensed broker and state certified residential appraiser.`}
             </p>
           </div>

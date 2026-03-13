@@ -70,7 +70,7 @@ const WhyValuationMatters = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Why Pricing & Valuation Matter in Estate Property Sales | Real Property Planning"
-        description="Overpricing stalls the sale. Underpricing costs the estate thousands. David Stein's rare combination of broker and certified appraiser credentials helps executors and families price inherited and probate property with confidence."
+        description="An overpriced estate home sits for months. An underpriced one costs heirs thousands. David Stein is one of the few Washington professionals who holds both a broker license and a certified appraiser credential — bringing analytical depth that protects estate value."
       />
       <BreadcrumbSchema items={[{ name: "Why Valuation Matters", url: "/why-valuation-matters" }]} />
       <Header />
@@ -86,10 +86,10 @@ const WhyValuationMatters = () => {
               Why Accurate Pricing Is the Most Important Decision in Estate Property Sales
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-4">
-              Pricing is the single most consequential decision in an estate property sale. Price too high and the home sits for months, draining the estate. Price too low and you leave real money behind — money that belongs to the heirs. Getting it right requires more than a quick market comparison.
+              Every estate property sale hinges on one question: what is this home actually worth in its current condition? Not what Zillow says. Not what the neighbors sold for after a full remodel. The real answer — factoring in deferred maintenance, functional issues, and realistic buyer behavior — is what determines whether the sale protects the estate or costs it.
             </p>
             <p className="text-lg text-primary-foreground/70 leading-relaxed mb-[30px]">
-              David Stein holds both a real estate broker license and a state certified residential appraiser credential — a combination that allows him to evaluate estate properties with a depth of analysis that most agents simply cannot provide. He accounts for deferred maintenance, functional obsolescence, and realistic buyer expectations — not just what the neighbors sold for.
+              David Stein is one of the few professionals in Western Washington who holds both a broker license and a state certified residential appraiser credential. That dual lens means he evaluates properties the way an appraiser would, then markets and sells them the way a seasoned broker does — giving executors, attorneys, and families a level of pricing confidence that most agents cannot deliver.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Link to="/contact">
