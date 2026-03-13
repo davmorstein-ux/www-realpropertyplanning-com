@@ -62,8 +62,8 @@ const HowTheProcessWorks = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="How the Process Works for Probate & Inherited Property Sales | Real Property Planning"
-        description="Learn the step-by-step process Real Property Planning uses to help attorneys, executors, trustees, and families handle probate property and inherited homes in Western Washington."
+        title="How the Process Works — Estate Property Sales | Real Property Planning"
+        description="From initial consultation to closing day — here is exactly how David Stein helps executors, attorneys, and families sell probate, inherited, and trust-owned property in Western Washington."
       />
       <BreadcrumbSchema items={[{ name: "How the Process Works", url: "/how-the-process-works" }]} />
       <Header />
@@ -79,10 +79,10 @@ const HowTheProcessWorks = () => {
               How the Process Works
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-4">
-              Real Property Planning uses a clear, steady process to help clients and referral partners move from uncertainty to action when a property is connected to probate, inheritance, a trust, or a major life transition.
+              Estate property sales can feel overwhelming — especially when you are managing legal requirements, family expectations, and a property that may need significant work. David Stein follows a clear, six-step process designed to bring order to complexity and keep everyone informed at every stage.
             </p>
             <p className="text-lg text-primary-foreground/70 leading-relaxed mb-[30px]">
-              David Stein helps simplify what can otherwise feel overwhelming by combining practical guidance, strong communication, market knowledge, and thoughtful coordination.
+              Each engagement is structured around practical milestones: assess the property, align on strategy, prepare the home, price it accurately, market it effectively, and close with confidence.
             </p>
             <Link to="/contact">
               <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-medium px-7 py-4 h-auto rounded-lg">

@@ -70,7 +70,7 @@ const WhyValuationMatters = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Why Pricing & Valuation Matter in Estate Property Sales | Real Property Planning"
-        description="Incorrect pricing costs estates thousands. David Stein combines broker expertise with certified appraiser credentials to help executors, attorneys, and families price probate and inherited property accurately."
+        description="Overpricing stalls the sale. Underpricing costs the estate thousands. David Stein's rare combination of broker and certified appraiser credentials helps executors and families price inherited and probate property with confidence."
       />
       <BreadcrumbSchema items={[{ name: "Why Valuation Matters", url: "/why-valuation-matters" }]} />
       <Header />
@@ -86,10 +86,10 @@ const WhyValuationMatters = () => {
               Why Accurate Pricing Is the Most Important Decision in Estate Property Sales
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-4">
-              In probate, inherited, and trust-related property situations, the right price protects the estate, reduces family conflict, and prevents costly delays. The wrong price can create problems that ripple through the entire process.
+              Pricing is the single most consequential decision in an estate property sale. Price too high and the home sits for months, draining the estate. Price too low and you leave real money behind — money that belongs to the heirs. Getting it right requires more than a quick market comparison.
             </p>
             <p className="text-lg text-primary-foreground/70 leading-relaxed mb-[30px]">
-              David Stein is one of the few professionals in Western Washington who brings both a broker's market knowledge and a state certified appraiser's analytical discipline to estate property pricing — a combination that helps clients make better decisions and avoid expensive mistakes.
+              David Stein holds both a real estate broker license and a state certified residential appraiser credential — a combination that allows him to evaluate estate properties with a depth of analysis that most agents simply cannot provide. He accounts for deferred maintenance, functional obsolescence, and realistic buyer expectations — not just what the neighbors sold for.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Link to="/contact">
@@ -166,6 +166,18 @@ const WhyValuationMatters = () => {
             <p className="text-muted-foreground mt-8 leading-relaxed">
               Executors and trustees can learn more about <Link to="/executors" className="text-accent hover:text-gold underline underline-offset-4">how David supports the sale process</Link>. Attorneys may also find value in the <Link to="/for-attorneys" className="text-accent hover:text-gold underline underline-offset-4">attorney referral resources</Link>.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonial */}
+      <section className="py-14 lg:py-16 bg-secondary">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-foreground text-lg italic leading-relaxed mb-4">
+              "David's dual background in brokerage and appraisal gave us confidence that the property was priced correctly. He made a complicated situation feel manageable."
+            </p>
+            <p className="text-muted-foreground text-sm font-medium">— Professional Referral · Probate property sale coordination</p>
           </div>
         </div>
       </section>

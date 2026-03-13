@@ -90,7 +90,7 @@ const Executors = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Estate Property Guide for Executors & Trustees | Real Property Planning"
-        description="Step-by-step real estate guidance for executors, personal representatives, and trustees selling inherited property in Washington. From assessment through closing — David Stein handles the property side."
+        description="Named executor or trustee? David Stein provides step-by-step real estate guidance — from property assessment and preparation through pricing and closing — so you can manage estate responsibilities with confidence."
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema items={[{ name: "For Executors", url: "/executors" }]} />
@@ -107,7 +107,7 @@ const Executors = () => {
               You Have Enough to Manage — Let David Handle the Property
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-5">
-              Being named executor or trustee often means inheriting responsibilities you didn't expect — including a property that needs to be evaluated, prepared, and sold. David Stein provides clear, experienced guidance so you can make confident decisions without feeling overwhelmed.
+              If you have been named executor, trustee, or personal representative, you are likely facing decisions about a property you did not plan for — and may not know where to start. David Stein provides the kind of clear, organized, hands-on guidance that takes the real estate burden off your plate.
             </p>
             <p className="text-lg text-primary-foreground/70 leading-relaxed mb-[30px]">
               Whether you're local or managing from out of state, David brings over 20 years of experience as a broker and certified appraiser to help you navigate the process from first assessment to closing day.
@@ -179,6 +179,18 @@ const Executors = () => {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonial */}
+      <section className="py-14 lg:py-16 bg-secondary">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-foreground text-lg italic leading-relaxed mb-4">
+              "David brought clarity, professionalism, and calm guidance during a very difficult property transition. His valuation perspective and market knowledge were incredibly helpful."
+            </p>
+            <p className="text-muted-foreground text-sm font-medium">— Client Review · Estate-related property transition</p>
           </div>
         </div>
       </section>

@@ -87,7 +87,7 @@ const ProbateEstateSales = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Probate Property Sales & Estate Real Estate | Real Property Planning"
-        description="Experienced guidance for probate property sales, court-supervised transactions, and estate real estate in Washington. David Stein manages preparation, pricing, and sale execution for executors and families."
+        description="Probate property sales involve legal timelines, fiduciary duties, and properties in non-standard condition. David Stein manages assessment, preparation, pricing, and sale execution for executors and families in Washington."
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema items={[{ name: "Probate & Estate Sales", url: "/probate-estate-sales" }]} />
@@ -104,10 +104,10 @@ const ProbateEstateSales = () => {
               Selling Probate Property Requires a Different Kind of Expertise
             </h1>
             <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
-              Probate and estate-related property sales are not typical transactions. They involve legal timelines, fiduciary responsibilities, family coordination, and properties that often need significant preparation before reaching the market.
+              A probate property sale is fundamentally different from listing a family home. The executor may need court authority before acting. The home may have years of deferred maintenance. Multiple heirs may disagree about timing or price. And the property itself often needs significant preparation before a single buyer walks through the door.
             </p>
             <p className="text-lg text-primary-foreground/70 leading-relaxed mb-8">
-              David Stein brings the perspective of both a licensed broker and a certified appraiser — providing the valuation insight, market strategy, and hands-on coordination that these situations demand.
+              David Stein specializes in exactly these situations — bringing the perspective of both a licensed broker and a certified appraiser to help executors, attorneys, and families navigate the process with clarity and confidence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/contact">
@@ -212,6 +212,18 @@ const ProbateEstateSales = () => {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonial */}
+      <section className="py-14 lg:py-16 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-foreground text-lg italic leading-relaxed mb-4">
+              "David's dual background in brokerage and appraisal gave us confidence that the property was priced correctly. He made a complicated situation feel manageable."
+            </p>
+            <p className="text-muted-foreground text-sm font-medium">— Professional Referral · Probate property sale coordination</p>
           </div>
         </div>
       </section>

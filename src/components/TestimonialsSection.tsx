@@ -2,21 +2,6 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Star, ExternalLink, Quote } from "lucide-react";
 
-const testimonials = [
-  {
-    name: "Theron",
-    text: "Dave was extremely helpful in the purchase of our new house. He was always available for whenever your time schedule worked. I would recommend Dave to anyone buying or selling.",
-  },
-  {
-    name: "Darrien",
-    text: "I had an awesome experience with Dave and his team! We were first time home buyers so we really enjoyed that they really had our back, especially when things got a bit tricky. Super grateful for his help throughout our journey.",
-  },
-  {
-    name: "Cameron",
-    text: "Dave did an outstanding job helping me with the purchase of my property. Very knowledgeable and very involved in all aspects of the purchasing process. Very friendly and always gave great advice.",
-  },
-];
-
 const featuredReviews = [
   {
     text: "David brought clarity, professionalism, and calm guidance during a very difficult property transition. His valuation perspective and market knowledge were incredibly helpful.",
@@ -32,6 +17,21 @@ const featuredReviews = [
     text: "David's dual background in brokerage and appraisal gave us confidence that the property was priced correctly. He made a complicated situation feel manageable.",
     label: "Professional Referral",
     situation: "Probate property sale coordination",
+  },
+];
+
+const verifiedReviews = [
+  {
+    name: "Theron",
+    text: "Dave was extremely helpful in the purchase of our new house. He was always available for whenever your time schedule worked. I would recommend Dave to anyone buying or selling.",
+  },
+  {
+    name: "Darrien",
+    text: "I had an awesome experience with Dave and his team! We were first time home buyers so we really enjoyed that they really had our back, especially when things got a bit tricky. Super grateful for his help throughout our journey.",
+  },
+  {
+    name: "Cameron",
+    text: "Dave did an outstanding job helping me with the purchase of my property. Very knowledgeable and very involved in all aspects of the purchasing process. Very friendly and always gave great advice.",
   },
 ];
 
@@ -66,13 +66,13 @@ const TestimonialsSection = () => {
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">
-            Client Feedback
+            What Clients Say
           </p>
           <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-5">
             Trusted During Important Property Transitions
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            Families, executors, attorneys, and professional advisors trust David Stein to provide calm, experienced guidance during sensitive real estate decisions.
+            Clients describe working with David as calm, organized, and reassuring. Whether the situation involves probate, an inherited home, a trust, or a senior transition, the experience is consistently professional and well-coordinated.
           </p>
         </div>
 
@@ -99,7 +99,7 @@ const TestimonialsSection = () => {
 
         {/* Verified Reviews */}
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-14">
-          {testimonials.map((t, i) => (
+          {verifiedReviews.map((t, i) => (
             <div
               key={i}
               className="bg-background rounded-xl p-7 border border-border relative"
