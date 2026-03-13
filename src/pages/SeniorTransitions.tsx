@@ -87,10 +87,10 @@ const SeniorTransitions = () => {
               Selling a Longtime Home Is About More Than Real Estate
             </h1>
             <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
-              When a senior is downsizing, relocating, or moving to assisted living, the home sale is often the most emotionally and logistically complex part of the transition. David Stein provides experienced, compassionate guidance that respects the weight of these decisions.
+              A family home of 30 or 40 years holds more than market value — it holds memories, routines, and a lifetime of belonging. When it is time to sell, the process deserves someone who understands that. David Stein provides experienced, patient guidance that puts the family's needs first.
             </p>
             <p className="text-lg text-primary-foreground/70 leading-relaxed mb-8">
-              With over two decades of real estate and valuation experience, David works at the family's pace — coordinating with care professionals, adult children, and trusted advisors to ensure the property side is handled with care and competence.
+              Whether a senior is downsizing, moving to assisted living, or a family is coordinating a transition on a parent's behalf, David works at their pace — managing the preparation, pricing, and sale so the experience feels organized rather than overwhelming.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/contact">

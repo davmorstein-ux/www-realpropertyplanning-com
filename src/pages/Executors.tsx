@@ -183,6 +183,18 @@ const Executors = () => {
         </div>
       </section>
 
+      {/* Testimonial */}
+      <section className="py-14 lg:py-16 bg-secondary">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-foreground text-lg italic leading-relaxed mb-4">
+              "David brought clarity, professionalism, and calm guidance during a very difficult property transition. His valuation perspective and market knowledge were incredibly helpful."
+            </p>
+            <p className="text-muted-foreground text-sm font-medium">— Client Review · Estate-related property transition</p>
+          </div>
+        </div>
+      </section>
+
       {/* Reassurance */}
       <section className="py-16 lg:py-20 bg-background">
         <div className="container px-6 lg:px-8">
