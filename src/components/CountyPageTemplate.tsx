@@ -10,12 +10,12 @@ import { Link } from "react-router-dom";
 import { CheckCircle, MapPin } from "lucide-react";
 
 const howDavidHelps = [
-  "Probate and estate property sales",
-  "Inherited home sale planning",
-  "Trust-owned real estate guidance",
-  "Pricing and market strategy",
-  "Senior transition support",
-  "Help for attorneys, executors, trustees, and families",
+  "Probate and estate property assessment and sale planning",
+  "Inherited home preparation, pricing, and market strategy",
+  "Trust-owned real estate guidance and sale coordination",
+  "Valuation-informed pricing for properties in non-standard condition",
+  "Senior transition support and family coordination",
+  "Reliable communication with attorneys, executors, trustees, and families",
 ];
 
 interface CountyPageProps {
@@ -23,6 +23,8 @@ interface CountyPageProps {
   countyPath: string;
   cities: string[];
   localParagraph?: string;
+  localInsight?: string;
+  typicalSituations?: string[];
 }
 
 const CountyPageTemplate = ({
@@ -30,6 +32,8 @@ const CountyPageTemplate = ({
   countyPath,
   cities,
   localParagraph,
+  localInsight,
+  typicalSituations,
 }: CountyPageProps) => {
   const breadcrumbItems = [
     { name: "Counties", url: "/counties" },
@@ -38,11 +42,19 @@ const CountyPageTemplate = ({
 
   const defaultLocalParagraph = `Every county has its own market patterns, housing stock, buyer demand, and practical sale considerations. Real Property Planning combines broad experience with local awareness to help clients make informed property decisions in ${countyName}.`;
 
+  const defaultSituations = [
+    "Probate property that needs to be evaluated and sold",
+    "Inherited homes requiring cleanout, repairs, or preparation",
+    "Trust-owned real estate needing sale coordination",
+    "Senior housing transitions involving a longtime family home",
+    "Pricing questions for properties in non-standard condition",
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title={`${countyName} Probate Real Estate & Inherited Property Guidance | Real Property Planning`}
-        description={`Real Property Planning helps clients and referral partners with probate real estate, inherited homes, estate sales, trust-owned property, and senior transitions in ${countyName}, Washington.`}
+        title={`${countyName} Probate & Inherited Property Sales | Real Property Planning`}
+        description={`David Stein provides experienced real estate guidance for probate property, inherited homes, estate sales, and senior transitions in ${countyName}, Washington. Broker + certified appraiser.`}
       />
       <BreadcrumbSchema items={breadcrumbItems} />
       <Header />
@@ -55,13 +67,13 @@ const CountyPageTemplate = ({
               {countyName} Service Area
             </p>
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-[22px]">
-              Probate Real Estate and Inherited Property Guidance in {countyName}
+              Probate & Inherited Property Sales in {countyName}
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-5">
-              Real Property Planning provides practical real estate guidance for probate property, inherited homes, estate sales, trust-owned homes, and senior transitions throughout {countyName}, Washington.
+              David Stein provides practical, experienced real estate guidance for probate property, inherited homes, trust-owned real estate, and senior transitions throughout {countyName}, Washington.
             </p>
             <p className="text-lg text-primary-foreground/70 leading-relaxed">
-              Whether the property needs preparation, pricing strategy, family coordination, or a full sale plan, clients and referral partners benefit from local market insight and experienced support. David Stein brings more than 20 years of real estate and valuation experience to these important transitions.
+              {localInsight || `Whether the property needs assessment, preparation, pricing strategy, or a full sale plan, clients and referral partners in ${countyName} benefit from David's dual credentials as a licensed broker and state certified residential appraiser.`}
             </p>
           </div>
         </div>
@@ -88,8 +100,30 @@ const CountyPageTemplate = ({
         </div>
       </section>
 
-      {/* Communities Served */}
+      {/* Typical Situations */}
       <section className="py-20 lg:py-28 bg-secondary">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
+              Common Situations in {countyName}
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              David regularly works with clients in {countyName} facing situations such as:
+            </p>
+            <ul className="space-y-4">
+              {(typicalSituations || defaultSituations).map((item, index) => (
+                <li key={index} className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
+                  <span className="text-muted-foreground">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Communities Served */}
+      <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
@@ -108,12 +142,23 @@ const CountyPageTemplate = ({
       </section>
 
       {/* Local Paragraph */}
-      <section className="py-16 lg:py-20 bg-background">
+      <section className="py-16 lg:py-20 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <p className="text-muted-foreground text-lg leading-relaxed">
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
               {localParagraph || defaultLocalParagraph}
             </p>
+            <div className="flex flex-wrap gap-3">
+              <Link to="/probate-estate-sales" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Probate & Estate Sales</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/executors" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Executors</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/for-attorneys" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Attorneys</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/senior-transitions" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Senior Transitions</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/why-valuation-matters" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Why Valuation Matters</Link>
+            </div>
           </div>
         </div>
       </section>
@@ -127,10 +172,13 @@ const CountyPageTemplate = ({
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
               Need help with a property in {countyName}?
             </h2>
+            <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
+              David provides confidential consultations for executors, attorneys, trustees, families, and financial professionals throughout {countyName}.
+            </p>
             <div className="flex justify-center">
               <Link to="/contact">
                 <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold">
-                  Request a Call
+                  Schedule a Consultation
                 </Button>
               </Link>
             </div>
