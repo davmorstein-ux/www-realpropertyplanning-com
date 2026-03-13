@@ -8,41 +8,63 @@ import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Phone, CheckCircle } from "lucide-react";
+import { Phone, CheckCircle, AlertTriangle } from "lucide-react";
 
-const whatMakesDifferent = [
-  "Legal authority and timing may affect when a sale can occur",
-  "Family communication can affect decision-making",
-  "The home may need preparation before market exposure",
-  "Pricing must reflect condition, timing, and market reality",
-  "Some properties require a more careful strategy due to deferred maintenance or occupancy issues",
+const probateVsInherited = [
+  {
+    label: "Probate Property",
+    description: "Property being administered through court-supervised probate. Legal authority (letters testamentary or letters of administration) is typically required before a sale can proceed. Timelines, court requirements, and fiduciary duties all affect the process.",
+  },
+  {
+    label: "Inherited Property (Non-Probate)",
+    description: "Property that passes outside of probate — through a trust, joint tenancy, or beneficiary designation. These situations may have fewer legal hurdles but still involve condition concerns, family coordination, and pricing decisions.",
+  },
 ];
 
-const davidCanHelp = [
-  "Inherited homes",
-  "Probate property",
-  "Trust-owned real estate",
-  "Vacant estate homes",
-  "Deferred-maintenance property",
-  "Sale preparation and market strategy",
+const whatMakesDifferent = [
+  "Legal authority and court requirements may dictate when and how a sale occurs",
+  "Multiple decision-makers — executors, co-heirs, attorneys, trustees — must coordinate",
+  "Properties often have years of deferred maintenance, clutter, or vacancy",
+  "Pricing must account for condition, legal timelines, and realistic market expectations",
+  "Emotional complexity can affect family communication and decision-making",
+  "Preparation decisions (as-is vs. repair) have a direct impact on sale outcome",
+];
+
+const timingConsiderations = [
+  {
+    title: "Before Legal Authority Is Granted",
+    text: "David can assess the property, discuss likely value, and help plan next steps — so you're ready to act as soon as authority is in place.",
+  },
+  {
+    title: "During Active Probate",
+    text: "Coordinate preparation, cleanout, pricing strategy, and listing timeline in alignment with legal proceedings and court requirements.",
+  },
+  {
+    title: "Post-Probate or Trust Distribution",
+    text: "Once authority is clear, David manages the full sale process — preparation, marketing, negotiation, and closing.",
+  },
 ];
 
 const faqs = [
   {
     question: "How long does it take to sell a probate property in Washington?",
-    answer: "Timelines vary depending on legal authority, property condition, preparation needs, and market conditions. Some probate properties sell within weeks of listing; others may take longer due to cleanup, repairs, or coordination among multiple parties. David Stein helps create a realistic timeline based on each situation.",
+    answer: "Timelines depend on legal authority, property condition, preparation needs, and market conditions. Some properties list within weeks of authority being granted; others need months of preparation. David helps create a realistic timeline based on your specific situation.",
   },
   {
     question: "Can an estate property be sold as-is?",
-    answer: "Yes. Many estate and probate properties are sold in as-is condition, especially when time, budget, or logistics make preparation impractical. David helps clients evaluate whether an as-is sale or targeted preparation will produce the best overall result.",
+    answer: "Yes. Many probate and estate properties sell as-is, especially when time or budget constraints make preparation impractical. David evaluates whether an as-is sale or targeted improvements will produce the best overall result for the estate.",
   },
   {
     question: "What costs are involved in selling a probate property?",
-    answer: "Common costs include clean-out, minor repairs, staging, real estate commissions, closing costs, and any title-related expenses. David helps executors and families understand likely costs upfront so there are no surprises during the process.",
+    answer: "Common costs include cleanout, repairs, staging, real estate commissions, closing costs, and title-related expenses. David helps executors understand likely costs upfront so there are no surprises.",
   },
   {
-    question: "Does the executor need court approval to sell estate property in Washington?",
-    answer: "It depends on the estate structure and the authority granted. In many cases, a personal representative has authority under the will or court appointment to sell without additional court confirmation. Legal questions should always be directed to the estate attorney.",
+    question: "Does the executor need court approval to sell in Washington?",
+    answer: "It depends on the estate structure and the authority granted by the court or will. In many cases, a personal representative can sell without additional court confirmation. Legal questions should always be directed to the estate attorney.",
+  },
+  {
+    question: "How is pricing different for probate property?",
+    answer: "Estate properties often have condition issues that standard market comparisons don't account for. David's appraisal background allows him to evaluate the property more accurately — accounting for deferred maintenance, functional obsolescence, and realistic buyer expectations.",
   },
 ];
 
@@ -50,7 +72,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   name: "Real Property Planning — Probate & Estate Property Sales",
-  description: "Real Property Planning provides experienced guidance for probate real estate, estate property sales, inherited homes, and trust-owned homes throughout Western Washington.",
+  description: "David Stein provides experienced guidance for probate real estate sales, inherited property, and estate-related home transactions throughout Western Washington. Broker and certified appraiser.",
   url: "https://realpropertyplanning.com/probate-estate-sales",
   areaServed: [
     { "@type": "AdministrativeArea", name: "King County, WA" },
@@ -64,8 +86,8 @@ const ProbateEstateSales = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Probate Real Estate & Estate Property Sales | Real Property Planning"
-        description="Real Property Planning provides experienced guidance for probate real estate, estate property sales, inherited homes, and trust-owned homes throughout Western Washington."
+        title="Probate Property Sales & Estate Real Estate | Real Property Planning"
+        description="Experienced guidance for probate property sales, court-supervised transactions, and estate real estate in Washington. David Stein manages preparation, pricing, and sale execution for executors and families."
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema items={[{ name: "Probate & Estate Sales", url: "/probate-estate-sales" }]} />
@@ -76,16 +98,16 @@ const ProbateEstateSales = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="text-gold font-bold tracking-widest uppercase mb-4 text-base">
-              Probate Real Estate Services
+              Probate & Estate Property Sales
             </p>
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
-              Experienced Guidance for Probate and Estate Property Sales
+              Selling Probate Property Requires a Different Kind of Expertise
             </h1>
             <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
-              Real Property Planning helps clients and referral partners navigate probate real estate, inherited homes, estate property sales, and trust-owned property with a practical, steady approach.
+              Probate and estate-related property sales are not typical transactions. They involve legal timelines, fiduciary responsibilities, family coordination, and properties that often need significant preparation before reaching the market.
             </p>
             <p className="text-lg text-primary-foreground/70 leading-relaxed mb-8">
-              These transactions often involve more complexity than a typical home sale. The property may need cleanout, preparation, deferred maintenance review, pricing analysis, or coordination among family members, fiduciaries, and legal professionals. David Stein provides experienced guidance shaped by both brokerage and valuation experience.
+              David Stein brings the perspective of both a licensed broker and a certified appraiser — providing the valuation insight, market strategy, and hands-on coordination that these situations demand.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/contact">
@@ -106,8 +128,30 @@ const ProbateEstateSales = () => {
 
       <TrustStrip />
 
-      {/* What Makes Estate Property Sales Different */}
+      {/* Probate vs Inherited */}
       <section className="py-20 lg:py-28 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
+              Probate Property vs. Inherited Property — What's the Difference?
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              Not all inherited property goes through probate. Understanding the distinction helps determine the right approach:
+            </p>
+            <div className="space-y-6">
+              {probateVsInherited.map((item, index) => (
+                <div key={index} className="bg-card border border-border rounded-xl p-6">
+                  <h3 className="font-serif text-lg text-foreground font-semibold mb-2">{item.label}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What Makes These Sales Different */}
+      <section className="py-20 lg:py-28 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
@@ -125,37 +169,49 @@ const ProbateEstateSales = () => {
         </div>
       </section>
 
-      {/* David Can Help With */}
-      <section className="py-20 lg:py-28 bg-secondary">
+      {/* Timing and Coordination */}
+      <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-              Real Property Planning Can Help With
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
+              Timing and Coordination in Probate Sales
             </h2>
-            <ul className="space-y-4">
-              {davidCanHelp.map((item, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-gold mt-0.5 shrink-0" />
-                  <span className="text-foreground">{item}</span>
-                </li>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              David works with clients at every stage of the process — whether legal authority has been granted or not:
+            </p>
+            <div className="space-y-5">
+              {timingConsiderations.map((item, index) => (
+                <div key={index} className="flex gap-5 items-start">
+                  <span className="text-gold font-serif text-2xl font-semibold shrink-0 leading-none pt-1">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+                  <div>
+                    <h3 className="font-serif text-lg text-foreground font-semibold mb-1">{item.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{item.text}</p>
+                  </div>
+                </div>
               ))}
-            </ul>
+            </div>
+            <p className="text-muted-foreground mt-8 leading-relaxed">
+              Learn more about the complete <Link to="/how-the-process-works" className="text-accent hover:text-gold underline underline-offset-4">sale process from consultation to closing</Link>, or see why <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">accurate pricing is critical</Link> in estate situations.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* CTA Strip */}
-      <section className="py-16 bg-primary">
+      {/* Legal Disclaimer */}
+      <section className="py-12 bg-secondary">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-serif text-2xl md:text-3xl text-primary-foreground font-semibold mb-6">
-              Need guidance on preparing, pricing, or selling an estate-related property?
-            </h2>
-            <Link to="/contact">
-              <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold">
-                Schedule a Consultation
-              </Button>
-            </Link>
+          <div className="max-w-3xl mx-auto">
+            <div className="flex items-start gap-4 bg-card border border-border rounded-xl p-6">
+              <AlertTriangle className="w-6 h-6 text-gold shrink-0 mt-0.5" />
+              <div>
+                <h3 className="font-serif text-lg text-foreground font-semibold mb-2">Important Note</h3>
+                <p className="text-muted-foreground leading-relaxed text-sm">
+                  David Stein provides real estate guidance, market analysis, and property sale services. Legal advice regarding probate administration, estate law, fiduciary duties, and court procedures should be directed to a qualified attorney. David works collaboratively with your legal team to ensure the real estate side proceeds smoothly.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -163,6 +219,26 @@ const ProbateEstateSales = () => {
       <PageFAQ faqs={faqs} heading="Probate & Estate Sale FAQs" />
 
       <RelatedServices currentPath="/probate-estate-sales" />
+
+      {/* Bottom CTA */}
+      <section className="py-20 lg:py-28 bg-primary">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
+              Need experienced help selling a probate or estate property?
+            </h2>
+            <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
+              David Stein provides a no-pressure consultation to review the property, discuss timing, and outline next steps.
+            </p>
+            <Link to="/contact">
+              <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold">
+                <Phone className="w-5 h-5 mr-2" />
+                Schedule a Consultation
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
 
       <DisclaimerSection />
       <Footer />
