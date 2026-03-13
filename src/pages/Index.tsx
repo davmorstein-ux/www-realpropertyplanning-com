@@ -510,7 +510,7 @@ const Index = () => {
 
           <div className="text-center mt-10">
             <Link to="/counties">
-              <Button variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+              <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold focus-visible:ring-gold">
                 View All Service Areas
                 <ChevronRight className="w-4 h-4 ml-1" />
               </Button>
