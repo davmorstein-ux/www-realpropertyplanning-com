@@ -111,10 +111,10 @@ const ForAttorneys = () => {
                 A Real Estate Partner You Can Refer With Confidence
               </h1>
               <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
-                Estate planning attorneys, probate attorneys, elder law professionals, and fiduciaries need a real estate resource who reduces friction, communicates clearly, and handles the property side with professionalism and discretion.
+                Attorneys refer clients to David Stein because he understands what they need: a real estate professional who can assess a property honestly, communicate with multiple parties without creating complications, price the home accurately, and manage the sale from start to finish — all while keeping legal counsel informed at the right moments.
               </p>
               <p className="text-lg text-primary-foreground/70 leading-relaxed mb-8">
-                David Stein brings the rare combination of a licensed Washington real estate broker and a state certified residential appraiser — with over 20 years of experience navigating the intersection of property, family, and fiduciary responsibility.
+                Unlike a general listing agent, David holds both a broker license and a state certified appraiser credential, giving him the analytical precision and market knowledge that estate, probate, and elder law situations require. Over 20 years of focused experience means fewer surprises and better outcomes for your clients.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/contact">

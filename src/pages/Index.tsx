@@ -229,11 +229,11 @@ const Index = () => {
               </h1>
 
               <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-[760px] mx-auto mb-4 text-center">
-                When a property is tied to probate, an inheritance, a trust, or a major life change, the decisions are rarely simple. David Stein brings clarity, structure, and over two decades of hands-on experience to every situation.
+                Selling a home tied to probate, an inheritance, a trust, or a major life change is rarely straightforward. Legal timelines, family dynamics, deferred maintenance, and pricing uncertainty all complicate the process. David Stein provides the clarity and structure that these situations demand.
               </p>
 
               <p className="text-base text-muted-foreground/80 leading-relaxed max-w-[680px] mx-auto mb-8 text-center">
-                As both a licensed Washington real estate broker and a state certified residential appraiser, David combines market insight with valuation expertise — a rare combination that helps clients price accurately, prepare strategically, and sell confidently.
+                As one of the few professionals in Western Washington who holds both a real estate broker license and a state certified residential appraiser credential, David combines market strategy with analytical precision — helping clients avoid costly pricing mistakes and move forward with confidence.
               </p>
 
               {/* Top CTA */}
