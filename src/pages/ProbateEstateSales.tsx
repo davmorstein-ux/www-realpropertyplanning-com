@@ -104,10 +104,10 @@ const ProbateEstateSales = () => {
               Selling Probate Property Requires a Different Kind of Expertise
             </h1>
             <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
-              Probate and estate-related property sales are not typical transactions. They involve legal timelines, fiduciary responsibilities, family coordination, and properties that often need significant preparation before reaching the market.
+              A probate property sale is fundamentally different from listing a family home. The executor may need court authority before acting. The home may have years of deferred maintenance. Multiple heirs may disagree about timing or price. And the property itself often needs significant preparation before a single buyer walks through the door.
             </p>
             <p className="text-lg text-primary-foreground/70 leading-relaxed mb-8">
-              David Stein brings the perspective of both a licensed broker and a certified appraiser — providing the valuation insight, market strategy, and hands-on coordination that these situations demand.
+              David Stein specializes in exactly these situations — bringing the perspective of both a licensed broker and a certified appraiser to help executors, attorneys, and families navigate the process with clarity and confidence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/contact">
