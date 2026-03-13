@@ -66,8 +66,8 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Contact Real Property Planning | Probate Real Estate Guidance"
-        description="Contact Real Property Planning for help with probate real estate, inherited property, estate sales, valuation-related questions, and senior transitions throughout Western Washington."
+        title="Contact David Stein | Probate & Estate Real Estate Guidance"
+        description="Have a property tied to probate, a trust, an inheritance, or a senior transition? Contact David Stein for a confidential consultation. Serving King, Snohomish, Pierce & Kitsap Counties."
       />
       <BreadcrumbSchema items={[{ name: "Contact", url: "/contact" }]} />
       <Header />
