@@ -70,7 +70,7 @@ const WhyValuationMatters = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Why Pricing & Valuation Matter in Estate Property Sales | Real Property Planning"
-        description="Incorrect pricing costs estates thousands. David Stein combines broker expertise with certified appraiser credentials to help executors, attorneys, and families price probate and inherited property accurately."
+        description="Overpricing stalls the sale. Underpricing costs the estate thousands. David Stein's rare combination of broker and certified appraiser credentials helps executors and families price inherited and probate property with confidence."
       />
       <BreadcrumbSchema items={[{ name: "Why Valuation Matters", url: "/why-valuation-matters" }]} />
       <Header />
