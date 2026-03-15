@@ -442,10 +442,10 @@ const Index = () => {
             <div className="bg-navy rounded-lg p-10 lg:p-12">
               <Award className="w-10 h-10 text-gold mb-6" />
               <h3 className="font-serif text-2xl text-primary-foreground font-semibold mb-4">
-                Why Professionals Refer David Stein
+                Why Professionals Refer Real Property Planning
               </h3>
               <p className="text-primary-foreground/80 leading-relaxed mb-6 text-sm">
-                Estate-related real estate demands careful judgment, discretion, and coordination across multiple parties. David's dual credentials and two decades of focused experience make him a natural fit for high-trust referrals.
+                Estate-related real estate demands careful judgment, discretion, and coordination across multiple parties. Our dual credentials and two decades of focused experience make Real Property Planning a natural fit for high-trust referrals.
               </p>
               <ul className="space-y-3">
                 {[
