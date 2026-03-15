@@ -69,8 +69,8 @@ const Header = () => {
       style={{ borderBottomWidth: "1px" }}
     >
       <div
-        className={`mx-auto max-w-[1400px] px-6 lg:px-10 flex items-center transition-all duration-300 ${
-          scrolled ? "h-[66px]" : "h-[80px]"
+        className={`mx-auto max-w-[1520px] px-6 lg:px-10 flex items-center transition-all duration-300 ${
+          scrolled ? "h-[78px] lg:h-[88px]" : "h-[86px] lg:h-[94px]"
         }`}
         ref={dropdownRef}
       >
