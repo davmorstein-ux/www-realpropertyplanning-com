@@ -184,7 +184,7 @@ const Header = () => {
                             key={child.href}
                             to={child.href}
                             className={`text-sm py-2 transition-colors hover:text-[hsl(216,65%,34%)] ${
-                              location.pathname === child.href ? "text-[hsl(216,65%,34%)] font-bold" : "text-foreground/60"
+                              location.pathname === child.href ? "text-[hsl(216,65%,34%)] font-bold" : "text-foreground"
                             }`}
                           >
                             {child.label}
