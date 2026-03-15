@@ -25,6 +25,14 @@ import KingCounty from "./pages/counties/KingCounty";
 import SnohomishCounty from "./pages/counties/SnohomishCounty";
 import PierceCounty from "./pages/counties/PierceCounty";
 import KitsapCounty from "./pages/counties/KitsapCounty";
+import Resources from "./pages/Resources";
+import SeniorMoveManagers from "./pages/resources/SeniorMoveManagers";
+import EstateSaleCompanies from "./pages/resources/EstateSaleCompanies";
+import ProbateEstateAttorneys from "./pages/resources/ProbateEstateAttorneys";
+import CPAsFinancialAdvisors from "./pages/resources/CPAsFinancialAdvisors";
+import SeniorLivingCommunities from "./pages/resources/SeniorLivingCommunities";
+import PropertyPreparationServices from "./pages/resources/PropertyPreparationServices";
+import MovingRelocationServices from "./pages/resources/MovingRelocationServices";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -58,6 +66,14 @@ const App = () => (
           <Route path="/counties/snohomish" element={<SnohomishCounty />} />
           <Route path="/counties/pierce" element={<PierceCounty />} />
           <Route path="/counties/kitsap" element={<KitsapCounty />} />
+          <Route path="/resources" element={<Resources />} />
+          <Route path="/resources/senior-move-managers" element={<SeniorMoveManagers />} />
+          <Route path="/resources/estate-sale-companies" element={<EstateSaleCompanies />} />
+          <Route path="/resources/probate-estate-attorneys" element={<ProbateEstateAttorneys />} />
+          <Route path="/resources/cpas-financial-advisors" element={<CPAsFinancialAdvisors />} />
+          <Route path="/resources/senior-living-communities" element={<SeniorLivingCommunities />} />
+          <Route path="/resources/property-preparation-services" element={<PropertyPreparationServices />} />
+          <Route path="/resources/moving-relocation-services" element={<MovingRelocationServices />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
