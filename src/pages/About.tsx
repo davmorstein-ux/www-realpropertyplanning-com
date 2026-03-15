@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
+import { realEstateAgentSchema } from "@/lib/schema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import TrustStrip from "@/components/TrustStrip";
 import RelatedServices from "@/components/RelatedServices";
@@ -33,6 +34,7 @@ const About = () => {
       <SEOHead
         title="About David Stein — Broker & Certified Appraiser | Real Property Planning"
         description="Meet David Stein — the Washington broker and certified appraiser behind Real Property Planning. Over 20 years of focused experience helping attorneys, executors, and families with estate property."
+        jsonLd={realEstateAgentSchema}
       />
       <BreadcrumbSchema items={[{ name: "About", url: "/about" }]} />
       <Header />

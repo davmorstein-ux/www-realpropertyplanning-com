@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
+import { articleSchema } from "@/lib/schema";
 import TrustStrip from "@/components/TrustStrip";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
@@ -71,19 +72,14 @@ const faqs = [
   },
 ];
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  name: "Real Property Planning — Guidance for Executors & Trustees",
-  description: "David Stein provides practical, step-by-step real estate guidance for executors, personal representatives, trustees, and families managing inherited property and estate home sales in Western Washington.",
-  url: "https://realpropertyplanning.com/executors",
-  areaServed: [
-    { "@type": "AdministrativeArea", name: "King County, WA" },
-    { "@type": "AdministrativeArea", name: "Snohomish County, WA" },
-    { "@type": "AdministrativeArea", name: "Pierce County, WA" },
-    { "@type": "AdministrativeArea", name: "Kitsap County, WA" },
-  ],
-};
+const jsonLd = articleSchema({
+  headline: "Estate Property Guide for Executors & Trustees",
+  description: "Practical, step-by-step real estate guidance for executors, personal representatives, trustees, and families managing inherited property and estate home sales in Western Washington.",
+  url: "/executors",
+  datePublished: "2025-01-15",
+  dateModified: "2026-03-15",
+  about: ["Executors", "Trustees", "Personal representatives", "Estate property", "Inherited home sales"],
+});
 
 const Executors = () => {
   return (

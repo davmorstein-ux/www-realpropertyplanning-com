@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
+import { articleSchema } from "@/lib/schema";
 import TrustStrip from "@/components/TrustStrip";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
@@ -64,6 +65,14 @@ const HowTheProcessWorks = () => {
       <SEOHead
         title="How the Process Works — Estate Property Sales | Real Property Planning"
         description="From initial consultation to closing day — here is exactly how David Stein helps executors, attorneys, and families sell probate, inherited, and trust-owned property in Western Washington."
+        jsonLd={articleSchema({
+          headline: "How the Process Works — Estate Property Sales",
+          description: "From initial consultation to closing day — step-by-step estate property sale process.",
+          url: "/how-the-process-works",
+          datePublished: "2025-01-15",
+          dateModified: "2026-03-15",
+          about: ["Estate sale process", "Probate property sales", "Real estate consultation", "Property preparation"],
+        })}
       />
       <BreadcrumbSchema items={[{ name: "How the Process Works", url: "/how-the-process-works" }]} />
       <Header />

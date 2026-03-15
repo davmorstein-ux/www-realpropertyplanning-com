@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
+import { realEstateAgentSchema } from "@/lib/schema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import TrustStrip from "@/components/TrustStrip";
 import { Button } from "@/components/ui/button";
@@ -68,6 +69,7 @@ const Contact = () => {
       <SEOHead
         title="Contact David Stein | Probate & Estate Real Estate Guidance"
         description="Have a property tied to probate, a trust, an inheritance, or a senior transition? Contact David Stein for a confidential consultation. Serving King, Snohomish, Pierce & Kitsap Counties."
+        jsonLd={realEstateAgentSchema}
       />
       <BreadcrumbSchema items={[{ name: "Contact", url: "/contact" }]} />
       <Header />

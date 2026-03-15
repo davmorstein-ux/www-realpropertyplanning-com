@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
+import { articleSchema } from "@/lib/schema";
 import TrustStrip from "@/components/TrustStrip";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
@@ -88,19 +89,14 @@ const benefitFeatures = [
 ];
 
 const ForFinancialPlanners = () => {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    name: "Real Property Planning — Real Estate Guidance for Financial Planners",
-    description: "Real Property Planning provides probate real estate, inherited property, trust-owned real estate, and estate sale guidance for financial planners and their clients in King, Snohomish, Pierce, and Kitsap Counties.",
-    url: "https://realpropertyplanning.com/for-financial-planners",
-    areaServed: [
-      { "@type": "AdministrativeArea", name: "King County, WA" },
-      { "@type": "AdministrativeArea", name: "Snohomish County, WA" },
-      { "@type": "AdministrativeArea", name: "Pierce County, WA" },
-      { "@type": "AdministrativeArea", name: "Kitsap County, WA" },
-    ],
-  };
+  const jsonLd = articleSchema({
+    headline: "Real Estate Guidance for Financial Planners and Their Clients",
+    description: "Real Property Planning provides probate real estate, inherited property, trust-owned real estate, and estate sale guidance for financial planners and their clients in Western Washington.",
+    url: "/for-financial-planners",
+    datePublished: "2025-01-15",
+    dateModified: "2026-03-15",
+    about: ["Financial planner guidance", "Estate property", "Inherited property", "Wealth management", "Real estate planning"],
+  });
 
   return (
     <div className="min-h-screen bg-background">

@@ -2,9 +2,11 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
+import { articleSchema } from "@/lib/schema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Phone, MessageSquare } from "lucide-react";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import {
   Accordion,
   AccordionContent,
@@ -120,7 +122,16 @@ const Terminology = () => {
       <SEOHead
         title="Wills, Probate & Real Property Glossary | David Stein"
         description="A clear glossary of wills, probate, inheritance, and real property terms to help attorneys, executors, trustees, and families understand the process of managing and selling estate-related real estate."
+        jsonLd={articleSchema({
+          headline: "Wills, Probate & Real Property Glossary",
+          description: "A clear glossary of wills, probate, inheritance, and real property terms for attorneys, executors, trustees, and families.",
+          url: "/terminology",
+          datePublished: "2025-01-15",
+          dateModified: "2026-03-15",
+          about: ["Probate terminology", "Estate glossary", "Real property terms", "Wills and trusts", "Legal real estate terms"],
+        })}
       />
+      <BreadcrumbSchema items={[{ name: "Terminology", url: "/terminology" }]} />
       <Header />
 
       {/* Hero */}

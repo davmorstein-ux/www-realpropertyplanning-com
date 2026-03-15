@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import { articleSchema } from "@/lib/schema";
 import RelatedServices from "@/components/RelatedServices";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import CTASection from "@/components/CTASection";
@@ -13,6 +14,14 @@ const HowToMoveElderlyParents = () => (
       title="How to Move Elderly Parents Out of Their Home in Washington State | Real Property Planning"
       description="A compassionate step-by-step guide for families navigating senior housing transitions in Washington State — from recognizing when it's time to move through selling the family home."
       canonical="https://www.realpropertyplanning.com/how-to-move-elderly-parents"
+      jsonLd={articleSchema({
+        headline: "How to Move Elderly Parents Out of Their Home in Washington State",
+        description: "A compassionate step-by-step guide for families navigating senior housing transitions in Washington State — from recognizing when it's time to move through selling the family home.",
+        url: "/how-to-move-elderly-parents",
+        datePublished: "2025-03-01",
+        dateModified: "2026-03-15",
+        about: ["Senior transitions", "Assisted living", "Downsizing", "Senior move management", "Selling a family home", "Elder care housing"],
+      })}
     />
     <BreadcrumbSchema
       items={[

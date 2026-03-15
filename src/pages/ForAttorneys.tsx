@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
+import { articleSchema } from "@/lib/schema";
 import TrustStrip from "@/components/TrustStrip";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
@@ -67,26 +68,14 @@ const faqs = [
   },
 ];
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  name: "Real Property Planning — Real Estate Resource for Attorneys and Fiduciaries",
-  description:
-    "David Stein provides probate real estate guidance, inherited property sales support, and practical coordination for estate planning attorneys, probate attorneys, elder law professionals, and fiduciaries across Western Washington.",
-  url: "https://realpropertyplanning.com/for-attorneys",
-  provider: {
-    "@type": "RealEstateAgent",
-    name: "David Stein",
-    url: "https://realpropertyplanning.com",
-    jobTitle: "Real Estate Broker & State Certified Appraiser",
-  },
-  areaServed: [
-    { "@type": "AdministrativeArea", name: "King County, WA" },
-    { "@type": "AdministrativeArea", name: "Snohomish County, WA" },
-    { "@type": "AdministrativeArea", name: "Pierce County, WA" },
-    { "@type": "AdministrativeArea", name: "Kitsap County, WA" },
-  ],
-};
+const jsonLd = articleSchema({
+  headline: "Probate Real Estate Resource for Attorneys & Fiduciaries",
+  description: "David Stein provides probate real estate guidance, inherited property sales support, and practical coordination for estate planning attorneys, probate attorneys, elder law professionals, and fiduciaries across Western Washington.",
+  url: "/for-attorneys",
+  datePublished: "2025-01-15",
+  dateModified: "2026-03-15",
+  about: ["Probate real estate", "Attorney referral", "Fiduciary support", "Estate property", "Trust-owned real estate"],
+});
 
 const ForAttorneys = () => {
   return (
