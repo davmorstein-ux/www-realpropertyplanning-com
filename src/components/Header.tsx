@@ -69,13 +69,13 @@ const Header = () => {
       style={{ borderBottomWidth: "1px" }}
     >
       <div
-        className={`mx-auto max-w-[1520px] px-6 lg:px-10 flex items-center transition-all duration-300 ${
-          scrolled ? "h-[78px] lg:h-[88px]" : "h-[86px] lg:h-[94px]"
+        className={`mx-auto max-w-[1520px] px-4 md:px-6 lg:px-10 flex items-center transition-all duration-300 ${
+          scrolled ? "h-[78px] md:h-[88px]" : "h-[86px] md:h-[94px]"
         }`}
         ref={dropdownRef}
       >
         {/* Left – Navigation */}
-        <nav className="hidden lg:flex items-center gap-5 xl:gap-6 shrink-0">
+        <nav className="hidden md:flex items-center gap-3 lg:gap-5 xl:gap-6 shrink-0">
           {primaryLinks.map((link) => (
             <div key={link.label} className="relative">
               {link.children ? (
