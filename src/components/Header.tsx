@@ -170,7 +170,7 @@ const Header = () => {
                   <>
                     <button
                       className={`w-full text-left text-[15px] py-2.5 transition-colors hover:text-[hsl(216,65%,34%)] flex items-center justify-between ${
-                        isActive(link.href, link.children) ? "text-[hsl(216,65%,34%)] font-bold" : "text-foreground/70"
+                        isActive(link.href, link.children) ? "text-[hsl(216,65%,34%)] font-bold" : "text-foreground"
                       }`}
                       onClick={() => setMobileExpanded(mobileExpanded === link.label ? null : link.label)}
                     >
