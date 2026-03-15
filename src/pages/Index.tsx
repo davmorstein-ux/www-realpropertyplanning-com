@@ -378,7 +378,7 @@ const Index = () => {
         <div className="mx-auto max-w-[1200px] px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <div className="bg-card border border-border rounded-3xl p-8 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
-              <p className="text-gold font-bold tracking-[0.2em] uppercase mb-2 text-xs">
+              <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-sm">
                 Why Clients and Referral Partners Choose Real Property Planning
               </p>
               <div className="grid sm:grid-cols-2 gap-3">
