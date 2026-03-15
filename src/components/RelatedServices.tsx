@@ -9,6 +9,7 @@ const allLinks = [
   { href: "/for-financial-planners", label: "For Financial Planners" },
   { href: "/why-valuation-matters", label: "Why Valuation Matters" },
   { href: "/how-the-process-works", label: "How the Process Works" },
+  { href: "/how-to-move-elderly-parents", label: "How to Move Elderly Parents" },
   { href: "/counties", label: "Counties We Serve" },
   { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact David" },

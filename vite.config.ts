@@ -107,6 +107,11 @@ const ROUTE_METADATA: Record<string, { title: string; description: string }> = {
     description:
       "Moving companies and relocation specialists experienced with estate and senior transitions in Western Washington.",
   },
+  "/how-to-move-elderly-parents": {
+    title: "How to Move Elderly Parents Out of Their Home in Washington State | Real Property Planning",
+    description:
+      "A compassionate step-by-step guide for families navigating senior housing transitions in Washington State — from recognizing when it's time to move through selling the family home.",
+  },
 };
 
 const replaceTag = (html: string, regex: RegExp, replacement: string) =>
