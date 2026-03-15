@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Phone, Mail } from "lucide-react";
 import daveHeadshot from "@/assets/dave-headshot.jpg";
+import logo from "@/assets/logo-rpp.jpg";
 
 const HeroSection = () => {
   return (
@@ -15,10 +16,15 @@ const HeroSection = () => {
       <div className="container relative z-10 px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <p className="text-gold font-bold tracking-wider uppercase mb-4 text-base">
-              David Stein — Licensed Broker & Certified Appraiser
-            </p>
-            
+            {/* Hero Logo */}
+            <div className="mb-6">
+              <img
+                src={logo}
+                alt="Real Property Planning"
+                className="w-[300px] md:w-[560px] lg:w-[800px] h-auto object-contain"
+              />
+            </div>
+
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-primary-foreground font-medium leading-tight mb-6">
               Specialized Guidance for Probate & Estate Property Sales
             </h1>
