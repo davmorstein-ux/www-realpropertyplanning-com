@@ -33,6 +33,7 @@ import CPAsFinancialAdvisors from "./pages/resources/CPAsFinancialAdvisors";
 import SeniorLivingCommunities from "./pages/resources/SeniorLivingCommunities";
 import PropertyPreparationServices from "./pages/resources/PropertyPreparationServices";
 import MovingRelocationServices from "./pages/resources/MovingRelocationServices";
+import HowToMoveElderlyParents from "./pages/HowToMoveElderlyParents";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
