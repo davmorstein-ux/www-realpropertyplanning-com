@@ -261,6 +261,70 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Who I Work With */}
+      <section className="py-20 lg:py-28 bg-background">
+        <div className="mx-auto max-w-[1200px] px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-4">
+              Who I Work With
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
+              Specialized real estate guidance for professionals, families, and decision-makers navigating important property transitions.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                icon: Briefcase,
+                title: "Attorneys",
+                text: "Support for attorneys and their clients when real property is involved in probate, trust administration, estate matters, or major life transitions.",
+              },
+              {
+                icon: FileText,
+                title: "Executors & Personal Representatives",
+                text: "Practical guidance for those responsible for managing property decisions, preparing a home for sale, and navigating next steps with confidence.",
+              },
+              {
+                icon: Shield,
+                title: "Trustees & Fiduciaries",
+                text: "Professional real estate insight for trust-related property decisions, valuation questions, sale preparation, and coordinated transitions.",
+              },
+              {
+                icon: Heart,
+                title: "Seniors & Families",
+                text: "Thoughtful support for downsizing, relocation, changing care needs, and other significant housing transitions.",
+              },
+            ].map((card, index) => (
+              <div
+                key={index}
+                className="bg-secondary rounded-xl border border-border p-7 shadow-sm hover:shadow-md transition-shadow"
+              >
+                <card.icon className="w-7 h-7 text-gold mb-4" />
+                <h3 className="font-serif text-lg text-foreground font-semibold mb-3">{card.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{card.text}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-14">
+            <p className="text-muted-foreground text-base leading-relaxed max-w-2xl mx-auto mb-8">
+              David Stein combines over 20 years of real estate experience with valuation insight to help clients and referral partners make informed property decisions.
+            </p>
+            <Link to="/probate-estate-sales">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-border text-foreground hover:bg-muted font-semibold px-8 rounded-lg text-base h-[52px]"
+              >
+                View Services
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Trust Badges */}
       <section data-nosnippet className="bg-background border-b border-border py-5">
         <div className="mx-auto max-w-[1200px] px-6 lg:px-8">
