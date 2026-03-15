@@ -19,6 +19,22 @@ const softCta = "If you would like to discuss your specific situation, contact D
 
 const faqs = [
   {
+    question: "How do executors sell a house in Washington State?",
+    answer: `In Washington, an executor typically needs letters testamentary or letters of administration from the probate court before they have legal authority to sell real property. Once authority is established, the executor can engage a real estate broker, prepare the home for sale, and proceed with the listing and transaction. The process involves coordinating legal timelines, property preparation, pricing, and communication with heirs and beneficiaries. David Stein guides executors through each step — from initial property assessment to closing.\n\n${softCta}`,
+  },
+  {
+    question: "What happens to a house during probate?",
+    answer: `During probate, the home becomes part of the estate and is managed by the executor or personal representative appointed by the court. The property must be maintained, secured, and insured throughout the process. Depending on the terms of the will and the needs of the estate, the home may be sold to pay debts, distributed to beneficiaries, or held temporarily. David Stein works with executors and attorneys to evaluate the property, develop a plan, and manage the real estate side of the process.\n\n${softCta}`,
+  },
+  {
+    question: "Can a house be sold before probate is completed?",
+    answer: `In some cases, yes — but it depends on the estate structure, the court's requirements, and whether the executor has been granted authority to sell. Some properties held in trust or with survivorship rights may not require probate at all. In other situations, the court may need to approve the sale before it can close. David Stein works with estate attorneys to align the real estate timeline with the legal process, so the sale moves forward as efficiently as possible.\n\n${softCta}`,
+  },
+  {
+    question: "How do families move elderly parents into assisted living?",
+    answer: `Moving an elderly parent into assisted living involves many moving parts — finding the right community, managing the emotional transition, sorting through a lifetime of belongings, and often selling the family home. Families benefit from working with senior move managers, senior living placement services, and a real estate broker experienced in senior transitions. David Stein provides patient, practical guidance on the property side, coordinating the home sale with the transition timeline so families aren't overwhelmed.\n\n${softCta}`,
+  },
+  {
     question: "Do I need probate before selling a house in Washington?",
     answer: `It depends on how the property is titled and the estate structure. In many cases, probate or letters testamentary are required before a sale can proceed. Some properties held in trust or with survivorship rights may avoid probate entirely. The legal requirements should be reviewed with an attorney, but on the real estate side, David Stein can help you evaluate the property and prepare a plan so you are ready to move forward once authority is confirmed.\n\n${softCta}`,
   },
