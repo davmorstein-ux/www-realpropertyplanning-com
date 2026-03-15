@@ -141,7 +141,7 @@ const Header = () => {
         </div>
 
         {/* Right – CTA (desktop) / Hamburger (mobile) */}
-        <div className="hidden lg:flex items-center shrink-0">
+        <div className="hidden md:flex items-center shrink-0">
           <Link to="/contact">
             <Button size="sm" className="bg-gold hover:bg-gold-light text-foreground font-medium">
               <Phone className="w-4 h-4 mr-2" />
