@@ -72,6 +72,14 @@ const WhyValuationMatters = () => {
       <SEOHead
         title="Why Pricing & Valuation Matter in Estate Property Sales | Real Property Planning"
         description="An overpriced estate home sits for months. An underpriced one costs heirs thousands. David Stein is one of the few Washington professionals who holds both a broker license and a certified appraiser credential — bringing analytical depth that protects estate value."
+        jsonLd={articleSchema({
+          headline: "Why Pricing & Valuation Matter in Estate Property Sales",
+          description: "How broker and certified appraiser expertise prevents costly pricing mistakes in estate property.",
+          url: "/why-valuation-matters",
+          datePublished: "2025-01-15",
+          dateModified: "2026-03-15",
+          about: ["Property valuation", "Estate pricing", "Certified appraiser", "Probate property pricing", "Inherited home value"],
+        })}
       />
       <BreadcrumbSchema items={[{ name: "Why Valuation Matters", url: "/why-valuation-matters" }]} />
       <Header />

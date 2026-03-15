@@ -52,19 +52,14 @@ const faqs = [
   },
 ];
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  name: "Real Property Planning — Senior Transition Real Estate Support",
-  description: "David Stein provides compassionate, experienced real estate support for senior housing transitions — downsizing, assisted living moves, and family home sales throughout Western Washington.",
-  url: "https://realpropertyplanning.com/senior-transitions",
-  areaServed: [
-    { "@type": "AdministrativeArea", name: "King County, WA" },
-    { "@type": "AdministrativeArea", name: "Snohomish County, WA" },
-    { "@type": "AdministrativeArea", name: "Pierce County, WA" },
-    { "@type": "AdministrativeArea", name: "Kitsap County, WA" },
-  ],
-};
+const jsonLd = articleSchema({
+  headline: "Senior Home Sales & Downsizing Support",
+  description: "Compassionate, experienced real estate support for senior housing transitions — downsizing, assisted living moves, and family home sales throughout Western Washington.",
+  url: "/senior-transitions",
+  datePublished: "2025-01-15",
+  dateModified: "2026-03-15",
+  about: ["Senior transitions", "Downsizing", "Assisted living", "Senior home sales", "Family housing decisions"],
+});
 
 const SeniorTransitions = () => {
   return (

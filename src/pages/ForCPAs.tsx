@@ -89,19 +89,14 @@ const coordinatedFeatures = [
 ];
 
 const ForCPAs = () => {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    name: "Real Property Planning — Real Estate Guidance for CPAs",
-    description: "Real Property Planning provides probate real estate, inherited property, trust-owned real estate, and estate sale guidance for CPAs and their clients in King, Snohomish, Pierce, and Kitsap Counties.",
-    url: "https://realpropertyplanning.com/for-cpas",
-    areaServed: [
-      { "@type": "AdministrativeArea", name: "King County, WA" },
-      { "@type": "AdministrativeArea", name: "Snohomish County, WA" },
-      { "@type": "AdministrativeArea", name: "Pierce County, WA" },
-      { "@type": "AdministrativeArea", name: "Kitsap County, WA" },
-    ],
-  };
+  const jsonLd = articleSchema({
+    headline: "Real Estate Guidance for CPAs and Their Clients",
+    description: "Real Property Planning provides probate real estate, inherited property, trust-owned real estate, and estate sale guidance for CPAs and their clients in Western Washington.",
+    url: "/for-cpas",
+    datePublished: "2025-01-15",
+    dateModified: "2026-03-15",
+    about: ["CPA real estate guidance", "Estate property", "Inherited property", "Tax planning", "Capital gains"],
+  });
 
   return (
     <div className="min-h-screen bg-background">

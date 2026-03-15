@@ -69,19 +69,14 @@ const faqs = [
   },
 ];
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  name: "Real Property Planning — Probate & Estate Property Sales",
-  description: "David Stein provides experienced guidance for probate real estate sales, inherited property, and estate-related home transactions throughout Western Washington. Broker and certified appraiser.",
-  url: "https://realpropertyplanning.com/probate-estate-sales",
-  areaServed: [
-    { "@type": "AdministrativeArea", name: "King County, WA" },
-    { "@type": "AdministrativeArea", name: "Snohomish County, WA" },
-    { "@type": "AdministrativeArea", name: "Pierce County, WA" },
-    { "@type": "AdministrativeArea", name: "Kitsap County, WA" },
-  ],
-};
+const jsonLd = articleSchema({
+  headline: "Probate Property Sales & Estate Real Estate",
+  description: "Experienced guidance for probate real estate sales, inherited property, and estate-related home transactions throughout Western Washington.",
+  url: "/probate-estate-sales",
+  datePublished: "2025-01-15",
+  dateModified: "2026-03-15",
+  about: ["Probate real estate", "Estate sales", "Inherited property", "Court-supervised sales", "Fiduciary duties"],
+});
 
 const ProbateEstateSales = () => {
   return (
