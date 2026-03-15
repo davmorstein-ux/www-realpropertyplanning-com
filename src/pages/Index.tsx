@@ -637,7 +637,7 @@ const Index = () => {
                 <h3 className="font-serif text-lg text-foreground font-semibold mt-4 mb-2">
                   {item.title}
                 </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <p className="text-muted-foreground text-[15px] leading-relaxed">
                   {item.description}
                 </p>
               </div>
