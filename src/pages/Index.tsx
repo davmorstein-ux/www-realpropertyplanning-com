@@ -463,7 +463,7 @@ const Index = () => {
                 {whoIWorkWith.map((category, index) => (
                   <div key={index}>
                     <h3 className="font-serif text-lg text-foreground font-semibold mb-2">{category.group}</h3>
-                    <p className="text-muted-foreground text-sm">{category.members}</p>
+                    <p className="text-muted-foreground text-[15px]">{category.members}</p>
                   </div>
                 ))}
               </div>
