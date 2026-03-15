@@ -244,14 +244,17 @@ const Index = () => {
               </p>
             </div>
 
-            {/* Right Column – Hero Image */}
-            <div className="hidden lg:block">
-              <div className="rounded-2xl overflow-hidden shadow-xl">
-                <img
-                  src={heroHome}
-                  alt="Refined Pacific Northwest home exterior representing estate property guidance"
-                  className="w-full h-auto object-cover"
-                />
+            {/* Right Column – David Stein Headshot */}
+            <div className="hidden lg:flex justify-center">
+              <div className="relative">
+                <div className="w-80 h-96 rounded-2xl overflow-hidden border-4 border-gold/30 shadow-2xl">
+                  <img
+                    src={daveHeadshot2}
+                    alt="David Stein — Licensed Broker & Certified Appraiser"
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
+                <div className="absolute -bottom-4 -right-4 w-80 h-96 rounded-2xl border-2 border-gold/20 -z-10" />
               </div>
             </div>
           </div>
