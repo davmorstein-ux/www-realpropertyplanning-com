@@ -197,7 +197,7 @@ const Header = () => {
                   <Link
                     to={link.href}
                     className={`text-[15px] py-2.5 block transition-colors hover:text-[hsl(216,65%,34%)] ${
-                      location.pathname === link.href ? "text-[hsl(216,65%,34%)] font-bold" : "text-foreground/70"
+                      location.pathname === link.href ? "text-[hsl(216,65%,34%)] font-bold" : "text-foreground"
                     }`}
                   >
                     {link.label}
