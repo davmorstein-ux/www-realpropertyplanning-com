@@ -6,6 +6,7 @@ import { articleSchema } from "@/lib/schema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Phone, MessageSquare } from "lucide-react";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import {
   Accordion,
   AccordionContent,
