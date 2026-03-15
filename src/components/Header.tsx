@@ -69,19 +69,19 @@ const Header = () => {
       style={{ borderBottomWidth: "1px" }}
     >
       <div
-        className={`mx-auto max-w-[1520px] px-6 lg:px-10 flex items-center transition-all duration-300 ${
-          scrolled ? "h-[78px] lg:h-[88px]" : "h-[86px] lg:h-[94px]"
+        className={`mx-auto max-w-[1520px] px-4 md:px-6 lg:px-10 flex items-center transition-all duration-300 ${
+          scrolled ? "h-[78px] md:h-[88px]" : "h-[86px] md:h-[94px]"
         }`}
         ref={dropdownRef}
       >
         {/* Left – Navigation */}
-        <nav className="hidden lg:flex items-center gap-5 xl:gap-6 shrink-0">
+        <nav className="hidden md:flex items-center gap-3 lg:gap-5 xl:gap-6 shrink-0">
           {primaryLinks.map((link) => (
             <div key={link.label} className="relative">
               {link.children ? (
                 <>
                   <button
-                    className={`text-[13.5px] tracking-[0.04em] font-normal transition-colors hover:text-[hsl(216,65%,34%)] inline-flex items-center gap-1 ${
+                    className={`text-[12.5px] lg:text-[13.5px] tracking-[0.04em] font-normal transition-colors hover:text-[hsl(216,65%,34%)] inline-flex items-center gap-1 ${
                       isActive(link.href, link.children)
                         ? "text-[hsl(216,65%,34%)] font-medium"
                         : "text-foreground"
@@ -114,7 +114,7 @@ const Header = () => {
               ) : (
                 <Link
                   to={link.href}
-                  className={`text-[13.5px] tracking-[0.04em] font-normal transition-colors hover:text-[hsl(216,65%,34%)] ${
+                  className={`text-[12.5px] lg:text-[13.5px] tracking-[0.04em] font-normal transition-colors hover:text-[hsl(216,65%,34%)] ${
                     isActive(link.href)
                       ? "text-[hsl(216,65%,34%)] font-medium"
                       : "text-foreground"
@@ -133,15 +133,15 @@ const Header = () => {
             <img
               src={logo}
               alt="Real Property Planning logo – estate real estate planning and property transition services"
-              className={`transition-all duration-300 w-[320px] md:w-[480px] lg:w-[620px] xl:w-[700px] ${
-                scrolled ? "xl:w-[560px] lg:w-[500px] md:w-[400px] w-[280px]" : ""
+              className={`transition-all duration-300 w-[320px] md:w-[340px] lg:w-[620px] xl:w-[700px] ${
+                scrolled ? "xl:w-[560px] lg:w-[500px] md:w-[280px] w-[280px]" : ""
               } h-auto max-h-[72px] object-contain`}
             />
           </Link>
         </div>
 
         {/* Right – CTA (desktop) / Hamburger (mobile) */}
-        <div className="hidden lg:flex items-center shrink-0">
+        <div className="hidden md:flex items-center shrink-0">
           <Link to="/contact">
             <Button size="sm" className="bg-gold hover:bg-gold-light text-foreground font-medium">
               <Phone className="w-4 h-4 mr-2" />
@@ -152,7 +152,7 @@ const Header = () => {
 
         {/* Mobile Hamburger */}
         <button
-          className="lg:hidden p-2 text-foreground"
+          className="md:hidden p-2 text-foreground"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -162,7 +162,7 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <div className="lg:hidden px-6 pb-6 border-t border-border pt-4 bg-white">
+        <div className="md:hidden px-6 pb-6 border-t border-border pt-4 bg-white">
           <nav className="flex flex-col gap-1">
             {primaryLinks.map((link) => (
               <div key={link.label}>
