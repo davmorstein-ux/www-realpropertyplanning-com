@@ -402,15 +402,15 @@ const Index = () => {
       {/* Trust Strip */}
       <section className="bg-ivory border-y border-border py-6">
         <div className="container px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-x-8 gap-y-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:flex md:flex-wrap md:justify-center gap-x-8 gap-y-3">
             {[
               "Licensed Real Estate Broker — Washington State",
               "State Certified Residential Appraiser",
               "20+ Years of Real Estate & Valuation Experience",
               "King · Snohomish · Pierce · Kitsap Counties",
             ].map((indicator, index) => (
-              <div key={index} className="flex items-center gap-2 text-base text-muted-foreground">
-                <CheckCircle className="w-4 h-4 text-gold" />
+              <div key={index} className="flex items-center gap-2 text-base text-muted-foreground font-medium">
+                <CheckCircle className="w-4 h-4 text-gold shrink-0" />
                 <span>{indicator}</span>
               </div>
             ))}
