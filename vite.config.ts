@@ -67,6 +67,46 @@ const ROUTE_METADATA: Record<string, { title: string; description: string }> = {
     description:
       "Real Property Planning helps clients and referral partners with probate real estate, inherited homes, estate sales, trust-owned property, and senior transitions in Kitsap County, Washington.",
   },
+  "/resources": {
+    title: "Resources | Real Property Planning",
+    description:
+      "Trusted professionals and service providers for probate, estate, and senior transition needs in Western Washington.",
+  },
+  "/resources/senior-move-managers": {
+    title: "Senior Move Managers | Resources | Real Property Planning",
+    description:
+      "Senior move management professionals in Western Washington who coordinate and manage the physical and emotional aspects of relocating seniors.",
+  },
+  "/resources/estate-sale-companies": {
+    title: "Estate Sale Companies | Resources | Real Property Planning",
+    description:
+      "Estate sale companies in Western Washington that organize, price, and conduct sales of personal property and household contents during probate and estate transitions.",
+  },
+  "/resources/probate-estate-attorneys": {
+    title: "Probate & Estate Attorneys | Resources | Real Property Planning",
+    description:
+      "Probate and estate attorneys in Western Washington who guide families and fiduciaries through the probate process and estate administration.",
+  },
+  "/resources/cpas-financial-advisors": {
+    title: "CPAs & Financial Advisors | Resources | Real Property Planning",
+    description:
+      "CPAs and financial advisors in Western Washington who help with estate tax, capital gains, and financial planning related to inherited property.",
+  },
+  "/resources/senior-living-communities": {
+    title: "Senior Living Communities | Resources | Real Property Planning",
+    description:
+      "Assisted living, independent living, and memory care communities across Western Washington for families navigating senior housing transitions.",
+  },
+  "/resources/property-preparation-services": {
+    title: "Property Preparation Services | Resources | Real Property Planning",
+    description:
+      "Cleanout, staging, repair, and preparation services for estate and transition properties in Western Washington.",
+  },
+  "/resources/moving-relocation-services": {
+    title: "Moving & Relocation Services | Resources | Real Property Planning",
+    description:
+      "Moving companies and relocation specialists experienced with estate and senior transitions in Western Washington.",
+  },
 };
 
 const replaceTag = (html: string, regex: RegExp, replacement: string) =>
