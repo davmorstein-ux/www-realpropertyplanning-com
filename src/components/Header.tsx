@@ -84,7 +84,7 @@ const Header = () => {
                     className={`text-[13.5px] tracking-[0.04em] font-normal transition-colors hover:text-[hsl(216,65%,34%)] inline-flex items-center gap-1 ${
                       isActive(link.href, link.children)
                         ? "text-[hsl(216,65%,34%)] font-medium"
-                        : "text-foreground/70"
+                        : "text-foreground"
                     }`}
                     onClick={() => setOpenDropdown(openDropdown === link.label ? null : link.label)}
                     onMouseEnter={() => setOpenDropdown(link.label)}
