@@ -69,33 +69,22 @@ const Header = () => {
       style={{ borderBottomWidth: "1px" }}
     >
       <div
-        className={`mx-auto max-w-[1400px] px-6 lg:px-10 flex items-center justify-between transition-all duration-300 ${
-          scrolled ? "h-[64px]" : "h-[74px]"
+        className={`mx-auto max-w-[1400px] px-6 lg:px-10 flex items-center transition-all duration-300 ${
+          scrolled ? "h-[66px]" : "h-[80px]"
         }`}
         ref={dropdownRef}
       >
-        {/* Logo */}
-        <Link to="/" className="shrink-0 mr-16 lg:mr-24 flex items-center">
-          <img
-            src={logo}
-            alt="Real Property Planning logo – estate real estate planning and property transition services"
-            className={`transition-all duration-300 w-[240px] md:w-[380px] lg:w-[480px] ${
-              scrolled ? "lg:w-[400px] md:w-[320px] w-[210px]" : ""
-            } h-auto max-h-[54px] object-contain object-left`}
-          />
-        </Link>
-
-        {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-7">
+        {/* Left – Navigation */}
+        <nav className="hidden lg:flex items-center gap-6 shrink-0">
           {primaryLinks.map((link) => (
             <div key={link.label} className="relative">
               {link.children ? (
                 <>
                   <button
-                    className={`text-[13px] tracking-[0.06em] uppercase font-normal transition-colors hover:text-[hsl(216,65%,34%)] inline-flex items-center gap-1 ${
+                    className={`text-[13.5px] tracking-[0.04em] font-normal transition-colors hover:text-[hsl(216,65%,34%)] inline-flex items-center gap-1 ${
                       isActive(link.href, link.children)
                         ? "text-[hsl(216,65%,34%)] font-medium"
-                        : "text-foreground/45"
+                        : "text-foreground/70"
                     }`}
                     onClick={() => setOpenDropdown(openDropdown === link.label ? null : link.label)}
                     onMouseEnter={() => setOpenDropdown(link.label)}
@@ -125,10 +114,10 @@ const Header = () => {
               ) : (
                 <Link
                   to={link.href}
-                  className={`text-[13px] tracking-[0.06em] uppercase font-normal transition-colors hover:text-[hsl(216,65%,34%)] ${
+                  className={`text-[13.5px] tracking-[0.04em] font-normal transition-colors hover:text-[hsl(216,65%,34%)] ${
                     isActive(link.href)
                       ? "text-[hsl(216,65%,34%)] font-medium"
-                      : "text-foreground/45"
+                      : "text-foreground/70"
                   }`}
                 >
                   {link.label}
@@ -136,13 +125,30 @@ const Header = () => {
               )}
             </div>
           ))}
+        </nav>
+
+        {/* Center – Logo */}
+        <div className="flex-1 flex justify-center lg:justify-center">
+          <Link to="/" className="flex items-center">
+            <img
+              src={logo}
+              alt="Real Property Planning logo – estate real estate planning and property transition services"
+              className={`transition-all duration-300 w-[240px] md:w-[380px] lg:w-[520px] ${
+                scrolled ? "lg:w-[440px] md:w-[320px] w-[210px]" : ""
+              } h-auto max-h-[60px] object-contain`}
+            />
+          </Link>
+        </div>
+
+        {/* Right – CTA (desktop) / Hamburger (mobile) */}
+        <div className="hidden lg:flex items-center shrink-0">
           <Link to="/contact">
             <Button size="sm" className="bg-gold hover:bg-gold-light text-foreground font-medium">
               <Phone className="w-4 h-4 mr-2" />
               Consultation
             </Button>
           </Link>
-        </nav>
+        </div>
 
         {/* Mobile Hamburger */}
         <button
