@@ -599,7 +599,7 @@ const Index = () => {
                       {area.county}
                     </h3>
                   </div>
-                  <p className="text-primary-foreground/60 text-sm">
+                  <p className="text-primary-foreground/70 text-[15px]">
                     {area.cities}
                   </p>
                 </div>
