@@ -75,15 +75,15 @@ const Header = () => {
         ref={dropdownRef}
       >
         {/* Left – Navigation */}
-        <nav className="hidden md:flex items-center gap-3 lg:gap-5 xl:gap-6 shrink-0">
+        <nav className="hidden md:flex items-center gap-4 lg:gap-6 xl:gap-7 shrink-0">
           {primaryLinks.map((link) => (
             <div key={link.label} className="relative">
               {link.children ? (
                 <>
                   <button
-                    className={`text-[12.5px] lg:text-[13.5px] tracking-[0.04em] font-normal transition-colors hover:text-[hsl(216,65%,34%)] inline-flex items-center gap-1 ${
+                    className={`text-[14px] lg:text-[15px] tracking-[0.02em] font-medium transition-colors hover:text-[hsl(216,65%,34%)] inline-flex items-center gap-1 ${
                       isActive(link.href, link.children)
-                        ? "text-[hsl(216,65%,34%)] font-medium"
+                        ? "text-[hsl(216,65%,34%)] font-semibold"
                         : "text-foreground"
                     }`}
                     onClick={() => setOpenDropdown(openDropdown === link.label ? null : link.label)}
@@ -114,9 +114,9 @@ const Header = () => {
               ) : (
                 <Link
                   to={link.href}
-                  className={`text-[12.5px] lg:text-[13.5px] tracking-[0.04em] font-normal transition-colors hover:text-[hsl(216,65%,34%)] ${
+                  className={`text-[14px] lg:text-[15px] tracking-[0.02em] font-medium transition-colors hover:text-[hsl(216,65%,34%)] ${
                     isActive(link.href)
-                      ? "text-[hsl(216,65%,34%)] font-medium"
+                      ? "text-[hsl(216,65%,34%)] font-semibold"
                       : "text-foreground"
                   }`}
                 >
