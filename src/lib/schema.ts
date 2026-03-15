@@ -12,9 +12,15 @@ const areaServed = [
 export const realEstateAgentSchema = {
   "@context": "https://schema.org",
   "@type": "RealEstateAgent",
+  "@id": `${SITE_URL}/#organization`,
   name: BUSINESS_NAME,
   url: SITE_URL,
-  logo: LOGO_URL,
+  logo: {
+    "@type": "ImageObject",
+    url: LOGO_URL,
+    width: 400,
+    height: 400,
+  },
   image: LOGO_URL,
   description:
     "Real Property Planning provides experienced real estate guidance for probate property, inherited homes, estate sales, trust-owned real estate, and senior housing transitions throughout Western Washington.",
@@ -41,7 +47,6 @@ export const realEstateAgentSchema = {
     "Estate property guidance",
     "Senior housing transitions",
   ],
-  sameAs: [],
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "(206) 900-3015",
@@ -49,6 +54,7 @@ export const realEstateAgentSchema = {
     areaServed: "US",
     availableLanguage: "English",
   },
+  sameAs: [],
 };
 
 const publisher = {

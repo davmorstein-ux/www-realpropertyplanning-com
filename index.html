@@ -27,22 +27,39 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ProfessionalService",
+      "@type": "RealEstateAgent",
+      "@id": "https://realpropertyplanning.com/#organization",
       "name": "Real Property Planning",
       "url": "https://realpropertyplanning.com",
-      "logo": "https://realpropertyplanning.com/logo.png",
-      "description": "Real Property Planning helps attorneys, executors, trustees, fiduciaries, and families navigate probate real estate, inherited homes, estate property sales, and senior transitions throughout Western Washington.",
-      "areaServed": [
-        "King County WA",
-        "Snohomish County WA",
-        "Pierce County WA",
-        "Kitsap County WA"
-      ],
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://realpropertyplanning.com/logo.png",
+        "width": 400,
+        "height": 400
+      },
+      "image": "https://realpropertyplanning.com/logo.png",
+      "description": "Real Property Planning provides experienced real estate guidance for probate property, inherited homes, estate sales, trust-owned real estate, and senior housing transitions throughout Western Washington.",
+      "telephone": "(206) 900-3015",
+      "email": "david@realpropertyplanning.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "PO Box 1462",
+        "addressLocality": "Woodinville",
+        "addressRegion": "WA",
+        "postalCode": "98072",
+        "addressCountry": "US"
+      },
       "founder": {
         "@type": "Person",
         "name": "David Stein",
         "jobTitle": "Real Estate Broker and State Certified Residential Appraiser"
       },
+      "areaServed": [
+        { "@type": "AdministrativeArea", "name": "King County", "containedInPlace": { "@type": "State", "name": "Washington" } },
+        { "@type": "AdministrativeArea", "name": "Snohomish County", "containedInPlace": { "@type": "State", "name": "Washington" } },
+        { "@type": "AdministrativeArea", "name": "Pierce County", "containedInPlace": { "@type": "State", "name": "Washington" } },
+        { "@type": "AdministrativeArea", "name": "Kitsap County", "containedInPlace": { "@type": "State", "name": "Washington" } }
+      ],
       "serviceType": [
         "Probate real estate services",
         "Inherited property sales",
@@ -50,11 +67,14 @@
         "Estate property guidance",
         "Senior housing transitions"
       ],
-      "address": {
-        "@type": "PostalAddress",
-        "addressRegion": "WA",
-        "addressCountry": "US"
-      }
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "(206) 900-3015",
+        "contactType": "customer service",
+        "areaServed": "US",
+        "availableLanguage": "English"
+      },
+      "sameAs": []
     }
     </script>
   </head>
