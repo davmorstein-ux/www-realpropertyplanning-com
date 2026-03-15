@@ -696,7 +696,7 @@ const Index = () => {
               Ready to Discuss a Property Situation?
             </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Start with a confidential conversation. Whether you are an attorney, executor, trustee, family member, or financial professional, David Stein provides clear, experienced guidance tailored to your situation.
+              Start with a confidential conversation. Whether you are an attorney, executor, trustee, family member, or financial professional, Real Property Planning provides clear, experienced guidance tailored to your situation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">
