@@ -397,7 +397,7 @@ const Index = () => {
               What Real Property Planning Does
             </p>
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-4">
-              How David Stein Helps With Complex Property Decisions
+              How We Help With Complex Property Decisions
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
               Estate-related property sales require a different approach — one that accounts for legal timelines, family dynamics, deferred maintenance, and careful pricing.
