@@ -309,7 +309,7 @@ const Index = () => {
 
           <div className="text-center mt-14">
             <p className="text-muted-foreground text-base leading-relaxed max-w-2xl mx-auto mb-8">
-              David Stein combines over 20 years of real estate experience with valuation insight to help clients and referral partners make informed property decisions.
+              Led by David Stein, Real Property Planning combines over 20 years of real estate experience with valuation insight to help clients and referral partners make informed property decisions.
             </p>
             <Link to="/probate-estate-sales">
               <Button
