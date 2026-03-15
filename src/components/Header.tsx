@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Phone, Menu, X, ChevronDown } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "@/assets/logo-rpp.png";
+import logo from "@/assets/logo-rpp.jpg";
 
 const primaryLinks = [
   { href: "/", label: "Home" },
