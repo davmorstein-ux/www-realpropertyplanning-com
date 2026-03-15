@@ -388,7 +388,7 @@ const Index = () => {
                   "Specialized in probate, estates, trusts, and senior transitions",
                   "Local expertise across four Western Washington counties"
                 ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-3 px-4 py-3 bg-secondary rounded-xl text-muted-foreground text-sm">
+                  <div key={i} className="flex items-center gap-3 px-4 py-3.5 bg-secondary rounded-xl text-foreground text-[15px] font-medium">
                     <CheckCircle className="w-4 h-4 text-gold shrink-0" />
                     {item}
                   </div>
