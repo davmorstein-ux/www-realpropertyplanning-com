@@ -40,13 +40,6 @@ export const realEstateAgentSchema = {
     jobTitle: "Real Estate Broker and State Certified Residential Appraiser",
   },
   areaServed,
-  serviceType: [
-    "Probate real estate services",
-    "Inherited property sales",
-    "Trust-owned home sales",
-    "Estate property guidance",
-    "Senior housing transitions",
-  ],
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "(206) 900-3015",
