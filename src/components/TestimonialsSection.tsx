@@ -145,7 +145,7 @@ const TestimonialsSection = () => {
               Leave a Review
             </h3>
             <p className="text-muted-foreground text-sm mb-6">
-              If David Stein helped you with a property transition, your feedback is appreciated.
+              If Real Property Planning helped you with a property transition, your feedback is appreciated.
             </p>
 
             {submitted ? (

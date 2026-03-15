@@ -705,7 +705,7 @@ const Index = () => {
                   className="bg-navy hover:bg-navy-light text-primary-foreground font-semibold px-8 w-full sm:w-auto"
                 >
                   <Phone className="w-5 h-5 mr-2" />
-                  Speak With David Stein
+                  Schedule a Consultation
                 </Button>
               </Link>
               <Link to="/contact">
