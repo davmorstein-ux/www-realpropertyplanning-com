@@ -90,7 +90,16 @@ const AttorneyReferral = () => {
       <SEOHead
         title="Attorney and Professional Referral Resource for Probate Real Estate | David Stein"
         description="David Stein is a real estate and valuation resource for attorneys, trustees, executors, and fiduciaries handling probate, trust, and estate property matters in King, Snohomish, Pierce, and Kitsap Counties."
+        jsonLd={articleSchema({
+          headline: "Attorney and Professional Referral Resource for Probate Real Estate",
+          description: "David Stein is a real estate and valuation resource for attorneys, trustees, executors, and fiduciaries handling probate, trust, and estate property matters.",
+          url: "/attorney-referral",
+          datePublished: "2025-01-15",
+          dateModified: "2026-03-15",
+          about: ["Attorney referral", "Probate real estate", "Trust property", "Fiduciary support", "Estate property sales"],
+        })}
       />
+      <BreadcrumbSchema items={[{ name: "Attorney Referral", url: "/attorney-referral" }]} />
       <Header />
 
       {/* Section 1: Hero */}
