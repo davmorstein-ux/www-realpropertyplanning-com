@@ -92,10 +92,10 @@ const Header = () => {
               {link.children ? (
                 <>
                   <button
-                    className={`text-[15px] tracking-[0.04em] font-medium transition-colors hover:text-[hsl(216,65%,34%)] inline-flex items-center gap-1 ${
+                    className={`text-[14px] tracking-[0.05em] font-normal transition-colors hover:text-[hsl(216,65%,34%)] inline-flex items-center gap-1 ${
                       isActive(link.href, link.children)
-                        ? "text-[hsl(216,65%,34%)] font-semibold"
-                        : "text-foreground/70"
+                        ? "text-[hsl(216,65%,34%)] font-medium"
+                        : "text-foreground/55"
                     }`}
                     onClick={() => setOpenDropdown(openDropdown === link.label ? null : link.label)}
                     onMouseEnter={() => setOpenDropdown(link.label)}
