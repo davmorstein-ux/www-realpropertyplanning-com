@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
+import { articleSchema } from "@/lib/schema";
 import TrustStrip from "@/components/TrustStrip";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
