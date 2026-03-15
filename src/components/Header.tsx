@@ -152,7 +152,7 @@ const Header = () => {
 
         {/* Mobile Hamburger */}
         <button
-          className="lg:hidden p-2 text-foreground"
+          className="md:hidden p-2 text-foreground"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
         >
