@@ -517,7 +517,7 @@ const Index = () => {
                 Selling a home tied to an estate, trust, or family transition is fundamentally different from a conventional sale. Legal authority may limit timing. Multiple decision-makers may disagree. The property itself may have years of deferred maintenance.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                David Stein brings both the market knowledge of an experienced broker and the analytical eye of a certified appraiser — helping clients navigate these situations with clarity, realistic expectations, and a workable plan.
+                Led by David Stein, Real Property Planning brings both the market knowledge of an experienced broker and the analytical eye of a certified appraiser — helping clients navigate these situations with clarity, realistic expectations, and a workable plan.
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link to="/how-the-process-works">
