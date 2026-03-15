@@ -70,18 +70,18 @@ const Header = () => {
     >
       <div
         className={`mx-auto max-w-[1400px] px-6 lg:px-10 flex items-center justify-between transition-all duration-300 ${
-          scrolled ? "py-1.5" : "py-2.5 lg:py-3"
+          scrolled ? "h-[64px]" : "h-[74px]"
         }`}
         ref={dropdownRef}
       >
         {/* Logo */}
-        <Link to="/" className="shrink-0 mr-16 lg:mr-24">
+        <Link to="/" className="shrink-0 mr-16 lg:mr-24 flex items-center">
           <img
             src={logo}
             alt="Real Property Planning logo – estate real estate planning and property transition services"
             className={`transition-all duration-300 w-[240px] md:w-[380px] lg:w-[480px] ${
               scrolled ? "lg:w-[400px] md:w-[320px] w-[210px]" : ""
-            } h-auto`}
+            } h-auto max-h-[54px] object-contain object-left`}
           />
         </Link>
 
