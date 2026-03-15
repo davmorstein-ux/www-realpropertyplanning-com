@@ -13,8 +13,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import daveHeadshot from "@/assets/dave-headshot.jpg";
 import daveHeadshot2 from "@/assets/dave-headshot-2.jpg";
 import coupleWritingWill from "@/assets/couple-writing-will.png";
-import logo from "@/assets/logo.png";
-import expRealtyLogo2 from "@/assets/exp-realty-logo-2.png";
+import heroHome from "@/assets/hero-home.jpg";
 
 const services = [
   {
@@ -206,98 +205,102 @@ const Index = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative py-16 lg:py-24" style={{ background: 'linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--muted)) 100%)' }}>
-         <div className="container px-6 lg:px-8 pt-20">
+      <section className="py-20 lg:py-28" style={{ background: 'linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--muted)) 100%)' }}>
+        <div className="mx-auto max-w-[1200px] px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Left Column */}
             <div>
-              {/* Logo & Headshot */}
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 mb-8">
-                <img src={logo} alt="Real Property Planning Logo" className="h-[280px] sm:h-[400px] md:h-[512px] lg:h-[640px] w-auto" />
-                <div className="flex flex-col items-center">
-                  <img src={daveHeadshot2} alt="David Stein — Licensed Real Estate Broker and State Certified Appraiser in Washington" className="h-[180px] sm:h-[220px] md:h-[256px] lg:h-[320px] w-auto rounded-2xl object-cover shadow-lg" />
-                  <div className="mt-3 flex flex-col items-center">
-                    <div className="flex items-center gap-3">
-                      <p className="font-serif text-lg font-semibold text-foreground">David Stein</p>
-                      <img src={expRealtyLogo2} alt="eXp Realty" className="h-6 md:h-7 w-auto" />
-                    </div>
-                    <p className="text-xs text-muted-foreground mt-1">License #113972</p>
-                  </div>
-                </div>
-              </div>
-
-              <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[54px] text-foreground font-bold leading-[1.08] mb-5 text-center">
-                Experienced Real Estate Guidance for Probate, Inherited Property & Life Transitions
+              <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[50px] text-foreground font-bold leading-[1.1] mb-6">
+                Real Estate Guidance for Life's Most Important Property Transitions
               </h1>
 
-              <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-[760px] mx-auto mb-4 text-center">
-                Selling a home tied to probate, an inheritance, a trust, or a major life change is rarely straightforward. Legal timelines, family dynamics, deferred maintenance, and pricing uncertainty all complicate the process. David Stein provides the clarity and structure that these situations demand.
+              <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-xl">
+                Real Property Planning provides professional real estate guidance for attorneys, executors, trustees, seniors, and families navigating estate sales, probate property, trust-related transfers, downsizing, and other significant real property decisions.
               </p>
 
-              <p className="text-base text-muted-foreground/80 leading-relaxed max-w-[680px] mx-auto mb-8 text-center">
-                As one of the few professionals in Western Washington who holds both a real estate broker license and a state certified residential appraiser credential, David combines market strategy with analytical precision — helping clients avoid costly pricing mistakes and move forward with confidence.
-              </p>
-
-              {/* Top CTA */}
-              <div className="bg-card border border-border rounded-2xl p-6 max-w-[620px] mx-auto mb-8">
-                <p className="text-foreground font-serif text-lg font-semibold mb-4 text-center">
-                  Dealing with a property tied to probate, inheritance, a trust, or a family transition?
-                </p>
-                <div className="flex flex-wrap justify-center gap-3.5">
-                  <Link to="/contact">
-                    <Button 
-                      size="lg" 
-                      className="bg-foreground hover:bg-foreground/90 text-background font-bold px-6 rounded-xl text-base h-[52px]"
-                    >
-                      <Phone className="w-5 h-5 mr-2" />
-                      Schedule a Consultation
-                    </Button>
-                  </Link>
-                  <Link to="/contact">
-                    <Button 
-                      size="lg" 
-                      variant="outline" 
-                      className="border-border bg-card text-foreground hover:bg-muted font-bold px-6 rounded-xl text-base h-[52px]"
-                    >
-                      <Mail className="w-5 h-5 mr-2" />
-                      Send a Message
-                    </Button>
-                  </Link>
-                </div>
-              </div>
-
-              <div className="flex flex-wrap justify-center gap-3">
-                {["Probate Property", "Inherited Homes", "Trust Real Estate", "Estate Sales", "Senior Transitions"].map((tag) => (
-                  <span 
-                    key={tag}
-                    className="bg-card border border-border rounded-full px-4 py-2.5 text-sm text-muted-foreground"
+              <div className="flex flex-col sm:flex-row gap-4 mb-6">
+                <Link to="/contact">
+                  <Button
+                    size="lg"
+                    className="bg-[hsl(216,65%,34%)] hover:bg-[hsl(216,65%,28%)] text-white font-semibold px-8 rounded-lg text-base h-[52px] w-full sm:w-auto"
                   >
-                    {tag}
-                  </span>
-                ))}
+                    <Phone className="w-5 h-5 mr-2" />
+                    Schedule a Consultation
+                  </Button>
+                </Link>
+                <Link to="/probate-estate-sales">
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="border-border text-foreground hover:bg-muted font-semibold px-8 rounded-lg text-base h-[52px] w-full sm:w-auto"
+                  >
+                    Explore Services
+                  </Button>
+                </Link>
               </div>
+
+              <p className="text-sm text-muted-foreground">
+                Over 20 years of real estate and valuation experience.
+              </p>
             </div>
 
-            {/* Why Clients Reach Out */}
-            <div className="mt-12 max-w-3xl mx-auto">
-              <div className="bg-card border border-border rounded-3xl p-8 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
-                <p className="text-gold font-bold tracking-[0.2em] uppercase mb-2 text-xs">
-                  Why Clients and Referral Partners Choose Real Property Planning
-                </p>
-                <div className="grid sm:grid-cols-2 gap-3">
-                  {[
-                    "Dual-credentialed: broker + state certified appraiser",
-                    "Trusted by attorneys, executors, trustees, and families",
-                    "Specialized in probate, estates, trusts, and senior transitions",
-                    "Local expertise across four Western Washington counties"
-                  ].map((item, i) => (
-                    <div key={i} className="flex items-center gap-3 px-4 py-3 bg-secondary rounded-xl text-muted-foreground text-sm">
-                      <CheckCircle className="w-4 h-4 text-gold shrink-0" />
-                      {item}
-                    </div>
-                  ))}
-                </div>
+            {/* Right Column – Hero Image */}
+            <div className="hidden lg:block">
+              <div className="rounded-2xl overflow-hidden shadow-xl">
+                <img
+                  src={heroHome}
+                  alt="Refined Pacific Northwest home exterior representing estate property guidance"
+                  className="w-full h-auto object-cover"
+                />
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Trust Badges */}
+      <section data-nosnippet className="bg-background border-b border-border py-5">
+        <div className="mx-auto max-w-[1200px] px-6 lg:px-8">
+          <div className="flex flex-wrap justify-center gap-x-8 gap-y-3">
+            {[
+              "Real Estate Broker",
+              "State Certified Appraiser",
+              "Probate & Estate Property Focus",
+              "Serving Western Washington",
+            ].map((indicator, index) => (
+              <div key={index} className="flex items-center gap-2 text-sm text-muted-foreground">
+                <CheckCircle className="w-4 h-4 text-gold" />
+                <span>{indicator}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Clients Reach Out */}
+      <section className="py-16 lg:py-20 bg-ivory">
+        <div className="mx-auto max-w-[1200px] px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <div className="bg-card border border-border rounded-3xl p-8 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
+              <p className="text-gold font-bold tracking-[0.2em] uppercase mb-2 text-xs">
+                Why Clients and Referral Partners Choose Real Property Planning
+              </p>
+              <div className="grid sm:grid-cols-2 gap-3">
+                {[
+                  "Dual-credentialed: broker + state certified appraiser",
+                  "Trusted by attorneys, executors, trustees, and families",
+                  "Specialized in probate, estates, trusts, and senior transitions",
+                  "Local expertise across four Western Washington counties"
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-3 px-4 py-3 bg-secondary rounded-xl text-muted-foreground text-sm">
+                    <CheckCircle className="w-4 h-4 text-gold shrink-0" />
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Trust Strip */}
