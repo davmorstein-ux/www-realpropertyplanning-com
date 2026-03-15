@@ -149,37 +149,7 @@ const whoIWorkWith = [
   { group: "Families & Individuals", members: "Adult children, heirs, seniors planning a move, families selling inherited property" },
 ];
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "Real Property Planning",
-  "url": "https://realpropertyplanning.com",
-  "logo": "https://realpropertyplanning.com/logo.png",
-  "description": "Real Property Planning provides experienced real estate guidance for probate property, inherited homes, estate sales, trust-owned real estate, and senior transitions throughout Western Washington.",
-  "areaServed": [
-    "King County WA",
-    "Snohomish County WA",
-    "Pierce County WA",
-    "Kitsap County WA"
-  ],
-  "founder": {
-    "@type": "Person",
-    "name": "David Stein",
-    "jobTitle": "Real Estate Broker and State Certified Residential Appraiser"
-  },
-  "serviceType": [
-    "Probate real estate services",
-    "Inherited property sales",
-    "Trust-owned home sales",
-    "Estate property guidance",
-    "Senior housing transitions"
-  ],
-  "address": {
-    "@type": "PostalAddress",
-    "addressRegion": "WA",
-    "addressCountry": "US"
-  }
-};
+const jsonLd = realEstateAgentSchema;
 
 const faqJsonLd = {
   "@context": "https://schema.org",
