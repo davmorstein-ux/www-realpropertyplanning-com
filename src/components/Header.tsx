@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Phone, Menu, X, ChevronDown } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "@/assets/logo-rpp.png";
+import logo from "@/assets/logo-rpp.jpg";
 
 const primaryLinks = [
   { href: "/", label: "Home" },
@@ -133,9 +133,9 @@ const Header = () => {
             <img
               src={logo}
               alt="Real Property Planning logo – estate real estate planning and property transition services"
-              className={`transition-all duration-300 w-[240px] md:w-[380px] lg:w-[520px] ${
-                scrolled ? "lg:w-[440px] md:w-[320px] w-[210px]" : ""
-              } h-auto max-h-[60px] object-contain`}
+              className={`transition-all duration-300 w-[250px] md:w-[420px] lg:w-[560px] ${
+                scrolled ? "lg:w-[460px] md:w-[360px] w-[220px]" : ""
+              } h-auto max-h-[62px] object-contain`}
             />
           </Link>
         </div>
