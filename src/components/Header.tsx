@@ -162,29 +162,29 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <div className="md:hidden px-6 pb-6 border-t border-border pt-4 bg-white">
-          <nav className="flex flex-col gap-1">
+        <div className="md:hidden px-6 pb-6 border-t border-border pt-5 bg-white">
+          <nav className="flex flex-col gap-0.5">
             {primaryLinks.map((link) => (
               <div key={link.label}>
                 {link.children ? (
                   <>
                     <button
-                      className={`w-full text-left text-[15px] py-2.5 transition-colors hover:text-[hsl(216,65%,34%)] flex items-center justify-between ${
-                        isActive(link.href, link.children) ? "text-[hsl(216,65%,34%)] font-bold" : "text-foreground"
+                      className={`w-full text-left text-[17px] py-3.5 transition-colors hover:text-[hsl(216,65%,34%)] flex items-center justify-between ${
+                        isActive(link.href, link.children) ? "text-[hsl(216,65%,34%)] font-bold" : "text-foreground font-medium"
                       }`}
                       onClick={() => setMobileExpanded(mobileExpanded === link.label ? null : link.label)}
                     >
                       {link.label}
-                      <ChevronDown className={`w-4 h-4 transition-transform ${mobileExpanded === link.label ? "rotate-180" : ""}`} />
+                      <ChevronDown className={`w-5 h-5 transition-transform ${mobileExpanded === link.label ? "rotate-180" : ""}`} />
                     </button>
                     {mobileExpanded === link.label && (
-                      <div className="flex flex-col gap-1 pl-4 border-l border-border mb-2">
+                      <div className="flex flex-col gap-0.5 pl-5 border-l-2 border-gold/30 mb-2">
                         {link.children.map((child) => (
                           <Link
                             key={child.href}
                             to={child.href}
-                            className={`text-sm py-2 transition-colors hover:text-[hsl(216,65%,34%)] ${
-                              location.pathname === child.href ? "text-[hsl(216,65%,34%)] font-bold" : "text-foreground"
+                            className={`text-[15px] py-3 transition-colors hover:text-[hsl(216,65%,34%)] ${
+                              location.pathname === child.href ? "text-[hsl(216,65%,34%)] font-bold" : "text-foreground/80"
                             }`}
                           >
                             {child.label}
@@ -196,8 +196,8 @@ const Header = () => {
                 ) : (
                   <Link
                     to={link.href}
-                    className={`text-[15px] py-2.5 block transition-colors hover:text-[hsl(216,65%,34%)] ${
-                      location.pathname === link.href ? "text-[hsl(216,65%,34%)] font-bold" : "text-foreground"
+                    className={`text-[17px] py-3.5 block transition-colors hover:text-[hsl(216,65%,34%)] ${
+                      location.pathname === link.href ? "text-[hsl(216,65%,34%)] font-bold" : "text-foreground font-medium"
                     }`}
                   >
                     {link.label}
@@ -205,12 +205,14 @@ const Header = () => {
                 )}
               </div>
             ))}
-            <Link to="/contact">
-              <Button className="bg-gold hover:bg-gold-light text-foreground font-medium w-full mt-3">
-                <Phone className="w-4 h-4 mr-2" />
-                Schedule Consultation
-              </Button>
-            </Link>
+            <div className="border-t border-border mt-3 pt-4">
+              <Link to="/contact">
+                <Button className="bg-[hsl(216,65%,34%)] hover:bg-[hsl(216,65%,28%)] text-white font-semibold w-full h-[52px] text-base rounded-lg">
+                  <Phone className="w-5 h-5 mr-2" />
+                  Schedule a Consultation
+                </Button>
+              </Link>
+            </div>
           </nav>
         </div>
       )}
