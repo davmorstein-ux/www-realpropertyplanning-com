@@ -112,6 +112,7 @@ const Resources = () => {
         </section>
 
         <RelatedServices currentPath="/resources" />
+        <DisclaimerSection />
       </main>
 
       <Footer />
