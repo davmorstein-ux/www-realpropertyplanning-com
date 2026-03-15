@@ -69,24 +69,24 @@ const Header = () => {
       style={{ borderBottomWidth: "1px" }}
     >
       <div
-        className={`mx-auto max-w-[1200px] px-6 lg:px-8 flex items-center justify-between transition-all duration-300 ${
+        className={`mx-auto max-w-[1200px] px-6 lg:px-10 flex items-center justify-between transition-all duration-300 ${
           scrolled ? "py-2" : "py-4 lg:py-5"
         }`}
         ref={dropdownRef}
       >
         {/* Logo */}
-        <Link to="/" className="shrink-0">
+        <Link to="/" className="shrink-0 mr-12 lg:mr-16">
           <img
             src={logo}
             alt="Real Property Planning logo – estate real estate planning and property transition services"
-            className={`transition-all duration-300 w-[220px] md:w-[340px] lg:w-[460px] ${
-              scrolled ? "lg:w-[380px] md:w-[300px] w-[200px]" : ""
+            className={`transition-all duration-300 w-[220px] md:w-[340px] lg:w-[480px] ${
+              scrolled ? "lg:w-[400px] md:w-[300px] w-[200px]" : ""
             } h-auto`}
           />
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-7">
+        <nav className="hidden lg:flex items-center gap-8">
           {primaryLinks.map((link) => (
             <div key={link.label} className="relative">
               {link.children ? (
