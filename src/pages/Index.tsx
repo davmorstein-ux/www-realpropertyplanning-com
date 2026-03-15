@@ -268,7 +268,7 @@ const Index = () => {
                 </Link>
               </div>
 
-              <p className="text-sm text-muted-foreground">
+              <p className="text-base text-muted-foreground">
                 Over 20 years of real estate and valuation experience.
               </p>
             </div>
