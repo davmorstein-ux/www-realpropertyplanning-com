@@ -199,7 +199,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Probate Real Estate & Inherited Property Sales | Real Property Planning"
-        description="Selling a home tied to probate, a trust, or an inheritance? David Stein is a Washington broker and certified appraiser who guides executors, attorneys, and families through estate property sales across King, Snohomish, Pierce & Kitsap Counties."
+        description="Selling a home tied to probate, a trust, or an inheritance? Real Property Planning guides executors, attorneys, and families through estate property sales across King, Snohomish, Pierce & Kitsap Counties. Led by a Washington broker and certified appraiser with over 20 years of experience."
         jsonLd={jsonLd}
       />
       <Header />
