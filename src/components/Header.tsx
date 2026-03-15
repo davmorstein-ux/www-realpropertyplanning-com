@@ -75,7 +75,7 @@ const Header = () => {
         ref={dropdownRef}
       >
         {/* Logo */}
-        <Link to="/" className="shrink-0 mr-12 lg:mr-16">
+        <Link to="/" className="shrink-0 mr-16 lg:mr-24">
           <img
             src={logo}
             alt="Real Property Planning logo – estate real estate planning and property transition services"
@@ -86,16 +86,16 @@ const Header = () => {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-7">
           {primaryLinks.map((link) => (
             <div key={link.label} className="relative">
               {link.children ? (
                 <>
                   <button
-                    className={`text-[14px] tracking-[0.05em] font-normal transition-colors hover:text-[hsl(216,65%,34%)] inline-flex items-center gap-1 ${
+                    className={`text-[13px] tracking-[0.06em] uppercase font-normal transition-colors hover:text-[hsl(216,65%,34%)] inline-flex items-center gap-1 ${
                       isActive(link.href, link.children)
                         ? "text-[hsl(216,65%,34%)] font-medium"
-                        : "text-foreground/55"
+                        : "text-foreground/45"
                     }`}
                     onClick={() => setOpenDropdown(openDropdown === link.label ? null : link.label)}
                     onMouseEnter={() => setOpenDropdown(link.label)}
@@ -125,10 +125,10 @@ const Header = () => {
               ) : (
                 <Link
                   to={link.href}
-                  className={`text-[14px] tracking-[0.05em] font-normal transition-colors hover:text-[hsl(216,65%,34%)] ${
+                  className={`text-[13px] tracking-[0.06em] uppercase font-normal transition-colors hover:text-[hsl(216,65%,34%)] ${
                     isActive(link.href)
                       ? "text-[hsl(216,65%,34%)] font-medium"
-                      : "text-foreground/55"
+                      : "text-foreground/45"
                   }`}
                 >
                   {link.label}
