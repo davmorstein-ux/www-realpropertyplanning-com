@@ -266,7 +266,7 @@ const Index = () => {
         <div className="mx-auto max-w-[1200px] px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-4">
-              Who I Work With
+              Who We Help
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
               Specialized real estate guidance for professionals, families, and decision-makers navigating important property transitions.
