@@ -79,8 +79,8 @@ const Header = () => {
           <img
             src={logo}
             alt="Real Property Planning logo – estate real estate planning and property transition services"
-            className={`transition-all duration-300 w-[220px] md:w-[340px] lg:w-[480px] ${
-              scrolled ? "lg:w-[400px] md:w-[300px] w-[200px]" : ""
+            className={`transition-all duration-300 w-[240px] md:w-[380px] lg:w-[520px] ${
+              scrolled ? "lg:w-[420px] md:w-[320px] w-[210px]" : ""
             } h-auto`}
           />
         </Link>
