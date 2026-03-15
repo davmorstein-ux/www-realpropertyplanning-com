@@ -69,7 +69,7 @@ const Header = () => {
       style={{ borderBottomWidth: "1px" }}
     >
       <div
-        className={`mx-auto max-w-[1200px] px-6 lg:px-10 flex items-center justify-between transition-all duration-300 ${
+        className={`mx-auto max-w-[1400px] px-6 lg:px-10 flex items-center justify-between transition-all duration-300 ${
           scrolled ? "py-2" : "py-4 lg:py-5"
         }`}
         ref={dropdownRef}
