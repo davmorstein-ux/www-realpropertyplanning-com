@@ -123,7 +123,7 @@ const homepageFaqs = [
   },
   {
     question: "How do I determine the right price for estate property?",
-    answer: "Pricing estate property requires understanding condition, market dynamics, and buyer expectations. David Stein's dual brokerage and certified appraisal background helps clients avoid the costly mistakes of overpricing or underpricing inherited and estate-held homes.",
+    answer: "Pricing estate property requires understanding condition, market dynamics, and buyer expectations. Real Property Planning's dual brokerage and certified appraisal background helps clients avoid the costly mistakes of overpricing or underpricing inherited and estate-held homes.",
     link: "/why-valuation-matters"
   },
   {
@@ -199,7 +199,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Probate Real Estate & Inherited Property Sales | Real Property Planning"
-        description="Selling a home tied to probate, a trust, or an inheritance? David Stein is a Washington broker and certified appraiser who guides executors, attorneys, and families through estate property sales across King, Snohomish, Pierce & Kitsap Counties."
+        description="Selling a home tied to probate, a trust, or an inheritance? Real Property Planning guides executors, attorneys, and families through estate property sales across King, Snohomish, Pierce & Kitsap Counties. Led by a Washington broker and certified appraiser with over 20 years of experience."
         jsonLd={jsonLd}
       />
       <Header />
@@ -266,7 +266,7 @@ const Index = () => {
         <div className="mx-auto max-w-[1200px] px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-4">
-              Who I Work With
+              Who We Help
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
               Specialized real estate guidance for professionals, families, and decision-makers navigating important property transitions.
@@ -309,7 +309,7 @@ const Index = () => {
 
           <div className="text-center mt-14">
             <p className="text-muted-foreground text-base leading-relaxed max-w-2xl mx-auto mb-8">
-              David Stein combines over 20 years of real estate experience with valuation insight to help clients and referral partners make informed property decisions.
+              Led by David Stein, Real Property Planning combines over 20 years of real estate experience with valuation insight to help clients and referral partners make informed property decisions.
             </p>
             <Link to="/probate-estate-sales">
               <Button
@@ -397,7 +397,7 @@ const Index = () => {
               What Real Property Planning Does
             </p>
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-4">
-              How David Stein Helps With Complex Property Decisions
+              How We Help With Complex Property Decisions
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
               Estate-related property sales require a different approach — one that accounts for legal timelines, family dynamics, deferred maintenance, and careful pricing.
@@ -425,7 +425,7 @@ const Index = () => {
                 Clients & Referral Partners
               </p>
               <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-6">
-                Who I Work With
+                Who We Work With
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-8">
                 Real Property Planning serves professionals and families across Western Washington who need experienced real estate guidance during estate settlement, inheritance, trust administration, or a significant housing change.
@@ -442,10 +442,10 @@ const Index = () => {
             <div className="bg-navy rounded-lg p-10 lg:p-12">
               <Award className="w-10 h-10 text-gold mb-6" />
               <h3 className="font-serif text-2xl text-primary-foreground font-semibold mb-4">
-                Why Professionals Refer David Stein
+                Why Professionals Refer Real Property Planning
               </h3>
               <p className="text-primary-foreground/80 leading-relaxed mb-6 text-sm">
-                Estate-related real estate demands careful judgment, discretion, and coordination across multiple parties. David's dual credentials and two decades of focused experience make him a natural fit for high-trust referrals.
+                Estate-related real estate demands careful judgment, discretion, and coordination across multiple parties. Our dual credentials and two decades of focused experience make Real Property Planning a natural fit for high-trust referrals.
               </p>
               <ul className="space-y-3">
                 {[
@@ -517,7 +517,7 @@ const Index = () => {
                 Selling a home tied to an estate, trust, or family transition is fundamentally different from a conventional sale. Legal authority may limit timing. Multiple decision-makers may disagree. The property itself may have years of deferred maintenance.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                David Stein brings both the market knowledge of an experienced broker and the analytical eye of a certified appraiser — helping clients navigate these situations with clarity, realistic expectations, and a workable plan.
+                Led by David Stein, Real Property Planning brings both the market knowledge of an experienced broker and the analytical eye of a certified appraiser — helping clients navigate these situations with clarity, realistic expectations, and a workable plan.
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link to="/how-the-process-works">
@@ -635,7 +635,7 @@ const Index = () => {
               A Referral Resource Attorneys Trust
             </h2>
             <p className="text-primary-foreground/80 leading-relaxed mb-8">
-              Estate planning and probate attorneys need a real estate professional who understands discretion, multi-party communication, and the importance of getting the property side right. David works collaboratively with legal professionals to reduce friction and support their clients through sensitive property transitions.
+              Estate planning and probate attorneys need a real estate professional who understands discretion, multi-party communication, and the importance of getting the property side right. Real Property Planning works collaboratively with legal professionals to reduce friction and support their clients through sensitive property transitions.
             </p>
             <Link to="/for-attorneys">
               <Button className="bg-gold hover:bg-gold-light text-navy font-semibold">
@@ -696,7 +696,7 @@ const Index = () => {
               Ready to Discuss a Property Situation?
             </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Start with a confidential conversation. Whether you are an attorney, executor, trustee, family member, or financial professional, David Stein provides clear, experienced guidance tailored to your situation.
+              Start with a confidential conversation. Whether you are an attorney, executor, trustee, family member, or financial professional, Real Property Planning provides clear, experienced guidance tailored to your situation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">
@@ -705,7 +705,7 @@ const Index = () => {
                   className="bg-navy hover:bg-navy-light text-primary-foreground font-semibold px-8 w-full sm:w-auto"
                 >
                   <Phone className="w-5 h-5 mr-2" />
-                  Speak With David Stein
+                  Schedule a Consultation
                 </Button>
               </Link>
               <Link to="/contact">
