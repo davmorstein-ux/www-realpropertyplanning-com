@@ -117,7 +117,7 @@ const Header = () => {
                   className={`text-[13.5px] tracking-[0.04em] font-normal transition-colors hover:text-[hsl(216,65%,34%)] ${
                     isActive(link.href)
                       ? "text-[hsl(216,65%,34%)] font-medium"
-                      : "text-foreground/70"
+                      : "text-foreground"
                   }`}
                 >
                   {link.label}
