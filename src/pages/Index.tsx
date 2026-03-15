@@ -245,7 +245,7 @@ const Index = () => {
             </div>
 
             {/* Right Column – David Stein Headshot */}
-            <div className="hidden lg:flex justify-center">
+            <div className="flex justify-center mt-10 lg:mt-0">
               <div className="relative">
                 <div className="w-80 h-96 rounded-2xl overflow-hidden border-4 border-gold/30 shadow-2xl">
                   <img
