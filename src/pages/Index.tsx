@@ -357,7 +357,7 @@ const Index = () => {
       {/* Trust Badges */}
       <section data-nosnippet className="bg-background border-b border-border py-5">
         <div className="mx-auto max-w-[1200px] px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-x-8 gap-y-3">
+          <div className="grid grid-cols-2 md:flex md:flex-wrap md:justify-center gap-x-8 gap-y-3">
             {[
               "Real Estate Broker",
               "State Certified Appraiser",
@@ -365,7 +365,7 @@ const Index = () => {
               "Serving Western Washington",
             ].map((indicator, index) => (
               <div key={index} className="flex items-center gap-2 text-sm text-muted-foreground">
-                <CheckCircle className="w-4 h-4 text-gold" />
+                <CheckCircle className="w-4 h-4 text-gold shrink-0" />
                 <span>{indicator}</span>
               </div>
             ))}
