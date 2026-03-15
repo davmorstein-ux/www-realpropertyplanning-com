@@ -635,7 +635,7 @@ const Index = () => {
               A Referral Resource Attorneys Trust
             </h2>
             <p className="text-primary-foreground/80 leading-relaxed mb-8">
-              Estate planning and probate attorneys need a real estate professional who understands discretion, multi-party communication, and the importance of getting the property side right. David works collaboratively with legal professionals to reduce friction and support their clients through sensitive property transitions.
+              Estate planning and probate attorneys need a real estate professional who understands discretion, multi-party communication, and the importance of getting the property side right. Real Property Planning works collaboratively with legal professionals to reduce friction and support their clients through sensitive property transitions.
             </p>
             <Link to="/for-attorneys">
               <Button className="bg-gold hover:bg-gold-light text-navy font-semibold">
