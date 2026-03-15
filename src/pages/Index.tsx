@@ -268,7 +268,7 @@ const Index = () => {
                 </Link>
               </div>
 
-              <p className="text-sm text-muted-foreground">
+              <p className="text-base text-muted-foreground">
                 Over 20 years of real estate and valuation experience.
               </p>
             </div>
@@ -331,7 +331,7 @@ const Index = () => {
               >
                 <card.icon className="w-7 h-7 text-gold mb-4" />
                 <h3 className="font-serif text-lg text-foreground font-semibold mb-3">{card.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{card.text}</p>
+                <p className="text-muted-foreground text-[15px] leading-relaxed">{card.text}</p>
               </div>
             ))}
           </div>
@@ -364,7 +364,7 @@ const Index = () => {
               "Probate & Estate Property Focus",
               "Serving Western Washington",
             ].map((indicator, index) => (
-              <div key={index} className="flex items-center gap-2 text-sm text-muted-foreground">
+              <div key={index} className="flex items-center gap-2 text-base text-muted-foreground font-medium">
                 <CheckCircle className="w-4 h-4 text-gold shrink-0" />
                 <span>{indicator}</span>
               </div>
@@ -378,7 +378,7 @@ const Index = () => {
         <div className="mx-auto max-w-[1200px] px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <div className="bg-card border border-border rounded-3xl p-8 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
-              <p className="text-gold font-bold tracking-[0.2em] uppercase mb-2 text-xs">
+              <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-sm">
                 Why Clients and Referral Partners Choose Real Property Planning
               </p>
               <div className="grid sm:grid-cols-2 gap-3">
@@ -388,7 +388,7 @@ const Index = () => {
                   "Specialized in probate, estates, trusts, and senior transitions",
                   "Local expertise across four Western Washington counties"
                 ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-3 px-4 py-3 bg-secondary rounded-xl text-muted-foreground text-sm">
+                  <div key={i} className="flex items-center gap-3 px-4 py-3.5 bg-secondary rounded-xl text-foreground text-[15px] font-medium">
                     <CheckCircle className="w-4 h-4 text-gold shrink-0" />
                     {item}
                   </div>
@@ -463,7 +463,7 @@ const Index = () => {
                 {whoIWorkWith.map((category, index) => (
                   <div key={index}>
                     <h3 className="font-serif text-lg text-foreground font-semibold mb-2">{category.group}</h3>
-                    <p className="text-muted-foreground text-sm">{category.members}</p>
+                    <p className="text-muted-foreground text-[15px]">{category.members}</p>
                   </div>
                 ))}
               </div>
@@ -473,7 +473,7 @@ const Index = () => {
               <h3 className="font-serif text-2xl text-primary-foreground font-semibold mb-4">
                 Why Professionals Refer Real Property Planning
               </h3>
-              <p className="text-primary-foreground/80 leading-relaxed mb-6 text-sm">
+              <p className="text-primary-foreground/85 leading-relaxed mb-6 text-[15px]">
                 Estate-related real estate demands careful judgment, discretion, and coordination across multiple parties. Our dual credentials and two decades of focused experience make Real Property Planning a natural fit for high-trust referrals.
               </p>
               <ul className="space-y-3">
@@ -484,7 +484,7 @@ const Index = () => {
                   "Practical guidance from first call through closing",
                   "Trusted by attorneys, CPAs, and financial planners"
                 ].map((point, index) => (
-                  <li key={index} className="flex items-start gap-3 text-primary-foreground/90 text-sm">
+                  <li key={index} className="flex items-start gap-3 text-primary-foreground/90 text-[15px]">
                     <CheckCircle className="w-4 h-4 text-gold mt-0.5 shrink-0" />
                     <span>{point}</span>
                   </li>
@@ -524,7 +524,7 @@ const Index = () => {
                   <h3 className="font-serif text-xl text-foreground font-semibold mb-3">
                     {service.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed text-sm">
+                  <p className="text-muted-foreground leading-relaxed text-[15px]">
                     {service.description}
                   </p>
                 </div>
@@ -599,7 +599,7 @@ const Index = () => {
                       {area.county}
                     </h3>
                   </div>
-                  <p className="text-primary-foreground/60 text-sm">
+                  <p className="text-primary-foreground/70 text-[15px]">
                     {area.cities}
                   </p>
                 </div>
@@ -637,7 +637,7 @@ const Index = () => {
                 <h3 className="font-serif text-lg text-foreground font-semibold mt-4 mb-2">
                   {item.title}
                 </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <p className="text-muted-foreground text-[15px] leading-relaxed">
                   {item.description}
                 </p>
               </div>
@@ -698,7 +698,7 @@ const Index = () => {
                   <h3 className="font-serif text-lg text-foreground font-semibold mb-2 group-hover:text-gold transition-colors">
                     {faq.question}
                   </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <p className="text-muted-foreground text-[15px] leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>
