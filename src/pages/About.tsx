@@ -34,6 +34,7 @@ const About = () => {
       <SEOHead
         title="About David Stein — Broker & Certified Appraiser | Real Property Planning"
         description="Meet David Stein — the Washington broker and certified appraiser behind Real Property Planning. Over 20 years of focused experience helping attorneys, executors, and families with estate property."
+        jsonLd={realEstateAgentSchema}
       />
       <BreadcrumbSchema items={[{ name: "About", url: "/about" }]} />
       <Header />
