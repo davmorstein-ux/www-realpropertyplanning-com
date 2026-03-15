@@ -75,7 +75,7 @@ const Header = () => {
         ref={dropdownRef}
       >
         {/* Logo */}
-        <Link to="/" className="shrink-0 mr-12 lg:mr-16">
+        <Link to="/" className="shrink-0 mr-16 lg:mr-24">
           <img
             src={logo}
             alt="Real Property Planning logo – estate real estate planning and property transition services"
@@ -86,7 +86,7 @@ const Header = () => {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-7">
           {primaryLinks.map((link) => (
             <div key={link.label} className="relative">
               {link.children ? (
