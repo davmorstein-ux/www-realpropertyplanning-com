@@ -204,6 +204,35 @@ const Index = () => {
       />
       <Header />
       
+      {/* Mobile Quick Nav */}
+      <div className="md:hidden bg-white border-b border-border px-4 py-3">
+        <div className="flex gap-2">
+          <Link to="/probate-estate-sales" className="flex-1">
+            <Button
+              variant="outline"
+              className="w-full border-border text-foreground font-semibold text-[14px] h-[44px] rounded-lg hover:bg-muted"
+            >
+              View Services
+            </Button>
+          </Link>
+          <Link to="/for-attorneys" className="flex-1">
+            <Button
+              variant="outline"
+              className="w-full border-border text-foreground font-semibold text-[14px] h-[44px] rounded-lg hover:bg-muted"
+            >
+              For Attorneys
+            </Button>
+          </Link>
+          <Link to="/contact" className="flex-1">
+            <Button
+              className="w-full bg-[hsl(216,65%,34%)] hover:bg-[hsl(216,65%,28%)] text-white font-semibold text-[14px] h-[44px] rounded-lg"
+            >
+              Contact
+            </Button>
+          </Link>
+        </div>
+      </div>
+
       {/* Hero Section */}
       <section className="py-20 lg:py-28" style={{ background: 'linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--muted)) 100%)' }}>
         <div className="mx-auto max-w-[1200px] px-6 lg:px-8">
