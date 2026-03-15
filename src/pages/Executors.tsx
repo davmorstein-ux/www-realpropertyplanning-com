@@ -205,8 +205,11 @@ const Executors = () => {
             <p className="text-muted-foreground text-lg leading-relaxed mb-4">
               Most executors are doing this for the first time. The legal terminology, the property decisions, the family dynamics — it can feel like a lot. David's role is to take the real estate weight off your shoulders so you can focus on everything else.
             </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              A clear plan, experienced guidance, and consistent communication make all the difference. Learn more about <Link to="/how-the-process-works" className="text-accent hover:text-gold underline underline-offset-4">how the full process works</Link>, explore <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">why accurate pricing matters</Link> for estate property, or visit the <Link to="/probate-estate-sales" className="text-accent hover:text-gold underline underline-offset-4">Probate & Estate Sales</Link> page for a broader overview.
+            </p>
             <p className="text-muted-foreground leading-relaxed">
-              A clear plan, experienced guidance, and consistent communication make all the difference. Learn more about <Link to="/how-the-process-works" className="text-accent hover:text-gold underline underline-offset-4">how the full process works</Link> or explore <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">why accurate pricing matters</Link> for estate property.
+              Looking for other professionals who can help? Browse the <Link to="/resources" className="text-accent hover:text-gold underline underline-offset-4">Resources</Link> section for trusted attorneys, CPAs, senior move managers, and other service providers in Western Washington.
             </p>
           </div>
         </div>
