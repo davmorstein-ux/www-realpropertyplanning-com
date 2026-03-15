@@ -3,13 +3,15 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
+import DisclaimerSection from "@/components/DisclaimerSection";
 import CTASection from "@/components/CTASection";
+import { Link } from "react-router-dom";
 
 const MovingRelocationServices = () => (
   <>
     <SEOHead
       title="Moving & Relocation Services | Resources | Real Property Planning"
-      description="Moving companies and relocation specialists for estate and senior transitions in Western Washington."
+      description="Moving companies and relocation specialists experienced with estate and senior transitions in Western Washington."
       canonical="https://www.realpropertyplanning.com/resources/moving-relocation-services"
     />
     <BreadcrumbSchema
@@ -26,14 +28,44 @@ const MovingRelocationServices = () => (
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-sm">Resources</p>
             <h1 className="font-serif text-3xl md:text-4xl font-bold text-foreground leading-tight mb-4">Moving & Relocation Services</h1>
-            <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-              Moving companies and relocation specialists experienced with estate and senior transitions. Coming soon — David's recommended movers in Western Washington.
-            </p>
           </div>
         </div>
       </section>
+
+      <section className="py-14 md:py-20 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-5">
+              What Moving & Relocation Services Provide
+            </h2>
+            <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-4">
+              Moving and relocation specialists experienced with estate and senior transitions understand the sensitivity and complexity involved. They handle packing, transport, storage, and delivery with care — especially when families are managing a move under emotional or time-sensitive circumstances.
+            </p>
+            <p className="text-muted-foreground text-base leading-relaxed mb-4">
+              Real Property Planning works with movers and relocation services to coordinate timing between a <Link to="/senior-transitions" className="text-accent hover:text-gold underline underline-offset-4">senior transition</Link> or estate property sale and the physical move, ensuring the process stays on track.
+            </p>
+
+            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mt-12 mb-5">
+              Recommended Professionals
+            </h2>
+            <div className="bg-secondary border border-border rounded-xl px-6 py-8 md:px-8 text-center">
+              <p className="text-muted-foreground text-base leading-relaxed">
+                David is currently compiling a list of recommended moving and relocation services in Western Washington. Check back soon, or <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4">contact David</Link> for a current referral.
+              </p>
+            </div>
+
+            <div className="mt-12 pt-8 border-t border-border">
+              <p className="text-muted-foreground/60 text-sm leading-relaxed italic">
+                These professionals are listed as informational resources for visitors navigating senior transitions and estate property matters. Real Property Planning does not receive compensation for these listings.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <CTASection />
       <RelatedServices currentPath="/resources/moving-relocation-services" />
+      <DisclaimerSection />
     </main>
     <Footer />
   </>
