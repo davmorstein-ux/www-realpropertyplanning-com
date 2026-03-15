@@ -524,7 +524,7 @@ const Index = () => {
                   <h3 className="font-serif text-xl text-foreground font-semibold mb-3">
                     {service.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed text-sm">
+                  <p className="text-muted-foreground leading-relaxed text-[15px]">
                     {service.description}
                   </p>
                 </div>
