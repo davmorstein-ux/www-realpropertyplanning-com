@@ -81,7 +81,7 @@ const Header = () => {
               {link.children ? (
                 <>
                   <button
-                    className={`text-[13.5px] tracking-[0.04em] font-normal transition-colors hover:text-[hsl(216,65%,34%)] inline-flex items-center gap-1 ${
+                    className={`text-[12.5px] lg:text-[13.5px] tracking-[0.04em] font-normal transition-colors hover:text-[hsl(216,65%,34%)] inline-flex items-center gap-1 ${
                       isActive(link.href, link.children)
                         ? "text-[hsl(216,65%,34%)] font-medium"
                         : "text-foreground"
