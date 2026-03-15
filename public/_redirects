@@ -23,5 +23,21 @@
 /counties/pierce/            /counties/pierce/index.html            200!
 /counties/kitsap             /counties/kitsap/index.html            200!
 /counties/kitsap/            /counties/kitsap/index.html            200!
+/resources                   /resources/index.html                  200!
+/resources/                  /resources/index.html                  200!
+/resources/senior-move-managers       /resources/senior-move-managers/index.html      200!
+/resources/senior-move-managers/      /resources/senior-move-managers/index.html      200!
+/resources/estate-sale-companies      /resources/estate-sale-companies/index.html     200!
+/resources/estate-sale-companies/     /resources/estate-sale-companies/index.html     200!
+/resources/probate-estate-attorneys   /resources/probate-estate-attorneys/index.html  200!
+/resources/probate-estate-attorneys/  /resources/probate-estate-attorneys/index.html  200!
+/resources/cpas-financial-advisors    /resources/cpas-financial-advisors/index.html   200!
+/resources/cpas-financial-advisors/   /resources/cpas-financial-advisors/index.html   200!
+/resources/senior-living-communities       /resources/senior-living-communities/index.html      200!
+/resources/senior-living-communities/      /resources/senior-living-communities/index.html      200!
+/resources/property-preparation-services   /resources/property-preparation-services/index.html  200!
+/resources/property-preparation-services/  /resources/property-preparation-services/index.html  200!
+/resources/moving-relocation-services      /resources/moving-relocation-services/index.html     200!
+/resources/moving-relocation-services/     /resources/moving-relocation-services/index.html     200!
 
 /*                           /index.html                            200
