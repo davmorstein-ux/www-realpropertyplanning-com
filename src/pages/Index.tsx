@@ -484,7 +484,7 @@ const Index = () => {
                   "Practical guidance from first call through closing",
                   "Trusted by attorneys, CPAs, and financial planners"
                 ].map((point, index) => (
-                  <li key={index} className="flex items-start gap-3 text-primary-foreground/90 text-sm">
+                  <li key={index} className="flex items-start gap-3 text-primary-foreground/90 text-[15px]">
                     <CheckCircle className="w-4 h-4 text-gold mt-0.5 shrink-0" />
                     <span>{point}</span>
                   </li>
