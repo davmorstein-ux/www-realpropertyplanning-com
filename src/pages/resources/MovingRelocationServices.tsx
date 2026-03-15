@@ -10,7 +10,7 @@ const MovingRelocationServices = () => (
     <SEOHead
       title="Moving & Relocation Services | Resources | Real Property Planning"
       description="Moving companies and relocation specialists for estate and senior transitions in Western Washington."
-      canonicalUrl="https://www.realpropertyplanning.com/resources/moving-relocation-services"
+      canonical="https://www.realpropertyplanning.com/resources/moving-relocation-services"
     />
     <BreadcrumbSchema
       items={[

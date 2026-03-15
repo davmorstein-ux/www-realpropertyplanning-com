@@ -10,7 +10,7 @@ const EstateSaleCompanies = () => (
     <SEOHead
       title="Estate Sale Companies | Resources | Real Property Planning"
       description="Estate sale companies in Western Washington that organize, price, and conduct sales of personal property and household contents."
-      canonicalUrl="https://www.realpropertyplanning.com/resources/estate-sale-companies"
+      canonical="https://www.realpropertyplanning.com/resources/estate-sale-companies"
     />
     <BreadcrumbSchema
       items={[

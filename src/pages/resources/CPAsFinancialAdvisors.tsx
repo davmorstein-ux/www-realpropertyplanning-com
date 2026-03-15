@@ -10,7 +10,7 @@ const CPAsFinancialAdvisors = () => (
     <SEOHead
       title="CPAs & Financial Advisors | Resources | Real Property Planning"
       description="CPAs and financial advisors in Western Washington for estate tax, capital gains, and inherited property planning."
-      canonicalUrl="https://www.realpropertyplanning.com/resources/cpas-financial-advisors"
+      canonical="https://www.realpropertyplanning.com/resources/cpas-financial-advisors"
     />
     <BreadcrumbSchema
       items={[

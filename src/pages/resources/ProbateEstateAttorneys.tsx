@@ -10,7 +10,7 @@ const ProbateEstateAttorneys = () => (
     <SEOHead
       title="Probate & Estate Attorneys | Resources | Real Property Planning"
       description="Probate and estate attorneys in Western Washington who guide families and fiduciaries through estate administration."
-      canonicalUrl="https://www.realpropertyplanning.com/resources/probate-estate-attorneys"
+      canonical="https://www.realpropertyplanning.com/resources/probate-estate-attorneys"
     />
     <BreadcrumbSchema
       items={[

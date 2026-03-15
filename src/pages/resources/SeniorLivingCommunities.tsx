@@ -10,7 +10,7 @@ const SeniorLivingCommunities = () => (
     <SEOHead
       title="Senior Living Communities | Resources | Real Property Planning"
       description="Assisted living, independent living, and memory care communities across Western Washington."
-      canonicalUrl="https://www.realpropertyplanning.com/resources/senior-living-communities"
+      canonical="https://www.realpropertyplanning.com/resources/senior-living-communities"
     />
     <BreadcrumbSchema
       items={[

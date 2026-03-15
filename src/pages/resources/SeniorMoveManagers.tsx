@@ -10,7 +10,7 @@ const SeniorMoveManagers = () => (
     <SEOHead
       title="Senior Move Managers | Resources | Real Property Planning"
       description="Senior move management professionals in Western Washington who help coordinate and manage senior relocations."
-      canonicalUrl="https://www.realpropertyplanning.com/resources/senior-move-managers"
+      canonical="https://www.realpropertyplanning.com/resources/senior-move-managers"
     />
     <BreadcrumbSchema
       items={[

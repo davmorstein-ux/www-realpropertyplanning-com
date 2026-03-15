@@ -57,7 +57,7 @@ const Resources = () => {
       <SEOHead
         title="Resources | Real Property Planning"
         description="Trusted professionals and service providers for probate, estate, and senior transition needs in Western Washington."
-        canonicalUrl="https://www.realpropertyplanning.com/resources"
+        canonical="https://www.realpropertyplanning.com/resources"
       />
       <BreadcrumbSchema
         items={[

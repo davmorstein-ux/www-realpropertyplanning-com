@@ -10,7 +10,7 @@ const PropertyPreparationServices = () => (
     <SEOHead
       title="Property Preparation Services | Resources | Real Property Planning"
       description="Cleanout, staging, repair, and preparation services for estate and transition properties in Western Washington."
-      canonicalUrl="https://www.realpropertyplanning.com/resources/property-preparation-services"
+      canonical="https://www.realpropertyplanning.com/resources/property-preparation-services"
     />
     <BreadcrumbSchema
       items={[

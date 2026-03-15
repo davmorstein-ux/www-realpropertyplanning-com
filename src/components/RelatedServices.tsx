@@ -12,6 +12,7 @@ const allLinks = [
   { href: "/counties", label: "Counties We Serve" },
   { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact David" },
+  { href: "/resources", label: "Resources" },
 ];
 
 interface RelatedServicesProps {
