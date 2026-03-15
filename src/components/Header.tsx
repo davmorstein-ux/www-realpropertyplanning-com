@@ -69,13 +69,13 @@ const Header = () => {
       style={{ borderBottomWidth: "1px" }}
     >
       <div
-        className={`mx-auto max-w-[1400px] px-6 lg:px-10 flex items-center transition-all duration-300 ${
-          scrolled ? "h-[66px]" : "h-[80px]"
+        className={`mx-auto max-w-[1520px] px-6 lg:px-10 flex items-center transition-all duration-300 ${
+          scrolled ? "h-[78px] lg:h-[88px]" : "h-[86px] lg:h-[94px]"
         }`}
         ref={dropdownRef}
       >
         {/* Left – Navigation */}
-        <nav className="hidden lg:flex items-center gap-6 shrink-0">
+        <nav className="hidden lg:flex items-center gap-5 xl:gap-6 shrink-0">
           {primaryLinks.map((link) => (
             <div key={link.label} className="relative">
               {link.children ? (
@@ -84,7 +84,7 @@ const Header = () => {
                     className={`text-[13.5px] tracking-[0.04em] font-normal transition-colors hover:text-[hsl(216,65%,34%)] inline-flex items-center gap-1 ${
                       isActive(link.href, link.children)
                         ? "text-[hsl(216,65%,34%)] font-medium"
-                        : "text-foreground/70"
+                        : "text-foreground"
                     }`}
                     onClick={() => setOpenDropdown(openDropdown === link.label ? null : link.label)}
                     onMouseEnter={() => setOpenDropdown(link.label)}
@@ -117,7 +117,7 @@ const Header = () => {
                   className={`text-[13.5px] tracking-[0.04em] font-normal transition-colors hover:text-[hsl(216,65%,34%)] ${
                     isActive(link.href)
                       ? "text-[hsl(216,65%,34%)] font-medium"
-                      : "text-foreground/70"
+                      : "text-foreground"
                   }`}
                 >
                   {link.label}
@@ -133,8 +133,8 @@ const Header = () => {
             <img
               src={logo}
               alt="Real Property Planning logo – estate real estate planning and property transition services"
-              className={`transition-all duration-300 w-[320px] md:w-[480px] lg:w-[700px] ${
-                scrolled ? "lg:w-[560px] md:w-[400px] w-[280px]" : ""
+              className={`transition-all duration-300 w-[320px] md:w-[480px] lg:w-[620px] xl:w-[700px] ${
+                scrolled ? "xl:w-[560px] lg:w-[500px] md:w-[400px] w-[280px]" : ""
               } h-auto max-h-[72px] object-contain`}
             />
           </Link>
@@ -170,7 +170,7 @@ const Header = () => {
                   <>
                     <button
                       className={`w-full text-left text-[15px] py-2.5 transition-colors hover:text-[hsl(216,65%,34%)] flex items-center justify-between ${
-                        isActive(link.href, link.children) ? "text-[hsl(216,65%,34%)] font-bold" : "text-foreground/70"
+                        isActive(link.href, link.children) ? "text-[hsl(216,65%,34%)] font-bold" : "text-foreground"
                       }`}
                       onClick={() => setMobileExpanded(mobileExpanded === link.label ? null : link.label)}
                     >
@@ -184,7 +184,7 @@ const Header = () => {
                             key={child.href}
                             to={child.href}
                             className={`text-sm py-2 transition-colors hover:text-[hsl(216,65%,34%)] ${
-                              location.pathname === child.href ? "text-[hsl(216,65%,34%)] font-bold" : "text-foreground/60"
+                              location.pathname === child.href ? "text-[hsl(216,65%,34%)] font-bold" : "text-foreground"
                             }`}
                           >
                             {child.label}
@@ -197,7 +197,7 @@ const Header = () => {
                   <Link
                     to={link.href}
                     className={`text-[15px] py-2.5 block transition-colors hover:text-[hsl(216,65%,34%)] ${
-                      location.pathname === link.href ? "text-[hsl(216,65%,34%)] font-bold" : "text-foreground/70"
+                      location.pathname === link.href ? "text-[hsl(216,65%,34%)] font-bold" : "text-foreground"
                     }`}
                   >
                     {link.label}
