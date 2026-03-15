@@ -425,7 +425,7 @@ const Index = () => {
                 Clients & Referral Partners
               </p>
               <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-6">
-                Who I Work With
+                Who We Work With
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-8">
                 Real Property Planning serves professionals and families across Western Washington who need experienced real estate guidance during estate settlement, inheritance, trust administration, or a significant housing change.
