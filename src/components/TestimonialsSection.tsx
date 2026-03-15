@@ -138,7 +138,7 @@ const TestimonialsSection = () => {
         {/* Review Submission Form */}
         <div className="max-w-2xl mx-auto">
           <div className="bg-background rounded-2xl border border-border p-8 md:p-10">
-            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-2 text-xs">
+            <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-2 text-sm">
               Share Your Experience
             </p>
             <h3 className="font-serif text-2xl text-foreground font-semibold mb-2">

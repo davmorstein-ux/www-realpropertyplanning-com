@@ -698,7 +698,7 @@ const Index = () => {
                   <h3 className="font-serif text-lg text-foreground font-semibold mb-2 group-hover:text-gold transition-colors">
                     {faq.question}
                   </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <p className="text-muted-foreground text-[15px] leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>
