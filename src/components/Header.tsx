@@ -114,9 +114,9 @@ const Header = () => {
               ) : (
                 <Link
                   to={link.href}
-                  className={`text-[12.5px] lg:text-[13.5px] tracking-[0.04em] font-normal transition-colors hover:text-[hsl(216,65%,34%)] ${
+                  className={`text-[14px] lg:text-[15px] tracking-[0.02em] font-medium transition-colors hover:text-[hsl(216,65%,34%)] ${
                     isActive(link.href)
-                      ? "text-[hsl(216,65%,34%)] font-medium"
+                      ? "text-[hsl(216,65%,34%)] font-semibold"
                       : "text-foreground"
                   }`}
                 >
