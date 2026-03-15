@@ -473,7 +473,7 @@ const Index = () => {
               <h3 className="font-serif text-2xl text-primary-foreground font-semibold mb-4">
                 Why Professionals Refer Real Property Planning
               </h3>
-              <p className="text-primary-foreground/80 leading-relaxed mb-6 text-sm">
+              <p className="text-primary-foreground/85 leading-relaxed mb-6 text-[15px]">
                 Estate-related real estate demands careful judgment, discretion, and coordination across multiple parties. Our dual credentials and two decades of focused experience make Real Property Planning a natural fit for high-trust referrals.
               </p>
               <ul className="space-y-3">
