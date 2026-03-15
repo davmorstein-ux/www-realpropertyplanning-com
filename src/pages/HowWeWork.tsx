@@ -41,7 +41,16 @@ const HowWeWork = () => {
       <SEOHead
         title="How David Stein Works With Attorneys, Executors, Trustees & Families | Western Washington"
         description="Learn how David Stein collaborates with attorneys, executors, trustees, and families to provide real estate guidance, valuation insight, and practical coordination during probate, trust, and estate property transitions."
+        jsonLd={articleSchema({
+          headline: "How David Stein Works With Attorneys, Executors, Trustees & Families",
+          description: "How David Stein collaborates with attorneys, executors, trustees, and families during probate, trust, and estate property transitions.",
+          url: "/how-we-work",
+          datePublished: "2025-01-15",
+          dateModified: "2026-03-15",
+          about: ["Real estate guidance", "Probate coordination", "Estate property", "Attorney collaboration"],
+        })}
       />
+      <BreadcrumbSchema items={[{ name: "How We Work", url: "/how-we-work" }]} />
       <Header />
 
       {/* Hero */}

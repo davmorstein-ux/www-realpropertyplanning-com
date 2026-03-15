@@ -131,6 +131,7 @@ const Terminology = () => {
           about: ["Probate terminology", "Estate glossary", "Real property terms", "Wills and trusts", "Legal real estate terms"],
         })}
       />
+      <BreadcrumbSchema items={[{ name: "Terminology", url: "/terminology" }]} />
       <Header />
 
       {/* Hero */}
