@@ -162,7 +162,7 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <div className="lg:hidden px-6 pb-6 border-t border-border pt-4 bg-white">
+        <div className="md:hidden px-6 pb-6 border-t border-border pt-4 bg-white">
           <nav className="flex flex-col gap-1">
             {primaryLinks.map((link) => (
               <div key={link.label}>
