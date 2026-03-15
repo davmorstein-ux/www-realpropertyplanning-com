@@ -75,7 +75,7 @@ const Header = () => {
         ref={dropdownRef}
       >
         {/* Left – Navigation */}
-        <nav className="hidden lg:flex items-center gap-6 shrink-0">
+        <nav className="hidden lg:flex items-center gap-5 xl:gap-6 shrink-0">
           {primaryLinks.map((link) => (
             <div key={link.label} className="relative">
               {link.children ? (
