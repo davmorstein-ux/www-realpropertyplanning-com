@@ -364,7 +364,7 @@ const Index = () => {
               "Probate & Estate Property Focus",
               "Serving Western Washington",
             ].map((indicator, index) => (
-              <div key={index} className="flex items-center gap-2 text-sm text-muted-foreground">
+              <div key={index} className="flex items-center gap-2 text-base text-muted-foreground font-medium">
                 <CheckCircle className="w-4 h-4 text-gold shrink-0" />
                 <span>{indicator}</span>
               </div>
