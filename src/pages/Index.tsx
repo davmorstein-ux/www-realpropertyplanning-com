@@ -698,6 +698,65 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Not Sure Where to Start? */}
+      <section className="py-20 lg:py-28 bg-secondary">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-gold font-bold tracking-widest uppercase mb-3 text-base">
+              Start Here
+            </p>
+            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-6">
+              Not Sure Where to Begin?
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
+              Whether you're an executor settling an estate, a family preparing for a senior move, or a professional supporting a client through a housing transition — Real Property Planning can help you find the right path forward.
+            </p>
+
+            <div className="grid sm:grid-cols-3 gap-5 mb-10">
+              {[
+                {
+                  icon: FileText,
+                  title: "Explore Resources",
+                  description: "Browse curated guides, service categories, and professional referral resources.",
+                  link: "/transition-resources",
+                },
+                {
+                  icon: Scale,
+                  title: "Understand the Process",
+                  description: "See how estate and transition property sales work from start to finish.",
+                  link: "/how-the-process-works",
+                },
+                {
+                  icon: Phone,
+                  title: "Talk to David",
+                  description: "Schedule a confidential conversation to discuss your situation.",
+                  link: "/contact",
+                },
+              ].map((card, index) => (
+                <Link key={index} to={card.link} className="group">
+                  <div className="bg-card rounded-xl border border-border p-7 h-full hover:border-gold/30 hover:shadow-md transition-all">
+                    <card.icon className="w-8 h-8 text-gold mx-auto mb-4" />
+                    <h3 className="font-serif text-lg text-foreground font-semibold mb-2 group-hover:text-gold transition-colors">
+                      {card.title}
+                    </h3>
+                    <p className="text-muted-foreground text-[15px] leading-relaxed">
+                      {card.description}
+                    </p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+
+            <Link to="/transition-resources">
+              <Button variant="outline" className="border-navy text-navy hover:bg-navy hover:text-primary-foreground">
+                View All Transition Resources
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section className="py-20 lg:py-28 bg-ivory">
         <div className="container px-6 lg:px-8">
