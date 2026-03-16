@@ -73,6 +73,7 @@ const App = () => (
           <Route path="/counties/snohomish" element={<SnohomishCounty />} />
           <Route path="/counties/pierce" element={<PierceCounty />} />
           <Route path="/counties/kitsap" element={<KitsapCounty />} />
+          <Route path="/counties/skagit" element={<SkagitCounty />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/resources/senior-move-managers" element={<SeniorMoveManagers />} />
           <Route path="/resources/estate-sale-companies" element={<EstateSaleCompanies />} />
