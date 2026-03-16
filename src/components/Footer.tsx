@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
 import expRealtyLogo from "@/assets/exp-realty-logo.png";
+import alcaLogo from "@/assets/alca-corporate-partner.png";
 
 const Footer = () => {
   return (
