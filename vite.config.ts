@@ -28,7 +28,13 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "Probate & Estate Property Sales — Experienced guidance for selling inherited homes, trust-owned real estate, and estate property across King, Snohomish, Pierce, Skagit, and Kitsap Counties.",
       "Senior Transitions & Downsizing Support — Thoughtful real estate guidance for families navigating a move from a longtime home to assisted living, independent living, or smaller housing.",
       "Valuation-Informed Strategy — As both a broker and certified appraiser, David provides pricing insight grounded in professional valuation experience.",
-      "Service Areas — Serving Western Washington and the Puget Sound region including Seattle, Bellevue, Everett, Tacoma, Bremerton, Mount Vernon, and surrounding communities.",
+    ],
+    cities: [
+      "Seattle", "Bellevue", "Kirkland", "Redmond", "Mercer Island", "Issaquah",
+      "Everett", "Edmonds", "Lynnwood", "Mukilteo", "Mill Creek",
+      "Tacoma", "University Place", "Gig Harbor", "Puyallup",
+      "Bainbridge Island", "Poulsbo", "Silverdale", "Bremerton",
+      "Mount Vernon", "Burlington", "Anacortes",
     ],
   },
   "/for-attorneys": {
