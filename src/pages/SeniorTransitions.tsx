@@ -10,6 +10,7 @@ import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Phone, CheckCircle, Heart, Users } from "lucide-react";
+import alcaLogo from "@/assets/alca-corporate-partner.png";
 
 const transitionSituations = [
   "Downsizing from a longtime family home to a smaller residence",
@@ -106,6 +107,25 @@ const SeniorTransitions = () => {
       </section>
 
       <TrustStrip />
+
+      {/* ALCA Affiliation */}
+      <section className="py-12 lg:py-16 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-center gap-6 sm:gap-8">
+            <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer" className="shrink-0">
+              <img
+                src={alcaLogo}
+                alt="Aging Life Care Association Corporate Partner"
+                className="h-20 md:h-24 w-auto"
+                loading="lazy"
+              />
+            </a>
+            <p className="text-muted-foreground text-base leading-relaxed">
+              Real Property Planning is a Corporate Partner of the Aging Life Care Association, a national organization of professionals who assist older adults and their families with care management, housing transitions, and life planning.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Common Transition Situations */}
       <section className="py-20 lg:py-28 bg-background">
