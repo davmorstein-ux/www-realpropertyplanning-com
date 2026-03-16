@@ -207,59 +207,49 @@ const Index = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="py-20 lg:py-28" style={{ background: 'linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--muted)) 100%)' }}>
+      <section className="py-20 lg:py-28 bg-secondary">
         <div className="mx-auto max-w-[1200px] px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="grid lg:grid-cols-[1fr_auto] gap-12 lg:gap-20 items-start">
             {/* Left Column */}
-            <div>
-              <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[50px] text-foreground font-bold leading-[1.1] mb-6">
+            <div className="max-w-2xl">
+              <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[48px] text-foreground font-bold leading-[1.12] mb-6">
                 Real Estate Guidance for Life's Most Important Property Transitions
               </h1>
 
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-xl">
-                Real Property Planning provides professional real estate guidance for attorneys, executors, trustees, seniors, and families navigating estate sales, probate property, trust-related transfers, downsizing, and other significant real property decisions.
+              <p className="text-[16px] text-muted-foreground leading-relaxed mb-4">
+                Real Property Planning works with attorneys, fiduciaries, executors, trustees, seniors, and families facing property decisions during probate, trust administration, estate settlement, senior downsizing, and other major life transitions.
               </p>
 
-              <div className="flex flex-col sm:flex-row flex-wrap gap-4 mb-6">
+              <p className="text-[16px] text-muted-foreground leading-relaxed mb-8">
+                Led by David Stein — a licensed real estate broker and Washington state certified residential appraiser with more than 20 years of experience — the approach is calm, practical, and focused on helping every client and referral partner feel informed and supported throughout the process.
+              </p>
+
+              <div className="flex flex-col sm:flex-row flex-wrap gap-4 mb-0">
                 <Link to="/contact">
                   <Button
                     size="lg"
-                    className="bg-[hsl(216,65%,34%)] hover:bg-[hsl(216,65%,28%)] text-white font-semibold px-8 rounded-lg text-base h-[52px] w-full sm:w-auto"
+                    className="bg-[hsl(216,65%,34%)] hover:bg-[hsl(216,65%,28%)] text-white font-semibold px-8 rounded-lg text-base h-[52px] w-full sm:w-auto focus-visible:ring-gold"
                   >
                     <Phone className="w-5 h-5 mr-2" />
-                    Schedule a Consultation
+                    Schedule a Confidential Conversation
                   </Button>
                 </Link>
                 <Link to="/services">
                   <Button
                     size="lg"
                     variant="outline"
-                    className="border-border text-foreground hover:bg-muted font-semibold px-8 rounded-lg text-base h-[52px] w-full sm:w-auto"
+                    className="border-border text-foreground hover:bg-muted font-semibold px-8 rounded-lg text-base h-[52px] w-full sm:w-auto focus-visible:ring-gold"
                   >
-                    Explore Services
-                  </Button>
-                </Link>
-                <Link to="/testimonials">
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-border text-foreground hover:bg-muted font-semibold px-8 rounded-lg text-base h-[52px] w-full sm:w-auto"
-                  >
-                    <Star className="w-5 h-5 mr-2" />
-                    Testimonials
+                    View Services
                   </Button>
                 </Link>
               </div>
-
-              <p className="text-base text-muted-foreground">
-                Over 20 years of real estate and valuation experience.
-              </p>
             </div>
 
             {/* Right Column – David Stein Headshot */}
-            <div className="flex flex-col items-center mt-10 lg:mt-0">
+            <div className="flex flex-col items-center lg:pt-2">
               <div className="relative">
-                <div className="w-72 h-[22rem] sm:w-80 sm:h-96 rounded-2xl overflow-hidden border-4 border-gold/30 shadow-2xl">
+                <div className="w-64 h-80 sm:w-72 sm:h-[22rem] rounded-2xl overflow-hidden border-4 border-gold/30 shadow-2xl">
                   <img
                     src={daveHeadshot2}
                     alt="David Stein, Washington state certified appraiser and real estate broker specializing in probate and estate property"
@@ -267,7 +257,7 @@ const Index = () => {
                     loading="eager"
                   />
                 </div>
-                <div className="absolute -bottom-4 -right-4 w-72 h-[22rem] sm:w-80 sm:h-96 rounded-2xl border-2 border-gold/20 -z-10" />
+                <div className="absolute -bottom-3 -right-3 w-64 h-80 sm:w-72 sm:h-[22rem] rounded-2xl border-2 border-gold/20 -z-10" />
               </div>
               <AgentCredentialBlock />
             </div>
