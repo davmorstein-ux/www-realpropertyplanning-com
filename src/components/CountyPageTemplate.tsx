@@ -9,15 +9,6 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { CheckCircle, MapPin } from "lucide-react";
 
-const howDavidHelps = [
-  "Probate and estate property assessment and sale planning",
-  "Inherited home preparation, pricing, and market strategy",
-  "Trust-owned real estate guidance and sale coordination",
-  "Valuation-informed pricing for properties in non-standard condition",
-  "Senior transition support and family coordination",
-  "Reliable communication with attorneys, executors, trustees, and families",
-];
-
 interface CountyPageProps {
   countyName: string;
   countyPath: string;
@@ -25,6 +16,8 @@ interface CountyPageProps {
   localParagraph?: string;
   localInsight?: string;
   typicalSituations?: string[];
+  clientTypes?: string[];
+  marketOverview?: string;
 }
 
 const CountyPageTemplate = ({
@@ -34,13 +27,22 @@ const CountyPageTemplate = ({
   localParagraph,
   localInsight,
   typicalSituations,
+  clientTypes,
+  marketOverview,
 }: CountyPageProps) => {
   const breadcrumbItems = [
     { name: "Counties", url: "/counties" },
     { name: countyName, url: countyPath },
   ];
 
-  const defaultLocalParagraph = `Every county has its own market patterns, housing stock, buyer demand, and practical sale considerations. Real Property Planning combines broad experience with local awareness to help clients make informed property decisions in ${countyName}.`;
+  const defaultClientTypes = [
+    `Executors and personal representatives managing probate property in ${countyName}`,
+    `Trustees overseeing trust-owned real estate in ${countyName} communities`,
+    `Attorneys referring clients with estate or inherited property in the area`,
+    `Families coordinating a senior housing transition from a longtime ${countyName} home`,
+    `Out-of-state heirs who need local, hands-on property management and sale coordination`,
+    `CPAs and financial planners advising clients on property-related estate decisions`,
+  ];
 
   const defaultSituations = [
     "Probate property that needs to be evaluated and sold",
@@ -78,18 +80,37 @@ const CountyPageTemplate = ({
 
       <TrustStrip />
 
-      {/* How David Helps */}
-      <section className="py-20 lg:py-28 bg-background">
+      {/* Market Overview (unique per county) */}
+      {marketOverview && (
+        <section className="py-16 lg:py-20 bg-background">
+          <div className="container px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
+                Understanding the {countyName} Real Estate Market
+              </h2>
+              <p className="text-muted-foreground text-lg leading-relaxed">
+                {marketOverview}
+              </p>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Who We Work With in This County */}
+      <section className="py-20 lg:py-28 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-              How Real Property Planning Helps in {countyName}
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
+              Who Real Property Planning Works With in {countyName}
             </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              David Stein works with a range of clients and professional partners throughout {countyName}, including:
+            </p>
             <ul className="space-y-4">
-              {howDavidHelps.map((item, index) => (
+              {(clientTypes || defaultClientTypes).map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-gold mt-0.5 shrink-0" />
-                  <span className="text-foreground">{item}</span>
+                  <span className="text-foreground text-[15px] leading-relaxed">{item}</span>
                 </li>
               ))}
             </ul>
@@ -98,7 +119,7 @@ const CountyPageTemplate = ({
       </section>
 
       {/* Typical Situations */}
-      <section className="py-20 lg:py-28 bg-secondary">
+      <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
@@ -120,7 +141,7 @@ const CountyPageTemplate = ({
       </section>
 
       {/* Communities Served */}
-      <section className="py-20 lg:py-28 bg-background">
+      <section className="py-20 lg:py-28 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
@@ -139,11 +160,11 @@ const CountyPageTemplate = ({
       </section>
 
       {/* Local Paragraph */}
-      <section className="py-16 lg:py-20 bg-secondary">
+      <section className="py-16 lg:py-20 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              {localParagraph || defaultLocalParagraph}
+              {localParagraph || `Every county has its own market patterns, housing stock, buyer demand, and practical sale considerations. Real Property Planning combines broad experience with local awareness to help clients make informed property decisions in ${countyName}.`}
             </p>
             <div className="flex flex-wrap gap-3">
               <Link to="/probate-estate-sales" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Probate & Estate Sales</Link>

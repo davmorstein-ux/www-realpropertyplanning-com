@@ -15,47 +15,67 @@ const steps = [
   {
     number: "01",
     title: "Initial Consultation",
-    text: "We start with the property, the situation, the decision-makers, and the immediate questions.",
+    text: "Every engagement begins with a conversation about the property, the people involved, and the circumstances driving the decision. David listens to understand the full picture — legal authority, family dynamics, timeline pressures, and financial goals. Whether you are an executor managing your first estate, an attorney referring a client, or a family navigating a senior transition, this conversation establishes the foundation for everything that follows.",
+    details: "There is no cost or obligation for this initial discussion. The goal is to determine whether Real Property Planning is the right fit and to outline a practical path forward.",
   },
   {
     number: "02",
-    title: "Property Review",
-    text: "We assess condition, occupancy, preparation needs, likely market position, and any concerns affecting sale strategy.",
+    title: "Property Review and Valuation-Informed Pricing Discussion",
+    text: "David visits the property to assess its condition, identify features that affect value, and evaluate what the market is likely to see. Unlike a standard comparative market analysis, David's assessment draws on over 20 years of certified appraisal experience — giving you a realistic pricing perspective that accounts for deferred maintenance, outdated systems, unusual layouts, and condition-related factors that automated tools consistently miss.",
+    details: "This step often includes a candid conversation about what the property is worth in its current condition versus what it could be worth with targeted preparation — helping you make informed decisions about where to invest time and money.",
   },
   {
     number: "03",
-    title: "Value and Strategy Discussion",
-    text: "We review realistic pricing considerations, possible preparation options, and the best path forward based on goals and circumstances.",
+    title: "Coordination of Cleanout, Repairs, and Vendor Management",
+    text: "Many estate and inherited homes need significant work before they are ready for the market. Personal belongings need to be sorted and removed. Deferred repairs need to be addressed. Landscaping, cleaning, and sometimes light staging are needed to present the property effectively. David coordinates this entire process — scheduling vendors, managing timelines, and overseeing the work so you do not have to be on-site or manage contractors yourself.",
+    details: "David works with trusted local professionals including move managers, estate sale companies, cleanout crews, handymen, and staging teams. He evaluates which improvements offer meaningful return on investment and advises against spending money on work that will not meaningfully affect the sale price.",
   },
   {
     number: "04",
-    title: "Preparation and Coordination",
-    text: "If needed, Real Property Planning helps guide the next steps related to cleanout, repairs, contractors, staging, or readiness for market.",
+    title: "Listing Preparation and Marketing Strategy",
+    text: "Once the property is ready, David develops a marketing plan tailored to the home's specific strengths, target buyer profile, and local market conditions. This includes professional photography, compelling listing descriptions, strategic pricing, and targeted exposure through MLS, online platforms, and agent networks.",
+    details: "The marketing approach varies based on property type and buyer pool. A waterfront home on Bainbridge Island requires a different strategy than a mid-century rambler in Everett or a condominium in downtown Bellevue. David adjusts the approach based on what will generate the strongest buyer interest for each specific property.",
   },
   {
     number: "05",
-    title: "Listing and Marketing",
-    text: "The property is positioned for the market with a strategy tailored to condition, timing, and buyer demand.",
+    title: "Offer Review, Negotiation, and Contract Management",
+    text: "When offers arrive, David reviews each one thoroughly — evaluating not just the price, but the terms, contingencies, financing strength, and closing timeline. He presents the options clearly, explains the tradeoffs, and negotiates on your behalf to protect the estate's interests. In multi-offer situations, David helps you navigate competing bids with a strategy focused on certainty of closing and net proceeds.",
+    details: "For probate and trust transactions, David pays particular attention to terms that affect fiduciary obligations — ensuring that the transaction structure supports the legal requirements of the sale.",
   },
   {
     number: "06",
-    title: "Contract to Closing",
-    text: "The team helps guide the transaction through negotiations, contingency management, communication, and closing coordination.",
+    title: "Escrow and Closing Coordination",
+    text: "From accepted offer to closing day, David manages the transaction details — inspection responses, appraisal coordination, title issues, repair negotiations, and communication with all parties including the buyer's agent, escrow officer, and your attorney if applicable. He tracks deadlines, anticipates problems, and keeps the transaction moving toward a successful close.",
+    details: "David provides regular status updates so you always know where things stand. If complications arise — and in estate transactions, they sometimes do — he addresses them promptly and communicates solutions rather than just problems.",
+  },
+  {
+    number: "07",
+    title: "Post-Sale Support",
+    text: "After closing, David remains available for questions about final documentation, tax-related inquiries you may want to discuss with your CPA, or any loose ends related to the property. For clients managing ongoing estate matters or families with additional properties, David provides continuity and a single point of contact for future real estate needs.",
+    details: "Many clients return for help with additional properties, and many attorneys continue to refer clients based on the experience of working together on a previous matter.",
   },
 ];
 
 const faqs = [
   {
     question: "What is the typical process for selling an inherited or probate property?",
-    answer: "The process generally follows six steps: initial consultation, property evaluation, strategy discussion, preparation coordination, marketing and sale management, and closing. David Stein guides clients through each step with clear communication and practical next-step guidance.",
+    answer: "The process generally follows seven steps: initial consultation, property evaluation and pricing discussion, preparation coordination, listing and marketing, offer review and negotiation, escrow and closing management, and post-sale support. David Stein guides clients through each step with clear communication and practical next-step guidance.",
   },
   {
     question: "How long does the entire process take from start to closing?",
-    answer: "Timelines vary depending on property condition, legal authority, preparation needs, and market conditions. Simple situations may take 2-3 months; more complex matters with cleanup, repairs, or multi-party coordination may take longer. David helps set realistic expectations early.",
+    answer: "Timelines vary depending on property condition, legal authority, preparation needs, and market conditions. Simple situations may take 2-3 months; more complex matters with significant cleanup, repairs, or multi-party coordination may take longer. David helps set realistic expectations early and adjusts the plan as circumstances evolve.",
   },
   {
     question: "Do I need to be local to work with David Stein?",
     answer: "No. Many clients — especially executors and trustees — are managing property from out of state. David provides hands-on local coordination and keeps clients informed through regular updates so they can participate in decisions without needing to be physically present.",
+  },
+  {
+    question: "What happens if the property needs major repairs?",
+    answer: "David evaluates repair decisions with a practical, cost-benefit perspective. Some improvements meaningfully increase sale price; others are not worth the cost or delay. He coordinates vendors, obtains estimates, and helps you decide which investments make sense based on the property's market position and your timeline.",
+  },
+  {
+    question: "How is this different from working with a regular real estate agent?",
+    answer: "Most agents focus on listing and selling. David's process starts earlier — with property assessment, valuation analysis, preparation coordination, and family communication — and continues through closing and beyond. His certified appraisal background also provides pricing depth that standard agents cannot offer.",
   },
 ];
 
@@ -64,14 +84,14 @@ const HowTheProcessWorks = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="How the Process Works — Estate Property Sales | Real Property Planning"
-        description="From initial consultation to closing day — here is exactly how David Stein helps executors, attorneys, and families sell probate, inherited, and trust-owned property in Western Washington."
+        description="From initial consultation to closing day and beyond — here is exactly how David Stein helps executors, attorneys, and families sell probate, inherited, and trust-owned property in Western Washington."
         jsonLd={articleSchema({
           headline: "How the Process Works — Estate Property Sales",
-          description: "From initial consultation to closing day — step-by-step estate property sale process.",
+          description: "A seven-step process for selling estate, probate, and inherited property in Western Washington.",
           url: "/how-the-process-works",
           datePublished: "2025-01-15",
-          dateModified: "2026-03-15",
-          about: ["Estate sale process", "Probate property sales", "Real estate consultation", "Property preparation"],
+          dateModified: "2026-03-16",
+          about: ["Estate sale process", "Probate property sales", "Real estate consultation", "Property preparation", "Offer negotiation", "Closing coordination"],
         })}
       />
       <BreadcrumbSchema items={[{ name: "How the Process Works", url: "/how-the-process-works" }]} />
@@ -88,10 +108,10 @@ const HowTheProcessWorks = () => {
               How the Process Works
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-4">
-              Estate property sales can feel overwhelming — especially when you are managing legal requirements, family expectations, and a property that may need significant work. David Stein follows a clear, six-step process designed to bring order to complexity and keep everyone informed at every stage.
+              Estate property sales can feel overwhelming — especially when you are managing legal requirements, family expectations, and a property that may need significant work. David Stein follows a clear, seven-step process designed to bring order to complexity and keep everyone informed at every stage.
             </p>
             <p className="text-lg text-primary-foreground/70 leading-relaxed mb-[30px]">
-              Each engagement is structured around practical milestones: assess the property, align on strategy, prepare the home, price it accurately, market it effectively, and close with confidence.
+              Each engagement is structured around practical milestones: assess the property, align on strategy, prepare the home, price it accurately, market it effectively, negotiate with confidence, and close with certainty. Post-sale support ensures nothing falls through the cracks.
             </p>
             <Link to="/contact">
               <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-medium px-7 py-4 h-auto rounded-lg">
@@ -105,7 +125,7 @@ const HowTheProcessWorks = () => {
 
       <TrustStrip />
 
-      {/* Six Steps */}
+      {/* Seven Steps */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-[900px] mx-auto">
@@ -119,7 +139,8 @@ const HowTheProcessWorks = () => {
                     <h3 className="font-serif text-xl md:text-[22px] text-foreground font-semibold mb-2">
                       {step.title}
                     </h3>
-                    <p className="text-muted-foreground leading-[1.75]">{step.text}</p>
+                    <p className="text-muted-foreground leading-[1.75] mb-3">{step.text}</p>
+                    <p className="text-muted-foreground/80 text-sm leading-relaxed italic">{step.details}</p>
                   </div>
                 </div>
               ))}
@@ -132,8 +153,11 @@ const HowTheProcessWorks = () => {
       <section className="py-16 lg:py-20 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <p className="text-muted-foreground text-lg leading-relaxed">
+            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
               Every situation is different. Some clients need immediate sale guidance. Others need time, planning, family coordination, or valuation-related clarity before taking the next step.
+            </p>
+            <p className="text-muted-foreground text-base leading-relaxed">
+              David adapts this process to fit your circumstances — whether that means a compressed timeline for a court-ordered sale or a longer runway that allows for thorough preparation and family decision-making. The structure provides consistency; the execution is always personalized.
             </p>
           </div>
         </div>
@@ -150,6 +174,9 @@ const HowTheProcessWorks = () => {
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
               Want to talk through your situation and next steps?
             </h2>
+            <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
+              Whether you are an executor, trustee, attorney, or family member — David is available for a no-obligation conversation about your property and circumstances.
+            </p>
             <div className="flex justify-center">
               <Link to="/contact">
                 <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold">
