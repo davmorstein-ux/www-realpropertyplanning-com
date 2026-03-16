@@ -71,8 +71,9 @@ const HeroSection = () => {
               <div className="w-80 h-96 rounded-2xl overflow-hidden border-4 border-gold/30 shadow-2xl">
                 <img
                   src={daveHeadshot}
-                  alt="David Stein - Licensed Broker & Certified Appraiser"
+                  alt="David Stein, probate real estate specialist and certified appraiser in Western Washington"
                   className="w-full h-full object-cover object-top"
+                  loading="eager"
                 />
               </div>
               <div className="absolute -bottom-4 -right-4 w-80 h-96 rounded-2xl border-2 border-gold/20 -z-10" />

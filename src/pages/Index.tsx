@@ -547,8 +547,9 @@ const Index = () => {
               <div className="rounded-lg overflow-hidden border border-border shadow-lg">
                 <img
                   src={coupleWritingWill}
-                  alt="A couple reviewing estate planning documents together"
+                  alt="A couple reviewing estate planning and inherited property documents at their kitchen table"
                   className="w-full h-auto object-cover"
+                  loading="lazy"
                 />
               </div>
             </div>
