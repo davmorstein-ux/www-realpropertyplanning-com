@@ -123,8 +123,8 @@ const ForAttorneys = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Real Estate Guidance for Attorneys & Their Clients | Real Property Planning"
-        description="Real Property Planning works with attorneys and their clients when real property is involved in probate, trust administration, guardianship, estate transitions, and senior housing moves across Western Washington."
+        title="Real Estate Resource for Estate & Probate Attorneys"
+        description="Experienced real estate broker and certified appraiser assisting attorneys and fiduciaries with probate property sales and estate real estate decisions."
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema items={[{ name: "For Attorneys", url: "/for-attorneys" }]} />

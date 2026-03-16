@@ -65,8 +65,8 @@ const SeniorTransitions = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Senior Home Sales & Downsizing Support | Real Property Planning"
-        description="When a parent or loved one needs to sell the family home, the process should feel steady — not rushed. David Stein works at the family's pace, handling preparation, pricing, and the sale with patience and care."
+        title="Senior Housing & Downsizing Real Estate Help"
+        description="Helping seniors and families coordinate downsizing and housing transitions with practical guidance and experienced real estate support."
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema items={[{ name: "Senior Transitions", url: "/senior-transitions" }]} />

@@ -55,8 +55,8 @@ const CountyPageTemplate = ({
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title={`${countyName} Estate & Inherited Property Sales | Real Property Planning`}
-        description={`Selling an inherited home, probate property, or trust-owned real estate in ${countyName}? David Stein provides hands-on guidance with local market knowledge and dual broker-appraiser credentials.`}
+        title={`Estate & Probate Property Sales in ${countyName} WA`}
+        description={countyName === "King County" ? "Local real estate expertise helping families, executors, and attorneys manage estate property sales throughout King County." : countyName === "Snohomish County" ? "Helping families and fiduciaries sell inherited real estate across Snohomish County with trusted market and valuation experience." : countyName === "Pierce County" ? "Professional real estate support for probate and estate property sales throughout Pierce County Washington." : countyName === "Kitsap County" ? "Guidance for executors and families selling inherited homes and estate properties across Kitsap County Washington." : `Helping families and fiduciaries sell inherited real estate across ${countyName} with trusted market and valuation experience.`}
       />
       <BreadcrumbSchema items={breadcrumbItems} />
       <Header />

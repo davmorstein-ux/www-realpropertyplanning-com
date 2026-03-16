@@ -117,8 +117,8 @@ const Executors = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Estate Property Guide for Executors & Trustees | Real Property Planning"
-        description="First time managing an estate property? David Stein walks executors and trustees through every step — assessing the home, coordinating preparation, pricing it right, and handling the sale from start to finish."
+        title="Selling an Estate Property | Help for Executors"
+        description="Guidance for executors and personal representatives selling inherited property, including valuation insight, preparation, and coordinated real estate services."
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema items={[{ name: "For Executors", url: "/executors" }]} />
