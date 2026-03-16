@@ -11,6 +11,7 @@ const allLinks = [
   { href: "/how-the-process-works", label: "How the Process Works" },
   { href: "/how-to-move-elderly-parents", label: "How to Move Elderly Parents" },
   { href: "/counties", label: "Counties We Serve" },
+  { href: "/transition-resources", label: "Transition Resources" },
   { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact David" },
   { href: "/resources", label: "Resources" },
