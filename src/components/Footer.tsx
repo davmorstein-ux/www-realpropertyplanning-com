@@ -89,8 +89,9 @@ const Footer = () => {
         <div className="border-t border-primary-foreground/10 pt-10 pb-2 flex flex-col items-center">
           <img 
             src={expRealtyLogo} 
-            alt="eXp Realty" 
+            alt="eXp Realty brokerage logo — David Stein is a licensed broker with eXp Realty" 
             className="w-[95px] md:w-[120px] h-auto mb-4"
+            loading="lazy"
           />
           <p className="text-primary-foreground/50 text-sm text-center leading-relaxed">
             David Stein | Licensed Real Estate Broker, Washington State | eXp Realty

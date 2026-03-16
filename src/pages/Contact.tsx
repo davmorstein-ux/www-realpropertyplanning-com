@@ -147,7 +147,7 @@ const Contact = () => {
               {/* Brokerage Info */}
               <div className="pt-8 border-t border-border">
                 <div className="flex flex-col items-center md:items-start mb-5">
-                  <img src={expRealtyLogo} alt="eXp Realty" className="w-[95px] md:w-[120px] h-auto" />
+                  <img src={expRealtyLogo} alt="eXp Realty brokerage logo" className="w-[95px] md:w-[120px] h-auto" loading="lazy" />
                 </div>
                 <div className="space-y-2 text-sm text-muted-foreground">
                   <p className="font-medium text-foreground">David Stein</p>
