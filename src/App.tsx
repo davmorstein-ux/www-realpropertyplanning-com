@@ -40,6 +40,7 @@ import ForSeniorLivingProfessionals from "./pages/ForSeniorLivingProfessionals";
 import TransitionResources from "./pages/TransitionResources";
 import Services from "./pages/Services";
 import Testimonials from "./pages/Testimonials";
+import ProfessionalReferralResource from "./pages/ProfessionalReferralResource";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
