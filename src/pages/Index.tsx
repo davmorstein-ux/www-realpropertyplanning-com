@@ -701,58 +701,40 @@ const Index = () => {
       {/* Not Sure Where to Start? */}
       <section className="py-20 lg:py-28 bg-secondary">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <p className="text-gold font-bold tracking-widest uppercase mb-3 text-base">
-              Start Here
-            </p>
+          <div className="max-w-2xl mx-auto text-center">
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-6">
-              Not Sure Where to Begin?
+              Not Sure Where to Start?
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
-              Whether you're an executor settling an estate, a family preparing for a senior move, or a professional supporting a client through a housing transition — Real Property Planning can help you find the right path forward.
+            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+              Many families contact Real Property Planning when they are trying to figure out what to do with a home during a major life transition — such as probate, downsizing, or a move to assisted living.
             </p>
-
-            <div className="grid sm:grid-cols-3 gap-5 mb-10">
-              {[
-                {
-                  icon: FileText,
-                  title: "Explore Resources",
-                  description: "Browse curated guides, service categories, and professional referral resources.",
-                  link: "/transition-resources",
-                },
-                {
-                  icon: Scale,
-                  title: "Understand the Process",
-                  description: "See how estate and transition property sales work from start to finish.",
-                  link: "/how-the-process-works",
-                },
-                {
-                  icon: Phone,
-                  title: "Talk to David",
-                  description: "Schedule a confidential conversation to discuss your situation.",
-                  link: "/contact",
-                },
-              ].map((card, index) => (
-                <Link key={index} to={card.link} className="group">
-                  <div className="bg-card rounded-xl border border-border p-7 h-full hover:border-gold/30 hover:shadow-md transition-all">
-                    <card.icon className="w-8 h-8 text-gold mx-auto mb-4" />
-                    <h3 className="font-serif text-lg text-foreground font-semibold mb-2 group-hover:text-gold transition-colors">
-                      {card.title}
-                    </h3>
-                    <p className="text-muted-foreground text-[15px] leading-relaxed">
-                      {card.description}
-                    </p>
-                  </div>
-                </Link>
-              ))}
+            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+              These situations often involve legal, financial, and housing decisions, and it can be helpful to speak with someone who understands how the real estate side fits into the bigger picture.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-10">
+              If you are navigating one of these situations, Real Property Planning is available as a resource.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/contact">
+                <Button
+                  size="lg"
+                  className="bg-[hsl(216,65%,34%)] hover:bg-[hsl(216,65%,28%)] text-white font-semibold px-8 rounded-lg text-base h-[52px] w-full sm:w-auto focus-visible:ring-gold"
+                >
+                  <Phone className="w-5 h-5 mr-2" />
+                  Schedule a Consultation
+                </Button>
+              </Link>
+              <Link to="/contact">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-border text-foreground hover:bg-muted font-semibold px-8 rounded-lg text-base h-[52px] w-full sm:w-auto focus-visible:ring-gold"
+                >
+                  <Mail className="w-5 h-5 mr-2" />
+                  Contact Real Property Planning
+                </Button>
+              </Link>
             </div>
-
-            <Link to="/transition-resources">
-              <Button variant="outline" className="border-navy text-navy hover:bg-navy hover:text-primary-foreground">
-                View All Transition Resources
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
-            </Link>
           </div>
         </div>
       </section>
