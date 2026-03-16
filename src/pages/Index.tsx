@@ -228,7 +228,7 @@ const Index = () => {
                     Schedule a Consultation
                   </Button>
                 </Link>
-                <Link to="/probate-estate-sales">
+                <Link to="/services">
                   <Button
                     size="lg"
                     variant="outline"
