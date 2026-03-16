@@ -25,6 +25,7 @@ import KingCounty from "./pages/counties/KingCounty";
 import SnohomishCounty from "./pages/counties/SnohomishCounty";
 import PierceCounty from "./pages/counties/PierceCounty";
 import KitsapCounty from "./pages/counties/KitsapCounty";
+import SkagitCounty from "./pages/counties/SkagitCounty";
 import Resources from "./pages/Resources";
 import SeniorMoveManagers from "./pages/resources/SeniorMoveManagers";
 import EstateSaleCompanies from "./pages/resources/EstateSaleCompanies";
