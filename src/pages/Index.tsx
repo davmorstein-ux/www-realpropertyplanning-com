@@ -16,6 +16,7 @@ import alcaLogo from "@/assets/alca-corporate-partner.png";
 import daveHeadshot2 from "@/assets/dave-headshot-2.jpg";
 import coupleWritingWill from "@/assets/couple-writing-will.png";
 import heroHome from "@/assets/hero-home.jpg";
+import AgentCredentialBlock from "@/components/AgentCredentialBlock";
 
 const services = [
   {
