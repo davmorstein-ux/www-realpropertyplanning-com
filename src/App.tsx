@@ -25,6 +25,7 @@ import KingCounty from "./pages/counties/KingCounty";
 import SnohomishCounty from "./pages/counties/SnohomishCounty";
 import PierceCounty from "./pages/counties/PierceCounty";
 import KitsapCounty from "./pages/counties/KitsapCounty";
+import SkagitCounty from "./pages/counties/SkagitCounty";
 import Resources from "./pages/Resources";
 import SeniorMoveManagers from "./pages/resources/SeniorMoveManagers";
 import EstateSaleCompanies from "./pages/resources/EstateSaleCompanies";
@@ -72,6 +73,7 @@ const App = () => (
           <Route path="/counties/snohomish" element={<SnohomishCounty />} />
           <Route path="/counties/pierce" element={<PierceCounty />} />
           <Route path="/counties/kitsap" element={<KitsapCounty />} />
+          <Route path="/counties/skagit" element={<SkagitCounty />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/resources/senior-move-managers" element={<SeniorMoveManagers />} />
           <Route path="/resources/estate-sale-companies" element={<EstateSaleCompanies />} />

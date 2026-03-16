@@ -123,6 +123,11 @@ const ROUTE_METADATA: Record<string, { title: string; description: string }> = {
     description:
       "Real Property Planning helps clients and referral partners with probate real estate, inherited homes, estate sales, trust-owned property, and senior transitions in Kitsap County.",
   },
+  "/counties/skagit": {
+    title: "Skagit County Probate Real Estate | Real Property Planning",
+    description:
+      "Real Property Planning helps clients and referral partners with probate real estate, inherited homes, estate sales, trust-owned property, and senior transitions in Skagit County.",
+  },
   "/resources": {
     title: "Resources | Real Property Planning",
     description:

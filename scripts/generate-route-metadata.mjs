@@ -78,6 +78,12 @@ const routeMeta = [
     description:
       "Real Property Planning helps clients and referral partners with probate real estate, inherited homes, estate sales, trust-owned property, and senior transitions in Kitsap County, Washington.",
   },
+  {
+    route: "/counties/skagit",
+    title: "Skagit County Probate Real Estate & Inherited Property Guidance | Real Property Planning",
+    description:
+      "Real Property Planning helps clients and referral partners with probate real estate, inherited homes, estate sales, trust-owned property, and senior transitions in Skagit County, Washington.",
+  },
 ];
 
 const replaceMetaTag = (html, regex, replacement) =>

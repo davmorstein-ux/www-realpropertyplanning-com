@@ -30,6 +30,11 @@ const countyCards = [
     href: "/counties/kitsap",
     intro: "Practical real estate guidance for inherited homes and estate-related sales across key Kitsap communities.",
   },
+  {
+    county: "Skagit County",
+    href: "/counties/skagit",
+    intro: "Estate property guidance for families and fiduciaries navigating probate, inherited homes, and property transitions in the Skagit Valley.",
+  },
 ];
 
 const Counties = () => {
@@ -37,7 +42,7 @@ const Counties = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Western Washington Service Areas | Real Property Planning"
-        description="David Stein serves clients across King, Snohomish, Pierce, and Kitsap Counties — bringing local market knowledge and dual broker-appraiser credentials to every estate, inherited, and transition-related property sale."
+        description="David Stein serves clients across King, Snohomish, Pierce, Kitsap, and Skagit Counties — bringing local market knowledge and dual broker-appraiser credentials to every estate, inherited, and transition-related property sale."
       />
       <BreadcrumbSchema items={[{ name: "Counties", url: "/counties" }]} />
       <Header />

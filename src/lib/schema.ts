@@ -7,6 +7,9 @@ const areaServed = [
   { "@type": "AdministrativeArea", name: "Snohomish County", containedInPlace: { "@type": "State", name: "Washington" } },
   { "@type": "AdministrativeArea", name: "Pierce County", containedInPlace: { "@type": "State", name: "Washington" } },
   { "@type": "AdministrativeArea", name: "Kitsap County", containedInPlace: { "@type": "State", name: "Washington" } },
+  { "@type": "AdministrativeArea", name: "Skagit County", containedInPlace: { "@type": "State", name: "Washington" } },
+  { "@type": "Place", name: "Western Washington" },
+  { "@type": "Place", name: "Puget Sound region, Washington" },
 ];
 
 export const realEstateAgentSchema = {
