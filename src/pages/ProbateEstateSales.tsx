@@ -82,8 +82,8 @@ const ProbateEstateSales = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Probate Property Sales & Estate Real Estate | Real Property Planning"
-        description="Probate sales involve court timelines, fiduciary duties, deferred maintenance, and family coordination. David Stein manages the entire real estate process so executors and attorneys can focus on what they do best."
+        title="Probate Real Estate Sales in Western Washington"
+        description="Professional representation for probate and estate property sales, helping families and fiduciaries navigate complex real estate transitions."
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema items={[{ name: "Probate & Estate Sales", url: "/probate-estate-sales" }]} />

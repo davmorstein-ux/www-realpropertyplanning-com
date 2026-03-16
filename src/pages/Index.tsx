@@ -169,8 +169,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Probate Real Estate & Inherited Property Sales | Real Property Planning"
-        description="Selling a home tied to probate, a trust, or an inheritance? Real Property Planning guides executors, attorneys, and families through estate property sales across King, Snohomish, Pierce & Kitsap Counties. Led by a Washington broker and certified appraiser with over 20 years of experience."
+        title="Probate & Estate Property Sales | Real Property Planning"
+        description="Helping executors, attorneys, and families sell inherited and estate properties across Western Washington with experienced real estate and valuation guidance."
         jsonLd={jsonLd}
       />
       <Header />
