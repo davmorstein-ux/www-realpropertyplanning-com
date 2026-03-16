@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { CheckCircle, Phone } from "lucide-react";
 import daveHeadshot from "@/assets/dave-headshot.jpg";
+import AgentCredentialBlock from "@/components/AgentCredentialBlock";
 
 const whoWorksWith = [
   "Estate planning, probate, and elder law attorneys",
@@ -84,6 +85,7 @@ const About = () => {
                   loading="eager"
                 />
               </div>
+              <AgentCredentialBlock />
             </div>
           </div>
         </div>

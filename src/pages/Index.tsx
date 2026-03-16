@@ -16,6 +16,7 @@ import alcaLogo from "@/assets/alca-corporate-partner.png";
 import daveHeadshot2 from "@/assets/dave-headshot-2.jpg";
 import coupleWritingWill from "@/assets/couple-writing-will.png";
 import heroHome from "@/assets/hero-home.jpg";
+import AgentCredentialBlock from "@/components/AgentCredentialBlock";
 
 const services = [
   {
@@ -268,6 +269,7 @@ const Index = () => {
                 </div>
                 <div className="absolute -bottom-4 -right-4 w-80 h-96 rounded-2xl border-2 border-gold/20 -z-10" />
               </div>
+              <AgentCredentialBlock />
             </div>
           </div>
         </div>
@@ -747,7 +749,7 @@ const Index = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-8">
-              Professional Affiliations
+              Professional Memberships &amp; Affiliations
             </h2>
             <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer" className="inline-block mb-6">
               <img
