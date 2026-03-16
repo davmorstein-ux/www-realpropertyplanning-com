@@ -212,7 +212,11 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "Real Property Planning helps clients and referral partners with probate real estate, inherited homes, estate sales, trust-owned property, and senior transitions in Pierce County.",
     h1: "Estate and Inherited Property Sales in Pierce County",
     intro:
-      "Real Property Planning helps clients and referral partners with probate real estate, inherited homes, estate sales, trust-owned property, and senior transitions in Pierce County — including Tacoma, University Place, Gig Harbor, Puyallup, and surrounding communities.",
+      "Real Property Planning helps clients and referral partners with probate real estate, inherited homes, estate sales, trust-owned property, and senior transitions in Pierce County, Washington.",
+    cities: [
+      "Tacoma", "University Place", "Gig Harbor", "Puyallup", "Bonney Lake",
+      "Lakewood", "Sumner", "Fircrest", "Milton",
+    ],
   },
   "/counties/kitsap": {
     title: "Kitsap County Probate Real Estate | Real Property Planning",
