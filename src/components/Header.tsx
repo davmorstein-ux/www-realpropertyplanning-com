@@ -18,10 +18,11 @@ const primaryLinks = [
   ]},
   { href: "/for-attorneys", label: "For Attorneys" },
   { href: "/executors", label: "For Executors" },
-  { href: "/testimonials", label: "Testimonials" },
-  { href: "/resources", label: "Resources" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
+  { href: "/resources", label: "Resources", children: [
+    { href: "/resources", label: "Resources" },
+    { href: "/about", label: "About" },
+    { href: "/contact", label: "Contact" },
+  ]},
 ];
 
 const Header = () => {
@@ -142,15 +143,8 @@ const Header = () => {
           </Link>
         </div>
 
-        {/* Right – CTA (desktop) / Hamburger (mobile) */}
-        <div className="hidden md:flex items-center shrink-0">
-          <Link to="/contact">
-            <Button size="sm" className="bg-gold hover:bg-gold-light text-foreground font-medium">
-              <Phone className="w-4 h-4 mr-2" />
-              Consultation
-            </Button>
-          </Link>
-        </div>
+        {/* Right spacer (desktop) */}
+        <div className="hidden md:flex items-center shrink-0" />
 
         {/* Mobile Hamburger */}
         <button
