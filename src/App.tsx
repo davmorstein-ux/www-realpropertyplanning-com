@@ -36,6 +36,7 @@ import MovingRelocationServices from "./pages/resources/MovingRelocationServices
 import HowToMoveElderlyParents from "./pages/HowToMoveElderlyParents";
 import ForReferralPartners from "./pages/ForReferralPartners";
 import ForSeniorLivingProfessionals from "./pages/ForSeniorLivingProfessionals";
+import TransitionResources from "./pages/TransitionResources";
 import Services from "./pages/Services";
 import Testimonials from "./pages/Testimonials";
 import NotFound from "./pages/NotFound";
@@ -82,6 +83,7 @@ const App = () => (
           <Route path="/how-to-move-elderly-parents" element={<HowToMoveElderlyParents />} />
           <Route path="/for-referral-partners" element={<ForReferralPartners />} />
           <Route path="/for-senior-living-professionals" element={<ForSeniorLivingProfessionals />} />
+          <Route path="/transition-resources" element={<TransitionResources />} />
           <Route path="/services" element={<Services />} />
           <Route path="/testimonials" element={<Testimonials />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
