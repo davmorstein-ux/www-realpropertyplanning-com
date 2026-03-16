@@ -257,9 +257,9 @@ const Index = () => {
             </div>
 
             {/* Right Column – David Stein Headshot */}
-            <div className="flex justify-center mt-10 lg:mt-0">
+            <div className="flex flex-col items-center mt-10 lg:mt-0">
               <div className="relative">
-                <div className="w-80 h-96 rounded-2xl overflow-hidden border-4 border-gold/30 shadow-2xl">
+                <div className="w-72 h-[22rem] sm:w-80 sm:h-96 rounded-2xl overflow-hidden border-4 border-gold/30 shadow-2xl">
                   <img
                     src={daveHeadshot2}
                     alt="David Stein, Washington state certified appraiser and real estate broker specializing in probate and estate property"
@@ -267,7 +267,7 @@ const Index = () => {
                     loading="eager"
                   />
                 </div>
-                <div className="absolute -bottom-4 -right-4 w-80 h-96 rounded-2xl border-2 border-gold/20 -z-10" />
+                <div className="absolute -bottom-4 -right-4 w-72 h-[22rem] sm:w-80 sm:h-96 rounded-2xl border-2 border-gold/20 -z-10" />
               </div>
               <AgentCredentialBlock />
             </div>
