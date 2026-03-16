@@ -34,6 +34,7 @@ import SeniorLivingCommunities from "./pages/resources/SeniorLivingCommunities";
 import PropertyPreparationServices from "./pages/resources/PropertyPreparationServices";
 import MovingRelocationServices from "./pages/resources/MovingRelocationServices";
 import HowToMoveElderlyParents from "./pages/HowToMoveElderlyParents";
+import ForReferralPartners from "./pages/ForReferralPartners";
 import Services from "./pages/Services";
 import Testimonials from "./pages/Testimonials";
 import NotFound from "./pages/NotFound";
