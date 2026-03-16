@@ -5,6 +5,26 @@ import SEOHead from "@/components/SEOHead";
 import { articleSchema } from "@/lib/schema";
 import TrustStrip from "@/components/TrustStrip";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import PageFAQ from "@/components/PageFAQ";
+
+const faqs = [
+  {
+    question: "Where should families start when a home is part of a major life transition?",
+    answer: "Start by identifying the type of transition — probate, trust administration, downsizing, or an inherited property situation. Each involves different timelines and requirements. Real Property Planning can help you understand the real estate side and connect you with the right professionals for other aspects of the process.",
+  },
+  {
+    question: "Can Real Property Planning help if we don't know what to do yet?",
+    answer: "Absolutely. Many families reach out before they have a clear plan. A confidential conversation with David Stein can help you understand your options, identify next steps, and determine which professionals you may need to involve.",
+  },
+  {
+    question: "What types of professionals are typically involved in an estate or senior transition?",
+    answer: "Depending on the situation, you may work with attorneys, CPAs, senior move managers, estate sale companies, financial advisors, care coordinators, and a real estate professional. Real Property Planning helps coordinate the real estate piece alongside these other professionals.",
+  },
+  {
+    question: "Is Real Property Planning a referral service?",
+    answer: "No. Real Property Planning is a professional real estate brokerage led by David Stein, a licensed broker and certified appraiser. The resource pages on this site are provided as a helpful starting point — not as paid referrals or endorsements.",
+  },
+];
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import {
@@ -380,6 +400,8 @@ const TransitionResources = () => {
           </div>
         </div>
       </section>
+
+      <PageFAQ faqs={faqs} heading="Transition Resources FAQs" />
 
       {/* CTA */}
       <section className="py-16 lg:py-24 bg-primary">
