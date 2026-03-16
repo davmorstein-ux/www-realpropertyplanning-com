@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Phone, Mail } from "lucide-react";
 import daveHeadshot from "@/assets/dave-headshot.jpg";
 import logo from "@/assets/logo-rpp.jpg";
+import AgentCredentialBlock from "@/components/AgentCredentialBlock";
 
 const HeroSection = () => {
   return (
