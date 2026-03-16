@@ -200,7 +200,11 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "Real Property Planning helps clients and referral partners with probate real estate, inherited homes, estate sales, trust-owned property, and senior transitions in Snohomish County.",
     h1: "Estate and Inherited Property Sales in Snohomish County",
     intro:
-      "Real Property Planning helps clients and referral partners with probate real estate, inherited homes, estate sales, trust-owned property, and senior transitions in Snohomish County — including Everett, Edmonds, Lynnwood, Mukilteo, Mill Creek, and surrounding communities.",
+      "Real Property Planning helps clients and referral partners with probate real estate, inherited homes, estate sales, trust-owned property, and senior transitions in Snohomish County, Washington.",
+    cities: [
+      "Everett", "Edmonds", "Lynnwood", "Mukilteo", "Mill Creek", "Bothell",
+      "Snohomish", "Lake Stevens", "Marysville", "Monroe", "Arlington",
+    ],
   },
   "/counties/pierce": {
     title: "Pierce County Probate Real Estate | Real Property Planning",
