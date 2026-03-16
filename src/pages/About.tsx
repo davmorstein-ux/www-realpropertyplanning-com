@@ -85,6 +85,7 @@ const About = () => {
                   loading="eager"
                 />
               </div>
+              <AgentCredentialBlock />
             </div>
           </div>
         </div>

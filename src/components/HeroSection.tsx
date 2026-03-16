@@ -79,6 +79,7 @@ const HeroSection = () => {
               </div>
               <div className="absolute -bottom-4 -right-4 w-80 h-96 rounded-2xl border-2 border-gold/20 -z-10" />
             </div>
+            <AgentCredentialBlock />
           </div>
         </div>
       </div>
