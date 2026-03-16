@@ -87,6 +87,19 @@ const Footer = () => {
           </p>
         </div>
         
+        {/* Professional Affiliations */}
+        <div className="border-t border-primary-foreground/10 pt-8 pb-6 flex flex-col items-center">
+          <h4 className="text-primary-foreground font-serif text-lg font-medium mb-4">Professional Affiliations</h4>
+          <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer">
+            <img
+              src={alcaLogo}
+              alt="Aging Life Care Association Corporate Partner"
+              className="h-12 w-auto opacity-80 hover:opacity-100 transition-opacity"
+              loading="lazy"
+            />
+          </a>
+        </div>
+
         {/* Brokerage Compliance */}
         <div className="border-t border-primary-foreground/10 pt-10 pb-2 flex flex-col items-center">
           <img 
