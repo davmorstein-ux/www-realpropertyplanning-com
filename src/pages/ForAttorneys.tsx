@@ -150,8 +150,9 @@ const ForAttorneys = () => {
             <div className="hidden lg:flex justify-center">
               <img
                 src={attorneyImage}
-                alt="Professional attorneys reviewing estate property documents"
+                alt="Attorneys and fiduciaries reviewing probate estate property documents with real estate guidance"
                 className="w-80 xl:w-96 rounded-lg shadow-lg"
+                loading="lazy"
               />
             </div>
           </div>

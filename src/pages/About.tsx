@@ -79,8 +79,9 @@ const About = () => {
               <div className="rounded-lg overflow-hidden border-2 border-gold/20 shadow-lg">
                 <img
                   src={daveHeadshot}
-                  alt="David Stein — Washington Real Estate Broker and Certified Appraiser"
+                  alt="David Stein, Washington state certified real estate appraiser and broker behind Real Property Planning"
                   className="w-full h-auto object-cover"
+                  loading="eager"
                 />
               </div>
             </div>
