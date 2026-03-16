@@ -296,6 +296,7 @@ const HowToMoveElderlyParents = () => (
         </div>
       </section>
 
+      <PageFAQ faqs={faqs} heading="Senior Move & Downsizing FAQs" />
       <CTASection />
       <RelatedServices currentPath="/how-to-move-elderly-parents" />
       <DisclaimerSection />
