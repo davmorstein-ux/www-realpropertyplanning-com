@@ -224,7 +224,11 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "Real Property Planning helps clients and referral partners with probate real estate, inherited homes, estate sales, trust-owned property, and senior transitions in Kitsap County.",
     h1: "Estate and Inherited Property Sales in Kitsap County",
     intro:
-      "Real Property Planning helps clients and referral partners with probate real estate, inherited homes, estate sales, trust-owned property, and senior transitions in Kitsap County — including Bainbridge Island, Poulsbo, Silverdale, Bremerton, and surrounding communities.",
+      "Real Property Planning helps clients and referral partners with probate real estate, inherited homes, estate sales, trust-owned property, and senior transitions in Kitsap County, Washington.",
+    cities: [
+      "Bainbridge Island", "Poulsbo", "Silverdale", "Bremerton",
+      "Port Orchard", "Kingston", "Suquamish",
+    ],
   },
   "/counties/skagit": {
     title: "Skagit County Probate Real Estate | Real Property Planning",
