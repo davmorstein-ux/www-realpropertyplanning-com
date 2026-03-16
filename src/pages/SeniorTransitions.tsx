@@ -10,6 +10,7 @@ import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Phone, CheckCircle, Heart, Users } from "lucide-react";
+import alcaLogo from "@/assets/alca-corporate-partner.png";
 
 const transitionSituations = [
   "Downsizing from a longtime family home to a smaller residence",
