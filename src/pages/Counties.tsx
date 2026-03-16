@@ -30,6 +30,11 @@ const countyCards = [
     href: "/counties/kitsap",
     intro: "Practical real estate guidance for inherited homes and estate-related sales across key Kitsap communities.",
   },
+  {
+    county: "Skagit County",
+    href: "/counties/skagit",
+    intro: "Estate property guidance for families and fiduciaries navigating probate, inherited homes, and property transitions in the Skagit Valley.",
+  },
 ];
 
 const Counties = () => {
