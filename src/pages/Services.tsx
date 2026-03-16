@@ -49,6 +49,12 @@ const serviceCards = [
     description: "Property guidance for CPAs and financial planners advising clients through estate or life transitions.",
     link: "/for-cpas",
   },
+  {
+    icon: Heart,
+    title: "For Senior Living & Transition Professionals",
+    description: "Real estate guidance for senior living communities, move managers, and professionals supporting families through later-life housing transitions.",
+    link: "/for-senior-living-professionals",
+  },
 ];
 
 const Services = () => {
