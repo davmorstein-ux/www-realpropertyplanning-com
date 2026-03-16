@@ -18,10 +18,11 @@ const primaryLinks = [
   ]},
   { href: "/for-attorneys", label: "For Attorneys" },
   { href: "/executors", label: "For Executors" },
-  { href: "/testimonials", label: "Testimonials" },
-  { href: "/resources", label: "Resources" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
+  { href: "/resources", label: "Resources", children: [
+    { href: "/resources", label: "Resources" },
+    { href: "/about", label: "About" },
+    { href: "/contact", label: "Contact" },
+  ]},
 ];
 
 const Header = () => {
