@@ -6,7 +6,31 @@ import { articleSchema } from "@/lib/schema";
 import RelatedServices from "@/components/RelatedServices";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import CTASection from "@/components/CTASection";
+import PageFAQ from "@/components/PageFAQ";
 import { Link } from "react-router-dom";
+
+const faqs = [
+  {
+    question: "What should families do with a home when a parent moves into assisted living?",
+    answer: "Families typically need to decide whether to sell the home, rent it, or hold it. In most cases, selling is the practical choice — especially when the home requires maintenance the family cannot manage remotely. Real Property Planning helps families evaluate their options and manage the sale when the time is right.",
+  },
+  {
+    question: "Should we sell the house before or after moving a parent into senior housing?",
+    answer: "It depends on your family's timeline and financial situation. Some families sell beforehand to fund the move, while others relocate first and sell afterward. David Stein can help you understand the trade-offs and plan a realistic timeline.",
+  },
+  {
+    question: "How long does it take to prepare a home for sale after downsizing?",
+    answer: "Preparation timelines vary depending on the home's condition, how much cleanout is needed, and whether repairs or staging are involved. Many homes can be sale-ready in 3–6 weeks with the right coordination. Real Property Planning helps manage this process from start to finish.",
+  },
+  {
+    question: "Do I need a senior move manager to help with the transition?",
+    answer: "A senior move manager can be a valuable resource — especially when the move involves decades of personal belongings, emotional attachment, or complex logistics. They coordinate packing, sorting, and settling into the new space. Real Property Planning works alongside senior move managers to handle the real estate side.",
+  },
+  {
+    question: "What if siblings disagree about selling a parent's home?",
+    answer: "Disagreements among siblings are common during these transitions. Having a knowledgeable, neutral real estate professional involved can help provide clear information about the home's value and realistic options — which often helps families make more informed decisions together.",
+  },
+];
 
 const HowToMoveElderlyParents = () => (
   <>
