@@ -218,7 +218,7 @@ const Index = () => {
                 Real Property Planning provides professional real estate guidance for attorneys, executors, trustees, seniors, and families navigating estate sales, probate property, trust-related transfers, downsizing, and other significant real property decisions.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 mb-6">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-4 mb-6">
                 <Link to="/contact">
                   <Button
                     size="lg"
@@ -235,6 +235,16 @@ const Index = () => {
                     className="border-border text-foreground hover:bg-muted font-semibold px-8 rounded-lg text-base h-[52px] w-full sm:w-auto"
                   >
                     Explore Services
+                  </Button>
+                </Link>
+                <Link to="/testimonials">
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="border-border text-foreground hover:bg-muted font-semibold px-8 rounded-lg text-base h-[52px] w-full sm:w-auto"
+                  >
+                    <Star className="w-5 h-5 mr-2" />
+                    Reviews
                   </Button>
                 </Link>
               </div>
