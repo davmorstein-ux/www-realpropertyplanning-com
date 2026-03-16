@@ -13,6 +13,7 @@ interface RouteMeta {
   h1?: string;
   intro?: string;
   sections?: string[];
+  cities?: string[];
 }
 
 const ROUTE_METADATA: Record<string, RouteMeta> = {
