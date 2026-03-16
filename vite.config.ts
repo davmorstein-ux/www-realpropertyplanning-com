@@ -344,7 +344,7 @@ const replaceTag = (html: string, regex: RegExp, replacement: string) =>
   regex.test(html) ? html.replace(regex, replacement) : html;
 
 const applyMetadata = (html: string, route: string, meta: RouteMeta) => {
-  const { title, description, h1, intro, sections } = meta;
+  const { title, description, h1, intro, sections, cities } = meta;
   const canonical = route === "/" ? SITE_URL : `${SITE_URL}${route}`;
 
   let out = html;
@@ -389,8 +389,23 @@ const applyMetadata = (html: string, route: string, meta: RouteMeta) => {
   if (h1 || intro) {
     const ssgParts: string[] = [];
     ssgParts.push(`<div id="ssg-content" style="font-family:system-ui,sans-serif;max-width:800px;margin:0 auto;padding:40px 20px">`);
+
+    // H1 and intro paragraph
     if (h1) ssgParts.push(`<h1 style="font-size:2rem;line-height:1.2;margin-bottom:16px">${h1}</h1>`);
     if (intro) ssgParts.push(`<p style="font-size:1.1rem;line-height:1.7;color:#444">${intro}</p>`);
+
+    // NAP block (Name, Address, Phone) — early in content for local SEO crawlers
+    ssgParts.push(`<div style="margin-top:24px;padding:20px;border:1px solid #e5e5e5;border-radius:8px;background:#fafafa">`);
+    ssgParts.push(`<h2 style="font-size:1.2rem;margin:0 0 12px 0">Real Property Planning — David Stein</h2>`);
+    ssgParts.push(`<p style="margin:4px 0;color:#444">Licensed Real Estate Broker &amp; Washington State Certified Residential Appraiser</p>`);
+    ssgParts.push(`<p style="margin:4px 0;color:#444">eXp Realty</p>`);
+    ssgParts.push(`<p style="margin:4px 0;color:#555">Phone: <a href="tel:2069003015" style="color:#1a365d">(206) 900-3015</a></p>`);
+    ssgParts.push(`<p style="margin:4px 0;color:#555">Email: <a href="mailto:david@realpropertyplanning.com" style="color:#1a365d">david@realpropertyplanning.com</a></p>`);
+    ssgParts.push(`<p style="margin:4px 0;color:#555">Mailing Address: PO Box 1462, Woodinville, WA 98072</p>`);
+    ssgParts.push(`<p style="margin:4px 0;color:#555">Office: 1455 NW Leary Way, Seattle, WA 98107</p>`);
+    ssgParts.push(`</div>`);
+
+    // Optional section headings
     if (sections) {
       sections.forEach((s) => {
         const [heading, ...rest] = s.split(" — ");
@@ -398,8 +413,16 @@ const applyMetadata = (html: string, route: string, meta: RouteMeta) => {
         if (rest.length) ssgParts.push(`<p style="color:#555;line-height:1.6">${rest.join(" — ")}</p>`);
       });
     }
-    ssgParts.push(`<p style="margin-top:32px;color:#666">Contact David Stein at (206) 900-3015 or david@realpropertyplanning.com</p>`);
-    ssgParts.push(`<p style="color:#888;font-size:0.85rem;margin-top:16px">Serving King County, Snohomish County, Pierce County, Skagit County, and Kitsap County — Western Washington and the Puget Sound region.</p>`);
+
+    // Areas Served block with city names
+    ssgParts.push(`<div style="margin-top:28px">`);
+    ssgParts.push(`<h2 style="font-size:1.3rem;margin-bottom:12px">Areas Served in Western Washington</h2>`);
+    if (cities && cities.length > 0) {
+      ssgParts.push(`<p style="color:#555;line-height:1.8">${cities.join(" · ")}</p>`);
+    }
+    ssgParts.push(`<p style="color:#666;margin-top:8px;line-height:1.6">Serving King County, Snohomish County, Pierce County, Skagit County, and Kitsap County throughout Western Washington and the Puget Sound region.</p>`);
+    ssgParts.push(`</div>`);
+
     ssgParts.push(`</div>`);
 
     out = out.replace(
