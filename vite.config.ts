@@ -187,7 +187,12 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "Real Property Planning helps clients and referral partners with probate real estate, inherited homes, estate sales, trust-owned property, and senior transitions in King County, Washington.",
     h1: "Estate and Inherited Property Sales in King County",
     intro:
-      "Real Property Planning helps clients and referral partners with probate real estate, inherited homes, estate sales, trust-owned property, and senior transitions in King County — including Seattle, Bellevue, Kirkland, Redmond, Issaquah, Mercer Island, and surrounding communities.",
+      "Real Property Planning helps clients and referral partners with probate real estate, inherited homes, estate sales, trust-owned property, and senior transitions in King County, Washington.",
+    cities: [
+      "Seattle", "Bellevue", "Kirkland", "Redmond", "Bothell", "Woodinville",
+      "Issaquah", "Sammamish", "Mercer Island", "Shoreline", "Renton", "Newcastle",
+      "Kenmore", "Lake Forest Park", "Burien", "Federal Way", "Kent",
+    ],
   },
   "/counties/snohomish": {
     title: "Snohomish County Probate Real Estate | Real Property Planning",
