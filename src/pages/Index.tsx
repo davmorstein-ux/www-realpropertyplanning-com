@@ -741,6 +741,28 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Professional Affiliations */}
+      <section className="py-16 lg:py-20 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-8">
+              Professional Affiliations
+            </h2>
+            <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer" className="inline-block mb-6">
+              <img
+                src={alcaLogo}
+                alt="Aging Life Care Association Corporate Partner"
+                className="h-24 md:h-28 w-auto mx-auto"
+                loading="lazy"
+              />
+            </a>
+            <p className="text-muted-foreground text-base leading-relaxed max-w-2xl mx-auto">
+              David Stein and Real Property Planning are proud Corporate Partners of the Aging Life Care Association. Aging Life Care Professionals help older adults and their families navigate complex care, housing, and life transitions. Working alongside these professionals supports a coordinated approach when housing decisions become part of the process.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section className="py-20 lg:py-28 bg-ivory">
         <div className="container px-6 lg:px-8">
