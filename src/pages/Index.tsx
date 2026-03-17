@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
@@ -114,20 +115,45 @@ const homepageFaqs = [
     link: "/faq"
   },
   {
-    question: "Can a trustee sell a house without court involvement?",
-    answer: "In most cases, a trustee can sell trust-owned real estate without going through probate court, as long as the trust document grants that authority. Real Property Planning works with trustees and their attorneys to coordinate the real estate side of these transactions.",
+    question: "What is probate real estate?",
+    answer: "Probate real estate refers to property that must be sold as part of settling a deceased person's estate. The process involves court oversight, specific timelines, and legal requirements that differ from a standard home sale.",
     link: "/faq"
   },
   {
-    question: "How do I determine the right price for estate property?",
-    answer: "Pricing estate property requires understanding condition, market dynamics, and buyer expectations. Real Property Planning's dual brokerage and certified appraisal background helps clients avoid the costly mistakes of overpricing or underpricing inherited and estate-held homes.",
+    question: "Do I need a specialized agent to sell a probate property?",
+    answer: "Yes — probate sales involve unique legal and procedural requirements. An agent with probate experience helps avoid costly delays, court complications, and pricing errors.",
+    link: "/faq"
+  },
+  {
+    question: "What counties does David Stein serve?",
+    answer: "David serves King, Snohomish, Pierce, Skagit, and Kitsap Counties throughout Western Washington.",
+    link: "/counties"
+  },
+  {
+    question: "What is the difference between a real estate broker and a certified appraiser?",
+    answer: "A broker facilitates the sale of property, while a certified appraiser provides independent valuations. David holds both credentials, giving clients professional pricing insight grounded in appraisal methodology — not just market guesswork.",
     link: "/why-valuation-matters"
   },
   {
-    question: "What if the home needs repairs or cleanout before sale?",
-    answer: "Many estate and inherited properties need cleanout, repairs, or preparation before going to market. Real Property Planning helps coordinate vendors, assess what improvements are worth making, and develop a practical plan to get the property sale-ready.",
+    question: "Can you help if the property needs repairs before sale?",
+    answer: "Yes. David advises families on whether to sell as-is or invest in targeted improvements, based on a valuation-informed analysis of likely return.",
     link: "/how-the-process-works"
-  }
+  },
+  {
+    question: "How do senior transitions work?",
+    answer: "David helps families coordinate the sale of a longtime family home when a senior is moving to assisted living, independent living, or a smaller residence — with sensitivity to emotional and logistical complexity.",
+    link: "/senior-transitions"
+  },
+  {
+    question: "Do you work with attorneys and fiduciaries?",
+    answer: "Yes. David regularly works alongside probate attorneys, estate attorneys, trustees, and professional fiduciaries to ensure the real estate component of estate administration is handled accurately and efficiently.",
+    link: "/for-attorneys"
+  },
+  {
+    question: "How is an estate property priced?",
+    answer: "David uses his background as a certified residential appraiser to inform pricing — evaluating condition, comparable sales, and market trends to set a defensible and competitive list price.",
+    link: "/why-valuation-matters"
+  },
 ];
 
 const howIHelp = [
@@ -162,6 +188,15 @@ const faqJsonLd = {
 };
 
 const Index = () => {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.setAttribute("data-faq-jsonld", "true");
+    script.textContent = JSON.stringify(faqJsonLd);
+    document.head.appendChild(script);
+    return () => { script.remove(); };
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
