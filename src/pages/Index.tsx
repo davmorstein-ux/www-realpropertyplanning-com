@@ -171,8 +171,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Probate & Estate Property Sales | Real Property Planning"
-        description="Helping executors, attorneys, and families sell inherited and estate properties across Western Washington with experienced real estate and valuation guidance."
+        title="Probate & Inherited Property Real Estate | Real Property Planning | Western Washington"
+        description="Real Property Planning helps executors, families, and attorneys sell probate, estate, and inherited real estate in King, Snohomish, Pierce, Skagit, and Kitsap Counties."
         jsonLd={jsonLd}
       />
       <Header />
