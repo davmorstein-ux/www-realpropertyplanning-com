@@ -7,6 +7,7 @@ import logo from "@/assets/logo-rpp.jpg";
 const primaryLinks = [
   { href: "/", label: "Home" },
   { href: "/probate-estate-sales", label: "Services", children: [
+    { href: "/senior-estate-services", label: "Senior & Estate Services" },
     { href: "/probate-estate-sales", label: "Probate & Estate Sales" },
     { href: "/senior-transitions", label: "Senior Transitions" },
     { href: "/for-attorneys", label: "For Attorneys & Fiduciaries" },

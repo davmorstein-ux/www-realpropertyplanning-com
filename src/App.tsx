@@ -42,6 +42,7 @@ import Services from "./pages/Services";
 import Testimonials from "./pages/Testimonials";
 import ProfessionalReferralResource from "./pages/ProfessionalReferralResource";
 import ProfessionalNetwork from "./pages/ProfessionalNetwork";
+import SeniorEstateServices from "./pages/SeniorEstateServices";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -92,6 +93,7 @@ const App = () => (
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/professional-referral-resource" element={<ProfessionalReferralResource />} />
           <Route path="/professional-network" element={<ProfessionalNetwork />} />
+          <Route path="/senior-estate-services" element={<SeniorEstateServices />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
