@@ -241,12 +241,16 @@ const Index = () => {
           <div className="grid lg:grid-cols-[1fr_auto] gap-12 lg:gap-20 items-start">
             {/* Left Column */}
             <div className="max-w-2xl">
-              <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[48px] text-foreground font-bold leading-[1.12] mb-6">
-                Senior Relocation & Estate Real Estate — Puget Sound
+              <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[48px] text-foreground font-bold leading-[1.12] mb-4">
+                Real Estate Guidance for Life's Most Important Property Transitions
               </h1>
 
+              <p className="text-[17px] text-muted-foreground/90 leading-relaxed mb-6 font-medium">
+                Specializing in probate, inherited property, trusts, and senior downsizing across the Puget Sound region and Western Washington.
+              </p>
+
               <p className="text-[16px] text-muted-foreground leading-relaxed mb-4">
-                Real estate broker serving the greater Puget Sound region, specializing in senior relocation, estate and inherited property sales, and trust &amp; probate real estate. David Stein works with executors, probate attorneys, and families to coordinate valuation, clean‑out, repairs, and sale of homes across King, Snohomish, and Pierce counties.
+                David Stein works with executors, probate attorneys, and families to coordinate valuation, clean‑out, repairs, and sale of homes across King, Snohomish, Pierce, and Kitsap counties.
               </p>
 
               <p className="text-[16px] text-muted-foreground leading-relaxed mb-8">
@@ -278,7 +282,7 @@ const Index = () => {
                     className="bg-[hsl(216,65%,34%)] hover:bg-[hsl(216,65%,28%)] text-white font-semibold px-8 rounded-lg text-base h-[52px] w-full sm:w-auto focus-visible:ring-gold"
                   >
                     <Phone className="w-5 h-5 mr-2" />
-                    Schedule a Confidential Conversation
+                    Schedule a Consultation
                   </Button>
                 </Link>
                 <Link to="/services">
