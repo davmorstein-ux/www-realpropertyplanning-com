@@ -118,7 +118,7 @@ const Footer = () => {
             loading="lazy"
           />
           <p className="text-primary-foreground/50 text-sm text-center leading-relaxed">
-            David Stein | Licensed Real Estate Broker, Washington State | eXp Realty
+            David Stein | Real Estate Broker — Senior Relocation & Estate Sales | eXp Realty
           </p>
           <p className="text-primary-foreground/40 text-sm text-center mt-1">
             Mailing Address: PO Box 1462, Woodinville, WA 98072
