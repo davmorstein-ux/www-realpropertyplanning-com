@@ -2,7 +2,7 @@ import expRealtyLogo from "@/assets/exp-realty-logo.png";
 
 const AgentCredentialBlock = () => (
   <div className="mt-4 text-center">
-    <p className="font-serif text-xl text-foreground font-bold leading-snug">David Stein</p>
+    <p className="font-serif text-[22px] text-foreground font-extrabold leading-snug tracking-[-0.01em]">David Stein</p>
     <p className="text-muted-foreground text-base leading-snug mt-1">Real Estate Broker</p>
     <p className="text-muted-foreground text-sm leading-snug mt-1">License #: 113972</p>
     <img
