@@ -72,7 +72,7 @@ const TestimonialsSection = () => {
             Trusted During Important Property Transitions
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            Clients describe working with Real Property Planning as calm, organized, and reassuring. Whether the situation involves probate, an inherited home, a trust, or a senior transition, the experience is consistently professional and well-coordinated.
+            Clients and professionals describe working with Real Property Planning as thorough, steady, and respectful during some of life's most complicated real estate situations.
           </p>
         </div>
 
@@ -144,6 +144,9 @@ const TestimonialsSection = () => {
             <h3 className="font-serif text-2xl text-foreground font-semibold mb-2">
               Leave a Review
             </h3>
+            <p className="text-muted-foreground text-sm mb-2">
+              If we've helped with probate, estate, trust, or a senior transition, your feedback helps other families and professionals find the right support.
+            </p>
             <p className="text-muted-foreground text-sm mb-6">
               If Real Property Planning helped you with a property transition, your feedback is appreciated.
             </p>

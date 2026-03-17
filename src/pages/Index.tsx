@@ -241,12 +241,16 @@ const Index = () => {
           <div className="grid lg:grid-cols-[1fr_auto] gap-12 lg:gap-20 items-start">
             {/* Left Column */}
             <div className="max-w-2xl">
-              <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[48px] text-foreground font-bold leading-[1.12] mb-6">
-                Senior Relocation & Estate Real Estate — Puget Sound
+              <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[48px] text-foreground font-bold leading-[1.12] mb-4">
+                Real Estate Guidance for Life's Most Important Property Transitions
               </h1>
 
+              <p className="text-[17px] text-muted-foreground/90 leading-relaxed mb-6 font-medium">
+                Specializing in probate, inherited property, trusts, and senior downsizing across the Puget Sound region and Western Washington.
+              </p>
+
               <p className="text-[16px] text-muted-foreground leading-relaxed mb-4">
-                Real estate broker serving the greater Puget Sound region, specializing in senior relocation, estate and inherited property sales, and trust &amp; probate real estate. David Stein works with executors, probate attorneys, and families to coordinate valuation, clean‑out, repairs, and sale of homes across King, Snohomish, and Pierce counties.
+                David Stein works with executors, probate attorneys, and families to coordinate valuation, clean‑out, repairs, and sale of homes across King, Snohomish, Pierce, and Kitsap counties.
               </p>
 
               <p className="text-[16px] text-muted-foreground leading-relaxed mb-8">
@@ -278,7 +282,7 @@ const Index = () => {
                     className="bg-[hsl(216,65%,34%)] hover:bg-[hsl(216,65%,28%)] text-white font-semibold px-8 rounded-lg text-base h-[52px] w-full sm:w-auto focus-visible:ring-gold"
                   >
                     <Phone className="w-5 h-5 mr-2" />
-                    Schedule a Confidential Conversation
+                    Schedule a Consultation
                   </Button>
                 </Link>
                 <Link to="/services">
@@ -312,15 +316,25 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Who I Work With */}
+      {/* Who We Serve */}
+      <section className="py-6 bg-background border-b border-border">
+        <div className="mx-auto max-w-[1200px] px-6 lg:px-8">
+          <p className="text-center text-muted-foreground text-[15px] leading-relaxed">
+            <span className="font-serif font-semibold text-foreground">Who We Serve:</span>{" "}
+            For attorneys, executors, trustees, seniors, and families managing property during probate, estate settlement, or major life transitions.
+          </p>
+        </div>
+      </section>
+
+      {/* Who We Help — Families & Individuals */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="mx-auto max-w-[1200px] px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-4">
-              Who We Work With
+              Who We Help
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
-              Specialized real estate guidance for professionals, families, and decision-makers navigating senior relocation, estate settlement, and important property transitions.
+              We work with seniors, adult children, and families who are facing major property decisions during life transitions, probate, or estate settlement. Our goal is to take the pressure off the real estate side, provide clear next steps, and coordinate trusted local resources so you don't have to manage every detail yourself.
             </p>
           </div>
 
@@ -359,9 +373,6 @@ const Index = () => {
           </div>
 
           <div className="text-center mt-14">
-            <p className="text-muted-foreground text-base leading-relaxed max-w-2xl mx-auto mb-8">
-              Led by David Stein, Real Property Planning combines over 20 years of real estate experience with valuation insight to help clients and referral partners make informed property decisions throughout the Puget Sound region.
-            </p>
             <Link to="/services">
               <Button
                 size="lg"
@@ -467,19 +478,19 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Who I Work With */}
+      {/* Clients & Referral Partners */}
       <section className="py-20 lg:py-28 bg-ivory">
         <div className="container px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-gold font-bold tracking-widest uppercase mb-3 text-base">
-                Clients & Referral Partners
+                Clients &amp; Referral Partners
               </p>
               <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-6">
-                Who David Stein Works With
+                A Trusted Resource for Professionals
               </h2>
-              <p className="text-muted-foreground leading-relaxed mb-8">
-                David Stein works with professionals and families across the Puget Sound region who need experienced real estate guidance during senior relocation, estate settlement, inheritance, trust administration, or a significant housing change.
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                We regularly partner with probate and estate attorneys, professional fiduciaries, financial advisors, and trust officers who need a reliable real estate resource in Western Washington and the Puget Sound region. As a real estate broker and certified appraiser, we provide clear opinions of value, market strategy, and on‑the‑ground coordination so you can stay focused on your legal and fiduciary responsibilities.
               </p>
               <div className="space-y-6">
                 {whoIWorkWith.map((category, index) => (
@@ -515,7 +526,7 @@ const Index = () => {
               <div className="mt-6">
                 <Link to="/for-attorneys">
                   <Button size="sm" className="bg-gold hover:bg-gold-light text-navy font-semibold">
-                    Attorney & Fiduciary Resources <ArrowRight className="w-4 h-4 ml-2" />
+                    Attorney &amp; Fiduciary Resources <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>
                 </Link>
               </div>
@@ -629,7 +640,7 @@ const Index = () => {
               Serving the Puget Sound Region
             </h2>
             <p className="text-primary-foreground/70 text-lg">
-              Local market knowledge for senior relocation, probate, estate, trust, and transition-related property sales.
+              Serving clients throughout Western Washington and the greater Puget Sound region, including King, Snohomish, Pierce, and Kitsap counties.
             </p>
           </div>
           
