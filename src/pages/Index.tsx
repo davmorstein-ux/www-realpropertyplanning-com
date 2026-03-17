@@ -20,40 +20,34 @@ import AgentCredentialBlock from "@/components/AgentCredentialBlock";
 
 const services = [
   {
-    icon: Scale,
-    title: "Probate & Estate Sales",
-    description: "Strategic guidance for properties in probate, active estate administration, and court-supervised sales.",
-    link: "/probate-estate-sales"
-  },
-  {
-    icon: Users,
-    title: "For Executors & Trustees",
-    description: "Step-by-step property support for executors, personal representatives, and trustees managing estate real estate.",
-    link: "/executors"
-  },
-  {
-    icon: Handshake,
-    title: "For Attorneys & Fiduciaries",
-    description: "A dependable referral resource for estate planning, probate, and elder law professionals.",
-    link: "/for-attorneys"
-  },
-  {
-    icon: FileText,
-    title: "Why Valuation Matters",
-    description: "How broker and certified appraiser expertise prevents costly pricing mistakes in estate property.",
-    link: "/why-valuation-matters"
-  },
-  {
-    icon: Heart,
-    title: "Senior Transitions",
-    description: "Compassionate support for downsizing, assisted living moves, and family home sales during life changes.",
+    title: "Senior Relocation Home Sales",
+    description: "Helping seniors and their families plan and complete the sale of a long‑time home, including timing, preparation, and coordinating trusted local vendors.",
     link: "/senior-transitions"
   },
   {
-    icon: Clock,
-    title: "How the Process Works",
-    description: "A transparent, six-step process from initial consultation through closing day.",
+    title: "Estate & Inherited Property Sales",
+    description: "Guiding executors and heirs through pricing, preparation, and sale of inherited homes so the estate can be settled with clarity and minimal stress.",
+    link: "/probate-estate-sales"
+  },
+  {
+    title: "Probate Real Estate Sales",
+    description: "Working alongside probate attorneys and personal representatives to market and sell property within court and estate timelines.",
+    link: "/probate-estate-sales"
+  },
+  {
+    title: "Trust & Fiduciary Property Sales",
+    description: "Assisting trustees and fiduciaries with valuation, marketing, and sale of residential real estate while honoring their legal responsibilities.",
+    link: "/executors"
+  },
+  {
+    title: "Clean‑Out & Preparation Coordination",
+    description: "Coordinating clean‑out, haul‑away, basic repairs, and staging resources so the property is ready for market without the family managing every detail.",
     link: "/how-the-process-works"
+  },
+  {
+    title: "Home Value & Market Analysis",
+    description: "Providing clear, data‑driven opinions of value and market conditions for seniors, executors, and attorneys who need to understand their options before selling.",
+    link: "/why-valuation-matters"
   }
 ];
 
@@ -171,8 +165,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Probate & Inherited Property Real Estate | Real Property Planning | Western Washington"
-        description="Real Property Planning helps executors, families, and attorneys sell probate, estate, and inherited real estate in King, Snohomish, Pierce, Skagit, and Kitsap Counties."
+        title="Senior Relocation & Estate Property Sales | David Stein | Puget Sound"
+        description="David Stein, real estate broker serving the Puget Sound region — specializing in senior relocation, estate and inherited property sales, probate real estate, and trust property sales in King, Snohomish, and Pierce counties."
         jsonLd={jsonLd}
       />
       <Header />
@@ -213,19 +207,15 @@ const Index = () => {
             {/* Left Column */}
             <div className="max-w-2xl">
               <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[48px] text-foreground font-bold leading-[1.12] mb-6">
-                Real Estate Guidance for Life's Most Important Property Transitions
+                Senior Relocation & Estate Real Estate — Puget Sound
               </h1>
 
               <p className="text-[16px] text-muted-foreground leading-relaxed mb-4">
-                Real Property Planning works with attorneys, fiduciaries, executors, trustees, seniors, and families facing property decisions during probate, trust administration, estate settlement, senior downsizing, and other major life transitions.
+                Real estate broker serving the greater Puget Sound region, specializing in senior relocation, estate and inherited property sales, and trust &amp; probate real estate. David Stein works with executors, probate attorneys, and families to coordinate valuation, clean‑out, repairs, and sale of homes across King, Snohomish, and Pierce counties.
               </p>
 
               <p className="text-[16px] text-muted-foreground leading-relaxed mb-8">
-                Led by David Stein — a licensed real estate broker and Washington state certified residential appraiser with more than 20 years of experience — the approach is calm, practical, and focused on helping every client and referral partner feel informed and supported throughout the process.
-              </p>
-
-              <p className="text-[15px] text-muted-foreground leading-relaxed mb-4">
-                Real Property Planning helps with probate home sales, inherited property sales, trust-owned real estate, and senior downsizing moves across Western Washington. We guide executors, personal representatives, attorneys, and families through pricing, preparation, and sale of estate property in King, Snohomish, Pierce, Skagit, and Kitsap Counties.
+                Experienced with court timelines, fiduciary obligations, and working with out‑of‑area decision makers. If you are navigating a transition or handling an estate, contact David for a clear, step‑by‑step plan and a no‑pressure consultation.
               </p>
 
               <div className="bg-card border border-border rounded-xl p-5 mb-8">
@@ -274,7 +264,7 @@ const Index = () => {
                 <div className="w-64 h-80 sm:w-72 sm:h-[22rem] rounded-2xl overflow-hidden border-4 border-gold/30 shadow-2xl">
                   <img
                     src={daveHeadshot2}
-                    alt="David Stein, Washington state certified appraiser and real estate broker specializing in probate and estate property"
+                    alt="David Stein, real estate broker specializing in senior relocation and estate property sales in the Puget Sound region"
                     className="w-full h-full object-cover object-top"
                     loading="eager"
                   />
@@ -292,10 +282,10 @@ const Index = () => {
         <div className="mx-auto max-w-[1200px] px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-4">
-              Who We Help
+              Who We Work With
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
-              Specialized real estate guidance for professionals, families, and decision-makers navigating important property transitions.
+              Specialized real estate guidance for professionals, families, and decision-makers navigating senior relocation, estate settlement, and important property transitions.
             </p>
           </div>
 
@@ -304,12 +294,12 @@ const Index = () => {
               {
                 icon: Briefcase,
                 title: "Attorneys",
-                text: "Support for attorneys and their clients when real property is involved in probate, trust administration, estate matters, or major life transitions.",
+                text: "Support for probate attorneys and their clients when real property is involved in estate administration, trust settlement, or senior transitions.",
               },
               {
                 icon: FileText,
                 title: "Executors & Personal Representatives",
-                text: "Practical guidance for those responsible for managing property decisions, preparing a home for sale, and navigating next steps with confidence.",
+                text: "Practical guidance for those responsible for managing estate property decisions, preparing a home for sale, and navigating next steps with confidence.",
               },
               {
                 icon: Shield,
@@ -319,7 +309,7 @@ const Index = () => {
               {
                 icon: Heart,
                 title: "Seniors & Families",
-                text: "Thoughtful support for downsizing, relocation, changing care needs, and other significant housing transitions.",
+                text: "Thoughtful support for senior relocation, downsizing, changing care needs, and other significant housing transitions.",
               },
             ].map((card, index) => (
               <div
@@ -335,9 +325,9 @@ const Index = () => {
 
           <div className="text-center mt-14">
             <p className="text-muted-foreground text-base leading-relaxed max-w-2xl mx-auto mb-8">
-              Led by David Stein, Real Property Planning combines over 20 years of real estate experience with valuation insight to help clients and referral partners make informed property decisions.
+              Led by David Stein, Real Property Planning combines over 20 years of real estate experience with valuation insight to help clients and referral partners make informed property decisions throughout the Puget Sound region.
             </p>
-            <Link to="/probate-estate-sales">
+            <Link to="/services">
               <Button
                 size="lg"
                 variant="outline"
@@ -358,8 +348,8 @@ const Index = () => {
             {[
               "Real Estate Broker",
               "State Certified Appraiser",
-              "Probate & Estate Property Focus",
-              "Serving Western Washington",
+              "Senior Relocation & Estate Property Focus",
+              "Serving the Puget Sound Region",
             ].map((indicator, index) => (
               <div key={index} className="flex items-center gap-2 text-base text-muted-foreground font-medium">
                 <CheckCircle className="w-4 h-4 text-gold shrink-0" />
@@ -382,8 +372,8 @@ const Index = () => {
                 {[
                   "Dual-credentialed: broker + state certified appraiser",
                   "Trusted by attorneys, executors, trustees, and families",
-                  "Specialized in probate, estates, trusts, and senior transitions",
-                  "Local expertise across four Western Washington counties"
+                  "Specialized in senior relocation, estates, trusts, and probate",
+                  "Local expertise across King, Snohomish, and Pierce counties"
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-3 px-4 py-3.5 bg-secondary rounded-xl text-foreground text-[15px] font-medium">
                     <CheckCircle className="w-4 h-4 text-gold shrink-0" />
@@ -404,7 +394,7 @@ const Index = () => {
               "Licensed Real Estate Broker — Washington State",
               "State Certified Residential Appraiser",
               "20+ Years of Real Estate & Valuation Experience",
-              "King · Snohomish · Pierce · Kitsap Counties",
+              "King · Snohomish · Pierce Counties",
             ].map((indicator, index) => (
               <div key={index} className="flex items-center gap-2 text-base text-muted-foreground font-medium">
                 <CheckCircle className="w-4 h-4 text-gold shrink-0" />
@@ -420,13 +410,13 @@ const Index = () => {
         <div className="container px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <p className="text-gold font-bold tracking-widest uppercase mb-3 text-base">
-              What Real Property Planning Does
+              What David Stein Does
             </p>
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-4">
-              How We Help With Complex Property Decisions
+              How We Help With Senior Relocation & Estate Property
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Estate-related property sales require a different approach — one that accounts for legal timelines, family dynamics, deferred maintenance, and careful pricing.
+              Senior relocation and estate-related property sales require a different approach — one that accounts for legal timelines, family dynamics, deferred maintenance, and careful pricing.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
@@ -451,10 +441,10 @@ const Index = () => {
                 Clients & Referral Partners
               </p>
               <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-6">
-                Who We Work With
+                Who David Stein Works With
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                Real Property Planning serves professionals and families across Western Washington who need experienced real estate guidance during estate settlement, inheritance, trust administration, or a significant housing change.
+                David Stein works with professionals and families across the Puget Sound region who need experienced real estate guidance during senior relocation, estate settlement, inheritance, trust administration, or a significant housing change.
               </p>
               <div className="space-y-6">
                 {whoIWorkWith.map((category, index) => (
@@ -468,10 +458,10 @@ const Index = () => {
             <div className="bg-navy rounded-lg p-10 lg:p-12">
               <Award className="w-10 h-10 text-gold mb-6" />
               <h3 className="font-serif text-2xl text-primary-foreground font-semibold mb-4">
-                Why Professionals Refer Real Property Planning
+                Why Professionals Refer David Stein
               </h3>
               <p className="text-primary-foreground/85 leading-relaxed mb-6 text-[15px]">
-                Estate-related real estate demands careful judgment, discretion, and coordination across multiple parties. Our dual credentials and two decades of focused experience make Real Property Planning a natural fit for high-trust referrals.
+                Senior relocation and estate-related real estate demands careful judgment, discretion, and coordination across multiple parties. David's dual credentials and two decades of focused experience make Real Property Planning a natural fit for high-trust referrals.
               </p>
               <ul className="space-y-3">
                 {[
@@ -504,10 +494,10 @@ const Index = () => {
         <div className="container px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <p className="text-gold font-bold tracking-widest uppercase mb-3 text-base">
-              Resources & Services
+              Services
             </p>
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-4">
-              Explore How Real Property Planning Can Help
+              Senior Relocation & Estate Real Estate Services
             </h2>
           </div>
           
@@ -515,9 +505,6 @@ const Index = () => {
             {services.map((service, index) => (
               <Link key={index} to={service.link} className="group">
                 <div className="p-8 bg-card rounded-lg border border-border hover:border-gold/30 hover:shadow-lg transition-all duration-300 h-full">
-                  <div className="w-12 h-12 rounded-full bg-navy/5 flex items-center justify-center mb-5 group-hover:bg-gold/10 transition-colors">
-                    <service.icon className="w-6 h-6 text-navy group-hover:text-gold transition-colors" />
-                  </div>
                   <h3 className="font-serif text-xl text-foreground font-semibold mb-3">
                     {service.title}
                   </h3>
@@ -537,13 +524,13 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
               <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-6">
-                Why Estate Property Requires a Different Approach
+                Why Senior Relocation & Estate Property Require a Different Approach
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-                Selling a home tied to an estate, trust, or family transition is fundamentally different from a conventional sale. Legal authority may limit timing. Multiple decision-makers may disagree. The property itself may have years of deferred maintenance.
+                Selling a home tied to a senior relocation, estate, trust, or family transition is fundamentally different from a conventional sale. Legal authority may limit timing. Multiple decision-makers may disagree. The property itself may have years of deferred maintenance.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Led by David Stein, Real Property Planning brings both the market knowledge of an experienced broker and the analytical eye of a certified appraiser — helping clients navigate these situations with clarity, realistic expectations, and a workable plan.
+                David Stein brings both the market knowledge of an experienced broker and the analytical eye of a certified appraiser — helping clients navigate these situations with clarity, realistic expectations, and a workable plan.
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link to="/how-the-process-works">
@@ -580,10 +567,10 @@ const Index = () => {
               Service Areas
             </p>
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-4">
-              Serving Four Western Washington Counties
+              Serving the Puget Sound Region
             </h2>
             <p className="text-primary-foreground/70 text-lg">
-              Local market knowledge for probate, estate, trust, and transition-related property sales.
+              Local market knowledge for senior relocation, probate, estate, trust, and transition-related property sales.
             </p>
           </div>
           
@@ -662,7 +649,7 @@ const Index = () => {
               A Referral Resource Attorneys Trust
             </h2>
             <p className="text-primary-foreground/80 leading-relaxed mb-8">
-              Estate planning and probate attorneys need a real estate professional who understands discretion, multi-party communication, and the importance of getting the property side right. Real Property Planning works collaboratively with legal professionals to reduce friction and support their clients through sensitive property transitions.
+              Estate planning and probate attorneys need a real estate professional who understands discretion, multi-party communication, and the importance of getting the property side right. David Stein works collaboratively with legal professionals to reduce friction and support their clients through sensitive senior relocation and estate property transitions.
             </p>
             <Link to="/for-attorneys">
               <Button className="bg-gold hover:bg-gold-light text-navy font-semibold">
@@ -685,7 +672,7 @@ const Index = () => {
               Common Questions
             </p>
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold">
-              Answers to Questions About Probate & Inherited Property
+              Answers to Questions About Estate & Inherited Property
             </h2>
           </div>
           
@@ -723,13 +710,13 @@ const Index = () => {
               Not Sure Where to Start?
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-              Many families contact Real Property Planning when they are trying to figure out what to do with a home during a major life transition — such as probate, downsizing, or a move to assisted living.
+              Many families contact David Stein when they are trying to figure out what to do with a home during a major life transition — such as senior relocation, probate, downsizing, or a move to assisted living.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-4">
               These situations often involve legal, financial, and housing decisions, and it can be helpful to speak with someone who understands how the real estate side fits into the bigger picture.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-10">
-              If you are navigating one of these situations, Real Property Planning is available as a resource.
+              If you are navigating one of these situations, David is available as a resource.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">
@@ -748,7 +735,7 @@ const Index = () => {
                   className="border-border text-foreground hover:bg-muted font-semibold px-8 rounded-lg text-base h-[52px] w-full sm:w-auto focus-visible:ring-gold"
                 >
                   <Mail className="w-5 h-5 mr-2" />
-                  Contact Real Property Planning
+                  Contact David Stein
                 </Button>
               </Link>
             </div>
@@ -786,7 +773,7 @@ const Index = () => {
               Ready to Discuss a Property Situation?
             </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Start with a confidential conversation. Whether you are an attorney, executor, trustee, family member, or financial professional, Real Property Planning provides clear, experienced guidance tailored to your situation.
+              Start with a confidential conversation. Whether you are an attorney, executor, trustee, family member, or financial professional, David Stein provides clear, experienced guidance tailored to your situation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">

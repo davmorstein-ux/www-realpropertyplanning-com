@@ -128,10 +128,17 @@ const Footer = () => {
           </p>
         </div>
 
+        {/* Geo / Service Area SEO */}
+        <div className="border-t border-primary-foreground/10 mt-8 pt-6 pb-4">
+          <p className="text-primary-foreground/50 text-sm text-center leading-relaxed max-w-3xl mx-auto">
+            Serving clients throughout the Puget Sound region, including King, Snohomish, and Pierce counties: Seattle, Bellevue, Tacoma, Everett, Kirkland, Redmond, Bothell, and nearby communities.
+          </p>
+        </div>
+
         {/* Copyright */}
-        <div className="border-t border-primary-foreground/10 mt-8 pt-4">
+        <div className="border-t border-primary-foreground/10 pt-4">
           <p className="text-primary-foreground/40 text-sm text-center">
-            © {new Date().getFullYear()} Real Property Planning — David Stein. Professional Real Estate Broker & State Certified Appraiser.
+            © {new Date().getFullYear()} David Stein, Real Estate Broker – Senior Relocation & Estate Sales. Real Property Planning.
           </p>
         </div>
       </div>

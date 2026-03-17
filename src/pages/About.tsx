@@ -66,13 +66,13 @@ const About = () => {
             <div className="lg:col-span-2">
               <div className="space-y-6 text-muted-foreground leading-relaxed text-lg">
                 <p>
-                  David Stein founded Real Property Planning to serve a need he saw repeatedly in real estate: families, executors, attorneys, and trustees facing complex property decisions without a professional who truly understood the intersection of estate settlement, property valuation, and market strategy.
+                  Real estate broker serving the greater Puget Sound region, specializing in senior relocation, estate and inherited property sales, and trust &amp; probate real estate. David works with executors, probate attorneys, and families to coordinate valuation, clean‑out, repairs, and sale of homes across King, Snohomish, and Pierce counties.
                 </p>
                 <p>
-                  With over 20 years of experience as a licensed Washington real estate broker and a state certified residential appraiser, David brings a rare combination of credentials to every engagement. This dual background means he doesn't just understand how to sell a home — he understands how to evaluate it with analytical precision and price it with market-informed confidence.
+                  Experienced with court timelines, fiduciary obligations, and working with out‑of‑area decision makers, David brings over 20 years of experience as a licensed Washington real estate broker and a state certified residential appraiser. This dual background means he doesn't just understand how to sell a home — he understands how to evaluate it with analytical precision and price it with market-informed confidence.
                 </p>
                 <p>
-                  David's practice is focused exclusively on property situations that require more than a standard listing approach: <Link to="/probate-estate-sales" className="text-accent hover:text-gold underline underline-offset-4">probate and estate sales</Link>, <Link to="/senior-transitions" className="text-accent hover:text-gold underline underline-offset-4">senior housing transitions</Link>, trust-owned real estate, and inherited homes that need experienced guidance from assessment through closing.
+                  David's practice is focused exclusively on property situations that require more than a standard listing approach: <Link to="/senior-transitions" className="text-accent hover:text-gold underline underline-offset-4">senior relocation home sales</Link>, <Link to="/probate-estate-sales" className="text-accent hover:text-gold underline underline-offset-4">probate and estate sales</Link>, trust-owned real estate, and inherited homes that need experienced guidance from assessment through closing. If you are navigating a transition or handling an estate, contact David for a clear, step‑by‑step plan and a no‑pressure consultation.
                 </p>
               </div>
             </div>

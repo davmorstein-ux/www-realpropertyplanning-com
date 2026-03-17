@@ -8,9 +8,9 @@ const BASE_HTML_PATH = path.join(DIST_DIR, "index.html");
 const routeMeta = [
   {
     route: "/",
-    title: "Probate & Inherited Property Real Estate | Real Property Planning | Western Washington",
+    title: "Senior Relocation & Estate Property Sales | David Stein | Puget Sound",
     description:
-      "Real Property Planning helps executors, families, and attorneys sell probate, estate, and inherited real estate in King, Snohomish, Pierce, Skagit, and Kitsap Counties.",
+      "David Stein, real estate broker serving the Puget Sound region — specializing in senior relocation, estate and inherited property sales, probate real estate, and trust property sales in King, Snohomish, and Pierce counties.",
   },
   {
     route: "/for-attorneys",
