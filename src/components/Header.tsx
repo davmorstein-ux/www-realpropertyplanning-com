@@ -16,6 +16,7 @@ const primaryLinks = [
     { href: "/for-financial-planners", label: "For Financial Planners" },
     { href: "/how-the-process-works", label: "How the Process Works" },
     { href: "/why-valuation-matters", label: "Why Valuation Matters" },
+    { href: "/professional-referral-resource", label: "Professional Referral Resource" },
   ]},
   { href: "/for-attorneys", label: "For Attorneys" },
   { href: "/executors", label: "For Executors" },

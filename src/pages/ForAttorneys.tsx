@@ -351,6 +351,7 @@ const ForAttorneys = () => {
             </p>
             <div className="grid sm:grid-cols-2 gap-4">
               {[
+                { href: "/professional-referral-resource", label: "Professional Referral Resource", desc: "A central hub for attorneys, CPAs, and professionals who refer clients to Real Property Planning." },
                 { href: "/executors", label: "For Executors & Trustees", desc: "A step-by-step guide for personal representatives managing estate property." },
                 { href: "/senior-transitions", label: "Senior Transitions", desc: "Support for families navigating a move from a longtime home." },
                 { href: "/resources", label: "Resource Directory", desc: "Trusted professionals who assist with transitions across Western Washington." },

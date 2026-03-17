@@ -242,8 +242,31 @@ const Executors = () => {
         </div>
       </section>
 
+      {/* Understanding Your Fiduciary Obligation */}
+      <section className="py-20 lg:py-28 bg-secondary">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
+              Understanding Your Fiduciary Obligation as Executor
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              As executor or personal representative, you have a legal obligation to act in the best interests of the estate and its beneficiaries. When it comes to real property, that means making informed decisions about pricing, preparation, and sale timing — not just accepting the first offer or the highest automated estimate.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              This is where David's dual credentials matter most. His certified appraisal background means he evaluates the property the way a court or lender would — considering physical condition, functional utility, and market positioning rather than just comparable sales data. When heirs or beneficiaries question the sale price, you can point to a pricing strategy grounded in professional analysis rather than guesswork.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              David also helps executors navigate the practical decisions that can affect estate value: whether to invest in repairs or sell as-is, how to handle personal property and cleanout, when to list relative to seasonal market patterns, and how to manage carrying costs while the property is being prepared. Each of these decisions has financial implications, and David provides the data to make them confidently.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              If you are working with an estate attorney, David coordinates closely with your legal counsel — providing market data and property updates that support the legal side of estate administration without overstepping professional boundaries.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonial */}
-      <section className="py-14 lg:py-16 bg-secondary">
+      <section className="py-14 lg:py-16 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-foreground text-lg italic leading-relaxed mb-4">

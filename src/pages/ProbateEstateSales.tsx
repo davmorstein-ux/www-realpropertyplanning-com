@@ -195,6 +195,29 @@ const ProbateEstateSales = () => {
         </div>
       </section>
 
+      {/* Understanding the Executor's Role in Property Sales */}
+      <section className="py-20 lg:py-28 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
+              The Real Estate Side of Estate Administration
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              Selling estate property is rarely as simple as putting a sign in the yard. These homes often sit vacant for months while legal authority is established, insurance and utility issues need to be managed, and the property's condition may deteriorate. Meanwhile, carrying costs — taxes, insurance, maintenance, and HOA fees — continue to accumulate.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              David Stein understands these pressures because he has worked through them with hundreds of clients. He helps executors, attorneys, and families develop a timeline that accounts for legal proceedings, property preparation, and market conditions — so the sale happens at the right time, not just the fastest time.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              For properties that need work before listing, David evaluates each potential improvement through a return-on-investment lens informed by his appraisal training. A $5,000 kitchen cleanup might add $15,000 in sale price; a $40,000 renovation might add only $20,000. These distinctions matter when estate funds are limited and fiduciary duties require defensible decision-making.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              Whether the property is a mid-century rambler in Shoreline with decades of deferred maintenance or a waterfront home on Mercer Island held in a family trust, David brings the same structured approach: assess, plan, prepare, price, market, and close — with clear communication at every step.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Legal Disclaimer */}
       <section className="py-12 bg-secondary">
         <div className="container px-6 lg:px-8">

@@ -149,15 +149,24 @@ const HowTheProcessWorks = () => {
         </div>
       </section>
 
-      {/* Reassurance */}
-      <section className="py-16 lg:py-20 bg-secondary">
+      {/* What Makes This Process Different */}
+      <section className="py-20 lg:py-28 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-              Every situation is different. Some clients need immediate sale guidance. Others need time, planning, family coordination, or valuation-related clarity before taking the next step.
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
+              What Makes This Process Different From a Standard Home Sale
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              In a conventional home sale, the homeowner decides to sell, a listing agent provides a price opinion, the home goes on the market, and a transaction closes in 30 to 45 days. The process is relatively predictable.
             </p>
-            <p className="text-muted-foreground text-base leading-relaxed">
-              David adapts this process to fit your circumstances — whether that means a compressed timeline for a court-ordered sale or a longer runway that allows for thorough preparation and family decision-making. The structure provides consistency; the execution is always personalized.
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              Estate, probate, and senior transition sales are fundamentally different. The decision-maker may not live locally. Legal authority may not yet be established. The property may have been vacant for months and need significant work before it can be shown. Family members may disagree about timing, pricing, or whether to sell at all. And the emotional weight of the situation — grief, guilt, uncertainty — affects every conversation.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              David's process is designed for these realities. He starts earlier than most agents — often before the property is ready to list — because early planning prevents the most common and costly mistakes. He coordinates more broadly, managing relationships with attorneys, family members, vendors, and care professionals. And he communicates more deliberately, because in these situations, silence creates anxiety and uncertainty.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              Every situation is different. Some clients need immediate sale guidance. Others need time, planning, family coordination, or valuation-related clarity before taking the next step. David adapts this process to fit your circumstances — whether that means a compressed timeline for a court-ordered sale or a longer runway that allows for thorough preparation and family decision-making.
             </p>
           </div>
         </div>
