@@ -316,15 +316,25 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Who I Work With */}
+      {/* Who We Serve */}
+      <section className="py-6 bg-background border-b border-border">
+        <div className="mx-auto max-w-[1200px] px-6 lg:px-8">
+          <p className="text-center text-muted-foreground text-[15px] leading-relaxed">
+            <span className="font-serif font-semibold text-foreground">Who We Serve:</span>{" "}
+            For attorneys, executors, trustees, seniors, and families managing property during probate, estate settlement, or major life transitions.
+          </p>
+        </div>
+      </section>
+
+      {/* Who We Help — Families & Individuals */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="mx-auto max-w-[1200px] px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-4">
-              Who We Work With
+              Who We Help
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
-              Specialized real estate guidance for professionals, families, and decision-makers navigating senior relocation, estate settlement, and important property transitions.
+              We work with seniors, adult children, and families who are facing major property decisions during life transitions, probate, or estate settlement. Our goal is to take the pressure off the real estate side, provide clear next steps, and coordinate trusted local resources so you don't have to manage every detail yourself.
             </p>
           </div>
 
@@ -363,9 +373,6 @@ const Index = () => {
           </div>
 
           <div className="text-center mt-14">
-            <p className="text-muted-foreground text-base leading-relaxed max-w-2xl mx-auto mb-8">
-              Led by David Stein, Real Property Planning combines over 20 years of real estate experience with valuation insight to help clients and referral partners make informed property decisions throughout the Puget Sound region.
-            </p>
             <Link to="/services">
               <Button
                 size="lg"
