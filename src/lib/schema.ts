@@ -10,6 +10,11 @@ const areaServed = [
   { "@type": "AdministrativeArea", name: "Skagit County", containedInPlace: { "@type": "State", name: "Washington" } },
   { "@type": "Place", name: "Western Washington" },
   { "@type": "Place", name: "Puget Sound region, Washington" },
+  { "@type": "City", name: "Seattle", containedInPlace: { "@type": "State", name: "Washington" } },
+  { "@type": "City", name: "Bellevue", containedInPlace: { "@type": "State", name: "Washington" } },
+  { "@type": "City", name: "Everett", containedInPlace: { "@type": "State", name: "Washington" } },
+  { "@type": "City", name: "Tacoma", containedInPlace: { "@type": "State", name: "Washington" } },
+  { "@type": "City", name: "Bremerton", containedInPlace: { "@type": "State", name: "Washington" } },
 ];
 
 export const realEstateAgentSchema = {

@@ -8,17 +8,18 @@ const Footer = () => {
     <footer data-nosnippet className="bg-navy-dark py-16">
       <div className="container px-6 lg:px-8">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-          {/* Brand */}
+          {/* Brand & NAP */}
           <div className="lg:col-span-1">
             <Link to="/" className="block mb-4">
               <span className="font-serif text-xl text-primary-foreground font-semibold">
                 David Stein <span className="text-gold font-bold">Real Property Planning</span>
               </span>
             </Link>
-            <p className="text-primary-foreground/60 text-base leading-relaxed mb-4">
-              Probate real estate, inherited property, trust-owned real estate, and estate sale guidance in Western Washington.
+            <p className="text-primary-foreground/60 text-sm leading-relaxed mb-3">
+              Licensed Real Estate Broker &amp; Washington State Certified Residential Appraiser
             </p>
-            <div className="flex flex-col gap-2 text-base">
+            <p className="text-primary-foreground/60 text-sm leading-relaxed mb-3">eXp Realty</p>
+            <div className="flex flex-col gap-2 text-sm">
               <a href="tel:2069003015" className="text-primary-foreground/70 hover:text-gold flex items-center gap-2">
                 <Phone className="w-4 h-4" />
                 (206) 900-3015
@@ -27,6 +28,14 @@ const Footer = () => {
                 <Mail className="w-4 h-4" />
                 david@realpropertyplanning.com
               </a>
+              <div className="text-primary-foreground/50 flex items-start gap-2 mt-1">
+                <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
+                <span>Mailing: PO Box 1462, Woodinville, WA 98072</span>
+              </div>
+              <div className="text-primary-foreground/50 flex items-start gap-2">
+                <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
+                <span>Office: 1455 NW Leary Way, Seattle, WA 98107</span>
+              </div>
             </div>
           </div>
           
@@ -34,14 +43,15 @@ const Footer = () => {
           <div>
             <h4 className="text-primary-foreground font-serif text-lg font-medium mb-4">Services</h4>
             <ul className="space-y-2.5 text-primary-foreground/60 text-base">
-              <li><Link to="/probate-estate-sales" className="hover:text-gold transition-colors">Probate & Estate Sales</Link></li>
+              <li><Link to="/probate-estate-sales" className="hover:text-gold transition-colors">Probate &amp; Estate Sales</Link></li>
+              <li><Link to="/executors" className="hover:text-gold transition-colors">Help for Executors</Link></li>
               <li><Link to="/senior-transitions" className="hover:text-gold transition-colors">Senior Transitions</Link></li>
-              <li><Link to="/for-attorneys" className="hover:text-gold transition-colors">For Attorneys & Fiduciaries</Link></li>
-              <li><Link to="/executors" className="hover:text-gold transition-colors">For Executors</Link></li>
+              <li><Link to="/for-attorneys" className="hover:text-gold transition-colors">For Attorneys &amp; Fiduciaries</Link></li>
               <li><Link to="/for-cpas" className="hover:text-gold transition-colors">For CPAs</Link></li>
               <li><Link to="/for-financial-planners" className="hover:text-gold transition-colors">For Financial Planners</Link></li>
-              <li><Link to="/why-valuation-matters" className="hover:text-gold transition-colors">Why Valuation Matters</Link></li>
+              <li><Link to="/why-valuation-matters" className="hover:text-gold transition-colors">Valuation &amp; Pricing</Link></li>
               <li><Link to="/how-the-process-works" className="hover:text-gold transition-colors">How the Process Works</Link></li>
+              <li><Link to="/faq" className="hover:text-gold transition-colors">FAQs</Link></li>
             </ul>
           </div>
           
@@ -50,7 +60,6 @@ const Footer = () => {
             <h4 className="text-primary-foreground font-serif text-lg font-medium mb-4">Resources</h4>
             <ul className="space-y-2.5 text-primary-foreground/60 text-base">
               <li><Link to="/about" className="hover:text-gold transition-colors">About David Stein</Link></li>
-              <li><Link to="/faq" className="hover:text-gold transition-colors">FAQ</Link></li>
               <li><Link to="/how-we-work" className="hover:text-gold transition-colors">How We Work</Link></li>
               <li><Link to="/attorney-referral" className="hover:text-gold transition-colors">Referral Resource</Link></li>
               <li><Link to="/terminology" className="hover:text-gold transition-colors">Terminology</Link></li>
@@ -67,11 +76,11 @@ const Footer = () => {
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
                 <span>Western Washington &amp; Puget Sound</span>
               </li>
-              <li><Link to="/counties/king" className="hover:text-gold transition-colors">Probate Real Estate in King County</Link></li>
-              <li><Link to="/counties/snohomish" className="hover:text-gold transition-colors">Estate Property Guidance in Snohomish County</Link></li>
-              <li><Link to="/counties/pierce" className="hover:text-gold transition-colors">Inherited Property Sales in Pierce County</Link></li>
-              <li><Link to="/counties/kitsap" className="hover:text-gold transition-colors">Estate Property Sales in Kitsap County</Link></li>
-              <li><Link to="/counties/skagit" className="hover:text-gold transition-colors">Probate Property Guidance in Skagit County</Link></li>
+              <li><Link to="/counties/king" className="hover:text-gold transition-colors">Probate real estate in King County</Link></li>
+              <li><Link to="/counties/snohomish" className="hover:text-gold transition-colors">Inherited property sales in Snohomish County</Link></li>
+              <li><Link to="/counties/pierce" className="hover:text-gold transition-colors">Estate property guidance in Pierce County</Link></li>
+              <li><Link to="/counties/kitsap" className="hover:text-gold transition-colors">Probate property sales in Kitsap County</Link></li>
+              <li><Link to="/counties/skagit" className="hover:text-gold transition-colors">Estate property guidance in Skagit County</Link></li>
               <li><Link to="/cities-we-serve" className="hover:text-gold transition-colors">All Cities We Serve</Link></li>
             </ul>
           </div>
