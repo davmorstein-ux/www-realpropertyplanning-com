@@ -640,7 +640,7 @@ const Index = () => {
               Serving the Puget Sound Region
             </h2>
             <p className="text-primary-foreground/70 text-lg">
-              Local market knowledge for senior relocation, probate, estate, trust, and transition-related property sales.
+              Serving clients throughout Western Washington and the greater Puget Sound region, including King, Snohomish, Pierce, and Kitsap counties.
             </p>
           </div>
           
