@@ -32,9 +32,9 @@ const whatSetsApart = [
 const About = () => {
   return (
     <div className="min-h-screen bg-background">
-      <SEOHead
-        title="About David Stein — Broker & Certified Appraiser | Real Property Planning"
-        description="Meet David Stein — the Washington broker and certified appraiser behind Real Property Planning. Over 20 years of focused experience helping attorneys, executors, and families with estate property."
+       <SEOHead
+        title="About David Stein — Senior Relocation & Estate Real Estate Broker | Puget Sound"
+        description="David Stein is a real estate broker serving the Puget Sound region, specializing in senior relocation, estate and inherited property sales, and trust & probate real estate in King, Snohomish, and Pierce counties."
         jsonLd={realEstateAgentSchema}
       />
       <BreadcrumbSchema items={[{ name: "About", url: "/about" }]} />
