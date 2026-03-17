@@ -66,8 +66,8 @@ const SeniorTransitions = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Senior Housing Transitions & Downsizing | Real Property Planning"
-        description="Compassionate real estate support for seniors and families handling downsizing, relocation, and assisted living transitions in Western Washington."
+        title="Senior Relocation Home Sales | David Stein | Puget Sound"
+        description="David Stein helps seniors and families plan and complete the sale of a long-time home — including timing, preparation, and coordinating trusted local vendors throughout King, Snohomish, and Pierce counties."
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema items={[{ name: "Senior Transitions", url: "/senior-transitions" }]} />

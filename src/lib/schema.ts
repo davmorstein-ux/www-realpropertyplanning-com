@@ -31,7 +31,7 @@ export const realEstateAgentSchema = {
   },
   image: LOGO_URL,
   description:
-    "Real Property Planning provides experienced real estate guidance for probate property, inherited homes, estate sales, trust-owned real estate, and senior housing transitions throughout Western Washington.",
+    "Real estate broker serving the greater Puget Sound region, specializing in senior relocation, estate and inherited property sales, and trust & probate real estate. Helping executors, probate attorneys, and families coordinate valuation, clean‑out, repairs, and sale of homes across King, Snohomish, and Pierce counties.",
   telephone: "(206) 900-3015",
   email: "david@realpropertyplanning.com",
   address: {
