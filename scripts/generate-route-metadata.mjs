@@ -8,9 +8,9 @@ const BASE_HTML_PATH = path.join(DIST_DIR, "index.html");
 const routeMeta = [
   {
     route: "/",
-    title: "Probate Real Estate & Inherited Property Guidance | Real Property Planning",
+    title: "Probate & Inherited Property Real Estate | Real Property Planning | Western Washington",
     description:
-      "Real Property Planning helps attorneys, executors, trustees, fiduciaries, and families navigate probate real estate, inherited homes, estate sales, and senior transitions throughout Western Washington.",
+      "Real Property Planning helps executors, families, and attorneys sell probate, estate, and inherited real estate in King, Snohomish, Pierce, Skagit, and Kitsap Counties.",
   },
   {
     route: "/for-attorneys",
@@ -20,15 +20,15 @@ const routeMeta = [
   },
   {
     route: "/executors",
-    title: "Guidance for Executors, Trustees & Personal Representatives | Real Property Planning",
+    title: "Help for Executors Selling Estate Property | Real Property Planning",
     description:
-      "Real Property Planning helps executors, trustees, personal representatives, and families handle inherited property, estate home sales, and next-step real estate decisions throughout Western Washington.",
+      "Step-by-step guidance for executors and personal representatives selling inherited homes and estate property in Western Washington.",
   },
   {
     route: "/probate-estate-sales",
-    title: "Probate Real Estate & Estate Property Sales | Real Property Planning",
+    title: "Probate & Estate Property Sales | Guidance for Executors & Attorneys",
     description:
-      "Real Property Planning provides experienced guidance for probate real estate, estate property sales, inherited homes, and trust-owned property throughout Western Washington.",
+      "Support for probate and estate property sales in Western Washington, helping executors, personal representatives, trustees, and attorneys navigate inherited real estate.",
   },
   {
     route: "/why-valuation-matters",
@@ -38,9 +38,9 @@ const routeMeta = [
   },
   {
     route: "/senior-transitions",
-    title: "Senior Transition Real Estate Support | Real Property Planning",
+    title: "Senior Housing Transitions & Downsizing | Real Property Planning",
     description:
-      "Real Property Planning provides thoughtful real estate support for downsizing, relocation, assisted living moves, and senior housing transitions throughout Western Washington.",
+      "Compassionate real estate support for seniors and families handling downsizing, relocation, and assisted living transitions in Western Washington.",
   },
   {
     route: "/how-the-process-works",
@@ -50,39 +50,39 @@ const routeMeta = [
   },
   {
     route: "/counties",
-    title: "Service Areas for Probate Real Estate | Real Property Planning",
+    title: "Probate Real Estate & Inherited Property Sales | Western Washington Service Areas",
     description:
-      "Real Property Planning provides probate real estate, inherited property, estate sale, valuation, and senior transition support across King, Snohomish, Pierce, and Kitsap Counties.",
+      "Real Property Planning provides probate real estate and inherited property sales guidance across King, Snohomish, Pierce, Skagit, and Kitsap Counties in Western Washington.",
   },
   {
     route: "/counties/king",
-    title: "King County Probate Real Estate & Inherited Property Guidance | Real Property Planning",
+    title: "Probate Real Estate & Inherited Property Sales in King County | Real Property Planning",
     description:
-      "Real Property Planning helps clients and referral partners with probate real estate, inherited homes, estate sales, trust-owned property, and senior transitions in King County, Washington.",
+      "Probate real estate and inherited property sales guidance for executors, attorneys, and families in King County — Seattle, Bellevue, Kirkland, Redmond, and surrounding communities.",
   },
   {
     route: "/counties/snohomish",
-    title: "Snohomish County Probate Real Estate & Inherited Property Guidance | Real Property Planning",
+    title: "Probate Real Estate & Inherited Property Sales in Snohomish County | Real Property Planning",
     description:
-      "Real Property Planning helps clients and referral partners with probate real estate, inherited homes, estate sales, trust-owned property, and senior transitions in Snohomish County, Washington.",
+      "Probate real estate and inherited property sales support for families and fiduciaries in Snohomish County — Everett, Edmonds, Lynnwood, Mukilteo, and surrounding areas.",
   },
   {
     route: "/counties/pierce",
-    title: "Pierce County Probate Real Estate & Inherited Property Guidance | Real Property Planning",
+    title: "Probate Real Estate & Inherited Property Sales in Pierce County | Real Property Planning",
     description:
-      "Real Property Planning helps clients and referral partners with probate real estate, inherited homes, estate sales, trust-owned property, and senior transitions in Pierce County, Washington.",
+      "Probate real estate and inherited property sales guidance for executors and families in Pierce County — Tacoma, Puyallup, Gig Harbor, Lakewood, and surrounding communities.",
   },
   {
     route: "/counties/kitsap",
-    title: "Kitsap County Probate Real Estate & Inherited Property Guidance | Real Property Planning",
+    title: "Probate Real Estate & Inherited Property Sales in Kitsap County | Real Property Planning",
     description:
-      "Real Property Planning helps clients and referral partners with probate real estate, inherited homes, estate sales, trust-owned property, and senior transitions in Kitsap County, Washington.",
+      "Probate real estate and inherited property sales guidance for executors and families in Kitsap County — Bainbridge Island, Poulsbo, Bremerton, Silverdale, and surrounding areas.",
   },
   {
     route: "/counties/skagit",
-    title: "Skagit County Probate Real Estate & Inherited Property Guidance | Real Property Planning",
+    title: "Probate Real Estate & Inherited Property Sales in Skagit County | Real Property Planning",
     description:
-      "Real Property Planning helps clients and referral partners with probate real estate, inherited homes, estate sales, trust-owned property, and senior transitions in Skagit County, Washington.",
+      "Probate real estate and inherited property sales guidance for families and fiduciaries in Skagit County — Mount Vernon, Anacortes, Burlington, and surrounding communities.",
   },
 ];
 

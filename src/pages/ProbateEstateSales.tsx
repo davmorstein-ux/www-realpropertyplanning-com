@@ -82,8 +82,8 @@ const ProbateEstateSales = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Probate Real Estate Sales in Western Washington"
-        description="Professional representation for probate and estate property sales, helping families and fiduciaries navigate complex real estate transitions."
+        title="Probate & Estate Property Sales | Guidance for Executors & Attorneys"
+        description="Support for probate and estate property sales in Western Washington, helping executors, personal representatives, trustees, and attorneys navigate inherited real estate."
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema items={[{ name: "Probate & Estate Sales", url: "/probate-estate-sales" }]} />

@@ -117,8 +117,8 @@ const Executors = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Selling an Estate Property | Help for Executors"
-        description="Guidance for executors and personal representatives selling inherited property, including valuation insight, preparation, and coordinated real estate services."
+        title="Help for Executors Selling Estate Property | Real Property Planning"
+        description="Step-by-step guidance for executors and personal representatives selling inherited homes and estate property in Western Washington."
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema items={[{ name: "For Executors", url: "/executors" }]} />
@@ -135,10 +135,10 @@ const Executors = () => {
               You Have Enough to Manage — Let David Handle the Property
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-5">
-              Most executors are handling an estate for the first time — sorting through legal paperwork, coordinating with family, and making decisions about a property they may not have seen in years. The real estate side alone can feel like a full-time job. David Stein takes that burden off your plate with a structured, hands-on approach that covers everything from initial property assessment to closing day.
+              David Stein provides step-by-step help for executors, personal representatives, and trustees who need to sell estate property or an inherited home in Western Washington. From valuation to preparation to closing, we handle the real estate details so you can focus on your fiduciary duties and family needs.
             </p>
             <p className="text-lg text-primary-foreground/70 leading-relaxed mb-[30px]">
-              With over 20 years as both a licensed broker and a state certified appraiser, David brings a level of analytical depth and practical coordination that general listing agents simply do not offer.
+              Most executors are handling an estate for the first time — sorting through legal paperwork, coordinating with family, and making decisions about a property they may not have seen in years. With over 20 years as both a licensed broker and a state certified appraiser, David brings a level of analytical depth and practical coordination that general listing agents simply do not offer.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Link to="/contact">

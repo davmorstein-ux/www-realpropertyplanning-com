@@ -66,8 +66,8 @@ const SeniorTransitions = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Senior Housing & Downsizing Real Estate Help"
-        description="Helping seniors and families coordinate downsizing and housing transitions with practical guidance and experienced real estate support."
+        title="Senior Housing Transitions & Downsizing | Real Property Planning"
+        description="Compassionate real estate support for seniors and families handling downsizing, relocation, and assisted living transitions in Western Washington."
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema items={[{ name: "Senior Transitions", url: "/senior-transitions" }]} />
@@ -84,10 +84,10 @@ const SeniorTransitions = () => {
               Selling a Longtime Home Is About More Than Real Estate
             </h1>
             <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
-              After 30 or 40 years in the same home, selling is never just a transaction. It means letting go of the place where children grew up, holidays happened, and a lifetime of memories accumulated. When that moment comes — whether it is planned or sudden — the process deserves someone who treats it with the weight it carries.
+              Real Property Planning supports seniors and families with downsizing, relocation, and selling a longtime home throughout Western Washington. We handle real estate decisions tied to assisted living moves, independent or memory care transitions, and multi-step senior housing plans — with patience and clear communication.
             </p>
             <p className="text-lg text-primary-foreground/70 leading-relaxed mb-8">
-              David Stein works at the family's pace, not a sales quota. He manages the preparation, coordinates with care professionals and family members, prices the home based on real market data, and handles the sale with the kind of steady communication that keeps everyone informed and comfortable.
+              After 30 or 40 years in the same home, selling is never just a transaction. David Stein works at the family's pace, not a sales quota. He manages the preparation, coordinates with care professionals and family members, prices the home based on real market data, and handles the sale with steady communication that keeps everyone informed and comfortable.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/contact">
