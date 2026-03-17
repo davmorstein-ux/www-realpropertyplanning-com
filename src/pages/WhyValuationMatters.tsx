@@ -179,6 +179,29 @@ const WhyValuationMatters = () => {
         </div>
       </section>
 
+      {/* How the Dual Credential Works in Practice */}
+      <section className="py-20 lg:py-28 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
+              How the Dual Credential Works in Practice
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              Most real estate agents base their pricing recommendations on a comparative market analysis — a review of recent sales of similar homes in the area. This works well for standard residential transactions where homes are in typical condition and the market provides clean comparables.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              Estate properties are different. The home may have an original 1960s kitchen, a furnace that should have been replaced a decade ago, water damage in the basement, or a roof with five years of remaining life. These are not cosmetic issues — they directly affect what buyers will pay and what lenders will finance. Standard comparables do not account for these realities.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              David's appraisal training means he evaluates properties the way a lender's appraiser would — assessing functional utility, physical depreciation, and effective age alongside location and square footage. This allows him to anticipate appraisal challenges before they derail a deal, price properties in a way that attracts serious buyers while protecting the estate's value, and advise families on which repairs will actually move the needle.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              The result is fewer surprises, faster closings, and pricing decisions that hold up under scrutiny — whether that scrutiny comes from a buyer's lender, a probate court, or family members with different expectations.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonial */}
       <section className="py-14 lg:py-16 bg-secondary">
         <div className="container px-6 lg:px-8">

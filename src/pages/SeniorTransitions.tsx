@@ -195,8 +195,31 @@ const SeniorTransitions = () => {
         </div>
       </section>
 
+      {/* Emotional and Practical Realities */}
+      <section className="py-20 lg:py-28 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
+              The Emotional and Practical Realities of Selling a Family Home
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              A home where someone has lived for 30 or 40 years is not just a house — it holds decades of memories, routines, and identity. The decision to sell often comes during a health crisis, a loss of independence, or a family conversation that nobody wanted to have. These circumstances make every decision more difficult.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              David approaches these situations with the understanding that the timeline is not always his to set. Some families need months to process the decision before listing. Others face urgent timelines driven by care needs or financial pressure. In both cases, David provides honest, patient guidance — helping families understand their options without creating artificial urgency.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              Practically, many senior homes present challenges that conventional listings do not. Decades of accumulated belongings need to be sorted, donated, or removed. Systems may be outdated — original furnaces, aging roofs, single-pane windows. Landscaping may be overgrown. David evaluates each property individually and recommends a preparation plan that balances cost, timeline, and likely market impact.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              For families coordinating from out of state, David serves as the local point of contact — meeting vendors at the property, overseeing cleanout and repairs, and providing photo updates so everyone stays informed without needing to travel repeatedly.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonial */}
-      <section className="py-14 lg:py-16 bg-background">
+      <section className="py-14 lg:py-16 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-foreground text-lg italic leading-relaxed mb-4">
