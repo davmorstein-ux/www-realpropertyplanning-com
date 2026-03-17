@@ -478,19 +478,19 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Who I Work With */}
+      {/* Clients & Referral Partners */}
       <section className="py-20 lg:py-28 bg-ivory">
         <div className="container px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-gold font-bold tracking-widest uppercase mb-3 text-base">
-                Clients & Referral Partners
+                Clients &amp; Referral Partners
               </p>
               <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-6">
-                Who David Stein Works With
+                A Trusted Resource for Professionals
               </h2>
-              <p className="text-muted-foreground leading-relaxed mb-8">
-                David Stein works with professionals and families across the Puget Sound region who need experienced real estate guidance during senior relocation, estate settlement, inheritance, trust administration, or a significant housing change.
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                We regularly partner with probate and estate attorneys, professional fiduciaries, financial advisors, and trust officers who need a reliable real estate resource in Western Washington and the Puget Sound region. As a real estate broker and certified appraiser, we provide clear opinions of value, market strategy, and on‑the‑ground coordination so you can stay focused on your legal and fiduciary responsibilities.
               </p>
               <div className="space-y-6">
                 {whoIWorkWith.map((category, index) => (
@@ -526,7 +526,7 @@ const Index = () => {
               <div className="mt-6">
                 <Link to="/for-attorneys">
                   <Button size="sm" className="bg-gold hover:bg-gold-light text-navy font-semibold">
-                    Attorney & Fiduciary Resources <ArrowRight className="w-4 h-4 ml-2" />
+                    Attorney &amp; Fiduciary Resources <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>
                 </Link>
               </div>
