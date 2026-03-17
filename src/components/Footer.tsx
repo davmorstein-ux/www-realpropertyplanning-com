@@ -74,12 +74,12 @@ const Footer = () => {
             <ul className="space-y-2.5 text-primary-foreground/60 text-base">
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
-                <span>Western Washington &amp; Puget Sound</span>
+                <span>Western Washington &amp; the Puget Sound Region</span>
               </li>
-              <li><Link to="/counties/king" className="hover:text-gold transition-colors">Probate real estate in King County</Link></li>
-              <li><Link to="/counties/snohomish" className="hover:text-gold transition-colors">Inherited property sales in Snohomish County</Link></li>
-              <li><Link to="/counties/pierce" className="hover:text-gold transition-colors">Estate property guidance in Pierce County</Link></li>
-              <li><Link to="/counties/kitsap" className="hover:text-gold transition-colors">Probate property sales in Kitsap County</Link></li>
+              <li><Link to="/counties/king" className="hover:text-gold transition-colors">Probate and estate real estate in King County</Link></li>
+              <li><Link to="/counties/snohomish" className="hover:text-gold transition-colors">Probate and estate real estate in Snohomish County</Link></li>
+              <li><Link to="/counties/pierce" className="hover:text-gold transition-colors">Probate and estate real estate in Pierce County</Link></li>
+              <li><Link to="/counties/kitsap" className="hover:text-gold transition-colors">Probate and estate real estate in Kitsap County</Link></li>
               <li><Link to="/counties/skagit" className="hover:text-gold transition-colors">Estate property guidance in Skagit County</Link></li>
               <li><Link to="/cities-we-serve" className="hover:text-gold transition-colors">All Cities We Serve</Link></li>
             </ul>
