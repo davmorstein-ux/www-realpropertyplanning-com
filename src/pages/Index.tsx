@@ -518,6 +518,30 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Senior & Estate Services Highlight */}
+      <section className="py-20 lg:py-28 bg-secondary">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-5">
+              Senior & Estate Services
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              David Stein works with seniors, families, executors, and attorneys navigating senior relocation, estate and inherited property sales, and probate and trust real estate across the Puget Sound region. From initial consultation through closing, every step is coordinated with care, clarity, and professional discretion.
+            </p>
+            <Link to="/senior-estate-services">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-border text-foreground hover:bg-muted font-semibold px-8 rounded-lg text-base h-[52px]"
+              >
+                Learn More About Senior & Estate Services
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Intro Section */}
       <section className="py-20 lg:py-28 bg-ivory">
         <div className="container px-6 lg:px-8">
