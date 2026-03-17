@@ -60,7 +60,10 @@ const Counties = () => {
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-5">
               Each county in the Puget Sound region has its own housing stock, buyer expectations, and market rhythm. A waterfront estate on Bainbridge Island sells differently than a mid-century home in Tacoma or a suburban family property in Mill Creek. David Stein brings local knowledge built over two decades — so clients and referral partners get market-specific guidance, not a one-size-fits-all approach.
             </p>
-            <p className="text-lg text-primary-foreground/70 leading-relaxed">
+            <p className="text-lg text-primary-foreground/70 leading-relaxed mb-5">
+              Click a county to see key cities and examples of where we've helped clients with probate, estate, trust, and senior transition real estate.
+            </p>
+            <p className="text-base text-primary-foreground/60 leading-relaxed">
               Select a county below to learn how Real Property Planning serves each area.
             </p>
           </div>
