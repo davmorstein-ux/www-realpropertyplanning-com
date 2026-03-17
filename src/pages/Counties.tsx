@@ -41,8 +41,8 @@ const Counties = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Western Washington Service Areas | Real Property Planning"
-        description="David Stein serves clients across King, Snohomish, Pierce, Kitsap, and Skagit Counties — bringing local market knowledge and dual broker-appraiser credentials to every estate, inherited, and transition-related property sale."
+        title="Probate Real Estate & Inherited Property Sales | Western Washington Service Areas"
+        description="Real Property Planning provides probate real estate and inherited property sales guidance across King, Snohomish, Pierce, Skagit, and Kitsap Counties in Western Washington."
       />
       <BreadcrumbSchema items={[{ name: "Counties", url: "/counties" }]} />
       <Header />

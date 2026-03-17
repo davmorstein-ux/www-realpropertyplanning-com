@@ -224,6 +224,28 @@ const Index = () => {
                 Led by David Stein — a licensed real estate broker and Washington state certified residential appraiser with more than 20 years of experience — the approach is calm, practical, and focused on helping every client and referral partner feel informed and supported throughout the process.
               </p>
 
+              <p className="text-[15px] text-muted-foreground leading-relaxed mb-4">
+                Real Property Planning helps with probate home sales, inherited property sales, trust-owned real estate, and senior downsizing moves across Western Washington. We guide executors, personal representatives, attorneys, and families through pricing, preparation, and sale of estate property in King, Snohomish, Pierce, Skagit, and Kitsap Counties.
+              </p>
+
+              <div className="bg-card border border-border rounded-xl p-5 mb-8">
+                <p className="font-serif text-foreground font-semibold text-base mb-3">Situations We Commonly Help With</p>
+                <ul className="space-y-2">
+                  {[
+                    "Selling a parent's home after they pass",
+                    "Selling a home from a trust or estate",
+                    "Helping an executor or personal representative manage real property",
+                    "Downsizing from a longtime family home into senior living",
+                    "Coordinating sale of an inherited property among multiple heirs",
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-2 text-muted-foreground text-[15px]">
+                      <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2 shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
               <div className="flex flex-col sm:flex-row flex-wrap gap-4 mb-0">
                 <Link to="/contact">
                   <Button
