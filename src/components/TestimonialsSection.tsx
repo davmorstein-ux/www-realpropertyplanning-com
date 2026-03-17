@@ -144,6 +144,9 @@ const TestimonialsSection = () => {
             <h3 className="font-serif text-2xl text-foreground font-semibold mb-2">
               Leave a Review
             </h3>
+            <p className="text-muted-foreground text-sm mb-2">
+              If we've helped with probate, estate, trust, or a senior transition, your feedback helps other families and professionals find the right support.
+            </p>
             <p className="text-muted-foreground text-sm mb-6">
               If Real Property Planning helped you with a property transition, your feedback is appreciated.
             </p>

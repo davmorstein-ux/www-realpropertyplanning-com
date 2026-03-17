@@ -131,7 +131,7 @@ const Footer = () => {
         {/* Geo / Service Area SEO */}
         <div className="border-t border-primary-foreground/10 mt-8 pt-6 pb-4">
           <p className="text-primary-foreground/50 text-sm text-center leading-relaxed max-w-3xl mx-auto">
-            Serving clients throughout the Puget Sound region, including King, Snohomish, and Pierce counties: Seattle, Bellevue, Tacoma, Everett, Kirkland, Redmond, Bothell, and nearby communities.
+            Serving clients throughout Western Washington and the greater Puget Sound region, including King, Snohomish, Pierce, and Kitsap counties: Seattle, Bellevue, Tacoma, Everett, Kirkland, Redmond, Bothell, and nearby communities.
           </p>
         </div>
 

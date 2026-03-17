@@ -105,7 +105,7 @@ const Counties = () => {
             <div className="flex justify-center">
               <Link to="/contact">
                 <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold">
-                  Contact David
+                  Schedule a Consultation
                 </Button>
               </Link>
             </div>
