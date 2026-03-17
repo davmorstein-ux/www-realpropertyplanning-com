@@ -188,6 +188,15 @@ const faqJsonLd = {
 };
 
 const Index = () => {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.setAttribute("data-faq-jsonld", "true");
+    script.textContent = JSON.stringify(faqJsonLd);
+    document.head.appendChild(script);
+    return () => { script.remove(); };
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
