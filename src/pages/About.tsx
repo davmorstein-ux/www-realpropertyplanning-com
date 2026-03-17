@@ -47,11 +47,11 @@ const About = () => {
             <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
               About
             </p>
-            <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight">
+             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight">
               About David Stein
             </h1>
             <p className="text-lg text-primary-foreground/70 leading-relaxed mt-4">
-              Over 20 years as a licensed broker and state certified appraiser — focused on probate, inherited, and estate-related property.
+              Real estate broker serving the greater Puget Sound region, specializing in senior relocation, estate and inherited property sales, and trust &amp; probate real estate.
             </p>
           </div>
         </div>
