@@ -85,15 +85,17 @@ const Index = () => {
           width={1920}
           height={1080}
         />
-        {/* Dark overlay for readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(220,45%,12%)/0.92] via-[hsl(220,45%,12%)/0.75] to-transparent" />
+        {/* Dark overlay for readability — gradient darker on text side */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(220,45%,10%)] via-[hsl(220,45%,12%)/0.85] to-[hsl(220,45%,12%)/0.4] md:to-[hsl(220,45%,12%)/0.25]" />
+        {/* Additional bottom gradient for mobile */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220,45%,10%)/0.6] via-transparent to-transparent md:hidden" />
 
         <div className="container relative z-10 px-6 lg:px-8 py-20 lg:py-28">
           <div className="max-w-2xl">
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-[56px] text-primary-foreground font-bold leading-[1.1] mb-6">
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-[56px] text-white font-bold leading-[1.1] mb-6" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.45), 0 1px 3px rgba(0,0,0,0.3)' }}>
               Guiding Families Through One of Life's Most Complex Transitions
             </h1>
-            <p className="text-primary-foreground/80 text-lg md:text-xl leading-relaxed mb-10 max-w-xl">
+            <p className="text-white/90 text-lg md:text-xl leading-relaxed mb-10 max-w-xl" style={{ textShadow: '0 1px 6px rgba(0,0,0,0.35)' }}>
               Specialized probate real estate, estate sales, and senior transition support across Western Washington.
             </p>
             <Link to="/contact">
