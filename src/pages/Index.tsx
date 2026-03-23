@@ -327,6 +327,9 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Visual Service Navigation */}
+      <ServiceNavTiles />
+
       {/* Who We Help — Families & Individuals */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="mx-auto max-w-[1200px] px-6 lg:px-8">
