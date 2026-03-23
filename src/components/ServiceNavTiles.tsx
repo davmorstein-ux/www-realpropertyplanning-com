@@ -211,44 +211,39 @@ const ServiceNavTiles = () => {
                             : "max-w-[240px] lg:max-w-[260px]"
                       )}
                       style={{
-                        /* Outer rim: thick rounded border with light metallic edge */
-                        border: "3px solid hsl(215 30% 88%)",
-                        /* Glass surface: soft blue-white gradient like the reference */
-                        background: "linear-gradient(145deg, hsl(210 40% 97%) 0%, hsl(215 35% 93%) 40%, hsl(210 30% 90%) 100%)",
-                        /* Layered shadows: outer drop + inner depth + top highlight + bottom darkening */
+                        border: `3px solid hsl(${tile.hue} 25% 86%)`,
+                        background: `linear-gradient(145deg, hsl(${tile.hue} 30% 96%) 0%, hsl(${tile.hue} 25% 92%) 45%, hsl(${tile.hue} 20% 89%) 100%)`,
                         boxShadow: isCenter
                           ? [
-                              "0 12px 40px -8px hsl(220 40% 25% / 0.2)",
-                              "0 6px 16px -4px hsl(220 40% 25% / 0.1)",
+                              `0 12px 40px -8px hsl(${tile.hue} 35% 25% / 0.18)`,
+                              `0 6px 16px -4px hsl(${tile.hue} 35% 25% / 0.1)`,
                               "inset 0 2px 4px 0 hsl(0 0% 100% / 0.7)",
-                              "inset 0 -3px 8px -2px hsl(215 30% 78% / 0.5)",
+                              `inset 0 -3px 8px -2px hsl(${tile.hue} 25% 78% / 0.5)`,
                               "inset 2px 0 6px -2px hsl(0 0% 100% / 0.3)",
-                              "inset -2px 0 6px -2px hsl(215 25% 82% / 0.3)",
+                              `inset -2px 0 6px -2px hsl(${tile.hue} 20% 80% / 0.3)`,
                             ].join(", ")
                           : isNear
                             ? [
-                                "0 6px 20px -4px hsl(220 40% 25% / 0.12)",
-                                "0 3px 8px -2px hsl(220 40% 25% / 0.06)",
+                                `0 6px 20px -4px hsl(${tile.hue} 35% 25% / 0.12)`,
+                                `0 3px 8px -2px hsl(${tile.hue} 35% 25% / 0.06)`,
                                 "inset 0 2px 3px 0 hsl(0 0% 100% / 0.6)",
-                                "inset 0 -2px 6px -2px hsl(215 30% 78% / 0.4)",
-                                "inset 2px 0 4px -2px hsl(0 0% 100% / 0.25)",
-                                "inset -2px 0 4px -2px hsl(215 25% 82% / 0.25)",
+                                `inset 0 -2px 6px -2px hsl(${tile.hue} 25% 78% / 0.4)`,
                               ].join(", ")
                             : [
-                                "0 3px 10px -2px hsl(220 40% 25% / 0.08)",
+                                `0 3px 10px -2px hsl(${tile.hue} 35% 25% / 0.08)`,
                                 "inset 0 1px 2px 0 hsl(0 0% 100% / 0.5)",
-                                "inset 0 -1px 4px -1px hsl(215 30% 78% / 0.3)",
+                                `inset 0 -1px 4px -1px hsl(${tile.hue} 25% 78% / 0.3)`,
                               ].join(", "),
                       }}
                       onMouseEnter={(e) => {
                         e.currentTarget.style.transform = "translateY(-4px) scale(1.02)";
                         e.currentTarget.style.boxShadow = [
-                          "0 16px 48px -8px hsl(220 40% 25% / 0.22)",
-                          "0 8px 20px -4px hsl(220 40% 25% / 0.12)",
+                          `0 16px 48px -8px hsl(${tile.hue} 35% 25% / 0.22)`,
+                          `0 8px 20px -4px hsl(${tile.hue} 35% 25% / 0.12)`,
                           "inset 0 2px 4px 0 hsl(0 0% 100% / 0.8)",
-                          "inset 0 -3px 8px -2px hsl(215 30% 78% / 0.5)",
+                          `inset 0 -3px 8px -2px hsl(${tile.hue} 25% 78% / 0.5)`,
                           "inset 2px 0 6px -2px hsl(0 0% 100% / 0.35)",
-                          "inset -2px 0 6px -2px hsl(215 25% 82% / 0.35)",
+                          `inset -2px 0 6px -2px hsl(${tile.hue} 20% 80% / 0.35)`,
                         ].join(", ");
                         e.currentTarget.style.transition = "transform 0.2s ease-out, box-shadow 0.2s ease-out";
                       }}
@@ -260,9 +255,9 @@ const ServiceNavTiles = () => {
                       onMouseDown={(e) => {
                         e.currentTarget.style.transform = "translateY(2px) scale(0.97)";
                         e.currentTarget.style.boxShadow = [
-                          "0 3px 10px -4px hsl(220 40% 25% / 0.2)",
-                          "0 1px 4px -1px hsl(220 40% 25% / 0.1)",
-                          "inset 0 2px 6px 0 hsl(215 30% 78% / 0.4)",
+                          `0 3px 10px -4px hsl(${tile.hue} 35% 25% / 0.2)`,
+                          `0 1px 4px -1px hsl(${tile.hue} 35% 25% / 0.1)`,
+                          `inset 0 2px 6px 0 hsl(${tile.hue} 25% 78% / 0.4)`,
                           "inset 0 -1px 2px 0 hsl(0 0% 100% / 0.5)",
                         ].join(", ");
                         e.currentTarget.style.transition = "transform 0.12s ease-out, box-shadow 0.12s ease-out";
@@ -277,33 +272,44 @@ const ServiceNavTiles = () => {
                       <div
                         className="absolute top-3 left-3 right-[40%] h-[40%] rounded-tl-[24px] rounded-br-[60%] pointer-events-none"
                         style={{
-                          background: "linear-gradient(135deg, hsl(0 0% 100% / 0.55) 0%, hsl(0 0% 100% / 0.1) 60%, transparent 100%)",
+                          background: "linear-gradient(135deg, hsl(0 0% 100% / 0.5) 0%, hsl(0 0% 100% / 0.08) 60%, transparent 100%)",
                         }}
                       />
 
                       {/* Rim highlight — top edge */}
                       <div
                         className="absolute inset-x-3 top-0 h-[1px] pointer-events-none"
-                        style={{ background: "linear-gradient(90deg, transparent 5%, hsl(0 0% 100% / 0.8) 50%, transparent 95%)" }}
+                        style={{ background: "linear-gradient(90deg, transparent 5%, hsl(0 0% 100% / 0.75) 50%, transparent 95%)" }}
+                      />
+
+                      {/* Left edge highlight */}
+                      <div
+                        className="absolute left-0 inset-y-4 w-[1px] pointer-events-none"
+                        style={{ background: "linear-gradient(180deg, transparent 5%, hsl(0 0% 100% / 0.5) 30%, hsl(0 0% 100% / 0.3) 70%, transparent 95%)" }}
                       />
 
                       {/* Content */}
-                      <div className="relative z-10 flex flex-col items-center px-4">
+                      <div className="relative z-10 flex flex-col items-center px-5">
                         <div
                           className={cn(
-                            "rounded-full flex items-center justify-center mb-4 transition-all duration-300",
-                            isCenter ? "w-16 h-16" : isNear ? "w-14 h-14" : "w-12 h-12"
+                            "rounded-2xl flex items-center justify-center mb-4 transition-all duration-300",
+                            isCenter ? "w-[60px] h-[60px]" : isNear ? "w-[52px] h-[52px]" : "w-[46px] h-[46px]"
                           )}
+                          style={{
+                            background: `linear-gradient(145deg, hsl(${tile.hue} 25% 90%) 0%, hsl(${tile.hue} 20% 85%) 100%)`,
+                            boxShadow: `inset 0 1px 2px hsl(0 0% 100% / 0.5), inset 0 -1px 2px hsl(${tile.hue} 20% 75% / 0.3), 0 2px 6px -2px hsl(${tile.hue} 30% 30% / 0.1)`,
+                          }}
                         >
                           <tile.icon
                             className={cn(
                               "transition-colors duration-300",
                               isCenter
-                                ? "w-9 h-9 text-navy"
+                                ? "w-8 h-8 text-navy"
                                 : isNear
                                   ? "w-7 h-7 text-navy/80 group-hover:text-navy"
                                   : "w-6 h-6 text-navy/60"
                             )}
+                            strokeWidth={1.8}
                           />
                         </div>
                         <h3
@@ -320,8 +326,8 @@ const ServiceNavTiles = () => {
                           className={cn(
                             "leading-snug",
                             isCenter
-                              ? "text-sm lg:text-[15px] text-navy/60"
-                              : "text-xs lg:text-sm text-navy/50"
+                              ? "text-sm lg:text-[15px] text-navy/55"
+                              : "text-xs lg:text-sm text-navy/45"
                           )}
                         >
                           {tile.subtitle}
