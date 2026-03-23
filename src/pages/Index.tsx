@@ -85,19 +85,19 @@ const Index = () => {
           width={1920}
           height={1080}
         />
-        {/* Strong overlay for consistent readability */}
-        <div className="absolute inset-0 bg-primary/60" />
-        {/* Darkest behind the text, lighter toward the image edge */}
-        <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/85 to-primary/35" />
-        {/* Extra mobile contrast for stacked content */}
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/45 to-transparent md:hidden" />
+        {/* Light neutral darkening — preserves natural image colors */}
+        <div className="absolute inset-0 bg-black/25" />
+        {/* Slightly stronger behind text area only */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-black/15 to-transparent" />
+        {/* Mobile: gentle bottom gradient for stacked content */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent md:hidden" />
 
         <div className="container relative z-10 px-6 lg:px-8 py-20 lg:py-28">
           <div className="max-w-2xl">
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-[56px] text-white font-black leading-[1.08] mb-6" style={{ textShadow: '0 2px 16px rgba(0,0,0,0.55), 0 1px 4px rgba(0,0,0,0.35)' }}>
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-[56px] text-white font-bold leading-[1.08] mb-6" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.4), 0 1px 3px rgba(0,0,0,0.25)' }}>
               Guiding Families Through One of Life's Most Complex Transitions
             </h1>
-            <p className="text-white text-lg md:text-xl font-semibold leading-relaxed mb-10 max-w-xl" style={{ textShadow: '0 1px 8px rgba(0,0,0,0.45), 0 1px 3px rgba(0,0,0,0.28)' }}>
+            <p className="text-white text-lg md:text-xl font-medium leading-relaxed mb-10 max-w-xl" style={{ textShadow: '0 1px 6px rgba(0,0,0,0.35), 0 1px 2px rgba(0,0,0,0.2)' }}>
               Specialized probate real estate, estate sales, and senior transition support across Western Washington.
             </p>
             <Link to="/contact">
