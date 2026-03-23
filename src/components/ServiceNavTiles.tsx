@@ -176,7 +176,7 @@ const ServiceNavTiles = () => {
           </button>
 
           {/* Carousel */}
-          <div ref={emblaRef} className="overflow-hidden mx-12 lg:mx-14">
+          <div ref={emblaRef} className="overflow-hidden mx-14">
             <div className="flex" style={isMobile ? undefined : { transformStyle: "preserve-3d" }}>
               {tiles.map((tile, i) => {
                 const pos = getPosition(i);
@@ -187,7 +187,7 @@ const ServiceNavTiles = () => {
                 return (
                   <div
                     key={tile.href + tile.title}
-                    className="flex-[0_0_85%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%] px-3"
+                    className="flex-[0_0_80%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%] px-3"
                     style={{
                       ...slideStyle,
                       transition: "transform 0.55s ease-in-out, opacity 0.5s ease-in-out",
