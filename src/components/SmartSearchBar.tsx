@@ -126,7 +126,7 @@ const SmartSearchBar = () => {
   const [suggestion, setSuggestion] = useState<RouteMatch | null>(null);
   const [showSuggestion, setShowSuggestion] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
-  const recognitionRef = useRef<SpeechRecognition | null>(null);
+  const recognitionRef = useRef<any>(null);
   const navigate = useNavigate();
 
   // Debounced routing suggestion
