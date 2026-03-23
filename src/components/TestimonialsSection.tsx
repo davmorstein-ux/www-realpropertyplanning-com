@@ -66,7 +66,7 @@ const TestimonialsSection = () => {
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-sm">
-            What Clients Say
+            What Clients Are Saying
           </p>
           <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-5">
             Trusted During Important Property Transitions

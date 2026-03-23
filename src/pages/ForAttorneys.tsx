@@ -10,6 +10,20 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Phone, CheckCircle, MessageSquare } from "lucide-react";
 import RealClientSituations from "@/components/RealClientSituations";
+import PageTestimonials from "@/components/PageTestimonials";
+
+const attorneyTestimonials = [
+  {
+    text: "David's communication throughout the process was excellent. He kept me informed without creating unnecessary noise, and my client felt well supported. That is exactly what I look for in a referral.",
+    attribution: "Attorney referral",
+    context: "Probate property coordination",
+  },
+  {
+    text: "I have referred several clients to David for estate property situations. Each time, the feedback has been the same — professional, thorough, and easy to work with. He makes me look good.",
+    attribution: "Estate planning attorney",
+    context: "Multiple client referrals · Western Washington",
+  },
+];
 
 const attorneyCaseStudies = [
   {
@@ -301,6 +315,8 @@ const ForAttorneys = () => {
           </div>
         </div>
       </section>
+
+      <PageTestimonials testimonials={attorneyTestimonials} heading="What Referring Attorneys Say" />
 
       <PageFAQ faqs={faqs} heading="Questions Attorneys Commonly Ask" />
 

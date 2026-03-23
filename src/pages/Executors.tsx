@@ -10,6 +10,25 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Phone, CheckCircle, MessageSquare } from "lucide-react";
 import RealClientSituations from "@/components/RealClientSituations";
+import PageTestimonials from "@/components/PageTestimonials";
+
+const executorTestimonials = [
+  {
+    text: "David brought clarity, professionalism, and calm guidance during a very difficult property transition. His valuation perspective and market knowledge were incredibly helpful.",
+    attribution: "Margaret T.",
+    context: "Executor · Estate property in King County",
+  },
+  {
+    text: "I was completely overwhelmed as a first-time executor. David walked me through every step, handled the cleanout and repairs, and made the entire process feel manageable. I could not have done it without him.",
+    attribution: "Robert K.",
+    context: "Personal representative · Inherited home in Snohomish County",
+  },
+  {
+    text: "David gave us honest, straightforward pricing when other agents were telling us what we wanted to hear. His appraisal background made all the difference — we knew the number was real.",
+    attribution: "Susan M.",
+    context: "Executor · Probate property sale",
+  },
+];
 
 const executorCaseStudies = [
   {
@@ -262,14 +281,16 @@ const Executors = () => {
 
       <RealClientSituations studies={executorCaseStudies} background="bg-background" />
 
+      <PageTestimonials testimonials={executorTestimonials} heading="What Executors Are Saying" />
+
       {/* Trust Signals */}
-      <section className="py-14 lg:py-16 bg-secondary">
+      <section className="py-14 lg:py-16 bg-background">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-serif text-2xl text-foreground font-semibold mb-6">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-serif text-2xl text-foreground font-semibold mb-6 text-center">
               Why Executors Trust David
             </h2>
-            <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 mb-8">
+            <div className="flex flex-wrap justify-center gap-x-8 gap-y-3">
               {[
                 "Licensed Real Estate Broker",
                 "Certified Residential Appraiser",
@@ -282,10 +303,6 @@ const Executors = () => {
                 </div>
               ))}
             </div>
-            <p className="text-foreground text-lg italic leading-relaxed mb-3">
-              "David brought clarity, professionalism, and calm guidance during a very difficult property transition. His valuation perspective and market knowledge were incredibly helpful."
-            </p>
-            <p className="text-muted-foreground text-sm font-medium">— Client Review · Estate-related property transition</p>
           </div>
         </div>
       </section>
