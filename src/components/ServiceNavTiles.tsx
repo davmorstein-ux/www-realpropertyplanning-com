@@ -4,9 +4,10 @@ import {
   ShieldCheck, BookOpen, Briefcase, TrendingUp, ClipboardList,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import { useState, useCallback, useEffect, useMemo } from "react";
+import { useState, useCallback, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { cn } from "@/lib/utils";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface ServiceTile {
   title: string;
@@ -32,38 +33,15 @@ const tiles: ServiceTile[] = [
 
 const ServiceNavTiles = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [scrollProgress, setScrollProgress] = useState<number[]>([]);
+  const isMobile = useIsMobile();
 
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: "center",
     loop: true,
     skipSnaps: false,
     containScroll: false,
+    duration: 35, // slower scroll
   });
-
-  const updateTransforms = useCallback(() => {
-    if (!emblaApi) return;
-    const engine = emblaApi.internalEngine();
-    const scrollSnaps = emblaApi.scrollSnapList();
-    const scrollPosition = engine.location.get();
-
-    const progress = scrollSnaps.map((snap, idx) => {
-      let diff = snap - scrollPosition;
-
-      // Handle loop wrapping
-      const loopPoints = engine.slideLooper.loopPoints;
-      if (loopPoints && loopPoints[idx]) {
-        const loopTarget = loopPoints[idx].target();
-        if (Math.abs(loopTarget - scrollPosition) < Math.abs(diff)) {
-          diff = loopTarget - scrollPosition;
-        }
-      }
-
-      return diff;
-    });
-
-    setScrollProgress(progress);
-  }, [emblaApi]);
 
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
@@ -74,68 +52,77 @@ const ServiceNavTiles = () => {
     if (!emblaApi) return;
     emblaApi.on("select", onSelect);
     emblaApi.on("reInit", onSelect);
-    emblaApi.on("scroll", updateTransforms);
-    emblaApi.on("reInit", updateTransforms);
     onSelect();
-    updateTransforms();
     return () => {
       emblaApi.off("select", onSelect);
       emblaApi.off("reInit", onSelect);
-      emblaApi.off("scroll", updateTransforms);
-      emblaApi.off("reInit", updateTransforms);
     };
-  }, [emblaApi, onSelect, updateTransforms]);
+  }, [emblaApi, onSelect]);
 
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
-  const getTransformStyle = useMemo(() => {
-    return (index: number) => {
-      if (scrollProgress.length === 0) {
-        return {
-          transform: "scale(0.85) rotateY(0deg) translateZ(-60px)",
-          opacity: 0.5,
-          zIndex: 1,
-        };
-      }
+  /** Returns -1 (left neighbor), 0 (center), 1 (right neighbor), or null (far) */
+  const getPosition = (index: number): number | null => {
+    const total = tiles.length;
+    const rawDiff = index - selectedIndex;
 
-      // progress value: 0 = center, negative = left, positive = right
-      const p = scrollProgress[index] ?? 0;
-      const absDist = Math.min(Math.abs(p), 1.5);
+    // normalize to range [-total/2 … +total/2]
+    let diff = rawDiff;
+    if (diff > total / 2) diff -= total;
+    if (diff < -total / 2) diff += total;
 
-      // Scale: center=1.15, edges=0.82
-      const scale = 1.15 - absDist * 0.22;
+    if (diff === 0) return 0;
+    if (diff === 1) return 1;
+    if (diff === -1) return -1;
+    return null;
+  };
 
-      // RotateY: smooth rotation based on position, max ±35deg
-      const rotateY = p * -25;
-      const clampedRotateY = Math.max(-35, Math.min(35, rotateY));
+  const getSlideStyle = (index: number) => {
+    const pos = getPosition(index);
 
-      // TranslateZ: center comes forward, sides recede
-      const translateZ = 50 - absDist * 90;
-
-      // TranslateX: pull side tiles slightly inward
-      const translateX = p * -15;
-
-      // Opacity: center=1, fades out
-      const opacity = Math.max(0.35, 1 - absDist * 0.45);
-
-      // Z-index based on distance
-      const zIndex = Math.round((1.5 - absDist) * 10);
-
+    if (isMobile) {
+      // Flat on mobile — no 3D
       return {
-        transform: `translateX(${translateX}px) scale(${scale.toFixed(3)}) rotateY(${clampedRotateY.toFixed(1)}deg) translateZ(${translateZ.toFixed(0)}px)`,
-        opacity,
-        zIndex: Math.max(1, zIndex),
+        transform: "none",
+        opacity: pos === 0 ? 1 : 0.6,
+        zIndex: pos === 0 ? 5 : 1,
       };
-    };
-  }, [scrollProgress]);
+    }
 
-  const getSlideState = (index: number): "center" | "near" | "far" => {
-    if (scrollProgress.length === 0) return "far";
-    const absDist = Math.abs(scrollProgress[index] ?? 2);
-    if (absDist < 0.15) return "center";
-    if (absDist < 0.8) return "near";
-    return "far";
+    if (pos === 0) {
+      // Center
+      return {
+        transform: "scale(1) rotateY(0deg) translateZ(0px)",
+        opacity: 1,
+        zIndex: 10,
+      };
+    }
+
+    if (pos === -1) {
+      // Left neighbor
+      return {
+        transform: "scale(0.88) rotateY(18deg) translateZ(-40px)",
+        opacity: 0.85,
+        zIndex: 5,
+      };
+    }
+
+    if (pos === 1) {
+      // Right neighbor
+      return {
+        transform: "scale(0.88) rotateY(-18deg) translateZ(-40px)",
+        opacity: 0.85,
+        zIndex: 5,
+      };
+    }
+
+    // Far tiles
+    return {
+      transform: "scale(0.8) rotateY(0deg) translateZ(-60px)",
+      opacity: 0.4,
+      zIndex: 1,
+    };
   };
 
   return (
@@ -150,54 +137,61 @@ const ServiceNavTiles = () => {
           </p>
         </div>
 
-        <div className="relative" style={{ perspective: "1000px", perspectiveOrigin: "50% 50%" }}>
+        <div
+          className="relative"
+          style={isMobile ? undefined : { perspective: "1200px", perspectiveOrigin: "50% 50%" }}
+        >
           {/* Prev arrow */}
           <button
             onClick={scrollPrev}
             aria-label="Previous"
-            className="absolute left-0 lg:-left-5 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full bg-card border border-border shadow-lg flex items-center justify-center hover:bg-accent/10 transition-colors"
+            className="absolute left-0 lg:-left-5 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full bg-card border border-border shadow-md flex items-center justify-center hover:bg-accent/10 transition-colors"
           >
             <svg className="w-5 h-5 text-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
             </svg>
           </button>
 
-          {/* Carousel viewport */}
-          <div ref={emblaRef} className="overflow-hidden mx-10 lg:mx-12">
-            <div className="flex" style={{ transformStyle: "preserve-3d" }}>
+          {/* Carousel */}
+          <div ref={emblaRef} className="overflow-hidden mx-12 lg:mx-14">
+            <div className="flex" style={isMobile ? undefined : { transformStyle: "preserve-3d" }}>
               {tiles.map((tile, i) => {
-                const style = getTransformStyle(i);
-                const state = getSlideState(i);
+                const pos = getPosition(i);
+                const isCenter = pos === 0;
+                const isNear = pos === -1 || pos === 1;
+                const slideStyle = getSlideStyle(i);
 
                 return (
                   <div
                     key={tile.href + tile.title}
-                    className="flex-[0_0_80%] sm:flex-[0_0_42%] lg:flex-[0_0_33.333%] px-2"
+                    className="flex-[0_0_85%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%] px-3"
                     style={{
-                      ...style,
-                      transition: "transform 0.45s cubic-bezier(0.23,1,0.32,1), opacity 0.4s ease",
-                      transformStyle: "preserve-3d",
+                      ...slideStyle,
+                      transition: "transform 0.55s ease-in-out, opacity 0.5s ease-in-out",
+                      transformStyle: isMobile ? undefined : "preserve-3d",
                     }}
                   >
                     <Link
                       to={tile.href}
                       className={cn(
-                        "group flex flex-col items-center text-center rounded-2xl h-full transition-shadow duration-300",
+                        "group flex flex-col items-center text-center rounded-2xl h-full",
                         "bg-card border border-border",
+                        "transition-all duration-300 ease-in-out",
+                        "hover:scale-[1.03] hover:-translate-y-1",
                         "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
-                        state === "center"
-                          ? "p-8 lg:p-10 shadow-[0_20px_60px_-15px_hsl(var(--foreground)/0.15),0_8px_24px_-8px_hsl(var(--foreground)/0.1)] border-gold/30 hover:shadow-[0_24px_64px_-12px_hsl(var(--foreground)/0.2)]"
-                          : state === "near"
-                            ? "p-7 lg:p-8 shadow-[0_8px_28px_-8px_hsl(var(--foreground)/0.08)] hover:shadow-[0_12px_36px_-8px_hsl(var(--foreground)/0.12)]"
-                            : "p-6 lg:p-7 shadow-[0_4px_12px_-4px_hsl(var(--foreground)/0.05)]"
+                        isCenter
+                          ? "p-8 lg:p-10 shadow-[0_12px_40px_-10px_hsl(var(--foreground)/0.12),0_4px_16px_-4px_hsl(var(--foreground)/0.08)] border-gold/25"
+                          : isNear
+                            ? "p-7 lg:p-8 shadow-[0_6px_20px_-6px_hsl(var(--foreground)/0.07),0_2px_8px_-2px_hsl(var(--foreground)/0.04)]"
+                            : "p-6 lg:p-7 shadow-[0_2px_8px_-2px_hsl(var(--foreground)/0.04)]"
                       )}
                     >
                       <div
                         className={cn(
                           "rounded-full flex items-center justify-center mb-5 transition-all duration-300",
-                          state === "center"
-                            ? "w-[76px] h-[76px] bg-gold/12"
-                            : state === "near"
+                          isCenter
+                            ? "w-[72px] h-[72px] bg-gold/12"
+                            : isNear
                               ? "w-16 h-16 bg-secondary"
                               : "w-14 h-14 bg-secondary"
                         )}
@@ -205,9 +199,9 @@ const ServiceNavTiles = () => {
                         <tile.icon
                           className={cn(
                             "transition-colors duration-300",
-                            state === "center"
+                            isCenter
                               ? "w-9 h-9 text-gold-dark"
-                              : state === "near"
+                              : isNear
                                 ? "w-7 h-7 text-accent group-hover:text-gold-dark"
                                 : "w-6 h-6 text-muted-foreground"
                           )}
@@ -216,11 +210,9 @@ const ServiceNavTiles = () => {
                       <h3
                         className={cn(
                           "font-serif text-foreground font-semibold leading-snug mb-1.5",
-                          state === "center"
+                          isCenter
                             ? "text-lg lg:text-xl"
-                            : state === "near"
-                              ? "text-base lg:text-lg"
-                              : "text-sm lg:text-base"
+                            : "text-base lg:text-lg"
                         )}
                       >
                         {tile.title}
@@ -228,9 +220,7 @@ const ServiceNavTiles = () => {
                       <p
                         className={cn(
                           "leading-snug text-muted-foreground",
-                          state === "center"
-                            ? "text-sm lg:text-[15px]"
-                            : "text-xs lg:text-sm"
+                          isCenter ? "text-sm lg:text-[15px]" : "text-sm"
                         )}
                       >
                         {tile.subtitle}
@@ -246,7 +236,7 @@ const ServiceNavTiles = () => {
           <button
             onClick={scrollNext}
             aria-label="Next"
-            className="absolute right-0 lg:-right-5 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full bg-card border border-border shadow-lg flex items-center justify-center hover:bg-accent/10 transition-colors"
+            className="absolute right-0 lg:-right-5 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full bg-card border border-border shadow-md flex items-center justify-center hover:bg-accent/10 transition-colors"
           >
             <svg className="w-5 h-5 text-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
