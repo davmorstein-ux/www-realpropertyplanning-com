@@ -18,6 +18,7 @@ import daveHeadshot2 from "@/assets/dave-headshot-2.jpg";
 import coupleWritingWill from "@/assets/couple-writing-will.png";
 import heroHome from "@/assets/hero-home.jpg";
 import AgentCredentialBlock from "@/components/AgentCredentialBlock";
+import ServiceNavTiles from "@/components/ServiceNavTiles";
 
 const services = [
   {
@@ -325,6 +326,9 @@ const Index = () => {
           </p>
         </div>
       </section>
+
+      {/* Visual Service Navigation */}
+      <ServiceNavTiles />
 
       {/* Who We Help — Families & Individuals */}
       <section className="py-20 lg:py-28 bg-background">
