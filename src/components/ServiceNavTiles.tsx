@@ -36,7 +36,7 @@ const ServiceNavTiles = () => {
   const isMobile = useIsMobile();
 
   const [emblaRef, emblaApi] = useEmblaCarousel({
-    align: "center",
+    align: (viewSize, snapSize) => (viewSize - snapSize) / 2,
     loop: true,
     skipSnaps: false,
     containScroll: false,
