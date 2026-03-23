@@ -176,29 +176,32 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                icon: Home,
+                iconSrc: iconServiceProbate,
                 title: "Probate & Estate Property Sales",
                 body: "Experienced guidance for selling inherited homes, trust-owned real estate, and estate property across King, Snohomish, Pierce, Skagit, and Kitsap Counties.",
                 link: "/probate-estate-sales"
               },
               {
-                icon: Heart,
+                iconSrc: iconServiceSenior,
                 title: "Senior Transitions & Downsizing",
                 body: "Thoughtful real estate support for families navigating a move from a longtime home to assisted living or smaller housing.",
                 link: "/senior-transitions"
               },
               {
-                icon: Scale,
+                iconSrc: iconServiceValuation,
                 title: "Valuation-Informed Strategy",
                 body: "As both a broker and certified appraiser, David provides pricing grounded in professional valuation expertise — not guesswork.",
                 link: "/why-valuation-matters"
               },
             ].map((card, i) => (
               <Link key={i} to={card.link} className="group">
-                <div className="bg-card rounded-2xl border border-border p-8 shadow-sm hover:shadow-lg transition-all duration-300 h-full">
-                  <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center mb-5">
-                    <card.icon className="w-6 h-6 text-gold" />
-                  </div>
+                <div className="bg-card rounded-2xl border border-border p-8 shadow-sm hover:shadow-lg transition-all duration-300 h-full flex flex-col items-center text-center">
+                  <img
+                    src={card.iconSrc}
+                    alt={card.title}
+                    className="h-32 w-32 md:h-36 md:w-36 object-contain mb-6"
+                    loading="lazy"
+                  />
                   <h3 className="font-serif text-xl text-foreground font-semibold mb-3 group-hover:text-gold transition-colors">
                     {card.title}
                   </h3>
