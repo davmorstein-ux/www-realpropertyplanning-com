@@ -174,27 +174,58 @@ const ServiceNavTiles = () => {
                     <Link
                       to={tile.href}
                       className={cn(
-                        "group flex flex-col items-center text-center rounded-2xl h-full",
-                        "bg-card border border-border",
+                        "group relative flex flex-col items-center text-center h-full",
+                        "rounded-[20px] overflow-hidden",
                         "transition-all duration-300 ease-in-out",
-                        "hover:scale-[1.03] hover:-translate-y-1",
                         "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
                         isCenter
-                          ? "p-8 lg:p-10 shadow-[0_12px_40px_-10px_hsl(var(--foreground)/0.12),0_4px_16px_-4px_hsl(var(--foreground)/0.08)] border-gold/25"
+                          ? "p-8 lg:p-10"
                           : isNear
-                            ? "p-7 lg:p-8 shadow-[0_6px_20px_-6px_hsl(var(--foreground)/0.07),0_2px_8px_-2px_hsl(var(--foreground)/0.04)]"
-                            : "p-6 lg:p-7 shadow-[0_2px_8px_-2px_hsl(var(--foreground)/0.04)]"
+                            ? "p-7 lg:p-8"
+                            : "p-6 lg:p-7"
                       )}
+                      style={{
+                        background: isCenter
+                          ? "linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(40 30% 98%) 100%)"
+                          : "linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(40 20% 96%) 100%)",
+                        border: "1px solid hsl(40 20% 90%)",
+                        borderBottom: "3px solid hsl(40 15% 82%)",
+                        boxShadow: isCenter
+                          ? "0 8px 32px -4px hsl(220 35% 15% / 0.12), 0 4px 12px -2px hsl(220 35% 15% / 0.08), inset 0 1px 0 0 hsl(0 0% 100% / 0.9), inset 0 -2px 6px -2px hsl(40 15% 85% / 0.5)"
+                          : isNear
+                            ? "0 4px 16px -2px hsl(220 35% 15% / 0.08), 0 2px 6px -1px hsl(220 35% 15% / 0.05), inset 0 1px 0 0 hsl(0 0% 100% / 0.8), inset 0 -2px 4px -2px hsl(40 15% 85% / 0.4)"
+                            : "0 2px 8px -1px hsl(220 35% 15% / 0.05), inset 0 1px 0 0 hsl(0 0% 100% / 0.7), inset 0 -1px 3px -1px hsl(40 15% 85% / 0.3)",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.transform = "translateY(-3px) scale(1.03)";
+                        e.currentTarget.style.boxShadow = "0 12px 40px -4px hsl(220 35% 15% / 0.15), 0 6px 16px -2px hsl(220 35% 15% / 0.1), inset 0 1px 0 0 hsl(0 0% 100% / 0.95), inset 0 -2px 6px -2px hsl(40 15% 85% / 0.5)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.transform = "";
+                        e.currentTarget.style.boxShadow = "";
+                      }}
                     >
+                      {/* Top highlight — simulates light catching the top edge */}
+                      <div
+                        className="absolute inset-x-0 top-0 h-[2px] rounded-t-[20px]"
+                        style={{ background: "linear-gradient(90deg, transparent 10%, hsl(0 0% 100% / 0.9) 50%, transparent 90%)" }}
+                      />
+
                       <div
                         className={cn(
                           "rounded-full flex items-center justify-center mb-5 transition-all duration-300",
                           isCenter
-                            ? "w-[72px] h-[72px] bg-gold/12"
+                            ? "w-[72px] h-[72px]"
                             : isNear
-                              ? "w-16 h-16 bg-secondary"
-                              : "w-14 h-14 bg-secondary"
+                              ? "w-16 h-16"
+                              : "w-14 h-14"
                         )}
+                        style={{
+                          background: isCenter
+                            ? "linear-gradient(135deg, hsl(42 55% 55% / 0.15) 0%, hsl(42 45% 72% / 0.1) 100%)"
+                            : "linear-gradient(135deg, hsl(40 30% 96%) 0%, hsl(40 20% 92%) 100%)",
+                          boxShadow: "inset 0 1px 2px hsl(0 0% 100% / 0.6), inset 0 -1px 2px hsl(40 15% 80% / 0.3), 0 1px 3px hsl(220 35% 15% / 0.06)",
+                        }}
                       >
                         <tile.icon
                           className={cn(
