@@ -9,6 +9,28 @@ import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Phone, CheckCircle, MessageSquare } from "lucide-react";
+import RealClientSituations from "@/components/RealClientSituations";
+
+const attorneyCaseStudies = [
+  {
+    title: "Probate Attorney Refers First-Time Executor",
+    situation: "A probate attorney's client — a first-time executor living out of state — inherited a home in King County that needed cleanout, repairs, and sale. The attorney needed a real estate professional who could handle the property side without requiring constant oversight.",
+    approach: "David coordinated directly with the executor, managed the cleanout and preparation, provided pricing guidance based on the property's actual condition, and kept both the attorney and executor informed at key milestones.",
+    outcome: "The property sold within market expectations. The attorney received positive feedback from the client and has since referred additional estate clients to David.",
+  },
+  {
+    title: "Trust Administration With Multiple Beneficiaries",
+    situation: "An estate planning attorney was advising a trustee managing a trust that included a residential property in Snohomish County. Three beneficiaries had different expectations about value, and the trustee needed defensible market data before proceeding.",
+    approach: "David assessed the property, prepared a detailed analysis of condition issues and comparable sales, and presented findings to the trustee and beneficiaries in a clear, objective format. He answered questions from all parties without taking sides.",
+    outcome: "The beneficiaries aligned on pricing. The property was listed, sold, and closed without disputes — and the trustee had documented market support for the sale price.",
+  },
+  {
+    title: "Guardianship Property Sale Requiring Court Oversight",
+    situation: "An elder law attorney needed to facilitate the sale of a protected person's home in Pierce County. The sale required court approval, documented market analysis, and careful handling of a property with significant deferred maintenance.",
+    approach: "David provided a thorough property assessment, coordinated necessary preparations, and documented his pricing rationale with the analytical depth that court-supervised sales require. He worked within the attorney's timeline and communicated proactively throughout.",
+    outcome: "The court approved the sale. The property closed at fair market value with complete documentation, and the attorney noted that David's process made the legal side significantly easier.",
+  },
+];
 
 const whyRefer = [
   "Licensed real estate broker and Washington State certified residential appraiser — dual credentials that provide analytical depth in pricing and market positioning",
@@ -248,6 +270,8 @@ const ForAttorneys = () => {
           </div>
         </div>
       </section>
+
+      <RealClientSituations studies={attorneyCaseStudies} background="bg-background" />
 
       {/* Good Fit */}
       <section className="py-16 lg:py-24 bg-background">
