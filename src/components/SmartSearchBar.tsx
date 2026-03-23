@@ -1,7 +1,8 @@
-import { useState, useRef, useCallback, useEffect } from "react";
+import { useState, useRef, useCallback, useEffect, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
-import { Search, Mic, MicOff, ArrowRight } from "lucide-react";
+import { Search, Mic, MicOff, ArrowRight, Volume2 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { toast } from "sonner";
 
 /* ------------------------------------------------------------------ */
 /*  Keyword → route mapping                                           */
@@ -15,12 +16,12 @@ interface RouteMatch {
 
 const routeMap: RouteMatch[] = [
   {
-    keywords: ["attorney", "attorneys", "lawyer", "lawyers", "legal", "law firm", "counsel"],
+    keywords: ["attorney", "attorneys", "lawyer", "lawyers", "legal", "law firm", "counsel", "law"],
     path: "/for-attorneys",
     label: "For Attorneys",
   },
   {
-    keywords: ["executor", "executors", "personal representative", "pr", "administer", "administering"],
+    keywords: ["executor", "executors", "personal representative", "pr", "administer", "administering", "appointed"],
     path: "/executors",
     label: "Personal Representatives",
   },
@@ -40,12 +41,12 @@ const routeMap: RouteMatch[] = [
     label: "Financial Planners",
   },
   {
-    keywords: ["senior", "seniors", "elderly", "aging", "downsizing", "downsize", "move", "moving", "assisted living", "retirement", "older parent", "mom", "dad", "parent", "parents"],
+    keywords: ["senior", "seniors", "elderly", "aging", "downsizing", "downsize", "move", "moving", "assisted living", "retirement", "older parent", "mom", "dad", "parent", "parents", "relocat"],
     path: "/senior-transitions",
     label: "Senior Transitions",
   },
   {
-    keywords: ["probate", "estate sale", "inherited", "inheritance", "selling inherited", "sell inherited", "deceased", "passed away", "death"],
+    keywords: ["probate", "estate sale", "inherited", "inheritance", "selling inherited", "sell inherited", "deceased", "passed away", "death", "sell", "selling", "house", "home", "property"],
     path: "/probate-estate-sales",
     label: "Probate & Estate Sales",
   },
@@ -60,12 +61,12 @@ const routeMap: RouteMatch[] = [
     label: "Why Valuation Matters",
   },
   {
-    keywords: ["terminology", "definition", "definitions", "glossary", "what does", "what is", "meaning", "term", "terms"],
+    keywords: ["terminology", "definition", "definitions", "glossary", "what does", "what is", "meaning", "term", "terms", "mean"],
     path: "/terminology",
     label: "Probate Terminology",
   },
   {
-    keywords: ["area", "areas", "county", "counties", "location", "where", "seattle", "tacoma", "washington", "puget", "king", "pierce", "snohomish", "kitsap", "skagit"],
+    keywords: ["area", "areas", "county", "counties", "location", "where", "seattle", "tacoma", "washington", "puget", "king", "pierce", "snohomish", "kitsap", "skagit", "serve", "work", "cover"],
     path: "/counties",
     label: "Service Areas",
   },
@@ -91,7 +92,6 @@ function findBestRoute(input: string): RouteMatch | null {
   for (const route of routeMap) {
     for (const kw of route.keywords) {
       if (lower.includes(kw)) {
-        // Longer keyword matches are more specific → higher score
         const score = kw.length;
         if (score > bestScore) {
           bestScore = score;
@@ -102,6 +102,30 @@ function findBestRoute(input: string): RouteMatch | null {
   }
 
   return bestMatch;
+}
+
+function findTopRoutes(input: string, max = 3): RouteMatch[] {
+  const lower = input.toLowerCase().trim();
+  if (!lower) return [];
+
+  const scored: { route: RouteMatch; score: number }[] = [];
+
+  for (const route of routeMap) {
+    let routeBestScore = 0;
+    for (const kw of route.keywords) {
+      if (lower.includes(kw) && kw.length > routeBestScore) {
+        routeBestScore = kw.length;
+      }
+    }
+    if (routeBestScore > 0) {
+      scored.push({ route, score: routeBestScore });
+    }
+  }
+
+  return scored
+    .sort((a, b) => b.score - a.score)
+    .slice(0, max)
+    .map((s) => s.route);
 }
 
 /* ------------------------------------------------------------------ */
@@ -123,34 +147,44 @@ const suggestedPrompts = [
 const SmartSearchBar = () => {
   const [query, setQuery] = useState("");
   const [isListening, setIsListening] = useState(false);
-  const [suggestion, setSuggestion] = useState<RouteMatch | null>(null);
-  const [showSuggestion, setShowSuggestion] = useState(false);
+  const [voiceStatus, setVoiceStatus] = useState<"idle" | "listening" | "processing" | "error">("idle");
+  const [voiceError, setVoiceError] = useState<string | null>(null);
+  const [suggestions, setSuggestions] = useState<RouteMatch[]>([]);
   const inputRef = useRef<HTMLInputElement>(null);
   const recognitionRef = useRef<any>(null);
   const navigate = useNavigate();
 
-  // Debounced routing suggestion
+  const supportsVoice = useMemo(
+    () =>
+      typeof window !== "undefined" &&
+      ("SpeechRecognition" in window || "webkitSpeechRecognition" in window),
+    [],
+  );
+
+  // Debounced routing suggestions
   useEffect(() => {
     if (!query.trim()) {
-      setSuggestion(null);
-      setShowSuggestion(false);
+      setSuggestions([]);
       return;
     }
     const timer = setTimeout(() => {
-      const match = findBestRoute(query);
-      setSuggestion(match);
-      setShowSuggestion(!!match);
-    }, 300);
+      setSuggestions(findTopRoutes(query));
+    }, 250);
     return () => clearTimeout(timer);
   }, [query]);
 
   const handleSubmit = useCallback(() => {
+    if (!query.trim()) return;
+
     const match = findBestRoute(query);
     if (match) {
+      toast.success(`Taking you to ${match.label}`, { duration: 2000 });
       navigate(match.path);
     } else if (query.trim()) {
-      // Fallback: go to FAQ
-      navigate("/faq");
+      toast.info("We couldn't find a perfect match. Here are some pages that might help.", {
+        duration: 3000,
+      });
+      navigate("/services");
     }
   }, [query, navigate]);
 
@@ -166,6 +200,7 @@ const SmartSearchBar = () => {
       setQuery(prompt);
       const match = findBestRoute(prompt);
       if (match) {
+        toast.success(`Taking you to ${match.label}`, { duration: 2000 });
         navigate(match.path);
       }
     },
@@ -173,48 +208,151 @@ const SmartSearchBar = () => {
   );
 
   const handleSuggestionClick = useCallback(() => {
-    if (suggestion) navigate(suggestion.path);
-  }, [suggestion, navigate]);
+    if (suggestions.length > 0) {
+      toast.success(`Taking you to ${suggestions[0].label}`, { duration: 2000 });
+      navigate(suggestions[0].path);
+    }
+  }, [suggestions, navigate]);
 
   /* ---- Voice input ---- */
-  const supportsVoice =
-    typeof window !== "undefined" &&
-    ("SpeechRecognition" in window || "webkitSpeechRecognition" in window);
-
-  const toggleVoice = useCallback(() => {
+  const stopListening = useCallback(() => {
     if (isListening && recognitionRef.current) {
-      recognitionRef.current.stop();
+      try {
+        recognitionRef.current.stop();
+      } catch {
+        // already stopped
+      }
       setIsListening(false);
+      setVoiceStatus("idle");
+    }
+  }, [isListening]);
+
+  const startListening = useCallback(() => {
+    if (!supportsVoice) {
+      toast.error("Voice search is not supported on this device or browser. Please type your question instead.", {
+        duration: 5000,
+      });
       return;
     }
 
     const SpeechRecognition =
       (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
-    if (!SpeechRecognition) return;
+    if (!SpeechRecognition) {
+      toast.error("Voice search is not available. Please type your question instead.", {
+        duration: 5000,
+      });
+      return;
+    }
 
     const recognition = new SpeechRecognition();
     recognition.lang = "en-US";
-    recognition.interimResults = false;
+    recognition.continuous = false;
+    recognition.interimResults = true;
     recognition.maxAlternatives = 1;
 
-    recognition.onresult = (event: SpeechRecognitionEvent) => {
-      const transcript = event.results[0][0].transcript;
+    recognition.onstart = () => {
+      setIsListening(true);
+      setVoiceStatus("listening");
+      setVoiceError(null);
+      toast.info("Listening… speak now", { duration: 3000, id: "voice-listening" });
+    };
+
+    recognition.onresult = (event: any) => {
+      const lastResult = event.results[event.results.length - 1];
+      const transcript = lastResult[0].transcript;
+
+      // Show interim results in the input
       setQuery(transcript);
-      setIsListening(false);
-      // Auto-navigate after voice result
-      const match = findBestRoute(transcript);
-      if (match) {
-        setTimeout(() => navigate(match.path), 600);
+
+      // Only navigate on final result
+      if (lastResult.isFinal) {
+        setVoiceStatus("processing");
+        toast.dismiss("voice-listening");
+
+        const match = findBestRoute(transcript);
+        if (match) {
+          toast.success(`Taking you to ${match.label}`, { duration: 2500 });
+          setTimeout(() => navigate(match.path), 800);
+        } else {
+          toast.info(`We heard: "${transcript}". Showing related pages.`, { duration: 4000 });
+          setSuggestions(findTopRoutes(transcript));
+        }
       }
     };
 
-    recognition.onerror = () => setIsListening(false);
-    recognition.onend = () => setIsListening(false);
+    recognition.onerror = (event: any) => {
+      setIsListening(false);
+      setVoiceStatus("error");
+      toast.dismiss("voice-listening");
+
+      const errorType = event?.error || "unknown";
+
+      if (errorType === "not-allowed") {
+        setVoiceError("Microphone permission was denied.");
+        toast.error(
+          "Microphone access was denied. Please allow microphone permission in your browser settings, then try again.",
+          { duration: 6000 },
+        );
+      } else if (errorType === "no-speech") {
+        setVoiceError("No speech was detected.");
+        toast.warning("We didn't hear anything. Please try again and speak clearly.", {
+          duration: 4000,
+        });
+      } else if (errorType === "network") {
+        setVoiceError("Network error during voice recognition.");
+        toast.error("A network error occurred. Please check your connection and try again.", {
+          duration: 4000,
+        });
+      } else if (errorType === "aborted") {
+        // User or system aborted — no toast needed
+      } else {
+        setVoiceError("Voice recognition failed.");
+        toast.error("Voice search encountered an error. Please type your question instead.", {
+          duration: 4000,
+        });
+      }
+    };
+
+    recognition.onend = () => {
+      setIsListening(false);
+      if (voiceStatus === "listening") {
+        setVoiceStatus("idle");
+      }
+    };
 
     recognitionRef.current = recognition;
-    recognition.start();
-    setIsListening(true);
-  }, [isListening, navigate]);
+
+    try {
+      recognition.start();
+    } catch (err) {
+      toast.error("Could not start voice recognition. Please type your question instead.", {
+        duration: 4000,
+      });
+      setIsListening(false);
+      setVoiceStatus("error");
+    }
+  }, [navigate, supportsVoice, voiceStatus]);
+
+  const toggleVoice = useCallback(() => {
+    if (isListening) {
+      stopListening();
+    } else {
+      startListening();
+    }
+  }, [isListening, startListening, stopListening]);
+
+  // Cleanup on unmount
+  useEffect(() => {
+    return () => {
+      if (recognitionRef.current) {
+        try {
+          recognitionRef.current.stop();
+        } catch {
+          // ignore
+        }
+      }
+    };
+  }, []);
 
   return (
     <div className="w-full max-w-2xl mx-auto mb-10">
@@ -240,20 +378,39 @@ const SmartSearchBar = () => {
         />
 
         {/* Voice button */}
-        {supportsVoice && (
-          <button
-            onClick={toggleVoice}
-            aria-label={isListening ? "Stop listening" : "Use voice input"}
-            className={cn(
-              "flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center mr-1.5 transition-all duration-200",
-              isListening
-                ? "bg-destructive/10 text-destructive animate-pulse"
+        <button
+          onClick={toggleVoice}
+          aria-label={
+            isListening
+              ? "Stop listening"
+              : supportsVoice
+                ? "Use voice input"
+                : "Voice input not supported"
+          }
+          title={
+            !supportsVoice
+              ? "Voice search is not supported on this browser"
+              : isListening
+                ? "Tap to stop listening"
+                : "Tap to speak your question"
+          }
+          className={cn(
+            "flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center mr-1.5 transition-all duration-200",
+            isListening
+              ? "bg-destructive/10 text-destructive animate-pulse"
+              : voiceStatus === "error"
+                ? "text-destructive/60 hover:text-destructive hover:bg-destructive/5"
                 : "text-muted-foreground hover:text-foreground hover:bg-muted",
-            )}
-          >
-            {isListening ? <MicOff className="w-5 h-5" /> : <Mic className="w-5 h-5" />}
-          </button>
-        )}
+          )}
+        >
+          {isListening ? (
+            <MicOff className="w-5 h-5" />
+          ) : voiceStatus === "processing" ? (
+            <Volume2 className="w-5 h-5 animate-pulse" />
+          ) : (
+            <Mic className="w-5 h-5" />
+          )}
+        </button>
 
         {/* Submit button */}
         <button
@@ -265,18 +422,31 @@ const SmartSearchBar = () => {
         </button>
       </div>
 
-      {/* Routing suggestion */}
-      {showSuggestion && suggestion && (
-        <button
-          onClick={handleSuggestionClick}
-          className="mt-3 mx-auto flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-border text-sm text-foreground hover:bg-muted transition-colors duration-200 animate-fade-in"
-        >
-          <Search className="w-3.5 h-3.5 text-gold-dark" />
-          <span>
-            Go to <strong className="font-semibold text-navy">{suggestion.label}</strong>
-          </span>
-          <ArrowRight className="w-3.5 h-3.5 text-muted-foreground" />
-        </button>
+      {/* Routing suggestions */}
+      {suggestions.length > 0 && (
+        <div className="mt-3 flex flex-wrap justify-center gap-2">
+          {suggestions.map((s) => (
+            <button
+              key={s.path + s.label}
+              onClick={() => {
+                toast.success(`Taking you to ${s.label}`, { duration: 2000 });
+                navigate(s.path);
+              }}
+              className="flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-border text-sm text-foreground hover:bg-muted hover:border-gold/40 transition-colors duration-200"
+            >
+              <Search className="w-3.5 h-3.5 text-gold-dark" />
+              <span>
+                Go to <strong className="font-semibold text-navy">{s.label}</strong>
+              </span>
+              <ArrowRight className="w-3.5 h-3.5 text-muted-foreground" />
+            </button>
+          ))}
+        </div>
+      )}
+
+      {/* Voice error hint */}
+      {voiceError && !isListening && (
+        <p className="mt-2 text-center text-sm text-destructive/80">{voiceError}</p>
       )}
 
       {/* Suggested prompts */}
