@@ -8,6 +8,7 @@ import { useState, useCallback, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { cn } from "@/lib/utils";
 import { useIsMobile } from "@/hooks/use-mobile";
+import SmartSearchBar from "./SmartSearchBar";
 
 interface ServiceTile {
   title: string;
