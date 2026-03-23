@@ -194,7 +194,7 @@ const Index = () => {
                 title: "Valuation-Informed Strategy",
                 body: "As both a broker and certified appraiser, David provides pricing grounded in professional valuation expertise — not guesswork.",
                 link: "/why-valuation-matters",
-                iconOffsetClass: "translate-x-2",
+                iconOffsetClass: "",
               },
             ].map((card, i) => (
               <Link key={i} to={card.link} className="group">
