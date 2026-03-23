@@ -1,79 +1,160 @@
-import { Link } from "react-router-dom";
-import {
-  Scale, FileText, Home, MapPin, Handshake, Users, BarChart3,
-  ShieldCheck, BookOpen, Briefcase, TrendingUp, ClipboardList,
-} from "lucide-react";
-import type { LucideIcon } from "lucide-react";
-import { useState, useCallback, useEffect } from "react";
-import useEmblaCarousel from "embla-carousel-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import SmartSearchBar from "./SmartSearchBar";
-
-interface ServiceTile {
-  title: string;
-  subtitle: string;
-  href: string;
-  icon: LucideIcon;
-  hue: number;
-}
-
-const tiles: ServiceTile[] = [
-  { title: "For Attorneys", subtitle: "Estate & Probate Support", href: "/for-attorneys", icon: Scale, hue: 220 },
-  { title: "Personal Representatives", subtitle: "Guidance for Executors", href: "/executors", icon: FileText, hue: 210 },
-  { title: "Trustees & Fiduciaries", subtitle: "Property Decision Support", href: "/executors", icon: ShieldCheck, hue: 200 },
-  { title: "CPAs", subtitle: "Coordinating Real Estate Decisions", href: "/for-cpas", icon: Briefcase, hue: 215 },
-  { title: "Financial Planners", subtitle: "Property & Wealth Strategy", href: "/for-financial-planners", icon: TrendingUp, hue: 185 },
-  { title: "Senior Transitions", subtitle: "Downsizing & Housing Changes", href: "/senior-transitions", icon: Users, hue: 195 },
-  { title: "Probate & Estate Sales", subtitle: "Selling Inherited Property", href: "/probate-estate-sales", icon: Home, hue: 205 },
-  { title: "How the Process Works", subtitle: "Step-by-Step Overview", href: "/how-the-process-works", icon: ClipboardList, hue: 190 },
-  { title: "Why Valuation Matters", subtitle: "Understanding Property Value", href: "/why-valuation-matters", icon: BarChart3, hue: 175 },
-  { title: "Probate Terminology", subtitle: "Simple Definitions & Guidance", href: "/terminology", icon: BookOpen, hue: 225 },
-  { title: "Service Areas", subtitle: "Western Washington Coverage", href: "/counties", icon: MapPin, hue: 170 },
-  { title: "Professional Resources", subtitle: "Trusted Network & Partners", href: "/professional-referral-resource", icon: Handshake, hue: 200 },
-];
+import ServiceNavTileCard from "./ServiceNavTileCard";
+import { serviceTiles } from "./service-nav-tiles-data";
 
 /* ── shared shadow strings ── */
 const arrowShadow = "0 4px 14px -3px hsl(220 30% 20% / 0.12), 0 2px 4px -1px hsl(220 30% 20% / 0.06)";
 const arrowShadowHover = "0 6px 18px -3px hsl(220 30% 20% / 0.15), 0 3px 6px -1px hsl(220 30% 20% / 0.08)";
 const arrowShadowPress = "0 1px 4px -1px hsl(220 30% 20% / 0.18)";
 
-const cardShadow = (hue: number) =>
-  `0 8px 30px -6px hsl(${hue} 25% 30% / 0.12), 0 4px 10px -4px hsl(${hue} 25% 30% / 0.08), 0 1px 0 0 hsl(${hue} 20% 82% / 0.6)`;
-const cardShadowHover = (hue: number) =>
-  `0 14px 40px -8px hsl(${hue} 25% 30% / 0.16), 0 6px 14px -4px hsl(${hue} 25% 30% / 0.1), 0 1px 0 0 hsl(${hue} 20% 80% / 0.7)`;
-const cardShadowPress = (hue: number) =>
-  `0 2px 8px -2px hsl(${hue} 25% 30% / 0.18), 0 1px 3px -1px hsl(${hue} 25% 30% / 0.1)`;
+const SCROLL_SETTLE_MS = 140;
+
+const getSlidesPerView = (width: number) => {
+  if (width >= 1024) return 3;
+  if (width >= 640) return 2;
+  return 1;
+};
+
+const getGap = (width: number) => {
+  if (width >= 1024) return 24;
+  if (width >= 640) return 20;
+  return 16;
+};
 
 const ServiceNavTiles = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [viewportWidth, setViewportWidth] = useState(0);
+  const viewportRef = useRef<HTMLDivElement | null>(null);
+  const slideRefs = useRef<Array<HTMLDivElement | null>>([]);
+  const settleTimerRef = useRef<number | null>(null);
+  const rafRef = useRef<number | null>(null);
 
-  const [emblaRef, emblaApi] = useEmblaCarousel({
-    align: "center",
-    loop: true,
-    skipSnaps: false,
-    containScroll: false,
-    dragFree: false,
-    duration: 30,
-  });
+  const gap = useMemo(() => getGap(viewportWidth), [viewportWidth]);
+  const slidesPerView = useMemo(() => getSlidesPerView(viewportWidth), [viewportWidth]);
+  const slideWidth = useMemo(() => {
+    if (!viewportWidth) return 0;
+    return (viewportWidth - gap * (slidesPerView - 1)) / slidesPerView;
+  }, [gap, slidesPerView, viewportWidth]);
+  const edgePadding = useMemo(() => {
+    if (!viewportWidth || !slideWidth) return 0;
+    return (viewportWidth - slideWidth) / 2;
+  }, [slideWidth, viewportWidth]);
 
-  const onSelect = useCallback(() => {
-    if (!emblaApi) return;
-    setSelectedIndex(emblaApi.selectedScrollSnap());
-  }, [emblaApi]);
+  const getTargetLeft = useCallback((index: number) => {
+    const viewport = viewportRef.current;
+    const slide = slideRefs.current[index];
+
+    if (!viewport || !slide) return null;
+
+    return slide.offsetLeft + slide.offsetWidth / 2 - viewport.clientWidth / 2;
+  }, []);
+
+  const scrollToIndex = useCallback(
+    (index: number, behavior: ScrollBehavior = "smooth") => {
+      const viewport = viewportRef.current;
+      const targetLeft = getTargetLeft(index);
+
+      if (!viewport || targetLeft === null) return;
+      if (Math.abs(viewport.scrollLeft - targetLeft) < 0.5) return;
+
+      viewport.scrollTo({ left: targetLeft, behavior });
+    },
+    [getTargetLeft],
+  );
+
+  const getNearestIndex = useCallback(() => {
+    const viewport = viewportRef.current;
+    if (!viewport) return 0;
+
+    const viewportCenter = viewport.scrollLeft + viewport.clientWidth / 2;
+    let nearestIndex = 0;
+    let smallestDistance = Number.POSITIVE_INFINITY;
+
+    slideRefs.current.forEach((slide, index) => {
+      if (!slide) return;
+      const slideCenter = slide.offsetLeft + slide.offsetWidth / 2;
+      const distance = Math.abs(slideCenter - viewportCenter);
+
+      if (distance < smallestDistance) {
+        smallestDistance = distance;
+        nearestIndex = index;
+      }
+    });
+
+    return nearestIndex;
+  }, []);
+
+  const syncSelectedIndex = useCallback(() => {
+    const nearestIndex = getNearestIndex();
+    setSelectedIndex((currentIndex) => (currentIndex === nearestIndex ? currentIndex : nearestIndex));
+    return nearestIndex;
+  }, [getNearestIndex]);
+
+  const handleScroll = useCallback(() => {
+    if (rafRef.current) {
+      window.cancelAnimationFrame(rafRef.current);
+    }
+
+    rafRef.current = window.requestAnimationFrame(() => {
+      syncSelectedIndex();
+    });
+
+    if (settleTimerRef.current) {
+      window.clearTimeout(settleTimerRef.current);
+    }
+
+    settleTimerRef.current = window.setTimeout(() => {
+      const nearestIndex = syncSelectedIndex();
+      scrollToIndex(nearestIndex, "smooth");
+    }, SCROLL_SETTLE_MS);
+  }, [scrollToIndex, syncSelectedIndex]);
+
+  const scrollPrev = useCallback(() => {
+    const nextIndex = Math.max(selectedIndex - 1, 0);
+    setSelectedIndex(nextIndex);
+    scrollToIndex(nextIndex);
+  }, [scrollToIndex, selectedIndex]);
+
+  const scrollNext = useCallback(() => {
+    const nextIndex = Math.min(selectedIndex + 1, serviceTiles.length - 1);
+    setSelectedIndex(nextIndex);
+    scrollToIndex(nextIndex);
+  }, [scrollToIndex, selectedIndex]);
+
+  useLayoutEffect(() => {
+    const viewport = viewportRef.current;
+    if (!viewport) return;
+
+    const measure = () => {
+      setViewportWidth(viewport.clientWidth);
+    };
+
+    measure();
+
+    const observer = new ResizeObserver(() => measure());
+    observer.observe(viewport);
+
+    return () => observer.disconnect();
+  }, []);
+
+  useLayoutEffect(() => {
+    if (!viewportWidth || !slideWidth) return;
+    scrollToIndex(selectedIndex, "auto");
+  }, [scrollToIndex, selectedIndex, slideWidth, viewportWidth]);
 
   useEffect(() => {
-    if (!emblaApi) return;
-    emblaApi.on("select", onSelect);
-    emblaApi.on("reInit", onSelect);
-    onSelect();
     return () => {
-      emblaApi.off("select", onSelect);
-      emblaApi.off("reInit", onSelect);
+      if (settleTimerRef.current) {
+        window.clearTimeout(settleTimerRef.current);
+      }
+      if (rafRef.current) {
+        window.cancelAnimationFrame(rafRef.current);
+      }
     };
-  }, [emblaApi, onSelect]);
-
-  const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
-  const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
+  }, []);
 
   return (
     <section className="py-16 lg:py-20 bg-secondary overflow-hidden">
@@ -89,130 +170,70 @@ const ServiceNavTiles = () => {
           <SmartSearchBar />
         </div>
 
-        {/* Carousel wrapper — arrows sit inside, carousel is full-width for true centering */}
+        {/* Carousel wrapper */}
         <div className="relative">
-          {/* Prev arrow */}
           <button
             onClick={scrollPrev}
             aria-label="Previous"
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-card border border-border flex items-center justify-center"
+            disabled={selectedIndex === 0}
+            className="absolute left-0 top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-card disabled:pointer-events-none disabled:opacity-40"
             style={{ boxShadow: arrowShadow, transition: "transform 0.2s ease-out, box-shadow 0.2s ease-out" }}
             onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-50%) scale(1.06)"; e.currentTarget.style.boxShadow = arrowShadowHover; }}
             onMouseLeave={(e) => { e.currentTarget.style.transform = "translateY(-50%)"; e.currentTarget.style.boxShadow = arrowShadow; e.currentTarget.style.transition = "transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out"; }}
             onMouseDown={(e) => { e.currentTarget.style.transform = "translateY(-50%) scale(0.93)"; e.currentTarget.style.boxShadow = arrowShadowPress; e.currentTarget.style.transition = "transform 0.12s ease-out, box-shadow 0.12s ease-out"; }}
             onMouseUp={(e) => { e.currentTarget.style.transform = "translateY(-50%) scale(1.06)"; e.currentTarget.style.boxShadow = arrowShadowHover; e.currentTarget.style.transition = "transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out"; }}
           >
-            <svg className="w-5 h-5 text-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-            </svg>
+            <ChevronLeft className="h-5 w-5 text-foreground" />
           </button>
 
-          {/* Embla viewport — symmetric padding so Embla measures a centered container */}
-          <div ref={emblaRef} className="overflow-hidden mx-14">
-            <div className="flex">
-              {tiles.map((tile, i) => {
-                const isActive = i === selectedIndex;
-
-                return (
-                  <div
-                    key={tile.href + tile.title}
-                    className="min-w-0 flex-[0_0_100%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%] px-3"
-                  >
-                    <div className="flex justify-center">
-                      <Link
-                        to={tile.href}
-                        className={cn(
-                          "group relative flex flex-col items-center justify-center text-center",
-                          "w-full max-w-[280px] aspect-square",
-                          "rounded-2xl border",
-                          "transition-[transform,box-shadow,opacity] duration-300 ease-in-out",
-                          "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
-                          isActive ? "opacity-100" : "opacity-70"
-                        )}
-                        style={{
-                          borderColor: `hsl(${tile.hue} 18% 86%)`,
-                          background: `linear-gradient(to bottom, hsl(${tile.hue} 20% 98%) 0%, hsl(${tile.hue} 16% 94%) 100%)`,
-                          boxShadow: cardShadow(tile.hue),
-                        }}
-                        onMouseEnter={(e) => {
-                          e.currentTarget.style.transform = "translateY(-4px) scale(1.02)";
-                          e.currentTarget.style.boxShadow = cardShadowHover(tile.hue);
-                          e.currentTarget.style.transition = "transform 0.2s ease-out, box-shadow 0.2s ease-out";
-                        }}
-                        onMouseLeave={(e) => {
-                          e.currentTarget.style.transform = "";
-                          e.currentTarget.style.boxShadow = cardShadow(tile.hue);
-                          e.currentTarget.style.transition = "transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out";
-                        }}
-                        onMouseDown={(e) => {
-                          e.currentTarget.style.transform = "translateY(2px) scale(0.97)";
-                          e.currentTarget.style.boxShadow = cardShadowPress(tile.hue);
-                          e.currentTarget.style.transition = "transform 0.12s ease-out, box-shadow 0.12s ease-out";
-                        }}
-                        onMouseUp={(e) => {
-                          e.currentTarget.style.transform = "translateY(-4px) scale(1.02)";
-                          e.currentTarget.style.boxShadow = cardShadowHover(tile.hue);
-                          e.currentTarget.style.transition = "transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out";
-                        }}
-                      >
-                        {/* Icon */}
-                        <div
-                          className="w-14 h-14 rounded-xl flex items-center justify-center mb-4"
-                          style={{
-                            background: `linear-gradient(to bottom, hsl(${tile.hue} 22% 93%) 0%, hsl(${tile.hue} 18% 88%) 100%)`,
-                            boxShadow: `0 2px 6px -2px hsl(${tile.hue} 25% 30% / 0.1)`,
-                          }}
-                        >
-                          <tile.icon className="w-7 h-7 text-foreground" strokeWidth={1.8} />
-                        </div>
-
-                        {/* Title */}
-                        <h3 className="font-serif text-lg lg:text-xl font-semibold leading-snug mb-1 text-foreground">
-                          {tile.title}
-                        </h3>
-
-                        {/* Subtitle */}
-                        <p className="text-sm text-muted-foreground leading-snug px-4">
-                          {tile.subtitle}
-                        </p>
-
-                        {/* Bottom edge depth line */}
-                        <div
-                          className="absolute bottom-0 inset-x-4 h-[1px] rounded-full pointer-events-none"
-                          style={{ background: `hsl(${tile.hue} 15% 82%)` }}
-                        />
-                      </Link>
-                    </div>
-                  </div>
-                );
-              })}
+          <div
+            ref={viewportRef}
+            onScroll={handleScroll}
+            className="mx-14 overflow-x-auto overscroll-x-contain scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          >
+            <div className="flex items-stretch" style={{ columnGap: `${gap}px` }}>
+              <div aria-hidden="true" style={{ width: `${edgePadding}px`, flex: `0 0 ${edgePadding}px` }} />
+              {serviceTiles.map((tile, index) => (
+                <div
+                  key={tile.href + tile.title}
+                  ref={(node) => {
+                    slideRefs.current[index] = node;
+                  }}
+                  className="shrink-0 snap-center"
+                  style={{ width: `${slideWidth}px`, flex: `0 0 ${slideWidth}px` }}
+                >
+                  <ServiceNavTileCard tile={tile} isActive={index === selectedIndex} />
+                </div>
+              ))}
+              <div aria-hidden="true" style={{ width: `${edgePadding}px`, flex: `0 0 ${edgePadding}px` }} />
             </div>
           </div>
 
-          {/* Next arrow */}
           <button
             onClick={scrollNext}
             aria-label="Next"
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-card border border-border flex items-center justify-center"
+            disabled={selectedIndex === serviceTiles.length - 1}
+            className="absolute right-0 top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-card disabled:pointer-events-none disabled:opacity-40"
             style={{ boxShadow: arrowShadow, transition: "transform 0.2s ease-out, box-shadow 0.2s ease-out" }}
             onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-50%) scale(1.06)"; e.currentTarget.style.boxShadow = arrowShadowHover; }}
             onMouseLeave={(e) => { e.currentTarget.style.transform = "translateY(-50%)"; e.currentTarget.style.boxShadow = arrowShadow; e.currentTarget.style.transition = "transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out"; }}
             onMouseDown={(e) => { e.currentTarget.style.transform = "translateY(-50%) scale(0.93)"; e.currentTarget.style.boxShadow = arrowShadowPress; e.currentTarget.style.transition = "transform 0.12s ease-out, box-shadow 0.12s ease-out"; }}
             onMouseUp={(e) => { e.currentTarget.style.transform = "translateY(-50%) scale(1.06)"; e.currentTarget.style.boxShadow = arrowShadowHover; e.currentTarget.style.transition = "transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out"; }}
           >
-            <svg className="w-5 h-5 text-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-            </svg>
+            <ChevronRight className="h-5 w-5 text-foreground" />
           </button>
         </div>
 
         {/* Dots */}
         <div className="flex justify-center gap-1.5 mt-10">
-          {tiles.map((_, i) => (
+          {serviceTiles.map((_, i) => (
             <button
               key={i}
               aria-label={`Go to slide ${i + 1}`}
-              onClick={() => emblaApi?.scrollTo(i)}
+              onClick={() => {
+                setSelectedIndex(i);
+                scrollToIndex(i);
+              }}
               className={cn(
                 "rounded-full transition-all duration-300",
                 i === selectedIndex
