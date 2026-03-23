@@ -7,9 +7,12 @@ import { realEstateAgentSchema } from "@/lib/schema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import {
-  Phone, Mail, Scale, Heart, Home, CheckCircle,
+  Phone, Mail, CheckCircle,
   ArrowRight, ChevronRight, MapPin, Quote, Award, Shield
 } from "lucide-react";
+import iconServiceProbate from "@/assets/icons/icon-service-probate.png";
+import iconServiceSenior from "@/assets/icons/icon-service-senior.png";
+import iconServiceValuation from "@/assets/icons/icon-service-valuation.png";
 import daveHeadshot2 from "@/assets/dave-headshot-2.jpg";
 import heroPnwHome from "@/assets/hero-pnw-home.jpg";
 import alcaLogo from "@/assets/alca-corporate-partner.png";
