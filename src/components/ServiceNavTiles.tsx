@@ -31,6 +31,7 @@ const ServiceNavTiles = () => {
   const slideRefs = useRef<Array<HTMLDivElement | null>>([]);
   const settleTimerRef = useRef<number | null>(null);
   const rafRef = useRef<number | null>(null);
+  const hasInitializedRef = useRef(false);
 
   const gap = useMemo(() => getGap(viewportWidth), [viewportWidth]);
   const slidesPerView = useMemo(() => getSlidesPerView(viewportWidth), [viewportWidth]);
@@ -142,8 +143,17 @@ const ServiceNavTiles = () => {
 
   useLayoutEffect(() => {
     if (!viewportWidth || !slideWidth) return;
+
+    if (!hasInitializedRef.current) {
+      const initialIndex = slidesPerView > 1 ? 1 : 0;
+      hasInitializedRef.current = true;
+      setSelectedIndex(initialIndex);
+      scrollToIndex(initialIndex, "auto");
+      return;
+    }
+
     scrollToIndex(selectedIndex, "auto");
-  }, [scrollToIndex, selectedIndex, slideWidth, viewportWidth]);
+  }, [scrollToIndex, selectedIndex, slideWidth, slidesPerView, viewportWidth]);
 
   useEffect(() => {
     return () => {
@@ -189,7 +199,7 @@ const ServiceNavTiles = () => {
           <div
             ref={viewportRef}
             onScroll={handleScroll}
-            className="mx-14 overflow-x-auto overscroll-x-contain scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            className="mx-14 snap-x snap-mandatory overflow-x-auto overscroll-x-contain scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           >
             <div className="flex items-stretch" style={{ columnGap: `${gap}px` }}>
               <div aria-hidden="true" style={{ width: `${edgePadding}px`, flex: `0 0 ${edgePadding}px` }} />
