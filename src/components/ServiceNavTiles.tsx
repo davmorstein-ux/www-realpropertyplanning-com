@@ -176,7 +176,7 @@ const ServiceNavTiles = () => {
           </button>
 
           {/* Carousel */}
-          <div ref={emblaRef} className="overflow-hidden mx-12 lg:mx-14">
+          <div ref={emblaRef} className="overflow-hidden mx-14">
             <div className="flex" style={isMobile ? undefined : { transformStyle: "preserve-3d" }}>
               {tiles.map((tile, i) => {
                 const pos = getPosition(i);
