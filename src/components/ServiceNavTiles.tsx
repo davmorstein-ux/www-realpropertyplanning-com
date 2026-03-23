@@ -8,6 +8,7 @@ import { useState, useCallback, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { cn } from "@/lib/utils";
 import { useIsMobile } from "@/hooks/use-mobile";
+import SmartSearchBar from "./SmartSearchBar";
 
 interface ServiceTile {
   title: string;
@@ -130,13 +131,14 @@ const ServiceNavTiles = () => {
   return (
     <section className="py-16 lg:py-20 bg-secondary overflow-hidden">
       <div className="mx-auto max-w-[1200px] px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-3">
             How Can I Help You Today?
           </h2>
-          <p className="text-muted-foreground text-base max-w-xl mx-auto">
-            Select a topic below to learn more about how we can assist you.
+          <p className="text-muted-foreground text-base max-w-xl mx-auto mb-8">
+            Type a question, tap a suggestion, or browse the topics below.
           </p>
+          <SmartSearchBar />
         </div>
 
         <div
