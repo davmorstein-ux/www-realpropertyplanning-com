@@ -5,8 +5,13 @@ const ServiceNavTileCard = ({ tile }: { tile: ServiceTile }) => {
   return (
     <Link
       to={tile.href}
-      className="group flex flex-col items-center justify-center gap-2 rounded-2xl border border-border bg-card p-6 text-center shadow-md transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-lg active:translate-y-px active:scale-[0.98] active:shadow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+      className="group relative flex flex-col items-center justify-center gap-2 overflow-hidden rounded-2xl border-2 border-border/80 bg-card p-6 text-center shadow-[0_4px_20px_-4px_hsl(var(--foreground)/0.08)] transition-all duration-[120ms] ease-out hover:-translate-y-0.5 hover:border-accent/40 hover:shadow-[0_8px_28px_-6px_hsl(var(--foreground)/0.13)] active:translate-y-px active:scale-[0.97] active:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
     >
+      {/* Top inner highlight */}
+      <span className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-foreground/[0.07] to-transparent" />
+      {/* Bottom edge depth line */}
+      <span className="pointer-events-none absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-transparent via-foreground/[0.10] to-transparent" />
+
       <div className="mb-1 flex h-12 w-12 items-center justify-center rounded-xl bg-secondary">
         <tile.icon className="h-6 w-6 text-foreground/70" strokeWidth={1.8} />
       </div>
