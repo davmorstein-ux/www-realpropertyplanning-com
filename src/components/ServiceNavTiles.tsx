@@ -187,7 +187,7 @@ const ServiceNavTiles = () => {
                 return (
                   <div
                     key={tile.href + tile.title}
-                    className="flex-[0_0_80%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%] px-3"
+                    className="flex-[0_0_100%] px-4 sm:flex-[0_0_50%] sm:px-3 lg:flex-[0_0_33.333333%]"
                     style={{
                       ...slideStyle,
                       transition: "transform 0.55s ease-in-out, opacity 0.5s ease-in-out",
