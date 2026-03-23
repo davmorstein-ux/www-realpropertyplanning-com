@@ -196,12 +196,14 @@ const Index = () => {
             ].map((card, i) => (
               <Link key={i} to={card.link} className="group">
                 <div className="bg-card rounded-2xl border border-border p-8 shadow-sm hover:shadow-lg transition-all duration-300 h-full flex flex-col items-center text-center">
-                  <img
-                    src={card.iconSrc}
-                    alt={card.title}
-                    className="h-32 w-32 md:h-36 md:w-36 object-contain mb-6"
-                    loading="lazy"
-                  />
+                  <div className="w-full flex items-center justify-center mb-6">
+                    <img
+                      src={card.iconSrc}
+                      alt={card.title}
+                      className="h-32 w-32 md:h-36 md:w-36 object-contain mx-auto block"
+                      loading="lazy"
+                    />
+                  </div>
                   <h3 className="font-serif text-xl text-foreground font-semibold mb-3 group-hover:text-gold transition-colors">
                     {card.title}
                   </h3>
