@@ -220,12 +220,24 @@ const ServiceNavTiles = () => {
                             : "0 2px 8px -1px hsl(220 35% 15% / 0.05), inset 0 1px 0 0 hsl(0 0% 100% / 0.7), inset 0 -1px 3px -1px hsl(40 15% 85% / 0.3)",
                       }}
                       onMouseEnter={(e) => {
-                        e.currentTarget.style.transform = "translateY(-3px) scale(1.03)";
+                        e.currentTarget.style.transform = "translateY(-3px) scale(1.02)";
                         e.currentTarget.style.boxShadow = "0 12px 40px -4px hsl(220 35% 15% / 0.15), 0 6px 16px -2px hsl(220 35% 15% / 0.1), inset 0 1px 0 0 hsl(0 0% 100% / 0.95), inset 0 -2px 6px -2px hsl(40 15% 85% / 0.5)";
+                        e.currentTarget.style.transition = "transform 0.2s ease-out, box-shadow 0.2s ease-out";
                       }}
                       onMouseLeave={(e) => {
                         e.currentTarget.style.transform = "";
                         e.currentTarget.style.boxShadow = "";
+                        e.currentTarget.style.transition = "transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out";
+                      }}
+                      onMouseDown={(e) => {
+                        e.currentTarget.style.transform = "translateY(2px) scale(0.97)";
+                        e.currentTarget.style.boxShadow = "0 2px 8px -2px hsl(220 35% 15% / 0.18), 0 1px 3px -1px hsl(220 35% 15% / 0.1), inset 0 1px 0 0 hsl(0 0% 100% / 0.7), inset 0 -1px 3px -1px hsl(40 15% 85% / 0.6)";
+                        e.currentTarget.style.transition = "transform 0.12s ease-out, box-shadow 0.12s ease-out";
+                      }}
+                      onMouseUp={(e) => {
+                        e.currentTarget.style.transform = "translateY(-3px) scale(1.02)";
+                        e.currentTarget.style.boxShadow = "0 12px 40px -4px hsl(220 35% 15% / 0.15), 0 6px 16px -2px hsl(220 35% 15% / 0.1), inset 0 1px 0 0 hsl(0 0% 100% / 0.95), inset 0 -2px 6px -2px hsl(40 15% 85% / 0.5)";
+                        e.currentTarget.style.transition = "transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out";
                       }}
                     >
                       {/* Top highlight — simulates light catching the top edge */}
