@@ -1,6 +1,6 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
+import { useScrollSnapSlider } from "@/hooks/use-scroll-snap-slider";
 import SmartSearchBar from "./SmartSearchBar";
 import ServiceNavTileCard from "./ServiceNavTileCard";
 import { serviceTiles } from "./service-nav-tiles-data";
@@ -10,161 +10,21 @@ const arrowShadow = "0 4px 14px -3px hsl(220 30% 20% / 0.12), 0 2px 4px -1px hsl
 const arrowShadowHover = "0 6px 18px -3px hsl(220 30% 20% / 0.15), 0 3px 6px -1px hsl(220 30% 20% / 0.08)";
 const arrowShadowPress = "0 1px 4px -1px hsl(220 30% 20% / 0.18)";
 
-const SCROLL_SETTLE_MS = 140;
-
-const getSlidesPerView = (width: number) => {
-  if (width >= 1024) return 3;
-  if (width >= 640) return 2;
-  return 1;
-};
-
-const getGap = (width: number) => {
-  if (width >= 1024) return 24;
-  if (width >= 640) return 20;
-  return 16;
-};
-
 const ServiceNavTiles = () => {
-  const [selectedIndex, setSelectedIndex] = useState(0);
-  const [viewportWidth, setViewportWidth] = useState(0);
-  const viewportRef = useRef<HTMLDivElement | null>(null);
-  const slideRefs = useRef<Array<HTMLDivElement | null>>([]);
-  const settleTimerRef = useRef<number | null>(null);
-  const rafRef = useRef<number | null>(null);
-  const hasInitializedRef = useRef(false);
-
-  const gap = useMemo(() => getGap(viewportWidth), [viewportWidth]);
-  const slidesPerView = useMemo(() => getSlidesPerView(viewportWidth), [viewportWidth]);
-  const slideWidth = useMemo(() => {
-    if (!viewportWidth) return 0;
-    return (viewportWidth - gap * (slidesPerView - 1)) / slidesPerView;
-  }, [gap, slidesPerView, viewportWidth]);
-  const edgePadding = useMemo(() => {
-    if (!viewportWidth || !slideWidth) return 0;
-    return (viewportWidth - slideWidth) / 2;
-  }, [slideWidth, viewportWidth]);
-
-  const getTargetLeft = useCallback((index: number) => {
-    const viewport = viewportRef.current;
-    const slide = slideRefs.current[index];
-
-    if (!viewport || !slide) return null;
-
-    return slide.offsetLeft + slide.offsetWidth / 2 - viewport.clientWidth / 2;
-  }, []);
-
-  const scrollToIndex = useCallback(
-    (index: number, behavior: ScrollBehavior = "smooth") => {
-      const viewport = viewportRef.current;
-      const targetLeft = getTargetLeft(index);
-
-      if (!viewport || targetLeft === null) return;
-      if (Math.abs(viewport.scrollLeft - targetLeft) < 0.5) return;
-
-      viewport.scrollTo({ left: targetLeft, behavior });
-    },
-    [getTargetLeft],
-  );
-
-  const getNearestIndex = useCallback(() => {
-    const viewport = viewportRef.current;
-    if (!viewport) return 0;
-
-    const viewportCenter = viewport.scrollLeft + viewport.clientWidth / 2;
-    let nearestIndex = 0;
-    let smallestDistance = Number.POSITIVE_INFINITY;
-
-    slideRefs.current.forEach((slide, index) => {
-      if (!slide) return;
-      const slideCenter = slide.offsetLeft + slide.offsetWidth / 2;
-      const distance = Math.abs(slideCenter - viewportCenter);
-
-      if (distance < smallestDistance) {
-        smallestDistance = distance;
-        nearestIndex = index;
-      }
-    });
-
-    return nearestIndex;
-  }, []);
-
-  const syncSelectedIndex = useCallback(() => {
-    const nearestIndex = getNearestIndex();
-    setSelectedIndex((currentIndex) => (currentIndex === nearestIndex ? currentIndex : nearestIndex));
-    return nearestIndex;
-  }, [getNearestIndex]);
-
-  const handleScroll = useCallback(() => {
-    if (rafRef.current) {
-      window.cancelAnimationFrame(rafRef.current);
-    }
-
-    rafRef.current = window.requestAnimationFrame(() => {
-      syncSelectedIndex();
-    });
-
-    if (settleTimerRef.current) {
-      window.clearTimeout(settleTimerRef.current);
-    }
-
-    settleTimerRef.current = window.setTimeout(() => {
-      const nearestIndex = syncSelectedIndex();
-      scrollToIndex(nearestIndex, "smooth");
-    }, SCROLL_SETTLE_MS);
-  }, [scrollToIndex, syncSelectedIndex]);
-
-  const scrollPrev = useCallback(() => {
-    const nextIndex = Math.max(selectedIndex - 1, 0);
-    setSelectedIndex(nextIndex);
-    scrollToIndex(nextIndex);
-  }, [scrollToIndex, selectedIndex]);
-
-  const scrollNext = useCallback(() => {
-    const nextIndex = Math.min(selectedIndex + 1, serviceTiles.length - 1);
-    setSelectedIndex(nextIndex);
-    scrollToIndex(nextIndex);
-  }, [scrollToIndex, selectedIndex]);
-
-  useLayoutEffect(() => {
-    const viewport = viewportRef.current;
-    if (!viewport) return;
-
-    const measure = () => {
-      setViewportWidth(viewport.clientWidth);
-    };
-
-    measure();
-
-    const observer = new ResizeObserver(() => measure());
-    observer.observe(viewport);
-
-    return () => observer.disconnect();
-  }, []);
-
-  useLayoutEffect(() => {
-    if (!viewportWidth || !slideWidth) return;
-
-    if (!hasInitializedRef.current) {
-      const initialIndex = slidesPerView > 1 ? 1 : 0;
-      hasInitializedRef.current = true;
-      setSelectedIndex(initialIndex);
-      scrollToIndex(initialIndex, "auto");
-      return;
-    }
-
-    scrollToIndex(selectedIndex, "auto");
-  }, [scrollToIndex, selectedIndex, slideWidth, slidesPerView, viewportWidth]);
-
-  useEffect(() => {
-    return () => {
-      if (settleTimerRef.current) {
-        window.clearTimeout(settleTimerRef.current);
-      }
-      if (rafRef.current) {
-        window.cancelAnimationFrame(rafRef.current);
-      }
-    };
-  }, []);
+  const {
+    viewportRef,
+    selectedIndex,
+    gap,
+    slideWidth,
+    edgePadding,
+    setSlideRef,
+    handleScroll,
+    goToIndex,
+    scrollPrev,
+    scrollNext,
+    canScrollPrev,
+    canScrollNext,
+  } = useScrollSnapSlider({ itemCount: serviceTiles.length });
 
   return (
     <section className="py-16 lg:py-20 bg-secondary overflow-hidden">
@@ -185,7 +45,7 @@ const ServiceNavTiles = () => {
           <button
             onClick={scrollPrev}
             aria-label="Previous"
-            disabled={selectedIndex === 0}
+            disabled={!canScrollPrev}
             className="absolute left-0 top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-card disabled:pointer-events-none disabled:opacity-40"
             style={{ boxShadow: arrowShadow, transition: "transform 0.2s ease-out, box-shadow 0.2s ease-out" }}
             onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-50%) scale(1.06)"; e.currentTarget.style.boxShadow = arrowShadowHover; }}
@@ -199,17 +59,18 @@ const ServiceNavTiles = () => {
           <div
             ref={viewportRef}
             onScroll={handleScroll}
-            className="mx-14 snap-x snap-mandatory overflow-x-auto overscroll-x-contain scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            className="snap-x snap-mandatory overflow-x-auto overscroll-x-contain scroll-smooth touch-pan-x [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            style={{
+              scrollPaddingInline: `${edgePadding}px`,
+            }}
           >
-            <div className="flex items-stretch" style={{ columnGap: `${gap}px` }}>
+            <div className="flex items-stretch" style={{ gap: `${gap}px` }}>
               <div aria-hidden="true" style={{ width: `${edgePadding}px`, flex: `0 0 ${edgePadding}px` }} />
               {serviceTiles.map((tile, index) => (
                 <div
                   key={tile.href + tile.title}
-                  ref={(node) => {
-                    slideRefs.current[index] = node;
-                  }}
-                  className="shrink-0 snap-center"
+                  ref={setSlideRef(index)}
+                  className="shrink-0 snap-center snap-always"
                   style={{ width: `${slideWidth}px`, flex: `0 0 ${slideWidth}px` }}
                 >
                   <ServiceNavTileCard tile={tile} isActive={index === selectedIndex} />
@@ -222,7 +83,7 @@ const ServiceNavTiles = () => {
           <button
             onClick={scrollNext}
             aria-label="Next"
-            disabled={selectedIndex === serviceTiles.length - 1}
+            disabled={!canScrollNext}
             className="absolute right-0 top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-card disabled:pointer-events-none disabled:opacity-40"
             style={{ boxShadow: arrowShadow, transition: "transform 0.2s ease-out, box-shadow 0.2s ease-out" }}
             onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-50%) scale(1.06)"; e.currentTarget.style.boxShadow = arrowShadowHover; }}
@@ -240,10 +101,7 @@ const ServiceNavTiles = () => {
             <button
               key={i}
               aria-label={`Go to slide ${i + 1}`}
-              onClick={() => {
-                setSelectedIndex(i);
-                scrollToIndex(i);
-              }}
+              onClick={() => goToIndex(i)}
               className={cn(
                 "rounded-full transition-all duration-300",
                 i === selectedIndex
