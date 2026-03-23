@@ -12,21 +12,21 @@ interface ServiceNavTileCardProps {
 const ServiceNavTileCard = ({ tile, isActive }: ServiceNavTileCardProps) => {
   const cssVars = {
     "--tile-border": `${tile.hue} 18% 84%`,
-    "--tile-top": `${tile.hue} 28% 98%`,
-    "--tile-bottom": `${tile.hue} 18% 93%`,
-    "--tile-edge": `${tile.hue} 18% 78%`,
-    "--tile-icon-top": `${tile.hue} 24% 94%`,
-    "--tile-icon-bottom": `${tile.hue} 18% 88%`,
-    "--tile-shadow": `0 16px 36px -20px hsl(${tile.hue} 25% 24% / 0.22), 0 8px 18px -14px hsl(${tile.hue} 20% 22% / 0.14), 0 1px 0 hsl(0 0% 100% / 0.82) inset`,
-    "--tile-shadow-hover": `0 24px 44px -22px hsl(${tile.hue} 25% 24% / 0.26), 0 12px 20px -14px hsl(${tile.hue} 20% 22% / 0.16), 0 1px 0 hsl(0 0% 100% / 0.84) inset`,
-    "--tile-shadow-press": `0 10px 20px -16px hsl(${tile.hue} 25% 22% / 0.32), 0 4px 10px -8px hsl(${tile.hue} 20% 20% / 0.18), 0 1px 0 hsl(0 0% 100% / 0.74) inset`,
+    "--tile-top": `${tile.hue} 20% 97%`,
+    "--tile-bottom": `${tile.hue} 14% 92%`,
+    "--tile-edge": `${tile.hue} 16% 78%`,
+    "--tile-icon-top": `${tile.hue} 20% 92%`,
+    "--tile-icon-bottom": `${tile.hue} 16% 86%`,
+    "--tile-shadow": `0 12px 28px -12px hsl(${tile.hue} 25% 24% / 0.18), 0 6px 14px -8px hsl(${tile.hue} 20% 22% / 0.12), 0 1px 0 hsl(0 0% 100% / 0.8) inset`,
+    "--tile-shadow-hover": `0 18px 36px -14px hsl(${tile.hue} 25% 24% / 0.22), 0 8px 18px -10px hsl(${tile.hue} 20% 22% / 0.14), 0 1px 0 hsl(0 0% 100% / 0.84) inset`,
+    "--tile-shadow-press": `0 6px 14px -8px hsl(${tile.hue} 25% 22% / 0.28), 0 3px 8px -4px hsl(${tile.hue} 20% 20% / 0.16), 0 1px 0 hsl(0 0% 100% / 0.7) inset`,
   } as CSSProperties;
 
   return (
     <Link
       to={tile.href}
       className={cn(
-        "group relative flex aspect-square w-full flex-col items-center justify-center overflow-hidden rounded-[1.75rem] border text-center",
+        "group relative flex aspect-square w-full flex-col items-center justify-center gap-1 overflow-hidden rounded-[1.75rem] border text-center",
         "bg-[linear-gradient(180deg,hsl(var(--tile-top))_0%,hsl(var(--tile-bottom))_100%)]",
         "border-[hsl(var(--tile-border))] shadow-[var(--tile-shadow)]",
         "transition-[transform,box-shadow,opacity] duration-300 ease-out",
@@ -39,15 +39,15 @@ const ServiceNavTileCard = ({ tile, isActive }: ServiceNavTileCardProps) => {
     >
       <div className="absolute inset-x-5 bottom-0 h-px rounded-full bg-[hsl(var(--tile-edge))]" />
 
-      <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-[linear-gradient(180deg,hsl(var(--tile-icon-top))_0%,hsl(var(--tile-icon-bottom))_100%)] shadow-[0_10px_18px_-14px_hsl(var(--foreground)/0.3)]">
-        <tile.icon className="h-7 w-7 text-foreground" strokeWidth={1.85} />
+      <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-[linear-gradient(180deg,hsl(var(--tile-icon-top))_0%,hsl(var(--tile-icon-bottom))_100%)] shadow-[0_6px_12px_-8px_hsl(var(--foreground)/0.25)]">
+        <tile.icon className="h-6 w-6 text-foreground/80" strokeWidth={1.8} />
       </div>
 
-      <h3 className="px-5 font-serif text-[1.35rem] font-semibold leading-tight text-foreground lg:text-[1.5rem]">
+      <h3 className="px-4 font-serif text-[1.65rem] font-bold leading-none tracking-tight text-foreground lg:text-[1.85rem]">
         {tile.title}
       </h3>
 
-      <p className="mt-2 max-w-[16rem] px-5 text-[0.98rem] leading-snug text-muted-foreground lg:text-[1rem]">
+      <p className="mt-1 max-w-[14rem] px-4 text-[0.85rem] font-medium leading-snug text-muted-foreground/90 lg:text-[0.9rem]">
         {tile.subtitle}
       </p>
     </Link>
