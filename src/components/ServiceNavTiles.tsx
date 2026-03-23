@@ -197,7 +197,7 @@ const ServiceNavTiles = () => {
                     <Link
                       to={tile.href}
                       className={cn(
-                        "group relative flex flex-col items-center text-center h-full",
+                        "group relative flex w-full max-w-[22rem] mx-auto flex-col items-center text-center h-full lg:max-w-none",
                         "rounded-[20px] overflow-hidden",
                         "transition-all duration-300 ease-in-out",
                         "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
