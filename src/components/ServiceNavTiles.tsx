@@ -4,7 +4,7 @@ import {
   ShieldCheck, BookOpen, Briefcase, TrendingUp, ClipboardList,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback, useEffect, useMemo } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { cn } from "@/lib/utils";
 
@@ -32,12 +32,38 @@ const tiles: ServiceTile[] = [
 
 const ServiceNavTiles = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [scrollProgress, setScrollProgress] = useState<number[]>([]);
+
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: "center",
     loop: true,
     skipSnaps: false,
     containScroll: false,
   });
+
+  const updateTransforms = useCallback(() => {
+    if (!emblaApi) return;
+    const engine = emblaApi.internalEngine();
+    const scrollSnaps = emblaApi.scrollSnapList();
+    const scrollPosition = engine.location.get();
+
+    const progress = scrollSnaps.map((snap, idx) => {
+      let diff = snap - scrollPosition;
+
+      // Handle loop wrapping
+      const loopPoints = engine.slideLooper.loopPoints;
+      if (loopPoints && loopPoints[idx]) {
+        const loopTarget = loopPoints[idx].target();
+        if (Math.abs(loopTarget - scrollPosition) < Math.abs(diff)) {
+          diff = loopTarget - scrollPosition;
+        }
+      }
+
+      return diff;
+    });
+
+    setScrollProgress(progress);
+  }, [emblaApi]);
 
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
@@ -48,22 +74,67 @@ const ServiceNavTiles = () => {
     if (!emblaApi) return;
     emblaApi.on("select", onSelect);
     emblaApi.on("reInit", onSelect);
+    emblaApi.on("scroll", updateTransforms);
+    emblaApi.on("reInit", updateTransforms);
     onSelect();
+    updateTransforms();
     return () => {
       emblaApi.off("select", onSelect);
       emblaApi.off("reInit", onSelect);
+      emblaApi.off("scroll", updateTransforms);
+      emblaApi.off("reInit", updateTransforms);
     };
-  }, [emblaApi, onSelect]);
+  }, [emblaApi, onSelect, updateTransforms]);
 
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
+  const getTransformStyle = useMemo(() => {
+    return (index: number) => {
+      if (scrollProgress.length === 0) {
+        return {
+          transform: "scale(0.85) rotateY(0deg) translateZ(-60px)",
+          opacity: 0.5,
+          zIndex: 1,
+        };
+      }
+
+      // progress value: 0 = center, negative = left, positive = right
+      const p = scrollProgress[index] ?? 0;
+      const absDist = Math.min(Math.abs(p), 1.5);
+
+      // Scale: center=1.15, edges=0.82
+      const scale = 1.15 - absDist * 0.22;
+
+      // RotateY: smooth rotation based on position, max ±35deg
+      const rotateY = p * -25;
+      const clampedRotateY = Math.max(-35, Math.min(35, rotateY));
+
+      // TranslateZ: center comes forward, sides recede
+      const translateZ = 50 - absDist * 90;
+
+      // TranslateX: pull side tiles slightly inward
+      const translateX = p * -15;
+
+      // Opacity: center=1, fades out
+      const opacity = Math.max(0.35, 1 - absDist * 0.45);
+
+      // Z-index based on distance
+      const zIndex = Math.round((1.5 - absDist) * 10);
+
+      return {
+        transform: `translateX(${translateX}px) scale(${scale.toFixed(3)}) rotateY(${clampedRotateY.toFixed(1)}deg) translateZ(${translateZ.toFixed(0)}px)`,
+        opacity,
+        zIndex: Math.max(1, zIndex),
+      };
+    };
+  }, [scrollProgress]);
+
   const getSlideState = (index: number): "center" | "near" | "far" => {
-    const total = tiles.length;
-    const diff = Math.abs(index - selectedIndex);
-    const wrappedDiff = Math.min(diff, total - diff);
-    if (wrappedDiff === 0) return "center";
-    if (wrappedDiff === 1) return "near";
+    if (scrollProgress.length === 0) return "far";
+    const absDist = Math.abs(scrollProgress[index] ?? 2);
+    if (absDist < 0.15) return "center";
+    if (absDist < 0.8) return "near";
     return "far";
   };
 
@@ -79,12 +150,12 @@ const ServiceNavTiles = () => {
           </p>
         </div>
 
-        <div className="relative" style={{ perspective: "1400px" }}>
+        <div className="relative" style={{ perspective: "1000px", perspectiveOrigin: "50% 50%" }}>
           {/* Prev arrow */}
           <button
             onClick={scrollPrev}
             aria-label="Previous"
-            className="absolute left-0 lg:-left-5 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-card border border-border shadow-lg flex items-center justify-center hover:bg-accent/10 transition-colors"
+            className="absolute left-0 lg:-left-5 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full bg-card border border-border shadow-lg flex items-center justify-center hover:bg-accent/10 transition-colors"
           >
             <svg className="w-5 h-5 text-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
@@ -95,53 +166,30 @@ const ServiceNavTiles = () => {
           <div ref={emblaRef} className="overflow-hidden mx-10 lg:mx-12">
             <div className="flex" style={{ transformStyle: "preserve-3d" }}>
               {tiles.map((tile, i) => {
+                const style = getTransformStyle(i);
                 const state = getSlideState(i);
-
-                // Determine rotation direction for near tiles
-                let rotateY = 0;
-                if (state === "near") {
-                  const total = tiles.length;
-                  const rawDiff = i - selectedIndex;
-                  const isRight =
-                    rawDiff === 1 ||
-                    rawDiff === -(total - 1) ||
-                    (rawDiff > 1 && rawDiff < total / 2);
-                  rotateY = isRight ? -6 : 6;
-                }
-
-                const transform =
-                  state === "center"
-                    ? "scale(1.12) rotateY(0deg) translateZ(30px)"
-                    : state === "near"
-                      ? `scale(0.94) rotateY(${rotateY}deg) translateZ(-10px)`
-                      : "scale(0.82) rotateY(0deg) translateZ(-40px)";
-
-                const opacity = state === "center" ? 1 : state === "near" ? 0.78 : 0.4;
-                const zIndex = state === "center" ? 10 : state === "near" ? 5 : 1;
 
                 return (
                   <div
                     key={tile.href + tile.title}
-                    className="flex-[0_0_85%] sm:flex-[0_0_45%] lg:flex-[0_0_33.333%] px-3"
+                    className="flex-[0_0_80%] sm:flex-[0_0_42%] lg:flex-[0_0_33.333%] px-2"
                     style={{
-                      transform,
-                      opacity,
-                      zIndex,
-                      transition: "transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94), opacity 0.5s ease",
+                      ...style,
+                      transition: "transform 0.45s cubic-bezier(0.23,1,0.32,1), opacity 0.4s ease",
                       transformStyle: "preserve-3d",
                     }}
                   >
                     <Link
                       to={tile.href}
                       className={cn(
-                        "group flex flex-col items-center text-center rounded-2xl h-full transition-all duration-300",
+                        "group flex flex-col items-center text-center rounded-2xl h-full transition-shadow duration-300",
                         "bg-card border border-border",
                         "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
                         state === "center"
-                          ? "p-8 lg:p-10 shadow-[0_16px_48px_-12px_hsl(var(--foreground)/0.12),0_4px_16px_-4px_hsl(var(--foreground)/0.08)] border-gold/25 hover:shadow-[0_20px_56px_-12px_hsl(var(--foreground)/0.16),0_6px_20px_-4px_hsl(var(--foreground)/0.1)] hover:-translate-y-1.5"
+                          ? "p-8 lg:p-10 shadow-[0_20px_60px_-15px_hsl(var(--foreground)/0.15),0_8px_24px_-8px_hsl(var(--foreground)/0.1)] border-gold/30 hover:shadow-[0_24px_64px_-12px_hsl(var(--foreground)/0.2)]"
                           : state === "near"
-                            ? "p-7 lg:p-8 shadow-[0_8px_24px_-8px_hsl(var(--foreground)/0.08),0_2px_8px_-2px_hsl(var(--foreground)/0.04)] hover:shadow-[0_12px_32px_-8px_hsl(var(--foreground)/0.1)] hover:-translate-y-1"
-                            : "p-6 lg:p-7 shadow-[0_4px_12px_-4px_hsl(var(--foreground)/0.06)]"
+                            ? "p-7 lg:p-8 shadow-[0_8px_28px_-8px_hsl(var(--foreground)/0.08)] hover:shadow-[0_12px_36px_-8px_hsl(var(--foreground)/0.12)]"
+                            : "p-6 lg:p-7 shadow-[0_4px_12px_-4px_hsl(var(--foreground)/0.05)]"
                       )}
                     >
                       <div
@@ -198,7 +246,7 @@ const ServiceNavTiles = () => {
           <button
             onClick={scrollNext}
             aria-label="Next"
-            className="absolute right-0 lg:-right-5 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-card border border-border shadow-lg flex items-center justify-center hover:bg-accent/10 transition-colors"
+            className="absolute right-0 lg:-right-5 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full bg-card border border-border shadow-lg flex items-center justify-center hover:bg-accent/10 transition-colors"
           >
             <svg className="w-5 h-5 text-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
