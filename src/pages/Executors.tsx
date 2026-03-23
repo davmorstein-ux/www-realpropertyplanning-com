@@ -3,78 +3,68 @@ import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import { articleSchema } from "@/lib/schema";
-import TrustStrip from "@/components/TrustStrip";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Phone, CheckCircle, MessageSquare, AlertTriangle, Home, DollarSign, Users } from "lucide-react";
+import { Phone, CheckCircle, MessageSquare } from "lucide-react";
+
+const commonSituations = [
+  "A parent or loved one has passed away, and you have been named executor or personal representative",
+  "You are managing an estate from out of state and need local help with the property",
+  "The home has years of deferred maintenance, and you are unsure whether to repair or sell as-is",
+  "The house is full of personal belongings, and you do not know where to start",
+  "Multiple family members have different opinions about what to do with the property",
+  "You need to satisfy a fiduciary obligation but have never sold a home before",
+  "The estate attorney needs market data or a property assessment to move things forward",
+  "You want honest pricing — not an inflated number designed to win a listing",
+];
+
+const howIHelp = [
+  "Evaluate the property's true condition and realistic market value",
+  "Advise on whether to invest in repairs or sell as-is based on return on investment",
+  "Coordinate cleanout, preparation, and vendor management so you do not have to",
+  "Price the home using appraiser-level analysis, not guesswork",
+  "Manage the listing, marketing, showings, and negotiations on your behalf",
+  "Communicate clearly with you, the attorney, and other stakeholders throughout",
+];
 
 const processSteps = [
   {
-    number: "01",
-    title: "Assess the Property",
-    text: "David reviews the home's condition, location, and current state to give you an honest picture of what you're working with and what the market is likely to see. This includes identifying deferred maintenance, safety concerns, and any issues that could affect value or sale timeline.",
+    number: "1",
+    title: "We Talk",
+    text: "Start with a phone call or meeting. David listens to your situation, answers your questions, and helps you understand what to expect.",
   },
   {
-    number: "02",
-    title: "Coordinate Timing and Legal Readiness",
-    text: "Legal authority, family discussions, and personal logistics all affect when a sale can begin. David helps you understand the timeline, coordinate with the estate attorney if needed, and plan accordingly so nothing delays the process unnecessarily.",
+    number: "2",
+    title: "David Assesses the Property",
+    text: "He visits the home, reviews its condition, and gives you an honest picture of what the market will see — including any issues that could affect value or timing.",
   },
   {
-    number: "03",
-    title: "Prepare the Home",
-    text: "Many estate homes need cleanout, minor repairs, or light staging. David coordinates vendors and manages the preparation so you don't have to — including sorting through what to keep, donate, sell, or discard when the home is full of decades of personal belongings.",
+    number: "3",
+    title: "We Make a Plan Together",
+    text: "Based on the property, your timeline, and the estate's needs, David recommends a clear path forward — including pricing, preparation, and any coordination with your attorney.",
   },
   {
-    number: "04",
-    title: "Price It With Analytical Precision",
-    text: "With dual credentials as a broker and certified appraiser, David provides pricing guidance that reflects the property's true condition and the current market — not wishful thinking or inflated numbers designed to win a listing. This protects your fiduciary obligation and sets realistic expectations.",
+    number: "4",
+    title: "David Handles the Details",
+    text: "From cleanout coordination to listing, marketing, showings, negotiations, and closing — David manages the process so you can focus on your other responsibilities.",
   },
   {
-    number: "05",
-    title: "Market and Sell Strategically",
-    text: "David creates a marketing plan tailored to the property's strengths and target buyer pool, manages showings, reviews offers thoroughly, and negotiates terms designed to protect the estate's interests and maximize net proceeds.",
-  },
-  {
-    number: "06",
-    title: "Communicate Throughout",
-    text: "From listing to closing, David keeps you, the attorney, and other stakeholders informed with clear, timely updates — so you always know where things stand and can make decisions confidently without being surprised by developments.",
+    number: "5",
+    title: "You Stay Informed",
+    text: "Regular updates keep you, the attorney, and other stakeholders in the loop. No surprises — just clear communication from start to finish.",
   },
 ];
 
-const commonConcerns = [
-  {
-    icon: DollarSign,
-    title: "What Is the Property Actually Worth?",
-    description: "This is often the first and most important question. Online estimates are unreliable for estate properties because they cannot account for deferred maintenance, outdated systems, or condition issues. David's appraisal background means he evaluates the property based on what a buyer will actually see — not what an algorithm projects. Getting the price right from the start avoids costly price reductions, extended market time, and potential scrutiny from heirs or the court.",
-  },
-  {
-    icon: Home,
-    title: "Should I Make Repairs or Sell As-Is?",
-    description: "This depends on the property, the market, and the likely return on investment. Some improvements — like cleaning, decluttering, and basic landscaping — almost always pay off. Others — like major kitchen renovations or structural repairs — may not be worth the cost or delay. David evaluates each decision individually and recommends only the improvements that will meaningfully affect the sale price and timeline.",
-  },
-  {
-    icon: AlertTriangle,
-    title: "The House Is Full of Personal Belongings — Where Do I Start?",
-    description: "A lifetime of possessions can feel overwhelming, especially when you are emotionally connected to the items or managing from a distance. David works with professional move managers and estate sale companies who handle this process with care and efficiency. He can coordinate the entire cleanout — from identifying items of value to scheduling removal — so you do not have to do it yourself.",
-  },
-  {
-    icon: Users,
-    title: "Multiple Heirs Have Different Opinions About What to Do",
-    description: "When siblings or co-heirs disagree about pricing, timing, or whether to sell at all, objective market data becomes essential. David presents factual information — comparable sales, condition assessments, and realistic timeline projections — that helps all parties make informed decisions. His appraisal credentials give his pricing recommendations credibility that reduces family conflict.",
-  },
-];
-
-const beforeListingChecklist = [
-  "Confirm your legal authority to sell — Letters Testamentary, Letters of Administration, or trust documentation",
-  "Secure the property — change locks if needed, check insurance coverage, and ensure utilities remain active",
-  "Do not make major decisions about repairs or pricing until you have a professional assessment",
-  "Gather any available property records — prior appraisals, tax assessments, renovation history, and known issues",
-  "Identify all decision-makers and communication preferences before the process begins",
-  "If the home contains personal belongings, do not feel pressure to sort everything immediately — professional help is available",
-  "Ask your estate attorney about any court approval requirements that may affect the sale timeline",
+const goodFitSituations = [
+  "You have been named executor or personal representative and are not sure where to start with the property",
+  "You need someone who understands both the real estate and the emotional side of estate transitions",
+  "You want honest, data-driven pricing from someone with appraisal credentials",
+  "You are managing the estate from a distance and need a reliable local partner",
+  "Your attorney or CPA has recommended getting a professional property assessment",
+  "You want one person coordinating the entire real estate process — not a team of strangers",
 ];
 
 const faqs = [
@@ -96,7 +86,7 @@ const faqs = [
   },
   {
     question: "What if I am a first-time executor and have no idea where to start?",
-    answer: "That is completely normal — most executors are handling this for the first time. David walks you through the real estate side step by step, explains what to expect at each stage, and handles the coordination so you can focus on the other responsibilities of estate administration. You do not need prior experience to work with Real Property Planning.",
+    answer: "That is completely normal — most executors are handling this for the first time. David walks you through the real estate side step by step, explains what to expect at each stage, and handles the coordination so you can focus on the other responsibilities of estate administration.",
   },
   {
     question: "How does David handle situations where the property has significant deferred maintenance?",
@@ -109,8 +99,8 @@ const jsonLd = articleSchema({
   description: "Practical, step-by-step real estate guidance for executors, personal representatives, trustees, and families managing inherited property and estate home sales in Western Washington.",
   url: "/executors",
   datePublished: "2025-01-15",
-  dateModified: "2026-03-16",
-  about: ["Executors", "Trustees", "Personal representatives", "Estate property", "Inherited home sales", "Deferred maintenance", "Personal property cleanout"],
+  dateModified: "2026-03-23",
+  about: ["Executors", "Trustees", "Personal representatives", "Estate property", "Inherited home sales"],
 });
 
 const Executors = () => {
@@ -129,28 +119,25 @@ const Executors = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
-              For Executors, Trustees & Personal Representatives
+              For Executors & Personal Representatives
             </p>
-            <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-[22px]">
-              You Have Enough to Manage — Let David Handle the Property
+            <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
+              You Do Not Have to Figure This Out Alone
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-5">
-              David Stein provides step-by-step help for executors, personal representatives, and trustees who need to sell estate property or an inherited home in Western Washington. From valuation to preparation to closing, we handle the real estate details so you can focus on your fiduciary duties and family needs.
-            </p>
-            <p className="text-lg text-primary-foreground/70 leading-relaxed mb-[30px]">
-              Most executors are handling an estate for the first time — sorting through legal paperwork, coordinating with family, and making decisions about a property they may not have seen in years. With over 20 years as both a licensed broker and a state certified appraiser, David brings a level of analytical depth and practical coordination that general listing agents simply do not offer.
+            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-8">
+              Selling a loved one's home during estate administration is one of the hardest things you will do. David Stein works with executors across Western Washington to handle the real estate details — so you can focus on the people and responsibilities that matter most.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Link to="/contact">
                 <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold px-7 py-4 h-auto rounded-lg w-full sm:w-auto">
                   <Phone className="w-4 h-4 mr-2" />
-                  Schedule a Consultation
+                  Schedule a Conversation
                 </Button>
               </Link>
               <Link to="/contact">
                 <Button size="lg" variant="outline" className="border-gold/50 bg-transparent text-gold hover:bg-gold hover:text-foreground focus-visible:ring-gold font-medium px-7 py-4 h-auto rounded-lg w-full sm:w-auto">
                   <MessageSquare className="w-4 h-4 mr-2" />
-                  Request a Call
+                  Send a Message
                 </Button>
               </Link>
             </div>
@@ -158,54 +145,38 @@ const Executors = () => {
         </div>
       </section>
 
-      <TrustStrip />
-
-      {/* Common Concerns */}
-      <section className="py-20 lg:py-28 bg-background">
+      {/* Reassurance */}
+      <section className="py-16 lg:py-20 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
-              Common Concerns Executors and Trustees Face
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-5">
+              Most Executors Are Doing This for the First Time
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-10">
-              If you have been named executor, personal representative, or trustee, these are the questions that keep most people up at night. David has helped clients work through every one of them.
+            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+              There is no training manual for being an executor. You are managing legal paperwork, coordinating with family, and making decisions about a property you may not have visited in years — all while processing loss.
             </p>
-            <div className="space-y-6">
-              {commonConcerns.map((concern) => (
-                <div key={concern.title} className="bg-card border border-border rounded-xl p-6">
-                  <div className="flex items-start gap-4">
-                    <concern.icon className="w-6 h-6 text-gold mt-0.5 shrink-0" />
-                    <div>
-                      <h3 className="font-serif text-lg text-foreground font-semibold mb-2">
-                        {concern.title}
-                      </h3>
-                      <p className="text-muted-foreground text-[15px] leading-relaxed">
-                        {concern.description}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              That is exactly why David does what he does. He takes the real estate burden off your plate, explains each step clearly, and handles the coordination so you do not have to become a real estate expert overnight. You just need someone in your corner who already is one.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Before You List Checklist */}
-      <section className="py-20 lg:py-28 bg-secondary">
+      {/* Common Situations */}
+      <section className="py-16 lg:py-24 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
-              What to Do Before Listing an Estate Property
+              Does This Sound Like Your Situation?
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              You do not need to have everything figured out before reaching out — but these steps will help you feel more prepared and give David the information he needs to provide useful guidance from the first conversation.
+              If any of these feel familiar, you are in the right place:
             </p>
             <ul className="space-y-4">
-              {beforeListingChecklist.map((item, index) => (
-                <li key={index} className="flex items-start gap-3">
+              {commonSituations.map((item, i) => (
+                <li key={i} className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-gold mt-0.5 shrink-0" />
-                  <span className="text-foreground text-[15px] leading-relaxed">{item}</span>
+                  <span className="text-foreground leading-relaxed">{item}</span>
                 </li>
               ))}
             </ul>
@@ -213,27 +184,52 @@ const Executors = () => {
         </div>
       </section>
 
-      {/* Step-by-Step Process */}
-      <section className="py-20 lg:py-28 bg-background">
+      {/* How I Help */}
+      <section className="py-16 lg:py-24 bg-secondary">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
+              How David Helps Executors
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+              David is both a licensed real estate broker and a Washington State certified residential appraiser with over 20 years of experience. That combination means you get someone who can evaluate property value with analytical precision <em>and</em> manage the entire sale process from start to finish.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              Here is what that looks like in practice:
+            </p>
+            <ul className="space-y-4">
+              {howIHelp.map((item, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-gold mt-0.5 shrink-0" />
+                  <span className="text-foreground leading-relaxed">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Simple Process */}
+      <section className="py-16 lg:py-24 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-[900px] mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
-              How the Process Works for Executors
+              A Simple, Clear Process
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-10">
-              David follows a clear, six-step process so you always know what's happening and what comes next:
+              No surprises. No jargon. Just a straightforward path from your first conversation to closing:
             </p>
-            <div className="grid gap-5 lg:gap-6">
+            <div className="grid gap-5">
               {processSteps.map((step) => (
-                <div key={step.number} className="bg-card border border-border rounded-[18px] px-7 py-7 md:px-9 md:py-8 flex gap-5 md:gap-7 items-start">
-                  <span className="text-gold font-serif text-3xl md:text-4xl font-semibold leading-none pt-1 select-none shrink-0">
+                <div key={step.number} className="bg-card border border-border rounded-xl px-7 py-6 flex gap-5 items-start">
+                  <span className="text-gold font-serif text-3xl font-semibold leading-none pt-0.5 select-none shrink-0">
                     {step.number}
                   </span>
                   <div>
-                    <h3 className="font-serif text-xl md:text-[22px] text-foreground font-semibold mb-2">
+                    <h3 className="font-serif text-xl text-foreground font-semibold mb-1.5">
                       {step.title}
                     </h3>
-                    <p className="text-muted-foreground leading-[1.75]">{step.text}</p>
+                    <p className="text-muted-foreground leading-relaxed">{step.text}</p>
                   </div>
                 </div>
               ))}
@@ -242,34 +238,27 @@ const Executors = () => {
         </div>
       </section>
 
-      {/* Understanding Your Fiduciary Obligation */}
-      <section className="py-20 lg:py-28 bg-secondary">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
-              Understanding Your Fiduciary Obligation as Executor
-            </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              As executor or personal representative, you have a legal obligation to act in the best interests of the estate and its beneficiaries. When it comes to real property, that means making informed decisions about pricing, preparation, and sale timing — not just accepting the first offer or the highest automated estimate.
-            </p>
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              This is where David's dual credentials matter most. His certified appraisal background means he evaluates the property the way a court or lender would — considering physical condition, functional utility, and market positioning rather than just comparable sales data. When heirs or beneficiaries question the sale price, you can point to a pricing strategy grounded in professional analysis rather than guesswork.
-            </p>
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              David also helps executors navigate the practical decisions that can affect estate value: whether to invest in repairs or sell as-is, how to handle personal property and cleanout, when to list relative to seasonal market patterns, and how to manage carrying costs while the property is being prepared. Each of these decisions has financial implications, and David provides the data to make them confidently.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              If you are working with an estate attorney, David coordinates closely with your legal counsel — providing market data and property updates that support the legal side of estate administration without overstepping professional boundaries.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonial */}
-      <section className="py-14 lg:py-16 bg-background">
+      {/* Trust Signals */}
+      <section className="py-14 lg:py-16 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <p className="text-foreground text-lg italic leading-relaxed mb-4">
+            <h2 className="font-serif text-2xl text-foreground font-semibold mb-6">
+              Why Executors Trust David
+            </h2>
+            <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 mb-8">
+              {[
+                "Licensed Real Estate Broker",
+                "Certified Residential Appraiser",
+                "20+ Years of Experience",
+                "King · Snohomish · Pierce · Kitsap Counties",
+              ].map((item, i) => (
+                <div key={i} className="flex items-center gap-2 text-muted-foreground font-medium">
+                  <CheckCircle className="w-4 h-4 text-gold shrink-0" />
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+            <p className="text-foreground text-lg italic leading-relaxed mb-3">
               "David brought clarity, professionalism, and calm guidance during a very difficult property transition. His valuation perspective and market knowledge were incredibly helpful."
             </p>
             <p className="text-muted-foreground text-sm font-medium">— Client Review · Estate-related property transition</p>
@@ -277,24 +266,23 @@ const Executors = () => {
         </div>
       </section>
 
-      {/* Reassurance for First-Time Executors */}
-      <section className="py-16 lg:py-20 bg-background">
+      {/* Good Fit */}
+      <section className="py-16 lg:py-24 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-              If This Is Your First Time as Executor — You Are Not Alone
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
+              This May Be a Good Fit If…
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-              The vast majority of executors and personal representatives are doing this for the first time. There is no training program, no orientation manual, and no roadmap for managing a loved one's estate while also processing grief and family obligations. It is completely normal to feel overwhelmed.
-            </p>
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              David's role is to take the real estate weight off your shoulders. He explains what to expect at each stage, handles the coordination that would otherwise consume your time, and communicates in plain language — not industry jargon. You do not need to be a real estate expert. You just need someone in your corner who is.
-            </p>
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              A clear plan, experienced guidance, and consistent communication make all the difference. Learn more about <Link to="/how-the-process-works" className="text-accent hover:text-gold underline underline-offset-4">how the full process works</Link>, explore <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">why accurate pricing matters</Link> for estate property, or visit the <Link to="/probate-estate-sales" className="text-accent hover:text-gold underline underline-offset-4">Probate & Estate Sales</Link> page for a broader overview.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              Looking for other professionals who can help? Browse the <Link to="/resources" className="text-accent hover:text-gold underline underline-offset-4">Resources</Link> section for trusted attorneys, CPAs, senior move managers, and other service providers in Western Washington.
+            <ul className="space-y-4">
+              {goodFitSituations.map((item, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-gold mt-0.5 shrink-0" />
+                  <span className="text-foreground leading-relaxed">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-muted-foreground leading-relaxed mt-8">
+              Want to learn more? See <Link to="/how-the-process-works" className="text-accent hover:text-gold underline underline-offset-4">how the full process works</Link>, explore <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">why accurate pricing matters</Link>, or visit the <Link to="/resources" className="text-accent hover:text-gold underline underline-offset-4">Resources</Link> section for trusted attorneys, CPAs, and other professionals.
             </p>
           </div>
         </div>
@@ -304,21 +292,21 @@ const Executors = () => {
 
       <RelatedServices currentPath="/executors" />
 
-      {/* Bottom CTA */}
+      {/* Final CTA */}
       <section className="py-20 lg:py-28 bg-primary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
-              Need help with an inherited or estate property?
+            <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-5">
+              Ready to Talk About Your Situation?
             </h2>
             <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
-              Start with a conversation. David will review your situation and outline practical next steps — no pressure, no obligation. Whether you are just beginning the process or already feel behind, there is always a clear path forward.
+              Start with a simple conversation. David will listen, answer your questions, and outline practical next steps — no pressure, no obligation. Whether you are just beginning or already feel behind, there is always a clear path forward.
             </p>
             <div className="flex justify-center">
               <Link to="/contact">
                 <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold">
                   <Phone className="w-5 h-5 mr-2" />
-                  Schedule a Consultation
+                  Schedule a Conversation
                 </Button>
               </Link>
             </div>
