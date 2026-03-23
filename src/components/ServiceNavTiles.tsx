@@ -145,7 +145,30 @@ const ServiceNavTiles = () => {
           <button
             onClick={scrollPrev}
             aria-label="Previous"
-            className="absolute left-0 lg:-left-5 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full bg-card border border-border shadow-md flex items-center justify-center hover:bg-accent/10 transition-colors"
+            className="absolute left-0 lg:-left-5 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full bg-card border border-border flex items-center justify-center"
+            style={{
+              boxShadow: "0 4px 12px -2px hsl(220 35% 15% / 0.1), 0 2px 4px -1px hsl(220 35% 15% / 0.06), inset 0 1px 0 hsl(0 0% 100% / 0.8)",
+              transition: "transform 0.2s ease-out, box-shadow 0.2s ease-out",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = "translateY(-50%) scale(1.06)";
+              e.currentTarget.style.boxShadow = "0 6px 16px -2px hsl(220 35% 15% / 0.12), 0 3px 6px -1px hsl(220 35% 15% / 0.08), inset 0 1px 0 hsl(0 0% 100% / 0.9)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "translateY(-50%)";
+              e.currentTarget.style.boxShadow = "0 4px 12px -2px hsl(220 35% 15% / 0.1), 0 2px 4px -1px hsl(220 35% 15% / 0.06), inset 0 1px 0 hsl(0 0% 100% / 0.8)";
+              e.currentTarget.style.transition = "transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out";
+            }}
+            onMouseDown={(e) => {
+              e.currentTarget.style.transform = "translateY(-50%) scale(0.93) translateY(2px)";
+              e.currentTarget.style.boxShadow = "0 1px 4px -1px hsl(220 35% 15% / 0.15), inset 0 1px 0 hsl(0 0% 100% / 0.6)";
+              e.currentTarget.style.transition = "transform 0.12s ease-out, box-shadow 0.12s ease-out";
+            }}
+            onMouseUp={(e) => {
+              e.currentTarget.style.transform = "translateY(-50%) scale(1.06)";
+              e.currentTarget.style.boxShadow = "0 6px 16px -2px hsl(220 35% 15% / 0.12), 0 3px 6px -1px hsl(220 35% 15% / 0.08), inset 0 1px 0 hsl(0 0% 100% / 0.9)";
+              e.currentTarget.style.transition = "transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out";
+            }}
           >
             <svg className="w-5 h-5 text-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
