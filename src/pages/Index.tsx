@@ -179,28 +179,31 @@ const Index = () => {
                 iconSrc: iconServiceProbate,
                 title: "Probate & Estate Property Sales",
                 body: "Experienced guidance for selling inherited homes, trust-owned real estate, and estate property across King, Snohomish, Pierce, Skagit, and Kitsap Counties.",
-                link: "/probate-estate-sales"
+                link: "/probate-estate-sales",
+                iconOffsetClass: "-translate-x-2",
               },
               {
                 iconSrc: iconServiceSenior,
                 title: "Senior Transitions & Downsizing",
                 body: "Thoughtful real estate support for families navigating a move from a longtime home to assisted living or smaller housing.",
-                link: "/senior-transitions"
+                link: "/senior-transitions",
+                iconOffsetClass: "",
               },
               {
                 iconSrc: iconServiceValuation,
                 title: "Valuation-Informed Strategy",
                 body: "As both a broker and certified appraiser, David provides pricing grounded in professional valuation expertise — not guesswork.",
-                link: "/why-valuation-matters"
+                link: "/why-valuation-matters",
+                iconOffsetClass: "translate-x-2",
               },
             ].map((card, i) => (
               <Link key={i} to={card.link} className="group">
                 <div className="bg-card rounded-2xl border border-border p-8 shadow-sm hover:shadow-lg transition-all duration-300 h-full flex flex-col items-center text-center">
-                  <div className="w-full flex items-center justify-center mb-6">
+                  <div className="mx-auto mb-6 flex h-32 w-40 items-center justify-center md:h-36 md:w-44">
                     <img
                       src={card.iconSrc}
                       alt={card.title}
-                      className="h-32 w-32 md:h-36 md:w-36 object-contain mx-auto block"
+                      className={`block max-h-full max-w-full object-contain ${card.iconOffsetClass}`}
                       loading="lazy"
                     />
                   </div>
