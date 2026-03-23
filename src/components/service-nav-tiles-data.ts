@@ -1,38 +1,34 @@
-import {
-  Scale,
-  FileText,
-  Home,
-  MapPin,
-  Handshake,
-  Users,
-  BarChart3,
-  ShieldCheck,
-  BookOpen,
-  Briefcase,
-  TrendingUp,
-  ClipboardList,
-} from "lucide-react";
-import type { LucideIcon } from "lucide-react";
+import iconAttorneys from "@/assets/icons/icon-attorneys.png";
+import iconExecutors from "@/assets/icons/icon-executors.png";
+import iconTrustees from "@/assets/icons/icon-trustees.png";
+import iconCpas from "@/assets/icons/icon-cpas.png";
+import iconFinancialPlanning from "@/assets/icons/icon-financial-planning.png";
+import iconSeniorMoves from "@/assets/icons/icon-senior-moves.png";
+import iconProbateSales from "@/assets/icons/icon-probate-sales.png";
+import iconTheProcess from "@/assets/icons/icon-the-process.png";
+import iconHomeValue from "@/assets/icons/icon-home-value.png";
+import iconProbateTerms from "@/assets/icons/icon-probate-sales-alt.png";
+import iconServiceAreas from "@/assets/icons/icon-service-areas.png";
+import iconResources from "@/assets/icons/icon-resources.png";
 
 export interface ServiceTile {
   title: string;
   subtitle: string;
   href: string;
-  icon: LucideIcon;
-  hue: number;
+  iconSrc: string;
 }
 
 export const serviceTiles: ServiceTile[] = [
-  { title: "Attorneys", subtitle: "", href: "/for-attorneys", icon: Scale, hue: 220 },
-  { title: "Executors", subtitle: "", href: "/executors", icon: FileText, hue: 210 },
-  { title: "Trustees", subtitle: "", href: "/executors", icon: ShieldCheck, hue: 200 },
-  { title: "CPAs", subtitle: "", href: "/for-cpas", icon: Briefcase, hue: 215 },
-  { title: "Financial Planning", subtitle: "", href: "/for-financial-planners", icon: TrendingUp, hue: 185 },
-  { title: "Senior Moves", subtitle: "", href: "/senior-transitions", icon: Users, hue: 195 },
-  { title: "Probate Sales", subtitle: "", href: "/probate-estate-sales", icon: Home, hue: 205 },
-  { title: "The Process", subtitle: "", href: "/how-the-process-works", icon: ClipboardList, hue: 190 },
-  { title: "Home Value", subtitle: "", href: "/why-valuation-matters", icon: BarChart3, hue: 175 },
-  { title: "Probate Terms", subtitle: "", href: "/terminology", icon: BookOpen, hue: 225 },
-  { title: "Service Areas", subtitle: "", href: "/counties", icon: MapPin, hue: 170 },
-  { title: "Resources", subtitle: "", href: "/professional-referral-resource", icon: Handshake, hue: 200 },
+  { title: "Attorneys", subtitle: "", href: "/for-attorneys", iconSrc: iconAttorneys },
+  { title: "Executors", subtitle: "", href: "/executors", iconSrc: iconExecutors },
+  { title: "Trustees", subtitle: "", href: "/executors", iconSrc: iconTrustees },
+  { title: "CPAs", subtitle: "", href: "/for-cpas", iconSrc: iconCpas },
+  { title: "Financial Planning", subtitle: "", href: "/for-financial-planners", iconSrc: iconFinancialPlanning },
+  { title: "Senior Moves", subtitle: "", href: "/senior-transitions", iconSrc: iconSeniorMoves },
+  { title: "Probate Sales", subtitle: "", href: "/probate-estate-sales", iconSrc: iconProbateSales },
+  { title: "The Process", subtitle: "", href: "/how-the-process-works", iconSrc: iconTheProcess },
+  { title: "Home Value", subtitle: "", href: "/why-valuation-matters", iconSrc: iconHomeValue },
+  { title: "Probate Terms", subtitle: "", href: "/terminology", iconSrc: iconProbateTerms },
+  { title: "Service Areas", subtitle: "", href: "/counties", iconSrc: iconServiceAreas },
+  { title: "Resources", subtitle: "", href: "/professional-referral-resource", iconSrc: iconResources },
 ];
