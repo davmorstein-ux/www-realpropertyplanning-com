@@ -316,6 +316,8 @@ const ForAttorneys = () => {
         </div>
       </section>
 
+      <PageTestimonials testimonials={attorneyTestimonials} heading="What Referring Attorneys Say" />
+
       <PageFAQ faqs={faqs} heading="Questions Attorneys Commonly Ask" />
 
       <RelatedServices currentPath="/for-attorneys" />
