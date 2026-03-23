@@ -23,16 +23,16 @@ export interface ServiceTile {
 }
 
 export const serviceTiles: ServiceTile[] = [
-  { title: "Attorneys", subtitle: "Estate & Probate Support", href: "/for-attorneys", icon: Scale, hue: 220 },
-  { title: "Executors", subtitle: "Guidance & Next Steps", href: "/executors", icon: FileText, hue: 210 },
-  { title: "Trustees", subtitle: "Property Decisions", href: "/executors", icon: ShieldCheck, hue: 200 },
-  { title: "CPAs", subtitle: "Real Estate Coordination", href: "/for-cpas", icon: Briefcase, hue: 215 },
-  { title: "Financial Planning", subtitle: "Property & Wealth", href: "/for-financial-planners", icon: TrendingUp, hue: 185 },
-  { title: "Senior Moves", subtitle: "Downsizing Help", href: "/senior-transitions", icon: Users, hue: 195 },
-  { title: "Probate Sales", subtitle: "Selling Inherited Property", href: "/probate-estate-sales", icon: Home, hue: 205 },
-  { title: "Process", subtitle: "Step-by-Step Overview", href: "/how-the-process-works", icon: ClipboardList, hue: 190 },
-  { title: "Valuation", subtitle: "Understanding Value", href: "/why-valuation-matters", icon: BarChart3, hue: 175 },
-  { title: "Probate Terms", subtitle: "Simple Definitions", href: "/terminology", icon: BookOpen, hue: 225 },
-  { title: "Service Areas", subtitle: "Western Washington", href: "/counties", icon: MapPin, hue: 170 },
-  { title: "Resources", subtitle: "Trusted Partners", href: "/professional-referral-resource", icon: Handshake, hue: 200 },
+  { title: "Attorneys", subtitle: "", href: "/for-attorneys", icon: Scale, hue: 220 },
+  { title: "Executors", subtitle: "", href: "/executors", icon: FileText, hue: 210 },
+  { title: "Trustees", subtitle: "", href: "/executors", icon: ShieldCheck, hue: 200 },
+  { title: "CPAs", subtitle: "", href: "/for-cpas", icon: Briefcase, hue: 215 },
+  { title: "Financial Planning", subtitle: "", href: "/for-financial-planners", icon: TrendingUp, hue: 185 },
+  { title: "Senior Moves", subtitle: "", href: "/senior-transitions", icon: Users, hue: 195 },
+  { title: "Probate Sales", subtitle: "", href: "/probate-estate-sales", icon: Home, hue: 205 },
+  { title: "The Process", subtitle: "", href: "/how-the-process-works", icon: ClipboardList, hue: 190 },
+  { title: "Home Value", subtitle: "", href: "/why-valuation-matters", icon: BarChart3, hue: 175 },
+  { title: "Probate Terms", subtitle: "", href: "/terminology", icon: BookOpen, hue: 225 },
+  { title: "Service Areas", subtitle: "", href: "/counties", icon: MapPin, hue: 170 },
+  { title: "Resources", subtitle: "", href: "/professional-referral-resource", icon: Handshake, hue: 200 },
 ];
