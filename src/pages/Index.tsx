@@ -180,7 +180,7 @@ const Index = () => {
                 title: "Probate & Estate Property Sales",
                 body: "Experienced guidance for selling inherited homes, trust-owned real estate, and estate property across King, Snohomish, Pierce, Skagit, and Kitsap Counties.",
                 link: "/probate-estate-sales",
-                iconOffsetClass: "-translate-x-2",
+                iconOffsetClass: "",
               },
               {
                 iconSrc: iconServiceSenior,
