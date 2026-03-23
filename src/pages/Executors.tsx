@@ -260,6 +260,8 @@ const Executors = () => {
         </div>
       </section>
 
+      <RealClientSituations studies={executorCaseStudies} background="bg-background" />
+
       {/* Trust Signals */}
       <section className="py-14 lg:py-16 bg-secondary">
         <div className="container px-6 lg:px-8">

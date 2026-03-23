@@ -271,6 +271,8 @@ const ForAttorneys = () => {
         </div>
       </section>
 
+      <RealClientSituations studies={attorneyCaseStudies} background="bg-background" />
+
       {/* Good Fit */}
       <section className="py-16 lg:py-24 bg-background">
         <div className="container px-6 lg:px-8">
