@@ -197,31 +197,57 @@ const ServiceNavTiles = () => {
                     <Link
                       to={tile.href}
                       className={cn(
-                        "group relative flex w-full max-w-[22rem] mx-auto flex-col items-center text-center h-full lg:max-w-none",
-                        "rounded-[20px] overflow-hidden",
-                        "transition-all duration-300 ease-in-out",
+                        "group relative flex w-full mx-auto flex-col items-center justify-center text-center",
+                        "aspect-square",
+                        "rounded-[28px]",
+                        "transition-[transform,box-shadow] duration-300 ease-in-out",
                         "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
                         isCenter
-                          ? "p-8 lg:p-10"
+                          ? "max-w-[280px] lg:max-w-[300px]"
                           : isNear
-                            ? "p-7 lg:p-8"
-                            : "p-6 lg:p-7"
+                            ? "max-w-[260px] lg:max-w-[280px]"
+                            : "max-w-[240px] lg:max-w-[260px]"
                       )}
                       style={{
-                        background: isCenter
-                          ? "linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(40 30% 98%) 100%)"
-                          : "linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(40 20% 96%) 100%)",
-                        border: "1px solid hsl(40 20% 90%)",
-                        borderBottom: "3px solid hsl(40 15% 82%)",
+                        /* Outer rim: thick rounded border with light metallic edge */
+                        border: "3px solid hsl(215 30% 88%)",
+                        /* Glass surface: soft blue-white gradient like the reference */
+                        background: "linear-gradient(145deg, hsl(210 40% 97%) 0%, hsl(215 35% 93%) 40%, hsl(210 30% 90%) 100%)",
+                        /* Layered shadows: outer drop + inner depth + top highlight + bottom darkening */
                         boxShadow: isCenter
-                          ? "0 8px 32px -4px hsl(220 35% 15% / 0.12), 0 4px 12px -2px hsl(220 35% 15% / 0.08), inset 0 1px 0 0 hsl(0 0% 100% / 0.9), inset 0 -2px 6px -2px hsl(40 15% 85% / 0.5)"
+                          ? [
+                              "0 12px 40px -8px hsl(220 40% 25% / 0.2)",
+                              "0 6px 16px -4px hsl(220 40% 25% / 0.1)",
+                              "inset 0 2px 4px 0 hsl(0 0% 100% / 0.7)",
+                              "inset 0 -3px 8px -2px hsl(215 30% 78% / 0.5)",
+                              "inset 2px 0 6px -2px hsl(0 0% 100% / 0.3)",
+                              "inset -2px 0 6px -2px hsl(215 25% 82% / 0.3)",
+                            ].join(", ")
                           : isNear
-                            ? "0 4px 16px -2px hsl(220 35% 15% / 0.08), 0 2px 6px -1px hsl(220 35% 15% / 0.05), inset 0 1px 0 0 hsl(0 0% 100% / 0.8), inset 0 -2px 4px -2px hsl(40 15% 85% / 0.4)"
-                            : "0 2px 8px -1px hsl(220 35% 15% / 0.05), inset 0 1px 0 0 hsl(0 0% 100% / 0.7), inset 0 -1px 3px -1px hsl(40 15% 85% / 0.3)",
+                            ? [
+                                "0 6px 20px -4px hsl(220 40% 25% / 0.12)",
+                                "0 3px 8px -2px hsl(220 40% 25% / 0.06)",
+                                "inset 0 2px 3px 0 hsl(0 0% 100% / 0.6)",
+                                "inset 0 -2px 6px -2px hsl(215 30% 78% / 0.4)",
+                                "inset 2px 0 4px -2px hsl(0 0% 100% / 0.25)",
+                                "inset -2px 0 4px -2px hsl(215 25% 82% / 0.25)",
+                              ].join(", ")
+                            : [
+                                "0 3px 10px -2px hsl(220 40% 25% / 0.08)",
+                                "inset 0 1px 2px 0 hsl(0 0% 100% / 0.5)",
+                                "inset 0 -1px 4px -1px hsl(215 30% 78% / 0.3)",
+                              ].join(", "),
                       }}
                       onMouseEnter={(e) => {
-                        e.currentTarget.style.transform = "translateY(-3px) scale(1.02)";
-                        e.currentTarget.style.boxShadow = "0 12px 40px -4px hsl(220 35% 15% / 0.15), 0 6px 16px -2px hsl(220 35% 15% / 0.1), inset 0 1px 0 0 hsl(0 0% 100% / 0.95), inset 0 -2px 6px -2px hsl(40 15% 85% / 0.5)";
+                        e.currentTarget.style.transform = "translateY(-4px) scale(1.02)";
+                        e.currentTarget.style.boxShadow = [
+                          "0 16px 48px -8px hsl(220 40% 25% / 0.22)",
+                          "0 8px 20px -4px hsl(220 40% 25% / 0.12)",
+                          "inset 0 2px 4px 0 hsl(0 0% 100% / 0.8)",
+                          "inset 0 -3px 8px -2px hsl(215 30% 78% / 0.5)",
+                          "inset 2px 0 6px -2px hsl(0 0% 100% / 0.35)",
+                          "inset -2px 0 6px -2px hsl(215 25% 82% / 0.35)",
+                        ].join(", ");
                         e.currentTarget.style.transition = "transform 0.2s ease-out, box-shadow 0.2s ease-out";
                       }}
                       onMouseLeave={(e) => {
@@ -231,66 +257,74 @@ const ServiceNavTiles = () => {
                       }}
                       onMouseDown={(e) => {
                         e.currentTarget.style.transform = "translateY(2px) scale(0.97)";
-                        e.currentTarget.style.boxShadow = "0 2px 8px -2px hsl(220 35% 15% / 0.18), 0 1px 3px -1px hsl(220 35% 15% / 0.1), inset 0 1px 0 0 hsl(0 0% 100% / 0.7), inset 0 -1px 3px -1px hsl(40 15% 85% / 0.6)";
+                        e.currentTarget.style.boxShadow = [
+                          "0 3px 10px -4px hsl(220 40% 25% / 0.2)",
+                          "0 1px 4px -1px hsl(220 40% 25% / 0.1)",
+                          "inset 0 2px 6px 0 hsl(215 30% 78% / 0.4)",
+                          "inset 0 -1px 2px 0 hsl(0 0% 100% / 0.5)",
+                        ].join(", ");
                         e.currentTarget.style.transition = "transform 0.12s ease-out, box-shadow 0.12s ease-out";
                       }}
                       onMouseUp={(e) => {
-                        e.currentTarget.style.transform = "translateY(-3px) scale(1.02)";
-                        e.currentTarget.style.boxShadow = "0 12px 40px -4px hsl(220 35% 15% / 0.15), 0 6px 16px -2px hsl(220 35% 15% / 0.1), inset 0 1px 0 0 hsl(0 0% 100% / 0.95), inset 0 -2px 6px -2px hsl(40 15% 85% / 0.5)";
+                        e.currentTarget.style.transform = "translateY(-4px) scale(1.02)";
+                        e.currentTarget.style.boxShadow = "";
                         e.currentTarget.style.transition = "transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out";
                       }}
                     >
-                      {/* Top highlight — simulates light catching the top edge */}
+                      {/* Top-left light reflection */}
                       <div
-                        className="absolute inset-x-0 top-0 h-[2px] rounded-t-[20px]"
-                        style={{ background: "linear-gradient(90deg, transparent 10%, hsl(0 0% 100% / 0.9) 50%, transparent 90%)" }}
+                        className="absolute top-3 left-3 right-[40%] h-[40%] rounded-tl-[24px] rounded-br-[60%] pointer-events-none"
+                        style={{
+                          background: "linear-gradient(135deg, hsl(0 0% 100% / 0.55) 0%, hsl(0 0% 100% / 0.1) 60%, transparent 100%)",
+                        }}
                       />
 
+                      {/* Rim highlight — top edge */}
                       <div
-                        className={cn(
-                          "rounded-full flex items-center justify-center mb-5 transition-all duration-300",
-                          isCenter
-                            ? "w-[72px] h-[72px]"
-                            : isNear
-                              ? "w-16 h-16"
-                              : "w-14 h-14"
-                        )}
-                        style={{
-                          background: isCenter
-                            ? "linear-gradient(135deg, hsl(42 55% 55% / 0.15) 0%, hsl(42 45% 72% / 0.1) 100%)"
-                            : "linear-gradient(135deg, hsl(40 30% 96%) 0%, hsl(40 20% 92%) 100%)",
-                          boxShadow: "inset 0 1px 2px hsl(0 0% 100% / 0.6), inset 0 -1px 2px hsl(40 15% 80% / 0.3), 0 1px 3px hsl(220 35% 15% / 0.06)",
-                        }}
-                      >
-                        <tile.icon
+                        className="absolute inset-x-3 top-0 h-[1px] pointer-events-none"
+                        style={{ background: "linear-gradient(90deg, transparent 5%, hsl(0 0% 100% / 0.8) 50%, transparent 95%)" }}
+                      />
+
+                      {/* Content */}
+                      <div className="relative z-10 flex flex-col items-center px-4">
+                        <div
                           className={cn(
-                            "transition-colors duration-300",
-                            isCenter
-                              ? "w-9 h-9 text-gold-dark"
-                              : isNear
-                                ? "w-7 h-7 text-accent group-hover:text-gold-dark"
-                                : "w-6 h-6 text-muted-foreground"
+                            "rounded-full flex items-center justify-center mb-4 transition-all duration-300",
+                            isCenter ? "w-16 h-16" : isNear ? "w-14 h-14" : "w-12 h-12"
                           )}
-                        />
+                        >
+                          <tile.icon
+                            className={cn(
+                              "transition-colors duration-300",
+                              isCenter
+                                ? "w-9 h-9 text-navy"
+                                : isNear
+                                  ? "w-7 h-7 text-navy/80 group-hover:text-navy"
+                                  : "w-6 h-6 text-navy/60"
+                            )}
+                          />
+                        </div>
+                        <h3
+                          className={cn(
+                            "font-serif font-semibold leading-snug mb-1",
+                            isCenter
+                              ? "text-lg lg:text-xl text-navy"
+                              : "text-base lg:text-lg text-navy/90"
+                          )}
+                        >
+                          {tile.title}
+                        </h3>
+                        <p
+                          className={cn(
+                            "leading-snug",
+                            isCenter
+                              ? "text-sm lg:text-[15px] text-navy/60"
+                              : "text-xs lg:text-sm text-navy/50"
+                          )}
+                        >
+                          {tile.subtitle}
+                        </p>
                       </div>
-                      <h3
-                        className={cn(
-                          "font-serif text-foreground font-semibold leading-snug mb-1.5",
-                          isCenter
-                            ? "text-lg lg:text-xl"
-                            : "text-base lg:text-lg"
-                        )}
-                      >
-                        {tile.title}
-                      </h3>
-                      <p
-                        className={cn(
-                          "leading-snug text-muted-foreground",
-                          isCenter ? "text-sm lg:text-[15px]" : "text-sm"
-                        )}
-                      >
-                        {tile.subtitle}
-                      </p>
                     </Link>
                   </div>
                 );
