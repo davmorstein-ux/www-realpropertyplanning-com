@@ -735,6 +735,42 @@ const Index = () => {
         </div>
       </section>
 
+      {/* When Should You Call Me */}
+      <section className="py-16 lg:py-24 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-5">
+              When Should You Call Me?
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              You don't need to have everything figured out. If any of these sound familiar, it's a good time to have a conversation.
+            </p>
+            <ul className="space-y-4 mb-10">
+              {[
+                "You've been named an executor and aren't sure where to start",
+                "You're handling an inherited home and need guidance",
+                "You're working with an attorney and real estate is part of the process",
+                "You're helping a parent or family member transition out of their home",
+                "You're trying to decide whether to sell as-is or make improvements",
+                "You want a clear understanding of what the property is worth",
+                "You simply want to talk through your situation before making any decisions",
+              ].map((item, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-gold mt-0.5 shrink-0" />
+                  <span className="text-foreground text-lg leading-relaxed">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <Link to="/contact">
+              <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold px-7 py-4 h-auto rounded-lg">
+                <Phone className="w-4 h-4 mr-2" />
+                Schedule a Conversation
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Client Reviews */}
       <TestimonialsSection />
 
