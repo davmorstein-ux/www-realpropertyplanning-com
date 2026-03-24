@@ -41,6 +41,7 @@ import PropertyPreparationServices from "./pages/resources/PropertyPreparationSe
 import MovingRelocationServices from "./pages/resources/MovingRelocationServices";
 import HowToMoveElderlyParents from "./pages/HowToMoveElderlyParents";
 import ForReferralPartners from "./pages/ForReferralPartners";
+import ForProfessionals from "./pages/ForProfessionals";
 import ForSeniorLivingProfessionals from "./pages/ForSeniorLivingProfessionals";
 import TransitionResources from "./pages/TransitionResources";
 import Services from "./pages/Services";
@@ -98,6 +99,7 @@ const App = () => (
           <Route path="/resources/moving-relocation-services" element={<MovingRelocationServices />} />
           <Route path="/how-to-move-elderly-parents" element={<HowToMoveElderlyParents />} />
           <Route path="/for-referral-partners" element={<ForReferralPartners />} />
+          <Route path="/for-professionals" element={<ForProfessionals />} />
           <Route path="/for-senior-living-professionals" element={<ForSeniorLivingProfessionals />} />
           <Route path="/transition-resources" element={<TransitionResources />} />
           <Route path="/services" element={<Services />} />
