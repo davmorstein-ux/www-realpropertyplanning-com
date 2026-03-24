@@ -1,14 +1,16 @@
-import { Award, Users, BookOpen } from "lucide-react";
 import mappin3d from "@/assets/mappin-3d.png";
+import award3d from "@/assets/award-3d.png";
+import people3d from "@/assets/people-3d.png";
+import book3d from "@/assets/book-3d.png";
 
 const credentials = [
   {
-    icon: Award,
+    image: award3d,
     stat: "15+",
     label: "Years of Specialized Experience"
   },
   {
-    icon: Users,
+    image: people3d,
     stat: "500+",
     label: "Families Served"
   },
@@ -19,7 +21,7 @@ const credentials = [
     label: "Counties Covered"
   },
   {
-    icon: BookOpen,
+    image: book3d,
     stat: "Expert",
     label: "Probate Certification"
   }
@@ -65,11 +67,7 @@ const WhyChooseSection = () => {
                 key={index}
                 className="bg-card p-8 rounded-lg border border-border text-center"
               >
-                {item.image ? (
-                  <img src={item.image} alt="" aria-hidden="true" className="w-8 h-8 object-contain mx-auto mb-4" />
-                ) : (
-                  <item.icon className="w-8 h-8 text-gold mx-auto mb-4" />
-                )}
+                <img src={item.image} alt="" aria-hidden="true" className="w-8 h-8 object-contain mx-auto mb-4" />
                 <div className="font-serif text-3xl text-foreground font-medium mb-2">
                   {item.stat}
                 </div>

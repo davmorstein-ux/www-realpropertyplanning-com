@@ -8,7 +8,8 @@ import TrustStrip from "@/components/TrustStrip";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Phone, ArrowRight, Users } from "lucide-react";
+import { Phone, ArrowRight } from "lucide-react";
+import people3d from "@/assets/people-3d.png";
 
 const SITE_URL = "https://realpropertyplanning.com";
 
@@ -219,7 +220,7 @@ const ForSeniorLivingProfessionals = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <div className="flex items-center gap-3 mb-4">
-              <Users className="w-6 h-6 text-accent shrink-0" />
+              <img src={people3d} alt="" aria-hidden="true" className="w-6 h-6 object-contain shrink-0" />
               <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold">
                 Our Collaborative Network
               </h2>
