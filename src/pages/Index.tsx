@@ -148,12 +148,12 @@ const Index = () => {
               </p>
               <div className="mb-5 space-y-3">
                 <p className="text-base font-semibold tracking-[0.02em] text-foreground">David Stein</p>
-                <p className="inline-flex items-center text-sm font-semibold text-foreground md:text-base">
-                  <img src={iconLicense3d} alt="" aria-hidden="true" className="mr-2 h-[22px] w-[22px] shrink-0 object-contain mix-blend-multiply" />
+                <p className="flex items-center text-sm font-semibold text-foreground md:text-base">
+                  <img src={iconLicense3d} alt="" aria-hidden="true" className="mr-2 h-[22px] w-[22px] shrink-0 object-contain" />
                   Licensed Real Estate Broker
                 </p>
-                <p className="inline-flex items-center text-sm font-semibold text-foreground md:text-base">
-                  <img src={iconAppraiser3d} alt="" aria-hidden="true" className="mr-2 h-[22px] w-[22px] shrink-0 object-contain mix-blend-multiply" />
+                <p className="flex items-center text-sm font-semibold text-foreground md:text-base">
+                  <img src={iconAppraiser3d} alt="" aria-hidden="true" className="mr-2 h-[22px] w-[22px] shrink-0 object-contain" />
                   WA Certified Residential Appraiser
                 </p>
               </div>
@@ -361,21 +361,21 @@ const Index = () => {
                 <div>
                   <p className="text-sm text-primary-foreground/60">Phone</p>
                   <a href="tel:2069003015" className="mt-1 inline-flex items-center text-primary-foreground transition-colors hover:text-gold">
-                    <img src={iconPhone3d} alt="" aria-hidden="true" className="mr-2 h-[22px] w-[22px] shrink-0 object-contain mix-blend-multiply" />
+                    <img src={iconPhone3d} alt="" aria-hidden="true" className="mr-2 h-[22px] w-[22px] shrink-0 object-contain" />
                     <span className="text-lg font-semibold">(206) 900-3015</span>
                   </a>
                 </div>
                 <div>
                   <p className="text-sm text-primary-foreground/60">Email</p>
                   <a href="mailto:david@realpropertyplanning.com" className="mt-1 inline-flex items-center text-primary-foreground transition-colors hover:text-gold">
-                    <img src={iconEmail3d} alt="" aria-hidden="true" className="mr-2 h-[22px] w-[22px] shrink-0 object-contain mix-blend-multiply" />
+                    <img src={iconEmail3d} alt="" aria-hidden="true" className="mr-2 h-[22px] w-[22px] shrink-0 object-contain" />
                     <span className="text-lg font-semibold">david@realpropertyplanning.com</span>
                   </a>
                 </div>
                 <div>
                   <p className="text-sm text-primary-foreground/60">Serving</p>
                   <div className="mt-1 inline-flex items-center text-primary-foreground">
-                    <img src={mappin3d} alt="" aria-hidden="true" className="mr-2 h-[22px] w-[22px] shrink-0 object-contain mix-blend-multiply" />
+                    <img src={mappin3d} alt="" aria-hidden="true" className="mr-2 h-[22px] w-[22px] shrink-0 object-contain" />
                     <span className="text-lg font-semibold">Western Washington &amp; Puget Sound</span>
                   </div>
                 </div>
