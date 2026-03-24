@@ -55,7 +55,7 @@ const SeniorEstateServices = () => {
               "Connections to senior living communities and transition professionals",
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-3 text-foreground text-[15px]">
-                <CheckCircle className="w-[18px] h-[18px] text-gold mt-0.5 shrink-0" />
+                <GoldCheck3D size={18} className="mt-0.5" />
                 <span>{item}</span>
               </li>
             ))}
@@ -81,7 +81,7 @@ const SeniorEstateServices = () => {
               "Support navigating disagreements among multiple heirs",
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-3 text-foreground text-[15px]">
-                <CheckCircle className="w-[18px] h-[18px] text-gold mt-0.5 shrink-0" />
+                <GoldCheck3D size={18} className="mt-0.5" />
                 <span>{item}</span>
               </li>
             ))}
@@ -107,7 +107,7 @@ const SeniorEstateServices = () => {
               "Clear communication with all parties throughout the process",
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-3 text-foreground text-[15px]">
-                <CheckCircle className="w-[18px] h-[18px] text-gold mt-0.5 shrink-0" />
+                <GoldCheck3D size={18} className="mt-0.5" />
                 <span>{item}</span>
               </li>
             ))}
@@ -132,7 +132,7 @@ const SeniorEstateServices = () => {
               "Coordination with financial advisors, attorneys, and other stakeholders",
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-3 text-foreground text-[15px]">
-                <CheckCircle className="w-[18px] h-[18px] text-gold mt-0.5 shrink-0" />
+                <GoldCheck3D size={18} className="mt-0.5" />
                 <span>{item}</span>
               </li>
             ))}
@@ -157,7 +157,7 @@ const SeniorEstateServices = () => {
               "Vendor scheduling and oversight so you don't have to be on‑site",
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-3 text-foreground text-[15px]">
-                <CheckCircle className="w-[18px] h-[18px] text-gold mt-0.5 shrink-0" />
+                <GoldCheck3D size={18} className="mt-0.5" />
                 <span>{item}</span>
               </li>
             ))}
@@ -182,7 +182,7 @@ const SeniorEstateServices = () => {
               "Written analysis to support estate, trust, or family decision‑making",
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-3 text-foreground text-[15px]">
-                <CheckCircle className="w-[18px] h-[18px] text-gold mt-0.5 shrink-0" />
+                <GoldCheck3D size={18} className="mt-0.5" />
                 <span>{item}</span>
               </li>
             ))}

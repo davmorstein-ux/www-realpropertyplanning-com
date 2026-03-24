@@ -173,7 +173,7 @@ const ForSeniorLivingProfessionals = () => {
             <ul className="space-y-4">
               {whyRefer.map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 min-w-5 text-gold mt-0.5 shrink-0" />
+                  <GoldCheck3D size={20} className="mt-0.5" />
                   <span className="text-foreground text-[15px] md:text-base leading-relaxed">{item}</span>
                 </li>
               ))}
