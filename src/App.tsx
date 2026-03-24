@@ -41,6 +41,7 @@ import PropertyPreparationServices from "./pages/resources/PropertyPreparationSe
 import MovingRelocationServices from "./pages/resources/MovingRelocationServices";
 import HowToMoveElderlyParents from "./pages/HowToMoveElderlyParents";
 import ForReferralPartners from "./pages/ForReferralPartners";
+import ForProfessionals from "./pages/ForProfessionals";
 import ForSeniorLivingProfessionals from "./pages/ForSeniorLivingProfessionals";
 import TransitionResources from "./pages/TransitionResources";
 import Services from "./pages/Services";
