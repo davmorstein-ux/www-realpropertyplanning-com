@@ -2,203 +2,197 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
-import { articleSchema } from "@/lib/schema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
-import RelatedServices from "@/components/RelatedServices";
+import GoldCheck3D from "@/components/GoldCheck3D";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight, Handshake, BookOpen, Mail } from "lucide-react";
-import people3d from "@/assets/people-3d.png";
+import { Phone } from "lucide-react";
 
-const professionalTypes = [
-  "Probate and Estate Attorneys",
-  "CPAs and Financial Advisors",
-  "Senior Move Managers",
-  "Estate Sale Companies",
-  "Senior Living Communities",
-  "Professional Organizers",
-  "Property Preparation Services",
+import iconAttorneys from "@/assets/icons/icon-attorneys.png";
+import iconFinancial from "@/assets/icons/icon-financial-planning.png";
+import iconSeniorMoves from "@/assets/icons/icon-senior-moves.png";
+import iconHomeValue from "@/assets/icons/icon-home-value.png";
+
+const partnerTiles = [
+  {
+    title: "Attorneys",
+    description: "Supporting clients through probate, estate planning, divorce, and other legal matters.",
+    href: "/for-attorneys",
+    iconSrc: iconAttorneys,
+  },
+  {
+    title: "Financial\nProfessionals",
+    description: "Working alongside financial planners and advisors to align real estate decisions with broader financial goals.",
+    href: "/for-financial-planners",
+    iconSrc: iconFinancial,
+  },
+  {
+    title: "Senior &\nTransition",
+    description: "Coordinating with those who help seniors and families navigate downsizing, relocation, and care transitions.",
+    href: "/transition-resources",
+    iconSrc: iconSeniorMoves,
+  },
+  {
+    title: "Lenders &\nFinancing",
+    description: "Connecting clients with trusted professionals who provide financing solutions, including reverse mortgage options.",
+    href: "/retirement-reverse-mortgage",
+    iconSrc: iconHomeValue,
+  },
 ];
 
-const SITE_URL = "https://realpropertyplanning.com";
+const whyCollaborate = [
+  "Clear, defensible valuation backed by appraisal experience",
+  "Structured and reliable process",
+  "Strong communication across all parties",
+  "Experience navigating complex situations",
+  "A focus on reducing stress for clients",
+];
 
 const ForReferralPartners = () => {
-  const pageSchema = {
-    ...articleSchema,
-    headline: "For Professional Referral Partners",
-    description:
-      "How Real Property Planning collaborates with professionals who assist families navigating probate property, estate transitions, downsizing, and senior housing decisions.",
-    url: `${SITE_URL}/for-referral-partners`,
-    about: [
-      { "@type": "Thing", name: "Professional Collaboration" },
-      { "@type": "Thing", name: "Referral Partnerships" },
-      { "@type": "Thing", name: "Estate Property Transitions" },
-    ],
-  };
-
   return (
-    <>
+    <div className="min-h-screen bg-background">
       <SEOHead
-        title="For Professional Referral Partners | Real Property Planning"
-        description="Learn how Real Property Planning collaborates with attorneys, CPAs, senior move managers, and other professionals who assist families navigating probate property, estate transitions, and senior housing decisions."
-        canonical={`${SITE_URL}/for-referral-partners`}
-        jsonLd={pageSchema}
+        title="Real Estate Support for Professional Partners | Real Property Planning"
+        description="A coordinated approach to property decisions involving legal planning, financial strategy, and life transitions. Collaborate with a licensed broker and certified appraiser."
       />
-      <BreadcrumbSchema
-        items={[
-          { name: "Home", url: SITE_URL },
-          { name: "For Professional Referral Partners", url: `${SITE_URL}/for-referral-partners` },
-        ]}
-      />
+      <BreadcrumbSchema items={[{ name: "For Professional Partners", url: "/for-referral-partners" }]} />
       <Header />
 
-      <main>
-        {/* Hero */}
-        <section className="bg-secondary py-14 md:py-20">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center">
-              <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-sm">
-                Professional Collaboration
-              </p>
-              <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-foreground leading-tight mb-4">
-                For Professional Referral Partners
-              </h1>
-              <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-                Many families navigating estate property transitions require coordinated support from
-                multiple professionals. Real Property Planning works with a network of trusted
-                partners to ensure every aspect of a property transition is handled with care,
-                competence, and clear communication.
+      {/* Hero */}
+      <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
+              For Professional Partners
+            </p>
+            <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
+              Real Estate Support for Professional Partners
+            </h1>
+            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-8">
+              A Coordinated Approach to Life's Most Important Property Decisions
+            </p>
+            <Link to="/contact">
+              <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold px-7 py-4 h-auto rounded-lg">
+                <Phone className="w-4 h-4 mr-2" />
+                Schedule a Conversation
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Intro */}
+      <section className="py-16 lg:py-20 bg-secondary">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+              Many real estate decisions are part of a much larger picture — involving legal planning, financial strategy, and major life transitions.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              I work alongside trusted professionals to help ensure that property-related decisions are handled with clarity, coordination, and care.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* A Collaborative Network */}
+      <section className="py-12 lg:py-16 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
+              A Collaborative Network
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              To provide clients with a connected, thoughtful approach — where each professional plays their role, and no detail is overlooked.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Tile Grid */}
+      <section className="py-10 lg:py-20 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-[1100px] mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-4">
+                Areas of Collaboration
+              </h2>
+              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+                Select the area that best aligns with your work:
               </p>
             </div>
-          </div>
-        </section>
-
-        {/* Collaborative Professional Network */}
-        <section className="py-14 md:py-20">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto">
-              <div className="flex items-center gap-3 mb-6">
-                <img src={people3d} alt="" aria-hidden="true" className="w-6 h-6 object-contain shrink-0" />
-                <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground">
-                  Collaborative Professional Network
-                </h2>
-              </div>
-              <p className="text-muted-foreground text-base md:text-[17px] leading-relaxed mb-8">
-                Estate property transitions often involve a range of professionals, each contributing
-                specialized knowledge to support the family and protect the estate's interests.
-                The following types of professionals frequently coordinate during these situations:
-              </p>
-              <ul className="space-y-3 mb-8">
-                {professionalTypes.map((type) => (
-                  <li
-                    key={type}
-                    className="flex items-start gap-3 text-foreground text-[15px] md:text-base leading-relaxed"
-                  >
-                    <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2 shrink-0" />
-                    {type}
-                  </li>
-                ))}
-              </ul>
-              <p className="text-muted-foreground text-base leading-relaxed">
-                When these professionals work together, families benefit from a more organized,
-                less stressful transition — and each professional can focus on their area of
-                expertise with confidence that the broader picture is being managed.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Why Collaboration Matters */}
-        <section className="bg-secondary py-14 md:py-20">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto">
-              <div className="flex items-center gap-3 mb-6">
-                <Handshake className="w-6 h-6 text-accent shrink-0" />
-                <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground">
-                  Why Collaboration Matters
-                </h2>
-              </div>
-              <p className="text-muted-foreground text-base md:text-[17px] leading-relaxed mb-6">
-                Estate property and senior housing transitions rarely involve a single decision or
-                a single discipline. Legal considerations intersect with financial planning.
-                Property preparation overlaps with timing decisions. Housing choices affect sale
-                strategy. When professionals communicate and coordinate, families experience fewer
-                surprises, fewer delays, and better outcomes.
-              </p>
-              <p className="text-muted-foreground text-base md:text-[17px] leading-relaxed">
-                Real Property Planning values these professional relationships and approaches every
-                engagement with the understanding that good coordination between{" "}
-                <Link to="/services" className="text-accent underline underline-offset-2 hover:text-accent/80 transition-colors">
-                  service providers
-                </Link>{" "}
-                leads to stronger results for the families involved.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Resource Directory */}
-        <section className="py-14 md:py-20">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto">
-              <div className="flex items-center gap-3 mb-6">
-                <BookOpen className="w-6 h-6 text-accent shrink-0" />
-                <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground">
-                  Resource Directory
-                </h2>
-              </div>
-              <p className="text-muted-foreground text-base md:text-[17px] leading-relaxed mb-8">
-                This website maintains a curated directory of professionals who assist families
-                during estate property and senior housing transitions across Western Washington.
-                The directory is organized by specialty and is intended to connect families with
-                knowledgeable, experienced providers.
-              </p>
-              <Link to="/resources">
-                <Button
-                  variant="outline"
-                  className="border-border text-foreground hover:bg-muted font-semibold px-8 rounded-lg text-base h-[52px]"
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              {partnerTiles.map((tile) => (
+                <Link
+                  key={tile.href}
+                  to={tile.href}
+                  className="group relative flex flex-col items-center justify-center gap-5 overflow-hidden rounded-2xl border-[3px] border-[hsl(215_20%_72%)] bg-card px-8 py-10 text-center shadow-[0_4px_20px_-4px_hsl(var(--foreground)/0.10)] transition-all duration-[120ms] ease-out hover:-translate-y-0.5 hover:border-[hsl(215_30%_55%)] hover:shadow-[0_8px_28px_-6px_hsl(var(--foreground)/0.15)] active:translate-y-px active:scale-[0.97] active:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                 >
-                  Browse the Resource Directory
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Button>
-              </Link>
+                  <span className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-foreground/[0.07] to-transparent" />
+                  <span className="pointer-events-none absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-transparent via-foreground/[0.10] to-transparent" />
+
+                  <img
+                    src={tile.iconSrc}
+                    alt=""
+                    className="h-28 w-28 sm:h-32 sm:w-32 object-contain"
+                    loading="lazy"
+                  />
+
+                  <h3 className="font-serif text-[1.75rem] font-bold leading-[1.15] tracking-tight text-foreground lg:text-[2rem] whitespace-pre-line">
+                    {tile.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed max-w-[280px]">
+                    {tile.description}
+                  </p>
+                </Link>
+              ))}
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Invitation to Connect */}
-        <section className="bg-secondary py-14 md:py-20">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto">
-              <div className="flex items-center gap-3 mb-6">
-                <Mail className="w-6 h-6 text-accent shrink-0" />
-                <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground">
-                  Invitation to Connect
-                </h2>
-              </div>
-              <p className="text-muted-foreground text-base md:text-[17px] leading-relaxed mb-6">
-                If you are a professional who works with families during estate property transitions,
-                probate matters, downsizing, or senior housing decisions, Real Property Planning
-                welcomes the opportunity to connect. Whether you are interested in being included
-                as a resource for families or simply want to learn more about how coordination
-                between professionals can improve client outcomes, we encourage you to reach out.
-              </p>
-              <Link to="/contact">
-                <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 rounded-lg text-base h-[52px]">
-                  Get in Touch
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Button>
-              </Link>
-            </div>
+      {/* Why Professionals Collaborate */}
+      <section className="py-16 lg:py-24 bg-secondary">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-8">
+              Why Professionals Choose to Collaborate
+            </h2>
+            <ul className="space-y-4">
+              {whyCollaborate.map((item, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <GoldCheck3D size={20} className="mt-0.5 shrink-0" />
+                  <span className="text-foreground leading-relaxed">{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <RelatedServices currentPath="/for-referral-partners" />
-        <DisclaimerSection />
-      </main>
+      {/* CTA */}
+      <section className="py-20 lg:py-28 bg-primary">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-5">
+              Let's Connect
+            </h2>
+            <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
+              If you work with clients where real estate plays a role, I would welcome the opportunity to collaborate and support a smooth, well-coordinated process.
+            </p>
+            <Link to="/contact">
+              <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold">
+                <Phone className="w-5 h-5 mr-2" />
+                Schedule a Conversation
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
 
+      <DisclaimerSection />
       <Footer />
-    </>
+    </div>
   );
 };
 
