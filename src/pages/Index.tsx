@@ -466,45 +466,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════════════
-          PROFESSIONAL AFFILIATIONS
-      ═══════════════════════════════════════════════════ */}
-      <section className="py-16 lg:py-20 bg-cream">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-8">
-              Professional Memberships & Affiliations
-            </h2>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-12 mb-8">
-              <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer" className="inline-block">
-                <img
-                  src={alcaLogo}
-                  alt="Aging Life Care Association Corporate Partner"
-                  className="h-24 md:h-28 w-auto"
-                  loading="lazy"
-                />
-              </a>
-              <img
-                src={naosaBadge}
-                alt="National Association of Senior Advocates - Best Real Estate Agent 2026"
-                className="h-28 md:h-32 w-auto"
-                loading="lazy"
-              />
-              <a href="https://www.naepc.org" target="_blank" rel="noopener noreferrer" className="inline-block">
-                <img
-                  src={naepcLogo}
-                  alt="National Association of Estate Planners & Councils"
-                  className="h-20 md:h-24 w-auto"
-                  loading="lazy"
-                />
-              </a>
-            </div>
-            <p className="text-muted-foreground text-base leading-relaxed max-w-2xl mx-auto">
-              David Stein and Real Property Planning are proud Corporate Partners of the Aging Life Care Association, a recognized member of the National Association of Senior Advocates and Advisors, and a member of the National Association of Estate Planners &amp; Councils.
-            </p>
-          </div>
-        </div>
-      </section>
 
       {/* ═══════════════════════════════════════════════════
           FAQ PREVIEW
