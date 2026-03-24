@@ -10,13 +10,13 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import {
-import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 
 import iconEmail3d from "@/assets/icons/icon-email-3d.png";
 import mappin3d from "@/assets/mappin-3d.png";
