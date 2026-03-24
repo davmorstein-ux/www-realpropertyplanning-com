@@ -205,7 +205,7 @@ const ForAttorneys = () => {
             <ul className="space-y-4">
               {whyRefer.map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-gold mt-0.5 shrink-0" />
+                  <CheckCircle className="w-5 h-5 min-w-5 text-gold mt-0.5 shrink-0" />
                   <span className="text-foreground leading-relaxed">{item}</span>
                 </li>
               ))}
@@ -227,7 +227,7 @@ const ForAttorneys = () => {
             <ul className="space-y-4">
               {clientSituations.map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-gold mt-0.5 shrink-0" />
+                  <CheckCircle className="w-5 h-5 min-w-5 text-gold mt-0.5 shrink-0" />
                   <span className="text-foreground leading-relaxed">{item}</span>
                 </li>
               ))}
@@ -304,7 +304,7 @@ const ForAttorneys = () => {
                 "You need a real estate professional who communicates clearly and respects boundaries",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-gold mt-0.5 shrink-0" />
+                  <CheckCircle className="w-5 h-5 min-w-5 text-gold mt-0.5 shrink-0" />
                   <span className="text-foreground leading-relaxed">{item}</span>
                 </li>
               ))}
