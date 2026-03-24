@@ -16,7 +16,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail } from "lucide-react";
+import mappin3d from "@/assets/mappin-3d.png";
 import { useState } from "react";
 import expRealtyLogo from "@/assets/exp-realty-logo.png";
 import { useToast } from "@/hooks/use-toast";
@@ -129,7 +130,7 @@ const Contact = () => {
 
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center shrink-0">
-                    <MapPin className="w-5 h-5 text-gold" />
+                    <img src={mappin3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain" />
                   </div>
                   <div>
                     <p className="font-medium text-foreground mb-1">Service Areas</p>

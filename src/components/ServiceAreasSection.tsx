@@ -1,4 +1,4 @@
-import { MapPin } from "lucide-react";
+import mappin3d from "@/assets/mappin-3d.png";
 
 const areas = [
   {
@@ -42,7 +42,7 @@ const ServiceAreasSection = () => {
               className="bg-primary-foreground/5 border border-primary-foreground/10 rounded-lg p-8 hover:bg-primary-foreground/10 transition-colors"
             >
               <div className="flex items-center gap-3 mb-4">
-                <MapPin className="w-5 h-5 text-gold" />
+                <img src={mappin3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0" />
                 <h3 className="font-serif text-xl text-primary-foreground font-medium">
                   {area.county}
                 </h3>

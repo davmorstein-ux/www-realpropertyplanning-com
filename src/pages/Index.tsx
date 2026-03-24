@@ -9,8 +9,9 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import {
   Phone, Mail,
-  ArrowRight, ChevronRight, MapPin, Quote, Award, Shield
+  ArrowRight, ChevronRight, Quote, Award, Shield
 } from "lucide-react";
+import mappin3d from "@/assets/mappin-3d.png";
 import iconServiceProbate from "@/assets/icons/icon-service-probate.png";
 import iconServiceSenior from "@/assets/icons/icon-service-senior.png";
 import iconServiceValuation from "@/assets/icons/icon-service-valuation.png";
@@ -316,7 +317,7 @@ const Index = () => {
               <Link key={i} to={area.href} className="group">
                 <div className="bg-primary-foreground/5 border border-primary-foreground/10 rounded-xl p-8 hover:bg-primary-foreground/10 transition-colors">
                   <div className="flex items-center gap-3 mb-3">
-                    <MapPin className="w-5 h-5 text-gold" />
+                    <img src={mappin3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0" />
                     <h3 className="font-serif text-xl text-primary-foreground font-semibold group-hover:text-gold transition-colors">
                       {area.county}
                     </h3>
@@ -373,7 +374,7 @@ const Index = () => {
                 </a>
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center">
-                    <MapPin className="w-5 h-5 text-gold" />
+                    <img src={mappin3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0" />
                   </div>
                   <div>
                     <p className="text-primary-foreground/60 text-sm">Serving</p>
