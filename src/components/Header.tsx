@@ -20,7 +20,7 @@ const primaryLinks = [
     { href: "/for-attorneys", label: "Attorneys" },
     { href: "/for-financial-planners", label: "Financial Professionals" },
     { href: "/for-senior-living-professionals", label: "Senior & Transition Professionals" },
-    { href: "/retirement-reverse-mortgage", label: "Lenders & Financing Specialists" },
+    { href: "/lenders-and-financing-specialists", label: "Lenders & Financing Specialists" },
   ]},
   { href: "/about", label: "About" },
   { href: "/resources", label: "Resources", children: [
