@@ -93,12 +93,12 @@ const Index = () => {
         {/* Gentle text-area gradient only */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/15 to-transparent" />
 
-        <div className="container relative z-10 px-6 lg:px-8 py-20 lg:py-28">
-          <div className="max-w-2xl">
+        <div className="container relative z-10 px-6 lg:px-8 py-20 lg:py-28 flex flex-col items-center text-center">
+          <div className="max-w-3xl">
             <h1 className="font-serif text-4xl md:text-5xl lg:text-[56px] text-white font-bold leading-[1.08] mb-6" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.4), 0 1px 3px rgba(0,0,0,0.25)' }}>
               Guiding Families Through One of Life's Most Complex Transitions
             </h1>
-            <p className="text-white text-lg md:text-xl font-medium leading-relaxed mb-10 max-w-xl" style={{ textShadow: '0 1px 6px rgba(0,0,0,0.35), 0 1px 2px rgba(0,0,0,0.2)' }}>
+            <p className="text-white text-lg md:text-xl font-medium leading-relaxed mb-10 mx-auto max-w-2xl" style={{ textShadow: '0 1px 6px rgba(0,0,0,0.35), 0 1px 2px rgba(0,0,0,0.2)' }}>
               Specialized probate real estate, estate sales, and senior transition support across Western Washington.
             </p>
             <Link to="/contact">
