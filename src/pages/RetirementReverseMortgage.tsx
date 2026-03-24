@@ -11,13 +11,13 @@ import { Phone, Mail, MapPin, Globe } from "lucide-react";
 const RetirementReverseMortgage = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
-      title="Retirement & Reverse Mortgage Planning | Real Property Planning"
-      description="A resource for seniors exploring reverse mortgage options and retirement planning. Connect with trusted professionals who help you understand your financial options clearly."
+      title="Lenders & Financing Specialists | Real Property Planning"
+      description="Supporting clients with financing options and long-term planning. Connect with trusted lending professionals who help you explore reverse mortgage and retirement strategies."
     />
     <BreadcrumbSchema
       items={[
-        { name: "Resources", url: "/resources" },
-        { name: "Retirement & Reverse Mortgage Planning", url: "/retirement-reverse-mortgage" },
+        { name: "For Professionals", url: "/for-professionals" },
+        { name: "Lenders & Financing Specialists", url: "/retirement-reverse-mortgage" },
       ]}
     />
     <Header />
@@ -27,13 +27,13 @@ const RetirementReverseMortgage = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
-            Senior Financial Resources
+            Lenders & Financing Specialists
           </p>
           <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
-            Retirement & Reverse Mortgage Planning
+            Supporting Clients with Financing Options and Long-Term Planning
           </h1>
           <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed">
-            A Resource for Seniors Exploring Financial Options
+            Connecting clients with trusted professionals who provide clarity around financing, retirement planning, and long-term strategy.
           </p>
         </div>
       </div>
@@ -44,21 +44,41 @@ const RetirementReverseMortgage = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-            For many seniors, real estate decisions are closely tied to financial flexibility, long-term planning, and maintaining independence.
+            Real estate decisions are often closely tied to financing, retirement planning, and long-term financial strategy.
+          </p>
+          <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+            In some situations, selling a home is the right decision. In others, financing solutions may provide flexibility and allow clients to remain in their home.
           </p>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            In some situations, a reverse mortgage may be worth exploring as part of that conversation. I work with trusted professionals who specialize in helping seniors understand their options clearly and without pressure.
+            I work with trusted lending professionals who help clients explore their options clearly and without pressure.
           </p>
         </div>
       </div>
     </section>
 
-    {/* Featured Resource */}
+    {/* Reverse Mortgage & Retirement Planning */}
     <section className="py-16 lg:py-24 bg-background">
+      <div className="container px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
+            Reverse Mortgage & Retirement Planning
+          </h2>
+          <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+            For seniors, reverse mortgage solutions can be part of a broader financial strategy.
+          </p>
+          <p className="text-muted-foreground text-lg leading-relaxed">
+            These conversations should be approached carefully, with a clear understanding of both benefits and considerations.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    {/* Featured Professional */}
+    <section className="py-16 lg:py-24 bg-secondary">
       <div className="container px-6 lg:px-8">
         <div className="max-w-[900px] mx-auto">
           <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
-            Featured Resource
+            Featured Professional
           </p>
           <h2 className="font-serif text-3xl text-foreground font-semibold mb-8">
             Daniel Bartel
@@ -72,10 +92,13 @@ const RetirementReverseMortgage = () => (
             </div>
 
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Daniel focuses on helping seniors evaluate whether a reverse mortgage aligns with their goals, lifestyle, and financial needs. His approach is educational and consultative, ensuring clients fully understand their options before making any decisions.
+              Daniel specializes in helping seniors evaluate reverse mortgage options as part of a larger retirement plan.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              His approach is educational and consultative — focused on helping clients understand their options so they can make informed decisions.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              As a Registered Social Security Analyst, he also helps clients consider how housing decisions may interact with broader retirement planning.
+              As a Registered Social Security Analyst, he also helps clients consider how real estate and financing decisions fit into their broader retirement strategy.
             </p>
           </div>
 
@@ -119,20 +142,20 @@ const RetirementReverseMortgage = () => (
     </section>
 
     {/* How This Fits In */}
-    <section className="py-16 lg:py-24 bg-secondary">
+    <section className="py-16 lg:py-24 bg-background">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <h2 className="font-serif text-3xl text-foreground font-semibold mb-8">
-            How This Fits In
+            How This Fits Into the Bigger Picture
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-            Every situation is different.
+            Every client's situation is different.
           </p>
           <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-            Some clients choose to sell. Others choose to stay. Some explore financing options as part of a broader plan.
+            Some choose to sell. Others explore financing options. Some do both as part of a long-term plan.
           </p>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            The goal is not to push a specific solution — but to help clients understand their options so they can make confident decisions.
+            The goal is to provide clarity — not push a specific path.
           </p>
         </div>
       </div>
@@ -143,10 +166,10 @@ const RetirementReverseMortgage = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-5">
-            Need Help Navigating the Bigger Picture?
+            Let's Connect
           </h2>
           <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
-            If you're unsure whether selling, staying, or exploring financing options is the right move, I'm happy to help you think through the possibilities and connect you with the right professionals.
+            If you're exploring whether selling, staying, or financing options make the most sense, I'm happy to help you evaluate your situation and connect you with the right professionals.
           </p>
           <Link to="/contact">
             <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold">
