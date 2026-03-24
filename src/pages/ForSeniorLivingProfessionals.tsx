@@ -1,3 +1,4 @@
+import GoldCheck3D from "@/components/GoldCheck3D";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
@@ -7,7 +8,7 @@ import TrustStrip from "@/components/TrustStrip";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Phone, ArrowRight, CheckCircle, Users } from "lucide-react";
+import { Phone, ArrowRight, Users } from "lucide-react";
 
 const SITE_URL = "https://realpropertyplanning.com";
 

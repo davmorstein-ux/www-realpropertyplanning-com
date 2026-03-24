@@ -1,3 +1,4 @@
+import GoldCheck3D from "@/components/GoldCheck3D";
 import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -7,7 +8,7 @@ import { realEstateAgentSchema } from "@/lib/schema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import {
-  Phone, Mail, CheckCircle,
+  Phone, Mail,
   ArrowRight, ChevronRight, MapPin, Quote, Award, Shield
 } from "lucide-react";
 import iconServiceProbate from "@/assets/icons/icon-service-probate.png";
