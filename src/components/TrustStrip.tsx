@@ -1,4 +1,4 @@
-import { CheckCircle } from "lucide-react";
+import GoldCheck3D from "@/components/GoldCheck3D";
 
 const trustIndicators = [
   "David Stein — Washington Real Estate Broker",
@@ -13,7 +13,7 @@ const TrustStrip = () => (
       <div className="mx-auto grid max-w-5xl grid-cols-1 gap-x-8 gap-y-3 sm:grid-cols-2 lg:grid-cols-4">
         {trustIndicators.map((indicator, index) => (
           <div key={index} className="flex w-full items-center gap-2 text-base font-medium text-muted-foreground">
-            <CheckCircle className="h-4 w-4 min-w-4 shrink-0 text-gold" />
+            <GoldCheck3D size={16} />
             <span>{indicator}</span>
           </div>
         ))}
