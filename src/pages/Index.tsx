@@ -205,7 +205,7 @@ const Index = () => {
                     <img
                       src={card.iconSrc}
                       alt={card.title}
-                      className={`block max-h-full max-w-full object-contain ${card.iconOffsetClass}`}
+                      className={`block max-h-full max-w-full object-contain mix-blend-multiply ${card.iconOffsetClass}`}
                       loading="lazy"
                     />
                   </div>

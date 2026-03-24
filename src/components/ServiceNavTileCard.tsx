@@ -13,7 +13,7 @@ const ServiceNavTileCard = ({ tile }: { tile: ServiceTile }) => {
       <img
         src={tile.iconSrc}
         alt={tile.title}
-        className="h-32 w-32 sm:h-36 sm:w-36 object-contain"
+        className="h-32 w-32 sm:h-36 sm:w-36 object-contain mix-blend-multiply"
         loading="lazy"
       />
 
