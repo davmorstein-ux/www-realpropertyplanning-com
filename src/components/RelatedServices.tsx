@@ -29,20 +29,18 @@ const RelatedServices = ({ currentPath }: RelatedServicesProps) => {
     <section data-nosnippet className="pt-10 pb-10 md:pt-14 md:pb-14 bg-secondary">
       <div className="container px-6 lg:px-8">
         <div className="max-w-[1140px] mx-auto">
-          <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-sm">
+          <p className="text-gold font-bold tracking-[0.2em] uppercase mb-5 text-sm">
             Related Resources
           </p>
-          <div className="flex flex-wrap gap-3">
-            {links.map((link, i) => (
-              <span key={link.href} className="flex items-center gap-3">
-                {i > 0 && <span className="text-muted-foreground/40">·</span>}
-                <Link
-                  to={link.href}
-                  className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm"
-                >
-                  {link.label}
-                </Link>
-              </span>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-2.5">
+            {links.map((link) => (
+              <Link
+                key={link.href}
+                to={link.href}
+                className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm leading-relaxed"
+              >
+                {link.label}
+              </Link>
             ))}
           </div>
         </div>
