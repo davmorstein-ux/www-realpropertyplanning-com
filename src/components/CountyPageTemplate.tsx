@@ -8,7 +8,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { MapPin } from "lucide-react";
+import mappin3d from "@/assets/mappin-3d.png";
 
 interface CountyPageProps {
   countyName: string;
@@ -151,7 +151,7 @@ const CountyPageTemplate = ({
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-3">
               {cities.map((city) => (
                 <div key={city} className="flex items-center gap-2">
-                  <MapPin className="w-3.5 h-3.5 text-gold shrink-0" />
+                  <img src={mappin3d} alt="" aria-hidden="true" className="w-3.5 h-3.5 object-contain shrink-0" />
                   <span className="text-muted-foreground">{city}</span>
                 </div>
               ))}
