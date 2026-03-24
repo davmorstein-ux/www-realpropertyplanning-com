@@ -19,6 +19,7 @@ import daveHeadshot2 from "@/assets/dave-headshot-2.jpg";
 import heroPnwHome from "@/assets/hero-pnw-home.jpg";
 import alcaLogo from "@/assets/alca-corporate-partner.png";
 import naosaBadge from "@/assets/naosa-badge.jpg";
+import naepcLogo from "@/assets/naepc-logo.png";
 import expRealtyLogo from "@/assets/exp-realty-logo.png";
 import ServiceNavTiles from "@/components/ServiceNavTiles";
 

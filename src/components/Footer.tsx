@@ -4,6 +4,7 @@ import mappin3d from "@/assets/mappin-3d.png";
 import expRealtyLogo from "@/assets/exp-realty-logo.png";
 import alcaLogo from "@/assets/alca-corporate-partner.png";
 import naosaBadge from "@/assets/naosa-badge.jpg";
+import naepcLogo from "@/assets/naepc-logo.png";
 
 const Footer = () => {
   return (
