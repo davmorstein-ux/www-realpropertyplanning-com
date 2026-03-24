@@ -82,7 +82,7 @@ const Index = () => {
       {/* ═══════════════════════════════════════════════════
           HERO — Full-width PNW home with overlay panel
       ═══════════════════════════════════════════════════ */}
-      <section className="relative min-h-[85vh] flex items-center">
+      <section className="relative min-h-[80vh] flex items-center">
         {/* Background image */}
         <img
           src={heroPnwHome}
@@ -92,18 +92,15 @@ const Index = () => {
           width={1920}
           height={1080}
         />
-        {/* Minimal neutral darkening — image stays bright and natural */}
-        <div className="absolute inset-0 bg-black/20" />
-        {/* Gentle text-area gradient only */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/15 to-transparent" />
+        <div className="absolute inset-0 bg-black/25" />
 
-        <div className="container relative z-10 px-6 lg:px-8 py-20 lg:py-28 flex flex-col items-center text-center">
+        <div className="container relative z-10 px-6 lg:px-8 py-20 lg:py-24 flex flex-col items-center text-center">
           <div className="max-w-3xl">
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-[56px] text-white font-bold leading-[1.08] mb-6" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.4), 0 1px 3px rgba(0,0,0,0.25)' }}>
-              Guiding Families Through One of Life's Most Complex Transitions
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-[54px] text-white font-bold leading-[1.1] mb-5" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.4), 0 1px 3px rgba(0,0,0,0.25)' }}>
+              Guiding Families Through Life's Most Important Property Decisions
             </h1>
-            <p className="text-white text-lg md:text-xl font-medium leading-relaxed mb-10 mx-auto max-w-2xl" style={{ textShadow: '0 1px 6px rgba(0,0,0,0.35), 0 1px 2px rgba(0,0,0,0.2)' }}>
-              Specialized probate real estate, estate sales, and senior transition support across Western Washington.
+            <p className="text-white/90 text-lg md:text-xl leading-relaxed mb-10 mx-auto max-w-2xl" style={{ textShadow: '0 1px 6px rgba(0,0,0,0.3)' }}>
+              Probate &amp; estate property sales · Senior transitions · Western Washington
             </p>
             <Link to="/contact">
               <Button
@@ -120,12 +117,12 @@ const Index = () => {
       {/* ═══════════════════════════════════════════════════
           ABOUT DAVID — Two-column with headshot + credentials
       ═══════════════════════════════════════════════════ */}
-      <section className="py-20 lg:py-28 bg-cream">
+      <section className="py-20 lg:py-24 bg-cream">
         <div className="mx-auto max-w-[1100px] px-6 lg:px-8">
           <div className="grid lg:grid-cols-[auto_1fr] gap-12 lg:gap-16 items-center">
             {/* Left — Headshot */}
             <div className="flex flex-col items-center">
-              <div className="w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden border-4 border-gold/30 shadow-xl">
+              <div className="w-60 h-60 md:w-68 md:h-68 rounded-full overflow-hidden border-4 border-gold/30 shadow-xl">
                 <img
                   src={daveHeadshot2}
                   alt="David Stein, probate real estate specialist and certified appraiser"
@@ -135,29 +132,33 @@ const Index = () => {
               </div>
             </div>
 
-            {/* Right — Bio + credentials */}
+            {/* Right — Bio + credentials + badges */}
             <div>
-              <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-5">
+              <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-4">
                 Meet David Stein
               </h2>
-              <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                With over 20 years of experience as both a licensed real estate broker and Washington State certified residential appraiser, David Stein brings rare dual expertise to every engagement. He works closely with attorneys, executors, trustees, and families — providing calm, knowledgeable guidance during some of life's most emotionally charged moments.
+              <p className="text-muted-foreground text-lg leading-relaxed mb-5">
+                With over 20 years of experience as both a licensed real estate broker and Washington State certified residential appraiser, David brings rare dual expertise to every engagement — providing calm, knowledgeable guidance during life's most emotionally charged moments.
               </p>
-              <div className="flex flex-col sm:flex-row gap-3">
-                <div className="flex items-center gap-3 bg-secondary rounded-full px-5 py-3 border border-border">
-                  <Award className="w-5 h-5 text-gold shrink-0" />
-                  <div>
-                    <p className="text-foreground font-semibold text-sm">Licensed Real Estate Broker</p>
-                    <p className="text-muted-foreground text-xs">eXp Realty · License #113972</p>
-                  </div>
+              <div className="flex flex-col sm:flex-row gap-3 mb-6">
+                <div className="flex items-center gap-2.5 bg-secondary rounded-full px-4 py-2.5 border border-border">
+                  <Award className="w-4 h-4 text-gold shrink-0" />
+                  <p className="text-foreground font-semibold text-sm">Licensed Real Estate Broker</p>
                 </div>
-                <div className="flex items-center gap-3 bg-secondary rounded-full px-5 py-3 border border-border">
-                  <Shield className="w-5 h-5 text-gold shrink-0" />
-                  <div>
-                    <p className="text-foreground font-semibold text-sm">WA Certified Residential Appraiser</p>
-                    <p className="text-muted-foreground text-xs">State-certified valuation expert</p>
-                  </div>
+                <div className="flex items-center gap-2.5 bg-secondary rounded-full px-4 py-2.5 border border-border">
+                  <Shield className="w-4 h-4 text-gold shrink-0" />
+                  <p className="text-foreground font-semibold text-sm">WA Certified Residential Appraiser</p>
                 </div>
+              </div>
+              <p className="text-muted-foreground text-xs uppercase tracking-widest font-semibold mb-3">Professional Memberships &amp; Affiliations</p>
+              <div className="flex flex-wrap items-center gap-6">
+                <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer">
+                  <img src={alcaLogo} alt="Aging Life Care Association Corporate Partner" className="h-14 w-auto" loading="lazy" />
+                </a>
+                <img src={naosaBadge} alt="National Association of Senior Advocates - Best Real Estate Agent 2026" className="h-16 w-auto" loading="lazy" />
+                <a href="https://www.naepc.org" target="_blank" rel="noopener noreferrer">
+                  <img src={naepcLogo} alt="National Association of Estate Planners & Councils" className="h-12 w-auto" loading="lazy" />
+                </a>
               </div>
             </div>
           </div>
@@ -167,7 +168,7 @@ const Index = () => {
       {/* ═══════════════════════════════════════════════════
           SERVICES — Three warm cards
       ═══════════════════════════════════════════════════ */}
-      <section className="py-20 lg:py-28 bg-warm-bg">
+      <section className="py-16 lg:py-22 bg-warm-bg">
         <div className="mx-auto max-w-[1100px] px-6 lg:px-8">
           <div className="text-center mb-14">
             <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-sm">
@@ -229,38 +230,12 @@ const Index = () => {
       ═══════════════════════════════════════════════════ */}
       <ServiceNavTiles />
 
-      {/* Credentials & Affiliations — directly below tiles */}
-      <section className="py-12 lg:py-16 bg-secondary">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mb-6">
-              <div className="flex items-center gap-3 bg-card rounded-full px-5 py-3 border border-border">
-                <Award className="w-5 h-5 text-gold shrink-0" />
-                <p className="text-foreground font-semibold text-sm">Licensed Real Estate Broker</p>
-              </div>
-              <div className="flex items-center gap-3 bg-card rounded-full px-5 py-3 border border-border">
-                <Shield className="w-5 h-5 text-gold shrink-0" />
-                <p className="text-foreground font-semibold text-sm">WA Certified Residential Appraiser</p>
-              </div>
-            </div>
-            <p className="text-muted-foreground text-xs uppercase tracking-widest font-semibold mb-5">Professional Memberships &amp; Affiliations</p>
-            <div className="flex flex-wrap items-center justify-center gap-8">
-              <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer">
-                <img src={alcaLogo} alt="Aging Life Care Association Corporate Partner" className="h-20 md:h-24 w-auto" loading="lazy" />
-              </a>
-              <img src={naosaBadge} alt="National Association of Senior Advocates - Best Real Estate Agent 2026" className="h-24 md:h-28 w-auto" loading="lazy" />
-              <a href="https://www.naepc.org" target="_blank" rel="noopener noreferrer">
-                <img src={naepcLogo} alt="National Association of Estate Planners & Councils" className="h-16 md:h-20 w-auto" loading="lazy" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Spacer removed — badges now live in About section */}
 
       {/* ═══════════════════════════════════════════════════
           WHEN SHOULD YOU CALL ME
       ═══════════════════════════════════════════════════ */}
-      <section className="py-16 lg:py-24 bg-cream">
+      <section className="py-16 lg:py-20 bg-cream">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-5">
