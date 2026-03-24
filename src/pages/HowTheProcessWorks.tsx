@@ -9,7 +9,6 @@ import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 
 
 const steps = [
@@ -57,6 +56,7 @@ const steps = [
   },
 ];
 
+import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 const faqs = [
   {
     question: "What is the typical process for selling an inherited or probate property?",

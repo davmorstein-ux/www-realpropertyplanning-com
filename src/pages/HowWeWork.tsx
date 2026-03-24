@@ -7,7 +7,6 @@ import { articleSchema } from "@/lib/schema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { MessageSquare } from "lucide-react";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 
 const contentBlocks = [
   {
@@ -36,6 +35,7 @@ const contentBlocks = [
   },
 ];
 
+import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 const HowWeWork = () => {
   return (
     <div className="min-h-screen bg-background">

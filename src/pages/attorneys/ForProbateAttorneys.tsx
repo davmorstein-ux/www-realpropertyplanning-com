@@ -8,7 +8,6 @@ import GoldCheck3D from "@/components/GoldCheck3D";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { AlertTriangle } from "lucide-react";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 
 const intersections = [
   "Determining the current market value of the property",
@@ -18,6 +17,7 @@ const intersections = [
   "Managing timelines tied to probate requirements",
 ];
 
+import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 const services = [
   { title: "Accurate, Defensible Valuation", description: "Clear market-based valuations to support probate requirements and decision-making." },
   { title: "Strategic Sale Guidance", description: "Helping determine timing, pricing, and preparation strategy for the property." },

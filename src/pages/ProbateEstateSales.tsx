@@ -11,7 +11,6 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 import warning3d from "@/assets/warning-3d.png";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 
 const probateVsInherited = [
   {
@@ -24,6 +23,7 @@ const probateVsInherited = [
   },
 ];
 
+import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 const whatMakesDifferent = [
   "Legal authority and court requirements may dictate when and how a sale occurs",
   "Multiple decision-makers — executors, co-heirs, attorneys, trustees — must coordinate",

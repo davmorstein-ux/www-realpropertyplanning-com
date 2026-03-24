@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Calendar } from "lucide-react";
 import iconEmail3d from "@/assets/icons/icon-email-3d.png";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 
 const CTASection = () => {
   return (
@@ -44,6 +43,7 @@ const CTASection = () => {
       </div>
     </section>
   );
+import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 };
 
 export default CTASection;

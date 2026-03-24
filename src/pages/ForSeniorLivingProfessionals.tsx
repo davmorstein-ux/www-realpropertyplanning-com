@@ -10,10 +10,10 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import people3d from "@/assets/people-3d.png";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 
 const SITE_URL = "https://realpropertyplanning.com";
 
+import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 const howWeHelp = [
   {
     title: "Home Decisions After a Move to Senior Living",

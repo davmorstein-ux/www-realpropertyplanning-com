@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { MapPin, Globe } from "lucide-react";
 import iconEmail3d from "@/assets/icons/icon-email-3d.png";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 
 const LendersFinancingSpecialists = () => (
   <div className="min-h-screen bg-background">
@@ -189,4 +188,5 @@ const LendersFinancingSpecialists = () => (
   </div>
 );
 
+import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 export default LendersFinancingSpecialists;

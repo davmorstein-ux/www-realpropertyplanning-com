@@ -8,7 +8,6 @@ import GoldCheck3D from "@/components/GoldCheck3D";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { AlertTriangle } from "lucide-react";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 
 const intersections = [
   "Division of real property",
@@ -18,6 +17,7 @@ const intersections = [
   "Managing communication between multiple parties",
 ];
 
+import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 const services = [
   { title: "Accurate Market Valuation", description: "Clear, data-supported valuation to assist in informed decision-making." },
   { title: "Structured Process Guidance", description: "Helping clients understand the steps involved in preparing and selling a home." },

@@ -22,7 +22,6 @@ import naosaBadge from "@/assets/naosa-badge.jpg";
 import naepcLogo from "@/assets/naepc-logo.png";
 import expRealtyLogo from "@/assets/exp-realty-logo.png";
 import ServiceNavTiles from "@/components/ServiceNavTiles";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 
 const serviceAreas = [
   { county: "King County", href: "/counties/king", cities: "Seattle, Bellevue, Kirkland, Redmond, Renton, Kent, Federal Way & more" },
@@ -31,6 +30,7 @@ const serviceAreas = [
   { county: "Kitsap County", href: "/counties/kitsap", cities: "Bremerton, Silverdale, Poulsbo, Bainbridge Island, Port Orchard & more" },
 ];
 
+import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 const homepageFaqs = [
   { question: "Do I need probate before selling an inherited home in Washington?", answer: "It depends on how the property is titled and the estate structure. In many cases, probate or letters testamentary are required before a sale can proceed. Real Property Planning helps families and executors understand what's needed and how to move forward efficiently.", link: "/faq" },
   { question: "What is probate real estate?", answer: "Probate real estate refers to property that must be sold as part of settling a deceased person's estate. The process involves court oversight, specific timelines, and legal requirements that differ from a standard home sale.", link: "/faq" },

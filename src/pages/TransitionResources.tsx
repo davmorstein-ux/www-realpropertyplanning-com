@@ -29,10 +29,10 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Home, FileText, Briefcase, BookOpen, Handshake, HeartHandshake } from "lucide-react";
 import people3d from "@/assets/people-3d.png";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 
 const SITE_URL = "https://realpropertyplanning.com";
 
+import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 const situations = [
   "Moving a parent into assisted living, memory care, or another senior living community",
   "Selling a home after the death of a family member",

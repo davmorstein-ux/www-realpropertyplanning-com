@@ -8,7 +8,6 @@ import GoldCheck3D from "@/components/GoldCheck3D";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { AlertTriangle } from "lucide-react";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 
 const intersections = [
   "Transitioning to assisted living or memory care",
@@ -18,6 +17,7 @@ const intersections = [
   "Coordinating decisions among family members",
 ];
 
+import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 const services = [
   { title: "Clear, Objective Valuation", description: "Helping families understand current market value so they can make informed decisions aligned with legal and financial planning." },
   { title: "Transition-Focused Planning", description: "Guidance on whether to sell, when to sell, and how to prepare the home — based on the client's situation." },

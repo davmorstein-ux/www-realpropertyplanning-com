@@ -8,7 +8,6 @@ import GoldCheck3D from "@/components/GoldCheck3D";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { AlertTriangle } from "lucide-react";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 
 const questions = [
   "Should the property be sold now or held?",
@@ -18,6 +17,7 @@ const questions = [
   "How do we coordinate with trustees, family members, and advisors?",
 ];
 
+import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 const services = [
   { title: "Clear, Defensible Valuation", description: "Objective market insight to support planning decisions, trust strategies, and client discussions." },
   { title: "Strategic Sale Planning", description: "Guidance on timing, preparation, and positioning — aligned with the broader estate plan." },

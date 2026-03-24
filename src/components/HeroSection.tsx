@@ -4,7 +4,6 @@ import iconEmail3d from "@/assets/icons/icon-email-3d.png";
 import daveHeadshot from "@/assets/dave-headshot.jpg";
 import logo from "@/assets/logo-rpp.jpg";
 import AgentCredentialBlock from "@/components/AgentCredentialBlock";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 
 const HeroSection = () => {
   return (
@@ -87,6 +86,7 @@ const HeroSection = () => {
       </div>
     </section>
   );
+import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 };
 
 export default HeroSection;

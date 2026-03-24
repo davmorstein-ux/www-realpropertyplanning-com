@@ -3,7 +3,6 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "@/assets/logo-rpp.jpg";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 
 const primaryLinks = [
   { href: "/", label: "Home" },
@@ -32,6 +31,7 @@ const primaryLinks = [
   ]},
 ];
 
+import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);

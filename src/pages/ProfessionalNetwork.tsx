@@ -6,7 +6,6 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { articleSchema } from "@/lib/schema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 
 
 const professionalCategories = [
@@ -52,6 +51,7 @@ const professionalCategories = [
   },
 ];
 
+import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 const jsonLd = articleSchema({
   headline: "Professional Network & Trusted Resources",
   description:

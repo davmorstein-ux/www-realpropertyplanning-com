@@ -12,7 +12,6 @@ import iconAttorneys from "@/assets/icons/icon-attorneys.png";
 import iconFinancial from "@/assets/icons/icon-financial-planning.png";
 import iconSeniorMoves from "@/assets/icons/icon-senior-moves.png";
 import iconHomeValue from "@/assets/icons/icon-home-value.png";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 
 const partnerTiles = [
   {
@@ -41,6 +40,7 @@ const partnerTiles = [
   },
 ];
 
+import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 const whyCollaborate = [
   "Clear, defensible valuation backed by appraisal experience",
   "Structured and reliable process",

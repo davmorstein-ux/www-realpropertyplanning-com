@@ -15,7 +15,6 @@ import iconHomeValue from "@/assets/icons/icon-home-value.png";
 import alcaLogo from "@/assets/alca-corporate-partner.png";
 import naosaBadge from "@/assets/naosa-badge.jpg";
 import naepcLogo from "@/assets/naepc-logo.png";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 
 const partnerTiles = [
   {
@@ -38,6 +37,7 @@ const partnerTiles = [
   },
 ];
 
+import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 const whyCollaborate = [
   "Clear, defensible valuation backed by appraisal experience",
   "Structured and reliable process",
