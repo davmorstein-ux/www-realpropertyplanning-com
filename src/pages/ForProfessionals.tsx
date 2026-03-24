@@ -10,7 +10,7 @@ import { Phone } from "lucide-react";
 
 import iconAttorneys from "@/assets/icons/icon-attorneys.png";
 import iconFinancial from "@/assets/icons/icon-financial-planning.png";
-import iconSeniorMoves from "@/assets/icons/icon-senior-moves.png";
+
 import iconHomeValue from "@/assets/icons/icon-home-value.png";
 import alcaLogo from "@/assets/alca-corporate-partner.png";
 import naosaBadge from "@/assets/naosa-badge.jpg";
