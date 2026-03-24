@@ -8,6 +8,11 @@ import Index from "./pages/Index";
 import ProbateEstateSales from "./pages/ProbateEstateSales";
 import SeniorTransitions from "./pages/SeniorTransitions";
 import ForAttorneys from "./pages/ForAttorneys";
+import ForProbateAttorneys from "./pages/attorneys/ForProbateAttorneys";
+import ForEstatePlanningAttorneys from "./pages/attorneys/ForEstatePlanningAttorneys";
+import ForElderLawAttorneys from "./pages/attorneys/ForElderLawAttorneys";
+import ForFamilyLawAttorneys from "./pages/attorneys/ForFamilyLawAttorneys";
+import ForDivorceAttorneys from "./pages/attorneys/ForDivorceAttorneys";
 import HowWeWork from "./pages/HowWeWork";
 import HowTheProcessWorks from "./pages/HowTheProcessWorks";
 import WhyValuationMatters from "./pages/WhyValuationMatters";
@@ -59,6 +64,11 @@ const App = () => (
           <Route path="/probate-estate-sales" element={<ProbateEstateSales />} />
           <Route path="/senior-transitions" element={<SeniorTransitions />} />
           <Route path="/for-attorneys" element={<ForAttorneys />} />
+          <Route path="/for-probate-attorneys" element={<ForProbateAttorneys />} />
+          <Route path="/for-estate-planning-attorneys" element={<ForEstatePlanningAttorneys />} />
+          <Route path="/for-elder-law-attorneys" element={<ForElderLawAttorneys />} />
+          <Route path="/for-family-law-attorneys" element={<ForFamilyLawAttorneys />} />
+          <Route path="/for-divorce-attorneys" element={<ForDivorceAttorneys />} />
           <Route path="/how-we-work" element={<HowWeWork />} />
           <Route path="/how-the-process-works" element={<HowTheProcessWorks />} />
           <Route path="/why-valuation-matters" element={<WhyValuationMatters />} />

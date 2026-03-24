@@ -9,9 +9,42 @@ import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Phone, MessageSquare } from "lucide-react";
+import { Phone, MessageSquare, Scale, FileText, Heart, Users, Handshake } from "lucide-react";
 import RealClientSituations from "@/components/RealClientSituations";
 import PageTestimonials from "@/components/PageTestimonials";
+
+const attorneyTypes = [
+  {
+    title: "Probate Attorneys",
+    description: "Property sales during estate administration, court-supervised transactions, and executor support.",
+    href: "/for-probate-attorneys",
+    icon: Scale,
+  },
+  {
+    title: "Estate Planning Attorneys",
+    description: "Trust-owned property sales, pre-planning valuations, and multi-generational property transitions.",
+    href: "/for-estate-planning-attorneys",
+    icon: FileText,
+  },
+  {
+    title: "Elder Law Attorneys",
+    description: "Guardianship sales, senior transitions, Medicaid planning, and family caregiver coordination.",
+    href: "/for-elder-law-attorneys",
+    icon: Heart,
+  },
+  {
+    title: "Family Law Attorneys",
+    description: "Marital home valuations, property settlements, buyout evaluations, and family transition support.",
+    href: "/for-family-law-attorneys",
+    icon: Users,
+  },
+  {
+    title: "Divorce Attorneys",
+    description: "Court-ordered home sales, contested valuations, and neutral property coordination during divorce.",
+    href: "/for-divorce-attorneys",
+    icon: Handshake,
+  },
+];
 
 const attorneyTestimonials = [
   {
@@ -153,10 +186,10 @@ const ForAttorneys = () => {
               For Attorneys & Fiduciaries
             </p>
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
-              A Trusted Real Estate Resource for Attorneys
+              Real Estate Support for Attorneys and Their Clients
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-8">
-              When your client's legal matter involves real property, David Stein provides the professional coordination, honest market analysis, and structured communication that protect your client's interests — and your reputation.
+              Helping attorneys navigate property decisions during life transitions with clarity, valuation expertise, and coordinated support.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Link to="/contact">
@@ -171,6 +204,44 @@ const ForAttorneys = () => {
                   Send a Message
                 </Button>
               </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Attorney Type Tiles */}
+      <section className="py-16 lg:py-24 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-[1100px] mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-4">
+                How Can I Help You Today?
+              </h2>
+              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+                Select your practice area to see how Real Property Planning supports your clients.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {attorneyTypes.map((type) => (
+                <Link
+                  key={type.href}
+                  to={type.href}
+                  className="group flex flex-col items-center text-center gap-4 rounded-2xl border border-border bg-card px-6 py-8 shadow-sm transition-all duration-150 hover:-translate-y-0.5 hover:shadow-md hover:border-accent/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                >
+                  <span className="flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 text-primary">
+                    <type.icon className="w-7 h-7" />
+                  </span>
+                  <h3 className="font-serif text-xl font-semibold text-foreground">
+                    {type.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {type.description}
+                  </p>
+                  <span className="text-accent text-sm font-medium group-hover:underline underline-offset-4">
+                    Learn more →
+                  </span>
+                </Link>
+              ))}
             </div>
           </div>
         </div>
