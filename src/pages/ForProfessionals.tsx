@@ -10,7 +10,7 @@ import { Phone } from "lucide-react";
 
 import iconAttorneys from "@/assets/icons/icon-attorneys.png";
 import iconFinancial from "@/assets/icons/icon-financial-planning.png";
-import iconSeniorMoves from "@/assets/icons/icon-senior-moves.png";
+
 import iconHomeValue from "@/assets/icons/icon-home-value.png";
 import alcaLogo from "@/assets/alca-corporate-partner.png";
 import naosaBadge from "@/assets/naosa-badge.jpg";
@@ -28,12 +28,6 @@ const partnerTiles = [
     description: "Working alongside financial planners and advisors to align real estate decisions with broader financial goals.",
     href: "/for-financial-planners",
     iconSrc: iconFinancial,
-  },
-  {
-    title: "Senior &\nTransition",
-    description: "Coordinating with those who help seniors and families navigate downsizing, relocation, and care transitions.",
-    href: "/for-senior-living-professionals",
-    iconSrc: iconSeniorMoves,
   },
   {
     title: "Lenders &\nFinancing",
