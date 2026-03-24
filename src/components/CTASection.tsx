@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, Calendar } from "lucide-react";
+import { Phone, Calendar } from "lucide-react";
+import iconEmail3d from "@/assets/icons/icon-email-3d.png";
 
 const CTASection = () => {
   return (
@@ -35,7 +36,7 @@ const CTASection = () => {
           </div>
           
           <div className="flex items-center justify-center gap-2 text-muted-foreground">
-            <Mail className="w-4 h-4" />
+            <img src={iconEmail3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0" />
             <span>david@realpropertyplanning.com</span>
           </div>
         </div>

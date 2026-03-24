@@ -6,7 +6,8 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Globe } from "lucide-react";
+import { Phone, MapPin, Globe } from "lucide-react";
+import iconEmail3d from "@/assets/icons/icon-email-3d.png";
 
 const LendersFinancingSpecialists = () => (
   <div className="min-h-screen bg-background">
@@ -112,7 +113,7 @@ const LendersFinancingSpecialists = () => (
                 href="mailto:santadan@c2financial.com"
                 className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
               >
-                <Mail className="w-5 h-5 text-gold shrink-0" />
+                <img src={iconEmail3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0" />
                 <span>santadan@c2financial.com</span>
               </a>
               <a

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail } from "lucide-react";
+import { Phone } from "lucide-react";
 import mappin3d from "@/assets/mappin-3d.png";
+import iconEmail3d from "@/assets/icons/icon-email-3d.png";
 import expRealtyLogo from "@/assets/exp-realty-logo.png";
 import alcaLogo from "@/assets/alca-corporate-partner.png";
 import naosaBadge from "@/assets/naosa-badge.jpg";
@@ -28,7 +29,7 @@ const Footer = () => {
                 (206) 900-3015
               </a>
               <a href="mailto:david@realpropertyplanning.com" className="text-primary-foreground/70 hover:text-gold flex items-center gap-2">
-                <Mail className="w-4 h-4" />
+                <img src={iconEmail3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0" />
                 david@realpropertyplanning.com
               </a>
               <div className="text-primary-foreground/50 flex items-start gap-2 mt-1">

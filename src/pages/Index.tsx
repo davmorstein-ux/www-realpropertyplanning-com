@@ -8,9 +8,10 @@ import { realEstateAgentSchema } from "@/lib/schema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import {
-  Phone, Mail,
+  Phone,
   ArrowRight, ChevronRight, Quote, Award, Shield
 } from "lucide-react";
+import iconEmail3d from "@/assets/icons/icon-email-3d.png";
 import mappin3d from "@/assets/mappin-3d.png";
 import iconServiceProbate from "@/assets/icons/icon-service-probate.png";
 import iconServiceSenior from "@/assets/icons/icon-service-senior.png";
@@ -365,7 +366,7 @@ const Index = () => {
                 </a>
                 <a href="mailto:david@realpropertyplanning.com" className="flex items-center gap-4 text-primary-foreground hover:text-gold transition-colors group">
                   <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center group-hover:bg-gold/20 transition-colors">
-                    <Mail className="w-5 h-5 text-gold" />
+                    <img src={iconEmail3d} alt="" aria-hidden="true" className="w-6 h-6 object-contain shrink-0" />
                   </div>
                   <div>
                     <p className="text-primary-foreground/60 text-sm">Email</p>

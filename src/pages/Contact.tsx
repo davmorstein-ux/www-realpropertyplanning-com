@@ -16,7 +16,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Phone, Mail } from "lucide-react";
+import { Phone } from "lucide-react";
+import iconEmail3d from "@/assets/icons/icon-email-3d.png";
 import mappin3d from "@/assets/mappin-3d.png";
 import { useState } from "react";
 import expRealtyLogo from "@/assets/exp-realty-logo.png";
@@ -118,7 +119,7 @@ const Contact = () => {
 
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center shrink-0">
-                    <Mail className="w-5 h-5 text-gold" />
+                    <img src={iconEmail3d} alt="" aria-hidden="true" className="w-6 h-6 object-contain shrink-0" />
                   </div>
                   <div>
                     <p className="font-medium text-foreground mb-1">Email</p>
