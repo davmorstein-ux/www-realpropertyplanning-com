@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import {
   Phone,
-  ArrowRight, ChevronRight, Quote, Shield
+  ArrowRight, ChevronRight, Quote
 } from "lucide-react";
 import iconEmail3d from "@/assets/icons/icon-email-3d.png";
 import iconLicense3d from "@/assets/icons/icon-license-3d.png";
