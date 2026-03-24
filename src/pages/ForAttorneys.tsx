@@ -9,6 +9,7 @@ import { Phone } from "lucide-react";
 
 import iconProbate from "@/assets/icons/icon-probate-sales.png";
 import iconExecutors from "@/assets/icons/icon-executors.png";
+import iconDivorce from "@/assets/icons/icon-divorce.png";
 import iconSeniorMoves from "@/assets/icons/icon-senior-moves.png";
 import iconFinancial from "@/assets/icons/icon-financial-planning.png";
 import iconTrustees from "@/assets/icons/icon-trustees.png";
@@ -37,7 +38,7 @@ const attorneyTiles = [
   {
     title: "Divorce\nAttorneys",
     href: "/for-divorce-attorneys",
-    iconSrc: iconExecutors,
+    iconSrc: iconDivorce,
   },
 ];
 
