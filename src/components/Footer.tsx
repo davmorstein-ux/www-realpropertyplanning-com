@@ -4,6 +4,7 @@ import mappin3d from "@/assets/mappin-3d.png";
 import expRealtyLogo from "@/assets/exp-realty-logo.png";
 import alcaLogo from "@/assets/alca-corporate-partner.png";
 import naosaBadge from "@/assets/naosa-badge.jpg";
+import naepcLogo from "@/assets/naepc-logo.png";
 
 const Footer = () => {
   return (
@@ -116,6 +117,14 @@ const Footer = () => {
               className="h-14 w-auto opacity-80"
               loading="lazy"
             />
+            <a href="https://www.naepc.org" target="_blank" rel="noopener noreferrer">
+              <img
+                src={naepcLogo}
+                alt="National Association of Estate Planners & Councils"
+                className="h-10 w-auto opacity-80 hover:opacity-100 transition-opacity"
+                loading="lazy"
+              />
+            </a>
           </div>
         </div>
 

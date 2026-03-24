@@ -15,6 +15,7 @@ import people3d from "@/assets/people-3d.png";
 import heart3d from "@/assets/heart-3d.png";
 import alcaLogo from "@/assets/alca-corporate-partner.png";
 import naosaBadge from "@/assets/naosa-badge.jpg";
+import naepcLogo from "@/assets/naepc-logo.png";
 
 const transitionSituations = [
   "Downsizing from a longtime family home to a smaller residence",
@@ -131,9 +132,17 @@ const SeniorTransitions = () => {
                 className="h-24 md:h-28 w-auto"
                 loading="lazy"
               />
+              <a href="https://www.naepc.org" target="_blank" rel="noopener noreferrer">
+                <img
+                  src={naepcLogo}
+                  alt="National Association of Estate Planners & Councils"
+                  className="h-16 md:h-20 w-auto"
+                  loading="lazy"
+                />
+              </a>
             </div>
             <p className="text-muted-foreground text-base leading-relaxed">
-              Real Property Planning is a Corporate Partner of the Aging Life Care Association and a recognized member of the National Association of Senior Advocates and Advisors.
+              Real Property Planning is a Corporate Partner of the Aging Life Care Association, a recognized member of the National Association of Senior Advocates and Advisors, and a member of the National Association of Estate Planners &amp; Councils.
             </p>
           </div>
         </div>

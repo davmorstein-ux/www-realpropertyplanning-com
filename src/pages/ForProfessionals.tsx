@@ -12,6 +12,9 @@ import iconAttorneys from "@/assets/icons/icon-attorneys.png";
 import iconFinancial from "@/assets/icons/icon-financial-planning.png";
 import iconSeniorMoves from "@/assets/icons/icon-senior-moves.png";
 import iconHomeValue from "@/assets/icons/icon-home-value.png";
+import alcaLogo from "@/assets/alca-corporate-partner.png";
+import naosaBadge from "@/assets/naosa-badge.jpg";
+import naepcLogo from "@/assets/naepc-logo.png";
 
 const partnerTiles = [
   {
@@ -166,6 +169,24 @@ const ForProfessionals = () => {
                 </li>
               ))}
             </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Professional Affiliations */}
+      <section className="py-12 lg:py-16 bg-cream">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h3 className="font-serif text-xl text-foreground font-semibold mb-6">Professional Memberships &amp; Affiliations</h3>
+            <div className="flex flex-wrap items-center justify-center gap-8">
+              <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer">
+                <img src={alcaLogo} alt="Aging Life Care Association Corporate Partner" className="h-16 md:h-20 w-auto" loading="lazy" />
+              </a>
+              <img src={naosaBadge} alt="National Association of Senior Advocates - Best Real Estate Agent 2026" className="h-20 md:h-24 w-auto" loading="lazy" />
+              <a href="https://www.naepc.org" target="_blank" rel="noopener noreferrer">
+                <img src={naepcLogo} alt="National Association of Estate Planners & Councils" className="h-14 md:h-18 w-auto" loading="lazy" />
+              </a>
+            </div>
           </div>
         </div>
       </section>
