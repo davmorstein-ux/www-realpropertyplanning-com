@@ -10,7 +10,8 @@ import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Phone, AlertTriangle } from "lucide-react";
+import { Phone } from "lucide-react";
+import warning3d from "@/assets/warning-3d.png";
 import scale3d from "@/assets/scale-3d.png";
 
 const whyMatters = [
@@ -140,7 +141,7 @@ const WhyValuationMatters = () => {
       <section className="py-20 lg:py-28 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <AlertTriangle className="w-10 h-10 text-gold mb-6" />
+            <img src={warning3d} alt="" aria-hidden="true" className="w-10 h-10 object-contain mb-6" />
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
               What Happens When Pricing Goes Wrong
             </h2>

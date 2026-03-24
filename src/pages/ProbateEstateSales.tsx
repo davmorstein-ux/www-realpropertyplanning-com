@@ -9,7 +9,8 @@ import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Phone, AlertTriangle } from "lucide-react";
+import { Phone } from "lucide-react";
+import warning3d from "@/assets/warning-3d.png";
 
 const probateVsInherited = [
   {
@@ -223,7 +224,7 @@ const ProbateEstateSales = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <div className="flex items-start gap-4 bg-card border border-border rounded-xl p-6">
-              <AlertTriangle className="w-6 h-6 text-gold shrink-0 mt-0.5" />
+              <img src={warning3d} alt="" aria-hidden="true" className="w-6 h-6 object-contain shrink-0 mt-0.5" />
               <div>
                 <h3 className="font-serif text-lg text-foreground font-semibold mb-2">Important Note</h3>
                 <p className="text-muted-foreground leading-relaxed text-sm">
