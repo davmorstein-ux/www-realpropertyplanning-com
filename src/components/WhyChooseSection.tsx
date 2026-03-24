@@ -67,11 +67,7 @@ const WhyChooseSection = () => {
                 key={index}
                 className="bg-card p-8 rounded-lg border border-border text-center"
               >
-                {item.image ? (
-                  <img src={item.image} alt="" aria-hidden="true" className="w-8 h-8 object-contain mx-auto mb-4" />
-                ) : (
-                  <item.icon className="w-8 h-8 text-gold mx-auto mb-4" />
-                )}
+                <img src={item.image} alt="" aria-hidden="true" className="w-8 h-8 object-contain mx-auto mb-4" />
                 <div className="font-serif text-3xl text-foreground font-medium mb-2">
                   {item.stat}
                 </div>
