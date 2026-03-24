@@ -302,14 +302,14 @@ const Index = () => {
       {/* ═══════════════════════════════════════════════════
           AREAS SERVED — Navy background with county cards
       ═══════════════════════════════════════════════════ */}
-      <section className="py-20 lg:py-28 bg-navy relative overflow-hidden">
+      <section className="py-16 lg:py-24 bg-navy relative overflow-hidden">
         {/* Subtle PNW watermark */}
         <div className="absolute inset-0 opacity-[0.03]" style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath d='M100 20 L130 80 L160 140 H40 L70 80 Z' fill='%23fff'/%3E%3Cpath d='M100 50 L120 90 L140 130 H60 L80 90 Z' fill='%23fff'/%3E%3C/svg%3E")`,
           backgroundSize: '300px',
         }} />
         <div className="mx-auto max-w-[1100px] px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-14">
+          <div className="text-center mb-10">
             <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">
               Service Areas
             </p>
@@ -320,7 +320,7 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {serviceAreas.map((area, i) => (
               <Link key={i} to={area.href} className="group">
-                <div className="bg-primary-foreground/5 border border-primary-foreground/10 rounded-xl p-8 hover:bg-primary-foreground/10 transition-colors">
+                <div className="bg-primary-foreground/5 border border-primary-foreground/10 rounded-xl p-6 hover:bg-primary-foreground/10 transition-colors">
                   <div className="flex items-center gap-3 mb-3">
                     <img src={mappin3d} alt="" aria-hidden="true" className="w-7 h-7 object-contain shrink-0" />
                     <h3 className="font-serif text-xl text-primary-foreground font-semibold group-hover:text-gold transition-colors">
