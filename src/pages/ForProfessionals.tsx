@@ -134,7 +134,7 @@ const ForProfessionals = () => {
                   <img
                     src={tile.iconSrc}
                     alt=""
-                    className="h-28 w-28 sm:h-32 sm:w-32 object-contain"
+                    className="h-28 w-28 sm:h-32 sm:w-32 object-contain mix-blend-multiply"
                     loading="lazy"
                   />
 
