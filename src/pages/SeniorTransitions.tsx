@@ -176,7 +176,7 @@ const SeniorTransitions = () => {
       <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <Users className="w-10 h-10 text-gold mb-6" />
+            <img src={people3d} alt="" aria-hidden="true" className="w-10 h-10 object-contain mb-6" />
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
               Coordinating With Family, Care Professionals & Trusted Advisors
             </h2>
