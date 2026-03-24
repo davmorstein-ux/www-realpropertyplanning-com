@@ -50,6 +50,12 @@ const categories = [
     description:
       "Moving companies and relocation specialists experienced with estate and senior transitions.",
   },
+  {
+    href: "/lenders-and-financing-specialists",
+    title: "Lenders & Financing Specialists",
+    description:
+      "Trusted lending professionals who help clients explore reverse mortgage, retirement financing, and long-term planning options.",
+  },
 ];
 
 const Resources = () => {
