@@ -25,6 +25,7 @@ const primaryLinks = [
   { href: "/about", label: "About" },
   { href: "/resources", label: "Resources", children: [
     { href: "/resources", label: "Resources" },
+    { href: "/lenders-and-financing-specialists", label: "Lenders & Financing" },
     { href: "/contact", label: "Contact" },
   ]},
 ];
