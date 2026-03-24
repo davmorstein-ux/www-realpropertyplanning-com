@@ -10,7 +10,8 @@ import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Phone, Users } from "lucide-react";
+import { Phone } from "lucide-react";
+import people3d from "@/assets/people-3d.png";
 import heart3d from "@/assets/heart-3d.png";
 import alcaLogo from "@/assets/alca-corporate-partner.png";
 
@@ -175,7 +176,7 @@ const SeniorTransitions = () => {
       <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <Users className="w-10 h-10 text-gold mb-6" />
+            <img src={people3d} alt="" aria-hidden="true" className="w-10 h-10 object-contain mb-6" />
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
               Coordinating With Family, Care Professionals & Trusted Advisors
             </h2>
