@@ -30,7 +30,6 @@ import { Link } from "react-router-dom";
 import {
   Phone,
   ArrowRight,
-  Heart,
   Home,
   FileText,
   Users,
