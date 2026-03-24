@@ -9,41 +9,56 @@ import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Phone, MessageSquare, Scale, FileText, Heart, Users, Handshake } from "lucide-react";
+import { Phone, Scale, FileText, Heart, Users, Handshake } from "lucide-react";
 import RealClientSituations from "@/components/RealClientSituations";
 import PageTestimonials from "@/components/PageTestimonials";
 
 const attorneyTypes = [
   {
     title: "Probate Attorneys",
-    description: "Property sales during estate administration, court-supervised transactions, and executor support.",
+    description: "Support for inherited property, estate sales, and coordination with executors and heirs.",
     href: "/for-probate-attorneys",
     icon: Scale,
   },
   {
     title: "Estate Planning Attorneys",
-    description: "Trust-owned property sales, pre-planning valuations, and multi-generational property transitions.",
+    description: "Helping clients evaluate real estate decisions as part of broader planning strategies.",
     href: "/for-estate-planning-attorneys",
     icon: FileText,
   },
   {
     title: "Elder Law Attorneys",
-    description: "Guardianship sales, senior transitions, Medicaid planning, and family caregiver coordination.",
+    description: "Guidance for clients navigating care transitions, long-term planning, and housing decisions.",
     href: "/for-elder-law-attorneys",
     icon: Heart,
   },
   {
     title: "Family Law Attorneys",
-    description: "Marital home valuations, property settlements, buyout evaluations, and family transition support.",
+    description: "Structured support for property decisions during family-related legal matters.",
     href: "/for-family-law-attorneys",
     icon: Users,
   },
   {
     title: "Divorce Attorneys",
-    description: "Court-ordered home sales, contested valuations, and neutral property coordination during divorce.",
+    description: "Objective valuation and neutral guidance for property division and sale.",
     href: "/for-divorce-attorneys",
     icon: Handshake,
   },
+];
+
+const whyCollaborate = [
+  "Clear, defensible valuation backed by appraisal experience",
+  "Structured, professional approach to property decisions",
+  "Experience coordinating with multiple stakeholders",
+  "Strong communication throughout the process",
+  "Focus on reducing stress for clients",
+];
+
+const coordinateWith = [
+  "Senior move managers",
+  "Estate sale companies",
+  "Financial professionals",
+  "Specialized lenders",
 ];
 
 const attorneyTestimonials = [
@@ -80,61 +95,6 @@ const attorneyCaseStudies = [
   },
 ];
 
-const whyRefer = [
-  "Licensed real estate broker and Washington State certified residential appraiser — dual credentials that provide analytical depth in pricing and market positioning",
-  "Clear, honest pricing guidance based on property condition and market data — not inflated numbers",
-  "Professional, timely communication with attorneys and their clients at every stage",
-  "Extensive experience with probate sales, trust administration, guardianship dispositions, and senior transitions",
-  "Full coordination of property preparation — cleanout, repairs, staging, and vendor management",
-  "Deep respect for the attorney-client relationship and fiduciary responsibilities",
-  "Calm, patient handling of sensitive family dynamics and multi-party situations",
-  "Willingness to speak directly with clients, family members, and other professionals — reducing your workload",
-];
-
-const clientSituations = [
-  "Probate property that needs to be sold as part of estate administration",
-  "Trust-owned real estate that a trustee needs to liquidate or manage",
-  "Guardianship or conservatorship property requiring court-supervised sale",
-  "Inherited home where multiple heirs have different opinions about what to do",
-  "Senior client transitioning from a longtime home to assisted living or family care",
-  "Estate property with significant deferred maintenance or condition issues",
-  "Out-of-state executor who needs reliable local coordination",
-  "Situations requiring documented market analysis for court or beneficiary review",
-];
-
-const processSteps = [
-  {
-    number: "1",
-    title: "You Reach Out",
-    text: "Share the client situation — property type, legal context, timeline, and any known complications. David listens carefully and outlines how he can help.",
-  },
-  {
-    number: "2",
-    title: "David Assesses the Property",
-    text: "He visits the home, evaluates condition, and provides a written summary of findings — including realistic market perspective and preparation recommendations.",
-  },
-  {
-    number: "3",
-    title: "Pricing and Strategy",
-    text: "Drawing on his appraisal background, David presents pricing guidance based on actual condition and comparable sales — not aspirational numbers or automated estimates.",
-  },
-  {
-    number: "4",
-    title: "Preparation and Coordination",
-    text: "If needed, David creates a preparation plan and coordinates vendors directly — cleanout, repairs, staging — keeping your client informed without requiring their day-to-day involvement.",
-  },
-  {
-    number: "5",
-    title: "Marketing Through Closing",
-    text: "Professional listing, strategic marketing, offer review, negotiation, and closing — all managed with attention to the legal context and fiduciary duties that distinguish estate transactions.",
-  },
-  {
-    number: "6",
-    title: "You Stay Informed",
-    text: "Updates at key milestones — listing, offers, inspections, and closing — with availability for questions throughout. David communicates at the level of detail you prefer.",
-  },
-];
-
 const faqs = [
   {
     question: "When should an attorney involve a real estate professional in a probate or trust matter?",
@@ -159,11 +119,11 @@ const faqs = [
 ];
 
 const jsonLd = articleSchema({
-  headline: "A Trusted Real Estate Resource for Attorneys",
+  headline: "Real Estate Support for Attorneys and Their Clients",
   description: "Real Property Planning works with attorneys and their clients when real property is involved in probate, trust administration, guardianship, estate transitions, and senior moves across Western Washington.",
   url: "/for-attorneys",
   datePublished: "2025-01-15",
-  dateModified: "2026-03-23",
+  dateModified: "2026-03-24",
   about: ["Probate real estate", "Attorney referral", "Fiduciary support", "Estate property", "Trust-owned real estate"],
 });
 
@@ -171,8 +131,8 @@ const ForAttorneys = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Real Estate Resource for Estate & Probate Attorneys | David Stein"
-        description="Experienced real estate broker and certified appraiser assisting attorneys and fiduciaries with probate property sales and estate real estate decisions in Western Washington."
+        title="Real Estate Support for Attorneys | David Stein – Real Property Planning"
+        description="Licensed broker and certified appraiser supporting attorneys with probate sales, estate property coordination, and valuation guidance across Western Washington."
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema items={[{ name: "For Attorneys", url: "/for-attorneys" }]} />
@@ -189,36 +149,65 @@ const ForAttorneys = () => {
               Real Estate Support for Attorneys and Their Clients
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-8">
-              Helping attorneys navigate property decisions during life transitions with clarity, valuation expertise, and coordinated support.
+              Helping Navigate Property Decisions with Clarity, Coordination, and Confidence
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <Link to="/contact">
-                <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold px-7 py-4 h-auto rounded-lg w-full sm:w-auto">
-                  <Phone className="w-4 h-4 mr-2" />
-                  Connect About a Client Situation
-                </Button>
-              </Link>
-              <Link to="/contact">
-                <Button size="lg" variant="outline" className="border-gold/50 bg-transparent text-gold hover:bg-gold hover:text-foreground focus-visible:ring-gold font-medium px-7 py-4 h-auto rounded-lg w-full sm:w-auto">
-                  <MessageSquare className="w-4 h-4 mr-2" />
-                  Send a Message
-                </Button>
-              </Link>
-            </div>
+            <Link to="/contact">
+              <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold px-7 py-4 h-auto rounded-lg">
+                <Phone className="w-4 h-4 mr-2" />
+                Connect to Discuss a Client Situation
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Attorney Type Tiles */}
-      <section className="py-16 lg:py-24 bg-background">
+      {/* Intro */}
+      <section className="py-16 lg:py-20 bg-secondary">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+              Legal matters involving real estate often extend beyond documentation and structure — they require real-world execution.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+              Whether clients are navigating probate, estate planning, divorce, or life transitions, property decisions can introduce complexity, emotion, and uncertainty.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              I work alongside attorneys to provide clear valuation insight, structured guidance, and hands-on support — helping ensure that real estate decisions are handled thoughtfully and efficiently.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* A Collaborative Approach */}
+      <section className="py-16 lg:py-20 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-5">
+              A Collaborative Approach
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+              As a licensed real estate broker and state-certified residential appraiser, I bring a dual perspective that supports both strategic planning and practical execution.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+              My role is not to replace legal guidance — it is to support it.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              By working together, we can help clients move forward with greater clarity, reduced stress, and well-coordinated decisions.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Areas of Collaboration – Tile Grid */}
+      <section className="py-16 lg:py-24 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-[1100px] mx-auto">
             <div className="text-center mb-12">
               <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-4">
-                How Can I Help You Today?
+                Areas of Collaboration
               </h2>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                Select your practice area to see how Real Property Planning supports your clients.
+                Select the area that best fits your client's situation:
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -247,146 +236,51 @@ const ForAttorneys = () => {
         </div>
       </section>
 
-      {/* Positioning */}
+      {/* Why Attorneys Choose to Collaborate */}
+      <section className="py-16 lg:py-24 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-8">
+              Why Attorneys Choose to Collaborate
+            </h2>
+            <ul className="space-y-4">
+              {whyCollaborate.map((item, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <GoldCheck3D size={20} className="mt-0.5 shrink-0" />
+                  <span className="text-foreground leading-relaxed">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Supporting Beyond the Transaction */}
       <section className="py-16 lg:py-20 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-5">
-              A Collaborative Approach to Estate Real Estate
+              Supporting Your Clients Beyond the Transaction
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-              David works alongside attorneys — never around them. He understands that legal counsel directs the overall matter, and he provides real estate expertise that supports your work without overstepping professional boundaries.
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              In many situations, real estate is only one piece of a larger transition. I regularly coordinate with:
             </p>
+            <ul className="space-y-4 mb-6">
+              {coordinateWith.map((item, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <GoldCheck3D size={20} className="mt-0.5 shrink-0" />
+                  <span className="text-foreground leading-relaxed">{item}</span>
+                </li>
+              ))}
+            </ul>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              With dual credentials as a licensed broker and certified residential appraiser, David brings a level of analytical depth and professional discretion that general listing agents simply do not offer. Attorneys who refer clients to Real Property Planning know their clients will be treated with patience, honesty, and respect.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Attorneys Refer */}
-      <section className="py-16 lg:py-24 bg-background">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
-              Why Attorneys Refer Clients to David
-            </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Attorneys continue to refer because the experience is consistently professional, organized, and low-friction — and because their clients feel supported rather than pressured.
-            </p>
-            <ul className="space-y-4">
-              {whyRefer.map((item, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <GoldCheck3D size={20} className="mt-0.5" />
-                  <span className="text-foreground leading-relaxed">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* Client Situations */}
-      <section className="py-16 lg:py-24 bg-secondary">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
-              Common Client Situations
-            </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Attorneys involve Real Property Planning when a client's matter includes real property that needs professional guidance:
-            </p>
-            <ul className="space-y-4">
-              {clientSituations.map((item, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <GoldCheck3D size={20} className="mt-0.5" />
-                  <span className="text-foreground leading-relaxed">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* Process */}
-      <section className="py-16 lg:py-24 bg-background">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-[900px] mx-auto">
-            <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
-              How the Referral Process Works
-            </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-10">
-              Every situation is different, but the general workflow follows a clear, professional path:
-            </p>
-            <div className="grid gap-5">
-              {processSteps.map((step) => (
-                <div key={step.number} className="bg-card border border-border rounded-xl px-7 py-6 flex gap-5 items-start">
-                  <span className="text-gold font-serif text-3xl font-semibold leading-none pt-0.5 select-none shrink-0">
-                    {step.number}
-                  </span>
-                  <div>
-                    <h3 className="font-serif text-xl text-foreground font-semibold mb-1.5">
-                      {step.title}
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">{step.text}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Promise */}
-      <section className="py-16 lg:py-20 bg-secondary">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-3xl text-foreground font-semibold mb-5">
-              A Referral That Reflects Well on You
-            </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-              When you refer a client to David, your reputation is on the line. He understands that — and takes it seriously. Every client interaction is handled with the same professionalism, discretion, and care that you would expect from a trusted colleague.
-            </p>
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              David does not use high-pressure tactics, make unrealistic promises, or disappear after the listing is signed. He communicates clearly, manages expectations honestly, and treats every client — whether the property is worth $300,000 or $3 million — with the same level of attention and respect.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              Your clients will feel supported. And they will remember who referred them.
+              This helps ensure that clients receive support beyond just the sale of a property.
             </p>
           </div>
         </div>
       </section>
 
       <RealClientSituations studies={attorneyCaseStudies} background="bg-background" />
-
-      {/* Good Fit */}
-      <section className="py-16 lg:py-24 bg-background">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
-              A Referral May Make Sense When…
-            </h2>
-            <ul className="space-y-4">
-              {[
-                "Your client has real property as part of a probate, trust, or guardianship matter",
-                "The property needs professional assessment before decisions can be made",
-                "Your client is overwhelmed and needs someone to handle the real estate side",
-                "You want reliable market data to support fiduciary decision-making",
-                "The property needs preparation — cleanout, repairs, or staging — before it can be listed",
-                "You need a real estate professional who communicates clearly and respects boundaries",
-              ].map((item, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <GoldCheck3D size={20} className="mt-0.5" />
-                  <span className="text-foreground leading-relaxed">{item}</span>
-                </li>
-              ))}
-            </ul>
-            <p className="text-muted-foreground leading-relaxed mt-8">
-              Learn more about <Link to="/executors" className="text-accent hover:text-gold underline underline-offset-4">how David works with executors</Link>, explore the <Link to="/professional-referral-resource" className="text-accent hover:text-gold underline underline-offset-4">Professional Referral Resource</Link>, or browse the <Link to="/resources" className="text-accent hover:text-gold underline underline-offset-4">Resource Directory</Link> for other trusted professionals in Western Washington.
-            </p>
-          </div>
-        </div>
-      </section>
 
       <PageTestimonials testimonials={attorneyTestimonials} heading="What Referring Attorneys Say" />
 
@@ -399,16 +293,16 @@ const ForAttorneys = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-5">
-              Have a Client Who Needs Real Estate Guidance?
+              Let's Connect
             </h2>
             <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
-              Confidential conversations are always welcome. David will follow up promptly to discuss the situation and how he can support your client — no pressure, no obligation.
+              If you work with clients where real estate plays a role, I would welcome the opportunity to collaborate and support a smooth, well-coordinated process.
             </p>
             <div className="flex justify-center">
               <Link to="/contact">
                 <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold">
                   <Phone className="w-5 h-5 mr-2" />
-                  Connect About a Client Situation
+                  Schedule a Conversation
                 </Button>
               </Link>
             </div>
