@@ -16,6 +16,7 @@ import heart3d from "@/assets/heart-3d.png";
 import alcaLogo from "@/assets/alca-corporate-partner.png";
 import naosaBadge from "@/assets/naosa-badge.jpg";
 import naepcLogo from "@/assets/naepc-logo.png";
+import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 
 const transitionSituations = [
   "Downsizing from a longtime family home to a smaller residence",
@@ -25,7 +26,6 @@ const transitionSituations = [
   "Managing a sale while coordinating with care professionals and family members",
 ];
 
-import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 const whatFamiliesNeed = [
   "A patient, respectful approach that honors the emotional weight of these decisions",
   "Clear guidance about timing, preparation, and what to expect from the process",

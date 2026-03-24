@@ -6,6 +6,7 @@ import { articleSchema } from "@/lib/schema";
 import TrustStrip from "@/components/TrustStrip";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import PageFAQ from "@/components/PageFAQ";
+import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 
 const faqs = [
   {
@@ -32,7 +33,6 @@ import people3d from "@/assets/people-3d.png";
 
 const SITE_URL = "https://realpropertyplanning.com";
 
-import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 const situations = [
   "Moving a parent into assisted living, memory care, or another senior living community",
   "Selling a home after the death of a family member",

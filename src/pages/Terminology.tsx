@@ -8,13 +8,13 @@ import { Link } from "react-router-dom";
 import { MessageSquare } from "lucide-react";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import {
+import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 interface GlossaryTerm {
   term: string;
   definition: string;

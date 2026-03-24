@@ -8,11 +8,11 @@ import RelatedServices from "@/components/RelatedServices";
 import CTASection from "@/components/CTASection";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 
 
 interface AttorneyPageProps {
   title: string;
-import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
   seoTitle: string;
   seoDescription: string;
   path: string;

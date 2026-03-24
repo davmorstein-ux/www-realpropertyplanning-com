@@ -5,6 +5,7 @@ import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { MessageSquare } from "lucide-react";
+import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 
 const kingCountyCities = [
   "Algona", "Auburn", "Beaux Arts Village", "Bellevue", "Black Diamond",
@@ -17,7 +18,6 @@ const kingCountyCities = [
   "Snoqualmie", "Tukwila", "Woodinville", "Yarrow Point",
 ];
 
-import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 const snohomishCountyCities = [
   "Arlington", "Bothell", "Brier", "Darrington", "Edmonds",
   "Everett", "Gold Bar", "Granite Falls", "Index", "Lake Stevens",

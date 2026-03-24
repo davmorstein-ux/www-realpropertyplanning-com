@@ -8,6 +8,7 @@ import GoldCheck3D from "@/components/GoldCheck3D";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { AlertTriangle } from "lucide-react";
+import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 
 const intersections = [
   "What is the home actually worth in today's market?",
@@ -17,7 +18,6 @@ const intersections = [
   "How do we coordinate communication between parties?",
 ];
 
-import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 const services = [
   { title: "Objective, Defensible Valuation", description: "Clear market-based valuations that support fair decision-making and reduce disputes." },
   { title: "Neutral Representation", description: "A balanced approach focused on fairness, transparency, and minimizing conflict." },
