@@ -146,24 +146,27 @@ const Index = () => {
               <p className="text-muted-foreground text-lg leading-relaxed mb-5">
                 With over 20 years of experience as both a licensed real estate broker and certified residential appraiser, David brings rare dual expertise to every engagement — providing calm, knowledgeable guidance during life's most important property decisions.
               </p>
-              <div className="flex flex-wrap gap-2.5 mb-5">
-                <span className="inline-flex items-center gap-2 bg-secondary rounded-full px-4 py-2 border border-border text-foreground font-semibold text-sm">
-                  <img src={iconLicense3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0" />
+              <div className="mb-5 space-y-3">
+                <p className="text-base font-semibold tracking-[0.02em] text-foreground">David Stein</p>
+                <p className="flex items-center text-sm font-semibold text-foreground md:text-base">
+                  <img src={iconLicense3d} alt="" aria-hidden="true" className="mr-2 h-[22px] w-[22px] shrink-0 object-contain" />
                   Licensed Real Estate Broker
-                </span>
-                <span className="inline-flex items-center gap-2 bg-secondary rounded-full px-4 py-2 border border-border text-foreground font-semibold text-sm">
-                  <img src={iconAppraiser3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0" />
+                </p>
+                <p className="flex items-center text-sm font-semibold text-foreground md:text-base">
+                  <img src={iconAppraiser3d} alt="" aria-hidden="true" className="mr-2 h-[22px] w-[22px] shrink-0 object-contain" />
                   WA Certified Residential Appraiser
-                </span>
+                </p>
               </div>
-              <p className="text-muted-foreground text-xs uppercase tracking-widest font-semibold mb-3">Professional Memberships &amp; Affiliations</p>
-              <div className="flex flex-wrap items-center gap-6">
-                <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer">
-                  <img src={alcaLogo} alt="Aging Life Care Association Corporate Partner" className="h-12 w-auto" loading="lazy" />
+              <p className="mb-3 text-center text-xs font-semibold uppercase tracking-widest text-muted-foreground">Professional Memberships &amp; Affiliations</p>
+              <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-5">
+                <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer" className="flex h-14 items-center justify-center">
+                  <img src={alcaLogo} alt="Aging Life Care Association Corporate Partner" className="max-h-11 w-auto object-contain" loading="lazy" />
                 </a>
-                <img src={naosaBadge} alt="National Association of Senior Advocates - Best Real Estate Agent 2026" className="h-14 w-auto" loading="lazy" />
-                <a href="https://www.naepc.org" target="_blank" rel="noopener noreferrer">
-                  <img src={naepcLogo} alt="National Association of Estate Planners & Councils" className="h-11 w-auto" loading="lazy" />
+                <span className="flex h-14 items-center justify-center">
+                  <img src={naosaBadge} alt="National Association of Senior Advocates - Best Real Estate Agent 2026" className="max-h-11 w-auto object-contain" loading="lazy" />
+                </span>
+                <a href="https://www.naepc.org" target="_blank" rel="noopener noreferrer" className="flex h-14 items-center justify-center">
+                  <img src={naepcLogo} alt="National Association of Estate Planners & Councils" className="max-h-11 w-auto object-contain" loading="lazy" />
                 </a>
               </div>
             </div>
@@ -354,32 +357,26 @@ const Index = () => {
                 Whether you're an attorney, executor, trustee, or family member — David is here to help you navigate the real estate side of your situation with care and clarity.
               </p>
 
-              <div className="space-y-6">
-                <a href="tel:2069003015" className="flex items-center gap-4 text-primary-foreground hover:text-gold transition-colors group">
-                  <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center group-hover:bg-gold/20 transition-colors">
-                    <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0" />
-                  </div>
-                  <div>
-                    <p className="text-primary-foreground/60 text-sm">Phone</p>
-                    <p className="text-primary-foreground text-lg font-semibold">(206) 900-3015</p>
-                  </div>
-                </a>
-                <a href="mailto:david@realpropertyplanning.com" className="flex items-center gap-4 text-primary-foreground hover:text-gold transition-colors group">
-                  <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center group-hover:bg-gold/20 transition-colors">
-                    <img src={iconEmail3d} alt="" aria-hidden="true" className="w-6 h-6 object-contain shrink-0" />
-                  </div>
-                  <div>
-                    <p className="text-primary-foreground/60 text-sm">Email</p>
-                    <p className="text-primary-foreground text-lg font-semibold">david@realpropertyplanning.com</p>
-                  </div>
-                </a>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center">
-                    <img src={mappin3d} alt="" aria-hidden="true" className="w-6 h-6 object-contain shrink-0" />
-                  </div>
-                  <div>
-                    <p className="text-primary-foreground/60 text-sm">Serving</p>
-                    <p className="text-primary-foreground text-lg font-semibold">Western Washington & Puget Sound</p>
+              <div className="space-y-5">
+                <div>
+                  <p className="text-sm text-primary-foreground/60">Phone</p>
+                  <a href="tel:2069003015" className="mt-1 inline-flex items-center text-primary-foreground transition-colors hover:text-gold">
+                    <img src={iconPhone3d} alt="" aria-hidden="true" className="mr-2 h-[22px] w-[22px] shrink-0 object-contain" />
+                    <span className="text-lg font-semibold">(206) 900-3015</span>
+                  </a>
+                </div>
+                <div>
+                  <p className="text-sm text-primary-foreground/60">Email</p>
+                  <a href="mailto:david@realpropertyplanning.com" className="mt-1 inline-flex items-center text-primary-foreground transition-colors hover:text-gold">
+                    <img src={iconEmail3d} alt="" aria-hidden="true" className="mr-2 h-[22px] w-[22px] shrink-0 object-contain" />
+                    <span className="text-lg font-semibold">david@realpropertyplanning.com</span>
+                  </a>
+                </div>
+                <div>
+                  <p className="text-sm text-primary-foreground/60">Serving</p>
+                  <div className="mt-1 inline-flex items-center text-primary-foreground">
+                    <img src={mappin3d} alt="" aria-hidden="true" className="mr-2 h-[22px] w-[22px] shrink-0 object-contain" />
+                    <span className="text-lg font-semibold">Western Washington &amp; Puget Sound</span>
                   </div>
                 </div>
               </div>

@@ -105,41 +105,29 @@ const Contact = () => {
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Contact Info */}
             <div>
-              <div className="space-y-6 mb-8">
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center shrink-0">
-                    <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0" />
-                  </div>
-                  <div>
-                    <p className="font-medium text-foreground mb-1">Phone</p>
-                    <a href="tel:2069003015" className="text-muted-foreground hover:text-gold transition-colors">
-                      (206) 900-3015
-                    </a>
-                  </div>
+              <div className="space-y-5 mb-8">
+                <div>
+                  <p className="mb-1 font-medium text-foreground">Phone</p>
+                  <a href="tel:2069003015" className="inline-flex items-center text-muted-foreground transition-colors hover:text-gold">
+                    <img src={iconPhone3d} alt="" aria-hidden="true" className="mr-2 h-[22px] w-[22px] shrink-0 object-contain" />
+                    <span>(206) 900-3015</span>
+                  </a>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center shrink-0">
-                    <img src={iconEmail3d} alt="" aria-hidden="true" className="w-6 h-6 object-contain shrink-0" />
-                  </div>
-                  <div>
-                    <p className="font-medium text-foreground mb-1">Email</p>
-                    <a href="mailto:david@realpropertyplanning.com" className="text-muted-foreground hover:text-gold transition-colors">
-                      david@realpropertyplanning.com
-                    </a>
-                  </div>
+                <div>
+                  <p className="mb-1 font-medium text-foreground">Email</p>
+                  <a href="mailto:david@realpropertyplanning.com" className="inline-flex items-center text-muted-foreground transition-colors hover:text-gold">
+                    <img src={iconEmail3d} alt="" aria-hidden="true" className="mr-2 h-[22px] w-[22px] shrink-0 object-contain" />
+                    <span>david@realpropertyplanning.com</span>
+                  </a>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center shrink-0">
-                    <img src={mappin3d} alt="" aria-hidden="true" className="w-6 h-6 object-contain" />
-                  </div>
-                  <div>
-                    <p className="font-medium text-foreground mb-1">Service Areas</p>
-                    <p className="text-muted-foreground">
-                      King, Snohomish, Pierce & Kitsap Counties
-                    </p>
-                  </div>
+                <div>
+                  <p className="mb-1 font-medium text-foreground">Service Areas</p>
+                  <p className="inline-flex items-center text-muted-foreground">
+                    <img src={mappin3d} alt="" aria-hidden="true" className="mr-2 h-[22px] w-[22px] shrink-0 object-contain" />
+                    <span>King, Snohomish, Pierce &amp; Kitsap Counties</span>
+                  </p>
                 </div>
               </div>
 
