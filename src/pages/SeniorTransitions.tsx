@@ -10,7 +10,8 @@ import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Phone, Users } from "lucide-react";
+import { Phone } from "lucide-react";
+import people3d from "@/assets/people-3d.png";
 import heart3d from "@/assets/heart-3d.png";
 import alcaLogo from "@/assets/alca-corporate-partner.png";
 
