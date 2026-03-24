@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Phone, Mail } from "lucide-react";
+import { Phone } from "lucide-react";
+import iconEmail3d from "@/assets/icons/icon-email-3d.png";
 import daveHeadshot from "@/assets/dave-headshot.jpg";
 import logo from "@/assets/logo-rpp.jpg";
 import AgentCredentialBlock from "@/components/AgentCredentialBlock";
@@ -47,7 +48,7 @@ const HeroSection = () => {
                 variant="outline" 
                 className="border-gold/50 bg-transparent text-gold hover:bg-gold hover:text-foreground focus-visible:ring-gold"
               >
-                <Mail className="w-5 h-5 mr-2" />
+                <img src={iconEmail3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0 mr-2" />
                 Contact Me
               </Button>
             </div>
