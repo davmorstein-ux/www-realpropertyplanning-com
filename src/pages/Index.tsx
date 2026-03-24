@@ -462,9 +462,17 @@ const Index = () => {
                 className="h-28 md:h-32 w-auto"
                 loading="lazy"
               />
+              <a href="https://www.naepc.org" target="_blank" rel="noopener noreferrer" className="inline-block">
+                <img
+                  src={naepcLogo}
+                  alt="National Association of Estate Planners & Councils"
+                  className="h-20 md:h-24 w-auto"
+                  loading="lazy"
+                />
+              </a>
             </div>
             <p className="text-muted-foreground text-base leading-relaxed max-w-2xl mx-auto">
-              David Stein and Real Property Planning are proud Corporate Partners of the Aging Life Care Association and a recognized member of the National Association of Senior Advocates and Advisors.
+              David Stein and Real Property Planning are proud Corporate Partners of the Aging Life Care Association, a recognized member of the National Association of Senior Advocates and Advisors, and a member of the National Association of Estate Planners &amp; Councils.
             </p>
           </div>
         </div>
