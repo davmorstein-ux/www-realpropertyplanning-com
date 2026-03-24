@@ -10,7 +10,8 @@ import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Phone, AlertTriangle, Scale } from "lucide-react";
+import { Phone, AlertTriangle } from "lucide-react";
+import scale3d from "@/assets/scale-3d.png";
 
 const whyMatters = [
   "Supports confident pricing decisions that reflect the property's true condition and market position",
@@ -119,7 +120,7 @@ const WhyValuationMatters = () => {
       <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <Scale className="w-10 h-10 text-gold mb-6" />
+            <img src={scale3d} alt="" aria-hidden="true" className="w-10 h-10 object-contain mb-6" />
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
               Why Accurate Value Guidance Matters
             </h2>
