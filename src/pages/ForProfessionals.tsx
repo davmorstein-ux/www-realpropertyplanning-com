@@ -35,7 +35,7 @@ const partnerTiles = [
   {
     title: "Lenders &\nFinancing",
     description: "Connecting clients with trusted professionals who provide financing solutions, including reverse mortgage options.",
-    href: "/retirement-reverse-mortgage",
+    href: "/lenders-and-financing-specialists",
     iconSrc: iconHomeValue,
   },
 ];
