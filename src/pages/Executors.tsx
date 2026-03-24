@@ -1,3 +1,4 @@
+import GoldCheck3D from "@/components/GoldCheck3D";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
@@ -8,7 +9,7 @@ import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Phone, CheckCircle, MessageSquare } from "lucide-react";
+import { Phone, MessageSquare } from "lucide-react";
 import RealClientSituations from "@/components/RealClientSituations";
 import PageTestimonials from "@/components/PageTestimonials";
 
@@ -216,7 +217,7 @@ const Executors = () => {
             <ul className="space-y-4">
               {commonSituations.map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 min-w-5 text-gold mt-0.5 shrink-0" />
+                  <GoldCheck3D size={20} className="mt-0.5" />
                   <span className="text-foreground leading-relaxed">{item}</span>
                 </li>
               ))}
@@ -241,7 +242,7 @@ const Executors = () => {
             <ul className="space-y-4">
               {howIHelp.map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 min-w-5 text-gold mt-0.5 shrink-0" />
+                  <GoldCheck3D size={20} className="mt-0.5" />
                   <span className="text-foreground leading-relaxed">{item}</span>
                 </li>
               ))}
@@ -298,7 +299,7 @@ const Executors = () => {
                 "King · Snohomish · Pierce · Kitsap Counties",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-2 text-muted-foreground font-medium">
-                  <CheckCircle className="w-4 h-4 min-w-4 text-gold shrink-0" />
+                  <GoldCheck3D size={16} />
                   <span>{item}</span>
                 </div>
               ))}
@@ -317,7 +318,7 @@ const Executors = () => {
             <ul className="space-y-4">
               {goodFitSituations.map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 min-w-5 text-gold mt-0.5 shrink-0" />
+                  <GoldCheck3D size={20} className="mt-0.5" />
                   <span className="text-foreground leading-relaxed">{item}</span>
                 </li>
               ))}

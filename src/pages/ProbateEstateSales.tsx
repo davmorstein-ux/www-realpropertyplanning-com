@@ -9,7 +9,7 @@ import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Phone, CheckCircle, AlertTriangle } from "lucide-react";
+import { Phone, AlertTriangle } from "lucide-react";
 
 const probateVsInherited = [
   {

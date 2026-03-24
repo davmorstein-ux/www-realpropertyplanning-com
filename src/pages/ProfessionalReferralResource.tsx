@@ -1,3 +1,4 @@
+import GoldCheck3D from "@/components/GoldCheck3D";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
@@ -8,7 +9,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Phone, ArrowRight, CheckCircle } from "lucide-react";
+import { Phone, ArrowRight } from "lucide-react";
 
 const whoIWorkWith = [
   {
@@ -270,7 +271,7 @@ const ProfessionalReferralResource = () => {
             <ul className="space-y-4">
               {goodFit.map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 min-w-5 text-gold mt-0.5 shrink-0" />
+                  <GoldCheck3D size={20} className="mt-0.5" />
                   <span className="text-foreground text-[15px] leading-relaxed">{item}</span>
                 </li>
               ))}

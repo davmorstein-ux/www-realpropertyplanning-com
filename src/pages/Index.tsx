@@ -1,3 +1,4 @@
+import GoldCheck3D from "@/components/GoldCheck3D";
 import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -7,7 +8,7 @@ import { realEstateAgentSchema } from "@/lib/schema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import {
-  Phone, Mail, CheckCircle,
+  Phone, Mail,
   ArrowRight, ChevronRight, MapPin, Quote, Award, Shield
 } from "lucide-react";
 import iconServiceProbate from "@/assets/icons/icon-service-probate.png";
@@ -248,7 +249,7 @@ const Index = () => {
                 "You simply want to talk through your situation before making any decisions",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 min-w-5 text-gold mt-0.5 shrink-0" />
+                  <GoldCheck3D size={20} className="mt-0.5" />
                   <span className="text-foreground text-lg leading-relaxed">{item}</span>
                 </li>
               ))}

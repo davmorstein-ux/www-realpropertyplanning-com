@@ -1,3 +1,4 @@
+import GoldCheck3D from "@/components/GoldCheck3D";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
@@ -8,7 +9,7 @@ import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Phone, CheckCircle, MessageSquare } from "lucide-react";
+import { Phone, MessageSquare } from "lucide-react";
 import RealClientSituations from "@/components/RealClientSituations";
 import PageTestimonials from "@/components/PageTestimonials";
 
@@ -205,7 +206,7 @@ const ForAttorneys = () => {
             <ul className="space-y-4">
               {whyRefer.map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 min-w-5 text-gold mt-0.5 shrink-0" />
+                  <GoldCheck3D size={20} className="mt-0.5" />
                   <span className="text-foreground leading-relaxed">{item}</span>
                 </li>
               ))}
@@ -227,7 +228,7 @@ const ForAttorneys = () => {
             <ul className="space-y-4">
               {clientSituations.map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 min-w-5 text-gold mt-0.5 shrink-0" />
+                  <GoldCheck3D size={20} className="mt-0.5" />
                   <span className="text-foreground leading-relaxed">{item}</span>
                 </li>
               ))}
@@ -304,7 +305,7 @@ const ForAttorneys = () => {
                 "You need a real estate professional who communicates clearly and respects boundaries",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 min-w-5 text-gold mt-0.5 shrink-0" />
+                  <GoldCheck3D size={20} className="mt-0.5" />
                   <span className="text-foreground leading-relaxed">{item}</span>
                 </li>
               ))}

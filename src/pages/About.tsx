@@ -1,3 +1,4 @@
+import GoldCheck3D from "@/components/GoldCheck3D";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
@@ -8,7 +9,7 @@ import TrustStrip from "@/components/TrustStrip";
 import RelatedServices from "@/components/RelatedServices";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { CheckCircle, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
 import daveHeadshot from "@/assets/dave-headshot.jpg";
 import AgentCredentialBlock from "@/components/AgentCredentialBlock";
 
@@ -101,7 +102,7 @@ const About = () => {
             <ul className="space-y-4">
               {whoWorksWith.map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 min-w-5 text-gold mt-0.5 shrink-0" />
+                  <GoldCheck3D size={20} className="mt-0.5" />
                   <span className="text-foreground">{item}</span>
                 </li>
               ))}

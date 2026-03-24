@@ -1,3 +1,4 @@
+import GoldCheck3D from "@/components/GoldCheck3D";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
@@ -9,7 +10,7 @@ import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Phone, CheckCircle, AlertTriangle, Scale } from "lucide-react";
+import { Phone, AlertTriangle, Scale } from "lucide-react";
 
 const whyMatters = [
   "Supports confident pricing decisions that reflect the property's true condition and market position",
@@ -125,7 +126,7 @@ const WhyValuationMatters = () => {
             <ul className="space-y-4">
               {whyMatters.map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 min-w-5 text-gold mt-0.5 shrink-0" />
+                  <GoldCheck3D size={20} className="mt-0.5" />
                   <span className="text-foreground">{item}</span>
                 </li>
               ))}
