@@ -13,7 +13,7 @@ const TrustStrip = () => (
       <div className="flex flex-wrap justify-center gap-x-8 gap-y-3">
         {trustIndicators.map((indicator, index) => (
           <div key={index} className="flex items-center gap-2 text-base text-muted-foreground font-medium">
-            <CheckCircle className="w-4 h-4 text-gold shrink-0" />
+            <CheckCircle className="w-4 h-4 min-w-4 text-gold shrink-0" />
             <span>{indicator}</span>
           </div>
         ))}
