@@ -9,10 +9,11 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import {
   Phone,
-  ArrowRight, ChevronRight, Quote, Shield
+  ArrowRight, ChevronRight, Quote
 } from "lucide-react";
 import iconEmail3d from "@/assets/icons/icon-email-3d.png";
 import iconLicense3d from "@/assets/icons/icon-license-3d.png";
+import iconAppraiser3d from "@/assets/icons/icon-appraiser-3d.png";
 import mappin3d from "@/assets/mappin-3d.png";
 import iconServiceProbate from "@/assets/icons/icon-service-probate.png";
 import iconServiceSenior from "@/assets/icons/icon-service-senior.png";
@@ -153,7 +154,7 @@ const Index = () => {
                   Licensed Real Estate Broker
                 </span>
                 <span className="inline-flex items-center gap-2 bg-secondary rounded-full px-4 py-2 border border-border text-foreground font-semibold text-sm">
-                  <Shield className="w-4 h-4 text-gold shrink-0" />
+                  <img src={iconAppraiser3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0" />
                   WA Certified Residential Appraiser
                 </span>
               </div>
