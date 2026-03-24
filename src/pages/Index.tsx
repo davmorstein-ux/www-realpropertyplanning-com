@@ -115,14 +115,19 @@ const Index = () => {
       </section>
 
       {/* ═══════════════════════════════════════════════════
+          SERVICE NAV TILES — Immediately after hero
+      ═══════════════════════════════════════════════════ */}
+      <ServiceNavTiles />
+
+      {/* ═══════════════════════════════════════════════════
           ABOUT DAVID — Two-column with headshot + credentials
       ═══════════════════════════════════════════════════ */}
-      <section className="py-20 lg:py-24 bg-cream">
+      <section className="py-16 lg:py-20 bg-cream">
         <div className="mx-auto max-w-[1100px] px-6 lg:px-8">
-          <div className="grid lg:grid-cols-[auto_1fr] gap-12 lg:gap-16 items-center">
+          <div className="grid lg:grid-cols-[auto_1fr] gap-10 lg:gap-14 items-center">
             {/* Left — Headshot */}
             <div className="flex flex-col items-center">
-              <div className="w-60 h-60 md:w-68 md:h-68 rounded-full overflow-hidden border-4 border-gold/30 shadow-xl">
+              <div className="w-56 h-56 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-gold/30 shadow-xl">
                 <img
                   src={daveHeadshot2}
                   alt="David Stein, probate real estate specialist and certified appraiser"
@@ -134,30 +139,30 @@ const Index = () => {
 
             {/* Right — Bio + credentials + badges */}
             <div>
-              <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-4">
+              <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-3">
                 Meet David Stein
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-                With over 20 years of experience as both a licensed real estate broker and Washington State certified residential appraiser, David brings rare dual expertise to every engagement — providing calm, knowledgeable guidance during life's most emotionally charged moments.
+                With over 20 years of experience as both a licensed real estate broker and certified residential appraiser, David brings rare dual expertise to every engagement — providing calm, knowledgeable guidance during life's most important property decisions.
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 mb-6">
-                <div className="flex items-center gap-2.5 bg-secondary rounded-full px-4 py-2.5 border border-border">
+              <div className="flex flex-wrap gap-2.5 mb-5">
+                <span className="inline-flex items-center gap-2 bg-secondary rounded-full px-4 py-2 border border-border text-foreground font-semibold text-sm">
                   <Award className="w-4 h-4 text-gold shrink-0" />
-                  <p className="text-foreground font-semibold text-sm">Licensed Real Estate Broker</p>
-                </div>
-                <div className="flex items-center gap-2.5 bg-secondary rounded-full px-4 py-2.5 border border-border">
+                  Licensed Real Estate Broker
+                </span>
+                <span className="inline-flex items-center gap-2 bg-secondary rounded-full px-4 py-2 border border-border text-foreground font-semibold text-sm">
                   <Shield className="w-4 h-4 text-gold shrink-0" />
-                  <p className="text-foreground font-semibold text-sm">WA Certified Residential Appraiser</p>
-                </div>
+                  WA Certified Residential Appraiser
+                </span>
               </div>
               <p className="text-muted-foreground text-xs uppercase tracking-widest font-semibold mb-3">Professional Memberships &amp; Affiliations</p>
               <div className="flex flex-wrap items-center gap-6">
                 <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer">
-                  <img src={alcaLogo} alt="Aging Life Care Association Corporate Partner" className="h-14 w-auto" loading="lazy" />
+                  <img src={alcaLogo} alt="Aging Life Care Association Corporate Partner" className="h-12 w-auto" loading="lazy" />
                 </a>
-                <img src={naosaBadge} alt="National Association of Senior Advocates - Best Real Estate Agent 2026" className="h-16 w-auto" loading="lazy" />
+                <img src={naosaBadge} alt="National Association of Senior Advocates - Best Real Estate Agent 2026" className="h-14 w-auto" loading="lazy" />
                 <a href="https://www.naepc.org" target="_blank" rel="noopener noreferrer">
-                  <img src={naepcLogo} alt="National Association of Estate Planners & Councils" className="h-12 w-auto" loading="lazy" />
+                  <img src={naepcLogo} alt="National Association of Estate Planners & Councils" className="h-11 w-auto" loading="lazy" />
                 </a>
               </div>
             </div>
@@ -168,9 +173,9 @@ const Index = () => {
       {/* ═══════════════════════════════════════════════════
           SERVICES — Three warm cards
       ═══════════════════════════════════════════════════ */}
-      <section className="py-16 lg:py-22 bg-warm-bg">
+      <section className="py-16 lg:py-20 bg-warm-bg">
         <div className="mx-auto max-w-[1100px] px-6 lg:px-8">
-          <div className="text-center mb-14">
+          <div className="text-center mb-12">
             <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-sm">
               How We Help
             </p>
@@ -183,23 +188,20 @@ const Index = () => {
               {
                 iconSrc: iconServiceProbate,
                 title: "Probate & Estate Property Sales",
-                body: "Experienced guidance for selling inherited homes, trust-owned real estate, and estate property across King, Snohomish, Pierce, Skagit, and Kitsap Counties.",
+                body: "Experienced guidance for selling inherited homes, trust-owned real estate, and estate property across Western Washington.",
                 link: "/probate-estate-sales",
-                iconOffsetClass: "",
               },
               {
                 iconSrc: iconServiceSenior,
                 title: "Senior Transitions & Downsizing",
                 body: "Thoughtful real estate support for families navigating a move from a longtime home to assisted living or smaller housing.",
                 link: "/senior-transitions",
-                iconOffsetClass: "",
               },
               {
                 iconSrc: iconServiceValuation,
                 title: "Valuation-Informed Strategy",
                 body: "As both a broker and certified appraiser, David provides pricing grounded in professional valuation expertise — not guesswork.",
                 link: "/why-valuation-matters",
-                iconOffsetClass: "",
               },
             ].map((card, i) => (
               <Link key={i} to={card.link} className="group">
@@ -208,7 +210,7 @@ const Index = () => {
                     <img
                       src={card.iconSrc}
                       alt={card.title}
-                      className={`block max-h-full max-w-full object-contain mix-blend-multiply ${card.iconOffsetClass}`}
+                      className="block max-h-full max-w-full object-contain mix-blend-multiply"
                       loading="lazy"
                     />
                   </div>
@@ -224,13 +226,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-      {/* ═══════════════════════════════════════════════════
-          SERVICE NAV TILES
-      ═══════════════════════════════════════════════════ */}
-      <ServiceNavTiles />
-
-      {/* Spacer removed — badges now live in About section */}
 
       {/* ═══════════════════════════════════════════════════
           WHEN SHOULD YOU CALL ME
