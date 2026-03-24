@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Phone } from "lucide-react";
+
 import iconEmail3d from "@/assets/icons/icon-email-3d.png";
 import daveHeadshot from "@/assets/dave-headshot.jpg";
 import logo from "@/assets/logo-rpp.jpg";
@@ -40,7 +40,7 @@ const HeroSection = () => {
                 size="lg" 
                 className="bg-gold hover:bg-gold-light text-primary font-semibold px-8"
               >
-                <Phone className="w-5 h-5 mr-2" />
+                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
                 Schedule a Consultation
               </Button>
               <Button 

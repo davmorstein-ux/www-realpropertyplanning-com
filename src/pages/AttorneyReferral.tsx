@@ -6,7 +6,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { articleSchema } from "@/lib/schema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Phone, MessageSquare } from "lucide-react";
+import { MessageSquare } from "lucide-react";
 
 const whyReferCards = [
   {
@@ -124,7 +124,7 @@ const AttorneyReferral = () => {
                   size="lg"
                   className="bg-gold hover:bg-gold-light text-foreground font-semibold px-7 py-4 h-auto rounded-lg w-full sm:w-auto"
                 >
-                  <Phone className="w-4 h-4 mr-2" />
+                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 mr-2 object-contain shrink-0" />
                   Request a Confidential Consultation
                 </Button>
               </Link>
@@ -303,7 +303,7 @@ const AttorneyReferral = () => {
                     size="lg"
                     className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-7 py-4 h-auto rounded-lg w-full sm:w-auto"
                   >
-                    <Phone className="w-4 h-4 mr-2" />
+                    <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 mr-2 object-contain shrink-0" />
                     Request a Confidential Consultation
                   </Button>
                 </Link>

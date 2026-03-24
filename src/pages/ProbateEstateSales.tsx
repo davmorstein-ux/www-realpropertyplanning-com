@@ -9,7 +9,7 @@ import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Phone } from "lucide-react";
+
 import warning3d from "@/assets/warning-3d.png";
 
 const probateVsInherited = [
@@ -109,7 +109,7 @@ const ProbateEstateSales = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/contact">
                 <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold w-full sm:w-auto">
-                  <Phone className="w-5 h-5 mr-2" />
+                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
                   Schedule a Consultation
                 </Button>
               </Link>
@@ -264,7 +264,7 @@ const ProbateEstateSales = () => {
             </p>
             <Link to="/contact">
               <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold">
-                <Phone className="w-5 h-5 mr-2" />
+                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
                 Schedule a Consultation
               </Button>
             </Link>

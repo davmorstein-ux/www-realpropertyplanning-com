@@ -9,7 +9,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Phone, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const whoIWorkWith = [
   {
@@ -130,7 +130,7 @@ const ProfessionalReferralResource = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/contact">
                 <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold w-full sm:w-auto px-8 h-[52px] text-base rounded-lg">
-                  <Phone className="w-5 h-5 mr-2" />
+                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
                   Schedule a Confidential Conversation
                 </Button>
               </Link>
@@ -331,7 +331,7 @@ const ProfessionalReferralResource = () => {
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link to="/contact">
                 <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold w-full sm:w-auto px-8 h-[52px] text-base rounded-lg">
-                  <Phone className="w-5 h-5 mr-2" />
+                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
                   Schedule a Confidential Conversation
                 </Button>
               </Link>

@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Phone, Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "@/assets/logo-rpp.jpg";
@@ -210,7 +210,7 @@ const Header = () => {
             <div className="border-t border-border mt-3 pt-4">
               <Link to="/contact">
                 <Button className="bg-[hsl(216,65%,34%)] hover:bg-[hsl(216,65%,28%)] text-white font-semibold w-full h-[52px] text-base rounded-lg">
-                  <Phone className="w-5 h-5 mr-2" />
+                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
                   Schedule a Consultation
                 </Button>
               </Link>

@@ -10,7 +10,7 @@ import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Phone } from "lucide-react";
+
 import people3d from "@/assets/people-3d.png";
 import heart3d from "@/assets/heart-3d.png";
 import alcaLogo from "@/assets/alca-corporate-partner.png";
@@ -97,7 +97,7 @@ const SeniorTransitions = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/contact">
                 <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold w-full sm:w-auto">
-                  <Phone className="w-5 h-5 mr-2" />
+                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
                   Schedule a Consultation
                 </Button>
               </Link>
@@ -268,7 +268,7 @@ const SeniorTransitions = () => {
             <div className="flex justify-center">
               <Link to="/contact">
                 <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold">
-                  <Phone className="w-5 h-5 mr-2" />
+                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
                   Schedule a Consultation
                 </Button>
               </Link>

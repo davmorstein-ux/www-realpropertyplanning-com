@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone } from "lucide-react";
+
 import mappin3d from "@/assets/mappin-3d.png";
 import iconEmail3d from "@/assets/icons/icon-email-3d.png";
 import expRealtyLogo from "@/assets/exp-realty-logo.png";
@@ -25,7 +25,7 @@ const Footer = () => {
             <p className="text-primary-foreground/60 text-sm leading-relaxed mb-3">eXp Realty</p>
             <div className="flex flex-col gap-2 text-sm">
               <a href="tel:2069003015" className="text-primary-foreground/70 hover:text-gold flex items-center gap-2">
-                <Phone className="w-4 h-4" />
+                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" />
                 (206) 900-3015
               </a>
               <a href="mailto:david@realpropertyplanning.com" className="text-primary-foreground/70 hover:text-gold flex items-center gap-2">

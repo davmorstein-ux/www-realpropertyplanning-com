@@ -6,7 +6,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Phone, MapPin, Globe } from "lucide-react";
+import { MapPin, Globe } from "lucide-react";
 import iconEmail3d from "@/assets/icons/icon-email-3d.png";
 
 const LendersFinancingSpecialists = () => (
@@ -120,7 +120,7 @@ const LendersFinancingSpecialists = () => (
                 href="tel:+12063105766"
                 className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
               >
-                <Phone className="w-5 h-5 text-gold shrink-0" />
+                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 shrink-0 object-contain" />
                 <span>(206) 310-5766</span>
               </a>
               <div className="flex items-start gap-3 text-muted-foreground">
@@ -174,7 +174,7 @@ const LendersFinancingSpecialists = () => (
           </p>
           <Link to="/contact">
             <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold">
-              <Phone className="w-5 h-5 mr-2" />
+              <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
               Schedule a Conversation
             </Button>
           </Link>

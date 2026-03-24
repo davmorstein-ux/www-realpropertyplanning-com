@@ -9,7 +9,7 @@ import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Phone } from "lucide-react";
+
 
 const steps = [
   {
@@ -115,7 +115,7 @@ const HowTheProcessWorks = () => {
             </p>
             <Link to="/contact">
               <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-medium px-7 py-4 h-auto rounded-lg">
-                <Phone className="w-4 h-4 mr-2" />
+                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 mr-2 object-contain shrink-0" />
                 Schedule a Consultation
               </Button>
             </Link>

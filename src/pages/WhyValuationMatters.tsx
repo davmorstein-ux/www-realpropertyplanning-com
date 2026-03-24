@@ -10,7 +10,7 @@ import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Phone } from "lucide-react";
+
 import warning3d from "@/assets/warning-3d.png";
 import scale3d from "@/assets/scale-3d.png";
 
@@ -106,7 +106,7 @@ const WhyValuationMatters = () => {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Link to="/contact">
                 <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-medium px-7 py-4 h-auto rounded-lg w-full sm:w-auto">
-                  <Phone className="w-4 h-4 mr-2" />
+                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 mr-2 object-contain shrink-0" />
                   Discuss a Property
                 </Button>
               </Link>
@@ -234,7 +234,7 @@ const WhyValuationMatters = () => {
             <div className="flex justify-center">
               <Link to="/contact">
                 <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold">
-                  <Phone className="w-5 h-5 mr-2" />
+                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
                   Discuss a Property
                 </Button>
               </Link>
