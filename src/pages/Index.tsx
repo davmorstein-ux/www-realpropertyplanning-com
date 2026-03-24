@@ -18,6 +18,7 @@ import iconServiceValuation from "@/assets/icons/icon-service-valuation.png";
 import daveHeadshot2 from "@/assets/dave-headshot-2.jpg";
 import heroPnwHome from "@/assets/hero-pnw-home.jpg";
 import alcaLogo from "@/assets/alca-corporate-partner.png";
+import naosaBadge from "@/assets/naosa-badge.jpg";
 import expRealtyLogo from "@/assets/exp-realty-logo.png";
 import ServiceNavTiles from "@/components/ServiceNavTiles";
 
@@ -445,16 +446,24 @@ const Index = () => {
             <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-8">
               Professional Memberships & Affiliations
             </h2>
-            <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer" className="inline-block mb-6">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-12 mb-8">
+              <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer" className="inline-block">
+                <img
+                  src={alcaLogo}
+                  alt="Aging Life Care Association Corporate Partner"
+                  className="h-24 md:h-28 w-auto"
+                  loading="lazy"
+                />
+              </a>
               <img
-                src={alcaLogo}
-                alt="Aging Life Care Association Corporate Partner"
-                className="h-24 md:h-28 w-auto mx-auto"
+                src={naosaBadge}
+                alt="National Association of Senior Advocates - Best Real Estate Agent 2026"
+                className="h-28 md:h-32 w-auto"
                 loading="lazy"
               />
-            </a>
+            </div>
             <p className="text-muted-foreground text-base leading-relaxed max-w-2xl mx-auto">
-              David Stein and Real Property Planning are proud Corporate Partners of the Aging Life Care Association. Aging Life Care Professionals help older adults and their families navigate complex care, housing, and life transitions.
+              David Stein and Real Property Planning are proud Corporate Partners of the Aging Life Care Association and a recognized member of the National Association of Senior Advocates and Advisors.
             </p>
           </div>
         </div>

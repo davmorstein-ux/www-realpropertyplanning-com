@@ -3,6 +3,7 @@ import { Phone, Mail } from "lucide-react";
 import mappin3d from "@/assets/mappin-3d.png";
 import expRealtyLogo from "@/assets/exp-realty-logo.png";
 import alcaLogo from "@/assets/alca-corporate-partner.png";
+import naosaBadge from "@/assets/naosa-badge.jpg";
 
 const Footer = () => {
   return (
@@ -100,14 +101,22 @@ const Footer = () => {
         {/* Professional Affiliations */}
         <div className="border-t border-primary-foreground/10 pt-8 pb-6 flex flex-col items-center">
           <h4 className="text-primary-foreground font-serif text-lg font-medium mb-4">Professional Memberships &amp; Affiliations</h4>
-          <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer">
+          <div className="flex items-center justify-center gap-6">
+            <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer">
+              <img
+                src={alcaLogo}
+                alt="Aging Life Care Association Corporate Partner"
+                className="h-12 w-auto opacity-80 hover:opacity-100 transition-opacity"
+                loading="lazy"
+              />
+            </a>
             <img
-              src={alcaLogo}
-              alt="Aging Life Care Association Corporate Partner"
-              className="h-12 w-auto opacity-80 hover:opacity-100 transition-opacity"
+              src={naosaBadge}
+              alt="National Association of Senior Advocates - Best Real Estate Agent 2026"
+              className="h-14 w-auto opacity-80"
               loading="lazy"
             />
-          </a>
+          </div>
         </div>
 
         {/* Brokerage Compliance */}
