@@ -181,12 +181,7 @@ const SeniorLivingAndRelocation = () => {
           </div>
         </section>
 
-        <CTASection
-          headline="Let's Talk About Your Family's Transition"
-          body="If your family is navigating a senior housing transition and needs guidance on the real estate side, I'm here to help."
-          buttonText="Schedule a Conversation"
-          buttonLink="/contact"
-        />
+        <CTASection />
         <RelatedServices currentPath="/senior-living-and-relocation" />
         <DisclaimerSection />
       </main>
