@@ -32,12 +32,12 @@ import {
   ArrowRight,
   Home,
   FileText,
-  Users,
   Briefcase,
   BookOpen,
   Handshake,
   HeartHandshake,
 } from "lucide-react";
+import people3d from "@/assets/people-3d.png";
 
 const SITE_URL = "https://realpropertyplanning.com";
 
@@ -55,7 +55,8 @@ const resourceCategories = [
     title: "Senior Move Managers",
     description:
       "Professionals who coordinate and manage the physical and emotional aspects of relocating seniors.",
-    icon: Users,
+    icon: null,
+    image: people3d,
   },
   {
     href: "/resources/estate-sale-companies",
@@ -97,7 +98,8 @@ const resourceCategories = [
     title: "Moving & Relocation Services",
     description:
       "Moving companies and relocation specialists experienced with estate and senior transitions.",
-    icon: Users,
+    icon: null,
+    image: people3d,
   },
 ];
 
