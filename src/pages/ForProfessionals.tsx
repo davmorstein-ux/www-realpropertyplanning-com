@@ -30,12 +30,6 @@ const partnerTiles = [
     iconSrc: iconFinancial,
   },
   {
-    title: "Senior &\nTransition",
-    description: "Coordinating with those who help seniors and families navigate downsizing, relocation, and care transitions.",
-    href: "/for-senior-living-professionals",
-    iconSrc: iconSeniorMoves,
-  },
-  {
     title: "Lenders &\nFinancing",
     description: "Connecting clients with trusted professionals who provide financing solutions, including reverse mortgage options.",
     href: "/lenders-and-financing-specialists",
