@@ -30,11 +30,11 @@ const Footer = () => {
                 david@realpropertyplanning.com
               </a>
               <div className="text-primary-foreground/50 flex items-start gap-2 mt-1">
-                <img src={mappin3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain mt-0.5 shrink-0" />
+                <img src={mappin3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain mt-0.5 shrink-0" />
                 <span>Mailing: PO Box 1462, Woodinville, WA 98072</span>
               </div>
               <div className="text-primary-foreground/50 flex items-start gap-2">
-                <img src={mappin3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain mt-0.5 shrink-0" />
+                <img src={mappin3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain mt-0.5 shrink-0" />
                 <span>Office: 1455 NW Leary Way, Seattle, WA 98107</span>
               </div>
             </div>

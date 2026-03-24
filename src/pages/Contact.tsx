@@ -130,7 +130,7 @@ const Contact = () => {
 
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center shrink-0">
-                    <img src={mappin3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain" />
+                    <img src={mappin3d} alt="" aria-hidden="true" className="w-6 h-6 object-contain" />
                   </div>
                   <div>
                     <p className="font-medium text-foreground mb-1">Service Areas</p>

@@ -80,7 +80,7 @@ const Counties = () => {
               <Link key={card.county} to={card.href} className="group">
                 <div className="bg-card border border-border rounded-[18px] px-7 py-8 h-full hover:border-gold/30 hover:shadow-lg transition-all">
                   <div className="flex items-center gap-3 mb-3">
-                    <img src={mappin3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0" />
+                    <img src={mappin3d} alt="" aria-hidden="true" className="w-7 h-7 object-contain shrink-0" />
                     <h2 className="font-serif text-xl text-foreground font-semibold group-hover:text-gold transition-colors">
                       {card.county}
                     </h2>
