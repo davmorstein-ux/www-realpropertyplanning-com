@@ -30,13 +30,13 @@ import { Link } from "react-router-dom";
 import {
   Phone,
   ArrowRight,
-  Heart,
   Home,
   FileText,
   Users,
   Briefcase,
   BookOpen,
   Handshake,
+  HeartHandshake,
 } from "lucide-react";
 
 const SITE_URL = "https://realpropertyplanning.com";
@@ -83,7 +83,7 @@ const resourceCategories = [
     title: "Senior Living Communities",
     description:
       "Assisted living, independent living, and memory care communities across Western Washington.",
-    icon: Heart,
+    icon: HeartHandshake,
   },
   {
     href: "/resources/property-preparation-services",
