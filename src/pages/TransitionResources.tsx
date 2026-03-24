@@ -290,7 +290,11 @@ const TransitionResources = () => {
                   className="group flex items-center justify-between gap-4 bg-card border border-border rounded-xl px-6 py-5 md:px-8 md:py-6 hover:border-gold/40 hover:shadow-md transition-all"
                 >
                   <div className="flex items-start gap-4">
-                    <cat.icon className="w-5 h-5 text-accent mt-1 shrink-0" />
+                    {cat.image ? (
+                      <img src={cat.image} alt="" aria-hidden="true" className="w-5 h-5 object-contain mt-1 shrink-0" />
+                    ) : (
+                      <cat.icon className="w-5 h-5 text-accent mt-1 shrink-0" />
+                    )}
                     <div>
                       <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground group-hover:text-accent transition-colors mb-1">
                         {cat.title}
