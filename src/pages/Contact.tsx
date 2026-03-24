@@ -22,6 +22,7 @@ import mappin3d from "@/assets/mappin-3d.png";
 import { useState } from "react";
 import expRealtyLogo from "@/assets/exp-realty-logo.png";
 import { useToast } from "@/hooks/use-toast";
+import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 
 const roleOptions = [
   "Attorney",

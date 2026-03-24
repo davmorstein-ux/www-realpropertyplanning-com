@@ -10,6 +10,7 @@ import RelatedServices from "@/components/RelatedServices";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 
 const whoIWorkWith = [
   {

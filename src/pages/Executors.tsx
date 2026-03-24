@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 import { MessageSquare } from "lucide-react";
 import RealClientSituations from "@/components/RealClientSituations";
 import PageTestimonials from "@/components/PageTestimonials";
+import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 
 const executorTestimonials = [
   {

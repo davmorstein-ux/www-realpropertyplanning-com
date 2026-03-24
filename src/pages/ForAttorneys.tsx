@@ -16,6 +16,7 @@ import iconTrustees from "@/assets/icons/icon-trustees.png";
 import alcaLogo from "@/assets/alca-corporate-partner.png";
 import naosaBadge from "@/assets/naosa-badge.jpg";
 import naepcLogo from "@/assets/naepc-logo.png";
+import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 
 const attorneyTiles = [
   {
