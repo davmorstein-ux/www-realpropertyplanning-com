@@ -7,10 +7,7 @@ import SEOHead from "@/components/SEOHead";
 import { realEstateAgentSchema } from "@/lib/schema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import {
-  Phone,
-  ArrowRight, ChevronRight, Quote
-} from "lucide-react";
+import { ArrowRight, ChevronRight, Quote } from "lucide-react";
 import iconEmail3d from "@/assets/icons/icon-email-3d.png";
 import iconLicense3d from "@/assets/icons/icon-license-3d.png";
 import iconAppraiser3d from "@/assets/icons/icon-appraiser-3d.png";
@@ -25,6 +22,7 @@ import naosaBadge from "@/assets/naosa-badge.jpg";
 import naepcLogo from "@/assets/naepc-logo.png";
 import expRealtyLogo from "@/assets/exp-realty-logo.png";
 import ServiceNavTiles from "@/components/ServiceNavTiles";
+import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 
 const serviceAreas = [
   { county: "King County", href: "/counties/king", cities: "Seattle, Bellevue, Kirkland, Redmond, Renton, Kent, Federal Way & more" },
@@ -260,7 +258,7 @@ const Index = () => {
             </ul>
             <Link to="/contact">
               <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold px-8 py-4 h-auto rounded-lg">
-                <Phone className="w-4 h-4 mr-2" />
+                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 mr-2 object-contain shrink-0" />
                 Schedule a Conversation
               </Button>
             </Link>
@@ -359,7 +357,7 @@ const Index = () => {
               <div className="space-y-6">
                 <a href="tel:2069003015" className="flex items-center gap-4 text-primary-foreground hover:text-gold transition-colors group">
                   <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center group-hover:bg-gold/20 transition-colors">
-                    <Phone className="w-5 h-5 text-gold" />
+                    <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0" />
                   </div>
                   <div>
                     <p className="text-primary-foreground/60 text-sm">Phone</p>

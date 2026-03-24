@@ -6,6 +6,7 @@ import { articleSchema } from "@/lib/schema";
 import TrustStrip from "@/components/TrustStrip";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import PageFAQ from "@/components/PageFAQ";
+import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 
 const faqs = [
   {
@@ -27,16 +28,7 @@ const faqs = [
 ];
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import {
-  Phone,
-  ArrowRight,
-  Home,
-  FileText,
-  Briefcase,
-  BookOpen,
-  Handshake,
-  HeartHandshake,
-} from "lucide-react";
+import { ArrowRight, Home, FileText, Briefcase, BookOpen, Handshake, HeartHandshake } from "lucide-react";
 import people3d from "@/assets/people-3d.png";
 
 const SITE_URL = "https://realpropertyplanning.com";
@@ -228,7 +220,7 @@ const TransitionResources = () => {
                   variant="outline"
                   className="border-gold/50 bg-transparent text-gold hover:bg-gold hover:text-foreground focus-visible:ring-gold w-full sm:w-auto px-8 h-[52px] text-base rounded-lg"
                 >
-                  <Phone className="w-5 h-5 mr-2" />
+                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
                   Contact Real Property Planning
                 </Button>
               </Link>
@@ -427,7 +419,7 @@ const TransitionResources = () => {
                 size="lg"
                 className="bg-gold hover:bg-gold-light text-foreground font-semibold px-8 h-[52px] text-base rounded-lg"
               >
-                <Phone className="w-5 h-5 mr-2" />
+                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
                 Start the Conversation
               </Button>
             </Link>

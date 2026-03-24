@@ -6,7 +6,8 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { articleSchema } from "@/lib/schema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Phone, MessageSquare } from "lucide-react";
+import { MessageSquare } from "lucide-react";
+import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 
 const contentBlocks = [
   {
@@ -104,7 +105,7 @@ const HowWeWork = () => {
                     size="lg"
                     className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium px-7 py-4 h-auto rounded-lg w-full sm:w-auto"
                   >
-                    <Phone className="w-4 h-4 mr-2" />
+                    <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 mr-2 object-contain shrink-0" />
                     Request a Confidential Consultation
                   </Button>
                 </Link>

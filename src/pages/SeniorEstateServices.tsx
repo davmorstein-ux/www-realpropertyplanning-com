@@ -6,7 +6,8 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Phone } from "lucide-react";
+import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+
 
 const SeniorEstateServices = () => {
   return (
@@ -255,7 +256,7 @@ const SeniorEstateServices = () => {
                   size="lg"
                   className="bg-gold hover:bg-gold-light text-foreground font-semibold px-8 rounded-[14px] text-base h-[52px] w-full sm:w-auto"
                 >
-                  <Phone className="w-5 h-5 mr-2" />
+                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
                   Schedule a Consultation
                 </Button>
               </Link>

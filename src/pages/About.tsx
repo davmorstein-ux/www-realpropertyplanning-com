@@ -9,12 +9,13 @@ import TrustStrip from "@/components/TrustStrip";
 import RelatedServices from "@/components/RelatedServices";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Phone } from "lucide-react";
+
 import daveHeadshot from "@/assets/dave-headshot.jpg";
 import AgentCredentialBlock from "@/components/AgentCredentialBlock";
 import alcaLogo from "@/assets/alca-corporate-partner.png";
 import naosaBadge from "@/assets/naosa-badge.jpg";
 import naepcLogo from "@/assets/naepc-logo.png";
+import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 
 const whoWorksWith = [
   "Estate planning, probate, and elder law attorneys",
@@ -169,7 +170,7 @@ const About = () => {
             <div className="flex justify-center">
               <Link to="/contact">
                 <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold">
-                  <Phone className="w-5 h-5 mr-2" />
+                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
                   Contact David
                 </Button>
               </Link>
