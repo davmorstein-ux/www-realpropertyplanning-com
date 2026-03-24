@@ -1,41 +1,246 @@
-import AttorneyPageTemplate from "@/components/AttorneyPageTemplate";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import DisclaimerSection from "@/components/DisclaimerSection";
+import SEOHead from "@/components/SEOHead";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import RelatedServices from "@/components/RelatedServices";
+import GoldCheck3D from "@/components/GoldCheck3D";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { Phone, AlertTriangle } from "lucide-react";
+
+const intersections = [
+  "Division of real property",
+  "Sale of a shared home",
+  "Determining fair market value",
+  "Coordinating timing with legal proceedings",
+  "Managing communication between multiple parties",
+];
+
+const services = [
+  { title: "Accurate Market Valuation", description: "Clear, data-supported valuation to assist in informed decision-making." },
+  { title: "Structured Process Guidance", description: "Helping clients understand the steps involved in preparing and selling a home." },
+  { title: "Professional Coordination", description: "Working alongside attorneys and clients to ensure alignment and clarity." },
+  { title: "Calm, Consistent Communication", description: "Providing steady communication that helps reduce confusion and uncertainty." },
+  { title: "Market Insight", description: "Guidance on pricing, timing, and positioning based on current conditions." },
+];
+
+const situations = [
+  "Division of jointly owned real estate",
+  "Preparing a home for sale during legal proceedings",
+  "Supporting clients through transitions involving housing",
+  "Coordinating timelines with legal requirements",
+  "Providing valuation insight for decision-making",
+];
+
+const withoutGuidance = [
+  "Misunderstandings",
+  "Delays",
+  "Added stress for clients",
+];
+
+const withGuidance = [
+  "Clarity and structure",
+  "Smoother transactions",
+  "A more manageable experience",
+];
 
 const ForFamilyLawAttorneys = () => (
-  <AttorneyPageTemplate
-    title="Family Law Attorneys"
-    seoTitle="Real Estate Support for Family Law Attorneys | Real Property Planning"
-    seoDescription="David Stein works with family law attorneys on property valuations, marital home sales, and real estate coordination during family transitions in Western Washington."
-    path="/for-family-law-attorneys"
-    heroLabel="For Family Law Attorneys"
-    heroHeadline="Real Estate Support for Family Law Attorneys and Their Clients"
-    heroSubtext="Providing objective property valuations, coordinated home sales, and professional real estate guidance during family transitions and legal proceedings."
-    introHeading="Working With Family Law Attorneys"
-    introText={[
-      "Family law matters often involve the marital home or other real property that needs to be valued, sold, or transferred as part of a legal resolution. Real Property Planning works with family law attorneys to provide objective market analysis and professional real estate coordination that supports fair outcomes.",
-      "David Stein's dual credentials as a licensed broker and certified residential appraiser bring analytical objectivity to property-related decisions during family transitions. He communicates neutrally, provides data-driven guidance, and manages the real estate process with discretion and professionalism.",
-    ]}
-    scenarios={[
-      { title: "Marital Home Sale During Separation", description: "A couple needs to sell the family home as part of a divorce settlement. David provides objective market analysis, manages preparation and listing, and communicates professionally with both parties and their attorneys." },
-      { title: "Property Valuation for Settlement", description: "An attorney needs a current, defensible property valuation to support equitable distribution negotiations. David provides detailed market analysis grounded in comparable sales and property condition assessment." },
-      { title: "Buyout Evaluation", description: "One spouse wants to buy out the other's share of the family home. David provides realistic market perspective to help both parties and their attorneys negotiate from an informed position." },
-      { title: "Pre-Listing Coordination", description: "The court has ordered the sale of the marital home. David coordinates preparation, pricing, and listing while maintaining neutral communication with both parties." },
-    ]}
-    howWeHelp={[
-      "Objective, data-driven property valuation grounded in appraiser-level analysis",
-      "Neutral communication with all parties — no favoritism or advocacy",
-      "Professional coordination of property preparation and sale",
-      "Defensible market analysis suitable for settlement negotiations and court review",
-      "Discreet, professional handling of sensitive family situations",
-      "Clear documentation and transparent process from assessment through closing",
-    ]}
-    whyItMatters={[
-      "Provides objective market data that supports fair, informed settlements",
-      "Reduces conflict by presenting facts rather than opinions",
-      "Aligns the real estate process with the legal timeline and settlement strategy",
-      "Ensures both parties feel the process is transparent and professional",
-      "Protects the attorney's client through honest, analytical guidance",
-    ]}
-  />
+  <div className="min-h-screen bg-background">
+    <SEOHead
+      title="Real Estate Support for Family Law Attorneys | Real Property Planning"
+      description="David Stein works with family law attorneys on property valuations, home sales, and real estate coordination during family transitions in Western Washington."
+    />
+    <BreadcrumbSchema
+      items={[
+        { name: "For Attorneys", url: "/for-attorneys" },
+        { name: "Family Law Attorneys", url: "/for-family-law-attorneys" },
+      ]}
+    />
+    <Header />
+
+    {/* Hero */}
+    <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
+      <div className="container px-6 lg:px-8">
+        <div className="max-w-3xl">
+          <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
+            For Family Law Attorneys
+          </p>
+          <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
+            Real Estate Support for Family Law Attorneys and Their Clients
+          </h1>
+          <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-8">
+            Helping Clients Navigate Property Decisions with Clarity and Structure
+          </p>
+          <Link to="/contact">
+            <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold px-7 py-4 h-auto rounded-lg">
+              <Phone className="w-4 h-4 mr-2" />
+              Schedule a Conversation
+            </Button>
+          </Link>
+        </div>
+      </div>
+    </section>
+
+    {/* Intro */}
+    <section className="py-16 lg:py-20 bg-secondary">
+      <div className="container px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto">
+          <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+            Family law matters often involve significant life changes — and when real estate is part of the equation, those changes can become even more complex.
+          </p>
+          <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+            Whether clients are navigating divorce, separation, or other family-related legal matters, decisions involving a home require clear information, thoughtful planning, and a steady approach.
+          </p>
+          <p className="text-muted-foreground text-lg leading-relaxed">
+            I work alongside family law attorneys to provide reliable valuation, structured guidance, and professional coordination throughout the process.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    {/* Where Real Estate and Family Law Intersect */}
+    <section className="py-16 lg:py-24 bg-background">
+      <div className="container px-6 lg:px-8">
+        <div className="max-w-[900px] mx-auto">
+          <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
+            Where Real Estate and Family Law Intersect
+          </h2>
+          <p className="text-muted-foreground text-lg leading-relaxed mb-10">
+            Clients may be facing situations such as:
+          </p>
+          <div className="grid gap-4">
+            {intersections.map((item, i) => (
+              <div key={i} className="flex items-start gap-3">
+                <GoldCheck3D size={20} className="mt-0.5 shrink-0" />
+                <span className="text-foreground leading-relaxed">{item}</span>
+              </div>
+            ))}
+          </div>
+          <p className="text-muted-foreground text-lg leading-relaxed mt-8">
+            These situations benefit from a clear, organized, and professional approach.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    {/* How I Support Your Clients */}
+    <section className="py-16 lg:py-24 bg-secondary">
+      <div className="container px-6 lg:px-8">
+        <div className="max-w-[900px] mx-auto">
+          <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
+            How I Support Your Clients
+          </h2>
+          <p className="text-muted-foreground text-lg leading-relaxed mb-10">
+            As a licensed real estate broker and state-certified residential appraiser, I provide:
+          </p>
+          <div className="grid gap-5">
+            {services.map((s, i) => (
+              <div key={i} className="bg-card border border-border rounded-xl px-7 py-6">
+                <h3 className="font-serif text-xl text-foreground font-semibold mb-2">
+                  {s.title}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">{s.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Common Situations */}
+    <section className="py-16 lg:py-24 bg-background">
+      <div className="container px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="font-serif text-3xl text-foreground font-semibold mb-8">
+            Common Situations I Help With
+          </h2>
+          <ul className="space-y-4">
+            {situations.map((item, i) => (
+              <li key={i} className="flex items-start gap-3">
+                <GoldCheck3D size={20} className="mt-0.5 shrink-0" />
+                <span className="text-foreground leading-relaxed">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    {/* Why This Matters */}
+    <section className="py-16 lg:py-24 bg-secondary">
+      <div className="container px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="font-serif text-3xl text-foreground font-semibold mb-8">
+            Why This Matters
+          </h2>
+          <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+            Without clear guidance, property-related decisions can lead to:
+          </p>
+          <ul className="space-y-3 mb-10">
+            {withoutGuidance.map((item, i) => (
+              <li key={i} className="flex items-start gap-3">
+                <AlertTriangle className="w-5 h-5 text-destructive mt-0.5 shrink-0" />
+                <span className="text-foreground leading-relaxed">{item}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+            With the right support, clients benefit from:
+          </p>
+          <ul className="space-y-3">
+            {withGuidance.map((item, i) => (
+              <li key={i} className="flex items-start gap-3">
+                <GoldCheck3D size={20} className="mt-0.5 shrink-0" />
+                <span className="text-foreground leading-relaxed">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    {/* A Collaborative Approach */}
+    <section className="py-16 lg:py-20 bg-background">
+      <div className="container px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="font-serif text-3xl text-foreground font-semibold mb-5">
+            A Collaborative Approach
+          </h2>
+          <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+            My role is to support the legal process by helping ensure that real estate decisions are handled clearly, professionally, and efficiently.
+          </p>
+          <p className="text-muted-foreground text-lg leading-relaxed">
+            By working together, we can provide a more complete and coordinated experience for clients.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    {/* CTA */}
+    <section className="py-20 lg:py-28 bg-primary">
+      <div className="container px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-5">
+            Let's Connect
+          </h2>
+          <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
+            If your clients are navigating family law matters involving real estate, I would welcome the opportunity to collaborate and support a smooth process.
+          </p>
+          <Link to="/contact">
+            <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold">
+              <Phone className="w-5 h-5 mr-2" />
+              Schedule a Conversation
+            </Button>
+          </Link>
+        </div>
+      </div>
+    </section>
+
+    <RelatedServices currentPath="/for-family-law-attorneys" />
+    <DisclaimerSection />
+    <Footer />
+  </div>
 );
 
 export default ForFamilyLawAttorneys;
