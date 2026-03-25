@@ -169,7 +169,7 @@ const FAQ = () => {
             </h2>
             <div className="flex justify-center">
               <Link to="/contact">
-                <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold">
+ <Button variant="gold" size="lg"className="hover:-light">
                   Contact David
                 </Button>
               </Link>

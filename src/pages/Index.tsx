@@ -260,7 +260,7 @@ const Index = () => {
               ))}
             </ul>
             <Link to="/contact">
-              <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold px-8 py-4 h-auto rounded-lg">
+ <Button variant="gold" size="lg"className="hover:-light px-8 py-4 h-auto rounded-lg">
                 <img src={iconPhone3d} alt="" aria-hidden="true" className="w-6 h-6 mr-2 object-contain shrink-0" />
                 Schedule a Conversation
               </Button>
@@ -333,7 +333,7 @@ const Index = () => {
           </div>
           <div className="text-center mt-10">
             <Link to="/counties">
-              <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold focus-visible:ring-gold">
+ <Button variant="gold" size="lg"className="hover:-light focus-visible:ring-gold">
                 View All Service Areas
                 <ChevronRight className="w-4 h-4 ml-1" />
               </Button>
@@ -425,7 +425,7 @@ const Index = () => {
                     placeholder="Tell us about your situation..."
                   />
                 </div>
-                <Button className="w-full bg-gold hover:bg-gold-light text-foreground font-semibold py-3 h-auto rounded-lg text-base">
+ <Button variant="gold" className="w-full hover:-light py-3 h-auto rounded-lg text-base">
                   Send a Message
                 </Button>
               </form>
