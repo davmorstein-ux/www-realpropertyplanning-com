@@ -362,14 +362,14 @@ const Index = () => {
                 <div>
                   <p className="text-sm text-primary-foreground/60">Phone</p>
                   <a href="tel:2069003015" className="mt-1 inline-flex items-center text-primary-foreground transition-colors hover:text-gold">
-                    <img src={iconPhone3d} alt="" aria-hidden="true" className="mr-2 h-8 w-8 shrink-0 object-contain mix-blend-multiply" />
+                    <img src={iconPhone3d} alt="" aria-hidden="true" className="mr-2 h-8 w-8 shrink-0 object-contain" />
                     <span className="text-lg font-semibold">(206) 900-3015</span>
                   </a>
                 </div>
                 <div>
                   <p className="text-sm text-primary-foreground/60">Email</p>
                   <a href="mailto:david@realpropertyplanning.com" className="mt-1 inline-flex items-center text-primary-foreground transition-colors hover:text-gold">
-                    <img src={iconEmail3d} alt="" aria-hidden="true" className="mr-2 h-8 w-8 shrink-0 object-contain mix-blend-multiply" />
+                    <img src={iconEmail3d} alt="" aria-hidden="true" className="mr-2 h-8 w-8 shrink-0 object-contain" />
                     <span className="text-lg font-semibold">david@realpropertyplanning.com</span>
                   </a>
                 </div>
