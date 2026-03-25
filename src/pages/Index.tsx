@@ -160,14 +160,14 @@ const Index = () => {
               </div>
               <p className="mb-3 text-center text-xs font-semibold uppercase tracking-widest text-muted-foreground">Professional Memberships &amp; Affiliations</p>
               <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-5">
-                <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer" className="flex h-14 items-center justify-center">
-                  <img src={alcaLogo} alt="Aging Life Care Association Corporate Partner" className="max-h-11 w-auto object-contain" loading="lazy" />
+                <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer" className="flex h-[84px] items-center justify-center">
+                  <img src={alcaLogo} alt="Aging Life Care Association Corporate Partner" className="max-h-[66px] w-auto object-contain" loading="lazy" />
                 </a>
-                <span className="flex h-14 items-center justify-center">
-                  <img src={naosaBadge} alt="National Association of Senior Advocates - Best Real Estate Agent 2026" className="max-h-11 w-auto object-contain" loading="lazy" />
+                <span className="flex h-[84px] items-center justify-center">
+                  <img src={naosaBadge} alt="National Association of Senior Advocates - Best Real Estate Agent 2026" className="max-h-[66px] w-auto object-contain" loading="lazy" />
                 </span>
-                <a href="https://www.naepc.org" target="_blank" rel="noopener noreferrer" className="flex h-14 items-center justify-center">
-                  <img src={naepcLogo} alt="National Association of Estate Planners & Councils" className="max-h-11 w-auto object-contain" loading="lazy" />
+                <a href="https://www.naepc.org" target="_blank" rel="noopener noreferrer" className="flex h-[84px] items-center justify-center">
+                  <img src={naepcLogo} alt="National Association of Estate Planners & Councils" className="max-h-[66px] w-auto object-contain" loading="lazy" />
                 </a>
               </div>
             </div>
@@ -262,7 +262,7 @@ const Index = () => {
             </ul>
             <Link to="/contact">
  <Button variant="gold" size="lg"className="hover:-light px-8 py-4 h-auto rounded-lg">
-                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-6 h-6 mr-2 object-contain shrink-0" />
+                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-6 h-6 mr-2 object-contain shrink-0" style={{ background: 'transparent' }} />
                 Schedule a Conversation
               </Button>
             </Link>
