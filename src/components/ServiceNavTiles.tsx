@@ -18,7 +18,7 @@ const ServiceNavTiles = () => {
 
         <div className="flex flex-wrap justify-center gap-5 sm:gap-6 lg:gap-7">
           {serviceTiles.map((tile) => (
-            <div key={tile.href + tile.title} className="w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1.17rem)]">
+            <div key={tile.href + tile.title} className="w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1.17rem)] flex">
               <ServiceNavTileCard tile={tile} />
             </div>
           ))}
