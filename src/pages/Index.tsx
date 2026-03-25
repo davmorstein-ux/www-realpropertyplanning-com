@@ -261,7 +261,7 @@ const Index = () => {
             </ul>
             <Link to="/contact">
               <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold px-8 py-4 h-auto rounded-lg">
-                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 mr-2 object-contain shrink-0" />
+                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-6 h-6 mr-2 object-contain shrink-0" />
                 Schedule a Conversation
               </Button>
             </Link>
@@ -361,14 +361,14 @@ const Index = () => {
                 <div>
                   <p className="text-sm text-primary-foreground/60">Phone</p>
                   <a href="tel:2069003015" className="mt-1 inline-flex items-center text-primary-foreground transition-colors hover:text-gold">
-                    <img src={iconPhone3d} alt="" aria-hidden="true" className="mr-2 h-[22px] w-[22px] shrink-0 object-contain" />
+                    <img src={iconPhone3d} alt="" aria-hidden="true" className="mr-2 h-8 w-8 shrink-0 object-contain" />
                     <span className="text-lg font-semibold">(206) 900-3015</span>
                   </a>
                 </div>
                 <div>
                   <p className="text-sm text-primary-foreground/60">Email</p>
                   <a href="mailto:david@realpropertyplanning.com" className="mt-1 inline-flex items-center text-primary-foreground transition-colors hover:text-gold">
-                    <img src={iconEmail3d} alt="" aria-hidden="true" className="mr-2 h-[22px] w-[22px] shrink-0 object-contain" />
+                    <img src={iconEmail3d} alt="" aria-hidden="true" className="mr-2 h-8 w-8 shrink-0 object-contain" />
                     <span className="text-lg font-semibold">david@realpropertyplanning.com</span>
                   </a>
                 </div>
