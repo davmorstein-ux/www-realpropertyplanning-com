@@ -149,11 +149,11 @@ const Index = () => {
               <div className="mb-5 space-y-3">
                 <p className="text-base font-semibold tracking-[0.02em] text-foreground">David Stein</p>
                 <p className="flex items-center text-sm font-semibold text-foreground md:text-base">
-                  <img src={iconLicense3d} alt="" aria-hidden="true" className="mr-2 h-[22px] w-[22px] shrink-0 object-contain" />
+                  <img src={iconLicense3d} alt="" aria-hidden="true" className="mr-2.5 h-8 w-8 shrink-0 object-contain" />
                   Licensed Real Estate Broker
                 </p>
                 <p className="flex items-center text-sm font-semibold text-foreground md:text-base">
-                  <img src={iconAppraiser3d} alt="" aria-hidden="true" className="mr-2 h-[22px] w-[22px] shrink-0 object-contain" />
+                  <img src={iconAppraiser3d} alt="" aria-hidden="true" className="mr-2.5 h-8 w-8 shrink-0 object-contain" />
                   WA Certified Residential Appraiser
                 </p>
               </div>
