@@ -115,7 +115,7 @@ const HowTheProcessWorks = () => {
               Each engagement is structured around practical milestones: assess the property, align on strategy, prepare the home, price it accurately, market it effectively, negotiate with confidence, and close with certainty. Post-sale support ensures nothing falls through the cracks.
             </p>
             <Link to="/contact">
-              <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-medium px-7 py-4 h-auto rounded-lg">
+ <Button variant="gold" size="lg"className="hover:-light font-medium px-7 py-4 h-auto rounded-lg">
                 <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 mr-2 object-contain shrink-0" />
                 Schedule a Consultation
               </Button>
@@ -189,7 +189,7 @@ const HowTheProcessWorks = () => {
             </p>
             <div className="flex justify-center">
               <Link to="/contact">
-                <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold">
+ <Button variant="gold" size="lg"className="hover:-light">
                   Schedule a Consultation
                 </Button>
               </Link>

@@ -97,7 +97,7 @@ const SeniorTransitions = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/contact">
-                <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold w-full sm:w-auto">
+ <Button variant="gold" size="lg"className="hover:-light w-full sm:w-auto">
                   <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
                   Schedule a Consultation
                 </Button>
@@ -268,7 +268,7 @@ const SeniorTransitions = () => {
             </p>
             <div className="flex justify-center">
               <Link to="/contact">
-                <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold">
+ <Button variant="gold" size="lg"className="hover:-light">
                   <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
                   Schedule a Consultation
                 </Button>

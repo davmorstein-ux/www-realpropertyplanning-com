@@ -65,7 +65,7 @@ const AttorneyPageTemplate = ({
               {heroSubtext}
             </p>
             <Link to="/contact">
-              <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold px-7 py-4 h-auto rounded-lg">
+ <Button variant="gold" size="lg"className="hover:-light px-7 py-4 h-auto rounded-lg">
                 <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 mr-2 object-contain shrink-0" />
                 Schedule a Conversation
               </Button>
@@ -166,7 +166,7 @@ const AttorneyPageTemplate = ({
               Confidential conversations are always welcome. David will follow up promptly — no pressure, no obligation.
             </p>
             <Link to="/contact">
-              <Button size="lg" className="bg-gold hover:bg-gold-light text-foreground font-semibold">
+ <Button variant="gold" size="lg"className="hover:-light">
                 <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
                 Schedule a Conversation
               </Button>

@@ -252,9 +252,9 @@ const SeniorEstateServices = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">
-                <Button
+                <Button variant="gold"
                   size="lg"
-                  className="bg-gold hover:bg-gold-light text-foreground font-semibold px-8 rounded-[14px] text-base h-[52px] w-full sm:w-auto"
+ className="hover:-light px-8 rounded-[14px] text-base h-[52px] w-full sm:w-auto"
                 >
                   <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
                   Schedule a Consultation
