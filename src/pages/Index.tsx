@@ -262,7 +262,7 @@ const Index = () => {
             </ul>
             <Link to="/contact">
  <Button variant="gold" size="lg"className="hover:-light px-8 py-4 h-auto rounded-lg">
-                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-6 h-6 mr-2 object-contain shrink-0" style={{ background: 'transparent' }} />
+                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-10 h-10 mr-2.5 object-contain shrink-0" style={{ background: 'transparent' }} />
                 Schedule a Conversation
               </Button>
             </Link>
@@ -322,7 +322,7 @@ const Index = () => {
               <Link key={i} to={area.href} className="group">
                 <div className="bg-primary-foreground/5 border border-primary-foreground/10 rounded-xl p-6 hover:bg-primary-foreground/10 transition-colors">
                   <div className="flex items-center gap-3 mb-3">
-                    <img src={mappin3d} alt="" aria-hidden="true" className="w-7 h-7 object-contain shrink-0" />
+                    <img src={mappin3d} alt="" aria-hidden="true" className="w-12 h-12 object-contain shrink-0" />
                     <h3 className="font-serif text-xl text-primary-foreground font-semibold group-hover:text-gold transition-colors">
                       {area.county}
                     </h3>
@@ -362,21 +362,21 @@ const Index = () => {
                 <div>
                   <p className="text-sm text-primary-foreground/60">Phone</p>
                   <a href="tel:2069003015" className="mt-1 inline-flex items-center text-primary-foreground transition-colors hover:text-gold">
-                    <img src={iconPhone3d} alt="" aria-hidden="true" className="mr-2 h-8 w-8 shrink-0 object-contain" />
+                    <img src={iconPhone3d} alt="" aria-hidden="true" className="mr-3 h-14 w-14 shrink-0 object-contain" />
                     <span className="text-lg font-semibold">(206) 900-3015</span>
                   </a>
                 </div>
                 <div>
                   <p className="text-sm text-primary-foreground/60">Email</p>
                   <a href="mailto:david@realpropertyplanning.com" className="mt-1 inline-flex items-center text-primary-foreground transition-colors hover:text-gold">
-                    <img src={iconEmail3d} alt="" aria-hidden="true" className="mr-2 h-8 w-8 shrink-0 object-contain" />
+                    <img src={iconEmail3d} alt="" aria-hidden="true" className="mr-3 h-14 w-14 shrink-0 object-contain" />
                     <span className="text-lg font-semibold">david@realpropertyplanning.com</span>
                   </a>
                 </div>
                 <div>
                   <p className="text-sm text-primary-foreground/60">Serving</p>
                   <div className="mt-1 inline-flex items-center text-primary-foreground">
-                    <img src={mappin3d} alt="" aria-hidden="true" className="mr-2 h-[22px] w-[22px] shrink-0 object-contain" />
+                    <img src={mappin3d} alt="" aria-hidden="true" className="mr-3 h-11 w-11 shrink-0 object-contain" />
                     <span className="text-lg font-semibold">Western Washington &amp; Puget Sound</span>
                   </div>
                 </div>
