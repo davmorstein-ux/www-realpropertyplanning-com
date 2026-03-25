@@ -15,7 +15,7 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        gold: "bg-gradient-to-b from-[hsl(43_56%_58%)] to-[hsl(43_50%_42%)] text-white font-semibold rounded-xl shadow-[0_4px_16px_-2px_hsl(43_50%_30%/0.45),0_1px_3px_0_hsl(43_50%_30%/0.25),inset_0_1px_0_0_hsl(43_60%_72%/0.5)] hover:shadow-[0_8px_24px_-4px_hsl(43_50%_30%/0.5),0_2px_6px_0_hsl(43_50%_30%/0.3),inset_0_1px_0_0_hsl(43_60%_72%/0.6)] hover:-translate-y-0.5 active:translate-y-px active:shadow-[0_2px_8px_-2px_hsl(43_50%_30%/0.4),inset_0_1px_2px_0_hsl(43_40%_30%/0.2)] transition-all duration-200 ease-out focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 border border-[hsl(43_45%_50%/0.3)]",
+        gold: "gold-premium-btn",
       },
       size: {
         default: "h-10 px-4 py-2",
