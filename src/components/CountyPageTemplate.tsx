@@ -40,7 +40,6 @@ const CountyPageTemplate = ({
     { name: countyName, url: countyPath },
   ];
 
-  // Find matching county data to get city slugs
   const countyData = counties.find((c) => c.slug === countySlug);
 
   const defaultClientTypes = [
@@ -104,7 +103,7 @@ const CountyPageTemplate = ({
         </section>
       )}
 
-      {/* Who We Work With in This County */}
+      {/* Who We Work With */}
       <section className="py-20 lg:py-28 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
@@ -129,7 +128,7 @@ const CountyPageTemplate = ({
         </div>
       </section>
 
-      {/* Typical Situations */}
+      {/* Common Situations */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
@@ -151,7 +150,7 @@ const CountyPageTemplate = ({
         </div>
       </section>
 
-      {/* Services Available in This County */}
+      {/* Services Available */}
       <section className="py-20 lg:py-28 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-[1140px] mx-auto">
@@ -185,8 +184,25 @@ const CountyPageTemplate = ({
         </div>
       </section>
 
-      {/* Communities Served — now with links */}
+      {/* Why Local Knowledge Matters */}
       <section className="py-20 lg:py-28 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
+              Why Local Knowledge Matters in {countyName}
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              {localParagraph || `Every county has its own market patterns, housing stock, buyer demand, and practical sale considerations. Real Property Planning combines broad experience with local awareness to help clients make informed property decisions in ${countyName}.`}
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              From neighborhood-level pricing nuances to understanding which preparation investments deliver meaningful returns, local context shapes every recommendation David makes. This is especially important for estate, probate, and inherited properties where condition and market positioning can significantly affect the final outcome.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Communities Served */}
+      <section className="py-20 lg:py-28 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
@@ -222,13 +238,10 @@ const CountyPageTemplate = ({
         </div>
       </section>
 
-      {/* Local Paragraph */}
-      <section className="py-16 lg:py-20 bg-secondary">
+      {/* Internal Links */}
+      <section className="py-12 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              {localParagraph || `Every county has its own market patterns, housing stock, buyer demand, and practical sale considerations. Real Property Planning combines broad experience with local awareness to help clients make informed property decisions in ${countyName}.`}
-            </p>
             <div className="flex flex-wrap gap-3">
               <Link to="/probate-estate-sales" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Probate & Estate Sales</Link>
               <span className="text-muted-foreground/40">·</span>
@@ -248,12 +261,12 @@ const CountyPageTemplate = ({
 
       <RelatedServices currentPath={countyPath} />
 
-      {/* Bottom CTA */}
+      {/* CTA */}
       <section className="py-20 lg:py-28 bg-primary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
-              Need help with a property in {countyName}?
+              Need Help With a Property in {countyName}?
             </h2>
             <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
               David provides confidential consultations for executors, attorneys, trustees, families, and financial professionals throughout {countyName}.

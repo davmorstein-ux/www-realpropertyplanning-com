@@ -20,7 +20,6 @@ interface ServicePageTemplateProps {
 }
 
 const ServicePageTemplate = ({ service, introText, situations, benefits }: ServicePageTemplateProps) => {
-  // Collect a sample of cities for internal linking
   const citySamples = counties.flatMap((county) =>
     county.cities.slice(0, 3).map((c) => ({
       ...c,
@@ -61,8 +60,30 @@ const ServicePageTemplate = ({ service, introText, situations, benefits }: Servi
 
       <TrustStrip />
 
-      {/* Common Situations */}
+      {/* Who This Service Is For */}
       <section className="py-20 lg:py-28 bg-secondary">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
+              Who This Service Is For
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              {service.shortName} is designed for clients and professionals who need experienced, trustworthy guidance during an important property transition:
+            </p>
+            <ul className="space-y-4">
+              {service.targetAudience.map((item, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <GoldCheck3D size={20} className="mt-0.5" />
+                  <span className="text-foreground text-[15px] leading-relaxed">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Common Situations */}
+      <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
@@ -80,8 +101,8 @@ const ServicePageTemplate = ({ service, introText, situations, benefits }: Servi
         </div>
       </section>
 
-      {/* Benefits */}
-      <section className="py-20 lg:py-28 bg-background">
+      {/* How I Help */}
+      <section className="py-20 lg:py-28 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
@@ -95,6 +116,20 @@ const ServicePageTemplate = ({ service, introText, situations, benefits }: Servi
                 </li>
               ))}
             </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Valuation & Market Guidance Matter */}
+      <section className="py-20 lg:py-28 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
+              Why Valuation and Market Guidance Matter
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              {service.whyValuationMatters}
+            </p>
           </div>
         </div>
       </section>
