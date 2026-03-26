@@ -552,7 +552,7 @@ export const services: ServiceData[] = [
     slug: "probate-estate-sales",
     shortName: "Probate & Estate Sales",
     description: "Guiding executors, attorneys, and families through the sale of probate and estate-owned property with valuation expertise and practical coordination.",
-    cityIntroTemplate: "Navigating a probate or estate property sale in {city} requires local market knowledge, realistic pricing, and experienced coordination. Real Property Planning provides practical guidance for executors, attorneys, and families managing estate-owned real estate in {city} and throughout {county}.",
+    cityIntroTemplate: "Selling a probate or estate property in {city} takes local market knowledge, realistic pricing, and experienced coordination. Real Property Planning guides executors, attorneys, and families through the sale of estate-owned real estate in {city} and {county}.",
     targetAudience: [
       "Executors and personal representatives appointed by the court",
       "Probate attorneys who need a reliable real estate partner",
@@ -567,7 +567,7 @@ export const services: ServiceData[] = [
     slug: "senior-transitions",
     shortName: "Senior Transitions",
     description: "Supporting seniors and their families through the sale of a longtime home, including preparation, pricing, and coordinating the transition timeline.",
-    cityIntroTemplate: "When a senior or their family is preparing to sell a longtime home in {city}, the process involves much more than listing a property. Real Property Planning helps families in {city} plan and coordinate the transition — from pricing and preparation to vendor coordination and sale timing.",
+    cityIntroTemplate: "Selling a longtime family home in {city} involves more than listing a property. Real Property Planning helps families plan and coordinate the transition — from preparation and pricing to vendor coordination and sale timing.",
     targetAudience: [
       "Seniors preparing to move to assisted living, independent living, or memory care",
       "Adult children coordinating a parent's housing transition",
@@ -582,7 +582,7 @@ export const services: ServiceData[] = [
     slug: "downsizing-services",
     shortName: "Downsizing",
     description: "Helping homeowners who are ready to simplify — whether moving to a smaller home, a retirement community, or closer to family.",
-    cityIntroTemplate: "Downsizing from a family home in {city} is a significant life decision that benefits from experienced, practical guidance. Real Property Planning helps homeowners in {city} evaluate their options, prepare their property, and navigate the sale with clarity and realistic expectations.",
+    cityIntroTemplate: "Downsizing from a family home in {city} is a major decision. Real Property Planning helps homeowners evaluate their options, prepare the property, and manage the sale with clarity and realistic expectations.",
     targetAudience: [
       "Homeowners ready to move to a smaller, more manageable home",
       "Retirees relocating closer to family or to a warmer climate",
@@ -611,7 +611,7 @@ export const services: ServiceData[] = [
     slug: "attorney-fiduciary-support",
     shortName: "Attorney & Fiduciary Support",
     description: "A reliable real estate resource for attorneys and fiduciaries who need experienced, communicative support on estate and trust property matters.",
-    cityIntroTemplate: "Attorneys and fiduciaries managing real property matters in {city} need a real estate partner who understands legal timelines, fiduciary obligations, and the importance of clear communication. Real Property Planning works with legal and fiduciary professionals across {city} and {county}.",
+    cityIntroTemplate: "Attorneys and fiduciaries managing property in {city} need a real estate partner who understands legal timelines, fiduciary obligations, and clear communication. Real Property Planning works with legal and fiduciary professionals across {city} and {county}.",
     targetAudience: [
       "Probate and estate planning attorneys",
       "Elder law attorneys coordinating property transitions",
@@ -626,7 +626,7 @@ export const services: ServiceData[] = [
     slug: "valuation-guidance",
     shortName: "Valuation Guidance",
     description: "Providing valuation-informed insight for inherited, estate, and transition-related property decisions where pricing accuracy is critical.",
-    cityIntroTemplate: "Accurate property valuation in {city} is essential for estate settlements, trust administration, and transition planning. Real Property Planning combines licensed broker and certified appraiser credentials to provide valuation-informed guidance for properties in {city} and throughout {county}.",
+    cityIntroTemplate: "Accurate property valuation in {city} matters for estate settlements, trust administration, and transition planning. David Stein combines licensed broker and certified appraiser credentials to provide clear, condition-based guidance for properties in {city} and {county}.",
     targetAudience: [
       "Executors and trustees who need an accurate understanding of property value",
       "Attorneys who need reliable real estate valuation support for legal proceedings",
@@ -1032,19 +1032,17 @@ export function getCityServiceScenarios(cityName: string, serviceName: string, s
 export function getToneScenariosHeading(cityName: string, serviceName: string, tone?: CommunityTone): string {
   switch (tone) {
     case "premium":
-      return `When ${cityName} Clients Seek ${serviceName} Guidance`;
+    case "waterfront":
+      return `When ${cityName} Clients Need ${serviceName}`;
     case "urban":
       return `Common ${serviceName} Situations in ${cityName}`;
-    case "waterfront":
-      return `When ${cityName} Families Turn to ${serviceName}`;
     case "smalltown":
-      return `How ${serviceName} Comes Up in ${cityName}`;
-    case "military":
-      return `When ${cityName} Families Need ${serviceName}`;
     case "rural":
-      return `${serviceName} Situations in the ${cityName} Area`;
+      return `${serviceName} in ${cityName}`;
+    case "military":
+      return `${serviceName} Situations in ${cityName}`;
     default:
-      return `When ${cityName} Clients Need ${serviceName}`;
+      return `When Clients in ${cityName} Need ${serviceName}`;
   }
 }
 
@@ -1052,37 +1050,28 @@ export function getToneScenariosHeading(cityName: string, serviceName: string, t
 export function getToneScenariosLead(cityName: string, serviceName: string, tone?: CommunityTone): string {
   switch (tone) {
     case "premium":
-      return `In a market like ${cityName}, ${serviceName.toLowerCase()} situations often involve significant property values and complex family or legal dynamics. Clients typically reach out when facing circumstances such as:`;
+      return `${serviceName} situations in ${cityName} often involve higher property values and multiple decision-makers. Clients typically reach out when facing:`;
     case "urban":
-      return `${cityName}'s diverse neighborhoods and fast-moving market mean ${serviceName.toLowerCase()} situations can take many forms. Common scenarios include:`;
+      return `${cityName}'s range of neighborhoods and property types means ${serviceName.toLowerCase()} situations vary widely. Common scenarios include:`;
     case "waterfront":
-      return `In a community like ${cityName}, property transitions carry personal significance alongside financial weight. Families often seek ${serviceName.toLowerCase()} guidance when they encounter:`;
+      return `Property transitions in ${cityName} often involve longtime family homes and specific local market factors. Clients seek ${serviceName.toLowerCase()} guidance when facing:`;
     case "smalltown":
-      return `In a close-knit community like ${cityName}, real estate decisions are often deeply personal. Families and individuals typically seek ${serviceName.toLowerCase()} support when facing:`;
+      return `In ${cityName}, property decisions tend to be personal and practical. Clients reach out for ${serviceName.toLowerCase()} support when facing:`;
     case "military":
-      return `Families in ${cityName} — including those connected to nearby military installations — often need ${serviceName.toLowerCase()} guidance when life circumstances change. Common situations include:`;
+      return `Families in ${cityName} often need ${serviceName.toLowerCase()} guidance when circumstances change. Common situations include:`;
     case "rural":
-      return `Properties in the ${cityName} area often have unique characteristics — acreage, outbuildings, or rural features — that make ${serviceName.toLowerCase()} situations more nuanced. Clients typically reach out when facing:`;
+      return `Properties in ${cityName} often have features — acreage, outbuildings, or rural character — that add complexity. Clients typically reach out when facing:`;
     default:
-      return `Clients in ${cityName} often seek ${serviceName.toLowerCase()} guidance when facing situations such as:`;
+      return `Clients in ${cityName} seek ${serviceName.toLowerCase()} guidance in situations such as:`;
   }
 }
 
 /** Tone-aware heading for how-we-help section */
 export function getToneHowWeHelpHeading(tone?: CommunityTone): string {
   switch (tone) {
-    case "premium":
-      return "How Real Property Planning Serves You";
-    case "urban":
-      return "What Real Property Planning Provides";
-    case "waterfront":
-      return "How Real Property Planning Supports Your Transition";
     case "smalltown":
-      return "How David Stein Helps";
-    case "military":
-      return "How Real Property Planning Can Help";
     case "rural":
-      return "How David Stein Works with You";
+      return "How David Stein Helps";
     default:
       return "How Real Property Planning Helps";
   }
@@ -1092,19 +1081,18 @@ export function getToneHowWeHelpHeading(tone?: CommunityTone): string {
 export function getToneHowWeHelpLead(cityName: string, serviceName: string, tone?: CommunityTone): string {
   switch (tone) {
     case "premium":
-      return `David Stein brings over twenty years of experience and dual credentials — licensed broker and certified appraiser — to every ${serviceName.toLowerCase()} engagement in ${cityName}:`;
+      return `David Stein's dual credentials as a licensed broker and certified appraiser inform every step of the ${serviceName.toLowerCase()} process in ${cityName}:`;
     case "urban":
-      return `David Stein provides experienced coordination and valuation-informed guidance tailored to ${cityName}'s market:`;
+      return `David Stein provides experienced guidance tailored to ${cityName}'s market:`;
     case "waterfront":
-      return `David Stein brings careful, locally informed guidance to every ${serviceName.toLowerCase()} situation in ${cityName}:`;
+      return `David Stein brings locally informed guidance to ${serviceName.toLowerCase()} in ${cityName}:`;
     case "smalltown":
-      return `David Stein provides steady, hands-on guidance through every step of the ${serviceName.toLowerCase()} process:`;
-    case "military":
-      return `David Stein provides clear, practical guidance for ${serviceName.toLowerCase()} situations in ${cityName}:`;
     case "rural":
-      return `David Stein provides honest, property-specific guidance for ${serviceName.toLowerCase()} in the ${cityName} area:`;
+      return `David Stein provides steady, hands-on guidance through the ${serviceName.toLowerCase()} process:`;
+    case "military":
+      return `David Stein provides clear, practical guidance for ${serviceName.toLowerCase()} in ${cityName}:`;
     default:
-      return `David Stein provides hands-on coordination and valuation-informed guidance for every ${serviceName.toLowerCase()} engagement:`;
+      return `David Stein provides valuation-informed guidance for every ${serviceName.toLowerCase()} engagement:`;
   }
 }
 
@@ -1112,17 +1100,12 @@ export function getToneHowWeHelpLead(cityName: string, serviceName: string, tone
 export function getToneCTAHeading(cityName: string, serviceName: string, tone?: CommunityTone): string {
   switch (tone) {
     case "premium":
-      return `Ready to Discuss Your ${cityName} Property?`;
-    case "urban":
-      return `Need ${serviceName} Help in ${cityName}?`;
-    case "waterfront":
-      return `Let's Talk About Your ${cityName} Property`;
+      return `Discuss Your ${cityName} Property`;
     case "smalltown":
-      return `Ready to Take the Next Step?`;
-    case "military":
-      return `Need ${serviceName} Guidance in ${cityName}?`;
     case "rural":
-      return `Let's Discuss Your Property`;
+      return `Ready to Take the Next Step?`;
+    case "waterfront":
+      return `Talk with David About Your Property`;
     default:
       return `Need ${serviceName} Help in ${cityName}?`;
   }
@@ -1132,18 +1115,13 @@ export function getToneCTAHeading(cityName: string, serviceName: string, tone?: 
 export function getToneCTABody(cityName: string, tone?: CommunityTone): string {
   switch (tone) {
     case "premium":
-      return `Schedule a confidential consultation to discuss your ${cityName} property and explore your options.`;
-    case "urban":
-      return `Schedule a consultation to discuss your ${cityName} property situation and next steps.`;
+      return `Schedule a confidential consultation to discuss your ${cityName} property and your options.`;
     case "waterfront":
-      return `Reach out for a conversation about your property and what the process looks like from here.`;
+      return `Reach out to discuss your property and what the process looks like from here.`;
     case "smalltown":
-      return `Contact David directly to discuss your situation — there is no pressure and no obligation.`;
-    case "military":
-      return `Schedule a consultation to discuss your ${cityName} property — David works with families across the area.`;
     case "rural":
-      return `Reach out to discuss your property. David is happy to talk through your situation and answer questions.`;
+      return `Contact David to discuss your situation — no pressure, no obligation.`;
     default:
-      return `Schedule a confidential consultation to discuss your ${cityName} property situation.`;
+      return `Schedule a consultation to discuss your ${cityName} property situation.`;
   }
 }
