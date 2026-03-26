@@ -225,7 +225,7 @@ const Index = () => {
                   <img src={naosaBadge} alt="National Association of Senior Advocates - Best Real Estate Agent 2026" className="max-h-[132px] w-auto object-contain" loading="lazy" />
                 </a>
                 <a href="https://www.naepc.org" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
-                  <img src={naepcLogo} alt="National Association of Estate Planners & Councils" className="h-[246px] w-auto object-contain" loading="lazy" />
+                  <img src={naepcLogo} alt="National Association of Estate Planners & Councils" className="h-[62px] w-auto object-contain" loading="lazy" />
                 </a>
               </div>
             </div>
