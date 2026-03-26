@@ -55,7 +55,7 @@ const ServicesSection = () => {
             <Link
               key={index}
               to={service.link}
-              className="group p-8 bg-card rounded-lg border border-border hover:border-gold/30 hover:shadow-lg transition-all duration-300"
+              className="card-3d group p-8"
             >
               <h3 className="font-serif text-xl text-foreground font-medium mb-3">
                 {service.title}
