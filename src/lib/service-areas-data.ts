@@ -119,7 +119,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   newcastle: {
     tone: "premium",
     descriptor: "Hillside community with Lake Washington views",
-    heroIntro: "Newcastle offers hillside living with striking views of Lake Washington, the Seattle skyline, and the Cascades. For families managing property transitions in Newcastle — whether probate, estate, or senior-related — the community's view-oriented market and newer construction create specific pricing considerations that benefit from experienced, valuation-informed guidance.",
+    heroIntro: "Newcastle offers hillside living with striking views of Lake Washington, the Seattle skyline, and the Cascades. For families managing property transitions in Newcastle — whether probate, estate, or senior-related — the community's view-oriented market and newer construction mean accurate pricing requires hands-on evaluation.",
     localKnowledge: "Newcastle's housing stock is predominantly newer, with many homes built in the 1990s and 2000s in planned communities like Newcastle Highlands and the Golf Club at Newcastle area. Views are a primary value driver here, and the difference between a property with a panoramic view and one without can be substantial. David Stein helps clients understand how view corridors, lot positioning, and condition affect market value in Newcastle's hillside environment.",
   },
   seattle: {
@@ -176,19 +176,19 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   "des-moines": {
     tone: "waterfront",
     descriptor: "Waterfront community along the Puget Sound",
-    heroIntro: "Des Moines offers waterfront living, marina access, and established neighborhoods with sound and mountain views along the Puget Sound coastline. For families handling estate sales or senior transitions in Des Moines, the community's view-oriented market and range of property ages create pricing considerations that benefit from experienced, condition-based analysis.",
+    heroIntro: "Des Moines offers waterfront living, marina access, and established neighborhoods with sound and mountain views along the Puget Sound coastline. For families handling estate sales or senior transitions in Des Moines, the community's view-oriented market and range of property ages make condition-based pricing especially important.",
     localKnowledge: "Des Moines' housing market includes waterfront properties along the sound, hillside homes with varying degrees of view, and established inland neighborhoods. The marina, Saltwater State Park, and waterfront character all contribute to the community's appeal. David Stein helps clients understand how proximity to the water, view quality, and property condition affect value in Des Moines — factors that automated estimates frequently misjudge.",
   },
   seatac: {
     tone: "suburban",
     descriptor: "Airport-adjacent community with practical appeal",
-    heroIntro: "SeaTac's proximity to Seattle-Tacoma International Airport creates a unique real estate environment where noise considerations, commercial zoning, and residential neighborhoods all coexist. For families managing estate or transition-related property in SeaTac, understanding how the airport's influence and the city's specific zoning affect property values is essential for realistic expectations and effective sale strategy.",
+    heroIntro: "SeaTac's proximity to Seattle-Tacoma International Airport creates a unique real estate environment where noise considerations, commercial zoning, and residential neighborhoods all coexist. When selling estate or transition property in SeaTac, understanding how the airport's influence and the city's specific zoning affect property values is essential for realistic expectations and effective sale strategy.",
     localKnowledge: "SeaTac's housing market is compact and influenced by its airport-adjacent location. Properties vary significantly in value based on their proximity to flight paths, commercial zones, and the quieter residential pockets of the city. David Stein helps clients navigate SeaTac's unique market dynamics with honest, condition-based guidance that accounts for the factors specific to this community.",
   },
   tukwila: {
     tone: "urban",
     descriptor: "Urban crossroads with commercial and residential diversity",
-    heroIntro: "Tukwila sits at a crossroads of major highways and commercial districts while maintaining established residential neighborhoods that many families have called home for decades. For executors, heirs, and families managing property transitions in Tukwila, the city's commercial adjacency and diverse housing stock create specific valuation and positioning considerations.",
+    heroIntro: "Tukwila sits at a crossroads of major highways and commercial districts while maintaining established residential neighborhoods that many families have called home for decades. For executors, heirs, and families managing property transitions in Tukwila, the city's commercial adjacency and diverse housing stock affect both valuation and positioning.",
     localKnowledge: "Tukwila's residential areas include neighborhoods near Foster Point, Riverton Heights, and the hillside areas with views toward the Cascades. The city's commercial centers, light rail access, and proximity to major employers all influence buyer demographics. David Stein helps clients understand how Tukwila's unique position as both a commercial hub and residential community affects realistic property values.",
   },
   woodinville: {
@@ -200,13 +200,13 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   kenmore: {
     tone: "waterfront",
     descriptor: "Lakeside community at the north end of Lake Washington",
-    heroIntro: "Kenmore sits at the northern tip of Lake Washington, offering waterfront access, established neighborhoods, and the natural appeal of the Burke-Gilman Trail and Log Boom Park. For families managing estate or transition-related property in Kenmore, the community's lake-adjacent market and range of housing types require guidance that reflects local pricing dynamics.",
+    heroIntro: "Kenmore sits at the northern tip of Lake Washington, offering waterfront access, established neighborhoods, and the natural appeal of the Burke-Gilman Trail and Log Boom Park. When selling estate or transition property in Kenmore, the community's lake-adjacent market and range of housing types require guidance that reflects local pricing dynamics.",
     localKnowledge: "Kenmore's housing includes waterfront and water-view properties along Lake Washington, established mid-century homes in the hillside neighborhoods, and newer developments near the city center. Proximity to the lake, trail access, and views all significantly influence value. David Stein helps Kenmore clients understand how these factors — combined with property condition — affect realistic market positioning.",
   },
   "maple-valley": {
     tone: "suburban",
     descriptor: "Growing foothills community with family appeal",
-    heroIntro: "Maple Valley has grown from a rural crossroads into a well-regarded family community in the foothills southeast of Renton. For families managing estate, probate, or transition properties in Maple Valley, the community's mix of newer planned developments and older established homes requires an approach that accounts for how location within the area and property characteristics affect value.",
+    heroIntro: "Maple Valley has grown from a rural crossroads into a well-regarded family community in the foothills southeast of Renton. When managing estate or transition property in Maple Valley, the community's mix of newer planned developments and older established homes requires an approach that accounts for how location within the area and property characteristics affect value.",
     localKnowledge: "Maple Valley's housing ranges from newer construction in communities like Lakeland Hills to established homes on larger lots in the surrounding areas. The community's family-oriented character, proximity to trails and parks, and growing amenities all contribute to its appeal. David Stein helps clients understand how Maple Valley's growth trajectory and neighborhood differences affect realistic pricing for estate and transition properties.",
   },
   covington: {
@@ -218,13 +218,13 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   "black-diamond": {
     tone: "smalltown",
     descriptor: "Small-town character with rural and master-planned living",
-    heroIntro: "Black Diamond is a small community at the rural edge of southeast King County, combining historic small-town character with newer master-planned developments. For families managing estate or transition properties in Black Diamond, the community's mix of older homes, rural properties, and new construction creates a market where local knowledge is essential for accurate pricing.",
+    heroIntro: "Black Diamond is a small community at the rural edge of southeast King County, combining historic small-town character with newer master-planned developments. When selling estate or transition property in Black Diamond, the community's mix of older homes, rural properties, and new construction creates a market where local knowledge is essential for accurate pricing.",
     localKnowledge: "Black Diamond's housing ranges from historic properties in the original town core to large-lot rural homes and newer construction in the Ten Trails master-planned community. The wide variety of property types — and the significant price differences between them — makes generic pricing tools unreliable. David Stein's appraisal credentials help clients understand how property type, lot size, and location within Black Diamond affect realistic market value.",
   },
   enumclaw: {
     tone: "smalltown",
     descriptor: "Plateau community with mountain views and rural character",
-    heroIntro: "Enumclaw sits on a plateau with striking views of Mount Rainier, combining small-town character with rural properties and established neighborhoods. For families managing estate or transition-related property in Enumclaw, the community's distinct market — influenced by its rural character, agricultural heritage, and distance from major employment centers — requires guidance grounded in local understanding.",
+    heroIntro: "Enumclaw sits on a plateau with striking views of Mount Rainier, combining small-town character with rural properties and established neighborhoods. When selling estate or transition property in Enumclaw, the community's distinct market — influenced by its rural character, agricultural heritage, and distance from major employment centers — requires guidance grounded in local understanding.",
     localKnowledge: "Enumclaw's housing market includes homes in the walkable downtown area, established neighborhoods, and properties with acreage and mountain views in the surrounding plateau. The community's agricultural heritage means some properties include outbuildings, livestock facilities, or unique lot configurations. David Stein helps clients understand how these property characteristics and Enumclaw's specific buyer demographics affect realistic pricing.",
   },
   "north-bend": {
@@ -242,7 +242,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   duvall: {
     tone: "smalltown",
     descriptor: "Small-town riverside community in the Snoqualmie Valley",
-    heroIntro: "Duvall is a small, tight-knit community along the Snoqualmie River, offering a rural-residential character that distinguishes it from more suburban Eastside cities. For families managing estate, probate, or transition properties in Duvall, the community's limited inventory, smaller-town dynamics, and range of property types — from modest homes to properties with acreage — require locally grounded guidance.",
+    heroIntro: "Duvall is a small, tight-knit community along the Snoqualmie River, offering a rural-residential character that distinguishes it from more suburban Eastside cities. When managing estate or transition property in Duvall, the community's limited inventory, smaller-town dynamics, and range of property types — from modest homes to properties with acreage — require locally grounded guidance.",
     localKnowledge: "Duvall's housing market includes homes in the walkable town center, newer subdivisions, and larger rural properties along the valley. The community's small-town identity and agricultural surroundings create a market where buyer expectations differ from more urban areas. David Stein's appraisal background helps clients in Duvall understand how property size, rural features, and community character affect realistic valuation.",
   },
 
@@ -263,7 +263,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   "mountlake-terrace": {
     tone: "suburban",
     descriptor: "Light rail-connected community with lake recreation",
-    heroIntro: "Mountlake Terrace is a compact residential community centered around its recreational lake and pool facility, with newer light rail service enhancing its appeal to commuters. For families managing estate or transition properties in Mountlake Terrace, the community's strong neighborhood identity and evolving transit-oriented development create specific market considerations that benefit from experienced guidance.",
+    heroIntro: "Mountlake Terrace is a compact residential community centered around its recreational lake and pool facility, with newer light rail service enhancing its appeal to commuters. When selling estate or transition property in Mountlake Terrace, the community's strong neighborhood identity and evolving transit-oriented development mean pricing accuracy matters.",
     localKnowledge: "Mountlake Terrace's housing is predominantly mid-century — ramblers and split-levels from the 1960s and '70s — along with some newer construction near the town center and light rail station. The community's recreational facilities and tight-knit character drive consistent buyer interest. David Stein helps clients understand how condition, proximity to amenities, and the light rail's influence affect property values throughout the community.",
   },
   brier: {
@@ -275,7 +275,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   mukilteo: {
     tone: "waterfront",
     descriptor: "Coastal community with Boeing and ferry influences",
-    heroIntro: "Mukilteo is a small, close-knit community with waterfront appeal, ferry access to Whidbey Island, and a housing market influenced by its proximity to Boeing and Paine Field. For families handling estate or transition-related property in Mukilteo, the community's character and relatively limited housing inventory create specific market dynamics that benefit from experienced, local guidance.",
+    heroIntro: "Mukilteo is a small, close-knit community with waterfront appeal, ferry access to Whidbey Island, and a housing market influenced by its proximity to Boeing and Paine Field. For families handling estate or transition-related property in Mukilteo, the community's character and relatively limited housing inventory make experienced local guidance valuable.",
     localKnowledge: "Mukilteo's housing market is relatively compact, with established neighborhoods near the waterfront, properties in the Harbour Pointe master-planned community, and homes along the hillside with varying degrees of sound and mountain views. Because inventory is limited, positioning and pricing accuracy are especially important. David Stein helps clients understand how Mukilteo's unique characteristics affect value and buyer interest.",
   },
   everett: {
@@ -287,19 +287,19 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   "mill-creek": {
     tone: "suburban",
     descriptor: "Master-planned community with strong family appeal",
-    heroIntro: "Mill Creek is a well-regarded master-planned community known for its maintained common areas, strong schools, and family-friendly character. Estate, probate, and senior transition properties in Mill Creek benefit from guidance that understands the community's HOA considerations, buyer expectations, and how condition affects value within a market that tends to attract families seeking move-in-ready homes.",
+    heroIntro: "Mill Creek is a well-regarded master-planned community known for its maintained common areas, strong schools, and family-friendly character. Estate, probate, and senior transition properties in Mill Creek need to be priced with HOA considerations, buyer expectations, and condition in mind — since most buyers here are looking for move-in-ready homes.",
     localKnowledge: "Mill Creek's housing includes a range of single-family homes, townhomes, and condos within its planned community framework. The town center, country club, and trail system all contribute to Mill Creek's appeal. When selling an estate or inherited property here, understanding HOA requirements and how the property compares to recently updated homes in the community is essential for realistic pricing.",
   },
   "bothell-snohomish": {
     tone: "suburban",
     descriptor: "Snohomish County side of the Bothell community",
-    heroIntro: "The Snohomish County portion of Bothell includes neighborhoods near Canyon Park, the University of Washington Bothell campus, and established residential areas along the city's northern edge. For families managing estate or transition-related property in this area, understanding how the Snohomish County side of Bothell differs in market dynamics from the King County side is important for accurate positioning.",
+    heroIntro: "The Snohomish County portion of Bothell includes neighborhoods near Canyon Park, the University of Washington Bothell campus, and established residential areas along the city's northern edge. When selling estate or transition property in this area, understanding how the Snohomish County side of Bothell differs in market dynamics from the King County side is important for accurate positioning.",
     localKnowledge: "Bothell's Snohomish County neighborhoods include Canyon Park, North Creek, and areas near the UW Bothell campus, with housing ranging from older ramblers to newer townhome and condo developments. The area's proximity to the Mill Creek community and its commercial corridors influence buyer interest and demographics. David Stein helps clients understand these local dynamics for estate and transition properties.",
   },
   "woodinville-snohomish": {
     tone: "rural",
     descriptor: "Wine country living in Snohomish County",
-    heroIntro: "The Snohomish County portion of the Woodinville area includes properties near the wine district, rural-residential neighborhoods, and newer developments. For families managing estate or transition-related property in this area, understanding how wine country proximity, lot sizes, and rural character affect value is important for realistic pricing.",
+    heroIntro: "The Snohomish County portion of the Woodinville area includes properties near the wine district, rural-residential neighborhoods, and newer developments. When selling estate or transition property in this area, understanding how wine country proximity, lot sizes, and rural character affect value is important for realistic pricing.",
     localKnowledge: "Properties in the Snohomish County Woodinville area range from estate-style homes near the wine district to rural properties with acreage and newer suburban developments. David Stein's appraisal background helps clients in this area understand how the blend of rural, suburban, and wine-country characteristics affects property values.",
   },
   snohomish: {
@@ -311,13 +311,13 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   "lake-stevens": {
     tone: "suburban",
     descriptor: "Lakeside community with rapid residential growth",
-    heroIntro: "Lake Stevens has experienced significant growth in recent years, transforming from a rural lake community into one of Snohomish County's most active residential markets. For families managing estate or transition-related property in Lake Stevens, the community's rapid evolution means property values and buyer expectations may have shifted significantly from when the home was originally purchased.",
+    heroIntro: "Lake Stevens has experienced significant growth in recent years, transforming from a rural lake community into one of Snohomish County's most active residential markets. When selling estate or transition property in Lake Stevens, the community's rapid evolution means property values and buyer expectations may have shifted significantly from when the home was originally purchased.",
     localKnowledge: "Lake Stevens' housing ranges from established homes near the lake and the original town center to newer construction in rapidly developing subdivisions throughout the community. The lake itself remains a major amenity and value driver, but distance from the water creates meaningful price variations. David Stein helps clients understand how Lake Stevens' growth trajectory and property-specific characteristics affect realistic market positioning.",
   },
   marysville: {
     tone: "suburban",
     descriptor: "Growing north Snohomish County community",
-    heroIntro: "Marysville has grown into one of the largest and most active communities in northern Snohomish County, with established neighborhoods near downtown and newer developments extending toward the surrounding rural areas. For families managing estate, probate, or transition properties in Marysville, the city's range of housing types and price points requires practical, locally informed guidance.",
+    heroIntro: "Marysville has grown into one of the largest and most active communities in northern Snohomish County, with established neighborhoods near downtown and newer developments extending toward the surrounding rural areas. When managing estate or transition property in Marysville, the city's range of housing types and price points requires practical, locally informed guidance.",
     localKnowledge: "Marysville's housing market includes older homes in the Ebey Waterfront and downtown areas, mid-range suburban developments, and newer construction on the city's expanding edges. The I-5 corridor's accessibility and the community's affordability relative to the Eastside and Seattle drive buyer interest. David Stein helps clients navigate Marysville's market dynamics and position estate or transition properties realistically.",
   },
   arlington: {
@@ -329,7 +329,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   monroe: {
     tone: "smalltown",
     descriptor: "Gateway to the Skykomish Valley with diverse housing",
-    heroIntro: "Monroe serves as a gateway between the suburban communities of Snohomish County and the Skykomish Valley, offering a mix of established neighborhoods, newer developments, and rural properties. For families managing estate or transition properties in Monroe, the community's position along the US-2 corridor and its range of housing types create specific market considerations.",
+    heroIntro: "Monroe serves as a gateway between the suburban communities of Snohomish County and the Skykomish Valley, offering a mix of established neighborhoods, newer developments, and rural properties. When selling estate or transition property in Monroe, the community's position along the US-2 corridor and its range of housing types affect how properties should be priced and positioned.",
     localKnowledge: "Monroe's housing ranges from homes near the historic downtown and fairgrounds to newer subdivisions and larger rural properties along the valley. The community's accessibility via US-2, its proximity to both employment centers and outdoor recreation, and its range of property sizes all influence buyer demographics. David Stein helps Monroe clients understand how these factors affect value for estate and transition properties.",
   },
   stanwood: {
@@ -341,19 +341,19 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   sultan: {
     tone: "smalltown",
     descriptor: "Sky Valley community with mountain access",
-    heroIntro: "Sultan is a small community along the Skykomish River in the Sky Valley, offering affordable housing, mountain access, and a rural character that appeals to buyers seeking distance from urban density. For families managing estate or transition properties in Sultan, the community's smaller market and unique property types require locally informed guidance.",
+    heroIntro: "Sultan is a small community along the Skykomish River in the Sky Valley, offering affordable housing, mountain access, and a rural character that appeals to buyers seeking distance from urban density. When selling estate or transition property in Sultan, the community's smaller market and unique property types require locally informed guidance.",
     localKnowledge: "Sultan's housing includes established homes near town, properties with acreage along the river corridor, and newer construction. The community's position along US-2 and its proximity to both Stevens Pass recreation and Snohomish County employment centers influence buyer interest. David Stein helps Sultan clients understand how the community's niche market dynamics affect realistic property values.",
   },
   "gold-bar": {
     tone: "rural",
     descriptor: "Rural mountain community along the Skykomish River",
     heroIntro: "Gold Bar is a small rural community along the Skykomish River, known for its proximity to Wallace Falls State Park and the Cascade foothills. Estate and transition properties in Gold Bar often include unique characteristics — river access, mountain views, larger acreage, or rustic construction — that require specialized valuation understanding.",
-    localKnowledge: "Gold Bar's housing market is limited in inventory and includes a mix of older cabins, established homes, and newer construction, many with larger lots or river proximity. The community's rural character and distance from major employment centers create specific buyer demographics. David Stein's appraisal credentials help clients understand how Gold Bar's unique property types and small-market dynamics affect realistic pricing.",
+    localKnowledge: "Gold Bar's housing market is limited in inventory and includes a mix of older cabins, established homes, and newer construction, many with larger lots or river proximity. The community's rural character and distance from major employment centers shape the local buyer pool. David Stein's appraisal credentials help clients understand how Gold Bar's unique property types and small-market dynamics affect realistic pricing.",
   },
   "granite-falls": {
     tone: "rural",
     descriptor: "Cascade foothills community with natural surroundings",
-    heroIntro: "Granite Falls is a small community at the edge of the Cascade foothills in eastern Snohomish County, offering an affordable, nature-oriented lifestyle. For families managing estate or transition properties in Granite Falls, the community's rural character, limited comparable sales, and range of property types require experienced, condition-based valuation guidance.",
+    heroIntro: "Granite Falls is a small community at the edge of the Cascade foothills in eastern Snohomish County, offering an affordable, nature-oriented lifestyle. When selling estate or transition property in Granite Falls, the community's rural character, limited comparable sales, and range of property types call for honest, condition-based pricing.",
     localKnowledge: "Granite Falls' housing includes homes in the established town center, rural properties with acreage, and homes near the Mountain Loop Highway corridor. The community's small size means limited comparable sales, making professional valuation especially important. David Stein helps Granite Falls clients navigate pricing with the careful, property-specific analysis that this unique market requires.",
   },
 
@@ -374,7 +374,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   "university-place": {
     tone: "suburban",
     descriptor: "Established residential community near Tacoma",
-    heroIntro: "University Place is a well-maintained residential community adjacent to Tacoma, known for its quality neighborhoods, Chambers Bay golf course, and access to Puget Sound waterfront. Families and fiduciaries managing property transitions in University Place benefit from guidance that reflects the community's strong neighborhood character and the specific expectations of buyers drawn to this area.",
+    heroIntro: "University Place is a well-maintained residential community adjacent to Tacoma, known for its quality neighborhoods, Chambers Bay golf course, and access to Puget Sound waterfront. Families and fiduciaries managing property transitions in University Place benefit from guidance grounded in local neighborhood character and buyer expectations.",
     localKnowledge: "University Place offers a mix of established single-family homes, newer developments, and properties near Chambers Bay and the waterfront. The community's appeal lies in its combination of residential character, proximity to Tacoma's amenities, and access to outdoor recreation. For estate and transition properties, understanding how condition compares to the area's well-maintained housing stock is key to effective pricing.",
   },
   lakewood: {
@@ -398,61 +398,61 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   fircrest: {
     tone: "suburban",
     descriptor: "Small residential enclave near Tacoma",
-    heroIntro: "Fircrest is a small, well-maintained residential community surrounded by Tacoma and University Place, known for its tree-lined streets, community parks, and quiet, family-oriented character. Estate and transition properties in Fircrest benefit from its strong neighborhood identity, but accurate pricing requires understanding how this compact community's specific appeal affects buyer demand.",
+    heroIntro: "Fircrest is a small, well-maintained residential community surrounded by Tacoma and University Place, known for its tree-lined streets, community parks, and quiet, family-oriented character. Estate and transition properties in Fircrest carry a strong neighborhood identity — but accurate pricing still requires understanding what drives demand in this compact community.",
     localKnowledge: "Fircrest's housing is predominantly mid-century single-family homes on well-maintained lots. The community's small size and consistent character mean that property condition and updates are especially visible factors in pricing. David Stein helps Fircrest clients understand how their property compares within this tight-knit community and how to position it effectively for the local buyer pool.",
   },
   steilacoom: {
     tone: "waterfront",
     descriptor: "Historic waterfront town with military proximity",
-    heroIntro: "Steilacoom is Washington's oldest incorporated town, offering historic charm, Puget Sound waterfront, and a quiet residential character near Joint Base Lewis-McChord. For families managing estate or transition properties in Steilacoom, the town's historic significance, waterfront access, and small-market dynamics create pricing considerations that benefit from experienced, locally informed guidance.",
+    heroIntro: "Steilacoom is Washington's oldest incorporated town, offering historic charm, Puget Sound waterfront, and a quiet residential character near Joint Base Lewis-McChord. When selling estate or transition property in Steilacoom, the town's historic significance, waterfront access, and small-market dynamics make experienced local guidance especially valuable.",
     localKnowledge: "Steilacoom's housing includes historic homes near downtown and the waterfront, established mid-century properties, and homes with sound views. The town's historic character and proximity to JBLM influence both buyer demographics and property regulations. David Stein helps clients navigate Steilacoom's unique market with the property-specific analysis this historic community requires.",
   },
   "bonney-lake": {
     tone: "suburban",
     descriptor: "Growing plateau community east of Tacoma",
-    heroIntro: "Bonney Lake is a growing community on the plateau east of Tacoma and Puyallup, with newer developments, mountain views, and an expanding commercial center. For families managing estate or transition-related property in Bonney Lake, the community's newer housing stock and growing buyer interest create specific market dynamics that require practical, informed guidance.",
+    heroIntro: "Bonney Lake is a growing community on the plateau east of Tacoma and Puyallup, with newer developments, mountain views, and an expanding commercial center. When selling estate or transition property in Bonney Lake, the community's newer housing stock and growing buyer interest call for practical, informed guidance.",
     localKnowledge: "Bonney Lake's housing is predominantly newer, with many homes built since the 1990s in planned subdivisions. The community's mountain views, growing amenities, and relative affordability compared to west-side communities drive buyer interest. David Stein helps clients understand how property age, condition, and location within Bonney Lake's expanding boundaries affect realistic market value.",
   },
   sumner: {
     tone: "smalltown",
     descriptor: "Valley community with historic downtown character",
-    heroIntro: "Sumner is a small community in the Puyallup Valley known for its historic downtown, residential neighborhoods, and connection to the valley's agricultural heritage. For families managing estate or transition properties in Sumner, the community's compact market and range of property ages require locally grounded pricing and preparation guidance.",
+    heroIntro: "Sumner is a small community in the Puyallup Valley known for its historic downtown, residential neighborhoods, and connection to the valley's agricultural heritage. When selling estate or transition property in Sumner, the community's compact market and range of property ages require locally grounded pricing and preparation guidance.",
     localKnowledge: "Sumner's housing includes established homes near downtown, newer construction on the edges of the city, and properties influenced by the valley's agricultural context. The community's small-town character and proximity to Puyallup and Auburn create a buyer pool with specific expectations. David Stein helps Sumner clients position estate and transition properties realistically within this local context.",
   },
   orting: {
     tone: "smalltown",
     descriptor: "Small valley town with mountain views and rural charm",
-    heroIntro: "Orting is a small town in the Carbon River valley, offering mountain views, rural charm, and affordable housing relative to other Pierce County communities. For families managing estate or transition properties in Orting, the community's smaller market, lahar zone considerations, and range of property types require honest, condition-based guidance.",
+    heroIntro: "Orting is a small town in the Carbon River valley, offering mountain views, rural charm, and affordable housing relative to other Pierce County communities. When selling estate or transition property in Orting, the community's smaller market, lahar zone considerations, and range of property types require honest, condition-based guidance.",
     localKnowledge: "Orting's housing ranges from established homes near the town center to newer developments and properties with rural characteristics. The community's position in the Carbon River valley and its relationship to Mount Rainier lahar zones are factors that informed buyers consider. David Stein helps Orting clients understand how these unique local factors affect realistic property values and buyer interest.",
   },
   spanaway: {
     tone: "military",
     descriptor: "Unincorporated community with military influence",
-    heroIntro: "Spanaway is an unincorporated community south of Tacoma near Joint Base Lewis-McChord, offering affordable housing and access to Spanaway Lake Park. For families managing estate or transition-related property in Spanaway, understanding how the area's military-influenced buyer demographics and diverse housing stock affect value is important for realistic expectations.",
+    heroIntro: "Spanaway is an unincorporated community south of Tacoma near Joint Base Lewis-McChord, offering affordable housing and access to Spanaway Lake Park. When selling estate or transition property in Spanaway, understanding how the area's military-influenced buyer demographics and diverse housing stock affect value is important for realistic expectations.",
     localKnowledge: "Spanaway's housing includes established ramblers, manufactured homes, newer construction, and properties near Spanaway Lake. The community's proximity to JBLM significantly influences buyer demographics and rental demand. David Stein helps clients understand how Spanaway's specific market dynamics — including military-related demand and the area's range of property types — affect realistic pricing for estate and transition properties.",
   },
   graham: {
     tone: "rural",
     descriptor: "Rural-suburban community in eastern Pierce County",
-    heroIntro: "Graham is an unincorporated community in eastern Pierce County, offering rural-suburban living with larger lots, mountain views, and agricultural character. For families managing estate or transition properties in Graham, the community's rural property types and distance from urban centers create specific valuation considerations.",
+    heroIntro: "Graham is an unincorporated community in eastern Pierce County, offering rural-suburban living with larger lots, mountain views, and agricultural character. When selling estate or transition property in Graham, the community's rural property types and distance from urban centers affect how properties are valued.",
     localKnowledge: "Graham's housing ranges from established homes on larger lots to newer subdivisions and properties with acreage, outbuildings, and agricultural uses. The community's rural character means property features like land area, well and septic systems, and road access meaningfully affect value. David Stein's appraisal credentials help Graham clients understand how these rural-specific factors influence realistic property pricing.",
   },
   dupont: {
     tone: "military",
     descriptor: "Master-planned community near JBLM with historic roots",
-    heroIntro: "DuPont is a distinctive master-planned community near Joint Base Lewis-McChord, built around a historic village core and designed with traditional neighborhood principles. For families managing estate or transition properties in DuPont, the community's HOA structure, planned character, and military-adjacent buyer demographics create specific market considerations.",
+    heroIntro: "DuPont is a distinctive master-planned community near Joint Base Lewis-McChord, built around a historic village core and designed with traditional neighborhood principles. When selling estate or transition property in DuPont, the community's HOA structure, planned character, and military-adjacent buyer demographics affect how properties should be priced and positioned.",
     localKnowledge: "DuPont's housing is predominantly within its master-planned community framework, with a range of home sizes and styles designed around the historic village core. The community's HOA requirements, proximity to JBLM and I-5, and planned amenities all influence buyer expectations. David Stein helps DuPont clients understand how the community's structured environment affects pricing and sale strategy for estate and transition properties.",
   },
   fife: {
     tone: "suburban",
     descriptor: "Compact community at the I-5 and Port of Tacoma crossroads",
-    heroIntro: "Fife is a compact community situated at the intersection of I-5 and the Port of Tacoma, with a mix of residential neighborhoods and commercial development. For families managing estate or transition-related property in Fife, the community's unique position and relatively limited residential inventory create market dynamics that benefit from honest, experienced guidance.",
+    heroIntro: "Fife is a compact community situated at the intersection of I-5 and the Port of Tacoma, with a mix of residential neighborhoods and commercial development. When selling estate or transition property in Fife, the community's unique position and relatively limited residential inventory make honest, experienced guidance especially useful.",
     localKnowledge: "Fife's residential areas are relatively compact, with established neighborhoods surrounded by commercial and industrial zones. The community's location along major transportation corridors and proximity to Tacoma and Federal Way influence buyer demographics. David Stein helps Fife clients navigate the community's specific market dynamics with clear, condition-based guidance.",
   },
   milton: {
     tone: "suburban",
     descriptor: "Small residential community spanning King and Pierce Counties",
-    heroIntro: "Milton is a small residential community that spans the King-Pierce County line, offering quiet neighborhoods and a community-oriented character. For families managing estate or transition properties in Milton, the community's compact size and cross-county position create specific market considerations that benefit from locally informed pricing guidance.",
+    heroIntro: "Milton is a small residential community that spans the King-Pierce County line, offering quiet neighborhoods and a community-oriented character. When selling estate or transition property in Milton, the community's compact size and cross-county position create specific market considerations that benefit from locally informed pricing guidance.",
     localKnowledge: "Milton's housing is primarily established single-family homes in a compact residential setting. The community's position across two counties and its proximity to Edgewood, Federal Way, and Fife influence comparable sales and buyer demographics. David Stein helps Milton clients understand how these cross-boundary dynamics and the community's small-market character affect realistic property values.",
   },
   edgewood: {
@@ -464,13 +464,13 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   buckley: {
     tone: "smalltown",
     descriptor: "Foothills town near Mount Rainier corridor",
-    heroIntro: "Buckley is a small community at the gateway to the Mount Rainier corridor, combining small-town character with proximity to the Cascades. For families managing estate or transition-related property in Buckley, the community's smaller market, rural characteristics, and specific buyer demographics require experienced, locally grounded guidance.",
+    heroIntro: "Buckley is a small community at the gateway to the Mount Rainier corridor, combining small-town character with proximity to the Cascades. When selling estate or transition property in Buckley, the community's smaller market, rural characteristics, and specific buyer demographics call for locally grounded guidance.",
     localKnowledge: "Buckley's housing includes established homes near the town center, newer developments, and properties with rural features including larger lots and mountain proximity. The community's position along the SR-410 corridor toward Mount Rainier influences buyer interest and demographics. David Stein helps Buckley clients understand how these local factors affect realistic property pricing.",
   },
   eatonville: {
     tone: "rural",
     descriptor: "Rural gateway to Mount Rainier National Park",
-    heroIntro: "Eatonville is a small, rural community that serves as one of the gateways to Mount Rainier National Park. For families managing estate or transition properties in Eatonville, the community's remote character, limited comparable sales, and range of rural property types require honest, condition-based valuation that accounts for the area's specific market dynamics.",
+    heroIntro: "Eatonville is a small, rural community that serves as one of the gateways to Mount Rainier National Park. When selling estate or transition property in Eatonville, the community's remote character, limited comparable sales, and range of rural property types require honest, condition-based valuation that accounts for the area's specific market dynamics.",
     localKnowledge: "Eatonville's housing ranges from established homes near the compact town center to rural properties with acreage and mountain access. The community's tourism connection to Mount Rainier and its agricultural character create a niche buyer pool. David Stein helps Eatonville clients understand how the community's rural character and limited market activity affect realistic property values.",
   },
 
@@ -484,7 +484,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   silverdale: {
     tone: "military",
     descriptor: "Central Kitsap's commercial and residential hub",
-    heroIntro: "Silverdale serves as Central Kitsap's primary commercial and residential center, with housing that ranges from newer developments in Ridgetop and Clear Creek to established neighborhoods throughout the community. For families managing estate, probate, or transition properties in Silverdale, understanding how this unincorporated community's market dynamics and proximity to Naval Base Kitsap affect value is important for making sound decisions.",
+    heroIntro: "Silverdale serves as Central Kitsap's primary commercial and residential center, with housing that ranges from newer developments in Ridgetop and Clear Creek to established neighborhoods throughout the community. When managing estate or transition property in Silverdale, understanding how this unincorporated community's market dynamics and proximity to Naval Base Kitsap affect value is important for making sound decisions.",
     localKnowledge: "Silverdale's housing market includes newer construction in planned communities, established ramblers and split-levels, and properties with varying degrees of access to waterfront and natural areas. The community's role as Central Kitsap's hub and the influence of nearby military installations create a buyer pool with specific characteristics. David Stein helps clients understand how these factors affect realistic pricing for estate and inherited properties.",
   },
   poulsbo: {
@@ -516,19 +516,19 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   kingston: {
     tone: "waterfront",
     descriptor: "Ferry-served community on the north Kitsap Peninsula",
-    heroIntro: "Kingston is a small community on the northern tip of the Kitsap Peninsula, served by the Kingston-Edmonds ferry and known for its village character and waterfront access. For families managing estate or transition-related property in Kingston, the community's ferry-dependent connectivity, limited inventory, and range of waterfront to inland properties create specific valuation considerations.",
+    heroIntro: "Kingston is a small community on the northern tip of the Kitsap Peninsula, served by the Kingston-Edmonds ferry and known for its village character and waterfront access. When selling estate or transition property in Kingston, the community's ferry-dependent connectivity, limited inventory, and range of waterfront to inland properties affect how properties are valued.",
     localKnowledge: "Kingston's housing includes properties near the ferry terminal and village center, waterfront homes along Appletree Cove, and established residential areas extending into the surrounding hills. The community's ferry connection to Edmonds and its small-town character attract a specific buyer demographic. David Stein helps Kingston clients understand how ferry access, waterfront proximity, and the community's limited market size affect realistic property pricing.",
   },
   suquamish: {
     tone: "smalltown",
     descriptor: "Tribal community with waterfront character on Agate Passage",
-    heroIntro: "Suquamish is a small community on Agate Passage with deep historical roots, waterfront access, and a quiet residential character. For families managing estate or transition properties in Suquamish, the community's compact size, waterfront dynamics, and specific local considerations require experienced, condition-based guidance.",
+    heroIntro: "Suquamish is a small community on Agate Passage with deep historical roots, waterfront access, and a quiet residential character. When selling estate or transition property in Suquamish, the community's compact size, waterfront dynamics, and specific local considerations require experienced, condition-based guidance.",
     localKnowledge: "Suquamish's housing includes waterfront and water-view properties along Agate Passage and Port Madison, along with established homes in the community's residential areas. The community's historical significance, proximity to Bainbridge Island and Poulsbo, and limited inventory create a niche market. David Stein helps Suquamish clients navigate these local factors with honest, property-specific pricing guidance.",
   },
   manchester: {
     tone: "waterfront",
     descriptor: "Quiet waterfront community on Rich Passage",
-    heroIntro: "Manchester is a small, unincorporated waterfront community on Rich Passage in South Kitsap, offering quiet residential living, waterfront access, and proximity to the Manchester State Park. For families managing estate or transition properties in Manchester, the community's limited inventory and waterfront-influenced market create specific pricing dynamics.",
+    heroIntro: "Manchester is a small, unincorporated waterfront community on Rich Passage in South Kitsap, offering quiet residential living, waterfront access, and proximity to the Manchester State Park. When selling estate or transition property in Manchester, the community's limited inventory and waterfront-influenced market create specific pricing dynamics.",
     localKnowledge: "Manchester's housing includes waterfront and water-view properties along Rich Passage, along with established homes in the hillside residential areas. The community's small size, state park proximity, and ferry-accessible location between Bremerton and Southworth influence buyer interest. David Stein helps Manchester clients understand how waterfront access, community character, and limited comparable sales affect realistic property values.",
   },
   seabeck: {
@@ -540,7 +540,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   hansville: {
     tone: "rural",
     descriptor: "Remote peninsula tip with lighthouse and waterfront appeal",
-    heroIntro: "Hansville is a small, secluded community at the northern tip of the Kitsap Peninsula, known for Point No Point Lighthouse and its quiet, waterfront-oriented character. For families managing estate or transition properties in Hansville, the community's remote location, limited inventory, and waterfront-driven market create valuation considerations that require experienced, locally informed guidance.",
+    heroIntro: "Hansville is a small, secluded community at the northern tip of the Kitsap Peninsula, known for Point No Point Lighthouse and its quiet, waterfront-oriented character. When selling estate or transition property in Hansville, the community's remote location, limited inventory, and waterfront-driven market create valuation considerations that require experienced, locally informed guidance.",
     localKnowledge: "Hansville's housing includes waterfront and water-view properties overlooking Puget Sound and Admiralty Inlet, along with established homes and cabins in the wooded areas of the community. The area's remote character and seasonal appeal create a buyer pool with specific expectations. David Stein helps Hansville clients understand how the community's unique location and limited market activity affect realistic property pricing.",
   },
 };
@@ -552,7 +552,7 @@ export const services: ServiceData[] = [
     slug: "probate-estate-sales",
     shortName: "Probate & Estate Sales",
     description: "Guiding executors, attorneys, and families through the sale of probate and estate-owned property with valuation expertise and practical coordination.",
-    cityIntroTemplate: "Navigating a probate or estate property sale in {city} requires local market knowledge, realistic pricing, and experienced coordination. Real Property Planning provides practical guidance for executors, attorneys, and families managing estate-owned real estate in {city} and throughout {county}.",
+    cityIntroTemplate: "Selling a probate or estate property in {city} takes local market knowledge, realistic pricing, and experienced coordination. Real Property Planning guides executors, attorneys, and families through the sale of estate-owned real estate in {city} and {county}.",
     targetAudience: [
       "Executors and personal representatives appointed by the court",
       "Probate attorneys who need a reliable real estate partner",
@@ -567,7 +567,7 @@ export const services: ServiceData[] = [
     slug: "senior-transitions",
     shortName: "Senior Transitions",
     description: "Supporting seniors and their families through the sale of a longtime home, including preparation, pricing, and coordinating the transition timeline.",
-    cityIntroTemplate: "When a senior or their family is preparing to sell a longtime home in {city}, the process involves much more than listing a property. Real Property Planning helps families in {city} plan and coordinate the transition — from pricing and preparation to vendor coordination and sale timing.",
+    cityIntroTemplate: "Selling a longtime family home in {city} involves more than listing a property. Real Property Planning helps families plan and coordinate the transition — from preparation and pricing to vendor coordination and sale timing.",
     targetAudience: [
       "Seniors preparing to move to assisted living, independent living, or memory care",
       "Adult children coordinating a parent's housing transition",
@@ -582,7 +582,7 @@ export const services: ServiceData[] = [
     slug: "downsizing-services",
     shortName: "Downsizing",
     description: "Helping homeowners who are ready to simplify — whether moving to a smaller home, a retirement community, or closer to family.",
-    cityIntroTemplate: "Downsizing from a family home in {city} is a significant life decision that benefits from experienced, practical guidance. Real Property Planning helps homeowners in {city} evaluate their options, prepare their property, and navigate the sale with clarity and realistic expectations.",
+    cityIntroTemplate: "Downsizing from a family home in {city} is a major decision. Real Property Planning helps homeowners evaluate their options, prepare the property, and manage the sale with clarity and realistic expectations.",
     targetAudience: [
       "Homeowners ready to move to a smaller, more manageable home",
       "Retirees relocating closer to family or to a warmer climate",
@@ -611,7 +611,7 @@ export const services: ServiceData[] = [
     slug: "attorney-fiduciary-support",
     shortName: "Attorney & Fiduciary Support",
     description: "A reliable real estate resource for attorneys and fiduciaries who need experienced, communicative support on estate and trust property matters.",
-    cityIntroTemplate: "Attorneys and fiduciaries managing real property matters in {city} need a real estate partner who understands legal timelines, fiduciary obligations, and the importance of clear communication. Real Property Planning works with legal and fiduciary professionals across {city} and {county}.",
+    cityIntroTemplate: "Attorneys and fiduciaries managing property in {city} need a real estate partner who understands legal timelines, fiduciary obligations, and clear communication. Real Property Planning works with legal and fiduciary professionals across {city} and {county}.",
     targetAudience: [
       "Probate and estate planning attorneys",
       "Elder law attorneys coordinating property transitions",
@@ -626,7 +626,7 @@ export const services: ServiceData[] = [
     slug: "valuation-guidance",
     shortName: "Valuation Guidance",
     description: "Providing valuation-informed insight for inherited, estate, and transition-related property decisions where pricing accuracy is critical.",
-    cityIntroTemplate: "Accurate property valuation in {city} is essential for estate settlements, trust administration, and transition planning. Real Property Planning combines licensed broker and certified appraiser credentials to provide valuation-informed guidance for properties in {city} and throughout {county}.",
+    cityIntroTemplate: "Accurate property valuation in {city} matters for estate settlements, trust administration, and transition planning. David Stein combines licensed broker and certified appraiser credentials to provide clear, condition-based guidance for properties in {city} and {county}.",
     targetAudience: [
       "Executors and trustees who need an accurate understanding of property value",
       "Attorneys who need reliable real estate valuation support for legal proceedings",
@@ -1032,19 +1032,17 @@ export function getCityServiceScenarios(cityName: string, serviceName: string, s
 export function getToneScenariosHeading(cityName: string, serviceName: string, tone?: CommunityTone): string {
   switch (tone) {
     case "premium":
-      return `When ${cityName} Clients Seek ${serviceName} Guidance`;
+    case "waterfront":
+      return `When ${cityName} Clients Need ${serviceName}`;
     case "urban":
       return `Common ${serviceName} Situations in ${cityName}`;
-    case "waterfront":
-      return `When ${cityName} Families Turn to ${serviceName}`;
     case "smalltown":
-      return `How ${serviceName} Comes Up in ${cityName}`;
-    case "military":
-      return `When ${cityName} Families Need ${serviceName}`;
     case "rural":
-      return `${serviceName} Situations in the ${cityName} Area`;
+      return `${serviceName} in ${cityName}`;
+    case "military":
+      return `${serviceName} Situations in ${cityName}`;
     default:
-      return `When ${cityName} Clients Need ${serviceName}`;
+      return `When Clients in ${cityName} Need ${serviceName}`;
   }
 }
 
@@ -1052,37 +1050,28 @@ export function getToneScenariosHeading(cityName: string, serviceName: string, t
 export function getToneScenariosLead(cityName: string, serviceName: string, tone?: CommunityTone): string {
   switch (tone) {
     case "premium":
-      return `In a market like ${cityName}, ${serviceName.toLowerCase()} situations often involve significant property values and complex family or legal dynamics. Clients typically reach out when facing circumstances such as:`;
+      return `${serviceName} situations in ${cityName} often involve higher property values and multiple decision-makers. Clients typically reach out when facing:`;
     case "urban":
-      return `${cityName}'s diverse neighborhoods and fast-moving market mean ${serviceName.toLowerCase()} situations can take many forms. Common scenarios include:`;
+      return `${cityName}'s range of neighborhoods and property types means ${serviceName.toLowerCase()} situations vary widely. Common scenarios include:`;
     case "waterfront":
-      return `In a community like ${cityName}, property transitions carry personal significance alongside financial weight. Families often seek ${serviceName.toLowerCase()} guidance when they encounter:`;
+      return `Property transitions in ${cityName} often involve longtime family homes and specific local market factors. Clients seek ${serviceName.toLowerCase()} guidance when facing:`;
     case "smalltown":
-      return `In a close-knit community like ${cityName}, real estate decisions are often deeply personal. Families and individuals typically seek ${serviceName.toLowerCase()} support when facing:`;
+      return `In ${cityName}, property decisions tend to be personal and practical. Clients reach out for ${serviceName.toLowerCase()} support when facing:`;
     case "military":
-      return `Families in ${cityName} — including those connected to nearby military installations — often need ${serviceName.toLowerCase()} guidance when life circumstances change. Common situations include:`;
+      return `Families in ${cityName} often need ${serviceName.toLowerCase()} guidance when circumstances change. Common situations include:`;
     case "rural":
-      return `Properties in the ${cityName} area often have unique characteristics — acreage, outbuildings, or rural features — that make ${serviceName.toLowerCase()} situations more nuanced. Clients typically reach out when facing:`;
+      return `Properties in ${cityName} often have features — acreage, outbuildings, or rural character — that add complexity. Clients typically reach out when facing:`;
     default:
-      return `Clients in ${cityName} often seek ${serviceName.toLowerCase()} guidance when facing situations such as:`;
+      return `Clients in ${cityName} seek ${serviceName.toLowerCase()} guidance in situations such as:`;
   }
 }
 
 /** Tone-aware heading for how-we-help section */
 export function getToneHowWeHelpHeading(tone?: CommunityTone): string {
   switch (tone) {
-    case "premium":
-      return "How Real Property Planning Serves You";
-    case "urban":
-      return "What Real Property Planning Provides";
-    case "waterfront":
-      return "How Real Property Planning Supports Your Transition";
     case "smalltown":
-      return "How David Stein Helps";
-    case "military":
-      return "How Real Property Planning Can Help";
     case "rural":
-      return "How David Stein Works with You";
+      return "How David Stein Helps";
     default:
       return "How Real Property Planning Helps";
   }
@@ -1092,19 +1081,18 @@ export function getToneHowWeHelpHeading(tone?: CommunityTone): string {
 export function getToneHowWeHelpLead(cityName: string, serviceName: string, tone?: CommunityTone): string {
   switch (tone) {
     case "premium":
-      return `David Stein brings over twenty years of experience and dual credentials — licensed broker and certified appraiser — to every ${serviceName.toLowerCase()} engagement in ${cityName}:`;
+      return `David Stein's dual credentials as a licensed broker and certified appraiser inform every step of the ${serviceName.toLowerCase()} process in ${cityName}:`;
     case "urban":
-      return `David Stein provides experienced coordination and valuation-informed guidance tailored to ${cityName}'s market:`;
+      return `David Stein provides experienced guidance tailored to ${cityName}'s market:`;
     case "waterfront":
-      return `David Stein brings careful, locally informed guidance to every ${serviceName.toLowerCase()} situation in ${cityName}:`;
+      return `David Stein brings locally informed guidance to ${serviceName.toLowerCase()} in ${cityName}:`;
     case "smalltown":
-      return `David Stein provides steady, hands-on guidance through every step of the ${serviceName.toLowerCase()} process:`;
-    case "military":
-      return `David Stein provides clear, practical guidance for ${serviceName.toLowerCase()} situations in ${cityName}:`;
     case "rural":
-      return `David Stein provides honest, property-specific guidance for ${serviceName.toLowerCase()} in the ${cityName} area:`;
+      return `David Stein provides steady, hands-on guidance through the ${serviceName.toLowerCase()} process:`;
+    case "military":
+      return `David Stein provides clear, practical guidance for ${serviceName.toLowerCase()} in ${cityName}:`;
     default:
-      return `David Stein provides hands-on coordination and valuation-informed guidance for every ${serviceName.toLowerCase()} engagement:`;
+      return `David Stein provides valuation-informed guidance for every ${serviceName.toLowerCase()} engagement:`;
   }
 }
 
@@ -1112,17 +1100,12 @@ export function getToneHowWeHelpLead(cityName: string, serviceName: string, tone
 export function getToneCTAHeading(cityName: string, serviceName: string, tone?: CommunityTone): string {
   switch (tone) {
     case "premium":
-      return `Ready to Discuss Your ${cityName} Property?`;
-    case "urban":
-      return `Need ${serviceName} Help in ${cityName}?`;
-    case "waterfront":
-      return `Let's Talk About Your ${cityName} Property`;
+      return `Discuss Your ${cityName} Property`;
     case "smalltown":
-      return `Ready to Take the Next Step?`;
-    case "military":
-      return `Need ${serviceName} Guidance in ${cityName}?`;
     case "rural":
-      return `Let's Discuss Your Property`;
+      return `Ready to Take the Next Step?`;
+    case "waterfront":
+      return `Talk with David About Your Property`;
     default:
       return `Need ${serviceName} Help in ${cityName}?`;
   }
@@ -1132,18 +1115,13 @@ export function getToneCTAHeading(cityName: string, serviceName: string, tone?: 
 export function getToneCTABody(cityName: string, tone?: CommunityTone): string {
   switch (tone) {
     case "premium":
-      return `Schedule a confidential consultation to discuss your ${cityName} property and explore your options.`;
-    case "urban":
-      return `Schedule a consultation to discuss your ${cityName} property situation and next steps.`;
+      return `Schedule a confidential consultation to discuss your ${cityName} property and your options.`;
     case "waterfront":
-      return `Reach out for a conversation about your property and what the process looks like from here.`;
+      return `Reach out to discuss your property and what the process looks like from here.`;
     case "smalltown":
-      return `Contact David directly to discuss your situation — there is no pressure and no obligation.`;
-    case "military":
-      return `Schedule a consultation to discuss your ${cityName} property — David works with families across the area.`;
     case "rural":
-      return `Reach out to discuss your property. David is happy to talk through your situation and answer questions.`;
+      return `Contact David to discuss your situation — no pressure, no obligation.`;
     default:
-      return `Schedule a confidential consultation to discuss your ${cityName} property situation.`;
+      return `Schedule a consultation to discuss your ${cityName} property situation.`;
   }
 }
