@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 import people3d from "@/assets/people-3d.png";
 import heart3d from "@/assets/heart-3d.png";
 import alcaLogo from "@/assets/alca-corporate-partner.png";
-import naosaBadge from "@/assets/naosa-badge.jpg";
+import naosaBadge from "@/assets/naosa-badge.png";
 import naepcLogo from "@/assets/naepc-logo.png";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 

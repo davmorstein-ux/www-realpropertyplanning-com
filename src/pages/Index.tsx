@@ -18,7 +18,7 @@ import iconServiceValuation from "@/assets/icons/icon-service-valuation.png";
 import daveHeadshot2 from "@/assets/dave-headshot-2.jpg";
 import heroPnwHome from "@/assets/hero-pnw-home.jpg";
 import alcaLogo from "@/assets/alca-corporate-partner.png";
-import naosaBadge from "@/assets/naosa-badge-2.jpg";
+import naosaBadge from "@/assets/naosa-badge-2.png";
 import naepcLogo from "@/assets/naepc-logo-2.png";
 import expRealtyLogo from "@/assets/exp-realty-logo.png";
 import ServiceNavTiles from "@/components/ServiceNavTiles";
