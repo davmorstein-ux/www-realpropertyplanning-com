@@ -6,32 +6,39 @@ import CTASection from "@/components/CTASection";
 import RelatedServices from "@/components/RelatedServices";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import iconSeniorLiving from "@/assets/icons/icon-senior-living.png";
+import { Link } from "react-router-dom";
+import { ChevronRight } from "lucide-react";
 
 const livingOptions = [
   {
     title: "Adult Family Homes",
     description:
       "Smaller, home-like settings that offer personalized care for a limited number of residents. Often a good fit for seniors who prefer a quieter, more intimate environment.",
+    path: "/senior-living/adult-family-homes",
   },
   {
     title: "Assisted Living Communities",
     description:
       "Larger communities that offer varying levels of daily support, social activities, and on-site amenities while maintaining independence.",
+    path: "/senior-living/assisted-living-communities",
   },
   {
     title: "Memory Care",
     description:
       "Specialized programs designed for individuals living with Alzheimer's or other forms of dementia, with structured routines and secure environments.",
+    path: "/senior-living/memory-care",
   },
   {
     title: "Nursing & Skilled Care",
     description:
       "Facilities that provide 24-hour medical support for seniors with more complex health needs or those recovering from hospitalization.",
+    path: "/senior-living/nursing-and-skilled-care",
   },
   {
     title: "Independent Living",
     description:
       "Communities designed for active seniors who want a maintenance-free lifestyle with access to social activities and shared amenities.",
+    path: "/senior-living/independent-living",
   },
 ];
 
@@ -117,17 +124,21 @@ const SeniorLivingAndRelocation = () => {
 
               <div className="grid gap-5 md:grid-cols-2">
                 {livingOptions.map((option) => (
-                  <div
+                  <Link
                     key={option.title}
-                    className="bg-card border border-border rounded-xl px-6 py-6 hover:border-gold/40 hover:shadow-md transition-all"
+                    to={option.path}
+                    className="group bg-card border border-border rounded-xl px-6 py-6 hover:border-gold/40 hover:shadow-lg transition-all block min-h-[44px]"
                   >
-                    <h3 className="font-serif text-lg font-semibold text-foreground mb-2">
-                      {option.title}
-                    </h3>
-                    <p className="text-muted-foreground text-[15px] leading-relaxed">
+                    <div className="flex items-start justify-between gap-3">
+                      <h3 className="font-serif text-xl font-bold text-foreground mb-2 group-hover:text-accent transition-colors">
+                        {option.title}
+                      </h3>
+                      <ChevronRight className="w-5 h-5 text-muted-foreground group-hover:text-accent transition-colors mt-1 shrink-0" />
+                    </div>
+                    <p className="text-foreground/80 text-base leading-relaxed font-medium">
                       {option.description}
                     </p>
-                  </div>
+                  </Link>
                 ))}
               </div>
             </div>

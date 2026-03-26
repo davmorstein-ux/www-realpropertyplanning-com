@@ -52,6 +52,11 @@ import SeniorEstateServices from "./pages/SeniorEstateServices";
 import RetirementReverseMortgage from "./pages/RetirementReverseMortgage";
 import LendersFinancingSpecialists from "./pages/LendersFinancingSpecialists";
 import SeniorLivingAndRelocation from "./pages/SeniorLivingAndRelocation";
+import AdultFamilyHomes from "./pages/senior-living/AdultFamilyHomes";
+import AssistedLivingCommunities from "./pages/senior-living/AssistedLivingCommunities";
+import MemoryCare from "./pages/senior-living/MemoryCare";
+import NursingAndSkilledCare from "./pages/senior-living/NursingAndSkilledCare";
+import IndependentLiving from "./pages/senior-living/IndependentLiving";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -112,6 +117,11 @@ const App = () => (
           <Route path="/retirement-reverse-mortgage" element={<RetirementReverseMortgage />} />
           <Route path="/lenders-and-financing-specialists" element={<LendersFinancingSpecialists />} />
           <Route path="/senior-living-and-relocation" element={<SeniorLivingAndRelocation />} />
+          <Route path="/senior-living/adult-family-homes" element={<AdultFamilyHomes />} />
+          <Route path="/senior-living/assisted-living-communities" element={<AssistedLivingCommunities />} />
+          <Route path="/senior-living/memory-care" element={<MemoryCare />} />
+          <Route path="/senior-living/nursing-and-skilled-care" element={<NursingAndSkilledCare />} />
+          <Route path="/senior-living/independent-living" element={<IndependentLiving />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
