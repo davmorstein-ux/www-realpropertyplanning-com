@@ -93,23 +93,33 @@ const Index = () => {
           width={1920}
           height={1080}
         />
-        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 bg-black/40" />
 
         <div className="container relative z-10 px-6 lg:px-8 py-20 lg:py-24 flex flex-col items-center text-center">
           <div className="max-w-3xl">
              <h1
               className="font-serif text-4xl md:text-5xl lg:text-[54px] font-bold leading-[1.1] mb-5"
               style={{
-                color: '#f5f0e8',
+                color: '#f5eed8',
+                WebkitTextStroke: '0.5px rgba(180,155,100,0.3)',
                 textShadow: [
-                  '0 -1px 0 rgba(255,255,255,0.25)',
-                  '0 1px 0 #d4c091',
-                  '0 2px 0 #c9b57e',
-                  '0 3px 0 #b8a36c',
-                  '0 4px 0 #a8935c',
-                  '0 5px 6px rgba(0,0,0,0.35)',
-                  '0 8px 18px rgba(0,0,0,0.25)',
-                  '0 12px 30px rgba(0,0,0,0.18)',
+                  /* top-lit highlight edge */
+                  '0 -1px 0 rgba(255,248,220,0.5)',
+                  '0 -2px 1px rgba(255,245,200,0.2)',
+                  /* gold bevel stack — each layer adds thickness */
+                  '0 1px 0 #d4c090',
+                  '0 2px 0 #ccb67e',
+                  '0 3px 0 #c4ac6e',
+                  '0 4px 0 #b89e5e',
+                  '0 5px 0 #ac9050',
+                  '0 6px 0 #a08444',
+                  /* contact shadow at base of extrusion */
+                  '0 7px 1px rgba(0,0,0,0.25)',
+                  '0 8px 3px rgba(0,0,0,0.22)',
+                  /* soft ambient shadows */
+                  '0 10px 10px rgba(0,0,0,0.25)',
+                  '0 14px 24px rgba(0,0,0,0.20)',
+                  '0 20px 40px rgba(0,0,0,0.15)',
                 ].join(', '),
               }}
             >
