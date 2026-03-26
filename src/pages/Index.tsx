@@ -74,8 +74,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-cream">
       <SEOHead
-        title="Senior Relocation & Estate Property Sales | David Stein | Washington State"
-        description="David Stein is a Washington State real estate broker specializing in senior relocation, estate and inherited property sales, probate real estate, and trust property sales — with deep experience across Western Washington and the Puget Sound region."
+        title="Probate, Estate & Senior Transition Real Estate | David Stein | Washington State"
+        description="David Stein is a Washington State real estate broker specializing in probate, estate, and senior transition real estate — with a strong focus in Western Washington and the Puget Sound region. Referral connections available nationwide and internationally through eXp Realty."
         jsonLd={jsonLd}
       />
       <Header />
@@ -98,7 +98,7 @@ const Index = () => {
         <div className="container relative z-10 px-6 lg:px-8 py-20 lg:py-24 flex flex-col items-center text-center">
           <div className="max-w-3xl">
              <h1 className="font-serif text-4xl md:text-5xl lg:text-[54px] font-bold leading-[1.1] text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6), 0 4px 16px rgba(0,0,0,0.3), 0 0 40px rgba(0,0,0,0.2)' }}>
-              Specialized Guidance for Probate &amp; Estate Property Sales
+              Specialized Guidance for Probate, Estate &amp; Senior Transition Real Estate Across Washington State
             </h1>
           </div>
         </div>
@@ -108,7 +108,10 @@ const Index = () => {
           CTA — Below hero image
       ═══════════════════════════════════════════════════ */}
       <section className="py-12 lg:py-16 bg-primary">
-        <div className="container px-6 lg:px-8 flex flex-col items-center text-center">
+        <div className="container px-6 lg:px-8 flex flex-col items-center text-center max-w-3xl mx-auto">
+          <p className="text-primary-foreground/80 text-lg leading-relaxed mb-6">
+            Real Property Planning helps attorneys, executors, trustees, fiduciaries, seniors, and families navigate probate real estate, inherited homes, estate sales, and major property transitions throughout Washington State. David Stein brings over 20 years of dual expertise as a licensed real estate broker and Washington State certified residential appraiser, with a strong focus in Western Washington and the Puget Sound region. Through eXp Realty's referral network, he can also help connect clients with trusted brokers across the United States and internationally when needed.
+          </p>
           <Link to="/contact">
             <Button
               variant="gold"
@@ -119,7 +122,7 @@ const Index = () => {
               Schedule a 20‑Minute Consultation
             </Button>
           </Link>
-          <p className="text-primary-foreground/70 text-base leading-relaxed max-w-lg mt-4">
+          <p className="text-primary-foreground/60 text-base leading-relaxed max-w-lg mt-4">
             In a brief call, we review your situation, answer initial questions, and outline a practical plan for your property — with no pressure or obligation.
           </p>
         </div>
@@ -415,7 +418,7 @@ const Index = () => {
                 Start a Conversation
               </h2>
               <p className="text-primary-foreground/75 text-lg leading-relaxed mb-10">
-                Whether you're an attorney, executor, trustee, or family member — David is here to help you navigate the real estate side of your situation with care and clarity.
+               Whether you're an attorney, executor, trustee, or family member anywhere in Washington State — David is here to help you navigate the real estate side of your situation with care and clarity. If your move or sale involves another state or country, David can help connect you with a trusted eXp Realty referral partner.
               </p>
 
               <div className="space-y-5">

@@ -41,8 +41,8 @@ const Counties = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Probate Real Estate & Inherited Property Sales | Western Washington Service Areas"
-        description="Real Property Planning provides probate real estate and inherited property sales guidance across King, Snohomish, Pierce, Skagit, and Kitsap Counties throughout Washington State."
+        title="Washington State Service Areas | Probate & Estate Real Estate"
+        description="Real Property Planning provides probate real estate, inherited property, estate sale, valuation-informed strategy, and senior transition support for clients throughout Washington State, with especially strong experience in Western Washington."
       />
       <BreadcrumbSchema items={[{ name: "Counties", url: "/counties" }]} />
       <Header />
@@ -52,16 +52,16 @@ const Counties = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
-              Local Service Areas
+              Service Areas
             </p>
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-[22px]">
-              Service Areas Throughout Western Washington
+              Washington State Service Areas
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-5">
-              Each county in the Puget Sound region has its own housing stock, buyer expectations, and market rhythm. A waterfront estate on Bainbridge Island sells differently than a mid-century home in Tacoma or a suburban family property in Mill Creek. David Stein brings local knowledge built over two decades — so clients and referral partners get market-specific guidance, not a one-size-fits-all approach.
+              Real Property Planning provides probate real estate, inherited property, estate sale, valuation-informed strategy, and senior transition support for clients throughout Washington State. David Stein has especially strong experience in Western Washington and the Puget Sound region, including King, Snohomish, Pierce, Skagit, and Kitsap Counties.
             </p>
             <p className="text-lg text-primary-foreground/70 leading-relaxed mb-5">
-              Click a county to see key cities and examples of where we've helped clients with probate, estate, trust, and senior transition real estate.
+              For clients moving into or out of Washington, or for families needing help in other markets, David can also coordinate referrals through eXp Realty's broker network across the United States and internationally.
             </p>
             <p className="text-base text-primary-foreground/60 leading-relaxed">
               Select a county below to learn how Real Property Planning serves each area.

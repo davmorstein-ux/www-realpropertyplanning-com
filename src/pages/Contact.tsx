@@ -126,13 +126,16 @@ const Contact = () => {
                   <p className="mb-1 font-medium text-foreground">Service Areas</p>
                   <p className="inline-flex items-center text-muted-foreground">
                     <img src={mappin3d} alt="" aria-hidden="true" className="mr-2 w-5 h-5 shrink-0 object-contain" />
-                    <span>Washington State — deep experience in Western WA &amp; Puget Sound</span>
+                    <span>Throughout Washington State, with a strong focus in Western WA &amp; Puget Sound</span>
                   </p>
                 </div>
               </div>
 
+              <p className="text-muted-foreground text-[15px] leading-relaxed mb-4">
+                Consultations are welcomed for attorneys, executors, fiduciaries, and families navigating property decisions anywhere in Washington State.
+              </p>
               <p className="text-muted-foreground text-[15px] leading-relaxed mb-8">
-                Consultations are welcomed for attorneys, executors, fiduciaries, and families navigating property decisions.
+                If you are helping a family member relocate into or out of Washington, or need a trusted broker referral outside Washington, Real Property Planning can help coordinate the next step.
               </p>
 
               {/* Brokerage Info */}

@@ -79,7 +79,7 @@ const Footer = () => {
             <ul className="space-y-3 text-primary-foreground/70 text-base">
               <li className="flex items-start gap-2">
                 <img src={mappin3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain mt-0.5 shrink-0" />
-                <span>Serving clients throughout Washington State</span>
+                <span>Serving clients throughout Washington State, with a strong focus in Western Washington and the Puget Sound region</span>
               </li>
               <li><Link to="/counties/king" className="hover:text-gold transition-colors">Probate and estate real estate in King County</Link></li>
               <li><Link to="/counties/snohomish" className="hover:text-gold transition-colors">Probate and estate real estate in Snohomish County</Link></li>
@@ -154,7 +154,7 @@ const Footer = () => {
         {/* Geo / Service Area SEO */}
         <div className="border-t border-primary-foreground/10 mt-8 pt-6 pb-4">
           <p className="text-primary-foreground/50 text-[13px] text-center leading-relaxed max-w-3xl mx-auto">
-            Serving clients throughout Washington State, with deep experience across Western Washington and the Puget Sound region, including King, Snohomish, Pierce, and Kitsap counties: Seattle, Bellevue, Tacoma, Everett, Kirkland, Redmond, Bothell, and nearby communities. Through eXp Realty, David can also connect clients with trusted brokers across the U.S. and internationally.
+            Serving buyers, sellers, families, attorneys, executors, trustees, and fiduciaries throughout Washington State, with a strong focus in Western Washington and the Puget Sound region. Through eXp Realty's referral network, David can also help connect clients with trusted brokers across the U.S. and internationally.
           </p>
         </div>
 

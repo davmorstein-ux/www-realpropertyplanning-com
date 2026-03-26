@@ -63,10 +63,10 @@ const Services = () => {
                 Our Services
               </p>
               <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl text-primary-foreground font-semibold mb-6">
-                Senior Relocation & Estate Real Estate Services
+                Probate, Estate & Senior Transition Real Estate Services
               </h1>
               <p className="text-primary-foreground/80 text-lg leading-relaxed max-w-2xl mx-auto">
-                David Stein works with executors, probate attorneys, trustees, seniors, and families navigating senior relocation, estate and inherited property sales, probate real estate, and trust property transactions throughout Washington State — with deep experience across Western Washington and the Puget Sound region.
+                Probate property sales, senior transitions, executor support, and estate-related real estate guidance throughout Washington State, with a strong focus in Western Washington and the Puget Sound region.
               </p>
             </div>
           </div>
