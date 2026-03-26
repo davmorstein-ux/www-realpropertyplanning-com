@@ -129,19 +129,19 @@ const HowWeWork = () => {
       <section className="pt-10 pb-10 md:pt-14 md:pb-14 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-[1140px] mx-auto">
-            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-sm">Related Resources</p>
+            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">Related Resources</p>
             <div className="flex flex-wrap gap-3">
-              <Link to="/how-the-process-works" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">How the Process Works</Link>
+              <Link to="/how-the-process-works" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-base">How the Process Works</Link>
               <span className="text-muted-foreground/40">·</span>
-              <Link to="/why-valuation-matters" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Why Valuation Matters</Link>
+              <Link to="/why-valuation-matters" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-base">Why Valuation Matters</Link>
               <span className="text-muted-foreground/40">·</span>
-              <Link to="/for-attorneys" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Attorneys</Link>
+              <Link to="/for-attorneys" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-base">For Attorneys</Link>
               <span className="text-muted-foreground/40">·</span>
-              <Link to="/executors" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Executors</Link>
+              <Link to="/executors" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-base">For Executors</Link>
               <span className="text-muted-foreground/40">·</span>
-              <Link to="/faq" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">FAQ</Link>
+              <Link to="/faq" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-base">FAQ</Link>
               <span className="text-muted-foreground/40">·</span>
-              <Link to="/contact" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Contact</Link>
+              <Link to="/contact" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-base">Contact</Link>
             </div>
           </div>
         </div>

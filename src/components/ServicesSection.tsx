@@ -63,7 +63,7 @@ const ServicesSection = () => {
               <p className="text-muted-foreground leading-relaxed mb-3">
                 {service.description}
               </p>
-              <span className="inline-flex items-center text-sm font-medium text-primary group-hover:text-gold transition-colors">
+              <span className="inline-flex items-center text-[15px] font-medium text-primary group-hover:text-gold transition-colors">
                 Learn More
                 <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
               </span>
