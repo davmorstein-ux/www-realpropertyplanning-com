@@ -141,9 +141,11 @@ const ForAttorneys = () => {
               <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer">
                 <img src={alcaLogo} alt="Aging Life Care Association Corporate Partner" className="h-16 md:h-20 w-auto" loading="lazy" />
               </a>
-              <img src={naosaBadge} alt="National Association of Senior Advocates - Best Real Estate Agent 2026" className="h-20 md:h-24 w-auto" loading="lazy" />
+              <a href="https://www.naosa.org" target="_blank" rel="noopener noreferrer">
+                <img src={naosaBadge} alt="National Association of Senior Advocates - Best Real Estate Agent 2026" className="h-20 md:h-24 w-auto" loading="lazy" />
+              </a>
               <a href="https://www.naepc.org" target="_blank" rel="noopener noreferrer">
-                <img src={naepcLogo} alt="National Association of Estate Planners & Councils" className="h-14 md:h-18 w-auto" loading="lazy" />
+                <img src={naepcLogo} alt="National Association of Estate Planners & Councils" className="h-[17.5px] md:h-[22.5px] w-auto" loading="lazy" />
               </a>
             </div>
           </div>

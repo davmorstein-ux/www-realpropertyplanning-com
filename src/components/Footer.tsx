@@ -113,17 +113,19 @@ const Footer = () => {
                 loading="lazy"
               />
             </a>
-            <img
-              src={naosaBadge}
-              alt="National Association of Senior Advocates - Best Real Estate Agent 2026"
-              className="h-14 w-auto opacity-80"
-              loading="lazy"
-            />
+            <a href="https://www.naosa.org" target="_blank" rel="noopener noreferrer">
+              <img
+                src={naosaBadge}
+                alt="National Association of Senior Advocates - Best Real Estate Agent 2026"
+                className="h-14 w-auto opacity-80 hover:opacity-100 transition-opacity"
+                loading="lazy"
+              />
+            </a>
             <a href="https://www.naepc.org" target="_blank" rel="noopener noreferrer">
               <img
                 src={naepcLogo}
                 alt="National Association of Estate Planners & Councils"
-                className="h-10 w-auto opacity-80 hover:opacity-100 transition-opacity"
+                className="h-[12.5px] w-auto opacity-80 hover:opacity-100 transition-opacity"
                 loading="lazy"
               />
             </a>
