@@ -107,7 +107,7 @@ const WhyValuationMatters = () => {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Link to="/contact">
  <Button variant="gold" size="lg"className="hover:-light font-medium px-7 py-4 h-auto rounded-lg w-full sm:w-auto">
-                  <img src={iconPhone3d alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
+                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
                   Discuss a Property
                 </Button>
               </Link>
