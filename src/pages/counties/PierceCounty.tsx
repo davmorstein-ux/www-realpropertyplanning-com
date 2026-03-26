@@ -3,7 +3,8 @@ import CountyPageTemplate from "@/components/CountyPageTemplate";
 const PierceCounty = () => (
   <CountyPageTemplate
     countyName="Pierce County"
-    countyPath="/counties/pierce"
+    countyPath="/pierce-county"
+    countySlug="pierce-county"
     cities={[
       "Tacoma", "University Place", "Gig Harbor", "Puyallup", "Bonney Lake",
       "Lakewood", "Sumner", "Fircrest", "Milton",

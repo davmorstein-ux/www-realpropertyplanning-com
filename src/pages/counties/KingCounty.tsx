@@ -3,7 +3,8 @@ import CountyPageTemplate from "@/components/CountyPageTemplate";
 const KingCounty = () => (
   <CountyPageTemplate
     countyName="King County"
-    countyPath="/counties/king"
+    countyPath="/king-county"
+    countySlug="king-county"
     cities={[
       "Seattle", "Bellevue", "Kirkland", "Redmond", "Bothell", "Woodinville",
       "Issaquah", "Sammamish", "Mercer Island", "Shoreline", "Renton", "Newcastle",
