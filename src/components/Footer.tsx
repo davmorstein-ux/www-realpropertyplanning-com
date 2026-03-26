@@ -117,7 +117,7 @@ const Footer = () => {
               <img
                 src={naosaBadge}
                 alt="National Association of Senior Advocates - Best Real Estate Agent 2026"
-                className="h-14 w-auto opacity-80 hover:opacity-100 transition-opacity"
+                className="h-28 w-auto opacity-80 hover:opacity-100 transition-opacity"
                 loading="lazy"
               />
             </a>
