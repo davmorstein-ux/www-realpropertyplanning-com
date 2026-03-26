@@ -131,15 +131,18 @@ const Index = () => {
       <section className="py-16 lg:py-20 bg-cream">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-8 text-center">
+            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-6 text-center">
               Who We Help
             </h2>
+            <p className="text-foreground/80 text-lg leading-relaxed mb-8 text-center">
+              Real Property Planning serves attorneys, personal representatives, and families facing probate, estate sales, inherited property, and senior transitions in Western Washington.
+            </p>
             <ul className="space-y-4">
               {[
                 "Attorneys seeking a reliable real estate partner for probate and estate cases.",
                 "Personal representatives, executors, and trustees responsible for selling an inherited property.",
                 "Heirs and beneficiaries who need clear guidance and realistic expectations.",
-                "Seniors and their families preparing to downsize or move to assisted / independent living.",
+                "Seniors and their families preparing to downsize or move to assisted or independent living.",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <GoldCheck3D size={20} className="mt-0.5" />
