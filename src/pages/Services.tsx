@@ -44,7 +44,7 @@ const Services = () => {
     <>
       <SEOHead
         title="Senior Relocation & Estate Real Estate Services | David Stein"
-        description="David Stein provides senior relocation home sales, estate and inherited property sales, probate real estate, trust property sales, clean-out coordination, and market analysis throughout the Puget Sound region."
+        description="David Stein provides senior relocation home sales, estate and inherited property sales, probate real estate, trust property sales, clean-out coordination, and market analysis throughout Washington State."
         canonical="https://www.realpropertyplanning.com/services"
       />
       <BreadcrumbSchema
