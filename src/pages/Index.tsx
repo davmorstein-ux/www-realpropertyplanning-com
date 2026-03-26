@@ -183,7 +183,7 @@ const Index = () => {
                 With over 20 years of experience as both a licensed real estate broker and certified residential appraiser, David brings rare dual expertise to every engagement — providing calm, knowledgeable guidance during life's most important property decisions.
               </p>
               <div className="mb-5 space-y-3">
-                <p className="text-base font-semibold tracking-[0.02em] text-foreground">David Stein</p>
+                <p className="text-lg font-bold tracking-[0.01em] text-foreground">Real Property Planning — David Stein</p>
                 <p className="flex items-center text-base font-semibold text-foreground">
                   <img src={iconLicense3d} alt="" aria-hidden="true" className="mr-3 h-12 w-12 shrink-0 object-contain mix-blend-multiply" />
                   Licensed Real Estate Broker
@@ -192,6 +192,26 @@ const Index = () => {
                   <img src={iconAppraiser3d} alt="" aria-hidden="true" className="mr-3 h-12 w-12 shrink-0 object-contain mix-blend-multiply" />
                   WA Certified Residential Appraiser
                 </p>
+                <div className="flex items-center text-base text-foreground">
+                  <img src={expRealtyLogo} alt="eXp Realty" className="mr-3 h-5 w-auto opacity-70" loading="lazy" />
+                  <span className="text-muted-foreground text-sm">eXp Realty</span>
+                </div>
+              </div>
+              <div className="mb-5 space-y-1.5 text-[15px] text-muted-foreground">
+                <p>
+                  <a href="tel:2069003015" className="hover:text-gold transition-colors">
+                    <img src={iconPhone3d} alt="" aria-hidden="true" className="inline mr-2 h-5 w-5 object-contain" />
+                    (206) 900-3015
+                  </a>
+                </p>
+                <p>
+                  <a href="mailto:david@realpropertyplanning.com" className="hover:text-gold transition-colors">
+                    <img src={iconEmail3d} alt="" aria-hidden="true" className="inline mr-2 h-5 w-5 object-contain" />
+                    david@realpropertyplanning.com
+                  </a>
+                </p>
+                <p className="text-sm">PO Box 1462, Woodinville, WA 98072</p>
+                <p className="text-sm">Office: 1455 NW Leary Way, Seattle, WA 98107</p>
               </div>
               <p className="mb-3 text-center text-xs font-semibold uppercase tracking-widest text-muted-foreground">Professional Memberships &amp; Affiliations</p>
               <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-5">
