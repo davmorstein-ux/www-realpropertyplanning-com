@@ -100,7 +100,7 @@ const Resources = () => {
                 <Link
                   key={cat.href}
                   to={cat.href}
-                  className="group flex items-center justify-between gap-4 bg-card border border-border rounded-xl px-6 py-5 md:px-8 md:py-6 hover:border-gold/40 hover:shadow-md transition-all"
+                  className="card-3d group flex items-center justify-between gap-4 px-6 py-5 md:px-8 md:py-6"
                 >
                   <div>
                     <h2 className="font-serif text-lg md:text-xl font-semibold text-foreground group-hover:text-accent transition-colors mb-1">

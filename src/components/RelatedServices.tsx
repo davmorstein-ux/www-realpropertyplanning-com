@@ -40,7 +40,7 @@ const RelatedServices = ({ currentPath }: RelatedServicesProps) => {
               <Link
                 key={link.href}
                 to={link.href}
-                className="group flex flex-col justify-between bg-card border border-border rounded-xl p-5 transition-all duration-200 hover:shadow-md hover:-translate-y-0.5 hover:border-gold/40"
+                className="card-3d group flex flex-col justify-between p-5"
               >
                 <div>
                   <h3 className="font-serif text-base font-semibold text-foreground group-hover:text-accent transition-colors mb-1.5">

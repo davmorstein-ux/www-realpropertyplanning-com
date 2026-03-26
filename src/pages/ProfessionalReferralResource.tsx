@@ -304,7 +304,7 @@ const ProfessionalReferralResource = () => {
                 <Link
                   key={link.href}
                   to={link.href}
-                  className="group bg-card border border-border rounded-xl p-5 hover:border-gold/40 hover:shadow-md transition-all"
+                  className="card-3d group p-5"
                 >
                   <h3 className="font-serif text-base font-semibold text-foreground group-hover:text-accent transition-colors mb-1">
                     {link.label}

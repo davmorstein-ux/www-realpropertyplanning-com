@@ -279,7 +279,7 @@ const TransitionResources = () => {
                 <Link
                   key={cat.href}
                   to={cat.href}
-                  className="group flex items-center justify-between gap-4 bg-card border border-border rounded-xl px-6 py-5 md:px-8 md:py-6 hover:border-gold/40 hover:shadow-md transition-all"
+                  className="card-3d group flex items-center justify-between gap-4 px-6 py-5 md:px-8 md:py-6"
                 >
                   <div className="flex items-start gap-4">
                     {cat.image ? (
@@ -321,7 +321,7 @@ const TransitionResources = () => {
                 <Link
                   key={guide.href}
                   to={guide.href}
-                  className="group bg-card border border-border rounded-xl p-5 hover:border-gold/40 hover:shadow-md transition-all"
+                  className="card-3d group p-5"
                 >
                   <h3 className="font-serif text-base font-semibold text-foreground group-hover:text-accent transition-colors mb-1">
                     {guide.title}
@@ -358,7 +358,7 @@ const TransitionResources = () => {
                 <Link
                   key={page.href}
                   to={page.href}
-                  className="group bg-card border border-border rounded-xl p-5 hover:border-gold/40 hover:shadow-md transition-all"
+                  className="card-3d group p-5"
                 >
                   <h3 className="font-serif text-base font-semibold text-foreground group-hover:text-accent transition-colors mb-1">
                     {page.title}
