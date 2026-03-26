@@ -1,11 +1,23 @@
 // Central data layer for all counties, cities, and services
 // This powers templates, routing, navigation, and internal linking
 
+/** Community tone classification — shapes connecting language throughout templates */
+export type CommunityTone = 
+  | "premium"      // upscale, established, high-value (Mercer Island, Bellevue, Bainbridge)
+  | "urban"        // complex, fast-paced, diverse neighborhoods (Seattle, Tacoma, Everett)
+  | "suburban"     // family-oriented, practical, approachable (Kirkland, Redmond, Mill Creek)
+  | "waterfront"   // locally grounded, nuanced, community-rooted (Edmonds, Mukilteo, Poulsbo)
+  | "smalltown"    // personal, steady, relationship-oriented (Duvall, Snohomish, Gold Bar)
+  | "military"     // practical, respectful, community-aware (Lakewood, Silverdale, Bremerton)
+  | "rural";       // grounded, honest, property-specific (Graham, Eatonville, Seabeck)
+
 export interface CityData {
   name: string;
   slug: string;
   county: string;
   countySlug: string;
+  /** Community tone — drives template language variation */
+  tone?: CommunityTone;
   /** Short unique descriptor for meta/intro variation */
   descriptor?: string;
   /** Unique hero intro paragraph for the city page */
