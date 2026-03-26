@@ -31,7 +31,7 @@ const ServiceAreasSection = () => {
             Serving Clients Throughout Washington State
           </h2>
           <p className="text-primary-foreground/70 text-lg">
-            Deep local expertise across Western Washington and the Puget Sound region, with the ability to connect clients to trusted brokers nationwide and internationally through eXp Realty.
+            With a strong focus in Western Washington and the Puget Sound region, and referral connections available across the U.S. and internationally through eXp Realty.
           </p>
         </div>
         
