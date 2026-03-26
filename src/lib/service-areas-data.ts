@@ -8,6 +8,16 @@ export interface CityData {
   countySlug: string;
   /** Short unique descriptor for meta/intro variation */
   descriptor?: string;
+  /** Unique hero intro paragraph for the city page */
+  heroIntro?: string;
+  /** Unique "why local knowledge matters" paragraph */
+  localKnowledge?: string;
+  /** Unique "why broker/appraiser" paragraph */
+  brokerAppraiserValue?: string;
+  /** City-specific situations clients face */
+  localSituations?: string[];
+  /** City-specific client types */
+  localClientTypes?: string[];
 }
 
 export interface CountyData {
@@ -28,6 +38,169 @@ export interface ServiceData {
   /** Why valuation and market guidance matter for this service */
   whyValuationMatters: string;
 }
+
+// ─── City-specific content for priority cities ──────────────────────────
+// Keyed by slug for easy lookup
+
+const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "countySlug">> = {
+  // ── KING COUNTY ─────────────────────────────────────────────
+  bellevue: {
+    descriptor: "Eastside luxury and established neighborhoods",
+    heroIntro: "Bellevue is one of the most dynamic real estate markets in Washington State — a mix of established neighborhoods, high-value estates, and rapid new development. For families managing a probate sale, trust property, or senior transition in Bellevue, the stakes are often significant. Real Property Planning provides valuation-informed guidance that accounts for Bellevue's premium market positioning, neighborhood-level pricing differences, and the unique challenges of selling estate or inherited property in a competitive environment.",
+    localKnowledge: "Bellevue's real estate market spans a wide spectrum — from mid-century ramblers in Crossroads to multimillion-dollar estates in West Bellevue, Meydenbauer, and Vuecrest. Accurate pricing requires understanding how neighborhood, lot size, views, and condition interact in a market where buyer expectations are high. David Stein's dual credentials as a licensed broker and state-certified appraiser provide the local depth needed to position estate and transition properties effectively in Bellevue's competitive landscape.",
+    brokerAppraiserValue: "In a high-value market like Bellevue, the difference between accurate pricing and a missed opportunity can be substantial. David Stein's combination of licensed brokerage experience and certified appraisal expertise means clients receive guidance grounded in actual property analysis — not automated estimates that may not account for the condition, lot characteristics, or neighborhood nuances that drive value on the Eastside.",
+    localSituations: [
+      "A longtime family home in a Bellevue neighborhood that has appreciated significantly and needs careful market positioning",
+      "An inherited property on the Eastside where multiple heirs need objective valuation and clear communication",
+      "A senior parent transitioning from a large Bellevue home to assisted or independent living",
+      "A trust-owned property in Bellevue that requires fiduciary-appropriate sale coordination",
+      "An out-of-state executor managing a high-value Bellevue estate property",
+      "A divorce-related sale in Bellevue where both parties need a neutral, experienced broker",
+    ],
+  },
+  kirkland: {
+    descriptor: "Waterfront charm and growing neighborhoods",
+    heroIntro: "Kirkland combines waterfront living, walkable neighborhoods, and a strong sense of community — qualities that make it one of the most desirable cities on the Eastside. When a property transition involves probate, an estate sale, a senior move, or an inherited home in Kirkland, the process benefits from someone who understands how Kirkland's distinct neighborhoods and buyer expectations affect pricing and preparation strategy.",
+    localKnowledge: "Kirkland's neighborhoods range from the boutique waterfront of Moss Bay and Houghton to the larger-lot homes of Juanita, Finn Hill, and Totem Lake. Each area attracts different buyers with different expectations. Selling an estate or inherited property in Kirkland requires understanding which improvements matter, how waterfront proximity affects value, and how to position a home that may not be in move-in condition against newer or recently updated listings.",
+    brokerAppraiserValue: "Kirkland's appeal lies in its location, walkability, and neighborhood character — but those qualities can be difficult to quantify with automated tools. David Stein evaluates each property based on its actual condition, lot characteristics, and realistic buyer demand in Kirkland. His appraisal background provides an analytical foundation that supports confident pricing decisions, especially for properties that need preparation or have deferred maintenance.",
+  },
+  redmond: {
+    descriptor: "Technology corridor with diverse housing stock",
+    heroIntro: "Redmond has grown from a quiet suburb into one of the most sought-after cities in King County, driven by its proximity to major employers and strong school districts. Families and fiduciaries managing estate, probate, or transition-related property in Redmond need guidance that reflects the city's evolving market dynamics and the wide range of housing — from original ramblers to newer planned communities like Trilogy and Redmond Ridge.",
+    localKnowledge: "Redmond's housing stock includes everything from older homes in downtown Redmond and Education Hill to newer construction in Redmond Ridge, Trilogy, and the Overlake area. These submarkets behave differently, and an estate or inherited property may need very different preparation and pricing strategies depending on location. David Stein's familiarity with Redmond's micro-markets helps clients avoid the common mistake of applying a one-size-fits-all approach.",
+  },
+  issaquah: {
+    descriptor: "Foothills communities and family neighborhoods",
+    heroIntro: "Nestled against the Cascade foothills, Issaquah offers a blend of established neighborhoods, newer planned communities, and rural-adjacent properties. For families navigating a probate sale, senior transition, or inherited property situation in Issaquah, the process requires someone who understands the area's unique mix of housing types, lot sizes, and buyer expectations — from the Highlands and Talus to Olde Town Issaquah and surrounding areas.",
+    localKnowledge: "Issaquah's real estate landscape includes master-planned communities like Issaquah Highlands and Talus, established neighborhoods near Olde Town, and properties in more rural settings toward the foothills. Each segment has its own pricing dynamics and buyer pool. Estate and inherited properties in Issaquah often require thoughtful preparation to compete effectively, especially when they differ from the newer construction that dominates parts of the market.",
+  },
+  sammamish: {
+    descriptor: "Plateau living with strong family appeal",
+    heroIntro: "Sammamish is known for its spacious lots, top-rated schools, and family-oriented character on the Eastside plateau. Properties here tend to hold strong value, but estate and inherited homes — particularly those with deferred maintenance or dated finishes — require careful positioning in a market where buyers often expect move-in condition. Real Property Planning provides the valuation-informed guidance Sammamish families and fiduciaries need during important property transitions.",
+    localKnowledge: "Sammamish properties range from well-maintained homes in Pine Lake, Beaver Lake, and Klahanie to larger custom homes throughout the plateau. The market can be competitive for updated properties but challenging for homes that need work. David Stein's understanding of how condition, lot size, and school proximity affect value in Sammamish helps clients set realistic expectations and develop preparation strategies that make sense for their specific situation.",
+  },
+  seattle: {
+    descriptor: "Urban diversity across dozens of distinct neighborhoods",
+    heroIntro: "Seattle's real estate market is as diverse as the city itself — from Capitol Hill condos to Magnolia estates, Ballard craftsmans to West Seattle view properties. Managing a probate sale, inherited home, or senior transition in Seattle means navigating a market where neighborhood context, zoning, and property type can dramatically affect both value and sale strategy. Real Property Planning provides the localized, valuation-informed guidance that Seattle's complex market demands.",
+    localKnowledge: "Seattle encompasses over 80 distinct neighborhoods, each with its own character, pricing trends, and buyer expectations. A mid-century rambler in Wedgwood presents a very different sale scenario than a Capitol Hill condo or a Craftsman in Wallingford. David Stein's appraisal background and broker experience across Seattle's neighborhoods allow him to develop pricing and preparation strategies that reflect actual local conditions rather than citywide averages.",
+    brokerAppraiserValue: "Seattle's market complexity makes generic pricing approaches especially risky for estate and inherited properties. Automated estimates often miss critical factors like lot potential, view corridors, ADU feasibility, and condition-based adjustments that vary block by block. David Stein's certified appraisal credentials and hands-on broker experience provide the granular analysis Seattle properties require for confident decision-making.",
+    localSituations: [
+      "An inherited craftsman in a rapidly changing Seattle neighborhood that may have significant lot value",
+      "A senior parent selling a longtime home in North Seattle or West Seattle to move to a care community",
+      "A probate property in Seattle requiring coordination across multiple out-of-state family members",
+      "A trust-owned condo or townhome in Seattle's urban core that needs sale coordination",
+      "A family home with rental history or ADU potential that requires nuanced valuation",
+      "A divorce-related property sale in Seattle where neighborhood-level market knowledge is critical",
+    ],
+  },
+  renton: {
+    descriptor: "South King County hub with evolving neighborhoods",
+    heroIntro: "Renton has experienced significant growth and transformation, with neighborhoods ranging from the waterfront areas along Lake Washington to the established communities of Kennydale, the Highlands, and Benson Hill. For families and executors managing property transitions in Renton, understanding how the city's evolving market affects valuation and sale timing is essential. Real Property Planning provides clear, practical guidance for Renton property situations.",
+    localKnowledge: "Renton's market includes everything from lakefront properties and Kennydale mid-century homes to newer developments in the Highlands and established neighborhoods in Benson Hill. The city's proximity to major employers and ongoing development make it a dynamic market where pricing accuracy is especially important. David Stein's appraiser credentials help clients understand how Renton's different submarkets and the city's growth trajectory affect their specific property.",
+  },
+
+  // ── SNOHOMISH COUNTY ────────────────────────────────────────
+  lynnwood: {
+    descriptor: "Rapidly evolving with new light rail access",
+    heroIntro: "Lynnwood is in the middle of a significant transformation, with light rail expansion bringing new development and shifting market dynamics. For families managing estate, probate, or senior transition properties in Lynnwood, this changing landscape creates both opportunities and challenges. Real Property Planning helps clients in Lynnwood understand how the city's evolution affects property values and develop sale strategies that reflect current and realistic market conditions.",
+    localKnowledge: "Lynnwood's housing stock includes established ramblers and split-levels from the 1960s–80s, newer townhomes and condos near the city center, and properties in neighborhoods like Alderwood, Martha Lake, and North Lynnwood. The arrival of light rail is reshaping buyer interest in certain areas while leaving others relatively unchanged. David Stein's understanding of these micro-market shifts helps clients position estate and transition properties effectively.",
+  },
+  edmonds: {
+    descriptor: "Charming waterfront community with historic character",
+    heroIntro: "Edmonds is a waterfront community known for its walkable downtown, ferry access, and strong neighborhood character. Properties in Edmonds — from bowl-area homes with sound views to hillside residences and properties near Highway 99 — require locally informed guidance when the sale involves estate, probate, or transition circumstances. Real Property Planning understands the nuances that affect value throughout Edmonds.",
+    localKnowledge: "Edmonds offers a wide range of property types and price points, from the desirable bowl area near downtown to Perrinville, Westgate, and Firdale. Waterfront proximity, views, walkability, and lot size all play meaningful roles in Edmonds pricing. David Stein's dual credentials help families selling estate or inherited property in Edmonds understand exactly where their home fits in this layered market and how to position it for the best possible outcome.",
+    brokerAppraiserValue: "In Edmonds, view corridors, walking distance to the ferry and downtown, and neighborhood character can create wide value differences within a small geographic area. David Stein's appraisal background allows him to account for these micro-factors rather than relying on broad market comparisons that may miss what makes a specific Edmonds property more — or less — valuable.",
+  },
+  mukilteo: {
+    descriptor: "Coastal community with Boeing and ferry influences",
+    heroIntro: "Mukilteo is a small, close-knit community with waterfront appeal, ferry access to Whidbey Island, and a housing market influenced by its proximity to Boeing and Paine Field. For families handling estate or transition-related property in Mukilteo, the community's character and relatively limited housing inventory create specific market dynamics that benefit from experienced, local guidance.",
+    localKnowledge: "Mukilteo's housing market is relatively compact, with established neighborhoods near the waterfront, properties in the Harbour Pointe master-planned community, and homes along the hillside with varying degrees of sound and mountain views. Because inventory is limited, positioning and pricing accuracy are especially important. David Stein helps clients understand how Mukilteo's unique characteristics affect value and buyer interest.",
+  },
+  "mill-creek": {
+    descriptor: "Master-planned community with strong family appeal",
+    heroIntro: "Mill Creek is a well-regarded master-planned community known for its maintained common areas, strong schools, and family-friendly character. Estate, probate, and senior transition properties in Mill Creek benefit from guidance that understands the community's HOA considerations, buyer expectations, and how condition affects value within a market that tends to attract families seeking move-in-ready homes.",
+    localKnowledge: "Mill Creek's housing includes a range of single-family homes, townhomes, and condos within its planned community framework. The town center, country club, and trail system all contribute to Mill Creek's appeal. When selling an estate or inherited property here, understanding HOA requirements and how the property compares to recently updated homes in the community is essential for realistic pricing.",
+  },
+  everett: {
+    descriptor: "County seat with waterfront revival and diverse neighborhoods",
+    heroIntro: "As Snohomish County's largest city, Everett offers a diverse housing landscape — from the revitalizing waterfront and Port Gardner district to established neighborhoods in North Everett, Silver Lake, and Lowell. Families and executors managing property transitions in Everett need guidance that accounts for the city's wide range of property types, price points, and neighborhood trajectories.",
+    localKnowledge: "Everett's neighborhoods vary significantly in character and value — from the grand historic homes on Grand and Rucker to mid-century ramblers, newer developments near Silver Lake, and waterfront condos on the Port Gardner peninsula. David Stein's experience across Everett's submarkets helps clients understand which areas are appreciating, where buyer demand is strongest, and how to position an estate or inherited property given its specific location and condition.",
+  },
+  snohomish: {
+    descriptor: "Historic small-town character with rural and estate properties",
+    heroIntro: "The city of Snohomish — often called the 'Antique Capital of the Northwest' — combines historic small-town character with larger-lot properties and rural-adjacent living. Estate, inherited, and transition properties in Snohomish often include unique features like acreage, older construction, or outbuildings that require specialized pricing and preparation knowledge.",
+    localKnowledge: "Snohomish's housing market includes historic homes in the walkable downtown, newer subdivisions, and larger properties with acreage on the outskirts. The rural and semi-rural character of many Snohomish properties means that standard urban comparisons often fall short. David Stein's appraisal background is especially valuable here, where property features like land, outbuildings, and access can meaningfully affect value.",
+  },
+
+  // ── PIERCE COUNTY ───────────────────────────────────────────
+  tacoma: {
+    descriptor: "Growing urban market with neighborhood diversity",
+    heroIntro: "Tacoma has emerged as one of the most dynamic real estate markets in Pierce County, with neighborhoods ranging from the historic Stadium District and North End to the waterfront communities of Ruston and Point Defiance. For families and fiduciaries navigating estate, probate, or senior transition sales in Tacoma, the city's neighborhood diversity and growth trajectory make experienced, local guidance essential.",
+    localKnowledge: "Tacoma's neighborhoods each carry distinct market dynamics — the North End's established homes, Stadium District's architectural character, South Tacoma's affordability, and the waterfront communities' premium positioning. David Stein's understanding of how these submarkets behave helps clients avoid the mistake of treating Tacoma as a single market. For estate and inherited properties, knowing which neighborhood factors drive — or limit — buyer interest is critical to realistic pricing.",
+    localSituations: [
+      "An inherited craftsman or Tudor in Tacoma's historic North End or Stadium District",
+      "A senior parent leaving a longtime family home in Tacoma for assisted living",
+      "A probate property in South Tacoma or Eastside that needs preparation and realistic market positioning",
+      "A trust-owned property near Point Defiance or the waterfront where value depends heavily on location specifics",
+      "An out-of-state executor managing a Tacoma estate sale remotely",
+    ],
+  },
+  "gig-harbor": {
+    descriptor: "Waterfront peninsula community with premium appeal",
+    heroIntro: "Gig Harbor's waterfront charm, small-town atmosphere, and proximity to Tacoma and the Narrows Bridge have made it one of Pierce County's most desirable communities. Estate and transition properties in Gig Harbor — whether on the harbor itself, in the established neighborhoods of the peninsula, or in newer developments like Gig Harbor North — require pricing and preparation strategies informed by the area's unique buyer expectations.",
+    localKnowledge: "Gig Harbor's market ranges from waterfront properties and historic harbor-area homes to newer construction in master-planned communities. The distinction between 'Gig Harbor proper' and surrounding unincorporated areas matters to buyers, and view properties, waterfront access, and proximity to downtown all significantly affect value. David Stein's appraisal credentials help clients understand these nuances rather than relying on broad averages.",
+  },
+  puyallup: {
+    descriptor: "Established family community in the valley",
+    heroIntro: "Puyallup is a well-established community in the Puyallup Valley, known for its historic downtown, family neighborhoods, and strong sense of community. For families managing estate sales, senior transitions, or inherited property in Puyallup, the process benefits from a broker who understands the valley's housing stock, buyer demographics, and how condition and location affect value in this market.",
+    localKnowledge: "Puyallup's housing ranges from older homes near downtown and South Hill to newer developments in the surrounding areas. The valley's agricultural heritage means some properties come with unique lot characteristics, outbuildings, or zoning considerations. David Stein helps clients in Puyallup understand how these factors — along with condition, school proximity, and neighborhood context — affect realistic pricing and buyer interest.",
+  },
+  "university-place": {
+    descriptor: "Established residential community near Tacoma",
+    heroIntro: "University Place is a well-maintained residential community adjacent to Tacoma, known for its quality neighborhoods, Chambers Bay golf course, and access to Puget Sound waterfront. Families and fiduciaries managing property transitions in University Place benefit from guidance that reflects the community's strong neighborhood character and the specific expectations of buyers drawn to this area.",
+    localKnowledge: "University Place offers a mix of established single-family homes, newer developments, and properties near Chambers Bay and the waterfront. The community's appeal lies in its combination of residential character, proximity to Tacoma's amenities, and access to outdoor recreation. For estate and transition properties, understanding how condition compares to the area's well-maintained housing stock is key to effective pricing.",
+  },
+  lakewood: {
+    descriptor: "Diverse community near Joint Base Lewis-McChord",
+    heroIntro: "Lakewood's proximity to Joint Base Lewis-McChord, its diverse neighborhoods, and its range of housing types — from lakefront properties to established suburban homes — create a real estate market with specific dynamics. For families and executors managing estate or transition-related property in Lakewood, understanding how military influence, neighborhood differences, and property condition affect value is essential.",
+    localKnowledge: "Lakewood's housing market includes lakefront properties on American Lake and Gravelly Lake, established neighborhoods in the Tillicum and Springbrook areas, and a range of housing types throughout the city. The military presence at JBLM affects buyer demographics and rental demand in ways that influence both pricing strategy and marketing approach. David Stein's experience helps clients navigate these considerations with clarity.",
+  },
+
+  // ── KITSAP COUNTY ───────────────────────────────────────────
+  silverdale: {
+    descriptor: "Central Kitsap's commercial and residential hub",
+    heroIntro: "Silverdale serves as Central Kitsap's primary commercial and residential center, with housing that ranges from newer developments in Ridgetop and Clear Creek to established neighborhoods throughout the community. For families managing estate, probate, or transition properties in Silverdale, understanding how this unincorporated community's market dynamics and proximity to Naval Base Kitsap affect value is important for making sound decisions.",
+    localKnowledge: "Silverdale's housing market includes newer construction in planned communities, established ramblers and split-levels, and properties with varying degrees of access to waterfront and natural areas. The community's role as Central Kitsap's hub and the influence of nearby military installations create a buyer pool with specific characteristics. David Stein helps clients understand how these factors affect realistic pricing for estate and inherited properties.",
+  },
+  poulsbo: {
+    descriptor: "Scandinavian-influenced waterfront community",
+    heroIntro: "Poulsbo's Scandinavian heritage, Liberty Bay waterfront, and small-town charm create a distinctive community with strong appeal for families and retirees. Estate and transition properties in Poulsbo — whether in the historic waterfront area, nearby established neighborhoods, or outlying rural properties — benefit from guidance that reflects the community's unique character and the expectations of buyers drawn to this area.",
+    localKnowledge: "Poulsbo's housing ranges from historic homes near the waterfront and downtown to newer developments and larger rural properties in the surrounding area. Waterfront access, Liberty Bay views, and proximity to downtown all significantly influence value. David Stein's appraisal credentials are particularly valuable in Poulsbo, where the range of property types and the community's distinctive character make generic pricing approaches unreliable.",
+  },
+  "bainbridge-island": {
+    descriptor: "Island community with Seattle ferry access and premium values",
+    heroIntro: "Bainbridge Island offers a rare combination of island living, artistic community character, and daily ferry access to downtown Seattle. The island's real estate market is premium and distinctive — estate, probate, and transition properties here involve specific considerations around island logistics, waterfront valuation, and the expectations of a buyer pool that prioritizes lifestyle and community over conventional suburban amenities.",
+    localKnowledge: "Bainbridge Island's housing market includes everything from modest cottages and island-style homes to waterfront estates and rural acreage. The island's limited inventory, ferry-dependent access, and strong community identity create pricing dynamics unlike any other market in the Puget Sound region. David Stein's appraisal background is especially valuable here, where automated estimates frequently miss the premium that island location, waterfront access, and community character command.",
+    brokerAppraiserValue: "Bainbridge Island properties are notoriously difficult to price with automated tools. The island's limited comparable sales, wide range of property types, and premium positioning require hands-on evaluation. David Stein's certified appraisal credentials — combined with his understanding of how island logistics affect sale coordination and buyer behavior — provide the kind of informed guidance that Bainbridge families and fiduciaries need.",
+    localSituations: [
+      "A longtime island family home being sold as part of an estate or trust",
+      "A waterfront or view property on Bainbridge that requires specialized valuation",
+      "A senior islander transitioning to care on the mainland who needs coordinated sale support",
+      "An inherited property on Bainbridge where out-of-state heirs need local management",
+      "A divorce-related sale where both parties want an objective, island-knowledgeable broker",
+    ],
+  },
+  "port-orchard": {
+    descriptor: "South Kitsap community with waterfront and established neighborhoods",
+    heroIntro: "Port Orchard's combination of Sinclair Inlet waterfront, established residential neighborhoods, and proximity to Naval Base Kitsap creates a real estate market with specific local dynamics. Families and executors managing property transitions in Port Orchard benefit from guidance that accounts for the community's diverse housing stock and the factors that drive value in South Kitsap.",
+    localKnowledge: "Port Orchard includes waterfront properties along Sinclair Inlet, established neighborhoods in the city center, and newer developments in surrounding South Kitsap. The area's military influence, ferry access to Bremerton and beyond, and range of property types create a market where local knowledge is essential for accurate pricing. David Stein helps clients understand how these Port Orchard-specific factors affect their property's realistic market position.",
+  },
+  bremerton: {
+    descriptor: "Naval city with revitalizing waterfront and diverse housing",
+    heroIntro: "Bremerton is experiencing a notable revitalization, with its waterfront, ferry terminal, and downtown district attracting renewed interest. The city's housing market — from historic homes in Manette to newer waterfront condos and established neighborhoods throughout — offers a wide range of price points and property types. For families managing estate, probate, or transition sales in Bremerton, understanding the city's evolving market is key to making well-informed decisions.",
+    localKnowledge: "Bremerton's neighborhoods range from the revitalizing downtown and waterfront to Manette's established community character, the Naval Avenue area, and surrounding residential neighborhoods. The city's connection to Seattle via Washington State Ferries and the presence of Puget Sound Naval Shipyard both influence buyer demographics and market activity. David Stein's experience helps clients understand how Bremerton's ongoing transformation affects property values and sale strategy.",
+  },
+};
 
 // ─── Services ───────────────────────────────────────────────────────────
 export const services: ServiceData[] = [
@@ -168,7 +341,8 @@ export const services: ServiceData[] = [
 // ─── Helper to build city entries ────────────────────────────────────────
 function city(name: string, county: string, countySlug: string, slugOverride?: string): CityData {
   const slug = slugOverride || name.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "");
-  return { name, slug, county, countySlug };
+  const content = cityContent[slug];
+  return { name, slug, county, countySlug, ...content };
 }
 
 // ─── Counties & Cities ──────────────────────────────────────────────────
@@ -301,8 +475,9 @@ export function getCityServiceIntro(service: ServiceData, cityData: CityData): s
     .replace(/\{county\}/g, cityData.county);
 }
 
-/** Common situations that apply broadly */
-export function getCommonSituations(cityName: string): string[] {
+/** Common situations — uses city-specific if available, otherwise generic */
+export function getCommonSituations(cityName: string, cityData?: CityData): string[] {
+  if (cityData?.localSituations) return cityData.localSituations;
   return [
     `An inherited home in ${cityName} that needs assessment, preparation, and sale`,
     `A probate property requiring court-compliant sale coordination`,
@@ -314,13 +489,15 @@ export function getCommonSituations(cityName: string): string[] {
   ];
 }
 
-/** Why local matters content */
-export function getWhyLocalMatters(cityName: string, countyName: string): string {
+/** Why local matters — uses city-specific if available */
+export function getWhyLocalMatters(cityName: string, countyName: string, cityData?: CityData): string {
+  if (cityData?.localKnowledge) return cityData.localKnowledge;
   return `Every neighborhood in ${cityName} has its own pricing dynamics, buyer expectations, and property characteristics. A valuation-informed approach — one that accounts for condition, location, and realistic market positioning — helps clients avoid costly mispricing and unnecessary delays. David Stein's dual credentials as a licensed Washington real estate broker and state-certified residential appraiser provide a level of market insight that benefits clients throughout ${countyName}.`;
 }
 
-/** Why working with a broker/appraiser matters — used on city pages */
-export function getWhyBrokerAppraiser(cityName: string): string {
+/** Why broker/appraiser — uses city-specific if available */
+export function getWhyBrokerAppraiser(cityName: string, cityData?: CityData): string {
+  if (cityData?.brokerAppraiserValue) return cityData.brokerAppraiserValue;
   return `Most real estate brokers can list a property. What sets Real Property Planning apart is the combination of licensed brokerage experience and state-certified appraisal expertise. For clients in ${cityName} managing estate, probate, trust, or transition-related property decisions, this dual perspective means more accurate pricing, better preparation decisions, and a clearer understanding of what drives value in the local market. David Stein does not rely on automated estimates — he assesses each property based on its actual condition, location, and realistic buyer demand.`;
 }
 
