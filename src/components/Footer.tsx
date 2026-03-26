@@ -24,7 +24,7 @@ const Footer = () => {
               Licensed Real Estate Broker &amp; Washington State Certified Residential Appraiser
             </p>
             <p className="text-primary-foreground/70 text-[15px] leading-relaxed mb-3">eXp Realty</p>
-            <div className="flex flex-col gap-2 text-sm">
+            <div className="flex flex-col gap-2 text-[15px]">
               <a href="tel:2069003015" className="text-primary-foreground/70 hover:text-gold flex items-center gap-2">
                 <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" />
                 (206) 900-3015

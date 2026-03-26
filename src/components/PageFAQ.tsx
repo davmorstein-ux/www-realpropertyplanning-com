@@ -51,7 +51,7 @@ const PageFAQ = ({ faqs, heading = "Frequently Asked Questions", eyebrow = "Comm
     <section className="py-16 lg:py-24 bg-secondary">
       <div className="container px-6 lg:px-8">
         <div className="max-w-[900px] mx-auto">
-          <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">{eyebrow}</p>
+          <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-base">{eyebrow}</p>
           <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-10">
             {heading}
           </h2>
