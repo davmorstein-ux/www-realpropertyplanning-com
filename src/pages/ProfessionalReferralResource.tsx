@@ -92,7 +92,7 @@ const goodFit = [
   "The family needs practical help coordinating next steps for a property",
   "The home may need repairs, cleanout, staging, or other preparation",
   "The decision-makers are overwhelmed and need a steady, experienced guide",
-  "A professional wants a trusted local resource for Western Washington property situations",
+  "A professional wants a trusted real estate resource for property situations throughout Washington State",
 ];
 
 const jsonLd = articleSchema({

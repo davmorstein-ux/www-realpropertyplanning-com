@@ -10,7 +10,7 @@ const Testimonials = () => {
     <>
       <SEOHead
         title="Testimonials & Reviews | Real Property Planning"
-        description="Read client reviews and testimonials about working with Real Property Planning for probate property sales, estate transitions, and senior moves in Western Washington."
+        description="Read client reviews and testimonials about working with Real Property Planning for probate property sales, estate transitions, and senior moves throughout Washington State."
         canonical="https://www.realpropertyplanning.com/testimonials"
       />
       <BreadcrumbSchema

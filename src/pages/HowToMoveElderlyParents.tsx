@@ -286,7 +286,7 @@ const HowToMoveElderlyParents = () => (
                 Moving an elderly parent out of their home is one of the most significant transitions a family will face. It takes time, compassion, and the right team of professionals working together.
               </p>
               <p className="text-muted-foreground text-base leading-relaxed mb-4">
-                Real Property Planning provides experienced, thoughtful support for families throughout Western Washington who are navigating <Link to="/senior-transitions" className="text-accent hover:text-gold underline underline-offset-4">senior transitions</Link> and the real estate decisions that come with them. Whether you're just beginning to think about a move or already coordinating a transition, David Stein is here to help.
+                Real Property Planning provides experienced, thoughtful support for families throughout Washington State who are navigating <Link to="/senior-transitions" className="text-accent hover:text-gold underline underline-offset-4">senior transitions</Link> and the real estate decisions that come with them. Whether you're just beginning to think about a move or already coordinating a transition, David Stein is here to help.
               </p>
               <p className="text-muted-foreground text-base leading-relaxed">
                 <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4">Contact David</Link> for a confidential conversation about your family's situation.
