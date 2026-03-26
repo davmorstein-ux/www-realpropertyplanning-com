@@ -51,7 +51,7 @@ const ForAttorneys = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Real Estate Support for Attorneys | Real Property Planning"
-        description="Licensed broker and certified appraiser supporting attorneys with probate sales, estate property coordination, and valuation guidance across Western Washington."
+        description="Licensed broker and certified appraiser supporting attorneys with probate sales, estate property coordination, and valuation guidance throughout Washington State."
       />
       <BreadcrumbSchema items={[{ name: "For Attorneys", url: "/for-attorneys" }]} />
       <Header />

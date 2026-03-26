@@ -139,7 +139,7 @@ const faqs = [
 
 const jsonLd = articleSchema({
   headline: "Estate Property Guide for Executors & Trustees",
-  description: "Practical, step-by-step real estate guidance for executors, personal representatives, trustees, and families managing inherited property and estate home sales in Western Washington.",
+  description: "Practical, step-by-step real estate guidance for executors, personal representatives, trustees, and families managing inherited property and estate home sales throughout Washington State.",
   url: "/executors",
   datePublished: "2025-01-15",
   dateModified: "2026-03-23",
@@ -150,8 +150,8 @@ const Executors = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Help for Executors Selling Estate Property | David Stein | Puget Sound"
-        description="David Stein provides step-by-step guidance for executors and personal representatives selling inherited homes and estate property in King, Snohomish, and Pierce counties."
+        title="Help for Executors Selling Estate Property | David Stein | Washington State"
+        description="David Stein provides step-by-step guidance for executors and personal representatives selling inherited homes and estate property throughout Washington State."
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema items={[{ name: "For Executors", url: "/executors" }]} />
@@ -168,7 +168,7 @@ const Executors = () => {
               You Do Not Have to Figure This Out Alone
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-8">
-              Selling a loved one's home during estate administration is one of the hardest things you will do. David Stein works with executors across Western Washington to handle the real estate details — so you can focus on the people and responsibilities that matter most.
+              Selling a loved one's home during estate administration is one of the hardest things you will do. David Stein works with executors throughout Washington State to handle the real estate details — so you can focus on the people and responsibilities that matter most.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Link to="/contact">

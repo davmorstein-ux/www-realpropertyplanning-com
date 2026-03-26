@@ -102,7 +102,7 @@ const WhyValuationMatters = () => {
               Every estate property sale hinges on one question: what is this home actually worth in its current condition? Not what Zillow says. Not what the neighbors sold for after a full remodel. The real answer — factoring in deferred maintenance, functional issues, and realistic buyer behavior — is what determines whether the sale protects the estate or costs it.
             </p>
             <p className="text-lg text-primary-foreground/70 leading-relaxed mb-[30px]">
-              David Stein is one of the few professionals in Western Washington who holds both a broker license and a state certified residential appraiser credential. That dual lens means he evaluates properties the way an appraiser would, then markets and sells them the way a seasoned broker does — giving executors, attorneys, and families a level of pricing confidence that most agents cannot deliver.
+              David Stein is one of the few professionals in Washington State who holds both a broker license and a state certified residential appraiser credential. That dual lens means he evaluates properties the way an appraiser would, then markets and sells them the way a seasoned broker does — giving executors, attorneys, and families a level of pricing confidence that most agents cannot deliver.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Link to="/contact">
