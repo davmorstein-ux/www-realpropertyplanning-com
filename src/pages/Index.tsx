@@ -97,21 +97,56 @@ const Index = () => {
 
         <div className="container relative z-10 px-6 lg:px-8 py-20 lg:py-24 flex flex-col items-center text-center">
           <div className="max-w-3xl">
-             <h1 className="font-serif text-4xl md:text-5xl lg:text-[54px] font-bold leading-[1.1] mb-5 text-primary-foreground">
-              Guiding Families Through Life's Most Important Property Decisions
+             <h1 className="font-serif text-4xl md:text-5xl lg:text-[54px] font-bold leading-[1.1] mb-4 text-primary-foreground">
+              Specialized Guidance for Probate &amp; Estate Property Sales
             </h1>
-            <p className="text-white/90 text-lg md:text-xl leading-relaxed mb-10 mx-auto max-w-2xl" style={{ textShadow: '0 1px 6px rgba(0,0,0,0.3)' }}>
-              Probate &amp; estate property sales · Senior transitions · Western Washington
+            <p className="text-gold font-semibold text-lg md:text-xl leading-relaxed mb-5 mx-auto max-w-2xl uppercase tracking-wide" style={{ textShadow: '0 1px 6px rgba(0,0,0,0.3)' }}>
+              Reduce Stress, Maximize Sale Proceeds, and Stay Organized When Selling Inherited Homes and Estate Property in Western Washington.
             </p>
-            <Link to="/contact">
-              <Button
-                variant="gold"
-                size="lg"
-                className="px-12 py-5 h-auto text-lg tracking-wide"
-              >
-                Schedule a Conversation
-              </Button>
-            </Link>
+            <p className="text-white/85 text-base md:text-lg leading-relaxed mb-10 mx-auto max-w-2xl" style={{ textShadow: '0 1px 6px rgba(0,0,0,0.3)' }}>
+              Real Property Planning helps attorneys, executors, trustees, fiduciaries, and families navigate probate real estate, inherited homes, estate sales, and senior transitions throughout Western Washington. David Stein brings over 20 years of dual experience as a licensed real estate broker and Washington State certified residential appraiser.
+            </p>
+            <div className="flex flex-col items-center gap-3">
+              <Link to="/contact">
+                <Button
+                  variant="gold"
+                  size="lg"
+                  className="px-12 py-5 h-auto text-lg tracking-wide"
+                >
+                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
+                  Schedule a 20‑Minute Consultation
+                </Button>
+              </Link>
+              <p className="text-white/70 text-sm leading-relaxed max-w-lg" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.25)' }}>
+                In a brief call, we review your situation, answer initial questions, and outline a practical plan for your property — with no pressure or obligation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════
+          WHO WE HELP — Immediately after hero
+      ═══════════════════════════════════════════════════ */}
+      <section className="py-16 lg:py-20 bg-cream">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-8 text-center">
+              Who We Help
+            </h2>
+            <ul className="space-y-4">
+              {[
+                "Attorneys seeking a reliable real estate partner for probate and estate cases.",
+                "Personal representatives, executors, and trustees responsible for selling an inherited property.",
+                "Heirs and beneficiaries who need clear guidance and realistic expectations.",
+                "Seniors and their families preparing to downsize or move to assisted / independent living.",
+              ].map((item, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <GoldCheck3D size={20} className="mt-0.5" />
+                  <span className="text-foreground text-lg leading-relaxed">{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
