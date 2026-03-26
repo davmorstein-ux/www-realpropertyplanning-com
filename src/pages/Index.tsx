@@ -211,11 +211,11 @@ const Index = () => {
             ].map((card, i) => (
               <Link key={i} to={card.link} className="group">
                 <div className="bg-card rounded-2xl border border-border p-8 shadow-sm hover:shadow-lg transition-all duration-300 h-full flex flex-col items-center text-center">
-                  <div className="mx-auto mb-6 flex h-48 w-60 items-center justify-center md:h-[13.5rem] md:w-[16.5rem]">
+                  <div className="mb-6 flex h-48 w-full items-center justify-center md:h-[13.5rem]">
                     <img
                       src={card.iconSrc}
                       alt={card.title}
-                      className="block max-h-full max-w-full object-contain mix-blend-multiply"
+                      className="block max-h-full max-w-[16.5rem] object-contain mix-blend-multiply mx-auto"
                       loading="lazy"
                     />
                   </div>
