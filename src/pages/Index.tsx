@@ -267,8 +267,7 @@ const Index = () => {
                 link: "/why-valuation-matters",
               },
             ].map((card, i) => (
-              <Link key={i} to={card.link} className="group">
-                <div className="bg-card rounded-2xl border border-border p-8 shadow-sm hover:shadow-lg transition-all duration-300 h-full flex flex-col items-center text-center">
+              <Link key={i} to={card.link} className="card-3d group flex flex-col items-center text-center p-8">
                   <div className="mb-6 flex h-48 w-full items-center justify-center md:h-[13.5rem]">
                     <img
                       src={card.iconSrc}
@@ -283,7 +282,7 @@ const Index = () => {
                   <p className="text-muted-foreground leading-relaxed text-[15px]">
                     {card.body}
                   </p>
-                </div>
+              
               </Link>
             ))}
           </div>
