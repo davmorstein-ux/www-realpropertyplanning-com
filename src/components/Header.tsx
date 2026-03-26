@@ -80,7 +80,7 @@ const Header = () => {
     >
       <div
         className={`mx-auto max-w-[1520px] px-4 md:px-6 lg:px-10 flex items-center transition-all duration-300 ${
-          scrolled ? "h-[78px] md:h-[88px]" : "h-[86px] md:h-[94px]"
+          scrolled ? "h-[90px] md:h-[100px]" : "h-[100px] md:h-[114px]"
         }`}
         ref={dropdownRef}
       >
