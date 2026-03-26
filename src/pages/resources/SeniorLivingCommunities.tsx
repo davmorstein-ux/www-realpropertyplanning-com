@@ -11,7 +11,7 @@ const SeniorLivingCommunities = () => (
   <>
     <SEOHead
       title="Senior Living Communities | Resources | Real Property Planning"
-      description="Assisted living, independent living, and memory care communities across Western Washington for families navigating senior housing transitions."
+      description="Assisted living, independent living, and memory care communities throughout Washington State for families navigating senior housing transitions."
       canonical="https://www.realpropertyplanning.com/resources/senior-living-communities"
     />
     <BreadcrumbSchema

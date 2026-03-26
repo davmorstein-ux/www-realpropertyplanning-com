@@ -75,7 +75,7 @@ const resourceCategories = [
     href: "/resources/senior-living-communities",
     title: "Senior Living Communities",
     description:
-      "Assisted living, independent living, and memory care communities across Western Washington.",
+      "Assisted living, independent living, and memory care communities throughout Washington State.",
     icon: HeartHandshake,
   },
   {
@@ -272,7 +272,7 @@ const TransitionResources = () => {
             <p className="text-muted-foreground text-base md:text-[17px] leading-relaxed mb-10 max-w-3xl">
               Explore trusted professionals and service providers who assist
               families during probate, estate, and senior transition situations
-              across Western Washington.
+              throughout Washington State.
             </p>
             <div className="grid gap-4 md:gap-5">
               {resourceCategories.map((cat) => (

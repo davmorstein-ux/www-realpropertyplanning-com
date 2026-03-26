@@ -36,7 +36,7 @@ const categories = [
     href: "/resources/senior-living-communities",
     title: "Senior Living Communities",
     description:
-      "Assisted living, independent living, and memory care communities across Western Washington.",
+      "Assisted living, independent living, and memory care communities throughout Washington State.",
   },
   {
     href: "/resources/property-preparation-services",
@@ -86,7 +86,7 @@ const Resources = () => {
                 Resources
               </h1>
               <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-                Professionals and service providers David works with and recommends for probate, estate, and senior transition needs across Western Washington.
+                Professionals and service providers David works with and recommends for probate, estate, and senior transition needs throughout Washington State.
               </p>
             </div>
           </div>

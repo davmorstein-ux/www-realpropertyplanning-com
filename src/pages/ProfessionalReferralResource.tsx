@@ -61,7 +61,7 @@ const whyRefer = [
     text: "David understands that estate and trust situations involve legal obligations, emotional complexity, and multiple stakeholders with different perspectives. He navigates these dynamics with care — presenting facts clearly, listening carefully, and never taking sides.",
   },
   {
-    title: "Local Knowledge of Western Washington Markets",
+    title: "Local Knowledge of Washington State Markets",
     text: "David serves clients across King, Snohomish, Pierce, Kitsap, and Skagit counties — with detailed knowledge of neighborhood-level pricing patterns, buyer expectations, and the practical realities of selling estate properties in each market.",
   },
 ];
@@ -123,7 +123,7 @@ const ProfessionalReferralResource = () => {
               A Professional Real Estate Resource for Important Property Transitions
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-4">
-              Real estate guidance for attorneys, fiduciaries, executors, trustees, seniors, and families navigating probate, estate property sales, inherited homes, and major housing transitions across Western Washington.
+              Real estate guidance for attorneys, fiduciaries, executors, trustees, seniors, and families navigating probate, estate property sales, inherited homes, and major housing transitions throughout Washington State.
             </p>
             <p className="text-base text-primary-foreground/70 leading-relaxed mb-8">
               David Stein is a licensed real estate broker and state-certified residential appraiser with more than 20 years of experience helping clients make informed property decisions during complex and often emotional transitions. He works closely with professional referral partners who want their clients served with care, discretion, responsiveness, and practical follow-through.

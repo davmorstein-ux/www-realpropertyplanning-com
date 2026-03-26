@@ -106,7 +106,7 @@ const ForSeniorLivingProfessionals = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="For Senior Living & Transition Professionals | Real Property Planning"
-        description="Real Property Planning works with senior living communities, move managers, downsizing specialists, and estate sale companies when a home is part of a major life transition across Western Washington."
+        description="Real Property Planning works with senior living communities, move managers, downsizing specialists, and estate sale companies when a home is part of a major life transition throughout Washington State."
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema items={[{ name: "For Senior Living & Transition Professionals", url: `${SITE_URL}/for-senior-living-professionals` }]} />
@@ -257,7 +257,7 @@ const ForSeniorLivingProfessionals = () => {
             <div className="grid sm:grid-cols-2 gap-4">
               {[
                 { href: "/senior-transitions", label: "Senior Transitions", desc: "How Real Property Planning supports families navigating a move from a longtime home." },
-                { href: "/resources", label: "Resource Directory", desc: "Trusted professionals who assist with transitions across Western Washington." },
+                { href: "/resources", label: "Resource Directory", desc: "Trusted professionals who assist with transitions throughout Washington State." },
                 { href: "/how-to-move-elderly-parents", label: "Moving Elderly Parents", desc: "A compassionate guide for families planning a senior housing transition." },
                 { href: "/services", label: "Our Services", desc: "An overview of how Real Property Planning supports families and professionals." },
               ].map((link) => (

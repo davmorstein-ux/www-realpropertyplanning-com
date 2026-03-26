@@ -55,7 +55,7 @@ const professionalCategories = [
 const jsonLd = articleSchema({
   headline: "Professional Network & Trusted Resources",
   description:
-    "A collaborative network of professionals helping families navigate estate matters, senior transitions, and real estate decisions across Western Washington.",
+    "A collaborative network of professionals helping families navigate estate matters, senior transitions, and real estate decisions throughout Washington State.",
   url: "/professional-network",
   datePublished: "2026-03-16",
   dateModified: "2026-03-16",
@@ -72,7 +72,7 @@ const ProfessionalNetwork = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Professional Network & Trusted Resources | Real Property Planning"
-        description="A collaborative network of professionals helping families navigate estate matters, senior transitions, and real estate decisions across Western Washington."
+        description="A collaborative network of professionals helping families navigate estate matters, senior transitions, and real estate decisions throughout Washington State."
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema
@@ -96,7 +96,7 @@ const ProfessionalNetwork = () => {
               Real Property Planning works collaboratively with a network of
               experienced professionals who help families navigate major life
               transitions, estate matters, senior care decisions, and housing
-              changes across Western Washington.
+              changes throughout Washington State.
             </p>
           </div>
         </div>
