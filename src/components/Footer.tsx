@@ -20,10 +20,10 @@ const Footer = () => {
                 David Stein <span className="text-gold font-bold">Senior Relocation & Estate Sales</span>
               </span>
             </Link>
-            <p className="text-primary-foreground/60 text-sm leading-relaxed mb-3">
+            <p className="text-primary-foreground/70 text-[15px] leading-relaxed mb-3">
               Licensed Real Estate Broker &amp; Washington State Certified Residential Appraiser
             </p>
-            <p className="text-primary-foreground/60 text-sm leading-relaxed mb-3">eXp Realty</p>
+            <p className="text-primary-foreground/70 text-[15px] leading-relaxed mb-3">eXp Realty</p>
             <div className="flex flex-col gap-2 text-sm">
               <a href="tel:2069003015" className="text-primary-foreground/70 hover:text-gold flex items-center gap-2">
                 <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" />
@@ -47,7 +47,7 @@ const Footer = () => {
           {/* Services */}
           <div>
             <h4 className="text-primary-foreground font-serif text-lg font-medium mb-4">Services</h4>
-            <ul className="space-y-2.5 text-primary-foreground/60 text-base">
+            <ul className="space-y-3 text-primary-foreground/70 text-base">
               <li><Link to="/probate-estate-sales" className="hover:text-gold transition-colors">Probate &amp; Estate Sales</Link></li>
               <li><Link to="/executors" className="hover:text-gold transition-colors">Help for Executors</Link></li>
               <li><Link to="/senior-transitions" className="hover:text-gold transition-colors">Senior Transitions</Link></li>
@@ -63,7 +63,7 @@ const Footer = () => {
           {/* Resources */}
           <div>
             <h4 className="text-primary-foreground font-serif text-lg font-medium mb-4">Resources</h4>
-            <ul className="space-y-2.5 text-primary-foreground/60 text-base">
+            <ul className="space-y-3 text-primary-foreground/70 text-base">
               <li><Link to="/about" className="hover:text-gold transition-colors">About David Stein</Link></li>
               <li><Link to="/how-we-work" className="hover:text-gold transition-colors">How We Work</Link></li>
               <li><Link to="/attorney-referral" className="hover:text-gold transition-colors">Referral Resource</Link></li>
@@ -76,7 +76,7 @@ const Footer = () => {
           {/* Service Areas */}
           <div>
             <h4 className="text-primary-foreground font-serif text-lg font-medium mb-4">Service Areas</h4>
-            <ul className="space-y-2.5 text-primary-foreground/60 text-base">
+            <ul className="space-y-3 text-primary-foreground/70 text-base">
               <li className="flex items-start gap-2">
                 <img src={mappin3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain mt-0.5 shrink-0" />
                 <span>Western Washington &amp; the Puget Sound Region</span>
@@ -93,10 +93,10 @@ const Footer = () => {
         
         {/* Disclaimer */}
         <div className="border-t border-primary-foreground/10 pt-8 mb-6">
-          <p className="text-primary-foreground/40 text-sm leading-relaxed max-w-4xl">
+          <p className="text-primary-foreground/50 text-[13px] leading-relaxed max-w-4xl">
             David Stein provides real estate brokerage and valuation-related guidance based on his experience as a professional real estate broker and state certified appraiser. Legal, tax, and probate-specific advice should be obtained from qualified legal and tax professionals.
           </p>
-          <p className="text-primary-foreground/40 text-sm leading-relaxed max-w-4xl mt-3">
+          <p className="text-primary-foreground/50 text-[13px] leading-relaxed max-w-4xl mt-3">
             David Stein is a licensed real estate broker in the State of Washington and a Washington state certified real estate appraiser. He is not an attorney, CPA, or tax advisor and does not provide legal, tax, or accounting advice.
           </p>
         </div>

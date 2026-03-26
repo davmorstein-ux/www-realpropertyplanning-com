@@ -91,7 +91,7 @@ const Header = () => {
               {link.children ? (
                 <>
                   <button
-                    className={`text-[14px] lg:text-[15px] tracking-[0.02em] font-medium transition-colors hover:text-[hsl(216,65%,34%)] inline-flex items-center gap-1 ${
+                    className={`text-[15px] lg:text-[16px] tracking-[0.02em] font-medium transition-colors hover:text-[hsl(216,65%,34%)] inline-flex items-center gap-1 ${
                       isActive(link.href, link.children)
                         ? "text-[hsl(216,65%,34%)] font-semibold"
                         : "text-foreground"
@@ -111,7 +111,7 @@ const Header = () => {
                         <Link
                           key={child.href}
                           to={child.href}
-                          className={`block px-5 py-2.5 text-sm transition-colors hover:text-[hsl(216,65%,34%)] hover:bg-secondary ${
+                          className={`block px-5 py-2.5 text-[15px] transition-colors hover:text-[hsl(216,65%,34%)] hover:bg-secondary ${
                             location.pathname === child.href ? "text-[hsl(216,65%,34%)] font-semibold" : "text-foreground/80"
                           }`}
                         >
