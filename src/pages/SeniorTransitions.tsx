@@ -130,7 +130,7 @@ const SeniorTransitions = () => {
               <img
                 src={naosaBadge}
                 alt="National Association of Senior Advocates - Best Real Estate Agent 2026"
-                className="h-24 md:h-28 w-auto"
+                className="h-48 md:h-56 w-auto"
                 loading="lazy"
               />
               <a href="https://www.naepc.org" target="_blank" rel="noopener noreferrer">

@@ -163,8 +163,8 @@ const Index = () => {
                 <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer" className="flex h-[84px] items-center justify-center">
                   <img src={alcaLogo} alt="Aging Life Care Association Corporate Partner" className="max-h-[66px] w-auto object-contain" loading="lazy" />
                 </a>
-                <a href="https://www.naosa.org" target="_blank" rel="noopener noreferrer" className="flex h-[84px] items-center justify-center">
-                  <img src={naosaBadge} alt="National Association of Senior Advocates - Best Real Estate Agent 2026" className="max-h-[66px] w-auto object-contain" loading="lazy" />
+                <a href="https://www.naosa.org" target="_blank" rel="noopener noreferrer" className="flex h-[168px] items-center justify-center">
+                  <img src={naosaBadge} alt="National Association of Senior Advocates - Best Real Estate Agent 2026" className="max-h-[132px] w-auto object-contain" loading="lazy" />
                 </a>
                 <a href="https://www.naepc.org" target="_blank" rel="noopener noreferrer" className="flex h-[84px] items-center justify-center">
                   <img src={naepcLogo} alt="National Association of Estate Planners & Councils" className="max-h-[82px] w-auto object-contain" loading="lazy" />

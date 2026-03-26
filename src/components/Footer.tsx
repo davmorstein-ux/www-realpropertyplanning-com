@@ -4,7 +4,7 @@ import mappin3d from "@/assets/mappin-3d.png";
 import iconEmail3d from "@/assets/icons/icon-email-3d.png";
 import expRealtyLogo from "@/assets/exp-realty-logo.png";
 import alcaLogo from "@/assets/alca-corporate-partner.png";
-import naosaBadge from "@/assets/naosa-badge.jpg";
+import naosaBadge from "@/assets/naosa-badge-clean.png";
 import naepcLogo from "@/assets/naepc-logo.png";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 
@@ -117,7 +117,7 @@ const Footer = () => {
               <img
                 src={naosaBadge}
                 alt="National Association of Senior Advocates - Best Real Estate Agent 2026"
-                className="h-14 w-auto opacity-80 hover:opacity-100 transition-opacity"
+                className="h-28 w-auto opacity-80 hover:opacity-100 transition-opacity"
                 loading="lazy"
               />
             </a>
