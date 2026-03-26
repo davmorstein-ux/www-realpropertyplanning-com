@@ -61,7 +61,7 @@ const faqs = [
 
 const jsonLd = articleSchema({
   headline: "Senior Home Sales & Downsizing Support",
-  description: "Compassionate, experienced real estate support for senior housing transitions — downsizing, assisted living moves, and family home sales throughout Western Washington.",
+  description: "Compassionate, experienced real estate support for senior housing transitions — downsizing, assisted living moves, and family home sales throughout Washington State.",
   url: "/senior-transitions",
   datePublished: "2025-01-15",
   dateModified: "2026-03-15",
@@ -72,8 +72,8 @@ const SeniorTransitions = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Senior Relocation Home Sales | David Stein | Puget Sound"
-        description="David Stein helps seniors and families plan and complete the sale of a long-time home — including timing, preparation, and coordinating trusted local vendors throughout King, Snohomish, and Pierce counties."
+        title="Senior Relocation Home Sales | David Stein | Washington State"
+        description="David Stein helps seniors and families plan and complete the sale of a long-time home — including timing, preparation, and coordinating trusted local vendors throughout Washington State."
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema items={[{ name: "Senior Transitions", url: "/senior-transitions" }]} />
@@ -90,7 +90,7 @@ const SeniorTransitions = () => {
               Selling a Longtime Home Is About More Than Real Estate
             </h1>
             <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
-              Real Property Planning supports seniors and families with downsizing, relocation, and selling a longtime home throughout Western Washington. We handle real estate decisions tied to assisted living moves, independent or memory care transitions, and multi-step senior housing plans — with patience and clear communication.
+              Real Property Planning supports seniors and families with downsizing, relocation, and selling a longtime home throughout Washington State. We handle real estate decisions tied to assisted living moves, independent or memory care transitions, and multi-step senior housing plans — with patience and clear communication.
             </p>
             <p className="text-lg text-primary-foreground/70 leading-relaxed mb-8">
               After 30 or 40 years in the same home, selling is never just a transaction. David Stein works at the family's pace, not a sales quota. He manages the preparation, coordinates with care professionals and family members, prices the home based on real market data, and handles the sale with steady communication that keeps everyone informed and comfortable.
