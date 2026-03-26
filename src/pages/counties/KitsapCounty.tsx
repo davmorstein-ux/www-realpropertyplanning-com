@@ -3,7 +3,8 @@ import CountyPageTemplate from "@/components/CountyPageTemplate";
 const KitsapCounty = () => (
   <CountyPageTemplate
     countyName="Kitsap County"
-    countyPath="/counties/kitsap"
+    countyPath="/kitsap-county"
+    countySlug="kitsap-county"
     cities={[
       "Bainbridge Island", "Poulsbo", "Silverdale", "Bremerton",
       "Port Orchard", "Kingston", "Suquamish",

@@ -7,27 +7,29 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 import mappin3d from "@/assets/mappin-3d.png";
+import { services } from "@/lib/service-areas-data";
 
 const countyCards = [
   {
     county: "King County",
-    href: "/counties/king",
+    href: "/king-county",
     intro: "Support for inherited homes, estate property, and major home transitions throughout the Eastside, Seattle, and surrounding areas.",
   },
   {
     county: "Snohomish County",
-    href: "/counties/snohomish",
+    href: "/snohomish-county",
     intro: "Guidance for probate and inherited property sales in communities ranging from Edmonds and Lynnwood to Everett, Mukilteo, and beyond.",
   },
   {
     county: "Pierce County",
-    href: "/counties/pierce",
+    href: "/pierce-county",
     intro: "Experienced help with estate sales, trust-owned homes, and transition-related property decisions throughout Pierce County.",
   },
   {
     county: "Kitsap County",
-    href: "/counties/kitsap",
+    href: "/kitsap-county",
     intro: "Practical real estate guidance for inherited homes and estate-related sales across key Kitsap communities.",
   },
   {
@@ -64,7 +66,7 @@ const Counties = () => {
               For clients moving into or out of Washington, or for families needing help in other markets, David can also coordinate referrals through eXp Realty's broker network across the United States and internationally.
             </p>
             <p className="text-base text-primary-foreground/60 leading-relaxed">
-              Select a county below to learn how Real Property Planning serves each area.
+              Select a county below to learn how Real Property Planning serves each area, or <Link to="/cities-we-serve" className="underline hover:text-gold transition-colors">browse all cities we serve</Link>.
             </p>
           </div>
         </div>
@@ -93,6 +95,40 @@ const Counties = () => {
         </div>
       </section>
 
+      {/* Services Overview */}
+      <section className="py-20 lg:py-28 bg-secondary">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-[1140px] mx-auto">
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
+              Services Available Throughout Our Service Areas
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-10 max-w-3xl">
+              Real Property Planning offers the following services for clients throughout King, Snohomish, Pierce, and Kitsap Counties:
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+              {services.map((service) => (
+                <Link
+                  key={service.slug}
+                  to={`/services/${service.slug}`}
+                  className="card-3d group p-6"
+                >
+                  <h3 className="font-serif text-lg text-foreground font-medium mb-2 group-hover:text-gold transition-colors">
+                    {service.shortName}
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-3">
+                    {service.description}
+                  </p>
+                  <span className="inline-flex items-center text-sm font-medium text-primary group-hover:text-gold transition-colors">
+                    Learn More
+                    <ArrowRight className="w-3.5 h-3.5 ml-1 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <RelatedServices currentPath="/counties" />
 
       {/* Bottom CTA */}
@@ -104,7 +140,7 @@ const Counties = () => {
             </h2>
             <div className="flex justify-center">
               <Link to="/contact">
- <Button variant="gold" size="lg"className="hover:-light">
+                <Button variant="gold" size="lg">
                   Schedule a Consultation
                 </Button>
               </Link>
