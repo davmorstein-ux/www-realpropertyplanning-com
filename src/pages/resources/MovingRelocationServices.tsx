@@ -26,7 +26,7 @@ const MovingRelocationServices = () => (
       <section className="bg-secondary py-14 md:py-20">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-sm">Resources</p>
+            <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-base">Resources</p>
             <h1 className="font-serif text-3xl md:text-4xl font-bold text-foreground leading-tight mb-4">Moving & Relocation Services</h1>
           </div>
         </div>
