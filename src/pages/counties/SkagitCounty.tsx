@@ -4,6 +4,7 @@ const SkagitCounty = () => (
   <CountyPageTemplate
     countyName="Skagit County"
     countyPath="/counties/skagit"
+    countySlug="skagit-county"
     cities={[
       "Mount Vernon", "Burlington", "Anacortes", "Sedro-Woolley",
       "La Conner", "Concrete", "Bow", "Edison",
