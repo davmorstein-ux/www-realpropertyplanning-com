@@ -18,9 +18,9 @@ interface CityServicePageTemplateProps {
 
 const CityServicePageTemplate = ({ city, service }: CityServicePageTemplateProps) => {
   const intro = getCityServiceIntro(service, city);
-  const whyLocal = getWhyLocalMatters(city.name, city.county);
-  const howWeHelp = getCityServiceHowWeHelp(city.name);
-  const scenarios = getCityServiceScenarios(city.name, service.shortName);
+  const whyLocal = getWhyLocalMatters(city.name, city.county, city);
+  const howWeHelp = getCityServiceHowWeHelp(city.name, service.slug);
+  const scenarios = getCityServiceScenarios(city.name, service.shortName, service.slug);
 
   return (
     <div className="min-h-screen bg-background">
