@@ -142,7 +142,7 @@ const ForReferralPartners = () => {
                   <h3 className="font-serif text-[1.75rem] font-bold leading-[1.15] tracking-tight text-foreground lg:text-[2rem] whitespace-pre-line">
                     {tile.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed max-w-[280px]">
+                  <p className="text-muted-foreground text-[15px] leading-relaxed max-w-[280px]">
                     {tile.description}
                   </p>
                 </Link>

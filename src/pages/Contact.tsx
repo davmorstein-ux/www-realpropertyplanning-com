@@ -140,7 +140,7 @@ const Contact = () => {
                 <div className="flex flex-col items-center md:items-start mb-5">
                   <img src={expRealtyLogo} alt="eXp Realty brokerage logo" className="w-[95px] md:w-[120px] h-auto" loading="lazy" />
                 </div>
-                <div className="space-y-2 text-sm text-muted-foreground">
+                <div className="space-y-2 text-[15px] text-muted-foreground">
                   <p className="font-medium text-foreground">David Stein</p>
                   <p>Licensed Real Estate Broker, Washington State</p>
                   <p className="font-medium text-foreground">eXp Realty</p>
@@ -232,7 +232,7 @@ const Contact = () => {
                     >
                       {isSubmitting ? "Sending..." : "Send Message"}
                     </Button>
-                    <p className="text-muted-foreground text-sm mt-4">
+                    <p className="text-muted-foreground text-[15px] mt-4">
                       All inquiries are handled with professionalism and discretion.
                     </p>
                   </div>

@@ -244,7 +244,7 @@ const ProbateEstateSales = () => {
             <p className="text-foreground text-lg italic leading-relaxed mb-4">
               "David's dual background in brokerage and appraisal gave us confidence that the property was priced correctly. He made a complicated situation feel manageable."
             </p>
-            <p className="text-muted-foreground text-sm font-medium">— Professional Referral · Probate property sale coordination</p>
+            <p className="text-muted-foreground text-[15px] font-medium">— Professional Referral · Probate property sale coordination</p>
           </div>
         </div>
       </section>
