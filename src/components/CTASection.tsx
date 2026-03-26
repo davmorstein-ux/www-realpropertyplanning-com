@@ -14,8 +14,11 @@ const CTASection = () => {
           <h2 className="font-serif text-3xl md:text-4xl text-foreground font-medium mb-6">
             Ready to Get Expert Guidance?
           </h2>
-          <p className="text-muted-foreground text-lg mb-10 max-w-2xl mx-auto">
-            Whether you're an attorney seeking a reliable real estate partner, an executor navigating probate, or a family caring for aging parents — Real Property Planning is here to help.
+          <p className="text-muted-foreground text-lg mb-4 max-w-2xl mx-auto">
+            Whether you're an attorney seeking a reliable real estate partner, an executor navigating probate, or a family caring for aging parents — Real Property Planning is here to help throughout Washington State.
+          </p>
+          <p className="text-muted-foreground text-base mb-10 max-w-2xl mx-auto">
+            If the property is in Washington, David can help directly. If your move or sale involves another state or country, David can help connect you with a trusted eXp Realty referral partner.
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">

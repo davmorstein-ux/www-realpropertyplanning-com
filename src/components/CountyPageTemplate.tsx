@@ -57,7 +57,7 @@ const CountyPageTemplate = ({
     <div className="min-h-screen bg-background">
       <SEOHead
         title={`Probate Real Estate & Inherited Property Sales in ${countyName} | Real Property Planning`}
-        description={countyName === "King County" ? "Probate real estate and inherited property sales guidance for executors, attorneys, and families in King County — Seattle, Bellevue, Kirkland, Redmond, and surrounding communities." : countyName === "Snohomish County" ? "Probate real estate and inherited property sales support for families and fiduciaries in Snohomish County — Everett, Edmonds, Lynnwood, Mukilteo, and surrounding areas." : countyName === "Pierce County" ? "Probate real estate and inherited property sales guidance for executors and families in Pierce County — Tacoma, Puyallup, Gig Harbor, Lakewood, and surrounding communities." : countyName === "Kitsap County" ? "Probate real estate and inherited property sales guidance for executors and families in Kitsap County — Bainbridge Island, Poulsbo, Bremerton, Silverdale, and surrounding areas." : countyName === "Skagit County" ? "Probate real estate and inherited property sales guidance for families and fiduciaries in Skagit County — Mount Vernon, Anacortes, Burlington, and surrounding communities." : `Probate real estate and inherited property sales guidance for families and fiduciaries in ${countyName}, Western Washington.`}
+        description={countyName === "King County" ? "Probate real estate and inherited property sales guidance for executors, attorneys, and families in King County — Seattle, Bellevue, Kirkland, Redmond, and surrounding communities." : countyName === "Snohomish County" ? "Probate real estate and inherited property sales support for families and fiduciaries in Snohomish County — Everett, Edmonds, Lynnwood, Mukilteo, and surrounding areas." : countyName === "Pierce County" ? "Probate real estate and inherited property sales guidance for executors and families in Pierce County — Tacoma, Puyallup, Gig Harbor, Lakewood, and surrounding communities." : countyName === "Kitsap County" ? "Probate real estate and inherited property sales guidance for executors and families in Kitsap County — Bainbridge Island, Poulsbo, Bremerton, Silverdale, and surrounding areas." : countyName === "Skagit County" ? "Probate real estate and inherited property sales guidance for families and fiduciaries in Skagit County — Mount Vernon, Anacortes, Burlington, and surrounding communities." : `Probate real estate and inherited property sales guidance for families and fiduciaries in ${countyName}, Washington State.`}
       />
       <BreadcrumbSchema items={breadcrumbItems} />
       <Header />
@@ -104,8 +104,11 @@ const CountyPageTemplate = ({
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
               Who Real Property Planning Works With in {countyName}
             </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+              David Stein serves clients throughout Washington State, with especially strong experience in Western Washington and the Puget Sound region. This page highlights services and market familiarity specific to {countyName}.
+            </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              David Stein works with a range of clients and professional partners throughout {countyName}, including:
+              Clients and professional partners David works with in {countyName} include:
             </p>
             <ul className="space-y-4">
               {(clientTypes || defaultClientTypes).map((item, index) => (
