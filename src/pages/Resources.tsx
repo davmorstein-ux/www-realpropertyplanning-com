@@ -86,7 +86,7 @@ const Resources = () => {
                 Resources
               </h1>
               <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-                Professionals and service providers David works with and recommends for probate, estate, and senior transition needs throughout Washington State.
+                Resources and service connections for property preparation, senior transitions, and estate-related real estate needs throughout Washington State, with particularly strong familiarity in Western Washington.
               </p>
             </div>
           </div>
