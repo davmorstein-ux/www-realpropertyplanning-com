@@ -11,7 +11,7 @@ const CPAsFinancialAdvisors = () => (
   <>
     <SEOHead
       title="CPAs & Financial Advisors | Resources | Real Property Planning"
-      description="CPAs and financial advisors in Western Washington who assist with estate tax, capital gains, and financial planning for inherited and estate property."
+      description="CPAs and financial advisors throughout Washington State who assist with estate tax, capital gains, and financial planning for inherited and estate property."
       canonical="https://www.realpropertyplanning.com/resources/cpas-financial-advisors"
     />
     <BreadcrumbSchema
@@ -50,7 +50,7 @@ const CPAsFinancialAdvisors = () => (
             </h2>
             <div className="bg-secondary border border-border rounded-xl px-6 py-8 md:px-8 text-center">
               <p className="text-muted-foreground text-base leading-relaxed">
-                David is currently compiling a list of recommended CPAs and financial advisors in Western Washington. Check back soon, or <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4">contact David</Link> for a current referral.
+                David is currently compiling a list of recommended CPAs and financial advisors throughout Washington State. Check back soon, or <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4">contact David</Link> for a current referral.
               </p>
             </div>
 

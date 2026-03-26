@@ -176,7 +176,7 @@ const TransitionResources = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Transition Resources for Families & Professionals | Real Property Planning"
-        description="A curated starting point for families and professionals navigating probate, downsizing, inherited property, senior moves, and other major housing transitions in Western Washington."
+        description="A curated starting point for families and professionals navigating probate, downsizing, inherited property, senior moves, and other major housing transitions throughout Washington State."
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema

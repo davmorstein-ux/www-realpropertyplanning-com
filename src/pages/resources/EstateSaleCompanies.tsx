@@ -11,7 +11,7 @@ const EstateSaleCompanies = () => (
   <>
     <SEOHead
       title="Estate Sale Companies | Resources | Real Property Planning"
-      description="Estate sale companies in Western Washington that organize, price, and conduct sales of personal property and household contents during probate and estate transitions."
+      description="Estate sale companies throughout Washington State that organize, price, and conduct sales of personal property and household contents during probate and estate transitions."
       canonical="https://www.realpropertyplanning.com/resources/estate-sale-companies"
     />
     <BreadcrumbSchema
@@ -50,7 +50,7 @@ const EstateSaleCompanies = () => (
             </h2>
             <div className="bg-secondary border border-border rounded-xl px-6 py-8 md:px-8 text-center">
               <p className="text-muted-foreground text-base leading-relaxed">
-                David is currently compiling a list of recommended estate sale companies in Western Washington. Check back soon, or <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4">contact David</Link> for a current referral.
+                David is currently compiling a list of recommended estate sale companies throughout Washington State. Check back soon, or <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4">contact David</Link> for a current referral.
               </p>
             </div>
 

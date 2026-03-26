@@ -11,7 +11,7 @@ const SeniorMoveManagers = () => (
   <>
     <SEOHead
       title="Senior Move Managers | Resources | Real Property Planning"
-      description="Senior move management professionals in Western Washington who coordinate and manage the physical and emotional aspects of relocating seniors."
+      description="Senior move management professionals throughout Washington State who coordinate and manage the physical and emotional aspects of relocating seniors."
       canonical="https://www.realpropertyplanning.com/resources/senior-move-managers"
     />
     <BreadcrumbSchema
@@ -50,7 +50,7 @@ const SeniorMoveManagers = () => (
             </h2>
             <div className="bg-secondary border border-border rounded-xl px-6 py-8 md:px-8 text-center">
               <p className="text-muted-foreground text-base leading-relaxed">
-                David is currently compiling a list of recommended senior move managers in Western Washington. Check back soon, or <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4">contact David</Link> for a current referral.
+                David is currently compiling a list of recommended senior move managers throughout Washington State. Check back soon, or <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4">contact David</Link> for a current referral.
               </p>
             </div>
 

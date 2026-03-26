@@ -11,7 +11,7 @@ const ProbateEstateAttorneys = () => (
   <>
     <SEOHead
       title="Probate & Estate Attorneys | Resources | Real Property Planning"
-      description="Probate and estate attorneys in Western Washington who guide families, executors, and fiduciaries through estate administration and property-related legal matters."
+      description="Probate and estate attorneys throughout Washington State who guide families, executors, and fiduciaries through estate administration and property-related legal matters."
       canonical="https://www.realpropertyplanning.com/resources/probate-estate-attorneys"
     />
     <BreadcrumbSchema
@@ -50,7 +50,7 @@ const ProbateEstateAttorneys = () => (
             </h2>
             <div className="bg-secondary border border-border rounded-xl px-6 py-8 md:px-8 text-center">
               <p className="text-muted-foreground text-base leading-relaxed">
-                David is currently compiling a list of recommended probate and estate attorneys in Western Washington. Check back soon, or <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4">contact David</Link> for a current referral.
+                David is currently compiling a list of recommended probate and estate attorneys throughout Washington State. Check back soon, or <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4">contact David</Link> for a current referral.
               </p>
             </div>
 

@@ -11,7 +11,7 @@ const MemoryCare = () => (
   <>
     <SEOHead
       title="Memory Care | Senior Living | Real Property Planning"
-      description="Learn about memory care programs designed for individuals living with Alzheimer's or dementia in Western Washington."
+      description="Learn about memory care programs designed for individuals living with Alzheimer's or dementia throughout Washington State."
       canonical="https://www.realpropertyplanning.com/senior-living/memory-care"
     />
     <BreadcrumbSchema
@@ -40,7 +40,7 @@ const MemoryCare = () => (
           <div className="max-w-3xl mx-auto">
             <div className="bg-secondary border border-border rounded-xl px-6 py-8 md:px-8 text-center">
               <p className="text-muted-foreground text-base leading-relaxed">
-                This page is being developed with detailed information about memory care options in Western Washington. Check back soon, or{" "}
+                This page is being developed with detailed information about memory care options throughout Washington State. Check back soon, or{" "}
                 <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4">contact David</Link> for guidance.
               </p>
             </div>
