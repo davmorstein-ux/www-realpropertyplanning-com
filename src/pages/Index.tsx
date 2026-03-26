@@ -93,33 +93,24 @@ const Index = () => {
           width={1920}
           height={1080}
         />
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/35" />
 
         <div className="container relative z-10 px-6 lg:px-8 py-20 lg:py-24 flex flex-col items-center text-center">
           <div className="max-w-3xl">
              <h1
               className="font-serif text-4xl md:text-5xl lg:text-[54px] font-bold leading-[1.1] mb-5"
               style={{
-                color: '#f5eed8',
-                WebkitTextStroke: '0.5px rgba(180,155,100,0.3)',
+                color: '#f3ead0',
                 textShadow: [
-                  /* top-lit highlight edge */
-                  '0 -1px 0 rgba(255,248,220,0.5)',
-                  '0 -2px 1px rgba(255,245,200,0.2)',
-                  /* gold bevel stack — each layer adds thickness */
-                  '0 1px 0 #d4c090',
-                  '0 2px 0 #ccb67e',
-                  '0 3px 0 #c4ac6e',
-                  '0 4px 0 #b89e5e',
-                  '0 5px 0 #ac9050',
-                  '0 6px 0 #a08444',
-                  /* contact shadow at base of extrusion */
-                  '0 7px 1px rgba(0,0,0,0.25)',
-                  '0 8px 3px rgba(0,0,0,0.22)',
-                  /* soft ambient shadows */
-                  '0 10px 10px rgba(0,0,0,0.25)',
-                  '0 14px 24px rgba(0,0,0,0.20)',
-                  '0 20px 40px rgba(0,0,0,0.15)',
+                  /* soft top-lit clay highlight */
+                  '0 -1px 0 rgba(255,250,230,0.35)',
+                  /* warm clay depth — tight, crisp layers */
+                  '0 1px 0 #c9b478',
+                  '0 2px 0 #bfa86c',
+                  '0 3px 0 #b49c60',
+                  /* soft ground shadow */
+                  '0 4px 2px rgba(60,45,20,0.25)',
+                  '0 6px 8px rgba(0,0,0,0.15)',
                 ].join(', '),
               }}
             >
