@@ -57,6 +57,9 @@ import AssistedLivingCommunities from "./pages/senior-living/AssistedLivingCommu
 import MemoryCare from "./pages/senior-living/MemoryCare";
 import NursingAndSkilledCare from "./pages/senior-living/NursingAndSkilledCare";
 import IndependentLiving from "./pages/senior-living/IndependentLiving";
+import CityPage from "./pages/CityPage";
+import CityServicePage from "./pages/CityServicePage";
+import ServicePage from "./pages/ServicePage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -91,11 +94,23 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/counties" element={<Counties />} />
           <Route path="/cities-we-serve" element={<CitiesWeServe />} />
+          {/* County hub pages — new URL structure */}
+          <Route path="/king-county" element={<KingCounty />} />
+          <Route path="/snohomish-county" element={<SnohomishCounty />} />
+          <Route path="/pierce-county" element={<PierceCounty />} />
+          <Route path="/kitsap-county" element={<KitsapCounty />} />
+          {/* Legacy county URLs — keep for backward compatibility */}
           <Route path="/counties/king" element={<KingCounty />} />
           <Route path="/counties/snohomish" element={<SnohomishCounty />} />
           <Route path="/counties/pierce" element={<PierceCounty />} />
           <Route path="/counties/kitsap" element={<KitsapCounty />} />
           <Route path="/counties/skagit" element={<SkagitCounty />} />
+          {/* Dynamic city pages */}
+          <Route path="/cities/:citySlug" element={<CityPage />} />
+          {/* Dynamic city + service pages */}
+          <Route path="/cities/:citySlug/:serviceSlug" element={<CityServicePage />} />
+          {/* Dynamic service pages */}
+          <Route path="/services/:serviceSlug" element={<ServicePage />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/resources/senior-move-managers" element={<SeniorMoveManagers />} />
           <Route path="/resources/estate-sale-companies" element={<EstateSaleCompanies />} />

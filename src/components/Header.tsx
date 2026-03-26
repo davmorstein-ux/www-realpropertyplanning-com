@@ -7,7 +7,8 @@ import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 
 const primaryLinks = [
   { href: "/", label: "Home" },
-  { href: "/probate-estate-sales", label: "Services", children: [
+  { href: "/services", label: "Services", children: [
+    { href: "/services", label: "All Services" },
     { href: "/senior-estate-services", label: "Senior & Estate Services" },
     { href: "/probate-estate-sales", label: "Probate & Estate Sales" },
     { href: "/senior-transitions", label: "Senior Transitions" },
@@ -15,6 +16,14 @@ const primaryLinks = [
     { href: "/how-the-process-works", label: "How the Process Works" },
     { href: "/why-valuation-matters", label: "Why Valuation Matters" },
     { href: "/professional-referral-resource", label: "Professional Referral Resource" },
+  ]},
+  { href: "/counties", label: "Counties", children: [
+    { href: "/counties", label: "All Counties" },
+    { href: "/king-county", label: "King County" },
+    { href: "/snohomish-county", label: "Snohomish County" },
+    { href: "/pierce-county", label: "Pierce County" },
+    { href: "/kitsap-county", label: "Kitsap County" },
+    { href: "/cities-we-serve", label: "Cities We Serve" },
   ]},
   { href: "/for-professionals", label: "For Professionals", children: [
     { href: "/for-professionals", label: "Overview" },
