@@ -10,7 +10,7 @@ import GoldCheck3D from "@/components/GoldCheck3D";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import { services, getCommonSituations, getWhyLocalMatters } from "@/lib/service-areas-data";
+import { services, getCommonSituations, getWhyLocalMatters, getWhyBrokerAppraiser } from "@/lib/service-areas-data";
 import type { CityData } from "@/lib/service-areas-data";
 
 interface CityPageTemplateProps {
@@ -20,6 +20,7 @@ interface CityPageTemplateProps {
 const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
   const situations = getCommonSituations(city.name);
   const whyLocal = getWhyLocalMatters(city.name, city.county);
+  const whyBrokerAppraiser = getWhyBrokerAppraiser(city.name);
 
   const faqs = [
     {
@@ -70,7 +71,7 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-[22px]">
               Real Estate Guidance for Important Property Transitions in {city.name}
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-5">
+            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed">
               Real Property Planning provides experienced real estate guidance for probate sales, estate property, senior transitions, and related situations in {city.name} and throughout {city.county}. David Stein combines over 20 years of experience as a licensed broker and state-certified residential appraiser to help clients make well-informed decisions about value, preparation, timing, and sale strategy.
             </p>
           </div>
@@ -123,22 +124,8 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
         </div>
       </section>
 
-      {/* Why Local Knowledge Matters */}
-      <section className="py-16 lg:py-20 bg-secondary">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-              Why Local Knowledge Matters in {city.name}
-            </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed">
-              {whyLocal}
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Services Available */}
-      <section className="py-20 lg:py-28 bg-background">
+      <section className="py-20 lg:py-28 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-[1140px] mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
@@ -167,6 +154,34 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
                 </Link>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Work With a Broker/Appraiser */}
+      <section className="py-20 lg:py-28 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
+              Why Work With a Broker and Appraiser Who Understands {city.name}
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              {whyBrokerAppraiser}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Local Knowledge Matters */}
+      <section className="py-16 lg:py-20 bg-secondary">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
+              Why Local Knowledge Matters in {city.name}
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              {whyLocal}
+            </p>
           </div>
         </div>
       </section>

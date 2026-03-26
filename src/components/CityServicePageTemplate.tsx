@@ -8,7 +8,7 @@ import RelatedServices from "@/components/RelatedServices";
 import GoldCheck3D from "@/components/GoldCheck3D";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { getCityServiceIntro, getWhyLocalMatters } from "@/lib/service-areas-data";
+import { getCityServiceIntro, getWhyLocalMatters, getCityServiceHowWeHelp, getCityServiceScenarios } from "@/lib/service-areas-data";
 import type { CityData, ServiceData } from "@/lib/service-areas-data";
 
 interface CityServicePageTemplateProps {
@@ -19,15 +19,8 @@ interface CityServicePageTemplateProps {
 const CityServicePageTemplate = ({ city, service }: CityServicePageTemplateProps) => {
   const intro = getCityServiceIntro(service, city);
   const whyLocal = getWhyLocalMatters(city.name, city.county);
-
-  const howWeHelp = [
-    "Honest assessment of the property's condition, market position, and realistic value range",
-    "Coordination of cleanout, repairs, and preparation with trusted local vendors",
-    "Clear communication with all parties — attorneys, co-executors, family members, and financial advisors",
-    "Valuation-informed pricing strategy based on actual condition and local market context",
-    "Full-service sale management from listing through closing",
-    "Regular updates and transparent guidance throughout the process",
-  ];
+  const howWeHelp = getCityServiceHowWeHelp(city.name);
+  const scenarios = getCityServiceScenarios(city.name, service.shortName);
 
   return (
     <div className="min-h-screen bg-background">
@@ -64,7 +57,7 @@ const CityServicePageTemplate = ({ city, service }: CityServicePageTemplateProps
 
       <TrustStrip />
 
-      {/* Common Situations */}
+      {/* Typical Scenarios */}
       <section className="py-20 lg:py-28 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
@@ -75,13 +68,7 @@ const CityServicePageTemplate = ({ city, service }: CityServicePageTemplateProps
               Clients in {city.name} often seek {service.name.toLowerCase()} guidance when facing situations such as:
             </p>
             <ul className="space-y-4">
-              {[
-                `A property in ${city.name} that requires experienced guidance and realistic market positioning`,
-                `Multiple decision-makers who need clear, objective information about the property and the process`,
-                `Deferred maintenance, accumulated belongings, or condition issues that affect value and marketability`,
-                `Legal, fiduciary, or family timelines that require thoughtful coordination`,
-                `Out-of-area family members who need someone local to manage the process on their behalf`,
-              ].map((item, i) => (
+              {scenarios.map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
                   <span className="text-muted-foreground">{item}</span>
@@ -114,12 +101,12 @@ const CityServicePageTemplate = ({ city, service }: CityServicePageTemplateProps
         </div>
       </section>
 
-      {/* Why Local Knowledge Matters */}
+      {/* Why Local Context Matters */}
       <section className="py-16 lg:py-20 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-              Why Local Knowledge Matters for {service.shortName} in {city.name}
+              Why Local Context Matters for {service.shortName} in {city.name}
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
               {whyLocal}
@@ -128,7 +115,7 @@ const CityServicePageTemplate = ({ city, service }: CityServicePageTemplateProps
         </div>
       </section>
 
-      {/* Internal Links */}
+      {/* Related Pages */}
       <section className="py-12 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
@@ -139,6 +126,10 @@ const CityServicePageTemplate = ({ city, service }: CityServicePageTemplateProps
               <span className="text-muted-foreground/40">·</span>
               <Link to={`/${city.countySlug}`} className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">
                 {city.county}
+              </Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to={`/services/${service.slug}`} className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">
+                {service.shortName} Overview
               </Link>
               <span className="text-muted-foreground/40">·</span>
               <Link to="/services" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">
