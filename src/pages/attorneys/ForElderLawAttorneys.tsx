@@ -50,7 +50,7 @@ const ForElderLawAttorneys = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
       title="Real Estate Support for Elder Law Attorneys | Real Property Planning"
-      description="David Stein works with elder law attorneys on senior transitions, Medicaid planning, and real estate coordination across Western Washington."
+      description="David Stein works with elder law attorneys on senior transitions, Medicaid planning, and real estate coordination throughout Washington State."
     />
     <BreadcrumbSchema
       items={[
