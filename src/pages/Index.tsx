@@ -97,16 +97,10 @@ const Index = () => {
 
         <div className="container relative z-10 px-6 lg:px-8 py-20 lg:py-24 flex flex-col items-center text-center">
           <div className="max-w-3xl">
-             <h1 className="font-serif text-4xl md:text-5xl lg:text-[54px] font-bold leading-[1.1] mb-4 text-primary-foreground">
+             <h1 className="font-serif text-4xl md:text-5xl lg:text-[54px] font-bold leading-[1.1] mb-10 text-primary-foreground">
               Specialized Guidance for Probate &amp; Estate Property Sales
             </h1>
-            <p className="text-gold font-semibold text-lg md:text-xl leading-relaxed mb-5 mx-auto max-w-2xl uppercase tracking-wide" style={{ textShadow: '0 1px 6px rgba(0,0,0,0.3)' }}>
-              Reduce Stress, Maximize Sale Proceeds, and Stay Organized When Selling Inherited Homes and Estate Property in Western Washington.
-            </p>
-            <p className="text-white/85 text-base md:text-lg leading-relaxed mb-10 mx-auto max-w-2xl" style={{ textShadow: '0 1px 6px rgba(0,0,0,0.3)' }}>
-              Real Property Planning helps attorneys, executors, trustees, fiduciaries, and families navigate probate real estate, inherited homes, estate sales, and senior transitions throughout Western Washington. David Stein brings over 20 years of dual experience as a licensed real estate broker and Washington State certified residential appraiser.
-            </p>
-            <div className="flex flex-col items-center gap-3">
+            <div className="flex flex-col items-center">
               <Link to="/contact">
                 <Button
                   variant="gold"
@@ -117,9 +111,6 @@ const Index = () => {
                   Schedule a 20‑Minute Consultation
                 </Button>
               </Link>
-              <p className="text-white/70 text-sm leading-relaxed max-w-lg" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.25)' }}>
-                In a brief call, we review your situation, answer initial questions, and outline a practical plan for your property — with no pressure or obligation.
-              </p>
             </div>
           </div>
         </div>
