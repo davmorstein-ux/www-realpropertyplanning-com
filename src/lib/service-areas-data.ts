@@ -1025,3 +1025,125 @@ export function getCityServiceScenarios(cityName: string, serviceName: string, s
       ];
   }
 }
+
+// ─── Tone-aware template language ──────────────────────────────────────
+
+/** Tone-aware section heading for scenarios */
+export function getToneScenariosHeading(cityName: string, serviceName: string, tone?: CommunityTone): string {
+  switch (tone) {
+    case "premium":
+      return `When ${cityName} Clients Seek ${serviceName} Guidance`;
+    case "urban":
+      return `Common ${serviceName} Situations in ${cityName}`;
+    case "waterfront":
+      return `When ${cityName} Families Turn to ${serviceName}`;
+    case "smalltown":
+      return `How ${serviceName} Comes Up in ${cityName}`;
+    case "military":
+      return `When ${cityName} Families Need ${serviceName}`;
+    case "rural":
+      return `${serviceName} Situations in the ${cityName} Area`;
+    default:
+      return `When ${cityName} Clients Need ${serviceName}`;
+  }
+}
+
+/** Tone-aware lead-in paragraph for scenarios section */
+export function getToneScenariosLead(cityName: string, serviceName: string, tone?: CommunityTone): string {
+  switch (tone) {
+    case "premium":
+      return `In a market like ${cityName}, ${serviceName.toLowerCase()} situations often involve significant property values and complex family or legal dynamics. Clients typically reach out when facing circumstances such as:`;
+    case "urban":
+      return `${cityName}'s diverse neighborhoods and fast-moving market mean ${serviceName.toLowerCase()} situations can take many forms. Common scenarios include:`;
+    case "waterfront":
+      return `In a community like ${cityName}, property transitions carry personal significance alongside financial weight. Families often seek ${serviceName.toLowerCase()} guidance when they encounter:`;
+    case "smalltown":
+      return `In a close-knit community like ${cityName}, real estate decisions are often deeply personal. Families and individuals typically seek ${serviceName.toLowerCase()} support when facing:`;
+    case "military":
+      return `Families in ${cityName} — including those connected to nearby military installations — often need ${serviceName.toLowerCase()} guidance when life circumstances change. Common situations include:`;
+    case "rural":
+      return `Properties in the ${cityName} area often have unique characteristics — acreage, outbuildings, or rural features — that make ${serviceName.toLowerCase()} situations more nuanced. Clients typically reach out when facing:`;
+    default:
+      return `Clients in ${cityName} often seek ${serviceName.toLowerCase()} guidance when facing situations such as:`;
+  }
+}
+
+/** Tone-aware heading for how-we-help section */
+export function getToneHowWeHelpHeading(tone?: CommunityTone): string {
+  switch (tone) {
+    case "premium":
+      return "How Real Property Planning Serves You";
+    case "urban":
+      return "What Real Property Planning Provides";
+    case "waterfront":
+      return "How Real Property Planning Supports Your Transition";
+    case "smalltown":
+      return "How David Stein Helps";
+    case "military":
+      return "How Real Property Planning Can Help";
+    case "rural":
+      return "How David Stein Works with You";
+    default:
+      return "How Real Property Planning Helps";
+  }
+}
+
+/** Tone-aware lead-in for how-we-help section */
+export function getToneHowWeHelpLead(cityName: string, serviceName: string, tone?: CommunityTone): string {
+  switch (tone) {
+    case "premium":
+      return `David Stein brings over twenty years of experience and dual credentials — licensed broker and certified appraiser — to every ${serviceName.toLowerCase()} engagement in ${cityName}:`;
+    case "urban":
+      return `David Stein provides experienced coordination and valuation-informed guidance tailored to ${cityName}'s market:`;
+    case "waterfront":
+      return `David Stein brings careful, locally informed guidance to every ${serviceName.toLowerCase()} situation in ${cityName}:`;
+    case "smalltown":
+      return `David Stein provides steady, hands-on guidance through every step of the ${serviceName.toLowerCase()} process:`;
+    case "military":
+      return `David Stein provides clear, practical guidance for ${serviceName.toLowerCase()} situations in ${cityName}:`;
+    case "rural":
+      return `David Stein provides honest, property-specific guidance for ${serviceName.toLowerCase()} in the ${cityName} area:`;
+    default:
+      return `David Stein provides hands-on coordination and valuation-informed guidance for every ${serviceName.toLowerCase()} engagement:`;
+  }
+}
+
+/** Tone-aware CTA heading */
+export function getToneCTAHeading(cityName: string, serviceName: string, tone?: CommunityTone): string {
+  switch (tone) {
+    case "premium":
+      return `Ready to Discuss Your ${cityName} Property?`;
+    case "urban":
+      return `Need ${serviceName} Help in ${cityName}?`;
+    case "waterfront":
+      return `Let's Talk About Your ${cityName} Property`;
+    case "smalltown":
+      return `Ready to Take the Next Step?`;
+    case "military":
+      return `Need ${serviceName} Guidance in ${cityName}?`;
+    case "rural":
+      return `Let's Discuss Your Property`;
+    default:
+      return `Need ${serviceName} Help in ${cityName}?`;
+  }
+}
+
+/** Tone-aware CTA body */
+export function getToneCTABody(cityName: string, tone?: CommunityTone): string {
+  switch (tone) {
+    case "premium":
+      return `Schedule a confidential consultation to discuss your ${cityName} property and explore your options.`;
+    case "urban":
+      return `Schedule a consultation to discuss your ${cityName} property situation and next steps.`;
+    case "waterfront":
+      return `Reach out for a conversation about your property and what the process looks like from here.`;
+    case "smalltown":
+      return `Contact David directly to discuss your situation — there is no pressure and no obligation.`;
+    case "military":
+      return `Schedule a consultation to discuss your ${cityName} property — David works with families across the area.`;
+    case "rural":
+      return `Reach out to discuss your property. David is happy to talk through your situation and answer questions.`;
+    default:
+      return `Schedule a confidential consultation to discuss your ${cityName} property situation.`;
+  }
+}
