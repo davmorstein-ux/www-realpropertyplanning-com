@@ -191,7 +191,7 @@ const Index = () => {
               <div className="mb-5 space-y-3">
                 <p className="text-lg font-bold tracking-[0.01em] text-foreground">Real Property Planning — David Stein</p>
                 <p className="flex items-center text-base font-semibold text-foreground">
-                  <img src={iconLicense3d} alt="" aria-hidden="true" className="mr-3 h-12 w-12 shrink-0 object-contain mix-blend-multiply" />
+                  <img src={iconLicense3d} alt="" aria-hidden="true" className="mr-3 h-12 w-12 shrink-0 object-contain" />
                   Licensed Real Estate Broker — License #113972
                 </p>
                 <p className="flex items-center text-base font-semibold text-foreground">
