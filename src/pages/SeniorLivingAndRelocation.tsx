@@ -122,18 +122,20 @@ const SeniorLivingAndRelocation = () => {
                 Every family's situation is different. Understanding the range of options available is an important first step in planning a thoughtful transition.
               </p>
 
-              <div className="grid gap-5 md:grid-cols-2">
+              <div className="grid gap-6 md:grid-cols-2">
                 {livingOptions.map((option) => (
                   <Link
                     key={option.title}
                     to={option.path}
-                    className="group bg-card border border-border rounded-xl px-6 py-6 hover:border-gold/40 hover:shadow-lg transition-all block min-h-[44px]"
+                    className="group relative bg-gradient-to-b from-card to-card/95 border border-border/80 rounded-xl px-7 py-7 block min-h-[44px] transition-all duration-200 shadow-[0_4px_12px_-2px_rgba(0,0,0,0.12),0_2px_4px_-1px_rgba(0,0,0,0.08),inset_0_1px_0_0_rgba(255,255,255,0.7)] hover:shadow-[0_8px_20px_-4px_rgba(0,0,0,0.18),0_4px_8px_-2px_rgba(0,0,0,0.1),inset_0_1px_0_0_rgba(255,255,255,0.7)] hover:-translate-y-[2px] active:translate-y-[1px] active:shadow-[0_1px_4px_-1px_rgba(0,0,0,0.12),inset_0_1px_2px_0_rgba(0,0,0,0.06)] cursor-pointer"
                   >
+                    {/* Top highlight for 3D raised feel */}
+                    <div className="absolute inset-x-3 top-[2px] h-[2px] rounded-full bg-gradient-to-r from-transparent via-white/50 to-transparent pointer-events-none" />
                     <div className="flex items-start justify-between gap-3">
                       <h3 className="font-serif text-xl font-bold text-foreground mb-2 group-hover:text-accent transition-colors">
                         {option.title}
                       </h3>
-                      <ChevronRight className="w-5 h-5 text-muted-foreground group-hover:text-accent transition-colors mt-1 shrink-0" />
+                      <ChevronRight className="w-6 h-6 text-accent/70 group-hover:text-accent group-hover:translate-x-0.5 transition-all mt-0.5 shrink-0" />
                     </div>
                     <p className="text-foreground/80 text-base leading-relaxed font-medium">
                       {option.description}
