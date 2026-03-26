@@ -292,7 +292,7 @@ const Executors = () => {
             <h2 className="font-serif text-2xl text-foreground font-semibold mb-6 text-center">
               Why Executors Trust David
             </h2>
-            <div className="flex flex-wrap justify-center gap-x-8 gap-y-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 max-w-2xl mx-auto">
               {[
                 "Licensed Real Estate Broker",
                 "Certified Residential Appraiser",
