@@ -145,7 +145,7 @@ const ForAttorneys = () => {
                 <img src={naosaBadge} alt="National Association of Senior Advocates - Best Real Estate Agent 2026" className="h-20 md:h-24 w-auto" loading="lazy" />
               </a>
               <a href="https://www.naepc.org" target="_blank" rel="noopener noreferrer">
-                <img src={naepcLogo} alt="National Association of Estate Planners & Councils" className="h-[17.5px] md:h-[22.5px] w-auto" loading="lazy" />
+                <img src={naepcLogo} alt="National Association of Estate Planners & Councils" className="max-h-[82px] w-auto object-contain" loading="lazy" />
               </a>
             </div>
           </div>
