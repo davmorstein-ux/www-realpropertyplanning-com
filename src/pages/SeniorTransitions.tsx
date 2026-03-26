@@ -137,7 +137,7 @@ const SeniorTransitions = () => {
                 <img
                   src={naepcLogo}
                   alt="National Association of Estate Planners & Councils"
-                  className="h-16 md:h-20 w-auto"
+                  className="max-h-[82px] w-auto object-contain"
                   loading="lazy"
                 />
               </a>
