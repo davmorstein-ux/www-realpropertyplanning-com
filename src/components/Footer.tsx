@@ -20,8 +20,11 @@ const Footer = () => {
                 David Stein <span className="text-gold font-bold">Senior Relocation & Estate Sales</span>
               </span>
             </Link>
+            <p className="text-primary-foreground/70 text-[15px] leading-relaxed mb-1">
+              Licensed Real Estate Broker — License #113972
+            </p>
             <p className="text-primary-foreground/70 text-[15px] leading-relaxed mb-3">
-              Licensed Real Estate Broker &amp; Washington State Certified Residential Appraiser
+              WA Certified Residential Appraiser — #1702080
             </p>
             <p className="text-primary-foreground/70 text-[15px] leading-relaxed mb-3">eXp Realty</p>
             <div className="flex flex-col gap-2 text-[15px]">

@@ -192,11 +192,11 @@ const Index = () => {
                 <p className="text-lg font-bold tracking-[0.01em] text-foreground">Real Property Planning — David Stein</p>
                 <p className="flex items-center text-base font-semibold text-foreground">
                   <img src={iconLicense3d} alt="" aria-hidden="true" className="mr-3 h-12 w-12 shrink-0 object-contain mix-blend-multiply" />
-                  Licensed Real Estate Broker
+                  Licensed Real Estate Broker — License #113972
                 </p>
                 <p className="flex items-center text-base font-semibold text-foreground">
                   <img src={iconAppraiser3d} alt="" aria-hidden="true" className="mr-3 h-12 w-12 shrink-0 object-contain mix-blend-multiply" />
-                  WA Certified Residential Appraiser
+                  WA Certified Residential Appraiser — #1702080
                 </p>
                 <div className="flex items-center text-base text-foreground">
                   <img src={expRealtyLogo} alt="eXp Realty" className="mr-3 h-5 w-auto opacity-70" loading="lazy" />
