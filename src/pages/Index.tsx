@@ -282,7 +282,7 @@ const Index = () => {
                   <p className="text-muted-foreground leading-relaxed text-[15px]">
                     {card.body}
                   </p>
-                </div>
+              
               </Link>
             ))}
           </div>
