@@ -63,7 +63,7 @@ const CitiesWeServe = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Cities We Serve for Probate and Inherited Property Guidance | David Stein"
-        description="David Stein serves cities across King, Snohomish, Pierce, and Kitsap Counties for probate real estate, inherited property, trust-owned homes, and estate-related sales in Western Washington."
+        description="David Stein serves cities across King, Snohomish, Pierce, and Kitsap Counties for probate real estate, inherited property, trust-owned homes, and estate-related sales throughout Washington State."
       />
       <Header />
 
@@ -78,7 +78,7 @@ const CitiesWeServe = () => {
               Cities We Serve Across King, Snohomish, Pierce, and Kitsap Counties
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-5">
-              David Stein helps clients and referring professionals navigate probate property, inherited homes, trust-owned real estate, and estate-related property transitions across a wide range of local communities in Western Washington. His work combines over 20 years of real estate experience with Washington state certified appraisal expertise to help clients make more informed decisions about value, preparation, timing, and sale strategy.
+              David Stein helps clients and referring professionals navigate probate property, inherited homes, trust-owned real estate, and estate-related property transitions across a wide range of communities throughout Washington State. His work combines over 20 years of real estate experience with Washington state certified appraisal expertise to help clients make more informed decisions about value, preparation, timing, and sale strategy.
             </p>
             <p className="text-lg text-primary-foreground/70 leading-relaxed mb-[30px]">
               Whether a property is located in Seattle, Bellevue, Kirkland, Everett, Tacoma, Gig Harbor, Bremerton, Bainbridge Island, or another local market, David Stein provides experienced guidance grounded in local awareness, valuation perspective, and a practical understanding of important property transitions.

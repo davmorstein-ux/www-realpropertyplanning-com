@@ -11,7 +11,7 @@ const NursingAndSkilledCare = () => (
   <>
     <SEOHead
       title="Nursing & Skilled Care | Senior Living | Real Property Planning"
-      description="Learn about nursing and skilled care facilities providing 24-hour medical support for seniors in Western Washington."
+      description="Learn about nursing and skilled care facilities providing 24-hour medical support for seniors throughout Washington State."
       canonical="https://www.realpropertyplanning.com/senior-living/nursing-and-skilled-care"
     />
     <BreadcrumbSchema
@@ -40,7 +40,7 @@ const NursingAndSkilledCare = () => (
           <div className="max-w-3xl mx-auto">
             <div className="bg-secondary border border-border rounded-xl px-6 py-8 md:px-8 text-center">
               <p className="text-muted-foreground text-base leading-relaxed">
-                This page is being developed with detailed information about nursing and skilled care facilities in Western Washington. Check back soon, or{" "}
+                This page is being developed with detailed information about nursing and skilled care facilities throughout Washington State. Check back soon, or{" "}
                 <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4">contact David</Link> for guidance.
               </p>
             </div>

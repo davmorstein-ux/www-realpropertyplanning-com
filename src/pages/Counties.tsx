@@ -42,7 +42,7 @@ const Counties = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Probate Real Estate & Inherited Property Sales | Western Washington Service Areas"
-        description="Real Property Planning provides probate real estate and inherited property sales guidance across King, Snohomish, Pierce, Skagit, and Kitsap Counties in Western Washington."
+        description="Real Property Planning provides probate real estate and inherited property sales guidance across King, Snohomish, Pierce, Skagit, and Kitsap Counties throughout Washington State."
       />
       <BreadcrumbSchema items={[{ name: "Counties", url: "/counties" }]} />
       <Header />

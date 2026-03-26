@@ -31,15 +31,15 @@ const whatSetsApart = [
   "Specialized focus on probate, estate, trust, and transition-related property",
   "A calm, steady communication style suited to sensitive situations",
   "Hands-on coordination from assessment through closing",
-  "Over two decades of relevant experience across Western Washington",
+  "Over two decades of relevant experience throughout Washington State",
 ];
 
 const About = () => {
   return (
     <div className="min-h-screen bg-background">
        <SEOHead
-        title="About David Stein — Senior Relocation & Estate Real Estate Broker | Puget Sound"
-        description="David Stein is a real estate broker serving the Puget Sound region, specializing in senior relocation, estate and inherited property sales, and trust & probate real estate in King, Snohomish, and Pierce counties."
+        title="About David Stein — Senior Relocation & Estate Real Estate Broker | Washington State"
+        description="David Stein is a Washington State real estate broker with eXp Realty, specializing in senior relocation, estate and inherited property sales, and trust & probate real estate — with deep experience across Western Washington and the Puget Sound region."
         jsonLd={realEstateAgentSchema}
       />
       <BreadcrumbSchema items={[{ name: "About", url: "/about" }]} />
@@ -56,7 +56,7 @@ const About = () => {
               About David Stein
             </h1>
             <p className="text-lg text-primary-foreground/70 leading-relaxed mt-4">
-              Real estate broker serving the greater Puget Sound region, specializing in senior relocation, estate and inherited property sales, and trust &amp; probate real estate.
+               Washington State real estate broker with eXp Realty, specializing in senior relocation, estate and inherited property sales, and trust &amp; probate real estate.
             </p>
           </div>
         </div>
@@ -71,7 +71,7 @@ const About = () => {
             <div className="lg:col-span-2">
               <div className="space-y-6 text-muted-foreground leading-relaxed text-lg">
                 <p>
-                  Real estate broker serving the greater Puget Sound region, specializing in senior relocation, estate and inherited property sales, and trust &amp; probate real estate. David works with executors, probate attorneys, and families to coordinate valuation, clean‑out, repairs, and sale of homes across King, Snohomish, and Pierce counties.
+                  Washington State real estate broker with eXp Realty, specializing in senior relocation, estate and inherited property sales, and trust &amp; probate real estate. David works with executors, probate attorneys, and families to coordinate valuation, clean‑out, repairs, and sale of homes throughout Washington State, with deep experience across King, Snohomish, and Pierce counties.
                 </p>
                 <p>
                   Experienced with court timelines, fiduciary obligations, and working with out‑of‑area decision makers, David brings over 20 years of experience as a licensed Washington real estate broker and a state certified residential appraiser. This dual background means he doesn't just understand how to sell a home — he understands how to evaluate it with analytical precision and price it with market-informed confidence.

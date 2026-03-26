@@ -3,6 +3,7 @@ const LOGO_URL = `${SITE_URL}/logo.png`;
 const BUSINESS_NAME = "Real Property Planning";
 
 const areaServed = [
+  { "@type": "State", name: "Washington" },
   { "@type": "AdministrativeArea", name: "King County", containedInPlace: { "@type": "State", name: "Washington" } },
   { "@type": "AdministrativeArea", name: "Snohomish County", containedInPlace: { "@type": "State", name: "Washington" } },
   { "@type": "AdministrativeArea", name: "Pierce County", containedInPlace: { "@type": "State", name: "Washington" } },
@@ -31,7 +32,7 @@ export const realEstateAgentSchema = {
   },
   image: LOGO_URL,
   description:
-    "Real estate broker serving the greater Puget Sound region, specializing in senior relocation, estate and inherited property sales, and trust & probate real estate. Helping executors, probate attorneys, and families coordinate valuation, clean‑out, repairs, and sale of homes across King, Snohomish, and Pierce counties.",
+    "Washington State real estate broker with eXp Realty, specializing in senior relocation, estate and inherited property sales, and trust & probate real estate. Deep experience across Western Washington and the Puget Sound region, with the ability to connect clients to trusted brokers nationwide and internationally through eXp Realty's referral network.",
   telephone: "(206) 900-3015",
   email: "david@realpropertyplanning.com",
   address: {

@@ -50,7 +50,7 @@ const ForDivorceAttorneys = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
       title="Real Estate Support for Divorce Attorneys | Real Property Planning"
-      description="David Stein works with divorce attorneys on marital property sales, valuations, and neutral real estate coordination across Western Washington."
+      description="David Stein works with divorce attorneys on marital property sales, valuations, and neutral real estate coordination throughout Washington State."
     />
     <BreadcrumbSchema
       items={[

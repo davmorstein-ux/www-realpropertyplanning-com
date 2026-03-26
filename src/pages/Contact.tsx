@@ -71,7 +71,7 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Contact David Stein | Probate & Estate Real Estate Guidance"
-        description="Have a property tied to probate, a trust, an inheritance, or a senior transition? Contact David Stein for a confidential consultation. Serving King, Snohomish, Pierce & Kitsap Counties."
+        description="Have a property tied to probate, a trust, an inheritance, or a senior transition? Contact David Stein for a confidential consultation. Serving clients throughout Washington State."
         jsonLd={realEstateAgentSchema}
       />
       <BreadcrumbSchema items={[{ name: "Contact", url: "/contact" }]} />
@@ -126,7 +126,7 @@ const Contact = () => {
                   <p className="mb-1 font-medium text-foreground">Service Areas</p>
                   <p className="inline-flex items-center text-muted-foreground">
                     <img src={mappin3d} alt="" aria-hidden="true" className="mr-2 w-5 h-5 shrink-0 object-contain" />
-                    <span>King, Snohomish, Pierce &amp; Kitsap Counties</span>
+                    <span>Washington State — deep experience in Western WA &amp; Puget Sound</span>
                   </p>
                 </div>
               </div>

@@ -92,7 +92,7 @@ const coordinatedFeatures = [
 const ForCPAs = () => {
   const jsonLd = articleSchema({
     headline: "Real Estate Guidance for CPAs and Their Clients",
-    description: "Real Property Planning provides probate real estate, inherited property, trust-owned real estate, and estate sale guidance for CPAs and their clients in Western Washington.",
+    description: "Real Property Planning provides probate real estate, inherited property, trust-owned real estate, and estate sale guidance for CPAs and their clients throughout Washington State.",
     url: "/for-cpas",
     datePublished: "2025-01-15",
     dateModified: "2026-03-15",
@@ -103,7 +103,7 @@ const ForCPAs = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Real Estate Guidance for CPAs and Their Clients | Real Property Planning"
-        description="Real Property Planning provides probate real estate, inherited property, trust-owned real estate, and estate sale guidance for CPAs and their clients in King, Snohomish, Pierce, and Kitsap Counties."
+        description="Real Property Planning provides probate real estate, inherited property, trust-owned real estate, and estate sale guidance for CPAs and their clients throughout Washington State."
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema items={[{ name: "For CPAs", url: "/for-cpas" }]} />

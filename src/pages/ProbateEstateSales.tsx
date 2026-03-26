@@ -73,7 +73,7 @@ const faqs = [
 
 const jsonLd = articleSchema({
   headline: "Probate Property Sales & Estate Real Estate",
-  description: "Experienced guidance for probate real estate sales, inherited property, and estate-related home transactions throughout Western Washington.",
+  description: "Experienced guidance for probate real estate sales, inherited property, and estate-related home transactions throughout Washington State.",
   url: "/probate-estate-sales",
   datePublished: "2025-01-15",
   dateModified: "2026-03-15",
@@ -84,8 +84,8 @@ const ProbateEstateSales = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Estate & Probate Property Sales | David Stein | Puget Sound"
-        description="David Stein guides executors, attorneys, and families through estate and probate property sales in King, Snohomish, and Pierce counties — including pricing, preparation, and sale of inherited homes."
+        title="Estate & Probate Property Sales | David Stein | Washington State"
+        description="David Stein guides executors, attorneys, and families through estate and probate property sales throughout Washington State — including pricing, preparation, and sale of inherited homes."
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema items={[{ name: "Probate & Estate Sales", url: "/probate-estate-sales" }]} />

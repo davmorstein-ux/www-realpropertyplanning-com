@@ -35,7 +35,7 @@ const homepageFaqs = [
   { question: "Do I need probate before selling an inherited home in Washington?", answer: "It depends on how the property is titled and the estate structure. In many cases, probate or letters testamentary are required before a sale can proceed. Real Property Planning helps families and executors understand what's needed and how to move forward efficiently.", link: "/faq" },
   { question: "What is probate real estate?", answer: "Probate real estate refers to property that must be sold as part of settling a deceased person's estate. The process involves court oversight, specific timelines, and legal requirements that differ from a standard home sale.", link: "/faq" },
   { question: "Do I need a specialized agent to sell a probate property?", answer: "Yes — probate sales involve unique legal and procedural requirements. An agent with probate experience helps avoid costly delays, court complications, and pricing errors.", link: "/faq" },
-  { question: "What counties does David Stein serve?", answer: "David serves King, Snohomish, Pierce, Skagit, and Kitsap Counties throughout Western Washington.", link: "/counties" },
+  { question: "What areas does David Stein serve?", answer: "David serves clients throughout Washington State, with deep experience in King, Snohomish, Pierce, Skagit, and Kitsap counties. Through eXp Realty's referral network, he can also connect clients with trusted brokers across the U.S. and internationally.", link: "/counties" },
   { question: "What is the difference between a real estate broker and a certified appraiser?", answer: "A broker facilitates the sale of property, while a certified appraiser provides independent valuations. David holds both credentials, giving clients professional pricing insight grounded in appraisal methodology — not just market guesswork.", link: "/why-valuation-matters" },
   { question: "Can you help if the property needs repairs before sale?", answer: "Yes. David advises families on whether to sell as-is or invest in targeted improvements, based on a valuation-informed analysis of likely return.", link: "/how-the-process-works" },
   { question: "How do senior transitions work?", answer: "David helps families coordinate the sale of a longtime family home when a senior is moving to assisted living, independent living, or a smaller residence — with sensitivity to emotional and logistical complexity.", link: "/senior-transitions" },
@@ -74,8 +74,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-cream">
       <SEOHead
-        title="Senior Relocation & Estate Property Sales | David Stein | Puget Sound"
-        description="David Stein, real estate broker serving the Puget Sound region — specializing in senior relocation, estate and inherited property sales, probate real estate, and trust property sales in King, Snohomish, and Pierce counties."
+        title="Senior Relocation & Estate Property Sales | David Stein | Washington State"
+        description="David Stein is a Washington State real estate broker specializing in senior relocation, estate and inherited property sales, probate real estate, and trust property sales — with deep experience across Western Washington and the Puget Sound region."
         jsonLd={jsonLd}
       />
       <Header />
@@ -135,7 +135,7 @@ const Index = () => {
               Who We Help
             </h2>
             <p className="text-foreground/80 text-lg leading-relaxed mb-8 text-center">
-              Real Property Planning serves attorneys, personal representatives, and families facing probate, estate sales, inherited property, and senior transitions in Western Washington.
+              Real Property Planning serves attorneys, personal representatives, and families facing probate, estate sales, inherited property, and senior transitions throughout Washington State.
             </p>
             <ul className="space-y-4">
               {[
@@ -251,7 +251,7 @@ const Index = () => {
               {
                 iconSrc: iconServiceProbate,
                 title: "Probate & Estate Property Sales",
-                body: "Experienced guidance for selling inherited homes, trust-owned real estate, and estate property across Western Washington.",
+                body: "Experienced guidance for selling inherited homes, trust-owned real estate, and estate property throughout Washington State.",
                 link: "/probate-estate-sales",
               },
               {
@@ -371,8 +371,11 @@ const Index = () => {
               Service Areas
             </p>
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-4">
-              Serving Western Washington & the Puget Sound Region
+              Serving Clients Throughout Washington State
             </h2>
+            <p className="text-primary-foreground/60 text-base max-w-2xl mx-auto">
+              Based in Washington with deep experience across Western Washington and the Puget Sound region. Through eXp Realty's referral network, David can also connect clients with trusted brokers across the U.S. and internationally.
+            </p>
           </div>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {serviceAreas.map((area, i) => (
@@ -434,7 +437,7 @@ const Index = () => {
                   <p className="text-[15px] text-primary-foreground/60">Serving</p>
                   <div className="mt-1 inline-flex items-center text-primary-foreground">
                     <img src={mappin3d} alt="" aria-hidden="true" className="mr-3 h-11 w-11 shrink-0 object-contain" />
-                    <span className="text-lg font-semibold">Western Washington &amp; Puget Sound</span>
+                    <span className="text-lg font-semibold">Washington State &amp; Beyond</span>
                   </div>
                 </div>
               </div>

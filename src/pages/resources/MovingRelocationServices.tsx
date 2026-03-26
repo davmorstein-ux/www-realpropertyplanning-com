@@ -11,7 +11,7 @@ const MovingRelocationServices = () => (
   <>
     <SEOHead
       title="Moving & Relocation Services | Resources | Real Property Planning"
-      description="Moving companies and relocation specialists experienced with estate and senior transitions in Western Washington."
+      description="Moving companies and relocation specialists experienced with estate and senior transitions throughout Washington State."
       canonical="https://www.realpropertyplanning.com/resources/moving-relocation-services"
     />
     <BreadcrumbSchema
@@ -50,7 +50,7 @@ const MovingRelocationServices = () => (
             </h2>
             <div className="bg-secondary border border-border rounded-xl px-6 py-8 md:px-8 text-center">
               <p className="text-muted-foreground text-base leading-relaxed">
-                David is currently compiling a list of recommended moving and relocation services in Western Washington. Check back soon, or <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4">contact David</Link> for a current referral.
+                David is currently compiling a list of recommended moving and relocation services throughout Washington State. Check back soon, or <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4">contact David</Link> for a current referral.
               </p>
             </div>
 

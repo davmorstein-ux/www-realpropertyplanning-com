@@ -50,7 +50,7 @@ const ForEstatePlanningAttorneys = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
       title="Real Estate Support for Estate Planning Attorneys | Real Property Planning"
-      description="David Stein works with estate planning attorneys on trust-owned property sales, valuations, and real estate coordination across Western Washington."
+      description="David Stein works with estate planning attorneys on trust-owned property sales, valuations, and real estate coordination throughout Washington State."
     />
     <BreadcrumbSchema
       items={[

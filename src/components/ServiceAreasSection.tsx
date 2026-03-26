@@ -28,10 +28,10 @@ const ServiceAreasSection = () => {
             Service Areas
           </p>
           <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-medium mb-4">
-            Serving the Greater Puget Sound Region
+            Serving Clients Throughout Washington State
           </h2>
           <p className="text-primary-foreground/70 text-lg">
-            Local expertise across four counties, with deep knowledge of each market and community.
+            Deep local expertise across Western Washington and the Puget Sound region, with the ability to connect clients to trusted brokers nationwide and internationally through eXp Realty.
           </p>
         </div>
         

@@ -44,7 +44,7 @@ const Services = () => {
     <>
       <SEOHead
         title="Senior Relocation & Estate Real Estate Services | David Stein"
-        description="David Stein provides senior relocation home sales, estate and inherited property sales, probate real estate, trust property sales, clean-out coordination, and market analysis throughout the Puget Sound region."
+        description="David Stein provides senior relocation home sales, estate and inherited property sales, probate real estate, trust property sales, clean-out coordination, and market analysis throughout Washington State."
         canonical="https://www.realpropertyplanning.com/services"
       />
       <BreadcrumbSchema
@@ -66,7 +66,7 @@ const Services = () => {
                 Senior Relocation & Estate Real Estate Services
               </h1>
               <p className="text-primary-foreground/80 text-lg leading-relaxed max-w-2xl mx-auto">
-                David Stein works with executors, probate attorneys, trustees, seniors, and families navigating senior relocation, estate and inherited property sales, probate real estate, and trust property transactions throughout the Puget Sound region — including King, Snohomish, and Pierce counties.
+                David Stein works with executors, probate attorneys, trustees, seniors, and families navigating senior relocation, estate and inherited property sales, probate real estate, and trust property transactions throughout Washington State — with deep experience across Western Washington and the Puget Sound region.
               </p>
             </div>
           </div>

@@ -13,8 +13,8 @@ const SeniorEstateServices = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Senior & Estate Real Estate Services in Puget Sound | David Stein"
-        description="David Stein specializes in senior relocation, estate and inherited property sales, and probate and trust real estate across King, Snohomish, and Pierce counties in the Puget Sound region."
+        title="Senior & Estate Real Estate Services | David Stein | Washington State"
+        description="David Stein specializes in senior relocation, estate and inherited property sales, and probate and trust real estate throughout Washington State, with deep experience across King, Snohomish, and Pierce counties."
       />
       <BreadcrumbSchema
         items={[
@@ -30,10 +30,10 @@ const SeniorEstateServices = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-[1100px] mx-auto">
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
-              Senior & Estate Real Estate Services in Puget Sound
+              Senior &amp; Estate Real Estate Services in Washington State
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed max-w-3xl">
-              David Stein specializes in senior relocation, estate and inherited property sales, and probate and trust real estate across King, Snohomish, and Pierce counties. Whether you are a senior planning a move, an adult child helping a parent, an executor settling an estate, or an attorney advising a client, David coordinates the real estate side so you can focus on the decisions that matter — not the logistics. Every engagement begins with a clear plan, honest communication, and a calm, professional approach.
+              David Stein specializes in senior relocation, estate and inherited property sales, and probate and trust real estate throughout Washington State, with deep experience across King, Snohomish, and Pierce counties. Whether you are a senior planning a move, an adult child helping a parent, an executor settling an estate, or an attorney advising a client, David coordinates the real estate side so you can focus on the decisions that matter — not the logistics. Every engagement begins with a clear plan, honest communication, and a calm, professional approach.
             </p>
           </div>
         </div>
@@ -180,7 +180,7 @@ const SeniorEstateServices = () => {
             {[
               "Comparative market analysis tailored to estate and senior moves",
               "Scenario planning — as‑is value versus improved condition value",
-              "Guidance on timing the market in the Puget Sound area",
+              "Guidance on timing the market in Washington State",
               "Written analysis to support estate, trust, or family decision‑making",
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-3 text-foreground text-[15px]">
@@ -196,13 +196,13 @@ const SeniorEstateServices = () => {
       <section className="py-12 md:py-16 lg:py-[84px] bg-background">
         <div className="max-w-[1100px] mx-auto px-6 lg:px-8">
           <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-5">
-            Areas I Serve in Puget Sound
+            Areas I Serve
           </h2>
           <p className="text-muted-foreground text-[16px] leading-relaxed mb-4 max-w-3xl">
-            David Stein serves clients throughout the Puget Sound region, with a focus on King, Snohomish, and Pierce counties. Whether the property is in a dense urban neighborhood or a quieter suburban community, David brings local market knowledge and hands‑on coordination to every engagement.
+            David Stein serves clients throughout Washington State, with a strong focus across Western Washington and the Puget Sound region. Whether the property is in a dense urban neighborhood or a quieter suburban community, David brings local market knowledge and hands‑on coordination to every engagement. Through eXp Realty's referral network, David can also connect clients with trusted brokers across the U.S. and internationally when needed.
           </p>
           <p className="text-foreground text-[15px] font-medium">
-            Seattle, Bellevue, Tacoma, Everett, Kirkland, Redmond, Bothell, and surrounding communities.
+            Seattle, Bellevue, Tacoma, Everett, Kirkland, Redmond, Bothell, and communities throughout Washington State.
           </p>
           <div className="flex flex-wrap gap-3 mt-6">
             <Link to="/counties/king">

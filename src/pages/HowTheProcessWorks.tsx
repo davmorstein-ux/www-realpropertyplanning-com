@@ -88,7 +88,7 @@ const HowTheProcessWorks = () => {
         description="Learn the process for selling inherited or estate real estate, from property evaluation to listing, marketing, and closing."
         jsonLd={articleSchema({
           headline: "How the Process Works — Estate Property Sales",
-          description: "A seven-step process for selling estate, probate, and inherited property in Western Washington.",
+          description: "A seven-step process for selling estate, probate, and inherited property in Washington State.",
           url: "/how-the-process-works",
           datePublished: "2025-01-15",
           dateModified: "2026-03-16",

@@ -50,8 +50,8 @@ const howWeWorkBlocks = [
     text: "The goal is not simply to list a property. The goal is to help clients make informed decisions, protect value, reduce confusion, and move forward with a plan that fits the needs of the estate, trust, or family.",
   },
   {
-    heading: "Local Experience Across Western Washington",
-    text: "David Stein serves clients throughout King County, Snohomish County, Pierce County, and Kitsap County, with local market knowledge that helps inform pricing, preparation, and sale strategy in each area.",
+    heading: "Experience Across Washington State",
+    text: "David Stein serves clients throughout Washington State, with deep experience in King County, Snohomish County, Pierce County, and Kitsap County. Through eXp Realty's referral network, he can also connect clients with trusted brokers across the U.S. and internationally.",
   },
 ];
 

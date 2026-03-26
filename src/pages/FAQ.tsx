@@ -68,7 +68,7 @@ const faqs = [
   },
   {
     question: "What counties does Real Property Planning serve?",
-    answer: `Real Property Planning serves clients throughout King County, Snohomish County, Pierce County, and Kitsap County in Western Washington. Each county has its own market dynamics, pricing patterns, and buyer expectations. Local knowledge helps clients make better-informed decisions about probate property, inherited homes, estate sales, and senior transitions.\n\n${softCta}`,
+    answer: `Real Property Planning serves clients throughout King County, Snohomish County, Pierce County, and Kitsap County throughout Washington State. Each county has its own market dynamics, pricing patterns, and buyer expectations. Local knowledge helps clients make better-informed decisions about probate property, inherited homes, estate sales, and senior transitions.\n\n${softCta}`,
   },
   {
     question: "Can Real Property Planning help with senior transitions and downsizing decisions?",

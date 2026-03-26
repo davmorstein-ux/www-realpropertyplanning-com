@@ -139,7 +139,7 @@ const HowToMoveElderlyParents = () => (
               </div>
             </div>
             <p className="text-muted-foreground text-base leading-relaxed mb-4">
-              Families navigating senior housing decisions often benefit from working with professionals who understand the local landscape. Real Property Planning works with families during <Link to="/senior-transitions" className="text-accent hover:text-gold underline underline-offset-4">senior transitions</Link> and can connect you with <Link to="/resources/senior-living-communities" className="text-accent hover:text-gold underline underline-offset-4">senior living communities</Link> across Western Washington.
+              Families navigating senior housing decisions often benefit from working with professionals who understand the local landscape. Real Property Planning works with families during <Link to="/senior-transitions" className="text-accent hover:text-gold underline underline-offset-4">senior transitions</Link> and can connect you with <Link to="/resources/senior-living-communities" className="text-accent hover:text-gold underline underline-offset-4">senior living communities</Link> throughout Washington State.
             </p>
 
             {/* Section 3 */}

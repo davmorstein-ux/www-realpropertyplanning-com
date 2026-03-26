@@ -4,7 +4,7 @@ const trustIndicators = [
   "David Stein — Washington Real Estate Broker",
   "Washington State Certified Residential Appraiser",
   "20+ Years of Experience",
-  "Serving King, Snohomish, Pierce & Kitsap Counties",
+  "Serving clients throughout Washington State",
 ];
 
 const TrustStrip = () => (

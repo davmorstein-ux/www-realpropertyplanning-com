@@ -11,7 +11,7 @@ const PropertyPreparationServices = () => (
   <>
     <SEOHead
       title="Property Preparation Services | Resources | Real Property Planning"
-      description="Cleanout, staging, repair, and preparation services for estate and transition properties in Western Washington."
+      description="Cleanout, staging, repair, and preparation services for estate and transition properties throughout Washington State."
       canonical="https://www.realpropertyplanning.com/resources/property-preparation-services"
     />
     <BreadcrumbSchema
@@ -50,7 +50,7 @@ const PropertyPreparationServices = () => (
             </h2>
             <div className="bg-secondary border border-border rounded-xl px-6 py-8 md:px-8 text-center">
               <p className="text-muted-foreground text-base leading-relaxed">
-                David is currently compiling a list of recommended property preparation services in Western Washington. Check back soon, or <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4">contact David</Link> for a current referral.
+                David is currently compiling a list of recommended property preparation services throughout Washington State. Check back soon, or <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4">contact David</Link> for a current referral.
               </p>
             </div>
 
