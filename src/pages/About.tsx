@@ -31,7 +31,7 @@ const whatSetsApart = [
   "Specialized focus on probate, estate, trust, and transition-related property",
   "A calm, steady communication style suited to sensitive situations",
   "Hands-on coordination from assessment through closing",
-  "Over two decades of relevant experience across Western Washington",
+  "Over two decades of relevant experience throughout Washington State",
 ];
 
 const About = () => {
