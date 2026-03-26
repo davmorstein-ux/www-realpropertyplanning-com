@@ -8,11 +8,14 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 import mappin3d from "@/assets/mappin-3d.png";
+import { services, counties } from "@/lib/service-areas-data";
 
 interface CountyPageProps {
   countyName: string;
   countyPath: string;
+  countySlug: string;
   cities: string[];
   localParagraph?: string;
   localInsight?: string;
@@ -24,6 +27,7 @@ interface CountyPageProps {
 const CountyPageTemplate = ({
   countyName,
   countyPath,
+  countySlug,
   cities,
   localParagraph,
   localInsight,
@@ -35,6 +39,9 @@ const CountyPageTemplate = ({
     { name: "Counties", url: "/counties" },
     { name: countyName, url: countyPath },
   ];
+
+  // Find matching county data to get city slugs
+  const countyData = counties.find((c) => c.slug === countySlug);
 
   const defaultClientTypes = [
     `Executors and personal representatives managing probate property in ${countyName}`,
@@ -144,27 +151,79 @@ const CountyPageTemplate = ({
         </div>
       </section>
 
-      {/* Communities Served */}
+      {/* Services Available in This County */}
       <section className="py-20 lg:py-28 bg-secondary">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-              Communities Served in {countyName}
+          <div className="max-w-[1140px] mx-auto">
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
+              Services Available in {countyName}
             </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-3">
-              {cities.map((city) => (
-                <div key={city} className="flex items-center gap-2">
-                  <img src={mappin3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0" />
-                  <span className="text-muted-foreground">{city}</span>
-                </div>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-10 max-w-3xl">
+              Real Property Planning offers the following services for clients throughout {countyName}:
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+              {services.map((service) => (
+                <Link
+                  key={service.slug}
+                  to={`/services/${service.slug}`}
+                  className="card-3d group p-6"
+                >
+                  <h3 className="font-serif text-lg text-foreground font-medium mb-2 group-hover:text-gold transition-colors">
+                    {service.shortName}
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-3">
+                    {service.description}
+                  </p>
+                  <span className="inline-flex items-center text-sm font-medium text-primary group-hover:text-gold transition-colors">
+                    Learn More
+                    <ArrowRight className="w-3.5 h-3.5 ml-1 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </Link>
               ))}
             </div>
           </div>
         </div>
       </section>
 
+      {/* Communities Served — now with links */}
+      <section className="py-20 lg:py-28 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
+              Communities Served in {countyName}
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              Explore city-specific guidance for communities throughout {countyName}:
+            </p>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-3">
+              {cities.map((cityName) => {
+                const cityData = countyData?.cities.find((c) => c.name === cityName);
+                if (cityData) {
+                  return (
+                    <Link
+                      key={cityName}
+                      to={`/cities/${cityData.slug}`}
+                      className="flex items-center gap-2 hover:text-gold transition-colors"
+                    >
+                      <img src={mappin3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0" />
+                      <span className="text-foreground hover:text-gold transition-colors">{cityName}</span>
+                    </Link>
+                  );
+                }
+                return (
+                  <div key={cityName} className="flex items-center gap-2">
+                    <img src={mappin3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0" />
+                    <span className="text-muted-foreground">{cityName}</span>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Local Paragraph */}
-      <section className="py-16 lg:py-20 bg-background">
+      <section className="py-16 lg:py-20 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
@@ -180,6 +239,8 @@ const CountyPageTemplate = ({
               <Link to="/senior-transitions" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Senior Transitions</Link>
               <span className="text-muted-foreground/40">·</span>
               <Link to="/why-valuation-matters" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Why Valuation Matters</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/cities-we-serve" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Cities We Serve</Link>
             </div>
           </div>
         </div>
@@ -199,7 +260,7 @@ const CountyPageTemplate = ({
             </p>
             <div className="flex justify-center">
               <Link to="/contact">
- <Button variant="gold" size="lg"className="hover:-light">
+                <Button variant="gold" size="lg">
                   Schedule a Consultation
                 </Button>
               </Link>
