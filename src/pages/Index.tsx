@@ -97,22 +97,31 @@ const Index = () => {
 
         <div className="container relative z-10 px-6 lg:px-8 py-20 lg:py-24 flex flex-col items-center text-center">
           <div className="max-w-3xl">
-             <h1 className="font-serif text-4xl md:text-5xl lg:text-[54px] font-bold leading-[1.1] mb-10 text-primary-foreground">
+             <h1 className="font-serif text-4xl md:text-5xl lg:text-[54px] font-bold leading-[1.1] text-primary-foreground">
               Specialized Guidance for Probate &amp; Estate Property Sales
             </h1>
-            <div className="flex flex-col items-center">
-              <Link to="/contact">
-                <Button
-                  variant="gold"
-                  size="lg"
-                  className="px-12 py-5 h-auto text-lg tracking-wide"
-                >
-                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
-                  Schedule a 20‑Minute Consultation
-                </Button>
-              </Link>
-            </div>
           </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════
+          CTA — Below hero image
+      ═══════════════════════════════════════════════════ */}
+      <section className="py-12 lg:py-16 bg-primary">
+        <div className="container px-6 lg:px-8 flex flex-col items-center text-center">
+          <Link to="/contact">
+            <Button
+              variant="gold"
+              size="lg"
+              className="px-12 py-5 h-auto text-lg tracking-wide"
+            >
+              <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
+              Schedule a 20‑Minute Consultation
+            </Button>
+          </Link>
+          <p className="text-primary-foreground/70 text-base leading-relaxed max-w-lg mt-4">
+            In a brief call, we review your situation, answer initial questions, and outline a practical plan for your property — with no pressure or obligation.
+          </p>
         </div>
       </section>
 
