@@ -13,7 +13,7 @@ import iconFinancial from "@/assets/icons/icon-financial-planning.png";
 
 import iconHomeValue from "@/assets/icons/icon-home-value.png";
 import alcaLogo from "@/assets/alca-corporate-partner.png";
-import naosaBadge from "@/assets/naosa-badge.png";
+import naosaBadge from "@/assets/naosa-badge-clean.png";
 import naepcLogo from "@/assets/naepc-logo.png";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 

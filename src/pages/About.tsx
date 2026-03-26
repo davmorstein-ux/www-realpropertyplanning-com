@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 import daveHeadshot from "@/assets/dave-headshot.jpg";
 import AgentCredentialBlock from "@/components/AgentCredentialBlock";
 import alcaLogo from "@/assets/alca-corporate-partner.png";
-import naosaBadge from "@/assets/naosa-badge.png";
+import naosaBadge from "@/assets/naosa-badge-clean.png";
 import naepcLogo from "@/assets/naepc-logo.png";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 
