@@ -4,7 +4,7 @@ import mappin3d from "@/assets/mappin-3d.png";
 import iconEmail3d from "@/assets/icons/icon-email-3d.png";
 import expRealtyLogo from "@/assets/exp-realty-logo.png";
 import alcaLogo from "@/assets/alca-corporate-partner.png";
-import naosaBadge from "@/assets/naosa-badge.jpg";
+import naosaBadge from "@/assets/naosa-badge-clean.png";
 import naepcLogo from "@/assets/naepc-logo.png";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 
