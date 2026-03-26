@@ -140,27 +140,27 @@ const Footer = () => {
             className="w-[95px] md:w-[120px] h-auto mb-4"
             loading="lazy"
           />
-          <p className="text-primary-foreground/50 text-sm text-center leading-relaxed">
+          <p className="text-primary-foreground/50 text-[13px] text-center leading-relaxed">
             David Stein | Real Estate Broker — Senior Relocation & Estate Sales | eXp Realty
           </p>
-          <p className="text-primary-foreground/40 text-sm text-center mt-1">
+          <p className="text-primary-foreground/40 text-[13px] text-center mt-1">
             Mailing Address: PO Box 1462, Woodinville, WA 98072
           </p>
-          <p className="text-primary-foreground/40 text-sm text-center mt-1">
+          <p className="text-primary-foreground/40 text-[13px] text-center mt-1">
             Office Address: 1455 NW Leary Way, Seattle, WA 98107
           </p>
         </div>
 
         {/* Geo / Service Area SEO */}
         <div className="border-t border-primary-foreground/10 mt-8 pt-6 pb-4">
-          <p className="text-primary-foreground/50 text-sm text-center leading-relaxed max-w-3xl mx-auto">
+          <p className="text-primary-foreground/50 text-[13px] text-center leading-relaxed max-w-3xl mx-auto">
             Serving clients throughout Western Washington and the greater Puget Sound region, including King, Snohomish, Pierce, and Kitsap counties: Seattle, Bellevue, Tacoma, Everett, Kirkland, Redmond, Bothell, and nearby communities.
           </p>
         </div>
 
         {/* Copyright */}
         <div className="border-t border-primary-foreground/10 pt-4">
-          <p className="text-primary-foreground/40 text-sm text-center">
+          <p className="text-primary-foreground/40 text-[13px] text-center">
             © {new Date().getFullYear()} David Stein, Real Estate Broker – Senior Relocation & Estate Sales. Real Property Planning.
           </p>
         </div>
