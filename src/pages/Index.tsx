@@ -93,11 +93,26 @@ const Index = () => {
           width={1920}
           height={1080}
         />
-        <div className="absolute inset-0 bg-black/25" />
+        <div className="absolute inset-0 bg-black/30" />
 
         <div className="container relative z-10 px-6 lg:px-8 py-20 lg:py-24 flex flex-col items-center text-center">
           <div className="max-w-3xl">
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-[54px] text-white font-bold leading-[1.1] mb-5" style={{ textShadow: '0 1px 0 rgba(255,255,255,0.12), 0 2px 4px rgba(0,0,0,0.25), 0 4px 12px rgba(0,0,0,0.20), 0 8px 24px rgba(0,0,0,0.15)' }}>
+             <h1
+              className="font-serif text-4xl md:text-5xl lg:text-[54px] font-bold leading-[1.1] mb-5"
+              style={{
+                color: '#f5f0e8',
+                textShadow: [
+                  '0 -1px 0 rgba(255,255,255,0.25)',
+                  '0 1px 0 #d4c091',
+                  '0 2px 0 #c9b57e',
+                  '0 3px 0 #b8a36c',
+                  '0 4px 0 #a8935c',
+                  '0 5px 6px rgba(0,0,0,0.35)',
+                  '0 8px 18px rgba(0,0,0,0.25)',
+                  '0 12px 30px rgba(0,0,0,0.18)',
+                ].join(', '),
+              }}
+            >
               Guiding Families Through Life's Most Important Property Decisions
             </h1>
             <p className="text-white/90 text-lg md:text-xl leading-relaxed mb-10 mx-auto max-w-2xl" style={{ textShadow: '0 1px 6px rgba(0,0,0,0.3)' }}>
