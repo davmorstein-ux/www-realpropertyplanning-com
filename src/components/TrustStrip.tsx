@@ -1,8 +1,8 @@
 import GoldCheck3D from "@/components/GoldCheck3D";
 
 const trustIndicators = [
-  "David Stein — Washington Real Estate Broker",
-  "Washington State Certified Residential Appraiser",
+  "David Stein — WA Real Estate Broker #113972",
+  "WA Certified Residential Appraiser #1702080",
   "20+ Years of Experience",
   "Serving clients throughout Washington State",
 ];
