@@ -186,7 +186,7 @@ const Terminology = () => {
 
             {/* Disclaimer */}
             <div className="mt-14 md:mt-16">
-              <p className="text-muted-foreground/70 text-sm leading-relaxed max-w-4xl">
+              <p className="text-muted-foreground/70 text-[15px] leading-relaxed max-w-4xl">
                 This glossary is provided for general informational purposes only and is not legal advice. Probate, inheritance, trust, and real-property laws vary by state and by the facts of each estate. Anyone dealing with a will, probate matter, inherited property, or trust-owned real estate should consult a qualified attorney, tax professional, or other appropriate advisor for advice specific to their situation.
               </p>
             </div>

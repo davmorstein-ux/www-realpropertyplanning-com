@@ -326,7 +326,7 @@ const TransitionResources = () => {
                   <h3 className="font-serif text-base font-semibold text-foreground group-hover:text-accent transition-colors mb-1">
                     {guide.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <p className="text-muted-foreground text-[15px] leading-relaxed">
                     {guide.description}
                   </p>
                 </Link>
@@ -363,7 +363,7 @@ const TransitionResources = () => {
                   <h3 className="font-serif text-base font-semibold text-foreground group-hover:text-accent transition-colors mb-1">
                     {page.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <p className="text-muted-foreground text-[15px] leading-relaxed">
                     {page.description}
                   </p>
                 </Link>

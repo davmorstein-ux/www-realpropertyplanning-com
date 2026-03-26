@@ -55,7 +55,7 @@ const SeniorLivingCommunities = () => (
             </div>
 
             <div className="mt-12 pt-8 border-t border-border">
-              <p className="text-muted-foreground/60 text-sm leading-relaxed italic">
+              <p className="text-muted-foreground/60 text-[15px] leading-relaxed italic">
                 These professionals are listed as informational resources for visitors navigating senior transitions and estate property matters. Real Property Planning does not receive compensation for these listings.
               </p>
             </div>

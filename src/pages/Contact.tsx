@@ -131,7 +131,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <p className="text-muted-foreground text-sm leading-relaxed mb-8">
+              <p className="text-muted-foreground text-[15px] leading-relaxed mb-8">
                 Consultations are welcomed for attorneys, executors, fiduciaries, and families navigating property decisions.
               </p>
 

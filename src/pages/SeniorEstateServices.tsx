@@ -233,7 +233,7 @@ const SeniorEstateServices = () => {
       <section className="py-12 md:py-16 lg:py-[84px] bg-secondary">
         <div className="max-w-[1100px] mx-auto px-6 lg:px-8">
           <div className="bg-card border border-border rounded-[16px] p-7 md:p-9 max-w-3xl mx-auto text-center">
-            <p className="text-muted-foreground text-sm leading-relaxed">
+            <p className="text-muted-foreground text-[15px] leading-relaxed">
               David Stein is a licensed real estate broker in the State of Washington and a Washington state certified real estate appraiser. He is not an attorney, CPA, or tax advisor, and does not provide legal, tax, or accounting advice. Legal, tax, and probate-specific questions should be directed to qualified professionals.
             </p>
           </div>
