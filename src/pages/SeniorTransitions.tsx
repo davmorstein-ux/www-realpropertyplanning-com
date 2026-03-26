@@ -247,7 +247,7 @@ const SeniorTransitions = () => {
             <p className="text-foreground text-lg italic leading-relaxed mb-4">
               "We appreciated David's patience, thoughtful communication, and realistic guidance throughout the sale of our family property."
             </p>
-            <p className="text-muted-foreground text-sm font-medium">— Family Review · Inherited home and sale preparation</p>
+            <p className="text-muted-foreground text-[15px] font-medium">— Family Review · Inherited home and sale preparation</p>
           </div>
         </div>
       </section>

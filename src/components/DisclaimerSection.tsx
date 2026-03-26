@@ -4,7 +4,7 @@ const DisclaimerSection = () => {
       <div className="container px-6 lg:px-8">
         <div className="max-w-[1060px] mx-auto">
           <div className="bg-card border border-border rounded-2xl px-5 py-5 md:px-9 md:py-9">
-            <p className="text-muted-foreground/60 font-bold tracking-[0.2em] uppercase text-xs mb-3">
+            <p className="text-muted-foreground/60 font-bold tracking-[0.2em] uppercase text-sm mb-3">
               Professional Disclosure
             </p>
             <h2 className="font-serif text-xl md:text-2xl text-foreground font-semibold mb-[18px]">

@@ -224,17 +224,17 @@ const ForFinancialPlanners = () => {
               Whether the property is part of an inheritance, a trust, a downsizing decision, or a broader transition in later life, David Stein helps clients make better-informed decisions with a clearer understanding of the real-estate side of the process.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Link to="/how-the-process-works" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">How the Process Works</Link>
+              <Link to="/how-the-process-works" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-base">How the Process Works</Link>
               <span className="text-muted-foreground/40">·</span>
-              <Link to="/why-valuation-matters" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Why Valuation Matters</Link>
+              <Link to="/why-valuation-matters" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-base">Why Valuation Matters</Link>
               <span className="text-muted-foreground/40">·</span>
-              <Link to="/for-attorneys" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Attorneys & Fiduciaries</Link>
+              <Link to="/for-attorneys" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-base">For Attorneys & Fiduciaries</Link>
               <span className="text-muted-foreground/40">·</span>
-              <Link to="/for-cpas" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For CPAs</Link>
+              <Link to="/for-cpas" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-base">For CPAs</Link>
               <span className="text-muted-foreground/40">·</span>
-              <Link to="/faq" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Frequently Asked Questions</Link>
+              <Link to="/faq" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-base">Frequently Asked Questions</Link>
               <span className="text-muted-foreground/40">·</span>
-              <Link to="/contact" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Contact David Stein</Link>
+              <Link to="/contact" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-base">Contact David Stein</Link>
             </div>
           </div>
         </div>

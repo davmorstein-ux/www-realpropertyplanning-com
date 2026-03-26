@@ -269,7 +269,7 @@ const ForSeniorLivingProfessionals = () => {
                   <h3 className="font-serif text-base font-semibold text-foreground group-hover:text-accent transition-colors mb-1">
                     {link.label}
                   </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <p className="text-muted-foreground text-[15px] leading-relaxed">
                     {link.desc}
                   </p>
                 </Link>

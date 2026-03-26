@@ -149,11 +149,11 @@ const Index = () => {
               </p>
               <div className="mb-5 space-y-3">
                 <p className="text-base font-semibold tracking-[0.02em] text-foreground">David Stein</p>
-                <p className="flex items-center text-sm font-semibold text-foreground md:text-base">
+                <p className="flex items-center text-base font-semibold text-foreground">
                   <img src={iconLicense3d} alt="" aria-hidden="true" className="mr-3 h-12 w-12 shrink-0 object-contain mix-blend-multiply" />
                   Licensed Real Estate Broker
                 </p>
-                <p className="flex items-center text-sm font-semibold text-foreground md:text-base">
+                <p className="flex items-center text-base font-semibold text-foreground">
                   <img src={iconAppraiser3d} alt="" aria-hidden="true" className="mr-3 h-12 w-12 shrink-0 object-contain mix-blend-multiply" />
                   WA Certified Residential Appraiser
                 </p>
@@ -181,7 +181,7 @@ const Index = () => {
       <section className="py-16 lg:py-20 bg-warm-bg">
         <div className="mx-auto max-w-[1100px] px-6 lg:px-8">
           <div className="text-center mb-12">
-            <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-sm">
+            <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-base">
               How We Help
             </p>
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold">
@@ -276,7 +276,7 @@ const Index = () => {
       <section className="py-20 lg:py-28 bg-warm-bg">
         <div className="mx-auto max-w-[1100px] px-6 lg:px-8">
           <div className="text-center mb-14">
-            <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-sm">
+            <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-base">
               What Clients Are Saying
             </p>
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold">
@@ -291,7 +291,7 @@ const Index = () => {
                   "{t.text}"
                 </p>
                 <div className="border-t border-border pt-4">
-                  <p className="text-muted-foreground font-medium text-sm">{t.attribution}</p>
+                  <p className="text-muted-foreground font-medium text-[15px]">{t.attribution}</p>
                 </div>
               </div>
             ))}
@@ -310,7 +310,7 @@ const Index = () => {
         }} />
         <div className="mx-auto max-w-[1100px] px-6 lg:px-8 relative z-10">
           <div className="text-center mb-10">
-            <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">
+            <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-base">
               Service Areas
             </p>
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-4">
@@ -360,21 +360,21 @@ const Index = () => {
 
               <div className="space-y-5">
                 <div>
-                  <p className="text-sm text-primary-foreground/60">Phone</p>
+                  <p className="text-[15px] text-primary-foreground/60">Phone</p>
                   <a href="tel:2069003015" className="mt-1 inline-flex items-center text-primary-foreground transition-colors hover:text-gold">
                     <img src={iconPhone3d} alt="" aria-hidden="true" className="mr-3 h-14 w-14 shrink-0 object-contain" />
                     <span className="text-lg font-semibold">(206) 900-3015</span>
                   </a>
                 </div>
                 <div>
-                  <p className="text-sm text-primary-foreground/60">Email</p>
+                  <p className="text-[15px] text-primary-foreground/60">Email</p>
                   <a href="mailto:david@realpropertyplanning.com" className="mt-1 inline-flex items-center text-primary-foreground transition-colors hover:text-gold">
                     <img src={iconEmail3d} alt="" aria-hidden="true" className="mr-3 h-14 w-14 shrink-0 object-contain" />
                     <span className="text-lg font-semibold">david@realpropertyplanning.com</span>
                   </a>
                 </div>
                 <div>
-                  <p className="text-sm text-primary-foreground/60">Serving</p>
+                  <p className="text-[15px] text-primary-foreground/60">Serving</p>
                   <div className="mt-1 inline-flex items-center text-primary-foreground">
                     <img src={mappin3d} alt="" aria-hidden="true" className="mr-3 h-11 w-11 shrink-0 object-contain" />
                     <span className="text-lg font-semibold">Western Washington &amp; Puget Sound</span>
@@ -384,7 +384,7 @@ const Index = () => {
 
               <div className="mt-10 flex items-center gap-3">
                 <img src={expRealtyLogo} alt="eXp Realty" className="h-6 w-auto opacity-50" loading="lazy" />
-                <span className="text-primary-foreground/40 text-sm">License #113972</span>
+                <span className="text-primary-foreground/40 text-[15px]">License #113972</span>
               </div>
             </div>
 
@@ -395,34 +395,34 @@ const Index = () => {
               </h3>
               <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-1.5">Name</label>
+                  <label className="block text-[15px] font-medium text-foreground mb-1.5">Name</label>
                   <input
                     type="text"
-                    className="w-full rounded-lg border border-border bg-background px-4 py-3 text-foreground text-sm placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-gold/30 focus:border-gold/50 transition"
+                    className="w-full rounded-lg border border-border bg-background px-4 py-3 text-foreground text-[15px] placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-gold/30 focus:border-gold/50 transition"
                     placeholder="Your name"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-1.5">Email</label>
+                  <label className="block text-[15px] font-medium text-foreground mb-1.5">Email</label>
                   <input
                     type="email"
-                    className="w-full rounded-lg border border-border bg-background px-4 py-3 text-foreground text-sm placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-gold/30 focus:border-gold/50 transition"
+                    className="w-full rounded-lg border border-border bg-background px-4 py-3 text-foreground text-[15px] placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-gold/30 focus:border-gold/50 transition"
                     placeholder="name@example.com"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-1.5">Phone</label>
+                  <label className="block text-[15px] font-medium text-foreground mb-1.5">Phone</label>
                   <input
                     type="tel"
-                    className="w-full rounded-lg border border-border bg-background px-4 py-3 text-foreground text-sm placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-gold/30 focus:border-gold/50 transition"
+                    className="w-full rounded-lg border border-border bg-background px-4 py-3 text-foreground text-[15px] placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-gold/30 focus:border-gold/50 transition"
                     placeholder="(555) 123-4567"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-1.5">Message</label>
+                  <label className="block text-[15px] font-medium text-foreground mb-1.5">Message</label>
                   <textarea
                     rows={4}
-                    className="w-full rounded-lg border border-border bg-background px-4 py-3 text-foreground text-sm placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-gold/30 focus:border-gold/50 transition resize-none"
+                    className="w-full rounded-lg border border-border bg-background px-4 py-3 text-foreground text-[15px] placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-gold/30 focus:border-gold/50 transition resize-none"
                     placeholder="Tell us about your situation..."
                   />
                 </div>
@@ -442,7 +442,7 @@ const Index = () => {
       <section className="py-20 lg:py-28 bg-warm-bg">
         <div className="container px-6 lg:px-8">
           <div className="text-center mb-12">
-            <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-sm">
+            <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-base">
               Common Questions
             </p>
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold">

@@ -141,7 +141,7 @@ const HowTheProcessWorks = () => {
                       {step.title}
                     </h3>
                     <p className="text-muted-foreground leading-[1.75] mb-3">{step.text}</p>
-                    <p className="text-muted-foreground/80 text-sm leading-relaxed italic">{step.details}</p>
+                    <p className="text-muted-foreground/80 text-[15px] leading-relaxed italic">{step.details}</p>
                   </div>
                 </div>
               ))}

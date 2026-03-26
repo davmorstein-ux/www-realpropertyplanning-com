@@ -26,7 +26,7 @@ const SeniorMoveManagers = () => (
       <section className="bg-secondary py-14 md:py-20">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-sm">Resources</p>
+            <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-base">Resources</p>
             <h1 className="font-serif text-3xl md:text-4xl font-bold text-foreground leading-tight mb-4">Senior Move Managers</h1>
           </div>
         </div>
@@ -55,7 +55,7 @@ const SeniorMoveManagers = () => (
             </div>
 
             <div className="mt-12 pt-8 border-t border-border">
-              <p className="text-muted-foreground/60 text-sm leading-relaxed italic">
+              <p className="text-muted-foreground/60 text-[15px] leading-relaxed italic">
                 These professionals are listed as informational resources for visitors navigating senior transitions and estate property matters. Real Property Planning does not receive compensation for these listings.
               </p>
             </div>
