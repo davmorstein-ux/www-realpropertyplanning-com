@@ -206,13 +206,13 @@ const Index = () => {
               <div className="mb-5 space-y-1.5 text-[15px] text-muted-foreground">
                 <p>
                   <a href="tel:2069003015" className="hover:text-gold transition-colors">
-                    <img src={iconPhone3d} alt="" aria-hidden="true" className="inline mr-2 h-5 w-5 object-contain" />
+                    <img src={iconPhone3d} alt="" aria-hidden="true" className="inline mr-2 h-10 w-10 object-contain" />
                     (206) 900-3015
                   </a>
                 </p>
                 <p>
                   <a href="mailto:david@realpropertyplanning.com" className="hover:text-gold transition-colors">
-                    <img src={iconEmail3d} alt="" aria-hidden="true" className="inline mr-2 h-5 w-5 object-contain" />
+                    <img src={iconEmail3d} alt="" aria-hidden="true" className="inline mr-2 h-10 w-10 object-contain" />
                     david@realpropertyplanning.com
                   </a>
                 </p>
