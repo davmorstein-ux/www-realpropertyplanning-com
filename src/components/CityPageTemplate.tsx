@@ -18,9 +18,9 @@ interface CityPageTemplateProps {
 }
 
 const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
-  const situations = getCommonSituations(city.name);
-  const whyLocal = getWhyLocalMatters(city.name, city.county);
-  const whyBrokerAppraiser = getWhyBrokerAppraiser(city.name);
+  const situations = getCommonSituations(city.name, city);
+  const whyLocal = getWhyLocalMatters(city.name, city.county, city);
+  const whyBrokerAppraiser = getWhyBrokerAppraiser(city.name, city);
 
   const faqs = [
     {
@@ -37,7 +37,7 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
     },
   ];
 
-  const clientTypes = [
+  const clientTypes = city.localClientTypes || [
     `Executors and personal representatives managing estate property in ${city.name}`,
     `Attorneys and fiduciaries seeking a reliable real estate partner in ${city.county}`,
     `Seniors and families preparing to transition from a longtime ${city.name} home`,
@@ -46,11 +46,17 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
     `CPAs and financial planners advising clients on property-related decisions`,
   ];
 
+  const heroIntro = city.heroIntro ||
+    `Real Property Planning provides experienced real estate guidance for probate sales, estate property, senior transitions, and related situations in ${city.name} and throughout ${city.county}. David Stein combines over 20 years of experience as a licensed broker and state-certified residential appraiser to help clients make well-informed decisions about value, preparation, timing, and sale strategy.`;
+
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
         title={`Probate & Estate Real Estate Services in ${city.name}, WA | Real Property Planning`}
-        description={`Real Property Planning provides probate, estate, senior transition, and valuation-informed real estate guidance in ${city.name}, ${city.county}. Licensed broker and certified appraiser David Stein serves clients throughout Washington State.`}
+        description={city.descriptor
+          ? `${city.descriptor} — Real Property Planning provides probate, estate, and senior transition guidance in ${city.name}, ${city.county}. Licensed broker and certified appraiser David Stein.`
+          : `Real Property Planning provides probate, estate, senior transition, and valuation-informed real estate guidance in ${city.name}, ${city.county}. Licensed broker and certified appraiser David Stein serves clients throughout Washington State.`
+        }
       />
       <BreadcrumbSchema
         items={[
@@ -72,7 +78,7 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
               Real Estate Guidance for Important Property Transitions in {city.name}
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed">
-              Real Property Planning provides experienced real estate guidance for probate sales, estate property, senior transitions, and related situations in {city.name} and throughout {city.county}. David Stein combines over 20 years of experience as a licensed broker and state-certified residential appraiser to help clients make well-informed decisions about value, preparation, timing, and sale strategy.
+              {heroIntro}
             </p>
           </div>
         </div>
