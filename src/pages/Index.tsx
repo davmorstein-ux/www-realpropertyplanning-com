@@ -97,7 +97,7 @@ const Index = () => {
 
         <div className="container relative z-10 px-6 lg:px-8 py-20 lg:py-24 flex flex-col items-center text-center">
           <div className="max-w-3xl">
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-[54px] text-white font-bold leading-[1.1] mb-5" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.4), 0 1px 3px rgba(0,0,0,0.25)' }}>
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-[54px] text-white font-bold leading-[1.1] mb-5" style={{ textShadow: '0 1px 0 rgba(255,255,255,0.12), 0 2px 4px rgba(0,0,0,0.25), 0 4px 12px rgba(0,0,0,0.20), 0 8px 24px rgba(0,0,0,0.15)' }}>
               Guiding Families Through Life's Most Important Property Decisions
             </h1>
             <p className="text-white/90 text-lg md:text-xl leading-relaxed mb-10 mx-auto max-w-2xl" style={{ textShadow: '0 1px 6px rgba(0,0,0,0.3)' }}>
