@@ -8,7 +8,18 @@ import RelatedServices from "@/components/RelatedServices";
 import GoldCheck3D from "@/components/GoldCheck3D";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { getCityServiceIntro, getWhyLocalMatters, getCityServiceHowWeHelp, getCityServiceScenarios } from "@/lib/service-areas-data";
+import {
+  getCityServiceIntro,
+  getWhyLocalMatters,
+  getCityServiceHowWeHelp,
+  getCityServiceScenarios,
+  getToneScenariosHeading,
+  getToneScenariosLead,
+  getToneHowWeHelpHeading,
+  getToneHowWeHelpLead,
+  getToneCTAHeading,
+  getToneCTABody,
+} from "@/lib/service-areas-data";
 import type { CityData, ServiceData } from "@/lib/service-areas-data";
 
 interface CityServicePageTemplateProps {
@@ -21,6 +32,7 @@ const CityServicePageTemplate = ({ city, service }: CityServicePageTemplateProps
   const whyLocal = getWhyLocalMatters(city.name, city.county, city);
   const howWeHelp = getCityServiceHowWeHelp(city.name, service.slug);
   const scenarios = getCityServiceScenarios(city.name, service.shortName, service.slug);
+  const tone = city.tone;
 
   return (
     <div className="min-h-screen bg-background">
@@ -62,10 +74,10 @@ const CityServicePageTemplate = ({ city, service }: CityServicePageTemplateProps
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
-              When {city.name} Clients Need {service.shortName}
+              {getToneScenariosHeading(city.name, service.shortName, tone)}
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Clients in {city.name} often seek {service.name.toLowerCase()} guidance when facing situations such as:
+              {getToneScenariosLead(city.name, service.name, tone)}
             </p>
             <ul className="space-y-4">
               {scenarios.map((item, i) => (
@@ -84,10 +96,10 @@ const CityServicePageTemplate = ({ city, service }: CityServicePageTemplateProps
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
-              How Real Property Planning Helps
+              {getToneHowWeHelpHeading(tone)}
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              David Stein provides hands-on coordination and valuation-informed guidance for every {service.name.toLowerCase()} engagement:
+              {getToneHowWeHelpLead(city.name, service.name, tone)}
             </p>
             <ul className="space-y-4">
               {howWeHelp.map((item, i) => (
@@ -151,10 +163,10 @@ const CityServicePageTemplate = ({ city, service }: CityServicePageTemplateProps
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
-              Need {service.shortName} Help in {city.name}?
+              {getToneCTAHeading(city.name, service.shortName, tone)}
             </h2>
             <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
-              Schedule a confidential consultation to discuss your {city.name} property situation.
+              {getToneCTABody(city.name, tone)}
             </p>
             <div className="flex justify-center">
               <Link to="/contact">

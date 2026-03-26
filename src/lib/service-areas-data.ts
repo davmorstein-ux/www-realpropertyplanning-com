@@ -1,11 +1,23 @@
 // Central data layer for all counties, cities, and services
 // This powers templates, routing, navigation, and internal linking
 
+/** Community tone classification — shapes connecting language throughout templates */
+export type CommunityTone = 
+  | "premium"      // upscale, established, high-value (Mercer Island, Bellevue, Bainbridge)
+  | "urban"        // complex, fast-paced, diverse neighborhoods (Seattle, Tacoma, Everett)
+  | "suburban"     // family-oriented, practical, approachable (Kirkland, Redmond, Mill Creek)
+  | "waterfront"   // locally grounded, nuanced, community-rooted (Edmonds, Mukilteo, Poulsbo)
+  | "smalltown"    // personal, steady, relationship-oriented (Duvall, Snohomish, Gold Bar)
+  | "military"     // practical, respectful, community-aware (Lakewood, Silverdale, Bremerton)
+  | "rural";       // grounded, honest, property-specific (Graham, Eatonville, Seabeck)
+
 export interface CityData {
   name: string;
   slug: string;
   county: string;
   countySlug: string;
+  /** Community tone — drives template language variation */
+  tone?: CommunityTone;
   /** Short unique descriptor for meta/intro variation */
   descriptor?: string;
   /** Unique hero intro paragraph for the city page */
@@ -45,6 +57,7 @@ export interface ServiceData {
 const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "countySlug">> = {
   // ── KING COUNTY ─────────────────────────────────────────────
   bellevue: {
+    tone: "premium",
     descriptor: "Eastside luxury and established neighborhoods",
     heroIntro: "Bellevue is one of the most dynamic real estate markets in Washington State — a mix of established neighborhoods, high-value estates, and rapid new development. For families managing a probate sale, trust property, or senior transition in Bellevue, the stakes are often significant. Real Property Planning provides valuation-informed guidance that accounts for Bellevue's premium market positioning, neighborhood-level pricing differences, and the unique challenges of selling estate or inherited property in a competitive environment.",
     localKnowledge: "Bellevue's real estate market spans a wide spectrum — from mid-century ramblers in Crossroads to multimillion-dollar estates in West Bellevue, Meydenbauer, and Vuecrest. Accurate pricing requires understanding how neighborhood, lot size, views, and condition interact in a market where buyer expectations are high. David Stein's dual credentials as a licensed broker and state-certified appraiser provide the local depth needed to position estate and transition properties effectively in Bellevue's competitive landscape.",
@@ -59,32 +72,38 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     ],
   },
   kirkland: {
+    tone: "suburban",
     descriptor: "Waterfront charm and growing neighborhoods",
     heroIntro: "Kirkland combines waterfront living, walkable neighborhoods, and a strong sense of community — qualities that make it one of the most desirable cities on the Eastside. When a property transition involves probate, an estate sale, a senior move, or an inherited home in Kirkland, the process benefits from someone who understands how Kirkland's distinct neighborhoods and buyer expectations affect pricing and preparation strategy.",
     localKnowledge: "Kirkland's neighborhoods range from the boutique waterfront of Moss Bay and Houghton to the larger-lot homes of Juanita, Finn Hill, and Totem Lake. Each area attracts different buyers with different expectations. Selling an estate or inherited property in Kirkland requires understanding which improvements matter, how waterfront proximity affects value, and how to position a home that may not be in move-in condition against newer or recently updated listings.",
     brokerAppraiserValue: "Kirkland's appeal lies in its location, walkability, and neighborhood character — but those qualities can be difficult to quantify with automated tools. David Stein evaluates each property based on its actual condition, lot characteristics, and realistic buyer demand in Kirkland. His appraisal background provides an analytical foundation that supports confident pricing decisions, especially for properties that need preparation or have deferred maintenance.",
   },
   redmond: {
+    tone: "suburban",
     descriptor: "Technology corridor with diverse housing stock",
     heroIntro: "Redmond has grown from a quiet suburb into one of the most sought-after cities in King County, driven by its proximity to major employers and strong school districts. Families and fiduciaries managing estate, probate, or transition-related property in Redmond need guidance that reflects the city's evolving market dynamics and the wide range of housing — from original ramblers to newer planned communities like Trilogy and Redmond Ridge.",
     localKnowledge: "Redmond's housing stock includes everything from older homes in downtown Redmond and Education Hill to newer construction in Redmond Ridge, Trilogy, and the Overlake area. These submarkets behave differently, and an estate or inherited property may need very different preparation and pricing strategies depending on location. David Stein's familiarity with Redmond's micro-markets helps clients avoid the common mistake of applying a one-size-fits-all approach.",
   },
   bothell: {
+    tone: "suburban",
     descriptor: "Cross-county community bridging King and Snohomish",
     heroIntro: "Bothell straddles the King and Snohomish County line, offering a mix of established neighborhoods, newer developments near Canyon Park, and properties along the Sammamish River corridor. For families navigating estate sales, probate, or senior transitions in Bothell, understanding how the city's dual-county location and neighborhood variety affect value is essential for making sound decisions.",
     localKnowledge: "Bothell's real estate spans mid-century homes in the original downtown core, newer construction near Canyon Park and the University of Washington Bothell campus, and properties along the river corridor. The city's position across two counties means comparable sales may come from either side of the boundary, and buyer demographics can shift meaningfully between neighborhoods. David Stein's experience with Bothell's specific market dynamics helps clients price and position properties accurately.",
   },
   issaquah: {
+    tone: "suburban",
     descriptor: "Foothills communities and family neighborhoods",
     heroIntro: "Nestled against the Cascade foothills, Issaquah offers a blend of established neighborhoods, newer planned communities, and rural-adjacent properties. For families navigating a probate sale, senior transition, or inherited property situation in Issaquah, the process requires someone who understands the area's unique mix of housing types, lot sizes, and buyer expectations — from the Highlands and Talus to Olde Town Issaquah and surrounding areas.",
     localKnowledge: "Issaquah's real estate landscape includes master-planned communities like Issaquah Highlands and Talus, established neighborhoods near Olde Town, and properties in more rural settings toward the foothills. Each segment has its own pricing dynamics and buyer pool. Estate and inherited properties in Issaquah often require thoughtful preparation to compete effectively, especially when they differ from the newer construction that dominates parts of the market.",
   },
   sammamish: {
+    tone: "premium",
     descriptor: "Plateau living with strong family appeal",
     heroIntro: "Sammamish is known for its spacious lots, top-rated schools, and family-oriented character on the Eastside plateau. Properties here tend to hold strong value, but estate and inherited homes — particularly those with deferred maintenance or dated finishes — require careful positioning in a market where buyers often expect move-in condition. Real Property Planning provides the valuation-informed guidance Sammamish families and fiduciaries need during important property transitions.",
     localKnowledge: "Sammamish properties range from well-maintained homes in Pine Lake, Beaver Lake, and Klahanie to larger custom homes throughout the plateau. The market can be competitive for updated properties but challenging for homes that need work. David Stein's understanding of how condition, lot size, and school proximity affect value in Sammamish helps clients set realistic expectations and develop preparation strategies that make sense for their specific situation.",
   },
   "mercer-island": {
+    tone: "premium",
     descriptor: "Exclusive island community with premium waterfront",
     heroIntro: "Mercer Island is one of the most exclusive residential communities in the Pacific Northwest, with homes ranging from mid-century estates to modern waterfront properties. Managing an estate sale, trust property disposition, or senior transition on Mercer Island requires an understanding of the island's premium market positioning, limited inventory dynamics, and the high expectations of both sellers and buyers in this market.",
     localKnowledge: "Mercer Island's housing market includes waterfront estates, established homes on the east and west sides of the island, and condos near the town center. The island's limited land area, access via I-90, and strong school district create pricing dynamics that differ significantly from other Eastside communities. David Stein's appraisal credentials help clients understand how lot size, waterfront access, views, and condition interact in a market where generic pricing tools frequently miss the mark.",
@@ -98,11 +117,13 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     ],
   },
   newcastle: {
+    tone: "premium",
     descriptor: "Hillside community with Lake Washington views",
     heroIntro: "Newcastle offers hillside living with striking views of Lake Washington, the Seattle skyline, and the Cascades. For families managing property transitions in Newcastle — whether probate, estate, or senior-related — the community's view-oriented market and newer construction create specific pricing considerations that benefit from experienced, valuation-informed guidance.",
     localKnowledge: "Newcastle's housing stock is predominantly newer, with many homes built in the 1990s and 2000s in planned communities like Newcastle Highlands and the Golf Club at Newcastle area. Views are a primary value driver here, and the difference between a property with a panoramic view and one without can be substantial. David Stein helps clients understand how view corridors, lot positioning, and condition affect market value in Newcastle's hillside environment.",
   },
   seattle: {
+    tone: "urban",
     descriptor: "Urban diversity across dozens of distinct neighborhoods",
     heroIntro: "Seattle's real estate market is as diverse as the city itself — from Capitol Hill condos to Magnolia estates, Ballard craftsmans to West Seattle view properties. Managing a probate sale, inherited home, or senior transition in Seattle means navigating a market where neighborhood context, zoning, and property type can dramatically affect both value and sale strategy. Real Property Planning provides the localized, valuation-informed guidance that Seattle's complex market demands.",
     localKnowledge: "Seattle encompasses over 80 distinct neighborhoods, each with its own character, pricing trends, and buyer expectations. A mid-century rambler in Wedgwood presents a very different sale scenario than a Capitol Hill condo or a Craftsman in Wallingford. David Stein's appraisal background and broker experience across Seattle's neighborhoods allow him to develop pricing and preparation strategies that reflect actual local conditions rather than citywide averages.",
@@ -117,91 +138,109 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     ],
   },
   renton: {
+    tone: "urban",
     descriptor: "South King County hub with evolving neighborhoods",
     heroIntro: "Renton has experienced significant growth and transformation, with neighborhoods ranging from the waterfront areas along Lake Washington to the established communities of Kennydale, the Highlands, and Benson Hill. For families and executors managing property transitions in Renton, understanding how the city's evolving market affects valuation and sale timing is essential. Real Property Planning provides clear, practical guidance for Renton property situations.",
     localKnowledge: "Renton's market includes everything from lakefront properties and Kennydale mid-century homes to newer developments in the Highlands and established neighborhoods in Benson Hill. The city's proximity to major employers and ongoing development make it a dynamic market where pricing accuracy is especially important. David Stein's appraiser credentials help clients understand how Renton's different submarkets and the city's growth trajectory affect their specific property.",
   },
   kent: {
+    tone: "suburban",
     descriptor: "South King County's largest city with diverse housing",
     heroIntro: "Kent is one of the largest cities in King County, with a housing market that ranges from established neighborhoods on the East Hill to properties in the valley and the West Hill areas. For families and executors managing estate, probate, or transition properties in Kent, the city's diverse housing stock and wide price range require an approach that accounts for neighborhood-specific conditions rather than broad market averages.",
     localKnowledge: "Kent's real estate includes everything from 1960s and '70s ramblers on East Hill to newer construction, townhomes, and condos throughout the city. The valley areas, West Hill, and the Panther Lake neighborhood each attract different buyers. David Stein's appraisal credentials help clients in Kent understand how location within the city, property condition, and lot characteristics affect realistic pricing for estate and transition properties.",
   },
   auburn: {
+    tone: "suburban",
     descriptor: "Valley community with established neighborhoods and rural edges",
     heroIntro: "Auburn offers a blend of established valley neighborhoods, hillside properties with views, and rural-adjacent areas toward the city's southeastern edge. Managing an estate sale, senior transition, or inherited property in Auburn requires practical guidance that accounts for the city's range of property types and the specific buyer demographics active in each area of the market.",
     localKnowledge: "Auburn's housing market includes mid-century homes in the valley, newer developments on the hillside areas, and properties with larger lots along the rural edges. The city's proximity to major employers and transportation corridors influences buyer demand in ways that vary by neighborhood. David Stein helps Auburn clients understand these dynamics and position estate or transition properties effectively based on their specific location and condition.",
   },
   "federal-way": {
+    tone: "suburban",
     descriptor: "South King gateway with lake-adjacent communities",
     heroIntro: "Federal Way sits at the southern edge of King County, offering established neighborhoods, newer developments, and properties near Steel Lake, North Lake, and the Federal Way town center. For families managing estate or transition-related property sales in Federal Way, understanding how the city's diverse housing stock and competitive pricing environment affect sale strategy is key to a good outcome.",
     localKnowledge: "Federal Way's housing ranges from established ramblers and split-levels to newer townhomes and condos near the city center. Properties near the lakes, those on larger lots, and those with mountain views each appeal to different buyer segments. David Stein's dual credentials help clients understand how condition, location, and property type affect realistic pricing in Federal Way's market, where accurate positioning is essential for attracting the right buyers.",
   },
   shoreline: {
+    tone: "suburban",
     descriptor: "North Seattle gateway with light rail transformation",
     heroIntro: "Shoreline is being reshaped by light rail expansion, bringing new development and shifting buyer interest throughout the city. For families managing estate sales, senior transitions, or inherited properties in Shoreline, the city's evolving market creates both opportunities and considerations that require experienced, locally informed guidance.",
     localKnowledge: "Shoreline's housing stock is primarily mid-century ramblers and split-levels, many of which have been updated over the decades, alongside newer infill development near the light rail stations. The city's proximity to Seattle, strong school district, and evolving transit access all influence value. David Stein helps clients understand how Shoreline's transformation affects their specific property — whether it's near a station area or in one of the city's quieter residential pockets.",
   },
   burien: {
+    tone: "suburban",
     descriptor: "South Seattle neighbor with walkable downtown revival",
     heroIntro: "Burien has evolved from a quiet suburb into a community with a revitalized downtown core and diverse neighborhoods ranging from Three Tree Point's waterfront to Seahurst's hillside homes. For families navigating estate, probate, or transition property sales in Burien, the city's range of housing types and price points requires guidance that reflects actual neighborhood-level conditions.",
     localKnowledge: "Burien's neighborhoods include the waterfront enclave of Three Tree Point, the hillside homes of Seahurst with sound views, established residential areas near downtown, and properties along the 1st Avenue corridor. Each area carries different value drivers and buyer expectations. David Stein's appraisal background helps clients understand how these micro-market differences affect realistic pricing for estate and transition properties in Burien.",
   },
   "des-moines": {
+    tone: "waterfront",
     descriptor: "Waterfront community along the Puget Sound",
     heroIntro: "Des Moines offers waterfront living, marina access, and established neighborhoods with sound and mountain views along the Puget Sound coastline. For families handling estate sales or senior transitions in Des Moines, the community's view-oriented market and range of property ages create pricing considerations that benefit from experienced, condition-based analysis.",
     localKnowledge: "Des Moines' housing market includes waterfront properties along the sound, hillside homes with varying degrees of view, and established inland neighborhoods. The marina, Saltwater State Park, and waterfront character all contribute to the community's appeal. David Stein helps clients understand how proximity to the water, view quality, and property condition affect value in Des Moines — factors that automated estimates frequently misjudge.",
   },
   seatac: {
+    tone: "suburban",
     descriptor: "Airport-adjacent community with practical appeal",
     heroIntro: "SeaTac's proximity to Seattle-Tacoma International Airport creates a unique real estate environment where noise considerations, commercial zoning, and residential neighborhoods all coexist. For families managing estate or transition-related property in SeaTac, understanding how the airport's influence and the city's specific zoning affect property values is essential for realistic expectations and effective sale strategy.",
     localKnowledge: "SeaTac's housing market is compact and influenced by its airport-adjacent location. Properties vary significantly in value based on their proximity to flight paths, commercial zones, and the quieter residential pockets of the city. David Stein helps clients navigate SeaTac's unique market dynamics with honest, condition-based guidance that accounts for the factors specific to this community.",
   },
   tukwila: {
+    tone: "urban",
     descriptor: "Urban crossroads with commercial and residential diversity",
     heroIntro: "Tukwila sits at a crossroads of major highways and commercial districts while maintaining established residential neighborhoods that many families have called home for decades. For executors, heirs, and families managing property transitions in Tukwila, the city's commercial adjacency and diverse housing stock create specific valuation and positioning considerations.",
     localKnowledge: "Tukwila's residential areas include neighborhoods near Foster Point, Riverton Heights, and the hillside areas with views toward the Cascades. The city's commercial centers, light rail access, and proximity to major employers all influence buyer demographics. David Stein helps clients understand how Tukwila's unique position as both a commercial hub and residential community affects realistic property values.",
   },
   woodinville: {
+    tone: "rural",
     descriptor: "Wine country character with estate-style properties",
     heroIntro: "Woodinville is known for its wine country character, rural-residential neighborhoods, and properties that range from established homes near town to larger estate-style lots in the surrounding areas. For families navigating estate sales, senior transitions, or inherited property in Woodinville, the community's mix of suburban and rural-adjacent housing requires locally informed pricing and preparation guidance.",
     localKnowledge: "Woodinville's housing market includes everything from newer townhomes and condos near the town center to larger-lot properties and homes with acreage in the surrounding areas. The Sammamish River corridor, wine district proximity, and equestrian properties all create niche market segments. David Stein's appraisal credentials are especially valuable here, where property characteristics like land area, outbuildings, and rural features can meaningfully affect value.",
   },
   kenmore: {
+    tone: "waterfront",
     descriptor: "Lakeside community at the north end of Lake Washington",
     heroIntro: "Kenmore sits at the northern tip of Lake Washington, offering waterfront access, established neighborhoods, and the natural appeal of the Burke-Gilman Trail and Log Boom Park. For families managing estate or transition-related property in Kenmore, the community's lake-adjacent market and range of housing types require guidance that reflects local pricing dynamics.",
     localKnowledge: "Kenmore's housing includes waterfront and water-view properties along Lake Washington, established mid-century homes in the hillside neighborhoods, and newer developments near the city center. Proximity to the lake, trail access, and views all significantly influence value. David Stein helps Kenmore clients understand how these factors — combined with property condition — affect realistic market positioning.",
   },
   "maple-valley": {
+    tone: "suburban",
     descriptor: "Growing foothills community with family appeal",
     heroIntro: "Maple Valley has grown from a rural crossroads into a well-regarded family community in the foothills southeast of Renton. For families managing estate, probate, or transition properties in Maple Valley, the community's mix of newer planned developments and older established homes requires an approach that accounts for how location within the area and property characteristics affect value.",
     localKnowledge: "Maple Valley's housing ranges from newer construction in communities like Lakeland Hills to established homes on larger lots in the surrounding areas. The community's family-oriented character, proximity to trails and parks, and growing amenities all contribute to its appeal. David Stein helps clients understand how Maple Valley's growth trajectory and neighborhood differences affect realistic pricing for estate and transition properties.",
   },
   covington: {
+    tone: "suburban",
     descriptor: "Family-focused community in southeast King County",
     heroIntro: "Covington is a growing community in southeast King County known for its family-friendly neighborhoods, newer construction, and proximity to the Cascade foothills. For families handling estate or transition-related property in Covington, understanding how the city's predominantly newer housing stock and buyer expectations affect sale strategy is important for realistic positioning.",
     localKnowledge: "Covington's housing market is largely composed of homes built since the 1990s, many in planned subdivisions with HOA structures. The community's newer housing stock means estate and inherited properties may face different competitive dynamics than in older, more established neighborhoods. David Stein helps clients understand how condition, age, and community amenities affect value within Covington's specific market context.",
   },
   "black-diamond": {
+    tone: "smalltown",
     descriptor: "Small-town character with rural and master-planned living",
     heroIntro: "Black Diamond is a small community at the rural edge of southeast King County, combining historic small-town character with newer master-planned developments. For families managing estate or transition properties in Black Diamond, the community's mix of older homes, rural properties, and new construction creates a market where local knowledge is essential for accurate pricing.",
     localKnowledge: "Black Diamond's housing ranges from historic properties in the original town core to large-lot rural homes and newer construction in the Ten Trails master-planned community. The wide variety of property types — and the significant price differences between them — makes generic pricing tools unreliable. David Stein's appraisal credentials help clients understand how property type, lot size, and location within Black Diamond affect realistic market value.",
   },
   enumclaw: {
+    tone: "smalltown",
     descriptor: "Plateau community with mountain views and rural character",
     heroIntro: "Enumclaw sits on a plateau with striking views of Mount Rainier, combining small-town character with rural properties and established neighborhoods. For families managing estate or transition-related property in Enumclaw, the community's distinct market — influenced by its rural character, agricultural heritage, and distance from major employment centers — requires guidance grounded in local understanding.",
     localKnowledge: "Enumclaw's housing market includes homes in the walkable downtown area, established neighborhoods, and properties with acreage and mountain views in the surrounding plateau. The community's agricultural heritage means some properties include outbuildings, livestock facilities, or unique lot configurations. David Stein helps clients understand how these property characteristics and Enumclaw's specific buyer demographics affect realistic pricing.",
   },
   "north-bend": {
+    tone: "smalltown",
     descriptor: "Mountain gateway community along I-90",
     heroIntro: "North Bend is a gateway community to the Cascades, known for its mountain views, outdoor recreation access, and small-town character along the I-90 corridor. Estate, probate, and transition properties in North Bend often include unique features — mountain views, larger lots, or proximity to wilderness — that require locally informed valuation guidance.",
     localKnowledge: "North Bend's housing ranges from established homes near downtown and the historic area to newer developments and properties with mountain views and larger lots. The community's appeal to outdoor enthusiasts and those seeking a mountain-adjacent lifestyle creates specific buyer expectations. David Stein helps clients understand how North Bend's location, property characteristics, and niche buyer pool affect realistic pricing for estate and transition sales.",
   },
   snoqualmie: {
+    tone: "suburban",
     descriptor: "Falls community with planned neighborhoods and natural beauty",
     heroIntro: "Snoqualmie combines natural beauty — anchored by the iconic Snoqualmie Falls — with well-planned residential communities and strong family appeal. For families handling estate or transition-related property in Snoqualmie, the community's newer housing stock and specific buyer expectations require pricing and preparation strategies informed by local market conditions.",
     localKnowledge: "Snoqualmie's housing is predominantly newer, with many homes in master-planned communities like Snoqualmie Ridge. The community's reputation for natural beauty, family-friendly amenities, and outdoor access drives buyer interest. For estate and inherited properties, understanding how condition and age compare to the area's well-maintained housing stock is essential for realistic positioning. David Stein helps clients navigate these dynamics with clear, condition-based guidance.",
   },
   duvall: {
+    tone: "smalltown",
     descriptor: "Small-town riverside community in the Snoqualmie Valley",
     heroIntro: "Duvall is a small, tight-knit community along the Snoqualmie River, offering a rural-residential character that distinguishes it from more suburban Eastside cities. For families managing estate, probate, or transition properties in Duvall, the community's limited inventory, smaller-town dynamics, and range of property types — from modest homes to properties with acreage — require locally grounded guidance.",
     localKnowledge: "Duvall's housing market includes homes in the walkable town center, newer subdivisions, and larger rural properties along the valley. The community's small-town identity and agricultural surroundings create a market where buyer expectations differ from more urban areas. David Stein's appraisal background helps clients in Duvall understand how property size, rural features, and community character affect realistic valuation.",
@@ -209,92 +248,110 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
 
   // ── SNOHOMISH COUNTY ────────────────────────────────────────
   lynnwood: {
+    tone: "urban",
     descriptor: "Rapidly evolving with new light rail access",
     heroIntro: "Lynnwood is in the middle of a significant transformation, with light rail expansion bringing new development and shifting market dynamics. For families managing estate, probate, or senior transition properties in Lynnwood, this changing landscape creates both opportunities and challenges. Real Property Planning helps clients in Lynnwood understand how the city's evolution affects property values and develop sale strategies that reflect current and realistic market conditions.",
     localKnowledge: "Lynnwood's housing stock includes established ramblers and split-levels from the 1960s–80s, newer townhomes and condos near the city center, and properties in neighborhoods like Alderwood, Martha Lake, and North Lynnwood. The arrival of light rail is reshaping buyer interest in certain areas while leaving others relatively unchanged. David Stein's understanding of these micro-market shifts helps clients position estate and transition properties effectively.",
   },
   edmonds: {
+    tone: "waterfront",
     descriptor: "Charming waterfront community with historic character",
     heroIntro: "Edmonds is a waterfront community known for its walkable downtown, ferry access, and strong neighborhood character. Properties in Edmonds — from bowl-area homes with sound views to hillside residences and properties near Highway 99 — require locally informed guidance when the sale involves estate, probate, or transition circumstances. Real Property Planning understands the nuances that affect value throughout Edmonds.",
     localKnowledge: "Edmonds offers a wide range of property types and price points, from the desirable bowl area near downtown to Perrinville, Westgate, and Firdale. Waterfront proximity, views, walkability, and lot size all play meaningful roles in Edmonds pricing. David Stein's dual credentials help families selling estate or inherited property in Edmonds understand exactly where their home fits in this layered market and how to position it for the best possible outcome.",
     brokerAppraiserValue: "In Edmonds, view corridors, walking distance to the ferry and downtown, and neighborhood character can create wide value differences within a small geographic area. David Stein's appraisal background allows him to account for these micro-factors rather than relying on broad market comparisons that may miss what makes a specific Edmonds property more — or less — valuable.",
   },
   "mountlake-terrace": {
+    tone: "suburban",
     descriptor: "Light rail-connected community with lake recreation",
     heroIntro: "Mountlake Terrace is a compact residential community centered around its recreational lake and pool facility, with newer light rail service enhancing its appeal to commuters. For families managing estate or transition properties in Mountlake Terrace, the community's strong neighborhood identity and evolving transit-oriented development create specific market considerations that benefit from experienced guidance.",
     localKnowledge: "Mountlake Terrace's housing is predominantly mid-century — ramblers and split-levels from the 1960s and '70s — along with some newer construction near the town center and light rail station. The community's recreational facilities and tight-knit character drive consistent buyer interest. David Stein helps clients understand how condition, proximity to amenities, and the light rail's influence affect property values throughout the community.",
   },
   brier: {
+    tone: "suburban",
     descriptor: "Wooded residential enclave with larger lots",
     heroIntro: "Brier is a small, wooded residential community known for its larger lot sizes, privacy, and semi-rural character despite its proximity to Lynnwood, Mountlake Terrace, and Bothell. Estate and transition properties in Brier often feature mature landscaping, older construction, and lot sizes that distinguish them from surrounding areas — all factors that require careful, condition-based valuation.",
     localKnowledge: "Brier's housing stock tends toward older single-family homes on lots that are significantly larger than those in neighboring communities. The community's zoning protects its semi-rural character, which appeals to buyers seeking privacy and space. David Stein helps clients understand how Brier's unique lot sizes, mature landscaping, and residential character affect property values — factors that automated estimates often misjudge in a community this small.",
   },
   mukilteo: {
+    tone: "waterfront",
     descriptor: "Coastal community with Boeing and ferry influences",
     heroIntro: "Mukilteo is a small, close-knit community with waterfront appeal, ferry access to Whidbey Island, and a housing market influenced by its proximity to Boeing and Paine Field. For families handling estate or transition-related property in Mukilteo, the community's character and relatively limited housing inventory create specific market dynamics that benefit from experienced, local guidance.",
     localKnowledge: "Mukilteo's housing market is relatively compact, with established neighborhoods near the waterfront, properties in the Harbour Pointe master-planned community, and homes along the hillside with varying degrees of sound and mountain views. Because inventory is limited, positioning and pricing accuracy are especially important. David Stein helps clients understand how Mukilteo's unique characteristics affect value and buyer interest.",
   },
   everett: {
+    tone: "urban",
     descriptor: "County seat with waterfront revival and diverse neighborhoods",
     heroIntro: "As Snohomish County's largest city, Everett offers a diverse housing landscape — from the revitalizing waterfront and Port Gardner district to established neighborhoods in North Everett, Silver Lake, and Lowell. Families and executors managing property transitions in Everett need guidance that accounts for the city's wide range of property types, price points, and neighborhood trajectories.",
     localKnowledge: "Everett's neighborhoods vary significantly in character and value — from the grand historic homes on Grand and Rucker to mid-century ramblers, newer developments near Silver Lake, and waterfront condos on the Port Gardner peninsula. David Stein's experience across Everett's submarkets helps clients understand which areas are appreciating, where buyer demand is strongest, and how to position an estate or inherited property given its specific location and condition.",
   },
   "mill-creek": {
+    tone: "suburban",
     descriptor: "Master-planned community with strong family appeal",
     heroIntro: "Mill Creek is a well-regarded master-planned community known for its maintained common areas, strong schools, and family-friendly character. Estate, probate, and senior transition properties in Mill Creek benefit from guidance that understands the community's HOA considerations, buyer expectations, and how condition affects value within a market that tends to attract families seeking move-in-ready homes.",
     localKnowledge: "Mill Creek's housing includes a range of single-family homes, townhomes, and condos within its planned community framework. The town center, country club, and trail system all contribute to Mill Creek's appeal. When selling an estate or inherited property here, understanding HOA requirements and how the property compares to recently updated homes in the community is essential for realistic pricing.",
   },
   "bothell-snohomish": {
+    tone: "suburban",
     descriptor: "Snohomish County side of the Bothell community",
     heroIntro: "The Snohomish County portion of Bothell includes neighborhoods near Canyon Park, the University of Washington Bothell campus, and established residential areas along the city's northern edge. For families managing estate or transition-related property in this area, understanding how the Snohomish County side of Bothell differs in market dynamics from the King County side is important for accurate positioning.",
     localKnowledge: "Bothell's Snohomish County neighborhoods include Canyon Park, North Creek, and areas near the UW Bothell campus, with housing ranging from older ramblers to newer townhome and condo developments. The area's proximity to the Mill Creek community and its commercial corridors influence buyer interest and demographics. David Stein helps clients understand these local dynamics for estate and transition properties.",
   },
   "woodinville-snohomish": {
+    tone: "rural",
     descriptor: "Wine country living in Snohomish County",
     heroIntro: "The Snohomish County portion of the Woodinville area includes properties near the wine district, rural-residential neighborhoods, and newer developments. For families managing estate or transition-related property in this area, understanding how wine country proximity, lot sizes, and rural character affect value is important for realistic pricing.",
     localKnowledge: "Properties in the Snohomish County Woodinville area range from estate-style homes near the wine district to rural properties with acreage and newer suburban developments. David Stein's appraisal background helps clients in this area understand how the blend of rural, suburban, and wine-country characteristics affects property values.",
   },
   snohomish: {
+    tone: "smalltown",
     descriptor: "Historic small-town character with rural and estate properties",
     heroIntro: "The city of Snohomish — often called the 'Antique Capital of the Northwest' — combines historic small-town character with larger-lot properties and rural-adjacent living. Estate, inherited, and transition properties in Snohomish often include unique features like acreage, older construction, or outbuildings that require specialized pricing and preparation knowledge.",
     localKnowledge: "Snohomish's housing market includes historic homes in the walkable downtown, newer subdivisions, and larger properties with acreage on the outskirts. The rural and semi-rural character of many Snohomish properties means that standard urban comparisons often fall short. David Stein's appraisal background is especially valuable here, where property features like land, outbuildings, and access can meaningfully affect value.",
   },
   "lake-stevens": {
+    tone: "suburban",
     descriptor: "Lakeside community with rapid residential growth",
     heroIntro: "Lake Stevens has experienced significant growth in recent years, transforming from a rural lake community into one of Snohomish County's most active residential markets. For families managing estate or transition-related property in Lake Stevens, the community's rapid evolution means property values and buyer expectations may have shifted significantly from when the home was originally purchased.",
     localKnowledge: "Lake Stevens' housing ranges from established homes near the lake and the original town center to newer construction in rapidly developing subdivisions throughout the community. The lake itself remains a major amenity and value driver, but distance from the water creates meaningful price variations. David Stein helps clients understand how Lake Stevens' growth trajectory and property-specific characteristics affect realistic market positioning.",
   },
   marysville: {
+    tone: "suburban",
     descriptor: "Growing north Snohomish County community",
     heroIntro: "Marysville has grown into one of the largest and most active communities in northern Snohomish County, with established neighborhoods near downtown and newer developments extending toward the surrounding rural areas. For families managing estate, probate, or transition properties in Marysville, the city's range of housing types and price points requires practical, locally informed guidance.",
     localKnowledge: "Marysville's housing market includes older homes in the Ebey Waterfront and downtown areas, mid-range suburban developments, and newer construction on the city's expanding edges. The I-5 corridor's accessibility and the community's affordability relative to the Eastside and Seattle drive buyer interest. David Stein helps clients navigate Marysville's market dynamics and position estate or transition properties realistically.",
   },
   arlington: {
+    tone: "smalltown",
     descriptor: "Small-city character where suburban meets rural",
     heroIntro: "Arlington combines small-city amenities with proximity to rural Snohomish County and the Cascade foothills. Estate, inherited, and transition properties in Arlington often feature larger lots, older construction, or rural characteristics that require specialized understanding for accurate pricing and effective sale coordination.",
     localKnowledge: "Arlington's housing includes established homes in the downtown area, suburban developments, and properties with acreage in the surrounding areas toward Darrington and the foothills. The community's balance of small-city accessibility and rural character creates a market where property features like land size, outbuildings, and road access meaningfully affect value. David Stein's appraisal credentials help Arlington clients understand these dynamics.",
   },
   monroe: {
+    tone: "smalltown",
     descriptor: "Gateway to the Skykomish Valley with diverse housing",
     heroIntro: "Monroe serves as a gateway between the suburban communities of Snohomish County and the Skykomish Valley, offering a mix of established neighborhoods, newer developments, and rural properties. For families managing estate or transition properties in Monroe, the community's position along the US-2 corridor and its range of housing types create specific market considerations.",
     localKnowledge: "Monroe's housing ranges from homes near the historic downtown and fairgrounds to newer subdivisions and larger rural properties along the valley. The community's accessibility via US-2, its proximity to both employment centers and outdoor recreation, and its range of property sizes all influence buyer demographics. David Stein helps Monroe clients understand how these factors affect value for estate and transition properties.",
   },
   stanwood: {
+    tone: "smalltown",
     descriptor: "Stillaguamish delta community near Camano Island",
     heroIntro: "Stanwood is a small, welcoming community near the Stillaguamish River delta and Camano Island, known for its rural character, farmland views, and proximity to the coast. Estate and transition properties in Stanwood often feature larger lots, agricultural connections, or older construction that benefits from valuation guidance grounded in the area's specific market.",
     localKnowledge: "Stanwood's housing market includes established homes near downtown, rural properties with acreage and farmland views, and newer developments. The community's proximity to Camano Island and its agricultural heritage create a niche market where standard suburban comparisons may not apply. David Stein helps clients understand how Stanwood's rural character and limited inventory affect realistic property pricing.",
   },
   sultan: {
+    tone: "smalltown",
     descriptor: "Sky Valley community with mountain access",
     heroIntro: "Sultan is a small community along the Skykomish River in the Sky Valley, offering affordable housing, mountain access, and a rural character that appeals to buyers seeking distance from urban density. For families managing estate or transition properties in Sultan, the community's smaller market and unique property types require locally informed guidance.",
     localKnowledge: "Sultan's housing includes established homes near town, properties with acreage along the river corridor, and newer construction. The community's position along US-2 and its proximity to both Stevens Pass recreation and Snohomish County employment centers influence buyer interest. David Stein helps Sultan clients understand how the community's niche market dynamics affect realistic property values.",
   },
   "gold-bar": {
+    tone: "rural",
     descriptor: "Rural mountain community along the Skykomish River",
     heroIntro: "Gold Bar is a small rural community along the Skykomish River, known for its proximity to Wallace Falls State Park and the Cascade foothills. Estate and transition properties in Gold Bar often include unique characteristics — river access, mountain views, larger acreage, or rustic construction — that require specialized valuation understanding.",
     localKnowledge: "Gold Bar's housing market is limited in inventory and includes a mix of older cabins, established homes, and newer construction, many with larger lots or river proximity. The community's rural character and distance from major employment centers create specific buyer demographics. David Stein's appraisal credentials help clients understand how Gold Bar's unique property types and small-market dynamics affect realistic pricing.",
   },
   "granite-falls": {
+    tone: "rural",
     descriptor: "Cascade foothills community with natural surroundings",
     heroIntro: "Granite Falls is a small community at the edge of the Cascade foothills in eastern Snohomish County, offering an affordable, nature-oriented lifestyle. For families managing estate or transition properties in Granite Falls, the community's rural character, limited comparable sales, and range of property types require experienced, condition-based valuation guidance.",
     localKnowledge: "Granite Falls' housing includes homes in the established town center, rural properties with acreage, and homes near the Mountain Loop Highway corridor. The community's small size means limited comparable sales, making professional valuation especially important. David Stein helps Granite Falls clients navigate pricing with the careful, property-specific analysis that this unique market requires.",
@@ -302,6 +359,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
 
   // ── PIERCE COUNTY ───────────────────────────────────────────
   tacoma: {
+    tone: "urban",
     descriptor: "Growing urban market with neighborhood diversity",
     heroIntro: "Tacoma has emerged as one of the most dynamic real estate markets in Pierce County, with neighborhoods ranging from the historic Stadium District and North End to the waterfront communities of Ruston and Point Defiance. For families and fiduciaries navigating estate, probate, or senior transition sales in Tacoma, the city's neighborhood diversity and growth trajectory make experienced, local guidance essential.",
     localKnowledge: "Tacoma's neighborhoods each carry distinct market dynamics — the North End's established homes, Stadium District's architectural character, South Tacoma's affordability, and the waterfront communities' premium positioning. David Stein's understanding of how these submarkets behave helps clients avoid the mistake of treating Tacoma as a single market. For estate and inherited properties, knowing which neighborhood factors drive — or limit — buyer interest is critical to realistic pricing.",
@@ -314,86 +372,103 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     ],
   },
   "university-place": {
+    tone: "suburban",
     descriptor: "Established residential community near Tacoma",
     heroIntro: "University Place is a well-maintained residential community adjacent to Tacoma, known for its quality neighborhoods, Chambers Bay golf course, and access to Puget Sound waterfront. Families and fiduciaries managing property transitions in University Place benefit from guidance that reflects the community's strong neighborhood character and the specific expectations of buyers drawn to this area.",
     localKnowledge: "University Place offers a mix of established single-family homes, newer developments, and properties near Chambers Bay and the waterfront. The community's appeal lies in its combination of residential character, proximity to Tacoma's amenities, and access to outdoor recreation. For estate and transition properties, understanding how condition compares to the area's well-maintained housing stock is key to effective pricing.",
   },
   lakewood: {
+    tone: "military",
     descriptor: "Diverse community near Joint Base Lewis-McChord",
     heroIntro: "Lakewood's proximity to Joint Base Lewis-McChord, its diverse neighborhoods, and its range of housing types — from lakefront properties to established suburban homes — create a real estate market with specific dynamics. For families and executors managing estate or transition-related property in Lakewood, understanding how military influence, neighborhood differences, and property condition affect value is essential.",
     localKnowledge: "Lakewood's housing market includes lakefront properties on American Lake and Gravelly Lake, established neighborhoods in the Tillicum and Springbrook areas, and a range of housing types throughout the city. The military presence at JBLM affects buyer demographics and rental demand in ways that influence both pricing strategy and marketing approach. David Stein's experience helps clients navigate these considerations with clarity.",
   },
   puyallup: {
+    tone: "suburban",
     descriptor: "Established family community in the valley",
     heroIntro: "Puyallup is a well-established community in the Puyallup Valley, known for its historic downtown, family neighborhoods, and strong sense of community. For families managing estate sales, senior transitions, or inherited property in Puyallup, the process benefits from a broker who understands the valley's housing stock, buyer demographics, and how condition and location affect value in this market.",
     localKnowledge: "Puyallup's housing ranges from older homes near downtown and South Hill to newer developments in the surrounding areas. The valley's agricultural heritage means some properties come with unique lot characteristics, outbuildings, or zoning considerations. David Stein helps clients in Puyallup understand how these factors — along with condition, school proximity, and neighborhood context — affect realistic pricing and buyer interest.",
   },
   "gig-harbor": {
+    tone: "waterfront",
     descriptor: "Waterfront peninsula community with premium appeal",
     heroIntro: "Gig Harbor's waterfront charm, small-town atmosphere, and proximity to Tacoma and the Narrows Bridge have made it one of Pierce County's most desirable communities. Estate and transition properties in Gig Harbor — whether on the harbor itself, in the established neighborhoods of the peninsula, or in newer developments like Gig Harbor North — require pricing and preparation strategies informed by the area's unique buyer expectations.",
     localKnowledge: "Gig Harbor's market ranges from waterfront properties and historic harbor-area homes to newer construction in master-planned communities. The distinction between 'Gig Harbor proper' and surrounding unincorporated areas matters to buyers, and view properties, waterfront access, and proximity to downtown all significantly affect value. David Stein's appraisal credentials help clients understand these nuances rather than relying on broad averages.",
   },
   fircrest: {
+    tone: "suburban",
     descriptor: "Small residential enclave near Tacoma",
     heroIntro: "Fircrest is a small, well-maintained residential community surrounded by Tacoma and University Place, known for its tree-lined streets, community parks, and quiet, family-oriented character. Estate and transition properties in Fircrest benefit from its strong neighborhood identity, but accurate pricing requires understanding how this compact community's specific appeal affects buyer demand.",
     localKnowledge: "Fircrest's housing is predominantly mid-century single-family homes on well-maintained lots. The community's small size and consistent character mean that property condition and updates are especially visible factors in pricing. David Stein helps Fircrest clients understand how their property compares within this tight-knit community and how to position it effectively for the local buyer pool.",
   },
   steilacoom: {
+    tone: "waterfront",
     descriptor: "Historic waterfront town with military proximity",
     heroIntro: "Steilacoom is Washington's oldest incorporated town, offering historic charm, Puget Sound waterfront, and a quiet residential character near Joint Base Lewis-McChord. For families managing estate or transition properties in Steilacoom, the town's historic significance, waterfront access, and small-market dynamics create pricing considerations that benefit from experienced, locally informed guidance.",
     localKnowledge: "Steilacoom's housing includes historic homes near downtown and the waterfront, established mid-century properties, and homes with sound views. The town's historic character and proximity to JBLM influence both buyer demographics and property regulations. David Stein helps clients navigate Steilacoom's unique market with the property-specific analysis this historic community requires.",
   },
   "bonney-lake": {
+    tone: "suburban",
     descriptor: "Growing plateau community east of Tacoma",
     heroIntro: "Bonney Lake is a growing community on the plateau east of Tacoma and Puyallup, with newer developments, mountain views, and an expanding commercial center. For families managing estate or transition-related property in Bonney Lake, the community's newer housing stock and growing buyer interest create specific market dynamics that require practical, informed guidance.",
     localKnowledge: "Bonney Lake's housing is predominantly newer, with many homes built since the 1990s in planned subdivisions. The community's mountain views, growing amenities, and relative affordability compared to west-side communities drive buyer interest. David Stein helps clients understand how property age, condition, and location within Bonney Lake's expanding boundaries affect realistic market value.",
   },
   sumner: {
+    tone: "smalltown",
     descriptor: "Valley community with historic downtown character",
     heroIntro: "Sumner is a small community in the Puyallup Valley known for its historic downtown, residential neighborhoods, and connection to the valley's agricultural heritage. For families managing estate or transition properties in Sumner, the community's compact market and range of property ages require locally grounded pricing and preparation guidance.",
     localKnowledge: "Sumner's housing includes established homes near downtown, newer construction on the edges of the city, and properties influenced by the valley's agricultural context. The community's small-town character and proximity to Puyallup and Auburn create a buyer pool with specific expectations. David Stein helps Sumner clients position estate and transition properties realistically within this local context.",
   },
   orting: {
+    tone: "smalltown",
     descriptor: "Small valley town with mountain views and rural charm",
     heroIntro: "Orting is a small town in the Carbon River valley, offering mountain views, rural charm, and affordable housing relative to other Pierce County communities. For families managing estate or transition properties in Orting, the community's smaller market, lahar zone considerations, and range of property types require honest, condition-based guidance.",
     localKnowledge: "Orting's housing ranges from established homes near the town center to newer developments and properties with rural characteristics. The community's position in the Carbon River valley and its relationship to Mount Rainier lahar zones are factors that informed buyers consider. David Stein helps Orting clients understand how these unique local factors affect realistic property values and buyer interest.",
   },
   spanaway: {
+    tone: "military",
     descriptor: "Unincorporated community with military influence",
     heroIntro: "Spanaway is an unincorporated community south of Tacoma near Joint Base Lewis-McChord, offering affordable housing and access to Spanaway Lake Park. For families managing estate or transition-related property in Spanaway, understanding how the area's military-influenced buyer demographics and diverse housing stock affect value is important for realistic expectations.",
     localKnowledge: "Spanaway's housing includes established ramblers, manufactured homes, newer construction, and properties near Spanaway Lake. The community's proximity to JBLM significantly influences buyer demographics and rental demand. David Stein helps clients understand how Spanaway's specific market dynamics — including military-related demand and the area's range of property types — affect realistic pricing for estate and transition properties.",
   },
   graham: {
+    tone: "rural",
     descriptor: "Rural-suburban community in eastern Pierce County",
     heroIntro: "Graham is an unincorporated community in eastern Pierce County, offering rural-suburban living with larger lots, mountain views, and agricultural character. For families managing estate or transition properties in Graham, the community's rural property types and distance from urban centers create specific valuation considerations.",
     localKnowledge: "Graham's housing ranges from established homes on larger lots to newer subdivisions and properties with acreage, outbuildings, and agricultural uses. The community's rural character means property features like land area, well and septic systems, and road access meaningfully affect value. David Stein's appraisal credentials help Graham clients understand how these rural-specific factors influence realistic property pricing.",
   },
   dupont: {
+    tone: "military",
     descriptor: "Master-planned community near JBLM with historic roots",
     heroIntro: "DuPont is a distinctive master-planned community near Joint Base Lewis-McChord, built around a historic village core and designed with traditional neighborhood principles. For families managing estate or transition properties in DuPont, the community's HOA structure, planned character, and military-adjacent buyer demographics create specific market considerations.",
     localKnowledge: "DuPont's housing is predominantly within its master-planned community framework, with a range of home sizes and styles designed around the historic village core. The community's HOA requirements, proximity to JBLM and I-5, and planned amenities all influence buyer expectations. David Stein helps DuPont clients understand how the community's structured environment affects pricing and sale strategy for estate and transition properties.",
   },
   fife: {
+    tone: "suburban",
     descriptor: "Compact community at the I-5 and Port of Tacoma crossroads",
     heroIntro: "Fife is a compact community situated at the intersection of I-5 and the Port of Tacoma, with a mix of residential neighborhoods and commercial development. For families managing estate or transition-related property in Fife, the community's unique position and relatively limited residential inventory create market dynamics that benefit from honest, experienced guidance.",
     localKnowledge: "Fife's residential areas are relatively compact, with established neighborhoods surrounded by commercial and industrial zones. The community's location along major transportation corridors and proximity to Tacoma and Federal Way influence buyer demographics. David Stein helps Fife clients navigate the community's specific market dynamics with clear, condition-based guidance.",
   },
   milton: {
+    tone: "suburban",
     descriptor: "Small residential community spanning King and Pierce Counties",
     heroIntro: "Milton is a small residential community that spans the King-Pierce County line, offering quiet neighborhoods and a community-oriented character. For families managing estate or transition properties in Milton, the community's compact size and cross-county position create specific market considerations that benefit from locally informed pricing guidance.",
     localKnowledge: "Milton's housing is primarily established single-family homes in a compact residential setting. The community's position across two counties and its proximity to Edgewood, Federal Way, and Fife influence comparable sales and buyer demographics. David Stein helps Milton clients understand how these cross-boundary dynamics and the community's small-market character affect realistic property values.",
   },
   edgewood: {
+    tone: "rural",
     descriptor: "Semi-rural community with larger lots and valley views",
     heroIntro: "Edgewood is a semi-rural residential community east of Milton and south of Puyallup, known for its larger lots, valley views, and quiet character. Estate and transition properties in Edgewood often feature acreage or larger-lot characteristics that distinguish them from more suburban communities in the area.",
     localKnowledge: "Edgewood's housing tends toward larger-lot single-family homes with a rural-residential feel, along with some newer development. The community's zoning protects its semi-rural character, which appeals to buyers seeking space and privacy. David Stein helps clients understand how Edgewood's distinctive lot sizes and residential character affect property values — factors that generic pricing tools often undervalue.",
   },
   buckley: {
+    tone: "smalltown",
     descriptor: "Foothills town near Mount Rainier corridor",
     heroIntro: "Buckley is a small community at the gateway to the Mount Rainier corridor, combining small-town character with proximity to the Cascades. For families managing estate or transition-related property in Buckley, the community's smaller market, rural characteristics, and specific buyer demographics require experienced, locally grounded guidance.",
     localKnowledge: "Buckley's housing includes established homes near the town center, newer developments, and properties with rural features including larger lots and mountain proximity. The community's position along the SR-410 corridor toward Mount Rainier influences buyer interest and demographics. David Stein helps Buckley clients understand how these local factors affect realistic property pricing.",
   },
   eatonville: {
+    tone: "rural",
     descriptor: "Rural gateway to Mount Rainier National Park",
     heroIntro: "Eatonville is a small, rural community that serves as one of the gateways to Mount Rainier National Park. For families managing estate or transition properties in Eatonville, the community's remote character, limited comparable sales, and range of rural property types require honest, condition-based valuation that accounts for the area's specific market dynamics.",
     localKnowledge: "Eatonville's housing ranges from established homes near the compact town center to rural properties with acreage and mountain access. The community's tourism connection to Mount Rainier and its agricultural character create a niche buyer pool. David Stein helps Eatonville clients understand how the community's rural character and limited market activity affect realistic property values.",
@@ -401,21 +476,25 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
 
   // ── KITSAP COUNTY ───────────────────────────────────────────
   bremerton: {
+    tone: "military",
     descriptor: "Naval city with revitalizing waterfront and diverse housing",
     heroIntro: "Bremerton is experiencing a notable revitalization, with its waterfront, ferry terminal, and downtown district attracting renewed interest. The city's housing market — from historic homes in Manette to newer waterfront condos and established neighborhoods throughout — offers a wide range of price points and property types. For families managing estate, probate, or transition sales in Bremerton, understanding the city's evolving market is key to making well-informed decisions.",
     localKnowledge: "Bremerton's neighborhoods range from the revitalizing downtown and waterfront to Manette's established community character, the Naval Avenue area, and surrounding residential neighborhoods. The city's connection to Seattle via Washington State Ferries and the presence of Puget Sound Naval Shipyard both influence buyer demographics and market activity. David Stein's experience helps clients understand how Bremerton's ongoing transformation affects property values and sale strategy.",
   },
   silverdale: {
+    tone: "military",
     descriptor: "Central Kitsap's commercial and residential hub",
     heroIntro: "Silverdale serves as Central Kitsap's primary commercial and residential center, with housing that ranges from newer developments in Ridgetop and Clear Creek to established neighborhoods throughout the community. For families managing estate, probate, or transition properties in Silverdale, understanding how this unincorporated community's market dynamics and proximity to Naval Base Kitsap affect value is important for making sound decisions.",
     localKnowledge: "Silverdale's housing market includes newer construction in planned communities, established ramblers and split-levels, and properties with varying degrees of access to waterfront and natural areas. The community's role as Central Kitsap's hub and the influence of nearby military installations create a buyer pool with specific characteristics. David Stein helps clients understand how these factors affect realistic pricing for estate and inherited properties.",
   },
   poulsbo: {
+    tone: "waterfront",
     descriptor: "Scandinavian-influenced waterfront community",
     heroIntro: "Poulsbo's Scandinavian heritage, Liberty Bay waterfront, and small-town charm create a distinctive community with strong appeal for families and retirees. Estate and transition properties in Poulsbo — whether in the historic waterfront area, nearby established neighborhoods, or outlying rural properties — benefit from guidance that reflects the community's unique character and the expectations of buyers drawn to this area.",
     localKnowledge: "Poulsbo's housing ranges from historic homes near the waterfront and downtown to newer developments and larger rural properties in the surrounding area. Waterfront access, Liberty Bay views, and proximity to downtown all significantly influence value. David Stein's appraisal credentials are particularly valuable in Poulsbo, where the range of property types and the community's distinctive character make generic pricing approaches unreliable.",
   },
   "bainbridge-island": {
+    tone: "premium",
     descriptor: "Island community with Seattle ferry access and premium values",
     heroIntro: "Bainbridge Island offers a rare combination of island living, artistic community character, and daily ferry access to downtown Seattle. The island's real estate market is premium and distinctive — estate, probate, and transition properties here involve specific considerations around island logistics, waterfront valuation, and the expectations of a buyer pool that prioritizes lifestyle and community over conventional suburban amenities.",
     localKnowledge: "Bainbridge Island's housing market includes everything from modest cottages and island-style homes to waterfront estates and rural acreage. The island's limited inventory, ferry-dependent access, and strong community identity create pricing dynamics unlike any other market in the Puget Sound region. David Stein's appraisal background is especially valuable here, where automated estimates frequently miss the premium that island location, waterfront access, and community character command.",
@@ -429,31 +508,37 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     ],
   },
   "port-orchard": {
+    tone: "waterfront",
     descriptor: "South Kitsap community with waterfront and established neighborhoods",
     heroIntro: "Port Orchard's combination of Sinclair Inlet waterfront, established residential neighborhoods, and proximity to Naval Base Kitsap creates a real estate market with specific local dynamics. Families and executors managing property transitions in Port Orchard benefit from guidance that accounts for the community's diverse housing stock and the factors that drive value in South Kitsap.",
     localKnowledge: "Port Orchard includes waterfront properties along Sinclair Inlet, established neighborhoods in the city center, and newer developments in surrounding South Kitsap. The area's military influence, ferry access to Bremerton and beyond, and range of property types create a market where local knowledge is essential for accurate pricing. David Stein helps clients understand how these Port Orchard-specific factors affect their property's realistic market position.",
   },
   kingston: {
+    tone: "waterfront",
     descriptor: "Ferry-served community on the north Kitsap Peninsula",
     heroIntro: "Kingston is a small community on the northern tip of the Kitsap Peninsula, served by the Kingston-Edmonds ferry and known for its village character and waterfront access. For families managing estate or transition-related property in Kingston, the community's ferry-dependent connectivity, limited inventory, and range of waterfront to inland properties create specific valuation considerations.",
     localKnowledge: "Kingston's housing includes properties near the ferry terminal and village center, waterfront homes along Appletree Cove, and established residential areas extending into the surrounding hills. The community's ferry connection to Edmonds and its small-town character attract a specific buyer demographic. David Stein helps Kingston clients understand how ferry access, waterfront proximity, and the community's limited market size affect realistic property pricing.",
   },
   suquamish: {
+    tone: "smalltown",
     descriptor: "Tribal community with waterfront character on Agate Passage",
     heroIntro: "Suquamish is a small community on Agate Passage with deep historical roots, waterfront access, and a quiet residential character. For families managing estate or transition properties in Suquamish, the community's compact size, waterfront dynamics, and specific local considerations require experienced, condition-based guidance.",
     localKnowledge: "Suquamish's housing includes waterfront and water-view properties along Agate Passage and Port Madison, along with established homes in the community's residential areas. The community's historical significance, proximity to Bainbridge Island and Poulsbo, and limited inventory create a niche market. David Stein helps Suquamish clients navigate these local factors with honest, property-specific pricing guidance.",
   },
   manchester: {
+    tone: "waterfront",
     descriptor: "Quiet waterfront community on Rich Passage",
     heroIntro: "Manchester is a small, unincorporated waterfront community on Rich Passage in South Kitsap, offering quiet residential living, waterfront access, and proximity to the Manchester State Park. For families managing estate or transition properties in Manchester, the community's limited inventory and waterfront-influenced market create specific pricing dynamics.",
     localKnowledge: "Manchester's housing includes waterfront and water-view properties along Rich Passage, along with established homes in the hillside residential areas. The community's small size, state park proximity, and ferry-accessible location between Bremerton and Southworth influence buyer interest. David Stein helps Manchester clients understand how waterfront access, community character, and limited comparable sales affect realistic property values.",
   },
   seabeck: {
+    tone: "rural",
     descriptor: "Rural waterfront community on Hood Canal",
     heroIntro: "Seabeck is a small, rural community on Hood Canal in western Kitsap County, known for its waterfront setting, natural surroundings, and distance from urban centers. Estate and transition properties in Seabeck often feature waterfront access, larger lots, or rustic construction that require specialized valuation understanding for this unique market.",
     localKnowledge: "Seabeck's housing ranges from waterfront cabins and homes along Hood Canal to rural residential properties in the surrounding wooded areas. The community's remote character and limited comparable sales make professional valuation especially important. David Stein's appraisal credentials help Seabeck clients understand how waterfront access, property condition, and the area's niche buyer pool affect realistic market value.",
   },
   hansville: {
+    tone: "rural",
     descriptor: "Remote peninsula tip with lighthouse and waterfront appeal",
     heroIntro: "Hansville is a small, secluded community at the northern tip of the Kitsap Peninsula, known for Point No Point Lighthouse and its quiet, waterfront-oriented character. For families managing estate or transition properties in Hansville, the community's remote location, limited inventory, and waterfront-driven market create valuation considerations that require experienced, locally informed guidance.",
     localKnowledge: "Hansville's housing includes waterfront and water-view properties overlooking Puget Sound and Admiralty Inlet, along with established homes and cabins in the wooded areas of the community. The area's remote character and seasonal appeal create a buyer pool with specific expectations. David Stein helps Hansville clients understand how the community's unique location and limited market activity affect realistic property pricing.",
@@ -938,5 +1023,127 @@ export function getCityServiceScenarios(cityName: string, serviceName: string, s
         `Legal, fiduciary, or family timelines that require thoughtful coordination`,
         `Out-of-area family members who need someone local to manage the ${serviceName.toLowerCase()} process on their behalf`,
       ];
+  }
+}
+
+// ─── Tone-aware template language ──────────────────────────────────────
+
+/** Tone-aware section heading for scenarios */
+export function getToneScenariosHeading(cityName: string, serviceName: string, tone?: CommunityTone): string {
+  switch (tone) {
+    case "premium":
+      return `When ${cityName} Clients Seek ${serviceName} Guidance`;
+    case "urban":
+      return `Common ${serviceName} Situations in ${cityName}`;
+    case "waterfront":
+      return `When ${cityName} Families Turn to ${serviceName}`;
+    case "smalltown":
+      return `How ${serviceName} Comes Up in ${cityName}`;
+    case "military":
+      return `When ${cityName} Families Need ${serviceName}`;
+    case "rural":
+      return `${serviceName} Situations in the ${cityName} Area`;
+    default:
+      return `When ${cityName} Clients Need ${serviceName}`;
+  }
+}
+
+/** Tone-aware lead-in paragraph for scenarios section */
+export function getToneScenariosLead(cityName: string, serviceName: string, tone?: CommunityTone): string {
+  switch (tone) {
+    case "premium":
+      return `In a market like ${cityName}, ${serviceName.toLowerCase()} situations often involve significant property values and complex family or legal dynamics. Clients typically reach out when facing circumstances such as:`;
+    case "urban":
+      return `${cityName}'s diverse neighborhoods and fast-moving market mean ${serviceName.toLowerCase()} situations can take many forms. Common scenarios include:`;
+    case "waterfront":
+      return `In a community like ${cityName}, property transitions carry personal significance alongside financial weight. Families often seek ${serviceName.toLowerCase()} guidance when they encounter:`;
+    case "smalltown":
+      return `In a close-knit community like ${cityName}, real estate decisions are often deeply personal. Families and individuals typically seek ${serviceName.toLowerCase()} support when facing:`;
+    case "military":
+      return `Families in ${cityName} — including those connected to nearby military installations — often need ${serviceName.toLowerCase()} guidance when life circumstances change. Common situations include:`;
+    case "rural":
+      return `Properties in the ${cityName} area often have unique characteristics — acreage, outbuildings, or rural features — that make ${serviceName.toLowerCase()} situations more nuanced. Clients typically reach out when facing:`;
+    default:
+      return `Clients in ${cityName} often seek ${serviceName.toLowerCase()} guidance when facing situations such as:`;
+  }
+}
+
+/** Tone-aware heading for how-we-help section */
+export function getToneHowWeHelpHeading(tone?: CommunityTone): string {
+  switch (tone) {
+    case "premium":
+      return "How Real Property Planning Serves You";
+    case "urban":
+      return "What Real Property Planning Provides";
+    case "waterfront":
+      return "How Real Property Planning Supports Your Transition";
+    case "smalltown":
+      return "How David Stein Helps";
+    case "military":
+      return "How Real Property Planning Can Help";
+    case "rural":
+      return "How David Stein Works with You";
+    default:
+      return "How Real Property Planning Helps";
+  }
+}
+
+/** Tone-aware lead-in for how-we-help section */
+export function getToneHowWeHelpLead(cityName: string, serviceName: string, tone?: CommunityTone): string {
+  switch (tone) {
+    case "premium":
+      return `David Stein brings over twenty years of experience and dual credentials — licensed broker and certified appraiser — to every ${serviceName.toLowerCase()} engagement in ${cityName}:`;
+    case "urban":
+      return `David Stein provides experienced coordination and valuation-informed guidance tailored to ${cityName}'s market:`;
+    case "waterfront":
+      return `David Stein brings careful, locally informed guidance to every ${serviceName.toLowerCase()} situation in ${cityName}:`;
+    case "smalltown":
+      return `David Stein provides steady, hands-on guidance through every step of the ${serviceName.toLowerCase()} process:`;
+    case "military":
+      return `David Stein provides clear, practical guidance for ${serviceName.toLowerCase()} situations in ${cityName}:`;
+    case "rural":
+      return `David Stein provides honest, property-specific guidance for ${serviceName.toLowerCase()} in the ${cityName} area:`;
+    default:
+      return `David Stein provides hands-on coordination and valuation-informed guidance for every ${serviceName.toLowerCase()} engagement:`;
+  }
+}
+
+/** Tone-aware CTA heading */
+export function getToneCTAHeading(cityName: string, serviceName: string, tone?: CommunityTone): string {
+  switch (tone) {
+    case "premium":
+      return `Ready to Discuss Your ${cityName} Property?`;
+    case "urban":
+      return `Need ${serviceName} Help in ${cityName}?`;
+    case "waterfront":
+      return `Let's Talk About Your ${cityName} Property`;
+    case "smalltown":
+      return `Ready to Take the Next Step?`;
+    case "military":
+      return `Need ${serviceName} Guidance in ${cityName}?`;
+    case "rural":
+      return `Let's Discuss Your Property`;
+    default:
+      return `Need ${serviceName} Help in ${cityName}?`;
+  }
+}
+
+/** Tone-aware CTA body */
+export function getToneCTABody(cityName: string, tone?: CommunityTone): string {
+  switch (tone) {
+    case "premium":
+      return `Schedule a confidential consultation to discuss your ${cityName} property and explore your options.`;
+    case "urban":
+      return `Schedule a consultation to discuss your ${cityName} property situation and next steps.`;
+    case "waterfront":
+      return `Reach out for a conversation about your property and what the process looks like from here.`;
+    case "smalltown":
+      return `Contact David directly to discuss your situation — there is no pressure and no obligation.`;
+    case "military":
+      return `Schedule a consultation to discuss your ${cityName} property — David works with families across the area.`;
+    case "rural":
+      return `Reach out to discuss your property. David is happy to talk through your situation and answer questions.`;
+    default:
+      return `Schedule a confidential consultation to discuss your ${cityName} property situation.`;
   }
 }
