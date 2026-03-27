@@ -858,6 +858,14 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
       "An out-of-state executor managing a Poulsbo property with rural or semi-rural characteristics",
       "A family navigating a property decision in Poulsbo where community relationships and discretion matter",
     ],
+    localClientTypes: [
+      "Executors managing estate property in Poulsbo's mix of waterfront, village-adjacent, and rural-residential markets",
+      "Families coordinating senior transitions from longtime Poulsbo homes to care communities on the peninsula or mainland",
+      "Attorneys handling probate or estate cases involving Poulsbo property where Liberty Bay proximity and waterfront premiums affect valuation",
+      "Trustees responsible for trust-owned homes in the Poulsbo area where property types range from village cottages to rural acreage",
+      "Out-of-state heirs who need local coordination for an inherited Poulsbo property in a close-knit waterfront community",
+      "Financial advisors needing Poulsbo property valuations that account for the community's Scandinavian-influenced waterfront character",
+    ],
   },
   "bainbridge-island": {
     tone: "premium",
