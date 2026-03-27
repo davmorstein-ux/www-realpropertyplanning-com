@@ -18,32 +18,32 @@ const defaultPathways: Pathway[] = [
   {
     title: "How Does Probate Real Estate Work in Washington?",
     description: "An overview of the probate sale process, court requirements, and what executors and attorneys need to know.",
-    href: "/probate-estate-sales",
+    href: "/guides/how-probate-real-estate-works",
   },
   {
     title: "What Should an Executor Do Before Selling an Inherited Home?",
     description: "Practical first steps for executors and personal representatives — from securing the property to understanding value.",
-    href: "/executors",
+    href: "/guides/what-executors-should-do",
   },
   {
     title: "What Is the Difference Between an Appraisal and a CMA?",
     description: "Why the distinction matters for estate property, probate sales, and trust-related real estate decisions.",
-    href: "/why-valuation-matters",
+    href: "/guides/appraisal-vs-cma",
   },
   {
     title: "How Do Senior Transition Sales Differ From Ordinary Home Sales?",
     description: "What families should expect when helping a parent or loved one sell a longtime home.",
-    href: "/senior-transitions",
+    href: "/guides/senior-transition-differences",
   },
   {
     title: "How Can an Out-of-State Family Manage a Washington Property Sale?",
     description: "Guidance for executors, trustees, and family members coordinating a sale from a distance.",
-    href: "/executors",
+    href: "/guides/out-of-state-families",
   },
   {
-    title: "How Does the Sale Process Work From Start to Finish?",
-    description: "A step-by-step overview of how David guides clients from initial conversation through closing.",
-    href: "/how-the-process-works",
+    title: "What to Do With an Inherited House in Washington State",
+    description: "Options, decision factors, and practical guidance when you inherit property in Washington.",
+    href: "/guides/inherited-house-washington",
   },
 ];
 

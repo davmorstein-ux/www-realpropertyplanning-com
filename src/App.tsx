@@ -60,6 +60,12 @@ import IndependentLiving from "./pages/senior-living/IndependentLiving";
 import CityPage from "./pages/CityPage";
 import CityServicePage from "./pages/CityServicePage";
 import ServicePage from "./pages/ServicePage";
+import HowProbateRealEstateWorks from "./pages/guides/HowProbateRealEstateWorks";
+import WhatExecutorsShouldDo from "./pages/guides/WhatExecutorsShouldDo";
+import AppraisalVsCma from "./pages/guides/AppraisalVsCma";
+import OutOfStateFamilies from "./pages/guides/OutOfStateFamilies";
+import SeniorTransitionDifferences from "./pages/guides/SeniorTransitionDifferences";
+import InheritedHouseWashington from "./pages/guides/InheritedHouseWashington";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -137,6 +143,13 @@ const App = () => (
           <Route path="/senior-living/memory-care" element={<MemoryCare />} />
           <Route path="/senior-living/nursing-and-skilled-care" element={<NursingAndSkilledCare />} />
           <Route path="/senior-living/independent-living" element={<IndependentLiving />} />
+          {/* Cornerstone guide pages */}
+          <Route path="/guides/how-probate-real-estate-works" element={<HowProbateRealEstateWorks />} />
+          <Route path="/guides/what-executors-should-do" element={<WhatExecutorsShouldDo />} />
+          <Route path="/guides/appraisal-vs-cma" element={<AppraisalVsCma />} />
+          <Route path="/guides/out-of-state-families" element={<OutOfStateFamilies />} />
+          <Route path="/guides/senior-transition-differences" element={<SeniorTransitionDifferences />} />
+          <Route path="/guides/inherited-house-washington" element={<InheritedHouseWashington />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

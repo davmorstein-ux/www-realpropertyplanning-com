@@ -20,10 +20,10 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   "/": {
     title: "Probate Real Estate & Inherited Property Guidance | Real Property Planning",
     description:
-      "Real Property Planning helps attorneys, executors, trustees, fiduciaries, and families navigate probate real estate, inherited homes, estate sales, and senior transitions throughout Western Washington.",
+      "Real Property Planning helps attorneys, executors, trustees, fiduciaries, and families navigate probate real estate, inherited homes, estate sales, and senior transitions throughout Washington State.",
     h1: "Specialized Guidance for Probate & Estate Property Sales",
     intro:
-      "Real Property Planning helps attorneys, executors, trustees, fiduciaries, and families navigate probate real estate, inherited homes, estate sales, and senior transitions throughout Western Washington. David Stein brings over 20 years of dual expertise as a licensed real estate broker and Washington state certified residential appraiser.",
+      "Real Property Planning helps attorneys, executors, trustees, fiduciaries, and families navigate probate real estate, inherited homes, estate sales, and senior transitions throughout Washington State. David Stein brings over 20 years of dual expertise as a licensed real estate broker and Washington state certified residential appraiser, with a strong focus in Western Washington and the Puget Sound region.",
     sections: [
       "Probate & Estate Property Sales — Experienced guidance for selling inherited homes, trust-owned real estate, and estate property across King, Snohomish, Pierce, Skagit, and Kitsap Counties.",
       "Senior Transitions & Downsizing Support — Thoughtful real estate guidance for families navigating a move from a longtime home to assisted living, independent living, or smaller housing.",
@@ -40,10 +40,10 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   "/for-attorneys": {
     title: "Real Estate Resource for Attorneys & Fiduciaries | Real Property Planning",
     description:
-      "Real Property Planning supports attorneys and fiduciaries with probate real estate, inherited property sales, trust-owned homes, valuation insight, and coordinated property guidance throughout Western Washington.",
+      "Real Property Planning supports attorneys and fiduciaries with probate real estate, inherited property sales, trust-owned homes, valuation insight, and coordinated property guidance throughout Washington State.",
     h1: "A Real Estate Resource for Attorneys and Fiduciaries",
     intro:
-      "Real Property Planning works with attorneys and their clients when real property is involved in probate, trust administration, estate transitions, and senior housing moves across Western Washington.",
+      "Real Property Planning works with attorneys and their clients when real property is involved in probate, trust administration, estate transitions, and senior housing moves throughout Washington State.",
   },
   "/executors": {
     title: "Estate Property Guide for Executors & Trustees | Real Property Planning",
@@ -56,34 +56,34 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   "/probate-estate-sales": {
     title: "Probate Property Sales & Estate Real Estate | Real Property Planning",
     description:
-      "Real Property Planning provides experienced guidance for probate real estate, estate property sales, inherited homes, and trust-owned property throughout Western Washington.",
+      "Real Property Planning provides experienced guidance for probate real estate, estate property sales, inherited homes, and trust-owned property throughout Washington State.",
     h1: "Probate Property Sales and Estate Real Estate",
     intro:
-      "Probate sales involve court timelines, fiduciary duties, deferred maintenance, and family coordination. David Stein manages the entire real estate process so executors and attorneys can focus on what they do best.",
+      "Probate sales involve court timelines, fiduciary duties, deferred maintenance, and family coordination. David Stein manages the entire real estate process throughout Washington State so executors and attorneys can focus on what they do best.",
   },
   "/why-valuation-matters": {
     title: "Why Valuation Matters for Probate & Inherited Property | Real Property Planning",
     description:
-      "Learn why accurate valuation matters for probate real estate, inherited homes, estate sales, trust-owned property, pricing strategy, and family decision-making in Western Washington.",
+      "Learn why accurate valuation matters for probate real estate, inherited homes, estate sales, trust-owned property, pricing strategy, and family decision-making throughout Washington State.",
     h1: "Why Valuation Matters for Probate and Inherited Property",
     intro:
-      "Accurate valuation is the foundation of every successful estate property sale. David Stein's dual credentials as a real estate broker and certified appraiser provide a unique perspective on pricing strategy.",
+      "Accurate valuation is the foundation of every successful estate property sale. David Stein's dual credentials as a real estate broker and certified appraiser provide a unique perspective on pricing strategy throughout Washington State.",
   },
   "/senior-transitions": {
     title: "Senior Home Sales & Downsizing Support | Real Property Planning",
     description:
-      "Real Property Planning provides thoughtful real estate support for downsizing, relocation, assisted living moves, and senior housing transitions throughout Western Washington.",
+      "Real Property Planning provides thoughtful real estate support for downsizing, relocation, assisted living moves, and senior housing transitions throughout Washington State.",
     h1: "Senior Transition Real Estate Support",
     intro:
-      "When a parent or loved one needs to sell the family home, the process should feel steady — not rushed. David Stein works at the family's pace, handling preparation, pricing, and the sale with patience and care.",
+      "When a parent or loved one needs to sell the family home, the process should feel steady — not rushed. David Stein works at the family's pace, handling preparation, pricing, and the sale with patience and care throughout Washington State.",
   },
   "/how-the-process-works": {
     title: "How the Process Works — Estate Property Sales | Real Property Planning",
     description:
-      "From initial consultation to closing day — here is exactly how David Stein helps executors, attorneys, and families sell probate, inherited, and trust-owned property in Western Washington.",
+      "From initial consultation to closing day — here is exactly how David Stein helps executors, attorneys, and families sell probate, inherited, and trust-owned property throughout Washington State.",
     h1: "How the Process Works",
     intro:
-      "From initial consultation to closing day — here is exactly how David Stein helps executors, attorneys, and families sell probate, inherited, and trust-owned property in Western Washington.",
+      "From initial consultation to closing day — here is exactly how David Stein helps executors, attorneys, and families sell probate, inherited, and trust-owned property throughout Washington State.",
   },
   "/how-we-work": {
     title: "How David Stein Works With Attorneys, Executors, Trustees & Families",
@@ -96,34 +96,34 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   "/attorney-referral": {
     title: "Attorney & Professional Referral Resource | Real Property Planning",
     description:
-      "David Stein is a real estate and valuation resource for attorneys, trustees, executors, and fiduciaries handling probate, trust, and estate property matters in Western Washington.",
+      "David Stein is a real estate and valuation resource for attorneys, trustees, executors, and fiduciaries handling probate, trust, and estate property matters throughout Washington State.",
     h1: "Attorney and Professional Referral Resource for Probate Real Estate",
     intro:
-      "David Stein is a real estate and valuation resource for attorneys, trustees, executors, and fiduciaries handling probate, trust, and estate property matters in King, Snohomish, Pierce, Skagit, and Kitsap Counties.",
+      "David Stein is a real estate and valuation resource for attorneys, trustees, executors, and fiduciaries handling probate, trust, and estate property matters throughout Washington State.",
   },
   "/for-cpas": {
     title: "Real Estate Guidance for CPAs | Real Property Planning",
     description:
-      "Real Property Planning provides probate real estate, inherited property, trust-owned real estate, and estate sale guidance for CPAs and their clients across Western Washington.",
+      "Real Property Planning provides probate real estate, inherited property, trust-owned real estate, and estate sale guidance for CPAs and their clients throughout Washington State.",
     h1: "Real Estate Guidance for CPAs and Their Clients",
     intro:
-      "Real Property Planning provides probate real estate, inherited property, trust-owned real estate, and estate sale guidance for CPAs and their clients across Western Washington.",
+      "Real Property Planning provides probate real estate, inherited property, trust-owned real estate, and estate sale guidance for CPAs and their clients throughout Washington State.",
   },
   "/for-financial-planners": {
     title: "Real Estate Guidance for Financial Planners | Real Property Planning",
     description:
-      "Real Property Planning provides probate real estate, inherited property, trust-owned real estate, and estate sale guidance for financial planners and their clients in Western Washington.",
+      "Real Property Planning provides probate real estate, inherited property, trust-owned real estate, and estate sale guidance for financial planners and their clients throughout Washington State.",
     h1: "Real Estate Guidance for Financial Planners and Their Clients",
     intro:
-      "Real Property Planning provides probate real estate, inherited property, trust-owned real estate, and estate sale guidance for financial planners and their clients in Western Washington.",
+      "Real Property Planning provides probate real estate, inherited property, trust-owned real estate, and estate sale guidance for financial planners and their clients throughout Washington State.",
   },
   "/for-senior-living-professionals": {
     title: "For Senior Living & Transition Professionals | Real Property Planning",
     description:
-      "Real Property Planning works with senior living communities, move managers, downsizing specialists, and estate sale companies when a home is part of a major life transition across Western Washington.",
+      "Real Property Planning works with senior living communities, move managers, downsizing specialists, and estate sale companies when a home is part of a major life transition throughout Washington State.",
     h1: "For Senior Living and Transition Professionals",
     intro:
-      "Real Property Planning works with senior living communities, move managers, downsizing specialists, and estate sale companies when a home is part of a major life transition across Western Washington.",
+      "Real Property Planning works with senior living communities, move managers, downsizing specialists, and estate sale companies when a home is part of a major life transition throughout Washington State.",
   },
   "/for-referral-partners": {
     title: "For Professional Referral Partners | Real Property Planning",
@@ -139,7 +139,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "Meet David Stein — the Washington broker and certified appraiser behind Real Property Planning. Over 20 years of focused experience helping attorneys, executors, and families with estate property.",
     h1: "About David Stein",
     intro:
-      "David Stein is a licensed real estate broker and Washington state certified residential appraiser with over 20 years of focused experience in probate real estate, inherited property, estate sales, and senior transitions throughout Western Washington.",
+      "David Stein is a licensed real estate broker and Washington state certified residential appraiser with over 20 years of focused experience in probate real estate, inherited property, estate sales, and senior transitions throughout Washington State, with a strong focus in Western Washington and the Puget Sound region.",
   },
   "/faq": {
     title: "Probate Real Estate FAQ | Real Property Planning",
@@ -245,66 +245,66 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   "/resources": {
     title: "Resources | Real Property Planning",
     description:
-      "Trusted professionals and service providers for probate, estate, and senior transition needs in Western Washington.",
+      "Trusted professionals and service providers for probate, estate, and senior transition needs throughout Washington State.",
     h1: "Transition Resources and Professional Directory",
     intro:
-      "Trusted professionals and service providers for probate, estate, and senior transition needs across Western Washington.",
+      "Trusted professionals and service providers for probate, estate, and senior transition needs throughout Washington State.",
   },
   "/resources/senior-move-managers": {
     title: "Senior Move Managers | Resources | Real Property Planning",
     description:
-      "Senior move management professionals in Western Washington who coordinate and manage the physical and emotional aspects of relocating seniors.",
-    h1: "Senior Move Managers in Western Washington",
+      "Senior move management professionals in Washington State who coordinate and manage the physical and emotional aspects of relocating seniors.",
+    h1: "Senior Move Managers in Washington State",
     intro:
-      "Senior move management professionals in Western Washington who coordinate and manage the physical and emotional aspects of relocating seniors.",
+      "Senior move management professionals in Washington State who coordinate and manage the physical and emotional aspects of relocating seniors.",
   },
   "/resources/estate-sale-companies": {
     title: "Estate Sale Companies | Resources | Real Property Planning",
     description:
-      "Estate sale companies in Western Washington that organize, price, and conduct sales of personal property and household contents during probate and estate transitions.",
-    h1: "Estate Sale Companies in Western Washington",
+      "Estate sale companies in Washington State that organize, price, and conduct sales of personal property and household contents during probate and estate transitions.",
+    h1: "Estate Sale Companies in Washington State",
     intro:
-      "Estate sale companies in Western Washington that organize, price, and conduct sales of personal property and household contents during probate and estate transitions.",
+      "Estate sale companies in Washington State that organize, price, and conduct sales of personal property and household contents during probate and estate transitions.",
   },
   "/resources/probate-estate-attorneys": {
     title: "Probate & Estate Attorneys | Resources | Real Property Planning",
     description:
-      "Probate and estate attorneys in Western Washington who guide families and fiduciaries through the probate process and estate administration.",
-    h1: "Probate and Estate Attorneys in Western Washington",
+      "Probate and estate attorneys in Washington State who guide families and fiduciaries through the probate process and estate administration.",
+    h1: "Probate and Estate Attorneys in Washington State",
     intro:
-      "Probate and estate attorneys in Western Washington who guide families and fiduciaries through the probate process and estate administration.",
+      "Probate and estate attorneys in Washington State who guide families and fiduciaries through the probate process and estate administration.",
   },
   "/resources/cpas-financial-advisors": {
     title: "CPAs & Financial Advisors | Resources | Real Property Planning",
     description:
-      "CPAs and financial advisors in Western Washington who help with estate tax, capital gains, and financial planning related to inherited property.",
-    h1: "CPAs and Financial Advisors in Western Washington",
+      "CPAs and financial advisors in Washington State who help with estate tax, capital gains, and financial planning related to inherited property.",
+    h1: "CPAs and Financial Advisors in Washington State",
     intro:
-      "CPAs and financial advisors in Western Washington who assist with estate tax, capital gains, and financial planning related to inherited property.",
+      "CPAs and financial advisors in Washington State who assist with estate tax, capital gains, and financial planning related to inherited property.",
   },
   "/resources/senior-living-communities": {
     title: "Senior Living Communities | Resources | Real Property Planning",
     description:
-      "Assisted living, independent living, and memory care communities across Western Washington for families navigating senior housing transitions.",
-    h1: "Senior Living Communities in Western Washington",
+      "Assisted living, independent living, and memory care communities throughout Washington State for families navigating senior housing transitions.",
+    h1: "Senior Living Communities in Washington State",
     intro:
-      "Assisted living, independent living, and memory care communities across Western Washington for families navigating senior housing transitions.",
+      "Assisted living, independent living, and memory care communities throughout Washington State for families navigating senior housing transitions.",
   },
   "/resources/property-preparation-services": {
     title: "Property Prep Services | Resources | Real Property Planning",
     description:
-      "Cleanout, staging, repair, and preparation services for estate and transition properties in Western Washington.",
-    h1: "Property Preparation Services in Western Washington",
+      "Cleanout, staging, repair, and preparation services for estate and transition properties throughout Washington State.",
+    h1: "Property Preparation Services in Washington State",
     intro:
-      "Cleanout, staging, repair, and preparation services for estate and transition properties in Western Washington.",
+      "Cleanout, staging, repair, and preparation services for estate and transition properties throughout Washington State.",
   },
   "/resources/moving-relocation-services": {
     title: "Moving & Relocation | Resources | Real Property Planning",
     description:
-      "Moving companies and relocation specialists experienced with estate and senior transitions in Western Washington.",
-    h1: "Moving and Relocation Services in Western Washington",
+      "Moving companies and relocation specialists experienced with estate and senior transitions throughout Washington State.",
+    h1: "Moving and Relocation Services in Washington State",
     intro:
-      "Moving companies and relocation specialists experienced with estate and senior transitions in Western Washington.",
+      "Moving companies and relocation specialists experienced with estate and senior transitions throughout Washington State.",
   },
   "/how-to-move-elderly-parents": {
     title: "How to Move Elderly Parents | Real Property Planning",
@@ -317,26 +317,26 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   "/transition-resources": {
     title: "Transition Resources for Families | Real Property Planning",
     description:
-      "A curated starting point for families and professionals navigating probate, downsizing, inherited property, senior moves, and other major housing transitions in Western Washington.",
+      "A curated starting point for families and professionals navigating probate, downsizing, inherited property, senior moves, and other major housing transitions throughout Washington State.",
     h1: "Transition Resources for Families and Professionals",
     intro:
-      "A curated starting point for families, attorneys, senior living professionals, and others navigating probate, downsizing, inherited property, senior moves, and other major housing transitions.",
+      "A curated starting point for families, attorneys, senior living professionals, and others navigating probate, downsizing, inherited property, senior moves, and other major housing transitions throughout Washington State.",
   },
   "/services": {
     title: "Services | Real Property Planning",
     description:
-      "Explore Real Property Planning's services including probate property sales, senior transitions, executor support, and estate-related real estate guidance in Western Washington.",
+      "Explore Real Property Planning's services including probate property sales, senior transitions, executor support, and estate-related real estate guidance throughout Washington State.",
     h1: "Real Property Planning Services",
     intro:
-      "Probate property sales, senior transitions, executor support, and estate-related real estate guidance across King, Snohomish, Pierce, Skagit, and Kitsap Counties in Western Washington.",
+      "Probate property sales, senior transitions, executor support, and estate-related real estate guidance throughout Washington State, with a strong focus in Western Washington and the Puget Sound region.",
   },
   "/testimonials": {
     title: "Testimonials & Reviews | Real Property Planning",
     description:
-      "Read client reviews and testimonials about working with Real Property Planning for probate property sales, estate transitions, and senior moves in Western Washington.",
+      "Read client reviews and testimonials about working with Real Property Planning for probate property sales, estate transitions, and senior moves throughout Washington State.",
     h1: "Client Testimonials and Reviews",
     intro:
-      "Read what clients say about working with Real Property Planning for probate property sales, estate transitions, and senior moves in Western Washington.",
+      "Read what clients say about working with Real Property Planning for probate property sales, estate transitions, and senior moves throughout Washington State.",
   },
 };
 
