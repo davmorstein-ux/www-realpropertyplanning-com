@@ -6,6 +6,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import MidPageCTA from "@/components/MidPageCTA";
+import PageFAQ from "@/components/PageFAQ";
 
 
 import iconProbate from "@/assets/icons/icon-probate-sales.png";
@@ -44,6 +45,25 @@ const attorneyTiles = [
     title: "Divorce\nAttorneys",
     href: "/for-divorce-attorneys",
     iconSrc: iconDivorce,
+  },
+];
+
+const attorneyFaqs = [
+  {
+    question: "How does David support attorneys during probate property sales?",
+    answer: "David handles the real estate side — property assessment, preparation, pricing, marketing, and sale — while coordinating directly with the attorney and personal representative. He provides regular updates and documentation to support the legal process.",
+  },
+  {
+    question: "What is the difference between a CMA and a formal appraisal?",
+    answer: "A CMA (Comparative Market Analysis) is a broker's opinion of value based on comparable sales data. A formal appraisal is a certified, independent valuation with stricter methodology. David's dual credentials allow him to provide market analysis informed by appraisal discipline — giving attorneys stronger data for estate decisions.",
+  },
+  {
+    question: "Can David help with valuation disputes or pricing disagreements among heirs?",
+    answer: "Yes. David's appraisal background allows him to present data-driven pricing supported by comparable sales analysis, condition adjustments, and market context — helping resolve disagreements with objective evidence rather than opinion.",
+  },
+  {
+    question: "Does David work with attorneys outside of Western Washington?",
+    answer: "David serves clients throughout Washington State. For properties outside Washington, he can connect attorneys with trusted brokers through eXp Realty's nationwide referral network.",
   },
 ];
 
@@ -159,6 +179,8 @@ const ForAttorneys = () => {
           </div>
         </div>
       </section>
+
+      <PageFAQ faqs={attorneyFaqs} heading="Questions Attorneys Ask About Working With David" />
 
       {/* CTA */}
       <section className="py-20 lg:py-28 bg-primary">
