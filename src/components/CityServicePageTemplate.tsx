@@ -38,8 +38,8 @@ const CityServicePageTemplate = ({ city, service }: CityServicePageTemplateProps
   // and city-page-level content — not city+service content.
   const intro = getDeepCityServiceIntro(service, city);
   const whyLocal = getDeepWhyLocalServiceMatters(city.name, city.county, service.slug, city);
-  const howWeHelp = getDeepCityServiceHowWeHelp(city.name, service.slug, tone);
-  const scenarios = getDeepCityServiceScenarios(city.name, service.shortName, service.slug, tone);
+  const howWeHelp = getDeepCityServiceHowWeHelp(city.name, service.slug, tone, city.slug);
+  const scenarios = getDeepCityServiceScenarios(city.name, service.shortName, service.slug, tone, city.slug);
   const ctaHeading = getDeepCTAHeading(city.name, city.slug, service.slug, tone);
   const ctaBody = getDeepCTABody(city.name, city.slug, service.slug, tone);
   const ctaButton = getDeepCTAButton(city.slug, service.slug);
