@@ -71,6 +71,11 @@ import AppraisalVsCma from "./pages/guides/AppraisalVsCma";
 import OutOfStateFamilies from "./pages/guides/OutOfStateFamilies";
 import SeniorTransitionDifferences from "./pages/guides/SeniorTransitionDifferences";
 import InheritedHouseWashington from "./pages/guides/InheritedHouseWashington";
+import ExecutorSellBeforeProbate from "./pages/guides/ExecutorSellBeforeProbate";
+import AppraisalBeforeSelling from "./pages/guides/AppraisalBeforeSelling";
+import EstatePropertyRepairs from "./pages/guides/EstatePropertyRepairs";
+import HeirsDisagreeSelling from "./pages/guides/HeirsDisagreeSelling";
+import PricingHouseTrustEstate from "./pages/guides/PricingHouseTrustEstate";
 import SeattleProbateEstate from "./pages/SeattleProbateEstate";
 import BellevueProbateEstate from "./pages/BellevueProbateEstate";
 import TacomaProbateEstate from "./pages/TacomaProbateEstate";
@@ -199,6 +204,11 @@ const App = () => (
           <Route path="/guides/out-of-state-families" element={<OutOfStateFamilies />} />
           <Route path="/guides/senior-transition-differences" element={<SeniorTransitionDifferences />} />
           <Route path="/guides/inherited-house-washington" element={<InheritedHouseWashington />} />
+          <Route path="/guides/executor-sell-house-before-probate-washington" element={<ExecutorSellBeforeProbate />} />
+          <Route path="/guides/appraisal-before-selling-inherited-property" element={<AppraisalBeforeSelling />} />
+          <Route path="/guides/estate-property-repairs-before-sale" element={<EstatePropertyRepairs />} />
+          <Route path="/guides/heirs-disagree-selling-house" element={<HeirsDisagreeSelling />} />
+          <Route path="/guides/pricing-house-trust-estate" element={<PricingHouseTrustEstate />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
