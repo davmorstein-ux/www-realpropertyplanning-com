@@ -18,6 +18,7 @@ interface CityPageTemplateProps {
 }
 
 const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
+  const tier1 = isTier1City(city.slug);
   const situations = getCommonSituations(city.name, city);
   const whyLocal = getWhyLocalMatters(city.name, city.county, city);
   const whyBrokerAppraiser = getWhyBrokerAppraiser(city.name, city);
