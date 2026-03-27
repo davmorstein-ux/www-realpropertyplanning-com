@@ -160,26 +160,26 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   "/contact": {
     title: "Contact David Stein | Probate & Estate Real Estate",
     description:
-      "Have a property tied to probate, a trust, an inheritance, or a senior transition? Contact David Stein for a confidential consultation. Serving King, Snohomish, Pierce & Kitsap Counties.",
+      "Have a property tied to probate, a trust, an inheritance, or a senior transition? Contact David Stein for a confidential consultation. Serving clients throughout Washington State.",
     h1: "Contact David Stein",
     intro:
-      "Have a property tied to probate, a trust, an inheritance, or a senior transition? Contact David Stein for a confidential consultation. Serving King, Snohomish, Pierce, Skagit, and Kitsap Counties.",
+      "Have a property tied to probate, a trust, an inheritance, or a senior transition? Contact David Stein for a confidential consultation. Serving clients throughout Washington State.",
   },
   "/counties": {
-    title: "Service Areas for Probate Real Estate | Real Property Planning",
+    title: "Washington State Service Areas | Probate & Estate Real Estate",
     description:
-      "Real Property Planning provides probate real estate, inherited property, estate sale, valuation, and senior transition support across King, Snohomish, Pierce, Skagit, and Kitsap Counties.",
-    h1: "Western Washington Service Areas",
+      "Real Property Planning provides probate real estate, inherited property, estate sale, valuation, and senior transition support for clients throughout Washington State.",
+    h1: "Washington State Service Areas",
     intro:
-      "Real Property Planning provides probate real estate, inherited property, estate sale, valuation, and senior transition support across King, Snohomish, Pierce, Skagit, and Kitsap Counties in the Puget Sound region.",
+      "Real Property Planning provides probate real estate, inherited property, estate sale, valuation-informed strategy, and senior transition support for clients throughout Washington State, with especially strong experience in Western Washington and the Puget Sound region.",
   },
   "/cities-we-serve": {
-    title: "Cities We Serve | Real Property Planning",
+    title: "Cities We Serve Throughout Washington State | Real Property Planning",
     description:
-      "David Stein serves cities across King, Snohomish, Pierce, Skagit, and Kitsap Counties for probate real estate, inherited property, trust-owned homes, and estate-related sales.",
-    h1: "Cities We Serve Across Western Washington",
+      "David Stein serves cities throughout Washington State for probate real estate, inherited property, trust-owned homes, and estate-related sales.",
+    h1: "Cities We Serve Throughout Washington State",
     intro:
-      "David Stein serves clients across King, Snohomish, Pierce, Skagit, and Kitsap Counties — including Seattle, Bellevue, Kirkland, Everett, Tacoma, Gig Harbor, Bremerton, Bainbridge Island, Mount Vernon, Anacortes, and dozens of other communities.",
+      "David Stein serves clients throughout Washington State — including Seattle, Bellevue, Kirkland, Everett, Tacoma, Gig Harbor, Bremerton, Bainbridge Island, and dozens of other communities.",
   },
   "/counties/king": {
     title: "King County Probate Real Estate | Real Property Planning",
@@ -416,11 +416,11 @@ const applyMetadata = (html: string, route: string, meta: RouteMeta) => {
 
     // Areas Served block with city names
     ssgParts.push(`<div style="margin-top:28px">`);
-    ssgParts.push(`<h2 style="font-size:1.3rem;margin-bottom:12px">Areas Served in Western Washington</h2>`);
+    ssgParts.push(`<h2 style="font-size:1.3rem;margin-bottom:12px">Washington State Service Areas</h2>`);
     if (cities && cities.length > 0) {
       ssgParts.push(`<p style="color:#555;line-height:1.8">${cities.join(" · ")}</p>`);
     }
-    ssgParts.push(`<p style="color:#666;margin-top:8px;line-height:1.6">Serving King County, Snohomish County, Pierce County, Skagit County, and Kitsap County throughout Western Washington and the Puget Sound region.</p>`);
+    ssgParts.push(`<p style="color:#666;margin-top:8px;line-height:1.6">Serving clients throughout Washington State, with especially strong experience in Western Washington and the Puget Sound region.</p>`);
     ssgParts.push(`</div>`);
 
     ssgParts.push(`</div>`);

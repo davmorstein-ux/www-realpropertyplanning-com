@@ -62,7 +62,7 @@ const whyRefer = [
   },
   {
     title: "Local Knowledge of Washington State Markets",
-    text: "David serves clients across King, Snohomish, Pierce, Kitsap, and Skagit counties — with detailed knowledge of neighborhood-level pricing patterns, buyer expectations, and the practical realities of selling estate properties in each market.",
+    text: "David serves clients throughout Washington State — with detailed knowledge of neighborhood-level pricing patterns, buyer expectations, and the practical realities of selling estate properties in each market.",
   },
 ];
 
@@ -299,7 +299,7 @@ const ProfessionalReferralResource = () => {
                 { href: "/how-the-process-works", label: "How the Process Works", desc: "A seven-step process from consultation through closing and beyond." },
                 { href: "/why-valuation-matters", label: "Why Valuation Matters", desc: "How appraisal experience prevents costly pricing mistakes." },
                 { href: "/senior-transitions", label: "Senior Transitions", desc: "Support for families navigating downsizing and housing transitions." },
-                { href: "/counties", label: "Counties & Service Areas", desc: "Local expertise across King, Snohomish, Pierce, Kitsap, and Skagit counties." },
+                { href: "/counties", label: "Counties & Service Areas", desc: "Local expertise throughout Washington State." },
               ].map((link) => (
                 <Link
                   key={link.href}

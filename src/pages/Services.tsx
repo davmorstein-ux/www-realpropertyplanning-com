@@ -66,7 +66,7 @@ const Services = () => {
                 Probate, Estate & Senior Transition Real Estate Services
               </h1>
               <p className="text-primary-foreground/80 text-lg leading-relaxed max-w-2xl mx-auto">
-                Probate property sales, senior transitions, executor support, and estate-related real estate guidance throughout Washington State, with a strong focus in Western Washington and the Puget Sound region.
+                Probate property sales, senior transitions, executor support, and estate-related real estate guidance throughout Washington State.
               </p>
             </div>
           </div>

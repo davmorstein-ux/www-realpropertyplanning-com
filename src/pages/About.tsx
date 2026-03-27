@@ -39,7 +39,7 @@ const About = () => {
     <div className="min-h-screen bg-background">
        <SEOHead
         title="About David Stein — Senior Relocation & Estate Real Estate Broker | Washington State"
-        description="David Stein is a Washington State real estate broker with eXp Realty, specializing in senior relocation, estate and inherited property sales, and trust & probate real estate — with deep experience across Western Washington and the Puget Sound region."
+        description="David Stein is a Washington State real estate broker with eXp Realty, specializing in senior relocation, estate and inherited property sales, and trust & probate real estate — serving clients throughout Washington State."
         jsonLd={realEstateAgentSchema}
       />
       <BreadcrumbSchema items={[{ name: "About", url: "/about" }]} />
