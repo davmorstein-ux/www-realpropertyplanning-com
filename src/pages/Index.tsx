@@ -27,6 +27,8 @@ import WhatToExpect from "@/components/WhatToExpect";
 import LeadMagnetBlock from "@/components/LeadMagnetBlock";
 import AppraiserAdvantage from "@/components/AppraiserAdvantage";
 import OutOfStateBlock from "@/components/OutOfStateBlock";
+import TrustAndResults from "@/components/TrustAndResults";
+import MidPageCTA from "@/components/MidPageCTA";
 
 const serviceAreas = [
   { county: "King County", href: "/counties/king", cities: "Seattle, Bellevue, Kirkland, Redmond, Renton, Kent, Federal Way & more" },
