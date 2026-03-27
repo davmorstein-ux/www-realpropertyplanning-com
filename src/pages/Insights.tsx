@@ -42,6 +42,11 @@ const categories: Category[] = [
         description: "How families navigate disagreements, what options exist, and where independent valuation helps.",
         href: "/guides/heirs-disagree-selling-house",
       },
+      {
+        title: "Understanding the Timeline for Selling an Estate Property",
+        description: "What affects timing, how probate and non-probate situations differ, and realistic expectations.",
+        href: "/insights/estate-property-sale-timeline",
+      },
     ],
   },
   {
