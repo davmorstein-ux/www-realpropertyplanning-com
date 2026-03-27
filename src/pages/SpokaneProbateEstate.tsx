@@ -89,7 +89,7 @@ const SpokaneProbateEstate = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Probate & Estate Real Estate in Spokane, Washington | Real Property Planning"
-        description="Guidance for executors and families handling inherited property in Spokane. Support for out-of-area decision-makers with clear communication and coordinated next steps."
+        description="Guidance for executors and families handling inherited property in Spokane. Local coordination, clear communication, and valuation-informed strategy for out-of-area decision-makers."
       />
       <BreadcrumbSchema
         items={[
@@ -110,7 +110,7 @@ const SpokaneProbateEstate = () => {
               Helping Families Manage Inherited Property in Spokane
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed">
-              Many Spokane estate properties are handled by families who live outside the area. Having reliable, on-the-ground support can make the process far more manageable.
+              Many Spokane estate properties are handled by families who live outside the area. When you are not local, having reliable, on-the-ground support can make the process far more manageable.
             </p>
           </div>
         </div>
@@ -311,7 +311,7 @@ const SpokaneProbateEstate = () => {
               If you're managing a Spokane property from outside the area, a short conversation can help you understand your options and next steps.
             </p>
             <p className="text-primary-foreground/50 text-base mb-8">
-              No pressure. Just practical guidance.
+              No pressure. Just practical guidance for your situation.
             </p>
             <div className="flex justify-center">
               <Link to="/contact">
