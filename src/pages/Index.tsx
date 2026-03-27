@@ -370,34 +370,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════════════
-          TESTIMONIALS — Warm background with quote cards
-      ═══════════════════════════════════════════════════ */}
-      <section className="py-20 lg:py-28 bg-warm-bg">
-        <div className="mx-auto max-w-[1100px] px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-base">
-              What Clients Are Saying
-            </p>
-            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold">
-              Trusted During Important Transitions
-            </h2>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((t, i) => (
-              <div key={i} className="bg-card rounded-2xl border border-border p-8 relative">
-                <Quote className="w-10 h-10 text-gold/15 absolute top-6 right-6" />
-                <p className="text-foreground text-lg leading-[1.8] italic mb-6 pr-8">
-                  "{t.text}"
-                </p>
-                <div className="border-t border-border pt-4">
-                  <p className="text-muted-foreground font-medium text-[15px]">{t.attribution}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Testimonials section moved to TrustAndResults above */}
+
 
       {/* ═══════════════════════════════════════════════════
           LEAD MAGNET — Executor checklist

@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 import { MessageSquare } from "lucide-react";
 import RealClientSituations from "@/components/RealClientSituations";
 import PageTestimonials from "@/components/PageTestimonials";
+import MidPageCTA from "@/components/MidPageCTA";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 
 const executorTestimonials = [
@@ -281,6 +282,13 @@ const Executors = () => {
         </div>
       </section>
 
+      <MidPageCTA
+        heading="Not Sure Where to Start?"
+        body="Most executors are doing this for the first time. A short conversation with David can help you understand your options and plan next steps."
+        buttonText="Schedule a Conversation"
+        microcopy="No pressure. Just practical guidance for your situation."
+      />
+
       <RealClientSituations studies={executorCaseStudies} background="bg-background" />
 
       <PageTestimonials testimonials={executorTestimonials} heading="What Executors Are Saying" />
@@ -342,8 +350,12 @@ const Executors = () => {
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-5">
               Ready to Talk About Your Situation?
             </h2>
-            <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
-              Start with a simple conversation. David will listen, answer your questions, and outline practical next steps — no pressure, no obligation. Whether you are just beginning or already feel behind, there is always a clear path forward.
+            <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">
+              Start with a simple conversation. David will listen, answer your questions, and outline practical next steps — no pressure, no obligation.
+            </p>
+            <p className="text-primary-foreground/50 text-base mb-8">
+              Whether you are just beginning or already feel behind, there is always a clear path forward.
+            </p>
             </p>
             <div className="flex justify-center">
               <Link to="/contact">
