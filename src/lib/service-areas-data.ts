@@ -789,6 +789,19 @@ export const counties: CountyData[] = [
   },
 ];
 
+// ─── Tier Classification ────────────────────────────────────────────────
+
+/** Tier 1 cities — fully enriched, ready for indexation */
+const TIER_1_SLUGS = new Set([
+  "bellevue", "seattle", "kirkland", "mercer-island",
+  "edmonds", "tacoma", "bainbridge-island",
+]);
+
+/** Check whether a city is Tier 1 (fully enriched content) */
+export function isTier1City(slug: string): boolean {
+  return TIER_1_SLUGS.has(slug);
+}
+
 // ─── Helpers ────────────────────────────────────────────────────────────
 
 /** Get all cities flat */
