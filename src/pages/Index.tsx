@@ -23,6 +23,10 @@ import naepcLogo from "@/assets/naepc-logo-2.png";
 import expRealtyLogo from "@/assets/exp-realty-logo.png";
 import ServiceNavTiles from "@/components/ServiceNavTiles";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+import WhatToExpect from "@/components/WhatToExpect";
+import LeadMagnetBlock from "@/components/LeadMagnetBlock";
+import AppraiserAdvantage from "@/components/AppraiserAdvantage";
+import OutOfStateBlock from "@/components/OutOfStateBlock";
 
 const serviceAreas = [
   { county: "King County", href: "/counties/king", cities: "Seattle, Bellevue, Kirkland, Redmond, Renton, Kent, Federal Way & more" },
