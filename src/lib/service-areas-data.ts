@@ -823,6 +823,7 @@ const TIER_1_SLUGS = new Set([
   "bellevue", "seattle", "kirkland", "mercer-island",
   "edmonds", "tacoma", "bainbridge-island",
   "gig-harbor", "poulsbo",
+  "snohomish", "silverdale",
 ]);
 
 /** Check whether a city is Tier 1 (fully enriched content) */
