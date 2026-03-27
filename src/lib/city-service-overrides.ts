@@ -2797,6 +2797,421 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
       whyLocal: "Trust property sales in Kent require fiduciary guidance that accounts for the city's internal market diversity. A trustee who applies citywide Kent averages to an East Hill property — or uses West Hill view-home comparables for a valley-floor property — creates pricing that may not withstand beneficiary scrutiny. David's South King County experience and appraisal credentials provide the submarket-specific analysis that Kent trust situations demand.",
     },
   },
+
+  // ═══════════════════════════════════════════════════════════════════
+  // WAVE 7 — Puyallup, Federal Way, Burien (suburban tone)
+  // ═══════════════════════════════════════════════════════════════════
+
+  // ── PUYALLUP ────────────────────────────────────────────────────
+  puyallup: {
+    "probate-estate-sales": {
+      intro: "Puyallup's valley location creates a market where property types range from older homes near the historic downtown to newer South Hill developments and properties with agricultural-heritage lot characteristics. When probate or estate sales involve Puyallup property, understanding how these valley-specific factors affect realistic pricing is essential. Real Property Planning provides the locally grounded guidance that Puyallup executors, attorneys, and families need.",
+      scenarios: [
+        "A family estate on South Hill where the larger lot, mature landscaping, and elevated position create value that automated estimates consistently miss",
+        "An inherited home near downtown Puyallup where the older housing stock competes with walkability and community charm for different buyer segments",
+        "A probate property with shop space, outbuildings, or acreage characteristics that complicate standard residential comparable selection",
+        "Multiple heirs — some local to Pierce County, some out of state — who need objective valuation of a Puyallup property they remember from childhood",
+        "An estate property near the fairgrounds where seasonal activity and location-specific factors create unique timing considerations",
+      ],
+      howWeHelp: [
+        "Neighborhood-level valuation distinguishing South Hill premiums from downtown-area and valley-floor pricing in Puyallup",
+        "Assessment of how agricultural-heritage lot features — outbuildings, shop space, larger parcels — affect market value and buyer pool",
+        "Coordination with probate attorneys on court documentation, timeline management, and Pierce County procedures",
+        "Property preparation strategy appropriate for Puyallup's buyer expectations at each price tier",
+        "Clear communication with multiple heirs and professionals across different locations",
+        "Full-service transaction management from initial property assessment through closing",
+      ],
+      whyLocal: "Puyallup's market is shaped by the valley's geography — South Hill properties command different premiums than downtown-area homes, and properties with agricultural-heritage characteristics require specialized understanding. Automated tools that average sales across the area miss the elevation, lot-type, and neighborhood distinctions that materially affect value. David's on-site assessment accounts for these valley-specific dynamics.",
+    },
+    "senior-transitions": {
+      intro: "Many Puyallup seniors have spent decades in their South Hill or downtown-area homes, raising families in the valley community. When it's time to transition to a smaller home, senior living, or a family member's residence, the sale involves both financial considerations and deep personal attachment. Real Property Planning helps Puyallup families navigate this process with experienced pricing and patient coordination.",
+      scenarios: [
+        "A senior couple on South Hill whose large home with established landscaping has appreciated significantly but may need updates for today's buyers",
+        "An adult child coordinating a parent's move from a longtime Puyallup home to a Pierce County senior living community",
+        "A longtime homeowner near downtown whose home's charm and walkable location appeal to specific buyers but the property needs preparation",
+        "A family balancing a parent's care timeline with preparing and selling a valley home with outbuildings or deferred maintenance",
+        "A senior relocating from Puyallup to be closer to family out of state, needing comprehensive sale management",
+      ],
+      howWeHelp: [
+        "Condition-based valuation accounting for how Puyallup's buyer pool evaluates older homes, larger lots, and deferred maintenance",
+        "Strategic preparation recommendations tailored to Puyallup's market at each price point and neighborhood",
+        "Sale timeline coordination aligned with the move to senior living or a smaller residence",
+        "Patient communication with seniors and adult children coordinating from different locations",
+        "Vendor coordination for cleanout, repairs, and presentation appropriate for the valley market",
+        "Full-service management so the family can focus on the transition",
+      ],
+      whyLocal: "Puyallup seniors often own homes with features — larger lots, outbuildings, mature landscaping — that automated tools undervalue. The gap between emotional significance and realistic market position requires locally informed analysis. David's appraisal background helps families understand where their property stands in a valley market where neighborhood, elevation, and lot characteristics all influence pricing.",
+    },
+    "executor-support": {
+      intro: "Executors managing estate property in Puyallup face a market where South Hill homes, downtown-area properties, and valley-floor locations each carry different value dynamics. Real Property Planning provides the valley expertise and steady communication that Puyallup executors need to price accurately and manage the sale alongside Pierce County probate requirements.",
+      scenarios: [
+        "A newly appointed executor managing a South Hill estate property while living outside Pierce County",
+        "An estate property with outbuildings or shop space that complicate standard residential valuation",
+        "Co-executors who disagree on value because one references South Hill sales while the other cites downtown-area comparables",
+        "An estate home that has been vacant and needs assessment, cleanout, and preparation before competing in Puyallup's market",
+        "An executor coordinating with multiple professionals on a property where the valley's housing diversity creates pricing complexity",
+      ],
+      howWeHelp: [
+        "Property-specific assessment accounting for Puyallup's neighborhood-level pricing — South Hill, downtown, valley floor, and fairgrounds-area",
+        "Clear guidance on how agricultural-heritage features and lot characteristics affect marketability",
+        "Defensible pricing documentation suitable for beneficiary review and court records",
+        "Coordination of cleanout, preparation, and presentation appropriate for the Puyallup submarket",
+        "Regular communication for executors managing from out of area",
+        "End-to-end transaction management through closing",
+      ],
+      whyLocal: "Puyallup executors face a market where the valley's range of property types means comparable selection requires local judgment. David's dual credentials provide the defensible, neighborhood-specific pricing analysis that Puyallup estate situations require.",
+    },
+    "downsizing-services": {
+      intro: "Downsizing from a longtime Puyallup home often means leaving a larger South Hill property or a family home near downtown for something smaller. Real Property Planning helps homeowners manage the sale with clear pricing, practical coordination, and respect for the emotional weight of leaving a home that may hold decades of memories.",
+      scenarios: [
+        "A couple on South Hill whose children have moved away, leaving them maintaining a home and yard larger than they need",
+        "A homeowner near downtown Puyallup moving to a condo or smaller home to simplify daily life",
+        "A retiree selling a Puyallup home with valley characteristics — larger lot, shop space — that need correct positioning",
+        "A family helping parents transition from a Puyallup home to a smaller property closer to adult children",
+      ],
+      howWeHelp: [
+        "Honest valuation accounting for how lot size, outbuildings, and condition affect buyer interest at each price point",
+        "Strategic preparation guidance focused on what delivers return in the valley market",
+        "Timeline coordination aligning the sale with the move to a new residence",
+        "Cleanout and vendor coordination so the homeowner isn't managing everything simultaneously",
+        "Patient communication throughout a personally significant transition",
+      ],
+      whyLocal: "Downsizing in Puyallup often involves properties with characteristics that don't fit standard comparable analysis neatly. David's valley experience helps downsizing clients understand realistic market value for homes where lot and improvements create unique buyer appeal.",
+    },
+    "attorney-fiduciary-support": {
+      intro: "Attorneys and fiduciaries working on matters involving Puyallup property need a real estate professional who understands the valley's diverse housing stock. Real Property Planning serves as a reliable resource for Pierce County legal professionals handling Puyallup property matters where local expertise affects legal and financial outcomes.",
+      scenarios: [
+        "A probate attorney managing an estate with a South Hill home where the neighborhood premium needs objective documentation",
+        "A family law attorney needing neutral pricing for a Puyallup property where valley-location factors create value disagreements",
+        "An elder law attorney coordinating the sale of a client's Puyallup home during a transition to care",
+        "A trustee needing fiduciary-grade guidance on a trust-owned property with outbuildings or lot characteristics",
+        "An estate planning attorney needing current valuation insight where South Hill versus valley-floor distinction matters",
+      ],
+      howWeHelp: [
+        "Defensible property assessments grounded in on-site inspection and Puyallup-specific comparable analysis",
+        "Clear documentation suitable for court proceedings, fiduciary records, and beneficiary communication",
+        "Responsive communication with attorneys and fiduciaries throughout the engagement",
+        "Experience with Pierce County probate procedures and estate-related timelines",
+        "Coordination of property preparation and sale logistics as needed",
+        "Objective guidance grounded in appraisal methodology",
+      ],
+      whyLocal: "Legal professionals handling Puyallup matters need a partner who understands valley-specific valuation factors. David's dual credentials provide the objective foundation that Pierce County legal proceedings and fiduciary situations require.",
+    },
+    "valuation-guidance": {
+      intro: "Accurate property valuation in Puyallup requires understanding the valley's distinct submarkets — South Hill properties carry different premiums than downtown-area homes, and lots with outbuildings or acreage need specialized analysis. Real Property Planning provides the valuation insight Puyallup clients need for estate settlements, trust administration, and informed sale decisions.",
+      scenarios: [
+        "An executor needing valuation of a South Hill estate property where the larger lot and elevation create a premium automated tools may miss",
+        "Divorcing spouses who disagree on their Puyallup home's value because each references sales from different parts of the valley",
+        "A trustee needing documented valuation for a trust-owned property with outbuildings that standard comparisons don't address",
+        "Heirs questioning an automated estimate that doesn't account for the property's specific neighborhood or lot characteristics",
+      ],
+      whyLocal: "Puyallup's valuation landscape is complicated by the valley's geography and wide range of property types. Automated tools that average sales produce estimates that don't reflect any specific Puyallup neighborhood accurately. David's credentials provide the property-specific analysis that valley situations require.",
+    },
+    "preparing-home-for-sale": {
+      intro: "Preparing a Puyallup home for sale requires understanding what buyers expect at the property's specific price point and neighborhood. South Hill buyers have different expectations than those shopping near downtown or in more affordable valley areas. Real Property Planning helps sellers identify which improvements deliver return and which over-invest for their submarket.",
+      scenarios: [
+        "A South Hill home with quality bones but dated finishes where strategic updates can meaningfully improve buyer appeal",
+        "A downtown-area property where charm and walkability are selling points but deferred maintenance needs addressing",
+        "An estate property with outbuildings where preparation strategy depends on whether buyers value or see those features as complications",
+        "A valley-floor home where practical curb appeal matters more than luxury upgrades at the price point",
+      ],
+      whyLocal: "Preparation strategy in Puyallup depends on the property's location and price tier. A South Hill home warrants different investment than a valley-floor property. David's valley experience helps sellers find the right balance between under-preparation and over-investment.",
+    },
+    "divorce-related-home-sales": {
+      intro: "Divorce-related property sales in Puyallup are complicated by the valley's internal market variation — spouses may reference South Hill, downtown, or valley-floor comparables to support different value conclusions. Real Property Planning provides the objective, neighborhood-specific analysis that Puyallup divorce situations require.",
+      scenarios: [
+        "A divorcing couple with a South Hill home where one spouse cites premium sales while the other points to valley-floor comparables",
+        "A family law attorney needing neutral pricing where outbuildings or extra lot features create disagreement about value",
+        "A mediated divorce where one party wants to retain the property and needs fair buyout valuation",
+        "A contentious divorce where the property's proximity to commercial areas creates location-value disagreement",
+      ],
+      whyLocal: "Divorce negotiations involving Puyallup property are complicated by the valley's price range and internal diversity. Both parties may cite 'Puyallup sales' from different neighborhoods. David's valley experience provides the neutral analysis needed for fair resolution.",
+    },
+    "trust-estate-property-sales": {
+      intro: "Trust-owned property in Puyallup may be located anywhere in the valley — from South Hill view homes to downtown-area older properties to lots with agricultural-heritage characteristics. Each creates different fiduciary considerations for trustees. Real Property Planning provides the Pierce County expertise that Puyallup's varied market demands.",
+      scenarios: [
+        "A successor trustee managing a trust-owned South Hill home where the larger lot and neighborhood premium need on-site verification",
+        "A corporate trustee needing local expertise where outbuildings and lot characteristics complicate standard valuation",
+        "A trustee preparing to sell a downtown-area home where charm and walkability appeal to a specific buyer segment",
+        "A beneficiary questioning the trustee's pricing because automated estimates don't distinguish South Hill from valley-floor markets",
+      ],
+      whyLocal: "Trust property sales in Puyallup require fiduciary guidance that accounts for the valley's diverse property types. David's valley experience and appraisal credentials provide the submarket-specific analysis that fiduciary situations demand.",
+    },
+  },
+
+  // ── FEDERAL WAY ─────────────────────────────────────────────────
+  "federal-way": {
+    "probate-estate-sales": {
+      intro: "Federal Way's position at the southern edge of King County creates a market with wide price variation — from established ramblers to lake-adjacent properties near Steel Lake and North Lake, newer town-center developments, and hillside homes with Rainier views. When probate or estate sales involve Federal Way property, this internal diversity requires pricing guidance that goes beyond citywide averages. Real Property Planning provides the South King expertise that Federal Way executors, attorneys, and families need.",
+      scenarios: [
+        "A family estate near Steel Lake where the lake-adjacent location creates a premium that standard automated estimates may not capture",
+        "An inherited rambler in an established neighborhood where condition varies widely and comparable selection requires local knowledge",
+        "A probate property near the town center where newer development and changing demographics affect buyer expectations",
+        "Multiple heirs dispersed across states needing objective valuation of a Federal Way home they haven't visited in years",
+        "An estate property in the eastern hills with mountain views where the premium needs on-site verification",
+      ],
+      howWeHelp: [
+        "Neighborhood-level valuation distinguishing Federal Way's lake-adjacent, view, town-center, and established-residential submarkets",
+        "Assessment of how location-specific factors — lake proximity, mountain views, commercial adjacency — affect realistic value",
+        "Coordination with probate attorneys on documentation, timeline management, and King County procedures",
+        "Property preparation appropriate for Federal Way's buyer expectations at the specific price point",
+        "Clear communication with multiple heirs and professionals across locations",
+        "Full-service transaction management from initial assessment through closing",
+      ],
+      whyLocal: "Federal Way's market is complicated by geographic spread and internal diversity. A lake-adjacent property, a town-center townhome, and a hillside view home operate in effectively different markets despite sharing a Federal Way address. David's South King County experience and appraisal credentials provide the property-specific analysis estate situations require.",
+    },
+    "senior-transitions": {
+      intro: "Many Federal Way seniors have lived in their homes since the city's major growth period — watching neighborhoods develop and the town center evolve. When it's time to transition from a longtime Federal Way home, the sale involves meaningful financial value and personal attachment. Real Property Planning helps families navigate this process with honest pricing, practical coordination, and patience.",
+      scenarios: [
+        "A senior couple in an established neighborhood whose home has appreciated but shows its age compared to newer listings",
+        "An adult child coordinating a parent's move from Federal Way to a South King County senior living community while managing the sale remotely",
+        "A longtime homeowner near Steel Lake whose property's location premium requires informed marketing to reach the right buyers",
+        "A family balancing a parent's declining health with preparing and selling a home full of accumulated belongings",
+        "A senior moving from Federal Way to be closer to family elsewhere, needing local sale management",
+      ],
+      howWeHelp: [
+        "Condition-based valuation accounting for how Federal Way's buyers evaluate older homes against newer inventory",
+        "Strategic preparation calibrated to what delivers return at Federal Way's price points and neighborhoods",
+        "Sale timeline coordination aligned with the move to senior living or a smaller residence",
+        "Patient communication with seniors and adult children managing a stressful transition",
+        "Vendor coordination for cleanout, repairs, and presentation",
+        "Full-service management from first consultation through closing",
+      ],
+      whyLocal: "Federal Way seniors often own homes that have appreciated but may not match today's buyer expectations. The gap between emotional and realistic market value requires honest, condition-based analysis. David's appraisal background helps families understand exactly where their property stands in a market with increasing competition from newer construction.",
+    },
+    "executor-support": {
+      intro: "Executors managing Federal Way estate property face a South King County market where values vary significantly by neighborhood, lake proximity, views, and housing age. Real Property Planning provides the local expertise and reliable communication that Federal Way executors need alongside legal responsibilities.",
+      scenarios: [
+        "A newly appointed executor managing a Federal Way property while living outside King County",
+        "An estate property near the town center where newer surrounding development creates competitive-positioning questions",
+        "Co-executors who disagree on value because one references lake-adjacent sales while the other cites established-neighborhood comparables",
+        "An estate home that has been vacant and needs assessment and preparation before attracting buyer interest",
+        "An executor coordinating with multiple professionals where the South King market requires locally specific guidance",
+      ],
+      howWeHelp: [
+        "Property-specific assessment accounting for Federal Way's neighborhood-level dynamics",
+        "Defensible pricing documentation suitable for beneficiary review and court records",
+        "Coordination of cleanout, preparation, and presentation appropriate for the price point",
+        "Regular communication for executors managing from out of area",
+        "Guidance on King County probate timelines and market conditions",
+        "End-to-end transaction management through closing",
+      ],
+      whyLocal: "Federal Way executors face a market where comparable selection requires local judgment. Lake-adjacent, view, and established-neighborhood properties operate in different micro-markets. David's credentials provide the defensible pricing analysis that Federal Way estate situations require.",
+    },
+    "downsizing-services": {
+      intro: "Downsizing from a Federal Way home often means leaving a property in an established neighborhood — perhaps near the lakes or in a community where the family has spent decades. Real Property Planning helps homeowners manage the sale with clear pricing and understanding of what the home is worth in today's South King County market.",
+      scenarios: [
+        "A couple in an established neighborhood maintaining a home and yard larger than they need after children have moved",
+        "A homeowner near Steel Lake moving to a condo or smaller home after retirement",
+        "A retiree selling a home with mountain views that need to be properly positioned for the right buyers",
+        "A family helping parents transition from a longtime home to a smaller property or senior community",
+      ],
+      howWeHelp: [
+        "Honest valuation accounting for neighborhood, condition, and realistic buyer demand",
+        "Strategic preparation focused on what delivers return at the specific price point",
+        "Timeline coordination aligning the sale with the move",
+        "Cleanout and vendor coordination so the homeowner isn't managing everything simultaneously",
+        "Patient communication throughout a personally significant transition",
+      ],
+      whyLocal: "Downsizing in Federal Way involves understanding how the city's range of neighborhoods affects buyer demand for each specific property. David's South King experience helps clients understand realistic value and preparation priorities.",
+    },
+    "attorney-fiduciary-support": {
+      intro: "Attorneys and fiduciaries handling Federal Way property matters need a real estate professional who understands the city's diverse South King County market and can provide defensible guidance. Real Property Planning serves as a reliable resource for legal professionals with Federal Way property matters.",
+      scenarios: [
+        "A probate attorney managing an estate with a Federal Way home near Steel Lake where the location premium needs documentation",
+        "A family law attorney needing neutral pricing during divorce proceedings involving neighborhood-based value disagreement",
+        "An elder law attorney coordinating the sale of a client's Federal Way home during a care transition",
+        "A trustee needing fiduciary-grade guidance where the specific submarket affects pricing significantly",
+        "An estate planning attorney needing current insight where view premium or lake proximity matters",
+      ],
+      howWeHelp: [
+        "Defensible property assessments grounded in on-site inspection and Federal Way-specific comparable analysis",
+        "Clear documentation suitable for court proceedings, fiduciary records, and beneficiary communication",
+        "Responsive communication throughout the engagement",
+        "Experience with King County procedures and estate-related timelines",
+        "Coordination of property preparation and sale logistics as needed",
+        "Objective guidance grounded in appraisal methodology",
+      ],
+      whyLocal: "Legal professionals handling Federal Way matters need a partner who can distinguish between the city's meaningfully different neighborhoods. David's dual credentials provide the objective foundation that South King County legal proceedings require.",
+    },
+    "valuation-guidance": {
+      intro: "Accurate property valuation in Federal Way requires understanding the city's internal market diversity — lake-adjacent homes, mountain-view properties, town-center condos, and established ramblers each follow different value patterns. Real Property Planning provides the valuation insight that Federal Way clients need for estate settlements, trust administration, and property decisions.",
+      scenarios: [
+        "An executor needing valuation of a Federal Way estate property near Steel Lake where the proximity premium needs on-site verification",
+        "Divorcing spouses who disagree on their home's value because each references sales from a different part of the city",
+        "A trustee needing documented valuation where mountain views or lake adjacency affect value",
+        "Heirs questioning an automated estimate that averages Federal Way sales without distinguishing neighborhoods",
+      ],
+      whyLocal: "Federal Way's valuation landscape is complicated by geographic spread and the wide range of property types. Automated tools produce estimates that don't reflect any specific neighborhood accurately. David's credentials provide the property-specific analysis Federal Way situations demand.",
+    },
+    "preparing-home-for-sale": {
+      intro: "Preparing a Federal Way home for sale requires understanding buyer expectations at the property's price point and location. A home near Steel Lake faces different preparation priorities than one near the town center or in an established hillside neighborhood. Real Property Planning helps sellers avoid both under-preparation and over-investment.",
+      scenarios: [
+        "An established rambler where targeted kitchen and bathroom updates can improve buyer appeal without exceeding the area's price ceiling",
+        "A lake-adjacent property where exterior presentation matters because the location premium only applies when the home shows its best",
+        "An estate property that needs cleanout and basic updates but where the price point limits preparation investment",
+        "A home competing against newer Federal Way construction where strategic updates help attract today's buyers",
+      ],
+      whyLocal: "Preparation strategy in Federal Way depends on location and buyer demographic. Lake-adjacent homes warrant different investment than properties in the city's more affordable segments. David's South King experience helps sellers calibrate preparation to their specific submarket.",
+    },
+    "divorce-related-home-sales": {
+      intro: "Divorce-related property sales in Federal Way are complicated by the city's internal diversity — spouses may cite comparable sales from lake-adjacent, view, or established-neighborhood areas to support different value conclusions. Real Property Planning provides the objective, property-specific analysis Federal Way divorce situations require.",
+      scenarios: [
+        "A divorcing couple whose home is near Steel Lake, where one spouse argues the lake adds premium while the other disputes its magnitude",
+        "A family law attorney needing neutral pricing where the specific neighborhood — not the city average — determines fair value",
+        "A mediated divorce where one party wants to retain the property and needs accurate buyout valuation",
+        "A contentious divorce where the property's age relative to newer construction creates disagreement about competitive positioning",
+      ],
+      whyLocal: "Divorce negotiations involving Federal Way property are complicated by the city's wide price range. Both parties may cite real sales from different neighborhoods. David's South King experience provides the neutral analysis needed for fair resolution.",
+    },
+    "trust-estate-property-sales": {
+      intro: "Trust-owned property in Federal Way may be near the lakes, in established residential neighborhoods, or in areas affected by newer development. Each creates different fiduciary considerations. Real Property Planning provides trustees with the South King County expertise that Federal Way's diverse market demands.",
+      scenarios: [
+        "A successor trustee managing a trust-owned home near Steel Lake where the location premium needs on-site verification",
+        "A corporate trustee needing local expertise where specific neighborhood dynamics differ from citywide statistics",
+        "A trustee preparing to sell a home in an established neighborhood where newer construction affects positioning",
+        "A beneficiary questioning the trustee's pricing because automated estimates don't distinguish Federal Way's varied submarkets",
+      ],
+      whyLocal: "Trust property sales in Federal Way require fiduciary guidance that accounts for internal market diversity. A trustee who applies citywide averages to a lake-adjacent property creates pricing that may not withstand beneficiary scrutiny. David's credentials provide the submarket analysis fiduciary situations demand.",
+    },
+  },
+
+  // ── BURIEN ──────────────────────────────────────────────────────
+  burien: {
+    "probate-estate-sales": {
+      intro: "Burien's neighborhoods range from the exclusive waterfront enclave of Three Tree Point to Seahurst's hillside homes to established residential areas near a revitalizing downtown core. When probate or estate sales involve Burien property, understanding these dramatic micro-market differences is essential. Real Property Planning provides the neighborhood-specific guidance that Burien executors, attorneys, and families need in a city where values vary sharply within short distances.",
+      scenarios: [
+        "A family estate in Three Tree Point where the waterfront location creates pricing dynamics entirely different from the rest of Burien",
+        "An inherited hillside home in Seahurst with sound views where the view premium and terrain require on-site assessment",
+        "A probate property near downtown Burien where the city's revitalization has changed buyer expectations",
+        "Multiple heirs needing objective valuation where the specific micro-neighborhood determines value more than the city address",
+        "An estate property along the 1st Avenue corridor where commercial adjacency complicates residential comparable approaches",
+      ],
+      howWeHelp: [
+        "Neighborhood-level valuation distinguishing Three Tree Point waterfront, Seahurst hillside, downtown-adjacent, and corridor-area pricing",
+        "Assessment of how views, waterfront access, terrain, and walkability affect value in Burien's varied micro-markets",
+        "Coordination with probate attorneys on documentation and King County procedures",
+        "Property preparation strategy appropriate for the specific Burien neighborhood and its buyer expectations",
+        "Clear communication with multiple heirs and professionals dispersed geographically",
+        "Full-service transaction management from initial assessment through closing",
+      ],
+      whyLocal: "Burien's market is defined by its micro-neighborhoods — Three Tree Point, Seahurst, downtown, and the corridors each operate as distinct markets. A waterfront home and a corridor-area rambler share a city name but nothing else in terms of value drivers. David's on-site assessment and appraisal credentials capture these distinctions that automated tools consistently miss.",
+    },
+    "senior-transitions": {
+      intro: "Many Burien seniors have watched their community evolve from a quiet suburb to a city with a revitalized downtown, diverse neighborhoods, and growing appeal. When it's time to transition from a longtime Burien home, the sale involves meaningful financial considerations and the personal weight of leaving a familiar community. Real Property Planning helps families navigate this with neighborhood-specific pricing and patient coordination.",
+      scenarios: [
+        "A senior in Seahurst whose hillside home with sound views has appreciated significantly but needs honest condition assessment",
+        "An adult child coordinating a parent's move from Three Tree Point while managing a premium-market property sale",
+        "A longtime homeowner near downtown whose property benefits from revitalization but needs strategic preparation",
+        "A family balancing a parent's care needs with the complexity of selling a longtime Burien home",
+        "A senior relocating from Burien to be closer to family, needing comprehensive management",
+      ],
+      howWeHelp: [
+        "Condition-based valuation accounting for how Burien's micro-markets create different buyer expectations",
+        "Strategic preparation calibrated to the specific neighborhood and buyer profile",
+        "Sale timeline coordination aligned with the transition to senior living or a smaller residence",
+        "Patient communication with seniors and adult children managing a significant life change",
+        "Vendor coordination for cleanout, repairs, and presentation appropriate for the neighborhood",
+        "Full-service management so the family can focus on the transition",
+      ],
+      whyLocal: "Burien seniors often own homes in neighborhoods where value has shifted meaningfully. David's appraisal background helps families understand where their specific property stands relative to today's market, not general perceptions.",
+    },
+    "executor-support": {
+      intro: "Executors managing Burien estate property face a market where micro-neighborhoods create wide value variation within a compact area. Real Property Planning provides the neighborhood-specific guidance and reliable communication that Burien executors need whether the property is a Three Tree Point waterfront home, a Seahurst hillside property, or a downtown-area rambler.",
+      scenarios: [
+        "A newly appointed executor managing a Three Tree Point estate property requiring specialized waterfront marketing",
+        "An estate property in Seahurst where view quality and terrain affect value in ways needing on-site verification",
+        "Co-executors disagreeing on value because one references waterfront sales while the other cites downtown-area comparables",
+        "An estate home near the 1st Avenue corridor that needs assessment of how the specific location affects buyer interest",
+        "An executor coordinating from out of state where the micro-neighborhood distinction matters more than the city average",
+      ],
+      howWeHelp: [
+        "Property-specific assessment accounting for Burien's dramatically different micro-markets",
+        "Defensible pricing documentation suitable for beneficiary review and court records",
+        "Coordination of cleanout, preparation, and presentation appropriate for the neighborhood",
+        "Regular communication for executors managing from out of area",
+        "Guidance on how Burien's revitalization affects realistic pricing for estate properties",
+        "End-to-end transaction management through closing",
+      ],
+      whyLocal: "Burien executors face a market where the difference between neighborhoods can be dramatic — Three Tree Point pricing has virtually nothing in common with 1st Avenue corridor values. David's experience provides the defensible, micro-neighborhood analysis estate situations require when citywide averages are meaningless.",
+    },
+    "downsizing-services": {
+      intro: "Downsizing from a Burien home often means leaving a neighborhood with distinctive character — whether Three Tree Point's exclusivity, Seahurst's hillside views, or downtown's walkable convenience. Real Property Planning helps homeowners manage the sale with pricing that reflects their specific micro-market.",
+      scenarios: [
+        "A couple in Seahurst whose view home is larger than they need, with maintenance that no longer fits their lifestyle",
+        "A homeowner near downtown whose walkable location appeals to specific buyers but the home needs preparation",
+        "A retiree in Three Tree Point whose waterfront property requires specialized marketing and buyer qualification",
+        "A family helping parents transition from a longtime Burien home to a smaller property or senior community",
+      ],
+      howWeHelp: [
+        "Honest valuation reflecting the specific micro-neighborhood's current market dynamics",
+        "Preparation guidance calibrated to what delivers return at the property's price point and location",
+        "Timeline coordination aligning the sale with the move",
+        "Cleanout and vendor coordination so the homeowner can focus on the transition",
+        "Patient communication throughout the process",
+      ],
+      whyLocal: "Downsizing in Burien requires understanding which micro-market the property belongs to — because Three Tree Point, Seahurst, and downtown attract different buyers with different expectations. David's experience helps clients price and prepare for the right audience.",
+    },
+    "attorney-fiduciary-support": {
+      intro: "Attorneys and fiduciaries handling Burien property matters need a real estate professional who understands how the city's dramatic micro-neighborhood differences affect valuation and sale strategy. Real Property Planning serves as a reliable resource for legal professionals where neighborhood-specific expertise is essential.",
+      scenarios: [
+        "A probate attorney managing an estate with a Three Tree Point waterfront home requiring specialized valuation",
+        "A family law attorney needing neutral pricing where the specific micro-neighborhood determines fair value",
+        "An elder law attorney coordinating the sale of a Seahurst home during a care transition",
+        "A trustee needing fiduciary-grade guidance where views, terrain, or waterfront access affect value",
+        "An estate planning attorney needing current insight where revitalization has changed neighborhood values",
+      ],
+      howWeHelp: [
+        "Defensible property assessments grounded in on-site inspection and micro-neighborhood analysis",
+        "Clear documentation suitable for court proceedings, fiduciary records, and beneficiary communication",
+        "Responsive communication with attorneys and fiduciaries throughout the engagement",
+        "Experience with King County procedures and estate-related timelines",
+        "Coordination of property preparation and sale logistics as needed",
+        "Objective guidance recognizing how Burien's internal diversity affects valuation",
+      ],
+      whyLocal: "Legal professionals handling Burien matters need a partner who can distinguish between dramatically different micro-neighborhoods. A Three Tree Point valuation has nothing in common with a corridor-area assessment — and both carry legal consequences if done poorly. David's dual credentials provide the objective foundation Burien proceedings require.",
+    },
+    "valuation-guidance": {
+      intro: "Accurate property valuation in Burien requires neighborhood-level precision — Three Tree Point waterfront, Seahurst hillside views, downtown-adjacent walkability, and corridor-area properties each follow entirely different value patterns. Real Property Planning provides the micro-market insight Burien clients need for estate settlements, trust administration, and informed decisions.",
+      scenarios: [
+        "An executor needing valuation of a Three Tree Point property where waterfront access and exclusivity create pricing generic tools can't capture",
+        "Divorcing spouses who disagree on their Seahurst home's value because view quality and terrain make standard comparisons unreliable",
+        "A trustee needing documented valuation where the micro-neighborhood determines value more than the city address",
+        "Heirs questioning an automated estimate that doesn't account for the property's specific neighborhood characteristics",
+      ],
+      whyLocal: "Burien's valuation landscape is complicated by dramatic micro-neighborhood differences within a compact area. Automated tools that average sales produce estimates that don't reflect any specific neighborhood. David's on-site assessment captures the factors that make Burien's neighborhoods so different from each other.",
+    },
+    "preparing-home-for-sale": {
+      intro: "Preparing a Burien home for sale requires understanding the specific micro-neighborhood's buyer expectations. A Three Tree Point waterfront home, a Seahurst view property, and a downtown-adjacent rambler each need different preparation strategies. Real Property Planning helps sellers calibrate to what their submarket rewards.",
+      scenarios: [
+        "A Seahurst hillside home where exterior presentation and view-framing matter because sound views are the primary value driver",
+        "A Three Tree Point property where waterfront lifestyle needs highlighting through preparation showcasing the location premium",
+        "A downtown-adjacent rambler where practical updates can meaningfully improve buyer appeal without exceeding the neighborhood's ceiling",
+        "An estate property near the 1st Avenue corridor where preparation budget must be calibrated to the realistic price point",
+      ],
+      whyLocal: "Preparation strategy in Burien depends entirely on which micro-neighborhood the property belongs to. A Seahurst view home warrants different investment than a corridor-area property. David's Burien experience helps sellers calibrate appropriately.",
+    },
+    "divorce-related-home-sales": {
+      intro: "Divorce-related property sales in Burien are complicated by dramatic internal diversity — spouses may cite comparable sales from Three Tree Point, Seahurst, or downtown areas that support wildly different value conclusions. Real Property Planning provides the objective, micro-neighborhood analysis Burien divorce situations require.",
+      scenarios: [
+        "A divorcing couple with a Seahurst home where view quality creates a premium one spouse emphasizes while the other disputes",
+        "A family law attorney needing neutral pricing where the micro-neighborhood determines value more than the city average",
+        "A mediated divorce where one party wants to retain the property and needs fair buyout valuation reflecting the actual neighborhood",
+        "A contentious divorce where commercial adjacency creates disagreement about residential value impact",
+      ],
+      whyLocal: "Divorce negotiations involving Burien property are uniquely complicated because micro-neighborhoods create such wide value variation. Both parties may cite real Burien sales from entirely different neighborhoods. David's micro-market expertise provides the neutral analysis needed when each side's comparables tell dramatically different stories.",
+    },
+    "trust-estate-property-sales": {
+      intro: "Trust-owned property in Burien may be a Three Tree Point waterfront home, a Seahurst hillside view property, a downtown-adjacent rambler, or a corridor-area home — each demanding different fiduciary analysis. Real Property Planning provides trustees with the micro-neighborhood expertise that Burien's uniquely varied market demands.",
+      scenarios: [
+        "A successor trustee managing a trust-owned Three Tree Point home requiring specialized waterfront marketing",
+        "A corporate trustee needing local expertise where the specific micro-neighborhood determines pricing strategy",
+        "A trustee preparing to sell a Seahurst home where view quality needs on-site assessment for accurate premium determination",
+        "A beneficiary questioning the trustee's pricing because automated estimates average across dramatically different neighborhoods",
+      ],
+      whyLocal: "Trust property sales in Burien require fiduciary guidance accounting for dramatic micro-market differences. A trustee who applies citywide averages to a Three Tree Point property creates pricing that won't withstand scrutiny. David's Burien experience provides the micro-neighborhood analysis fiduciary situations demand.",
+    },
+  },
 };
 export function getCityServiceOverride(
   citySlug: string,
