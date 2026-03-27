@@ -303,6 +303,11 @@ const Index = () => {
       </section>
 
       {/* ═══════════════════════════════════════════════════
+          TRUST & RESULTS — Credentials, testimonials, case snapshots
+      ═══════════════════════════════════════════════════ */}
+      <TrustAndResults />
+
+      {/* ═══════════════════════════════════════════════════
           WHAT TO EXPECT — 4-step process
       ═══════════════════════════════════════════════════ */}
       <WhatToExpect />
@@ -311,6 +316,16 @@ const Index = () => {
           APPRAISER ADVANTAGE
       ═══════════════════════════════════════════════════ */}
       <AppraiserAdvantage />
+
+      {/* ═══════════════════════════════════════════════════
+          MID-PAGE CTA
+      ═══════════════════════════════════════════════════ */}
+      <MidPageCTA
+        heading="Have Questions About Your Situation?"
+        body="A short conversation to understand your situation, answer questions, and discuss next steps."
+        buttonText="Schedule a 20‑Minute Consultation"
+        variant="dark"
+      />
 
       {/* ═══════════════════════════════════════════════════
           OUT-OF-STATE SUPPORT
