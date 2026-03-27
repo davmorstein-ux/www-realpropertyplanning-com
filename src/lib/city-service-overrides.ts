@@ -1451,6 +1451,206 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
     },
 
   },
+
+  // ═══════════════════════════════════════════════════════════════════
+  // SMALLTOWN TONE — Snohomish (only smalltown city in Tier 1)
+  // Identity: "Antique Capital of the Northwest," historic downtown,
+  // acreage properties, outbuildings, rural-adjacent character
+  // ═══════════════════════════════════════════════════════════════════
+
+  snohomish: {
+    "probate-estate-sales": {
+      intro: "Snohomish's real estate includes historic homes near the downtown antique district, farmhouse-style properties with outbuildings, and acreage parcels along the Pilchuck and Snohomish River corridors. Probate and estate sales here often involve properties with features — land, barns, older construction, deferred maintenance — that standard suburban pricing models don't capture well. Real Property Planning brings the property-specific assessment that executors and families need for Snohomish's distinctive inventory.",
+      scenarios: [
+        "An inherited farmhouse on several acres outside Snohomish where the land, outbuildings, and home each need separate valuation consideration",
+        "A probate property in historic downtown Snohomish where the home's character and walkability to First Street create value that standard comparables miss",
+        "Multiple heirs disagreeing on whether to sell a Snohomish acreage property as-is or invest in repairs — needing objective guidance on what the market actually rewards",
+        "An estate with a Snohomish property that includes shop buildings, fenced pasture, or other rural features that affect both value and buyer pool",
+        "A family managing probate from out of state for a longtime Snohomish home that hasn't been updated in decades and contains a lifetime of belongings",
+      ],
+      whyLocal: "Snohomish properties often include features — acreage, barns, shop buildings, historic construction, river access — that don't appear in standard suburban comparables. The difference between a well-positioned Snohomish estate sale and a poorly priced one often comes down to understanding which rural and historic features add value in this specific market. David Stein's appraisal background and experience with properties across the Snohomish Valley provides the grounded assessment these situations require.",
+    },
+    "senior-transitions": {
+      intro: "Seniors in Snohomish often live in homes they've owned for decades — properties with gardens, workshops, and the kind of accumulated living that comes with longtime small-town homeownership. Transitioning from a Snohomish home involves practical challenges around property preparation, realistic pricing for homes that may not match modern buyer expectations, and the emotional weight of leaving a community where relationships run deep.",
+      scenarios: [
+        "A longtime Snohomish homeowner moving to assisted living in Everett or Marysville while managing the sale of a home with decades of belongings, workshop items, and garden features",
+        "An adult child helping a parent leave a Snohomish acreage property that's become too much to maintain — coordinating the sale from Seattle or out of state",
+        "A retired couple in Snohomish whose home needs meaningful updates before it can compete with newer construction — needing guidance on what to fix and what to leave",
+        "A senior transitioning from a historic downtown Snohomish home where the property's character is its main asset but deferred maintenance creates pricing questions",
+      ],
+      whyLocal: "Snohomish seniors often own properties with features — workshops, gardens, acreage, outbuildings — that represent decades of personal investment but don't always translate directly to market value. Understanding which features Snohomish buyers actually pay premiums for helps families set realistic expectations and avoid costly over-improvement before sale.",
+    },
+    "executor-services": {
+      intro: "Executors managing Snohomish estates often face properties with rural characteristics, deferred maintenance, and accumulated belongings that suburban-focused agents aren't equipped to handle. Real Property Planning provides the property-specific guidance executors need for Snohomish's distinctive housing stock — from historic downtown homes to acreage properties with outbuildings.",
+      scenarios: [
+        "An out-of-state executor managing a Snohomish acreage property with a home, shop buildings, and years of accumulated tools and equipment",
+        "An executor dealing with a historic Snohomish home that has character and location appeal but needs assessment of what deferred maintenance items affect value",
+        "Multiple co-executors with different opinions about a Snohomish property's value — needing objective, defensible pricing grounded in local market data",
+        "An executor responsible for a Snohomish property where the personal property may have significant value requiring separate handling",
+      ],
+      whyLocal: "Snohomish estates frequently include property types — acreage with outbuildings, historic homes, properties with agricultural features — where the executor's biggest risk is mispricing due to unfamiliarity with how rural and small-town features affect value. David Stein's appraisal credentials and experience with Snohomish Valley properties provide the defensible foundation executors need.",
+    },
+    "attorney-fiduciary-services": {
+      intro: "Attorneys and fiduciaries handling Snohomish property matters need a real estate resource who understands the community's distinctive inventory — historic homes, acreage parcels, properties with outbuildings and rural features that complicate standard valuation. Real Property Planning provides the documentation-grade analysis these situations require.",
+      scenarios: [
+        "A probate attorney managing a Snohomish estate where acreage, outbuildings, and rural features require specialized valuation beyond standard residential comparables",
+        "A trust administrator responsible for Snohomish property where the historic character and small-town location create pricing complexity",
+        "An elder law attorney coordinating a client's Snohomish property sale alongside a transition to care facilities in Everett or Marysville",
+        "A family law attorney handling a Snohomish divorce where the property includes acreage, shop buildings, or agricultural features that affect equitable distribution",
+      ],
+      whyLocal: "Snohomish property matters often involve features — land, outbuildings, historic construction, rural zoning — that standard residential valuation approaches handle poorly. Attorneys and fiduciaries need a real estate professional who can provide defensible pricing rationale for properties where the comparable sales pool is limited.",
+    },
+    "downsizing": {
+      intro: "Downsizing from a Snohomish home often means leaving a property with space, character, and features — acreage, workshops, gardens — that won't be replicated in a smaller home. Real Property Planning helps Snohomish homeowners understand what their property is actually worth in today's market and make practical decisions about preparation and timing.",
+      scenarios: [
+        "A Snohomish homeowner with a large shop building and acreage who needs to understand whether those features add enough value to justify the property's maintenance burden",
+        "A couple moving from a historic downtown Snohomish home to a smaller place in Marysville or Lake Stevens — needing realistic pricing for a character property",
+        "A homeowner whose Snohomish property has extensive gardens and outdoor features that represent personal investment but may not translate to market premium",
+        "A family helping a relative downsize from a rural Snohomish property where the cleanout involves workshop equipment, outdoor items, and decades of accumulated belongings",
+      ],
+      whyLocal: "Snohomish downsizers often overestimate the market value of features they personally invested in — workshops, gardens, outbuildings, fencing — while underestimating the appeal of the property's location and small-town character. David Stein's local knowledge helps set realistic expectations about what Snohomish buyers actually pay for.",
+    },
+    "valuation-guidance": {
+      intro: "Snohomish properties frequently include features — acreage, outbuildings, historic construction, river proximity — that automated valuation tools handle poorly. Real Property Planning provides the property-specific assessment needed when standard comparables don't capture what makes a Snohomish property unique.",
+      scenarios: [
+        "An inherited property outside Snohomish where the acreage and outbuildings make standard automated valuations unreliable",
+        "A historic downtown Snohomish home where the walkability to First Street and architectural character create value that neighborhood averages miss",
+        "A property along the Pilchuck or Snohomish River where water proximity, flood zone status, and access all affect valuation differently",
+        "A Snohomish property with a large shop building or barn where the improvement's value depends on its condition, permits, and the buyer pool it attracts",
+      ],
+      whyLocal: "In Snohomish, the difference between accurate and inaccurate property valuation often comes down to understanding rural and small-town features that don't appear in standard comparable analyses. Acreage increments, outbuilding quality, historic designation, and proximity to the downtown antique district all affect value in ways that require local expertise.",
+    },
+    "home-preparation": {
+      intro: "Preparing a Snohomish home for sale often involves challenges that suburban properties don't present — outbuilding cleanouts, acreage maintenance, addressing deferred repairs on older construction, and deciding which character features to preserve versus update.",
+      scenarios: [
+        "A Snohomish estate property with a large shop building full of tools and equipment that needs organized cleanout before the property can be shown",
+        "A historic home near downtown Snohomish where preserving character features matters more than full modernization for the likely buyer pool",
+        "An acreage property where the landscaping, fencing, and outbuildings need selective attention — not everything needs to be perfect, but neglect affects first impressions",
+        "A longtime family home in Snohomish where decades of accumulation require professional cleanout coordination before any preparation work can begin",
+      ],
+      whyLocal: "Snohomish buyers often seek the community's character — historic homes, space, rural feeling — but they still expect functional systems and reasonable maintenance. The preparation balance is different here than in suburban markets: preserving authentic character while addressing the maintenance items that actually affect value.",
+    },
+    "divorce-real-estate": {
+      intro: "Divorce-related property decisions in Snohomish often involve homes with features — acreage, outbuildings, workshops, historic character — that make equitable valuation more complex than standard residential divisions.",
+      scenarios: [
+        "A Snohomish property with acreage and outbuildings where each spouse values different features — the shop, the garden, the land — making equitable division complex",
+        "A historic downtown Snohomish home where the character and location create value that one spouse may not fully appreciate in settlement discussions",
+        "A rural Snohomish property where improvements made during the marriage need objective valuation for fair division",
+        "A divorce involving a Snohomish property where one spouse wants to keep the home but needs realistic assessment of buyout costs",
+      ],
+      whyLocal: "Snohomish divorce property situations often involve features — land, outbuildings, agricultural improvements — where both spouses may have invested significantly but the market values those improvements differently than the personal investment suggests. Objective, locally grounded valuation prevents settlement disputes rooted in emotional attachment.",
+    },
+    "trust-property-sales": {
+      intro: "Trust-held properties in Snohomish often include longtime family homes with acreage, rural features, and deferred maintenance that require careful fiduciary handling. Real Property Planning provides trustees with the property-specific guidance needed to fulfill their obligations in Snohomish's distinctive market.",
+      scenarios: [
+        "A trustee managing a Snohomish acreage property where the beneficiaries live out of state and have limited understanding of the local market",
+        "A trust-held historic home in downtown Snohomish where the property's character and condition create a pricing tension between preservation value and practical marketability",
+        "A family trust property outside Snohomish where outbuildings, land features, and rural characteristics require specialized marketing",
+        "A successor trustee inheriting responsibility for a Snohomish property they've never visited, needing comprehensive assessment before making disposition decisions",
+      ],
+      whyLocal: "Trustees managing Snohomish properties face the challenge of making defensible decisions about properties with features — acreage, outbuildings, historic elements — that automated tools price poorly. Snohomish's limited comparable sales pool makes local expertise essential for fiduciary-grade analysis.",
+    },
+  },
+
+  // ═══════════════════════════════════════════════════════════════════
+  // MILITARY TONE — Silverdale (only military city in Tier 1)
+  // Identity: Central Kitsap hub, Naval Base Kitsap proximity,
+  // unincorporated community, Ridgetop/Clear Creek developments
+  // ═══════════════════════════════════════════════════════════════════
+
+  silverdale: {
+    "probate-estate-sales": {
+      intro: "Silverdale's real estate market reflects its role as Central Kitsap's commercial and residential hub — from newer planned communities in Ridgetop and Clear Creek to established neighborhoods throughout the unincorporated area. Probate and estate sales in Silverdale require understanding how military-adjacent buyer demographics, community growth patterns, and the area's mix of housing types affect pricing and marketing strategy.",
+      scenarios: [
+        "An estate property in an established Silverdale neighborhood where the home has been in the family since before the area's commercial growth transformed the community",
+        "A probate sale involving a Ridgetop or Clear Creek home where newer construction nearby creates competitive pricing pressure for an older estate property",
+        "Multiple heirs managing a Silverdale property from different states — needing a local resource to coordinate cleanout, preparation, and sale",
+        "An estate with a Silverdale home where the buyer pool includes both military families on assignment and civilian buyers with different priorities and timelines",
+        "A family managing probate for a parent's Silverdale home that needs updates to compete with newer inventory dominating the area's listings",
+      ],
+      whyLocal: "Silverdale's market is shaped by its dual role as a military-adjacent community and Central Kitsap's commercial center. Estate properties here compete with newer construction in planned developments, and the buyer pool includes military families with specific timelines and VA loan requirements alongside civilian buyers. Understanding these dynamics is essential for realistic pricing.",
+    },
+    "senior-transitions": {
+      intro: "Seniors in Silverdale often chose the community for its combination of Kitsap County's natural setting and practical access to shopping, medical services, and community amenities. Transitioning from a Silverdale home involves understanding how the area's growth has changed property values, which preparation steps matter for the current market, and how to coordinate a sale that aligns with the family's transition timeline.",
+      scenarios: [
+        "A longtime Silverdale homeowner moving to assisted living in Poulsbo or Bremerton while managing the sale of a home in an established neighborhood that has evolved significantly",
+        "An adult child helping a parent leave a Silverdale home — coordinating the transition from across the water in Seattle or from out of state",
+        "A retired military couple who settled in Silverdale after service and now need to downsize from a home that served a larger family",
+        "A senior in a Silverdale home near Clear Creek or Ridgetop whose property competes with newer construction — needing realistic guidance on pricing and preparation",
+      ],
+      whyLocal: "Silverdale seniors often own homes in established neighborhoods that have been transformed by commercial growth and new residential development around them. Understanding how these changes affect their specific property's value helps families set realistic expectations and avoid preparation decisions based on outdated assumptions.",
+    },
+    "executor-services": {
+      intro: "Executors handling Silverdale estates often manage the process from across Puget Sound or from out of state entirely. Real Property Planning provides the on-the-ground coordination executors need in a market where military buyer demographics and Central Kitsap's growth patterns both influence strategy.",
+      scenarios: [
+        "An out-of-state executor managing a Silverdale property they haven't visited, needing comprehensive assessment of condition, value, and local market context",
+        "An executor coordinating cleanout of a longtime Silverdale home filled with decades of belongings while managing the process remotely from Seattle",
+        "Multiple co-executors with different expectations about a Silverdale property's value — needing objective local market analysis to align on pricing",
+        "An executor for a military retiree's estate in Silverdale where the buyer pool includes active-duty families with VA financing",
+      ],
+      whyLocal: "Silverdale executors face unique challenges: the community's unincorporated status means different regulatory considerations, the buyer pool's military component affects showing schedules and financing types, and the area's rapid commercial growth means properties purchased even 15 years ago exist in a very different market context.",
+    },
+    "attorney-fiduciary-services": {
+      intro: "Attorneys and fiduciaries handling Silverdale property matters need a real estate resource who understands Central Kitsap's specific market dynamics — the military buyer influence, the competition between established homes and newer construction, and the unincorporated community's regulatory landscape.",
+      scenarios: [
+        "A probate attorney managing a Silverdale estate where the property's value has been affected by commercial development growth in the surrounding area",
+        "A trust administrator responsible for a Silverdale property where VA loan eligibility and military buyer demographics are relevant to marketing strategy",
+        "An elder law attorney coordinating a client's Silverdale property sale alongside transition to care facilities in the Kitsap County area",
+        "A family law attorney handling a Silverdale divorce where one spouse is active military and duty station changes affect timeline and strategy",
+      ],
+      whyLocal: "Silverdale property matters often involve dynamics specific to military-adjacent communities — VA loan considerations, PCS-driven buying and selling cycles, and the impact of base activity on local housing demand. Attorneys and fiduciaries need a real estate professional who understands these factors.",
+    },
+    "downsizing": {
+      intro: "Downsizing from a Silverdale home often means recalibrating expectations about what the property is worth in a market that has changed significantly due to commercial growth and new residential development.",
+      scenarios: [
+        "A retired military couple in Silverdale whose family home is now larger than needed — weighing whether to stay in Kitsap County or relocate closer to adult children",
+        "A Silverdale homeowner in an established neighborhood where nearby newer construction has changed the competitive landscape for older homes",
+        "A couple moving from a Silverdale home to a condo or smaller property in Poulsbo or Bainbridge Island — needing realistic pricing to fund the transition",
+        "A homeowner near Ridgetop whose property has benefited from commercial growth but needs updates to appeal to today's buyer expectations",
+      ],
+      whyLocal: "Silverdale downsizers often purchased their homes when the community looked very different — before the commercial growth along Silverdale Way and the residential development in Ridgetop and Clear Creek. Understanding how these changes affect their specific property's competitive position helps set realistic pricing expectations.",
+    },
+    "valuation-guidance": {
+      intro: "Silverdale's mix of newer planned communities, established neighborhoods, and military-influenced buyer demographics creates valuation complexity that automated tools don't capture well.",
+      scenarios: [
+        "An established Silverdale home where nearby newer construction has shifted the comparable sales landscape in ways that affect value in both directions",
+        "An inherited property in Silverdale where the family's perception of value is based on the community they remember, not the significantly changed current market",
+        "A Silverdale property near commercial development where the location's convenience is offset by traffic and density concerns that affect different buyers differently",
+        "A home in the Clear Creek or Ridgetop area where the planned community context and HOA requirements affect value relative to unrestricted Silverdale properties",
+      ],
+      whyLocal: "Silverdale's valuation landscape is shaped by rapid change — commercial growth, new residential development, and shifts in the military buyer pool all create a market where recent comparable sales may not fully represent current dynamics.",
+    },
+    "home-preparation": {
+      intro: "Preparing a Silverdale home for sale means understanding what today's buyers — a mix of military families, civilian professionals, and retirees — actually prioritize.",
+      scenarios: [
+        "An established Silverdale home competing with newer Ridgetop and Clear Creek construction — needing strategic updates that close the gap without over-investing",
+        "An estate property in Silverdale where decades of deferred maintenance need triage — identifying which repairs affect value and which are cosmetic preferences",
+        "A Silverdale home where the yard and outdoor spaces need attention to match the expectations of buyers comparing it to newer homes with professional landscaping",
+        "A longtime Silverdale property where the interior finishes are functional but dated — needing guidance on what to update versus price accordingly",
+      ],
+      whyLocal: "In Silverdale's market, established homes compete directly with newer construction in planned communities. The preparation strategy needs to account for this competitive dynamic — investing enough to be competitive without over-improving for a market where newer alternatives are readily available.",
+    },
+    "divorce-real-estate": {
+      intro: "Divorce-related property decisions in Silverdale often include considerations unique to military-connected communities — PCS timelines, VA loan implications, and housing allowance calculations that affect buyout decisions.",
+      scenarios: [
+        "A Silverdale divorce where one spouse is active military and a potential duty station change affects the timeline for property decisions",
+        "A civilian couple in Silverdale divorcing where the home's value has been affected by nearby commercial and residential development since purchase",
+        "A military family's Silverdale home purchased with VA financing where the equity position and loan assumptions affect settlement options",
+        "A divorce involving a Silverdale property where one spouse wants to retain the home but needs realistic assessment of refinancing feasibility",
+      ],
+      whyLocal: "Silverdale divorce situations frequently involve military-specific considerations — BAH calculations, VA loan assumptions, PCS-driven timelines — alongside standard property valuation questions. Having a real estate professional who understands both the military community dynamics and Silverdale's specific market provides more complete guidance.",
+    },
+    "trust-property-sales": {
+      intro: "Trust-held properties in Silverdale often reflect an earlier version of the community — homes purchased before the commercial growth and residential development that have transformed Central Kitsap.",
+      scenarios: [
+        "A trustee managing a Silverdale property purchased decades ago, now surrounded by commercial development that has fundamentally changed the neighborhood's character",
+        "A trust-held home in an established Silverdale neighborhood where the beneficiaries expect values based on the newer construction nearby rather than the property's actual competitive position",
+        "A family trust property in Silverdale where the trustee is based in Seattle and needs a Kitsap County resource to manage assessment, preparation, and sale",
+        "A successor trustee inheriting responsibility for a Silverdale property they've never visited, needing comprehensive local market context before making disposition decisions",
+      ],
+      whyLocal: "Trustees managing Silverdale properties need to understand how Central Kitsap's transformation affects the specific property they're responsible for. A home in an established neighborhood may benefit from commercial growth, or it may face competitive pressure from newer construction — the answer depends on the specific property's location, condition, and buyer pool.",
+    },
+  },
 };
 
 /**
