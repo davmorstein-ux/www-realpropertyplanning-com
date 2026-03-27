@@ -164,6 +164,8 @@ const App = () => (
           <Route path="/kirkland-probate-estate-real-estate" element={<KirklandProbateEstate />} />
           <Route path="/redmond-probate-estate-real-estate" element={<RedmondProbateEstate />} />
           <Route path="/olympia-probate-estate-real-estate" element={<OlympiaProbateEstate />} />
+          <Route path="/bellingham-probate-estate-real-estate" element={<BellinghamProbateEstate />} />
+          <Route path="/yakima-probate-estate-real-estate" element={<YakimaProbateEstate />} />
           {/* Cornerstone guide pages */}
           <Route path="/guides/how-probate-real-estate-works" element={<HowProbateRealEstateWorks />} />
           <Route path="/guides/what-executors-should-do" element={<WhatExecutorsShouldDo />} />
