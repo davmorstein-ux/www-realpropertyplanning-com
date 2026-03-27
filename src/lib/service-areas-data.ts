@@ -709,6 +709,14 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
       "An executor managing a Gig Harbor estate where the property's waterfront character complicates standard pricing approaches",
       "A divorce-related sale involving a Gig Harbor home where both parties need an objective, locally knowledgeable broker",
     ],
+    localClientTypes: [
+      "Executors managing estate property on the Gig Harbor peninsula — waterfront, harbor-view, and Gig Harbor North",
+      "Families coordinating senior transitions from longtime Gig Harbor homes to care communities or smaller residences",
+      "Attorneys handling probate or divorce cases involving Gig Harbor property where waterfront and view premiums complicate valuation",
+      "Trustees responsible for trust-owned homes in Gig Harbor where the distinction between 'Gig Harbor address' and Gig Harbor proper affects pricing",
+      "Out-of-state heirs who need local coordination for an inherited peninsula property",
+      "Financial advisors needing Gig Harbor property valuations that account for the community's premium waterfront positioning",
+    ],
   },
   fircrest: {
     tone: "suburban",
