@@ -1,5 +1,5 @@
 import GoldCheck3D from "@/components/GoldCheck3D";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
