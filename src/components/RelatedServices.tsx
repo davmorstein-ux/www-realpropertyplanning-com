@@ -11,7 +11,7 @@ const allLinks = [
   { href: "/why-valuation-matters", label: "Why Valuation Matters", description: "Understanding the role of accurate property valuation in estate and transition planning." },
   { href: "/how-the-process-works", label: "How the Process Works", description: "A step-by-step look at how a property sale unfolds from conversation through closing." },
   { href: "/how-to-move-elderly-parents", label: "How to Move Elderly Parents", description: "A compassionate guide for families planning a senior housing transition." },
-  { href: "/counties", label: "Counties We Serve", description: "Service areas across King, Snohomish, Pierce, Kitsap, and Skagit Counties." },
+  { href: "/counties", label: "Counties We Serve", description: "Service areas throughout Washington State." },
   { href: "/transition-resources", label: "Transition Resources", description: "A curated starting point for families and professionals navigating major housing transitions." },
   { href: "/faq", label: "FAQ", description: "Answers to common questions about our services, process, and expertise." },
   { href: "/contact", label: "Contact David", description: "Start a confidential conversation about your property situation." },
