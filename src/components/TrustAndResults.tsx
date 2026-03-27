@@ -18,14 +18,17 @@ const testimonials = [
   {
     text: "David guided our family through a very difficult time with professionalism and genuine compassion. His valuation perspective and market knowledge were incredibly helpful.",
     attribution: "Estate Attorney, Seattle",
+    tag: "Probate · Valuation",
   },
   {
     text: "We didn't know where to start. David made the entire process manageable and kept us informed every step of the way.",
     attribution: "Executor, Snohomish County",
+    tag: "Estate Administration · Communication",
   },
   {
     text: "David's dual background in brokerage and appraisal gave us confidence that the property was priced correctly. He made a complicated situation feel manageable.",
     attribution: "Family Member, King County",
+    tag: "Inherited Home · Pricing",
   },
 ];
 
@@ -127,14 +130,27 @@ const TrustAndResults = () => (
                 </p>
                 <div className="border-t border-border pt-3">
                   <p className="text-muted-foreground text-sm font-medium">— {t.attribution}</p>
+                  {t.tag && (
+                    <span className="inline-block mt-1.5 text-[11px] font-semibold uppercase tracking-wider text-gold/70 bg-gold/5 rounded-full px-2.5 py-0.5">
+                      {t.tag}
+                    </span>
+                  )}
                 </div>
               </div>
             ))}
           </div>
-          <div className="text-center mt-6">
+          <div className="flex flex-wrap items-center justify-center gap-4 mt-6">
             <Link to="/testimonials" className="text-sm text-accent hover:text-gold underline underline-offset-4 transition-colors">
               Read more reviews →
             </Link>
+            <a
+              href="https://www.zillow.com/profile/dstein2112#reviews"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-accent hover:text-gold underline underline-offset-4 transition-colors"
+            >
+              See reviews on Zillow →
+            </a>
           </div>
         </div>
 
