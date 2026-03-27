@@ -59,8 +59,8 @@ const Contact = () => {
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
     toast({
-      title: "Message Sent",
-      description: "Thank you for your inquiry. David Stein will be in touch shortly.",
+      title: "Thank You",
+      description: "I'll reach out shortly to learn more about your situation. If it's urgent, feel free to call directly.",
     });
 
     setIsSubmitting(false);
@@ -161,6 +161,8 @@ const Contact = () => {
                 </p>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  <input type="hidden" name="source_page" value={typeof window !== "undefined" ? window.location.pathname : ""} />
+
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="name">Full Name *</Label>
@@ -217,12 +219,39 @@ const Contact = () => {
                   </div>
 
                   <div className="space-y-2">
+                    <Label htmlFor="found_via">How did you find this site?</Label>
+                    <Select name="found_via">
+                      <SelectTrigger>
+                        <SelectValue placeholder="Select one (optional)" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="Google Search">Google Search</SelectItem>
+                        <SelectItem value="Referral">Referral</SelectItem>
+                        <SelectItem value="Zillow">Zillow</SelectItem>
+                        <SelectItem value="Attorney / Professional">Attorney / Professional</SelectItem>
+                        <SelectItem value="Direct / Typed URL">Direct / Typed URL</SelectItem>
+                        <SelectItem value="Other">Other</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+
+                  <div className="space-y-2">
                     <Label htmlFor="message">Message</Label>
                     <Textarea
                       id="message"
                       name="message"
                       rows={5}
                       placeholder="Please share any additional details about your situation..."
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="notes">Anything you'd like me to know?</Label>
+                    <Textarea
+                      id="notes"
+                      name="notes"
+                      rows={2}
+                      placeholder="Situation, timing, questions..."
                     />
                   </div>
 
