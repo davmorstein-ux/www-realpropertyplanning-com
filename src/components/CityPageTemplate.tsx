@@ -86,7 +86,7 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
               {city.name}, {city.county}
             </p>
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-[22px]">
-              Real Estate Guidance for Important Property Transitions in {city.name}
+              {city.heroHeading || `Real Estate Guidance for Important Property Transitions in ${city.name}`}
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed">
               {heroIntro}
