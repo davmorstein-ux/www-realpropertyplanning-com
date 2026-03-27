@@ -107,7 +107,7 @@ const CityServicePageTemplate = ({ city, service }: CityServicePageTemplateProps
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
-              {getToneHowWeHelpHeading(tone)}
+              {getToneHowWeHelpHeading(tone, service.slug)}
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               {getToneHowWeHelpLead(city.name, service.name, tone)}

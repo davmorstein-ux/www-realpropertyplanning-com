@@ -824,6 +824,7 @@ const TIER_1_SLUGS = new Set([
   "edmonds", "tacoma", "bainbridge-island",
   "gig-harbor", "poulsbo",
   "snohomish", "silverdale",
+  "lynnwood", "woodinville", "issaquah",
 ]);
 
 /** Check whether a city is Tier 1 (fully enriched content) */
@@ -1108,14 +1109,112 @@ export function getToneScenariosLead(cityName: string, serviceName: string, tone
   }
 }
 
-/** Tone-aware heading for how-we-help section */
-export function getToneHowWeHelpHeading(tone?: CommunityTone): string {
-  switch (tone) {
-    case "smalltown":
-    case "rural":
-      return "How David Stein Helps";
+/** Tone × service–aware heading for how-we-help section */
+export function getToneHowWeHelpHeading(tone?: CommunityTone, serviceSlug?: string): string {
+  const t = tone || "suburban";
+  const s = serviceSlug || "";
+
+  // Service-specific heading variants by tone
+  switch (s) {
+    case "probate-estate-sales":
+      switch (t) {
+        case "premium": return "How David Guides Estate Property Sales";
+        case "urban": return "Experienced Probate Sale Support";
+        case "waterfront": return "How David Helps With Estate Property";
+        case "smalltown": return "Guiding Your Estate Sale, Step by Step";
+        case "military": return "Practical Probate Sale Guidance";
+        case "rural": return "How David Helps With Estate Property Sales";
+        default: return "How Real Property Planning Supports Estate Sales";
+      }
+    case "senior-transitions":
+      switch (t) {
+        case "premium": return "Supporting Your Family's Transition";
+        case "urban": return "Experienced Senior Transition Support";
+        case "waterfront": return "How David Supports Senior Moves";
+        case "smalltown": return "Walking With You Through the Transition";
+        case "military": return "Practical Senior Transition Guidance";
+        case "rural": return "How David Helps Families in Transition";
+        default: return "How Real Property Planning Supports Senior Transitions";
+      }
+    case "downsizing-services":
+      switch (t) {
+        case "premium": return "How David Supports Your Downsizing Plan";
+        case "urban": return "Practical Downsizing Guidance";
+        case "waterfront": return "How David Helps With Downsizing";
+        case "smalltown": return "Steady Guidance for Your Next Chapter";
+        case "military": return "Clear, Practical Downsizing Support";
+        case "rural": return "How David Helps You Downsize";
+        default: return "How Real Property Planning Helps With Downsizing";
+      }
+    case "executor-support":
+      switch (t) {
+        case "premium": return "How David Supports Executors";
+        case "urban": return "Experienced Executor Real Estate Support";
+        case "waterfront": return "How David Helps Executors Navigate the Process";
+        case "smalltown": return "Guiding Executors Through Each Step";
+        case "military": return "Clear Guidance for Executor Responsibilities";
+        case "rural": return "How David Helps With Executor Duties";
+        default: return "How Real Property Planning Supports Executors";
+      }
+    case "attorney-fiduciary-support":
+      switch (t) {
+        case "premium": return "How David Works With Legal Professionals";
+        case "urban": return "A Reliable Resource for Attorneys and Fiduciaries";
+        case "waterfront": return "How David Supports Attorneys and Fiduciaries";
+        case "smalltown": return "Working With Your Legal Team";
+        case "military": return "Practical Support for Legal Professionals";
+        case "rural": return "How David Partners With Attorneys";
+        default: return "How Real Property Planning Works With Legal Professionals";
+      }
+    case "valuation-guidance":
+      switch (t) {
+        case "premium": return "How David Provides Valuation Clarity";
+        case "urban": return "Experienced Valuation Support";
+        case "waterfront": return "How David Brings Valuation Insight";
+        case "smalltown": return "Honest, Grounded Valuation Guidance";
+        case "military": return "Clear Property Valuation Support";
+        case "rural": return "How David Provides Honest Valuation";
+        default: return "How Real Property Planning Delivers Valuation Insight";
+      }
+    case "preparing-home-for-sale":
+      switch (t) {
+        case "premium": return "How David Manages Property Preparation";
+        case "urban": return "Coordinated Home Preparation Support";
+        case "waterfront": return "How David Helps Prepare Your Home";
+        case "smalltown": return "Getting Your Home Ready, Practically";
+        case "military": return "Efficient Home Preparation Guidance";
+        case "rural": return "How David Coordinates Property Preparation";
+        default: return "How Real Property Planning Prepares Homes for Sale";
+      }
+    case "divorce-related-home-sales":
+      switch (t) {
+        case "premium": return "How David Handles Divorce-Related Sales";
+        case "urban": return "Objective Support for Divorce Property Sales";
+        case "waterfront": return "How David Helps With Divorce-Related Property";
+        case "smalltown": return "Discreet, Professional Sale Guidance";
+        case "military": return "Clear Guidance for Divorce-Related Sales";
+        case "rural": return "How David Manages Divorce Property Sales";
+        default: return "How Real Property Planning Supports Divorce Sales";
+      }
+    case "trust-estate-property-sales":
+      switch (t) {
+        case "premium": return "How David Supports Trust Property Sales";
+        case "urban": return "Experienced Trust Property Sale Guidance";
+        case "waterfront": return "How David Helps With Trust-Owned Property";
+        case "smalltown": return "Guiding Trustees Through the Sale Process";
+        case "military": return "Practical Trust Property Sale Support";
+        case "rural": return "How David Helps Sell Trust-Owned Property";
+        default: return "How Real Property Planning Supports Trust Sales";
+      }
     default:
-      return "How Real Property Planning Helps";
+      // Fallback by tone only
+      switch (t) {
+        case "smalltown":
+        case "rural":
+          return "How David Stein Helps";
+        default:
+          return "How Real Property Planning Helps";
+      }
   }
 }
 
@@ -2371,36 +2470,57 @@ const deepCTAHeadings: Record<CommunityTone, string[]> = {
     "Discuss Your {city} Property",
     "Ready to Explore Your Options?",
     "Schedule a Confidential Conversation",
+    "Let's Talk About Your {city} Property Goals",
+    "Get Trusted Guidance for Your {city} Property",
+    "Your {city} Property Deserves Expert Attention",
   ],
   urban: [
     "Let's Talk About Your {city} Property",
     "Get Experienced Guidance in {city}",
     "Start the Conversation",
+    "Need Practical Help in {city}?",
+    "Ready for Expert Guidance in {city}?",
+    "Take the First Step on Your {city} Property",
   ],
   suburban: [
     "Need Help With a Property in {city}?",
     "Ready to Take the Next Step?",
     "Talk With David About Your {city} Home",
+    "Get Clear Guidance for Your {city} Property",
+    "Let's Talk About Your {city} Property",
+    "Your {city} Home Deserves Experienced Guidance",
   ],
   waterfront: [
     "Discuss Your {city} Property",
     "Ready to Talk About Next Steps?",
     "Let's Discuss Your Options",
+    "Get Locally Informed Guidance in {city}",
+    "Talk With David About Your {city} Home",
+    "Ready to Move Forward on Your {city} Property?",
   ],
   smalltown: [
     "Ready to Take the Next Step?",
     "Let's Talk About Your Property",
     "Get in Touch",
+    "Ready for Honest, Local Guidance?",
+    "Let David Help With Your {city} Property",
+    "Take the Next Step With Confidence",
   ],
   military: [
     "Ready to Discuss Your Property?",
     "Let's Get Started",
     "Schedule a Conversation",
+    "Get Straightforward Guidance in {city}",
+    "Ready to Take Action on Your Property?",
+    "Talk With David About Your {city} Home",
   ],
   rural: [
     "Ready to Discuss Your Property?",
     "Let's Talk About Your {city} Property",
     "Get Honest, Local Guidance",
+    "Take the Next Step on Your {city} Property",
+    "Ready for Grounded, Practical Advice?",
+    "Let David Help With Your Property",
   ],
 };
 

@@ -1651,6 +1651,309 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
       whyLocal: "Trustees managing Silverdale properties need to understand how Central Kitsap's transformation affects the specific property they're responsible for. A home in an established neighborhood may benefit from commercial growth, or it may face competitive pressure from newer construction — the answer depends on the specific property's location, condition, and buyer pool.",
     },
   },
+
+  // ═══════════════════════════════════════════════════════════════════
+  // URBAN TONE GROUP — Lynnwood (alongside Seattle, Tacoma)
+  // ═══════════════════════════════════════════════════════════════════
+
+  // ── LYNNWOOD ────────────────────────────────────────────────────
+  // Identity: Light rail transformation, mid-century housing stock
+  // evolving rapidly, commercial corridor redevelopment
+  lynnwood: {
+    "probate-estate-sales": {
+      intro: "Lynnwood is in the middle of a once-in-a-generation transformation — light rail has arrived, and the city's real estate market is shifting from a quiet suburban bedroom community into an urban-adjacent hub. When a probate or estate sale involves Lynnwood property, understanding how the city's rapid evolution affects value is essential. A mid-century rambler near a future station area may carry very different potential than a similar home a mile away.",
+      scenarios: [
+        "A family home near the Lynnwood City Center light rail station where redevelopment potential may exceed the value of the existing structure",
+        "An estate property in Alderwood or Martha Lake that has appreciated but needs significant updates to meet evolving buyer expectations",
+        "Multiple heirs managing a longtime Lynnwood property where some want to sell quickly and others want to maximize value through preparation",
+        "An executor dealing with a 1960s rambler on Highway 99 where commercial and residential interest overlap",
+        "A probate property near the light rail corridor where understanding transit-oriented zoning changes is critical for pricing",
+      ],
+      whyLocal: "Lynnwood's light rail expansion is reshaping buyer interest block by block. Properties near station areas may attract developers or transit-oriented buyers, while homes in neighborhoods like Martha Lake or North Lynnwood retain a more traditional residential market. Estate properties in Lynnwood need pricing that accounts for this neighborhood-by-neighborhood transformation rather than relying on citywide averages that may already be outdated.",
+    },
+    "senior-transitions": {
+      intro: "Many Lynnwood seniors purchased their homes decades ago when the city was a quiet, affordable suburb. Now, with light rail transforming the landscape and property values shifting, families are navigating senior transitions in a market that looks very different from when the home was originally purchased. Real Property Planning helps Lynnwood families understand how the city's evolution affects their property and manage the sale at a pace that respects the family's needs.",
+      scenarios: [
+        "A senior couple in Alderwood whose mid-century home has appreciated significantly as Lynnwood's light rail corridor develops",
+        "An adult child coordinating a parent's move from a longtime Lynnwood home to assisted living while managing property preparation from out of state",
+        "A family deciding whether a Lynnwood property near the light rail should be sold to a developer or a traditional buyer",
+        "A senior downsizing from a larger Lynnwood lot to a newer condo or townhome closer to transit amenities",
+      ],
+      whyLocal: "Lynnwood seniors who have lived in their homes for 30 or 40 years are watching their neighborhoods transform around them. Light rail, new apartment construction, and shifting commercial corridors all affect property values — sometimes dramatically. David's on-the-ground assessment helps families understand whether their specific property benefits from these changes or whether a more traditional sale approach is appropriate.",
+    },
+    "downsizing-services": {
+      intro: "Lynnwood's transformation from a traditional suburb into a light rail-connected urban hub creates interesting downsizing possibilities — newer condos near transit, more manageable townhomes, or a move to a quieter community. Real Property Planning helps Lynnwood homeowners evaluate their property in today's shifting market and make informed decisions about timing, preparation, and pricing.",
+      scenarios: [
+        "A Lynnwood homeowner in a large mid-century rambler whose children have moved out and who wants to simplify near the new transit options",
+        "A retiree deciding whether to sell a larger Lynnwood home now — while the market is shifting — or wait for more development to mature",
+        "A couple wanting to move from a high-maintenance Lynnwood lot to a newer, low-maintenance townhome or condo in the area",
+        "A homeowner near the Highway 99 corridor weighing developer interest against traditional sale options",
+      ],
+      whyLocal: "Lynnwood's downsizing market is being reshaped by light rail and new construction. Homeowners who have been in their properties for decades may find that their home's highest value comes from redevelopment potential rather than traditional residential sale. David helps clients understand which scenario applies to their specific property and neighborhood within Lynnwood's evolving landscape.",
+    },
+    "executor-support": {
+      intro: "Serving as an executor for a Lynnwood estate property means navigating a market in transition. Light rail, new zoning, and shifting buyer demographics can all affect how an estate property should be priced and positioned. Real Property Planning provides executors with the practical, locally informed guidance needed to manage a Lynnwood estate sale with confidence.",
+      scenarios: [
+        "An executor managing a mid-century Lynnwood home that has been in the family for decades and may have deferred maintenance",
+        "A personal representative dealing with a property near the light rail corridor where both residential buyers and developers may be interested",
+        "Co-executors who disagree on whether to invest in preparing a Lynnwood property or sell it as-is",
+        "An out-of-state executor who needs a local partner to assess property condition and coordinate sale logistics in Lynnwood",
+      ],
+      whyLocal: "Executors handling Lynnwood property face a market where values are shifting rapidly in some neighborhoods while remaining stable in others. A property near the City Center station area presents a very different opportunity than one in Martha Lake or north Lynnwood. David's dual credentials help executors understand these distinctions and make decisions that protect the estate's interests.",
+    },
+    "attorney-fiduciary-support": {
+      intro: "Attorneys and fiduciaries working with Lynnwood property need a real estate partner who understands how the city's ongoing transformation affects valuation, sale timelines, and buyer interest. Real Property Planning provides the reliable communication and market-specific insight that legal professionals need when coordinating property matters in a changing market.",
+      scenarios: [
+        "A probate attorney coordinating the sale of an estate property near Lynnwood's light rail corridor where zoning changes affect value",
+        "An elder law attorney helping a client transition from a longtime Lynnwood home while managing the property sale",
+        "A trustee overseeing a trust-owned Lynnwood property where the market has shifted significantly since the trust was created",
+        "A guardian managing property in a Lynnwood neighborhood where redevelopment interest complicates traditional sale assumptions",
+      ],
+      whyLocal: "Lynnwood's legal professionals are encountering property situations shaped by the city's transformation — new zoning overlays, transit-oriented development potential, and shifting neighborhood demographics. David provides the kind of current, locally grounded market insight that helps attorneys and fiduciaries make well-informed recommendations in a market that is actively evolving.",
+    },
+    "valuation-guidance": {
+      intro: "Property valuation in Lynnwood requires understanding how the city's light rail expansion, new construction, and evolving zoning are reshaping values neighborhood by neighborhood. Automated tools often lag behind these rapid changes. Real Property Planning provides condition-based, locally informed valuation guidance that reflects Lynnwood's current market reality.",
+      scenarios: [
+        "An estate settlement where the property's value has shifted substantially due to Lynnwood's light rail development",
+        "A trust administration requiring accurate valuation of a Lynnwood property near a transit station area",
+        "A family dispute over the value of an inherited Lynnwood home where automated estimates conflict with neighborhood reality",
+        "A divorce proceeding involving a Lynnwood property where transit-oriented development potential complicates valuation",
+      ],
+      whyLocal: "Lynnwood's market is moving faster than most automated tools can track. A property near the City Center station may carry development premium that a standard residential comparison misses entirely. Meanwhile, homes in more established neighborhoods like Alderwood or Martha Lake still trade on traditional residential factors. David's on-site evaluation accounts for these diverging dynamics within the same city.",
+    },
+    "preparing-home-for-sale": {
+      intro: "Preparing a Lynnwood home for sale — especially an estate or longtime family property — requires understanding which improvements matter in today's shifting market. A mid-century rambler near the light rail corridor may need different preparation than a similar home in a quieter Lynnwood neighborhood. Real Property Planning helps families make practical preparation decisions based on the property's specific location and realistic buyer expectations.",
+      scenarios: [
+        "A 1960s rambler in Lynnwood that needs strategic updates to compete against newer construction in the area",
+        "An estate property with decades of accumulated belongings that needs professional cleanout and basic preparation",
+        "A Lynnwood home where the question is whether to invest in preparation or sell as-is to take advantage of current market timing",
+        "A property near the light rail where buyer expectations may lean toward developer-ready condition rather than traditional move-in ready",
+      ],
+      whyLocal: "In Lynnwood's evolving market, preparation strategy depends heavily on where the property sits within the city's transformation. Homes near light rail stations may benefit from minimal preparation if the primary buyer pool is developers, while properties in established residential neighborhoods still need traditional staging and updates to attract homebuyers. David helps families avoid both over-investing and under-preparing.",
+    },
+    "divorce-related-home-sales": {
+      intro: "Selling a shared home during a divorce in Lynnwood requires objectivity, market accuracy, and an understanding of how the city's shifting dynamics affect property value. Real Property Planning provides the neutral, experienced guidance that both parties and their attorneys need to move forward with clarity in Lynnwood's evolving market.",
+      scenarios: [
+        "A divorcing couple who purchased in Lynnwood years ago and disagree on the current value of their home in the transformed market",
+        "A family law attorney who needs a neutral broker opinion on a Lynnwood property where light rail proximity complicates valuation",
+        "A mediated settlement requiring an accurate, defensible property valuation in a Lynnwood neighborhood with active development",
+        "A divorce-related sale where one party wants to sell quickly and the other believes waiting will increase value due to ongoing development",
+      ],
+      whyLocal: "Divorce-related sales in Lynnwood often involve disagreements about value that are amplified by the city's rapid transformation. One party may believe the home has development potential while the other sees it as a standard residential property. David's appraisal credentials provide the objective, defensible basis both attorneys and their clients need for productive negotiations.",
+    },
+    "trust-estate-property-sales": {
+      intro: "Trust-owned property in Lynnwood may have been placed in trust when the city's market looked very different. As light rail reshapes neighborhoods and new construction changes buyer expectations, trustees need current, locally informed guidance to fulfill their fiduciary obligations. Real Property Planning helps trustees navigate Lynnwood's evolving market with clarity and appropriate documentation.",
+      scenarios: [
+        "A successor trustee managing a trust-owned Lynnwood property where the market has shifted dramatically since the trust was established",
+        "A corporate trustee needing a reliable local broker for a Lynnwood property near the light rail corridor",
+        "A trustee deciding whether to sell a Lynnwood property now during the market transformation or hold for further appreciation",
+        "A beneficiary questioning the value of a trust-owned Lynnwood home based on automated estimates that may not reflect transit-area dynamics",
+      ],
+      whyLocal: "Trust properties in Lynnwood present a unique challenge: the market has changed so rapidly that the assumptions built into many trust documents may no longer reflect reality. David's on-the-ground assessment helps trustees understand how Lynnwood's transformation affects their specific property and develop a sale strategy that meets fiduciary standards in a changing environment.",
+    },
+  },
+
+  // ═══════════════════════════════════════════════════════════════════
+  // RURAL TONE GROUP — Woodinville
+  // ═══════════════════════════════════════════════════════════════════
+
+  // ── WOODINVILLE ────────────────────────────────────────────────
+  // Identity: Wine country character, estate-style lots, equestrian
+  // properties, blend of suburban center and rural acreage
+  woodinville: {
+    "probate-estate-sales": {
+      intro: "Woodinville's wine country character and varied housing — from estate-style lots and equestrian properties to townhomes near the Sammamish River — make probate and estate sales here more complex than standard suburban transactions. When an estate property includes acreage, outbuildings, or proximity to the wine district, accurate pricing requires hands-on evaluation that accounts for Woodinville's unique niche market.",
+      scenarios: [
+        "A family estate on a larger Woodinville lot with outbuildings, gardens, or equestrian facilities that don't fit standard comparable sales",
+        "An inherited property near the Woodinville wine district where tourism proximity and residential appeal both affect value",
+        "Multiple heirs managing a Woodinville property where acreage and rural features make online estimates unreliable",
+        "An estate home along the Sammamish River corridor where flood plain considerations and lot characteristics require specialized understanding",
+        "A probate sale involving a Woodinville property with unique features — wine storage, workshop buildings, or hobby farm infrastructure",
+      ],
+      whyLocal: "Woodinville's market doesn't behave like a standard suburban community. Properties with acreage, equestrian facilities, or wine district proximity attract a niche buyer pool with specific expectations. Estate properties here often include features — outbuildings, rural infrastructure, specialty landscaping — that automated tools completely miss. David's appraisal background is especially valuable for Woodinville properties where the land, improvements, and location all contribute to value in ways that require on-site assessment.",
+    },
+    "senior-transitions": {
+      intro: "Many Woodinville seniors chose the community for its space, privacy, and rural character — a lifestyle that can become harder to maintain as needs change. When it's time to transition from a large Woodinville property to a more manageable living situation, the sale involves understanding how the property's unique features — acreage, outbuildings, mature landscaping — affect value and buyer appeal.",
+      scenarios: [
+        "A senior couple on a multi-acre Woodinville lot whose property includes features like horse facilities, gardens, or workshop buildings that affect marketability",
+        "An adult child coordinating a parent's move from a large Woodinville property while managing the complexity of selling rural-adjacent real estate",
+        "A longtime Woodinville homeowner whose property requires more maintenance than they can manage and who needs guidance on whether to simplify the lot before selling",
+        "A family balancing a parent's preference to stay in Woodinville with the practical need for closer proximity to care resources",
+      ],
+      whyLocal: "Woodinville seniors who are transitioning often face a challenge that suburban downsizers don't: their property's value may be deeply tied to features — acreage, outbuildings, equestrian facilities — that require specialized marketing and a buyer pool that's smaller and more specific. David helps families understand how to position these unique Woodinville properties effectively rather than treating them like standard residential listings.",
+    },
+    "downsizing-services": {
+      intro: "Downsizing from a larger Woodinville property means understanding what makes the home unique and how to position those features for the right buyer. Whether the property includes acreage, wine country proximity, or rural character, Real Property Planning provides practical guidance on preparing and pricing a Woodinville home so the downsizing process is grounded in realistic market expectations.",
+      scenarios: [
+        "A Woodinville homeowner on a large lot who wants to move to a smaller, low-maintenance home in town or near the Sammamish River",
+        "A retiree whose Woodinville property includes land and outbuildings that need to be marketed to a niche buyer pool",
+        "A couple leaving a rural-adjacent Woodinville home for a townhome or condo closer to urban amenities",
+        "A homeowner whose property has unique features — wine storage, equestrian facilities — that require specialized sale strategy",
+      ],
+      whyLocal: "Downsizing from a Woodinville property with rural character, acreage, or specialty features requires a different approach than downsizing from a standard suburban home. The buyer pool is more specific, preparation priorities are different, and pricing accuracy requires understanding how rural-adjacent features contribute to — or complicate — market value. David's dual credentials help Woodinville homeowners navigate these nuances.",
+    },
+    "executor-support": {
+      intro: "Executors managing a Woodinville estate property often inherit unique challenges — larger lots with outbuildings, equestrian infrastructure, mature landscaping, or wine country proximity that affect both valuation and sale logistics. Real Property Planning provides the grounded, locally informed support executors need to manage these distinctive properties responsibly.",
+      scenarios: [
+        "An executor managing a Woodinville estate that includes acreage, outbuildings, and property features that don't appear in standard comparable sales",
+        "A personal representative dealing with a Woodinville property where accumulated belongings, workshop contents, and outdoor infrastructure need coordinated handling",
+        "An out-of-state executor who needs a local partner to assess a Woodinville property with unique rural-adjacent features",
+        "Co-executors navigating decisions about whether to sell a Woodinville estate property as-is or invest in preparing the land and structures for market",
+      ],
+      whyLocal: "Estate properties in Woodinville frequently include features that make standard probate sale approaches insufficient. Acreage, outbuildings, equestrian facilities, and proximity to the wine district all affect value and marketability in ways that require on-site, hands-on evaluation. David's appraisal background provides executors with the property-specific insight they need to make confident decisions about unique Woodinville estates.",
+    },
+    "attorney-fiduciary-support": {
+      intro: "Attorneys and fiduciaries working with Woodinville property need a real estate partner who understands rural-adjacent valuation, acreage properties, and the wine country market's unique dynamics. Real Property Planning provides the reliable, well-documented guidance legal professionals need when property characteristics extend well beyond standard residential norms.",
+      scenarios: [
+        "A probate attorney coordinating the sale of a Woodinville estate with acreage and outbuildings that complicate valuation",
+        "An estate planning attorney advising clients on the value of a Woodinville property near the wine district",
+        "A trustee overseeing a trust-owned Woodinville property where rural features and niche buyer demand make standard market comparisons unreliable",
+        "A family law attorney dealing with a divorce involving a Woodinville property where equestrian facilities or hobby farm features affect the settlement",
+      ],
+      whyLocal: "Woodinville properties often include features — acreage, outbuildings, specialty improvements — that create valuation complexity for legal proceedings. Standard residential comparisons may miss the value (or limitation) of these features entirely. David's appraisal credentials provide attorneys and fiduciaries with the kind of defensible, property-specific analysis needed for estate settlements, trust administration, and family law proceedings involving non-standard properties.",
+    },
+    "valuation-guidance": {
+      intro: "Valuing property in Woodinville requires understanding how acreage, outbuildings, wine country proximity, and rural character affect market value. Standard automated tools frequently miss these features or misapply suburban comparables to properties that behave more like rural or estate-style real estate. Real Property Planning provides the hands-on, property-specific valuation insight that Woodinville's unique market demands.",
+      scenarios: [
+        "An estate settlement where the Woodinville property includes acreage and improvements that automated tools significantly undervalue or overvalue",
+        "A trust administration requiring defensible valuation of a Woodinville property with equestrian facilities or hobby farm features",
+        "A family disagreement over the value of an inherited Woodinville property where the land and improvements create complex value dynamics",
+        "A financial advisor helping a client understand the realistic market value of a Woodinville property before making retirement decisions",
+      ],
+      whyLocal: "Woodinville sits at the intersection of suburban, rural, and wine country real estate — and each category carries different valuation dynamics. A property with a productive vineyard is valued differently from one with equestrian facilities, which is valued differently from a standard suburban lot near the Sammamish River. David's on-site assessment accounts for how Woodinville's specific property characteristics interact with actual buyer demand.",
+    },
+    "preparing-home-for-sale": {
+      intro: "Preparing a Woodinville home for sale — especially one with acreage, outbuildings, or rural features — requires a different approach than preparing a standard suburban listing. Real Property Planning helps Woodinville property owners focus preparation efforts on the improvements that matter most for their specific buyer pool and avoid spending money on changes that won't affect value.",
+      scenarios: [
+        "A Woodinville property with acreage that needs land clearing, fence repair, or outbuilding cleanup before it can show well to buyers",
+        "An estate property with accumulated tools, equipment, and personal property across multiple outbuildings that needs coordinated cleanout",
+        "A Woodinville home near the wine district where staging and presentation need to match the expectations of lifestyle-oriented buyers",
+        "A rural-adjacent property where the question is whether to invest in accessory structure repairs or sell as-is to a buyer who plans their own improvements",
+      ],
+      whyLocal: "Preparation for a Woodinville property often extends beyond the house itself — fencing, outbuildings, land presentation, and accessory structures all contribute to buyer perception. Over-improving features that a specific buyer pool won't pay for wastes money, while under-preparing can cause buyers to discount the property unfairly. David's experience with Woodinville's niche market helps sellers invest preparation dollars where they deliver the most return.",
+    },
+    "divorce-related-home-sales": {
+      intro: "Divorce-related property sales in Woodinville can be particularly complex when the marital home includes acreage, outbuildings, or specialty features that make standard valuation approaches unreliable. Real Property Planning provides the objective, property-specific guidance both parties and their attorneys need to reach fair, well-supported conclusions about value.",
+      scenarios: [
+        "A divorcing couple whose Woodinville home includes acreage and improvements that are difficult to value using standard residential comparables",
+        "A family law attorney needing a neutral opinion on a Woodinville property where equestrian facilities or wine-related features affect the asset value",
+        "A mediated settlement involving a Woodinville property with unique characteristics that both parties value differently",
+        "A divorce-related sale where one party built custom improvements — workshop, barn, gardens — and believes they add more value than the market may support",
+      ],
+      whyLocal: "Divorce settlements involving Woodinville property are often complicated by the home's unique features. One party may have invested heavily in equestrian facilities, a workshop, or landscaping that they value sentimentally at a different level than the market. David's appraisal credentials provide the objective, defensible valuation that helps attorneys and mediators cut through subjective disagreements and reach fair outcomes.",
+    },
+    "trust-estate-property-sales": {
+      intro: "Trust-owned property in Woodinville often reflects the original owner's lifestyle choices — larger lots, equestrian facilities, gardens, or wine country character — that create unique sale dynamics. Trustees need a real estate partner who understands how these features affect value and who can manage the sale with appropriate fiduciary care and documentation.",
+      scenarios: [
+        "A successor trustee managing a Woodinville property with acreage and outbuildings that require specialized marketing",
+        "A corporate trustee needing local expertise for a trust-owned Woodinville property where the land itself may be the primary asset",
+        "A trustee deciding how to handle a Woodinville property with equestrian or hobby farm features that limit the buyer pool",
+        "A beneficiary questioning the value of a trust-owned Woodinville property based on online estimates that don't account for rural features",
+      ],
+      whyLocal: "Trust properties in Woodinville frequently include features that were meaningful to the original owner — equestrian facilities, gardens, workshops, wine storage — that may appeal to a niche buyer pool. Trustees need to understand which features add market value and which are personal improvements that buyers may not pay for. David's property-specific assessment provides the clarity trustees need to sell responsibly.",
+    },
+  },
+
+  // ═══════════════════════════════════════════════════════════════════
+  // SUBURBAN TONE GROUP — Issaquah (alongside Kirkland, Redmond)
+  // ═══════════════════════════════════════════════════════════════════
+
+  // ── ISSAQUAH ──────────────────────────────────────────────────────
+  // Identity: Cascade foothills community, master-planned neighborhoods
+  // (Highlands, Talus), Olde Town character, trail access, outdoor lifestyle
+  issaquah: {
+    "probate-estate-sales": {
+      intro: "Issaquah's real estate market spans from the walkable streets of Olde Town to master-planned communities in the Highlands and Talus — each segment with its own buyer expectations and pricing dynamics. When a probate or estate sale involves Issaquah property, understanding how the home's location within the city and its condition relative to the heavily updated or newer housing stock affects realistic value is essential for protecting the estate's interests.",
+      scenarios: [
+        "An estate property in Olde Town Issaquah where the older construction and smaller lot contrast with the newer homes buyers often compare it to",
+        "A family home in Issaquah Highlands or Talus where HOA requirements and community standards affect preparation and sale strategy",
+        "Multiple heirs managing an inherited property in Issaquah where the home needs significant updates to compete in a market dominated by newer construction",
+        "An executor coordinating a probate sale for a foothills-adjacent property with larger lot characteristics that differ from the planned communities",
+        "An estate property where the family's emotional attachment to the home's mountain and foothill setting complicates objective pricing decisions",
+      ],
+      whyLocal: "Issaquah's market is divided between master-planned communities with strict HOA standards and older homes in Olde Town and surrounding areas. An estate property in Olde Town faces very different buyer expectations than one in the Highlands — and pricing either segment incorrectly can delay the sale or leave money on the table. David's on-site evaluation accounts for how Issaquah's foothills geography, community type, and condition factors interact in each submarket.",
+    },
+    "senior-transitions": {
+      intro: "Issaquah seniors who have lived in the community for years — whether in established Olde Town neighborhoods or master-planned communities — face a transition market shaped by newer construction and active outdoor-lifestyle buyers. Real Property Planning helps Issaquah families navigate the sale of a longtime home with practical guidance on preparation, pricing, and timing that reflects the community's specific buyer expectations.",
+      scenarios: [
+        "A senior couple in Olde Town Issaquah whose longtime home needs updates to compete against newer Highlands or Talus listings",
+        "An adult child coordinating a parent's move from an Issaquah Highlands home to a lower-maintenance senior living community",
+        "A longtime Issaquah homeowner whose property backs to trails or open space but needs condition-based guidance on realistic value",
+        "A family managing a parent's transition from a larger foothills-area home while handling the emotional weight of leaving a community they love",
+      ],
+      whyLocal: "Issaquah's appeal to active, outdoor-oriented families means buyer expectations tend toward well-maintained, move-in-ready homes. Seniors whose properties have deferred maintenance face a market where preparation decisions directly impact sale outcomes. David helps Issaquah families understand which updates matter most in their specific neighborhood and how to position a longtime home against the newer construction that dominates parts of the market.",
+    },
+    "downsizing-services": {
+      intro: "Downsizing from an Issaquah home often means leaving a community valued for its trails, mountain views, and family-oriented character. Whether the move is to a smaller home nearby, a senior community, or a different city entirely, the sale of the current property requires pricing and preparation strategies tailored to Issaquah's specific buyer expectations and competitive landscape.",
+      scenarios: [
+        "An Issaquah homeowner in a larger Highlands home whose children have graduated and who wants something smaller and lower-maintenance",
+        "A retiree moving from a foothills-area property to be closer to medical facilities and urban conveniences",
+        "A couple downsizing from an Olde Town home who want to understand whether their older property's character adds or limits value in today's market",
+        "A homeowner in Talus evaluating whether to sell now or wait, given ongoing development in the Issaquah area",
+      ],
+      whyLocal: "Issaquah downsizers face a specific challenge: the community's newer construction and HOA-maintained neighborhoods set high presentation standards. A home with dated finishes or deferred maintenance may need strategic preparation to compete effectively. David helps Issaquah homeowners determine which improvements deliver meaningful return and which are unnecessary given their property's specific submarket and buyer pool.",
+    },
+    "executor-support": {
+      intro: "Executors handling property in Issaquah need to understand how the city's varied housing landscape — from master-planned communities with HOA requirements to older Olde Town homes with different buyer expectations — affects the sale process. Real Property Planning provides executors with clear, practical guidance tailored to Issaquah's specific market segments.",
+      scenarios: [
+        "An executor managing an Issaquah Highlands property where HOA compliance, community standards, and condition all affect sale strategy",
+        "A personal representative dealing with an Olde Town Issaquah home that needs significant preparation to meet buyer expectations",
+        "An out-of-state executor who needs a local partner to assess condition and coordinate the sale of a foothills-area Issaquah property",
+        "Co-executors disagreeing on the value of an Issaquah property where automated estimates don't account for condition relative to newer community standards",
+      ],
+      whyLocal: "Issaquah estates present distinct challenges depending on whether the property is in a master-planned community or the older housing stock near Olde Town. HOA requirements, community architectural standards, and condition relative to the community's newer homes all affect how the property should be priced and prepared. David provides executors with the submarket-specific insight needed to manage these distinctions confidently.",
+    },
+    "attorney-fiduciary-support": {
+      intro: "Attorneys and fiduciaries working with Issaquah property benefit from a real estate partner who understands the city's unique structure — master-planned communities with strict HOA governance alongside older residential areas with different market dynamics. Real Property Planning provides the reliable communication and submarket-specific insight that legal professionals need for property matters in Issaquah.",
+      scenarios: [
+        "A probate attorney managing the sale of an estate property in Issaquah Highlands where HOA compliance and community standards must be addressed",
+        "An estate planning attorney advising clients on the value of Issaquah property across different community types within the city",
+        "A trustee overseeing trust-owned property in Issaquah where the master-planned community environment creates specific sale requirements",
+        "A family law attorney dealing with a shared home in Issaquah where location within the city significantly affects valuation",
+      ],
+      whyLocal: "Issaquah's legal professionals encounter property situations where the community structure — HOAs, architectural review boards, trail easements — adds layers of complexity to standard real estate transactions. David's experience across Issaquah's diverse housing segments helps attorneys and fiduciaries navigate these community-specific requirements while providing defensible valuation guidance.",
+    },
+    "valuation-guidance": {
+      intro: "Property valuation in Issaquah requires distinguishing between the city's master-planned communities, its Olde Town core, and its foothills-adjacent properties. Each segment carries different value drivers and buyer expectations that automated tools often conflate. Real Property Planning provides the condition-based, submarket-specific valuation insight that Issaquah's varied landscape demands.",
+      scenarios: [
+        "An estate settlement requiring accurate valuation of an Issaquah Highlands home where HOA fees and community amenities affect marketability",
+        "A trust administration involving an Olde Town Issaquah property where the home's older construction and character differ from the city's newer housing stock",
+        "A family dispute over the value of an inherited Issaquah property where mountain views and trail proximity add subjective value that needs objective assessment",
+        "A financial advisor helping a client understand how their Issaquah property's specific location and condition affect realistic sale price",
+      ],
+      whyLocal: "Issaquah's valuation landscape is more segmented than many buyers and sellers realize. A home in the Highlands with mountain views, HOA amenities, and newer construction trades at a fundamentally different level than a similar-sized home in Olde Town with older systems and no HOA. David's on-site evaluation captures these submarket distinctions rather than applying citywide averages that can mislead clients in either direction.",
+    },
+    "preparing-home-for-sale": {
+      intro: "Preparing a home for sale in Issaquah means understanding what buyers in each part of the city expect. A Highlands home competes against community standards that emphasize curb appeal and move-in condition, while an Olde Town property may appeal to buyers looking for character and walkability. Real Property Planning helps Issaquah sellers prioritize preparation based on their specific neighborhood and realistic buyer expectations.",
+      scenarios: [
+        "An Issaquah Highlands home where community presentation standards mean preparation must meet HOA and neighborhood norms",
+        "An Olde Town Issaquah property with older systems that needs honest assessment of which updates will deliver meaningful return",
+        "A foothills-area home with trail access and natural surroundings where outdoor presentation and landscaping affect first impressions significantly",
+        "An estate property in Issaquah where decades of accumulated belongings need coordinated cleanout before the home can be evaluated and prepared",
+      ],
+      whyLocal: "Issaquah buyers — particularly in the master-planned communities — have high expectations for move-in condition. But not every update delivers proportional value. David helps Issaquah sellers understand which preparation investments matter in their specific submarket and which improvements buyers in their price range won't pay extra for, avoiding both over-spending and under-preparing.",
+    },
+    "divorce-related-home-sales": {
+      intro: "Divorce-related property sales in Issaquah require objectivity about a home's value within its specific community context — whether it's a Highlands home with HOA amenities, an Olde Town property with character appeal, or a foothills lot with mountain views. Real Property Planning provides the neutral, submarket-informed guidance both parties need to reach fair, defensible conclusions.",
+      scenarios: [
+        "A divorcing couple with a home in Issaquah Highlands where HOA fees, community amenities, and market positioning all factor into the valuation discussion",
+        "A family law attorney needing an objective property assessment for an Olde Town Issaquah home where the community's walkability and character add subjective value",
+        "A mediated settlement involving an Issaquah property where one party believes mountain views add more value than market data supports",
+        "A divorce-related sale where the couple purchased during a different market cycle and disagree on how Issaquah's foothills market has shifted",
+      ],
+      whyLocal: "Divorce negotiations involving Issaquah property are often complicated by the community's varied submarket dynamics. A Highlands home with mountain views may trade at a premium that an Olde Town property with better walkability doesn't command — or vice versa, depending on market conditions. David's appraisal credentials provide the objective, community-specific analysis that helps both parties and their attorneys move forward productively.",
+    },
+    "trust-estate-property-sales": {
+      intro: "Trust-owned property in Issaquah may be in a master-planned community with HOA requirements, an Olde Town neighborhood with different character and buyer appeal, or a foothills-adjacent lot with unique features. Trustees need a real estate partner who understands how these distinctions affect sale strategy and can manage the process with appropriate fiduciary care.",
+      scenarios: [
+        "A successor trustee managing a trust-owned home in Issaquah Highlands where community standards and HOA compliance must be addressed before sale",
+        "A corporate trustee needing local expertise for an Olde Town Issaquah property where the housing stock differs significantly from the city's newer communities",
+        "A trustee deciding how to handle a trust-owned Issaquah property that backs to trails or open space and has features that require specialized marketing",
+        "A beneficiary questioning the value of a trust-owned Issaquah home based on automated estimates that don't account for community-specific dynamics",
+      ],
+      whyLocal: "Trust properties in Issaquah carry community-specific complexities that standard approaches may overlook. HOA requirements, architectural standards, and the distinction between master-planned and non-HOA neighborhoods all affect how a trustee should approach the sale. David's on-the-ground experience across Issaquah's communities provides trustees with the specificity needed to make well-supported, fiduciary-appropriate decisions.",
+    },
+  },
 };
 
 /**
