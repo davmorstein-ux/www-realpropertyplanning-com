@@ -6,6 +6,7 @@ import { articleSchema } from "@/lib/schema";
 import TrustStrip from "@/components/TrustStrip";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
+import NextStepBlock from "@/components/NextStepBlock";
 import PageFAQ from "@/components/PageFAQ";
 import MidPageCTA from "@/components/MidPageCTA";
 import ProofCallout from "@/components/ProofCallout";
@@ -143,6 +144,16 @@ const SeniorTransitionDifferences = () => (
     </section>
 
     <PageFAQ faqs={faqs} heading="Senior Transition FAQs" />
+
+    <NextStepBlock
+      heading="Continue Learning"
+      steps={[
+        { title: "How Probate Real Estate Works", description: "A step-by-step overview of the probate property sale process in Washington State.", href: "/guides/how-probate-real-estate-works" },
+        { title: "Inherited House Guide", description: "What to do with an inherited house — sell, keep, rent, or buy out co-inheritors.", href: "/guides/inherited-house-washington" },
+        { title: "Out-of-State Family Guide", description: "Managing a Washington property transition when you live far away.", href: "/guides/out-of-state-families" },
+      ]}
+    />
+
     <RelatedServices currentPath="/guides/senior-transition-differences" />
 
     <section className="py-20 lg:py-28 bg-primary">

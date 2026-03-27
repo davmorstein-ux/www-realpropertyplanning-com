@@ -6,6 +6,7 @@ import { articleSchema } from "@/lib/schema";
 import TrustStrip from "@/components/TrustStrip";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
+import NextStepBlock from "@/components/NextStepBlock";
 import PageFAQ from "@/components/PageFAQ";
 import MidPageCTA from "@/components/MidPageCTA";
 import ProofCallout from "@/components/ProofCallout";
@@ -176,6 +177,16 @@ const OutOfStateFamilies = () => (
     </section>
 
     <PageFAQ faqs={faqs} heading="Out-of-State Property FAQs" />
+
+    <NextStepBlock
+      heading="Continue Learning"
+      steps={[
+        { title: "What Executors Should Do First", description: "A practical guide to the first 30 days of managing estate property.", href: "/guides/what-executors-should-do" },
+        { title: "How Probate Real Estate Works", description: "Understand the legal process and key decisions for selling property through probate.", href: "/guides/how-probate-real-estate-works" },
+        { title: "Appraisal vs. CMA: Which Do You Need?", description: "When a formal appraisal is required versus a comparative market analysis.", href: "/guides/appraisal-vs-cma" },
+      ]}
+    />
+
     <RelatedServices currentPath="/guides/out-of-state-families" />
 
     <section className="py-20 lg:py-28 bg-primary">
