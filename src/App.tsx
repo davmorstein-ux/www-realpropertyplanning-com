@@ -95,6 +95,7 @@ import KentProbateEstate from "./pages/KentProbateEstate";
 import FederalWayProbateEstate from "./pages/FederalWayProbateEstate";
 import AuburnProbateEstate from "./pages/AuburnProbateEstate";
 import MarysvilleProbateEstate from "./pages/MarysvilleProbateEstate";
+import Insights from "./pages/Insights";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -108,6 +109,7 @@ const App = () => (
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/insights" element={<Insights />} />
           <Route path="/probate-estate-sales" element={<ProbateEstateSales />} />
           <Route path="/senior-transitions" element={<SeniorTransitions />} />
           <Route path="/for-attorneys" element={<ForAttorneys />} />
