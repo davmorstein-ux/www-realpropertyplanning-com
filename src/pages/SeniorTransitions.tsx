@@ -9,6 +9,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
 import MidPageCTA from "@/components/MidPageCTA";
+import ProofCallout from "@/components/ProofCallout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -251,11 +252,13 @@ const SeniorTransitions = () => {
       {/* Testimonial */}
       <section className="py-14 lg:py-16 bg-secondary">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <p className="text-foreground text-lg italic leading-relaxed mb-4">
-              "We appreciated David's patience, thoughtful communication, and realistic guidance throughout the sale of our family property."
-            </p>
-            <p className="text-muted-foreground text-[15px] font-medium">— Family Review · Inherited home and sale preparation</p>
+          <div className="max-w-3xl mx-auto">
+            <ProofCallout
+              quote="We appreciated David's patience, thoughtful communication, and realistic guidance throughout the sale of our family property."
+              attribution="Family Review"
+              context="Inherited home and sale preparation"
+              variant="accent"
+            />
           </div>
         </div>
       </section>

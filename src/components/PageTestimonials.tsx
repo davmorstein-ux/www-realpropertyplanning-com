@@ -4,6 +4,7 @@ interface Testimonial {
   text: string;
   attribution: string;
   context?: string;
+  tag?: string;
 }
 
 interface PageTestimonialsProps {
@@ -37,6 +38,11 @@ const PageTestimonials = ({
                 <p className="font-semibold text-foreground text-sm">{t.attribution}</p>
                 {t.context && (
                   <p className="text-muted-foreground text-sm mt-0.5">{t.context}</p>
+                )}
+                {t.tag && (
+                  <span className="inline-block mt-1.5 text-[11px] font-semibold uppercase tracking-wider text-gold/70 bg-gold/5 rounded-full px-2.5 py-0.5">
+                    {t.tag}
+                  </span>
                 )}
               </div>
             </div>

@@ -7,6 +7,22 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import MidPageCTA from "@/components/MidPageCTA";
 import PageFAQ from "@/components/PageFAQ";
+import ProfessionalConfidence from "@/components/ProfessionalConfidence";
+import ProofCallout from "@/components/ProofCallout";
+
+
+      <ProfessionalConfidence
+        heading="Why Attorneys Trust This Process"
+        intro="Legal professionals consistently describe these qualities when referring clients to David:"
+        background="bg-background"
+      />
+
+      <ProofCallout
+        quote="David guided our family through a very difficult time with professionalism and genuine compassion. His valuation perspective and market knowledge were incredibly helpful."
+        attribution="Estate Attorney, Seattle"
+        context="Probate property transition"
+        variant="accent"
+      />
 
 
 import iconProbate from "@/assets/icons/icon-probate-sales.png";
