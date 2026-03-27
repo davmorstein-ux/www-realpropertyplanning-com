@@ -12,7 +12,7 @@ interface SEOHeadProps {
 
 const SITE_URL = "https://realpropertyplanning.com";
 
-const SEOHead = ({ title, description, canonical, jsonLd }: SEOHeadProps) => {
+const SEOHead = ({ title, description, canonical, jsonLd, noindex = false }: SEOHeadProps) => {
   const location = useLocation();
   const canonicalUrl = canonical || `${SITE_URL}${location.pathname === "/" ? "" : location.pathname}`;
 
