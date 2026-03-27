@@ -96,6 +96,11 @@ import FederalWayProbateEstate from "./pages/FederalWayProbateEstate";
 import AuburnProbateEstate from "./pages/AuburnProbateEstate";
 import MarysvilleProbateEstate from "./pages/MarysvilleProbateEstate";
 import Insights from "./pages/Insights";
+import FirstStepsInheritedHouse from "./pages/insights/FirstStepsInheritedHouse";
+import OutOfStateInheritedHouse from "./pages/insights/OutOfStateInheritedHouse";
+import EstatePropertyTimeline from "./pages/insights/EstatePropertyTimeline";
+import EstateCleanoutBeforeSale from "./pages/insights/EstateCleanoutBeforeSale";
+import PricingInheritedProperty from "./pages/insights/PricingInheritedProperty";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -211,6 +216,12 @@ const App = () => (
           <Route path="/guides/estate-property-repairs-before-sale" element={<EstatePropertyRepairs />} />
           <Route path="/guides/heirs-disagree-selling-house" element={<HeirsDisagreeSelling />} />
           <Route path="/guides/pricing-house-trust-estate" element={<PricingHouseTrustEstate />} />
+          {/* Insight articles */}
+          <Route path="/insights/first-steps-inherited-house-washington" element={<FirstStepsInheritedHouse />} />
+          <Route path="/insights/out-of-state-inherited-house-help" element={<OutOfStateInheritedHouse />} />
+          <Route path="/insights/estate-property-sale-timeline" element={<EstatePropertyTimeline />} />
+          <Route path="/insights/estate-property-cleanout-before-sale" element={<EstateCleanoutBeforeSale />} />
+          <Route path="/insights/pricing-inherited-property-differences" element={<PricingInheritedProperty />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
