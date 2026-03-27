@@ -160,6 +160,23 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     descriptor: "South King County hub with evolving neighborhoods",
     heroIntro: "Renton has experienced significant growth and transformation, with neighborhoods ranging from the waterfront areas along Lake Washington to the established communities of Kennydale, the Highlands, and Benson Hill. For families and executors managing property transitions in Renton, understanding how the city's evolving market affects valuation and sale timing is essential. Real Property Planning provides clear, practical guidance for Renton property situations.",
     localKnowledge: "Renton's market includes everything from lakefront properties and Kennydale mid-century homes to newer developments in the Highlands and established neighborhoods in Benson Hill. The city's proximity to major employers and ongoing development make it a dynamic market where pricing accuracy is especially important. David Stein's appraiser credentials help clients understand how Renton's different submarkets and the city's growth trajectory affect their specific property.",
+    brokerAppraiserValue: "Renton's rapid transformation means neighborhood-level pricing shifts faster here than in more stable markets. A Kennydale lakefront home, a Highlands rambler, and a Benson Hill split-level each operate in different micro-markets despite sharing a city name. David Stein's appraisal credentials and familiarity with Renton's evolving landscape provide the condition-specific, neighborhood-aware analysis that estate, probate, and transition clients need in a city where yesterday's comparables may already be outdated.",
+    localSituations: [
+      "A longtime family home in Kennydale where Lake Washington proximity creates a significant premium that generic tools may understate or overstate",
+      "An estate property in the Highlands where the neighborhood's transformation and new construction affect how older homes are valued",
+      "A senior parent's Benson Hill home where the established neighborhood character and school proximity drive specific buyer interest",
+      "An inherited property near Renton's downtown where redevelopment activity creates both opportunity and complexity for estate sales",
+      "A probate property in the Landing area where commercial adjacency and newer development change buyer expectations",
+      "A divorce-related sale involving a Renton home where the city's rapid appreciation creates disagreement about current value",
+    ],
+    localClientTypes: [
+      "Executors managing estate property in Renton's diverse and rapidly changing market",
+      "Families coordinating senior transitions from established Renton neighborhoods to care communities",
+      "Attorneys handling probate or divorce cases involving Renton residential property where market evolution complicates valuation",
+      "Trustees responsible for trust-owned homes across Renton's distinct submarkets — lakefront, Highlands, Benson Hill",
+      "Adult children managing a parent's Renton home sale from out of state during a period of rapid market change",
+      "Financial advisors needing current Renton property valuations for estate planning or settlement in a shifting market",
+    ],
   },
   kent: {
     tone: "suburban",
@@ -295,6 +312,23 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     descriptor: "Plateau community with mountain views and rural character",
     heroIntro: "Enumclaw sits on a plateau with striking views of Mount Rainier, combining small-town character with rural properties and established neighborhoods. When selling estate or transition property in Enumclaw, the community's distinct market — influenced by its rural character, agricultural heritage, and distance from major employment centers — requires guidance grounded in local understanding.",
     localKnowledge: "Enumclaw's housing market includes homes in the walkable downtown area, established neighborhoods, and properties with acreage and mountain views in the surrounding plateau. The community's agricultural heritage means some properties include outbuildings, livestock facilities, or unique lot configurations. David Stein helps clients understand how these property characteristics and Enumclaw's specific buyer demographics affect realistic pricing.",
+    brokerAppraiserValue: "Enumclaw's plateau location and rural-residential character mean many properties have features — acreage, outbuildings, livestock facilities, mountain views — that automated pricing tools handle poorly. David Stein's certified appraisal background and experience with properties that blend residential and agricultural characteristics provide the kind of property-specific analysis that Enumclaw clients need, especially when estate or trust situations require defensible pricing for unique plateau homes.",
+    localSituations: [
+      "A family estate on acreage outside Enumclaw where outbuildings, pasture, and mountain views create valuation complexity beyond standard residential analysis",
+      "An inherited home in Enumclaw's walkable downtown area where the small-town character and community charm appeal to a specific buyer demographic",
+      "A senior couple's plateau home with Rainier views and shop buildings that require experienced evaluation of how these features affect market value",
+      "An executor managing an Enumclaw property with agricultural-heritage characteristics while living in the Seattle metro area",
+      "A trust-owned property near Enumclaw where the rural-residential zoning and lot size create unique fiduciary considerations",
+      "A probate property on the plateau where distance from employment centers and the community's specific buyer pool affect realistic pricing and timeline",
+    ],
+    localClientTypes: [
+      "Executors managing estate property on the Enumclaw plateau where rural-residential characteristics complicate standard valuation",
+      "Families coordinating senior transitions from longtime Enumclaw homes with acreage or agricultural features",
+      "Attorneys handling probate or estate cases involving Enumclaw properties where outbuildings and land use affect value",
+      "Trustees responsible for trust-owned plateau homes where mountain views and lot characteristics need on-site assessment",
+      "Adult children managing a parent's Enumclaw home sale from the Seattle metro area",
+      "Financial advisors helping clients understand Enumclaw property values for estate settlement where rural-residential features create pricing complexity",
+    ],
   },
   "north-bend": {
     tone: "smalltown",
@@ -600,6 +634,23 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     descriptor: "Naval city with revitalizing waterfront and diverse housing",
     heroIntro: "Bremerton is experiencing a notable revitalization, with its waterfront, ferry terminal, and downtown district attracting renewed interest. The city's housing market — from historic homes in Manette to newer waterfront condos and established neighborhoods throughout — offers a wide range of price points and property types. For families managing estate, probate, or transition sales in Bremerton, understanding the city's evolving market is key to making well-informed decisions.",
     localKnowledge: "Bremerton's neighborhoods range from the revitalizing downtown and waterfront to Manette's established community character, the Naval Avenue area, and surrounding residential neighborhoods. The city's connection to Seattle via Washington State Ferries and the presence of Puget Sound Naval Shipyard both influence buyer demographics and market activity. David Stein's experience helps clients understand how Bremerton's ongoing transformation affects property values and sale strategy.",
+    brokerAppraiserValue: "Bremerton's revitalization means property values are shifting at different rates across the city — waterfront condos and downtown-adjacent homes are appreciating faster than outlying neighborhoods, and the Naval Shipyard's influence on buyer demographics creates patterns that automated tools miss. David Stein's appraisal credentials and Kitsap County experience provide the neighborhood-specific analysis that Bremerton clients need, especially for estate and transition properties where the revitalization's uneven impact makes accurate pricing critical.",
+    localSituations: [
+      "A family estate in Manette where the neighborhood's growing appeal and proximity to the ferry create value that older comparables may understate",
+      "An inherited property near the Naval Shipyard where military buyer demographics and VA loan eligibility affect marketing and pricing strategy",
+      "A senior couple's longtime home in an established Bremerton neighborhood where the city's revitalization hasn't yet reached their area",
+      "A probate property downtown where the waterfront transformation has changed buyer expectations and comparable selection",
+      "An executor managing a Bremerton home while living on the Seattle side, unfamiliar with Kitsap's distinct market dynamics",
+      "A divorce-related sale involving a Bremerton property where the city's uneven revitalization creates disagreement about current and future value",
+    ],
+    localClientTypes: [
+      "Executors managing estate property in Bremerton's revitalizing but unevenly evolving market",
+      "Military families and retirees navigating property transitions connected to Puget Sound Naval Shipyard",
+      "Attorneys handling probate or divorce cases involving Bremerton residential property where revitalization affects valuation",
+      "Trustees responsible for trust-owned homes across Bremerton's diverse neighborhoods — waterfront, Manette, Naval Avenue, outlying areas",
+      "Families coordinating senior transitions from longtime Bremerton homes during a period of significant city transformation",
+      "Financial advisors needing Bremerton property valuations for estate planning in a market where revitalization creates pricing uncertainty",
+    ],
   },
   silverdale: {
     tone: "military",
@@ -930,6 +981,7 @@ const TIER_1_SLUGS = new Set([
   "redmond", "everett", "duvall",
   "lakewood", "bothell", "kent",
   "puyallup", "federal-way", "burien",
+  "bremerton", "renton", "enumclaw",
 ]);
 
 /** Check whether a city is Tier 1 (fully enriched content) */
