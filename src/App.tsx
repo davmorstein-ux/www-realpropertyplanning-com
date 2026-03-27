@@ -31,6 +31,11 @@ import SnohomishCounty from "./pages/counties/SnohomishCounty";
 import PierceCounty from "./pages/counties/PierceCounty";
 import KitsapCounty from "./pages/counties/KitsapCounty";
 import SkagitCounty from "./pages/counties/SkagitCounty";
+import ClarkCounty from "./pages/counties/ClarkCounty";
+import SpokaneCounty from "./pages/counties/SpokaneCounty";
+import ThurstonCounty from "./pages/counties/ThurstonCounty";
+import WhatcomCounty from "./pages/counties/WhatcomCounty";
+import BentonCounty from "./pages/counties/BentonCounty";
 import Resources from "./pages/Resources";
 import SeniorMoveManagers from "./pages/resources/SeniorMoveManagers";
 import EstateSaleCompanies from "./pages/resources/EstateSaleCompanies";
@@ -130,6 +135,11 @@ const App = () => (
           <Route path="/counties/pierce" element={<PierceCounty />} />
           <Route path="/counties/kitsap" element={<KitsapCounty />} />
           <Route path="/counties/skagit" element={<SkagitCounty />} />
+          <Route path="/clark-county-probate-estate-real-estate" element={<ClarkCounty />} />
+          <Route path="/spokane-county-probate-estate-real-estate" element={<SpokaneCounty />} />
+          <Route path="/thurston-county-probate-estate-real-estate" element={<ThurstonCounty />} />
+          <Route path="/whatcom-county-probate-estate-real-estate" element={<WhatcomCounty />} />
+          <Route path="/benton-county-probate-estate-real-estate" element={<BentonCounty />} />
           {/* Dynamic city pages */}
           <Route path="/cities/:citySlug" element={<CityPage />} />
           {/* Dynamic city + service pages */}
