@@ -139,16 +139,24 @@ const Index = () => {
               Reduce stress. Protect value. Get clear, valuation-informed strategy from a broker who understands what your family is going through.
             </p>
 
-            {/* Refined gold accent divider */}
-            <div className="flex items-center justify-center gap-3 my-10 lg:my-14">
-              <div className="h-px w-16 bg-gold/30" />
-              <div className="w-1.5 h-1.5 rounded-full bg-gold/50" />
-              <div className="h-px w-16 bg-gold/30" />
+            {/* Gold accent divider */}
+            <div className="flex items-center justify-center gap-3 my-12 lg:my-16">
+              <div className="h-[2px] w-20 bg-gold/40 rounded-full" />
+              <div className="w-2 h-2 rounded-full bg-gold/50" />
+              <div className="h-[2px] w-20 bg-gold/40 rounded-full" />
             </div>
 
-            <p className="text-primary-foreground/80 text-lg leading-relaxed mb-6">
-              Real Property Planning helps attorneys, executors, trustees, fiduciaries, seniors, and families navigate probate real estate, inherited homes, estate sales, and major property transitions throughout Washington State. David Stein brings over 20 years of dual expertise as a licensed real estate broker and Washington State certified residential appraiser, with a strong focus in Western Washington and the Puget Sound region. Through eXp Realty's referral network, he can also help connect clients with trusted brokers across the United States and internationally when needed.
-            </p>
+            <div className="text-primary-foreground/80 text-lg leading-relaxed space-y-4 max-w-2xl mx-auto">
+              <p>
+                Real Property Planning works with attorneys, executors, trustees, fiduciaries, seniors, and families facing probate real estate, inherited homes, estate sales, and major property transitions throughout Washington State.
+              </p>
+              <p>
+                David Stein brings more than 20 years of dual expertise as a licensed real estate broker and Washington State certified residential appraiser. He has especially strong experience in Western Washington and the Puget Sound region.
+              </p>
+              <p>
+                When clients need help outside Washington, David can also connect them with trusted eXp Realty brokers across the United States and internationally.
+              </p>
+            </div>
           </div>
         </div>
       </section>
