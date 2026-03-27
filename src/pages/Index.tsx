@@ -25,6 +25,7 @@ import ServiceNavTiles from "@/components/ServiceNavTiles";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 import WhatToExpect from "@/components/WhatToExpect";
 import LeadMagnetBlock from "@/components/LeadMagnetBlock";
+import HomepageLeadForm from "@/components/HomepageLeadForm";
 import AppraiserAdvantage from "@/components/AppraiserAdvantage";
 import OutOfStateBlock from "@/components/OutOfStateBlock";
 import TrustAndResults from "@/components/TrustAndResults";
