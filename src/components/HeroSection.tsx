@@ -32,17 +32,20 @@ const HeroSection = () => {
               Specialized Guidance for Probate & Estate Property Sales
             </h1>
             
-            <p className="text-lg md:text-xl text-primary-foreground/80 mb-8 leading-relaxed max-w-2xl">
-              Helping attorneys, executors, personal administrators, and families navigate real estate transitions with compassion, expertise, and integrity.
+            <p className="text-lg md:text-xl text-gold/90 mb-4 leading-relaxed max-w-2xl font-medium">
+              Clear guidance to reduce stress, protect property value, and bring confidence to inherited and estate real estate decisions.
+            </p>
+            <p className="text-base md:text-lg text-primary-foreground/70 mb-8 leading-relaxed max-w-2xl">
+              Working with attorneys, executors, trustees, and families across Washington State — with 20+ years of dual expertise as a broker and certified appraiser.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button variant="gold" 
                 size="lg" 
- className="hover:-light text-primary px-8"
+                className="hover:-light text-primary px-8"
               >
                 <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
-                Schedule a Consultation
+                Schedule a 20-Minute Consultation
               </Button>
               <Button 
                 size="lg" 
@@ -53,6 +56,9 @@ const HeroSection = () => {
                 Contact Me
               </Button>
             </div>
+            <p className="mt-3 text-primary-foreground/50 text-sm max-w-md">
+              A short conversation to understand your situation, answer questions, and outline practical next steps.
+            </p>
             
             <div className="mt-12 pt-8 border-t border-primary-foreground/20">
               <p className="text-primary-foreground/60 text-base mb-3">Proudly Serving</p>
