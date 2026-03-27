@@ -67,6 +67,7 @@ const CityServicePageTemplate = ({ city, service }: CityServicePageTemplateProps
       <SEOHead
         title={`${service.shortName} in ${city.name}, WA | Real Property Planning`}
         description={`${service.shortName} in ${city.name}, ${city.county}. David Stein provides experienced real estate guidance for ${service.name.toLowerCase()} with licensed broker and certified appraiser credentials.`}
+        noindex={!tier1}
       />
       <BreadcrumbSchema
         items={[
