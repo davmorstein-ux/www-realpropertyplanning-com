@@ -789,6 +789,19 @@ export const counties: CountyData[] = [
   },
 ];
 
+// ─── Tier Classification ────────────────────────────────────────────────
+
+/** Tier 1 cities — fully enriched, ready for indexation */
+const TIER_1_SLUGS = new Set([
+  "bellevue", "seattle", "kirkland", "mercer-island",
+  "edmonds", "tacoma", "bainbridge-island",
+]);
+
+/** Check whether a city is Tier 1 (fully enriched content) */
+export function isTier1City(slug: string): boolean {
+  return TIER_1_SLUGS.has(slug);
+}
+
 // ─── Helpers ────────────────────────────────────────────────────────────
 
 /** Get all cities flat */
@@ -1124,4 +1137,461 @@ export function getToneCTABody(cityName: string, tone?: CommunityTone): string {
     default:
       return `Schedule a consultation to discuss your ${cityName} property situation.`;
   }
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// DEEP CONTENT VARIATION SYSTEM
+// Replaces near-identical city-name-swap templates with tone×service
+// paragraph banks for Tier 2-3 cities
+// ═══════════════════════════════════════════════════════════════════════
+
+type ToneServiceKey = `${CommunityTone}:${string}`;
+
+// ─── Deep Intro Paragraphs ─────────────────────────────────────────────
+// Unique opening paragraph by tone × service — never just a city-name swap
+
+const deepIntroBank: Record<string, Record<CommunityTone, string>> = {
+  "probate-estate-sales": {
+    premium: `In established, higher-value communities, probate and estate sales carry added complexity — from navigating multiple interested parties to pricing homes that reflect both premium location and real-world condition. In {city}, {county}, Real Property Planning provides the valuation-informed guidance that executors, attorneys, and families need to handle estate property with clarity and confidence.`,
+    urban: `Urban estate sales move quickly and involve diverse property types — condos, townhomes, multifamily, and single-family homes across distinct neighborhoods. In {city}, the pace and complexity of the market make experienced guidance essential. Real Property Planning works with executors and attorneys who need a broker who understands city-market dynamics and can price estate property based on actual condition and realistic demand.`,
+    suburban: `In family-oriented communities like {city}, estate and probate properties are often longtime family homes — well-loved but showing their age. Selling them effectively means understanding what buyers in {city} expect and how to position a home that may not match the newer construction nearby. Real Property Planning provides practical guidance grounded in local market knowledge and condition-based pricing.`,
+    waterfront: `Waterfront and water-influenced communities present distinct challenges for estate sales — from view-driven premiums to properties with aging bulkheads, marine exposure, or unique lot configurations. In {city}, Real Property Planning helps executors and families price and prepare estate property with the local insight that waterfront markets require.`,
+    smalltown: `In smaller communities like {city}, estate sales are personal — the family is often well-known, and the property may have been in the family for decades. Real Property Planning brings respectful, experienced guidance to probate and estate property sales in {city}, providing honest pricing and clear coordination without the pressure of a high-volume brokerage.`,
+    military: `Military-connected communities like {city} experience frequent relocations, PCS-related sales, and estate transitions that may involve service members or their families. Real Property Planning provides steady, practical guidance for probate and estate sales in {city}, working within the timelines and constraints that military families often face.`,
+    rural: `Rural and semi-rural estate properties in {city} often include features that standard market tools overlook — acreage, outbuildings, well and septic systems, or mixed-use potential. Real Property Planning provides condition-based pricing and hands-on coordination for estate sales in {city} where property characteristics require experienced, on-the-ground evaluation.`,
+  },
+  "senior-transitions": {
+    premium: `Senior transitions in established communities like {city} often involve homes with significant value and decades of memories. The sale needs to be handled with care — for the family and for the asset. Real Property Planning guides {city} families through the process with experienced pricing, vendor coordination, and a pace that respects both the market opportunity and the human reality of the move.`,
+    urban: `In {city}'s urban environment, senior transitions can involve everything from condos in walkable neighborhoods to mid-century homes in established residential areas. The range of options — and the pace of the market — make experienced guidance essential. Real Property Planning helps families coordinate the sale of a longtime home alongside the logistics of a move to assisted or independent living.`,
+    suburban: `Many families in {city} reach out when a parent is ready to transition from the family home — a home they may have lived in for 20 or 30 years. Real Property Planning helps suburban families in {city} navigate the sale timeline, property preparation, and pricing decisions that come with this important life change.`,
+    waterfront: `Senior transitions from waterfront or water-view homes in {city} carry unique considerations — from the premium that water access commands to the specialized maintenance these properties require. Real Property Planning helps families approach the sale with honest pricing and thoughtful coordination.`,
+    smalltown: `In a close-knit community like {city}, a senior's decision to leave the family home is both practical and personal. Real Property Planning provides patient, clear guidance — helping families understand the property's realistic value, coordinate preparation, and manage the sale at a pace that works.`,
+    military: `In {city}, senior transitions often intersect with military retirement or the needs of veteran families. Real Property Planning provides practical, respectful guidance for families coordinating a move from a longtime home to a more manageable living situation.`,
+    rural: `Rural properties in {city} often present unique preparation challenges during a senior transition — deferred maintenance on larger lots, outbuildings, or systems that need evaluation. Real Property Planning provides honest, condition-based guidance for families managing these transitions.`,
+  },
+  "downsizing-services": {
+    premium: `Downsizing from a premium home in {city} is a significant financial decision — the home may have appreciated substantially, and getting the pricing right matters. Real Property Planning helps {city} homeowners approach downsizing with a realistic understanding of their home's current value, the preparation that makes sense, and the timing that aligns with their next chapter.`,
+    urban: `In {city}'s urban market, downsizing often means moving from a single-family home to a condo, townhome, or smaller residence in a different neighborhood. Real Property Planning helps homeowners in {city} navigate the transition with clear pricing guidance and practical coordination.`,
+    suburban: `For homeowners in {city} whose children have moved out and who no longer need the space, downsizing is a practical decision that deserves experienced guidance. Real Property Planning works with families in {city} to assess their home's condition, understand realistic market value, and plan a sale that aligns with their next living arrangement.`,
+    waterfront: `Downsizing from a waterfront property in {city} involves specific market considerations — waterfront premiums, specialized property features, and a buyer pool with distinct expectations. Real Property Planning provides valuation-informed guidance for homeowners ready to simplify.`,
+    smalltown: `In {city}, downsizing often means leaving a home where the family has deep roots. Real Property Planning provides honest, practical guidance for homeowners who are ready to simplify — helping them understand what their property is worth and how to prepare it for sale.`,
+    military: `Military families in {city} who are downsizing after retirement or a change in duty status benefit from a broker who understands the practical realities of military transitions. Real Property Planning provides clear, efficient guidance for the sale process.`,
+    rural: `Downsizing from a rural property in {city} often involves considerations that standard downsizing guides don't address — acreage, outbuildings, septic systems, and rural buyer expectations. Real Property Planning provides on-the-ground assessment and honest pricing guidance.`,
+  },
+  "executor-support": {
+    premium: `Executors managing estate property in {city}'s premium market face significant responsibility — the property may be high-value, the beneficiaries may have strong opinions, and the stakes of mispricing are real. Real Property Planning provides the valuation expertise and steady communication that executors in {city} need to fulfill their duties with confidence.`,
+    urban: `Serving as executor for a property in {city}'s urban market can be overwhelming — especially for out-of-area executors who need local coordination. Real Property Planning provides experienced guidance for executors in {city}, managing the property assessment, preparation, and sale process from start to finish.`,
+    suburban: `In family-oriented communities like {city}, executors often inherit a home that was the center of family life for decades. Real Property Planning helps executors in {city} navigate property assessment, preparation decisions, and the sale process with practical guidance and clear communication.`,
+    waterfront: `Managing estate property in a waterfront community like {city} adds specific complexity — waterfront valuations, specialized property features, and a buyer market with particular expectations. Real Property Planning provides the locally informed guidance executors need.`,
+    smalltown: `In {city}, executors often manage property in a community where the family is known and the situation is personal. Real Property Planning provides respectful, experienced support — handling property assessment, preparation, and sale coordination with the care the situation requires.`,
+    military: `Executors in military-connected communities like {city} may be managing estate property while also navigating service-related obligations. Real Property Planning provides efficient, clear guidance that works within the executor's timeline and circumstances.`,
+    rural: `Estate properties in rural areas like {city} often include features that complicate the executor's job — acreage, outbuildings, deferred maintenance, or systems that need inspection. Real Property Planning helps executors assess, prepare, and sell rural estate property with locally grounded expertise.`,
+  },
+  "attorney-fiduciary-support": {
+    premium: `Attorneys and fiduciaries working with property in {city}'s premium market need a real estate partner who understands both the financial stakes and the professional standards involved. Real Property Planning works with legal professionals in {city} to provide defensible pricing, clear documentation, and responsive communication throughout the engagement.`,
+    urban: `In {city}'s diverse urban market, attorneys and fiduciaries need a broker who can handle a wide range of property types and neighborhood contexts. Real Property Planning provides experienced support for legal professionals managing estate, trust, and guardianship property matters across {city}.`,
+    suburban: `Legal professionals referring clients with property in {city} need a broker who communicates clearly, prices accurately, and follows through. Real Property Planning works with attorneys and fiduciaries in {city} as a reliable partner for estate, trust, and transition-related property matters.`,
+    waterfront: `Waterfront property valuations in {city} require more than standard market comparisons. Real Property Planning provides attorneys and fiduciaries with condition-based assessments that account for the specific factors that drive value in waterfront and water-influenced markets.`,
+    smalltown: `In a community like {city}, the relationship between legal professionals and their real estate partners matters. Real Property Planning provides attorneys and fiduciaries with dependable, locally informed guidance — the kind of support that earns ongoing referrals.`,
+    military: `Attorneys serving military families in {city} need a real estate resource who understands PCS timelines, VA considerations, and the practical realities of service-connected property transitions. Real Property Planning provides clear, professional support for these situations.`,
+    rural: `Rural property matters in {city} often involve unique characteristics — acreage, easements, water rights, or mixed-use zoning. Real Property Planning provides attorneys and fiduciaries with the property-specific analysis that rural markets require.`,
+  },
+  "valuation-guidance": {
+    premium: `In {city}'s premium market, accurate valuation is the foundation of sound property decisions. Whether for estate settlement, trust administration, or pre-listing strategy, Real Property Planning provides valuation insight grounded in David Stein's dual credentials as a licensed broker and state-certified appraiser.`,
+    urban: `Property values in {city} can vary dramatically from block to block. Real Property Planning provides condition-based valuation guidance that reflects {city}'s neighborhood-level market dynamics — not citywide averages or automated estimates.`,
+    suburban: `For families and professionals in {city} who need a clear understanding of what a property is worth, Real Property Planning provides valuation guidance based on actual condition, comparable sales, and realistic market positioning — not automated tools that miss the details that matter.`,
+    waterfront: `Waterfront and water-view properties in {city} are notoriously difficult to value with automated tools. Real Property Planning provides hands-on valuation guidance that accounts for view quality, waterfront access, marine exposure, and the specific buyer expectations of {city}'s market.`,
+    smalltown: `In {city}'s smaller market, comparable sales may be limited and property characteristics can vary widely. Real Property Planning provides honest, condition-based valuation guidance that reflects the realities of {city}'s specific market — not a one-size-fits-all estimate.`,
+    military: `Property valuations in military-connected communities like {city} are influenced by base proximity, PCS cycles, and VA-related buyer activity. Real Property Planning accounts for these local dynamics to provide accurate, defensible valuation guidance.`,
+    rural: `Rural properties in {city} often have features — acreage, outbuildings, well/septic systems, or mixed-use potential — that automated valuation tools cannot evaluate. Real Property Planning provides in-person, condition-based assessment for properties that require local expertise.`,
+  },
+  "preparing-home-for-sale": {
+    premium: `In {city}'s premium market, property presentation can significantly affect final sale price. Real Property Planning helps homeowners, executors, and families determine which preparations are worth the investment — balancing cost against realistic return in {city}'s competitive buyer environment.`,
+    urban: `Preparing an estate or transition property for sale in {city}'s urban market often involves managing cleanout, vendor coordination, and presentation strategy across different property types. Real Property Planning handles the logistics so sellers can focus on the bigger picture.`,
+    suburban: `Many homes in {city} need practical preparation before listing — cleanout of decades of belongings, minor repairs, or cosmetic updates. Real Property Planning helps families and executors in {city} make smart preparation decisions based on which improvements actually affect the sale outcome.`,
+    waterfront: `Waterfront properties in {city} may require specialized preparation — addressing marine exposure, moisture concerns, or presentation that highlights water views and access. Real Property Planning coordinates preparation strategy that accounts for {city}'s waterfront buyer expectations.`,
+    smalltown: `In {city}, preparing a longtime family home for sale is often more than a logistics challenge — it's personal. Real Property Planning provides practical guidance on what preparation makes sense, coordinating vendors and managing the process with care and efficiency.`,
+    military: `Preparing a home for sale during a military transition in {city} often needs to happen on a compressed timeline. Real Property Planning provides efficient preparation coordination — cleanout, repairs, and presentation strategy managed within the seller's schedule.`,
+    rural: `Rural properties in {city} may need preparation that goes beyond standard residential concerns — outbuilding maintenance, land clearing, septic inspection, or well certification. Real Property Planning coordinates all aspects of rural property preparation.`,
+  },
+  "divorce-related-home-sales": {
+    premium: `Divorce-related property sales in {city} often involve homes with significant value, making accurate pricing essential for a fair settlement. Real Property Planning provides objective, valuation-informed guidance with the discretion and professionalism that {city} clients and their attorneys expect.`,
+    urban: `In {city}'s urban market, divorce-related sales can involve a range of property types and complex neighborhood dynamics. Real Property Planning provides neutral, experienced guidance — working with both parties and their attorneys to manage the sale process fairly and efficiently.`,
+    suburban: `Divorce-related home sales in {city} benefit from a broker who can remain objective while maintaining clear communication with both parties. Real Property Planning provides condition-based pricing, neutral coordination, and a professional process that reduces friction.`,
+    waterfront: `Selling a waterfront property in {city} during a divorce requires specialized valuation — waterfront premiums, view corridors, and marine-related condition factors all affect fair pricing. Real Property Planning provides the objective, defensible guidance this situation demands.`,
+    smalltown: `In a community like {city}, divorce-related sales require particular discretion and sensitivity. Real Property Planning provides professional, neutral coordination — honest pricing, clear communication, and a process focused on fair outcomes for both parties.`,
+    military: `Divorce-related property sales in military communities like {city} may involve deployment timelines, VA loan considerations, or service-related constraints. Real Property Planning provides practical, neutral guidance that accommodates these realities.`,
+    rural: `Rural divorce-related sales in {city} often involve properties with unique characteristics — acreage, outbuildings, or features that complicate standard valuation. Real Property Planning provides objective, property-specific assessment for fair settlement outcomes.`,
+  },
+  "trust-estate-property-sales": {
+    premium: `Trust property sales in {city}'s premium market require transparency, defensible pricing, and clear communication with beneficiaries. Real Property Planning works with trustees and estate attorneys to manage trust-owned property sales in {city} with the professionalism and documentation that fiduciary standards demand.`,
+    urban: `Managing trust property in {city}'s urban environment requires a broker who understands both the real estate market and the fiduciary obligations involved. Real Property Planning provides trustees with experienced guidance — from property assessment through closing.`,
+    suburban: `For trustees managing property in {city}, the sale process needs to be transparent, well-documented, and defensible. Real Property Planning provides the clear communication and valuation-informed pricing that trust administration requires.`,
+    waterfront: `Trust-owned waterfront properties in {city} require specialized valuation that accounts for premium features, limited comparable sales, and the specific documentation standards of trust administration. Real Property Planning provides the expertise trustees need.`,
+    smalltown: `In {city}, trust property sales are often handled within a community context where reputation and integrity matter. Real Property Planning provides trustees with professional, well-documented sale coordination that meets fiduciary standards.`,
+    military: `Trustees managing trust property in {city}'s military-connected market benefit from a broker who understands the local buyer demographics and can coordinate the sale efficiently within trust administration timelines.`,
+    rural: `Trust-owned rural properties in {city} may involve unique features — acreage, outbuildings, easements — that require specialized assessment. Real Property Planning provides trustees with the property-specific evaluation and clear documentation that fiduciary standards require.`,
+  },
+};
+
+/** Get a deeply varied intro paragraph for city+service pages */
+export function getDeepCityServiceIntro(service: ServiceData, cityData: CityData): string {
+  const tone = cityData.tone || "suburban";
+  const bank = deepIntroBank[service.slug];
+  if (bank && bank[tone]) {
+    return bank[tone]
+      .replace(/\{city\}/g, cityData.name)
+      .replace(/\{county\}/g, cityData.county);
+  }
+  // Fallback to original template for Tier 1 or unknown
+  return getCityServiceIntro(service, cityData);
+}
+
+// ─── Deep Scenario Variations ──────────────────────────────────────────
+// Service × Tone scenario sets — different bullets for different community types
+
+const deepScenarioBank: Record<string, Partial<Record<CommunityTone, string[]>>> = {
+  "probate-estate-sales": {
+    premium: [
+      "A high-value estate property in {city} where accurate pricing protects significant family assets",
+      "Multiple heirs with different perspectives on what the property is worth and when to sell",
+      "An estate home in {city} that has appreciated substantially and needs careful market positioning",
+      "An out-of-state executor managing a property in an unfamiliar premium market",
+      "A trust-to-probate transition where legal and real estate timelines must be coordinated",
+    ],
+    urban: [
+      "A rental property or multi-unit building in {city} that is part of an estate",
+      "A condo or townhome in {city} with HOA considerations that affect the estate sale timeline",
+      "An estate property in a rapidly changing {city} neighborhood where lot value may exceed structure value",
+      "Multiple properties across different {city} neighborhoods that must be sold as part of one estate",
+      "A probate attorney who needs a responsive broker familiar with {city}'s market pace",
+    ],
+    suburban: [
+      "A family home in {city} where the owner lived for decades and the property needs updating before sale",
+      "Co-heirs who live in different states and need someone local to manage the sale in {city}",
+      "An estate property competing against newer construction in a {city} neighborhood",
+      "A probate sale in {city} where the court requires property valuation documentation",
+      "A family home with accumulated belongings that needs cleanout before the property can be shown",
+    ],
+    waterfront: [
+      "A waterfront estate property in {city} where view premiums and marine-related condition affect value",
+      "An inherited home near the water in {city} with deferred maintenance on a waterfront lot",
+      "A longtime waterfront home in {city} being sold as part of an estate settlement",
+      "A property in {city} where ferry access and seasonal market patterns influence sale timing",
+      "An estate property with water views in {city} that automated valuation tools consistently misjudge",
+    ],
+    smalltown: [
+      "A longtime family property in {city} where the community knows the family and discretion matters",
+      "An estate property in {city} with a larger lot, older construction, or nonstandard features",
+      "An out-of-town executor who needs trusted local coordination for a property in {city}",
+      "A family home in {city} where limited comparable sales make pricing more nuanced",
+      "A probate property in {city} that needs practical preparation before it can be listed",
+    ],
+    military: [
+      "An estate property in {city} where a service member's family needs efficient sale coordination",
+      "A probate sale in {city} complicated by a PCS timeline or deployment obligations",
+      "An inherited home near a military installation in {city} with specific buyer demographics",
+      "A property in {city} where VA loan eligibility of prospective buyers affects sale strategy",
+      "An executor in {city} managing estate property while also navigating service-related responsibilities",
+    ],
+    rural: [
+      "An estate property in {city} with acreage, outbuildings, or agricultural features",
+      "A rural home in {city} where well and septic systems require inspection before sale",
+      "A property in {city} with limited comparable sales and unique land characteristics",
+      "An inherited rural property in {city} where the heirs are unfamiliar with the local market",
+      "An estate property in {city} where road access, easements, or zoning affect value",
+    ],
+  },
+  "senior-transitions": {
+    premium: [
+      "A senior couple in {city} moving from a large estate home to a luxury retirement community",
+      "An adult child coordinating a parent's transition from a high-value {city} property",
+      "A longtime homeowner in {city} who wants to understand the home's current market value before deciding to sell",
+      "A family coordinating the sale of a premium {city} home while also managing care arrangements",
+      "A senior in {city} whose home needs strategic preparation to compete in the premium market",
+    ],
+    suburban: [
+      "A parent in {city} whose children have moved away and who is ready for a more manageable home",
+      "An adult child helping coordinate a parent's move from a {city} home to assisted living nearby",
+      "A longtime homeowner in {city} who needs honest guidance on preparing a well-loved home for sale",
+      "A family in {city} coordinating a sale timeline with a move-in date at a senior community",
+      "A {city} homeowner who needs help deciding which home improvements are worth doing before listing",
+    ],
+    waterfront: [
+      "A senior leaving a waterfront home in {city} who wants to understand the property's true market value",
+      "A family coordinating a parent's move from a water-view property in {city} to a care community",
+      "A longtime waterfront homeowner in {city} whose property has specialized maintenance needs before sale",
+      "A senior couple in {city} moving closer to family on the mainland after decades on the water",
+      "A family managing the sale of a {city} waterfront home with view-driven value considerations",
+    ],
+    military: [
+      "A retired service member in {city} transitioning from the family home to a smaller residence",
+      "A military spouse in {city} coordinating a parent's housing transition alongside family obligations",
+      "A veteran family in {city} selling the family home after the passing of a service-connected parent",
+      "A retired military family in {city} downsizing as part of retirement planning",
+      "A family in {city} managing a senior transition while also coordinating VA benefit considerations",
+    ],
+    rural: [
+      "A senior in {city} leaving a rural property with acreage and outbuildings that need assessment",
+      "A family coordinating a parent's move from a remote {city} property to care closer to services",
+      "A rural homeowner in {city} whose property has deferred maintenance on land-related systems",
+      "A longtime {city} property where the land and structures must be evaluated separately",
+      "A senior in {city} who needs help coordinating the sale of a property with unique rural features",
+    ],
+    smalltown: [
+      "A senior in {city} who has lived in the same home for decades and is ready for a smaller space",
+      "A family in {city} helping a parent transition while maintaining community connections",
+      "A longtime {city} homeowner who needs practical guidance on property preparation",
+      "A senior in {city} whose home has sentimental value and whose family wants the sale handled with care",
+      "A {city} family coordinating the sale with a transition to senior living in a nearby community",
+    ],
+  },
+};
+
+/** Get deeply varied scenarios for city+service pages */
+export function getDeepCityServiceScenarios(cityName: string, serviceName: string, serviceSlug: string, tone?: CommunityTone): string[] {
+  const effectiveTone = tone || "suburban";
+  const serviceBank = deepScenarioBank[serviceSlug];
+  if (serviceBank) {
+    const toneScenarios = serviceBank[effectiveTone];
+    if (toneScenarios) {
+      return toneScenarios.map(s => s.replace(/\{city\}/g, cityName));
+    }
+  }
+  // Fallback to original system
+  return getCityServiceScenarios(cityName, serviceName, serviceSlug);
+}
+
+// ─── Deep How-We-Help Variations ───────────────────────────────────────
+
+const deepHowWeHelpBank: Record<string, Partial<Record<CommunityTone, string[]>>> = {
+  "probate-estate-sales": {
+    premium: [
+      "Condition-based valuation that accounts for the premium market positioning of {city} properties",
+      "Coordination with the probate attorney on court timelines and documentation requirements",
+      "Management of high-end property preparation — staging, vendor coordination, and presentation strategy",
+      "Clear communication with multiple heirs, attorneys, and financial professionals involved in the estate",
+      "Strategic market positioning that reflects actual condition rather than automated high-end estimates",
+      "Full-service transaction management from initial consultation through closing",
+    ],
+    urban: [
+      "Neighborhood-level pricing analysis — not citywide averages — for the estate property in {city}",
+      "Coordination with the probate attorney and court on required timelines and sale procedures",
+      "Assessment of whether the property's highest value is as a residence, a lot, or a redevelopment opportunity",
+      "Management of cleanout, preparation, and vendor coordination for occupied or accumulated properties",
+      "Clear reporting to executors, co-heirs, and attorneys with regular status updates",
+      "Transaction management across the full sale process in {city}'s pace of market",
+    ],
+    suburban: [
+      "Honest assessment of what the home is worth in its current condition in {city}'s market",
+      "Guidance on which repairs and updates will actually affect the sale price versus which to skip",
+      "Coordination of property cleanout, preparation vendors, and staging if appropriate",
+      "Communication with co-executors, family members, and the estate attorney throughout",
+      "Pricing strategy that accounts for competition from newer homes in {city}",
+      "Full-service coordination from property assessment through successful closing",
+    ],
+    waterfront: [
+      "Valuation that accounts for waterfront access, view quality, and marine-related condition factors",
+      "Coordination with the probate process alongside seasonal waterfront market considerations",
+      "Assessment of waterfront-specific maintenance needs — bulkheads, docks, drainage, and exposure",
+      "Communication with attorneys, executors, and beneficiaries about waterfront-specific pricing dynamics",
+      "Strategic timing recommendations based on waterfront buyer seasonal patterns",
+      "Full-service sale management for waterfront estate properties in {city}",
+    ],
+    military: [
+      "Practical property assessment that accounts for {city}'s military-influenced buyer demographics",
+      "Coordination with probate proceedings on timelines that accommodate service-related schedules",
+      "Management of cleanout and preparation for properties that may have been tenant-occupied",
+      "Clear communication with executors who may be balancing estate duties with service obligations",
+      "Pricing strategy informed by VA-eligible buyer expectations and local market conditions",
+      "Efficient transaction management that respects the executor's time constraints",
+    ],
+  },
+  "senior-transitions": {
+    premium: [
+      "Thorough property assessment reflecting {city}'s premium market standards and buyer expectations",
+      "Strategic preparation recommendations — which investments maximize return in this price range",
+      "Sale timeline coordination aligned with the move to a new living arrangement",
+      "Sensitive, experienced communication with seniors and their adult children",
+      "Vendor coordination for high-standard property presentation and staging",
+      "Full-service management of the sale so the family can focus on the transition itself",
+    ],
+    suburban: [
+      "Realistic assessment of the home's value based on its current condition in {city}",
+      "Practical guidance on which updates make financial sense before listing",
+      "Coordination of cleanout, repairs, and presentation within the family's budget and timeline",
+      "Patient communication with seniors and adult children who may have different perspectives",
+      "Timeline planning that aligns the sale closing with the move to a new living situation",
+      "Referrals to trusted move managers and transition professionals in {city}",
+    ],
+    waterfront: [
+      "Valuation guidance that captures the waterfront premium while reflecting actual property condition",
+      "Assessment of waterfront-specific preparation needs before listing in {city}",
+      "Coordination with senior living communities regarding move-in timelines and sale proceeds",
+      "Understanding of how seasonal buyer patterns affect timing for waterfront homes in {city}",
+      "Patient guidance for families navigating an emotional transition from a meaningful waterfront home",
+      "Full-service coordination of the sale process alongside the family's transition timeline",
+    ],
+  },
+};
+
+/** Get deeply varied how-we-help bullets for city+service pages */
+export function getDeepCityServiceHowWeHelp(cityName: string, serviceSlug: string, tone?: CommunityTone): string[] {
+  const effectiveTone = tone || "suburban";
+  const serviceBank = deepHowWeHelpBank[serviceSlug];
+  if (serviceBank) {
+    const toneHelp = serviceBank[effectiveTone];
+    if (toneHelp) {
+      return toneHelp.map(s => s.replace(/\{city\}/g, cityName));
+    }
+  }
+  // Fallback to original
+  return getCityServiceHowWeHelp(cityName, serviceSlug);
+}
+
+// ─── Deep "Why Local Context" — Service-Specific ───────────────────────
+
+const deepWhyLocalBank: Record<string, Partial<Record<CommunityTone, string>>> = {
+  "probate-estate-sales": {
+    premium: `Probate properties in premium markets like {city} often appear to be worth more than their actual condition supports — or less, if unique features are overlooked. David Stein's on-site evaluation accounts for the specific factors that drive value in {city}: neighborhood positioning, lot characteristics, view quality, and the realistic cost of bringing deferred-maintenance properties to market standard. This is valuation guidance built on local knowledge, not automated assumptions.`,
+    urban: `Estate properties in {city} exist within a complex urban market where neighborhood, zoning, and property type all affect value. A probate property in one part of {city} may be best positioned as a renovation opportunity; in another area, it may attract developers. David Stein's familiarity with {city}'s neighborhood-level dynamics allows him to advise executors and attorneys on the most realistic path to a successful sale.`,
+    suburban: `In {city}'s suburban market, estate properties often compete against newer construction and recently updated homes. Buyers have expectations shaped by move-in-ready listings, which means a probate property with deferred maintenance or dated finishes needs careful pricing and preparation strategy. David Stein helps families and executors understand how their specific property fits within {city}'s competitive landscape.`,
+    waterfront: `Waterfront estate properties in {city} require specialized local knowledge — view premiums, waterfront access quality, marine exposure, and seasonal market patterns all affect how these properties should be priced and presented. Generic comparable sales from non-waterfront areas are unreliable guides. David Stein's appraisal credentials and local experience provide the waterfront-specific insight that estate sales in {city} require.`,
+    smalltown: `In {city}'s smaller market, comparable sales may be limited and market timing can matter more than in larger communities. Estate properties here often have unique features — larger lots, older construction, or characteristics that don't fit neatly into automated valuation models. David Stein provides the in-person, condition-based analysis that probate sales in {city}'s market require.`,
+    military: `{city}'s real estate market is influenced by military presence — PCS cycles, VA-eligible buyer demographics, and proximity to installations all affect property demand and pricing. For estate sales in {city}, understanding these dynamics helps executors price accurately and reach the right buyer pool. David Stein's local knowledge accounts for the military-market factors that generic pricing tools miss.`,
+    rural: `Rural estate properties in {city} often include features that standard market analysis doesn't cover — acreage, outbuildings, septic and well systems, or road access limitations. These characteristics can significantly affect value, and they require on-the-ground evaluation rather than desk-based estimates. David Stein provides the hands-on assessment that rural probate and estate sales in {city} demand.`,
+  },
+  "senior-transitions": {
+    premium: `Senior transition properties in {city} are often well-maintained but may show their age in ways that affect premium-market buyer expectations. Understanding how kitchen vintage, systems age, and cosmetic updates affect value in {city}'s competitive market helps families make smart preparation decisions. David Stein's appraisal background provides the condition-specific insight these decisions require.`,
+    suburban: `In {city}, longtime family homes being sold during a senior transition often have a character that newer homes lack — but they may also need updates to meet current buyer expectations. David Stein helps families understand the balance: which improvements will affect the sale price, which won't, and how to prepare the home in a way that makes financial sense without unnecessary stress or expense.`,
+    waterfront: `Waterfront homes in {city} that have been in the same family for years may have specialized maintenance needs — marine exposure wear, dock conditions, or drainage systems — that affect both value and buyer interest. David Stein provides families with a realistic assessment of what these properties are worth and what preparation makes sense given {city}'s waterfront market dynamics.`,
+  },
+};
+
+/** Get service-specific "Why Local Context Matters" text instead of reusing city-page paragraph */
+export function getDeepWhyLocalServiceMatters(cityName: string, countyName: string, serviceSlug: string, cityData?: CityData): string {
+  const tone = cityData?.tone || "suburban";
+  const serviceBank = deepWhyLocalBank[serviceSlug];
+  if (serviceBank) {
+    const toneText = serviceBank[tone];
+    if (toneText) {
+      return toneText
+        .replace(/\{city\}/g, cityName)
+        .replace(/\{county\}/g, countyName);
+    }
+  }
+  // Fallback to generic local knowledge
+  return getWhyLocalMatters(cityName, countyName, cityData);
+}
+
+// ─── Deep CTA Variations ──────────────────────────────────────────────
+
+const deepCTAHeadings: Record<CommunityTone, string[]> = {
+  premium: [
+    "Discuss Your {city} Property",
+    "Ready to Explore Your Options?",
+    "Schedule a Confidential Conversation",
+  ],
+  urban: [
+    "Let's Talk About Your {city} Property",
+    "Get Experienced Guidance in {city}",
+    "Start the Conversation",
+  ],
+  suburban: [
+    "Need Help With a Property in {city}?",
+    "Ready to Take the Next Step?",
+    "Talk With David About Your {city} Home",
+  ],
+  waterfront: [
+    "Discuss Your {city} Property",
+    "Ready to Talk About Next Steps?",
+    "Let's Discuss Your Options",
+  ],
+  smalltown: [
+    "Ready to Take the Next Step?",
+    "Let's Talk About Your Property",
+    "Get in Touch",
+  ],
+  military: [
+    "Ready to Discuss Your Property?",
+    "Let's Get Started",
+    "Schedule a Conversation",
+  ],
+  rural: [
+    "Ready to Discuss Your Property?",
+    "Let's Talk About Your {city} Property",
+    "Get Honest, Local Guidance",
+  ],
+};
+
+const deepCTABodies: Record<CommunityTone, string[]> = {
+  premium: [
+    "Schedule a confidential consultation to discuss your {city} property, your timeline, and your options.",
+    "David Stein provides experienced, discreet guidance for clients and professionals in {city}.",
+    "Reach out for a conversation about your property and what the path forward looks like.",
+  ],
+  urban: [
+    "Contact David to discuss your {city} property situation — no obligation, no pressure.",
+    "Schedule a consultation to get clear, practical guidance for your property decision.",
+    "Reach out to discuss your situation and learn how David can help.",
+  ],
+  suburban: [
+    "David Stein provides clear, experienced guidance for families and professionals in {city}.",
+    "Schedule a consultation to discuss your property, your timeline, and your questions.",
+    "Contact David for an honest conversation about your {city} property and your options.",
+  ],
+  waterfront: [
+    "Reach out to discuss your {city} waterfront or water-view property and your options.",
+    "David Stein provides locally informed guidance for property transitions in {city}.",
+    "Schedule a conversation about your property and what the process looks like from here.",
+  ],
+  smalltown: [
+    "Contact David to discuss your situation — no pressure, no obligation.",
+    "Reach out for an honest conversation about your property and your options.",
+    "David provides steady, experienced guidance for families in {city}.",
+  ],
+  military: [
+    "Schedule a consultation to discuss your property situation and timeline.",
+    "David provides clear, practical guidance that works within your schedule.",
+    "Contact David to discuss your property — straightforward guidance, no pressure.",
+  ],
+  rural: [
+    "Contact David to discuss your property — honest guidance based on actual property evaluation.",
+    "Schedule a consultation to talk about your rural property and your options.",
+    "Reach out for practical, locally grounded guidance on your property decision.",
+  ],
+};
+
+const deepCTAButtons: string[] = [
+  "Schedule a Consultation",
+  "Get in Touch",
+  "Start a Conversation",
+  "Request a Consultation",
+  "Contact David",
+];
+
+/** Deterministically pick a CTA heading variant based on city+service combination */
+function hashPick<T>(items: T[], citySlug: string, serviceSlug: string): T {
+  let hash = 0;
+  const key = `${citySlug}:${serviceSlug}`;
+  for (let i = 0; i < key.length; i++) {
+    hash = ((hash << 5) - hash + key.charCodeAt(i)) | 0;
+  }
+  return items[Math.abs(hash) % items.length];
+}
+
+export function getDeepCTAHeading(cityName: string, citySlug: string, serviceSlug: string, tone?: CommunityTone): string {
+  const effectiveTone = tone || "suburban";
+  const options = deepCTAHeadings[effectiveTone];
+  return hashPick(options, citySlug, serviceSlug).replace(/\{city\}/g, cityName);
+}
+
+export function getDeepCTABody(cityName: string, citySlug: string, serviceSlug: string, tone?: CommunityTone): string {
+  const effectiveTone = tone || "suburban";
+  const options = deepCTABodies[effectiveTone];
+  return hashPick(options, citySlug, serviceSlug).replace(/\{city\}/g, cityName);
+}
+
+export function getDeepCTAButton(citySlug: string, serviceSlug: string): string {
+  return hashPick(deepCTAButtons, citySlug, serviceSlug);
 }

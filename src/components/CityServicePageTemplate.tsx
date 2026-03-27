@@ -19,6 +19,14 @@ import {
   getToneHowWeHelpLead,
   getToneCTAHeading,
   getToneCTABody,
+  isTier1City,
+  getDeepCityServiceIntro,
+  getDeepCityServiceScenarios,
+  getDeepCityServiceHowWeHelp,
+  getDeepWhyLocalServiceMatters,
+  getDeepCTAHeading,
+  getDeepCTABody,
+  getDeepCTAButton,
 } from "@/lib/service-areas-data";
 import type { CityData, ServiceData } from "@/lib/service-areas-data";
 
@@ -28,17 +36,38 @@ interface CityServicePageTemplateProps {
 }
 
 const CityServicePageTemplate = ({ city, service }: CityServicePageTemplateProps) => {
-  const intro = getCityServiceIntro(service, city);
-  const whyLocal = getWhyLocalMatters(city.name, city.county, city);
-  const howWeHelp = getCityServiceHowWeHelp(city.name, service.slug);
-  const scenarios = getCityServiceScenarios(city.name, service.shortName, service.slug);
+  const tier1 = isTier1City(city.slug);
   const tone = city.tone;
+
+  // Tier 1 cities use original enriched content; Tier 2-3 use deep variation system
+  const intro = tier1
+    ? getCityServiceIntro(service, city)
+    : getDeepCityServiceIntro(service, city);
+  const whyLocal = tier1
+    ? getWhyLocalMatters(city.name, city.county, city)
+    : getDeepWhyLocalServiceMatters(city.name, city.county, service.slug, city);
+  const howWeHelp = tier1
+    ? getCityServiceHowWeHelp(city.name, service.slug)
+    : getDeepCityServiceHowWeHelp(city.name, service.slug, tone);
+  const scenarios = tier1
+    ? getCityServiceScenarios(city.name, service.shortName, service.slug)
+    : getDeepCityServiceScenarios(city.name, service.shortName, service.slug, tone);
+  const ctaHeading = tier1
+    ? getToneCTAHeading(city.name, service.shortName, tone)
+    : getDeepCTAHeading(city.name, city.slug, service.slug, tone);
+  const ctaBody = tier1
+    ? getToneCTABody(city.name, tone)
+    : getDeepCTABody(city.name, city.slug, service.slug, tone);
+  const ctaButton = tier1
+    ? "Schedule a Consultation"
+    : getDeepCTAButton(city.slug, service.slug);
 
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
         title={`${service.shortName} in ${city.name}, WA | Real Property Planning`}
         description={`${service.shortName} in ${city.name}, ${city.county}. David Stein provides experienced real estate guidance for ${service.name.toLowerCase()} with licensed broker and certified appraiser credentials.`}
+        noindex={!tier1}
       />
       <BreadcrumbSchema
         items={[
@@ -163,15 +192,15 @@ const CityServicePageTemplate = ({ city, service }: CityServicePageTemplateProps
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
-              {getToneCTAHeading(city.name, service.shortName, tone)}
+              {ctaHeading}
             </h2>
             <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
-              {getToneCTABody(city.name, tone)}
+              {ctaBody}
             </p>
             <div className="flex justify-center">
               <Link to="/contact">
                 <Button variant="gold" size="lg">
-                  Schedule a Consultation
+                  {ctaButton}
                 </Button>
               </Link>
             </div>
