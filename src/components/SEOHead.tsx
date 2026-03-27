@@ -36,7 +36,10 @@ const SEOHead = ({ title, description, canonical, jsonLd, noindex = false }: SEO
     setMeta("og:type", "website", "property");
     setMeta("twitter:title", title, "name");
     setMeta("twitter:description", description, "name");
-    setMeta("robots", "index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1");
+    setMeta("robots", noindex
+      ? "noindex,follow,max-image-preview:large"
+      : "index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"
+    );
 
     // Canonical link
     let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
