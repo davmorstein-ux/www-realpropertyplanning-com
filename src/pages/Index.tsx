@@ -119,7 +119,7 @@ const Index = () => {
       <section className="py-12 lg:py-16 bg-primary border-b border-primary-foreground/10">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-serif text-2xl md:text-3xl text-primary-foreground font-semibold mb-6">
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] text-primary-foreground font-bold mb-6">
               Who We Can Help
             </h2>
             <ul className="space-y-3 text-left max-w-xl mx-auto mb-8">
