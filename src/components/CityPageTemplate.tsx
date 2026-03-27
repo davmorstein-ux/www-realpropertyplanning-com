@@ -6,6 +6,7 @@ import TrustStrip from "@/components/TrustStrip";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
+import MidPageCTA from "@/components/MidPageCTA";
 import GoldCheck3D from "@/components/GoldCheck3D";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -25,16 +26,24 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
 
   const faqs = [
     {
-      question: `What types of property transitions does Real Property Planning help with in ${city.name}?`,
-      answer: `Real Property Planning assists with probate and estate sales, senior transitions, executor support, downsizing, trust property sales, divorce-related sales, and valuation guidance for properties in ${city.name} and throughout ${city.county}.`,
+      question: `How does selling a home in probate work in ${city.name}?`,
+      answer: `Probate property sales in ${city.name} typically require legal authority before the property can be listed. David coordinates with the estate attorney and personal representative to assess the property, manage preparation, develop a pricing strategy, and handle the sale — keeping all parties informed throughout the process.`,
+    },
+    {
+      question: `What should an executor do first when there is property in ${city.name}?`,
+      answer: `Secure the property, confirm your legal authority to act, and get a realistic assessment of the home's condition and market value. David can evaluate the property and help you understand your options while you work with the estate attorney on the legal requirements.`,
     },
     {
       question: `How does David Stein's appraisal background help sellers in ${city.name}?`,
-      answer: `As both a licensed Washington real estate broker and a state-certified residential appraiser, David brings valuation expertise that helps clients price properties accurately based on actual condition and local market context — not automated estimates or generic comps.`,
+      answer: `As both a licensed Washington real estate broker and a state-certified residential appraiser, David brings valuation expertise that helps clients price properties accurately based on actual condition and local ${city.name} market context — not automated estimates or generic comps.`,
     },
     {
       question: `Can David help if I live out of state but the property is in ${city.name}?`,
       answer: `Yes. David regularly works with out-of-state executors, trustees, and heirs. He coordinates property access, vendor management, preparation, and the full sale process — keeping distant clients informed at every step.`,
+    },
+    {
+      question: `What should be done before listing an inherited home in ${city.name}?`,
+      answer: `It depends on the property's condition and your timeline. David evaluates whether to sell as-is or invest in targeted preparation — using his appraisal background to assess which improvements are likely to increase the sale price enough to justify the cost and delay.`,
     },
   ];
 
@@ -115,7 +124,7 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
-              Common Situations in {city.name}
+              When Do People in {city.name} Need Help With Property Transitions?
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               Clients in {city.name} often reach out when facing situations such as:
@@ -132,12 +141,20 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
         </div>
       </section>
 
+      {/* Mid-page CTA */}
+      <MidPageCTA
+        heading={`Have a Property Situation in ${city.name}?`}
+        body={`David provides confidential consultations for executors, attorneys, trustees, and families in ${city.name} and throughout ${city.county}.`}
+        buttonText="Schedule a Consultation"
+        microcopy="No pressure. Just practical guidance for your situation."
+      />
+
       {/* Services Available */}
       <section className="py-20 lg:py-28 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-[1140px] mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
-              Services Available in {city.name}
+              How Can Real Property Planning Help in {city.name}?
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-10 max-w-3xl">
               Real Property Planning offers the following services for clients in {city.name} and throughout {city.county}:
@@ -185,7 +202,7 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-              Why Local Knowledge Matters in {city.name}
+              Why Does Local Knowledge Matter for Property Transitions in {city.name}?
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
               {whyLocal}
@@ -200,21 +217,42 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
       <section className="py-12 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
+            <p className="text-sm font-semibold text-muted-foreground mb-3">Related Resources</p>
             <div className="flex flex-wrap gap-3">
               <Link to={`/${city.countySlug}`} className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">
                 {city.county} Overview
               </Link>
               <span className="text-muted-foreground/40">·</span>
+              <Link to="/probate-estate-sales" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">
+                Probate & Estate Sales
+              </Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/executors" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">
+                For Executors
+              </Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/senior-transitions" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">
+                Senior Transitions
+              </Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/for-attorneys" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">
+                For Attorneys
+              </Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/why-valuation-matters" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">
+                Why Valuation Matters
+              </Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/how-the-process-works" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">
+                How the Process Works
+              </Link>
+              <span className="text-muted-foreground/40">·</span>
               <Link to="/cities-we-serve" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">
-                All Cities We Serve
+                All Cities
               </Link>
               <span className="text-muted-foreground/40">·</span>
-              <Link to="/services" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">
-                All Services
-              </Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/counties" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">
-                Counties We Serve
+              <Link to="/resources" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">
+                Resources
               </Link>
             </div>
           </div>
@@ -230,8 +268,11 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
               Need Help With a Property in {city.name}?
             </h2>
-            <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
+            <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">
               David Stein provides confidential consultations for executors, attorneys, trustees, families, and financial professionals in {city.name} and throughout {city.county}.
+            </p>
+            <p className="text-primary-foreground/50 text-base mb-8">
+              A short conversation to understand your situation, answer questions, and discuss next steps.
             </p>
             <div className="flex justify-center">
               <Link to="/contact">
