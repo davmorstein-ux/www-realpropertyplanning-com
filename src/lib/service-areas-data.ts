@@ -1263,6 +1263,12 @@ const deepIntroBank: Record<string, Record<CommunityTone, string>> = {
 
 /** Get a deeply varied intro paragraph for city+service pages */
 export function getDeepCityServiceIntro(service: ServiceData, cityData: CityData): string {
+  // City-specific override layer — eliminates same-tone duplication
+  const override = getCityServiceOverride(cityData.slug, service.slug);
+  if (override?.intro) {
+    return override.intro;
+  }
+  // Tone-based variation
   const tone = cityData.tone || "suburban";
   const bank = deepIntroBank[service.slug];
   if (bank && bank[tone]) {
@@ -1270,7 +1276,7 @@ export function getDeepCityServiceIntro(service: ServiceData, cityData: CityData
       .replace(/\{city\}/g, cityData.name)
       .replace(/\{county\}/g, cityData.county);
   }
-  // Fallback to original template for Tier 1 or unknown
+  // Fallback to original template
   return getCityServiceIntro(service, cityData);
 }
 
