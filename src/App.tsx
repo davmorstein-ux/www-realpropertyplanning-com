@@ -101,6 +101,11 @@ import OutOfStateInheritedHouse from "./pages/insights/OutOfStateInheritedHouse"
 import EstatePropertyTimeline from "./pages/insights/EstatePropertyTimeline";
 import EstateCleanoutBeforeSale from "./pages/insights/EstateCleanoutBeforeSale";
 import PricingInheritedProperty from "./pages/insights/PricingInheritedProperty";
+import SellWithoutRepairs from "./pages/insights/SellWithoutRepairs";
+import FamilyDisagreementSelling from "./pages/insights/FamilyDisagreementSelling";
+import EmptyHouseBeforeSelling from "./pages/insights/EmptyHouseBeforeSelling";
+import SellOrKeepProperty from "./pages/insights/SellOrKeepProperty";
+import EstatePropertyMistakes from "./pages/insights/EstatePropertyMistakes";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -222,6 +227,11 @@ const App = () => (
           <Route path="/insights/estate-property-sale-timeline" element={<EstatePropertyTimeline />} />
           <Route path="/insights/estate-property-cleanout-before-sale" element={<EstateCleanoutBeforeSale />} />
           <Route path="/insights/pricing-inherited-property-differences" element={<PricingInheritedProperty />} />
+          <Route path="/insights/sell-inherited-house-without-repairs" element={<SellWithoutRepairs />} />
+          <Route path="/insights/family-disagreement-selling-house" element={<FamilyDisagreementSelling />} />
+          <Route path="/insights/empty-house-before-selling" element={<EmptyHouseBeforeSelling />} />
+          <Route path="/insights/sell-or-keep-inherited-property" element={<SellOrKeepProperty />} />
+          <Route path="/insights/estate-property-mistakes" element={<EstatePropertyMistakes />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
