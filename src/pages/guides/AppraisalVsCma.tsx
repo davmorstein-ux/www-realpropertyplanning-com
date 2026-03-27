@@ -8,6 +8,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
 import MidPageCTA from "@/components/MidPageCTA";
+import NextStepBlock from "@/components/NextStepBlock";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
@@ -158,6 +159,16 @@ const AppraisalVsCma = () => (
     </section>
 
     <PageFAQ faqs={faqs} heading="Appraisal & CMA FAQs" />
+
+    <NextStepBlock
+      heading="Continue Learning"
+      steps={[
+        { title: "Why Valuation Matters in Estate Real Estate", description: "Understand how professional valuation discipline protects executors, trustees, and families from costly pricing mistakes.", href: "/why-valuation-matters" },
+        { title: "Inherited House Guide for Washington Families", description: "Explore your options — sell, keep, rent, or buy out co-inheritors — with key financial and legal considerations.", href: "/guides/inherited-house-washington" },
+        { title: "How Probate Real Estate Works", description: "A step-by-step overview of the probate property sale process in Washington State.", href: "/guides/how-probate-real-estate-works" },
+      ]}
+    />
+
     <RelatedServices currentPath="/guides/appraisal-vs-cma" />
 
     <section className="py-20 lg:py-28 bg-primary">
