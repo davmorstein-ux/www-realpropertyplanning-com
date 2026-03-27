@@ -479,6 +479,14 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
       "An out-of-state executor managing a hillside home with partial sound views that are difficult to price remotely",
       "A divorce-related sale in Edmonds where waterfront proximity complicates the valuation discussion",
     ],
+    localClientTypes: [
+      "Executors managing estate property in Edmonds' layered waterfront-to-highway market",
+      "Families coordinating senior transitions from longtime Edmonds bowl or Perrinville homes",
+      "Attorneys handling probate or divorce cases involving Edmonds property where view corridors and ferry proximity affect valuation",
+      "Trustees responsible for trust-owned homes in Edmonds where waterfront premiums require specialized assessment",
+      "Adult children managing a parent's Edmonds home sale from out of state",
+      "Financial advisors needing Edmonds property valuations that account for the community's micro-location value differences",
+    ],
   },
   "mountlake-terrace": {
     tone: "suburban",
