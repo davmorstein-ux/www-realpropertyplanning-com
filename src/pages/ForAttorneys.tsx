@@ -29,7 +29,6 @@ import ProofCallout from "@/components/ProofCallout";
         </div>
       </section>
 
-
 import iconProbate from "@/assets/icons/icon-probate-sales.png";
 import iconExecutors from "@/assets/icons/icon-executors.png";
 import iconDivorce from "@/assets/icons/icon-divorce.png";
