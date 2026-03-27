@@ -10,7 +10,7 @@ import GoldCheck3D from "@/components/GoldCheck3D";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import { services, getCommonSituations, getWhyLocalMatters, getWhyBrokerAppraiser } from "@/lib/service-areas-data";
+import { services, getCommonSituations, getWhyLocalMatters, getWhyBrokerAppraiser, isTier1City } from "@/lib/service-areas-data";
 import type { CityData } from "@/lib/service-areas-data";
 
 interface CityPageTemplateProps {
