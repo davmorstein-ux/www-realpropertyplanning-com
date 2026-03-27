@@ -6,6 +6,8 @@ interface SEOHeadProps {
   description: string;
   canonical?: string;
   jsonLd?: object;
+  /** Set to true to add noindex,follow — keeps links crawlable but page out of index */
+  noindex?: boolean;
 }
 
 const SITE_URL = "https://realpropertyplanning.com";
