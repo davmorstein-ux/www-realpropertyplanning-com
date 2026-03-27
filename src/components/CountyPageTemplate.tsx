@@ -6,6 +6,8 @@ import SEOHead from "@/components/SEOHead";
 import TrustStrip from "@/components/TrustStrip";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
+import PageFAQ from "@/components/PageFAQ";
+import MidPageCTA from "@/components/MidPageCTA";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
@@ -59,6 +61,25 @@ const CountyPageTemplate = ({
     "Pricing questions for properties in non-standard condition",
   ];
 
+  const countyFaqs = [
+    {
+      question: `How do I sell a house in probate in ${countyName}?`,
+      answer: `Selling probate property in ${countyName} typically requires legal authority (letters testamentary or letters of administration) before the property can be listed. David coordinates with the estate attorney and personal representative to assess the property, develop a pricing strategy, manage preparation, and handle the sale — keeping all parties informed throughout the process.`,
+    },
+    {
+      question: `What should an executor do first when there is property in ${countyName}?`,
+      answer: `The first steps are securing the property, confirming your legal authority, and getting a realistic assessment of the home's condition and market value. David can evaluate the property and help you understand your options while you work with the estate attorney on legal requirements.`,
+    },
+    {
+      question: `Can David help if I live out of state but the property is in ${countyName}?`,
+      answer: `Yes. David regularly works with out-of-state executors, trustees, and family members. He coordinates property access, vendor management, cleanout, preparation, and the full sale process — providing regular updates so you can manage from a distance without needing to travel repeatedly.`,
+    },
+    {
+      question: `Do I need an appraisal before selling estate property in ${countyName}?`,
+      answer: `It depends on the situation. Some estates benefit from a formal appraisal for court, tax, or distribution purposes. David's dual credentials as a broker and certified appraiser allow him to provide market analysis informed by appraisal-level discipline, helping you make well-supported pricing decisions.`,
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
@@ -76,7 +97,7 @@ const CountyPageTemplate = ({
               {countyName} Service Area
             </p>
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-[22px]">
-              Estate & Inherited Property Sales in {countyName}
+              Estate &amp; Inherited Property Sales in {countyName}
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-5">
               {localInsight || `Whether the property needs assessment, preparation, pricing strategy, or a full sale plan, clients and referral partners in ${countyName} benefit from David's dual credentials as a licensed broker and state certified residential appraiser.`}
@@ -128,12 +149,12 @@ const CountyPageTemplate = ({
         </div>
       </section>
 
-      {/* Common Situations */}
+      {/* Common Situations — question-based heading */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
-              Common Situations in {countyName}
+              When Do People in {countyName} Need Help With Estate Property?
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               David regularly works with clients in {countyName} facing situations such as:
@@ -149,6 +170,14 @@ const CountyPageTemplate = ({
           </div>
         </div>
       </section>
+
+      {/* Mid-page CTA */}
+      <MidPageCTA
+        heading={`Need Help With a Property in ${countyName}?`}
+        body={`David provides confidential consultations for executors, attorneys, trustees, and families dealing with property transitions in ${countyName}.`}
+        buttonText="Schedule a Consultation"
+        microcopy="No pressure. Just practical guidance for your situation."
+      />
 
       {/* Services Available */}
       <section className="py-20 lg:py-28 bg-secondary">
@@ -189,7 +218,7 @@ const CountyPageTemplate = ({
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-              Why Local Knowledge Matters in {countyName}
+              Why Does Local Knowledge Matter in {countyName}?
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
               {localParagraph || `Every county has its own market patterns, housing stock, buyer demand, and practical sale considerations. Real Property Planning combines broad experience with local awareness to help clients make informed property decisions in ${countyName}.`}
@@ -238,10 +267,14 @@ const CountyPageTemplate = ({
         </div>
       </section>
 
+      {/* County FAQ */}
+      <PageFAQ faqs={countyFaqs} heading={`${countyName} Property Transition FAQ`} />
+
       {/* Internal Links */}
       <section className="py-12 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
+            <p className="text-sm font-semibold text-muted-foreground mb-3">Related Resources</p>
             <div className="flex flex-wrap gap-3">
               <Link to="/probate-estate-sales" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Probate & Estate Sales</Link>
               <span className="text-muted-foreground/40">·</span>
@@ -253,7 +286,11 @@ const CountyPageTemplate = ({
               <span className="text-muted-foreground/40">·</span>
               <Link to="/why-valuation-matters" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Why Valuation Matters</Link>
               <span className="text-muted-foreground/40">·</span>
+              <Link to="/how-the-process-works" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">How the Process Works</Link>
+              <span className="text-muted-foreground/40">·</span>
               <Link to="/cities-we-serve" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Cities We Serve</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/resources" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Resources</Link>
             </div>
           </div>
         </div>
@@ -268,8 +305,11 @@ const CountyPageTemplate = ({
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
               Need Help With a Property in {countyName}?
             </h2>
-            <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
+            <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">
               David provides confidential consultations for executors, attorneys, trustees, families, and financial professionals throughout {countyName}.
+            </p>
+            <p className="text-primary-foreground/50 text-base mb-8">
+              A short conversation to understand your situation, answer questions, and discuss next steps.
             </p>
             <div className="flex justify-center">
               <Link to="/contact">

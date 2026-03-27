@@ -173,6 +173,28 @@ const ServicePageTemplate = ({ service, introText, situations, benefits }: Servi
         </div>
       </section>
 
+      {/* Internal Links */}
+      <section className="py-12 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <p className="text-sm font-semibold text-muted-foreground mb-3">Related Resources</p>
+            <div className="flex flex-wrap gap-3">
+              <Link to="/probate-estate-sales" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Probate & Estate Sales</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/executors" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Executors</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/for-attorneys" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Attorneys</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/senior-transitions" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Senior Transitions</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/why-valuation-matters" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Why Valuation Matters</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/counties" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Counties</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <RelatedServices currentPath={`/services/${service.slug}`} />
 
       {/* CTA */}

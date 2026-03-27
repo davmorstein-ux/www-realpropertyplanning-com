@@ -29,6 +29,7 @@ import AppraiserAdvantage from "@/components/AppraiserAdvantage";
 import OutOfStateBlock from "@/components/OutOfStateBlock";
 import TrustAndResults from "@/components/TrustAndResults";
 import MidPageCTA from "@/components/MidPageCTA";
+import EducationalPathways from "@/components/EducationalPathways";
 
 const serviceAreas = [
   { county: "King County", href: "/counties/king", cities: "Seattle, Bellevue, Kirkland, Redmond, Renton, Kent, Federal Way & more" },
@@ -519,16 +520,21 @@ const Index = () => {
 
 
       {/* ═══════════════════════════════════════════════════
+          EDUCATIONAL PATHWAYS
+      ═══════════════════════════════════════════════════ */}
+      <EducationalPathways />
+
+      {/* ═══════════════════════════════════════════════════
           FAQ PREVIEW
       ═══════════════════════════════════════════════════ */}
-      <section className="py-20 lg:py-28 bg-warm-bg">
+      <section className="py-20 lg:py-28 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-base">
               Common Questions
             </p>
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold">
-              Answers to Questions About Estate & Inherited Property
+              Answers to Questions About Estate &amp; Inherited Property
             </h2>
           </div>
           <div className="max-w-3xl mx-auto space-y-5">
