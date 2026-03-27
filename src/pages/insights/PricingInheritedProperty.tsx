@@ -153,10 +153,10 @@ const PricingInheritedProperty = () => (
     </section>
 
     <NextStepBlock
-      links={[
-        { label: "Appraisal vs. CMA in Estate Situations", href: "/guides/appraisal-vs-cma" },
-        { label: "Pricing a House in a Trust or Estate", href: "/guides/pricing-house-trust-estate" },
-        { label: "Why Valuation Matters", href: "/why-valuation-matters" },
+      steps={[
+        { title: "Appraisal vs. CMA in Estate Situations", description: "Why the distinction matters for estate decisions.", href: "/guides/appraisal-vs-cma" },
+        { title: "Pricing a House in a Trust or Estate", description: "Valuation-informed strategies for fiduciaries.", href: "/guides/pricing-house-trust-estate" },
+        { title: "Why Valuation Matters", description: "How professional valuation protects your interests.", href: "/why-valuation-matters" },
       ]}
     />
 

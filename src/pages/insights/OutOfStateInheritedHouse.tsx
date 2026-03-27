@@ -155,10 +155,10 @@ const OutOfStateInheritedHouse = () => (
     </section>
 
     <NextStepBlock
-      links={[
-        { label: "Out-of-State Family Coordination Guide", href: "/guides/out-of-state-families" },
-        { label: "Spokane: Remote Ownership Support", href: "/spokane-probate-estate-real-estate" },
-        { label: "Executor Responsibilities", href: "/executors" },
+      steps={[
+        { title: "Out-of-State Family Coordination Guide", description: "Guidance for families managing property from a distance.", href: "/guides/out-of-state-families" },
+        { title: "Spokane: Remote Ownership Support", description: "Local coordination for out-of-area families.", href: "/spokane-probate-estate-real-estate" },
+        { title: "Executor Responsibilities", description: "What executors need to know before selling.", href: "/executors" },
       ]}
     />
 

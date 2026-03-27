@@ -161,10 +161,10 @@ const EstatePropertyTimeline = () => (
     </section>
 
     <NextStepBlock
-      links={[
-        { label: "How Probate Real Estate Works", href: "/guides/how-probate-real-estate-works" },
-        { label: "Probate & Estate Sales", href: "/probate-estate-sales" },
-        { label: "Why Valuation Matters", href: "/why-valuation-matters" },
+      steps={[
+        { title: "How Probate Real Estate Works", description: "An overview of the probate sale process in Washington.", href: "/guides/how-probate-real-estate-works" },
+        { title: "Probate & Estate Sales", description: "Comprehensive support for estate property decisions.", href: "/probate-estate-sales" },
+        { title: "Why Valuation Matters", description: "How professional valuation protects your interests.", href: "/why-valuation-matters" },
       ]}
     />
 

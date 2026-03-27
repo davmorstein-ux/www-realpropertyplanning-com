@@ -161,10 +161,10 @@ const EstateCleanoutBeforeSale = () => (
     </section>
 
     <NextStepBlock
-      links={[
-        { label: "Repairs Before Selling Estate Property", href: "/guides/estate-property-repairs-before-sale" },
-        { label: "Executor's Pre-Sale Checklist", href: "/guides/what-executors-should-do" },
-        { label: "Probate & Estate Sales", href: "/probate-estate-sales" },
+      steps={[
+        { title: "Repairs Before Selling Estate Property", description: "Which improvements are worth the investment.", href: "/guides/estate-property-repairs-before-sale" },
+        { title: "Executor's Pre-Sale Checklist", description: "Practical first steps for executors.", href: "/guides/what-executors-should-do" },
+        { title: "Probate & Estate Sales", description: "Comprehensive support for estate property decisions.", href: "/probate-estate-sales" },
       ]}
     />
 

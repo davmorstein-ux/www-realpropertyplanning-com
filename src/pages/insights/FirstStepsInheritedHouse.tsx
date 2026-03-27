@@ -148,10 +148,10 @@ const FirstStepsInheritedHouse = () => (
 
     {/* Next Steps Block */}
     <NextStepBlock
-      links={[
-        { label: "What Should an Executor Do Before Selling?", href: "/guides/what-executors-should-do" },
-        { label: "Inherited House Options in Washington", href: "/guides/inherited-house-washington" },
-        { label: "Why Valuation Matters", href: "/why-valuation-matters" },
+      steps={[
+        { title: "What Should an Executor Do Before Selling?", description: "Practical first steps for executors and personal representatives.", href: "/guides/what-executors-should-do" },
+        { title: "Inherited House Options in Washington", description: "Options and decision factors when you inherit property.", href: "/guides/inherited-house-washington" },
+        { title: "Why Valuation Matters", description: "How professional valuation protects your interests.", href: "/why-valuation-matters" },
       ]}
     />
 
