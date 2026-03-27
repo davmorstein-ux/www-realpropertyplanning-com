@@ -1740,7 +1740,12 @@ const deepScenarioBank: Record<string, Partial<Record<CommunityTone, string[]>>>
 };
 
 /** Get deeply varied scenarios for city+service pages */
-export function getDeepCityServiceScenarios(cityName: string, serviceName: string, serviceSlug: string, tone?: CommunityTone): string[] {
+export function getDeepCityServiceScenarios(cityName: string, serviceName: string, serviceSlug: string, tone?: CommunityTone, citySlug?: string): string[] {
+  // City-specific override layer
+  if (citySlug) {
+    const override = getCityServiceOverride(citySlug, serviceSlug);
+    if (override?.scenarios) return override.scenarios;
+  }
   const effectiveTone = tone || "suburban";
   const serviceBank = deepScenarioBank[serviceSlug];
   if (serviceBank) {
@@ -2233,7 +2238,12 @@ const deepHowWeHelpBank: Record<string, Partial<Record<CommunityTone, string[]>>
 };
 
 /** Get deeply varied how-we-help bullets for city+service pages */
-export function getDeepCityServiceHowWeHelp(cityName: string, serviceSlug: string, tone?: CommunityTone): string[] {
+export function getDeepCityServiceHowWeHelp(cityName: string, serviceSlug: string, tone?: CommunityTone, citySlug?: string): string[] {
+  // City-specific override layer
+  if (citySlug) {
+    const override = getCityServiceOverride(citySlug, serviceSlug);
+    if (override?.howWeHelp) return override.howWeHelp;
+  }
   const effectiveTone = tone || "suburban";
   const serviceBank = deepHowWeHelpBank[serviceSlug];
   if (serviceBank) {
@@ -2334,6 +2344,11 @@ const deepWhyLocalBank: Record<string, Partial<Record<CommunityTone, string>>> =
 
 /** Get service-specific "Why Local Context Matters" text instead of reusing city-page paragraph */
 export function getDeepWhyLocalServiceMatters(cityName: string, countyName: string, serviceSlug: string, cityData?: CityData): string {
+  // City-specific override layer
+  if (cityData?.slug) {
+    const override = getCityServiceOverride(cityData.slug, serviceSlug);
+    if (override?.whyLocal) return override.whyLocal;
+  }
   const tone = cityData?.tone || "suburban";
   const serviceBank = deepWhyLocalBank[serviceSlug];
   if (serviceBank) {
