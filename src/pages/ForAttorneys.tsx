@@ -7,8 +7,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import MidPageCTA from "@/components/MidPageCTA";
 import PageFAQ from "@/components/PageFAQ";
-
-
+import ProfessionalConfidence from "@/components/ProfessionalConfidence";
+import ProofCallout from "@/components/ProofCallout";
 import iconProbate from "@/assets/icons/icon-probate-sales.png";
 import iconExecutors from "@/assets/icons/icon-executors.png";
 import iconDivorce from "@/assets/icons/icon-divorce.png";
@@ -176,6 +176,25 @@ const ForAttorneys = () => {
                 <img src={naepcLogo} alt="National Association of Estate Planners & Councils" className="max-h-[82px] w-auto object-contain" loading="lazy" />
               </a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <ProfessionalConfidence
+        heading="Why Attorneys Trust This Process"
+        intro="Legal professionals consistently describe these qualities when referring clients to David:"
+        background="bg-background"
+      />
+
+      <section className="py-10 lg:py-12 bg-cream">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <ProofCallout
+              quote="David guided our family through a very difficult time with professionalism and genuine compassion. His valuation perspective and market knowledge were incredibly helpful."
+              attribution="Estate Attorney, Seattle"
+              context="Probate property transition"
+              variant="accent"
+            />
           </div>
         </div>
       </section>

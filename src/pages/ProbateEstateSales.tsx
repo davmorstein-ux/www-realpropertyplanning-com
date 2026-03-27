@@ -8,6 +8,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
 import MidPageCTA from "@/components/MidPageCTA";
+import ProofCallout from "@/components/ProofCallout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -249,11 +250,13 @@ const ProbateEstateSales = () => {
       {/* Testimonial */}
       <section className="py-14 lg:py-16 bg-background">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <p className="text-foreground text-lg italic leading-relaxed mb-4">
-              "David's dual background in brokerage and appraisal gave us confidence that the property was priced correctly. He made a complicated situation feel manageable."
-            </p>
-            <p className="text-muted-foreground text-[15px] font-medium">— Professional Referral · Probate property sale coordination</p>
+          <div className="max-w-3xl mx-auto">
+            <ProofCallout
+              quote="David's dual background in brokerage and appraisal gave us confidence that the property was priced correctly. He made a complicated situation feel manageable."
+              attribution="Professional Referral"
+              context="Probate property sale coordination"
+              variant="accent"
+            />
           </div>
         </div>
       </section>

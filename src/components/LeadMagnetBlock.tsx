@@ -66,7 +66,7 @@ const LeadMagnetBlock = () => (
             Download the Free Checklist
           </Button>
           <p className="text-primary-foreground/50 text-sm mt-4">
-            No email required. Just a useful resource you can save and refer back to anytime.
+            No email required. Practical, straightforward, and designed by a broker who works with executors every day.
           </p>
         </div>
 
