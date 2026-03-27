@@ -80,6 +80,11 @@ import YakimaProbateEstate from "./pages/YakimaProbateEstate";
 import KennewickProbateEstate from "./pages/KennewickProbateEstate";
 import RichlandProbateEstate from "./pages/RichlandProbateEstate";
 import PascoProbateEstate from "./pages/PascoProbateEstate";
+import RentonProbateEstate from "./pages/RentonProbateEstate";
+import KentProbateEstate from "./pages/KentProbateEstate";
+import FederalWayProbateEstate from "./pages/FederalWayProbateEstate";
+import AuburnProbateEstate from "./pages/AuburnProbateEstate";
+import MarysvilleProbateEstate from "./pages/MarysvilleProbateEstate";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
