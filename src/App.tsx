@@ -77,6 +77,9 @@ import RedmondProbateEstate from "./pages/RedmondProbateEstate";
 import OlympiaProbateEstate from "./pages/OlympiaProbateEstate";
 import BellinghamProbateEstate from "./pages/BellinghamProbateEstate";
 import YakimaProbateEstate from "./pages/YakimaProbateEstate";
+import KennewickProbateEstate from "./pages/KennewickProbateEstate";
+import RichlandProbateEstate from "./pages/RichlandProbateEstate";
+import PascoProbateEstate from "./pages/PascoProbateEstate";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
