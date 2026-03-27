@@ -8,6 +8,7 @@ import TrustStrip from "@/components/TrustStrip";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
+import MidPageCTA from "@/components/MidPageCTA";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -217,6 +218,13 @@ const SeniorTransitions = () => {
         </div>
       </section>
 
+      <MidPageCTA
+        heading="Planning a Senior Housing Transition?"
+        body="David works at the family's pace — with patience, clear communication, and experienced coordination."
+        buttonText="Schedule a Consultation"
+        microcopy="No pressure. Just practical guidance for your family's situation."
+      />
+
       {/* Emotional and Practical Realities */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
@@ -261,10 +269,13 @@ const SeniorTransitions = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
-              Planning a senior housing transition?
+              Planning a Senior Housing Transition?
             </h2>
-            <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
+            <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">
               David welcomes confidential conversations with families and their trusted advisors. There is no pressure — just experienced guidance tailored to your situation.
+            </p>
+            <p className="text-primary-foreground/50 text-base mb-8">
+              A short conversation to understand your family's needs, answer questions, and discuss next steps.
             </p>
             <div className="flex justify-center">
               <Link to="/contact">

@@ -5,6 +5,7 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import MidPageCTA from "@/components/MidPageCTA";
 
 
 import iconProbate from "@/assets/icons/icon-probate-sales.png";
@@ -131,6 +132,14 @@ const ForAttorneys = () => {
           </div>
         </div>
       </section>
+      </section>
+
+      <MidPageCTA
+        heading="Have a Client Situation to Discuss?"
+        body="David works alongside attorneys to handle the real estate side of probate, estate, and family law matters with professionalism and clear communication."
+        buttonText="Connect to Discuss a Client Situation"
+        microcopy="Confidential. Professional. No obligation."
+      />
 
       {/* Professional Affiliations */}
       <section className="py-12 lg:py-16 bg-cream">
@@ -159,11 +168,14 @@ const ForAttorneys = () => {
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-5">
               Let's Connect
             </h2>
-            <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
+            <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">
               If you work with clients where real estate plays a role, I would welcome the opportunity to collaborate and support a smooth, well-coordinated process.
             </p>
+            <p className="text-primary-foreground/50 text-base mb-8">
+              A short conversation to understand your client's situation and discuss how I can support your work.
+            </p>
             <Link to="/contact">
- <Button variant="gold" size="lg"className="hover:-light">
+              <Button variant="gold" size="lg">
                 <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
                 Schedule a Conversation
               </Button>
