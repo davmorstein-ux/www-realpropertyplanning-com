@@ -9,17 +9,6 @@ import GoldCheck3D from "@/components/GoldCheck3D";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import {
-  getCityServiceIntro,
-  getWhyLocalMatters,
-  getCityServiceHowWeHelp,
-  getCityServiceScenarios,
-  getToneScenariosHeading,
-  getToneScenariosLead,
-  getToneHowWeHelpHeading,
-  getToneHowWeHelpLead,
-  getToneCTAHeading,
-  getToneCTABody,
-  isTier1City,
   getDeepCityServiceIntro,
   getDeepCityServiceScenarios,
   getDeepCityServiceHowWeHelp,
@@ -27,6 +16,11 @@ import {
   getDeepCTAHeading,
   getDeepCTABody,
   getDeepCTAButton,
+  getToneScenariosHeading,
+  getToneScenariosLead,
+  getToneHowWeHelpHeading,
+  getToneHowWeHelpLead,
+  isTier1City,
 } from "@/lib/service-areas-data";
 import type { CityData, ServiceData } from "@/lib/service-areas-data";
 
@@ -39,28 +33,16 @@ const CityServicePageTemplate = ({ city, service }: CityServicePageTemplateProps
   const tier1 = isTier1City(city.slug);
   const tone = city.tone;
 
-  // Tier 1 cities use original enriched content; Tier 2-3 use deep variation system
-  const intro = tier1
-    ? getCityServiceIntro(service, city)
-    : getDeepCityServiceIntro(service, city);
-  const whyLocal = tier1
-    ? getWhyLocalMatters(city.name, city.county, city)
-    : getDeepWhyLocalServiceMatters(city.name, city.county, service.slug, city);
-  const howWeHelp = tier1
-    ? getCityServiceHowWeHelp(city.name, service.slug)
-    : getDeepCityServiceHowWeHelp(city.name, service.slug, tone);
-  const scenarios = tier1
-    ? getCityServiceScenarios(city.name, service.shortName, service.slug)
-    : getDeepCityServiceScenarios(city.name, service.shortName, service.slug, tone);
-  const ctaHeading = tier1
-    ? getToneCTAHeading(city.name, service.shortName, tone)
-    : getDeepCTAHeading(city.name, city.slug, service.slug, tone);
-  const ctaBody = tier1
-    ? getToneCTABody(city.name, tone)
-    : getDeepCTABody(city.name, city.slug, service.slug, tone);
-  const ctaButton = tier1
-    ? "Schedule a Consultation"
-    : getDeepCTAButton(city.slug, service.slug);
+  // All cities now use the deep variation system for city+service pages.
+  // Tier 1 vs Tier 2-3 distinction only controls indexation (noindex tag)
+  // and city-page-level content — not city+service content.
+  const intro = getDeepCityServiceIntro(service, city);
+  const whyLocal = getDeepWhyLocalServiceMatters(city.name, city.county, service.slug, city);
+  const howWeHelp = getDeepCityServiceHowWeHelp(city.name, service.slug, tone);
+  const scenarios = getDeepCityServiceScenarios(city.name, service.shortName, service.slug, tone);
+  const ctaHeading = getDeepCTAHeading(city.name, city.slug, service.slug, tone);
+  const ctaBody = getDeepCTABody(city.name, city.slug, service.slug, tone);
+  const ctaButton = getDeepCTAButton(city.slug, service.slug);
 
   return (
     <div className="min-h-screen bg-background">
