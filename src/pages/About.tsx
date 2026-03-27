@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
-import { realEstateAgentSchema } from "@/lib/schema";
+import { realEstateAgentSchema, davidSteinPerson } from "@/lib/schema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import TrustStrip from "@/components/TrustStrip";
 import RelatedServices from "@/components/RelatedServices";
@@ -38,9 +38,14 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background">
        <SEOHead
-        title="About David Stein — Senior Relocation & Estate Real Estate Broker | Washington State"
-        description="David Stein is a Washington State real estate broker with eXp Realty, specializing in senior relocation, estate and inherited property sales, and trust & probate real estate — serving clients throughout Washington State."
-        jsonLd={realEstateAgentSchema}
+        title="About David Stein — Probate, Estate & Senior Transition Broker | Washington State"
+        description="David Stein is a Washington State licensed real estate broker and certified residential appraiser specializing in probate, estate, inherited property, and senior transition real estate throughout Washington State."
+        jsonLd={{
+          "@context": "https://schema.org",
+          ...davidSteinPerson,
+          description: "Washington State licensed real estate broker and certified residential appraiser specializing in probate, estate, inherited property, and senior transition real estate. Over 20 years of dual expertise serving attorneys, executors, trustees, seniors, and families throughout Washington State.",
+          image: "https://realpropertyplanning.com/dave-headshot.jpg",
+        }}
       />
       <BreadcrumbSchema items={[{ name: "About", url: "/about" }]} />
       <Header />

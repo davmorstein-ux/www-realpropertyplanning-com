@@ -74,8 +74,8 @@ const WhyValuationMatters = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Why Property Valuation Matters in Estate Sales"
-        description="Understanding property value is critical in probate and estate decisions. Learn how professional valuation insight helps guide real estate choices."
+        title="Why Valuation Matters in Probate & Estate Property Sales | David Stein"
+        description="Learn why accurate property valuation is critical in probate, estate, and inherited home sales — and how a broker with certified appraisal credentials prevents costly pricing mistakes."
         jsonLd={articleSchema({
           headline: "Why Pricing & Valuation Matter in Estate Property Sales",
           description: "How broker and certified appraiser expertise prevents costly pricing mistakes in estate property.",
