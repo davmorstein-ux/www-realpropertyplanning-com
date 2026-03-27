@@ -97,34 +97,44 @@ const resourceCategories = [
 
 const helpfulGuides = [
   {
-    href: "/how-to-move-elderly-parents",
-    title: "How to Move Elderly Parents",
-    description:
-      "A compassionate guide for families planning a senior housing transition in Washington State.",
+    href: "/guides/how-probate-real-estate-works",
+    title: "How Probate Real Estate Sales Work in Washington",
+    description: "A comprehensive guide to the probate sale process — from legal authority to pricing and closing.",
   },
   {
-    href: "/senior-transitions",
-    title: "Senior Transitions",
-    description:
-      "How Real Property Planning supports families navigating a move from a longtime home.",
+    href: "/guides/what-executors-should-do",
+    title: "What Executors Should Do Before Selling",
+    description: "Practical first steps for executors and personal representatives managing inherited property.",
+  },
+  {
+    href: "/guides/appraisal-vs-cma",
+    title: "Appraisal vs. CMA",
+    description: "Understanding the difference — and why it matters in estate and probate situations.",
+  },
+  {
+    href: "/guides/out-of-state-families",
+    title: "Managing a Property Sale From Out of State",
+    description: "How remote executors, trustees, and families can manage a Washington property sale.",
+  },
+  {
+    href: "/guides/senior-transition-differences",
+    title: "How Senior Sales Differ From Ordinary Sales",
+    description: "What families should expect when helping a parent sell a longtime home.",
+  },
+  {
+    href: "/guides/inherited-house-washington",
+    title: "What to Do With an Inherited House",
+    description: "Options, decision factors, and practical guidance when you inherit property in Washington.",
+  },
+  {
+    href: "/how-to-move-elderly-parents",
+    title: "How to Move Elderly Parents",
+    description: "A compassionate guide for families planning a senior housing transition in Washington State.",
   },
   {
     href: "/how-the-process-works",
     title: "How the Process Works",
-    description:
-      "A transparent, step-by-step look at how a property sale unfolds from initial conversation through closing.",
-  },
-  {
-    href: "/executors",
-    title: "For Executors & Trustees",
-    description:
-      "A clear roadmap for executors and personal representatives managing estate real property.",
-  },
-  {
-    href: "/probate-estate-sales",
-    title: "Probate & Estate Sales",
-    description:
-      "Guidance for families and fiduciaries navigating the sale of property during probate or estate administration.",
+    description: "A step-by-step overview of how David guides clients from initial conversation through closing.",
   },
 ];
 
