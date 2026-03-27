@@ -190,6 +190,16 @@ const WhatExecutorsShouldDo = () => (
     </section>
 
     <PageFAQ faqs={faqs} heading="Executor FAQs" />
+
+    <NextStepBlock
+      heading="Continue Learning"
+      steps={[
+        { title: "How Probate Real Estate Works in Washington", description: "Understand the legal process, timeline, and key decisions involved in selling property through probate.", href: "/guides/how-probate-real-estate-works" },
+        { title: "Inherited House Guide", description: "Explore your options — sell, keep, rent, or buy out — with key financial and legal considerations.", href: "/guides/inherited-house-washington" },
+        { title: "Out-of-State Family Guide", description: "How to manage, prepare, and sell a Washington property when you live in another state.", href: "/guides/out-of-state-families" },
+      ]}
+    />
+
     <RelatedServices currentPath="/guides/what-executors-should-do" />
 
     <section className="py-20 lg:py-28 bg-primary">

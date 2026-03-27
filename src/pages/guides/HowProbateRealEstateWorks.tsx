@@ -265,6 +265,15 @@ const HowProbateRealEstateWorks = () => (
 
     <PageFAQ faqs={faqs} heading="Probate Real Estate FAQs" />
 
+    <NextStepBlock
+      heading="Continue Learning"
+      steps={[
+        { title: "What Executors Should Do First", description: "A step-by-step guide to the first 30 days of managing estate property as a personal representative.", href: "/guides/what-executors-should-do" },
+        { title: "Inherited House Guide for Washington Families", description: "Explore your options — sell, keep, rent, or buy out co-inheritors — with key considerations.", href: "/guides/inherited-house-washington" },
+        { title: "Appraisal vs. CMA: Which Do You Need?", description: "Learn when a formal appraisal is required versus a comparative market analysis.", href: "/guides/appraisal-vs-cma" },
+      ]}
+    />
+
     <RelatedServices currentPath="/guides/how-probate-real-estate-works" />
 
     {/* Bottom CTA */}
