@@ -10,7 +10,7 @@ import GoldCheck3D from "@/components/GoldCheck3D";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import { services, getCommonSituations, getWhyLocalMatters, getWhyBrokerAppraiser } from "@/lib/service-areas-data";
+import { services, getCommonSituations, getWhyLocalMatters, getWhyBrokerAppraiser, isTier1City } from "@/lib/service-areas-data";
 import type { CityData } from "@/lib/service-areas-data";
 
 interface CityPageTemplateProps {
@@ -18,6 +18,7 @@ interface CityPageTemplateProps {
 }
 
 const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
+  const tier1 = isTier1City(city.slug);
   const situations = getCommonSituations(city.name, city);
   const whyLocal = getWhyLocalMatters(city.name, city.county, city);
   const whyBrokerAppraiser = getWhyBrokerAppraiser(city.name, city);
@@ -57,6 +58,7 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
           ? `${city.descriptor} — Real Property Planning provides probate, estate, and senior transition guidance in ${city.name}, ${city.county}. Licensed broker and certified appraiser David Stein.`
           : `Real Property Planning provides probate, estate, senior transition, and valuation-informed real estate guidance in ${city.name}, ${city.county}. Licensed broker and certified appraiser David Stein serves clients throughout Washington State.`
         }
+        noindex={!tier1}
       />
       <BreadcrumbSchema
         items={[
