@@ -878,6 +878,7 @@ const TIER_1_SLUGS = new Set([
   "lynnwood", "woodinville", "issaquah",
   "redmond", "everett", "duvall",
   "lakewood", "bothell", "kent",
+  "puyallup", "federal-way", "burien",
 ]);
 
 /** Check whether a city is Tier 1 (fully enriched content) */
