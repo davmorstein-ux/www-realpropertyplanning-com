@@ -132,7 +132,6 @@ const ForAttorneys = () => {
           </div>
         </div>
       </section>
-      </section>
 
       <MidPageCTA
         heading="Have a Client Situation to Discuss?"
