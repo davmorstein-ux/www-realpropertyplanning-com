@@ -119,13 +119,10 @@ const Index = () => {
       <section className="py-12 lg:py-16 bg-primary border-b border-primary-foreground/10">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-serif text-2xl md:text-3xl text-primary-foreground font-semibold mb-4">
+            <h2 className="font-serif text-2xl md:text-3xl text-primary-foreground font-semibold mb-6">
               Who We Can Help
             </h2>
-            <p className="text-primary-foreground/80 text-lg leading-relaxed mb-8">
-              Reduce stress. Protect value. Get clear, valuation-informed strategy from a broker who understands what your family is going through.
-            </p>
-            <ul className="space-y-3 text-left max-w-xl mx-auto">
+            <ul className="space-y-3 text-left max-w-xl mx-auto mb-8">
               {[
                 "Executors and personal representatives",
                 "Families handling inherited property",
@@ -138,6 +135,9 @@ const Index = () => {
                 </li>
               ))}
             </ul>
+            <p className="text-primary-foreground/70 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
+              Reduce stress. Protect value. Get clear, valuation-informed strategy from a broker who understands what your family is going through.
+            </p>
           </div>
         </div>
       </section>
