@@ -116,7 +116,7 @@ const Index = () => {
       {/* ═══════════════════════════════════════════════════
           WHO WE CAN HELP — Between hero and CTA
       ═══════════════════════════════════════════════════ */}
-      <section className="py-12 lg:py-16 bg-primary border-b border-primary-foreground/10">
+      <section className="py-12 lg:py-16 bg-primary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] text-primary-foreground font-bold mb-6">
@@ -138,6 +138,17 @@ const Index = () => {
             <p className="text-primary-foreground/70 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
               Reduce stress. Protect value. Get clear, valuation-informed strategy from a broker who understands what your family is going through.
             </p>
+
+            {/* Refined gold accent divider */}
+            <div className="flex items-center justify-center gap-3 my-10 lg:my-14">
+              <div className="h-px w-16 bg-gold/30" />
+              <div className="w-1.5 h-1.5 rounded-full bg-gold/50" />
+              <div className="h-px w-16 bg-gold/30" />
+            </div>
+
+            <p className="text-primary-foreground/80 text-lg leading-relaxed mb-6">
+              Real Property Planning helps attorneys, executors, trustees, fiduciaries, seniors, and families navigate probate real estate, inherited homes, estate sales, and major property transitions throughout Washington State. David Stein brings over 20 years of dual expertise as a licensed real estate broker and Washington State certified residential appraiser, with a strong focus in Western Washington and the Puget Sound region. Through eXp Realty's referral network, he can also help connect clients with trusted brokers across the United States and internationally when needed.
+            </p>
           </div>
         </div>
       </section>
@@ -147,9 +158,6 @@ const Index = () => {
       ═══════════════════════════════════════════════════ */}
       <section className="py-12 lg:py-16 bg-primary">
         <div className="container px-6 lg:px-8 flex flex-col items-center text-center max-w-3xl mx-auto">
-          <p className="text-primary-foreground/80 text-lg leading-relaxed mb-6">
-            Real Property Planning helps attorneys, executors, trustees, fiduciaries, seniors, and families navigate probate real estate, inherited homes, estate sales, and major property transitions throughout Washington State. David Stein brings over 20 years of dual expertise as a licensed real estate broker and Washington State certified residential appraiser, with a strong focus in Western Washington and the Puget Sound region. Through eXp Realty's referral network, he can also help connect clients with trusted brokers across the United States and internationally when needed.
-          </p>
           <Link to="/contact">
             <Button
               variant="gold"
