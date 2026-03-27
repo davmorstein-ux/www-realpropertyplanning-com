@@ -4,6 +4,7 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import DisclaimerSection from "@/components/DisclaimerSection";
+import ResourceDownloadCard from "@/components/ResourceDownloadCard";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
@@ -113,6 +114,60 @@ const Resources = () => {
                   <ArrowRight className="w-5 h-5 text-muted-foreground/40 group-hover:text-gold shrink-0 transition-colors" />
                 </Link>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Downloadable Guides */}
+        <section className="py-14 md:py-20 bg-secondary">
+          <div className="container px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto">
+              <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-sm">
+                Downloadable Guides
+              </p>
+              <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-3">
+                Practical Checklists and Decision Guides
+              </h2>
+              <p className="text-muted-foreground text-base leading-relaxed mb-10 max-w-2xl">
+                Free resources designed for executors, heirs, trustees, families, and professionals navigating property transitions in Washington State.
+              </p>
+              <div className="grid md:grid-cols-2 gap-5">
+                <ResourceDownloadCard
+                  title="Inherited House Decision Guide"
+                  description="A structured framework for heirs deciding whether to sell, keep, rent, or buy out co-inheritors — with key financial and legal considerations."
+                  audience="Heirs, beneficiaries, co-inheritors"
+                  guideLink="/guides/inherited-house-washington"
+                  guideLinkLabel="Read the full guide"
+                />
+                <ResourceDownloadCard
+                  title="Senior Transition Planning Checklist"
+                  description="Step-by-step planning guide for families coordinating a move from a longtime home to assisted living, independent living, or a smaller residence."
+                  audience="Adult children, caregivers, seniors"
+                  guideLink="/senior-transitions"
+                  guideLinkLabel="Learn about senior transitions"
+                />
+                <ResourceDownloadCard
+                  title="Appraisal vs. CMA Quick Guide"
+                  description="Understand the difference between a formal appraisal and a comparative market analysis — and which one your situation requires."
+                  audience="Executors, attorneys, trustees"
+                  guideLink="/guides/appraisal-vs-cma"
+                  guideLinkLabel="Read the full comparison"
+                />
+                <ResourceDownloadCard
+                  title="Out-of-State Property Sale Checklist"
+                  description="Essential steps for managing, preparing, and selling a Washington property when you live in another state."
+                  audience="Out-of-state heirs, executors, trustees"
+                  guideLink="/guides/out-of-state-families"
+                  guideLinkLabel="Read the full guide"
+                />
+                <ResourceDownloadCard
+                  title="Estate Property Preparation Checklist"
+                  description="A practical guide to evaluating, cleaning, and preparing an estate or inherited property for sale — including which improvements are worth the investment."
+                  audience="Executors, personal representatives, families"
+                  guideLink="/how-the-process-works"
+                  guideLinkLabel="See how the process works"
+                />
+              </div>
             </div>
           </div>
         </section>

@@ -9,6 +9,7 @@ import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
 import MidPageCTA from "@/components/MidPageCTA";
 import GoldCheck3D from "@/components/GoldCheck3D";
+import NextStepBlock from "@/components/NextStepBlock";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
@@ -162,6 +163,16 @@ const InheritedHouseWashington = () => (
     </section>
 
     <PageFAQ faqs={faqs} heading="Inherited Property FAQs" />
+
+    <NextStepBlock
+      heading="Continue Learning"
+      steps={[
+        { title: "How Probate Real Estate Works in Washington", description: "Understand the legal process, timeline, and key decisions involved in selling property through probate.", href: "/guides/how-probate-real-estate-works" },
+        { title: "Appraisal vs. CMA: Which Do You Need?", description: "Learn when a formal appraisal is required and when a market analysis is sufficient for estate property.", href: "/guides/appraisal-vs-cma" },
+        { title: "What Executors Should Do First", description: "A step-by-step guide to the first 30 days of managing estate property as a personal representative.", href: "/guides/what-executors-should-do" },
+      ]}
+    />
+
     <RelatedServices currentPath="/guides/inherited-house-washington" />
 
     <section className="py-20 lg:py-28 bg-primary">

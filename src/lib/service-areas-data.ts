@@ -31,6 +31,8 @@ export interface CityData {
   localSituations?: string[];
   /** City-specific client types */
   localClientTypes?: string[];
+  /** Custom hero heading for the city page */
+  heroHeading?: string;
 }
 
 export interface CountyData {

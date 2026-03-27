@@ -24,6 +24,27 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
   const whyLocal = getWhyLocalMatters(city.name, city.county, city);
   const whyBrokerAppraiser = getWhyBrokerAppraiser(city.name, city);
 
+  // Vary section headings by tone to reduce template repetition
+  const tone = city.tone || "suburban";
+  const whoHeadings: Record<string, string> = {
+    premium: `Who Relies on Real Property Planning in ${city.name}`,
+    urban: `Clients and Partners We Serve in ${city.name}`,
+    suburban: `Who We Work With in ${city.name}`,
+    waterfront: `Families and Professionals We Help in ${city.name}`,
+    smalltown: `Who Reaches Out in ${city.name}`,
+    military: `Who We Support in ${city.name}`,
+    rural: `Who We Help in ${city.name}`,
+  };
+  const situationHeadings: Record<string, string> = {
+    premium: `When ${city.name} Families and Professionals Reach Out`,
+    urban: `Common Property Transition Situations in ${city.name}`,
+    suburban: `When Do People in ${city.name} Need Help With Property Transitions?`,
+    waterfront: `Situations That Bring ${city.name} Families to Real Property Planning`,
+    smalltown: `When ${city.name} Residents Need Property Guidance`,
+    military: `Property Situations We Handle in ${city.name}`,
+    rural: `When Families in ${city.name} Need Help With Property`,
+  };
+
   const faqs = [
     {
       question: `How does selling a home in probate work in ${city.name}?`,
@@ -86,7 +107,7 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
               {city.name}, {city.county}
             </p>
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-[22px]">
-              Real Estate Guidance for Important Property Transitions in {city.name}
+              {city.heroHeading || `Real Estate Guidance for Important Property Transitions in ${city.name}`}
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed">
               {heroIntro}
@@ -102,7 +123,7 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
-              Who We Work With in {city.name}
+              {whoHeadings[tone]}
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               David Stein works with a range of clients and professional partners in {city.name}, including:
@@ -124,7 +145,7 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
-              When Do People in {city.name} Need Help With Property Transitions?
+              {situationHeadings[tone]}
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               Clients in {city.name} often reach out when facing situations such as:
