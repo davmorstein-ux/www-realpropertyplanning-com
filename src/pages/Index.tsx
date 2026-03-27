@@ -383,6 +383,11 @@ const Index = () => {
       </section>
 
       {/* ═══════════════════════════════════════════════════
+          LEAD MAGNET — Executor checklist
+      ═══════════════════════════════════════════════════ */}
+      <LeadMagnetBlock />
+
+      {/* ═══════════════════════════════════════════════════
           AREAS SERVED — Navy background with county cards
       ═══════════════════════════════════════════════════ */}
       <section className="py-16 lg:py-24 bg-navy relative overflow-hidden">
