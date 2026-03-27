@@ -9,17 +9,6 @@ import GoldCheck3D from "@/components/GoldCheck3D";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import {
-  getCityServiceIntro,
-  getWhyLocalMatters,
-  getCityServiceHowWeHelp,
-  getCityServiceScenarios,
-  getToneScenariosHeading,
-  getToneScenariosLead,
-  getToneHowWeHelpHeading,
-  getToneHowWeHelpLead,
-  getToneCTAHeading,
-  getToneCTABody,
-  isTier1City,
   getDeepCityServiceIntro,
   getDeepCityServiceScenarios,
   getDeepCityServiceHowWeHelp,
@@ -27,6 +16,11 @@ import {
   getDeepCTAHeading,
   getDeepCTABody,
   getDeepCTAButton,
+  getToneScenariosHeading,
+  getToneScenariosLead,
+  getToneHowWeHelpHeading,
+  getToneHowWeHelpLead,
+  isTier1City,
 } from "@/lib/service-areas-data";
 import type { CityData, ServiceData } from "@/lib/service-areas-data";
 
