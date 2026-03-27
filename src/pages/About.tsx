@@ -177,6 +177,23 @@ const About = () => {
             <p className="text-muted-foreground text-lg leading-relaxed mt-8">
               Learn more about <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">why David's valuation expertise matters</Link> or explore the <Link to="/how-the-process-works" className="text-accent hover:text-gold underline underline-offset-4">step-by-step process</Link> he follows for every engagement.
             </p>
+
+            {/* Review pathways */}
+            <div className="mt-8 pt-6 border-t border-border">
+              <p className="text-sm font-semibold text-muted-foreground mb-3">Client Reviews &amp; Reputation</p>
+              <div className="flex flex-wrap gap-3">
+                <Link to="/testimonials" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Read Client Reviews</Link>
+                <span className="text-muted-foreground/40">·</span>
+                <a
+                  href="https://www.zillow.com/profile/dstein2112#reviews"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm"
+                >
+                  See Reviews on Zillow
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>

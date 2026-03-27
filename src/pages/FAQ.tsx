@@ -74,6 +74,30 @@ const faqs = [
     question: "Can Real Property Planning help with senior transitions and downsizing decisions?",
     answer: `Yes. Real Property Planning works with seniors, adult children, attorneys, and trusted advisors navigating housing transitions including downsizing, moves to assisted living, and the sale of a longtime family home. David Stein provides patient, practical guidance focused on timing, value, preparation, and clear communication throughout the process.\n\n${softCta}`,
   },
+  {
+    question: "Do I need an appraisal before selling inherited property?",
+    answer: `Not always, but understanding the property's true market value is critical — especially in estate situations where pricing must be defensible. A broker with appraisal credentials, like David Stein, can provide valuation-informed pricing that satisfies fiduciary obligations without the cost and delay of a formal appraisal in every case.\n\n${softCta}`,
+  },
+  {
+    question: "Can an executor sell a house before probate is complete?",
+    answer: `In some cases, an executor may be able to sell before the full probate process concludes — but it depends on the estate structure, the will, and whether the court has granted authority. David works with estate attorneys to align the real estate timeline with legal proceedings so the sale happens at the right time.\n\n${softCta}`,
+  },
+  {
+    question: "What repairs should be done before selling an estate property?",
+    answer: `It depends on the property, the budget, and the likely return. Targeted improvements like paint, flooring, and landscaping can increase value significantly. Expensive renovations rarely make financial sense for estate property. David evaluates each situation using his appraisal background to recommend only the improvements worth making.\n\n${softCta}`,
+  },
+  {
+    question: "How do siblings decide what to do with an inherited house?",
+    answer: `Disagreements among siblings are common and understandable. Clear, objective information about the property's condition and market value helps reduce conflict. David provides a calm, data-driven perspective that helps families move toward a workable decision — whether that means selling, keeping, or renting the property.\n\n${softCta}`,
+  },
+  {
+    question: "What should an attorney look for in a probate real estate broker?",
+    answer: `Attorneys should look for a broker with probate experience, valuation expertise, clear communication skills, and the ability to coordinate with legal timelines and multiple decision-makers. David Stein's dual credentials as a broker and certified residential appraiser, combined with 20+ years of estate-focused experience, make him a reliable partner for attorneys throughout Washington State.\n\n${softCta}`,
+  },
+  {
+    question: "How do you prepare a senior's home for sale during a move?",
+    answer: `Preparing a senior's home typically involves sorting decades of belongings, coordinating cleanout, addressing deferred maintenance, and managing the timeline alongside a care transition. David works with families and senior move managers to handle the real estate side with patience and practical planning.\n\n${softCta}`,
+  },
 ];
 
 const faqJsonLd = {
@@ -158,21 +182,55 @@ const FAQ = () => {
         </div>
       </section>
 
+      {/* Related Resources */}
+      <section className="py-12 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-[900px] mx-auto">
+            <p className="text-sm font-semibold text-muted-foreground mb-3">Related Guides</p>
+            <div className="flex flex-wrap gap-3">
+              <Link to="/guides/how-probate-real-estate-works" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">How Probate Sales Work</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/guides/what-executors-should-do" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">What Executors Should Do First</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/guides/appraisal-vs-cma" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Appraisal vs. CMA</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/guides/inherited-house-washington" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Inherited House Guide</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/guides/out-of-state-families" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Out-of-State Families</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/guides/senior-transition-differences" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Senior Transition Differences</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <RelatedServices currentPath="/faq" />
 
       {/* Bottom CTA */}
       <section className="py-20 lg:py-28 bg-primary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
+            <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-4">
               Have a question not listed here?
             </h2>
-            <div className="flex justify-center">
+            <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
+              David welcomes confidential conversations with attorneys, executors, trustees, families, and financial professionals. A short call can often clarify your next steps.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link to="/contact">
- <Button variant="gold" size="lg"className="hover:-light">
+                <Button variant="gold" size="lg">
                   Contact David
                 </Button>
               </Link>
+              <a
+                href="https://www.zillow.com/profile/dstein2112#reviews"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="outline" size="lg" className="border-gold/50 bg-transparent text-gold hover:bg-gold hover:text-foreground">
+                  Read Reviews on Zillow
+                </Button>
+              </a>
             </div>
           </div>
         </div>

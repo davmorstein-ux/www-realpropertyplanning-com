@@ -440,8 +440,11 @@ const Index = () => {
               <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
                 Start a Conversation
               </h2>
-              <p className="text-primary-foreground/75 text-lg leading-relaxed mb-10">
-               Whether you're an attorney, executor, trustee, or family member anywhere in Washington State — David is here to help you navigate the real estate side of your situation with care and clarity. If your move or sale involves another state or country, David can help connect you with a trusted eXp Realty referral partner.
+              <p className="text-primary-foreground/75 text-lg leading-relaxed mb-4">
+                Whether you're an attorney, executor, trustee, or family member anywhere in Washington State — David is here to help you navigate the real estate side of your situation with care and clarity.
+              </p>
+              <p className="text-primary-foreground/60 text-base leading-relaxed mb-10">
+                <strong className="text-primary-foreground/80">What happens next:</strong> David will respond within one business day, usually sooner. Your initial conversation is confidential, practical, and no-obligation — focused on understanding your situation and outlining next steps.
               </p>
 
               <div className="space-y-5">
