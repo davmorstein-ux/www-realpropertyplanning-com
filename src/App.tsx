@@ -135,6 +135,11 @@ const App = () => (
           <Route path="/counties/pierce" element={<PierceCounty />} />
           <Route path="/counties/kitsap" element={<KitsapCounty />} />
           <Route path="/counties/skagit" element={<SkagitCounty />} />
+          <Route path="/clark-county-probate-estate-real-estate" element={<ClarkCounty />} />
+          <Route path="/spokane-county-probate-estate-real-estate" element={<SpokaneCounty />} />
+          <Route path="/thurston-county-probate-estate-real-estate" element={<ThurstonCounty />} />
+          <Route path="/whatcom-county-probate-estate-real-estate" element={<WhatcomCounty />} />
+          <Route path="/benton-county-probate-estate-real-estate" element={<BentonCounty />} />
           {/* Dynamic city pages */}
           <Route path="/cities/:citySlug" element={<CityPage />} />
           {/* Dynamic city + service pages */}
