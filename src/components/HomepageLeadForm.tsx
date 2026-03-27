@@ -22,9 +22,13 @@ const HomepageLeadForm = () => {
     const address = (formData.get("address") as string) || "Not provided";
     const message = (formData.get("message") as string) || "No message";
 
+    const sourcePage = formData.get("source_page") as string;
+    const foundVia = (formData.get("found_via") as string) || "Not specified";
+    const notes = (formData.get("notes") as string) || "";
+
     const subject = encodeURIComponent(`New Inquiry from ${name}`);
     const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nProperty Address: ${address}\n\nMessage:\n${message}`
+      `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nProperty Address: ${address}\nSource Page: ${sourcePage}\nHow They Found Us: ${foundVia}${notes ? `\nAdditional Notes: ${notes}` : ""}\n\nMessage:\n${message}`
     );
 
     window.location.href = `mailto:david@realpropertyplanning.com?subject=${subject}&body=${body}`;
@@ -48,7 +52,10 @@ const HomepageLeadForm = () => {
           Thank You
         </h3>
         <p className="text-muted-foreground text-lg leading-relaxed max-w-sm">
-          I'll reach out shortly to learn more about your situation.
+          Thank you — I'll reach out shortly to learn more about your situation.
+        </p>
+        <p className="text-muted-foreground text-sm leading-relaxed max-w-sm mt-2">
+          If it's urgent, feel free to call directly.
         </p>
       </div>
     );
@@ -64,6 +71,7 @@ const HomepageLeadForm = () => {
       </p>
 
       <form className="space-y-4" onSubmit={handleSubmit}>
+        <input type="hidden" name="source_page" value={typeof window !== "undefined" ? window.location.pathname : ""} />
         <div>
           <label className="block text-[15px] font-medium text-foreground mb-1.5">
             Name <span className="text-destructive">*</span>
@@ -123,6 +131,37 @@ const HomepageLeadForm = () => {
             rows={3}
             className={`${inputClass} resize-none`}
             placeholder="Tell us about your situation..."
+          />
+        </div>
+
+        <div>
+          <label className="block text-[15px] font-medium text-foreground mb-1.5">
+            How did you find this site? <span className="text-muted-foreground text-sm font-normal">(optional)</span>
+          </label>
+          <select
+            name="found_via"
+            className={inputClass}
+            defaultValue=""
+          >
+            <option value="" disabled>Select one...</option>
+            <option value="Google Search">Google Search</option>
+            <option value="Referral">Referral</option>
+            <option value="Zillow">Zillow</option>
+            <option value="Attorney / Professional">Attorney / Professional</option>
+            <option value="Direct / Typed URL">Direct / Typed URL</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div>
+          <label className="block text-[15px] font-medium text-foreground mb-1.5">
+            Anything you'd like me to know? <span className="text-muted-foreground text-sm font-normal">(optional)</span>
+          </label>
+          <textarea
+            name="notes"
+            rows={2}
+            className={`${inputClass} resize-none`}
+            placeholder="Situation, timing, questions..."
           />
         </div>
 
