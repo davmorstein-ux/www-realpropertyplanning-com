@@ -89,7 +89,7 @@ const VancouverWaProbateEstate = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Probate & Estate Real Estate in Vancouver, Washington | Real Property Planning"
-        description="Guidance for executors and families handling inherited property in Vancouver, WA. Support for cross-state transitions, relocation timing, and coordinated next steps."
+        description="Guidance for families, executors, and trustees handling inherited property in Vancouver, WA. Support for relocation, timing, and coordinated transitions."
       />
       <BreadcrumbSchema
         items={[
@@ -110,7 +110,7 @@ const VancouverWaProbateEstate = () => {
               Helping Families Navigate Property Transitions in Vancouver
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed">
-              Property transitions in Vancouver often involve more than just a sale. Families may be coordinating a move, managing a cross-state situation, or balancing estate decisions with relocation timing. Clear guidance and practical coordination can make the process far more manageable.
+              Vancouver property decisions often involve timing, relocation, and coordination across state lines. Clear guidance can help simplify what can otherwise feel complex.
             </p>
           </div>
         </div>
@@ -123,18 +123,18 @@ const VancouverWaProbateEstate = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
-              When Vancouver Families Reach Out
+              When Families in Vancouver Reach Out
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               Vancouver sits at a unique crossroads — geographically and personally. Many of the families who reach out are managing property transitions that involve timing, coordination, and decisions that stretch across state lines:
             </p>
             <ul className="space-y-4">
               {[
-                "Family managing a transition between Washington and Oregon",
-                "Inherited home that needs to be sold while coordinating a relocation",
-                "Senior transition where the property sale and move need to happen in sequence",
-                "Estate property requiring preparation, pricing, and sale coordination",
-                "Out-of-area executor or trustee needing reliable local support",
+                "Relocating between Washington and Oregon",
+                "Inherited home during a move or transition",
+                "Executor balancing timing of sale and relocation",
+                "Coordinating property decisions with multiple family members",
+                "Questions about pricing and next steps",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <GoldCheck3D size={22} className="mt-0.5 shrink-0" />
@@ -151,7 +151,7 @@ const VancouverWaProbateEstate = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-              Why Vancouver Property Decisions Require Careful Timing
+              Why Timing and Coordination Matter in Vancouver
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
               Vancouver's proximity to Portland creates unique dynamics for estate and transition property sales. Buyers often cross state lines, tax considerations differ between Washington and Oregon, and families frequently have ties to both sides of the river. These factors make timing and coordination especially important.
@@ -179,7 +179,7 @@ const VancouverWaProbateEstate = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-              Coordination for Transitions, Relocations, and Estate Sales
+              Support Through Transition and Relocation
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
               Many Vancouver property situations involve more than just selling a home. A parent may be moving to senior living while the family home needs to be prepared and sold. An executor in Portland may be managing a Clark County estate. A family may be relocating out of state and needs the sale coordinated with their move timeline.
@@ -199,7 +199,7 @@ const VancouverWaProbateEstate = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-              How I Help Manage Timing and Transitions
+              How I Help Simplify Transition-Driven Decisions
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               Every transition is different, but the approach follows a clear framework designed to keep things moving without adding pressure:
@@ -305,10 +305,10 @@ const VancouverWaProbateEstate = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
-              A Clear Next Step for Vancouver Families
+              A Clear Next Step
             </h2>
             <p className="text-primary-foreground/75 text-lg leading-relaxed mb-4">
-              If you're managing a property transition in Vancouver — whether it involves an estate, a relocation, or a senior move — a short conversation can help you understand your options and next steps.
+              If you are handling a Vancouver property during a transition or relocation, a short conversation can help clarify the path forward.
             </p>
             <p className="text-primary-foreground/50 text-base mb-8">
               No pressure. Just practical guidance for your situation.
