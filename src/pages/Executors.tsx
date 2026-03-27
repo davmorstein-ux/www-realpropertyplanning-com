@@ -356,7 +356,6 @@ const Executors = () => {
             <p className="text-primary-foreground/50 text-base mb-8">
               Whether you are just beginning or already feel behind, there is always a clear path forward.
             </p>
-            </p>
             <div className="flex justify-center">
               <Link to="/contact">
  <Button variant="gold" size="lg"className="hover:-light">
