@@ -66,6 +66,7 @@ import AppraisalVsCma from "./pages/guides/AppraisalVsCma";
 import OutOfStateFamilies from "./pages/guides/OutOfStateFamilies";
 import SeniorTransitionDifferences from "./pages/guides/SeniorTransitionDifferences";
 import InheritedHouseWashington from "./pages/guides/InheritedHouseWashington";
+import SeattleProbateEstate from "./pages/SeattleProbateEstate";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
