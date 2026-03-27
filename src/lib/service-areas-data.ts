@@ -259,6 +259,14 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     heroIntro: "Edmonds is a waterfront community known for its walkable downtown, ferry access, and strong neighborhood character. Properties in Edmonds — from bowl-area homes with sound views to hillside residences and properties near Highway 99 — require locally informed guidance when the sale involves estate, probate, or transition circumstances. Real Property Planning understands the nuances that affect value throughout Edmonds.",
     localKnowledge: "Edmonds offers a wide range of property types and price points, from the desirable bowl area near downtown to Perrinville, Westgate, and Firdale. Waterfront proximity, views, walkability, and lot size all play meaningful roles in Edmonds pricing. David Stein's dual credentials help families selling estate or inherited property in Edmonds understand exactly where their home fits in this layered market and how to position it for the best possible outcome.",
     brokerAppraiserValue: "In Edmonds, view corridors, walking distance to the ferry and downtown, and neighborhood character can create wide value differences within a small geographic area. David Stein's appraisal background allows him to account for these micro-factors rather than relying on broad market comparisons that may miss what makes a specific Edmonds property more — or less — valuable.",
+    localSituations: [
+      "A longtime family home in the Edmonds bowl that needs careful pricing given its sound views and walkability premium",
+      "An inherited property near downtown Edmonds where heirs need objective valuation and sale coordination",
+      "A senior parent leaving a Perrinville or Westgate home for assisted living closer to family",
+      "A trust-owned property in Edmonds where the trustee needs a broker who understands waterfront-area valuations",
+      "An out-of-state executor managing a hillside home with partial sound views that are difficult to price remotely",
+      "A divorce-related sale in Edmonds where waterfront proximity complicates the valuation discussion",
+    ],
   },
   "mountlake-terrace": {
     tone: "suburban",
@@ -394,6 +402,15 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     descriptor: "Waterfront peninsula community with premium appeal",
     heroIntro: "Gig Harbor's waterfront charm, small-town atmosphere, and proximity to Tacoma and the Narrows Bridge have made it one of Pierce County's most desirable communities. Estate and transition properties in Gig Harbor — whether on the harbor itself, in the established neighborhoods of the peninsula, or in newer developments like Gig Harbor North — require pricing and preparation strategies informed by the area's unique buyer expectations.",
     localKnowledge: "Gig Harbor's market ranges from waterfront properties and historic harbor-area homes to newer construction in master-planned communities. The distinction between 'Gig Harbor proper' and surrounding unincorporated areas matters to buyers, and view properties, waterfront access, and proximity to downtown all significantly affect value. David Stein's appraisal credentials help clients understand these nuances rather than relying on broad averages.",
+    brokerAppraiserValue: "Gig Harbor properties — particularly those near the harbor, on the bluff, or with water views — carry premiums that automated tools consistently misjudge. David Stein's certified appraisal background provides the property-specific analysis Gig Harbor sellers need, accounting for view quality, waterfront proximity, lot orientation, and the meaningful price differences between 'Gig Harbor address' and actual Gig Harbor proper.",
+    localSituations: [
+      "A waterfront or harbor-view home in Gig Harbor where the estate needs accurate valuation that reflects view premiums",
+      "An inherited property on the Gig Harbor peninsula where out-of-state heirs need local coordination and honest pricing",
+      "A senior couple leaving a longtime Gig Harbor home for a retirement community closer to medical services",
+      "A trust-owned property in Gig Harbor North or the surrounding peninsula that needs fiduciary-appropriate sale coordination",
+      "An executor managing a Gig Harbor estate where the property's waterfront character complicates standard pricing approaches",
+      "A divorce-related sale involving a Gig Harbor home where both parties need an objective, locally knowledgeable broker",
+    ],
   },
   fircrest: {
     tone: "suburban",
@@ -492,6 +509,15 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     descriptor: "Scandinavian-influenced waterfront community",
     heroIntro: "Poulsbo's Scandinavian heritage, Liberty Bay waterfront, and small-town charm create a distinctive community with strong appeal for families and retirees. Estate and transition properties in Poulsbo — whether in the historic waterfront area, nearby established neighborhoods, or outlying rural properties — benefit from guidance that reflects the community's unique character and the expectations of buyers drawn to this area.",
     localKnowledge: "Poulsbo's housing ranges from historic homes near the waterfront and downtown to newer developments and larger rural properties in the surrounding area. Waterfront access, Liberty Bay views, and proximity to downtown all significantly influence value. David Stein's appraisal credentials are particularly valuable in Poulsbo, where the range of property types and the community's distinctive character make generic pricing approaches unreliable.",
+    brokerAppraiserValue: "Poulsbo's mix of waterfront homes, village-adjacent properties, and rural-residential lots creates a market where automated pricing tools fall short. David Stein evaluates each property on its actual characteristics — Liberty Bay proximity, view corridors, lot topography, and condition — providing the kind of grounded analysis that Poulsbo sellers and their advisors need for confident decisions.",
+    localSituations: [
+      "A longtime family home near Poulsbo's downtown waterfront where the Liberty Bay premium needs accurate evaluation",
+      "An inherited property in Poulsbo where multiple heirs need objective pricing and clear communication",
+      "A senior transitioning from a Poulsbo home to assisted living on the peninsula or the mainland",
+      "A trust-owned property in the Poulsbo area where the trustee needs a broker experienced with Kitsap waterfront markets",
+      "An out-of-state executor managing a Poulsbo property with rural or semi-rural characteristics",
+      "A family navigating a property decision in Poulsbo where community relationships and discretion matter",
+    ],
   },
   "bainbridge-island": {
     tone: "premium",
@@ -795,6 +821,7 @@ export const counties: CountyData[] = [
 const TIER_1_SLUGS = new Set([
   "bellevue", "seattle", "kirkland", "mercer-island",
   "edmonds", "tacoma", "bainbridge-island",
+  "gig-harbor", "poulsbo",
 ]);
 
 /** Check whether a city is Tier 1 (fully enriched content) */
