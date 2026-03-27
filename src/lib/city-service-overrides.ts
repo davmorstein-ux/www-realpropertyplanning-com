@@ -1855,8 +1855,143 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
   },
 
   // ═══════════════════════════════════════════════════════════════════
-  // SUBURBAN TONE GROUP — Issaquah (alongside Kirkland, Redmond)
+  // SUBURBAN TONE GROUP — Kirkland, Issaquah, Redmond
   // ═══════════════════════════════════════════════════════════════════
+
+  // ── KIRKLAND ──────────────────────────────────────────────────────
+  // Identity: Waterfront charm meets suburban growth, Moss Bay/Houghton
+  // boutique waterfront, Juanita/Finn Hill family neighborhoods,
+  // Totem Lake redevelopment, Google campus, walkable downtown
+  kirkland: {
+    "probate-estate-sales": {
+      intro: "Kirkland's neighborhoods span from the boutique waterfront blocks of Moss Bay and Houghton to the family-oriented hillside communities of Juanita, Finn Hill, and Totem Lake — each with its own buyer profile and pricing dynamics. When a probate or estate sale involves Kirkland property, the home's location relative to the waterfront, its condition compared to the city's increasingly updated housing stock, and the expectations of Kirkland's discerning buyer pool all affect realistic pricing. Real Property Planning brings neighborhood-level Kirkland expertise to estate property sales.",
+      scenarios: [
+        "A longtime family home in Moss Bay or Houghton where the walkable waterfront location commands a premium but the home's condition may not meet today's buyer expectations",
+        "An inherited property in Juanita or Finn Hill where the hilltop views and larger lots add value that automated estimates often understate",
+        "An estate home near the Totem Lake redevelopment area where commercial transformation is changing neighborhood dynamics and buyer interest",
+        "Multiple heirs managing a Kirkland property where one sibling lives locally and others are out of state — needing objective, defensible valuation",
+        "A probate sale involving a Kirkland condo or townhome in one of the city's newer mixed-use developments near downtown",
+      ],
+      howWeHelp: [
+        "Neighborhood-specific valuation that accounts for Kirkland's waterfront premium, hillside view corridors, and the wide pricing gap between locations",
+        "Assessment of how the Totem Lake transformation and downtown Kirkland development are affecting nearby residential values",
+        "Coordination with probate attorneys on court documentation, timeline requirements, and sale procedures",
+        "Property preparation tailored to Kirkland's buyer expectations — which improvements drive return and which don't in each submarket",
+        "Clear, regular communication with multiple heirs or parties managing the process from different locations",
+        "Full transaction management from initial assessment through closing in Kirkland's competitive market",
+      ],
+      whyLocal: "Kirkland's market is shaped by its waterfront identity, walkable downtown, and the ongoing transformation of Totem Lake into a mixed-use district. A home in Moss Bay faces entirely different buyer expectations than one on Finn Hill or near the Cross Kirkland Corridor. Automated estimates miss these neighborhood-level distinctions — especially for older estate properties competing against the heavily updated homes that dominate Kirkland's most desirable blocks. David Stein's on-site assessment provides the granular pricing insight that Kirkland estate situations require.",
+    },
+    "senior-transitions": {
+      intro: "Many Kirkland seniors have lived in their homes for decades — watching the city evolve from a quiet lakeside town into one of the Eastside's most desirable communities. When it's time to transition from a longtime Kirkland home, the process involves both significant financial considerations and deeply personal connections to the neighborhood. Real Property Planning helps Kirkland families navigate senior transitions with patient, experienced guidance that respects the family's pace while ensuring the property is positioned accurately in Kirkland's competitive market.",
+      scenarios: [
+        "A senior couple in Houghton whose midcentury home sits on a premium waterfront-adjacent lot but needs strategic updates for today's buyers",
+        "An adult child coordinating a parent's move from a Juanita home to an Eastside senior living community while managing the sale from out of state",
+        "A longtime Finn Hill homeowner whose property has panoramic lake views but hasn't been updated in decades — needing honest guidance on preparation priorities",
+        "A family balancing a parent's assisted living timeline with the practical requirements of selling a Kirkland home in a market that rewards move-in condition",
+        "A senior downsizing from a larger Kirkland home to a condo or townhome within the community — wanting to stay close to familiar amenities",
+      ],
+      howWeHelp: [
+        "Condition-based valuation that reflects how Kirkland's buyer pool evaluates older homes against the updated and newer inventory dominating the market",
+        "Strategic preparation guidance specific to Kirkland — which investments matter for waterfront-area homes versus hillside properties",
+        "Timeline coordination aligned with the senior's move to a care community, family home, or smaller Kirkland residence",
+        "Patient communication with seniors and adult children who may be managing the transition from different locations",
+        "Vendor coordination for cleanout, repairs, and staging appropriate for Kirkland's market expectations",
+        "Full-service management so the family can focus on their parent's wellbeing rather than transaction logistics",
+      ],
+      whyLocal: "Kirkland seniors often own homes in locations that have appreciated significantly — but the home itself may not reflect what today's buyers expect in terms of condition and finish. The gap between emotional value and market reality is especially pronounced in Kirkland, where walkability, waterfront proximity, and neighborhood charm drive premiums that only apply when the property is presented effectively. David's appraisal background helps families understand where their home actually stands and what preparation makes financial sense.",
+    },
+    "downsizing-services": {
+      intro: "Downsizing from a longtime Kirkland home means navigating a market where location carries significant premiums and buyer expectations vary dramatically by neighborhood. Whether moving from a larger Juanita home to a Kirkland condo, from Finn Hill to a smaller waterfront-area property, or leaving the community altogether, the process benefits from someone who understands how Kirkland's distinct submarkets affect both the sale of the current home and realistic expectations for the next step.",
+      scenarios: [
+        "A couple in a large Finn Hill home with lake views who want to downsize to a Kirkland condo but need to understand how their proceeds translate in the current market",
+        "A homeowner in Juanita whose children have moved away, considering whether to stay in Kirkland in a smaller home or move to a community with more amenities",
+        "A retiree in a Moss Bay home who wants to sell and relocate closer to family — needing accurate pricing for a property in one of Kirkland's most competitive micro-markets",
+        "A family helping a parent transition from a Totem Lake area home to a more manageable living situation while the neighborhood undergoes redevelopment",
+      ],
+      whyLocal: "Downsizing decisions in Kirkland are complicated by the city's wide range of housing options and the significant price differences between neighborhoods. A Finn Hill home with views may sell at a premium, but replacing that square footage in waterfront Kirkland requires understanding exactly how the proceeds translate. David provides the comparative market analysis that helps Kirkland downsizers make realistic plans rather than assumptions.",
+    },
+    "executor-support": {
+      intro: "Executors managing estate property in Kirkland face a market where the city's waterfront charm, walkable downtown, and strong school districts drive demand — but where property condition and neighborhood location create wide pricing variations. Whether the estate property is a midcentury home in Houghton, a split-level in Juanita, or a condo near downtown Kirkland, executors need locally grounded guidance to meet their fiduciary responsibilities while navigating the city's competitive market.",
+      scenarios: [
+        "A newly appointed executor managing a Kirkland estate property while living out of state — unfamiliar with how waterfront proximity and neighborhood character affect pricing",
+        "An estate home in Kirkland's Totem Lake area where ongoing redevelopment creates uncertainty about property positioning and buyer interest",
+        "Co-executors who disagree about a Kirkland property's value and need defensible, appraisal-informed pricing to resolve the discussion",
+        "An estate property that has been vacant and needs assessment, cleanout, and preparation before it can compete with Kirkland's updated listings",
+        "An executor coordinating with a probate attorney and CPA on a Kirkland property where the neighborhood's premium location elevates financial stakes",
+      ],
+      howWeHelp: [
+        "Property-specific assessment accounting for Kirkland's neighborhood-level pricing — from Moss Bay waterfront premiums to Finn Hill view corridors to Totem Lake redevelopment effects",
+        "Defensible pricing documentation using appraisal-level methodology suitable for beneficiary review and court records",
+        "Guidance on whether the estate property's highest value is as a residence, renovation opportunity, or development potential in evolving areas",
+        "Coordination of cleanout, preparation, and staging appropriate for Kirkland's buyer expectations in each submarket",
+        "Regular communication and status updates for executors managing remotely",
+        "End-to-end transaction management from initial assessment through closing and distribution coordination",
+      ],
+      whyLocal: "Kirkland executors face a market where mispricing carries real consequences — overprice and the property sits while the estate accumulates carrying costs; underprice and beneficiaries question the executor's judgment. With Kirkland's wide range of neighborhood values and the transformation happening around Totem Lake, accurate pricing requires on-the-ground assessment rather than automated tools. David's dual credentials provide the defensible analysis that Kirkland estate situations demand.",
+    },
+    "attorney-fiduciary-support": {
+      intro: "Attorneys and fiduciaries managing property matters in Kirkland need a real estate partner who understands the city's waterfront-driven market premiums, the significant pricing variation between neighborhoods, and the documentation standards that legal proceedings require. Real Property Planning works with Kirkland-area legal professionals as a responsive, credentialed resource for estate, trust, probate, divorce, and guardianship property matters across the city's diverse submarkets.",
+      scenarios: [
+        "A probate attorney managing a Kirkland estate where the property's waterfront-adjacent location complicates valuation because beneficiaries assume premium pricing regardless of condition",
+        "A trustee overseeing trust-held property in Kirkland who needs defensible pricing that accounts for the neighborhood's specific market dynamics",
+        "An estate planning attorney advising a Kirkland client on property disposition where the Totem Lake redevelopment creates development-potential questions",
+        "A family law attorney handling a divorce involving a Kirkland home where both parties have different expectations based on neighborhood reputation versus actual condition",
+        "An elder law attorney coordinating a client's Kirkland property sale alongside a transition to senior living",
+      ],
+      howWeHelp: [
+        "Defensible property assessments that distinguish between Kirkland's waterfront, hillside, and redevelopment-area submarkets",
+        "Responsive communication calibrated to legal timelines and the professional expectations of Eastside attorneys",
+        "Pricing documentation grounded in appraisal-level methodology — suitable for court proceedings, beneficiary review, and settlement negotiations",
+        "Strategic guidance on property preparation and market positioning appropriate for Kirkland's competitive buyer environment",
+        "Coordination across legal, financial, and family stakeholders with clear, professional reporting",
+        "A consistent, locally expert point of contact for ongoing property-related referrals in Kirkland",
+      ],
+      whyLocal: "Kirkland's legal professionals deal with property matters where the city's waterfront identity and walkable charm create expectations that may not align with specific property conditions. A home two blocks from the lake in Houghton and one on a busy Juanita arterial represent dramatically different values — yet both carry the 'Kirkland' address. David provides the neighborhood-granular analysis that attorneys and fiduciaries need for defensible opinions in a market where location within the city matters enormously.",
+    },
+    "valuation-guidance": {
+      intro: "Kirkland's real estate market presents valuation challenges that reflect the city's layered geography — waterfront blocks in Moss Bay, hillside view properties on Finn Hill, family neighborhoods in Juanita, and the rapidly evolving Totem Lake corridor. When accurate property valuation matters for estate planning, divorce proceedings, trust administration, or a pending sale, the wide range of Kirkland's submarkets makes generic approaches unreliable. Real Property Planning provides the property-specific valuation insight that Kirkland situations require.",
+      scenarios: [
+        "An estate planning attorney needing current market valuation for a Kirkland waterfront-area property where the location premium is significant but condition-dependent",
+        "Divorcing spouses who disagree on the value of their Kirkland home — each referencing different comparable sales from different neighborhoods",
+        "A trustee needing documented valuation for a trust-owned Kirkland property where recent nearby sales may not reflect the subject property's actual condition and features",
+        "Heirs questioning an automated estimate for an inherited Kirkland home that doesn't account for view corridors, lot configuration, or deferred maintenance",
+      ],
+      whyLocal: "Kirkland's valuation landscape is defined by micro-market premiums that automated tools consistently miss. A Houghton home with filtered lake views may be worth significantly more than a similar home two blocks inland — but only if condition meets buyer expectations. David's certified appraisal credentials and hands-on broker experience provide the analytically grounded, property-specific valuation that Kirkland's layered market demands.",
+    },
+    "preparing-home-for-sale": {
+      intro: "Preparing a Kirkland home for sale requires understanding what the city's buyers expect — and those expectations vary significantly by neighborhood. A waterfront-area home in Moss Bay faces different preparation standards than a family home in Juanita or a property near the Totem Lake redevelopment. Real Property Planning helps Kirkland sellers identify which improvements drive return, which can be skipped, and how to present a property that competes effectively in the city's condition-sensitive market.",
+      scenarios: [
+        "A Houghton home with original finishes where the walkable location is desirable but the kitchen and bathrooms need updating to meet buyer expectations",
+        "A Finn Hill property with panoramic views but dated landscaping and deferred exterior maintenance that undermines curb appeal",
+        "An estate property in Juanita that needs cleanout, carpet replacement, and paint to compete with the updated homes that dominate neighborhood listings",
+        "A Totem Lake area home where the owner is unsure whether to invest in updates or price for the growing buyer segment interested in renovation opportunities",
+      ],
+      whyLocal: "Kirkland buyers are condition-conscious — especially in the waterfront-adjacent and downtown-proximate neighborhoods where premiums are highest. Over-improving a Totem Lake property may not yield the same return as targeted updates in Moss Bay. David's experience with Kirkland's neighborhood-specific buyer expectations helps sellers invest preparation dollars where they matter most, avoiding both under-preparation and over-investment.",
+    },
+    "divorce-related-home-sales": {
+      intro: "Divorce-related property sales in Kirkland carry the added complexity of a market where neighborhood location creates dramatic value differences — and where both parties may have very different perceptions of what their home is worth based on Kirkland's reputation versus actual property-specific factors. Real Property Planning provides the objective, defensible pricing that divorce situations in Kirkland require, working constructively with both parties and their attorneys.",
+      scenarios: [
+        "A divorcing couple with a Houghton home where the waterfront-area location creates high value expectations but the home's condition doesn't match premium comps",
+        "A family law attorney needing neutral pricing assessment for a Kirkland property where both spouses cite different neighborhood sales to support their position",
+        "A mediated divorce involving a Finn Hill home where one party wants to retain the property — needing accurate buyout valuation that accounts for the view premium and deferred maintenance",
+        "A contentious divorce where the Kirkland home is the primary asset and both parties need a credentialed broker who can provide court-ready pricing documentation",
+      ],
+      whyLocal: "Divorce negotiations involving Kirkland property are complicated by the city's wide range of neighborhood values and the emotional premium both parties often attach to the Kirkland address. Automated estimates may validate one party's expectations while contradicting the other's — neither accurately. David's dual broker and appraiser credentials provide the neutral, property-specific analysis that helps Kirkland divorce situations reach fair resolution based on actual market conditions rather than aspirational pricing.",
+    },
+    "trust-estate-property-sales": {
+      intro: "Trust-owned property in Kirkland requires fiduciary-level care in a market where the city's waterfront charm and Eastside location create significant values — and where trustee decisions are subject to beneficiary scrutiny. Whether the trust property is a longtime family home in Juanita, a condo near downtown Kirkland, or a view property on Finn Hill, Real Property Planning provides trustees with the defensible pricing and professional sale management that trust administration demands.",
+      scenarios: [
+        "A successor trustee managing a trust-owned Kirkland home where beneficiaries have different expectations about the property's value based on the city's general reputation",
+        "A corporate trustee needing local expertise for a Kirkland property where waterfront proximity and condition factors require on-site assessment rather than desktop valuation",
+        "A trustee preparing to sell a Finn Hill trust property where the views command a premium but the home needs updating — uncertain how condition affects the view-premium relationship",
+        "A trust administration involving a Kirkland condo in a newer mixed-use development where HOA factors and building-specific dynamics affect pricing",
+      ],
+      whyLocal: "Trust property sales in Kirkland carry elevated scrutiny because the city's values are significant and beneficiaries often have strong opinions based on Kirkland's desirable reputation. A trustee who relies on automated estimates may overprice a dated property or underprice one where location premiums apply — either creating fiduciary exposure. David's dual credentials provide trustees with the defensible, neighborhood-specific analysis that Kirkland trust situations require.",
+    },
+  },
+
+
 
   // ── ISSAQUAH ──────────────────────────────────────────────────────
   // Identity: Cascade foothills community, master-planned neighborhoods

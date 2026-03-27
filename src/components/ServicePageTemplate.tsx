@@ -9,7 +9,7 @@ import GoldCheck3D from "@/components/GoldCheck3D";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import { counties } from "@/lib/service-areas-data";
+import { counties, isTier1City } from "@/lib/service-areas-data";
 import type { ServiceData } from "@/lib/service-areas-data";
 
 interface ServicePageTemplateProps {
@@ -20,12 +20,16 @@ interface ServicePageTemplateProps {
 }
 
 const ServicePageTemplate = ({ service, introText, situations, benefits }: ServicePageTemplateProps) => {
-  const citySamples = counties.flatMap((county) =>
-    county.cities.slice(0, 3).map((c) => ({
+  // Show all Tier 1 cities first, then fill with additional cities for coverage
+  const allCities = counties.flatMap((county) =>
+    county.cities.map((c) => ({
       ...c,
       countyName: county.name,
     }))
   );
+  const tier1Cities = allCities.filter((c) => isTier1City(c.slug));
+  const otherCities = allCities.filter((c) => !isTier1City(c.slug)).slice(0, 6);
+  const citySamples = [...tier1Cities, ...otherCities];
 
   return (
     <div className="min-h-screen bg-background">
