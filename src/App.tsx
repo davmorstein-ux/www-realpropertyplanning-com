@@ -68,6 +68,7 @@ import SeniorTransitionDifferences from "./pages/guides/SeniorTransitionDifferen
 import InheritedHouseWashington from "./pages/guides/InheritedHouseWashington";
 import SeattleProbateEstate from "./pages/SeattleProbateEstate";
 import BellevueProbateEstate from "./pages/BellevueProbateEstate";
+import TacomaProbateEstate from "./pages/TacomaProbateEstate";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -148,6 +149,7 @@ const App = () => (
           {/* Custom city pages */}
           <Route path="/seattle-probate-estate-real-estate" element={<SeattleProbateEstate />} />
           <Route path="/bellevue-probate-estate-real-estate" element={<BellevueProbateEstate />} />
+          <Route path="/tacoma-probate-estate-real-estate" element={<TacomaProbateEstate />} />
           {/* Cornerstone guide pages */}
           <Route path="/guides/how-probate-real-estate-works" element={<HowProbateRealEstateWorks />} />
           <Route path="/guides/what-executors-should-do" element={<WhatExecutorsShouldDo />} />
