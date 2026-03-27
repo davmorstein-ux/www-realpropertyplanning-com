@@ -5,6 +5,7 @@ import SEOHead from "@/components/SEOHead";
 import TrustStrip from "@/components/TrustStrip";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
+import MidPageCTA from "@/components/MidPageCTA";
 import GoldCheck3D from "@/components/GoldCheck3D";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -124,6 +125,14 @@ const ServicePageTemplate = ({ service, introText, situations, benefits }: Servi
         </div>
       </section>
 
+      {/* Mid-page CTA */}
+      <MidPageCTA
+        heading={`Need Help With ${service.shortName}?`}
+        body="David Stein provides confidential consultations for clients and professionals throughout Washington State."
+        buttonText="Schedule a Consultation"
+        microcopy="No pressure. Just practical guidance for your situation."
+      />
+
       {/* Why Valuation & Market Guidance Matter */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
@@ -173,8 +182,11 @@ const ServicePageTemplate = ({ service, introText, situations, benefits }: Servi
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
               Ready to Discuss {service.shortName}?
             </h2>
-            <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
+            <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">
               David Stein provides confidential consultations for clients and professionals throughout Washington State.
+            </p>
+            <p className="text-primary-foreground/50 text-base mb-8">
+              A short conversation to understand your situation, answer questions, and discuss next steps.
             </p>
             <div className="flex justify-center">
               <Link to="/contact">

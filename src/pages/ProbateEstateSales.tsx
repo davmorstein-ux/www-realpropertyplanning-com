@@ -7,6 +7,7 @@ import TrustStrip from "@/components/TrustStrip";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
+import MidPageCTA from "@/components/MidPageCTA";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -196,6 +197,14 @@ const ProbateEstateSales = () => {
           </div>
         </div>
       </section>
+      {/* Mid-page CTA */}
+      <MidPageCTA
+        heading="Dealing With a Probate or Estate Property?"
+        body="David provides a no-pressure consultation to review the property, discuss timing, and outline next steps — whether you are an executor, attorney, or family member."
+        buttonText="Schedule a Consultation"
+        microcopy="No pressure. Just practical guidance for your situation."
+        variant="dark"
+      />
 
       {/* Understanding the Executor's Role in Property Sales */}
       <section className="py-20 lg:py-28 bg-background">
@@ -258,10 +267,13 @@ const ProbateEstateSales = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
-              Need experienced help selling a probate or estate property?
+              Need Experienced Help Selling a Probate or Estate Property?
             </h2>
-            <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
+            <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">
               David Stein provides a no-pressure consultation to review the property, discuss timing, and outline next steps.
+            </p>
+            <p className="text-primary-foreground/50 text-base mb-8">
+              A short conversation to understand your situation, answer questions, and plan a practical path forward.
             </p>
             <Link to="/contact">
  <Button variant="gold" size="lg"className="hover:-light">

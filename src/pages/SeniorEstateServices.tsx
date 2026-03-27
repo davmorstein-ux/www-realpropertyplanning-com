@@ -6,6 +6,7 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import MidPageCTA from "@/components/MidPageCTA";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 
 
@@ -166,6 +167,13 @@ const SeniorEstateServices = () => {
           </ul>
         </div>
       </section>
+
+      <MidPageCTA
+        heading="Have Questions About a Senior or Estate Property?"
+        body="Whether you are a senior planning a move, a family member coordinating a sale, or an attorney advising a client — David welcomes a confidential conversation."
+        buttonText="Schedule a Consultation"
+        microcopy="No pressure. Just practical guidance for your situation."
+      />
 
       {/* Home Value and Market Analysis */}
       <section className="py-12 md:py-16 lg:py-[84px] bg-secondary">
