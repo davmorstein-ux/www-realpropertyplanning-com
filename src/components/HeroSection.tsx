@@ -28,15 +28,19 @@ const HeroSection = () => {
               />
             </div>
 
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-primary-foreground font-medium leading-tight mb-6">
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-primary-foreground font-medium leading-tight mb-4">
               Specialized Guidance for Probate & Estate Property Sales
             </h1>
             
-            <p className="text-lg md:text-xl text-gold/90 mb-4 leading-relaxed max-w-2xl font-medium">
-              Clear guidance to reduce stress, protect property value, and bring confidence to inherited and estate real estate decisions.
+            <p className="text-lg md:text-xl text-gold/90 mb-5 leading-relaxed max-w-2xl font-medium">
+              Clear guidance to reduce stress, protect property value, and bring confidence to every decision along the way.
+            </p>
+
+            <p className="text-base md:text-lg text-primary-foreground/70 mb-3 leading-relaxed max-w-2xl">
+              These situations can feel overwhelming. You don't have to figure it out alone.
             </p>
             <p className="text-base md:text-lg text-primary-foreground/70 mb-8 leading-relaxed max-w-2xl">
-              Working with attorneys, executors, trustees, and families across Washington State — with 20+ years of dual expertise as a broker and certified appraiser.
+              David Stein brings 20+ years of dual expertise as a licensed broker and certified appraiser — working with executors, attorneys, trustees, and families across Washington State to organize next steps and guide the process from start to finish.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
@@ -57,7 +61,7 @@ const HeroSection = () => {
               </Button>
             </div>
             <p className="mt-3 text-primary-foreground/50 text-sm max-w-md">
-              A short conversation to understand your situation, answer questions, and outline practical next steps.
+              A short conversation to understand your situation, answer your questions, and outline practical next steps. No pressure. Just clear guidance.
             </p>
             
             <div className="mt-12 pt-8 border-t border-primary-foreground/20">
