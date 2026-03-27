@@ -1651,7 +1651,6 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
       whyLocal: "Trustees managing Silverdale properties need to understand how Central Kitsap's transformation affects the specific property they're responsible for. A home in an established neighborhood may benefit from commercial growth, or it may face competitive pressure from newer construction — the answer depends on the specific property's location, condition, and buyer pool.",
     },
   },
-};
 
   // ═══════════════════════════════════════════════════════════════════
   // URBAN TONE GROUP — Lynnwood (alongside Seattle, Tacoma)
@@ -1955,8 +1954,10 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
       whyLocal: "Trust properties in Issaquah carry community-specific complexities that standard approaches may overlook. HOA requirements, architectural standards, and the distinction between master-planned and non-HOA neighborhoods all affect how a trustee should approach the sale. David's on-the-ground experience across Issaquah's communities provides trustees with the specificity needed to make well-supported, fiduciary-appropriate decisions.",
     },
   },
+};
 
-
+/**
+ * Look up a city-specific content override.
  * Returns undefined if no override exists for the city+service combination.
  */
 export function getCityServiceOverride(
