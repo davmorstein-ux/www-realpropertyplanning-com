@@ -8,6 +8,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
 import MidPageCTA from "@/components/MidPageCTA";
+import ProofCallout from "@/components/ProofCallout";
 import GoldCheck3D from "@/components/GoldCheck3D";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -106,6 +107,20 @@ const WhatExecutorsShouldDo = () => (
           <p className="text-muted-foreground leading-relaxed">
             David's dual background as a broker and <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">certified residential appraiser</Link> means you get valuation insight grounded in professional methodology — not guesswork.
           </p>
+        </div>
+      </div>
+    </section>
+
+    {/* Proof callout */}
+    <section className="py-10 bg-background">
+      <div className="container px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto">
+          <ProofCallout
+            quote="We didn't know where to start. David made the entire process manageable and kept us informed every step of the way."
+            attribution="Executor, Snohomish County"
+            context="Inherited property sale"
+            variant="accent"
+          />
         </div>
       </div>
     </section>
