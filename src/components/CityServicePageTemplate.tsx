@@ -8,6 +8,7 @@ import RelatedServices from "@/components/RelatedServices";
 import GoldCheck3D from "@/components/GoldCheck3D";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import MidPageCTA from "@/components/MidPageCTA";
 import {
   getDeepCityServiceIntro,
   getDeepCityServiceScenarios,
@@ -124,12 +125,20 @@ const CityServicePageTemplate = ({ city, service }: CityServicePageTemplateProps
         </div>
       </section>
 
+      {/* Mid-page CTA */}
+      <MidPageCTA
+        heading={`Need ${service.shortName} Help in ${city.name}?`}
+        body={`David provides confidential consultations for clients and professionals in ${city.name} and throughout ${city.county}.`}
+        buttonText="Schedule a Consultation"
+        microcopy="No pressure. Just practical guidance for your situation."
+      />
+
       {/* Why Local Context Matters */}
       <section className="py-16 lg:py-20 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-              Why Local Context Matters for {service.shortName} in {city.name}
+              Why Does Local Context Matter for {service.shortName} in {city.name}?
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
               {whyLocal}
@@ -142,6 +151,7 @@ const CityServicePageTemplate = ({ city, service }: CityServicePageTemplateProps
       <section className="py-12 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
+            <p className="text-sm font-semibold text-muted-foreground mb-3">Related Resources</p>
             <div className="flex flex-wrap gap-3">
               <Link to={`/cities/${city.slug}`} className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">
                 {city.name} Overview
@@ -155,8 +165,16 @@ const CityServicePageTemplate = ({ city, service }: CityServicePageTemplateProps
                 {service.shortName} Overview
               </Link>
               <span className="text-muted-foreground/40">·</span>
-              <Link to="/services" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">
-                All Services
+              <Link to="/executors" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">
+                For Executors
+              </Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/for-attorneys" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">
+                For Attorneys
+              </Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/why-valuation-matters" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">
+                Why Valuation Matters
               </Link>
               <span className="text-muted-foreground/40">·</span>
               <Link to="/cities-we-serve" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">
