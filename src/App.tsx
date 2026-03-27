@@ -144,6 +144,8 @@ const App = () => (
           <Route path="/senior-living/memory-care" element={<MemoryCare />} />
           <Route path="/senior-living/nursing-and-skilled-care" element={<NursingAndSkilledCare />} />
           <Route path="/senior-living/independent-living" element={<IndependentLiving />} />
+          {/* Custom city pages */}
+          <Route path="/seattle-probate-estate-real-estate" element={<SeattleProbateEstate />} />
           {/* Cornerstone guide pages */}
           <Route path="/guides/how-probate-real-estate-works" element={<HowProbateRealEstateWorks />} />
           <Route path="/guides/what-executors-should-do" element={<WhatExecutorsShouldDo />} />
