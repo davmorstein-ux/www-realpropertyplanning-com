@@ -70,6 +70,7 @@ import SeattleProbateEstate from "./pages/SeattleProbateEstate";
 import BellevueProbateEstate from "./pages/BellevueProbateEstate";
 import TacomaProbateEstate from "./pages/TacomaProbateEstate";
 import SpokaneProbateEstate from "./pages/SpokaneProbateEstate";
+import VancouverWaProbateEstate from "./pages/VancouverWaProbateEstate";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -152,6 +153,7 @@ const App = () => (
           <Route path="/bellevue-probate-estate-real-estate" element={<BellevueProbateEstate />} />
           <Route path="/tacoma-probate-estate-real-estate" element={<TacomaProbateEstate />} />
           <Route path="/spokane-probate-estate-real-estate" element={<SpokaneProbateEstate />} />
+          <Route path="/vancouver-wa-probate-estate-real-estate" element={<VancouverWaProbateEstate />} />
           {/* Cornerstone guide pages */}
           <Route path="/guides/how-probate-real-estate-works" element={<HowProbateRealEstateWorks />} />
           <Route path="/guides/what-executors-should-do" element={<WhatExecutorsShouldDo />} />
