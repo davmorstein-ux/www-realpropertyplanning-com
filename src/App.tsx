@@ -109,6 +109,7 @@ const App = () => (
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/insights" element={<Insights />} />
           <Route path="/probate-estate-sales" element={<ProbateEstateSales />} />
           <Route path="/senior-transitions" element={<SeniorTransitions />} />
           <Route path="/for-attorneys" element={<ForAttorneys />} />
