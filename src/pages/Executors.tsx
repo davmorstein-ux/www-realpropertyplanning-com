@@ -348,21 +348,25 @@ const Executors = () => {
       <section className="py-12 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <p className="text-sm font-semibold text-muted-foreground mb-3">Related Resources</p>
+            <p className="text-sm font-semibold text-muted-foreground mb-3">Related Guides &amp; Resources</p>
             <div className="flex flex-wrap gap-3">
-              <Link to="/probate-estate-sales" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Probate & Estate Sales</Link>
+              <Link to="/guides/what-executors-should-do" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">What Executors Should Do First</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/guides/how-probate-real-estate-works" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">How Probate Sales Work</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/guides/inherited-house-washington" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Inherited House Guide</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/guides/out-of-state-families" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Out-of-State Families</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/guides/appraisal-vs-cma" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Appraisal vs. CMA</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/probate-estate-sales" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Probate &amp; Estate Sales</Link>
               <span className="text-muted-foreground/40">·</span>
               <Link to="/for-attorneys" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Attorneys</Link>
               <span className="text-muted-foreground/40">·</span>
-              <Link to="/why-valuation-matters" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Why Valuation Matters</Link>
+              <Link to="/testimonials" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Client Reviews</Link>
               <span className="text-muted-foreground/40">·</span>
-              <Link to="/how-the-process-works" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">How the Process Works</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/senior-transitions" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Senior Transitions</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/faq" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">All FAQs</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/resources" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Resources</Link>
+              <a href="https://www.zillow.com/profile/dstein2112#reviews" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Reviews on Zillow</a>
             </div>
           </div>
         </div>

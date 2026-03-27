@@ -259,6 +259,24 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
         </div>
       </section>
 
+      {/* Related Guides */}
+      <section className="py-10 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <p className="text-sm font-semibold text-muted-foreground mb-3">Helpful Guides</p>
+            <div className="flex flex-wrap gap-3">
+              <Link to="/guides/how-probate-real-estate-works" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">How Probate Sales Work</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/guides/what-executors-should-do" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">What Executors Should Do First</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/guides/inherited-house-washington" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Inherited House Guide</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/guides/out-of-state-families" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Out-of-State Families</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <RelatedServices currentPath={`/cities/${city.slug}`} />
 
       {/* CTA */}
