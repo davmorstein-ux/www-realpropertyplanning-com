@@ -1,5 +1,6 @@
 // Central data layer for all counties, cities, and services
 // This powers templates, routing, navigation, and internal linking
+import { getCityServiceOverride } from "@/lib/city-service-overrides";
 
 /** Community tone classification — shapes connecting language throughout templates */
 export type CommunityTone = 
