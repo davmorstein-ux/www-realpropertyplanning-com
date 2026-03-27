@@ -6,6 +6,7 @@ import { articleSchema } from "@/lib/schema";
 import TrustStrip from "@/components/TrustStrip";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
+import PageFAQ from "@/components/PageFAQ";
 import MidPageCTA from "@/components/MidPageCTA";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
