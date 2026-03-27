@@ -22,21 +22,25 @@ const CTASection = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-6">
-            <Button 
-              size="lg" 
-              className="bg-primary hover:bg-navy-dark text-primary-foreground font-semibold px-8"
-            >
-              <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
-              (206) 900-3015
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline"
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold px-8"
-            >
-              <Calendar className="w-5 h-5 mr-2" />
-              Schedule a 20-Minute Consultation
-            </Button>
+            <a href="tel:2069003015">
+              <Button 
+                size="lg" 
+                className="bg-primary hover:bg-navy-dark text-primary-foreground font-semibold px-8"
+              >
+                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
+                (206) 900-3015
+              </Button>
+            </a>
+            <a href="mailto:david@realpropertyplanning.com">
+              <Button 
+                size="lg" 
+                variant="outline"
+                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold px-8"
+              >
+                <Calendar className="w-5 h-5 mr-2" />
+                Schedule a 20-Minute Consultation
+              </Button>
+            </a>
           </div>
 
           <p className="text-muted-foreground/70 text-sm mb-10 max-w-md mx-auto">
@@ -45,7 +49,9 @@ const CTASection = () => {
           
           <div className="flex items-center justify-center gap-2 text-muted-foreground">
             <img src={iconEmail3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0" />
-            <span>david@realpropertyplanning.com</span>
+            <a href="mailto:david@realpropertyplanning.com" className="hover:text-gold transition-colors">
+              david@realpropertyplanning.com
+            </a>
           </div>
         </div>
       </div>

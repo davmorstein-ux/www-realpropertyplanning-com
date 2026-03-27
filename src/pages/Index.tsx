@@ -1,5 +1,5 @@
 import GoldCheck3D from "@/components/GoldCheck3D";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
@@ -25,6 +25,7 @@ import ServiceNavTiles from "@/components/ServiceNavTiles";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 import WhatToExpect from "@/components/WhatToExpect";
 import LeadMagnetBlock from "@/components/LeadMagnetBlock";
+import HomepageLeadForm from "@/components/HomepageLeadForm";
 import AppraiserAdvantage from "@/components/AppraiserAdvantage";
 import OutOfStateBlock from "@/components/OutOfStateBlock";
 import TrustAndResults from "@/components/TrustAndResults";
@@ -477,49 +478,8 @@ const Index = () => {
               </div>
             </div>
 
-            {/* Right — Contact form */}
-            <div className="bg-card rounded-2xl p-8 md:p-10 shadow-lg">
-              <h3 className="font-serif text-2xl text-foreground font-semibold mb-6">
-                Send a Message
-              </h3>
-              <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
-                <div>
-                  <label className="block text-[15px] font-medium text-foreground mb-1.5">Name</label>
-                  <input
-                    type="text"
-                    className="w-full rounded-lg border border-border bg-background px-4 py-3 text-foreground text-[15px] placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-gold/30 focus:border-gold/50 transition"
-                    placeholder="Your name"
-                  />
-                </div>
-                <div>
-                  <label className="block text-[15px] font-medium text-foreground mb-1.5">Email</label>
-                  <input
-                    type="email"
-                    className="w-full rounded-lg border border-border bg-background px-4 py-3 text-foreground text-[15px] placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-gold/30 focus:border-gold/50 transition"
-                    placeholder="name@example.com"
-                  />
-                </div>
-                <div>
-                  <label className="block text-[15px] font-medium text-foreground mb-1.5">Phone</label>
-                  <input
-                    type="tel"
-                    className="w-full rounded-lg border border-border bg-background px-4 py-3 text-foreground text-[15px] placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-gold/30 focus:border-gold/50 transition"
-                    placeholder="(555) 123-4567"
-                  />
-                </div>
-                <div>
-                  <label className="block text-[15px] font-medium text-foreground mb-1.5">Message</label>
-                  <textarea
-                    rows={4}
-                    className="w-full rounded-lg border border-border bg-background px-4 py-3 text-foreground text-[15px] placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-gold/30 focus:border-gold/50 transition resize-none"
-                    placeholder="Tell us about your situation..."
-                  />
-                </div>
- <Button variant="gold" className="w-full hover:-light py-3 h-auto rounded-lg text-base">
-                  Send a Message
-                </Button>
-              </form>
-            </div>
+            {/* Right — Lead capture form */}
+            <HomepageLeadForm />
           </div>
         </div>
       </section>
