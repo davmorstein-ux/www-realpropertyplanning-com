@@ -880,6 +880,14 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
       "An inherited property on Bainbridge where out-of-state heirs need local management",
       "A divorce-related sale where both parties want an objective, island-knowledgeable broker",
     ],
+    localClientTypes: [
+      "Executors managing estate property on Bainbridge Island's premium, limited-inventory market",
+      "Families coordinating senior transitions from island homes to mainland care communities",
+      "Attorneys handling probate or divorce cases involving Bainbridge property where island premiums and ferry logistics affect outcomes",
+      "Trustees responsible for trust-owned island homes where waterfront access and community character drive value",
+      "Out-of-state heirs who need local island coordination for an inherited Bainbridge property",
+      "Financial advisors needing Bainbridge Island property valuations for estate planning in a unique island market",
+    ],
   },
   "port-orchard": {
     tone: "waterfront",
