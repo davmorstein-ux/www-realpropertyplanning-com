@@ -7,6 +7,7 @@ import { articleSchema } from "@/lib/schema";
 import TrustStrip from "@/components/TrustStrip";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
+import MidPageCTA from "@/components/MidPageCTA";
 import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -218,7 +219,36 @@ const WhyValuationMatters = () => {
         </div>
       </section>
 
+      <MidPageCTA
+        heading="Need Help Pricing an Estate or Inherited Property?"
+        body="David provides valuation-informed pricing strategy grounded in over 20 years of dual broker and appraiser experience."
+        buttonText="Discuss a Property"
+        microcopy="No pressure. Just honest, market-grounded guidance."
+      />
+
       <PageFAQ faqs={faqs} heading="Valuation & Pricing FAQs" />
+
+      {/* Related Resources */}
+      <section className="py-12 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <p className="text-sm font-semibold text-muted-foreground mb-3">Related Resources</p>
+            <div className="flex flex-wrap gap-3">
+              <Link to="/probate-estate-sales" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Probate & Estate Sales</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/executors" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Executors</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/for-attorneys" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Attorneys</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/how-the-process-works" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">How the Process Works</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/senior-transitions" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Senior Transitions</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/faq" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">All FAQs</Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <RelatedServices currentPath="/why-valuation-matters" />
 
