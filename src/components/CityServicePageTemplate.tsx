@@ -192,15 +192,15 @@ const CityServicePageTemplate = ({ city, service }: CityServicePageTemplateProps
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
-              {getToneCTAHeading(city.name, service.shortName, tone)}
+              {ctaHeading}
             </h2>
             <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
-              {getToneCTABody(city.name, tone)}
+              {ctaBody}
             </p>
             <div className="flex justify-center">
               <Link to="/contact">
                 <Button variant="gold" size="lg">
-                  Schedule a Consultation
+                  {ctaButton}
                 </Button>
               </Link>
             </div>
