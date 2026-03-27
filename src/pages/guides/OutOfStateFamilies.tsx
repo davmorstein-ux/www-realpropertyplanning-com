@@ -118,6 +118,20 @@ const OutOfStateFamilies = () => (
       </div>
     </section>
 
+    {/* Proof callout */}
+    <section className="py-10 bg-background">
+      <div className="container px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto">
+          <ProofCallout
+            quote="David guided our family through a very difficult time with professionalism and genuine compassion. His valuation perspective and market knowledge were incredibly helpful."
+            attribution="Estate Attorney, Seattle"
+            context="Out-of-state estate coordination"
+            variant="accent"
+          />
+        </div>
+      </div>
+    </section>
+
     <MidPageCTA
       heading="Managing a Property From Out of State?"
       body="David provides hands-on local coordination so you can manage the sale from wherever you are — with confidence and clear communication."
