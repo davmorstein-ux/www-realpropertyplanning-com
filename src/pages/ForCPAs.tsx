@@ -123,7 +123,7 @@ const ForCPAs = () => {
               Real Property Planning supports CPAs and their clients when important financial decisions involve inherited property, estate settlement, trust administration, probate matters, downsizing, or the sale of real estate during major life transitions.
             </p>
             <p className="text-lg text-primary-foreground/70 leading-relaxed mb-[30px]">
-              David Stein brings more than 20 years of experience as a Washington real estate broker and state certified residential appraiser, helping clients and their advisors navigate property decisions with a practical, valuation-informed approach throughout King, Snohomish, Pierce, and Kitsap Counties.
+              David Stein brings more than 20 years of experience as a Washington real estate broker and state certified residential appraiser, helping clients and their advisors navigate property decisions with a practical, valuation-informed approach throughout Washington State.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Link to="/contact">

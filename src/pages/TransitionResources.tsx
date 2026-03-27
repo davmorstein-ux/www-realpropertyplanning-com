@@ -393,7 +393,7 @@ const TransitionResources = () => {
               appraiser, David Stein brings the market knowledge, valuation
               insight, and professional sensitivity that these situations
               require. Real Property Planning serves families and professionals
-              across King, Snohomish, Pierce, and Kitsap Counties.
+              throughout Washington State.
             </p>
           </div>
         </div>

@@ -65,7 +65,7 @@ const HowWeWork = () => {
               How David Stein Works With Attorneys, Executors, Trustees, and Families
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed">
-              Important property transitions often involve more than a standard home sale. Probate, trust administration, inherited real estate, and estate-related property decisions can require coordination among attorneys, fiduciaries, executors, trustees, personal representatives, heirs, and family members. David Stein works as a real estate and valuation resource to help bring structure, market clarity, and experienced guidance to the real-property side of these matters throughout King, Snohomish, Pierce, and Kitsap Counties.
+              Important property transitions often involve more than a standard home sale. Probate, trust administration, inherited real estate, and estate-related property decisions can require coordination among attorneys, fiduciaries, executors, trustees, personal representatives, heirs, and family members. Important property transitions often involve more than a standard home sale. Probate, trust administration, inherited real estate, and estate-related property decisions can require coordination among attorneys, fiduciaries, executors, trustees, personal representatives, heirs, and family members. David Stein works as a real estate and valuation resource to help bring structure, market clarity, and experienced guidance to the real-property side of these matters throughout Washington State.
             </p>
           </div>
         </div>
@@ -97,7 +97,7 @@ const HowWeWork = () => {
                 Discuss a Property Transition With David Stein
               </h2>
               <p className="text-muted-foreground leading-relaxed text-base md:text-lg max-w-3xl mx-auto mb-8">
-                If you are an attorney, executor, trustee, fiduciary, or family member navigating probate property, inherited real estate, or trust-owned property in King, Snohomish, Pierce, or Kitsap County, David Stein provides experienced real estate guidance grounded in market knowledge, valuation insight, and a practical understanding of complex property transitions.
+                If you are an attorney, executor, trustee, fiduciary, or family member navigating probate property, inherited real estate, or trust-owned property anywhere in Washington State, David Stein provides experienced real estate guidance grounded in market knowledge, valuation insight, and a practical understanding of complex property transitions.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
                 <Link to="/contact">

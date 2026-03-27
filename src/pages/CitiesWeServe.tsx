@@ -71,7 +71,7 @@ const CitiesWeServe = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Cities We Serve for Probate and Inherited Property Guidance | David Stein"
-        description="David Stein serves cities across King, Snohomish, Pierce, and Kitsap Counties for probate real estate, inherited property, trust-owned homes, and estate-related sales throughout Washington State."
+        description="David Stein serves cities throughout Washington State for probate real estate, inherited property, trust-owned homes, and estate-related sales, with especially strong experience in Western Washington and the Puget Sound region."
       />
       <Header />
 
@@ -83,7 +83,7 @@ const CitiesWeServe = () => {
               Local Cities and Communities
             </p>
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-[22px]">
-              Cities We Serve Across King, Snohomish, Pierce, and Kitsap Counties
+              Cities We Serve Throughout Washington State
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-5">
               David Stein helps clients and referring professionals navigate probate property, inherited homes, trust-owned real estate, and estate-related property transitions across a wide range of communities throughout Washington State. His work combines over 20 years of real estate experience with Washington state certified appraisal expertise to help clients make more informed decisions about value, preparation, timing, and sale strategy.
