@@ -3212,6 +3212,499 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
       whyLocal: "Trust property sales in Burien require fiduciary guidance accounting for dramatic micro-market differences. A trustee who applies citywide averages to a Three Tree Point property creates pricing that won't withstand scrutiny. David's Burien experience provides the micro-neighborhood analysis fiduciary situations demand.",
     },
   },
+
+  // ═══════════════════════════════════════════════════════════════════
+  // WAVE 8 — Bremerton (military), Renton (urban), Enumclaw (smalltown)
+  // ═══════════════════════════════════════════════════════════════════
+
+  // ── BREMERTON ───────────────────────────────────────────────────
+  // Identity: Naval city revitalization, Manette character, ferry connection,
+  // Shipyard influence, diverse housing from waterfront condos to established ramblers
+  bremerton: {
+    "probate-estate-sales": {
+      intro: "Bremerton's real estate market is shaped by the city's ongoing revitalization and the Puget Sound Naval Shipyard's influence on buyer demographics. Estate and probate properties range from historic Manette homes to downtown waterfront condos to established ramblers in outlying neighborhoods — each carrying different value dynamics. Real Property Planning provides the Kitsap-specific guidance that Bremerton executors, attorneys, and families need when the city's uneven transformation makes accurate pricing essential.",
+      scenarios: [
+        "A family estate in Manette where the neighborhood's growing appeal and ferry proximity create value that older comparables may significantly understate",
+        "An inherited property near the Naval Shipyard where military buyer demographics and VA loan considerations affect marketing strategy and pricing",
+        "A probate property in downtown Bremerton where the waterfront revitalization has transformed buyer expectations and comparable selection",
+        "Multiple heirs — some on the Kitsap side, some in Seattle — who need objective valuation of a Bremerton property in a market that's changing rapidly",
+        "An estate home in an outlying Bremerton neighborhood where the revitalization hasn't arrived yet and pricing reflects different market conditions than downtown",
+      ],
+      howWeHelp: [
+        "Neighborhood-level valuation distinguishing Bremerton's revitalizing downtown, Manette, Naval Avenue, and outlying-area pricing dynamics",
+        "Assessment of how the Shipyard's influence, ferry access, and revitalization progress affect value in each specific neighborhood",
+        "Coordination with probate attorneys on documentation, timeline management, and Kitsap County procedures",
+        "Property preparation strategy calibrated to the specific Bremerton submarket and its buyer expectations",
+        "Clear communication with heirs and professionals who may be split between Kitsap and King County",
+        "Full-service transaction management from initial assessment through closing",
+      ],
+      whyLocal: "Bremerton's market is uniquely complicated by the uneven pace of revitalization — waterfront and Manette properties operate in a fundamentally different market than homes in outlying neighborhoods. Automated tools that average across Bremerton produce estimates that don't reflect any specific neighborhood accurately. David's Kitsap experience and appraisal credentials provide the on-site, neighborhood-specific analysis that estate situations in a transforming city require.",
+    },
+    "senior-transitions": {
+      intro: "Many Bremerton seniors have deep roots in the community — connected to the Naval Shipyard, the ferry system, or the city's long history as a working waterfront town. When it's time to transition from a longtime Bremerton home, the sale involves both the practical challenge of pricing in a market that's transforming unevenly and the personal weight of leaving a community with strong identity. Real Property Planning helps Bremerton families navigate this process with honest pricing and patient coordination.",
+      scenarios: [
+        "A retired Shipyard worker's longtime home in an established Bremerton neighborhood where the property needs honest assessment of how condition and location affect value in today's evolving market",
+        "An adult child on the Seattle side coordinating a parent's move from a Bremerton home to a Kitsap senior living community while managing the ferry-connected sale remotely",
+        "A senior couple in Manette whose home has benefited from the neighborhood's growing appeal but needs preparation to meet updated buyer expectations",
+        "A family balancing a parent's health needs with the complexity of selling a Bremerton home during a period of significant neighborhood-level value shifts",
+        "A senior relocating from Bremerton to be closer to family on the east side of the Sound, needing comprehensive local sale management",
+      ],
+      howWeHelp: [
+        "Condition-based valuation accounting for how Bremerton's revitalization affects different neighborhoods at different rates",
+        "Strategic preparation calibrated to the specific Bremerton submarket — what matters for a Manette buyer differs from an outlying-area buyer",
+        "Sale timeline coordination aligned with the move to senior living or a family member's home",
+        "Patient communication with seniors and adult children, especially when the ferry creates geographic separation",
+        "Vendor coordination for cleanout, repairs, and presentation appropriate for the neighborhood's market",
+        "Full-service management from first consultation through closing",
+      ],
+      whyLocal: "Bremerton seniors may own homes in neighborhoods where revitalization has driven values up — or in areas where the market remains more traditional. The gap between general Bremerton headlines and specific neighborhood realities requires on-site, condition-based analysis. David's Kitsap experience helps families understand where their specific property stands in a city that's changing at different speeds.",
+    },
+    "executor-support": {
+      intro: "Executors managing estate property in Bremerton face a Kitsap County market where the city's revitalization creates neighborhood-level value differences that didn't exist a decade ago. Whether the estate property is a Manette bungalow, a downtown waterfront condo, or an established rambler in the outlying areas, executors need locally grounded guidance. Real Property Planning provides the Bremerton-specific expertise and reliable communication that executors need alongside their legal responsibilities.",
+      scenarios: [
+        "A newly appointed executor managing a Bremerton estate property while living on the Seattle side of the Sound, unfamiliar with Kitsap's market dynamics",
+        "An estate property in Manette where the neighborhood's transformation has significantly changed the property's value since the last assessment",
+        "Co-executors who disagree on value because one follows Bremerton's revitalization headlines while the other remembers the neighborhood's previous condition",
+        "An estate home that has been vacant and needs assessment of whether it's in a part of Bremerton where revitalization supports investment in preparation",
+        "An executor coordinating with multiple professionals on a Bremerton property where the military-influenced buyer pool creates specific marketing considerations",
+      ],
+      howWeHelp: [
+        "Property-specific assessment accounting for Bremerton's neighborhood-level revitalization differences",
+        "Defensible pricing documentation suitable for beneficiary review and Kitsap County court records",
+        "Coordination of cleanout, preparation, and presentation calibrated to the property's submarket",
+        "Regular communication for executors managing from across the Sound",
+        "Guidance on how Bremerton's military buyer demographics affect marketing and offer expectations",
+        "End-to-end transaction management through closing",
+      ],
+      whyLocal: "Bremerton executors face a market where the city's transformation makes comparable selection unusually challenging. Recent sales in revitalizing areas may not apply to outlying neighborhoods, and vice versa. David's Kitsap experience and appraisal credentials provide the defensible, neighborhood-specific analysis that Bremerton estate situations require.",
+    },
+    "downsizing-services": {
+      intro: "Downsizing from a longtime Bremerton home often means leaving a community deeply connected to the Naval Shipyard, the ferry system, and the city's working-waterfront identity. Real Property Planning helps Bremerton homeowners manage the sale with clear pricing that accounts for the city's uneven revitalization and coordination that respects the personal significance of the transition.",
+      scenarios: [
+        "A retired Shipyard couple whose Bremerton home is larger than they need, with maintenance demands that no longer fit their lifestyle",
+        "A senior in Manette whose neighborhood's growing appeal means the home has appreciated, but it needs preparation to meet today's buyer standards",
+        "A homeowner moving from Bremerton to the Seattle side to be closer to family and medical services",
+        "A retiree transitioning from a Bremerton home to a smaller property or senior community on the peninsula",
+      ],
+      howWeHelp: [
+        "Honest valuation accounting for the specific Bremerton neighborhood's position in the city's revitalization timeline",
+        "Preparation guidance calibrated to what delivers return at the property's price point and location",
+        "Timeline coordination aligning the sale with the move to a new residence",
+        "Cleanout and vendor coordination so the homeowner can focus on the transition",
+        "Patient communication throughout a personally significant change",
+      ],
+      whyLocal: "Downsizing in Bremerton requires understanding whether the specific property is in a revitalizing area or a more traditional market — because preparation strategy, buyer expectations, and realistic pricing differ significantly. David's Kitsap experience helps downsizing clients navigate a city where one-size-fits-all market guidance doesn't apply.",
+    },
+    "attorney-fiduciary-support": {
+      intro: "Attorneys and fiduciaries handling matters involving Bremerton property need a real estate professional who understands the city's revitalization dynamics, military buyer demographics, and neighborhood-level value variation. Real Property Planning serves as a reliable resource for Kitsap County legal professionals with Bremerton property matters where local market knowledge directly affects legal and fiduciary outcomes.",
+      scenarios: [
+        "A probate attorney managing an estate with a Manette property where the neighborhood's rapid appreciation needs current, defensible documentation",
+        "A family law attorney needing neutral pricing for a Bremerton home during divorce proceedings where the revitalization creates value disagreements",
+        "An elder law attorney coordinating the sale of a client's Bremerton home during a transition to care on the peninsula",
+        "A trustee needing fiduciary-grade guidance on a trust-owned property where Bremerton's uneven transformation affects pricing",
+        "An estate planning attorney needing current insight on a Bremerton property where military buyer demographics and Shipyard proximity affect marketability",
+      ],
+      howWeHelp: [
+        "Defensible property assessments grounded in on-site inspection and Bremerton-specific neighborhood analysis",
+        "Clear documentation suitable for court proceedings, fiduciary records, and beneficiary communication",
+        "Responsive communication with attorneys and fiduciaries throughout the engagement",
+        "Experience with Kitsap County procedures and estate-related timelines",
+        "Understanding of how military buyer demographics and VA loan prevalence affect Bremerton transaction dynamics",
+        "Objective guidance grounded in appraisal methodology appropriate for a market in transformation",
+      ],
+      whyLocal: "Legal professionals handling Bremerton matters need a partner who understands both the revitalization dynamics and the military-influenced buyer pool. David's dual credentials and Kitsap experience provide the objective foundation that Bremerton legal proceedings and fiduciary situations require in a market where neighborhood-level conditions change faster than citywide statistics reflect.",
+    },
+    "valuation-guidance": {
+      intro: "Accurate property valuation in Bremerton requires understanding the city's uneven revitalization — waterfront and Manette properties have appreciated on a different trajectory than established neighborhoods in the outlying areas. Real Property Planning provides the valuation-informed insight that Bremerton clients need for estate settlements, trust administration, and property decisions in a market where transformation creates pricing complexity.",
+      scenarios: [
+        "An executor needing valuation of a Manette estate property where the neighborhood's rapid transformation makes recent comparables essential",
+        "Divorcing spouses who disagree on their Bremerton home's value because one cites revitalization-driven appreciation while the other argues the specific neighborhood hasn't benefited",
+        "A trustee needing documented valuation for a trust-owned property near the Shipyard where military buyer demographics affect marketability",
+        "Heirs questioning an automated estimate for a Bremerton home that doesn't distinguish between revitalizing and stable neighborhoods",
+      ],
+      howWeHelp: [
+        "On-site assessment accounting for Bremerton's neighborhood-level revitalization differences and property-specific characteristics",
+        "Condition-based analysis recognizing how the city's transformation affects value differently across submarkets",
+        "Clear valuation documentation suitable for estate settlement, legal proceedings, or fiduciary review",
+        "Objective guidance grounded in certified appraisal methodology and Kitsap County market knowledge",
+      ],
+      whyLocal: "Bremerton's valuation landscape is complicated by the city's uneven revitalization — automated tools averaging across the city produce estimates that may significantly over- or understate value depending on the specific neighborhood. David's on-site assessment and appraisal credentials capture the revitalization-driven differences that make Bremerton's neighborhoods so varied.",
+    },
+    "preparing-home-for-sale": {
+      intro: "Preparing a Bremerton home for sale requires understanding where the property falls in the city's revitalization landscape. A Manette bungalow near the ferry warrants different preparation than an established rambler in an outlying neighborhood. Real Property Planning helps Bremerton sellers calibrate preparation to what their specific submarket rewards.",
+      scenarios: [
+        "A Manette property where the neighborhood's growing appeal justifies preparation investment that wouldn't make sense in a less active submarket",
+        "A downtown-adjacent home where waterfront revitalization has changed buyer expectations and strategic updates can capture the area's momentum",
+        "An estate property in an outlying Bremerton neighborhood where preparation budget must be calibrated to a more traditional price point",
+        "A home near the Shipyard where military buyer expectations and VA loan requirements influence which preparations matter most",
+      ],
+      howWeHelp: [
+        "Property-specific preparation assessment based on where the home falls in Bremerton's revitalization landscape",
+        "Clear guidance on which improvements drive return versus which exceed what the specific neighborhood supports",
+        "Vendor coordination for cleanout, repairs, staging, and presentation",
+        "Timeline management aligning preparation with optimal listing conditions for the Bremerton submarket",
+      ],
+      whyLocal: "Preparation strategy in Bremerton depends heavily on whether the property is in a revitalizing area or a more traditional neighborhood. Over-preparing for an outlying location wastes money; under-preparing a Manette property misses the neighborhood's growing potential. David's Kitsap experience helps sellers calibrate correctly.",
+    },
+    "divorce-related-home-sales": {
+      intro: "Divorce-related property sales in Bremerton are complicated by the city's uneven revitalization — one spouse may argue the home has benefited from Bremerton's transformation while the other maintains the specific neighborhood hasn't changed. Real Property Planning provides the objective, neighborhood-specific analysis that Bremerton divorce situations require when the city's internal diversity creates value disagreements.",
+      scenarios: [
+        "A divorcing couple with a Manette home where one spouse cites the neighborhood's appreciation while the other argues comparable sales from other Bremerton areas suggest lower value",
+        "A family law attorney needing neutral pricing for a Bremerton property where the Shipyard's influence on buyer demographics affects marketability assessments",
+        "A mediated divorce involving a Bremerton home where one party wants to retain the property and needs buyout valuation reflecting the actual neighborhood trend",
+        "A contentious divorce where the property's position relative to the revitalization creates genuine disagreement about current and trajectory value",
+      ],
+      howWeHelp: [
+        "Objective, neighborhood-specific pricing using comparable sales from the property's actual Bremerton submarket — not citywide averages",
+        "Clear documentation suitable for court proceedings, mediation, and attorney review",
+        "Neutral communication with both parties and their attorneys throughout the process",
+        "Discretion and professionalism throughout a sensitive transaction in a close-knit community",
+      ],
+      whyLocal: "Divorce negotiations involving Bremerton property are complicated because the city's revitalization creates genuine disagreement — both parties may be right about 'Bremerton values' while referencing different neighborhoods. David's Kitsap experience provides the neutral, neighborhood-specific analysis needed when the city's transformation makes one-number answers unreliable.",
+    },
+    "trust-estate-property-sales": {
+      intro: "Trust-owned property in Bremerton may be in a revitalizing area like Manette or downtown, near the Naval Shipyard, or in an established outlying neighborhood — and each location creates different fiduciary considerations for trustees managing trust assets. Real Property Planning provides trustees with the Kitsap County expertise that Bremerton's transforming market demands.",
+      scenarios: [
+        "A successor trustee managing a trust-owned Manette home where the neighborhood's appreciation has significantly changed the property's value since the trust was established",
+        "A corporate trustee needing local expertise for a Bremerton property where military buyer demographics and VA loan prevalence affect pricing and marketing strategy",
+        "A trustee preparing to sell a trust-owned home in an outlying Bremerton neighborhood where the revitalization hasn't reached, requiring realistic pricing rather than optimistic projections",
+        "A beneficiary questioning the trustee's pricing because general Bremerton appreciation headlines don't match the specific neighborhood's performance",
+      ],
+      howWeHelp: [
+        "Fiduciary-grade assessment accounting for the property's specific position in Bremerton's revitalization landscape",
+        "Clear documentation suitable for trust records, beneficiary communication, and legal review",
+        "Strategic preparation and positioning appropriate for the property's actual neighborhood and buyer pool",
+        "Coordination with trust attorneys and financial advisors throughout the sale process",
+      ],
+      whyLocal: "Trust property sales in Bremerton require fiduciary guidance that accounts for the city's uneven transformation. A trustee who applies revitalization-driven appreciation to an outlying-area property creates pricing that may not withstand beneficiary scrutiny — and one who ignores Manette's growth undersells the trust asset. David's Kitsap experience provides the neighborhood-specific analysis fiduciary situations demand.",
+    },
+  },
+
+  // ── RENTON ──────────────────────────────────────────────────────
+  // Identity: South King hub, Lake Washington waterfront, Kennydale,
+  // Highlands transformation, Benson Hill, major employer proximity, rapid growth
+  renton: {
+    "probate-estate-sales": {
+      intro: "Renton's rapid transformation has created a market where neighborhood-level pricing differences are dramatic and still evolving. Estate and probate properties range from Kennydale lakefront homes to Highlands ramblers undergoing neighborhood transformation to established Benson Hill split-levels — each requiring fundamentally different pricing approaches. Real Property Planning provides the South King County expertise that Renton executors, attorneys, and families need when the city's growth trajectory makes yesterday's comparables unreliable.",
+      scenarios: [
+        "A family estate in Kennydale where Lake Washington proximity creates significant value, but the home's condition relative to updated neighbors affects pricing",
+        "An inherited property in the Highlands where the neighborhood's rapid development changes how older homes are perceived and valued by today's buyers",
+        "A probate property near the Landing where commercial adjacency and newer development have transformed the area's buyer profile",
+        "Multiple heirs who need objective valuation of a Benson Hill property in a neighborhood where values have appreciated but unevenly",
+        "An estate home near downtown Renton where redevelopment activity creates both opportunity complexity and comparable-selection challenges",
+      ],
+      howWeHelp: [
+        "Neighborhood-level valuation distinguishing Kennydale lakefront, Highlands, Benson Hill, Landing-area, and downtown pricing dynamics in Renton",
+        "Assessment of how Renton's growth trajectory and development activity affect the specific property's competitive position",
+        "Coordination with probate attorneys on documentation, timeline management, and King County procedures",
+        "Property preparation strategy calibrated to Renton's submarket-specific buyer expectations",
+        "Clear communication with multiple heirs and professionals across locations",
+        "Full-service transaction management from initial assessment through closing",
+      ],
+      whyLocal: "Renton's market moves faster than most cities in South King County — new development, employer-driven demand, and neighborhood-level transformation mean that comparables from even six months ago may not reflect current conditions. David's appraisal credentials and Renton experience provide the current, property-specific analysis that estate situations demand in a rapidly evolving market.",
+    },
+    "senior-transitions": {
+      intro: "Many Renton seniors have lived through the city's transformation — from a quieter South King County community to one of the region's most dynamic markets. When it's time to transition from a longtime Renton home, the sale involves significant financial stakes in a market where values have appreciated substantially but buyer expectations have also changed. Real Property Planning helps Renton families navigate this process with honest, current pricing and patient coordination.",
+      scenarios: [
+        "A senior in Kennydale whose lakefront-area home has appreciated dramatically but needs assessment of how condition affects value against updated neighbors",
+        "An adult child coordinating a parent's move from a Highlands home to a senior living community while the neighborhood undergoes rapid development",
+        "A longtime homeowner in Benson Hill whose established neighborhood offers value but the home needs strategic preparation for today's buyer expectations",
+        "A family balancing a parent's care needs with the financial opportunity of selling a Renton home in an appreciating market",
+        "A senior relocating from Renton to be with family elsewhere, needing comprehensive management of a sale in a competitive market",
+      ],
+      howWeHelp: [
+        "Condition-based valuation accounting for how Renton's transformation has changed buyer expectations neighborhood by neighborhood",
+        "Strategic preparation calibrated to what Renton's specific buyer demographics expect at each price point",
+        "Sale timeline coordination aligned with the transition to senior living or a family home",
+        "Patient communication with seniors and adult children navigating both the emotional and financial dimensions",
+        "Vendor coordination for cleanout, repairs, and presentation appropriate for the submarket",
+        "Full-service management so the family can focus on the transition",
+      ],
+      whyLocal: "Renton seniors may own homes that have appreciated significantly — but the home's current condition may not match what today's buyers expect in a market driven by newer construction and tech-industry demand. David's appraisal background helps families understand the realistic gap between their home's emotional value and its market position, and which preparation investments close that gap effectively.",
+    },
+    "executor-support": {
+      intro: "Executors managing estate property in Renton face one of South King County's most dynamic markets — where neighborhood-level transformation, employer-driven demand, and rapid development create pricing complexity that more stable markets don't present. Real Property Planning provides the current, locally grounded guidance that Renton executors need to price accurately and manage the sale alongside fiduciary responsibilities.",
+      scenarios: [
+        "A newly appointed executor managing a Kennydale estate property where the lakefront premium and neighborhood expectations require on-site assessment",
+        "An estate property in the Highlands where surrounding development has changed the competitive landscape for an older home",
+        "Co-executors disagreeing on value because Renton's rapid appreciation makes older assessments and current market conditions difficult to reconcile",
+        "An estate home in Benson Hill that needs assessment, cleanout, and preparation to compete in a market with high buyer expectations",
+        "An executor coordinating from out of state on a Renton property where the city's pace of change requires locally current guidance",
+      ],
+      howWeHelp: [
+        "Property-specific assessment accounting for Renton's neighborhood-level transformation and development dynamics",
+        "Defensible pricing documentation using current data and appraisal methodology suitable for beneficiary review and court records",
+        "Coordination of property cleanout, preparation, and presentation calibrated to Renton's buyer expectations",
+        "Regular communication for executors managing from out of area in a market that moves quickly",
+        "Guidance on how Renton's development activity and employer presence affect sale timing and strategy",
+        "End-to-end transaction management through closing",
+      ],
+      whyLocal: "Renton executors face a market where the pace of change makes pricing especially consequential — overprice and the property sits while the market may shift; underprice and beneficiaries question the executor's judgment in a city where appreciation has been significant. David's current Renton experience and appraisal credentials provide the defensible analysis executors need.",
+    },
+    "downsizing-services": {
+      intro: "Downsizing from a longtime Renton home means selling in one of South King County's most dynamic markets — where significant appreciation creates financial opportunity but updated buyer expectations require strategic preparation. Real Property Planning helps Renton homeowners manage the sale with current pricing and practical coordination.",
+      scenarios: [
+        "A couple in Kennydale whose lakefront-area home is larger than they need, with substantial equity built over decades of appreciation",
+        "A Highlands homeowner downsizing as new development transforms the neighborhood, creating both opportunity and competitive pressure",
+        "A Benson Hill retiree whose established home appeals to families but needs preparation to show alongside newer inventory",
+        "A senior transitioning from Renton to be closer to family, needing comprehensive management of a sale in a competitive market",
+      ],
+      howWeHelp: [
+        "Current valuation accounting for Renton's rapid appreciation and how condition affects value at each price tier",
+        "Preparation guidance calibrated to what Renton's buyer demographics expect at the specific price point",
+        "Timeline coordination aligning the sale with the move to a new residence",
+        "Cleanout and vendor coordination for homeowners managing a significant transition",
+        "Patient communication throughout the process",
+      ],
+      whyLocal: "Downsizing in Renton's dynamic market requires understanding how the city's transformation affects the specific property. David's experience helps clients capture the appreciation their home has earned while preparing strategically for today's buyer expectations.",
+    },
+    "attorney-fiduciary-support": {
+      intro: "Attorneys and fiduciaries handling matters involving Renton property need a real estate professional who understands the city's rapid transformation, neighborhood-level dynamics, and how employer-driven demand affects pricing. Real Property Planning serves as a reliable resource for South King County legal professionals with Renton property matters where current, defensible market analysis directly affects legal outcomes.",
+      scenarios: [
+        "A probate attorney managing an estate with a Kennydale property where lakefront proximity and the neighborhood's premium need current documentation",
+        "A family law attorney needing neutral pricing for a Renton home during divorce proceedings where rapid appreciation creates value disagreements",
+        "An elder law attorney coordinating the sale of a client's Renton home during a transition to care",
+        "A trustee needing fiduciary-grade guidance on a trust-owned Renton property in a neighborhood undergoing development transformation",
+        "An estate planning attorney needing current insight on Renton property value in a market where appreciation has been significant and uneven",
+      ],
+      howWeHelp: [
+        "Defensible property assessments grounded in current on-site inspection and Renton-specific comparable analysis",
+        "Clear documentation suitable for court proceedings, fiduciary records, and beneficiary communication",
+        "Responsive communication with attorneys and fiduciaries throughout the engagement",
+        "Experience with King County procedures and estate-related timelines",
+        "Understanding of how Renton's employer-driven demand and development activity affect transaction dynamics",
+        "Objective guidance grounded in appraisal methodology appropriate for a rapidly evolving market",
+      ],
+      whyLocal: "Legal professionals handling Renton matters need a partner who can provide current, defensible pricing in a market that moves faster than most. David's dual credentials and Renton experience provide the objective analysis that South King County legal proceedings require when yesterday's data may not reflect today's market.",
+    },
+    "valuation-guidance": {
+      intro: "Accurate property valuation in Renton requires current, neighborhood-specific analysis — Kennydale lakefront, Highlands development areas, Benson Hill established neighborhoods, and Landing-adjacent properties each follow different value trajectories. Real Property Planning provides the current-market insight Renton clients need when the city's pace of change makes timing and data currency essential.",
+      scenarios: [
+        "An executor needing valuation of a Kennydale estate property where lakefront proximity and recent neighborhood sales create significant value but require current analysis",
+        "Divorcing spouses who disagree on their Renton home's value because the city's rapid appreciation has outpaced one party's expectations",
+        "A trustee needing documented valuation for a trust-owned property in the Highlands where surrounding development changes the competitive landscape",
+        "Heirs questioning an automated estimate for a Renton home that may use dated comparables in a fast-moving market",
+      ],
+      howWeHelp: [
+        "Current on-site assessment accounting for Renton's neighborhood-level transformation and recent comparable sales",
+        "Condition-based analysis recognizing how deferred maintenance affects value in a market with high buyer expectations",
+        "Clear valuation documentation suitable for estate settlement, legal proceedings, or fiduciary review",
+        "Objective guidance grounded in certified appraisal methodology and current South King County market knowledge",
+      ],
+      whyLocal: "Renton's valuation landscape is complicated by the city's pace of change — automated tools using sales from even months ago may not reflect current conditions in the most dynamic neighborhoods. David's credentials and current Renton experience provide the timely, property-specific analysis that Renton situations demand.",
+    },
+    "preparing-home-for-sale": {
+      intro: "Preparing a Renton home for sale requires understanding how the city's transformation has raised buyer expectations — and how those expectations differ by neighborhood. A Kennydale home near the lake faces different preparation priorities than a Benson Hill rambler or a Highlands property competing with newer construction. Real Property Planning helps Renton sellers calibrate preparation to what their submarket rewards.",
+      scenarios: [
+        "A Kennydale home where the lakefront-area premium justifies investment in kitchen and bathroom updates to compete with updated neighbors",
+        "A Highlands property where surrounding new construction sets buyer expectations that the older home needs to address strategically",
+        "A Benson Hill rambler where practical updates — paint, flooring, curb appeal — can meaningfully improve buyer interest at the price point",
+        "An estate property near the Landing that needs cleanout and targeted preparation to capture the area's growing buyer demand",
+      ],
+      howWeHelp: [
+        "Property-specific preparation assessment based on the Renton submarket, price tier, and current buyer expectations",
+        "Clear guidance on which improvements drive return in Renton's competitive market versus which exceed the neighborhood ceiling",
+        "Vendor coordination for cleanout, repairs, staging, and presentation",
+        "Timeline management aligning preparation with optimal listing timing in a market that responds to presentation quality",
+      ],
+      whyLocal: "Preparation strategy in Renton depends on the neighborhood's position in the city's transformation. A Kennydale property warrants different investment than a Benson Hill home at a different price point. David's current Renton experience helps sellers calibrate preparation to their specific submarket's buyer expectations.",
+    },
+    "divorce-related-home-sales": {
+      intro: "Divorce-related property sales in Renton are complicated by the city's rapid appreciation — one spouse may cite recent sales showing significant gains while the other argues the home's condition doesn't support that level of value. Real Property Planning provides the objective, condition-based analysis that Renton divorce situations require when the city's transformation creates genuine disagreement about property worth.",
+      scenarios: [
+        "A divorcing couple whose Renton home has appreciated significantly, where one spouse wants to price based on the neighborhood's trajectory and the other on the home's current condition",
+        "A family law attorney needing neutral pricing where Renton's rapid market shifts make both parties' comparable selections defensible but contradictory",
+        "A mediated divorce where one party wants to retain the Renton home and needs buyout valuation that accounts for both appreciation and condition",
+        "A contentious divorce where the home's Kennydale or Highlands location creates premium-versus-condition disagreement",
+      ],
+      howWeHelp: [
+        "Objective, condition-based pricing using current comparable sales from the property's actual Renton submarket",
+        "Clear documentation suitable for court proceedings, mediation, and attorney review",
+        "Neutral communication with both parties and their attorneys",
+        "Discretion and professionalism throughout a sensitive transaction in a market where values carry significant weight",
+      ],
+      whyLocal: "Divorce negotiations involving Renton property are complicated by the city's rapid appreciation — both parties may be partially right, one citing the neighborhood's trajectory and the other the home's current state. David's condition-based, appraisal-grounded approach provides the neutral analysis needed when market momentum and property reality tell different stories.",
+    },
+    "trust-estate-property-sales": {
+      intro: "Trust-owned property in Renton may be a Kennydale lakefront home, a Highlands rambler in a developing area, or a Benson Hill established property — each requiring different fiduciary analysis in a market where values have shifted significantly. Real Property Planning provides trustees with the current South King County expertise that Renton's dynamic market demands.",
+      scenarios: [
+        "A successor trustee managing a trust-owned Kennydale home where the lakefront premium has appreciated substantially since the trust's last valuation",
+        "A corporate trustee needing current local expertise for a Renton property where neighborhood development has changed the competitive landscape",
+        "A trustee preparing to sell a trust-owned Benson Hill home where the fiduciary obligation requires understanding the property's position in a shifting market",
+        "A beneficiary questioning the trustee's pricing because Renton's rapid appreciation has created expectations that may or may not apply to the specific property",
+      ],
+      howWeHelp: [
+        "Fiduciary-grade assessment using current data and accounting for the property's specific Renton submarket dynamics",
+        "Clear documentation suitable for trust records, beneficiary communication, and legal review",
+        "Strategic preparation and positioning based on current buyer expectations in the property's neighborhood",
+        "Coordination with trust attorneys and financial advisors throughout the sale process",
+      ],
+      whyLocal: "Trust property sales in Renton require fiduciary guidance that accounts for the city's rapid and uneven transformation. A trustee using dated valuations or citywide averages in Renton's dynamic market creates pricing that won't withstand beneficiary scrutiny. David's current Renton experience and appraisal credentials provide the timely, property-specific analysis fiduciary situations demand.",
+    },
+  },
+
+  // ── ENUMCLAW ────────────────────────────────────────────────────
+  // Identity: Plateau community, Mount Rainier views, agricultural heritage,
+  // small-town character, rural-residential properties, distance from metro
+  enumclaw: {
+    "probate-estate-sales": {
+      intro: "Enumclaw's plateau location at the foot of Mount Rainier creates a market unlike anywhere else in King County — where small-town homes with mountain views, agricultural properties with acreage, and rural-residential lots with outbuildings all require specialized understanding. When probate or estate sales involve Enumclaw property, the community's unique characteristics and specific buyer demographics make locally grounded guidance essential. Real Property Planning provides the property-specific analysis that Enumclaw executors, attorneys, and families need.",
+      scenarios: [
+        "A family estate on acreage outside Enumclaw where outbuildings, pasture, and Rainier views create valuation complexity that automated tools can't handle",
+        "An inherited home in Enumclaw's walkable downtown where small-town character and community proximity appeal to a buyer demographic different from metro-area markets",
+        "A probate property with agricultural-heritage features — livestock facilities, irrigated pasture, shop buildings — that require experienced evaluation beyond standard residential analysis",
+        "Heirs living in the Seattle metro area who need objective valuation of an Enumclaw property in a market they don't understand from their urban perspective",
+        "An estate property on the plateau where the distance from employment centers and the community's specific buyer pool affect realistic pricing and timeline",
+      ],
+      howWeHelp: [
+        "Property-specific valuation accounting for Enumclaw's unique market — mountain views, acreage, agricultural features, and small-town location premiums",
+        "Assessment of how rural-residential characteristics — outbuildings, livestock facilities, irrigation, fencing — affect market value and buyer pool",
+        "Coordination with probate attorneys on documentation, timeline management, and King County procedures",
+        "Property preparation strategy appropriate for Enumclaw's specific buyer expectations and price points",
+        "Clear communication with heirs who may be unfamiliar with plateau market dynamics from their metro-area perspective",
+        "Full-service transaction management from initial assessment through closing",
+      ],
+      whyLocal: "Enumclaw's market operates on fundamentally different principles than metro-area markets — mountain views, acreage, and agricultural features are primary value drivers that automated tools either ignore or misvalue. David's experience with properties that blend residential and rural characteristics provides the on-site analysis that estate situations on the plateau require.",
+    },
+    "senior-transitions": {
+      intro: "Many Enumclaw seniors have deep roots in the plateau community — connected to the land, the agricultural heritage, and the small-town way of life. When it's time to transition from a longtime Enumclaw home, the sale often involves unique property characteristics and a market that operates differently from the metro area. Real Property Planning helps Enumclaw families navigate this process with practical guidance that respects both the property's complexity and the personal significance of the transition.",
+      scenarios: [
+        "A senior couple on acreage whose property includes outbuildings, gardens, and views that make the home unique but harder to value with standard tools",
+        "An adult child in the Seattle metro coordinating a parent's move from an Enumclaw plateau home to a senior community closer to medical services",
+        "A longtime homeowner in Enumclaw's downtown area whose walkable location and community connections have defined their daily life for decades",
+        "A family balancing a parent's care needs with the complexity of selling a rural-residential Enumclaw property with agricultural features",
+        "A senior relocating from the plateau to be closer to family, needing comprehensive management of a sale in a specialized market",
+      ],
+      howWeHelp: [
+        "Condition-based valuation accounting for Enumclaw's unique property characteristics — acreage, views, outbuildings, agricultural features",
+        "Strategic preparation guidance appropriate for the plateau market and its specific buyer expectations",
+        "Sale timeline coordination aligned with the move to a senior community or family residence, potentially in the metro area",
+        "Patient communication with seniors and adult children, especially when the metro-to-plateau distance complicates coordination",
+        "Vendor coordination for properties that may need rural-specific preparation beyond standard residential cleanout",
+        "Full-service management so the family can focus on the transition",
+      ],
+      whyLocal: "Enumclaw seniors often own properties with features — acreage, outbuildings, mountain views, agricultural improvements — that metro-focused brokers may not know how to evaluate or market. David's experience with the plateau's unique market helps families understand how these features affect realistic pricing and which buyers to target.",
+    },
+    "executor-support": {
+      intro: "Executors managing estate property in Enumclaw face a market that operates differently from metro-area communities — where acreage, mountain views, agricultural features, and small-town location create pricing dynamics that require plateau-specific understanding. Real Property Planning provides the property-specific expertise and reliable communication that Enumclaw executors need, especially when they're managing from the metro area.",
+      scenarios: [
+        "A newly appointed executor managing an Enumclaw property with acreage and outbuildings while living in the Seattle metro, unfamiliar with plateau market dynamics",
+        "An estate property with agricultural-heritage features — shop buildings, livestock facilities, irrigated pasture — that need expert assessment of how they affect value",
+        "Co-executors who disagree on value because one uses metro-area expectations while the other understands the plateau market's different dynamics",
+        "An estate home on the plateau that needs assessment of whether the acreage and views represent the primary value or the residential improvements do",
+        "An executor coordinating with an attorney on an Enumclaw property where the specialized market makes standard residential valuation approaches insufficient",
+      ],
+      howWeHelp: [
+        "Property-specific assessment accounting for Enumclaw's unique valuation factors — mountain views, acreage, agricultural features, and plateau-market buyer demographics",
+        "Clear guidance on whether the property's highest value is as a residential home, a rural-residential lifestyle property, or agricultural land with residential improvements",
+        "Defensible pricing documentation suitable for beneficiary review and court records",
+        "Coordination of property preparation appropriate for the plateau market and its specific buyer expectations",
+        "Regular communication for executors managing from the metro area",
+        "End-to-end transaction management in a market that requires specialized local knowledge",
+      ],
+      whyLocal: "Enumclaw executors — especially those from the metro area — face a market where standard residential valuation approaches may not apply. Properties with acreage, outbuildings, and mountain views require on-site assessment by someone who understands how these features affect value on the plateau. David's experience provides the defensible analysis executors need.",
+    },
+    "downsizing-services": {
+      intro: "Downsizing from a longtime Enumclaw home often means leaving a property with characteristics that don't exist in metro-area markets — acreage, mountain views, outbuildings, or agricultural features that have defined the homeowner's daily life. Real Property Planning helps Enumclaw homeowners manage the sale with pricing that accurately reflects these unique features and coordination appropriate for the plateau's specialized market.",
+      scenarios: [
+        "A couple on acreage whose children have moved to the metro area, leaving them maintaining a property with land and outbuildings that exceeds their current needs",
+        "A senior in Enumclaw's downtown moving to a smaller home or senior community closer to medical services and family",
+        "A retiree selling a plateau property with Rainier views and shop space that need specialized marketing to reach the right buyer",
+        "A family helping parents transition from a rural-residential Enumclaw home to a more manageable living situation",
+      ],
+      howWeHelp: [
+        "Honest valuation accounting for how acreage, views, outbuildings, and agricultural features affect value on the plateau",
+        "Preparation guidance appropriate for the plateau market's buyer expectations — different from metro-area standards",
+        "Timeline coordination aligning the sale with the move, potentially to a metro-area residence or senior community",
+        "Vendor coordination for properties that may need rural-specific preparation",
+        "Patient communication throughout a transition that often means leaving a way of life, not just a home",
+      ],
+      whyLocal: "Downsizing from an Enumclaw property often involves features that metro-area brokers rarely encounter. David's experience with plateau properties helps clients understand how acreage, views, and agricultural improvements affect realistic value and which buyers will appreciate what the property offers.",
+    },
+    "attorney-fiduciary-support": {
+      intro: "Attorneys and fiduciaries handling matters involving Enumclaw property need a real estate professional who understands the plateau's specialized market — where acreage, mountain views, and agricultural features create valuation complexity that standard residential analysis doesn't address. Real Property Planning serves as a reliable resource for legal professionals with Enumclaw property matters.",
+      scenarios: [
+        "A probate attorney managing an estate with an Enumclaw acreage property where outbuildings and agricultural features need defensible valuation",
+        "A family law attorney needing neutral pricing for an Enumclaw home where mountain views and acreage create value disagreements between spouses",
+        "An elder law attorney coordinating the sale of a client's plateau property during a transition to care in the metro area",
+        "A trustee needing fiduciary-grade guidance on a trust-owned Enumclaw property where rural-residential characteristics complicate standard valuation",
+        "An estate planning attorney needing current insight on an Enumclaw property where acreage, views, and the plateau's specific buyer demographics affect value",
+      ],
+      howWeHelp: [
+        "Defensible property assessments accounting for Enumclaw's unique characteristics — acreage, views, agricultural features, and plateau-market dynamics",
+        "Clear documentation suitable for court proceedings, fiduciary records, and beneficiary communication",
+        "Responsive communication with attorneys and fiduciaries, bridging the metro-to-plateau knowledge gap",
+        "Experience with how King County procedures apply to rural-residential and agricultural-heritage properties",
+        "Coordination of property preparation and sale logistics for specialized plateau properties",
+        "Objective guidance grounded in appraisal methodology adapted for the plateau's unique property types",
+      ],
+      whyLocal: "Legal professionals handling Enumclaw matters need a partner who understands that plateau properties don't follow metro-area valuation rules. David's dual credentials and experience with rural-residential properties provide the objective foundation that legal proceedings involving Enumclaw's unique market require.",
+    },
+    "valuation-guidance": {
+      intro: "Accurate property valuation in Enumclaw requires understanding the plateau's specialized market — where mountain views, acreage, agricultural features, and distance from employment centers create value patterns that automated tools and metro-focused analysis consistently miss. Real Property Planning provides the plateau-specific insight that Enumclaw clients need for estate settlements, trust administration, and informed decisions.",
+      scenarios: [
+        "An executor needing valuation of an Enumclaw estate property with acreage and Rainier views where the view and land premiums need on-site verification",
+        "Divorcing spouses who disagree on their Enumclaw home's value because metro-area expectations don't match plateau market realities",
+        "A trustee needing documented valuation for a trust-owned property with outbuildings and agricultural features that standard residential comparisons don't address",
+        "Heirs questioning an automated estimate for an Enumclaw home that doesn't account for the property's acreage, views, or rural-residential characteristics",
+      ],
+      howWeHelp: [
+        "On-site assessment capturing Enumclaw's unique value drivers — mountain views, acreage, outbuildings, agricultural improvements, and plateau-market positioning",
+        "Condition-based analysis recognizing how rural-residential features affect value differently than in metro markets",
+        "Clear documentation suitable for estate settlement, legal proceedings, or fiduciary review",
+        "Objective guidance grounded in certified appraisal methodology adapted for the plateau's property types",
+      ],
+      whyLocal: "Enumclaw's valuation landscape is fundamentally different from metro-area markets. Automated tools trained on suburban comparable patterns produce estimates that miss the acreage premiums, view values, and agricultural-feature contributions that define plateau property worth. David's experience with these property types provides the analysis Enumclaw situations require.",
+    },
+    "preparing-home-for-sale": {
+      intro: "Preparing an Enumclaw home for sale requires understanding the plateau market's specific buyer expectations — which are fundamentally different from metro-area standards. Buyers looking at Enumclaw properties often value views, land, outbuildings, and rural character over the kitchen-and-bathroom updates that drive metro-area sales. Real Property Planning helps Enumclaw sellers prepare strategically for their actual buyer pool.",
+      scenarios: [
+        "An acreage property where clearing, fencing repair, and outbuilding presentation matter more than interior cosmetic updates for the target buyer",
+        "A downtown Enumclaw home where walkability and community character are the selling points and practical updates enhance curb appeal",
+        "An estate property on the plateau where the Rainier views need to be properly showcased and the land presented at its best",
+        "A rural-residential property where the buyer pool values shop space and land features that need to be maintained and presented, not removed or hidden",
+      ],
+      howWeHelp: [
+        "Plateau-specific preparation assessment based on what Enumclaw buyers actually value — views, land, outbuildings, and rural character",
+        "Clear guidance on which improvements drive return in the plateau market versus which reflect metro-area assumptions that don't apply",
+        "Vendor coordination for properties that may need rural-specific preparation — clearing, fencing, outbuilding maintenance",
+        "Timeline management accounting for the plateau market's seasonal patterns and buyer activity cycles",
+      ],
+      whyLocal: "Preparation strategy in Enumclaw follows different rules than metro-area markets. Buyers drawn to the plateau value acreage presentation, view access, and functional outbuildings — not necessarily the same cosmetic updates that drive suburban sales. David's experience with plateau properties helps sellers invest in preparation that their actual buyer pool values.",
+    },
+    "divorce-related-home-sales": {
+      intro: "Divorce-related property sales in Enumclaw are complicated by the plateau's unique property characteristics — acreage, mountain views, outbuildings, and agricultural features create value that's difficult to establish through automated tools or metro-area comparable analysis. Real Property Planning provides the objective, property-specific analysis that Enumclaw divorce situations require.",
+      scenarios: [
+        "A divorcing couple with an Enumclaw acreage property where one spouse emphasizes the land and view value while the other argues the distance from employment depresses the home's worth",
+        "A family law attorney needing neutral pricing for a plateau property where outbuildings and agricultural features make standard residential comparisons unreliable",
+        "A mediated divorce involving an Enumclaw home where one party wants to retain the property and needs buyout valuation reflecting the plateau market's unique dynamics",
+        "A contentious divorce where the property's rural-residential character creates genuine disagreement about whether features like shop space and acreage add or complicate value",
+      ],
+      howWeHelp: [
+        "Objective, property-specific pricing accounting for the plateau's unique value drivers — views, acreage, outbuildings, and rural character",
+        "Clear documentation suitable for court proceedings, mediation, and attorney review",
+        "Neutral communication with both parties and their attorneys",
+        "Discretion and professionalism in a small community where privacy matters",
+      ],
+      whyLocal: "Divorce negotiations involving Enumclaw property are uniquely challenging because the plateau's value drivers — acreage, views, agricultural features — don't translate easily into standard residential valuation. Both parties may genuinely disagree about what these features are worth. David's experience with plateau properties provides the neutral analysis needed when standard approaches don't apply.",
+    },
+    "trust-estate-property-sales": {
+      intro: "Trust-owned property in Enumclaw may include acreage with mountain views, agricultural improvements, outbuildings, or downtown homes with small-town character — each creating different fiduciary considerations for trustees managing trust assets in a market unlike metro-area communities. Real Property Planning provides trustees with the plateau-specific expertise that Enumclaw's unique market demands.",
+      scenarios: [
+        "A successor trustee managing a trust-owned plateau property with acreage and Rainier views where the land and view premiums need on-site assessment",
+        "A corporate trustee needing local expertise for an Enumclaw property where agricultural-heritage features and rural-residential zoning create pricing complexity",
+        "A trustee preparing to sell a trust-owned downtown Enumclaw home where the small-town buyer demographic differs from what metro-area analysis suggests",
+        "A beneficiary questioning the trustee's pricing because automated estimates don't account for the property's acreage, views, or outbuilding value",
+      ],
+      howWeHelp: [
+        "Fiduciary-grade assessment capturing the property's plateau-specific characteristics — views, acreage, agricultural features, and rural-residential market position",
+        "Clear documentation suitable for trust records, beneficiary communication, and legal review",
+        "Strategic preparation and positioning appropriate for the plateau market's specific buyer pool",
+        "Coordination with trust attorneys and financial advisors who may be unfamiliar with Enumclaw's specialized market",
+      ],
+      whyLocal: "Trust property sales in Enumclaw require fiduciary guidance that accounts for the plateau's fundamentally different market dynamics. A trustee who applies metro-area valuation assumptions to an Enumclaw acreage property creates pricing that won't withstand beneficiary scrutiny. David's plateau experience and appraisal credentials provide the property-specific analysis fiduciary situations demand.",
+    },
+  },
 };
 export function getCityServiceOverride(
   citySlug: string,
