@@ -23,6 +23,10 @@ import naepcLogo from "@/assets/naepc-logo-2.png";
 import expRealtyLogo from "@/assets/exp-realty-logo.png";
 import ServiceNavTiles from "@/components/ServiceNavTiles";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+import WhatToExpect from "@/components/WhatToExpect";
+import LeadMagnetBlock from "@/components/LeadMagnetBlock";
+import AppraiserAdvantage from "@/components/AppraiserAdvantage";
+import OutOfStateBlock from "@/components/OutOfStateBlock";
 
 const serviceAreas = [
   { county: "King County", href: "/counties/king", cities: "Seattle, Bellevue, Kirkland, Redmond, Renton, Kent, Federal Way & more" },
@@ -96,10 +100,13 @@ const Index = () => {
         <div className="absolute inset-0 bg-black/35" />
 
         <div className="container relative z-10 px-6 lg:px-8 py-20 lg:py-24 flex flex-col items-center text-center">
-          <div className="max-w-3xl">
+        <div className="max-w-3xl">
              <h1 className="font-serif text-4xl md:text-5xl lg:text-[54px] font-bold leading-[1.1] text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6), 0 4px 16px rgba(0,0,0,0.3), 0 0 40px rgba(0,0,0,0.2)' }}>
               Specialized Guidance for Probate, Estate &amp; Senior Transition Real Estate Across Washington State
             </h1>
+            <p className="mt-5 text-xl md:text-2xl text-white/90 leading-relaxed max-w-2xl mx-auto" style={{ textShadow: '0 1px 6px rgba(0,0,0,0.5)' }}>
+              Reduce stress. Protect value. Get clear, valuation-informed strategy from a broker who understands what your family is going through.
+            </p>
           </div>
         </div>
       </section>
@@ -146,6 +153,7 @@ const Index = () => {
                 "Personal representatives, executors, and trustees responsible for selling an inherited property.",
                 "Heirs and beneficiaries who need clear guidance and realistic expectations.",
                 "Seniors and their families preparing to downsize or move to assisted or independent living.",
+                "Out-of-state family members managing Washington property from a distance.",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <GoldCheck3D size={20} className="mt-0.5" />
@@ -293,6 +301,21 @@ const Index = () => {
       </section>
 
       {/* ═══════════════════════════════════════════════════
+          WHAT TO EXPECT — 4-step process
+      ═══════════════════════════════════════════════════ */}
+      <WhatToExpect />
+
+      {/* ═══════════════════════════════════════════════════
+          APPRAISER ADVANTAGE
+      ═══════════════════════════════════════════════════ */}
+      <AppraiserAdvantage />
+
+      {/* ═══════════════════════════════════════════════════
+          OUT-OF-STATE SUPPORT
+      ═══════════════════════════════════════════════════ */}
+      <OutOfStateBlock />
+
+      {/* ═══════════════════════════════════════════════════
           WHEN SHOULD YOU CALL ME
       ═══════════════════════════════════════════════════ */}
       <section className="py-16 lg:py-20 bg-cream">
@@ -358,6 +381,11 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* ═══════════════════════════════════════════════════
+          LEAD MAGNET — Executor checklist
+      ═══════════════════════════════════════════════════ */}
+      <LeadMagnetBlock />
 
       {/* ═══════════════════════════════════════════════════
           AREAS SERVED — Navy background with county cards
