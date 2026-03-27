@@ -1954,6 +1954,309 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
       whyLocal: "Trust properties in Issaquah carry community-specific complexities that standard approaches may overlook. HOA requirements, architectural standards, and the distinction between master-planned and non-HOA neighborhoods all affect how a trustee should approach the sale. David's on-the-ground experience across Issaquah's communities provides trustees with the specificity needed to make well-supported, fiduciary-appropriate decisions.",
     },
   },
+
+  // ═══════════════════════════════════════════════════════════════════
+  // SUBURBAN TONE GROUP — Redmond (alongside Kirkland, Issaquah)
+  // ═══════════════════════════════════════════════════════════════════
+
+  // ── REDMOND ──────────────────────────────────────────────────────
+  // Identity: Tech-corridor growth, Microsoft/Nintendo campus influence,
+  // wide housing range from Education Hill ramblers to Redmond Ridge new builds
+  redmond: {
+    "probate-estate-sales": {
+      intro: "Redmond's housing market has transformed dramatically over two decades — from a quiet Eastside suburb to one of the state's most active tech-driven markets. Probate and estate properties here range from original ramblers near downtown Redmond and Education Hill to newer homes in Redmond Ridge and the Overlake corridor. Executors need guidance that accounts for how proximity to tech campuses, school boundaries, and rapid neighborhood evolution affect realistic estate property pricing.",
+      scenarios: [
+        "An executor managing a longtime family home on Education Hill where the property has appreciated significantly but needs updates to compete with newer inventory nearby",
+        "Heirs inheriting a Redmond property near the Overlake corridor where mixed-use development and light rail access have fundamentally changed the neighborhood's value proposition",
+        "A probate property in downtown Redmond where the lot's redevelopment potential may exceed the home's residential value",
+        "Multiple beneficiaries disagreeing on the value of a Redmond Ridge home where HOA features and community amenities complicate comparison to older Redmond neighborhoods",
+        "An estate property near Marymoor Park where trail access and location appeal create buyer interest but deferred maintenance limits the realistic price range",
+      ],
+      whyLocal: "Redmond's transformation from bedroom community to tech hub has created dramatic value differences between neighborhoods that are only minutes apart. An estate home on Education Hill faces different buyer dynamics than one in Bear Creek or Redmond Ridge. Automated valuations frequently miss how campus proximity, light rail expansion, and school boundary changes affect specific properties. David's on-the-ground familiarity with Redmond's micro-markets ensures estates are priced based on how today's buyers actually evaluate these neighborhoods.",
+    },
+    "senior-transitions": {
+      intro: "Many Redmond seniors settled here when the city was still primarily agricultural and suburban — long before Microsoft and the tech boom reshaped the landscape. Now facing transitions to smaller homes, assisted living, or moves closer to family, these homeowners often find that their properties have appreciated far beyond expectations while the neighborhoods around them have changed significantly. Real Property Planning helps Redmond seniors and their families navigate these transitions with honest pricing guidance and practical coordination.",
+      scenarios: [
+        "A retired couple on Education Hill whose home has appreciated substantially but needs strategic preparation to appeal to today's tech-industry buyers",
+        "An adult child helping a parent transition from a Redmond home to senior living while managing the sale from out of state",
+        "A longtime homeowner near Bear Creek whose large-lot property appeals to families but requires updates the senior can no longer manage",
+        "A Redmond senior relocating to be closer to grandchildren in another state — needing help coordinating the sale, preparation, and timeline simultaneously",
+      ],
+      whyLocal: "Redmond seniors often occupy properties that have appreciated enormously but may not match current buyer expectations without strategic preparation. The city's tech-driven market creates specific buyer profiles that differ from neighboring communities. David understands how Redmond's evolution — from its agricultural roots to today's campus-adjacent housing demand — affects realistic pricing for transition properties that may not have been updated in decades.",
+    },
+    "downsizing-services": {
+      intro: "Downsizing in Redmond often means leaving a home purchased when the city was quieter and more affordable — before campuses, light rail, and rapid development reshaped the community. Whether transitioning to a condo in the Overlake area, a smaller home closer to downtown, or moving out of the region entirely, Redmond homeowners benefit from guidance that accounts for the city's distinctive market dynamics and buyer expectations.",
+      scenarios: [
+        "A retired tech professional in Redmond Ridge deciding whether to sell the larger home now or wait for light rail completion to potentially increase value",
+        "A couple in their 60s downsizing from an Education Hill home to a lower-maintenance condo — needing clarity on how neighborhood differences affect their sale price",
+        "A homeowner near Marymoor Park whose property appeals to outdoor-oriented buyers but requires honest assessment of condition-based pricing",
+        "A family selling a large Redmond home after the last child has moved out — unsure how to prioritize preparation in a market that moves quickly",
+      ],
+      whyLocal: "Redmond's downsizing decisions are uniquely influenced by the city's ongoing transformation. Light rail expansion, campus growth, and changing neighborhood demographics mean that the optimal timing and preparation strategy for a downsizing sale depends heavily on the specific submarket. David's local knowledge helps downsizing homeowners avoid the common mistake of applying generic Eastside assumptions to Redmond's rapidly evolving micro-markets.",
+    },
+    "executor-support": {
+      intro: "Executors handling Redmond estate property face a market that has changed dramatically from when the deceased purchased their home. Properties near Microsoft's campus, along the Sammamish River trail, or in newer communities like Redmond Ridge each present different challenges around valuation, preparation, and buyer expectations. Real Property Planning provides executors with the structured, Redmond-specific guidance needed to manage estate real property responsibly.",
+      scenarios: [
+        "A first-time executor managing an Education Hill estate where the property needs substantial updates to attract Redmond's quality-conscious buyers",
+        "An out-of-state executor who needs a local expert to assess, prepare, and manage the sale of a Redmond estate property",
+        "An executor working with a probate attorney on a Redmond home where recent tech-sector layoffs have introduced market uncertainty",
+        "Multiple executors managing a Redmond property where disagreements about value stem from comparing the home to its neighbors rather than its actual condition",
+      ],
+      whyLocal: "Redmond executors often inherit responsibility for properties in a market they may not fully understand — especially if they're out of state or haven't tracked how dramatically the city has changed. David's dual broker-appraiser background gives executors a credentialed, locally grounded resource who can provide realistic assessments rather than optimistic estimates based on peak comparable sales.",
+    },
+    "attorney-fiduciary-support": {
+      intro: "Attorneys and fiduciaries managing Redmond property matters operate in a market shaped by corporate relocations, tech-industry compensation patterns, and rapid neighborhood change. Whether supporting an executor through a probate sale on Education Hill or advising a trustee on an Overlake-area property affected by transit development, these professionals need a real estate partner who understands Redmond's specific dynamics.",
+      scenarios: [
+        "A probate attorney managing a Redmond estate where the property's proximity to Microsoft campus creates unique buyer dynamics and pricing considerations",
+        "A trust administrator needing accurate valuation for a Redmond Ridge property where HOA standards and community-specific features affect market positioning",
+        "An elder law attorney coordinating a Redmond property sale alongside a client's transition to care facilities in the Eastside corridor",
+        "A family law attorney handling a Redmond divorce where both parties' employment at local tech companies adds financial complexity to the property division",
+      ],
+      whyLocal: "Redmond's legal and fiduciary property matters are frequently complicated by the city's tech-driven market volatility. Property values can shift meaningfully based on campus expansion plans, light rail station proximity, and corporate hiring cycles. David provides attorneys and fiduciaries with the grounded, credential-backed analysis needed to navigate these Redmond-specific variables.",
+    },
+    "valuation-guidance": {
+      intro: "Valuation in Redmond requires understanding how dramatically different micro-markets coexist within the same city. A modest rambler near downtown Redmond may sit a mile from a Redmond Ridge home worth twice as much — not because of square footage, but because of community standards, school boundaries, and campus proximity. Real Property Planning provides the kind of locally informed, condition-based valuation guidance that automated tools consistently miss in Redmond's complex market.",
+      scenarios: [
+        "An executor needing accurate valuation for an Education Hill property where the home's condition doesn't match the neighborhood's rising price trajectory",
+        "A family questioning an automated estimate for a Redmond home near Marymoor Park where trail access and location create value that algorithms struggle to quantify",
+        "A trustee comparing a Redmond Ridge property's value to older Redmond neighborhoods and needing expert guidance on how HOA features and community standards affect pricing",
+        "A couple considering a pre-sale valuation of their Redmond home as part of retirement planning — unsure how light rail expansion affects their specific location",
+      ],
+      whyLocal: "Redmond's valuation landscape is uniquely challenging because the city's rapid development has created adjacent neighborhoods with dramatically different value trajectories. An Education Hill property and an Overlake condo may both carry Redmond addresses but face completely different buyer pools and pricing dynamics. David's certified appraiser background provides the analytical foundation to navigate these distinctions accurately.",
+    },
+    "preparing-home-for-sale": {
+      intro: "Preparing a Redmond home for sale involves understanding what today's buyers — often tech professionals with specific expectations about finishes, layout, and energy efficiency — actually value. Whether the property is a well-maintained Redmond Ridge home or an older rambler near downtown Redmond that needs meaningful updates, the preparation strategy should reflect the specific neighborhood's buyer profile rather than generic staging advice.",
+      scenarios: [
+        "An estate property on Education Hill where decades of personal belongings need professional cleanout before the home can be evaluated for strategic updates",
+        "A Redmond Ridge home where HOA exterior standards are met but interior updates are needed to compete with newer homes in the community",
+        "A property near the Sammamish River trail where outdoor features and landscaping are key selling points but indoor spaces need modernization",
+        "A longtime family home in Bear Creek where the property's large lot is an asset but the home itself needs honest assessment of cost-effective preparation priorities",
+      ],
+      whyLocal: "Redmond's buyer expectations are shaped by the tech industry's influence on the local market. Buyers often compare properties against newer construction with modern layouts and finishes. David helps sellers identify which preparation investments will genuinely affect sale price in Redmond's specific neighborhoods — rather than spending on upgrades that won't move the needle for the property's actual buyer pool.",
+    },
+    "divorce-related-home-sales": {
+      intro: "Divorce-related property sales in Redmond carry unique complexity because the city's tech-driven appreciation has created significant equity in many homes — equity that both parties may value differently based on when they purchased and how they perceive the market's trajectory. Real Property Planning provides the objective, credential-backed guidance needed to navigate Redmond marital property sales with clarity and discretion.",
+      scenarios: [
+        "A divorcing couple with a Redmond home purchased before the most recent tech-boom appreciation cycle — disagreeing significantly on current value",
+        "A family law attorney needing objective assessment for an Education Hill property where both parties' emotional attachment complicates negotiations",
+        "A mediated settlement involving a Redmond Ridge home where HOA features, community amenities, and school boundaries add complexity to equitable valuation",
+        "A divorce-related sale where one party wants to retain the Redmond home and needs accurate buyout valuation that accounts for condition and market position",
+      ],
+      whyLocal: "Divorce negotiations in Redmond are frequently complicated by the dramatic appreciation many homes have experienced — sometimes doubling or tripling in value during a marriage. Both parties may have very different views of what the property is worth, especially when tech compensation patterns have influenced when improvements were made. David's appraisal credentials provide the objective foundation needed for fair resolution.",
+    },
+    "trust-estate-property-sales": {
+      intro: "Trust-owned property in Redmond may be in a master-planned community with specific architectural standards, an older neighborhood where the home predates the city's tech-driven transformation, or a transitional area affected by light rail and campus expansion. Trustees need a real estate partner who understands how these Redmond-specific dynamics affect sale strategy and fiduciary responsibility.",
+      scenarios: [
+        "A successor trustee managing a trust-owned home on Education Hill where the property has appreciated enormously but hasn't been updated in years",
+        "A corporate trustee needing local expertise for a Redmond Ridge property where community-specific marketing knowledge affects sale outcome",
+        "A trustee deciding how to handle a trust-owned property near the Overlake corridor where transit-oriented development has changed the neighborhood's character",
+        "A beneficiary questioning the trustee's pricing approach for a Redmond property based on automated estimates that don't reflect the home's actual condition",
+      ],
+      whyLocal: "Trust properties in Redmond exist within a market that rewards precision — small differences in location, condition, and neighborhood trajectory can create meaningful value variations. Trustees who rely on generic Eastside data risk either underpricing in strong micro-markets or overpricing in areas where buyer expectations have shifted. David provides the Redmond-specific analysis that supports sound fiduciary decision-making.",
+    },
+  },
+
+  // ═══════════════════════════════════════════════════════════════════
+  // URBAN TONE GROUP — Everett (alongside Seattle, Tacoma, Lynnwood)
+  // ═══════════════════════════════════════════════════════════════════
+
+  // ── EVERETT ──────────────────────────────────────────────────────
+  // Identity: County seat, waterfront revival, Boeing influence,
+  // diverse neighborhoods from Port Gardner to Silver Lake to Lowell
+  everett: {
+    "probate-estate-sales": {
+      intro: "Everett's housing market reflects the city's working-class heritage and ongoing revitalization — from early 20th-century craftsmans in North Everett to mid-century ramblers in Silver Lake and newer developments near the waterfront. Probate properties in Everett often carry decades of deferred maintenance and personal history, and the city's wide range of neighborhood values means generic pricing approaches frequently miss the mark. Real Property Planning helps executors navigate Everett's specific market dynamics with credentialed guidance.",
+      scenarios: [
+        "An executor managing a longtime family home in North Everett where the property's craftsman character could appeal to renovation buyers but deferred maintenance limits the realistic price range",
+        "Heirs inheriting a mid-century home near Silver Lake where the neighborhood's proximity to Boeing and Naval Station Everett creates a specific buyer pool",
+        "A probate property in the Port Gardner waterfront district where revitalization has increased surrounding values but the specific home needs significant work",
+        "Multiple beneficiaries disagreeing on the value of an Everett property based on their memories of the neighborhood versus its current market trajectory",
+        "An estate home in Lowell or Delta where the industrial surroundings and property characteristics require honest assessment rather than aspirational pricing",
+      ],
+      whyLocal: "Everett's market is defined by dramatic neighborhood-level variation — a craftsman in Norton-Grand has different dynamics than a rambler near Mall Drive or a view property in Bayside. The city's ongoing waterfront revitalization has created pockets of rapid appreciation adjacent to areas where values remain more stable. David's familiarity with Everett's neighborhood trajectories ensures probate properties are priced based on realistic buyer demand rather than citywide averages.",
+    },
+    "senior-transitions": {
+      intro: "Many Everett seniors have deep roots in the community — often in the same home near Boeing, the naval station, or one of the city's established residential neighborhoods for decades. Transitioning from a longtime Everett home involves not just the logistics of selling property but also the emotional weight of leaving a community where military, aerospace, and working-class heritage have shaped daily life for generations.",
+      scenarios: [
+        "A retired Boeing employee transitioning from a longtime Silver Lake home to assisted living — the property functionally sound but dated compared to current buyer expectations",
+        "An adult child helping an Everett parent move closer to family in another city while coordinating the sale of a home with decades of accumulated belongings",
+        "A senior couple in North Everett whose craftsman home has character appeal but needs honest assessment of which updates would meaningfully affect sale price",
+        "A veteran transitioning from a home near Naval Station Everett to VA-supported housing — needing efficient, straightforward guidance on the property sale",
+      ],
+      whyLocal: "Everett's senior transitions often involve properties tied to the city's aerospace and military employment history — homes purchased when Boeing hiring was strong or when the naval station was expanding. These properties may have appreciated differently than the revitalizing waterfront district, and understanding which Everett neighborhoods are trending up versus holding steady is essential for realistic pricing. David helps Everett seniors avoid both underpricing in improving areas and overpricing in neighborhoods where buyer demand is more measured.",
+    },
+    "downsizing-services": {
+      intro: "Downsizing in Everett means leaving a home that may have been purchased during a very different phase of the city's evolution — before waterfront revitalization, before the Paine Field passenger terminal, and before the influx of new development that has begun changing the city's character. Whether moving to a more manageable home within Snohomish County or relocating entirely, Everett homeowners need guidance that reflects the city's current trajectory rather than historical assumptions.",
+      scenarios: [
+        "A longtime homeowner near Paine Field downsizing after retirement — needing clarity on how the area's commercial development affects residential property values",
+        "A couple in North Everett selling their craftsman home to move closer to grandchildren in another state — unsure how to position a character home in a market dominated by newer construction",
+        "A senior in the Riverside neighborhood whose waterfront-adjacent location creates interest but whose home needs practical assessment of preparation priorities",
+        "A downsizing homeowner near Silver Lake whose property's value is complicated by its proximity to both desirable schools and commercial corridors",
+      ],
+      whyLocal: "Everett's downsizing decisions are shaped by the city's uneven revitalization — some neighborhoods have seen meaningful appreciation while others remain more stable. Homeowners who've watched waterfront condos go up may overestimate their own property's trajectory, while those in steadily appreciating areas may not realize how much equity they've built. David provides the neighborhood-specific perspective that helps Everett downsizers make informed decisions.",
+    },
+    "executor-support": {
+      intro: "Executors handling estate property in Everett often face practical challenges unique to the county seat — properties with deferred maintenance in transitional neighborhoods, homes near industrial areas where environmental factors affect marketability, and a broad spectrum of housing ages and conditions. Real Property Planning provides executors with structured, locally grounded support for managing estate real property in Everett's complex market.",
+      scenarios: [
+        "A first-time executor managing a North Everett estate where the home's age, systems condition, and neighborhood require careful evaluation before pricing",
+        "An out-of-state executor who needs a trusted local resource to assess and manage the sale of an Everett property they've never visited",
+        "An executor working with a Snohomish County probate attorney on an Everett property where the estate's complexity requires coordinated professional support",
+        "Multiple executors managing an Everett property where the home's condition and the neighborhood's trajectory create different opinions on sale approach",
+      ],
+      whyLocal: "Executors unfamiliar with Everett may not realize how dramatically the city's neighborhoods differ — or how quickly some areas are changing while others remain stable. David's presence in Snohomish County ensures executors receive Everett-specific guidance rather than generic suburban assumptions that don't reflect the county seat's distinctive character and market dynamics.",
+    },
+    "attorney-fiduciary-support": {
+      intro: "Attorneys and fiduciaries managing property matters in Everett work in a market shaped by industrial heritage, military presence, and ongoing urban renewal. Probate estates near the waterfront, trust properties in established residential areas, and divorce-related sales near Boeing or the naval station all carry Everett-specific dynamics that require locally informed real estate guidance.",
+      scenarios: [
+        "A probate attorney managing an Everett estate where the property's proximity to the waterfront redevelopment area complicates valuation and buyer-pool assessment",
+        "A trust administrator needing reliable guidance for a North Everett craftsman where the home's character appeals to a specific buyer demographic",
+        "An elder law attorney coordinating an Everett client's property sale alongside a transition to care facilities in Snohomish County",
+        "A family law attorney handling an Everett divorce where one party's Boeing employment and the home's proximity to Paine Field affect both timing and value considerations",
+      ],
+      whyLocal: "Everett's legal property matters frequently involve the city's industrial and military employment dynamics — Boeing shift schedules that affect showing flexibility, naval station transfers that create seasonal buyer patterns, and revitalization timelines that influence neighborhood value trajectories. David provides attorneys and fiduciaries with the grounded, Everett-specific analysis these situations require.",
+    },
+    "valuation-guidance": {
+      intro: "Valuation in Everett is complicated by the city's wide range of housing stock, neighborhood trajectories, and the influence of large employers on local demand. A craftsman in Norton-Grand, a rambler near Silver Lake, and a newer unit in the waterfront district may all carry Everett addresses but face fundamentally different buyer pools and pricing dynamics. Real Property Planning provides condition-based, neighborhood-specific valuation guidance for Everett's diverse market.",
+      scenarios: [
+        "An executor needing accurate valuation for a North Everett craftsman where character features and location appeal compete with deferred maintenance and age-related concerns",
+        "A family questioning an automated estimate for an Everett property near the waterfront where revitalization has created rapid but uneven appreciation",
+        "A trustee comparing an Everett property's value to nearby Lynnwood or Mukilteo homes — needing expert guidance on how the county seat's dynamics differ",
+        "A divorcing couple whose Silver Lake home has appreciated steadily but where condition issues create disagreement about realistic current value",
+      ],
+      whyLocal: "Everett's valuation challenges stem from the city's role as a county seat with industrial, military, and revitalization dynamics all operating simultaneously. Properties in the same zip code can face dramatically different market conditions depending on their specific neighborhood, proximity to employers, and the trajectory of surrounding development. David's certified appraiser background provides the analytical framework to navigate these Everett-specific complexities.",
+    },
+    "preparing-home-for-sale": {
+      intro: "Preparing an Everett home for sale requires understanding what the city's buyer pool actually expects — which varies significantly by neighborhood. A North Everett craftsman may benefit from preserving original character while addressing systems and safety, while a Silver Lake rambler might need practical modernization to compete. Real Property Planning helps Everett sellers identify preparation priorities that align with their specific neighborhood's buyer expectations.",
+      scenarios: [
+        "An estate property in North Everett where decades of personal belongings, workshop materials, and deferred maintenance create a significant cleanout and preparation challenge",
+        "A craftsman home where original woodwork and character features should be preserved but dated systems and finishes need strategic updating",
+        "A Silver Lake property where basic modernization — kitchen, bathrooms, flooring — would meaningfully affect the sale price versus selling as-is to renovation buyers",
+        "A home near the waterfront district where exterior presentation and curb appeal matter more than interior upgrades due to the area's buyer demographic",
+      ],
+      whyLocal: "Everett's diverse housing stock means preparation strategies vary dramatically by neighborhood and property type. What works for a Bayside view property doesn't apply to a Lowell ranch, and the budget for preparation should reflect the realistic return in each specific micro-market. David helps Everett sellers avoid over-investing in updates that won't move the needle — or under-preparing in neighborhoods where presentation genuinely affects sale price.",
+    },
+    "divorce-related-home-sales": {
+      intro: "Divorce-related property sales in Everett often involve homes connected to the city's major employers — Boeing, the naval station, and the healthcare systems that serve as the county seat's employment anchors. These sales carry practical complications around work schedules, potential relocation, and the emotional dynamics of dividing a home in a community where both parties may have deep roots.",
+      scenarios: [
+        "A divorcing couple with a Silver Lake home purchased during Boeing's expansion — disagreeing on whether the property's value reflects current market conditions or peak-cycle pricing",
+        "A family law attorney needing objective assessment for a North Everett property where both parties have different visions for whether to sell or retain",
+        "A mediated settlement involving an Everett home where one party's military service creates timeline and relocation complications",
+        "A divorce-related sale in a transitional Everett neighborhood where the property's future value trajectory is uncertain and both parties see it differently",
+      ],
+      whyLocal: "Everett divorces frequently involve employment-related complications — Boeing layoff cycles, naval station transfers, and the financial dynamics of single-income transitions in a county-seat market. David provides the objective, locally informed analysis that helps both parties and their attorneys move forward with realistic expectations about the Everett property's value and marketability.",
+    },
+    "trust-estate-property-sales": {
+      intro: "Trust-owned property in Everett may range from a well-maintained North Everett craftsman to a mid-century home near Silver Lake or a property in a transitional neighborhood where market dynamics are shifting. Trustees need a real estate partner who understands how Everett's specific neighborhood trajectories, buyer demographics, and property conditions affect sale strategy and fiduciary decision-making.",
+      scenarios: [
+        "A successor trustee managing a trust-owned craftsman in North Everett where preservation of character features must be balanced against practical sale preparation",
+        "A corporate trustee needing local expertise for an Everett property near the waterfront where revitalization complicates the decision between holding and selling",
+        "A trustee handling a trust-owned Silver Lake property where the home's condition and neighborhood position require careful analysis of preparation versus as-is sale",
+        "A beneficiary questioning the value of a trust-owned Everett property based on automated estimates that don't account for the city's neighborhood-level variation",
+      ],
+      whyLocal: "Trust properties in Everett require understanding the county seat's distinctive market dynamics — where industrial heritage, military presence, and urban renewal create conditions that standard suburban analysis doesn't capture. David provides trustees with the Everett-specific insight needed to make well-supported fiduciary decisions in a market where neighborhood trajectory matters as much as property condition.",
+    },
+  },
+
+  // ═══════════════════════════════════════════════════════════════════
+  // SMALLTOWN TONE GROUP — Duvall (alongside Snohomish, Woodinville)
+  // ═══════════════════════════════════════════════════════════════════
+
+  // ── DUVALL ──────────────────────────────────────────────────────
+  // Identity: Small riverside community in Snoqualmie Valley,
+  // rural-residential character, limited inventory, tight-knit community
+  duvall: {
+    "probate-estate-sales": {
+      intro: "Duvall's small size and rural-residential character create distinctive challenges for probate and estate sales. Properties here range from modest homes in the walkable town core to larger parcels along the Snoqualmie River valley — and the limited inventory means each sale draws from a smaller buyer pool than in nearby Eastside cities. Real Property Planning helps executors and families navigate Duvall's unique dynamics with local knowledge and credentialed valuation guidance.",
+      scenarios: [
+        "An executor managing a family homestead on the outskirts of Duvall where acreage, outbuildings, and rural features require specialized marketing beyond standard residential approaches",
+        "Heirs inheriting a home in Duvall's town center who live out of state and need guidance on a market they may not have tracked since childhood",
+        "A probate property on a larger Snoqualmie Valley lot where the land's agricultural or equestrian potential affects value differently than in suburban markets",
+        "An estate home where the deceased was well-known in Duvall's tight-knit community — creating both opportunities and sensitivities around the sale process",
+        "Multiple beneficiaries disagreeing about a Duvall property's value because online estimates don't account for rural features, lot size, or the town's limited comparable sales",
+      ],
+      whyLocal: "Duvall's real estate market operates differently than nearby Eastside suburbs because of its small inventory, rural character, and the specific buyer profiles drawn to a town of this size. Automated valuations often miss how acreage, outbuildings, river proximity, and the community's small-town identity affect pricing. David's familiarity with Snoqualmie Valley properties helps executors set realistic expectations in a market where standard suburban comparisons fall short.",
+    },
+    "senior-transitions": {
+      intro: "Seniors in Duvall have often lived in the community for decades — drawn by its quiet pace, natural surroundings, and the kind of small-town relationships that make leaving especially difficult. When it's time to transition to a smaller home, assisted living, or a move closer to family, these homeowners face a market with limited senior housing options locally and properties that may include features — gardens, workshops, acreage — that require thoughtful preparation for sale.",
+      scenarios: [
+        "A longtime Duvall homeowner moving to assisted living in Redmond or Woodinville while managing the sale of a home with gardens, outbuildings, and years of accumulated belongings",
+        "An adult child coordinating a parent's transition from a Duvall property — handling cleanout, preparation, and sale from Seattle or further away",
+        "A retired couple whose Duvall home sits on a larger lot that's become too much to maintain — needing guidance on whether to sell the property whole or consider a lot-line approach",
+        "A senior in Duvall whose community connections make the transition emotionally complex — needing a patient, relationship-oriented process",
+      ],
+      whyLocal: "Duvall's limited local senior living options mean most transitions involve relocating to larger nearby communities — Redmond, Woodinville, or Monroe. This creates a two-market challenge: selling a rural-character property in a small market while simultaneously navigating housing options elsewhere. David's valley-wide familiarity helps families coordinate both sides of this transition with realistic expectations and compassionate pacing.",
+    },
+    "downsizing-services": {
+      intro: "Downsizing from a Duvall home often means leaving a property with features that don't exist in more compact markets — a large garden, workshop space, riverside access, or the kind of privacy that attracted the homeowner to this valley community in the first place. The decision to downsize is practical, but in Duvall it carries additional complexity because the buyer who values what you're leaving behind may be a very specific type of buyer.",
+      scenarios: [
+        "A homeowner in Duvall's town core downsizing to a smaller home in Woodinville or Redmond — needing clarity on how the property's small-town location affects buyer interest compared to Eastside suburbs",
+        "A couple on a larger Duvall parcel who want to simplify but aren't sure whether the property's acreage and outbuildings are an asset or a limiting factor for today's buyers",
+        "A retiree whose Duvall home has been a hobby property — with workshop, greenhouse, or equestrian features — that needs honest assessment of how these features affect market value",
+        "A downsizing homeowner who wants to stay in the Snoqualmie Valley but needs to understand the financial tradeoffs of Duvall versus Carnation or Monroe options",
+      ],
+      whyLocal: "Duvall's downsizing market is shaped by the town's small inventory and specific buyer appeal. Properties with rural features attract buyers who are intentionally seeking a small-town lifestyle — but this is a narrower pool than suburban downsizing markets serve. David helps Duvall homeowners understand how their specific property features, lot characteristics, and location within the valley affect realistic timeline and pricing expectations.",
+    },
+    "executor-support": {
+      intro: "Executors managing estate property in Duvall face challenges specific to small-town real estate — limited comparable sales data, properties with rural features that complicate standard valuation, and a buyer pool that's smaller and more specialized than in neighboring Eastside cities. Real Property Planning provides executors with the structured, locally informed support needed to navigate Duvall's distinctive market.",
+      scenarios: [
+        "A first-time executor managing a Duvall estate where the property includes acreage, outbuildings, or agricultural features that standard residential approaches don't adequately address",
+        "An out-of-state executor who needs a trusted Snoqualmie Valley contact to assess, prepare, and manage the sale of a Duvall property",
+        "An executor working with an attorney on a Duvall estate where the limited local comparable sales make pricing particularly challenging",
+        "Multiple executors disagreeing about a Duvall property's value because they're comparing it to Eastside suburban homes rather than recognizing the small-town market's different dynamics",
+      ],
+      whyLocal: "Duvall's small market means executors can't rely on the volume of comparable sales that larger communities provide. Each property's specific features — lot size, outbuildings, river proximity, and condition — carry more weight in pricing decisions. David's experience with Snoqualmie Valley properties provides executors with the granular, property-specific guidance that automated tools and out-of-area agents consistently miss in communities this size.",
+    },
+    "attorney-fiduciary-support": {
+      intro: "Attorneys and fiduciaries managing Duvall property matters need a real estate partner who understands small-town market dynamics — where limited inventory means longer exposure times, where rural property features require specialized assessment, and where the community's tight-knit character influences how sales are perceived and received.",
+      scenarios: [
+        "A probate attorney managing a Duvall estate where acreage and outbuildings require assessment beyond standard residential valuation approaches",
+        "A trust administrator needing guidance on a Duvall property where the limited comparable sales make establishing fair market value more complex",
+        "An elder law attorney coordinating a Duvall client's property sale alongside a transition to care facilities in Redmond or Woodinville",
+        "A family law attorney handling a Duvall divorce where the property's rural features and small-town market dynamics affect equitable distribution calculations",
+      ],
+      whyLocal: "Legal matters involving Duvall property carry complications that attorneys accustomed to suburban markets may not anticipate — including how limited inventory affects exposure time, how rural features interact with standard appraisal methods, and how the community's character influences buyer behavior. David provides attorneys and fiduciaries with the Snoqualmie Valley-specific analysis these situations demand.",
+    },
+    "valuation-guidance": {
+      intro: "Valuation in Duvall is uniquely challenging because of the town's small inventory, the prevalence of properties with non-standard features, and the limited comparable sales data available. A home in the town core, a property with river frontage, and a parcel with acreage and outbuildings may all carry Duvall addresses but face very different valuation dynamics. Real Property Planning provides the locally grounded, condition-based analysis that Duvall properties require.",
+      scenarios: [
+        "An executor needing accurate valuation for a Duvall property where limited recent comparable sales make automated estimates unreliable",
+        "A family questioning an online estimate for a Duvall home where the lot's size, outbuildings, or river proximity create value that algorithms miss",
+        "A trustee needing guidance on a Duvall property with equestrian or agricultural features that standard residential comparisons don't capture",
+        "A homeowner seeking pre-sale valuation of a Duvall property as part of retirement planning — unsure how the town's small-market dynamics affect realistic pricing",
+      ],
+      whyLocal: "Duvall's valuation challenges are fundamentally different from suburban Eastside markets. The small number of annual transactions means each comparable sale carries outsized influence, and properties with acreage, outbuildings, or river features require assessment methods that go beyond standard residential analysis. David's certified appraiser background provides the analytical depth that Duvall's distinctive properties demand.",
+    },
+    "preparing-home-for-sale": {
+      intro: "Preparing a Duvall home for sale requires understanding what draws buyers to this community — and what they'll accept versus what they won't. Buyers choosing Duvall are typically seeking small-town character, space, and privacy — but they still expect functional systems, clean presentation, and honest disclosure about property condition. The preparation strategy should honor the property's character while addressing the practical concerns that affect sale price in a small market.",
+      scenarios: [
+        "An estate property in Duvall where years of accumulated belongings, workshop materials, and outdoor equipment require extensive cleanout before the home can be properly assessed",
+        "A home in the town core where basic updates — paint, fixtures, landscaping — would meaningfully improve buyer perception without over-investing for the market",
+        "A larger Duvall property where outbuildings, fencing, and acreage features need practical attention to present well to the specific buyers drawn to this kind of property",
+        "A longtime family home where sentimental features and personal landscaping need sensitive handling during preparation for sale",
+      ],
+      whyLocal: "Duvall's buyer pool has different expectations than suburban Eastside markets. Over-improving a Duvall home with trendy finishes may not generate the return it would in Redmond or Kirkland, while under-preparing can extend time on market in a community where inventory already moves more slowly. David helps Duvall sellers find the right preparation balance for their specific property and the realistic buyer profile it will attract.",
+    },
+    "divorce-related-home-sales": {
+      intro: "Divorce-related property sales in Duvall are complicated by the community's small size, limited inventory, and the fact that rural-character properties don't have the volume of comparable sales that larger communities provide. When both parties need clarity on property value, the small-town dynamics and non-standard property features that make Duvall special also make objective valuation more complex.",
+      scenarios: [
+        "A divorcing couple with a Duvall home where acreage, outbuildings, or equestrian features make standard comparable-based valuation difficult",
+        "A family law attorney needing objective assessment for a Duvall property in a market where limited recent sales create disagreement about current value",
+        "A mediated settlement involving a Duvall home where one party wants to retain the property — needing accurate buyout valuation in a small market with few comps",
+        "A divorce-related sale where the couple's emotional attachment to Duvall's community character is complicating practical sale decisions",
+      ],
+      whyLocal: "Divorce negotiations involving Duvall property require understanding that standard suburban valuation methods don't fully apply. The town's limited annual sales volume, the premium or discount that rural features create, and the narrower buyer pool all affect realistic pricing. David's appraisal background provides the objective, locally grounded analysis needed for equitable resolution when Duvall's small-market dynamics make standard approaches insufficient.",
+    },
+    "trust-estate-property-sales": {
+      intro: "Trust-owned property in Duvall may include features that trustees and corporate trust departments rarely encounter — acreage, outbuildings, agricultural elements, or river-adjacent parcels where standard residential trust administration approaches need adaptation. Real Property Planning provides trustees with the locally informed, property-specific guidance that Duvall's distinctive real estate requires.",
+      scenarios: [
+        "A successor trustee managing a trust-owned Duvall property with acreage and outbuildings — unsure how these features affect sale strategy and timeline in a small market",
+        "A corporate trustee needing local expertise for a Duvall home where the community's limited inventory means standard marketing timelines may not apply",
+        "A trustee handling a trust-owned property along the Snoqualmie Valley where river proximity and environmental considerations affect sale preparation",
+        "A beneficiary questioning the value of a trust-owned Duvall property because automated estimates don't account for rural features and limited comparable sales",
+      ],
+      whyLocal: "Trust properties in Duvall require fiduciary guidance that accounts for the community's distinctive market — small inventory, specialized buyer interest, and properties with features that don't fit neatly into standard residential categories. David provides trustees with the Snoqualmie Valley knowledge and appraisal foundation needed to make well-supported decisions in a market where the usual suburban assumptions don't apply.",
+    },
+  },
 };
 
 /**
