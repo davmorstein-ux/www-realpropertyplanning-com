@@ -17,16 +17,22 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <Link to="/" className="block mb-4">
               <span className="font-serif text-xl text-primary-foreground font-semibold">
-                David Stein <span className="text-gold font-bold">Senior Relocation & Estate Sales</span>
+                Real Property Planning
               </span>
             </Link>
-            <p className="text-primary-foreground/70 text-[15px] leading-relaxed mb-1">
-              Licensed Real Estate Broker — License #113972
+            <p className="text-primary-foreground/80 text-[15px] font-medium leading-snug mb-2">
+              David Stein
             </p>
-            <p className="text-primary-foreground/70 text-[15px] leading-relaxed mb-3">
+            <p className="text-primary-foreground/70 text-[15px] leading-relaxed mb-0.5">
+              Licensed Real Estate Broker — #113972
+            </p>
+            <p className="text-primary-foreground/70 text-[15px] leading-relaxed mb-1">
               WA Certified Residential Appraiser — #1702080
             </p>
-            <p className="text-primary-foreground/70 text-[15px] leading-relaxed mb-3">eXp Realty</p>
+            <p className="text-primary-foreground/60 text-[15px] leading-relaxed mb-3">
+              Specializing in probate, estate, inherited property &amp; senior transition real estate
+            </p>
+            <p className="text-primary-foreground/60 text-[15px] leading-relaxed mb-3">eXp Realty</p>
             <div className="flex flex-col gap-2 text-[15px]">
               <a href="tel:2069003015" className="text-primary-foreground/70 hover:text-gold flex items-center gap-2">
                 <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0" />
@@ -144,7 +150,7 @@ const Footer = () => {
             loading="lazy"
           />
           <p className="text-primary-foreground/50 text-[13px] text-center leading-relaxed">
-            David Stein | Real Estate Broker — Senior Relocation & Estate Sales | eXp Realty
+            David Stein | Real Estate Broker · Certified Residential Appraiser | Real Property Planning | eXp Realty
           </p>
           <p className="text-primary-foreground/40 text-[13px] text-center mt-1">
             Mailing Address: PO Box 1462, Woodinville, WA 98072
