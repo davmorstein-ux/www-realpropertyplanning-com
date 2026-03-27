@@ -67,6 +67,7 @@ import OutOfStateFamilies from "./pages/guides/OutOfStateFamilies";
 import SeniorTransitionDifferences from "./pages/guides/SeniorTransitionDifferences";
 import InheritedHouseWashington from "./pages/guides/InheritedHouseWashington";
 import SeattleProbateEstate from "./pages/SeattleProbateEstate";
+import BellevueProbateEstate from "./pages/BellevueProbateEstate";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -146,6 +147,7 @@ const App = () => (
           <Route path="/senior-living/independent-living" element={<IndependentLiving />} />
           {/* Custom city pages */}
           <Route path="/seattle-probate-estate-real-estate" element={<SeattleProbateEstate />} />
+          <Route path="/bellevue-probate-estate-real-estate" element={<BellevueProbateEstate />} />
           {/* Cornerstone guide pages */}
           <Route path="/guides/how-probate-real-estate-works" element={<HowProbateRealEstateWorks />} />
           <Route path="/guides/what-executors-should-do" element={<WhatExecutorsShouldDo />} />
