@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { FileText, Users, MapPin, ClipboardList } from "lucide-react";
+import { FileText, Users, MapPin, ClipboardList, CheckCircle2 } from "lucide-react";
 import GoldCheck3D from "@/components/GoldCheck3D";
+import { Link } from "react-router-dom";
 
 const checklist = [
   "Understanding your role, legal authority, and first steps",
@@ -26,8 +27,9 @@ const LeadMagnetBlock = () => (
             <FileText className="h-8 w-8 text-gold" />
           </div>
 
+          <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">Free Resource</p>
           <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-4">
-            Free Guide: The Washington Executor's 10‑Step Checklist for Handling Real Estate
+            The Washington Executor's 10‑Step Checklist for Handling Real Estate
           </h2>
           <p className="text-primary-foreground/75 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
             Overwhelmed by the property side of estate administration? This practical, step-by-step checklist covers what most executors, trustees, and families wish they'd known from day one.
@@ -66,6 +68,17 @@ const LeadMagnetBlock = () => (
           <p className="text-primary-foreground/50 text-sm mt-4">
             No email required. Just a useful resource you can save and refer back to anytime.
           </p>
+        </div>
+
+        {/* Related guides */}
+        <div className="mt-10 pt-8 border-t border-primary-foreground/10">
+          <p className="text-primary-foreground/50 text-xs font-bold uppercase tracking-widest mb-4 text-center">Related Guides</p>
+          <div className="flex flex-wrap justify-center gap-x-4 gap-y-2">
+            <Link to="/guides/what-executors-should-do" className="text-primary-foreground/70 hover:text-gold text-sm underline underline-offset-4 transition-colors">What Executors Should Do First</Link>
+            <Link to="/guides/inherited-house-washington" className="text-primary-foreground/70 hover:text-gold text-sm underline underline-offset-4 transition-colors">Inherited House Guide</Link>
+            <Link to="/guides/how-probate-real-estate-works" className="text-primary-foreground/70 hover:text-gold text-sm underline underline-offset-4 transition-colors">How Probate Sales Work</Link>
+            <Link to="/guides/out-of-state-families" className="text-primary-foreground/70 hover:text-gold text-sm underline underline-offset-4 transition-colors">Out-of-State Coordination</Link>
+          </div>
         </div>
       </div>
     </div>

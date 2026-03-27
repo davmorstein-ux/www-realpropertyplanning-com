@@ -8,6 +8,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
 import MidPageCTA from "@/components/MidPageCTA";
+import ProofCallout from "@/components/ProofCallout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
@@ -80,6 +81,20 @@ const SeniorTransitionDifferences = () => (
               </div>
             ))}
           </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Proof callout */}
+    <section className="py-10 bg-background">
+      <div className="container px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto">
+          <ProofCallout
+            quote="We appreciated David's patience, thoughtful communication, and realistic guidance throughout the sale of our family property."
+            attribution="Family Member"
+            context="Senior transition home sale"
+            variant="accent"
+          />
         </div>
       </div>
     </section>

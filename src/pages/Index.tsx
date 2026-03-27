@@ -30,6 +30,7 @@ import OutOfStateBlock from "@/components/OutOfStateBlock";
 import TrustAndResults from "@/components/TrustAndResults";
 import MidPageCTA from "@/components/MidPageCTA";
 import EducationalPathways from "@/components/EducationalPathways";
+import SituationFinderBlock from "@/components/SituationFinderBlock";
 
 const serviceAreas = [
   { county: "King County", href: "/counties/king", cities: "Seattle, Bellevue, Kirkland, Redmond, Renton, Kent, Federal Way & more" },
@@ -371,8 +372,10 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Testimonials section moved to TrustAndResults above */}
-
+      {/* ═══════════════════════════════════════════════════
+          SITUATION FINDER — Situation-based entry points
+      ═══════════════════════════════════════════════════ */}
+      <SituationFinderBlock />
 
       {/* ═══════════════════════════════════════════════════
           LEAD MAGNET — Executor checklist

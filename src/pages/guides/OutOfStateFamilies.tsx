@@ -8,6 +8,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
 import MidPageCTA from "@/components/MidPageCTA";
+import ProofCallout from "@/components/ProofCallout";
 import GoldCheck3D from "@/components/GoldCheck3D";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -113,6 +114,20 @@ const OutOfStateFamilies = () => (
               </li>
             ))}
           </ul>
+        </div>
+      </div>
+    </section>
+
+    {/* Proof callout */}
+    <section className="py-10 bg-background">
+      <div className="container px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto">
+          <ProofCallout
+            quote="David guided our family through a very difficult time with professionalism and genuine compassion. His valuation perspective and market knowledge were incredibly helpful."
+            attribution="Estate Attorney, Seattle"
+            context="Out-of-state estate coordination"
+            variant="accent"
+          />
         </div>
       </div>
     </section>

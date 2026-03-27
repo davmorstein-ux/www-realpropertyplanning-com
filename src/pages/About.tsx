@@ -7,6 +7,7 @@ import { realEstateAgentSchema, davidSteinPerson } from "@/lib/schema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import TrustStrip from "@/components/TrustStrip";
 import RelatedServices from "@/components/RelatedServices";
+import ProofCallout from "@/components/ProofCallout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -101,6 +102,44 @@ const About = () => {
         </div>
       </section>
 
+      {/* Why Professionals Refer to David */}
+      <section className="py-16 lg:py-20 bg-cream">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
+              Why Professionals and Families Reach Out
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              Attorneys, fiduciaries, and family members consistently describe these qualities when recommending David:
+            </p>
+            <div className="grid sm:grid-cols-2 gap-4 mb-8">
+              {[
+                { label: "Valuation Expertise", desc: "Pricing grounded in certified appraisal methodology, not guesswork" },
+                { label: "Calm Communication", desc: "Clear, steady guidance through emotional and complex situations" },
+                { label: "Full Coordination", desc: "Manages vendors, cleanout, repairs, and sale from start to close" },
+                { label: "Fiduciary Awareness", desc: "Understands the obligations executors, trustees, and attorneys carry" },
+                { label: "Remote Management", desc: "Serves as local point of contact for out-of-state decision makers" },
+                { label: "Niche Focus", desc: "Exclusively handles probate, estate, inherited property, and senior transitions" },
+              ].map((item, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <GoldCheck3D size={18} className="mt-1 shrink-0" />
+                  <div>
+                    <p className="font-semibold text-foreground text-sm">{item.label}</p>
+                    <p className="text-muted-foreground text-sm">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <ProofCallout
+              quote="David guided our family through a very difficult time with professionalism and genuine compassion. His valuation perspective and market knowledge were incredibly helpful."
+              attribution="Estate Attorney, Seattle"
+              context="Probate property transition"
+              variant="accent"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Who David Works With */}
       <section className="py-20 lg:py-28 bg-secondary">
         <div className="container px-6 lg:px-8">
@@ -176,7 +215,7 @@ const About = () => {
             </p>
             <div className="flex justify-center">
               <Link to="/contact">
- <Button variant="gold" size="lg"className="hover:-light">
+                <Button variant="gold" size="lg">
                   <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
                   Contact David
                 </Button>
