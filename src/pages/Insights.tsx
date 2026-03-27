@@ -55,9 +55,19 @@ const categories: Category[] = [
         href: "/guides/inherited-house-washington",
       },
       {
+        title: "What Should You Do First After Inheriting a House in Washington?",
+        description: "Immediate priorities, common mistakes to avoid, and how to think through your next steps.",
+        href: "/insights/first-steps-inherited-house-washington",
+      },
+      {
         title: "What Repairs Should Be Done Before Selling an Estate Property?",
         description: "Which improvements are worth the investment — and which ones to skip.",
         href: "/guides/estate-property-repairs-before-sale",
+      },
+      {
+        title: "Should You Clean Out an Estate Property Before Selling?",
+        description: "When cleanout is necessary, when it may not be needed, and a practical decision approach.",
+        href: "/insights/estate-property-cleanout-before-sale",
       },
     ],
   },
@@ -115,6 +125,11 @@ const categories: Category[] = [
         description: "Valuation-informed strategies that protect fiduciaries and support informed decisions.",
         href: "/guides/pricing-house-trust-estate",
       },
+      {
+        title: "What Makes Pricing an Inherited Property Different?",
+        description: "Why inherited property pricing requires a different approach — and how to avoid costly mistakes.",
+        href: "/insights/pricing-inherited-property-differences",
+      },
     ],
   },
   {
@@ -126,6 +141,11 @@ const categories: Category[] = [
         title: "How Can an Out-of-State Family Manage a Washington Property Sale?",
         description: "Guidance for executors, trustees, and family members coordinating a sale from a distance.",
         href: "/guides/out-of-state-families",
+      },
+      {
+        title: "How to Handle an Inherited House When You Live Out of State",
+        description: "Practical strategies for managing inherited property remotely — coordination, condition, and minimizing travel.",
+        href: "/insights/out-of-state-inherited-house-help",
       },
     ],
   },
