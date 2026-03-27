@@ -177,6 +177,11 @@ const App = () => (
           <Route path="/kennewick-probate-estate-real-estate" element={<KennewickProbateEstate />} />
           <Route path="/richland-probate-estate-real-estate" element={<RichlandProbateEstate />} />
           <Route path="/pasco-probate-estate-real-estate" element={<PascoProbateEstate />} />
+          <Route path="/renton-probate-estate-real-estate" element={<RentonProbateEstate />} />
+          <Route path="/kent-probate-estate-real-estate" element={<KentProbateEstate />} />
+          <Route path="/federal-way-probate-estate-real-estate" element={<FederalWayProbateEstate />} />
+          <Route path="/auburn-probate-estate-real-estate" element={<AuburnProbateEstate />} />
+          <Route path="/marysville-probate-estate-real-estate" element={<MarysvilleProbateEstate />} />
           {/* Cornerstone guide pages */}
           <Route path="/guides/how-probate-real-estate-works" element={<HowProbateRealEstateWorks />} />
           <Route path="/guides/what-executors-should-do" element={<WhatExecutorsShouldDo />} />
