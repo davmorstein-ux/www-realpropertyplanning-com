@@ -146,7 +146,7 @@ const ServicePageTemplate = ({ service, introText, situations, benefits }: Servi
               {service.shortName} by City
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-10 max-w-3xl">
-              Learn more about {service.name.toLowerCase()} in specific communities throughout Western Washington:
+              Learn more about {service.name.toLowerCase()} in specific communities throughout Washington State:
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
               {citySamples.map((c) => (

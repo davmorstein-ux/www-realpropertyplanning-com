@@ -103,7 +103,7 @@ const Counties = () => {
               Services Available Throughout Our Service Areas
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-10 max-w-3xl">
-              Real Property Planning offers the following services for clients throughout King, Snohomish, Pierce, and Kitsap Counties:
+              Real Property Planning offers the following services for clients throughout Washington State:
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
               {services.map((service) => (
