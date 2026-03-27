@@ -1480,7 +1480,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
       ],
       whyLocal: "Snohomish seniors often own properties with features — workshops, gardens, acreage, outbuildings — that represent decades of personal investment but don't always translate directly to market value. Understanding which features Snohomish buyers actually pay premiums for helps families set realistic expectations and avoid costly over-improvement before sale.",
     },
-    "executor-services": {
+    "executor-support": {
       intro: "Executors managing Snohomish estates often face properties with rural characteristics, deferred maintenance, and accumulated belongings that suburban-focused agents aren't equipped to handle. Real Property Planning provides the property-specific guidance executors need for Snohomish's distinctive housing stock — from historic downtown homes to acreage properties with outbuildings.",
       scenarios: [
         "An out-of-state executor managing a Snohomish acreage property with a home, shop buildings, and years of accumulated tools and equipment",
@@ -1490,7 +1490,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
       ],
       whyLocal: "Snohomish estates frequently include property types — acreage with outbuildings, historic homes, properties with agricultural features — where the executor's biggest risk is mispricing due to unfamiliarity with how rural and small-town features affect value. David Stein's appraisal credentials and experience with Snohomish Valley properties provide the defensible foundation executors need.",
     },
-    "attorney-fiduciary-services": {
+    "attorney-fiduciary-support": {
       intro: "Attorneys and fiduciaries handling Snohomish property matters need a real estate resource who understands the community's distinctive inventory — historic homes, acreage parcels, properties with outbuildings and rural features that complicate standard valuation. Real Property Planning provides the documentation-grade analysis these situations require.",
       scenarios: [
         "A probate attorney managing a Snohomish estate where acreage, outbuildings, and rural features require specialized valuation beyond standard residential comparables",
@@ -1500,7 +1500,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
       ],
       whyLocal: "Snohomish property matters often involve features — land, outbuildings, historic construction, rural zoning — that standard residential valuation approaches handle poorly. Attorneys and fiduciaries need a real estate professional who can provide defensible pricing rationale for properties where the comparable sales pool is limited.",
     },
-    "downsizing": {
+    "downsizing-services": {
       intro: "Downsizing from a Snohomish home often means leaving a property with space, character, and features — acreage, workshops, gardens — that won't be replicated in a smaller home. Real Property Planning helps Snohomish homeowners understand what their property is actually worth in today's market and make practical decisions about preparation and timing.",
       scenarios: [
         "A Snohomish homeowner with a large shop building and acreage who needs to understand whether those features add enough value to justify the property's maintenance burden",
@@ -1520,7 +1520,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
       ],
       whyLocal: "In Snohomish, the difference between accurate and inaccurate property valuation often comes down to understanding rural and small-town features that don't appear in standard comparable analyses. Acreage increments, outbuilding quality, historic designation, and proximity to the downtown antique district all affect value in ways that require local expertise.",
     },
-    "home-preparation": {
+    "preparing-home-for-sale": {
       intro: "Preparing a Snohomish home for sale often involves challenges that suburban properties don't present — outbuilding cleanouts, acreage maintenance, addressing deferred repairs on older construction, and deciding which character features to preserve versus update.",
       scenarios: [
         "A Snohomish estate property with a large shop building full of tools and equipment that needs organized cleanout before the property can be shown",
@@ -1530,7 +1530,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
       ],
       whyLocal: "Snohomish buyers often seek the community's character — historic homes, space, rural feeling — but they still expect functional systems and reasonable maintenance. The preparation balance is different here than in suburban markets: preserving authentic character while addressing the maintenance items that actually affect value.",
     },
-    "divorce-real-estate": {
+    "divorce-related-home-sales": {
       intro: "Divorce-related property decisions in Snohomish often involve homes with features — acreage, outbuildings, workshops, historic character — that make equitable valuation more complex than standard residential divisions.",
       scenarios: [
         "A Snohomish property with acreage and outbuildings where each spouse values different features — the shop, the garden, the land — making equitable division complex",
@@ -1540,7 +1540,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
       ],
       whyLocal: "Snohomish divorce property situations often involve features — land, outbuildings, agricultural improvements — where both spouses may have invested significantly but the market values those improvements differently than the personal investment suggests. Objective, locally grounded valuation prevents settlement disputes rooted in emotional attachment.",
     },
-    "trust-property-sales": {
+    "trust-estate-property-sales": {
       intro: "Trust-held properties in Snohomish often include longtime family homes with acreage, rural features, and deferred maintenance that require careful fiduciary handling. Real Property Planning provides trustees with the property-specific guidance needed to fulfill their obligations in Snohomish's distinctive market.",
       scenarios: [
         "A trustee managing a Snohomish acreage property where the beneficiaries live out of state and have limited understanding of the local market",
@@ -1580,7 +1580,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
       ],
       whyLocal: "Silverdale seniors often own homes in established neighborhoods that have been transformed by commercial growth and new residential development around them. Understanding how these changes affect their specific property's value helps families set realistic expectations and avoid preparation decisions based on outdated assumptions.",
     },
-    "executor-services": {
+    "executor-support": {
       intro: "Executors handling Silverdale estates often manage the process from across Puget Sound or from out of state entirely. Real Property Planning provides the on-the-ground coordination executors need in a market where military buyer demographics and Central Kitsap's growth patterns both influence strategy.",
       scenarios: [
         "An out-of-state executor managing a Silverdale property they haven't visited, needing comprehensive assessment of condition, value, and local market context",
@@ -1590,7 +1590,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
       ],
       whyLocal: "Silverdale executors face unique challenges: the community's unincorporated status means different regulatory considerations, the buyer pool's military component affects showing schedules and financing types, and the area's rapid commercial growth means properties purchased even 15 years ago exist in a very different market context.",
     },
-    "attorney-fiduciary-services": {
+    "attorney-fiduciary-support": {
       intro: "Attorneys and fiduciaries handling Silverdale property matters need a real estate resource who understands Central Kitsap's specific market dynamics — the military buyer influence, the competition between established homes and newer construction, and the unincorporated community's regulatory landscape.",
       scenarios: [
         "A probate attorney managing a Silverdale estate where the property's value has been affected by commercial development growth in the surrounding area",
@@ -1600,7 +1600,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
       ],
       whyLocal: "Silverdale property matters often involve dynamics specific to military-adjacent communities — VA loan considerations, PCS-driven buying and selling cycles, and the impact of base activity on local housing demand. Attorneys and fiduciaries need a real estate professional who understands these factors.",
     },
-    "downsizing": {
+    "downsizing-services": {
       intro: "Downsizing from a Silverdale home often means recalibrating expectations about what the property is worth in a market that has changed significantly due to commercial growth and new residential development.",
       scenarios: [
         "A retired military couple in Silverdale whose family home is now larger than needed — weighing whether to stay in Kitsap County or relocate closer to adult children",
@@ -1620,7 +1620,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
       ],
       whyLocal: "Silverdale's valuation landscape is shaped by rapid change — commercial growth, new residential development, and shifts in the military buyer pool all create a market where recent comparable sales may not fully represent current dynamics.",
     },
-    "home-preparation": {
+    "preparing-home-for-sale": {
       intro: "Preparing a Silverdale home for sale means understanding what today's buyers — a mix of military families, civilian professionals, and retirees — actually prioritize.",
       scenarios: [
         "An established Silverdale home competing with newer Ridgetop and Clear Creek construction — needing strategic updates that close the gap without over-investing",
@@ -1630,7 +1630,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
       ],
       whyLocal: "In Silverdale's market, established homes compete directly with newer construction in planned communities. The preparation strategy needs to account for this competitive dynamic — investing enough to be competitive without over-improving for a market where newer alternatives are readily available.",
     },
-    "divorce-real-estate": {
+    "divorce-related-home-sales": {
       intro: "Divorce-related property decisions in Silverdale often include considerations unique to military-connected communities — PCS timelines, VA loan implications, and housing allowance calculations that affect buyout decisions.",
       scenarios: [
         "A Silverdale divorce where one spouse is active military and a potential duty station change affects the timeline for property decisions",
@@ -1640,7 +1640,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
       ],
       whyLocal: "Silverdale divorce situations frequently involve military-specific considerations — BAH calculations, VA loan assumptions, PCS-driven timelines — alongside standard property valuation questions. Having a real estate professional who understands both the military community dynamics and Silverdale's specific market provides more complete guidance.",
     },
-    "trust-property-sales": {
+    "trust-estate-property-sales": {
       intro: "Trust-held properties in Silverdale often reflect an earlier version of the community — homes purchased before the commercial growth and residential development that have transformed Central Kitsap.",
       scenarios: [
         "A trustee managing a Silverdale property purchased decades ago, now surrounded by commercial development that has fundamentally changed the neighborhood's character",
