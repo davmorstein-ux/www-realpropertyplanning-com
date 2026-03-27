@@ -73,6 +73,7 @@ import SpokaneProbateEstate from "./pages/SpokaneProbateEstate";
 import VancouverWaProbateEstate from "./pages/VancouverWaProbateEstate";
 import EverettProbateEstate from "./pages/EverettProbateEstate";
 import KirklandProbateEstate from "./pages/KirklandProbateEstate";
+import RedmondProbateEstate from "./pages/RedmondProbateEstate";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
