@@ -357,6 +357,23 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     descriptor: "Wine country character with estate-style properties",
     heroIntro: "Woodinville is known for its wine country character, rural-residential neighborhoods, and properties that range from established homes near town to larger estate-style lots in the surrounding areas. For families navigating estate sales, senior transitions, or inherited property in Woodinville, the community's mix of suburban and rural-adjacent housing requires locally informed pricing and preparation guidance.",
     localKnowledge: "Woodinville's housing market includes everything from newer townhomes and condos near the town center to larger-lot properties and homes with acreage in the surrounding areas. The Sammamish River corridor, wine district proximity, and equestrian properties all create niche market segments. David Stein's appraisal credentials are especially valuable here, where property characteristics like land area, outbuildings, and rural features can meaningfully affect value.",
+    brokerAppraiserValue: "Woodinville's wine-country character and rural-residential properties create a market where automated tools trained on suburban data consistently fall short. Estate-style lots, equestrian properties, and wine-district-adjacent homes each require fundamentally different valuation approaches. David Stein's certified appraisal credentials provide the property-specific analysis Woodinville clients need when acreage, outbuildings, and rural character are primary value drivers.",
+    localSituations: [
+      "An estate-style property near the Woodinville wine district where the rural character and proximity to tasting rooms create niche buyer appeal",
+      "An inherited home on acreage in the surrounding areas where equestrian facilities, outbuildings, or agricultural features complicate standard residential pricing",
+      "A senior couple's longtime property along the Sammamish River corridor where trail access and natural setting add value automated tools miss",
+      "An executor managing a Woodinville property from out of state, unfamiliar with how the wine-country character and rural-residential features affect value",
+      "A trust-owned larger-lot property where the trustee needs defensible pricing that accounts for land, improvements, and the property's niche market position",
+      "A divorce-related sale involving a Woodinville home where the rural character and estate-style features create disagreement about comparable selection",
+    ],
+    localClientTypes: [
+      "Executors managing estate property in Woodinville's wine-country and rural-residential market",
+      "Families coordinating senior transitions from longtime Woodinville properties with acreage or estate-style characteristics",
+      "Attorneys handling probate or estate cases involving Woodinville property where rural features and wine-district proximity affect valuation",
+      "Trustees responsible for trust-owned Woodinville properties where equestrian facilities, outbuildings, or acreage require specialized assessment",
+      "Adult children managing a parent's Woodinville home sale from the metro area",
+      "Financial advisors needing Woodinville property valuations for estate settlement where rural-residential features create pricing complexity",
+    ],
   },
   kenmore: {
     tone: "waterfront",
