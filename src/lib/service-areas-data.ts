@@ -71,6 +71,14 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
       "An out-of-state executor managing a high-value Bellevue estate property",
       "A divorce-related sale in Bellevue where both parties need a neutral, experienced broker",
     ],
+    localClientTypes: [
+      "Executors and personal representatives managing high-value Bellevue estate property on the Eastside",
+      "Families coordinating senior transitions from established Bellevue neighborhoods to care communities or smaller residences",
+      "Attorneys handling probate or divorce cases involving Bellevue property where significant value makes pricing accuracy critical",
+      "Trustees managing trust-owned homes across Bellevue's wide spectrum — from Crossroads to West Bellevue to Somerset",
+      "Out-of-state heirs who need local coordination for an inherited Eastside property",
+      "Financial advisors needing defensible Bellevue property valuations for estate planning or settlement",
+    ],
   },
   kirkland: {
     tone: "suburban",
@@ -78,6 +86,22 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     heroIntro: "Kirkland combines waterfront living, walkable neighborhoods, and a strong sense of community — qualities that make it one of the most desirable cities on the Eastside. When a property transition involves probate, an estate sale, a senior move, or an inherited home in Kirkland, the process benefits from someone who understands how Kirkland's distinct neighborhoods and buyer expectations affect pricing and preparation strategy.",
     localKnowledge: "Kirkland's neighborhoods range from the boutique waterfront of Moss Bay and Houghton to the larger-lot homes of Juanita, Finn Hill, and Totem Lake. Each area attracts different buyers with different expectations. Selling an estate or inherited property in Kirkland requires understanding which improvements matter, how waterfront proximity affects value, and how to position a home that may not be in move-in condition against newer or recently updated listings.",
     brokerAppraiserValue: "Kirkland's appeal lies in its location, walkability, and neighborhood character — but those qualities can be difficult to quantify with automated tools. David Stein evaluates each property based on its actual condition, lot characteristics, and realistic buyer demand in Kirkland. His appraisal background provides an analytical foundation that supports confident pricing decisions, especially for properties that need preparation or have deferred maintenance.",
+    localSituations: [
+      "An inherited waterfront-area home in Moss Bay or Houghton where the premium location requires nuanced, condition-based pricing",
+      "A longtime family home in Juanita or Finn Hill where the established neighborhood character appeals to specific buyer demographics",
+      "A senior parent transitioning from a Kirkland home to assisted or independent living while the family coordinates the sale",
+      "A trust-owned property near Totem Lake where recent development activity changes comparable selection and buyer expectations",
+      "An executor managing a Kirkland estate property while living out of state, unfamiliar with the Eastside waterfront community's pricing dynamics",
+      "A divorce-related sale in Kirkland where walkability, waterfront proximity, and neighborhood character complicate objective valuation",
+    ],
+    localClientTypes: [
+      "Executors managing estate property across Kirkland's diverse neighborhoods — Moss Bay, Houghton, Juanita, Finn Hill, Totem Lake",
+      "Families coordinating senior transitions from waterfront-area and established Kirkland homes",
+      "Attorneys handling probate or divorce cases involving Kirkland property where waterfront proximity complicates valuation",
+      "Trustees responsible for trust-owned homes in Kirkland's varied neighborhoods with different buyer expectations",
+      "Adult children managing a parent's Kirkland home sale from out of state",
+      "Financial advisors needing Kirkland property valuations that account for the city's walkability and waterfront premiums",
+    ],
   },
   redmond: {
     tone: "suburban",
@@ -166,6 +190,15 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
       "A senior couple transitioning off the island to be closer to family or care resources",
       "An inherited property where multiple beneficiaries need objective valuation guidance",
       "A trust-owned home on Mercer Island that requires fiduciary-level sale coordination",
+      "A divorce-related sale on Mercer Island where the island's premium positioning and limited inventory complicate pricing",
+    ],
+    localClientTypes: [
+      "Executors managing high-value estate property on Mercer Island's exclusive residential market",
+      "Families coordinating senior transitions from longtime island homes to mainland care communities",
+      "Attorneys handling probate or divorce cases involving Mercer Island property where premium valuations carry significant legal consequences",
+      "Trustees responsible for trust-owned homes on Mercer Island where waterfront access and island premiums require specialized assessment",
+      "Out-of-state heirs who need local coordination for an inherited Mercer Island property",
+      "Financial advisors needing Mercer Island property valuations for estate planning in one of the region's most exclusive markets",
     ],
   },
   newcastle: {
@@ -187,6 +220,14 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
       "A trust-owned condo or townhome in Seattle's urban core that needs sale coordination",
       "A family home with rental history or ADU potential that requires nuanced valuation",
       "A divorce-related property sale in Seattle where neighborhood-level market knowledge is critical",
+    ],
+    localClientTypes: [
+      "Executors managing estate property across Seattle's 80+ distinct neighborhoods",
+      "Families coordinating senior transitions from longtime Seattle homes in neighborhoods with rapidly changing demographics",
+      "Attorneys handling probate or divorce cases involving Seattle property where neighborhood context dramatically affects value",
+      "Trustees responsible for trust-owned homes and condos across Seattle's diverse urban submarkets",
+      "Out-of-state heirs who need comprehensive local coordination for an inherited Seattle property",
+      "Financial advisors needing Seattle property valuations that go beyond citywide averages to reflect actual neighborhood conditions",
     ],
   },
   renton: {
