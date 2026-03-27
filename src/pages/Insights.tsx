@@ -47,6 +47,11 @@ const categories: Category[] = [
         description: "What affects timing, how probate and non-probate situations differ, and realistic expectations.",
         href: "/insights/estate-property-sale-timeline",
       },
+      {
+        title: "What Are the Biggest Mistakes When Selling Estate Property?",
+        description: "Common pricing, preparation, timing, and communication errors — and how to avoid them.",
+        href: "/insights/estate-property-mistakes",
+      },
     ],
   },
   {
@@ -74,6 +79,21 @@ const categories: Category[] = [
         description: "When cleanout is necessary, when it may not be needed, and a practical decision approach.",
         href: "/insights/estate-property-cleanout-before-sale",
       },
+      {
+        title: "Can You Sell an Inherited House Without Fixing It Up?",
+        description: "Pros and cons of selling as-is, when repairs make sense, and how to evaluate the decision.",
+        href: "/insights/sell-inherited-house-without-repairs",
+      },
+      {
+        title: "Do You Need to Empty a House Before Selling It?",
+        description: "When emptying matters, when it doesn't, and a practical approach to the decision.",
+        href: "/insights/empty-house-before-selling",
+      },
+      {
+        title: "How Do You Decide Whether to Sell or Keep an Inherited Property?",
+        description: "Financial considerations, emotional factors, and a simple decision framework.",
+        href: "/insights/sell-or-keep-inherited-property",
+      },
     ],
   },
   {
@@ -90,6 +110,11 @@ const categories: Category[] = [
         title: "Can an Executor Sell Before Probate in Washington?",
         description: "Understanding timing, legal authority, and preparation steps before a property can be listed.",
         href: "/guides/executor-sell-house-before-probate-washington",
+      },
+      {
+        title: "What Happens If Family Members Disagree About Selling?",
+        description: "Common conflict scenarios, communication strategies, and how to find a way forward.",
+        href: "/insights/family-disagreement-selling-house",
       },
     ],
   },
