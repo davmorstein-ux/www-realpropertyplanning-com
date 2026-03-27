@@ -95,6 +95,7 @@ import KentProbateEstate from "./pages/KentProbateEstate";
 import FederalWayProbateEstate from "./pages/FederalWayProbateEstate";
 import AuburnProbateEstate from "./pages/AuburnProbateEstate";
 import MarysvilleProbateEstate from "./pages/MarysvilleProbateEstate";
+import Insights from "./pages/Insights";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
