@@ -19,6 +19,14 @@ import {
   getToneHowWeHelpLead,
   getToneCTAHeading,
   getToneCTABody,
+  isTier1City,
+  getDeepCityServiceIntro,
+  getDeepCityServiceScenarios,
+  getDeepCityServiceHowWeHelp,
+  getDeepWhyLocalServiceMatters,
+  getDeepCTAHeading,
+  getDeepCTABody,
+  getDeepCTAButton,
 } from "@/lib/service-areas-data";
 import type { CityData, ServiceData } from "@/lib/service-areas-data";
 
