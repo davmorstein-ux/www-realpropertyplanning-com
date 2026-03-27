@@ -109,9 +109,35 @@ const Index = () => {
              <h1 className="font-serif text-4xl md:text-5xl lg:text-[54px] font-bold leading-[1.1] text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6), 0 4px 16px rgba(0,0,0,0.3), 0 0 40px rgba(0,0,0,0.2)' }}>
               Specialized Guidance for Probate, Estate &amp; Senior Transition Real Estate Across Washington State
             </h1>
-            <p className="mt-5 text-xl md:text-2xl text-white/90 leading-relaxed max-w-2xl mx-auto" style={{ textShadow: '0 1px 6px rgba(0,0,0,0.5)' }}>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════
+          WHO WE CAN HELP — Between hero and CTA
+      ═══════════════════════════════════════════════════ */}
+      <section className="py-12 lg:py-16 bg-primary border-b border-primary-foreground/10">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="font-serif text-2xl md:text-3xl text-primary-foreground font-semibold mb-4">
+              Who We Can Help
+            </h2>
+            <p className="text-primary-foreground/80 text-lg leading-relaxed mb-8">
               Reduce stress. Protect value. Get clear, valuation-informed strategy from a broker who understands what your family is going through.
             </p>
+            <ul className="space-y-3 text-left max-w-xl mx-auto">
+              {[
+                "Executors and personal representatives",
+                "Families handling inherited property",
+                "Seniors and their families navigating transitions",
+                "Attorneys and fiduciaries supporting clients",
+              ].map((item, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
+                  <span className="text-primary-foreground/90 text-lg leading-relaxed">{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
