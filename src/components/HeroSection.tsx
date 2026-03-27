@@ -36,11 +36,8 @@ const HeroSection = () => {
               Clear guidance to reduce stress, protect property value, and bring confidence to every decision along the way.
             </p>
 
-            <p className="text-base md:text-lg text-primary-foreground/70 mb-3 leading-relaxed max-w-2xl">
-              These situations can feel overwhelming. You don't have to figure it out alone.
-            </p>
             <p className="text-base md:text-lg text-primary-foreground/70 mb-8 leading-relaxed max-w-2xl">
-              David Stein brings 20+ years of dual expertise as a licensed broker and certified appraiser — working with executors, attorneys, trustees, and families across Washington State to organize next steps and guide the process from start to finish.
+              David Stein brings 20+ years of dual expertise as a licensed broker and certified appraiser — working with executors, attorneys, trustees, and families across Washington State.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
