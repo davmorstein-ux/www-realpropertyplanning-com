@@ -8,6 +8,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
 import MidPageCTA from "@/components/MidPageCTA";
+import ProofCallout from "@/components/ProofCallout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
@@ -145,6 +146,20 @@ const HowProbateRealEstateWorks = () => (
           <p className="text-muted-foreground leading-relaxed">
             This matters because overpricing leads to extended market time and declining buyer interest, while underpricing can create fiduciary concerns and leave estate value on the table. Accurate, defensible pricing protects both the executor's fiduciary obligations and the estate's financial interests. Learn more about <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">why valuation expertise matters in estate sales</Link>.
           </p>
+        </div>
+      </div>
+    </section>
+
+    {/* Proof callout */}
+    <section className="py-10 bg-background">
+      <div className="container px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto">
+          <ProofCallout
+            quote="David's dual background in brokerage and appraisal gave us confidence that the property was priced correctly. He made a complicated situation feel manageable."
+            attribution="Family Member, King County"
+            context="Probate property sale"
+            variant="accent"
+          />
         </div>
       </div>
     </section>
