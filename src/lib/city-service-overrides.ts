@@ -2392,12 +2392,412 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
       whyLocal: "Trust properties in Duvall require fiduciary guidance that accounts for the community's distinctive market — small inventory, specialized buyer interest, and properties with features that don't fit neatly into standard residential categories. David provides trustees with the Snoqualmie Valley knowledge and appraisal foundation needed to make well-supported decisions in a market where the usual suburban assumptions don't apply.",
     },
   },
-};
 
-/**
- * Look up a city-specific content override.
- * Returns undefined if no override exists for the city+service combination.
- */
+  // ═══════════════════════════════════════════════════════════════════
+  // MILITARY TONE — Lakewood
+  // Identity: JBLM-adjacent, lakefront properties (American Lake,
+  // Gravelly Lake), Tillicum, diverse housing, military buyer influence
+  // ═══════════════════════════════════════════════════════════════════
+
+  lakewood: {
+    "probate-estate-sales": {
+      intro: "Lakewood's real estate market is shaped by the proximity of Joint Base Lewis-McChord, lakefront properties on American Lake and Gravelly Lake, and a wide range of housing types across the city's diverse neighborhoods. When a probate or estate sale involves Lakewood property, understanding how military buyer demographics, lakefront premiums, and neighborhood-specific conditions affect pricing is essential. Real Property Planning provides the locally grounded guidance that Lakewood executors and families need.",
+      scenarios: [
+        "An estate property on or near American Lake where the waterfront location carries a premium but the home's age and condition create pricing complexity",
+        "A probate sale in the Tillicum area where JBLM proximity influences the buyer pool and rental-versus-owner-occupied dynamics affect strategy",
+        "Multiple heirs managing an inherited Lakewood home where one sibling lives near the base and others are scattered across the country",
+        "An estate home near Gravelly Lake where the exclusive enclave character creates a limited comparable-sales environment",
+        "A vacant estate property in Lakewood that needs assessment, cleanout, and preparation before it can compete with updated listings in a price-sensitive market",
+      ],
+      howWeHelp: [
+        "Property-specific valuation that distinguishes between Lakewood's lakefront, JBLM-adjacent, and suburban-interior submarkets",
+        "Assessment of how military buyer demographics and rental demand affect optimal sale strategy for estate properties",
+        "Coordination with probate attorneys on court documentation and timeline requirements",
+        "Property preparation guidance calibrated to Lakewood's price-sensitive market — focusing investment where it generates measurable return",
+        "Clear communication with multiple heirs or parties managing from different locations, including military relocations",
+        "Full transaction management from initial assessment through closing",
+      ],
+      whyLocal: "Lakewood's market operates differently from neighboring Tacoma or University Place because of JBLM's influence on buyer demographics, the distinct lakefront enclaves, and the city's wide price range. An estate property on American Lake faces a completely different buyer pool than one near the base. David Stein's on-site assessment accounts for these Lakewood-specific dynamics — military influence, lakefront premiums, and the practical realities of selling estate property in a market with diverse buyer expectations.",
+    },
+    "senior-transitions": {
+      intro: "Many Lakewood seniors have deep roots in the community — some connected to decades of military service, others drawn by the lakefront lifestyle or the city's established neighborhoods. When it's time to transition from a longtime Lakewood home, the process involves understanding how the city's unique market dynamics affect the sale while coordinating the move to a senior living community or family home. Real Property Planning helps Lakewood families navigate this transition with patience and practical expertise.",
+      scenarios: [
+        "A retired military couple on American Lake whose home has been the family gathering place for decades — now transitioning to a community with more support services",
+        "An adult child coordinating a parent's move from a Lakewood home to a Pierce County assisted living facility while managing the sale from out of state",
+        "A senior in a Tillicum-area home where the property's proximity to JBLM affects buyer demographics and the family needs guidance on realistic timeline expectations",
+        "A longtime Lakewood homeowner whose lakefront or lake-view property requires specialized marketing to reach the right buyer pool",
+        "A family balancing urgency around a parent's care needs with the practical steps of preparing and selling a Lakewood home",
+      ],
+      howWeHelp: [
+        "Condition-based valuation that accounts for how Lakewood's different buyer segments — military families, lakefront buyers, local families — evaluate properties",
+        "Strategic preparation recommendations calibrated to Lakewood's market — identifying which updates matter in each price tier",
+        "Timeline coordination aligned with the senior's move to assisted living, a family member's home, or a smaller local residence",
+        "Patient, respectful communication with seniors and their families throughout the process",
+        "Vendor coordination for cleanout, repairs, and presentation appropriate for the property's submarket",
+        "Full-service management so the family can focus on their parent's wellbeing",
+      ],
+      whyLocal: "Lakewood seniors often own homes in neighborhoods where military-influenced buyer cycles and lakefront dynamics create pricing patterns that differ from the broader Pierce County market. A senior selling a home near American Lake faces different considerations than one in a Tillicum neighborhood. David's experience with Lakewood's specific submarkets helps families set realistic expectations and prepare properties in ways that align with actual buyer demand.",
+    },
+    "downsizing-services": {
+      intro: "Downsizing from a Lakewood home involves navigating a market where lakefront properties, military-adjacent neighborhoods, and established suburban areas each attract different buyers and carry different values. Whether moving to a smaller Lakewood home, a Pierce County senior community, or relocating to be near family elsewhere, the process benefits from someone who understands how Lakewood's distinct submarkets affect both the sale proceeds and realistic next-step options.",
+      scenarios: [
+        "A retired couple on Gravelly Lake whose large lakefront home no longer fits their lifestyle — needing accurate pricing in a niche market with limited comparable sales",
+        "A military retiree in a Tillicum-area home who wants to downsize locally but needs to understand how JBLM-area pricing compares to other Lakewood neighborhoods",
+        "A senior whose children have relocated away from the JBLM area, considering whether to stay in Lakewood or move closer to family",
+        "A homeowner near American Lake weighing whether to sell and downsize within the lakefront community or transition to a more manageable property type",
+      ],
+      whyLocal: "Downsizing decisions in Lakewood are complicated by the city's segmented market — lakefront homes, JBLM-adjacent properties, and suburban-interior neighborhoods each have different demand profiles and sale timelines. Understanding how proceeds from one submarket translate into options in another requires the kind of local comparative analysis that David provides.",
+    },
+    "executor-support": {
+      intro: "Executors managing estate property in Lakewood face a market with distinctive dynamics — military buyer influence near JBLM, lakefront premiums on American and Gravelly Lakes, and a diverse range of housing types across the city's neighborhoods. Whether the estate property is a lakefront home, a property near the base, or a home in one of Lakewood's established suburban areas, executors need guidance that accounts for these Lakewood-specific factors.",
+      scenarios: [
+        "A newly appointed executor managing a Lakewood estate property while stationed elsewhere — unfamiliar with how JBLM proximity and lakefront premiums affect local pricing",
+        "An estate home on American Lake where the lakefront location carries significant value but the limited comparable sales make pricing complex",
+        "Co-executors who disagree about a Lakewood property's value because one references lakefront sales and the other references nearby suburban comps",
+        "An estate property in Tillicum that has been used as a rental and needs transition from investment to owner-occupied sale strategy",
+        "An executor coordinating with a probate attorney on a Lakewood property where military PCS cycles affect buyer availability and timing",
+      ],
+      howWeHelp: [
+        "Property-specific assessment that accounts for Lakewood's lakefront premiums, JBLM buyer demographics, and neighborhood-level pricing differences",
+        "Defensible pricing documentation suitable for beneficiary review and court records",
+        "Guidance on whether the property's optimal strategy targets military buyers, lakefront buyers, or the broader Pierce County market",
+        "Coordination of cleanout, preparation, and staging appropriate for the property's specific submarket",
+        "Regular communication for executors managing from out of area — including those on military assignments",
+        "End-to-end transaction management from assessment through closing",
+      ],
+      whyLocal: "Lakewood executors face a market where JBLM's PCS (Permanent Change of Station) cycles create seasonal buyer fluctuations, and lakefront properties operate in a niche market with limited inventory. An executor who doesn't account for these Lakewood-specific patterns risks mispricing or mistiming the sale. David's local experience helps executors navigate these dynamics with confidence.",
+    },
+    "attorney-fiduciary-support": {
+      intro: "Attorneys and fiduciaries managing property matters in Lakewood need a real estate partner who understands the city's military-influenced market, lakefront property dynamics, and the diverse housing stock across Lakewood's neighborhoods. Real Property Planning works with Lakewood-area legal professionals as a responsive, credentialed resource for estate, trust, probate, divorce, and guardianship property matters.",
+      scenarios: [
+        "A probate attorney managing a Lakewood estate where the property's lakefront location creates valuation complexity that requires more than automated estimates",
+        "A trustee overseeing trust-held property near JBLM who needs guidance on how military buyer demographics affect sale strategy and timing",
+        "A family law attorney handling a divorce involving a Lakewood home where the parties disagree on how JBLM proximity affects value",
+        "An elder law attorney coordinating a client's lakefront property sale alongside a transition to assisted living in Pierce County",
+        "An estate planning attorney advising a Lakewood client on property disposition where rental history and military tenant considerations complicate the analysis",
+      ],
+      howWeHelp: [
+        "Defensible property assessments that account for Lakewood's lakefront, military-adjacent, and suburban submarkets",
+        "Responsive communication calibrated to legal timelines and professional documentation standards",
+        "Pricing documentation grounded in appraisal-level methodology for court proceedings and settlement negotiations",
+        "Strategic guidance on property preparation appropriate for Lakewood's specific buyer demographics",
+        "Coordination across legal, financial, and family stakeholders with clear reporting",
+        "A consistent local resource for ongoing property-related referrals in the JBLM corridor",
+      ],
+      whyLocal: "Lakewood's legal professionals encounter property matters where military influence, lakefront premiums, and the city's diverse housing stock create valuation challenges that generic approaches miss. A home on Gravelly Lake and a property in Tillicum represent fundamentally different markets — yet both are 'Lakewood.' David provides the submarket-specific analysis that attorneys and fiduciaries need for defensible opinions.",
+    },
+    "valuation-guidance": {
+      intro: "Lakewood's real estate market presents distinct valuation challenges — lakefront properties on American Lake and Gravelly Lake operate in a niche market, JBLM-adjacent areas are influenced by military buyer cycles, and the city's broader neighborhoods span a wide price range. When accurate property valuation matters for estate planning, divorce, trust administration, or a pending sale, Lakewood's segmented market makes property-specific assessment essential.",
+      scenarios: [
+        "An estate planning attorney needing current market valuation for a lakefront Lakewood property where limited comparable sales make automated estimates unreliable",
+        "Divorcing spouses who disagree on their Lakewood home's value because one cites lakefront sales and the other references more modest nearby neighborhoods",
+        "A trustee needing documented valuation for a trust-owned Lakewood property where military rental history complicates the owner-occupied market comparison",
+        "Heirs questioning an automated estimate for an inherited Lakewood home that doesn't account for JBLM buyer demographics or the property's specific condition",
+      ],
+      whyLocal: "Lakewood's valuation landscape is defined by three distinct submarkets — exclusive lakefront, JBLM-influenced, and suburban-general — that automated tools frequently conflate. A property on American Lake may be worth multiples of a similar-sized home near the base, but only if condition and access meet lakefront buyer expectations. David's certified appraisal credentials provide the property-specific analysis that Lakewood's segmented market requires.",
+    },
+    "preparing-home-for-sale": {
+      intro: "Preparing a Lakewood home for sale requires understanding which buyer segment the property will attract — lakefront buyers expect different presentation than military families or suburban families. Real Property Planning helps Lakewood sellers identify which improvements generate return in their specific submarket, avoiding both under-preparation that leaves value on the table and over-investment that the market won't reward.",
+      scenarios: [
+        "A lakefront home on American Lake that needs dock assessment, exterior updates, and presentation that highlights the waterfront lifestyle",
+        "A Tillicum-area home where targeted, cost-effective preparation can meaningfully improve appeal to military-family buyers without exceeding the neighborhood's price ceiling",
+        "An estate property in Lakewood's suburban interior that needs cleanout, paint, and carpet to compete with updated listings in the same price range",
+        "A former rental property near JBLM being converted from investment presentation to owner-occupied sale — needing guidance on which tenant-era wear to address",
+      ],
+      whyLocal: "Preparation strategy in Lakewood depends heavily on which submarket the property serves. Lakefront homes warrant premium staging and exterior investment; JBLM-adjacent homes need practical, cost-conscious improvements that appeal to military-family budgets. David's experience with Lakewood's distinct buyer segments helps sellers invest preparation dollars where they'll generate the strongest return.",
+    },
+    "divorce-related-home-sales": {
+      intro: "Divorce-related property sales in Lakewood are complicated by the city's segmented market — lakefront homes, JBLM-adjacent properties, and suburban-interior neighborhoods each have different valuations, and spouses may reference very different comparable sales to support their positions. Real Property Planning provides the objective, property-specific pricing that Lakewood divorce situations require, including situations involving military service members and PCS-related timelines.",
+      scenarios: [
+        "A military couple divorcing where one spouse is being reassigned and the Lakewood home needs to be sold on a PCS-driven timeline",
+        "A family law attorney needing neutral pricing for a Lakewood lakefront property where both parties cite different comparable sales from different submarkets",
+        "A mediated divorce involving a Lakewood home where one party wants to retain the property — needing buyout valuation that accounts for JBLM market dynamics",
+        "A contentious divorce where the Lakewood home's proximity to the base creates disagreement about whether military rental demand supports a higher or lower valuation",
+      ],
+      whyLocal: "Divorce negotiations involving Lakewood property often involve military-specific considerations — PCS timelines, BAH (Basic Allowance for Housing) rental dynamics, and the question of whether the home's value reflects its owner-occupied appeal or its rental income potential. David's experience with JBLM-area properties helps both parties and their attorneys arrive at fair, defensible valuations that account for Lakewood's specific market realities.",
+    },
+    "trust-estate-property-sales": {
+      intro: "Trust-owned property in Lakewood may include lakefront homes on American or Gravelly Lake, established suburban properties, or homes in JBLM-adjacent neighborhoods — each requiring different fiduciary considerations. Real Property Planning provides trustees with the locally informed, defensible guidance that Lakewood's segmented real estate market demands.",
+      scenarios: [
+        "A successor trustee managing a trust-owned lakefront property on American Lake where the limited comparable sales and premium location require on-site assessment",
+        "A corporate trustee needing local expertise for a Lakewood property where JBLM buyer demographics and military rental cycles affect optimal sale timing",
+        "A trustee preparing to sell a trust-owned home in Lakewood's suburban interior where the property competes against a range of housing types and price points",
+        "A beneficiary questioning the trustee's pricing because automated estimates don't distinguish between Lakewood's lakefront and non-lakefront submarkets",
+      ],
+      whyLocal: "Trust property sales in Lakewood require fiduciary guidance that accounts for the city's distinct market segments. A trustee who prices a lakefront property based on suburban comps — or vice versa — creates fiduciary exposure. David's dual credentials provide the submarket-specific analysis that Lakewood trust situations demand, ensuring pricing decisions can withstand beneficiary scrutiny.",
+    },
+  },
+
+  // ═══════════════════════════════════════════════════════════════════
+  // SUBURBAN TONE — Bothell (cross-county, distinct from Kirkland/
+  // Issaquah/Redmond via dual-county identity, Canyon Park growth,
+  // UW Bothell campus influence, Sammamish River corridor)
+  // ═══════════════════════════════════════════════════════════════════
+
+  bothell: {
+    "probate-estate-sales": {
+      intro: "Bothell straddles the King and Snohomish County line — a dual-county position that creates unique real estate dynamics for probate and estate sales. Comparable sales may come from either side of the county boundary, buyer demographics shift between the original downtown core and the Canyon Park corridor, and the UW Bothell campus has transformed the city's northern edge. Real Property Planning provides the cross-county expertise that Bothell estate situations require.",
+      scenarios: [
+        "An estate property in Bothell's original downtown core where the home's mid-century character and walkable location appeal to a different buyer than Canyon Park's newer construction",
+        "Multiple heirs managing an inherited home near the King-Snohomish County line where comparable sales from either county support different pricing conclusions",
+        "A probate sale involving a property near UW Bothell where the campus's growth has changed the neighborhood's buyer profile and development potential",
+        "An estate home along the Sammamish River corridor where the lot characteristics and trail access add value that automated estimates miss",
+        "An out-of-state executor unfamiliar with how Bothell's dual-county location affects which comparable sales are most relevant",
+      ],
+      howWeHelp: [
+        "Cross-county valuation analysis that draws comparable sales from both King and Snohomish County neighborhoods as appropriate",
+        "Assessment of how Canyon Park redevelopment and UW Bothell campus growth affect nearby residential values",
+        "Coordination with probate attorneys on court documentation and timeline requirements",
+        "Property preparation guidance that reflects what Bothell's specific buyer segments expect in each submarket",
+        "Clear communication with multiple heirs or parties managing the process from different locations",
+        "Full transaction management accounting for Bothell's dual-county market dynamics",
+      ],
+      whyLocal: "Bothell's dual-county position means that a home near the Snohomish County line may compete against Canyon Park listings, while one near downtown Bothell competes with Kenmore or Woodinville. This cross-boundary dynamic makes automated estimates — which typically draw from a single geographic radius — especially unreliable. David Stein's on-site assessment accounts for which comparable sales actually apply to each Bothell property based on its specific location and buyer pool.",
+    },
+    "senior-transitions": {
+      intro: "Many Bothell seniors have lived in the community through decades of transformation — from a quiet crossroads town to a growing city with a university campus, expanding commercial corridors, and evolving neighborhoods. When it's time to transition from a longtime Bothell home, the sale involves understanding how the city's growth has affected property values while coordinating a move that may lead to a nearby senior community, a family member's home, or a smaller local residence.",
+      scenarios: [
+        "A senior couple in original downtown Bothell whose mid-century home sits in a neighborhood that has changed significantly — needing guidance on how current buyer expectations affect pricing",
+        "An adult child coordinating a parent's move from a Bothell home to a Snohomish or King County senior living community while managing the sale remotely",
+        "A longtime homeowner near the Sammamish River corridor whose property benefits from trail access and natural setting but hasn't been updated in years",
+        "A family balancing a parent's care timeline with the practical requirements of preparing a Bothell home for a market that rewards updated condition",
+        "A senior in a Canyon Park area home where newer surrounding development creates both competition and buyer interest",
+      ],
+      howWeHelp: [
+        "Condition-based valuation that reflects how Bothell's evolving buyer pool evaluates older homes against newer Canyon Park construction",
+        "Strategic preparation guidance specific to Bothell — which investments matter for original-core homes versus Canyon Park area properties",
+        "Timeline coordination aligned with the senior's move to a care community, family home, or smaller residence",
+        "Patient communication with seniors and adult children managing the transition from different locations",
+        "Vendor coordination for cleanout, repairs, and staging appropriate for Bothell's market expectations",
+        "Full-service management so the family can focus on the transition rather than transaction logistics",
+      ],
+      whyLocal: "Bothell seniors often own homes in the original core or established neighborhoods that have been reshaped by the city's growth. The gap between what these homes meant to the family and what today's market values can be significant — especially when competing against newer construction in Canyon Park. David's appraisal background helps families understand where their Bothell property actually stands and what preparation makes practical sense.",
+    },
+    "downsizing-services": {
+      intro: "Downsizing from a Bothell home means navigating a market that spans two counties and includes everything from mid-century homes in the original downtown to newer condos and townhomes near Canyon Park. Whether staying in the Bothell area or relocating, the process benefits from someone who understands how the city's diverse housing options and dual-county dynamics affect both the sale and realistic next-step planning.",
+      scenarios: [
+        "A couple in a larger Bothell home near the Snohomish County line who want to downsize to a condo or townhome — needing to understand how their sale proceeds translate in the current market",
+        "A retiree in original downtown Bothell considering whether to stay in the community in a smaller home or move closer to family elsewhere",
+        "A homeowner near Canyon Park whose property competes with newer construction — uncertain whether the home's strengths offset its age in today's market",
+        "A family helping a parent transition from a Sammamish River corridor home to a more manageable living situation",
+      ],
+      whyLocal: "Downsizing in Bothell is complicated by the city's dual-county housing market and the wide range of replacement options — from established King County neighborhoods to newer Snohomish County developments. Understanding how sale proceeds from one Bothell submarket translate into purchasing power in another requires cross-county market knowledge that David provides.",
+    },
+    "executor-support": {
+      intro: "Executors managing estate property in Bothell face a market where the city's dual-county position, the Canyon Park growth corridor, and the contrast between established neighborhoods and newer development all affect pricing and strategy. Whether the estate property is a mid-century home near downtown, a property near UW Bothell, or a home in the Canyon Park area, executors need guidance that accounts for Bothell's specific cross-county dynamics.",
+      scenarios: [
+        "A newly appointed executor managing a Bothell estate property while living out of state — unsure whether King County or Snohomish County comparable sales are more relevant",
+        "An estate home near UW Bothell where the university's growth has changed the neighborhood — creating questions about development potential versus residential value",
+        "Co-executors who disagree about a Bothell property's value because one references Canyon Park sales and the other cites original-core comparables",
+        "An estate property along the Sammamish River corridor where trail access and natural setting create value that automated tools don't capture",
+        "An executor coordinating with a probate attorney on a Bothell property where the dual-county location creates jurisdictional considerations",
+      ],
+      howWeHelp: [
+        "Cross-county property assessment drawing relevant comparables from both King and Snohomish County as appropriate",
+        "Defensible pricing documentation using appraisal-level methodology for beneficiary review and court records",
+        "Guidance on whether the estate property's value is driven by residential use, development potential, or lot characteristics",
+        "Coordination of cleanout, preparation, and staging appropriate for the property's specific Bothell submarket",
+        "Regular communication for executors managing remotely",
+        "End-to-end transaction management accounting for Bothell's dual-county dynamics",
+      ],
+      whyLocal: "Bothell executors face the unusual challenge of a market that straddles two counties — meaning comparable sales, buyer demographics, and even tax implications can vary based on which side of the boundary the property sits. David's experience with Bothell's specific cross-county dynamics helps executors avoid the pricing errors that occur when the wrong comparables are applied.",
+    },
+    "attorney-fiduciary-support": {
+      intro: "Attorneys and fiduciaries managing property matters in Bothell need a real estate partner who understands the city's dual-county market dynamics, the contrast between established and newly developed neighborhoods, and the documentation standards that legal proceedings require. Real Property Planning works with Bothell-area legal professionals as a responsive, credentialed resource for property matters that span King and Snohomish County boundaries.",
+      scenarios: [
+        "A probate attorney managing a Bothell estate where the dual-county location creates questions about which comparable sales are most defensible",
+        "A trustee overseeing trust-held property near Canyon Park who needs guidance on how the area's rapid development affects the property's current value",
+        "A family law attorney handling a divorce involving a Bothell home where the parties disagree about value based on different county-side comparables",
+        "An elder law attorney coordinating a client's Bothell property sale alongside a transition to senior living in the north King or south Snohomish corridor",
+        "An estate planning attorney advising a Bothell client where the property's proximity to UW Bothell raises development-potential questions",
+      ],
+      howWeHelp: [
+        "Cross-county property assessments that use appropriate comparables from both King and Snohomish County",
+        "Responsive communication calibrated to legal timelines and professional expectations",
+        "Pricing documentation grounded in appraisal-level methodology for court proceedings and settlement negotiations",
+        "Strategic guidance on property preparation for Bothell's competitive and evolving market",
+        "Coordination across legal, financial, and family stakeholders with clear reporting",
+        "A consistent locally expert resource for ongoing property-related referrals in the cross-county corridor",
+      ],
+      whyLocal: "Bothell's dual-county position creates property valuation scenarios that attorneys in single-county markets rarely encounter. A defensible pricing opinion for a Bothell property must account for which county's sales are truly comparable — a distinction that automated tools and distant brokers routinely miss. David provides the cross-boundary analysis that Bothell-area attorneys and fiduciaries need.",
+    },
+    "valuation-guidance": {
+      intro: "Bothell's dual-county position creates valuation complexity that few other cities present — comparable sales from King County and Snohomish County may support different pricing conclusions, and the city's rapid evolution from a quiet crossroads to a growing university-adjacent community has created neighborhoods with very different value trajectories. Real Property Planning provides the property-specific, cross-county valuation insight that Bothell situations require.",
+      scenarios: [
+        "An estate planning attorney needing current valuation for a Bothell property where King County and Snohomish County comparable sales suggest different price ranges",
+        "Divorcing spouses who disagree on their Bothell home's value because each cites sales from a different county or submarket",
+        "A trustee needing documented valuation for a trust-owned Bothell property near the Canyon Park growth corridor where development activity is changing comparables",
+        "Heirs questioning an automated estimate that averaged incompatible sales from both sides of the county line",
+      ],
+      whyLocal: "Bothell's valuation challenges stem from its dual-county identity — automated tools that draw comparable sales from a geographic radius inevitably mix King County and Snohomish County markets, producing unreliable estimates. David's certified appraisal credentials and local experience allow him to select the truly relevant comparables for each Bothell property, providing the analytically grounded valuation that cross-county situations demand.",
+    },
+    "preparing-home-for-sale": {
+      intro: "Preparing a Bothell home for sale requires understanding whether the property competes against Canyon Park's newer construction, established homes in the original downtown core, or properties along the Sammamish River corridor — each segment with different buyer expectations. Real Property Planning helps Bothell sellers identify which improvements generate return in their specific submarket and avoid preparation that exceeds what the market will reward.",
+      scenarios: [
+        "A mid-century home near downtown Bothell where the walkable character is desirable but the finishes need updating to compete with newer Canyon Park listings",
+        "A property along the Sammamish River corridor where outdoor spaces and trail access are selling points but the home's interior needs modernization",
+        "An estate property near UW Bothell that needs cleanout and presentation — with questions about whether to target student-rental investors or owner-occupants",
+        "A Canyon Park area home where the surrounding newer development sets high buyer expectations for condition and finish",
+      ],
+      whyLocal: "Preparation strategy in Bothell depends on which submarket the property serves. Downtown-core homes can leverage walkability and character; Canyon Park properties need to match the area's newer construction standards; river corridor homes should highlight their natural setting. David's knowledge of Bothell's distinct buyer expectations in each area helps sellers invest preparation dollars strategically.",
+    },
+    "divorce-related-home-sales": {
+      intro: "Divorce-related property sales in Bothell are complicated by the city's dual-county market — spouses and their attorneys may reference comparable sales from different counties, and the wide range of Bothell's neighborhoods means the same city name can encompass very different property values. Real Property Planning provides the objective, cross-county analysis that Bothell divorce situations require.",
+      scenarios: [
+        "A divorcing couple with a Bothell home near the county line where King County and Snohomish County comparable sales support different valuations",
+        "A family law attorney needing neutral pricing for a Bothell property where one spouse cites Canyon Park's newer-construction values and the other references the original-core neighborhood",
+        "A mediated divorce involving a home near UW Bothell where development potential creates disagreement about whether the property's value is residential or speculative",
+        "A divorce where one party wants to retain the Bothell home — needing buyout valuation that accurately reflects the property's position in the dual-county market",
+      ],
+      whyLocal: "Divorce negotiations involving Bothell property are uniquely complicated by the dual-county dynamic. Each party's attorney may pull comparables from different sides of the King-Snohomish boundary, reaching different conclusions. David's cross-county experience and appraisal credentials provide the neutral, property-specific analysis needed for equitable resolution.",
+    },
+    "trust-estate-property-sales": {
+      intro: "Trust-owned property in Bothell presents fiduciary challenges that reflect the city's dual-county position and evolving market — trustees need guidance that accounts for which county's comparables apply, how Canyon Park's growth affects neighboring values, and whether the property's location near UW Bothell creates development considerations. Real Property Planning provides trustees with the cross-county expertise that Bothell trust administration requires.",
+      scenarios: [
+        "A successor trustee managing a trust-owned Bothell home where the dual-county location creates uncertainty about which comparable sales support defensible pricing",
+        "A corporate trustee needing local expertise for a Bothell property near Canyon Park where rapid development is changing the competitive landscape",
+        "A trustee preparing to sell a trust-owned home near the Sammamish River corridor where trail access and natural setting create value that desktop valuation tools miss",
+        "A beneficiary questioning the trust's pricing because automated estimates mix King County and Snohomish County sales indiscriminately",
+      ],
+      whyLocal: "Trust property sales in Bothell require fiduciary guidance that navigates the city's dual-county market with precision. A trustee who applies the wrong county's comparables — or blends both without distinction — creates pricing that may not withstand beneficiary challenge. David's cross-county experience and appraisal background provide the defensible, property-specific analysis that Bothell trust situations demand.",
+    },
+  },
+
+  // ═══════════════════════════════════════════════════════════════════
+  // SUBURBAN TONE — Kent (distinct from Kirkland/Issaquah/Redmond via
+  // South King County identity, valley/East Hill/West Hill geography,
+  // industrial adjacency, diverse housing stock, price-sensitive market)
+  // ═══════════════════════════════════════════════════════════════════
+
+  kent: {
+    "probate-estate-sales": {
+      intro: "Kent is one of the largest cities in King County, with a housing market that spans the East Hill's established ramblers, newer construction throughout the city, West Hill properties, and valley-floor homes adjacent to commercial and industrial corridors. When a probate or estate sale involves Kent property, the wide range of housing types and the significant pricing differences between locations within the city make neighborhood-level guidance essential. Real Property Planning brings the South King County expertise that Kent estate situations require.",
+      scenarios: [
+        "An estate property on Kent's East Hill where the 1960s-era rambler sits in a neighborhood that has seen significant demographic and market changes",
+        "A probate sale involving a West Hill property where views and lot size create value but the home's condition requires honest assessment against updated competition",
+        "Multiple heirs managing an inherited Kent home where the property's valley location near industrial areas affects buyer perception and realistic pricing",
+        "An estate home near the Panther Lake neighborhood where recent development has created new comparable sales that change the pricing landscape",
+        "An out-of-state executor unfamiliar with how Kent's East Hill, West Hill, and valley submarkets produce dramatically different values for similar-sized homes",
+      ],
+      howWeHelp: [
+        "Neighborhood-specific valuation distinguishing between Kent's East Hill, West Hill, valley, and Panther Lake submarkets",
+        "Assessment of how industrial adjacency, commercial corridor proximity, and school boundaries affect property values in specific Kent neighborhoods",
+        "Coordination with probate attorneys on court documentation and timeline requirements",
+        "Property preparation guidance calibrated to Kent's price-sensitive market — focusing investment on improvements that generate measurable return",
+        "Clear communication with multiple heirs or parties managing the process from different locations",
+        "Full transaction management from initial assessment through closing in Kent's competitive market",
+      ],
+      whyLocal: "Kent's housing market is shaped by geography — East Hill homes face different buyer expectations than valley-floor properties or West Hill view homes. The city's proximity to major employers, industrial areas, and transportation corridors creates submarket dynamics that automated estimates frequently flatten into a single 'Kent average.' David Stein's on-site assessment accounts for how specific location, condition, and neighborhood context affect realistic pricing.",
+    },
+    "senior-transitions": {
+      intro: "Many Kent seniors have lived on the East Hill or in established valley neighborhoods for decades — watching the city grow from a smaller community into one of South King County's largest cities. When it's time to transition from a longtime Kent home, the process involves understanding how the city's growth and changing demographics have affected property values while coordinating a move that respects the family's pace and priorities.",
+      scenarios: [
+        "A senior couple on East Hill whose 1970s rambler has been the family home for decades but needs updates to compete with newer construction entering the market",
+        "An adult child coordinating a parent's move from a Kent home to a South King County assisted living community while managing the sale from out of state",
+        "A longtime homeowner in the Panther Lake area whose neighborhood has evolved — needing guidance on how recent development affects their property's current market position",
+        "A family balancing a parent's care needs with the practical requirements of selling a Kent home in a price-sensitive market where preparation significantly affects outcome",
+        "A senior in a valley-area Kent home where industrial adjacency affects buyer perception — needing honest guidance on realistic pricing expectations",
+      ],
+      howWeHelp: [
+        "Condition-based valuation that reflects how Kent's different buyer segments evaluate older homes against the city's newer inventory",
+        "Strategic preparation recommendations calibrated to Kent's market — identifying which updates matter in the property's specific price tier and location",
+        "Timeline coordination aligned with the senior's move to assisted living, a family home, or a smaller local residence",
+        "Patient, respectful communication with seniors and their families throughout the process",
+        "Vendor coordination for cleanout, repairs, and presentation appropriate for Kent's market",
+        "Full-service management so the family can prioritize their parent's transition",
+      ],
+      whyLocal: "Kent seniors often own homes in neighborhoods where the surrounding community has changed significantly. The East Hill that a senior remembers from the 1970s looks and functions differently today — and the buyer pool has evolved accordingly. David's experience with Kent's specific submarkets helps families set realistic expectations and prepare properties in ways that match what today's buyers are actually looking for.",
+    },
+    "downsizing-services": {
+      intro: "Downsizing from a Kent home involves navigating one of South King County's most diverse housing markets — where East Hill ramblers, valley townhomes, and West Hill view properties each serve different buyer segments and carry different values. Whether staying in Kent or moving to a smaller community, the process benefits from someone who understands how the city's wide range of housing options and price points affects both the sale and realistic next-step planning.",
+      scenarios: [
+        "A couple on East Hill whose large rambler on a generous lot is more home than they need — wanting to understand how their property's value compares to the condo and townhome options available in South King County",
+        "A retiree in a West Hill home with views who wants to downsize but is uncertain how their property's location-based premium translates to purchasing power elsewhere",
+        "A homeowner near Panther Lake considering whether to stay in Kent in a smaller home or relocate to a community with more senior-oriented amenities",
+        "A family helping a parent transition from a valley-area Kent home where the neighborhood's commercial adjacency affects pricing expectations",
+      ],
+      whyLocal: "Downsizing decisions in Kent are complicated by the city's wide price range — an East Hill rambler, a valley condo, and a West Hill view home represent very different values and buyer pools. Understanding how proceeds from one Kent submarket translate into options in another (or in neighboring cities) requires the comparative market knowledge that David provides.",
+    },
+    "executor-support": {
+      intro: "Executors managing estate property in Kent face one of South King County's most diverse housing markets — where East Hill, West Hill, valley, and Panther Lake properties each operate in different micro-markets with different buyer expectations. Whether the estate property is a midcentury rambler on the East Hill, a townhome near the valley floor, or a view property on the West Hill, executors need guidance that reflects Kent's neighborhood-level pricing realities.",
+      scenarios: [
+        "A newly appointed executor managing a Kent estate property while living out of state — unfamiliar with how East Hill pricing differs from valley or West Hill neighborhoods",
+        "An estate home on East Hill where the property needs significant updates to compete in a market where buyers increasingly expect move-in condition",
+        "Co-executors who disagree about a Kent property's value because one references East Hill sales and the other cites nearby valley-floor comparables",
+        "An estate property near the valley floor where commercial and industrial adjacency affects buyer perception and realistic pricing expectations",
+        "An executor coordinating with a probate attorney on a Kent property where the city's diverse housing stock makes identifying true comparable sales complex",
+      ],
+      howWeHelp: [
+        "Property-specific assessment accounting for Kent's East Hill, West Hill, valley, and Panther Lake submarket differences",
+        "Defensible pricing documentation using appraisal-level methodology for beneficiary review and court records",
+        "Guidance on which preparation investments generate return in the property's specific Kent price tier and location",
+        "Coordination of cleanout, preparation, and staging appropriate for the property's submarket and buyer expectations",
+        "Regular communication for executors managing from out of area",
+        "End-to-end transaction management from assessment through closing",
+      ],
+      whyLocal: "Kent executors face a market where the difference between neighborhoods — East Hill versus valley, Panther Lake versus West Hill — can represent significant pricing variation. An executor who relies on a single 'Kent' average risks either leaving money on the table or overpricing into a stale listing. David's South King County experience helps executors price accurately for their property's specific submarket.",
+    },
+    "attorney-fiduciary-support": {
+      intro: "Attorneys and fiduciaries managing property matters in Kent need a real estate partner who understands South King County's largest city — its diverse housing stock, the geographic divisions that create distinct micro-markets, and the documentation standards that legal proceedings require. Real Property Planning works with Kent-area legal professionals as a responsive, credentialed resource for estate, trust, probate, divorce, and guardianship property matters across the city's varied neighborhoods.",
+      scenarios: [
+        "A probate attorney managing a Kent estate where beneficiaries disagree about value based on incompatible comparable sales from different Kent neighborhoods",
+        "A trustee overseeing trust-held property on Kent's East Hill who needs defensible pricing that reflects the specific neighborhood's current market dynamics",
+        "A family law attorney handling a divorce involving a Kent home where the property's location within the city dramatically affects its value",
+        "An elder law attorney coordinating a client's Kent property sale alongside a transition to senior living in South King County",
+        "An estate planning attorney advising a Kent client on property disposition where the lot size and zoning create development-potential questions",
+      ],
+      howWeHelp: [
+        "Defensible property assessments distinguishing between Kent's East Hill, West Hill, valley, and Panther Lake submarkets",
+        "Responsive communication calibrated to legal timelines and professional standards",
+        "Pricing documentation grounded in appraisal-level methodology for court proceedings and settlement negotiations",
+        "Strategic guidance on property preparation appropriate for the specific Kent neighborhood and price tier",
+        "Coordination across legal, financial, and family stakeholders with clear reporting",
+        "A consistent South King County resource for ongoing property-related referrals",
+      ],
+      whyLocal: "Kent's attorneys encounter property matters where the city's geographic diversity creates valuation complexity — an East Hill rambler and a valley townhome both carry a Kent address but serve very different markets. David provides the neighborhood-specific analysis that attorneys and fiduciaries need for defensible pricing opinions in a city where 'Kent' encompasses a wider range of values than most clients expect.",
+    },
+    "valuation-guidance": {
+      intro: "Kent's size and geographic diversity create valuation challenges that simpler markets don't present — East Hill, West Hill, the valley floor, and Panther Lake each have their own comparable-sales patterns, buyer demographics, and pricing dynamics. When accurate property valuation matters for estate planning, divorce, trust administration, or a pending sale, Kent's internal market segmentation makes property-specific assessment essential.",
+      scenarios: [
+        "An estate planning attorney needing current valuation for a Kent East Hill property where the neighborhood's changing demographics create questions about comparable sales selection",
+        "Divorcing spouses who disagree on their Kent home's value because each cites sales from a different Kent submarket to support their position",
+        "A trustee needing documented valuation for a trust-owned Kent property where the valley location and commercial adjacency complicate standard residential comparisons",
+        "Heirs questioning an automated estimate for an inherited Kent home that doesn't account for the property's specific East Hill or West Hill location premium",
+      ],
+      whyLocal: "Kent's valuation landscape is complicated by the city's size and the significant pricing differences between its submarkets. Automated tools that average sales across a wide radius produce estimates that don't reflect any specific Kent neighborhood accurately. David's certified appraisal credentials and South King County experience provide the submarket-specific analysis that Kent's diverse housing market requires.",
+    },
+    "preparing-home-for-sale": {
+      intro: "Preparing a Kent home for sale requires understanding what buyers expect in the property's specific submarket — East Hill buyers have different expectations than those shopping in the valley or on the West Hill. Real Property Planning helps Kent sellers identify which improvements drive return at their price point and location, avoiding both under-preparation that limits buyer interest and over-investment that the local market won't support.",
+      scenarios: [
+        "An East Hill rambler with original 1960s finishes where targeted updates to the kitchen and bathrooms can meaningfully improve buyer appeal without exceeding the neighborhood's price ceiling",
+        "A West Hill property with views where exterior presentation and curb appeal matter because the location premium only applies when the home shows well",
+        "An estate property near the valley floor that needs cleanout, paint, and carpet to compete — but where the price point limits how much preparation investment makes financial sense",
+        "A Panther Lake area home where newer surrounding construction sets buyer expectations that the older property needs to address strategically",
+      ],
+      whyLocal: "Preparation strategy in Kent depends heavily on the property's location and price tier. An East Hill home at one price point warrants different investment than a valley-floor property at another. Over-improving a Kent home beyond what the neighborhood supports wastes the seller's money; under-preparing it costs more in sale price than the preparation would have cost. David's experience with Kent's distinct submarkets helps sellers find the right balance.",
+    },
+    "divorce-related-home-sales": {
+      intro: "Divorce-related property sales in Kent are complicated by the city's internal market segmentation — spouses and their attorneys may reference comparable sales from different Kent neighborhoods that support very different value conclusions. The East Hill, West Hill, valley, and Panther Lake areas each function as distinct micro-markets, and accurate pricing requires understanding which comparables truly apply. Real Property Planning provides the objective, neighborhood-specific analysis that Kent divorce situations require.",
+      scenarios: [
+        "A divorcing couple with an East Hill home where one spouse cites recent new-construction sales nearby while the other references the older homes that are more directly comparable",
+        "A family law attorney needing neutral pricing for a Kent property where the home's West Hill location and views create a premium that needs objective documentation",
+        "A mediated divorce involving a Kent home where one party wants to retain the property — needing buyout valuation that accurately reflects the specific neighborhood's market",
+        "A contentious divorce where the Kent home's proximity to commercial areas creates disagreement about whether the location depresses or supports value",
+      ],
+      whyLocal: "Divorce negotiations involving Kent property are complicated by the city's wide price range and internal diversity. Both parties may be 'right' about Kent values — just referencing different parts of the city. David's experience across Kent's submarkets and his appraisal credentials provide the neutral, property-specific analysis needed for fair resolution when each side's comparable sales tell different stories.",
+    },
+    "trust-estate-property-sales": {
+      intro: "Trust-owned property in Kent may be located in any of the city's diverse submarkets — from East Hill ramblers to West Hill view homes to valley-floor properties near commercial corridors. Each location creates different fiduciary considerations for trustees responsible for maximizing trust value while managing the sale appropriately. Real Property Planning provides trustees with the South King County expertise that Kent's varied housing market demands.",
+      scenarios: [
+        "A successor trustee managing a trust-owned East Hill home where the property's age and condition create questions about whether to invest in updates or price as-is",
+        "A corporate trustee needing local expertise for a Kent property where the specific neighborhood's market dynamics differ significantly from citywide averages",
+        "A trustee preparing to sell a trust-owned West Hill home where the view premium needs on-site verification — not desktop estimation",
+        "A beneficiary questioning the trustee's pricing because automated estimates don't distinguish between Kent's dramatically different submarkets",
+      ],
+      whyLocal: "Trust property sales in Kent require fiduciary guidance that accounts for the city's internal market diversity. A trustee who applies citywide Kent averages to an East Hill property — or uses West Hill view-home comparables for a valley-floor property — creates pricing that may not withstand beneficiary scrutiny. David's South King County experience and appraisal credentials provide the submarket-specific analysis that Kent trust situations demand.",
+    },
+  },
+};
 export function getCityServiceOverride(
   citySlug: string,
   serviceSlug: string,
