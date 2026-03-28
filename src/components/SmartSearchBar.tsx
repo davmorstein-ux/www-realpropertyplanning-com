@@ -450,12 +450,17 @@ const SmartSearchBar = () => {
       )}
 
       {/* Suggested prompts */}
-      <div className="flex flex-wrap justify-center gap-2 mt-5">
+      <div className="flex flex-wrap justify-center gap-3 mt-5">
         {suggestedPrompts.map((prompt) => (
           <button
             key={prompt}
             onClick={() => handlePromptClick(prompt)}
-            className="px-4 py-2 rounded-full border border-border bg-card text-sm text-muted-foreground hover:text-foreground hover:border-gold/40 hover:bg-gold/5 transition-all duration-200 active:scale-95"
+            className="px-5 py-2.5 rounded-full border-[1.5px] border-border/80 bg-card text-sm font-medium text-muted-foreground transition-all duration-200 cursor-pointer hover:text-foreground hover:border-gold/40 hover:-translate-y-[2px] active:translate-y-[1px]"
+            style={{
+              backgroundImage: 'linear-gradient(to bottom, hsl(var(--card)), hsl(var(--card) / 0.94))',
+              boxShadow:
+                '0 3px 10px -2px rgba(0,0,0,0.10), 0 2px 4px -1px rgba(0,0,0,0.06), 0 1px 0 0 rgba(0,0,0,0.03), inset 0 1px 0 0 rgba(255,255,255,0.75), inset 0 -1px 0 0 rgba(0,0,0,0.04)',
+            }}
           >
             {prompt}
           </button>
