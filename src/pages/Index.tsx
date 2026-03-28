@@ -266,9 +266,15 @@ const Index = () => {
                 <a href="https://www.naosa.org" target="_blank" rel="noopener noreferrer" className="flex h-[168px] items-center justify-center">
                   <img src={naosaBadge} alt="National Association of Senior Advocates - Best Real Estate Agent 2026" className="max-h-[132px] w-auto object-contain" loading="lazy" />
                 </a>
-                <a href="https://www.naepc.org" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
+                <a href="https://www.naepc.org" target="_blank" rel="noopener noreferrer" className="flex h-[84px] items-center justify-center">
                   <img src={naepcLogo} alt="National Association of Estate Planners & Councils" className="h-[62px] w-auto object-contain" loading="lazy" />
                 </a>
+                <div className="flex h-[84px] items-center justify-center">
+                  <img src="/badges/realtor-badge.png" alt="REALTOR® badge" className="h-[58px] md:h-[64px] w-auto object-contain" />
+                </div>
+                <div className="flex h-[84px] items-center justify-center">
+                  <img src="/badges/equal-housing-badge.png" alt="Equal Housing Opportunity badge" className="h-[44px] md:h-[48px] w-auto object-contain" />
+                </div>
               </div>
             </div>
           </div>
