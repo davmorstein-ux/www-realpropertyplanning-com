@@ -251,13 +251,14 @@ const Index = () => {
             </a>
           </div>
 
-          {/* 8. eXp logo + addresses */}
-          <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
-            <img src={expRealtyLogo} alt="eXp Realty" className="h-6 w-auto opacity-70" loading="lazy" />
-            <div className="text-sm text-muted-foreground leading-relaxed sm:text-left">
+          {/* 8. eXp logo + addresses + Equal Housing badge */}
+          <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8">
+            <img src={expRealtyLogo} alt="eXp Realty" className="h-7 w-auto opacity-70" loading="lazy" />
+            <div className="text-sm text-muted-foreground leading-relaxed text-center sm:text-left">
               <p>PO Box 1462, Woodinville, WA 98072</p>
               <p>Office: 1455 NW Leary Way, Seattle, WA 98107</p>
             </div>
+            <img src="/badges/equal-housing-badge.png" alt="Equal Housing Opportunity" className="h-8 w-auto opacity-80" loading="lazy" />
           </div>
 
           {/* 9. Memberships heading */}
