@@ -55,6 +55,30 @@ const probateCaseStudies = [
     howHelped: "David evaluated each issue, estimated the cost impact on market value, and recommended a targeted preparation strategy — addressing safety concerns while advising against costly renovations that would not deliver meaningful return.",
     outcome: "The property was priced accurately for its condition, attracted multiple offers, and closed smoothly with documented market support.",
   },
+  {
+    title: "Coordinating a Probate Sale with Multiple Heirs",
+    label: "Family Coordination",
+    situation: "Four adult siblings inherited a family home in Kitsap County after their father passed. All four had equal ownership, and none lived near the property.",
+    challenge: "The siblings had different views on timing — one wanted to hold, two wanted to sell quickly, and one was unsure. Confusion about the home's value made it harder to reach agreement.",
+    howHelped: "David provided a clear, valuation-informed pricing assessment so everyone was working from the same numbers. He walked the family through market data, explained the cost of holding versus selling, and coordinated the preparation and sale with regular updates to all four siblings.",
+    outcome: "The family reached agreement within two weeks. The home sold at a price everyone felt was fair, and the process was far less stressful than expected.",
+  },
+  {
+    title: "Helping a Family Navigate a Senior Transition and Home Sale",
+    label: "Senior Transition",
+    situation: "A longtime homeowner in her early 80s was moving to assisted living. Her two adult children were helping coordinate the transition and sale of the family home in King County.",
+    challenge: "The home held 40 years of memories. The family wasn't sure how to prepare the property, when to list, or how to manage the timeline alongside the move.",
+    howHelped: "David recommended a phased approach: start with a gentle cleanout, address targeted improvements, and list at a time aligned with the transition. He coordinated vendors and kept everyone informed throughout.",
+    outcome: "The home sold within a month of listing. The family described the experience as respectful and well-paced.",
+  },
+  {
+    title: "Providing Clarity on Pricing an Inherited Property",
+    label: "Valuation Strategy",
+    situation: "An executor inherited a home in Snohomish County and had received two very different price opinions from other agents.",
+    challenge: "One agent suggested listing high to 'test the market.' The other recommended a much lower price to sell fast. Neither was supported by detailed analysis.",
+    howHelped: "David conducted a thorough property review and provided a valuation-informed pricing strategy — walking the executor through comparable sales, condition adjustments, and current market trends.",
+    outcome: "The executor chose a well-supported list price. The home received strong interest and sold close to asking.",
+  },
 ];
 
 const probateVsInherited = [

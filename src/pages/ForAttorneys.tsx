@@ -68,6 +68,22 @@ const attorneyCaseStudies = [
     howHelped: "David worked with the family to set a realistic timeline, coordinated preparation and staging, and provided consistent updates to both the attorney and family members.",
     outcome: "The home sold at a fair price with a smooth transition. The family described the process as respectful and well-coordinated.",
   },
+  {
+    title: "Coordinating a Probate Sale with Multiple Heirs",
+    label: "Family Coordination",
+    situation: "Four adult siblings inherited a family home in Kitsap County. The probate attorney needed a broker who could manage the real estate while keeping all parties aligned.",
+    challenge: "Differing opinions on timing and value among the heirs, plus no one lived near the property.",
+    howHelped: "David provided a valuation-informed pricing assessment, held a group call to walk through the data, and managed the full sale process with regular updates to the attorney and all four siblings.",
+    outcome: "Agreement reached within two weeks. The home sold at a fair price, and the attorney noted that having a reliable real estate partner simplified the probate process.",
+  },
+  {
+    title: "Providing Clarity on Pricing an Inherited Property",
+    label: "Valuation Strategy",
+    situation: "An estate planning attorney's client — an executor — had received conflicting price opinions from two other agents and didn't know who to trust.",
+    challenge: "One agent suggested listing high, the other recommended a much lower price. Neither provided detailed analysis to support their recommendation.",
+    howHelped: "David conducted a thorough property review and presented a valuation-informed pricing strategy with clear comparable data — giving the executor and attorney confidence in the recommended price.",
+    outcome: "The executor chose a well-supported list price. The home sold close to asking, and the attorney added David to their referral list for future estate situations.",
+  },
 ];
 
 const attorneyTiles = [
