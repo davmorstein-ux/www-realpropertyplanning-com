@@ -1,6 +1,5 @@
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { FileText, Users, MapPin, ClipboardList, CheckCircle2, Mail } from "lucide-react";
+import { FileText, Users, MapPin, ClipboardList } from "lucide-react";
 import GoldCheck3D from "@/components/GoldCheck3D";
 import { Link } from "react-router-dom";
 
@@ -20,15 +19,6 @@ const whoItsFor = [
 ];
 
 const LeadMagnetBlock = () => {
-  const [email, setEmail] = useState("");
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email.trim()) return;
-    setSubmitted(true);
-    setEmail("");
-  };
 
   return (
     <section className="py-16 lg:py-20 bg-primary">
@@ -86,51 +76,6 @@ const LeadMagnetBlock = () => {
               </li>
             ))}
           </ul>
-
-          {/* Form / Download area */}
-          <div id="checklist-form" className="max-w-md mx-auto">
-            {submitted ? (
-              <div className="text-center bg-primary-foreground/10 rounded-xl p-8">
-                <CheckCircle2 className="w-10 h-10 text-gold mx-auto mb-4" />
-                <p className="text-primary-foreground font-serif text-xl font-semibold mb-2">
-                  Check your inbox
-                </p>
-                <p className="text-primary-foreground/70 text-sm leading-relaxed">
-                  The checklist is on its way. While you wait, explore our{" "}
-                  <Link to="/guides/what-executors-should-do" className="text-gold underline underline-offset-4">executor guide</Link>{" "}
-                  for additional step-by-step help.
-                </p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-3">
-                <div className="flex gap-3">
-                  <div className="relative flex-1">
-                    <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-primary-foreground/40" />
-                    <input
-                      type="email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      placeholder="Your email address"
-                      required
-                      className="w-full rounded-lg border border-primary-foreground/20 bg-primary-foreground/10 pl-10 pr-4 py-3.5 text-primary-foreground text-[15px] placeholder:text-primary-foreground/40 focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold/50 transition"
-                    />
-                  </div>
-                  <Button
-                    type="submit"
-                    variant="gold"
-                    size="lg"
-                    className="px-6 py-3.5 h-auto text-base tracking-wide shrink-0"
-                  >
-                    <FileText className="w-4 h-4 mr-2" />
-                    Send Checklist
-                  </Button>
-                </div>
-                <p className="text-primary-foreground/45 text-xs text-center leading-relaxed">
-                  Free and instant. No spam — just a practical resource from a broker who works with executors every day.
-                </p>
-              </form>
-            )}
-          </div>
 
           {/* Related guides */}
           <div className="mt-10 pt-8 border-t border-primary-foreground/10">
