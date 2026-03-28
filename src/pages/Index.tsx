@@ -22,6 +22,7 @@ import naosaBadge from "@/assets/naosa-badge-clean.png";
 import naepcLogo from "@/assets/naepc-logo-2.png";
 import expRealtyLogo from "@/assets/exp-realty-logo.png";
 import ServiceNavTiles from "@/components/ServiceNavTiles";
+import StatewideSupport from "@/components/StatewideSupport";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 import WhatToExpect from "@/components/WhatToExpect";
 import LeadMagnetBlock from "@/components/LeadMagnetBlock";
@@ -191,6 +192,8 @@ const Index = () => {
           SERVICE NAV TILES — Immediately after hero
       ═══════════════════════════════════════════════════ */}
       <ServiceNavTiles />
+
+      <StatewideSupport background="bg-cream" />
 
       {/* ═══════════════════════════════════════════════════
           ABOUT DAVID — Two-column with headshot + credentials
