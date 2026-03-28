@@ -23,7 +23,7 @@ const AffiliationBadgeGrid = ({ naepcAlt }: AffiliationBadgeGridProps = {}) => {
     : naepcLogo;
 
   return (
-    <div className="mx-auto w-full overflow-x-auto">
+    <div className="mx-auto w-full overflow-hidden">
       <div className="mx-auto flex w-max min-w-fit translate-x-5 items-center justify-center gap-4 px-1 md:translate-x-8 md:gap-6 lg:gap-8">
         <BadgeCell>
           <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
