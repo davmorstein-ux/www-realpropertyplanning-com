@@ -140,10 +140,8 @@ const Index = () => {
             </p>
 
             {/* Premium gold divider */}
-            <div className="flex items-center justify-center gap-4 my-14 lg:my-[72px]">
-              <div className="h-[2px] w-24 rounded-full" style={{ background: 'linear-gradient(to right, transparent, hsl(var(--gold)))' }} />
-              <div className="w-[6px] h-[6px] rotate-45 bg-gold/60 shrink-0" />
-              <div className="h-[2px] w-24 rounded-full" style={{ background: 'linear-gradient(to left, transparent, hsl(var(--gold)))' }} />
+            <div className="premium-divider my-14 lg:my-[72px]">
+              <span className="premium-divider-dot" />
             </div>
 
             <div className="text-primary-foreground/80 text-lg leading-relaxed space-y-4 max-w-2xl mx-auto">
