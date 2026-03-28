@@ -1,5 +1,4 @@
 import expRealtyLogo from "@/assets/exp-realty-logo.png";
-import realtorBadge from "@/assets/realtor-badge.png";
 
 const AgentCredentialBlock = () => (
   <div className="mt-4 text-center">
@@ -13,11 +12,6 @@ const AgentCredentialBlock = () => (
         alt="eXp Realty — David Stein's brokerage"
         className="h-6 w-auto opacity-70"
         loading="lazy"
-      />
-      <img
-        src={realtorBadge}
-        alt="REALTOR®"
-        className="h-[56px] md:h-[64px] w-auto"
       />
     </div>
   </div>
