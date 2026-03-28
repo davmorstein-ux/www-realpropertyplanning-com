@@ -212,6 +212,7 @@ const Index = () => {
                   loading="lazy"
                 />
               </div>
+              <p className="mt-3 text-lg font-bold text-foreground text-center">President, Real Property Planning</p>
             </div>
 
             {/* Right — Bio + credentials + badges */}
