@@ -23,25 +23,27 @@ const AffiliationBadgeGrid = ({ naepcAlt }: AffiliationBadgeGridProps = {}) => {
     : naepcLogo;
 
   return (
-    <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 lg:gap-8">
-      <BadgeCell>
-        <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full h-full">
-          <img src={alcaLogo} alt="Aging Life Care Association Corporate Partner" className="max-w-[90%] max-h-[90%] w-auto h-auto object-contain" />
-        </a>
-      </BadgeCell>
-      <BadgeCell>
-        <a href="https://www.naosa.org" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full h-full">
-          <img src={naosaBadge} alt="National Association of Senior Advocates - Best Real Estate Agent 2026" className="max-w-[95%] max-h-[95%] w-auto h-auto object-contain" />
-        </a>
-      </BadgeCell>
-      <BadgeCell>
-        <a href="https://www.naepc.org" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full h-full">
-          <img src={naepcSrc} alt="National Association of Estate Planners & Councils" className="max-w-[90%] max-h-[90%] w-auto h-auto object-contain" />
-        </a>
-      </BadgeCell>
-      <BadgeCell>
-        <img src="/badges/realtor-badge.png" alt="REALTOR® badge" className="max-w-[85%] max-h-[85%] w-auto h-auto object-contain" />
-      </BadgeCell>
+    <div className="w-full flex justify-center">
+      <div className="mx-auto flex w-fit max-w-full flex-wrap items-center justify-center gap-4 md:gap-6 lg:gap-8">
+        <BadgeCell>
+          <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full h-full">
+            <img src={alcaLogo} alt="Aging Life Care Association Corporate Partner" className="max-w-[90%] max-h-[90%] w-auto h-auto object-contain" />
+          </a>
+        </BadgeCell>
+        <BadgeCell>
+          <a href="https://www.naosa.org" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full h-full">
+            <img src={naosaBadge} alt="National Association of Senior Advocates - Best Real Estate Agent 2026" className="max-w-[95%] max-h-[95%] w-auto h-auto object-contain" />
+          </a>
+        </BadgeCell>
+        <BadgeCell>
+          <a href="https://www.naepc.org" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full h-full">
+            <img src={naepcSrc} alt="National Association of Estate Planners & Councils" className="max-w-[90%] max-h-[90%] w-auto h-auto object-contain" />
+          </a>
+        </BadgeCell>
+        <BadgeCell>
+          <img src="/badges/realtor-badge.png" alt="REALTOR® badge" className="max-w-[85%] max-h-[85%] w-auto h-auto object-contain" />
+        </BadgeCell>
+      </div>
     </div>
   );
 };
