@@ -108,12 +108,28 @@ const Index = () => {
         <div className="container relative z-10 px-6 lg:px-8 py-20 lg:py-24 flex flex-col items-center text-center">
           <div className="max-w-3xl">
             <h1 className="font-serif text-4xl md:text-5xl lg:text-[54px] font-bold leading-[1.1] text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6), 0 4px 16px rgba(0,0,0,0.3), 0 0 40px rgba(0,0,0,0.2)' }}>
-              Expert Real Estate Guidance for Probate, Estates &amp; Senior Transitions in Washington State
+              Real Estate Guidance for Probate, Inherited Property &amp; Life Transitions
             </h1>
             <p className="mt-5 text-xl md:text-2xl text-white/90 font-medium leading-relaxed max-w-2xl mx-auto" style={{ textShadow: '0 1px 6px rgba(0,0,0,0.5)' }}>
-              Helping executors, families, and attorneys sell inherited and estate property with confidence.
+              Helping executors, families, and attorneys make confident property decisions with clarity, coordination, and valuation-informed strategy.
+            </p>
+            <p className="mt-4 text-lg text-white/70 font-normal" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.4)' }}>
+              You don't have to figure this out alone.
             </p>
           </div>
+          <Link to="/contact" className="mt-8">
+            <Button
+              variant="gold"
+              size="lg"
+              className="px-10 py-5 h-auto text-lg tracking-wide"
+            >
+              <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
+              Schedule a 20‑Minute Consultation
+            </Button>
+          </Link>
+          <p className="mt-3 text-white/50 text-sm max-w-md text-center">
+            A short call to understand your situation and outline next steps. No pressure.
+          </p>
         </div>
       </section>
 
@@ -463,16 +479,16 @@ const Index = () => {
             {/* Left — Contact info */}
             <div>
                <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
-                Start a Conversation
+                Not Sure Where to Start? That's Normal.
               </h2>
               <p className="text-primary-foreground/75 text-lg leading-relaxed mb-4">
-                Whether you're an attorney, executor, trustee, or family member — David is here to help you work through the real estate side of your situation with care and clarity.
+                A short conversation can help bring clarity. Whether you're an executor, family member, attorney, or trustee — David is here to help you work through the real estate side of your situation.
               </p>
-              <p className="text-primary-foreground/60 text-base leading-relaxed mb-4">
+              <p className="text-primary-foreground/60 text-base leading-relaxed mb-3">
                 <strong className="text-primary-foreground/80">What happens next:</strong> David responds within one business day, usually sooner.
               </p>
               <p className="text-primary-foreground/60 text-base leading-relaxed mb-10">
-                Your initial conversation is confidential, practical, and no-obligation — focused on understanding your situation and outlining next steps.
+                Your conversation is confidential, practical, and no-obligation — focused on understanding your situation and outlining a clear path forward.
               </p>
 
               <div className="space-y-5">
