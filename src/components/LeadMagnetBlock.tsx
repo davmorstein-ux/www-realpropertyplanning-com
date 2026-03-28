@@ -44,17 +44,12 @@ const LeadMagnetBlock = () => {
             </p>
 
             {/* Primary CTA button */}
-            <Button
-              variant="gold"
-              size="lg"
-              className="px-8 py-4 h-auto text-base tracking-wide mb-8"
-              asChild
-            >
-              <Link to="/resources/washington-executors-10-step-checklist">
+            <Link to="/resources/washington-executors-10-step-checklist" className="inline-block mb-8">
+              <Button variant="gold" size="lg" className="px-8 py-4 h-auto text-base tracking-wide">
                 <FileText className="w-5 h-5 mr-2" />
                 Get the Free Checklist
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           </div>
 
           {/* Who it's for */}
