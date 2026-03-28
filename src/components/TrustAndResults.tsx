@@ -3,9 +3,7 @@ import { Quote, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import iconLicense3d from "@/assets/icons/icon-license-3d.png";
 import iconAppraiser3d from "@/assets/icons/icon-appraiser-3d.png";
-import alcaLogo from "@/assets/alca-corporate-partner.png";
-import naosaBadge from "@/assets/naosa-badge-clean.png";
-import naepcLogo from "@/assets/naepc-logo-2.png";
+import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
 
 const credentials = [
   "Licensed Real Estate Broker — WA #113972",

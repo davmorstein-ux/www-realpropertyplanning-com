@@ -14,9 +14,7 @@ import { Link } from "react-router-dom";
 
 import daveHeadshot from "@/assets/dave-headshot.jpg";
 import AgentCredentialBlock from "@/components/AgentCredentialBlock";
-import alcaLogo from "@/assets/alca-corporate-partner.png";
-import naosaBadge from "@/assets/naosa-badge-clean.png";
-import naepcLogo from "@/assets/naepc-logo.png";
+import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 
 const whoWorksWith = [
@@ -206,23 +204,7 @@ const About = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h3 className="font-serif text-xl text-foreground font-semibold mb-6">Professional Memberships &amp; Affiliations</h3>
-            <div className="flex flex-wrap items-center justify-center gap-8">
-              <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer">
-                <img src={alcaLogo} alt="Aging Life Care Association Corporate Partner" className="h-16 md:h-20 w-auto" loading="lazy" />
-              </a>
-              <a href="https://www.naosa.org" target="_blank" rel="noopener noreferrer">
-                <img src={naosaBadge} alt="National Association of Senior Advocates - Best Real Estate Agent 2026" className="h-40 md:h-48 w-auto" loading="lazy" />
-              </a>
-              <a href="https://www.naepc.org" target="_blank" rel="noopener noreferrer">
-                <img src={naepcLogo} alt="National Association of Estate Planners & Councils" className="max-h-[246px] w-auto object-contain" loading="lazy" />
-              </a>
-              <div className="flex items-center justify-center min-h-[160px]">
-                <img src="/badges/realtor-badge.png" alt="REALTOR® badge" className="h-40 md:h-48 w-auto object-contain" />
-              </div>
-              <div className="flex items-center justify-center min-h-[160px]">
-                <img src="/badges/equal-housing-badge.png" alt="Equal Housing Opportunity badge" className="h-40 md:h-48 w-auto object-contain" />
-              </div>
-            </div>
+            <AffiliationBadgeGrid />
           </div>
         </div>
       </section>
