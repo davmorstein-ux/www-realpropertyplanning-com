@@ -14,6 +14,48 @@ import { Link } from "react-router-dom";
 
 import warning3d from "@/assets/warning-3d.png";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+import ClientReviewsSection from "@/components/ClientReviewsSection";
+import RealClientSituations from "@/components/RealClientSituations";
+
+const probateReviews = [
+  {
+    text: "David's dual background in brokerage and appraisal gave us confidence that the property was priced correctly. He made a complicated situation feel manageable.",
+    highlights: ["priced correctly", "complicated situation feel manageable"],
+    attribution: "Family Member, King County",
+    contextTag: "Probate · Valuation Strategy",
+  },
+  {
+    text: "David guided our family through a very difficult time with professionalism and genuine compassion. His valuation perspective and market knowledge were incredibly helpful.",
+    highlights: ["professionalism and genuine compassion", "valuation perspective"],
+    attribution: "Estate Attorney, Seattle",
+    contextTag: "Probate · Executor",
+  },
+  {
+    text: "We appreciated David's patience, thoughtful communication, and realistic guidance throughout the sale of our family property.",
+    highlights: ["patience, thoughtful communication", "realistic guidance"],
+    attribution: "Family Review",
+    contextTag: "Inherited Property",
+  },
+];
+
+const probateCaseStudies = [
+  {
+    title: "Out-of-State Executor With a Full House",
+    label: "Out-of-State Coordination",
+    situation: "An executor living in California was named personal representative for her father's estate in Snohomish County. The home had not been updated in 30 years and was filled with decades of belongings.",
+    challenge: "No local contacts, no idea where to start, and no ability to travel frequently to manage the process.",
+    howHelped: "David assessed the property, coordinated a professional cleanout team, managed minor repairs and landscaping, and handled the entire listing and sale process — providing regular photo updates so she never had to fly out.",
+    outcome: "The home sold within three weeks of listing at a price that exceeded the executor's expectations.",
+  },
+  {
+    title: "Estate Property With Significant Deferred Maintenance",
+    label: "Valuation Strategy",
+    situation: "A trustee needed to sell a Pierce County home that had a failing roof, outdated electrical, and years of deferred maintenance.",
+    challenge: "Two previous agents had declined the listing because of the property's condition. The trustee needed to fulfill fiduciary obligations.",
+    howHelped: "David evaluated each issue, estimated the cost impact on market value, and recommended a targeted preparation strategy — addressing safety concerns while advising against costly renovations that would not deliver meaningful return.",
+    outcome: "The property was priced accurately for its condition, attracted multiple offers, and closed smoothly with documented market support.",
+  },
+];
 
 const probateVsInherited = [
   {
@@ -260,6 +302,20 @@ const ProbateEstateSales = () => {
           </div>
         </div>
       </section>
+
+      <ClientReviewsSection
+        reviews={probateReviews}
+        heading="Client Reviews & Experiences"
+        subheading="Feedback from clients and professionals who worked with David on probate and estate property situations."
+        background="bg-secondary"
+      />
+
+      <RealClientSituations
+        studies={probateCaseStudies}
+        heading="Real Client Situations"
+        subheading="Examples of how David has helped executors and families handle complex probate property transitions."
+        background="bg-background"
+      />
 
       <PageFAQ faqs={faqs} heading="Probate & Estate Sale FAQs" />
 
