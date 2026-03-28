@@ -246,7 +246,7 @@ const Index = () => {
               (206) 900-3015
             </a>
             <a href="mailto:david@realpropertyplanning.com" className="flex items-center gap-2 hover:text-gold transition-colors font-medium">
-              <img src={iconEmail3d} alt="" aria-hidden="true" className="h-8 w-8 object-contain shrink-0" />
+              <img src={iconEmail3d} alt="" aria-hidden="true" className="h-12 w-12 object-contain shrink-0" />
               david@realpropertyplanning.com
             </a>
           </div>
@@ -263,9 +263,9 @@ const Index = () => {
 
           {/* 9. Memberships heading with divider lines */}
           <div className="mt-12 mb-4 flex items-center justify-center gap-3 w-full max-w-xl mx-auto">
-            <div className="flex-1 h-px bg-gradient-to-r from-transparent via-muted-foreground/30 to-muted-foreground/30" />
+            <div className="flex-1 h-px bg-gradient-to-r from-transparent via-muted-foreground/60 to-muted-foreground/60" />
             <p className="text-sm font-semibold uppercase tracking-[0.15em] text-muted-foreground whitespace-nowrap">Professional Memberships &amp; Affiliations</p>
-            <div className="flex-1 h-px bg-gradient-to-l from-transparent via-muted-foreground/30 to-muted-foreground/30" />
+            <div className="flex-1 h-px bg-gradient-to-l from-transparent via-muted-foreground/60 to-muted-foreground/60" />
           </div>
 
           {/* 10. Badge row — all 5 on one line */}
