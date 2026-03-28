@@ -121,9 +121,13 @@ const Index = () => {
               Call (206) 900-3015
             </Button>
           </a>
-          <p className="mt-3 text-white/60 text-sm">
-            <Link to="/contact" className="underline underline-offset-2 hover:text-gold transition-colors">Request a call back</Link>
-          </p>
+          <Link
+            to="/contact"
+            className="mt-5 relative overflow-hidden inline-flex items-center justify-center rounded-[12px] px-8 py-4 min-h-[56px] font-bold text-lg tracking-[0.01em] text-white no-underline transition-all duration-200 ease-out bg-gradient-to-b from-[#1a6b6a] to-[#144f4e] border border-[rgba(10,60,58,0.5)] shadow-[0_3px_0_rgba(10,50,48,0.7),0_8px_18px_rgba(0,0,0,0.16),inset_0_1px_0_rgba(255,255,255,0.18),inset_0_-1px_0_rgba(5,30,28,0.2)] hover:-translate-y-[2px] hover:brightness-[1.06] hover:shadow-[0_5px_0_rgba(10,50,48,0.7),0_12px_24px_rgba(0,0,0,0.2),inset_0_1px_0_rgba(255,255,255,0.18)] active:translate-y-[1px] active:shadow-[0_2px_0_rgba(10,50,48,0.7),0_4px_10px_rgba(0,0,0,0.14)] focus-visible:outline focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[rgba(46,82,161,0.35)]"
+          >
+            <span className="pointer-events-none absolute left-[8%] top-0 h-[46%] w-[84%] rounded-full bg-gradient-to-b from-white/20 to-white/0" />
+            <span className="relative z-10">Request a Call Back</span>
+          </Link>
         </div>
       </section>
 
