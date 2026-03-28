@@ -17,9 +17,7 @@ import iconServiceSenior from "@/assets/icons/icon-service-senior.png";
 import iconServiceValuation from "@/assets/icons/icon-service-valuation.png";
 import daveHeadshot2 from "@/assets/dave-headshot-2.jpg";
 import heroPnwHome from "@/assets/hero-pnw-home.jpg";
-import alcaLogo from "@/assets/alca-corporate-partner.png";
-import naosaBadge from "@/assets/naosa-badge-clean.png";
-import naepcLogo from "@/assets/naepc-logo-2.png";
+import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
 import expRealtyLogo from "@/assets/exp-realty-logo.png";
 import ServiceNavTiles from "@/components/ServiceNavTiles";
 import StatewideSupport from "@/components/StatewideSupport";
@@ -259,23 +257,7 @@ const Index = () => {
                 <p className="text-sm">Office: 1455 NW Leary Way, Seattle, WA 98107</p>
               </div>
               <p className="mb-3 text-center text-xs font-semibold uppercase tracking-widest text-muted-foreground">Professional Memberships &amp; Affiliations</p>
-              <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-5">
-                <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer" className="flex h-[84px] items-center justify-center">
-                  <img src={alcaLogo} alt="Aging Life Care Association Corporate Partner" className="max-h-[66px] w-auto object-contain" loading="lazy" />
-                </a>
-                <a href="https://www.naosa.org" target="_blank" rel="noopener noreferrer" className="flex h-[168px] items-center justify-center">
-                  <img src={naosaBadge} alt="National Association of Senior Advocates - Best Real Estate Agent 2026" className="max-h-[132px] w-auto object-contain" loading="lazy" />
-                </a>
-                <a href="https://www.naepc.org" target="_blank" rel="noopener noreferrer" className="flex h-[84px] items-center justify-center">
-                  <img src={naepcLogo} alt="National Association of Estate Planners & Councils" className="h-[62px] w-auto object-contain" loading="lazy" />
-                </a>
-                <div className="flex h-[168px] items-center justify-center">
-                  <img src="/badges/realtor-badge.png" alt="REALTOR® badge" className="max-h-[132px] w-auto object-contain" />
-                </div>
-                <div className="flex h-[168px] items-center justify-center">
-                  <img src="/badges/equal-housing-badge.png" alt="Equal Housing Opportunity badge" className="max-h-[132px] w-auto object-contain" />
-                </div>
-              </div>
+              <AffiliationBadgeGrid />
             </div>
           </div>
         </div>

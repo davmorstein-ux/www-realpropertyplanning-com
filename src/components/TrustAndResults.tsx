@@ -3,9 +3,7 @@ import { Quote, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import iconLicense3d from "@/assets/icons/icon-license-3d.png";
 import iconAppraiser3d from "@/assets/icons/icon-appraiser-3d.png";
-import alcaLogo from "@/assets/alca-corporate-partner.png";
-import naosaBadge from "@/assets/naosa-badge-clean.png";
-import naepcLogo from "@/assets/naepc-logo-2.png";
+import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
 
 const credentials = [
   "Licensed Real Estate Broker — WA #113972",
@@ -97,22 +95,8 @@ const TrustAndResults = () => (
             <h3 className="font-serif text-xl text-foreground font-semibold mb-6">
               Memberships & Affiliations
             </h3>
-            <div className="flex-1 flex flex-wrap items-center justify-center gap-6">
-              <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer">
-                <img src={alcaLogo} alt="Aging Life Care Association Corporate Partner" className="max-h-[60px] w-auto object-contain" loading="lazy" />
-              </a>
-              <a href="https://www.naosa.org" target="_blank" rel="noopener noreferrer">
-                <img src={naosaBadge} alt="National Association of Senior Advocates" className="max-h-[120px] w-auto object-contain" loading="lazy" />
-              </a>
-              <a href="https://www.naepc.org" target="_blank" rel="noopener noreferrer">
-                <img src={naepcLogo} alt="National Association of Estate Planners & Councils" className="max-h-[56px] w-auto object-contain" loading="lazy" />
-              </a>
-              <div className="flex items-center justify-center min-h-[120px]">
-                <img src="/badges/realtor-badge.png" alt="REALTOR® badge" className="max-h-[120px] w-auto object-contain" />
-              </div>
-              <div className="flex items-center justify-center min-h-[120px]">
-                <img src="/badges/equal-housing-badge.png" alt="Equal Housing Opportunity badge" className="max-h-[120px] w-auto object-contain" />
-              </div>
+            <div className="flex-1 flex items-center justify-center">
+              <AffiliationBadgeGrid />
             </div>
           </div>
         </div>
