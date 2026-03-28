@@ -215,9 +215,12 @@ const Index = () => {
               <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-3">
                 Meet David Stein
               </h2>
-              <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-                With over 20 years of experience as both a licensed real estate broker and certified residential appraiser, David brings rare dual expertise to every engagement — providing calm, knowledgeable guidance during life's most important property decisions.
-              </p>
+               <p className="text-muted-foreground text-lg leading-relaxed mb-3">
+                 David brings over 20 years of experience as both a licensed real estate broker and certified residential appraiser. This rare dual expertise means clients get calm, knowledgeable guidance grounded in professional valuation — not guesswork.
+               </p>
+               <p className="text-muted-foreground text-base leading-relaxed mb-5">
+                 He works with executors, attorneys, trustees, and families across Washington State, with deep experience in Western Washington and the Puget Sound region.
+               </p>
               <div className="mb-5 space-y-3">
                 <p className="text-lg font-bold tracking-[0.01em] text-foreground">Real Property Planning — David Stein</p>
                 <p className="flex items-center text-base font-semibold text-foreground">
