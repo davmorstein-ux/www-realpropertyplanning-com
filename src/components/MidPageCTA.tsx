@@ -20,9 +20,14 @@ const MidPageCTA = ({
   const isDark = variant === "dark";
 
   return (
-    <section className={`py-14 lg:py-18 ${isDark ? "bg-primary" : "bg-secondary"}`}>
+    <section className={`py-16 lg:py-20 ${isDark ? "bg-primary" : "bg-secondary"}`}>
       <div className="container px-6 lg:px-8">
         <div className="max-w-2xl mx-auto text-center">
+          {/* Gold accent divider top */}
+          <div className="premium-divider mb-8">
+            <span className="premium-divider-dot" />
+          </div>
+
           <h3
             className={`font-serif text-2xl md:text-3xl font-semibold mb-4 ${
               isDark ? "text-primary-foreground" : "text-foreground"
@@ -31,7 +36,7 @@ const MidPageCTA = ({
             {heading}
           </h3>
           <p
-            className={`text-lg leading-relaxed mb-6 ${
+            className={`text-lg leading-relaxed mb-8 ${
               isDark ? "text-primary-foreground/75" : "text-muted-foreground"
             }`}
           >

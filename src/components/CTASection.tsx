@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { Calendar } from "lucide-react";
 import iconEmail3d from "@/assets/icons/icon-email-3d.png";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 
@@ -8,16 +7,16 @@ const CTASection = () => {
     <section data-nosnippet className="py-20 lg:py-28 bg-background">
       <div className="container px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-gold font-bold tracking-wider uppercase mb-3 text-base">
+          <p className="section-eyebrow">
             Let's Talk
           </p>
-          <h2 className="font-serif text-3xl md:text-4xl text-foreground font-medium mb-6">
+          <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-6">
             Not Sure Where to Start? That's Completely Normal.
           </h2>
-          <p className="text-muted-foreground text-lg mb-4 max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-lg mb-4 max-w-2xl mx-auto leading-relaxed">
             A simple conversation can help bring clarity. Whether you're an attorney, executor, trustee, or family member — a short call is often the easiest first step.
           </p>
-          <p className="text-muted-foreground text-base mb-10 max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-base mb-10 max-w-2xl mx-auto leading-relaxed">
             If the property is in Washington, David can help directly. If your move or sale involves another state or country, David can connect you with a trusted eXp Realty referral partner.
           </p>
           
@@ -25,7 +24,7 @@ const CTASection = () => {
             <a href="tel:2069003015">
               <Button 
                 size="lg" 
-                className="bg-primary hover:bg-navy-dark text-primary-foreground font-semibold px-8"
+                className="bg-primary hover:bg-navy-dark text-primary-foreground font-semibold px-8 h-auto min-h-[52px]"
               >
                 <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
                 (206) 900-3015
@@ -33,11 +32,10 @@ const CTASection = () => {
             </a>
             <a href="mailto:david@realpropertyplanning.com">
               <Button 
+                variant="gold"
                 size="lg" 
-                variant="outline"
-                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold px-8"
+                className="px-8"
               >
-                <Calendar className="w-5 h-5 mr-2" />
                 Schedule a 20-Minute Consultation
               </Button>
             </a>

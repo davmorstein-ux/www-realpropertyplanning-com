@@ -8,12 +8,12 @@ const trustIndicators = [
 ];
 
 const TrustStrip = () => (
-  <section data-nosnippet className="bg-secondary border-y border-border py-5">
+  <section data-nosnippet className="bg-secondary border-y border-border py-6">
     <div className="container px-6 lg:px-8">
-      <div className="mx-auto grid max-w-5xl grid-cols-1 gap-x-8 gap-y-3 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mx-auto grid max-w-5xl grid-cols-1 gap-x-8 gap-y-3.5 sm:grid-cols-2 lg:grid-cols-4">
         {trustIndicators.map((indicator, index) => (
-          <div key={index} className="flex w-full items-center gap-2 text-base font-medium text-muted-foreground">
-            <GoldCheck3D size={16} />
+          <div key={index} className="flex w-full items-center gap-2.5 text-base font-medium text-muted-foreground">
+            <GoldCheck3D size={20} />
             <span>{indicator}</span>
           </div>
         ))}
