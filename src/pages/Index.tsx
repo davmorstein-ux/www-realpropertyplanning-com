@@ -342,7 +342,8 @@ const Index = () => {
       ═══════════════════════════════════════════════════ */}
       <MidPageCTA
         heading="Have Questions About Your Situation?"
-        body="A short conversation to understand your situation, answer questions, and discuss next steps."
+        body="A short, no-pressure conversation to understand what you're facing and talk through next steps."
+        microcopy="Most people feel better just having a plan. Let's start there."
         buttonText="Schedule a 20‑Minute Consultation"
         variant="dark"
       />
@@ -455,14 +456,17 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
             {/* Left — Contact info */}
             <div>
-              <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
+               <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
                 Start a Conversation
               </h2>
               <p className="text-primary-foreground/75 text-lg leading-relaxed mb-4">
-                Whether you're an attorney, executor, trustee, or family member anywhere in Washington State — David is here to help you navigate the real estate side of your situation with care and clarity.
+                Whether you're an attorney, executor, trustee, or family member — David is here to help you work through the real estate side of your situation with care and clarity.
+              </p>
+              <p className="text-primary-foreground/60 text-base leading-relaxed mb-4">
+                <strong className="text-primary-foreground/80">What happens next:</strong> David responds within one business day, usually sooner.
               </p>
               <p className="text-primary-foreground/60 text-base leading-relaxed mb-10">
-                <strong className="text-primary-foreground/80">What happens next:</strong> David will respond within one business day, usually sooner. Your initial conversation is confidential, practical, and no-obligation — focused on understanding your situation and outlining next steps.
+                Your initial conversation is confidential, practical, and no-obligation — focused on understanding your situation and outlining next steps.
               </p>
 
               <div className="space-y-5">
