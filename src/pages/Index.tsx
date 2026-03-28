@@ -251,25 +251,28 @@ const Index = () => {
             </a>
           </div>
 
-          {/* 8. eXp logo + addresses + Equal Housing badge */}
-          <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8">
-            <img src={expRealtyLogo} alt="eXp Realty" className="h-7 w-auto opacity-70" loading="lazy" />
-            <div className="text-sm text-muted-foreground leading-relaxed text-center">
-              <p>PO Box 1462, Woodinville, WA 98072</p>
-              <p>Office: 1455 NW Leary Way, Seattle, WA 98107</p>
+          {/* 8–10. Centered lower block: brokerage row + memberships + badges */}
+          <div className="mt-6 w-full flex flex-col items-center">
+            {/* 8. eXp logo + addresses + Equal Housing badge */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8">
+              <img src={expRealtyLogo} alt="eXp Realty" className="h-7 w-auto opacity-70" loading="lazy" />
+              <div className="text-sm text-muted-foreground leading-relaxed text-center">
+                <p>PO Box 1462, Woodinville, WA 98072</p>
+                <p>Office: 1455 NW Leary Way, Seattle, WA 98107</p>
+              </div>
+              <img src="/badges/equal-housing-badge.png" alt="Equal Housing Opportunity" className="h-[5.25rem] w-auto opacity-70" loading="lazy" />
             </div>
-            <img src="/badges/equal-housing-badge.png" alt="Equal Housing Opportunity" className="h-[5.25rem] w-auto opacity-70" loading="lazy" />
-          </div>
 
-          {/* 9. Memberships heading with divider lines */}
-          <div className="mt-12 mb-4 flex items-center justify-center gap-3 w-full max-w-xl mx-auto">
-            <div className="flex-1 h-px bg-gradient-to-r from-transparent via-muted-foreground/60 to-muted-foreground/60" />
-            <p className="text-sm font-semibold uppercase tracking-[0.15em] text-muted-foreground whitespace-nowrap">Professional Memberships &amp; Affiliations</p>
-            <div className="flex-1 h-px bg-gradient-to-l from-transparent via-muted-foreground/60 to-muted-foreground/60" />
-          </div>
+            {/* 9. Memberships heading with divider lines */}
+            <div className="mt-12 mb-4 flex items-center justify-center gap-3 w-full max-w-xl">
+              <div className="flex-1 h-px bg-gradient-to-r from-transparent via-muted-foreground/60 to-muted-foreground/60" />
+              <p className="text-sm font-semibold uppercase tracking-[0.15em] text-muted-foreground whitespace-nowrap">Professional Memberships &amp; Affiliations</p>
+              <div className="flex-1 h-px bg-gradient-to-l from-transparent via-muted-foreground/60 to-muted-foreground/60" />
+            </div>
 
-          {/* 10. Badge row — all 5 on one line */}
-          <AffiliationBadgeGrid />
+            {/* 10. Badge row */}
+            <AffiliationBadgeGrid />
+          </div>
         </div>
       </section>
 
