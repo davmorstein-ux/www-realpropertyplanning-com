@@ -32,22 +32,20 @@ const HeroSection = () => {
               Specialized Guidance for Probate & Estate Property Sales
             </h1>
             
-            <p className="text-lg md:text-xl text-gold mb-5 leading-relaxed max-w-2xl font-medium" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.2)' }}>
-              Clear guidance to reduce stress, protect property value, and bring confidence to every decision along the way.
-            </p>
-
             <p className="text-base md:text-lg text-primary-foreground/80 mb-8 leading-relaxed max-w-2xl" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.15)' }}>
               David Stein brings 20+ years of dual expertise as a licensed broker and certified appraiser — working with executors, attorneys, trustees, and families across Washington State.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="gold" 
-                size="lg" 
-                className="hover:-light text-primary px-8"
-              >
-                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
-                Schedule a 20-Minute Consultation
-              </Button>
+            <div className="flex flex-col sm:flex-row items-start gap-4">
+              <a href="tel:+12069003015">
+                <Button variant="gold" 
+                  size="lg" 
+                  className="text-primary px-8"
+                >
+                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
+                  Call (206) 900-3015
+                </Button>
+              </a>
               <Button 
                 size="lg" 
                 variant="outline" 
@@ -57,8 +55,11 @@ const HeroSection = () => {
                 Contact Me
               </Button>
             </div>
-            <p className="mt-3 text-primary-foreground/60 text-sm max-w-md">
-              A short conversation to understand your situation, answer your questions, and outline practical next steps. No pressure. Just clear guidance.
+            <p className="mt-2 text-primary-foreground/70 text-sm max-w-md" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.15)' }}>
+              Or <a href="/contact" className="underline underline-offset-2 hover:text-gold transition-colors">request a call back</a> if that's easier.
+            </p>
+            <p className="mt-2 text-primary-foreground/50 text-sm max-w-md">
+              A short conversation to understand your situation and discuss next steps. No pressure.
             </p>
             
             <div className="mt-12 pt-8 border-t border-primary-foreground/20">
