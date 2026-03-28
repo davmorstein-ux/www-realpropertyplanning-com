@@ -212,7 +212,7 @@ const Index = () => {
                   loading="lazy"
                 />
               </div>
-              <p className="mt-3 font-serif text-xl font-bold text-foreground text-center">David Stein</p>
+              <p className="mt-3 text-xl font-bold text-foreground text-center">David Stein</p>
               <p className="mt-1 text-lg font-semibold text-foreground/80 text-center">President, Real Property Planning</p>
             </div>
 
