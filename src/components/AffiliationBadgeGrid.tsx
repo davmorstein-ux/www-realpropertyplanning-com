@@ -41,7 +41,7 @@ const AffiliationBadgeGrid = ({ naepcAlt }: AffiliationBadgeGridProps = {}) => {
           </a>
         </BadgeCell>
         <BadgeCell>
-          <img src="/badges/realtor-badge.png" alt="REALTOR® badge" className="h-[54px] w-auto object-contain" />
+          <img src="/badges/realtor-badge.png" alt="REALTOR® badge" className="h-[108px] w-auto object-contain" />
         </BadgeCell>
       </div>
     </div>
