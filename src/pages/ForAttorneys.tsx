@@ -277,6 +277,7 @@ const ForAttorneys = () => {
         heading="Real Client Situations"
         subheading="Examples of how David has supported attorneys and their clients through complex property transitions."
         background="bg-secondary"
+        showCTA
       />
 
       <PageFAQ faqs={attorneyFaqs} heading="Questions Attorneys Ask About Working With David" />

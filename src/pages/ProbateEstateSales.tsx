@@ -339,6 +339,7 @@ const ProbateEstateSales = () => {
         heading="Real Client Situations"
         subheading="Examples of how David has helped executors and families handle complex probate property transitions."
         background="bg-background"
+        showCTA
       />
 
       <PageFAQ faqs={faqs} heading="Probate & Estate Sale FAQs" />
