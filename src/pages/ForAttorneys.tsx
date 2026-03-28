@@ -19,6 +19,56 @@ import alcaLogo from "@/assets/alca-corporate-partner.png";
 import naosaBadge from "@/assets/naosa-badge-clean.png";
 import naepcLogo from "@/assets/naepc-logo.png";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+import ClientReviewsSection from "@/components/ClientReviewsSection";
+import RealClientSituations from "@/components/RealClientSituations";
+
+const attorneyReviews = [
+  {
+    text: "David guided our family through a very difficult time with professionalism and genuine compassion. His valuation perspective and market knowledge were incredibly helpful.",
+    highlights: ["professionalism and genuine compassion", "valuation perspective"],
+    attribution: "Estate Attorney, Seattle",
+    contextTag: "Probate · Executor",
+  },
+  {
+    text: "David's dual background in brokerage and appraisal gave us confidence that the property was priced correctly. He made a complicated situation feel manageable.",
+    highlights: ["priced correctly", "complicated situation"],
+    attribution: "Professional Referral",
+    contextTag: "Valuation Strategy",
+  },
+  {
+    text: "We didn't know where to start. David made the entire process manageable and kept us informed every step of the way.",
+    highlights: ["entire process manageable", "informed every step"],
+    attribution: "Executor, Snohomish County",
+    contextTag: "Out-of-State Coordination",
+  },
+];
+
+const attorneyCaseStudies = [
+  {
+    title: "Out-of-State Executor With a Full House",
+    label: "Out-of-State Executor",
+    situation: "An executor living in California was named personal representative for her father's estate in Snohomish County.",
+    challenge: "No local contacts, property hadn't been updated in 30 years, and was filled with decades of belongings.",
+    howHelped: "Coordinated cleanout, managed repairs, handled the entire listing and sale remotely with regular updates to both the executor and her estate attorney.",
+    outcome: "Home sold within three weeks at a price exceeding expectations. The executor later referred David to her attorney for future situations.",
+  },
+  {
+    title: "Siblings Who Disagreed on Pricing",
+    label: "Family Coordination",
+    situation: "Three adult children inherited their mother's home in King County. Each had a different opinion about what to do.",
+    challenge: "One wanted to sell quickly, one believed the home was worth far more than market data showed, and one was unsure.",
+    howHelped: "Presented a detailed property assessment and comparable sales analysis grounded in appraisal methodology to all three siblings.",
+    outcome: "The family agreed on a data-driven price. The home sold with minimal conflict, and all three felt the process was professional.",
+  },
+  {
+    title: "Senior Transition With Family Coordination",
+    label: "Senior Transition",
+    situation: "An elder law attorney's client needed to sell the family home as part of a move to assisted living.",
+    challenge: "The senior was emotionally attached to the home, and adult children living out of state needed regular communication and reassurance.",
+    howHelped: "David worked with the family to set a realistic timeline, coordinated preparation and staging, and provided consistent updates to both the attorney and family members.",
+    outcome: "The home sold at a fair price with a smooth transition. The family described the process as respectful and well-coordinated.",
+  },
+];
 
 const attorneyTiles = [
   {
@@ -198,6 +248,20 @@ const ForAttorneys = () => {
           </div>
         </div>
       </section>
+
+      <ClientReviewsSection
+        reviews={attorneyReviews}
+        heading="Client Reviews & Experiences"
+        subheading="Feedback from attorneys, executors, and families who have worked with David on complex property situations."
+        background="bg-background"
+      />
+
+      <RealClientSituations
+        studies={attorneyCaseStudies}
+        heading="Real Client Situations"
+        subheading="Examples of how David has supported attorneys and their clients through complex property transitions."
+        background="bg-secondary"
+      />
 
       <PageFAQ faqs={attorneyFaqs} heading="Questions Attorneys Ask About Working With David" />
 

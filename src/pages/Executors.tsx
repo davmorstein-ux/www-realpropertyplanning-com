@@ -39,20 +39,26 @@ const executorTestimonials = [
 const executorCaseStudies = [
   {
     title: "Out-of-State Executor With a Full House",
-    situation: "An executor living in California was named personal representative for her father's estate in Snohomish County. The home had not been updated in 30 years and was filled with decades of belongings. She had no local contacts and no idea where to start.",
-    approach: "David assessed the property, coordinated a professional cleanout team, managed minor repairs and landscaping, and handled the entire listing and sale process — providing regular photo updates and phone calls so she never had to fly out.",
+    label: "Out-of-State Executor",
+    situation: "An executor living in California was named personal representative for her father's estate in Snohomish County. The home had not been updated in 30 years and was filled with decades of belongings.",
+    challenge: "No local contacts, no idea where to start, and she could not fly out regularly to manage the process.",
+    howHelped: "David assessed the property, coordinated a professional cleanout team, managed minor repairs and landscaping, and handled the entire listing and sale process — providing regular photo updates and phone calls so she never had to fly out.",
     outcome: "The home sold within three weeks of listing at a price that exceeded the executor's expectations. She later referred David to her estate attorney for future client situations.",
   },
   {
     title: "Siblings Who Disagreed on Pricing",
+    label: "Family Coordination",
     situation: "Three adult children inherited their mother's home in King County. One wanted to sell quickly, one believed the home was worth significantly more than market data supported, and one was not sure what to do.",
-    approach: "David presented a detailed property assessment and comparable sales analysis — drawing on his appraisal background to explain how condition, location, and market timing affected realistic value. He met with all three siblings to answer questions and address concerns.",
+    challenge: "Conflicting opinions about value and timeline created tension and delayed decision-making.",
+    howHelped: "David presented a detailed property assessment and comparable sales analysis — drawing on his appraisal background to explain how condition, location, and market timing affected realistic value. He met with all three siblings to answer questions and address concerns.",
     outcome: "The family agreed on a pricing strategy grounded in data rather than emotion. The home sold at a fair price with minimal conflict, and all three siblings felt the process was handled professionally.",
   },
   {
     title: "Estate Property With Significant Deferred Maintenance",
-    situation: "A trustee needed to sell a Pierce County home that had a failing roof, outdated electrical, and years of deferred maintenance. Two previous agents had declined the listing because of the property's condition.",
-    approach: "David evaluated each issue, estimated the cost impact on market value, and recommended a targeted preparation strategy — addressing safety concerns and cosmetic items that would affect buyer perception while advising against costly renovations that would not deliver meaningful return.",
+    label: "Valuation Strategy",
+    situation: "A trustee needed to sell a Pierce County home that had a failing roof, outdated electrical, and years of deferred maintenance.",
+    challenge: "Two previous agents had declined the listing because of the property's condition. The trustee needed to fulfill fiduciary obligations with documented market support.",
+    howHelped: "David evaluated each issue, estimated the cost impact on market value, and recommended a targeted preparation strategy — addressing safety concerns and cosmetic items that would affect buyer perception while advising against costly renovations that would not deliver meaningful return.",
     outcome: "The property was priced accurately for its condition, attracted multiple offers from investors and renovation buyers, and closed smoothly. The trustee fulfilled their fiduciary obligation with documented market support.",
   },
 ];
