@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import mappin3d from "@/assets/mappin-3d.png";
 import iconEmail3d from "@/assets/icons/icon-email-3d.png";
 import expRealtyLogo from "@/assets/exp-realty-logo.png";
+import equalHousingBadge from "@/assets/equal-housing-badge.png";
 import alcaLogo from "@/assets/alca-corporate-partner.png";
 import naosaBadge from "@/assets/naosa-badge-clean.png";
 import naepcLogo from "@/assets/naepc-logo.png";
@@ -147,12 +148,20 @@ const Footer = () => {
         {/* Brokerage Compliance */}
         <div className="footer-divider mb-0" />
         <div className="pt-10 pb-2 flex flex-col items-center">
-          <img 
-            src={expRealtyLogo} 
-            alt="eXp Realty brokerage logo — David Stein is a licensed broker with eXp Realty" 
-            className="w-[95px] md:w-[120px] h-auto mb-4"
-            loading="lazy"
-          />
+          <div className="flex items-center justify-center gap-5 mb-4">
+            <img 
+              src={expRealtyLogo} 
+              alt="eXp Realty brokerage logo — David Stein is a licensed broker with eXp Realty" 
+              className="w-[95px] md:w-[120px] h-auto"
+              loading="lazy"
+            />
+            <img
+              src={equalHousingBadge}
+              alt="Equal Housing Opportunity"
+              className="h-[36px] md:h-[44px] w-auto opacity-80"
+              loading="lazy"
+            />
+          </div>
           <p className="text-primary-foreground/50 text-[13px] text-center leading-relaxed">
             David Stein | Real Estate Broker · Certified Residential Appraiser | Real Property Planning | eXp Realty
           </p>
