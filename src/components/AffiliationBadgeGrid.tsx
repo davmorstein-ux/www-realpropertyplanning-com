@@ -32,7 +32,7 @@ const AffiliationBadgeGrid = ({ naepcAlt }: AffiliationBadgeGridProps = {}) => {
         </BadgeCell>
         <BadgeCell>
           <a href="https://www.naosa.org" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
-            <img src={naosaBadge} alt="National Association of Senior Advocates - Best Real Estate Agent 2026" className="h-[92px] w-auto object-contain" />
+            <img src={naosaBadge} alt="National Association of Senior Advocates - Best Real Estate Agent 2026" className="h-[115px] w-auto object-contain" />
           </a>
         </BadgeCell>
         <BadgeCell>
