@@ -175,12 +175,12 @@ const WashingtonExecutorsChecklist = () => {
               <p className="text-primary-foreground/75 text-lg leading-relaxed mb-8 max-w-xl mx-auto">
                 Real Property Planning works with executors, trustees, and families to make informed property decisions with clarity, coordination, and valuation-informed strategy.
               </p>
-              <Button variant="gold" size="lg" className="px-8 py-4 h-auto text-base tracking-wide" asChild>
-                <Link to="/contact">
+              <Link to="/contact">
+                <Button variant="gold" size="lg" className="px-8 py-4 h-auto text-base tracking-wide">
                   Schedule a Conversation
                   <ArrowRight className="w-5 h-5 ml-2" />
-                </Link>
-              </Button>
+                </Button>
+              </Link>
             </div>
           </div>
         </section>
