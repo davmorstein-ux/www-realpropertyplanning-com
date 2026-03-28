@@ -198,68 +198,73 @@ const Index = () => {
           ABOUT DAVID — Two-column with headshot + credentials
       ═══════════════════════════════════════════════════ */}
       <section className="py-16 lg:py-20 bg-cream">
-        <div className="mx-auto max-w-[1100px] px-6 lg:px-8">
-          <div className="grid lg:grid-cols-[auto_1fr] gap-10 lg:gap-14 items-center">
-            {/* Left — Headshot */}
-            <div className="flex flex-col items-center">
-              <div className="w-56 h-56 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-gold/30 shadow-xl">
-                <img
-                  src={daveHeadshot2}
-                  alt="David Stein, probate real estate specialist and certified appraiser"
-                  className="w-full h-full object-cover object-top"
-                  loading="lazy"
-                />
-              </div>
-              <p className="mt-3 text-xl font-bold text-foreground text-center">David Stein</p>
-              <p className="mt-1 text-lg font-semibold text-foreground/80 text-center">President, Real Property Planning</p>
-            </div>
-
-            {/* Right — Bio + credentials + badges */}
-            <div>
-              <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-3">
-                Meet David Stein
-              </h2>
-               <p className="text-muted-foreground text-lg leading-relaxed mb-3">
-                 David brings over 20 years of experience as both a licensed real estate broker and certified residential appraiser. This rare dual expertise means clients get calm, knowledgeable guidance grounded in professional valuation — not guesswork.
-               </p>
-               <p className="text-muted-foreground text-base leading-relaxed mb-5">
-                 He works with executors, attorneys, trustees, and families across Washington State, with deep experience in Western Washington and the Puget Sound region.
-               </p>
-              <div className="mb-5 space-y-3">
-                <p className="text-lg font-bold tracking-[0.01em] text-foreground">Real Property Planning — David Stein</p>
-                <p className="flex items-center text-base font-semibold text-foreground">
-                  <img src={iconLicense3d} alt="" aria-hidden="true" className="mr-3 h-12 w-12 shrink-0 object-contain" />
-                  Licensed Real Estate Broker — License #113972
-                </p>
-                <p className="flex items-center text-base font-semibold text-foreground">
-                  <img src={iconAppraiser3d} alt="" aria-hidden="true" className="mr-3 h-12 w-12 shrink-0 object-contain mix-blend-multiply" />
-                  WA Certified Residential Appraiser — #1702080
-                </p>
-                <div className="flex items-center text-base text-foreground">
-                  <img src={expRealtyLogo} alt="eXp Realty" className="mr-3 h-5 w-auto opacity-70" loading="lazy" />
-                  <span className="text-muted-foreground text-sm">eXp Realty</span>
-                </div>
-              </div>
-              <div className="mb-5 space-y-1.5 text-[15px] text-muted-foreground">
-                <p>
-                  <a href="tel:2069003015" className="hover:text-gold transition-colors">
-                    <img src={iconPhone3d} alt="" aria-hidden="true" className="inline mr-2 h-10 w-10 object-contain" />
-                    (206) 900-3015
-                  </a>
-                </p>
-                <p>
-                  <a href="mailto:david@realpropertyplanning.com" className="hover:text-gold transition-colors">
-                    <img src={iconEmail3d} alt="" aria-hidden="true" className="inline mr-2 h-10 w-10 object-contain" />
-                    david@realpropertyplanning.com
-                  </a>
-                </p>
-                <p className="text-sm">PO Box 1462, Woodinville, WA 98072</p>
-                <p className="text-sm">Office: 1455 NW Leary Way, Seattle, WA 98107</p>
-              </div>
-              <p className="mb-3 text-center text-xs font-semibold uppercase tracking-widest text-muted-foreground">Professional Memberships &amp; Affiliations</p>
-              <AffiliationBadgeGrid />
+        <div className="mx-auto max-w-3xl px-6 lg:px-8 text-center">
+          {/* 1. Headshot */}
+          <div className="flex justify-center mb-5">
+            <div className="w-56 h-56 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-gold/30 shadow-xl">
+              <img
+                src={daveHeadshot2}
+                alt="David Stein, probate real estate specialist and certified appraiser"
+                className="w-full h-full object-cover object-top"
+                loading="lazy"
+              />
             </div>
           </div>
+
+          {/* 2. Name */}
+          <p className="text-2xl md:text-[1.65rem] font-bold text-foreground">David Stein</p>
+
+          {/* 3. Title */}
+          <p className="text-lg md:text-xl font-semibold text-foreground/80 mt-1">President, Real Property Planning</p>
+
+          {/* 5. Experience text */}
+          <div className="mt-8 text-left sm:text-center space-y-4 max-w-2xl mx-auto">
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              David brings over 20 years of experience as both a licensed real estate broker and certified residential appraiser. This rare dual expertise means clients get calm, knowledgeable guidance grounded in professional valuation — not guesswork.
+            </p>
+            <p className="text-muted-foreground text-base leading-relaxed">
+              He works with executors, attorneys, trustees, and families across Washington State, with deep experience in Western Washington and the Puget Sound region.
+            </p>
+          </div>
+
+          {/* 6. Licensing */}
+          <div className="mt-8 space-y-2">
+            <p className="flex items-center justify-center text-base font-semibold text-foreground">
+              <img src={iconLicense3d} alt="" aria-hidden="true" className="mr-3 h-10 w-10 shrink-0 object-contain" />
+              Licensed Real Estate Broker — License #113972
+            </p>
+            <p className="flex items-center justify-center text-base font-semibold text-foreground">
+              <img src={iconAppraiser3d} alt="" aria-hidden="true" className="mr-3 h-10 w-10 shrink-0 object-contain mix-blend-multiply" />
+              WA Certified Residential Appraiser — #1702080
+            </p>
+          </div>
+
+          {/* 7. Phone + Email on one line */}
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-10 text-base text-muted-foreground">
+            <a href="tel:2069003015" className="flex items-center gap-2 hover:text-gold transition-colors font-medium">
+              <img src={iconPhone3d} alt="" aria-hidden="true" className="h-8 w-8 object-contain shrink-0" />
+              (206) 900-3015
+            </a>
+            <a href="mailto:david@realpropertyplanning.com" className="flex items-center gap-2 hover:text-gold transition-colors font-medium">
+              <img src={iconEmail3d} alt="" aria-hidden="true" className="h-8 w-8 object-contain shrink-0" />
+              david@realpropertyplanning.com
+            </a>
+          </div>
+
+          {/* 8. eXp logo + addresses */}
+          <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
+            <img src={expRealtyLogo} alt="eXp Realty" className="h-6 w-auto opacity-70" loading="lazy" />
+            <div className="text-sm text-muted-foreground leading-relaxed sm:text-left">
+              <p>PO Box 1462, Woodinville, WA 98072</p>
+              <p>Office: 1455 NW Leary Way, Seattle, WA 98107</p>
+            </div>
+          </div>
+
+          {/* 9. Memberships heading */}
+          <p className="mt-12 mb-4 text-xs font-semibold uppercase tracking-widest text-muted-foreground">Professional Memberships &amp; Affiliations</p>
+
+          {/* 10. Badge row — all 5 on one line */}
+          <AffiliationBadgeGrid />
         </div>
       </section>
 
