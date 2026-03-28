@@ -122,7 +122,7 @@ const Index = () => {
             </Button>
           </a>
           <p className="mt-3 text-white/60 text-sm">
-            Or <Link to="/contact" className="underline underline-offset-2 hover:text-gold transition-colors">request a call back</Link> if that's easier.
+            <Link to="/contact" className="underline underline-offset-2 hover:text-gold transition-colors">Request a call back</Link>
           </p>
         </div>
       </section>

@@ -56,7 +56,7 @@ const HeroSection = () => {
               </Button>
             </div>
             <p className="mt-2 text-primary-foreground/70 text-sm max-w-md" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.15)' }}>
-              Or <a href="/contact" className="underline underline-offset-2 hover:text-gold transition-colors">request a call back</a> if that's easier.
+              <a href="/contact" className="underline underline-offset-2 hover:text-gold transition-colors">Request a call back</a>
             </p>
             <p className="mt-2 text-primary-foreground/50 text-sm max-w-md">
               A short conversation to understand your situation and discuss next steps. No pressure.
