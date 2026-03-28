@@ -210,6 +210,15 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Navy divider between Who We Help and Service Tiles */}
+      <div className="bg-cream">
+        <div className="flex items-center justify-center gap-4 py-10 lg:py-14">
+          <div className="h-[2px] w-24 rounded-full" style={{ background: 'linear-gradient(to right, transparent, hsl(var(--navy)))' }} />
+          <div className="w-[6px] h-[6px] rotate-45 shrink-0" style={{ background: 'hsl(var(--navy) / 0.6)' }} />
+          <div className="h-[2px] w-24 rounded-full" style={{ background: 'linear-gradient(to left, transparent, hsl(var(--navy)))' }} />
+        </div>
+      </div>
+
       {/* ═══════════════════════════════════════════════════
           SERVICE NAV TILES — Immediately after hero
       ═══════════════════════════════════════════════════ */}
