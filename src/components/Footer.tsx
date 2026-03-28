@@ -158,8 +158,7 @@ const Footer = () => {
             <img
               src={equalHousingBadge}
               alt="Equal Housing Opportunity"
-              className="h-[36px] md:h-[44px] w-auto opacity-80"
-              loading="lazy"
+              className="h-[36px] md:h-[44px] w-auto"
             />
           </div>
           <p className="text-primary-foreground/50 text-[13px] text-center leading-relaxed">

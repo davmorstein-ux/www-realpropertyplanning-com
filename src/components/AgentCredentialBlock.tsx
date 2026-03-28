@@ -17,8 +17,7 @@ const AgentCredentialBlock = () => (
       <img
         src={realtorBadge}
         alt="REALTOR®"
-        className="h-[56px] md:h-[64px] w-auto opacity-85"
-        loading="lazy"
+        className="h-[56px] md:h-[64px] w-auto"
       />
     </div>
   </div>
