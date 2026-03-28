@@ -183,6 +183,12 @@ const ForProfessionals = () => {
               <a href="https://www.naepc.org" target="_blank" rel="noopener noreferrer">
                 <img src={naepcLogo} alt="National Association of Estate Planners & Councils" className="max-h-[82px] w-auto object-contain" loading="lazy" />
               </a>
+              <div className="flex items-center justify-center min-h-[80px]">
+                <img src="/badges/realtor-badge.png" alt="REALTOR® badge" className="h-[58px] md:h-[64px] w-auto object-contain" />
+              </div>
+              <div className="flex items-center justify-center min-h-[80px]">
+                <img src="/badges/equal-housing-badge.png" alt="Equal Housing Opportunity badge" className="h-[44px] md:h-[48px] w-auto object-contain" />
+              </div>
             </div>
           </div>
         </div>

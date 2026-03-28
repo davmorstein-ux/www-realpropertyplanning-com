@@ -119,20 +119,20 @@ const SeniorTransitions = () => {
       {/* Professional Affiliations */}
       <section className="py-12 lg:py-16 bg-background">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-center gap-6 sm:gap-8">
-            <div className="flex items-center gap-6 shrink-0">
+          <div className="max-w-4xl mx-auto flex flex-col items-center gap-6 sm:gap-8">
+            <div className="flex flex-wrap items-center justify-center gap-8">
               <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer">
                 <img
                   src={alcaLogo}
                   alt="Aging Life Care Association Corporate Partner"
-                  className="h-20 md:h-24 w-auto"
+                  className="h-16 md:h-20 w-auto"
                   loading="lazy"
                 />
               </a>
               <img
                 src={naosaBadge}
                 alt="National Association of Senior Advocates - Best Real Estate Agent 2026"
-                className="h-48 md:h-56 w-auto"
+                className="h-40 md:h-48 w-auto"
                 loading="lazy"
               />
               <a href="https://www.naepc.org" target="_blank" rel="noopener noreferrer">
@@ -143,8 +143,14 @@ const SeniorTransitions = () => {
                   loading="lazy"
                 />
               </a>
+              <div className="flex items-center justify-center min-h-[80px]">
+                <img src="/badges/realtor-badge.png" alt="REALTOR® badge" className="h-[58px] md:h-[64px] w-auto object-contain" />
+              </div>
+              <div className="flex items-center justify-center min-h-[80px]">
+                <img src="/badges/equal-housing-badge.png" alt="Equal Housing Opportunity badge" className="h-[44px] md:h-[48px] w-auto object-contain" />
+              </div>
             </div>
-            <p className="text-muted-foreground text-base leading-relaxed">
+            <p className="text-muted-foreground text-base leading-relaxed text-center max-w-3xl">
               Real Property Planning is a Corporate Partner of the Aging Life Care Association, a recognized member of the National Association of Senior Advocates and Advisors, and a member of the National Association of Estate Planners &amp; Councils.
             </p>
           </div>
