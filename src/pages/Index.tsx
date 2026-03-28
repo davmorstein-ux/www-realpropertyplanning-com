@@ -258,7 +258,7 @@ const Index = () => {
               <p>PO Box 1462, Woodinville, WA 98072</p>
               <p>Office: 1455 NW Leary Way, Seattle, WA 98107</p>
             </div>
-            <img src="/badges/equal-housing-badge.png" alt="Equal Housing Opportunity" className="h-[21px] w-auto opacity-70" loading="lazy" />
+            <img src="/badges/equal-housing-badge.png" alt="Equal Housing Opportunity" className="h-[5.25rem] w-auto opacity-70" loading="lazy" />
           </div>
 
           {/* 9. Memberships heading with divider lines */}
