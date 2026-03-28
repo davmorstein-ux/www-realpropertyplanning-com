@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 
 interface CaseStudy {
   title: string;
@@ -15,13 +17,15 @@ interface RealClientSituationsProps {
   heading?: string;
   subheading?: string;
   background?: "bg-background" | "bg-secondary" | "bg-cream";
+  showCTA?: boolean;
 }
 
 const RealClientSituations = ({
   studies,
   heading = "Real Client Situations",
-  subheading = "Every situation is different. Here are a few examples of how David has helped clients navigate complex property transitions.",
+  subheading = "Every situation is different. Here are a few examples of how David has helped clients work through complex property transitions.",
   background = "bg-background",
+  showCTA = false,
 }: RealClientSituationsProps) => (
   <section className={`py-16 lg:py-24 ${background}`}>
     <div className="container px-6 lg:px-8">
@@ -72,6 +76,29 @@ const RealClientSituations = ({
             </div>
           ))}
         </div>
+
+        {showCTA && (
+          <div className="mt-14 text-center">
+            <div className="premium-divider mb-8">
+              <span className="premium-divider-dot" />
+            </div>
+            <h3 className="font-serif text-2xl md:text-[1.7rem] text-foreground font-semibold mb-4">
+              A Clear Next Step
+            </h3>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8 max-w-xl mx-auto">
+              If you're dealing with a situation like this, a short conversation can help bring clarity.
+            </p>
+            <Link to="/contact">
+              <Button variant="gold" size="lg" className="px-10 py-4 h-auto text-base">
+                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
+                Schedule a Consultation
+              </Button>
+            </Link>
+            <p className="text-muted-foreground/70 text-sm mt-4">
+              No pressure. Just practical guidance.
+            </p>
+          </div>
+        )}
       </div>
     </div>
   </section>

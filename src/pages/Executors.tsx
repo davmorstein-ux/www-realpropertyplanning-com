@@ -61,6 +61,30 @@ const executorCaseStudies = [
     howHelped: "David evaluated each issue, estimated the cost impact on market value, and recommended a targeted preparation strategy — addressing safety concerns and cosmetic items that would affect buyer perception while advising against costly renovations that would not deliver meaningful return.",
     outcome: "The property was priced accurately for its condition, attracted multiple offers from investors and renovation buyers, and closed smoothly. The trustee fulfilled their fiduciary obligation with documented market support.",
   },
+  {
+    title: "Coordinating a Probate Sale with Multiple Heirs",
+    label: "Family Coordination",
+    situation: "Four adult siblings inherited a family home in Kitsap County after their father passed. All four had equal ownership, and none lived near the property.",
+    challenge: "The siblings had different views on timing — one wanted to hold the property, two wanted to sell quickly, and one was unsure. There was also confusion about what the home was actually worth, which made it harder to reach agreement.",
+    howHelped: "David provided a clear, valuation-informed pricing assessment so everyone was working from the same numbers. He held a group call to walk through the market data, explain the cost of holding versus selling, and outline realistic options. He then coordinated preparation and managed the sale process with regular updates to all four siblings.",
+    outcome: "The family reached agreement within two weeks. The home sold at a price everyone felt was fair, and multiple siblings said the process was far less stressful than they expected.",
+  },
+  {
+    title: "Helping a Family Navigate a Senior Transition and Home Sale",
+    label: "Senior Transition",
+    situation: "A longtime homeowner in her early 80s was moving to an assisted living community. Her two adult children — one local, one out of state — were helping coordinate the transition and sale of the family home in King County.",
+    challenge: "The home held 40 years of memories, and the decision was emotionally difficult for everyone. The family wasn't sure how to prepare the property, when to list, or how to manage the timeline alongside the move.",
+    howHelped: "David met with the family to understand the full picture — the move-in date, the property's condition, and the family's comfort level. He recommended a phased approach: start with a gentle cleanout, address a few targeted improvements, and list at a time that aligned with the transition. He coordinated vendors and kept everyone informed throughout.",
+    outcome: "The home sold within a month of listing. The family described the experience as respectful and well-paced — and said having a clear plan made the transition much easier to manage.",
+  },
+  {
+    title: "Providing Clarity on Pricing an Inherited Property",
+    label: "Valuation Strategy",
+    situation: "An executor inherited a home in Snohomish County and had received two very different price opinions from other agents. She wasn't sure who to trust or how to set a realistic asking price.",
+    challenge: "One agent suggested listing high to 'test the market.' The other recommended a much lower price to sell fast. Neither opinion was supported by detailed analysis, and the executor felt stuck.",
+    howHelped: "David conducted a thorough property review and provided a valuation-informed pricing strategy — walking the executor through comparable sales, condition adjustments, and current market trends. He explained his reasoning clearly so she could make a confident, informed decision.",
+    outcome: "The executor chose a well-supported list price. The home received strong interest and sold close to asking. She said the clarity David provided was the turning point in feeling confident about the process.",
+  },
 ];
 
 const commonSituations = [
@@ -298,7 +322,7 @@ const Executors = () => {
         microcopy="No pressure. Just practical guidance for your situation."
       />
 
-      <RealClientSituations studies={executorCaseStudies} background="bg-background" />
+      <RealClientSituations studies={executorCaseStudies} background="bg-background" showCTA />
 
       <PageTestimonials testimonials={executorTestimonials} heading="What Executors Are Saying" />
 
