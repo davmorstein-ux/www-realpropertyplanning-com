@@ -158,20 +158,7 @@ const Index = () => {
               Reduce stress. Protect value. Get clear, valuation-informed strategy from a broker who understands what your family is going through.
             </p>
 
-            {/* CTA */}
-            <Link to="/contact">
-              <Button
-                variant="gold"
-                size="lg"
-                className="px-12 py-5 h-auto text-lg tracking-wide"
-              >
-                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
-                Schedule a 20‑Minute Consultation
-              </Button>
-            </Link>
-            <p className="text-primary-foreground/50 text-sm leading-relaxed max-w-md mx-auto mt-4">
-              We'll walk through your situation, answer your questions, and outline practical next steps. No pressure or obligation.
-            </p>
+
 
             {/* Premium gold divider */}
             <div className="premium-divider my-14 lg:my-[72px]">
