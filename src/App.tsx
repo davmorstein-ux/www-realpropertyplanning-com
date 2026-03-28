@@ -227,6 +227,11 @@ const App = () => (
           <Route path="/guides/estate-property-repairs-before-sale" element={<EstatePropertyRepairs />} />
           <Route path="/guides/heirs-disagree-selling-house" element={<HeirsDisagreeSelling />} />
           <Route path="/guides/pricing-house-trust-estate" element={<PricingHouseTrustEstate />} />
+          <Route path="/guides/sell-house-during-probate-washington" element={<SellHouseDuringProbateWashington />} />
+          <Route path="/guides/taxes-selling-inherited-house-washington" element={<TaxesSellingInheritedHouseWashington />} />
+          <Route path="/guides/how-long-sell-probate-property" element={<HowLongSellProbateProperty />} />
+          <Route path="/guides/executor-first-steps-house" element={<ExecutorFirstStepsHouse />} />
+          <Route path="/guides/sell-inherited-house-as-is-or-fix" element={<SellInheritedHouseAsIsOrFix />} />
           {/* Insight articles */}
           <Route path="/insights/first-steps-inherited-house-washington" element={<FirstStepsInheritedHouse />} />
           <Route path="/insights/out-of-state-inherited-house-help" element={<OutOfStateInheritedHouse />} />
