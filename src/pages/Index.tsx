@@ -102,32 +102,36 @@ const Index = () => {
           width={1920}
           height={1080}
         />
-        <div className="absolute inset-0 bg-black/35" />
+        <div className="absolute inset-0 bg-black/40" />
 
         <div className="container relative z-10 px-6 lg:px-8 py-20 lg:py-24 flex flex-col items-center text-center">
-        <div className="max-w-3xl">
-             <h1 className="font-serif text-4xl md:text-5xl lg:text-[54px] font-bold leading-[1.1] text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6), 0 4px 16px rgba(0,0,0,0.3), 0 0 40px rgba(0,0,0,0.2)' }}>
-              Specialized Guidance for Probate, Estate &amp; Senior Transition Real Estate Across Washington State
+          <div className="max-w-3xl">
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-[54px] font-bold leading-[1.1] text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6), 0 4px 16px rgba(0,0,0,0.3), 0 0 40px rgba(0,0,0,0.2)' }}>
+              Expert Real Estate Guidance for Probate, Estates &amp; Senior Transitions in Washington State
             </h1>
+            <p className="mt-5 text-xl md:text-2xl text-white/90 font-medium leading-relaxed max-w-2xl mx-auto" style={{ textShadow: '0 1px 6px rgba(0,0,0,0.5)' }}>
+              Helping executors, families, and attorneys sell inherited and estate property with confidence.
+            </p>
           </div>
         </div>
       </section>
 
       {/* ═══════════════════════════════════════════════════
-          WHO WE CAN HELP — Between hero and CTA
+          WHO WE CAN HELP + CTA — Consolidated dark section
       ═══════════════════════════════════════════════════ */}
-      <section className="py-12 lg:py-16 bg-primary">
+      <section className="py-14 lg:py-20 bg-primary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] text-primary-foreground font-bold mb-6">
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] text-primary-foreground font-bold mb-8">
               Who We Can Help
             </h2>
             <ul className="space-y-3 text-left max-w-xl mx-auto mb-8">
               {[
-                "Executors and personal representatives",
-                "Families handling inherited property",
-                "Seniors and their families navigating transitions",
-                "Attorneys and fiduciaries supporting clients",
+                "Executors and personal representatives settling an estate",
+                "Families handling inherited property — locally or from out of state",
+                "Seniors and their families preparing for a move or transition",
+                "Attorneys and fiduciaries who need a reliable real estate partner",
+                "Out-of-state family members managing Washington property from a distance",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
@@ -135,8 +139,23 @@ const Index = () => {
                 </li>
               ))}
             </ul>
-            <p className="text-primary-foreground/70 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
+            <p className="text-primary-foreground/70 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-10">
               Reduce stress. Protect value. Get clear, valuation-informed strategy from a broker who understands what your family is going through.
+            </p>
+
+            {/* CTA */}
+            <Link to="/contact">
+              <Button
+                variant="gold"
+                size="lg"
+                className="px-12 py-5 h-auto text-lg tracking-wide"
+              >
+                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
+                Schedule a 20‑Minute Consultation
+              </Button>
+            </Link>
+            <p className="text-primary-foreground/50 text-sm leading-relaxed max-w-md mx-auto mt-4">
+              We'll walk through your situation, answer your questions, and outline practical next steps. No pressure or obligation.
             </p>
 
             {/* Premium gold divider */}
@@ -144,73 +163,22 @@ const Index = () => {
               <span className="premium-divider-dot" />
             </div>
 
-            <div className="text-primary-foreground/80 text-lg leading-relaxed space-y-4 max-w-2xl mx-auto">
+            <div className="text-primary-foreground/80 text-[17px] leading-[1.85] space-y-5 max-w-2xl mx-auto text-left">
               <p>
-                Real Property Planning works with attorneys, executors, trustees, fiduciaries, seniors, and families facing probate real estate, inherited homes, estate sales, and major property transitions throughout Washington State.
+                Real Property Planning works with attorneys, executors, trustees, and families facing probate, inherited property, estate sales, and senior transitions across Washington State.
               </p>
               <p>
-                David Stein brings more than 20 years of dual expertise as a licensed real estate broker and Washington State certified residential appraiser. He has especially strong experience in Western Washington and the Puget Sound region.
+                David Stein brings more than 20 years of dual expertise as a licensed real estate broker and certified residential appraiser. His strongest experience is in Western Washington and the Puget Sound region.
               </p>
               <p>
-                When clients need help outside Washington, David can also connect them with trusted eXp Realty brokers across the United States and internationally.
+                When clients need help outside Washington, David connects them with trusted eXp Realty brokers across the United States and internationally.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════════════
-          CTA — Below hero image
-      ═══════════════════════════════════════════════════ */}
-      <section className="py-12 lg:py-16 bg-primary">
-        <div className="container px-6 lg:px-8 flex flex-col items-center text-center max-w-3xl mx-auto">
-          <Link to="/contact">
-            <Button
-              variant="gold"
-              size="lg"
-              className="px-12 py-5 h-auto text-lg tracking-wide"
-            >
-              <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
-              Schedule a 20‑Minute Consultation
-            </Button>
-          </Link>
-          <p className="text-primary-foreground/60 text-base leading-relaxed max-w-lg mt-4">
-            In a brief call, we review your situation, answer initial questions, and outline a practical plan for your property — with no pressure or obligation.
-          </p>
-        </div>
-      </section>
-
-      {/* ═══════════════════════════════════════════════════
-          WHO WE HELP — Immediately after hero
-      ═══════════════════════════════════════════════════ */}
-      <section className="py-16 lg:py-20 bg-cream">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-6 text-center">
-              Who We Help
-            </h2>
-            <p className="text-foreground/80 text-lg leading-relaxed mb-8 text-center">
-              Real Property Planning serves attorneys, personal representatives, and families facing probate, estate sales, inherited property, and senior transitions throughout Washington State.
-            </p>
-            <ul className="space-y-4">
-              {[
-                "Attorneys seeking a reliable real estate partner for probate and estate cases.",
-                "Personal representatives, executors, and trustees responsible for selling an inherited property.",
-                "Heirs and beneficiaries who need clear guidance and realistic expectations.",
-                "Seniors and their families preparing to downsize or move to assisted or independent living.",
-                "Out-of-state family members managing Washington property from a distance.",
-              ].map((item, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <GoldCheck3D size={20} className="mt-0.5" />
-                  <span className="text-foreground text-lg leading-relaxed">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* Navy divider between Who We Help and Service Tiles */}
+      {/* Navy divider between dark section and Service Tiles */}
       <div className="bg-cream">
         <div className="flex items-center justify-center gap-4 py-10 lg:py-14">
           <div className="h-[2px] w-24 rounded-full" style={{ background: 'linear-gradient(to right, transparent, hsl(var(--navy)))' }} />
@@ -247,9 +215,12 @@ const Index = () => {
               <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-3">
                 Meet David Stein
               </h2>
-              <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-                With over 20 years of experience as both a licensed real estate broker and certified residential appraiser, David brings rare dual expertise to every engagement — providing calm, knowledgeable guidance during life's most important property decisions.
-              </p>
+               <p className="text-muted-foreground text-lg leading-relaxed mb-3">
+                 David brings over 20 years of experience as both a licensed real estate broker and certified residential appraiser. This rare dual expertise means clients get calm, knowledgeable guidance grounded in professional valuation — not guesswork.
+               </p>
+               <p className="text-muted-foreground text-base leading-relaxed mb-5">
+                 He works with executors, attorneys, trustees, and families across Washington State, with deep experience in Western Washington and the Puget Sound region.
+               </p>
               <div className="mb-5 space-y-3">
                 <p className="text-lg font-bold tracking-[0.01em] text-foreground">Real Property Planning — David Stein</p>
                 <p className="flex items-center text-base font-semibold text-foreground">
@@ -374,7 +345,8 @@ const Index = () => {
       ═══════════════════════════════════════════════════ */}
       <MidPageCTA
         heading="Have Questions About Your Situation?"
-        body="A short conversation to understand your situation, answer questions, and discuss next steps."
+        body="A short, no-pressure conversation to understand what you're facing and talk through next steps."
+        microcopy="Most people feel better just having a plan. Let's start there."
         buttonText="Schedule a 20‑Minute Consultation"
         variant="dark"
       />
@@ -487,14 +459,17 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
             {/* Left — Contact info */}
             <div>
-              <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
+               <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
                 Start a Conversation
               </h2>
               <p className="text-primary-foreground/75 text-lg leading-relaxed mb-4">
-                Whether you're an attorney, executor, trustee, or family member anywhere in Washington State — David is here to help you navigate the real estate side of your situation with care and clarity.
+                Whether you're an attorney, executor, trustee, or family member — David is here to help you work through the real estate side of your situation with care and clarity.
+              </p>
+              <p className="text-primary-foreground/60 text-base leading-relaxed mb-4">
+                <strong className="text-primary-foreground/80">What happens next:</strong> David responds within one business day, usually sooner.
               </p>
               <p className="text-primary-foreground/60 text-base leading-relaxed mb-10">
-                <strong className="text-primary-foreground/80">What happens next:</strong> David will respond within one business day, usually sooner. Your initial conversation is confidential, practical, and no-obligation — focused on understanding your situation and outlining next steps.
+                Your initial conversation is confidential, practical, and no-obligation — focused on understanding your situation and outlining next steps.
               </p>
 
               <div className="space-y-5">
