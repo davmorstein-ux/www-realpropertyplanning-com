@@ -7,6 +7,7 @@ import { realEstateAgentSchema, davidSteinPerson } from "@/lib/schema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import TrustStrip from "@/components/TrustStrip";
 import RelatedServices from "@/components/RelatedServices";
+import StatewideSupport from "@/components/StatewideSupport";
 import ProofCallout from "@/components/ProofCallout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -241,6 +242,8 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      <StatewideSupport background="bg-secondary" />
 
       <DisclaimerSection />
       <Footer />

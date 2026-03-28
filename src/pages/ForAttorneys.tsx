@@ -21,6 +21,7 @@ import naepcLogo from "@/assets/naepc-logo.png";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 import ClientReviewsSection from "@/components/ClientReviewsSection";
 import RealClientSituations from "@/components/RealClientSituations";
+import StatewideSupport from "@/components/StatewideSupport";
 
 const attorneyReviews = [
   {
@@ -281,6 +282,8 @@ const ForAttorneys = () => {
       />
 
       <PageFAQ faqs={attorneyFaqs} heading="Questions Attorneys Ask About Working With David" />
+
+      <StatewideSupport background="bg-cream" />
 
       {/* CTA */}
       <section className="py-20 lg:py-28 bg-primary">
