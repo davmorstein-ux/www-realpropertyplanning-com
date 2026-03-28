@@ -322,7 +322,7 @@ const Executors = () => {
         microcopy="No pressure. Just practical guidance for your situation."
       />
 
-      <RealClientSituations studies={executorCaseStudies} background="bg-background" />
+      <RealClientSituations studies={executorCaseStudies} background="bg-background" showCTA />
 
       <PageTestimonials testimonials={executorTestimonials} heading="What Executors Are Saying" />
 
