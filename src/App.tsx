@@ -44,6 +44,7 @@ import CPAsFinancialAdvisors from "./pages/resources/CPAsFinancialAdvisors";
 import SeniorLivingCommunities from "./pages/resources/SeniorLivingCommunities";
 import PropertyPreparationServices from "./pages/resources/PropertyPreparationServices";
 import MovingRelocationServices from "./pages/resources/MovingRelocationServices";
+import WashingtonExecutorsChecklist from "./pages/resources/WashingtonExecutorsChecklist";
 import HowToMoveElderlyParents from "./pages/HowToMoveElderlyParents";
 import ForReferralPartners from "./pages/ForReferralPartners";
 import ForProfessionals from "./pages/ForProfessionals";
@@ -177,6 +178,7 @@ const App = () => (
           <Route path="/resources/senior-living-communities" element={<SeniorLivingCommunities />} />
           <Route path="/resources/property-preparation-services" element={<PropertyPreparationServices />} />
           <Route path="/resources/moving-relocation-services" element={<MovingRelocationServices />} />
+          <Route path="/resources/washington-executors-10-step-checklist" element={<WashingtonExecutorsChecklist />} />
           <Route path="/how-to-move-elderly-parents" element={<HowToMoveElderlyParents />} />
           <Route path="/for-referral-partners" element={<ForReferralPartners />} />
           <Route path="/for-professionals" element={<ForProfessionals />} />
