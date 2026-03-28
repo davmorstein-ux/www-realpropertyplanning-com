@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import mappin3d from "@/assets/mappin-3d.png";
 import iconEmail3d from "@/assets/icons/icon-email-3d.png";
 import expRealtyLogo from "@/assets/exp-realty-logo.png";
+import equalHousingBadge from "@/assets/equal-housing-badge.png";
 import alcaLogo from "@/assets/alca-corporate-partner.png";
 import naosaBadge from "@/assets/naosa-badge-clean.png";
 import naepcLogo from "@/assets/naepc-logo.png";
