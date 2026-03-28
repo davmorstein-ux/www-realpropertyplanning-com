@@ -107,11 +107,11 @@ const TrustAndResults = () => (
               <a href="https://www.naepc.org" target="_blank" rel="noopener noreferrer">
                 <img src={naepcLogo} alt="National Association of Estate Planners & Councils" className="max-h-[56px] w-auto object-contain" loading="lazy" />
               </a>
-              <div className="flex items-center justify-center min-h-[72px]">
-                <img src="/badges/realtor-badge.png" alt="REALTOR® badge" className="h-[56px] md:h-[60px] w-auto object-contain" />
+              <div className="flex items-center justify-center min-h-[120px]">
+                <img src="/badges/realtor-badge.png" alt="REALTOR® badge" className="max-h-[120px] w-auto object-contain" />
               </div>
-              <div className="flex items-center justify-center min-h-[72px]">
-                <img src="/badges/equal-housing-badge.png" alt="Equal Housing Opportunity badge" className="h-[40px] md:h-[44px] w-auto object-contain" />
+              <div className="flex items-center justify-center min-h-[120px]">
+                <img src="/badges/equal-housing-badge.png" alt="Equal Housing Opportunity badge" className="max-h-[120px] w-auto object-contain" />
               </div>
             </div>
           </div>
