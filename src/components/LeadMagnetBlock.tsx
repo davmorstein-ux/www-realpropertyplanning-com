@@ -35,17 +35,36 @@ const LeadMagnetBlock = () => {
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <div className="text-center">
-            <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-gold/20">
-              <FileText className="h-8 w-8 text-gold" />
+            {/* Premium 3D icon + badge */}
+            <div className="mx-auto mb-5 flex h-[72px] w-[72px] items-center justify-center rounded-full bg-gradient-to-b from-gold/25 to-gold/10 border border-gold/30 shadow-[0_4px_16px_rgba(201,168,76,0.18),inset_0_1px_0_rgba(255,255,255,0.12),inset_0_-1px_0_rgba(0,0,0,0.1)]">
+              <FileText className="h-8 w-8 text-gold drop-shadow-[0_1px_2px_rgba(0,0,0,0.25)]" />
             </div>
 
-            <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">Free Resource</p>
+            <div className="inline-flex items-center justify-center mb-4">
+              <span className="inline-block px-5 py-1.5 rounded-full text-gold font-bold tracking-[0.18em] uppercase text-xs bg-gradient-to-b from-gold/15 to-gold/5 border border-gold/25 shadow-[0_2px_8px_rgba(201,168,76,0.12),inset_0_1px_0_rgba(255,255,255,0.1),inset_0_-1px_0_rgba(0,0,0,0.08)]">
+                Free Resource
+              </span>
+            </div>
+
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-4">
               The Washington Executor's 10‑Step Checklist for Handling Real Estate
             </h2>
-            <p className="text-primary-foreground/75 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
+            <p className="text-primary-foreground/75 text-lg leading-relaxed mb-6 max-w-2xl mx-auto">
               Overwhelmed by the property side of estate administration? This practical, step-by-step checklist covers what most executors, trustees, and families wish they'd known from day one.
             </p>
+
+            {/* Primary CTA button */}
+            {!submitted && (
+              <Button
+                variant="gold"
+                size="lg"
+                className="px-8 py-4 h-auto text-base tracking-wide mb-8"
+                onClick={() => document.getElementById('checklist-form')?.scrollIntoView({ behavior: 'smooth', block: 'center' })}
+              >
+                <FileText className="w-5 h-5 mr-2" />
+                Get the Free Checklist
+              </Button>
+            )}
           </div>
 
           {/* Who it's for */}
@@ -69,7 +88,7 @@ const LeadMagnetBlock = () => {
           </ul>
 
           {/* Form / Download area */}
-          <div className="max-w-md mx-auto">
+          <div id="checklist-form" className="max-w-md mx-auto">
             {submitted ? (
               <div className="text-center bg-primary-foreground/10 rounded-xl p-8">
                 <CheckCircle2 className="w-10 h-10 text-gold mx-auto mb-4" />
