@@ -105,30 +105,24 @@ const Index = () => {
         />
         <div className="absolute inset-0 bg-black/40" />
 
-        <div className="container relative z-10 px-6 lg:px-8 py-20 lg:py-24 flex flex-col items-center text-center">
+        <div className="container relative z-10 px-6 lg:px-8 py-24 lg:py-32 flex flex-col items-center text-center">
           <div className="max-w-3xl">
             <h1 className="font-serif text-4xl md:text-5xl lg:text-[54px] font-bold leading-[1.1] text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6), 0 4px 16px rgba(0,0,0,0.3), 0 0 40px rgba(0,0,0,0.2)' }}>
               Real Estate Guidance for Probate, Inherited Property &amp; Life Transitions
             </h1>
-            <p className="mt-5 text-xl md:text-2xl text-white/90 font-medium leading-relaxed max-w-2xl mx-auto" style={{ textShadow: '0 1px 6px rgba(0,0,0,0.5)' }}>
-              Helping executors, families, and attorneys make confident property decisions with clarity, coordination, and valuation-informed strategy.
-            </p>
-            <p className="mt-4 text-lg text-white/70 font-normal" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.4)' }}>
-              You don't have to figure this out alone.
-            </p>
           </div>
-          <Link to="/contact" className="mt-8">
+          <a href="tel:+12069003015" className="mt-10">
             <Button
               variant="gold"
               size="lg"
               className="px-10 py-5 h-auto text-lg tracking-wide"
             >
               <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
-              Schedule a 20‑Minute Consultation
+              Call (206) 900-3015
             </Button>
-          </Link>
-          <p className="mt-3 text-white/50 text-sm max-w-md text-center">
-            A short call to understand your situation and outline next steps. No pressure.
+          </a>
+          <p className="mt-3 text-white/60 text-sm">
+            Or <Link to="/contact" className="underline underline-offset-2 hover:text-gold transition-colors">request a call back</Link> if that's easier.
           </p>
         </div>
       </section>
