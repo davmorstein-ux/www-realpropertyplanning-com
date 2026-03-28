@@ -253,14 +253,18 @@ const Index = () => {
 
           {/* 8–10. Centered lower block: brokerage row + memberships + badges */}
           <div className="mt-6 w-full flex flex-col items-center">
-            {/* 8. eXp logo + addresses + Equal Housing badge */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8">
-              <img src={expRealtyLogo} alt="eXp Realty" className="h-7 w-auto opacity-70" loading="lazy" />
+            {/* 8. eXp logo + addresses + Equal Housing badge — 3-col grid for true centering */}
+            <div className="w-full grid grid-cols-1 sm:grid-cols-[1fr_auto_1fr] items-center gap-6 sm:gap-4">
+              <div className="flex items-center justify-center sm:justify-end">
+                <img src={expRealtyLogo} alt="eXp Realty" className="h-7 w-auto opacity-70" loading="lazy" />
+              </div>
               <div className="text-sm text-muted-foreground leading-relaxed text-center">
                 <p>PO Box 1462, Woodinville, WA 98072</p>
                 <p>Office: 1455 NW Leary Way, Seattle, WA 98107</p>
               </div>
-              <img src="/badges/equal-housing-badge.png" alt="Equal Housing Opportunity" className="h-[5.25rem] w-auto opacity-70" loading="lazy" />
+              <div className="flex items-center justify-center sm:justify-start">
+                <img src="/badges/equal-housing-badge.png" alt="Equal Housing Opportunity" className="h-[5.25rem] w-auto opacity-70" loading="lazy" />
+              </div>
             </div>
 
             {/* 9. Memberships heading with divider lines */}
