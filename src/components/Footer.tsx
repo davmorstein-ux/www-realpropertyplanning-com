@@ -116,12 +116,12 @@ const Footer = () => {
         <div className="footer-divider mb-0" />
         <div className="pt-8 pb-6 flex flex-col items-center">
           <h4 className="text-primary-foreground font-serif text-lg font-semibold mb-5">Professional Memberships &amp; Affiliations</h4>
-          <div className="flex items-center justify-center gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8">
             <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer">
               <img
                 src={alcaLogo}
                 alt="Aging Life Care Association Corporate Partner"
-                className="h-12 w-auto opacity-80 hover:opacity-100 transition-opacity"
+                className="h-12 md:h-16 w-auto opacity-80 hover:opacity-100 transition-opacity"
                 loading="lazy"
               />
             </a>
@@ -129,7 +129,7 @@ const Footer = () => {
               <img
                 src={naosaBadge}
                 alt="National Association of Senior Advocates - Best Real Estate Agent 2026"
-                className="h-28 w-auto opacity-80 hover:opacity-100 transition-opacity"
+                className="h-28 md:h-36 w-auto opacity-80 hover:opacity-100 transition-opacity"
                 loading="lazy"
               />
             </a>
@@ -137,10 +137,24 @@ const Footer = () => {
               <img
                 src={naepcLogo}
                 alt="National Association of Estate Planners & Councils"
-                className="max-h-[82px] w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+                className="max-h-[60px] md:max-h-[72px] w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
                 loading="lazy"
               />
             </a>
+            <div className="flex items-center justify-center min-h-[64px] md:min-h-[72px]">
+              <img
+                src="/badges/realtor-badge.png"
+                alt="REALTOR® badge"
+                className="h-[52px] md:h-[60px] w-auto object-contain opacity-90"
+              />
+            </div>
+            <div className="flex items-center justify-center min-h-[64px] md:min-h-[72px]">
+              <img
+                src="/badges/equal-housing-badge.png"
+                alt="Equal Housing Opportunity badge"
+                className="h-[38px] md:h-[44px] w-auto object-contain opacity-90"
+              />
+            </div>
           </div>
         </div>
 
