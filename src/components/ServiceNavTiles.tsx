@@ -10,9 +10,12 @@ const ServiceNavTiles = () => {
           <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-3">
             How Can I Help You Today?
           </h2>
-          <p className="text-muted-foreground text-base max-w-xl mx-auto mb-8">
-            Type a question, tap a suggestion, or browse the topics below.
-          </p>
+           <p className="text-muted-foreground text-base max-w-xl mx-auto mb-2">
+             You don't need to figure out the whole process right now.
+           </p>
+           <p className="text-muted-foreground text-sm max-w-xl mx-auto mb-8">
+             Choose the path that sounds most like your situation, or type a question below.
+           </p>
           <SmartSearchBar />
         </div>
 
