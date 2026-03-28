@@ -42,9 +42,6 @@ const AffiliationBadgeGrid = ({ naepcAlt }: AffiliationBadgeGridProps = {}) => {
       <BadgeCell>
         <img src="/badges/realtor-badge.png" alt="REALTOR® badge" className="max-w-[85%] max-h-[85%] w-auto h-auto object-contain" />
       </BadgeCell>
-      <BadgeCell>
-        <img src="/badges/equal-housing-badge.png" alt="Equal Housing Opportunity badge" className="max-w-[80%] max-h-[80%] w-auto h-auto object-contain" />
-      </BadgeCell>
     </div>
   );
 };
