@@ -102,13 +102,16 @@ const Index = () => {
           width={1920}
           height={1080}
         />
-        <div className="absolute inset-0 bg-black/35" />
+        <div className="absolute inset-0 bg-black/40" />
 
         <div className="container relative z-10 px-6 lg:px-8 py-20 lg:py-24 flex flex-col items-center text-center">
-        <div className="max-w-3xl">
-             <h1 className="font-serif text-4xl md:text-5xl lg:text-[54px] font-bold leading-[1.1] text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6), 0 4px 16px rgba(0,0,0,0.3), 0 0 40px rgba(0,0,0,0.2)' }}>
-              Specialized Guidance for Probate, Estate &amp; Senior Transition Real Estate Across Washington State
+          <div className="max-w-3xl">
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-[54px] font-bold leading-[1.1] text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6), 0 4px 16px rgba(0,0,0,0.3), 0 0 40px rgba(0,0,0,0.2)' }}>
+              Expert Real Estate Guidance for Probate, Estates &amp; Senior Transitions in Washington State
             </h1>
+            <p className="mt-5 text-xl md:text-2xl text-white/90 font-medium leading-relaxed max-w-2xl mx-auto" style={{ textShadow: '0 1px 6px rgba(0,0,0,0.5)' }}>
+              Helping executors, families, and attorneys sell inherited and estate property with confidence.
+            </p>
           </div>
         </div>
       </section>
