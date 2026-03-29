@@ -1,4 +1,5 @@
 import { Phone, ClipboardList, Target, Handshake } from "lucide-react";
+import ListenButton from "@/components/ListenButton";
 
 const steps = [
   {
@@ -33,8 +34,11 @@ const steps = [
 
 const WhatToExpect = () => (
   <section className="py-16 lg:py-24 bg-secondary">
-    <div className="container px-6 lg:px-8">
+    <div className="container px-6 lg:px-8" id="what-to-expect-section">
       <div className="text-center mb-14">
+        <div className="flex justify-center mb-5">
+          <ListenButton targetId="what-to-expect-section" />
+        </div>
         <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-base">
           The Process
         </p>
