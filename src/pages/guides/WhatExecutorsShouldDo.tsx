@@ -14,6 +14,7 @@ import GoldCheck3D from "@/components/GoldCheck3D";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+import ListenButton from "@/components/ListenButton";
 
 const immediateSteps = [
   { title: "Secure the Property", text: "Change locks if needed, verify insurance coverage, and make sure utilities remain active. A vacant home is vulnerable to weather damage, vandalism, and liability issues." },
@@ -54,7 +55,10 @@ const WhatExecutorsShouldDo = () => (
 
     <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
       <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl">
+        <div className="max-w-3xl" id="executors-guide-hero">
+          <div className="mb-5">
+            <ListenButton targetId="executors-guide-hero" />
+          </div>
           <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">Educational Guide</p>
           <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
             What Executors Should Do Before Selling an Inherited Home

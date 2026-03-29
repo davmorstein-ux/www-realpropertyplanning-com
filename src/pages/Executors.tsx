@@ -14,6 +14,7 @@ import RealClientSituations from "@/components/RealClientSituations";
 import PageTestimonials from "@/components/PageTestimonials";
 import MidPageCTA from "@/components/MidPageCTA";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+import ListenButton from "@/components/ListenButton";
 
 const executorTestimonials = [
   {
@@ -194,7 +195,10 @@ const Executors = () => {
       {/* Hero */}
       <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl" id="executors-hero-section">
+            <div className="mb-5">
+              <ListenButton targetId="executors-hero-section" />
+            </div>
             <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
               For Executors & Personal Representatives
             </p>

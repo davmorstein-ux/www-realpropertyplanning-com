@@ -13,6 +13,7 @@ import NextStepBlock from "@/components/NextStepBlock";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+import ListenButton from "@/components/ListenButton";
 
 const options = [
   { title: "Sell the Property", text: "The most common choice. Selling converts the property into liquid assets that can be distributed among beneficiaries, used to settle estate debts, or reinvested. The sale can happen immediately, after preparation, or after a holding period depending on circumstances." },
@@ -64,7 +65,10 @@ const InheritedHouseWashington = () => (
 
     <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
       <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl">
+        <div className="max-w-3xl" id="inherited-house-hero">
+          <div className="mb-5">
+            <ListenButton targetId="inherited-house-hero" />
+          </div>
           <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">Educational Guide</p>
           <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
             What to Do With an Inherited House in Washington State
