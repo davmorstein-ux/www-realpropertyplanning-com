@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const inputClass =
   "w-full rounded-lg border border-border bg-background px-4 py-3.5 text-foreground text-[16px] placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-gold/30 focus:border-gold/50 transition";
@@ -15,7 +16,6 @@ const HomepageLeadForm = () => {
     const form = e.currentTarget;
     const formData = new FormData(form);
 
-    // Build mailto body as fallback (no backend)
     const name = formData.get("name") as string;
     const email = formData.get("email") as string;
     const phone = (formData.get("phone") as string) || "Not provided";
@@ -33,7 +33,6 @@ const HomepageLeadForm = () => {
 
     window.location.href = `mailto:david@realpropertyplanning.com?subject=${subject}&body=${body}`;
 
-    // Brief delay then show confirmation
     setTimeout(() => {
       setSending(false);
       setSubmitted(true);
@@ -49,14 +48,18 @@ const HomepageLeadForm = () => {
           </svg>
         </div>
         <h3 className="font-serif text-2xl text-foreground font-semibold mb-3">
-          Thank You
+          Thank You — Message Received
         </h3>
-        <p className="text-muted-foreground text-lg leading-relaxed max-w-sm">
-          Thank you — I'll reach out shortly to learn more about your situation.
+        <p className="text-muted-foreground text-lg leading-relaxed max-w-sm mb-2">
+          David will reach out shortly to learn more about your situation and discuss next steps.
         </p>
-        <p className="text-muted-foreground text-sm leading-relaxed max-w-sm mt-2">
-          If it's urgent, feel free to call directly.
+        <p className="text-muted-foreground/70 text-base leading-relaxed max-w-sm mb-5">
+          If it's time-sensitive, you're welcome to call directly at{" "}
+          <a href="tel:2069003015" className="text-gold hover:underline font-medium">(206) 900-3015</a>.
         </p>
+        <Link to="/how-the-process-works" className="text-accent hover:text-gold underline underline-offset-4 text-[15px]">
+          Learn what to expect from here →
+        </Link>
       </div>
     );
   }
@@ -64,30 +67,33 @@ const HomepageLeadForm = () => {
   return (
     <div className="bg-card rounded-2xl p-8 md:p-10 shadow-lg">
       <h3 className="font-serif text-2xl text-foreground font-semibold mb-2">
-        Request Guidance
+        Prefer to Send a Message?
       </h3>
-      <p className="text-muted-foreground text-[15px] leading-relaxed mb-6">
-        If you prefer, you can share a few details here and I'll follow up with you directly.
+      <p className="text-muted-foreground text-[15px] leading-relaxed mb-1.5">
+        Share a few details and David will follow up with you directly — usually within one business day.
+      </p>
+      <p className="text-muted-foreground/60 text-[14px] leading-relaxed mb-6">
+        You don't need to know exactly what you need yet. Just tell us what's going on.
       </p>
 
-      <form className="space-y-4" onSubmit={handleSubmit}>
+      <form className="space-y-5" onSubmit={handleSubmit}>
         <input type="hidden" name="source_page" value={typeof window !== "undefined" ? window.location.pathname : ""} />
         <div>
           <label className="block text-[15px] font-medium text-foreground mb-1.5">
-            Name <span className="text-destructive">*</span>
+            Your Name <span className="text-destructive">*</span>
           </label>
           <input
             type="text"
             name="name"
             required
             className={inputClass}
-            placeholder="Your name"
+            placeholder="First and last name"
           />
         </div>
 
         <div>
           <label className="block text-[15px] font-medium text-foreground mb-1.5">
-            Email <span className="text-destructive">*</span>
+            Email Address <span className="text-destructive">*</span>
           </label>
           <input
             type="email"
@@ -100,7 +106,7 @@ const HomepageLeadForm = () => {
 
         <div>
           <label className="block text-[15px] font-medium text-foreground mb-1.5">
-            Phone <span className="text-muted-foreground text-sm font-normal">(optional)</span>
+            Phone Number <span className="text-muted-foreground text-sm font-normal">(optional — helpful if you'd like a call back)</span>
           </label>
           <input
             type="tel"
@@ -118,19 +124,19 @@ const HomepageLeadForm = () => {
             type="text"
             name="address"
             className={inputClass}
-            placeholder="Street address, city, state"
+            placeholder="If you have one in mind"
           />
         </div>
 
         <div>
           <label className="block text-[15px] font-medium text-foreground mb-1.5">
-            Message <span className="text-muted-foreground text-sm font-normal">(optional)</span>
+            What's Going On? <span className="text-muted-foreground text-sm font-normal">(optional)</span>
           </label>
           <textarea
             name="message"
             rows={3}
             className={`${inputClass} resize-none`}
-            placeholder="Tell us about your situation..."
+            placeholder="A brief summary is fine — e.g., 'My mother passed and we need to sell her house in Bellevue.'"
           />
         </div>
 
@@ -145,38 +151,38 @@ const HomepageLeadForm = () => {
           >
             <option value="" disabled>Select one...</option>
             <option value="Google Search">Google Search</option>
-            <option value="Referral">Referral</option>
+            <option value="Referral">Referral from someone I know</option>
             <option value="Zillow">Zillow</option>
-            <option value="Attorney / Professional">Attorney / Professional</option>
-            <option value="Direct / Typed URL">Direct / Typed URL</option>
+            <option value="Attorney / Professional">Attorney or professional referral</option>
+            <option value="Direct / Typed URL">Typed the website directly</option>
             <option value="Other">Other</option>
           </select>
         </div>
 
         <div>
           <label className="block text-[15px] font-medium text-foreground mb-1.5">
-            Anything you'd like me to know? <span className="text-muted-foreground text-sm font-normal">(optional)</span>
+            Anything else? <span className="text-muted-foreground text-sm font-normal">(optional)</span>
           </label>
           <textarea
             name="notes"
             rows={2}
             className={`${inputClass} resize-none`}
-            placeholder="Situation, timing, questions..."
+            placeholder="Timeline, concerns, questions — anything that would help David understand your situation"
           />
         </div>
 
         <Button
           type="submit"
           variant="gold"
-          className="w-full py-3.5 h-auto rounded-lg text-base"
+          className="w-full py-3.5 h-auto rounded-[14px] text-base"
           disabled={sending}
         >
-          {sending ? "Sending..." : "Request Guidance"}
+          {sending ? "Sending..." : "Send My Message"}
         </Button>
       </form>
 
       <p className="text-muted-foreground/60 text-sm text-center mt-4">
-        No pressure. Just clear, practical guidance.
+        No obligation. David will respond personally.
       </p>
     </div>
   );
