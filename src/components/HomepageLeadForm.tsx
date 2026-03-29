@@ -48,18 +48,15 @@ const HomepageLeadForm = () => {
           </svg>
         </div>
         <h3 className="font-serif text-2xl text-foreground font-semibold mb-3">
-          Thank You — Message Received
+          Thanks — Message Received
         </h3>
-        <p className="text-muted-foreground text-lg leading-relaxed max-w-sm mb-2">
-          David will reach out shortly to learn more about your situation and discuss next steps.
+        <p className="text-muted-foreground text-lg leading-relaxed max-w-sm mb-5">
+          David will reach out shortly to learn more about your situation.
         </p>
         <p className="text-muted-foreground/70 text-base leading-relaxed max-w-sm mb-5">
-          If it's time-sensitive, you're welcome to call directly at{" "}
-          <a href="tel:2069003015" className="text-gold hover:underline font-medium">(206) 900-3015</a>.
+          Need to talk sooner?{" "}
+          <a href="tel:2069003015" className="text-gold hover:underline font-medium">(206) 900-3015</a>
         </p>
-        <Link to="/how-the-process-works" className="text-accent hover:text-gold underline underline-offset-4 text-[15px]">
-          Learn what to expect from here →
-        </Link>
       </div>
     );
   }
@@ -67,13 +64,10 @@ const HomepageLeadForm = () => {
   return (
     <div className="bg-card rounded-2xl p-8 md:p-10 shadow-lg">
       <h3 className="font-serif text-2xl text-foreground font-semibold mb-2">
-        Prefer to Send a Message?
+        Send a Message
       </h3>
-      <p className="text-muted-foreground text-[15px] leading-relaxed mb-1.5">
-        Share a few details and David will follow up with you directly — usually within one business day.
-      </p>
-      <p className="text-muted-foreground/60 text-[14px] leading-relaxed mb-6">
-        You don't need to know exactly what you need yet. Just tell us what's going on.
+      <p className="text-muted-foreground text-[15px] leading-relaxed mb-6">
+        Share a few details and David will follow up directly — usually within one business day.
       </p>
 
       <form className="space-y-5" onSubmit={handleSubmit}>
@@ -182,7 +176,7 @@ const HomepageLeadForm = () => {
       </form>
 
       <p className="text-muted-foreground/60 text-sm text-center mt-4">
-        No obligation. David will respond personally.
+        David responds personally.
       </p>
     </div>
   );

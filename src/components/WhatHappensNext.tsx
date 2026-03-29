@@ -9,18 +9,18 @@ interface WhatHappensNextProps {
 const steps = [
   {
     iconSrc: iconPhone3d,
-    title: "A short, low-pressure conversation",
-    text: "David will ask a few questions to understand your situation — no preparation needed on your end",
+    title: "A short conversation",
+    text: "David will ask a few questions to understand your situation",
   },
   {
     iconSrc: iconChat3d,
-    title: "Honest answers, not a sales pitch",
-    text: "Ask anything. You'll get straightforward, practical guidance based on what David has seen work in similar situations",
+    title: "Straightforward guidance",
+    text: "You'll get practical answers based on what works in situations like yours",
   },
   {
     iconSrc: iconArrowRight3d,
-    title: "A clear sense of next steps",
-    text: "You'll walk away knowing what needs to happen, in what order, and what you can set aside for now",
+    title: "Clear next steps",
+    text: "You'll know what needs to happen, in what order, and what can wait",
   },
 ];
 
@@ -41,7 +41,7 @@ const WhatHappensNext = ({ variant = "light" }: WhatHappensNextProps) => {
       <p className={`text-[15px] mb-7 ${
         isDark ? "text-primary-foreground/60" : "text-muted-foreground"
       }`}>
-        Here's what to expect — it's simpler than most people think.
+        Here's what to expect.
       </p>
 
       <div className="space-y-6">
@@ -68,11 +68,6 @@ const WhatHappensNext = ({ variant = "light" }: WhatHappensNextProps) => {
         ))}
       </div>
 
-      <p className={`text-[15px] mt-7 ${
-        isDark ? "text-primary-foreground/50" : "text-muted-foreground"
-      }`}>
-        No obligation, no follow-up pressure — just an honest conversation to help you see where things stand.
-      </p>
     </div>
   );
 };
