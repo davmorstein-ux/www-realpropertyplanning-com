@@ -1,5 +1,4 @@
 import ListenButton from "@/components/ListenButton";
-import ListenButton from "@/components/ListenButton";
 
 const steps = [
   {
