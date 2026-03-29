@@ -140,11 +140,11 @@ const Index = () => {
             </h2>
             <ul className="space-y-3 text-left max-w-xl mx-auto mb-8">
               {[
-                "Executors and personal representatives who've been handed a big responsibility",
-                "Families dealing with an inherited property — whether you're local or across the country",
-                "Seniors and their families facing a move from a longtime home",
-                "Attorneys and fiduciaries who need a real estate partner they can count on",
-                "Out-of-state family members trying to manage a Washington property from a distance",
+                "Executors and personal representatives trying to settle an estate — often while grieving and managing family expectations at the same time",
+                "Families with an inherited property who aren't sure whether to sell, keep, or fix it up — and need honest guidance, not a sales pitch",
+                "Seniors and their families facing a move from a longtime home, with all the emotion and logistics that come with it",
+                "Attorneys and fiduciaries who need a real estate partner they can hand the property piece to — and trust that it's handled right",
+                "Out-of-state family members trying to coordinate a Washington property sale from across the country, without anyone local they can rely on",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
@@ -153,7 +153,7 @@ const Index = () => {
               ))}
             </ul>
             <p className="text-primary-foreground/70 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-10">
-              Most people in these situations didn't plan for this. That's okay. The goal is to protect value, reduce stress, and give you a clear path forward.
+              If any of that sounds familiar, you're not alone — and you don't have to figure it out by yourself. The goal is to protect value, reduce stress, and give you a clear path forward with someone who's been through it before.
             </p>
 
 
