@@ -126,7 +126,7 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
               {whoHeadings[tone]}
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              David Stein works with a range of clients and professional partners in {city.name}, including:
+              Many of the people David works with in {city.name} are navigating something they haven't been through before:
             </p>
             <ul className="space-y-4">
               {clientTypes.map((item, i) => (
@@ -148,7 +148,7 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
               {situationHeadings[tone]}
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Clients in {city.name} often reach out when facing situations such as:
+              These are the kinds of circumstances that typically lead to a conversation:
             </p>
             <ul className="space-y-4">
               {situations.map((item, i) => (
@@ -164,10 +164,9 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
 
       {/* Mid-page CTA */}
       <MidPageCTA
-        heading={`Have a Property Situation in ${city.name}?`}
-        body={`David provides confidential consultations for executors, attorneys, trustees, and families in ${city.name} and throughout ${city.county}.`}
-        buttonText="Schedule a Consultation"
-        microcopy="No pressure. Just practical guidance for your situation."
+        heading={`Need Guidance on a ${city.name} Property?`}
+        body="A brief conversation is usually the fastest way to get clarity on your options and next steps."
+        buttonText="Schedule a Conversation"
       />
 
       {/* Services Available */}
@@ -175,10 +174,10 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-[1140px] mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
-              How Can Real Property Planning Help in {city.name}?
+              What David Can Help With in {city.name}
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-10 max-w-3xl">
-              Real Property Planning offers the following services for clients in {city.name} and throughout {city.county}:
+              The right approach depends on the situation. Here are the areas where David's experience is most relevant:
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
               {services.map((service) => (
@@ -305,18 +304,15 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
-              Need Help With a Property in {city.name}?
+              Ready to Talk About Your {city.name} Property?
             </h2>
-            <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">
-              David Stein provides confidential consultations for executors, attorneys, trustees, families, and financial professionals in {city.name} and throughout {city.county}.
-            </p>
-            <p className="text-primary-foreground/50 text-base mb-8">
-              A short conversation to understand your situation, answer questions, and discuss next steps.
+            <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
+              David can walk you through your situation and help you figure out a practical path forward.
             </p>
             <div className="flex justify-center">
               <Link to="/contact">
                 <Button variant="gold" size="lg">
-                  Schedule a Consultation
+                  Start a Conversation
                 </Button>
               </Link>
             </div>

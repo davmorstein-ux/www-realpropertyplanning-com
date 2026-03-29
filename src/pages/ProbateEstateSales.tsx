@@ -266,10 +266,9 @@ const ProbateEstateSales = () => {
       </section>
       {/* Mid-page CTA */}
       <MidPageCTA
-        heading="Dealing With a Probate or Estate Property?"
-        body="David provides a no-pressure consultation to review the property, discuss timing, and outline next steps — whether you are an executor, attorney, or family member."
-        buttonText="Schedule a Consultation"
-        microcopy="No pressure. Just practical guidance for your situation."
+        heading="Have a Probate or Estate Property to Discuss?"
+        body="A brief conversation can help you understand your options and decide on a practical next step."
+        buttonText="Schedule a Conversation"
         variant="dark"
       />
 

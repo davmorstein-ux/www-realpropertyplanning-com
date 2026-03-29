@@ -151,15 +151,15 @@ const ForAttorneys = () => {
               For Attorneys & Fiduciaries
             </p>
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
-              Real Estate Support for Attorneys and Their Clients
+              When Your Client Has a Property to Deal With
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-8">
-              Helping Navigate Property Decisions with Clarity, Coordination, and Confidence
+              David handles the real estate side — valuation, preparation, coordination, and sale — so you and your client can focus on the legal and financial priorities.
             </p>
             <Link to="/contact">
- <Button variant="gold" size="lg"className="hover:-light px-7 py-4 h-auto rounded-lg">
+              <Button variant="gold" size="lg" className="px-7 py-4 h-auto rounded-lg">
                 <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
-                Connect to Discuss a Client Situation
+                Discuss a Client Situation
               </Button>
             </Link>
           </div>
@@ -171,10 +171,10 @@ const ForAttorneys = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-              As a licensed real estate broker and state-certified residential appraiser, I bring a dual perspective that supports both strategic planning and practical execution.
+              Most attorneys I work with reach out because they have a client situation where the property piece is becoming the bottleneck — a probate that needs a realistic market assessment, an estate where the family can't agree on pricing, or a trust that needs to sell a home in difficult condition.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              My role is not to replace legal guidance — it is to support it. Select an area below to learn more about how I work with attorneys and their clients.
+              My role is to take the real estate off your plate entirely. I handle the property assessment, preparation, pricing, and sale — while keeping you and your client informed at every stage.
             </p>
           </div>
         </div>
@@ -220,10 +220,9 @@ const ForAttorneys = () => {
       </section>
 
       <MidPageCTA
-        heading="Have a Client Situation to Discuss?"
-        body="David works alongside attorneys to handle the real estate side of probate, estate, and family law matters with professionalism and clear communication."
-        buttonText="Connect to Discuss a Client Situation"
-        microcopy="Confidential. Professional. No obligation."
+        heading="Have a Client Who Needs Property Guidance?"
+        body="A quick call is usually the fastest way to determine how David can support the situation."
+        buttonText="Discuss a Client Situation"
       />
 
       {/* Professional Affiliations */}
@@ -279,18 +278,15 @@ const ForAttorneys = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-5">
-              A Reliable Resource for Your Clients
+              A Reliable Resource for Your Practice
             </h2>
-            <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">
-              If you are working with a client who needs guidance on a real estate matter, a short conversation can help determine the best path forward.
-            </p>
-            <p className="text-primary-foreground/50 text-base mb-8">
-              No pressure. Just practical, professional support.
+            <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
+              When you have a client situation involving property, David can step in and handle the real estate side with the professionalism your practice requires.
             </p>
             <Link to="/contact">
               <Button variant="gold" size="lg">
                 <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
-                Schedule a Consultation
+                Discuss a Client Situation
               </Button>
             </Link>
           </div>
