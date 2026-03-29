@@ -33,6 +33,7 @@ import people3d from "@/assets/people-3d.png";
 import iconHome3d from "@/assets/icons/icon-home-3d.png";
 import iconDocument3d from "@/assets/icons/icon-document-3d.png";
 import iconBriefcase3d from "@/assets/icons/icon-briefcase-3d.png";
+import iconHeartHands3d from "@/assets/icons/icon-heart-hands-3d.png";
 import iconHandshake3d from "@/assets/icons/icon-handshake-3d.png";
 import iconBookOpen3d from "@/assets/icons/icon-book-open-3d.png";
 
