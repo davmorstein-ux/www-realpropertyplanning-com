@@ -1,39 +1,44 @@
 import { Link } from "react-router-dom";
-import { ClipboardList, Home, Scale, Users, MapPin, Heart } from "lucide-react";
+import iconClipboard3d from "@/assets/icons/icon-clipboard-3d.png";
+import iconHome3d from "@/assets/icons/icon-home-3d.png";
+import iconScale3d from "@/assets/icons/icon-scale-3d.png";
+import iconHeartHands3d from "@/assets/icons/icon-heart-hands-3d.png";
+import iconMappin3d from "@/assets/icons/icon-mappin-3d.png";
+import iconPeople3d from "@/assets/icons/icon-people-3d.png";
 
 const situations = [
   {
-    icon: ClipboardList,
+    iconSrc: iconClipboard3d,
     label: "I'm an executor or personal representative",
     description: "Named in a will or appointed by the court to handle property",
     link: "/executors",
   },
   {
-    icon: Home,
+    iconSrc: iconHome3d,
     label: "I inherited a home and need guidance",
     description: "Figuring out what to do with a property left to you or your family",
     link: "/guides/inherited-house-washington",
   },
   {
-    icon: Scale,
+    iconSrc: iconScale3d,
     label: "I'm an attorney with a client who has real property",
     description: "Probate, estate planning, elder law, or family law matter involving real estate",
     link: "/for-attorneys",
   },
   {
-    icon: Heart,
+    iconSrc: iconHeartHands3d,
     label: "We're helping a parent transition out of their home",
     description: "Senior move to assisted living, memory care, or smaller housing",
     link: "/senior-transitions",
   },
   {
-    icon: MapPin,
+    iconSrc: iconMappin3d,
     label: "I'm managing a Washington property from out of state",
     description: "Need a local point of contact who can coordinate everything",
     link: "/guides/out-of-state-families",
   },
   {
-    icon: Users,
+    iconSrc: iconPeople3d,
     label: "Our family is deciding whether to sell or keep an inherited property",
     description: "Need objective valuation insight and a clear picture of options",
     link: "/guides/inherited-house-washington",
@@ -64,8 +69,8 @@ const SituationFinderBlock = () => (
               className="group bg-card border border-border rounded-xl p-5 hover:border-gold/40 hover:shadow-md transition-all"
             >
               <div className="flex items-start gap-3">
-                <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-gold/10">
-                  <s.icon className="h-4.5 w-4.5 text-gold" />
+                <div className="mt-0.5 flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-gold/10">
+                  <img src={s.iconSrc} alt="" aria-hidden="true" className="h-7 w-7 object-contain" loading="lazy" />
                 </div>
                 <div>
                   <p className="font-semibold text-foreground text-[15px] leading-snug group-hover:text-gold transition-colors">

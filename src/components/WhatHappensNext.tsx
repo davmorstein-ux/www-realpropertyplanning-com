@@ -1,4 +1,6 @@
-import { Phone, MessageCircle, ArrowRight } from "lucide-react";
+import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+import iconChat3d from "@/assets/icons/icon-chat-3d.png";
+import iconArrowRight3d from "@/assets/icons/icon-arrow-right-3d.png";
 
 interface WhatHappensNextProps {
   variant?: "light" | "dark";
@@ -6,15 +8,15 @@ interface WhatHappensNextProps {
 
 const steps = [
   {
-    icon: Phone,
+    iconSrc: iconPhone3d,
     text: "A short conversation about what's going on — no preparation needed",
   },
   {
-    icon: MessageCircle,
+    iconSrc: iconChat3d,
     text: "You can ask anything. David will give you straight, practical answers",
   },
   {
-    icon: ArrowRight,
+    iconSrc: iconArrowRight3d,
     text: "Together, you'll map out clear next steps based on your specific situation",
   },
 ];
@@ -37,12 +39,12 @@ const WhatHappensNext = ({ variant = "light" }: WhatHappensNextProps) => {
       <div className="space-y-5">
         {steps.map((step, i) => (
           <div key={i} className="flex items-start gap-4">
-            <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full ${
+            <div className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full ${
               isDark ? "bg-gold/15 border border-gold/25" : "bg-gold/10 border border-gold/20"
             }`}>
-              <step.icon className="w-4.5 h-4.5 text-gold" />
+              <img src={step.iconSrc} alt="" aria-hidden="true" className="w-6 h-6 object-contain" loading="lazy" />
             </div>
-            <p className={`text-lg leading-relaxed pt-1.5 ${
+            <p className={`text-lg leading-relaxed pt-2 ${
               isDark ? "text-primary-foreground/85" : "text-foreground"
             }`}>
               {step.text}

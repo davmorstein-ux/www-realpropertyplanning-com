@@ -1,6 +1,6 @@
-import { FileText } from "lucide-react";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import iconDocument3d from "@/assets/icons/icon-document-3d.png";
+import iconArrowRight3d from "@/assets/icons/icon-arrow-right-3d.png";
 
 interface ResourceCardProps {
   title: string;
@@ -20,8 +20,8 @@ const ResourceCard = ({
   <Link to={linkTo} className="group block">
     <div className="card-3d p-6 h-full">
       <div className="flex items-start gap-4">
-        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-gold/10 mt-0.5">
-          {icon || <FileText className="h-5 w-5 text-gold" />}
+        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-gold/10 mt-0.5">
+          {icon || <img src={iconDocument3d} alt="" aria-hidden="true" className="h-7 w-7 object-contain" loading="lazy" />}
         </div>
         <div className="min-w-0 flex-1">
           {badge && (
@@ -35,8 +35,8 @@ const ResourceCard = ({
           <p className="text-muted-foreground text-sm leading-relaxed mb-3">
             {description}
           </p>
-          <span className="inline-flex items-center gap-1 text-accent/60 group-hover:text-gold transition-colors text-sm">
-            Read more <ArrowRight className="w-3.5 h-3.5" />
+          <span className="inline-flex items-center gap-1.5 text-accent/60 group-hover:text-gold transition-colors text-sm">
+            Read more <img src={iconArrowRight3d} alt="" aria-hidden="true" className="w-3.5 h-3.5 object-contain" loading="lazy" />
           </span>
         </div>
       </div>
