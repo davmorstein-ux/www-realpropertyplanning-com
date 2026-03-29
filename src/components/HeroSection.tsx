@@ -48,7 +48,7 @@ const HeroSection = () => {
               </a>
               <Button 
                 size="lg" 
-                variant="outline" 
+                variant="outline3d" 
                 className="border-gold/50 bg-transparent text-gold hover:bg-gold hover:text-foreground focus-visible:ring-gold"
               >
                 <img src={iconEmail3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0 mr-2" />

@@ -71,7 +71,7 @@ const ResourceDownloadCard = ({
             {guideLink && (
               <Link to={guideLink}>
                 <Button
-                  variant="outline"
+                  variant="outline3d"
                   size="sm"
                   className="h-9 px-4 text-sm border-border"
                 >
