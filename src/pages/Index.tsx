@@ -148,16 +148,19 @@ const Index = () => {
             <div className="flex justify-center mb-5">
               <ListenButton targetId="who-we-help-section" />
             </div>
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] text-primary-foreground font-bold mb-8">
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] text-primary-foreground font-bold mb-5">
               Who We Can Help
             </h2>
+            <p className="text-primary-foreground/70 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-9">
+              Many of the people who reach out are in a situation they didn't plan for. A parent passed away. A trust needs to be settled. A family home needs to be dealt with — and no one is quite sure where to begin.
+            </p>
             <ul className="space-y-3 text-left max-w-xl mx-auto mb-8">
               {[
-                "Executors and personal representatives settling an estate — often while grieving, fielding questions from family, and making decisions they've never had to make before",
-                "Families sitting on an inherited property who aren't sure what comes next — sell it, keep it, fix it up? What often happens is everyone has a different opinion and no one has the full picture",
-                "Seniors and their families navigating a move from the home they've lived in for decades — where the emotional weight is just as real as the logistics",
-                "Attorneys and fiduciaries who need a real estate partner they can hand the property piece to and not worry about it — someone who understands the stakes and follows through",
-                "Out-of-state family members trying to manage a Washington property from across the country, without a reliable local contact to keep things moving",
+                "Executors and personal representatives who are suddenly responsible for a property — often while sorting through a house full of belongings, fielding calls from family, and trying to figure out what actually needs to happen first",
+                "Families with an inherited home and no clear plan — maybe one person wants to sell, another wants to wait, and no one knows what the property is really worth or what condition it's in",
+                "Seniors and their families facing a move from the home they've lived in for 30 or 40 years — where deciding what to keep, what to let go of, and where to go next can feel overwhelming all at once",
+                "Attorneys and fiduciaries who need someone to take the property piece off their plate entirely — handle the valuation, manage the preparation, coordinate the sale, and communicate clearly throughout",
+                "Out-of-state family members trying to manage everything from hundreds of miles away — relying on phone calls and emails, unable to check on the property, and unsure who to trust locally",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
@@ -166,7 +169,7 @@ const Index = () => {
               ))}
             </ul>
             <p className="text-primary-foreground/70 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-10">
-              If any of that sounds familiar, you're in the right place. Most people who reach out aren't sure exactly what they need — they just know they need someone steady who's handled these situations before.
+              If any of that sounds like where you are right now, you don't need to have everything figured out before reaching out. Most people don't. They just need someone who has been through this many times and can help them see the path forward clearly.
             </p>
 
 
@@ -178,10 +181,10 @@ const Index = () => {
 
             <div className="text-primary-foreground/80 text-[17px] leading-[1.85] space-y-5 max-w-2xl mx-auto text-left" id="intro-section">
               <p>
-                Real Property Planning works alongside attorneys, executors, trustees, and families navigating probate, inherited property, or senior transitions — the kind of situations where the real estate piece adds a layer of complexity that most people aren't prepared for.
+                Real Property Planning works alongside attorneys, executors, trustees, and families navigating probate, inherited property, or senior transitions. These are situations where the real estate piece often becomes the hardest part — not because of the market, but because of the emotions, the logistics, and the number of moving pieces no one warned you about.
               </p>
               <p>
-                David Stein brings more than 20 years as both a licensed real estate broker and certified residential appraiser. That's an uncommon combination, and it matters — especially in estate situations where pricing needs to be defensible, not just optimistic. His deepest experience is in Western Washington and the Puget Sound region.
+                David Stein brings more than 20 years as both a licensed real estate broker and certified residential appraiser. That combination matters most in estate and transition situations — where pricing needs to hold up under legal scrutiny, not just look good on a listing sheet. His deepest experience is in Western Washington and the Puget Sound region.
               </p>
               <p>
                 When clients need help outside Washington, David connects them with trusted eXp Realty brokers across the country and internationally.
