@@ -140,11 +140,11 @@ const Index = () => {
             </h2>
             <ul className="space-y-3 text-left max-w-xl mx-auto mb-8">
               {[
-                "Executors and personal representatives settling an estate",
-                "Families handling inherited property — locally or from out of state",
-                "Seniors and their families preparing for a move or transition",
-                "Attorneys and fiduciaries who need a reliable real estate partner",
-                "Out-of-state family members managing Washington property from a distance",
+                "Executors and personal representatives who've been handed a big responsibility",
+                "Families dealing with an inherited property — whether you're local or across the country",
+                "Seniors and their families facing a move from a longtime home",
+                "Attorneys and fiduciaries who need a real estate partner they can count on",
+                "Out-of-state family members trying to manage a Washington property from a distance",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
@@ -153,7 +153,7 @@ const Index = () => {
               ))}
             </ul>
             <p className="text-primary-foreground/70 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-10">
-              Reduce stress. Protect value. Get clear, valuation-informed strategy from a broker who understands what your family is going through.
+              Most people in these situations didn't plan for this. That's okay. The goal is to protect value, reduce stress, and give you a clear path forward.
             </p>
 
 
@@ -165,13 +165,13 @@ const Index = () => {
 
             <div className="text-primary-foreground/80 text-[17px] leading-[1.85] space-y-5 max-w-2xl mx-auto text-left">
               <p>
-                Real Property Planning works with attorneys, executors, trustees, and families facing probate, inherited property, estate sales, and senior transitions across Washington State.
+                Real Property Planning works alongside attorneys, executors, trustees, and families who are dealing with probate, inherited property, or a senior transition — situations where the real estate piece can feel especially uncertain.
               </p>
               <p>
-                David Stein brings more than 20 years of dual expertise as a licensed real estate broker and certified residential appraiser. His strongest experience is in Western Washington and the Puget Sound region.
+                David Stein has spent more than 20 years working as both a licensed real estate broker and certified residential appraiser. That combination matters because it means pricing decisions are grounded in methodology, not just market opinion. His deepest experience is in Western Washington and the Puget Sound region.
               </p>
               <p>
-                When clients need help outside Washington, David connects them with trusted eXp Realty brokers across the United States and internationally.
+                For clients who need help outside Washington, David connects them with trusted eXp Realty brokers across the country and internationally.
               </p>
             </div>
           </div>
@@ -211,10 +211,10 @@ const Index = () => {
           {/* 5. Experience text */}
           <div className="mt-8 text-left sm:text-center space-y-4 max-w-2xl mx-auto">
             <p className="text-muted-foreground text-lg leading-relaxed">
-              David brings over 20 years of experience as both a licensed real estate broker and certified residential appraiser. This rare dual expertise means clients get calm, knowledgeable guidance grounded in professional valuation — not guesswork.
+              For over 20 years, David has worked as both a licensed real estate broker and certified residential appraiser — a combination that's uncommon in the industry. It means the pricing advice you get is grounded in professional methodology, not a best guess.
             </p>
             <p className="text-muted-foreground text-base leading-relaxed">
-              He works with executors, attorneys, trustees, and families across Washington State, with deep experience in Western Washington and the Puget Sound region.
+              His practice is focused on executors, attorneys, trustees, and families across Washington State, with his deepest roots in Western Washington and the Puget Sound region.
             </p>
           </div>
 
@@ -278,10 +278,10 @@ const Index = () => {
         <div className="mx-auto max-w-[1100px] px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-base">
-              How We Help
+              What We Do
             </p>
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold">
-              Specialized Real Estate Services
+              Real Estate Services Built for Complex Situations
             </h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -289,19 +289,19 @@ const Index = () => {
               {
                 iconSrc: iconServiceProbate,
                 title: "Probate & Estate Property Sales",
-                body: "Experienced guidance for selling inherited homes, trust-owned real estate, and estate property throughout Washington State.",
+                body: "When a property is part of an estate, the decisions aren't always straightforward. David works with executors and families to handle inherited homes, trust-owned real estate, and probate sales across Washington.",
                 link: "/probate-estate-sales",
               },
               {
                 iconSrc: iconServiceSenior,
                 title: "Senior Transitions & Downsizing",
-                body: "Thoughtful real estate support for families navigating a move from a longtime home to assisted living or smaller housing.",
+                body: "Selling a home your family has lived in for decades is different from a typical sale. David works with families to coordinate the move, the property preparation, and the sale — so no one has to figure it out alone.",
                 link: "/senior-transitions",
               },
               {
                 iconSrc: iconServiceValuation,
                 title: "Valuation-Informed Strategy",
-                body: "As both a broker and certified appraiser, David provides pricing grounded in professional valuation expertise — not guesswork.",
+                body: "One of the most common mistakes in estate and senior sales is mispricing the property. David's appraisal background means pricing is built on real data and methodology — not just what feels right.",
                 link: "/why-valuation-matters",
               },
             ].map((card, i) => (
@@ -368,7 +368,7 @@ const Index = () => {
               When Should You Call Me?
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              You don't need to have everything figured out. If any of these sound familiar, it's a good time to have a conversation.
+              Most people don't call with a plan — they call because something happened and they're not sure what to do next. If any of these sound familiar, that's a good reason to reach out.
             </p>
             <ul className="space-y-4 mb-10">
               {[
@@ -465,13 +465,13 @@ const Index = () => {
                 Not Sure Where to Start? That's Normal.
               </h2>
               <p className="text-primary-foreground/75 text-lg leading-relaxed mb-4">
-                A short conversation can help bring clarity. Whether you're an executor, family member, attorney, or trustee — David is here to help you work through the real estate side of your situation.
+                Most people who reach out aren't sure exactly what they need — they just know the property is part of the picture and they want to talk it through with someone who's been through it before.
               </p>
               <p className="text-primary-foreground/60 text-base leading-relaxed mb-3">
-                <strong className="text-primary-foreground/80">What happens next:</strong> David responds within one business day, usually sooner.
+                <strong className="text-primary-foreground/80">What happens next:</strong> David typically responds within one business day, often sooner.
               </p>
               <p className="text-primary-foreground/60 text-base leading-relaxed mb-10">
-                Your conversation is confidential, practical, and no-obligation — focused on understanding your situation and outlining a clear path forward.
+                The conversation is confidential, practical, and no-obligation. The goal is to understand your situation and talk through what makes sense.
               </p>
 
               <div className="space-y-5">

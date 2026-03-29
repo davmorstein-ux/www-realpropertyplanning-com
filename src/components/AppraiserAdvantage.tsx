@@ -5,22 +5,22 @@ const advantages = [
   {
     title: "More Defensible Pricing",
     description:
-      "Pricing grounded in appraisal methodology means the list price can withstand scrutiny from attorneys, courts, co-executors, and beneficiaries.",
+      "When an attorney, co-executor, or beneficiary questions the price, it needs to hold up. Pricing built on appraisal methodology does that — it's not just an opinion, it's supported by data.",
   },
   {
     title: "Reduced Risk of Costly Mistakes",
     description:
-      "Overpricing leads to stale listings. Underpricing leaves money on the table. David's valuation background minimizes both risks.",
+      "Overpricing causes the property to sit. Underpricing means the estate loses money. David's valuation training helps avoid both — and that difference matters most in estate situations where there's no room for error.",
   },
   {
     title: "Stronger Guidance for Fiduciaries",
     description:
-      "Executors and trustees have a legal obligation to act in the estate's best interest. A broker who understands appraisal standards provides the data they need to meet that duty.",
+      "Executors and trustees are held to a fiduciary standard. When the pricing is backed by professional valuation methodology, it's easier to demonstrate that they acted in the estate's best interest.",
   },
   {
     title: "Informed Preparation Decisions",
     description:
-      "Should you renovate, make targeted repairs, or sell as-is? David's analysis focuses on which improvements actually return value — not guesswork.",
+      "Families often ask whether it's worth fixing up the house before selling. David's analysis looks at what improvements actually return value — so you're not spending money on things the market won't reward.",
   },
 ];
 
@@ -36,7 +36,7 @@ const AppraiserAdvantage = () => (
             The Appraiser Advantage
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
-            Most real estate brokers estimate value. David measures it. As both a licensed broker and a Washington State certified residential appraiser, he brings a level of pricing confidence that protects families, satisfies fiduciary obligations, and reduces risk.
+            Most brokers estimate value based on recent sales and experience. David does that too — but he also brings formal appraisal training, which means his pricing is built on a structured methodology. For estate and probate sales, that difference can be the thing that prevents a dispute or protects a fiduciary.
           </p>
         </div>
 

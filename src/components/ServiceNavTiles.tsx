@@ -11,10 +11,10 @@ const ServiceNavTiles = () => {
             How Can I Help You Today?
           </h2>
            <p className="text-muted-foreground text-base max-w-xl mx-auto mb-2">
-             You don't need to figure out the whole process right now.
+             Most people start here — pick whatever feels closest to your situation.
            </p>
            <p className="text-muted-foreground text-sm max-w-xl mx-auto mb-8">
-             Choose the path that sounds most like your situation, or type a question below.
+             Not sure? Just type a question below and we'll point you in the right direction.
            </p>
           <SmartSearchBar />
         </div>

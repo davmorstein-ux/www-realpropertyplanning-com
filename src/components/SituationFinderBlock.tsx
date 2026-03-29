@@ -52,7 +52,7 @@ const SituationFinderBlock = () => (
             Which of These Sounds Like You?
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto">
-            Every property situation is different. Select the one that best describes where you are right now.
+            People come to this site from very different starting points. Pick the one that's closest to your situation — it'll take you to the most relevant information.
           </p>
         </div>
 
