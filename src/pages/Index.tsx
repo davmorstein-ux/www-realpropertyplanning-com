@@ -153,11 +153,11 @@ const Index = () => {
             </h2>
             <ul className="space-y-3 text-left max-w-xl mx-auto mb-8">
               {[
-                "Executors and personal representatives trying to settle an estate — often while grieving and managing family expectations at the same time",
-                "Families with an inherited property who aren't sure whether to sell, keep, or fix it up — and need honest guidance, not a sales pitch",
-                "Seniors and their families facing a move from a longtime home, with all the emotion and logistics that come with it",
-                "Attorneys and fiduciaries who need a real estate partner they can hand the property piece to — and trust that it's handled right",
-                "Out-of-state family members trying to coordinate a Washington property sale from across the country, without anyone local they can rely on",
+                "Executors and personal representatives settling an estate — often while grieving, fielding questions from family, and making decisions they've never had to make before",
+                "Families sitting on an inherited property who aren't sure what comes next — sell it, keep it, fix it up? What often happens is everyone has a different opinion and no one has the full picture",
+                "Seniors and their families navigating a move from the home they've lived in for decades — where the emotional weight is just as real as the logistics",
+                "Attorneys and fiduciaries who need a real estate partner they can hand the property piece to and not worry about it — someone who understands the stakes and follows through",
+                "Out-of-state family members trying to manage a Washington property from across the country, without a reliable local contact to keep things moving",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
@@ -166,7 +166,7 @@ const Index = () => {
               ))}
             </ul>
             <p className="text-primary-foreground/70 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-10">
-              If any of that sounds familiar, you're not alone — and you don't have to figure it out by yourself. The goal is to protect value, reduce stress, and give you a clear path forward with someone who's been through it before.
+              If any of that sounds familiar, you're in the right place. Most people who reach out aren't sure exactly what they need — they just know they need someone steady who's handled these situations before.
             </p>
 
 
@@ -178,13 +178,13 @@ const Index = () => {
 
             <div className="text-primary-foreground/80 text-[17px] leading-[1.85] space-y-5 max-w-2xl mx-auto text-left" id="intro-section">
               <p>
-                Real Property Planning works alongside attorneys, executors, trustees, and families who are dealing with probate, inherited property, or a senior transition — situations where the real estate piece can feel especially uncertain.
+                Real Property Planning works alongside attorneys, executors, trustees, and families navigating probate, inherited property, or senior transitions — the kind of situations where the real estate piece adds a layer of complexity that most people aren't prepared for.
               </p>
               <p>
-                David Stein has spent more than 20 years working as both a licensed real estate broker and certified residential appraiser. That combination matters because it means pricing decisions are grounded in methodology, not just market opinion. His deepest experience is in Western Washington and the Puget Sound region.
+                David Stein brings more than 20 years as both a licensed real estate broker and certified residential appraiser. That's an uncommon combination, and it matters — especially in estate situations where pricing needs to be defensible, not just optimistic. His deepest experience is in Western Washington and the Puget Sound region.
               </p>
               <p>
-                For clients who need help outside Washington, David connects them with trusted eXp Realty brokers across the country and internationally.
+                When clients need help outside Washington, David connects them with trusted eXp Realty brokers across the country and internationally.
               </p>
             </div>
           </div>
@@ -299,7 +299,7 @@ const Index = () => {
               What We Do
             </p>
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold">
-              Real Estate Services Built for Complex Situations
+              Real Estate Services for Situations That Aren't Straightforward
             </h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -307,19 +307,19 @@ const Index = () => {
               {
                 iconSrc: iconServiceProbate,
                 title: "Probate & Estate Property Sales",
-                body: "When a property is part of an estate, the decisions aren't always straightforward. David works with executors and families to handle inherited homes, trust-owned real estate, and probate sales across Washington.",
+                body: "When a property is tied to an estate, there are decisions most families haven't faced before — legal timelines, condition issues, family dynamics. David works with executors and families to navigate inherited homes, trust-owned real estate, and probate sales across Washington.",
                 link: "/probate-estate-sales",
               },
               {
                 iconSrc: iconServiceSenior,
                 title: "Senior Transitions & Downsizing",
-                body: "Selling a home your family has lived in for decades is different from a typical sale. David works with families to coordinate the move, the property preparation, and the sale — so no one has to figure it out alone.",
+                body: "When a parent or loved one is leaving the home they've been in for 30 or 40 years, it's not a typical transaction. David works with families to coordinate the move, prepare the property, and manage the sale — with patience for the emotional side of it.",
                 link: "/senior-transitions",
               },
               {
                 iconSrc: iconServiceValuation,
                 title: "Valuation-Informed Strategy",
-                body: "One of the most common mistakes in estate and senior sales is mispricing the property. David's appraisal background means pricing is built on real data and methodology — not just what feels right.",
+                body: "Mispricing is one of the most costly mistakes in estate and senior sales — and it happens more often than people realize. David's appraisal background means pricing is grounded in real data, not guesswork or wishful thinking.",
                 link: "/why-valuation-matters",
               },
             ].map((card, i) => (
@@ -386,7 +386,7 @@ const Index = () => {
               When Should You Call Me?
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Most people don't call with a plan — they call because something happened and they're not sure what to do next. If any of these sound familiar, that's a good reason to reach out.
+               In many cases, people don't call with a plan — they call because something happened and they're trying to figure out what comes next. That's usually the point where a conversation makes the biggest difference.
             </p>
             <ul className="space-y-4 mb-10">
               {[
@@ -480,11 +480,11 @@ const Index = () => {
             {/* Left — Contact info */}
             <div>
                <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
-                Not Sure Where to Start? That's Normal.
-              </h2>
-              <p className="text-primary-foreground/75 text-lg leading-relaxed mb-4">
-                Most people who reach out aren't sure exactly what they need — they just know the property is part of the picture and they want to talk it through with someone who's been through it before.
-              </p>
+                Most People Start With a Question, Not a Plan
+               </h2>
+               <p className="text-primary-foreground/75 text-lg leading-relaxed mb-4">
+                That's how most of David's client relationships begin — someone calls because a situation came up, there's a property involved, and they're not sure what comes first. A short conversation usually clears things up.
+               </p>
               <p className="text-primary-foreground/60 text-base leading-relaxed mb-3">
                 <strong className="text-primary-foreground/80">What happens next:</strong> David typically responds within one business day, often sooner.
               </p>
