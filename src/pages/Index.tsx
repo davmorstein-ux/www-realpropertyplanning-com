@@ -32,6 +32,9 @@ import MidPageCTA from "@/components/MidPageCTA";
 import EducationalPathways from "@/components/EducationalPathways";
 import SituationFinderBlock from "@/components/SituationFinderBlock";
 import ListenButton from "@/components/ListenButton";
+import GuidedEntryPanel from "@/components/GuidedEntryPanel";
+import StickyMobileCallButton from "@/components/StickyMobileCallButton";
+import WhatHappensNext from "@/components/WhatHappensNext";
 
 const serviceAreas = [
   { county: "King County", href: "/counties/king", cities: "Seattle, Bellevue, Kirkland, Redmond, Renton, Kent, Federal Way & more" },
@@ -127,6 +130,12 @@ const Index = () => {
             <span className="pointer-events-none absolute left-[8%] top-0 h-[46%] w-[84%] rounded-full bg-gradient-to-b from-white/20 to-white/0" />
             <span className="relative z-10">Request a Call Back</span>
           </Link>
+          <button
+            onClick={() => document.getElementById('guided-entry')?.scrollIntoView({ behavior: 'smooth' })}
+            className="mt-6 text-white/70 hover:text-white text-base underline underline-offset-4 decoration-white/30 hover:decoration-white/60 transition-colors cursor-pointer"
+          >
+            Not sure where to start?
+          </button>
         </div>
       </section>
 
@@ -181,6 +190,11 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* ═══════════════════════════════════════════════════
+          GUIDED ENTRY — "Not sure where to start?"
+      ═══════════════════════════════════════════════════ */}
+      <GuidedEntryPanel />
 
       {/* ═══════════════════════════════════════════════════
           SERVICE NAV TILES — Immediately after hero
@@ -508,6 +522,11 @@ const Index = () => {
               </div>
             </div>
 
+            {/* What Happens Next — reassurance panel */}
+            <div className="mt-10">
+              <WhatHappensNext variant="dark" />
+            </div>
+
             {/* Right — Lead capture form */}
             <HomepageLeadForm />
           </div>
@@ -559,6 +578,7 @@ const Index = () => {
 
       <DisclaimerSection />
       <Footer />
+      <StickyMobileCallButton />
     </div>
   );
 };
