@@ -23,8 +23,9 @@ const CTASection = () => {
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-6">
             <a href="tel:2069003015">
               <Button 
+                variant="navy3d"
                 size="lg" 
-                className="bg-primary hover:bg-navy-dark text-primary-foreground font-semibold px-8 h-auto min-h-[52px]"
+                className="px-8"
               >
                 <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
                 (206) 900-3015

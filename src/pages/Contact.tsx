@@ -258,8 +258,8 @@ const Contact = () => {
                   <div>
                     <Button
                       type="submit"
+                      variant="navy3d"
                       size="lg"
-                      className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold w-full md:w-auto"
                       disabled={isSubmitting}
                     >
                       {isSubmitting ? "Sending..." : "Send Message"}
