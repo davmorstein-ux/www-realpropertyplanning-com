@@ -240,7 +240,7 @@ const TestimonialsSection = () => {
 
                 <Button
                   type="submit"
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-7"
+                  variant="navy3d"
                 >
                   Submit Review
                 </Button>

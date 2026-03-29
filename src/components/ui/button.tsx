@@ -12,6 +12,14 @@ export const GOLD_PREMIUM_CLASSES =
   "active:translate-y-[1px] active:shadow-[0_2px_0_rgba(122,85,10,0.85),0_6px_14px_rgba(0,0,0,0.16),inset_0_1px_0_rgba(255,255,255,0.20)] " +
   "focus-visible:outline focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[rgba(46,82,161,0.35)]";
 
+export const NAVY_PREMIUM_CLASSES =
+  "relative overflow-hidden inline-flex items-center justify-center rounded-[14px] px-6 py-3.5 min-h-[52px] font-bold tracking-[0.02em] text-white no-underline transition-all duration-200 ease-out " +
+  "bg-gradient-to-b from-[#2e4a7a] to-[#1a3056] border border-[rgba(20,40,70,0.5)] " +
+  "shadow-[0_3px_0_rgba(15,30,55,0.85),0_10px_22px_rgba(0,0,0,0.18),inset_0_1px_0_rgba(255,255,255,0.2),inset_0_-1px_0_rgba(10,20,40,0.2)] " +
+  "hover:-translate-y-[2px] hover:brightness-[1.06] hover:shadow-[0_5px_0_rgba(15,30,55,0.85),0_14px_26px_rgba(0,0,0,0.22),inset_0_1px_0_rgba(255,255,255,0.2),inset_0_-1px_0_rgba(10,20,40,0.2)] " +
+  "active:translate-y-[1px] active:shadow-[0_2px_0_rgba(15,30,55,0.85),0_6px_14px_rgba(0,0,0,0.16),inset_0_1px_0_rgba(255,255,255,0.12)] " +
+  "focus-visible:outline focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[rgba(46,82,161,0.35)]";
+
 export const GoldHighlight = () => (
   <span className="pointer-events-none absolute left-[8%] top-0 h-[48%] w-[84%] rounded-full bg-gradient-to-b from-white/30 to-white/0" />
 );
@@ -35,6 +43,7 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         gold: GOLD_PREMIUM_CLASSES,
+        navy3d: NAVY_PREMIUM_CLASSES,
       },
       size: {
         default: "h-10 px-4 py-2",
@@ -59,7 +68,7 @@ export interface ButtonProps
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, children, ...props }, ref) => {
     const Comp = asChild ? Slot : "button";
-    const is3d = variant === "gold" || variant === "outline3d";
+    const is3d = variant === "gold" || variant === "outline3d" || variant === "navy3d";
     return (
       <Comp className={cn(buttonVariants({ variant, size, className }))} ref={ref} {...props}>
         {is3d && <GoldHighlight />}
