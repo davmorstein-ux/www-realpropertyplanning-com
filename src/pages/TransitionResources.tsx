@@ -33,7 +33,8 @@ import people3d from "@/assets/people-3d.png";
 import iconHome3d from "@/assets/icons/icon-home-3d.png";
 import iconDocument3d from "@/assets/icons/icon-document-3d.png";
 import iconBriefcase3d from "@/assets/icons/icon-briefcase-3d.png";
-import iconHeartHands3d from "@/assets/icons/icon-heart-hands-3d.png";
+import iconHandshake3d from "@/assets/icons/icon-handshake-3d.png";
+import iconBookOpen3d from "@/assets/icons/icon-book-open-3d.png";
 
 const SITE_URL = "https://realpropertyplanning.com";
 
@@ -224,7 +225,7 @@ const TransitionResources = () => {
                   size="lg"
  className="hover:-light px-8 h-[52px] text-base rounded-lg w-full sm:w-auto"
                 >
-                  <BookOpen className="w-5 h-5 mr-2" />
+                  <img src={iconBookOpen3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain" loading="lazy" />
                   Explore Resources
                 </Button>
               </a>
@@ -355,7 +356,7 @@ const TransitionResources = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <div className="flex items-center gap-3 mb-4">
-              <Handshake className="w-6 h-6 text-accent shrink-0" />
+              <img src={iconHandshake3d} alt="" aria-hidden="true" className="w-8 h-8 object-contain shrink-0" loading="lazy" />
               <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold">
                 For Professional Referral Partners
               </h2>
