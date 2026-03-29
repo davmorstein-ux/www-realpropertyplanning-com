@@ -129,13 +129,10 @@ const CountyPageTemplate = ({
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
-              Who Real Property Planning Works With in {countyName}
+              Clients and Partners in {countyName}
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-              David Stein serves clients throughout Washington State, with especially strong experience in Western Washington and the Puget Sound region. This page highlights services and market familiarity specific to {countyName}.
-            </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Clients and professional partners David works with in {countyName} include:
+              Most of the people David works with in {countyName} are dealing with a property situation they didn't expect — and they're looking for someone with real experience to guide the process:
             </p>
             <ul className="space-y-4">
               {(clientTypes || defaultClientTypes).map((item, index) => (
@@ -149,15 +146,15 @@ const CountyPageTemplate = ({
         </div>
       </section>
 
-      {/* Common Situations — question-based heading */}
+      {/* Common Situations */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
-              When Do People in {countyName} Need Help With Estate Property?
+              Situations That Bring {countyName} Families to David
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              David regularly works with clients in {countyName} facing situations such as:
+              Every situation is different, but these are the kinds of circumstances David sees most often in {countyName}:
             </p>
             <ul className="space-y-4">
               {(typicalSituations || defaultSituations).map((item, index) => (
@@ -173,10 +170,9 @@ const CountyPageTemplate = ({
 
       {/* Mid-page CTA */}
       <MidPageCTA
-        heading={`Need Help With a Property in ${countyName}?`}
-        body={`David provides confidential consultations for executors, attorneys, trustees, and families dealing with property transitions in ${countyName}.`}
-        buttonText="Schedule a Consultation"
-        microcopy="No pressure. Just practical guidance for your situation."
+        heading={`Dealing With a ${countyName} Property?`}
+        body="A short conversation is usually the best way to figure out next steps. David can walk you through your options."
+        buttonText="Schedule a Conversation"
       />
 
       {/* Services Available */}
@@ -184,10 +180,10 @@ const CountyPageTemplate = ({
         <div className="container px-6 lg:px-8">
           <div className="max-w-[1140px] mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
-              Services Available in {countyName}
+              What David Can Help With in {countyName}
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-10 max-w-3xl">
-              Real Property Planning offers the following services for clients throughout {countyName}:
+              Each situation is different, but these are the areas where David's experience is most relevant:
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
               {services.map((service) => (
@@ -321,18 +317,15 @@ const CountyPageTemplate = ({
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
-              Need Help With a Property in {countyName}?
+              Ready to Talk About a {countyName} Property?
             </h2>
-            <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">
-              David provides confidential consultations for executors, attorneys, trustees, families, and financial professionals throughout {countyName}.
-            </p>
-            <p className="text-primary-foreground/50 text-base mb-8">
-              A short conversation to understand your situation, answer questions, and discuss next steps.
+            <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
+              David is happy to walk through your situation and help you see what makes sense as a next step.
             </p>
             <div className="flex justify-center">
               <Link to="/contact">
                 <Button variant="gold" size="lg">
-                  Schedule a Consultation
+                  Start a Conversation
                 </Button>
               </Link>
             </div>

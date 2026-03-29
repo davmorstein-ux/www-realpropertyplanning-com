@@ -60,13 +60,13 @@ const Services = () => {
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
               <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">
-                Our Services
+                Services
               </p>
               <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl text-primary-foreground font-semibold mb-6">
-                Probate, Estate & Senior Transition Real Estate Services
+                How David Helps With Estate, Probate &amp; Senior Property Transitions
               </h1>
               <p className="text-primary-foreground/80 text-lg leading-relaxed max-w-2xl mx-auto">
-                Probate property sales, senior transitions, executor support, and estate-related real estate guidance throughout Washington State.
+                Every situation is different. These are the areas where David's experience as a licensed broker and certified appraiser makes the biggest difference.
               </p>
             </div>
           </div>

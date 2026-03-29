@@ -127,10 +127,9 @@ const ServicePageTemplate = ({ service, introText, situations, benefits }: Servi
 
       {/* Mid-page CTA */}
       <MidPageCTA
-        heading={`Need Help With ${service.shortName}?`}
-        body="David Stein provides confidential consultations for clients and professionals throughout Washington State."
-        buttonText="Schedule a Consultation"
-        microcopy="No pressure. Just practical guidance for your situation."
+        heading={`Questions About ${service.shortName}?`}
+        body="A brief conversation is usually the best place to start. David can walk you through your options."
+        buttonText="Schedule a Conversation"
       />
 
       {/* Why Valuation & Market Guidance Matter */}
@@ -202,18 +201,15 @@ const ServicePageTemplate = ({ service, introText, situations, benefits }: Servi
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
-              Ready to Discuss {service.shortName}?
+              Want to Talk Through Your Situation?
             </h2>
-            <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">
-              David Stein provides confidential consultations for clients and professionals throughout Washington State.
-            </p>
-            <p className="text-primary-foreground/50 text-base mb-8">
-              A short conversation to understand your situation, answer questions, and discuss next steps.
+            <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
+              David is happy to listen, answer questions, and help you see what makes sense as a next step.
             </p>
             <div className="flex justify-center">
               <Link to="/contact">
                 <Button variant="gold" size="lg">
-                  Schedule a Consultation
+                  Start a Conversation
                 </Button>
               </Link>
             </div>
