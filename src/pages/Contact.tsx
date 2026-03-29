@@ -59,8 +59,8 @@ const Contact = () => {
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
     toast({
-      title: "Thank You — Message Received",
-      description: "David will reach out shortly to learn more about your situation. If it's time-sensitive, feel free to call (206) 900-3015 directly.",
+      title: "Thanks — Message Received",
+      description: "David will reach out shortly. Need to talk sooner? Call (206) 900-3015.",
     });
 
     setIsSubmitting(false);
@@ -87,11 +87,8 @@ const Contact = () => {
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-[22px]">
               Reaching Out Is the Easiest First Step
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-4">
-              Whether you're an executor sorting through a property, an attorney with a client situation, or a family member trying to figure out what comes next — a short conversation can bring real clarity.
-            </p>
-            <p className="text-lg text-primary-foreground/70 leading-relaxed">
-              You don't need to have all the details. Just tell David what's going on and he'll help you see the path forward.
+            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed">
+              Whether you're an executor, an attorney, or a family member navigating a property situation — a short conversation can bring real clarity.
             </p>
           </div>
         </div>
@@ -132,10 +129,10 @@ const Contact = () => {
               </div>
 
               <p className="text-muted-foreground text-[15px] leading-relaxed mb-4">
-                David works with attorneys, executors, fiduciaries, and families across Washington State. If you're not sure whether your situation fits, reach out anyway — most people aren't sure at first, and that's fine.
+                David works with attorneys, executors, fiduciaries, and families across Washington State.
               </p>
               <p className="text-muted-foreground text-[15px] leading-relaxed mb-8">
-                If you need help coordinating a move or sale outside Washington, David can connect you with a trusted eXp Realty broker in the right area.
+                For properties outside Washington, he can connect you with a trusted eXp Realty partner in the right area.
               </p>
 
               {/* Brokerage Info */}
@@ -157,10 +154,10 @@ const Contact = () => {
             <div className="lg:col-span-2">
               <div className="bg-card rounded-lg border border-border p-6 sm:p-8 lg:p-10">
                 <h2 className="font-serif text-xl font-semibold text-foreground mb-2">
-                  Share a Few Details
+                  Send a Message
                 </h2>
                 <p className="text-muted-foreground mb-6 text-[15px] leading-relaxed">
-                  You don't need to have everything figured out. A brief description of what's going on is a great place to start.
+                  A brief description of your situation is a great place to start.
                 </p>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -268,7 +265,7 @@ const Contact = () => {
                       {isSubmitting ? "Sending..." : "Send My Message"}
                     </Button>
                     <p className="text-muted-foreground/70 text-[15px] mt-4">
-                      All inquiries are handled with care and discretion. David responds personally.
+                      David responds personally to every inquiry.
                     </p>
                   </div>
                 </form>
