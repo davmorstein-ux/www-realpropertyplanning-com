@@ -130,6 +130,12 @@ const Index = () => {
             <span className="pointer-events-none absolute left-[8%] top-0 h-[46%] w-[84%] rounded-full bg-gradient-to-b from-white/20 to-white/0" />
             <span className="relative z-10">Request a Call Back</span>
           </Link>
+          <button
+            onClick={() => document.getElementById('guided-entry')?.scrollIntoView({ behavior: 'smooth' })}
+            className="mt-6 text-white/70 hover:text-white text-base underline underline-offset-4 decoration-white/30 hover:decoration-white/60 transition-colors cursor-pointer"
+          >
+            Not sure where to start?
+          </button>
         </div>
       </section>
 
