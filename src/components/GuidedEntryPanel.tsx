@@ -5,31 +5,31 @@ const options = [
   {
     icon: ClipboardList,
     label: "I'm an executor or personal representative",
-    description: "Named in a will or appointed by the court to handle the estate",
+    description: "You've been named in a will or appointed by the court — and now there's a property to deal with",
     href: "/executors",
   },
   {
     icon: Home,
     label: "I'm dealing with an inherited property",
-    description: "Trying to figure out what to do with a home left to you or your family",
+    description: "You're not sure whether to sell, keep, or fix it up — and you need straight answers",
     href: "/guides/inherited-house-washington",
   },
   {
     icon: Heart,
     label: "I'm helping a senior transition",
-    description: "A parent or loved one is moving from a longtime home",
+    description: "A parent or loved one is leaving a home they've been in for years — and the logistics feel overwhelming",
     href: "/senior-transitions",
   },
   {
     icon: Scale,
     label: "I'm an attorney or fiduciary",
-    description: "Looking for a reliable real estate partner for your client",
+    description: "You need someone who understands the real estate side and can handle it without creating more work for you",
     href: "/for-attorneys",
   },
   {
     icon: MapPin,
     label: "I'm managing this from out of state",
-    description: "Need a local point of contact in Washington",
+    description: "You need a reliable local contact who can handle things on the ground in Washington",
     href: "/guides/out-of-state-families",
   },
 ];
@@ -47,7 +47,7 @@ const GuidedEntryPanel = () => {
               Let's Point You in the Right Direction
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed max-w-xl mx-auto">
-              You don't need to have everything figured out. Choose the option that best fits your situation.
+              You don't need to have everything figured out — most people don't when they first reach out. Just pick the option that sounds closest to your situation.
             </p>
           </div>
 

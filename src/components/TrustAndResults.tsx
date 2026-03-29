@@ -64,7 +64,7 @@ const TrustAndResults = () => (
             Why Clients and Professionals Trust David Stein
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
-            People don't work with David because of a sales pitch. They work with him because he's thorough, steady, and brings a level of valuation expertise that most brokers simply don't have.
+            What keeps clients coming back — and referring others — isn't a sales pitch. It's that David is thorough, honest about what a property is actually worth, and brings a level of valuation expertise that most brokers simply don't have.
           </p>
         </div>
 
@@ -150,7 +150,7 @@ const TrustAndResults = () => (
             Real Situations, Real Results
           </h3>
           <p className="text-muted-foreground text-center mb-8 max-w-2xl mx-auto">
-            No two estates are the same. These are real examples of how David has worked through difficult property situations with families and their advisors.
+            Every situation is different — different families, different properties, different pressures. Here's what a few of those situations actually looked like.
           </p>
           <div className="grid md:grid-cols-3 gap-6">
             {caseSnapshots.map((snap, i) => (

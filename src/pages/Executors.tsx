@@ -206,7 +206,7 @@ const Executors = () => {
               You Do Not Have to Figure This Out Alone
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-8">
-              Selling a loved one's home during estate administration is one of the hardest things you will do. David Stein works with executors throughout Washington State to handle the real estate details — so you can focus on the people and responsibilities that matter most.
+              If you've been named executor or personal representative, the property piece can feel like the most overwhelming part. David Stein works with executors throughout Washington State to take that burden off your plate — handling the real estate details so you can focus on the people and responsibilities that need your attention.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Link to="/contact">
@@ -234,10 +234,10 @@ const Executors = () => {
               Most Executors Are Doing This for the First Time
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-              There is no training manual for being an executor. You are managing legal paperwork, coordinating with family, and making decisions about a property you may not have visited in years — all while processing loss.
+              There is no training for this. You're managing legal paperwork, answering questions from family, and making decisions about a property you may not have visited in years — all while processing a loss. This is where things can get confusing fast.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              That is exactly why David does what he does. He takes the real estate burden off your plate, explains each step clearly, and handles the coordination so you do not have to become a real estate expert overnight. You just need someone in your corner who already is one.
+              That's exactly why David does what he does. He takes the property off your plate, walks you through each step clearly, and handles the coordination so you're not trying to become a real estate expert overnight. You just need someone in your corner who already is one.
             </p>
           </div>
         </div>
@@ -251,7 +251,7 @@ const Executors = () => {
               Does This Sound Like Your Situation?
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              If any of these feel familiar, you are in the right place:
+              What often happens is people find themselves in one of these situations and don't realize there's someone who does this kind of work regularly. If any of these sound familiar, that's usually a good time to reach out:
             </p>
             <ul className="space-y-4">
               {commonSituations.map((item, i) => (
@@ -273,10 +273,10 @@ const Executors = () => {
               How David Helps Executors
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-              David is both a licensed real estate broker and a Washington State certified residential appraiser with over 20 years of experience. That combination means you get someone who can evaluate property value with analytical precision <em>and</em> manage the entire sale process from start to finish.
+              David holds both a real estate broker license and a Washington State certified residential appraiser credential — a combination that's uncommon in the industry. In practice, that means you get someone who can evaluate property value with analytical rigor <em>and</em> manage the entire sale from first conversation to closing.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Here is what that looks like in practice:
+              Here is what that actually looks like:
             </p>
             <ul className="space-y-4">
               {howIHelp.map((item, i) => (
@@ -298,7 +298,7 @@ const Executors = () => {
               A Simple, Clear Process
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-10">
-              No surprises. No jargon. Just a straightforward path from your first conversation to closing:
+              No jargon, no surprises. Just a clear path from the first conversation to closing:
             </p>
             <div className="grid gap-5">
               {processSteps.map((step) => (
@@ -416,10 +416,10 @@ const Executors = () => {
               Ready to Talk About Your Situation?
             </h2>
             <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">
-              Start with a simple conversation. David will listen, answer your questions, and outline practical next steps — no pressure, no obligation.
+              It starts with a simple conversation. David will listen to what's going on, answer your questions honestly, and help you see a clear path forward — even if you're not sure what that looks like yet.
             </p>
             <p className="text-primary-foreground/50 text-base mb-8">
-              Whether you are just beginning or already feel behind, there is always a clear path forward.
+              Whether you're just getting started or already feel behind, there's always a way to move forward from here.
             </p>
             <div className="flex justify-center">
               <Link to="/contact">

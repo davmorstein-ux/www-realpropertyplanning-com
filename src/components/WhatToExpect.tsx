@@ -46,7 +46,7 @@ const WhatToExpect = () => (
           What to Expect When You Reach Out
         </h2>
         <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-          Nobody walks into this with a playbook. Here's how things typically unfold — step by step, at a pace that makes sense for your situation.
+          Most people aren't sure what to expect when they first reach out. Here's how things typically unfold — at a pace that fits your situation, not someone else's timeline.
         </p>
       </div>
 
