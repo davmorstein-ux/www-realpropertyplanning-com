@@ -526,7 +526,6 @@ const Index = () => {
             <div className="mt-10">
               <WhatHappensNext variant="dark" />
             </div>
-            </div>
 
             {/* Right — Lead capture form */}
             <HomepageLeadForm />
