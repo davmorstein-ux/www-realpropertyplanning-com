@@ -59,11 +59,11 @@ export interface ButtonProps
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, children, ...props }, ref) => {
     const Comp = asChild ? Slot : "button";
-    const isGold = variant === "gold";
+    const is3d = variant === "gold" || variant === "outline3d";
     return (
       <Comp className={cn(buttonVariants({ variant, size, className }))} ref={ref} {...props}>
-        {isGold && <GoldHighlight />}
-        {isGold ? <span className="relative z-10 inline-flex items-center gap-2">{children}</span> : children}
+        {is3d && <GoldHighlight />}
+        {is3d ? <span className="relative z-10 inline-flex items-center gap-2">{children}</span> : children}
       </Comp>
     );
   },
