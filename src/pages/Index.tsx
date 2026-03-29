@@ -192,6 +192,11 @@ const Index = () => {
       </section>
 
       {/* ═══════════════════════════════════════════════════
+          GUIDED ENTRY — "Not sure where to start?"
+      ═══════════════════════════════════════════════════ */}
+      <GuidedEntryPanel />
+
+      {/* ═══════════════════════════════════════════════════
           SERVICE NAV TILES — Immediately after hero
       ═══════════════════════════════════════════════════ */}
       <ServiceNavTiles />
@@ -517,6 +522,12 @@ const Index = () => {
               </div>
             </div>
 
+            {/* What Happens Next — reassurance panel */}
+            <div className="mt-10">
+              <WhatHappensNext variant="dark" />
+            </div>
+            </div>
+
             {/* Right — Lead capture form */}
             <HomepageLeadForm />
           </div>
@@ -568,6 +579,7 @@ const Index = () => {
 
       <DisclaimerSection />
       <Footer />
+      <StickyMobileCallButton />
     </div>
   );
 };
