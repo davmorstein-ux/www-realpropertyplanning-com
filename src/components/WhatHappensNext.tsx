@@ -7,15 +7,15 @@ interface WhatHappensNextProps {
 const steps = [
   {
     icon: Phone,
-    text: "We'll have a short conversation about your situation",
+    text: "A short conversation about what's going on — no preparation needed",
   },
   {
     icon: MessageCircle,
-    text: "You can ask questions and get clear direction",
+    text: "You can ask anything. David will give you straight, practical answers",
   },
   {
     icon: ArrowRight,
-    text: "We'll outline practical next steps based on your needs",
+    text: "Together, you'll map out clear next steps based on your specific situation",
   },
 ];
 
@@ -54,7 +54,7 @@ const WhatHappensNext = ({ variant = "light" }: WhatHappensNextProps) => {
       <p className={`text-[15px] mt-6 ${
         isDark ? "text-primary-foreground/50" : "text-muted-foreground"
       }`}>
-        There's no pressure — just a helpful starting point.
+        No sales pitch, no obligation — just an honest conversation to help you figure out where things stand.
       </p>
     </div>
   );

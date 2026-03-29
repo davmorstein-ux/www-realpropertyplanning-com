@@ -36,7 +36,7 @@ const AppraiserAdvantage = () => (
             The Appraiser Advantage
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
-            Most brokers estimate value based on recent sales and experience. David does that too — but he also brings formal appraisal training, which means his pricing is built on a structured methodology. For estate and probate sales, that difference can be the thing that prevents a dispute or protects a fiduciary.
+            Most brokers price a property based on recent sales and experience — and that's a reasonable starting point. But David also brings formal appraisal training, which means his pricing is built on structured methodology. In estate and probate situations, that difference can be what prevents a dispute, protects a fiduciary, or keeps a deal from falling apart.
           </p>
         </div>
 

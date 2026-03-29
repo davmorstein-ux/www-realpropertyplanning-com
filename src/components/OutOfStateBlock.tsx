@@ -22,7 +22,7 @@ const OutOfStateBlock = () => (
           Managing Washington Property From a Distance?
         </h2>
         <p className="text-muted-foreground text-lg leading-relaxed mb-8 text-center">
-          It's one of the most common situations David sees: a family member inherits a Washington property but lives in another state. The logistics can feel impossible. David steps in as your local point of contact — handling the details on the ground so you don't have to be here.
+          This is one of the situations David sees most often: someone inherits a Washington property but lives in another state. The logistics feel impossible — you can't be there to check on the house, manage vendors, or oversee the sale. David steps in as your local point of contact and handles the details on the ground so you don't have to fly back and forth.
         </p>
 
         <ul className="space-y-4 mb-10">
