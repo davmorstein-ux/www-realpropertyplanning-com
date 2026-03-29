@@ -40,7 +40,7 @@ const LeadMagnetBlock = () => {
               The Washington Executor's 10‑Step Checklist for Handling Real Estate
             </h2>
             <p className="text-primary-foreground/75 text-lg leading-relaxed mb-6 max-w-2xl mx-auto">
-              Overwhelmed by the property side of estate administration? This practical, step-by-step checklist covers what most executors, trustees, and families wish they'd known from day one.
+              The property side of estate administration catches most people off guard. This step-by-step checklist covers the things executors, trustees, and families tell us they wish someone had explained from the beginning.
             </p>
 
             {/* Primary CTA button */}

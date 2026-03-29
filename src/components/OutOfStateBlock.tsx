@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 
 const points = [
-  "Boots-on-the-ground support — David handles property visits, vendor coordination, and inspections so you don't need to travel.",
-  "Regular updates with photos and clear communication — stay informed from anywhere.",
-  "Coordination with local attorneys, cleanout crews, contractors, and other professionals.",
-  "Honest, defensible pricing so you can make confident decisions from a distance.",
-  "Experience working with executors, trustees, and family members across the country.",
+  "David handles property visits, vendor coordination, and inspections in person — so you don't have to fly back and forth.",
+  "You'll get regular updates with photos and clear communication. No guessing about what's happening.",
+  "He coordinates directly with local attorneys, cleanout crews, contractors, and other professionals on your behalf.",
+  "Pricing is honest and defensible, so you can make confident decisions even from 2,000 miles away.",
+  "David regularly works with executors, trustees, and family members who are managing things from out of state — it's one of his most common situations.",
 ];
 
 const OutOfStateBlock = () => (
@@ -22,7 +22,7 @@ const OutOfStateBlock = () => (
           Managing Washington Property From a Distance?
         </h2>
         <p className="text-muted-foreground text-lg leading-relaxed mb-8 text-center">
-          Many executors, trustees, and family members live outside Washington when they inherit or need to sell a property here. David serves as your trusted local partner — managing the process so you don't have to be physically present.
+          It's one of the most common situations David sees: a family member inherits a Washington property but lives in another state. The logistics can feel impossible. David steps in as your local point of contact — handling the details on the ground so you don't have to be here.
         </p>
 
         <ul className="space-y-4 mb-10">

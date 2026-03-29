@@ -6,28 +6,28 @@ const steps = [
     number: "1",
     title: "Initial Conversation",
     description:
-      "A brief, no-pressure call to understand your situation, answer questions, and discuss what you're facing — whether it's a probate sale, an inherited home, or a senior transition.",
+      "It usually starts with a phone call. You tell David what's going on — whether it's a probate situation, an inherited home, or a parent who needs to move — and he listens before offering any direction.",
   },
   {
     icon: ClipboardList,
     number: "2",
     title: "Property Review & Assessment",
     description:
-      "David evaluates the property's condition, location, and market position — drawing on his dual expertise as a broker and certified appraiser to give you an honest, informed picture.",
+      "David visits the property and looks at it with fresh eyes — condition, deferred maintenance, what the market is doing nearby. Because he's both a broker and a certified appraiser, the assessment goes deeper than a typical walkthrough.",
   },
   {
     icon: Target,
     number: "3",
     title: "Strategy & Pricing",
     description:
-      "Together, we build a plan: realistic pricing grounded in valuation data, preparation recommendations, timeline expectations, and clear next steps tailored to your goals.",
+      "Based on what he's found, David puts together a plan — realistic pricing backed by valuation data, what preparation makes sense (if any), and a timeline that fits your situation. No surprises.",
   },
   {
     icon: Handshake,
     number: "4",
     title: "Execution & Coordination",
     description:
-      "David manages the details — vendor coordination, listing, marketing, negotiations, and communication with attorneys, co-executors, and family members — so you don't have to carry the burden alone.",
+      "From here, David handles the day-to-day — coordinating vendors, managing the listing, communicating with attorneys and family members, and keeping things moving. You stay informed without having to manage every detail.",
   },
 ];
 
@@ -42,7 +42,7 @@ const WhatToExpect = () => (
           What to Expect When You Reach Out
         </h2>
         <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-          You don't need to have everything figured out. Here's how a typical engagement unfolds — calmly, clearly, and at a pace that works for you.
+          Nobody walks into this with a playbook. Here's how things typically unfold — step by step, at a pace that makes sense for your situation.
         </p>
       </div>
 

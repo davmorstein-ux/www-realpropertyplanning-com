@@ -64,7 +64,7 @@ const TrustAndResults = () => (
             Why Clients and Professionals Trust David Stein
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
-            Specialized experience, valuation-informed expertise, and a calm, professional approach that attorneys, executors, and families rely on.
+            People don't work with David because of a sales pitch. They work with him because he's thorough, steady, and brings a level of valuation expertise that most brokers simply don't have.
           </p>
         </div>
 
@@ -150,7 +150,7 @@ const TrustAndResults = () => (
             Real Situations, Real Results
           </h3>
           <p className="text-muted-foreground text-center mb-8 max-w-2xl mx-auto">
-            Every situation is different. Here are examples of how David has helped clients navigate complex property transitions.
+            No two estates are the same. These are real examples of how David has worked through difficult property situations with families and their advisors.
           </p>
           <div className="grid md:grid-cols-3 gap-6">
             {caseSnapshots.map((snap, i) => (

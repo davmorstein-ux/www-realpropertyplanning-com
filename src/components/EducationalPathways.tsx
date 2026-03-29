@@ -64,7 +64,7 @@ const EducationalPathways = ({
             {heading}
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Answers to the questions families, executors, and professionals ask most often about property transitions.
+            These are the questions that come up most often — from executors trying to understand the process, families weighing their options, and professionals looking for reliable information.
           </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
