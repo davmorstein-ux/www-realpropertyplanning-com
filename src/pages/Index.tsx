@@ -31,6 +31,7 @@ import TrustAndResults from "@/components/TrustAndResults";
 import MidPageCTA from "@/components/MidPageCTA";
 import EducationalPathways from "@/components/EducationalPathways";
 import SituationFinderBlock from "@/components/SituationFinderBlock";
+import ListenButton from "@/components/ListenButton";
 
 const serviceAreas = [
   { county: "King County", href: "/counties/king", cities: "Seattle, Bellevue, Kirkland, Redmond, Renton, Kent, Federal Way & more" },
@@ -134,7 +135,10 @@ const Index = () => {
       ═══════════════════════════════════════════════════ */}
       <section className="py-14 lg:py-20 bg-primary">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-3xl mx-auto text-center" id="who-we-help-section">
+            <div className="flex justify-center mb-5">
+              <ListenButton targetId="who-we-help-section" />
+            </div>
             <h2 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] text-primary-foreground font-bold mb-8">
               Who We Can Help
             </h2>
@@ -163,7 +167,7 @@ const Index = () => {
               <span className="premium-divider-dot" />
             </div>
 
-            <div className="text-primary-foreground/80 text-[17px] leading-[1.85] space-y-5 max-w-2xl mx-auto text-left">
+            <div className="text-primary-foreground/80 text-[17px] leading-[1.85] space-y-5 max-w-2xl mx-auto text-left" id="intro-section">
               <p>
                 Real Property Planning works alongside attorneys, executors, trustees, and families who are dealing with probate, inherited property, or a senior transition — situations where the real estate piece can feel especially uncertain.
               </p>
