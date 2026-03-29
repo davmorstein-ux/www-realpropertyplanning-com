@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import iconArrowRight3d from "@/assets/icons/icon-arrow-right-3d.png";
 
 const allLinks = [
   { href: "/for-attorneys", label: "For Attorneys & Fiduciaries", description: "How we support attorneys and fiduciaries with real estate during probate and estate matters." },
@@ -50,9 +50,9 @@ const RelatedServices = ({ currentPath }: RelatedServicesProps) => {
                     {link.description}
                   </p>
                 </div>
-                <div className="flex items-center gap-1 mt-4 text-accent/60 group-hover:text-gold transition-colors text-sm">
+                <div className="flex items-center gap-1.5 mt-4 text-accent/60 group-hover:text-gold transition-colors text-sm">
                   <span>Learn more</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
+                  <img src={iconArrowRight3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain" loading="lazy" />
                 </div>
               </Link>
             ))}

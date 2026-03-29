@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import iconArrowRight3d from "@/assets/icons/icon-arrow-right-3d.png";
 
 interface NextStep {
   title: string;
@@ -39,7 +39,7 @@ const NextStepBlock = ({
                   {step.description}
                 </p>
               </div>
-              <ArrowRight className="w-4 h-4 text-muted-foreground/40 group-hover:text-gold shrink-0 transition-colors" />
+              <img src={iconArrowRight3d} alt="" aria-hidden="true" className="w-6 h-6 object-contain shrink-0 opacity-40 group-hover:opacity-100 transition-opacity" loading="lazy" />
             </Link>
           ))}
         </div>

@@ -28,8 +28,14 @@ const faqs = [
 ];
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight, Home, FileText, Briefcase, BookOpen, Handshake, HeartHandshake } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import people3d from "@/assets/people-3d.png";
+import iconHome3d from "@/assets/icons/icon-home-3d.png";
+import iconDocument3d from "@/assets/icons/icon-document-3d.png";
+import iconBriefcase3d from "@/assets/icons/icon-briefcase-3d.png";
+import iconHeartHands3d from "@/assets/icons/icon-heart-hands-3d.png";
+import iconHandshake3d from "@/assets/icons/icon-handshake-3d.png";
+import iconBookOpen3d from "@/assets/icons/icon-book-open-3d.png";
 
 const SITE_URL = "https://realpropertyplanning.com";
 
@@ -55,35 +61,35 @@ const resourceCategories = [
     title: "Estate Sale Companies",
     description:
       "Companies that organize, price, and conduct estate sales for personal property and household contents.",
-    icon: Home,
+    iconSrc: iconHome3d,
   },
   {
     href: "/resources/probate-estate-attorneys",
     title: "Probate & Estate Attorneys",
     description:
       "Attorneys who guide families and fiduciaries through the probate process and estate administration.",
-    icon: FileText,
+    iconSrc: iconDocument3d,
   },
   {
     href: "/resources/cpas-financial-advisors",
     title: "CPAs & Financial Advisors",
     description:
       "Tax and financial professionals who assist with estate tax, capital gains, and financial planning related to inherited property.",
-    icon: Briefcase,
+    iconSrc: iconBriefcase3d,
   },
   {
     href: "/resources/senior-living-communities",
     title: "Senior Living Communities",
     description:
       "Assisted living, independent living, and memory care communities throughout Washington State.",
-    icon: HeartHandshake,
+    iconSrc: iconHeartHands3d,
   },
   {
     href: "/resources/property-preparation-services",
     title: "Property Preparation Services",
     description:
       "Cleanout, staging, repair, and preparation services to get estate and transition properties market-ready.",
-    icon: Home,
+    iconSrc: iconHome3d,
   },
   {
     href: "/resources/moving-relocation-services",
@@ -220,7 +226,7 @@ const TransitionResources = () => {
                   size="lg"
  className="hover:-light px-8 h-[52px] text-base rounded-lg w-full sm:w-auto"
                 >
-                  <BookOpen className="w-5 h-5 mr-2" />
+                  <img src={iconBookOpen3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain" loading="lazy" />
                   Explore Resources
                 </Button>
               </a>
@@ -293,10 +299,10 @@ const TransitionResources = () => {
                 >
                   <div className="flex items-start gap-4">
                     {cat.image ? (
-                      <img src={cat.image} alt="" aria-hidden="true" className="w-5 h-5 object-contain mt-1 shrink-0" />
-                    ) : (
-                      <cat.icon className="w-5 h-5 text-accent mt-1 shrink-0" />
-                    )}
+                      <img src={cat.image} alt="" aria-hidden="true" className="w-7 h-7 object-contain mt-1 shrink-0" loading="lazy" />
+                    ) : cat.iconSrc ? (
+                      <img src={cat.iconSrc} alt="" aria-hidden="true" className="w-7 h-7 object-contain mt-1 shrink-0" loading="lazy" />
+                    ) : null}
                     <div>
                       <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground group-hover:text-accent transition-colors mb-1">
                         {cat.title}
@@ -351,7 +357,7 @@ const TransitionResources = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <div className="flex items-center gap-3 mb-4">
-              <Handshake className="w-6 h-6 text-accent shrink-0" />
+              <img src={iconHandshake3d} alt="" aria-hidden="true" className="w-8 h-8 object-contain shrink-0" loading="lazy" />
               <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold">
                 For Professional Referral Partners
               </h2>
