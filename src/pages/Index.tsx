@@ -568,7 +568,7 @@ const Index = () => {
           </div>
           <div className="text-center mt-10">
             <Link to="/faq">
-              <Button variant="outline" className="border-navy text-navy hover:bg-navy hover:text-primary-foreground">
+              <Button variant="outline3d" className="border-navy text-navy hover:bg-navy hover:text-primary-foreground">
                 View All FAQs <ChevronRight className="w-4 h-4 ml-1" />
               </Button>
             </Link>

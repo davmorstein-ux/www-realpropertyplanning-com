@@ -121,7 +121,7 @@ const TestimonialsSection = () => {
         <div className="text-center mb-20">
           <Button
             asChild
-            variant="outline"
+            variant="outline3d"
             className="border-border text-foreground hover:border-gold hover:text-gold"
           >
             <a

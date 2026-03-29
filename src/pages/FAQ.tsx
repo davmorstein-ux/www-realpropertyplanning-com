@@ -227,7 +227,7 @@ const FAQ = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button variant="outline" size="lg" className="border-gold/50 bg-transparent text-gold hover:bg-gold hover:text-foreground">
+                <Button variant="outline3d" size="lg" className="border-gold/50 bg-transparent text-gold hover:bg-gold hover:text-foreground">
                   Read Reviews on Zillow
                 </Button>
               </a>

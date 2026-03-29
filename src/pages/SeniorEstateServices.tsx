@@ -214,22 +214,22 @@ const SeniorEstateServices = () => {
           </p>
           <div className="flex flex-wrap gap-3 mt-6">
             <Link to="/counties/king">
-              <Button variant="outline" size="sm" className="border-border text-foreground hover:bg-muted rounded-[14px]">
+              <Button variant="outline3d" size="sm" className="border-border text-foreground hover:bg-muted rounded-[14px]">
                 King County
               </Button>
             </Link>
             <Link to="/counties/snohomish">
-              <Button variant="outline" size="sm" className="border-border text-foreground hover:bg-muted rounded-[14px]">
+              <Button variant="outline3d" size="sm" className="border-border text-foreground hover:bg-muted rounded-[14px]">
                 Snohomish County
               </Button>
             </Link>
             <Link to="/counties/pierce">
-              <Button variant="outline" size="sm" className="border-border text-foreground hover:bg-muted rounded-[14px]">
+              <Button variant="outline3d" size="sm" className="border-border text-foreground hover:bg-muted rounded-[14px]">
                 Pierce County
               </Button>
             </Link>
             <Link to="/counties/kitsap">
-              <Button variant="outline" size="sm" className="border-border text-foreground hover:bg-muted rounded-[14px]">
+              <Button variant="outline3d" size="sm" className="border-border text-foreground hover:bg-muted rounded-[14px]">
                 Kitsap County
               </Button>
             </Link>
@@ -271,7 +271,7 @@ const SeniorEstateServices = () => {
               <Link to="/contact">
                 <Button
                   size="lg"
-                  variant="outline"
+                  variant="outline3d"
                   className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-semibold px-8 rounded-[14px] text-base h-[52px] w-full sm:w-auto"
                 >
                   Request a Call

@@ -132,7 +132,7 @@ const AttorneyReferral = () => {
               <Link to="/contact">
                 <Button
                   size="lg"
-                  variant="outline"
+                  variant="outline3d"
                   className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-medium px-7 py-4 h-auto rounded-lg w-full sm:w-auto"
                 >
                   <MessageSquare className="w-4 h-4 mr-2" />
@@ -311,7 +311,7 @@ const AttorneyReferral = () => {
                 <Link to="/contact">
                   <Button
                     size="lg"
-                    variant="outline"
+                    variant="outline3d"
                     className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-medium px-7 py-4 h-auto rounded-lg w-full sm:w-auto"
                   >
                     <MessageSquare className="w-4 h-4 mr-2" />
