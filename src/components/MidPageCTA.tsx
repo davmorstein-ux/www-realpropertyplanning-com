@@ -11,10 +11,10 @@ interface MidPageCTAProps {
 }
 
 const MidPageCTA = ({
-  heading = "Ready to Talk About Your Situation?",
-  body = "A short conversation to understand your situation, answer questions, and discuss next steps.",
-  microcopy = "No pressure. Just practical guidance for your situation.",
-  buttonText = "Schedule a Consultation",
+  heading = "Ready to Talk Through Your Situation?",
+  body = "A brief conversation is usually the best place to start.",
+  microcopy,
+  buttonText = "Schedule a Conversation",
   variant = "light",
 }: MidPageCTAProps) => {
   const isDark = variant === "dark";
@@ -53,13 +53,15 @@ const MidPageCTA = ({
               {buttonText}
             </Button>
           </Link>
-          <p
-            className={`text-sm mt-4 ${
-              isDark ? "text-primary-foreground/50" : "text-muted-foreground/70"
-            }`}
-          >
-            {microcopy}
-          </p>
+          {microcopy && (
+            <p
+              className={`text-sm mt-4 ${
+                isDark ? "text-primary-foreground/50" : "text-muted-foreground/70"
+              }`}
+            >
+              {microcopy}
+            </p>
+          )}
         </div>
       </div>
     </section>
