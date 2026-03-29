@@ -355,7 +355,7 @@ const SmartSearchBar = () => {
   }, []);
 
   return (
-    <div className="w-full max-w-2xl mx-auto mb-10">
+    <div className="w-full max-w-2xl mx-auto mb-10 overflow-hidden">
       {/* Search bar */}
       <div
         className="relative flex items-center rounded-full border-2 border-border bg-card transition-all duration-200 focus-within:border-gold focus-within:ring-2 focus-within:ring-gold/20"
