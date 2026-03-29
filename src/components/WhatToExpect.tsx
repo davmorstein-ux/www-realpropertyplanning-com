@@ -1,30 +1,26 @@
-import { Phone, ClipboardList, Target, Handshake } from "lucide-react";
+import ListenButton from "@/components/ListenButton";
 import ListenButton from "@/components/ListenButton";
 
 const steps = [
   {
-    icon: Phone,
     number: "1",
     title: "Initial Conversation",
     description:
       "It usually starts with a phone call. You tell David what's going on — whether it's a probate situation, an inherited home, or a parent who needs to move — and he listens before offering any direction.",
   },
   {
-    icon: ClipboardList,
     number: "2",
     title: "Property Review & Assessment",
     description:
       "David visits the property and looks at it with fresh eyes — condition, deferred maintenance, what the market is doing nearby. Because he's both a broker and a certified appraiser, the assessment goes deeper than a typical walkthrough.",
   },
   {
-    icon: Target,
     number: "3",
     title: "Strategy & Pricing",
     description:
       "Based on what he's found, David puts together a plan — realistic pricing backed by valuation data, what preparation makes sense (if any), and a timeline that fits your situation. No surprises.",
   },
   {
-    icon: Handshake,
     number: "4",
     title: "Execution & Coordination",
     description:
