@@ -4,6 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Global overflow safeguard */
+html, body {
+  overflow-x: hidden;
+}
+
 @layer base {
   :root {
     /* Premium Estate Advisory Palette */

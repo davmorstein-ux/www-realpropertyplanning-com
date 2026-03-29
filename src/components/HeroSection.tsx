@@ -24,7 +24,7 @@ const HeroSection = () => {
               <img
                 src={logo}
                 alt="Real Property Planning"
-                className="w-[375px] md:w-[700px] lg:w-[1000px] h-auto object-contain"
+                className="w-[375px] md:w-[700px] lg:w-[1000px] max-w-full h-auto object-contain"
               />
             </div>
 
