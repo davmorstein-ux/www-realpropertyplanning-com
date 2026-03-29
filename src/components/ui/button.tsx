@@ -24,6 +24,13 @@ const buttonVariants = cva(
         default: "bg-primary text-primary-foreground hover:bg-primary/90",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+        outline3d:
+          "relative overflow-hidden inline-flex items-center justify-center rounded-[14px] px-6 py-3.5 min-h-[52px] font-bold tracking-[0.02em] no-underline transition-all duration-200 ease-out " +
+          "bg-gradient-to-b from-white to-[#f0ede8] border border-[rgba(180,170,150,0.5)] text-foreground " +
+          "shadow-[0_3px_0_rgba(160,150,130,0.4),0_8px_18px_rgba(0,0,0,0.08),inset_0_1px_0_rgba(255,255,255,0.9),inset_0_-1px_0_rgba(160,150,130,0.15)] " +
+          "hover:-translate-y-[2px] hover:brightness-[1.01] hover:shadow-[0_5px_0_rgba(160,150,130,0.4),0_12px_22px_rgba(0,0,0,0.10),inset_0_1px_0_rgba(255,255,255,0.9),inset_0_-1px_0_rgba(160,150,130,0.15)] " +
+          "active:translate-y-[1px] active:shadow-[0_2px_0_rgba(160,150,130,0.4),0_4px_10px_rgba(0,0,0,0.06),inset_0_1px_0_rgba(255,255,255,0.6)] " +
+          "focus-visible:outline focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[rgba(46,82,161,0.35)]",
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
