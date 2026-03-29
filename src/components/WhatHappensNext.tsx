@@ -9,15 +9,18 @@ interface WhatHappensNextProps {
 const steps = [
   {
     iconSrc: iconPhone3d,
-    text: "A short conversation about what's going on — no preparation needed",
+    title: "A short, low-pressure conversation",
+    text: "David will ask a few questions to understand your situation — no preparation needed on your end",
   },
   {
     iconSrc: iconChat3d,
-    text: "You can ask anything. David will give you straight, practical answers",
+    title: "Honest answers, not a sales pitch",
+    text: "Ask anything. You'll get straightforward, practical guidance based on what David has seen work in similar situations",
   },
   {
     iconSrc: iconArrowRight3d,
-    text: "Together, you'll map out clear next steps based on your specific situation",
+    title: "A clear sense of next steps",
+    text: "You'll walk away knowing what needs to happen, in what order, and what you can set aside for now",
   },
 ];
 
@@ -30,13 +33,18 @@ const WhatHappensNext = ({ variant = "light" }: WhatHappensNextProps) => {
         ? "bg-primary-foreground/5 border-primary-foreground/10"
         : "bg-card border-border"
     }`}>
-      <h3 className={`font-serif text-2xl font-semibold mb-6 ${
+      <h3 className={`font-serif text-2xl font-semibold mb-2 ${
         isDark ? "text-primary-foreground" : "text-foreground"
       }`}>
-        What Happens Next
+        What Happens When You Reach Out
       </h3>
+      <p className={`text-[15px] mb-7 ${
+        isDark ? "text-primary-foreground/60" : "text-muted-foreground"
+      }`}>
+        Here's what to expect — it's simpler than most people think.
+      </p>
 
-      <div className="space-y-5">
+      <div className="space-y-6">
         {steps.map((step, i) => (
           <div key={i} className="flex items-start gap-4">
             <div className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full ${
@@ -44,19 +52,26 @@ const WhatHappensNext = ({ variant = "light" }: WhatHappensNextProps) => {
             }`}>
               <img src={step.iconSrc} alt="" aria-hidden="true" className="w-6 h-6 object-contain" loading="lazy" />
             </div>
-            <p className={`text-lg leading-relaxed pt-2 ${
-              isDark ? "text-primary-foreground/85" : "text-foreground"
-            }`}>
-              {step.text}
-            </p>
+            <div className="pt-1">
+              <p className={`font-semibold text-lg leading-snug mb-1 ${
+                isDark ? "text-primary-foreground" : "text-foreground"
+              }`}>
+                {step.title}
+              </p>
+              <p className={`text-[15px] leading-relaxed ${
+                isDark ? "text-primary-foreground/75" : "text-muted-foreground"
+              }`}>
+                {step.text}
+              </p>
+            </div>
           </div>
         ))}
       </div>
 
-      <p className={`text-[15px] mt-6 ${
+      <p className={`text-[15px] mt-7 ${
         isDark ? "text-primary-foreground/50" : "text-muted-foreground"
       }`}>
-        No sales pitch, no obligation — just an honest conversation to help you figure out where things stand.
+        No obligation, no follow-up pressure — just an honest conversation to help you see where things stand.
       </p>
     </div>
   );
