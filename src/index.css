@@ -309,6 +309,12 @@ html, body {
   margin-top: 0.18rem !important;
 }
 
+@media (min-width: 640px) {
+  .premium-tile h3[data-tile-id="senior-living"] {
+    transform: translateY(-1%);
+  }
+}
+
 @media (max-width: 639px) {
   .premium-tile .tile-label-tight {
     font-size: 0.8rem !important;
