@@ -6,7 +6,7 @@ const ServiceNavTileCard = ({ tile }: { tile: ServiceTile }) => {
   return (
     <Link
       to={tile.href}
-      className="premium-tile group relative block w-full text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 -m-[4%]"
+      className="premium-tile group relative block w-full text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 -m-[4%] scale-125"
     >
       {/* Shell image flows naturally — defines the tile size */}
       <img
@@ -17,7 +17,7 @@ const ServiceNavTileCard = ({ tile }: { tile: ServiceTile }) => {
         draggable={false}
       />
       {/* Blue ring on active/click */}
-      <span className="pointer-events-none absolute inset-[2%] rounded-[18%] border-[2.5px] border-transparent transition-all duration-150 group-active:border-[hsl(215_65%_55%/0.7)] group-active:shadow-[0_0_12px_hsl(215_65%_55%/0.3)]" />
+      <span className="pointer-events-none absolute inset-[2%] rounded-none border-[2.5px] border-transparent transition-all duration-150 group-active:border-[hsl(215_65%_55%/0.7)] group-active:shadow-[0_0_12px_hsl(215_65%_55%/0.3)]" />
 
       {/* Icon + label centered together inside the gold trim ring */}
       <span className="absolute inset-[14%] bottom-[22%] flex flex-col items-center justify-center px-[10px] py-[10px]">
