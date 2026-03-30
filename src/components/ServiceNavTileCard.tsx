@@ -6,7 +6,7 @@ const ServiceNavTileCard = ({ tile }: { tile: ServiceTile }) => {
   return (
     <Link
       to={tile.href}
-      className="premium-tile group relative block w-full text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 -my-[12%] -mx-[3%] scale-[1.15] sm:-my-[22%] sm:-mx-[6%] sm:scale-[1.588]"
+      className="premium-tile group relative block w-full text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 -my-[8%] -mx-[2%] scale-[1.35] sm:-my-[22%] sm:-mx-[6%] sm:scale-[1.588]"
     >
       {/* Shell image flows naturally — defines the tile size */}
       <img
@@ -25,10 +25,10 @@ const ServiceNavTileCard = ({ tile }: { tile: ServiceTile }) => {
         <img
           src={tile.iconSrc}
           alt={tile.title}
-          className="mx-auto w-[40%] sm:w-[45%] max-h-[36%] object-contain drop-shadow-lg"
+          className="mx-auto w-[48%] sm:w-[45%] max-h-[38%] object-contain drop-shadow-lg"
           loading="lazy"
         />
-        <h3 className="-mt-2 sm:-mt-4 max-w-[92%] text-center font-serif text-[0.65rem] font-bold leading-[1.15] tracking-tight text-foreground sm:text-[1.1rem] md:text-[1.3rem] lg:text-[1.5rem] xl:text-[1.8rem]">
+        <h3 className="-mt-1 sm:-mt-4 max-w-[92%] text-center font-serif text-[0.8rem] font-bold leading-[1.15] tracking-tight text-foreground sm:text-[1.1rem] md:text-[1.3rem] lg:text-[1.5rem] xl:text-[1.8rem]">
           {tile.title}
         </h3>
       </span>
