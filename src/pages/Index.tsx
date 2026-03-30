@@ -444,7 +444,7 @@ const Index = () => {
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-4">
               Serving Clients Throughout Washington State
             </h2>
-            <p className="text-primary-foreground/60 text-base max-w-2xl mx-auto">
+            <p className="text-primary-foreground/60 text-lg max-w-3xl mx-auto leading-relaxed">
               Based in Washington with deep experience across Western Washington and the Puget Sound region. Through eXp Realty's referral network, David can also connect clients with trusted brokers across the U.S. and internationally.
             </p>
           </div>
