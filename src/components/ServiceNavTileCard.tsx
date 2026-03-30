@@ -26,7 +26,7 @@ const ServiceNavTileCard = ({ tile }: { tile: ServiceTile }) => {
           style={tile.iconOffsetY ? { transform: `translateY(${tile.iconOffsetY})` } : undefined}
           loading="lazy"
         />
-        <h3 className="-mt-1 sm:-mt-4 max-w-[92%] text-center font-serif text-[0.8rem] font-bold leading-[1.15] tracking-tight text-foreground sm:text-[1.1rem] md:text-[1.3rem] lg:text-[1.5rem] xl:text-[1.8rem]">
+        <h3 className="-mt-1 sm:-mt-4 max-w-[92%] text-center font-serif text-[0.8rem] font-bold leading-[1.15] tracking-tight text-foreground sm:text-[1.1rem] md:text-[1.3rem] lg:text-[1.5rem] xl:text-[1.8rem] whitespace-pre-line">
           {tile.title}
         </h3>
       </span>
