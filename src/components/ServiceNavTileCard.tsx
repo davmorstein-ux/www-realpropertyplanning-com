@@ -22,7 +22,7 @@ const ServiceNavTileCard = ({ tile }: { tile: ServiceTile }) => {
         <img
           src={tile.iconSrc}
           alt={tile.title}
-          className="tile-icon self-start mx-auto w-[48%] sm:w-[45%] max-h-[38%] object-contain drop-shadow-lg"
+          className="tile-icon self-start mx-auto w-[48%] sm:w-[45%] max-h-[38%] object-contain drop-shadow-lg sm:transition-transform sm:duration-300 sm:ease-out sm:group-hover:scale-110"
           style={tile.iconOffsetY ? { transform: `translateY(${tile.iconOffsetY})` } : undefined}
           loading="lazy"
         />
