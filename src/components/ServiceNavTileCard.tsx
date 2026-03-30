@@ -13,7 +13,7 @@ const ServiceNavTileCard = ({ tile }: { tile: ServiceTile }) => {
           src={tileShell}
           alt=""
           aria-hidden="true"
-          className="absolute inset-0 h-full w-full scale-[1.18] object-contain pointer-events-none select-none transition-all duration-200 group-hover:brightness-[1.04] group-active:brightness-[0.98] drop-shadow-[0_18px_34px_hsl(220_18%_20%/0.18)]"
+          className="absolute inset-0 h-full w-full object-contain pointer-events-none select-none transition-all duration-200 group-hover:brightness-[1.04] group-active:brightness-[0.98] drop-shadow-[0_18px_34px_hsl(220_18%_20%/0.18)]"
           draggable={false}
         />
         {/* Blue ring on active/click */}
