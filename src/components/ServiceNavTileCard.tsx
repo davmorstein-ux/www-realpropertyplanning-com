@@ -20,16 +20,14 @@ const ServiceNavTileCard = ({ tile }: { tile: ServiceTile }) => {
         <span className="pointer-events-none absolute left-[14%] right-[14%] top-[11%] bottom-[11%] rounded-[18%] border-[2.5px] border-transparent transition-all duration-150 group-active:border-[hsl(215_65%_55%/0.7)] group-active:shadow-[0_0_12px_hsl(215_65%_55%/0.3)]" />
 
         {/* Icon + label centered together inside the gold trim ring */}
-        <span className="absolute left-[17%] right-[17%] top-[14%] bottom-[22%] flex items-center justify-center px-[6%]">
-          <span className="flex w-full flex-col items-center justify-center gap-3 sm:gap-4 lg:gap-5">
-            <img
-              src={tile.iconSrc}
-              alt={tile.title}
-              className="max-h-[160px] w-[62%] object-contain mix-blend-multiply sm:max-h-[180px] lg:max-h-[200px] mx-auto"
-              loading="lazy"
-            />
-          </span>
-          <h3 className="max-w-[96%] text-center font-serif text-[1.18rem] font-bold leading-[1.06] tracking-tight text-foreground sm:text-[1.42rem] lg:text-[1.62rem] xl:text-[1.72rem]">
+        <span className="absolute left-[17%] right-[17%] top-[12%] bottom-[20%] flex flex-col items-center justify-center gap-4 px-[4%] sm:gap-5 lg:gap-6">
+          <img
+            src={tile.iconSrc}
+            alt={tile.title}
+            className="mx-auto max-h-[150px] w-[58%] object-contain mix-blend-multiply sm:max-h-[172px] lg:max-h-[190px]"
+            loading="lazy"
+          />
+          <h3 className="max-w-[96%] text-center font-serif text-[1.12rem] font-bold leading-[1.08] tracking-tight text-foreground sm:text-[1.34rem] lg:text-[1.52rem] xl:text-[1.64rem]">
             {tile.title}
           </h3>
         </span>
