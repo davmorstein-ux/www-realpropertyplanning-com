@@ -237,10 +237,7 @@ html, body {
    PREMIUM TILE — image-based 3D tile button
 ═══════════════════════════════════════════════ */
 .premium-tile {
-  @apply relative cursor-pointer transition-transform duration-200 ease-out;
-}
-.premium-tile:hover {
-  transform: scale(1.05);
+  @apply relative cursor-pointer;
 }
 
 /* ═══════════════════════════════════════════════
