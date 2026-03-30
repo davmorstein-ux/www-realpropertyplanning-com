@@ -167,7 +167,7 @@ html, body {
   .premium-tile p,
   .premium-tile span,
   .premium-tile li,
-  .premium-tile h3 {
+  .premium-tile h3:not(.tile-label-tight) {
     font-size: revert-layer !important;
     line-height: revert-layer !important;
   }
@@ -296,11 +296,17 @@ html, body {
 
 @media (max-width: 639px) {
   .premium-tile h3[data-mobile-tight="true"] {
-    line-height: 0.95 !important;
+    line-height: 0.82 !important;
+    margin-top: 0.18rem !important;
   }
   .premium-tile .tile-icon {
     transform: translateY(-9%) !important;
   }
+}
+
+.premium-tile .tile-label-tight {
+  line-height: 0.82 !important;
+  margin-top: 0.18rem !important;
 }
 
 /* ═══════════════════════════════════════════════
