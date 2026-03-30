@@ -8,7 +8,7 @@ const ServiceNavTileCard = ({ tile }: { tile: ServiceTile }) => {
       to={tile.href}
       className="premium-tile group flex w-full flex-col items-center justify-center text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
     >
-      <div className="relative mx-auto w-full max-w-[600px]" style={{ aspectRatio: "1 / 1.18" }}>
+      <div className="relative mx-auto w-full max-w-[900px]" style={{ aspectRatio: "1 / 1.18" }}>
         <img
           src={tileShell}
           alt=""
