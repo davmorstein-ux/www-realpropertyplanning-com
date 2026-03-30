@@ -19,9 +19,9 @@ const ServiceNavTiles = () => {
           <SmartSearchBar />
         </div>
 
-        <div className="flex flex-wrap justify-center gap-x-6 gap-y-10 sm:gap-x-8 sm:gap-y-12 lg:gap-x-10 lg:gap-y-14 max-w-[1600px] mx-auto">
+        <div className="mx-auto flex max-w-[2200px] flex-wrap justify-center gap-x-10 gap-y-12 sm:gap-x-12 sm:gap-y-14 lg:gap-x-14 lg:gap-y-16">
           {serviceTiles.map((tile) => (
-            <div key={tile.href + tile.title} className="w-[156px] sm:w-[220px] lg:w-[240px] xl:w-[248px]">
+            <div key={tile.href + tile.title} className="w-[280px] sm:w-[320px] lg:w-[340px] xl:w-[360px]">
               <ServiceNavTileCard tile={tile} />
             </div>
           ))}
