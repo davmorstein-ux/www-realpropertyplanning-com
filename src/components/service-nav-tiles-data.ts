@@ -33,6 +33,6 @@ export const serviceTiles: ServiceTile[] = [
   { title: "Probate Terms", subtitle: "", href: "/terminology", iconSrc: iconProbateTerms, iconOffsetY: "-9%" },
   { title: "Service Areas", subtitle: "", href: "/counties", iconSrc: iconServiceAreas },
   { title: "Resources", subtitle: "", href: "/professional-referral-resource", iconSrc: iconResources },
-  { title: "Lenders", subtitle: "", href: "/lenders-and-financing-specialists", iconSrc: iconLenders },
+  { title: "Lenders", subtitle: "", href: "/lenders-and-financing-specialists", iconSrc: iconLenders, iconOffsetY: "-3%" },
   { title: "Senior Living & Relocation", subtitle: "", href: "/senior-living-and-relocation", iconSrc: iconSeniorLiving },
 ];
