@@ -30,7 +30,7 @@ export const serviceTiles: ServiceTile[] = [
   { title: "Probate Sales", subtitle: "", href: "/probate-estate-sales", iconSrc: iconProbateSales },
   { title: "The Process", subtitle: "", href: "/how-the-process-works", iconSrc: iconTheProcess },
   { title: "Home Value", subtitle: "", href: "/why-valuation-matters", iconSrc: iconHomeValue },
-  { title: "Probate Terms", subtitle: "", href: "/terminology", iconSrc: iconProbateTerms, iconOffsetY: "-7%" },
+  { title: "Probate Terms", subtitle: "", href: "/terminology", iconSrc: iconProbateTerms, iconOffsetY: "-9%" },
   { title: "Service Areas", subtitle: "", href: "/counties", iconSrc: iconServiceAreas },
   { title: "Resources", subtitle: "", href: "/professional-referral-resource", iconSrc: iconResources },
   { title: "Lenders", subtitle: "", href: "/lenders-and-financing-specialists", iconSrc: iconLenders },
