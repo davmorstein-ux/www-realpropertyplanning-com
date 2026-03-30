@@ -8,7 +8,7 @@ const ServiceNavTileCard = ({ tile }: { tile: ServiceTile }) => {
       to={tile.href}
       className="premium-tile group flex w-full flex-col items-center justify-center text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
     >
-      <div className="relative mx-auto w-full max-w-[900px]" style={{ aspectRatio: "1 / 1.18" }}>
+      <div className="relative mx-auto w-full max-w-[1350px]" style={{ aspectRatio: "1 / 1.18" }}>
         <img
           src={tileShell}
           alt=""
@@ -24,10 +24,10 @@ const ServiceNavTileCard = ({ tile }: { tile: ServiceTile }) => {
           <img
             src={tile.iconSrc}
             alt={tile.title}
-            className="mx-auto max-h-[180px] w-[62%] object-contain mix-blend-multiply [background:transparent] sm:max-h-[210px] lg:max-h-[240px]"
+            className="mx-auto max-h-[270px] w-[62%] object-contain mix-blend-multiply [background:transparent] sm:max-h-[315px] lg:max-h-[360px]"
             loading="lazy"
           />
-          <h3 className="max-w-[96%] text-center font-serif text-[1.3rem] font-bold leading-[1.08] tracking-tight text-foreground sm:text-[1.6rem] lg:text-[1.85rem] xl:text-[2rem]">
+          <h3 className="max-w-[96%] text-center font-serif text-[1.95rem] font-bold leading-[1.08] tracking-tight text-foreground sm:text-[2.4rem] lg:text-[2.8rem] xl:text-[3rem]">
             {tile.title}
           </h3>
         </span>
