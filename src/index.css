@@ -312,7 +312,7 @@ html, body {
 @media (max-width: 639px) {
   .premium-tile .tile-label-tight {
     font-size: 0.8rem !important;
-    margin-top: -0.15rem !important;
+    margin-top: -0.45rem !important;
   }
 }
 
