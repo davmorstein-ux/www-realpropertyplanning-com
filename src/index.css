@@ -133,28 +133,28 @@ html, body {
   }
 
   p, li, span, td, th, label, blockquote, figcaption {
-    font-size: max(1em, 1.125rem); /* Enforce minimum 18px for all content text */
+    font-size: 1.1875rem;
   }
 
-  /* Prevent Tailwind small text utilities from shrinking below 18px site-wide,
-     EXCEPT inside .premium-tile (tile buttons) and footer legal text */
-  :where(p, li, span, td, label):not(.premium-tile *, footer .text-\[13px\]) {
-    font-size: max(1em, 1.125rem) !important;
+  /* Force legacy small utility classes to render larger site-wide */
+  :where(.text-sm, .text-base, .text-\[15px\], .text-\[14px\], .text-\[13px\]) {
+    font-size: 1.1875rem !important;
+    line-height: 1.85 !important;
   }
 
-  /* Allow headings to keep their own sizes */
-  h1, h2, h3, h4, h5, h6 {
+  /* Keep tile button text unchanged */
+  .premium-tile :where(.text-sm, .text-base, .text-\[15px\], .text-\[14px\], .text-\[13px\]),
+  .premium-tile p,
+  .premium-tile span,
+  .premium-tile li {
     font-size: revert-layer !important;
+    line-height: revert-layer !important;
   }
 
-  /* Allow tile button text to remain at its current size */
-  .premium-tile * {
-    font-size: revert-layer !important;
-  }
-
-  /* Allow footer legal disclaimers to stay small */
+  /* Keep footer legal disclaimers small */
   footer .text-\[13px\] {
     font-size: 13px !important;
+    line-height: 1.6 !important;
   }
 
   /* Improved contrast for muted text - critical for older readers */
