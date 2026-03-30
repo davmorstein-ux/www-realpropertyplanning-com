@@ -27,7 +27,7 @@ const ServiceNavTileCard = ({ tile }: { tile: ServiceTile }) => {
           className="mx-auto w-[60%] max-h-[48%] object-contain mix-blend-multiply [background:transparent]"
           loading="lazy"
         />
-        <h3 className="mt-1 max-w-[92%] text-center font-serif text-[1.1rem] font-bold leading-[1.1] tracking-tight text-foreground sm:text-[1.4rem] md:text-[1.7rem] lg:text-[2rem] xl:text-[2.4rem]">
+        <h3 className="-mt-3 max-w-[92%] text-center font-serif text-[1.1rem] font-bold leading-[1.1] tracking-tight text-foreground sm:text-[1.4rem] md:text-[1.7rem] lg:text-[2rem] xl:text-[2.4rem]">
           {tile.title}
         </h3>
       </span>
