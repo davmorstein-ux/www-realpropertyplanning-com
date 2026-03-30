@@ -294,6 +294,12 @@ html, body {
   @apply relative cursor-pointer;
 }
 
+@media (max-width: 639px) {
+  .premium-tile h3[data-mobile-tight="true"] {
+    line-height: 0.95 !important;
+  }
+}
+
 /* ═══════════════════════════════════════════════
    SECTION EYEBROW LABEL
 ═══════════════════════════════════════════════ */
