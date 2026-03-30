@@ -18,11 +18,11 @@ const ServiceNavTileCard = ({ tile }: { tile: ServiceTile }) => {
       />
 
       {/* Icon + label centered together inside the gold trim ring */}
-      <span className="absolute inset-[10%] grid grid-rows-[42%_auto] justify-items-center px-[6px] py-[4px] -translate-y-[9%] sm:inset-[12%] sm:flex sm:flex-col sm:items-center sm:justify-center sm:px-[10px] sm:py-[6px]">
+      <span className="absolute inset-[10%] flex flex-col items-center justify-center px-[6px] py-[4px] sm:inset-[12%] sm:px-[10px] sm:py-[6px]">
         <img
           src={tile.iconSrc}
           alt={tile.title}
-          className={`tile-icon self-start mx-auto w-[48%] sm:w-[45%] max-h-[38%] object-contain drop-shadow-lg sm:transition-transform sm:duration-300 sm:ease-out ${tile.iconOffsetY ? '' : 'sm:group-hover:scale-110'}`}
+          className={`tile-icon mx-auto w-[48%] sm:w-[45%] max-h-[38%] object-contain drop-shadow-lg sm:transition-transform sm:duration-300 sm:ease-out ${tile.iconOffsetY ? '' : 'sm:group-hover:scale-110'}`}
           style={tile.iconOffsetY ? { transform: `translateY(${tile.iconOffsetY})`, transition: 'transform 0.3s ease-out' } : undefined}
           onMouseEnter={tile.iconOffsetY ? (e) => { if (window.innerWidth >= 640) (e.target as HTMLElement).style.transform = `translateY(${tile.iconOffsetY}) scale(1.1)`; } : undefined}
           onMouseLeave={tile.iconOffsetY ? (e) => { if (window.innerWidth >= 640) (e.target as HTMLElement).style.transform = `translateY(${tile.iconOffsetY})`; } : undefined}
