@@ -5,7 +5,7 @@ import { serviceTiles } from "./service-nav-tiles-data";
 const ServiceNavTiles = () => {
   return (
     <section className="py-20 lg:py-28 bg-secondary">
-      <div className="mx-auto max-w-[3300px] px-5 sm:px-8 lg:px-10">
+      <div className="mx-auto max-w-[3300px] px-1 sm:px-2 lg:px-4">
         <div className="text-center mb-14">
           <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-3">
             How Can I Help You Today?
@@ -19,7 +19,7 @@ const ServiceNavTiles = () => {
           <SmartSearchBar />
         </div>
 
-        <div className="mx-auto grid max-w-[2000px] grid-cols-2 justify-items-center gap-1 sm:grid-cols-3">
+        <div className="mx-auto grid max-w-[2000px] grid-cols-2 justify-items-center gap-0.5 sm:grid-cols-3">
           {serviceTiles.map((tile) => (
             <ServiceNavTileCard key={tile.href + tile.title} tile={tile} />
           ))}
