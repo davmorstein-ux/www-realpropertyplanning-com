@@ -18,6 +18,7 @@ export interface ServiceTile {
   href: string;
   iconSrc: string;
   iconOffsetY?: string;
+  mobileLeading?: string;
 }
 
 export const serviceTiles: ServiceTile[] = [
@@ -25,7 +26,7 @@ export const serviceTiles: ServiceTile[] = [
   { title: "Executors", subtitle: "", href: "/executors", iconSrc: iconExecutors, iconOffsetY: "-2%" },
   { title: "Trustees", subtitle: "", href: "/executors", iconSrc: iconTrustees },
   { title: "CPAs", subtitle: "", href: "/for-cpas", iconSrc: iconCpas },
-  { title: "Financial Planning", subtitle: "", href: "/for-financial-planners", iconSrc: iconFinancialPlanning },
+  { title: "Financial\nPlanning", subtitle: "", href: "/for-financial-planners", iconSrc: iconFinancialPlanning },
   { title: "Senior Moves", subtitle: "", href: "/senior-transitions", iconSrc: iconSeniorMoves },
   { title: "Probate Sales", subtitle: "", href: "/probate-estate-sales", iconSrc: iconProbateSales },
   { title: "The Process", subtitle: "", href: "/how-the-process-works", iconSrc: iconTheProcess },
@@ -34,5 +35,5 @@ export const serviceTiles: ServiceTile[] = [
   { title: "Service Areas", subtitle: "", href: "/counties", iconSrc: iconServiceAreas },
   { title: "Resources", subtitle: "", href: "/professional-referral-resource", iconSrc: iconResources },
   { title: "Lenders", subtitle: "", href: "/lenders-and-financing-specialists", iconSrc: iconLenders, iconOffsetY: "-5%" },
-  { title: "Senior Living\n& Relocation", subtitle: "", href: "/senior-living-and-relocation", iconSrc: iconSeniorLiving },
+  { title: "Senior Living\n& Relocation", subtitle: "", href: "/senior-living-and-relocation", iconSrc: iconSeniorLiving, mobileLeading: "0.95" },
 ];
