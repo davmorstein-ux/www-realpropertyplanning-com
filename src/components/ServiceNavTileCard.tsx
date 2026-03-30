@@ -6,7 +6,7 @@ const ServiceNavTileCard = ({ tile }: { tile: ServiceTile }) => {
   return (
     <Link
       to={tile.href}
-      className="premium-tile group relative block w-full text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 -my-[8%] -mx-[2%] scale-[1.35] sm:-my-[22%] sm:-mx-[6%] sm:scale-[1.588]"
+      className="premium-tile group relative block w-full text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 -my-[18%] -mx-[2%] scale-[1.35] sm:-my-[22%] sm:-mx-[6%] sm:scale-[1.588]"
     >
       {/* Shell image flows naturally — defines the tile size */}
       <img
