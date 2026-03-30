@@ -310,8 +310,29 @@ html, body {
 }
 
 @media (min-width: 640px) {
+  .premium-tile .tile-label-tight {
+    font-size: 0.9rem !important;
+  }
   .premium-tile h3[data-tile-id="senior-living"] {
     transform: translateY(-1%);
+  }
+}
+
+@media (min-width: 768px) {
+  .premium-tile .tile-label-tight {
+    font-size: 1.05rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .premium-tile .tile-label-tight {
+    font-size: 1.2rem !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .premium-tile .tile-label-tight {
+    font-size: 1.45rem !important;
   }
 }
 
