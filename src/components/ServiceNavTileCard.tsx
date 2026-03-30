@@ -24,7 +24,7 @@ const ServiceNavTileCard = ({ tile }: { tile: ServiceTile }) => {
           <img
             src={tile.iconSrc}
             alt={tile.title}
-            className="mx-auto max-h-[150px] w-[58%] object-contain mix-blend-multiply sm:max-h-[172px] lg:max-h-[190px]"
+            className="mx-auto max-h-[150px] w-[58%] object-contain mix-blend-multiply [background:transparent] sm:max-h-[172px] lg:max-h-[190px]"
             loading="lazy"
           />
           <h3 className="max-w-[96%] text-center font-serif text-[1.12rem] font-bold leading-[1.08] tracking-tight text-foreground sm:text-[1.34rem] lg:text-[1.52rem] xl:text-[1.64rem]">
