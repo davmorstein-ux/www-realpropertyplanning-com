@@ -13,11 +13,12 @@ const ServiceNavTileCard = ({ tile }: { tile: ServiceTile }) => {
         src={tileShell}
         alt=""
         aria-hidden="true"
-        className="block h-auto w-full pointer-events-none select-none transition-all duration-200 group-hover:brightness-[1.04] group-hover:drop-shadow-[0_16px_28px_hsl(220_18%_20%/0.22)] drop-shadow-[0_12px_24px_hsl(220_18%_20%/0.16)]"
+        className="block h-auto w-full pointer-events-none select-none drop-shadow-[0_12px_24px_hsl(220_18%_20%/0.16)]"
         draggable={false}
       />
       {/* Blue ring on hover, stronger on active */}
-      <span className="pointer-events-none absolute inset-[2%] rounded-none border-[2.5px] border-transparent transition-all duration-200 group-hover:border-[hsl(215_65%_55%/0.6)] group-hover:shadow-[0_0_10px_hsl(215_65%_55%/0.2)] group-active:border-[hsl(215_65%_55%/0.85)] group-active:shadow-[0_0_14px_hsl(215_65%_55%/0.35)]" />
+      {/* Electric blue glow on hover */}
+      <span className="pointer-events-none absolute inset-[4%] rounded-[6%] border-[3px] border-transparent transition-all duration-300 group-hover:border-[hsl(210_100%_55%)] group-hover:shadow-[0_0_18px_hsl(210_100%_55%/0.5),inset_0_0_12px_hsl(210_100%_55%/0.15)] group-active:border-[hsl(210_100%_60%)] group-active:shadow-[0_0_24px_hsl(210_100%_55%/0.65),inset_0_0_16px_hsl(210_100%_55%/0.25)]" />
 
       {/* Icon + label centered together inside the gold trim ring */}
       <span className="absolute inset-[10%] sm:inset-[12%] flex flex-col items-center justify-center px-[6px] py-[4px] sm:px-[10px] sm:py-[6px] -translate-y-[7%]">
