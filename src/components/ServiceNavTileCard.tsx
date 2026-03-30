@@ -27,7 +27,7 @@ const ServiceNavTileCard = ({ tile }: { tile: ServiceTile }) => {
           loading="lazy"
         />
         <h3
-          className={`-mt-1 sm:-mt-4 max-w-[92%] text-center font-serif text-[0.8rem] font-bold leading-[1.15] tracking-tight text-foreground sm:text-[1.1rem] md:text-[1.3rem] lg:text-[1.5rem] xl:text-[1.8rem] whitespace-pre-line ${tile.mobileLeading ? 'sm:leading-[0.95] sm:mt-1' : ''}`}
+          className={`-mt-1 sm:-mt-4 max-w-[92%] text-center font-serif text-[0.8rem] font-bold leading-[1.15] tracking-tight text-foreground sm:text-[1.1rem] md:text-[1.3rem] lg:text-[1.5rem] xl:text-[1.8rem] whitespace-pre-line ${tile.mobileLeading ? 'sm:!leading-[0.85] sm:mt-2' : ''}`}
           data-mobile-tight={tile.mobileLeading ? "true" : undefined}
         >
           {tile.title}
