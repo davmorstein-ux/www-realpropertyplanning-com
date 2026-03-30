@@ -19,9 +19,9 @@ const ServiceNavTiles = () => {
           <SmartSearchBar />
         </div>
 
-        <div className="mx-auto grid max-w-[1320px] grid-cols-2 justify-items-center gap-x-8 gap-y-12 sm:grid-cols-3 sm:gap-x-10 sm:gap-y-14 lg:gap-x-12 lg:gap-y-16">
+        <div className="mx-auto grid max-w-[1600px] grid-cols-2 justify-items-center gap-x-8 gap-y-12 sm:grid-cols-3 sm:gap-x-10 sm:gap-y-14 lg:gap-x-14 lg:gap-y-18">
           {serviceTiles.map((tile) => (
-            <div key={tile.href + tile.title} className="w-full max-w-[380px]">
+            <div key={tile.href + tile.title} className="w-full max-w-[480px]">
               <ServiceNavTileCard tile={tile} />
             </div>
           ))}
