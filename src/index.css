@@ -119,7 +119,7 @@ html, body {
   body {
     @apply bg-background text-foreground antialiased;
     font-family: 'Inter', sans-serif;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.8;
     letter-spacing: 0.01em;
     -webkit-font-smoothing: antialiased;
@@ -132,14 +132,29 @@ html, body {
     letter-spacing: -0.01em;
   }
 
-  p {
-    margin-bottom: 0.25em;
-    font-size: max(1em, 1.0625rem); /* Enforce minimum 17px for all paragraphs */
+  p, li, span, td, th, label, blockquote, figcaption {
+    font-size: max(1em, 1.125rem); /* Enforce minimum 18px for all content text */
   }
 
-  /* Enforce minimum text size for list items and spans inside content */
-  li span, li p {
-    font-size: max(1em, 1.0625rem);
+  /* Prevent Tailwind small text utilities from shrinking below 18px site-wide,
+     EXCEPT inside .premium-tile (tile buttons) and footer legal text */
+  :where(p, li, span, td, label):not(.premium-tile *, footer .text-\[13px\]) {
+    font-size: max(1em, 1.125rem) !important;
+  }
+
+  /* Allow headings to keep their own sizes */
+  h1, h2, h3, h4, h5, h6 {
+    font-size: revert-layer !important;
+  }
+
+  /* Allow tile button text to remain at its current size */
+  .premium-tile * {
+    font-size: revert-layer !important;
+  }
+
+  /* Allow footer legal disclaimers to stay small */
+  footer .text-\[13px\] {
+    font-size: 13px !important;
   }
 
   /* Improved contrast for muted text - critical for older readers */
