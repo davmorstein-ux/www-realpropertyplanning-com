@@ -8,13 +8,12 @@ const ServiceNavTileCard = ({ tile }: { tile: ServiceTile }) => {
       to={tile.href}
       className="premium-tile group flex w-full flex-col items-center justify-center text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
     >
-      {/* Single tile unit — icon + label all inside */}
       <div className="relative w-full" style={{ aspectRatio: "1 / 1.12" }}>
         <img
           src={tileShell}
           alt=""
           aria-hidden="true"
-          className="absolute inset-0 h-full w-full object-fill pointer-events-none select-none transition-all duration-200 group-hover:brightness-[1.04] group-active:brightness-[0.98] drop-shadow-[0_10px_18px_hsl(220_18%_20%/0.16)]"
+          className="absolute inset-0 h-full w-full object-contain pointer-events-none select-none transition-all duration-200 group-hover:brightness-[1.04] group-active:brightness-[0.98] drop-shadow-[0_10px_18px_hsl(220_18%_20%/0.16)]"
           draggable={false}
         />
         {/* Blue ring on active/click */}
