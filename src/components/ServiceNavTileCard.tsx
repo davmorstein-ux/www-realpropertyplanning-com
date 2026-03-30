@@ -20,7 +20,7 @@ const ServiceNavTileCard = ({ tile }: { tile: ServiceTile }) => {
         <span className="pointer-events-none absolute left-[14%] right-[14%] top-[11%] bottom-[11%] rounded-[18%] border-[2.5px] border-transparent transition-all duration-150 group-active:border-[hsl(215_65%_55%/0.7)] group-active:shadow-[0_0_12px_hsl(215_65%_55%/0.3)]" />
 
         {/* Icon + label centered together inside the gold trim ring */}
-        <span className="absolute left-[17%] right-[17%] top-[12%] bottom-[20%] flex flex-col items-center justify-center gap-1 px-[4%] sm:gap-2 lg:gap-2">
+        <span className="absolute left-[17%] right-[17%] top-[12%] bottom-[20%] flex flex-col items-center justify-center px-[4%] -space-y-3 sm:-space-y-4 lg:-space-y-5">
           <img
             src={tile.iconSrc}
             alt={tile.title}
