@@ -16,9 +16,6 @@ const ServiceNavTileCard = ({ tile }: { tile: ServiceTile }) => {
         className="block h-auto w-full pointer-events-none select-none drop-shadow-[0_12px_24px_hsl(220_18%_20%/0.16)]"
         draggable={false}
       />
-      {/* Blue ring on hover, stronger on active */}
-      {/* Electric blue glow on hover */}
-      <span className="pointer-events-none absolute inset-[4%] rounded-[6%] border-[3px] border-transparent transition-all duration-300 group-hover:border-[hsl(210_100%_55%)] group-hover:shadow-[0_0_18px_hsl(210_100%_55%/0.5),inset_0_0_12px_hsl(210_100%_55%/0.15)] group-active:border-[hsl(210_100%_60%)] group-active:shadow-[0_0_24px_hsl(210_100%_55%/0.65),inset_0_0_16px_hsl(210_100%_55%/0.25)]" />
 
       {/* Icon + label centered together inside the gold trim ring */}
       <span className="absolute inset-[10%] sm:inset-[12%] flex flex-col items-center justify-center px-[6px] py-[4px] sm:px-[10px] sm:py-[6px] -translate-y-[7%]">
