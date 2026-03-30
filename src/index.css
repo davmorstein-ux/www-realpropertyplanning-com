@@ -298,6 +298,9 @@ html, body {
   .premium-tile h3[data-mobile-tight="true"] {
     line-height: 0.95 !important;
   }
+  .premium-tile .tile-icon {
+    transform: translateY(-9%) !important;
+  }
 }
 
 /* ═══════════════════════════════════════════════
