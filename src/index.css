@@ -119,8 +119,8 @@ html, body {
   body {
     @apply bg-background text-foreground antialiased;
     font-family: 'Inter', sans-serif;
-    font-size: 20px;
-    line-height: 1.8;
+    font-size: 21px;
+    line-height: 1.9;
     letter-spacing: 0.01em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -132,21 +132,31 @@ html, body {
     letter-spacing: -0.01em;
   }
 
-  p, li, span, td, th, label, blockquote, figcaption {
-    font-size: 1.1875rem;
+  p, li, label, td, th, blockquote, figcaption {
+    font-size: 1.25rem !important;
+    line-height: 1.95 !important;
   }
 
-  /* Force legacy small utility classes to render larger site-wide */
-  :where(.text-sm, .text-base, .text-\[15px\], .text-\[14px\], .text-\[13px\]) {
-    font-size: 1.1875rem !important;
-    line-height: 1.85 !important;
+  p {
+    margin-bottom: 0.7em;
+  }
+
+  p + p {
+    margin-top: 0.85em;
+  }
+
+  /* Force common smaller text utilities to render noticeably larger site-wide */
+  :where(.text-sm, .text-base, .text-lg, .text-\[15px\], .text-\[14px\], .text-\[13px\]) {
+    font-size: 1.25rem !important;
+    line-height: 1.95 !important;
   }
 
   /* Keep tile button text unchanged */
-  .premium-tile :where(.text-sm, .text-base, .text-\[15px\], .text-\[14px\], .text-\[13px\]),
+  .premium-tile :where(.text-sm, .text-base, .text-lg, .text-\[15px\], .text-\[14px\], .text-\[13px\]),
   .premium-tile p,
   .premium-tile span,
-  .premium-tile li {
+  .premium-tile li,
+  .premium-tile h3 {
     font-size: revert-layer !important;
     line-height: revert-layer !important;
   }
@@ -166,6 +176,23 @@ html, body {
   }
 }
 
+@media (min-width: 1024px) {
+  .max-w-xl {
+    max-width: 44rem !important;
+  }
+
+  .max-w-2xl {
+    max-width: 56rem !important;
+  }
+
+  .max-w-3xl {
+    max-width: 68rem !important;
+  }
+
+  .max-w-4xl {
+    max-width: 76rem !important;
+  }
+}
 
 @layer utilities {
   .font-serif {
