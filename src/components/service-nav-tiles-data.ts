@@ -17,11 +17,12 @@ export interface ServiceTile {
   subtitle: string;
   href: string;
   iconSrc: string;
+  iconOffsetY?: string;
 }
 
 export const serviceTiles: ServiceTile[] = [
   { title: "Attorneys", subtitle: "", href: "/for-attorneys", iconSrc: iconAttorneys },
-  { title: "Executors", subtitle: "", href: "/executors", iconSrc: iconExecutors },
+  { title: "Executors", subtitle: "", href: "/executors", iconSrc: iconExecutors, iconOffsetY: "-2%" },
   { title: "Trustees", subtitle: "", href: "/executors", iconSrc: iconTrustees },
   { title: "CPAs", subtitle: "", href: "/for-cpas", iconSrc: iconCpas },
   { title: "Financial Planning", subtitle: "", href: "/for-financial-planners", iconSrc: iconFinancialPlanning },
