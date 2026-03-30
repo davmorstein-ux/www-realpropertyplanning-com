@@ -6,7 +6,7 @@ const ServiceNavTileCard = ({ tile }: { tile: ServiceTile }) => {
   return (
     <Link
       to={tile.href}
-      className="premium-tile group relative block w-full text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 -my-[22%] -mx-[6%] scale-[1.588]"
+      className="premium-tile group relative block w-full text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 -my-[12%] -mx-[3%] scale-[1.15] sm:-my-[22%] sm:-mx-[6%] sm:scale-[1.588]"
     >
       {/* Shell image flows naturally — defines the tile size */}
       <img
@@ -20,14 +20,14 @@ const ServiceNavTileCard = ({ tile }: { tile: ServiceTile }) => {
       <span className="pointer-events-none absolute inset-[2%] rounded-none border-[2.5px] border-transparent transition-all duration-200 group-hover:border-[hsl(215_65%_55%/0.6)] group-hover:shadow-[0_0_10px_hsl(215_65%_55%/0.2)] group-active:border-[hsl(215_65%_55%/0.85)] group-active:shadow-[0_0_14px_hsl(215_65%_55%/0.35)]" />
 
       {/* Icon + label centered together inside the gold trim ring */}
-      <span className="absolute inset-[12%] flex flex-col items-center justify-center px-[10px] py-[6px] -translate-y-[7%]">
+      <span className="absolute inset-[10%] sm:inset-[12%] flex flex-col items-center justify-center px-[6px] py-[4px] sm:px-[10px] sm:py-[6px] -translate-y-[7%]">
         <img
           src={tile.iconSrc}
           alt={tile.title}
-          className="mx-auto w-[45%] max-h-[36%] object-contain drop-shadow-lg"
+          className="mx-auto w-[40%] sm:w-[45%] max-h-[36%] object-contain drop-shadow-lg"
           loading="lazy"
         />
-        <h3 className="-mt-4 max-w-[92%] text-center font-serif text-[0.9rem] font-bold leading-[1.1] tracking-tight text-foreground sm:text-[1.1rem] md:text-[1.3rem] lg:text-[1.5rem] xl:text-[1.8rem]">
+        <h3 className="-mt-2 sm:-mt-4 max-w-[92%] text-center font-serif text-[0.65rem] font-bold leading-[1.15] tracking-tight text-foreground sm:text-[1.1rem] md:text-[1.3rem] lg:text-[1.5rem] xl:text-[1.8rem]">
           {tile.title}
         </h3>
       </span>
