@@ -144,17 +144,17 @@ const Index = () => {
       ═══════════════════════════════════════════════════ */}
       <section className="py-14 lg:py-20 bg-primary">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center" id="who-we-help-section">
+          <div className="max-w-4xl mx-auto text-center" id="who-we-help-section">
             <div className="flex justify-center mb-5">
               <ListenButton targetId="who-we-help-section" />
             </div>
             <h2 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] text-primary-foreground font-bold mb-5">
               Who We Can Help
             </h2>
-            <p className="text-primary-foreground/70 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-9">
+            <p className="text-primary-foreground/70 text-lg leading-relaxed max-w-3xl mx-auto mb-9">
               Many of the people who reach out are in a situation they didn't plan for. A parent passed away. A trust needs to be settled. A family home needs to be dealt with — and no one is quite sure where to begin.
             </p>
-            <ul className="space-y-3 text-left max-w-xl mx-auto mb-8">
+            <ul className="space-y-3 text-left max-w-2xl mx-auto mb-8">
               {[
                 "Executors and personal representatives who are suddenly responsible for a property — often while sorting through a house full of belongings, fielding calls from family, and trying to figure out what actually needs to happen first",
                 "Families with an inherited home and no clear plan — maybe one person wants to sell, another wants to wait, and no one knows what the property is really worth or what condition it's in",
@@ -168,7 +168,7 @@ const Index = () => {
                 </li>
               ))}
             </ul>
-            <p className="text-primary-foreground/70 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-10">
+            <p className="text-primary-foreground/70 text-lg leading-relaxed max-w-3xl mx-auto mb-10">
               If any of that sounds like where you are right now, you don't need to have everything figured out before reaching out. Most people don't. They just need someone who has been through this many times and can help them see the path forward clearly.
             </p>
 
@@ -179,7 +179,7 @@ const Index = () => {
               <span className="premium-divider-dot" />
             </div>
 
-            <div className="text-primary-foreground/80 text-[17px] leading-[1.85] space-y-5 max-w-2xl mx-auto text-left" id="intro-section">
+            <div className="text-primary-foreground/80 text-lg leading-[1.85] space-y-5 max-w-3xl mx-auto text-left" id="intro-section">
               <p>
                 Real Property Planning works alongside attorneys, executors, trustees, and families navigating probate, inherited property, or senior transitions. These are situations where the real estate piece often becomes the hardest part — not because of the market, but because of the emotions, the logistics, and the number of moving pieces no one warned you about.
               </p>
@@ -210,7 +210,7 @@ const Index = () => {
           ABOUT DAVID — Two-column with headshot + credentials
       ═══════════════════════════════════════════════════ */}
       <section className="py-16 lg:py-20 bg-cream">
-        <div className="mx-auto max-w-3xl px-6 lg:px-8 text-center">
+        <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center">
           {/* 1. Headshot */}
           <div className="flex justify-center mb-5">
             <div className="w-56 h-56 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-gold/30 shadow-xl">
@@ -230,7 +230,7 @@ const Index = () => {
           <p className="text-lg md:text-xl font-semibold text-foreground/80 mt-1">President, Real Property Planning</p>
 
           {/* 5. Experience text */}
-          <div className="mt-8 text-left sm:text-center space-y-4 max-w-2xl mx-auto">
+          <div className="mt-8 text-left sm:text-center space-y-4 max-w-3xl mx-auto">
             <p className="text-muted-foreground text-lg leading-relaxed">
               For over 20 years, David has worked as both a licensed real estate broker and certified residential appraiser — a combination that's uncommon in the industry. It means the pricing advice you get is grounded in professional methodology, not a best guess.
             </p>
@@ -338,7 +338,7 @@ const Index = () => {
                   <h3 className="font-serif text-xl text-foreground font-semibold mb-3 group-hover:text-gold transition-colors">
                     {card.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed text-[15px]">
+                  <p className="text-muted-foreground leading-relaxed text-base">
                     {card.body}
                   </p>
               
@@ -384,7 +384,7 @@ const Index = () => {
       ═══════════════════════════════════════════════════ */}
       <section className="py-16 lg:py-20 bg-cream">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-5">
               When Should You Call Me?
             </h2>
@@ -444,7 +444,7 @@ const Index = () => {
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-4">
               Serving Clients Throughout Washington State
             </h2>
-            <p className="text-primary-foreground/60 text-base max-w-2xl mx-auto">
+            <p className="text-primary-foreground/60 text-lg max-w-3xl mx-auto leading-relaxed">
               Based in Washington with deep experience across Western Washington and the Puget Sound region. Through eXp Realty's referral network, David can also connect clients with trusted brokers across the U.S. and internationally.
             </p>
           </div>
@@ -458,7 +458,7 @@ const Index = () => {
                       {area.county}
                     </h3>
                   </div>
-                  <p className="text-primary-foreground/70 text-[15px]">{area.cities}</p>
+                  <p className="text-primary-foreground/70 text-base">{area.cities}</p>
                 </div>
               </Link>
             ))}
@@ -488,30 +488,30 @@ const Index = () => {
                <p className="text-primary-foreground/75 text-lg leading-relaxed mb-4">
                 That's how most of David's client relationships begin — someone calls because a situation came up, there's a property involved, and they're not sure what comes first. A short conversation usually clears things up.
                </p>
-              <p className="text-primary-foreground/60 text-base leading-relaxed mb-3">
+              <p className="text-primary-foreground/60 text-lg leading-relaxed mb-3">
                 <strong className="text-primary-foreground/80">What happens next:</strong> David typically responds within one business day, often sooner.
               </p>
-              <p className="text-primary-foreground/60 text-base leading-relaxed mb-10">
+              <p className="text-primary-foreground/60 text-lg leading-relaxed mb-10">
                 The conversation is confidential, practical, and no-obligation. The goal is to understand your situation and talk through what makes sense.
               </p>
 
               <div className="space-y-5">
                 <div>
-                  <p className="text-[15px] text-primary-foreground/60">Phone</p>
+                  <p className="text-base text-primary-foreground/60">Phone</p>
                   <a href="tel:2069003015" className="mt-1 inline-flex items-center text-primary-foreground transition-colors hover:text-gold">
                     <img src={iconPhone3d} alt="" aria-hidden="true" className="mr-3 h-14 w-14 shrink-0 object-contain" />
                     <span className="text-lg font-semibold">(206) 900-3015</span>
                   </a>
                 </div>
                 <div>
-                  <p className="text-[15px] text-primary-foreground/60">Email</p>
+                  <p className="text-base text-primary-foreground/60">Email</p>
                   <a href="mailto:david@realpropertyplanning.com" className="mt-1 inline-flex items-center text-primary-foreground transition-colors hover:text-gold">
                     <img src={iconEmail3d} alt="" aria-hidden="true" className="mr-3 h-14 w-14 shrink-0 object-contain" />
                     <span className="text-lg font-semibold">david@realpropertyplanning.com</span>
                   </a>
                 </div>
                 <div>
-                  <p className="text-[15px] text-primary-foreground/60">Serving</p>
+                  <p className="text-base text-primary-foreground/60">Serving</p>
                   <div className="mt-1 inline-flex items-center text-primary-foreground">
                     <img src={mappin3d} alt="" aria-hidden="true" className="mr-3 h-11 w-11 shrink-0 object-contain" />
                     <span className="text-lg font-semibold">Washington State &amp; Beyond</span>
@@ -521,7 +521,7 @@ const Index = () => {
 
               <div className="mt-10 flex items-center gap-3">
                 <img src={expRealtyLogo} alt="eXp Realty" className="h-6 w-auto opacity-50" loading="lazy" />
-                <span className="text-primary-foreground/40 text-[15px]">Broker License #113972 · Appraiser #1702080</span>
+                <span className="text-primary-foreground/40 text-base">Broker License #113972 · Appraiser #1702080</span>
               </div>
             </div>
 
@@ -555,14 +555,14 @@ const Index = () => {
               Answers to Questions About Estate &amp; Inherited Property
             </h2>
           </div>
-          <div className="max-w-3xl mx-auto space-y-5">
+          <div className="max-w-4xl mx-auto space-y-5">
             {homepageFaqs.map((faq, index) => (
               <Link key={index} to={faq.link} className="block group">
                 <div className="bg-card p-6 rounded-xl border border-border hover:border-gold/30 transition-colors">
                   <h3 className="font-serif text-lg text-foreground font-semibold mb-2 group-hover:text-gold transition-colors">
                     {faq.question}
                   </h3>
-                  <p className="text-muted-foreground text-[15px] leading-relaxed">
+                  <p className="text-muted-foreground text-base leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>

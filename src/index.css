@@ -134,6 +134,12 @@ html, body {
 
   p {
     margin-bottom: 0.25em;
+    font-size: max(1em, 1.0625rem); /* Enforce minimum 17px for all paragraphs */
+  }
+
+  /* Enforce minimum text size for list items and spans inside content */
+  li span, li p {
+    font-size: max(1em, 1.0625rem);
   }
 
   /* Improved contrast for muted text - critical for older readers */

@@ -49,7 +49,7 @@ const ServicePageTemplate = ({ service, introText, situations, benefits }: Servi
       {/* Hero */}
       <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl">
+          <div className="max-w-4xl">
             <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
               {service.shortName}
             </p>
@@ -68,7 +68,7 @@ const ServicePageTemplate = ({ service, introText, situations, benefits }: Servi
       {/* Who This Service Is For */}
       <section className="py-20 lg:py-28 bg-secondary">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
               Who This Service Is For
             </h2>
@@ -79,7 +79,7 @@ const ServicePageTemplate = ({ service, introText, situations, benefits }: Servi
               {service.targetAudience.map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <GoldCheck3D size={20} className="mt-0.5" />
-                  <span className="text-foreground text-[15px] leading-relaxed">{item}</span>
+                  <span className="text-foreground text-base leading-relaxed">{item}</span>
                 </li>
               ))}
             </ul>
@@ -90,7 +90,7 @@ const ServicePageTemplate = ({ service, introText, situations, benefits }: Servi
       {/* Common Situations */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
               When You May Need {service.shortName}
             </h2>
@@ -109,7 +109,7 @@ const ServicePageTemplate = ({ service, introText, situations, benefits }: Servi
       {/* How I Help */}
       <section className="py-20 lg:py-28 bg-secondary">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
               How Real Property Planning Helps
             </h2>
@@ -117,7 +117,7 @@ const ServicePageTemplate = ({ service, introText, situations, benefits }: Servi
               {benefits.map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <GoldCheck3D size={20} className="mt-0.5" />
-                  <span className="text-foreground text-[15px] leading-relaxed">{item}</span>
+                  <span className="text-foreground text-base leading-relaxed">{item}</span>
                 </li>
               ))}
             </ul>
@@ -135,7 +135,7 @@ const ServicePageTemplate = ({ service, introText, situations, benefits }: Servi
       {/* Why Valuation & Market Guidance Matter */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
               Why Valuation and Market Guidance Matter
             </h2>
@@ -153,7 +153,7 @@ const ServicePageTemplate = ({ service, introText, situations, benefits }: Servi
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
               {service.shortName} by City
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-10 max-w-3xl">
+            <p className="text-muted-foreground text-lg leading-relaxed mb-10 max-w-4xl">
               Learn more about {service.name.toLowerCase()} in specific communities throughout Washington State:
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
@@ -175,7 +175,7 @@ const ServicePageTemplate = ({ service, introText, situations, benefits }: Servi
       {/* Internal Links */}
       <section className="py-12 bg-background">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <p className="text-sm font-semibold text-muted-foreground mb-3">Related Resources</p>
             <div className="flex flex-wrap gap-3">
               <Link to="/probate-estate-sales" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Probate & Estate Sales</Link>
@@ -199,7 +199,7 @@ const ServicePageTemplate = ({ service, introText, situations, benefits }: Servi
       {/* CTA */}
       <section className="py-20 lg:py-28 bg-primary">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center">
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
               Want to Talk Through Your Situation?
             </h2>
