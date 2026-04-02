@@ -20,6 +20,7 @@ export interface ServiceTile {
   iconOffsetY?: string;
   labelSpacing?: "tight";
   contentOffsetY?: string;
+  mobileContentOffsetY?: string;
 }
 
 export const serviceTiles: ServiceTile[] = [
