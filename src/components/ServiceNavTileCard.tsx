@@ -3,6 +3,15 @@ import type { ServiceTile } from "./service-nav-tiles-data";
 import tileShell from "@/assets/tile-shell.png";
 
 const ServiceNavTileCard = ({ tile }: { tile: ServiceTile }) => {
+  // Build the inline style for the content container
+  const contentStyle: React.CSSProperties = {};
+  if (tile.contentOffsetY) {
+    contentStyle['--tw-translate-y' as string] = `calc(-10.2% + ${tile.contentOffsetY})`;
+  }
+  if (tile.mobileContentOffsetY) {
+    contentStyle['--mobile-offset' as string] = tile.mobileContentOffsetY;
+  }
+
   return (
     <Link
       to={tile.href}
@@ -19,8 +28,8 @@ const ServiceNavTileCard = ({ tile }: { tile: ServiceTile }) => {
 
       {/* Icon + label centered together inside the gold trim ring */}
       <span
-        className={`absolute inset-[12%] flex flex-col items-center justify-center px-[6px] py-[4px] sm:px-[10px] sm:py-[6px] ${tile.contentOffsetY ? '' : '-translate-y-[10.2%]'}`}
-        style={tile.contentOffsetY ? { '--tw-translate-y': `calc(-10.2% + ${tile.contentOffsetY})` } as React.CSSProperties : undefined}
+        className={`absolute inset-[12%] flex flex-col items-center justify-center px-[6px] py-[4px] sm:px-[10px] sm:py-[6px] ${tile.contentOffsetY ? '' : '-translate-y-[10.2%]'} ${tile.mobileContentOffsetY ? 'has-mobile-offset' : ''}`}
+        style={Object.keys(contentStyle).length > 0 ? contentStyle : undefined}
       >
         <img
           src={tile.iconSrc}
