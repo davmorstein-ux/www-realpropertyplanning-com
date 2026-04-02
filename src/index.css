@@ -299,9 +299,6 @@ html, body {
     line-height: 0.82 !important;
     margin-top: 0.18rem !important;
   }
-  .premium-tile .tile-icon {
-    transform: translateY(-9%) !important;
-  }
 }
 
 .premium-tile .tile-label-tight {
@@ -339,7 +336,7 @@ html, body {
 @media (max-width: 639px) {
   .premium-tile .tile-label-tight {
     font-size: 0.8rem !important;
-    margin-top: -0.65rem !important;
+    margin-top: -0.45rem !important;
   }
 }
 

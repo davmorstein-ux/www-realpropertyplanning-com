@@ -19,20 +19,20 @@ const ServiceNavTileCard = ({ tile }: { tile: ServiceTile }) => {
 
       {/* Icon + label centered together inside the gold trim ring */}
       <span
-        className={`absolute inset-[10%] flex flex-col items-center justify-center px-[6px] py-[4px] -translate-y-[6%] sm:translate-y-0 sm:inset-[12%] sm:px-[10px] sm:py-[6px] ${tile.contentOffsetY ? '' : 'sm:-translate-y-[10.2%]'}`}
+        className={`absolute inset-[12%] flex flex-col items-center justify-center px-[6px] py-[4px] sm:px-[10px] sm:py-[6px] ${tile.contentOffsetY ? '' : '-translate-y-[10.2%]'}`}
         style={tile.contentOffsetY ? { '--tw-translate-y': `calc(-10.2% + ${tile.contentOffsetY})` } as React.CSSProperties : undefined}
       >
         <img
           src={tile.iconSrc}
           alt={tile.title}
-          className={`tile-icon mx-auto w-[48%] sm:w-[45%] max-h-[38%] object-contain drop-shadow-lg sm:transition-transform sm:duration-300 sm:ease-out ${tile.iconOffsetY ? '' : 'sm:group-hover:scale-110'}`}
+          className={`tile-icon mx-auto w-[45%] max-h-[38%] object-contain drop-shadow-lg sm:transition-transform sm:duration-300 sm:ease-out ${tile.iconOffsetY ? '' : 'sm:group-hover:scale-110'}`}
           style={tile.iconOffsetY ? { transform: `translateY(${tile.iconOffsetY})`, transition: 'transform 0.3s ease-out' } : undefined}
           onMouseEnter={tile.iconOffsetY ? (e) => { if (window.innerWidth >= 640) (e.target as HTMLElement).style.transform = `translateY(${tile.iconOffsetY}) scale(1.1)`; } : undefined}
           onMouseLeave={tile.iconOffsetY ? (e) => { if (window.innerWidth >= 640) (e.target as HTMLElement).style.transform = `translateY(${tile.iconOffsetY})`; } : undefined}
           loading="lazy"
         />
         <h3
-          className={`-mt-1 max-w-[92%] text-center font-serif text-[0.8rem] font-bold leading-[1.15] tracking-tight text-foreground sm:-mt-6 sm:text-[1.1rem] md:text-[1.3rem] lg:text-[1.5rem] xl:text-[1.8rem] whitespace-pre-line ${tile.labelSpacing ? 'tile-label-tight' : ''}`}
+          className={`-mt-6 max-w-[92%] text-center font-serif text-[0.8rem] font-bold leading-[1.15] tracking-tight text-foreground sm:text-[1.1rem] md:text-[1.3rem] lg:text-[1.5rem] xl:text-[1.8rem] whitespace-pre-line ${tile.labelSpacing ? 'tile-label-tight' : ''}`}
           data-mobile-tight={tile.labelSpacing ? "true" : undefined}
           data-tile-id={tile.title.includes("Senior Living") ? "senior-living" : undefined}
         >
