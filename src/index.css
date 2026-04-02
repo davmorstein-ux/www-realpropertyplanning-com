@@ -314,7 +314,7 @@ html, body {
     font-size: 0.9rem !important;
   }
   .premium-tile h3[data-tile-id="senior-living"] {
-    transform: translateY(-1%);
+    margin-top: -0.5rem !important;
   }
 }
 
