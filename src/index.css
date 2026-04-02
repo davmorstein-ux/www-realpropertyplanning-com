@@ -299,6 +299,9 @@ html, body {
     line-height: 0.82 !important;
     margin-top: 0.18rem !important;
   }
+  .premium-tile .has-mobile-offset {
+    --tw-translate-y: calc(-10.2% + var(--mobile-offset, 0%)) !important;
+  }
 }
 
 .premium-tile .tile-label-tight {
