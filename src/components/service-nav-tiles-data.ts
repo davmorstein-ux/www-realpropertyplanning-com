@@ -28,7 +28,7 @@ export const serviceTiles: ServiceTile[] = [
   { title: "CPAs", subtitle: "", href: "/for-cpas", iconSrc: iconCpas, iconOffsetY: "-4%" },
   { title: "Financial\nPlanning", subtitle: "", href: "/for-financial-planners", iconSrc: iconFinancialPlanning, labelSpacing: "tight", iconOffsetY: "4%" },
   { title: "Senior Moves", subtitle: "", href: "/senior-transitions", iconSrc: iconSeniorMoves },
-  { title: "Probate Sales", subtitle: "", href: "/probate-estate-sales", iconSrc: iconProbateSales },
+  { title: "Probate Sales", subtitle: "", href: "/probate-estate-sales", iconSrc: iconProbateSales, iconOffsetY: "-4%" },
   { title: "The Process", subtitle: "", href: "/how-the-process-works", iconSrc: iconTheProcess },
   { title: "Home Value", subtitle: "", href: "/why-valuation-matters", iconSrc: iconHomeValue },
   { title: "Probate Terms", subtitle: "", href: "/terminology", iconSrc: iconProbateTerms, iconOffsetY: "-9%" },
