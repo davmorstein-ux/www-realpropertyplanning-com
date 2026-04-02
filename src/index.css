@@ -299,9 +299,6 @@ html, body {
     line-height: 0.82 !important;
     margin-top: 0.18rem !important;
   }
-  .premium-tile .tile-icon {
-    transform: translateY(-9%) !important;
-  }
 }
 
 .premium-tile .tile-label-tight {
