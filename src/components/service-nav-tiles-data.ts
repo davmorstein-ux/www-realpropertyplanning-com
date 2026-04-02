@@ -11,7 +11,7 @@ import iconProbateTerms from "@/assets/icons/icon-probate-sales-alt.png";
 import iconServiceAreas from "@/assets/icons/icon-service-areas.png";
 import iconResources from "@/assets/icons/icon-resources.png";
 import iconSeniorLiving from "@/assets/icons/icon-senior-living.png";
-import tileLendingFull from "@/assets/tiles/tile-lending-full.jpg";
+import iconLending from "@/assets/icons/icon-lending.png";
 export interface ServiceTile {
   title: string;
   subtitle: string;
