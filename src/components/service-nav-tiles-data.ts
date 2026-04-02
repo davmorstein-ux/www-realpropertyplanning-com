@@ -11,7 +11,7 @@ import iconProbateTerms from "@/assets/icons/icon-probate-sales-alt.png";
 import iconServiceAreas from "@/assets/icons/icon-service-areas.png";
 import iconResources from "@/assets/icons/icon-resources.png";
 import iconSeniorLiving from "@/assets/icons/icon-senior-living.png";
-import tileLendingFull from "@/assets/tiles/tile-lending-full.jpg";
+import iconLending from "@/assets/icons/icon-lending.png";
 export interface ServiceTile {
   title: string;
   subtitle: string;
@@ -19,7 +19,6 @@ export interface ServiceTile {
   iconSrc: string;
   iconOffsetY?: string;
   labelSpacing?: "tight";
-  fullTileImage?: string;
 }
 
 export const serviceTiles: ServiceTile[] = [
@@ -35,6 +34,6 @@ export const serviceTiles: ServiceTile[] = [
   { title: "Probate Terms", subtitle: "", href: "/terminology", iconSrc: iconProbateTerms, iconOffsetY: "-9%" },
   { title: "Service Areas", subtitle: "", href: "/counties", iconSrc: iconServiceAreas },
   { title: "Resources", subtitle: "", href: "/professional-referral-resource", iconSrc: iconResources },
-  { title: "Lending", subtitle: "", href: "/lenders-and-financing-specialists", iconSrc: "", fullTileImage: tileLendingFull },
+  { title: "Lending", subtitle: "", href: "/lenders-and-financing-specialists", iconSrc: iconLending },
   { title: "Senior Living\n& Relocation", subtitle: "", href: "/senior-living-and-relocation", iconSrc: iconSeniorLiving, labelSpacing: "tight" },
 ];

@@ -3,23 +3,6 @@ import type { ServiceTile } from "./service-nav-tiles-data";
 import tileShell from "@/assets/tile-shell.png";
 
 const ServiceNavTileCard = ({ tile }: { tile: ServiceTile }) => {
-  if (tile.fullTileImage) {
-    return (
-      <Link
-        to={tile.href}
-        className="premium-tile group relative block w-full text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 -my-[22%] -mx-[4%] scale-[1.45] sm:-my-[22%] sm:-mx-[6%] sm:scale-[1.588]"
-      >
-        <img
-          src={tile.fullTileImage}
-          alt={tile.title}
-          className="block h-auto w-full pointer-events-none select-none drop-shadow-[0_12px_24px_hsl(220_18%_20%/0.16)]"
-          draggable={false}
-          loading="lazy"
-        />
-      </Link>
-    );
-  }
-
   return (
     <Link
       to={tile.href}
