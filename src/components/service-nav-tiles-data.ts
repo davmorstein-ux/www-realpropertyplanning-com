@@ -19,7 +19,6 @@ export interface ServiceTile {
   iconSrc: string;
   iconOffsetY?: string;
   labelSpacing?: "tight";
-  fullTileImage?: string;
 }
 
 export const serviceTiles: ServiceTile[] = [
