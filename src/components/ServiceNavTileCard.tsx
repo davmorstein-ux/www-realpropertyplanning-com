@@ -19,8 +19,8 @@ const ServiceNavTileCard = ({ tile }: { tile: ServiceTile }) => {
 
       {/* Icon + label centered together inside the gold trim ring */}
       <span
-        className="absolute inset-[10%] flex flex-col items-center justify-center px-[6px] py-[4px] -translate-y-[6%] sm:translate-y-0 sm:inset-[12%] sm:px-[10px] sm:py-[6px] sm:-translate-y-[10.2%]"
-        style={tile.contentOffsetY ? { transform: `translateY(${tile.contentOffsetY})` } : undefined}
+        className={`absolute inset-[10%] flex flex-col items-center justify-center px-[6px] py-[4px] -translate-y-[6%] sm:translate-y-0 sm:inset-[12%] sm:px-[10px] sm:py-[6px] ${tile.contentOffsetY ? '' : 'sm:-translate-y-[10.2%]'}`}
+        style={tile.contentOffsetY ? { '--tw-translate-y': `calc(-10.2% + ${tile.contentOffsetY})` } as React.CSSProperties : undefined}
       >
         <img
           src={tile.iconSrc}
