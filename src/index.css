@@ -339,6 +339,10 @@ html, body {
   }
   a.premium-tile[data-tile-name="wills"] .tile-icon {
     transform: translateY(8%) !important;
+    transition: transform 0.3s ease-out !important;
+  }
+  a.premium-tile[data-tile-name="wills"]:hover .tile-icon {
+    transform: translateY(8%) scale(1.1) !important;
   }
 }
 
