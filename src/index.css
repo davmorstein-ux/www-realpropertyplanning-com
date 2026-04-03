@@ -337,6 +337,9 @@ html, body {
   a.premium-tile[data-tile-name="wills"] span {
     transform: translateY(-14%) !important;
   }
+  a.premium-tile[data-tile-name="wills"] .tile-icon {
+    transform: translateY(8%) !important;
+  }
 }
 
 @media (min-width: 768px) {
