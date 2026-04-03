@@ -334,8 +334,8 @@ html, body {
   .premium-tile .tile-label-tight {
     font-size: 0.9rem !important;
   }
-  .premium-tile[data-tile-name="wills"] > span {
-    transform: translateY(-13%) !important;
+  a.premium-tile[data-tile-name="wills"] span {
+    transform: translateY(-14%) !important;
   }
 }
 
