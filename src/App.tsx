@@ -113,6 +113,7 @@ import EmptyHouseBeforeSelling from "./pages/insights/EmptyHouseBeforeSelling";
 import SellOrKeepProperty from "./pages/insights/SellOrKeepProperty";
 import EstatePropertyMistakes from "./pages/insights/EstatePropertyMistakes";
 import OutOfStateExecutorCaseStudy from "./pages/insights/OutOfStateExecutorCaseStudy";
+import Wills from "./pages/Wills";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
