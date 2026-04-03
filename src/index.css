@@ -308,6 +308,9 @@ html, body {
   .premium-tile .mobile-icon-down {
     margin-top: var(--mobile-icon-mt, 4%) !important;
   }
+  .premium-tile h3[data-tile-id="cpas"] {
+    margin-top: 0.1rem !important;
+  }
 }
 
 .premium-tile .tile-label-tight {
