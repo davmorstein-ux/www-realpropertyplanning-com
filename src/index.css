@@ -319,7 +319,9 @@ html, body {
   .premium-tile h3[data-tile-id="probate-sales"],
   .premium-tile h3[data-tile-id="the-process"],
   .premium-tile h3[data-tile-id="home-value"],
-  .premium-tile h3[data-tile-id="lending"] {
+  .premium-tile h3[data-tile-id="lending"],
+  .premium-tile h3[data-tile-id="senior-living"],
+  .premium-tile h3[data-tile-id="wills"] {
     margin-top: -0.5rem !important;
   }
 
