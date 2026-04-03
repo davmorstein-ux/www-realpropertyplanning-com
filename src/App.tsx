@@ -113,6 +113,7 @@ import EmptyHouseBeforeSelling from "./pages/insights/EmptyHouseBeforeSelling";
 import SellOrKeepProperty from "./pages/insights/SellOrKeepProperty";
 import EstatePropertyMistakes from "./pages/insights/EstatePropertyMistakes";
 import OutOfStateExecutorCaseStudy from "./pages/insights/OutOfStateExecutorCaseStudy";
+import Wills from "./pages/Wills";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -246,6 +247,7 @@ const App = () => (
           <Route path="/insights/sell-or-keep-inherited-property" element={<SellOrKeepProperty />} />
           <Route path="/insights/estate-property-mistakes" element={<EstatePropertyMistakes />} />
           <Route path="/insights/out-of-state-executor-case-study" element={<OutOfStateExecutorCaseStudy />} />
+          <Route path="/wills" element={<Wills />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
