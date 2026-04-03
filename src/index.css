@@ -305,6 +305,9 @@ html, body {
   .premium-tile h3.mobile-text-down {
     margin-top: 0.15rem !important;
   }
+  .premium-tile .mobile-icon-down {
+    margin-top: 8% !important;
+  }
 }
 
 .premium-tile .tile-label-tight {
