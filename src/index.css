@@ -302,6 +302,9 @@ html, body {
   .premium-tile .has-mobile-offset {
     --tw-translate-y: calc(-10.2% + var(--mobile-offset, 0%)) !important;
   }
+  .premium-tile h3.mobile-text-down {
+    margin-top: 0.15rem !important;
+  }
 }
 
 .premium-tile .tile-label-tight {
