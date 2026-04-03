@@ -306,7 +306,7 @@ html, body {
     margin-top: -0.15rem !important;
   }
   .premium-tile .mobile-icon-down {
-    margin-top: 4% !important;
+    margin-top: var(--mobile-icon-mt, 4%) !important;
   }
 }
 
