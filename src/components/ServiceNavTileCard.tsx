@@ -35,7 +35,10 @@ const ServiceNavTileCard = ({ tile }: { tile: ServiceTile }) => {
           src={tile.iconSrc}
           alt={tile.title}
           className={`tile-icon mx-auto w-[45%] max-h-[38%] object-contain drop-shadow-lg sm:transition-transform sm:duration-300 sm:ease-out ${tile.iconOffsetY ? '' : 'sm:group-hover:scale-110'} ${tile.mobileIconDown ? 'mobile-icon-down' : ''}`}
-          style={tile.iconOffsetY ? { transform: `translateY(${tile.iconOffsetY})`, transition: 'transform 0.3s ease-out' } : undefined}
+          style={{
+            ...(tile.iconOffsetY ? { transform: `translateY(${tile.iconOffsetY})`, transition: 'transform 0.3s ease-out' } : {}),
+            ...(tile.mobileIconOffsetY ? { '--mobile-icon-mt': tile.mobileIconOffsetY } as React.CSSProperties : {}),
+          }}
           onMouseEnter={tile.iconOffsetY ? (e) => { if (window.innerWidth >= 640) (e.target as HTMLElement).style.transform = `translateY(${tile.iconOffsetY}) scale(1.1)`; } : undefined}
           onMouseLeave={tile.iconOffsetY ? (e) => { if (window.innerWidth >= 640) (e.target as HTMLElement).style.transform = `translateY(${tile.iconOffsetY})`; } : undefined}
           loading="lazy"
