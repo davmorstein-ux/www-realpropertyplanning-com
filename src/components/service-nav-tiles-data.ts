@@ -23,6 +23,7 @@ export interface ServiceTile {
   mobileContentOffsetY?: string;
   mobileTextDown?: boolean;
   mobileIconDown?: boolean;
+  mobileIconOffsetY?: string;
 }
 
 export const serviceTiles: ServiceTile[] = [
