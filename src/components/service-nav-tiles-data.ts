@@ -35,7 +35,7 @@ export const serviceTiles: ServiceTile[] = [
   { title: "Senior Moves", subtitle: "", href: "/senior-transitions", iconSrc: iconSeniorMoves, mobileContentOffsetY: "-3%", mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "10%" },
   { title: "Probate Sales", subtitle: "", href: "/probate-estate-sales", iconSrc: iconProbateSales, iconOffsetY: "-4%", mobileContentOffsetY: "-2%", mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "19%" },
   { title: "The Process", subtitle: "", href: "/how-the-process-works", iconSrc: iconTheProcess, mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "14%" },
-  { title: "Home Value", subtitle: "", href: "/why-valuation-matters", iconSrc: iconHomeValue, mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "14%" },
+  { title: "Home Value", subtitle: "", href: "/why-valuation-matters", iconSrc: iconHomeValue, mobileContentOffsetY: "-1.5%", mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "12%" },
   { title: "Probate Terms", subtitle: "", href: "/terminology", iconSrc: iconProbateTerms, iconOffsetY: "-9%", mobileTextDown: true, mobileIconDown: true },
   { title: "Service Areas", subtitle: "", href: "/counties", iconSrc: iconServiceAreas, iconOffsetY: "4%", mobileTextDown: true, mobileIconDown: true },
   { title: "Resources", subtitle: "", href: "/professional-referral-resource", iconSrc: iconResources, mobileTextDown: true, mobileIconDown: true },
