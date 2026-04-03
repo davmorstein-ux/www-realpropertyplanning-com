@@ -335,10 +335,7 @@ html, body {
     font-size: 0.9rem !important;
   }
   .premium-tile[data-tile-name="wills"] > span {
-    --tw-translate-y: calc(-10.2% - 2%) !important;
-  }
-  .premium-tile h3[data-tile-id="wills"] {
-    margin-top: -0.5rem !important;
+    transform: translateY(-13%) !important;
   }
 }
 
