@@ -314,6 +314,9 @@ html, body {
   .premium-tile h3[data-tile-id="financial-planning"] {
     margin-top: 0.1rem !important;
   }
+  .premium-tile h3[data-tile-id="wills"] {
+    margin-top: -0.5rem !important;
+  }
   }
   .premium-tile h3[data-tile-id="senior-moves"],
   .premium-tile h3[data-tile-id="probate-sales"],
