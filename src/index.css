@@ -311,6 +311,9 @@ html, body {
   .premium-tile h3[data-tile-id="cpas"] {
     margin-top: -0.5rem !important;
   }
+  .premium-tile h3[data-tile-id="financial-planning"] {
+    margin-top: -0.5rem !important;
+  }
 }
 
 .premium-tile .tile-label-tight {
