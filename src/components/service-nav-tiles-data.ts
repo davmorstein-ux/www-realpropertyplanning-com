@@ -12,6 +12,7 @@ import iconServiceAreas from "@/assets/icons/icon-service-areas.png";
 import iconResources from "@/assets/icons/icon-resources.png";
 import iconSeniorLiving from "@/assets/icons/icon-senior-living.png";
 import iconLending from "@/assets/icons/icon-lending.png";
+import iconWills from "@/assets/icons/icon-wills.png";
 export interface ServiceTile {
   title: string;
   subtitle: string;
