@@ -21,6 +21,7 @@ export interface ServiceTile {
   labelSpacing?: "tight";
   contentOffsetY?: string;
   mobileContentOffsetY?: string;
+  mobileTextDown?: boolean;
 }
 
 export const serviceTiles: ServiceTile[] = [
