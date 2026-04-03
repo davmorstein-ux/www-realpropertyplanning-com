@@ -42,4 +42,5 @@ export const serviceTiles: ServiceTile[] = [
   { title: "Resources", subtitle: "", href: "/professional-referral-resource", iconSrc: iconResources, mobileTextDown: true, mobileIconDown: true },
   { title: "Lending", subtitle: "", href: "/lenders-and-financing-specialists", iconSrc: iconLending, mobileContentOffsetY: "-2%", mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "14%" },
   { title: "Senior Living", subtitle: "", href: "/senior-living-and-relocation", iconSrc: iconSeniorLiving, mobileTextDown: true, mobileIconDown: true },
+  { title: "Wills", subtitle: "", href: "/wills", iconSrc: iconWills, mobileTextDown: true, mobileIconDown: true },
 ];
