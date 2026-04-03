@@ -36,8 +36,8 @@ export const serviceTiles: ServiceTile[] = [
   { title: "The Process", subtitle: "", href: "/how-the-process-works", iconSrc: iconTheProcess, mobileTextDown: true, mobileIconDown: true },
   { title: "Home Value", subtitle: "", href: "/why-valuation-matters", iconSrc: iconHomeValue, mobileTextDown: true, mobileIconDown: true },
   { title: "Probate Terms", subtitle: "", href: "/terminology", iconSrc: iconProbateTerms, iconOffsetY: "-9%", mobileTextDown: true, mobileIconDown: true },
-  { title: "Service Areas", subtitle: "", href: "/counties", iconSrc: iconServiceAreas, iconOffsetY: "4%" },
-  { title: "Resources", subtitle: "", href: "/professional-referral-resource", iconSrc: iconResources },
+  { title: "Service Areas", subtitle: "", href: "/counties", iconSrc: iconServiceAreas, iconOffsetY: "4%", mobileTextDown: true, mobileIconDown: true },
+  { title: "Resources", subtitle: "", href: "/professional-referral-resource", iconSrc: iconResources, mobileTextDown: true, mobileIconDown: true },
   { title: "Lending", subtitle: "", href: "/lenders-and-financing-specialists", iconSrc: iconLending, mobileContentOffsetY: "-2%", mobileTextDown: true, mobileIconDown: true },
   { title: "Senior Living\n& Relocation", subtitle: "", href: "/senior-living-and-relocation", iconSrc: iconSeniorLiving, labelSpacing: "tight" },
 ];
