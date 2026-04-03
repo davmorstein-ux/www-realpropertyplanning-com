@@ -39,38 +39,12 @@ const willsFaqs = [
   },
 ];
 
-const willsRelatedServices = [
-  {
-    title: "Executors & Personal Representatives",
-    description:
-      "Guidance for executors navigating the real estate responsibilities of estate administration.",
-    href: "/executors",
-  },
-  {
-    title: "Probate & Estate Sales",
-    description:
-      "How probate affects the sale of real property — and how we help families through the process.",
-    href: "/probate-estate-sales",
-  },
-  {
-    title: "For Estate Planning Attorneys",
-    description:
-      "How we work alongside estate planning attorneys to support families with real property decisions.",
-    href: "/for-estate-planning-attorneys",
-  },
-  {
-    title: "Why Valuation Matters",
-    description:
-      "Understanding why accurate property valuation is critical during estate transitions.",
-    href: "/why-valuation-matters",
-  },
-  {
-    title: "Terminology",
-    description:
-      "A plain-language glossary of probate, estate, and real property terms.",
-    href: "/terminology",
-  },
-];
+const CheckItem = ({ children }: { children: React.ReactNode }) => (
+  <li className="flex items-start gap-3">
+    <GoldCheck3D size={22} className="mt-0.5 shrink-0" />
+    <span className="text-foreground text-[15px] leading-relaxed">{children}</span>
+  </li>
+);
 
 const Wills = () => {
   const schemaData = articleSchema({
@@ -78,7 +52,6 @@ const Wills = () => {
     description:
       "Understand how wills affect real property decisions. Learn what executors, heirs, and families should know about selling or transferring a home during estate administration in Washington State.",
     url: "https://www.realpropertyplanning.com/wills",
-    author: "David Stein",
     about: ["Wills", "Real Estate", "Estate Administration", "Probate", "Executors"],
   });
 
@@ -87,8 +60,8 @@ const Wills = () => {
       <SEOHead
         title="Wills & Real Estate | What Families Need to Know | Real Property Planning"
         description="Learn how wills affect real property decisions in Washington State. Understand what executors, heirs, and families should know about selling or transferring a home during estate administration."
-        canonicalUrl="https://www.realpropertyplanning.com/wills"
-        schema={schemaData}
+        canonical="https://www.realpropertyplanning.com/wills"
+        jsonLd={schemaData}
       />
       <BreadcrumbSchema
         items={[
@@ -141,14 +114,14 @@ const Wills = () => {
               <h2 className="font-serif text-2xl sm:text-3xl font-semibold text-foreground mb-6">
                 What a Will Does
               </h2>
-              <div className="space-y-4">
-                <GoldCheck3D text="Names who inherits specific assets — including real property" />
-                <GoldCheck3D text="Designates an executor or personal representative to manage the estate" />
-                <GoldCheck3D text="Provides instructions for how property should be sold, transferred, or distributed" />
-                <GoldCheck3D text="Can specify whether a home should be kept in the family or listed for sale" />
-                <GoldCheck3D text="Establishes a framework that guides the probate court's decisions" />
-                <GoldCheck3D text="May include conditions — such as a right of first refusal for a family member" />
-              </div>
+              <ul className="space-y-4">
+                <CheckItem>Names who inherits specific assets — including real property</CheckItem>
+                <CheckItem>Designates an executor or personal representative to manage the estate</CheckItem>
+                <CheckItem>Provides instructions for how property should be sold, transferred, or distributed</CheckItem>
+                <CheckItem>Can specify whether a home should be kept in the family or listed for sale</CheckItem>
+                <CheckItem>Establishes a framework that guides the probate court's decisions</CheckItem>
+                <CheckItem>May include conditions — such as a right of first refusal for a family member</CheckItem>
+              </ul>
             </div>
           </section>
 
@@ -163,13 +136,13 @@ const Wills = () => {
                 determines who has the authority to make decisions about that property — and those
                 decisions carry real financial consequences.
               </p>
-              <div className="space-y-4">
-                <GoldCheck3D text="The executor named in the will is the only person authorized to list and sell estate property" />
-                <GoldCheck3D text="Without a will, the court must appoint a personal representative — which can delay the sale by months" />
-                <GoldCheck3D text="A will may require an appraisal for equitable distribution among multiple heirs" />
-                <GoldCheck3D text="Tax obligations — including stepped-up basis calculations — depend on accurate property valuation at the date of death" />
-                <GoldCheck3D text="Disagreements between heirs about whether to sell or keep a property are more easily resolved when a will provides clear direction" />
-              </div>
+              <ul className="space-y-4">
+                <CheckItem>The executor named in the will is the only person authorized to list and sell estate property</CheckItem>
+                <CheckItem>Without a will, the court must appoint a personal representative — which can delay the sale by months</CheckItem>
+                <CheckItem>A will may require an appraisal for equitable distribution among multiple heirs</CheckItem>
+                <CheckItem>Tax obligations — including stepped-up basis calculations — depend on accurate property valuation at the date of death</CheckItem>
+                <CheckItem>Disagreements between heirs about whether to sell or keep a property are more easily resolved when a will provides clear direction</CheckItem>
+              </ul>
             </div>
           </section>
 
@@ -266,14 +239,14 @@ const Wills = () => {
                 the real property side of estate administration — from the first conversation to the
                 closing table.
               </p>
-              <div className="space-y-4">
-                <GoldCheck3D text="Certified appraisals for estate tax, equitable distribution, and stepped-up basis documentation" />
-                <GoldCheck3D text="Market analysis and pricing strategy tailored to estate timelines" />
-                <GoldCheck3D text="Property preparation — cleanout, repairs, staging — coordinated on your behalf" />
-                <GoldCheck3D text="Steady communication with executors, heirs, and attorneys throughout the process" />
-                <GoldCheck3D text="Support for out-of-state families who can't be on-site" />
-                <GoldCheck3D text="A calm, experienced presence during one of the most difficult transitions a family can face" />
-              </div>
+              <ul className="space-y-4">
+                <CheckItem>Certified appraisals for estate tax, equitable distribution, and stepped-up basis documentation</CheckItem>
+                <CheckItem>Market analysis and pricing strategy tailored to estate timelines</CheckItem>
+                <CheckItem>Property preparation — cleanout, repairs, staging — coordinated on your behalf</CheckItem>
+                <CheckItem>Steady communication with executors, heirs, and attorneys throughout the process</CheckItem>
+                <CheckItem>Support for out-of-state families who can't be on-site</CheckItem>
+                <CheckItem>A calm, experienced presence during one of the most difficult transitions a family can face</CheckItem>
+              </ul>
 
               <div className="mt-10 text-center">
                 <Link to="/contact" className="inline-block">
@@ -294,7 +267,7 @@ const Wills = () => {
           </section>
 
           {/* Related Services */}
-          <RelatedServices services={willsRelatedServices} />
+          <RelatedServices currentPath="/wills" />
 
           <DisclaimerSection />
         </main>
