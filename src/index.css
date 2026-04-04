@@ -315,7 +315,7 @@ html, body {
     margin-top: 0.1rem !important;
   }
   .premium-tile h3[data-tile-id="wills"] {
-    margin-top: -2.1rem !important;
+    margin-top: -1.2rem !important;
   }
   }
   .premium-tile h3[data-tile-id="senior-moves"],
@@ -323,8 +323,7 @@ html, body {
   .premium-tile h3[data-tile-id="the-process"],
   .premium-tile h3[data-tile-id="home-value"],
   .premium-tile h3[data-tile-id="lending"],
-  .premium-tile h3[data-tile-id="senior-living"],
-  .premium-tile h3[data-tile-id="wills"] {
+  .premium-tile h3[data-tile-id="senior-living"] {
     margin-top: -0.5rem !important;
   }
 
