@@ -18,6 +18,7 @@ import iconElderLaw from "@/assets/icons/icon-elder-law-3d.png";
 import iconFinancial from "@/assets/icons/icon-financial-planning.png";
 import iconEstatePlanning from "@/assets/icons/icon-estate-planning-3d.png";
 import iconTrustees from "@/assets/icons/icon-trustees.png";
+import iconFamilyLaw from "@/assets/icons/icon-family-law-3d.png";
 import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 import ClientReviewsSection from "@/components/ClientReviewsSection";
@@ -107,7 +108,7 @@ const attorneyTiles = [
   {
     title: "Family Law\nAttorneys",
     href: "/for-family-law-attorneys",
-    iconSrc: iconTrustees,
+    iconSrc: iconFamilyLaw,
   },
   {
     title: "Divorce\nAttorneys",
