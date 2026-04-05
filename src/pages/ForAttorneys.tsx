@@ -10,15 +10,12 @@ import MidPageCTA from "@/components/MidPageCTA";
 import PageFAQ from "@/components/PageFAQ";
 import ProfessionalConfidence from "@/components/ProfessionalConfidence";
 import ProofCallout from "@/components/ProofCallout";
-import tileShell from "@/assets/tile-shell.png";
+import ServiceNavTileCard from "@/components/ServiceNavTileCard";
+import type { ServiceTile } from "@/components/service-nav-tiles-data";
 import iconProbate from "@/assets/icons/icon-probate-sales.png";
-import iconExecutors from "@/assets/icons/icon-executors.png";
 import iconDivorce from "@/assets/icons/icon-divorce-3d.png";
-import iconSeniorMoves from "@/assets/icons/icon-senior-moves.png";
 import iconElderLaw from "@/assets/icons/icon-elder-law-3d.png";
-import iconFinancial from "@/assets/icons/icon-financial-planning.png";
 import iconEstatePlanning from "@/assets/icons/icon-estate-planning-3d.png";
-import iconTrustees from "@/assets/icons/icon-trustees.png";
 import iconFamilyLaw from "@/assets/icons/icon-family-law-3d.png";
 import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
@@ -90,29 +87,34 @@ const attorneyCaseStudies = [
   },
 ];
 
-const attorneyTiles = [
+const attorneyTiles: ServiceTile[] = [
   {
     title: "Probate\nAttorneys",
+    subtitle: "",
     href: "/for-probate-attorneys",
     iconSrc: iconProbate,
   },
   {
     title: "Estate Planning\nAttorneys",
+    subtitle: "",
     href: "/for-estate-planning-attorneys",
     iconSrc: iconEstatePlanning,
   },
   {
     title: "Elder Law\nAttorneys",
+    subtitle: "",
     href: "/for-elder-law-attorneys",
     iconSrc: iconElderLaw,
   },
   {
     title: "Family Law\nAttorneys",
+    subtitle: "",
     href: "/for-family-law-attorneys",
     iconSrc: iconFamilyLaw,
   },
   {
     title: "Divorce\nAttorneys",
+    subtitle: "",
     href: "/for-divorce-attorneys",
     iconSrc: iconDivorce,
   },
@@ -186,7 +188,7 @@ const ForAttorneys = () => {
 
       <section className="py-16 lg:py-24 bg-background">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-[1100px] mx-auto">
+          <div className="max-w-[1200px] mx-auto">
             <div className="text-center mb-12">
               <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-4">
                 Areas of Collaboration
@@ -195,32 +197,9 @@ const ForAttorneys = () => {
                 Select the area that best fits your client's situation:
               </p>
             </div>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-5 max-w-[900px] mx-auto">
+            <div className="mx-auto grid w-full max-w-[1200px] grid-cols-2 items-start gap-0 sm:grid-cols-3">
               {attorneyTiles.map((tile) => (
-                <Link
-                  key={tile.href}
-                  to={tile.href}
-                  className="premium-tile group relative block w-full text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                >
-                  <img
-                    src={tileShell}
-                    alt=""
-                    aria-hidden="true"
-                    className="block h-auto w-full pointer-events-none select-none drop-shadow-[0_12px_24px_hsl(220_18%_20%/0.16)]"
-                    draggable={false}
-                  />
-                  <span className="absolute inset-[12%] flex flex-col items-center justify-center px-[6px] py-[4px] sm:px-[10px] sm:py-[6px] -translate-y-[4%]">
-                    <img
-                      src={tile.iconSrc}
-                      alt=""
-                      className="tile-icon mx-auto w-[45%] max-h-[38%] object-contain drop-shadow-lg transition-transform duration-300 ease-out group-hover:scale-110"
-                      loading="lazy"
-                    />
-                    <h3 className="-mt-6 max-w-[92%] text-center font-serif text-[0.8rem] font-bold leading-[1.15] tracking-tight text-foreground sm:text-[1.1rem] md:text-[1.3rem] lg:text-[1.5rem] xl:text-[1.8rem] whitespace-pre-line">
-                      {tile.title}
-                    </h3>
-                  </span>
-                </Link>
+                <ServiceNavTileCard key={tile.href + tile.title} tile={tile} />
               ))}
             </div>
           </div>
