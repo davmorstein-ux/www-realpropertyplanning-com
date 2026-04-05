@@ -127,26 +127,71 @@ const Index = () => {
       </section>
 
       {/* ═══════════════════════════════════════════════════
-          2. SERVICE NAV TILES — Role-based pathways, right near the top
+          2. SERVICE NAV TILES — Role-based pathways
       ═══════════════════════════════════════════════════ */}
       <ServiceNavTiles />
 
       {/* ═══════════════════════════════════════════════════
-          3. GUIDED ENTRY — "Not sure where to start?"
+          3. START HERE — Decision-based entry points
       ═══════════════════════════════════════════════════ */}
-      <GuidedEntryPanel />
+      <section className="py-14 lg:py-18 bg-secondary">
+        <div className="mx-auto max-w-[1100px] px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-3">
+              Start Here If You Are…
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Choose the path that fits your situation. We'll guide you from there.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {[
+              { title: "Handling an Estate", desc: "Named as executor or managing inherited property", link: "/executors" },
+              { title: "Helping a Family Member", desc: "Supporting a parent or loved one through a transition", link: "/senior-transitions" },
+              { title: "Planning Ahead", desc: "Getting organized before a transition happens", link: "/wills" },
+              { title: "Managing a Property Transition", desc: "Navigating a sale tied to probate, trust, or life change", link: "/how-the-process-works" },
+            ].map((item, i) => (
+              <Link key={i} to={item.link} className="card-3d group p-6 text-center flex flex-col items-center">
+                <h3 className="font-serif text-lg font-semibold text-foreground mb-2 group-hover:text-gold transition-colors">
+                  {item.title}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-4">{item.desc}</p>
+                <span className="text-gold font-semibold text-sm inline-flex items-center gap-1">
+                  Learn More <ChevronRight className="w-4 h-4" />
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* ═══════════════════════════════════════════════════
-          4. SITUATION FINDER — Situation-based entry points
+          4. TRUST STRIP — Credentials early
       ═══════════════════════════════════════════════════ */}
-      <SituationFinderBlock />
+      <section className="py-10 lg:py-12 bg-cream">
+        <div className="mx-auto max-w-[1100px] px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 text-center">
+            <div className="flex items-center gap-3">
+              <img src={iconLicense3d} alt="" aria-hidden="true" className="h-10 w-10 object-contain" />
+              <span className="text-foreground font-semibold text-base">Licensed WA Broker</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <img src={iconAppraiser3d} alt="" aria-hidden="true" className="h-10 w-10 object-contain mix-blend-multiply" />
+              <span className="text-foreground font-semibold text-base">Certified Appraiser</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <span className="text-foreground font-semibold text-base">20+ Years Experience</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* ═══════════════════════════════════════════════════
           5. WHAT WE DO — Three service cards
       ═══════════════════════════════════════════════════ */}
-      <section className="py-16 lg:py-20 bg-warm-bg">
+      <section className="py-14 lg:py-18 bg-warm-bg">
         <div className="mx-auto max-w-[1100px] px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-10">
             <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-base">
               What We Do
             </p>
@@ -197,15 +242,50 @@ const Index = () => {
       </section>
 
       {/* ═══════════════════════════════════════════════════
-          6. ABOUT DAVID — The trusted expert behind the hub
+          6. TRUST & RESULTS — Moved higher
       ═══════════════════════════════════════════════════ */}
-      <section className="py-16 lg:py-20 bg-cream">
+      <TrustAndResults />
+
+      {/* ═══════════════════════════════════════════════════
+          7. SECURE YOUR WILL — Featured section
+      ═══════════════════════════════════════════════════ */}
+      <SecureWillSection />
+
+      {/* ═══════════════════════════════════════════════════
+          8. MID-PAGE CTA
+      ═══════════════════════════════════════════════════ */}
+      <MidPageCTA
+        heading="Have Questions?"
+        body="A short, no-pressure conversation to understand your situation and talk through next steps."
+        microcopy="Most people feel better just having a plan."
+        buttonText="Schedule a Conversation"
+        variant="dark"
+      />
+
+      {/* ═══════════════════════════════════════════════════
+          9. WHAT TO EXPECT — 4-step process
+      ═══════════════════════════════════════════════════ */}
+      <WhatToExpect />
+
+      {/* ═══════════════════════════════════════════════════
+          10. APPRAISER ADVANTAGE
+      ═══════════════════════════════════════════════════ */}
+      <AppraiserAdvantage />
+
+      {/* ═══════════════════════════════════════════════════
+          11. OUT-OF-STATE SUPPORT
+      ═══════════════════════════════════════════════════ */}
+      <OutOfStateBlock />
+
+      {/* ═══════════════════════════════════════════════════
+          12. ABOUT DAVID — The trusted expert
+      ═══════════════════════════════════════════════════ */}
+      <section className="py-14 lg:py-18 bg-cream">
         <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center">
           <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-5 text-base">
             Your Guide
           </p>
 
-          {/* Headshot */}
           <div className="flex justify-center mb-5">
             <div className="w-56 h-56 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-gold/30 shadow-xl">
               <img
@@ -217,22 +297,19 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Name & Title */}
           <p className="text-2xl md:text-[1.65rem] font-bold text-foreground">David Stein</p>
           <p className="text-lg md:text-xl font-semibold text-foreground/80 mt-1">President, Real Property Planning</p>
 
-          {/* Short bio */}
-          <div className="mt-8 text-left sm:text-center space-y-4 max-w-3xl mx-auto">
+          <div className="mt-6 text-left sm:text-center space-y-3 max-w-3xl mx-auto">
             <p className="text-muted-foreground text-lg leading-relaxed">
               20+ years as both a licensed broker and certified residential appraiser. That combination means pricing advice grounded in professional methodology — not a best guess.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              David works with executors, attorneys, trustees, and families across Washington State. His deepest roots are in Western Washington and the Puget Sound region.
+              David works with executors, attorneys, trustees, and families across Washington State.
             </p>
           </div>
 
-          {/* Licensing */}
-          <div className="mt-8 space-y-2">
+          <div className="mt-6 space-y-2">
             <p className="flex items-center justify-center text-base font-semibold text-foreground">
               <img src={iconLicense3d} alt="" aria-hidden="true" className="mr-3 h-10 w-10 shrink-0 object-contain" />
               Licensed Real Estate Broker — License #113972
@@ -243,8 +320,7 @@ const Index = () => {
             </p>
           </div>
 
-          {/* Phone + Email */}
-          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-10 text-base text-muted-foreground">
+          <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-10 text-base text-muted-foreground">
             <a href="tel:2069003015" className="flex items-center gap-2 hover:text-gold transition-colors font-medium">
               <img src={iconPhone3d} alt="" aria-hidden="true" className="h-8 w-8 object-contain shrink-0" />
               (206) 900-3015
@@ -255,7 +331,6 @@ const Index = () => {
             </a>
           </div>
 
-          {/* Brokerage row */}
           <div className="mt-6 w-full flex flex-col items-center">
             <div className="w-full grid grid-cols-1 sm:grid-cols-[1fr_auto_1fr] items-center gap-6 sm:gap-4">
               <div className="flex items-center justify-center sm:justify-end">
@@ -270,8 +345,7 @@ const Index = () => {
               </div>
             </div>
 
-            {/* Memberships */}
-            <div className="mt-12 mb-4 flex items-center justify-center gap-3 w-full max-w-xl">
+            <div className="mt-10 mb-4 flex items-center justify-center gap-3 w-full max-w-xl">
               <div className="flex-1 h-px bg-gradient-to-r from-transparent via-muted-foreground/60 to-muted-foreground/60" />
               <p className="text-sm font-semibold uppercase tracking-[0.15em] text-muted-foreground whitespace-nowrap">Professional Memberships &amp; Affiliations</p>
               <div className="flex-1 h-px bg-gradient-to-l from-transparent via-muted-foreground/60 to-muted-foreground/60" />
@@ -284,55 +358,23 @@ const Index = () => {
       <StatewideSupport background="bg-cream" />
 
       {/* ═══════════════════════════════════════════════════
-          TRUST & RESULTS
+          13. WHEN SHOULD YOU CALL
       ═══════════════════════════════════════════════════ */}
-      <TrustAndResults />
-
-      {/* ═══════════════════════════════════════════════════
-          WHAT TO EXPECT — 4-step process
-      ═══════════════════════════════════════════════════ */}
-      <WhatToExpect />
-
-      {/* ═══════════════════════════════════════════════════
-          APPRAISER ADVANTAGE
-      ═══════════════════════════════════════════════════ */}
-      <AppraiserAdvantage />
-
-      {/* ═══════════════════════════════════════════════════
-          MID-PAGE CTA
-      ═══════════════════════════════════════════════════ */}
-      <MidPageCTA
-        heading="Have Questions?"
-        body="A short, no-pressure conversation to understand your situation and talk through next steps."
-        microcopy="Most people feel better just having a plan."
-        buttonText="Schedule a Conversation"
-        variant="dark"
-      />
-
-      {/* ═══════════════════════════════════════════════════
-          OUT-OF-STATE SUPPORT
-      ═══════════════════════════════════════════════════ */}
-      <OutOfStateBlock />
-
-      {/* ═══════════════════════════════════════════════════
-          WHEN SHOULD YOU CALL
-      ═══════════════════════════════════════════════════ */}
-      <section className="py-16 lg:py-20 bg-cream">
+      <section className="py-14 lg:py-18 bg-cream">
         <div className="container px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-5">
               When Should You Reach Out?
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
               Most people don't call with a plan. They call because something happened and they need to figure out what comes next.
             </p>
-            <ul className="space-y-4 mb-10">
+            <ul className="space-y-3 mb-8">
               {[
                 "You've been named an executor and aren't sure where to start",
                 "You're handling an inherited home and need guidance",
                 "An attorney is involved and real estate is part of the process",
                 "A parent or family member is transitioning out of their home",
-                "You're deciding whether to sell as-is or make improvements",
                 "You want a clear picture of what the property is worth",
                 "You just want to talk through your situation first",
               ].map((item, i) => (
@@ -353,14 +395,14 @@ const Index = () => {
       </section>
 
       {/* ═══════════════════════════════════════════════════
-          LEAD MAGNET
+          14. LEAD MAGNET
       ═══════════════════════════════════════════════════ */}
       <LeadMagnetBlock />
 
       {/* ═══════════════════════════════════════════════════
-          AREAS SERVED
+          15. AREAS SERVED
       ═══════════════════════════════════════════════════ */}
-      <section className="py-16 lg:py-24 bg-navy relative overflow-hidden">
+      <section className="py-14 lg:py-20 bg-navy relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.03]" style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath d='M100 20 L130 80 L160 140 H40 L70 80 Z' fill='%23fff'/%3E%3Cpath d='M100 50 L120 90 L140 130 H60 L80 90 Z' fill='%23fff'/%3E%3C/svg%3E")`,
           backgroundSize: '300px',
@@ -402,18 +444,17 @@ const Index = () => {
       </section>
 
       {/* ═══════════════════════════════════════════════════
-          CONTACT
+          16. CONTACT
       ═══════════════════════════════════════════════════ */}
-      <section className="py-20 lg:py-28 bg-navy-dark">
+      <section className="py-16 lg:py-24 bg-navy-dark">
         <div className="mx-auto max-w-[1100px] px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
-            {/* Left — Contact info */}
             <div>
               <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
                 Start With a Question, Not a Plan
               </h2>
               <p className="text-primary-foreground/75 text-lg leading-relaxed mb-4">
-                Most client relationships start the same way — someone calls because a situation came up and they're not sure what comes first. A short conversation usually clears things up.
+                Most client relationships start the same way — someone calls because a situation came up and they're not sure what comes first.
               </p>
               <p className="text-primary-foreground/60 text-lg leading-relaxed mb-3">
                 <strong className="text-primary-foreground/80">What happens next:</strong> David typically responds within one business day, often sooner.
@@ -452,26 +493,24 @@ const Index = () => {
               </div>
             </div>
 
-            {/* What Happens Next */}
             <div className="mt-10">
               <WhatHappensNext variant="dark" />
             </div>
 
-            {/* Lead capture form */}
             <HomepageLeadForm />
           </div>
         </div>
       </section>
 
       {/* ═══════════════════════════════════════════════════
-          EDUCATIONAL PATHWAYS
+          17. EDUCATIONAL PATHWAYS
       ═══════════════════════════════════════════════════ */}
       <EducationalPathways />
 
       {/* ═══════════════════════════════════════════════════
-          FAQ PREVIEW
+          18. FAQ PREVIEW
       ═══════════════════════════════════════════════════ */}
-      <section className="py-20 lg:py-28 bg-secondary">
+      <section className="py-16 lg:py-24 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-base">
