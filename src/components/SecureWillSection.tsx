@@ -24,7 +24,7 @@ const SecureWillSection = () => {
             Secure Your Will. Protect Your Legacy.
           </h2>
 
-          <p className="text-lg sm:text-xl font-semibold text-foreground/90 leading-relaxed mb-6">
+          <p className="text-lg sm:text-xl font-semibold text-foreground leading-relaxed mb-6">
             Upload and securely store your will in the blockchain cloud — ensuring easy, reliable access for you and your loved ones, now and in the future.
           </p>
 
