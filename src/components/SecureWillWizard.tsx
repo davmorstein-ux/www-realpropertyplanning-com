@@ -317,9 +317,9 @@ const ConfirmationScreen = ({ onNext }: { onNext: () => void }) => (
     </p>
 
     {/* Important notice */}
-    <div className="w-full max-w-sm rounded-xl border-2 border-amber-400/60 bg-amber-50 p-5 mb-8">
+    <div className="w-full max-w-sm rounded-xl border-2 border-accent bg-accent/20 p-5 mb-8">
       <div className="flex items-start gap-3">
-        <Shield className="w-6 h-6 text-amber-600 shrink-0 mt-0.5" />
+        <Shield className="w-6 h-6 text-primary shrink-0 mt-0.5" />
         <p className="text-foreground font-semibold text-base text-left leading-relaxed">
           Your private access key is required to retrieve your document.
         </p>
