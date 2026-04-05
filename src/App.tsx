@@ -13,6 +13,7 @@ import ForEstatePlanningAttorneys from "./pages/attorneys/ForEstatePlanningAttor
 import ForElderLawAttorneys from "./pages/attorneys/ForElderLawAttorneys";
 import ForFamilyLawAttorneys from "./pages/attorneys/ForFamilyLawAttorneys";
 import ForDivorceAttorneys from "./pages/attorneys/ForDivorceAttorneys";
+import ForRealEstateAttorneys from "./pages/attorneys/ForRealEstateAttorneys";
 import HowWeWork from "./pages/HowWeWork";
 import HowTheProcessWorks from "./pages/HowTheProcessWorks";
 import WhyValuationMatters from "./pages/WhyValuationMatters";
@@ -136,6 +137,7 @@ const App = () => (
           <Route path="/for-elder-law-attorneys" element={<ForElderLawAttorneys />} />
           <Route path="/for-family-law-attorneys" element={<ForFamilyLawAttorneys />} />
           <Route path="/for-divorce-attorneys" element={<ForDivorceAttorneys />} />
+          <Route path="/real-estate-attorneys" element={<ForRealEstateAttorneys />} />
           <Route path="/how-we-work" element={<HowWeWork />} />
           <Route path="/how-the-process-works" element={<HowTheProcessWorks />} />
           <Route path="/why-valuation-matters" element={<WhyValuationMatters />} />
