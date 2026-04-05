@@ -299,9 +299,9 @@ const TransitionResources = () => {
                 >
                   <div className="flex items-start gap-4">
                     {cat.image ? (
-                      <img src={cat.image} alt="" aria-hidden="true" className="w-7 h-7 object-contain mt-1 shrink-0" loading="lazy" />
+                      <img src={cat.image} alt="" aria-hidden="true" className="w-7 h-7 object-contain mt-1 shrink-0 transition-transform duration-300 ease-out group-hover:scale-110" loading="lazy" />
                     ) : cat.iconSrc ? (
-                      <img src={cat.iconSrc} alt="" aria-hidden="true" className="w-7 h-7 object-contain mt-1 shrink-0" loading="lazy" />
+                      <img src={cat.iconSrc} alt="" aria-hidden="true" className="w-7 h-7 object-contain mt-1 shrink-0 transition-transform duration-300 ease-out group-hover:scale-110" loading="lazy" />
                     ) : null}
                     <div>
                       <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground group-hover:text-accent transition-colors mb-1">

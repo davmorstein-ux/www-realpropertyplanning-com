@@ -21,7 +21,7 @@ const ResourceCard = ({
     <div className="card-3d p-6 h-full">
       <div className="flex items-start gap-4">
         <div className="flex h-12 w-12 shrink-0 items-center justify-center mt-0.5">
-          {icon || <img src={iconDocument3d} alt="" aria-hidden="true" className="h-7 w-7 object-contain" loading="lazy" />}
+          {icon || <img src={iconDocument3d} alt="" aria-hidden="true" className="h-7 w-7 object-contain transition-transform duration-300 ease-out group-hover:scale-110" loading="lazy" />}
         </div>
         <div className="min-w-0 flex-1">
           {badge && (
@@ -36,7 +36,7 @@ const ResourceCard = ({
             {description}
           </p>
           <span className="inline-flex items-center gap-1.5 text-accent/60 group-hover:text-gold transition-colors text-sm">
-            Read more <img src={iconArrowRight3d} alt="" aria-hidden="true" className="w-3.5 h-3.5 object-contain" loading="lazy" />
+            Read more <img src={iconArrowRight3d} alt="" aria-hidden="true" className="w-3.5 h-3.5 object-contain transition-transform duration-300 ease-out group-hover:translate-x-1" loading="lazy" />
           </span>
         </div>
       </div>
