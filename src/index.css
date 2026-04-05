@@ -584,6 +584,11 @@ html, body {
   width: 58% !important;
   max-height: 38% !important;
 }
+@media (min-width: 640px) {
+  .attorney-tiles-grid .premium-tile:nth-child(6) h3 {
+    margin-top: 0.1rem !important;
+  }
+}
 
 @media (min-width: 640px) {
   .premium-tile .tile-label-tight {
