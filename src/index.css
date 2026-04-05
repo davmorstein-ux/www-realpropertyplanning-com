@@ -462,7 +462,8 @@ html, body {
   a.premium-tile[data-tile-name="senior-moves"]:hover .tile-icon,
   a.premium-tile[data-tile-name="the-process"]:hover .tile-icon,
   a.premium-tile[data-tile-name="home-value"]:hover .tile-icon,
-  a.premium-tile[data-tile-name="lending"]:hover .tile-icon {
+  a.premium-tile[data-tile-name="lending"]:hover .tile-icon,
+  a.premium-tile[data-tile-name="cpas"]:hover .tile-icon {
     transform: translateY(8%) scale(1.1) !important;
   }
   a.premium-tile[data-tile-name="probate-sales"] .tile-icon {
