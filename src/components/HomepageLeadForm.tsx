@@ -99,8 +99,8 @@ const HomepageLeadForm = () => {
         </div>
 
         <div>
-          <label className="block text-[15px] font-medium text-foreground mb-1.5">
-            Phone Number <span className="text-muted-foreground text-sm font-normal">(optional — helpful if you'd like a call back)</span>
+          <label className="block text-base font-medium text-foreground mb-1.5">
+            Phone Number <span className="text-muted-foreground text-base font-normal">(optional — helpful if you'd like a call back)</span>
           </label>
           <input
             type="tel"
