@@ -1,5 +1,7 @@
+import { useState } from "react";
 import willVaultIcon from "@/assets/icons/icon-will-vault-3d.png";
 import GoldCheck3D from "@/components/GoldCheck3D";
+import SecureWillWizard from "@/components/SecureWillWizard";
 
 const bullets = [
   "Secure blockchain storage",
@@ -10,7 +12,10 @@ const bullets = [
 ];
 
 const SecureWillSection = () => {
+  const [wizardOpen, setWizardOpen] = useState(false);
+
   return (
+    <>
     <section className="py-16 sm:py-24 bg-gradient-to-b from-secondary via-background to-secondary">
       <div className="mx-auto max-w-6xl px-6">
         {/* Desktop: side-by-side | Mobile: stacked image-on-top */}
@@ -59,12 +64,12 @@ const SecureWillSection = () => {
 
             {/* CTA */}
             <div className="flex flex-col items-center lg:items-start gap-4">
-              <a
-                href="#"
+              <button
+                onClick={() => setWizardOpen(true)}
                 className="secure-will-cta inline-flex items-center justify-center px-10 py-5 rounded-xl text-xl sm:text-2xl font-bold text-white transition-all duration-200"
               >
                 Secure Your Will Now
-              </a>
+              </button>
               <p className="text-sm sm:text-base text-muted-foreground italic max-w-md">
                 No pressure. Secure, private, and accessible only to you and those you trust.
               </p>
@@ -83,6 +88,8 @@ const SecureWillSection = () => {
         </div>
       </div>
     </section>
+    <SecureWillWizard open={wizardOpen} onOpenChange={setWizardOpen} />
+    </>
   );
 };
 
