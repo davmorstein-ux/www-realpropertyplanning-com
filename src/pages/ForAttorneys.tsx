@@ -119,6 +119,12 @@ const attorneyTiles: ServiceTile[] = [
     href: "/for-divorce-attorneys",
     iconSrc: iconDivorce,
   },
+  {
+    title: "Real Estate\nAttorneys",
+    subtitle: "",
+    href: "/for-attorneys",
+    iconSrc: iconRealEstateAttorney,
+  },
 ];
 
 const attorneyFaqs = [
