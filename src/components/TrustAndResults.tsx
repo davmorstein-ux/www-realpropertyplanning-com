@@ -130,14 +130,14 @@ const TrustAndResults = () => (
             ))}
           </div>
           <div className="flex flex-wrap items-center justify-center gap-4 mt-6">
-            <Link to="/testimonials" className="text-sm text-accent hover:text-gold underline underline-offset-4 transition-colors">
+             <Link to="/testimonials" className="text-base text-accent hover:text-gold underline underline-offset-4 transition-colors">
               Read more reviews →
             </Link>
             <a
               href="https://www.zillow.com/profile/dstein2112#reviews"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-accent hover:text-gold underline underline-offset-4 transition-colors"
+              className="text-base text-accent hover:text-gold underline underline-offset-4 transition-colors"
             >
               See reviews on Zillow →
             </a>
