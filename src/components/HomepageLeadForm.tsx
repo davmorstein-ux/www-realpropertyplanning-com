@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 const inputClass =
-  "w-full rounded-lg border border-border bg-background px-4 py-3.5 text-foreground text-[16px] placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-gold/30 focus:border-gold/50 transition";
+  "w-full rounded-lg border border-border bg-background px-4 py-3.5 text-foreground text-[17px] placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-gold/30 focus:border-gold/50 transition";
 
 const HomepageLeadForm = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -66,14 +66,14 @@ const HomepageLeadForm = () => {
       <h3 className="font-serif text-2xl text-foreground font-semibold mb-2">
         Send a Message
       </h3>
-      <p className="text-muted-foreground text-[15px] leading-relaxed mb-6">
+      <p className="text-muted-foreground text-base leading-relaxed mb-6">
         Share a few details and David will follow up directly — usually within one business day.
       </p>
 
       <form className="space-y-5" onSubmit={handleSubmit}>
         <input type="hidden" name="source_page" value={typeof window !== "undefined" ? window.location.pathname : ""} />
         <div>
-          <label className="block text-[15px] font-medium text-foreground mb-1.5">
+          <label className="block text-base font-medium text-foreground mb-1.5">
             Your Name <span className="text-destructive">*</span>
           </label>
           <input
@@ -86,7 +86,7 @@ const HomepageLeadForm = () => {
         </div>
 
         <div>
-          <label className="block text-[15px] font-medium text-foreground mb-1.5">
+          <label className="block text-base font-medium text-foreground mb-1.5">
             Email Address <span className="text-destructive">*</span>
           </label>
           <input
@@ -99,8 +99,8 @@ const HomepageLeadForm = () => {
         </div>
 
         <div>
-          <label className="block text-[15px] font-medium text-foreground mb-1.5">
-            Phone Number <span className="text-muted-foreground text-sm font-normal">(optional — helpful if you'd like a call back)</span>
+          <label className="block text-base font-medium text-foreground mb-1.5">
+            Phone Number <span className="text-muted-foreground text-base font-normal">(optional — helpful if you'd like a call back)</span>
           </label>
           <input
             type="tel"
@@ -111,8 +111,8 @@ const HomepageLeadForm = () => {
         </div>
 
         <div>
-          <label className="block text-[15px] font-medium text-foreground mb-1.5">
-            Property Address <span className="text-muted-foreground text-sm font-normal">(optional)</span>
+          <label className="block text-base font-medium text-foreground mb-1.5">
+            Property Address <span className="text-muted-foreground text-base font-normal">(optional)</span>
           </label>
           <input
             type="text"
@@ -123,8 +123,8 @@ const HomepageLeadForm = () => {
         </div>
 
         <div>
-          <label className="block text-[15px] font-medium text-foreground mb-1.5">
-            What's Going On? <span className="text-muted-foreground text-sm font-normal">(optional)</span>
+          <label className="block text-base font-medium text-foreground mb-1.5">
+            What's Going On? <span className="text-muted-foreground text-base font-normal">(optional)</span>
           </label>
           <textarea
             name="message"
@@ -135,8 +135,8 @@ const HomepageLeadForm = () => {
         </div>
 
         <div>
-          <label className="block text-[15px] font-medium text-foreground mb-1.5">
-            How did you find this site? <span className="text-muted-foreground text-sm font-normal">(optional)</span>
+          <label className="block text-base font-medium text-foreground mb-1.5">
+            How did you find this site? <span className="text-muted-foreground text-base font-normal">(optional)</span>
           </label>
           <select
             name="found_via"
@@ -154,8 +154,8 @@ const HomepageLeadForm = () => {
         </div>
 
         <div>
-          <label className="block text-[15px] font-medium text-foreground mb-1.5">
-            Anything else? <span className="text-muted-foreground text-sm font-normal">(optional)</span>
+          <label className="block text-base font-medium text-foreground mb-1.5">
+            Anything else? <span className="text-muted-foreground text-base font-normal">(optional)</span>
           </label>
           <textarea
             name="notes"
@@ -175,7 +175,7 @@ const HomepageLeadForm = () => {
         </Button>
       </form>
 
-      <p className="text-muted-foreground/60 text-sm text-center mt-4">
+      <p className="text-muted-foreground/60 text-base text-center mt-4">
         David responds personally.
       </p>
     </div>

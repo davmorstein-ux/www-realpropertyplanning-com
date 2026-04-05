@@ -32,19 +32,19 @@ const ProofCallout = ({
           isAccent ? "text-gold/25" : "text-gold/18"
         }`}
       />
-      <p className="text-foreground text-lg leading-relaxed italic pr-10 mb-4">
+      <p className="text-foreground text-lg leading-relaxed italic pr-10 mb-5">
         "{quote}"
       </p>
       <div className="flex items-center justify-between">
         <div>
-          <p className="font-semibold text-foreground text-sm">— {attribution}</p>
+          <p className="font-semibold text-foreground text-base">— {attribution}</p>
           {context && (
-            <p className="text-muted-foreground text-sm mt-0.5">{context}</p>
+            <p className="text-muted-foreground text-base mt-0.5">{context}</p>
           )}
         </div>
         <Link
           to="/testimonials"
-          className="text-xs text-accent hover:text-gold underline underline-offset-4 transition-colors shrink-0 ml-4"
+          className="text-base text-accent hover:text-gold underline underline-offset-4 transition-colors shrink-0 ml-4"
         >
           More reviews →
         </Link>

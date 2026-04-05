@@ -79,14 +79,14 @@ const TrustAndResults = () => (
               {credentials.map((cred, i) => (
                 <li key={i} className="flex items-center gap-3">
                   <GoldCheck3D size={18} />
-                  <span className="text-foreground text-[15px] font-medium">{cred}</span>
+                  <span className="text-foreground text-base font-medium">{cred}</span>
                 </li>
               ))}
             </ul>
             <div className="flex items-center gap-3 pt-4 border-t border-border">
               <img src={iconLicense3d} alt="" aria-hidden="true" className="h-10 w-10 object-contain" />
               <img src={iconAppraiser3d} alt="" aria-hidden="true" className="h-10 w-10 object-contain mix-blend-multiply" />
-              <span className="text-muted-foreground text-sm">Broker & Appraiser — serving clients throughout Washington State</span>
+              <span className="text-muted-foreground text-base">Broker & Appraiser — serving clients throughout Washington State</span>
             </div>
           </div>
 
@@ -115,13 +115,13 @@ const TrustAndResults = () => (
                     <Star key={j} className="w-3.5 h-3.5 fill-gold text-gold" />
                   ))}
                 </div>
-                <p className="text-foreground text-[15px] leading-relaxed italic mb-5 pr-6">
+                <p className="text-foreground text-base leading-relaxed italic mb-5 pr-6">
                   "{t.text}"
                 </p>
                 <div className="border-t border-border pt-3">
-                  <p className="text-muted-foreground text-sm font-medium">— {t.attribution}</p>
+                  <p className="text-muted-foreground text-base font-medium">— {t.attribution}</p>
                   {t.tag && (
-                    <span className="inline-block mt-1.5 text-[11px] font-semibold uppercase tracking-wider text-gold/70 bg-gold/5 rounded-full px-2.5 py-0.5">
+                    <span className="inline-block mt-1.5 text-xs font-semibold uppercase tracking-wider text-gold/70 bg-gold/5 rounded-full px-2.5 py-0.5">
                       {t.tag}
                     </span>
                   )}
@@ -130,14 +130,14 @@ const TrustAndResults = () => (
             ))}
           </div>
           <div className="flex flex-wrap items-center justify-center gap-4 mt-6">
-            <Link to="/testimonials" className="text-sm text-accent hover:text-gold underline underline-offset-4 transition-colors">
+             <Link to="/testimonials" className="text-base text-accent hover:text-gold underline underline-offset-4 transition-colors">
               Read more reviews →
             </Link>
             <a
               href="https://www.zillow.com/profile/dstein2112#reviews"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-accent hover:text-gold underline underline-offset-4 transition-colors"
+              className="text-base text-accent hover:text-gold underline underline-offset-4 transition-colors"
             >
               See reviews on Zillow →
             </a>
@@ -158,19 +158,19 @@ const TrustAndResults = () => (
                 <div className="space-y-3">
                   <div>
                     <p className="text-xs font-bold uppercase tracking-wider text-gold mb-1">Situation</p>
-                    <p className="text-foreground text-sm leading-relaxed">{snap.situation}</p>
+                    <p className="text-foreground text-base leading-relaxed">{snap.situation}</p>
                   </div>
                   <div>
                     <p className="text-xs font-bold uppercase tracking-wider text-gold mb-1">Challenge</p>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{snap.challenge}</p>
+                    <p className="text-muted-foreground text-base leading-relaxed">{snap.challenge}</p>
                   </div>
                   <div>
                     <p className="text-xs font-bold uppercase tracking-wider text-gold mb-1">How David Helped</p>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{snap.howHelped}</p>
+                    <p className="text-muted-foreground text-base leading-relaxed">{snap.howHelped}</p>
                   </div>
                   <div className="pt-2 border-t border-border">
                     <p className="text-xs font-bold uppercase tracking-wider text-gold mb-1">Outcome</p>
-                    <p className="text-foreground text-sm leading-relaxed font-medium">{snap.outcome}</p>
+                    <p className="text-foreground text-base leading-relaxed font-medium">{snap.outcome}</p>
                   </div>
                 </div>
               </div>

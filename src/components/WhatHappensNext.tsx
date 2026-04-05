@@ -38,7 +38,7 @@ const WhatHappensNext = ({ variant = "light" }: WhatHappensNextProps) => {
       }`}>
         What Happens When You Reach Out
       </h3>
-      <p className={`text-[15px] mb-7 ${
+      <p className={`text-base mb-7 ${
         isDark ? "text-primary-foreground/60" : "text-muted-foreground"
       }`}>
         Here's what to expect.
@@ -58,7 +58,7 @@ const WhatHappensNext = ({ variant = "light" }: WhatHappensNextProps) => {
               }`}>
                 {step.title}
               </p>
-              <p className={`text-[15px] leading-relaxed ${
+              <p className={`text-base leading-relaxed ${
                 isDark ? "text-primary-foreground/75" : "text-muted-foreground"
               }`}>
                 {step.text}

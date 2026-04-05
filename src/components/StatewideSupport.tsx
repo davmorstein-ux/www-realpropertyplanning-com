@@ -64,7 +64,7 @@ const StatewideSupport = ({ background = "bg-secondary" }: StatewideSupportProps
               <Link
                 key={county.href}
                 to={county.href}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                className={`px-4 py-2 rounded-full text-base font-medium transition-colors ${
                   isDark
                     ? "bg-primary-foreground/10 text-primary-foreground/90 hover:bg-primary-foreground/15"
                     : "bg-foreground/5 text-foreground/80 hover:bg-foreground/10"
@@ -75,7 +75,7 @@ const StatewideSupport = ({ background = "bg-secondary" }: StatewideSupportProps
             ))}
             <Link
               to="/counties"
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+              className={`px-4 py-2 rounded-full text-base font-medium transition-colors ${
                 isDark
                   ? "text-gold/80 hover:text-gold"
                   : "text-gold-dark hover:text-gold"

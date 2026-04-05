@@ -50,7 +50,7 @@ const SituationFinderBlock = () => (
     <div className="container px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-10">
-          <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-sm">
+          <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-base">
             Find Your Situation
           </p>
           <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-4">
@@ -73,10 +73,10 @@ const SituationFinderBlock = () => (
                   <img src={s.iconSrc} alt="" aria-hidden="true" className="h-7 w-7 object-contain" loading="lazy" />
                 </div>
                 <div>
-                  <p className="font-semibold text-foreground text-[15px] leading-snug group-hover:text-gold transition-colors">
+                  <p className="font-semibold text-foreground text-base leading-snug group-hover:text-gold transition-colors">
                     {s.label}
                   </p>
-                  <p className="text-muted-foreground text-sm mt-1 leading-relaxed">
+                  <p className="text-muted-foreground text-base mt-1.5 leading-relaxed">
                     {s.description}
                   </p>
                 </div>

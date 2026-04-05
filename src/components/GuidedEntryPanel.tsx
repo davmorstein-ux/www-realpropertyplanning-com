@@ -74,10 +74,10 @@ const GuidedEntryPanel = () => {
 
                     {/* Text block */}
                     <div className="min-w-0">
-                      <p className="font-semibold text-foreground text-[17px] leading-snug group-hover:text-gold transition-colors">
+                      <p className="font-semibold text-foreground text-lg leading-snug group-hover:text-gold transition-colors">
                         {opt.label}
                       </p>
-                      <p className="text-muted-foreground text-[15px] mt-1 leading-relaxed">
+                      <p className="text-muted-foreground text-base mt-1.5 leading-relaxed">
                         {opt.description}
                       </p>
                     </div>
@@ -87,7 +87,7 @@ const GuidedEntryPanel = () => {
             ))}
           </div>
 
-          <p className="text-center text-muted-foreground text-sm mt-8">
+          <p className="text-center text-muted-foreground text-base mt-8">
             Still not sure? <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4 transition-colors">Just reach out</Link> — a short conversation is often the best place to start.
           </p>
         </div>

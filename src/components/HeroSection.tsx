@@ -32,7 +32,7 @@ const HeroSection = () => {
               Specialized Guidance for Probate & Estate Property Sales
             </h1>
             
-            <p className="text-base md:text-lg text-primary-foreground/80 mb-8 leading-relaxed max-w-2xl" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.15)' }}>
+            <p className="text-lg md:text-xl text-primary-foreground/80 mb-8 leading-relaxed max-w-2xl" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.15)' }}>
               David Stein brings 20+ years of dual expertise as a licensed broker and certified appraiser — working with executors, attorneys, trustees, and families across Washington State.
             </p>
             
@@ -55,10 +55,10 @@ const HeroSection = () => {
                 Contact Me
               </Button>
             </div>
-            <p className="mt-2 text-primary-foreground/70 text-sm max-w-md" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.15)' }}>
+            <p className="mt-2 text-primary-foreground/70 text-base max-w-md" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.15)' }}>
               <a href="/contact" className="underline underline-offset-2 hover:text-gold transition-colors">Request a call back</a>
             </p>
-            <p className="mt-2 text-primary-foreground/50 text-sm max-w-md">
+            <p className="mt-2 text-primary-foreground/50 text-base max-w-md">
               A short conversation to understand your situation and discuss next steps. No pressure.
             </p>
             
