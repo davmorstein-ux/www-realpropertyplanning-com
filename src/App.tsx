@@ -137,6 +137,7 @@ const App = () => (
           <Route path="/for-elder-law-attorneys" element={<ForElderLawAttorneys />} />
           <Route path="/for-family-law-attorneys" element={<ForFamilyLawAttorneys />} />
           <Route path="/for-divorce-attorneys" element={<ForDivorceAttorneys />} />
+          <Route path="/real-estate-attorneys" element={<ForRealEstateAttorneys />} />
           <Route path="/how-we-work" element={<HowWeWork />} />
           <Route path="/how-the-process-works" element={<HowTheProcessWorks />} />
           <Route path="/why-valuation-matters" element={<WhyValuationMatters />} />
