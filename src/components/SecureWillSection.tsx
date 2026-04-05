@@ -22,12 +22,20 @@ const SecureWillSection = () => {
         <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
           {/* Image – shows first on mobile, right on desktop via order */}
           <div className="w-full lg:w-5/12 flex justify-center lg:order-2">
-            <img
-              src={willVaultIcon}
-              alt="Secure blockchain will vault with permanent time-stamp seal"
-              className="w-64 sm:w-72 lg:w-[340px] drop-shadow-2xl will-vault-float"
-              loading="lazy"
-            />
+            <div className="relative w-64 sm:w-72 lg:w-[340px] will-vault-float">
+              <img
+                src={willVaultIcon}
+                alt="Secure blockchain will vault with permanent time-stamp seal"
+                className="w-full drop-shadow-2xl"
+                loading="lazy"
+              />
+              {/* Clickable START button overlay – positioned over the gold START area */}
+              <button
+                onClick={() => setWizardOpen(true)}
+                className="absolute bottom-[4%] left-1/2 -translate-x-1/2 w-[40%] h-[8%] cursor-pointer rounded-md bg-transparent hover:bg-white/10 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary/50"
+                aria-label="Start secure will upload"
+              />
+            </div>
           </div>
 
           {/* Text content */}
