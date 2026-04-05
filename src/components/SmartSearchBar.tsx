@@ -424,21 +424,24 @@ const SmartSearchBar = () => {
 
       {/* Routing suggestions */}
       {suggestions.length > 0 && (
-        <div className="mt-3 flex flex-wrap justify-center gap-2">
+        <div className="mt-3 flex flex-wrap justify-center gap-3">
           {suggestions.map((s) => (
             <button
               key={s.path + s.label}
+              type="button"
               onClick={() => {
                 toast.success(`Taking you to ${s.label}`, { duration: 2000 });
                 navigate(s.path);
               }}
-              className="flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-border text-sm text-foreground hover:bg-muted hover:border-gold/40 transition-colors duration-200"
+              className="premium-pill-3d focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
             >
-              <Search className="w-3.5 h-3.5 text-gold-dark" />
-              <span>
-                Go to <strong className="font-semibold text-navy">{s.label}</strong>
+              <span className="premium-pill-3d__face text-[15px] sm:text-base">
+                <Search className="w-4 h-4 text-gold-dark shrink-0" />
+                <span>
+                  Go to <strong className="font-semibold text-foreground">{s.label}</strong>
+                </span>
+                <ArrowRight className="w-4 h-4 text-muted-foreground shrink-0" />
               </span>
-              <ArrowRight className="w-3.5 h-3.5 text-muted-foreground" />
             </button>
           ))}
         </div>
@@ -454,15 +457,13 @@ const SmartSearchBar = () => {
         {suggestedPrompts.map((prompt) => (
           <button
             key={prompt}
+            type="button"
             onClick={() => handlePromptClick(prompt)}
-            className="px-5 py-2.5 rounded-full border-[1.5px] border-border/80 bg-card text-sm font-medium text-muted-foreground transition-all duration-200 cursor-pointer hover:text-foreground hover:border-gold/40 hover:-translate-y-[2px] active:translate-y-[1px]"
-            style={{
-              backgroundImage: 'linear-gradient(to bottom, hsl(var(--card)), hsl(var(--card) / 0.94))',
-              boxShadow:
-                '0 3px 10px -2px rgba(0,0,0,0.10), 0 2px 4px -1px rgba(0,0,0,0.06), 0 1px 0 0 rgba(0,0,0,0.03), inset 0 1px 0 0 rgba(255,255,255,0.75), inset 0 -1px 0 0 rgba(0,0,0,0.04)',
-            }}
+            className="premium-pill-3d focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
           >
-            {prompt}
+            <span className="premium-pill-3d__face text-[15px] sm:text-base">
+              {prompt}
+            </span>
           </button>
         ))}
       </div>
