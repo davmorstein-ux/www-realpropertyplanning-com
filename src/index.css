@@ -450,11 +450,12 @@ html, body {
     transform: translateY(12%) scale(1.1) !important;
   }
 
-  /* Lower icons in 5 target tiles to match Attorneys top spacing — desktop only */
+  /* Lower icons in target tiles to match Attorneys top spacing — desktop only */
   a.premium-tile[data-tile-name="senior-moves"] .tile-icon,
   a.premium-tile[data-tile-name="the-process"] .tile-icon,
   a.premium-tile[data-tile-name="home-value"] .tile-icon,
-  a.premium-tile[data-tile-name="lending"] .tile-icon {
+  a.premium-tile[data-tile-name="lending"] .tile-icon,
+  a.premium-tile[data-tile-name="cpas"] .tile-icon {
     transform: translateY(8%) !important;
     transition: transform 0.3s ease-out !important;
   }
