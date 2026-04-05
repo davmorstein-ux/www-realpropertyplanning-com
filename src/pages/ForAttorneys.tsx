@@ -96,7 +96,7 @@ const attorneyTiles = [
   {
     title: "Estate Planning\nAttorneys",
     href: "/for-estate-planning-attorneys",
-    iconSrc: iconFinancial,
+    iconSrc: iconEstatePlanning,
   },
   {
     title: "Elder Law\nAttorneys",
