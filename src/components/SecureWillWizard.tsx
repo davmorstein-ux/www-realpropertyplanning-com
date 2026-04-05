@@ -306,8 +306,8 @@ const ProcessingScreen = ({ onDone }: { onDone: () => void }) => {
 /* ─── SCREEN 5: Confirmation ─── */
 const ConfirmationScreen = ({ onNext }: { onNext: () => void }) => (
   <div className="flex flex-col items-center text-center px-2">
-    <div className="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center mb-6">
-      <Check className="w-10 h-10 text-green-600" />
+    <div className="w-20 h-20 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center mb-6">
+      <Check className="w-10 h-10 text-emerald-600 dark:text-emerald-400" />
     </div>
     <h2 className="font-serif text-2xl sm:text-3xl font-bold text-foreground mb-3">
       Your Will Has Been Secured
