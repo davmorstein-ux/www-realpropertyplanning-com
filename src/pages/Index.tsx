@@ -97,25 +97,28 @@ const Index = () => {
               loading="eager"
             />
             <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.8rem] font-bold leading-[1.15] text-primary-foreground mb-5" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.3)' }}>
-              Guidance for Probate, Estate Property &amp; Life Transitions
+              Real Estate Guidance for Life's Most Important Property Transitions
             </h1>
             <p className="text-primary-foreground/80 text-xl leading-relaxed max-w-2xl mx-auto mb-10">
-              Find the right path based on your situation — whether you're an executor, attorney, family member, or professional advisor.
+              Helping families, executors, and professionals navigate complex real estate decisions with clarity and confidence.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="tel:+12069003015">
+              <Link to="/contact">
                 <Button variant="gold" size="lg" className="px-10 py-5 h-auto text-lg tracking-wide">
                   <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
-                  Call (206) 900-3015
+                  Schedule a Conversation
                 </Button>
-              </a>
-              <Link
-                to="/contact"
-                className="relative overflow-hidden inline-flex items-center justify-center rounded-[12px] px-8 py-4 min-h-[56px] font-bold text-lg tracking-[0.01em] text-white no-underline transition-all duration-200 ease-out bg-gradient-to-b from-[#1a6b6a] to-[#144f4e] border border-[rgba(10,60,58,0.5)] shadow-[0_3px_0_rgba(10,50,48,0.7),0_8px_18px_rgba(0,0,0,0.16),inset_0_1px_0_rgba(255,255,255,0.18),inset_0_-1px_0_rgba(5,30,28,0.2)] hover:-translate-y-[2px] hover:brightness-[1.06] hover:shadow-[0_5px_0_rgba(10,50,48,0.7),0_12px_24px_rgba(0,0,0,0.2),inset_0_1px_0_rgba(255,255,255,0.18)] active:translate-y-[1px] active:shadow-[0_2px_0_rgba(10,50,48,0.7),0_4px_10px_rgba(0,0,0,0.14)]"
-              >
-                <span className="pointer-events-none absolute left-[8%] top-0 h-[46%] w-[84%] rounded-full bg-gradient-to-b from-white/20 to-white/0" />
-                <span className="relative z-10">Request a Call Back</span>
+              </Link>
+              <Link to="/services">
+                <Button
+                  size="lg"
+                  variant="outline3d"
+                  className="px-10 py-5 h-auto text-lg tracking-wide border-gold/50 bg-transparent text-gold hover:bg-gold hover:text-foreground focus-visible:ring-gold"
+                >
+                  Explore Services
+                  <ChevronRight className="w-5 h-5 ml-1" />
+                </Button>
               </Link>
             </div>
           </div>
