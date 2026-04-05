@@ -56,21 +56,30 @@ const GuidedEntryPanel = () => {
             </p>
           </div>
 
-          <div className="space-y-3">
+          <div className="space-y-4">
             {options.map((opt, i) => (
               <Link
                 key={i}
                 to={opt.href}
-                className="card-3d group flex items-center gap-4 p-5 sm:p-6 min-h-[72px]"
+                className="card-3d-premium group flex items-center gap-5 p-5 sm:p-6"
               >
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-gold/10 border border-gold/20 group-hover:bg-gold/15 transition-colors">
+                {/* Icon well — structured container */}
+                <div className="relative flex h-[60px] w-[60px] shrink-0 items-center justify-center rounded-2xl"
+                  style={{
+                    background: 'linear-gradient(180deg, hsl(42 45% 96%) 0%, hsl(40 30% 92%) 100%)',
+                    border: '1.5px solid hsl(42 50% 78% / 0.5)',
+                    boxShadow: 'inset 0 1px 0 0 rgba(255,255,255,0.8), 0 2px 6px -2px rgba(0,0,0,0.08)',
+                  }}
+                >
                   <img src={opt.iconSrc} alt="" aria-hidden="true" className="h-8 w-8 object-contain" loading="lazy" />
                 </div>
-                <div>
+
+                {/* Text block */}
+                <div className="relative z-[2] min-w-0">
                   <p className="font-semibold text-foreground text-[17px] leading-snug group-hover:text-gold transition-colors">
                     {opt.label}
                   </p>
-                  <p className="text-muted-foreground text-[15px] mt-0.5 leading-relaxed">
+                  <p className="text-muted-foreground text-[15px] mt-1 leading-relaxed">
                     {opt.description}
                   </p>
                 </div>

@@ -288,6 +288,70 @@ html, body {
 }
 
 /* ═══════════════════════════════════════════════
+   PREMIUM 3D SERVICE CARD — luxury horizontal link
+   Inspired by embossed ivory tile with gold inset trim
+═══════════════════════════════════════════════ */
+.card-3d-premium {
+  @apply relative cursor-pointer transition-all duration-200 overflow-hidden;
+  border-radius: 16px;
+  background: linear-gradient(180deg, hsl(40 30% 98%) 0%, hsl(38 22% 95%) 100%);
+  border: 1.5px solid hsl(38 25% 88%);
+  box-shadow:
+    0 6px 20px -4px rgba(0,0,0,0.10),
+    0 3px 8px -2px rgba(0,0,0,0.06),
+    0 1px 0 0 rgba(0,0,0,0.03),
+    inset 0 1px 0 0 rgba(255,255,255,0.9),
+    inset 0 -2px 0 0 rgba(0,0,0,0.03);
+}
+
+/* Gold inset trim — inner border accent */
+.card-3d-premium::before {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border-radius: 12px;
+  border: 1.5px solid hsl(42 55% 72% / 0.55);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Top-edge bevel highlight */
+.card-3d-premium::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  border-radius: 9999px;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.7), transparent);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.card-3d-premium:hover {
+  transform: translateY(-3px);
+  border-color: hsl(42 55% 68% / 0.6);
+  box-shadow:
+    0 14px 32px -6px rgba(0,0,0,0.13),
+    0 6px 16px -4px rgba(0,0,0,0.08),
+    0 2px 0 0 rgba(0,0,0,0.02),
+    inset 0 1px 0 0 rgba(255,255,255,0.9),
+    inset 0 -2px 0 0 rgba(0,0,0,0.03);
+}
+
+.card-3d-premium:hover::before {
+  border-color: hsl(42 55% 65% / 0.7);
+}
+
+.card-3d-premium:active {
+  transform: translateY(1px);
+  box-shadow:
+    0 1px 4px -1px rgba(0,0,0,0.10),
+    inset 0 1px 3px 0 rgba(0,0,0,0.06);
+}
+
+/* ═══════════════════════════════════════════════
    PREMIUM TILE — image-based 3D tile button
 ═══════════════════════════════════════════════ */
 .premium-tile {
