@@ -375,16 +375,14 @@ const Index = () => {
           </div>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {serviceAreas.map((area, i) => (
-              <Link key={i} to={area.href} className="group">
-                <div className="bg-primary-foreground/5 border border-primary-foreground/10 rounded-xl p-6 hover:bg-primary-foreground/10 transition-colors">
-                  <div className="flex items-center gap-3 mb-3">
-                    <img src={mappin3d} alt="" aria-hidden="true" className="w-12 h-12 object-contain shrink-0" />
-                    <h3 className="font-serif text-xl text-primary-foreground font-semibold group-hover:text-gold transition-colors">
-                      {area.county}
-                    </h3>
-                  </div>
-                  <p className="text-primary-foreground/70 text-base">{area.cities}</p>
+              <Link key={i} to={area.href} className="card-3d group p-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <img src={mappin3d} alt="" aria-hidden="true" className="w-12 h-12 object-contain shrink-0" />
+                  <h3 className="font-serif text-xl text-foreground font-semibold group-hover:text-gold transition-colors">
+                    {area.county}
+                  </h3>
                 </div>
+                <p className="text-muted-foreground text-base">{area.cities}</p>
               </Link>
             ))}
           </div>
@@ -481,15 +479,13 @@ const Index = () => {
           </div>
           <div className="max-w-4xl mx-auto space-y-5">
             {homepageFaqs.map((faq, index) => (
-              <Link key={index} to={faq.link} className="block group">
-                <div className="bg-card p-6 rounded-xl border border-border hover:border-gold/30 transition-colors">
-                  <h3 className="font-serif text-lg text-foreground font-semibold mb-2 group-hover:text-gold transition-colors">
-                    {faq.question}
-                  </h3>
-                  <p className="text-muted-foreground text-base leading-relaxed">
-                    {faq.answer}
-                  </p>
-                </div>
+              <Link key={index} to={faq.link} className="card-3d group block p-6">
+                <h3 className="font-serif text-lg text-foreground font-semibold mb-2 group-hover:text-gold transition-colors">
+                  {faq.question}
+                </h3>
+                <p className="text-muted-foreground text-base leading-relaxed">
+                  {faq.answer}
+                </p>
               </Link>
             ))}
           </div>

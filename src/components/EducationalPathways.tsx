@@ -73,7 +73,7 @@ const EducationalPathways = ({
             <Link
               key={i}
               to={p.href}
-              className="group bg-card border border-border rounded-xl p-6 hover:border-gold/30 hover:shadow-md transition-all"
+              className="card-3d group block p-6"
             >
               <div className="flex items-start gap-3 mb-3">
                 <img src={iconBookOpen3d} alt="" aria-hidden="true" className="w-7 h-7 object-contain shrink-0 mt-0.5" loading="lazy" />
