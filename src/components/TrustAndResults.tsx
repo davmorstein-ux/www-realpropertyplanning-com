@@ -119,9 +119,9 @@ const TrustAndResults = () => (
                   "{t.text}"
                 </p>
                 <div className="border-t border-border pt-3">
-                  <p className="text-muted-foreground text-sm font-medium">— {t.attribution}</p>
+                  <p className="text-muted-foreground text-base font-medium">— {t.attribution}</p>
                   {t.tag && (
-                    <span className="inline-block mt-1.5 text-[11px] font-semibold uppercase tracking-wider text-gold/70 bg-gold/5 rounded-full px-2.5 py-0.5">
+                    <span className="inline-block mt-1.5 text-xs font-semibold uppercase tracking-wider text-gold/70 bg-gold/5 rounded-full px-2.5 py-0.5">
                       {t.tag}
                     </span>
                   )}
