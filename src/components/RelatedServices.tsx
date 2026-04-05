@@ -40,19 +40,21 @@ const RelatedServices = ({ currentPath }: RelatedServicesProps) => {
               <Link
                 key={link.href}
                 to={link.href}
-                className="card-3d group flex flex-col justify-between p-5"
+                className="card-3d group block"
               >
-                <div>
-                  <h3 className="font-serif text-base font-semibold text-foreground group-hover:text-accent transition-colors mb-1.5">
-                    {link.label}
-                  </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {link.description}
-                  </p>
-                </div>
-                <div className="flex items-center gap-1.5 mt-4 text-accent/60 group-hover:text-gold transition-colors text-sm">
-                  <span>Learn more</span>
-                  <img src={iconArrowRight3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain" loading="lazy" />
+                <div className="flex flex-col justify-between p-5 h-full">
+                  <div>
+                    <h3 className="font-serif text-base font-semibold text-foreground group-hover:text-accent transition-colors mb-1.5">
+                      {link.label}
+                    </h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      {link.description}
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-1.5 mt-4 text-accent/60 group-hover:text-gold transition-colors text-sm">
+                    <span>Learn more</span>
+                    <img src={iconArrowRight3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain" loading="lazy" />
+                  </div>
                 </div>
               </Link>
             ))}
