@@ -561,7 +561,7 @@ html, body {
 
 /* Attorney tiles: vertically balance content within tile face */
 .attorney-tiles-grid .premium-tile > span {
-  transform: translateY(-7%) !important;
+  transform: translateY(-9%) !important;
 }
 .attorney-tiles-grid .premium-tile .tile-icon {
   margin-top: -3% !important;
