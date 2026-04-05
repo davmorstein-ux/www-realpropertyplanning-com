@@ -79,15 +79,21 @@ const Counties = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-[900px] mx-auto grid md:grid-cols-2 gap-6">
             {countyCards.map((card) => (
-              <Link key={card.county} to={card.href} className="group">
-                <div className="bg-card border border-border rounded-[18px] px-7 py-8 h-full hover:border-gold/30 hover:shadow-lg transition-all">
-                  <div className="flex items-center gap-3 mb-3">
-                    <img src={mappin3d} alt="" aria-hidden="true" className="w-7 h-7 object-contain shrink-0" />
-                    <h2 className="font-serif text-xl text-foreground font-semibold group-hover:text-gold transition-colors">
-                      {card.county}
-                    </h2>
+              <Link
+                key={card.county}
+                to={card.href}
+                className="card-3d-premium group block h-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-4"
+              >
+                <div className="card-3d-premium__inner h-full">
+                  <div className="card-3d-premium__face flex h-full flex-col px-7 py-7 md:px-8 md:py-8">
+                    <div className="flex items-center gap-3 mb-4">
+                      <img src={mappin3d} alt="" aria-hidden="true" className="w-8 h-8 object-contain shrink-0" />
+                      <h2 className="font-serif text-xl text-foreground font-semibold group-hover:text-gold transition-colors">
+                        {card.county}
+                      </h2>
+                    </div>
+                    <p className="text-muted-foreground leading-relaxed text-base">{card.intro}</p>
                   </div>
-                  <p className="text-muted-foreground leading-relaxed text-sm">{card.intro}</p>
                 </div>
               </Link>
             ))}

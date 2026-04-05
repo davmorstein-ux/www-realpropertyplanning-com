@@ -54,7 +54,7 @@ const StatewideSupport = ({ background = "bg-secondary" }: StatewideSupportProps
             </p>
           </div>
 
-          <div className="mt-8 flex flex-wrap gap-2">
+          <div className="mt-8 flex flex-wrap gap-3">
             {[
               { label: "King County", href: "/counties/king" },
               { label: "Snohomish County", href: "/counties/snohomish" },
@@ -64,24 +64,20 @@ const StatewideSupport = ({ background = "bg-secondary" }: StatewideSupportProps
               <Link
                 key={county.href}
                 to={county.href}
-                className={`px-4 py-2.5 rounded-[14px] text-base font-medium transition-all duration-200 ease-out ${
-                  isDark
-                    ? "bg-gradient-to-b from-[rgba(255,255,255,0.12)] to-[rgba(255,255,255,0.05)] text-primary-foreground/90 border border-[rgba(255,255,255,0.15)] shadow-[0_2px_0_rgba(0,0,0,0.2),0_4px_10px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.15)] hover:-translate-y-[2px] hover:border-gold/40 hover:text-gold hover:shadow-[0_4px_0_rgba(0,0,0,0.2),0_8px_16px_rgba(0,0,0,0.15),inset_0_1px_0_rgba(255,255,255,0.15)]"
-                    : "bg-gradient-to-b from-white to-[#f0ede8] border-[1.5px] border-[hsl(42_55%_62%/0.5)] text-foreground/80 shadow-[0_2px_0_rgba(160,150,130,0.25),0_4px_10px_rgba(0,0,0,0.05),inset_0_1px_0_rgba(255,255,255,0.9)] hover:-translate-y-[2px] hover:border-[hsl(42_60%_52%/0.6)] hover:text-gold hover:shadow-[0_4px_0_rgba(160,150,130,0.25),0_8px_14px_rgba(0,0,0,0.07),inset_0_1px_0_rgba(255,255,255,0.9)]"
-                }`}
+                className="premium-pill-3d group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
               >
-                {county.label}
+                <span className="premium-pill-3d__face text-base group-hover:text-foreground">
+                  {county.label}
+                </span>
               </Link>
             ))}
             <Link
               to="/counties"
-              className={`px-4 py-2.5 rounded-[14px] text-base font-medium transition-all duration-200 ease-out ${
-                isDark
-                  ? "text-gold/80 hover:text-gold border border-gold/25 shadow-[0_2px_0_rgba(0,0,0,0.15),inset_0_1px_0_rgba(255,255,255,0.08)] hover:-translate-y-[2px] hover:border-gold/50 hover:shadow-[0_4px_0_rgba(0,0,0,0.15),0_6px_12px_rgba(0,0,0,0.1)]"
-                  : "text-gold-dark hover:text-gold border border-gold/30 bg-gradient-to-b from-white to-[#f0ede8] shadow-[0_2px_0_rgba(160,150,130,0.2),inset_0_1px_0_rgba(255,255,255,0.9)] hover:-translate-y-[2px] hover:border-gold/50 hover:shadow-[0_4px_0_rgba(160,150,130,0.2),0_6px_12px_rgba(0,0,0,0.05)]"
-              }`}
+              className="premium-pill-3d group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
             >
-              + All Counties →
+              <span className="premium-pill-3d__face text-base text-accent group-hover:text-foreground">
+                + All Counties →
+              </span>
             </Link>
           </div>
         </div>
