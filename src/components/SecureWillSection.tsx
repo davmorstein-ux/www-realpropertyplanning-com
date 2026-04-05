@@ -88,7 +88,7 @@ const SecureWillSection = () => {
 
         {/* Disclosure */}
         <div className="mt-14 pt-8 border-t border-border/50 max-w-3xl mx-auto">
-          <p className="text-sm sm:text-[15px] text-muted-foreground/80 leading-relaxed mb-3">
+          <p className="text-sm sm:text-[15px] text-foreground/55 leading-relaxed mb-3">
             Real Property Planning provides access to this storage solution as a convenience only and does not create, review, or validate the contents of any uploaded will.
           </p>
           <p className="text-sm sm:text-[15px] text-muted-foreground/80 leading-relaxed">
