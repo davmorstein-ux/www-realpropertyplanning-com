@@ -17,6 +17,7 @@ import iconDivorce from "@/assets/icons/icon-divorce-3d.png";
 import iconElderLaw from "@/assets/icons/icon-elder-law-3d.png";
 import iconEstatePlanning from "@/assets/icons/icon-estate-planning-3d.png";
 import iconFamilyLaw from "@/assets/icons/icon-family-law-3d.png";
+import iconRealEstateAttorney from "@/assets/icons/icon-real-estate-attorney.png";
 import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 import ClientReviewsSection from "@/components/ClientReviewsSection";
