@@ -260,6 +260,10 @@ const Wills = () => {
             </div>
           </section>
 
+
+          {/* Secure Will Vault */}
+          <SecureWillSection />
+
           {/* FAQ */}
           <section className="py-16 sm:py-20 bg-background">
             <div className="mx-auto max-w-3xl px-6">
