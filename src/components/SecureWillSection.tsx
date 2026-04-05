@@ -64,12 +64,12 @@ const SecureWillSection = () => {
 
             {/* CTA */}
             <div className="flex flex-col items-center lg:items-start gap-4">
-              <a
-                href="#"
+              <button
+                onClick={() => setWizardOpen(true)}
                 className="secure-will-cta inline-flex items-center justify-center px-10 py-5 rounded-xl text-xl sm:text-2xl font-bold text-white transition-all duration-200"
               >
                 Secure Your Will Now
-              </a>
+              </button>
               <p className="text-sm sm:text-base text-muted-foreground italic max-w-md">
                 No pressure. Secure, private, and accessible only to you and those you trust.
               </p>
