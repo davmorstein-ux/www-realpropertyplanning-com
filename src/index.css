@@ -575,7 +575,7 @@ html, body {
   max-height: 50% !important;
 }
 .attorney-tiles-grid .premium-tile:nth-child(6) h3 {
-  margin-top: 0.1rem !important;
+  margin-top: 0.2rem !important;
 }
 
 @media (min-width: 640px) {
