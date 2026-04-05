@@ -52,7 +52,7 @@ const RelatedServices = ({ currentPath }: RelatedServicesProps) => {
                 </div>
                 <div className="flex items-center gap-1.5 mt-4 text-accent/60 group-hover:text-gold transition-colors text-sm">
                   <span>Learn more</span>
-                  <img src={iconArrowRight3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain" loading="lazy" />
+                  <img src={iconArrowRight3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain transition-transform duration-300 ease-out group-hover:translate-x-1" loading="lazy" />
                 </div>
               </Link>
             ))}

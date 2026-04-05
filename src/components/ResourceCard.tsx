@@ -36,7 +36,7 @@ const ResourceCard = ({
             {description}
           </p>
           <span className="inline-flex items-center gap-1.5 text-accent/60 group-hover:text-gold transition-colors text-sm">
-            Read more <img src={iconArrowRight3d} alt="" aria-hidden="true" className="w-3.5 h-3.5 object-contain" loading="lazy" />
+            Read more <img src={iconArrowRight3d} alt="" aria-hidden="true" className="w-3.5 h-3.5 object-contain transition-transform duration-300 ease-out group-hover:translate-x-1" loading="lazy" />
           </span>
         </div>
       </div>
