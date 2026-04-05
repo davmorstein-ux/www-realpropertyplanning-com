@@ -575,13 +575,10 @@ html, body {
 .attorney-tiles-grid .premium-tile h3 {
   margin-top: -0.2rem !important;
 }
-/* Real Estate Attorneys tile: scale up icon to match other tiles' visual footprint */
+/* Real Estate Attorneys tile: widen icon container so height matches other square icons */
 .attorney-tiles-grid .premium-tile:nth-child(6) .tile-icon {
-  width: 62% !important;
-  max-height: 50% !important;
-}
-.attorney-tiles-grid .premium-tile:nth-child(6) h3 {
-  margin-top: 0.2rem !important;
+  width: 58% !important;
+  max-height: 38% !important;
 }
 
 @media (min-width: 640px) {
