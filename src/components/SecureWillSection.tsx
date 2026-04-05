@@ -18,50 +18,34 @@ const SecureWillSection = () => {
     <>
     <section className="py-16 sm:py-24 bg-gradient-to-b from-secondary via-background to-secondary">
       <div className="mx-auto max-w-6xl px-6">
-        {/* Desktop: side-by-side | Mobile: stacked image-on-top */}
-        <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
-          {/* Image – shows first on mobile, right on desktop via order */}
-          <div className="w-full lg:w-5/12 flex justify-center lg:order-2">
-            <div className="relative w-64 sm:w-72 lg:w-[340px] will-vault-float">
-              <img
-                src={willVaultIcon}
-                alt="Secure blockchain will vault with permanent time-stamp seal"
-                className="w-full drop-shadow-2xl"
-                loading="lazy"
-              />
-              {/* Clickable START button overlay – positioned over the gold START area */}
-              <button
-                onClick={() => setWizardOpen(true)}
-                className="absolute bottom-[4%] left-1/2 -translate-x-1/2 w-[40%] h-[8%] cursor-pointer rounded-md bg-transparent hover:bg-white/10 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary/50"
-                aria-label="Start secure will upload"
-              />
-            </div>
-          </div>
+        {/* Headline + body text – full width */}
+        <div className="text-center lg:text-left max-w-4xl">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-foreground leading-tight mb-5">
+            Secure Your Will. Protect Your Legacy.
+          </h2>
 
-          {/* Text content */}
-          <div className="w-full lg:w-7/12 lg:order-1 text-center lg:text-left">
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-foreground leading-tight mb-5">
-              Secure Your Will. Protect Your Legacy.
-            </h2>
+          <p className="text-lg sm:text-xl font-semibold text-foreground/90 leading-relaxed mb-6">
+            Upload and securely store your will in the blockchain cloud — ensuring easy, reliable access for you and your loved ones, now and in the future.
+          </p>
 
-            <p className="text-lg sm:text-xl font-semibold text-foreground/90 leading-relaxed mb-6">
-              Upload and securely store your will in the blockchain cloud — ensuring easy, reliable access for you and your loved ones, now and in the future.
-            </p>
+          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-4">
+            Your last will &amp; testament is one of the most important documents you will ever create. This secure digital storage solution allows you to upload your will to a blockchain-backed system where it is time-stamped, authenticated, and safely preserved.
+          </p>
 
-            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-4">
-              Your last will &amp; testament is one of the most important documents you will ever create. This secure digital storage solution allows you to upload your will to a blockchain-backed system where it is time-stamped, authenticated, and safely preserved.
-            </p>
+          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-4">
+            Once stored, your document cannot be altered, lost, or misplaced. Access is controlled entirely by a private digital key — ensuring that only you, or those you authorize, can retrieve it when needed.
+          </p>
 
-            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-4">
-              Once stored, your document cannot be altered, lost, or misplaced. Access is controlled entirely by a private digital key — ensuring that only you, or those you authorize, can retrieve it when needed.
-            </p>
+          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-10">
+            This creates a single, reliable source of truth — giving you and your loved ones confidence in knowing exactly where to find your will and that it is the correct, verified version.
+          </p>
+        </div>
 
-            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-8">
-              This creates a single, reliable source of truth — giving you and your loved ones confidence in knowing exactly where to find your will and that it is the correct, verified version.
-            </p>
-
-            {/* Bullets */}
-            <ul className="space-y-3 mb-10 inline-block text-left">
+        {/* Bullets + Icon – side by side on desktop, stacked on mobile */}
+        <div className="flex flex-col lg:flex-row items-center lg:items-center gap-8 lg:gap-16 mb-10">
+          {/* Bullets – left on desktop */}
+          <div className="w-full lg:w-1/2">
+            <ul className="space-y-4 inline-block text-left">
               {bullets.map((text) => (
                 <li key={text} className="flex items-center gap-3">
                   <GoldCheck3D size={22} className="shrink-0" />
@@ -69,20 +53,37 @@ const SecureWillSection = () => {
                 </li>
               ))}
             </ul>
+          </div>
 
-            {/* CTA */}
-            <div className="flex flex-col items-center lg:items-start gap-4">
+          {/* Icon – right on desktop, below bullets on mobile */}
+          <div className="w-full lg:w-1/2 flex justify-center">
+            <div className="relative w-56 sm:w-64 lg:w-[300px] will-vault-float">
+              <img
+                src={willVaultIcon}
+                alt="Secure blockchain will vault with permanent time-stamp seal"
+                className="w-full drop-shadow-2xl"
+                loading="lazy"
+              />
               <button
                 onClick={() => setWizardOpen(true)}
-                className="secure-will-cta inline-flex items-center justify-center px-10 py-5 rounded-xl text-xl sm:text-2xl font-bold text-white transition-all duration-200"
-              >
-                Secure Your Will Now
-              </button>
-              <p className="text-sm sm:text-base text-muted-foreground italic max-w-md">
-                No pressure. Secure, private, and accessible only to you and those you trust.
-              </p>
+                className="absolute bottom-[4%] left-1/2 -translate-x-1/2 w-[40%] h-[8%] cursor-pointer rounded-md bg-transparent hover:bg-white/10 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary/50"
+                aria-label="Start secure will upload"
+              />
             </div>
           </div>
+        </div>
+
+        {/* CTA */}
+        <div className="flex flex-col items-center lg:items-start gap-4">
+          <button
+            onClick={() => setWizardOpen(true)}
+            className="secure-will-cta inline-flex items-center justify-center px-10 py-5 rounded-xl text-xl sm:text-2xl font-bold text-white transition-all duration-200"
+          >
+            Secure Your Will Now
+          </button>
+          <p className="text-sm sm:text-base text-muted-foreground italic max-w-md">
+            No pressure. Secure, private, and accessible only to you and those you trust.
+          </p>
         </div>
 
         {/* Disclosure */}
