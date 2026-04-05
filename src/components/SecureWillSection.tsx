@@ -24,19 +24,19 @@ const SecureWillSection = () => {
             Secure Your Will. Protect Your Legacy.
           </h2>
 
-          <p className="text-lg sm:text-xl font-semibold text-foreground/90 leading-relaxed mb-6">
+          <p className="text-lg sm:text-xl font-semibold text-foreground leading-relaxed mb-6">
             Upload and securely store your will in the blockchain cloud — ensuring easy, reliable access for you and your loved ones, now and in the future.
           </p>
 
-          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-4">
+          <p className="text-base sm:text-lg text-foreground/80 leading-relaxed mb-4">
             Your last will &amp; testament is one of the most important documents you will ever create. This secure digital storage solution allows you to upload your will to a blockchain-backed system where it is time-stamped, authenticated, and safely preserved.
           </p>
 
-          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-4">
+          <p className="text-base sm:text-lg text-foreground/80 leading-relaxed mb-4">
             Once stored, your document cannot be altered, lost, or misplaced. Access is controlled entirely by a private digital key — ensuring that only you, or those you authorize, can retrieve it when needed.
           </p>
 
-          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-10">
+          <p className="text-base sm:text-lg text-foreground/80 leading-relaxed mb-10">
             This creates a single, reliable source of truth — giving you and your loved ones confidence in knowing exactly where to find your will and that it is the correct, verified version.
           </p>
         </div>
@@ -81,17 +81,17 @@ const SecureWillSection = () => {
           >
             Secure Your Will Now
           </button>
-          <p className="text-sm sm:text-base text-muted-foreground italic max-w-md">
+          <p className="text-sm sm:text-base text-foreground/60 italic max-w-md">
             No pressure. Secure, private, and accessible only to you and those you trust.
           </p>
         </div>
 
         {/* Disclosure */}
         <div className="mt-14 pt-8 border-t border-border/50 max-w-3xl mx-auto">
-          <p className="text-sm sm:text-[15px] text-muted-foreground/80 leading-relaxed mb-3">
+          <p className="text-sm sm:text-[15px] text-foreground/55 leading-relaxed mb-3">
             Real Property Planning provides access to this storage solution as a convenience only and does not create, review, or validate the contents of any uploaded will.
           </p>
-          <p className="text-sm sm:text-[15px] text-muted-foreground/80 leading-relaxed">
+          <p className="text-sm sm:text-[15px] text-foreground/55 leading-relaxed">
             Once a document is uploaded, access is controlled exclusively by the holder(s) of the private digital key. Real Property Planning does not have access to, custody of, or the ability to retrieve your documents.
           </p>
         </div>
