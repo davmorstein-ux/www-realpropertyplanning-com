@@ -10,6 +10,7 @@ import MidPageCTA from "@/components/MidPageCTA";
 import PageFAQ from "@/components/PageFAQ";
 import ProfessionalConfidence from "@/components/ProfessionalConfidence";
 import ProofCallout from "@/components/ProofCallout";
+import tileShell from "@/assets/tile-shell.png";
 import iconProbate from "@/assets/icons/icon-probate-sales.png";
 import iconExecutors from "@/assets/icons/icon-executors.png";
 import iconDivorce from "@/assets/icons/icon-divorce-3d.png";
