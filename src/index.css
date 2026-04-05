@@ -560,6 +560,10 @@ html, body {
     transform: scale(1.1) !important;
     transform-origin: top center !important;
   }
+  /* The Process tile: grow upward to reduce headspace */
+  .premium-tile[data-tile-name="the-process"] .tile-icon {
+    transform-origin: bottom center !important;
+  }
   /* Reset for attorney tiles so they aren't affected */
   .attorney-tiles-grid .premium-tile .tile-icon {
     transform: none !important;
