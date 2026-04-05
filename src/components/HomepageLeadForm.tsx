@@ -73,7 +73,7 @@ const HomepageLeadForm = () => {
       <form className="space-y-5" onSubmit={handleSubmit}>
         <input type="hidden" name="source_page" value={typeof window !== "undefined" ? window.location.pathname : ""} />
         <div>
-          <label className="block text-[15px] font-medium text-foreground mb-1.5">
+          <label className="block text-base font-medium text-foreground mb-1.5">
             Your Name <span className="text-destructive">*</span>
           </label>
           <input
