@@ -559,6 +559,17 @@ html, body {
   line-height: 0.92 !important;
 }
 
+/* Attorney tiles: vertically balance content within tile face */
+.attorney-tiles-grid .premium-tile > span {
+  transform: translateY(-7%) !important;
+}
+.attorney-tiles-grid .premium-tile .tile-icon {
+  margin-top: -3% !important;
+}
+.attorney-tiles-grid .premium-tile h3 {
+  margin-top: -0.2rem !important;
+}
+
 @media (min-width: 640px) {
   .premium-tile .tile-label-tight {
     font-size: 0.9rem !important;
