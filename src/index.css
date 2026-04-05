@@ -559,6 +559,9 @@ html, body {
   .attorney-tiles-grid .premium-tile h3 {
     font-size: 0.9rem !important;
   }
+  .attorney-tiles-grid .premium-tile:nth-child(6) h3 {
+    margin-top: 0.15rem !important;
+  }
 }
 /* Attorney tiles: tighten line spacing without changing font size */
 .attorney-tiles-grid .premium-tile h3 {
