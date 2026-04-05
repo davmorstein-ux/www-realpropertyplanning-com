@@ -32,7 +32,7 @@ const SecureWillSection = () => {
             Your last will &amp; testament is one of the most important documents you will ever create. This secure digital storage solution allows you to upload your will to a blockchain-backed system where it is time-stamped, authenticated, and safely preserved.
           </p>
 
-          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-4">
+          <p className="text-base sm:text-lg text-foreground/80 leading-relaxed mb-4">
             Once stored, your document cannot be altered, lost, or misplaced. Access is controlled entirely by a private digital key — ensuring that only you, or those you authorize, can retrieve it when needed.
           </p>
 
