@@ -16,7 +16,7 @@ const SecureWillSection = () => {
 
   return (
     <>
-    <section className="py-16 sm:py-24 bg-gradient-to-b from-secondary via-background to-secondary">
+    <section id="secure-will-section" className="py-16 sm:py-24 bg-gradient-to-b from-secondary via-background to-secondary">
       <div className="mx-auto max-w-6xl px-6">
         {/* Headline + body text – full width */}
         <div className="text-center lg:text-left max-w-4xl">
