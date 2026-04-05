@@ -66,7 +66,7 @@ const HomepageLeadForm = () => {
       <h3 className="font-serif text-2xl text-foreground font-semibold mb-2">
         Send a Message
       </h3>
-      <p className="text-muted-foreground text-[15px] leading-relaxed mb-6">
+      <p className="text-muted-foreground text-base leading-relaxed mb-6">
         Share a few details and David will follow up directly — usually within one business day.
       </p>
 
