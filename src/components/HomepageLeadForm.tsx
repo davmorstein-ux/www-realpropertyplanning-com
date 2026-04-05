@@ -135,8 +135,8 @@ const HomepageLeadForm = () => {
         </div>
 
         <div>
-          <label className="block text-[15px] font-medium text-foreground mb-1.5">
-            How did you find this site? <span className="text-muted-foreground text-sm font-normal">(optional)</span>
+          <label className="block text-base font-medium text-foreground mb-1.5">
+            How did you find this site? <span className="text-muted-foreground text-base font-normal">(optional)</span>
           </label>
           <select
             name="found_via"
