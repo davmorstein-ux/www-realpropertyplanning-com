@@ -725,3 +725,40 @@ html, body {
   height: 1px;
   background: linear-gradient(to right, transparent, hsl(var(--gold) / 0.18), transparent);
 }
+
+/* ═══════════════════════════════════════════════
+   SECURE WILL CTA BUTTON — 3D electric-blue
+═══════════════════════════════════════════════ */
+.secure-will-cta {
+  background: linear-gradient(180deg, #2563eb 0%, #1d4ed8 60%, #1e3a8a 100%);
+  box-shadow:
+    0 4px 0 0 #1e3a8a,
+    0 6px 16px rgba(30, 58, 138, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  border: 2px solid hsl(42 55% 62% / 0.5);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  transform: translateY(0);
+}
+.secure-will-cta:hover {
+  transform: translateY(2px);
+  box-shadow:
+    0 2px 0 0 #1e3a8a,
+    0 3px 8px rgba(30, 58, 138, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+.secure-will-cta:active {
+  transform: translateY(3px);
+  box-shadow:
+    0 1px 0 0 #1e3a8a,
+    0 1px 4px rgba(30, 58, 138, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Floating animation for will vault icon */
+@keyframes will-vault-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.will-vault-float {
+  animation: will-vault-float 4s ease-in-out infinite;
+}
