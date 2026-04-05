@@ -12,7 +12,10 @@ const bullets = [
 ];
 
 const SecureWillSection = () => {
+  const [wizardOpen, setWizardOpen] = useState(false);
+
   return (
+    <>
     <section className="py-16 sm:py-24 bg-gradient-to-b from-secondary via-background to-secondary">
       <div className="mx-auto max-w-6xl px-6">
         {/* Desktop: side-by-side | Mobile: stacked image-on-top */}
