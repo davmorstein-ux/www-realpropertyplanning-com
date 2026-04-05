@@ -471,6 +471,11 @@ html, body {
   a.premium-tile[data-tile-name="probate-sales"]:hover .tile-icon {
     transform: translateY(4%) scale(1.1) !important;
   }
+
+  /* Lower CPAs text to match Senior Moves — desktop only */
+  .premium-tile h3[data-tile-id="cpas"] {
+    margin-top: -0.5rem !important;
+  }
 }
 
 @media (min-width: 768px) {
