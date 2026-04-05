@@ -17,10 +17,10 @@ const ResourceCard = ({
   badge,
   icon,
 }: ResourceCardProps) => (
-  <Link to={linkTo} className="group block">
-    <div className="card-3d p-6 h-full">
+  <Link to={linkTo} className="card-3d group block">
+    <div className="p-6 h-full">
       <div className="flex items-start gap-4">
-        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-gold/10 mt-0.5">
+        <div className="flex h-12 w-12 shrink-0 items-center justify-center mt-0.5">
           {icon || <img src={iconDocument3d} alt="" aria-hidden="true" className="h-7 w-7 object-contain" loading="lazy" />}
         </div>
         <div className="min-w-0 flex-1">
