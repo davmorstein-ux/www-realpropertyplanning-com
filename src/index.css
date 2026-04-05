@@ -554,6 +554,11 @@ html, body {
   margin-top: 0.18rem !important;
 }
 
+/* Attorney tiles: tighten line spacing without changing font size */
+.premium-tile h3.attorney-tile-label {
+  line-height: 0.95 !important;
+}
+
 @media (min-width: 640px) {
   .premium-tile .tile-label-tight {
     font-size: 0.9rem !important;
