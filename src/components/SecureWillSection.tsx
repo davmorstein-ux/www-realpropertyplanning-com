@@ -81,7 +81,7 @@ const SecureWillSection = () => {
           >
             Secure Your Will Now
           </button>
-          <p className="text-sm sm:text-base text-muted-foreground italic max-w-md">
+          <p className="text-sm sm:text-base text-foreground/60 italic max-w-md">
             No pressure. Secure, private, and accessible only to you and those you trust.
           </p>
         </div>
