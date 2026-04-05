@@ -36,7 +36,7 @@ const SecureWillSection = () => {
             Once stored, your document cannot be altered, lost, or misplaced. Access is controlled entirely by a private digital key — ensuring that only you, or those you authorize, can retrieve it when needed.
           </p>
 
-          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-10">
+          <p className="text-base sm:text-lg text-foreground/80 leading-relaxed mb-10">
             This creates a single, reliable source of truth — giving you and your loved ones confidence in knowing exactly where to find your will and that it is the correct, verified version.
           </p>
         </div>
