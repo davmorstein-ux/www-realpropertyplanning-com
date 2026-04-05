@@ -7,7 +7,7 @@ import SEOHead from "@/components/SEOHead";
 import { realEstateAgentSchema } from "@/lib/schema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ChevronRight, Quote } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import iconEmail3d from "@/assets/icons/icon-email-3d.png";
 import iconLicense3d from "@/assets/icons/icon-license-3d.png";
 import iconAppraiser3d from "@/assets/icons/icon-appraiser-3d.png";
