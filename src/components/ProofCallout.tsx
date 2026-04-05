@@ -37,9 +37,9 @@ const ProofCallout = ({
       </p>
       <div className="flex items-center justify-between">
         <div>
-          <p className="font-semibold text-foreground text-sm">— {attribution}</p>
+          <p className="font-semibold text-foreground text-base">— {attribution}</p>
           {context && (
-            <p className="text-muted-foreground text-sm mt-0.5">{context}</p>
+            <p className="text-muted-foreground text-base mt-0.5">{context}</p>
           )}
         </div>
         <Link
