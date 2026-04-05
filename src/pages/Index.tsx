@@ -7,7 +7,7 @@ import SEOHead from "@/components/SEOHead";
 import { realEstateAgentSchema } from "@/lib/schema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight, ChevronRight, Quote } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import iconEmail3d from "@/assets/icons/icon-email-3d.png";
 import iconLicense3d from "@/assets/icons/icon-license-3d.png";
 import iconAppraiser3d from "@/assets/icons/icon-appraiser-3d.png";
@@ -16,7 +16,7 @@ import iconServiceProbate from "@/assets/icons/icon-service-probate.png";
 import iconServiceSenior from "@/assets/icons/icon-service-senior.png";
 import iconServiceValuation from "@/assets/icons/icon-service-valuation.png";
 import daveHeadshot2 from "@/assets/dave-headshot-2.jpg";
-import heroPnwHome from "@/assets/hero-pnw-home.jpg";
+import logo from "@/assets/logo-rpp.jpg";
 import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
 import expRealtyLogo from "@/assets/exp-realty-logo.png";
 import ServiceNavTiles from "@/components/ServiceNavTiles";
@@ -31,7 +31,6 @@ import TrustAndResults from "@/components/TrustAndResults";
 import MidPageCTA from "@/components/MidPageCTA";
 import EducationalPathways from "@/components/EducationalPathways";
 import SituationFinderBlock from "@/components/SituationFinderBlock";
-import ListenButton from "@/components/ListenButton";
 import GuidedEntryPanel from "@/components/GuidedEntryPanel";
 import StickyMobileCallButton from "@/components/StickyMobileCallButton";
 import WhatHappensNext from "@/components/WhatHappensNext";
@@ -44,21 +43,14 @@ const serviceAreas = [
 ];
 
 const homepageFaqs = [
-  { question: "Do I need probate before selling an inherited home in Washington?", answer: "It depends on how the property is titled and the estate structure. In many cases, probate or letters testamentary are required before a sale can proceed. Real Property Planning helps families and executors understand what's needed and how to move forward efficiently.", link: "/faq" },
-  { question: "What is probate real estate?", answer: "Probate real estate refers to property that must be sold as part of settling a deceased person's estate. The process involves court oversight, specific timelines, and legal requirements that differ from a standard home sale.", link: "/faq" },
-  { question: "Do I need a specialized agent to sell a probate property?", answer: "Yes — probate sales involve unique legal and procedural requirements. An agent with probate experience helps avoid costly delays, court complications, and pricing errors.", link: "/faq" },
-  { question: "What areas does David Stein serve?", answer: "David serves clients throughout Washington State, with deep experience in King, Snohomish, Pierce, Skagit, and Kitsap counties. Through eXp Realty's referral network, he can also connect clients with trusted brokers across the U.S. and internationally.", link: "/counties" },
-  { question: "What is the difference between a real estate broker and a certified appraiser?", answer: "A broker facilitates the sale of property, while a certified appraiser provides independent valuations. David holds both credentials, giving clients professional pricing insight grounded in appraisal methodology — not just market guesswork.", link: "/why-valuation-matters" },
-  { question: "Can you help if the property needs repairs before sale?", answer: "Yes. David advises families on whether to sell as-is or invest in targeted improvements, based on a valuation-informed analysis of likely return.", link: "/how-the-process-works" },
-  { question: "How do senior transitions work?", answer: "David helps families coordinate the sale of a longtime family home when a senior is moving to assisted living, independent living, or a smaller residence — with sensitivity to emotional and logistical complexity.", link: "/senior-transitions" },
-  { question: "Do you work with attorneys and fiduciaries?", answer: "Yes. David regularly works alongside probate attorneys, estate attorneys, trustees, and professional fiduciaries to ensure the real estate component of estate administration is handled accurately and efficiently.", link: "/for-attorneys" },
-  { question: "How is an estate property priced?", answer: "David uses his background as a certified residential appraiser to inform pricing — evaluating condition, comparable sales, and market trends to set a defensible and competitive list price.", link: "/why-valuation-matters" },
-];
-
-const testimonials = [
-  { text: "David guided our family through a very difficult time with professionalism and genuine compassion. His valuation perspective and market knowledge were incredibly helpful.", attribution: "— Estate Attorney, Seattle" },
-  { text: "We didn't know where to start. David made the entire process manageable and kept us informed every step of the way.", attribution: "— Executor, Snohomish County" },
-  { text: "David's dual background in brokerage and appraisal gave us confidence that the property was priced correctly. He made a complicated situation feel manageable.", attribution: "— Family Member, King County" },
+  { question: "Do I need probate before selling an inherited home?", answer: "It depends on how the property is titled. In many cases, probate or letters testamentary are required before a sale can proceed.", link: "/faq" },
+  { question: "What is probate real estate?", answer: "Property that must be sold as part of settling a deceased person's estate. The process involves court oversight and specific legal requirements.", link: "/faq" },
+  { question: "Do I need a specialized agent for a probate sale?", answer: "Yes — probate sales have unique legal and procedural requirements. An experienced agent helps avoid delays and pricing errors.", link: "/faq" },
+  { question: "What areas do you serve?", answer: "Washington State, with deep experience in King, Snohomish, Pierce, Skagit, and Kitsap counties. Referral connections available nationwide through eXp Realty.", link: "/counties" },
+  { question: "What's the difference between a broker and a certified appraiser?", answer: "A broker facilitates sales. A certified appraiser provides independent valuations. David holds both credentials.", link: "/why-valuation-matters" },
+  { question: "Can you help if the property needs repairs?", answer: "Yes. David advises whether to sell as-is or invest in targeted improvements based on a valuation-informed analysis.", link: "/how-the-process-works" },
+  { question: "How do senior transitions work?", answer: "David coordinates the sale of a longtime family home when a senior is moving — with patience for the emotional and logistical complexity.", link: "/senior-transitions" },
+  { question: "Do you work with attorneys and fiduciaries?", answer: "Yes. David works alongside probate attorneys, estate attorneys, trustees, and professional fiduciaries regularly.", link: "/for-attorneys" },
 ];
 
 const jsonLd = realEstateAgentSchema;
@@ -86,160 +78,156 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-cream">
       <SEOHead
-        title="Probate, Estate & Senior Transition Real Estate | David Stein | Washington State"
-        description="David Stein is a Washington State real estate broker specializing in probate, estate, and senior transition real estate — with a strong focus in Western Washington and the Puget Sound region. Referral connections available nationwide and internationally through eXp Realty."
+        title="Real Property Planning | Probate, Estate & Senior Transition Guidance | Washington State"
+        description="Real Property Planning provides expert real estate guidance for probate, estate, inherited property, and senior transitions across Washington State. Led by David Stein — broker and certified appraiser."
         jsonLd={jsonLd}
       />
       <Header />
 
       {/* ═══════════════════════════════════════════════════
-          HERO — Full-width PNW home with overlay panel
+          1. BRAND INTRO — Short, clear, hub-focused
       ═══════════════════════════════════════════════════ */}
-      <section className="relative min-h-[80vh] flex items-center">
-        {/* Background image */}
-        <img
-          src={heroPnwHome}
-          alt="Beautiful Pacific Northwest home surrounded by trees"
-          className="absolute inset-0 w-full h-full object-cover"
-          loading="eager"
-          width={1920}
-          height={1080}
-        />
-        <div className="absolute inset-0 bg-black/40" />
-
-        <div className="container relative z-10 px-6 lg:px-8 py-24 lg:py-32 flex flex-col items-center text-center">
-          <div className="max-w-3xl">
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-[54px] font-bold leading-[1.1] text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6), 0 4px 16px rgba(0,0,0,0.3), 0 0 40px rgba(0,0,0,0.2)' }}>
-              Real Estate Guidance for Probate, Inherited Property &amp; Life Transitions
-            </h1>
-          </div>
-          <a href="tel:+12069003015" className="mt-10">
-            <Button
-              variant="gold"
-              size="lg"
-              className="px-10 py-5 h-auto text-lg tracking-wide"
-            >
-              <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
-              Call (206) 900-3015
-            </Button>
-          </a>
-          <Link
-            to="/contact"
-            className="mt-5 relative overflow-hidden inline-flex items-center justify-center rounded-[12px] px-8 py-4 min-h-[56px] font-bold text-lg tracking-[0.01em] text-white no-underline transition-all duration-200 ease-out bg-gradient-to-b from-[#1a6b6a] to-[#144f4e] border border-[rgba(10,60,58,0.5)] shadow-[0_3px_0_rgba(10,50,48,0.7),0_8px_18px_rgba(0,0,0,0.16),inset_0_1px_0_rgba(255,255,255,0.18),inset_0_-1px_0_rgba(5,30,28,0.2)] hover:-translate-y-[2px] hover:brightness-[1.06] hover:shadow-[0_5px_0_rgba(10,50,48,0.7),0_12px_24px_rgba(0,0,0,0.2),inset_0_1px_0_rgba(255,255,255,0.18)] active:translate-y-[1px] active:shadow-[0_2px_0_rgba(10,50,48,0.7),0_4px_10px_rgba(0,0,0,0.14)] focus-visible:outline focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[rgba(46,82,161,0.35)]"
-          >
-            <span className="pointer-events-none absolute left-[8%] top-0 h-[46%] w-[84%] rounded-full bg-gradient-to-b from-white/20 to-white/0" />
-            <span className="relative z-10">Request a Call Back</span>
-          </Link>
-          <button
-            onClick={() => document.getElementById('guided-entry')?.scrollIntoView({ behavior: 'smooth' })}
-            className="mt-6 text-white/70 hover:text-white text-base underline underline-offset-4 decoration-white/30 hover:decoration-white/60 transition-colors cursor-pointer"
-          >
-            Not sure where to start?
-          </button>
-        </div>
-      </section>
-
-      {/* ═══════════════════════════════════════════════════
-          WHO WE CAN HELP + CTA — Consolidated dark section
-      ═══════════════════════════════════════════════════ */}
-      <section className="py-14 lg:py-20 bg-primary">
+      <section className="py-16 lg:py-24 bg-primary text-center">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center" id="who-we-help-section">
-            <div className="flex justify-center mb-5">
-              <ListenButton targetId="who-we-help-section" />
-            </div>
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] text-primary-foreground font-bold mb-5">
-              Who We Can Help
-            </h2>
-            <p className="text-primary-foreground/70 text-lg leading-relaxed max-w-3xl mx-auto mb-9">
-              Many of the people who reach out are in a situation they didn't plan for. A parent passed away. A trust needs to be settled. A family home needs to be dealt with — and no one is quite sure where to begin.
-            </p>
-            <ul className="space-y-3 text-left max-w-2xl mx-auto mb-8">
-              {[
-                "Executors and personal representatives who are suddenly responsible for a property — often while sorting through a house full of belongings, fielding calls from family, and trying to figure out what actually needs to happen first",
-                "Families with an inherited home and no clear plan — maybe one person wants to sell, another wants to wait, and no one knows what the property is really worth or what condition it's in",
-                "Seniors and their families facing a move from the home they've lived in for 30 or 40 years — where deciding what to keep, what to let go of, and where to go next can feel overwhelming all at once",
-                "Attorneys and fiduciaries who need someone to take the property piece off their plate entirely — handle the valuation, manage the preparation, coordinate the sale, and communicate clearly throughout",
-                "Out-of-state family members trying to manage everything from hundreds of miles away — relying on phone calls and emails, unable to check on the property, and unsure who to trust locally",
-              ].map((item, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <div className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
-                  <span className="text-primary-foreground/90 text-lg leading-relaxed">{item}</span>
-                </li>
-              ))}
-            </ul>
-            <p className="text-primary-foreground/70 text-lg leading-relaxed max-w-3xl mx-auto mb-10">
-              If any of that sounds like where you are right now, you don't need to have everything figured out before reaching out. Most people don't. They just need someone who has been through this many times and can help them see the path forward clearly.
+          <div className="max-w-3xl mx-auto">
+            <img
+              src={logo}
+              alt="Real Property Planning"
+              className="mx-auto w-[280px] md:w-[420px] lg:w-[520px] h-auto object-contain mb-8"
+              loading="eager"
+            />
+            <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.8rem] font-bold leading-[1.15] text-primary-foreground mb-5" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.3)' }}>
+              Guidance for Probate, Estate Property &amp; Life Transitions
+            </h1>
+            <p className="text-primary-foreground/80 text-xl leading-relaxed max-w-2xl mx-auto mb-10">
+              Find the right path based on your situation — whether you're an executor, attorney, family member, or professional advisor.
             </p>
 
-
-
-            {/* Premium gold divider */}
-            <div className="premium-divider my-14 lg:my-[72px]">
-              <span className="premium-divider-dot" />
-            </div>
-
-            <div className="text-primary-foreground/80 text-lg leading-[1.85] space-y-5 max-w-3xl mx-auto text-left" id="intro-section">
-              <p>
-                Real Property Planning works alongside attorneys, executors, trustees, and families navigating probate, inherited property, or senior transitions. These are situations where the real estate piece often becomes the hardest part — not because of the market, but because of the emotions, the logistics, and the number of moving pieces no one warned you about.
-              </p>
-              <p>
-                David Stein brings more than 20 years as both a licensed real estate broker and certified residential appraiser. That combination matters most in estate and transition situations — where pricing needs to hold up under legal scrutiny, not just look good on a listing sheet. His deepest experience is in Western Washington and the Puget Sound region.
-              </p>
-              <p>
-                When clients need help outside Washington, David connects them with trusted eXp Realty brokers across the country and internationally.
-              </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a href="tel:+12069003015">
+                <Button variant="gold" size="lg" className="px-10 py-5 h-auto text-lg tracking-wide">
+                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
+                  Call (206) 900-3015
+                </Button>
+              </a>
+              <Link
+                to="/contact"
+                className="relative overflow-hidden inline-flex items-center justify-center rounded-[12px] px-8 py-4 min-h-[56px] font-bold text-lg tracking-[0.01em] text-white no-underline transition-all duration-200 ease-out bg-gradient-to-b from-[#1a6b6a] to-[#144f4e] border border-[rgba(10,60,58,0.5)] shadow-[0_3px_0_rgba(10,50,48,0.7),0_8px_18px_rgba(0,0,0,0.16),inset_0_1px_0_rgba(255,255,255,0.18),inset_0_-1px_0_rgba(5,30,28,0.2)] hover:-translate-y-[2px] hover:brightness-[1.06] hover:shadow-[0_5px_0_rgba(10,50,48,0.7),0_12px_24px_rgba(0,0,0,0.2),inset_0_1px_0_rgba(255,255,255,0.18)] active:translate-y-[1px] active:shadow-[0_2px_0_rgba(10,50,48,0.7),0_4px_10px_rgba(0,0,0,0.14)]"
+              >
+                <span className="pointer-events-none absolute left-[8%] top-0 h-[46%] w-[84%] rounded-full bg-gradient-to-b from-white/20 to-white/0" />
+                <span className="relative z-10">Request a Call Back</span>
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
       {/* ═══════════════════════════════════════════════════
-          GUIDED ENTRY — "Not sure where to start?"
+          2. SERVICE NAV TILES — Role-based pathways, right near the top
+      ═══════════════════════════════════════════════════ */}
+      <ServiceNavTiles />
+
+      {/* ═══════════════════════════════════════════════════
+          3. GUIDED ENTRY — "Not sure where to start?"
       ═══════════════════════════════════════════════════ */}
       <GuidedEntryPanel />
 
       {/* ═══════════════════════════════════════════════════
-          SERVICE NAV TILES — Immediately after hero
+          4. SITUATION FINDER — Situation-based entry points
       ═══════════════════════════════════════════════════ */}
-      <ServiceNavTiles />
-
-      <StatewideSupport background="bg-cream" />
+      <SituationFinderBlock />
 
       {/* ═══════════════════════════════════════════════════
-          ABOUT DAVID — Two-column with headshot + credentials
+          5. WHAT WE DO — Three service cards
+      ═══════════════════════════════════════════════════ */}
+      <section className="py-16 lg:py-20 bg-warm-bg">
+        <div className="mx-auto max-w-[1100px] px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-base">
+              What We Do
+            </p>
+            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold">
+              Real Estate Services for Complex Situations
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                iconSrc: iconServiceProbate,
+                title: "Probate & Estate Sales",
+                body: "Guidance for executors and families navigating inherited homes, trust-owned property, and court-supervised sales.",
+                link: "/probate-estate-sales",
+              },
+              {
+                iconSrc: iconServiceSenior,
+                title: "Senior Transitions",
+                body: "Coordinating the sale of a longtime family home when a loved one is moving — with patience for the emotional side.",
+                link: "/senior-transitions",
+              },
+              {
+                iconSrc: iconServiceValuation,
+                title: "Valuation-Informed Pricing",
+                body: "Pricing grounded in certified appraisal methodology — not guesswork. Especially important in estate and fiduciary situations.",
+                link: "/why-valuation-matters",
+              },
+            ].map((card, i) => (
+              <Link key={i} to={card.link} className="card-3d group flex flex-col items-center text-center p-8">
+                <div className="mb-6 flex h-48 w-full items-center justify-center md:h-[13.5rem]">
+                  <img
+                    src={card.iconSrc}
+                    alt={card.title}
+                    className="block max-h-full max-w-[16.5rem] object-contain mix-blend-multiply mx-auto"
+                    loading="lazy"
+                  />
+                </div>
+                <h3 className="font-serif text-xl text-foreground font-semibold mb-3 group-hover:text-gold transition-colors">
+                  {card.title}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed text-base">
+                  {card.body}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════
+          6. ABOUT DAVID — The trusted expert behind the hub
       ═══════════════════════════════════════════════════ */}
       <section className="py-16 lg:py-20 bg-cream">
         <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center">
-          {/* 1. Headshot */}
+          <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-5 text-base">
+            Your Guide
+          </p>
+
+          {/* Headshot */}
           <div className="flex justify-center mb-5">
             <div className="w-56 h-56 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-gold/30 shadow-xl">
               <img
                 src={daveHeadshot2}
-                alt="David Stein, probate real estate specialist and certified appraiser"
+                alt="David Stein, President of Real Property Planning"
                 className="w-full h-full object-cover object-top"
                 loading="lazy"
               />
             </div>
           </div>
 
-          {/* 2. Name */}
+          {/* Name & Title */}
           <p className="text-2xl md:text-[1.65rem] font-bold text-foreground">David Stein</p>
-
-          {/* 3. Title */}
           <p className="text-lg md:text-xl font-semibold text-foreground/80 mt-1">President, Real Property Planning</p>
 
-          {/* 5. Experience text */}
+          {/* Short bio */}
           <div className="mt-8 text-left sm:text-center space-y-4 max-w-3xl mx-auto">
             <p className="text-muted-foreground text-lg leading-relaxed">
-              For over 20 years, David has worked as both a licensed real estate broker and certified residential appraiser — a combination that's uncommon in the industry. It means the pricing advice you get is grounded in professional methodology, not a best guess.
+              20+ years as both a licensed broker and certified residential appraiser. That combination means pricing advice grounded in professional methodology — not a best guess.
             </p>
-            <p className="text-muted-foreground text-base leading-relaxed">
-              His practice is focused on executors, attorneys, trustees, and families across Washington State, with his deepest roots in Western Washington and the Puget Sound region.
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              David works with executors, attorneys, trustees, and families across Washington State. His deepest roots are in Western Washington and the Puget Sound region.
             </p>
           </div>
 
-          {/* 6. Licensing */}
+          {/* Licensing */}
           <div className="mt-8 space-y-2">
             <p className="flex items-center justify-center text-base font-semibold text-foreground">
               <img src={iconLicense3d} alt="" aria-hidden="true" className="mr-3 h-10 w-10 shrink-0 object-contain" />
@@ -251,7 +239,7 @@ const Index = () => {
             </p>
           </div>
 
-          {/* 7. Phone + Email on one line */}
+          {/* Phone + Email */}
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-10 text-base text-muted-foreground">
             <a href="tel:2069003015" className="flex items-center gap-2 hover:text-gold transition-colors font-medium">
               <img src={iconPhone3d} alt="" aria-hidden="true" className="h-8 w-8 object-contain shrink-0" />
@@ -263,9 +251,8 @@ const Index = () => {
             </a>
           </div>
 
-          {/* 8–10. Centered lower block: brokerage row + memberships + badges */}
+          {/* Brokerage row */}
           <div className="mt-6 w-full flex flex-col items-center">
-            {/* 8. eXp logo + addresses + Equal Housing badge — 3-col grid for true centering */}
             <div className="w-full grid grid-cols-1 sm:grid-cols-[1fr_auto_1fr] items-center gap-6 sm:gap-4">
               <div className="flex items-center justify-center sm:justify-end">
                 <img src={expRealtyLogo} alt="eXp Realty" className="h-7 w-auto opacity-70" loading="lazy" />
@@ -279,77 +266,21 @@ const Index = () => {
               </div>
             </div>
 
-            {/* 9. Memberships heading with divider lines */}
+            {/* Memberships */}
             <div className="mt-12 mb-4 flex items-center justify-center gap-3 w-full max-w-xl">
               <div className="flex-1 h-px bg-gradient-to-r from-transparent via-muted-foreground/60 to-muted-foreground/60" />
               <p className="text-sm font-semibold uppercase tracking-[0.15em] text-muted-foreground whitespace-nowrap">Professional Memberships &amp; Affiliations</p>
               <div className="flex-1 h-px bg-gradient-to-l from-transparent via-muted-foreground/60 to-muted-foreground/60" />
             </div>
-
-            {/* 10. Badge row */}
             <AffiliationBadgeGrid />
           </div>
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════════════
-          SERVICES — Three warm cards
-      ═══════════════════════════════════════════════════ */}
-      <section className="py-16 lg:py-20 bg-warm-bg">
-        <div className="mx-auto max-w-[1100px] px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-base">
-              What We Do
-            </p>
-            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold">
-              Real Estate Services for Situations That Aren't Straightforward
-            </h2>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                iconSrc: iconServiceProbate,
-                title: "Probate & Estate Property Sales",
-                body: "When a property is tied to an estate, there are decisions most families haven't faced before — legal timelines, condition issues, family dynamics. David works with executors and families to navigate inherited homes, trust-owned real estate, and probate sales across Washington.",
-                link: "/probate-estate-sales",
-              },
-              {
-                iconSrc: iconServiceSenior,
-                title: "Senior Transitions & Downsizing",
-                body: "When a parent or loved one is leaving the home they've been in for 30 or 40 years, it's not a typical transaction. David works with families to coordinate the move, prepare the property, and manage the sale — with patience for the emotional side of it.",
-                link: "/senior-transitions",
-              },
-              {
-                iconSrc: iconServiceValuation,
-                title: "Valuation-Informed Strategy",
-                body: "Mispricing is one of the most costly mistakes in estate and senior sales — and it happens more often than people realize. David's appraisal background means pricing is grounded in real data, not guesswork or wishful thinking.",
-                link: "/why-valuation-matters",
-              },
-            ].map((card, i) => (
-              <Link key={i} to={card.link} className="card-3d group flex flex-col items-center text-center p-8">
-                  <div className="mb-6 flex h-48 w-full items-center justify-center md:h-[13.5rem]">
-                    <img
-                      src={card.iconSrc}
-                      alt={card.title}
-                      className="block max-h-full max-w-[16.5rem] object-contain mix-blend-multiply mx-auto"
-                      loading="lazy"
-                    />
-                  </div>
-                  <h3 className="font-serif text-xl text-foreground font-semibold mb-3 group-hover:text-gold transition-colors">
-                    {card.title}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed text-base">
-                    {card.body}
-                  </p>
-              
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      <StatewideSupport background="bg-cream" />
 
       {/* ═══════════════════════════════════════════════════
-          TRUST & RESULTS — Credentials, testimonials, case snapshots
+          TRUST & RESULTS
       ═══════════════════════════════════════════════════ */}
       <TrustAndResults />
 
@@ -367,10 +298,10 @@ const Index = () => {
           MID-PAGE CTA
       ═══════════════════════════════════════════════════ */}
       <MidPageCTA
-        heading="Have Questions About Your Situation?"
-        body="A short, no-pressure conversation to understand what you're facing and talk through next steps."
-        microcopy="Most people feel better just having a plan. Let's start there."
-        buttonText="Schedule a 20‑Minute Consultation"
+        heading="Have Questions?"
+        body="A short, no-pressure conversation to understand your situation and talk through next steps."
+        microcopy="Most people feel better just having a plan."
+        buttonText="Schedule a Conversation"
         variant="dark"
       />
 
@@ -380,26 +311,26 @@ const Index = () => {
       <OutOfStateBlock />
 
       {/* ═══════════════════════════════════════════════════
-          WHEN SHOULD YOU CALL ME
+          WHEN SHOULD YOU CALL
       ═══════════════════════════════════════════════════ */}
       <section className="py-16 lg:py-20 bg-cream">
         <div className="container px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-5">
-              When Should You Call Me?
+              When Should You Reach Out?
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-               In many cases, people don't call with a plan — they call because something happened and they're trying to figure out what comes next. That's usually the point where a conversation makes the biggest difference.
+              Most people don't call with a plan. They call because something happened and they need to figure out what comes next.
             </p>
             <ul className="space-y-4 mb-10">
               {[
                 "You've been named an executor and aren't sure where to start",
                 "You're handling an inherited home and need guidance",
-                "You're working with an attorney and real estate is part of the process",
-                "You're helping a parent or family member transition out of their home",
-                "You're trying to decide whether to sell as-is or make improvements",
-                "You want a clear understanding of what the property is worth",
-                "You simply want to talk through your situation before making any decisions",
+                "An attorney is involved and real estate is part of the process",
+                "A parent or family member is transitioning out of their home",
+                "You're deciding whether to sell as-is or make improvements",
+                "You want a clear picture of what the property is worth",
+                "You just want to talk through your situation first",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <GoldCheck3D size={20} className="mt-0.5" />
@@ -408,7 +339,7 @@ const Index = () => {
               ))}
             </ul>
             <Link to="/contact">
- <Button variant="gold" size="lg"className="hover:-light px-8 py-4 h-auto rounded-lg">
+              <Button variant="gold" size="lg" className="px-8 py-4 h-auto rounded-lg">
                 <img src={iconPhone3d} alt="" aria-hidden="true" className="w-10 h-10 mr-2.5 object-contain shrink-0" style={{ background: 'transparent' }} />
                 Schedule a Conversation
               </Button>
@@ -418,20 +349,14 @@ const Index = () => {
       </section>
 
       {/* ═══════════════════════════════════════════════════
-          SITUATION FINDER — Situation-based entry points
-      ═══════════════════════════════════════════════════ */}
-      <SituationFinderBlock />
-
-      {/* ═══════════════════════════════════════════════════
-          LEAD MAGNET — Executor checklist
+          LEAD MAGNET
       ═══════════════════════════════════════════════════ */}
       <LeadMagnetBlock />
 
       {/* ═══════════════════════════════════════════════════
-          AREAS SERVED — Navy background with county cards
+          AREAS SERVED
       ═══════════════════════════════════════════════════ */}
       <section className="py-16 lg:py-24 bg-navy relative overflow-hidden">
-        {/* Subtle PNW watermark */}
         <div className="absolute inset-0 opacity-[0.03]" style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath d='M100 20 L130 80 L160 140 H40 L70 80 Z' fill='%23fff'/%3E%3Cpath d='M100 50 L120 90 L140 130 H60 L80 90 Z' fill='%23fff'/%3E%3C/svg%3E")`,
           backgroundSize: '300px',
@@ -442,10 +367,10 @@ const Index = () => {
               Service Areas
             </p>
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-4">
-              Serving Clients Throughout Washington State
+              Serving Clients Across Washington State
             </h2>
             <p className="text-primary-foreground/60 text-lg max-w-3xl mx-auto leading-relaxed">
-              Based in Washington with deep experience across Western Washington and the Puget Sound region. Through eXp Realty's referral network, David can also connect clients with trusted brokers across the U.S. and internationally.
+              Based in Western Washington with referral connections nationwide through eXp Realty.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
@@ -465,7 +390,7 @@ const Index = () => {
           </div>
           <div className="text-center mt-10">
             <Link to="/counties">
- <Button variant="gold" size="lg"className="hover:-light focus-visible:ring-gold">
+              <Button variant="gold" size="lg" className="focus-visible:ring-gold">
                 View All Service Areas
                 <ChevronRight className="w-4 h-4 ml-1" />
               </Button>
@@ -475,24 +400,24 @@ const Index = () => {
       </section>
 
       {/* ═══════════════════════════════════════════════════
-          CONTACT — Navy/dark background with form
+          CONTACT
       ═══════════════════════════════════════════════════ */}
       <section className="py-20 lg:py-28 bg-navy-dark">
         <div className="mx-auto max-w-[1100px] px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
             {/* Left — Contact info */}
             <div>
-               <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
-                Most People Start With a Question, Not a Plan
-               </h2>
-               <p className="text-primary-foreground/75 text-lg leading-relaxed mb-4">
-                That's how most of David's client relationships begin — someone calls because a situation came up, there's a property involved, and they're not sure what comes first. A short conversation usually clears things up.
-               </p>
+              <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
+                Start With a Question, Not a Plan
+              </h2>
+              <p className="text-primary-foreground/75 text-lg leading-relaxed mb-4">
+                Most client relationships start the same way — someone calls because a situation came up and they're not sure what comes first. A short conversation usually clears things up.
+              </p>
               <p className="text-primary-foreground/60 text-lg leading-relaxed mb-3">
                 <strong className="text-primary-foreground/80">What happens next:</strong> David typically responds within one business day, often sooner.
               </p>
               <p className="text-primary-foreground/60 text-lg leading-relaxed mb-10">
-                The conversation is confidential, practical, and no-obligation. The goal is to understand your situation and talk through what makes sense.
+                Confidential. Practical. No obligation.
               </p>
 
               <div className="space-y-5">
@@ -525,17 +450,16 @@ const Index = () => {
               </div>
             </div>
 
-            {/* What Happens Next — reassurance panel */}
+            {/* What Happens Next */}
             <div className="mt-10">
               <WhatHappensNext variant="dark" />
             </div>
 
-            {/* Right — Lead capture form */}
+            {/* Lead capture form */}
             <HomepageLeadForm />
           </div>
         </div>
       </section>
-
 
       {/* ═══════════════════════════════════════════════════
           EDUCATIONAL PATHWAYS
@@ -552,7 +476,7 @@ const Index = () => {
               Common Questions
             </p>
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold">
-              Answers to Questions About Estate &amp; Inherited Property
+              Quick Answers About Estate &amp; Inherited Property
             </h2>
           </div>
           <div className="max-w-4xl mx-auto space-y-5">
