@@ -79,9 +79,10 @@ const Header = () => {
   };
 
   return (
+    <>
     <header
       data-nosnippet
-      className={`sticky top-0 z-50 bg-white border-b transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 bg-white border-b transition-all duration-300 ${
         scrolled
           ? "border-border shadow-[0_2px_10px_rgba(0,0,0,0.06)]"
           : "border-[hsl(0_0%_90%)]"
