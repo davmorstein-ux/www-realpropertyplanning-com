@@ -15,7 +15,7 @@ const ServiceNavTileCard = ({ tile }: { tile: ServiceTile }) => {
   return (
     <Link
       to={tile.href}
-      data-tile-name={tile.title === "Wills" ? "wills" : undefined}
+      data-tile-name={tile.title === "Wills" ? "wills" : tile.title === "Senior Moves" ? "senior-moves" : tile.title === "Probate Sales" ? "probate-sales" : tile.title === "The Process" ? "the-process" : tile.title === "Home Value" ? "home-value" : tile.title === "Lending" ? "lending" : undefined}
       className="premium-tile group relative block w-full text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 -my-[22%] -mx-[4%] scale-[1.45] sm:-my-[22%] sm:-mx-[6%] sm:scale-[1.588]"
     >
       {/* Shell image flows naturally — defines the tile size */}
