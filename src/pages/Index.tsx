@@ -31,6 +31,7 @@ import TrustAndResults from "@/components/TrustAndResults";
 import MidPageCTA from "@/components/MidPageCTA";
 import EducationalPathways from "@/components/EducationalPathways";
 import SituationFinderBlock from "@/components/SituationFinderBlock";
+import GuidedEntryPanel from "@/components/GuidedEntryPanel";
 import StickyMobileCallButton from "@/components/StickyMobileCallButton";
 import WhatHappensNext from "@/components/WhatHappensNext";
 
