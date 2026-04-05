@@ -129,8 +129,8 @@ html, body {
   /* Desktop: larger text for older readers */
   @media (min-width: 768px) {
     body {
-      font-size: 21px;
-      line-height: 1.9;
+      font-size: 22px;
+      line-height: 1.95;
     }
   }
 
