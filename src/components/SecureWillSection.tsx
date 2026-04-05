@@ -1,5 +1,7 @@
+import { useState } from "react";
 import willVaultIcon from "@/assets/icons/icon-will-vault-3d.png";
 import GoldCheck3D from "@/components/GoldCheck3D";
+import SecureWillWizard from "@/components/SecureWillWizard";
 
 const bullets = [
   "Secure blockchain storage",
