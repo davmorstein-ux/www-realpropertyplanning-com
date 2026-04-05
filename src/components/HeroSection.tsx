@@ -32,7 +32,7 @@ const HeroSection = () => {
               Specialized Guidance for Probate & Estate Property Sales
             </h1>
             
-            <p className="text-base md:text-lg text-primary-foreground/80 mb-8 leading-relaxed max-w-2xl" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.15)' }}>
+            <p className="text-lg md:text-xl text-primary-foreground/80 mb-8 leading-relaxed max-w-2xl" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.15)' }}>
               David Stein brings 20+ years of dual expertise as a licensed broker and certified appraiser — working with executors, attorneys, trustees, and families across Washington State.
             </p>
             
