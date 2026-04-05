@@ -50,7 +50,7 @@ const SituationFinderBlock = () => (
     <div className="container px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-10">
-          <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-sm">
+          <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-base">
             Find Your Situation
           </p>
           <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-4">
