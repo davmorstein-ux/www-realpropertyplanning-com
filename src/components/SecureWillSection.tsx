@@ -88,6 +88,8 @@ const SecureWillSection = () => {
         </div>
       </div>
     </section>
+    <SecureWillWizard open={wizardOpen} onOpenChange={setWizardOpen} />
+    </>
   );
 };
 
