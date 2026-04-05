@@ -209,7 +209,7 @@ const ForAttorneys = () => {
                     className="block h-auto w-full pointer-events-none select-none drop-shadow-[0_12px_24px_hsl(220_18%_20%/0.16)]"
                     draggable={false}
                   />
-                  <span className="absolute inset-[12%] flex flex-col items-center justify-center px-[6px] py-[4px] sm:px-[10px] sm:py-[6px] -translate-y-[10.2%]">
+                  <span className="absolute inset-[12%] flex flex-col items-center justify-center px-[6px] py-[4px] sm:px-[10px] sm:py-[6px] -translate-y-[4%]">
                     <img
                       src={tile.iconSrc}
                       alt=""
