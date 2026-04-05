@@ -66,7 +66,7 @@ const SituationFinderBlock = () => (
             <Link
               key={i}
               to={s.link}
-              className="group bg-card border border-border rounded-xl p-5 hover:border-gold/40 hover:shadow-md transition-all"
+              className="card-3d group p-5"
             >
               <div className="flex items-start gap-3">
                 <div className="mt-0.5 flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-gold/10">
