@@ -375,16 +375,14 @@ const Index = () => {
           </div>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {serviceAreas.map((area, i) => (
-              <Link key={i} to={area.href} className="card-3d group">
-                <div className="p-6">
-                  <div className="flex items-center gap-3 mb-3">
-                    <img src={mappin3d} alt="" aria-hidden="true" className="w-12 h-12 object-contain shrink-0" />
-                    <h3 className="font-serif text-xl text-foreground font-semibold group-hover:text-gold transition-colors">
-                      {area.county}
-                    </h3>
-                  </div>
-                  <p className="text-muted-foreground text-base">{area.cities}</p>
+              <Link key={i} to={area.href} className="card-3d group p-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <img src={mappin3d} alt="" aria-hidden="true" className="w-12 h-12 object-contain shrink-0" />
+                  <h3 className="font-serif text-xl text-foreground font-semibold group-hover:text-gold transition-colors">
+                    {area.county}
+                  </h3>
                 </div>
+                <p className="text-muted-foreground text-base">{area.cities}</p>
               </Link>
             ))}
           </div>
