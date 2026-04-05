@@ -5,6 +5,7 @@ import SEOHead from "@/components/SEOHead";
 import { articleSchema } from "@/lib/schema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
+import SecureWillSection from "@/components/SecureWillSection";
 import PageFAQ from "@/components/PageFAQ";
 import GoldCheck3D from "@/components/GoldCheck3D";
 import MidPageCTA from "@/components/MidPageCTA";
@@ -258,6 +259,10 @@ const Wills = () => {
               </div>
             </div>
           </section>
+
+
+          {/* Secure Will Vault */}
+          <SecureWillSection />
 
           {/* FAQ */}
           <section className="py-16 sm:py-20 bg-background">
