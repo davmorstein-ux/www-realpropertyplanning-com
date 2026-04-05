@@ -205,7 +205,7 @@ const ForAttorneys = () => {
                   <img
                     src={tile.iconSrc}
                     alt=""
-                    className="h-28 w-28 sm:h-32 sm:w-32 object-contain mix-blend-multiply"
+                    className="h-28 w-28 sm:h-32 sm:w-32 object-contain mix-blend-multiply transition-transform duration-300 ease-out group-hover:scale-110"
                     loading="lazy"
                   />
 
