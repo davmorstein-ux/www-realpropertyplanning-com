@@ -481,8 +481,8 @@ const Index = () => {
           </div>
           <div className="max-w-4xl mx-auto space-y-5">
             {homepageFaqs.map((faq, index) => (
-              <Link key={index} to={faq.link} className="block group">
-                <div className="bg-card p-6 rounded-xl border border-border hover:border-gold/30 transition-colors">
+              <Link key={index} to={faq.link} className="card-3d group block">
+                <div className="p-6">
                   <h3 className="font-serif text-lg text-foreground font-semibold mb-2 group-hover:text-gold transition-colors">
                     {faq.question}
                   </h3>

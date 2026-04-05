@@ -73,21 +73,23 @@ const EducationalPathways = ({
             <Link
               key={i}
               to={p.href}
-              className="group bg-card border border-border rounded-xl p-6 hover:border-gold/30 hover:shadow-md transition-all"
+              className="card-3d group block"
             >
-              <div className="flex items-start gap-3 mb-3">
-                <img src={iconBookOpen3d} alt="" aria-hidden="true" className="w-7 h-7 object-contain shrink-0 mt-0.5" loading="lazy" />
-                <h3 className="font-serif text-base text-foreground font-semibold leading-snug group-hover:text-gold transition-colors">
-                  {p.title}
-                </h3>
+              <div className="p-6">
+                <div className="flex items-start gap-3 mb-3">
+                  <img src={iconBookOpen3d} alt="" aria-hidden="true" className="w-7 h-7 object-contain shrink-0 mt-0.5" loading="lazy" />
+                  <h3 className="font-serif text-base text-foreground font-semibold leading-snug group-hover:text-gold transition-colors">
+                    {p.title}
+                  </h3>
+                </div>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-3 pl-10">
+                  {p.description}
+                </p>
+                <span className="inline-flex items-center text-sm font-medium text-primary group-hover:text-gold transition-colors pl-10">
+                  Read more
+                  <img src={iconArrowRight3d} alt="" aria-hidden="true" className="w-4 h-4 ml-1.5 object-contain group-hover:translate-x-1 transition-transform" loading="lazy" />
+                </span>
               </div>
-              <p className="text-muted-foreground text-sm leading-relaxed mb-3 pl-10">
-                {p.description}
-              </p>
-              <span className="inline-flex items-center text-sm font-medium text-primary group-hover:text-gold transition-colors pl-10">
-                Read more
-                <img src={iconArrowRight3d} alt="" aria-hidden="true" className="w-4 h-4 ml-1.5 object-contain group-hover:translate-x-1 transition-transform" loading="lazy" />
-              </span>
             </Link>
           ))}
         </div>

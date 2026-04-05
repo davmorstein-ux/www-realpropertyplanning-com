@@ -42,16 +42,18 @@ const AppraiserAdvantage = () => (
 
         <div className="grid md:grid-cols-2 gap-8">
           {advantages.map((item, i) => (
-            <div key={i} className="bg-card rounded-xl border border-border p-7">
-              <div className="flex items-start gap-4">
-                <GoldCheck3D size={22} className="mt-1 shrink-0" />
-                <div>
-                  <h3 className="font-serif text-lg text-foreground font-semibold mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-muted-foreground text-[15px] leading-relaxed">
-                    {item.description}
-                  </p>
+            <div key={i} className="card-3d">
+              <div className="p-7">
+                <div className="flex items-start gap-4">
+                  <GoldCheck3D size={22} className="mt-1 shrink-0" />
+                  <div>
+                    <h3 className="font-serif text-lg text-foreground font-semibold mb-2">
+                      {item.title}
+                    </h3>
+                    <p className="text-muted-foreground text-[15px] leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
