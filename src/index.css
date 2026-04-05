@@ -449,6 +449,28 @@ html, body {
   a.premium-tile[data-tile-name="wills"]:hover .tile-icon {
     transform: translateY(12%) scale(1.1) !important;
   }
+
+  /* Lower icons in 5 target tiles to match Attorneys top spacing — desktop only */
+  a.premium-tile[data-tile-name="senior-moves"] .tile-icon,
+  a.premium-tile[data-tile-name="the-process"] .tile-icon,
+  a.premium-tile[data-tile-name="home-value"] .tile-icon,
+  a.premium-tile[data-tile-name="lending"] .tile-icon {
+    transform: translateY(8%) !important;
+    transition: transform 0.3s ease-out !important;
+  }
+  a.premium-tile[data-tile-name="senior-moves"]:hover .tile-icon,
+  a.premium-tile[data-tile-name="the-process"]:hover .tile-icon,
+  a.premium-tile[data-tile-name="home-value"]:hover .tile-icon,
+  a.premium-tile[data-tile-name="lending"]:hover .tile-icon {
+    transform: translateY(8%) scale(1.1) !important;
+  }
+  a.premium-tile[data-tile-name="probate-sales"] .tile-icon {
+    transform: translateY(4%) !important;
+    transition: transform 0.3s ease-out !important;
+  }
+  a.premium-tile[data-tile-name="probate-sales"]:hover .tile-icon {
+    transform: translateY(4%) scale(1.1) !important;
+  }
 }
 
 @media (min-width: 768px) {
