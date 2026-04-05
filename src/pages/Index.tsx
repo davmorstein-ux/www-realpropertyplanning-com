@@ -171,23 +171,21 @@ const Index = () => {
                 link: "/why-valuation-matters",
               },
             ].map((card, i) => (
-              <Link key={i} to={card.link} className="card-3d group block">
-                <div className="flex flex-col items-center text-center p-8">
-                  <div className="mb-6 flex h-48 w-full items-center justify-center md:h-[13.5rem]">
-                    <img
-                      src={card.iconSrc}
-                      alt={card.title}
-                      className="block max-h-full max-w-[16.5rem] object-contain mix-blend-multiply mx-auto"
-                      loading="lazy"
-                    />
-                  </div>
-                  <h3 className="font-serif text-xl text-foreground font-semibold mb-3 group-hover:text-gold transition-colors">
-                    {card.title}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed text-base">
-                    {card.body}
-                  </p>
+              <Link key={i} to={card.link} className="card-3d group flex flex-col items-center text-center p-8">
+                <div className="mb-6 flex h-48 w-full items-center justify-center md:h-[13.5rem]">
+                  <img
+                    src={card.iconSrc}
+                    alt={card.title}
+                    className="block max-h-full max-w-[16.5rem] object-contain mix-blend-multiply mx-auto"
+                    loading="lazy"
+                  />
                 </div>
+                <h3 className="font-serif text-xl text-foreground font-semibold mb-3 group-hover:text-gold transition-colors">
+                  {card.title}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed text-base">
+                  {card.body}
+                </p>
               </Link>
             ))}
           </div>
