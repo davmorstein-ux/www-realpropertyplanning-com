@@ -66,9 +66,9 @@ const SituationFinderBlock = () => (
             <Link
               key={i}
               to={s.link}
-              className="card-3d group block"
+              className="card-3d group p-5"
             >
-              <div className="flex items-start gap-3 p-5">
+              <div className="flex items-start gap-3">
                 <div className="mt-0.5 flex h-11 w-11 shrink-0 items-center justify-center">
                   <img src={s.iconSrc} alt="" aria-hidden="true" className="h-7 w-7 object-contain" loading="lazy" />
                 </div>
