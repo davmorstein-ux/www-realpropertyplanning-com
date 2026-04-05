@@ -18,13 +18,13 @@ const ProofCallout = ({
 
   return (
     <div
-      className={`rounded-xl p-6 md:p-8 relative border-[1.5px] ${
+      className={`rounded-[18px] p-6 md:p-8 relative border-[1.5px] ${
         isAccent
-          ? "bg-gold/5 border-gold/25"
-          : "bg-secondary border-border/80"
+          ? "bg-gradient-to-b from-white via-[hsl(42,45%,98%)] to-[hsl(40,30%,95%)] border-[hsl(42_55%_52%/0.4)]"
+          : "bg-gradient-to-b from-white via-[hsl(40,25%,97%)] to-[hsl(38,18%,95%)] border-[hsl(42_55%_62%/0.4)]"
       }`}
       style={{
-        boxShadow: '0 4px 14px -2px rgba(0,0,0,0.08), 0 2px 6px -1px rgba(0,0,0,0.05), inset 0 1px 0 0 rgba(255,255,255,0.6)',
+        boxShadow: '0 6px 18px -4px rgba(0,0,0,0.10), 0 3px 8px -3px rgba(0,0,0,0.06), 0 1px 0 0 hsl(36 14% 85%), inset 0 1px 0 0 rgba(255,255,255,0.85), inset 0 -1px 2px 0 rgba(0,0,0,0.03)',
       }}
     >
       <Quote

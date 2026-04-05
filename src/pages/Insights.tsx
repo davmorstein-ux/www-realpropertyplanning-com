@@ -281,7 +281,7 @@ const Insights = () => {
                   <a
                     key={link.href}
                     href={link.href}
-                    className="inline-block px-5 py-2.5 rounded-full border border-border bg-card text-sm font-medium text-foreground hover:border-gold/40 hover:text-gold transition-colors"
+                    className="inline-block px-5 py-2.5 rounded-[14px] text-sm font-medium text-foreground transition-all duration-200 ease-out bg-gradient-to-b from-white to-[#f0ede8] border-[1.5px] border-[hsl(42_55%_62%/0.5)] shadow-[0_3px_0_rgba(160,150,130,0.3),0_6px_14px_rgba(0,0,0,0.06),inset_0_1px_0_rgba(255,255,255,0.9)] hover:-translate-y-[2px] hover:border-[hsl(42_60%_52%/0.6)] hover:shadow-[0_5px_0_rgba(160,150,130,0.3),0_10px_18px_rgba(0,0,0,0.08),inset_0_1px_0_rgba(255,255,255,0.9)] hover:text-gold active:translate-y-[1px] active:shadow-[0_1px_3px_rgba(0,0,0,0.08),inset_0_1px_2px_rgba(0,0,0,0.04)]"
                   >
                     {link.label}
                   </a>

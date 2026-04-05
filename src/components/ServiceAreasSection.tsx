@@ -39,7 +39,7 @@ const ServiceAreasSection = () => {
           {areas.map((area, index) => (
             <div 
               key={index}
-              className="bg-primary-foreground/5 border border-primary-foreground/10 rounded-lg p-8 hover:bg-primary-foreground/10 transition-colors"
+              className="rounded-[18px] p-8 transition-all duration-200 bg-gradient-to-b from-[rgba(255,255,255,0.08)] to-[rgba(255,255,255,0.03)] border-[1.5px] border-[rgba(255,255,255,0.12)] shadow-[0_4px_0_rgba(0,0,0,0.15),0_8px_20px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.12),inset_0_-1px_0_rgba(0,0,0,0.08)] hover:-translate-y-[2px] hover:border-gold/30 hover:shadow-[0_6px_0_rgba(0,0,0,0.15),0_12px_28px_rgba(0,0,0,0.15),inset_0_1px_0_rgba(255,255,255,0.12)]"
             >
               <div className="flex items-center gap-3 mb-4">
                 <img src={mappin3d} alt="" aria-hidden="true" className="w-7 h-7 object-contain shrink-0" />
