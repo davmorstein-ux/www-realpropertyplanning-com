@@ -87,7 +87,7 @@ const Counties = () => {
                 <div className="card-3d-premium__inner h-full">
                   <div className="card-3d-premium__face flex h-full flex-col px-7 py-7 md:px-8 md:py-8">
                     <div className="flex items-center gap-3 mb-4">
-                      <img src={mappin3d} alt="" aria-hidden="true" className="w-8 h-8 object-contain shrink-0" />
+                      <img src={mappin3d} alt="" aria-hidden="true" className="w-8 h-8 object-contain shrink-0 transition-transform duration-300 ease-out group-hover:scale-110" />
                       <h2 className="font-serif text-xl text-foreground font-semibold group-hover:text-gold transition-colors">
                         {card.county}
                       </h2>
