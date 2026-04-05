@@ -91,7 +91,7 @@ const SecureWillSection = () => {
           <p className="text-sm sm:text-[15px] text-foreground/55 leading-relaxed mb-3">
             Real Property Planning provides access to this storage solution as a convenience only and does not create, review, or validate the contents of any uploaded will.
           </p>
-          <p className="text-sm sm:text-[15px] text-muted-foreground/80 leading-relaxed">
+          <p className="text-sm sm:text-[15px] text-foreground/55 leading-relaxed">
             Once a document is uploaded, access is controlled exclusively by the holder(s) of the private digital key. Real Property Planning does not have access to, custody of, or the ability to retrieve your documents.
           </p>
         </div>
