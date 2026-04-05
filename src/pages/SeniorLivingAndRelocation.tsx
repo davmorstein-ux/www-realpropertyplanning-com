@@ -160,7 +160,7 @@ const SeniorLivingAndRelocation = () => {
                 {supportItems.map((item) => (
                   <div
                     key={item.title}
-                    className="bg-card border border-border rounded-xl px-6 py-6"
+                    className="card-3d px-6 py-6"
                   >
                     <h3 className="font-serif text-lg font-semibold text-foreground mb-2">
                       {item.title}

@@ -38,7 +38,7 @@ const RealClientSituations = ({
         </p>
         <div className="space-y-6">
           {studies.map((study, i) => (
-            <div key={i} className="bg-card border border-border rounded-xl p-6 md:p-8">
+            <div key={i} className="card-3d p-6 md:p-8">
               <div className="flex items-start justify-between gap-4 mb-5">
                 <h3 className="font-serif text-xl text-foreground font-semibold">
                   {study.title}

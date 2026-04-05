@@ -64,7 +64,7 @@ const ClientReviewsSection = ({
           {reviews.map((review, i) => (
             <div
               key={i}
-              className="bg-card border border-border rounded-xl p-6 md:p-7 relative flex flex-col"
+              className="card-3d p-6 md:p-7 relative flex flex-col"
             >
               <Quote className="w-8 h-8 text-gold/15 absolute top-6 right-6" />
 
