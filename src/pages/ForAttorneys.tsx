@@ -91,29 +91,34 @@ const attorneyCaseStudies = [
   },
 ];
 
-const attorneyTiles = [
+const attorneyTiles: ServiceTile[] = [
   {
     title: "Probate\nAttorneys",
+    subtitle: "",
     href: "/for-probate-attorneys",
     iconSrc: iconProbate,
   },
   {
     title: "Estate Planning\nAttorneys",
+    subtitle: "",
     href: "/for-estate-planning-attorneys",
     iconSrc: iconEstatePlanning,
   },
   {
     title: "Elder Law\nAttorneys",
+    subtitle: "",
     href: "/for-elder-law-attorneys",
     iconSrc: iconElderLaw,
   },
   {
     title: "Family Law\nAttorneys",
+    subtitle: "",
     href: "/for-family-law-attorneys",
     iconSrc: iconFamilyLaw,
   },
   {
     title: "Divorce\nAttorneys",
+    subtitle: "",
     href: "/for-divorce-attorneys",
     iconSrc: iconDivorce,
   },
