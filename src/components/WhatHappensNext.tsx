@@ -28,10 +28,10 @@ const WhatHappensNext = ({ variant = "light" }: WhatHappensNextProps) => {
   const isDark = variant === "dark";
 
   return (
-    <div className={`rounded-2xl border p-8 sm:p-10 ${
+    <div className={`rounded-[18px] border-[1.5px] p-8 sm:p-10 ${
       isDark
-        ? "bg-primary-foreground/5 border-primary-foreground/10"
-        : "bg-card border-border"
+        ? "bg-gradient-to-b from-[rgba(255,255,255,0.08)] to-[rgba(255,255,255,0.03)] border-[rgba(255,255,255,0.12)] shadow-[0_4px_14px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.1)]"
+        : "bg-gradient-to-b from-white via-[hsl(40,25%,97%)] to-[hsl(38,18%,95%)] border-[hsl(42_55%_62%/0.4)] shadow-[0_6px_18px_-4px_rgba(0,0,0,0.10),0_3px_8px_-3px_rgba(0,0,0,0.06),0_1px_0_0_hsl(36_14%_85%),inset_0_1px_0_0_rgba(255,255,255,0.85),inset_0_-1px_2px_0_rgba(0,0,0,0.03)]"
     }`}>
       <h3 className={`font-serif text-2xl font-semibold mb-2 ${
         isDark ? "text-primary-foreground" : "text-foreground"
