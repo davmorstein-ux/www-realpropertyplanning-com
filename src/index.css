@@ -555,8 +555,8 @@ html, body {
 }
 
 /* Attorney tiles: tighten line spacing without changing font size */
-.premium-tile h3.attorney-tile-label {
-  line-height: 0.95 !important;
+.attorney-tiles-grid .premium-tile h3 {
+  line-height: 0.92 !important;
 }
 
 @media (min-width: 640px) {
