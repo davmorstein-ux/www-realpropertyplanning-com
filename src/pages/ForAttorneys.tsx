@@ -12,7 +12,7 @@ import ProfessionalConfidence from "@/components/ProfessionalConfidence";
 import ProofCallout from "@/components/ProofCallout";
 import iconProbate from "@/assets/icons/icon-probate-sales.png";
 import iconExecutors from "@/assets/icons/icon-executors.png";
-import iconDivorce from "@/assets/icons/icon-divorce.png";
+import iconDivorce from "@/assets/icons/icon-divorce-3d.png";
 import iconSeniorMoves from "@/assets/icons/icon-senior-moves.png";
 import iconElderLaw from "@/assets/icons/icon-elder-law-3d.png";
 import iconFinancial from "@/assets/icons/icon-financial-planning.png";
