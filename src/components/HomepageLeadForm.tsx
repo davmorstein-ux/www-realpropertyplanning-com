@@ -86,7 +86,7 @@ const HomepageLeadForm = () => {
         </div>
 
         <div>
-          <label className="block text-[15px] font-medium text-foreground mb-1.5">
+          <label className="block text-base font-medium text-foreground mb-1.5">
             Email Address <span className="text-destructive">*</span>
           </label>
           <input
