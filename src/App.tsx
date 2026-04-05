@@ -13,6 +13,7 @@ import ForEstatePlanningAttorneys from "./pages/attorneys/ForEstatePlanningAttor
 import ForElderLawAttorneys from "./pages/attorneys/ForElderLawAttorneys";
 import ForFamilyLawAttorneys from "./pages/attorneys/ForFamilyLawAttorneys";
 import ForDivorceAttorneys from "./pages/attorneys/ForDivorceAttorneys";
+import ForRealEstateAttorneys from "./pages/attorneys/ForRealEstateAttorneys";
 import HowWeWork from "./pages/HowWeWork";
 import HowTheProcessWorks from "./pages/HowTheProcessWorks";
 import WhyValuationMatters from "./pages/WhyValuationMatters";
