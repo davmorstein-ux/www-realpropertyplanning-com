@@ -87,7 +87,7 @@ const GuidedEntryPanel = () => {
             ))}
           </div>
 
-          <p className="text-center text-muted-foreground text-sm mt-8">
+          <p className="text-center text-muted-foreground text-base mt-8">
             Still not sure? <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4 transition-colors">Just reach out</Link> — a short conversation is often the best place to start.
           </p>
         </div>

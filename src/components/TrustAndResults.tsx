@@ -158,19 +158,19 @@ const TrustAndResults = () => (
                 <div className="space-y-3">
                   <div>
                     <p className="text-xs font-bold uppercase tracking-wider text-gold mb-1">Situation</p>
-                    <p className="text-foreground text-sm leading-relaxed">{snap.situation}</p>
+                    <p className="text-foreground text-base leading-relaxed">{snap.situation}</p>
                   </div>
                   <div>
                     <p className="text-xs font-bold uppercase tracking-wider text-gold mb-1">Challenge</p>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{snap.challenge}</p>
+                    <p className="text-muted-foreground text-base leading-relaxed">{snap.challenge}</p>
                   </div>
                   <div>
                     <p className="text-xs font-bold uppercase tracking-wider text-gold mb-1">How David Helped</p>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{snap.howHelped}</p>
+                    <p className="text-muted-foreground text-base leading-relaxed">{snap.howHelped}</p>
                   </div>
                   <div className="pt-2 border-t border-border">
                     <p className="text-xs font-bold uppercase tracking-wider text-gold mb-1">Outcome</p>
-                    <p className="text-foreground text-sm leading-relaxed font-medium">{snap.outcome}</p>
+                    <p className="text-foreground text-base leading-relaxed font-medium">{snap.outcome}</p>
                   </div>
                 </div>
               </div>
