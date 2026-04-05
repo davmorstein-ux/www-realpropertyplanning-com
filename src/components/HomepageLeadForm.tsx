@@ -154,8 +154,8 @@ const HomepageLeadForm = () => {
         </div>
 
         <div>
-          <label className="block text-[15px] font-medium text-foreground mb-1.5">
-            Anything else? <span className="text-muted-foreground text-sm font-normal">(optional)</span>
+          <label className="block text-base font-medium text-foreground mb-1.5">
+            Anything else? <span className="text-muted-foreground text-base font-normal">(optional)</span>
           </label>
           <textarea
             name="notes"
