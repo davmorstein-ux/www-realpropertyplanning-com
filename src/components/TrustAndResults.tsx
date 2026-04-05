@@ -115,7 +115,7 @@ const TrustAndResults = () => (
                     <Star key={j} className="w-3.5 h-3.5 fill-gold text-gold" />
                   ))}
                 </div>
-                <p className="text-foreground text-[15px] leading-relaxed italic mb-5 pr-6">
+                <p className="text-foreground text-base leading-relaxed italic mb-5 pr-6">
                   "{t.text}"
                 </p>
                 <div className="border-t border-border pt-3">
