@@ -102,7 +102,7 @@ const attorneyTiles = [
   {
     title: "Elder Law\nAttorneys",
     href: "/for-elder-law-attorneys",
-    iconSrc: iconSeniorMoves,
+    iconSrc: iconElderLaw,
   },
   {
     title: "Family Law\nAttorneys",
