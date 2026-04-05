@@ -289,66 +289,97 @@ html, body {
 
 /* ═══════════════════════════════════════════════
    PREMIUM 3D SERVICE CARD — luxury horizontal link
-   Inspired by embossed ivory tile with gold inset trim
+   Multi-layer construction: outer body → gold trim → inner face
 ═══════════════════════════════════════════════ */
+
+/* OUTER BODY — the thick 3D shell with visible base/ledge */
 .card-3d-premium {
-  @apply relative cursor-pointer transition-all duration-200 overflow-hidden;
-  border-radius: 16px;
-  background: linear-gradient(180deg, hsl(40 30% 98%) 0%, hsl(38 22% 95%) 100%);
-  border: 1.5px solid hsl(38 25% 88%);
+  @apply relative cursor-pointer transition-all duration-200;
+  border-radius: 18px;
+  background: linear-gradient(180deg, hsl(40 20% 95%) 0%, hsl(38 15% 90%) 60%, hsl(36 12% 86%) 100%);
+  border: 1px solid hsl(38 18% 82%);
+  padding-bottom: 6px; /* creates the visible base/ledge */
   box-shadow:
-    0 6px 20px -4px rgba(0,0,0,0.10),
-    0 3px 8px -2px rgba(0,0,0,0.06),
-    0 1px 0 0 rgba(0,0,0,0.03),
-    inset 0 1px 0 0 rgba(255,255,255,0.9),
-    inset 0 -2px 0 0 rgba(0,0,0,0.03);
+    0 8px 24px -6px rgba(0,0,0,0.14),
+    0 4px 10px -3px rgba(0,0,0,0.08),
+    0 2px 4px -1px rgba(0,0,0,0.05),
+    inset 0 1px 0 0 rgba(255,255,255,0.7),
+    inset 0 -1px 0 0 rgba(0,0,0,0.06);
 }
 
-/* Gold inset trim — inner border accent */
+/* GOLD TRIM RING — visible gold border between outer body and inner face */
+.card-3d-premium .card-3d-premium__inner {
+  @apply relative;
+  border-radius: 13px;
+  border: 2px solid hsl(42 60% 62%);
+  box-shadow:
+    0 0 0 1px hsl(42 45% 75% / 0.5),
+    inset 0 0 0 1px hsl(42 50% 80% / 0.3);
+  overflow: hidden;
+}
+
+/* INNER FACE PANEL — the recessed white surface */
+.card-3d-premium .card-3d-premium__face {
+  @apply relative;
+  background: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(40 25% 98%) 100%);
+  border-radius: 11px;
+  box-shadow:
+    inset 0 2px 4px 0 rgba(255,255,255,0.9),
+    inset 0 -1px 3px 0 rgba(0,0,0,0.03);
+}
+
+/* Top-edge highlight on outer body */
 .card-3d-premium::before {
   content: '';
   position: absolute;
-  inset: 4px;
-  border-radius: 12px;
-  border: 1.5px solid hsl(42 55% 72% / 0.55);
+  top: 1px;
+  left: 8%;
+  right: 8%;
+  height: 2px;
+  border-radius: 9999px;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.8), transparent);
   pointer-events: none;
-  z-index: 1;
+  z-index: 2;
 }
 
-/* Top-edge bevel highlight */
+/* Bottom base shadow line for ledge effect */
 .card-3d-premium::after {
   content: '';
   position: absolute;
-  top: 2px;
-  left: 10%;
-  right: 10%;
-  height: 2px;
-  border-radius: 9999px;
-  background: linear-gradient(to right, transparent, rgba(255,255,255,0.7), transparent);
+  bottom: 0;
+  left: 4%;
+  right: 4%;
+  height: 6px;
+  border-radius: 0 0 14px 14px;
+  background: linear-gradient(180deg, transparent, hsl(36 12% 84%));
   pointer-events: none;
-  z-index: 1;
+  z-index: 0;
 }
 
 .card-3d-premium:hover {
   transform: translateY(-3px);
-  border-color: hsl(42 55% 68% / 0.6);
   box-shadow:
-    0 14px 32px -6px rgba(0,0,0,0.13),
-    0 6px 16px -4px rgba(0,0,0,0.08),
-    0 2px 0 0 rgba(0,0,0,0.02),
-    inset 0 1px 0 0 rgba(255,255,255,0.9),
-    inset 0 -2px 0 0 rgba(0,0,0,0.03);
+    0 14px 36px -8px rgba(0,0,0,0.16),
+    0 8px 16px -4px rgba(0,0,0,0.10),
+    0 3px 6px -2px rgba(0,0,0,0.06),
+    inset 0 1px 0 0 rgba(255,255,255,0.7),
+    inset 0 -1px 0 0 rgba(0,0,0,0.06);
 }
 
-.card-3d-premium:hover::before {
-  border-color: hsl(42 55% 65% / 0.7);
+.card-3d-premium:hover .card-3d-premium__inner {
+  border-color: hsl(42 65% 55%);
+  box-shadow:
+    0 0 0 1px hsl(42 50% 68% / 0.6),
+    inset 0 0 0 1px hsl(42 55% 75% / 0.4);
 }
 
 .card-3d-premium:active {
   transform: translateY(1px);
+  padding-bottom: 3px;
   box-shadow:
-    0 1px 4px -1px rgba(0,0,0,0.10),
-    inset 0 1px 3px 0 rgba(0,0,0,0.06);
+    0 2px 6px -2px rgba(0,0,0,0.12),
+    0 1px 3px -1px rgba(0,0,0,0.08),
+    inset 0 1px 2px 0 rgba(0,0,0,0.04);
 }
 
 /* ═══════════════════════════════════════════════
