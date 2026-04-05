@@ -143,22 +143,27 @@ html, body {
   /* Desktop-only large paragraph text */
   @media (min-width: 768px) {
     p, li, label, td, th, blockquote, figcaption {
-      font-size: 1.25rem !important;
-      line-height: 1.95 !important;
+      font-size: 1.3rem !important;
+      line-height: 2 !important;
     }
 
     p {
-      margin-bottom: 0.7em;
+      margin-bottom: 0.75em;
     }
 
     p + p {
-      margin-top: 0.85em;
+      margin-top: 0.9em;
     }
 
     /* Force common smaller text utilities to render larger on desktop */
     :where(.text-sm, .text-base, .text-lg, .text-\[15px\], .text-\[14px\], .text-\[13px\]) {
-      font-size: 1.25rem !important;
-      line-height: 1.95 !important;
+      font-size: 1.3rem !important;
+      line-height: 2 !important;
+    }
+
+    /* Ensure link text and span text also scale up */
+    a, span {
+      font-size: inherit;
     }
   }
 
