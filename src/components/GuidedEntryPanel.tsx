@@ -67,16 +67,9 @@ const GuidedEntryPanel = () => {
                 <div className="card-3d-premium__inner">
                   {/* Inner recessed face panel */}
                   <div className="card-3d-premium__face flex items-center gap-5 p-5 sm:p-6">
-                    {/* Icon well */}
-                    <div
-                      className="relative flex h-[56px] w-[56px] shrink-0 items-center justify-center rounded-xl"
-                      style={{
-                        background: 'linear-gradient(180deg, hsl(40 35% 97%) 0%, hsl(38 25% 93%) 100%)',
-                        border: '1.5px solid hsl(42 45% 78% / 0.5)',
-                        boxShadow: 'inset 0 1px 0 0 rgba(255,255,255,0.9), 0 2px 6px -2px rgba(0,0,0,0.08)',
-                      }}
-                    >
-                      <img src={opt.iconSrc} alt="" aria-hidden="true" className="h-8 w-8 object-contain" loading="lazy" />
+                    {/* Icon — standalone 3D, no background */}
+                    <div className="flex shrink-0 items-center justify-center w-[72px] sm:w-[80px]">
+                      <img src={opt.iconSrc} alt="" aria-hidden="true" className="h-14 w-14 sm:h-16 sm:w-16 object-contain drop-shadow-md" loading="lazy" />
                     </div>
 
                     {/* Text block */}
