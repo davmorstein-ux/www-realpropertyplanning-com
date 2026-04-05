@@ -44,7 +44,7 @@ const ProofCallout = ({
         </div>
         <Link
           to="/testimonials"
-          className="text-xs text-accent hover:text-gold underline underline-offset-4 transition-colors shrink-0 ml-4"
+          className="text-base text-accent hover:text-gold underline underline-offset-4 transition-colors shrink-0 ml-4"
         >
           More reviews →
         </Link>

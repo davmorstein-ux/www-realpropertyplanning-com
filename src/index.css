@@ -517,7 +517,7 @@ html, body {
    SECTION EYEBROW LABEL
 ═══════════════════════════════════════════════ */
 .section-eyebrow {
-  @apply text-gold font-bold tracking-[0.18em] uppercase text-sm mb-3;
+  @apply text-gold font-bold tracking-[0.18em] uppercase text-base mb-3;
 }
 
 /* ═══════════════════════════════════════════════

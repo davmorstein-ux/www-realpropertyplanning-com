@@ -32,10 +32,10 @@ const NextStepBlock = ({
               className="card-3d group flex items-center justify-between gap-4 p-5"
             >
               <div>
-                <h3 className="font-serif text-base font-medium text-foreground group-hover:text-gold transition-colors mb-1">
+                <h3 className="font-serif text-lg font-medium text-foreground group-hover:text-gold transition-colors mb-1">
                   {step.title}
                 </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <p className="text-muted-foreground text-base leading-relaxed">
                   {step.description}
                 </p>
               </div>
