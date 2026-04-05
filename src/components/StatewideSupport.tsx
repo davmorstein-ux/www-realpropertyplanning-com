@@ -75,7 +75,7 @@ const StatewideSupport = ({ background = "bg-secondary" }: StatewideSupportProps
             ))}
             <Link
               to="/counties"
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+              className={`px-4 py-2 rounded-full text-base font-medium transition-colors ${
                 isDark
                   ? "text-gold/80 hover:text-gold"
                   : "text-gold-dark hover:text-gold"

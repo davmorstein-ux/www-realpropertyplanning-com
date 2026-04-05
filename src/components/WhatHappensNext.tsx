@@ -58,7 +58,7 @@ const WhatHappensNext = ({ variant = "light" }: WhatHappensNextProps) => {
               }`}>
                 {step.title}
               </p>
-              <p className={`text-[15px] leading-relaxed ${
+              <p className={`text-base leading-relaxed ${
                 isDark ? "text-primary-foreground/75" : "text-muted-foreground"
               }`}>
                 {step.text}

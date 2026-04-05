@@ -175,7 +175,7 @@ const HomepageLeadForm = () => {
         </Button>
       </form>
 
-      <p className="text-muted-foreground/60 text-sm text-center mt-4">
+      <p className="text-muted-foreground/60 text-base text-center mt-4">
         David responds personally.
       </p>
     </div>

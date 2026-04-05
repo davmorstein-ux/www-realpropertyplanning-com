@@ -55,7 +55,7 @@ const WhatToExpect = () => (
             <h3 className="font-serif text-xl text-foreground font-semibold mb-3">
               {step.title}
             </h3>
-            <p className="text-muted-foreground text-[15px] leading-relaxed">
+            <p className="text-muted-foreground text-base leading-relaxed">
               {step.description}
             </p>
           </div>

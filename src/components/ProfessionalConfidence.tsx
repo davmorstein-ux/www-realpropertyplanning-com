@@ -52,8 +52,8 @@ const ProfessionalConfidence = ({
             <div key={i} className="flex items-start gap-3">
               <GoldCheck3D size={18} className="mt-1 shrink-0" />
               <div>
-                <p className="font-semibold text-foreground text-sm">{q.label}</p>
-                <p className="text-muted-foreground text-sm">{q.desc}</p>
+                <p className="font-semibold text-foreground text-base">{q.label}</p>
+                <p className="text-muted-foreground text-base leading-relaxed">{q.desc}</p>
               </div>
             </div>
           ))}
