@@ -201,21 +201,26 @@ const ForAttorneys = () => {
                 <Link
                   key={tile.href}
                   to={tile.href}
-                  className="card-3d group relative flex flex-col items-center justify-center gap-5 overflow-hidden px-8 py-10 text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                  className="premium-tile group relative block w-full text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                 >
-                  <span className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-foreground/[0.07] to-transparent" />
-                  <span className="pointer-events-none absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-transparent via-foreground/[0.10] to-transparent" />
-
                   <img
-                    src={tile.iconSrc}
+                    src={tileShell}
                     alt=""
-                    className="h-[193px] w-[193px] sm:h-[222px] sm:w-[222px] object-contain mix-blend-multiply transition-transform duration-300 ease-out group-hover:scale-110"
-                    loading="lazy"
+                    aria-hidden="true"
+                    className="block h-auto w-full pointer-events-none select-none drop-shadow-[0_12px_24px_hsl(220_18%_20%/0.16)]"
+                    draggable={false}
                   />
-
-                  <h3 className="font-serif text-[1.75rem] font-bold leading-[1.15] tracking-tight text-foreground lg:text-[2rem] whitespace-pre-line">
-                    {tile.title}
-                  </h3>
+                  <span className="absolute inset-[12%] flex flex-col items-center justify-center px-[10px] py-[6px] -translate-y-[10.2%]">
+                    <img
+                      src={tile.iconSrc}
+                      alt=""
+                      className="tile-icon mx-auto w-[45%] max-h-[38%] object-contain drop-shadow-lg transition-transform duration-300 ease-out group-hover:scale-110"
+                      loading="lazy"
+                    />
+                    <h3 className="-mt-6 max-w-[92%] text-center font-serif text-[0.8rem] font-bold leading-[1.15] tracking-tight text-foreground sm:text-[1.1rem] md:text-[1.3rem] lg:text-[1.5rem] xl:text-[1.8rem] whitespace-pre-line">
+                      {tile.title}
+                    </h3>
+                  </span>
                 </Link>
               ))}
             </div>
