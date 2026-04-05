@@ -108,7 +108,7 @@ const attorneyTiles = [
   {
     title: "Family Law\nAttorneys",
     href: "/for-family-law-attorneys",
-    iconSrc: iconTrustees,
+    iconSrc: iconFamilyLaw,
   },
   {
     title: "Divorce\nAttorneys",
