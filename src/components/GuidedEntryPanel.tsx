@@ -61,7 +61,7 @@ const GuidedEntryPanel = () => {
               <Link
                 key={i}
                 to={opt.href}
-                className="group flex items-center gap-4 bg-card border border-border rounded-xl p-5 sm:p-6 hover:border-gold/40 hover:shadow-md transition-all min-h-[72px]"
+                className="card-3d group flex items-center gap-4 p-5 sm:p-6 min-h-[72px]"
               >
                 <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-gold/10 border border-gold/20 group-hover:bg-gold/15 transition-colors">
                   <img src={opt.iconSrc} alt="" aria-hidden="true" className="h-8 w-8 object-contain" loading="lazy" />
