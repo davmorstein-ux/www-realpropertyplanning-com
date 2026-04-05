@@ -557,7 +557,7 @@ html, body {
 /* Attorney tiles: reduce text size on mobile so it fits within tile face */
 @media (max-width: 639px) {
   .attorney-tiles-grid .premium-tile h3 {
-    font-size: 0.65rem !important;
+    font-size: 0.7rem !important;
   }
 }
 /* Attorney tiles: tighten line spacing without changing font size */
