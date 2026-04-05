@@ -61,27 +61,34 @@ const GuidedEntryPanel = () => {
               <Link
                 key={i}
                 to={opt.href}
-                className="card-3d-premium group flex items-center gap-5 p-5 sm:p-6"
+                className="card-3d-premium group block"
               >
-                {/* Icon well — structured container */}
-                <div className="relative flex h-[60px] w-[60px] shrink-0 items-center justify-center rounded-2xl"
-                  style={{
-                    background: 'linear-gradient(180deg, hsl(42 45% 96%) 0%, hsl(40 30% 92%) 100%)',
-                    border: '1.5px solid hsl(42 50% 78% / 0.5)',
-                    boxShadow: 'inset 0 1px 0 0 rgba(255,255,255,0.8), 0 2px 6px -2px rgba(0,0,0,0.08)',
-                  }}
-                >
-                  <img src={opt.iconSrc} alt="" aria-hidden="true" className="h-8 w-8 object-contain" loading="lazy" />
-                </div>
+                {/* Gold trim ring */}
+                <div className="card-3d-premium__inner">
+                  {/* Inner recessed face panel */}
+                  <div className="card-3d-premium__face flex items-center gap-5 p-5 sm:p-6">
+                    {/* Icon well */}
+                    <div
+                      className="relative flex h-[56px] w-[56px] shrink-0 items-center justify-center rounded-xl"
+                      style={{
+                        background: 'linear-gradient(180deg, hsl(40 35% 97%) 0%, hsl(38 25% 93%) 100%)',
+                        border: '1.5px solid hsl(42 45% 78% / 0.5)',
+                        boxShadow: 'inset 0 1px 0 0 rgba(255,255,255,0.9), 0 2px 6px -2px rgba(0,0,0,0.08)',
+                      }}
+                    >
+                      <img src={opt.iconSrc} alt="" aria-hidden="true" className="h-8 w-8 object-contain" loading="lazy" />
+                    </div>
 
-                {/* Text block */}
-                <div className="relative z-[2] min-w-0">
-                  <p className="font-semibold text-foreground text-[17px] leading-snug group-hover:text-gold transition-colors">
-                    {opt.label}
-                  </p>
-                  <p className="text-muted-foreground text-[15px] mt-1 leading-relaxed">
-                    {opt.description}
-                  </p>
+                    {/* Text block */}
+                    <div className="min-w-0">
+                      <p className="font-semibold text-foreground text-[17px] leading-snug group-hover:text-gold transition-colors">
+                        {opt.label}
+                      </p>
+                      <p className="text-muted-foreground text-[15px] mt-1 leading-relaxed">
+                        {opt.description}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </Link>
             ))}
