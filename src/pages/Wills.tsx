@@ -93,9 +93,10 @@ const Wills = () => {
                     window.scrollTo({ top: elementPosition - headerOffset, behavior: "smooth" });
                   }
                 }}
-                className="card-3d inline-flex items-center justify-center bg-primary text-primary-foreground px-10 py-4 rounded-lg font-bold text-lg sm:text-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
+                className="card-3d inline-flex flex-col items-center justify-center bg-primary text-primary-foreground px-10 py-5 rounded-lg shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
               >
-                Save a Copy of Your Will Here!
+                <span className="font-bold text-lg sm:text-xl leading-snug">Do you know where your will is?</span>
+                <span className="text-base sm:text-lg font-semibold leading-snug mt-1 opacity-95">Save a secure copy here.</span>
               </button>
             </div>
           </section>
