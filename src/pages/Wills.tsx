@@ -74,16 +74,29 @@ const Wills = () => {
         <Header />
         <main className="flex-1">
           {/* Hero */}
-          <section className="pt-28 pb-16 sm:pt-36 sm:pb-20 bg-gradient-to-b from-secondary to-background">
+          <section className="pt-20 pb-10 sm:pt-28 sm:pb-14 bg-gradient-to-b from-secondary to-background">
             <div className="mx-auto max-w-3xl px-6 text-center">
               <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
                 Wills &amp; Real Estate
               </h1>
-              <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-8">
                 A will is one of the most important documents in estate planning — and when real
                 property is involved, the decisions it guides can shape a family's financial future
                 for years to come.
               </p>
+              <button
+                onClick={() => {
+                  const target = document.getElementById("secure-will-section");
+                  if (target) {
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top + window.scrollY;
+                    window.scrollTo({ top: elementPosition - headerOffset, behavior: "smooth" });
+                  }
+                }}
+                className="card-3d inline-flex items-center justify-center bg-primary text-primary-foreground px-10 py-4 rounded-lg font-bold text-lg sm:text-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
+              >
+                Save a Copy of Your Will Here!
+              </button>
             </div>
           </section>
 
