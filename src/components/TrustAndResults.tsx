@@ -79,7 +79,7 @@ const TrustAndResults = () => (
               {credentials.map((cred, i) => (
                 <li key={i} className="flex items-center gap-3">
                   <GoldCheck3D size={18} />
-                  <span className="text-foreground text-[15px] font-medium">{cred}</span>
+                  <span className="text-foreground text-base font-medium">{cred}</span>
                 </li>
               ))}
             </ul>
