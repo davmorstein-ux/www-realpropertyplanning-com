@@ -93,10 +93,10 @@ const SecureWillSection = () => {
 
         {/* Disclosure */}
         <div className="mt-14 pt-8 border-t border-border/50 max-w-3xl mx-auto">
-          <p className="text-sm sm:text-[15px] leading-relaxed mb-3" style={{ color: 'hsl(220 15% 42%)' }}>
+          <p className="text-sm sm:text-[15px] leading-relaxed mb-3 italic" style={{ color: 'hsl(0 70% 45%)' }}>
             Real Property Planning provides access to this storage solution as a convenience only and does not create, review, or validate the contents of any uploaded will.
           </p>
-          <p className="text-sm sm:text-[15px] leading-relaxed" style={{ color: 'hsl(220 15% 42%)' }}>
+          <p className="text-sm sm:text-[15px] leading-relaxed italic" style={{ color: 'hsl(0 70% 45%)' }}>
             Once a document is uploaded, access is controlled exclusively by the holder(s) of the private digital key. Real Property Planning does not have access to, custody of, or the ability to retrieve your documents.
           </p>
         </div>
