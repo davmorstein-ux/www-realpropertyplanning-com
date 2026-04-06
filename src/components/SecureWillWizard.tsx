@@ -93,8 +93,8 @@ const ProfileScreen = ({
 
   return (
     <div className="flex flex-col items-center text-center px-2">
-      <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-5">
-        <Lock className="w-8 h-8 text-primary" />
+      <div className="w-20 h-20 rounded-full overflow-hidden mb-5">
+        <img src={proofOfThoughtSeal} alt="Proof of Thought verified seal" className="w-full h-full object-cover" />
       </div>
       <h2 className="font-serif text-2xl sm:text-3xl font-bold text-foreground mb-2">
         Create Your Secure Access Profile
