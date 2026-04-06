@@ -8,6 +8,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import iconSeniorLiving from "@/assets/icons/icon-senior-living.png";
 import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
+import blueKeycap from "@/assets/icons/blue-keycap-button.png";
 
 const livingOptions = [
   {
@@ -122,22 +123,21 @@ const SeniorLivingAndRelocation = () => {
                 Every family's situation is different. Understanding the range of options available is an important first step in planning a thoughtful transition.
               </p>
 
-              <div className="grid gap-6 md:grid-cols-2">
+              <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 justify-items-center">
                 {livingOptions.map((option) => (
                   <Link
                     key={option.title}
                     to={option.path}
-                    className="card-3d group block px-7 py-7 min-h-[44px]"
+                    className="group relative flex items-center justify-center w-[220px] h-[190px] transition-all duration-200 ease-out hover:-translate-y-[2px] hover:brightness-[1.06] active:translate-y-[1px] active:brightness-[0.97]"
                   >
-                    <div className="flex items-start justify-between gap-3">
-                      <h3 className="font-serif text-xl font-bold text-foreground mb-2 group-hover:text-accent transition-colors">
-                        {option.title}
-                      </h3>
-                      <ChevronRight className="w-6 h-6 text-accent/70 group-hover:text-accent group-hover:translate-x-0.5 transition-all mt-0.5 shrink-0" />
-                    </div>
-                    <p className="text-foreground/80 text-base leading-relaxed font-medium">
-                      {option.description}
-                    </p>
+                    <img
+                      src={blueKeycap}
+                      alt=""
+                      className="absolute inset-0 w-full h-full object-contain pointer-events-none drop-shadow-[0_4px_12px_rgba(0,80,180,0.18)] group-hover:drop-shadow-[0_6px_18px_rgba(0,100,220,0.28)] transition-all duration-200"
+                    />
+                    <span className="relative z-10 text-center px-5 font-serif text-[15px] sm:text-base font-bold leading-snug" style={{ color: '#1B2B4B' }}>
+                      {option.title}
+                    </span>
                   </Link>
                 ))}
               </div>
