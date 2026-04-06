@@ -88,11 +88,11 @@ const Index = () => {
       {/* ═══════════════════════════════════════════════════
           1. BRAND INTRO — Short, clear, hub-focused
       ═══════════════════════════════════════════════════ */}
-      <section className="py-10 lg:py-14 text-center" style={{ background: 'radial-gradient(ellipse 70% 50% at center 30%, hsl(220 48% 17%), hsl(220 52% 10%) 55%, hsl(220 55% 8%) 100%)' }}>
+      <section className="pt-5 pb-10 lg:pt-7 lg:pb-12 text-center" style={{ background: 'radial-gradient(ellipse 70% 50% at center 30%, hsl(220 48% 17%), hsl(220 52% 10%) 55%, hsl(220 55% 8%) 100%)' }}>
         <div className="container px-6 lg:px-8">
           <div className="max-w-2xl mx-auto">
-            {/* Logo — transparent, seamlessly integrated */}
-            <div className="mb-4 lg:mb-5">
+            {/* Logo */}
+            <div className="mb-3 lg:mb-4">
               <img
                 src={logo}
                 alt="Real Property Planning"
@@ -101,23 +101,23 @@ const Index = () => {
               />
             </div>
 
-            <h1 className="font-serif text-[1.35rem] md:text-[1.65rem] lg:text-[1.95rem] font-semibold leading-[1.2] text-primary-foreground mb-3 max-w-[26rem] mx-auto" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.25)' }}>
+            <h1 className="font-serif text-[1.35rem] md:text-[1.65rem] lg:text-[1.95rem] font-semibold leading-[1.35] tracking-[0.01em] text-primary-foreground mb-3 max-w-[25rem] mx-auto" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.25)', wordSpacing: '0.05em' }}>
               Real Estate Guidance for Life's Most Important Property Transitions
             </h1>
 
-            <p className="text-primary-foreground/75 text-[0.935rem] md:text-base leading-relaxed max-w-[28rem] mx-auto mb-7">
+            <p className="text-primary-foreground/50 text-[0.82rem] md:text-[0.875rem] leading-relaxed max-w-[26rem] mx-auto mb-6">
               Helping families, executors, and professionals navigate complex real estate decisions with clarity and confidence.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-2.5">
               <Link to="/contact">
-                <button className="inline-flex items-center justify-center rounded-md px-6 py-2 font-medium text-sm tracking-wide text-white transition-all duration-200 ease-out bg-[#b89a3a] border border-[#a08530]/50 shadow-[0_1px_3px_rgba(0,0,0,0.12)] hover:bg-[#c4a643] hover:shadow-[0_2px_8px_rgba(0,0,0,0.16)] active:bg-[#a8892f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c9a84c]/50">
-                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 mr-2 object-contain shrink-0" />
+                <button className="inline-flex items-center justify-center rounded-md px-6 py-1.5 font-medium text-sm tracking-wide text-white transition-all duration-200 ease-out bg-[#b89a3a] border border-[#a08530]/50 shadow-[0_1px_3px_rgba(0,0,0,0.12)] hover:bg-[#c4a643] hover:shadow-[0_2px_8px_rgba(0,0,0,0.16)] active:bg-[#a8892f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c9a84c]/50">
+                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-6 h-6 mr-2.5 object-contain shrink-0" />
                   Schedule a Conversation
                 </button>
               </Link>
               <Link to="/services">
-                <button className="inline-flex items-center justify-center rounded-md px-6 py-2 font-medium text-sm tracking-wide transition-all duration-200 ease-out bg-transparent border border-white/20 text-primary-foreground/85 hover:border-white/35 hover:text-primary-foreground hover:bg-white/5 active:bg-white/8 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/30">
+                <button className="inline-flex items-center justify-center rounded-md px-6 py-1.5 font-medium text-sm tracking-wide transition-all duration-200 ease-out bg-transparent border border-white/40 text-primary-foreground/90 hover:border-white/55 hover:text-primary-foreground hover:bg-white/5 active:bg-white/8 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/30">
                   Explore Services
                   <ChevronRight className="w-3.5 h-3.5 ml-1" />
                 </button>
