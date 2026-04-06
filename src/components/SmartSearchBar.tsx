@@ -367,7 +367,7 @@ const SmartSearchBar = () => {
         <Search className="ml-5 w-5 h-5 text-muted-foreground flex-shrink-0 self-center" />
 
         <textarea
-          ref={inputRef as any}
+          ref={inputRef}
           value={query}
           onChange={(e) => {
             setQuery(e.target.value.replace(/\n/g, ""));
