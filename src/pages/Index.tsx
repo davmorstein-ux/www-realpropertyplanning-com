@@ -16,7 +16,7 @@ import iconServiceProbate from "@/assets/icons/icon-service-probate.png";
 import iconServiceSenior from "@/assets/icons/icon-service-senior.png";
 import iconServiceValuation from "@/assets/icons/icon-service-valuation.png";
 import daveHeadshot2 from "@/assets/dave-headshot-2.jpg";
-import logo from "@/assets/logo-rpp.jpg";
+import logo from "@/assets/logo-rpp-transparent.png";
 import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
 import expRealtyLogo from "@/assets/exp-realty-logo.png";
 import ServiceNavTiles from "@/components/ServiceNavTiles";
@@ -88,23 +88,28 @@ const Index = () => {
       {/* ═══════════════════════════════════════════════════
           1. BRAND INTRO — Short, clear, hub-focused
       ═══════════════════════════════════════════════════ */}
-      <section className="py-16 lg:py-24 bg-primary text-center">
+      <section className="py-20 lg:py-32 bg-primary text-center">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <img
-              src={logo}
-              alt="Real Property Planning"
-              className="mx-auto w-[280px] md:w-[420px] lg:w-[520px] h-auto object-contain mb-8"
-              loading="eager"
-            />
-            <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.8rem] font-bold leading-[1.15] text-primary-foreground mb-5" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.3)' }}>
+            {/* Logo — transparent, with generous breathing room */}
+            <div className="mb-12 lg:mb-16">
+              <img
+                src={logo}
+                alt="Real Property Planning"
+                className="mx-auto w-[260px] md:w-[400px] lg:w-[500px] h-auto object-contain drop-shadow-[0_4px_12px_rgba(0,0,0,0.25)]"
+                loading="eager"
+              />
+            </div>
+
+            <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.8rem] font-bold leading-[1.2] text-primary-foreground mb-6 max-w-2xl mx-auto" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.3)' }}>
               Real Estate Guidance for Life's Most Important Property Transitions
             </h1>
-            <p className="text-primary-foreground/80 text-xl leading-relaxed max-w-2xl mx-auto mb-10">
+
+            <p className="text-primary-foreground/80 text-lg md:text-xl leading-relaxed max-w-xl mx-auto mb-14">
               Helping families, executors, and professionals navigate complex real estate decisions with clarity and confidence.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
               <Link to="/contact">
                 <Button variant="gold" size="lg" className="px-10 py-5 h-auto text-lg tracking-wide">
                   <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
