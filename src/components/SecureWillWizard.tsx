@@ -102,7 +102,7 @@ const ProfileScreen = ({
       <p className="text-sm text-muted-foreground mb-2 max-w-sm leading-tight">
         This allows you to securely retrieve your document in the future.
       </p>
-      <div className="w-full max-w-sm space-y-2.5 text-left mb-4">
+      <div className="w-full max-w-sm space-y-1.5 text-left mb-4">
         <div>
           <label className="block text-sm font-semibold text-foreground mb-1">First Name</label>
           <input
