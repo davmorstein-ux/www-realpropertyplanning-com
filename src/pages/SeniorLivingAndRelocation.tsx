@@ -147,7 +147,7 @@ const SeniorLivingAndRelocation = () => {
                           {forcedLabelLines ? (
                             <div className="relative w-full flex-1 mt-3 px-1">
                               <div className="absolute inset-x-0 bottom-[12px] translate-y-[6px] flex flex-col items-center justify-center">
-                                <h3 className="m-0 font-serif text-[17px] sm:text-[14px] font-bold text-foreground group-hover:text-accent transition-colors text-center">
+                                <h3 className="m-0 font-serif text-[15px] sm:text-[14px] font-bold text-foreground group-hover:text-accent transition-colors text-center">
                                   <span className="block leading-[1.02]">{forcedLabelLines[0]}</span>
                                   <span className="-mt-0.5 block leading-[1.02]">{forcedLabelLines[1]}</span>
                                 </h3>
