@@ -89,20 +89,20 @@ const ProfileScreen = ({
   const valid = form.first.trim() && form.last.trim() && form.email.includes("@");
 
   const fieldClass =
-    "w-full rounded-lg border-2 border-border bg-background px-4 py-3.5 text-lg text-foreground placeholder:text-muted-foreground/60 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all";
+    "w-full rounded-lg border-2 border-border bg-background px-3 py-2.5 text-base text-foreground placeholder:text-muted-foreground/60 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all";
 
   return (
     <div className="flex flex-col items-center text-center px-2">
-      <div className="w-40 h-40 rounded-full overflow-hidden -mt-4 mb-1">
+      <div className="w-28 h-28 rounded-full overflow-hidden -mt-4 mb-1">
         <img src={proofOfThoughtSeal} alt="Proof of Thought verified seal" className="w-full h-full object-cover" />
       </div>
-      <h2 className="font-serif text-2xl sm:text-3xl font-bold text-foreground mb-0.5">
+      <h2 className="font-serif text-xl sm:text-2xl font-bold text-foreground mb-0.5">
         Create Your Secure Access Profile
       </h2>
-      <p className="text-base text-muted-foreground mb-3 max-w-sm leading-tight">
+      <p className="text-sm text-muted-foreground mb-2 max-w-sm leading-tight">
         This allows you to securely retrieve your document in the future.
       </p>
-      <div className="w-full max-w-sm space-y-4 text-left mb-8">
+      <div className="w-full max-w-sm space-y-2.5 text-left mb-4">
         <div>
           <label className="block text-sm font-semibold text-foreground mb-1">First Name</label>
           <input
