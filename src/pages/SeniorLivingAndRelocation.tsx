@@ -131,13 +131,14 @@ const SeniorLivingAndRelocation = () => {
                   >
                     <div className="card-3d-blue__inner h-full">
                       <div className="card-3d-blue__face h-full px-3 pt-3 pb-2 flex flex-col items-center">
-                        {/* Icon — upper portion */}
-                        <div className="flex-[1] flex items-end justify-center w-full pb-1">
-                          <div className="w-14 h-14 shrink-0 rounded-2xl bg-gradient-to-b from-[hsl(205_80%_92%)] to-[hsl(205_60%_85%)] border border-[hsl(205_70%_75%/0.5)] shadow-[inset_0_1px_2px_rgba(255,255,255,0.8),0_2px_4px_rgba(0,0,0,0.08)]" />
-                        </div>
-                        {/* Label — lower portion */}
-                        <div className={`flex-[1] flex justify-center w-full px-1 pt-1 ${option.title === 'Memory Care' ? 'items-end pb-0' : 'items-start'}`}>
-                          <h3 className="font-serif text-[13px] sm:text-[14px] font-bold text-foreground group-hover:text-accent transition-colors text-center" style={{ lineHeight: option.title === 'Memory Care' ? '1.05' : '0.65' }}>
+                        {/* Icon — fixed at top */}
+                        <div className="w-14 h-14 shrink-0 rounded-2xl bg-gradient-to-b from-[hsl(205_80%_92%)] to-[hsl(205_60%_85%)] border border-[hsl(205_70%_75%/0.5)] shadow-[inset_0_1px_2px_rgba(255,255,255,0.8),0_2px_4px_rgba(0,0,0,0.08)] mt-3" />
+                        {/* Text block — pushed down, tight lines */}
+                        <div className="flex flex-col items-center justify-center w-full flex-1 mt-3 px-1">
+                          <h3
+                            className="font-serif text-[13px] sm:text-[14px] font-bold text-foreground group-hover:text-accent transition-colors text-center"
+                            style={{ lineHeight: '1.15', marginTop: option.title === 'Memory Care' ? '16px' : '0' }}
+                          >
                             {option.title}
                           </h3>
                         </div>
