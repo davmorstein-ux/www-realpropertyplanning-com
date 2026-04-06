@@ -61,8 +61,8 @@ const SecureWillSection = () => {
           </div>
 
           {/* Icon – right on desktop, below bullets on mobile */}
-          <div className="w-full lg:w-1/2 flex justify-center">
-            <div className="relative w-[336px] sm:w-96 lg:w-[450px] will-vault-float">
+          <div className="w-full lg:w-1/2 flex justify-center px-0">
+            <div className="relative w-[300px] sm:w-96 lg:w-[450px] mx-auto will-vault-float">
               <img
                 src={willVaultIcon}
                 alt="Secure blockchain will vault with permanent time-stamp seal"
