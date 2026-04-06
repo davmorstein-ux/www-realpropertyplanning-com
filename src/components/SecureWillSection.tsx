@@ -71,7 +71,7 @@ const SecureWillSection = () => {
               />
               <button
                 onClick={() => setWizardOpen(true)}
-                className="absolute bottom-[16%] left-1/2 -translate-x-1/2 w-[44%] h-[7%] cursor-pointer rounded-md bg-transparent hover:bg-white/10 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary/50"
+                className="absolute bottom-[12%] left-1/2 -translate-x-1/2 w-[55%] h-[14%] cursor-pointer rounded-md bg-transparent hover:bg-white/10 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary/50"
                 aria-label="Start secure will upload"
               />
             </div>
