@@ -96,7 +96,7 @@ const Index = () => {
               <img
                 src={logo}
                 alt="Real Property Planning"
-                className="mx-auto w-[200px] md:w-[280px] lg:w-[340px] h-auto object-contain"
+                className="mx-auto w-[400px] md:w-[560px] lg:w-[680px] h-auto object-contain"
                 loading="eager"
               />
             </div>
