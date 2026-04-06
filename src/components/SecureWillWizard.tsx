@@ -96,7 +96,7 @@ const ProfileScreen = ({
       <div className="w-28 h-28 rounded-full overflow-hidden -mt-4 mb-1">
         <img src={proofOfThoughtSeal} alt="Proof of Thought verified seal" className="w-full h-full object-cover" />
       </div>
-      <h2 className="font-serif text-2xl sm:text-3xl font-bold text-primary mb-0.5">
+      <h2 className="font-serif text-2xl sm:text-3xl font-bold mb-0.5" style={{ color: '#1d7372' }}>
         Create Your Secure Access Profile
       </h2>
       <p className="text-[13px] text-muted-foreground mb-1 max-w-sm wizard-subtitle-tight">
