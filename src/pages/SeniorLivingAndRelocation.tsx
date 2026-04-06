@@ -122,21 +122,22 @@ const SeniorLivingAndRelocation = () => {
                 Every family's situation is different. Understanding the range of options available is an important first step in planning a thoughtful transition.
               </p>
 
-              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5 justify-items-center">
                 {livingOptions.map((option) => (
                   <Link
                     key={option.title}
                     to={option.path}
-                    className="card-3d-blue group block no-underline"
+                    className="card-3d-blue group block no-underline w-[160px] sm:w-[170px]"
                   >
                     <div className="card-3d-blue__inner">
-                      <div className="card-3d-blue__face flex items-center justify-center px-6 py-7 min-h-[100px]">
-                        <div className="flex items-center justify-between gap-3 w-full">
-                          <h3 className="font-serif text-lg font-bold text-foreground group-hover:text-accent transition-colors text-center flex-1">
-                            {option.title}
-                          </h3>
-                          <ChevronRight className="w-5 h-5 text-[hsl(205_80%_50%)] group-hover:translate-x-0.5 transition-transform shrink-0" />
+                      <div className="card-3d-blue__face flex flex-col items-center justify-center aspect-square px-4 py-5">
+                        {/* Icon placeholder space */}
+                        <div className="w-14 h-14 mb-3 flex items-center justify-center">
+                          <div className="w-12 h-12 rounded-xl bg-gradient-to-b from-[hsl(205_80%_92%)] to-[hsl(205_60%_85%)] border border-[hsl(205_70%_75%/0.5)] shadow-[inset_0_1px_2px_rgba(255,255,255,0.8),0_2px_4px_rgba(0,0,0,0.08)]" />
                         </div>
+                        <h3 className="font-serif text-[14px] sm:text-[15px] font-bold text-foreground group-hover:text-accent transition-colors text-center leading-snug">
+                          {option.title}
+                        </h3>
                       </div>
                     </div>
                   </Link>
