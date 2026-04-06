@@ -88,39 +88,39 @@ const Index = () => {
       {/* ═══════════════════════════════════════════════════
           1. BRAND INTRO — Short, clear, hub-focused
       ═══════════════════════════════════════════════════ */}
-      <section className="py-20 lg:py-32 text-center" style={{ background: 'radial-gradient(ellipse 70% 50% at center 30%, hsl(220 48% 17%), hsl(220 52% 10%) 55%, hsl(220 55% 8%) 100%)' }}>
+      <section className="py-14 lg:py-20 text-center" style={{ background: 'radial-gradient(ellipse 70% 50% at center 30%, hsl(220 48% 17%), hsl(220 52% 10%) 55%, hsl(220 55% 8%) 100%)' }}>
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            {/* Logo — blended seamlessly into hero background */}
-            <div className="mb-12 lg:mb-16">
+          <div className="max-w-2xl mx-auto">
+            {/* Logo — refined, not overpowering */}
+            <div className="mb-8 lg:mb-10">
               <img
                 src={logo}
                 alt="Real Property Planning"
-                className="mx-auto w-[300px] md:w-[460px] lg:w-[560px] h-auto object-contain"
+                className="mx-auto w-[220px] md:w-[320px] lg:w-[400px] h-auto object-contain"
                 loading="eager"
                 style={{ maskImage: 'radial-gradient(ellipse 90% 85% at center, black 40%, transparent 90%)', WebkitMaskImage: 'radial-gradient(ellipse 90% 85% at center, black 40%, transparent 90%)' }}
               />
             </div>
 
-            <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.8rem] font-bold leading-[1.2] text-primary-foreground mb-6 max-w-2xl mx-auto" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.3)' }}>
+            <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl font-semibold leading-[1.25] text-primary-foreground mb-4 max-w-xl mx-auto" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.25)' }}>
               Real Estate Guidance for Life's Most Important Property Transitions
             </h1>
 
-            <p className="text-primary-foreground/80 text-lg md:text-xl leading-relaxed max-w-xl mx-auto mb-14">
+            <p className="text-primary-foreground/75 text-base md:text-lg leading-relaxed max-w-md mx-auto mb-10">
               Helping families, executors, and professionals navigate complex real estate decisions with clarity and confidence.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <Link to="/contact">
-                <button className="inline-flex items-center justify-center rounded-lg px-8 py-3 font-semibold text-base tracking-wide text-white transition-all duration-200 ease-out bg-gradient-to-b from-[#c9a84c] to-[#b0912e] border border-[#a07e28]/60 shadow-[0_2px_6px_rgba(0,0,0,0.15),inset_0_1px_0_rgba(255,255,255,0.15)] hover:-translate-y-[1px] hover:shadow-[0_4px_12px_rgba(0,0,0,0.2)] active:translate-y-0 active:shadow-[0_1px_3px_rgba(0,0,0,0.12)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold/50">
-                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
+                <button className="inline-flex items-center justify-center rounded-md px-7 py-2.5 font-medium text-[15px] tracking-wide text-white transition-all duration-200 ease-out bg-[#b89a3a] border border-[#a08530]/50 shadow-[0_1px_3px_rgba(0,0,0,0.12)] hover:bg-[#c4a643] hover:shadow-[0_2px_8px_rgba(0,0,0,0.16)] active:bg-[#a8892f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c9a84c]/50">
+                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 mr-2 object-contain shrink-0" />
                   Schedule a Conversation
                 </button>
               </Link>
               <Link to="/services">
-                <button className="inline-flex items-center justify-center rounded-lg px-8 py-3 font-semibold text-base tracking-wide transition-all duration-200 ease-out bg-gradient-to-b from-white/15 to-white/5 border border-white/25 text-primary-foreground/90 shadow-[0_2px_6px_rgba(0,0,0,0.1),inset_0_1px_0_rgba(255,255,255,0.1)] hover:-translate-y-[1px] hover:bg-white/15 hover:border-white/35 hover:shadow-[0_4px_12px_rgba(0,0,0,0.15)] active:translate-y-0 active:shadow-[0_1px_3px_rgba(0,0,0,0.08)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/40">
+                <button className="inline-flex items-center justify-center rounded-md px-7 py-2.5 font-medium text-[15px] tracking-wide transition-all duration-200 ease-out bg-transparent border border-white/20 text-primary-foreground/85 hover:border-white/35 hover:text-primary-foreground hover:bg-white/5 active:bg-white/8 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/30">
                   Explore Services
-                  <ChevronRight className="w-4 h-4 ml-1.5" />
+                  <ChevronRight className="w-4 h-4 ml-1" />
                 </button>
               </Link>
             </div>
