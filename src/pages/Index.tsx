@@ -99,15 +99,19 @@ const Index = () => {
                 className="w-full h-auto object-contain"
                 loading="eager"
               />
-              {/* Shimmer overlay — top 38% only (roofline) */}
+              {/* Shimmer overlay — roofline only */}
               <div
-                className="absolute inset-0 pointer-events-none motion-safe:animate-[shimmer_6s_ease-in-out_infinite]"
-                style={{
-                  clipPath: 'inset(0 0 62% 0)',
-                  background: 'linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.08) 45%, rgba(255,255,255,0.18) 50%, rgba(255,255,255,0.08) 55%, transparent 60%)',
-                  backgroundSize: '300% 100%',
-                }}
-              />
+                className="absolute inset-0 pointer-events-none overflow-hidden motion-safe:animate-[shimmer_5s_ease-in-out_infinite_1s]"
+                style={{ clipPath: 'inset(5% 10% 62% 10%)' }}
+              >
+                <div
+                  className="absolute inset-0 motion-safe:animate-[shimmer-sweep_5s_ease-in-out_infinite_1s]"
+                  style={{
+                    background: 'linear-gradient(105deg, transparent 0%, transparent 40%, rgba(255,255,255,0.12) 47%, rgba(255,255,255,0.22) 50%, rgba(255,255,255,0.12) 53%, transparent 60%, transparent 100%)',
+                    transform: 'translateX(-100%)',
+                  }}
+                />
+              </div>
             </div>
 
             <h1 className="font-serif text-[1.35rem] md:text-[1.65rem] lg:text-[1.95rem] font-semibold leading-[1.35] tracking-[0.01em] text-primary-foreground mb-3 max-w-[25rem] mx-auto" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.25)', wordSpacing: '0.05em' }}>
