@@ -112,8 +112,7 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <Link to="/contact">
                 <button className="inline-flex items-center justify-center rounded-md px-6 py-[5px] font-medium text-[0.8rem] tracking-[0.06em] uppercase text-white/90 transition-all duration-200 ease-out bg-[#a8892f] border border-[#c9a84c]/20 shadow-[0_1px_3px_rgba(0,0,0,0.2)] hover:bg-[#b89a3a] hover:shadow-[0_2px_6px_rgba(0,0,0,0.2)] active:bg-[#96792a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c9a84c]/50">
-                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-10 h-10 mr-2.5 object-contain shrink-0" />
-                  Schedule a Conversation
+                  Contact Us Now
                 </button>
               </Link>
               <Link to="/services">
