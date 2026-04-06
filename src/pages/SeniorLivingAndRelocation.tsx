@@ -123,29 +123,51 @@ const SeniorLivingAndRelocation = () => {
               </p>
 
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5 justify-items-center">
-                {livingOptions.map((option) => (
-                  <Link
-                    key={option.title}
-                    to={option.path}
-                    className="card-3d-blue group block no-underline w-[170px] h-[200px] sm:w-[180px] sm:h-[210px]"
-                  >
-                    <div className="card-3d-blue__inner h-full">
-                      <div className="card-3d-blue__face h-full px-3 pt-3 pb-2 flex flex-col items-center">
-                        {/* Icon — fixed at top */}
-                        <div className="w-14 h-14 shrink-0 rounded-2xl bg-gradient-to-b from-[hsl(205_80%_92%)] to-[hsl(205_60%_85%)] border border-[hsl(205_70%_75%/0.5)] shadow-[inset_0_1px_2px_rgba(255,255,255,0.8),0_2px_4px_rgba(0,0,0,0.08)] mt-3" />
-                        {/* Text block — pushed down, tight lines */}
-                        <div className="flex flex-col items-center justify-end w-full flex-1 mt-3 px-1">
-                          <h3
-                            className="font-serif text-[13px] sm:text-[14px] font-bold text-foreground group-hover:text-accent transition-colors text-center"
-                            style={{ lineHeight: '1.15' }}
-                          >
-                            {option.title}
-                          </h3>
+                {livingOptions.map((option) => {
+                  const forcedLabelLines =
+                    option.title === "Adult Family Homes"
+                      ? ["Adult Family", "Homes"]
+                      : option.title === "Assisted Living Communities"
+                        ? ["Assisted Living", "Communities"]
+                        : option.title === "Nursing & Skilled Care"
+                          ? ["Nursing &", "Skilled Care"]
+                          : option.title === "Independent Living"
+                            ? ["Independent", "Living"]
+                            : null;
+
+                  return (
+                    <Link
+                      key={option.title}
+                      to={option.path}
+                      className="card-3d-blue group block no-underline w-[170px] h-[200px] sm:w-[180px] sm:h-[210px]"
+                    >
+                      <div className="card-3d-blue__inner h-full">
+                        <div className="card-3d-blue__face h-full px-3 pt-3 pb-2 flex flex-col items-center">
+                          <div className="w-14 h-14 shrink-0 rounded-2xl bg-gradient-to-b from-[hsl(205_80%_92%)] to-[hsl(205_60%_85%)] border border-[hsl(205_70%_75%/0.5)] shadow-[inset_0_1px_2px_rgba(255,255,255,0.8),0_2px_4px_rgba(0,0,0,0.08)] mt-3" />
+                          {forcedLabelLines ? (
+                            <div className="relative w-full flex-1 mt-3 px-1">
+                              <div className="absolute inset-x-0 bottom-[12px] translate-y-[6px] flex flex-col items-center justify-center">
+                                <h3 className="m-0 font-serif text-[13px] sm:text-[14px] font-bold text-foreground group-hover:text-accent transition-colors text-center">
+                                  <span className="block leading-[1.02]">{forcedLabelLines[0]}</span>
+                                  <span className="-mt-0.5 block leading-[1.02]">{forcedLabelLines[1]}</span>
+                                </h3>
+                              </div>
+                            </div>
+                          ) : (
+                            <div className="flex flex-col items-center justify-end w-full flex-1 mt-3 px-1">
+                              <h3
+                                className="font-serif text-[13px] sm:text-[14px] font-bold text-foreground group-hover:text-accent transition-colors text-center"
+                                style={{ lineHeight: '1.15' }}
+                              >
+                                {option.title}
+                              </h3>
+                            </div>
+                          )}
                         </div>
                       </div>
-                    </div>
-                  </Link>
-                ))}
+                    </Link>
+                  );
+                })}
               </div>
             </div>
           </div>
