@@ -93,13 +93,13 @@ const ProfileScreen = ({
 
   return (
     <div className="flex flex-col items-center text-center px-2">
-      <div className="w-40 h-40 rounded-full overflow-hidden mb-5">
+      <div className="w-40 h-40 rounded-full overflow-hidden mb-2">
         <img src={proofOfThoughtSeal} alt="Proof of Thought verified seal" className="w-full h-full object-cover" />
       </div>
-      <h2 className="font-serif text-2xl sm:text-3xl font-bold text-foreground mb-2">
+      <h2 className="font-serif text-2xl sm:text-3xl font-bold text-foreground mb-0.5">
         Create Your Secure Access Profile
       </h2>
-      <p className="text-base text-muted-foreground mb-6 max-w-sm">
+      <p className="text-base text-muted-foreground mb-3 max-w-sm">
         This allows you to securely retrieve your document in the future.
       </p>
       <div className="w-full max-w-sm space-y-4 text-left mb-8">
