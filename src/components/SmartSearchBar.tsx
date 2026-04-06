@@ -150,7 +150,7 @@ const SmartSearchBar = () => {
   const [voiceStatus, setVoiceStatus] = useState<"idle" | "listening" | "processing" | "error">("idle");
   const [voiceError, setVoiceError] = useState<string | null>(null);
   const [suggestions, setSuggestions] = useState<RouteMatch[]>([]);
-  const inputRef = useRef<HTMLInputElement>(null);
+  const inputRef = useRef<HTMLTextAreaElement>(null);
   const recognitionRef = useRef<any>(null);
   const navigate = useNavigate();
 
