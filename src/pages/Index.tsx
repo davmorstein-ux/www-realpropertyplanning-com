@@ -110,22 +110,18 @@ const Index = () => {
               Helping families, executors, and professionals navigate complex real estate decisions with clarity and confidence.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link to="/contact">
-                <Button variant="gold" size="lg" className="px-10 py-5 h-auto text-lg tracking-wide">
+                <button className="inline-flex items-center justify-center rounded-lg px-8 py-3 font-semibold text-base tracking-wide text-white transition-all duration-200 ease-out bg-gradient-to-b from-[#c9a84c] to-[#b0912e] border border-[#a07e28]/60 shadow-[0_2px_6px_rgba(0,0,0,0.15),inset_0_1px_0_rgba(255,255,255,0.15)] hover:-translate-y-[1px] hover:shadow-[0_4px_12px_rgba(0,0,0,0.2)] active:translate-y-0 active:shadow-[0_1px_3px_rgba(0,0,0,0.12)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold/50">
                   <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
                   Schedule a Conversation
-                </Button>
+                </button>
               </Link>
               <Link to="/services">
-                <Button
-                  size="lg"
-                  variant="outline3d"
-                  className="px-10 py-5 h-auto text-lg tracking-wide border-gold/50 bg-transparent text-gold hover:bg-gold hover:text-foreground focus-visible:ring-gold"
-                >
+                <button className="inline-flex items-center justify-center rounded-lg px-8 py-3 font-semibold text-base tracking-wide transition-all duration-200 ease-out bg-gradient-to-b from-white/15 to-white/5 border border-white/25 text-primary-foreground/90 shadow-[0_2px_6px_rgba(0,0,0,0.1),inset_0_1px_0_rgba(255,255,255,0.1)] hover:-translate-y-[1px] hover:bg-white/15 hover:border-white/35 hover:shadow-[0_4px_12px_rgba(0,0,0,0.15)] active:translate-y-0 active:shadow-[0_1px_3px_rgba(0,0,0,0.08)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/40">
                   Explore Services
-                  <ChevronRight className="w-5 h-5 ml-1" />
-                </Button>
+                  <ChevronRight className="w-4 h-4 ml-1.5" />
+                </button>
               </Link>
             </div>
           </div>
