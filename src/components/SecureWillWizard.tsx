@@ -99,7 +99,7 @@ const ProfileScreen = ({
       <h2 className="font-serif text-xl sm:text-2xl font-bold text-foreground mb-0.5">
         Create Your Secure Access Profile
       </h2>
-      <p className="text-[13px] text-muted-foreground mb-1 max-w-sm" style={{ lineHeight: '0.9' }}>
+      <p className="text-[13px] text-muted-foreground mb-1 max-w-sm wizard-subtitle-tight">
         This allows you to securely retrieve your document in the future.
       </p>
       <div className="w-full max-w-sm space-y-1.5 text-left mb-4">
