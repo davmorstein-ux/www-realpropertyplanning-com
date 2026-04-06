@@ -127,7 +127,7 @@ const SeniorLivingAndRelocation = () => {
                   <Link
                     key={option.title}
                     to={option.path}
-                    className="card-3d-blue group block no-underline w-[160px] h-[180px] sm:w-[170px] sm:h-[185px]"
+                    className="card-3d-blue group block no-underline w-[170px] h-[200px] sm:w-[180px] sm:h-[210px]"
                   >
                     <div className="card-3d-blue__inner h-full">
                       <div className="card-3d-blue__face h-full px-3 pt-3 pb-2 flex flex-col items-center">
