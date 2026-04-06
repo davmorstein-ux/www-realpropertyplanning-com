@@ -101,14 +101,13 @@ const Index = () => {
               />
               {/* Shimmer overlay — roofline only */}
               <div
-                className="absolute inset-0 pointer-events-none overflow-hidden motion-safe:animate-[shimmer_5s_ease-in-out_infinite_1s]"
+                className="absolute inset-0 pointer-events-none overflow-hidden"
                 style={{ clipPath: 'inset(5% 10% 62% 10%)' }}
               >
                 <div
                   className="absolute inset-0 motion-safe:animate-[shimmer-sweep_5s_ease-in-out_infinite_1s]"
                   style={{
                     background: 'linear-gradient(105deg, transparent 0%, transparent 40%, rgba(255,255,255,0.12) 47%, rgba(255,255,255,0.22) 50%, rgba(255,255,255,0.12) 53%, transparent 60%, transparent 100%)',
-                    transform: 'translateX(-100%)',
                   }}
                 />
               </div>
