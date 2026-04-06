@@ -784,3 +784,24 @@ html, body {
   line-height: 1.2 !important;
   margin-bottom: 0.25rem !important;
 }
+
+/* Search bar textarea — mobile: allow placeholder to wrap onto 2 lines */
+.search-textarea-mobile {
+  white-space: nowrap;
+  min-height: auto;
+}
+@media (max-width: 639px) {
+  .search-textarea-mobile {
+    white-space: pre-wrap !important;
+    min-height: 3.2rem !important;
+    padding-top: 0.625rem !important;
+    padding-bottom: 0.625rem !important;
+    font-size: 0.9375rem !important;
+    line-height: 1.35 !important;
+  }
+  .search-textarea-mobile::placeholder {
+    white-space: pre-wrap !important;
+    overflow-wrap: break-word !important;
+    line-height: 1.35 !important;
+  }
+}
