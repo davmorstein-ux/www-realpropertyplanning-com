@@ -113,13 +113,15 @@ export default {
           "70%": { filter: "brightness(1.22) contrast(1.08) saturate(1.12)" },
           "90%": { filter: "brightness(1.08) contrast(1.03) saturate(1.04)" },
         },
-        "text-emphasis": {
-          "0%": { opacity: "1", filter: "brightness(1.15)" },
-          "20%": { opacity: "1", filter: "brightness(1.15)" },
-          "35%": { opacity: "0.25", filter: "brightness(0.8)" },
-          "50%": { opacity: "0.25", filter: "brightness(0.8)" },
-          "65%": { opacity: "1", filter: "brightness(1.15)" },
-          "100%": { opacity: "1", filter: "brightness(1.15)" },
+        "text-emphasis-a": {
+          "0%, 15%": { opacity: "1", filter: "brightness(1.15)" },
+          "40%, 60%": { opacity: "0.25", filter: "brightness(0.8)" },
+          "85%, 100%": { opacity: "1", filter: "brightness(1.15)" },
+        },
+        "text-emphasis-b": {
+          "0%, 15%": { opacity: "0.25", filter: "brightness(0.8)" },
+          "40%, 60%": { opacity: "1", filter: "brightness(1.15)" },
+          "85%, 100%": { opacity: "0.25", filter: "brightness(0.8)" },
         },
       },
       animation: {
