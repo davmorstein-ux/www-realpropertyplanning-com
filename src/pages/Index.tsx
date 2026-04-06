@@ -92,34 +92,12 @@ const Index = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-2xl mx-auto">
             {/* Logo */}
-            <div className="-mb-8 lg:-mb-11 relative mx-auto w-[400px] md:w-[560px] lg:w-[680px]">
+            <div className="-mb-8 lg:-mb-11">
               <img
                 src={logo}
                 alt="Real Property Planning"
-                className="w-full h-auto object-contain"
+                className="mx-auto w-[400px] md:w-[560px] lg:w-[680px] h-auto object-contain"
                 loading="eager"
-              />
-              {/* Organic metallic shimmer — roofline only */}
-              <div
-                className="absolute inset-0 pointer-events-none mix-blend-screen opacity-0 motion-safe:animate-[roof-shimmer_8s_ease-in-out_infinite_2s]"
-                style={{
-                  clipPath: 'polygon(28% 18%, 50% 2%, 72% 18%, 78% 28%, 65% 35%, 50% 22%, 35% 35%, 22% 28%)',
-                  background: `
-                    radial-gradient(ellipse 35% 60% at 30% 40%, rgba(255,255,255,0.35) 0%, transparent 70%),
-                    radial-gradient(ellipse 25% 50% at 65% 30%, rgba(200,220,255,0.28) 0%, transparent 65%),
-                    radial-gradient(ellipse 40% 40% at 50% 50%, rgba(255,255,255,0.20) 0%, transparent 60%)
-                  `,
-                }}
-              />
-              <div
-                className="absolute inset-0 pointer-events-none mix-blend-screen opacity-0 motion-safe:animate-[roof-shimmer-b_10s_ease-in-out_infinite_4s]"
-                style={{
-                  clipPath: 'polygon(28% 18%, 50% 2%, 72% 18%, 78% 28%, 65% 35%, 50% 22%, 35% 35%, 22% 28%)',
-                  background: `
-                    radial-gradient(ellipse 30% 55% at 55% 35%, rgba(255,255,255,0.30) 0%, transparent 65%),
-                    radial-gradient(ellipse 20% 45% at 38% 25%, rgba(210,230,255,0.25) 0%, transparent 60%)
-                  `,
-                }}
               />
             </div>
 
