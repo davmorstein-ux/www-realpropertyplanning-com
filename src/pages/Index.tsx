@@ -16,7 +16,7 @@ import iconServiceProbate from "@/assets/icons/icon-service-probate.png";
 import iconServiceSenior from "@/assets/icons/icon-service-senior.png";
 import iconServiceValuation from "@/assets/icons/icon-service-valuation.png";
 import daveHeadshot2 from "@/assets/dave-headshot-2.jpg";
-import logo from "@/assets/logo-rpp-transparent.png";
+import logo from "@/assets/logo-rpp-dark.png";
 import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
 import expRealtyLogo from "@/assets/exp-realty-logo.png";
 import ServiceNavTiles from "@/components/ServiceNavTiles";
