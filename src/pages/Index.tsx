@@ -111,12 +111,12 @@ const Index = () => {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <Link to="/contact">
-                <button className="inline-flex items-center justify-center rounded-md min-w-[190px] px-6 py-[5px] font-medium text-[0.8rem] tracking-[0.06em] uppercase text-white/90 transition-all duration-200 ease-out bg-[#a8892f] border border-[#c9a84c]/20 shadow-[0_1px_3px_rgba(0,0,0,0.2)] ring-1 ring-inset ring-black/30 hover:bg-[#b89a3a] hover:shadow-[0_2px_6px_rgba(0,0,0,0.2)] active:bg-[#96792a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c9a84c]/50">
+                <button className="inline-flex w-[203px] items-center justify-center rounded-md px-6 py-[5px] font-medium text-[0.8rem] tracking-[0.06em] uppercase text-white/90 transition-all duration-200 ease-out bg-[#a8892f] border border-[#c9a84c]/20 shadow-[0_1px_3px_rgba(0,0,0,0.2)] ring-1 ring-inset ring-black/30 hover:bg-[#b89a3a] hover:shadow-[0_2px_6px_rgba(0,0,0,0.2)] active:bg-[#96792a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c9a84c]/50">
                   Contact Us Now
                 </button>
               </Link>
               <Link to="/services">
-                <button className="inline-flex items-center justify-center rounded-md min-w-[190px] px-6 py-[3.5px] font-medium text-[0.8rem] tracking-[0.06em] uppercase transition-all duration-200 ease-out bg-transparent border-[2.5px] border-[#c9a84c]/35 text-primary-foreground/90 hover:border-[#c9a84c]/55 hover:text-primary-foreground hover:bg-white/5 active:bg-white/8 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/30">
+                <button className="inline-flex w-[203px] items-center justify-center rounded-md px-6 py-[3.5px] font-medium text-[0.8rem] tracking-[0.06em] uppercase transition-all duration-200 ease-out bg-transparent border-[2.5px] border-[#c9a84c]/35 text-primary-foreground/90 hover:border-[#c9a84c]/55 hover:text-primary-foreground hover:bg-white/5 active:bg-white/8 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/30">
                   Explore Services
                   <ChevronRight className="w-3.5 h-3.5 ml-1" />
                 </button>
