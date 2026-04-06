@@ -88,16 +88,17 @@ const Index = () => {
       {/* ═══════════════════════════════════════════════════
           1. BRAND INTRO — Short, clear, hub-focused
       ═══════════════════════════════════════════════════ */}
-      <section className="py-20 lg:py-32 bg-primary text-center">
+      <section className="py-20 lg:py-32 text-center" style={{ background: 'radial-gradient(ellipse 70% 50% at center 30%, hsl(220 48% 17%), hsl(220 52% 10%) 55%, hsl(220 55% 8%) 100%)' }}>
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            {/* Logo — transparent, with generous breathing room */}
+            {/* Logo — blended seamlessly into hero background */}
             <div className="mb-12 lg:mb-16">
               <img
                 src={logo}
                 alt="Real Property Planning"
-                className="mx-auto w-[260px] md:w-[400px] lg:w-[500px] h-auto object-contain drop-shadow-[0_4px_12px_rgba(0,0,0,0.25)]"
+                className="mx-auto w-[300px] md:w-[460px] lg:w-[560px] h-auto object-contain"
                 loading="eager"
+                style={{ maskImage: 'radial-gradient(ellipse 90% 85% at center, black 40%, transparent 90%)', WebkitMaskImage: 'radial-gradient(ellipse 90% 85% at center, black 40%, transparent 90%)' }}
               />
             </div>
 
