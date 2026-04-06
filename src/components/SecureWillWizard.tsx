@@ -1,6 +1,6 @@
 import { useState, useCallback, useEffect } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
-import { Upload, Shield, Check, Send, ChevronRight, FileText, X } from "lucide-react";
+import { Lock, Upload, Shield, Check, Send, ChevronRight, FileText, X } from "lucide-react";
 import proofOfThoughtSeal from "@/assets/icons/proof-of-thought-seal.jpeg";
 
 type Step = 1 | 2 | 3 | 4 | 5 | 6;
