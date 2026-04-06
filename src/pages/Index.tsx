@@ -101,11 +101,11 @@ const Index = () => {
               />
             </div>
 
-            <h1 className="font-serif text-[1.35rem] md:text-[1.65rem] lg:text-[1.95rem] font-semibold leading-[1.35] tracking-[0.01em] text-primary-foreground mb-3 max-w-[25rem] mx-auto" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.25)', wordSpacing: '0.05em' }}>
+            <h1 className="font-serif text-[1.35rem] md:text-[1.65rem] lg:text-[1.95rem] font-semibold leading-[1.35] tracking-[0.01em] text-primary-foreground mb-3 max-w-[25rem] mx-auto motion-safe:animate-[text-emphasis_10s_ease-in-out_infinite]" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.25)', wordSpacing: '0.05em' }}>
               Real Estate Guidance for Life's Most Important Property Transitions
             </h1>
 
-            <p className="text-primary-foreground/50 text-[0.82rem] md:text-[0.875rem] leading-relaxed max-w-[26rem] mx-auto mb-6">
+            <p className="text-primary-foreground/50 text-[0.82rem] md:text-[0.875rem] leading-relaxed max-w-[26rem] mx-auto mb-6 motion-safe:animate-[text-emphasis_10s_ease-in-out_infinite_5s]">
               Helping families, executors, and professionals navigate complex real estate decisions with clarity and confidence.
             </p>
 

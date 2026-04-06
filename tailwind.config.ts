@@ -113,6 +113,11 @@ export default {
           "70%": { filter: "brightness(1.22) contrast(1.08) saturate(1.12)" },
           "90%": { filter: "brightness(1.08) contrast(1.03) saturate(1.04)" },
         },
+        "text-emphasis": {
+          "0%, 45%": { opacity: "1", filter: "brightness(1.1)" },
+          "50%, 95%": { opacity: "0.55", filter: "brightness(0.95)" },
+          "100%": { opacity: "1", filter: "brightness(1.1)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
