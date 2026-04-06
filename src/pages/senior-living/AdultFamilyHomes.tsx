@@ -60,7 +60,7 @@ const AdultFamilyHomes = () => (
                     <img
                       src={victoria1Logo}
                       alt="Victoria 1 AFH logo"
-                      className="h-14 w-auto object-contain"
+                      className="h-30 w-auto object-contain"
                     />
                   </div>
                   <p className="text-muted-foreground text-sm mb-4">Owner: Maria Corbu</p>
