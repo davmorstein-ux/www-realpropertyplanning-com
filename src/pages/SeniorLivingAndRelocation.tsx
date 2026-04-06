@@ -10,6 +10,7 @@ import iconAfh3d from "@/assets/icons/icon-afh-3d.png";
 import iconAssistedLiving3d from "@/assets/icons/icon-assisted-living-3d.png";
 import iconMemoryCare3d from "@/assets/icons/icon-memory-care-3d.png";
 import iconNursingCare3d from "@/assets/icons/icon-nursing-care-3d.png";
+import iconIndependentLiving3d from "@/assets/icons/icon-independent-living-3d.png";
 import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 
