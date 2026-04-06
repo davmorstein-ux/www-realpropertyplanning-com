@@ -66,7 +66,6 @@ const AdultFamilyHomes = () => (
                       className="h-[140px] w-auto object-contain mx-auto sm:mx-0 mb-1"
                     />
                   </a>
-                  />
                   <p className="text-muted-foreground text-sm mb-3">Owner: Maria Corbu</p>
 
                   <div className="space-y-1.5 text-sm">
