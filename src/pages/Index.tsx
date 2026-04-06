@@ -105,7 +105,7 @@ const Index = () => {
               Real Estate Guidance for Life's Most Important Property Transitions
             </h1>
 
-            <p className="text-primary-foreground/50 text-[0.82rem] md:text-[0.875rem] leading-relaxed max-w-[26rem] mx-auto mb-6 motion-safe:animate-[text-emphasis_10s_ease-in-out_infinite_5s]">
+            <p className="text-primary-foreground/90 text-[0.82rem] md:text-[0.875rem] leading-relaxed max-w-[26rem] mx-auto mb-6 motion-safe:animate-[text-emphasis_10s_ease-in-out_infinite_5s]">
               Helping families, executors, and professionals navigate complex real estate decisions with clarity and confidence.
             </p>
 
