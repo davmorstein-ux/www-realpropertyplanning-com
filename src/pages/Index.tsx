@@ -92,25 +92,13 @@ const Index = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-2xl mx-auto">
             {/* Logo */}
-            <div className="-mb-8 lg:-mb-11 relative mx-auto w-[400px] md:w-[560px] lg:w-[680px]">
+            <div className="-mb-8 lg:-mb-11">
               <img
                 src={logo}
                 alt="Real Property Planning"
-                className="w-full h-auto object-contain"
+                className="mx-auto w-[400px] md:w-[560px] lg:w-[680px] h-auto object-contain"
                 loading="eager"
               />
-              {/* Shimmer overlay — roofline only */}
-              <div
-                className="absolute inset-0 pointer-events-none overflow-hidden"
-                style={{ clipPath: 'inset(5% 10% 62% 10%)' }}
-              >
-                <div
-                  className="absolute inset-0 motion-safe:animate-[shimmer-sweep_5s_ease-in-out_infinite_1s]"
-                  style={{
-                    background: 'linear-gradient(105deg, transparent 0%, transparent 40%, rgba(255,255,255,0.12) 47%, rgba(255,255,255,0.22) 50%, rgba(255,255,255,0.12) 53%, transparent 60%, transparent 100%)',
-                  }}
-                />
-              </div>
             </div>
 
             <h1 className="font-serif text-[1.35rem] md:text-[1.65rem] lg:text-[1.95rem] font-semibold leading-[1.35] tracking-[0.01em] text-primary-foreground mb-3 max-w-[25rem] mx-auto" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.25)', wordSpacing: '0.05em' }}>
