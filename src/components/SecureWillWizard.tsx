@@ -146,15 +146,15 @@ const ProfileScreen = ({
           />
         </div>
       </div>
-      <div className="flex flex-col sm:flex-row gap-3 w-full max-w-sm">
-        <WizardButton variant="secondary" onClick={onBack} className="flex-1 text-base sm:text-lg">
+      <div className="flex flex-col sm:flex-row gap-2 w-full max-w-sm">
+        <WizardButton variant="secondary" onClick={onBack} className="flex-1 text-sm sm:text-base !px-5 !py-2.5">
           Back
         </WizardButton>
         <WizardButton
           onClick={valid ? onNext : undefined}
-          className={`flex-1 ${!valid ? "opacity-50 cursor-not-allowed" : ""}`}
+          className={`flex-1 text-sm sm:text-base !px-5 !py-2.5 ${!valid ? "opacity-50 cursor-not-allowed" : ""}`}
         >
-          Continue <ChevronRight className="w-5 h-5" />
+          Continue <ChevronRight className="w-4 h-4" />
         </WizardButton>
       </div>
     </div>
