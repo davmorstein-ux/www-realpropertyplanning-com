@@ -134,7 +134,7 @@ const SeniorLivingAndRelocation = () => {
                         {/* Icon — fixed at top */}
                         <div className="w-14 h-14 shrink-0 rounded-2xl bg-gradient-to-b from-[hsl(205_80%_92%)] to-[hsl(205_60%_85%)] border border-[hsl(205_70%_75%/0.5)] shadow-[inset_0_1px_2px_rgba(255,255,255,0.8),0_2px_4px_rgba(0,0,0,0.08)] mt-3" />
                         {/* Text block — pushed down, tight lines */}
-                        <div className="flex flex-col items-center justify-center w-full flex-1 mt-3 px-1">
+                        <div className="flex flex-col items-center justify-end w-full flex-1 mt-3 px-1">
                           <h3
                             className="font-serif text-[13px] sm:text-[14px] font-bold text-foreground group-hover:text-accent transition-colors text-center"
                             style={{ lineHeight: '1.15' }}
