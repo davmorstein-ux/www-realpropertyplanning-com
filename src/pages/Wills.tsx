@@ -298,10 +298,29 @@ const Wills = () => {
               </ul>
 
               <div className="mt-10 text-center">
-                <Link to="/contact" className="inline-block">
-                  <div className="card-3d inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg">
-                    <img src={iconPhone3d} alt="" className="w-7 h-7" aria-hidden="true" />
-                    Schedule a Conversation
+                <Link to="/contact" className="inline-block group">
+                  <div className="relative inline-flex items-center justify-center cursor-pointer transition-all duration-200 group-hover:-translate-y-1 active:translate-y-[2px]">
+                    {/* White outer shell */}
+                    <div className="absolute inset-0 rounded-[20px]" style={{
+                      background: 'linear-gradient(180deg, #ffffff 0%, #f5f2ec 60%, #e8e4dc 100%)',
+                      boxShadow: '0 7px 0 #d5d0c6, 0 9px 0 #c4bfb4, 0 12px 26px rgba(0,0,0,0.2), 0 3px 6px rgba(0,0,0,0.1)',
+                    }} />
+                    {/* Gold trim */}
+                    <div className="absolute rounded-[16px]" style={{
+                      inset: '5px',
+                      border: '2px solid hsl(42 55% 62% / 0.5)',
+                      boxShadow: 'inset 0 0 4px rgba(201,168,76,0.12)',
+                    }} />
+                    {/* Teal inner face */}
+                    <div className="relative rounded-[12px] inline-flex items-center gap-3 px-10 py-5" style={{
+                      margin: '8px 8px 14px 8px',
+                      background: 'linear-gradient(180deg, #28918f 0%, #1d7372 30%, #166060 70%, #134e4d 100%)',
+                      boxShadow: 'inset 0 2px 2px rgba(255,255,255,0.25), inset 0 -2px 4px rgba(0,0,0,0.15)',
+                      borderTop: '1px solid rgba(255,255,255,0.3)',
+                    }}>
+                      <img src={iconPhone3d} alt="" className="w-7 h-7" aria-hidden="true" />
+                      <span className="font-bold text-lg text-white" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.4)' }}>Schedule a Conversation</span>
+                    </div>
                   </div>
                 </Link>
               </div>
