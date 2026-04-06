@@ -108,10 +108,10 @@ export default {
         },
         "logo-glow": {
           "0%, 100%": { filter: "brightness(1) contrast(1) saturate(1)" },
-          "30%": { filter: "brightness(1.18) contrast(1.06) saturate(1.1)" },
-          "50%": { filter: "brightness(1.04) contrast(1.01) saturate(1)" },
-          "70%": { filter: "brightness(1.14) contrast(1.04) saturate(1.08)" },
-          "90%": { filter: "brightness(1.06) contrast(1.02) saturate(1.02)" },
+          "30%": { filter: "brightness(1.28) contrast(1.1) saturate(1.15)" },
+          "50%": { filter: "brightness(1.06) contrast(1.02) saturate(1)" },
+          "70%": { filter: "brightness(1.22) contrast(1.08) saturate(1.12)" },
+          "90%": { filter: "brightness(1.08) contrast(1.03) saturate(1.04)" },
         },
       },
       animation: {
