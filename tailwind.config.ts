@@ -106,6 +106,10 @@ export default {
             height: "0",
           },
         },
+        "shimmer-sweep": {
+          "0%, 20%": { transform: "translateX(-100%)" },
+          "60%, 100%": { transform: "translateX(200%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
