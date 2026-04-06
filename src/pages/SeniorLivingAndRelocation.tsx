@@ -143,9 +143,9 @@ const SeniorLivingAndRelocation = () => {
                       className="card-3d-blue group block no-underline w-[170px] h-[200px] sm:w-[180px] sm:h-[210px]"
                     >
                       <div className="card-3d-blue__inner h-full">
-                        <div className="card-3d-blue__face h-full px-3 pt-0 pb-2 flex flex-col items-center overflow-hidden">
+                        <div className="card-3d-blue__face h-full px-3 pt-3 pb-2 flex flex-col items-center">
                           {option.title === "Adult Family Homes" ? (
-                            <img src={iconAfh3d} alt="Adult Family Homes" className="w-[130px] h-[100px] shrink-0 object-contain mt-2" />
+                            <img src={iconAfh3d} alt="Adult Family Homes" className="w-[132px] h-[100px] max-w-none shrink-0 object-contain mt-2" />
                           ) : (
                             <div className="w-14 h-14 shrink-0 rounded-2xl bg-gradient-to-b from-[hsl(205_80%_92%)] to-[hsl(205_60%_85%)] border border-[hsl(205_70%_75%/0.5)] shadow-[inset_0_1px_2px_rgba(255,255,255,0.8),0_2px_4px_rgba(0,0,0,0.08)] mt-3" />
                           )}
