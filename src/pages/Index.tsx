@@ -109,15 +109,15 @@ const Index = () => {
               Helping families, executors, and professionals navigate complex real estate decisions with clarity and confidence.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-2.5">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <Link to="/contact">
-                <button className="inline-flex items-center justify-center rounded-md px-6 py-1.5 font-medium text-sm tracking-wide text-white transition-all duration-200 ease-out bg-[#b89a3a] border border-[#a08530]/50 shadow-[0_1px_3px_rgba(0,0,0,0.12)] hover:bg-[#c4a643] hover:shadow-[0_2px_8px_rgba(0,0,0,0.16)] active:bg-[#a8892f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c9a84c]/50">
-                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-6 h-6 mr-2.5 object-contain shrink-0" />
+                <button className="inline-flex items-center justify-center rounded-md px-4 py-1.5 font-medium text-[0.8rem] tracking-wide text-white transition-all duration-200 ease-out bg-[#b89a3a]/85 border border-[#c9a84c]/40 shadow-[0_1px_4px_rgba(0,0,0,0.1)] hover:bg-[#c4a643]/90 hover:shadow-[0_2px_8px_rgba(0,0,0,0.14)] active:bg-[#a8892f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c9a84c]/50">
+                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-8 h-8 mr-2 object-contain shrink-0" />
                   Schedule a Conversation
                 </button>
               </Link>
               <Link to="/services">
-                <button className="inline-flex items-center justify-center rounded-md px-6 py-1.5 font-medium text-sm tracking-wide transition-all duration-200 ease-out bg-transparent border border-white/40 text-primary-foreground/90 hover:border-white/55 hover:text-primary-foreground hover:bg-white/5 active:bg-white/8 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/30">
+                <button className="inline-flex items-center justify-center rounded-md px-4 py-1.5 font-medium text-[0.8rem] tracking-wide transition-all duration-200 ease-out bg-transparent border border-white/30 text-primary-foreground/80 hover:border-white/50 hover:text-primary-foreground hover:bg-white/5 active:bg-white/8 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/30">
                   Explore Services
                   <ChevronRight className="w-3.5 h-3.5 ml-1" />
                 </button>
