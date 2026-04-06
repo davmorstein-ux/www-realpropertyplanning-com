@@ -96,41 +96,36 @@ const Wills = () => {
                 className="group relative inline-flex flex-col items-center justify-center cursor-pointer transition-all duration-200 hover:-translate-y-1 active:translate-y-[2px]"
                 style={{ padding: 0 }}
               >
-                {/* Outer base/ledge — darker teal, mimics the thick bottom slab */}
+                {/* Outer white body/shell — premium keycap base */}
                 <div
-                  className="absolute inset-0 rounded-[20px]"
+                  className="absolute inset-0 rounded-[22px]"
                   style={{
-                    background: 'linear-gradient(180deg, #0f4241 0%, #0a2f2e 100%)',
-                    boxShadow: '0 10px 28px rgba(0,0,0,0.28), 0 4px 8px rgba(0,0,0,0.18)',
+                    background: 'linear-gradient(180deg, #ffffff 0%, #f5f2ec 60%, #e8e4dc 100%)',
+                    boxShadow: '0 8px 0 #d5d0c6, 0 10px 0 #c4bfb4, 0 14px 30px rgba(0,0,0,0.22), 0 4px 8px rgba(0,0,0,0.12)',
                   }}
                 />
-                {/* Gold trim border — inset ring */}
+                {/* Gold trim ring */}
                 <div
-                  className="absolute rounded-[16px]"
+                  className="absolute rounded-[17px]"
                   style={{
-                    inset: '4px',
-                    border: '2px solid',
-                    borderImage: 'linear-gradient(180deg, hsl(42 55% 62%), hsl(42 45% 50%)) 1',
-                    borderRadius: '16px',
-                    boxShadow: 'inset 0 0 6px rgba(201,168,76,0.15)',
-                    /* border-image doesn't work with border-radius, use outline trick */
-                    borderColor: 'hsl(42 55% 62% / 0.55)',
+                    inset: '5px',
+                    border: '2px solid hsl(42 55% 62% / 0.5)',
+                    boxShadow: 'inset 0 0 4px rgba(201,168,76,0.12), 0 0 3px rgba(201,168,76,0.1)',
                   }}
                 />
-                {/* Raised face — the main teal surface */}
+                {/* Teal inner face */}
                 <div
-                  className="relative rounded-[14px] px-12 py-7 flex flex-col items-center justify-center"
+                  className="relative rounded-[13px] px-12 py-7 flex flex-col items-center justify-center"
                   style={{
-                    margin: '6px 6px 10px 6px',
+                    margin: '8px 8px 14px 8px',
                     background: 'linear-gradient(180deg, #28918f 0%, #1d7372 30%, #166060 70%, #134e4d 100%)',
                     boxShadow: `
-                      inset 0 2px 2px rgba(255,255,255,0.22),
-                      inset 0 -1px 3px rgba(0,0,0,0.12),
+                      inset 0 2px 2px rgba(255,255,255,0.25),
+                      inset 0 -2px 4px rgba(0,0,0,0.15),
                       inset 1px 0 2px rgba(255,255,255,0.08),
-                      inset -1px 0 2px rgba(255,255,255,0.08),
-                      0 1px 0 rgba(255,255,255,0.1)
+                      inset -1px 0 2px rgba(255,255,255,0.08)
                     `,
-                    borderTop: '1px solid rgba(255,255,255,0.28)',
+                    borderTop: '1px solid rgba(255,255,255,0.3)',
                   }}
                 >
                   <span className="font-bold text-lg sm:text-xl leading-snug text-white" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.4)' }}>Do you know where your will is?</span>
