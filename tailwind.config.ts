@@ -114,14 +114,14 @@ export default {
           "90%": { filter: "brightness(1.08) contrast(1.03) saturate(1.04)" },
         },
         "text-emphasis-a": {
-          "0%, 20%": { opacity: "1", filter: "brightness(1.15)" },
-          "42%, 58%": { opacity: "0.12", filter: "brightness(0.7)" },
-          "80%, 100%": { opacity: "1", filter: "brightness(1.15)" },
+          "0%, 18%": { opacity: "1", filter: "brightness(1.15)" },
+          "38%, 68%": { opacity: "0.12", filter: "brightness(0.7)" },
+          "88%, 100%": { opacity: "1", filter: "brightness(1.15)" },
         },
         "text-emphasis-b": {
-          "0%, 20%": { opacity: "0.12", filter: "brightness(0.7)" },
-          "42%, 58%": { opacity: "1", filter: "brightness(1.15)" },
-          "80%, 100%": { opacity: "0.12", filter: "brightness(0.7)" },
+          "0%, 18%": { opacity: "0.12", filter: "brightness(0.7)" },
+          "38%, 68%": { opacity: "1", filter: "brightness(1.15)" },
+          "88%, 100%": { opacity: "0.12", filter: "brightness(0.7)" },
         },
       },
       animation: {
