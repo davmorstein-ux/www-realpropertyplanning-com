@@ -130,14 +130,14 @@ const SeniorLivingAndRelocation = () => {
                     className="card-3d-blue group block no-underline w-[160px] h-[180px] sm:w-[170px] sm:h-[185px]"
                   >
                     <div className="card-3d-blue__inner h-full">
-                      <div className="card-3d-blue__face h-full px-3 flex flex-col items-center">
-                        {/* Icon area — upper 60% */}
-                        <div className="flex-[3] flex items-center justify-center w-full">
-                          <div className="w-14 h-14 shrink-0 rounded-xl bg-gradient-to-b from-[hsl(205_80%_92%)] to-[hsl(205_60%_85%)] border border-[hsl(205_70%_75%/0.5)] shadow-[inset_0_1px_2px_rgba(255,255,255,0.8),0_2px_4px_rgba(0,0,0,0.08)]" />
+                      <div className="card-3d-blue__face h-full px-3 pt-4 pb-3 flex flex-col items-center">
+                        {/* Icon — upper portion, vertically centered in its space */}
+                        <div className="flex-[5] flex items-center justify-center w-full">
+                          <div className="w-16 h-16 shrink-0 rounded-2xl bg-gradient-to-b from-[hsl(205_80%_92%)] to-[hsl(205_60%_85%)] border border-[hsl(205_70%_75%/0.5)] shadow-[inset_0_1px_2px_rgba(255,255,255,0.8),0_2px_4px_rgba(0,0,0,0.08)]" />
                         </div>
-                        {/* Label — lower 40%, pushed down */}
-                        <div className="flex-[2] flex items-start justify-center w-full px-1">
-                          <h3 className="font-serif text-[14px] sm:text-[15px] font-bold text-foreground group-hover:text-accent transition-colors text-center" style={{ lineHeight: '1.15' }}>
+                        {/* Label — lower portion */}
+                        <div className="flex-[4] flex items-start justify-center w-full px-1 pt-1">
+                          <h3 className="font-serif text-[13px] sm:text-[14px] font-bold text-foreground group-hover:text-accent transition-colors text-center" style={{ lineHeight: '1.2' }}>
                             {option.title}
                           </h3>
                         </div>
