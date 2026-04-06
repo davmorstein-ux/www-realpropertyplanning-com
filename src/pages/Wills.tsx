@@ -93,46 +93,49 @@ const Wills = () => {
                     window.scrollTo({ top: elementPosition - headerOffset, behavior: "smooth" });
                   }
                 }}
-                className="inline-flex flex-col items-center justify-center px-12 py-6 rounded-2xl cursor-pointer transition-all duration-200 hover:-translate-y-1 active:translate-y-[2px] border-2 border-[rgba(255,255,255,0.15)]"
-                style={{
-                  background: 'linear-gradient(180deg, #238584 0%, #1a6b6a 40%, #144f4e 100%)',
-                  boxShadow: `
-                    0 6px 0 #0d3a39,
-                    0 8px 0 #092a29,
-                    0 12px 24px rgba(0,0,0,0.25),
-                    inset 0 2px 1px rgba(255,255,255,0.2),
-                    inset 0 -2px 4px rgba(0,0,0,0.15),
-                    inset 2px 0 3px rgba(255,255,255,0.06),
-                    inset -2px 0 3px rgba(255,255,255,0.06)
-                  `,
-                  borderTop: '1px solid rgba(255,255,255,0.25)',
-                  borderBottom: '3px solid #092a29',
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.boxShadow = `
-                    0 8px 0 #0d3a39,
-                    0 10px 0 #092a29,
-                    0 16px 32px rgba(0,0,0,0.3),
-                    inset 0 2px 1px rgba(255,255,255,0.2),
-                    inset 0 -2px 4px rgba(0,0,0,0.15),
-                    inset 2px 0 3px rgba(255,255,255,0.06),
-                    inset -2px 0 3px rgba(255,255,255,0.06)
-                  `;
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.boxShadow = `
-                    0 6px 0 #0d3a39,
-                    0 8px 0 #092a29,
-                    0 12px 24px rgba(0,0,0,0.25),
-                    inset 0 2px 1px rgba(255,255,255,0.2),
-                    inset 0 -2px 4px rgba(0,0,0,0.15),
-                    inset 2px 0 3px rgba(255,255,255,0.06),
-                    inset -2px 0 3px rgba(255,255,255,0.06)
-                  `;
-                }}
+                className="group relative inline-flex flex-col items-center justify-center cursor-pointer transition-all duration-200 hover:-translate-y-1 active:translate-y-[2px]"
+                style={{ padding: 0 }}
               >
-                <span className="font-bold text-lg sm:text-xl leading-snug text-white" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.4)' }}>Do you know where your will is?</span>
-                <span className="text-base sm:text-lg font-semibold leading-snug mt-1.5 text-white/95" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.4)' }}>Save a secure copy here.</span>
+                {/* Outer base/ledge — darker teal, mimics the thick bottom slab */}
+                <div
+                  className="absolute inset-0 rounded-[20px]"
+                  style={{
+                    background: 'linear-gradient(180deg, #0f4241 0%, #0a2f2e 100%)',
+                    boxShadow: '0 10px 28px rgba(0,0,0,0.28), 0 4px 8px rgba(0,0,0,0.18)',
+                  }}
+                />
+                {/* Gold trim border — inset ring */}
+                <div
+                  className="absolute rounded-[16px]"
+                  style={{
+                    inset: '4px',
+                    border: '2px solid',
+                    borderImage: 'linear-gradient(180deg, hsl(42 55% 62%), hsl(42 45% 50%)) 1',
+                    borderRadius: '16px',
+                    boxShadow: 'inset 0 0 6px rgba(201,168,76,0.15)',
+                    /* border-image doesn't work with border-radius, use outline trick */
+                    borderColor: 'hsl(42 55% 62% / 0.55)',
+                  }}
+                />
+                {/* Raised face — the main teal surface */}
+                <div
+                  className="relative rounded-[14px] px-12 py-7 flex flex-col items-center justify-center"
+                  style={{
+                    margin: '6px 6px 10px 6px',
+                    background: 'linear-gradient(180deg, #28918f 0%, #1d7372 30%, #166060 70%, #134e4d 100%)',
+                    boxShadow: `
+                      inset 0 2px 2px rgba(255,255,255,0.22),
+                      inset 0 -1px 3px rgba(0,0,0,0.12),
+                      inset 1px 0 2px rgba(255,255,255,0.08),
+                      inset -1px 0 2px rgba(255,255,255,0.08),
+                      0 1px 0 rgba(255,255,255,0.1)
+                    `,
+                    borderTop: '1px solid rgba(255,255,255,0.28)',
+                  }}
+                >
+                  <span className="font-bold text-lg sm:text-xl leading-snug text-white" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.4)' }}>Do you know where your will is?</span>
+                  <span className="text-base sm:text-lg font-semibold leading-snug mt-1.5 text-white/95" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.4)' }}>Save a secure copy here.</span>
+                </div>
               </button>
             </div>
           </section>
