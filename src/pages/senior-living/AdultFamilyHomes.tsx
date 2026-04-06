@@ -56,7 +56,13 @@ const AdultFamilyHomes = () => (
                   />
                 </div>
                 <div className="flex-1 px-6 pb-6 sm:py-6 sm:pl-2 sm:pr-6">
-                  <h3 className="font-serif text-xl font-bold text-foreground mb-1">Victoria 1 AFH</h3>
+                  <div className="flex items-center gap-3 mb-1">
+                    <img
+                      src={victoria1Logo}
+                      alt="Victoria 1 AFH logo"
+                      className="h-8 w-auto object-contain"
+                    />
+                  </div>
                   <p className="text-muted-foreground text-sm mb-4">Owner: Maria Corbu</p>
 
                   <div className="space-y-2.5 text-sm">
