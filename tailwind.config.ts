@@ -114,9 +114,12 @@ export default {
           "90%": { filter: "brightness(1.08) contrast(1.03) saturate(1.04)" },
         },
         "text-emphasis": {
-          "0%, 45%": { opacity: "1", filter: "brightness(1.1)" },
-          "50%, 95%": { opacity: "0.55", filter: "brightness(0.95)" },
-          "100%": { opacity: "1", filter: "brightness(1.1)" },
+          "0%": { opacity: "1", filter: "brightness(1.12)" },
+          "20%": { opacity: "1", filter: "brightness(1.12)" },
+          "35%": { opacity: "0.6", filter: "brightness(0.95)" },
+          "50%": { opacity: "0.6", filter: "brightness(0.95)" },
+          "65%": { opacity: "1", filter: "brightness(1.12)" },
+          "100%": { opacity: "1", filter: "brightness(1.12)" },
         },
       },
       animation: {
