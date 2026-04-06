@@ -101,7 +101,7 @@ const Index = () => {
               />
             </div>
 
-            <h1 className="font-serif text-[1.35rem] md:text-[1.65rem] lg:text-[1.95rem] font-semibold leading-[1.35] tracking-[0.01em] text-primary-foreground mb-3 max-w-[25rem] mx-auto motion-safe:animate-[text-emphasis-a_15s_ease-in-out_infinite]" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.25)', wordSpacing: '0.05em' }}>
+            <h1 className="font-serif text-[1.35rem] md:text-[1.65rem] lg:text-[1.95rem] font-semibold leading-[1.35] tracking-[0.01em] text-primary-foreground mb-3 max-w-[25rem] mx-auto motion-safe:animate-[text-emphasis-a_20s_ease-in-out_infinite]" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.25)', wordSpacing: '0.05em' }}>
               Real Estate Guidance for Life's Most Important Property Transitions
             </h1>
 
