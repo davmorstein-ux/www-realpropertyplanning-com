@@ -93,10 +93,10 @@ const Wills = () => {
                     window.scrollTo({ top: elementPosition - headerOffset, behavior: "smooth" });
                   }
                 }}
-                className="card-3d inline-flex flex-col items-center justify-center bg-primary text-primary-foreground px-10 py-5 rounded-lg shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
+                className="inline-flex flex-col items-center justify-center px-10 py-5 rounded-lg cursor-pointer transition-all duration-200 hover:-translate-y-0.5 bg-gradient-to-b from-[#1a6b6a] to-[#144f4e] border border-[rgba(10,60,58,0.5)] shadow-[0_3px_0_rgba(10,50,48,0.7),0_8px_18px_rgba(0,0,0,0.16),inset_0_1px_0_rgba(255,255,255,0.18)] hover:shadow-[0_5px_0_rgba(10,50,48,0.7),0_12px_24px_rgba(0,0,0,0.2),inset_0_1px_0_rgba(255,255,255,0.18)] active:translate-y-[1px] active:shadow-[0_2px_0_rgba(10,50,48,0.7),0_4px_10px_rgba(0,0,0,0.14)]"
               >
-                <span className="font-bold text-lg sm:text-xl leading-snug">Do you know where your will is?</span>
-                <span className="text-base sm:text-lg font-semibold leading-snug mt-1 opacity-95">Save a secure copy here.</span>
+                <span className="font-bold text-lg sm:text-xl leading-snug text-white" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>Do you know where your will is?</span>
+                <span className="text-base sm:text-lg font-semibold leading-snug mt-1 text-white/90" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>Save a secure copy here.</span>
               </button>
             </div>
           </section>
