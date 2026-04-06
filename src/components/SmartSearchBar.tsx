@@ -150,7 +150,7 @@ const SmartSearchBar = () => {
   const [voiceStatus, setVoiceStatus] = useState<"idle" | "listening" | "processing" | "error">("idle");
   const [voiceError, setVoiceError] = useState<string | null>(null);
   const [suggestions, setSuggestions] = useState<RouteMatch[]>([]);
-  const inputRef = useRef<HTMLInputElement>(null);
+  const inputRef = useRef<HTMLTextAreaElement>(null);
   const recognitionRef = useRef<any>(null);
   const navigate = useNavigate();
 
@@ -358,23 +358,31 @@ const SmartSearchBar = () => {
     <div className="w-full max-w-2xl mx-auto mb-10 overflow-hidden">
       {/* Search bar */}
       <div
-        className="relative flex items-center rounded-full border-2 border-border bg-card transition-all duration-200 focus-within:border-gold focus-within:ring-2 focus-within:ring-gold/20"
+        className="relative flex items-center rounded-full border-2 border-border bg-card transition-all duration-200 focus-within:border-gold focus-within:ring-2 focus-within:ring-gold/20 sm:rounded-full rounded-[1.5rem]"
         style={{
           boxShadow:
             "0 4px 20px -4px hsl(220 35% 15% / 0.08), inset 0 1px 0 hsl(0 0% 100% / 0.7)",
         }}
       >
-        <Search className="ml-5 w-5 h-5 text-muted-foreground flex-shrink-0" />
+        <Search className="ml-5 w-5 h-5 text-muted-foreground flex-shrink-0 self-center" />
 
-        <input
+        <textarea
           ref={inputRef}
-          type="text"
           value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          onKeyDown={handleKeyDown}
+          onChange={(e) => {
+            setQuery(e.target.value.replace(/\n/g, ""));
+          }}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              e.preventDefault();
+              handleSubmit();
+            }
+          }}
           placeholder="Tell us what you need help with…"
-          className="flex-1 bg-transparent border-none outline-none py-4 px-4 text-base lg:text-lg text-foreground placeholder:text-muted-foreground/60 font-sans"
+          rows={1}
+          className="flex-1 bg-transparent border-none outline-none py-4 px-4 text-base lg:text-lg text-foreground placeholder:text-muted-foreground/60 font-sans resize-none overflow-hidden search-textarea-mobile"
           aria-label="Search for help"
+          style={{ lineHeight: '1.4' }}
         />
 
         {/* Voice button */}
