@@ -98,6 +98,7 @@ const Index = () => {
                 alt="Real Property Planning"
                 className="mx-auto w-[300px] md:w-[460px] lg:w-[560px] h-auto object-contain"
                 loading="eager"
+                style={{ maskImage: 'radial-gradient(ellipse 85% 80% at center, black 50%, transparent 100%)', WebkitMaskImage: 'radial-gradient(ellipse 85% 80% at center, black 50%, transparent 100%)' }}
               />
             </div>
 
