@@ -93,10 +93,46 @@ const Wills = () => {
                     window.scrollTo({ top: elementPosition - headerOffset, behavior: "smooth" });
                   }
                 }}
-                className="inline-flex flex-col items-center justify-center px-10 py-5 rounded-lg cursor-pointer transition-all duration-200 hover:-translate-y-0.5 bg-gradient-to-b from-[#1a6b6a] to-[#144f4e] border border-[rgba(10,60,58,0.5)] shadow-[0_3px_0_rgba(10,50,48,0.7),0_8px_18px_rgba(0,0,0,0.16),inset_0_1px_0_rgba(255,255,255,0.18)] hover:shadow-[0_5px_0_rgba(10,50,48,0.7),0_12px_24px_rgba(0,0,0,0.2),inset_0_1px_0_rgba(255,255,255,0.18)] active:translate-y-[1px] active:shadow-[0_2px_0_rgba(10,50,48,0.7),0_4px_10px_rgba(0,0,0,0.14)]"
+                className="inline-flex flex-col items-center justify-center px-12 py-6 rounded-2xl cursor-pointer transition-all duration-200 hover:-translate-y-1 active:translate-y-[2px] border-2 border-[rgba(255,255,255,0.15)]"
+                style={{
+                  background: 'linear-gradient(180deg, #238584 0%, #1a6b6a 40%, #144f4e 100%)',
+                  boxShadow: `
+                    0 6px 0 #0d3a39,
+                    0 8px 0 #092a29,
+                    0 12px 24px rgba(0,0,0,0.25),
+                    inset 0 2px 1px rgba(255,255,255,0.2),
+                    inset 0 -2px 4px rgba(0,0,0,0.15),
+                    inset 2px 0 3px rgba(255,255,255,0.06),
+                    inset -2px 0 3px rgba(255,255,255,0.06)
+                  `,
+                  borderTop: '1px solid rgba(255,255,255,0.25)',
+                  borderBottom: '3px solid #092a29',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = `
+                    0 8px 0 #0d3a39,
+                    0 10px 0 #092a29,
+                    0 16px 32px rgba(0,0,0,0.3),
+                    inset 0 2px 1px rgba(255,255,255,0.2),
+                    inset 0 -2px 4px rgba(0,0,0,0.15),
+                    inset 2px 0 3px rgba(255,255,255,0.06),
+                    inset -2px 0 3px rgba(255,255,255,0.06)
+                  `;
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = `
+                    0 6px 0 #0d3a39,
+                    0 8px 0 #092a29,
+                    0 12px 24px rgba(0,0,0,0.25),
+                    inset 0 2px 1px rgba(255,255,255,0.2),
+                    inset 0 -2px 4px rgba(0,0,0,0.15),
+                    inset 2px 0 3px rgba(255,255,255,0.06),
+                    inset -2px 0 3px rgba(255,255,255,0.06)
+                  `;
+                }}
               >
-                <span className="font-bold text-lg sm:text-xl leading-snug text-white" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>Do you know where your will is?</span>
-                <span className="text-base sm:text-lg font-semibold leading-snug mt-1 text-white/90" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>Save a secure copy here.</span>
+                <span className="font-bold text-lg sm:text-xl leading-snug text-white" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.4)' }}>Do you know where your will is?</span>
+                <span className="text-base sm:text-lg font-semibold leading-snug mt-1.5 text-white/95" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.4)' }}>Save a secure copy here.</span>
               </button>
             </div>
           </section>
