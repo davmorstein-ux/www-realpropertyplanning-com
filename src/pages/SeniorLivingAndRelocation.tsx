@@ -7,6 +7,7 @@ import RelatedServices from "@/components/RelatedServices";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import iconSeniorLiving from "@/assets/icons/icon-senior-living.png";
 import iconAfh3d from "@/assets/icons/icon-afh-3d.png";
+import iconAssistedLiving3d from "@/assets/icons/icon-assisted-living-3d.png";
 import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 
@@ -146,6 +147,8 @@ const SeniorLivingAndRelocation = () => {
                         <div className="card-3d-blue__face h-full px-3 pt-3 pb-2 flex flex-col items-center">
                           {option.title === "Adult Family Homes" ? (
                             <img src={iconAfh3d} alt="Adult Family Homes" className="h-[105px] max-w-[150px] shrink-0 object-contain mt-1" />
+                          ) : option.title === "Assisted Living Communities" ? (
+                            <img src={iconAssistedLiving3d} alt="Assisted Living Communities" className="h-[105px] max-w-[150px] shrink-0 object-contain mt-1" />
                           ) : (
                             <div className="w-14 h-14 shrink-0 rounded-2xl bg-gradient-to-b from-[hsl(205_80%_92%)] to-[hsl(205_60%_85%)] border border-[hsl(205_70%_75%/0.5)] shadow-[inset_0_1px_2px_rgba(255,255,255,0.8),0_2px_4px_rgba(0,0,0,0.08)] mt-3" />
                           )}
