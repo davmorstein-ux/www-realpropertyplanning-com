@@ -130,15 +130,13 @@ const SeniorLivingAndRelocation = () => {
                     className="card-3d-blue group block no-underline w-[160px] h-[180px] sm:w-[170px] sm:h-[185px]"
                   >
                     <div className="card-3d-blue__inner h-full">
-                      <div className="card-3d-blue__face h-full px-3 pt-5 pb-4 flex flex-col items-center">
+                      <div className="card-3d-blue__face h-full px-3 flex flex-col items-center justify-center">
                         {/* Icon placeholder */}
                         <div className="w-12 h-12 shrink-0 rounded-xl bg-gradient-to-b from-[hsl(205_80%_92%)] to-[hsl(205_60%_85%)] border border-[hsl(205_70%_75%/0.5)] shadow-[inset_0_1px_2px_rgba(255,255,255,0.8),0_2px_4px_rgba(0,0,0,0.08)]" />
                         {/* Label */}
-                        <div className="flex-1 flex items-center mt-2">
-                          <h3 className="font-serif text-[14px] sm:text-[15px] font-bold text-foreground group-hover:text-accent transition-colors text-center" style={{ lineHeight: '1.15' }}>
-                            {option.title}
-                          </h3>
-                        </div>
+                        <h3 className="font-serif text-[14px] sm:text-[15px] font-bold text-foreground group-hover:text-accent transition-colors text-center mt-2" style={{ lineHeight: '1.1' }}>
+                          {option.title}
+                        </h3>
                       </div>
                     </div>
                   </Link>
