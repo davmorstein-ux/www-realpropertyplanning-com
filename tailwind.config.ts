@@ -106,6 +106,10 @@ export default {
             height: "0",
           },
         },
+        shimmer: {
+          "0%": { backgroundPosition: "200% 0" },
+          "100%": { backgroundPosition: "-100% 0" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
