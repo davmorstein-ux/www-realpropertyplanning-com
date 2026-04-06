@@ -136,7 +136,7 @@ const SeniorLivingAndRelocation = () => {
                           <div className="w-14 h-14 shrink-0 rounded-2xl bg-gradient-to-b from-[hsl(205_80%_92%)] to-[hsl(205_60%_85%)] border border-[hsl(205_70%_75%/0.5)] shadow-[inset_0_1px_2px_rgba(255,255,255,0.8),0_2px_4px_rgba(0,0,0,0.08)]" />
                         </div>
                         {/* Label — lower portion */}
-                        <div className={`flex-[1] flex justify-center w-full px-1 pt-1 ${option.title === 'Memory Care' ? 'items-end pb-1' : 'items-start'}`}>
+                        <div className={`flex-[1] flex justify-center w-full px-1 pt-1 ${option.title === 'Memory Care' ? 'items-end pb-0' : 'items-start'}`}>
                           <h3 className="font-serif text-[13px] sm:text-[14px] font-bold text-foreground group-hover:text-accent transition-colors text-center" style={{ lineHeight: option.title === 'Memory Care' ? '1.05' : '0.8' }}>
                             {option.title}
                           </h3>
