@@ -5,6 +5,8 @@ import naepcLogo from "@/assets/naepc-logo-2.png";
 interface AffiliationBadgeGridProps {
   /** Use the alt naepc logo (naepc-logo.png) instead of naepc-logo-2.png */
   naepcAlt?: boolean;
+  /** Additional className for the outer wrapper */
+  className?: string;
 }
 
 const BadgeCell = ({
