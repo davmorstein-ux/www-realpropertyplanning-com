@@ -780,7 +780,7 @@ html, body {
 
 /* Wizard subtitle — override global line-height */
 .wizard-subtitle-tight {
-  font-size: 0.8125rem !important;
+  font-size: 0.9375rem !important;
   line-height: 1.2 !important;
   margin-bottom: 0.25rem !important;
 }
