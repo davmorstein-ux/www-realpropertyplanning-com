@@ -8,7 +8,6 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import iconSeniorLiving from "@/assets/icons/icon-senior-living.png";
 import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
-import blueKeycap from "@/assets/icons/blue-keycap-button.png";
 
 const livingOptions = [
   {
@@ -123,21 +122,23 @@ const SeniorLivingAndRelocation = () => {
                 Every family's situation is different. Understanding the range of options available is an important first step in planning a thoughtful transition.
               </p>
 
-              <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 justify-items-center">
+              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {livingOptions.map((option) => (
                   <Link
                     key={option.title}
                     to={option.path}
-                    className="group relative flex items-center justify-center w-[220px] h-[190px] transition-all duration-200 ease-out hover:-translate-y-[2px] hover:brightness-[1.06] active:translate-y-[1px] active:brightness-[0.97]"
+                    className="card-3d-blue group block no-underline"
                   >
-                    <img
-                      src={blueKeycap}
-                      alt=""
-                      className="absolute inset-0 w-full h-full object-contain pointer-events-none drop-shadow-[0_4px_12px_rgba(0,80,180,0.18)] group-hover:drop-shadow-[0_6px_18px_rgba(0,100,220,0.28)] transition-all duration-200"
-                    />
-                    <span className="relative z-10 text-center px-5 font-serif text-[15px] sm:text-base font-bold leading-snug" style={{ color: '#1B2B4B' }}>
-                      {option.title}
-                    </span>
+                    <div className="card-3d-blue__inner">
+                      <div className="card-3d-blue__face flex items-center justify-center px-6 py-7 min-h-[100px]">
+                        <div className="flex items-center justify-between gap-3 w-full">
+                          <h3 className="font-serif text-lg font-bold text-foreground group-hover:text-accent transition-colors text-center flex-1">
+                            {option.title}
+                          </h3>
+                          <ChevronRight className="w-5 h-5 text-[hsl(205_80%_50%)] group-hover:translate-x-0.5 transition-transform shrink-0" />
+                        </div>
+                      </div>
+                    </div>
                   </Link>
                 ))}
               </div>
