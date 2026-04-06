@@ -11,6 +11,11 @@ const bullets = [
   "Prevents lost or outdated documents",
 ];
 
+const tealHeading = "hsl(179 38% 30%)";
+const tealSub = "hsl(179 40% 25%)";
+const tealBullet = "hsl(179 38% 28%)";
+const bodyDark = "hsl(220 35% 18%)";
+
 const SecureWillSection = () => {
   const [wizardOpen, setWizardOpen] = useState(false);
 
@@ -20,23 +25,23 @@ const SecureWillSection = () => {
       <div className="mx-auto max-w-6xl px-6">
         {/* Headline + body text – full width */}
         <div className="text-center lg:text-left max-w-4xl">
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-foreground leading-tight mb-5">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-[2.75rem] font-bold leading-tight mb-5" style={{ color: tealHeading }}>
             Secure Your Will. Protect Your Legacy.
           </h2>
 
-          <p className="text-lg sm:text-xl font-semibold text-foreground leading-relaxed mb-6">
+          <p className="text-lg sm:text-xl font-semibold leading-relaxed mb-6" style={{ color: tealSub }}>
             Upload and securely store your will in the blockchain cloud — ensuring easy, reliable access for you and your loved ones, now and in the future.
           </p>
 
-          <p className="text-base sm:text-lg text-foreground/80 leading-relaxed mb-4">
+          <p className="text-base sm:text-lg leading-relaxed mb-4" style={{ color: bodyDark }}>
             Your last will &amp; testament is one of the most important documents you will ever create. This secure digital storage solution allows you to upload your will to a blockchain-backed system where it is time-stamped, authenticated, and safely preserved.
           </p>
 
-          <p className="text-base sm:text-lg text-foreground/80 leading-relaxed mb-4">
+          <p className="text-base sm:text-lg leading-relaxed mb-4" style={{ color: bodyDark }}>
             Once stored, your document cannot be altered, lost, or misplaced. Access is controlled entirely by a private digital key — ensuring that only you, or those you authorize, can retrieve it when needed.
           </p>
 
-          <p className="text-base sm:text-lg text-foreground/80 leading-relaxed mb-10">
+          <p className="text-base sm:text-lg leading-relaxed mb-10" style={{ color: bodyDark }}>
             This creates a single, reliable source of truth — giving you and your loved ones confidence in knowing exactly where to find your will and that it is the correct, verified version.
           </p>
         </div>
@@ -49,7 +54,7 @@ const SecureWillSection = () => {
               {bullets.map((text) => (
                 <li key={text} className="flex items-center gap-3">
                   <GoldCheck3D size={22} className="shrink-0" />
-                  <span className="text-foreground text-base sm:text-lg font-medium">{text}</span>
+                  <span className="text-base sm:text-lg font-semibold" style={{ color: tealBullet }}>{text}</span>
                 </li>
               ))}
             </ul>
@@ -81,17 +86,17 @@ const SecureWillSection = () => {
           >
             Secure Your Will Now
           </button>
-          <p className="text-sm sm:text-base text-foreground/60 italic max-w-md">
+          <p className="text-sm sm:text-base italic max-w-md" style={{ color: 'hsl(220 20% 40%)' }}>
             No pressure. Secure, private, and accessible only to you and those you trust.
           </p>
         </div>
 
         {/* Disclosure */}
         <div className="mt-14 pt-8 border-t border-border/50 max-w-3xl mx-auto">
-          <p className="text-sm sm:text-[15px] text-foreground/55 leading-relaxed mb-3">
+          <p className="text-sm sm:text-[15px] leading-relaxed mb-3" style={{ color: 'hsl(220 15% 42%)' }}>
             Real Property Planning provides access to this storage solution as a convenience only and does not create, review, or validate the contents of any uploaded will.
           </p>
-          <p className="text-sm sm:text-[15px] text-foreground/55 leading-relaxed">
+          <p className="text-sm sm:text-[15px] leading-relaxed" style={{ color: 'hsl(220 15% 42%)' }}>
             Once a document is uploaded, access is controlled exclusively by the holder(s) of the private digital key. Real Property Planning does not have access to, custody of, or the ability to retrieve your documents.
           </p>
         </div>
