@@ -127,12 +127,12 @@ const SeniorLivingAndRelocation = () => {
                   <Link
                     key={option.title}
                     to={option.path}
-                    className="card-3d-blue group block no-underline w-[160px] sm:w-[170px]"
+                    className="card-3d-blue group block no-underline w-[160px] h-[160px] sm:w-[170px] sm:h-[170px]"
                   >
-                    <div className="card-3d-blue__inner">
-                      <div className="card-3d-blue__face flex flex-col items-center justify-center aspect-square px-4 py-5">
+                    <div className="card-3d-blue__inner h-full">
+                      <div className="card-3d-blue__face flex flex-col items-center justify-center h-full px-4">
                         {/* Icon placeholder space */}
-                        <div className="w-14 h-14 mb-3 flex items-center justify-center">
+                        <div className="w-14 h-14 mb-3 flex items-center justify-center shrink-0">
                           <div className="w-12 h-12 rounded-xl bg-gradient-to-b from-[hsl(205_80%_92%)] to-[hsl(205_60%_85%)] border border-[hsl(205_70%_75%/0.5)] shadow-[inset_0_1px_2px_rgba(255,255,255,0.8),0_2px_4px_rgba(0,0,0,0.08)]" />
                         </div>
                         <h3 className="font-serif text-[14px] sm:text-[15px] font-bold text-foreground group-hover:text-accent transition-colors text-center leading-snug">
