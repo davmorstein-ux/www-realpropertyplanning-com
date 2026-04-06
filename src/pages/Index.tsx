@@ -88,11 +88,11 @@ const Index = () => {
       {/* ═══════════════════════════════════════════════════
           1. BRAND INTRO — Short, clear, hub-focused
       ═══════════════════════════════════════════════════ */}
-      <section className="-mt-6 lg:-mt-8 pb-6 lg:pb-8 text-center" style={{ background: 'radial-gradient(ellipse 70% 50% at center 30%, hsl(220 48% 17%), hsl(220 52% 10%) 55%, hsl(220 55% 8%) 100%)' }}>
+      <section className="-mt-6 lg:-mt-8 pt-6 md:pt-0 pb-6 lg:pb-8 text-center" style={{ background: 'radial-gradient(ellipse 70% 50% at center 30%, hsl(220 48% 17%), hsl(220 52% 10%) 55%, hsl(220 55% 8%) 100%)' }}>
         <div className="container px-6 lg:px-8">
           <div className="max-w-2xl mx-auto">
             {/* Logo */}
-            <div className="-mb-10 md:-mb-20 lg:-mb-32">
+            <div className="-mb-6 md:-mb-20 lg:-mb-32">
               <img
                 src={logo}
                 alt="Real Property Planning"
