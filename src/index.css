@@ -188,10 +188,22 @@ html, body {
 
   /* Improved contrast for muted text - critical for older readers */
   .text-muted-foreground {
-    color: hsl(220 15% 38%) !important;
+    color: hsl(220 22% 28%) !important;
   }
   .dark .text-muted-foreground {
     color: hsl(40 15% 72%) !important;
+  }
+
+  /* Placeholder text — darker for readability */
+  ::placeholder {
+    color: hsl(220 15% 42%) !important;
+    opacity: 1;
+  }
+
+  /* Input text styling */
+  input, textarea, select {
+    font-weight: 450;
+    color: hsl(220 35% 15%);
   }
 }
 
