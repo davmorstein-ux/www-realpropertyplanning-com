@@ -106,9 +106,9 @@ export default {
             height: "0",
           },
         },
-        shimmer: {
-          "0%": { backgroundPosition: "200% 0" },
-          "100%": { backgroundPosition: "-100% 0" },
+        "shimmer-sweep": {
+          "0%, 20%": { transform: "translateX(-100%)" },
+          "60%, 100%": { transform: "translateX(200%)" },
         },
       },
       animation: {
