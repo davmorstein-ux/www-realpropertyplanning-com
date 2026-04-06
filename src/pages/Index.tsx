@@ -92,7 +92,7 @@ const Index = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-2xl mx-auto">
             {/* Logo */}
-            <div className="-mb-24 lg:-mb-28">
+            <div className="-mb-28 lg:-mb-32">
               <img
                 src={logo}
                 alt="Real Property Planning"
