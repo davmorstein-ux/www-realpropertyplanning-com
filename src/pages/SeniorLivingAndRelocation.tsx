@@ -8,7 +8,6 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import iconSeniorLiving from "@/assets/icons/icon-senior-living.png";
 import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
-import blueKeycap from "@/assets/icons/blue-keycap-button.png";
 
 const livingOptions = [
   {
