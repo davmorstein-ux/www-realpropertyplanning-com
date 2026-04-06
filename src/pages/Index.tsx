@@ -16,7 +16,7 @@ import iconServiceProbate from "@/assets/icons/icon-service-probate.png";
 import iconServiceSenior from "@/assets/icons/icon-service-senior.png";
 import iconServiceValuation from "@/assets/icons/icon-service-valuation.png";
 import daveHeadshot2 from "@/assets/dave-headshot-2.jpg";
-import logo from "@/assets/logo-rpp-dark.png";
+import logo from "@/assets/logo-rpp-transparent.png";
 import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
 import expRealtyLogo from "@/assets/exp-realty-logo.png";
 import ServiceNavTiles from "@/components/ServiceNavTiles";
@@ -91,14 +91,13 @@ const Index = () => {
       <section className="py-10 lg:py-14 text-center" style={{ background: 'radial-gradient(ellipse 70% 50% at center 30%, hsl(220 48% 17%), hsl(220 52% 10%) 55%, hsl(220 55% 8%) 100%)' }}>
         <div className="container px-6 lg:px-8">
           <div className="max-w-2xl mx-auto">
-            {/* Logo — compact, integrated */}
-            <div className="mb-5 lg:mb-6">
+            {/* Logo — transparent, seamlessly integrated */}
+            <div className="mb-4 lg:mb-5">
               <img
                 src={logo}
                 alt="Real Property Planning"
-                className="mx-auto w-[180px] md:w-[260px] lg:w-[320px] h-auto object-contain"
+                className="mx-auto w-[200px] md:w-[280px] lg:w-[340px] h-auto object-contain"
                 loading="eager"
-                style={{ maskImage: 'radial-gradient(ellipse 92% 88% at center, black 50%, transparent 92%)', WebkitMaskImage: 'radial-gradient(ellipse 92% 88% at center, black 50%, transparent 92%)' }}
               />
             </div>
 
