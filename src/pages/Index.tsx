@@ -350,9 +350,7 @@ const Index = () => {
               <p className="text-sm font-semibold uppercase tracking-[0.15em] text-muted-foreground md:whitespace-nowrap text-center">Professional Memberships<br className="md:hidden" /> &amp; Affiliations</p>
               <div className="flex-1 h-px bg-gradient-to-l from-transparent via-muted-foreground/60 to-muted-foreground/60" />
             </div>
-            <div className="-ml-6 md:ml-0">
-              <AffiliationBadgeGrid />
-            </div>
+            <AffiliationBadgeGrid />
           </div>
         </div>
       </section>
