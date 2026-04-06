@@ -156,7 +156,7 @@ const SeniorLivingAndRelocation = () => {
                           ) : (
                             <div className="flex flex-col items-center justify-end w-full flex-1 mt-3 px-1">
                               <h3
-                                className="font-serif text-[17px] sm:text-[14px] font-bold text-foreground group-hover:text-accent transition-colors text-center"
+                                className="font-serif text-[15px] sm:text-[14px] font-bold text-foreground group-hover:text-accent transition-colors text-center"
                                 style={{ lineHeight: '1.15' }}
                               >
                                 {option.title}
