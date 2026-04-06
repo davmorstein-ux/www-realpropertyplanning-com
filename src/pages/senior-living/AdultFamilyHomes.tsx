@@ -8,7 +8,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import { Link } from "react-router-dom";
 import { Phone, Mail, Globe, MapPin } from "lucide-react";
 import mariaCorbuPhoto from "@/assets/providers/maria-corbu-victoria1afh.jpg";
-import victoria1Logo from "@/assets/providers/victoria1afh-logo.png";
+import victoria1Logo from "@/assets/providers/victoria1afh-logo-cropped.png";
 
 const AdultFamilyHomes = () => (
   <>
@@ -47,8 +47,8 @@ const AdultFamilyHomes = () => (
 
             {/* Victoria 1 AFH */}
             <div className="bg-secondary border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 p-5 sm:p-6">
-              <div className="flex flex-col items-center sm:flex-row sm:items-start gap-5">
-                {/* Left: Headshot */}
+              <div className="flex flex-col items-center gap-3 sm:grid sm:grid-cols-[8rem_minmax(0,1fr)] sm:items-start sm:gap-x-5 sm:gap-y-0">
+                {/* Row 1: Headshot */}
                 <div className="shrink-0">
                   <img
                     src={mariaCorbuPhoto}
@@ -57,15 +57,20 @@ const AdultFamilyHomes = () => (
                   />
                 </div>
 
-                {/* Right: Info */}
-                <div className="flex-1 text-center sm:text-left -mt-1">
-                  <a href="https://www.victoria1afh.com" target="_blank" rel="noopener noreferrer">
-                    <img
-                      src={victoria1Logo}
-                      alt="Victoria 1 AFH logo"
-                      className="h-[280px] w-auto object-contain mx-auto sm:mx-0 block leading-none -mb-32"
-                    />
-                  </a>
+                {/* Row 1: Logo */}
+                <a href="https://www.victoria1afh.com" target="_blank" rel="noopener noreferrer" className="sm:self-start">
+                  <img
+                    src={victoria1Logo}
+                    alt="Victoria 1 AFH logo"
+                    className="h-[42px] w-auto object-contain mx-auto sm:mx-0 block"
+                  />
+                </a>
+
+                {/* Row 2: Spacer */}
+                <div className="hidden sm:block" aria-hidden="true" />
+
+                {/* Row 2: Business info */}
+                <div className="w-full text-center sm:text-left">
                   <p className="text-muted-foreground text-sm mb-3">Owner: Maria Corbu</p>
 
                   <div className="space-y-1.5 text-sm">
