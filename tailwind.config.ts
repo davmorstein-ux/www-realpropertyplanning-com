@@ -108,15 +108,15 @@ export default {
         },
         "roof-shimmer": {
           "0%, 100%": { opacity: "0" },
-          "30%": { opacity: "0.6", transform: "scale(1.02) translate(1%, -1%)" },
-          "50%": { opacity: "0.35", transform: "scale(1) translate(-1%, 1%)" },
-          "70%": { opacity: "0.55", transform: "scale(1.01) translate(2%, 0%)" },
+          "30%": { opacity: "0.85", transform: "scale(1.02) translate(1%, -1%)" },
+          "50%": { opacity: "0.5", transform: "scale(1) translate(-1%, 1%)" },
+          "70%": { opacity: "0.8", transform: "scale(1.01) translate(2%, 0%)" },
         },
         "roof-shimmer-b": {
           "0%, 100%": { opacity: "0" },
-          "25%": { opacity: "0.4", transform: "scale(1.01) translate(-2%, 1%)" },
-          "55%": { opacity: "0.6", transform: "scale(1) translate(1%, -1%)" },
-          "80%": { opacity: "0.3", transform: "scale(1.02) translate(0%, 1%)" },
+          "25%": { opacity: "0.7", transform: "scale(1.01) translate(-2%, 1%)" },
+          "55%": { opacity: "0.85", transform: "scale(1) translate(1%, -1%)" },
+          "80%": { opacity: "0.5", transform: "scale(1.02) translate(0%, 1%)" },
         },
       },
       animation: {
