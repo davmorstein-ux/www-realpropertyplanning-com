@@ -347,7 +347,7 @@ const Index = () => {
 
             <div className="mt-10 mb-4 flex items-center justify-center gap-3 w-full max-w-xl">
               <div className="flex-1 h-px bg-gradient-to-r from-transparent via-muted-foreground/60 to-muted-foreground/60" />
-              <p className="text-sm font-semibold uppercase tracking-[0.15em] text-muted-foreground md:whitespace-nowrap text-center">Professional Memberships<br className="md:hidden" /> &amp; Affiliations</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.15em] text-muted-foreground md:whitespace-nowrap text-center">Professional<br className="md:hidden" /> Memberships &amp; Affiliations</p>
               <div className="flex-1 h-px bg-gradient-to-l from-transparent via-muted-foreground/60 to-muted-foreground/60" />
             </div>
             <AffiliationBadgeGrid />
