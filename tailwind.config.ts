@@ -106,9 +106,17 @@ export default {
             height: "0",
           },
         },
-        "shimmer-sweep": {
-          "0%, 20%": { transform: "translateX(-100%)" },
-          "60%, 100%": { transform: "translateX(200%)" },
+        "roof-shimmer": {
+          "0%, 100%": { opacity: "0" },
+          "30%": { opacity: "0.6", transform: "scale(1.02) translate(1%, -1%)" },
+          "50%": { opacity: "0.35", transform: "scale(1) translate(-1%, 1%)" },
+          "70%": { opacity: "0.55", transform: "scale(1.01) translate(2%, 0%)" },
+        },
+        "roof-shimmer-b": {
+          "0%, 100%": { opacity: "0" },
+          "25%": { opacity: "0.4", transform: "scale(1.01) translate(-2%, 1%)" },
+          "55%": { opacity: "0.6", transform: "scale(1) translate(1%, -1%)" },
+          "80%": { opacity: "0.3", transform: "scale(1.02) translate(0%, 1%)" },
         },
       },
       animation: {
