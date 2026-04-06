@@ -137,7 +137,7 @@ const SeniorLivingAndRelocation = () => {
                         </div>
                         {/* Label — lower portion */}
                         <div className={`flex-[1] flex justify-center w-full px-1 pt-1 ${option.title === 'Memory Care' ? 'items-end pb-0' : 'items-start'}`}>
-                          <h3 className="font-serif text-[13px] sm:text-[14px] font-bold text-foreground group-hover:text-accent transition-colors text-center" style={{ lineHeight: option.title === 'Memory Care' ? '1.05' : '0.8' }}>
+                          <h3 className="font-serif text-[13px] sm:text-[14px] font-bold text-foreground group-hover:text-accent transition-colors text-center" style={{ lineHeight: option.title === 'Memory Care' ? '1.05' : '0.65' }}>
                             {option.title}
                           </h3>
                         </div>
