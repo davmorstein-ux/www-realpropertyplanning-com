@@ -58,12 +58,12 @@ const AdultFamilyHomes = () => (
                 </div>
 
                 {/* Right: Info */}
-                <div className="flex-1 text-center sm:text-left">
+                <div className="flex-1 text-center sm:text-left -mt-1">
                   <a href="https://www.victoria1afh.com" target="_blank" rel="noopener noreferrer">
                     <img
                       src={victoria1Logo}
                       alt="Victoria 1 AFH logo"
-                      className="h-[140px] w-auto object-contain mx-auto sm:mx-0 block leading-none"
+                      className="h-[280px] w-auto object-contain mx-auto sm:mx-0 block leading-none -mb-4"
                     />
                   </a>
                   <p className="text-muted-foreground text-sm mb-3">Owner: Maria Corbu</p>
