@@ -88,7 +88,7 @@ const Index = () => {
       {/* ═══════════════════════════════════════════════════
           1. BRAND INTRO — Short, clear, hub-focused
       ═══════════════════════════════════════════════════ */}
-      <section className="py-20 lg:py-32 text-center" style={{ background: 'radial-gradient(ellipse at center top, hsl(220 50% 16%), hsl(220 50% 10%) 70%)' }}>
+      <section className="py-20 lg:py-32 text-center" style={{ background: 'radial-gradient(ellipse 80% 60% at center 35%, hsl(220 48% 18%), hsl(220 52% 11%) 60%, hsl(220 55% 8%) 100%)' }}>
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             {/* Logo — blended seamlessly into hero background */}
