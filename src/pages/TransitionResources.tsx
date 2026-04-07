@@ -36,6 +36,7 @@ import iconBriefcase3d from "@/assets/icons/icon-briefcase-3d.png";
 import iconHeartHands3d from "@/assets/icons/icon-heart-hands-3d.png";
 import iconHandshake3d from "@/assets/icons/icon-handshake-3d.png";
 import iconBookOpen3d from "@/assets/icons/icon-book-open-3d.png";
+import ServicePageNav from "@/components/ServicePageNav";
 
 const SITE_URL = "https://realpropertyplanning.com";
 
@@ -443,6 +444,7 @@ const TransitionResources = () => {
         </div>
       </section>
 
+      <ServicePageNav />
       <DisclaimerSection />
       <Footer />
     </div>

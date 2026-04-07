@@ -11,6 +11,7 @@ import PageFAQ from "@/components/PageFAQ";
 import MidPageCTA from "@/components/MidPageCTA";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import ServicePageNav from "@/components/ServicePageNav";
 
 const faqs = [
   { question: "Can one heir block the sale of an inherited property?", answer: "It depends on how the property is titled and the terms of the will or trust. In some cases, all co-owners must agree to sell. In others, the executor or trustee may have authority to proceed. If a co-owner refuses to cooperate, a partition action — a court-ordered sale — may be an option, though it is typically a last resort." },
@@ -188,6 +189,7 @@ const FamilyDisagreementSelling = () => (
     </section>
 
     <RelatedServices currentPath="/insights/family-disagreement-selling-house" />
+    <ServicePageNav />
     <DisclaimerSection />
     <Footer />
   </div>

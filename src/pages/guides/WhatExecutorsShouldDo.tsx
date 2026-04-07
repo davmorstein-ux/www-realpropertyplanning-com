@@ -15,6 +15,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 import ListenButton from "@/components/ListenButton";
+import ServicePageNav from "@/components/ServicePageNav";
 
 const immediateSteps = [
   { title: "Secure the Property", text: "Change locks if needed, verify insurance coverage, and make sure utilities remain active. A vacant home is vulnerable to weather damage, vandalism, and liability issues." },
@@ -217,6 +218,7 @@ const WhatExecutorsShouldDo = () => (
       </div>
     </section>
 
+    <ServicePageNav />
     <DisclaimerSection />
     <Footer />
   </div>

@@ -11,6 +11,7 @@ import PageFAQ from "@/components/PageFAQ";
 import MidPageCTA from "@/components/MidPageCTA";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import ServicePageNav from "@/components/ServicePageNav";
 
 const faqs = [
   { question: "Do I need to travel to Washington to sell inherited property?", answer: "Not necessarily. Many steps — including assessments, vendor coordination, and even closings — can be handled remotely with the right local support. Some families make one trip for personal items and leave the rest to trusted professionals on the ground." },
@@ -181,6 +182,7 @@ const OutOfStateInheritedHouse = () => (
     </section>
 
     <RelatedServices currentPath="/insights/out-of-state-inherited-house-help" />
+    <ServicePageNav />
     <DisclaimerSection />
     <Footer />
   </div>

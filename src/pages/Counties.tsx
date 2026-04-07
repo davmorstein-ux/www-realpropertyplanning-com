@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import mappin3d from "@/assets/mappin-3d.png";
 import { services } from "@/lib/service-areas-data";
+import ServicePageNav from "@/components/ServicePageNav";
 
 const countyCards = [
   {
@@ -155,6 +156,7 @@ const Counties = () => {
         </div>
       </section>
 
+      <ServicePageNav />
       <DisclaimerSection />
       <Footer />
     </div>

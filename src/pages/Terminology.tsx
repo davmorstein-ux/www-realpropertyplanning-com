@@ -14,6 +14,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+import ServicePageNav from "@/components/ServicePageNav";
 
 interface GlossaryTerm {
   term: string;
@@ -225,6 +226,7 @@ const Terminology = () => {
         </div>
       </section>
 
+      <ServicePageNav />
       <DisclaimerSection />
       <Footer />
     </div>

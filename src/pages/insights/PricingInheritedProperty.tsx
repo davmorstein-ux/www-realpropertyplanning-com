@@ -11,6 +11,7 @@ import PageFAQ from "@/components/PageFAQ";
 import MidPageCTA from "@/components/MidPageCTA";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import ServicePageNav from "@/components/ServicePageNav";
 
 const faqs = [
   { question: "Why can't I just use Zillow or Redfin to price an inherited property?", answer: "Online estimates use algorithms based on recent comparable sales — but they cannot account for deferred maintenance, outdated interiors, unusual floor plans, or the specific condition of an estate property. They are a starting point at best, and often misleading for homes that do not fit a typical profile." },
@@ -179,6 +180,7 @@ const PricingInheritedProperty = () => (
     </section>
 
     <RelatedServices currentPath="/insights/pricing-inherited-property-differences" />
+    <ServicePageNav />
     <DisclaimerSection />
     <Footer />
   </div>

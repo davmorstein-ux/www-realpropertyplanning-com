@@ -11,6 +11,7 @@ import PageFAQ from "@/components/PageFAQ";
 import MidPageCTA from "@/components/MidPageCTA";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import ServicePageNav from "@/components/ServicePageNav";
 
 const faqs = [
   { question: "How long does it typically take to sell an estate property in Washington?", answer: "From start to finish — including probate, preparation, listing, and closing — most estate property sales take between 4 and 12 months. Complex estates, contested situations, or properties requiring significant work can take longer." },
@@ -187,6 +188,7 @@ const EstatePropertyTimeline = () => (
     </section>
 
     <RelatedServices currentPath="/insights/estate-property-sale-timeline" />
+    <ServicePageNav />
     <DisclaimerSection />
     <Footer />
   </div>

@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 import ListenButton from "@/components/ListenButton";
+import ServicePageNav from "@/components/ServicePageNav";
 
 const options = [
   { title: "Sell the Property", text: "The most common choice. Selling converts the property into liquid assets that can be distributed among beneficiaries, used to settle estate debts, or reinvested. The sale can happen immediately, after preparation, or after a holding period depending on circumstances." },
@@ -189,6 +190,7 @@ const InheritedHouseWashington = () => (
       </div>
     </section>
 
+    <ServicePageNav />
     <DisclaimerSection />
     <Footer />
   </div>

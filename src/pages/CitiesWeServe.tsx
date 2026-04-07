@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { MessageSquare } from "lucide-react";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 import { counties } from "@/lib/service-areas-data";
+import ServicePageNav from "@/components/ServicePageNav";
 
 const CityGrid = ({ countyData }: { countyData: typeof counties[0] }) => (
   <div className="bg-card border border-border rounded-[18px] px-7 py-8 md:px-8 md:py-9">
@@ -173,6 +174,7 @@ const CitiesWeServe = () => {
         </div>
       </section>
 
+      <ServicePageNav />
       <DisclaimerSection />
 
       {/* Final CTA */}

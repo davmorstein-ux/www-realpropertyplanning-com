@@ -6,6 +6,7 @@ import RelatedServices from "@/components/RelatedServices";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import CTASection from "@/components/CTASection";
 import { Link } from "react-router-dom";
+import ServicePageNav from "@/components/ServicePageNav";
 
 const ProbateEstateAttorneys = () => (
   <>
@@ -65,6 +66,7 @@ const ProbateEstateAttorneys = () => (
 
       <CTASection />
       <RelatedServices currentPath="/resources/probate-estate-attorneys" />
+      <ServicePageNav />
       <DisclaimerSection />
     </main>
     <Footer />

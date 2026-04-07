@@ -6,6 +6,7 @@ import RelatedServices from "@/components/RelatedServices";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import ResourceCard from "@/components/ResourceCard";
 import { BookOpen, Home, Users, MapPin, DollarSign, Scale, Compass } from "lucide-react";
+import ServicePageNav from "@/components/ServicePageNav";
 
 interface Article {
   title: string;
@@ -292,6 +293,7 @@ const Insights = () => {
         </section>
 
         <RelatedServices currentPath="/insights" />
+        <ServicePageNav />
         <DisclaimerSection />
       </main>
 

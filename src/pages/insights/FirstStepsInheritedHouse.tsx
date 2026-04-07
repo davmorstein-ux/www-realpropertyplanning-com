@@ -11,6 +11,7 @@ import PageFAQ from "@/components/PageFAQ";
 import MidPageCTA from "@/components/MidPageCTA";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import ServicePageNav from "@/components/ServicePageNav";
 
 const faqs = [
   { question: "Do I need to do anything with the house immediately?", answer: "The most important first steps are securing the property, maintaining insurance, and notifying relevant parties. You do not need to make any major decisions right away — but taking small protective steps early prevents larger problems later." },
@@ -174,6 +175,7 @@ const FirstStepsInheritedHouse = () => (
     </section>
 
     <RelatedServices currentPath="/insights/first-steps-inherited-house-washington" />
+    <ServicePageNav />
     <DisclaimerSection />
     <Footer />
   </div>
