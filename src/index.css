@@ -908,12 +908,17 @@ html, body {
   }
 }
 
-/* Shared page arrow navigation */
+/* Floating page arrow navigation */
 .rpp-arrow-nav {
+  position: fixed;
+  z-index: 9999;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px;
+  flex-direction: column;
+  gap: 12px;
+  right: 28px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
 }
 
 .rpp-arrow-btn {
@@ -928,6 +933,7 @@ html, body {
   background: transparent;
   cursor: pointer;
   transition: transform 0.18s ease, filter 0.18s ease;
+  pointer-events: auto;
 }
 
 .rpp-arrow-btn img {
@@ -941,19 +947,28 @@ html, body {
   filter: brightness(1.04);
 }
 
+.rpp-arrow-btn:active {
+  transform: translateY(2px) scale(0.96);
+}
+
 .rpp-arrow-btn:focus-visible {
   outline: 3px solid hsl(var(--primary));
   outline-offset: 4px;
 }
 
 @media (max-width: 768px) {
-  .rpp-arrow-btn,
-  .rpp-arrow-btn img {
-    width: 64px;
-    height: 64px;
+  .rpp-arrow-nav {
+    top: auto;
+    transform: none;
+    right: 16px;
+    bottom: 20px;
+    flex-direction: row;
+    gap: 10px;
   }
 
-  .rpp-arrow-nav {
-    gap: 10px;
+  .rpp-arrow-btn,
+  .rpp-arrow-btn img {
+    width: 56px;
+    height: 56px;
   }
 }
