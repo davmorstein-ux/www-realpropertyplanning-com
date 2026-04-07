@@ -6,6 +6,7 @@ import RelatedServices from "@/components/RelatedServices";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import CTASection from "@/components/CTASection";
 import { Link } from "react-router-dom";
+import ServicePageNav from "@/components/ServicePageNav";
 
 const MovingRelocationServices = () => (
   <>
@@ -65,6 +66,7 @@ const MovingRelocationServices = () => (
 
       <CTASection />
       <RelatedServices currentPath="/resources/moving-relocation-services" />
+      <ServicePageNav />
       <DisclaimerSection />
     </main>
     <Footer />

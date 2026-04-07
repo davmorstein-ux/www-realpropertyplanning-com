@@ -13,6 +13,7 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { realEstateAgentSchema } from "@/lib/schema";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+import ServicePageNav from "@/components/ServicePageNav";
 
 const faqs = [
   {
@@ -238,6 +239,7 @@ const KennewickProbateEstate = () => {
         </div>
       </section>
 
+      <ServicePageNav />
       <DisclaimerSection />
       <Footer />
     </div>

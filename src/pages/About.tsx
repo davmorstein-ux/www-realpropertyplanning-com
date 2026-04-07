@@ -16,6 +16,7 @@ import daveHeadshot from "@/assets/dave-headshot.jpg";
 import AgentCredentialBlock from "@/components/AgentCredentialBlock";
 import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+import ServicePageNav from "@/components/ServicePageNav";
 
 const whoWorksWith = [
   "Estate planning, probate, and elder law attorneys",
@@ -233,6 +234,7 @@ const About = () => {
 
       <StatewideSupport background="bg-secondary" />
 
+      <ServicePageNav />
       <DisclaimerSection />
       <Footer />
     </div>

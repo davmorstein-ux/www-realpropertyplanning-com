@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { AlertTriangle } from "lucide-react";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+import ServicePageNav from "@/components/ServicePageNav";
 
 const questions = [
   "Should the property be sold now or held?",
@@ -236,6 +237,7 @@ const ForEstatePlanningAttorneys = () => (
     </section>
 
     <RelatedServices currentPath="/for-estate-planning-attorneys" />
+    <ServicePageNav />
     <DisclaimerSection />
     <Footer />
   </div>

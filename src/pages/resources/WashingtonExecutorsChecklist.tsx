@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { FileText, ArrowRight, AlertCircle } from "lucide-react";
 import GoldCheck3D from "@/components/GoldCheck3D";
+import ServicePageNav from "@/components/ServicePageNav";
 
 const steps = [
   {
@@ -186,6 +187,7 @@ const WashingtonExecutorsChecklist = () => {
         </section>
 
         <RelatedServices currentPath="/resources/washington-executors-10-step-checklist" />
+        <ServicePageNav />
         <DisclaimerSection />
       </main>
 

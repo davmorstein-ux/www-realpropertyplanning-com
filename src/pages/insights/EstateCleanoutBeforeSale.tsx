@@ -11,6 +11,7 @@ import PageFAQ from "@/components/PageFAQ";
 import MidPageCTA from "@/components/MidPageCTA";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import ServicePageNav from "@/components/ServicePageNav";
 
 const faqs = [
   { question: "Do buyers expect an estate property to be completely empty?", answer: "Not always. Some buyers — particularly investors — are comfortable purchasing a home with contents. However, most traditional buyers prefer a clean, empty home. Your approach should be guided by the buyer profile you are targeting and how the property is priced." },
@@ -187,6 +188,7 @@ const EstateCleanoutBeforeSale = () => (
     </section>
 
     <RelatedServices currentPath="/insights/estate-property-cleanout-before-sale" />
+    <ServicePageNav />
     <DisclaimerSection />
     <Footer />
   </div>

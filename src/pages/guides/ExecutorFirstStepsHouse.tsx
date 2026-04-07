@@ -12,6 +12,7 @@ import MidPageCTA from "@/components/MidPageCTA";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+import ServicePageNav from "@/components/ServicePageNav";
 
 const faqs = [
   { question: "Should I change the locks on the estate property?", answer: "Yes, this is generally one of the first things to do. You want to control access to the property and protect it from unauthorized entry. Change the locks and keep a record of who has keys." },
@@ -225,6 +226,7 @@ const ExecutorFirstStepsHouse = () => (
       </div>
     </section>
 
+    <ServicePageNav />
     <DisclaimerSection />
     <Footer />
   </div>

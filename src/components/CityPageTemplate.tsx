@@ -13,6 +13,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { services, getCommonSituations, getWhyLocalMatters, getWhyBrokerAppraiser, isTier1City } from "@/lib/service-areas-data";
 import type { CityData } from "@/lib/service-areas-data";
+import ServicePageNav from "@/components/ServicePageNav";
 
 interface CityPageTemplateProps {
   city: CityData;
@@ -320,6 +321,7 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
         </div>
       </section>
 
+      <ServicePageNav />
       <DisclaimerSection />
       <Footer />
     </div>

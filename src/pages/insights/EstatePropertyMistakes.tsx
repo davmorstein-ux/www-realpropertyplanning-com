@@ -11,6 +11,7 @@ import PageFAQ from "@/components/PageFAQ";
 import MidPageCTA from "@/components/MidPageCTA";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import ServicePageNav from "@/components/ServicePageNav";
 
 const faqs = [
   { question: "What is the most expensive mistake executors make?", answer: "Pricing the property based on emotion or outdated information rather than current market data. An overpriced property sits on the market, accumulates carrying costs, and eventually sells for less than it would have at a well-researched initial price." },
@@ -212,6 +213,7 @@ const EstatePropertyMistakes = () => (
     </section>
 
     <RelatedServices currentPath="/insights/estate-property-mistakes" />
+    <ServicePageNav />
     <DisclaimerSection />
     <Footer />
   </div>

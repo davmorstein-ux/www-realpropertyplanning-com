@@ -11,6 +11,7 @@ import PageFAQ from "@/components/PageFAQ";
 import MidPageCTA from "@/components/MidPageCTA";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import ServicePageNav from "@/components/ServicePageNav";
 
 const faqs = [
   { question: "Do buyers really care if the house has furniture in it?", answer: "Most traditional buyers do. A cluttered home makes rooms feel smaller, hides potential problems, and makes it harder for buyers to imagine their own life in the space. Investors and as-is buyers are generally less concerned about contents." },
@@ -189,6 +190,7 @@ const EmptyHouseBeforeSelling = () => (
     </section>
 
     <RelatedServices currentPath="/insights/empty-house-before-selling" />
+    <ServicePageNav />
     <DisclaimerSection />
     <Footer />
   </div>

@@ -8,6 +8,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import CTASection from "@/components/CTASection";
 import PageFAQ from "@/components/PageFAQ";
 import { Link } from "react-router-dom";
+import ServicePageNav from "@/components/ServicePageNav";
 
 const faqs = [
   {
@@ -299,6 +300,7 @@ const HowToMoveElderlyParents = () => (
       <PageFAQ faqs={faqs} heading="Senior Move & Downsizing FAQs" />
       <CTASection />
       <RelatedServices currentPath="/how-to-move-elderly-parents" />
+      <ServicePageNav />
       <DisclaimerSection />
     </main>
     <Footer />

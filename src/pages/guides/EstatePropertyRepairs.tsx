@@ -12,6 +12,7 @@ import MidPageCTA from "@/components/MidPageCTA";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+import ServicePageNav from "@/components/ServicePageNav";
 
 const faqs = [
   { question: "Should I renovate an inherited home before selling?", answer: "Usually, no. Full renovations rarely make financial sense for estate properties. Targeted improvements — deep cleaning, paint, landscaping, minor repairs — often deliver the best return. A professional assessment can identify which specific improvements are worth the investment." },
@@ -202,6 +203,7 @@ const EstatePropertyRepairs = () => (
       </div>
     </section>
 
+    <ServicePageNav />
     <DisclaimerSection />
     <Footer />
   </div>

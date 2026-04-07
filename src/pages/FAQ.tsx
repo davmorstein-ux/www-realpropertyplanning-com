@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import {
+import ServicePageNav from "@/components/ServicePageNav";
   Accordion,
   AccordionContent,
   AccordionItem,
@@ -236,6 +237,7 @@ const FAQ = () => {
         </div>
       </section>
 
+      <ServicePageNav />
       <DisclaimerSection />
       <Footer />
     </div>
