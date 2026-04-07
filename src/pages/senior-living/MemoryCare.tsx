@@ -6,6 +6,7 @@ import CTASection from "@/components/CTASection";
 import RelatedServices from "@/components/RelatedServices";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import { Link } from "react-router-dom";
+import memoryCareHeroIcon from "@/assets/icons/icon-memory-care-hero.png";
 
 const MemoryCare = () => (
   <>
@@ -34,6 +35,14 @@ const MemoryCare = () => (
           </div>
         </div>
       </section>
+
+      <div className="bg-background pt-10 md:pt-14 pb-2 md:pb-4">
+        <img
+          src={memoryCareHeroIcon}
+          alt="Memory Care"
+          className="block max-w-[240px] md:max-w-[336px] h-auto mx-auto"
+        />
+      </div>
 
       <section className="py-14 md:py-20 bg-background">
         <div className="container px-6 lg:px-8">
