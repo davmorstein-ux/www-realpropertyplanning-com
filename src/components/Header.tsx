@@ -228,12 +228,9 @@ const Header = () => {
       </header>
 
       <div className={`transition-all duration-300 ${scrolled ? "h-[90px] md:h-[100px]" : "h-[100px] md:h-[114px]"}`} />
-
-      <div data-nosnippet className="border-b border-border bg-background">
-        <div className="mx-auto max-w-[1520px] px-4 py-3 md:px-6 md:py-4 lg:px-10">
-          <ServicePageNav variant="global" />
-        </div>
-      </div>
+    </>
+  );
+};
     </>
   );
 };
