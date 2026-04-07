@@ -335,22 +335,19 @@ html, body {
 }
 
 /* ═══════════════════════════════════════════════
-   PREMIUM REFERENCE TILE — gold-standard nav card
+   PREMIUM SHELL TILE — image-backed nav card
 ═══════════════════════════════════════════════ */
-.premium-ref-tile {
-  background: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(40 30% 98%) 100%);
-  border: 1.5px solid hsl(40 25% 82%);
-  box-shadow:
-    0 4px 16px -4px hsl(220 18% 20% / 0.10),
-    0 1px 3px 0 hsl(220 18% 20% / 0.06),
-    inset 0 1px 0 0 hsl(0 0% 100% / 0.7);
+.premium-shell-tile {
+  @apply relative overflow-hidden cursor-pointer transition-all duration-300 ease-out;
+  border-radius: 18px;
+  min-height: 180px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }
-.premium-ref-tile:hover {
-  border-color: hsl(42 55% 68%);
-  box-shadow:
-    0 8px 28px -6px hsl(220 18% 20% / 0.14),
-    0 2px 6px 0 hsl(220 18% 20% / 0.06),
-    inset 0 1px 0 0 hsl(0 0% 100% / 0.8);
+.premium-shell-tile:hover {
+  transform: translateY(-3px);
+  filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.08));
 }
 
 /* ═══════════════════════════════════════════════
