@@ -5,8 +5,10 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import CTASection from "@/components/CTASection";
 import { Link } from "react-router-dom";
-import { CheckCircle, Users, Heart, ArrowRight, Phone } from "lucide-react";
+import { CheckCircle, Users, Heart, ArrowRight, Phone, Mail, Globe, MapPin } from "lucide-react";
 import { Button, GoldHighlight } from "@/components/ui/button";
+import ericRovnerPhoto from "@/assets/providers/eric-rovner-hbmovemanagement.png";
+import hbmmLogo from "@/assets/providers/hbmovemanagement-logo.png";
 
 const SeniorMoveManagers = () => {
   const jsonLd = {
