@@ -7,7 +7,6 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import ResourceDownloadCard from "@/components/ResourceDownloadCard";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import ServicePageNav from "@/components/ServicePageNav";
 
 const categories = [
   {
@@ -174,8 +173,7 @@ const Resources = () => {
         </section>
 
         <RelatedServices currentPath="/resources" />
-        <ServicePageNav />
-        <DisclaimerSection />
+          <DisclaimerSection />
       </main>
 
       <Footer />

@@ -14,7 +14,6 @@ import { ArrowRight } from "lucide-react";
 import { useEffect } from "react";
 import { realEstateAgentSchema } from "@/lib/schema";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
-import ServicePageNav from "@/components/ServicePageNav";
 
 const SITE_URL = "https://realpropertyplanning.com";
 
@@ -331,7 +330,6 @@ const SeattleProbateEstate = () => {
         </div>
       </section>
 
-      <ServicePageNav />
       <DisclaimerSection />
       <Footer />
     </div>

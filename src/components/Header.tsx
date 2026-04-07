@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import ServicePageNav from "@/components/ServicePageNav";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
@@ -74,131 +75,55 @@ const Header = () => {
 
   const isActive = (href: string, children?: { href: string }[]) => {
     if (location.pathname === href) return true;
-    if (children) return children.some(c => location.pathname === c.href);
+    if (children) return children.some((c) => location.pathname === c.href);
     return false;
   };
 
   return (
     <>
-    <header
-      data-nosnippet
-      className={`fixed top-0 left-0 right-0 z-50 bg-white border-b transition-all duration-300 ${
-        scrolled
-          ? "border-border shadow-[0_2px_10px_rgba(0,0,0,0.06)]"
-          : "border-[hsl(0_0%_90%)]"
-      }`}
-      style={{ borderBottomWidth: "1px" }}
-    >
-      <div
-        className={`mx-auto max-w-[1520px] px-4 md:px-6 lg:px-10 flex items-center transition-all duration-300 ${
-          scrolled ? "h-[90px] md:h-[100px]" : "h-[100px] md:h-[114px]"
+      <header
+        data-nosnippet
+        className={`fixed left-0 right-0 top-0 z-50 bg-white border-b transition-all duration-300 ${
+          scrolled
+            ? "border-border shadow-[0_2px_10px_rgba(0,0,0,0.06)]"
+            : "border-[hsl(0_0%_90%)]"
         }`}
-        ref={dropdownRef}
+        style={{ borderBottomWidth: "1px" }}
       >
-        {/* Left – Navigation */}
-        <nav className="hidden md:flex items-center gap-4 lg:gap-6 xl:gap-7 shrink-0">
-          {primaryLinks.map((link) => (
-            <div key={link.label} className="relative">
-              {link.children ? (
-                <>
-                  <button
-                    className={`text-[15px] lg:text-[16px] tracking-[0.02em] font-medium transition-colors hover:text-[hsl(216,65%,34%)] inline-flex items-center gap-1 ${
-                      isActive(link.href, link.children)
-                        ? "text-[hsl(216,65%,34%)] font-semibold"
-                        : "text-foreground"
-                    }`}
-                    onClick={() => setOpenDropdown(openDropdown === link.label ? null : link.label)}
-                    onMouseEnter={() => setOpenDropdown(link.label)}
-                  >
-                    {link.label}
-                    <ChevronDown className={`w-3.5 h-3.5 transition-transform ${openDropdown === link.label ? "rotate-180" : ""}`} />
-                  </button>
-                  {openDropdown === link.label && (
-                    <div
-                      className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-56 bg-card border border-border rounded-2xl shadow-lg py-2 z-50"
-                      onMouseLeave={() => setOpenDropdown(null)}
-                    >
-                      {link.children.map((child) => (
-                        <Link
-                          key={child.href}
-                          to={child.href}
-                          className={`block px-5 py-2.5 text-[15px] transition-colors hover:text-[hsl(216,65%,34%)] hover:bg-secondary ${
-                            location.pathname === child.href ? "text-[hsl(216,65%,34%)] font-semibold" : "text-foreground/80"
-                          }`}
-                        >
-                          {child.label}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </>
-              ) : (
-                <Link
-                  to={link.href}
-                  className={`text-[14px] lg:text-[15px] tracking-[0.02em] font-medium transition-colors hover:text-[hsl(216,65%,34%)] ${
-                    isActive(link.href)
-                      ? "text-[hsl(216,65%,34%)] font-semibold"
-                      : "text-foreground"
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              )}
-            </div>
-          ))}
-        </nav>
-
-        {/* Center – Logo */}
-        <div className="flex-1 flex justify-center lg:justify-center">
-          <Link to="/" className="flex items-center">
-            <img
-              src={logo}
-              alt="Real Property Planning logo – estate real estate planning and property transition services"
-              className={`transition-all duration-300 w-[400px] md:w-[425px] lg:w-[775px] xl:w-[875px] ${
-                scrolled ? "xl:w-[700px] lg:w-[625px] md:w-[350px] w-[350px]" : ""
-              } h-auto max-h-[90px] object-contain`}
-            />
-          </Link>
-        </div>
-
-        {/* Right spacer (desktop) */}
-        <div className="hidden md:flex items-center shrink-0" />
-
-        {/* Mobile Hamburger */}
-        <button
-          className="md:hidden p-3 text-foreground rounded-lg border border-border bg-secondary hover:bg-muted transition-colors"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle menu"
+        <div
+          className={`mx-auto flex max-w-[1520px] items-center px-4 transition-all duration-300 md:px-6 lg:px-10 ${
+            scrolled ? "h-[90px] md:h-[100px]" : "h-[100px] md:h-[114px]"
+          }`}
+          ref={dropdownRef}
         >
-          {mobileMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
-        </button>
-      </div>
-
-      {/* Mobile Navigation */}
-      {mobileMenuOpen && (
-        <div className="md:hidden px-6 pb-6 border-t border-border pt-5 bg-white">
-          <nav className="flex flex-col gap-0.5">
+          <nav className="hidden shrink-0 items-center gap-4 md:flex lg:gap-6 xl:gap-7">
             {primaryLinks.map((link) => (
-              <div key={link.label}>
+              <div key={link.label} className="relative">
                 {link.children ? (
                   <>
                     <button
-                      className={`w-full text-left text-[17px] py-3.5 transition-colors hover:text-[hsl(216,65%,34%)] flex items-center justify-between ${
-                        isActive(link.href, link.children) ? "text-[hsl(216,65%,34%)] font-bold" : "text-foreground font-medium"
+                      className={`inline-flex items-center gap-1 text-[15px] font-medium tracking-[0.02em] transition-colors hover:text-[hsl(216,65%,34%)] lg:text-[16px] ${
+                        isActive(link.href, link.children)
+                          ? "font-semibold text-[hsl(216,65%,34%)]"
+                          : "text-foreground"
                       }`}
-                      onClick={() => setMobileExpanded(mobileExpanded === link.label ? null : link.label)}
+                      onClick={() => setOpenDropdown(openDropdown === link.label ? null : link.label)}
+                      onMouseEnter={() => setOpenDropdown(link.label)}
                     >
                       {link.label}
-                      <ChevronDown className={`w-5 h-5 transition-transform ${mobileExpanded === link.label ? "rotate-180" : ""}`} />
+                      <ChevronDown className={`h-3.5 w-3.5 transition-transform ${openDropdown === link.label ? "rotate-180" : ""}`} />
                     </button>
-                    {mobileExpanded === link.label && (
-                      <div className="flex flex-col gap-0.5 pl-5 border-l-2 border-gold/30 mb-2">
+                    {openDropdown === link.label && (
+                      <div
+                        className="absolute left-1/2 top-full z-50 mt-2 w-56 -translate-x-1/2 rounded-2xl border border-border bg-card py-2 shadow-lg"
+                        onMouseLeave={() => setOpenDropdown(null)}
+                      >
                         {link.children.map((child) => (
                           <Link
                             key={child.href}
                             to={child.href}
-                            className={`text-[15px] py-3 transition-colors hover:text-[hsl(216,65%,34%)] ${
-                              location.pathname === child.href ? "text-[hsl(216,65%,34%)] font-bold" : "text-foreground/80"
+                            className={`block px-5 py-2.5 text-[15px] transition-colors hover:bg-secondary hover:text-[hsl(216,65%,34%)] ${
+                              location.pathname === child.href ? "font-semibold text-[hsl(216,65%,34%)]" : "text-foreground/80"
                             }`}
                           >
                             {child.label}
@@ -210,8 +135,10 @@ const Header = () => {
                 ) : (
                   <Link
                     to={link.href}
-                    className={`text-[17px] py-3.5 block transition-colors hover:text-[hsl(216,65%,34%)] ${
-                      location.pathname === link.href ? "text-[hsl(216,65%,34%)] font-bold" : "text-foreground font-medium"
+                    className={`text-[14px] font-medium tracking-[0.02em] transition-colors hover:text-[hsl(216,65%,34%)] lg:text-[15px] ${
+                      isActive(link.href)
+                        ? "font-semibold text-[hsl(216,65%,34%)]"
+                        : "text-foreground"
                     }`}
                   >
                     {link.label}
@@ -219,20 +146,95 @@ const Header = () => {
                 )}
               </div>
             ))}
-            <div className="border-t border-border mt-3 pt-4">
-              <Link to="/contact">
-                <Button className="bg-[hsl(216,65%,34%)] hover:bg-[hsl(216,65%,28%)] text-white font-semibold w-full h-[52px] text-base rounded-lg">
-                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
-                  Schedule a Consultation
-                </Button>
-              </Link>
-            </div>
           </nav>
+
+          <div className="flex flex-1 justify-center lg:justify-center">
+            <Link to="/" className="flex items-center">
+              <img
+                src={logo}
+                alt="Real Property Planning logo – estate real estate planning and property transition services"
+                className={`h-auto max-h-[90px] w-[400px] object-contain transition-all duration-300 md:w-[425px] lg:w-[775px] xl:w-[875px] ${
+                  scrolled ? "w-[350px] md:w-[350px] lg:w-[625px] xl:w-[700px]" : ""
+                }`}
+              />
+            </Link>
+          </div>
+
+          <div className="hidden shrink-0 items-center md:flex" />
+
+          <button
+            className="rounded-lg border border-border bg-secondary p-3 text-foreground transition-colors hover:bg-muted md:hidden"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
+          </button>
         </div>
-      )}
-    </header>
-    {/* Spacer to offset fixed header height */}
-    <div className={`transition-all duration-300 ${scrolled ? "h-[90px] md:h-[100px]" : "h-[100px] md:h-[114px]"}`} />
+
+        {mobileMenuOpen && (
+          <div className="border-t border-border bg-white px-6 pb-6 pt-5 md:hidden">
+            <nav className="flex flex-col gap-0.5">
+              {primaryLinks.map((link) => (
+                <div key={link.label}>
+                  {link.children ? (
+                    <>
+                      <button
+                        className={`flex w-full items-center justify-between py-3.5 text-left text-[17px] transition-colors hover:text-[hsl(216,65%,34%)] ${
+                          isActive(link.href, link.children) ? "font-bold text-[hsl(216,65%,34%)]" : "font-medium text-foreground"
+                        }`}
+                        onClick={() => setMobileExpanded(mobileExpanded === link.label ? null : link.label)}
+                      >
+                        {link.label}
+                        <ChevronDown className={`h-5 w-5 transition-transform ${mobileExpanded === link.label ? "rotate-180" : ""}`} />
+                      </button>
+                      {mobileExpanded === link.label && (
+                        <div className="mb-2 flex flex-col gap-0.5 border-l-2 border-gold/30 pl-5">
+                          {link.children.map((child) => (
+                            <Link
+                              key={child.href}
+                              to={child.href}
+                              className={`py-3 text-[15px] transition-colors hover:text-[hsl(216,65%,34%)] ${
+                                location.pathname === child.href ? "font-bold text-[hsl(216,65%,34%)]" : "text-foreground/80"
+                              }`}
+                            >
+                              {child.label}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </>
+                  ) : (
+                    <Link
+                      to={link.href}
+                      className={`block py-3.5 text-[17px] transition-colors hover:text-[hsl(216,65%,34%)] ${
+                        location.pathname === link.href ? "font-bold text-[hsl(216,65%,34%)]" : "font-medium text-foreground"
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
+                  )}
+                </div>
+              ))}
+              <div className="mt-3 border-t border-border pt-4">
+                <Link to="/contact">
+                  <Button className="h-[52px] w-full rounded-lg bg-[hsl(216,65%,34%)] text-base font-semibold text-white hover:bg-[hsl(216,65%,28%)]">
+                    <img src={iconPhone3d} alt="" aria-hidden="true" className="mr-2 h-5 w-5 shrink-0 object-contain" />
+                    Schedule a Consultation
+                  </Button>
+                </Link>
+              </div>
+            </nav>
+          </div>
+        )}
+      </header>
+
+      <div className={`transition-all duration-300 ${scrolled ? "h-[90px] md:h-[100px]" : "h-[100px] md:h-[114px]"}`} />
+
+      <div data-nosnippet className="border-b border-border bg-background">
+        <div className="mx-auto max-w-[1520px] px-4 py-3 md:px-6 md:py-4 lg:px-10">
+          <ServicePageNav variant="global" />
+        </div>
+      </div>
     </>
   );
 };

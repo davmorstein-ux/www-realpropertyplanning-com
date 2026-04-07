@@ -14,7 +14,6 @@ import GoldCheck3D from "@/components/GoldCheck3D";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
-import ServicePageNav from "@/components/ServicePageNav";
 
 const challenges = [
   "Coordinating property access, vendor appointments, and inspections from a different time zone",
@@ -200,7 +199,6 @@ const OutOfStateFamilies = () => (
       </div>
     </section>
 
-    <ServicePageNav />
     <DisclaimerSection />
     <Footer />
   </div>

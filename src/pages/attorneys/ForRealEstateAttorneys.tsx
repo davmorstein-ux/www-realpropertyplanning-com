@@ -9,7 +9,6 @@ import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
-import ServicePageNav from "@/components/ServicePageNav";
 
 const whatTheyDo = [
   "Reviewing or drafting purchase and sale agreements",
@@ -323,7 +322,6 @@ const ForRealEstateAttorneys = () => (
     </section>
 
     <RelatedServices currentPath="/real-estate-attorneys" />
-    <ServicePageNav />
     <DisclaimerSection />
     <Footer />
   </div>

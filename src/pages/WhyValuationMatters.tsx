@@ -15,7 +15,6 @@ import { Link } from "react-router-dom";
 import warning3d from "@/assets/warning-3d.png";
 import scale3d from "@/assets/scale-3d.png";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
-import ServicePageNav from "@/components/ServicePageNav";
 
 const whyMatters = [
   "Supports confident pricing decisions that reflect the property's true condition and market position",
@@ -275,7 +274,6 @@ const WhyValuationMatters = () => {
         </div>
       </section>
 
-      <ServicePageNav />
       <DisclaimerSection />
       <Footer />
     </div>

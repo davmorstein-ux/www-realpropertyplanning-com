@@ -11,7 +11,6 @@ import PageFAQ from "@/components/PageFAQ";
 import MidPageCTA from "@/components/MidPageCTA";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import ServicePageNav from "@/components/ServicePageNav";
 
 const faqs = [
   { question: "Is it better financially to sell or rent an inherited property?", answer: "It depends on the property's condition, location, rental demand, and your ability to manage it. Renting can provide ongoing income, but it also means ongoing responsibility — maintenance, tenant management, and tax implications. Selling provides a clean resolution and immediate proceeds. There is no universally right answer." },
@@ -195,7 +194,6 @@ const SellOrKeepProperty = () => (
     </section>
 
     <RelatedServices currentPath="/insights/sell-or-keep-inherited-property" />
-    <ServicePageNav />
     <DisclaimerSection />
     <Footer />
   </div>

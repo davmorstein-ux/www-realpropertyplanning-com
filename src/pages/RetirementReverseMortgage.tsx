@@ -9,7 +9,6 @@ import { Link } from "react-router-dom";
 import { MapPin, Globe } from "lucide-react";
 import iconEmail3d from "@/assets/icons/icon-email-3d.png";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
-import ServicePageNav from "@/components/ServicePageNav";
 
 const RetirementReverseMortgage = () => (
   <div className="min-h-screen bg-background">
@@ -185,7 +184,6 @@ const RetirementReverseMortgage = () => (
     </section>
 
     <RelatedServices currentPath="/retirement-reverse-mortgage" />
-    <ServicePageNav />
     <DisclaimerSection />
     <Footer />
   </div>

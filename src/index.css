@@ -908,8 +908,46 @@ html, body {
   }
 }
 
-/* Service page arrow navigation — mobile */
+/* Shared page arrow navigation */
+.rpp-arrow-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.rpp-arrow-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 74px;
+  height: 74px;
+  padding: 0;
+  border: 0;
+  border-radius: 9999px;
+  background: transparent;
+  cursor: pointer;
+  transition: transform 0.18s ease, filter 0.18s ease;
+}
+
+.rpp-arrow-btn img {
+  display: block;
+  width: 74px;
+  height: 74px;
+}
+
+.rpp-arrow-btn:hover {
+  transform: translateY(1px) scale(0.985);
+  filter: brightness(1.04);
+}
+
+.rpp-arrow-btn:focus-visible {
+  outline: 3px solid hsl(var(--primary));
+  outline-offset: 4px;
+}
+
 @media (max-width: 768px) {
+  .rpp-arrow-btn,
   .rpp-arrow-btn img {
     width: 64px;
     height: 64px;

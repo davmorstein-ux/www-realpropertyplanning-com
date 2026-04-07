@@ -8,7 +8,6 @@ import RelatedServices from "@/components/RelatedServices";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
-import ServicePageNav from "@/components/ServicePageNav";
 import {
   Accordion,
   AccordionContent,
@@ -237,7 +236,6 @@ const FAQ = () => {
         </div>
       </section>
 
-      <ServicePageNav />
       <DisclaimerSection />
       <Footer />
     </div>

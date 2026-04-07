@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 import GoldCheck3D from "@/components/GoldCheck3D";
-import ServicePageNav from "@/components/ServicePageNav";
 
 const OutOfStateExecutorCaseStudy = () => {
   return (
@@ -179,7 +178,6 @@ const OutOfStateExecutorCaseStudy = () => {
         </div>
       </section>
 
-      <ServicePageNav />
       <Footer />
     </div>
   );

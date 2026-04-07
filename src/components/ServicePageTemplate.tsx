@@ -12,7 +12,6 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { counties, isTier1City } from "@/lib/service-areas-data";
 import type { ServiceData } from "@/lib/service-areas-data";
-import ServicePageNav from "@/components/ServicePageNav";
 
 interface ServicePageTemplateProps {
   service: ServiceData;
@@ -218,7 +217,6 @@ const ServicePageTemplate = ({ service, introText, situations, benefits }: Servi
         </div>
       </section>
 
-      <ServicePageNav />
       <DisclaimerSection />
       <Footer />
     </div>

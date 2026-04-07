@@ -11,7 +11,6 @@ import PageFAQ from "@/components/PageFAQ";
 import MidPageCTA from "@/components/MidPageCTA";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import ServicePageNav from "@/components/ServicePageNav";
 
 const faqs = [
   { question: "Will I get less money selling as-is?", answer: "Usually, yes — but not always as much less as people fear. Buyers who purchase as-is properties factor in repair costs, but a well-priced as-is home in a desirable location can still attract strong offers. The key is pricing accurately based on current condition, not what the home could be worth after renovations." },
@@ -169,7 +168,6 @@ const SellWithoutRepairs = () => (
     </section>
 
     <RelatedServices currentPath="/insights/sell-inherited-house-without-repairs" />
-    <ServicePageNav />
     <DisclaimerSection />
     <Footer />
   </div>
