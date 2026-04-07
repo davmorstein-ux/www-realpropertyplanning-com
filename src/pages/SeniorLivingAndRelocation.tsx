@@ -5,7 +5,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import CTASection from "@/components/CTASection";
 import RelatedServices from "@/components/RelatedServices";
 import DisclaimerSection from "@/components/DisclaimerSection";
-import iconSeniorLiving from "@/assets/icons/icon-senior-living.png";
+import iconSeniorLiving from "@/assets/icons/icon-senior-living-hero-cropped.png";
 import iconAfh3d from "@/assets/icons/icon-afh-3d.png";
 import iconAssistedLiving3d from "@/assets/icons/icon-assisted-living-3d.png";
 import iconMemoryCare3d from "@/assets/icons/icon-memory-care-3d.png";
@@ -13,94 +13,16 @@ import iconNursingCare3d from "@/assets/icons/icon-nursing-care-3d.png";
 import iconIndependentLiving3d from "@/assets/icons/icon-independent-living-3d.png";
 import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
-
-const livingOptions = [
-  {
-    title: "Adult Family Homes",
-    description:
-      "Smaller, home-like settings that offer personalized care for a limited number of residents. Often a good fit for seniors who prefer a quieter, more intimate environment.",
-    path: "/senior-living/adult-family-homes",
-  },
-  {
-    title: "Assisted Living Communities",
-    description:
-      "Larger communities that offer varying levels of daily support, social activities, and on-site amenities while maintaining independence.",
-    path: "/senior-living/assisted-living-communities",
-  },
-  {
-    title: "Memory Care",
-    description:
-      "Specialized programs designed for individuals living with Alzheimer's or other forms of dementia, with structured routines and secure environments.",
-    path: "/senior-living/memory-care",
-  },
-  {
-    title: "Nursing & Skilled Care",
-    description:
-      "Facilities that provide 24-hour medical support for seniors with more complex health needs or those recovering from hospitalization.",
-    path: "/senior-living/nursing-and-skilled-care",
-  },
-  {
-    title: "Independent Living",
-    description:
-      "Communities designed for active seniors who want a maintenance-free lifestyle with access to social activities and shared amenities.",
-    path: "/senior-living/independent-living",
-  },
-];
-
-const supportItems = [
-  {
-    title: "Timing Real Estate with Relocation",
-    description:
-      "Understanding when to list, how to prepare the home, and how to align the sale with the move timeline.",
-  },
-  {
-    title: "Property Preparation & Coordination",
-    description:
-      "Coordinating cleanout, repairs, and staging with trusted vendors so the home is market-ready without adding stress.",
-  },
-  {
-    title: "Clear, Objective Valuation",
-    description:
-      "Providing accurate market insight so families can make informed financial decisions about the property.",
-  },
-  {
-    title: "Working with Your Team",
-    description:
-      "Collaborating with senior move managers, care advisors, attorneys, and family members to keep everyone aligned.",
-  },
-  {
-    title: "Calm, Steady Communication",
-    description:
-      "Providing regular updates and a patient, structured approach during what is often an emotional process.",
-  },
-];
-
-const SeniorLivingAndRelocation = () => {
-  return (
-    <>
-      <SEOHead
-        title="Senior Living & Relocation | Real Property Planning"
-        description="Helping families navigate housing transitions — from understanding senior living options to coordinating the sale of a family home."
-        canonical="https://www.realpropertyplanning.com/senior-living-and-relocation"
-      />
-      <BreadcrumbSchema
-        items={[
-          { name: "Home", url: "https://www.realpropertyplanning.com" },
-          { name: "Senior Living & Relocation", url: "https://www.realpropertyplanning.com/senior-living-and-relocation" },
-        ]}
-      />
-      <Header />
-
-      <main>
+...
         {/* Hero */}
-        <section className="bg-secondary py-14 md:py-20">
+        <section className="bg-secondary pt-8 md:pt-12 pb-12 md:pb-14">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
-              <div className="flex justify-center mb-6">
+              <div className="flex justify-center mb-8 md:mb-10">
                 <img
                   src={iconSeniorLiving}
                   alt="Senior Living & Relocation"
-                  className="h-[26rem] w-[26rem] object-contain"
+                  className="block w-full max-w-[23rem] h-auto object-contain"
                 />
               </div>
               <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-sm">
