@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import { Phone, Mail } from "lucide-react";
 import { useLayoutEffect, useRef, useState, useCallback } from "react";
 import redSphere from "@/assets/red-sphere-accent.png";
+import ServicePageNav from "@/components/ServicePageNav";
 
 const poaTiles = [
   { title: "Aging Parents", description: "A parent begins to need help with daily decisions, and the family home needs to be sold to fund care or simplify the estate. Someone needs to be authorized to act." },
@@ -526,6 +527,7 @@ const PowerOfAttorneys = () => {
       </section>
 
       <RelatedServices currentPath="/senior-living/power-of-attorneys" />
+      <ServicePageNav />
       <DisclaimerSection />
     </main>
     <Footer />

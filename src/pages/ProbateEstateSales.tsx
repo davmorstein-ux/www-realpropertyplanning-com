@@ -16,6 +16,7 @@ import warning3d from "@/assets/warning-3d.png";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 import ClientReviewsSection from "@/components/ClientReviewsSection";
 import RealClientSituations from "@/components/RealClientSituations";
+import ServicePageNav from "@/components/ServicePageNav";
 
 const probateReviews = [
   {
@@ -392,6 +393,7 @@ const ProbateEstateSales = () => {
         </div>
       </section>
 
+      <ServicePageNav />
       <DisclaimerSection />
       <Footer />
     </div>

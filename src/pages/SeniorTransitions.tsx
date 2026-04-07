@@ -17,6 +17,7 @@ import people3d from "@/assets/people-3d.png";
 import heart3d from "@/assets/heart-3d.png";
 import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+import ServicePageNav from "@/components/ServicePageNav";
 
 const transitionSituations = [
   "Downsizing from a longtime family home to a smaller residence",
@@ -289,6 +290,7 @@ const SeniorTransitions = () => {
         </div>
       </section>
 
+      <ServicePageNav />
       <DisclaimerSection />
       <Footer />
     </div>
