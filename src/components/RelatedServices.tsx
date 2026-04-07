@@ -61,7 +61,7 @@ const RelatedServices = ({ currentPath }: RelatedServicesProps) => {
                       {link.description}
                     </p>
                   </div>
-                  <div className="flex items-center gap-1.5 mt-4 text-primary/70 group-hover:text-blue-600 transition-colors text-sm font-medium">
+                  <div className="flex items-center gap-1.5 mt-4 text-primary/70 group-hover:text-accent transition-colors text-sm font-medium">
                     <span>Learn more</span>
                     <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1.5">→</span>
                   </div>
