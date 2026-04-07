@@ -17,6 +17,7 @@ const allLinks = [
   { href: "/faq", label: "FAQ", description: "Answers to common questions about our services, process, and expertise." },
   { href: "/contact", label: "Contact David", description: "Start a confidential conversation about your property situation." },
   { href: "/resources", label: "Resources", description: "Trusted professionals and service providers for probate, estate, and senior transitions." },
+  { href: "/senior-living/power-of-attorneys", label: "Power of Attorneys", description: "Understanding how Power of Attorney authority connects to real estate decisions during senior transitions." },
 ];
 
 interface RelatedServicesProps {

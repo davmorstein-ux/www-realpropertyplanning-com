@@ -6,7 +6,6 @@ import CTASection from "@/components/CTASection";
 import RelatedServices from "@/components/RelatedServices";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import iconSeniorLiving from "@/assets/icons/icon-senior-living.png";
-import iconPowerOfAttorneys3d from "@/assets/icons/icon-power-of-attorneys-3d.png";
 import iconAfh3d from "@/assets/icons/icon-afh-3d.png";
 import iconAssistedLiving3d from "@/assets/icons/icon-assisted-living-3d.png";
 import iconMemoryCare3d from "@/assets/icons/icon-memory-care-3d.png";
@@ -45,12 +44,6 @@ const livingOptions = [
     description:
       "Communities designed for active seniors who want a maintenance-free lifestyle with access to social activities and shared amenities.",
     path: "/senior-living/independent-living",
-  },
-  {
-    title: "Power of Attorneys",
-    description:
-      "Understanding how Power of Attorney authority connects to real estate decisions when a loved one can no longer manage property matters.",
-    path: "/senior-living/power-of-attorneys",
   },
 ];
 
@@ -134,7 +127,7 @@ const SeniorLivingAndRelocation = () => {
                 Every family's situation is different. Understanding the range of options available is an important first step in planning a thoughtful transition.
               </p>
 
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-5 justify-items-center">
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5 justify-items-center">
                 {livingOptions.map((option) => {
                   const forcedLabelLines =
                     option.title === "Adult Family Homes"
@@ -145,9 +138,7 @@ const SeniorLivingAndRelocation = () => {
                           ? ["Nursing &", "Skilled Care"]
                           : option.title === "Independent Living"
                             ? ["Independent", "Living"]
-                            : option.title === "Power of Attorneys"
-                              ? ["Power of", "Attorneys"]
-                              : null;
+                            : null;
 
                   return (
                     <Link
@@ -167,8 +158,6 @@ const SeniorLivingAndRelocation = () => {
                             <img src={iconNursingCare3d} alt="Nursing & Skilled Care" className="h-[105px] max-w-[150px] shrink-0 object-contain mt-1 transition-transform duration-300 ease-out group-hover:scale-110" />
                           ) : option.title === "Independent Living" ? (
                             <img src={iconIndependentLiving3d} alt="Independent Living" className="h-[105px] max-w-[150px] shrink-0 object-contain mt-1 transition-transform duration-300 ease-out group-hover:scale-110" />
-                          ) : option.title === "Power of Attorneys" ? (
-                            <img src={iconPowerOfAttorneys3d} alt="Power of Attorneys" className="h-[105px] max-w-[150px] shrink-0 object-contain mt-1 transition-transform duration-300 ease-out group-hover:scale-110" />
                           ) : (
                             <div className="w-14 h-14 shrink-0 rounded-2xl bg-gradient-to-b from-[hsl(205_80%_92%)] to-[hsl(205_60%_85%)] border border-[hsl(205_70%_75%/0.5)] shadow-[inset_0_1px_2px_rgba(255,255,255,0.8),0_2px_4px_rgba(0,0,0,0.08)] mt-3" />
                           )}
