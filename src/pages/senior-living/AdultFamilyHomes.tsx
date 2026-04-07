@@ -47,7 +47,7 @@ const AdultFamilyHomes = () => (
 
             {/* Victoria 1 AFH */}
             <div className="bg-secondary border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 p-5 sm:p-6">
-              <div className="flex flex-col items-center gap-3 sm:grid sm:grid-cols-[8rem_minmax(0,1fr)] sm:items-start sm:gap-x-5 sm:gap-y-0">
+              <div className="flex flex-col items-center gap-3 sm:grid sm:grid-cols-[8rem_minmax(0,1fr)] sm:items-start sm:gap-x-5 sm:gap-y-1">
                 {/* Row 1: Headshot */}
                 <div className="shrink-0">
                   <img
