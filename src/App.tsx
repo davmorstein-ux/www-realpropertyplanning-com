@@ -60,6 +60,7 @@ import SeniorEstateServices from "./pages/SeniorEstateServices";
 import RetirementReverseMortgage from "./pages/RetirementReverseMortgage";
 import LendersFinancingSpecialists from "./pages/LendersFinancingSpecialists";
 import SeniorLivingAndRelocation from "./pages/SeniorLivingAndRelocation";
+import SeniorMoveManagersPage from "./pages/SeniorMoveManagers";
 import AdultFamilyHomes from "./pages/senior-living/AdultFamilyHomes";
 import AssistedLivingCommunities from "./pages/senior-living/AssistedLivingCommunities";
 import MemoryCare from "./pages/senior-living/MemoryCare";
@@ -198,6 +199,7 @@ const App = () => (
           <Route path="/retirement-reverse-mortgage" element={<RetirementReverseMortgage />} />
           <Route path="/lenders-and-financing-specialists" element={<LendersFinancingSpecialists />} />
           <Route path="/senior-living-and-relocation" element={<SeniorLivingAndRelocation />} />
+          <Route path="/senior-move-managers" element={<SeniorMoveManagersPage />} />
           <Route path="/senior-living/adult-family-homes" element={<AdultFamilyHomes />} />
           <Route path="/senior-living/assisted-living-communities" element={<AssistedLivingCommunities />} />
           <Route path="/senior-living/memory-care" element={<MemoryCare />} />
