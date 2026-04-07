@@ -201,6 +201,7 @@ const App = () => (
           <Route path="/senior-living/memory-care" element={<MemoryCare />} />
           <Route path="/senior-living/nursing-and-skilled-care" element={<NursingAndSkilledCare />} />
           <Route path="/senior-living/independent-living" element={<IndependentLiving />} />
+          <Route path="/senior-living/power-of-attorneys" element={<PowerOfAttorneys />} />
           {/* Custom city pages */}
           <Route path="/seattle-probate-estate-real-estate" element={<SeattleProbateEstate />} />
           <Route path="/bellevue-probate-estate-real-estate" element={<BellevueProbateEstate />} />
