@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
+import ServicePageNav from "./components/ServicePageNav";
 import Index from "./pages/Index";
 import ProbateEstateSales from "./pages/ProbateEstateSales";
 import SeniorTransitions from "./pages/SeniorTransitions";
@@ -127,6 +128,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
+        <ServicePageNav variant="global" />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/insights" element={<Insights />} />
