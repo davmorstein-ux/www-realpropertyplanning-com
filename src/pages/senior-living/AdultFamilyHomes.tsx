@@ -33,7 +33,7 @@ const AdultFamilyHomes = () => (
             <img
               src={afhHeroIcon}
               alt="Adult Family Home"
-              className="w-40 h-auto md:w-56 mx-auto mb-6"
+              className="w-[480px] h-auto md:w-[672px] mx-auto mb-6"
             />
             <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-base">Senior Living</p>
             <h1 className="font-serif text-3xl md:text-4xl font-bold text-foreground leading-tight mb-4">Adult Family Homes</h1>
