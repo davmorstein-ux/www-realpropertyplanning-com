@@ -5,14 +5,13 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import CTASection from "@/components/CTASection";
 import RelatedServices from "@/components/RelatedServices";
 import DisclaimerSection from "@/components/DisclaimerSection";
-import iconSeniorLiving from "@/assets/icons/icon-senior-living.png";
+import iconSeniorLiving from "@/assets/icons/icon-senior-living-hero-cropped.png";
 import iconAfh3d from "@/assets/icons/icon-afh-3d.png";
 import iconAssistedLiving3d from "@/assets/icons/icon-assisted-living-3d.png";
 import iconMemoryCare3d from "@/assets/icons/icon-memory-care-3d.png";
 import iconNursingCare3d from "@/assets/icons/icon-nursing-care-3d.png";
 import iconIndependentLiving3d from "@/assets/icons/icon-independent-living-3d.png";
 import { Link } from "react-router-dom";
-import { ChevronRight } from "lucide-react";
 
 const livingOptions = [
   {
@@ -92,19 +91,18 @@ const SeniorLivingAndRelocation = () => {
       <Header />
 
       <main>
-        {/* Hero */}
-        <section className="bg-secondary py-14 md:py-20">
+        <section className="bg-secondary pt-8 md:pt-12 pb-12 md:pb-14">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
-              <div className="flex justify-center mb-6">
+              <div className="flex justify-center mb-8 md:mb-10">
                 <img
                   src={iconSeniorLiving}
                   alt="Senior Living & Relocation"
-                  className="h-[26rem] w-[26rem] object-contain"
+                  className="block w-full max-w-[23rem] h-auto object-contain"
                 />
               </div>
               <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-sm">
-                Transition Support
+                Senior Living
               </p>
               <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-foreground leading-tight mb-4">
                 Senior Living & Relocation
@@ -116,7 +114,6 @@ const SeniorLivingAndRelocation = () => {
           </div>
         </section>
 
-        {/* Understanding Options */}
         <section className="py-14 md:py-20">
           <div className="container px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
@@ -174,7 +171,7 @@ const SeniorLivingAndRelocation = () => {
                             <div className="flex flex-col items-center justify-end w-full flex-1 mt-3 px-1">
                               <h3
                                 className="font-serif text-[19px] sm:text-[14px] font-bold text-foreground group-hover:text-accent transition-colors text-center"
-                                style={{ lineHeight: '1.15' }}
+                                style={{ lineHeight: "1.15" }}
                               >
                                 {option.title}
                               </h3>
@@ -190,7 +187,6 @@ const SeniorLivingAndRelocation = () => {
           </div>
         </section>
 
-        {/* How I Help */}
         <section className="py-14 md:py-20 bg-secondary">
           <div className="container px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
@@ -203,10 +199,7 @@ const SeniorLivingAndRelocation = () => {
 
               <div className="grid gap-5 md:grid-cols-2">
                 {supportItems.map((item) => (
-                  <div
-                    key={item.title}
-                    className="card-3d px-6 py-6"
-                  >
+                  <div key={item.title} className="card-3d px-6 py-6">
                     <h3 className="font-serif text-lg font-semibold text-foreground mb-2">
                       {item.title}
                     </h3>
@@ -220,7 +213,6 @@ const SeniorLivingAndRelocation = () => {
           </div>
         </section>
 
-        {/* Positioning */}
         <section className="py-14 md:py-20">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
@@ -239,7 +231,7 @@ const SeniorLivingAndRelocation = () => {
 
         <CTASection />
         <RelatedServices currentPath="/senior-living-and-relocation" />
-          <DisclaimerSection />
+        <DisclaimerSection />
       </main>
 
       <Footer />
