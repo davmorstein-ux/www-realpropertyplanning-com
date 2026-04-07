@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import redSphere from "@/assets/red-sphere-accent.png";
-import { useLayoutEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef, useState, useCallback } from "react";
 
 const allLinks = [
   { href: "/for-attorneys", label: "For Attorneys & Fiduciaries", description: "How we support attorneys and fiduciaries with real estate during probate and estate matters." },
@@ -27,12 +27,16 @@ interface SpherePosition {
   key: string;
   left: number;
   top: number;
+  row: number;
+  col: number;
 }
 
 const RelatedServices = ({ currentPath }: RelatedServicesProps) => {
   const links = allLinks.filter((l) => l.href !== currentPath);
   const gridRef = useRef<HTMLDivElement | null>(null);
   const [spherePositions, setSpherePositions] = useState<SpherePosition[]>([]);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [colCount, setColCount] = useState(3);
 
   useLayoutEffect(() => {
     const grid = gridRef.current;
@@ -60,16 +64,15 @@ const RelatedServices = ({ currentPath }: RelatedServicesProps) => {
 
       sortedCards.forEach((card) => {
         const lastRow = rows[rows.length - 1];
-
         if (!lastRow || Math.abs(card.rect.top - lastRow.top) > 8) {
           rows.push({ top: card.rect.top, items: [card] });
           return;
         }
-
         lastRow.items.push(card);
       });
 
       rows.forEach((row) => row.items.sort((a, b) => a.rect.left - b.rect.left));
+      if (rows.length > 0) setColCount(rows[0].items.length);
 
       const nextPositions: SpherePosition[] = [];
 
@@ -96,6 +99,8 @@ const RelatedServices = ({ currentPath }: RelatedServicesProps) => {
             key: `${rowIndex}-${colIndex}`,
             left,
             top,
+            row: rowIndex,
+            col: colIndex,
           });
         }
       });
@@ -125,6 +130,17 @@ const RelatedServices = ({ currentPath }: RelatedServicesProps) => {
     };
   }, [currentPath, links.length]);
 
+  const isSphereNearTile = useCallback(
+    (sphere: SpherePosition, tileIndex: number) => {
+      const tileRow = Math.floor(tileIndex / colCount);
+      const tileCol = tileIndex % colCount;
+      const isAdjacentRow = sphere.row === tileRow || sphere.row === tileRow - 1;
+      const isAdjacentCol = sphere.col === tileCol || sphere.col === tileCol - 1;
+      return isAdjacentRow && isAdjacentCol;
+    },
+    [colCount]
+  );
+
   return (
     <section data-nosnippet className="py-14 md:py-20 bg-secondary">
       <div className="container px-6 lg:px-8">
@@ -137,11 +153,13 @@ const RelatedServices = ({ currentPath }: RelatedServicesProps) => {
           </p>
           <div className="relative">
             <div ref={gridRef} className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {links.map((link) => (
+              {links.map((link, index) => (
                 <Link
                   key={link.href}
                   to={link.href}
                   className="card-3d-blue group block h-full min-h-[252px] sm:min-h-[280px]"
+                  onMouseEnter={() => setHoveredIndex(index)}
+                  onMouseLeave={() => setHoveredIndex(null)}
                 >
                   <div className="card-3d-blue__inner h-full">
                     <div className="card-3d-blue__face h-full">
@@ -165,21 +183,28 @@ const RelatedServices = ({ currentPath }: RelatedServicesProps) => {
               ))}
             </div>
 
-            {spherePositions.map(({ key, left, top }) => (
-              <img
-                key={key}
-                src={redSphere}
-                alt=""
-                aria-hidden="true"
-                className="pointer-events-none absolute z-10 hidden sm:block w-[44px] h-[44px] lg:w-[52px] lg:h-[52px]"
-                style={{
-                  left,
-                  top,
-                  transform: "translate(-50%, -50%)",
-                }}
-                draggable={false}
-              />
-            ))}
+            {spherePositions.map((sphere) => {
+              const isActive = hoveredIndex !== null && isSphereNearTile(sphere, hoveredIndex);
+              return (
+                <img
+                  key={sphere.key}
+                  src={redSphere}
+                  alt=""
+                  aria-hidden="true"
+                  className="pointer-events-none absolute z-10 hidden sm:block w-[44px] h-[44px] lg:w-[52px] lg:h-[52px]"
+                  style={{
+                    left: sphere.left,
+                    top: sphere.top,
+                    transform: "translate(-50%, -50%)",
+                    filter: isActive
+                      ? "brightness(1.18) drop-shadow(0 0 6px hsla(0, 75%, 50%, 0.35))"
+                      : "brightness(1) drop-shadow(0 0 0px transparent)",
+                    transition: "filter 0.5s ease",
+                  }}
+                  draggable={false}
+                />
+              );
+            })}
           </div>
         </div>
       </div>
