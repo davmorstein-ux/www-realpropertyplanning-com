@@ -14,7 +14,6 @@ import iconFinancial from "@/assets/icons/icon-financial-planning.png";
 import iconHomeValue from "@/assets/icons/icon-home-value.png";
 import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
-import ServicePageNav from "@/components/ServicePageNav";
 
 const partnerTiles = [
   {
@@ -197,7 +196,6 @@ const ForProfessionals = () => {
         </div>
       </section>
 
-      <ServicePageNav />
       <DisclaimerSection />
       <Footer />
     </div>

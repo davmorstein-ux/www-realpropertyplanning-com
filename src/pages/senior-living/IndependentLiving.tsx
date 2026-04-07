@@ -6,7 +6,6 @@ import CTASection from "@/components/CTASection";
 import RelatedServices from "@/components/RelatedServices";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import { Link } from "react-router-dom";
-import ServicePageNav from "@/components/ServicePageNav";
 
 const IndependentLiving = () => (
   <>
@@ -56,7 +55,6 @@ const IndependentLiving = () => (
 
       <CTASection />
       <RelatedServices currentPath="/senior-living/independent-living" />
-      <ServicePageNav />
       <DisclaimerSection />
     </main>
     <Footer />

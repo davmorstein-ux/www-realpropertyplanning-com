@@ -6,7 +6,6 @@ import CTASection from "@/components/CTASection";
 import RelatedServices from "@/components/RelatedServices";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import { Link } from "react-router-dom";
-import ServicePageNav from "@/components/ServicePageNav";
 
 const AssistedLivingCommunities = () => (
   <>
@@ -56,7 +55,6 @@ const AssistedLivingCommunities = () => (
 
       <CTASection />
       <RelatedServices currentPath="/senior-living/assisted-living-communities" />
-      <ServicePageNav />
       <DisclaimerSection />
     </main>
     <Footer />

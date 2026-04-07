@@ -11,7 +11,6 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import people3d from "@/assets/people-3d.png";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
-import ServicePageNav from "@/components/ServicePageNav";
 
 const SITE_URL = "https://realpropertyplanning.com";
 
@@ -308,7 +307,6 @@ const ForSeniorLivingProfessionals = () => {
         </div>
       </section>
 
-      <ServicePageNav />
       <DisclaimerSection />
       <Footer />
     </div>

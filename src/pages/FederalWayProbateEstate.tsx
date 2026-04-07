@@ -13,7 +13,6 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { realEstateAgentSchema } from "@/lib/schema";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
-import ServicePageNav from "@/components/ServicePageNav";
 
 const faqs = [
   { question: "What should I do first with an inherited home in Federal Way?", answer: "Secure the property, confirm your legal authority, and get an honest assessment of condition and value. David can walk through the home, identify what affects its marketability, and help you understand your options before making commitments." },
@@ -120,7 +119,6 @@ const FederalWayProbateEstate = () => {
         <div className="flex justify-center"><Link to="/contact"><Button variant="gold" size="lg" className="px-10 py-4 h-auto text-base"><img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />Schedule a Consultation</Button></Link></div>
       </div></div></section>
 
-      <ServicePageNav />
       <DisclaimerSection />
       <Footer />
     </div>

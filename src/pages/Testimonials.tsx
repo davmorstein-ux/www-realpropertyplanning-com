@@ -4,7 +4,6 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
-import ServicePageNav from "@/components/ServicePageNav";
 
 const Testimonials = () => {
   return (
@@ -24,7 +23,6 @@ const Testimonials = () => {
       <main>
         <TestimonialsSection />
       </main>
-      <ServicePageNav />
       <DisclaimerSection />
       <Footer />
     </>

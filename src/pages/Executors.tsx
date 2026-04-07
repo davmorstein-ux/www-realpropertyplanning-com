@@ -15,7 +15,6 @@ import PageTestimonials from "@/components/PageTestimonials";
 import MidPageCTA from "@/components/MidPageCTA";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 import ListenButton from "@/components/ListenButton";
-import ServicePageNav from "@/components/ServicePageNav";
 
 const executorTestimonials = [
   {
@@ -434,7 +433,6 @@ const Executors = () => {
         </div>
       </section>
 
-      <ServicePageNav />
       <DisclaimerSection />
       <Footer />
     </div>

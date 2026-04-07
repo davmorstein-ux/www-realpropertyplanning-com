@@ -35,7 +35,6 @@ import GuidedEntryPanel from "@/components/GuidedEntryPanel";
 import StickyMobileCallButton from "@/components/StickyMobileCallButton";
 import WhatHappensNext from "@/components/WhatHappensNext";
 import SecureWillSection from "@/components/SecureWillSection";
-import ServicePageNav from "@/components/ServicePageNav";
 
 const serviceAreas = [
   { county: "King County", href: "/counties/king", cities: "Seattle, Bellevue, Kirkland, Redmond, Renton, Kent, Federal Way & more" },
@@ -543,7 +542,6 @@ const Index = () => {
         </div>
       </section>
 
-      <ServicePageNav />
       <DisclaimerSection />
       <Footer />
       <StickyMobileCallButton />

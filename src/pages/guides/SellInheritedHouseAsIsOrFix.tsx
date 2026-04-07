@@ -12,7 +12,6 @@ import MidPageCTA from "@/components/MidPageCTA";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
-import ServicePageNav from "@/components/ServicePageNav";
 
 const faqs = [
   { question: "Is it worth fixing up an inherited house before selling?", answer: "It depends on the property's condition, the local market, and the cost of repairs relative to the expected return. In some cases, targeted improvements yield a strong return. In others, the time and money invested do not come back at sale. A professional assessment helps determine which approach makes sense." },
@@ -237,7 +236,6 @@ const SellInheritedHouseAsIsOrFix = () => (
       </div>
     </section>
 
-    <ServicePageNav />
     <DisclaimerSection />
     <Footer />
   </div>

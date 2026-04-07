@@ -13,7 +13,6 @@ import iconFinancial from "@/assets/icons/icon-financial-planning.png";
 import iconSeniorMoves from "@/assets/icons/icon-senior-moves.png";
 import iconHomeValue from "@/assets/icons/icon-home-value.png";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
-import ServicePageNav from "@/components/ServicePageNav";
 
 const partnerTiles = [
   {
@@ -189,7 +188,6 @@ const ForReferralPartners = () => {
         </div>
       </section>
 
-      <ServicePageNav />
       <DisclaimerSection />
       <Footer />
     </div>

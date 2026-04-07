@@ -23,7 +23,6 @@ import mappin3d from "@/assets/mappin-3d.png";
 import { useState } from "react";
 import expRealtyLogo from "@/assets/exp-realty-logo.png";
 import { useToast } from "@/hooks/use-toast";
-import ServicePageNav from "@/components/ServicePageNav";
 
 const roleOptions = [
   "Attorney",
@@ -276,7 +275,6 @@ const Contact = () => {
         </div>
       </section>
 
-      <ServicePageNav />
       <DisclaimerSection />
       <Footer />
     </div>

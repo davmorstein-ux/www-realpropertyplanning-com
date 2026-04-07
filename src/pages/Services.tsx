@@ -5,7 +5,6 @@ import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
-import ServicePageNav from "@/components/ServicePageNav";
 
 const serviceCards = [
   {
@@ -99,7 +98,6 @@ const Services = () => {
           </div>
         </section>
       </main>
-      <ServicePageNav />
       <DisclaimerSection />
       <Footer />
     </>

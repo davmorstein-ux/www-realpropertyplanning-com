@@ -24,7 +24,6 @@ import {
   isTier1City,
 } from "@/lib/service-areas-data";
 import type { CityData, ServiceData } from "@/lib/service-areas-data";
-import ServicePageNav from "@/components/ServicePageNav";
 
 interface CityServicePageTemplateProps {
   city: CityData;
@@ -209,7 +208,6 @@ const CityServicePageTemplate = ({ city, service }: CityServicePageTemplateProps
         </div>
       </section>
 
-      <ServicePageNav />
       <DisclaimerSection />
       <Footer />
     </div>

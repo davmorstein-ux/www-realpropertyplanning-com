@@ -23,7 +23,6 @@ import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 import ClientReviewsSection from "@/components/ClientReviewsSection";
 import RealClientSituations from "@/components/RealClientSituations";
 import StatewideSupport from "@/components/StatewideSupport";
-import ServicePageNav from "@/components/ServicePageNav";
 
 const attorneyReviews = [
   {
@@ -288,7 +287,6 @@ const ForAttorneys = () => {
         </div>
       </section>
 
-      <ServicePageNav />
       <DisclaimerSection />
       <Footer />
     </div>

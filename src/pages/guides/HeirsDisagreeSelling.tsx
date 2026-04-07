@@ -12,7 +12,6 @@ import MidPageCTA from "@/components/MidPageCTA";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
-import ServicePageNav from "@/components/ServicePageNav";
 
 const faqs = [
   { question: "Can one heir force the sale of an inherited house?", answer: "In some cases, yes. If heirs cannot reach agreement, one heir can petition the court for a partition action — essentially asking the court to order the sale. This is expensive, time-consuming, and adversarial. Reaching agreement through informed discussion is almost always the better path." },
@@ -217,7 +216,6 @@ const HeirsDisagreeSelling = () => (
       </div>
     </section>
 
-    <ServicePageNav />
     <DisclaimerSection />
     <Footer />
   </div>

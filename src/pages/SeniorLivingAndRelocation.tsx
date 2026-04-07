@@ -13,7 +13,6 @@ import iconNursingCare3d from "@/assets/icons/icon-nursing-care-3d.png";
 import iconIndependentLiving3d from "@/assets/icons/icon-independent-living-3d.png";
 import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
-import ServicePageNav from "@/components/ServicePageNav";
 
 const livingOptions = [
   {
@@ -240,8 +239,7 @@ const SeniorLivingAndRelocation = () => {
 
         <CTASection />
         <RelatedServices currentPath="/senior-living-and-relocation" />
-        <ServicePageNav />
-        <DisclaimerSection />
+          <DisclaimerSection />
       </main>
 
       <Footer />
