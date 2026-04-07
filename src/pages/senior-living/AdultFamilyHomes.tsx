@@ -71,7 +71,7 @@ const AdultFamilyHomes = () => (
 
                 {/* Row 2: Business info */}
                 <div className="w-full text-center sm:text-left">
-                  <p className="text-muted-foreground text-sm mb-3">Owner: Maria Corbu</p>
+                  <p className="text-muted-foreground text-sm mb-1.5">Owner: Maria Corbu</p>
 
                   <div className="space-y-1.5 text-sm">
                     <div className="flex items-start gap-2 justify-center sm:justify-start">
