@@ -12,9 +12,85 @@ import iconMemoryCare3d from "@/assets/icons/icon-memory-care-3d.png";
 import iconNursingCare3d from "@/assets/icons/icon-nursing-care-3d.png";
 import iconIndependentLiving3d from "@/assets/icons/icon-independent-living-3d.png";
 import { Link } from "react-router-dom";
-import { ChevronRight } from "lucide-react";
-...
-        {/* Hero */}
+
+const livingOptions = [
+  {
+    title: "Adult Family Homes",
+    description:
+      "Smaller, home-like settings that offer personalized care for a limited number of residents. Often a good fit for seniors who prefer a quieter, more intimate environment.",
+    path: "/senior-living/adult-family-homes",
+  },
+  {
+    title: "Assisted Living Communities",
+    description:
+      "Larger communities that offer varying levels of daily support, social activities, and on-site amenities while maintaining independence.",
+    path: "/senior-living/assisted-living-communities",
+  },
+  {
+    title: "Memory Care",
+    description:
+      "Specialized programs designed for individuals living with Alzheimer's or other forms of dementia, with structured routines and secure environments.",
+    path: "/senior-living/memory-care",
+  },
+  {
+    title: "Nursing & Skilled Care",
+    description:
+      "Facilities that provide 24-hour medical support for seniors with more complex health needs or those recovering from hospitalization.",
+    path: "/senior-living/nursing-and-skilled-care",
+  },
+  {
+    title: "Independent Living",
+    description:
+      "Communities designed for active seniors who want a maintenance-free lifestyle with access to social activities and shared amenities.",
+    path: "/senior-living/independent-living",
+  },
+];
+
+const supportItems = [
+  {
+    title: "Timing Real Estate with Relocation",
+    description:
+      "Understanding when to list, how to prepare the home, and how to align the sale with the move timeline.",
+  },
+  {
+    title: "Property Preparation & Coordination",
+    description:
+      "Coordinating cleanout, repairs, and staging with trusted vendors so the home is market-ready without adding stress.",
+  },
+  {
+    title: "Clear, Objective Valuation",
+    description:
+      "Providing accurate market insight so families can make informed financial decisions about the property.",
+  },
+  {
+    title: "Working with Your Team",
+    description:
+      "Collaborating with senior move managers, care advisors, attorneys, and family members to keep everyone aligned.",
+  },
+  {
+    title: "Calm, Steady Communication",
+    description:
+      "Providing regular updates and a patient, structured approach during what is often an emotional process.",
+  },
+];
+
+const SeniorLivingAndRelocation = () => {
+  return (
+    <>
+      <SEOHead
+        title="Senior Living & Relocation | Real Property Planning"
+        description="Helping families navigate housing transitions — from understanding senior living options to coordinating the sale of a family home."
+        canonical="https://www.realpropertyplanning.com/senior-living-and-relocation"
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://www.realpropertyplanning.com" },
+          { name: "Senior Living & Relocation", url: "https://www.realpropertyplanning.com/senior-living-and-relocation" },
+        ]}
+      />
+      <Header />
+
+      <main>
         <section className="bg-secondary pt-8 md:pt-12 pb-12 md:pb-14">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
@@ -26,7 +102,7 @@ import { ChevronRight } from "lucide-react";
                 />
               </div>
               <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-sm">
-                Transition Support
+                Senior Living
               </p>
               <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-foreground leading-tight mb-4">
                 Senior Living & Relocation
@@ -38,7 +114,6 @@ import { ChevronRight } from "lucide-react";
           </div>
         </section>
 
-        {/* Understanding Options */}
         <section className="py-14 md:py-20">
           <div className="container px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
@@ -96,7 +171,7 @@ import { ChevronRight } from "lucide-react";
                             <div className="flex flex-col items-center justify-end w-full flex-1 mt-3 px-1">
                               <h3
                                 className="font-serif text-[19px] sm:text-[14px] font-bold text-foreground group-hover:text-accent transition-colors text-center"
-                                style={{ lineHeight: '1.15' }}
+                                style={{ lineHeight: "1.15" }}
                               >
                                 {option.title}
                               </h3>
@@ -112,7 +187,6 @@ import { ChevronRight } from "lucide-react";
           </div>
         </section>
 
-        {/* How I Help */}
         <section className="py-14 md:py-20 bg-secondary">
           <div className="container px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
@@ -125,10 +199,7 @@ import { ChevronRight } from "lucide-react";
 
               <div className="grid gap-5 md:grid-cols-2">
                 {supportItems.map((item) => (
-                  <div
-                    key={item.title}
-                    className="card-3d px-6 py-6"
-                  >
+                  <div key={item.title} className="card-3d px-6 py-6">
                     <h3 className="font-serif text-lg font-semibold text-foreground mb-2">
                       {item.title}
                     </h3>
@@ -142,7 +213,6 @@ import { ChevronRight } from "lucide-react";
           </div>
         </section>
 
-        {/* Positioning */}
         <section className="py-14 md:py-20">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
@@ -161,7 +231,7 @@ import { ChevronRight } from "lucide-react";
 
         <CTASection />
         <RelatedServices currentPath="/senior-living-and-relocation" />
-          <DisclaimerSection />
+        <DisclaimerSection />
       </main>
 
       <Footer />
