@@ -27,6 +27,13 @@ const MemoryCare = () => (
       <section className="bg-secondary py-14 md:py-20">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
+            <div className="mb-6">
+              <img
+                src={memoryCareHeroIcon}
+                alt="Memory Care"
+                className="block max-w-[240px] md:max-w-[336px] h-auto mx-auto"
+              />
+            </div>
             <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-base">Senior Living</p>
             <h1 className="font-serif text-3xl md:text-4xl font-bold text-foreground leading-tight mb-4">Memory Care</h1>
             <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
@@ -35,14 +42,6 @@ const MemoryCare = () => (
           </div>
         </div>
       </section>
-
-      <div className="bg-background pt-10 md:pt-14 pb-2 md:pb-4">
-        <img
-          src={memoryCareHeroIcon}
-          alt="Memory Care"
-          className="block max-w-[240px] md:max-w-[336px] h-auto mx-auto"
-        />
-      </div>
 
       <section className="py-14 md:py-20 bg-background">
         <div className="container px-6 lg:px-8">
