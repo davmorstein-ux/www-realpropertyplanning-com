@@ -174,7 +174,7 @@ const LendersFinancingSpecialists = () => (
             If you're exploring whether selling, staying, or financing options make the most sense, I'm happy to help you evaluate your situation and connect you with the right professionals.
           </p>
           <Link to="/contact">
- <Button variant="gold" size="lg"className="hover:-light">
+ <Button variant="gold" size="lg">
               <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
               Schedule a Conversation
             </Button>
