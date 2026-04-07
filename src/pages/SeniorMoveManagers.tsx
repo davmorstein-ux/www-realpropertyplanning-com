@@ -49,11 +49,7 @@ const SeniorMoveManagers = () => {
         <section className="bg-primary py-20 lg:py-28">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
-              <img
-                src={seniorMovesHeroIcon}
-                alt="Senior Move Managers"
-                className="block w-full max-w-[480px] h-auto md:max-w-[672px] mx-auto"
-              />
+              
               <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">
                 Senior Transitions
               </p>
@@ -86,8 +82,17 @@ const SeniorMoveManagers = () => {
           </div>
         </section>
 
+        {/* SENIOR MOVES ICON */}
+        <div className="bg-background pt-10 md:pt-14 pb-2 md:pb-4">
+          <img
+            src={seniorMovesHeroIcon}
+            alt="Senior Move Managers"
+            className="block max-w-[240px] md:max-w-[336px] h-auto mx-auto"
+          />
+        </div>
+
         {/* WHAT IS A SENIOR MOVE MANAGER */}
-        <section className="py-16 md:py-24 bg-background">
+        <section className="py-10 md:py-16 bg-background">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
               <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-6">
