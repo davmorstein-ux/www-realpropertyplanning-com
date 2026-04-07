@@ -35,24 +35,20 @@ const RelatedServices = ({ currentPath }: RelatedServicesProps) => {
           <p className="text-muted-foreground text-[15px] mb-8 max-w-2xl">
             Explore helpful pages for families, executors, and professionals navigating property transitions.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {links.map((link) => (
               <Link
                 key={link.href}
                 to={link.href}
                 className="premium-shell-tile group relative flex flex-col justify-between"
+                style={{
+                  backgroundImage: `url(${premiumTileBg})`,
+                  backgroundSize: '100% 100%',
+                  backgroundRepeat: 'no-repeat',
+                  backgroundPosition: 'center',
+                }}
               >
-                {/* Background shell image */}
-                <img
-                  src={premiumTileBg}
-                  alt=""
-                  aria-hidden="true"
-                  className="absolute inset-0 w-full h-full object-fill pointer-events-none select-none"
-                  draggable={false}
-                />
-
-                {/* Live text content layered on top */}
-                <div className="relative z-10 flex flex-col justify-between h-full px-7 py-6 sm:px-8 sm:py-7">
+                <div className="relative z-10 flex flex-col justify-between h-full px-8 py-7 sm:px-9 sm:py-8">
                   <div>
                     <h3 className="font-serif text-[1.05rem] font-bold text-foreground group-hover:text-accent transition-colors mb-2.5 leading-snug">
                       {link.label}
