@@ -24,7 +24,7 @@ const MemoryCare = () => (
     />
     <Header />
     <main>
-      <section className="bg-secondary pt-5 md:pt-7 pb-10 md:pb-14">
+      <section className="bg-secondary pt-2 md:pt-3 pb-5 md:pb-7">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <div className="mb-2">
