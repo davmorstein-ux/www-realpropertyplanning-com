@@ -100,7 +100,7 @@ const SeniorLivingAndRelocation = () => {
                 <img
                   src={iconSeniorLiving}
                   alt="Senior Living & Relocation"
-                  className="h-36 w-36 object-contain"
+                  className="h-[26rem] w-[26rem] object-contain"
                 />
               </div>
               <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-sm">

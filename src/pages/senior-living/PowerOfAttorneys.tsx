@@ -234,7 +234,7 @@ const PowerOfAttorneys = () => {
             <p className="text-muted-foreground text-base md:text-[17px] leading-relaxed mb-8">
               These situations are manageable — but only when you know what to expect. Here are the challenges families and agents encounter most often.
             </p>
-            <div className="grid gap-3 sm:grid-cols-2">
+            <div className="relative grid gap-3 sm:grid-cols-2">
               <div className="card-3d-blue group block h-full min-h-[252px] sm:min-h-[280px]">
                 <div className="card-3d-blue__inner h-full">
                   <div className="card-3d-blue__face h-full">
@@ -299,6 +299,13 @@ const PowerOfAttorneys = () => {
                   </div>
                 </div>
               </div>
+              {/* Red 3D sphere at center intersection */}
+              <img
+                src={redSphere}
+                alt=""
+                aria-hidden="true"
+                className="pointer-events-none absolute left-1/2 top-1/2 z-10 h-7 w-7 -translate-x-1/2 -translate-y-1/2 sm:h-9 sm:w-9"
+              />
             </div>
           </div>
         </div>
