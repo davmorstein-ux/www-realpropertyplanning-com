@@ -47,8 +47,7 @@ const AdultFamilyHomes = () => (
 
             {/* Victoria 1 AFH */}
             <div className="bg-secondary border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 p-5 sm:p-6">
-              <div className="flex flex-col items-center gap-3 sm:grid sm:grid-cols-[8rem_minmax(0,1fr)] sm:items-start sm:gap-x-5 sm:gap-y-1">
-                {/* Row 1: Headshot */}
+              <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-start sm:gap-5">
                 <div className="shrink-0">
                   <img
                     src={mariaCorbuPhoto}
@@ -57,44 +56,41 @@ const AdultFamilyHomes = () => (
                   />
                 </div>
 
-                {/* Row 1: Logo */}
-                <a href="https://www.victoria1afh.com" target="_blank" rel="noopener noreferrer" className="sm:self-start">
-                  <img
-                    src={victoria1Logo}
-                    alt="Victoria 1 AFH logo"
-                    className="h-[42px] w-auto object-contain mx-auto sm:mx-0 block"
-                  />
-                </a>
+                <div className="flex w-full flex-col items-center sm:flex-1 sm:items-start">
+                  <a href="https://www.victoria1afh.com" target="_blank" rel="noopener noreferrer" className="sm:self-start">
+                    <img
+                      src={victoria1Logo}
+                      alt="Victoria 1 AFH logo"
+                      className="h-[42px] w-auto object-contain mx-auto sm:mx-0 block"
+                    />
+                  </a>
 
-                {/* Row 2: Spacer */}
-                <div className="hidden sm:block" aria-hidden="true" />
+                  <div className="w-full mt-1 text-center sm:pl-[58px] sm:text-left">
+                    <p className="text-muted-foreground text-sm mb-1.5">Owner: Maria Corbu</p>
 
-                {/* Row 2: Business info */}
-                <div className="w-full text-center sm:text-left">
-                  <p className="text-muted-foreground text-sm mb-1.5">Owner: Maria Corbu</p>
-
-                  <div className="space-y-1.5 text-sm">
-                    <div className="flex items-start gap-2 justify-center sm:justify-start">
-                      <MapPin className="w-4 h-4 text-accent shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">13321 31st Ave NE, Seattle, WA 98125</span>
-                    </div>
-                    <div className="flex items-center gap-2 justify-center sm:justify-start">
-                      <Phone className="w-4 h-4 text-accent shrink-0" />
-                      <a href="tel:+14255033808" className="text-accent hover:text-gold underline-offset-4 hover:underline">
-                        (425) 503-3808
-                      </a>
-                    </div>
-                    <div className="flex items-center gap-2 justify-center sm:justify-start">
-                      <Mail className="w-4 h-4 text-accent shrink-0" />
-                      <a href="mailto:maria610unz@yahoo.com" className="text-accent hover:text-gold underline-offset-4 hover:underline break-all">
-                        maria610unz@yahoo.com
-                      </a>
-                    </div>
-                    <div className="flex items-center gap-2 justify-center sm:justify-start">
-                      <Globe className="w-4 h-4 text-accent shrink-0" />
-                      <a href="https://www.victoria1afh.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-gold underline-offset-4 hover:underline">
-                        www.victoria1afh.com
-                      </a>
+                    <div className="space-y-1.5 text-sm">
+                      <div className="flex items-start gap-2 justify-center sm:justify-start">
+                        <MapPin className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+                        <span className="text-muted-foreground">13321 31st Ave NE, Seattle, WA 98125</span>
+                      </div>
+                      <div className="flex items-center gap-2 justify-center sm:justify-start">
+                        <Phone className="w-4 h-4 text-accent shrink-0" />
+                        <a href="tel:+14255033808" className="text-accent hover:text-gold underline-offset-4 hover:underline">
+                          (425) 503-3808
+                        </a>
+                      </div>
+                      <div className="flex items-center gap-2 justify-center sm:justify-start">
+                        <Mail className="w-4 h-4 text-accent shrink-0" />
+                        <a href="mailto:maria610unz@yahoo.com" className="text-accent hover:text-gold underline-offset-4 hover:underline break-all">
+                          maria610unz@yahoo.com
+                        </a>
+                      </div>
+                      <div className="flex items-center gap-2 justify-center sm:justify-start">
+                        <Globe className="w-4 h-4 text-accent shrink-0" />
+                        <a href="https://www.victoria1afh.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-gold underline-offset-4 hover:underline">
+                          www.victoria1afh.com
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
