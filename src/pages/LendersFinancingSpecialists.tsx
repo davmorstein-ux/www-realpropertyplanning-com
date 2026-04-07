@@ -6,9 +6,10 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { MapPin, Globe } from "lucide-react";
-import iconEmail3d from "@/assets/icons/icon-email-3d.png";
+import { Phone, Mail, Globe, MapPin } from "lucide-react";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+import danBartelPhoto from "@/assets/providers/dan-bartel-c2financial.png";
+import c2FinancialLogo from "@/assets/providers/c2financial-logo.png";
 
 const LendersFinancingSpecialists = () => (
   <div className="min-h-screen bg-background">
@@ -75,68 +76,67 @@ const LendersFinancingSpecialists = () => (
       </div>
     </section>
 
-    {/* Featured Professional */}
-    <section className="py-16 lg:py-24 bg-secondary">
+    {/* Featured Provider — mirrors AdultFamilyHomes provider card */}
+    <section className="py-14 md:py-20 bg-secondary">
       <div className="container px-6 lg:px-8">
-        <div className="max-w-[900px] mx-auto">
-          <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
-            Featured Professional
-          </p>
-          <h2 className="font-serif text-3xl text-foreground font-semibold mb-8">
-            Daniel Bartel
+        <div className="max-w-3xl mx-auto">
+          <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground text-center mb-10">
+            Featured Provider
           </h2>
 
-          <div className="bg-card border border-border rounded-xl px-7 py-8 mb-10">
-            <div className="space-y-1 mb-6">
-              <p className="text-foreground font-semibold text-lg">Retirement Mortgage Specialist</p>
-              <p className="text-muted-foreground">Reverse Mortgage Lender</p>
-              <p className="text-muted-foreground">C2 Financial</p>
-            </div>
-
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              Daniel specializes in helping seniors evaluate reverse mortgage options as part of a larger retirement plan.
-            </p>
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              His approach is educational and consultative — focused on helping clients understand their options so they can make informed decisions.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              As a Registered Social Security Analyst, he also helps clients consider how real estate and financing decisions fit into their broader retirement strategy.
-            </p>
-          </div>
-
-          {/* Contact Info */}
-          <div className="bg-card border border-border rounded-xl px-7 py-8">
-            <h3 className="font-serif text-xl text-foreground font-semibold mb-5">
-              Contact Information
-            </h3>
-            <div className="space-y-4">
-              <a
-                href="mailto:santadan@c2financial.com"
-                className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
-              >
-                <img src={iconEmail3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0" />
-                <span>santadan@c2financial.com</span>
-              </a>
-              <a
-                href="tel:+12063105766"
-                className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
-              >
-                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 shrink-0 object-contain" />
-                <span>(206) 310-5766</span>
-              </a>
-              <div className="flex items-start gap-3 text-muted-foreground">
-                <MapPin className="w-5 h-5 text-gold shrink-0 mt-0.5" />
-                <span>1721 Hewitt Ave Ste. 612, Everett, WA 98201</span>
+          <div className="bg-secondary border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 p-5 sm:p-6">
+            <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-start sm:gap-5">
+              <div className="shrink-0">
+                <img
+                  src={danBartelPhoto}
+                  alt="Daniel Bartel — Retirement Mortgage Specialist, C2 Financial"
+                  className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-border shadow-sm"
+                />
               </div>
-              <a
-                href="http://www.santadanmortgage.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
-              >
-                <Globe className="w-5 h-5 text-gold shrink-0" />
-                <span>www.santadanmortgage.com</span>
-              </a>
+
+              <div className="flex w-full flex-col items-center sm:flex-1 sm:items-start">
+                <a href="http://www.santadanmortgage.com" target="_blank" rel="noopener noreferrer" className="sm:self-start">
+                  <img
+                    src={c2FinancialLogo}
+                    alt="C2 Financial logo"
+                    className="h-[42px] w-auto object-contain mx-auto sm:mx-0 block"
+                  />
+                </a>
+
+                <div className="w-full mt-1 text-center sm:pl-[58px] sm:text-left">
+                  <p className="text-foreground font-semibold text-lg">Daniel Bartel</p>
+                  <p className="text-muted-foreground text-sm mb-1.5">Retirement Mortgage Specialist · Reverse Mortgage Lender · C2 Financial</p>
+
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-3">
+                    Daniel specializes in helping seniors evaluate reverse mortgage options as part of a larger retirement plan. His approach is educational and consultative — focused on helping clients understand their options so they can make informed decisions. As a Registered Social Security Analyst, he also helps clients consider how real estate and financing decisions fit into their broader retirement strategy.
+                  </p>
+
+                  <div className="space-y-1.5 text-sm">
+                    <div className="flex items-start gap-2 justify-center sm:justify-start">
+                      <MapPin className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground">1721 Hewitt Ave Ste. 612, Everett, WA 98201</span>
+                    </div>
+                    <div className="flex items-center gap-2 justify-center sm:justify-start">
+                      <Phone className="w-4 h-4 text-accent shrink-0" />
+                      <a href="tel:+12063105766" className="text-accent hover:text-gold underline-offset-4 hover:underline">
+                        (206) 310-5766
+                      </a>
+                    </div>
+                    <div className="flex items-center gap-2 justify-center sm:justify-start">
+                      <Mail className="w-4 h-4 text-accent shrink-0" />
+                      <a href="mailto:santadan@c2financial.com" className="text-accent hover:text-gold underline-offset-4 hover:underline break-all">
+                        santadan@c2financial.com
+                      </a>
+                    </div>
+                    <div className="flex items-center gap-2 justify-center sm:justify-start">
+                      <Globe className="w-4 h-4 text-accent shrink-0" />
+                      <a href="http://www.santadanmortgage.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-gold underline-offset-4 hover:underline">
+                        www.santadanmortgage.com
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -174,7 +174,7 @@ const LendersFinancingSpecialists = () => (
             If you're exploring whether selling, staying, or financing options make the most sense, I'm happy to help you evaluate your situation and connect you with the right professionals.
           </p>
           <Link to="/contact">
- <Button variant="gold" size="lg"className="hover:-light">
+ <Button variant="gold" size="lg">
               <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
               Schedule a Conversation
             </Button>
