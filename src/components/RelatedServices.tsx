@@ -32,7 +32,6 @@ interface SpherePosition {
 const RelatedServices = ({ currentPath }: RelatedServicesProps) => {
   const links = allLinks.filter((l) => l.href !== currentPath);
   const gridRef = useRef<HTMLDivElement | null>(null);
-  const linkRefs = useRef<Array<HTMLAnchorElement | null>>([]);
   const [spherePositions, setSpherePositions] = useState<SpherePosition[]>([]);
 
   useLayoutEffect(() => {
@@ -42,7 +41,7 @@ const RelatedServices = ({ currentPath }: RelatedServicesProps) => {
     let frameId = 0;
 
     const measureSpherePositions = () => {
-      const cards = linkRefs.current.slice(0, links.length).filter(Boolean) as HTMLAnchorElement[];
+      const cards = Array.from(grid.querySelectorAll<HTMLElement>(".card-3d-blue"));
 
       if (cards.length < 4) {
         setSpherePositions([]);
@@ -88,9 +87,10 @@ const RelatedServices = ({ currentPath }: RelatedServicesProps) => {
           const lowerRight = nextRow.items[colIndex + 1];
 
           const left = (upperLeft.rect.right + upperRight.rect.left) / 2 - gridRect.left;
-          const upperBottom = Math.max(upperLeft.rect.bottom, upperRight.rect.bottom);
-          const lowerTop = Math.min(lowerLeft.rect.top, lowerRight.rect.top);
-          const top = (upperBottom + lowerTop) / 2 - gridRect.top;
+          const top = (
+            Math.max(upperLeft.rect.bottom, upperRight.rect.bottom) +
+            Math.min(lowerLeft.rect.top, lowerRight.rect.top)
+          ) / 2 - gridRect.top;
 
           nextPositions.push({
             key: `${rowIndex}-${colIndex}`,
@@ -112,8 +112,8 @@ const RelatedServices = ({ currentPath }: RelatedServicesProps) => {
 
     const resizeObserver = new ResizeObserver(scheduleMeasurement);
     resizeObserver.observe(grid);
-    linkRefs.current.slice(0, links.length).forEach((card) => {
-      if (card) resizeObserver.observe(card);
+    Array.from(grid.querySelectorAll<HTMLElement>(".card-3d-blue")).forEach((card) => {
+      resizeObserver.observe(card);
     });
 
     window.addEventListener("resize", scheduleMeasurement);
@@ -137,12 +137,9 @@ const RelatedServices = ({ currentPath }: RelatedServicesProps) => {
           </p>
           <div className="relative">
             <div ref={gridRef} className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {links.map((link, index) => (
+              {links.map((link) => (
                 <Link
                   key={link.href}
-                  ref={(element) => {
-                    linkRefs.current[index] = element;
-                  }}
                   to={link.href}
                   className="card-3d-blue group block h-full min-h-[252px] sm:min-h-[280px]"
                 >
@@ -150,7 +147,7 @@ const RelatedServices = ({ currentPath }: RelatedServicesProps) => {
                     <div className="card-3d-blue__face h-full">
                       <div className="flex h-full flex-col justify-between px-6 pb-6 pt-10 sm:px-7 sm:pb-7 sm:pt-11">
                         <div>
-                          <h3 className="mb-3 font-serif text-xl font-extrabold leading-snug text-foreground transition-colors duration-300 group-hover:text-accent sm:text-[1.38rem]" style={{ textShadow: '0 1px 4px hsla(220, 30%, 15%, 0.25)' }}>
+                          <h3 className="mb-3 font-serif text-xl font-extrabold leading-snug text-foreground transition-colors duration-300 group-hover:text-accent sm:text-[1.38rem]" style={{ textShadow: "0 1px 4px hsla(220, 30%, 15%, 0.25)" }}>
                             {link.label}
                           </h3>
                           <p className="text-sm leading-relaxed text-muted-foreground">
@@ -174,10 +171,8 @@ const RelatedServices = ({ currentPath }: RelatedServicesProps) => {
                 src={redSphere}
                 alt=""
                 aria-hidden="true"
-                className="pointer-events-none absolute z-10 hidden sm:block"
+                className="pointer-events-none absolute z-10 hidden sm:block h-6 w-6 lg:h-7 lg:w-7"
                 style={{
-                  width: "clamp(22px, 1.6vw, 26px)",
-                  height: "clamp(22px, 1.6vw, 26px)",
                   left,
                   top,
                   transform: "translate(-50%, -50%)",
