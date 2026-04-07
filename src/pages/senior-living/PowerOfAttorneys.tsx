@@ -370,5 +370,6 @@ const PowerOfAttorneys = () => {
     <Footer />
   </>
 );
+};
 
 export default PowerOfAttorneys;
