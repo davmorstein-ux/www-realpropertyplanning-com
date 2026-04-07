@@ -2,15 +2,16 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
-import CTASection from "@/components/CTASection";
 import RelatedServices from "@/components/RelatedServices";
 import DisclaimerSection from "@/components/DisclaimerSection";
+import { Link } from "react-router-dom";
+import { Phone, Mail } from "lucide-react";
 
 const PowerOfAttorneys = () => (
   <>
     <SEOHead
-      title="Power of Attorney & Senior Housing Transitions | Real Property Planning"
-      description="Understanding how power of attorney authority connects to real estate decisions during senior transitions in Washington State."
+      title="Power of Attorney & Real Estate Decisions | Real Property Planning"
+      description="Understanding how a power of attorney works in real estate — for families, executors, and professionals navigating property decisions in Washington State."
       canonical="https://www.realpropertyplanning.com/senior-living/power-of-attorneys"
     />
     <BreadcrumbSchema
@@ -22,116 +23,257 @@ const PowerOfAttorneys = () => (
     />
     <Header />
     <main>
-      <section className="bg-secondary py-14 md:py-20">
+      {/* Hero */}
+      <section className="bg-primary py-20 lg:py-28">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-base">Senior Living</p>
-            <h1 className="font-serif text-3xl md:text-4xl font-bold text-foreground leading-tight mb-4">
-              Power of Attorneys
+            <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">
+              Guidance for Families & Professionals
+            </p>
+            <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-primary-foreground leading-tight mb-5">
+              Power of Attorney &amp; Real Estate Decisions
             </h1>
-            <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-              When a loved one can no longer make decisions about their property, a Power of Attorney may be the legal tool that allows a trusted family member or agent to act on their behalf — including selling the family home.
+            <p className="text-primary-foreground/85 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto mb-4">
+              When someone needs help managing property, a properly structured power of attorney can make all the difference.
+            </p>
+            <p className="text-primary-foreground/70 text-base leading-relaxed max-w-2xl mx-auto">
+              Whether you're planning ahead or stepping in to help a loved one, understanding how a power of attorney works in real estate is critical. This page explains what you need to know — and how to move forward with confidence.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="py-14 md:py-20 bg-background">
+      {/* Section 1: What Is a POA? */}
+      <section className="py-16 md:py-24 bg-background">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto space-y-12">
-            <div>
-              <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-4">
-                What Is a Power of Attorney?
-              </h2>
-              <p className="text-muted-foreground text-base leading-relaxed mb-4">
-                A Power of Attorney (POA) is a legal document that grants one person — the "agent" or "attorney-in-fact" — the authority to act on behalf of another person (the "principal") in legal, financial, or real estate matters.
+          <div className="max-w-[1100px] mx-auto">
+            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-6">
+              What Is a Power of Attorney?
+            </h2>
+            <div className="space-y-5 text-muted-foreground text-base md:text-[17px] leading-relaxed">
+              <p>
+                A power of attorney is a legal document that allows one person — the "agent" or "attorney-in-fact" — to act on behalf of another person, known as the "principal." It's one of the most important planning tools available, especially when someone may not be able to manage their own affairs in the future.
               </p>
-              <p className="text-muted-foreground text-base leading-relaxed">
-                In the context of senior transitions, a POA is often used when a parent or loved one is no longer able to manage their own affairs due to cognitive decline, illness, or incapacity. The agent may be called upon to make decisions about selling, maintaining, or transferring real property.
+              <p>
+                Powers of attorney are commonly used in situations involving aging, illness, or incapacity. They allow a trusted family member or professional to step in and handle financial decisions, legal matters, and real estate transactions when the principal cannot do so themselves.
               </p>
-            </div>
-
-            <div>
-              <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-4">
-                Types of Power of Attorney
-              </h2>
-              <div className="space-y-4">
-                <div className="card-3d px-6 py-6">
-                  <h3 className="font-serif text-lg font-semibold text-foreground mb-2">General Power of Attorney</h3>
-                  <p className="text-muted-foreground text-[15px] leading-relaxed">
-                    Grants broad authority over financial and legal matters, including real estate transactions. Becomes void if the principal becomes incapacitated.
-                  </p>
-                </div>
-                <div className="card-3d px-6 py-6">
-                  <h3 className="font-serif text-lg font-semibold text-foreground mb-2">Durable Power of Attorney</h3>
-                  <p className="text-muted-foreground text-[15px] leading-relaxed">
-                    Remains in effect even if the principal becomes incapacitated. This is the most commonly used form for senior transitions and estate planning.
-                  </p>
-                </div>
-                <div className="card-3d px-6 py-6">
-                  <h3 className="font-serif text-lg font-semibold text-foreground mb-2">Limited (Special) Power of Attorney</h3>
-                  <p className="text-muted-foreground text-[15px] leading-relaxed">
-                    Grants authority for a specific task or time period — such as selling a particular property or handling a single transaction.
-                  </p>
-                </div>
-                <div className="card-3d px-6 py-6">
-                  <h3 className="font-serif text-lg font-semibold text-foreground mb-2">Springing Power of Attorney</h3>
-                  <p className="text-muted-foreground text-[15px] leading-relaxed">
-                    Only takes effect when a specific condition is met, such as the principal being declared incapacitated by a physician.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-4">
-                How Power of Attorney Connects to Real Estate
-              </h2>
-              <p className="text-muted-foreground text-base leading-relaxed mb-4">
-                When a senior is transitioning to assisted living, memory care, or another setting, the family home often needs to be sold to fund care or simplify the estate. If the homeowner is unable to sign documents or make decisions, the agent acting under a valid POA can step in to:
-              </p>
-              <ul className="space-y-2 text-muted-foreground text-base leading-relaxed list-disc pl-6">
-                <li>List and sell the property</li>
-                <li>Sign listing agreements and closing documents</li>
-                <li>Coordinate property preparation and repairs</li>
-                <li>Accept or negotiate offers on behalf of the principal</li>
-                <li>Work with title companies, lenders, and real estate professionals</li>
-              </ul>
-            </div>
-
-            <div>
-              <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-4">
-                Important Considerations in Washington State
-              </h2>
-              <div className="space-y-4 text-muted-foreground text-base leading-relaxed">
-                <p>
-                  <strong className="text-foreground">Recording requirements:</strong> In Washington, a POA used for real estate transactions must typically be recorded with the county auditor's office where the property is located.
-                </p>
-                <p>
-                  <strong className="text-foreground">Title company acceptance:</strong> Not all title companies accept every POA. It's important to verify that the document meets current legal standards and will be accepted at closing.
-                </p>
-                <p>
-                  <strong className="text-foreground">Legal counsel:</strong> Families should always work with a qualified attorney to draft, review, or update a Power of Attorney — especially when real estate is involved.
-                </p>
-                <p>
-                  <strong className="text-foreground">Timing matters:</strong> A POA must be executed while the principal still has mental capacity. Once incapacity has occurred without a valid POA in place, the family may need to pursue guardianship through the courts — a more costly and time-consuming process.
-                </p>
-              </div>
-            </div>
-
-            <div>
-              <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-4">
-                How David Supports Families in These Situations
-              </h2>
-              <p className="text-muted-foreground text-base leading-relaxed">
-                While I do not provide legal advice, I work closely with families and their attorneys when a property needs to be sold under POA authority. I understand the documentation requirements, the coordination involved, and the sensitivity these situations require. My role is to provide accurate property valuation, thoughtful preparation guidance, and steady communication throughout the process.
+              <p>
+                In real estate, a power of attorney can authorize an agent to list a property, sign contracts, coordinate with title and escrow, and close a sale — all on behalf of the homeowner. It's a practical tool that keeps things moving when life circumstances make direct involvement difficult or impossible.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <CTASection />
+      {/* Section 2: When It Becomes Important */}
+      <section className="py-16 md:py-24 bg-secondary">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-[1100px] mx-auto">
+            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-6">
+              When It Becomes Important
+            </h2>
+            <p className="text-muted-foreground text-base md:text-[17px] leading-relaxed mb-8">
+              Most people don't think about a power of attorney until they need one. But in practice, these situations come up more often than families expect — and they usually arrive under pressure.
+            </p>
+            <div className="grid gap-5 md:grid-cols-2">
+              <div className="card-3d px-6 py-6">
+                <h3 className="font-serif text-lg font-semibold text-foreground mb-2">Aging Parents</h3>
+                <p className="text-muted-foreground text-[15px] leading-relaxed">
+                  A parent begins to need help with daily decisions, and the family home needs to be sold to fund care or simplify the estate. Someone needs to be authorized to act.
+                </p>
+              </div>
+              <div className="card-3d px-6 py-6">
+                <h3 className="font-serif text-lg font-semibold text-foreground mb-2">Medical Events</h3>
+                <p className="text-muted-foreground text-[15px] leading-relaxed">
+                  A sudden illness, stroke, or hospitalization creates an urgent need for someone to manage property matters while the homeowner is unable to participate.
+                </p>
+              </div>
+              <div className="card-3d px-6 py-6">
+                <h3 className="font-serif text-lg font-semibold text-foreground mb-2">Out-of-State Families</h3>
+                <p className="text-muted-foreground text-[15px] leading-relaxed">
+                  When the person managing the property lives in a different state, a POA allows them to authorize someone local to handle the day-to-day coordination and sale process.
+                </p>
+              </div>
+              <div className="card-3d px-6 py-6">
+                <h3 className="font-serif text-lg font-semibold text-foreground mb-2">Urgent Decisions</h3>
+                <p className="text-muted-foreground text-[15px] leading-relaxed">
+                  Sometimes a property needs to be listed or sold quickly — for financial, legal, or practical reasons — and the owner isn't available or able to be directly involved.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 3: How It Impacts Real Estate */}
+      <section className="py-16 md:py-24 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-[1100px] mx-auto">
+            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-6">
+              How It Impacts Real Estate
+            </h2>
+            <p className="text-muted-foreground text-base md:text-[17px] leading-relaxed mb-8">
+              Selling a property under a power of attorney isn't the same as a standard sale. There are additional documentation requirements, coordination steps, and potential complications that require experience and attention to detail.
+            </p>
+            <div className="space-y-5 text-muted-foreground text-base md:text-[17px] leading-relaxed">
+              <p>
+                <strong className="text-foreground">Listing and contracts.</strong> The agent acting under the POA signs listing agreements, reviews offers, and executes purchase and sale agreements on behalf of the principal. The document must clearly grant this authority.
+              </p>
+              <p>
+                <strong className="text-foreground">Title and escrow.</strong> Title companies will review the POA before allowing a closing to proceed. Not every document is accepted — it must meet specific legal standards and be recorded with the county auditor's office where the property is located.
+              </p>
+              <p>
+                <strong className="text-foreground">Lender and underwriting considerations.</strong> If the buyer is financing the purchase, the lender's underwriting team may also need to review and approve the POA before the loan can close. This can add time to the process.
+              </p>
+              <p>
+                <strong className="text-foreground">Proper documentation.</strong> The POA must be current, properly executed, and specific enough to cover real estate transactions. Vague or outdated documents are one of the most common reasons for delays or rejected closings.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 4: Common Challenges */}
+      <section className="py-16 md:py-24 bg-secondary">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-[1100px] mx-auto">
+            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-6">
+              Common Challenges to Be Aware Of
+            </h2>
+            <p className="text-muted-foreground text-base md:text-[17px] leading-relaxed mb-8">
+              These situations are manageable — but only when you know what to expect. Here are the challenges families and agents encounter most often.
+            </p>
+            <div className="grid gap-5 md:grid-cols-2">
+              <div className="card-3d px-6 py-6">
+                <h3 className="font-serif text-lg font-semibold text-foreground mb-2">Outdated or Incomplete Documents</h3>
+                <p className="text-muted-foreground text-[15px] leading-relaxed">
+                  A POA created years ago may not meet current legal standards or may lack the specific language needed for real estate transactions. Reviewing and updating the document early can prevent delays later.
+                </p>
+              </div>
+              <div className="card-3d px-6 py-6">
+                <h3 className="font-serif text-lg font-semibold text-foreground mb-2">Institutional Rejection</h3>
+                <p className="text-muted-foreground text-[15px] leading-relaxed">
+                  Title companies, lenders, and other institutions may refuse to accept a POA if it doesn't meet their internal requirements — even if it's technically valid. Working with experienced professionals helps navigate this.
+                </p>
+              </div>
+              <div className="card-3d px-6 py-6">
+                <h3 className="font-serif text-lg font-semibold text-foreground mb-2">Unclear Authority Language</h3>
+                <p className="text-muted-foreground text-[15px] leading-relaxed">
+                  If the POA doesn't explicitly authorize real estate transactions — or doesn't name the specific property — it may not be sufficient. Clarity in the document is essential.
+                </p>
+              </div>
+              <div className="card-3d px-6 py-6">
+                <h3 className="font-serif text-lg font-semibold text-foreground mb-2">Timing Issues During a Sale</h3>
+                <p className="text-muted-foreground text-[15px] leading-relaxed">
+                  Delays in obtaining, recording, or verifying a POA can stall a transaction. In time-sensitive situations, getting the document in order early is critical to keeping everything on track.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 5: How I Help */}
+      <section className="py-16 md:py-24 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-[1100px] mx-auto">
+            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-6">
+              How I Help
+            </h2>
+            <p className="text-muted-foreground text-base md:text-[17px] leading-relaxed mb-8">
+              I don't provide legal advice — and I'll always recommend working with a qualified attorney for the legal side of a power of attorney. But when it comes to the real estate process, I bring experience and structure to situations that often feel uncertain.
+            </p>
+            <div className="space-y-5 text-muted-foreground text-base md:text-[17px] leading-relaxed">
+              <p>
+                <strong className="text-foreground">Coordination with attorneys, title, and escrow.</strong> I work alongside your legal team to make sure the real estate side of things moves smoothly. That includes verifying documentation requirements, communicating with title companies, and keeping everyone aligned.
+              </p>
+              <p>
+                <strong className="text-foreground">Understanding documentation requirements.</strong> With more than 20 years of experience as both a licensed broker and a certified appraiser, I know what title companies, lenders, and underwriters expect — and I can help you prepare before issues arise.
+              </p>
+              <p>
+                <strong className="text-foreground">Helping families move forward with clarity.</strong> Many families come to me feeling overwhelmed. My role is to provide a steady, calm presence — someone who can explain the process, answer questions, and help the family make informed decisions about the property.
+              </p>
+              <p>
+                <strong className="text-foreground">Experience with sensitive situations.</strong> These are rarely simple transactions. They involve aging parents, family dynamics, and high-stakes decisions. I approach every situation with the patience and professionalism it deserves.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 6: For Families, Executors & Professionals */}
+      <section className="py-16 md:py-24 bg-secondary">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-[1100px] mx-auto">
+            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground text-center mb-10">
+              For Families, Executors &amp; Professionals
+            </h2>
+            <div className="grid gap-6 md:grid-cols-3">
+              <div className="card-3d px-6 py-8">
+                <h3 className="font-serif text-xl font-semibold text-foreground mb-3">Families</h3>
+                <p className="text-muted-foreground text-[15px] leading-relaxed mb-3">
+                  If you're helping a loved one who can no longer manage their property, you're not alone. Many families face this situation — and having the right guidance makes it less stressful.
+                </p>
+                <p className="text-muted-foreground text-[15px] leading-relaxed">
+                  I'll help you understand the process, coordinate with your team, and take care of the property details so you can focus on what matters most.
+                </p>
+              </div>
+              <div className="card-3d px-6 py-8">
+                <h3 className="font-serif text-xl font-semibold text-foreground mb-3">Executors &amp; Trustees</h3>
+                <p className="text-muted-foreground text-[15px] leading-relaxed mb-3">
+                  If you've been named as an agent under a power of attorney — or you're serving as executor or trustee — you likely have property responsibilities that require careful handling.
+                </p>
+                <p className="text-muted-foreground text-[15px] leading-relaxed">
+                  I work with fiduciaries regularly and understand the documentation, timing, and coordination involved in selling property under legal authority.
+                </p>
+              </div>
+              <div className="card-3d px-6 py-8">
+                <h3 className="font-serif text-xl font-semibold text-foreground mb-3">Attorneys &amp; Advisors</h3>
+                <p className="text-muted-foreground text-[15px] leading-relaxed mb-3">
+                  If you represent clients who need to sell property under a POA, I can serve as a reliable point of coordination on the real estate side.
+                </p>
+                <p className="text-muted-foreground text-[15px] leading-relaxed">
+                  I communicate clearly, respect timelines, and understand the standards your clients' transactions need to meet.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 md:py-24 bg-primary">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-primary-foreground mb-5">
+              Have Questions About a Power of Attorney and Real Estate?
+            </h2>
+            <p className="text-primary-foreground/80 text-base md:text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
+              If you're navigating a situation involving a power of attorney, I'm here to help you understand your options and move forward with clarity.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-4">
+              <a
+                href="tel:+12069003015"
+                className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-gold text-primary font-semibold rounded-lg hover:bg-gold/90 transition-colors text-base"
+              >
+                <Phone className="w-4 h-4" />
+                Call (206) 900-3015
+              </a>
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-primary-foreground/10 text-primary-foreground font-semibold rounded-lg border border-primary-foreground/20 hover:bg-primary-foreground/20 transition-colors text-base"
+              >
+                <Mail className="w-4 h-4" />
+                Send a Message
+              </Link>
+            </div>
+            <p className="text-primary-foreground/60 text-sm">
+              No pressure. Just practical guidance.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <RelatedServices currentPath="/senior-living/power-of-attorneys" />
       <DisclaimerSection />
     </main>
