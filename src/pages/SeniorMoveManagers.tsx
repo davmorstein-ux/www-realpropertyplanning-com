@@ -235,7 +235,7 @@ const SeniorMoveManagers = () => {
                   </div>
 
                   <div className="flex w-full flex-col items-center sm:flex-1 sm:items-start">
-                    <a href="https://www.hbmovemanagement.com" target="_blank" rel="noopener noreferrer" className="sm:self-start sm:pl-[58px]">
+                    <a href="https://www.hbmovemanagement.com" target="_blank" rel="noopener noreferrer" className="sm:self-start sm:pl-[58px] sm:-ml-[30px]">
                       <img
                         src={hbmmLogo}
                         alt="HB Move Management logo"
