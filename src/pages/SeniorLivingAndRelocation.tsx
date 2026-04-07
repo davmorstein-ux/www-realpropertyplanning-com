@@ -46,12 +46,6 @@ const livingOptions = [
       "Communities designed for active seniors who want a maintenance-free lifestyle with access to social activities and shared amenities.",
     path: "/senior-living/independent-living",
   },
-  {
-    title: "Power of Attorneys",
-    description:
-      "Understanding how Power of Attorney authority connects to real estate decisions when a loved one can no longer manage property matters.",
-    path: "/senior-living/power-of-attorneys",
-  },
 ];
 
 const supportItems = [
