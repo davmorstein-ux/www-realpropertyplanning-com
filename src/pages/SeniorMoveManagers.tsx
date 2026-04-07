@@ -240,7 +240,7 @@ const SeniorMoveManagers = () => {
                         <img
                           src={hbmmLogo}
                           alt="HB Move Management logo"
-                          className="h-[240px] w-auto object-contain mx-auto sm:mx-0 sm:-ml-[72px] block"
+                          className="h-[240px] w-auto object-contain mx-auto sm:mx-0 sm:-ml-[84px] block"
                         />
                       </a>
                       <p className="text-foreground font-semibold text-base">Eric Rovner</p>
