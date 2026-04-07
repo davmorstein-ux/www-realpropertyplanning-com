@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import premiumTileBg from "@/assets/premium-tile-bg.png";
 
 const allLinks = [
   { href: "/for-attorneys", label: "For Attorneys & Fiduciaries", description: "How we support attorneys and fiduciaries with real estate during probate and estate matters." },
@@ -35,31 +34,29 @@ const RelatedServices = ({ currentPath }: RelatedServicesProps) => {
           <p className="text-muted-foreground text-[15px] mb-8 max-w-2xl">
             Explore helpful pages for families, executors, and professionals navigating property transitions.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {links.map((link) => (
               <Link
                 key={link.href}
                 to={link.href}
-                className="premium-shell-tile group relative flex flex-col justify-between"
-                style={{
-                  backgroundImage: `url(${premiumTileBg})`,
-                  backgroundSize: '100% 100%',
-                  backgroundRepeat: 'no-repeat',
-                  backgroundPosition: 'center',
-                }}
+                className="card-3d-blue group block h-full min-h-[252px] sm:min-h-[280px]"
               >
-                <div className="relative z-10 flex flex-col justify-between h-full px-8 py-7 sm:px-9 sm:py-8">
-                  <div>
-                    <h3 className="font-serif text-[1.05rem] font-bold text-foreground group-hover:text-accent transition-colors mb-2.5 leading-snug">
-                      {link.label}
-                    </h3>
-                    <p className="text-muted-foreground/90 text-sm leading-relaxed">
-                      {link.description}
-                    </p>
-                  </div>
-                  <div className="flex items-center gap-1.5 mt-4 text-primary/70 group-hover:text-accent transition-colors text-sm font-medium">
-                    <span>Learn more</span>
-                    <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1.5">→</span>
+                <div className="card-3d-blue__inner h-full">
+                  <div className="card-3d-blue__face h-full">
+                    <div className="flex h-full flex-col justify-between px-6 pb-6 pt-10 sm:px-7 sm:pb-7 sm:pt-11">
+                      <div>
+                        <h3 className="mb-3 font-serif text-[1.08rem] font-bold leading-snug text-foreground transition-colors duration-300 group-hover:text-accent sm:text-[1.12rem]">
+                          {link.label}
+                        </h3>
+                        <p className="text-sm leading-relaxed text-muted-foreground">
+                          {link.description}
+                        </p>
+                      </div>
+                      <div className="mt-5 flex items-center gap-1.5 text-sm font-medium text-primary/75 transition-colors duration-300 group-hover:text-accent">
+                        <span>Learn more</span>
+                        <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1">→</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </Link>
