@@ -198,25 +198,25 @@ const SeniorLivingAndRelocation = () => {
                 The decision to move often raises questions about the family home. When should it be sold? How should it be prepared? How does the timing align with the move? I help families answer these questions.
               </p>
 
-              <div className="grid gap-5 md:grid-cols-2">
+              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                 {supportItems.map((item) => (
                   <div
                     key={item.title}
-                    className="relative group transition-transform duration-300 ease-out hover:-translate-y-1 rounded-xl"
-                    style={{
-                      backgroundImage: `url(${tealTileBg})`,
-                      backgroundSize: '100% 100%',
-                      backgroundRepeat: 'no-repeat',
-                      backgroundPosition: 'center',
-                    }}
+                    className="card-3d-blue group block h-full min-h-[252px] sm:min-h-[280px]"
                   >
-                    <div className="px-8 py-7 md:px-10 md:py-8">
-                      <h3 className="font-serif text-lg font-bold text-foreground mb-2">
-                        {item.title}
-                      </h3>
-                      <p className="text-muted-foreground text-[15px] leading-relaxed">
-                        {item.description}
-                      </p>
+                    <div className="card-3d-blue__inner h-full">
+                      <div className="card-3d-blue__face h-full">
+                        <div className="flex h-full flex-col justify-between px-6 pb-6 pt-10 sm:px-7 sm:pb-7 sm:pt-11">
+                          <div>
+                            <h3 className="mb-3 font-serif text-xl font-extrabold leading-snug text-foreground sm:text-[1.38rem]" style={{ textShadow: "0 1px 4px hsla(220, 30%, 15%, 0.25)" }}>
+                              {item.title}
+                            </h3>
+                            <p className="text-sm leading-relaxed text-muted-foreground">
+                              {item.description}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 ))}
