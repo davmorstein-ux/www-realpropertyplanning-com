@@ -36,26 +36,56 @@ const RelatedServices = ({ currentPath }: RelatedServicesProps) => {
             Explore helpful pages for families, executors, and professionals navigating property transitions.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {links.map((link) => (
-              <Link
-                key={link.href}
-                to={link.href}
-                className="card-3d group flex flex-col justify-between p-5"
-              >
-                <div>
-                  <h3 className="font-serif text-base font-semibold text-foreground group-hover:text-accent transition-colors mb-1.5">
-                    {link.label}
-                  </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {link.description}
-                  </p>
-                </div>
-                <div className="flex items-center gap-1.5 mt-4 text-accent/60 group-hover:text-gold transition-colors text-sm">
-                  <span>Learn more</span>
-                  <img src={iconArrowRight3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain transition-transform duration-300 ease-out group-hover:translate-x-1" loading="lazy" />
-                </div>
-              </Link>
-            ))}
+            {links.map((link) => {
+              const isPremiumRef = link.href === "/for-attorneys";
+
+              if (isPremiumRef) {
+                return (
+                  <Link
+                    key={link.href}
+                    to={link.href}
+                    className="premium-ref-tile group relative flex flex-col justify-between overflow-hidden rounded-[18px] p-5 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02]"
+                  >
+                    {/* Top accent line */}
+                    <span className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-gold/60 via-gold to-gold/60 transition-opacity duration-300 group-hover:opacity-100 opacity-80" />
+
+                    <div>
+                      <h3 className="font-serif text-[1.05rem] font-bold text-foreground group-hover:text-accent transition-colors mb-2.5 leading-snug">
+                        {link.label}
+                      </h3>
+                      <p className="text-muted-foreground/90 text-sm leading-relaxed">
+                        {link.description}
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-1.5 mt-4 text-primary/70 group-hover:text-gold transition-colors text-sm font-medium">
+                      <span>Learn more</span>
+                      <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1.5">→</span>
+                    </div>
+                  </Link>
+                );
+              }
+
+              return (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  className="card-3d group flex flex-col justify-between p-5"
+                >
+                  <div>
+                    <h3 className="font-serif text-base font-semibold text-foreground group-hover:text-accent transition-colors mb-1.5">
+                      {link.label}
+                    </h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      {link.description}
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-1.5 mt-4 text-accent/60 group-hover:text-gold transition-colors text-sm">
+                    <span>Learn more</span>
+                    <img src={iconArrowRight3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain transition-transform duration-300 ease-out group-hover:translate-x-1" loading="lazy" />
+                  </div>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </div>
