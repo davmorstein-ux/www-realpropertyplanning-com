@@ -33,13 +33,15 @@ const AdultFamilyHomes = () => (
             <img
               src={afhHeroIcon}
               alt="Adult Family Home"
-              className="w-[480px] h-auto md:w-[672px] mx-auto -mb-10 md:-mb-14"
+              className="w-[480px] h-auto md:w-[672px] mx-auto"
             />
-            <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-base">Senior Living</p>
-            <h1 className="font-serif text-3xl md:text-4xl font-bold text-foreground leading-tight mb-4">Adult Family Homes</h1>
-            <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-              Smaller, home-like settings that offer personalized care for a limited number of residents. Often a good fit for seniors who prefer a quieter, more intimate environment.
-            </p>
+            <div className="-mt-36 md:-mt-56">
+              <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-base">Senior Living</p>
+              <h1 className="font-serif text-3xl md:text-4xl font-bold text-foreground leading-tight mb-4">Adult Family Homes</h1>
+              <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
+                Smaller, home-like settings that offer personalized care for a limited number of residents. Often a good fit for seniors who prefer a quieter, more intimate environment.
+              </p>
+            </div>
           </div>
         </div>
       </section>
