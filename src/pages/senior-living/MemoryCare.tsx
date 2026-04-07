@@ -24,10 +24,10 @@ const MemoryCare = () => (
     />
     <Header />
     <main>
-      <section className="bg-secondary py-14 md:py-20">
+      <section className="bg-secondary pt-5 md:pt-7 pb-10 md:pb-14">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="mb-6">
+            <div className="mb-2">
               <img
                 src={memoryCareHeroIcon}
                 alt="Memory Care"
