@@ -6,6 +6,7 @@ import CTASection from "@/components/CTASection";
 import RelatedServices from "@/components/RelatedServices";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import { Link } from "react-router-dom";
+import ServicePageNav from "@/components/ServicePageNav";
 
 const MemoryCare = () => (
   <>
@@ -55,6 +56,7 @@ const MemoryCare = () => (
 
       <CTASection />
       <RelatedServices currentPath="/senior-living/memory-care" />
+      <ServicePageNav />
       <DisclaimerSection />
     </main>
     <Footer />
