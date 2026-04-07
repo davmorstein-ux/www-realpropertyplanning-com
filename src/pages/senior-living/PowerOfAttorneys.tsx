@@ -332,15 +332,128 @@ const PowerOfAttorneys = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Real-World Scenarios */}
+      <section className="py-16 md:py-24 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-[1100px] mx-auto">
+            <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">
+              Practical Guidance
+            </p>
+            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-8">
+              Real-World Situations We Help Navigate
+            </h2>
+            <div className="space-y-10">
+              <div>
+                <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
+                  Aging Parent Needs Help Selling Their Home
+                </h3>
+                <p className="text-muted-foreground text-base md:text-[17px] leading-relaxed">
+                  A parent's health has changed, and the family home needs to be sold to fund care or simplify the estate. A properly executed power of attorney allows a trusted family member to list the property, review offers, and coordinate with title and escrow — without the parent needing to be directly involved. I work alongside families in these situations to keep the process organized, reduce stress, and make sure the real estate side moves forward smoothly. If you're also managing <Link to="/senior-transitions" className="text-primary underline underline-offset-4 hover:text-accent transition-colors">a senior transition</Link>, I can help coordinate both the property sale and the move.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
+                  Medical Event Creates Urgent Decisions
+                </h3>
+                <p className="text-muted-foreground text-base md:text-[17px] leading-relaxed">
+                  A sudden illness, stroke, or hospitalization can create an immediate need to manage property matters — from listing a home to handling offers and closing. When a power of attorney is already in place, these decisions can move forward without delay. When it isn't, families often face difficult legal hurdles. I bring experience and structure to these time-sensitive situations, coordinating with attorneys and title companies to keep things on track. Families managing an estate alongside these decisions may also benefit from our <Link to="/probate-estate-sales" className="text-primary underline underline-offset-4 hover:text-accent transition-colors">Probate &amp; Estate Sales</Link> guidance.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
+                  Out-of-State Family Managing Property Remotely
+                </h3>
+                <p className="text-muted-foreground text-base md:text-[17px] leading-relaxed">
+                  When the person responsible for managing a property lives in another state, a power of attorney enables them to authorize someone local to handle the coordination and sale. I work with out-of-state families regularly — handling inspections, appraisals, contractor access, and buyer negotiations so the family doesn't need to travel back and forth. Clear communication and reliable coordination are essential, and that's exactly what I provide. If you're serving as <Link to="/executors" className="text-primary underline underline-offset-4 hover:text-accent transition-colors">executor of an estate</Link>, I understand the additional responsibilities you're managing.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
+                  Time-Sensitive Property Sale
+                </h3>
+                <p className="text-muted-foreground text-base md:text-[17px] leading-relaxed">
+                  Financial pressures, pending offers, or legal timelines sometimes mean a property needs to move quickly. A properly documented power of attorney allows the transaction to proceed without unnecessary delays — but the documentation must be current, specific, and accepted by all parties involved. I help families and <Link to="/for-attorneys" className="text-primary underline underline-offset-4 hover:text-accent transition-colors">attorneys</Link> prepare ahead of time so the closing process stays on schedule.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Experience Matters */}
+      <section className="py-16 md:py-24 bg-secondary">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-[1100px] mx-auto">
+            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-6">
+              Why Experience Matters in Power of Attorney Situations
+            </h2>
+            <div className="space-y-5 text-muted-foreground text-base md:text-[17px] leading-relaxed">
+              <p>
+                Selling property under a power of attorney isn't a routine transaction. It requires careful coordination between attorneys, title companies, escrow officers, lenders, and sometimes the courts. Every party involved has documentation standards — and if any of them reject the POA or require additional verification, the sale can stall.
+              </p>
+              <p>
+                With more than 20 years of experience as both a licensed real estate broker and a certified appraiser, I've worked through these situations many times. I know what title companies look for, how lenders evaluate POA documents during underwriting, and how to prepare families before problems arise — not after.
+              </p>
+              <p>
+                Most people in these situations didn't plan for this. They're stepping into unfamiliar territory during a stressful time. My role is to provide a calm, experienced presence — someone who can explain the process clearly, anticipate challenges, and keep the transaction moving forward. That kind of guidance makes a real difference when the stakes are high and the timeline is tight.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <PageFAQ
+        eyebrow="Power of Attorney FAQ"
+        heading="Frequently Asked Questions About Power of Attorney & Real Estate"
+        faqs={[
+          {
+            question: "Can a power of attorney be used to sell a house?",
+            answer: "Yes. A properly executed power of attorney can authorize an agent to list, negotiate, and close the sale of real property on behalf of the principal. The document must specifically grant authority over real estate transactions, and it must be accepted by the title company handling the closing.",
+          },
+          {
+            question: "Does a power of attorney need to be recorded with the county?",
+            answer: "In Washington State, a power of attorney used in a real estate transaction typically needs to be recorded with the county auditor's office where the property is located. Recording ensures the document is part of the public record and gives title companies the verification they need to proceed with a closing.",
+          },
+          {
+            question: "Will title companies accept any power of attorney?",
+            answer: "Not necessarily. Title companies have their own internal review standards. Some may reject a POA that is outdated, too vague, or doesn't meet specific formatting or notarization requirements. Working with an experienced broker and a qualified attorney helps ensure the document meets the standards needed for a smooth closing.",
+          },
+          {
+            question: "What happens if the power of attorney document is outdated?",
+            answer: "An outdated POA may not meet current legal standards or may lack the specific language required by title companies and lenders. If the document was created years ago, it's worth having an attorney review and update it before beginning a real estate transaction. Addressing this early prevents delays later.",
+          },
+          {
+            question: "Can a power of attorney sign listing agreements and purchase contracts?",
+            answer: "Yes, as long as the POA document explicitly grants authority to handle real estate transactions. The agent acting under the POA signs on behalf of the principal, and the listing agreement and purchase contract should clearly reflect this arrangement.",
+          },
+          {
+            question: "What documentation is required to use a POA in a property sale?",
+            answer: "At minimum, you'll need the original or certified copy of the power of attorney document, valid identification for the agent, and in most cases, the document must be recorded with the county. Title companies and lenders may request additional documentation depending on the specifics of the transaction.",
+          },
+          {
+            question: "Can multiple people act as agents under a power of attorney?",
+            answer: "Yes, a power of attorney can name more than one agent. However, the document must specify whether the agents can act independently or must act together. In real estate, having multiple agents can sometimes add complexity to the signing and closing process, so clarity in the document is important.",
+          },
+          {
+            question: "What's the difference between a general and durable power of attorney?",
+            answer: "A general power of attorney grants broad authority but typically becomes invalid if the principal becomes incapacitated. A durable power of attorney remains in effect even if the principal can no longer make decisions. For real estate situations involving aging or illness, a durable POA is usually the more appropriate and practical option.",
+          },
+        ]}
+      />
+
+      {/* Enhanced CTA Section */}
       <section className="py-16 md:py-24 bg-primary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-serif text-2xl md:text-3xl font-semibold text-primary-foreground mb-5">
               Have Questions About a Power of Attorney and Real Estate?
             </h2>
-            <p className="text-primary-foreground/80 text-base md:text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
-              If you're navigating a situation involving a power of attorney, I'm here to help you understand your options and move forward with clarity.
+            <p className="text-primary-foreground/80 text-base md:text-lg leading-relaxed mb-3 max-w-2xl mx-auto">
+              Every situation is different. I'm here to help you understand your options and move forward with clarity.
+            </p>
+            <p className="text-primary-foreground/65 text-[15px] leading-relaxed mb-8 max-w-2xl mx-auto">
+              Whether you're a family member stepping in to help, an executor managing property, or a professional coordinating on behalf of a client — a conversation is the best place to start.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-4">
               <a
