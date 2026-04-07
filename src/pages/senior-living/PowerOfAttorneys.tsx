@@ -234,30 +234,70 @@ const PowerOfAttorneys = () => {
             <p className="text-muted-foreground text-base md:text-[17px] leading-relaxed mb-8">
               These situations are manageable — but only when you know what to expect. Here are the challenges families and agents encounter most often.
             </p>
-            <div className="grid gap-5 md:grid-cols-2">
-              <div className="card-3d px-6 py-6">
-                <h3 className="font-serif text-lg font-semibold text-foreground mb-2">Outdated or Incomplete Documents</h3>
-                <p className="text-muted-foreground text-[15px] leading-relaxed">
-                  A POA created years ago may not meet current legal standards or may lack the specific language needed for real estate transactions. Reviewing and updating the document early can prevent delays later.
-                </p>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <div className="card-3d-blue group block h-full min-h-[252px] sm:min-h-[280px]">
+                <div className="card-3d-blue__inner h-full">
+                  <div className="card-3d-blue__face h-full">
+                    <div className="flex h-full flex-col justify-between px-6 pb-6 pt-10 sm:px-7 sm:pb-7 sm:pt-11">
+                      <div>
+                        <h3 className="mb-3 font-serif text-xl font-extrabold leading-snug text-foreground transition-colors duration-300 group-hover:text-accent sm:text-[1.38rem]" style={{ textShadow: "0 1px 4px hsla(220, 30%, 15%, 0.25)" }}>
+                          Outdated or Incomplete Documents
+                        </h3>
+                        <p className="text-sm leading-relaxed text-muted-foreground">
+                          A POA created years ago may not meet current legal standards or may lack the specific language needed for real estate transactions. Reviewing and updating the document early can prevent delays later.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="card-3d px-6 py-6">
-                <h3 className="font-serif text-lg font-semibold text-foreground mb-2">Institutional Rejection</h3>
-                <p className="text-muted-foreground text-[15px] leading-relaxed">
-                  Title companies, lenders, and other institutions may refuse to accept a POA if it doesn't meet their internal requirements — even if it's technically valid. Working with experienced professionals helps navigate this.
-                </p>
+              <div className="card-3d-blue group block h-full min-h-[252px] sm:min-h-[280px]">
+                <div className="card-3d-blue__inner h-full">
+                  <div className="card-3d-blue__face h-full">
+                    <div className="flex h-full flex-col justify-between px-6 pb-6 pt-10 sm:px-7 sm:pb-7 sm:pt-11">
+                      <div>
+                        <h3 className="mb-3 font-serif text-xl font-extrabold leading-snug text-foreground transition-colors duration-300 group-hover:text-accent sm:text-[1.38rem]" style={{ textShadow: "0 1px 4px hsla(220, 30%, 15%, 0.25)" }}>
+                          Institutional Rejection
+                        </h3>
+                        <p className="text-sm leading-relaxed text-muted-foreground">
+                          Title companies, lenders, and other institutions may refuse to accept a POA if it doesn't meet their internal requirements — even if it's technically valid. Working with experienced professionals helps navigate this.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="card-3d px-6 py-6">
-                <h3 className="font-serif text-lg font-semibold text-foreground mb-2">Unclear Authority Language</h3>
-                <p className="text-muted-foreground text-[15px] leading-relaxed">
-                  If the POA doesn't explicitly authorize real estate transactions — or doesn't name the specific property — it may not be sufficient. Clarity in the document is essential.
-                </p>
+              <div className="card-3d-blue group block h-full min-h-[252px] sm:min-h-[280px]">
+                <div className="card-3d-blue__inner h-full">
+                  <div className="card-3d-blue__face h-full">
+                    <div className="flex h-full flex-col justify-between px-6 pb-6 pt-10 sm:px-7 sm:pb-7 sm:pt-11">
+                      <div>
+                        <h3 className="mb-3 font-serif text-xl font-extrabold leading-snug text-foreground transition-colors duration-300 group-hover:text-accent sm:text-[1.38rem]" style={{ textShadow: "0 1px 4px hsla(220, 30%, 15%, 0.25)" }}>
+                          Unclear Authority Language
+                        </h3>
+                        <p className="text-sm leading-relaxed text-muted-foreground">
+                          If the POA doesn't explicitly authorize real estate transactions — or doesn't name the specific property — it may not be sufficient. Clarity in the document is essential.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="card-3d px-6 py-6">
-                <h3 className="font-serif text-lg font-semibold text-foreground mb-2">Timing Issues During a Sale</h3>
-                <p className="text-muted-foreground text-[15px] leading-relaxed">
-                  Delays in obtaining, recording, or verifying a POA can stall a transaction. In time-sensitive situations, getting the document in order early is critical to keeping everything on track.
-                </p>
+              <div className="card-3d-blue group block h-full min-h-[252px] sm:min-h-[280px]">
+                <div className="card-3d-blue__inner h-full">
+                  <div className="card-3d-blue__face h-full">
+                    <div className="flex h-full flex-col justify-between px-6 pb-6 pt-10 sm:px-7 sm:pb-7 sm:pt-11">
+                      <div>
+                        <h3 className="mb-3 font-serif text-xl font-extrabold leading-snug text-foreground transition-colors duration-300 group-hover:text-accent sm:text-[1.38rem]" style={{ textShadow: "0 1px 4px hsla(220, 30%, 15%, 0.25)" }}>
+                          Timing Issues During a Sale
+                        </h3>
+                        <p className="text-sm leading-relaxed text-muted-foreground">
+                          Delays in obtaining, recording, or verifying a POA can stall a transaction. In time-sensitive situations, getting the document in order early is critical to keeping everything on track.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
