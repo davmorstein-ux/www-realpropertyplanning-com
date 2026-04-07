@@ -6,6 +6,8 @@ import RelatedServices from "@/components/RelatedServices";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import { Link } from "react-router-dom";
 import { Phone, Mail } from "lucide-react";
+import { useLayoutEffect, useRef, useState, useCallback } from "react";
+import redSphere from "@/assets/red-sphere-accent.png";
 
 const PowerOfAttorneys = () => (
   <>
