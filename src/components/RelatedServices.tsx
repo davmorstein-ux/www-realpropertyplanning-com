@@ -171,7 +171,7 @@ const RelatedServices = ({ currentPath }: RelatedServicesProps) => {
                 src={redSphere}
                 alt=""
                 aria-hidden="true"
-                className="pointer-events-none absolute z-10 hidden sm:block h-6 w-6 lg:h-7 lg:w-7"
+                className="pointer-events-none absolute z-10 hidden sm:block w-[88px] h-[88px] lg:w-[104px] lg:h-[104px]"
                 style={{
                   left,
                   top,
