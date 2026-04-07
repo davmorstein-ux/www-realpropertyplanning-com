@@ -24,14 +24,14 @@ const MemoryCare = () => (
     />
     <Header />
     <main>
-      <section className="bg-secondary pt-2 md:pt-3 pb-5 md:pb-7">
+      <section className="bg-secondary pt-8 md:pt-12 pb-5 md:pb-7">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="mb-2">
+            <div className="mb-8 md:mb-10">
               <img
                 src={memoryCareHeroIcon}
                 alt="Memory Care"
-                className="block max-w-[240px] md:max-w-[336px] h-auto mx-auto"
+                className="block max-w-[203px] md:max-w-[284px] h-auto mx-auto"
               />
             </div>
             <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-base">Senior Living</p>
