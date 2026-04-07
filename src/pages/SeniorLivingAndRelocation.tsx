@@ -6,6 +6,7 @@ import CTASection from "@/components/CTASection";
 import RelatedServices from "@/components/RelatedServices";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import iconSeniorLiving from "@/assets/icons/icon-senior-living-hero-cropped.png";
+import tealTileBg from "@/assets/icons/teal-tile-bg.png";
 import iconAfh3d from "@/assets/icons/icon-afh-3d.png";
 import iconAssistedLiving3d from "@/assets/icons/icon-assisted-living-3d.png";
 import iconMemoryCare3d from "@/assets/icons/icon-memory-care-3d.png";
