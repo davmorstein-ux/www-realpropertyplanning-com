@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import redSphere from "@/assets/red-sphere-accent.png";
+import { useMemo } from "react";
 
 const allLinks = [
   { href: "/for-attorneys", label: "For Attorneys & Fiduciaries", description: "How we support attorneys and fiduciaries with real estate during probate and estate matters." },
@@ -24,6 +26,23 @@ interface RelatedServicesProps {
 const RelatedServices = ({ currentPath }: RelatedServicesProps) => {
   const links = allLinks.filter((l) => l.href !== currentPath);
 
+  // Compute intersection positions for 3-col desktop grid
+  const cols = 3;
+  const rows = Math.ceil(links.length / cols);
+
+  // Intersections occur where column gaps and row gaps cross
+  // Column positions: 1/3 and 2/3 across the grid
+  // Row positions: after each row except the last
+  const intersections = useMemo(() => {
+    const points: { col: number; row: number; key: string }[] = [];
+    for (let r = 0; r < rows - 1; r++) {
+      for (let c = 0; c < cols - 1; c++) {
+        points.push({ col: c, row: r, key: `${c}-${r}` });
+      }
+    }
+    return points;
+  }, [rows]);
+
   return (
     <section data-nosnippet className="py-14 md:py-20 bg-secondary">
       <div className="container px-6 lg:px-8">
@@ -34,32 +53,52 @@ const RelatedServices = ({ currentPath }: RelatedServicesProps) => {
           <p className="text-muted-foreground text-[15px] mb-8 max-w-2xl">
             Explore helpful pages for families, executors, and professionals navigating property transitions.
           </p>
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {links.map((link) => (
-              <Link
-                key={link.href}
-                to={link.href}
-                className="card-3d-blue group block h-full min-h-[252px] sm:min-h-[280px]"
-              >
-                <div className="card-3d-blue__inner h-full">
-                  <div className="card-3d-blue__face h-full">
-                    <div className="flex h-full flex-col justify-between px-6 pb-6 pt-10 sm:px-7 sm:pb-7 sm:pt-11">
-                      <div>
-                        <h3 className="mb-3 font-serif text-xl font-extrabold leading-snug text-foreground transition-colors duration-300 group-hover:text-accent sm:text-[1.38rem]" style={{ textShadow: '0 1px 4px hsla(220, 30%, 15%, 0.25)' }}>
-                          {link.label}
-                        </h3>
-                        <p className="text-sm leading-relaxed text-muted-foreground">
-                          {link.description}
-                        </p>
-                      </div>
-                      <div className="mt-5 flex items-center gap-1.5 text-sm font-medium text-primary/75 transition-colors duration-300 group-hover:text-accent">
-                        <span>Learn more</span>
-                        <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1">→</span>
+          <div className="relative">
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {links.map((link) => (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  className="card-3d-blue group block h-full min-h-[252px] sm:min-h-[280px]"
+                >
+                  <div className="card-3d-blue__inner h-full">
+                    <div className="card-3d-blue__face h-full">
+                      <div className="flex h-full flex-col justify-between px-6 pb-6 pt-10 sm:px-7 sm:pb-7 sm:pt-11">
+                        <div>
+                          <h3 className="mb-3 font-serif text-xl font-extrabold leading-snug text-foreground transition-colors duration-300 group-hover:text-accent sm:text-[1.38rem]" style={{ textShadow: '0 1px 4px hsla(220, 30%, 15%, 0.25)' }}>
+                            {link.label}
+                          </h3>
+                          <p className="text-sm leading-relaxed text-muted-foreground">
+                            {link.description}
+                          </p>
+                        </div>
+                        <div className="mt-5 flex items-center gap-1.5 text-sm font-medium text-primary/75 transition-colors duration-300 group-hover:text-accent">
+                          <span>Learn more</span>
+                          <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1">→</span>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </Link>
+                </Link>
+              ))}
+            </div>
+
+            {/* Red sphere accents at tile intersection points — desktop only */}
+            {intersections.map(({ col, row, key }) => (
+              <img
+                key={key}
+                src={redSphere}
+                alt=""
+                aria-hidden="true"
+                className="pointer-events-none absolute z-10 hidden lg:block"
+                style={{
+                  width: 10,
+                  height: 10,
+                  left: `calc(${((col + 1) / cols) * 100}% - 5px)`,
+                  top: `calc(${((row + 1) / rows) * 100}% - 5px)`,
+                }}
+                draggable={false}
+              />
             ))}
           </div>
         </div>
