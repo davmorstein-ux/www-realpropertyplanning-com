@@ -198,19 +198,19 @@ const SeniorLivingAndRelocation = () => {
                 The decision to move often raises questions about the family home. When should it be sold? How should it be prepared? How does the timing align with the move? I help families answer these questions.
               </p>
 
-              <div className="grid gap-6 md:grid-cols-2">
+              <div className="grid gap-5 md:grid-cols-2">
                 {supportItems.map((item) => (
                   <div
                     key={item.title}
-                    className="relative group transition-transform duration-300 ease-out hover:-translate-y-1"
+                    className="relative group transition-transform duration-300 ease-out hover:-translate-y-1 rounded-xl"
+                    style={{
+                      backgroundImage: `url(${tealTileBg})`,
+                      backgroundSize: '100% 100%',
+                      backgroundRepeat: 'no-repeat',
+                      backgroundPosition: 'center',
+                    }}
                   >
-                    <img
-                      src={tealTileBg}
-                      alt=""
-                      aria-hidden="true"
-                      className="absolute inset-0 w-full h-full object-fill pointer-events-none"
-                    />
-                    <div className="relative z-10 px-8 py-7 md:px-9 md:py-8">
+                    <div className="px-8 py-7 md:px-10 md:py-8">
                       <h3 className="font-serif text-lg font-bold text-foreground mb-2">
                         {item.title}
                       </h3>
