@@ -235,15 +235,14 @@ const SeniorMoveManagers = () => {
                   </div>
 
                   <div className="flex w-full flex-col items-center sm:flex-1 sm:items-start">
-                    <a href="https://www.hbmovemanagement.com" target="_blank" rel="noopener noreferrer" className="sm:self-start sm:pl-[58px] sm:-ml-[30px]">
-                      <img
-                        src={hbmmLogo}
-                        alt="HB Move Management logo"
-                        className="h-[240px] w-auto object-contain mx-auto sm:mx-0 block"
-                      />
-                    </a>
-
                     <div className="w-full mt-1 text-center sm:pl-[58px] sm:text-left">
+                      <a href="https://www.hbmovemanagement.com" target="_blank" rel="noopener noreferrer" className="inline-block">
+                        <img
+                          src={hbmmLogo}
+                          alt="HB Move Management logo"
+                          className="h-[240px] w-auto object-contain mx-auto sm:mx-0 block"
+                        />
+                      </a>
                       <p className="text-foreground font-semibold text-base">Eric Rovner</p>
                       <p className="text-muted-foreground text-sm mb-0.5">Vice President of Marketing</p>
                       <p className="text-muted-foreground text-sm mb-1.5">HB Move Management · Hansen Bros. Moving</p>
