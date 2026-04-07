@@ -39,7 +39,7 @@ const AffiliationBadgeGrid = ({ naepcAlt, className }: AffiliationBadgeGridProps
       </div>
 
       {/* Desktop: single row */}
-      <div className="hidden md:flex mx-auto w-max min-w-fit translate-x-8 items-center justify-center gap-6 px-1 lg:gap-8">
+      <div className="hidden md:flex mx-auto w-full max-w-full items-center justify-center gap-6 px-4 lg:gap-8 overflow-hidden">
         <div className="flex h-[120px] items-center justify-center">
           <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
             <img src={alcaLogo} alt="Aging Life Care Association Corporate Partner" className="h-[66px] w-auto object-contain" />
