@@ -7,7 +7,7 @@ import RelatedServices from "@/components/RelatedServices";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import { Link } from "react-router-dom";
 import { Phone, Mail, Globe, MapPin } from "lucide-react";
-import afhHeroIcon from "@/assets/icons/icon-afh-hero.png";
+import afhHeroIcon from "@/assets/icons/icon-afh-hero-cropped.png";
 import mariaCorbuPhoto from "@/assets/providers/maria-corbu-victoria1afh.jpg";
 import victoria1Logo from "@/assets/providers/victoria1afh-logo-cropped.png";
 
@@ -30,20 +30,16 @@ const AdultFamilyHomes = () => (
       <section className="bg-secondary py-14 md:py-20">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="flex flex-col items-center">
-              <img
-                src={afhHeroIcon}
-                alt="Adult Family Home"
-                className="w-[480px] h-auto md:w-[672px] mx-auto"
-              />
-              <div className="-mt-[21rem] md:-mt-[41rem] px-4 relative z-10">
-                <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-base">Senior Living</p>
-                <h1 className="font-serif text-3xl md:text-4xl font-bold text-foreground leading-tight mb-4">Adult Family Homes</h1>
-                <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-                  Smaller, home-like settings that offer personalized care for a limited number of residents. Often a good fit for seniors who prefer a quieter, more intimate environment.
-                </p>
-              </div>
-            </div>
+            <img
+              src={afhHeroIcon}
+              alt="Adult Family Home"
+              className="block w-full max-w-[480px] h-auto md:max-w-[672px] mx-auto"
+            />
+            <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-base">Senior Living</p>
+            <h1 className="font-serif text-3xl md:text-4xl font-bold text-foreground leading-tight mb-4">Adult Family Homes</h1>
+            <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
+              Smaller, home-like settings that offer personalized care for a limited number of residents. Often a good fit for seniors who prefer a quieter, more intimate environment.
+            </p>
           </div>
         </div>
       </section>
@@ -55,7 +51,6 @@ const AdultFamilyHomes = () => (
               Featured Providers
             </h2>
 
-            {/* Victoria 1 AFH */}
             <div className="bg-secondary border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 p-5 sm:p-6">
               <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-start sm:gap-5">
                 <div className="shrink-0">
