@@ -139,9 +139,7 @@ const SeniorLivingAndRelocation = () => {
                           ? ["Nursing &", "Skilled Care"]
                           : option.title === "Independent Living"
                             ? ["Independent", "Living"]
-                            : option.title === "Power of Attorneys"
-                              ? ["Power of", "Attorneys"]
-                              : null;
+                            : null;
 
                   return (
                     <Link
