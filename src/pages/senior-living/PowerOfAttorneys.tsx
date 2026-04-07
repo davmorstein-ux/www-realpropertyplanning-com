@@ -6,8 +6,72 @@ import RelatedServices from "@/components/RelatedServices";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import { Link } from "react-router-dom";
 import { Phone, Mail } from "lucide-react";
+import { useLayoutEffect, useRef, useState, useCallback } from "react";
+import redSphere from "@/assets/red-sphere-accent.png";
 
-const PowerOfAttorneys = () => (
+const poaTiles = [
+  { title: "Aging Parents", description: "A parent begins to need help with daily decisions, and the family home needs to be sold to fund care or simplify the estate. Someone needs to be authorized to act." },
+  { title: "Medical Events", description: "A sudden illness, stroke, or hospitalization creates an urgent need for someone to manage property matters while the homeowner is unable to participate." },
+  { title: "Out-of-State Families", description: "When the person managing the property lives in a different state, a POA allows them to authorize someone local to handle the day-to-day coordination and sale process." },
+  { title: "Urgent Decisions", description: "Sometimes a property needs to be listed or sold quickly — for financial, legal, or practical reasons — and the owner isn't available or able to be directly involved." },
+];
+
+const PowerOfAttorneys = () => {
+  const gridRef = useRef<HTMLDivElement | null>(null);
+  const [spherePositions, setSpherePositions] = useState<{ key: string; left: number; top: number; row: number; col: number }[]>([]);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [colCount, setColCount] = useState(2);
+
+  useLayoutEffect(() => {
+    const grid = gridRef.current;
+    if (!grid) return;
+    let frameId = 0;
+    const measure = () => {
+      const cards = Array.from(grid.querySelectorAll<HTMLElement>(".card-3d-blue"));
+      if (cards.length < 4) { setSpherePositions([]); return; }
+      const gridRect = grid.getBoundingClientRect();
+      const rows: Array<{ top: number; items: Array<{ rect: DOMRect }> }> = [];
+      const sorted = cards.map(c => ({ rect: c.getBoundingClientRect() })).sort((a, b) => a.rect.top - b.rect.top || a.rect.left - b.rect.left);
+      sorted.forEach(card => {
+        const last = rows[rows.length - 1];
+        if (!last || Math.abs(card.rect.top - last.top) > 8) { rows.push({ top: card.rect.top, items: [card] }); return; }
+        last.items.push(card);
+      });
+      rows.forEach(r => r.items.sort((a, b) => a.rect.left - b.rect.left));
+      if (rows.length > 0) setColCount(rows[0].items.length);
+      const pos: typeof spherePositions = [];
+      rows.forEach((row, ri) => {
+        const next = rows[ri + 1];
+        if (!next) return;
+        const n = Math.min(row.items.length, next.items.length) - 1;
+        for (let ci = 0; ci < n; ci++) {
+          const ul = row.items[ci], ur = row.items[ci + 1], ll = next.items[ci], lr = next.items[ci + 1];
+          pos.push({
+            key: `${ri}-${ci}`,
+            left: (ul.rect.right + ur.rect.left) / 2 - gridRect.left,
+            top: (Math.max(ul.rect.bottom, ur.rect.bottom) + Math.min(ll.rect.top, lr.rect.top)) / 2 - gridRect.top,
+            row: ri, col: ci,
+          });
+        }
+      });
+      setSpherePositions(pos);
+    };
+    const schedule = () => { window.cancelAnimationFrame(frameId); frameId = window.requestAnimationFrame(measure); };
+    schedule();
+    const ro = new ResizeObserver(schedule);
+    ro.observe(grid);
+    Array.from(grid.querySelectorAll<HTMLElement>(".card-3d-blue")).forEach(c => ro.observe(c));
+    window.addEventListener("resize", schedule);
+    return () => { window.cancelAnimationFrame(frameId); window.removeEventListener("resize", schedule); ro.disconnect(); };
+  }, []);
+
+  const isSphereNearTile = useCallback((sphere: { row: number; col: number }, tileIndex: number) => {
+    const tileRow = Math.floor(tileIndex / colCount);
+    const tileCol = tileIndex % colCount;
+    return (sphere.row === tileRow || sphere.row === tileRow - 1) && (sphere.col === tileCol || sphere.col === tileCol - 1);
+  }, [colCount]);
+
+  return (
   <>
     <SEOHead
       title="Power of Attorney & Real Estate Decisions | Real Property Planning"
@@ -65,7 +129,7 @@ const PowerOfAttorneys = () => (
         </div>
       </section>
 
-      {/* Section 2: When It Becomes Important */}
+      {/* Section 2: When It Becomes Important — Premium Tiles */}
       <section className="py-16 md:py-24 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-[1100px] mx-auto">
@@ -75,31 +139,57 @@ const PowerOfAttorneys = () => (
             <p className="text-muted-foreground text-base md:text-[17px] leading-relaxed mb-8">
               Most people don't think about a power of attorney until they need one. But in practice, these situations come up more often than families expect — and they usually arrive under pressure.
             </p>
-            <div className="grid gap-5 md:grid-cols-2">
-              <div className="card-3d px-6 py-6">
-                <h3 className="font-serif text-lg font-semibold text-foreground mb-2">Aging Parents</h3>
-                <p className="text-muted-foreground text-[15px] leading-relaxed">
-                  A parent begins to need help with daily decisions, and the family home needs to be sold to fund care or simplify the estate. Someone needs to be authorized to act.
-                </p>
+            <div className="relative">
+              <div ref={gridRef} className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                {poaTiles.map((tile, index) => (
+                  <div
+                    key={tile.title}
+                    className="card-3d-blue group block h-full min-h-[252px] sm:min-h-[280px]"
+                    onMouseEnter={() => setHoveredIndex(index)}
+                    onMouseLeave={() => setHoveredIndex(null)}
+                  >
+                    <div className="card-3d-blue__inner h-full">
+                      <div className="card-3d-blue__face h-full">
+                        <div className="flex h-full flex-col justify-between px-6 pb-6 pt-10 sm:px-7 sm:pb-7 sm:pt-11">
+                          <div>
+                            <h3
+                              className="mb-3 font-serif text-xl font-extrabold leading-snug text-foreground transition-colors duration-300 group-hover:text-accent sm:text-[1.38rem]"
+                              style={{ textShadow: "0 1px 4px hsla(220, 30%, 15%, 0.25)" }}
+                            >
+                              {tile.title}
+                            </h3>
+                            <p className="text-sm leading-relaxed text-muted-foreground">
+                              {tile.description}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
-              <div className="card-3d px-6 py-6">
-                <h3 className="font-serif text-lg font-semibold text-foreground mb-2">Medical Events</h3>
-                <p className="text-muted-foreground text-[15px] leading-relaxed">
-                  A sudden illness, stroke, or hospitalization creates an urgent need for someone to manage property matters while the homeowner is unable to participate.
-                </p>
-              </div>
-              <div className="card-3d px-6 py-6">
-                <h3 className="font-serif text-lg font-semibold text-foreground mb-2">Out-of-State Families</h3>
-                <p className="text-muted-foreground text-[15px] leading-relaxed">
-                  When the person managing the property lives in a different state, a POA allows them to authorize someone local to handle the day-to-day coordination and sale process.
-                </p>
-              </div>
-              <div className="card-3d px-6 py-6">
-                <h3 className="font-serif text-lg font-semibold text-foreground mb-2">Urgent Decisions</h3>
-                <p className="text-muted-foreground text-[15px] leading-relaxed">
-                  Sometimes a property needs to be listed or sold quickly — for financial, legal, or practical reasons — and the owner isn't available or able to be directly involved.
-                </p>
-              </div>
+              {spherePositions.map((sphere) => {
+                const isActive = hoveredIndex !== null && isSphereNearTile(sphere, hoveredIndex);
+                return (
+                  <img
+                    key={sphere.key}
+                    src={redSphere}
+                    alt=""
+                    aria-hidden="true"
+                    className="pointer-events-none absolute z-10 hidden sm:block w-[44px] h-[44px] lg:w-[52px] lg:h-[52px]"
+                    style={{
+                      left: sphere.left,
+                      top: sphere.top,
+                      transform: "translate(-50%, -50%)",
+                      filter: isActive
+                        ? "brightness(1.18) drop-shadow(0 0 6px hsla(0, 75%, 50%, 0.35))"
+                        : "brightness(1) drop-shadow(0 0 0px transparent)",
+                      transition: "filter 0.5s ease",
+                    }}
+                    draggable={false}
+                  />
+                );
+              })}
             </div>
           </div>
         </div>
@@ -280,5 +370,6 @@ const PowerOfAttorneys = () => (
     <Footer />
   </>
 );
+};
 
 export default PowerOfAttorneys;
