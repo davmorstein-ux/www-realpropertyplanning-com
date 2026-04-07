@@ -64,6 +64,7 @@ import AssistedLivingCommunities from "./pages/senior-living/AssistedLivingCommu
 import MemoryCare from "./pages/senior-living/MemoryCare";
 import NursingAndSkilledCare from "./pages/senior-living/NursingAndSkilledCare";
 import IndependentLiving from "./pages/senior-living/IndependentLiving";
+import PowerOfAttorneys from "./pages/senior-living/PowerOfAttorneys";
 import CityPage from "./pages/CityPage";
 import CityServicePage from "./pages/CityServicePage";
 import ServicePage from "./pages/ServicePage";
