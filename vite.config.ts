@@ -440,7 +440,13 @@ const routeMetadataPlugin = {
   async closeBundle() {
     const distDir = path.resolve(__dirname, "dist");
     const baseHtmlPath = path.join(distDir, "index.html");
-    const baseHtml = await readFile(baseHtmlPath, "utf8");
+    let baseHtml: string;
+    try {
+      baseHtml = await readFile(baseHtmlPath, "utf8");
+    } catch {
+      // index.html not yet emitted (e.g. dev build or prior error) — skip SSG
+      return;
+    }
 
     await Promise.all(
       Object.entries(ROUTE_METADATA).map(async ([route, metadata]) => {
