@@ -230,9 +230,5 @@ const Header = () => {
       <div className={`transition-all duration-300 ${scrolled ? "h-[90px] md:h-[100px]" : "h-[100px] md:h-[114px]"}`} />
     </>
   );
-};
-    </>
-  );
-};
 
 export default Header;
