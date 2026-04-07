@@ -544,7 +544,7 @@ const Index = () => {
 
       <DisclaimerSection />
       <Footer />
-      <StickyMobileCallButton />
+      
     </div>
   );
 };
