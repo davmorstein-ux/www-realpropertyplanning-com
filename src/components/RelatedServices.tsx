@@ -45,7 +45,7 @@ const RelatedServices = ({ currentPath }: RelatedServicesProps) => {
                   <div className="card-3d-blue__face h-full">
                     <div className="flex h-full flex-col justify-between px-6 pb-6 pt-10 sm:px-7 sm:pb-7 sm:pt-11">
                       <div>
-                        <h3 className="mb-3 font-serif text-[1.08rem] font-bold leading-snug text-foreground transition-colors duration-300 group-hover:text-accent sm:text-[1.12rem]">
+                        <h3 className="mb-3 font-serif text-[1.18rem] font-bold leading-snug text-foreground transition-colors duration-300 group-hover:text-accent sm:text-[1.22rem]">
                           {link.label}
                         </h3>
                         <p className="text-sm leading-relaxed text-muted-foreground">
