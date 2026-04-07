@@ -9,6 +9,7 @@ import { CheckCircle, Users, Heart, ArrowRight, Phone, Mail, Globe, MapPin } fro
 import { Button, GoldHighlight } from "@/components/ui/button";
 import ericRovnerPhoto from "@/assets/providers/eric-rovner-hbmovemanagement.png";
 import hbmmLogo from "@/assets/providers/hbmovemanagement-logo.png";
+import seniorMovesHeroIcon from "@/assets/icons/icon-senior-moves-hero.png";
 
 const SeniorMoveManagers = () => {
   const jsonLd = {
@@ -48,6 +49,11 @@ const SeniorMoveManagers = () => {
         <section className="bg-primary py-20 lg:py-28">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
+              <img
+                src={seniorMovesHeroIcon}
+                alt="Senior Move Managers"
+                className="block w-full max-w-[480px] h-auto md:max-w-[672px] mx-auto"
+              />
               <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">
                 Senior Transitions
               </p>
