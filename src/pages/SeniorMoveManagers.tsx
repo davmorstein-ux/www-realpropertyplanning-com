@@ -220,16 +220,65 @@ const SeniorMoveManagers = () => {
         <section className="py-16 md:py-24 bg-background">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
-              <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-5">
-                Featured Senior Move Managers
+              <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground text-center mb-10">
+                Featured Senior Move Manager
               </h2>
-              <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-8">
-                I work with professionals who help older adults and families navigate the practical side of downsizing and relocation. If you are looking for support with sorting, packing, move coordination, or settling into a new home, this is where featured providers can be highlighted.
-              </p>
-              <div className="bg-secondary border border-border rounded-xl px-6 py-8 md:px-8 text-center">
-                <p className="text-muted-foreground text-base leading-relaxed">
-                  Featured Senior Move Manager listings are coming soon. <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4">Contact David</Link> if you are a Senior Move Manager interested in being featured, or if you need a referral.
-                </p>
+
+              <div className="bg-secondary border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 p-5 sm:p-6">
+                <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-start sm:gap-5">
+                  <div className="shrink-0">
+                    <img
+                      src={ericRovnerPhoto}
+                      alt="Eric Rovner — Vice President of Marketing, HB Move Management"
+                      className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-border shadow-sm"
+                    />
+                  </div>
+
+                  <div className="flex w-full flex-col items-center sm:flex-1 sm:items-start">
+                    <a href="https://www.hbmovemanagement.com" target="_blank" rel="noopener noreferrer" className="sm:self-start">
+                      <img
+                        src={hbmmLogo}
+                        alt="HB Move Management logo"
+                        className="h-[42px] w-auto object-contain mx-auto sm:mx-0 block"
+                      />
+                    </a>
+
+                    <div className="w-full mt-1 text-center sm:pl-[58px] sm:text-left">
+                      <p className="text-foreground font-semibold text-base">Eric Rovner</p>
+                      <p className="text-muted-foreground text-sm mb-0.5">Vice President of Marketing</p>
+                      <p className="text-muted-foreground text-sm mb-1.5">HB Move Management · Hansen Bros. Moving</p>
+
+                      <p className="text-muted-foreground text-sm leading-relaxed mb-3">
+                        HB Move Management is a proud division of Hansen Bros. Moving &amp; Storage, one of the oldest (founded in 1890) and most highly respected service providers in the Puget Sound region. Our services go far beyond those of traditional moving companies — although we do work closely with the movers. Our colleagues at Hansen Bros. focus on getting things from one place to another. We focus on helping people prepare for the move, survive the move, and get comfortably settled in their new home!
+                      </p>
+
+                      <div className="space-y-1.5 text-sm">
+                        <div className="flex items-start gap-2 justify-center sm:justify-start">
+                          <MapPin className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+                          <span className="text-muted-foreground">10750 Aurora Ave N, Seattle, WA 98133</span>
+                        </div>
+                        <div className="flex items-center gap-2 justify-center sm:justify-start">
+                          <Phone className="w-4 h-4 text-accent shrink-0" />
+                          <a href="tel:+12062574314" className="text-accent hover:text-gold underline-offset-4 hover:underline">
+                            (206) 257-4314
+                          </a>
+                        </div>
+                        <div className="flex items-center gap-2 justify-center sm:justify-start">
+                          <Mail className="w-4 h-4 text-accent shrink-0" />
+                          <a href="mailto:info@hbmovemanagement.com" className="text-accent hover:text-gold underline-offset-4 hover:underline break-all">
+                            info@hbmovemanagement.com
+                          </a>
+                        </div>
+                        <div className="flex items-center gap-2 justify-center sm:justify-start">
+                          <Globe className="w-4 h-4 text-accent shrink-0" />
+                          <a href="https://www.hbmovemanagement.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-gold underline-offset-4 hover:underline">
+                            www.hbmovemanagement.com
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
