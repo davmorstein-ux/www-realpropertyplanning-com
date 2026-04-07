@@ -68,6 +68,10 @@ const AdultFamilyHomes = () => (
                   <div className="w-full mt-1 text-center sm:pl-[58px] sm:text-left">
                     <p className="text-muted-foreground text-sm mb-1.5">Owner: Maria Corbu</p>
 
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-3">
+                      Victoria 1 Adult Family Home is a memory care provider in Seattle, WA. The staff at Victoria 1 Adult Family Home provide supervision and are able to remind residents to attend activities of daily living such as grooming and toileting. Staff are on service 24 hours a day. There are activities appropriate for seniors with Alzheimer's disease and dementia that help keep residents active and engaged. At Victoria 1 Adult Family Home, you can rest assured because a nurse is on staff and a doctor is on call.
+                    </p>
+
                     <div className="space-y-1.5 text-sm">
                       <div className="flex items-start gap-2 justify-center sm:justify-start">
                         <MapPin className="w-4 h-4 text-accent shrink-0 mt-0.5" />
