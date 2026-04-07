@@ -234,8 +234,8 @@ const SeniorMoveManagers = () => {
                     />
                   </div>
 
-                  <div className="flex w-full flex-col items-center sm:flex-1 sm:items-start">
-                    <div className="w-full mt-1 text-center sm:pl-[58px] sm:text-left">
+                  <div className="w-full flex flex-col items-center sm:flex-1 sm:items-start">
+                    <div className="w-full mt-1 text-center sm:text-left">
                       <a href="https://www.hbmovemanagement.com" target="_blank" rel="noopener noreferrer" className="inline-block">
                         <img
                           src={hbmmLogo}
