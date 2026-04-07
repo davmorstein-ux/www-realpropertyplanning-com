@@ -92,10 +92,10 @@ const RelatedServices = ({ currentPath }: RelatedServicesProps) => {
                 aria-hidden="true"
                 className="pointer-events-none absolute z-10 hidden lg:block"
                 style={{
-                  width: 10,
-                  height: 10,
-                  left: `calc(${((col + 1) / cols) * 100}% - 5px)`,
-                  top: `calc(${((row + 1) / rows) * 100}% - 5px)`,
+                  width: 16,
+                  height: 16,
+                  left: `calc(${((col + 1) / cols) * 100}% - 8px)`,
+                  top: `calc(${((row + 1) / rows) * 100}% - 8px)`,
                 }}
                 draggable={false}
               />
