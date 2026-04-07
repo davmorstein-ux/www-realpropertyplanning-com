@@ -9,6 +9,7 @@ import { CheckCircle, Users, Heart, ArrowRight, Phone, Mail, Globe, MapPin } fro
 import { Button, GoldHighlight } from "@/components/ui/button";
 import ericRovnerPhoto from "@/assets/providers/eric-rovner-hbmovemanagement.png";
 import hbmmLogo from "@/assets/providers/hbmovemanagement-logo.png";
+import seniorMovesHeroIcon from "@/assets/icons/icon-senior-moves-hero.png";
 
 const SeniorMoveManagers = () => {
   const jsonLd = {
