@@ -7,6 +7,7 @@ import RelatedServices from "@/components/RelatedServices";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import { Link } from "react-router-dom";
 import { Phone, Mail, Globe, MapPin } from "lucide-react";
+import afhHeroIcon from "@/assets/icons/icon-afh-hero.png";
 import mariaCorbuPhoto from "@/assets/providers/maria-corbu-victoria1afh.jpg";
 import victoria1Logo from "@/assets/providers/victoria1afh-logo-cropped.png";
 
