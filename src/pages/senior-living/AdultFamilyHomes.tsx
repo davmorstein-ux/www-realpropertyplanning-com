@@ -29,18 +29,20 @@ const AdultFamilyHomes = () => (
     <main>
       <section className="bg-secondary py-14 md:py-20">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center relative">
-            <img
-              src={afhHeroIcon}
-              alt="Adult Family Home"
-              className="w-[480px] h-auto md:w-[672px] mx-auto"
-            />
-            <div className="absolute inset-x-0 bottom-[6%] md:bottom-[7%] px-4">
-              <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-base">Senior Living</p>
-              <h1 className="font-serif text-3xl md:text-4xl font-bold text-foreground leading-tight mb-4">Adult Family Homes</h1>
-              <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-                Smaller, home-like settings that offer personalized care for a limited number of residents. Often a good fit for seniors who prefer a quieter, more intimate environment.
-              </p>
+          <div className="max-w-3xl mx-auto text-center">
+            <div className="flex flex-col items-center">
+              <img
+                src={afhHeroIcon}
+                alt="Adult Family Home"
+                className="w-[480px] h-auto md:w-[672px] mx-auto"
+              />
+              <div className="-mt-64 md:-mt-[28rem] px-4 relative z-10">
+                <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-base">Senior Living</p>
+                <h1 className="font-serif text-3xl md:text-4xl font-bold text-foreground leading-tight mb-4">Adult Family Homes</h1>
+                <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
+                  Smaller, home-like settings that offer personalized care for a limited number of residents. Often a good fit for seniors who prefer a quieter, more intimate environment.
+                </p>
+              </div>
             </div>
           </div>
         </div>
