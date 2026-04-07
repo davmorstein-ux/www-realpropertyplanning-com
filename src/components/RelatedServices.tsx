@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import redSphere from "@/assets/red-sphere-accent.png";
-import { useMemo } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 
 const allLinks = [
   { href: "/for-attorneys", label: "For Attorneys & Fiduciaries", description: "How we support attorneys and fiduciaries with real estate during probate and estate matters." },
@@ -23,25 +23,107 @@ interface RelatedServicesProps {
   currentPath: string;
 }
 
+interface SpherePosition {
+  key: string;
+  left: number;
+  top: number;
+}
+
 const RelatedServices = ({ currentPath }: RelatedServicesProps) => {
   const links = allLinks.filter((l) => l.href !== currentPath);
+  const gridRef = useRef<HTMLDivElement | null>(null);
+  const [spherePositions, setSpherePositions] = useState<SpherePosition[]>([]);
 
-  // Compute intersection positions for 3-col desktop grid
-  const cols = 3;
-  const rows = Math.ceil(links.length / cols);
+  useLayoutEffect(() => {
+    const grid = gridRef.current;
+    if (!grid) return;
 
-  // Intersections occur where column gaps and row gaps cross
-  // Column positions: 1/3 and 2/3 across the grid
-  // Row positions: after each row except the last
-  const intersections = useMemo(() => {
-    const points: { col: number; row: number; key: string }[] = [];
-    for (let r = 0; r < rows - 1; r++) {
-      for (let c = 0; c < cols - 1; c++) {
-        points.push({ col: c, row: r, key: `${c}-${r}` });
+    let frameId = 0;
+
+    const measureSpherePositions = () => {
+      const cards = Array.from(grid.querySelectorAll<HTMLElement>(".card-3d-blue"));
+
+      if (cards.length < 4) {
+        setSpherePositions([]);
+        return;
       }
-    }
-    return points;
-  }, [rows]);
+
+      const gridRect = grid.getBoundingClientRect();
+      const rows: Array<{
+        top: number;
+        items: Array<{ rect: DOMRect }>;
+      }> = [];
+
+      const sortedCards = cards
+        .map((card) => ({ rect: card.getBoundingClientRect() }))
+        .sort((a, b) => a.rect.top - b.rect.top || a.rect.left - b.rect.left);
+
+      sortedCards.forEach((card) => {
+        const lastRow = rows[rows.length - 1];
+
+        if (!lastRow || Math.abs(card.rect.top - lastRow.top) > 8) {
+          rows.push({ top: card.rect.top, items: [card] });
+          return;
+        }
+
+        lastRow.items.push(card);
+      });
+
+      rows.forEach((row) => row.items.sort((a, b) => a.rect.left - b.rect.left));
+
+      const nextPositions: SpherePosition[] = [];
+
+      rows.forEach((row, rowIndex) => {
+        const nextRow = rows[rowIndex + 1];
+        if (!nextRow) return;
+
+        const intersections = Math.min(row.items.length, nextRow.items.length) - 1;
+        if (intersections <= 0) return;
+
+        for (let colIndex = 0; colIndex < intersections; colIndex += 1) {
+          const upperLeft = row.items[colIndex];
+          const upperRight = row.items[colIndex + 1];
+          const lowerLeft = nextRow.items[colIndex];
+          const lowerRight = nextRow.items[colIndex + 1];
+
+          const left = (upperLeft.rect.right + upperRight.rect.left) / 2 - gridRect.left;
+          const top = (
+            Math.max(upperLeft.rect.bottom, upperRight.rect.bottom) +
+            Math.min(lowerLeft.rect.top, lowerRight.rect.top)
+          ) / 2 - gridRect.top;
+
+          nextPositions.push({
+            key: `${rowIndex}-${colIndex}`,
+            left,
+            top,
+          });
+        }
+      });
+
+      setSpherePositions(nextPositions);
+    };
+
+    const scheduleMeasurement = () => {
+      window.cancelAnimationFrame(frameId);
+      frameId = window.requestAnimationFrame(measureSpherePositions);
+    };
+
+    scheduleMeasurement();
+
+    const resizeObserver = new ResizeObserver(scheduleMeasurement);
+    resizeObserver.observe(grid);
+    Array.from(grid.querySelectorAll<HTMLElement>(".card-3d-blue")).forEach((card) => {
+      resizeObserver.observe(card);
+    });
+
+    window.addEventListener("resize", scheduleMeasurement);
+
+    return () => {
+      window.cancelAnimationFrame(frameId);
+      window.removeEventListener("resize", scheduleMeasurement);
+      resizeObserver.disconnect();
+    };
+  }, [currentPath, links.length]);
 
   return (
     <section data-nosnippet className="py-14 md:py-20 bg-secondary">
@@ -54,7 +136,7 @@ const RelatedServices = ({ currentPath }: RelatedServicesProps) => {
             Explore helpful pages for families, executors, and professionals navigating property transitions.
           </p>
           <div className="relative">
-            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            <div ref={gridRef} className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {links.map((link) => (
                 <Link
                   key={link.href}
@@ -65,7 +147,7 @@ const RelatedServices = ({ currentPath }: RelatedServicesProps) => {
                     <div className="card-3d-blue__face h-full">
                       <div className="flex h-full flex-col justify-between px-6 pb-6 pt-10 sm:px-7 sm:pb-7 sm:pt-11">
                         <div>
-                          <h3 className="mb-3 font-serif text-xl font-extrabold leading-snug text-foreground transition-colors duration-300 group-hover:text-accent sm:text-[1.38rem]" style={{ textShadow: '0 1px 4px hsla(220, 30%, 15%, 0.25)' }}>
+                          <h3 className="mb-3 font-serif text-xl font-extrabold leading-snug text-foreground transition-colors duration-300 group-hover:text-accent sm:text-[1.38rem]" style={{ textShadow: "0 1px 4px hsla(220, 30%, 15%, 0.25)" }}>
                             {link.label}
                           </h3>
                           <p className="text-sm leading-relaxed text-muted-foreground">
@@ -83,19 +165,17 @@ const RelatedServices = ({ currentPath }: RelatedServicesProps) => {
               ))}
             </div>
 
-            {/* Red sphere accents at tile intersection points — desktop only */}
-            {intersections.map(({ col, row, key }) => (
+            {spherePositions.map(({ key, left, top }) => (
               <img
                 key={key}
                 src={redSphere}
                 alt=""
                 aria-hidden="true"
-                className="pointer-events-none absolute z-10 hidden lg:block"
+                className="pointer-events-none absolute z-10 hidden sm:block h-6 w-6 lg:h-7 lg:w-7"
                 style={{
-                  width: 16,
-                  height: 16,
-                  left: `calc(${((col + 1) / cols) * 100}% - 8px)`,
-                  top: `calc(${((row + 1) / rows) * 100}% - 8px)`,
+                  left,
+                  top,
+                  transform: "translate(-50%, -50%)",
                 }}
                 draggable={false}
               />
