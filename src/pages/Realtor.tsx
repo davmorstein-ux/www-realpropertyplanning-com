@@ -4,7 +4,7 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import CTASection from "@/components/CTASection";
 import { Phone, Mail, Globe } from "lucide-react";
-import davidSteinPhoto from "@/assets/providers/david-stein-headshot.png";
+import davidSteinPhoto from "@/assets/providers/david-stein-headshot-sq.jpg";
 import expRealtyLogo from "@/assets/providers/exp-realty-logo-large.png";
 import ehoLogo from "@/assets/providers/equal-housing-opportunity.png";
 
@@ -89,11 +89,11 @@ const Realtor = () => (
                 </div>
 
                 <div className="flex w-full flex-col items-center sm:flex-1 sm:items-start">
-                  <a href="https://davestein.exprealty.com" target="_blank" rel="noopener noreferrer" className="sm:self-start">
+                  <a href="https://davestein.exprealty.com" target="_blank" rel="noopener noreferrer" className="inline-block">
                     <img
                       src={expRealtyLogo}
                       alt="eXp Realty logo"
-                      className="h-[240px] w-auto object-contain mx-auto sm:mx-0 block"
+                      className="h-[120px] w-auto object-contain mx-auto sm:mx-0 block"
                     />
                   </a>
 
