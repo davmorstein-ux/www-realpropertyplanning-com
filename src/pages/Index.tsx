@@ -155,8 +155,8 @@ const Index = () => {
                 <h3 className="font-serif text-lg font-semibold text-foreground mb-2 group-hover:text-gold transition-colors">
                   {item.title}
                 </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">{item.desc}</p>
-                <span className="text-gold font-semibold text-sm inline-flex items-center gap-1">
+                <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-1">{item.desc}</p>
+                <span className="text-gold font-semibold text-sm inline-flex items-center gap-1 mt-auto">
                   Learn More <ChevronRight className="w-4 h-4" />
                 </span>
               </Link>
