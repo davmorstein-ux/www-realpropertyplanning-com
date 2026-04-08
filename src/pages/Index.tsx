@@ -159,7 +159,10 @@ const Index = () => {
                 </div>
                 <div className="flex-1 flex items-center justify-center w-full mb-4">
                   <div className="flex min-h-[84px] w-full items-start justify-center">
-                    <p className="m-0 w-full pt-[6px] text-center text-sm text-muted-foreground leading-[0.9]">
+                    <p
+                      className="m-0 w-full pt-[6px] text-center text-sm text-muted-foreground"
+                      style={{ lineHeight: i === 0 ? "0.82" : "0.9" }}
+                    >
                       {item.desc}
                     </p>
                   </div>
