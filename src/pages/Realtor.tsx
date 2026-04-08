@@ -93,7 +93,7 @@ const Realtor = () => (
                     <img
                       src={expRealtyLogo}
                       alt="eXp Realty logo"
-                      className="h-[120px] w-auto object-contain mx-auto sm:mx-0 sm:-translate-x-[6px] block"
+                      className="h-[120px] w-auto object-contain mx-auto sm:mx-0 sm:-translate-x-[10px] block"
                     />
                   </a>
 
