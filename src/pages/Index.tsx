@@ -152,7 +152,7 @@ const Index = () => {
               { title: "Managing a Property Transition", desc: "Navigating a sale tied to probate, trust, or life change", link: "/how-the-process-works" },
             ].map((item, i) => (
               <Link key={i} to={item.link} className="card-3d-blue-skin group p-6 text-center flex flex-col items-center">
-                <h3 className="font-serif text-lg font-semibold text-foreground mb-2 group-hover:text-gold transition-colors">
+                <h3 className="font-serif text-xl font-bold mb-2 group-hover:text-gold transition-colors" style={{ color: 'hsl(0, 70%, 30%)', lineHeight: '1.15' }}>
                   {item.title}
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-1">{item.desc}</p>
