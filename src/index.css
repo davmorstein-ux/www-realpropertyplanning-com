@@ -335,6 +335,64 @@ html, body {
 }
 
 /* ═══════════════════════════════════════════════
+   BLUE PREMIUM FLAT — drop-in for card-3d with blue tile look
+═══════════════════════════════════════════════ */
+.card-3d-blue-skin {
+  @apply relative cursor-pointer transition-all duration-200;
+  border-radius: 18px;
+  background: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 15% 98%) 50%, hsl(210 12% 96%) 100%);
+  border: 2px solid hsl(210 85% 58% / 0.45);
+  box-shadow:
+    0 8px 24px -4px rgba(0,0,0,0.11),
+    0 4px 10px -3px rgba(0,0,0,0.07),
+    0 2px 4px -1px rgba(0,0,0,0.04),
+    0 1px 0 0 hsl(210 30% 82%),
+    inset 0 1px 0 0 rgba(255,255,255,0.95),
+    inset 0 -1px 2px 0 rgba(0,0,0,0.03);
+}
+.card-3d-blue-skin::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 8%;
+  right: 8%;
+  height: 2px;
+  border-radius: 9999px;
+  background: linear-gradient(to right, transparent, hsl(210 80% 60% / 0.5), transparent);
+  pointer-events: none;
+  z-index: 2;
+}
+.card-3d-blue-skin::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 4%;
+  right: 4%;
+  height: 6px;
+  border-radius: 0 0 14px 14px;
+  background: linear-gradient(180deg, transparent 0%, hsl(210 50% 70%) 70%, hsl(210 55% 60%) 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+.card-3d-blue-skin:hover {
+  transform: translateY(-4px);
+  border-color: hsl(210 85% 50% / 0.7);
+  box-shadow:
+    0 14px 34px -6px rgba(0,0,0,0.15),
+    0 6px 14px -4px rgba(0,0,0,0.09),
+    0 3px 6px -2px rgba(0,0,0,0.05),
+    0 2px 0 0 hsl(210 40% 78%),
+    inset 0 1px 0 0 rgba(255,255,255,0.95),
+    inset 0 -1px 2px 0 rgba(0,0,0,0.03);
+}
+.card-3d-blue-skin:active {
+  transform: translateY(1px);
+  box-shadow:
+    0 2px 6px -2px rgba(0,0,0,0.12),
+    inset 0 1px 3px 0 rgba(0,0,0,0.06);
+}
+
+/* ═══════════════════════════════════════════════
    PREMIUM SHELL TILE — image-backed nav card
 ═══════════════════════════════════════════════ */
 .premium-shell-tile {
