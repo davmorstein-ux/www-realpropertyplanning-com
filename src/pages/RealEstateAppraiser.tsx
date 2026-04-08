@@ -3,9 +3,9 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import CTASection from "@/components/CTASection";
-import { Phone, Mail, Globe } from "lucide-react";
+import { Phone, Mail } from "lucide-react";
 import davidSteinPhoto from "@/assets/providers/david-stein-headshot-sq.jpg";
-import expRealtyLogo from "@/assets/providers/exp-realty-logo-large.png";
+import steinAppraisalLogo from "@/assets/stein-appraisal-logo.jpg";
 import ehoLogo from "@/assets/providers/equal-housing-opportunity.png";
 
 const RealEstateAppraiser = () => (
@@ -89,13 +89,11 @@ const RealEstateAppraiser = () => (
                 </div>
 
                 <div className="flex w-full flex-col items-center sm:flex-1 sm:items-start">
-                  <a href="https://davestein.exprealty.com" target="_blank" rel="noopener noreferrer" className="inline-block">
-                    <img
-                      src={expRealtyLogo}
-                      alt="eXp Realty logo"
-                      className="h-[120px] w-auto object-contain mx-auto sm:mx-0 sm:-translate-x-[10px] block"
-                    />
-                  </a>
+                  <img
+                    src={steinAppraisalLogo}
+                    alt="Stein Appraisal logo"
+                    className="h-[120px] w-auto object-contain mx-auto sm:mx-0 sm:-translate-x-[4px] block"
+                  />
 
                   <div className="w-full mt-1 text-center sm:text-left">
                     <p className="text-foreground font-semibold text-base">David Stein</p>
@@ -120,14 +118,8 @@ const RealEstateAppraiser = () => (
                       </div>
                       <div className="flex items-center gap-2 justify-center sm:justify-start">
                         <Mail className="w-4 h-4 text-accent shrink-0" />
-                        <a href="mailto:david@realpropertyplanning.com" className="text-accent hover:text-gold underline-offset-4 hover:underline break-all">
-                          david@realpropertyplanning.com
-                        </a>
-                      </div>
-                      <div className="flex items-center gap-2 justify-center sm:justify-start">
-                        <Globe className="w-4 h-4 text-accent shrink-0" />
-                        <a href="https://davestein.exprealty.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-gold underline-offset-4 hover:underline">
-                          davestein.exprealty.com
+                        <a href="mailto:dave@steinappraisal.com" className="text-accent hover:text-gold underline-offset-4 hover:underline break-all">
+                          dave@steinappraisal.com
                         </a>
                       </div>
                     </div>
