@@ -157,7 +157,7 @@ const Index = () => {
                     {item.title}
                   </h3>
                 </div>
-                <p className="text-muted-foreground text-sm flex-1 pl-[2px] pr-0 pt-[15px] pb-0 mb-0 mt-0" style={{ lineHeight: "1.15" }}>
+                <p className="text-muted-foreground text-sm flex-1 grid place-content-center pl-[2px] pr-0 pt-0 pb-0 mb-0 mt-0" style={{ lineHeight: "1.15" }}>
                   {item.desc}
                 </p>
                 <span className="text-gold font-semibold text-sm inline-flex items-center gap-1 mt-auto">
