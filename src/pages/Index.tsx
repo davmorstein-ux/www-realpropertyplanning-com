@@ -101,12 +101,12 @@ const Index = () => {
               />
             </div>
 
-            <h1 className="font-serif text-[1.35rem] md:text-[1.65rem] lg:text-[1.95rem] font-semibold leading-[1.35] tracking-[0.01em] text-primary-foreground mb-3 max-w-[25rem] mx-auto motion-safe:animate-[text-emphasis-a_20s_ease-in-out_infinite]" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.25)', wordSpacing: '0.05em' }}>
-              Real Estate Guidance for Life's Most Important Property Transitions
+            <h1 className="font-serif text-[1.35rem] md:text-[1.65rem] lg:text-[1.95rem] font-semibold leading-[1.35] tracking-[0.01em] text-primary-foreground mb-3 max-w-[28rem] mx-auto" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.25)', wordSpacing: '0.05em' }}>
+              Guidance for Senior Transitions, Placement, and Property Decisions
             </h1>
 
-            <p className="text-primary-foreground/90 text-[0.95rem] md:text-[1.05rem] leading-relaxed max-w-[28rem] mx-auto mb-6 motion-safe:animate-[text-emphasis-b_20s_ease-in-out_infinite]">
-              Helping families, executors, and professionals navigate complex real estate decisions with clarity and confidence.
+            <p className="text-primary-foreground/90 text-[0.95rem] md:text-[1.05rem] leading-relaxed max-w-[30rem] mx-auto mb-6">
+              Education, practical guidance, and trusted connections for seniors, families, executors, and professionals navigating housing changes, care transitions, estate matters, and the sale of personal and real property.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
