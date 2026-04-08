@@ -777,6 +777,13 @@ html, body {
   a.premium-tile[data-tile-name="probate-sales"]:hover .tile-icon {
     transform: translateY(4%) scale(1.1) !important;
   }
+  a.premium-tile[data-tile-name="realtor"] .tile-icon {
+    transform: scale(1.1) !important;
+    transition: transform 0.3s ease-out !important;
+  }
+  a.premium-tile[data-tile-name="realtor"]:hover .tile-icon {
+    transform: scale(1.21) !important;
+  }
 
   /* Lower CPAs text to match Senior Moves — desktop only */
   .premium-tile h3[data-tile-id="cpas"] {
