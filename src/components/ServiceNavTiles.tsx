@@ -10,6 +10,10 @@ const ServiceNavTiles = () => {
           <SmartSearchBar />
         </div>
 
+        <p className="text-center text-muted-foreground text-base sm:text-lg font-medium tracking-wide mb-10">
+          Choose the path that best fits your situation
+        </p>
+
         <div className="mx-auto grid w-full max-w-[1200px] grid-cols-2 items-start gap-0 sm:grid-cols-3">
           {serviceTiles.map((tile) => (
             <ServiceNavTileCard key={tile.href + tile.title} tile={tile} />
