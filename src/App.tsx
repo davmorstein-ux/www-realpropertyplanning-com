@@ -119,6 +119,7 @@ import EstatePropertyMistakes from "./pages/insights/EstatePropertyMistakes";
 import OutOfStateExecutorCaseStudy from "./pages/insights/OutOfStateExecutorCaseStudy";
 import Wills from "./pages/Wills";
 import EstateLiquidation from "./pages/EstateLiquidation";
+import Realtor from "./pages/Realtor";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -258,6 +259,7 @@ const App = () => (
           <Route path="/insights/out-of-state-executor-case-study" element={<OutOfStateExecutorCaseStudy />} />
           <Route path="/wills" element={<Wills />} />
           <Route path="/estate-liquidation" element={<EstateLiquidation />} />
+          <Route path="/realtor" element={<Realtor />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
