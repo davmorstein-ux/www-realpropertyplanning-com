@@ -46,4 +46,5 @@ export const serviceTiles: ServiceTile[] = [
   { title: "Senior Living", subtitle: "", href: "/senior-living-and-relocation", iconSrc: iconSeniorLiving, mobileTextDown: true, mobileIconDown: true },
   { title: "Wills", subtitle: "", href: "/wills", iconSrc: iconWills, mobileTextDown: true, mobileIconDown: true },
   { title: "Estate\nLiquidation", subtitle: "", href: "/estate-liquidation", iconSrc: iconEstateLiquidation, labelSpacing: "tight", mobileTextDown: true, mobileIconDown: true },
+  { title: "Realtor", subtitle: "", href: "/realtor", iconSrc: iconRealtor, mobileTextDown: true, mobileIconDown: true },
 ];

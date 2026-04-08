@@ -136,12 +136,7 @@ const Realtor = () => (
       </section>
 
       {/* CTA */}
-      <CTASection
-        title="Ready to Discuss Your Property?"
-        subtitle="Whether you're planning ahead or navigating a transition now, a conversation is always a good first step."
-        buttonText="Contact Us"
-        buttonLink="/contact"
-      />
+      <CTASection />
     </main>
     <Footer />
   </>

@@ -119,6 +119,7 @@ import EstatePropertyMistakes from "./pages/insights/EstatePropertyMistakes";
 import OutOfStateExecutorCaseStudy from "./pages/insights/OutOfStateExecutorCaseStudy";
 import Wills from "./pages/Wills";
 import EstateLiquidation from "./pages/EstateLiquidation";
+import Realtor from "./pages/Realtor";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
