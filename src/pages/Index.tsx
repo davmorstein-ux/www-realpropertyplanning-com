@@ -105,9 +105,9 @@ const Index = () => {
               Guidance for Senior Transitions, Placement, and Property Decisions
             </h1>
 
-            <p className="font-serif text-[1.35rem] md:text-[1.65rem] lg:text-[1.95rem] font-semibold leading-[1.35] tracking-[0.01em] text-primary-foreground mb-6 max-w-[30rem] mx-auto motion-safe:animate-[text-emphasis-b_20s_ease-in-out_infinite]" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.25)', wordSpacing: '0.05em' }}>
+            <h2 className="font-serif text-[1.35rem] md:text-[1.65rem] lg:text-[1.95rem] font-semibold leading-[1.35] tracking-[0.01em] text-primary-foreground mb-6 max-w-[28rem] mx-auto motion-safe:animate-[text-emphasis-b_20s_ease-in-out_infinite]" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.25)', wordSpacing: '0.05em' }}>
               Practical guidance and trusted connections for senior moves, care transitions, estate matters, and property decisions.
-            </p>
+            </h2>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <Link to="/contact">
