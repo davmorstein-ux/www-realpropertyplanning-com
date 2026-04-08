@@ -10,9 +10,9 @@ const ServiceNavTiles = () => {
           <SmartSearchBar />
         </div>
 
-        <p className="text-center text-muted-foreground text-base sm:text-lg font-medium tracking-wide mb-10">
+        <h2 className="text-center text-3xl sm:text-4xl lg:text-[2.6rem] font-bold font-serif text-foreground tracking-tight mb-10">
           Choose the path that best fits your situation
-        </p>
+        </h2>
 
         <div className="mx-auto grid w-full max-w-[1200px] grid-cols-2 items-start gap-0 sm:grid-cols-3">
           {serviceTiles.map((tile) => (
