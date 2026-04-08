@@ -13,6 +13,7 @@ import iconResources from "@/assets/icons/icon-resources.png";
 import iconSeniorLiving from "@/assets/icons/icon-senior-living.png";
 import iconLending from "@/assets/icons/icon-lending.png";
 import iconWills from "@/assets/icons/icon-wills.png";
+import iconEstateLiquidation from "@/assets/icons/icon-estate-liquidation.png";
 export interface ServiceTile {
   title: string;
   subtitle: string;
@@ -43,4 +44,5 @@ export const serviceTiles: ServiceTile[] = [
   { title: "Lending", subtitle: "", href: "/lenders-and-financing-specialists", iconSrc: iconLending, mobileContentOffsetY: "-2%", mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "14%" },
   { title: "Senior Living", subtitle: "", href: "/senior-living-and-relocation", iconSrc: iconSeniorLiving, mobileTextDown: true, mobileIconDown: true },
   { title: "Wills", subtitle: "", href: "/wills", iconSrc: iconWills, mobileTextDown: true, mobileIconDown: true },
+  { title: "Estate\nLiquidation", subtitle: "", href: "/estate-liquidation", iconSrc: iconEstateLiquidation, labelSpacing: "tight", mobileTextDown: true, mobileIconDown: true },
 ];
