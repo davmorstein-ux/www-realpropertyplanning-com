@@ -378,7 +378,7 @@ const SmartSearchBar = () => {
               handleSubmit();
             }
           }}
-          placeholder="Tell us what you need help with…"
+          placeholder="Search…"
           rows={1}
           className="flex-1 bg-transparent border-none outline-none py-4 px-4 text-base lg:text-lg text-foreground placeholder:text-muted-foreground/60 font-sans resize-none overflow-hidden search-textarea-mobile"
           aria-label="Search for help"
