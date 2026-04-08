@@ -151,7 +151,7 @@ const Index = () => {
               { title: "Planning Ahead", desc: "Getting organized before a transition happens", link: "/wills" },
               { title: "Managing a Property Transition", desc: "Navigating a sale tied to probate, trust, or life change", link: "/how-the-process-works" },
             ].map((item, i) => (
-              <Link key={i} to={item.link} className="card-3d group p-6 text-center flex flex-col items-center">
+              <Link key={i} to={item.link} className="card-3d-blue-skin group p-6 text-center flex flex-col items-center">
                 <h3 className="font-serif text-lg font-semibold text-foreground mb-2 group-hover:text-gold transition-colors">
                   {item.title}
                 </h3>
@@ -220,7 +220,7 @@ const Index = () => {
                 link: "/why-valuation-matters",
               },
             ].map((card, i) => (
-              <Link key={i} to={card.link} className="card-3d group flex flex-col items-center text-center p-8">
+              <Link key={i} to={card.link} className="card-3d-blue-skin group flex flex-col items-center text-center p-8">
                 <div className="mb-6 flex h-48 w-full items-center justify-center md:h-[13.5rem]">
                   <img
                     src={card.iconSrc}
