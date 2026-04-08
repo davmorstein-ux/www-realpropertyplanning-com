@@ -72,7 +72,7 @@ const Realtor = () => (
 
       {/* Featured Realtor — Maria Corbu layout */}
       <section className="py-14 md:py-20 bg-secondary">
-        <div className="container px-6 lg:px-8">
+        <div className="container px-6 lg:px-8 text-lime-800">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground text-center mb-10">
               Featured Realtor
@@ -138,7 +138,7 @@ const Realtor = () => (
                         <li>ALCA — Aging Life Care Association</li>
                         <li>NAOSA — National Association of Senior Advocates</li>
                         <li>NAEPC — National Association of Estate Planners &amp; Councils</li>
-                        <li>NAR — National Association of Realtors®</li>
+                        <li className="text-[#1c825e]">NAR — National Association of Realtors®</li>
                       </ul>
                     </div>
 
