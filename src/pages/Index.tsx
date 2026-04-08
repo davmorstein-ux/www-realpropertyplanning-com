@@ -106,7 +106,7 @@ const Index = () => {
             </h1>
 
             <p className="text-primary-foreground/90 text-[0.95rem] md:text-[1.05rem] leading-relaxed max-w-[30rem] mx-auto mb-6 motion-safe:animate-[text-emphasis-b_20s_ease-in-out_infinite]">
-              Education, practical guidance, and trusted connections for seniors, families, executors, and professionals navigating housing changes, care transitions, estate matters, and the sale of personal and real property.
+              Practical guidance and trusted connections for senior moves, care transitions, estate matters, and property decisions.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
