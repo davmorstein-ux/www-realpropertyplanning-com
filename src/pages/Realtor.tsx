@@ -134,11 +134,11 @@ const Realtor = () => (
 
                     <div className="mt-4 pt-4 border-t border-border/50">
                       <p className="text-foreground font-semibold text-xs uppercase tracking-widest mb-2">Proud member of the:</p>
-                      <ul className="space-y-1 text-accent text-sm">
+                      <ul className="space-y-1 text-[#1c825e] text-sm">
                         <li>ALCA — Aging Life Care Association</li>
                         <li>NAOSA — National Association of Senior Advocates</li>
                         <li>NAEPC — National Association of Estate Planners &amp; Councils</li>
-                        <li className="text-[#1c825e]">NAR — National Association of Realtors®</li>
+                        <li>NAR — National Association of Realtors®</li>
                       </ul>
                     </div>
 
