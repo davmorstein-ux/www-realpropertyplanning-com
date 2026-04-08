@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import type { ServiceTile } from "./service-nav-tiles-data";
-import tileShell from "@/assets/tile-shell.png";
+import tileShell from "@/assets/tile-shell-blue.png";
 
 const ServiceNavTileCard = ({ tile }: { tile: ServiceTile }) => {
   // Build the inline style for the content container
