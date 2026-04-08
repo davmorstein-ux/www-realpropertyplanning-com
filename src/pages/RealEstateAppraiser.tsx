@@ -3,9 +3,9 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import CTASection from "@/components/CTASection";
-import { Phone, Mail, Globe } from "lucide-react";
+import { Phone, Mail } from "lucide-react";
 import davidSteinPhoto from "@/assets/providers/david-stein-headshot-sq.jpg";
-import expRealtyLogo from "@/assets/providers/exp-realty-logo-large.png";
+import steinAppraisalLogo from "@/assets/stein-appraisal-logo.jpg";
 import ehoLogo from "@/assets/providers/equal-housing-opportunity.png";
 
 const RealEstateAppraiser = () => (
