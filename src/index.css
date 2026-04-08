@@ -662,7 +662,8 @@ html, body {
   .premium-tile h3[data-tile-id="the-process"],
   .premium-tile h3[data-tile-id="home-value"],
   .premium-tile h3[data-tile-id="lending"],
-  .premium-tile h3[data-tile-id="senior-living"] {
+  .premium-tile h3[data-tile-id="senior-living"],
+  .premium-tile h3[data-tile-id="realtor"] {
     margin-top: -0.5rem !important;
   }
 
@@ -778,11 +779,12 @@ html, body {
     transform: translateY(4%) scale(1.1) !important;
   }
   a.premium-tile[data-tile-name="realtor"] .tile-icon {
-    transform: scale(1.1) !important;
+    transform: translateX(3%) scale(1.1) !important;
+    transform-origin: center center !important;
     transition: transform 0.3s ease-out !important;
   }
   a.premium-tile[data-tile-name="realtor"]:hover .tile-icon {
-    transform: scale(1.21) !important;
+    transform: translateX(3%) scale(1.21) !important;
   }
 
   /* Lower CPAs text to match Senior Moves — desktop only */
