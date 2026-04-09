@@ -14,7 +14,7 @@ const ServiceNavTiles = () => {
           Choose the path that best fits your situation
         </h2>
 
-        <div className="mx-auto grid w-full max-w-[1200px] grid-cols-2 items-start gap-0 sm:grid-cols-3">
+        <div className="mx-auto grid w-full max-w-[1200px] grid-cols-2 items-start gap-0 sm:grid-cols-3 isolate">
           {serviceTiles.map((tile) => (
             <ServiceNavTileCard key={tile.href + tile.title} tile={tile} />
           ))}
