@@ -91,7 +91,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   "/how-the-process-works": {
     title: "How the Process Works — Estate Property Sales | Real Property Planning",
     description:
-      "From initial consultation to closing day — here is exactly how David Stein helps executors, attorneys, and families sell probate, inherited, and trust-owned property throughout Washington State.",
+      "From initial consultation to closing day — here is exactly how Real Property Planning helps executors, attorneys, and families sell probate, inherited, and trust-owned property throughout Washington State.",
     h1: "How the Process Works",
     quickAnswerQ: "How does the estate and probate property sale process work?",
     quickAnswerA: "Real Property Planning follows a clear seven-step process: initial consultation, property evaluation and valuation-informed pricing, preparation and vendor coordination, listing and marketing, offer review and negotiation, escrow and closing management, and post-sale support.",
