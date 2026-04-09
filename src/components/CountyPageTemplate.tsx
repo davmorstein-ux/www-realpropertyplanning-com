@@ -51,6 +51,10 @@ const CountyPageTemplate = ({
   whoIHelp,
   whyCredentialsMatter,
   countySpecificFaqs,
+  aeoQuestion,
+  aeoAnswer,
+  aeoSupportBullets,
+  aeoSupportFaqs,
 }: CountyPageProps) => {
   const breadcrumbItems = [
     { name: "Counties", url: "/counties" },
