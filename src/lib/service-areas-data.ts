@@ -17,28 +17,25 @@ export interface CityData {
   slug: string;
   county: string;
   countySlug: string;
-  /** Community tone — drives template language variation */
   tone?: CommunityTone;
-  /** Short unique descriptor for meta/intro variation */
   descriptor?: string;
-  /** Unique hero intro paragraph for the city page */
   heroIntro?: string;
-  /** Unique "why local knowledge matters" paragraph */
   localKnowledge?: string;
-  /** Unique "why broker/appraiser" paragraph */
   brokerAppraiserValue?: string;
-  /** City-specific situations clients face */
   localSituations?: string[];
-  /** City-specific client types */
   localClientTypes?: string[];
-  /** Custom hero heading for the city page */
   heroHeading?: string;
-  /** Short paragraph: who David helps in this city */
   whoIHelp?: string;
-  /** Short paragraph: why broker+appraiser credentials matter here */
   whyCredentialsMatter?: string;
-  /** City-specific FAQs */
   localFaqs?: { question: string; answer: string }[];
+  /** Override the default AEO answer block question */
+  aeoQuestion?: string;
+  /** Override the default AEO answer block answer */
+  aeoAnswer?: string;
+  /** Override the default AEO support content with bullets */
+  aeoSupportBullets?: string[];
+  /** Override the default AEO support content with FAQ cards */
+  aeoSupportFaqs?: { question: string; answer: string }[];
 }
 
 export interface CountyData {
