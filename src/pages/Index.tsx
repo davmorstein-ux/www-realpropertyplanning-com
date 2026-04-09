@@ -35,6 +35,7 @@ import GuidedEntryPanel from "@/components/GuidedEntryPanel";
 import StickyMobileCallButton from "@/components/StickyMobileCallButton";
 import WhatHappensNext from "@/components/WhatHappensNext";
 import SecureWillSection from "@/components/SecureWillSection";
+import DirectAnswerBlock from "@/components/DirectAnswerBlock";
 
 const serviceAreas = [
   { county: "King County", href: "/counties/king", cities: "Seattle, Bellevue, Kirkland, Redmond, Renton, Kent, Federal Way & more" },
@@ -125,6 +126,11 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      <DirectAnswerBlock
+        question="What does Real Property Planning do?"
+        answer="Real Property Planning helps executors, trustees, attorneys, and families sell probate, estate, inherited, and senior-transition properties throughout Washington State. David Stein combines 20+ years as a licensed broker and state-certified residential appraiser to provide accurate pricing, hands-on coordination, and clear communication from first conversation through closing."
+      />
 
       {/* ═══════════════════════════════════════════════════
           2. SERVICE NAV TILES — Role-based pathways

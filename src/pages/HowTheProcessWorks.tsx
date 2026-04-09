@@ -11,6 +11,7 @@ import MidPageCTA from "@/components/MidPageCTA";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+import DirectAnswerBlock from "@/components/DirectAnswerBlock";
 
 
 const steps = [
@@ -125,6 +126,11 @@ const HowTheProcessWorks = () => {
         </div>
       </section>
 
+      <DirectAnswerBlock
+        question="How do estate and probate property sales work in Washington State?"
+        answer="David Stein follows a clear seven-step process: initial consultation, property evaluation and valuation-informed pricing, preparation and vendor coordination, listing and marketing, offer review and negotiation, escrow and closing management, and post-sale support. Each step is designed for the unique complexity of estate, probate, and senior transition sales — where legal requirements, family dynamics, and property condition all shape the timeline."
+      />
+
       <TrustStrip />
 
       {/* Seven Steps */}
@@ -156,7 +162,7 @@ const HowTheProcessWorks = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
-              What Makes This Process Different From a Standard Home Sale
+              How Is Selling Estate Property Different From a Standard Home Sale?
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
               In a conventional home sale, the homeowner decides to sell, a listing agent provides a price opinion, the home goes on the market, and a transaction closes in 30 to 45 days. The process is relatively predictable.

@@ -17,6 +17,7 @@ import people3d from "@/assets/people-3d.png";
 import heart3d from "@/assets/heart-3d.png";
 import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+import DirectAnswerBlock from "@/components/DirectAnswerBlock";
 
 const transitionSituations = [
   "Downsizing from a longtime family home to a smaller residence",
@@ -112,6 +113,11 @@ const SeniorTransitions = () => {
         </div>
       </section>
 
+      <DirectAnswerBlock
+        question="How does David Stein help seniors and families sell a longtime home?"
+        answer="David provides patient, step-by-step guidance for seniors and families transitioning from a longtime home — whether moving to assisted living, downsizing, or relocating closer to family. He evaluates the home's condition, coordinates preparation and cleanout, prices it using his dual broker and appraiser credentials, and manages the sale while communicating clearly with everyone involved."
+      />
+
       <TrustStrip />
 
       {/* Professional Affiliations */}
@@ -131,7 +137,7 @@ const SeniorTransitions = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-              When Families Reach Out
+              When Do Families Reach Out About Senior Home Sales?
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               Senior housing transitions take many forms. David works with families in situations including:
@@ -154,7 +160,7 @@ const SeniorTransitions = () => {
           <div className="max-w-3xl mx-auto">
             <img src={heart3d} alt="" aria-hidden="true" className="w-10 h-10 shrink-0 mb-6" style={{ width: 40, height: 40 }} />
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-              What Families Need Most During These Transitions
+              What Do Families Need Most During a Senior Home Sale?
             </h2>
             <ul className="space-y-4">
               {whatFamiliesNeed.map((item, index) => (

@@ -15,6 +15,7 @@ import { Link } from "react-router-dom";
 import warning3d from "@/assets/warning-3d.png";
 import scale3d from "@/assets/scale-3d.png";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+import DirectAnswerBlock from "@/components/DirectAnswerBlock";
 
 const whyMatters = [
   "Supports confident pricing decisions that reflect the property's true condition and market position",
@@ -117,6 +118,11 @@ const WhyValuationMatters = () => {
         </div>
       </section>
 
+      <DirectAnswerBlock
+        question="Why does property valuation matter in estate and probate sales?"
+        answer="Accurate valuation prevents the two most expensive mistakes in estate property sales: overpricing that leads to months of carrying costs and lost buyer interest, and underpricing that leaves tens of thousands of dollars on the table. David Stein's dual credentials as a licensed broker and certified residential appraiser allow him to evaluate properties based on actual condition, not automated estimates — giving executors, attorneys, and trustees defensible pricing that protects the estate."
+      />
+
       <TrustStrip />
 
       {/* Why Accurate Value Guidance Matters */}
@@ -125,7 +131,7 @@ const WhyValuationMatters = () => {
           <div className="max-w-3xl mx-auto">
             <img src={scale3d} alt="" aria-hidden="true" className="w-10 h-10 object-contain mb-6" />
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-              Why Accurate Value Guidance Matters
+              Why Does Accurate Value Guidance Matter in Estate Sales?
             </h2>
             <ul className="space-y-4">
               {whyMatters.map((item, index) => (
@@ -145,7 +151,7 @@ const WhyValuationMatters = () => {
           <div className="max-w-3xl mx-auto">
             <img src={warning3d} alt="" aria-hidden="true" className="w-10 h-10 object-contain mb-6" />
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
-              What Happens When Pricing Goes Wrong
+              What Happens When Estate Property Pricing Goes Wrong?
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               Pricing mistakes in estate situations create consequences that go beyond just dollars:
@@ -167,7 +173,7 @@ const WhyValuationMatters = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-              When Valuation Expertise Becomes Critical
+              When Does Valuation Expertise Become Critical?
             </h2>
             <ul className="space-y-4">
               {situations.map((item, index) => (
