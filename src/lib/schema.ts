@@ -1,4 +1,4 @@
-const SITE_URL = "https://realpropertyplanning.com";
+const SITE_URL = "https://www.realpropertyplanning.com";
 const LOGO_URL = `${SITE_URL}/logo.png`;
 const BUSINESS_NAME = "Real Property Planning";
 

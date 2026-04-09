@@ -312,47 +312,78 @@ const CountyPageTemplate = ({
       {/* County FAQ */}
       <PageFAQ faqs={faqs} heading={`${countyName} Property Transition FAQ`} />
 
-      {/* Internal Links */}
+      {/* Internal Links — County-specific city links */}
       <section className="py-12 bg-background">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <p className="text-sm font-semibold text-muted-foreground mb-3">Related Resources</p>
-            <div className="flex flex-wrap gap-3">
-              <Link to="/probate-estate-sales" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Probate & Estate Sales</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/executors" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Executors</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/trustees" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Trustees</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/for-attorneys" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Attorneys</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/senior-transitions" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Senior Transitions</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/why-valuation-matters" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Why Valuation Matters</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/how-the-process-works" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">How the Process Works</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/cities-we-serve" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Cities We Serve</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/resources" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Resources</Link>
-            </div>
-          </div>
-        </div>
-      </section>
+          <div className="max-w-3xl mx-auto space-y-6">
+            {/* City pages within this county */}
+            {countyData && countyData.cities.length > 0 && (
+              <div>
+                <p className="text-sm font-semibold text-muted-foreground mb-3">{countyName} City Pages</p>
+                <div className="flex flex-wrap gap-3">
+                  {countyData.cities.map((c, i) => (
+                    <span key={c.slug}>
+                      {i > 0 && <span className="text-muted-foreground/40 mr-3">·</span>}
+                      <Link to={`/cities/${c.slug}`} className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">
+                        {`Probate & estate guidance in ${c.name}`}
+                      </Link>
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
 
-      {/* Related Guides */}
-      <section className="py-10 bg-background">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <p className="text-sm font-semibold text-muted-foreground mb-3">Helpful Guides</p>
-            <div className="flex flex-wrap gap-3">
-              <Link to="/guides/how-probate-real-estate-works" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">How Probate Sales Work</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/guides/what-executors-should-do" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">What Executors Should Do First</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/guides/inherited-house-washington" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Inherited House Guide</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/guides/appraisal-vs-cma" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Appraisal vs. CMA</Link>
+            {/* Service pages */}
+            <div>
+              <p className="text-sm font-semibold text-muted-foreground mb-3">Related Services</p>
+              <div className="flex flex-wrap gap-3">
+                <Link to="/probate-estate-sales" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Selling probate property in Washington</Link>
+                <span className="text-muted-foreground/40">·</span>
+                <Link to="/executors" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Guidance for executors and personal representatives</Link>
+                <span className="text-muted-foreground/40">·</span>
+                <Link to="/trustees" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Guidance for trustees managing real estate</Link>
+                <span className="text-muted-foreground/40">·</span>
+                <Link to="/for-attorneys" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Real estate partner for probate and estate attorneys</Link>
+                <span className="text-muted-foreground/40">·</span>
+                <Link to="/senior-transitions" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Senior transition and relocation support</Link>
+                <span className="text-muted-foreground/40">·</span>
+                <Link to="/why-valuation-matters" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Why appraisal-informed pricing matters</Link>
+                <span className="text-muted-foreground/40">·</span>
+                <Link to="/how-the-process-works" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">How the estate property process works</Link>
+              </div>
+            </div>
+
+            {/* Educational guides */}
+            <div>
+              <p className="text-sm font-semibold text-muted-foreground mb-3">Educational Guides</p>
+              <div className="flex flex-wrap gap-3">
+                <Link to="/guides/how-probate-real-estate-works" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">How probate real estate sales work in Washington</Link>
+                <span className="text-muted-foreground/40">·</span>
+                <Link to="/guides/what-executors-should-do" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">First steps for executors with a house to sell</Link>
+                <span className="text-muted-foreground/40">·</span>
+                <Link to="/guides/inherited-house-washington" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">What to do with an inherited house in Washington</Link>
+                <span className="text-muted-foreground/40">·</span>
+                <Link to="/guides/appraisal-vs-cma" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Appraisal vs. CMA for estate properties</Link>
+                <span className="text-muted-foreground/40">·</span>
+                <Link to="/guides/out-of-state-families" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Managing inherited property from out of state</Link>
+                <span className="text-muted-foreground/40">·</span>
+                <Link to="/guides/taxes-selling-inherited-house-washington" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Tax considerations when selling inherited property</Link>
+              </div>
+            </div>
+
+            {/* Other county hubs */}
+            <div>
+              <p className="text-sm font-semibold text-muted-foreground mb-3">Other Counties We Serve</p>
+              <div className="flex flex-wrap gap-3">
+                {counties.filter(c => c.slug !== countySlug).map((c, i) => (
+                  <span key={c.slug}>
+                    {i > 0 && <span className="text-muted-foreground/40 mr-3">·</span>}
+                    <Link to={`/counties/${c.slug}`} className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">
+                      {`${c.name} estate property services`}
+                    </Link>
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         </div>

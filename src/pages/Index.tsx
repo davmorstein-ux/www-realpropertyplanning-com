@@ -102,11 +102,11 @@ const Index = () => {
             </div>
 
             <h1 className="font-serif text-[1.35rem] md:text-[1.65rem] lg:text-[1.95rem] font-semibold leading-[1.35] tracking-[0.01em] text-primary-foreground mb-3 max-w-[28rem] mx-auto motion-safe:animate-[text-emphasis-a_14s_ease-in-out_infinite]" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.25)', wordSpacing: '0.05em' }}>
-              Guidance for Senior Transitions, Placement, and Property Decisions
+              David Stein helps executors, trustees, attorneys, and families navigate property transitions across Washington State.
             </h1>
 
             <h2 className="font-serif text-[1.35rem] md:text-[1.65rem] lg:text-[1.95rem] font-semibold leading-[1.35] tracking-[0.01em] text-primary-foreground mb-6 max-w-[28rem] mx-auto motion-safe:animate-[text-emphasis-b_14s_ease-in-out_infinite]" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.25)', wordSpacing: '0.05em' }}>
-              Practical guidance and trusted connections for senior moves, care transitions, estate matters, and property decisions.
+              Probate sales, inherited homes, senior moves, and trust property — guided by 20+ years as a licensed broker and certified appraiser.
             </h2>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
