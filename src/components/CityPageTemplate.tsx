@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import DirectAnswerBlock from "@/components/DirectAnswerBlock";
 import { counties } from "@/lib/service-areas-data";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
@@ -257,6 +258,11 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
         </div>
       </section>
 
+      <DirectAnswerBlock
+        question={`How do probate and estate property sales work in ${city.name}?`}
+        answer={`David Stein provides hands-on real estate guidance for executors, trustees, attorneys, and families selling probate, inherited, and trust-held property in ${city.name}, ${city.county}. As a licensed broker and certified residential appraiser with 20+ years of experience, he evaluates each property's condition, develops accurate pricing, coordinates preparation, and manages the full sale process.`}
+      />
+
       {/* --- UNIQUE CONTENT FIRST --- */}
 
       {/* Who I Help in [City] */}
@@ -264,7 +270,7 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-4">
-              Who I Help in {city.name}
+              Who Does David Stein Help in {city.name}?
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
               {city.whoIHelp || defaultWhoIHelp}
@@ -278,7 +284,7 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-4">
-              Why Broker and Appraiser Experience Matters in {city.name}
+              Why Does Broker and Appraiser Experience Matter in {city.name}?
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
               {city.whyCredentialsMatter || defaultWhyCredentials}
