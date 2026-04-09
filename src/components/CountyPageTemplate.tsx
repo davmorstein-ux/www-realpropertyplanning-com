@@ -141,7 +141,6 @@ const CountyPageTemplate = ({
           { label: "Prepare", desc: "Cleanout, repairs, and vendor coordination managed for you" },
           { label: "Sell", desc: "Marketing, negotiation, and closing with clear communication" },
         ] : undefined}
-        ]}
       />
 
       {/* Who I Help + Why Credentials — combined compact section */}
