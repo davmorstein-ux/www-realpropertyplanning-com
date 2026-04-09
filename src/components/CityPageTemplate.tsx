@@ -260,7 +260,7 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
 
       <DirectAnswerBlock
         question={city.aeoQuestion || `How do probate and estate property sales work in ${city.name}?`}
-        answer={city.aeoAnswer || `David Stein provides hands-on real estate guidance for executors, trustees, attorneys, and families selling probate, inherited, and trust-held property in ${city.name}, ${city.county}. As a licensed broker and certified residential appraiser with 20+ years of experience, he evaluates each property's condition, develops accurate pricing, coordinates preparation, and manages the full sale process.`}
+        answer={city.aeoAnswer || `Real Property Planning provides hands-on guidance for executors, trustees, attorneys, and families selling probate, inherited, and trust-held property in ${city.name}, ${city.county}. Each property's condition is carefully evaluated, accurate pricing is developed, and preparation and the full sale process are coordinated — backed by licensed broker and certified appraiser expertise.`}
         supportBullets={city.aeoSupportBullets}
         supportFaqs={city.aeoSupportFaqs}
         supportSteps={!city.aeoSupportBullets && !city.aeoSupportFaqs ? [
