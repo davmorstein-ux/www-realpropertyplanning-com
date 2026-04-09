@@ -750,7 +750,7 @@ html, body {
   /* The Process tile: grow upward to reduce headspace, lower icon */
   .premium-tile[data-tile-name="the-process"] .tile-icon {
     transform-origin: bottom center !important;
-    transform: scale(1.30) translateY(-6%) !important;
+    transform: scale(1.30) translateY(-2%) !important;
   }
   /* Appraiser: raise icon more */
   .premium-tile[data-tile-name="appraiser"] .tile-icon {
@@ -760,14 +760,21 @@ html, body {
   .premium-tile[data-tile-name="service-areas"] .tile-icon {
     transform: scale(1.21) !important;
   }
+  /* Estate Liquidation: reduce icon by 5% */
+  .premium-tile[data-tile-name="estate-liquidation"] .tile-icon {
+    transform: scale(1.045) !important;
+  }
   /* Nudge icons upward on mobile for these tiles */
   .premium-tile[data-tile-name="wills"] .tile-icon,
   .premium-tile[data-tile-name="lending"] .tile-icon,
   .premium-tile[data-tile-name="senior-living"] .tile-icon,
   .premium-tile[data-tile-name="probate-terms"] .tile-icon,
-  .premium-tile[data-tile-name="probate-sales"] .tile-icon,
   .premium-tile[data-tile-name="cpas"] .tile-icon {
     transform: scale(1.18) translateY(-14%) !important;
+  }
+  /* Probate Sales: nudge icon down */
+  .premium-tile[data-tile-name="probate-sales"] .tile-icon {
+    transform: scale(1.18) translateY(-8%) !important;
   }
 
   /* Reset for attorney tiles so they aren't affected */
@@ -911,7 +918,7 @@ html, body {
     margin-top: 0.1rem !important;
   }
   .premium-tile .tile-label-tight[data-tile-id="appraiser"] {
-    margin-top: -0.8rem !important;
+    margin-top: -1.1rem !important;
   }
 }
 
