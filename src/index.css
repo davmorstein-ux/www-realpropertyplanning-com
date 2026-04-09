@@ -739,8 +739,8 @@ html, body {
   position: absolute;
   top: 44%;
   left: 50%;
-  width: 12%;
-  height: 8%;
+  width: 28%;
+  height: 18%;
   transform: translate(-50%, -50%);
   z-index: 20;
   pointer-events: auto;
@@ -754,8 +754,8 @@ html, body {
     position: absolute;
     top: 44%;
     left: 50%;
-    width: 22%;
-    height: 12%;
+    width: 36%;
+    height: 20%;
     transform: translate(-50%, -50%);
     z-index: 20;
     pointer-events: auto;
