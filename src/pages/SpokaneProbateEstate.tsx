@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import DirectAnswerBlock from "@/components/DirectAnswerBlock";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import TrustStrip from "@/components/TrustStrip";
@@ -115,6 +116,16 @@ const SpokaneProbateEstate = () => {
           </div>
         </div>
       </section>
+
+      <DirectAnswerBlock
+        question="How does David Stein help families manage inherited property in Spokane?"
+        answer="Many Spokane estate properties are managed by families who live outside the area. David Stein provides reliable, on-the-ground coordination — property assessment, preparation, pricing, and sale management — so out-of-area executors and trustees can make confident decisions without needing to be on-site."
+        supportBullets={[
+          "Clear guidance for out-of-state executors managing Spokane property from a distance",
+          "Valuation-informed pricing based on Spokane's neighborhood-level market dynamics",
+          "Full-service coordination from cleanout through closing with regular updates",
+        ]}
+      />
 
       <TrustStrip />
 
