@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import type { ServiceTile } from "./service-nav-tiles-data";
 import tileShell from "@/assets/tile-shell.png";
 
-const ServiceNavTileCard = ({ tile }: { tile: ServiceTile }) => {
+const ServiceNavTileCard = ({ tile, index, columns = 3 }: { tile: ServiceTile; index: number; columns?: number }) => {
   // Build the inline style for the content container
   const contentStyle: React.CSSProperties = {};
   if (tile.contentOffsetY) {
@@ -12,9 +12,15 @@ const ServiceNavTileCard = ({ tile }: { tile: ServiceTile }) => {
     contentStyle['--mobile-offset' as string] = tile.mobileContentOffsetY;
   }
 
+  // Row-based z-index: upper rows get higher z-index so they sit on top of lower rows
+  const totalRows = Math.ceil(18 / columns);
+  const row = Math.floor(index / columns);
+  const baseZIndex = (totalRows - row) * 2; // e.g. row 0 = 12, row 1 = 10, row 2 = 8...
+
   return (
     <div
-      className="premium-tile relative block w-full text-center -my-[22%] -mx-[4%] scale-[1.45] sm:-my-[22%] sm:-mx-[6%] sm:scale-[1.588] z-0 pointer-events-none [&:hover]:z-10"
+      className="premium-tile relative block w-full text-center -my-[22%] -mx-[4%] scale-[1.45] sm:-my-[22%] sm:-mx-[6%] sm:scale-[1.588] pointer-events-none hover:!z-[100]"
+      style={{ zIndex: baseZIndex }}
     >
       <Link
         to={tile.href}
