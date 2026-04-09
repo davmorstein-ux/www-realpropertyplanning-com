@@ -1036,64 +1036,151 @@ html, body {
   }
 }
 
-/* Floating page arrow navigation */
-.rpp-arrow-nav {
+/* ═══════════════════════════════════════════════
+   Floating Compass Navigation
+═══════════════════════════════════════════════ */
+.rpp-compass-nav {
   position: fixed;
   z-index: 9999;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 20px;
-  bottom: 26px;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   pointer-events: none;
 }
 
-.rpp-arrow-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 74px;
-  height: 74px;
-  padding: 0;
+.rpp-compass-container {
+  position: relative;
+  width: 180px;
+  height: 120px;
+  pointer-events: none;
+}
+
+.rpp-compass-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Shared hit area styles */
+.rpp-compass-hit {
+  position: absolute;
   border: 0;
-  border-radius: 9999px;
+  padding: 0;
+  margin: 0;
   background: transparent;
   cursor: pointer;
-  transition: transform 0.18s ease, filter 0.18s ease;
   pointer-events: auto;
+  transition: transform 0.2s ease-out;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
 }
 
-.rpp-arrow-btn img {
-  display: block;
-  width: 74px;
-  height: 74px;
+.rpp-compass-hit:hover {
+  transform: scale(1.08);
 }
 
-.rpp-arrow-btn:hover {
-  transform: translateY(1px) scale(0.985);
-  filter: brightness(1.04);
+.rpp-compass-hit:active {
+  transform: scale(0.95);
 }
 
-.rpp-arrow-btn:active {
-  transform: translateY(2px) scale(0.96);
+.rpp-compass-hit:focus-visible {
+  outline: 2px solid hsl(var(--primary));
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
-.rpp-arrow-btn:focus-visible {
-  outline: 3px solid hsl(var(--primary));
-  outline-offset: 4px;
+/* Top arrow — scroll to top */
+.rpp-compass-hit--top {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 26%;
+  height: 30%;
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+}
+.rpp-compass-hit--top:hover {
+  transform: translateX(-50%) scale(1.08);
+}
+.rpp-compass-hit--top:active {
+  transform: translateX(-50%) scale(0.95);
 }
 
+/* Bottom arrow — scroll to bottom */
+.rpp-compass-hit--bottom {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 26%;
+  height: 30%;
+  clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
+}
+.rpp-compass-hit--bottom:hover {
+  transform: translateX(-50%) scale(1.08);
+}
+.rpp-compass-hit--bottom:active {
+  transform: translateX(-50%) scale(0.95);
+}
+
+/* Left arrow — go back */
+.rpp-compass-hit--left {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 34%;
+  height: 28%;
+  clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
+}
+.rpp-compass-hit--left:hover {
+  transform: translateY(-50%) scale(1.08);
+}
+.rpp-compass-hit--left:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+/* Right arrow — go forward */
+.rpp-compass-hit--right {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 34%;
+  height: 28%;
+  clip-path: polygon(100% 50%, 0% 0%, 0% 100%);
+}
+.rpp-compass-hit--right:hover {
+  transform: translateY(-50%) scale(1.08);
+}
+.rpp-compass-hit--right:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+/* Center button — go home */
+.rpp-compass-hit--center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: 38%;
+  border-radius: 50%;
+}
+.rpp-compass-hit--center:hover {
+  transform: translate(-50%, -50%) scale(1.08);
+}
+.rpp-compass-hit--center:active {
+  transform: translate(-50%, -50%) scale(0.95);
+}
+
+/* Mobile adjustments */
 @media (max-width: 768px) {
-  .rpp-arrow-nav {
-    bottom: 22px;
-    gap: 16px;
+  .rpp-compass-nav {
+    bottom: 16px;
   }
 
-  .rpp-arrow-btn,
-  .rpp-arrow-btn img {
-    width: 56px;
-    height: 56px;
+  .rpp-compass-container {
+    width: 140px;
+    height: 114px;
   }
 }
