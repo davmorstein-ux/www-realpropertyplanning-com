@@ -1,6 +1,7 @@
 import GoldCheck3D from "@/components/GoldCheck3D";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import DirectAnswerBlock from "@/components/DirectAnswerBlock";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import TrustStrip from "@/components/TrustStrip";
@@ -121,6 +122,11 @@ const CountyPageTemplate = ({
         </div>
       </section>
 
+      <DirectAnswerBlock
+        question={`How do probate and estate property sales work in ${countyName}?`}
+        answer={`David Stein provides experienced real estate guidance for executors, trustees, attorneys, and families selling probate, inherited, and trust-held property in ${countyName}, Washington. As a licensed broker and certified residential appraiser, he evaluates each property's condition and market position, coordinates preparation and sale, and provides defensible pricing that standard agents cannot match.`}
+      />
+
       {/* --- UNIQUE CONTENT FIRST --- */}
 
       {/* Who I Help in [County] */}
@@ -128,7 +134,7 @@ const CountyPageTemplate = ({
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-4">
-              Who I Help in {countyName}
+              Who Does David Stein Help in {countyName}?
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
               {whoIHelp || defaultWhoIHelp}
@@ -142,7 +148,7 @@ const CountyPageTemplate = ({
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-4">
-              Why Broker and Appraiser Experience Matters in {countyName}
+              Why Does Broker and Appraiser Experience Matter in {countyName}?
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
               {whyCredentialsMatter || defaultWhyCredentials}
@@ -260,7 +266,7 @@ const CountyPageTemplate = ({
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-              Why Does Local Knowledge Matter in {countyName}?
+              Why Does Local Knowledge Matter for Estate Property Sales in {countyName}?
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
               {localParagraph || `Every county has its own market patterns, housing stock, buyer demand, and practical sale considerations. Real Property Planning combines broad experience with local awareness to help clients make informed property decisions in ${countyName}.`}
