@@ -51,6 +51,13 @@ const BentonCounty = () => (
         answer: "Timing depends on the property's condition, the estate administration timeline, and seasonal market patterns in the Tri-Cities area. David helps executors balance these factors — identifying when the market is most favorable while respecting legal deadlines and family readiness. His goal is a realistic plan that accounts for all the moving pieces, not pressure to list before the property is ready.",
       },
     ]}
+    aeoQuestion="What are the practical first steps for selling inherited property in Benton County?"
+    aeoAnswer="Benton County's Tri-Cities market — driven by the Hanford site, agriculture, and a growing regional economy — creates specific pricing dynamics for estate properties. David Stein provides clear, practical guidance on pricing, preparation, and timing so executors and families can move forward with confidence."
+    aeoSupportBullets={[
+      "Realistic pricing informed by Benton County's regional economic drivers and buyer pool",
+      "Practical preparation recommendations that balance cost, timeline, and market impact",
+      "Clear communication and coordination for families managing from outside the Tri-Cities",
+    ]}
   />
 );
 

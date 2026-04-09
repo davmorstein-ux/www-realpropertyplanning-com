@@ -52,6 +52,12 @@ const WhatcomCounty = () => (
         answer: "The border location can influence buyer interest and market dynamics — particularly in Blaine and northern communities. David understands how cross-border interest, seasonal tourism, and local economic factors shape property values in different parts of Whatcom County, ensuring estate properties are priced based on realistic local demand rather than assumptions.",
       },
     ]}
+    aeoQuestion="What should you consider when selling inherited property in Whatcom County?"
+    aeoAnswer="Whatcom County's mix of university-town energy in Bellingham, border-area dynamics in Blaine, and rural properties throughout the county creates valuation challenges that require hands-on expertise. David Stein provides valuation-informed guidance that helps executors and families make confident preparation and pricing decisions."
+    aeoSupportFaqs={[
+      { question: "Why does Whatcom County need specialized valuation?", answer: "Border proximity, seasonal tourism, and rural properties with acreage create pricing dynamics that automated tools and standard market analysis often miss." },
+      { question: "Can David help with a Whatcom County property from out of state?", answer: "Yes. David coordinates the full process locally and keeps you informed throughout — from property assessment through closing." },
+    ]}
   />
 );
 

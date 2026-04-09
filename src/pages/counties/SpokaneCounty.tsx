@@ -52,6 +52,12 @@ const SpokaneCounty = () => (
         answer: "Spokane's market has more pronounced seasonal patterns than western Washington — winter conditions can slow showings, while spring and early summer typically bring stronger buyer activity. David helps executors and trustees plan timing strategically, balancing market conditions against estate administration deadlines and family readiness.",
       },
     ]}
+    aeoQuestion="What should you know about selling inherited property in Spokane County?"
+    aeoAnswer="Spokane County's seasonal market patterns, wide-ranging property values, and the frequency of out-of-area ownership make estate property sales here distinctly different from western Washington. David Stein provides practical guidance on pricing, preparation, and timing — helping executors and trustees navigate inherited home decisions with confidence."
+    aeoSupportFaqs={[
+      { question: "How does distance affect Spokane County estate sales?", answer: "Many executors live outside the area. David coordinates the full process locally — property assessment, cleanout, preparation, and sale — with regular updates so you can manage from a distance." },
+      { question: "Does Spokane's seasonal market matter for timing?", answer: "Yes. Spokane has more pronounced seasonal patterns than western Washington. David helps plan timing strategically while respecting estate deadlines." },
+    ]}
   />
 );
 

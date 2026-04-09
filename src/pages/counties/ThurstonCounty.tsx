@@ -52,6 +52,13 @@ const ThurstonCounty = () => (
         answer: "The government employment base creates a stable buyer pool in Thurston County, which can be an advantage for estate sales. However, it also means the market moves at a steadier pace than faster-growing metro areas. David understands these dynamics and helps executors and families set expectations that match Thurston County's measured market rhythm rather than assumptions borrowed from Seattle or Tacoma.",
       },
     ]}
+    aeoQuestion="How do practical probate and estate sale strategies work in Thurston County?"
+    aeoAnswer="Thurston County's government-employment-driven market creates a steady buyer pool that behaves differently from faster-growing metro areas. David Stein provides practical estate sale strategy grounded in Thurston County's measured market dynamics — helping executors and families set realistic expectations and move forward with clear plans."
+    aeoSupportBullets={[
+      "Pricing strategy calibrated to Thurston County's steady, government-influenced market",
+      "Practical preparation guidance focused on buyer expectations in Olympia, Lacey, and Tumwater",
+      "Step-by-step coordination for families managing estate property from a distance",
+    ]}
   />
 );
 

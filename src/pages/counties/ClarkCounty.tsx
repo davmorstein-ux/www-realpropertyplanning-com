@@ -52,6 +52,13 @@ const ClarkCounty = () => (
         answer: "Yes. David frequently works with executors and trustees who are based in the Portland area. While the property may be just across the river, managing an estate sale still requires on-site coordination — securing the property, supervising cleanout, managing vendors, and handling the listing and sale process. David provides that local presence and keeps you informed throughout.",
       },
     ]}
+    aeoQuestion="How do probate and inherited property sales work in Clark County?"
+    aeoAnswer="Clark County families — many with ties to both sides of the Columbia River — often face unique coordination challenges during estate and probate property transitions. David Stein provides valuation-informed guidance, clear family communication, and hands-on sale management for executors, trustees, and attorneys throughout Clark County."
+    aeoSupportBullets={[
+      "Clear communication with families coordinating across the Portland-Vancouver metro area",
+      "Valuation-informed pricing that reflects Clark County's distinct market dynamics",
+      "Full coordination from property assessment through closing",
+    ]}
   />
 );
 
