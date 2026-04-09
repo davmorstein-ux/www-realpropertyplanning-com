@@ -84,6 +84,12 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
       "Out-of-state heirs who need local coordination for an inherited Eastside property",
       "Financial advisors needing defensible Bellevue property valuations for estate planning or settlement",
     ],
+    aeoQuestion: "What should you know about selling estate or inherited property in Bellevue?",
+    aeoAnswer: "Bellevue's high-value, competitive market makes accurate pricing especially important in estate and probate sales. David Stein — a licensed broker and certified residential appraiser — evaluates each property based on its actual condition, lot characteristics, and neighborhood-level demand, providing the defensible pricing that executors, trustees, and attorneys need in a market where mispricing can cost tens of thousands of dollars.",
+    aeoSupportFaqs: [
+      { question: "Why does valuation expertise matter in Bellevue?", answer: "Bellevue's wide price range — from Crossroads ramblers to West Bellevue estates — means automated tools often miss the condition and neighborhood factors that drive actual buyer behavior." },
+      { question: "Can David coordinate a Bellevue estate sale remotely?", answer: "Yes. Many Bellevue clients manage the process from out of state. David handles property assessment, preparation, listing, and closing with regular updates." },
+    ],
   },
   kirkland: {
     tone: "suburban",
@@ -107,8 +113,14 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
       "Adult children managing a parent's Kirkland home sale from out of state",
       "Financial advisors needing Kirkland property valuations that account for the city's walkability and waterfront premiums",
     ],
+    aeoQuestion: "How should you approach pricing and preparation for a Kirkland estate property?",
+    aeoAnswer: "Kirkland's blend of waterfront charm and growing neighborhoods creates distinct buyer expectations that vary by location. David Stein's dual credentials as a licensed broker and certified appraiser help executors, trustees, and families price properties accurately — whether it's a waterfront home in Moss Bay or a larger-lot property in Juanita or Finn Hill.",
+    aeoSupportBullets: [
+      "Neighborhood-level pricing that accounts for waterfront proximity, walkability, and condition",
+      "Strategic preparation guidance — what to invest in and what to skip",
+      "Full coordination for out-of-state families managing Kirkland property transitions",
+    ],
   },
-  redmond: {
     tone: "suburban",
     descriptor: "Technology corridor with diverse housing stock",
     heroIntro: "Redmond has grown from a quiet suburb into one of the most sought-after cities in King County, driven by its proximity to major employers and strong school districts. Families and fiduciaries managing estate, probate, or transition-related property in Redmond need guidance that reflects the city's evolving market dynamics and the wide range of housing — from original ramblers to newer planned communities like Trilogy and Redmond Ridge.",
