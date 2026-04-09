@@ -59,7 +59,7 @@ const LendersFinancingSpecialists = () => (
     </section>
 
     {/* Intro */}
-    <section className="py-16 lg:py-20 bg-secondary">
+    <section className="py-10 lg:py-14 bg-secondary">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <p className="text-muted-foreground text-lg leading-relaxed mb-4">
