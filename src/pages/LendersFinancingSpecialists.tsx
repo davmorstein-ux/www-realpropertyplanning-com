@@ -97,7 +97,7 @@ const LendersFinancingSpecialists = () => (
               </div>
 
               <div className="flex w-full flex-col items-center sm:flex-1 sm:items-start">
-                <a href="http://www.santadanmortgage.com" target="_blank" rel="noopener noreferrer" className="sm:self-start">
+                <a href="http://www.santadanmortgage.com" target="_blank" rel="noopener noreferrer" className="sm:self-start sm:ml-[58px]">
                   <img
                     src={c2FinancialLogo}
                     alt="C2 Financial logo"
