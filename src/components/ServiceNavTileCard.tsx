@@ -71,7 +71,7 @@ const ServiceNavTileCard = ({ tile, index, columns = 3 }: { tile: ServiceTile; i
           <h3
             className={`-mt-6 max-w-[92%] text-center font-serif text-[0.8rem] font-bold leading-[1.15] tracking-tight text-foreground sm:text-[1.1rem] md:text-[1.3rem] lg:text-[1.5rem] xl:text-[1.8rem] whitespace-pre-line ${tile.labelSpacing ? 'tile-label-tight' : ''} ${tile.mobileTextDown ? 'mobile-text-down' : ''}`}
             data-mobile-tight={tile.labelSpacing ? "true" : undefined}
-            data-tile-id={tile.title === "CPAs" ? "cpas" : tile.title.includes("Senior Living") ? "senior-living" : tile.title.includes("Financial") ? "financial-planning" : tile.title === "Senior Moves" ? "senior-moves" : tile.title === "Probate Sales" ? "probate-sales" : tile.title === "The Process" ? "the-process" : tile.title === "Home Value" ? "home-value" : tile.title === "Lending" ? "lending" : tile.title === "Wills" ? "wills" : tile.title === "Realtor" ? "realtor" : tile.title.includes("Appraiser") ? "appraiser" : undefined}
+            data-tile-id={tile.title === "CPAs" ? "cpas" : tile.title.includes("Senior Living") ? "senior-living" : tile.title.includes("Financial") ? "financial-planning" : tile.title === "Senior Moves" ? "senior-moves" : tile.title === "Probate Sales" ? "probate-sales" : tile.title === "The Process" ? "the-process" : tile.title === "Home Value" ? "home-value" : tile.title === "Lending" ? "lending" : tile.title === "Wills" ? "wills" : tile.title === "Realtor" ? "realtor" : tile.title.includes("Appraiser") ? "appraiser" : tile.title.includes("Liquidation") ? "estate-liquidation" : undefined}
             style={tile.textOffsetY ? { transform: `translateY(${tile.textOffsetY})` } : undefined}
           >
             {tile.title}
