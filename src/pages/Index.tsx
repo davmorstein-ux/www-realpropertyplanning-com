@@ -79,8 +79,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-cream">
       <SEOHead
-        title="Real Property Planning | Probate, Estate & Senior Transition Guidance | Washington State"
-        description="Real Property Planning provides expert real estate guidance for probate, estate, inherited property, and senior transitions across Washington State. Led by David Stein — broker and certified appraiser."
+        title="Real Property Planning | Probate, Estate & Senior Transition Real Estate | Washington State"
+        description="David Stein helps executors, trustees, attorneys, and families navigate probate sales, inherited homes, senior transitions, and trust property across Washington State. Licensed broker and certified appraiser with 20+ years of experience."
         jsonLd={jsonLd}
       />
       <Header />
