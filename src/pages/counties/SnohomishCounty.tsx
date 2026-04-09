@@ -30,6 +30,28 @@ const SnohomishCounty = () => (
       "Inherited homes where siblings disagree about whether to sell, hold, or invest in renovations",
       "Senior transitions from suburban family homes to smaller residences or assisted living communities",
     ]}
+    countySpecificFaqs={[
+      {
+        question: "How is selling a waterfront estate home in Edmonds different from selling in Everett?",
+        answer: "Edmonds waterfront properties command premium prices and attract a specific buyer pool that values walkability, ferry access, and community character. Everett properties serve a broader market with different price expectations and preparation considerations. David's appraisal background helps him price each property within its specific micro-market — ensuring an Edmonds waterfront home is not underpriced by generic county comps, and an Everett property is not overpriced by comparison to premium neighborhoods.",
+      },
+      {
+        question: "What should I do with a rural property near Monroe or Arlington that was left to multiple heirs?",
+        answer: "Rural Snohomish County properties with acreage, outbuildings, or non-standard features require specialized valuation that automated tools handle poorly. When multiple heirs are involved, David provides objective condition assessment and market analysis that gives everyone a clear picture of the property's realistic value — helping the family reach agreement based on data rather than assumptions.",
+      },
+      {
+        question: "My parent lived in their Mill Creek home for 40 years — how do we start the transition?",
+        answer: "Longtime family homes in Mill Creek often need organized cleanout, condition assessment, and a realistic conversation about preparation before listing. David guides families through this step by step — evaluating the property, coordinating vendors, and helping you decide what is worth investing in versus what buyers in that neighborhood will accept. The pace can be tailored to what the family is ready for.",
+      },
+      {
+        question: "Does David work with attorneys who handle probate cases in Snohomish County Superior Court?",
+        answer: "Yes. David regularly coordinates with probate attorneys on Snohomish County estate sales, providing property assessments, market analysis, and coordinated sale management that aligns with court timelines and fiduciary requirements. Attorneys refer clients to David because he communicates clearly, follows through, and understands the legal context surrounding estate property sales.",
+      },
+      {
+        question: "How do I manage an inherited Snohomish County property from out of state?",
+        answer: "David handles the full process locally — securing the property, coordinating cleanout, managing preparation, listing, showing, negotiating, and closing. He provides regular updates via phone and email so you can fulfill your executor or trustee responsibilities without needing to fly in repeatedly. Many of his Snohomish County clients manage the entire process from a distance.",
+      },
+    ]}
   />
 );
 

@@ -30,6 +30,28 @@ const ThurstonCounty = () => (
       "Multi-heir situations where family members want clear guidance on pricing and realistic timeline expectations",
       "Rural or semi-rural properties near Yelm or Rainier with unique market positioning considerations",
     ]}
+    countySpecificFaqs={[
+      {
+        question: "How does selling a retiree's longtime Olympia home differ from a standard sale?",
+        answer: "Retiree transitions in Olympia often involve emotional complexity, decades of accumulated belongings, and homes that reflect a lifetime of care but may need updating for today's buyers. David approaches these situations with patience and sensitivity — helping families organize the process at a pace that feels manageable while ensuring the property is positioned to sell well when the time is right.",
+      },
+      {
+        question: "What should I expect when selling estate property through Thurston County probate court?",
+        answer: "Thurston County probate sales require coordination between the personal representative, the estate attorney, and the court timeline. David works within these structures, providing property assessments, pricing recommendations, and sale management that align with legal requirements. He communicates clearly with all parties so there are no surprises as the process moves forward.",
+      },
+      {
+        question: "Is it worth investing in repairs before selling an inherited home in Lacey?",
+        answer: "It depends on the property's condition and the local buyer expectations in Lacey. Some improvements — like fresh paint, carpet replacement, or addressing deferred maintenance — can improve the sale price meaningfully. Others may not justify the cost or delay. David's appraisal background helps him evaluate which investments are likely to pay off in this specific market.",
+      },
+      {
+        question: "Can David help with a rural property near Yelm or Rainier?",
+        answer: "Yes. Rural and semi-rural properties in southern Thurston County present unique valuation considerations — acreage, well and septic systems, outbuildings, and access issues that suburban-focused agents may not be equipped to assess. David's certified appraiser credentials and experience with non-standard properties make him well-suited for these situations.",
+      },
+      {
+        question: "How does the state government presence in Olympia affect the real estate market?",
+        answer: "The government employment base creates a stable buyer pool in Thurston County, which can be an advantage for estate sales. However, it also means the market moves at a steadier pace than faster-growing metro areas. David understands these dynamics and helps executors and families set expectations that match Thurston County's measured market rhythm rather than assumptions borrowed from Seattle or Tacoma.",
+      },
+    ]}
   />
 );
 

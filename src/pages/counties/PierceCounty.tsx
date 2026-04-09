@@ -30,6 +30,28 @@ const PierceCounty = () => (
       "Trust-owned homes in Lakewood where the trustee needs sale planning guidance from a distance",
       "Senior transitions from longtime Pierce County homes to assisted living or family residences",
     ]}
+    countySpecificFaqs={[
+      {
+        question: "How do I handle a probate property in Tacoma that needs significant repairs?",
+        answer: "Many Tacoma estate homes — especially in the North End and Stadium District — have character features combined with decades of deferred maintenance. David evaluates whether targeted repairs will improve the sale price enough to justify the cost and delay, or whether selling as-is to a buyer who values the home's character and location is the stronger strategy. His appraisal background ensures this analysis is grounded in actual market data, not guesswork.",
+      },
+      {
+        question: "Is pricing a Gig Harbor waterfront home different from pricing a home in Lakewood?",
+        answer: "Significantly. Gig Harbor waterfront properties attract a premium buyer pool with different expectations than Lakewood's value-oriented market. David's dual credentials as a broker and appraiser allow him to assess waterfront premiums, view adjustments, and condition factors specific to each micro-market — ensuring each property is positioned for its actual buyer pool.",
+      },
+      {
+        question: "What if the heirs disagree about whether to fix up or sell the Pierce County property as-is?",
+        answer: "Heir disagreements about preparation strategy are common in Pierce County estates. David provides objective, condition-based analysis showing what specific improvements are likely to return and what the as-is value looks like — giving all parties the data they need to make an informed decision rather than arguing based on assumptions.",
+      },
+      {
+        question: "Can David manage a Pierce County estate sale if I live out of state?",
+        answer: "Yes. David regularly coordinates Pierce County estate sales for executors and trustees who live in Seattle, Portland, California, and beyond. He manages property access, vendor coordination, cleanout supervision, and the full sale process — providing consistent updates so you can fulfill your fiduciary role without repeated travel to the area.",
+      },
+      {
+        question: "How long does it typically take to sell an inherited home in Pierce County?",
+        answer: "Timeline depends on property condition, location within the county, and preparation decisions. A well-priced home in University Place or Puyallup may sell in weeks, while a Tacoma property needing significant preparation could take longer. David helps set realistic timeline expectations based on the specific property and current market conditions — not generic averages.",
+      },
+    ]}
   />
 );
 
