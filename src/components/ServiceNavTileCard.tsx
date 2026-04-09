@@ -25,9 +25,14 @@ const ServiceNavTileCard = ({ tile, index, columns = 3 }: { tile: ServiceTile; i
       <Link
         to={tile.href}
         data-tile-name={tile.title === "Wills" ? "wills" : tile.title === "Senior Moves" ? "senior-moves" : tile.title === "Probate Sales" ? "probate-sales" : tile.title === "The Process" ? "the-process" : tile.title === "Home Value" ? "home-value" : tile.title === "Lending" ? "lending" : tile.title === "CPAs" ? "cpas" : tile.title === "Realtor" ? "realtor" : tile.title.includes("Appraiser") ? "appraiser" : tile.title === "Probate Terms" ? "probate-terms" : tile.title === "Senior Living" ? "senior-living" : undefined}
-        className="group relative block w-full h-full pointer-events-auto focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+        className="group relative block w-full h-full pointer-events-none sm:pointer-events-auto focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
         style={{ clipPath: 'inset(3% 4% 6% 4% round 18px)' }}
       >
+        <span
+          aria-hidden="true"
+          className="absolute inset-0 z-10 pointer-events-auto sm:pointer-events-none"
+          style={{ clipPath: 'ellipse(33% 26% at 50% 46%)' }}
+        />
         {/* Shell image flows naturally — defines the tile size */}
         <img
           src={tileShell}
@@ -39,7 +44,7 @@ const ServiceNavTileCard = ({ tile, index, columns = 3 }: { tile: ServiceTile; i
 
         {/* Icon + label centered together inside the gold trim ring */}
         <span
-          className={`absolute inset-[12%] flex flex-col items-center justify-center px-[6px] py-[4px] sm:px-[10px] sm:py-[6px] ${tile.contentOffsetY ? '' : '-translate-y-[10.2%]'} ${tile.mobileContentOffsetY ? 'has-mobile-offset' : ''}`}
+          className={`absolute inset-[12%] flex flex-col items-center justify-center px-[6px] py-[4px] pointer-events-none sm:pointer-events-auto sm:px-[10px] sm:py-[6px] ${tile.contentOffsetY ? '' : '-translate-y-[10.2%]'} ${tile.mobileContentOffsetY ? 'has-mobile-offset' : ''}`}
           style={Object.keys(contentStyle).length > 0 ? contentStyle : undefined}
         >
           <img
