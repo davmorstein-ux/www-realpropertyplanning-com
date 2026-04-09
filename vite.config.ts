@@ -375,7 +375,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   },
 };
 
-const DEFAULT_SHELL_META: RouteMeta = {
+const DEFAULT_SHELL_META: RouteMeta = ROUTE_METADATA["/"] || {
   title: "Real Property Planning | Washington State Real Estate Guidance",
   description:
     "Real Property Planning helps seniors, families, executors, trustees, attorneys, and fiduciaries navigate probate real estate, inherited homes, senior transitions, and housing change across Washington State.",
