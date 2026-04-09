@@ -55,6 +55,7 @@ const LendersFinancingSpecialists = () => (
             className="block w-full max-w-[240px] h-auto md:max-w-[336px] mx-auto"
           />
           <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-base">Mortgage Lending</p>
+        </div>
       </div>
     </section>
 
