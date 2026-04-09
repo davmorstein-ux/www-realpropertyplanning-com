@@ -35,9 +35,9 @@ const LendersFinancingSpecialists = () => (
           <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
             Lenders & Financing Specialists
           </p>
-          <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
+          <p className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
             Supporting Clients with Financing Options and Long-Term Planning
-          </h1>
+          </p>
           <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed">
             Connecting clients with trusted professionals who provide clarity around financing, retirement planning, and long-term strategy.
           </p>
@@ -45,8 +45,8 @@ const LendersFinancingSpecialists = () => (
       </div>
     </section>
 
-    {/* Transitional Icon */}
-    <section className="pt-10 md:pt-14">
+    {/* Icon + Heading Block — matches Senior Living & Relocation */}
+    <section className="bg-secondary py-14 md:py-20">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <img
@@ -54,23 +54,14 @@ const LendersFinancingSpecialists = () => (
             alt="Lenders & Financing"
             className="block w-full max-w-[240px] h-auto md:max-w-[336px] mx-auto"
           />
-          <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-base">Mortgage Lending</p>
-        </div>
-      </div>
-    </section>
-
-    {/* Intro */}
-    <section className="py-10 lg:py-14 bg-secondary">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
-          <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-            Real estate decisions are often closely tied to financing, retirement planning, and long-term financial strategy.
+          <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-sm">
+            Mortgage Lending
           </p>
-          <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-            In some situations, selling a home is the right decision. In others, financing solutions may provide flexibility and allow clients to remain in their home.
-          </p>
-          <p className="text-muted-foreground text-lg leading-relaxed">
-            I work with trusted lending professionals who help clients explore their options clearly and without pressure.
+          <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-foreground leading-tight mb-4">
+            Supporting Clients with Financing Options and Long-Term Planning
+          </h1>
+          <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
+            Connecting clients with trusted professionals who provide clarity around financing, retirement planning, and long-term strategy.
           </p>
         </div>
       </div>
