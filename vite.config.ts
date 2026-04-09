@@ -12,6 +12,9 @@ interface RouteMeta {
   description: string;
   h1?: string;
   intro?: string;
+  /** AEO quick-answer block — rendered first in SSG content for crawler extraction */
+  quickAnswerQ?: string;
+  quickAnswerA?: string;
   sections?: string[];
   cities?: string[];
 }
