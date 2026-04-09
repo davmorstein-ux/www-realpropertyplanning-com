@@ -755,11 +755,11 @@ html, body {
   /* The Process tile: lower icon */
   .premium-tile[data-tile-name="the-process"] .tile-icon {
     transform-origin: bottom center !important;
-    transform: scale(1.365) translateY(6%) !important;
+    transform: scale(1.365) translateY(10%) !important;
   }
   /* Realtor: center icon on mobile */
   .premium-tile[data-tile-name="realtor"] .tile-icon {
-    transform: scale(1.1) translateX(3%) !important;
+    transform: scale(1.1) translateX(6%) !important;
   }
   /* Senior Moves: nudge icon down */
   .premium-tile[data-tile-name="senior-moves"] .tile-icon {
