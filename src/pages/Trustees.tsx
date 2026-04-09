@@ -76,10 +76,10 @@ const Trustees = () => {
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
               Trustees
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground leading-relaxed mb-4 motion-safe:animate-[text-emphasis-a_20s_ease-in-out_infinite]" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.25)' }}>
+            <p className="text-lg md:text-xl text-primary-foreground leading-relaxed mb-4 motion-safe:animate-[text-emphasis-a_22s_ease-in-out_infinite]" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.25)' }}>
               Serving as a trustee often means balancing legal responsibility, practical decisions, family dynamics, and property-related questions — all at the same time.
             </p>
-            <p className="text-lg md:text-xl text-primary-foreground leading-relaxed mb-8 motion-safe:animate-[text-emphasis-b_20s_ease-in-out_infinite]" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.25)' }}>
+            <p className="text-lg md:text-xl text-primary-foreground leading-relaxed mb-8 motion-safe:animate-[text-emphasis-b_22s_ease-in-out_infinite]" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.25)' }}>
               When a trust includes real estate, the process can involve valuation, property preparation, timing, communication, and sale coordination. This page is designed to help trustees understand the real estate side of that responsibility and know where to turn for practical support.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
