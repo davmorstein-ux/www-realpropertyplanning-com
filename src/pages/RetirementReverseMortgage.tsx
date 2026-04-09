@@ -10,6 +10,8 @@ import { Phone, Mail, Globe, MapPin } from "lucide-react";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 import danBartelPhoto from "@/assets/providers/dan-bartel-c2financial.png";
 import c2FinancialLogo from "@/assets/providers/c2financial-logo.png";
+import jeffMcGinnisPhoto from "@/assets/providers/jeff-mcginnis-crosscountry.webp";
+import crossCountryLogo from "@/assets/providers/crosscountry-mortgage-logo.png";
 
 const RetirementReverseMortgage = () => (
   <div className="min-h-screen bg-background">
