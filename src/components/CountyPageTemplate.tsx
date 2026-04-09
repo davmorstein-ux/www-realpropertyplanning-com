@@ -132,12 +132,15 @@ const CountyPageTemplate = ({
       </section>
 
       <DirectAnswerBlock
-        question={`How do probate and estate property sales work in ${countyName}?`}
-        answer={`David Stein provides experienced real estate guidance for executors, trustees, attorneys, and families selling probate, inherited, and trust-held property in ${countyName}, Washington. As a licensed broker and certified residential appraiser, he evaluates each property's condition and market position, coordinates preparation and sale, and provides defensible pricing that standard agents cannot match.`}
-        supportSteps={[
+        question={aeoQuestion || `How do probate and estate property sales work in ${countyName}?`}
+        answer={aeoAnswer || `David Stein provides experienced real estate guidance for executors, trustees, attorneys, and families selling probate, inherited, and trust-held property in ${countyName}, Washington. As a licensed broker and certified residential appraiser, he evaluates each property's condition and market position, coordinates preparation and sale, and provides defensible pricing that standard agents cannot match.`}
+        supportBullets={aeoSupportBullets}
+        supportFaqs={aeoSupportFaqs}
+        supportSteps={!aeoSupportBullets && !aeoSupportFaqs ? [
           { label: "Evaluate", desc: "Honest property assessment and valuation-informed pricing" },
           { label: "Prepare", desc: "Cleanout, repairs, and vendor coordination managed for you" },
           { label: "Sell", desc: "Marketing, negotiation, and closing with clear communication" },
+        ] : undefined}
         ]}
       />
 
