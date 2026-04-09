@@ -65,27 +65,13 @@ const ServiceNavTileCard = ({ tile, index, columns = 3 }: { tile: ServiceTile; i
         <img
           src={tile.iconSrc}
           alt={tile.title}
-          className={`tile-icon mx-auto w-[45%] max-h-[38%] object-contain drop-shadow-lg sm:transition-transform sm:duration-300 sm:ease-out ${tile.iconOffsetY ? '' : 'sm:group-hover:scale-110'} ${tile.mobileIconDown ? 'mobile-icon-down' : ''}`}
+          className={`tile-icon mx-auto w-[45%] max-h-[38%] object-contain drop-shadow-lg ${tile.mobileIconDown ? 'mobile-icon-down' : ''}`}
           style={{
-            ...(tile.iconOffsetY ? { transform: `translateY(${tile.iconOffsetY})`, transition: 'transform 0.3s ease-out' } : {}),
-            ...(tile.iconScale && !tile.iconOffsetY ? { transform: `scale(${tile.iconScale})`, transition: 'transform 0.3s ease-out' } : {}),
-            ...(tile.iconScale && tile.iconOffsetY ? { transform: `translateY(${tile.iconOffsetY}) scale(${tile.iconScale})`, transition: 'transform 0.3s ease-out' } : {}),
+            ...(tile.iconOffsetY ? { transform: `translateY(${tile.iconOffsetY})` } : {}),
+            ...(tile.iconScale && !tile.iconOffsetY ? { transform: `scale(${tile.iconScale})` } : {}),
+            ...(tile.iconScale && tile.iconOffsetY ? { transform: `translateY(${tile.iconOffsetY}) scale(${tile.iconScale})` } : {}),
             ...(tile.mobileIconOffsetY ? { '--mobile-icon-mt': tile.mobileIconOffsetY } as React.CSSProperties : {}),
           }}
-          onMouseEnter={tile.iconOffsetY || tile.iconScale ? (e) => {
-            if (window.innerWidth >= 640) {
-              const yPart = tile.iconOffsetY ? `translateY(${tile.iconOffsetY})` : '';
-              const baseScale = tile.iconScale || 1;
-              (e.target as HTMLElement).style.transform = `${yPart} scale(${baseScale * 1.1})`;
-            }
-          } : undefined}
-          onMouseLeave={tile.iconOffsetY || tile.iconScale ? (e) => {
-            if (window.innerWidth >= 640) {
-              const yPart = tile.iconOffsetY ? `translateY(${tile.iconOffsetY})` : '';
-              const baseScale = tile.iconScale || 1;
-              (e.target as HTMLElement).style.transform = `${yPart} scale(${baseScale})`;
-            }
-          } : undefined}
           loading="lazy"
         />
         <h3
