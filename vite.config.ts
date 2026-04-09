@@ -475,8 +475,12 @@ html+='</div>';root.innerHTML=html;}
 })();</script>`;
 };
 
-const injectRouteAwareShell = (html: string) =>
-  html.replace("<div id=\"root\"></div>", `<div id="root"></div>${buildRouteAwareShellScript()}`);
+const injectRouteAwareShell = (html: string) => {
+  const script = buildRouteAwareShellScript();
+  // Insert script right after </head><body> or before the closing </body>
+  // Since SSG content may already be inside #root, match the closing </div> of #root
+  return html.replace("</head>", `${script}</head>`);
+};
 
 const applyMetadata = (
   html: string,
