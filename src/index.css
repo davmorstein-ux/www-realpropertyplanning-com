@@ -1050,8 +1050,8 @@ html, body {
 
 .rpp-compass-container {
   position: relative;
-  width: 540px;
-  height: 360px;
+  width: 405px;
+  height: 270px;
   pointer-events: none;
 }
 
@@ -1188,7 +1188,7 @@ html, body {
   }
 
   .rpp-compass-container {
-    width: 360px;
-    height: 240px;
+    width: 270px;
+    height: 180px;
   }
 }
