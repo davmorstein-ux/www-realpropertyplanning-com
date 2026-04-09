@@ -200,7 +200,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "Probate real estate and inherited property sales guidance for executors, attorneys, and families in King County — Seattle, Bellevue, Kirkland, Redmond, and surrounding communities.",
     h1: "Estate and Inherited Property Sales in King County",
     quickAnswerQ: "How do probate and estate property sales work in King County?",
-    quickAnswerA: "King County's intense buyer demand and wide price variation make accurate pricing especially critical for estate sales. David Stein — a licensed broker and certified residential appraiser — evaluates each property's condition and market position, coordinates preparation and sale, and provides defensible pricing that standard agents cannot match.",
+    quickAnswerA: "King County's intense buyer demand and wide price variation make accurate pricing especially critical for estate sales. Real Property Planning evaluates each property's condition and market position, coordinates preparation and sale, and provides defensible pricing backed by certified appraisal expertise that standard agents cannot match.",
     intro:
       "King County is Washington's largest and most competitive real estate market. Estate properties here range from Capitol Hill bungalows to Eastside homes valued well over a million dollars — making accurate pricing and experienced coordination especially critical.",
     cities: [
