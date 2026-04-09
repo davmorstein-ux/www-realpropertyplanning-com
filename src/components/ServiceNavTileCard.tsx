@@ -42,7 +42,9 @@ const ServiceNavTileCard = ({ tile, index, columns = 3 }: { tile: ServiceTile; i
                            ? "senior-living"
                            : tile.title === "Service Areas"
                              ? "service-areas"
-                             : undefined;
+                             : tile.title.includes("Liquidation")
+                               ? "estate-liquidation"
+                               : undefined;
 
   const tileVisual = (
     <>
