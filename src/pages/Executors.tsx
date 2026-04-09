@@ -227,12 +227,17 @@ const Executors = () => {
         </div>
       </section>
 
+      <DirectAnswerBlock
+        question="What should an executor do when there is real estate in the estate?"
+        answer="Secure the property, confirm your legal authority to act, and get a realistic assessment of the home's condition and market value. David Stein — a licensed Washington broker and certified residential appraiser — works with executors throughout Washington State to handle property evaluation, preparation, pricing, and the full sale process so you can focus on your other responsibilities."
+      />
+
       {/* Reassurance */}
       <section className="py-16 lg:py-20 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-5">
-              Most Executors Are Doing This for the First Time
+              Why Do Most Executors Feel Overwhelmed by the Property?
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-4">
               There is no training for this. You're managing legal paperwork, answering questions from family, and making decisions about a property you may not have visited in years — all while processing a loss. This is where things can get confusing fast.
@@ -249,7 +254,7 @@ const Executors = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
-              Does This Sound Like Your Situation?
+              Does Any of This Sound Like Your Situation?
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               What often happens is people find themselves in one of these situations and don't realize there's someone who does this kind of work regularly. If any of these sound familiar, that's usually a good time to reach out:
@@ -271,7 +276,7 @@ const Executors = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
-              How David Helps Executors
+              How Does David Help Executors Sell Estate Property?
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-4">
               David holds both a real estate broker license and a Washington State certified residential appraiser credential — a combination that's uncommon in the industry. In practice, that means you get someone who can evaluate property value with analytical rigor <em>and</em> manage the entire sale from first conversation to closing.
