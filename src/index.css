@@ -740,8 +740,15 @@ html, body {
   .premium-tile[data-tile-name="the-process"] .tile-icon {
     transform-origin: bottom center !important;
   }
-  /* Real Estate Appraiser: nudge icon upward on mobile */
-  .premium-tile[data-tile-name="appraiser"] .tile-icon {
+  /* Nudge icons upward on mobile for these tiles */
+  .premium-tile[data-tile-name="appraiser"] .tile-icon,
+  .premium-tile[data-tile-name="wills"] .tile-icon,
+  .premium-tile[data-tile-name="lending"] .tile-icon,
+  .premium-tile[data-tile-name="senior-living"] .tile-icon,
+  .premium-tile[data-tile-name="probate-terms"] .tile-icon,
+  .premium-tile[data-tile-name="probate-sales"] .tile-icon,
+  .premium-tile[data-tile-name="the-process"] .tile-icon,
+  .premium-tile[data-tile-name="cpas"] .tile-icon {
     transform: scale(1.1) translateY(-8%) !important;
   }
   /* Reset for attorney tiles so they aren't affected */
