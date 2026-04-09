@@ -127,15 +127,6 @@ const Index = () => {
         </div>
       </section>
 
-      <DirectAnswerBlock
-        question="What does Real Property Planning do?"
-        answer="Real Property Planning helps seniors, families, executors, trustees, attorneys, and fiduciaries navigate real estate and housing transitions throughout Washington State. Whether the need involves downsizing, relocation, probate, inherited property, senior living decisions, or preparing a home for sale, the goal is to provide calm guidance, practical coordination, and clear next steps."
-        supportBullets={[
-          "Guidance for senior transitions, probate, inherited homes, and property decisions",
-          "Help coordinating preparation, sale strategy, relocation, and next-step planning",
-          "Clear support for families and professionals navigating complex life transitions",
-        ]}
-      />
 
       {/* ═══════════════════════════════════════════════════
           2. SERVICE NAV TILES — Role-based pathways
