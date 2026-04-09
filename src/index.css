@@ -761,8 +761,6 @@ html, body {
     pointer-events: auto;
     border-radius: 9999px;
   }
-    clip-path: ellipse(48% 46% at 50% 50%);
-  }
 
   .premium-tile:not([data-tile-name="probate-sales"]) .tile-icon {
     transform: scale(1.1) !important;
