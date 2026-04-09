@@ -30,7 +30,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     sections: [
       "Probate & Estate Property Sales — Experienced guidance for selling inherited homes, trust-owned real estate, and estate property across King, Snohomish, Pierce, Skagit, and Kitsap Counties.",
       "Senior Transitions & Downsizing Support — Thoughtful real estate guidance for families navigating a move from a longtime home to assisted living, independent living, or smaller housing.",
-      "Valuation-Informed Strategy — As both a broker and certified appraiser, David provides pricing insight grounded in professional valuation experience.",
+      "Valuation-Informed Strategy — Pricing insight grounded in certified appraisal methodology and professional valuation experience.",
     ],
     cities: [
       "Seattle", "Bellevue", "Kirkland", "Redmond", "Mercer Island", "Issaquah",
