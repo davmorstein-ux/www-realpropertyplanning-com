@@ -1042,7 +1042,7 @@ html, body {
 .rpp-compass-nav {
   position: fixed;
   z-index: 9999;
-  bottom: 20px;
+  bottom: 28px;
   left: 50%;
   transform: translateX(-50%);
   pointer-events: none;
@@ -1063,6 +1063,14 @@ html, body {
   pointer-events: none;
   user-select: none;
   -webkit-user-drag: none;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.18))
+          drop-shadow(0 1px 3px rgba(0, 0, 0, 0.10));
+  transition: filter 0.3s ease;
+}
+
+.rpp-compass-container:hover .rpp-compass-img {
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.22))
+          drop-shadow(0 2px 4px rgba(0, 0, 0, 0.12));
 }
 
 /* Shared hit area styles */
@@ -1080,20 +1088,20 @@ html, body {
 }
 
 .rpp-compass-hit:hover {
-  transform: scale(1.08);
+  transform: scale(1.06);
 }
 
 .rpp-compass-hit:active {
-  transform: scale(0.95);
+  transform: scale(0.94);
 }
 
 .rpp-compass-hit:focus-visible {
-  outline: 2px solid hsl(var(--primary));
+  outline: 2px solid hsl(var(--gold) / 0.6);
   outline-offset: 2px;
   border-radius: 4px;
 }
 
-/* Top arrow — scroll to top */
+/* Top arrow */
 .rpp-compass-hit--top {
   top: 0;
   left: 50%;
@@ -1103,13 +1111,13 @@ html, body {
   clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
 }
 .rpp-compass-hit--top:hover {
-  transform: translateX(-50%) scale(1.08);
+  transform: translateX(-50%) scale(1.06);
 }
 .rpp-compass-hit--top:active {
-  transform: translateX(-50%) scale(0.95);
+  transform: translateX(-50%) scale(0.94);
 }
 
-/* Bottom arrow — scroll to bottom */
+/* Bottom arrow */
 .rpp-compass-hit--bottom {
   bottom: 0;
   left: 50%;
@@ -1119,13 +1127,13 @@ html, body {
   clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
 }
 .rpp-compass-hit--bottom:hover {
-  transform: translateX(-50%) scale(1.08);
+  transform: translateX(-50%) scale(1.06);
 }
 .rpp-compass-hit--bottom:active {
-  transform: translateX(-50%) scale(0.95);
+  transform: translateX(-50%) scale(0.94);
 }
 
-/* Left arrow — go back */
+/* Left arrow */
 .rpp-compass-hit--left {
   top: 50%;
   left: 0;
@@ -1135,13 +1143,13 @@ html, body {
   clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
 }
 .rpp-compass-hit--left:hover {
-  transform: translateY(-50%) scale(1.08);
+  transform: translateY(-50%) scale(1.06);
 }
 .rpp-compass-hit--left:active {
-  transform: translateY(-50%) scale(0.95);
+  transform: translateY(-50%) scale(0.94);
 }
 
-/* Right arrow — go forward */
+/* Right arrow */
 .rpp-compass-hit--right {
   top: 50%;
   right: 0;
@@ -1151,13 +1159,13 @@ html, body {
   clip-path: polygon(100% 50%, 0% 0%, 0% 100%);
 }
 .rpp-compass-hit--right:hover {
-  transform: translateY(-50%) scale(1.08);
+  transform: translateY(-50%) scale(1.06);
 }
 .rpp-compass-hit--right:active {
-  transform: translateY(-50%) scale(0.95);
+  transform: translateY(-50%) scale(0.94);
 }
 
-/* Center button — go home */
+/* Center button */
 .rpp-compass-hit--center {
   top: 50%;
   left: 50%;
@@ -1167,20 +1175,20 @@ html, body {
   border-radius: 50%;
 }
 .rpp-compass-hit--center:hover {
-  transform: translate(-50%, -50%) scale(1.08);
+  transform: translate(-50%, -50%) scale(1.06);
 }
 .rpp-compass-hit--center:active {
-  transform: translate(-50%, -50%) scale(0.95);
+  transform: translate(-50%, -50%) scale(0.94);
 }
 
-/* Mobile adjustments */
+/* Mobile */
 @media (max-width: 768px) {
   .rpp-compass-nav {
-    bottom: 16px;
+    bottom: 20px;
   }
 
   .rpp-compass-container {
-    width: 140px;
-    height: 114px;
+    width: 150px;
+    height: 100px;
   }
 }
