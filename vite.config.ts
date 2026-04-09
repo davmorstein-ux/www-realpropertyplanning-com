@@ -5,7 +5,7 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { componentTagger } from "lovable-tagger";
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 
-const SITE_URL = "https://realpropertyplanning.com";
+const SITE_URL = "https://www.realpropertyplanning.com";
 
 interface RouteMeta {
   title: string;
