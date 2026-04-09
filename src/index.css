@@ -724,6 +724,11 @@ html, body {
   .premium-tile h3[data-tile-id="realtor"] {
     margin-top: -0.5rem !important;
   }
+@media (max-width: 639px) {
+  .premium-tile h3[data-tile-id="senior-moves"] {
+    margin-top: 0rem !important;
+  }
+}
 
 .premium-tile .tile-label-tight {
   line-height: 0.82 !important;
@@ -750,11 +755,11 @@ html, body {
   /* The Process tile: grow upward to reduce headspace, lower icon */
   .premium-tile[data-tile-name="the-process"] .tile-icon {
     transform-origin: bottom center !important;
-    transform: scale(1.30) translateY(-2%) !important;
+    transform: scale(1.30) translateY(2%) !important;
   }
   /* Appraiser: raise icon more */
   .premium-tile[data-tile-name="appraiser"] .tile-icon {
-    transform: scale(1.18) translateY(-20%) !important;
+    transform: scale(1.18) translateY(-24%) !important;
   }
   /* Service Areas: 10% bigger */
   .premium-tile[data-tile-name="service-areas"] .tile-icon {
