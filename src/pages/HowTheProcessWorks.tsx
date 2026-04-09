@@ -110,11 +110,8 @@ const HowTheProcessWorks = () => {
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-[22px]">
               How the Process Works
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-4">
-              Estate property sales can feel overwhelming — especially when you are managing legal requirements, family expectations, and a property that may need significant work. David Stein follows a clear, seven-step process designed to bring order to complexity and keep everyone informed at every stage.
-            </p>
-            <p className="text-lg text-primary-foreground/70 leading-relaxed mb-[30px]">
-              Each engagement is structured around practical milestones: assess the property, align on strategy, prepare the home, price it accurately, market it effectively, negotiate with confidence, and close with certainty. Post-sale support ensures nothing falls through the cracks.
+            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-[30px]">
+              David Stein follows a clear, seven-step process — from consultation through closing — designed for the unique complexity of estate, probate, and senior transition sales.
             </p>
             <Link to="/contact">
  <Button variant="gold" size="lg"className="hover:-light font-medium px-7 py-4 h-auto rounded-lg">
@@ -157,25 +154,32 @@ const HowTheProcessWorks = () => {
         </div>
       </section>
 
-      {/* What Makes This Process Different */}
-      <section className="py-20 lg:py-28 bg-secondary">
+      {/* What Makes This Process Different — Accordion */}
+      <section className="py-16 lg:py-20 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
               How Is Selling Estate Property Different From a Standard Home Sale?
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              In a conventional home sale, the homeowner decides to sell, a listing agent provides a price opinion, the home goes on the market, and a transaction closes in 30 to 45 days. The process is relatively predictable.
+              Estate, probate, and senior transition sales are fundamentally different from conventional transactions. Here's why:
             </p>
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              Estate, probate, and senior transition sales are fundamentally different. The decision-maker may not live locally. Legal authority may not yet be established. The property may have been vacant for months and need significant work before it can be shown. Family members may disagree about timing, pricing, or whether to sell at all. And the emotional weight of the situation — grief, guilt, uncertainty — affects every conversation.
-            </p>
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              David's process is designed for these realities. He starts earlier than most agents — often before the property is ready to list — because early planning prevents the most common and costly mistakes. He coordinates more broadly, managing relationships with attorneys, family members, vendors, and care professionals. And he communicates more deliberately, because in these situations, silence creates anxiety and uncertainty.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              Every situation is different. Some clients need immediate sale guidance. Others need time, planning, family coordination, or valuation-related clarity before taking the next step. David adapts this process to fit your circumstances — whether that means a compressed timeline for a court-ordered sale or a longer runway that allows for thorough preparation and family decision-making.
-            </p>
+            <Accordion type="single" collapsible className="space-y-3">
+              {[
+                { value: "complexity", q: "Why are estate sales more complex?", a: "The decision-maker may not live locally. Legal authority may not yet be established. The property may have been vacant for months. Family members may disagree about timing, pricing, or whether to sell at all." },
+                { value: "early", q: "Why does David start earlier than most agents?", a: "Early planning prevents the most common and costly mistakes. David often begins before the property is ready to list — assessing condition, coordinating with attorneys, and helping families align on strategy." },
+                { value: "adapt", q: "How does the process adapt to each situation?", a: "Some clients need immediate sale guidance. Others need time, planning, family coordination, or valuation-related clarity. David adapts — whether that means a compressed timeline for a court-ordered sale or a longer runway for family decision-making." },
+              ].map((item) => (
+                <AccordionItem key={item.value} value={item.value} className="bg-card border border-border rounded-2xl overflow-hidden data-[state=open]:border-gold/25 transition-colors">
+                  <AccordionTrigger className="text-left font-serif text-base md:text-lg font-semibold text-foreground hover:text-gold hover:no-underline px-6 py-5">
+                    {item.q}
+                  </AccordionTrigger>
+                  <AccordionContent className="px-6 pb-5 pt-0 text-muted-foreground leading-relaxed">
+                    {item.a}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </div>
         </div>
       </section>

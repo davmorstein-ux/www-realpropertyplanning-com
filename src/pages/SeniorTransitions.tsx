@@ -90,11 +90,8 @@ const SeniorTransitions = () => {
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
               Selling a Longtime Home Is About More Than Real Estate
             </h1>
-            <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
-              Real Property Planning supports seniors and families with downsizing, relocation, and selling a longtime home throughout Washington State. We handle real estate decisions tied to assisted living moves, independent or memory care transitions, and multi-step senior housing plans — with patience and clear communication.
-            </p>
-            <p className="text-lg text-primary-foreground/70 leading-relaxed mb-8">
-              After 30 or 40 years in the same home, selling is never just a transaction. David Stein works at the family's pace, not a sales quota. He manages the preparation, coordinates with care professionals and family members, prices the home based on real market data, and handles the sale with steady communication that keeps everyone informed and comfortable.
+            <p className="text-xl text-primary-foreground/80 leading-relaxed mb-8">
+              David Stein works at the family's pace — managing preparation, pricing, and the sale with steady communication that keeps everyone informed and comfortable.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/contact">
@@ -207,25 +204,29 @@ const SeniorTransitions = () => {
         microcopy="No pressure. Just practical guidance for your family's situation."
       />
 
-      {/* Emotional and Practical Realities */}
-      <section className="py-20 lg:py-28 bg-background">
+      {/* Emotional and Practical Realities — Accordion */}
+      <section className="py-16 lg:py-20 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
-              The Emotional and Practical Realities of Selling a Family Home
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
+              What Are the Emotional and Practical Realities of Selling a Family Home?
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              A home where someone has lived for 30 or 40 years is not just a house — it holds decades of memories, routines, and identity. The decision to sell often comes during a health crisis, a loss of independence, or a family conversation that nobody wanted to have. These circumstances make every decision more difficult.
-            </p>
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              David approaches these situations with the understanding that the timeline is not always his to set. Some families need months to process the decision before listing. Others face urgent timelines driven by care needs or financial pressure. In both cases, David provides honest, patient guidance — helping families understand their options without creating artificial urgency.
-            </p>
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              Practically, many senior homes present challenges that conventional listings do not. Decades of accumulated belongings need to be sorted, donated, or removed. Systems may be outdated — original furnaces, aging roofs, single-pane windows. Landscaping may be overgrown. David evaluates each property individually and recommends a preparation plan that balances cost, timeline, and likely market impact.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              For families coordinating from out of state, David serves as the local point of contact — meeting vendors at the property, overseeing cleanout and repairs, and providing photo updates so everyone stays informed without needing to travel repeatedly.
-            </p>
+            <Accordion type="single" collapsible className="space-y-3">
+              {[
+                { value: "emotional", q: "How does David handle the emotional side?", a: "David approaches these situations with the understanding that the timeline is not always his to set. Some families need months to process the decision. Others face urgent timelines driven by care needs. In both cases, he provides honest, patient guidance without creating artificial urgency." },
+                { value: "condition", q: "What about a home with decades of deferred maintenance?", a: "Many senior homes have accumulated belongings, outdated systems, and overgrown landscaping. David evaluates each property individually and recommends a preparation plan that balances cost, timeline, and likely market impact." },
+                { value: "remote", q: "Can families coordinate from out of state?", a: "Yes. David serves as the local point of contact — meeting vendors at the property, overseeing cleanout and repairs, and providing photo updates so everyone stays informed without needing to travel repeatedly." },
+              ].map((item) => (
+                <AccordionItem key={item.value} value={item.value} className="bg-card border border-border rounded-2xl overflow-hidden data-[state=open]:border-gold/25 transition-colors">
+                  <AccordionTrigger className="text-left font-serif text-base md:text-lg font-semibold text-foreground hover:text-gold hover:no-underline px-6 py-5">
+                    {item.q}
+                  </AccordionTrigger>
+                  <AccordionContent className="px-6 pb-5 pt-0 text-muted-foreground leading-relaxed">
+                    {item.a}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </div>
         </div>
       </section>
