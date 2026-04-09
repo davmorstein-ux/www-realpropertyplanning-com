@@ -24,9 +24,11 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     title: "Probate Real Estate & Inherited Property Guidance | Real Property Planning",
     description:
       "Real Property Planning helps attorneys, executors, trustees, fiduciaries, and families navigate probate real estate, inherited homes, estate sales, and senior transitions throughout Washington State.",
-    h1: "Specialized Guidance for Probate & Estate Property Sales",
+    h1: "Probate, Estate & Senior Transition Real Estate in Washington State",
+    quickAnswerQ: "What does Real Property Planning do?",
+    quickAnswerA: "Real Property Planning helps executors, trustees, attorneys, and families sell probate, estate, inherited, and senior-transition properties throughout Washington State. David Stein combines 20+ years as a licensed broker and state-certified residential appraiser to provide accurate pricing, hands-on coordination, and clear communication from first conversation through closing.",
     intro:
-      "Real Property Planning helps attorneys, executors, trustees, fiduciaries, and families navigate probate real estate, inherited homes, estate sales, and senior transitions throughout Washington State. David Stein brings over 20 years of dual expertise as a licensed real estate broker and Washington state certified residential appraiser, with a strong focus in Western Washington and the Puget Sound region.",
+      "David Stein helps executors, trustees, attorneys, and families navigate property transitions across Washington State — probate sales, inherited homes, senior moves, and trust property — guided by 20+ years as a licensed broker and certified appraiser.",
     sections: [
       "Probate & Estate Property Sales — Experienced guidance for selling inherited homes, trust-owned real estate, and estate property across King, Snohomish, Pierce, Skagit, and Kitsap Counties.",
       "Senior Transitions & Downsizing Support — Thoughtful real estate guidance for families navigating a move from a longtime home to assisted living, independent living, or smaller housing.",
