@@ -737,14 +737,14 @@ html, body {
 
 .service-nav-tile-link {
   position: absolute;
-  top: 35%;
+  top: 36%;
   left: 50%;
-  width: 28%;
-  height: 16%;
+  width: 24%;
+  height: 14%;
   transform: translateX(-50%);
   z-index: 20;
   background: transparent;
-  clip-path: ellipse(47% 43% at 50% 50%);
+  clip-path: ellipse(46% 42% at 50% 50%);
 }
 
 /* Homepage tiles: enlarge icons 10% on mobile only (except Probate Sales) */
@@ -862,53 +862,51 @@ html, body {
   .premium-tile .tile-label-tight {
     font-size: 0.9rem !important;
   }
-  a.premium-tile[data-tile-name="wills"] span {
+  .premium-tile[data-tile-name="wills"] span {
     transform: translateY(-14%) !important;
   }
-  a.premium-tile[data-tile-name="wills"] h3[data-tile-id="wills"] {
+  .premium-tile[data-tile-name="wills"] h3[data-tile-id="wills"] {
     margin-top: -1rem !important;
   }
-  a.premium-tile[data-tile-name="wills"] .tile-icon {
+  .premium-tile[data-tile-name="wills"] .tile-icon {
     transform: translateY(12%) !important;
     transition: transform 0.3s ease-out !important;
   }
-  a.premium-tile[data-tile-name="wills"]:hover .tile-icon {
+  .premium-tile[data-tile-name="wills"]:has(.service-nav-tile-link:hover) .tile-icon {
     transform: translateY(12%) scale(1.1) !important;
   }
 
-  /* Lower icons in target tiles to match Attorneys top spacing — desktop only */
-  a.premium-tile[data-tile-name="senior-moves"] .tile-icon,
-  a.premium-tile[data-tile-name="the-process"] .tile-icon,
-  a.premium-tile[data-tile-name="home-value"] .tile-icon,
-  a.premium-tile[data-tile-name="lending"] .tile-icon,
-  a.premium-tile[data-tile-name="cpas"] .tile-icon {
+  .premium-tile[data-tile-name="senior-moves"] .tile-icon,
+  .premium-tile[data-tile-name="the-process"] .tile-icon,
+  .premium-tile[data-tile-name="home-value"] .tile-icon,
+  .premium-tile[data-tile-name="lending"] .tile-icon,
+  .premium-tile[data-tile-name="cpas"] .tile-icon {
     transform: translateY(8%) !important;
     transition: transform 0.3s ease-out !important;
   }
-  a.premium-tile[data-tile-name="senior-moves"]:hover .tile-icon,
-  a.premium-tile[data-tile-name="the-process"]:hover .tile-icon,
-  a.premium-tile[data-tile-name="home-value"]:hover .tile-icon,
-  a.premium-tile[data-tile-name="lending"]:hover .tile-icon,
-  a.premium-tile[data-tile-name="cpas"]:hover .tile-icon {
+  .premium-tile[data-tile-name="senior-moves"]:has(.service-nav-tile-link:hover) .tile-icon,
+  .premium-tile[data-tile-name="the-process"]:has(.service-nav-tile-link:hover) .tile-icon,
+  .premium-tile[data-tile-name="home-value"]:has(.service-nav-tile-link:hover) .tile-icon,
+  .premium-tile[data-tile-name="lending"]:has(.service-nav-tile-link:hover) .tile-icon,
+  .premium-tile[data-tile-name="cpas"]:has(.service-nav-tile-link:hover) .tile-icon {
     transform: translateY(8%) scale(1.1) !important;
   }
-  a.premium-tile[data-tile-name="probate-sales"] .tile-icon {
+  .premium-tile[data-tile-name="probate-sales"] .tile-icon {
     transform: translateY(4%) !important;
     transition: transform 0.3s ease-out !important;
   }
-  a.premium-tile[data-tile-name="probate-sales"]:hover .tile-icon {
+  .premium-tile[data-tile-name="probate-sales"]:has(.service-nav-tile-link:hover) .tile-icon {
     transform: translateY(4%) scale(1.1) !important;
   }
-  a.premium-tile[data-tile-name="realtor"] .tile-icon {
+  .premium-tile[data-tile-name="realtor"] .tile-icon {
     transform: translateX(6%) translateY(6%) scale(1.1) !important;
     transform-origin: center center !important;
     transition: transform 0.3s ease-out !important;
   }
-  a.premium-tile[data-tile-name="realtor"]:hover .tile-icon {
+  .premium-tile[data-tile-name="realtor"]:has(.service-nav-tile-link:hover) .tile-icon {
     transform: translateX(6%) translateY(6%) scale(1.21) !important;
   }
 
-  /* Lower CPAs text to match Senior Moves — desktop only */
   .premium-tile h3[data-tile-id="cpas"] {
     margin-top: -0.5rem !important;
   }
