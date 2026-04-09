@@ -1,4 +1,5 @@
 import GoldCheck3D from "@/components/GoldCheck3D";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
@@ -100,11 +101,8 @@ const WhyValuationMatters = () => {
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-[22px]">
               Why Accurate Pricing Is the Most Important Decision in Estate Property Sales
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-4">
-              Every estate property sale hinges on one question: what is this home actually worth in its current condition? Not what Zillow says. Not what the neighbors sold for after a full remodel. The real answer — factoring in deferred maintenance, functional issues, and realistic buyer behavior — is what determines whether the sale protects the estate or costs it.
-            </p>
-            <p className="text-lg text-primary-foreground/70 leading-relaxed mb-[30px]">
-              David Stein is one of the few professionals in Washington State who holds both a broker license and a state certified residential appraiser credential. That dual lens means he evaluates properties the way an appraiser would, then markets and sells them the way a seasoned broker does — giving executors, attorneys, and families a level of pricing confidence that most agents cannot deliver.
+            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-[30px]">
+              David Stein is one of the few Washington professionals who holds both a broker license and a certified residential appraiser credential — giving executors, attorneys, and families pricing confidence that most agents cannot deliver.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Link to="/contact">
@@ -190,25 +188,31 @@ const WhyValuationMatters = () => {
         </div>
       </section>
 
-      {/* How the Dual Credential Works in Practice */}
-      <section className="py-20 lg:py-28 bg-background">
+      {/* How the Dual Credential Works — Accordion */}
+      <section className="py-16 lg:py-20 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
-              How the Dual Credential Works in Practice
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
+              How Does the Dual Credential Work in Practice?
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Most real estate agents base their pricing recommendations on a comparative market analysis — a review of recent sales of similar homes in the area. This works well for standard residential transactions where homes are in typical condition and the market provides clean comparables.
-            </p>
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              Estate properties are different. The home may have an original 1960s kitchen, a furnace that should have been replaced a decade ago, water damage in the basement, or a roof with five years of remaining life. These are not cosmetic issues — they directly affect what buyers will pay and what lenders will finance. Standard comparables do not account for these realities.
-            </p>
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              David's appraisal training means he evaluates properties the way a lender's appraiser would — assessing functional utility, physical depreciation, and effective age alongside location and square footage. This allows him to anticipate appraisal challenges before they derail a deal, price properties in a way that attracts serious buyers while protecting the estate's value, and advise families on which repairs will actually move the needle.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              The result is fewer surprises, faster closings, and pricing decisions that hold up under scrutiny — whether that scrutiny comes from a buyer's lender, a probate court, or family members with different expectations.
-            </p>
+            <Accordion type="single" collapsible className="space-y-3">
+              <AccordionItem value="cma" className="bg-card border border-border rounded-2xl overflow-hidden data-[state=open]:border-gold/25 transition-colors">
+                <AccordionTrigger className="text-left font-serif text-base md:text-lg font-semibold text-foreground hover:text-gold hover:no-underline px-6 py-5">
+                  How is David's pricing different from a standard agent's CMA?
+                </AccordionTrigger>
+                <AccordionContent className="px-6 pb-5 pt-0 text-muted-foreground leading-relaxed">
+                  Most agents base pricing on comparable sales of similar homes in typical condition. Estate properties often have original kitchens, aging systems, and deferred maintenance that standard comparables don't account for. David evaluates properties the way a lender's appraiser would — assessing functional utility, physical depreciation, and effective age alongside location.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="anticipate" className="bg-card border border-border rounded-2xl overflow-hidden data-[state=open]:border-gold/25 transition-colors">
+                <AccordionTrigger className="text-left font-serif text-base md:text-lg font-semibold text-foreground hover:text-gold hover:no-underline px-6 py-5">
+                  How does this prevent surprises during the sale?
+                </AccordionTrigger>
+                <AccordionContent className="px-6 pb-5 pt-0 text-muted-foreground leading-relaxed">
+                  David anticipates appraisal challenges before they derail a deal, prices properties to attract serious buyers while protecting estate value, and advises families on which repairs will actually move the needle. The result is fewer surprises, faster closings, and pricing decisions that hold up under scrutiny.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
         </div>
       </section>

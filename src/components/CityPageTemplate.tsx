@@ -263,32 +263,48 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
         answer={`David Stein provides hands-on real estate guidance for executors, trustees, attorneys, and families selling probate, inherited, and trust-held property in ${city.name}, ${city.county}. As a licensed broker and certified residential appraiser with 20+ years of experience, he evaluates each property's condition, develops accurate pricing, coordinates preparation, and manages the full sale process.`}
       />
 
-      {/* --- UNIQUE CONTENT FIRST --- */}
-
-      {/* Who I Help in [City] */}
-      <section className="py-14 lg:py-18 bg-background">
+      {/* Compact scannable section */}
+      <section className="py-10 lg:py-12 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-4">
-              Who Does David Stein Help in {city.name}?
-            </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed">
-              {city.whoIHelp || defaultWhoIHelp}
-            </p>
+            <div className="grid sm:grid-cols-3 gap-6 text-center">
+              <div>
+                <span className="text-gold font-serif text-xl font-semibold">Evaluate</span>
+                <p className="text-muted-foreground text-sm mt-1">Property assessment and valuation-informed pricing</p>
+              </div>
+              <div>
+                <span className="text-gold font-serif text-xl font-semibold">Prepare</span>
+                <p className="text-muted-foreground text-sm mt-1">Cleanout, repairs, and vendor coordination</p>
+              </div>
+              <div>
+                <span className="text-gold font-serif text-xl font-semibold">Sell</span>
+                <p className="text-muted-foreground text-sm mt-1">Marketing, negotiation, and closing</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Why Broker + Appraiser Credentials Matter */}
-      <section className="py-14 lg:py-18 bg-secondary">
+      {/* Who I Help + Why Credentials — combined compact section */}
+      <section className="py-12 lg:py-16 bg-secondary">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-4">
-              Why Does Broker and Appraiser Experience Matter in {city.name}?
-            </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed">
-              {city.whyCredentialsMatter || defaultWhyCredentials}
-            </p>
+          <div className="max-w-3xl mx-auto space-y-6">
+            <div>
+              <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-3">
+                Who Does David Stein Help in {city.name}?
+              </h2>
+              <p className="text-muted-foreground text-lg leading-relaxed">
+                {city.whoIHelp || defaultWhoIHelp}
+              </p>
+            </div>
+            <div>
+              <h2 className="font-serif text-xl md:text-2xl text-foreground font-semibold mb-3">
+                Why Does Broker and Appraiser Experience Matter Here?
+              </h2>
+              <p className="text-muted-foreground leading-relaxed">
+                {city.whyCredentialsMatter || defaultWhyCredentials}
+              </p>
+            </div>
           </div>
         </div>
       </section>

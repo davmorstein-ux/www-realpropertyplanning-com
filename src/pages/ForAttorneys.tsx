@@ -185,16 +185,22 @@ const ForAttorneys = () => {
         answer="David handles the real estate side of estate, probate, and family law matters — property assessment, valuation-informed pricing, preparation coordination, and sale management — so attorneys and their clients can focus on the legal and financial priorities. He holds both a Washington broker license and a certified residential appraiser credential, giving attorneys stronger data and more reliable execution than a standard listing agent."
       />
 
-      {/* Intro */}
-      <section className="py-16 lg:py-20 bg-secondary">
+      {/* Quick 3-step overview */}
+      <section className="py-10 lg:py-12 bg-secondary">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-              Most attorneys I work with reach out because they have a client situation where the property piece is becoming the bottleneck — a probate that needs a realistic market assessment, an estate where the family can't agree on pricing, or a trust that needs to sell a home in difficult condition.
-            </p>
-            <p className="text-muted-foreground text-lg leading-relaxed">
-              My role is to take the real estate off your plate entirely. I handle the property assessment, preparation, pricing, and sale — while keeping you and your client informed at every stage.
-            </p>
+          <div className="max-w-3xl mx-auto">
+            <div className="grid sm:grid-cols-3 gap-6 text-center">
+              {[
+                { title: "You Refer", desc: "Send David the client situation — probate, estate, trust, or family law property." },
+                { title: "David Handles It", desc: "Property assessment, preparation, pricing, marketing, and sale — managed end to end." },
+                { title: "You Stay Informed", desc: "Regular updates keep you and your client in the loop through closing." },
+              ].map((s, i) => (
+                <div key={i}>
+                  <span className="text-gold font-serif text-xl font-semibold">{s.title}</span>
+                  <p className="text-muted-foreground text-sm mt-1 leading-relaxed">{s.desc}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
