@@ -104,6 +104,11 @@ const Trustees = () => {
       <DirectAnswerBlock
         question="What should a trustee know about selling trust-held real estate?"
         answer="Trust property sales involve fiduciary obligations, beneficiary communication, defensible pricing, and sometimes attorney coordination that standard home sales do not require. David Stein — a licensed Washington broker and certified residential appraiser — works with trustees and successor trustees to evaluate property condition, price it accurately, manage preparation and sale, and provide the documentation needed to support fiduciary decisions."
+        supportBullets={[
+          "Defensible, valuation-informed pricing that supports fiduciary accountability",
+          "Full coordination of cleanout, repairs, listing, and closing — managed for you",
+          "Clear communication with beneficiaries, attorneys, and co-trustees throughout",
+        ]}
       />
 
       {/* Section 1: What Trustees Are Often Dealing With */}
