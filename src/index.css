@@ -691,6 +691,23 @@ html, body {
   @apply relative cursor-pointer;
 }
 
+/* Universal tile icon hover — uses CSS `scale` so it composes with any `transform` */
+@media (min-width: 640px) {
+  .premium-tile .tile-icon {
+    transition: scale 0.3s ease-out !important;
+  }
+  .premium-tile:has(.service-nav-tile-link:hover) .tile-icon {
+    scale: 1.1 !important;
+  }
+}
+/* Non-premium tile icons (cards with group class) */
+.tile-icon-hover {
+  @apply transition-transform duration-300 ease-out;
+}
+.group:hover .tile-icon-hover {
+  @apply scale-110;
+}
+
 @media (max-width: 639px) {
   .premium-tile h3[data-mobile-tight="true"] {
     line-height: 0.82 !important;
@@ -852,10 +869,6 @@ html, body {
   .attorney-tiles-grid .premium-tile:nth-child(6) .tile-icon {
     transform: scale(1.1) !important;
     transform-origin: top center !important;
-    transition: transform 0.3s ease-out !important;
-  }
-  .attorney-tiles-grid .premium-tile:nth-child(6):hover .tile-icon {
-    transform: scale(1.21) !important;
   }
 }
 
@@ -871,10 +884,6 @@ html, body {
   }
   .premium-tile[data-tile-name="wills"] .tile-icon {
     transform: translateY(12%) !important;
-    transition: transform 0.3s ease-out !important;
-  }
-  .premium-tile[data-tile-name="wills"]:has(.service-nav-tile-link:hover) .tile-icon {
-    transform: translateY(12%) scale(1.1) !important;
   }
 
   .premium-tile[data-tile-name="senior-moves"] .tile-icon,
@@ -883,29 +892,13 @@ html, body {
   .premium-tile[data-tile-name="lending"] .tile-icon,
   .premium-tile[data-tile-name="cpas"] .tile-icon {
     transform: translateY(8%) !important;
-    transition: transform 0.3s ease-out !important;
-  }
-  .premium-tile[data-tile-name="senior-moves"]:has(.service-nav-tile-link:hover) .tile-icon,
-  .premium-tile[data-tile-name="the-process"]:has(.service-nav-tile-link:hover) .tile-icon,
-  .premium-tile[data-tile-name="home-value"]:has(.service-nav-tile-link:hover) .tile-icon,
-  .premium-tile[data-tile-name="lending"]:has(.service-nav-tile-link:hover) .tile-icon,
-  .premium-tile[data-tile-name="cpas"]:has(.service-nav-tile-link:hover) .tile-icon {
-    transform: translateY(8%) scale(1.1) !important;
   }
   .premium-tile[data-tile-name="probate-sales"] .tile-icon {
     transform: translateY(4%) !important;
-    transition: transform 0.3s ease-out !important;
-  }
-  .premium-tile[data-tile-name="probate-sales"]:has(.service-nav-tile-link:hover) .tile-icon {
-    transform: translateY(4%) scale(1.1) !important;
   }
   .premium-tile[data-tile-name="realtor"] .tile-icon {
     transform: translateX(6%) translateY(6%) scale(1.1) !important;
     transform-origin: center center !important;
-    transition: transform 0.3s ease-out !important;
-  }
-  .premium-tile[data-tile-name="realtor"]:has(.service-nav-tile-link:hover) .tile-icon {
-    transform: translateX(6%) translateY(6%) scale(1.21) !important;
   }
 
   .premium-tile h3[data-tile-id="cpas"] {
