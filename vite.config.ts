@@ -26,9 +26,9 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "Real Property Planning helps attorneys, executors, trustees, fiduciaries, and families navigate probate real estate, inherited homes, estate sales, and senior transitions throughout Washington State.",
     h1: "Probate, Estate & Senior Transition Real Estate in Washington State",
     quickAnswerQ: "What does Real Property Planning do?",
-    quickAnswerA: "Real Property Planning helps executors, trustees, attorneys, and families sell probate, estate, inherited, and senior-transition properties throughout Washington State. David Stein combines 20+ years as a licensed broker and state-certified residential appraiser to provide accurate pricing, hands-on coordination, and clear communication from first conversation through closing.",
+    quickAnswerA: "Real Property Planning helps seniors, families, executors, trustees, attorneys, and fiduciaries navigate real estate and housing transitions throughout Washington State. Whether the need involves downsizing, relocation, probate, inherited property, senior living decisions, or preparing a home for sale, the focus is on calm guidance, practical coordination, and clear next steps.",
     intro:
-      "David Stein helps executors, trustees, attorneys, and families navigate property transitions across Washington State — probate sales, inherited homes, senior moves, and trust property — guided by 20+ years as a licensed broker and certified appraiser.",
+      "Guiding seniors, families, and professionals through real estate and housing transitions across Washington State — downsizing, relocation, probate, inherited property, and senior living decisions — with calm guidance, practical coordination, and clear next steps.",
     sections: [
       "Probate & Estate Property Sales — Experienced guidance for selling inherited homes, trust-owned real estate, and estate property across King, Snohomish, Pierce, Skagit, and Kitsap Counties.",
       "Senior Transitions & Downsizing Support — Thoughtful real estate guidance for families navigating a move from a longtime home to assisted living, independent living, or smaller housing.",
@@ -85,20 +85,20 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     description:
       "Real Property Planning provides thoughtful real estate support for downsizing, relocation, assisted living moves, and senior housing transitions throughout Washington State.",
     h1: "Senior Transition Real Estate Support",
-    quickAnswerQ: "How does David Stein help seniors and families sell a longtime home?",
-    quickAnswerA: "David provides patient, step-by-step guidance for seniors and families transitioning from a longtime home — whether moving to assisted living, downsizing, or relocating closer to family. He evaluates the home's condition, coordinates preparation, prices it accurately, and manages the sale.",
+    quickAnswerQ: "How does Real Property Planning support senior housing transitions?",
+    quickAnswerA: "Real Property Planning provides patient, step-by-step guidance for seniors and families transitioning from a longtime home — whether moving to assisted living, downsizing, or relocating closer to family. The process includes home evaluation, preparation coordination, accurate pricing, and full sale management.",
     intro:
-      "When a parent or loved one needs to sell the family home, the process should feel steady — not rushed. David Stein works at the family's pace, handling preparation, pricing, and the sale with patience and care throughout Washington State.",
+      "When a parent or loved one needs to sell the family home, the process should feel steady — not rushed. Real Property Planning works at the family's pace, handling preparation, pricing, and the sale with patience and care throughout Washington State.",
   },
   "/how-the-process-works": {
     title: "How the Process Works — Estate Property Sales | Real Property Planning",
     description:
       "From initial consultation to closing day — here is exactly how David Stein helps executors, attorneys, and families sell probate, inherited, and trust-owned property throughout Washington State.",
     h1: "How the Process Works",
-    quickAnswerQ: "How do estate and probate property sales work in Washington State?",
-    quickAnswerA: "David Stein follows a clear seven-step process: initial consultation, property evaluation and valuation-informed pricing, preparation and vendor coordination, listing and marketing, offer review and negotiation, escrow and closing management, and post-sale support.",
+    quickAnswerQ: "How does the estate and probate property sale process work?",
+    quickAnswerA: "Real Property Planning follows a clear seven-step process: initial consultation, property evaluation and valuation-informed pricing, preparation and vendor coordination, listing and marketing, offer review and negotiation, escrow and closing management, and post-sale support.",
     intro:
-      "From initial consultation to closing day — here is exactly how David Stein helps executors, attorneys, and families sell probate, inherited, and trust-owned property throughout Washington State.",
+      "From initial consultation to closing day — here is exactly how Real Property Planning helps executors, attorneys, and families sell probate, inherited, and trust-owned property throughout Washington State.",
   },
   "/how-we-work": {
     title: "How David Stein Works With Attorneys, Executors, Trustees & Families",

@@ -118,7 +118,7 @@ const WhyValuationMatters = () => {
 
       <DirectAnswerBlock
         question="Why does property valuation matter in estate and probate sales?"
-        answer="Accurate valuation prevents the two most expensive mistakes in estate property sales: overpricing that leads to months of carrying costs and lost buyer interest, and underpricing that leaves tens of thousands of dollars on the table. David Stein's dual credentials as a licensed broker and certified residential appraiser allow him to evaluate properties based on actual condition, not automated estimates — giving executors, attorneys, and trustees defensible pricing that protects the estate."
+        answer="Accurate valuation prevents the two most expensive mistakes in estate property sales: overpricing that leads to months of carrying costs and lost buyer interest, and underpricing that leaves tens of thousands of dollars on the table. Real Property Planning evaluates properties based on actual condition, not automated estimates — giving executors, attorneys, and trustees defensible pricing that protects the estate."
         supportFaqs={[
           { question: "Why can't I just use an online estimate?", answer: "Automated tools miss deferred maintenance, condition issues, and estate-specific factors that significantly affect what buyers will actually pay." },
           { question: "Who benefits from valuation expertise?", answer: "Executors, trustees, and attorneys who need defensible pricing — especially in multi-heir situations or court-supervised sales." },

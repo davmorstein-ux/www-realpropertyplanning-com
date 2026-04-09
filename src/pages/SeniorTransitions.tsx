@@ -112,8 +112,8 @@ const SeniorTransitions = () => {
       </section>
 
       <DirectAnswerBlock
-        question="How does David Stein help seniors and families sell a longtime home?"
-        answer="David provides patient, step-by-step guidance for seniors and families transitioning from a longtime home — whether moving to assisted living, downsizing, or relocating closer to family. He evaluates the home's condition, coordinates preparation and cleanout, prices it using his dual broker and appraiser credentials, and manages the sale while communicating clearly with everyone involved."
+        question="How does Real Property Planning support senior housing transitions?"
+        answer="Real Property Planning provides patient, step-by-step guidance for seniors and families transitioning from a longtime home — whether moving to assisted living, downsizing, or relocating closer to family. The process includes home evaluation, preparation and cleanout coordination, valuation-informed pricing, and full sale management with clear communication throughout."
         supportBullets={[
           "Patient, respectful coordination that honors the emotional weight of the transition",
           "Valuation-informed pricing based on actual condition — not automated estimates",
