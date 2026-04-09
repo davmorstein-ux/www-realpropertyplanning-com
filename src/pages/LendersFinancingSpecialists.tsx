@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Phone, Mail, Globe, MapPin } from "lucide-react";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+import lendersIcon from "@/assets/icons/icon-lenders-3d.png";
 import danBartelPhoto from "@/assets/providers/dan-bartel-c2financial.png";
 import c2FinancialLogo from "@/assets/providers/c2financial-logo.png";
 import jeffMcGinnisPhoto from "@/assets/providers/jeff-mcginnis-crosscountry.webp";
@@ -44,8 +45,21 @@ const LendersFinancingSpecialists = () => (
       </div>
     </section>
 
+    {/* Transitional Icon */}
+    <section className="bg-secondary pt-10 md:pt-14">
+      <div className="container px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto text-center">
+          <img
+            src={lendersIcon}
+            alt="Lenders & Financing"
+            className="block w-full max-w-[480px] h-auto md:max-w-[672px] mx-auto"
+          />
+        </div>
+      </div>
+    </section>
+
     {/* Intro */}
-    <section className="py-16 lg:py-20 bg-secondary">
+    <section className="py-10 lg:py-14 bg-secondary">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <p className="text-muted-foreground text-lg leading-relaxed mb-4">
