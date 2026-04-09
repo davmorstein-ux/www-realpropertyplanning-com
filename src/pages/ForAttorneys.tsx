@@ -180,6 +180,11 @@ const ForAttorneys = () => {
         </div>
       </section>
 
+      <DirectAnswerBlock
+        question="How does David Stein support attorneys with estate and probate real estate?"
+        answer="David handles the real estate side of estate, probate, and family law matters — property assessment, valuation-informed pricing, preparation coordination, and sale management — so attorneys and their clients can focus on the legal and financial priorities. He holds both a Washington broker license and a certified residential appraiser credential, giving attorneys stronger data and more reliable execution than a standard listing agent."
+      />
+
       {/* Intro */}
       <section className="py-16 lg:py-20 bg-secondary">
         <div className="container px-6 lg:px-8">
