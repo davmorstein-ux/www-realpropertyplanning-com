@@ -45,6 +45,19 @@ const LendersFinancingSpecialists = () => (
       </div>
     </section>
 
+    {/* Transitional Icon */}
+    <section className="bg-secondary pt-10 md:pt-14">
+      <div className="container px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto text-center">
+          <img
+            src={lendersIcon}
+            alt="Lenders & Financing"
+            className="block w-full max-w-[480px] h-auto md:max-w-[672px] mx-auto"
+          />
+        </div>
+      </div>
+    </section>
+
     {/* Intro */}
     <section className="py-16 lg:py-20 bg-secondary">
       <div className="container px-6 lg:px-8">
