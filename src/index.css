@@ -747,18 +747,25 @@ html, body {
     transform: scale(1.1) !important;
     transform-origin: top center !important;
   }
-  /* The Process tile: grow upward to reduce headspace */
+  /* The Process tile: grow upward to reduce headspace, lower icon */
   .premium-tile[data-tile-name="the-process"] .tile-icon {
     transform-origin: bottom center !important;
+    transform: scale(1.30) translateY(-6%) !important;
+  }
+  /* Appraiser: raise icon more */
+  .premium-tile[data-tile-name="appraiser"] .tile-icon {
+    transform: scale(1.18) translateY(-20%) !important;
+  }
+  /* Service Areas: 10% bigger */
+  .premium-tile[data-tile-name="service-areas"] .tile-icon {
+    transform: scale(1.21) !important;
   }
   /* Nudge icons upward on mobile for these tiles */
-  .premium-tile[data-tile-name="appraiser"] .tile-icon,
   .premium-tile[data-tile-name="wills"] .tile-icon,
   .premium-tile[data-tile-name="lending"] .tile-icon,
   .premium-tile[data-tile-name="senior-living"] .tile-icon,
   .premium-tile[data-tile-name="probate-terms"] .tile-icon,
   .premium-tile[data-tile-name="probate-sales"] .tile-icon,
-  .premium-tile[data-tile-name="the-process"] .tile-icon,
   .premium-tile[data-tile-name="cpas"] .tile-icon {
     transform: scale(1.18) translateY(-14%) !important;
   }
