@@ -43,8 +43,8 @@ const Services = () => {
   return (
     <>
       <SEOHead
-        title="Senior Relocation & Estate Real Estate Services | David Stein"
-        description="David Stein provides senior relocation home sales, estate and inherited property sales, probate real estate, trust property sales, clean-out coordination, and market analysis throughout Washington State."
+        title="Senior Relocation & Estate Real Estate Services | Real Property Planning"
+        description="Real Property Planning provides senior relocation home sales, estate and inherited property sales, probate real estate, trust property sales, clean-out coordination, and market analysis throughout Washington State."
         canonical="https://www.realpropertyplanning.com/services"
       />
       <BreadcrumbSchema
@@ -63,10 +63,10 @@ const Services = () => {
                 Services
               </p>
               <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl text-primary-foreground font-semibold mb-6">
-                How David Helps With Estate, Probate &amp; Senior Property Transitions
+                Real Estate Services for Estate, Probate &amp; Senior Transitions
               </h1>
               <p className="text-primary-foreground/80 text-lg leading-relaxed max-w-2xl mx-auto">
-                Every situation is different. These are the areas where David's experience as a licensed broker and certified appraiser makes the biggest difference.
+                Every situation is different. These are the areas where Real Property Planning's experience as a licensed brokerage with certified appraisal expertise makes the biggest difference.
               </p>
             </div>
           </div>

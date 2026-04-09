@@ -112,7 +112,7 @@ const HowTheProcessWorks = () => {
               How the Process Works
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-[30px]">
-              David Stein follows a clear, seven-step process — from consultation through closing — designed for the unique complexity of estate, probate, and senior transition sales.
+              Real Property Planning follows a clear, seven-step process — from consultation through closing — designed for the unique complexity of estate, probate, and senior transition sales.
             </p>
             <Link to="/contact">
  <Button variant="gold" size="lg"className="hover:-light font-medium px-7 py-4 h-auto rounded-lg">
