@@ -743,9 +743,14 @@ html, body {
 @media (max-width: 639px) {
   .service-nav-tile-mobile-hitbox {
     position: absolute;
-    inset: 23% 20% 30% 20%;
+    top: 31%;
+    left: 50%;
+    width: 46%;
+    height: 27%;
+    transform: translateX(-50%);
     z-index: 20;
-    clip-path: ellipse(50% 48% at 50% 48%);
+    pointer-events: auto;
+    clip-path: ellipse(48% 46% at 50% 50%);
   }
 
   .premium-tile:not([data-tile-name="probate-sales"]) .tile-icon {
