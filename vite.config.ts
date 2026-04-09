@@ -355,6 +355,16 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     intro:
       "Probate property sales, senior transitions, executor support, and estate-related real estate guidance throughout Washington State.",
   },
+  "/services/senior-transitions": {
+    title: "Senior Transitions Services | Real Property Planning",
+    description:
+      "Senior transition support for selling a longtime home, coordinating preparation, and guiding families through major housing decisions throughout Washington State.",
+    h1: "Senior Transitions",
+    quickAnswerQ: "How does Real Property Planning help with senior transitions?",
+    quickAnswerA: "Real Property Planning helps seniors and families sell a longtime home with patient, step-by-step guidance around preparation, pricing, timing, and coordination during a major housing transition.",
+    intro:
+      "Support for seniors and families navigating the sale of a longtime home during downsizing, assisted living moves, relocation, or other major housing transitions.",
+  },
   "/testimonials": {
     title: "Testimonials & Reviews | Real Property Planning",
     description:
@@ -425,21 +435,7 @@ const buildSsgContent = (meta: RouteMeta) => {
 };
 
 const buildRouteAwareShellScript = () => {
-  const routePayload = Object.fromEntries(
-    Object.entries(ROUTE_METADATA).map(([route, meta]) => [
-      route,
-      {
-        title: meta.title,
-        description: meta.description,
-        canonical: route === "/" ? SITE_URL : `${SITE_URL}${route}`,
-        ssg: buildSsgContent(meta),
-      },
-    ])
-  );
-
-  const serializedPayload = JSON.stringify(routePayload).replace(/</g, "\\u003c");
-
-  return `<script>(function(){const routePayload=${serializedPayload};const normalizePath=(pathname)=>{let next=pathname||"/";try{next=decodeURIComponent(next);}catch{}if(!next.startsWith("/"))next="/"+next;if(next.endsWith("/index.html"))next=next.slice(0,-11)||"/";if(next.length>1&&next.endsWith("/"))next=next.slice(0,-1);return next||"/";};const ensureTag=(tagName,selector,attrs)=>{let el=document.querySelector(selector);if(!el){el=document.createElement(tagName);Object.entries(attrs).forEach(([key,value])=>el.setAttribute(key,value));document.head.appendChild(el);}return el;};const route=normalizePath(window.location.pathname);const payload=routePayload[route];if(!payload)return;document.title=payload.title;ensureTag("meta",'meta[name="description"]',{name:"description"}).setAttribute("content",payload.description);ensureTag("meta",'meta[property="og:title"]',{property:"og:title"}).setAttribute("content",payload.title);ensureTag("meta",'meta[property="og:description"]',{property:"og:description"}).setAttribute("content",payload.description);ensureTag("meta",'meta[name="twitter:title"]',{name:"twitter:title"}).setAttribute("content",payload.title);ensureTag("meta",'meta[name="twitter:description"]',{name:"twitter:description"}).setAttribute("content",payload.description);ensureTag("meta",'meta[property="og:url"]',{property:"og:url"}).setAttribute("content",payload.canonical);ensureTag("link",'link[rel="canonical"]',{rel:"canonical"}).setAttribute("href",payload.canonical);const root=document.getElementById("root");if(root){root.innerHTML=payload.ssg||"";}})();</script>`;
+  return `<script>(function(){const normalizePath=(pathname)=>{let next=pathname||"/";try{next=decodeURIComponent(next);}catch{}if(!next.startsWith("/"))next="/"+next;if(next.endsWith("/index.html"))next=next.slice(0,-11)||"/";if(next.length>1&&next.endsWith("/"))next=next.slice(0,-1);return next||"/";};const ensureTag=(tagName,selector,attrs)=>{let el=document.querySelector(selector);if(!el){el=document.createElement(tagName);Object.entries(attrs).forEach(([key,value])=>el.setAttribute(key,value));document.head.appendChild(el);}return el;};const copyAttr=(doc,selector,attr,target)=>{const value=doc.querySelector(selector)?.getAttribute(attr);if(value)target.setAttribute(attr,value);};const applyDoc=(doc)=>{if(doc.title)document.title=doc.title;copyAttr(doc,'meta[name="description"]','content',ensureTag("meta",'meta[name="description"]',{name:"description"}));copyAttr(doc,'meta[property="og:title"]','content',ensureTag("meta",'meta[property="og:title"]',{property:"og:title"}));copyAttr(doc,'meta[property="og:description"]','content',ensureTag("meta",'meta[property="og:description"]',{property:"og:description"}));copyAttr(doc,'meta[name="twitter:title"]','content',ensureTag("meta",'meta[name="twitter:title"]',{name:"twitter:title"}));copyAttr(doc,'meta[name="twitter:description"]','content',ensureTag("meta",'meta[name="twitter:description"]',{name:"twitter:description"}));copyAttr(doc,'meta[property="og:url"]','content',ensureTag("meta",'meta[property="og:url"]',{property:"og:url"}));copyAttr(doc,'link[rel="canonical"]','href',ensureTag("link",'link[rel="canonical"]',{rel:"canonical"}));const sourceRoot=doc.getElementById("root");const targetRoot=document.getElementById("root");if(sourceRoot&&targetRoot&&sourceRoot.innerHTML.trim())targetRoot.innerHTML=sourceRoot.innerHTML;};const route=normalizePath(window.location.pathname);if(route==="/")return;try{const xhr=new XMLHttpRequest();xhr.open("GET",route+"/index.html",false);xhr.send(null);if(xhr.status>=200&&xhr.status<300&&xhr.responseText){const doc=new DOMParser().parseFromString(xhr.responseText,"text/html");applyDoc(doc);}}catch{}})();</script>`;
 };
 
 const injectRouteAwareShell = (html: string) =>

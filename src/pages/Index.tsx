@@ -1,5 +1,4 @@
 import GoldCheck3D from "@/components/GoldCheck3D";
-import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
@@ -35,7 +34,6 @@ import GuidedEntryPanel from "@/components/GuidedEntryPanel";
 import StickyMobileCallButton from "@/components/StickyMobileCallButton";
 import WhatHappensNext from "@/components/WhatHappensNext";
 import SecureWillSection from "@/components/SecureWillSection";
-import DirectAnswerBlock from "@/components/DirectAnswerBlock";
 
 const serviceAreas = [
   { county: "King County", href: "/counties/king", cities: "Seattle, Bellevue, Kirkland, Redmond, Renton, Kent, Federal Way & more" },
@@ -44,39 +42,9 @@ const serviceAreas = [
   { county: "Kitsap County", href: "/counties/kitsap", cities: "Bremerton, Silverdale, Poulsbo, Bainbridge Island, Port Orchard & more" },
 ];
 
-const homepageFaqs = [
-  { question: "Do I need probate before selling an inherited home?", answer: "It depends on how the property is titled. In many cases, probate or letters testamentary are required before a sale can proceed.", link: "/faq" },
-  { question: "What is probate real estate?", answer: "Property that must be sold as part of settling a deceased person's estate. The process involves court oversight and specific legal requirements.", link: "/faq" },
-  { question: "Do I need a specialized agent for a probate sale?", answer: "Yes — probate sales have unique legal and procedural requirements. An experienced agent helps avoid delays and pricing errors.", link: "/faq" },
-  { question: "What areas do you serve?", answer: "Washington State, with deep experience in King, Snohomish, Pierce, Skagit, and Kitsap counties. Referral connections available nationwide through eXp Realty.", link: "/counties" },
-  { question: "What's the difference between a broker and a certified appraiser?", answer: "A broker facilitates sales. A certified appraiser provides independent valuations. David holds both credentials.", link: "/why-valuation-matters" },
-  { question: "Can you help if the property needs repairs?", answer: "Yes. David advises whether to sell as-is or invest in targeted improvements based on a valuation-informed analysis.", link: "/how-the-process-works" },
-  { question: "How do senior transitions work?", answer: "David coordinates the sale of a longtime family home when a senior is moving — with patience for the emotional and logistical complexity.", link: "/senior-transitions" },
-  { question: "Do you work with attorneys and fiduciaries?", answer: "Yes. David works alongside probate attorneys, estate attorneys, trustees, and professional fiduciaries regularly.", link: "/for-attorneys" },
-];
-
 const jsonLd = realEstateAgentSchema;
 
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": homepageFaqs.map(faq => ({
-    "@type": "Question",
-    "name": faq.question,
-    "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
-  }))
-};
-
 const Index = () => {
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.setAttribute("data-faq-jsonld", "true");
-    script.textContent = JSON.stringify(faqJsonLd);
-    document.head.appendChild(script);
-    return () => { script.remove(); };
-  }, []);
-
   return (
     <div className="min-h-screen bg-cream">
       <SEOHead
@@ -512,41 +480,6 @@ const Index = () => {
           17. EDUCATIONAL PATHWAYS
       ═══════════════════════════════════════════════════ */}
       <EducationalPathways />
-
-      {/* ═══════════════════════════════════════════════════
-          18. FAQ PREVIEW
-      ═══════════════════════════════════════════════════ */}
-      <section className="py-16 lg:py-24 bg-secondary">
-        <div className="container px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-base">
-              Common Questions
-            </p>
-            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold">
-              Quick Answers About Estate &amp; Inherited Property
-            </h2>
-          </div>
-          <div className="max-w-4xl mx-auto space-y-5">
-            {homepageFaqs.map((faq, index) => (
-              <Link key={index} to={faq.link} className="card-3d group block p-6">
-                <h3 className="font-serif text-lg text-foreground font-semibold mb-2 group-hover:text-gold transition-colors">
-                  {faq.question}
-                </h3>
-                <p className="text-muted-foreground text-base leading-relaxed">
-                  {faq.answer}
-                </p>
-              </Link>
-            ))}
-          </div>
-          <div className="text-center mt-10">
-            <Link to="/faq">
-              <Button variant="outline3d" className="border-navy text-navy hover:bg-navy hover:text-primary-foreground">
-                View All FAQs <ChevronRight className="w-4 h-4 ml-1" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
 
       <DisclaimerSection />
       <Footer />
