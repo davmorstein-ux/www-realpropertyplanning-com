@@ -163,10 +163,10 @@ const ForAttorneys = () => {
             <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
               For Attorneys & Fiduciaries
             </p>
-            <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
+            <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6 motion-safe:animate-[text-emphasis-a_14s_ease-in-out_infinite]">
               When Your Client Has a Property to Deal With
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-8">
+            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-8 motion-safe:animate-[text-emphasis-b_14s_ease-in-out_infinite]">
               David handles the real estate side — valuation, preparation, coordination, and sale — so you and your client can focus on the legal and financial priorities.
             </p>
             <Link to="/contact">
