@@ -554,7 +554,7 @@ const routeMetadataPlugin = {
     }
 
     const shellHtml = injectRouteAwareShell(
-      applyMetadata(baseHtml, "/", DEFAULT_SHELL_META, { injectSsg: false })
+      applyMetadata(baseHtml, "/", DEFAULT_SHELL_META, { injectSsg: true })
     );
     await writeFile(baseHtmlPath, shellHtml, "utf8");
 
