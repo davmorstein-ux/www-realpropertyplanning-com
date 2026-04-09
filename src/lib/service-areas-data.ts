@@ -121,6 +121,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
       "Full coordination for out-of-state families managing Kirkland property transitions",
     ],
   },
+  redmond: {
     tone: "suburban",
     descriptor: "Technology corridor with diverse housing stock",
     heroIntro: "Redmond has grown from a quiet suburb into one of the most sought-after cities in King County, driven by its proximity to major employers and strong school districts. Families and fiduciaries managing estate, probate, or transition-related property in Redmond need guidance that reflects the city's evolving market dynamics and the wide range of housing — from original ramblers to newer planned communities like Trilogy and Redmond Ridge.",
