@@ -74,7 +74,7 @@ const SeniorTransitions = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Senior Home Sales & Transition Support | David Stein | Washington State"
+        title="Senior Home Sales & Transition Support | Real Property Planning"
         description="Compassionate, experienced real estate support for senior housing transitions — downsizing, assisted living moves, and family home sales throughout Washington State. Licensed broker and certified appraiser."
         jsonLd={jsonLd}
       />
@@ -92,7 +92,7 @@ const SeniorTransitions = () => {
               Selling a Longtime Home Is About More Than Real Estate
             </h1>
             <p className="text-xl text-primary-foreground/80 leading-relaxed mb-8">
-              David Stein works at the family's pace — managing preparation, pricing, and the sale with steady communication that keeps everyone informed and comfortable.
+              Real Property Planning works at the family's pace — managing preparation, pricing, and the sale with steady communication that keeps everyone informed and comfortable.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/contact">

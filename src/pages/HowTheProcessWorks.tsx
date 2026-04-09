@@ -87,8 +87,8 @@ const HowTheProcessWorks = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="How Estate & Probate Property Sales Work — 7-Step Process | David Stein"
-        description="David Stein's step-by-step process for selling estate, probate, and inherited property in Washington State — from initial consultation through closing and post-sale support."
+        title="How Estate & Probate Property Sales Work — 7-Step Process | Real Property Planning"
+        description="Real Property Planning's step-by-step process for selling estate, probate, and inherited property in Washington State — from initial consultation through closing and post-sale support."
         jsonLd={articleSchema({
           headline: "How the Process Works — Estate Property Sales",
           description: "A seven-step process for selling estate, probate, and inherited property in Washington State.",
@@ -112,7 +112,7 @@ const HowTheProcessWorks = () => {
               How the Process Works
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-[30px]">
-              David Stein follows a clear, seven-step process — from consultation through closing — designed for the unique complexity of estate, probate, and senior transition sales.
+              Real Property Planning follows a clear, seven-step process — from consultation through closing — designed for the unique complexity of estate, probate, and senior transition sales.
             </p>
             <Link to="/contact">
  <Button variant="gold" size="lg"className="hover:-light font-medium px-7 py-4 h-auto rounded-lg">
