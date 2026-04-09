@@ -33,6 +33,10 @@ export interface CityData {
   localClientTypes?: string[];
   /** Custom hero heading for the city page */
   heroHeading?: string;
+  /** Short paragraph: who David helps in this city */
+  whoIHelp?: string;
+  /** Short paragraph: why broker+appraiser credentials matter here */
+  whyCredentialsMatter?: string;
 }
 
 export interface CountyData {

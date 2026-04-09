@@ -24,7 +24,6 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
   const whyLocal = getWhyLocalMatters(city.name, city.county, city);
   const whyBrokerAppraiser = getWhyBrokerAppraiser(city.name, city);
 
-  // Vary section headings by tone to reduce template repetition
   const tone = city.tone || "suburban";
   const whoHeadings: Record<string, string> = {
     premium: `Who Relies on Real Property Planning in ${city.name}`,
@@ -80,6 +79,10 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
   const heroIntro = city.heroIntro ||
     `Real Property Planning provides experienced real estate guidance for probate sales, estate property, senior transitions, and related situations in ${city.name} and throughout ${city.county}. David Stein combines over 20 years of experience as a licensed broker and state-certified residential appraiser to help clients make well-informed decisions about value, preparation, timing, and sale strategy.`;
 
+  const defaultWhoIHelp = `David Stein works with executors, trustees, attorneys, fiduciaries, and families in ${city.name} who are navigating a property situation connected to probate, an estate, a trust, or a senior transition. Whether you are local or managing from a distance, David provides the hands-on coordination and honest guidance that these situations require.`;
+
+  const defaultWhyCredentials = `In ${city.name}, property values and buyer expectations can shift significantly from one neighborhood to the next. David's dual credentials as a licensed broker and state-certified residential appraiser allow him to evaluate a property's actual condition, assess its realistic market value, and guide the sale with the kind of precision that estate, probate, and trust situations demand.`;
+
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
@@ -99,7 +102,7 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
       />
       <Header />
 
-      {/* Hero */}
+      {/* Hero — unique H1 + city-specific intro */}
       <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl">
@@ -116,9 +119,40 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
         </div>
       </section>
 
+      {/* --- UNIQUE CONTENT FIRST --- */}
+
+      {/* Who I Help in [City] */}
+      <section className="py-14 lg:py-18 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-4">
+              Who I Help in {city.name}
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              {city.whoIHelp || defaultWhoIHelp}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Broker + Appraiser Credentials Matter */}
+      <section className="py-14 lg:py-18 bg-secondary">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-4">
+              Why Broker and Appraiser Experience Matters in {city.name}
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              {city.whyCredentialsMatter || defaultWhyCredentials}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* --- BOILERPLATE MOVED LOWER --- */}
       <TrustStrip />
 
-      {/* Who We Help */}
+      {/* Who We Work With */}
       <section className="py-20 lg:py-28 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
@@ -249,6 +283,10 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
               <span className="text-muted-foreground/40">·</span>
               <Link to="/executors" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">
                 For Executors
+              </Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/trustees" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">
+                For Trustees
               </Link>
               <span className="text-muted-foreground/40">·</span>
               <Link to="/senior-transitions" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">
