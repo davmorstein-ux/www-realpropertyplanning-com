@@ -12,6 +12,9 @@ interface RouteMeta {
   description: string;
   h1?: string;
   intro?: string;
+  /** AEO quick-answer block — rendered first in SSG content for crawler extraction */
+  quickAnswerQ?: string;
+  quickAnswerA?: string;
   sections?: string[];
   cities?: string[];
 }
@@ -21,9 +24,11 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     title: "Probate Real Estate & Inherited Property Guidance | Real Property Planning",
     description:
       "Real Property Planning helps attorneys, executors, trustees, fiduciaries, and families navigate probate real estate, inherited homes, estate sales, and senior transitions throughout Washington State.",
-    h1: "Specialized Guidance for Probate & Estate Property Sales",
+    h1: "Probate, Estate & Senior Transition Real Estate in Washington State",
+    quickAnswerQ: "What does Real Property Planning do?",
+    quickAnswerA: "Real Property Planning helps executors, trustees, attorneys, and families sell probate, estate, inherited, and senior-transition properties throughout Washington State. David Stein combines 20+ years as a licensed broker and state-certified residential appraiser to provide accurate pricing, hands-on coordination, and clear communication from first conversation through closing.",
     intro:
-      "Real Property Planning helps attorneys, executors, trustees, fiduciaries, and families navigate probate real estate, inherited homes, estate sales, and senior transitions throughout Washington State. David Stein brings over 20 years of dual expertise as a licensed real estate broker and Washington state certified residential appraiser, with a strong focus in Western Washington and the Puget Sound region.",
+      "David Stein helps executors, trustees, attorneys, and families navigate property transitions across Washington State — probate sales, inherited homes, senior moves, and trust property — guided by 20+ years as a licensed broker and certified appraiser.",
     sections: [
       "Probate & Estate Property Sales — Experienced guidance for selling inherited homes, trust-owned real estate, and estate property across King, Snohomish, Pierce, Skagit, and Kitsap Counties.",
       "Senior Transitions & Downsizing Support — Thoughtful real estate guidance for families navigating a move from a longtime home to assisted living, independent living, or smaller housing.",
@@ -42,6 +47,8 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     description:
       "Real Property Planning supports attorneys and fiduciaries with probate real estate, inherited property sales, trust-owned homes, valuation insight, and coordinated property guidance throughout Washington State.",
     h1: "A Real Estate Resource for Attorneys and Fiduciaries",
+    quickAnswerQ: "How does David Stein support attorneys with estate and probate real estate?",
+    quickAnswerA: "David handles the real estate side of estate, probate, and family law matters — property assessment, valuation-informed pricing, preparation coordination, and sale management — so attorneys and their clients can focus on the legal and financial priorities.",
     intro:
       "Real Property Planning works with attorneys and their clients when real property is involved in probate, trust administration, estate transitions, and senior housing moves throughout Washington State.",
   },
@@ -50,6 +57,8 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     description:
       "First time managing an estate property? David Stein walks executors and trustees through every step — assessing the home, coordinating preparation, pricing it right, and handling the sale.",
     h1: "A Practical Guide for Executors and Trustees Managing Estate Property",
+    quickAnswerQ: "What should an executor do when there is real estate in the estate?",
+    quickAnswerA: "Secure the property, confirm your legal authority to act, and get a realistic assessment of the home's condition and market value. David Stein — a licensed Washington broker and certified residential appraiser — handles property evaluation, preparation, pricing, and the full sale process.",
     intro:
       "First time managing an estate property? David Stein walks executors and trustees through every step — assessing the home, coordinating preparation, pricing it right, and handling the sale from start to finish.",
   },
@@ -66,6 +75,8 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     description:
       "Learn why accurate valuation matters for probate real estate, inherited homes, estate sales, trust-owned property, pricing strategy, and family decision-making throughout Washington State.",
     h1: "Why Valuation Matters for Probate and Inherited Property",
+    quickAnswerQ: "Why does property valuation matter in estate and probate sales?",
+    quickAnswerA: "Accurate valuation prevents the two most expensive mistakes in estate property sales: overpricing that leads to months of carrying costs and lost buyer interest, and underpricing that leaves tens of thousands of dollars on the table.",
     intro:
       "Accurate valuation is the foundation of every successful estate property sale. David Stein's dual credentials as a real estate broker and certified appraiser provide a unique perspective on pricing strategy throughout Washington State.",
   },
@@ -74,6 +85,8 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     description:
       "Real Property Planning provides thoughtful real estate support for downsizing, relocation, assisted living moves, and senior housing transitions throughout Washington State.",
     h1: "Senior Transition Real Estate Support",
+    quickAnswerQ: "How does David Stein help seniors and families sell a longtime home?",
+    quickAnswerA: "David provides patient, step-by-step guidance for seniors and families transitioning from a longtime home — whether moving to assisted living, downsizing, or relocating closer to family. He evaluates the home's condition, coordinates preparation, prices it accurately, and manages the sale.",
     intro:
       "When a parent or loved one needs to sell the family home, the process should feel steady — not rushed. David Stein works at the family's pace, handling preparation, pricing, and the sale with patience and care throughout Washington State.",
   },
@@ -82,6 +95,8 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     description:
       "From initial consultation to closing day — here is exactly how David Stein helps executors, attorneys, and families sell probate, inherited, and trust-owned property throughout Washington State.",
     h1: "How the Process Works",
+    quickAnswerQ: "How do estate and probate property sales work in Washington State?",
+    quickAnswerA: "David Stein follows a clear seven-step process: initial consultation, property evaluation and valuation-informed pricing, preparation and vendor coordination, listing and marketing, offer review and negotiation, escrow and closing management, and post-sale support.",
     intro:
       "From initial consultation to closing day — here is exactly how David Stein helps executors, attorneys, and families sell probate, inherited, and trust-owned property throughout Washington State.",
   },
@@ -184,10 +199,12 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   "/counties/king": {
     title: "King County Probate Real Estate | Real Property Planning",
     description:
-      "Real Property Planning helps clients and referral partners with probate real estate, inherited homes, estate sales, trust-owned property, and senior transitions in King County, Washington.",
+      "Probate real estate and inherited property sales guidance for executors, attorneys, and families in King County — Seattle, Bellevue, Kirkland, Redmond, and surrounding communities.",
     h1: "Estate and Inherited Property Sales in King County",
+    quickAnswerQ: "How do probate and estate property sales work in King County?",
+    quickAnswerA: "King County's intense buyer demand and wide price variation make accurate pricing especially critical for estate sales. David Stein — a licensed broker and certified residential appraiser — evaluates each property's condition and market position, coordinates preparation and sale, and provides defensible pricing that standard agents cannot match.",
     intro:
-      "Real Property Planning helps clients and referral partners with probate real estate, inherited homes, estate sales, trust-owned property, and senior transitions in King County, Washington.",
+      "King County is Washington's largest and most competitive real estate market. Estate properties here range from Capitol Hill bungalows to Eastside homes valued well over a million dollars — making accurate pricing and experienced coordination especially critical.",
     cities: [
       "Seattle", "Bellevue", "Kirkland", "Redmond", "Bothell", "Woodinville",
       "Issaquah", "Sammamish", "Mercer Island", "Shoreline", "Renton", "Newcastle",
@@ -197,10 +214,12 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   "/counties/snohomish": {
     title: "Snohomish County Probate Real Estate | Real Property Planning",
     description:
-      "Real Property Planning helps clients and referral partners with probate real estate, inherited homes, estate sales, trust-owned property, and senior transitions in Snohomish County.",
+      "Probate real estate and inherited property sales support for families and fiduciaries in Snohomish County — Everett, Edmonds, Lynnwood, Mukilteo, and surrounding areas.",
     h1: "Estate and Inherited Property Sales in Snohomish County",
+    quickAnswerQ: "How do inherited home decisions and pricing work in Snohomish County?",
+    quickAnswerA: "Snohomish County spans waterfront communities like Edmonds and Mukilteo, established suburbs like Mill Creek and Bothell, and growing towns like Lake Stevens and Monroe — each with its own buyer pool and pricing dynamics. David Stein evaluates each property in its specific context.",
     intro:
-      "Real Property Planning helps clients and referral partners with probate real estate, inherited homes, estate sales, trust-owned property, and senior transitions in Snohomish County, Washington.",
+      "Snohomish County spans waterfront communities, established suburbs, and growing towns — each with its own buyer pool and pricing dynamics that require local expertise for estate and inherited property sales.",
     cities: [
       "Everett", "Edmonds", "Lynnwood", "Mukilteo", "Mill Creek", "Bothell",
       "Snohomish", "Lake Stevens", "Marysville", "Monroe", "Arlington",
@@ -209,10 +228,12 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   "/counties/pierce": {
     title: "Pierce County Probate Real Estate | Real Property Planning",
     description:
-      "Real Property Planning helps clients and referral partners with probate real estate, inherited homes, estate sales, trust-owned property, and senior transitions in Pierce County.",
+      "Probate real estate and inherited property sales guidance for executors and families in Pierce County — Tacoma, Puyallup, Gig Harbor, Lakewood, and surrounding communities.",
     h1: "Estate and Inherited Property Sales in Pierce County",
+    quickAnswerQ: "What should executors and families know about selling inherited property in Pierce County?",
+    quickAnswerA: "Pierce County's diverse neighborhoods — from Tacoma's North End to Gig Harbor's waterfront — create distinct buyer pools and pricing dynamics. David Stein provides practical, valuation-informed guidance for estate property preparation, pricing, and sale.",
     intro:
-      "Real Property Planning helps clients and referral partners with probate real estate, inherited homes, estate sales, trust-owned property, and senior transitions in Pierce County, Washington.",
+      "Pierce County's diverse communities require locally informed guidance for estate property sales. David Stein works with executors, trustees, and families throughout Tacoma, Gig Harbor, Puyallup, Lakewood, and surrounding areas.",
     cities: [
       "Tacoma", "University Place", "Gig Harbor", "Puyallup", "Bonney Lake",
       "Lakewood", "Sumner", "Fircrest", "Milton",
@@ -221,10 +242,12 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   "/counties/kitsap": {
     title: "Kitsap County Probate Real Estate | Real Property Planning",
     description:
-      "Real Property Planning helps clients and referral partners with probate real estate, inherited homes, estate sales, trust-owned property, and senior transitions in Kitsap County.",
+      "Probate real estate and inherited property sales guidance for executors and families in Kitsap County — Bainbridge Island, Poulsbo, Bremerton, Silverdale, and surrounding areas.",
     h1: "Estate and Inherited Property Sales in Kitsap County",
+    quickAnswerQ: "How do probate and estate property sales work in Kitsap County?",
+    quickAnswerA: "Kitsap County's waterfront properties, military-adjacent communities, and island logistics create unique valuation and coordination challenges for estate sales. David Stein's dual credentials as a broker and certified appraiser provide the depth needed for these distinctive properties.",
     intro:
-      "Real Property Planning helps clients and referral partners with probate real estate, inherited homes, estate sales, trust-owned property, and senior transitions in Kitsap County, Washington.",
+      "Kitsap County's waterfront properties, military-adjacent communities, and island logistics create unique challenges for estate property sales that require locally informed, valuation-based guidance.",
     cities: [
       "Bainbridge Island", "Poulsbo", "Silverdale", "Bremerton",
       "Port Orchard", "Kingston", "Suquamish",
@@ -233,10 +256,12 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   "/counties/skagit": {
     title: "Skagit County Probate Real Estate | Real Property Planning",
     description:
-      "Real Property Planning helps clients and referral partners with probate real estate, inherited homes, estate sales, trust-owned property, and senior transitions in Skagit County.",
+      "Probate real estate and inherited property sales guidance for families and fiduciaries in Skagit County — Mount Vernon, Anacortes, Burlington, and surrounding communities.",
     h1: "Estate and Inherited Property Sales in Skagit County",
+    quickAnswerQ: "How do estate property sales work in Skagit County?",
+    quickAnswerA: "Skagit County's agricultural heritage, waterfront communities, and small-town character create valuation considerations that standard market analysis often misses. David Stein provides hands-on guidance for estate and inherited property sales throughout the county.",
     intro:
-      "Real Property Planning helps clients and referral partners with probate real estate, inherited homes, estate sales, trust-owned property, and senior transitions in Skagit County, Washington.",
+      "Skagit County's agricultural heritage, waterfront communities, and small-town character create unique dynamics for estate property sales that benefit from experienced, valuation-informed guidance.",
     cities: [
       "Mount Vernon", "Burlington", "Anacortes", "Sedro-Woolley",
       "La Conner", "Concrete", "Bow", "Edison",
@@ -327,8 +352,10 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     description:
       "Explore Real Property Planning's services including probate property sales, senior transitions, executor support, and estate-related real estate guidance throughout Washington State.",
     h1: "Real Property Planning Services",
+    quickAnswerQ: "What services does Real Property Planning provide?",
+    quickAnswerA: "Real Property Planning provides probate property sales, senior transition support, executor and trustee guidance, attorney referral coordination, and valuation-informed pricing strategy — all backed by David Stein's dual credentials as a licensed broker and certified residential appraiser.",
     intro:
-      "Probate property sales, senior transitions, executor support, and estate-related real estate guidance throughout Washington State, with a strong focus in Western Washington and the Puget Sound region.",
+      "Probate property sales, senior transitions, executor support, and estate-related real estate guidance throughout Washington State.",
   },
   "/testimonials": {
     title: "Testimonials & Reviews | Real Property Planning",
@@ -387,23 +414,24 @@ const applyMetadata = (html: string, route: string, meta: RouteMeta) => {
 
   // Inject static SSG content into <div id="root"> for crawler visibility
   if (h1 || intro) {
+    const { quickAnswerQ, quickAnswerA } = meta;
     const ssgParts: string[] = [];
     ssgParts.push(`<div id="ssg-content" style="font-family:system-ui,sans-serif;max-width:800px;margin:0 auto;padding:40px 20px">`);
 
-    // H1 and intro paragraph
+    // H1 first
     if (h1) ssgParts.push(`<h1 style="font-size:2rem;line-height:1.2;margin-bottom:16px">${h1}</h1>`);
-    if (intro) ssgParts.push(`<p style="font-size:1.1rem;line-height:1.7;color:#444">${intro}</p>`);
 
-    // NAP block (Name, Address, Phone) — early in content for local SEO crawlers
-    ssgParts.push(`<div style="margin-top:24px;padding:20px;border:1px solid #e5e5e5;border-radius:8px;background:#fafafa">`);
-    ssgParts.push(`<h2 style="font-size:1.2rem;margin:0 0 12px 0">Real Property Planning — David Stein</h2>`);
-    ssgParts.push(`<p style="margin:4px 0;color:#444">Licensed Real Estate Broker &amp; Washington State Certified Residential Appraiser</p>`);
-    ssgParts.push(`<p style="margin:4px 0;color:#444">eXp Realty</p>`);
-    ssgParts.push(`<p style="margin:4px 0;color:#555">Phone: <a href="tel:2069003015" style="color:#1a365d">(206) 900-3015</a></p>`);
-    ssgParts.push(`<p style="margin:4px 0;color:#555">Email: <a href="mailto:david@realpropertyplanning.com" style="color:#1a365d">david@realpropertyplanning.com</a></p>`);
-    ssgParts.push(`<p style="margin:4px 0;color:#555">Mailing Address: PO Box 1462, Woodinville, WA 98072</p>`);
-    ssgParts.push(`<p style="margin:4px 0;color:#555">Office: 1455 NW Leary Way, Seattle, WA 98107</p>`);
-    ssgParts.push(`</div>`);
+    // Quick Answer block — placed FIRST for AEO extraction priority
+    if (quickAnswerQ && quickAnswerA) {
+      ssgParts.push(`<div style="margin-bottom:24px;padding:20px;border:1px solid #e5e5e5;border-radius:12px;background:#fafafa">`);
+      ssgParts.push(`<p style="font-size:0.75rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#a8892f;margin:0 0 8px 0">Quick Answer</p>`);
+      ssgParts.push(`<h2 style="font-size:1.25rem;line-height:1.3;margin:0 0 8px 0">${quickAnswerQ}</h2>`);
+      ssgParts.push(`<p style="font-size:1.05rem;line-height:1.7;color:#444;margin:0">${quickAnswerA}</p>`);
+      ssgParts.push(`</div>`);
+    }
+
+    // Intro paragraph
+    if (intro) ssgParts.push(`<p style="font-size:1.1rem;line-height:1.7;color:#444">${intro}</p>`);
 
     // Optional section headings
     if (sections) {
@@ -414,7 +442,18 @@ const applyMetadata = (html: string, route: string, meta: RouteMeta) => {
       });
     }
 
-    // Areas Served block with city names
+    // NAP block — pushed lower for local SEO but below unique content
+    ssgParts.push(`<div style="margin-top:28px;padding:20px;border:1px solid #e5e5e5;border-radius:8px;background:#fafafa">`);
+    ssgParts.push(`<h2 style="font-size:1.2rem;margin:0 0 12px 0">Real Property Planning — David Stein</h2>`);
+    ssgParts.push(`<p style="margin:4px 0;color:#444">Licensed Real Estate Broker &amp; Washington State Certified Residential Appraiser</p>`);
+    ssgParts.push(`<p style="margin:4px 0;color:#444">eXp Realty</p>`);
+    ssgParts.push(`<p style="margin:4px 0;color:#555">Phone: <a href="tel:2069003015" style="color:#1a365d">(206) 900-3015</a></p>`);
+    ssgParts.push(`<p style="margin:4px 0;color:#555">Email: <a href="mailto:david@realpropertyplanning.com" style="color:#1a365d">david@realpropertyplanning.com</a></p>`);
+    ssgParts.push(`<p style="margin:4px 0;color:#555">Mailing Address: PO Box 1462, Woodinville, WA 98072</p>`);
+    ssgParts.push(`<p style="margin:4px 0;color:#555">Office: 1455 NW Leary Way, Seattle, WA 98107</p>`);
+    ssgParts.push(`</div>`);
+
+    // Areas Served block — last
     ssgParts.push(`<div style="margin-top:28px">`);
     ssgParts.push(`<h2 style="font-size:1.3rem;margin-bottom:12px">Washington State Service Areas</h2>`);
     if (cities && cities.length > 0) {
