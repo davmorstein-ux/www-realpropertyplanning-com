@@ -752,10 +752,14 @@ html, body {
     transform: scale(1.1) !important;
     transform-origin: top center !important;
   }
-  /* The Process tile: grow upward to reduce headspace, lower icon */
+  /* The Process tile: lower icon */
   .premium-tile[data-tile-name="the-process"] .tile-icon {
     transform-origin: bottom center !important;
-    transform: scale(1.30) translateY(2%) !important;
+    transform: scale(1.30) translateY(6%) !important;
+  }
+  /* Senior Moves: nudge icon down */
+  .premium-tile[data-tile-name="senior-moves"] .tile-icon {
+    transform: scale(1.1) translateY(6%) !important;
   }
   /* Appraiser: raise icon more */
   .premium-tile[data-tile-name="appraiser"] .tile-icon {
