@@ -83,7 +83,7 @@ const RetirementReverseMortgage = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground text-center mb-10">
-            Featured Provider
+            Featured Providers
           </h2>
 
           <div className="bg-secondary border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 p-5 sm:p-6">
