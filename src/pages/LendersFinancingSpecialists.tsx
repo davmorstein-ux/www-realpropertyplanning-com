@@ -46,13 +46,13 @@ const LendersFinancingSpecialists = () => (
     </section>
 
     {/* Transitional Icon */}
-    <section className="bg-secondary pt-10 md:pt-14">
+    <section className="pt-10 md:pt-14">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <img
             src={lendersIcon}
             alt="Lenders & Financing"
-            className="block w-full max-w-[480px] h-auto md:max-w-[672px] mx-auto"
+            className="block w-full max-w-[240px] h-auto md:max-w-[336px] mx-auto"
           />
         </div>
       </div>
