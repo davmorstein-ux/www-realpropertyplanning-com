@@ -156,6 +156,36 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.realpropertyplanning.com/counties/clark</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.realpropertyplanning.com/counties/spokane</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.realpropertyplanning.com/counties/thurston</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.realpropertyplanning.com/counties/whatcom</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.realpropertyplanning.com/counties/benton</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.realpropertyplanning.com/trustees</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.realpropertyplanning.com/resources</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -194,5 +224,30 @@
     <loc>https://www.realpropertyplanning.com/resources/moving-relocation-services</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.realpropertyplanning.com/guides/how-probate-real-estate-works</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.realpropertyplanning.com/guides/what-executors-should-do</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.realpropertyplanning.com/guides/inherited-house-washington</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.realpropertyplanning.com/guides/sell-house-during-probate-washington</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.realpropertyplanning.com/guides/taxes-selling-inherited-house-washington</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>

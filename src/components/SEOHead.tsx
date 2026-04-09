@@ -10,7 +10,7 @@ interface SEOHeadProps {
   noindex?: boolean;
 }
 
-const SITE_URL = "https://realpropertyplanning.com";
+const SITE_URL = "https://www.realpropertyplanning.com";
 
 const SEOHead = ({ title, description, canonical, jsonLd, noindex = false }: SEOHeadProps) => {
   const location = useLocation();
