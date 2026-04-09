@@ -158,7 +158,7 @@ const LendersFinancingSpecialists = () => (
                   <img
                     src={crossCountryLogo}
                     alt="CrossCountry Mortgage logo"
-                    className="h-[120px] w-auto object-contain mx-auto sm:mx-0 block scale-[2.5] origin-left"
+                    className="h-[120px] w-auto object-contain mx-auto sm:mx-0 block scale-[2.5] origin-left sm:-ml-[18px]"
                   />
                 </a>
 
