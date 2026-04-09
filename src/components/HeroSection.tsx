@@ -29,11 +29,11 @@ const HeroSection = () => {
             </div>
 
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-primary-foreground font-medium leading-tight mb-4" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.3)' }}>
-              Specialized Guidance for Probate & Estate Property Sales
+              Probate, Estate &amp; Senior Transition Real Estate
             </h1>
             
             <p className="text-lg md:text-xl text-primary-foreground/80 mb-8 leading-relaxed max-w-2xl" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.15)' }}>
-              David Stein brings 20+ years of dual expertise as a licensed broker and certified appraiser — working with executors, attorneys, trustees, and families across Washington State.
+              David Stein works with executors, trustees, attorneys, and families navigating inherited homes, probate sales, trust property, and senior transitions throughout Washington State — with 20+ years of dual expertise as a licensed broker and certified appraiser.
             </p>
             
             <div className="flex flex-col sm:flex-row items-start gap-4">

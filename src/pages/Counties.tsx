@@ -15,27 +15,52 @@ const countyCards = [
   {
     county: "King County",
     href: "/king-county",
-    intro: "Support for inherited homes, estate property, and major home transitions throughout the Eastside, Seattle, and surrounding areas.",
+    intro: "Washington's largest and most competitive real estate market. Estate properties range from Capitol Hill bungalows to Eastside homes valued well over a million dollars — making accurate pricing and experienced coordination especially critical.",
   },
   {
     county: "Snohomish County",
     href: "/snohomish-county",
-    intro: "Guidance for probate and inherited property sales in communities ranging from Edmonds and Lynnwood to Everett, Mukilteo, and beyond.",
+    intro: "Diverse housing stock from established Edmonds neighborhoods to newer Marysville developments. Executors and families here often need help with deferred maintenance, realistic pricing, and coordinating vendors for homes that haven't been updated in decades.",
   },
   {
     county: "Pierce County",
     href: "/pierce-county",
-    intro: "Experienced help with estate sales, trust-owned homes, and transition-related property decisions throughout Pierce County.",
+    intro: "Military-adjacent communities, established Tacoma neighborhoods, and growing suburban areas each present unique challenges for estate sales. Pierce County properties often require careful condition assessment and realistic buyer-pool analysis.",
   },
   {
     county: "Kitsap County",
     href: "/kitsap-county",
-    intro: "Practical real estate guidance for inherited homes and estate-related sales across key Kitsap communities.",
+    intro: "Waterfront properties, naval community transitions, and rural acreage create a market where automated valuations consistently miss the mark. Local knowledge and appraisal-informed pricing are essential here.",
   },
   {
     county: "Skagit County",
     href: "/counties/skagit",
-    intro: "Estate property guidance for families and fiduciaries navigating probate, inherited homes, and property transitions in the Skagit Valley.",
+    intro: "Agricultural properties, small-town homes, and waterfront parcels in the Skagit Valley require a different approach than urban markets. Estate sales here often involve unique zoning, acreage, and condition considerations.",
+  },
+  {
+    county: "Clark County",
+    href: "/clark-county-probate-estate-real-estate",
+    intro: "Cross-state families, Portland-area relocation dynamics, and a rapidly growing market make Clark County estate sales uniquely complex — especially for executors coordinating from Oregon or beyond.",
+  },
+  {
+    county: "Spokane County",
+    href: "/spokane-county-probate-estate-real-estate",
+    intro: "Eastern Washington's largest metro area, with a housing market distinct from the Puget Sound region. Out-of-area executors often need hands-on coordination for inherited properties in Spokane's established neighborhoods.",
+  },
+  {
+    county: "Thurston County",
+    href: "/thurston-county",
+    intro: "State capital region with a mix of government-adjacent homes, established neighborhoods, and rural acreage. Retiree transitions and estate planning follow-through are especially common here.",
+  },
+  {
+    county: "Whatcom County",
+    href: "/whatcom-county",
+    intro: "Bellingham and surrounding communities attract second-home owners and retirees, creating frequent distance-ownership challenges when estates need to be settled or seniors need to transition.",
+  },
+  {
+    county: "Benton County",
+    href: "/benton-county",
+    intro: "Tri-Cities area properties often involve practical pricing challenges, multi-generational family homes, and executors coordinating from Western Washington or out of state.",
   },
 ];
 
@@ -43,10 +68,10 @@ const Counties = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Washington State Service Areas | Probate & Estate Real Estate"
-        description="Real Property Planning provides probate real estate, inherited property, estate sale, valuation-informed strategy, and senior transition support for clients throughout Washington State, with especially strong experience in Western Washington."
+        title="Probate & Estate Real Estate by County | Washington State | David Stein"
+        description="County-by-county probate real estate guidance for executors, trustees, attorneys, and families throughout Washington State. Licensed broker and certified appraiser David Stein provides localized support for inherited homes, estate sales, and senior transitions."
       />
-      <BreadcrumbSchema items={[{ name: "Counties", url: "/counties" }]} />
+      <BreadcrumbSchema items={[{ name: "Service Areas", url: "/counties" }]} />
       <Header />
 
       {/* Hero */}
@@ -57,16 +82,16 @@ const Counties = () => {
               Service Areas
             </p>
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-[22px]">
-              Washington State Service Areas
+              Probate &amp; Estate Real Estate Guidance by County
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-5">
-              Real Property Planning provides probate real estate, inherited property, estate sale, valuation-informed strategy, and senior transition support for clients throughout Washington State. David Stein has especially strong experience in Western Washington and the Puget Sound region, including King, Snohomish, Pierce, Skagit, and Kitsap Counties.
+              Every county in Washington has its own market dynamics, housing stock, and buyer expectations. Estate properties in Seattle's urban neighborhoods sell differently than inherited homes in Spokane's established communities or waterfront parcels on Bainbridge Island. David Stein provides county-specific guidance so executors, trustees, attorneys, and families get pricing and coordination tailored to where the property actually sits.
             </p>
             <p className="text-lg text-primary-foreground/70 leading-relaxed mb-5">
-              For clients moving into or out of Washington, or for families needing help in other markets, David can also coordinate referrals through eXp Realty's broker network across the United States and internationally.
+              As a licensed broker and state-certified residential appraiser with over 20 years of experience, David evaluates each property based on its real condition and local market context — not generic statewide assumptions. Select a county below to see how he works in that area.
             </p>
             <p className="text-base text-primary-foreground/60 leading-relaxed">
-              Select a county below to learn how Real Property Planning serves each area, or <Link to="/cities-we-serve" className="underline hover:text-gold transition-colors">browse all cities we serve</Link>.
+              Looking for a specific city? <Link to="/cities-we-serve" className="underline hover:text-gold transition-colors">Browse all cities we serve</Link>.
             </p>
           </div>
         </div>
@@ -106,10 +131,10 @@ const Counties = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-[1140px] mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
-              Services Available Throughout Our Service Areas
+              What David Can Help With in Each County
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-10 max-w-3xl">
-              Real Property Planning offers the following services for clients throughout Washington State:
+              Whether the situation involves probate, an inherited home, a trust-owned property, or a senior transition, David provides hands-on guidance through every step:
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
               {services.map((service) => (
