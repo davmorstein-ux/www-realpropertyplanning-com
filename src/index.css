@@ -749,7 +749,7 @@ html, body {
   .premium-tile[data-tile-name="probate-sales"] .tile-icon,
   .premium-tile[data-tile-name="the-process"] .tile-icon,
   .premium-tile[data-tile-name="cpas"] .tile-icon {
-    transform: scale(1.18) translateY(-8%) !important;
+    transform: scale(1.18) translateY(-14%) !important;
   }
   /* Reset for attorney tiles so they aren't affected */
   .attorney-tiles-grid .premium-tile .tile-icon {
