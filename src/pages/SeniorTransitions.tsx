@@ -114,6 +114,11 @@ const SeniorTransitions = () => {
       <DirectAnswerBlock
         question="How does David Stein help seniors and families sell a longtime home?"
         answer="David provides patient, step-by-step guidance for seniors and families transitioning from a longtime home — whether moving to assisted living, downsizing, or relocating closer to family. He evaluates the home's condition, coordinates preparation and cleanout, prices it using his dual broker and appraiser credentials, and manages the sale while communicating clearly with everyone involved."
+        supportBullets={[
+          "Patient, respectful coordination that honors the emotional weight of the transition",
+          "Valuation-informed pricing based on actual condition — not automated estimates",
+          "Full-service management: cleanout, repairs, staging, listing, and closing",
+        ]}
       />
 
       <TrustStrip />

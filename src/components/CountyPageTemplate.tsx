@@ -125,29 +125,12 @@ const CountyPageTemplate = ({
       <DirectAnswerBlock
         question={`How do probate and estate property sales work in ${countyName}?`}
         answer={`David Stein provides experienced real estate guidance for executors, trustees, attorneys, and families selling probate, inherited, and trust-held property in ${countyName}, Washington. As a licensed broker and certified residential appraiser, he evaluates each property's condition and market position, coordinates preparation and sale, and provides defensible pricing that standard agents cannot match.`}
+        supportSteps={[
+          { label: "Evaluate", desc: "Honest property assessment and valuation-informed pricing" },
+          { label: "Prepare", desc: "Cleanout, repairs, and vendor coordination managed for you" },
+          { label: "Sell", desc: "Marketing, negotiation, and closing with clear communication" },
+        ]}
       />
-
-      {/* Compact scannable section — 3 bullets */}
-      <section className="py-10 lg:py-12 bg-background">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <div className="grid sm:grid-cols-3 gap-6 text-center">
-              <div>
-                <span className="text-gold font-serif text-xl font-semibold">Evaluate</span>
-                <p className="text-muted-foreground text-sm mt-1">Honest property assessment and valuation-informed pricing</p>
-              </div>
-              <div>
-                <span className="text-gold font-serif text-xl font-semibold">Prepare</span>
-                <p className="text-muted-foreground text-sm mt-1">Cleanout, repairs, and vendor coordination managed for you</p>
-              </div>
-              <div>
-                <span className="text-gold font-serif text-xl font-semibold">Sell</span>
-                <p className="text-muted-foreground text-sm mt-1">Marketing, negotiation, and closing with clear communication</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Who I Help + Why Credentials — combined compact section */}
       <section className="py-12 lg:py-16 bg-secondary">

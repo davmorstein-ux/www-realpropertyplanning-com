@@ -261,29 +261,12 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
       <DirectAnswerBlock
         question={`How do probate and estate property sales work in ${city.name}?`}
         answer={`David Stein provides hands-on real estate guidance for executors, trustees, attorneys, and families selling probate, inherited, and trust-held property in ${city.name}, ${city.county}. As a licensed broker and certified residential appraiser with 20+ years of experience, he evaluates each property's condition, develops accurate pricing, coordinates preparation, and manages the full sale process.`}
+        supportSteps={[
+          { label: "Evaluate", desc: "Property assessment and valuation-informed pricing" },
+          { label: "Prepare", desc: "Cleanout, repairs, and vendor coordination" },
+          { label: "Sell", desc: "Marketing, negotiation, and closing" },
+        ]}
       />
-
-      {/* Compact scannable section */}
-      <section className="py-10 lg:py-12 bg-background">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <div className="grid sm:grid-cols-3 gap-6 text-center">
-              <div>
-                <span className="text-gold font-serif text-xl font-semibold">Evaluate</span>
-                <p className="text-muted-foreground text-sm mt-1">Property assessment and valuation-informed pricing</p>
-              </div>
-              <div>
-                <span className="text-gold font-serif text-xl font-semibold">Prepare</span>
-                <p className="text-muted-foreground text-sm mt-1">Cleanout, repairs, and vendor coordination</p>
-              </div>
-              <div>
-                <span className="text-gold font-serif text-xl font-semibold">Sell</span>
-                <p className="text-muted-foreground text-sm mt-1">Marketing, negotiation, and closing</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Who I Help + Why Credentials — combined compact section */}
       <section className="py-12 lg:py-16 bg-secondary">
