@@ -10,6 +10,8 @@ import { Phone, Mail, Globe, MapPin } from "lucide-react";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 import danBartelPhoto from "@/assets/providers/dan-bartel-c2financial.png";
 import c2FinancialLogo from "@/assets/providers/c2financial-logo.png";
+import jeffMcGinnisPhoto from "@/assets/providers/jeff-mcginnis-crosscountry.webp";
+import crossCountryLogo from "@/assets/providers/crosscountry-mortgage-logo.png";
 
 const RetirementReverseMortgage = () => (
   <div className="min-h-screen bg-background">
@@ -79,9 +81,9 @@ const RetirementReverseMortgage = () => (
     {/* Featured Professional — mirrors AdultFamilyHomes provider card */}
     <section className="py-14 md:py-20 bg-secondary">
       <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl mx-auto space-y-8">
           <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground text-center mb-10">
-            Featured Provider
+            Featured Providers
           </h2>
 
           <div className="bg-secondary border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 p-5 sm:p-6">
@@ -138,7 +140,65 @@ const RetirementReverseMortgage = () => (
                 </div>
               </div>
             </div>
+
+
+          {/* Jeff McGinnis — CrossCountry Mortgage */}
+          <div className="bg-secondary border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 p-5 sm:p-6">
+            <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-start sm:gap-5">
+              <div className="shrink-0">
+                <img
+                  src={jeffMcGinnisPhoto}
+                  alt="Jeff McGinnis — Senior Loan Officer, CrossCountry Mortgage"
+                  className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-border shadow-sm"
+                />
+              </div>
+
+              <div className="flex w-full flex-col items-center sm:flex-1 sm:items-start">
+                <a href="https://crosscountrymortgage.com/seattle-wa-5531/jeffrey-mcginnis/" target="_blank" rel="noopener noreferrer" className="sm:self-start">
+                  <img
+                    src={crossCountryLogo}
+                    alt="CrossCountry Mortgage logo"
+                    className="h-[42px] w-auto object-contain mx-auto sm:mx-0 block"
+                  />
+                </a>
+
+                <div className="w-full mt-1 text-center sm:pl-[58px] sm:text-left">
+                  <p className="text-foreground font-semibold text-lg">Jeff McGinnis</p>
+                  <p className="text-muted-foreground text-sm mb-1.5">Senior Loan Officer · CrossCountry Mortgage</p>
+
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-3">
+                    I'm a seasoned mortgage lending professional with over 25 years of experience in the industry. I have a proven track record of success and am known as one of the top producers in my field. With a deep understanding of the lending landscape and a passion for helping clients achieve their homeownership goals, I've established myself as a trusted and knowledgeable resource for borrowers.
+                  </p>
+
+                  <div className="space-y-1.5 text-sm">
+                    <div className="flex items-start gap-2 justify-center sm:justify-start">
+                      <MapPin className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground">1000 Dexter Ave N, Suite 310, Seattle, WA 98109</span>
+                    </div>
+                    <div className="flex items-center gap-2 justify-center sm:justify-start">
+                      <Phone className="w-4 h-4 text-accent shrink-0" />
+                      <a href="tel:+12062835626" className="text-accent hover:text-gold underline-offset-4 hover:underline">
+                        (206) 283-5626
+                      </a>
+                    </div>
+                    <div className="flex items-center gap-2 justify-center sm:justify-start">
+                      <Mail className="w-4 h-4 text-accent shrink-0" />
+                      <a href="mailto:jejj.mcginnis@ccm.com" className="text-accent hover:text-gold underline-offset-4 hover:underline break-all">
+                        jejj.mcginnis@ccm.com
+                      </a>
+                    </div>
+                    <div className="flex items-center gap-2 justify-center sm:justify-start">
+                      <Globe className="w-4 h-4 text-accent shrink-0" />
+                      <a href="https://crosscountrymortgage.com/seattle-wa-5531/jeffrey-mcginnis/" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-gold underline-offset-4 hover:underline">
+                        crosscountrymortgage.com
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
         </div>
       </div>
     </section>
