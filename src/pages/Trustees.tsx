@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 import { MessageSquare, Phone, Mail, Globe } from "lucide-react";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 import ListenButton from "@/components/ListenButton";
+import DirectAnswerBlock from "@/components/DirectAnswerBlock";
 import davidSteinPhoto from "@/assets/providers/david-stein-headshot-sq.jpg";
 import expRealtyLogo from "@/assets/providers/exp-realty-logo-large.png";
 import ehoLogo from "@/assets/providers/equal-housing-opportunity.png";
