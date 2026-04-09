@@ -1042,7 +1042,7 @@ html, body {
 .rpp-compass-nav {
   position: fixed;
   z-index: 9999;
-  bottom: 40px;
+  bottom: 12px;
   left: 50%;
   transform: translateX(-50%);
   pointer-events: none;
