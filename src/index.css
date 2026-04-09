@@ -1042,7 +1042,7 @@ html, body {
 .rpp-compass-nav {
   position: fixed;
   z-index: 9999;
-  bottom: 28px;
+  bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
   pointer-events: none;
@@ -1050,8 +1050,8 @@ html, body {
 
 .rpp-compass-container {
   position: relative;
-  width: 180px;
-  height: 120px;
+  width: 540px;
+  height: 360px;
   pointer-events: none;
 }
 
@@ -1184,11 +1184,11 @@ html, body {
 /* Mobile */
 @media (max-width: 768px) {
   .rpp-compass-nav {
-    bottom: 20px;
+    bottom: 24px;
   }
 
   .rpp-compass-container {
-    width: 150px;
-    height: 100px;
+    width: 360px;
+    height: 240px;
   }
 }
