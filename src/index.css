@@ -877,6 +877,12 @@ html, body {
   .premium-tile .tile-label-tight[data-tile-id="financial-planning"] {
     font-size: 0.95rem !important;
   }
+  .premium-tile .tile-label-tight[data-tile-id="estate-liquidation"] {
+    margin-top: 0.1rem !important;
+  }
+  .premium-tile .tile-label-tight[data-tile-id="appraiser"] {
+    margin-top: -0.8rem !important;
+  }
 }
 
 /* ═══════════════════════════════════════════════
