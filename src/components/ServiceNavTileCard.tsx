@@ -38,9 +38,11 @@ const ServiceNavTileCard = ({ tile, index, columns = 3 }: { tile: ServiceTile; i
                       ? "appraiser"
                       : tile.title === "Probate Terms"
                         ? "probate-terms"
-                        : tile.title === "Senior Living"
-                          ? "senior-living"
-                          : undefined;
+                         : tile.title === "Senior Living"
+                           ? "senior-living"
+                           : tile.title === "Service Areas"
+                             ? "service-areas"
+                             : undefined;
 
   const tileVisual = (
     <>
