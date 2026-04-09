@@ -740,6 +740,10 @@ html, body {
   .premium-tile[data-tile-name="the-process"] .tile-icon {
     transform-origin: bottom center !important;
   }
+  /* Real Estate Appraiser: nudge icon upward on mobile */
+  .premium-tile[data-tile-name="appraiser"] .tile-icon {
+    transform: scale(1.1) translateY(-8%) !important;
+  }
   /* Reset for attorney tiles so they aren't affected */
   .attorney-tiles-grid .premium-tile .tile-icon {
     transform: none !important;
