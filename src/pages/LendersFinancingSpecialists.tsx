@@ -154,11 +154,11 @@ const LendersFinancingSpecialists = () => (
               </div>
 
               <div className="flex w-full flex-col items-center sm:flex-1 sm:items-start">
-                <a href="https://crosscountrymortgage.com/seattle-wa-5531/jeffrey-mcginnis/" target="_blank" rel="noopener noreferrer" className="sm:self-start">
+                <a href="https://crosscountrymortgage.com/seattle-wa-5531/jeffrey-mcginnis/" target="_blank" rel="noopener noreferrer" className="sm:self-start sm:ml-[58px]">
                   <img
                     src={crossCountryLogo}
                     alt="CrossCountry Mortgage logo"
-                    className="h-[42px] w-auto object-contain mx-auto sm:mx-0 block"
+                    className="h-[120px] w-auto object-contain mx-auto sm:mx-0 block"
                   />
                 </a>
 
