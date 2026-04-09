@@ -737,27 +737,30 @@ html, body {
 
 .service-nav-tile-link {
   position: absolute;
-  top: 36%;
+  top: 44%;
   left: 50%;
-  width: 24%;
-  height: 14%;
-  transform: translateX(-50%);
+  width: 12%;
+  height: 8%;
+  transform: translate(-50%, -50%);
   z-index: 20;
+  pointer-events: auto;
   background: transparent;
-  clip-path: ellipse(46% 42% at 50% 50%);
+  border-radius: 9999px;
 }
 
 /* Homepage tiles: enlarge icons 10% on mobile only (except Probate Sales) */
 @media (max-width: 639px) {
   .service-nav-tile-mobile-hitbox {
     position: absolute;
-    top: 31%;
+    top: 44%;
     left: 50%;
-    width: 46%;
-    height: 27%;
-    transform: translateX(-50%);
+    width: 22%;
+    height: 12%;
+    transform: translate(-50%, -50%);
     z-index: 20;
     pointer-events: auto;
+    border-radius: 9999px;
+  }
     clip-path: ellipse(48% 46% at 50% 50%);
   }
 
