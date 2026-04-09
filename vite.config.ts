@@ -413,8 +413,8 @@ const buildSsgContent = (meta: RouteMeta) => {
   }
 
   ssgParts.push(`<div style="margin-top:28px;padding:20px;border:1px solid #e5e5e5;border-radius:8px;background:#fafafa">`);
-  ssgParts.push(`<h2 style="font-size:1.2rem;margin:0 0 12px 0">Real Property Planning — David Stein</h2>`);
-  ssgParts.push(`<p style="margin:4px 0;color:#444">Licensed Real Estate Broker &amp; Washington State Certified Residential Appraiser</p>`);
+  ssgParts.push(`<h2 style="font-size:1.2rem;margin:0 0 12px 0">Real Property Planning</h2>`);
+  ssgParts.push(`<p style="margin:4px 0;color:#444">Licensed Real Estate Brokerage &amp; Certified Residential Appraisal</p>`);
   ssgParts.push(`<p style="margin:4px 0;color:#444">eXp Realty</p>`);
   ssgParts.push(`<p style="margin:4px 0;color:#555">Phone: <a href="tel:2069003015" style="color:#1a365d">(206) 900-3015</a></p>`);
   ssgParts.push(`<p style="margin:4px 0;color:#555">Email: <a href="mailto:david@realpropertyplanning.com" style="color:#1a365d">david@realpropertyplanning.com</a></p>`);
