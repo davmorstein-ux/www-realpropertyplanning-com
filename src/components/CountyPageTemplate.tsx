@@ -25,12 +25,17 @@ interface CountyPageProps {
   typicalSituations?: string[];
   clientTypes?: string[];
   marketOverview?: string;
-  /** Short 2–3 sentence paragraph for "Who I help in [County]" */
   whoIHelp?: string;
-  /** Short paragraph on why broker + appraiser credentials matter here */
   whyCredentialsMatter?: string;
-  /** County-specific FAQs to replace or extend the defaults */
   countySpecificFaqs?: { question: string; answer: string }[];
+  /** Override the default AEO answer block question */
+  aeoQuestion?: string;
+  /** Override the default AEO answer block answer */
+  aeoAnswer?: string;
+  /** Override the default AEO support content with bullets */
+  aeoSupportBullets?: string[];
+  /** Override the default AEO support content with FAQ cards */
+  aeoSupportFaqs?: { question: string; answer: string }[];
 }
 
 const CountyPageTemplate = ({
@@ -46,6 +51,10 @@ const CountyPageTemplate = ({
   whoIHelp,
   whyCredentialsMatter,
   countySpecificFaqs,
+  aeoQuestion,
+  aeoAnswer,
+  aeoSupportBullets,
+  aeoSupportFaqs,
 }: CountyPageProps) => {
   const breadcrumbItems = [
     { name: "Counties", url: "/counties" },
@@ -123,13 +132,15 @@ const CountyPageTemplate = ({
       </section>
 
       <DirectAnswerBlock
-        question={`How do probate and estate property sales work in ${countyName}?`}
-        answer={`David Stein provides experienced real estate guidance for executors, trustees, attorneys, and families selling probate, inherited, and trust-held property in ${countyName}, Washington. As a licensed broker and certified residential appraiser, he evaluates each property's condition and market position, coordinates preparation and sale, and provides defensible pricing that standard agents cannot match.`}
-        supportSteps={[
+        question={aeoQuestion || `How do probate and estate property sales work in ${countyName}?`}
+        answer={aeoAnswer || `David Stein provides experienced real estate guidance for executors, trustees, attorneys, and families selling probate, inherited, and trust-held property in ${countyName}, Washington. As a licensed broker and certified residential appraiser, he evaluates each property's condition and market position, coordinates preparation and sale, and provides defensible pricing that standard agents cannot match.`}
+        supportBullets={aeoSupportBullets}
+        supportFaqs={aeoSupportFaqs}
+        supportSteps={!aeoSupportBullets && !aeoSupportFaqs ? [
           { label: "Evaluate", desc: "Honest property assessment and valuation-informed pricing" },
           { label: "Prepare", desc: "Cleanout, repairs, and vendor coordination managed for you" },
           { label: "Sell", desc: "Marketing, negotiation, and closing with clear communication" },
-        ]}
+        ] : undefined}
       />
 
       {/* Who I Help + Why Credentials — combined compact section */}

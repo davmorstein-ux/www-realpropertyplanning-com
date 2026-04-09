@@ -17,28 +17,25 @@ export interface CityData {
   slug: string;
   county: string;
   countySlug: string;
-  /** Community tone — drives template language variation */
   tone?: CommunityTone;
-  /** Short unique descriptor for meta/intro variation */
   descriptor?: string;
-  /** Unique hero intro paragraph for the city page */
   heroIntro?: string;
-  /** Unique "why local knowledge matters" paragraph */
   localKnowledge?: string;
-  /** Unique "why broker/appraiser" paragraph */
   brokerAppraiserValue?: string;
-  /** City-specific situations clients face */
   localSituations?: string[];
-  /** City-specific client types */
   localClientTypes?: string[];
-  /** Custom hero heading for the city page */
   heroHeading?: string;
-  /** Short paragraph: who David helps in this city */
   whoIHelp?: string;
-  /** Short paragraph: why broker+appraiser credentials matter here */
   whyCredentialsMatter?: string;
-  /** City-specific FAQs */
   localFaqs?: { question: string; answer: string }[];
+  /** Override the default AEO answer block question */
+  aeoQuestion?: string;
+  /** Override the default AEO answer block answer */
+  aeoAnswer?: string;
+  /** Override the default AEO support content with bullets */
+  aeoSupportBullets?: string[];
+  /** Override the default AEO support content with FAQ cards */
+  aeoSupportFaqs?: { question: string; answer: string }[];
 }
 
 export interface CountyData {
@@ -87,6 +84,12 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
       "Out-of-state heirs who need local coordination for an inherited Eastside property",
       "Financial advisors needing defensible Bellevue property valuations for estate planning or settlement",
     ],
+    aeoQuestion: "What should you know about selling estate or inherited property in Bellevue?",
+    aeoAnswer: "Bellevue's high-value, competitive market makes accurate pricing especially important in estate and probate sales. David Stein — a licensed broker and certified residential appraiser — evaluates each property based on its actual condition, lot characteristics, and neighborhood-level demand, providing the defensible pricing that executors, trustees, and attorneys need in a market where mispricing can cost tens of thousands of dollars.",
+    aeoSupportFaqs: [
+      { question: "Why does valuation expertise matter in Bellevue?", answer: "Bellevue's wide price range — from Crossroads ramblers to West Bellevue estates — means automated tools often miss the condition and neighborhood factors that drive actual buyer behavior." },
+      { question: "Can David coordinate a Bellevue estate sale remotely?", answer: "Yes. Many Bellevue clients manage the process from out of state. David handles property assessment, preparation, listing, and closing with regular updates." },
+    ],
   },
   kirkland: {
     tone: "suburban",
@@ -110,6 +113,13 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
       "Adult children managing a parent's Kirkland home sale from out of state",
       "Financial advisors needing Kirkland property valuations that account for the city's walkability and waterfront premiums",
     ],
+    aeoQuestion: "How should you approach pricing and preparation for a Kirkland estate property?",
+    aeoAnswer: "Kirkland's blend of waterfront charm and growing neighborhoods creates distinct buyer expectations that vary by location. David Stein's dual credentials as a licensed broker and certified appraiser help executors, trustees, and families price properties accurately — whether it's a waterfront home in Moss Bay or a larger-lot property in Juanita or Finn Hill.",
+    aeoSupportBullets: [
+      "Neighborhood-level pricing that accounts for waterfront proximity, walkability, and condition",
+      "Strategic preparation guidance — what to invest in and what to skip",
+      "Full coordination for out-of-state families managing Kirkland property transitions",
+    ],
   },
   redmond: {
     tone: "suburban",
@@ -132,6 +142,13 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
       "Trustees responsible for trust-owned homes across Redmond's distinct submarkets — Education Hill, Overlake, Trilogy, Redmond Ridge",
       "Adult children managing a parent's Redmond home sale from out of state during a period of significant market evolution",
       "Financial advisors needing current Redmond property valuations for estate planning in a rapidly appreciating market",
+    ],
+    aeoQuestion: "What should you know about selling inherited or trust-owned property in Redmond?",
+    aeoAnswer: "Redmond's tech-driven market creates wide value spreads between neighborhoods — from Education Hill ramblers to Trilogy active-adult homes. David Stein's dual credentials as a broker and certified appraiser provide the segment-specific analysis that Redmond estate and transition situations require.",
+    aeoSupportBullets: [
+      "Submarket-specific pricing for Education Hill, Overlake, Trilogy, and Redmond Ridge",
+      "Preparation strategy tailored to each property's competitive landscape",
+      "Remote coordination for out-of-state executors and trustees",
     ],
   },
   bothell: {
@@ -179,6 +196,13 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
       "Adult children managing a parent's Issaquah home sale from out of the area",
       "Financial advisors needing Issaquah property valuations that account for the wide spread between community segments",
     ],
+    aeoQuestion: "What are the first decisions to make with an inherited home in Issaquah?",
+    aeoAnswer: "Issaquah's segmented market — from Highlands planned communities to Olde Town homes — means inherited properties compete in very different buyer pools depending on location. David Stein evaluates each property's specific context and provides valuation-informed guidance on preparation, pricing, and timing.",
+    aeoSupportBullets: [
+      "Community-specific pricing for Highlands, Talus, Olde Town, and foothills-adjacent properties",
+      "Honest guidance on preparation investments that deliver meaningful return",
+      "Full coordination of cleanout, repairs, and sale management",
+    ],
   },
   sammamish: {
     tone: "premium",
@@ -208,6 +232,12 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
       "Out-of-state heirs who need local coordination for an inherited Mercer Island property",
       "Financial advisors needing Mercer Island property valuations for estate planning in one of the region's most exclusive markets",
     ],
+    aeoQuestion: "How should you approach selling high-value property on Mercer Island?",
+    aeoAnswer: "Mercer Island's premium market demands valuation expertise that reflects the island's unique buyer pool and property characteristics. David Stein's dual credentials as a broker and certified appraiser provide the defensible, condition-based pricing that executors, trustees, and families need when significant value is at stake.",
+    aeoSupportFaqs: [
+      { "question": "Why does valuation expertise matter on Mercer Island?", "answer": "The island's premium pricing and distinctive properties mean automated tools often miss the condition and lot factors that drive buyer decisions and appraised value." },
+      { "question": "Can David manage a Mercer Island estate sale remotely?", "answer": "Yes. David handles property assessment, preparation coordination, marketing, and closing — keeping out-of-state families informed throughout." },
+    ],
   },
   newcastle: {
     tone: "premium",
@@ -236,6 +266,13 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
       "Trustees responsible for trust-owned homes and condos across Seattle's diverse urban submarkets",
       "Out-of-state heirs who need comprehensive local coordination for an inherited Seattle property",
       "Financial advisors needing Seattle property valuations that go beyond citywide averages to reflect actual neighborhood conditions",
+    ],
+    aeoQuestion: "How do estate and probate property sales work in Seattle's diverse neighborhoods?",
+    aeoAnswer: "Seattle's neighborhood-driven market means an estate property in Capitol Hill faces entirely different buyer expectations than one in Ballard, Magnolia, or Rainier Valley. David Stein's dual credentials as a broker and certified appraiser provide the neighborhood-sensitive pricing and preparation strategy that Seattle estate sales require.",
+    aeoSupportBullets: [
+      "Neighborhood-level pricing that reflects Seattle's micro-market dynamics",
+      "Condition-based valuation for older homes with deferred maintenance",
+      "Full coordination for executors managing from out of state",
     ],
   },
   renton: {
@@ -382,6 +419,13 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
       "Adult children managing a parent's Woodinville home sale from the metro area",
       "Financial advisors needing Woodinville property valuations for estate settlement where rural-residential features create pricing complexity",
     ],
+    aeoQuestion: "What should you know about selling an inherited home in Woodinville?",
+    aeoAnswer: "Woodinville's mix of established neighborhoods, wine country adjacency, and newer developments creates pricing nuances that require local expertise. David Stein evaluates each property based on its specific location, condition, and buyer pool — providing the honest, valuation-informed guidance that families need during property transitions.",
+    aeoSupportBullets: [
+      "Property-specific pricing that accounts for Woodinville's diverse housing stock",
+      "Clear preparation guidance — what improvements matter and what to skip",
+      "Hands-on coordination for families managing from a distance",
+    ],
   },
   kenmore: {
     tone: "waterfront",
@@ -489,6 +533,13 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
       "Adult children managing a parent's Lynnwood home sale from out of state",
       "Financial advisors needing Lynnwood property valuations that account for the city's uneven transformation",
     ],
+    aeoQuestion: "What are the practical first steps for selling an inherited home in Lynnwood?",
+    aeoAnswer: "Lynnwood's accessible price point and proximity to Seattle make it a strong market for estate properties — but accurate pricing still requires understanding condition-driven factors that automated tools miss. David Stein provides clear, practical guidance to help executors and families move forward with confidence.",
+    aeoSupportBullets: [
+      "Realistic pricing based on actual property condition and local buyer expectations",
+      "Practical preparation strategy focused on cost-effective improvements",
+      "Step-by-step coordination from cleanout through closing",
+    ],
   },
   edmonds: {
     tone: "waterfront",
@@ -511,6 +562,12 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
       "Trustees responsible for trust-owned homes in Edmonds where waterfront premiums require specialized assessment",
       "Adult children managing a parent's Edmonds home sale from out of state",
       "Financial advisors needing Edmonds property valuations that account for the community's micro-location value differences",
+    ],
+    aeoQuestion: "What should you consider when selling an inherited home in Edmonds?",
+    aeoAnswer: "Edmonds' walkable downtown, waterfront character, and strong buyer demand create specific expectations for estate properties. David Stein's dual credentials as a broker and certified appraiser help families price inherited homes accurately — accounting for the condition gaps between estate properties and the updated homes Edmonds buyers typically expect.",
+    aeoSupportFaqs: [
+      { "question": "How does Edmonds buyer expectation affect estate sales?", "answer": "Edmonds buyers value walkability, waterfront proximity, and updated finishes. Estate properties may need targeted preparation to compete effectively." },
+      { "question": "Can David coordinate an Edmonds estate sale remotely?", "answer": "Yes. David manages the full process locally — property assessment, preparation, listing, and closing — with regular updates for out-of-area families." },
     ],
   },
   "mountlake-terrace": {
@@ -553,6 +610,13 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
       "Adult children managing a parent's Everett home sale from out of the area",
       "Financial advisors needing Everett property valuations that account for the county seat's diverse submarkets",
     ],
+    aeoQuestion: "What are practical first steps for inherited home sales in Everett?",
+    aeoAnswer: "Everett's evolving market offers opportunity for estate property sales — but realistic pricing and practical preparation are key. David Stein evaluates each property's condition, identifies cost-effective improvements, and manages the full sale process for executors and families who need clear, honest guidance.",
+    aeoSupportBullets: [
+      "Condition-based pricing that reflects Everett's neighborhood-level market dynamics",
+      "Practical preparation recommendations focused on buyer expectations and return on investment",
+      "Full-service coordination for out-of-state executors and family members",
+    ],
   },
   "mill-creek": {
     tone: "suburban",
@@ -593,6 +657,12 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
       "Trustees responsible for trust-owned properties in Snohomish where historic homes, acreage, or river proximity require specialized assessment",
       "Adult children managing a parent's Snohomish home sale from the metro area",
       "Financial advisors needing Snohomish property valuations for estate settlement where small-town and rural features create pricing complexity",
+    ],
+    aeoQuestion: "How should you price and prepare an inherited property in Snohomish?",
+    aeoAnswer: "Snohomish's small-town character and rural-adjacent properties create valuation challenges that automated tools handle poorly. David Stein's certified appraisal credentials allow him to evaluate acreage, outbuildings, and non-standard features with the accuracy that estate and trust sales demand.",
+    aeoSupportFaqs: [
+      { "question": "Why is valuation expertise important for Snohomish properties?", "answer": "Acreage, outbuildings, and rural-adjacent lots require hands-on evaluation that automated tools consistently miss." },
+      { "question": "Can David help with a Snohomish property I inherited from out of state?", "answer": "Yes. David coordinates the full process locally — assessment, cleanout, preparation, and sale — with regular updates so you can manage from a distance." },
     ],
   },
   "lake-stevens": {
@@ -667,6 +737,13 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
       "Adult children managing a parent's Tacoma home sale from outside Pierce County",
       "Financial advisors needing Tacoma property valuations that distinguish between the city's dramatically different submarkets",
     ],
+    aeoQuestion: "What should executors and families know about selling inherited property in Tacoma?",
+    aeoAnswer: "Tacoma's diverse neighborhoods — from the North End to Hilltop to the waterfront — create distinct buyer pools and pricing dynamics for estate properties. David Stein provides practical, valuation-informed guidance that helps executors and families navigate preparation decisions, pricing strategy, and the full sale process with confidence.",
+    aeoSupportBullets: [
+      "Neighborhood-specific pricing that reflects Tacoma's diverse market dynamics",
+      "Practical preparation guidance tailored to each property's condition and buyer pool",
+      "Clear communication and coordination for families managing from a distance",
+    ],
   },
   "university-place": {
     tone: "suburban",
@@ -695,6 +772,13 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
       "Trustees managing trust-owned property in Lakewood where lakefront premiums or military rental dynamics affect fiduciary decisions",
       "Out-of-state heirs who need local coordination for an inherited property in a market shaped by JBLM",
       "CPAs and financial planners advising clients on property decisions involving Lakewood's segmented housing market",
+    ],
+    aeoQuestion: "What are practical first steps for probate and trust-related sales in Lakewood?",
+    aeoAnswer: "Lakewood's proximity to Joint Base Lewis-McChord and its mix of established neighborhoods create unique dynamics for estate property sales. David Stein provides straightforward guidance on pricing, preparation, and listing strategy — helping executors and trustees move forward with a clear, practical plan.",
+    aeoSupportBullets: [
+      "Realistic pricing based on condition, location, and local buyer expectations",
+      "Preparation recommendations that balance cost, timeline, and market impact",
+      "Full coordination for families and fiduciaries managing from a distance",
     ],
   },
   puyallup: {
@@ -741,6 +825,12 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
       "Trustees responsible for trust-owned homes in Gig Harbor where the distinction between 'Gig Harbor address' and Gig Harbor proper affects pricing",
       "Out-of-state heirs who need local coordination for an inherited peninsula property",
       "Financial advisors needing Gig Harbor property valuations that account for the community's premium waterfront positioning",
+    ],
+    aeoQuestion: "How should you approach probate and trust-related property sales in Gig Harbor?",
+    aeoAnswer: "Gig Harbor's waterfront character, premium neighborhoods, and distinctive properties require thoughtful strategy for estate and trust sales. David Stein's dual credentials as a broker and certified appraiser provide the valuation depth needed to price these properties accurately and guide families through the process with care.",
+    aeoSupportFaqs: [
+      { "question": "Why does Gig Harbor require specialized pricing?", "answer": "Waterfront proximity, view premiums, and community character create pricing nuances that automated tools and standard market analysis often miss." },
+      { "question": "Can David coordinate a Gig Harbor estate sale from a distance?", "answer": "Yes. David manages property assessment, preparation, marketing, and closing — providing regular updates to families and fiduciaries who aren't local." },
     ],
   },
   fircrest: {
@@ -868,6 +958,13 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
       "Families coordinating senior transitions from longtime Silverdale homes",
       "Financial advisors needing Silverdale property valuations that account for the community's military-adjacent market dynamics",
     ],
+    aeoQuestion: "What should you know about selling probate or inherited property in Silverdale?",
+    aeoAnswer: "Silverdale's proximity to Naval Base Kitsap and its blend of established and newer neighborhoods create specific dynamics for estate property sales. David Stein provides practical guidance on pricing, preparation, and family coordination — helping executors and trustees navigate the process with clarity.",
+    aeoSupportBullets: [
+      "Market-informed pricing that reflects Silverdale's military-adjacent buyer dynamics",
+      "Clear preparation strategy that balances cost and timeline",
+      "Coordinated communication for multi-family and out-of-area situations",
+    ],
   },
   poulsbo: {
     tone: "waterfront",
@@ -891,6 +988,13 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
       "Out-of-state heirs who need local coordination for an inherited Poulsbo property in a close-knit waterfront community",
       "Financial advisors needing Poulsbo property valuations that account for the community's Scandinavian-influenced waterfront character",
     ],
+    aeoQuestion: "How should you approach inherited property decisions in Poulsbo?",
+    aeoAnswer: "Poulsbo's Scandinavian-influenced character, waterfront setting, and tight-knit community create a distinctive market for estate properties. David Stein's dual credentials as a broker and certified appraiser provide the valuation depth needed for accurate pricing — especially for properties with waterfront proximity or unique architectural character.",
+    aeoSupportBullets: [
+      "Valuation-informed pricing that reflects Poulsbo's unique community character",
+      "Practical coordination for families managing property from outside Kitsap County",
+      "Thoughtful preparation strategy that respects the property and the process",
+    ],
   },
   "bainbridge-island": {
     tone: "premium",
@@ -912,6 +1016,12 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
       "Trustees responsible for trust-owned island homes where waterfront access and community character drive value",
       "Out-of-state heirs who need local island coordination for an inherited Bainbridge property",
       "Financial advisors needing Bainbridge Island property valuations for estate planning in a unique island market",
+    ],
+    aeoQuestion: "What strategy works best for distinctive and higher-value properties on Bainbridge Island?",
+    aeoAnswer: "Bainbridge Island's premium market, distinctive architecture, and island logistics demand thoughtful strategy for estate and trust property sales. David Stein's dual credentials as a broker and certified appraiser provide the valuation depth needed for properties where unique character, waterfront access, and community context all affect value.",
+    aeoSupportFaqs: [
+      { "question": "Why do Bainbridge Island properties need specialized pricing?", "answer": "The island's distinctive architecture, waterfront premiums, and small-market dynamics mean standard comparisons often don't capture what drives actual buyer behavior." },
+      { "question": "Can David manage the full sale process on Bainbridge Island?", "answer": "Yes. David coordinates property assessment, preparation, marketing, and closing — handling ferry logistics and local vendor coordination for families who aren't on-island." },
     ],
   },
   "port-orchard": {
