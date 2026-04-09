@@ -736,6 +736,13 @@ html, body {
 
 /* Homepage tiles: enlarge icons 10% on mobile only (except Probate Sales) */
 @media (max-width: 639px) {
+  .service-nav-tile-mobile-hitbox {
+    position: absolute;
+    inset: 23% 20% 30% 20%;
+    z-index: 20;
+    clip-path: ellipse(50% 48% at 50% 48%);
+  }
+
   .premium-tile:not([data-tile-name="probate-sales"]) .tile-icon {
     transform: scale(1.1) !important;
     transform-origin: top center !important;
@@ -754,9 +761,6 @@ html, body {
   .premium-tile[data-tile-name="the-process"] .tile-icon,
   .premium-tile[data-tile-name="cpas"] .tile-icon {
     transform: scale(1.18) translateY(-14%) !important;
-  }
-  .service-nav-tile-link {
-    clip-path: ellipse(31% 23% at 50% 45%);
   }
 
   /* Reset for attorney tiles so they aren't affected */

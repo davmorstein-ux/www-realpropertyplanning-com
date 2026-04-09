@@ -98,6 +98,7 @@ const ServiceNavTileCard = ({ tile, index, columns = 3 }: { tile: ServiceTile; i
 
   return (
     <div
+      data-tile-name={tileName}
       className="premium-tile relative block w-full text-center -my-[22%] -mx-[4%] scale-[1.45] sm:-my-[22%] sm:-mx-[6%] sm:scale-[1.588] pointer-events-none hover:!z-[100]"
       style={{ zIndex: baseZIndex }}
     >
