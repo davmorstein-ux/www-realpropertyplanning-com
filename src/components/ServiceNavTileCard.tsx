@@ -106,23 +106,21 @@ const ServiceNavTileCard = ({ tile, index, columns = 3 }: { tile: ServiceTile; i
       className="premium-tile relative block w-full text-center -my-[22%] -mx-[4%] scale-[1.45] sm:-my-[22%] sm:-mx-[6%] sm:scale-[1.588] pointer-events-none hover:!z-[100]"
       style={{ zIndex: baseZIndex }}
     >
-      <div aria-hidden="true" className="relative block w-full h-full pointer-events-none sm:hidden">
+      <div aria-hidden="true" className="relative block w-full h-full pointer-events-none">
         {tileVisual}
       </div>
 
       <Link
         to={tile.href}
         aria-label={tile.title.replace(/\n/g, " ")}
-        className="service-nav-tile-mobile-hitbox block pointer-events-auto sm:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+        className="service-nav-tile-mobile-hitbox absolute block pointer-events-auto sm:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
       />
 
       <Link
         to={tile.href}
-        data-tile-name={tileName}
-        className="service-nav-tile-link group relative hidden w-full h-full pointer-events-auto sm:block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-      >
-        {tileVisual}
-      </Link>
+        aria-label={tile.title.replace(/\n/g, " ")}
+        className="service-nav-tile-link absolute hidden pointer-events-auto sm:block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+      />
     </div>
   );
 };

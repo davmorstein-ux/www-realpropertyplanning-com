@@ -736,7 +736,15 @@ html, body {
 }
 
 .service-nav-tile-link {
-  clip-path: inset(3% 4% 6% 4% round 18px);
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  width: 28%;
+  height: 16%;
+  transform: translateX(-50%);
+  z-index: 20;
+  background: transparent;
+  clip-path: ellipse(47% 43% at 50% 50%);
 }
 
 /* Homepage tiles: enlarge icons 10% on mobile only (except Probate Sales) */
