@@ -25,8 +25,6 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     description:
       "Real Property Planning helps attorneys, executors, trustees, fiduciaries, and families navigate probate real estate, inherited homes, estate sales, and senior transitions throughout Washington State.",
     h1: "Probate, Estate & Senior Transition Real Estate in Washington State",
-    quickAnswerQ: "What does Real Property Planning do?",
-    quickAnswerA: "Real Property Planning helps seniors, families, executors, trustees, attorneys, and fiduciaries navigate real estate and housing transitions throughout Washington State. Whether the need involves downsizing, relocation, probate, inherited property, senior living decisions, or preparing a home for sale, the focus is on calm guidance, practical coordination, and clear next steps.",
     intro:
       "Guiding seniors, families, and professionals through real estate and housing transitions across Washington State — downsizing, relocation, probate, inherited property, and senior living decisions — with calm guidance, practical coordination, and clear next steps.",
     sections: [
@@ -367,11 +365,94 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   },
 };
 
+const DEFAULT_SHELL_META: RouteMeta = {
+  title: "Real Property Planning | Washington State Real Estate Guidance",
+  description:
+    "Real Property Planning helps seniors, families, executors, trustees, attorneys, and fiduciaries navigate probate real estate, inherited homes, senior transitions, and housing change across Washington State.",
+};
+
 const replaceTag = (html: string, regex: RegExp, replacement: string) =>
   regex.test(html) ? html.replace(regex, replacement) : html;
 
-const applyMetadata = (html: string, route: string, meta: RouteMeta) => {
-  const { title, description, h1, intro, sections, cities } = meta;
+const buildSsgContent = (meta: RouteMeta) => {
+  const { h1, intro, sections, cities, quickAnswerQ, quickAnswerA } = meta;
+
+  if (!h1 && !intro) return "";
+
+  const ssgParts: string[] = [];
+  ssgParts.push(`<div id="ssg-content" style="font-family:system-ui,sans-serif;max-width:800px;margin:0 auto;padding:40px 20px">`);
+
+  if (h1) ssgParts.push(`<h1 style="font-size:2rem;line-height:1.2;margin-bottom:16px">${h1}</h1>`);
+
+  if (quickAnswerQ && quickAnswerA) {
+    ssgParts.push(`<div style="margin-bottom:24px;padding:20px;border:1px solid #e5e5e5;border-radius:12px;background:#fafafa">`);
+    ssgParts.push(`<p style="font-size:0.75rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#a8892f;margin:0 0 8px 0">Quick Answer</p>`);
+    ssgParts.push(`<h2 style="font-size:1.25rem;line-height:1.3;margin:0 0 8px 0">${quickAnswerQ}</h2>`);
+    ssgParts.push(`<p style="font-size:1.05rem;line-height:1.7;color:#444;margin:0">${quickAnswerA}</p>`);
+    ssgParts.push(`</div>`);
+  }
+
+  if (intro) ssgParts.push(`<p style="font-size:1.1rem;line-height:1.7;color:#444">${intro}</p>`);
+
+  if (sections) {
+    sections.forEach((s) => {
+      const [heading, ...rest] = s.split(" — ");
+      ssgParts.push(`<h2 style="font-size:1.3rem;margin-top:24px;margin-bottom:8px">${heading}</h2>`);
+      if (rest.length) ssgParts.push(`<p style="color:#555;line-height:1.6">${rest.join(" — ")}</p>`);
+    });
+  }
+
+  ssgParts.push(`<div style="margin-top:28px;padding:20px;border:1px solid #e5e5e5;border-radius:8px;background:#fafafa">`);
+  ssgParts.push(`<h2 style="font-size:1.2rem;margin:0 0 12px 0">Real Property Planning — David Stein</h2>`);
+  ssgParts.push(`<p style="margin:4px 0;color:#444">Licensed Real Estate Broker &amp; Washington State Certified Residential Appraiser</p>`);
+  ssgParts.push(`<p style="margin:4px 0;color:#444">eXp Realty</p>`);
+  ssgParts.push(`<p style="margin:4px 0;color:#555">Phone: <a href="tel:2069003015" style="color:#1a365d">(206) 900-3015</a></p>`);
+  ssgParts.push(`<p style="margin:4px 0;color:#555">Email: <a href="mailto:david@realpropertyplanning.com" style="color:#1a365d">david@realpropertyplanning.com</a></p>`);
+  ssgParts.push(`<p style="margin:4px 0;color:#555">Mailing Address: PO Box 1462, Woodinville, WA 98072</p>`);
+  ssgParts.push(`<p style="margin:4px 0;color:#555">Office: 1455 NW Leary Way, Seattle, WA 98107</p>`);
+  ssgParts.push(`</div>`);
+
+  ssgParts.push(`<div style="margin-top:28px">`);
+  ssgParts.push(`<h2 style="font-size:1.3rem;margin-bottom:12px">Washington State Service Areas</h2>`);
+  if (cities && cities.length > 0) {
+    ssgParts.push(`<p style="color:#555;line-height:1.8">${cities.join(" · ")}</p>`);
+  }
+  ssgParts.push(`<p style="color:#666;margin-top:8px;line-height:1.6">Serving clients throughout Washington State, with especially strong experience in Western Washington and the Puget Sound region.</p>`);
+  ssgParts.push(`</div>`);
+
+  ssgParts.push(`</div>`);
+  return ssgParts.join("");
+};
+
+const buildRouteAwareShellScript = () => {
+  const routePayload = Object.fromEntries(
+    Object.entries(ROUTE_METADATA).map(([route, meta]) => [
+      route,
+      {
+        title: meta.title,
+        description: meta.description,
+        canonical: route === "/" ? SITE_URL : `${SITE_URL}${route}`,
+        ssg: buildSsgContent(meta),
+      },
+    ])
+  );
+
+  const serializedPayload = JSON.stringify(routePayload).replace(/</g, "\\u003c");
+
+  return `<script>(function(){const routePayload=${serializedPayload};const normalizePath=(pathname)=>{let next=pathname||"/";try{next=decodeURIComponent(next);}catch{}if(!next.startsWith("/"))next="/"+next;if(next.endsWith("/index.html"))next=next.slice(0,-11)||"/";if(next.length>1&&next.endsWith("/"))next=next.slice(0,-1);return next||"/";};const ensureTag=(tagName,selector,attrs)=>{let el=document.querySelector(selector);if(!el){el=document.createElement(tagName);Object.entries(attrs).forEach(([key,value])=>el.setAttribute(key,value));document.head.appendChild(el);}return el;};const route=normalizePath(window.location.pathname);const payload=routePayload[route];if(!payload)return;document.title=payload.title;ensureTag("meta",'meta[name="description"]',{name:"description"}).setAttribute("content",payload.description);ensureTag("meta",'meta[property="og:title"]',{property:"og:title"}).setAttribute("content",payload.title);ensureTag("meta",'meta[property="og:description"]',{property:"og:description"}).setAttribute("content",payload.description);ensureTag("meta",'meta[name="twitter:title"]',{name:"twitter:title"}).setAttribute("content",payload.title);ensureTag("meta",'meta[name="twitter:description"]',{name:"twitter:description"}).setAttribute("content",payload.description);ensureTag("meta",'meta[property="og:url"]',{property:"og:url"}).setAttribute("content",payload.canonical);ensureTag("link",'link[rel="canonical"]',{rel:"canonical"}).setAttribute("href",payload.canonical);const root=document.getElementById("root");if(root){root.innerHTML=payload.ssg||"";}})();</script>`;
+};
+
+const injectRouteAwareShell = (html: string) =>
+  html.replace("<div id=\"root\"></div>", `<div id="root"></div>${buildRouteAwareShellScript()}`);
+
+const applyMetadata = (
+  html: string,
+  route: string,
+  meta: RouteMeta,
+  options: { injectSsg?: boolean } = {}
+) => {
+  const { title, description } = meta;
+  const { injectSsg = true } = options;
   const canonical = route === "/" ? SITE_URL : `${SITE_URL}${route}`;
 
   let out = html;
@@ -412,62 +493,14 @@ const applyMetadata = (html: string, route: string, meta: RouteMeta) => {
     `<meta property="og:url" content="${canonical}" />`
   );
 
-  // Inject static SSG content into <div id="root"> for crawler visibility
-  if (h1 || intro) {
-    const { quickAnswerQ, quickAnswerA } = meta;
-    const ssgParts: string[] = [];
-    ssgParts.push(`<div id="ssg-content" style="font-family:system-ui,sans-serif;max-width:800px;margin:0 auto;padding:40px 20px">`);
-
-    // H1 first
-    if (h1) ssgParts.push(`<h1 style="font-size:2rem;line-height:1.2;margin-bottom:16px">${h1}</h1>`);
-
-    // Quick Answer block — placed FIRST for AEO extraction priority
-    if (quickAnswerQ && quickAnswerA) {
-      ssgParts.push(`<div style="margin-bottom:24px;padding:20px;border:1px solid #e5e5e5;border-radius:12px;background:#fafafa">`);
-      ssgParts.push(`<p style="font-size:0.75rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#a8892f;margin:0 0 8px 0">Quick Answer</p>`);
-      ssgParts.push(`<h2 style="font-size:1.25rem;line-height:1.3;margin:0 0 8px 0">${quickAnswerQ}</h2>`);
-      ssgParts.push(`<p style="font-size:1.05rem;line-height:1.7;color:#444;margin:0">${quickAnswerA}</p>`);
-      ssgParts.push(`</div>`);
-    }
-
-    // Intro paragraph
-    if (intro) ssgParts.push(`<p style="font-size:1.1rem;line-height:1.7;color:#444">${intro}</p>`);
-
-    // Optional section headings
-    if (sections) {
-      sections.forEach((s) => {
-        const [heading, ...rest] = s.split(" — ");
-        ssgParts.push(`<h2 style="font-size:1.3rem;margin-top:24px;margin-bottom:8px">${heading}</h2>`);
-        if (rest.length) ssgParts.push(`<p style="color:#555;line-height:1.6">${rest.join(" — ")}</p>`);
-      });
-    }
-
-    // NAP block — pushed lower for local SEO but below unique content
-    ssgParts.push(`<div style="margin-top:28px;padding:20px;border:1px solid #e5e5e5;border-radius:8px;background:#fafafa">`);
-    ssgParts.push(`<h2 style="font-size:1.2rem;margin:0 0 12px 0">Real Property Planning — David Stein</h2>`);
-    ssgParts.push(`<p style="margin:4px 0;color:#444">Licensed Real Estate Broker &amp; Washington State Certified Residential Appraiser</p>`);
-    ssgParts.push(`<p style="margin:4px 0;color:#444">eXp Realty</p>`);
-    ssgParts.push(`<p style="margin:4px 0;color:#555">Phone: <a href="tel:2069003015" style="color:#1a365d">(206) 900-3015</a></p>`);
-    ssgParts.push(`<p style="margin:4px 0;color:#555">Email: <a href="mailto:david@realpropertyplanning.com" style="color:#1a365d">david@realpropertyplanning.com</a></p>`);
-    ssgParts.push(`<p style="margin:4px 0;color:#555">Mailing Address: PO Box 1462, Woodinville, WA 98072</p>`);
-    ssgParts.push(`<p style="margin:4px 0;color:#555">Office: 1455 NW Leary Way, Seattle, WA 98107</p>`);
-    ssgParts.push(`</div>`);
-
-    // Areas Served block — last
-    ssgParts.push(`<div style="margin-top:28px">`);
-    ssgParts.push(`<h2 style="font-size:1.3rem;margin-bottom:12px">Washington State Service Areas</h2>`);
-    if (cities && cities.length > 0) {
-      ssgParts.push(`<p style="color:#555;line-height:1.8">${cities.join(" · ")}</p>`);
-    }
-    ssgParts.push(`<p style="color:#666;margin-top:8px;line-height:1.6">Serving clients throughout Washington State, with especially strong experience in Western Washington and the Puget Sound region.</p>`);
-    ssgParts.push(`</div>`);
-
-    ssgParts.push(`</div>`);
-
+  if (injectSsg) {
+    const ssgContent = buildSsgContent(meta);
+    if (ssgContent) {
     out = out.replace(
       '<div id="root"></div>',
-      `<div id="root">${ssgParts.join("")}</div>`
+      `<div id="root">${ssgContent}</div>`
     );
+    }
   }
 
   return out;
@@ -487,13 +520,20 @@ const routeMetadataPlugin = {
       return;
     }
 
+    const shellHtml = injectRouteAwareShell(
+      applyMetadata(baseHtml, "/", DEFAULT_SHELL_META, { injectSsg: false })
+    );
+    await writeFile(baseHtmlPath, shellHtml, "utf8");
+
     await Promise.all(
-      Object.entries(ROUTE_METADATA).map(async ([route, metadata]) => {
+      Object.entries(ROUTE_METADATA)
+        .filter(([route]) => route !== "/")
+        .map(async ([route, metadata]) => {
         const html = applyMetadata(baseHtml, route, metadata);
         const routeDir = route === "/" ? distDir : path.join(distDir, route.slice(1));
         await mkdir(routeDir, { recursive: true });
         await writeFile(path.join(routeDir, "index.html"), html, "utf8");
-      })
+        })
     );
   },
 };
