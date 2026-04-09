@@ -25,12 +25,17 @@ interface CountyPageProps {
   typicalSituations?: string[];
   clientTypes?: string[];
   marketOverview?: string;
-  /** Short 2–3 sentence paragraph for "Who I help in [County]" */
   whoIHelp?: string;
-  /** Short paragraph on why broker + appraiser credentials matter here */
   whyCredentialsMatter?: string;
-  /** County-specific FAQs to replace or extend the defaults */
   countySpecificFaqs?: { question: string; answer: string }[];
+  /** Override the default AEO answer block question */
+  aeoQuestion?: string;
+  /** Override the default AEO answer block answer */
+  aeoAnswer?: string;
+  /** Override the default AEO support content with bullets */
+  aeoSupportBullets?: string[];
+  /** Override the default AEO support content with FAQ cards */
+  aeoSupportFaqs?: { question: string; answer: string }[];
 }
 
 const CountyPageTemplate = ({
