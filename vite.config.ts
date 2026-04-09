@@ -435,7 +435,44 @@ const buildSsgContent = (meta: RouteMeta) => {
 };
 
 const buildRouteAwareShellScript = () => {
-  return `<script>(function(){const normalizePath=(pathname)=>{let next=pathname||"/";try{next=decodeURIComponent(next);}catch{}if(!next.startsWith("/"))next="/"+next;if(next.endsWith("/index.html"))next=next.slice(0,-11)||"/";if(next.length>1&&next.endsWith("/"))next=next.slice(0,-1);return next||"/";};const ensureTag=(tagName,selector,attrs)=>{let el=document.querySelector(selector);if(!el){el=document.createElement(tagName);Object.entries(attrs).forEach(([key,value])=>el.setAttribute(key,value));document.head.appendChild(el);}return el;};const copyAttr=(doc,selector,attr,target)=>{const value=doc.querySelector(selector)?.getAttribute(attr);if(value)target.setAttribute(attr,value);};const applyDoc=(doc)=>{if(doc.title)document.title=doc.title;copyAttr(doc,'meta[name="description"]','content',ensureTag("meta",'meta[name="description"]',{name:"description"}));copyAttr(doc,'meta[property="og:title"]','content',ensureTag("meta",'meta[property="og:title"]',{property:"og:title"}));copyAttr(doc,'meta[property="og:description"]','content',ensureTag("meta",'meta[property="og:description"]',{property:"og:description"}));copyAttr(doc,'meta[name="twitter:title"]','content',ensureTag("meta",'meta[name="twitter:title"]',{name:"twitter:title"}));copyAttr(doc,'meta[name="twitter:description"]','content',ensureTag("meta",'meta[name="twitter:description"]',{name:"twitter:description"}));copyAttr(doc,'meta[property="og:url"]','content',ensureTag("meta",'meta[property="og:url"]',{property:"og:url"}));copyAttr(doc,'link[rel="canonical"]','href',ensureTag("link",'link[rel="canonical"]',{rel:"canonical"}));const sourceRoot=doc.getElementById("root");const targetRoot=document.getElementById("root");if(sourceRoot&&targetRoot&&sourceRoot.innerHTML.trim())targetRoot.innerHTML=sourceRoot.innerHTML;};const route=normalizePath(window.location.pathname);if(route==="/")return;try{const xhr=new XMLHttpRequest();xhr.open("GET",route+"/index.html",false);xhr.send(null);if(xhr.status>=200&&xhr.status<300&&xhr.responseText){const doc=new DOMParser().parseFromString(xhr.responseText,"text/html");applyDoc(doc);}}catch{}})();</script>`;
+  // Build a compact JSON map of route -> {title, description, h1, intro, quickAnswerQ, quickAnswerA}
+  // This is embedded inline so no XHR is needed (Lovable hosting returns root index.html for all paths)
+  const routeMap: Record<string, { t: string; d: string; h1?: string; intro?: string; qQ?: string; qA?: string }> = {};
+  for (const [route, meta] of Object.entries(ROUTE_METADATA)) {
+    routeMap[route] = {
+      t: meta.title,
+      d: meta.description,
+      ...(meta.h1 ? { h1: meta.h1 } : {}),
+      ...(meta.intro ? { intro: meta.intro } : {}),
+      ...(meta.quickAnswerQ ? { qQ: meta.quickAnswerQ } : {}),
+      ...(meta.quickAnswerA ? { qA: meta.quickAnswerA } : {}),
+    };
+  }
+  const mapJson = JSON.stringify(routeMap);
+
+  return `<script>(function(){
+var R=${mapJson};
+var normalizePath=function(p){var n=p||"/";try{n=decodeURIComponent(n);}catch(e){}if(!n.startsWith("/"))n="/"+n;if(n.endsWith("/index.html"))n=n.slice(0,-11)||"/";if(n.length>1&&n.endsWith("/"))n=n.slice(0,-1);return n||"/";};
+var route=normalizePath(window.location.pathname);
+var m=R[route];
+if(!m)return;
+if(m.t)document.title=m.t;
+var setMeta=function(sel,attr,val){var el=document.querySelector(sel);if(el)el.setAttribute(attr,val);else{el=document.createElement("meta");var parts=sel.match(/\\[([^=]+)="([^"]+)"\\]/);if(parts){el.setAttribute(parts[1],parts[2]);}el.setAttribute(attr,val);document.head.appendChild(el);}};
+setMeta('meta[name="description"]',"content",m.d);
+setMeta('meta[property="og:title"]',"content",m.t);
+setMeta('meta[property="og:description"]',"content",m.d);
+setMeta('meta[name="twitter:title"]',"content",m.t);
+setMeta('meta[name="twitter:description"]',"content",m.d);
+var canon=route==="/"?"${SITE_URL}":"${SITE_URL}"+route;
+setMeta('meta[property="og:url"]',"content",canon);
+var link=document.querySelector('link[rel="canonical"]');if(link)link.setAttribute("href",canon);else{link=document.createElement("link");link.rel="canonical";link.href=canon;document.head.appendChild(link);}
+var root=document.getElementById("root");
+if(root&&m.h1){var html='<div id="ssg-content" style="font-family:system-ui,sans-serif;max-width:800px;margin:0 auto;padding:40px 20px">';
+html+='<h1 style="font-size:2rem;line-height:1.2;margin-bottom:16px">'+m.h1+'</h1>';
+if(m.qQ&&m.qA){html+='<div style="margin:20px 0;padding:20px;border:1px solid #e2e2e2;border-radius:12px;background:#fafaf8"><p style="font-weight:700;text-transform:uppercase;letter-spacing:0.1em;font-size:0.7rem;color:#a8892f;margin:0 0 6px 0">Quick Answer</p><h2 style="font-size:1.25rem;line-height:1.3;margin:0 0 8px 0">'+m.qQ+'</h2><p style="font-size:1.05rem;line-height:1.7;color:#444;margin:0">'+m.qA+'</p></div>';}
+if(m.intro){html+='<p style="font-size:1.1rem;line-height:1.7;color:#444">'+m.intro+'</p>';}
+html+='</div>';root.innerHTML=html;}
+})();</script>`;
 };
 
 const injectRouteAwareShell = (html: string) =>
