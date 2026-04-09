@@ -81,7 +81,7 @@ const LendersFinancingSpecialists = () => (
     {/* Featured Provider — mirrors AdultFamilyHomes provider card */}
     <section className="py-14 md:py-20 bg-secondary">
       <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl mx-auto space-y-8">
           <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground text-center mb-10">
             Featured Providers
           </h2>
