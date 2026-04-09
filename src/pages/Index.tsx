@@ -130,6 +130,11 @@ const Index = () => {
       <DirectAnswerBlock
         question="What does Real Property Planning do?"
         answer="Real Property Planning helps executors, trustees, attorneys, and families sell probate, estate, inherited, and senior-transition properties throughout Washington State. David Stein combines 20+ years as a licensed broker and state-certified residential appraiser to provide accurate pricing, hands-on coordination, and clear communication from first conversation through closing."
+        supportBullets={[
+          "Valuation-informed pricing grounded in appraisal expertise — not guesswork",
+          "Full-service coordination: cleanout, repairs, staging, listing, and closing",
+          "Clear communication with executors, attorneys, and families throughout the process",
+        ]}
       />
 
       {/* ═══════════════════════════════════════════════════

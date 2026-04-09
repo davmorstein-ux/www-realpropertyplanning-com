@@ -230,28 +230,12 @@ const Executors = () => {
       <DirectAnswerBlock
         question="What should an executor do when there is real estate in the estate?"
         answer="Secure the property, confirm your legal authority to act, and get a realistic assessment of the home's condition and market value. David Stein — a licensed Washington broker and certified residential appraiser — works with executors throughout Washington State to handle property evaluation, preparation, pricing, and the full sale process so you can focus on your other responsibilities."
+        supportSteps={[
+          { label: "We Talk", desc: "David listens to your situation and answers your questions." },
+          { label: "David Assesses", desc: "He visits the property and gives you an honest picture of condition and value." },
+          { label: "He Handles It", desc: "Cleanout, prep, pricing, marketing, negotiation, and closing — managed for you." },
+        ]}
       />
-
-      {/* Quick 3-step overview */}
-      <section className="py-10 lg:py-12 bg-secondary">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <div className="grid sm:grid-cols-3 gap-6">
-              {[
-                { num: "1", title: "We Talk", desc: "David listens to your situation and answers your questions." },
-                { num: "2", title: "David Assesses", desc: "He visits the property and gives you an honest picture of condition and value." },
-                { num: "3", title: "He Handles the Details", desc: "Cleanout, prep, pricing, marketing, negotiation, and closing — managed for you." },
-              ].map((s) => (
-                <div key={s.num} className="text-center">
-                  <span className="text-gold font-serif text-2xl font-semibold">{s.num}</span>
-                  <h3 className="font-serif text-lg text-foreground font-semibold mt-1 mb-1">{s.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{s.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Common Situations */}
       <section className="py-16 lg:py-24 bg-background">

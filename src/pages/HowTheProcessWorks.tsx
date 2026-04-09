@@ -127,6 +127,11 @@ const HowTheProcessWorks = () => {
       <DirectAnswerBlock
         question="How do estate and probate property sales work in Washington State?"
         answer="David Stein follows a clear seven-step process: initial consultation, property evaluation and valuation-informed pricing, preparation and vendor coordination, listing and marketing, offer review and negotiation, escrow and closing management, and post-sale support. Each step is designed for the unique complexity of estate, probate, and senior transition sales — where legal requirements, family dynamics, and property condition all shape the timeline."
+        supportSteps={[
+          { label: "Evaluate", desc: "Property assessment and valuation-informed pricing discussion" },
+          { label: "Prepare", desc: "Cleanout, repairs, and vendor coordination managed for you" },
+          { label: "Sell", desc: "Marketing, negotiation, escrow, and closing — handled end to end" },
+        ]}
       />
 
       <TrustStrip />
