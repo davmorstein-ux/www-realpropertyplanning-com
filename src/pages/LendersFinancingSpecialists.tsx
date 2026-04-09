@@ -35,9 +35,9 @@ const LendersFinancingSpecialists = () => (
           <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
             Lenders & Financing Specialists
           </p>
-          <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
+          <p className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
             Supporting Clients with Financing Options and Long-Term Planning
-          </h1>
+          </p>
           <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed">
             Connecting clients with trusted professionals who provide clarity around financing, retirement planning, and long-term strategy.
           </p>
