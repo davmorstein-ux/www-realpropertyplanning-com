@@ -351,7 +351,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "Explore Real Property Planning's services including probate property sales, senior transitions, executor support, and estate-related real estate guidance throughout Washington State.",
     h1: "Real Property Planning Services",
     quickAnswerQ: "What services does Real Property Planning provide?",
-    quickAnswerA: "Real Property Planning provides probate property sales, senior transition support, executor and trustee guidance, attorney referral coordination, and valuation-informed pricing strategy — all backed by David Stein's dual credentials as a licensed broker and certified residential appraiser.",
+    quickAnswerA: "Real Property Planning provides probate property sales, senior transition support, executor and trustee guidance, attorney referral coordination, and valuation-informed pricing strategy — backed by dual credentials as a licensed brokerage with certified residential appraisal expertise.",
     intro:
       "Probate property sales, senior transitions, executor support, and estate-related real estate guidance throughout Washington State.",
   },
