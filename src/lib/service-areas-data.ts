@@ -37,6 +37,8 @@ export interface CityData {
   whoIHelp?: string;
   /** Short paragraph: why broker+appraiser credentials matter here */
   whyCredentialsMatter?: string;
+  /** City-specific FAQs */
+  localFaqs?: { question: string; answer: string }[];
 }
 
 export interface CountyData {

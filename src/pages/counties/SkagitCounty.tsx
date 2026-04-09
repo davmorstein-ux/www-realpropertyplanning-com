@@ -30,6 +30,28 @@ const SkagitCounty = () => (
       "Senior transitions from rural Skagit properties to more accessible housing options in town centers",
       "Estate properties with deferred maintenance requiring strategic preparation decisions and honest pricing",
     ]}
+    countySpecificFaqs={[
+      {
+        question: "How do you price a property with agricultural zoning in the Skagit Valley?",
+        answer: "Agricultural-zoned properties require valuation approaches that standard residential tools cannot handle — acreage, soil classifications, water rights, outbuildings, and development restrictions all affect value differently. David's certified appraiser credentials give him the training to evaluate these factors and set pricing that reflects what agricultural-adjacent buyers will actually pay, not what a suburban comp model suggests.",
+      },
+      {
+        question: "What makes selling a waterfront home in Anacortes different from other Skagit County sales?",
+        answer: "Anacortes attracts a distinct buyer pool drawn to waterfront living, San Juan Island access, and the community's arts-driven character. These buyers have specific expectations about shoreline quality, views, and proximity to the ferry terminal. David's familiarity with Anacortes and his appraisal background help him assess waterfront premiums and position properties to attract the right buyers without overpricing.",
+      },
+      {
+        question: "My family inherited a property with acreage near Burlington — how do we decide whether to subdivide or sell as-is?",
+        answer: "Subdivision can increase total sale proceeds but adds significant time, cost, and regulatory complexity. David evaluates the property's zoning, access, utility availability, and market demand to help families understand whether subdivision is realistic and financially worthwhile — or whether selling the property as a whole to the right buyer is the stronger strategy.",
+      },
+      {
+        question: "Can David coordinate a Skagit County estate sale if the family lives in Seattle?",
+        answer: "Yes. Many of David's Skagit County clients manage from the Seattle area or further away. He handles property access, vendor coordination, cleanout supervision, preparation, and the full listing and sale process — providing consistent updates so you can manage your responsibilities without needing to make frequent trips to the Skagit Valley.",
+      },
+      {
+        question: "What should I know about selling an inherited home in a small Skagit community like La Conner or Edison?",
+        answer: "Small communities like La Conner and Edison have limited buyer pools and unique market characteristics. Properties here attract buyers seeking character, rural charm, or creative community connections — but they need to be priced accurately because the pool of qualified buyers is smaller. David understands these micro-markets and positions properties to reach the right audience without extended time on market.",
+      },
+    ]}
   />
 );
 

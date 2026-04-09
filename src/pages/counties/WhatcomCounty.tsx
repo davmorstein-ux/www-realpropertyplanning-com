@@ -30,6 +30,28 @@ const WhatcomCounty = () => (
       "Properties with condition issues in a market where realistic pricing is essential for timely sale",
       "Multi-heir situations involving unique Whatcom County property that requires specialized valuation",
     ]}
+    countySpecificFaqs={[
+      {
+        question: "How do I sell an inherited second home or vacation property near Birch Bay?",
+        answer: "Second homes and vacation properties near Birch Bay attract a specific buyer pool — often seasonal residents or retirees seeking waterfront access. David evaluates these properties based on their unique features — shoreline type, rental potential, seasonal demand patterns, and condition — ensuring pricing reflects the actual buyer pool rather than year-round residential comparables that may not apply.",
+      },
+      {
+        question: "What makes selling estate property in Bellingham different from selling in larger markets?",
+        answer: "Bellingham's buyer pool is smaller and more localized than Seattle or Tacoma, which means overpricing has a more immediate and lasting impact on market time. Estate properties here also tend to attract buyers who value character and community — but they still expect honest condition assessment. David's appraisal background helps him price properties realistically for Bellingham's specific market dynamics.",
+      },
+      {
+        question: "Can David help with an inherited property in Lynden that has agricultural elements?",
+        answer: "Yes. Properties with agricultural zoning, outbuildings, or acreage near Lynden require specialized valuation that accounts for factors standard residential tools ignore. David's certified appraiser credentials and experience with non-standard properties allow him to assess these unique features accurately and market the property to the right buyer pool.",
+      },
+      {
+        question: "What should I do first if I inherit a Whatcom County property and live out of state?",
+        answer: "The first steps are securing the property and getting a realistic assessment of its condition and market value. David can visit the property, provide an honest evaluation, and outline a clear plan — from cleanout and preparation through listing and sale. He coordinates everything locally so you do not need to make repeated trips to Whatcom County.",
+      },
+      {
+        question: "Does the Canadian border proximity affect Whatcom County property values?",
+        answer: "The border location can influence buyer interest and market dynamics — particularly in Blaine and northern communities. David understands how cross-border interest, seasonal tourism, and local economic factors shape property values in different parts of Whatcom County, ensuring estate properties are priced based on realistic local demand rather than assumptions.",
+      },
+    ]}
   />
 );
 

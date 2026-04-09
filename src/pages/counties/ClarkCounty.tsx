@@ -30,6 +30,28 @@ const ClarkCounty = () => (
       "Multi-heir estates where family members live in different states and disagree on timing or strategy",
       "Properties with deferred maintenance in older Clark County neighborhoods needing realistic assessment",
     ]}
+    countySpecificFaqs={[
+      {
+        question: "How does Clark County's proximity to Portland affect estate property sales?",
+        answer: "Clark County benefits from strong cross-border buyer demand — many Portland-area residents are drawn by Washington's lack of state income tax. For estate sales, this can mean a larger buyer pool than the local population alone would suggest. However, pricing must account for how different Clark County neighborhoods compete with Portland-area alternatives. David understands these cross-border dynamics and positions properties accordingly.",
+      },
+      {
+        question: "What cross-state complications can arise when selling inherited property in Clark County?",
+        answer: "When heirs live in Oregon or the estate involves cross-border legal considerations, families may need to coordinate between Washington and Oregon legal frameworks, tax obligations, and professional advisors. David works alongside estate attorneys to manage the real estate side of these situations, ensuring the property sale aligns with the broader legal and financial picture.",
+      },
+      {
+        question: "How has rapid growth in Ridgefield and Battle Ground changed estate property values?",
+        answer: "Areas like Ridgefield and Battle Ground have seen significant appreciation as Clark County's population has grown. Estate properties in these communities may be worth substantially more than families expect based on older assessments. David provides current, condition-based pricing analysis that accounts for recent market shifts — helping executors avoid both underpricing in appreciating areas and overpricing in neighborhoods where growth has been more moderate.",
+      },
+      {
+        question: "Should I sell a Vancouver estate home as-is or invest in preparation?",
+        answer: "It depends on the property's condition, location within Vancouver, and the current buyer expectations for that neighborhood. A home near downtown Vancouver's revitalized core may benefit from targeted preparation, while a property in a more established subdivision might sell well as-is. David evaluates each situation individually, using his appraisal background to assess which investments are likely to improve the outcome.",
+      },
+      {
+        question: "Can David help if the executor lives in Portland and the property is in Clark County?",
+        answer: "Yes. David frequently works with executors and trustees who are based in the Portland area. While the property may be just across the river, managing an estate sale still requires on-site coordination — securing the property, supervising cleanout, managing vendors, and handling the listing and sale process. David provides that local presence and keeps you informed throughout.",
+      },
+    ]}
   />
 );
 

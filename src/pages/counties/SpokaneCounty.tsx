@@ -30,6 +30,28 @@ const SpokaneCounty = () => (
       "Senior transitions from established Spokane neighborhoods to assisted living or family care",
       "Rural or semi-rural properties near Cheney or Deer Park with unique valuation considerations",
     ]}
+    countySpecificFaqs={[
+      {
+        question: "How do I sell an inherited home in Spokane if I live on the west side of the state?",
+        answer: "David handles the entire process locally — from initial property assessment and securing the home to coordinating cleanout, managing preparation, and overseeing the sale through closing. He provides regular phone and email updates so you can manage your executor or trustee role from Seattle, Portland, or wherever you are without repeated trips to Spokane.",
+      },
+      {
+        question: "Is the Spokane real estate market different enough from Seattle to affect how I price an estate home?",
+        answer: "Very much so. Spokane's buyer expectations, price points, and seasonal patterns are fundamentally different from the Puget Sound region. Overpricing based on western Washington assumptions is one of the most common mistakes out-of-area executors make. David's local market knowledge and appraisal training ensure pricing reflects Spokane's actual conditions — not Seattle-based expectations.",
+      },
+      {
+        question: "What should I know about selling a South Hill craftsman that has been in the family for decades?",
+        answer: "South Hill craftsmen are cherished by Spokane buyers, but decades of ownership often means deferred maintenance that needs honest assessment. David evaluates what character features add value and what condition issues need disclosure or repair, helping you price the home to attract buyers who appreciate its heritage while accounting for realistic condition adjustments.",
+      },
+      {
+        question: "Does David work with probate attorneys in Spokane County?",
+        answer: "Yes. David coordinates regularly with probate attorneys handling estate cases in Spokane County Superior Court. He provides property assessments, market analysis, and structured sale management that aligns with court requirements and fiduciary obligations — giving attorneys a reliable partner for the real estate side of estate administration.",
+      },
+      {
+        question: "How do seasonal patterns affect selling estate property in Spokane County?",
+        answer: "Spokane's market has more pronounced seasonal patterns than western Washington — winter conditions can slow showings, while spring and early summer typically bring stronger buyer activity. David helps executors and trustees plan timing strategically, balancing market conditions against estate administration deadlines and family readiness.",
+      },
+    ]}
   />
 );
 

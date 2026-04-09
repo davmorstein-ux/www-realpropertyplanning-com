@@ -30,6 +30,28 @@ const KingCounty = () => (
       "Longtime family homes in Shoreline, Kirkland, or Renton needing full preparation before listing",
       "Senior downsizing from established King County neighborhoods to assisted living or smaller residences",
     ]}
+    countySpecificFaqs={[
+      {
+        question: "How does selling estate property work in King County's competitive market?",
+        answer: "King County's intense buyer demand and limited inventory create both opportunities and risks for estate sales. Properly priced estate properties often sell quickly, but overpricing in this market can lead to price reductions that signal problems to buyers. David uses his appraisal background to price estate homes based on actual condition and neighborhood-level comparables — not aspirational numbers that backfire in a sophisticated buyer pool.",
+      },
+      {
+        question: "What challenges do executors face when selling a Seattle or Eastside home?",
+        answer: "King County estate properties often involve high values, complex buyer expectations, and significant condition gaps between estate homes and updated inventory. Executors must decide whether to invest in preparation or sell as-is — a decision that can affect the sale price by tens of thousands of dollars. David evaluates each property individually, recommending targeted preparation when the return justifies the cost and timeline.",
+      },
+      {
+        question: "How is pricing an inherited condo in Bellevue different from pricing a house in Shoreline?",
+        answer: "Bellevue condos and Shoreline houses sit in fundamentally different markets with different buyer profiles, price expectations, and preparation needs. David's dual broker-appraiser credentials allow him to assess each property type in its specific context — evaluating HOA factors for condos, lot value for houses, and condition-driven adjustments that automated tools miss in both cases.",
+      },
+      {
+        question: "Can David coordinate an estate sale if multiple heirs live in different states?",
+        answer: "Yes. Multi-heir King County estates are among the most common situations David handles. He provides clear, objective communication to all parties, manages every aspect of property preparation and sale, and helps families navigate disagreements about pricing, timeline, and strategy with honest, data-supported guidance.",
+      },
+      {
+        question: "Should I get a formal appraisal before selling an inherited King County home?",
+        answer: "It depends on the property's value, the number of heirs, and whether the estate requires court-supervised accounting. For high-value King County properties, a formal appraisal can protect the executor from liability questions. David's appraisal credentials allow him to advise on when a formal appraisal adds value versus when a well-documented market analysis is sufficient.",
+      },
+    ]}
   />
 );
 

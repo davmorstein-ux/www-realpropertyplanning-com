@@ -29,6 +29,28 @@ const BentonCounty = () => (
       "Properties with significant deferred maintenance where preparation decisions directly affect sale outcome",
       "Senior transitions from longtime Tri-Cities homes to smaller residences or family care arrangements",
     ]}
+    countySpecificFaqs={[
+      {
+        question: "How does the Hanford employment corridor affect property values in Richland?",
+        answer: "Richland's proximity to Hanford creates a stable employment base that supports consistent housing demand — particularly in established neighborhoods where many homes have been owner-occupied for decades. David understands how this employment dynamic, neighborhood stability, and the specific buyer expectations of Hanford-connected families influence estate property values in Richland and surrounding communities.",
+      },
+      {
+        question: "What should I know about selling an inherited home in Kennewick with significant deferred maintenance?",
+        answer: "Kennewick buyers expect practical value, and deferred maintenance directly affects what they will pay. Rather than guessing which repairs are worth making, David uses his appraisal background to evaluate which improvements are likely to improve the sale price enough to justify the cost — and which are better left for the buyer to address. This honest, data-driven approach helps executors avoid overspending on preparation.",
+      },
+      {
+        question: "Is selling estate property near Prosser different from selling in the Tri-Cities urban core?",
+        answer: "Yes. Properties near Prosser often involve larger lots, agricultural adjacency, and rural characteristics that attract a different buyer pool than urban Kennewick or Richland. David's appraiser credentials allow him to evaluate these non-standard features accurately — accounting for acreage, outbuildings, and rural market dynamics that standard residential valuation models miss.",
+      },
+      {
+        question: "Can David help with a Benton County estate sale if the heirs are scattered across multiple states?",
+        answer: "Yes. David frequently manages estate sales where family members are spread across Washington, Oregon, and other states. He handles all on-site coordination — property access, vendor management, preparation, and the sale process — while providing clear, consistent updates to all parties. This structured communication helps multi-heir families stay aligned without needing to travel to the Tri-Cities repeatedly.",
+      },
+      {
+        question: "How do I decide the right time to list an inherited Tri-Cities property?",
+        answer: "Timing depends on the property's condition, the estate administration timeline, and seasonal market patterns in the Tri-Cities area. David helps executors balance these factors — identifying when the market is most favorable while respecting legal deadlines and family readiness. His goal is a realistic plan that accounts for all the moving pieces, not pressure to list before the property is ready.",
+      },
+    ]}
   />
 );
 
