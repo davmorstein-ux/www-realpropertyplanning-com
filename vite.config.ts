@@ -199,10 +199,12 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   "/counties/king": {
     title: "King County Probate Real Estate | Real Property Planning",
     description:
-      "Real Property Planning helps clients and referral partners with probate real estate, inherited homes, estate sales, trust-owned property, and senior transitions in King County, Washington.",
+      "Probate real estate and inherited property sales guidance for executors, attorneys, and families in King County — Seattle, Bellevue, Kirkland, Redmond, and surrounding communities.",
     h1: "Estate and Inherited Property Sales in King County",
+    quickAnswerQ: "How do probate and estate property sales work in King County?",
+    quickAnswerA: "King County's intense buyer demand and wide price variation make accurate pricing especially critical for estate sales. David Stein — a licensed broker and certified residential appraiser — evaluates each property's condition and market position, coordinates preparation and sale, and provides defensible pricing that standard agents cannot match.",
     intro:
-      "Real Property Planning helps clients and referral partners with probate real estate, inherited homes, estate sales, trust-owned property, and senior transitions in King County, Washington.",
+      "King County is Washington's largest and most competitive real estate market. Estate properties here range from Capitol Hill bungalows to Eastside homes valued well over a million dollars — making accurate pricing and experienced coordination especially critical.",
     cities: [
       "Seattle", "Bellevue", "Kirkland", "Redmond", "Bothell", "Woodinville",
       "Issaquah", "Sammamish", "Mercer Island", "Shoreline", "Renton", "Newcastle",
@@ -212,10 +214,12 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   "/counties/snohomish": {
     title: "Snohomish County Probate Real Estate | Real Property Planning",
     description:
-      "Real Property Planning helps clients and referral partners with probate real estate, inherited homes, estate sales, trust-owned property, and senior transitions in Snohomish County.",
+      "Probate real estate and inherited property sales support for families and fiduciaries in Snohomish County — Everett, Edmonds, Lynnwood, Mukilteo, and surrounding areas.",
     h1: "Estate and Inherited Property Sales in Snohomish County",
+    quickAnswerQ: "How do inherited home decisions and pricing work in Snohomish County?",
+    quickAnswerA: "Snohomish County spans waterfront communities like Edmonds and Mukilteo, established suburbs like Mill Creek and Bothell, and growing towns like Lake Stevens and Monroe — each with its own buyer pool and pricing dynamics. David Stein evaluates each property in its specific context.",
     intro:
-      "Real Property Planning helps clients and referral partners with probate real estate, inherited homes, estate sales, trust-owned property, and senior transitions in Snohomish County, Washington.",
+      "Snohomish County spans waterfront communities, established suburbs, and growing towns — each with its own buyer pool and pricing dynamics that require local expertise for estate and inherited property sales.",
     cities: [
       "Everett", "Edmonds", "Lynnwood", "Mukilteo", "Mill Creek", "Bothell",
       "Snohomish", "Lake Stevens", "Marysville", "Monroe", "Arlington",
@@ -224,10 +228,12 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   "/counties/pierce": {
     title: "Pierce County Probate Real Estate | Real Property Planning",
     description:
-      "Real Property Planning helps clients and referral partners with probate real estate, inherited homes, estate sales, trust-owned property, and senior transitions in Pierce County.",
+      "Probate real estate and inherited property sales guidance for executors and families in Pierce County — Tacoma, Puyallup, Gig Harbor, Lakewood, and surrounding communities.",
     h1: "Estate and Inherited Property Sales in Pierce County",
+    quickAnswerQ: "What should executors and families know about selling inherited property in Pierce County?",
+    quickAnswerA: "Pierce County's diverse neighborhoods — from Tacoma's North End to Gig Harbor's waterfront — create distinct buyer pools and pricing dynamics. David Stein provides practical, valuation-informed guidance for estate property preparation, pricing, and sale.",
     intro:
-      "Real Property Planning helps clients and referral partners with probate real estate, inherited homes, estate sales, trust-owned property, and senior transitions in Pierce County, Washington.",
+      "Pierce County's diverse communities require locally informed guidance for estate property sales. David Stein works with executors, trustees, and families throughout Tacoma, Gig Harbor, Puyallup, Lakewood, and surrounding areas.",
     cities: [
       "Tacoma", "University Place", "Gig Harbor", "Puyallup", "Bonney Lake",
       "Lakewood", "Sumner", "Fircrest", "Milton",
@@ -236,10 +242,12 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   "/counties/kitsap": {
     title: "Kitsap County Probate Real Estate | Real Property Planning",
     description:
-      "Real Property Planning helps clients and referral partners with probate real estate, inherited homes, estate sales, trust-owned property, and senior transitions in Kitsap County.",
+      "Probate real estate and inherited property sales guidance for executors and families in Kitsap County — Bainbridge Island, Poulsbo, Bremerton, Silverdale, and surrounding areas.",
     h1: "Estate and Inherited Property Sales in Kitsap County",
+    quickAnswerQ: "How do probate and estate property sales work in Kitsap County?",
+    quickAnswerA: "Kitsap County's waterfront properties, military-adjacent communities, and island logistics create unique valuation and coordination challenges for estate sales. David Stein's dual credentials as a broker and certified appraiser provide the depth needed for these distinctive properties.",
     intro:
-      "Real Property Planning helps clients and referral partners with probate real estate, inherited homes, estate sales, trust-owned property, and senior transitions in Kitsap County, Washington.",
+      "Kitsap County's waterfront properties, military-adjacent communities, and island logistics create unique challenges for estate property sales that require locally informed, valuation-based guidance.",
     cities: [
       "Bainbridge Island", "Poulsbo", "Silverdale", "Bremerton",
       "Port Orchard", "Kingston", "Suquamish",
@@ -248,10 +256,12 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   "/counties/skagit": {
     title: "Skagit County Probate Real Estate | Real Property Planning",
     description:
-      "Real Property Planning helps clients and referral partners with probate real estate, inherited homes, estate sales, trust-owned property, and senior transitions in Skagit County.",
+      "Probate real estate and inherited property sales guidance for families and fiduciaries in Skagit County — Mount Vernon, Anacortes, Burlington, and surrounding communities.",
     h1: "Estate and Inherited Property Sales in Skagit County",
+    quickAnswerQ: "How do estate property sales work in Skagit County?",
+    quickAnswerA: "Skagit County's agricultural heritage, waterfront communities, and small-town character create valuation considerations that standard market analysis often misses. David Stein provides hands-on guidance for estate and inherited property sales throughout the county.",
     intro:
-      "Real Property Planning helps clients and referral partners with probate real estate, inherited homes, estate sales, trust-owned property, and senior transitions in Skagit County, Washington.",
+      "Skagit County's agricultural heritage, waterfront communities, and small-town character create unique dynamics for estate property sales that benefit from experienced, valuation-informed guidance.",
     cities: [
       "Mount Vernon", "Burlington", "Anacortes", "Sedro-Woolley",
       "La Conner", "Concrete", "Bow", "Edison",
