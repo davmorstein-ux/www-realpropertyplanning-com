@@ -414,23 +414,24 @@ const applyMetadata = (html: string, route: string, meta: RouteMeta) => {
 
   // Inject static SSG content into <div id="root"> for crawler visibility
   if (h1 || intro) {
+    const { quickAnswerQ, quickAnswerA } = meta;
     const ssgParts: string[] = [];
     ssgParts.push(`<div id="ssg-content" style="font-family:system-ui,sans-serif;max-width:800px;margin:0 auto;padding:40px 20px">`);
 
-    // H1 and intro paragraph
+    // H1 first
     if (h1) ssgParts.push(`<h1 style="font-size:2rem;line-height:1.2;margin-bottom:16px">${h1}</h1>`);
-    if (intro) ssgParts.push(`<p style="font-size:1.1rem;line-height:1.7;color:#444">${intro}</p>`);
 
-    // NAP block (Name, Address, Phone) — early in content for local SEO crawlers
-    ssgParts.push(`<div style="margin-top:24px;padding:20px;border:1px solid #e5e5e5;border-radius:8px;background:#fafafa">`);
-    ssgParts.push(`<h2 style="font-size:1.2rem;margin:0 0 12px 0">Real Property Planning — David Stein</h2>`);
-    ssgParts.push(`<p style="margin:4px 0;color:#444">Licensed Real Estate Broker &amp; Washington State Certified Residential Appraiser</p>`);
-    ssgParts.push(`<p style="margin:4px 0;color:#444">eXp Realty</p>`);
-    ssgParts.push(`<p style="margin:4px 0;color:#555">Phone: <a href="tel:2069003015" style="color:#1a365d">(206) 900-3015</a></p>`);
-    ssgParts.push(`<p style="margin:4px 0;color:#555">Email: <a href="mailto:david@realpropertyplanning.com" style="color:#1a365d">david@realpropertyplanning.com</a></p>`);
-    ssgParts.push(`<p style="margin:4px 0;color:#555">Mailing Address: PO Box 1462, Woodinville, WA 98072</p>`);
-    ssgParts.push(`<p style="margin:4px 0;color:#555">Office: 1455 NW Leary Way, Seattle, WA 98107</p>`);
-    ssgParts.push(`</div>`);
+    // Quick Answer block — placed FIRST for AEO extraction priority
+    if (quickAnswerQ && quickAnswerA) {
+      ssgParts.push(`<div style="margin-bottom:24px;padding:20px;border:1px solid #e5e5e5;border-radius:12px;background:#fafafa">`);
+      ssgParts.push(`<p style="font-size:0.75rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#a8892f;margin:0 0 8px 0">Quick Answer</p>`);
+      ssgParts.push(`<h2 style="font-size:1.25rem;line-height:1.3;margin:0 0 8px 0">${quickAnswerQ}</h2>`);
+      ssgParts.push(`<p style="font-size:1.05rem;line-height:1.7;color:#444;margin:0">${quickAnswerA}</p>`);
+      ssgParts.push(`</div>`);
+    }
+
+    // Intro paragraph
+    if (intro) ssgParts.push(`<p style="font-size:1.1rem;line-height:1.7;color:#444">${intro}</p>`);
 
     // Optional section headings
     if (sections) {
@@ -441,7 +442,18 @@ const applyMetadata = (html: string, route: string, meta: RouteMeta) => {
       });
     }
 
-    // Areas Served block with city names
+    // NAP block — pushed lower for local SEO but below unique content
+    ssgParts.push(`<div style="margin-top:28px;padding:20px;border:1px solid #e5e5e5;border-radius:8px;background:#fafafa">`);
+    ssgParts.push(`<h2 style="font-size:1.2rem;margin:0 0 12px 0">Real Property Planning — David Stein</h2>`);
+    ssgParts.push(`<p style="margin:4px 0;color:#444">Licensed Real Estate Broker &amp; Washington State Certified Residential Appraiser</p>`);
+    ssgParts.push(`<p style="margin:4px 0;color:#444">eXp Realty</p>`);
+    ssgParts.push(`<p style="margin:4px 0;color:#555">Phone: <a href="tel:2069003015" style="color:#1a365d">(206) 900-3015</a></p>`);
+    ssgParts.push(`<p style="margin:4px 0;color:#555">Email: <a href="mailto:david@realpropertyplanning.com" style="color:#1a365d">david@realpropertyplanning.com</a></p>`);
+    ssgParts.push(`<p style="margin:4px 0;color:#555">Mailing Address: PO Box 1462, Woodinville, WA 98072</p>`);
+    ssgParts.push(`<p style="margin:4px 0;color:#555">Office: 1455 NW Leary Way, Seattle, WA 98107</p>`);
+    ssgParts.push(`</div>`);
+
+    // Areas Served block — last
     ssgParts.push(`<div style="margin-top:28px">`);
     ssgParts.push(`<h2 style="font-size:1.3rem;margin-bottom:12px">Washington State Service Areas</h2>`);
     if (cities && cities.length > 0) {
