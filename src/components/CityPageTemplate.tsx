@@ -44,28 +44,165 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
     rural: `When Families in ${city.name} Need Help With Property`,
   };
 
-  const faqs = [
-    {
-      question: `How does selling a home in probate work in ${city.name}?`,
-      answer: `Probate property sales in ${city.name} typically require legal authority before the property can be listed. David coordinates with the estate attorney and personal representative to assess the property, manage preparation, develop a pricing strategy, and handle the sale — keeping all parties informed throughout the process.`,
-    },
-    {
-      question: `What should an executor do first when there is property in ${city.name}?`,
-      answer: `Secure the property, confirm your legal authority to act, and get a realistic assessment of the home's condition and market value. David can evaluate the property and help you understand your options while you work with the estate attorney on the legal requirements.`,
-    },
-    {
-      question: `How does David Stein's appraisal background help sellers in ${city.name}?`,
-      answer: `As both a licensed Washington real estate broker and a state-certified residential appraiser, David brings valuation expertise that helps clients price properties accurately based on actual condition and local ${city.name} market context — not automated estimates or generic comps.`,
-    },
-    {
-      question: `Can David help if I live out of state but the property is in ${city.name}?`,
-      answer: `Yes. David regularly works with out-of-state executors, trustees, and heirs. He coordinates property access, vendor management, preparation, and the full sale process — keeping distant clients informed at every step.`,
-    },
-    {
-      question: `What should be done before listing an inherited home in ${city.name}?`,
-      answer: `It depends on the property's condition and your timeline. David evaluates whether to sell as-is or invest in targeted preparation — using his appraisal background to assess which improvements are likely to increase the sale price enough to justify the cost and delay.`,
-    },
-  ];
+  // Tone-specific FAQ generation for unique content per city
+  const toneFaqSets: Record<string, { question: string; answer: string }[]> = {
+    premium: [
+      {
+        question: `What should an executor consider before listing a high-value home in ${city.name}?`,
+        answer: `High-value ${city.name} properties require precise pricing, targeted marketing, and careful preparation decisions. David's appraisal background helps executors understand the property's realistic market position based on condition, neighborhood, and current buyer expectations — avoiding the costly mistakes that come from relying on automated estimates in a premium market.`,
+      },
+      {
+        question: `How does David price estate properties in ${city.name}'s competitive market?`,
+        answer: `David combines his licensed broker experience with certified appraiser training to evaluate each ${city.name} property individually — assessing condition, lot characteristics, neighborhood demand, and recent comparable sales. This dual perspective produces pricing that is both competitive and defensible, which is especially important when fiduciary obligations are involved.`,
+      },
+      {
+        question: `Can David manage the sale of a ${city.name} property if the family lives out of state?`,
+        answer: `Yes. David frequently coordinates ${city.name} estate sales for executors and trustees who live elsewhere. He handles property access, vendor management, preparation, showings, and the full sale process — providing detailed updates so distant family members can fulfill their responsibilities without repeated travel.`,
+      },
+      {
+        question: `What preparation is worth investing in before selling an inherited ${city.name} home?`,
+        answer: `In ${city.name}'s premium market, buyers expect a certain standard — but not every improvement delivers a return. David evaluates which targeted preparations will meaningfully improve the sale outcome and which are better left for the buyer, ensuring the estate's resources are spent wisely.`,
+      },
+      {
+        question: `How do multi-heir situations get handled when selling property in ${city.name}?`,
+        answer: `David provides objective, data-supported analysis that helps all parties understand the property's realistic value and the tradeoffs involved in different sale strategies. His clear communication and neutral approach help families navigate disagreements and reach practical decisions together.`,
+      },
+    ],
+    urban: [
+      {
+        question: `How does probate affect selling a home in ${city.name}?`,
+        answer: `Probate property sales in ${city.name} require legal authority — typically letters testamentary — before the home can be listed. David coordinates with the estate attorney and personal representative to manage property assessment, preparation, pricing, and sale, ensuring the process meets legal requirements while moving at a practical pace.`,
+      },
+      {
+        question: `What challenges do executors face with older homes in ${city.name}?`,
+        answer: `Older ${city.name} homes often have character features that add value alongside deferred maintenance that affects pricing. David's appraisal background helps him distinguish between what adds value and what needs honest disclosure, ensuring the property is priced to attract the right buyers in ${city.name}'s active market.`,
+      },
+      {
+        question: `Is it better to sell an inherited ${city.name} property as-is or invest in updates?`,
+        answer: `It depends on the property's condition, location within ${city.name}, and the current buyer expectations for that neighborhood. David evaluates each situation individually, recommending targeted preparation when the likely return justifies the investment — and advising against it when selling as-is is the stronger strategy.`,
+      },
+      {
+        question: `Can David help coordinate a ${city.name} estate sale from a distance?`,
+        answer: `Yes. David handles the full process locally — from securing the property and coordinating cleanout to managing preparation, listing, and sale. He keeps distant executors and family members informed with regular updates so you can manage your role without needing to be on-site.`,
+      },
+      {
+        question: `How does David's appraiser background benefit ${city.name} estate sales?`,
+        answer: `As a certified residential appraiser and licensed broker, David evaluates properties based on actual condition and ${city.name}-specific market data — not automated estimates that miss condition issues, neighborhood nuances, and property-specific factors that directly affect value.`,
+      },
+    ],
+    suburban: [
+      {
+        question: `What are the first steps when selling an inherited home in ${city.name}?`,
+        answer: `Start by securing the property and confirming your legal authority to act. Then get a realistic assessment of the home's condition and market value. David can visit the property, evaluate what needs attention, and help you develop a clear plan — whether you are local or managing from a distance.`,
+      },
+      {
+        question: `How does David determine the right price for an estate property in ${city.name}?`,
+        answer: `David uses his dual credentials as a licensed broker and certified appraiser to evaluate each ${city.name} property based on its actual condition, lot characteristics, and neighborhood-level market data. This approach produces pricing that reflects reality — helping families avoid both overpricing that delays the sale and underpricing that leaves money behind.`,
+      },
+      {
+        question: `What if family members disagree about selling the ${city.name} property?`,
+        answer: `David provides objective, condition-based analysis and clear market data that helps all family members understand the property's realistic value and the implications of different decisions. His neutral, experienced approach often helps families find common ground based on facts rather than emotions.`,
+      },
+      {
+        question: `Does David help with the cleanout and preparation of ${city.name} estate homes?`,
+        answer: `Yes. David coordinates the full preparation process — from organizing cleanout vendors to assessing which repairs or updates are worth the investment. He manages these logistics so executors and families can focus on the broader estate administration without getting overwhelmed by property details.`,
+      },
+      {
+        question: `How long does it usually take to sell an inherited property in ${city.name}?`,
+        answer: `Timeline varies based on the property's condition, the preparation needed, and current market conditions in ${city.name}. David helps set realistic expectations from the start — outlining a practical timeline that accounts for cleanout, preparation, listing, and the sale process so there are no surprises along the way.`,
+      },
+    ],
+    waterfront: [
+      {
+        question: `How is pricing a waterfront or water-view home in ${city.name} different?`,
+        answer: `Waterfront properties in ${city.name} involve unique valuation factors — shoreline type, view corridors, bulkhead condition, and water access all affect value in ways that automated tools miss. David's certified appraiser credentials give him the training to evaluate these features accurately, producing pricing that reflects the property's actual position in ${city.name}'s waterfront market.`,
+      },
+      {
+        question: `What should a trustee know about selling waterfront property in ${city.name}?`,
+        answer: `Trustees managing waterfront property in ${city.name} have fiduciary obligations that require documented, defensible pricing decisions. David's dual broker-appraiser credentials provide the kind of valuation discipline that supports these obligations — evaluating condition, view premiums, and market position with professional precision.`,
+      },
+      {
+        question: `Can David help sell an inherited ${city.name} home if the family lives elsewhere?`,
+        answer: `Yes. Many of David's ${city.name} clients manage from Seattle, Portland, or out of state. He coordinates all on-site activities — property access, vendor management, preparation, and the full sale process — providing regular updates so you can manage from a distance without repeated trips.`,
+      },
+      {
+        question: `What preparation is worthwhile before listing an estate home in ${city.name}?`,
+        answer: `It depends on the property's condition and what ${city.name} buyers expect. David evaluates which improvements are likely to improve the sale outcome and which are better left for the buyer — using his appraisal background to make recommendations based on return on investment rather than assumptions.`,
+      },
+      {
+        question: `How does the local buyer pool in ${city.name} affect estate property sales?`,
+        answer: `${city.name}'s buyer pool has specific preferences shaped by the community's character — waterfront access, walkability, and neighborhood feel all matter. David understands what local buyers prioritize and positions estate properties to appeal to the right audience, even when the property needs condition-related adjustments.`,
+      },
+    ],
+    smalltown: [
+      {
+        question: `What should I know about selling an inherited home in a community like ${city.name}?`,
+        answer: `Smaller communities like ${city.name} have more focused buyer pools, which means accurate pricing is especially important. David's appraisal background helps him set prices that reflect local demand and property condition — avoiding the extended market time that comes from overpricing in a smaller market.`,
+      },
+      {
+        question: `How does David handle estate sales in ${city.name} when the family lives far away?`,
+        answer: `David manages the entire process locally — from property assessment and cleanout coordination to preparation, listing, and sale. He provides regular updates by phone and email so you can manage your executor or trustee responsibilities from wherever you are, without needing frequent trips to ${city.name}.`,
+      },
+      {
+        question: `Is it worth making repairs to an inherited home in ${city.name} before selling?`,
+        answer: `It depends on the property's condition and what ${city.name} buyers expect. David evaluates which improvements are likely to improve the sale price enough to justify the cost and delay — and which are better left for the buyer. His appraisal training ensures these recommendations are based on data, not guesswork.`,
+      },
+      {
+        question: `Does David work with local attorneys on ${city.name} probate cases?`,
+        answer: `Yes. David coordinates with estate attorneys on probate sales, providing property assessments, market analysis, and structured sale management that aligns with court requirements. Attorneys appreciate David's clear communication and consistent follow-through on the real estate side of estate administration.`,
+      },
+      {
+        question: `What makes selling estate property in ${city.name} different from selling in a larger city?`,
+        answer: `${city.name}'s smaller market means properties may take longer if overpriced, and the buyer pool has specific expectations shaped by the community's character. David's local market awareness and appraisal discipline help him position estate properties realistically — attracting qualified buyers without unnecessary time on market.`,
+      },
+    ],
+    military: [
+      {
+        question: `What should military families in ${city.name} know about managing inherited property?`,
+        answer: `Military families often face deployment timelines, relocations, and distance challenges when dealing with inherited property. David provides full-service coordination — handling property assessment, preparation, and sale while keeping families informed regardless of where they are stationed. His structured approach works well for families who need reliable execution without being able to manage on-site.`,
+      },
+      {
+        question: `How does David price estate property in ${city.name}'s market?`,
+        answer: `David uses his dual credentials as a licensed broker and certified appraiser to evaluate each ${city.name} property based on condition, neighborhood demand, and comparable sales. This discipline-based approach produces pricing that is accurate and defensible — important for executors and trustees who need well-supported decisions.`,
+      },
+      {
+        question: `Can David coordinate a ${city.name} property sale if I am stationed elsewhere?`,
+        answer: `Yes. David regularly works with military families and service members managing property transitions from a distance. He handles property access, vendor coordination, preparation, and the complete sale process — providing consistent updates so you stay informed without needing to travel to ${city.name}.`,
+      },
+      {
+        question: `What preparation should be done before listing an inherited ${city.name} home?`,
+        answer: `David evaluates the property's condition and the local market expectations to recommend targeted preparation that improves the sale outcome. In ${city.name}, where buyer expectations are shaped by practical value, his appraisal background helps identify which improvements are worthwhile and which are not.`,
+      },
+      {
+        question: `How long does it take to sell estate property in ${city.name}?`,
+        answer: `Timeline depends on the property's condition, preparation needs, and current market activity in ${city.name}. David sets realistic expectations from the beginning and provides a structured timeline covering cleanout, preparation, listing, and sale — so you know what to expect at every stage.`,
+      },
+    ],
+    rural: [
+      {
+        question: `How do you value a rural or acreage property near ${city.name}?`,
+        answer: `Rural properties near ${city.name} involve factors that standard residential valuation tools handle poorly — acreage, outbuildings, well and septic systems, and access considerations all affect value. David's certified appraiser credentials give him the training to evaluate these non-standard features and produce pricing that reflects what rural-market buyers will actually pay.`,
+      },
+      {
+        question: `What challenges come with selling an inherited property near ${city.name}?`,
+        answer: `Inherited rural properties often involve unique characteristics — deferred maintenance on outbuildings, well or septic concerns, access road conditions, or zoning restrictions. David assesses these factors honestly, helping families understand the property's realistic value and the preparation steps that will meaningfully affect the sale outcome.`,
+      },
+      {
+        question: `Can David help if the inherited property near ${city.name} has agricultural elements?`,
+        answer: `Yes. Properties with agricultural zoning, farmland, or agricultural outbuildings require specialized assessment. David's appraiser credentials and experience with non-standard properties allow him to evaluate these features accurately and market the property to the right buyer pool.`,
+      },
+      {
+        question: `What should I do first with an inherited rural property near ${city.name}?`,
+        answer: `Secure the property, confirm your legal authority to act, and get a realistic property assessment. David can visit the property, evaluate its condition and unique features, and outline a clear path forward — whether that means preparing for sale, addressing immediate maintenance concerns, or developing a timeline that works for your situation.`,
+      },
+      {
+        question: `How does David manage a rural ${city.name}-area estate sale from a distance?`,
+        answer: `David handles all on-site coordination — property access, condition assessment, vendor management, and the full sale process. Rural properties often require more hands-on coordination than suburban homes, and David's local presence ensures nothing falls through the cracks while keeping distant family members informed at every step.`,
+      },
+    ],
+  };
+
+  const faqs = city.localFaqs || toneFaqSets[tone] || toneFaqSets.suburban;
 
   const clientTypes = city.localClientTypes || [
     `Executors and personal representatives managing estate property in ${city.name}`,
