@@ -103,11 +103,11 @@ const Index = () => {
             </div>
 
             <h1 className="font-serif text-[1.35rem] md:text-[1.65rem] lg:text-[1.95rem] font-semibold leading-[1.35] tracking-[0.01em] text-primary-foreground mb-3 max-w-[28rem] mx-auto motion-safe:animate-[text-emphasis-a_14s_ease-in-out_infinite]" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.25)', wordSpacing: '0.05em' }}>
-              David Stein helps executors, trustees, attorneys, and families navigate property transitions across Washington State.
+              Guiding seniors, families, and professionals through real estate and housing transitions across Washington State.
             </h1>
 
             <h2 className="font-serif text-[1.35rem] md:text-[1.65rem] lg:text-[1.95rem] font-semibold leading-[1.35] tracking-[0.01em] text-primary-foreground mb-6 max-w-[28rem] mx-auto motion-safe:animate-[text-emphasis-b_14s_ease-in-out_infinite]" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.25)', wordSpacing: '0.05em' }}>
-              Probate sales, inherited homes, senior moves, and trust property — guided by 20+ years as a licensed broker and certified appraiser.
+              Downsizing, relocation, probate, inherited property, and senior living decisions — with calm guidance, practical coordination, and clear next steps.
             </h2>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -129,11 +129,11 @@ const Index = () => {
 
       <DirectAnswerBlock
         question="What does Real Property Planning do?"
-        answer="Real Property Planning helps executors, trustees, attorneys, and families sell probate, estate, inherited, and senior-transition properties throughout Washington State. David Stein combines 20+ years as a licensed broker and state-certified residential appraiser to provide accurate pricing, hands-on coordination, and clear communication from first conversation through closing."
+        answer="Real Property Planning helps seniors, families, executors, trustees, attorneys, and fiduciaries navigate real estate and housing transitions throughout Washington State. Whether the need involves downsizing, relocation, probate, inherited property, senior living decisions, or preparing a home for sale, the goal is to provide calm guidance, practical coordination, and clear next steps."
         supportBullets={[
-          "Valuation-informed pricing grounded in appraisal expertise — not guesswork",
-          "Full-service coordination: cleanout, repairs, staging, listing, and closing",
-          "Clear communication with executors, attorneys, and families throughout the process",
+          "Guidance for senior transitions, probate, inherited homes, and property decisions",
+          "Help coordinating preparation, sale strategy, relocation, and next-step planning",
+          "Clear support for families and professionals navigating complex life transitions",
         ]}
       />
 
