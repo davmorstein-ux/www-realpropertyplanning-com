@@ -24,6 +24,12 @@ interface CountyPageProps {
   typicalSituations?: string[];
   clientTypes?: string[];
   marketOverview?: string;
+  /** Short 2–3 sentence paragraph for "Who I help in [County]" */
+  whoIHelp?: string;
+  /** Short paragraph on why broker + appraiser credentials matter here */
+  whyCredentialsMatter?: string;
+  /** County-specific FAQs to replace or extend the defaults */
+  countySpecificFaqs?: { question: string; answer: string }[];
 }
 
 const CountyPageTemplate = ({
@@ -36,6 +42,9 @@ const CountyPageTemplate = ({
   typicalSituations,
   clientTypes,
   marketOverview,
+  whoIHelp,
+  whyCredentialsMatter,
+  countySpecificFaqs,
 }: CountyPageProps) => {
   const breadcrumbItems = [
     { name: "Counties", url: "/counties" },
@@ -61,7 +70,11 @@ const CountyPageTemplate = ({
     "Pricing questions for properties in non-standard condition",
   ];
 
-  const countyFaqs = [
+  const defaultWhoIHelp = `David Stein works with executors, trustees, attorneys, fiduciaries, and families throughout ${countyName} who are dealing with a property situation tied to probate, an estate, a trust, or a senior transition. Most clients come to him because they need someone who understands both the real estate and the personal complexity involved.`;
+
+  const defaultWhyCredentials = `Most real estate agents can list a home — but estate, probate, and trust properties require a deeper level of care. David's dual credentials as a licensed Washington broker and state-certified residential appraiser mean he can evaluate property condition, assess realistic market value, and guide the sale process with the kind of discipline that fiduciary situations demand. In ${countyName}, where property values and buyer expectations vary significantly by neighborhood, that precision matters.`;
+
+  const defaultCountyFaqs = [
     {
       question: `How do I sell a house in probate in ${countyName}?`,
       answer: `Selling probate property in ${countyName} typically requires legal authority (letters testamentary or letters of administration) before the property can be listed. David coordinates with the estate attorney and personal representative to assess the property, develop a pricing strategy, manage preparation, and handle the sale — keeping all parties informed throughout the process.`,
@@ -80,6 +93,8 @@ const CountyPageTemplate = ({
     },
   ];
 
+  const faqs = countySpecificFaqs || defaultCountyFaqs;
+
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
@@ -89,7 +104,7 @@ const CountyPageTemplate = ({
       <BreadcrumbSchema items={breadcrumbItems} />
       <Header />
 
-      {/* Hero */}
+      {/* Hero — unique H1 + county-specific intro */}
       <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl">
@@ -99,14 +114,42 @@ const CountyPageTemplate = ({
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-[22px]">
               Estate &amp; Inherited Property Sales in {countyName}
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-5">
+            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed">
               {localInsight || `Whether the property needs assessment, preparation, pricing strategy, or a full sale plan, clients and referral partners in ${countyName} benefit from David's dual credentials as a licensed broker and state certified residential appraiser.`}
             </p>
           </div>
         </div>
       </section>
 
-      <TrustStrip />
+      {/* --- UNIQUE CONTENT FIRST --- */}
+
+      {/* Who I Help in [County] */}
+      <section className="py-14 lg:py-18 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-4">
+              Who I Help in {countyName}
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              {whoIHelp || defaultWhoIHelp}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Broker + Appraiser Credentials Matter Here */}
+      <section className="py-14 lg:py-18 bg-secondary">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-4">
+              Why Broker and Appraiser Experience Matters in {countyName}
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              {whyCredentialsMatter || defaultWhyCredentials}
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Market Overview (unique per county) */}
       {marketOverview && (
@@ -124,7 +167,10 @@ const CountyPageTemplate = ({
         </section>
       )}
 
-      {/* Who We Work With */}
+      {/* --- BOILERPLATE MOVED LOWER --- */}
+      <TrustStrip />
+
+      {/* Clients and Partners */}
       <section className="py-20 lg:py-28 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
@@ -264,7 +310,7 @@ const CountyPageTemplate = ({
       </section>
 
       {/* County FAQ */}
-      <PageFAQ faqs={countyFaqs} heading={`${countyName} Property Transition FAQ`} />
+      <PageFAQ faqs={faqs} heading={`${countyName} Property Transition FAQ`} />
 
       {/* Internal Links */}
       <section className="py-12 bg-background">
@@ -275,6 +321,8 @@ const CountyPageTemplate = ({
               <Link to="/probate-estate-sales" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Probate & Estate Sales</Link>
               <span className="text-muted-foreground/40">·</span>
               <Link to="/executors" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Executors</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/trustees" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Trustees</Link>
               <span className="text-muted-foreground/40">·</span>
               <Link to="/for-attorneys" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Attorneys</Link>
               <span className="text-muted-foreground/40">·</span>
