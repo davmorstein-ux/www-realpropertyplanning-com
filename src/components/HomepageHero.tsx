@@ -15,7 +15,7 @@ const HomepageHero = () => {
         />
 
         {/* Tagline */}
-        <p className="text-[18px] md:text-[22px] tracking-[0.08em] leading-relaxed mb-8" style={{ color: "#b0b8c8" }}>
+        <p className="text-[22px] md:text-[28px] tracking-[0.08em] leading-relaxed mb-8 text-white font-medium">
           Guiding Families Through Life's Most Important Transitions
         </p>
 
@@ -34,11 +34,6 @@ const HomepageHero = () => {
             </button>
           </Link>
         </div>
-
-        {/* Trust line */}
-        <p className="text-sm" style={{ color: "#8a94a6" }}>
-          Licensed Real Estate Broker · Certified Residential Appraiser · Serving Western Washington
-        </p>
       </div>
     </section>
   );
