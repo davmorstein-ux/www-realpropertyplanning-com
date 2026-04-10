@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { AlertTriangle } from "lucide-react";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+import iconElderLaw from "@/assets/icons/icon-elder-law-3d.png";
 
 const intersections = [
   "Transitioning to assisted living or memory care",
@@ -63,7 +64,8 @@ const ForElderLawAttorneys = () => (
     {/* Hero */}
     <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
       <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl">
+        <div className="max-w-3xl mx-auto text-center">
+          <img src={iconElderLaw} alt="" aria-hidden="true" className="mx-auto w-60 h-auto object-contain mb-8" />
           <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
             For Elder Law Attorneys
           </p>
