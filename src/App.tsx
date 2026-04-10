@@ -131,6 +131,9 @@ import RealtorLearnMore from "./pages/RealtorLearnMore";
 import RealEstateAppraiserLearnMore from "./pages/RealEstateAppraiserLearnMore";
 import SeniorMoveManagersLearnMore from "./pages/SeniorMoveManagersLearnMore";
 import EstateLiquidationLearnMore from "./pages/EstateLiquidationLearnMore";
+import Professionals from "./pages/Professionals";
+import ProbateAttorneys from "./pages/professionals/ProbateAttorneys";
+import SeniorHousingAdvisors from "./pages/professionals/SeniorHousingAdvisors";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -283,6 +286,10 @@ const App = () => (
           <Route path="/real-estate-appraiser/learn-more" element={<RealEstateAppraiserLearnMore />} />
           <Route path="/senior-move-managers/learn-more" element={<SeniorMoveManagersLearnMore />} />
           <Route path="/estate-liquidation/learn-more" element={<EstateLiquidationLearnMore />} />
+          {/* Professionals hub */}
+          <Route path="/professionals" element={<Professionals />} />
+          <Route path="/professionals/probate-attorneys" element={<ProbateAttorneys />} />
+          <Route path="/professionals/senior-housing-advisors" element={<SeniorHousingAdvisors />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
