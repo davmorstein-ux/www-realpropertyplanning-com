@@ -17,19 +17,18 @@ const ServiceNavTiles = () => {
           Choose a service, role, or next step below.
         </p>
 
-        {tileCategories.map((category) => {
-
-          return (
-            <div key={category.label} className="mb-16 last:mb-0">
-              <h3 className="text-center text-xl sm:text-2xl font-serif font-semibold text-foreground/80 tracking-tight mb-6">
-                {category.label}
-              </h3>
-              <div className="mx-auto grid w-full max-w-[1200px] grid-cols-2 items-start gap-0 sm:grid-cols-3 isolate">
-                {tiles}
-              </div>
+        {tileCategories.map((category) => (
+          <div key={category.label} className="mb-16 last:mb-0">
+            <h3 className="text-center text-xl sm:text-2xl font-serif font-semibold text-foreground/80 tracking-tight mb-6">
+              {category.label}
+            </h3>
+            <div className="mx-auto grid w-full max-w-[1200px] grid-cols-2 items-start gap-0 sm:grid-cols-3 isolate">
+              {category.tiles.map((tile, i) => (
+                <ServiceNavTileCard key={tile.href + tile.title} tile={tile} index={i} />
+              ))}
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
     </section>
   );
