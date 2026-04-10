@@ -72,14 +72,6 @@ const SeniorMoveManagers = () => {
           </div>
         </section>
 
-        {/* SENIOR MOVES ICON */}
-        <div className="bg-background pt-10 md:pt-14 pb-2 md:pb-4">
-          <img
-            src={seniorMovesHeroIcon}
-            alt="Senior Move Managers"
-            className="block max-w-[240px] md:max-w-[336px] h-auto mx-auto"
-          />
-        </div>
 
         {/* WHAT IS A SENIOR MOVE MANAGER */}
         <section className="py-10 md:py-16 bg-background">
