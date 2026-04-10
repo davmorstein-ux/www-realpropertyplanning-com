@@ -134,6 +134,10 @@ import EstateLiquidationLearnMore from "./pages/EstateLiquidationLearnMore";
 import Professionals from "./pages/Professionals";
 import ProbateAttorneys from "./pages/professionals/ProbateAttorneys";
 import SeniorHousingAdvisors from "./pages/professionals/SeniorHousingAdvisors";
+import FinancialPlanners from "./pages/professionals/FinancialPlanners";
+import EstateSale from "./pages/professionals/EstateSale";
+import HomePreparation from "./pages/professionals/HomePreparation";
+import CareManagers from "./pages/professionals/CareManagers";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -290,6 +294,10 @@ const App = () => (
           <Route path="/professionals" element={<Professionals />} />
           <Route path="/professionals/probate-attorneys" element={<ProbateAttorneys />} />
           <Route path="/professionals/senior-housing-advisors" element={<SeniorHousingAdvisors />} />
+          <Route path="/professionals/financial-planners" element={<FinancialPlanners />} />
+          <Route path="/professionals/estate-sale" element={<EstateSale />} />
+          <Route path="/professionals/home-preparation" element={<HomePreparation />} />
+          <Route path="/professionals/care-managers" element={<CareManagers />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
