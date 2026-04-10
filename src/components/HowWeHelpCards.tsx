@@ -1,23 +1,25 @@
 import { Link } from "react-router-dom";
-import { Home, Users, ClipboardList } from "lucide-react";
 
 const cards = [
   {
-    icon: Home,
+    iconSrc: "https://img.icons8.com/3d-fluency/94/home.png",
+    iconAlt: "Inherited home real estate icon",
     headline: "Selling an Inherited Home",
     description: "We handle the details so families don't have to. From pricing to closing, we manage the process with care.",
     link: "/probate-estate-sales",
     proLink: { label: "Find a probate attorney →", href: "/professionals/probate-attorneys" },
   },
   {
-    icon: Users,
+    iconSrc: "https://img.icons8.com/3d-fluency/94/family.png",
+    iconAlt: "Senior housing transition icon",
     headline: "Senior Housing Transitions",
     description: "Helping older adults and their families find the right next step — whether that's downsizing or moving to assisted living.",
     link: "/senior-transitions",
     proLink: { label: "Find a senior housing advisor →", href: "/professionals/senior-housing-advisors" },
   },
   {
-    icon: ClipboardList,
+    iconSrc: "https://img.icons8.com/3d-fluency/94/document.png",
+    iconAlt: "Estate appraisal document icon",
     headline: "Estate & Trust Appraisals",
     description: "As a certified appraiser, David provides legally reliable valuations for probate, trusts, and estate settlements.",
     link: "/real-estate-appraiser",
@@ -38,7 +40,14 @@ const HowWeHelpCards = () => {
               key={card.headline}
               className="bg-card rounded-2xl shadow-md p-8 flex flex-col items-start"
             >
-              <card.icon className="w-16 h-16 text-gold mb-6 stroke-[1.5]" />
+              <img
+                src={card.iconSrc}
+                alt={card.iconAlt}
+                width={80}
+                height={80}
+                className="w-20 h-20 object-contain mb-6"
+                loading="lazy"
+              />
               <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
                 {card.headline}
               </h3>
