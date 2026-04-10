@@ -1,0 +1,51 @@
+import iconAttorneys from "@/assets/icons/icon-attorneys.png";
+import iconFinancialPlanners from "@/assets/icons/icon-financial-planners.png";
+import iconSeniorMoves from "@/assets/icons/icon-senior-moves-hero.png";
+import iconAppraiser from "@/assets/icons/icon-appraiser.png";
+import iconRealtor from "@/assets/icons/icon-realtor.png";
+import iconExecutors from "@/assets/icons/icon-executors.png";
+
+const tiles = [
+  { icon: iconRealtor, label: "Real Estate Broker" },
+  { icon: iconAppraiser, label: "Certified Appraiser" },
+  { icon: iconAttorneys, label: "Estate Attorney" },
+  { icon: iconFinancialPlanners, label: "Financial Planner" },
+  { icon: iconSeniorMoves, label: "Senior Move Manager" },
+  { icon: iconExecutors, label: "Executor Advisor" },
+];
+
+const HomepageTeamSection = () => {
+  return (
+    <section className="py-16 lg:py-24 bg-background">
+      <div className="container px-6 lg:px-8">
+        <div className="max-w-[680px] mx-auto text-center mb-12">
+          <h2 className="font-serif text-4xl text-foreground font-semibold mb-6">
+            You Don't Navigate This Alone
+          </h2>
+          <p className="text-xl text-muted-foreground leading-relaxed">
+            Families dealing with inherited property, probate, or a senior housing transition rarely need just one kind of help. They need a coordinated team — a real estate professional, an attorney, a care advisor, a financial planner — all working together. Real Property Planning connects families with the right professionals for their situation, across Western Washington.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-5 max-w-3xl mx-auto">
+          {tiles.map((tile) => (
+            <div
+              key={tile.label}
+              className="bg-card rounded-2xl shadow-sm border border-border p-6 flex flex-col items-center text-center"
+            >
+              <img
+                src={tile.icon}
+                alt={tile.label}
+                className="w-12 h-12 object-contain mb-3"
+                loading="lazy"
+              />
+              <span className="font-semibold text-base text-foreground">{tile.label}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HomepageTeamSection;
