@@ -3,8 +3,6 @@ import ServiceNavTileCard from "./ServiceNavTileCard";
 import { tileCategories } from "./service-nav-tiles-data";
 
 const ServiceNavTiles = () => {
-  let globalIndex = 0;
-
   return (
     <section className="py-20 lg:py-28 bg-secondary">
       <div className="mx-auto max-w-[3300px] px-0 sm:px-1 lg:px-2">
@@ -20,12 +18,6 @@ const ServiceNavTiles = () => {
         </p>
 
         {tileCategories.map((category) => {
-          const startIndex = globalIndex;
-          const tiles = category.tiles.map((tile, i) => {
-            const idx = startIndex + i;
-            return <ServiceNavTileCard key={tile.href + tile.title} tile={tile} index={idx} />;
-          });
-          globalIndex += category.tiles.length;
 
           return (
             <div key={category.label} className="mb-16 last:mb-0">
