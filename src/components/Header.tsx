@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "@/assets/logo-rpp.jpg";
+import logo from "@/assets/logo-rpp-bright.png";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 
 const primaryLinks = [
@@ -109,10 +109,10 @@ const Header = () => {
                 {link.children ? (
                   <>
                     <button
-                      className={`inline-flex items-center gap-1 text-[15px] font-medium tracking-[0.02em] transition-colors hover:text-[hsl(216,65%,34%)] lg:text-[16px] ${
+                      className={`inline-flex items-center gap-1 text-[15px] font-medium tracking-[0.02em] transition-colors hover:text-blue-300 lg:text-[16px] ${
                         isActive(link.href, link.children)
-                          ? "font-semibold text-[hsl(216,65%,34%)]"
-                          : "text-foreground"
+                          ? "font-semibold text-white"
+                          : "text-white/80"
                       }`}
                       onClick={() => setOpenDropdown(openDropdown === link.label ? null : link.label)}
                       onMouseEnter={() => setOpenDropdown(link.label)}
@@ -142,10 +142,10 @@ const Header = () => {
                 ) : (
                   <Link
                     to={link.href}
-                    className={`text-[14px] font-medium tracking-[0.02em] transition-colors hover:text-[hsl(216,65%,34%)] lg:text-[15px] ${
+                    className={`text-[14px] font-medium tracking-[0.02em] transition-colors hover:text-blue-300 lg:text-[15px] ${
                       isActive(link.href)
-                        ? "font-semibold text-[hsl(216,65%,34%)]"
-                        : "text-foreground"
+                        ? "font-semibold text-white"
+                        : "text-white/80"
                     }`}
                   >
                     {link.label}
@@ -169,14 +169,14 @@ const Header = () => {
 
           <a
             href="tel:2069003015"
-            className="hidden shrink-0 items-center gap-1.5 text-[14px] font-semibold text-foreground hover:text-gold transition-colors md:flex"
+            className="hidden shrink-0 items-center gap-1.5 text-[14px] font-semibold text-white/90 hover:text-white transition-colors md:flex"
           >
             <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0" />
             (206) 900-3015
           </a>
 
           <button
-            className="rounded-lg border border-border bg-secondary p-3 text-foreground transition-colors hover:bg-muted md:hidden"
+            className="rounded-lg border border-white/20 bg-white/10 p-3 text-white transition-colors hover:bg-white/20 md:hidden"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
