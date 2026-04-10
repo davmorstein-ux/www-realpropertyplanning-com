@@ -7,8 +7,6 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
-import iconLicense3d from "@/assets/icons/icon-license-3d.png";
-import iconAppraiser3d from "@/assets/icons/icon-appraiser-3d.png";
 import mappin3d from "@/assets/mappin-3d.png";
 import logo from "@/assets/logo-rpp-bright.png";
 import expRealtyLogo from "@/assets/exp-realty-logo.png";
@@ -79,26 +77,7 @@ const Index = () => {
       ═══════════════════════════════════════════════════ */}
       <ServiceNavTiles />
 
-      {/* ═══════════════════════════════════════════════════
-          3. TRUST STRIP — Credentials
-      ═══════════════════════════════════════════════════ */}
-      <section className="py-8 lg:py-10 bg-cream">
-        <div className="mx-auto max-w-[1100px] px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 text-center">
-            <div className="flex items-center gap-3">
-              <img src={iconLicense3d} alt="" aria-hidden="true" className="h-10 w-10 object-contain" />
-              <span className="text-foreground font-semibold text-base">Licensed WA Broker</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <img src={iconAppraiser3d} alt="" aria-hidden="true" className="h-10 w-10 object-contain mix-blend-multiply" />
-              <span className="text-foreground font-semibold text-base">Certified Appraiser</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <span className="text-foreground font-semibold text-base">20+ Years Experience</span>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Spacer between tiles and next section */}
 
       {/* ═══════════════════════════════════════════════════
           4. WHEN SHOULD YOU CALL — Quick, scannable
