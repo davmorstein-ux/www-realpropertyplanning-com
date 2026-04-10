@@ -139,7 +139,8 @@ const Terminology = () => {
       {/* Hero */}
       <section className="bg-primary pt-16 pb-12 md:pt-32 md:pb-20 lg:pb-24">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl mx-auto text-center">
+            <img src={iconProbateTerms} alt="" aria-hidden="true" className="mx-auto w-60 h-auto object-contain mb-8" />
             <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
               Probate Real Estate Resource
             </p>
