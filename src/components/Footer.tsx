@@ -80,7 +80,7 @@ const Footer = () => {
               <li><Link to="/terminology" className="hover:text-gold transition-colors">Terminology</Link></li>
               <li><Link to="/contact" className="hover:text-gold transition-colors">Contact</Link></li>
               <li><Link to="/resources" className="hover:text-gold transition-colors">Resources</Link></li>
-            </ul>
+              <li><Link to="/professionals" className="hover:text-gold transition-colors">Professional Resources</Link></li>
           </div>
           
           {/* Service Areas */}
