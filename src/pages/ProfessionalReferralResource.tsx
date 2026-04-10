@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+import iconResources from "@/assets/icons/icon-resources.png";
 
 const whoIWorkWith = [
   {
@@ -118,7 +119,8 @@ const ProfessionalReferralResource = () => {
       {/* Hero */}
       <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl mx-auto text-center">
+            <img src={iconResources} alt="" aria-hidden="true" className="mx-auto w-60 h-auto object-contain mb-8" />
             <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] text-primary-foreground font-semibold leading-tight mb-6">
               A Professional Real Estate Resource for Important Property Transitions
             </h1>
@@ -126,7 +128,7 @@ const ProfessionalReferralResource = () => {
               Real estate guidance for attorneys, fiduciaries, executors, trustees, seniors, and families navigating probate, estate property sales, inherited homes, and major housing transitions throughout Washington State.
             </p>
             <p className="text-base text-primary-foreground/70 leading-relaxed mb-8">
-              David Stein is a licensed real estate broker and state-certified residential appraiser with more than 20 years of experience helping clients make informed property decisions during complex and often emotional transitions. He works closely with professional referral partners who want their clients served with care, discretion, responsiveness, and practical follow-through.
+              Real Property Planning is a licensed real estate brokerage with state-certified residential appraisal expertise, helping clients make informed property decisions during complex and often emotional transitions. We work closely with professional referral partners who want their clients served with care, discretion, responsiveness, and practical follow-through.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/contact">

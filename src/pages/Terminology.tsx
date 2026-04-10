@@ -14,6 +14,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+import iconProbateTerms from "@/assets/icons/icon-probate-sales-alt.png";
 
 interface GlossaryTerm {
   term: string;

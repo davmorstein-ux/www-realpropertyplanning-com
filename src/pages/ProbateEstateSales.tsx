@@ -14,6 +14,7 @@ import { Link } from "react-router-dom";
 
 import warning3d from "@/assets/warning-3d.png";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+import iconProbateSales from "@/assets/icons/icon-probate-sales.png";
 import ClientReviewsSection from "@/components/ClientReviewsSection";
 import RealClientSituations from "@/components/RealClientSituations";
 
@@ -162,7 +163,8 @@ const ProbateEstateSales = () => {
       {/* Hero */}
       <section className="bg-primary pt-16 pb-12 lg:pt-32 lg:pb-28">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl mx-auto text-center">
+            <img src={iconProbateSales} alt="" aria-hidden="true" className="mx-auto w-60 h-auto object-contain mb-8" />
             <p className="text-gold font-bold tracking-widest uppercase mb-4 text-base">
               Probate & Estate Property Sales
             </p>

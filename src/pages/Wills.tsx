@@ -11,6 +11,7 @@ import GoldCheck3D from "@/components/GoldCheck3D";
 import MidPageCTA from "@/components/MidPageCTA";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+import iconWills from "@/assets/icons/icon-wills.png";
 
 const willsFaqs = [
   {
@@ -76,6 +77,7 @@ const Wills = () => {
           {/* Hero */}
           <section className="pt-20 pb-10 sm:pt-28 sm:pb-14 bg-gradient-to-b from-secondary to-background">
             <div className="mx-auto max-w-3xl px-6 text-center">
+              <img src={iconWills} alt="" aria-hidden="true" className="mx-auto w-60 h-auto object-contain mb-8" />
               <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
                 Wills &amp; Real Estate
               </h1>

@@ -12,6 +12,7 @@ import MidPageCTA from "@/components/MidPageCTA";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+import iconTheProcess from "@/assets/icons/icon-the-process.png";
 import DirectAnswerBlock from "@/components/DirectAnswerBlock";
 
 
@@ -104,7 +105,8 @@ const HowTheProcessWorks = () => {
       {/* Hero */}
       <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-[96px]">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl mx-auto text-center">
+            <img src={iconTheProcess} alt="" aria-hidden="true" className="mx-auto w-60 h-auto object-contain mb-8" />
             <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
               A Clear and Organized Approach
             </p>
