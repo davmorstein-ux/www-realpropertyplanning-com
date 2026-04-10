@@ -80,6 +80,13 @@ const Header = () => {
 
   return (
     <>
+      {/* Skip to content — accessibility */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:bg-primary focus:text-primary-foreground focus:px-4 focus:py-2 focus:rounded-md focus:text-base"
+      >
+        Skip to main content
+      </a>
       <header
         data-nosnippet
         className={`fixed left-0 right-0 top-0 z-50 bg-white border-b transition-all duration-300 ${
@@ -159,7 +166,13 @@ const Header = () => {
             </Link>
           </div>
 
-          <div className="hidden shrink-0 items-center md:flex" />
+          <a
+            href="tel:2069003015"
+            className="hidden shrink-0 items-center gap-1.5 text-[14px] font-semibold text-foreground hover:text-gold transition-colors md:flex"
+          >
+            <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0" />
+            (206) 900-3015
+          </a>
 
           <button
             className="rounded-lg border border-border bg-secondary p-3 text-foreground transition-colors hover:bg-muted md:hidden"
