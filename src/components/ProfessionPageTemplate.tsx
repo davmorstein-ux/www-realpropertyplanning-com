@@ -52,6 +52,13 @@ interface ProfessionPageTemplateProps {
   professionLabel: string;
 }
 
+const placeholderProfessional: Professional = {
+  name: "Your Name Here",
+  firm: "Your Firm Name",
+  counties: ["King County"],
+  bio: "Featured professionals will appear here. If you serve Western Washington families in this field, we'd love to hear from you.",
+};
+
 const ProfessionPageTemplate = ({
   title,
   metaTitle,
@@ -64,9 +71,24 @@ const ProfessionPageTemplate = ({
   relatedProfessions,
   professionLabel,
 }: ProfessionPageTemplateProps) => {
+  const displayProfessionals = professionals.length > 0 ? professionals : [placeholderProfessional];
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.a,
+      },
+    })),
+  };
+
   return (
     <div className="min-h-screen bg-background">
-      <SEOHead title={metaTitle} description={metaDescription} />
+      <SEOHead title={metaTitle} description={metaDescription} jsonLd={faqSchema} />
       <BreadcrumbSchema
         items={[
           { name: "Professionals", url: "/professionals" },
@@ -117,11 +139,11 @@ const ProfessionPageTemplate = ({
             <h2 className="font-serif text-[1.75rem] text-foreground font-semibold mb-10">
               Featured Professionals
             </h2>
-            {professionals.length > 0 ? (
+            {displayProfessionals.length > 0 && (
               <div className="grid md:grid-cols-2 gap-6">
-                {professionals.map((pro) => (
+                {displayProfessionals.map((pro, idx) => (
                   <div
-                    key={pro.name}
+                    key={pro.name + idx}
                     className="bg-card rounded-xl border border-border shadow-sm p-6"
                   >
                     <div className="flex items-start gap-4 mb-4">
@@ -187,12 +209,6 @@ const ProfessionPageTemplate = ({
                     </div>
                   </div>
                 ))}
-              </div>
-            ) : (
-              <div className="bg-card rounded-xl border border-border p-8 text-center">
-                <p className="text-muted-foreground text-lg">
-                  Featured professionals coming soon. We're building a curated list of trusted specialists in this area.
-                </p>
               </div>
             )}
           </div>

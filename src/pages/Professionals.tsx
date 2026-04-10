@@ -56,8 +56,8 @@ const Professionals = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Find a Professional | Western Washington | Real Property Planning"
-        description="A resource hub connecting families with trusted probate attorneys, senior housing advisors, financial planners, estate sale specialists, and care managers across Western Washington."
+        title="Find a Professional | Real Property Planning | Western Washington"
+        description="A resource for families navigating estate settlement, inherited homes, and senior transitions — find trusted probate attorneys, senior housing advisors, financial planners, and more across the Puget Sound region."
       />
       <BreadcrumbSchema items={[{ name: "Professionals", url: "/professionals" }]} />
       <Header />
