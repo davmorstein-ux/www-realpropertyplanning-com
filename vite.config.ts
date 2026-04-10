@@ -1,4 +1,4 @@
-import { defineConfig, type OutputBundle, type OutputAsset } from "vite";
+import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
@@ -553,15 +553,19 @@ const applyMetadata = (
 const routeMetadataPlugin = {
   name: "route-metadata-prerender",
   apply: "build" as const,
-  generateBundle(_, bundle: OutputBundle) {
+  generateBundle(
+    this: { emitFile: (file: { type: "asset"; fileName: string; source: string }) => void },
+    _options: unknown,
+    bundle: Record<string, { type: string; source?: string | Uint8Array }>
+  ) {
     const indexEntry = bundle["index.html"];
-    if (!indexEntry || indexEntry.type !== "asset") return;
+    if (!indexEntry || indexEntry.type !== "asset" || typeof indexEntry.source === "undefined") return;
 
     const baseHtml = typeof indexEntry.source === "string"
       ? indexEntry.source
       : indexEntry.source.toString();
 
-    (indexEntry as OutputAsset).source = injectRouteAwareShell(
+    indexEntry.source = injectRouteAwareShell(
       applyMetadata(baseHtml, "/", DEFAULT_SHELL_META, { injectSsg: true })
     );
 
