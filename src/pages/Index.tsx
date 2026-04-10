@@ -7,8 +7,6 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
-import iconLicense3d from "@/assets/icons/icon-license-3d.png";
-import iconAppraiser3d from "@/assets/icons/icon-appraiser-3d.png";
 import mappin3d from "@/assets/mappin-3d.png";
 import logo from "@/assets/logo-rpp-bright.png";
 import expRealtyLogo from "@/assets/exp-realty-logo.png";
