@@ -18,10 +18,14 @@ const ServiceNavTiles = () => {
         </p>
 
         {tileCategories.map((category) => (
-          <div key={category.label} className="mb-16 last:mb-0">
-            <h3 className="text-center text-3xl sm:text-4xl lg:text-[2.6rem] font-serif font-bold text-red-900 tracking-tight mb-10 mt-6">
-              {category.label}
-            </h3>
+          <div key={category.label} className="mb-20 last:mb-0">
+            <div className="mx-auto max-w-[1200px] mb-10 mt-8">
+              <div className="bg-navy rounded-lg px-6 py-3">
+                <h3 className="text-center text-xl sm:text-2xl lg:text-[1.65rem] font-serif font-bold text-primary-foreground tracking-wide">
+                  {category.label}
+                </h3>
+              </div>
+            </div>
             <div className="mx-auto grid w-full max-w-[1200px] grid-cols-2 items-start gap-0 sm:grid-cols-3 isolate">
               {category.tiles.map((tile, i) => (
                 <ServiceNavTileCard key={tile.href + tile.title} tile={tile} index={i} />
