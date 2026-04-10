@@ -132,7 +132,6 @@ import RealEstateAppraiserLearnMore from "./pages/RealEstateAppraiserLearnMore";
 import SeniorMoveManagersLearnMore from "./pages/SeniorMoveManagersLearnMore";
 import EstateLiquidationLearnMore from "./pages/EstateLiquidationLearnMore";
 import NotFound from "./pages/NotFound";
-import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
