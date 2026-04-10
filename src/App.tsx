@@ -107,6 +107,7 @@ import FederalWayProbateEstate from "./pages/FederalWayProbateEstate";
 import AuburnProbateEstate from "./pages/AuburnProbateEstate";
 import MarysvilleProbateEstate from "./pages/MarysvilleProbateEstate";
 import Insights from "./pages/Insights";
+import GuidesAndResources from "./pages/GuidesAndResources";
 import FirstStepsInheritedHouse from "./pages/insights/FirstStepsInheritedHouse";
 import OutOfStateInheritedHouse from "./pages/insights/OutOfStateInheritedHouse";
 import EstatePropertyTimeline from "./pages/insights/EstatePropertyTimeline";
@@ -153,6 +154,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/insights" element={<Insights />} />
+          <Route path="/guides-and-resources" element={<GuidesAndResources />} />
           <Route path="/probate-estate-sales" element={<ProbateEstateSales />} />
           <Route path="/senior-transitions" element={<SeniorTransitions />} />
           <Route path="/for-attorneys" element={<ForAttorneys />} />
