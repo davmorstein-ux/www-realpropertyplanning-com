@@ -601,8 +601,7 @@ export default defineConfig({
       webp: { quality: 80 },
     }),
     routeMetadataPlugin,
-    process.env.NODE_ENV === "development" ? componentTagger() : null,
-  ].filter(Boolean),
+  ],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
