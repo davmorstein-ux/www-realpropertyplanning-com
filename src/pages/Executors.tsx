@@ -42,7 +42,7 @@ const Executors = () => (
           <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-foreground leading-tight mb-4">
             You Do Not Have to Figure This Out Alone
           </h1>
-          <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-8">
+          <p className="text-muted-foreground/70 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-8" style={{ maskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)' }}>
             Real Property Planning coordinates property evaluation, preparation, pricing, and sale so you can focus on your other responsibilities.
           </p>
           <Link to="/contact">

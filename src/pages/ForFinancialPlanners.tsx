@@ -42,7 +42,7 @@ const ForFinancialPlanners = () => (
           <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-foreground leading-tight mb-4">
             Real Estate Guidance for Financial Planners
           </h1>
-          <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-8">
+          <p className="text-muted-foreground/70 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-8" style={{ maskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)' }}>
             Practical property guidance when your clients face inherited property, trust-owned homes, estate transitions, or senior housing changes.
           </p>
           <Link to="/contact">
