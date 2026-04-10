@@ -50,7 +50,7 @@ const ForEstatePlanningAttorneys = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
       title="Real Estate Support for Estate Planning Attorneys | Real Property Planning"
-      description="David Stein works with estate planning attorneys on trust-owned property sales, valuations, and real estate coordination throughout Washington State."
+      description="Real Property Planning works with estate planning attorneys on trust-owned property sales, valuations, and real estate coordination throughout Washington State."
     />
     <BreadcrumbSchema
       items={[
@@ -91,7 +91,7 @@ const ForEstatePlanningAttorneys = () => (
             Estate planning is about clarity, protection, and long-term intent. But when real property is involved, even well-structured plans can become complicated when it's time to act.
           </p>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            I work alongside estate planning attorneys to help clients move from strategy to execution — providing clear valuation insight, coordinated sale planning, and a steady, professional presence during important transitions.
+            Real Property Planning works alongside estate planning attorneys to help clients move from strategy to execution — providing clear valuation insight, coordinated sale planning, and a steady, professional presence during important transitions.
           </p>
         </div>
       </div>
@@ -122,15 +122,15 @@ const ForEstatePlanningAttorneys = () => (
       </div>
     </section>
 
-    {/* How I Support Your Clients */}
+    {/* How We Support Your Clients */}
     <section className="py-16 lg:py-24 bg-secondary">
       <div className="container px-6 lg:px-8">
         <div className="max-w-[900px] mx-auto">
           <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
-            How I Support Your Clients
+            How We Support Your Clients
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-10">
-            As a licensed real estate broker and state-certified residential appraiser, I provide:
+            As a licensed real estate brokerage with state-certified residential appraisal expertise, Real Property Planning provides:
           </p>
           <div className="grid gap-5">
             {services.map((s, i) => (
@@ -151,7 +151,7 @@ const ForEstatePlanningAttorneys = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <h2 className="font-serif text-3xl text-foreground font-semibold mb-8">
-            Common Situations I Help With
+            Common Situations We Help With
           </h2>
           <ul className="space-y-4">
             {situations.map((item, i) => (

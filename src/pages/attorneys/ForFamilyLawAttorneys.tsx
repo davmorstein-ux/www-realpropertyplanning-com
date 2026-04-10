@@ -50,7 +50,7 @@ const ForFamilyLawAttorneys = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
       title="Real Estate Support for Family Law Attorneys | Real Property Planning"
-      description="David Stein works with family law attorneys on property valuations, home sales, and real estate coordination during family transitions in Washington State."
+      description="Real Property Planning works with family law attorneys on property valuations, home sales, and real estate coordination during family transitions in Washington State."
     />
     <BreadcrumbSchema
       items={[
@@ -94,7 +94,7 @@ const ForFamilyLawAttorneys = () => (
             Whether clients are navigating divorce, separation, or other family-related legal matters, decisions involving a home require clear information, thoughtful planning, and a steady approach.
           </p>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            I work alongside family law attorneys to provide reliable valuation, structured guidance, and professional coordination throughout the process.
+            Real Property Planning works alongside family law attorneys to provide reliable valuation, structured guidance, and professional coordination throughout the process.
           </p>
         </div>
       </div>
@@ -125,15 +125,15 @@ const ForFamilyLawAttorneys = () => (
       </div>
     </section>
 
-    {/* How I Support Your Clients */}
+    {/* How We Support Your Clients */}
     <section className="py-16 lg:py-24 bg-secondary">
       <div className="container px-6 lg:px-8">
         <div className="max-w-[900px] mx-auto">
           <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
-            How I Support Your Clients
+            How We Support Your Clients
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-10">
-            As a licensed real estate broker and state-certified residential appraiser, I provide:
+            As a licensed real estate brokerage with state-certified residential appraisal expertise, Real Property Planning provides:
           </p>
           <div className="grid gap-5">
             {services.map((s, i) => (
@@ -154,7 +154,7 @@ const ForFamilyLawAttorneys = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <h2 className="font-serif text-3xl text-foreground font-semibold mb-8">
-            Common Situations I Help With
+            Common Situations We Help With
           </h2>
           <ul className="space-y-4">
             {situations.map((item, i) => (
@@ -209,10 +209,10 @@ const ForFamilyLawAttorneys = () => (
             A Collaborative Approach
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-            My role is to support the legal process by helping ensure that real estate decisions are handled clearly, professionally, and efficiently.
+            Our role is to support the legal process by helping ensure that real estate decisions are handled clearly, professionally, and efficiently.
           </p>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            By working together, we can provide a more complete and coordinated experience for clients.
+            By working together, Real Property Planning can provide a more complete and coordinated experience for clients.
           </p>
         </div>
       </div>
@@ -226,7 +226,7 @@ const ForFamilyLawAttorneys = () => (
             Let's Connect
           </h2>
           <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
-            If your clients are navigating family law matters involving real estate, I would welcome the opportunity to collaborate and support a smooth process.
+            If your clients are navigating family law matters involving real estate, we would welcome the opportunity to collaborate and support a smooth process.
           </p>
           <Link to="/contact">
  <Button variant="gold" size="lg"className="hover:-light">

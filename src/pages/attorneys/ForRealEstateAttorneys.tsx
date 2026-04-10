@@ -56,7 +56,7 @@ const faqs = [
   {
     question: "Do you provide legal advice?",
     answer:
-      "No. Real Property Planning does not provide legal advice. When legal questions arise, clients should consult a qualified real estate attorney. David Stein helps with the real estate, valuation, and practical property side of the situation.",
+      "No. Real Property Planning does not provide legal advice. When legal questions arise, clients should consult a qualified real estate attorney. Real Property Planning helps with the real estate, valuation, and practical property side of the situation.",
   },
   {
     question: "When should I contact a real estate attorney?",
@@ -189,7 +189,7 @@ const ForRealEstateAttorneys = () => (
             How Real Property Planning Works Alongside Real Estate Attorneys
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-            Real Property Planning does not provide legal advice. Instead, David Stein works alongside attorneys and other trusted professionals to help clients understand the real estate side of the decision.
+            Real Property Planning does not provide legal advice. Instead, Real Property Planning works alongside attorneys and other trusted professionals to help clients understand the real estate side of the decision.
           </p>
           <p className="text-muted-foreground text-lg leading-relaxed mb-8">
             That may include:
@@ -258,7 +258,7 @@ const ForRealEstateAttorneys = () => (
             Many clients are not sure whether they need a real estate attorney, a real estate professional, or both. That is understandable. In many cases, the first step is simply understanding the situation clearly.
           </p>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            David Stein helps clients think through the real estate side of complex property matters and works professionally with <Link to="/for-attorneys" className="text-primary underline hover:no-underline">attorneys</Link> and other advisors when needed.
+            Real Property Planning helps clients think through the real estate side of complex property matters and works professionally with <Link to="/for-attorneys" className="text-primary underline hover:no-underline">attorneys</Link> and other advisors when needed.
           </p>
         </div>
       </div>

@@ -50,7 +50,7 @@ const ForElderLawAttorneys = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
       title="Real Estate Support for Elder Law Attorneys | Real Property Planning"
-      description="David Stein works with elder law attorneys on senior transitions, Medicaid planning, and real estate coordination throughout Washington State."
+      description="Real Property Planning works with elder law attorneys on senior transitions, Medicaid planning, and real estate coordination throughout Washington State."
     />
     <BreadcrumbSchema
       items={[
@@ -94,7 +94,7 @@ const ForElderLawAttorneys = () => (
             When real estate is part of the picture, families are often faced with difficult decisions about whether to sell, retain, or reposition a home.
           </p>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            I work alongside elder law attorneys to provide clear guidance, thoughtful coordination, and practical support so clients can move forward with confidence.
+            Real Property Planning works alongside elder law attorneys to provide clear guidance, thoughtful coordination, and practical support so clients can move forward with confidence.
           </p>
         </div>
       </div>
@@ -125,15 +125,15 @@ const ForElderLawAttorneys = () => (
       </div>
     </section>
 
-    {/* How I Support Your Clients */}
+    {/* How We Support Your Clients */}
     <section className="py-16 lg:py-24 bg-secondary">
       <div className="container px-6 lg:px-8">
         <div className="max-w-[900px] mx-auto">
           <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
-            How I Support Your Clients
+            How We Support Your Clients
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-10">
-            As a licensed real estate broker and state-certified residential appraiser, I provide:
+            As a licensed real estate brokerage with state-certified residential appraisal expertise, Real Property Planning provides:
           </p>
           <div className="grid gap-5">
             {services.map((s, i) => (
@@ -154,7 +154,7 @@ const ForElderLawAttorneys = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <h2 className="font-serif text-3xl text-foreground font-semibold mb-8">
-            Common Situations I Help With
+            Common Situations We Help With
           </h2>
           <ul className="space-y-4">
             {situations.map((item, i) => (
@@ -209,7 +209,7 @@ const ForElderLawAttorneys = () => (
             A Collaborative Approach
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-            My role is to support the work you are already doing — helping ensure that real estate decisions are handled thoughtfully, efficiently, and in alignment with your client's needs.
+            Our role is to support the work you are already doing — helping ensure that real estate decisions are handled thoughtfully, efficiently, and in alignment with your client's needs.
           </p>
           <p className="text-muted-foreground text-lg leading-relaxed">
             Together, we can provide a more complete and supportive experience for the families we serve.
@@ -226,7 +226,7 @@ const ForElderLawAttorneys = () => (
             Let's Connect
           </h2>
           <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
-            If you work with clients navigating life transitions where real estate is part of the picture, I would welcome the opportunity to collaborate.
+            If you work with clients navigating life transitions where real estate is part of the picture, we would welcome the opportunity to collaborate.
           </p>
           <Link to="/contact">
  <Button variant="gold" size="lg"className="hover:-light">

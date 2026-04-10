@@ -57,19 +57,19 @@ const situations = [
 const faqs = [
   {
     question: "Why is valuation expertise especially important in probate situations?",
-    answer: "Probate properties are often in non-standard condition — outdated, cluttered, vacant, or in need of repair. Standard comparative market analyses may not account for these factors. David's dual credentials as a broker and certified appraiser allow him to evaluate properties with greater accuracy and nuance.",
+    answer: "Probate properties are often in non-standard condition — outdated, cluttered, vacant, or in need of repair. Standard comparative market analyses may not account for these factors. The dual credentials at Real Property Planning — licensed broker and certified appraiser — allow properties to be evaluated with greater accuracy and nuance.",
   },
   {
-    question: "Does David provide formal appraisals?",
-    answer: "David is a Washington state certified residential appraiser and can discuss valuation matters in depth. In most client engagements, his primary role is as a real estate broker providing pricing strategy and sale execution. Formal appraisal services are available separately when needed.",
+    question: "Does Real Property Planning provide formal appraisals?",
+    answer: "Real Property Planning includes Washington state certified residential appraiser credentials. In most client engagements, the primary role is real estate brokerage providing pricing strategy and sale execution. Formal appraisal services are available separately when needed.",
   },
   {
-    question: "How does David's appraisal background improve the sale process?",
-    answer: "Understanding how appraisers evaluate property helps David anticipate buyer financing challenges, price properties more accurately, and identify condition issues that could affect value — all before the property reaches the market. This reduces surprises and improves outcomes.",
+    question: "How does the appraisal background improve the sale process?",
+    answer: "Understanding how appraisers evaluate property helps Real Property Planning anticipate buyer financing challenges, price properties more accurately, and identify condition issues that could affect value — all before the property reaches the market. This reduces surprises and improves outcomes.",
   },
   {
-    question: "Can David help when family members disagree about a property's value?",
-    answer: "Yes. Pricing disagreements are common in inherited and estate situations. David provides objective, market-grounded perspective that helps families move past disagreement toward a realistic plan — often by explaining the factors that drive actual buyer behavior and appraised value.",
+    question: "Can Real Property Planning help when family members disagree about a property's value?",
+    answer: "Yes. Pricing disagreements are common in inherited and estate situations. Real Property Planning provides objective, market-grounded perspective that helps families move past disagreement toward a realistic plan — often by explaining the factors that drive actual buyer behavior and appraised value.",
   },
 ];
 
@@ -77,7 +77,7 @@ const WhyValuationMatters = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Why Valuation Matters in Probate & Estate Property Sales | David Stein"
+        title="Why Valuation Matters in Probate & Estate Property Sales | Real Property Planning"
         description="Learn why accurate property valuation is critical in probate, estate, and inherited home sales — and how a broker with certified appraisal credentials prevents costly pricing mistakes."
         jsonLd={articleSchema({
           headline: "Why Pricing & Valuation Matter in Estate Property Sales",
@@ -102,7 +102,7 @@ const WhyValuationMatters = () => {
               Why Accurate Pricing Is the Most Important Decision in Estate Property Sales
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-[30px]">
-              David Stein is one of the few Washington professionals who holds both a broker license and a certified residential appraiser credential — giving executors, attorneys, and families pricing confidence that most agents cannot deliver.
+              Real Property Planning brings valuation-informed real estate guidance to probate and estate property sales — helping executors, attorneys, and families navigate pricing, coordination, and next steps with greater clarity and confidence.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Link to="/contact">
@@ -202,10 +202,10 @@ const WhyValuationMatters = () => {
             <Accordion type="single" collapsible className="space-y-3">
               <AccordionItem value="cma" className="bg-card border border-border rounded-2xl overflow-hidden data-[state=open]:border-gold/25 transition-colors">
                 <AccordionTrigger className="text-left font-serif text-base md:text-lg font-semibold text-foreground hover:text-gold hover:no-underline px-6 py-5">
-                  How is David's pricing different from a standard agent's CMA?
+                  How is Real Property Planning's pricing different from a standard agent's CMA?
                 </AccordionTrigger>
                 <AccordionContent className="px-6 pb-5 pt-0 text-muted-foreground leading-relaxed">
-                  Most agents base pricing on comparable sales of similar homes in typical condition. Estate properties often have original kitchens, aging systems, and deferred maintenance that standard comparables don't account for. David evaluates properties the way a lender's appraiser would — assessing functional utility, physical depreciation, and effective age alongside location.
+                  Most agents base pricing on comparable sales of similar homes in typical condition. Estate properties often have original kitchens, aging systems, and deferred maintenance that standard comparables don't account for. Real Property Planning evaluates properties the way a lender's appraiser would — assessing functional utility, physical depreciation, and effective age alongside location.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="anticipate" className="bg-card border border-border rounded-2xl overflow-hidden data-[state=open]:border-gold/25 transition-colors">
@@ -235,7 +235,7 @@ const WhyValuationMatters = () => {
 
       <MidPageCTA
         heading="Need Help Pricing an Estate or Inherited Property?"
-        body="David provides valuation-informed pricing strategy grounded in over 20 years of dual broker and appraiser experience."
+        body="Real Property Planning provides valuation-informed pricing strategy grounded in dual broker and appraiser experience."
         buttonText="Discuss a Property"
         microcopy="No pressure. Just honest, market-grounded guidance."
       />
@@ -274,7 +274,7 @@ const WhyValuationMatters = () => {
               Need experienced pricing guidance for an estate, inherited, or trust-owned property?
             </h2>
             <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
-              David provides honest, market-grounded assessments that help clients and fiduciaries make confident pricing decisions.
+              Real Property Planning provides honest, market-grounded assessments that help clients and fiduciaries make confident pricing decisions.
             </p>
             <div className="flex justify-center">
               <Link to="/contact">

@@ -15,38 +15,38 @@ import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 const whoIWorkWith = [
   {
     title: "Estate Planning and Probate Attorneys",
-    text: "David works with attorneys whose clients face real property decisions during probate, trust administration, guardianship, or conservatorship. He provides the property assessment, pricing guidance, and sale coordination that allow attorneys to focus on the legal matter — confident that the real estate side is handled with professionalism and discretion.",
+    text: "Real Property Planning works with attorneys whose clients face real property decisions during probate, trust administration, guardianship, or conservatorship. He provides the property assessment, pricing guidance, and sale coordination that allow attorneys to focus on the legal matter — confident that the real estate side is handled with professionalism and discretion.",
   },
   {
     title: "Personal Representatives and Executors",
-    text: "Most executors are managing an estate for the first time. David walks them through the real estate process step by step — from property evaluation to preparation, pricing, and closing — with clear communication and practical guidance that reduces stress and prevents costly mistakes.",
+    text: "Most executors are managing an estate for the first time. Real Property Planning walks them through the real estate process step by step — from property evaluation to preparation, pricing, and closing — with clear communication and practical guidance that reduces stress and prevents costly mistakes.",
   },
   {
     title: "Trustees and Fiduciaries",
-    text: "Trustees managing trust-owned real estate need accurate market data, honest condition assessments, and a structured path to sale. David provides valuation-informed pricing and professional coordination that supports fiduciary obligations and keeps beneficiaries informed.",
+    text: "Trustees managing trust-owned real estate need accurate market data, honest condition assessments, and a structured path to sale. Real Property Planning provides valuation-informed pricing and professional coordination that supports fiduciary obligations and keeps beneficiaries informed.",
   },
   {
     title: "CPAs and Financial Professionals",
-    text: "When estate property decisions intersect with tax planning, capital gains considerations, or financial advisory work, David provides the real estate and valuation perspective that helps CPAs and financial advisors give their clients well-rounded guidance.",
+    text: "When estate property decisions intersect with tax planning, capital gains considerations, or financial advisory work, Real Property Planning provides the real estate and valuation perspective that helps CPAs and financial advisors give their clients well-rounded guidance.",
   },
   {
     title: "Senior Move Managers and Transition Professionals",
-    text: "David works with senior move managers and care professionals who need a reliable real estate partner for clients transitioning out of longtime homes. He coordinates seamlessly with transition teams, handling property preparation and sale while the care side focuses on the client's wellbeing.",
+    text: "Real Property Planning works with senior move managers and care professionals who need a reliable real estate partner for clients transitioning out of longtime homes. He coordinates seamlessly with transition teams, handling property preparation and sale while the care side focuses on the client's wellbeing.",
   },
   {
     title: "Families Handling Inherited or Transition-Related Property",
-    text: "Whether the situation involves an inherited home, a parent moving to assisted living, or siblings coordinating from different states, David provides the steady, experienced guidance that helps families make informed decisions during an emotional and unfamiliar process.",
+    text: "Whether the situation involves an inherited home, a parent moving to assisted living, or siblings coordinating from different states, Real Property Planning provides the steady, experienced guidance that helps families make informed decisions during an emotional and unfamiliar process.",
   },
 ];
 
 const whyRefer = [
   {
     title: "Real Estate Broker and State-Certified Appraiser Perspective",
-    text: "David holds dual credentials that few real estate professionals carry. His appraisal background informs every pricing recommendation and preparation decision — providing analytical depth that protects estate value and supports fiduciary obligations.",
+    text: "Real Property Planning holds dual credentials that few real estate professionals carry. The appraisal background informs every pricing recommendation and preparation decision — providing analytical depth that protects estate value and supports fiduciary obligations.",
   },
   {
     title: "Calm, Practical Guidance in Sensitive Situations",
-    text: "Estate and transition-related property decisions often involve grief, family conflict, financial pressure, and uncertainty. David approaches every engagement with patience, professionalism, and a measured pace that respects the weight of the circumstances.",
+    text: "Estate and transition-related property decisions often involve grief, family conflict, financial pressure, and uncertainty. Real Property Planning approaches every engagement with patience, professionalism, and a measured pace that respects the weight of the circumstances.",
   },
   {
     title: "Clear Communication Throughout the Process",
@@ -293,7 +293,7 @@ const ProfessionalReferralResource = () => {
             </p>
             <div className="grid sm:grid-cols-2 gap-4">
               {[
-                { href: "/for-attorneys", label: "For Attorneys", desc: "How David works with attorneys on probate, trust, and estate property matters." },
+                { href: "/for-attorneys", label: "For Attorneys", desc: "How Real Property Planning works with attorneys on probate, trust, and estate property matters." },
                 { href: "/executors", label: "For Executors & Trustees", desc: "Step-by-step guidance for personal representatives managing estate property." },
                 { href: "/probate-estate-sales", label: "Probate & Estate Sales", desc: "Overview of probate and estate-related real estate services." },
                 { href: "/how-the-process-works", label: "How the Process Works", desc: "A seven-step process from consultation through closing and beyond." },

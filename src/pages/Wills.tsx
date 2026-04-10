@@ -36,7 +36,7 @@ const willsFaqs = [
   {
     question: "How does a will affect property valuation?",
     answer:
-      "The terms of a will can influence whether a property needs a formal appraisal for estate tax purposes, equitable distribution among heirs, or establishing a stepped-up cost basis. As a certified appraiser and broker, David Stein provides valuations that hold up to legal and financial scrutiny.",
+      "The terms of a will can influence whether a property needs a formal appraisal for estate tax purposes, equitable distribution among heirs, or establishing a stepped-up cost basis. Real Property Planning provides valuations informed by certified appraisal expertise that hold up to legal and financial scrutiny.",
   },
 ];
 

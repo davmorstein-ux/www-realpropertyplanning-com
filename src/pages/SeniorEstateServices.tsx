@@ -14,8 +14,8 @@ const SeniorEstateServices = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Senior & Estate Real Estate Services | David Stein | Washington State"
-        description="David Stein specializes in senior relocation, estate and inherited property sales, and probate and trust real estate throughout Washington State, with deep experience across King, Snohomish, and Pierce counties."
+        title="Senior & Estate Real Estate Services | Real Property Planning | Washington State"
+        description="Real Property Planning specializes in senior relocation, estate and inherited property sales, and probate and trust real estate throughout Washington State, with deep experience across King, Snohomish, and Pierce counties."
       />
       <BreadcrumbSchema
         items={[
@@ -34,7 +34,7 @@ const SeniorEstateServices = () => {
               Senior &amp; Estate Real Estate Services in Washington State
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed max-w-3xl">
-              David Stein specializes in senior relocation, estate and inherited property sales, and probate and trust real estate throughout Washington State, with deep experience across King, Snohomish, and Pierce counties. Whether you are a senior planning a move, an adult child helping a parent, an executor settling an estate, or an attorney advising a client, David coordinates the real estate side so you can focus on the decisions that matter — not the logistics. Every engagement begins with a clear plan, honest communication, and a calm, professional approach.
+              Real Property Planning specializes in senior relocation, estate and inherited property sales, and probate and trust real estate throughout Washington State, with deep experience across King, Snohomish, and Pierce counties. Whether you are a senior planning a move, an adult child helping a parent, an executor settling an estate, or an attorney advising a client, Real Property Planning coordinates the real estate side so you can focus on the decisions that matter — not the logistics. Every engagement begins with a clear plan, honest communication, and a calm, professional approach.
             </p>
           </div>
         </div>
@@ -47,7 +47,7 @@ const SeniorEstateServices = () => {
             Senior Relocation Home Sales
           </h2>
           <p className="text-muted-foreground text-[16px] leading-relaxed mb-6 max-w-3xl">
-            Selling a home after 20, 30, or 40 years is one of the biggest transitions a family can face. David works with seniors and their families to plan and complete the sale of a long‑time home — including timing, preparation, and coordination with trusted local vendors and senior communities — so the process feels manageable rather than overwhelming.
+            Selling a home after 20, 30, or 40 years is one of the biggest transitions a family can face. Real Property Planning works with seniors and their families to plan and complete the sale of a long‑time home — including timing, preparation, and coordination with trusted local vendors and senior communities — so the process feels manageable rather than overwhelming.
           </p>
           <ul className="space-y-3 max-w-2xl">
             {[
