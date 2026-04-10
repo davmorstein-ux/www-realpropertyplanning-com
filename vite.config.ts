@@ -584,7 +584,7 @@ const routeMetadataPlugin = {
 };
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
+export default defineConfig({
   server: {
     host: "::",
     port: 8080,
@@ -601,11 +601,11 @@ export default defineConfig(({ mode }) => ({
       webp: { quality: 80 },
     }),
     routeMetadataPlugin,
-    mode === "development" && componentTagger(),
+    process.env.NODE_ENV === "development" ? componentTagger() : null,
   ].filter(Boolean),
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
-}));
+});
