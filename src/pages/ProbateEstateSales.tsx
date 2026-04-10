@@ -20,19 +20,19 @@ import RealClientSituations from "@/components/RealClientSituations";
 
 const probateReviews = [
   {
-    text: "David's dual background in brokerage and appraisal gave us confidence that the property was priced correctly. He made a complicated situation feel manageable.",
+    text: "The dual background in brokerage and appraisal gave us confidence that the property was priced correctly. He made a complicated situation feel manageable.",
     highlights: ["priced correctly", "complicated situation feel manageable"],
     attribution: "Family Member, King County",
     contextTag: "Probate · Valuation Strategy",
   },
   {
-    text: "David guided our family through a very difficult time with professionalism and genuine compassion. His valuation perspective and market knowledge were incredibly helpful.",
+    text: "Real Property Planning guided our family through a very difficult time with professionalism and genuine compassion. His valuation perspective and market knowledge were incredibly helpful.",
     highlights: ["professionalism and genuine compassion", "valuation perspective"],
     attribution: "Estate Attorney, Seattle",
     contextTag: "Probate · Executor",
   },
   {
-    text: "We appreciated David's patience, thoughtful communication, and realistic guidance throughout the sale of our family property.",
+    text: "We appreciated the patience, thoughtful communication, and realistic guidance throughout the sale of our family property.",
     highlights: ["patience, thoughtful communication", "realistic guidance"],
     attribution: "Family Review",
     contextTag: "Inherited Property",
@@ -319,7 +319,7 @@ const ProbateEstateSales = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <ProofCallout
-              quote="David's dual background in brokerage and appraisal gave us confidence that the property was priced correctly. He made a complicated situation feel manageable."
+              quote="The dual background in brokerage and appraisal gave us confidence that the property was priced correctly. He made a complicated situation feel manageable."
               attribution="Professional Referral"
               context="Probate property sale coordination"
               variant="accent"

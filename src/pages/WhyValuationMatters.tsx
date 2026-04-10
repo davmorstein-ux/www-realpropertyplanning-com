@@ -228,7 +228,7 @@ const WhyValuationMatters = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-foreground text-lg italic leading-relaxed mb-4">
-              "David's dual background in brokerage and appraisal gave us confidence that the property was priced correctly. He made a complicated situation feel manageable."
+              "The dual background in brokerage and appraisal gave us confidence that the property was priced correctly. He made a complicated situation feel manageable."
             </p>
             <p className="text-muted-foreground text-[15px] font-medium">— Professional Referral · Probate property sale coordination</p>
           </div>

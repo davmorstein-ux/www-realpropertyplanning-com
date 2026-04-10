@@ -73,7 +73,7 @@ const SeniorEstateServices = () => {
             Estate and Inherited Property Sales
           </h2>
           <p className="text-muted-foreground text-[16px] leading-relaxed mb-6 max-w-3xl">
-            When a family inherits a home, the path forward is rarely straightforward. David guides executors and heirs through pricing, preparation, and sale of inherited homes so the estate can be settled with clarity and minimal stress — whether the property is down the street or across the state.
+            When a family inherits a home, the path forward is rarely straightforward. Real Property Planning guides executors and heirs through pricing, preparation, and sale of inherited homes so the estate can be settled with clarity and minimal stress — whether the property is down the street or across the state.
           </p>
           <ul className="space-y-3 max-w-2xl">
             {[
@@ -99,7 +99,7 @@ const SeniorEstateServices = () => {
             Probate Real Estate Sales
           </h2>
           <p className="text-muted-foreground text-[16px] leading-relaxed mb-6 max-w-3xl">
-            Probate property sales involve court timelines, legal documentation, and coordination with attorneys and personal representatives. David works alongside probate attorneys and personal representatives to market and sell property within court and estate timelines, while respecting legal requirements at every stage.
+            Probate property sales involve court timelines, legal documentation, and coordination with attorneys and personal representatives. Real Property Planning works alongside probate attorneys and personal representatives to market and sell property within court and estate timelines, while respecting legal requirements at every stage.
           </p>
           <ul className="space-y-3 max-w-2xl">
             {[
@@ -125,7 +125,7 @@ const SeniorEstateServices = () => {
             Trust and Fiduciary Property Sales
           </h2>
           <p className="text-muted-foreground text-[16px] leading-relaxed mb-6 max-w-3xl">
-            Trustees and fiduciaries have legal responsibilities to beneficiaries that extend to how real estate is valued, marketed, and sold. David assists trustees and fiduciaries with valuation, marketing, and sale of residential real estate while honoring their obligations and providing the documentation needed to support sound decision‑making.
+            Trustees and fiduciaries have legal responsibilities to beneficiaries that extend to how real estate is valued, marketed, and sold. Real Property Planning assists trustees and fiduciaries with valuation, marketing, and sale of residential real estate while honoring their obligations and providing the documentation needed to support sound decision‑making.
           </p>
           <ul className="space-y-3 max-w-2xl">
             {[
@@ -150,7 +150,7 @@ const SeniorEstateServices = () => {
             Clean‑Out and Preparation Coordination
           </h2>
           <p className="text-muted-foreground text-[16px] leading-relaxed mb-6 max-w-3xl">
-            Most estate and senior properties need some level of preparation before going to market — from clearing personal belongings to handling basic repairs. David coordinates clean‑out, haul‑away, basic repairs, and staging resources so the property is ready for market without the family managing every detail.
+            Most estate and senior properties need some level of preparation before going to market — from clearing personal belongings to handling basic repairs. Real Property Planning coordinates clean‑out, haul‑away, basic repairs, and staging resources so the property is ready for market without the family managing every detail.
           </p>
           <ul className="space-y-3 max-w-2xl">
             {[
@@ -170,7 +170,7 @@ const SeniorEstateServices = () => {
 
       <MidPageCTA
         heading="Have Questions About a Senior or Estate Property?"
-        body="Whether you are a senior planning a move, a family member coordinating a sale, or an attorney advising a client — David welcomes a confidential conversation."
+        body="Whether you are a senior planning a move, a family member coordinating a sale, or an attorney advising a client — Real Property Planning welcomes a confidential conversation."
         buttonText="Schedule a Consultation"
         microcopy="No pressure. Just practical guidance for your situation."
       />
@@ -182,7 +182,7 @@ const SeniorEstateServices = () => {
             Home Value and Market Analysis
           </h2>
           <p className="text-muted-foreground text-[16px] leading-relaxed mb-6 max-w-3xl">
-            Before making any decision about selling, you need to understand what the property is worth and what your options look like. David provides clear, data‑driven opinions of value and market conditions for seniors, executors, and attorneys who need to understand their options before committing to a sale.
+            Before making any decision about selling, you need to understand what the property is worth and what your options look like. Real Property Planning provides clear, data‑driven opinions of value and market conditions for seniors, executors, and attorneys who need to understand their options before committing to a sale.
           </p>
           <ul className="space-y-3 max-w-2xl">
             {[
@@ -207,7 +207,7 @@ const SeniorEstateServices = () => {
             Areas I Serve
           </h2>
           <p className="text-muted-foreground text-[16px] leading-relaxed mb-4 max-w-3xl">
-            David Stein serves clients throughout Washington State, with a strong focus across Western Washington and the Puget Sound region. Whether the property is in a dense urban neighborhood or a quieter suburban community, David brings local market knowledge and hands‑on coordination to every engagement. Through eXp Realty's referral network, David can also connect clients with trusted brokers across the U.S. and internationally when needed.
+            Real Property Planning serves clients throughout Washington State, with a strong focus across Western Washington and the Puget Sound region. Whether the property is in a dense urban neighborhood or a quieter suburban community, local market knowledge and hands‑on coordination are brought to every engagement.
           </p>
           <p className="text-foreground text-[15px] font-medium">
             Seattle, Bellevue, Tacoma, Everett, Kirkland, Redmond, Bothell, and communities throughout Washington State.
@@ -242,7 +242,7 @@ const SeniorEstateServices = () => {
         <div className="max-w-[1100px] mx-auto px-6 lg:px-8">
           <div className="bg-card border border-border rounded-[16px] p-7 md:p-9 max-w-3xl mx-auto text-center">
             <p className="text-muted-foreground text-[15px] leading-relaxed">
-              David Stein is a licensed real estate broker in the State of Washington and a Washington state certified real estate appraiser. He is not an attorney, CPA, or tax advisor, and does not provide legal, tax, or accounting advice. Legal, tax, and probate-specific questions should be directed to qualified professionals.
+              Real Property Planning is a licensed real estate brokerage in Washington State with state-certified residential appraisal expertise. We are not attorneys, CPAs, or tax advisors, and do not provide legal, tax, or accounting advice. Legal, tax, and probate-specific questions should be directed to qualified professionals.
             </p>
           </div>
         </div>
@@ -256,7 +256,7 @@ const SeniorEstateServices = () => {
               Schedule a No‑Pressure Consultation
             </h2>
             <p className="text-primary-foreground/75 text-lg leading-relaxed mb-8">
-              Whether you are a senior planning a move, a family member coordinating a sale, an executor managing an estate, or an attorney advising a client — David welcomes a confidential conversation about your situation. There is no obligation and no sales pressure.
+              Whether you are a senior planning a move, a family member coordinating a sale, an executor managing an estate, or an attorney advising a client — Real Property Planning welcomes a confidential conversation about your situation. There is no obligation and no sales pressure.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">
