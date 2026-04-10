@@ -22,7 +22,7 @@ const jsonLd = articleSchema({
 const Executors = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
-      title="What Executors Need to Know About Selling Estate Property | David Stein"
+      title="What Executors Need to Know About Selling Estate Property | Real Property Planning"
       description="Step-by-step real estate guidance for executors, personal representatives, and trustees selling inherited homes and estate property throughout Washington State. Licensed broker and certified appraiser."
       jsonLd={jsonLd}
     />
