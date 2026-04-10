@@ -69,8 +69,8 @@ const Counties = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Probate & Estate Real Estate by County | Washington State | David Stein"
-        description="County-by-county probate real estate guidance for executors, trustees, attorneys, and families throughout Washington State. Licensed broker and certified appraiser David Stein provides localized support for inherited homes, estate sales, and senior transitions."
+        title="Service Areas | Probate Real Estate Across Puget Sound | Real Property Planning"
+        description="Serving King, Snohomish, Pierce, Skagit, and Kitsap Counties — probate property sales, estate appraisals, and senior transitions in Seattle, Bellevue, Everett, Tacoma, and surrounding communities."
       />
       <BreadcrumbSchema items={[{ name: "Service Areas", url: "/counties" }]} />
       <Header />
@@ -133,10 +133,10 @@ const Counties = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-[1140px] mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
-              What David Can Help With in Each County
+              Services Available in Each County
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-10 max-w-3xl">
-              Whether the situation involves probate, an inherited home, a trust-owned property, or a senior transition, David provides hands-on guidance through every step:
+              Whether the situation involves probate, an inherited home, a trust-owned property, or a senior transition, Real Property Planning provides hands-on guidance through every step:
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
               {services.map((service) => (
