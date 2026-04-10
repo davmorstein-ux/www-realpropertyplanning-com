@@ -7,9 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 import MidPageCTA from "@/components/MidPageCTA";
-import ProfessionalConfidence from "@/components/ProfessionalConfidence";
 import ProofCallout from "@/components/ProofCallout";
-import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
 import ClientReviewsSection from "@/components/ClientReviewsSection";
 import RealClientSituations from "@/components/RealClientSituations";
 import PageFAQ from "@/components/PageFAQ";
@@ -17,9 +15,9 @@ import StatewideSupport from "@/components/StatewideSupport";
 import DirectAnswerBlock from "@/components/DirectAnswerBlock";
 
 const attorneyReviews = [
-  { text: "David guided our family through a very difficult time with professionalism and genuine compassion.", highlights: ["professionalism and genuine compassion"], attribution: "Estate Attorney, Seattle", contextTag: "Probate · Executor" },
-  { text: "David's dual background in brokerage and appraisal gave us confidence that the property was priced correctly.", highlights: ["priced correctly"], attribution: "Professional Referral", contextTag: "Valuation Strategy" },
-  { text: "We didn't know where to start. David made the entire process manageable.", highlights: ["entire process manageable"], attribution: "Executor, Snohomish County", contextTag: "Out-of-State Coordination" },
+  { text: "Real Property Planning guided our family through a very difficult time with professionalism and genuine compassion.", highlights: ["professionalism and genuine compassion"], attribution: "Estate Attorney, Seattle", contextTag: "Probate · Executor" },
+  { text: "The dual background in brokerage and appraisal gave us confidence that the property was priced correctly.", highlights: ["priced correctly"], attribution: "Professional Referral", contextTag: "Valuation Strategy" },
+  { text: "We didn't know where to start. The team made the entire process manageable.", highlights: ["entire process manageable"], attribution: "Executor, Snohomish County", contextTag: "Out-of-State Coordination" },
 ];
 
 const attorneyCaseStudies = [
@@ -30,16 +28,16 @@ const attorneyCaseStudies = [
 ];
 
 const attorneyFaqs = [
-  { question: "How does David support attorneys during probate property sales?", answer: "David handles the real estate side — property assessment, preparation, pricing, marketing, and sale — while coordinating directly with the attorney and personal representative." },
-  { question: "What is the difference between a CMA and a formal appraisal?", answer: "A CMA is a broker's opinion of value. A formal appraisal is a certified, independent valuation. David's dual credentials allow him to provide market analysis informed by appraisal discipline." },
-  { question: "Can David help with valuation disputes among heirs?", answer: "Yes. David's appraisal background allows him to present data-driven pricing supported by comparable sales analysis and market context." },
-  { question: "Does David work with attorneys outside of Western Washington?", answer: "David serves clients throughout Washington State. For properties outside Washington, he can connect attorneys with trusted brokers through eXp Realty's referral network." },
+  { question: "How does Real Property Planning support attorneys during probate property sales?", answer: "We handle the real estate side — property assessment, preparation, pricing, marketing, and sale — while coordinating directly with the attorney and personal representative." },
+  { question: "What is the difference between a CMA and a formal appraisal?", answer: "A CMA is a broker's opinion of value. A formal appraisal is a certified, independent valuation. Real Property Planning provides market analysis informed by appraisal-level discipline." },
+  { question: "Can you help with valuation disputes among heirs?", answer: "Yes. We present data-driven pricing supported by comparable sales analysis and market context to help resolve disagreements." },
+  { question: "Do you work with attorneys outside of Western Washington?", answer: "Real Property Planning serves clients throughout Washington State. For properties outside Washington, we can connect attorneys with trusted brokers through our referral network." },
 ];
 
 const ForAttorneysLearnMore = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
-      title="Attorney Guide — Real Estate Support for Legal Professionals | David Stein"
+      title="Attorney Guide — Real Estate Support for Legal Professionals | Real Property Planning"
       description="In-depth real estate support for attorneys handling probate, estate, and family law property matters in Washington State."
     />
     <BreadcrumbSchema items={[
@@ -54,45 +52,34 @@ const ForAttorneysLearnMore = () => (
           <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-sm">In-Depth Guide</p>
           <h1 className="font-serif text-3xl md:text-4xl font-bold text-foreground leading-tight mb-4">Working With Attorneys</h1>
           <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-            How David supports attorneys with estate, probate, and family law property matters — case studies, reviews, and FAQs.
+            How Real Property Planning supports attorneys with estate, probate, and family law property matters — case studies, reviews, and FAQs.
           </p>
         </div>
       </div>
     </section>
 
     <DirectAnswerBlock
-      question="How does David Stein support attorneys with estate and probate real estate?"
-      answer="David handles the real estate side — property assessment, valuation-informed pricing, preparation coordination, and sale management — so attorneys and their clients can focus on legal and financial priorities."
+      question="How does Real Property Planning support attorneys with estate and probate real estate?"
+      answer="Real Property Planning handles the real estate side — property assessment, valuation-informed pricing, preparation coordination, and sale management — so attorneys and their clients can focus on legal and financial priorities."
       supportSteps={[
-        { label: "You Refer", desc: "Send David the client situation — probate, estate, trust, or family law property." },
-        { label: "David Handles It", desc: "Property assessment, preparation, pricing, marketing, and sale — managed end to end." },
+        { label: "You Refer", desc: "Send us the client situation — probate, estate, trust, or family law property." },
+        { label: "We Handle It", desc: "Property assessment, preparation, pricing, marketing, and sale — managed end to end." },
         { label: "You Stay Informed", desc: "Regular updates keep you and your client in the loop through closing." },
       ]}
     />
 
-    <MidPageCTA heading="Have a Client Who Needs Property Guidance?" body="A quick call is usually the fastest way to determine how David can support the situation." buttonText="Discuss a Client Situation" />
-
-    <section className="py-12 lg:py-16 bg-cream">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center">
-          <h3 className="font-serif text-xl text-foreground font-semibold mb-6">Professional Memberships &amp; Affiliations</h3>
-          <AffiliationBadgeGrid />
-        </div>
-      </div>
-    </section>
-
-    <ProfessionalConfidence heading="Why Attorneys Trust This Process" intro="Legal professionals consistently describe these qualities when referring clients to David:" background="bg-background" />
+    <MidPageCTA heading="Have a Client Who Needs Property Guidance?" body="A quick call is usually the fastest way to determine how we can support the situation." buttonText="Discuss a Client Situation" />
 
     <section className="py-10 lg:py-12 bg-cream">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
-          <ProofCallout quote="David guided our family through a very difficult time with professionalism and genuine compassion." attribution="Estate Attorney, Seattle" context="Probate property transition" variant="accent" />
+          <ProofCallout quote="Real Property Planning guided our family through a very difficult time with professionalism and genuine compassion." attribution="Estate Attorney, Seattle" context="Probate property transition" variant="accent" />
         </div>
       </div>
     </section>
 
     <ClientReviewsSection reviews={attorneyReviews} heading="Client Reviews" subheading="Feedback from attorneys, executors, and families." background="bg-background" />
-    <RealClientSituations studies={attorneyCaseStudies} heading="Real Client Situations" subheading="Examples of how David has supported attorneys." background="bg-secondary" showCTA />
+    <RealClientSituations studies={attorneyCaseStudies} heading="Real Client Situations" subheading="Examples of how Real Property Planning has supported attorneys." background="bg-secondary" showCTA />
     <PageFAQ faqs={attorneyFaqs} heading="Attorney FAQs" />
     <StatewideSupport background="bg-cream" />
 
@@ -100,7 +87,7 @@ const ForAttorneysLearnMore = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-5">A Reliable Resource for Your Practice</h2>
-          <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">When you have a client situation involving property, David can handle the real estate side.</p>
+          <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">When you have a client situation involving property, Real Property Planning can handle the real estate side.</p>
           <Link to="/contact">
             <Button variant="gold" size="lg">
               <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />

@@ -25,7 +25,7 @@ const EstateLiquidationLearnMore = () => (
             <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-sm">In-Depth Guide</p>
             <h1 className="font-serif text-3xl md:text-4xl font-bold text-foreground leading-tight mb-4">Understanding Estate Liquidation</h1>
             <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-              What estate liquidation involves, how estate sales fit in, who it helps, and how David coordinates the process.
+              What estate liquidation involves, how estate sales fit in, who it helps, and how the process is coordinated.
             </p>
           </div>
         </div>
@@ -100,9 +100,9 @@ const EstateLiquidationLearnMore = () => (
       <section className="py-14 md:py-20 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-5">How David Helps</h2>
+            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-5">How Real Property Planning Helps</h2>
             <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-4">
-              David plays a critical coordination role in the overall liquidation-to-sale process:
+              Real Property Planning plays a critical coordination role in the overall liquidation-to-sale process:
             </p>
             <ul className="space-y-3">
               {[

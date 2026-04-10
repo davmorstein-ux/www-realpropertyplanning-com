@@ -15,18 +15,18 @@ import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 import DirectAnswerBlock from "@/components/DirectAnswerBlock";
 
 const executorTestimonials = [
-  { text: "David brought clarity, professionalism, and calm guidance during a very difficult property transition.", attribution: "Margaret T.", context: "Executor · Estate property in King County", tag: "Estate Administration" },
-  { text: "I was completely overwhelmed as a first-time executor. David walked me through every step and made the entire process feel manageable.", attribution: "Robert K.", context: "Personal representative · Snohomish County", tag: "First-Time Executor" },
-  { text: "David gave us honest, straightforward pricing when other agents were telling us what we wanted to hear.", attribution: "Susan M.", context: "Executor · Probate property sale", tag: "Honest Pricing" },
+  { text: "Real Property Planning brought clarity, professionalism, and calm guidance during a very difficult property transition.", attribution: "Margaret T.", context: "Executor · Estate property in King County", tag: "Estate Administration" },
+  { text: "I was completely overwhelmed as a first-time executor. The team walked me through every step and made the entire process feel manageable.", attribution: "Robert K.", context: "Personal representative · Snohomish County", tag: "First-Time Executor" },
+  { text: "We received honest, straightforward pricing when other agents were telling us what we wanted to hear.", attribution: "Susan M.", context: "Executor · Probate property sale", tag: "Honest Pricing" },
 ];
 
 const executorCaseStudies = [
-  { title: "Out-of-State Executor With a Full House", label: "Out-of-State", situation: "An executor in California was named personal representative for her father's estate in Snohomish County.", challenge: "No local contacts, property hadn't been updated in 30 years.", howHelped: "David assessed the property, coordinated cleanout, managed repairs, and handled the entire listing and sale — providing regular updates.", outcome: "The home sold within three weeks at a price exceeding expectations." },
-  { title: "Siblings Who Disagreed on Pricing", label: "Family Coordination", situation: "Three adult children inherited their mother's home in King County with different opinions.", challenge: "Conflicting opinions about value and timeline created tension.", howHelped: "David presented a detailed property assessment and comparable sales analysis grounded in appraisal methodology.", outcome: "The family agreed on a data-driven price and the home sold with minimal conflict." },
-  { title: "Estate Property With Deferred Maintenance", label: "Valuation Strategy", situation: "A trustee needed to sell a Pierce County home with significant deferred maintenance.", challenge: "Two previous agents had declined the listing.", howHelped: "David evaluated each issue, estimated cost impact on value, and recommended a targeted preparation strategy.", outcome: "The property was priced accurately, attracted multiple offers, and closed smoothly." },
-  { title: "Coordinating a Probate Sale with Multiple Heirs", label: "Family Coordination", situation: "Four siblings inherited a family home in Kitsap County with none living nearby.", challenge: "Different views on timing and confusion about value.", howHelped: "David provided a valuation-informed pricing assessment and held a group call to walk through the data.", outcome: "Agreement reached within two weeks. The home sold at a fair price." },
-  { title: "Helping a Family Navigate a Senior Transition", label: "Senior Transition", situation: "A homeowner in her early 80s was moving to assisted living.", challenge: "40 years of memories made the decision emotionally difficult.", howHelped: "David recommended a phased approach: gentle cleanout, targeted improvements, and listing aligned with the transition.", outcome: "The home sold within a month and the family described the experience as respectful." },
-  { title: "Providing Clarity on Pricing", label: "Valuation Strategy", situation: "An executor had received two conflicting price opinions from other agents.", challenge: "Neither opinion was supported by detailed analysis.", howHelped: "David provided a valuation-informed pricing strategy with clear comparable data.", outcome: "The home sold close to asking price." },
+  { title: "Out-of-State Executor With a Full House", label: "Out-of-State", situation: "An executor in California was named personal representative for her father's estate in Snohomish County.", challenge: "No local contacts, property hadn't been updated in 30 years.", howHelped: "Real Property Planning assessed the property, coordinated cleanout, managed repairs, and handled the entire listing and sale — providing regular updates.", outcome: "The home sold within three weeks at a price exceeding expectations." },
+  { title: "Siblings Who Disagreed on Pricing", label: "Family Coordination", situation: "Three adult children inherited their mother's home in King County with different opinions.", challenge: "Conflicting opinions about value and timeline created tension.", howHelped: "A detailed property assessment and comparable sales analysis grounded in appraisal methodology helped the family align.", outcome: "The family agreed on a data-driven price and the home sold with minimal conflict." },
+  { title: "Estate Property With Deferred Maintenance", label: "Valuation Strategy", situation: "A trustee needed to sell a Pierce County home with significant deferred maintenance.", challenge: "Two previous agents had declined the listing.", howHelped: "Each issue was evaluated, cost impact on value was estimated, and a targeted preparation strategy was recommended.", outcome: "The property was priced accurately, attracted multiple offers, and closed smoothly." },
+  { title: "Coordinating a Probate Sale with Multiple Heirs", label: "Family Coordination", situation: "Four siblings inherited a family home in Kitsap County with none living nearby.", challenge: "Different views on timing and confusion about value.", howHelped: "A valuation-informed pricing assessment was provided and a group call walked through the data.", outcome: "Agreement reached within two weeks. The home sold at a fair price." },
+  { title: "Helping a Family Navigate a Senior Transition", label: "Senior Transition", situation: "A homeowner in her early 80s was moving to assisted living.", challenge: "40 years of memories made the decision emotionally difficult.", howHelped: "A phased approach was recommended: gentle cleanout, targeted improvements, and listing aligned with the transition.", outcome: "The home sold within a month and the family described the experience as respectful." },
+  { title: "Providing Clarity on Pricing", label: "Valuation Strategy", situation: "An executor had received two conflicting price opinions from other agents.", challenge: "Neither opinion was supported by detailed analysis.", howHelped: "A valuation-informed pricing strategy with clear comparable data was provided.", outcome: "The home sold close to asking price." },
 ];
 
 const commonSituations = [
@@ -40,28 +40,28 @@ const commonSituations = [
   "You want honest pricing — not an inflated number designed to win a listing",
 ];
 
-const howIHelp = [
+const howWeHelp = [
   "Evaluate the property's true condition and realistic market value",
   "Advise on whether to invest in repairs or sell as-is",
   "Coordinate cleanout, preparation, and vendor management",
-  "Price the home using appraiser-level analysis",
+  "Price the home using valuation-informed analysis",
   "Manage the listing, marketing, showings, and negotiations",
   "Communicate clearly with you, the attorney, and other stakeholders",
 ];
 
 const faqs = [
   { question: "What is the first thing I should do as executor when there is real estate involved?", answer: "Secure the property, confirm your legal authority to act, and get a realistic assessment of the home's condition and likely market value." },
-  { question: "I live out of state — can David handle the property locally?", answer: "Absolutely. David provides hands-on local coordination — property access, vendor management, preparation, and sale oversight — keeping you informed through regular updates." },
-  { question: "Should I invest in repairs before selling?", answer: "It depends on the property and the likely return on investment. David evaluates repair decisions with a practical, market-informed perspective." },
+  { question: "I live out of state — can you handle the property locally?", answer: "Absolutely. Real Property Planning provides hands-on local coordination — property access, vendor management, preparation, and sale oversight — keeping you informed through regular updates." },
+  { question: "Should I invest in repairs before selling?", answer: "It depends on the property and the likely return on investment. We evaluate repair decisions with a practical, market-informed perspective." },
   { question: "How is selling estate property different from a normal home sale?", answer: "Estate sales often involve legal timelines, multiple decision-makers, deferred maintenance, personal property cleanout, and emotional complexity." },
-  { question: "What if I am a first-time executor?", answer: "That is completely normal. David walks you through the real estate side step by step and handles the coordination." },
-  { question: "How does David handle significant deferred maintenance?", answer: "David assesses the condition honestly and helps you understand which issues affect value, which need disclosure, and which are worth addressing before listing." },
+  { question: "What if I am a first-time executor?", answer: "That is completely normal. Real Property Planning walks you through the real estate side step by step and handles the coordination." },
+  { question: "How do you handle significant deferred maintenance?", answer: "We assess the condition honestly and help you understand which issues affect value, which need disclosure, and which are worth addressing before listing." },
 ];
 
 const ExecutorsLearnMore = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
-      title="Executor Guide — Selling Estate Property in Washington | David Stein"
+      title="Executor Guide — Selling Estate Property in Washington | Real Property Planning"
       description="In-depth guidance for executors selling inherited homes and estate property throughout Washington State. Case studies, FAQs, and process overview."
     />
     <BreadcrumbSchema items={[
@@ -86,11 +86,11 @@ const ExecutorsLearnMore = () => (
 
     <DirectAnswerBlock
       question="What should an executor do when there is real estate in the estate?"
-      answer="Secure the property, confirm your legal authority to act, and get a realistic assessment of the home's condition and market value. David Stein — a licensed Washington broker and certified residential appraiser — works with executors throughout Washington State to handle the full sale process."
+      answer="Secure the property, confirm your legal authority to act, and get a realistic assessment of the home's condition and market value. Real Property Planning works with executors throughout Washington State to handle the full sale process — from property evaluation through closing."
       supportSteps={[
-        { label: "We Talk", desc: "David listens to your situation and answers your questions." },
-        { label: "David Assesses", desc: "He visits the property and gives you an honest picture." },
-        { label: "He Handles It", desc: "Cleanout, prep, pricing, marketing, and closing — managed for you." },
+        { label: "We Talk", desc: "We listen to your situation and answer your questions." },
+        { label: "We Assess", desc: "We visit the property and give you an honest picture." },
+        { label: "We Handle It", desc: "Cleanout, prep, pricing, marketing, and closing — managed for you." },
       ]}
     />
 
@@ -113,9 +113,9 @@ const ExecutorsLearnMore = () => (
     <section className="py-16 lg:py-24 bg-secondary">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
-          <h2 className="font-serif text-3xl text-foreground font-semibold mb-8">How David Helps Executors</h2>
+          <h2 className="font-serif text-3xl text-foreground font-semibold mb-8">How Real Property Planning Helps Executors</h2>
           <ul className="space-y-4">
-            {howIHelp.map((item, i) => (
+            {howWeHelp.map((item, i) => (
               <li key={i} className="flex items-start gap-3">
                 <GoldCheck3D size={20} className="mt-0.5" />
                 <span className="text-foreground leading-relaxed">{item}</span>

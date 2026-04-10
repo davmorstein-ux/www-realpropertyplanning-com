@@ -6,7 +6,6 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
-import TrustStrip from "@/components/TrustStrip";
 
 const whyCPAsInvolveRE = [
   { heading: "Understanding Likely Market Value", text: "Clients often need a practical understanding of what a property may be worth before making informed decisions." },
@@ -16,10 +15,10 @@ const whyCPAsInvolveRE = [
 ];
 
 const howHelpsBlocks = [
-  { heading: "Valuation-Informed Perspective", text: "As both a licensed broker and certified appraiser, David brings added perspective to questions of value and pricing strategy." },
-  { heading: "Practical Guidance on Sale Strategy", text: "Some properties should be sold as-is. Others may benefit from cleanup or repairs. David helps clients think through those choices." },
+  { heading: "Valuation-Informed Perspective", text: "Real Property Planning brings added perspective to questions of value and pricing strategy through combined brokerage and appraisal experience." },
+  { heading: "Practical Guidance on Sale Strategy", text: "Some properties should be sold as-is. Others may benefit from cleanup or repairs. We help clients think through those choices." },
   { heading: "Support With Inherited and Probate Property", text: "Inherited homes and probate properties often involve more complexity than a typical sale." },
-  { heading: "Local Market Insight", text: "David serves King, Snohomish, Pierce, and Kitsap Counties with local market knowledge." },
+  { heading: "Local Market Insight", text: "Real Property Planning serves King, Snohomish, Pierce, and Kitsap Counties with local market knowledge." },
 ];
 
 const ForCPAsLearnMore = () => (
@@ -45,8 +44,6 @@ const ForCPAsLearnMore = () => (
         </div>
       </div>
     </section>
-
-    <TrustStrip />
 
     <section className="py-14 md:py-20 bg-secondary">
       <div className="container px-6 lg:px-8">

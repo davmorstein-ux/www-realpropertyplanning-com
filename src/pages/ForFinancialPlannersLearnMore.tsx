@@ -6,7 +6,6 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
-import TrustStrip from "@/components/TrustStrip";
 
 const whyPlannersInvolveRE = [
   { heading: "Sale Versus Hold Decisions", text: "Clients sometimes need to decide whether to sell, retain, or evaluate a property before making larger planning decisions." },
@@ -16,10 +15,10 @@ const whyPlannersInvolveRE = [
 ];
 
 const howHelpsBlocks = [
-  { heading: "Practical Real Estate Guidance", text: "David helps clients understand what the property is, what may affect its value, and what sale strategy may make the most sense." },
-  { heading: "Valuation-Informed Perspective", text: "As both a licensed broker and certified appraiser, David brings added insight to questions of pricing and positioning." },
-  { heading: "Preparation Strategy", text: "Some homes benefit from cleanup or repairs; others are best sold as-is. David helps clients think through those choices with care." },
-  { heading: "Local Market Awareness", text: "David serves King, Snohomish, Pierce, and Kitsap Counties with local market knowledge." },
+  { heading: "Practical Real Estate Guidance", text: "Real Property Planning helps clients understand what the property is, what may affect its value, and what sale strategy may make the most sense." },
+  { heading: "Valuation-Informed Perspective", text: "Combined brokerage and appraisal experience brings added insight to questions of pricing and positioning." },
+  { heading: "Preparation Strategy", text: "Some homes benefit from cleanup or repairs; others are best sold as-is. We help clients think through those choices with care." },
+  { heading: "Local Market Awareness", text: "Real Property Planning serves King, Snohomish, Pierce, and Kitsap Counties with local market knowledge." },
 ];
 
 const ForFinancialPlannersLearnMore = () => (
@@ -45,8 +44,6 @@ const ForFinancialPlannersLearnMore = () => (
         </div>
       </div>
     </section>
-
-    <TrustStrip />
 
     <section className="py-14 md:py-20 bg-secondary">
       <div className="container px-6 lg:px-8">
