@@ -42,11 +42,11 @@ const Index = () => {
       {/* 1. HERO — PNW background, calm headline, two CTAs */}
       <HomepageHero />
 
-      {/* 2. HOW WE HELP — 3 icon cards */}
-      <HowWeHelpCards />
-
-      {/* 3. SERVICE NAV TILES */}
+      {/* 2. SERVICE NAV TILES */}
       <ServiceNavTiles />
+
+      {/* 3. HOW WE HELP — 3 icon cards */}
+      <HowWeHelpCards />
 
       {/* 4. WARM STATEMENT + PULLQUOTE */}
       <HomepageWarmStatement />
