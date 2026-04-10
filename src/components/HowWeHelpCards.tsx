@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
+import inheritedHomeIcon from "@/assets/inherited-home-icon.png";
+import seniorHousingIcon from "@/assets/senior-housing-icon.png";
+import estateAppraisalsIcon from "@/assets/estate-appraisals-icon.png";
 
 const cards = [
   {
-    iconSrc: "https://img.icons8.com/3d-fluency/94/home.png",
+    iconSrc: inheritedHomeIcon,
     iconAlt: "Inherited home real estate icon",
     headline: "Selling an Inherited Home",
     description: "We handle the details so families don't have to. From pricing to closing, we manage the process with care.",
@@ -10,7 +13,7 @@ const cards = [
     proLink: { label: "Find a probate attorney →", href: "/professionals/probate-attorneys" },
   },
   {
-    iconSrc: "https://img.icons8.com/3d-fluency/94/family.png",
+    iconSrc: seniorHousingIcon,
     iconAlt: "Senior housing transition icon",
     headline: "Senior Housing Transitions",
     description: "Helping older adults and their families find the right next step — whether that's downsizing or moving to assisted living.",
@@ -18,7 +21,7 @@ const cards = [
     proLink: { label: "Find a senior housing advisor →", href: "/professionals/senior-housing-advisors" },
   },
   {
-    iconSrc: "https://img.icons8.com/3d-fluency/94/document.png",
+    iconSrc: estateAppraisalsIcon,
     iconAlt: "Estate appraisal document icon",
     headline: "Estate & Trust Appraisals",
     description: "As a certified appraiser, David provides legally reliable valuations for probate, trusts, and estate settlements.",
@@ -40,14 +43,14 @@ const HowWeHelpCards = () => {
               key={card.headline}
               className="bg-card rounded-2xl shadow-md p-8 flex flex-col items-start"
             >
-              <img
-                src={card.iconSrc}
-                alt={card.iconAlt}
-                width={80}
-                height={80}
-                className="w-20 h-20 object-contain mb-6"
-                loading="lazy"
-              />
+              <div className="w-full flex justify-center mb-6">
+                <img
+                  src={card.iconSrc}
+                  alt={card.iconAlt}
+                  className="w-[200px] h-[140px] object-contain"
+                  loading="lazy"
+                />
+              </div>
               <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
                 {card.headline}
               </h3>
