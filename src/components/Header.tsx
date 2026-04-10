@@ -35,6 +35,7 @@ const primaryLinks = [
   { href: "/about", label: "About" },
   { href: "/resources", label: "Resources", children: [
     { href: "/resources", label: "Resources" },
+    { href: "/professionals", label: "Find a Professional" },
     { href: "/insights", label: "Insights & Guidance" },
     { href: "/senior-living-and-relocation", label: "Senior Living & Relocation" },
     { href: "/lenders-and-financing-specialists", label: "Lenders & Financing" },
