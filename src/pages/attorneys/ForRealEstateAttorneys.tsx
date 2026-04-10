@@ -9,6 +9,7 @@ import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+import iconRealEstateAttorney from "@/assets/icons/icon-real-estate-attorney.png";
 
 const whatTheyDo = [
   "Reviewing or drafting purchase and sale agreements",
@@ -56,7 +57,7 @@ const faqs = [
   {
     question: "Do you provide legal advice?",
     answer:
-      "No. Real Property Planning does not provide legal advice. When legal questions arise, clients should consult a qualified real estate attorney. David Stein helps with the real estate, valuation, and practical property side of the situation.",
+      "No. Real Property Planning does not provide legal advice. When legal questions arise, clients should consult a qualified real estate attorney. Real Property Planning helps with the real estate, valuation, and practical property side of the situation.",
   },
   {
     question: "When should I contact a real estate attorney?",
@@ -97,7 +98,8 @@ const ForRealEstateAttorneys = () => (
     {/* Hero */}
     <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
       <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl">
+        <div className="max-w-3xl mx-auto text-center">
+          <img src={iconRealEstateAttorney} alt="" aria-hidden="true" className="mx-auto w-60 h-auto object-contain mb-8" />
           <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
             For Real Estate Attorneys
           </p>
@@ -189,7 +191,7 @@ const ForRealEstateAttorneys = () => (
             How Real Property Planning Works Alongside Real Estate Attorneys
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-            Real Property Planning does not provide legal advice. Instead, David Stein works alongside attorneys and other trusted professionals to help clients understand the real estate side of the decision.
+            Real Property Planning does not provide legal advice. Instead, Real Property Planning works alongside attorneys and other trusted professionals to help clients understand the real estate side of the decision.
           </p>
           <p className="text-muted-foreground text-lg leading-relaxed mb-8">
             That may include:
@@ -258,7 +260,7 @@ const ForRealEstateAttorneys = () => (
             Many clients are not sure whether they need a real estate attorney, a real estate professional, or both. That is understandable. In many cases, the first step is simply understanding the situation clearly.
           </p>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            David Stein helps clients think through the real estate side of complex property matters and works professionally with <Link to="/for-attorneys" className="text-primary underline hover:no-underline">attorneys</Link> and other advisors when needed.
+            Real Property Planning helps clients think through the real estate side of complex property matters and works professionally with <Link to="/for-attorneys" className="text-primary underline hover:no-underline">attorneys</Link> and other advisors when needed.
           </p>
         </div>
       </div>

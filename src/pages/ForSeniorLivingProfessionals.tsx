@@ -44,7 +44,7 @@ const howWeHelp = [
 const whyRefer = [
   "Calm, respectful communication with families during emotionally sensitive transitions",
   "Understanding of the dynamics involved when aging parents, health changes, or care needs drive housing decisions",
-  "Real estate and valuation insight from dual credentials — licensed broker and certified appraiser",
+  "Real estate and valuation insight from dual credentials — licensed brokerage and certified appraisal expertise",
   "Ability to coordinate with multiple service providers without creating confusion or added stress",
   "Consistent support for families who feel overwhelmed by the housing side of a major life change",
   "Professional discretion and respect for the relationships transition professionals have with their clients",

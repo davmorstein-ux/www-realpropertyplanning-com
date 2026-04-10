@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { AlertTriangle } from "lucide-react";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+import iconDivorce from "@/assets/icons/icon-divorce-3d.png";
 
 const intersections = [
   "What is the home actually worth in today's market?",
@@ -50,7 +51,7 @@ const ForDivorceAttorneys = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
       title="Real Estate Support for Divorce Attorneys | Real Property Planning"
-      description="David Stein works with divorce attorneys on marital property sales, valuations, and neutral real estate coordination throughout Washington State."
+      description="Real Property Planning works with divorce attorneys on marital property sales, valuations, and neutral real estate coordination throughout Washington State."
     />
     <BreadcrumbSchema
       items={[
@@ -63,7 +64,8 @@ const ForDivorceAttorneys = () => (
     {/* Hero */}
     <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
       <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl">
+        <div className="max-w-3xl mx-auto text-center">
+          <img src={iconDivorce} alt="" aria-hidden="true" className="mx-auto w-60 h-auto object-contain mb-8" />
           <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
             For Divorce Attorneys
           </p>
@@ -94,7 +96,7 @@ const ForDivorceAttorneys = () => (
             When a home is involved, questions arise around value, timing, and how to move forward in a way that is fair, clear, and practical.
           </p>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            I work alongside divorce attorneys to provide objective valuation, structured guidance, and a calm, neutral approach that helps clients navigate these decisions with greater confidence.
+            Real Property Planning works alongside divorce attorneys to provide objective valuation, structured guidance, and a calm, neutral approach that helps clients navigate these decisions with greater confidence.
           </p>
         </div>
       </div>
@@ -125,15 +127,15 @@ const ForDivorceAttorneys = () => (
       </div>
     </section>
 
-    {/* How I Support Your Clients */}
+    {/* How We Support Your Clients */}
     <section className="py-16 lg:py-24 bg-secondary">
       <div className="container px-6 lg:px-8">
         <div className="max-w-[900px] mx-auto">
           <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
-            How I Support Your Clients
+            How We Support Your Clients
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-10">
-            As a licensed real estate broker and state-certified residential appraiser, I provide:
+            As a licensed real estate brokerage with state-certified residential appraisal expertise, Real Property Planning provides:
           </p>
           <div className="grid gap-5">
             {services.map((s, i) => (
@@ -154,7 +156,7 @@ const ForDivorceAttorneys = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <h2 className="font-serif text-3xl text-foreground font-semibold mb-8">
-            Common Situations I Help With
+            Common Situations We Help With
           </h2>
           <ul className="space-y-4">
             {situations.map((item, i) => (
@@ -226,7 +228,7 @@ const ForDivorceAttorneys = () => (
             Let's Connect
           </h2>
           <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
-            If you work with clients navigating divorce where real estate is involved, I would welcome the opportunity to collaborate and support a smooth, well-managed process.
+            If you work with clients navigating divorce where real estate is involved, we would welcome the opportunity to collaborate and support a smooth, well-managed process.
           </p>
           <Link to="/contact">
  <Button variant="gold" size="lg"className="hover:-light">

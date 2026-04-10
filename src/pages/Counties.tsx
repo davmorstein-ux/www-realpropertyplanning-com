@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import mappin3d from "@/assets/mappin-3d.png";
+import iconServiceAreas from "@/assets/icons/icon-service-areas.png";
 import { services } from "@/lib/service-areas-data";
 
 const countyCards = [
@@ -77,7 +78,8 @@ const Counties = () => {
       {/* Hero */}
       <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl mx-auto text-center">
+            <img src={iconServiceAreas} alt="" aria-hidden="true" className="mx-auto w-60 h-auto object-contain mb-8" />
             <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
               Service Areas
             </p>
@@ -85,10 +87,10 @@ const Counties = () => {
               Probate &amp; Estate Real Estate Guidance by County
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-5">
-              Every county in Washington has its own market dynamics, housing stock, and buyer expectations. Estate properties in Seattle's urban neighborhoods sell differently than inherited homes in Spokane's established communities or waterfront parcels on Bainbridge Island. David Stein provides county-specific guidance so executors, trustees, attorneys, and families get pricing and coordination tailored to where the property actually sits.
+              Every county in Washington has its own market dynamics, housing stock, and buyer expectations. Estate properties in Seattle's urban neighborhoods sell differently than inherited homes in Spokane's established communities or waterfront parcels on Bainbridge Island. Real Property Planning provides county-specific guidance so executors, trustees, attorneys, and families get pricing and coordination tailored to where the property actually sits.
             </p>
             <p className="text-lg text-primary-foreground/70 leading-relaxed mb-5">
-              As a licensed broker and state-certified residential appraiser with over 20 years of experience, David evaluates each property based on its real condition and local market context — not generic statewide assumptions. Select a county below to see how he works in that area.
+              As a licensed broker and state-certified residential appraiser with over 20 years of experience, Real Property Planning evaluates each property based on its real condition and local market context — not generic statewide assumptions. Select a county below to learn more about service in that area.
             </p>
             <p className="text-base text-primary-foreground/60 leading-relaxed">
               Looking for a specific city? <Link to="/cities-we-serve" className="underline hover:text-gold transition-colors">Browse all cities we serve</Link>.

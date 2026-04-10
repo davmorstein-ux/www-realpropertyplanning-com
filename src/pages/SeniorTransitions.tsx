@@ -44,20 +44,20 @@ const coordinationPartners = [
 
 const faqs = [
   {
-    question: "How does David help seniors who need to sell their home?",
-    answer: "David provides patient, step-by-step guidance through the entire process. He evaluates the home's condition and market position, coordinates preparation and cleanout, manages the listing and sale, and communicates regularly with family members throughout.",
+    question: "How does Real Property Planning help seniors who need to sell their home?",
+    answer: "Real Property Planning provides patient, step-by-step guidance through the entire process. The team evaluates the home's condition and market position, coordinates preparation and cleanout, manages the listing and sale, and communicates regularly with family members throughout.",
   },
   {
     question: "What if the home needs significant work before selling?",
-    answer: "Many longtime family homes need updates before going to market. David evaluates which improvements are likely to improve the sale outcome and which are not worth the investment — then coordinates vendors to handle the work.",
+    answer: "Many longtime family homes need updates before going to market. Real Property Planning evaluates which improvements are likely to improve the sale outcome and which are not worth the investment — then coordinates vendors to handle the work.",
   },
   {
-    question: "Can David coordinate with a senior move manager or care team?",
-    answer: "Yes. David often works alongside families, senior move managers, care coordinators, and other professionals to ensure the real estate timeline aligns with the broader transition plan.",
+    question: "Can Real Property Planning coordinate with a senior move manager or care team?",
+    answer: "Yes. Real Property Planning often works alongside families, senior move managers, care coordinators, and other professionals to ensure the real estate timeline aligns with the broader transition plan.",
   },
   {
     question: "How long does it typically take to sell a senior's home?",
-    answer: "Timelines depend on the home's condition, location, and preparation needs. Some homes sell quickly with minimal work; others benefit from a more deliberate approach. David creates a realistic timeline that balances speed with value protection.",
+    answer: "Timelines depend on the home's condition, location, and preparation needs. Some homes sell quickly with minimal work; others benefit from a more deliberate approach. Real Property Planning creates a realistic timeline that balances speed with value protection.",
   },
 ];
 

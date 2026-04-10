@@ -14,24 +14,25 @@ import { Link } from "react-router-dom";
 
 import warning3d from "@/assets/warning-3d.png";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+import iconProbateSales from "@/assets/icons/icon-probate-sales.png";
 import ClientReviewsSection from "@/components/ClientReviewsSection";
 import RealClientSituations from "@/components/RealClientSituations";
 
 const probateReviews = [
   {
-    text: "David's dual background in brokerage and appraisal gave us confidence that the property was priced correctly. He made a complicated situation feel manageable.",
+    text: "The dual background in brokerage and appraisal gave us confidence that the property was priced correctly. He made a complicated situation feel manageable.",
     highlights: ["priced correctly", "complicated situation feel manageable"],
     attribution: "Family Member, King County",
     contextTag: "Probate · Valuation Strategy",
   },
   {
-    text: "David guided our family through a very difficult time with professionalism and genuine compassion. His valuation perspective and market knowledge were incredibly helpful.",
+    text: "Real Property Planning guided our family through a very difficult time with professionalism and genuine compassion. His valuation perspective and market knowledge were incredibly helpful.",
     highlights: ["professionalism and genuine compassion", "valuation perspective"],
     attribution: "Estate Attorney, Seattle",
     contextTag: "Probate · Executor",
   },
   {
-    text: "We appreciated David's patience, thoughtful communication, and realistic guidance throughout the sale of our family property.",
+    text: "We appreciated the patience, thoughtful communication, and realistic guidance throughout the sale of our family property.",
     highlights: ["patience, thoughtful communication", "realistic guidance"],
     attribution: "Family Review",
     contextTag: "Inherited Property",
@@ -44,7 +45,7 @@ const probateCaseStudies = [
     label: "Out-of-State Coordination",
     situation: "An executor living in California was named personal representative for her father's estate in Snohomish County. The home had not been updated in 30 years and was filled with decades of belongings.",
     challenge: "No local contacts, no idea where to start, and no ability to travel frequently to manage the process.",
-    howHelped: "David assessed the property, coordinated a professional cleanout team, managed minor repairs and landscaping, and handled the entire listing and sale process — providing regular photo updates so she never had to fly out.",
+    howHelped: "Real Property Planning assessed the property, coordinated a professional cleanout team, managed minor repairs and landscaping, and handled the entire listing and sale process — providing regular photo updates so she never had to fly out.",
     outcome: "The home sold within three weeks of listing at a price that exceeded the executor's expectations.",
   },
   {
@@ -52,7 +53,7 @@ const probateCaseStudies = [
     label: "Valuation Strategy",
     situation: "A trustee needed to sell a Pierce County home that had a failing roof, outdated electrical, and years of deferred maintenance.",
     challenge: "Two previous agents had declined the listing because of the property's condition. The trustee needed to fulfill fiduciary obligations.",
-    howHelped: "David evaluated each issue, estimated the cost impact on market value, and recommended a targeted preparation strategy — addressing safety concerns while advising against costly renovations that would not deliver meaningful return.",
+    howHelped: "Real Property Planning evaluated each issue, estimated the cost impact on market value, and recommended a targeted preparation strategy — addressing safety concerns while advising against costly renovations that would not deliver meaningful return.",
     outcome: "The property was priced accurately for its condition, attracted multiple offers, and closed smoothly with documented market support.",
   },
   {
@@ -60,7 +61,7 @@ const probateCaseStudies = [
     label: "Family Coordination",
     situation: "Four adult siblings inherited a family home in Kitsap County after their father passed. All four had equal ownership, and none lived near the property.",
     challenge: "The siblings had different views on timing — one wanted to hold, two wanted to sell quickly, and one was unsure. Confusion about the home's value made it harder to reach agreement.",
-    howHelped: "David provided a clear, valuation-informed pricing assessment so everyone was working from the same numbers. He walked the family through market data, explained the cost of holding versus selling, and coordinated the preparation and sale with regular updates to all four siblings.",
+    howHelped: "Real Property Planning provided a clear, valuation-informed pricing assessment so everyone was working from the same numbers. He walked the family through market data, explained the cost of holding versus selling, and coordinated the preparation and sale with regular updates to all four siblings.",
     outcome: "The family reached agreement within two weeks. The home sold at a price everyone felt was fair, and the process was far less stressful than expected.",
   },
   {
@@ -68,7 +69,7 @@ const probateCaseStudies = [
     label: "Senior Transition",
     situation: "A longtime homeowner in her early 80s was moving to assisted living. Her two adult children were helping coordinate the transition and sale of the family home in King County.",
     challenge: "The home held 40 years of memories. The family wasn't sure how to prepare the property, when to list, or how to manage the timeline alongside the move.",
-    howHelped: "David recommended a phased approach: start with a gentle cleanout, address targeted improvements, and list at a time aligned with the transition. He coordinated vendors and kept everyone informed throughout.",
+    howHelped: "Real Property Planning recommended a phased approach: start with a gentle cleanout, address targeted improvements, and list at a time aligned with the transition. He coordinated vendors and kept everyone informed throughout.",
     outcome: "The home sold within a month of listing. The family described the experience as respectful and well-paced.",
   },
   {
@@ -76,7 +77,7 @@ const probateCaseStudies = [
     label: "Valuation Strategy",
     situation: "An executor inherited a home in Snohomish County and had received two very different price opinions from other agents.",
     challenge: "One agent suggested listing high to 'test the market.' The other recommended a much lower price to sell fast. Neither was supported by detailed analysis.",
-    howHelped: "David conducted a thorough property review and provided a valuation-informed pricing strategy — walking the executor through comparable sales, condition adjustments, and current market trends.",
+    howHelped: "Real Property Planning conducted a thorough property review and provided a valuation-informed pricing strategy — walking the executor through comparable sales, condition adjustments, and current market trends.",
     outcome: "The executor chose a well-supported list price. The home received strong interest and sold close to asking.",
   },
 ];
@@ -104,7 +105,7 @@ const whatMakesDifferent = [
 const timingConsiderations = [
   {
     title: "Before Legal Authority Is Granted",
-    text: "David can assess the property, discuss likely value, and help plan next steps — so you're ready to act as soon as authority is in place.",
+    text: "Real Property Planning can assess the property, discuss likely value, and help plan next steps — so you're ready to act as soon as authority is in place.",
   },
   {
     title: "During Active Probate",
@@ -119,15 +120,15 @@ const timingConsiderations = [
 const faqs = [
   {
     question: "How long does it take to sell a probate property in Washington?",
-    answer: "Timelines depend on legal authority, property condition, preparation needs, and market conditions. Some properties list within weeks of authority being granted; others need months of preparation. David helps create a realistic timeline based on your specific situation.",
+    answer: "Timelines depend on legal authority, property condition, preparation needs, and market conditions. Some properties list within weeks of authority being granted; others need months of preparation. Real Property Planning helps create a realistic timeline based on your specific situation.",
   },
   {
     question: "Can an estate property be sold as-is?",
-    answer: "Yes. Many probate and estate properties sell as-is, especially when time or budget constraints make preparation impractical. David evaluates whether an as-is sale or targeted improvements will produce the best overall result for the estate.",
+    answer: "Yes. Many probate and estate properties sell as-is, especially when time or budget constraints make preparation impractical. Real Property Planning evaluates whether an as-is sale or targeted improvements will produce the best overall result for the estate.",
   },
   {
     question: "What costs are involved in selling a probate property?",
-    answer: "Common costs include cleanout, repairs, staging, real estate commissions, closing costs, and title-related expenses. David helps executors understand likely costs upfront so there are no surprises.",
+    answer: "Common costs include cleanout, repairs, staging, real estate commissions, closing costs, and title-related expenses. Real Property Planning helps executors understand likely costs upfront so there are no surprises.",
   },
   {
     question: "Does the executor need court approval to sell in Washington?",
@@ -135,7 +136,7 @@ const faqs = [
   },
   {
     question: "How is pricing different for probate property?",
-    answer: "Estate properties often have condition issues that standard market comparisons don't account for. David's appraisal background allows him to evaluate the property more accurately — accounting for deferred maintenance, functional obsolescence, and realistic buyer expectations.",
+    answer: "Estate properties often have condition issues that standard market comparisons don't account for. The appraisal background at Real Property Planning allows for evaluating the property more accurately — accounting for deferred maintenance, functional obsolescence, and realistic buyer expectations.",
   },
 ];
 
@@ -152,8 +153,8 @@ const ProbateEstateSales = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Probate & Estate Property Sales in Washington State | David Stein"
-        description="Experienced real estate guidance for probate property, inherited homes, and estate sales throughout Washington State. Licensed broker and certified residential appraiser David Stein guides executors, attorneys, and families."
+        title="Probate & Estate Property Sales in Washington State | Real Property Planning"
+        description="Experienced real estate guidance for probate property, inherited homes, and estate sales throughout Washington State. Real Property Planning provides valuation-informed coordination for executors, attorneys, and families."
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema items={[{ name: "Probate & Estate Sales", url: "/probate-estate-sales" }]} />
@@ -162,7 +163,8 @@ const ProbateEstateSales = () => {
       {/* Hero */}
       <section className="bg-primary pt-16 pb-12 lg:pt-32 lg:pb-28">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl mx-auto text-center">
+            <img src={iconProbateSales} alt="" aria-hidden="true" className="mx-auto w-60 h-auto object-contain mb-8" />
             <p className="text-gold font-bold tracking-widest uppercase mb-4 text-base">
               Probate & Estate Property Sales
             </p>
@@ -173,7 +175,7 @@ const ProbateEstateSales = () => {
               When a home is part of a probate case, nothing about the sale follows the normal playbook. Court authority may need to be granted before the property can be listed. The house itself may have been vacant for months, with deferred maintenance that standard market comparisons cannot account for. And the executor, attorney, and family members all need to stay informed without stepping on each other's timelines.
             </p>
             <p className="text-lg text-primary-foreground/70 leading-relaxed mb-8">
-              David Stein brings a rare combination of brokerage skill and certified appraisal knowledge to these situations — giving executors defensible pricing, attorneys a reliable point of coordination, and families the confidence that the property is being handled with care.
+              Real Property Planning brings valuation-informed real estate guidance to these situations — giving executors defensible pricing, attorneys a reliable point of coordination, and families the confidence that the property is being handled with care.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/contact">
@@ -243,7 +245,7 @@ const ProbateEstateSales = () => {
               Timing and Coordination in Probate Sales
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              David works with clients at every stage of the process — whether legal authority has been granted or not:
+              Real Property Planning works with clients at every stage of the process — whether legal authority has been granted or not:
             </p>
             <div className="space-y-5">
               {timingConsiderations.map((item, index) => (
@@ -283,10 +285,10 @@ const ProbateEstateSales = () => {
               Selling estate property is rarely as simple as putting a sign in the yard. These homes often sit vacant for months while legal authority is established, insurance and utility issues need to be managed, and the property's condition may deteriorate. Meanwhile, carrying costs — taxes, insurance, maintenance, and HOA fees — continue to accumulate.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              David Stein understands these pressures because he has worked through them with hundreds of clients. He helps executors, attorneys, and families develop a timeline that accounts for legal proceedings, property preparation, and market conditions — so the sale happens at the right time, not just the fastest time.
+              Real Property Planning understands these pressures from working through them with hundreds of clients. We help executors, attorneys, and families develop a timeline that accounts for legal proceedings, property preparation, and market conditions — so the sale happens at the right time, not just the fastest time.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              For properties that need work before listing, David evaluates each potential improvement through a return-on-investment lens informed by his appraisal training. A $5,000 kitchen cleanup might add $15,000 in sale price; a $40,000 renovation might add only $20,000. These distinctions matter when estate funds are limited and fiduciary duties require defensible decision-making.
+              For properties that need work before listing, Each potential improvement is evaluated through a return-on-investment lens informed by certified appraisal training. A $5,000 kitchen cleanup might add $15,000 in sale price; a $40,000 renovation might add only $20,000. These distinctions matter when estate funds are limited and fiduciary duties require defensible decision-making.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               Whether the property is a mid-century rambler in Shoreline with decades of deferred maintenance or a waterfront home on Mercer Island held in a family trust, David brings the same structured approach: assess, plan, prepare, price, market, and close — with clear communication at every step.
@@ -304,7 +306,7 @@ const ProbateEstateSales = () => {
               <div>
                 <h3 className="font-serif text-lg text-foreground font-semibold mb-2">Important Note</h3>
                 <p className="text-muted-foreground leading-relaxed text-sm">
-                  David Stein provides real estate guidance, market analysis, and property sale services. Legal advice regarding probate administration, estate law, fiduciary duties, and court procedures should be directed to a qualified attorney. David works collaboratively with your legal team to ensure the real estate side proceeds smoothly.
+                  Real Property Planning provides real estate guidance, market analysis, and property sale services. Legal advice regarding probate administration, estate law, fiduciary duties, and court procedures should be directed to a qualified attorney. Real Property Planning works collaboratively with your legal team to ensure the real estate side proceeds smoothly.
                 </p>
               </div>
             </div>
@@ -317,7 +319,7 @@ const ProbateEstateSales = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <ProofCallout
-              quote="David's dual background in brokerage and appraisal gave us confidence that the property was priced correctly. He made a complicated situation feel manageable."
+              quote="The dual background in brokerage and appraisal gave us confidence that the property was priced correctly. He made a complicated situation feel manageable."
               attribution="Professional Referral"
               context="Probate property sale coordination"
               variant="accent"
@@ -377,7 +379,7 @@ const ProbateEstateSales = () => {
               Need Experienced Help Selling a Probate or Estate Property?
             </h2>
             <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">
-              David Stein provides a no-pressure consultation to review the property, discuss timing, and outline next steps.
+              Real Property Planning provides a no-pressure consultation to review the property, discuss timing, and outline next steps.
             </p>
             <p className="text-primary-foreground/50 text-base mb-8">
               A short conversation to understand your situation, answer questions, and plan a practical path forward.
