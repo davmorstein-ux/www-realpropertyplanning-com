@@ -373,6 +373,14 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     intro:
       "Read what clients say about working with Real Property Planning for probate property sales, estate transitions, and senior moves throughout Washington State.",
   },
+  "/guides-and-resources": {
+    title: "Guides & Resources | Probate, Estate & Senior Transition Guidance | Real Property Planning",
+    description:
+      "Clear, practical guides for families, executors, trustees, and professionals navigating probate, inherited property, senior transitions, pricing, and real estate decisions in Washington State.",
+    h1: "Guides & Resources",
+    intro:
+      "Practical answers to common questions about probate, inherited homes, senior transitions, pricing, and the professionals who help — written in plain language for families, executors, trustees, and professionals throughout Washington State.",
+  },
 };
 
 const DEFAULT_SHELL_META: RouteMeta = ROUTE_METADATA["/"] || {
