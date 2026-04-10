@@ -1,6 +1,6 @@
 import SmartSearchBar from "./SmartSearchBar";
 import ServiceNavTileCard from "./ServiceNavTileCard";
-import { serviceTiles } from "./service-nav-tiles-data";
+import { tileCategories } from "./service-nav-tiles-data";
 
 const ServiceNavTiles = () => {
   return (
@@ -10,15 +10,25 @@ const ServiceNavTiles = () => {
           <SmartSearchBar />
         </div>
 
-        <h2 className="text-center text-3xl sm:text-4xl lg:text-[2.6rem] font-bold font-serif text-foreground tracking-tight mb-10">
-          What are you looking for?
+        <h2 className="text-center text-3xl sm:text-4xl lg:text-[2.6rem] font-bold font-serif text-foreground tracking-tight mb-2">
+          How can we help today?
         </h2>
+        <p className="text-center text-muted-foreground text-lg mb-14">
+          Choose a service, role, or next step below.
+        </p>
 
-        <div className="mx-auto grid w-full max-w-[1200px] grid-cols-2 items-start gap-0 sm:grid-cols-3 isolate">
-          {serviceTiles.map((tile, index) => (
-            <ServiceNavTileCard key={tile.href + tile.title} tile={tile} index={index} />
-          ))}
-        </div>
+        {tileCategories.map((category) => (
+          <div key={category.label} className="mb-16 last:mb-0">
+            <h3 className="text-center text-xl sm:text-2xl font-serif font-semibold text-foreground/80 tracking-tight mb-6">
+              {category.label}
+            </h3>
+            <div className="mx-auto grid w-full max-w-[1200px] grid-cols-2 items-start gap-0 sm:grid-cols-3 isolate">
+              {category.tiles.map((tile, i) => (
+                <ServiceNavTileCard key={tile.href + tile.title} tile={tile} index={i} />
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
