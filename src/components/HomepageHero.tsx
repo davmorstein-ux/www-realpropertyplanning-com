@@ -1,52 +1,43 @@
 import { Link } from "react-router-dom";
-import heroBg from "@/assets/hero-pnw-home.jpg";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
-import iconEmail3d from "@/assets/icons/icon-email-3d.png";
+import logoBright from "@/assets/logo-rpp-bright.png";
 
 const HomepageHero = () => {
   return (
-    <section className="relative min-h-[70vh] flex items-center">
-      {/* Background image */}
-      <img
-        src={heroBg}
-        alt="Peaceful Pacific Northwest craftsman home in a lush green neighborhood"
-        className="absolute inset-0 w-full h-full object-cover"
-        loading="eager"
-        width={1920}
-        height={1080}
-      />
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/55" />
+    <section className="relative flex flex-col items-center justify-center" style={{ backgroundColor: "#0a1628", minHeight: "70vh" }}>
+      <div className="flex flex-col items-center px-6 lg:px-8 py-16 lg:py-24 w-full max-w-3xl mx-auto text-center">
+        {/* Logo */}
+        <img
+          src={logoBright}
+          alt="Real Property Planning logo"
+          className="w-[280px] md:w-[420px] lg:w-[480px] h-auto mb-10"
+          loading="eager"
+        />
 
-      <div className="container relative z-10 px-6 lg:px-8 py-20 lg:py-28">
-        <div className="max-w-3xl">
-          <h1 className="font-sans text-[2.5rem] md:text-[3rem] lg:text-[3.5rem] font-semibold leading-[1.15] text-white mb-6">
-            We Help Families Through One of Life's Hardest Moments
-          </h1>
+        {/* Tagline */}
+        <p className="text-[18px] md:text-[22px] tracking-[0.08em] leading-relaxed mb-10" style={{ color: "#b0b8c8" }}>
+          Guiding Families Through Life's Most Important Transitions
+        </p>
 
-          <p className="text-[1.375rem] leading-relaxed text-white/80 mb-10 max-w-2xl">
-            Selling an inherited home. Moving a parent to assisted living. Navigating probate. We guide you — calmly, clearly, and with 20 years of experience.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 mb-8">
-            <a href="tel:2069003015">
-              <button className="inline-flex items-center justify-center gap-2.5 h-14 px-8 rounded-lg bg-gold text-primary font-bold text-lg tracking-wide shadow-lg hover:brightness-110 transition-all min-w-[240px]">
-                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0" />
-                Call Us: (206) 900-3015
-              </button>
-            </a>
-            <Link to="/contact">
-              <button className="inline-flex items-center justify-center gap-2.5 h-14 px-8 rounded-lg border-2 border-white/40 bg-white/10 text-white font-bold text-lg tracking-wide hover:bg-white/20 transition-all min-w-[240px]">
-                <img src={iconEmail3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0" />
-                Send a Message
-              </button>
-            </Link>
-          </div>
-
-          <p className="text-white/60 text-base">
-            Licensed Real Estate Broker &amp; Certified Residential Appraiser · Serving Western Washington
-          </p>
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 mb-8 w-full sm:w-auto">
+          <a href="tel:2069003015" className="w-full sm:w-auto">
+            <button className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 rounded-lg font-bold tracking-wide shadow-lg hover:brightness-110 transition-all min-w-[240px]"
+              style={{ height: "54px", fontSize: "18px", padding: "0 2rem", backgroundColor: "#2563eb", color: "#ffffff" }}>
+              Call (206) 900-3015
+            </button>
+          </a>
+          <Link to="/contact" className="w-full sm:w-auto">
+            <button className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 rounded-lg font-bold tracking-wide hover:bg-white/10 transition-all min-w-[240px]"
+              style={{ height: "54px", fontSize: "18px", padding: "0 2rem", backgroundColor: "transparent", color: "#ffffff", border: "2px solid rgba(255,255,255,0.5)" }}>
+              Send a Message
+            </button>
+          </Link>
         </div>
+
+        {/* Trust line */}
+        <p className="text-sm" style={{ color: "#8a94a6" }}>
+          Licensed Real Estate Broker · Certified Residential Appraiser · Serving Western Washington
+        </p>
       </div>
     </section>
   );
