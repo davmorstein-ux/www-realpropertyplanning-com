@@ -8,19 +8,12 @@ import RelatedServices from "@/components/RelatedServices";
 import GoldCheck3D from "@/components/GoldCheck3D";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import MidPageCTA from "@/components/MidPageCTA";
 import {
   getDeepCityServiceIntro,
-  getDeepCityServiceScenarios,
   getDeepCityServiceHowWeHelp,
-  getDeepWhyLocalServiceMatters,
   getDeepCTAHeading,
   getDeepCTABody,
   getDeepCTAButton,
-  getToneScenariosHeading,
-  getToneScenariosLead,
-  getToneHowWeHelpHeading,
-  getToneHowWeHelpLead,
   isTier1City,
 } from "@/lib/service-areas-data";
 import type { CityData, ServiceData } from "@/lib/service-areas-data";
@@ -34,13 +27,8 @@ const CityServicePageTemplate = ({ city, service }: CityServicePageTemplateProps
   const tier1 = isTier1City(city.slug);
   const tone = city.tone;
 
-  // All cities now use the deep variation system for city+service pages.
-  // Tier 1 vs Tier 2-3 distinction only controls indexation (noindex tag)
-  // and city-page-level content — not city+service content.
   const intro = getDeepCityServiceIntro(service, city);
-  const whyLocal = getDeepWhyLocalServiceMatters(city.name, city.county, service.slug, city);
   const howWeHelp = getDeepCityServiceHowWeHelp(city.name, service.slug, tone, city.slug);
-  const scenarios = getDeepCityServiceScenarios(city.name, service.shortName, service.slug, tone, city.slug);
   const ctaHeading = getDeepCTAHeading(city.name, city.slug, service.slug, tone);
   const ctaBody = getDeepCTABody(city.name, city.slug, service.slug, tone);
   const ctaButton = getDeepCTAButton(city.slug, service.slug);
@@ -49,30 +37,28 @@ const CityServicePageTemplate = ({ city, service }: CityServicePageTemplateProps
     <div className="min-h-screen bg-background">
       <SEOHead
         title={`${service.shortName} in ${city.name}, WA | Real Property Planning`}
-        description={`${service.shortName} in ${city.name}, ${city.county}. David Stein provides experienced real estate guidance for ${service.name.toLowerCase()} with licensed broker and certified appraiser credentials.`}
+        description={`${service.shortName} in ${city.name}, ${city.county}. Experienced real estate guidance with licensed broker and certified appraiser credentials.`}
         noindex={!tier1}
       />
-      <BreadcrumbSchema
-        items={[
-          { name: "Counties", url: "/counties" },
-          { name: city.county, url: `/${city.countySlug}` },
-          { name: city.name, url: `/cities/${city.slug}` },
-          { name: service.shortName, url: `/cities/${city.slug}/${service.slug}` },
-        ]}
-      />
+      <BreadcrumbSchema items={[
+        { name: "Counties", url: "/counties" },
+        { name: city.county, url: `/${city.countySlug}` },
+        { name: city.name, url: `/cities/${city.slug}` },
+        { name: service.shortName, url: `/cities/${city.slug}/${service.slug}` },
+      ]} />
       <Header />
 
-      {/* Hero */}
-      <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
+      {/* Hero — concise */}
+      <section className="bg-primary pt-16 pb-12 md:pt-20 md:pb-16 lg:pt-24 lg:pb-20">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl">
-            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
+            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">
               {service.shortName} · {city.name}
             </p>
-            <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-[22px]">
+            <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl text-primary-foreground font-semibold leading-tight mb-4">
               {service.name} in {city.name}
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed">
+            <p className="text-lg text-primary-foreground/80 leading-relaxed">
               {intro}
             </p>
           </div>
@@ -81,42 +67,17 @@ const CityServicePageTemplate = ({ city, service }: CityServicePageTemplateProps
 
       <TrustStrip />
 
-      {/* Typical Scenarios */}
-      <section className="py-20 lg:py-28 bg-secondary">
+      {/* How We Help — compact bullets */}
+      <section className="py-14 lg:py-18 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
-              {getToneScenariosHeading(city.name, service.shortName, tone)}
+            <h2 className="font-serif text-2xl text-foreground font-semibold mb-5">
+              How We Help
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              {getToneScenariosLead(city.name, service.name, tone)}
-            </p>
-            <ul className="space-y-4">
-              {scenarios.map((item, i) => (
+            <ul className="space-y-3">
+              {howWeHelp.slice(0, 5).map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <div className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
-                  <span className="text-muted-foreground">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* How We Help */}
-      <section className="py-20 lg:py-28 bg-background">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
-              {getToneHowWeHelpHeading(tone, service.slug)}
-            </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              {getToneHowWeHelpLead(city.name, service.name, tone)}
-            </p>
-            <ul className="space-y-4">
-              {howWeHelp.map((item, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <GoldCheck3D size={20} className="mt-0.5" />
+                  <GoldCheck3D size={18} className="mt-0.5" />
                   <span className="text-foreground text-[15px] leading-relaxed">{item}</span>
                 </li>
               ))}
@@ -125,61 +86,17 @@ const CityServicePageTemplate = ({ city, service }: CityServicePageTemplateProps
         </div>
       </section>
 
-      {/* Mid-page CTA */}
-      <MidPageCTA
-        heading={`Need ${service.shortName} Help in ${city.name}?`}
-        body={`David provides confidential consultations for clients and professionals in ${city.name} and throughout ${city.county}.`}
-        buttonText="Schedule a Consultation"
-        microcopy="No pressure. Just practical guidance for your situation."
-      />
-
-      {/* Why Local Context Matters */}
-      <section className="py-16 lg:py-20 bg-secondary">
+      {/* Related Links */}
+      <section className="py-10 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-              Why Does Local Context Matter for {service.shortName} in {city.name}?
-            </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed">
-              {whyLocal}
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Related Pages */}
-      <section className="py-12 bg-background">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <p className="text-sm font-semibold text-muted-foreground mb-3">Related Resources</p>
-            <div className="flex flex-wrap gap-3">
-              <Link to={`/cities/${city.slug}`} className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">
-                {city.name} Overview
-              </Link>
+            <p className="text-sm font-semibold text-muted-foreground mb-2">Related</p>
+            <div className="flex flex-wrap gap-2">
+              <Link to={`/cities/${city.slug}`} className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">{city.name}</Link>
               <span className="text-muted-foreground/40">·</span>
-              <Link to={`/${city.countySlug}`} className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">
-                {city.county}
-              </Link>
+              <Link to={`/${city.countySlug}`} className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">{city.county}</Link>
               <span className="text-muted-foreground/40">·</span>
-              <Link to={`/services/${service.slug}`} className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">
-                {service.shortName} Overview
-              </Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/executors" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">
-                For Executors
-              </Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/for-attorneys" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">
-                For Attorneys
-              </Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/why-valuation-matters" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">
-                Why Valuation Matters
-              </Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/cities-we-serve" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">
-                All Cities
-              </Link>
+              <Link to={`/services/${service.slug}`} className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">{service.shortName} Overview</Link>
             </div>
           </div>
         </div>
@@ -188,22 +105,18 @@ const CityServicePageTemplate = ({ city, service }: CityServicePageTemplateProps
       <RelatedServices currentPath={`/cities/${city.slug}/${service.slug}`} />
 
       {/* CTA */}
-      <section className="py-20 lg:py-28 bg-primary">
+      <section className="py-16 lg:py-20 bg-primary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
+            <h2 className="font-serif text-3xl text-primary-foreground font-semibold mb-4">
               {ctaHeading}
             </h2>
-            <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
+            <p className="text-primary-foreground/70 text-lg mb-6">
               {ctaBody}
             </p>
-            <div className="flex justify-center">
-              <Link to="/contact">
-                <Button variant="gold" size="lg">
-                  {ctaButton}
-                </Button>
-              </Link>
-            </div>
+            <Link to="/contact">
+              <Button variant="gold" size="lg">{ctaButton}</Button>
+            </Link>
           </div>
         </div>
       </section>
