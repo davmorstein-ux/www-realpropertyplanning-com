@@ -575,15 +575,9 @@ const routeMetadataPlugin = {
         .filter(([route]) => route !== "/")
         .map(async ([route, metadata]) => {
           const routeHtml = applyMetadata(baseHtml, route, metadata);
-          const routePath = route.slice(1);
-          const routeDir = path.join(distDir, routePath);
-          const exactFilePath = path.join(distDir, routePath);
-          const nestedIndexPath = path.join(routeDir, "index.html");
-
-          await mkdir(path.dirname(exactFilePath), { recursive: true });
+          const routeDir = path.join(distDir, route.slice(1));
           await mkdir(routeDir, { recursive: true });
-          await writeFile(exactFilePath, routeHtml, "utf8");
-          await writeFile(nestedIndexPath, routeHtml, "utf8");
+          await writeFile(path.join(routeDir, "index.html"), routeHtml, "utf8");
         })
     );
   },
