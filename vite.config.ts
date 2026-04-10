@@ -592,13 +592,19 @@ export default defineConfig({
       overlay: false,
     },
   },
- plugins: [
-  react(),
-  ViteImageOptimizer({
-    png: { quality: 80 },
-    jpeg: { quality: 80 },
-    jpg: { quality: 80 },
-    webp: { quality: 80 },
-  }),
-  routeMetadataPlugin,
-],
+  plugins: [
+    react(),
+    ViteImageOptimizer({
+      png: { quality: 80 },
+      jpeg: { quality: 80 },
+      jpg: { quality: 80 },
+      webp: { quality: 80 },
+    }),
+    routeMetadataPlugin,
+  ],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
+});
