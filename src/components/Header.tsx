@@ -90,12 +90,12 @@ const Header = () => {
       </a>
       <header
         data-nosnippet
-        className={`fixed left-0 right-0 top-0 z-50 bg-white border-b transition-all duration-300 ${
+        className={`fixed left-0 right-0 top-0 z-50 border-b transition-all duration-300 ${
           scrolled
             ? "border-border shadow-[0_2px_10px_rgba(0,0,0,0.06)]"
-            : "border-[hsl(0_0%_90%)]"
+            : "border-transparent"
         }`}
-        style={{ borderBottomWidth: "1px" }}
+        style={{ borderBottomWidth: "1px", backgroundColor: "#0a1628" }}
       >
         <div
           className={`mx-auto flex max-w-[1520px] items-center px-4 transition-all duration-300 md:px-6 lg:px-10 ${
