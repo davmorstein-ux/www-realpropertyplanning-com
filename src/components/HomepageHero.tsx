@@ -10,6 +10,7 @@ const HomepageHero = () => {
           src={logoBright}
           alt="Real Property Planning logo"
           className="w-[680px] md:w-[840px] lg:w-[1000px] max-w-[85vw] h-auto mb-4"
+          style={{ marginTop: "-15%", marginBottom: "-15%" }}
           loading="eager"
         />
 
