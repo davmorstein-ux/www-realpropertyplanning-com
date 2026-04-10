@@ -11,7 +11,7 @@ const ServiceNavTiles = () => {
         </div>
 
         <h2 className="text-center text-3xl sm:text-4xl lg:text-[2.6rem] font-bold font-serif text-foreground tracking-tight mb-10">
-          Choose the path that best fits your situation
+          What are you looking for?
         </h2>
 
         <div className="mx-auto grid w-full max-w-[1200px] grid-cols-2 items-start gap-0 sm:grid-cols-3 isolate">
