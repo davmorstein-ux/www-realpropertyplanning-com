@@ -7,6 +7,7 @@ import { Phone, Mail } from "lucide-react";
 import davidSteinPhoto from "@/assets/providers/david-stein-headshot-sq.jpg";
 import steinAppraisalLogo from "@/assets/stein-appraisal-logo.jpg";
 import ehoLogo from "@/assets/providers/equal-housing-opportunity.png";
+import iconAppraiser from "@/assets/icons/icon-appraiser.png";
 
 const RealEstateAppraiser = () => (
   <>
@@ -24,13 +25,16 @@ const RealEstateAppraiser = () => (
     <Header />
     <main>
       {/* Hero */}
-      <section className="bg-secondary py-14 md:py-20">
+      <section className="bg-secondary pt-8 md:pt-12 pb-12 md:pb-14">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-base">Valuation &amp; Appraisal</p>
-            <h1 className="font-serif text-3xl md:text-4xl font-bold text-foreground leading-tight mb-4">Real Estate Appraiser</h1>
+            <div className="flex justify-center mb-8 md:mb-10">
+              <img src={iconAppraiser} alt="Real Estate Appraiser" className="block w-full max-w-[23rem] h-auto object-contain" />
+            </div>
+            <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-sm">Valuation &amp; Appraisal</p>
+            <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-foreground leading-tight mb-4">Real Estate Appraiser</h1>
             <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-              Certified residential appraisal insight for families, executors, trustees, and professionals who need objective, defensible property valuations during important life transitions.
+              Objective, defensible property valuations for families, executors, trustees, and professionals during important life transitions.
             </p>
           </div>
         </div>

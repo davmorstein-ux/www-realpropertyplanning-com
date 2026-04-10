@@ -7,6 +7,7 @@ import { Phone, Mail, Globe } from "lucide-react";
 import davidSteinPhoto from "@/assets/providers/david-stein-headshot-sq.jpg";
 import expRealtyLogo from "@/assets/providers/exp-realty-logo-large.png";
 import ehoLogo from "@/assets/providers/equal-housing-opportunity.png";
+import iconRealtor from "@/assets/icons/icon-realtor.png";
 
 const Realtor = () => (
   <>
@@ -24,13 +25,16 @@ const Realtor = () => (
     <Header />
     <main>
       {/* Hero */}
-      <section className="bg-secondary py-14 md:py-20">
+      <section className="bg-secondary pt-8 md:pt-12 pb-12 md:pb-14">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-base">Real Estate</p>
-            <h1 className="font-serif text-3xl md:text-4xl font-bold text-foreground leading-tight mb-4">Realtor</h1>
+            <div className="flex justify-center mb-8 md:mb-10">
+              <img src={iconRealtor} alt="Realtor" className="block w-full max-w-[23rem] h-auto object-contain" />
+            </div>
+            <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-sm">Real Estate</p>
+            <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-foreground leading-tight mb-4">Realtor</h1>
             <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-              Experienced real estate representation and guidance for seniors, families, executors, trustees, and professionals navigating important property decisions throughout Washington State.
+              Experienced real estate guidance for seniors, families, executors, and professionals navigating important property decisions throughout Washington State.
             </p>
           </div>
         </div>

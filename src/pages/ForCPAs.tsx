@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { MessageSquare } from "lucide-react";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+import iconCpas from "@/assets/icons/icon-cpas.png";
 
 const whyCPAsInvolveRE = [
   {
@@ -110,35 +111,27 @@ const ForCPAs = () => {
       <Header />
 
       {/* Hero */}
-      <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
+      <section className="bg-secondary pt-8 md:pt-12 pb-12 md:pb-14">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
-              Professional Referral Resource
+          <div className="max-w-3xl mx-auto text-center">
+            <div className="flex justify-center mb-8 md:mb-10">
+              <img src={iconCpas} alt="CPAs" className="block w-full max-w-[23rem] h-auto object-contain" />
+            </div>
+            <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-sm">
+              For CPAs
             </p>
-            <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-[22px]">
+            <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-foreground leading-tight mb-4">
               Real Estate Guidance for CPAs and Their Clients
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-5">
-              Real Property Planning supports CPAs and their clients when important financial decisions involve inherited property, estate settlement, trust administration, probate matters, downsizing, or the sale of real estate during major life transitions.
+            <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-8">
+              Practical, valuation-informed property guidance when your clients face inherited property, estate settlement, or trust administration decisions.
             </p>
-            <p className="text-lg text-primary-foreground/70 leading-relaxed mb-[30px]">
-              David Stein brings more than 20 years of experience as a Washington real estate broker and state certified residential appraiser, helping clients and their advisors navigate property decisions with a practical, valuation-informed approach throughout Washington State.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <Link to="/contact">
- <Button variant="gold" size="lg"className="hover:-light px-7 py-4 h-auto rounded-lg w-full sm:w-auto">
-                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
-                  Schedule a Consultation
-                </Button>
-              </Link>
-              <Link to="/contact">
-                <Button size="lg" variant="outline3d" className="border-gold/50 bg-transparent text-gold hover:bg-gold hover:text-foreground focus-visible:ring-gold font-medium px-7 py-4 h-auto rounded-lg w-full sm:w-auto">
-                  <MessageSquare className="w-4 h-4 mr-2" />
-                  Request a Confidential Consultation
-                </Button>
-              </Link>
-            </div>
+            <Link to="/contact">
+              <Button variant="gold" size="lg" className="px-7 py-4 h-auto rounded-lg">
+                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
+                Discuss a Client Situation
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
