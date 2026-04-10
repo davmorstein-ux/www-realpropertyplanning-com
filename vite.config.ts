@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { componentTagger } from "lovable-tagger";
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 
@@ -553,31 +554,38 @@ const applyMetadata = (
 const routeMetadataPlugin = {
   name: "route-metadata-prerender",
   apply: "build" as const,
-  generateBundle(
-    this: { emitFile: (file: { type: "asset"; fileName: string; source: string }) => void },
-    _options: unknown,
-    bundle: Record<string, { type: string; source?: string | Uint8Array }>
-  ) {
-    const indexEntry = bundle["index.html"];
-    if (!indexEntry || indexEntry.type !== "asset" || typeof indexEntry.source === "undefined") return;
+  async closeBundle() {
+    const distDir = path.resolve(__dirname, "dist");
+    const baseHtmlPath = path.join(distDir, "index.html");
+    let baseHtml: string;
 
-    const baseHtml = typeof indexEntry.source === "string"
-      ? indexEntry.source
-      : indexEntry.source.toString();
+    try {
+      baseHtml = await readFile(baseHtmlPath, "utf8");
+    } catch {
+      return;
+    }
 
-    indexEntry.source = injectRouteAwareShell(
+    const rootHtml = injectRouteAwareShell(
       applyMetadata(baseHtml, "/", DEFAULT_SHELL_META, { injectSsg: true })
     );
+    await writeFile(baseHtmlPath, rootHtml, "utf8");
 
-    for (const [route, metadata] of Object.entries(ROUTE_METADATA)) {
-      if (route === "/") continue;
+    await Promise.all(
+      Object.entries(ROUTE_METADATA)
+        .filter(([route]) => route !== "/")
+        .map(async ([route, metadata]) => {
+          const routeHtml = applyMetadata(baseHtml, route, metadata);
+          const routePath = route.slice(1);
+          const routeDir = path.join(distDir, routePath);
+          const exactFilePath = path.join(distDir, routePath);
+          const nestedIndexPath = path.join(routeDir, "index.html");
 
-      this.emitFile({
-        type: "asset",
-        fileName: `${route.slice(1)}/index.html`,
-        source: applyMetadata(baseHtml, route, metadata),
-      });
-    }
+          await mkdir(path.dirname(exactFilePath), { recursive: true });
+          await mkdir(routeDir, { recursive: true });
+          await writeFile(exactFilePath, routeHtml, "utf8");
+          await writeFile(nestedIndexPath, routeHtml, "utf8");
+        })
+    );
   },
 };
 
