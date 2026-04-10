@@ -43,14 +43,14 @@ const HowWeHelpCards = () => {
               key={card.headline}
               className="bg-card rounded-2xl shadow-md p-8 flex flex-col items-start"
             >
-              <img
-                src={card.iconSrc}
-                alt={card.iconAlt}
-                width={80}
-                height={80}
-                className="w-20 h-20 object-contain mb-6"
-                loading="lazy"
-              />
+              <div className="w-full flex justify-center mb-6">
+                <img
+                  src={card.iconSrc}
+                  alt={card.iconAlt}
+                  className="w-[200px] h-[140px] object-contain"
+                  loading="lazy"
+                />
+              </div>
               <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
                 {card.headline}
               </h3>
