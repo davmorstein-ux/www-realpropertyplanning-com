@@ -122,6 +122,15 @@ import Wills from "./pages/Wills";
 import EstateLiquidation from "./pages/EstateLiquidation";
 import Realtor from "./pages/Realtor";
 import RealEstateAppraiser from "./pages/RealEstateAppraiser";
+import ExecutorsLearnMore from "./pages/ExecutorsLearnMore";
+import TrusteesLearnMore from "./pages/TrusteesLearnMore";
+import ForAttorneysLearnMore from "./pages/ForAttorneysLearnMore";
+import ForCPAsLearnMore from "./pages/ForCPAsLearnMore";
+import ForFinancialPlannersLearnMore from "./pages/ForFinancialPlannersLearnMore";
+import RealtorLearnMore from "./pages/RealtorLearnMore";
+import RealEstateAppraiserLearnMore from "./pages/RealEstateAppraiserLearnMore";
+import SeniorMoveManagersLearnMore from "./pages/SeniorMoveManagersLearnMore";
+import EstateLiquidationLearnMore from "./pages/EstateLiquidationLearnMore";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -264,6 +273,16 @@ const App = () => (
           <Route path="/estate-liquidation" element={<EstateLiquidation />} />
           <Route path="/realtor" element={<Realtor />} />
           <Route path="/real-estate-appraiser" element={<RealEstateAppraiser />} />
+          {/* Learn More detail pages */}
+          <Route path="/executors/learn-more" element={<ExecutorsLearnMore />} />
+          <Route path="/trustees/learn-more" element={<TrusteesLearnMore />} />
+          <Route path="/for-attorneys/learn-more" element={<ForAttorneysLearnMore />} />
+          <Route path="/for-cpas/learn-more" element={<ForCPAsLearnMore />} />
+          <Route path="/for-financial-planners/learn-more" element={<ForFinancialPlannersLearnMore />} />
+          <Route path="/realtor/learn-more" element={<RealtorLearnMore />} />
+          <Route path="/real-estate-appraiser/learn-more" element={<RealEstateAppraiserLearnMore />} />
+          <Route path="/senior-move-managers/learn-more" element={<SeniorMoveManagersLearnMore />} />
+          <Route path="/estate-liquidation/learn-more" element={<EstateLiquidationLearnMore />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
