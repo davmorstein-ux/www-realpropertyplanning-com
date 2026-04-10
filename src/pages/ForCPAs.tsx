@@ -6,12 +6,9 @@ import { articleSchema } from "@/lib/schema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Phone, Mail } from "lucide-react";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 import iconCpas from "@/assets/icons/icon-cpas.png";
 import CTASection from "@/components/CTASection";
-import davidSteinPhoto from "@/assets/providers/david-stein-headshot-sq.jpg";
-import expRealtyLogo from "@/assets/providers/exp-realty-logo-large.png";
 
 const jsonLd = articleSchema({
   headline: "Real Estate Guidance for CPAs and Their Clients",
@@ -54,35 +51,6 @@ const ForCPAs = () => (
               Discuss a Client Situation
             </Button>
           </Link>
-        </div>
-      </div>
-    </section>
-
-    {/* Featured Professional */}
-    <section className="py-10 md:py-14 bg-background">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-2xl mx-auto">
-          <div className="bg-secondary border border-border rounded-xl p-5 sm:p-6">
-            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4">
-              <img src={davidSteinPhoto} alt="David Stein" className="w-24 h-24 rounded-full object-cover border-2 border-border shadow-sm shrink-0" />
-              <div className="text-center sm:text-left">
-                <img src={expRealtyLogo} alt="eXp Realty" className="h-16 w-auto object-contain mx-auto sm:mx-0 mb-1" />
-                <p className="text-foreground font-semibold text-base">David Stein</p>
-                <p className="text-muted-foreground text-sm mb-1">Real Estate Broker · Certified Residential Appraiser</p>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-2">
-                  Specializing in estate property, probate sales, and trust-held real estate throughout Washington State.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-2 text-sm">
-                  <a href="tel:+12069003015" className="inline-flex items-center gap-1.5 text-accent hover:text-gold">
-                    <Phone className="w-3.5 h-3.5" />(206) 900-3015
-                  </a>
-                  <a href="mailto:david@realpropertyplanning.com" className="inline-flex items-center gap-1.5 text-accent hover:text-gold">
-                    <Mail className="w-3.5 h-3.5" />david@realpropertyplanning.com
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
