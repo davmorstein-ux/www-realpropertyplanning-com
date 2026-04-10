@@ -29,7 +29,7 @@ const attorneyTiles: ServiceTile[] = [
 const ForAttorneys = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
-      title="Real Estate Support for Attorneys | Probate, Estate & Family Law | David Stein"
+      title="Real Estate Support for Attorneys | Probate, Estate & Family Law | Real Property Planning"
       description="Licensed real estate broker and certified residential appraiser supporting attorneys with probate sales, estate property coordination, valuation guidance, and family law property matters throughout Washington State."
     />
     <BreadcrumbSchema items={[{ name: "For Attorneys", url: "/for-attorneys" }]} />
@@ -49,7 +49,7 @@ const ForAttorneys = () => (
             When Your Client Has a Property to Deal With
           </h1>
           <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-8">
-            David handles valuation, preparation, coordination, and sale — so you and your client can focus on legal and financial priorities.
+            Real Property Planning handles valuation, preparation, coordination, and sale — so you and your client can focus on legal and financial priorities.
           </p>
           <Link to="/contact">
             <Button variant="gold" size="lg" className="px-7 py-4 h-auto rounded-lg">
