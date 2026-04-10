@@ -273,6 +273,16 @@ const App = () => (
           <Route path="/estate-liquidation" element={<EstateLiquidation />} />
           <Route path="/realtor" element={<Realtor />} />
           <Route path="/real-estate-appraiser" element={<RealEstateAppraiser />} />
+          {/* Learn More detail pages */}
+          <Route path="/executors/learn-more" element={<ExecutorsLearnMore />} />
+          <Route path="/trustees/learn-more" element={<TrusteesLearnMore />} />
+          <Route path="/for-attorneys/learn-more" element={<ForAttorneysLearnMore />} />
+          <Route path="/for-cpas/learn-more" element={<ForCPAsLearnMore />} />
+          <Route path="/for-financial-planners/learn-more" element={<ForFinancialPlannersLearnMore />} />
+          <Route path="/realtor/learn-more" element={<RealtorLearnMore />} />
+          <Route path="/real-estate-appraiser/learn-more" element={<RealEstateAppraiserLearnMore />} />
+          <Route path="/senior-move-managers/learn-more" element={<SeniorMoveManagersLearnMore />} />
+          <Route path="/estate-liquidation/learn-more" element={<EstateLiquidationLearnMore />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
