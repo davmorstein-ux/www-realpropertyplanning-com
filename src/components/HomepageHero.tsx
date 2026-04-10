@@ -9,12 +9,12 @@ const HomepageHero = () => {
         <img
           src={logoBright}
           alt="Real Property Planning logo"
-          className="w-[840px] md:w-[1260px] lg:w-[1440px] max-w-[90vw] h-auto mb-10"
+          className="w-[480px] md:w-[600px] lg:w-[700px] max-w-[85vw] h-auto mb-8"
           loading="eager"
         />
 
         {/* Tagline */}
-        <p className="text-[18px] md:text-[22px] tracking-[0.08em] leading-relaxed mb-10" style={{ color: "#b0b8c8" }}>
+        <p className="text-[18px] md:text-[22px] tracking-[0.08em] leading-relaxed mb-8" style={{ color: "#b0b8c8" }}>
           Guiding Families Through Life's Most Important Transitions
         </p>
 
