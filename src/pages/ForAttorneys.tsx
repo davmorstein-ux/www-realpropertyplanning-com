@@ -20,6 +20,7 @@ import iconFamilyLaw from "@/assets/icons/icon-family-law-3d.png";
 import iconRealEstateAttorney from "@/assets/icons/icon-real-estate-attorney.png";
 import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+import iconAttorneys from "@/assets/icons/icon-attorneys.png";
 import ClientReviewsSection from "@/components/ClientReviewsSection";
 import RealClientSituations from "@/components/RealClientSituations";
 import StatewideSupport from "@/components/StatewideSupport";
@@ -158,17 +159,20 @@ const ForAttorneys = () => {
       <Header />
 
       {/* Hero */}
-      <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
+      <section className="bg-secondary pt-8 md:pt-12 pb-12 md:pb-14">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
-              For Attorneys & Fiduciaries
+            <div className="flex justify-center mb-8 md:mb-10">
+              <img src={iconAttorneys} alt="Attorneys" className="block w-full max-w-[23rem] h-auto object-contain" />
+            </div>
+            <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-sm">
+              For Attorneys
             </p>
-            <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6 motion-safe:animate-[text-emphasis-a_14s_ease-in-out_infinite]">
+            <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-foreground leading-tight mb-4">
               When Your Client Has a Property to Deal With
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-8 motion-safe:animate-[text-emphasis-b_14s_ease-in-out_infinite]">
-              David handles the real estate side — valuation, preparation, coordination, and sale — so you and your client can focus on the legal and financial priorities.
+            <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-8">
+              David handles valuation, preparation, coordination, and sale — so you and your client can focus on legal and financial priorities.
             </p>
             <Link to="/contact">
               <Button variant="gold" size="lg" className="px-7 py-4 h-auto rounded-lg">

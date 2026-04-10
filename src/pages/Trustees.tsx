@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { MessageSquare, Phone, Mail, Globe } from "lucide-react";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+import iconTrustees from "@/assets/icons/icon-trustees.png";
 import ListenButton from "@/components/ListenButton";
 import DirectAnswerBlock from "@/components/DirectAnswerBlock";
 import davidSteinPhoto from "@/assets/providers/david-stein-headshot-sq.jpg";
@@ -65,38 +66,27 @@ const Trustees = () => {
       <Header />
 
       {/* Hero */}
-      <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
+      <section className="bg-secondary pt-8 md:pt-12 pb-12 md:pb-14">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl" id="trustees-hero-section">
-            <div className="mb-5">
-              <ListenButton targetId="trustees-hero-section" />
+          <div className="max-w-3xl mx-auto text-center">
+            <div className="flex justify-center mb-8 md:mb-10">
+              <img src={iconTrustees} alt="Trustees" className="block w-full max-w-[23rem] h-auto object-contain" />
             </div>
-            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
+            <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-sm">
               Fiduciary Support
             </p>
-            <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
+            <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-foreground leading-tight mb-4">
               Trustees
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground leading-relaxed mb-4 motion-safe:animate-[text-emphasis-a_22s_ease-in-out_infinite]" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.25)' }}>
-              Serving as a trustee often means balancing legal responsibility, practical decisions, family dynamics, and property-related questions — all at the same time.
+            <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-8">
+              Practical real estate guidance for trustees and successor trustees managing trust-held property in Washington State.
             </p>
-            <p className="text-lg md:text-xl text-primary-foreground leading-relaxed mb-8 motion-safe:animate-[text-emphasis-b_22s_ease-in-out_infinite]" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.25)' }}>
-              When a trust includes real estate, the process can involve valuation, property preparation, timing, communication, and sale coordination. This page is designed to help trustees understand the real estate side of that responsibility and know where to turn for practical support.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <Link to="/contact">
-                <Button variant="gold" size="lg" className="px-7 py-4 h-auto rounded-lg w-full sm:w-auto">
-                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
-                  Schedule a Conversation
-                </Button>
-              </Link>
-              <Link to="/contact">
-                <Button size="lg" variant="outline3d" className="border-gold/50 bg-transparent text-gold hover:bg-gold hover:text-foreground focus-visible:ring-gold font-medium px-7 py-4 h-auto rounded-lg w-full sm:w-auto">
-                  <MessageSquare className="w-4 h-4 mr-2" />
-                  Send a Message
-                </Button>
-              </Link>
-            </div>
+            <Link to="/contact">
+              <Button variant="gold" size="lg" className="px-7 py-4 h-auto rounded-lg">
+                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
+                Schedule a Conversation
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

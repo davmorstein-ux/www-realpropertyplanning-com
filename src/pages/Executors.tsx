@@ -14,6 +14,7 @@ import RealClientSituations from "@/components/RealClientSituations";
 import PageTestimonials from "@/components/PageTestimonials";
 import MidPageCTA from "@/components/MidPageCTA";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+import iconExecutors from "@/assets/icons/icon-executors.png";
 import ListenButton from "@/components/ListenButton";
 import DirectAnswerBlock from "@/components/DirectAnswerBlock";
 
@@ -194,35 +195,27 @@ const Executors = () => {
       <Header />
 
       {/* Hero */}
-      <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
+      <section className="bg-secondary pt-8 md:pt-12 pb-12 md:pb-14">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl" id="executors-hero-section">
-            <div className="mb-5">
-              <ListenButton targetId="executors-hero-section" />
+          <div className="max-w-3xl mx-auto text-center">
+            <div className="flex justify-center mb-8 md:mb-10">
+              <img src={iconExecutors} alt="Executors" className="block w-full max-w-[23rem] h-auto object-contain" />
             </div>
-            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
+            <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-sm">
               For Executors & Personal Representatives
             </p>
-            <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
+            <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-foreground leading-tight mb-4">
               You Do Not Have to Figure This Out Alone
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-8">
-              David Stein works with executors throughout Washington State — handling property evaluation, preparation, pricing, and sale so you can focus on your other responsibilities.
+            <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-8">
+              David handles property evaluation, preparation, pricing, and sale so you can focus on your other responsibilities.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <Link to="/contact">
- <Button variant="gold" size="lg"className="hover:-light px-7 py-4 h-auto rounded-lg w-full sm:w-auto">
-                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
-                  Schedule a Conversation
-                </Button>
-              </Link>
-              <Link to="/contact">
-                <Button size="lg" variant="outline3d" className="border-gold/50 bg-transparent text-gold hover:bg-gold hover:text-foreground focus-visible:ring-gold font-medium px-7 py-4 h-auto rounded-lg w-full sm:w-auto">
-                  <MessageSquare className="w-4 h-4 mr-2" />
-                  Send a Message
-                </Button>
-              </Link>
-            </div>
+            <Link to="/contact">
+              <Button variant="gold" size="lg" className="px-7 py-4 h-auto rounded-lg">
+                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
+                Schedule a Conversation
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

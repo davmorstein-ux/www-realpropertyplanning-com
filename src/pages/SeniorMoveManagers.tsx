@@ -10,6 +10,7 @@ import { Button, GoldHighlight } from "@/components/ui/button";
 import ericRovnerPhoto from "@/assets/providers/eric-rovner-hbmovemanagement.png";
 import hbmmLogo from "@/assets/providers/hbmovemanagement-logo.png";
 import seniorMovesHeroIcon from "@/assets/icons/icon-senior-moves-hero.png";
+import iconSeniorMoves from "@/assets/icons/icon-senior-moves.png";
 
 const SeniorMoveManagers = () => {
   const jsonLd = {
@@ -46,38 +47,27 @@ const SeniorMoveManagers = () => {
       <Header />
       <main>
         {/* HERO */}
-        <section className="bg-primary py-20 lg:py-28">
+        <section className="bg-secondary pt-8 md:pt-12 pb-12 md:pb-14">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
-              
-              <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">
+              <div className="flex justify-center mb-8 md:mb-10">
+                <img src={iconSeniorMoves} alt="Senior Move Managers" className="block w-full max-w-[23rem] h-auto object-contain" />
+              </div>
+              <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-sm">
                 Senior Transitions
               </p>
-              <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl text-primary-foreground font-semibold mb-6">
+              <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-foreground leading-tight mb-4">
                 Senior Move Managers
               </h1>
-              <p className="text-primary-foreground/80 text-lg leading-relaxed max-w-2xl mx-auto mb-8">
+              <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-8">
                 Practical, compassionate help for older adults and families preparing to downsize, organize, pack, relocate, or settle into a new home.
               </p>
-              <p className="text-primary-foreground/70 text-base leading-relaxed max-w-2xl mx-auto mb-10">
-                Senior Move Managers help make later-life moves more manageable. They assist with the planning, organizing, sorting, packing, coordination, and setup that often come with moving from a longtime home.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/contact">
-                  <Button variant="gold" size="lg" className="text-base">
-                    <GoldHighlight />
-                    <span className="relative z-10 inline-flex items-center gap-2">
-                      <Phone className="w-4 h-4" />
-                      Request a Consultation
-                    </span>
-                  </Button>
-                </Link>
-                <Link to="/contact">
-                  <Button variant="outline3d" size="lg" className="text-base">
-                    Ask About Senior Move Manager Resources
-                  </Button>
-                </Link>
-              </div>
+              <Link to="/contact">
+                <Button variant="gold" size="lg" className="text-base px-7 py-4 h-auto rounded-lg">
+                  <Phone className="w-4 h-4 mr-2" />
+                  Request a Consultation
+                </Button>
+              </Link>
             </div>
           </div>
         </section>
