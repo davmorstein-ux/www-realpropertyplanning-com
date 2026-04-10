@@ -9,7 +9,7 @@ const HomepageHero = () => {
         <img
           src={logoBright}
           alt="Real Property Planning logo"
-          className="w-[480px] md:w-[600px] lg:w-[700px] max-w-[85vw] h-auto mb-4"
+          className="w-[680px] md:w-[840px] lg:w-[1000px] max-w-[85vw] h-auto mb-4"
           loading="eager"
         />
 
