@@ -51,7 +51,7 @@ const HowWeHelpCards = () => {
                   loading="lazy"
                 />
               </div>
-              <h3 className="font-serif text-2xl font-bold text-red-900 mb-3">
+              <h3 className="font-serif text-3xl font-bold text-red-900 mb-3">
                 {card.headline}
               </h3>
               <p className="text-muted-foreground text-lg leading-relaxed mb-4 flex-1">
