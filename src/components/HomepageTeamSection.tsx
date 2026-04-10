@@ -1,5 +1,5 @@
 import iconAttorneys from "@/assets/icons/icon-attorneys.png";
-import iconFinancialPlanners from "@/assets/icons/icon-financial-planners.png";
+import iconFinancialPlanning from "@/assets/icons/icon-financial-planning.png";
 import iconSeniorMoves from "@/assets/icons/icon-senior-moves-hero.png";
 import iconAppraiser from "@/assets/icons/icon-appraiser.png";
 import iconRealtor from "@/assets/icons/icon-realtor.png";
@@ -9,7 +9,7 @@ const tiles = [
   { icon: iconRealtor, label: "Real Estate Broker" },
   { icon: iconAppraiser, label: "Certified Appraiser" },
   { icon: iconAttorneys, label: "Estate Attorney" },
-  { icon: iconFinancialPlanners, label: "Financial Planner" },
+  { icon: iconFinancialPlanning, label: "Financial Planner" },
   { icon: iconSeniorMoves, label: "Senior Move Manager" },
   { icon: iconExecutors, label: "Executor Advisor" },
 ];
