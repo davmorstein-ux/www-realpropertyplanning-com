@@ -3,13 +3,13 @@ import logoBright from "@/assets/logo-rpp-bright.png";
 
 const HomepageHero = () => {
   return (
-    <section className="relative flex flex-col items-center justify-center" style={{ backgroundColor: "#0a1628" }}>
-      <div className="flex flex-col items-center px-6 lg:px-8 py-8 lg:py-12 w-full max-w-6xl mx-auto text-center">
+    <section className="relative flex flex-col items-center justify-center" style={{ backgroundColor: "#0a1628", minHeight: "unset" }}>
+      <div className="flex flex-col items-center px-6 lg:px-8 py-6 lg:py-8 w-full max-w-6xl mx-auto text-center">
         {/* Logo */}
         <img
           src={logoBright}
           alt="Real Property Planning logo"
-          className="w-[480px] md:w-[600px] lg:w-[700px] max-w-[85vw] h-auto mb-8"
+          className="w-[480px] md:w-[600px] lg:w-[700px] max-w-[85vw] h-auto mb-4"
           loading="eager"
         />
 
