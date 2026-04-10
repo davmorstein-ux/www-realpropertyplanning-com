@@ -479,7 +479,7 @@ const injectRouteAwareShell = (html: string) => {
   const script = buildRouteAwareShellScript();
   // Insert script right after </head><body> or before the closing </body>
   // Since SSG content may already be inside #root, match the closing </div> of #root
-  return html.replace("</head>", `${script}</head>`);
+  return html.replace("</body>", `${script}</body>`);
 };
 
 const applyMetadata = (
