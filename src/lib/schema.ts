@@ -76,21 +76,22 @@ export const realEstateAgentSchema = {
   },
   image: LOGO_URL,
   description:
-    "Washington State real estate broker with eXp Realty, specializing in senior relocation, estate and inherited property sales, and trust & probate real estate. Deep experience across Western Washington and the Puget Sound region, with the ability to connect clients to trusted brokers nationwide and internationally through eXp Realty's referral network.",
+    "Probate real estate, inherited property sales, estate appraisals, and senior housing transitions in Western Washington.",
   telephone: "(206) 900-3015",
   email: "david@realpropertyplanning.com",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "PO Box 1462",
-    addressLocality: "Woodinville",
+    streetAddress: "1455 NW Leary Way",
+    addressLocality: "Seattle",
     addressRegion: "WA",
-    postalCode: "98072",
+    postalCode: "98107",
     addressCountry: "US",
   },
   founder: {
     ...davidSteinPerson,
   },
-  areaServed,
+  areaServed: ["King County", "Snohomish County", "Pierce County", "Skagit County", "Kitsap County"],
+  hasCredential: ["Licensed Real Estate Broker", "Washington State Certified Residential Appraiser"],
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "(206) 900-3015",
@@ -152,3 +153,67 @@ export function articleSchema({
     },
   };
 }
+
+/** Homepage FAQ schema */
+export const homepageFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is a probate real estate agent?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "A probate real estate agent specializes in selling homes that are part of a deceased person's estate. They understand the legal requirements, court timelines, and family sensitivities involved — and work alongside attorneys and executors to get the property sold properly.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do I need a special agent to sell an inherited home in Washington State?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Not legally required, but strongly recommended. Probate sales have specific legal steps, documentation requirements, and timelines. An agent with probate experience — especially one who is also a certified appraiser — can save families significant time, money, and stress.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is a senior transition specialist?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "A senior transition specialist is a real estate professional trained to support older adults and their families when it's time to move from a longtime home. They coordinate the process thoughtfully — from decluttering and downsizing support to finding appropriate housing and selling the home.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is an estate appraisal and why does it matter?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "An estate appraisal is a certified valuation of a property at the time of the owner's death. It's used to set a fair listing price, satisfy court requirements in probate, calculate estate taxes, and ensure heirs are treated fairly. Courts and the IRS have specific requirements — a certified appraiser ensures your appraisal holds up.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How is David Stein different from a regular real estate agent?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "David holds two credentials most agents don't: he is both a licensed real estate broker and a Washington State Certified Residential Appraiser. This means he can value a home with professional appraisal standards AND help sell it — providing families with integrated guidance they can trust.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What areas does Real Property Planning serve?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We serve all of Western Washington and the Puget Sound region, including King, Snohomish, Pierce, Skagit, and Kitsap Counties — cities like Seattle, Bellevue, Everett, Tacoma, Bainbridge Island, and many more.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do I get started?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Simply call (206) 900-3015 or send an email to david@realpropertyplanning.com. There's no pressure — just a calm, honest conversation about your situation.",
+      },
+    },
+  ],
+};

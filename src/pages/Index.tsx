@@ -8,14 +8,17 @@ import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
 import mappin3d from "@/assets/mappin-3d.png";
-import logo from "@/assets/logo-rpp-bright.png";
 import expRealtyLogo from "@/assets/exp-realty-logo.png";
 import ServiceNavTiles from "@/components/ServiceNavTiles";
 import HomepageLeadForm from "@/components/HomepageLeadForm";
 import LeadMagnetBlock from "@/components/LeadMagnetBlock";
 import EducationalPathways from "@/components/EducationalPathways";
-import StickyMobileCallButton from "@/components/StickyMobileCallButton";
 import WhatHappensNext from "@/components/WhatHappensNext";
+import HomepageHero from "@/components/HomepageHero";
+import HowWeHelpCards from "@/components/HowWeHelpCards";
+import HomepageWarmStatement from "@/components/HomepageWarmStatement";
+import HomepageFAQ from "@/components/HomepageFAQ";
+import HomepageTeamSection from "@/components/HomepageTeamSection";
 
 const serviceAreas = [
   { county: "King County", href: "/counties/king", cities: "Seattle, Bellevue, Kirkland, Redmond, Renton, Kent & more" },
@@ -30,58 +33,31 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-cream">
       <SEOHead
-        title="Real Property Planning | Probate, Estate & Senior Transition Real Estate | Washington State"
-        description="Real Property Planning helps executors, trustees, attorneys, and families navigate probate sales, inherited homes, senior transitions, and trust property across Washington State. Valuation-informed guidance from a licensed broker and certified appraiser."
+        title="Probate & Estate Real Estate | Washington State | Real Property Planning"
+        description="Helping families, attorneys, and trustees navigate inherited homes, probate sales, and senior housing transitions across Western Washington. David Stein — licensed broker and certified appraiser with 20+ years of experience."
         jsonLd={jsonLd}
       />
       <Header />
 
-      {/* ═══════════════════════════════════════════════════
-          1. BRAND INTRO — Short, calm, scannable
-      ═══════════════════════════════════════════════════ */}
-      <section className="-mt-6 lg:-mt-8 pt-6 md:pt-0 pb-6 lg:pb-8 text-center" style={{ background: 'radial-gradient(ellipse 70% 50% at center 30%, hsl(220 48% 17%), hsl(220 52% 10%) 55%, hsl(220 55% 8%) 100%)' }}>
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-2xl mx-auto">
-            <div className="-mb-6 md:-mb-20 lg:-mb-32">
-              <img
-                src={logo}
-                alt="Real Property Planning"
-                className="mx-auto w-[600px] md:w-[840px] lg:w-[1020px] h-auto object-contain motion-safe:animate-[logo-glow_8s_ease-in-out_infinite_2s]"
-                loading="eager"
-              />
-            </div>
+      {/* 1. HERO — PNW background, calm headline, two CTAs */}
+      <HomepageHero />
 
-            <h1 className="font-serif text-[1.35rem] md:text-[1.65rem] lg:text-[1.95rem] font-semibold leading-[1.35] tracking-[0.01em] text-primary-foreground mb-5 max-w-[28rem] mx-auto" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.25)', wordSpacing: '0.05em' }}>
-              Calm guidance for estate, probate, and senior real estate transitions across Washington State.
-            </h1>
+      {/* 2. HOW WE HELP — 3 icon cards */}
+      <HowWeHelpCards />
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-              <Link to="/contact">
-                <button className="inline-flex w-[240px] h-[32px] items-center justify-center rounded-md font-medium text-[0.8rem] tracking-[0.06em] uppercase text-white/90 transition-all duration-200 ease-out bg-[#a8892f] border border-[#c9a84c]/20 shadow-[0_1px_3px_rgba(0,0,0,0.2)] ring-1 ring-inset ring-black/30 hover:bg-[#b89a3a] hover:shadow-[0_2px_6px_rgba(0,0,0,0.2)] active:bg-[#96792a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c9a84c]/50">
-                  Contact Us Now
-                </button>
-              </Link>
-              <Link to="/services">
-                <button className="inline-flex w-[240px] h-[32px] items-center justify-center rounded-md font-medium text-[0.8rem] tracking-[0.06em] uppercase transition-all duration-200 ease-out bg-transparent border-[2.5px] border-[#c9a84c]/35 text-primary-foreground/90 hover:border-[#c9a84c]/55 hover:text-primary-foreground hover:bg-white/5 active:bg-white/8 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/30">
-                  Explore Services
-                  <ChevronRight className="w-3.5 h-3.5 ml-1" />
-                </button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════════════════════════════════════════════════
-          2. SERVICE NAV TILES — Show choices fast
-      ═══════════════════════════════════════════════════ */}
+      {/* 3. SERVICE NAV TILES */}
       <ServiceNavTiles />
 
-      {/* Spacer between tiles and next section */}
+      {/* 4. WARM STATEMENT + PULLQUOTE */}
+      <HomepageWarmStatement />
 
-      {/* ═══════════════════════════════════════════════════
-          4. WHEN SHOULD YOU CALL — Quick, scannable
-      ═══════════════════════════════════════════════════ */}
+      {/* 5. TEAM SECTION */}
+      <HomepageTeamSection />
+
+      {/* 6. FAQ */}
+      <HomepageFAQ />
+
+      {/* 7. WHEN SHOULD YOU CALL */}
       <section className="py-12 lg:py-16 bg-cream">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
@@ -101,14 +77,10 @@ const Index = () => {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════════════
-          5. LEAD MAGNET
-      ═══════════════════════════════════════════════════ */}
+      {/* 8. LEAD MAGNET */}
       <LeadMagnetBlock />
 
-      {/* ═══════════════════════════════════════════════════
-          6. AREAS SERVED
-      ═══════════════════════════════════════════════════ */}
+      {/* 9. AREAS SERVED */}
       <section className="py-14 lg:py-20 bg-navy relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.03]" style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath d='M100 20 L130 80 L160 140 H40 L70 80 Z' fill='%23fff'/%3E%3Cpath d='M100 50 L120 90 L140 130 H60 L80 90 Z' fill='%23fff'/%3E%3C/svg%3E")`,
@@ -147,9 +119,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════════════
-          7. CONTACT
-      ═══════════════════════════════════════════════════ */}
+      {/* 10. CONTACT */}
       <section className="py-14 lg:py-20 bg-navy-dark">
         <div className="mx-auto max-w-[1100px] px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
@@ -179,9 +149,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════════════
-          8. EDUCATIONAL PATHWAYS
-      ═══════════════════════════════════════════════════ */}
+      {/* 11. EDUCATIONAL PATHWAYS */}
       <EducationalPathways />
 
       <DisclaimerSection />
