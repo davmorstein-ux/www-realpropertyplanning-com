@@ -5,12 +5,12 @@ const HomepageHero = () => {
   return (
     <section className="relative flex flex-col items-center justify-center min-h-[320px] md:min-h-[380px] lg:min-h-[420px]" style={{ backgroundColor: "#0a1628" }}>
       <div className="flex flex-col items-center px-6 lg:px-8 py-6 lg:py-8 w-full max-w-6xl mx-auto text-center">
-        {/* Logo — explicit container height prevents CLS from percentage margins */}
-        <div className="w-[680px] md:w-[840px] lg:w-[1000px] max-w-[85vw] mb-4 relative" style={{ height: "clamp(132px, 20vw, 200px)" }}>
+        {/* Logo — fixed-height wrapper prevents CLS; image overflows to show full artwork */}
+        <div className="w-[680px] md:w-[840px] lg:w-[1000px] max-w-[85vw] mb-4 relative" style={{ height: "clamp(150px, 20vw, 240px)" }}>
           <img
             src={logoBright}
             alt="Real Property Planning logo"
-            className="w-full h-auto absolute top-1/2 left-0 -translate-y-1/2"
+            className="w-full h-auto absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[47%]"
             width={1000}
             height={286}
             loading="eager"
