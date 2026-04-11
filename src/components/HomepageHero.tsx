@@ -21,7 +21,7 @@ const HomepageHero = () => {
         {/* Tagline — serves as the page H1 */}
         <h1 className="text-[22px] md:text-[28px] tracking-[0.08em] leading-relaxed mb-8 text-white font-medium">
           Guiding Families Through Life's Most Important Transitions
-        </p>
+        </h1>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 mb-8 w-full sm:w-auto">
