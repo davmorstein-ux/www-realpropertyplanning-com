@@ -104,8 +104,9 @@ const ProfileScreen = ({
       </p>
       <div className="w-full max-w-sm space-y-1.5 text-left mb-4">
         <div>
-          <label className="block text-sm font-semibold text-foreground mb-1">First Name</label>
+          <label htmlFor="sw-first" className="block text-sm font-semibold text-foreground mb-1">First Name</label>
           <input
+            id="sw-first"
             type="text"
             className={fieldClass}
             placeholder="First name"
@@ -114,8 +115,9 @@ const ProfileScreen = ({
           />
         </div>
         <div>
-          <label className="block text-sm font-semibold text-foreground mb-1">Last Name</label>
+          <label htmlFor="sw-last" className="block text-sm font-semibold text-foreground mb-1">Last Name</label>
           <input
+            id="sw-last"
             type="text"
             className={fieldClass}
             placeholder="Last name"
@@ -124,8 +126,9 @@ const ProfileScreen = ({
           />
         </div>
         <div>
-          <label className="block text-sm font-semibold text-foreground mb-1">Email</label>
+          <label htmlFor="sw-email" className="block text-sm font-semibold text-foreground mb-1">Email</label>
           <input
+            id="sw-email"
             type="email"
             className={fieldClass}
             placeholder="you@example.com"
@@ -134,10 +137,11 @@ const ProfileScreen = ({
           />
         </div>
         <div>
-          <label className="block text-sm font-semibold text-foreground mb-1">
+          <label htmlFor="sw-phone" className="block text-sm font-semibold text-foreground mb-1">
             Phone <span className="font-normal text-muted-foreground">(optional)</span>
           </label>
           <input
+            id="sw-phone"
             type="tel"
             className={fieldClass}
             placeholder="(555) 555-0000"
@@ -358,10 +362,11 @@ const ShareScreen = ({ onClose }: { onClose: () => void }) => {
       </p>
 
       <div className="w-full max-w-sm text-left mb-6">
-        <label className="block text-sm font-semibold text-foreground mb-1">
+        <label htmlFor="sw-trusted-email" className="block text-sm font-semibold text-foreground mb-1">
           Trusted contact email
         </label>
         <input
+          id="sw-trusted-email"
           type="email"
           className="w-full rounded-lg border-2 border-border bg-background px-4 py-3.5 text-lg text-foreground placeholder:text-muted-foreground/60 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
           placeholder="contact@example.com"
