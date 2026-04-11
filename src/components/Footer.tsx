@@ -122,7 +122,7 @@ const Footer = () => {
               <img
                 src={alcaLogo}
                 alt="Aging Life Care Association Corporate Partner"
-                className="h-[120px] w-auto opacity-80 hover:opacity-100 transition-opacity"
+                className="h-[240px] w-auto opacity-80 hover:opacity-100 transition-opacity"
                 loading="lazy"
               />
             </a>
@@ -130,7 +130,7 @@ const Footer = () => {
               <img
                 src={naosaBadge}
                 alt="National Association of Senior Advocates - Best Real Estate Agent 2026"
-                className="h-[140px] w-auto opacity-80 hover:opacity-100 transition-opacity"
+                className="h-[240px] w-auto opacity-80 hover:opacity-100 transition-opacity"
                 loading="lazy"
               />
             </a>
