@@ -143,6 +143,7 @@ const Footer = () => {
               />
             </a>
           </div>
+        </div>
 
         {/* Accessibility Statement */}
         <div className="footer-divider mb-0" />
