@@ -138,7 +138,7 @@ const Footer = () => {
               <img
                 src={naepcLogo}
                 alt="National Association of Estate Planners & Councils"
-                className="h-[120px] w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+                className="h-[240px] w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
                 loading="lazy"
               />
             </a>
