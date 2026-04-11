@@ -3,19 +3,20 @@ import logoBright from "@/assets/logo-rpp-bright.png";
 
 const HomepageHero = () => {
   return (
-    <section className="relative flex flex-col items-center justify-center" style={{ backgroundColor: "#0a1628", minHeight: "unset" }}>
+    <section className="relative flex flex-col items-center justify-center min-h-[320px] md:min-h-[380px] lg:min-h-[420px]" style={{ backgroundColor: "#0a1628" }}>
       <div className="flex flex-col items-center px-6 lg:px-8 py-6 lg:py-8 w-full max-w-6xl mx-auto text-center">
-        {/* Logo */}
-        <img
-          src={logoBright}
-          alt="Real Property Planning logo"
-          className="w-[680px] md:w-[840px] lg:w-[1000px] max-w-[85vw] h-auto mb-4"
-          style={{ marginTop: "-15%", marginBottom: "-15%" }}
-          width={1000}
-          height={286}
-          loading="eager"
-          fetchPriority="high"
-        />
+        {/* Logo — explicit container height prevents CLS from percentage margins */}
+        <div className="w-[680px] md:w-[840px] lg:w-[1000px] max-w-[85vw] mb-4 relative" style={{ height: "clamp(132px, 20vw, 200px)" }}>
+          <img
+            src={logoBright}
+            alt="Real Property Planning logo"
+            className="w-full h-auto absolute top-1/2 left-0 -translate-y-1/2"
+            width={1000}
+            height={286}
+            loading="eager"
+            fetchPriority="high"
+          />
+        </div>
 
         {/* Tagline */}
         <p className="text-[22px] md:text-[28px] tracking-[0.08em] leading-relaxed mb-8 text-white font-medium">
