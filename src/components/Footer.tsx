@@ -116,7 +116,7 @@ const Footer = () => {
         {/* Professional Affiliations */}
         <div className="footer-divider mb-0" />
         <div className="pt-8 pb-6 flex flex-col items-center">
-          <h4 className="text-primary-foreground font-serif text-lg font-semibold mb-5">Professional Memberships &amp; Affiliations</h4>
+          <h4 className="text-primary-foreground font-serif text-[22px] font-bold mb-5">Professional Memberships &amp; Affiliations</h4>
           <div className="flex items-center justify-center gap-10">
             <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer">
               <img
@@ -126,19 +126,19 @@ const Footer = () => {
                 loading="lazy"
               />
             </a>
-            <a href="https://www.naosa.org" target="_blank" rel="noopener noreferrer">
-              <img
-                src={naosaBadge}
-                alt="National Association of Senior Advocates - Best Real Estate Agent 2026"
-                className="h-[300px] w-auto object-contain"
-                loading="lazy"
-              />
-            </a>
             <a href="https://www.naepc.org" target="_blank" rel="noopener noreferrer">
               <img
                 src={naepcLogo}
                 alt="National Association of Estate Planners & Councils"
                 className="h-[120px] w-auto object-contain"
+                loading="lazy"
+              />
+            </a>
+            <a href="https://www.naosa.org" target="_blank" rel="noopener noreferrer">
+              <img
+                src={naosaBadge}
+                alt="National Association of Senior Advocates - Best Real Estate Agent 2026"
+                className="h-[300px] w-auto object-contain"
                 loading="lazy"
               />
             </a>
