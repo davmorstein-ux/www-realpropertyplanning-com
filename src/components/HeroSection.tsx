@@ -25,7 +25,11 @@ const HeroSection = () => {
                 src={logo}
                 alt="Real Property Planning"
                 className="w-[260px] md:w-[500px] lg:w-[700px] max-w-full h-auto object-contain"
-               loading="lazy"/>
+                width={700}
+                height={200}
+                loading="eager"
+                fetchPriority="high"
+              />
             </div>
 
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-primary-foreground font-medium leading-tight mb-4" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.3)' }}>
