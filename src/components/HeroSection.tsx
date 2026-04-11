@@ -25,7 +25,11 @@ const HeroSection = () => {
                 src={logo}
                 alt="Real Property Planning"
                 className="w-[260px] md:w-[500px] lg:w-[700px] max-w-full h-auto object-contain"
-               loading="lazy"/>
+                width={700}
+                height={200}
+                loading="eager"
+                fetchPriority="high"
+              />
             </div>
 
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-primary-foreground font-medium leading-tight mb-4" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.3)' }}>
@@ -82,10 +86,11 @@ const HeroSection = () => {
               <div className="w-80 h-96 rounded-2xl overflow-hidden border-4 border-gold/30 shadow-2xl">
                 <img
                   src={daveHeadshot}
-                  alt="David Stein, probate real estate specialist and certified appraiser in Western Washington"
-                  className="w-full h-full object-cover object-top"
-                  loading="eager"
-                />
+                   alt="David Stein, probate real estate specialist and certified appraiser in Western Washington"
+                   className="w-full h-full object-cover object-top"
+                   loading="eager"
+                   fetchPriority="high"
+                 />
               </div>
               <div className="absolute -bottom-4 -right-4 w-80 h-96 rounded-2xl border-2 border-gold/20 -z-10" />
             </div>
