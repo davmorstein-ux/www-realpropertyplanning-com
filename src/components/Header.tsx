@@ -103,7 +103,7 @@ const Header = () => {
           }`}
           ref={dropdownRef}
         >
-          <nav className="hidden shrink-0 items-center gap-4 md:flex lg:gap-6 xl:gap-7">
+          <nav aria-label="Main navigation" className="hidden shrink-0 items-center gap-4 md:flex lg:gap-6 xl:gap-7">
             {primaryLinks.map((link) => (
               <div key={link.label} className="relative">
                 {link.children ? (
@@ -201,7 +201,7 @@ const Header = () => {
 
         {mobileMenuOpen && (
           <div className="border-t border-border bg-white px-6 pb-6 pt-5 md:hidden">
-            <nav className="flex flex-col gap-0.5">
+            <nav aria-label="Mobile navigation" className="flex flex-col gap-0.5">
               {primaryLinks.map((link) => (
                 <div key={link.label}>
                   {link.children ? (
