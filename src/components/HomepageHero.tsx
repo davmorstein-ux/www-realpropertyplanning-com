@@ -5,17 +5,18 @@ const HomepageHero = () => {
   return (
     <section className="relative flex flex-col items-center justify-center min-h-[320px] md:min-h-[380px] lg:min-h-[420px]" style={{ backgroundColor: "#0a1628" }}>
       <div className="flex flex-col items-center px-6 lg:px-8 py-6 lg:py-8 w-full max-w-6xl mx-auto text-center">
-        {/* Logo — fixed aspect-ratio container prevents CLS; negative margins collapse transparent padding */}
-        <img
-          src={logoBright}
-          alt="Real Property Planning logo"
-          className="w-[680px] md:w-[840px] lg:w-[1000px] max-w-[85vw] mb-4"
-          style={{ marginTop: "-15%", marginBottom: "-15%", aspectRatio: "1000 / 286", objectFit: "contain" }}
-          width={1000}
-          height={286}
-          loading="eager"
-          fetchPriority="high"
-        />
+        {/* Logo — fixed-height wrapper prevents CLS; image overflows to show full artwork */}
+        <div className="w-[680px] md:w-[840px] lg:w-[1000px] max-w-[85vw] mb-4 relative" style={{ height: "clamp(150px, 20vw, 240px)" }}>
+          <img
+            src={logoBright}
+            alt="Real Property Planning logo"
+            className="w-full h-auto absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[47%]"
+            width={1000}
+            height={286}
+            loading="eager"
+            fetchPriority="high"
+          />
+        </div>
 
         {/* Tagline */}
         <p className="text-[22px] md:text-[28px] tracking-[0.08em] leading-relaxed mb-8 text-white font-medium">
