@@ -315,7 +315,7 @@ const GuidesAndResources = () => {
                     aria-hidden="true"
                     className="w-10 h-10 mr-2.5 object-contain shrink-0"
                     style={{ background: "transparent" }}
-                  />
+                   loading="lazy"/>
                   Start a Conversation
                 </Button>
               </Link>

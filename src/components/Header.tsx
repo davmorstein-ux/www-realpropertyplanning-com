@@ -163,7 +163,7 @@ const Header = () => {
                 className={`h-auto max-h-[90px] w-[400px] object-contain transition-all duration-300 md:w-[425px] lg:w-[775px] xl:w-[875px] ${
                   scrolled ? "w-[350px] md:w-[350px] lg:w-[625px] xl:w-[700px]" : ""
                 }`}
-              />
+               loading="lazy"/>
             </Link>
           </div>
 
@@ -171,7 +171,7 @@ const Header = () => {
             href="tel:2069003015"
             className="hidden shrink-0 items-center gap-1.5 text-[14px] font-semibold text-white/90 hover:text-white transition-colors md:flex"
           >
-            <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0" />
+            <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0"  loading="lazy"/>
             (206) 900-3015
           </a>
 
@@ -231,7 +231,7 @@ const Header = () => {
               <div className="mt-3 border-t border-border pt-4">
                 <Link to="/contact">
                   <Button className="h-[52px] w-full rounded-lg bg-[hsl(216,65%,34%)] text-base font-semibold text-white hover:bg-[hsl(216,65%,28%)]">
-                    <img src={iconPhone3d} alt="" aria-hidden="true" className="mr-2 h-5 w-5 shrink-0 object-contain" />
+                    <img src={iconPhone3d} alt="" aria-hidden="true" className="mr-2 h-5 w-5 shrink-0 object-contain"  loading="lazy"/>
                     Schedule a Consultation
                   </Button>
                 </Link>

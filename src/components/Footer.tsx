@@ -35,19 +35,19 @@ const Footer = () => {
             <p className="text-primary-foreground/60 text-[15px] leading-relaxed mb-3">eXp Realty</p>
             <div className="flex flex-col gap-2 text-[15px]">
               <a href="tel:2069003015" className="text-primary-foreground/70 hover:text-gold transition-colors flex items-center gap-2">
-                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0" />
+                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0"  loading="lazy"/>
                 (206) 900-3015
               </a>
               <a href="mailto:david@realpropertyplanning.com" className="text-primary-foreground/70 hover:text-gold transition-colors flex items-center gap-2">
-                <img src={iconEmail3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0" />
+                <img src={iconEmail3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0"  loading="lazy"/>
                 david@realpropertyplanning.com
               </a>
               <div className="text-primary-foreground/50 flex items-start gap-2 mt-1">
-                <img src={mappin3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain mt-0.5 shrink-0" />
+                <img src={mappin3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain mt-0.5 shrink-0"  loading="lazy"/>
                 <span>Mailing: PO Box 1462, Woodinville, WA 98072</span>
               </div>
               <div className="text-primary-foreground/50 flex items-start gap-2">
-                <img src={mappin3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain mt-0.5 shrink-0" />
+                <img src={mappin3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain mt-0.5 shrink-0"  loading="lazy"/>
                 <span>Office: 1455 NW Leary Way, Seattle, WA 98107</span>
               </div>
             </div>
@@ -89,7 +89,7 @@ const Footer = () => {
             <h4 className="text-primary-foreground font-serif text-lg font-semibold mb-5">Service Areas</h4>
             <ul className="space-y-3 text-primary-foreground/70 text-base">
               <li className="flex items-start gap-2">
-                <img src={mappin3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain mt-0.5 shrink-0" />
+                <img src={mappin3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain mt-0.5 shrink-0"  loading="lazy"/>
                 <span>Serving clients throughout Washington State, with a strong focus in Western Washington and the Puget Sound region</span>
               </li>
               <li><Link to="/counties/king" className="hover:text-gold transition-colors">Probate and estate real estate in King County</Link></li>

@@ -18,7 +18,7 @@ const StatewideSupport = ({ background = "bg-secondary" }: StatewideSupportProps
               alt=""
               aria-hidden="true"
               className="w-12 h-12 object-contain shrink-0"
-            />
+             loading="lazy"/>
             <div>
               <h2
                 className={`font-serif text-3xl md:text-4xl font-semibold ${

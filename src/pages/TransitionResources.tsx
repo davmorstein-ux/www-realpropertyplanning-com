@@ -236,7 +236,7 @@ const TransitionResources = () => {
                   variant="outline3d"
                   className="border-gold/50 bg-transparent text-gold hover:bg-gold hover:text-foreground focus-visible:ring-gold w-full sm:w-auto px-8 h-[52px] text-base rounded-lg"
                 >
-                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
+                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy"/>
                   Contact Real Property Planning
                 </Button>
               </Link>
@@ -435,7 +435,7 @@ const TransitionResources = () => {
                 size="lg"
  className="hover:-light px-8 h-[52px] text-base rounded-lg"
               >
-                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
+                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy"/>
                 Start the Conversation
               </Button>
             </Link>

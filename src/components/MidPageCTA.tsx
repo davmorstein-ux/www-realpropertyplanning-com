@@ -49,7 +49,7 @@ const MidPageCTA = ({
                 alt=""
                 aria-hidden="true"
                 className="w-5 h-5 mr-2 object-contain shrink-0"
-              />
+               loading="lazy"/>
               {buttonText}
             </Button>
           </Link>

@@ -138,14 +138,14 @@ const CountyPageTemplate = ({
                 if (cityData) {
                   return (
                     <Link key={cityName} to={`/cities/${cityData.slug}`} className="flex items-center gap-2 hover:text-gold transition-colors">
-                      <img src={mappin3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" />
+                      <img src={mappin3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0"  loading="lazy"/>
                       <span className="text-foreground hover:text-gold transition-colors text-sm">{cityName}</span>
                     </Link>
                   );
                 }
                 return (
                   <div key={cityName} className="flex items-center gap-2">
-                    <img src={mappin3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" />
+                    <img src={mappin3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0"  loading="lazy"/>
                     <span className="text-muted-foreground text-sm">{cityName}</span>
                   </div>
                 );

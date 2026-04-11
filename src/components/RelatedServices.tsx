@@ -203,7 +203,7 @@ const RelatedServices = ({ currentPath }: RelatedServicesProps) => {
                     transition: "filter 0.5s ease",
                   }}
                   draggable={false}
-                />
+                 loading="lazy"/>
               );
             })}
           </div>

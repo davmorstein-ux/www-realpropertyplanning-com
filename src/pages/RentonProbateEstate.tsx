@@ -116,7 +116,7 @@ const RentonProbateEstate = () => {
         <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">A Clear First Step</h2>
         <p className="text-primary-foreground/75 text-lg leading-relaxed mb-4">If you're handling inherited property in Renton and want clarity on pricing, condition, and next steps, a short conversation can help you get organized and move forward.</p>
         <p className="text-primary-foreground/50 text-base mb-8">No pressure. Just practical guidance.</p>
-        <div className="flex justify-center"><Link to="/contact"><Button variant="gold" size="lg" className="px-10 py-4 h-auto text-base"><img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />Schedule a Consultation</Button></Link></div>
+        <div className="flex justify-center"><Link to="/contact"><Button variant="gold" size="lg" className="px-10 py-4 h-auto text-base"><img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy"/>Schedule a Consultation</Button></Link></div>
       </div></div></section>
 
       <DisclaimerSection />

@@ -212,7 +212,7 @@ const WhatExecutorsShouldDo = () => (
           <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">Ready to Talk About Your Situation?</h2>
           <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">Start with a simple conversation. David will listen, answer your questions, and outline practical next steps.</p>
           <p className="text-primary-foreground/50 text-base mb-8">Whether you are just beginning or already feel behind, there is always a clear path forward.</p>
-          <Link to="/contact"><Button variant="gold" size="lg"><img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />Schedule a Conversation</Button></Link>
+          <Link to="/contact"><Button variant="gold" size="lg"><img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy"/>Schedule a Conversation</Button></Link>
         </div>
       </div>
     </section>

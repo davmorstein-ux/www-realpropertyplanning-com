@@ -188,7 +188,7 @@ const PowerOfAttorneys = () => {
                       transition: "filter 0.5s ease",
                     }}
                     draggable={false}
-                  />
+                   loading="lazy"/>
                 );
               })}
             </div>
@@ -305,7 +305,7 @@ const PowerOfAttorneys = () => {
                 alt=""
                 aria-hidden="true"
                 className="pointer-events-none absolute left-1/2 top-1/2 z-10 h-7 w-7 -translate-x-1/2 -translate-y-1/2 sm:h-9 sm:w-9"
-              />
+               loading="lazy"/>
             </div>
           </div>
         </div>

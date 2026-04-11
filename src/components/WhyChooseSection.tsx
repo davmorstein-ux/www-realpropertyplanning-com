@@ -67,7 +67,7 @@ const WhyChooseSection = () => {
                 key={index}
                 className="card-3d p-8 text-center"
               >
-                <img src={item.image} alt="" aria-hidden="true" className="w-8 h-8 object-contain mx-auto mb-4" />
+                <img src={item.image} alt="" aria-hidden="true" className="w-8 h-8 object-contain mx-auto mb-4"  loading="lazy"/>
                 <div className="font-serif text-3xl text-foreground font-medium mb-2">
                   {item.stat}
                 </div>

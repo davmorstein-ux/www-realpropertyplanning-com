@@ -100,7 +100,7 @@ const SeniorLivingAndRelocation = () => {
                   src={iconSeniorLiving}
                   alt="Senior Living & Relocation"
                   className="block w-full max-w-[23rem] h-auto object-contain"
-                />
+                 loading="lazy"/>
               </div>
               <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-sm">
                 Senior Living
@@ -147,15 +147,15 @@ const SeniorLivingAndRelocation = () => {
                       <div className="card-3d-blue__inner h-full">
                         <div className="card-3d-blue__face h-full px-3 pt-3 pb-2 flex flex-col items-center">
                           {option.title === "Adult Family Homes" ? (
-                            <img src={iconAfh3d} alt="Adult Family Homes" className="h-[105px] max-w-[150px] shrink-0 object-contain mt-1 transition-transform duration-300 ease-out group-hover:scale-110" />
+                            <img src={iconAfh3d} alt="Adult Family Homes" className="h-[105px] max-w-[150px] shrink-0 object-contain mt-1 transition-transform duration-300 ease-out group-hover:scale-110"  loading="lazy"/>
                           ) : option.title === "Assisted Living Communities" ? (
-                            <img src={iconAssistedLiving3d} alt="Assisted Living Communities" className="h-[105px] max-w-[150px] shrink-0 object-contain mt-1 transition-transform duration-300 ease-out group-hover:scale-110" />
+                            <img src={iconAssistedLiving3d} alt="Assisted Living Communities" className="h-[105px] max-w-[150px] shrink-0 object-contain mt-1 transition-transform duration-300 ease-out group-hover:scale-110"  loading="lazy"/>
                           ) : option.title === "Memory Care" ? (
-                            <img src={iconMemoryCare3d} alt="Memory Care" className="h-[105px] max-w-[150px] shrink-0 object-contain mt-1 transition-transform duration-300 ease-out group-hover:scale-110" />
+                            <img src={iconMemoryCare3d} alt="Memory Care" className="h-[105px] max-w-[150px] shrink-0 object-contain mt-1 transition-transform duration-300 ease-out group-hover:scale-110"  loading="lazy"/>
                           ) : option.title === "Nursing & Skilled Care" ? (
-                            <img src={iconNursingCare3d} alt="Nursing & Skilled Care" className="h-[105px] max-w-[150px] shrink-0 object-contain mt-1 transition-transform duration-300 ease-out group-hover:scale-110" />
+                            <img src={iconNursingCare3d} alt="Nursing & Skilled Care" className="h-[105px] max-w-[150px] shrink-0 object-contain mt-1 transition-transform duration-300 ease-out group-hover:scale-110"  loading="lazy"/>
                           ) : option.title === "Independent Living" ? (
-                            <img src={iconIndependentLiving3d} alt="Independent Living" className="h-[105px] max-w-[150px] shrink-0 object-contain mt-1 transition-transform duration-300 ease-out group-hover:scale-110" />
+                            <img src={iconIndependentLiving3d} alt="Independent Living" className="h-[105px] max-w-[150px] shrink-0 object-contain mt-1 transition-transform duration-300 ease-out group-hover:scale-110"  loading="lazy"/>
                           ) : (
                             <div className="w-14 h-14 shrink-0 rounded-2xl bg-gradient-to-b from-[hsl(205_80%_92%)] to-[hsl(205_60%_85%)] border border-[hsl(205_70%_75%/0.5)] shadow-[inset_0_1px_2px_rgba(255,255,255,0.8),0_2px_4px_rgba(0,0,0,0.08)] mt-3" />
                           )}

@@ -164,7 +164,7 @@ const ProbateEstateSales = () => {
       <section className="bg-primary pt-16 pb-12 lg:pt-32 lg:pb-28">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <img src={iconProbateSales} alt="" aria-hidden="true" className="mx-auto w-60 h-auto object-contain mb-8" />
+            <img src={iconProbateSales} alt="" aria-hidden="true" className="mx-auto w-60 h-auto object-contain mb-8"  loading="lazy"/>
             <p className="text-gold font-bold tracking-widest uppercase mb-4 text-base">
               Probate & Estate Property Sales
             </p>
@@ -180,7 +180,7 @@ const ProbateEstateSales = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/contact">
  <Button variant="gold" size="lg"className="hover:-light w-full sm:w-auto">
-                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
+                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy"/>
                   Schedule a Consultation
                 </Button>
               </Link>
@@ -302,7 +302,7 @@ const ProbateEstateSales = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <div className="flex items-start gap-4 bg-card border border-border rounded-xl p-6">
-              <img src={warning3d} alt="" aria-hidden="true" className="w-6 h-6 object-contain shrink-0 mt-0.5" />
+              <img src={warning3d} alt="" aria-hidden="true" className="w-6 h-6 object-contain shrink-0 mt-0.5"  loading="lazy"/>
               <div>
                 <h3 className="font-serif text-lg text-foreground font-semibold mb-2">Important Note</h3>
                 <p className="text-muted-foreground leading-relaxed text-sm">
@@ -386,7 +386,7 @@ const ProbateEstateSales = () => {
             </p>
             <Link to="/contact">
  <Button variant="gold" size="lg"className="hover:-light">
-                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
+                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy"/>
                 Schedule a Consultation
               </Button>
             </Link>

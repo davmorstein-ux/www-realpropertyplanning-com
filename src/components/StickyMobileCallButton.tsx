@@ -12,7 +12,7 @@ const StickyMobileCallButton = () => {
           alt=""
           aria-hidden="true"
           className="w-5 h-5 object-contain shrink-0"
-        />
+         loading="lazy"/>
         Call (206) 900-3015
       </a>
     </div>
