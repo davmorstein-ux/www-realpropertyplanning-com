@@ -7,8 +7,8 @@ const HomepageHero = () => {
       <div className="flex flex-col items-center px-6 lg:px-8 py-6 lg:py-8 w-full max-w-6xl mx-auto text-center">
         {/* Logo — wrapper reserves exact vertical space to prevent CLS */}
         <div
-          className="w-[680px] md:w-[840px] lg:w-[1000px] max-w-[85vw] mb-4 overflow-hidden"
-          style={{ aspectRatio: "1000 / 200" }}
+          className="w-[680px] md:w-[840px] lg:w-[1000px] max-w-[85vw] mb-4 overflow-visible"
+          style={{ aspectRatio: "1000 / 286" }}
         >
           <img
             src={logoBright}
