@@ -117,12 +117,12 @@ const Footer = () => {
         <div className="footer-divider mb-0" />
         <div className="pt-8 pb-6 flex flex-col items-center">
           <h4 className="text-primary-foreground font-serif text-[28px] font-bold mb-5">Professional Memberships &amp; Affiliations</h4>
-          <div className="flex justify-center items-center gap-10" style={{ gap: '40px' }}>
+          <div className="flex justify-center items-center" style={{ gap: '40px' }}>
             <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer">
               <img
                 src={alcaLogo}
                 alt="Aging Life Care Association Corporate Partner"
-                className="h-[120px] w-auto object-contain"
+                className="w-auto object-contain max-h-[140px]"
                 loading="lazy"
               />
             </a>
@@ -130,7 +130,7 @@ const Footer = () => {
               <img
                 src={naepcLogo}
                 alt="National Association of Estate Planners & Councils"
-                className="h-[120px] w-auto object-contain"
+                className="w-auto object-contain max-h-[140px]"
                 loading="lazy"
               />
             </a>
@@ -138,12 +138,11 @@ const Footer = () => {
               <img
                 src={naosaBadge}
                 alt="National Association of Senior Advocates - Best Real Estate Agent 2026"
-                className="h-[120px] w-auto object-contain"
+                className="w-auto object-contain max-h-[240px]"
                 loading="lazy"
               />
             </a>
           </div>
-        </div>
 
         {/* Accessibility Statement */}
         <div className="footer-divider mb-0" />
