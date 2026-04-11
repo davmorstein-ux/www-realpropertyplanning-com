@@ -9,8 +9,8 @@ const HomepageHero = () => {
         <img
           src={logoBright}
           alt="Real Property Planning logo"
-          className="w-[680px] md:w-[840px] lg:w-[1000px] max-w-[85vw] h-auto mb-4"
-          style={{ marginTop: "-15%", marginBottom: "-15%" }}
+          className="w-[680px] md:w-[840px] lg:w-[1000px] max-w-[85vw] mb-4"
+          style={{ marginTop: "-15%", marginBottom: "-15%", aspectRatio: "1000 / 286" }}
           width={1000}
           height={286}
           loading="eager"
