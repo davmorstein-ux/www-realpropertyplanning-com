@@ -96,6 +96,7 @@ const ProfessionPageTemplate = ({
         ]}
       />
       <Header />
+      <main id="main-content">
 
       {/* SECTION 1: Hero */}
       <section className="bg-primary pt-16 pb-14 md:pt-20 md:pb-16 lg:pt-24 lg:pb-20">
@@ -304,6 +305,7 @@ const ProfessionPageTemplate = ({
       </section>
 
       <DisclaimerSection />
+      </main>
       <Footer />
     </div>
   );
