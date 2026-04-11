@@ -40,6 +40,7 @@ const OutOfStateInheritedHouse = () => (
       { name: "Out-of-State Inherited House", url: "/insights/out-of-state-inherited-house-help" },
     ]} />
     <Header />
+    <main id="main-content">
 
     <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
       <div className="container px-6 lg:px-8">
@@ -182,6 +183,7 @@ const OutOfStateInheritedHouse = () => (
 
     <RelatedServices currentPath="/insights/out-of-state-inherited-house-help" />
     <DisclaimerSection />
+    </main>
     <Footer />
   </div>
 );

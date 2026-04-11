@@ -159,6 +159,7 @@ const ProbateEstateSales = () => {
       />
       <BreadcrumbSchema items={[{ name: "Probate & Estate Sales", url: "/probate-estate-sales" }]} />
       <Header />
+      <main id="main-content">
 
       {/* Hero */}
       <section className="bg-primary pt-16 pb-12 lg:pt-32 lg:pb-28">
@@ -395,6 +396,7 @@ const ProbateEstateSales = () => {
       </section>
 
       <DisclaimerSection />
+      </main>
       <Footer />
     </div>
   );

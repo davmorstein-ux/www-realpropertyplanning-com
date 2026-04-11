@@ -20,7 +20,7 @@ const Testimonials = () => {
         ]}
       />
       <Header />
-      <main>
+      <main id="main-content">
         <TestimonialsSection />
       </main>
       <DisclaimerSection />

@@ -45,6 +45,7 @@ const ForAttorneysLearnMore = () => (
       { name: "Learn More", url: "/for-attorneys/learn-more" },
     ]} />
     <Header />
+    <main id="main-content">
 
     <section className="bg-secondary py-12 md:py-16">
       <div className="container px-6 lg:px-8">
@@ -99,6 +100,7 @@ const ForAttorneysLearnMore = () => (
     </section>
 
     <DisclaimerSection />
+    </main>
     <Footer />
   </div>
 );

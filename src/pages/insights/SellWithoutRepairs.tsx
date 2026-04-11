@@ -40,6 +40,7 @@ const SellWithoutRepairs = () => (
       { name: "Sell Without Repairs", url: "/insights/sell-inherited-house-without-repairs" },
     ]} />
     <Header />
+    <main id="main-content">
 
     <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
       <div className="container px-6 lg:px-8">
@@ -169,6 +170,7 @@ const SellWithoutRepairs = () => (
 
     <RelatedServices currentPath="/insights/sell-inherited-house-without-repairs" />
     <DisclaimerSection />
+    </main>
     <Footer />
   </div>
 );

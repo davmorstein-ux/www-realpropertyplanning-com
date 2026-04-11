@@ -54,7 +54,7 @@ const Services = () => {
         ]}
       />
       <Header />
-      <main>
+      <main id="main-content">
         {/* Hero */}
         <section className="py-20 lg:py-28 bg-primary">
           <div className="container px-6 lg:px-8">

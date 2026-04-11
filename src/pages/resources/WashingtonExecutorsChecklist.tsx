@@ -87,7 +87,7 @@ const WashingtonExecutorsChecklist = () => {
       />
       <Header />
 
-      <main>
+      <main id="main-content">
         {/* Hero */}
         <section className="bg-primary py-16 md:py-24">
           <div className="container px-6 lg:px-8">

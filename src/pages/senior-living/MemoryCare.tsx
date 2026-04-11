@@ -23,7 +23,7 @@ const MemoryCare = () => (
       ]}
     />
     <Header />
-    <main>
+    <main id="main-content">
       <section className="bg-secondary pt-8 md:pt-12 pb-5 md:pb-7">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">

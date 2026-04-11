@@ -38,6 +38,7 @@ const Index = () => {
         jsonLd={jsonLd}
       />
       <Header />
+      <main id="main-content">
 
       {/* 1. HERO — PNW background, calm headline, two CTAs */}
       <HomepageHero />
@@ -153,6 +154,7 @@ const Index = () => {
       <EducationalPathways />
 
       <DisclaimerSection />
+      </main>
       <Footer />
     </div>
   );

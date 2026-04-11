@@ -73,7 +73,7 @@ const Wills = () => {
       />
       <div className="min-h-screen flex flex-col" data-nosnippet>
         <Header />
-        <main className="flex-1">
+        <main id="main-content" className="flex-1">
           {/* Hero */}
           <section className="pt-20 pb-10 sm:pt-28 sm:pb-14 bg-gradient-to-b from-secondary to-background">
             <div className="mx-auto max-w-3xl px-6 text-center">

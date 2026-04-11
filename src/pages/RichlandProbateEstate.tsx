@@ -81,6 +81,7 @@ const RichlandProbateEstate = () => {
       />
       <BreadcrumbSchema items={[{ name: "Counties", url: "/counties" }, { name: "Richland", url: "/richland-probate-estate-real-estate" }]} />
       <Header />
+      <main id="main-content">
 
       <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
         <div className="container px-6 lg:px-8">
@@ -239,6 +240,7 @@ const RichlandProbateEstate = () => {
       </section>
 
       <DisclaimerSection />
+      </main>
       <Footer />
     </div>
   );

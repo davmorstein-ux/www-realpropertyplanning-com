@@ -14,6 +14,7 @@ const OutOfStateExecutorCaseStudy = () => {
         description="How David Stein helped an out-of-state executor coordinate the sale of an inherited family home in Washington — managing property preparation, valuation, and family communication from start to close."
       />
       <Header />
+      <main id="main-content">
 
       {/* Hero */}
       <section className="py-14 lg:py-20 bg-primary">
@@ -178,6 +179,7 @@ const OutOfStateExecutorCaseStudy = () => {
         </div>
       </section>
 
+      </main>
       <Footer />
     </div>
   );

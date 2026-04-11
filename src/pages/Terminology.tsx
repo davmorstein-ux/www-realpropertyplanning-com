@@ -135,6 +135,7 @@ const Terminology = () => {
       />
       <BreadcrumbSchema items={[{ name: "Terminology", url: "/terminology" }]} />
       <Header />
+      <main id="main-content">
 
       {/* Hero */}
       <section className="bg-primary pt-16 pb-12 md:pt-32 md:pb-20 lg:pb-24">
@@ -228,6 +229,7 @@ const Terminology = () => {
       </section>
 
       <DisclaimerSection />
+      </main>
       <Footer />
     </div>
   );

@@ -42,6 +42,7 @@ const SellHouseDuringProbateWashington = () => (
       { name: "Sell a House During Probate in WA", url: "/guides/sell-house-during-probate-washington" },
     ]} />
     <Header />
+    <main id="main-content">
 
     <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
       <div className="container px-6 lg:px-8">
@@ -219,6 +220,7 @@ const SellHouseDuringProbateWashington = () => (
     </section>
 
     <DisclaimerSection />
+    </main>
     <Footer />
   </div>
 );

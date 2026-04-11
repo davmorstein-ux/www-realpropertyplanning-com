@@ -60,6 +60,7 @@ const ForFamilyLawAttorneys = () => (
       ]}
     />
     <Header />
+    <main id="main-content">
 
     {/* Hero */}
     <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
@@ -242,6 +243,7 @@ const ForFamilyLawAttorneys = () => (
 
     <RelatedServices currentPath="/for-family-law-attorneys" />
     <DisclaimerSection />
+    </main>
     <Footer />
   </div>
 );

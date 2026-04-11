@@ -40,6 +40,7 @@ const FirstStepsInheritedHouse = () => (
       { name: "First Steps After Inheriting a House", url: "/insights/first-steps-inherited-house-washington" },
     ]} />
     <Header />
+    <main id="main-content">
 
     <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
       <div className="container px-6 lg:px-8">
@@ -175,6 +176,7 @@ const FirstStepsInheritedHouse = () => (
 
     <RelatedServices currentPath="/insights/first-steps-inherited-house-washington" />
     <DisclaimerSection />
+    </main>
     <Footer />
   </div>
 );

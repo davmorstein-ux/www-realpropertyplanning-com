@@ -50,6 +50,7 @@ const SeniorTransitionDifferences = () => (
       { name: "Senior Transition Differences", url: "/guides/senior-transition-differences" },
     ]} />
     <Header />
+    <main id="main-content">
 
     <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
       <div className="container px-6 lg:px-8">
@@ -167,6 +168,7 @@ const SeniorTransitionDifferences = () => (
     </section>
 
     <DisclaimerSection />
+    </main>
     <Footer />
   </div>
 );
