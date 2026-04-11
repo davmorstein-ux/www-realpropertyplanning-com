@@ -145,6 +145,18 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Accessibility Statement */}
+        <div className="footer-divider mb-0" />
+        <div className="pt-4 pb-2">
+          <p className="text-primary-foreground/70 text-base text-center leading-relaxed max-w-2xl mx-auto">
+            realpropertyplanning.com is committed to digital accessibility for people with disabilities. This website meets WCAG 2.1 AA accessibility standards. If you experience any accessibility barriers, please contact us at{" "}
+            <a href="mailto:david@realpropertyplanning.com" className="underline underline-offset-2 hover:text-gold transition-colors font-medium">
+              david@realpropertyplanning.com
+            </a>{" "}
+            and we will assist you.
+          </p>
+        </div>
+
         {/* Brokerage Compliance */}
         <div className="footer-divider mb-0" />
         <div className="pt-10 pb-2 flex flex-col items-center">
@@ -173,18 +185,6 @@ const Footer = () => {
           </p>
           <p className="text-primary-foreground/70 text-base text-center leading-relaxed max-w-2xl mx-auto">
             Specializing in probate real estate, inherited property, estate sales, senior transitions, and valuation-informed strategy for attorneys, executors, trustees, heirs, beneficiaries, seniors, and families.
-          </p>
-        </div>
-
-        {/* Accessibility Statement */}
-        <div className="footer-divider mb-0" />
-        <div className="pt-4 pb-2">
-          <p className="text-primary-foreground/70 text-base text-center leading-relaxed max-w-2xl mx-auto">
-            realpropertyplanning.com is committed to digital accessibility for people with disabilities. This website meets WCAG 2.1 AA accessibility standards. If you experience any accessibility barriers, please contact us at{" "}
-            <a href="mailto:david@realpropertyplanning.com" className="underline underline-offset-2 hover:text-gold transition-colors font-medium">
-              david@realpropertyplanning.com
-            </a>{" "}
-            and we will assist you.
           </p>
         </div>
 
