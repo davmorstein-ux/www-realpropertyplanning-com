@@ -73,10 +73,11 @@ const HomepageLeadForm = () => {
       <form className="space-y-5" onSubmit={handleSubmit}>
         <input type="hidden" name="source_page" value={typeof window !== "undefined" ? window.location.pathname : ""} />
         <div>
-          <label className="block text-base font-medium text-foreground mb-1.5">
+          <label htmlFor="lead-name" className="block text-base font-medium text-foreground mb-1.5">
             Your Name <span className="text-destructive">*</span>
           </label>
           <input
+            id="lead-name"
             type="text"
             name="name"
             required
@@ -86,10 +87,11 @@ const HomepageLeadForm = () => {
         </div>
 
         <div>
-          <label className="block text-base font-medium text-foreground mb-1.5">
+          <label htmlFor="lead-email" className="block text-base font-medium text-foreground mb-1.5">
             Email Address <span className="text-destructive">*</span>
           </label>
           <input
+            id="lead-email"
             type="email"
             name="email"
             required
@@ -99,10 +101,11 @@ const HomepageLeadForm = () => {
         </div>
 
         <div>
-          <label className="block text-base font-medium text-foreground mb-1.5">
+          <label htmlFor="lead-phone" className="block text-base font-medium text-foreground mb-1.5">
             Phone Number <span className="text-muted-foreground text-base font-normal">(optional — helpful if you'd like a call back)</span>
           </label>
           <input
+            id="lead-phone"
             type="tel"
             name="phone"
             className={inputClass}
@@ -111,10 +114,11 @@ const HomepageLeadForm = () => {
         </div>
 
         <div>
-          <label className="block text-base font-medium text-foreground mb-1.5">
+          <label htmlFor="lead-address" className="block text-base font-medium text-foreground mb-1.5">
             Property Address <span className="text-muted-foreground text-base font-normal">(optional)</span>
           </label>
           <input
+            id="lead-address"
             type="text"
             name="address"
             className={inputClass}
@@ -123,10 +127,11 @@ const HomepageLeadForm = () => {
         </div>
 
         <div>
-          <label className="block text-base font-medium text-foreground mb-1.5">
+          <label htmlFor="lead-message" className="block text-base font-medium text-foreground mb-1.5">
             What's Going On? <span className="text-muted-foreground text-base font-normal">(optional)</span>
           </label>
           <textarea
+            id="lead-message"
             name="message"
             rows={3}
             className={`${inputClass} resize-none`}
@@ -135,10 +140,11 @@ const HomepageLeadForm = () => {
         </div>
 
         <div>
-          <label className="block text-base font-medium text-foreground mb-1.5">
+          <label htmlFor="lead-found-via" className="block text-base font-medium text-foreground mb-1.5">
             How did you find this site? <span className="text-muted-foreground text-base font-normal">(optional)</span>
           </label>
           <select
+            id="lead-found-via"
             name="found_via"
             className={inputClass}
             defaultValue=""
@@ -154,10 +160,11 @@ const HomepageLeadForm = () => {
         </div>
 
         <div>
-          <label className="block text-base font-medium text-foreground mb-1.5">
+          <label htmlFor="lead-notes" className="block text-base font-medium text-foreground mb-1.5">
             Anything else? <span className="text-muted-foreground text-base font-normal">(optional)</span>
           </label>
           <textarea
+            id="lead-notes"
             name="notes"
             rows={2}
             className={`${inputClass} resize-none`}
@@ -175,7 +182,7 @@ const HomepageLeadForm = () => {
         </Button>
       </form>
 
-      <p className="text-muted-foreground/60 text-base text-center mt-4">
+      <p className="text-muted-foreground text-base text-center mt-4">
         David responds personally.
       </p>
     </div>

@@ -116,6 +116,14 @@ const Header = () => {
                       }`}
                       onClick={() => setOpenDropdown(openDropdown === link.label ? null : link.label)}
                       onMouseEnter={() => setOpenDropdown(link.label)}
+                      aria-expanded={openDropdown === link.label}
+                      aria-haspopup="true"
+                      onKeyDown={(e) => {
+                        if (e.key === "Escape") {
+                          setOpenDropdown(null);
+                          (e.target as HTMLElement).focus();
+                        }
+                      }}
                     >
                       {link.label}
                       <ChevronDown className={`h-3.5 w-3.5 transition-transform ${openDropdown === link.label ? "rotate-180" : ""}`} />
@@ -123,12 +131,19 @@ const Header = () => {
                     {openDropdown === link.label && (
                       <div
                         className="absolute left-1/2 top-full z-50 mt-2 w-56 -translate-x-1/2 rounded-2xl border border-border bg-card py-2 shadow-lg"
+                        role="menu"
                         onMouseLeave={() => setOpenDropdown(null)}
+                        onKeyDown={(e) => {
+                          if (e.key === "Escape") {
+                            setOpenDropdown(null);
+                          }
+                        }}
                       >
                         {link.children.map((child) => (
                           <Link
                             key={child.href}
                             to={child.href}
+                            role="menuitem"
                             className={`block px-5 py-2.5 text-[15px] transition-colors hover:bg-secondary hover:text-[hsl(216,65%,34%)] ${
                               location.pathname === child.href ? "font-semibold text-[hsl(216,65%,34%)]" : "text-foreground/80"
                             }`}

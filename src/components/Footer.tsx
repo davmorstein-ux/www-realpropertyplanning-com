@@ -29,10 +29,10 @@ const Footer = () => {
             <p className="text-primary-foreground/70 text-[15px] leading-relaxed mb-1">
               WA Certified Residential Appraiser — #1702080
             </p>
-            <p className="text-primary-foreground/60 text-[15px] leading-relaxed mb-3">
+            <p className="text-primary-foreground/70 text-[15px] leading-relaxed mb-3">
               Specializing in probate, estate, inherited property &amp; senior transition real estate
             </p>
-            <p className="text-primary-foreground/60 text-[15px] leading-relaxed mb-3">eXp Realty</p>
+            <p className="text-primary-foreground/70 text-[15px] leading-relaxed mb-3">eXp Realty</p>
             <div className="flex flex-col gap-2 text-[15px]">
               <a href="tel:2069003015" className="text-primary-foreground/70 hover:text-gold transition-colors flex items-center gap-2">
                 <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0"  loading="lazy"/>
@@ -42,11 +42,11 @@ const Footer = () => {
                 <img src={iconEmail3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0"  loading="lazy"/>
                 david@realpropertyplanning.com
               </a>
-              <div className="text-primary-foreground/50 flex items-start gap-2 mt-1">
+              <div className="text-primary-foreground/70 flex items-start gap-2 mt-1">
                 <img src={mappin3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain mt-0.5 shrink-0"  loading="lazy"/>
                 <span>Mailing: PO Box 1462, Woodinville, WA 98072</span>
               </div>
-              <div className="text-primary-foreground/50 flex items-start gap-2">
+              <div className="text-primary-foreground/70 flex items-start gap-2">
                 <img src={mappin3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain mt-0.5 shrink-0"  loading="lazy"/>
                 <span>Office: 1455 NW Leary Way, Seattle, WA 98107</span>
               </div>
@@ -105,10 +105,10 @@ const Footer = () => {
         {/* Disclaimer */}
         <div className="footer-divider mb-0" />
         <div className="pt-8 mb-6">
-          <p className="text-primary-foreground/50 text-[13px] leading-relaxed max-w-4xl">
+          <p className="text-primary-foreground/70 text-[13px] leading-relaxed max-w-4xl">
             David Stein provides real estate brokerage and valuation-related guidance based on his experience as a professional real estate broker and state certified appraiser. Legal, tax, and probate-specific advice should be obtained from qualified legal and tax professionals.
           </p>
-          <p className="text-primary-foreground/50 text-[13px] leading-relaxed max-w-4xl mt-3">
+          <p className="text-primary-foreground/70 text-[13px] leading-relaxed max-w-4xl mt-3">
             David Stein is a licensed real estate broker in the State of Washington and a Washington state certified real estate appraiser. He is not an attorney, CPA, or tax advisor and does not provide legal, tax, or accounting advice.
           </p>
         </div>
@@ -154,13 +154,13 @@ const Footer = () => {
             className="w-[95px] md:w-[120px] h-auto mb-4"
             loading="lazy"
           />
-          <p className="text-primary-foreground/50 text-[13px] text-center leading-relaxed">
+          <p className="text-primary-foreground/70 text-[13px] text-center leading-relaxed">
             David Stein | Real Estate Broker · Certified Residential Appraiser | Real Property Planning | eXp Realty
           </p>
-          <p className="text-primary-foreground/40 text-[13px] text-center mt-1">
+          <p className="text-primary-foreground/60 text-[13px] text-center mt-1">
             Mailing Address: PO Box 1462, Woodinville, WA 98072
           </p>
-          <p className="text-primary-foreground/40 text-[13px] text-center mt-1">
+          <p className="text-primary-foreground/60 text-[13px] text-center mt-1">
             Office Address: 1455 NW Leary Way, Seattle, WA 98107
           </p>
         </div>
@@ -168,10 +168,10 @@ const Footer = () => {
         {/* Geo / Service Area SEO */}
         <div className="footer-divider mb-0" />
         <div className="mt-0 pt-6 pb-4">
-          <p className="text-primary-foreground/50 text-[13px] text-center leading-relaxed max-w-3xl mx-auto mb-2">
+          <p className="text-primary-foreground/70 text-[13px] text-center leading-relaxed max-w-3xl mx-auto mb-2">
             Serving buyers, sellers, families, attorneys, executors, trustees, and fiduciaries throughout Washington State, with a strong focus in Western Washington and the Puget Sound region. Through eXp Realty's referral network, David can also help connect clients with trusted brokers across the U.S. and internationally.
           </p>
-          <p className="text-primary-foreground/40 text-[12px] text-center leading-relaxed max-w-2xl mx-auto">
+          <p className="text-primary-foreground/60 text-[12px] text-center leading-relaxed max-w-2xl mx-auto">
             Specializing in probate real estate, inherited property, estate sales, senior transitions, and valuation-informed strategy for attorneys, executors, trustees, heirs, beneficiaries, seniors, and families.
           </p>
         </div>
@@ -179,7 +179,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="footer-divider mb-0" />
         <div className="pt-4">
-          <p className="text-primary-foreground/40 text-[13px] text-center">
+          <p className="text-primary-foreground/60 text-[13px] text-center">
             © {new Date().getFullYear()} David Stein, Real Estate Broker – Senior Relocation & Estate Sales. Real Property Planning.
           </p>
         </div>
