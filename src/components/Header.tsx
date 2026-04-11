@@ -241,7 +241,7 @@ const Header = () => {
         )}
       </header>
 
-      <div className={`transition-all duration-300 ${scrolled ? "h-[90px] md:h-[100px]" : "h-[100px] md:h-[114px]"}`} />
+      <div className="h-[100px] md:h-[114px]" />
     </>
   );
 };
