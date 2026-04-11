@@ -20,20 +20,20 @@ const Footer = () => {
                 Real Property Planning
               </span>
             </Link>
-            <p className="text-primary-foreground/80 text-[15px] font-medium leading-snug mb-2">
+            <p className="text-primary-foreground/80 text-base font-medium leading-snug mb-2">
               David Stein
             </p>
-            <p className="text-primary-foreground/70 text-[15px] leading-relaxed mb-0.5">
+            <p className="text-primary-foreground/70 text-base leading-relaxed mb-0.5">
               Licensed Real Estate Broker — #113972
             </p>
-            <p className="text-primary-foreground/70 text-[15px] leading-relaxed mb-1">
+            <p className="text-primary-foreground/70 text-base leading-relaxed mb-1">
               WA Certified Residential Appraiser — #1702080
             </p>
-            <p className="text-primary-foreground/70 text-[15px] leading-relaxed mb-3">
+            <p className="text-primary-foreground/70 text-base leading-relaxed mb-3">
               Specializing in probate, estate, inherited property &amp; senior transition real estate
             </p>
-            <p className="text-primary-foreground/70 text-[15px] leading-relaxed mb-3">eXp Realty</p>
-            <div className="flex flex-col gap-2 text-[15px]">
+            <p className="text-primary-foreground/70 text-base leading-relaxed mb-3">eXp Realty</p>
+            <div className="flex flex-col gap-2 text-base">
               <a href="tel:2069003015" className="text-primary-foreground/70 hover:text-gold transition-colors flex items-center gap-2">
                 <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0"  loading="lazy"/>
                 (206) 900-3015
