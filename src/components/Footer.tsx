@@ -134,7 +134,7 @@ const Footer = () => {
                 loading="lazy"
               />
             </a>
-            <a href="https://www.naosa.org" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.naosa.org" target="_blank" rel="noopener noreferrer" className="h-[120px] overflow-hidden flex items-center">
               <img
                 src={naosaBadge}
                 alt="National Association of Senior Advocates - Best Real Estate Agent 2026"
