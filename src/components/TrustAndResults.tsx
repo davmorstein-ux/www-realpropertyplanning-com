@@ -84,8 +84,8 @@ const TrustAndResults = () => (
               ))}
             </ul>
             <div className="flex items-center gap-3 pt-4 border-t border-border">
-              <img src={iconLicense3d} alt="" aria-hidden="true" className="h-10 w-10 object-contain" />
-              <img src={iconAppraiser3d} alt="" aria-hidden="true" className="h-10 w-10 object-contain mix-blend-multiply" />
+              <img src={iconLicense3d} alt="" aria-hidden="true" className="h-10 w-10 object-contain"  loading="lazy"/>
+              <img src={iconAppraiser3d} alt="" aria-hidden="true" className="h-10 w-10 object-contain mix-blend-multiply"  loading="lazy"/>
               <span className="text-muted-foreground text-base">Broker & Appraiser — serving clients throughout Washington State</span>
             </div>
           </div>

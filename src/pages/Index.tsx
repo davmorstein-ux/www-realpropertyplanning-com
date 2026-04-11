@@ -69,7 +69,7 @@ const Index = () => {
             </p>
             <Link to="/contact">
               <Button variant="gold" size="lg" className="px-8 py-4 h-auto rounded-lg">
-                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-10 h-10 mr-2.5 object-contain shrink-0" style={{ background: 'transparent' }} />
+                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-10 h-10 mr-2.5 object-contain shrink-0" style={{ background: 'transparent' }}  loading="lazy"/>
                 Schedule a Conversation
               </Button>
             </Link>
@@ -99,7 +99,7 @@ const Index = () => {
             {serviceAreas.map((area, i) => (
               <Link key={i} to={area.href} className="card-3d group p-6">
                 <div className="flex items-center gap-3 mb-2">
-                  <img src={mappin3d} alt="" aria-hidden="true" className="w-10 h-10 object-contain shrink-0" />
+                  <img src={mappin3d} alt="" aria-hidden="true" className="w-10 h-10 object-contain shrink-0"  loading="lazy"/>
                   <h3 className="font-serif text-xl text-foreground font-semibold group-hover:text-gold transition-colors">
                     {area.county}
                   </h3>
@@ -132,7 +132,7 @@ const Index = () => {
               </p>
               <div className="space-y-4">
                 <a href="tel:2069003015" className="flex items-center gap-3 text-primary-foreground hover:text-gold transition-colors">
-                  <img src={iconPhone3d} alt="" aria-hidden="true" className="h-10 w-10 shrink-0 object-contain" />
+                  <img src={iconPhone3d} alt="" aria-hidden="true" className="h-10 w-10 shrink-0 object-contain"  loading="lazy"/>
                   <span className="text-lg font-semibold">(206) 900-3015</span>
                 </a>
               </div>

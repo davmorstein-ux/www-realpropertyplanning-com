@@ -64,7 +64,7 @@ const AppraiserAdvantage = () => (
             alt=""
             aria-hidden="true"
             className="h-8 w-8 object-contain mix-blend-multiply"
-          />
+           loading="lazy"/>
           <span>WA Certified Residential Appraiser — License #1702080</span>
         </div>
       </div>

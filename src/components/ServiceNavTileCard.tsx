@@ -55,7 +55,7 @@ const ServiceNavTileCard = ({ tile, index, columns = 3 }: { tile: ServiceTile; i
         aria-hidden="true"
         className="block h-auto w-full pointer-events-none select-none drop-shadow-[0_12px_24px_hsl(220_18%_20%/0.16)]"
         draggable={false}
-      />
+       loading="lazy"/>
 
       {/* Icon + label centered together inside the gold trim ring */}
       <span

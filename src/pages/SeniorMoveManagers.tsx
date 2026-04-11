@@ -32,7 +32,7 @@ const SeniorMoveManagers = () => (
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <div className="flex justify-center mb-8 md:mb-10">
-              <img src={iconSeniorMoves} alt="Senior Move Managers" className="block w-full max-w-[23rem] h-auto object-contain" />
+              <img src={iconSeniorMoves} alt="Senior Move Managers" className="block w-full max-w-[23rem] h-auto object-contain"  loading="lazy"/>
             </div>
             <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-sm">
               Senior Transitions
@@ -45,7 +45,7 @@ const SeniorMoveManagers = () => (
             </p>
             <Link to="/contact">
               <Button variant="gold" size="lg" className="px-7 py-4 h-auto rounded-lg">
-                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
+                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy"/>
                 Request a Consultation
               </Button>
             </Link>
@@ -63,12 +63,12 @@ const SeniorMoveManagers = () => (
             <div className="bg-secondary border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 p-5 sm:p-6">
               <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-start sm:gap-5">
                 <div className="shrink-0">
-                  <img src={ericRovnerPhoto} alt="Eric Rovner — HB Move Management" className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-border shadow-sm" />
+                  <img src={ericRovnerPhoto} alt="Eric Rovner — HB Move Management" className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-border shadow-sm"  loading="lazy"/>
                 </div>
                 <div className="w-full flex flex-col items-center sm:flex-1 sm:items-start">
                   <div className="w-full mt-1 text-center sm:text-left">
                     <a href="https://www.hbmovemanagement.com" target="_blank" rel="noopener noreferrer" className="inline-block">
-                      <img src={hbmmLogo} alt="HB Move Management logo" className="h-[240px] w-auto object-contain mx-auto sm:mx-0 sm:-translate-x-[70px] block" />
+                      <img src={hbmmLogo} alt="HB Move Management logo" className="h-[240px] w-auto object-contain mx-auto sm:mx-0 sm:-translate-x-[70px] block"  loading="lazy"/>
                     </a>
                     <p className="text-foreground font-semibold text-base">Eric Rovner</p>
                     <p className="text-muted-foreground text-sm mb-0.5">Vice President of Marketing</p>

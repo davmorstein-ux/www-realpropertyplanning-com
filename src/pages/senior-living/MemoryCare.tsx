@@ -32,7 +32,7 @@ const MemoryCare = () => (
                 src={memoryCareHeroIcon}
                 alt="Memory Care"
                 className="block max-w-[203px] md:max-w-[284px] h-auto mx-auto"
-              />
+               loading="lazy"/>
             </div>
             <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-base">Senior Living</p>
             <h1 className="font-serif text-3xl md:text-4xl font-bold text-foreground leading-tight mb-4">Memory Care</h1>

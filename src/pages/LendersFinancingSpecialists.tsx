@@ -37,7 +37,7 @@ const LendersFinancingSpecialists = () => (
             src={lendersIcon}
             alt="Lenders & Financing"
             className="block w-full max-w-[240px] h-auto md:max-w-[336px] mx-auto mb-8 md:mb-10"
-          />
+           loading="lazy"/>
           <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-sm">
             Mortgage Lending
           </p>
@@ -49,7 +49,7 @@ const LendersFinancingSpecialists = () => (
           </p>
           <Link to="/contact">
             <Button variant="gold" size="lg" className="px-7 py-4 h-auto rounded-lg">
-              <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
+              <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy"/>
               Schedule a Conversation
             </Button>
           </Link>
@@ -80,11 +80,11 @@ const LendersFinancingSpecialists = () => (
           <div className="bg-secondary border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 p-5 sm:p-6">
             <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-start sm:gap-5">
               <div className="shrink-0">
-                <img src={danBartelPhoto} alt="Daniel Bartel — Retirement Mortgage Specialist, C2 Financial" className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-border shadow-sm" />
+                <img src={danBartelPhoto} alt="Daniel Bartel — Retirement Mortgage Specialist, C2 Financial" className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-border shadow-sm"  loading="lazy"/>
               </div>
               <div className="flex w-full flex-col items-center sm:flex-1 sm:items-start">
                 <a href="http://www.santadanmortgage.com" target="_blank" rel="noopener noreferrer" className="sm:self-start sm:ml-[58px]">
-                  <img src={c2FinancialLogo} alt="C2 Financial logo" className="h-[42px] w-auto object-contain mx-auto sm:mx-0 block" />
+                  <img src={c2FinancialLogo} alt="C2 Financial logo" className="h-[42px] w-auto object-contain mx-auto sm:mx-0 block"  loading="lazy"/>
                 </a>
                 <div className="w-full mt-1 text-center sm:pl-[58px] sm:text-left">
                   <p className="text-foreground font-semibold text-lg">Daniel Bartel</p>
@@ -119,11 +119,11 @@ const LendersFinancingSpecialists = () => (
           <div className="bg-secondary border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 p-5 sm:p-6">
             <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-start sm:gap-5">
               <div className="shrink-0">
-                <img src={jeffMcGinnisPhoto} alt="Jeff McGinnis — Senior Loan Officer, CrossCountry Mortgage" className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-border shadow-sm" />
+                <img src={jeffMcGinnisPhoto} alt="Jeff McGinnis — Senior Loan Officer, CrossCountry Mortgage" className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-border shadow-sm"  loading="lazy"/>
               </div>
               <div className="flex w-full flex-col items-center sm:flex-1 sm:items-start">
                 <a href="https://crosscountrymortgage.com/seattle-wa-5531/jeffrey-mcginnis/" target="_blank" rel="noopener noreferrer" className="sm:self-start sm:ml-[58px]">
-                  <img src={crossCountryLogo} alt="CrossCountry Mortgage logo" className="h-[120px] w-auto object-contain mx-auto sm:mx-0 block scale-[2.5] origin-left sm:-ml-[36px] sm:-mt-[16px]" />
+                  <img src={crossCountryLogo} alt="CrossCountry Mortgage logo" className="h-[120px] w-auto object-contain mx-auto sm:mx-0 block scale-[2.5] origin-left sm:-ml-[36px] sm:-mt-[16px]"  loading="lazy"/>
                 </a>
                 <div className="w-full mt-1 text-center sm:pl-[58px] sm:text-left">
                   <p className="text-foreground font-semibold text-lg">Jeff McGinnis</p>

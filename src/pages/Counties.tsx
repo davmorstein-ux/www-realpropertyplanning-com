@@ -79,7 +79,7 @@ const Counties = () => {
       <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <img src={iconServiceAreas} alt="" aria-hidden="true" className="mx-auto w-60 h-auto object-contain mb-8" />
+            <img src={iconServiceAreas} alt="" aria-hidden="true" className="mx-auto w-60 h-auto object-contain mb-8"  loading="lazy"/>
             <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
               Service Areas
             </p>
@@ -114,7 +114,7 @@ const Counties = () => {
                 <div className="card-3d-premium__inner h-full">
                   <div className="card-3d-premium__face flex h-full flex-col px-7 py-7 md:px-8 md:py-8">
                     <div className="flex items-center gap-3 mb-4">
-                      <img src={mappin3d} alt="" aria-hidden="true" className="w-8 h-8 object-contain shrink-0 transition-transform duration-300 ease-out group-hover:scale-110" />
+                      <img src={mappin3d} alt="" aria-hidden="true" className="w-8 h-8 object-contain shrink-0 transition-transform duration-300 ease-out group-hover:scale-110"  loading="lazy"/>
                       <h2 className="font-serif text-xl text-foreground font-semibold group-hover:text-gold transition-colors">
                         {card.county}
                       </h2>

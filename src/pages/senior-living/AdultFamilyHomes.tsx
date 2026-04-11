@@ -34,7 +34,7 @@ const AdultFamilyHomes = () => (
               src={afhHeroIcon}
               alt="Adult Family Home"
               className="block w-full max-w-[240px] h-auto md:max-w-[336px] mx-auto"
-            />
+             loading="lazy"/>
             <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-base">Senior Living</p>
             <h1 className="font-serif text-3xl md:text-4xl font-bold text-foreground leading-tight mb-4">Adult Family Homes</h1>
             <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
@@ -58,7 +58,7 @@ const AdultFamilyHomes = () => (
                     src={mariaCorbuPhoto}
                     alt="Maria Corbu — Owner of Victoria 1 AFH"
                     className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-border shadow-sm"
-                  />
+                   loading="lazy"/>
                 </div>
 
                 <div className="flex w-full flex-col items-center sm:flex-1 sm:items-start">
@@ -67,7 +67,7 @@ const AdultFamilyHomes = () => (
                       src={victoria1Logo}
                       alt="Victoria 1 AFH logo"
                       className="h-[42px] w-auto object-contain mx-auto sm:mx-0 block"
-                    />
+                     loading="lazy"/>
                   </a>
 
                   <div className="w-full mt-1 text-center sm:pl-[58px] sm:text-left">

@@ -127,7 +127,7 @@ const ForSeniorLivingProfessionals = () => {
             </p>
             <Link to="/contact">
  <Button variant="gold" size="lg"className="hover:-light px-8 h-[52px] text-base rounded-lg">
-                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
+                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy"/>
                 Connect About a Client Situation
               </Button>
             </Link>
@@ -221,7 +221,7 @@ const ForSeniorLivingProfessionals = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <div className="flex items-center gap-3 mb-4">
-              <img src={people3d} alt="" aria-hidden="true" className="w-6 h-6 object-contain shrink-0" />
+              <img src={people3d} alt="" aria-hidden="true" className="w-6 h-6 object-contain shrink-0"  loading="lazy"/>
               <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold">
                 Our Collaborative Network
               </h2>
@@ -292,7 +292,7 @@ const ForSeniorLivingProfessionals = () => {
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link to="/contact">
  <Button variant="gold" size="lg"className="hover:-light w-full sm:w-auto px-8 h-[52px] text-base rounded-lg">
-                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
+                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy"/>
                   Connect About a Client Situation
                 </Button>
               </Link>

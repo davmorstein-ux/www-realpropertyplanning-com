@@ -96,7 +96,7 @@ const WhyValuationMatters = () => {
       <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-[96px]">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <img src={iconHomeValue} alt="" aria-hidden="true" className="mx-auto w-60 h-auto object-contain mb-8" />
+            <img src={iconHomeValue} alt="" aria-hidden="true" className="mx-auto w-60 h-auto object-contain mb-8"  loading="lazy"/>
             <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
               Pricing & Valuation Expertise
             </p>
@@ -109,7 +109,7 @@ const WhyValuationMatters = () => {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Link to="/contact">
  <Button variant="gold" size="lg"className="hover:-light font-medium px-7 py-4 h-auto rounded-lg w-full sm:w-auto">
-                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
+                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy"/>
                   Discuss a Property
                 </Button>
               </Link>
@@ -133,7 +133,7 @@ const WhyValuationMatters = () => {
       <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <img src={scale3d} alt="" aria-hidden="true" className="w-10 h-10 object-contain mb-6" />
+            <img src={scale3d} alt="" aria-hidden="true" className="w-10 h-10 object-contain mb-6"  loading="lazy"/>
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
               Why Does Accurate Value Guidance Matter in Estate Sales?
             </h2>
@@ -153,7 +153,7 @@ const WhyValuationMatters = () => {
       <section className="py-20 lg:py-28 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <img src={warning3d} alt="" aria-hidden="true" className="w-10 h-10 object-contain mb-6" />
+            <img src={warning3d} alt="" aria-hidden="true" className="w-10 h-10 object-contain mb-6"  loading="lazy"/>
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
               What Happens When Estate Property Pricing Goes Wrong?
             </h2>
@@ -281,7 +281,7 @@ const WhyValuationMatters = () => {
             <div className="flex justify-center">
               <Link to="/contact">
  <Button variant="gold" size="lg"className="hover:-light">
-                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
+                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy"/>
                   Discuss a Property
                 </Button>
               </Link>

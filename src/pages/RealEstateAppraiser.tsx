@@ -30,7 +30,7 @@ const RealEstateAppraiser = () => (
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <div className="flex justify-center mb-8 md:mb-10">
-              <img src={iconAppraiser} alt="Real Estate Appraiser" className="block w-full max-w-[23rem] h-auto object-contain" />
+              <img src={iconAppraiser} alt="Real Estate Appraiser" className="block w-full max-w-[23rem] h-auto object-contain"  loading="lazy"/>
             </div>
             <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-sm">Valuation &amp; Appraisal</p>
             <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-foreground leading-tight mb-4">Real Estate Appraiser</h1>
@@ -49,10 +49,10 @@ const RealEstateAppraiser = () => (
             <div className="bg-secondary border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 p-5 sm:p-6">
               <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-start sm:gap-5">
                 <div className="shrink-0">
-                  <img src={davidSteinPhoto} alt="David Stein — Certified Residential Appraiser" className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-border shadow-sm" />
+                  <img src={davidSteinPhoto} alt="David Stein — Certified Residential Appraiser" className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-border shadow-sm"  loading="lazy"/>
                 </div>
                 <div className="flex w-full flex-col items-center sm:flex-1 sm:items-start">
-                  <img src={steinAppraisalLogo} alt="Stein Appraisal logo" className="h-[120px] w-auto object-contain mx-auto sm:mx-0 sm:-translate-x-[4px] block" />
+                  <img src={steinAppraisalLogo} alt="Stein Appraisal logo" className="h-[120px] w-auto object-contain mx-auto sm:mx-0 sm:-translate-x-[4px] block"  loading="lazy"/>
                   <div className="w-full mt-1 text-center sm:text-left">
                     <p className="text-foreground font-semibold text-base">David Stein</p>
                     <p className="text-muted-foreground text-sm mb-0.5">Certified Residential Appraiser</p>
@@ -75,7 +75,7 @@ const RealEstateAppraiser = () => (
                       </div>
                     </div>
                     <div className="flex items-center justify-center sm:justify-start gap-4 mt-4">
-                      <img src={ehoLogo} alt="Equal Housing Opportunity" className="h-10 w-auto object-contain opacity-70" />
+                      <img src={ehoLogo} alt="Equal Housing Opportunity" className="h-10 w-auto object-contain opacity-70"  loading="lazy"/>
                     </div>
                   </div>
                 </div>

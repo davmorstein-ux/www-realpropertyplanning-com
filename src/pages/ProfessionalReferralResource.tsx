@@ -120,7 +120,7 @@ const ProfessionalReferralResource = () => {
       <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <img src={iconResources} alt="" aria-hidden="true" className="mx-auto w-60 h-auto object-contain mb-8" />
+            <img src={iconResources} alt="" aria-hidden="true" className="mx-auto w-60 h-auto object-contain mb-8"  loading="lazy"/>
             <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] text-primary-foreground font-semibold leading-tight mb-6">
               A Professional Real Estate Resource for Important Property Transitions
             </h1>
@@ -133,7 +133,7 @@ const ProfessionalReferralResource = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/contact">
  <Button variant="gold" size="lg"className="hover:-light w-full sm:w-auto px-8 h-[52px] text-base rounded-lg">
-                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
+                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy"/>
                   Schedule a Confidential Conversation
                 </Button>
               </Link>
@@ -334,7 +334,7 @@ const ProfessionalReferralResource = () => {
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link to="/contact">
  <Button variant="gold" size="lg"className="hover:-light w-full sm:w-auto px-8 h-[52px] text-base rounded-lg">
-                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
+                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy"/>
                   Schedule a Confidential Conversation
                 </Button>
               </Link>

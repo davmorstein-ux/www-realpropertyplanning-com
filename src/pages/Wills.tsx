@@ -77,7 +77,7 @@ const Wills = () => {
           {/* Hero */}
           <section className="pt-20 pb-10 sm:pt-28 sm:pb-14 bg-gradient-to-b from-secondary to-background">
             <div className="mx-auto max-w-3xl px-6 text-center">
-              <img src={iconWills} alt="" aria-hidden="true" className="mx-auto w-60 h-auto object-contain mb-8" />
+              <img src={iconWills} alt="" aria-hidden="true" className="mx-auto w-60 h-auto object-contain mb-8"  loading="lazy"/>
               <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
                 Wills &amp; Real Estate
               </h1>
@@ -320,7 +320,7 @@ const Wills = () => {
                       boxShadow: 'inset 0 2px 2px rgba(255,255,255,0.25), inset 0 -2px 4px rgba(0,0,0,0.15)',
                       borderTop: '1px solid rgba(255,255,255,0.3)',
                     }}>
-                      <img src={iconPhone3d} alt="" className="w-7 h-7" aria-hidden="true" />
+                      <img src={iconPhone3d} alt="" className="w-7 h-7" aria-hidden="true"  loading="lazy"/>
                       <span className="font-bold text-lg text-white" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.4)' }}>Schedule a Conversation</span>
                     </div>
                   </div>

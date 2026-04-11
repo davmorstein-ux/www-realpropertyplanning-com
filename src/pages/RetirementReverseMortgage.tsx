@@ -93,7 +93,7 @@ const RetirementReverseMortgage = () => (
                   src={danBartelPhoto}
                   alt="Daniel Bartel — Retirement Mortgage Specialist, C2 Financial"
                   className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-border shadow-sm"
-                />
+                 loading="lazy"/>
               </div>
 
               <div className="flex w-full flex-col items-center sm:flex-1 sm:items-start">
@@ -102,7 +102,7 @@ const RetirementReverseMortgage = () => (
                     src={c2FinancialLogo}
                     alt="C2 Financial logo"
                     className="h-[42px] w-auto object-contain mx-auto sm:mx-0 block"
-                  />
+                   loading="lazy"/>
                 </a>
 
                 <div className="w-full mt-1 text-center sm:pl-[58px] sm:text-left">
@@ -150,7 +150,7 @@ const RetirementReverseMortgage = () => (
                   src={jeffMcGinnisPhoto}
                   alt="Jeff McGinnis — Senior Loan Officer, CrossCountry Mortgage"
                   className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-border shadow-sm"
-                />
+                 loading="lazy"/>
               </div>
 
               <div className="flex w-full flex-col items-center sm:flex-1 sm:items-start">
@@ -159,7 +159,7 @@ const RetirementReverseMortgage = () => (
                     src={crossCountryLogo}
                     alt="CrossCountry Mortgage logo"
                     className="h-[42px] w-auto object-contain mx-auto sm:mx-0 block"
-                  />
+                   loading="lazy"/>
                 </a>
 
                 <div className="w-full mt-1 text-center sm:pl-[58px] sm:text-left">
@@ -235,7 +235,7 @@ const RetirementReverseMortgage = () => (
           </p>
           <Link to="/contact">
             <Button variant="gold" size="lg">
-              <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
+              <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy"/>
               Schedule a Conversation
             </Button>
           </Link>

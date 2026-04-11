@@ -129,7 +129,7 @@ const TrusteesLearnMore = () => (
           <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">Real Property Planning can help with valuation, preparation, coordination, and sale strategy.</p>
           <Link to="/contact">
             <Button variant="gold" size="lg" className="px-7 py-4 h-auto rounded-lg">
-              <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" />
+              <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy"/>
               Schedule a Conversation
             </Button>
           </Link>
