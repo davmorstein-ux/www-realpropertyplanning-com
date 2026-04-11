@@ -39,7 +39,7 @@ const CTASection = () => {
             </a>
           </div>
 
-          <p className="text-muted-foreground/70 text-base mb-10 max-w-md mx-auto">
+          <p className="text-muted-foreground text-base mb-10 max-w-md mx-auto">
             Just a practical conversation about your situation.
           </p>
           
