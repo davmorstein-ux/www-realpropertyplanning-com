@@ -91,7 +91,7 @@ const SeniorLivingAndRelocation = () => {
       />
       <Header />
 
-      <main>
+      <main id="main-content">
         <section className="bg-secondary pt-8 md:pt-12 pb-12 md:pb-14">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">

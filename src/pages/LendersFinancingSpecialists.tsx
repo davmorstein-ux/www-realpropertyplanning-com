@@ -28,6 +28,7 @@ const LendersFinancingSpecialists = () => (
       ]}
     />
     <Header />
+    <main id="main-content">
 
     {/* Hero — Icon + faded intro */}
     <section className="bg-secondary pt-8 md:pt-12 pb-12 md:pb-14">
@@ -160,6 +161,7 @@ const LendersFinancingSpecialists = () => (
     <CTASection />
     <RelatedServices currentPath="/lenders-and-financing-specialists" />
     <DisclaimerSection />
+    </main>
     <Footer />
   </div>
 );

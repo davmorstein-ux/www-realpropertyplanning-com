@@ -31,6 +31,7 @@ const TrusteesLearnMore = () => (
       { name: "Learn More", url: "/trustees/learn-more" },
     ]} />
     <Header />
+    <main id="main-content">
 
     <section className="bg-secondary py-12 md:py-16">
       <div className="container px-6 lg:px-8">
@@ -138,6 +139,7 @@ const TrusteesLearnMore = () => (
     </section>
 
     <DisclaimerSection />
+    </main>
     <Footer />
   </div>
 );

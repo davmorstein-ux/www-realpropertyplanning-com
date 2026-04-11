@@ -49,6 +49,7 @@ const About = () => {
       />
       <BreadcrumbSchema items={[{ name: "About", url: "/about" }]} />
       <Header />
+      <main id="main-content">
 
       {/* Hero */}
       <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
@@ -234,6 +235,7 @@ const About = () => {
       <StatewideSupport background="bg-secondary" />
 
       <DisclaimerSection />
+      </main>
       <Footer />
     </div>
   );

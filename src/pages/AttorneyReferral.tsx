@@ -102,6 +102,7 @@ const AttorneyReferral = () => {
       />
       <BreadcrumbSchema items={[{ name: "Attorney Referral", url: "/attorney-referral" }]} />
       <Header />
+      <main id="main-content">
 
       {/* Section 1: Hero */}
       <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
@@ -324,6 +325,7 @@ const AttorneyReferral = () => {
         </div>
       </section>
 
+      </main>
       <Footer />
     </div>
   );

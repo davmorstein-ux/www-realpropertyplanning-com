@@ -26,7 +26,7 @@ const SeniorMoveManagers = () => (
       ]}
     />
     <Header />
-    <main>
+    <main id="main-content">
       {/* Hero */}
       <section className="bg-secondary pt-8 md:pt-12 pb-12 md:pb-14">
         <div className="container px-6 lg:px-8">

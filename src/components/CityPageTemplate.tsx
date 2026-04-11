@@ -83,6 +83,7 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
         { name: city.name, url: `/cities/${city.slug}` },
       ]} />
       <Header />
+      <main id="main-content">
 
       {/* Hero — concise */}
       <section className="bg-primary pt-16 pb-12 md:pt-20 md:pb-16 lg:pt-24 lg:pb-20">
@@ -203,6 +204,7 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
 
       <RelatedServices currentPath={`/cities/${city.slug}`} />
       <DisclaimerSection />
+      </main>
       <Footer />
     </div>
   );

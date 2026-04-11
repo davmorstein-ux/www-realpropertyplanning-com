@@ -87,7 +87,7 @@ const PowerOfAttorneys = () => {
       ]}
     />
     <Header />
-    <main>
+    <main id="main-content">
       {/* Hero */}
       <section className="bg-primary py-20 lg:py-28">
         <div className="container px-6 lg:px-8">

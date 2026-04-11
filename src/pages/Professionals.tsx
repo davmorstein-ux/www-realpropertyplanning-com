@@ -61,6 +61,7 @@ const Professionals = () => {
       />
       <BreadcrumbSchema items={[{ name: "Professionals", url: "/professionals" }]} />
       <Header />
+      <main id="main-content">
 
       {/* Hero */}
       <section className="bg-primary pt-16 pb-14 md:pt-20 md:pb-16 lg:pt-24 lg:pb-20">
@@ -132,6 +133,7 @@ const Professionals = () => {
       </section>
 
       <DisclaimerSection />
+      </main>
       <Footer />
     </div>
   );

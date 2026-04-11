@@ -204,6 +204,7 @@ const TransitionResources = () => {
         ]}
       />
       <Header />
+      <main id="main-content">
 
       {/* Hero */}
       <section className="bg-primary pt-16 pb-12 lg:pt-28 lg:pb-24">
@@ -444,6 +445,7 @@ const TransitionResources = () => {
       </section>
 
       <DisclaimerSection />
+      </main>
       <Footer />
     </div>
   );

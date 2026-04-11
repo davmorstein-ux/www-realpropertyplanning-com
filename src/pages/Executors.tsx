@@ -28,6 +28,7 @@ const Executors = () => (
     />
     <BreadcrumbSchema items={[{ name: "For Executors", url: "/executors" }]} />
     <Header />
+    <main id="main-content">
 
     {/* Hero */}
     <section className="bg-secondary pt-8 md:pt-12 pb-12 md:pb-14">
@@ -68,6 +69,7 @@ const Executors = () => (
 
     <CTASection />
     <DisclaimerSection />
+    </main>
     <Footer />
   </div>
 );

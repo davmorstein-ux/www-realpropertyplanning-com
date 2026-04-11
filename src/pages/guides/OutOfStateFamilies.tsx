@@ -61,6 +61,7 @@ const OutOfStateFamilies = () => (
       { name: "Out-of-State Families", url: "/guides/out-of-state-families" },
     ]} />
     <Header />
+    <main id="main-content">
 
     <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
       <div className="container px-6 lg:px-8">
@@ -200,6 +201,7 @@ const OutOfStateFamilies = () => (
     </section>
 
     <DisclaimerSection />
+    </main>
     <Footer />
   </div>
 );

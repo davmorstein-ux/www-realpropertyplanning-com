@@ -40,6 +40,7 @@ const ServicePageTemplate = ({ service, introText, situations, benefits }: Servi
         ]}
       />
       <Header />
+      <main id="main-content">
 
       {/* Hero — short */}
       <section className="bg-primary pt-16 pb-12 md:pt-20 md:pb-16 lg:pt-24 lg:pb-20">
@@ -163,6 +164,7 @@ const ServicePageTemplate = ({ service, introText, situations, benefits }: Servi
 
       <RelatedServices currentPath={`/services/${service.slug}`} />
       <DisclaimerSection />
+      </main>
       <Footer />
     </div>
   );

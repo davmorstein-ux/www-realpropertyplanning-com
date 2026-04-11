@@ -53,6 +53,7 @@ const HowWeWork = () => {
       />
       <BreadcrumbSchema items={[{ name: "How We Work", url: "/how-we-work" }]} />
       <Header />
+      <main id="main-content">
 
       {/* Hero */}
       <section className="bg-primary pt-16 pb-12 md:pt-32 md:pb-20 lg:pb-24">
@@ -148,6 +149,7 @@ const HowWeWork = () => {
       </section>
 
       <DisclaimerSection />
+      </main>
       <Footer />
     </div>
   );

@@ -37,6 +37,7 @@ const MarysvilleProbateEstate = () => {
       <SEOHead title="Probate & Estate Real Estate in Marysville, Washington | Real Property Planning" description="Guidance for executors and families handling inherited property in Marysville. Practical support for family-led decisions, property preparation, and realistic pricing." />
       <BreadcrumbSchema items={[{ name: "Snohomish County", url: "/snohomish-county" }, { name: "Marysville", url: "/marysville-probate-estate-real-estate" }]} />
       <Header />
+      <main id="main-content">
 
       <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
         <div className="container px-6 lg:px-8">
@@ -120,6 +121,7 @@ const MarysvilleProbateEstate = () => {
       </div></div></section>
 
       <DisclaimerSection />
+      </main>
       <Footer />
     </div>
   );

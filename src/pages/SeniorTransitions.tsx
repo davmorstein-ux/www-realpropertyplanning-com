@@ -80,6 +80,7 @@ const SeniorTransitions = () => {
       />
       <BreadcrumbSchema items={[{ name: "Senior Transitions", url: "/senior-transitions" }]} />
       <Header />
+      <main id="main-content">
 
       {/* Hero */}
       <section className="bg-primary pt-16 pb-12 lg:pt-32 lg:pb-28">
@@ -303,6 +304,7 @@ const SeniorTransitions = () => {
       </section>
 
       <DisclaimerSection />
+      </main>
       <Footer />
     </div>
   );

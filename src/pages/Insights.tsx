@@ -197,7 +197,7 @@ const Insights = () => {
       />
       <Header />
 
-      <main>
+      <main id="main-content">
         {/* Hero */}
         <section className="bg-secondary py-14 md:py-20">
           <div className="container px-6 lg:px-8">

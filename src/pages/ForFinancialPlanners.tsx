@@ -28,6 +28,7 @@ const ForFinancialPlanners = () => (
     />
     <BreadcrumbSchema items={[{ name: "For Financial Planners", url: "/for-financial-planners" }]} />
     <Header />
+    <main id="main-content">
 
     {/* Hero */}
     <section className="bg-secondary pt-8 md:pt-12 pb-12 md:pb-14">
@@ -68,6 +69,7 @@ const ForFinancialPlanners = () => (
 
     <CTASection />
     <DisclaimerSection />
+    </main>
     <Footer />
   </div>
 );

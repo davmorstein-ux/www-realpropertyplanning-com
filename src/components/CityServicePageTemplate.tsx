@@ -47,6 +47,7 @@ const CityServicePageTemplate = ({ city, service }: CityServicePageTemplateProps
         { name: service.shortName, url: `/cities/${city.slug}/${service.slug}` },
       ]} />
       <Header />
+      <main id="main-content">
 
       {/* Hero — concise */}
       <section className="bg-primary pt-16 pb-12 md:pt-20 md:pb-16 lg:pt-24 lg:pb-20">
@@ -122,6 +123,7 @@ const CityServicePageTemplate = ({ city, service }: CityServicePageTemplateProps
       </section>
 
       <DisclaimerSection />
+      </main>
       <Footer />
     </div>
   );

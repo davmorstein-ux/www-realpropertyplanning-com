@@ -81,6 +81,7 @@ const ProfessionalNetwork = () => {
         ]}
       />
       <Header />
+      <main id="main-content">
 
       {/* Hero */}
       <section className="bg-primary pt-16 pb-12 lg:pt-32 lg:pb-28">
@@ -220,6 +221,7 @@ const ProfessionalNetwork = () => {
       </section>
 
       <DisclaimerSection />
+      </main>
       <Footer />
     </div>
   );

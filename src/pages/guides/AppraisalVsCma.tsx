@@ -41,6 +41,7 @@ const AppraisalVsCma = () => (
       { name: "Appraisal vs. CMA", url: "/guides/appraisal-vs-cma" },
     ]} />
     <Header />
+    <main id="main-content">
 
     <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
       <div className="container px-6 lg:px-8">
@@ -182,6 +183,7 @@ const AppraisalVsCma = () => (
     </section>
 
     <DisclaimerSection />
+    </main>
     <Footer />
   </div>
 );

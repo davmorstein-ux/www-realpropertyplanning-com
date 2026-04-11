@@ -74,6 +74,7 @@ const CitiesWeServe = () => {
         description="David Stein serves cities throughout Washington State for probate real estate, inherited property, trust-owned homes, and estate-related sales, with especially strong experience in Western Washington and the Puget Sound region."
       />
       <Header />
+      <main id="main-content">
 
       {/* Hero */}
       <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
@@ -208,6 +209,7 @@ const CitiesWeServe = () => {
         </div>
       </section>
 
+      </main>
       <Footer />
     </div>
   );

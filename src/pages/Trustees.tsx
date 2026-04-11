@@ -28,6 +28,7 @@ const Trustees = () => (
     />
     <BreadcrumbSchema items={[{ name: "Trustees", url: "/trustees" }]} />
     <Header />
+    <main id="main-content">
 
     {/* Hero */}
     <section className="bg-secondary pt-8 md:pt-12 pb-12 md:pb-14">
@@ -68,6 +69,7 @@ const Trustees = () => (
 
     <CTASection />
     <DisclaimerSection />
+    </main>
     <Footer />
   </div>
 );

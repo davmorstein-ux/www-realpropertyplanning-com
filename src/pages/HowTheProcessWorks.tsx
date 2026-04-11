@@ -101,6 +101,7 @@ const HowTheProcessWorks = () => {
       />
       <BreadcrumbSchema items={[{ name: "How the Process Works", url: "/how-the-process-works" }]} />
       <Header />
+      <main id="main-content">
 
       {/* Hero */}
       <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-[96px]">
@@ -247,6 +248,7 @@ const HowTheProcessWorks = () => {
       </section>
 
       <DisclaimerSection />
+      </main>
       <Footer />
     </div>
   );

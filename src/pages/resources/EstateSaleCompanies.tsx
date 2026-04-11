@@ -22,7 +22,7 @@ const EstateSaleCompanies = () => (
       ]}
     />
     <Header />
-    <main>
+    <main id="main-content">
       <section className="bg-secondary py-14 md:py-20">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">

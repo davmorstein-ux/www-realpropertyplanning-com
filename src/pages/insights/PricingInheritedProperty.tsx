@@ -40,6 +40,7 @@ const PricingInheritedProperty = () => (
       { name: "Pricing Inherited Property", url: "/insights/pricing-inherited-property-differences" },
     ]} />
     <Header />
+    <main id="main-content">
 
     <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
       <div className="container px-6 lg:px-8">
@@ -180,6 +181,7 @@ const PricingInheritedProperty = () => (
 
     <RelatedServices currentPath="/insights/pricing-inherited-property-differences" />
     <DisclaimerSection />
+    </main>
     <Footer />
   </div>
 );

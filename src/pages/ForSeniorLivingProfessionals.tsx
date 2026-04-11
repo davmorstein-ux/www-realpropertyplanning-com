@@ -111,6 +111,7 @@ const ForSeniorLivingProfessionals = () => {
       />
       <BreadcrumbSchema items={[{ name: "For Senior Living & Transition Professionals", url: `${SITE_URL}/for-senior-living-professionals` }]} />
       <Header />
+      <main id="main-content">
 
       {/* Hero */}
       <section className="bg-primary pt-16 pb-12 lg:pt-28 lg:pb-24">
@@ -308,6 +309,7 @@ const ForSeniorLivingProfessionals = () => {
       </section>
 
       <DisclaimerSection />
+      </main>
       <Footer />
     </div>
   );
