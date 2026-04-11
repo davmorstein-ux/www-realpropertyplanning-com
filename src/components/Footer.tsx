@@ -176,6 +176,18 @@ const Footer = () => {
           </p>
         </div>
 
+        {/* Accessibility Statement */}
+        <div className="footer-divider mb-0" />
+        <div className="pt-4 pb-2">
+          <p className="text-primary-foreground/70 text-[13px] text-center leading-relaxed max-w-2xl mx-auto">
+            realpropertyplanning.com is committed to digital accessibility for people with disabilities. This website meets WCAG 2.1 AA accessibility standards. If you experience any accessibility barriers, please contact us at{" "}
+            <a href="mailto:david@realpropertyplanning.com" className="underline underline-offset-2 hover:text-gold transition-colors">
+              david@realpropertyplanning.com
+            </a>{" "}
+            and we will assist you.
+          </p>
+        </div>
+
         {/* Copyright */}
         <div className="footer-divider mb-0" />
         <div className="pt-4">
