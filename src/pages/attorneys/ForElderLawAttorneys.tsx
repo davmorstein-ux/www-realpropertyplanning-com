@@ -8,8 +8,8 @@ import GoldCheck3D from "@/components/GoldCheck3D";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { AlertTriangle } from "lucide-react";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
-import iconElderLaw from "@/assets/icons/icon-elder-law-3d.png";
+import iconPhone3d from "@/assets/icons/icon-phone-3d.webp";
+import iconElderLaw from "@/assets/icons/icon-elder-law-3d.webp";
 
 const intersections = [
   "Transitioning to assisted living or memory care",

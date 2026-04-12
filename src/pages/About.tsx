@@ -12,10 +12,10 @@ import ProofCallout from "@/components/ProofCallout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
-import daveHeadshot from "@/assets/dave-headshot.jpg";
+import daveHeadshot from "@/assets/dave-headshot.webp";
 import AgentCredentialBlock from "@/components/AgentCredentialBlock";
 import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+import iconPhone3d from "@/assets/icons/icon-phone-3d.webp";
 
 const whoWorksWith = [
   "Estate planning, probate, and elder law attorneys",

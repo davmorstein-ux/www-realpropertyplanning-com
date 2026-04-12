@@ -8,12 +8,12 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 
-import iconAttorneys from "@/assets/icons/icon-attorneys.png";
-import iconFinancial from "@/assets/icons/icon-financial-planning.png";
+import iconAttorneys from "@/assets/icons/icon-attorneys.webp";
+import iconFinancial from "@/assets/icons/icon-financial-planning.webp";
 
-import iconHomeValue from "@/assets/icons/icon-home-value.png";
+import iconHomeValue from "@/assets/icons/icon-home-value.webp";
 import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+import iconPhone3d from "@/assets/icons/icon-phone-3d.webp";
 
 const partnerTiles = [
   {

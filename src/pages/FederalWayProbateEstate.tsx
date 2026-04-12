@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { realEstateAgentSchema } from "@/lib/schema";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+import iconPhone3d from "@/assets/icons/icon-phone-3d.webp";
 
 const faqs = [
   { question: "What should I do first with an inherited home in Federal Way?", answer: "Secure the property, confirm your legal authority, and get an honest assessment of condition and value. David can walk through the home, identify what affects its marketability, and help you understand your options before making commitments." },

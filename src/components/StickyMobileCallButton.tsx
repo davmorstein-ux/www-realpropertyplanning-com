@@ -1,4 +1,4 @@
-import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+import iconPhone3d from "@/assets/icons/icon-phone-3d.webp";
 
 const StickyMobileCallButton = () => {
   return (

@@ -1,6 +1,6 @@
-import alcaLogo from "@/assets/alca-corporate-partner.png";
-import naosaBadge from "@/assets/naosa-badge-clean.png";
-import naepcLogo from "@/assets/naepc-logo-2.png";
+import alcaLogo from "@/assets/alca-corporate-partner.webp";
+import naosaBadge from "@/assets/naosa-badge-clean.webp";
+import naepcLogo from "@/assets/naepc-logo-2.webp";
 
 interface AffiliationBadgeGridProps {
   naepcAlt?: boolean;

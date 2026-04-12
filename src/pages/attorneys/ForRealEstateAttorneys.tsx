@@ -8,8 +8,8 @@ import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
-import iconRealEstateAttorney from "@/assets/icons/icon-real-estate-attorney.png";
+import iconPhone3d from "@/assets/icons/icon-phone-3d.webp";
+import iconRealEstateAttorney from "@/assets/icons/icon-real-estate-attorney.webp";
 
 const whatTheyDo = [
   "Reviewing or drafting purchase and sale agreements",

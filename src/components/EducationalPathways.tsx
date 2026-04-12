@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import iconBookOpen3d from "@/assets/icons/icon-book-open-3d.png";
-import iconArrowRight3d from "@/assets/icons/icon-arrow-right-3d.png";
+import iconBookOpen3d from "@/assets/icons/icon-book-open-3d.webp";
+import iconArrowRight3d from "@/assets/icons/icon-arrow-right-3d.webp";
 
 interface Pathway {
   title: string;

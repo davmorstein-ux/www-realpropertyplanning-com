@@ -5,13 +5,13 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import CTASection from "@/components/CTASection";
 import RelatedServices from "@/components/RelatedServices";
 import DisclaimerSection from "@/components/DisclaimerSection";
-import iconSeniorLiving from "@/assets/icons/icon-senior-living-hero-cropped.png";
-import tealTileBg from "@/assets/icons/teal-tile-bg.png";
-import iconAfh3d from "@/assets/icons/icon-afh-3d.png";
-import iconAssistedLiving3d from "@/assets/icons/icon-assisted-living-3d.png";
-import iconMemoryCare3d from "@/assets/icons/icon-memory-care-3d.png";
-import iconNursingCare3d from "@/assets/icons/icon-nursing-care-3d.png";
-import iconIndependentLiving3d from "@/assets/icons/icon-independent-living-3d.png";
+import iconSeniorLiving from "@/assets/icons/icon-senior-living-hero-cropped.webp";
+import tealTileBg from "@/assets/icons/teal-tile-bg.webp";
+import iconAfh3d from "@/assets/icons/icon-afh-3d.webp";
+import iconAssistedLiving3d from "@/assets/icons/icon-assisted-living-3d.webp";
+import iconMemoryCare3d from "@/assets/icons/icon-memory-care-3d.webp";
+import iconNursingCare3d from "@/assets/icons/icon-nursing-care-3d.webp";
+import iconIndependentLiving3d from "@/assets/icons/icon-independent-living-3d.webp";
 import { Link } from "react-router-dom";
 
 const livingOptions = [

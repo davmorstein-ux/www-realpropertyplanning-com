@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { useEffect } from "react";
 import { realEstateAgentSchema } from "@/lib/schema";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+import iconPhone3d from "@/assets/icons/icon-phone-3d.webp";
 
 const SITE_URL = "https://realpropertyplanning.com";
 

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import redSphere from "@/assets/red-sphere-accent.png";
+import redSphere from "@/assets/red-sphere-accent.webp";
 import { useLayoutEffect, useRef, useState, useCallback } from "react";
 
 const allLinks = [

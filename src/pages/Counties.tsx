@@ -8,8 +8,8 @@ import RelatedServices from "@/components/RelatedServices";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import mappin3d from "@/assets/mappin-3d.png";
-import iconServiceAreas from "@/assets/icons/icon-service-areas.png";
+import mappin3d from "@/assets/mappin-3d.webp";
+import iconServiceAreas from "@/assets/icons/icon-service-areas.webp";
 import { services } from "@/lib/service-areas-data";
 
 const countyCards = [
