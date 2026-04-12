@@ -4,9 +4,9 @@ import logoBright from "@/assets/logo-rpp-bright.webp";
 const HomepageHero = () => {
   return (
     <section className="relative flex flex-col items-center justify-center min-h-[320px] md:min-h-[380px] lg:min-h-[420px]" style={{ backgroundColor: "#0a1628" }}>
-      <div className="flex flex-col items-center px-6 lg:px-8 py-6 lg:py-8 w-full max-w-6xl mx-auto text-center">
+      <div className="flex flex-col items-center px-6 lg:px-8 py-2 lg:py-3 w-full max-w-6xl mx-auto text-center">
         {/* Logo — fixed-height wrapper prevents CLS; image overflows to show full artwork */}
-        <div className="w-[588px] md:w-[726px] lg:w-[864px] max-w-[85vw] mb-4 relative" style={{ height: "clamp(259px, 35vw, 415px)" }}>
+        <div className="w-[588px] md:w-[726px] lg:w-[864px] max-w-[85vw] mb-1 relative" style={{ height: "clamp(259px, 35vw, 415px)" }}>
           <img
             src={logoBright}
             alt="Real Property Planning logo"
