@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import iconClipboard3d from "@/assets/icons/icon-clipboard-3d.webp";
-import iconHome3d from "@/assets/icons/icon-home-3d.webp";
-import iconScale3d from "@/assets/icons/icon-scale-3d.webp";
-import iconHeartHands3d from "@/assets/icons/icon-heart-hands-3d.webp";
-import iconMappin3d from "@/assets/icons/icon-mappin-3d.webp";
-import iconPeople3d from "@/assets/icons/icon-people-3d.webp";
+import iconClipboard3d from "@/assets/icons/executors-clipboard-checklist-icon-washington.webp";
+import iconHome3d from "@/assets/icons/probate-property-home-icon-washington.webp";
+import iconScale3d from "@/assets/icons/appraisal-property-scale-icon-washington.webp";
+import iconHeartHands3d from "@/assets/icons/senior-care-heart-hands-icon-washington.webp";
+import iconMappin3d from "@/assets/icons/real-estate-service-areas-icon-washington.webp";
+import iconPeople3d from "@/assets/icons/real-estate-people-team-icon-washington.webp";
 
 const situations = [
   {

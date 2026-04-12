@@ -7,10 +7,10 @@ import CTASection from "@/components/CTASection";
 import { Link } from "react-router-dom";
 import { Phone, Mail, Globe, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import ericRovnerPhoto from "@/assets/providers/eric-rovner-hbmovemanagement.webp";
-import hbmmLogo from "@/assets/providers/hbmovemanagement-logo.webp";
-import iconSeniorMoves from "@/assets/icons/icon-senior-moves.webp";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.webp";
+import ericRovnerPhoto from "@/assets/providers/senior-movers-eric-rovner-washington.webp";
+import hbmmLogo from "@/assets/providers/senior-movers-hbmovemanagement-logo-washington.webp";
+import iconSeniorMoves from "@/assets/icons/senior-movers-relocation-icon-washington.webp";
+import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 
 const SeniorMoveManagers = () => (
   <>

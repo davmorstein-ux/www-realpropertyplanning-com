@@ -10,8 +10,8 @@ import PageFAQ from "@/components/PageFAQ";
 import GoldCheck3D from "@/components/GoldCheck3D";
 import MidPageCTA from "@/components/MidPageCTA";
 import { Link } from "react-router-dom";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.webp";
-import iconWills from "@/assets/icons/icon-wills.webp";
+import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
+import iconWills from "@/assets/icons/estate-wills-planning-icon-washington.webp";
 
 const willsFaqs = [
   {

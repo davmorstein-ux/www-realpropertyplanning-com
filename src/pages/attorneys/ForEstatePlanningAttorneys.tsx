@@ -8,8 +8,8 @@ import GoldCheck3D from "@/components/GoldCheck3D";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { AlertTriangle } from "lucide-react";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.webp";
-import iconEstatePlanning from "@/assets/icons/icon-estate-planning-3d.webp";
+import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
+import iconEstatePlanning from "@/assets/icons/attorney-estate-planning-icon-washington.webp";
 
 const questions = [
   "Should the property be sold now or held?",

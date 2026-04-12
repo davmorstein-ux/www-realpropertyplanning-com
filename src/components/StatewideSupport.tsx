@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import mappin3d from "@/assets/mappin-3d.webp";
+import mappin3d from "@/assets/real-estate-service-areas-mappin-washington.webp";
 
 interface StatewideSupportProps {
   background?: "bg-background" | "bg-secondary" | "bg-cream" | "bg-primary";

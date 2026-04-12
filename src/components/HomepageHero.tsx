@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logoBright from "@/assets/logo-rpp-bright.webp";
+import logoBright from "@/assets/real-property-planning-logo-bright-seattle.webp";
 
 const HomepageHero = () => {
   return (

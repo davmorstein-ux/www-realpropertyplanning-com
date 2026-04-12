@@ -10,7 +10,7 @@ import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import mappin3d from "@/assets/mappin-3d.webp";
+import mappin3d from "@/assets/real-estate-service-areas-mappin-washington.webp";
 import { services, counties } from "@/lib/service-areas-data";
 
 interface CountyPageProps {

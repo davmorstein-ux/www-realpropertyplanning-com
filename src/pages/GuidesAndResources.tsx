@@ -7,8 +7,8 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import ResourceCard from "@/components/ResourceCard";
 import { BookOpen, Home, Users, Compass, DollarSign, Briefcase } from "lucide-react";
 import { Link } from "react-router-dom";
-import iconResources from "@/assets/icons/icon-resources.webp";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.webp";
+import iconResources from "@/assets/icons/probate-estate-resources-icon-washington.webp";
+import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import { Button } from "@/components/ui/button";
 
 interface Article {

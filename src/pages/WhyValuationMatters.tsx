@@ -13,10 +13,10 @@ import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
-import warning3d from "@/assets/warning-3d.webp";
-import scale3d from "@/assets/scale-3d.webp";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.webp";
-import iconHomeValue from "@/assets/icons/icon-home-value.webp";
+import warning3d from "@/assets/property-warning-guidance-icon-washington.webp";
+import scale3d from "@/assets/appraisal-scale-icon-washington.webp";
+import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
+import iconHomeValue from "@/assets/icons/real-estate-property-value-icon-washington.webp";
 import DirectAnswerBlock from "@/components/DirectAnswerBlock";
 
 const whyMatters = [

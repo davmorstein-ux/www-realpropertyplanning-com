@@ -7,9 +7,9 @@ import RelatedServices from "@/components/RelatedServices";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import { Link } from "react-router-dom";
 import { Phone, Mail, Globe, MapPin } from "lucide-react";
-import afhHeroIcon from "@/assets/icons/icon-afh-hero-cropped.webp";
-import mariaCorbuPhoto from "@/assets/providers/maria-corbu-victoria1afh.webp";
-import victoria1Logo from "@/assets/providers/victoria1afh-logo-cropped.webp";
+import afhHeroIcon from "@/assets/icons/senior-adult-family-home-hero-washington.webp";
+import mariaCorbuPhoto from "@/assets/providers/senior-placement-maria-corbu-washington.webp";
+import victoria1Logo from "@/assets/providers/senior-adult-family-home-victoria1-logo-washington.webp";
 
 const AdultFamilyHomes = () => (
   <>

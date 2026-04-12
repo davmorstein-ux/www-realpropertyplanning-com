@@ -1,7 +1,7 @@
-import mappin3d from "@/assets/mappin-3d.webp";
-import award3d from "@/assets/award-3d.webp";
-import people3d from "@/assets/people-3d.webp";
-import book3d from "@/assets/book-3d.webp";
+import mappin3d from "@/assets/real-estate-service-areas-mappin-washington.webp";
+import award3d from "@/assets/real-estate-award-icon-seattle.webp";
+import people3d from "@/assets/real-estate-agent-team-icon-washington.webp";
+import book3d from "@/assets/probate-guidance-book-icon-washington.webp";
 
 const credentials = [
   {

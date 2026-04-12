@@ -12,9 +12,9 @@ import ProofCallout from "@/components/ProofCallout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
-import warning3d from "@/assets/warning-3d.webp";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.webp";
-import iconProbateSales from "@/assets/icons/icon-probate-sales.webp";
+import warning3d from "@/assets/property-warning-guidance-icon-washington.webp";
+import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
+import iconProbateSales from "@/assets/icons/probate-property-sales-icon-washington.webp";
 import ClientReviewsSection from "@/components/ClientReviewsSection";
 import RealClientSituations from "@/components/RealClientSituations";
 

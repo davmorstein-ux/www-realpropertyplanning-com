@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { realEstateAgentSchema } from "@/lib/schema";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.webp";
+import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 
 const faqs = [
   { question: "What should I do first with an inherited home in Marysville?", answer: "Secure the property, confirm your legal authority to act, and get an honest assessment of its condition and value. David can visit the home, identify what affects its marketability, and outline your options before you make any decisions." },

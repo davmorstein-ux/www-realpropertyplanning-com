@@ -14,10 +14,10 @@ import ProofCallout from "@/components/ProofCallout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
-import people3d from "@/assets/people-3d.webp";
-import heart3d from "@/assets/heart-3d.webp";
+import people3d from "@/assets/real-estate-agent-team-icon-washington.webp";
+import heart3d from "@/assets/senior-care-heart-icon-washington.webp";
 import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.webp";
+import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import DirectAnswerBlock from "@/components/DirectAnswerBlock";
 
 const transitionSituations = [

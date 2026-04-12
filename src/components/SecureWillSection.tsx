@@ -1,5 +1,5 @@
 import { useState } from "react";
-import willVaultIcon from "@/assets/icons/icon-will-vault-3d.webp";
+import willVaultIcon from "@/assets/icons/estate-will-vault-secure-icon-washington.webp";
 import GoldCheck3D from "@/components/GoldCheck3D";
 import SecureWillWizard from "@/components/SecureWillWizard";
 

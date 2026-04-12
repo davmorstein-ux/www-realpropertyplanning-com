@@ -5,10 +5,10 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import CTASection from "@/components/CTASection";
 import { Phone, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
-import davidSteinPhoto from "@/assets/providers/david-stein-headshot-sq.webp";
-import steinAppraisalLogo from "@/assets/stein-appraisal-logo.webp";
-import ehoLogo from "@/assets/providers/equal-housing-opportunity.webp";
-import iconAppraiser from "@/assets/icons/icon-appraiser.webp";
+import davidSteinPhoto from "@/assets/providers/realtor-david-stein-headshot-seattle.webp";
+import steinAppraisalLogo from "@/assets/stein-appraisal-appraiser-logo-washington.webp";
+import ehoLogo from "@/assets/providers/equal-housing-opportunity-logo-washington.webp";
+import iconAppraiser from "@/assets/icons/real-estate-appraiser-icon-washington.webp";
 
 const RealEstateAppraiser = () => (
   <>

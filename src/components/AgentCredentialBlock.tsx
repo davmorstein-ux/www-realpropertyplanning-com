@@ -1,4 +1,4 @@
-import expRealtyLogo from "@/assets/exp-realty-logo.webp";
+import expRealtyLogo from "@/assets/exp-realty-real-estate-logo-washington.webp";
 
 const AgentCredentialBlock = () => (
   <div className="mt-4 text-center">

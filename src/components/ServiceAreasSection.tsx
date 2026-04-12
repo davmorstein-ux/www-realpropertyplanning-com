@@ -1,4 +1,4 @@
-import mappin3d from "@/assets/mappin-3d.webp";
+import mappin3d from "@/assets/real-estate-service-areas-mappin-washington.webp";
 
 const areas = [
   {
