@@ -6,7 +6,7 @@ const HomepageHero = () => {
     <section className="relative flex flex-col items-center justify-center min-h-[320px] md:min-h-[380px] lg:min-h-[420px]" style={{ backgroundColor: "#0a1628" }}>
       <div className="flex flex-col items-center px-6 lg:px-8 py-6 lg:py-8 w-full max-w-6xl mx-auto text-center">
         {/* Logo — fixed-height wrapper prevents CLS; image overflows to show full artwork */}
-        <div className="w-[408px] md:w-[504px] lg:w-[600px] max-w-[85vw] mb-4 relative" style={{ height: "clamp(180px, 24vw, 288px)" }}>
+        <div className="w-[490px] md:w-[605px] lg:w-[720px] max-w-[85vw] mb-4 relative" style={{ height: "clamp(216px, 29vw, 346px)" }}>
           <img
             src={logoBright}
             alt="Real Property Planning logo"
