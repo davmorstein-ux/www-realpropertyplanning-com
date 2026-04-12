@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
 
-import iconEmail3d from "@/assets/icons/icon-email-3d.png";
-import daveHeadshot from "@/assets/dave-headshot.jpg";
-import logo from "@/assets/logo-rpp.jpg";
+import iconEmail3d from "@/assets/icons/icon-email-3d.webp";
+import daveHeadshot from "@/assets/dave-headshot.webp";
+import logo from "@/assets/logo-rpp.webp";
 import AgentCredentialBlock from "@/components/AgentCredentialBlock";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+import iconPhone3d from "@/assets/icons/icon-phone-3d.webp";
 
 const HeroSection = () => {
   return (

@@ -1,9 +1,9 @@
-import iconAttorneys from "@/assets/icons/icon-attorneys.png";
-import iconFinancialPlanning from "@/assets/icons/icon-financial-planning.png";
-import iconSeniorMoves from "@/assets/icons/icon-senior-moves-hero.png";
-import iconAppraiser from "@/assets/icons/icon-appraiser.png";
-import iconRealtor from "@/assets/icons/icon-realtor.png";
-import iconExecutors from "@/assets/icons/icon-executors.png";
+import iconAttorneys from "@/assets/icons/icon-attorneys.webp";
+import iconFinancialPlanning from "@/assets/icons/icon-financial-planning.webp";
+import iconSeniorMoves from "@/assets/icons/icon-senior-moves-hero.webp";
+import iconAppraiser from "@/assets/icons/icon-appraiser.webp";
+import iconRealtor from "@/assets/icons/icon-realtor.webp";
+import iconExecutors from "@/assets/icons/icon-executors.webp";
 
 const tiles = [
   { icon: iconRealtor, label: "Real Estate Broker" },

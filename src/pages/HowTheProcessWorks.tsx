@@ -11,8 +11,8 @@ import PageFAQ from "@/components/PageFAQ";
 import MidPageCTA from "@/components/MidPageCTA";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
-import iconTheProcess from "@/assets/icons/icon-the-process.png";
+import iconPhone3d from "@/assets/icons/icon-phone-3d.webp";
+import iconTheProcess from "@/assets/icons/icon-the-process.webp";
 import DirectAnswerBlock from "@/components/DirectAnswerBlock";
 
 

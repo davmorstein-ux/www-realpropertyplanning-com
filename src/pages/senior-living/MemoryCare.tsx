@@ -6,7 +6,7 @@ import CTASection from "@/components/CTASection";
 import RelatedServices from "@/components/RelatedServices";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import { Link } from "react-router-dom";
-import memoryCareHeroIcon from "@/assets/icons/icon-memory-care-hero.png";
+import memoryCareHeroIcon from "@/assets/icons/icon-memory-care-hero.webp";
 
 const MemoryCare = () => (
   <>

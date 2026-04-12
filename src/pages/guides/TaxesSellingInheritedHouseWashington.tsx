@@ -11,7 +11,7 @@ import PageFAQ from "@/components/PageFAQ";
 import MidPageCTA from "@/components/MidPageCTA";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+import iconPhone3d from "@/assets/icons/icon-phone-3d.webp";
 
 const faqs = [
   { question: "Do you pay capital gains tax on an inherited house in Washington?", answer: "You may owe federal capital gains tax on any appreciation above the stepped-up basis — meaning the property's fair market value at the date of the decedent's death. If you sell shortly after inheriting, there is often little or no gain. Washington State does not have a state capital gains tax on real estate sales of primary residences, but a 7% tax may apply to long-term capital gains above $250,000. Consult a tax professional for your specific situation." },

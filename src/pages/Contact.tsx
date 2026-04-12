@@ -16,12 +16,12 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+import iconPhone3d from "@/assets/icons/icon-phone-3d.webp";
 
-import iconEmail3d from "@/assets/icons/icon-email-3d.png";
-import mappin3d from "@/assets/mappin-3d.png";
+import iconEmail3d from "@/assets/icons/icon-email-3d.webp";
+import mappin3d from "@/assets/mappin-3d.webp";
 import { useState } from "react";
-import expRealtyLogo from "@/assets/exp-realty-logo.png";
+import expRealtyLogo from "@/assets/exp-realty-logo.webp";
 import { useToast } from "@/hooks/use-toast";
 
 const roleOptions = [

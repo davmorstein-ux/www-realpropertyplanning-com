@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import iconClipboard3d from "@/assets/icons/icon-clipboard-3d.png";
-import iconHome3d from "@/assets/icons/icon-home-3d.png";
-import iconHeartHands3d from "@/assets/icons/icon-heart-hands-3d.png";
-import iconScale3d from "@/assets/icons/icon-scale-3d.png";
-import iconMappin3d from "@/assets/icons/icon-mappin-3d.png";
-import iconHelp3d from "@/assets/icons/icon-help-3d.png";
+import iconClipboard3d from "@/assets/icons/icon-clipboard-3d.webp";
+import iconHome3d from "@/assets/icons/icon-home-3d.webp";
+import iconHeartHands3d from "@/assets/icons/icon-heart-hands-3d.webp";
+import iconScale3d from "@/assets/icons/icon-scale-3d.webp";
+import iconMappin3d from "@/assets/icons/icon-mappin-3d.webp";
+import iconHelp3d from "@/assets/icons/icon-help-3d.webp";
 
 const options = [
   {

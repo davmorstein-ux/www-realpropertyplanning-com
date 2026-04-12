@@ -6,12 +6,12 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Button } from "@/components/ui/button";
 
-import iconAttorneys from "@/assets/icons/icon-attorneys.png";
-import iconSeniorLiving from "@/assets/icons/icon-senior-living.png";
-import iconFinancialPlanning from "@/assets/icons/icon-financial-planning.png";
-import iconEstateLiquidation from "@/assets/icons/icon-estate-liquidation.png";
-import iconHome3d from "@/assets/icons/icon-home-3d.png";
-import iconPeople3d from "@/assets/icons/icon-people-3d.png";
+import iconAttorneys from "@/assets/icons/icon-attorneys.webp";
+import iconSeniorLiving from "@/assets/icons/icon-senior-living.webp";
+import iconFinancialPlanning from "@/assets/icons/icon-financial-planning.webp";
+import iconEstateLiquidation from "@/assets/icons/icon-estate-liquidation.webp";
+import iconHome3d from "@/assets/icons/icon-home-3d.webp";
+import iconPeople3d from "@/assets/icons/icon-people-3d.webp";
 
 const categories = [
   {

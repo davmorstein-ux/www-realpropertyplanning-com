@@ -1,4 +1,4 @@
-import goldCheck3d from "@/assets/gold-check-3d.png";
+import goldCheck3d from "@/assets/gold-check-3d.webp";
 
 interface GoldCheck3DProps {
   size?: number;

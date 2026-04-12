@@ -12,7 +12,7 @@ import GoldCheck3D from "@/components/GoldCheck3D";
 import NextStepBlock from "@/components/NextStepBlock";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+import iconPhone3d from "@/assets/icons/icon-phone-3d.webp";
 import ListenButton from "@/components/ListenButton";
 
 const options = [

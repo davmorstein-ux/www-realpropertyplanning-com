@@ -6,8 +6,8 @@ import { articleSchema } from "@/lib/schema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
-import iconFinancialPlanning from "@/assets/icons/icon-financial-planning.png";
+import iconPhone3d from "@/assets/icons/icon-phone-3d.webp";
+import iconFinancialPlanning from "@/assets/icons/icon-financial-planning.webp";
 import CTASection from "@/components/CTASection";
 
 const jsonLd = articleSchema({

@@ -1,4 +1,4 @@
-import mappin3d from "@/assets/mappin-3d.png";
+import mappin3d from "@/assets/mappin-3d.webp";
 
 const areas = [
   {

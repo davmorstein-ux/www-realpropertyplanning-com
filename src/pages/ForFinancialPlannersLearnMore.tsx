@@ -5,7 +5,7 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+import iconPhone3d from "@/assets/icons/icon-phone-3d.webp";
 
 const whyPlannersInvolveRE = [
   { heading: "Sale Versus Hold Decisions", text: "Clients sometimes need to decide whether to sell, retain, or evaluate a property before making larger planning decisions." },

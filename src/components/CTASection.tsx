@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
-import iconEmail3d from "@/assets/icons/icon-email-3d.png";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+import iconEmail3d from "@/assets/icons/icon-email-3d.webp";
+import iconPhone3d from "@/assets/icons/icon-phone-3d.webp";
 
 const CTASection = () => {
   return (

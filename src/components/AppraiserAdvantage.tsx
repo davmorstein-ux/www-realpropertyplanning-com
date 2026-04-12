@@ -1,5 +1,5 @@
 import GoldCheck3D from "@/components/GoldCheck3D";
-import iconAppraiser3d from "@/assets/icons/icon-appraiser-3d.png";
+import iconAppraiser3d from "@/assets/icons/icon-appraiser-3d.webp";
 
 const advantages = [
   {

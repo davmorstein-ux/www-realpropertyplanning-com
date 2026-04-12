@@ -2,8 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "@/assets/logo-rpp-bright.png";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+import logo from "@/assets/logo-rpp-bright.webp";
+import iconPhone3d from "@/assets/icons/icon-phone-3d.webp";
 
 const primaryLinks = [
   { href: "/", label: "Home" },

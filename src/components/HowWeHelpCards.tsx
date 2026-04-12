@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import inheritedHomeIcon from "@/assets/inherited-home-icon.png";
-import seniorHousingIcon from "@/assets/senior-housing-icon.png";
-import estateAppraisalsIcon from "@/assets/estate-appraisals-icon.png";
+import inheritedHomeIcon from "@/assets/inherited-home-icon.webp";
+import seniorHousingIcon from "@/assets/senior-housing-icon.webp";
+import estateAppraisalsIcon from "@/assets/estate-appraisals-icon.webp";
 
 const cards = [
   {

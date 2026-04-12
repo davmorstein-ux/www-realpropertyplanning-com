@@ -5,7 +5,7 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+import iconPhone3d from "@/assets/icons/icon-phone-3d.webp";
 
 const whyCPAsInvolveRE = [
   { heading: "Understanding Likely Market Value", text: "Clients often need a practical understanding of what a property may be worth before making informed decisions." },

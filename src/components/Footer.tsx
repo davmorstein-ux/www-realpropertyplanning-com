@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 
-import mappin3d from "@/assets/mappin-3d.png";
-import iconEmail3d from "@/assets/icons/icon-email-3d.png";
-import expRealtyLogo from "@/assets/exp-realty-logo.png";
-import alcaLogo from "@/assets/alca-corporate-partner.png";
-import naosaBadge from "@/assets/naosa-badge-clean.png";
-import naepcLogo from "@/assets/naepc-logo.png";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
+import mappin3d from "@/assets/mappin-3d.webp";
+import iconEmail3d from "@/assets/icons/icon-email-3d.webp";
+import expRealtyLogo from "@/assets/exp-realty-logo.webp";
+import alcaLogo from "@/assets/alca-corporate-partner.webp";
+import naosaBadge from "@/assets/naosa-badge-clean.webp";
+import naepcLogo from "@/assets/naepc-logo.webp";
+import iconPhone3d from "@/assets/icons/icon-phone-3d.webp";
 
 const Footer = () => {
   return (

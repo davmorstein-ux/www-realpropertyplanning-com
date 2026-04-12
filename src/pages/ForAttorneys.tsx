@@ -5,17 +5,17 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
-import iconAttorneys from "@/assets/icons/icon-attorneys.png";
+import iconPhone3d from "@/assets/icons/icon-phone-3d.webp";
+import iconAttorneys from "@/assets/icons/icon-attorneys.webp";
 import CTASection from "@/components/CTASection";
 import ServiceNavTileCard from "@/components/ServiceNavTileCard";
 import type { ServiceTile } from "@/components/service-nav-tiles-data";
-import iconProbate from "@/assets/icons/icon-probate-sales.png";
-import iconDivorce from "@/assets/icons/icon-divorce-3d.png";
-import iconElderLaw from "@/assets/icons/icon-elder-law-3d.png";
-import iconEstatePlanning from "@/assets/icons/icon-estate-planning-3d.png";
-import iconFamilyLaw from "@/assets/icons/icon-family-law-3d.png";
-import iconRealEstateAttorney from "@/assets/icons/icon-real-estate-attorney.png";
+import iconProbate from "@/assets/icons/icon-probate-sales.webp";
+import iconDivorce from "@/assets/icons/icon-divorce-3d.webp";
+import iconElderLaw from "@/assets/icons/icon-elder-law-3d.webp";
+import iconEstatePlanning from "@/assets/icons/icon-estate-planning-3d.webp";
+import iconFamilyLaw from "@/assets/icons/icon-family-law-3d.webp";
+import iconRealEstateAttorney from "@/assets/icons/icon-real-estate-attorney.webp";
 
 const attorneyTiles: ServiceTile[] = [
   { title: "Probate\nAttorneys", subtitle: "", href: "/for-probate-attorneys", iconSrc: iconProbate },

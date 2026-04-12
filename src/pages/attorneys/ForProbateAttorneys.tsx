@@ -8,8 +8,8 @@ import GoldCheck3D from "@/components/GoldCheck3D";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { AlertTriangle } from "lucide-react";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
-import iconProbate from "@/assets/icons/icon-probate-sales.png";
+import iconPhone3d from "@/assets/icons/icon-phone-3d.webp";
+import iconProbate from "@/assets/icons/icon-probate-sales.webp";
 
 const intersections = [
   "Determining the current market value of the property",

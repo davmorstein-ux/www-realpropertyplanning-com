@@ -6,8 +6,8 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import CTASection from "@/components/CTASection";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.png";
-import iconEstateLiquidation from "@/assets/icons/icon-estate-liquidation.png";
+import iconPhone3d from "@/assets/icons/icon-phone-3d.webp";
+import iconEstateLiquidation from "@/assets/icons/icon-estate-liquidation.webp";
 
 const EstateLiquidation = () => (
   <>

@@ -1,8 +1,8 @@
 import GoldCheck3D from "@/components/GoldCheck3D";
 import { Quote, Star } from "lucide-react";
 import { Link } from "react-router-dom";
-import iconLicense3d from "@/assets/icons/icon-license-3d.png";
-import iconAppraiser3d from "@/assets/icons/icon-appraiser-3d.png";
+import iconLicense3d from "@/assets/icons/icon-license-3d.webp";
+import iconAppraiser3d from "@/assets/icons/icon-appraiser-3d.webp";
 import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
 
 const credentials = [
