@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import iconArrowRight3d from "@/assets/icons/icon-arrow-right-3d.webp";
+import iconArrowRight3d from "@/assets/icons/property-guidance-arrow-icon-washington.webp";
 
 interface NextStep {
   title: string;

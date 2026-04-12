@@ -6,7 +6,7 @@ import { articleSchema } from "@/lib/schema";
 import TrustStrip from "@/components/TrustStrip";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import PageFAQ from "@/components/PageFAQ";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.webp";
+import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 
 const faqs = [
   {
@@ -29,13 +29,13 @@ const faqs = [
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import people3d from "@/assets/people-3d.webp";
-import iconHome3d from "@/assets/icons/icon-home-3d.webp";
-import iconDocument3d from "@/assets/icons/icon-document-3d.webp";
-import iconBriefcase3d from "@/assets/icons/icon-briefcase-3d.webp";
-import iconHeartHands3d from "@/assets/icons/icon-heart-hands-3d.webp";
-import iconHandshake3d from "@/assets/icons/icon-handshake-3d.webp";
-import iconBookOpen3d from "@/assets/icons/icon-book-open-3d.webp";
+import people3d from "@/assets/real-estate-agent-team-icon-washington.webp";
+import iconHome3d from "@/assets/icons/probate-property-home-icon-washington.webp";
+import iconDocument3d from "@/assets/icons/probate-document-icon-washington.webp";
+import iconBriefcase3d from "@/assets/icons/real-estate-agent-briefcase-icon-washington.webp";
+import iconHeartHands3d from "@/assets/icons/senior-care-heart-hands-icon-washington.webp";
+import iconHandshake3d from "@/assets/icons/real-estate-agent-handshake-icon-washington.webp";
+import iconBookOpen3d from "@/assets/icons/probate-guidance-book-open-icon-washington.webp";
 
 const SITE_URL = "https://realpropertyplanning.com";
 

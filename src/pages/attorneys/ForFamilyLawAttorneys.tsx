@@ -8,8 +8,8 @@ import GoldCheck3D from "@/components/GoldCheck3D";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { AlertTriangle } from "lucide-react";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.webp";
-import iconFamilyLaw from "@/assets/icons/icon-family-law-3d.webp";
+import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
+import iconFamilyLaw from "@/assets/icons/attorney-family-law-property-icon-washington.webp";
 
 const intersections = [
   "Division of real property",

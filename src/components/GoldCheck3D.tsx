@@ -1,4 +1,4 @@
-import goldCheck3d from "@/assets/gold-check-3d.webp";
+import goldCheck3d from "@/assets/property-guidance-checkmark-icon-washington.webp";
 
 interface GoldCheck3DProps {
   size?: number;

@@ -6,12 +6,12 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Button } from "@/components/ui/button";
 
-import iconAttorneys from "@/assets/icons/icon-attorneys.webp";
-import iconSeniorLiving from "@/assets/icons/icon-senior-living.webp";
-import iconFinancialPlanning from "@/assets/icons/icon-financial-planning.webp";
-import iconEstateLiquidation from "@/assets/icons/icon-estate-liquidation.webp";
-import iconHome3d from "@/assets/icons/icon-home-3d.webp";
-import iconPeople3d from "@/assets/icons/icon-people-3d.webp";
+import iconAttorneys from "@/assets/icons/probate-attorney-services-icon-washington.webp";
+import iconSeniorLiving from "@/assets/icons/senior-living-placement-icon-washington.webp";
+import iconFinancialPlanning from "@/assets/icons/estate-financial-planning-icon-washington.webp";
+import iconEstateLiquidation from "@/assets/icons/estate-liquidation-services-icon-washington.webp";
+import iconHome3d from "@/assets/icons/probate-property-home-icon-washington.webp";
+import iconPeople3d from "@/assets/icons/real-estate-people-team-icon-washington.webp";
 
 const categories = [
   {

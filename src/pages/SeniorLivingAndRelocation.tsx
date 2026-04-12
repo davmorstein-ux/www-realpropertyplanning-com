@@ -5,13 +5,13 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import CTASection from "@/components/CTASection";
 import RelatedServices from "@/components/RelatedServices";
 import DisclaimerSection from "@/components/DisclaimerSection";
-import iconSeniorLiving from "@/assets/icons/icon-senior-living-hero-cropped.webp";
-import tealTileBg from "@/assets/icons/teal-tile-bg.webp";
-import iconAfh3d from "@/assets/icons/icon-afh-3d.webp";
-import iconAssistedLiving3d from "@/assets/icons/icon-assisted-living-3d.webp";
-import iconMemoryCare3d from "@/assets/icons/icon-memory-care-3d.webp";
-import iconNursingCare3d from "@/assets/icons/icon-nursing-care-3d.webp";
-import iconIndependentLiving3d from "@/assets/icons/icon-independent-living-3d.webp";
+import iconSeniorLiving from "@/assets/icons/senior-living-placement-hero-washington.webp";
+import tealTileBg from "@/assets/icons/property-services-teal-tile-washington.webp";
+import iconAfh3d from "@/assets/icons/senior-adult-family-home-3d-washington.webp";
+import iconAssistedLiving3d from "@/assets/icons/senior-assisted-living-icon-washington.webp";
+import iconMemoryCare3d from "@/assets/icons/senior-memory-care-3d-icon-washington.webp";
+import iconNursingCare3d from "@/assets/icons/senior-nursing-care-icon-washington.webp";
+import iconIndependentLiving3d from "@/assets/icons/senior-independent-living-icon-washington.webp";
 import { Link } from "react-router-dom";
 
 const livingOptions = [

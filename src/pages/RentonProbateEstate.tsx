@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { realEstateAgentSchema } from "@/lib/schema";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.webp";
+import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 
 const faqs = [
   { question: "What should I do first with an inherited home in Renton?", answer: "Secure the property, confirm your legal authority to act, and get an honest assessment of condition and market value. David can walk through the property, identify what affects value, and help you understand your options before committing to anything." },

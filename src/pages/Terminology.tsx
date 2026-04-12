@@ -13,8 +13,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.webp";
-import iconProbateTerms from "@/assets/icons/icon-probate-sales-alt.webp";
+import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
+import iconProbateTerms from "@/assets/icons/probate-property-sales-alt-icon-washington.webp";
 
 interface GlossaryTerm {
   term: string;

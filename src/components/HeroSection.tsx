@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
 
-import iconEmail3d from "@/assets/icons/icon-email-3d.webp";
-import daveHeadshot from "@/assets/dave-headshot.webp";
-import logo from "@/assets/logo-rpp.webp";
+import iconEmail3d from "@/assets/icons/real-estate-email-contact-icon-washington.webp";
+import daveHeadshot from "@/assets/david-stein-real-estate-agent-seattle.webp";
+import logo from "@/assets/real-property-planning-logo-seattle.webp";
 import AgentCredentialBlock from "@/components/AgentCredentialBlock";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.webp";
+import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 
 const HeroSection = () => {
   return (

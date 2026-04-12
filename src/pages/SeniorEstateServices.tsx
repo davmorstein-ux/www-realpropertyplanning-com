@@ -7,7 +7,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import MidPageCTA from "@/components/MidPageCTA";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.webp";
+import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 
 
 const SeniorEstateServices = () => {

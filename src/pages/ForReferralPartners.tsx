@@ -8,11 +8,11 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 
-import iconAttorneys from "@/assets/icons/icon-attorneys.webp";
-import iconFinancial from "@/assets/icons/icon-financial-planning.webp";
-import iconSeniorMoves from "@/assets/icons/icon-senior-moves.webp";
-import iconHomeValue from "@/assets/icons/icon-home-value.webp";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.webp";
+import iconAttorneys from "@/assets/icons/probate-attorney-services-icon-washington.webp";
+import iconFinancial from "@/assets/icons/estate-financial-planning-icon-washington.webp";
+import iconSeniorMoves from "@/assets/icons/senior-movers-relocation-icon-washington.webp";
+import iconHomeValue from "@/assets/icons/real-estate-property-value-icon-washington.webp";
+import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 
 const partnerTiles = [
   {

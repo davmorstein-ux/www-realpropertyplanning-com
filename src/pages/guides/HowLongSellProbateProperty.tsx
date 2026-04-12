@@ -11,7 +11,7 @@ import PageFAQ from "@/components/PageFAQ";
 import MidPageCTA from "@/components/MidPageCTA";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.webp";
+import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 
 const faqs = [
   { question: "What is the fastest a probate property can sell?", answer: "If the executor already has letters testamentary and the property is in good condition, the sale itself can close in as little as 30 to 45 days — similar to a standard real estate transaction. However, the total timeline including probate administration is usually longer." },

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import type { ServiceTile } from "./service-nav-tiles-data";
-import tileShell from "@/assets/tile-shell.webp";
+import tileShell from "@/assets/property-services-tile-shell-washington.webp";
 
 const ServiceNavTileCard = ({ tile, index, columns = 3 }: { tile: ServiceTile; index: number; columns?: number }) => {
   // Build the inline style for the content container

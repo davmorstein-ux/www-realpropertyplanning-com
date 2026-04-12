@@ -11,7 +11,7 @@ import PageFAQ from "@/components/PageFAQ";
 import MidPageCTA from "@/components/MidPageCTA";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import iconPhone3d from "@/assets/icons/icon-phone-3d.webp";
+import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 
 const faqs = [
   { question: "Is pricing an estate home different from pricing a regular home?", answer: "Yes. Estate properties often have deferred maintenance, dated finishes, and condition issues that standard market comparisons do not capture. Pricing must account for the property's actual condition — not its potential after renovation. A broker with appraisal experience can make these adjustments accurately." },

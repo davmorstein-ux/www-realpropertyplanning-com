@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import iconDocument3d from "@/assets/icons/icon-document-3d.webp";
-import iconArrowRight3d from "@/assets/icons/icon-arrow-right-3d.webp";
+import iconDocument3d from "@/assets/icons/probate-document-icon-washington.webp";
+import iconArrowRight3d from "@/assets/icons/property-guidance-arrow-icon-washington.webp";
 
 interface ResourceCardProps {
   title: string;
