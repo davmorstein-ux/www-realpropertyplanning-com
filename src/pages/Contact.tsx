@@ -70,8 +70,8 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Contact David Stein | Probate & Estate Real Estate Guidance"
-        description="Have a property tied to probate, a trust, an inheritance, or a senior transition? Contact David Stein for a confidential consultation. Serving clients throughout Washington State."
+        title="Contact Real Property Planning | Probate & Estate Real Estate in Washington State"
+        description="Ready to talk through your situation? Reach out to Real Property Planning for calm, knowledgeable guidance on probate, inherited property, or senior housing transitions. Call (206) 900-3015."
         jsonLd={realEstateAgentSchema}
       />
       <BreadcrumbSchema items={[{ name: "Contact", url: "/contact" }]} />
@@ -86,7 +86,7 @@ const Contact = () => {
               Get in Touch
             </p>
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-[22px]">
-              Reaching Out Is the Easiest First Step
+              Get in Touch
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed">
               Whether you're an executor, an attorney, or a family member navigating a property situation — a short conversation can bring real clarity.

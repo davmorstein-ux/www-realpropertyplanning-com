@@ -171,10 +171,10 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "A clear glossary of wills, probate, inheritance, and real property terms to help attorneys, executors, trustees, and families understand the process of managing and selling estate-related real estate.",
   },
   "/contact": {
-    title: "Contact David Stein | Probate & Estate Real Estate",
+    title: "Contact Real Property Planning | Probate & Estate Real Estate in Washington State",
     description:
-      "Have a property tied to probate, a trust, an inheritance, or a senior transition? Contact David Stein for a confidential consultation. Serving clients throughout Washington State.",
-    h1: "Contact David Stein",
+      "Ready to talk through your situation? Reach out to Real Property Planning for calm, knowledgeable guidance on probate, inherited property, or senior housing transitions. Call (206) 900-3015.",
+    h1: "Get in Touch",
     intro:
       "Have a property tied to probate, a trust, an inheritance, or a senior transition? Contact David Stein for a confidential consultation. Serving clients throughout Washington State.",
   },
