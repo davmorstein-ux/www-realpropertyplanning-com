@@ -30,7 +30,7 @@ const categories: Category[] = [
       {
         title: "How Does Probate Real Estate Work in Washington?",
         description: "An overview of the probate sale process, court requirements, and what executors and attorneys need to know.",
-        href: "/guides/how-probate-real-estate-works",
+        href: "/insights-guidance/how-does-probate-real-estate-work-in-washington",
       },
       {
         title: "Can an Executor Sell a House Before Probate?",
