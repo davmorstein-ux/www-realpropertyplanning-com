@@ -153,8 +153,8 @@ const ProbateEstateSales = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Probate & Estate Property Sales in Washington State | Real Property Planning"
-        description="Experienced real estate guidance for probate property, inherited homes, and estate sales throughout Washington State. Real Property Planning provides valuation-informed coordination for executors, attorneys, and families."
+        title="Probate Home Sales in Washington State | Real Property Planning"
+        description="Selling a home through probate in Washington State? We guide families and estates through the process with expertise, patience, and clear next steps. Licensed Broker & Certified Appraiser."
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema items={[{ name: "Probate & Estate Sales", url: "/probate-estate-sales" }]} />
@@ -170,7 +170,7 @@ const ProbateEstateSales = () => {
               Probate & Estate Property Sales
             </p>
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
-              Selling Probate Property Requires a Different Kind of Expertise
+              Probate Real Estate Sales in Washington State
             </h1>
             <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
               When a home is part of a probate case, nothing about the sale follows the normal playbook. Court authority may need to be granted before the property can be listed. The house itself may have been vacant for months, with deferred maintenance that standard market comparisons cannot account for. And the executor, attorney, and family members all need to stay informed without stepping on each other's timelines.
