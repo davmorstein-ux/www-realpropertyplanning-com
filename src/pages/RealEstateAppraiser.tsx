@@ -14,7 +14,7 @@ const RealEstateAppraiser = () => (
   <>
     <SEOHead
       title="Certified Real Estate Appraiser in Washington State | Real Property Planning"
-      description="Licensed and certified real estate appraiser serving all of Washington State. Residential, estate, probate, senior transition, and commercial appraisals accepted by courts, lenders, and the IRS."
+      description="Licensed and certified real estate appraiser serving all of Washington State. Residential, estate, probate, and senior transition appraisals accepted by courts, lenders, and the IRS."
       canonical="https://www.realpropertyplanning.com/real-estate-appraiser"
     />
     <BreadcrumbSchema
@@ -106,10 +106,6 @@ const RealEstateAppraiser = () => (
                 {
                   title: "Senior Transition & Relocation Appraisals",
                   text: "Families helping an aging parent leave the home they have lived in for decades need to know its fair market value before making any decisions. We work directly with families, elder law attorneys, and senior care coordinators to deliver timely, accurate appraisals that support confident next steps.",
-                },
-                {
-                  title: "Commercial Appraisals",
-                  text: "From small mixed-use buildings to larger commercial assets, we provide certified commercial appraisals across Washington State for buyers, sellers, lenders, estate settlements, and legal proceedings.",
                 },
               ].map((card) => (
                 <div key={card.title} className="bg-background border border-border rounded-xl p-5 sm:p-6 shadow-sm">
