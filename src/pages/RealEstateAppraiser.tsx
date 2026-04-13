@@ -13,8 +13,8 @@ import iconAppraiser from "@/assets/icons/real-estate-appraiser-icon-washington.
 const RealEstateAppraiser = () => (
   <>
     <SEOHead
-      title="Real Estate Appraiser | Real Property Planning"
-      description="Certified residential appraiser providing objective property valuations for estate, probate, trust, and senior transition situations throughout Washington State."
+      title="Certified Real Estate Appraiser in Washington State | Real Property Planning"
+      description="Licensed and certified real estate appraiser serving all of Washington State. Residential, estate, probate, senior transition, and commercial appraisals accepted by courts, lenders, and the IRS."
       canonical="https://www.realpropertyplanning.com/real-estate-appraiser"
     />
     <BreadcrumbSchema
@@ -81,6 +81,67 @@ const RealEstateAppraiser = () => (
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Appraisal Services */}
+      <section className="py-10 md:py-14 bg-secondary">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground text-center mb-4">Appraisal Services We Provide</h2>
+            <p className="text-muted-foreground text-base md:text-lg leading-relaxed text-center max-w-3xl mx-auto mb-10">
+              A certified appraisal is one of the most important documents in any major property decision. Whether you are settling an estate, navigating probate, helping a parent transition out of their home, or refinancing — an accurate, defensible valuation gives you the foundation to move forward with confidence.
+            </p>
+            <div className="grid gap-6 sm:grid-cols-2">
+              {[
+                {
+                  title: "Residential Appraisals",
+                  text: "Whether you are buying, selling, refinancing, or simply want to know what your home is worth, a certified residential appraisal provides an accurate, lender-accepted valuation backed by local Washington State market data.",
+                },
+                {
+                  title: "Estate & Probate Appraisals",
+                  text: "When a loved one passes away, Washington State courts and the IRS often require a certified appraisal of real property to settle the estate. We provide court-acceptable appraisal reports prepared with the care and precision these situations demand — and with sensitivity to what families are going through.",
+                },
+                {
+                  title: "Senior Transition & Relocation Appraisals",
+                  text: "Families helping an aging parent leave the home they have lived in for decades need to know its fair market value before making any decisions. We work directly with families, elder law attorneys, and senior care coordinators to deliver timely, accurate appraisals that support confident next steps.",
+                },
+                {
+                  title: "Commercial Appraisals",
+                  text: "From small mixed-use buildings to larger commercial assets, we provide certified commercial appraisals across Washington State for buyers, sellers, lenders, estate settlements, and legal proceedings.",
+                },
+              ].map((card) => (
+                <div key={card.title} className="bg-background border border-border rounded-xl p-5 sm:p-6 shadow-sm">
+                  <h3 className="font-serif text-lg font-semibold text-foreground mb-2">{card.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{card.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Certified Appraiser */}
+      <section className="py-10 md:py-14 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-4">Why a Certified Appraiser Makes a Difference</h2>
+            <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
+              Not all property valuations carry the same weight. A certified appraisal is legally defensible, accepted by courts, lenders, and the IRS — and is often required in probate, divorce, estate settlement, tax appeals, and senior housing decisions. Real Property Planning holds both a Washington State Certified Residential Appraiser designation (WA #1702080) and a Real Estate Broker license (#113972) — a rare combination that brings deeper market insight and practical real estate experience to every valuation.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Serving All of Washington State */}
+      <section className="py-10 md:py-14 bg-secondary">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-4">Serving All of Washington State</h2>
+            <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
+              From King County and Snohomish County to Pierce, Thurston, Whatcom, Skagit, Clark, Spokane, and every county in between — Real Property Planning provides certified appraisal services throughout Washington State. Whether your property is in a major metro area or a rural community, we can help.
+            </p>
           </div>
         </div>
       </section>
