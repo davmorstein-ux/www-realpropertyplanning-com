@@ -22,8 +22,8 @@ const jsonLd = articleSchema({
 const Executors = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
-      title="What Executors Need to Know About Selling Estate Property | Real Property Planning"
-      description="Step-by-step real estate guidance for executors, personal representatives, and trustees selling inherited homes and estate property throughout Washington State. Licensed broker and certified appraiser."
+      title="Help for Executors Selling Inherited Property in Washington State | Real Property Planning"
+      description="Are you an executor managing a probate property in Washington? Get calm, step-by-step guidance on pricing, preparing, and selling inherited real estate. Serving King, Snohomish & surrounding counties."
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema items={[{ name: "For Executors", url: "/executors" }]} />
@@ -41,7 +41,7 @@ const Executors = () => (
             For Executors & Personal Representatives
           </p>
           <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-foreground leading-tight mb-4">
-            You Do Not Have to Figure This Out Alone
+            Guidance for Executors Managing Inherited Property
           </h1>
           <p className="text-muted-foreground/70 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-8" style={{ maskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)' }}>
             Real Property Planning coordinates property evaluation, preparation, pricing, and sale so you can focus on your other responsibilities.
