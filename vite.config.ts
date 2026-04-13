@@ -79,10 +79,10 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "Accurate valuation is the foundation of every successful estate property sale. David Stein's dual credentials as a real estate broker and certified appraiser provide a unique perspective on pricing strategy throughout Washington State.",
   },
   "/senior-transitions": {
-    title: "Senior Home Sales & Downsizing Support | Real Property Planning",
+    title: "Senior Housing Transitions & Downsizing in Washington State | Real Property Planning",
     description:
-      "Real Property Planning provides thoughtful real estate support for downsizing, relocation, assisted living moves, and senior housing transitions throughout Washington State.",
-    h1: "Senior Transition Real Estate Support",
+      "Helping seniors and families navigate downsizing, relocation, and senior living decisions across Washington State. Compassionate coordination and clear next steps every step of the way.",
+    h1: "Senior Housing Transitions & Downsizing in Washington State",
     quickAnswerQ: "How does Real Property Planning support senior housing transitions?",
     quickAnswerA: "Real Property Planning provides patient, step-by-step guidance for seniors and families transitioning from a longtime home — whether moving to assisted living, downsizing, or relocating closer to family. The process includes home evaluation, preparation coordination, accurate pricing, and full sale management.",
     intro:
