@@ -74,8 +74,8 @@ const SeniorTransitions = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Senior Home Sales & Transition Support | Real Property Planning"
-        description="Compassionate, experienced real estate support for senior housing transitions — downsizing, assisted living moves, and family home sales throughout Washington State. Licensed broker and certified appraiser."
+        title="Senior Housing Transitions & Downsizing in Washington State | Real Property Planning"
+        description="Helping seniors and families navigate downsizing, relocation, and senior living decisions across Washington State. Compassionate coordination and clear next steps every step of the way."
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema items={[{ name: "Senior Transitions", url: "/senior-transitions" }]} />
@@ -90,7 +90,7 @@ const SeniorTransitions = () => {
               Senior Housing Transitions
             </p>
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
-              Selling a Longtime Home Is About More Than Real Estate
+              Senior Housing Transitions &amp; Downsizing in Washington State
             </h1>
             <p className="text-xl text-primary-foreground/80 leading-relaxed mb-8">
               Real Property Planning works at the family's pace — managing preparation, pricing, and the sale with steady communication that keeps everyone informed and comfortable.
