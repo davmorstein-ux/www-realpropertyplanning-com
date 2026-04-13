@@ -51,10 +51,10 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "Real Property Planning works with attorneys and their clients when real property is involved in probate, trust administration, estate transitions, and senior housing moves throughout Washington State.",
   },
   "/executors": {
-    title: "Estate Property Guide for Executors & Trustees | Real Property Planning",
+    title: "Help for Executors Selling Inherited Property in Washington State | Real Property Planning",
     description:
-      "First time managing an estate property? David Stein walks executors and trustees through every step — assessing the home, coordinating preparation, pricing it right, and handling the sale.",
-    h1: "A Practical Guide for Executors and Trustees Managing Estate Property",
+      "Are you an executor managing a probate property in Washington? Get calm, step-by-step guidance on pricing, preparing, and selling inherited real estate. Serving King, Snohomish & surrounding counties.",
+    h1: "Guidance for Executors Managing Inherited Property",
     quickAnswerQ: "What should an executor do when there is real estate in the estate?",
     quickAnswerA: "Secure the property, confirm your legal authority to act, and get a realistic assessment of the home's condition and market value. David Stein — a licensed Washington broker and certified residential appraiser — handles property evaluation, preparation, pricing, and the full sale process.",
     intro:
