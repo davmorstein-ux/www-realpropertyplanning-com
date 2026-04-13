@@ -121,6 +121,7 @@ import EstatePropertyMistakes from "./pages/insights/EstatePropertyMistakes";
 import OutOfStateExecutorCaseStudy from "./pages/insights/OutOfStateExecutorCaseStudy";
 import HowDoesProbateRealEstateWork from "./pages/insights/HowDoesProbateRealEstateWork";
 import HowToMoveElderlyParentsGuide from "./pages/insights/HowToMoveElderlyParents";
+import PowerOfAttorney from "./pages/PowerOfAttorney";
 import Wills from "./pages/Wills";
 import EstateLiquidation from "./pages/EstateLiquidation";
 import Realtor from "./pages/Realtor";
