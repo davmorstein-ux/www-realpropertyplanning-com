@@ -144,6 +144,10 @@ import CareManagers from "./pages/professionals/CareManagers";
 import KingCountyServiceArea from "./pages/service-areas/KingCounty";
 import SnohomishCountyServiceArea from "./pages/service-areas/SnohomishCounty";
 import PierceCountyServiceArea from "./pages/service-areas/PierceCounty";
+import KitsapCountyServiceArea from "./pages/service-areas/KitsapCounty";
+import SkagitCountyServiceArea from "./pages/service-areas/SkagitCounty";
+import ThurstonCountyServiceArea from "./pages/service-areas/ThurstonCounty";
+import WhatcomCountyServiceArea from "./pages/service-areas/WhatcomCounty";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -310,6 +314,10 @@ const App = () => (
           <Route path="/service-areas/king-county" element={<KingCountyServiceArea />} />
           <Route path="/service-areas/snohomish-county" element={<SnohomishCountyServiceArea />} />
           <Route path="/service-areas/pierce-county" element={<PierceCountyServiceArea />} />
+          <Route path="/service-areas/kitsap-county" element={<KitsapCountyServiceArea />} />
+          <Route path="/service-areas/skagit-county" element={<SkagitCountyServiceArea />} />
+          <Route path="/service-areas/thurston-county" element={<ThurstonCountyServiceArea />} />
+          <Route path="/service-areas/whatcom-county" element={<WhatcomCountyServiceArea />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

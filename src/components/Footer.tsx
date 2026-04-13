@@ -95,8 +95,10 @@ const Footer = () => {
               <li><Link to="/service-areas/king-county" className="hover:text-gold transition-colors">Probate and estate real estate in King County</Link></li>
               <li><Link to="/service-areas/snohomish-county" className="hover:text-gold transition-colors">Probate and estate real estate in Snohomish County</Link></li>
               <li><Link to="/service-areas/pierce-county" className="hover:text-gold transition-colors">Probate and estate real estate in Pierce County</Link></li>
-              <li><Link to="/counties/kitsap" className="hover:text-gold transition-colors">Probate and estate real estate in Kitsap County</Link></li>
-              <li><Link to="/counties/skagit" className="hover:text-gold transition-colors">Estate property guidance in Skagit County</Link></li>
+              <li><Link to="/service-areas/kitsap-county" className="hover:text-gold transition-colors">Probate and estate real estate in Kitsap County</Link></li>
+              <li><Link to="/service-areas/skagit-county" className="hover:text-gold transition-colors">Estate property guidance in Skagit County</Link></li>
+              <li><Link to="/service-areas/thurston-county" className="hover:text-gold transition-colors">Probate and estate real estate in Thurston County</Link></li>
+              <li><Link to="/service-areas/whatcom-county" className="hover:text-gold transition-colors">Probate and estate real estate in Whatcom County</Link></li>
               <li><Link to="/cities-we-serve" className="hover:text-gold transition-colors">All Cities We Serve</Link></li>
             </ul>
           </div>
