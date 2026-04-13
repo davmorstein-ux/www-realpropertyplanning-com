@@ -121,6 +121,7 @@ import EstatePropertyMistakes from "./pages/insights/EstatePropertyMistakes";
 import OutOfStateExecutorCaseStudy from "./pages/insights/OutOfStateExecutorCaseStudy";
 import HowDoesProbateRealEstateWork from "./pages/insights/HowDoesProbateRealEstateWork";
 import HowToMoveElderlyParentsGuide from "./pages/insights/HowToMoveElderlyParents";
+import PowerOfAttorney from "./pages/PowerOfAttorney";
 import Wills from "./pages/Wills";
 import EstateLiquidation from "./pages/EstateLiquidation";
 import Realtor from "./pages/Realtor";
@@ -290,6 +291,7 @@ const App = () => (
           <Route path="/insights-guidance/how-does-probate-real-estate-work-in-washington" element={<HowDoesProbateRealEstateWork />} />
           <Route path="/insights-guidance/how-to-move-elderly-parents-safely-and-respectfully" element={<HowToMoveElderlyParentsGuide />} />
           <Route path="/wills" element={<Wills />} />
+          <Route path="/power-of-attorney" element={<PowerOfAttorney />} />
           <Route path="/estate-liquidation" element={<EstateLiquidation />} />
           <Route path="/realtor" element={<Realtor />} />
           <Route path="/real-estate-appraiser" element={<RealEstateAppraiser />} />
