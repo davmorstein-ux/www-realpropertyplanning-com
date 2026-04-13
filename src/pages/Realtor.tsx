@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import CTASection from "@/components/CTASection";
+import ZillowReviewsCarousel from "@/components/ZillowReviewsCarousel";
 import { Phone, Mail, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
 import davidSteinPhoto from "@/assets/providers/realtor-david-stein-headshot-seattle.webp";
@@ -99,6 +100,9 @@ const Realtor = () => (
           </div>
         </div>
       </section>
+
+      {/* Zillow Reviews */}
+      <ZillowReviewsCarousel />
 
       {/* More information link */}
       <section className="py-6 bg-background">
