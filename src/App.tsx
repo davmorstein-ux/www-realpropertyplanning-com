@@ -291,6 +291,7 @@ const App = () => (
           <Route path="/insights-guidance/how-does-probate-real-estate-work-in-washington" element={<HowDoesProbateRealEstateWork />} />
           <Route path="/insights-guidance/how-to-move-elderly-parents-safely-and-respectfully" element={<HowToMoveElderlyParentsGuide />} />
           <Route path="/wills" element={<Wills />} />
+          <Route path="/power-of-attorney" element={<PowerOfAttorney />} />
           <Route path="/estate-liquidation" element={<EstateLiquidation />} />
           <Route path="/realtor" element={<Realtor />} />
           <Route path="/real-estate-appraiser" element={<RealEstateAppraiser />} />
