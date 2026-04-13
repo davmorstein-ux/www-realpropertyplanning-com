@@ -308,6 +308,8 @@ const App = () => (
           <Route path="/professionals/home-preparation" element={<HomePreparation />} />
           <Route path="/professionals/care-managers" element={<CareManagers />} />
           <Route path="/service-areas/king-county" element={<KingCountyServiceArea />} />
+          <Route path="/service-areas/snohomish-county" element={<SnohomishCountyServiceArea />} />
+          <Route path="/service-areas/pierce-county" element={<PierceCountyServiceArea />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

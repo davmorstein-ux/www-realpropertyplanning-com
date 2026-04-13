@@ -93,8 +93,8 @@ const Footer = () => {
                 <span>Serving clients throughout Washington State, with a strong focus in Western Washington and the Puget Sound region</span>
               </li>
               <li><Link to="/service-areas/king-county" className="hover:text-gold transition-colors">Probate and estate real estate in King County</Link></li>
-              <li><Link to="/counties/snohomish" className="hover:text-gold transition-colors">Probate and estate real estate in Snohomish County</Link></li>
-              <li><Link to="/counties/pierce" className="hover:text-gold transition-colors">Probate and estate real estate in Pierce County</Link></li>
+              <li><Link to="/service-areas/snohomish-county" className="hover:text-gold transition-colors">Probate and estate real estate in Snohomish County</Link></li>
+              <li><Link to="/service-areas/pierce-county" className="hover:text-gold transition-colors">Probate and estate real estate in Pierce County</Link></li>
               <li><Link to="/counties/kitsap" className="hover:text-gold transition-colors">Probate and estate real estate in Kitsap County</Link></li>
               <li><Link to="/counties/skagit" className="hover:text-gold transition-colors">Estate property guidance in Skagit County</Link></li>
               <li><Link to="/cities-we-serve" className="hover:text-gold transition-colors">All Cities We Serve</Link></li>
