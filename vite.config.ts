@@ -61,10 +61,10 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "First time managing an estate property? David Stein walks executors and trustees through every step — assessing the home, coordinating preparation, pricing it right, and handling the sale from start to finish.",
   },
   "/probate-estate-sales": {
-    title: "Probate Property Sales & Estate Real Estate | Real Property Planning",
+    title: "Probate Home Sales in Washington State | Real Property Planning",
     description:
-      "Real Property Planning provides experienced guidance for probate real estate, estate property sales, inherited homes, and trust-owned property throughout Washington State.",
-    h1: "Probate Property Sales and Estate Real Estate",
+      "Selling a home through probate in Washington State? We guide families and estates through the process with expertise, patience, and clear next steps. Licensed Broker & Certified Appraiser.",
+    h1: "Probate Real Estate Sales in Washington State",
     intro:
       "Probate sales involve court timelines, fiduciary duties, deferred maintenance, and family coordination. David Stein manages the entire real estate process throughout Washington State so executors and attorneys can focus on what they do best.",
   },
