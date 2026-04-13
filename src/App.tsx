@@ -141,6 +141,7 @@ import FinancialPlanners from "./pages/professionals/FinancialPlanners";
 import EstateSale from "./pages/professionals/EstateSale";
 import HomePreparation from "./pages/professionals/HomePreparation";
 import CareManagers from "./pages/professionals/CareManagers";
+import KingCountyServiceArea from "./pages/service-areas/KingCounty";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -304,6 +305,7 @@ const App = () => (
           <Route path="/professionals/estate-sale" element={<EstateSale />} />
           <Route path="/professionals/home-preparation" element={<HomePreparation />} />
           <Route path="/professionals/care-managers" element={<CareManagers />} />
+          <Route path="/service-areas/king-county" element={<KingCountyServiceArea />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

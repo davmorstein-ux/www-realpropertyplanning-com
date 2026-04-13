@@ -92,7 +92,7 @@ const Footer = () => {
                 <img src={mappin3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain mt-0.5 shrink-0"  loading="lazy"/>
                 <span>Serving clients throughout Washington State, with a strong focus in Western Washington and the Puget Sound region</span>
               </li>
-              <li><Link to="/counties/king" className="hover:text-gold transition-colors">Probate and estate real estate in King County</Link></li>
+              <li><Link to="/service-areas/king-county" className="hover:text-gold transition-colors">Probate and estate real estate in King County</Link></li>
               <li><Link to="/counties/snohomish" className="hover:text-gold transition-colors">Probate and estate real estate in Snohomish County</Link></li>
               <li><Link to="/counties/pierce" className="hover:text-gold transition-colors">Probate and estate real estate in Pierce County</Link></li>
               <li><Link to="/counties/kitsap" className="hover:text-gold transition-colors">Probate and estate real estate in Kitsap County</Link></li>
