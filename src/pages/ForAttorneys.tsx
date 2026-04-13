@@ -29,8 +29,8 @@ const attorneyTiles: ServiceTile[] = [
 const ForAttorneys = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
-      title="Real Estate Support for Attorneys | Probate, Estate & Family Law | Real Property Planning"
-      description="Licensed real estate broker and certified residential appraiser supporting attorneys with probate sales, estate property coordination, valuation guidance, and family law property matters throughout Washington State."
+      title="Probate Real Estate Services for Attorneys in Washington State | Real Property Planning"
+      description="A trusted real estate resource for attorneys handling probate and estate matters in Washington State. Licensed Broker & Certified Appraiser with deep expertise in inherited and court-supervised property sales."
     />
     <BreadcrumbSchema items={[{ name: "For Attorneys", url: "/for-attorneys" }]} />
     <Header />
@@ -47,7 +47,7 @@ const ForAttorneys = () => (
             For Attorneys
           </p>
           <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-foreground leading-tight mb-4">
-            When Your Client Has a Property to Deal With
+            Real Estate Support for Probate &amp; Estate Attorneys
           </h1>
           <p className="text-muted-foreground/70 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-8" style={{ maskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)' }}>
             Real Property Planning handles valuation, preparation, coordination, and sale — so you and your client can focus on legal and financial priorities.
