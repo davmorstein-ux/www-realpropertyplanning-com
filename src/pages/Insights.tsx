@@ -131,7 +131,7 @@ const categories: Category[] = [
       {
         title: "How to Move Elderly Parents Safely and Respectfully",
         description: "Guidance for families coordinating a move from a longtime home to a new living situation.",
-        href: "/how-to-move-elderly-parents",
+        href: "/insights-guidance/how-to-move-elderly-parents-safely-and-respectfully",
       },
     ],
   },
