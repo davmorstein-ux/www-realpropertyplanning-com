@@ -21,9 +21,9 @@ interface RouteMeta {
 
 const ROUTE_METADATA: Record<string, RouteMeta> = {
   "/": {
-    title: "Probate Real Estate & Inherited Property Guidance | Real Property Planning",
+    title: "Probate & Estate Real Estate in Washington State | Real Property Planning",
     description:
-      "Real Property Planning helps attorneys, executors, trustees, fiduciaries, and families navigate probate real estate, inherited homes, estate sales, and senior transitions throughout Washington State.",
+      "Calm, experienced guidance for families navigating probate, inherited property, and senior housing transitions across Washington State. Licensed Broker & Certified Appraiser. Call (206) 900-3015.",
     h1: "Probate, Estate & Senior Transition Real Estate in Washington State",
     intro:
       "Guiding seniors, families, and professionals through real estate and housing transitions across Washington State — downsizing, relocation, probate, inherited property, and senior living decisions — with calm guidance, practical coordination, and clear next steps.",
