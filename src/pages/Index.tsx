@@ -33,8 +33,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-cream">
       <SEOHead
-        title="Probate & Estate Real Estate | Washington State | Real Property Planning"
-        description="Helping families, attorneys, and trustees navigate inherited homes, probate sales, and senior housing transitions across Western Washington. David Stein — licensed broker and certified appraiser with 20+ years of experience."
+        title="Probate & Estate Real Estate in Washington State | Real Property Planning"
+        description="Calm, experienced guidance for families navigating probate, inherited property, and senior housing transitions across Washington State. Licensed Broker & Certified Appraiser. Call (206) 900-3015."
         jsonLd={jsonLd}
       />
       <Header />
