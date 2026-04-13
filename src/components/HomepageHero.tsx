@@ -7,56 +7,6 @@ const HomepageHero = () => {
       <div className="flex flex-col items-center px-6 lg:px-8 py-1 lg:py-1 w-full max-w-6xl mx-auto text-center">
         {/* Logo — fixed-height wrapper prevents CLS; image overflows to show full artwork */}
         <div className="w-[588px] md:w-[726px] lg:w-[864px] max-w-[85vw] mb-1 relative" style={{ height: "clamp(259px, 35vw, 415px)" }}>
-          {/* SVG overlay with shooting star */}
-          <svg
-            className="absolute inset-0 w-full h-full"
-            style={{ pointerEvents: "none", zIndex: 2 }}
-            xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="xMidYMid slice"
-            aria-hidden="true"
-          >
-            <defs>
-              <linearGradient id="shooting-star-grad" x1="100%" y1="0%" x2="0%" y2="0%">
-                <stop offset="0%" stopColor="white" stopOpacity="1" />
-                <stop offset="100%" stopColor="white" stopOpacity="0" />
-              </linearGradient>
-              <style>{`
-                @keyframes shooting-star-move {
-                  0% {
-                    transform: translate(0, 0);
-                    opacity: 0;
-                  }
-                  5% {
-                    opacity: 0.75;
-                  }
-                  14% {
-                    opacity: 0.75;
-                  }
-                  17.14% {
-                    transform: translate(-50%, -25%);
-                    opacity: 0;
-                  }
-                  100% {
-                    transform: translate(-50%, -25%);
-                    opacity: 0;
-                  }
-                }
-                .shooting-star {
-                  animation: shooting-star-move 7s linear infinite;
-                  will-change: transform, opacity;
-                }
-              `}</style>
-            </defs>
-            <ellipse
-              className="shooting-star"
-              cx="75%"
-              cy="45%"
-              rx="18"
-              ry="2"
-              fill="url(#shooting-star-grad)"
-              transform="rotate(-30, 75, 45)"
-            />
-          </svg>
           <img
             src={logoBright}
             alt="Real Property Planning logo"
