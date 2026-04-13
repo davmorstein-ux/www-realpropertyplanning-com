@@ -38,8 +38,8 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background">
        <SEOHead
-        title="About David Stein — Probate, Estate & Senior Transition Broker | Washington State"
-        description="David Stein is a Washington State licensed real estate broker and certified residential appraiser specializing in probate, estate, inherited property, and senior transition real estate throughout Washington State."
+        title="About Real Property Planning | Licensed Broker & Certified Appraiser in Washington State"
+        description="Real Property Planning helps families, seniors, and legal professionals navigate life's most important real estate transitions across Washington State with calm guidance and deep local expertise."
         jsonLd={{
           "@context": "https://schema.org",
           ...davidSteinPerson,
@@ -59,7 +59,7 @@ const About = () => {
               About
             </p>
              <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight">
-              About David Stein
+              About Real Property Planning
             </h1>
             <p className="text-lg text-primary-foreground/70 leading-relaxed mt-4">
                Washington State real estate broker with eXp Realty, specializing in senior relocation, estate and inherited property sales, and trust &amp; probate real estate.

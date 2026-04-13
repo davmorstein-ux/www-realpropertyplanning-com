@@ -147,10 +147,10 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "Real Property Planning collaborates with attorneys, CPAs, senior move managers, and other professionals who assist families navigating probate property, estate transitions, and senior housing decisions.",
   },
   "/about": {
-    title: "About David Stein — Broker & Certified Appraiser | Real Property Planning",
+    title: "About Real Property Planning | Licensed Broker & Certified Appraiser in Washington State",
     description:
-      "Meet David Stein — the Washington broker and certified appraiser behind Real Property Planning. Over 20 years of focused experience helping attorneys, executors, and families with estate property.",
-    h1: "About David Stein",
+      "Real Property Planning helps families, seniors, and legal professionals navigate life's most important real estate transitions across Washington State with calm guidance and deep local expertise.",
+    h1: "About Real Property Planning",
     intro:
       "David Stein is a licensed real estate broker and Washington state certified residential appraiser with over 20 years of focused experience in probate real estate, inherited property, estate sales, and senior transitions throughout Washington State, with a strong focus in Western Washington and the Puget Sound region.",
   },
