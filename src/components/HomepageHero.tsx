@@ -9,7 +9,7 @@ const HomepageHero = () => {
         <div className="w-[588px] md:w-[726px] lg:w-[864px] max-w-[85vw] mb-1 relative" style={{ height: "clamp(259px, 35vw, 415px)" }}>
           <img
             src={logoBright}
-            alt="Real Property Planning logo"
+            alt="Real Property Planning — probate and estate real estate guidance in Washington State"
             className="w-full h-auto absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
             style={{ zIndex: 1 }}
             width={1600}

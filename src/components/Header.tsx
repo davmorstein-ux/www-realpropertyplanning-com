@@ -174,7 +174,7 @@ const Header = () => {
             <Link to="/" className="flex items-center">
               <img
                 src={logo}
-                alt="Real Property Planning logo – estate real estate planning and property transition services"
+                alt="Real Property Planning — probate and estate real estate guidance in Washington State"
                 className={`h-auto max-h-[90px] w-[400px] object-contain transition-all duration-300 md:w-[425px] lg:w-[775px] xl:w-[875px] ${
                   scrolled ? "w-[350px] md:w-[350px] lg:w-[625px] xl:w-[700px]" : ""
                 }`}
