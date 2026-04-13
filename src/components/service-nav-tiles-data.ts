@@ -14,6 +14,7 @@ import iconSeniorLiving from "@/assets/icons/senior-living-placement-icon-washin
 import iconLending from "@/assets/icons/real-estate-lending-services-icon-washington.webp";
 import iconWills from "@/assets/icons/estate-wills-planning-icon-washington.webp";
 import iconEstateLiquidation from "@/assets/icons/estate-liquidation-services-icon-washington.webp";
+import iconPowerOfAttorney from "@/assets/icons/power-of-attorney-icon-washington.webp";
 import iconRealtor from "@/assets/icons/realtor-real-estate-agent-icon-washington.webp";
 import iconAppraiser from "@/assets/icons/real-estate-appraiser-icon-washington.webp";
 
@@ -58,6 +59,7 @@ export const tileCategories: TileCategory[] = [
       { title: "Executors", subtitle: "", href: "/executors", iconSrc: iconExecutors, iconOffsetY: "-2%", mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "6%" },
       { title: "Trustees", subtitle: "", href: "/trustees", iconSrc: iconTrustees, mobileTextDown: true, mobileIconDown: true },
       { title: "Wills", subtitle: "", href: "/wills", iconSrc: iconWills, mobileTextDown: true, mobileIconDown: true },
+      { title: "Power of\nAttorney", subtitle: "", href: "/power-of-attorney", iconSrc: iconPowerOfAttorney, labelSpacing: "tight", mobileTextDown: true, mobileIconDown: true },
       { title: "Probate Terms", subtitle: "", href: "/terminology", iconSrc: iconProbateTerms, iconOffsetY: "-9%", mobileTextDown: true, mobileIconDown: true },
     ],
   },
