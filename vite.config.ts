@@ -41,10 +41,10 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     ],
   },
   "/for-attorneys": {
-    title: "Real Estate Resource for Attorneys & Fiduciaries | Real Property Planning",
+    title: "Probate Real Estate Services for Attorneys in Washington State | Real Property Planning",
     description:
-      "Real Property Planning supports attorneys and fiduciaries with probate real estate, inherited property sales, trust-owned homes, valuation insight, and coordinated property guidance throughout Washington State.",
-    h1: "A Real Estate Resource for Attorneys and Fiduciaries",
+      "A trusted real estate resource for attorneys handling probate and estate matters in Washington State. Licensed Broker & Certified Appraiser with deep expertise in inherited and court-supervised property sales.",
+    h1: "Real Estate Support for Probate & Estate Attorneys",
     quickAnswerQ: "How does David Stein support attorneys with estate and probate real estate?",
     quickAnswerA: "David handles the real estate side of estate, probate, and family law matters — property assessment, valuation-informed pricing, preparation coordination, and sale management — so attorneys and their clients can focus on the legal and financial priorities.",
     intro:
