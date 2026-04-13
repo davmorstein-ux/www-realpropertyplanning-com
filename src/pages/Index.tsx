@@ -138,7 +138,7 @@ const Index = () => {
                 </a>
               </div>
               <div className="mt-8 flex items-center gap-3">
-                <img src={expRealtyLogo} alt="eXp Realty" className="h-6 w-auto opacity-50" loading="lazy" />
+                <img src={expRealtyLogo} alt="eXp Realty — brokerage for Real Property Planning in Washington State" className="h-6 w-auto opacity-50" loading="lazy" />
                 <span className="text-primary-foreground/40 text-sm">Broker #113972 · Appraiser #1702080</span>
               </div>
             </div>
