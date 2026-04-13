@@ -168,12 +168,25 @@ const HowDoesProbateRealEstateWork = () => (
       </div>
     </section>
 
-    <NextStepBlock
-      heading="Need Help With a Probate Property in Washington?"
-      text="If you are an executor, trustee, or family member navigating the sale of probate real estate in Washington State, Real Property Planning can help. We bring calm, experienced guidance to every step of the process."
-      ctaText="Contact Us"
-      ctaHref="/contact"
-    />
+    {/* CTA */}
+    <section className="py-14 md:py-20 bg-warm-bg">
+      <div className="container px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-4">
+            Need Help With a Probate Property in Washington?
+          </h2>
+          <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-8">
+            If you are an executor, trustee, or family member navigating the sale of probate real estate in Washington State, Real Property Planning can help. We bring calm, experienced guidance to every step of the process.
+          </p>
+          <a
+            href="/contact"
+            className="inline-flex items-center justify-center rounded-md bg-gold px-8 py-3 text-sm font-semibold text-white shadow-sm hover:bg-gold-dark transition-colors"
+          >
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </section>
 
     <RelatedServices currentPath="/insights-guidance/how-does-probate-real-estate-work-in-washington" />
     <DisclaimerSection />
