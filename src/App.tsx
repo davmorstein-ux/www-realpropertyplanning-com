@@ -142,6 +142,8 @@ import EstateSale from "./pages/professionals/EstateSale";
 import HomePreparation from "./pages/professionals/HomePreparation";
 import CareManagers from "./pages/professionals/CareManagers";
 import KingCountyServiceArea from "./pages/service-areas/KingCounty";
+import SnohomishCountyServiceArea from "./pages/service-areas/SnohomishCounty";
+import PierceCountyServiceArea from "./pages/service-areas/PierceCounty";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -306,6 +308,8 @@ const App = () => (
           <Route path="/professionals/home-preparation" element={<HomePreparation />} />
           <Route path="/professionals/care-managers" element={<CareManagers />} />
           <Route path="/service-areas/king-county" element={<KingCountyServiceArea />} />
+          <Route path="/service-areas/snohomish-county" element={<SnohomishCountyServiceArea />} />
+          <Route path="/service-areas/pierce-county" element={<PierceCountyServiceArea />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

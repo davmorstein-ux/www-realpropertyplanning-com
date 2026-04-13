@@ -62,7 +62,7 @@ const KingCountyServiceArea = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
       title="Probate, Estate & Senior Transition Real Estate in King County, WA | Real Property Planning"
-      description="Serving families, executors, attorneys, and seniors throughout King County Washington — Seattle, Bellevue, Kirkland, Redmond, Bothell, Woodinville, Renton, and beyond. Probate sales, certified appraisals, and senior transitions."
+      description="Serving families, executors, attorneys, and seniors throughout King County — Seattle, Bellevue, Kirkland, Redmond, Bothell, Woodinville, Renton, and beyond. Probate sales, certified appraisals, and senior transitions."
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema items={[
