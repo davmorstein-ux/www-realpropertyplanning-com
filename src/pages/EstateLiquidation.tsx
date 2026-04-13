@@ -29,7 +29,7 @@ const EstateLiquidation = () => (
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <div className="flex justify-center mb-8 md:mb-10">
-              <img src={iconEstateLiquidation} alt="Estate Liquidation" className="block w-full max-w-[23rem] h-auto object-contain"  loading="lazy"/>
+              <img src={iconEstateLiquidation} alt="Estate liquidation and inherited property guidance in Washington State" className="block w-full max-w-[23rem] h-auto object-contain"  loading="lazy"/>
             </div>
             <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-sm">Services</p>
             <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-foreground leading-tight mb-4">

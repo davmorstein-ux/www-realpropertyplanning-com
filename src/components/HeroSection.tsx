@@ -23,7 +23,7 @@ const HeroSection = () => {
             <div className="mb-6">
               <img
                 src={logo}
-                alt="Real Property Planning"
+                alt="Real Property Planning — probate and estate real estate guidance in Washington State"
                 className="w-[260px] md:w-[500px] lg:w-[700px] max-w-full h-auto object-contain"
                 width={700}
                 height={200}

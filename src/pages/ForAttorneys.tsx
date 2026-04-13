@@ -41,7 +41,7 @@ const ForAttorneys = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <div className="flex justify-center mb-8 md:mb-10">
-            <img src={iconAttorneys} alt="Attorneys" className="block w-full max-w-[23rem] h-auto object-contain"  loading="lazy"/>
+            <img src={iconAttorneys} alt="Probate real estate services for attorneys in Washington State" className="block w-full max-w-[23rem] h-auto object-contain"  loading="lazy"/>
           </div>
           <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-sm">
             For Attorneys

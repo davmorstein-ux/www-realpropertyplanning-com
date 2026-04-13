@@ -165,7 +165,7 @@ const ProbateEstateSales = () => {
       <section className="bg-primary pt-16 pb-12 lg:pt-32 lg:pb-28">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <img src={iconProbateSales} alt="" aria-hidden="true" className="mx-auto w-60 h-auto object-contain mb-8"  loading="lazy"/>
+            <img src={iconProbateSales} alt="Probate real estate sales guidance in Washington State" className="mx-auto w-60 h-auto object-contain mb-8"  loading="lazy"/>
             <p className="text-gold font-bold tracking-widest uppercase mb-4 text-base">
               Probate & Estate Property Sales
             </p>
