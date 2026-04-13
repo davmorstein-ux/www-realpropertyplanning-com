@@ -7,10 +7,21 @@ const HomepageHero = () => {
       <div className="flex flex-col items-center px-6 lg:px-8 py-1 lg:py-1 w-full max-w-6xl mx-auto text-center">
         {/* Logo — fixed-height wrapper prevents CLS; image overflows to show full artwork */}
         <div className="w-[588px] md:w-[726px] lg:w-[864px] max-w-[85vw] mb-1 relative" style={{ height: "clamp(259px, 35vw, 415px)" }}>
+          {/* SVG overlay behind the logo */}
+          <svg
+            className="absolute inset-0 w-full h-full"
+            style={{ pointerEvents: "none", zIndex: 0 }}
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="xMidYMid slice"
+            aria-hidden="true"
+          >
+            <rect width="100%" height="100%" fill="transparent" />
+          </svg>
           <img
             src={logoBright}
             alt="Real Property Planning logo"
             className="w-full h-auto absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+            style={{ zIndex: 1 }}
             width={1600}
             height={1050}
             loading="eager"
