@@ -15,10 +15,10 @@ import logo from "@/assets/real-property-planning-logo-bright-seattle.webp";
 const leftNodes = [
   { label: "Attorneys", to: "/for-attorneys", icon: iconAttorney },
   { label: "Senior Move Managers", to: "/senior-transitions", icon: iconMovers },
-  { label: "Adult Family Homes", to: "/for-senior-living", icon: iconAdultFamily },
+  { label: "Adult Family Homes", to: "/senior-living-and-relocation", icon: iconAdultFamily },
   ,
   { label: "Senior Living Placement", to: "/senior-transitions", icon: iconPlacement },
-  { label: "Mortgage & Lending", to: "/for-mortgage-lending", icon: iconLending },
+  { label: "Mortgage & Lending", to: "/lenders-and-financing-specialists", icon: iconLending },
 ];
 
 const rightNodes = [
