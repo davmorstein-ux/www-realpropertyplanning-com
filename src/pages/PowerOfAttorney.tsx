@@ -240,7 +240,7 @@ const PowerOfAttorney = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="tel:2069003015" className="inline-flex items-center justify-center gap-2 bg-gold hover:bg-gold/90 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors">
-                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-6 h-6 object-contain" />
+                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-6 h-6 object-contain" loading="lazy" />
                   Call (206) 900-3015
                 </a>
                 <Link to="/contact" className="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-primary-foreground font-semibold px-8 py-4 rounded-lg text-lg transition-colors border border-white/20">
