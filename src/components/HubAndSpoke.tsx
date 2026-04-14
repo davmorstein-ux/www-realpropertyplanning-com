@@ -22,7 +22,6 @@ interface Node {
 }
 
 const forceSize: React.CSSProperties = { width: 72, height: 72, minWidth: 72, minHeight: 72, objectFit: "contain", display: "block", margin: "auto" };
-const brokerCenter: React.CSSProperties = { display: "block", marginLeft: "auto", marginRight: "auto", width: 72, height: 72, objectFit: "contain", position: "relative", left: "50%", transform: "translateX(-50%)" };
 
 const leftNodes: Node[] = [
   { label: "Attorneys", to: "/for-attorneys", icon: iconAttorney, dx: -260, dy: -240, iconStyle: forceSize },
@@ -33,7 +32,7 @@ const leftNodes: Node[] = [
 ];
 
 const rightNodes: Node[] = [
-  { label: "Real Estate Brokers", to: "/realtor", icon: iconRealtor, dx: 260, dy: -240, iconStyle: brokerCenter },
+  { label: "Real Estate Brokers", to: "/realtor", icon: iconRealtor, dx: 260, dy: -240, iconStyle: { display: "block", margin: "auto", width: 72, height: 72, objectFit: "contain" as const } },
   { label: "Appraisers", to: "/real-estate-appraiser", icon: iconAppraiser, dx: 340, dy: -120 },
   { label: "CPAs", to: "/cpas", icon: iconCPA, dx: 400, dy: 0 },
   { label: "Financial Planners", to: "/financial-planning", icon: iconFinancial, dx: 340, dy: 120 },
@@ -116,9 +115,13 @@ const HubAndSpoke = () => {
             left: "50%",
             top: "50%",
             transform: "translate(-50%, -50%)",
+            background: "transparent",
+            border: "none",
+            boxShadow: "none",
+            borderRadius: 0,
           }}
         >
-          <img src={logo} alt="Real Property Planning" className="w-[180px] h-auto" />
+          <img src={logo} alt="Real Property Planning" className="w-[180px] h-auto" style={{ background: "transparent", border: "none", boxShadow: "none" }} />
         </div>
 
         {/* Nodes */}
