@@ -136,7 +136,7 @@ const HubAndSpoke = () => {
               className="flex flex-col items-center gap-1.5 group"
               aria-label={node.label}
             >
-              <div className="w-[80px] h-[80px] rounded-full border-[3px] border-[#C9A84C] bg-white flex items-center justify-center transition-all duration-200 group-hover:scale-[1.08] group-hover:border-[#E8C96A]">
+              <div className="w-[90px] h-[90px] rounded-full border-[3px] border-[#C9A84C] bg-white flex items-center justify-center transition-all duration-200 group-hover:scale-[1.08] group-hover:border-[#E8C96A]">
                 <img src={node.icon} alt="" aria-hidden="true" className="w-10 h-10 object-contain" loading="lazy" />
               </div>
               <span className="text-[12px] text-white text-center leading-tight max-w-[100px] font-medium">
