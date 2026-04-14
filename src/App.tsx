@@ -24,6 +24,8 @@ import Trustees from "./pages/Trustees";
 import ForCPAs from "./pages/ForCPAs";
 import ForFinancialPlanners from "./pages/ForFinancialPlanners";
 import About from "./pages/About";
+import AboutPlatform from "./pages/AboutPlatform";
+import JoinTheNetwork from "./pages/JoinTheNetwork";
 import FAQ from "./pages/FAQ";
 import Terminology from "./pages/Terminology";
 import Contact from "./pages/Contact";
@@ -182,7 +184,9 @@ const App = () => (
           <Route path="/trustees" element={<Trustees />} />
           <Route path="/for-cpas" element={<ForCPAs />} />
           <Route path="/for-financial-planners" element={<ForFinancialPlanners />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/about" element={<AboutPlatform />} />
+          <Route path="/about-david-stein" element={<About />} />
+          <Route path="/join-the-network" element={<JoinTheNetwork />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/terminology" element={<Terminology />} />
           <Route path="/contact" element={<Contact />} />
