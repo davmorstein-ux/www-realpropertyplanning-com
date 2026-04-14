@@ -17,9 +17,34 @@ const areaServed = [
   { "@type": "Place", name: "Puget Sound region, Washington" },
   { "@type": "City", name: "Seattle", containedInPlace: { "@type": "State", name: "Washington" } },
   { "@type": "City", name: "Bellevue", containedInPlace: { "@type": "State", name: "Washington" } },
+  { "@type": "City", name: "Kirkland", containedInPlace: { "@type": "State", name: "Washington" } },
+  { "@type": "City", name: "Redmond", containedInPlace: { "@type": "State", name: "Washington" } },
+  { "@type": "City", name: "Bothell", containedInPlace: { "@type": "State", name: "Washington" } },
+  { "@type": "City", name: "Woodinville", containedInPlace: { "@type": "State", name: "Washington" } },
+  { "@type": "City", name: "Issaquah", containedInPlace: { "@type": "State", name: "Washington" } },
+  { "@type": "City", name: "Sammamish", containedInPlace: { "@type": "State", name: "Washington" } },
+  { "@type": "City", name: "Mercer Island", containedInPlace: { "@type": "State", name: "Washington" } },
+  { "@type": "City", name: "Shoreline", containedInPlace: { "@type": "State", name: "Washington" } },
+  { "@type": "City", name: "Renton", containedInPlace: { "@type": "State", name: "Washington" } },
   { "@type": "City", name: "Everett", containedInPlace: { "@type": "State", name: "Washington" } },
+  { "@type": "City", name: "Edmonds", containedInPlace: { "@type": "State", name: "Washington" } },
+  { "@type": "City", name: "Lynnwood", containedInPlace: { "@type": "State", name: "Washington" } },
+  { "@type": "City", name: "Mukilteo", containedInPlace: { "@type": "State", name: "Washington" } },
+  { "@type": "City", name: "Mill Creek", containedInPlace: { "@type": "State", name: "Washington" } },
+  { "@type": "City", name: "Marysville", containedInPlace: { "@type": "State", name: "Washington" } },
   { "@type": "City", name: "Tacoma", containedInPlace: { "@type": "State", name: "Washington" } },
+  { "@type": "City", name: "Puyallup", containedInPlace: { "@type": "State", name: "Washington" } },
+  { "@type": "City", name: "Gig Harbor", containedInPlace: { "@type": "State", name: "Washington" } },
+  { "@type": "City", name: "Lakewood", containedInPlace: { "@type": "State", name: "Washington" } },
   { "@type": "City", name: "Bremerton", containedInPlace: { "@type": "State", name: "Washington" } },
+  { "@type": "City", name: "Silverdale", containedInPlace: { "@type": "State", name: "Washington" } },
+  { "@type": "City", name: "Poulsbo", containedInPlace: { "@type": "State", name: "Washington" } },
+  { "@type": "City", name: "Bainbridge Island", containedInPlace: { "@type": "State", name: "Washington" } },
+  { "@type": "City", name: "Port Orchard", containedInPlace: { "@type": "State", name: "Washington" } },
+  { "@type": "City", name: "Mount Vernon", containedInPlace: { "@type": "State", name: "Washington" } },
+  { "@type": "City", name: "Burlington", containedInPlace: { "@type": "State", name: "Washington" } },
+  { "@type": "City", name: "Anacortes", containedInPlace: { "@type": "State", name: "Washington" } },
+  { "@type": "City", name: "La Conner", containedInPlace: { "@type": "State", name: "Washington" } },
 ];
 
 /** Person schema for David Stein — reusable entity across the site */
@@ -28,7 +53,7 @@ export const davidSteinPerson = {
   "@id": `${SITE_URL}/#david-stein`,
   name: "David Stein",
   jobTitle: "Real Estate Broker and State Certified Residential Appraiser",
-  url: `${SITE_URL}/about`,
+  url: `${SITE_URL}/about-david-stein`,
   worksFor: {
     "@type": "RealEstateAgent",
     "@id": `${SITE_URL}/#organization`,
@@ -58,6 +83,7 @@ export const davidSteinPerson = {
       name: "National Association of Estate Planners & Councils",
       url: "https://www.naepc.org",
     },
+    { "@type": "Organization", name: "National Association of Realtors", url: "https://www.nar.realtor" },
   ],
   knowsAbout: [
     "Probate real estate",
@@ -67,47 +93,188 @@ export const davidSteinPerson = {
     "Residential real estate appraisal",
     "Trust-owned real estate",
     "Fiduciary property coordination",
+    "Estate appraisals",
+    "Date of death valuations",
+    "Out-of-state executor coordination",
+    "Senior downsizing",
+    "Adult family homes",
+    "Assisted living transitions",
+    "Washington State probate law",
+    "Puget Sound real estate market",
   ],
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Kirkland",
+    addressRegion: "WA",
+    addressCountry: "US",
+  },
 };
+
+/** Service schema — reusable for each core service */
+export const serviceSchemas = [
+  {
+    "@type": "Service",
+    "@id": `${SITE_URL}/#service-probate-sales`,
+    name: "Probate Real Estate Sales",
+    description:
+      "Full-service real estate guidance for executors, trustees, and families selling estate property during probate in Washington State. Includes property assessment, valuation-informed pricing, preparation coordination, listing, and sale management.",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: areaServed,
+    url: `${SITE_URL}/probate-estate-sales`,
+    serviceType: "Probate Real Estate",
+  },
+  {
+    "@type": "Service",
+    "@id": `${SITE_URL}/#service-estate-appraisals`,
+    name: "Estate & Probate Appraisals",
+    description:
+      "Washington State Certified Residential Appraiser providing defensible valuations for probate, trust administration, estate settlements, date of death valuations, and financial planning purposes throughout the Puget Sound region.",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: areaServed,
+    url: `${SITE_URL}/real-estate-appraiser`,
+    serviceType: "Real Estate Appraisal",
+  },
+  {
+    "@type": "Service",
+    "@id": `${SITE_URL}/#service-senior-transitions`,
+    name: "Senior Housing Transitions",
+    description:
+      "Patient, coordinated real estate guidance for seniors and families navigating the sale of a longtime home — whether moving to assisted living, downsizing, or relocating closer to family. Includes coordination with senior move managers, care teams, and advisors throughout Washington State.",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: areaServed,
+    url: `${SITE_URL}/senior-move-managers`,
+    serviceType: "Senior Real Estate Transition",
+  },
+  {
+    "@type": "Service",
+    "@id": `${SITE_URL}/#service-inherited-property`,
+    name: "Inherited Home Sales",
+    description:
+      "Comprehensive real estate guidance for families and executors selling inherited property in Washington State. Includes honest condition assessment, valuation-informed pricing, cleanout coordination, and full sale management.",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: areaServed,
+    url: `${SITE_URL}/executors`,
+    serviceType: "Inherited Property Sales",
+  },
+  {
+    "@type": "Service",
+    "@id": `${SITE_URL}/#service-professional-network`,
+    name: "Professional Resource Network",
+    description:
+      "Real Property Planning connects families, executors, attorneys, CPAs, and financial planners with trusted professionals throughout Washington State — including senior move managers, adult family home operators, estate liquidators, and more.",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: areaServed,
+    url: `${SITE_URL}/about`,
+    serviceType: "Professional Referral Network",
+  },
+];
 
 export const realEstateAgentSchema = {
   "@context": "https://schema.org",
-  "@type": "RealEstateAgent",
-  "@id": `${SITE_URL}/#organization`,
-  name: BUSINESS_NAME,
-  url: SITE_URL,
-  logo: {
-    "@type": "ImageObject",
-    url: LOGO_URL,
-    width: 400,
-    height: 400,
-  },
-  image: LOGO_URL,
-  description:
-    "Probate real estate, inherited property sales, estate appraisals, and senior housing transitions in Western Washington.",
-  telephone: "(206) 900-3015",
-  email: "david@realpropertyplanning.com",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "1455 NW Leary Way",
-    addressLocality: "Seattle",
-    addressRegion: "WA",
-    postalCode: "98107",
-    addressCountry: "US",
-  },
-  founder: {
-    ...davidSteinPerson,
-  },
-  areaServed: ["King County", "Snohomish County", "Pierce County", "Skagit County", "Kitsap County"],
-  hasCredential: ["Licensed Real Estate Broker", "Washington State Certified Residential Appraiser"],
-  contactPoint: {
-    "@type": "ContactPoint",
-    telephone: "(206) 900-3015",
-    contactType: "customer service",
-    areaServed: "US",
-    availableLanguage: "English",
-  },
-  sameAs: [],
+  "@graph": [
+    {
+      "@type": ["RealEstateAgent", "LocalBusiness"],
+      "@id": `${SITE_URL}/#organization`,
+      name: BUSINESS_NAME,
+      alternateName: "Real Property Planning — Probate & Estate Real Estate Washington State",
+      url: SITE_URL,
+      logo: {
+        "@type": "ImageObject",
+        url: LOGO_URL,
+        width: 400,
+        height: 400,
+      },
+      image: LOGO_URL,
+      description:
+        "Real Property Planning is Washington State's professional resource hub for probate real estate, inherited property sales, estate appraisals, and senior housing transitions. Led by David Stein — a licensed real estate broker and Washington State Certified Residential Appraiser — serving families, executors, attorneys, and professionals throughout the Puget Sound region.",
+      telephone: "(206) 900-3015",
+      email: "david@realpropertyplanning.com",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "1455 NW Leary Way",
+        addressLocality: "Seattle",
+        addressRegion: "WA",
+        postalCode: "98107",
+        addressCountry: "US",
+      },
+      founder: davidSteinPerson,
+      employee: davidSteinPerson,
+      areaServed: areaServed,
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Real Property Planning Services",
+        itemListElement: serviceSchemas,
+      },
+      openingHoursSpecification: [
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          opens: "08:00",
+          closes: "20:00",
+        },
+      ],
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: "(206) 900-3015",
+        email: "david@realpropertyplanning.com",
+        contactType: "customer service",
+        areaServed: "US-WA",
+        availableLanguage: "English",
+        hoursAvailable: {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          opens: "08:00",
+          closes: "20:00",
+        },
+      },
+      memberOf: [
+        {
+          "@type": "Organization",
+          name: "Aging Life Care Association",
+          url: "https://www.aginglifecare.org",
+        },
+        {
+          "@type": "Organization",
+          name: "National Association of Senior Advocates",
+          url: "https://www.naosa.org",
+        },
+        {
+          "@type": "Organization",
+          name: "National Association of Estate Planners & Councils",
+          url: "https://www.naepc.org",
+        },
+        {
+          "@type": "Organization",
+          name: "eXp Realty",
+          url: "https://www.exprealty.com",
+        },
+      ],
+      knowsAbout: [
+        "Probate real estate Washington State",
+        "Inherited property sales",
+        "Estate appraisals",
+        "Senior housing transitions",
+        "Executor real estate guidance",
+        "Trust-owned real estate",
+        "Date of death valuations",
+        "Senior downsizing Puget Sound",
+        "Out-of-state executor coordination",
+        "Estate property preparation",
+        "Valuation-informed pricing",
+        "Probate sales King County",
+        "Probate sales Snohomish County",
+        "Probate sales Pierce County",
+        "Probate sales Kitsap County",
+        "Probate sales Skagit County",
+      ],
+      sameAs: ["https://www.zillow.com/profile/DavidSteinRPP"],
+      priceRange: "$$",
+      currenciesAccepted: "USD",
+      paymentAccepted: "Check, Wire Transfer",
+    },
+    davidSteinPerson,
+    ...serviceSchemas,
+  ],
 };
 
 const publisher = {
@@ -162,6 +329,58 @@ export function articleSchema({
   };
 }
 
+/** Breadcrumb schema — use on inner pages */
+export function breadcrumbSchema(items: { name: string; url: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: `${SITE_URL}${item.url}`,
+    })),
+  };
+}
+
+/** Local business schema for county pages */
+export function countyPageSchema(countyName: string, url: string, description: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    name: `Real Property Planning — ${countyName}`,
+    url: `${SITE_URL}${url}`,
+    description,
+    telephone: "(206) 900-3015",
+    email: "david@realpropertyplanning.com",
+    areaServed: {
+      "@type": "AdministrativeArea",
+      name: countyName,
+      containedInPlace: { "@type": "State", name: "Washington" },
+    },
+    employee: davidSteinPerson,
+    parentOrganization: {
+      "@id": `${SITE_URL}/#organization`,
+    },
+  };
+}
+
+/** FAQ schema — reusable for any page with FAQs */
+export function faqSchema(questions: { question: string; answer: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: questions.map((q) => ({
+      "@type": "Question",
+      name: q.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: q.answer,
+      },
+    })),
+  };
+}
+
 /** Homepage FAQ schema */
 export const homepageFaqSchema = {
   "@context": "https://schema.org",
@@ -212,7 +431,7 @@ export const homepageFaqSchema = {
       name: "What areas does Real Property Planning serve?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We serve all of Western Washington and the Puget Sound region, including King, Snohomish, Pierce, Skagit, and Kitsap Counties — cities like Seattle, Bellevue, Everett, Tacoma, Bainbridge Island, and many more.",
+        text: "We serve all of Western Washington and the Puget Sound region, including King, Snohomish, Pierce, Skagit, and Kitsap Counties — cities like Seattle, Bellevue, Kirkland, Everett, Tacoma, Bainbridge Island, and many more.",
       },
     },
     {
@@ -221,6 +440,30 @@ export const homepageFaqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text: "Simply call (206) 900-3015 or send an email to david@realpropertyplanning.com. There's no pressure — just a calm, honest conversation about your situation.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can Real Property Planning help out-of-state executors?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes — this is one of the most common situations we work with. David manages the full property process locally, including assessment, cleanout coordination, repairs, listing, and sale, with regular updates so out-of-state executors never need to be present for every step.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What professional organizations is Real Property Planning affiliated with?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Real Property Planning is a Corporate Partner of the Aging Life Care Association (ALCA), a recognized member of the National Association of Senior Advocates, and a member of the National Association of Estate Planners & Councils.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is there a cost to consult with Real Property Planning?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Initial consultations are free and carry no obligation. David typically responds within one business day. Call (206) 900-3015 or visit realpropertyplanning.com to get started.",
       },
     },
   ],
