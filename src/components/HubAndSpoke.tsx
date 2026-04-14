@@ -121,7 +121,7 @@ const HubAndSpoke = () => {
               <img
                 src={logo}
                 alt="Real Property Planning — return to homepage"
-                className="max-h-[720px] w-auto cursor-pointer transition-transform duration-300 hover:scale-105"
+                className="max-h-[600px] w-auto cursor-pointer transition-transform duration-300 hover:scale-105"
                 loading="lazy"
               />
             </Link>
