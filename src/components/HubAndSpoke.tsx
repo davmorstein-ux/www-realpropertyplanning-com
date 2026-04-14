@@ -10,7 +10,7 @@ import iconAppraiser from "@/assets/icons/real-estate-appraiser-icon-washington.
 import iconCPA from "@/assets/icons/estate-cpas-financial-icon-washington.webp";
 import iconFinancial from "@/assets/icons/estate-financial-planning-icon-washington.webp";
 import iconLiquidation from "@/assets/icons/estate-liquidation-services-icon-washington.webp";
-import logo from "@/assets/real-property-planning-logo-bright-seattle.webp";
+import logo from "@/assets/real-property-planning-logo-transparent-seattle.webp";
 
 interface Node {
   label: string;
