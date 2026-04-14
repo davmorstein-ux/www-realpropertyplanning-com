@@ -67,7 +67,7 @@ const AboutPlatform = () => {
       <main id="main-content">
         <HubAndSpoke />
         {/* Hero */}
-        <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
+        <section className="bg-primary pt-6 pb-14 md:pt-6 md:pb-[72px] lg:pt-6 lg:pb-24">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl">
               <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
