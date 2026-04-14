@@ -18,9 +18,12 @@ const OutOfStateExecutorCaseStudy = () => {
       <main id="main-content">
 
       {/* Hero */}
-      <section className="py-14 lg:py-20 bg-primary">
+      <section className="bg-primary pt-3 md:pt-4 pb-12 md:pb-14">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
+            <div className="flex justify-center mb-3 md:mb-4">
+              <img src={heroIcon} alt="" aria-hidden="true" className="block w-full max-w-[23rem] h-auto object-contain" loading="lazy" />
+            </div>
             <span className="inline-block text-[11px] font-semibold uppercase tracking-wider text-gold/80 bg-gold/10 rounded-full px-3 py-1 mb-5">
               Out-of-State Executor · Family Coordination
             </span>
