@@ -7,6 +7,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import ResourceDownloadCard from "@/components/ResourceDownloadCard";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import iconResources from "@/assets/icons/probate-estate-resources-icon-washington.webp";
 
 const categories = [
   {
