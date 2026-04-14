@@ -74,11 +74,11 @@ const MobileSpokeNode = ({ node }: { node: SpokeNodeData }) => (
 
 const HubAndSpoke = () => {
   const centerX = 500;
-  const centerY = CONTAINER_HEIGHT / 2;
+  const centerY = CONTAINER_HEIGHT / 2 - 40;
 
   return (
     <section
-      className="bg-[#1B2A4A] pt-8 lg:pt-10 pb-4"
+      className="bg-[#1B2A4A] pt-4 pb-4"
       aria-label="Real Property Planning professional ecosystem hub connecting families with attorneys, appraisers, real estate brokers, CPAs, financial planners, estate liquidators, adult family homes, senior living placement, senior move managers, and mortgage and lending specialists throughout Washington State"
     >
       {/* Desktop layout */}
