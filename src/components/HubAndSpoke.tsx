@@ -152,16 +152,17 @@ const HubAndSpoke = () => {
           </Link>
         </div>
         <div className="grid grid-cols-2 gap-y-6 gap-x-4">
-          {leftNodes.map((node, i) => (
-            <React.Fragment key={i}>
-              <div className="flex justify-center">
+          {leftNodes.map((node, i) => {
+            const right = rightNodes[i];
+            return [
+              <div key={`l-${i}`} className="flex justify-center">
                 <MobileSpokeNode node={node} />
-              </div>
-              <div className="flex justify-center">
-                <MobileSpokeNode node={rightNodes[i]} />
-              </div>
-            </React.Fragment>
-          ))}
+              </div>,
+              <div key={`r-${i}`} className="flex justify-center">
+                <MobileSpokeNode node={right} />
+              </div>,
+            ];
+          })}
         </div>
       </div>
     </section>
