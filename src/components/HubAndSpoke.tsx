@@ -138,7 +138,7 @@ const HubAndSpoke = () => {
               aria-label={node.label}
             >
               <div className="w-[90px] h-[90px] rounded-full border-[3px] border-[#C9A84C] bg-[#FFFFFF] flex items-center justify-center transition-all duration-200 group-hover:scale-[1.08] group-hover:border-[#E8C96A]">
-                <img src={node.icon} alt="" aria-hidden="true" className="w-[72px] h-[72px] object-contain" loading="lazy" />
+                <img src={node.icon} alt="" aria-hidden="true" className={`w-[72px] h-[72px] object-contain ${node.iconClass || ""}`} loading="lazy" />
               </div>
               <span className="text-[12px] text-white text-center leading-tight max-w-[100px] font-medium">
                 {node.label}
