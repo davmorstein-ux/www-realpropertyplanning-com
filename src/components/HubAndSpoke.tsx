@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 import iconAttorney from "@/assets/icons/real-estate-attorney-services-icon-washington.webp";
 import iconMovers from "@/assets/icons/senior-movers-relocation-icon-washington.webp";
-import iconAdultFamily from "@/assets/icons/senior-adult-family-home-icon-washington.webp";
+import iconAdultFamily from "@/assets/icons/senior-adult-family-home-3d-washington.webp";
 import iconPlacement from "@/assets/icons/senior-living-placement-icon-washington.webp";
 import iconLending from "@/assets/icons/real-estate-lenders-3d-icon-washington.webp";
 import iconRealtor from "@/assets/icons/realtor-real-estate-agent-icon-washington.webp";
@@ -26,7 +26,7 @@ const forceSize: React.CSSProperties = { width: 72, height: 72, minWidth: 72, mi
 const leftNodes: Node[] = [
   { label: "Attorneys", to: "/for-attorneys", icon: iconAttorney, dx: -260, dy: -240, iconStyle: forceSize },
   { label: "Senior Move Managers", to: "/senior-transitions", icon: iconMovers, dx: -340, dy: -120 },
-  { label: "Adult Family Homes", to: "/senior-living", icon: iconAdultFamily, dx: -400, dy: 0, iconStyle: forceSize },
+  { label: "Adult Family Homes", to: "/senior-living", icon: iconAdultFamily, dx: -400, dy: 0 },
   { label: "Senior Living Placement", to: "/senior-transitions", icon: iconPlacement, dx: -340, dy: 120 },
   { label: "Mortgage & Lending", to: "/lenders-financing", icon: iconLending, dx: -260, dy: 240, iconStyle: forceSize },
 ];
