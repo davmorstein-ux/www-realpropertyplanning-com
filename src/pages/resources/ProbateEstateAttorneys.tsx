@@ -6,6 +6,7 @@ import RelatedServices from "@/components/RelatedServices";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import CTASection from "@/components/CTASection";
 import { Link } from "react-router-dom";
+import heroIcon from "@/assets/icons/probate-estate-resources-icon-washington.webp";
 
 const ProbateEstateAttorneys = () => (
   <>
@@ -26,6 +27,10 @@ const ProbateEstateAttorneys = () => (
       <section className="bg-primary pt-3 md:pt-4 pb-12 md:pb-14">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
+            <div className="flex justify-center mb-3 md:mb-4">
+              <img src={heroIcon} alt="" aria-hidden="true" className="block w-full max-w-[23rem] h-auto object-contain" loading="lazy" />
+            </div>
+
             <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-base">Resources</p>
             <h1 className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground leading-tight mb-4">Probate & Estate Attorneys</h1>
           </div>

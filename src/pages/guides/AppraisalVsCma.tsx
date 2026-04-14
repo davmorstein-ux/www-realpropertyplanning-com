@@ -12,6 +12,7 @@ import NextStepBlock from "@/components/NextStepBlock";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
+import heroIcon from "@/assets/icons/probate-guidance-book-open-icon-washington.webp";
 
 const faqs = [
   { question: "Which should I get — an appraisal or a CMA?", answer: "It depends on the purpose. A CMA is typically used for listing pricing decisions. A formal appraisal is used when legal documentation, court submission, tax reporting, or lending requirements demand a certified independent valuation. David can advise on which is appropriate for your situation." },
@@ -46,6 +47,10 @@ const AppraisalVsCma = () => (
     <section className="bg-primary pt-3 md:pt-4 pb-12 md:pb-14">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl">
+            <div className="flex justify-center mb-3 md:mb-4">
+              <img src={heroIcon} alt="" aria-hidden="true" className="block w-full max-w-[23rem] h-auto object-contain" loading="lazy" />
+            </div>
+
           <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">Educational Guide</p>
           <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
             Appraisal vs. CMA: What Estate Property Sellers Need to Know

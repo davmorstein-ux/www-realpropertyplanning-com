@@ -8,6 +8,7 @@ import RelatedServices from "@/components/RelatedServices";
 import DirectAnswerBlock from "@/components/DirectAnswerBlock";
 import { Link } from "react-router-dom";
 import { Phone, ShieldCheck, Heart, Globe, MapPin } from "lucide-react";
+import heroIcon from "@/assets/icons/real-estate-service-areas-map-icon-washington.webp";
 
 const sectionBase = "py-14 md:py-20";
 const contentWrap = "container px-6 lg:px-8";
@@ -77,6 +78,10 @@ const KingCountyServiceArea = () => (
     <section className="bg-primary pt-3 md:pt-4 pb-12 md:pb-14">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl">
+            <div className="flex justify-center mb-3 md:mb-4">
+              <img src={heroIcon} alt="" aria-hidden="true" className="block w-full max-w-[23rem] h-auto object-contain" loading="lazy" />
+            </div>
+
           <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">King County, Washington</p>
           <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
             Probate &amp; Estate Real Estate in King County, Washington

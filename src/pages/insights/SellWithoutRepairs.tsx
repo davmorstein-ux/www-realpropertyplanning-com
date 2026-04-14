@@ -11,6 +11,7 @@ import PageFAQ from "@/components/PageFAQ";
 import MidPageCTA from "@/components/MidPageCTA";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import heroIcon from "@/assets/icons/probate-guidance-book-open-icon-washington.webp";
 
 const faqs = [
   { question: "Will I get less money selling as-is?", answer: "Usually, yes — but not always as much less as people fear. Buyers who purchase as-is properties factor in repair costs, but a well-priced as-is home in a desirable location can still attract strong offers. The key is pricing accurately based on current condition, not what the home could be worth after renovations." },
@@ -45,6 +46,10 @@ const SellWithoutRepairs = () => (
     <section className="bg-primary pt-3 md:pt-4 pb-12 md:pb-14">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl">
+            <div className="flex justify-center mb-3 md:mb-4">
+              <img src={heroIcon} alt="" aria-hidden="true" className="block w-full max-w-[23rem] h-auto object-contain" loading="lazy" />
+            </div>
+
           <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">Insights</p>
           <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
             Can You Sell an Inherited House Without Fixing It Up?

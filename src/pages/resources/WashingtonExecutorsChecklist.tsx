@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { FileText, ArrowRight, AlertCircle } from "lucide-react";
 import GoldCheck3D from "@/components/GoldCheck3D";
+import heroIcon from "@/assets/icons/probate-estate-resources-icon-washington.webp";
 
 const steps = [
   {
@@ -101,6 +102,10 @@ const WashingtonExecutorsChecklist = () => {
               <p className="text-primary-foreground/80 text-lg md:text-xl leading-relaxed mb-4 max-w-2xl mx-auto">
                 A practical step-by-step guide for executors, trustees, and families handling Washington real estate during probate, trust administration, or major life transitions.
               </p>
+            <div className="flex justify-center mb-3 md:mb-4">
+              <img src={heroIcon} alt="" aria-hidden="true" className="block w-full max-w-[23rem] h-auto object-contain" loading="lazy" />
+            </div>
+
               <p className="text-gold/90 text-base italic">
                 Created for Washington families who need clarity, not guesswork.
               </p>
