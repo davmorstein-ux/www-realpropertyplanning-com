@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { articleSchema } from "@/lib/schema";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
+import HubAndSpoke from "@/components/HubAndSpoke";
 
 const jsonLd = articleSchema({
   headline: "About Real Property Planning",
@@ -105,6 +106,8 @@ const AboutPlatform = () => {
             </div>
           </div>
         </section>
+
+        <HubAndSpoke />
 
         {/* Section 2: Who This Is For */}
         <section className="py-20 lg:py-28 bg-secondary">
