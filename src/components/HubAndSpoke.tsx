@@ -112,9 +112,9 @@ const HubAndSpoke = () => {
             className="absolute"
             style={{
               left: centerX - 180,
-              top: centerY - 360,
+              top: centerY - 300,
               width: 360,
-              height: 720,
+              height: 600,
             }}
           >
             <Link to="/" className="flex items-center justify-center w-full h-full" aria-label="Real Property Planning — return to homepage">
