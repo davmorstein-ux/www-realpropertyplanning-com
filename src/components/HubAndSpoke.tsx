@@ -39,7 +39,7 @@ const rightNodes: SpokeNodeData[] = [
 const allNodes = [...leftNodes, ...rightNodes];
 
 const NODE_SIZE = 90;
-const CONTAINER_HEIGHT = 780;
+const CONTAINER_HEIGHT = 720;
 
 const SpokeNode = ({ node, cx, cy }: { node: SpokeNodeData; cx: number; cy: number }) => (
   <Link
@@ -78,7 +78,7 @@ const HubAndSpoke = () => {
 
   return (
     <section
-      className="bg-[#1B2A4A] py-8 lg:py-10"
+      className="bg-[#1B2A4A] pt-8 lg:pt-10 pb-4"
       aria-label="Real Property Planning professional ecosystem hub connecting families with attorneys, appraisers, real estate brokers, CPAs, financial planners, estate liquidators, adult family homes, senior living placement, senior move managers, and mortgage and lending specialists throughout Washington State"
     >
       {/* Desktop layout */}
