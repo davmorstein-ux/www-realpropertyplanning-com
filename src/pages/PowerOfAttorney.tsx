@@ -89,7 +89,9 @@ const PowerOfAttorney = () => {
         <section className="py-16 md:py-24 bg-secondary">
           <div className={contentWrap}>
             <div className={proseWrap + " text-center"}>
-              <img src={poaIcon} alt="" aria-hidden="true" className="block w-full max-w-[23rem] h-auto mx-auto mb-8 md:mb-10 object-contain" loading="lazy" />
+              <div className="flex justify-center mb-8 md:mb-10">
+                <img src={poaIcon} alt="Power of Attorney real estate guidance in Washington State" className="block w-full max-w-[23rem] h-auto object-contain" loading="lazy" />
+              </div>
               <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.5rem] font-semibold text-foreground leading-tight mb-6">
                 Helping Those Who Hold Power of Attorney Navigate Real Estate in Washington State
               </h1>
