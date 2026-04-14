@@ -7,6 +7,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import ResourceDownloadCard from "@/components/ResourceDownloadCard";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import iconResources from "@/assets/icons/probate-estate-resources-icon-washington.webp";
 
 const categories = [
   {
@@ -80,6 +81,7 @@ const Resources = () => {
         <section className="bg-primary pt-3 md:pt-4 pb-12 md:pb-14">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
+              <img src={iconResources} alt="" aria-hidden="true" className="mx-auto max-w-[23rem] w-full h-auto object-contain mb-3" loading="lazy" />
               <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">
                 Trusted Partners
               </p>
