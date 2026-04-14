@@ -52,25 +52,30 @@ function edgePoint(cx: number, cy: number, tx: number, ty: number, r: number) {
   return { x: cx + (dx / len) * r, y: cy + (dy / len) * r };
 }
 
-const SpokeNode = ({ node }: { node: Node }) => (
-  <Link
-    to={node.to}
-    className="absolute flex flex-col items-center gap-1.5 group"
-    style={{
-      left: "50%",
-      top: "50%",
-      transform: `translate(calc(-50% + ${node.dx}px), calc(-50% + ${node.dy}px))`,
-    }}
-    aria-label={node.label}
-  >
-    <div className="w-[90px] h-[90px] rounded-full border-[3px] border-[#C9A84C] bg-[#FFFFFF] flex items-center justify-center transition-all duration-200 group-hover:scale-[1.08] group-hover:border-[#E8C96A] group-hover:shadow-[0_0_14px_rgba(201,168,76,0.35)]">
-      <img src={node.icon} alt="" aria-hidden="true" className="w-[72px] h-[72px] object-contain" style={node.iconStyle} loading="lazy" />
-    </div>
-    <span className="text-[12px] text-white text-center leading-tight max-w-[100px] font-medium whitespace-nowrap">
-      {node.label}
-    </span>
-  </Link>
-);
+const SpokeNode = ({ node }: { node: Node }) => {
+  const isExternal = node.to.startsWith("http");
+  const Wrapper = isExternal ? "a" : Link;
+  const linkProps = isExternal ? { href: node.to } : { to: node.to };
+  return (
+    <Wrapper
+      {...(linkProps as any)}
+      className="absolute flex flex-col items-center gap-1.5 group"
+      style={{
+        left: "50%",
+        top: "50%",
+        transform: `translate(calc(-50% + ${node.dx}px), calc(-50% + ${node.dy}px))`,
+      }}
+      aria-label={node.label}
+    >
+      <div className="w-[90px] h-[90px] rounded-full border-[3px] border-[#C9A84C] bg-[#FFFFFF] flex items-center justify-center transition-all duration-200 group-hover:scale-[1.08] group-hover:border-[#E8C96A] group-hover:shadow-[0_0_14px_rgba(201,168,76,0.35)]">
+        <img src={node.icon} alt="" aria-hidden="true" className="w-[72px] h-[72px] object-contain" style={node.iconStyle} loading="lazy" />
+      </div>
+      <span className="text-[12px] text-white text-center leading-tight max-w-[100px] font-medium whitespace-nowrap">
+        {node.label}
+      </span>
+    </Wrapper>
+  );
+};
 
 const HubAndSpoke = () => {
   // SVG viewBox matches section size conceptually; we use 50%/50% center
@@ -109,8 +114,8 @@ const HubAndSpoke = () => {
         </svg>
 
         {/* Center logo */}
-        <Link
-          to="/"
+        <a
+          href="https://www.realpropertyplanning.com"
           className="absolute cursor-pointer"
           style={{
             left: "50%",
@@ -123,7 +128,7 @@ const HubAndSpoke = () => {
           }}
         >
           <img src={logo} alt="Real Property Planning" className="w-[360px] h-auto" style={{ background: "transparent", border: "none", boxShadow: "none", transition: "transform 0.3s ease" }} loading="lazy" onMouseOver={e => (e.currentTarget.style.transform = "scale(1.05)")} onMouseOut={e => (e.currentTarget.style.transform = "scale(1)")} />
-        </Link>
+        </a>
 
         {/* Nodes */}
         {allNodes.map((node, i) => (
@@ -137,21 +142,26 @@ const HubAndSpoke = () => {
           <img src={logo} alt="Real Property Planning" className="w-[150px] h-auto" loading="lazy" />
         </div>
         <div className="grid grid-cols-2 gap-6 justify-items-center">
-          {allNodes.map((node, i) => (
-            <Link
-              key={i}
-              to={node.to}
-              className="flex flex-col items-center gap-1.5 group"
-              aria-label={node.label}
-            >
-              <div className="w-[90px] h-[90px] rounded-full border-[3px] border-[#C9A84C] bg-[#FFFFFF] flex items-center justify-center transition-all duration-200 group-hover:scale-[1.08] group-hover:border-[#E8C96A]">
-                <img src={node.icon} alt="" aria-hidden="true" className="w-[72px] h-[72px] object-contain" style={node.iconStyle} loading="lazy" />
-              </div>
-              <span className="text-[12px] text-white text-center leading-tight max-w-[100px] font-medium">
-                {node.label}
-              </span>
-            </Link>
-          ))}
+          {allNodes.map((node, i) => {
+            const isExternal = node.to.startsWith("http");
+            const Wrapper = isExternal ? "a" : Link;
+            const linkProps = isExternal ? { href: node.to } : { to: node.to };
+            return (
+              <Wrapper
+                key={i}
+                {...(linkProps as any)}
+                className="flex flex-col items-center gap-1.5 group"
+                aria-label={node.label}
+              >
+                <div className="w-[90px] h-[90px] rounded-full border-[3px] border-[#C9A84C] bg-[#FFFFFF] flex items-center justify-center transition-all duration-200 group-hover:scale-[1.08] group-hover:border-[#E8C96A]">
+                  <img src={node.icon} alt="" aria-hidden="true" className="w-[72px] h-[72px] object-contain" style={node.iconStyle} loading="lazy" />
+                </div>
+                <span className="text-[12px] text-white text-center leading-tight max-w-[100px] font-medium">
+                  {node.label}
+                </span>
+              </Wrapper>
+            );
+          })}
         </div>
       </div>
     </section>
