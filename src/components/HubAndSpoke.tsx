@@ -32,7 +32,7 @@ const leftNodes: Node[] = [
 ];
 
 const rightNodes: Node[] = [
-  { label: "Real Estate Brokers", to: "/realtor", icon: iconRealtor, dx: 260, dy: -240, iconStyle: { display: "block", margin: "auto", width: 72, height: 72, objectFit: "contain" as const } },
+  { label: "Real Estate Brokers", to: "/realtor", icon: iconRealtor, dx: 280, dy: -240 },
   { label: "Appraisers", to: "/real-estate-appraiser", icon: iconAppraiser, dx: 340, dy: -120 },
   { label: "CPAs", to: "/cpas", icon: iconCPA, dx: 400, dy: 0 },
   { label: "Financial Planners", to: "/financial-planning", icon: iconFinancial, dx: 340, dy: 120 },
