@@ -38,16 +38,16 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background">
        <SEOHead
-        title="About Real Property Planning | Licensed Broker & Certified Appraiser in Washington State"
-        description="Real Property Planning helps families, seniors, and legal professionals navigate life's most important real estate transitions across Washington State with calm guidance and deep local expertise."
+        title="David Stein | Featured Real Estate Professional | Real Property Planning"
+        description="David Stein is a licensed Washington State real estate broker and certified residential appraiser specializing in probate, estate, inherited property, and senior transition real estate."
         jsonLd={{
           "@context": "https://schema.org",
           ...davidSteinPerson,
-          description: "Washington State licensed real estate broker and certified residential appraiser specializing in probate, estate, inherited property, and senior transition real estate. Over 20 years of dual expertise serving attorneys, executors, trustees, seniors, and families throughout Washington State.",
+          description: "David Stein is one of the featured professionals on the Real Property Planning platform — a licensed Washington State real estate broker and certified residential appraiser with over 20 years of experience in probate, estate, inherited property, and senior transition real estate.",
           image: "https://realpropertyplanning.com/dave-headshot.jpg",
         }}
       />
-      <BreadcrumbSchema items={[{ name: "About", url: "/about" }]} />
+      <BreadcrumbSchema items={[{ name: "About", url: "/about" }, { name: "David Stein", url: "/about-david-stein" }]} />
       <Header />
       <main id="main-content">
 
@@ -56,13 +56,13 @@ const About = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
-              About
+              Featured Professional
             </p>
              <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight">
-              About Real Property Planning
+              David Stein | Featured Real Estate Professional
             </h1>
             <p className="text-lg text-primary-foreground/70 leading-relaxed mt-4">
-               Washington State real estate broker with eXp Realty, specializing in senior relocation, estate and inherited property sales, and trust &amp; probate real estate.
+              Licensed Broker · Certified Appraiser · Real Property Planning Contributor
             </p>
           </div>
         </div>
@@ -77,13 +77,13 @@ const About = () => {
             <div className="lg:col-span-2">
               <div className="space-y-6 text-muted-foreground leading-relaxed text-lg">
                 <p>
-                  Washington State real estate broker with eXp Realty, specializing in senior relocation, estate and inherited property sales, and trust &amp; probate real estate. David works with executors, probate attorneys, and families to coordinate valuation, clean‑out, repairs, and sale of homes throughout Washington State, with deep experience across King, Snohomish, and Pierce counties.
+                  David Stein is one of the featured professionals on the <Link to="/about" className="text-accent hover:text-gold underline underline-offset-4">Real Property Planning</Link> platform — and the specialist behind the site's real estate brokerage and appraisal guidance.
                 </p>
                 <p>
-                  Experienced with court timelines, fiduciary obligations, and working with out‑of‑area decision makers, David brings over 20 years of experience as a licensed Washington real estate broker and a state certified residential appraiser. This dual background means he doesn't just understand how to sell a home — he understands how to evaluate it with analytical precision and price it with market-informed confidence.
+                  As a licensed Washington State real estate broker and a Washington State Certified Residential Appraiser with over 20 years of experience in both disciplines, David brings a dual perspective to <Link to="/probate-estate-sales" className="text-accent hover:text-gold underline underline-offset-4">probate real estate</Link>, inherited property, estate sales, and <Link to="/senior-transitions" className="text-accent hover:text-gold underline underline-offset-4">senior housing transitions</Link> that most agents simply don't have. He is based in Kirkland, Washington, and serves families, <Link to="/executors" className="text-accent hover:text-gold underline underline-offset-4">executors</Link>, trustees, and <Link to="/for-attorneys" className="text-accent hover:text-gold underline underline-offset-4">attorneys</Link> throughout the Puget Sound region and across Washington State.
                 </p>
                 <p>
-                  David's practice is focused exclusively on property situations that require more than a standard listing approach: <Link to="/senior-transitions" className="text-accent hover:text-gold underline underline-offset-4">senior relocation home sales</Link>, <Link to="/probate-estate-sales" className="text-accent hover:text-gold underline underline-offset-4">probate and estate sales</Link>, trust-owned real estate, and inherited homes that need experienced guidance from assessment through closing. If you are navigating a transition or handling an estate, contact David for a clear, step‑by‑step plan and a no‑pressure consultation.
+                  His role within Real Property Planning is to provide the real estate and valuation expertise at the center of what this platform does — connecting families with honest, experienced guidance at one of the most complicated moments of their lives.
                 </p>
               </div>
             </div>
