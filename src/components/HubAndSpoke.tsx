@@ -39,7 +39,7 @@ const rightNodes: Node[] = [
 const allNodes = [...leftNodes, ...rightNodes];
 
 const LOGO_R = 90; // approximate logo radius for line endpoints
-const NODE_R = 40; // node radius (80px / 2)
+const NODE_R = 45; // node radius (90px / 2)
 
 function edgePoint(cx: number, cy: number, tx: number, ty: number, r: number) {
   const dx = tx - cx;
@@ -60,7 +60,7 @@ const SpokeNode = ({ node }: { node: Node }) => (
     }}
     aria-label={node.label}
   >
-    <div className="w-[80px] h-[80px] rounded-full border-[3px] border-[#C9A84C] bg-white flex items-center justify-center transition-all duration-200 group-hover:scale-[1.08] group-hover:border-[#E8C96A] group-hover:shadow-[0_0_14px_rgba(201,168,76,0.35)]">
+    <div className="w-[90px] h-[90px] rounded-full border-[3px] border-[#C9A84C] bg-white flex items-center justify-center transition-all duration-200 group-hover:scale-[1.08] group-hover:border-[#E8C96A] group-hover:shadow-[0_0_14px_rgba(201,168,76,0.35)]">
       <img src={node.icon} alt="" aria-hidden="true" className="w-10 h-10 object-contain" loading="lazy" />
     </div>
     <span className="text-[12px] text-white text-center leading-tight max-w-[100px] font-medium whitespace-nowrap">
