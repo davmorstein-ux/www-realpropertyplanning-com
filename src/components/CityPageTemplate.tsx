@@ -13,6 +13,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { services, isTier1City } from "@/lib/service-areas-data";
 import type { CityData } from "@/lib/service-areas-data";
+import heroIcon from "@/assets/icons/real-estate-service-areas-map-icon-washington.webp";
 
 // Tone-specific FAQ sets (kept for SEO uniqueness)
 const toneFaqSets: Record<string, (city: CityData) => { question: string; answer: string }[]> = {

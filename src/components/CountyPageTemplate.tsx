@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import mappin3d from "@/assets/real-estate-service-areas-mappin-washington.webp";
+import heroIcon from "@/assets/icons/real-estate-service-areas-map-icon-washington.webp";
 import { services, counties } from "@/lib/service-areas-data";
 
 interface CountyPageProps {

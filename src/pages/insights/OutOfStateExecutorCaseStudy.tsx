@@ -4,6 +4,7 @@ import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
+import heroIcon from "@/assets/icons/probate-guidance-book-open-icon-washington.webp";
 import GoldCheck3D from "@/components/GoldCheck3D";
 
 const OutOfStateExecutorCaseStudy = () => {
