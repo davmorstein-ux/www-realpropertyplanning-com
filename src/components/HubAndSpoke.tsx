@@ -18,6 +18,7 @@ interface Node {
   icon: string;
   dx: number;
   dy: number;
+  iconClass?: string;
 }
 
 const leftNodes: Node[] = [
