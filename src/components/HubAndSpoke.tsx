@@ -80,7 +80,7 @@ const HubAndSpoke = () => {
   const cy = svgH / 2;
 
   return (
-    <section className="bg-[#1B2A4A]" aria-label="Professional network">
+    <section className="bg-[#1B2A4A]" aria-label="Real Property Planning ecosystem hub connecting families and professionals across Washington State — including attorneys, appraisers, real estate brokers, CPAs, financial planners, estate liquidators, adult family homes, senior living placement, senior move managers, and mortgage and lending specialists.">
       {/* Desktop */}
       <div className="hidden md:block relative w-full" style={{ height: 650 }}>
         {/* SVG lines */}
