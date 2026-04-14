@@ -39,7 +39,7 @@ const rightNodes: SpokeNodeData[] = [
 const allNodes = [...leftNodes, ...rightNodes];
 
 const NODE_SIZE = 90;
-const CONTAINER_HEIGHT = 780;
+const CONTAINER_HEIGHT = 680;
 
 const SpokeNode = ({ node, cx, cy }: { node: SpokeNodeData; cx: number; cy: number }) => (
   <Link
