@@ -108,7 +108,6 @@ const AboutPlatform = () => {
           </div>
         </section>
 
-        <HubAndSpoke />
 
         {/* Section 2: Who This Is For */}
         <section className="py-20 lg:py-28 bg-secondary">
