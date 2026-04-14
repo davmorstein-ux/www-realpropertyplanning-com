@@ -22,7 +22,6 @@ interface Node {
 }
 
 const forceSize: React.CSSProperties = { width: 72, height: 72, minWidth: 72, minHeight: 72, objectFit: "contain", display: "block", margin: "auto" };
-const brokerCenter: React.CSSProperties = { display: "block", marginLeft: "auto", marginRight: "auto", width: 72, height: 72, objectFit: "contain", position: "relative", left: "50%", transform: "translateX(-50%)" };
 
 const leftNodes: Node[] = [
   { label: "Attorneys", to: "/for-attorneys", icon: iconAttorney, dx: -260, dy: -240, iconStyle: forceSize },
