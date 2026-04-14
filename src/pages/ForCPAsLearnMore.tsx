@@ -89,11 +89,7 @@ const faqs = [
   },
   {
     question: "Do you work with CPAs whose clients are outside the Puget Sound area?",
-    answer: (
-      <>
-        David's primary service area is Western Washington and the Puget Sound region. For clients with property in other parts of Washington State, he can discuss referral connections. For out-of-state property, <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4">eXp Realty's national network</Link> can connect clients with trusted local brokers in most U.S. markets.
-      </>
-    ),
+    answer: "David's primary service area is Western Washington and the Puget Sound region. For clients with property in other parts of Washington State, he can discuss referral connections. For out-of-state property, eXp Realty's national network can connect clients with trusted local brokers in most U.S. markets.",
   },
 ];
 

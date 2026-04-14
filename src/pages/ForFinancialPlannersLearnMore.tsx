@@ -85,11 +85,7 @@ const faqs = [
   },
   {
     question: "Can David help when a senior client is transitioning to assisted living?",
-    answer: (
-      <>
-        Yes — and this is one of the most common situations Real Property Planning works with. David coordinates the home sale with the senior's transition timeline, working at the family's pace and in alignment with the care team's plan. His affiliations with the <a href="https://www.aginglifecare.org/" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-gold underline underline-offset-4">Aging Life Care Association</a> and the <a href="https://www.naosa.org/" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-gold underline underline-offset-4">National Association of Senior Advocates</a> reflect a commitment to senior transitions that goes beyond standard real estate practice.
-      </>
-    ),
+    answer: "Yes — and this is one of the most common situations Real Property Planning works with. David coordinates the home sale with the senior's transition timeline, working at the family's pace and in alignment with the care team's plan. His affiliations with the Aging Life Care Association and the National Association of Senior Advocates reflect a commitment to senior transitions that goes beyond standard real estate practice.",
   },
   {
     question: "How does valuation-informed pricing differ from a standard listing agent's CMA?",
@@ -97,11 +93,7 @@ const faqs = [
   },
   {
     question: "Do you work with financial planners whose clients are outside the immediate Seattle area?",
-    answer: (
-      <>
-        Yes — David serves clients throughout Western Washington and the broader Puget Sound region. For clients with property outside Washington State, <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4">eXp Realty's national referral network</Link> can connect them with trusted brokers in most U.S. markets.
-      </>
-    ),
+    answer: "Yes — David serves clients throughout Western Washington and the broader Puget Sound region. For clients with property outside Washington State, eXp Realty's national referral network can connect them with trusted brokers in most U.S. markets.",
   },
 ];
 
