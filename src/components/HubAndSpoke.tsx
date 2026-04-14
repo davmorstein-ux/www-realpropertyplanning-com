@@ -151,10 +151,16 @@ const HubAndSpoke = () => {
             />
           </Link>
         </div>
-        <div className="grid grid-cols-2 gap-6 justify-items-center">
-          {allNodes.map((node, i) => (
-            <MobileSpokeNode key={i} node={node} />
+        <div className="grid grid-cols-2 gap-y-6 gap-x-4">
+          {leftNodes.map((node, i) => (
+            <div key={`l-${i}`} className="flex justify-end">
+              <MobileSpokeNode node={node} />
+            </div>
           ))}
+          {/* Interleave: render row by row */}
+        </div>
+        {/* Proper paired grid */}
+        <div className="grid grid-cols-2 gap-y-6 gap-x-4" style={{ marginTop: '-100%' }}>
         </div>
       </div>
     </section>
