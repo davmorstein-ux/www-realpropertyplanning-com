@@ -1327,6 +1327,19 @@ export const counties: CountyData[] = [
       city("Hansville", "Kitsap County", "kitsap-county"),
     ],
   },
+  {
+    name: "Skagit County",
+    slug: "skagit-county",
+    cities: [
+      city("Mount Vernon", "Skagit County", "skagit-county"),
+      city("Burlington", "Skagit County", "skagit-county"),
+      city("Anacortes", "Skagit County", "skagit-county"),
+      city("Sedro-Woolley", "Skagit County", "skagit-county"),
+      city("La Conner", "Skagit County", "skagit-county"),
+      city("Concrete", "Skagit County", "skagit-county"),
+      city("Bow-Edison", "Skagit County", "skagit-county", "bow-edison"),
+    ],
+  },
 ];
 
 // ─── Tier Classification ────────────────────────────────────────────────
