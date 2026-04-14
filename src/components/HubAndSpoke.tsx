@@ -76,7 +76,7 @@ const HubAndSpoke = () => {
 
   return (
     <section
-      className="bg-[#1B2A4A] py-16 lg:py-20"
+      className="bg-[#1B2A4A] py-8"
       aria-label="Real Property Planning professional ecosystem hub connecting families with attorneys, appraisers, real estate brokers, CPAs, financial planners, estate liquidators, adult family homes, senior living placement, senior move managers, and mortgage and lending specialists throughout Washington State"
     >
       {/* Desktop layout */}

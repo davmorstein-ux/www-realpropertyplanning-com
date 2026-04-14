@@ -13,6 +13,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { services, isTier1City } from "@/lib/service-areas-data";
 import type { CityData } from "@/lib/service-areas-data";
+import heroIcon from "@/assets/icons/real-estate-service-areas-map-icon-washington.webp";
 
 // Tone-specific FAQ sets (kept for SEO uniqueness)
 const toneFaqSets: Record<string, (city: CityData) => { question: string; answer: string }[]> = {
@@ -89,6 +90,9 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
       <section className="bg-primary pt-3 md:pt-4 pb-12 md:pb-14">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl">
+            <div className="flex justify-center mb-3 md:mb-4">
+              <img src={heroIcon} alt="" aria-hidden="true" className="block w-full max-w-[23rem] h-auto object-contain" loading="lazy" />
+            </div>
             <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">
               {city.name}, {city.county}
             </p>
