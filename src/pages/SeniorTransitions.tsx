@@ -144,7 +144,7 @@ const SeniorTransitions = () => {
           "Referral connections to trusted senior move managers, care advisors, and estate professionals throughout the Puget Sound area",
         ]}
         supportSteps={[
-          "The process is built around your family's timeline, not a sales calendar. From initial conversation through closing, David coordinates preparation, pricing, and the sale itself — keeping every family member and professional advisor informed at every step.",
+          { label: "Your Timeline", desc: "The process is built around your family's timeline, not a sales calendar. From initial conversation through closing, David coordinates preparation, pricing, and the sale itself — keeping every family member and professional advisor informed at every step." },
         ]}
       />
 
