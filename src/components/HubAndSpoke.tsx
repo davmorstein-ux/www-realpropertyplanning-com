@@ -121,7 +121,7 @@ const HubAndSpoke = () => {
             borderRadius: 0,
           }}
         >
-          <img src={logo} alt="Real Property Planning" className="w-[360px] h-auto" style={{ background: "transparent", border: "none", boxShadow: "none" }} />
+          <img src={logo} alt="Real Property Planning" className="w-[360px] h-auto" style={{ background: "transparent", border: "none", boxShadow: "none" }} loading="lazy" />
         </div>
 
         {/* Nodes */}
@@ -133,7 +133,7 @@ const HubAndSpoke = () => {
       {/* Mobile */}
       <div className="md:hidden py-12 px-6">
         <div className="flex justify-center mb-8">
-          <img src={logo} alt="Real Property Planning" className="w-[150px] h-auto" />
+          <img src={logo} alt="Real Property Planning" className="w-[150px] h-auto" loading="lazy" />
         </div>
         <div className="grid grid-cols-2 gap-6 justify-items-center">
           {allNodes.map((node, i) => (
