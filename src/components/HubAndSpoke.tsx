@@ -39,22 +39,23 @@ const rightNodes: SpokeNodeData[] = [
 const allNodes = [...leftNodes, ...rightNodes];
 
 const NODE_SIZE = 90;
-const CONTAINER_HEIGHT = 650;
+const CONTAINER_HEIGHT = 780;
 
 const SpokeNode = ({ node, cx, cy }: { node: SpokeNodeData; cx: number; cy: number }) => (
   <Link
     to={node.to}
     className="absolute flex flex-col items-center gap-2 group"
     style={{
-      left: cx - NODE_SIZE / 2,
+      left: cx,
       top: cy - NODE_SIZE / 2,
+      transform: "translateX(-50%)",
     }}
     aria-label={node.label}
   >
     <div className="w-[90px] h-[90px] rounded-full border-[3px] border-[#C9A84C] bg-[#FAF8F4] flex items-center justify-center transition-all duration-200 group-hover:scale-[1.08] group-hover:border-[#E8C96A] group-hover:shadow-[0_0_12px_rgba(201,168,76,0.3)]">
       <img src={node.icon} alt="" aria-hidden="true" className="w-[72px] h-[72px] object-contain" loading="lazy" />
     </div>
-    <span className="text-[12px] text-[#FAF8F4] text-center leading-tight max-w-[100px] font-medium whitespace-nowrap">
+    <span className="text-[12px] text-[#FAF8F4] text-center leading-tight font-medium whitespace-nowrap">
       {node.label}
     </span>
   </Link>
@@ -110,17 +111,17 @@ const HubAndSpoke = () => {
           <div
             className="absolute"
             style={{
-              left: centerX - 90,
-              top: centerY - 180,
-              width: 180,
-              height: 360,
+              left: centerX - 180,
+              top: centerY - 360,
+              width: 360,
+              height: 720,
             }}
           >
             <Link to="/" className="flex items-center justify-center w-full h-full" aria-label="Real Property Planning — return to homepage">
               <img
                 src={logo}
                 alt="Real Property Planning — return to homepage"
-                className="max-h-[360px] w-auto cursor-pointer transition-transform duration-300 hover:scale-105"
+                className="max-h-[720px] w-auto cursor-pointer transition-transform duration-300 hover:scale-105"
                 loading="lazy"
               />
             </Link>
