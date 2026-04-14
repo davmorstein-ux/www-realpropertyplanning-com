@@ -30,12 +30,16 @@ interface CountyPageProps {
   aeoAnswer?: string;
   aeoSupportBullets?: string[];
   aeoSupportFaqs?: { question: string; answer: string }[];
+  heroH1?: string;
+  seoTitle?: string;
+  seoDescription?: string;
 }
 
 const CountyPageTemplate = ({
   countyName, countyPath, countySlug, cities,
   localInsight, countySpecificFaqs,
   aeoQuestion, aeoAnswer, aeoSupportBullets, aeoSupportFaqs,
+  heroH1, seoTitle, seoDescription,
 }: CountyPageProps) => {
   const countyData = counties.find((c) => c.slug === countySlug);
 
@@ -59,8 +63,8 @@ const CountyPageTemplate = ({
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title={`Probate Real Estate & Inherited Property Sales in ${countyName} | Real Property Planning`}
-        description={`Probate real estate and inherited property sales guidance for executors, attorneys, and families in ${countyName}, Washington State.`}
+        title={seoTitle || `Probate Real Estate & Inherited Property Sales in ${countyName} | Real Property Planning`}
+        description={seoDescription || `Probate real estate and inherited property sales guidance for executors, attorneys, and families in ${countyName}, Washington State.`}
       />
       <BreadcrumbSchema items={[
         { name: "Counties", url: "/counties" },
@@ -77,7 +81,7 @@ const CountyPageTemplate = ({
               {countyName}
             </p>
             <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl text-primary-foreground font-semibold leading-tight mb-4">
-              Estate &amp; Inherited Property Sales in {countyName}
+              {heroH1 || `Estate & Inherited Property Sales in ${countyName}`}
             </h1>
             <p className="text-lg text-primary-foreground/80 leading-relaxed">
               {localInsight || `Licensed broker and certified appraiser guidance for probate, estate, and senior property transitions in ${countyName}.`}

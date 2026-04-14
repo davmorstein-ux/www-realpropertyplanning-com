@@ -5,6 +5,7 @@ import SEOHead from "@/components/SEOHead";
 import TrustStrip from "@/components/TrustStrip";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
+import DirectAnswerBlock from "@/components/DirectAnswerBlock";
 import { Link } from "react-router-dom";
 import { Phone, ShieldCheck, Heart, Globe, MapPin } from "lucide-react";
 
@@ -61,8 +62,8 @@ const jsonLd = {
 const KingCountyServiceArea = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
-      title="Probate, Estate & Senior Transition Real Estate in King County, WA | Real Property Planning"
-      description="Serving families, executors, attorneys, and seniors throughout King County — Seattle, Bellevue, Kirkland, Redmond, Bothell, Woodinville, Renton, and beyond. Probate sales, certified appraisals, and senior transitions."
+      title="Probate & Estate Real Estate in King County, WA | Real Property Planning"
+      description="Experienced probate real estate, inherited home sales, and senior transition guidance throughout King County, Washington. Serving Seattle, Bellevue, Kirkland, Redmond & more."
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema items={[
@@ -78,13 +79,13 @@ const KingCountyServiceArea = () => (
         <div className="max-w-3xl">
           <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">King County, Washington</p>
           <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
-            Probate, Estate & Senior Transition Real Estate in King County, Washington
+            Probate &amp; Estate Real Estate in King County, Washington
           </h1>
-          <p className="text-xl md:text-[22px] text-primary-foreground/80 leading-[1.75] mb-5">
-            Real Property Planning serves families, executors, attorneys, and seniors throughout King County with certified appraisals, probate real estate sales, and senior housing transition guidance.
+          <p className="text-lg md:text-xl text-primary-foreground/80 leading-[1.75] mb-5">
+            Experienced guidance for executors, families, and attorneys navigating property sales throughout King County.
           </p>
-          <p className="text-lg md:text-xl text-primary-foreground/70 leading-[1.75] mb-8">
-            Whether you are managing an inherited property in Seattle, helping a parent downsize in Woodinville, or settling an estate in Renton — we are here to help.
+          <p className="text-[17px] md:text-lg text-primary-foreground/70 leading-[1.75] mb-8">
+            King County is one of the most dynamic and varied real estate markets in the country — and that complexity doesn't disappear when a property is part of an estate, a probate case, or a senior housing transition. If anything, it increases. A condition-impaired home in Shoreline faces a very different buyer pool than a waterfront property in Mercer Island. A Capitol Hill condo involves different legal and logistical considerations than a Sammamish family home. Real Property Planning brings the neighborhood-level market knowledge and the valuation methodology to navigate all of it — honestly, carefully, and at your pace. David Stein serves families, executors, trustees, and attorneys throughout King County with the dual perspective of a licensed real estate broker and a Washington State Certified Residential Appraiser.
           </p>
           <Link
             to="/contact"
@@ -96,18 +97,59 @@ const KingCountyServiceArea = () => (
       </div>
     </section>
 
+    <DirectAnswerBlock
+      question="How does selling estate property work in King County's competitive market?"
+      answer="King County's real estate market is active and competitive — but estate and probate properties don't always benefit from that competitiveness automatically. Homes with deferred maintenance, extended vacancy, or condition issues can sit if they're priced or presented incorrectly. David's approach starts with an honest, condition-adjusted valuation — not a number designed to win a listing — followed by a preparation strategy that's calibrated to the property's specific situation and neighborhood. The result is a pricing position that attracts the right buyers for that property, in that market, at that time."
+      supportFaqs={[
+        {
+          question: "What challenges do executors face when selling a Seattle or Eastside home?",
+          answer: "King County executors face several challenges that aren't present in standard transactions: establishing legal authority before listing, managing properties that may have been vacant for months, coordinating among heirs who may live across the country, and navigating a market where neighborhood-level pricing dynamics matter enormously.",
+        },
+        {
+          question: "How is pricing an inherited condo in Bellevue different from pricing a house in Shoreline?",
+          answer: "Significantly different. A Bellevue condo involves HOA considerations, building financials, and a buyer pool that skews toward tech-sector buyers. A Shoreline house involves lot value, neighborhood trajectory, and a buyer pool that may include developers as well as end-users. David's pricing analysis accounts for these distinctions.",
+        },
+        {
+          question: "Can David coordinate an estate sale if multiple heirs live in different states?",
+          answer: "Yes — this is one of the most common situations Real Property Planning handles. David manages the full process locally, provides regular written and photo updates, handles all vendor coordination, and communicates with each heir consistently.",
+        },
+        {
+          question: "Should I get a formal appraisal before selling an inherited King County home?",
+          answer: "It depends on your situation. A formal USPAP-compliant appraisal is required in some probate and estate tax situations. For most estate property sales, David's valuation-informed market analysis provides the defensible pricing foundation executors need. David can help you understand which approach is right.",
+        },
+      ]}
+    />
+
     <TrustStrip />
 
-    {/* Communities */}
+    {/* Market Complexity */}
     <section className={sectionBase}>
+      <div className={contentWrap}>
+        <div className={proseWrap}>
+          <h2 className={h2Class}>King County's Market Complexity — Why Local Knowledge Matters</h2>
+          <p className={pClass}>
+            King County spans over 2,100 square miles and includes some of the most valuable real estate in the Pacific Northwest alongside communities where property values tell a very different story. The difference between accurate pricing and wishful thinking can be $50,000 or more — and in an estate situation, that difference has real consequences for heirs, fiduciaries, and the families involved.
+          </p>
+          <p className={pClass}>
+            David has worked with estate properties across King County — from historic Capitol Hill homes to Eastside tech-corridor condos, from Renton ramblers to Mercer Island waterfront estates. Each neighborhood has its own buyer expectations, its own pricing dynamics, and its own preparation considerations. That local, specific knowledge is what separates a well-executed estate sale from one that sits on the market and requires price reductions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    {/* Communities */}
+    <section className={`${sectionBase} bg-secondary`}>
       <div className={contentWrap}>
         <div className="max-w-4xl mx-auto">
           <h2 className={h2Class}>Communities We Serve in King County</h2>
+          <p className={`${pClass} mb-8`}>
+            Real Property Planning serves families, executors, and professionals throughout King County, including:
+          </p>
           <div className="flex flex-wrap gap-2.5">
             {communities.map((city) => (
               <span
                 key={city}
-                className="inline-block px-4 py-2 rounded-full text-[15px] md:text-base font-medium text-foreground bg-secondary border border-border"
+                className="inline-block px-4 py-2 rounded-full text-[15px] md:text-base font-medium text-foreground bg-card border border-border"
               >
                 {city}
               </span>
@@ -118,7 +160,7 @@ const KingCountyServiceArea = () => (
     </section>
 
     {/* Probate & Estate */}
-    <section className={`${sectionBase} bg-secondary`}>
+    <section className={sectionBase}>
       <div className={contentWrap}>
         <div className={proseWrap}>
           <h2 className={h2Class}>Probate & Estate Real Estate in King County</h2>
@@ -133,7 +175,7 @@ const KingCountyServiceArea = () => (
     </section>
 
     {/* Certified Appraisals */}
-    <section className={sectionBase}>
+    <section className={`${sectionBase} bg-secondary`}>
       <div className={contentWrap}>
         <div className={proseWrap}>
           <h2 className={h2Class}>Certified Appraisals in King County</h2>
@@ -151,7 +193,7 @@ const KingCountyServiceArea = () => (
     </section>
 
     {/* Senior Transitions */}
-    <section className={`${sectionBase} bg-secondary`}>
+    <section className={sectionBase}>
       <div className={contentWrap}>
         <div className={proseWrap}>
           <h2 className={h2Class}>Senior Transitions in King County</h2>
@@ -166,7 +208,7 @@ const KingCountyServiceArea = () => (
     </section>
 
     {/* Executors and Attorneys */}
-    <section className={sectionBase}>
+    <section className={`${sectionBase} bg-secondary`}>
       <div className={contentWrap}>
         <div className={proseWrap}>
           <h2 className={h2Class}>Serving Executors and Attorneys in King County</h2>
@@ -184,7 +226,7 @@ const KingCountyServiceArea = () => (
     </section>
 
     {/* Why Families Choose */}
-    <section className={`${sectionBase} bg-secondary`}>
+    <section className={sectionBase}>
       <div className={contentWrap}>
         <div className="max-w-4xl mx-auto">
           <h2 className={`${h2Class} text-center`}>Why Families in King County Choose Real Property Planning</h2>
@@ -213,8 +255,11 @@ const KingCountyServiceArea = () => (
           <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-5">
             Have a King County Property to Discuss?
           </h2>
+          <p className="text-muted-foreground text-[17px] md:text-lg leading-[1.8] mb-5 max-w-2xl mx-auto">
+            Whether you're just beginning to think about an estate property in King County or are already in the middle of a probate sale, a short conversation can help bring clarity.
+          </p>
           <p className="text-muted-foreground text-[17px] md:text-lg leading-[1.8] mb-10 max-w-2xl mx-auto">
-            A short conversation is usually the fastest way to get clarity. There is no obligation — just practical guidance about your situation.
+            David is based in Kirkland and serves the entire King County area — from Seattle neighborhoods to the Eastside communities he knows best.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
