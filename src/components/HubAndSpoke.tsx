@@ -121,7 +121,7 @@ const HubAndSpoke = () => {
             borderRadius: 0,
           }}
         >
-          <img src={logo} alt="Real Property Planning" className="w-[180px] h-auto" style={{ background: "transparent", border: "none", boxShadow: "none" }} />
+          <img src={logo} alt="Real Property Planning" className="w-[360px] h-auto" style={{ background: "transparent", border: "none", boxShadow: "none" }} />
         </div>
 
         {/* Nodes */}
