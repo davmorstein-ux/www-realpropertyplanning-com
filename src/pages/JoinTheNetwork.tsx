@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { articleSchema } from "@/lib/schema";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
-import iconEmail3d from "@/assets/icons/real-estate-email-message-icon-washington.webp";
+import iconEmail3d from "@/assets/icons/real-estate-email-contact-icon-washington.webp";
 
 const jsonLd = articleSchema({
   headline: "Join the Real Property Planning Network",
