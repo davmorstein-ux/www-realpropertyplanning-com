@@ -46,15 +46,16 @@ const SpokeNode = ({ node, cx, cy }: { node: SpokeNodeData; cx: number; cy: numb
     to={node.to}
     className="absolute flex flex-col items-center gap-2 group"
     style={{
-      left: cx - NODE_SIZE / 2,
+      left: cx,
       top: cy - NODE_SIZE / 2,
+      transform: "translateX(-50%)",
     }}
     aria-label={node.label}
   >
     <div className="w-[90px] h-[90px] rounded-full border-[3px] border-[#C9A84C] bg-[#FAF8F4] flex items-center justify-center transition-all duration-200 group-hover:scale-[1.08] group-hover:border-[#E8C96A] group-hover:shadow-[0_0_12px_rgba(201,168,76,0.3)]">
       <img src={node.icon} alt="" aria-hidden="true" className="w-[72px] h-[72px] object-contain" loading="lazy" />
     </div>
-    <span className="text-[12px] text-[#FAF8F4] text-center leading-tight max-w-[100px] font-medium whitespace-nowrap">
+    <span className="text-[12px] text-[#FAF8F4] text-center leading-tight font-medium whitespace-nowrap">
       {node.label}
     </span>
   </Link>
