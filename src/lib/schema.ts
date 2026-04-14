@@ -5,7 +5,11 @@ const BUSINESS_NAME = "Real Property Planning";
 const areaServed = [
   { "@type": "State", name: "Washington" },
   { "@type": "AdministrativeArea", name: "King County", containedInPlace: { "@type": "State", name: "Washington" } },
-  { "@type": "AdministrativeArea", name: "Snohomish County", containedInPlace: { "@type": "State", name: "Washington" } },
+  {
+    "@type": "AdministrativeArea",
+    name: "Snohomish County",
+    containedInPlace: { "@type": "State", name: "Washington" },
+  },
   { "@type": "AdministrativeArea", name: "Pierce County", containedInPlace: { "@type": "State", name: "Washington" } },
   { "@type": "AdministrativeArea", name: "Kitsap County", containedInPlace: { "@type": "State", name: "Washington" } },
   { "@type": "AdministrativeArea", name: "Skagit County", containedInPlace: { "@type": "State", name: "Washington" } },
@@ -49,7 +53,11 @@ export const davidSteinPerson = {
   memberOf: [
     { "@type": "Organization", name: "Aging Life Care Association", url: "https://www.aginglifecare.org" },
     { "@type": "Organization", name: "National Association of Senior Advocates", url: "https://www.naosa.org" },
-    { "@type": "Organization", name: "National Association of Estate Planners & Councils", url: "https://www.naepc.org" },
+    {
+      "@type": "Organization",
+      name: "National Association of Estate Planners & Councils",
+      url: "https://www.naepc.org",
+    },
   ],
   knowsAbout: [
     "Probate real estate",
