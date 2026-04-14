@@ -74,7 +74,7 @@ const KingCountyServiceArea = () => (
     <main id="main-content">
 
     {/* Hero */}
-    <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
+    <section className="bg-primary pt-3 md:pt-4 pb-12 md:pb-14">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl">
           <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">King County, Washington</p>
@@ -84,7 +84,7 @@ const KingCountyServiceArea = () => (
           <p className="text-lg md:text-xl text-primary-foreground/80 leading-[1.75] mb-5">
             Experienced guidance for executors, families, and attorneys navigating property sales throughout King County.
           </p>
-          <p className="text-[17px] md:text-lg text-primary-foreground/70 leading-[1.75] mb-8">
+          <p className="text-[17px] md:text-lg text-primary-foreground/70 leading-[1.75] mb-3">
             King County is one of the most dynamic and varied real estate markets in the country — and that complexity doesn't disappear when a property is part of an estate, a probate case, or a senior housing transition. If anything, it increases. A condition-impaired home in Shoreline faces a very different buyer pool than a waterfront property in Mercer Island. A Capitol Hill condo involves different legal and logistical considerations than a Sammamish family home. Real Property Planning brings the neighborhood-level market knowledge and the valuation methodology to navigate all of it — honestly, carefully, and at your pace. David Stein serves families, executors, trustees, and attorneys throughout King County with the dual perspective of a licensed real estate broker and a Washington State Certified Residential Appraiser.
           </p>
           <Link

@@ -224,7 +224,7 @@ const GuidesAndResources = () => {
 
       <main id="main-content">
         {/* Hero */}
-        <section className="bg-secondary py-14 md:py-20">
+        <section className="bg-primary pt-3 md:pt-4 pb-12 md:pb-14">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
               <div className="flex justify-center mb-5">
@@ -236,10 +236,10 @@ const GuidesAndResources = () => {
                   loading="eager"
                 />
               </div>
-              <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-foreground leading-tight mb-4">
+              <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-primary-foreground leading-tight mb-4">
                 Guides & Resources
               </h1>
-              <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
+              <p className="text-primary-foreground/80 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
                 Practical answers to common questions about probate, inherited homes, senior transitions, pricing, and the professionals who help.
               </p>
             </div>

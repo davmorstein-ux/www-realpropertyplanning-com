@@ -97,10 +97,10 @@ const ForRealEstateAttorneys = () => (
     <main id="main-content">
 
     {/* Hero */}
-    <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
+    <section className="bg-primary pt-3 md:pt-4 pb-12 md:pb-14">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
-          <img src={iconRealEstateAttorney} alt="" aria-hidden="true" className="mx-auto w-60 h-auto object-contain mb-8"  loading="lazy"/>
+          <img src={iconRealEstateAttorney} alt="" aria-hidden="true" className="mx-auto max-w-[23rem] w-full h-auto object-contain mb-3"  loading="lazy"/>
           <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
             For Real Estate Attorneys
           </p>
@@ -110,7 +110,7 @@ const ForRealEstateAttorneys = () => (
           <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-4">
             Helping clients navigate contracts, title issues, disputes, transactions, and important real estate decisions with the right legal guidance.
           </p>
-          <p className="text-base md:text-lg text-primary-foreground/60 leading-relaxed mb-8">
+          <p className="text-base md:text-lg text-primary-foreground/60 leading-relaxed mb-3">
             Need help with a property issue involving legal questions? Let's talk through the situation.
           </p>
           <Link to="/contact">

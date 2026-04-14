@@ -118,17 +118,17 @@ const ProfessionalReferralResource = () => {
       <main id="main-content">
 
       {/* Hero */}
-      <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
+      <section className="bg-primary pt-3 md:pt-4 pb-12 md:pb-14">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <img src={iconResources} alt="" aria-hidden="true" className="mx-auto w-60 h-auto object-contain mb-8"  loading="lazy"/>
+            <img src={iconResources} alt="" aria-hidden="true" className="mx-auto max-w-[23rem] w-full h-auto object-contain mb-3"  loading="lazy"/>
             <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] text-primary-foreground font-semibold leading-tight mb-6">
               A Professional Real Estate Resource for Important Property Transitions
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-4">
               Real estate guidance for attorneys, fiduciaries, executors, trustees, seniors, and families navigating probate, estate property sales, inherited homes, and major housing transitions throughout Washington State.
             </p>
-            <p className="text-base text-primary-foreground/70 leading-relaxed mb-8">
+            <p className="text-base text-primary-foreground/70 leading-relaxed mb-3">
               Real Property Planning is a licensed real estate brokerage with state-certified residential appraisal expertise, helping clients make informed property decisions during complex and often emotional transitions. We work closely with professional referral partners who want their clients served with care, discretion, responsiveness, and practical follow-through.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">

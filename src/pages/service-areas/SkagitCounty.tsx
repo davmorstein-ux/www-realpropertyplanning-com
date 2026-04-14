@@ -47,7 +47,7 @@ const SkagitCountyServiceArea = () => (
     <Header />
     <main id="main-content">
 
-    <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
+    <section className="bg-primary pt-3 md:pt-4 pb-12 md:pb-14">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl">
           <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">Skagit County, Washington</p>
@@ -57,7 +57,7 @@ const SkagitCountyServiceArea = () => (
           <p className="text-xl md:text-[22px] text-primary-foreground/80 leading-[1.75] mb-5">
             Experienced guidance for <Link to="/executors" className="text-gold hover:text-gold/80 underline underline-offset-4">executors</Link>, families, and <Link to="/for-attorneys" className="text-gold hover:text-gold/80 underline underline-offset-4">attorneys</Link> navigating property sales throughout Skagit County — including waterfront, agricultural, and rural properties.
           </p>
-          <p className="text-lg md:text-xl text-primary-foreground/70 leading-[1.75] mb-8">
+          <p className="text-lg md:text-xl text-primary-foreground/70 leading-[1.75] mb-3">
             Whether you are managing an inherited property in Mount Vernon, helping a parent transition in Anacortes, or settling an estate in Burlington — we are here to help.
           </p>
           <Link to="/contact" className="inline-flex items-center justify-center rounded-md bg-gold px-8 py-3.5 text-base font-semibold text-white shadow-sm hover:bg-gold-dark transition-colors min-h-[52px]">

@@ -44,7 +44,7 @@ const WhatcomCountyServiceArea = () => (
     <Header />
     <main id="main-content">
 
-    <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
+    <section className="bg-primary pt-3 md:pt-4 pb-12 md:pb-14">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl">
           <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">Whatcom County, Washington</p>
@@ -54,7 +54,7 @@ const WhatcomCountyServiceArea = () => (
           <p className="text-xl md:text-[22px] text-primary-foreground/80 leading-[1.75] mb-5">
             Real Property Planning serves families, executors, attorneys, and seniors throughout Whatcom County with certified appraisals, probate real estate sales, and senior housing transition guidance.
           </p>
-          <p className="text-lg md:text-xl text-primary-foreground/70 leading-[1.75] mb-8">
+          <p className="text-lg md:text-xl text-primary-foreground/70 leading-[1.75] mb-3">
             Whether you are managing an inherited property in Bellingham, helping a parent transition in Ferndale, or settling an estate in Lynden — we are here to help.
           </p>
           <Link to="/contact" className="inline-flex items-center justify-center rounded-md bg-gold px-8 py-3.5 text-base font-semibold text-white shadow-sm hover:bg-gold-dark transition-colors min-h-[52px]">

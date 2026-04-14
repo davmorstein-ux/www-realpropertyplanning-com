@@ -86,7 +86,7 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
       <main id="main-content">
 
       {/* Hero — concise */}
-      <section className="bg-primary pt-16 pb-12 md:pt-20 md:pb-16 lg:pt-24 lg:pb-20">
+      <section className="bg-primary pt-3 md:pt-4 pb-12 md:pb-14">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">

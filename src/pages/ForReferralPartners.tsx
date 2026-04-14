@@ -61,7 +61,7 @@ const ForReferralPartners = () => {
       <main id="main-content">
 
       {/* Hero */}
-      <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
+      <section className="bg-primary pt-3 md:pt-4 pb-12 md:pb-14">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
@@ -70,7 +70,7 @@ const ForReferralPartners = () => {
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
               Real Estate Support for Professional Partners
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-8">
+            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-3">
               A Coordinated Approach to Life's Most Important Property Decisions
             </p>
             <Link to="/contact">

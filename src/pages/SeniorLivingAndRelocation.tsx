@@ -92,23 +92,23 @@ const SeniorLivingAndRelocation = () => {
       <Header />
 
       <main id="main-content">
-        <section className="bg-secondary pt-8 md:pt-12 pb-12 md:pb-14">
+        <section className="bg-primary pt-3 md:pt-4 pb-12 md:pb-14">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
-              <div className="flex justify-center mb-8 md:mb-10">
+              <div className="flex justify-center mb-3 md:mb-4">
                 <img
                   src={iconSeniorLiving}
                   alt="Senior Living & Relocation"
                   className="block w-full max-w-[23rem] h-auto object-contain"
                  loading="lazy"/>
               </div>
-              <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-sm">
+              <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">
                 Senior Living
               </p>
-              <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-foreground leading-tight mb-4">
+              <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-primary-foreground leading-tight mb-4">
                 Senior Living & Relocation
               </h1>
-              <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
+              <p className="text-primary-foreground/80 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
                 When a senior is moving out of their home, families face important decisions about where to go next — and what to do with the property they're leaving behind. I help families navigate both sides of that transition with clarity and care.
               </p>
             </div>

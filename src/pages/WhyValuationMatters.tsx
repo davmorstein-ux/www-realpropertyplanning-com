@@ -97,7 +97,7 @@ const WhyValuationMatters = () => {
       <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-[96px]">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <img src={iconHomeValue} alt="" aria-hidden="true" className="mx-auto w-60 h-auto object-contain mb-8"  loading="lazy"/>
+            <img src={iconHomeValue} alt="" aria-hidden="true" className="mx-auto max-w-[23rem] w-full h-auto object-contain mb-3"  loading="lazy"/>
             <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
               Pricing & Valuation Expertise
             </p>

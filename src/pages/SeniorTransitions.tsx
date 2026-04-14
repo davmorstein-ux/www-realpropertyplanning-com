@@ -104,7 +104,7 @@ const SeniorTransitions = () => {
       <main id="main-content">
 
       {/* Hero */}
-      <section className="bg-primary pt-16 pb-12 lg:pt-32 lg:pb-28">
+      <section className="bg-primary pt-3 md:pt-4 pb-12 md:pb-14">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="text-gold font-bold tracking-widest uppercase mb-4 text-base">
@@ -113,7 +113,7 @@ const SeniorTransitions = () => {
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
               Senior Housing Transitions in Washington State
             </h1>
-            <p className="text-xl text-primary-foreground/80 leading-relaxed mb-8">
+            <p className="text-xl text-primary-foreground/80 leading-relaxed mb-3">
               When a parent or loved one needs to leave the home they've lived in for decades, the decision rarely feels simple — and it rarely is. Families throughout the Puget Sound area reach out to Real Property Planning not because they have a plan, but because they need one. David Stein works at your family's pace, coordinating the real estate side of the transition with patience, clear communication, and experience that comes from years of working alongside families, care professionals, and trusted advisors across Western Washington.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">

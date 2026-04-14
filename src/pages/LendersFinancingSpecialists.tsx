@@ -31,21 +31,21 @@ const LendersFinancingSpecialists = () => (
     <main id="main-content">
 
     {/* Hero — Icon + faded intro */}
-    <section className="bg-secondary pt-8 md:pt-12 pb-12 md:pb-14">
+    <section className="bg-primary pt-3 md:pt-4 pb-12 md:pb-14">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <img
             src={lendersIcon}
             alt="Lenders & Financing"
-            className="block w-full max-w-[240px] h-auto md:max-w-[336px] mx-auto mb-8 md:mb-10"
+            className="block w-full max-w-[23rem] h-auto mx-auto mb-3 md:mb-4"
            loading="lazy"/>
-          <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-sm">
+          <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">
             Mortgage Lending
           </p>
-          <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-foreground leading-tight mb-5">
+          <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-primary-foreground leading-tight mb-5">
             Supporting Clients with Financing Options and Long-Term Planning
           </h1>
-          <p className="text-muted-foreground/70 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-8" style={{ maskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)' }}>
+          <p className="text-primary-foreground/70 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-3" style={{ maskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)' }}>
             Connecting clients with trusted professionals who provide clarity around financing, retirement planning, and long-term strategy.
           </p>
           <Link to="/contact">
