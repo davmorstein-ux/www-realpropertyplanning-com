@@ -21,19 +21,19 @@ interface Node {
 }
 
 const leftNodes: Node[] = [
-  { label: "Attorneys", to: "/for-attorneys", icon: iconAttorney, dx: -220, dy: -200 },
-  { label: "Senior Move Managers", to: "/senior-transitions", icon: iconMovers, dx: -300, dy: -100 },
-  { label: "Adult Family Homes", to: "/senior-living", icon: iconAdultFamily, dx: -340, dy: 0 },
-  { label: "Senior Living Placement", to: "/senior-transitions", icon: iconPlacement, dx: -300, dy: 100 },
-  { label: "Mortgage & Lending", to: "/lenders-financing", icon: iconLending, dx: -220, dy: 200 },
+  { label: "Attorneys", to: "/for-attorneys", icon: iconAttorney, dx: -260, dy: -240 },
+  { label: "Senior Move Managers", to: "/senior-transitions", icon: iconMovers, dx: -340, dy: -120 },
+  { label: "Adult Family Homes", to: "/senior-living", icon: iconAdultFamily, dx: -400, dy: 0 },
+  { label: "Senior Living Placement", to: "/senior-transitions", icon: iconPlacement, dx: -340, dy: 120 },
+  { label: "Mortgage & Lending", to: "/lenders-financing", icon: iconLending, dx: -260, dy: 240 },
 ];
 
 const rightNodes: Node[] = [
-  { label: "Real Estate Brokers", to: "/realtor", icon: iconRealtor, dx: 220, dy: -200 },
-  { label: "Appraisers", to: "/real-estate-appraiser", icon: iconAppraiser, dx: 300, dy: -100 },
-  { label: "CPAs", to: "/cpas", icon: iconCPA, dx: 340, dy: 0 },
-  { label: "Financial Planners", to: "/financial-planning", icon: iconFinancial, dx: 300, dy: 100 },
-  { label: "Estate Liquidators", to: "/estate-liquidation", icon: iconLiquidation, dx: 220, dy: 200 },
+  { label: "Real Estate Brokers", to: "/realtor", icon: iconRealtor, dx: 260, dy: -240 },
+  { label: "Appraisers", to: "/real-estate-appraiser", icon: iconAppraiser, dx: 340, dy: -120 },
+  { label: "CPAs", to: "/cpas", icon: iconCPA, dx: 400, dy: 0 },
+  { label: "Financial Planners", to: "/financial-planning", icon: iconFinancial, dx: 340, dy: 120 },
+  { label: "Estate Liquidators", to: "/estate-liquidation", icon: iconLiquidation, dx: 260, dy: 240 },
 ];
 
 const allNodes = [...leftNodes, ...rightNodes];
