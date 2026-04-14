@@ -1465,6 +1465,8 @@ const TIER_1_SLUGS = new Set([
   "lakewood", "bothell", "kent",
   "puyallup", "federal-way", "burien",
   "bremerton", "renton", "enumclaw",
+  "mount-vernon", "burlington", "anacortes",
+  "sedro-woolley", "la-conner", "concrete", "bow-edison",
 ]);
 
 /** Check whether a city is Tier 1 (fully enriched content) */
