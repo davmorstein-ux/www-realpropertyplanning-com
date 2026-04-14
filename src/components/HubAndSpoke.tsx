@@ -29,7 +29,7 @@ const leftNodes: SpokeNodeData[] = [
 ];
 
 const rightNodes: SpokeNodeData[] = [
-  { label: "Real Estate Brokers", to: "/realtor", icon: iconRealtor, dx: 300, dy: -240 },
+  { label: "Real Estate Brokers", to: "/realtor", icon: iconRealtor, dx: 260, dy: -240 },
   { label: "Appraisers", to: "/real-estate-appraiser", icon: iconAppraiser, dx: 340, dy: -120 },
   { label: "CPAs", to: "/for-cpas", icon: iconCPA, dx: 400, dy: 0 },
   { label: "Financial Planners", to: "/for-financial-planners", icon: iconFinancial, dx: 340, dy: 120 },
@@ -39,7 +39,7 @@ const rightNodes: SpokeNodeData[] = [
 const allNodes = [...leftNodes, ...rightNodes];
 
 const NODE_SIZE = 90;
-const CONTAINER_HEIGHT = 640;
+const CONTAINER_HEIGHT = 780;
 
 const SpokeNode = ({ node, cx, cy }: { node: SpokeNodeData; cx: number; cy: number }) => (
   <Link
@@ -66,9 +66,7 @@ const MobileSpokeNode = ({ node }: { node: SpokeNodeData }) => (
     <div className="w-[90px] h-[90px] rounded-full border-[3px] border-[#C9A84C] bg-[#FAF8F4] flex items-center justify-center transition-all duration-200 group-hover:scale-[1.08] group-hover:border-[#E8C96A] group-hover:shadow-[0_0_12px_rgba(201,168,76,0.3)]">
       <img src={node.icon} alt="" aria-hidden="true" className="w-[72px] h-[72px] object-contain" loading="lazy" />
     </div>
-    <span className="text-[12px] text-[#FAF8F4] text-center leading-tight max-w-[100px] font-medium">
-      {node.label}
-    </span>
+    <span className="text-[12px] text-[#FAF8F4] text-center leading-tight max-w-[100px] font-medium">{node.label}</span>
   </Link>
 );
 
@@ -78,15 +76,12 @@ const HubAndSpoke = () => {
 
   return (
     <section
-      className="bg-[#1B2A4A] py-6"
+      className="bg-[#1B2A4A] py-16 lg:py-20"
       aria-label="Real Property Planning professional ecosystem hub connecting families with attorneys, appraisers, real estate brokers, CPAs, financial planners, estate liquidators, adult family homes, senior living placement, senior move managers, and mortgage and lending specialists throughout Washington State"
     >
       {/* Desktop layout */}
       <div className="hidden md:block">
-        <div
-          className="relative mx-auto"
-          style={{ width: 1000, height: CONTAINER_HEIGHT }}
-        >
+        <div className="relative mx-auto" style={{ width: 1000, height: CONTAINER_HEIGHT }}>
           {/* SVG connecting lines */}
           <svg
             className="absolute inset-0 pointer-events-none"
@@ -112,16 +107,20 @@ const HubAndSpoke = () => {
             className="absolute"
             style={{
               left: centerX - 180,
-              top: centerY - 300,
+              top: centerY - 360,
               width: 360,
-              height: 600,
+              height: 720,
             }}
           >
-            <Link to="/" className="flex items-center justify-center w-full h-full" aria-label="Real Property Planning — return to homepage">
+            <Link
+              to="/"
+              className="flex items-center justify-center w-full h-full"
+              aria-label="Real Property Planning — return to homepage"
+            >
               <img
                 src={logo}
                 alt="Real Property Planning — return to homepage"
-                className="max-h-[600px] w-auto cursor-pointer transition-transform duration-300 hover:scale-105"
+                className="max-h-[720px] w-auto cursor-pointer transition-transform duration-300 hover:scale-105"
                 loading="lazy"
               />
             </Link>
@@ -129,12 +128,7 @@ const HubAndSpoke = () => {
 
           {/* Spoke nodes */}
           {allNodes.map((node, i) => (
-            <SpokeNode
-              key={i}
-              node={node}
-              cx={centerX + node.dx}
-              cy={centerY + node.dy}
-            />
+            <SpokeNode key={i} node={node} cx={centerX + node.dx} cy={centerY + node.dy} />
           ))}
         </div>
       </div>
@@ -151,18 +145,10 @@ const HubAndSpoke = () => {
             />
           </Link>
         </div>
-        <div className="grid grid-cols-2 gap-y-6 gap-x-4">
-          {leftNodes.map((node, i) => {
-            const right = rightNodes[i];
-            return [
-              <div key={`l-${i}`} className="flex justify-center">
-                <MobileSpokeNode node={node} />
-              </div>,
-              <div key={`r-${i}`} className="flex justify-center">
-                <MobileSpokeNode node={right} />
-              </div>,
-            ];
-          })}
+        <div className="grid grid-cols-2 gap-6 justify-items-center">
+          {allNodes.map((node, i) => (
+            <MobileSpokeNode key={i} node={node} />
+          ))}
         </div>
       </div>
     </section>
