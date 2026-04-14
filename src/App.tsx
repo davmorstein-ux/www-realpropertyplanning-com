@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 
 import Index from "./pages/Index";
@@ -324,6 +324,11 @@ const App = () => (
           <Route path="/service-areas/skagit-county" element={<SkagitCountyServiceArea />} />
           <Route path="/service-areas/thurston-county" element={<ThurstonCountyServiceArea />} />
           <Route path="/service-areas/whatcom-county" element={<WhatcomCountyServiceArea />} />
+          {/* 301-style redirects for old/wrong URLs */}
+          <Route path="/cpas" element={<Navigate to="/for-cpas" replace />} />
+          <Route path="/financial-planning" element={<Navigate to="/for-financial-planners" replace />} />
+          <Route path="/senior-living" element={<Navigate to="/senior-living-and-relocation" replace />} />
+          <Route path="/lenders-financing" element={<Navigate to="/lenders-and-financing-specialists" replace />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
