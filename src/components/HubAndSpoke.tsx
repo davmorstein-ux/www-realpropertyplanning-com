@@ -111,17 +111,17 @@ const HubAndSpoke = () => {
           <div
             className="absolute"
             style={{
-              left: centerX - 90,
-              top: centerY - 180,
-              width: 180,
-              height: 360,
+              left: centerX - 180,
+              top: centerY - 360,
+              width: 360,
+              height: 720,
             }}
           >
             <Link to="/" className="flex items-center justify-center w-full h-full" aria-label="Real Property Planning — return to homepage">
               <img
                 src={logo}
                 alt="Real Property Planning — return to homepage"
-                className="max-h-[360px] w-auto cursor-pointer transition-transform duration-300 hover:scale-105"
+                className="max-h-[720px] w-auto cursor-pointer transition-transform duration-300 hover:scale-105"
                 loading="lazy"
               />
             </Link>
