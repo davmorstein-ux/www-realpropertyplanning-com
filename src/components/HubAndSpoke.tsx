@@ -5,7 +5,7 @@ import iconMovers from "@/assets/icons/senior-movers-relocation-icon-washington.
 import iconAdultFamily from "@/assets/icons/senior-adult-family-home-3d-washington.webp";
 import iconPlacement from "@/assets/icons/senior-living-placement-icon-washington.webp";
 import iconLending from "@/assets/icons/real-estate-lending-services-icon-washington.webp";
-import iconRealtor from "@/assets/icons/realtor-real-estate-agent-icon-washington.webp";
+import iconRealtor from "@/assets/icons/realtor-real-estate-agent-transparent-icon-washington.webp";
 import iconAppraiser from "@/assets/icons/real-estate-appraiser-icon-washington.webp";
 import iconCPA from "@/assets/icons/estate-cpas-financial-icon-washington.webp";
 import iconFinancial from "@/assets/icons/estate-financial-planning-icon-washington.webp";
@@ -32,7 +32,7 @@ const leftNodes: Node[] = [
 ];
 
 const rightNodes: Node[] = [
-  { label: "Real Estate Brokers", to: "/realtor", icon: iconRealtor, dx: 260, dy: -240, iconStyle: { display: "block", margin: "auto", width: 72, height: 72, objectFit: "contain" as const } },
+  { label: "Real Estate Brokers", to: "/realtor", icon: iconRealtor, dx: 280, dy: -240 },
   { label: "Appraisers", to: "/real-estate-appraiser", icon: iconAppraiser, dx: 340, dy: -120 },
   { label: "CPAs", to: "/cpas", icon: iconCPA, dx: 400, dy: 0 },
   { label: "Financial Planners", to: "/financial-planning", icon: iconFinancial, dx: 340, dy: 120 },
