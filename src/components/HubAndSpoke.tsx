@@ -28,7 +28,7 @@ const leftNodes: Node[] = [
   { label: "Senior Move Managers", to: "/senior-transitions", icon: iconMovers, dx: -340, dy: -120 },
   { label: "Adult Family Homes", to: "/senior-living", icon: iconAdultFamily, dx: -400, dy: 0 },
   { label: "Senior Living Placement", to: "/senior-transitions", icon: iconPlacement, dx: -340, dy: 120 },
-  { label: "Mortgage & Lending", to: "/lenders-financing", icon: iconLending, dx: -260, dy: 240 },
+  { label: "Mortgage & Lending", to: "/mortgage-lending", icon: iconLending, dx: -260, dy: 240 },
 ];
 
 const rightNodes: Node[] = [
@@ -109,8 +109,9 @@ const HubAndSpoke = () => {
         </svg>
 
         {/* Center logo */}
-        <div
-          className="absolute"
+        <Link
+          to="/"
+          className="absolute cursor-pointer"
           style={{
             left: "50%",
             top: "50%",
@@ -121,8 +122,8 @@ const HubAndSpoke = () => {
             borderRadius: 0,
           }}
         >
-          <img src={logo} alt="Real Property Planning" className="w-[360px] h-auto" style={{ background: "transparent", border: "none", boxShadow: "none" }} loading="lazy" />
-        </div>
+          <img src={logo} alt="Real Property Planning" className="w-[360px] h-auto" style={{ background: "transparent", border: "none", boxShadow: "none", transition: "transform 0.3s ease" }} loading="lazy" onMouseOver={e => (e.currentTarget.style.transform = "scale(1.05)")} onMouseOut={e => (e.currentTarget.style.transform = "scale(1)")} />
+        </Link>
 
         {/* Nodes */}
         {allNodes.map((node, i) => (
