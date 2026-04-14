@@ -12,7 +12,13 @@ import iconFinancial from "@/assets/icons/estate-financial-planning-icon-washing
 import iconLiquidation from "@/assets/icons/estate-liquidation-services-icon-washington.webp";
 import logo from "@/assets/real-property-planning-logo-bright-seattle.webp";
 
-const leftNodes = [
+interface SpokeNodeData {
+  label: string;
+  to: string;
+  icon: string;
+}
+
+const leftNodes: SpokeNodeData[] = [
   { label: "Attorneys", to: "/for-attorneys", icon: iconAttorney },
   { label: "Senior Move Managers", to: "/senior-move-managers", icon: iconMovers },
   { label: "Adult Family Homes", to: "/senior-living-and-relocation", icon: iconAdultFamily },
@@ -20,7 +26,7 @@ const leftNodes = [
   { label: "Mortgage & Lending", to: "/lenders-and-financing-specialists", icon: iconLending },
 ];
 
-const rightNodes = [
+const rightNodes: SpokeNodeData[] = [
   { label: "Real Estate Brokers", to: "/realtor", icon: iconRealtor },
   { label: "Appraisers", to: "/real-estate-appraiser", icon: iconAppraiser },
   { label: "CPAs", to: "/for-cpas", icon: iconCPA },
@@ -30,7 +36,7 @@ const rightNodes = [
 
 const allNodes = [...leftNodes, ...rightNodes];
 
-const SpokeNode = ({ node }: { node: (typeof leftNodes)[0] }) => (
+const SpokeNode = ({ node }: { node: SpokeNodeData }) => (
   <Link to={node.to} className="flex flex-col items-center gap-2 group" aria-label={node.label}>
     <div className="w-[90px] h-[90px] rounded-full border-[3px] border-[#C9A84C] bg-[#FAF8F4] flex items-center justify-center transition-transform duration-200 group-hover:scale-105 group-hover:border-[#D4B85C] group-hover:shadow-[0_0_12px_rgba(201,168,76,0.3)]">
       <img src={node.icon} alt="" aria-hidden="true" className="w-[72px] h-[72px] object-contain" loading="lazy" />
@@ -47,39 +53,35 @@ const HubAndSpoke = () => {
     >
       {/* Desktop layout */}
       <div className="hidden md:flex items-center justify-center container px-6 lg:px-8">
-        {/* Left column */}
         <div className="flex flex-col items-center gap-6">
           {leftNodes.map((node, i) => (
             <SpokeNode key={i} node={node} />
           ))}
         </div>
 
-        {/* Left lines */}
         <div className="flex flex-col justify-center gap-[42px] py-[18px]">
           {leftNodes.map((_, i) => (
             <div key={i} className="w-16 lg:w-24 h-[2px] bg-[#C9A84C]" />
           ))}
         </div>
 
-        {/* Center logo */}
         <div className="shrink-0 mx-4">
           <Link to="/">
             <img
               src={logo}
               alt="Real Property Planning — return to homepage"
               className="w-[180px] h-auto cursor-pointer transition-transform duration-300 hover:scale-105"
+              loading="lazy"
             />
           </Link>
         </div>
 
-        {/* Right lines */}
         <div className="flex flex-col justify-center gap-[42px] py-[18px]">
           {rightNodes.map((_, i) => (
             <div key={i} className="w-16 lg:w-24 h-[2px] bg-[#C9A84C]" />
           ))}
         </div>
 
-        {/* Right column */}
         <div className="flex flex-col items-center gap-6">
           {rightNodes.map((node, i) => (
             <SpokeNode key={i} node={node} />
@@ -95,6 +97,7 @@ const HubAndSpoke = () => {
               src={logo}
               alt="Real Property Planning — return to homepage"
               className="w-[150px] h-auto cursor-pointer transition-transform duration-300 hover:scale-105"
+              loading="lazy"
             />
           </Link>
         </div>
