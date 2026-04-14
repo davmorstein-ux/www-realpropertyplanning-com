@@ -28,7 +28,7 @@ const SeniorEstateServices = () => {
       <main id="main-content">
 
       {/* Hero */}
-      <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
+      <section className="bg-primary pt-3 md:pt-4 pb-12 md:pb-14">
         <div className="container px-6 lg:px-8">
           <div className="max-w-[1100px] mx-auto">
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">

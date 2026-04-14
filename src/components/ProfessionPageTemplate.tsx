@@ -99,7 +99,7 @@ const ProfessionPageTemplate = ({
       <main id="main-content">
 
       {/* SECTION 1: Hero */}
-      <section className="bg-primary pt-16 pb-14 md:pt-20 md:pb-16 lg:pt-24 lg:pb-20">
+      <section className="bg-primary pt-3 md:pt-4 pb-12 md:pb-14">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="font-serif text-[2.625rem] text-primary-foreground font-semibold leading-tight mb-4">

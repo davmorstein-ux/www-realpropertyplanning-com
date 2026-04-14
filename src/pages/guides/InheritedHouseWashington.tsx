@@ -64,7 +64,7 @@ const InheritedHouseWashington = () => (
     <Header />
     <main id="main-content">
 
-    <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
+    <section className="bg-primary pt-3 md:pt-4 pb-12 md:pb-14">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl" id="inherited-house-hero">
           <div className="mb-5">

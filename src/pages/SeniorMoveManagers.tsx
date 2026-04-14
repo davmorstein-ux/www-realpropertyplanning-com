@@ -65,19 +65,19 @@ const SeniorMoveManagers = () => (
     <Header />
     <main id="main-content">
       {/* Hero */}
-      <section className="bg-secondary pt-8 md:pt-12 pb-12 md:pb-14">
+      <section className="bg-primary pt-3 md:pt-4 pb-12 md:pb-14">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="flex justify-center mb-8 md:mb-10">
+            <div className="flex justify-center mb-3 md:mb-4">
               <img src={iconSeniorMoves} alt="Senior move management and downsizing coordination in Washington State" className="block w-full max-w-[23rem] h-auto object-contain" loading="lazy" />
             </div>
-            <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-sm">
+            <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">
               Senior Transitions
             </p>
-            <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-foreground leading-tight mb-4">
+            <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-primary-foreground leading-tight mb-4">
               Senior Move Managers
             </h1>
-            <p className="text-muted-foreground/70 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-8" style={{ maskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)' }}>
+            <p className="text-primary-foreground/70 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-3" style={{ maskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)' }}>
               Practical, compassionate help for older adults and families preparing to downsize, organize, pack, relocate, or settle into a new home.
             </p>
             <Link to="/contact">

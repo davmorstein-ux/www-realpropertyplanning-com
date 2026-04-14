@@ -75,13 +75,13 @@ const Wills = () => {
         <Header />
         <main id="main-content" className="flex-1">
           {/* Hero */}
-          <section className="pt-20 pb-10 sm:pt-28 sm:pb-14 bg-gradient-to-b from-secondary to-background">
+          <section className="pt-3 md:pt-4 pb-10 sm:pb-14 bg-gradient-to-b from-primary to-primary">
             <div className="mx-auto max-w-3xl px-6 text-center">
-              <img src={iconWills} alt="Wills and real estate guidance for Washington State families" className="mx-auto w-60 h-auto object-contain mb-8"  loading="lazy"/>
-              <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
+              <img src={iconWills} alt="Wills and real estate guidance for Washington State families" className="mx-auto max-w-[23rem] w-full h-auto object-contain mb-3"  loading="lazy"/>
+              <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
                 Wills &amp; Real Estate
               </h1>
-              <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-8">
+              <p className="text-lg sm:text-xl text-primary-foreground/80 max-w-2xl mx-auto leading-relaxed mb-3">
                 A will is one of the most important documents in estate planning — and when real
                 property is involved, the decisions it guides can shape a family's financial future
                 for years to come.

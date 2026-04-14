@@ -54,7 +54,7 @@ const HowToMoveElderlyParents = () => (
     <main id="main-content">
 
     {/* Hero */}
-    <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
+    <section className="bg-primary pt-3 md:pt-4 pb-12 md:pb-14">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl">
           <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">Insights & Guidance</p>
@@ -64,7 +64,7 @@ const HowToMoveElderlyParents = () => (
           <p className="text-xl md:text-[22px] text-primary-foreground/80 leading-[1.75] mb-5">
             Helping a parent leave the home they have lived in for decades is one of the most emotionally complex things an adult child will ever do.
           </p>
-          <p className="text-lg md:text-xl text-primary-foreground/70 leading-[1.75] mb-8">
+          <p className="text-lg md:text-xl text-primary-foreground/70 leading-[1.75] mb-3">
             It involves logistics, family dynamics, financial decisions, and deeply personal emotions — often all at once. This guide is written for families in the middle of that process, or just beginning to think about it.
           </p>
           <Link

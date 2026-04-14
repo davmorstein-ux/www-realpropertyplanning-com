@@ -27,15 +27,15 @@ const Realtor = () => (
     <Header />
     <main id="main-content">
       {/* Hero */}
-      <section className="bg-secondary pt-8 md:pt-12 pb-12 md:pb-14">
+      <section className="bg-primary pt-3 md:pt-4 pb-12 md:pb-14">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="flex justify-center mb-8 md:mb-10">
+            <div className="flex justify-center mb-3 md:mb-4">
               <img src={iconRealtor} alt="Realtor" className="block w-full max-w-[23rem] h-auto object-contain"  loading="lazy"/>
             </div>
-            <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-sm">Real Estate</p>
-            <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-foreground leading-tight mb-4">Realtor</h1>
-            <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
+            <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">Real Estate</p>
+            <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-primary-foreground leading-tight mb-4">Realtor</h1>
+            <p className="text-primary-foreground/80 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
               Experienced real estate guidance for seniors, families, executors, and professionals navigating important property decisions throughout Washington State.
             </p>
           </div>

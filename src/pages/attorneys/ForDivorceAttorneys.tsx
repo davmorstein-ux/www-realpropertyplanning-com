@@ -63,17 +63,17 @@ const ForDivorceAttorneys = () => (
     <main id="main-content">
 
     {/* Hero */}
-    <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
+    <section className="bg-primary pt-3 md:pt-4 pb-12 md:pb-14">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
-          <img src={iconDivorce} alt="" aria-hidden="true" className="mx-auto w-60 h-auto object-contain mb-8"  loading="lazy"/>
+          <img src={iconDivorce} alt="" aria-hidden="true" className="mx-auto max-w-[23rem] w-full h-auto object-contain mb-3"  loading="lazy"/>
           <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
             For Divorce Attorneys
           </p>
           <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
             Real Estate Support for Divorce Attorneys and Their Clients
           </h1>
-          <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-8">
+          <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-3">
             Providing Clarity and Neutrality During Complex Transitions
           </p>
           <Link to="/contact">

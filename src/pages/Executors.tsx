@@ -31,22 +31,22 @@ const Executors = () => (
     <main id="main-content">
 
     {/* Hero */}
-    <section className="bg-secondary pt-8 md:pt-12 pb-12 md:pb-14">
+    <section className="bg-primary pt-3 md:pt-4 pb-12 md:pb-14">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="flex justify-center mb-8 md:mb-10">
+          <div className="flex justify-center mb-3 md:mb-4">
             <img src={iconExecutors} alt="Executor and personal representative real estate guidance Washington State" className="block w-full max-w-[23rem] h-auto object-contain" loading="lazy" />
           </div>
-          <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-sm">
+          <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">
             For Executors & Personal Representatives
           </p>
-          <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-foreground leading-tight mb-4">
+          <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-primary-foreground leading-tight mb-4">
             Guidance for Executors Managing Inherited Property in Washington State
           </h1>
-          <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-4">
+          <p className="text-primary-foreground/80 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-4">
             Real Property Planning coordinates property evaluation, preparation, pricing, and sale — so you can focus on your other responsibilities.
           </p>
-          <p className="text-muted-foreground/80 text-[15px] md:text-base leading-relaxed max-w-2xl mx-auto mb-8">
+          <p className="text-primary-foreground/80 text-[15px] md:text-base leading-relaxed max-w-2xl mx-auto mb-3">
             Being named executor is an honor — and an enormous responsibility. Most executors have never sold a home on behalf of an estate before, and many are managing the process from another city or state while also grieving, coordinating with attorneys, and dealing with family members who may not agree on anything. Real Property Planning exists to take the real estate burden off your plate entirely — with honest guidance, local expertise throughout{" "}
             <Link to="/counties" className="text-accent hover:text-gold underline underline-offset-4 transition-colors">King, Snohomish, Pierce, and Kitsap Counties</Link>, and the kind of steady communication that keeps everyone informed without overwhelming anyone.
           </p>

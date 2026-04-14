@@ -46,7 +46,7 @@ const PierceCountyServiceArea = () => (
     <main id="main-content">
 
     {/* Hero */}
-    <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
+    <section className="bg-primary pt-3 md:pt-4 pb-12 md:pb-14">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl">
           <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">Pierce County, Washington</p>
@@ -56,7 +56,7 @@ const PierceCountyServiceArea = () => (
           <p className="text-xl md:text-[22px] text-primary-foreground/80 leading-[1.75] mb-5">
             Real Property Planning serves families, executors, attorneys, and seniors throughout Pierce County with certified appraisals, probate real estate sales, and senior housing transition guidance.
           </p>
-          <p className="text-lg md:text-xl text-primary-foreground/70 leading-[1.75] mb-8">
+          <p className="text-lg md:text-xl text-primary-foreground/70 leading-[1.75] mb-3">
             Whether you are managing an inherited property in Tacoma, helping a parent transition in Gig Harbor, or settling an estate in Puyallup — we are here to help.
           </p>
           <Link

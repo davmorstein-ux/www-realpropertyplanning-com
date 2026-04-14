@@ -162,10 +162,10 @@ const ProbateEstateSales = () => {
       <main id="main-content">
 
       {/* Hero */}
-      <section className="bg-primary pt-16 pb-12 lg:pt-32 lg:pb-28">
+      <section className="bg-primary pt-3 md:pt-4 pb-12 md:pb-14">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <img src={iconProbateSales} alt="Probate real estate sales guidance in Washington State" className="mx-auto w-60 h-auto object-contain mb-8"  loading="lazy"/>
+            <img src={iconProbateSales} alt="Probate real estate sales guidance in Washington State" className="mx-auto max-w-[23rem] w-full h-auto object-contain mb-3"  loading="lazy"/>
             <p className="text-gold font-bold tracking-widest uppercase mb-4 text-base">
               Probate & Estate Property Sales
             </p>
@@ -175,7 +175,7 @@ const ProbateEstateSales = () => {
             <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
               When a home is part of a probate case, nothing about the sale follows the normal playbook. Court authority may need to be granted before the property can be listed. The house itself may have been vacant for months, with deferred maintenance that standard market comparisons cannot account for. And the executor, attorney, and family members all need to stay informed without stepping on each other's timelines.
             </p>
-            <p className="text-lg text-primary-foreground/70 leading-relaxed mb-8">
+            <p className="text-lg text-primary-foreground/70 leading-relaxed mb-3">
               Real Property Planning brings valuation-informed real estate guidance to these situations — giving executors defensible pricing, attorneys a reliable point of coordination, and families the confidence that the property is being handled with care.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
