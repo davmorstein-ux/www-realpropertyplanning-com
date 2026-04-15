@@ -1552,6 +1552,9 @@ const TIER_1_SLUGS = new Set([
   "bremerton", "renton", "enumclaw",
   "mount-vernon", "burlington", "anacortes",
   "sedro-woolley", "la-conner", "concrete", "bow-edison",
+  "mukilteo", "mill-creek", "marysville", "lake-stevens",
+  "university-place", "port-orchard", "kingston", "suquamish",
+  "shoreline", "sammamish", "newcastle",
 ]);
 
 /** Check whether a city is Tier 1 (fully enriched content) */
