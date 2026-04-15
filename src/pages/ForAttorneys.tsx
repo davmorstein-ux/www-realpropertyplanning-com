@@ -120,7 +120,7 @@ const ForAttorneys = () => (
     <section className="py-6 bg-background">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
-          <Link to="/for-attorneys/learn-more" className="text-accent hover:text-gold underline underline-offset-4 text-base font-medium transition-colors">
+          <Link to="/for-attorneys/learn-more" className="text-[#8B6914] hover:text-[#6B4F0E] underline underline-offset-4 text-lg md:text-xl font-semibold transition-colors">
             More information about working with Attorneys →
           </Link>
         </div>
