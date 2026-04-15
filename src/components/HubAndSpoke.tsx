@@ -84,9 +84,9 @@ const SpokeNode = ({
         position: "relative",
         zIndex: 1,
         ...(isPulsing ? {
-          transform: "scale(1.08)",
+          transform: "scale(1.18)",
           borderColor: "#E8C96A",
-          boxShadow: "0 0 14px rgba(201,168,76,0.35)",
+          boxShadow: "0 0 18px rgba(201,168,76,0.45)",
         } : {}),
       }}
     >
@@ -194,9 +194,10 @@ const HubAndSpoke = () => {
                 y1={centerY}
                 x2={centerX + node.dx}
                 y2={centerY + node.dy}
-                stroke={pulsingIndex === i ? "#F0D878" : "#C9A84C"}
-                strokeWidth={pulsingIndex === i ? 3 : 2}
-                style={{ transition: `stroke ${NODE_PULSE_MS / 2}ms ease-in-out, stroke-width ${NODE_PULSE_MS / 2}ms ease-in-out` }}
+                stroke={pulsingIndex === i ? "#FFFDE8" : "#C9A84C"}
+                strokeWidth={pulsingIndex === i ? 5 : 2}
+                filter={pulsingIndex === i ? "drop-shadow(0 0 6px rgba(255,250,200,0.6))" : "none"}
+                style={{ transition: `stroke ${NODE_PULSE_MS / 2}ms ease-in-out, stroke-width ${NODE_PULSE_MS / 2}ms ease-in-out, filter ${NODE_PULSE_MS / 2}ms ease-in-out` }}
               />
             ))}
           </svg>
