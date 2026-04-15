@@ -1,7 +1,39 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import logoBright from "@/assets/real-property-planning-logo-bright-seattle.webp";
 
+const LINE1 = "Washington's Professional Hub for Seniors, Families & Estate Transitions";
+const TYPING_DURATION = 1500; // ms
+const FADE_DELAY = 500; // ms after typing completes
+
 const HomepageHero = () => {
+  const [charCount, setCharCount] = useState(0);
+  const [showLine2, setShowLine2] = useState(false);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (mq.matches) {
+      setPrefersReducedMotion(true);
+      setCharCount(LINE1.length);
+      setShowLine2(true);
+      return;
+    }
+
+    const interval = TYPING_DURATION / LINE1.length;
+    let i = 0;
+    const timer = setInterval(() => {
+      i++;
+      setCharCount(i);
+      if (i >= LINE1.length) {
+        clearInterval(timer);
+        setTimeout(() => setShowLine2(true), FADE_DELAY);
+      }
+    }, interval);
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section className="relative flex flex-col items-center justify-center" style={{ backgroundColor: "#0a1628" }}>
       <div className="flex flex-col items-center px-6 lg:px-8 py-1 lg:py-1 w-full max-w-6xl mx-auto text-center">
@@ -19,13 +51,27 @@ const HomepageHero = () => {
           />
         </div>
 
-        {/* H1 — keyword-rich for SEO */}
-        <h1 className="text-[22px] md:text-[28px] tracking-[0.08em] leading-relaxed mb-2 text-white font-medium">
-          Probate Real Estate &amp; Senior Transition Services in Washington State
+        {/* H1 — typewriter animation */}
+        <h1
+          className="text-[22px] md:text-[28px] tracking-[0.08em] leading-relaxed mb-2 text-white font-medium"
+          aria-label={LINE1}
+        >
+          <span aria-hidden="true">
+            {LINE1.slice(0, charCount)}
+            {!prefersReducedMotion && charCount < LINE1.length && (
+              <span className="inline-block w-[2px] h-[1.1em] bg-white/80 align-middle ml-[1px] animate-[blink_0.7s_steps(1)_infinite]" />
+            )}
+          </span>
         </h1>
 
-        {/* Warm subheading */}
-        <p className="text-[18px] md:text-[22px] tracking-[0.04em] leading-relaxed mb-6 text-white/80 font-light">
+        {/* Warm subheading — fades in after typing */}
+        <p
+          className="text-[18px] md:text-[22px] tracking-[0.04em] leading-relaxed mb-6 text-white/80 font-light"
+          style={{
+            opacity: showLine2 ? 1 : 0,
+            transition: prefersReducedMotion ? "none" : "opacity 0.8s ease-in-out",
+          }}
+        >
           Guiding Families Through Life's Most Important Transitions
         </p>
 
@@ -46,6 +92,13 @@ const HomepageHero = () => {
           </Link>
         </div>
       </div>
+
+      <style>{`
+        @keyframes blink {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0; }
+        }
+      `}</style>
     </section>
   );
 };
