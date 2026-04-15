@@ -101,6 +101,9 @@ const LendersFinancingSpecialists = () => (
                       <MapPin className="w-4 h-4 text-accent shrink-0 mt-0.5" />
                       <span className="text-muted-foreground">1721 Hewitt Ave Ste. 612, Everett, WA 98201</span>
                     </div>
+                    <div className="flex items-center gap-2 justify-center sm:justify-start pl-6">
+                      <span className="text-muted-foreground">NMLS 135622</span>
+                    </div>
                     <div className="flex items-center gap-2 justify-center sm:justify-start">
                       <Phone className="w-4 h-4 text-accent shrink-0" />
                       <a href="tel:+12063105766" className="text-accent hover:text-gold underline-offset-4 hover:underline">(206) 310-5766</a>
