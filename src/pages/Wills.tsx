@@ -77,7 +77,7 @@ const Wills = () => {
           {/* Hero */}
           <section className="pt-3 md:pt-4 pb-10 sm:pb-14 bg-gradient-to-b from-primary to-primary">
             <div className="mx-auto max-w-3xl px-6 text-center">
-              <img src={iconWills} alt="Wills and real estate guidance for Washington State families" className="mx-auto max-w-[23rem] w-full h-auto object-contain mb-3"  loading="lazy"/>
+              <img src={iconWills} alt="Wills and real estate guidance for Washington State families" className="mx-auto max-w-[15rem] w-full h-auto object-contain mb-1.5"  loading="lazy"/>
               <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
                 Wills &amp; Real Estate
               </h1>

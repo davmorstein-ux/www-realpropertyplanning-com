@@ -90,7 +90,7 @@ const WashingtonExecutorsChecklist = () => {
 
       <main id="main-content">
         {/* Hero */}
-        <section className="bg-primary pt-3 md:pt-4 pb-12 md:pb-14">
+        <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
               <span className="inline-block px-5 py-1.5 rounded-full text-gold font-bold tracking-[0.18em] uppercase text-xs bg-gradient-to-b from-gold/15 to-gold/5 border border-gold/25 shadow-[0_2px_8px_rgba(201,168,76,0.12),inset_0_1px_0_rgba(255,255,255,0.1),inset_0_-1px_0_rgba(0,0,0,0.08)] mb-5">
@@ -102,8 +102,8 @@ const WashingtonExecutorsChecklist = () => {
               <p className="text-primary-foreground/80 text-lg md:text-xl leading-relaxed mb-4 max-w-2xl mx-auto">
                 A practical step-by-step guide for executors, trustees, and families handling Washington real estate during probate, trust administration, or major life transitions.
               </p>
-            <div className="flex justify-center mb-3 md:mb-4">
-              <img src={heroIcon} alt="" aria-hidden="true" className="block w-full max-w-[23rem] h-auto object-contain" loading="lazy" />
+            <div className="flex justify-center mb-1.5 md:mb-2">
+              <img src={heroIcon} alt="" aria-hidden="true" className="block w-full max-w-[15rem] h-auto object-contain" loading="lazy" />
             </div>
 
               <p className="text-gold/90 text-base italic">

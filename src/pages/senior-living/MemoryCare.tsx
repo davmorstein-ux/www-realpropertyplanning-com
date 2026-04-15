@@ -31,7 +31,7 @@ const MemoryCare = () => (
               <img
                 src={memoryCareHeroIcon}
                 alt="Memory Care"
-                className="block max-w-[23rem] h-auto mx-auto"
+                className="block max-w-[15rem] h-auto mx-auto"
                loading="lazy"/>
             </div>
             <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-base">Senior Living</p>
