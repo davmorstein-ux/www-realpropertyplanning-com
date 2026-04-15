@@ -66,15 +66,6 @@ const ForAttorneys = () => (
     <section className="py-10 md:py-14 bg-background">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
-          <p className="text-muted-foreground text-[17px] md:text-lg leading-[1.8] mb-4">
-            Attorneys working in{" "}
-            <Link to="/probate-estate-sales" className="text-accent hover:text-gold underline underline-offset-4">probate</Link>, estate planning, elder law, family law, and divorce regularly encounter real estate questions that fall outside the scope of legal counsel. When a client needs honest property valuation, coordinated sale management, or a professional who can hold a complex multi-party process together — that's where Real Property Planning fits in.
-          </p>
-          <p className="text-muted-foreground text-[17px] md:text-lg leading-[1.8] mb-6">
-            David Stein's dual background as a licensed real estate broker and a{" "}
-            <Link to="/real-estate-appraiser" className="text-accent hover:text-gold underline underline-offset-4">Washington State Certified Residential Appraiser</Link>{" "}
-            makes him an unusually reliable resource for attorneys who need the property side handled with accuracy, professionalism, and clear communication.
-          </p>
           <p className="text-muted-foreground text-[17px] md:text-lg leading-[1.8] font-medium">
             Select the area of law that best fits your client's situation below.
           </p>
@@ -96,6 +87,17 @@ const ForAttorneys = () => (
               <ServiceNavTileCard key={tile.href + tile.title} tile={tile} index={index} />
             ))}
           </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Introductory copy below tiles */}
+    <section className="py-10 md:py-14 bg-background">
+      <div className="container px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto">
+          <p className="text-muted-foreground text-[17px] md:text-lg leading-[1.8]">
+            Attorneys working in probate, estate planning, elder law, family law, and divorce regularly encounter real estate questions that fall outside the scope of legal counsel. When a client needs honest property valuation, coordinated sale management, or a professional who can hold a complex multi-party process together — that's where Real Property Planning fits in.
+          </p>
         </div>
       </div>
     </section>
