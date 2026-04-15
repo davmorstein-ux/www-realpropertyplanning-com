@@ -109,7 +109,7 @@ const ForAttorneys = () => (
     <section className="py-8 md:py-12 bg-background">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
-          <p className="text-foreground text-xl md:text-2xl leading-[1.8]">
+          <p className="text-[#1B2B4B] text-2xl md:text-[1.7rem] leading-[1.8]">
             Attorneys working in probate, estate planning, elder law, family law, and divorce regularly encounter real estate questions that fall outside the scope of legal counsel. When a client needs honest property valuation, coordinated sale management, or a professional who can hold a complex multi-party process together — that's where Real Property Planning fits in.
           </p>
         </div>
