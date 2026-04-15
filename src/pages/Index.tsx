@@ -21,10 +21,10 @@ import HomepageFAQ from "@/components/HomepageFAQ";
 import HomepageTeamSection from "@/components/HomepageTeamSection";
 
 const serviceAreas = [
-  { county: "King County", href: "/counties/king", cities: "Seattle, Bellevue, Kirkland, Redmond, Renton, Kent & more" },
-  { county: "Snohomish County", href: "/counties/snohomish", cities: "Everett, Edmonds, Lynnwood, Marysville & more" },
-  { county: "Pierce County", href: "/counties/pierce", cities: "Tacoma, Puyallup, Lakewood & more" },
-  { county: "Kitsap County", href: "/counties/kitsap", cities: "Bremerton, Silverdale, Poulsbo & more" },
+  { county: "King County", href: "/counties/king", cities: "Seattle, Bellevue, Kirkland, Redmond, Renton, Bothell, Shoreline, Mercer Island, Burien, Kent, Auburn, Federal Way" },
+  { county: "Snohomish County", href: "/counties/snohomish", cities: "Everett, Edmonds, Lynnwood, Marysville, Mukilteo, Mill Creek, Mountlake Terrace, Monroe, Bothell, Woodinville" },
+  { county: "Pierce County", href: "/counties/pierce", cities: "Tacoma, Puyallup, Lakewood, Gig Harbor, Bonney Lake, Sumner, Auburn, University Place" },
+  { county: "Kitsap County", href: "/counties/kitsap", cities: "Bremerton, Silverdale, Poulsbo, Port Orchard, Bainbridge Island, Kingston" },
 ];
 
 const jsonLd = realEstateAgentSchema;
@@ -33,8 +33,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-cream">
       <SEOHead
-        title="Probate & Estate Real Estate in Washington State | Real Property Planning"
-        description="Calm, experienced guidance for families navigating probate, inherited property, and senior housing transitions across Washington State. Licensed Broker & Certified Appraiser. Call (206) 900-3015."
+        title="Probate Real Estate & Senior Transition Services | Puget Sound, Washington | Real Property Planning"
+        description="Probate real estate, estate appraisals & senior transition guidance for families and professionals throughout Washington State. David Stein — eXp Realty. Call (206) 900-3015."
         jsonLd={jsonLd}
       />
       <Header />
