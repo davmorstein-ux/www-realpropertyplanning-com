@@ -133,7 +133,7 @@ const LendersFinancingSpecialists = () => (
                   <img src={crossCountryLogo} alt="CrossCountry Mortgage logo" className="h-[180px] w-auto object-contain mx-auto sm:mx-0 block scale-[2.5] origin-left sm:-ml-[36px] sm:-mt-[16px]"  loading="lazy"/>
                 </a>
                 <div className="w-full mt-1 text-center sm:pl-[58px] sm:text-left">
-                  <p className="text-foreground font-semibold text-lg">Jeff McGinnis</p>
+                  <p className="text-foreground font-semibold text-lg">Jeff McGinnis <span className="text-muted-foreground text-sm font-normal">· NMLS 279369</span></p>
                   <p className="text-muted-foreground text-sm mb-1.5">Senior Loan Officer · CrossCountry Mortgage</p>
                   <p className="text-muted-foreground text-sm leading-relaxed mb-3">
                     I'm a seasoned mortgage lending professional with over 25 years of experience in the industry. I have a proven track record of success and am known as one of the top producers in my field. With a deep understanding of the lending landscape and a passion for helping clients achieve their homeownership goals, I've established myself as a trusted and knowledgeable resource for borrowers.
@@ -142,6 +142,9 @@ const LendersFinancingSpecialists = () => (
                     <div className="flex items-start gap-2 justify-center sm:justify-start">
                       <MapPin className="w-4 h-4 text-accent shrink-0 mt-0.5" />
                       <span className="text-muted-foreground">1000 Dexter Ave N, Suite 310, Seattle, WA 98109</span>
+                    </div>
+                    <div className="flex items-center gap-2 justify-center sm:justify-start pl-6">
+                      <span className="text-muted-foreground">NMLS 1958276</span>
                     </div>
                     <div className="flex items-center gap-2 justify-center sm:justify-start">
                       <Phone className="w-4 h-4 text-accent shrink-0" />
