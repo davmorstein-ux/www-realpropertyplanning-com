@@ -145,6 +145,24 @@ const CountyPageTemplate = ({
         </div>
       </section>
 
+      {/* Local Expertise — optional */}
+      {localExpertiseHeading && localExpertiseBody && (
+        <section className="py-14 lg:py-18 bg-cream">
+          <div className="container px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="font-serif text-2xl text-foreground font-semibold mb-5">
+                {localExpertiseHeading}
+              </h2>
+              <div className="space-y-5 text-muted-foreground text-lg leading-relaxed">
+                {localExpertiseBody.map((p, i) => (
+                  <p key={i}>{p}</p>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Communities Served */}
       <section className="py-14 lg:py-18 bg-background">
         <div className="container px-6 lg:px-8">
@@ -152,6 +170,9 @@ const CountyPageTemplate = ({
             <h2 className="font-serif text-2xl text-foreground font-semibold mb-5">
               Communities in {countyName}
             </h2>
+            {communitiesIntro && (
+              <p className="text-muted-foreground text-lg leading-relaxed mb-5">{communitiesIntro}</p>
+            )}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-2.5">
               {cities.map((cityName) => {
                 const cityData = countyData?.cities.find((c) => c.name === cityName);
@@ -185,9 +206,15 @@ const CountyPageTemplate = ({
             <h2 className="font-serif text-3xl text-primary-foreground font-semibold mb-4">
               Ready to Talk About a {countyName} Property?
             </h2>
-            <p className="text-primary-foreground/70 text-lg mb-6">
-              David can walk you through your situation and help you see what makes sense.
-            </p>
+            {closingCtaBody ? (
+              closingCtaBody.map((p, i) => (
+                <p key={i} className="text-primary-foreground/70 text-lg mb-4 leading-relaxed">{p}</p>
+              ))
+            ) : (
+              <p className="text-primary-foreground/70 text-lg mb-6">
+                David can walk you through your situation and help you see what makes sense.
+              </p>
+            )}
             <Link to="/contact">
               <Button variant="gold" size="lg">Start a Conversation</Button>
             </Link>
