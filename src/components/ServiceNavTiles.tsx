@@ -30,6 +30,17 @@ const ServiceNavTiles = () => {
               {category.tiles.map((tile, i) => (
                 <ServiceNavTileCard key={tile.href + tile.title} tile={tile} index={i} />
               ))}
+              {/* Pad incomplete rows with invisible placeholders to keep tile sizes uniform */}
+              {category.tiles.length % 3 !== 0 &&
+                Array.from({ length: 3 - (category.tiles.length % 3) }).map((_, i) => (
+                  <div key={`placeholder-${i}`} className="invisible pointer-events-none" aria-hidden="true">
+                    <ServiceNavTileCard
+                      tile={category.tiles[0]}
+                      index={category.tiles.length + i}
+                    />
+                  </div>
+                ))
+              }
             </div>
           </div>
         ))}
