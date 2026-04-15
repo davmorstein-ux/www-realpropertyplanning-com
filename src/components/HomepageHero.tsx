@@ -69,7 +69,7 @@ const HomepageHero = () => {
           className="text-[20px] md:text-[24px] tracking-[0.04em] leading-relaxed mb-6 pb-6 text-white/80 font-bold"
           style={{
             opacity: showLine2 ? 1 : 0,
-            transition: prefersReducedMotion ? "none" : "opacity 0.8s ease-in-out",
+            transition: prefersReducedMotion ? "none" : "opacity 2.5s ease-in-out",
           }}
         >
           Guiding Families Through Life's Most Important Transitions
