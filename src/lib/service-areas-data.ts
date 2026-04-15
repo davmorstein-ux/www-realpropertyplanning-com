@@ -565,7 +565,10 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   lynnwood: {
     tone: "urban",
     descriptor: "Rapidly evolving with new light rail access",
-    heroIntro: "Lynnwood is in the middle of a significant transformation, with light rail expansion bringing new development and shifting market dynamics. For families managing estate, probate, or senior transition properties in Lynnwood, this changing landscape creates both opportunities and challenges. Real Property Planning helps clients in Lynnwood understand how the city's evolution affects property values and develop sale strategies that reflect current and realistic market conditions.",
+    seoTitle: "Probate & Estate Real Estate in Lynnwood, WA | Real Property Planning",
+    seoDescription: "Estate property sales and probate guidance in Lynnwood, Washington — serving families and executors in this established Snohomish County community.",
+    heroHeading: "Probate & Estate Real Estate in Lynnwood, Washington",
+    heroIntro: "Lynnwood is one of Snohomish County's most established communities — with a housing stock that includes mid-century homes and newer construction alongside a growing commercial corridor. Estate properties in Lynnwood span a range of vintages and conditions, requiring the kind of condition-adjusted analysis that reflects the property's actual market position rather than neighborhood averages. David works with families and executors throughout Lynnwood with the honest, practical guidance these situations require.",
     localKnowledge: "Lynnwood's housing stock includes established ramblers and split-levels from the 1960s–80s, newer townhomes and condos near the city center, and properties in neighborhoods like Alderwood, Martha Lake, and North Lynnwood. The arrival of light rail is reshaping buyer interest in certain areas while leaving others relatively unchanged. David Stein's understanding of these micro-market shifts helps clients position estate and transition properties effectively.",
     brokerAppraiserValue: "Lynnwood's light rail transformation is creating a two-speed market — properties near station areas are appreciating on a different trajectory than those in quieter residential neighborhoods. David Stein's certified appraisal credentials provide the neighborhood-specific analysis that Lynnwood clients need when the city's transit-driven evolution makes comparable selection and pricing strategy especially consequential for estate and transition properties.",
     localSituations: [
@@ -595,7 +598,10 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   edmonds: {
     tone: "waterfront",
     descriptor: "Charming waterfront community with historic character",
-    heroIntro: "Edmonds is a waterfront community known for its walkable downtown, ferry access, and strong neighborhood character. Properties in Edmonds — from bowl-area homes with sound views to hillside residences and properties near Highway 99 — require locally informed guidance when the sale involves estate, probate, or transition circumstances. Real Property Planning understands the nuances that affect value throughout Edmonds.",
+    seoTitle: "Probate & Estate Real Estate in Edmonds, WA | Real Property Planning",
+    seoDescription: "Estate property sales, probate guidance, and senior transitions in Edmonds, Washington — one of Snohomish County's most desirable waterfront communities.",
+    heroHeading: "Probate & Estate Real Estate in Edmonds, Washington",
+    heroIntro: "Edmonds is one of Snohomish County's most sought-after communities — a waterfront city with a charming downtown, strong community identity, and a real estate market that reflects its desirability. Estate properties in Edmonds can perform exceptionally well, but they require pricing that accurately accounts for proximity to the waterfront, lot characteristics, and the condition expectations of Edmonds buyers. David Stein works with executors and families in Edmonds, bringing the condition-adjusted analysis and local market knowledge that well-located estate properties deserve.",
     localKnowledge: "Edmonds offers a wide range of property types and price points, from the desirable bowl area near downtown to Perrinville, Westgate, and Firdale. Waterfront proximity, views, walkability, and lot size all play meaningful roles in Edmonds pricing. David Stein's dual credentials help families selling estate or inherited property in Edmonds understand exactly where their home fits in this layered market and how to position it for the best possible outcome.",
     brokerAppraiserValue: "In Edmonds, view corridors, walking distance to the ferry and downtown, and neighborhood character can create wide value differences within a small geographic area. David Stein's appraisal background allows him to account for these micro-factors rather than relying on broad market comparisons that may miss what makes a specific Edmonds property more — or less — valuable.",
     localSituations: [
@@ -617,7 +623,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     aeoQuestion: "What should you consider when selling an inherited home in Edmonds?",
     aeoAnswer: "Edmonds' walkable downtown, waterfront character, and strong buyer demand create specific expectations for estate properties. David Stein's dual credentials as a broker and certified appraiser help families price inherited homes accurately — accounting for the condition gaps between estate properties and the updated homes Edmonds buyers typically expect.",
     aeoSupportFaqs: [
-      { "question": "How does Edmonds buyer expectation affect estate sales?", "answer": "Edmonds buyers value walkability, waterfront proximity, and updated finishes. Estate properties may need targeted preparation to compete effectively." },
+      { "question": "How does waterfront proximity affect estate property values in Edmonds?", "answer": "Significantly — and the premium varies depending on whether the property has water views, is within walking distance of the waterfront, or simply benefits from the Edmonds zip code. David's appraisal-informed analysis accounts for these distinctions precisely, rather than applying a blanket waterfront premium that may not reflect the property's specific situation." },
       { "question": "Can David coordinate an Edmonds estate sale remotely?", "answer": "Yes. David manages the full process locally — property assessment, preparation, listing, and closing — with regular updates for out-of-area families." },
     ],
   },
@@ -636,13 +642,19 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   mukilteo: {
     tone: "waterfront",
     descriptor: "Coastal community with Boeing and ferry influences",
-    heroIntro: "Mukilteo is a small, close-knit community with waterfront appeal, ferry access to Whidbey Island, and a housing market influenced by its proximity to Boeing and Paine Field. For families handling estate or transition-related property in Mukilteo, the community's character and relatively limited housing inventory make experienced local guidance valuable.",
+    seoTitle: "Probate & Estate Real Estate in Mukilteo, WA | Real Property Planning",
+    seoDescription: "Estate property sales and probate guidance in Mukilteo, Washington — serving families and executors in this waterfront Snohomish County community.",
+    heroHeading: "Probate & Estate Real Estate in Mukilteo, Washington",
+    heroIntro: "Mukilteo's position on the waterfront — with ferry access to Whidbey Island and views of Puget Sound — makes it one of Snohomish County's most distinctive real estate markets. Estate properties here often carry significant premiums tied to water views, proximity to the ferry, and the community's overall desirability. David works with executors and families in Mukilteo, ensuring that these location-specific value factors are reflected accurately in the estate sale strategy.",
     localKnowledge: "Mukilteo's housing market is relatively compact, with established neighborhoods near the waterfront, properties in the Harbour Pointe master-planned community, and homes along the hillside with varying degrees of sound and mountain views. Because inventory is limited, positioning and pricing accuracy are especially important. David Stein helps clients understand how Mukilteo's unique characteristics affect value and buyer interest.",
   },
   everett: {
     tone: "urban",
     descriptor: "County seat with waterfront revival and diverse neighborhoods",
-    heroIntro: "As Snohomish County's largest city, Everett offers a diverse housing landscape — from the revitalizing waterfront and Port Gardner district to established neighborhoods in North Everett, Silver Lake, and Lowell. Families and executors managing property transitions in Everett need guidance that accounts for the city's wide range of property types, price points, and neighborhood trajectories.",
+    seoTitle: "Probate & Estate Real Estate in Everett, WA | Real Property Planning",
+    seoDescription: "Estate property sales, probate guidance, and senior transitions in Everett, Washington — Snohomish County's largest city. Serving families and executors throughout.",
+    heroHeading: "Probate & Estate Real Estate in Everett, Washington",
+    heroIntro: "As Snohomish County's largest city, Everett offers a diverse housing landscape — from the revitalizing waterfront and Port Gardner district to established neighborhoods in North Everett, Silver Lake, and Lowell. Families and executors managing property transitions in Everett need guidance that accounts for the city's wide range of property types, price points, and neighborhood trajectories.\n\nDavid Stein works with estate properties across Everett's full range — from the revitalizing waterfront district to established neighborhoods in North Everett, Silver Lake, and Lowell — providing the neighborhood-sensitive pricing and preparation guidance that Everett's varied market requires. As Snohomish County's largest city, Everett has significant price variation between neighborhoods, which makes accurate, location-specific valuation especially important in estate situations.",
     localKnowledge: "Everett's neighborhoods vary significantly in character and value — from the grand historic homes on Grand and Rucker to mid-century ramblers, newer developments near Silver Lake, and waterfront condos on the Port Gardner peninsula. David Stein's experience across Everett's submarkets helps clients understand which areas are appreciating, where buyer demand is strongest, and how to position an estate or inherited property given its specific location and condition.",
     brokerAppraiserValue: "Everett's market spans a wider price range than most Snohomish County cities — from historic Grand Avenue homes and Port Gardner waterfront condos to modest ramblers in South Everett. David Stein's certified appraisal credentials allow him to evaluate where a specific property falls within this range based on condition, neighborhood trajectory, and realistic buyer demand, providing the defensible analysis that Everett estate and transition situations require.",
     localSituations: [
@@ -668,11 +680,18 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
       "Practical preparation recommendations focused on buyer expectations and return on investment",
       "Full-service coordination for out-of-state executors and family members",
     ],
+    localFaqs: [
+      { question: "What are the first steps when selling an inherited home in Everett?", answer: "Secure the property, confirm legal authority, and get an honest assessment of condition and realistic value — before making any decisions about repairs or listing. David can visit the property, evaluate what needs attention, and help develop a clear plan tailored to the specific neighborhood." },
+      { question: "How does Everett's market affect estate property pricing?", answer: "Everett's ongoing revitalization — particularly near the waterfront and downtown core — has created significant variation between neighborhoods. Properties in areas benefiting from development investment may perform better than broad city averages suggest; properties in more static neighborhoods need to be priced accordingly. David's analysis accounts for these distinctions specifically." },
+    ],
   },
   "mill-creek": {
     tone: "suburban",
     descriptor: "Master-planned community with strong family appeal",
-    heroIntro: "Mill Creek is a well-regarded master-planned community known for its maintained common areas, strong schools, and family-friendly character. Estate, probate, and senior transition properties in Mill Creek need to be priced with HOA considerations, buyer expectations, and condition in mind — since most buyers here are looking for move-in-ready homes.",
+    seoTitle: "Probate & Estate Real Estate in Mill Creek, WA | Real Property Planning",
+    seoDescription: "Estate property sales and probate guidance in Mill Creek, Washington — serving families and executors in this established planned community.",
+    heroHeading: "Probate & Estate Real Estate in Mill Creek, Washington",
+    heroIntro: "Mill Creek is one of Snohomish County's most established planned communities — with a housing stock that appeals strongly to families seeking good schools, community amenities, and Eastside-adjacent access. Estate properties in Mill Creek typically attract a motivated buyer pool, but condition and preparation matter: buyers here expect a higher level of move-in readiness than in some other markets. David provides the honest condition assessment and targeted preparation guidance that helps Mill Creek estate properties perform to their potential.",
     localKnowledge: "Mill Creek's housing includes a range of single-family homes, townhomes, and condos within its planned community framework. The town center, country club, and trail system all contribute to Mill Creek's appeal. When selling an estate or inherited property here, understanding HOA requirements and how the property compares to recently updated homes in the community is essential for realistic pricing.",
   },
   "bothell-snohomish": {
@@ -719,13 +738,19 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   "lake-stevens": {
     tone: "suburban",
     descriptor: "Lakeside community with rapid residential growth",
-    heroIntro: "Lake Stevens has experienced significant growth in recent years, transforming from a rural lake community into one of Snohomish County's most active residential markets. When selling estate or transition property in Lake Stevens, the community's rapid evolution means property values and buyer expectations may have shifted significantly from when the home was originally purchased.",
+    seoTitle: "Probate & Estate Real Estate in Lake Stevens & Monroe, WA | Real Property Planning",
+    seoDescription: "Estate property sales and probate guidance in Lake Stevens and Monroe, Washington — serving growing east Snohomish County communities.",
+    heroHeading: "Probate & Estate Real Estate in Lake Stevens and Monroe, Washington",
+    heroIntro: "Lake Stevens and Monroe have been among Snohomish County's fastest-growing communities — attracting buyers seeking more space, newer construction, and relative affordability compared to closer-in suburbs. Estate properties in these communities range from older homes in established neighborhoods to newer construction that requires different pricing considerations. David serves executors and families throughout east Snohomish County with honest, condition-adjusted guidance calibrated to these specific markets.",
     localKnowledge: "Lake Stevens' housing ranges from established homes near the lake and the original town center to newer construction in rapidly developing subdivisions throughout the community. The lake itself remains a major amenity and value driver, but distance from the water creates meaningful price variations. David Stein helps clients understand how Lake Stevens' growth trajectory and property-specific characteristics affect realistic market positioning.",
   },
   marysville: {
     tone: "suburban",
     descriptor: "Growing north Snohomish County community",
-    heroIntro: "Marysville has grown into one of the largest and most active communities in northern Snohomish County, with established neighborhoods near downtown and newer developments extending toward the surrounding rural areas. When managing estate or transition property in Marysville, the city's range of housing types and price points requires practical, locally informed guidance.",
+    seoTitle: "Probate & Estate Real Estate in Marysville & Arlington, WA | Real Property Planning",
+    seoDescription: "Estate property sales and probate guidance in Marysville and Arlington, Washington — serving north Snohomish County families and executors.",
+    heroHeading: "Probate & Estate Real Estate in Marysville and Arlington, Washington",
+    heroIntro: "Marysville and Arlington represent the northern reaches of Snohomish County's residential market — communities with their own character, buyer pools, and pricing dynamics distinct from the county's more urban centers. Estate properties here — which often include larger lots, rural-adjacent parcels, and older housing stock — require pricing that reflects local demand rather than county-wide trends. David works with families and executors throughout north Snohomish County, providing the location-specific guidance these communities require.",
     localKnowledge: "Marysville's housing market includes older homes in the Ebey Waterfront and downtown areas, mid-range suburban developments, and newer construction on the city's expanding edges. The I-5 corridor's accessibility and the community's affordability relative to the Eastside and Seattle drive buyer interest. David Stein helps clients navigate Marysville's market dynamics and position estate or transition properties realistically.",
   },
   arlington: {
@@ -769,7 +794,10 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   tacoma: {
     tone: "urban",
     descriptor: "Growing urban market with neighborhood diversity",
-    heroIntro: "Tacoma has emerged as one of the most dynamic real estate markets in Pierce County, with neighborhoods ranging from the historic Stadium District and North End to the waterfront communities of Ruston and Point Defiance. For families and fiduciaries navigating estate, probate, or senior transition sales in Tacoma, the city's neighborhood diversity and growth trajectory make experienced, local guidance essential.",
+    seoTitle: "Probate & Estate Real Estate in Tacoma, WA | Real Property Planning",
+    seoDescription: "Estate property sales, probate guidance, and senior transitions in Tacoma, Washington. Serving families and executors throughout Tacoma's diverse neighborhoods.",
+    heroHeading: "Probate & Estate Real Estate in Tacoma, Washington",
+    heroIntro: "Tacoma is Pierce County's largest city and one of the most varied real estate markets in Western Washington — spanning historic neighborhoods like Stadium District and Proctor to South Tacoma's working-class communities, the waterfront, and everything in between. Estate properties in Tacoma often include craftsman homes, mid-century ramblers, and older properties with significant deferred maintenance — all of which require condition-adjusted pricing that reflects neighborhood-level market dynamics rather than city-wide averages. David Stein works with executors and families throughout Tacoma with the honest, experienced guidance these situations require.",
     localKnowledge: "Tacoma's neighborhoods each carry distinct market dynamics — the North End's established homes, Stadium District's architectural character, South Tacoma's affordability, and the waterfront communities' premium positioning. David Stein's understanding of how these submarkets behave helps clients avoid the mistake of treating Tacoma as a single market. For estate and inherited properties, knowing which neighborhood factors drive — or limit — buyer interest is critical to realistic pricing.",
     brokerAppraiserValue: "Tacoma's neighborhood diversity creates one of the widest value spreads in Pierce County — a Stadium District Tudor, a North End craftsman, a Ruston waterfront condo, and a South Tacoma rambler each require fundamentally different pricing approaches. David Stein's certified appraisal credentials provide the neighborhood-specific analysis Tacoma clients need, especially for estate and transition properties where the gap between automated estimates and actual market position can be significant.",
     localSituations: [
@@ -795,11 +823,18 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
       "Practical preparation guidance tailored to each property's condition and buyer pool",
       "Clear communication and coordination for families managing from a distance",
     ],
+    localFaqs: [
+      { question: "How does the Tacoma market affect estate property pricing?", answer: "Tacoma's neighborhood variation is significant — a home in the Stadium District or Proctor area commands very different pricing than comparable square footage in South Tacoma or Hilltop. David's analysis is neighborhood-specific, accounting for the micro-market dynamics that determine how buyers will evaluate a particular property." },
+      { question: "Are older Tacoma craftsman homes hard to sell as estate properties?", answer: "Not with the right approach. Tacoma's older housing stock attracts a dedicated buyer pool — buyers who appreciate character, historic details, and the community context these homes represent. The key is honest condition assessment and pricing that reflects what that buyer pool will pay, which David provides through his combined broker and appraisal expertise." },
+    ],
   },
   "university-place": {
     tone: "suburban",
     descriptor: "Established residential community near Tacoma",
-    heroIntro: "University Place is a well-maintained residential community adjacent to Tacoma, known for its quality neighborhoods, Chambers Bay golf course, and access to Puget Sound waterfront. Families and fiduciaries managing property transitions in University Place benefit from guidance grounded in local neighborhood character and buyer expectations.",
+    seoTitle: "Probate & Estate Real Estate in Lakewood & University Place, WA | Real Property Planning",
+    seoDescription: "Estate property sales and probate guidance in Lakewood and University Place, Washington — serving families and executors in established Pierce County communities.",
+    heroHeading: "Probate & Estate Real Estate in Lakewood and University Place, Washington",
+    heroIntro: "Lakewood and University Place are established Pierce County communities with distinct characters — Lakewood's diverse housing stock and military-adjacent economy, and University Place's waterfront-adjacent neighborhoods and strong community identity. Estate properties in both communities require pricing that reflects the specific neighborhood rather than broad county trends. David works with executors and families throughout both communities with the condition-adjusted, location-specific guidance these markets require.",
     localKnowledge: "University Place offers a mix of established single-family homes, newer developments, and properties near Chambers Bay and the waterfront. The community's appeal lies in its combination of residential character, proximity to Tacoma's amenities, and access to outdoor recreation. For estate and transition properties, understanding how condition compares to the area's well-maintained housing stock is key to effective pricing.",
   },
   lakewood: {
@@ -835,7 +870,10 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   puyallup: {
     tone: "suburban",
     descriptor: "Established family community in the valley",
-    heroIntro: "Puyallup is a well-established community in the Puyallup Valley, known for its historic downtown, family neighborhoods, and strong sense of community. For families managing estate sales, senior transitions, or inherited property in Puyallup, the process benefits from a broker who understands the valley's housing stock, buyer demographics, and how condition and location affect value in this market.",
+    seoTitle: "Probate & Estate Real Estate in Puyallup, WA | Real Property Planning",
+    seoDescription: "Estate property sales and probate guidance in Puyallup, Washington — serving families and executors in Pierce County's established family community.",
+    heroHeading: "Probate & Estate Real Estate in Puyallup, Washington",
+    heroIntro: "Puyallup is one of Pierce County's most established family communities — with a strong local identity, a varied housing stock, and a buyer pool that values community character alongside practical considerations like schools and commute access. Estate properties in Puyallup range from older homes in established neighborhoods to newer construction in developing areas, each requiring pricing calibrated to its specific location and condition. David serves executors and families throughout Puyallup with the honest, practical guidance estate situations require.",
     localKnowledge: "Puyallup's housing ranges from older homes near downtown and South Hill to newer developments in the surrounding areas. The valley's agricultural heritage means some properties come with unique lot characteristics, outbuildings, or zoning considerations. David Stein helps clients in Puyallup understand how these factors — along with condition, school proximity, and neighborhood context — affect realistic pricing and buyer interest.",
     brokerAppraiserValue: "Puyallup's valley location creates distinct valuation dynamics — South Hill properties command different premiums than downtown-area homes, and agricultural-heritage lots with outbuildings or acreage require appraisal experience to price accurately. David Stein's dual credentials help Puyallup clients understand how these valley-specific factors affect realistic market value for estate, probate, and transition properties.",
     localSituations: [
@@ -858,7 +896,10 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   "gig-harbor": {
     tone: "waterfront",
     descriptor: "Waterfront peninsula community with premium appeal",
-    heroIntro: "Gig Harbor's waterfront charm, small-town atmosphere, and proximity to Tacoma and the Narrows Bridge have made it one of Pierce County's most desirable communities. Estate and transition properties in Gig Harbor — whether on the harbor itself, in the established neighborhoods of the peninsula, or in newer developments like Gig Harbor North — require pricing and preparation strategies informed by the area's unique buyer expectations.",
+    seoTitle: "Probate & Estate Real Estate in Gig Harbor, WA | Real Property Planning",
+    seoDescription: "Estate property sales and probate guidance in Gig Harbor, Washington — one of Pierce County's most distinctive waterfront communities.",
+    heroHeading: "Probate & Estate Real Estate in Gig Harbor, Washington",
+    heroIntro: "Gig Harbor's waterfront character, community identity, and strong buyer demand make it one of Pierce County's most distinctive real estate markets. Estate properties here can perform very well — but they require pricing that accurately accounts for water access, views, lot characteristics, and the community premiums that Gig Harbor commands. David works with executors and families in Gig Harbor, bringing the condition-adjusted, location-specific analysis that these well-situated properties deserve.",
     localKnowledge: "Gig Harbor's market ranges from waterfront properties and historic harbor-area homes to newer construction in master-planned communities. The distinction between 'Gig Harbor proper' and surrounding unincorporated areas matters to buyers, and view properties, waterfront access, and proximity to downtown all significantly affect value. David Stein's appraisal credentials help clients understand these nuances rather than relying on broad averages.",
     brokerAppraiserValue: "Gig Harbor properties — particularly those near the harbor, on the bluff, or with water views — carry premiums that automated tools consistently misjudge. David Stein's certified appraisal background provides the property-specific analysis Gig Harbor sellers need, accounting for view quality, waterfront proximity, lot orientation, and the meaningful price differences between 'Gig Harbor address' and actual Gig Harbor proper.",
     localSituations: [
@@ -967,7 +1008,10 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   bremerton: {
     tone: "military",
     descriptor: "Naval city with revitalizing waterfront and diverse housing",
-    heroIntro: "Bremerton is experiencing a notable revitalization, with its waterfront, ferry terminal, and downtown district attracting renewed interest. The city's housing market — from historic homes in Manette to newer waterfront condos and established neighborhoods throughout — offers a wide range of price points and property types. For families managing estate, probate, or transition sales in Bremerton, understanding the city's evolving market is key to making well-informed decisions.",
+    seoTitle: "Probate & Estate Real Estate in Bremerton, WA | Real Property Planning",
+    seoDescription: "Estate property sales and probate guidance in Bremerton, Washington — serving families and executors in Kitsap County's largest city.",
+    heroHeading: "Probate & Estate Real Estate in Bremerton, Washington",
+    heroIntro: "Bremerton is Kitsap County's largest city — a community shaped by its naval history, its ongoing revitalization, and its position as the primary ferry connection to Seattle. Estate properties in Bremerton span a wide range of vintages, conditions, and price points, requiring pricing calibrated to the specific neighborhood and current buyer demand. David works with executors and families throughout Bremerton with the honest, condition-adjusted guidance that helps estate properties find the right buyers at the right price.",
     localKnowledge: "Bremerton's neighborhoods range from the revitalizing downtown and waterfront to Manette's established community character, the Naval Avenue area, and surrounding residential neighborhoods. The city's connection to Seattle via Washington State Ferries and the presence of Puget Sound Naval Shipyard both influence buyer demographics and market activity. David Stein's experience helps clients understand how Bremerton's ongoing transformation affects property values and sale strategy.",
     brokerAppraiserValue: "Bremerton's revitalization means property values are shifting at different rates across the city — waterfront condos and downtown-adjacent homes are appreciating faster than outlying neighborhoods, and the Naval Shipyard's influence on buyer demographics creates patterns that automated tools miss. David Stein's appraisal credentials and Kitsap County experience provide the neighborhood-specific analysis that Bremerton clients need, especially for estate and transition properties where the revitalization's uneven impact makes accurate pricing critical.",
     localSituations: [
@@ -1050,7 +1094,10 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   "bainbridge-island": {
     tone: "premium",
     descriptor: "Island community with Seattle ferry access and premium values",
-    heroIntro: "Bainbridge Island offers a rare combination of island living, artistic community character, and daily ferry access to downtown Seattle. The island's real estate market is premium and distinctive — estate, probate, and transition properties here involve specific considerations around island logistics, waterfront valuation, and the expectations of a buyer pool that prioritizes lifestyle and community over conventional suburban amenities.",
+    seoTitle: "Probate & Estate Real Estate on Bainbridge Island, WA | Real Property Planning",
+    seoDescription: "Estate property sales and probate guidance on Bainbridge Island, Washington — one of Puget Sound's most distinctive and valuable real estate markets.",
+    heroHeading: "Probate & Estate Real Estate on Bainbridge Island, Washington",
+    heroIntro: "Bainbridge Island is one of the most distinctive real estate markets in the entire Puget Sound region — an island community with ferry access to Seattle, a strong community identity, significant property values, and a buyer pool that expects a sophisticated approach to pricing and presentation. Estate properties on Bainbridge require careful, condition-adjusted analysis that accounts for the island's unique dynamics: waterfront and view premiums, the varied character of different neighborhoods, and the expectations of buyers who have chosen island living deliberately. David works with executors and families on Bainbridge Island with the analytical rigor and local knowledge these high-value situations require.",
     localKnowledge: "Bainbridge Island's housing market includes everything from modest cottages and island-style homes to waterfront estates and rural acreage. The island's limited inventory, ferry-dependent access, and strong community identity create pricing dynamics unlike any other market in the Puget Sound region. David Stein's appraisal background is especially valuable here, where automated estimates frequently miss the premium that island location, waterfront access, and community character command.",
     brokerAppraiserValue: "Bainbridge Island properties are notoriously difficult to price with automated tools. The island's limited comparable sales, wide range of property types, and premium positioning require hands-on evaluation. David Stein's certified appraisal credentials — combined with his understanding of how island logistics affect sale coordination and buyer behavior — provide the kind of informed guidance that Bainbridge families and fiduciaries need.",
     localSituations: [
@@ -1078,20 +1125,30 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   "port-orchard": {
     tone: "waterfront",
     descriptor: "South Kitsap community with waterfront and established neighborhoods",
-    heroIntro: "Port Orchard's combination of Sinclair Inlet waterfront, established residential neighborhoods, and proximity to Naval Base Kitsap creates a real estate market with specific local dynamics. Families and executors managing property transitions in Port Orchard benefit from guidance that accounts for the community's diverse housing stock and the factors that drive value in South Kitsap.",
-    localKnowledge: "Port Orchard includes waterfront properties along Sinclair Inlet, established neighborhoods in the city center, and newer developments in surrounding South Kitsap. The area's military influence, ferry access to Bremerton and beyond, and range of property types create a market where local knowledge is essential for accurate pricing. David Stein helps clients understand how these Port Orchard-specific factors affect their property's realistic market position.",
+    seoTitle: "Probate & Estate Real Estate in Silverdale & Port Orchard, WA | Real Property Planning",
+    seoDescription: "Estate property sales and probate guidance in Silverdale and Port Orchard, Washington — serving families and executors throughout central and south Kitsap County.",
+    heroHeading: "Probate & Estate Real Estate in Silverdale and Port Orchard, Washington",
+    heroIntro: "Silverdale and Port Orchard serve as the commercial and residential centers of central and south Kitsap County — communities with their own distinct characters and buyer pools. Silverdale's suburban growth and proximity to the naval base creates consistent demand; Port Orchard's waterfront character and established neighborhoods attract buyers seeking a more traditional community feel. Estate properties in both communities require location-specific pricing and preparation guidance. David serves executors and families throughout central and south Kitsap County with the practical, valuation-informed approach these markets require.",
   },
   kingston: {
     tone: "waterfront",
     descriptor: "Ferry-served community on the north Kitsap Peninsula",
-    heroIntro: "Kingston is a small community on the northern tip of the Kitsap Peninsula, served by the Kingston-Edmonds ferry and known for its village character and waterfront access. When selling estate or transition property in Kingston, the community's ferry-dependent connectivity, limited inventory, and range of waterfront to inland properties affect how properties are valued.",
-    localKnowledge: "Kingston's housing includes properties near the ferry terminal and village center, waterfront homes along Appletree Cove, and established residential areas extending into the surrounding hills. The community's ferry connection to Edmonds and its small-town character attract a specific buyer demographic. David Stein helps Kingston clients understand how ferry access, waterfront proximity, and the community's limited market size affect realistic property pricing.",
+    seoTitle: "Probate & Estate Real Estate in Poulsbo & Kingston, WA | Real Property Planning",
+    seoDescription: "Estate property sales and probate guidance in Poulsbo and Kingston, Washington — serving north Kitsap County families and executors.",
+    heroHeading: "Probate & Estate Real Estate in Poulsbo and Kingston, Washington",
+    heroIntro: "Poulsbo and Kingston represent north Kitsap County's distinctive character — Poulsbo's Scandinavian heritage, waterfront setting, and strong community identity; Kingston's ferry connection to Edmonds and its appeal to buyers seeking affordable waterfront-adjacent living. Estate properties in both communities attract buyers drawn to north Kitsap's lifestyle — and require pricing that reflects the specific community's dynamics rather than broad peninsula averages. David works with executors and families throughout north Kitsap County with the location-specific guidance these communities deserve.",
   },
   suquamish: {
     tone: "smalltown",
     descriptor: "Tribal community with waterfront character on Agate Passage",
-    heroIntro: "Suquamish is a small community on Agate Passage with deep historical roots, waterfront access, and a quiet residential character. When selling estate or transition property in Suquamish, the community's compact size, waterfront dynamics, and specific local considerations require experienced, condition-based guidance.",
+    seoTitle: "Probate & Estate Real Estate in Suquamish, WA | Real Property Planning",
+    seoDescription: "Estate property sales and probate guidance in Suquamish, Washington — serving families and executors in this distinctive north Kitsap community near Bainbridge Island.",
+    heroHeading: "Probate & Estate Real Estate in Suquamish, Washington",
+    heroIntro: "Suquamish sits on the Kitsap Peninsula directly across from Bainbridge Island — a community with deep cultural roots, waterfront character, and proximity to both the Kingston ferry and Bainbridge Island's market influence. Estate properties in Suquamish attract buyers drawn to the area's natural setting, water access, and relative affordability compared to neighboring Bainbridge Island. David works with executors and families in Suquamish with the same honest, condition-adjusted guidance he brings to every Kitsap community — ensuring the property is priced accurately for the buyers most likely to value it.",
     localKnowledge: "Suquamish's housing includes waterfront and water-view properties along Agate Passage and Port Madison, along with established homes in the community's residential areas. The community's historical significance, proximity to Bainbridge Island and Poulsbo, and limited inventory create a niche market. David Stein helps Suquamish clients navigate these local factors with honest, property-specific pricing guidance.",
+    localFaqs: [
+      { question: "How does Suquamish's proximity to Bainbridge Island affect property values?", answer: "Suquamish benefits from its location near Bainbridge Island without commanding Bainbridge's premium price points — which creates a specific buyer pool of its own. Buyers who want waterfront-adjacent Kitsap living at accessible price points, and who value the community's natural character, are the core audience for most Suquamish estate properties. David's pricing analysis reflects these dynamics specifically rather than applying Bainbridge Island comparables that don't accurately represent Suquamish's market position." },
+    ],
   },
   manchester: {
     tone: "waterfront",
@@ -1495,6 +1552,9 @@ const TIER_1_SLUGS = new Set([
   "bremerton", "renton", "enumclaw",
   "mount-vernon", "burlington", "anacortes",
   "sedro-woolley", "la-conner", "concrete", "bow-edison",
+  "mukilteo", "mill-creek", "marysville", "lake-stevens",
+  "university-place", "port-orchard", "kingston", "suquamish",
+  "shoreline", "sammamish", "newcastle",
 ]);
 
 /** Check whether a city is Tier 1 (fully enriched content) */
