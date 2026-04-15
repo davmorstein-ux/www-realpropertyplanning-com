@@ -41,8 +41,8 @@ const allNodes = [...leftNodes, ...rightNodes];
 
 const NODE_SIZE = 90;
 const CONTAINER_HEIGHT = 680;
-const NODE_PULSE_MS = 750;
-const HUB_PULSE_MS = 550;
+const NODE_PULSE_MS = 1100;
+const HUB_PULSE_MS = 900;
 
 const SpokeNode = ({
   node, cx, cy, isPulsing, onMouseEnter, onMouseLeave,
@@ -62,17 +62,37 @@ const SpokeNode = ({
     onMouseEnter={onMouseEnter}
     onMouseLeave={onMouseLeave}
   >
+    {/* Electric blue glow behind the node */}
     <div
-      className="w-[90px] h-[90px] rounded-full border-[3px] border-[#C9A84C] bg-[#FAF8F4] flex items-center justify-center transition-all duration-200 group-hover:scale-[1.08] group-hover:border-[#E8C96A] group-hover:shadow-[0_0_12px_rgba(201,168,76,0.3)]"
-      style={isPulsing ? {
-        transform: "scale(1.08)",
-        borderColor: "#E8C96A",
-        boxShadow: "0 0 12px rgba(201,168,76,0.3)",
-      } : undefined}
+      className="absolute rounded-full pointer-events-none"
+      style={{
+        width: 110,
+        height: 110,
+        top: -10,
+        left: "50%",
+        transform: "translateX(-50%)",
+        background: "radial-gradient(circle, rgba(56,142,240,0.45) 0%, rgba(56,142,240,0.12) 50%, transparent 75%)",
+        opacity: isPulsing ? 1 : 0,
+        transition: `opacity ${NODE_PULSE_MS / 2}ms ease-in-out`,
+        zIndex: 0,
+      }}
+    />
+    <div
+      className="w-[90px] h-[90px] rounded-full border-[3px] border-[#C9A84C] bg-[#FAF8F4] flex items-center justify-center group-hover:scale-[1.08] group-hover:border-[#E8C96A] group-hover:shadow-[0_0_12px_rgba(201,168,76,0.3)]"
+      style={{
+        transition: `transform ${NODE_PULSE_MS / 2}ms ease-in-out, border-color ${NODE_PULSE_MS / 2}ms ease-in-out, box-shadow ${NODE_PULSE_MS / 2}ms ease-in-out`,
+        position: "relative",
+        zIndex: 1,
+        ...(isPulsing ? {
+          transform: "scale(1.08)",
+          borderColor: "#E8C96A",
+          boxShadow: "0 0 14px rgba(201,168,76,0.35)",
+        } : {}),
+      }}
     >
       <img src={node.icon} alt="" aria-hidden="true" className="w-[72px] h-[72px] object-contain" loading="lazy" />
     </div>
-    <span className="text-[12px] text-[#FAF8F4] text-center leading-tight font-medium whitespace-nowrap">
+    <span className="text-[12px] text-[#FAF8F4] text-center leading-tight font-medium whitespace-nowrap" style={{ position: "relative", zIndex: 1 }}>
       {node.label}
     </span>
   </Link>
@@ -104,19 +124,29 @@ const HubAndSpoke = () => {
       if (candidates.length === 0) { scheduleNext(); return; }
       const pick = candidates[Math.floor(Math.random() * candidates.length)];
 
-      // Phase 1: node pulse
+      // Phase 1: node pulse — CSS transition handles the smooth ramp-up
       setPulsingIndex(pick);
+
+      // At the midpoint, begin ramp-down by clearing the pulse state
+      // The CSS ease-in-out transition smoothly returns to normal
       setTimeout(() => {
         if (unmountedRef.current) return;
         setPulsingIndex(null);
-        // Phase 2: hub pulse starts immediately after node ends
-        setHubPulsing(true);
+
+        // Phase 2: hub pulse starts right as node finishes returning
         setTimeout(() => {
           if (unmountedRef.current) return;
-          setHubPulsing(false);
-          scheduleNext();
-        }, HUB_PULSE_MS);
-      }, NODE_PULSE_MS);
+          setHubPulsing(true);
+          setTimeout(() => {
+            if (unmountedRef.current) return;
+            setHubPulsing(false);
+            // Wait for CSS transition to finish returning hub to normal, then schedule next
+            setTimeout(() => {
+              if (!unmountedRef.current) scheduleNext();
+            }, HUB_PULSE_MS / 2);
+          }, HUB_PULSE_MS / 2);
+        }, NODE_PULSE_MS / 2);
+      }, NODE_PULSE_MS / 2);
     }, delay);
   }, []);
 
@@ -162,7 +192,7 @@ const HubAndSpoke = () => {
                 y2={centerY + node.dy}
                 stroke={pulsingIndex === i ? "#F0D878" : "#C9A84C"}
                 strokeWidth={pulsingIndex === i ? 3 : 2}
-                style={{ transition: "stroke 0.25s ease, stroke-width 0.25s ease" }}
+                style={{ transition: `stroke ${NODE_PULSE_MS / 2}ms ease-in-out, stroke-width ${NODE_PULSE_MS / 2}ms ease-in-out` }}
               />
             ))}
           </svg>
@@ -175,7 +205,7 @@ const HubAndSpoke = () => {
               top: centerY - 360,
               width: 360,
               height: 720,
-              transition: "transform 0.3s ease",
+              transition: `transform ${HUB_PULSE_MS / 2}ms ease-in-out`,
               transform: hubPulsing ? "scale(1.04)" : "scale(1)",
             }}
           >
