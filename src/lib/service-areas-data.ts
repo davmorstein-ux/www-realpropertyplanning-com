@@ -36,6 +36,10 @@ export interface CityData {
   aeoSupportBullets?: string[];
   /** Override the default AEO support content with FAQ cards */
   aeoSupportFaqs?: { question: string; answer: string }[];
+  /** Custom SEO page title */
+  seoTitle?: string;
+  /** Custom SEO meta description */
+  seoDescription?: string;
 }
 
 export interface CountyData {
