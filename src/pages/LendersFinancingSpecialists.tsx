@@ -13,6 +13,9 @@ import danBartelPhoto from "@/assets/providers/real-estate-lenders-dan-bartel-wa
 import c2FinancialLogo from "@/assets/providers/real-estate-lenders-c2financial-logo-washington.webp";
 import jeffMcGinnisPhoto from "@/assets/providers/real-estate-lenders-jeff-mcginnis-washington.webp";
 import crossCountryLogo from "@/assets/providers/real-estate-lenders-crosscountry-logo-washington.webp";
+import hansWestermarkPhoto from "@/assets/providers/real-estate-lenders-hans-westermark-washington.webp";
+import familyFirstLogo from "@/assets/providers/real-estate-lenders-family-first-mortgage-logo-washington.webp";
+import equalHousingIcon from "@/assets/providers/equal-housing-lender-icon-washington.webp";
 import CTASection from "@/components/CTASection";
 
 const LendersFinancingSpecialists = () => (
@@ -150,8 +153,51 @@ const LendersFinancingSpecialists = () => (
                       <a href="https://crosscountrymortgage.com/seattle-wa-5531/jeffrey-mcginnis/" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-gold underline-offset-4 hover:underline">crosscountrymortgage.com</a>
                     </div>
                   </div>
+          </div>
+
+          {/* Hans Westermark */}
+          <div className="bg-secondary border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 p-5 sm:p-6">
+            <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-start sm:gap-5">
+              <div className="shrink-0">
+                <img src={hansWestermarkPhoto} alt="Hans Westermark — President, Family First Mortgage" className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-border shadow-sm" loading="lazy"/>
+              </div>
+              <div className="flex w-full flex-col items-center sm:flex-1 sm:items-start">
+                <a href="https://www.familyfirstmortgagegroup.com/loan-officer/hans-westermark" target="_blank" rel="noopener noreferrer" className="sm:self-start sm:ml-[58px]">
+                  <img src={familyFirstLogo} alt="Family First Mortgage logo" className="h-[42px] w-auto object-contain mx-auto sm:mx-0 block" loading="lazy"/>
+                </a>
+                <div className="w-full mt-1 text-center sm:pl-[58px] sm:text-left">
+                  <p className="text-foreground font-semibold text-lg">Hans Westermark</p>
+                  <p className="text-muted-foreground text-sm mb-1.5">President of Family First Mortgage · Senior Loan Officer · NMLS 1053094</p>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-3">
+                    Hans Westermark is an experienced mortgage advisor specializing in home loans, refinancing, and real estate transitions. With a background in finance, accounting, and homebuilding, he brings a well-rounded perspective to helping clients make confident, informed decisions—especially during major life changes such as downsizing, relocating, or planning for retirement. Hans takes a consultative, client-first approach, focusing on understanding each individual's goals and providing tailored mortgage solutions that support both immediate needs and long-term financial stability. He is known for simplifying complex loan options, offering clear guidance, and creating a smooth, approachable experience. Through Family First Mortgage, Hans provides access to a wide range of loan programs, allowing him to deliver flexible financing strategies designed around each client's unique situation. His clients value his expertise, transparency, and commitment to helping them move forward with clarity and confidence.
+                  </p>
+                  <div className="space-y-1.5 text-sm">
+                    <div className="flex items-start gap-2 justify-center sm:justify-start">
+                      <MapPin className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground">20806 Bothell Everett Hwy, Suite 102, Bothell, WA 98021</span>
+                    </div>
+                    <div className="flex items-center gap-2 justify-center sm:justify-start">
+                      <Phone className="w-4 h-4 text-accent shrink-0" />
+                      <a href="tel:+12063909915" className="text-accent hover:text-gold underline-offset-4 hover:underline">(206) 390-9915</a>
+                    </div>
+                    <div className="flex items-center gap-2 justify-center sm:justify-start">
+                      <Mail className="w-4 h-4 text-accent shrink-0" />
+                      <a href="mailto:Hans.Westermark@famfirstmtg.com" className="text-accent hover:text-gold underline-offset-4 hover:underline break-all">Hans.Westermark@famfirstmtg.com</a>
+                    </div>
+                    <div className="flex items-center gap-2 justify-center sm:justify-start">
+                      <Globe className="w-4 h-4 text-accent shrink-0" />
+                      <a href="https://www.familyfirstmortgagegroup.com/loan-officer/hans-westermark" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-gold underline-offset-4 hover:underline">familyfirstmortgagegroup.com</a>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3 mt-4 justify-center sm:justify-start">
+                    <img src={equalHousingIcon} alt="Equal Housing Lender" className="h-8 w-auto object-contain opacity-70" loading="lazy"/>
+                    <span className="text-muted-foreground text-xs">Family First Mortgage LLC · NMLS 2546884</span>
+                  </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
             </div>
           </div>
         </div>
