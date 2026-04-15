@@ -12,7 +12,7 @@ import RelatedServices from "@/components/RelatedServices";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
-import { realEstateAgentSchema, areaServed, areaServed } from "@/lib/schema";
+import { realEstateAgentSchema, areaServed } from "@/lib/schema";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 
 const faqs = [
