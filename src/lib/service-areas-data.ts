@@ -794,7 +794,10 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   tacoma: {
     tone: "urban",
     descriptor: "Growing urban market with neighborhood diversity",
-    heroIntro: "Tacoma has emerged as one of the most dynamic real estate markets in Pierce County, with neighborhoods ranging from the historic Stadium District and North End to the waterfront communities of Ruston and Point Defiance. For families and fiduciaries navigating estate, probate, or senior transition sales in Tacoma, the city's neighborhood diversity and growth trajectory make experienced, local guidance essential.",
+    seoTitle: "Probate & Estate Real Estate in Tacoma, WA | Real Property Planning",
+    seoDescription: "Estate property sales, probate guidance, and senior transitions in Tacoma, Washington. Serving families and executors throughout Tacoma's diverse neighborhoods.",
+    heroHeading: "Probate & Estate Real Estate in Tacoma, Washington",
+    heroIntro: "Tacoma is Pierce County's largest city and one of the most varied real estate markets in Western Washington — spanning historic neighborhoods like Stadium District and Proctor to South Tacoma's working-class communities, the waterfront, and everything in between. Estate properties in Tacoma often include craftsman homes, mid-century ramblers, and older properties with significant deferred maintenance — all of which require condition-adjusted pricing that reflects neighborhood-level market dynamics rather than city-wide averages. David Stein works with executors and families throughout Tacoma with the honest, experienced guidance these situations require.",
     localKnowledge: "Tacoma's neighborhoods each carry distinct market dynamics — the North End's established homes, Stadium District's architectural character, South Tacoma's affordability, and the waterfront communities' premium positioning. David Stein's understanding of how these submarkets behave helps clients avoid the mistake of treating Tacoma as a single market. For estate and inherited properties, knowing which neighborhood factors drive — or limit — buyer interest is critical to realistic pricing.",
     brokerAppraiserValue: "Tacoma's neighborhood diversity creates one of the widest value spreads in Pierce County — a Stadium District Tudor, a North End craftsman, a Ruston waterfront condo, and a South Tacoma rambler each require fundamentally different pricing approaches. David Stein's certified appraisal credentials provide the neighborhood-specific analysis Tacoma clients need, especially for estate and transition properties where the gap between automated estimates and actual market position can be significant.",
     localSituations: [
@@ -824,7 +827,10 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   "university-place": {
     tone: "suburban",
     descriptor: "Established residential community near Tacoma",
-    heroIntro: "University Place is a well-maintained residential community adjacent to Tacoma, known for its quality neighborhoods, Chambers Bay golf course, and access to Puget Sound waterfront. Families and fiduciaries managing property transitions in University Place benefit from guidance grounded in local neighborhood character and buyer expectations.",
+    seoTitle: "Probate & Estate Real Estate in Lakewood & University Place, WA | Real Property Planning",
+    seoDescription: "Estate property sales and probate guidance in Lakewood and University Place, Washington — serving families and executors in established Pierce County communities.",
+    heroHeading: "Probate & Estate Real Estate in Lakewood and University Place, Washington",
+    heroIntro: "Lakewood and University Place are established Pierce County communities with distinct characters — Lakewood's diverse housing stock and military-adjacent economy, and University Place's waterfront-adjacent neighborhoods and strong community identity. Estate properties in both communities require pricing that reflects the specific neighborhood rather than broad county trends. David works with executors and families throughout both communities with the condition-adjusted, location-specific guidance these markets require.",
     localKnowledge: "University Place offers a mix of established single-family homes, newer developments, and properties near Chambers Bay and the waterfront. The community's appeal lies in its combination of residential character, proximity to Tacoma's amenities, and access to outdoor recreation. For estate and transition properties, understanding how condition compares to the area's well-maintained housing stock is key to effective pricing.",
   },
   lakewood: {
