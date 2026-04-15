@@ -66,12 +66,12 @@ const SpokeNode = ({
     <div
       className="absolute rounded-full pointer-events-none"
       style={{
-        width: 110,
-        height: 110,
-        top: -10,
+      width: 126,
+        height: 126,
+        top: -18,
         left: "50%",
         transform: "translateX(-50%)",
-        background: "radial-gradient(circle, rgba(56,142,240,0.45) 0%, rgba(56,142,240,0.12) 50%, transparent 75%)",
+        background: "radial-gradient(circle, rgba(56,142,240,0.55) 0%, rgba(56,142,240,0.22) 45%, rgba(56,142,240,0.06) 70%, transparent 85%)",
         opacity: isPulsing ? 1 : 0,
         transition: `opacity ${NODE_PULSE_MS / 2}ms ease-in-out`,
         zIndex: 0,
