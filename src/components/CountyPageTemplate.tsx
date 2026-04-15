@@ -93,6 +93,11 @@ const CountyPageTemplate = ({
             <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl text-primary-foreground font-semibold leading-tight mb-4">
               {heroH1 || `Estate & Inherited Property Sales in ${countyName}`}
             </h1>
+            {heroSubheading && (
+              <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4 font-serif italic">
+                {heroSubheading}
+              </p>
+            )}
             <p className="text-lg text-primary-foreground/80 leading-relaxed">
               {localInsight || `Licensed broker and certified appraiser guidance for probate, estate, and senior property transitions in ${countyName}.`}
             </p>
