@@ -29,10 +29,6 @@ const HomepageHero = () => {
           Guiding Families Through Life's Most Important Transitions
         </p>
 
-        {/* Intro paragraph — SEO enrichment */}
-        <p className="text-[15px] md:text-[16px] leading-relaxed mb-8 text-white/70 max-w-3xl mx-auto">
-          When a family is navigating inherited property, a probate sale, or helping an aging parent make one of the biggest decisions of their life, Real Property Planning provides calm, honest guidance at every step. David Stein is a licensed real estate broker and Washington State Certified Residential Appraiser serving families, executors, attorneys, and professionals throughout King County, Snohomish County, Pierce County, Kitsap County, and across the Puget Sound region.
-        </p>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 mb-8 w-full sm:w-auto">
