@@ -837,10 +837,6 @@ html, body {
     margin-top: 0.2rem !important;
     transform: translateY(0.12rem) !important;
   }
-  .attorney-tiles-grid .premium-tile:nth-child(6) .tile-icon {
-    transform: scale(1.1) !important;
-    transform-origin: top center !important;
-  }
 }
 /* Attorney tiles: tighten line spacing without changing font size */
 .attorney-tiles-grid .premium-tile h3 {
