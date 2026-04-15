@@ -201,11 +201,11 @@ const HubAndSpoke = () => {
           <div
             className="absolute rounded-full pointer-events-none"
             style={{
-              left: centerX - 100,
-              top: centerY - 100,
-              width: 200,
-              height: 200,
-              background: "radial-gradient(circle, rgba(56,142,240,0.4) 0%, rgba(56,142,240,0.15) 40%, rgba(56,142,240,0.04) 65%, transparent 85%)",
+              left: centerX - 140,
+              top: centerY - 140,
+              width: 280,
+              height: 280,
+              background: "radial-gradient(circle, rgba(56,142,240,0.6) 0%, rgba(56,142,240,0.3) 35%, rgba(56,142,240,0.1) 60%, transparent 82%)",
               opacity: hubPulsing ? 1 : 0,
               transition: `opacity ${HUB_PULSE_MS / 2}ms ease-in-out`,
               zIndex: 0,
