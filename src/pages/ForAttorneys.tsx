@@ -94,7 +94,7 @@ const ForAttorneys = () => (
             ["Family Law Attorneys", "Handle family-related legal matters involving spouses, children, custody, support, and shared assets."],
             ["Divorce Attorneys", "Guide clients through divorce, property division, support, and real estate decisions tied to separation."],
             ["Real Estate Attorneys", "Advise on title, contracts, disputes, ownership rights, and transaction-related legal risk."],
-          )].map(([title, desc]) => (
+          ].map(([title, desc]) => (
             <p key={title} className="text-xl md:text-2xl leading-relaxed">
               <strong className="text-[#8B6914]">{title}</strong>
               <span className="text-[#1B2B4B]"> — </span>
