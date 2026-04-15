@@ -166,7 +166,7 @@ const LendersFinancingSpecialists = () => (
               </div>
               <div className="flex w-full flex-col items-center sm:flex-1 sm:items-start">
                 <a href="https://www.familyfirstmortgagegroup.com/loan-officer/hans-westermark" target="_blank" rel="noopener noreferrer" className="sm:self-start sm:ml-[58px]">
-                  <img src={familyFirstLogo} alt="Family First Mortgage logo" className="h-[42px] w-auto object-contain mx-auto sm:mx-0 block" loading="lazy"/>
+                  <img src={familyFirstLogo} alt="Family First Mortgage logo" className="h-[126px] w-auto object-contain mx-auto sm:mx-0 block" loading="lazy"/>
                 </a>
                 <div className="w-full mt-1 text-center sm:pl-[58px] sm:text-left">
                   <p className="text-foreground font-semibold text-lg">Hans Westermark</p>
