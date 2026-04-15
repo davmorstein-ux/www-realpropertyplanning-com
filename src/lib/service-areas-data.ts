@@ -565,7 +565,10 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   lynnwood: {
     tone: "urban",
     descriptor: "Rapidly evolving with new light rail access",
-    heroIntro: "Lynnwood is in the middle of a significant transformation, with light rail expansion bringing new development and shifting market dynamics. For families managing estate, probate, or senior transition properties in Lynnwood, this changing landscape creates both opportunities and challenges. Real Property Planning helps clients in Lynnwood understand how the city's evolution affects property values and develop sale strategies that reflect current and realistic market conditions.",
+    seoTitle: "Probate & Estate Real Estate in Lynnwood, WA | Real Property Planning",
+    seoDescription: "Estate property sales and probate guidance in Lynnwood, Washington — serving families and executors in this established Snohomish County community.",
+    heroHeading: "Probate & Estate Real Estate in Lynnwood, Washington",
+    heroIntro: "Lynnwood is one of Snohomish County's most established communities — with a housing stock that includes mid-century homes and newer construction alongside a growing commercial corridor. Estate properties in Lynnwood span a range of vintages and conditions, requiring the kind of condition-adjusted analysis that reflects the property's actual market position rather than neighborhood averages. David works with families and executors throughout Lynnwood with the honest, practical guidance these situations require.",
     localKnowledge: "Lynnwood's housing stock includes established ramblers and split-levels from the 1960s–80s, newer townhomes and condos near the city center, and properties in neighborhoods like Alderwood, Martha Lake, and North Lynnwood. The arrival of light rail is reshaping buyer interest in certain areas while leaving others relatively unchanged. David Stein's understanding of these micro-market shifts helps clients position estate and transition properties effectively.",
     brokerAppraiserValue: "Lynnwood's light rail transformation is creating a two-speed market — properties near station areas are appreciating on a different trajectory than those in quieter residential neighborhoods. David Stein's certified appraisal credentials provide the neighborhood-specific analysis that Lynnwood clients need when the city's transit-driven evolution makes comparable selection and pricing strategy especially consequential for estate and transition properties.",
     localSituations: [
@@ -639,7 +642,10 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   mukilteo: {
     tone: "waterfront",
     descriptor: "Coastal community with Boeing and ferry influences",
-    heroIntro: "Mukilteo is a small, close-knit community with waterfront appeal, ferry access to Whidbey Island, and a housing market influenced by its proximity to Boeing and Paine Field. For families handling estate or transition-related property in Mukilteo, the community's character and relatively limited housing inventory make experienced local guidance valuable.",
+    seoTitle: "Probate & Estate Real Estate in Mukilteo, WA | Real Property Planning",
+    seoDescription: "Estate property sales and probate guidance in Mukilteo, Washington — serving families and executors in this waterfront Snohomish County community.",
+    heroHeading: "Probate & Estate Real Estate in Mukilteo, Washington",
+    heroIntro: "Mukilteo's position on the waterfront — with ferry access to Whidbey Island and views of Puget Sound — makes it one of Snohomish County's most distinctive real estate markets. Estate properties here often carry significant premiums tied to water views, proximity to the ferry, and the community's overall desirability. David works with executors and families in Mukilteo, ensuring that these location-specific value factors are reflected accurately in the estate sale strategy.",
     localKnowledge: "Mukilteo's housing market is relatively compact, with established neighborhoods near the waterfront, properties in the Harbour Pointe master-planned community, and homes along the hillside with varying degrees of sound and mountain views. Because inventory is limited, positioning and pricing accuracy are especially important. David Stein helps clients understand how Mukilteo's unique characteristics affect value and buyer interest.",
   },
   everett: {
@@ -682,7 +688,10 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   "mill-creek": {
     tone: "suburban",
     descriptor: "Master-planned community with strong family appeal",
-    heroIntro: "Mill Creek is a well-regarded master-planned community known for its maintained common areas, strong schools, and family-friendly character. Estate, probate, and senior transition properties in Mill Creek need to be priced with HOA considerations, buyer expectations, and condition in mind — since most buyers here are looking for move-in-ready homes.",
+    seoTitle: "Probate & Estate Real Estate in Mill Creek, WA | Real Property Planning",
+    seoDescription: "Estate property sales and probate guidance in Mill Creek, Washington — serving families and executors in this established planned community.",
+    heroHeading: "Probate & Estate Real Estate in Mill Creek, Washington",
+    heroIntro: "Mill Creek is one of Snohomish County's most established planned communities — with a housing stock that appeals strongly to families seeking good schools, community amenities, and Eastside-adjacent access. Estate properties in Mill Creek typically attract a motivated buyer pool, but condition and preparation matter: buyers here expect a higher level of move-in readiness than in some other markets. David provides the honest condition assessment and targeted preparation guidance that helps Mill Creek estate properties perform to their potential.",
     localKnowledge: "Mill Creek's housing includes a range of single-family homes, townhomes, and condos within its planned community framework. The town center, country club, and trail system all contribute to Mill Creek's appeal. When selling an estate or inherited property here, understanding HOA requirements and how the property compares to recently updated homes in the community is essential for realistic pricing.",
   },
   "bothell-snohomish": {
