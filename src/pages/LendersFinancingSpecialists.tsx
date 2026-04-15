@@ -88,10 +88,10 @@ const LendersFinancingSpecialists = () => (
               </div>
               <div className="flex w-full flex-col items-center sm:flex-1 sm:items-start">
                 <a href="http://www.santadanmortgage.com" target="_blank" rel="noopener noreferrer" className="sm:self-start sm:ml-[58px]">
-                  <img src={c2FinancialLogo} alt="C2 Financial logo" className="h-[42px] w-auto object-contain mx-auto sm:mx-0 block"  loading="lazy"/>
+                  <img src={c2FinancialLogo} alt="C2 Financial logo" className="h-[84px] w-auto object-contain mx-auto sm:mx-0 block"  loading="lazy"/>
                 </a>
                 <div className="w-full mt-1 text-center sm:pl-[58px] sm:text-left">
-                  <p className="text-foreground font-semibold text-lg">Daniel Bartel</p>
+                  <p className="text-foreground font-semibold text-lg">Daniel Bartel <span className="text-muted-foreground text-sm font-normal">· NMLS 110735</span></p>
                   <p className="text-muted-foreground text-sm mb-1.5">Retirement Mortgage Specialist · Reverse Mortgage Lender · C2 Financial</p>
                   <p className="text-muted-foreground text-sm leading-relaxed mb-3">
                     Daniel specializes in helping seniors evaluate reverse mortgage options as part of a larger retirement plan. His approach is educational and consultative — focused on helping clients understand their options so they can make informed decisions. As a Registered Social Security Analyst, he also helps clients consider how real estate and financing decisions fit into their broader retirement strategy.
@@ -100,6 +100,9 @@ const LendersFinancingSpecialists = () => (
                     <div className="flex items-start gap-2 justify-center sm:justify-start">
                       <MapPin className="w-4 h-4 text-accent shrink-0 mt-0.5" />
                       <span className="text-muted-foreground">1721 Hewitt Ave Ste. 612, Everett, WA 98201</span>
+                    </div>
+                    <div className="flex items-center gap-2 justify-center sm:justify-start pl-6">
+                      <span className="text-muted-foreground">NMLS 135622</span>
                     </div>
                     <div className="flex items-center gap-2 justify-center sm:justify-start">
                       <Phone className="w-4 h-4 text-accent shrink-0" />
