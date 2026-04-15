@@ -833,10 +833,6 @@ html, body {
   .attorney-tiles-grid .premium-tile h3 {
     font-size: 0.9rem !important;
   }
-  .attorney-tiles-grid .premium-tile:nth-child(6) h3 {
-    margin-top: 0.2rem !important;
-    transform: translateY(0.12rem) !important;
-  }
 }
 /* Attorney tiles: tighten line spacing without changing font size */
 .attorney-tiles-grid .premium-tile h3 {
@@ -852,19 +848,6 @@ html, body {
 }
 .attorney-tiles-grid .premium-tile h3 {
   margin-top: -0.2rem !important;
-}
-/* Real Estate Attorneys tile: widen icon container so height matches other square icons */
-.attorney-tiles-grid .premium-tile:nth-child(6) .tile-icon {
-  width: 58% !important;
-  max-height: 38% !important;
-}
-@media (min-width: 640px) {
-  .attorney-tiles-grid .premium-tile:nth-child(6) h3 {
-    margin-top: 0.55rem !important;
-  }
-  .attorney-tiles-grid .premium-tile:nth-child(6) .tile-icon {
-    transform-origin: top center !important;
-  }
 }
 
 @media (min-width: 640px) {
