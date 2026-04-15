@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import logoBright from "@/assets/real-property-planning-logo-bright-seattle.webp";
 
 const LINE1 = "Washington's Professional Hub for Seniors, Families & Estate Transitions";
-const TYPING_DURATION = 1500; // ms
-const FADE_DELAY = 500; // ms after typing completes
+const TYPING_DURATION = 3500; // ms
+const FADE_DELAY = 1000; // ms after typing completes
 
 const HomepageHero = () => {
   const [charCount, setCharCount] = useState(0);
@@ -53,7 +53,7 @@ const HomepageHero = () => {
 
         {/* H1 — typewriter animation */}
         <h1
-          className="text-[22px] md:text-[28px] tracking-[0.08em] leading-relaxed mb-2 text-white font-medium"
+          className="text-[22px] md:text-[28px] tracking-[0.08em] leading-relaxed mb-2 text-white font-medium pt-6"
           aria-label={LINE1}
         >
           <span aria-hidden="true">
@@ -66,7 +66,7 @@ const HomepageHero = () => {
 
         {/* Warm subheading — fades in after typing */}
         <p
-          className="text-[18px] md:text-[22px] tracking-[0.04em] leading-relaxed mb-6 text-white/80 font-light"
+          className="text-[20px] md:text-[24px] tracking-[0.04em] leading-relaxed mb-6 pb-6 text-white/80 font-bold"
           style={{
             opacity: showLine2 ? 1 : 0,
             transition: prefersReducedMotion ? "none" : "opacity 0.8s ease-in-out",
