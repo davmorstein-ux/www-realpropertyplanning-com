@@ -2,7 +2,21 @@
   command = "npm run build"
   publish = "dist"
 
-# Non-www to www redirect
+# HTTP non-www to HTTPS www
+[[redirects]]
+  from = "http://realpropertyplanning.com/*"
+  to = "https://www.realpropertyplanning.com/:splat"
+  status = 301
+  force = true
+
+# HTTP www to HTTPS www
+[[redirects]]
+  from = "http://www.realpropertyplanning.com/*"
+  to = "https://www.realpropertyplanning.com/:splat"
+  status = 301
+  force = true
+
+# HTTPS non-www to HTTPS www
 [[redirects]]
   from = "https://realpropertyplanning.com/*"
   to = "https://www.realpropertyplanning.com/:splat"
