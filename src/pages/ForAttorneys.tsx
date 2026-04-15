@@ -52,18 +52,27 @@ const ForAttorneys = () => (
           <p className="text-primary-foreground text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-6">
             Real Property Planning handles valuation, preparation, coordination, and sale — so you and your client can focus on legal and financial priorities.
           </p>
-          <Link to="/contact">
-            <Button variant="gold" size="lg" className="px-7 py-4 h-auto rounded-lg">
-              <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy"/>
-              Share Your Situation
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link to="/contact">
+              <Button variant="gold" size="lg" className="px-7 py-4 h-auto rounded-lg">
+                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy"/>
+                Share Your Situation
+              </Button>
+            </Link>
+            <Button
+              size="lg"
+              className="px-7 py-4 h-auto rounded-lg bg-[hsl(var(--primary))] text-primary-foreground hover:bg-[hsl(var(--primary)/0.9)]"
+              onClick={() => document.getElementById('areas-of-collaboration')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              Attorney Options
             </Button>
-          </Link>
+          </div>
         </div>
       </div>
     </section>
 
     {/* Attorney Specialty Tiles */}
-    <section className="pt-6 md:pt-8 pb-12 lg:pb-16 bg-background">
+    <section id="areas-of-collaboration" className="pt-6 md:pt-8 pb-12 lg:pb-16 bg-background">
       <div className="container px-6 lg:px-8">
         <div className="max-w-[1200px] mx-auto">
           <p className="text-center text-muted-foreground text-lg md:text-xl leading-[1.8] font-bold mb-4 md:mb-6">
