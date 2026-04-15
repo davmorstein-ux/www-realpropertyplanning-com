@@ -2,7 +2,7 @@ const SITE_URL = "https://www.realpropertyplanning.com";
 const LOGO_URL = `${SITE_URL}/logo.png`;
 const BUSINESS_NAME = "Real Property Planning";
 
-const areaServed = [
+export const areaServed = [
   { "@type": "State", name: "Washington" },
   { "@type": "AdministrativeArea", name: "King County", containedInPlace: { "@type": "State", name: "Washington" } },
   {

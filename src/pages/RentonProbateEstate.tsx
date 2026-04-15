@@ -11,7 +11,7 @@ import RelatedServices from "@/components/RelatedServices";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
-import { realEstateAgentSchema } from "@/lib/schema";
+import { realEstateAgentSchema, areaServed } from "@/lib/schema";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 
 const faqs = [
@@ -26,7 +26,7 @@ const faqs = [
 const RentonProbateEstate = () => {
   useEffect(() => {
     const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.question, acceptedAnswer: { "@type": "Answer", text: f.answer } })) };
-    const localSchema = { ...realEstateAgentSchema, "@context": "https://schema.org", areaServed: [{ "@type": "City", name: "Renton", containedInPlace: { "@type": "State", name: "Washington" } }, ...realEstateAgentSchema.areaServed] };
+    const localSchema = { ...realEstateAgentSchema, "@context": "https://schema.org", areaServed: [{ "@type": "City", name: "Renton", containedInPlace: { "@type": "State", name: "Washington" } }, ...areaServed] };
     const s1 = document.createElement("script"); s1.type = "application/ld+json"; s1.setAttribute("data-page-jsonld", "faq"); s1.textContent = JSON.stringify(faqSchema); document.head.appendChild(s1);
     const s2 = document.createElement("script"); s2.type = "application/ld+json"; s2.setAttribute("data-page-jsonld", "local"); s2.textContent = JSON.stringify(localSchema); document.head.appendChild(s2);
     return () => { document.querySelectorAll("script[data-page-jsonld]").forEach((s) => s.remove()); };
