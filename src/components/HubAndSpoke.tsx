@@ -42,7 +42,7 @@ const allNodes = [...leftNodes, ...rightNodes];
 const NODE_SIZE = 90;
 const CONTAINER_HEIGHT = 680;
 const NODE_PULSE_MS = 1100;
-const HUB_PULSE_MS = 900;
+const HUB_PULSE_MS = 1150;
 
 const SpokeNode = ({
   node, cx, cy, isPulsing, onMouseEnter, onMouseLeave,
@@ -197,6 +197,21 @@ const HubAndSpoke = () => {
             ))}
           </svg>
 
+          {/* Center hub glow */}
+          <div
+            className="absolute rounded-full pointer-events-none"
+            style={{
+              left: centerX - 100,
+              top: centerY - 100,
+              width: 200,
+              height: 200,
+              background: "radial-gradient(circle, rgba(56,142,240,0.4) 0%, rgba(56,142,240,0.15) 40%, rgba(56,142,240,0.04) 65%, transparent 85%)",
+              opacity: hubPulsing ? 1 : 0,
+              transition: `opacity ${HUB_PULSE_MS / 2}ms ease-in-out`,
+              zIndex: 0,
+            }}
+          />
+
           {/* Center logo */}
           <div
             className="absolute"
@@ -205,8 +220,6 @@ const HubAndSpoke = () => {
               top: centerY - 360,
               width: 360,
               height: 720,
-              transition: `transform ${HUB_PULSE_MS / 2}ms ease-in-out`,
-              transform: hubPulsing ? "scale(1.04)" : "scale(1)",
             }}
           >
             <Link
