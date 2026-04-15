@@ -80,7 +80,7 @@ const Counties = () => {
       <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <img src={iconServiceAreas} alt="" aria-hidden="true" className="mx-auto max-w-[15rem] w-full h-auto object-contain mb-3"  loading="lazy"/>
+            <img src={iconServiceAreas} alt="" aria-hidden="true" className="mx-auto max-w-[15rem] w-full h-auto object-contain mb-1.5"  loading="lazy"/>
             <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
               Service Areas
             </p>

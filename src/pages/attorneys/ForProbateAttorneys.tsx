@@ -93,7 +93,7 @@ const ForProbateAttorneys = () => (
     <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
-          <img src={iconProbate} alt="Probate attorney real estate coordination Washington State" className="mx-auto max-w-[15rem] w-full h-auto object-contain mb-3" loading="lazy"/>
+          <img src={iconProbate} alt="Probate attorney real estate coordination Washington State" className="mx-auto max-w-[15rem] w-full h-auto object-contain mb-1.5" loading="lazy"/>
           <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
             For Probate Attorneys
           </p>

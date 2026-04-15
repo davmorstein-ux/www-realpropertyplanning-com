@@ -121,7 +121,7 @@ const ProfessionalReferralResource = () => {
       <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <img src={iconResources} alt="" aria-hidden="true" className="mx-auto max-w-[15rem] w-full h-auto object-contain mb-3"  loading="lazy"/>
+            <img src={iconResources} alt="" aria-hidden="true" className="mx-auto max-w-[15rem] w-full h-auto object-contain mb-1.5"  loading="lazy"/>
             <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] text-primary-foreground font-semibold leading-tight mb-6">
               A Professional Real Estate Resource for Important Property Transitions
             </h1>
