@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import logoBright from "@/assets/real-property-planning-logo-bright-seattle.webp";
 
 const LINE1 = "Washington's Professional Hub for Seniors, Families & Estate Transitions";
-const TYPING_DURATION = 3500; // ms
+const TYPING_DURATION = 6000; // ms
 const FADE_DELAY = 1000; // ms after typing completes
 
 const HomepageHero = () => {
