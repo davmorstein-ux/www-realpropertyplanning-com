@@ -72,7 +72,7 @@ const HomepageHero = () => {
             transition: prefersReducedMotion ? "none" : "opacity 3s ease-in-out",
           }}
         >
-          Guiding Families Through Life's Most Important Transitions
+          Connecting Families and Professionals When It Matters Most
         </p>
 
 
