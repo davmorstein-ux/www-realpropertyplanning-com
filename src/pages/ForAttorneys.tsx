@@ -62,23 +62,15 @@ const ForAttorneys = () => (
       </div>
     </section>
 
-    {/* Supporting paragraph */}
-    <section className="py-10 md:py-14 bg-background">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
-          <p className="text-muted-foreground text-[17px] md:text-lg leading-[1.8] font-medium">
-            Select the area of law that best fits your client's situation below.
-          </p>
-        </div>
-      </div>
-    </section>
-
     {/* Attorney Specialty Tiles */}
-    <section className="py-12 lg:py-16 bg-background">
+    <section className="pt-6 md:pt-8 pb-12 lg:pb-16 bg-background">
       <div className="container px-6 lg:px-8">
         <div className="max-w-[1200px] mx-auto">
-          <div className="text-center mb-10">
-            <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-3">
+          <p className="text-center text-muted-foreground text-lg md:text-xl leading-[1.8] font-bold mb-4 md:mb-6">
+            Select the area of law that best fits your client's situation below.
+          </p>
+          <div className="text-center mb-8">
+            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-bold mb-3">
               Areas of Collaboration
             </h2>
           </div>
