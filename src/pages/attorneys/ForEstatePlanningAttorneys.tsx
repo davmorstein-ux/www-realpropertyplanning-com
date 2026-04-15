@@ -7,51 +7,45 @@ import RelatedServices from "@/components/RelatedServices";
 import GoldCheck3D from "@/components/GoldCheck3D";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { AlertTriangle } from "lucide-react";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconEstatePlanning from "@/assets/icons/attorney-estate-planning-icon-washington.webp";
 
 const questions = [
-  "Should the property be sold now or held?",
-  "What is the true current market value?",
-  "How does timing affect tax or planning outcomes?",
-  "What preparation is needed before listing?",
-  "How do we coordinate with trustees, family members, and advisors?",
+  "The client wants to understand the current market value of a property held in trust",
+  "A life transition — health change, move to senior living, death of a spouse — triggers a planned or unplanned property sale",
+  "Timing a sale relative to tax planning, trust provisions, or beneficiary needs requires real estate input",
+  "Multiple trustees or beneficiaries need to agree on pricing and preparation before a sale can proceed",
+  "A property held in trust for years has deferred maintenance that affects its realistic market value",
 ];
 
 const services = [
-  { title: "Clear, Defensible Valuation", description: "Objective market insight to support planning decisions, trust strategies, and client discussions." },
-  { title: "Strategic Sale Planning", description: "Guidance on timing, preparation, and positioning — aligned with the broader estate plan." },
-  { title: "Coordination with Advisors", description: "Collaboration with attorneys, CPAs, and financial planners to ensure everyone is working from the same information." },
-  { title: "Property Preparation Oversight", description: "Access to trusted vendors and coordination of repairs, cleanout, or updates when needed." },
-  { title: "Steady Communication", description: "A calm, structured approach that keeps clients informed and reduces uncertainty." },
-];
-
-const situations = [
-  "Trust planning that includes real property",
-  "Pre-sale planning prior to life transitions",
-  "Preparing a home for future sale within a trust structure",
-  "Evaluating whether to sell, retain, or reposition property",
-  "Coordinating with multiple decision-makers",
-];
-
-const withoutCoordination = [
-  "Unnecessary stress for clients",
-  "Delays in execution",
-  "Missed opportunities in the market",
-];
-
-const withCoordination = [
-  "Clarity in decision-making",
-  "Smoother transitions",
-  "Alignment between legal strategy and real-world execution",
+  {
+    title: "Clear, Defensible Valuation",
+    description: (
+      <>
+        David's background as a <Link to="/real-estate-appraiser" className="text-accent hover:text-gold underline underline-offset-4">Washington State Certified Residential Appraiser</Link> means clients receive a condition-adjusted, methodology-based market assessment — not just a listing agent's price opinion. This is especially valuable when valuation needs to support trust decisions, beneficiary conversations, or planning-related financial analysis.
+      </>
+    ),
+  },
+  {
+    title: "Strategic Sale Planning",
+    description: "David advises on timing, preparation, and market positioning — always in alignment with the broader estate plan and the client's specific situation. Decisions about what to repair, when to list, and how to price are made with both market knowledge and fiduciary awareness.",
+  },
+  {
+    title: "Coordination With Advisors",
+    description: "David works collaboratively with attorneys, CPAs, and financial planners — ensuring that everyone involved in the client's plan is working from the same real estate information. One consistent point of contact. Regular updates. No gaps in communication.",
+  },
+  {
+    title: "Property Preparation Oversight",
+    description: "When preparation is needed before a sale, David coordinates vendors, manages the process, and keeps the client and their advisors informed — without adding to their administrative burden.",
+  },
 ];
 
 const ForEstatePlanningAttorneys = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
-      title="Real Estate Support for Estate Planning Attorneys | Real Property Planning"
-      description="Real Property Planning works with estate planning attorneys on trust-owned property sales, valuations, and real estate coordination throughout Washington State."
+      title="Real Estate Support for Estate Planning Attorneys in Washington State | Real Property Planning"
+      description="Real Property Planning helps estate planning attorneys and their clients navigate property valuation, sale timing, and real estate coordination throughout Washington State."
     />
     <BreadcrumbSchema
       items={[
@@ -66,7 +60,7 @@ const ForEstatePlanningAttorneys = () => (
     <section className="bg-primary pt-3 md:pt-4 pb-12 md:pb-14">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
-          <img src={iconEstatePlanning} alt="" aria-hidden="true" className="mx-auto max-w-[23rem] w-full h-auto object-contain mb-3"  loading="lazy"/>
+          <img src={iconEstatePlanning} alt="Estate planning attorney real estate support Washington State" className="mx-auto max-w-[23rem] w-full h-auto object-contain mb-3" loading="lazy"/>
           <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
             For Estate Planning Attorneys
           </p>
@@ -77,8 +71,8 @@ const ForEstatePlanningAttorneys = () => (
             Helping Your Clients Execute the Plan — Clearly and Confidently
           </p>
           <Link to="/contact">
- <Button variant="gold" size="lg"className="hover:-light px-7 py-4 h-auto rounded-lg">
-              <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy"/>
+            <Button variant="gold" size="lg" className="px-7 py-4 h-auto rounded-lg">
+              <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy"/>
               Schedule a Conversation
             </Button>
           </Link>
@@ -86,15 +80,15 @@ const ForEstatePlanningAttorneys = () => (
       </div>
     </section>
 
-    {/* Intro */}
+    {/* Opening */}
     <section className="py-16 lg:py-20 bg-secondary">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-            Estate planning is about clarity, protection, and long-term intent. But when real property is involved, even well-structured plans can become complicated when it's time to act.
+            Estate planning is about clarity, protection, and long-term intent. But even the most carefully structured plan can become complicated when real property is involved and it's time to act. The client who understood their trust during the planning conversation may feel uncertain when the property actually needs to be sold. The family member who agreed on paper may resist when it becomes real.
           </p>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            Real Property Planning works alongside estate planning attorneys to help clients move from strategy to execution — providing clear valuation insight, coordinated sale planning, and a steady, professional presence during important transitions.
+            Real Property Planning works alongside estate planning attorneys to help clients move from strategy to execution — providing clear valuation insight, coordinated sale planning, and a calm, professional presence during transitions that matter.
           </p>
         </div>
       </div>
@@ -108,7 +102,7 @@ const ForEstatePlanningAttorneys = () => (
             Where Real Estate and Estate Planning Intersect
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-10">
-            Many clients have a plan in place — but questions arise when real property becomes part of the conversation:
+            Many of your clients have a plan in place — but the real estate questions arise at the point of execution, often years after the plan was drafted. The most common situations:
           </p>
           <div className="grid gap-4">
             {questions.map((q, i) => (
@@ -118,9 +112,6 @@ const ForEstatePlanningAttorneys = () => (
               </div>
             ))}
           </div>
-          <p className="text-muted-foreground text-lg leading-relaxed mt-8">
-            These decisions benefit from both legal guidance and real estate expertise working together.
-          </p>
         </div>
       </div>
     </section>
@@ -129,12 +120,9 @@ const ForEstatePlanningAttorneys = () => (
     <section className="py-16 lg:py-24 bg-secondary">
       <div className="container px-6 lg:px-8">
         <div className="max-w-[900px] mx-auto">
-          <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
+          <h2 className="font-serif text-3xl text-foreground font-semibold mb-10">
             How We Support Your Clients
           </h2>
-          <p className="text-muted-foreground text-lg leading-relaxed mb-10">
-            As a licensed real estate brokerage with state-certified residential appraisal expertise, Real Property Planning provides:
-          </p>
           <div className="grid gap-5">
             {services.map((s, i) => (
               <div key={i} className="bg-card border border-border rounded-xl px-7 py-6">
@@ -149,91 +137,32 @@ const ForEstatePlanningAttorneys = () => (
       </div>
     </section>
 
-    {/* Common Situations */}
-    <section className="py-16 lg:py-24 bg-background">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="font-serif text-3xl text-foreground font-semibold mb-8">
-            Common Situations We Help With
-          </h2>
-          <ul className="space-y-4">
-            {situations.map((item, i) => (
-              <li key={i} className="flex items-start gap-3">
-                <GoldCheck3D size={20} className="mt-0.5 shrink-0" />
-                <span className="text-foreground leading-relaxed">{item}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    {/* Why This Matters */}
-    <section className="py-16 lg:py-24 bg-secondary">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="font-serif text-3xl text-foreground font-semibold mb-8">
-            Why This Matters
-          </h2>
-          <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-            When real estate decisions are made without proper coordination, it can lead to:
-          </p>
-          <ul className="space-y-3 mb-10">
-            {withoutCoordination.map((item, i) => (
-              <li key={i} className="flex items-start gap-3">
-                <AlertTriangle className="w-5 h-5 text-destructive mt-0.5 shrink-0" />
-                <span className="text-foreground leading-relaxed">{item}</span>
-              </li>
-            ))}
-          </ul>
-          <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-            When we work together, clients benefit from:
-          </p>
-          <ul className="space-y-3">
-            {withCoordination.map((item, i) => (
-              <li key={i} className="flex items-start gap-3">
-                <GoldCheck3D size={20} className="mt-0.5 shrink-0" />
-                <span className="text-foreground leading-relaxed">{item}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    {/* A Collaborative Approach */}
-    <section className="py-16 lg:py-20 bg-background">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="font-serif text-3xl text-foreground font-semibold mb-5">
-            A Collaborative Approach
-          </h2>
-          <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-            My role is not to replace legal guidance — it is to support it.
-          </p>
-          <p className="text-muted-foreground text-lg leading-relaxed">
-            By working together, we can help ensure that your client's real estate decisions reflect the intent of their plan, while navigating the practical realities of the market.
-          </p>
-        </div>
-      </div>
-    </section>
-
     {/* CTA */}
     <section className="py-20 lg:py-28 bg-primary">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-5">
-            Let's Connect
+            Discuss a Client Situation
           </h2>
-          <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
-            If you work with clients who need real estate guidance as part of their planning process, I'd welcome the opportunity to collaborate.
+          <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">
+            If you work with clients who hold real property as part of their estate plan — and who will eventually need to sell, transfer, or make decisions about that property — David welcomes the opportunity to be a resource for your practice.
           </p>
-          <Link to="/contact">
- <Button variant="gold" size="lg"className="hover:-light">
-              <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy"/>
-              Schedule a Conversation
-            </Button>
-          </Link>
+          <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
+            A brief conversation is the most efficient way to discuss how Real Property Planning can support your clients in Washington State.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="tel:+12069003015">
+              <Button variant="gold" size="lg" className="px-8 py-4 h-auto">
+                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy"/>
+                Call (206) 900-3015
+              </Button>
+            </a>
+            <Link to="/contact">
+              <Button variant="outline" size="lg" className="px-8 py-4 h-auto border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+                Send a Message
+              </Button>
+            </Link>
+          </div>
         </div>
       </div>
     </section>

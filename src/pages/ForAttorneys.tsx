@@ -29,8 +29,8 @@ const attorneyTiles: ServiceTile[] = [
 const ForAttorneys = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
-      title="Probate Real Estate Services for Attorneys in Washington State | Real Property Planning"
-      description="A trusted real estate resource for attorneys handling probate and estate matters in Washington State. Licensed Broker & Certified Appraiser with deep expertise in inherited and court-supervised property sales."
+      title="Real Estate Support for Attorneys in Washington State | Real Property Planning"
+      description="Real Property Planning provides valuation, preparation, and sale coordination for probate, estate, elder law, family law, and divorce attorneys throughout Washington State."
     />
     <BreadcrumbSchema items={[{ name: "For Attorneys", url: "/for-attorneys" }]} />
     <Header />
@@ -41,23 +41,43 @@ const ForAttorneys = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <div className="flex justify-center mb-3 md:mb-4">
-            <img src={iconAttorneys} alt="Probate real estate services for attorneys in Washington State" className="block w-full max-w-[23rem] h-auto object-contain"  loading="lazy"/>
+            <img src={iconAttorneys} alt="Real estate support for probate estate and family law attorneys Washington State" className="block w-full max-w-[23rem] h-auto object-contain" loading="lazy"/>
           </div>
           <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">
             For Attorneys
           </p>
           <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-primary-foreground leading-tight mb-4">
-            Real Estate Support for Probate &amp; Estate Attorneys
+            Real Estate Support for Probate &amp; Estate Attorneys in Washington State
           </h1>
-          <p className="text-primary-foreground/70 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-3" style={{ maskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)' }}>
+          <p className="text-primary-foreground/70 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-4" style={{ maskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)' }}>
             Real Property Planning handles valuation, preparation, coordination, and sale — so you and your client can focus on legal and financial priorities.
           </p>
           <Link to="/contact">
             <Button variant="gold" size="lg" className="px-7 py-4 h-auto rounded-lg">
-              <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy"/>
+              <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy"/>
               Discuss a Client Situation
             </Button>
           </Link>
+        </div>
+      </div>
+    </section>
+
+    {/* Supporting paragraph */}
+    <section className="py-10 md:py-14 bg-background">
+      <div className="container px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto">
+          <p className="text-muted-foreground text-[17px] md:text-lg leading-[1.8] mb-4">
+            Attorneys working in{" "}
+            <Link to="/probate-estate-sales" className="text-accent hover:text-gold underline underline-offset-4">probate</Link>, estate planning, elder law, family law, and divorce regularly encounter real estate questions that fall outside the scope of legal counsel. When a client needs honest property valuation, coordinated sale management, or a professional who can hold a complex multi-party process together — that's where Real Property Planning fits in.
+          </p>
+          <p className="text-muted-foreground text-[17px] md:text-lg leading-[1.8] mb-6">
+            David Stein's dual background as a licensed real estate broker and a{" "}
+            <Link to="/real-estate-appraiser" className="text-accent hover:text-gold underline underline-offset-4">Washington State Certified Residential Appraiser</Link>{" "}
+            makes him an unusually reliable resource for attorneys who need the property side handled with accuracy, professionalism, and clear communication.
+          </p>
+          <p className="text-muted-foreground text-[17px] md:text-lg leading-[1.8] font-medium">
+            Select the area of law that best fits your client's situation below.
+          </p>
         </div>
       </div>
     </section>
@@ -70,9 +90,6 @@ const ForAttorneys = () => (
             <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-3">
               Areas of Collaboration
             </h2>
-            <p className="text-muted-foreground text-base max-w-2xl mx-auto">
-              Select the area that best fits your client's situation:
-            </p>
           </div>
           <div className="mx-auto grid w-full max-w-[1200px] grid-cols-2 items-start gap-0 sm:grid-cols-3 attorney-tiles-grid">
             {attorneyTiles.map((tile, index) => (
