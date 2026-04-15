@@ -83,11 +83,33 @@ const ForAttorneys = () => (
       </div>
     </section>
 
-    {/* Introductory copy below tiles */}
-    <section className="py-10 md:py-14 bg-background">
+    {/* Attorney type definitions */}
+    <section className="pt-6 md:pt-8 pb-8 md:pb-10 bg-background">
+      <div className="container px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto space-y-5 md:space-y-6">
+          {[
+            ["Probate Attorneys", "Handle estate administration after death, including court process, creditor issues, and transfer or sale of property."],
+            ["Estate Planning Attorneys", "Plan ahead with wills, trusts, powers of attorney, and directives for how assets should be handled."],
+            ["Elder Law Attorneys", "Help with aging, care planning, Medicaid, incapacity issues, and asset protection."],
+            ["Family Law Attorneys", "Handle family-related legal matters involving spouses, children, custody, support, and shared assets."],
+            ["Divorce Attorneys", "Guide clients through divorce, property division, support, and real estate decisions tied to separation."],
+            ["Real Estate Attorneys", "Advise on title, contracts, disputes, ownership rights, and transaction-related legal risk."],
+          ].map(([title, desc]) => (
+            <p key={title} className="text-foreground text-lg md:text-xl leading-relaxed">
+              <strong className="text-gold">{title}</strong>
+              <span className="text-muted-foreground"> — </span>
+              <span className="text-muted-foreground">{desc}</span>
+            </p>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* Introductory copy below definitions */}
+    <section className="py-8 md:py-12 bg-background">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
-          <p className="text-muted-foreground text-[17px] md:text-lg leading-[1.8]">
+          <p className="text-foreground text-xl md:text-2xl leading-[1.8]">
             Attorneys working in probate, estate planning, elder law, family law, and divorce regularly encounter real estate questions that fall outside the scope of legal counsel. When a client needs honest property valuation, coordinated sale management, or a professional who can hold a complex multi-party process together — that's where Real Property Planning fits in.
           </p>
         </div>
