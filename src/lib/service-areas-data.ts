@@ -738,13 +738,19 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   "lake-stevens": {
     tone: "suburban",
     descriptor: "Lakeside community with rapid residential growth",
-    heroIntro: "Lake Stevens has experienced significant growth in recent years, transforming from a rural lake community into one of Snohomish County's most active residential markets. When selling estate or transition property in Lake Stevens, the community's rapid evolution means property values and buyer expectations may have shifted significantly from when the home was originally purchased.",
+    seoTitle: "Probate & Estate Real Estate in Lake Stevens & Monroe, WA | Real Property Planning",
+    seoDescription: "Estate property sales and probate guidance in Lake Stevens and Monroe, Washington — serving growing east Snohomish County communities.",
+    heroHeading: "Probate & Estate Real Estate in Lake Stevens and Monroe, Washington",
+    heroIntro: "Lake Stevens and Monroe have been among Snohomish County's fastest-growing communities — attracting buyers seeking more space, newer construction, and relative affordability compared to closer-in suburbs. Estate properties in these communities range from older homes in established neighborhoods to newer construction that requires different pricing considerations. David serves executors and families throughout east Snohomish County with honest, condition-adjusted guidance calibrated to these specific markets.",
     localKnowledge: "Lake Stevens' housing ranges from established homes near the lake and the original town center to newer construction in rapidly developing subdivisions throughout the community. The lake itself remains a major amenity and value driver, but distance from the water creates meaningful price variations. David Stein helps clients understand how Lake Stevens' growth trajectory and property-specific characteristics affect realistic market positioning.",
   },
   marysville: {
     tone: "suburban",
     descriptor: "Growing north Snohomish County community",
-    heroIntro: "Marysville has grown into one of the largest and most active communities in northern Snohomish County, with established neighborhoods near downtown and newer developments extending toward the surrounding rural areas. When managing estate or transition property in Marysville, the city's range of housing types and price points requires practical, locally informed guidance.",
+    seoTitle: "Probate & Estate Real Estate in Marysville & Arlington, WA | Real Property Planning",
+    seoDescription: "Estate property sales and probate guidance in Marysville and Arlington, Washington — serving north Snohomish County families and executors.",
+    heroHeading: "Probate & Estate Real Estate in Marysville and Arlington, Washington",
+    heroIntro: "Marysville and Arlington represent the northern reaches of Snohomish County's residential market — communities with their own character, buyer pools, and pricing dynamics distinct from the county's more urban centers. Estate properties here — which often include larger lots, rural-adjacent parcels, and older housing stock — require pricing that reflects local demand rather than county-wide trends. David works with families and executors throughout north Snohomish County, providing the location-specific guidance these communities require.",
     localKnowledge: "Marysville's housing market includes older homes in the Ebey Waterfront and downtown areas, mid-range suburban developments, and newer construction on the city's expanding edges. The I-5 corridor's accessibility and the community's affordability relative to the Eastside and Seattle drive buyer interest. David Stein helps clients navigate Marysville's market dynamics and position estate or transition properties realistically.",
   },
   arlington: {
