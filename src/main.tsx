@@ -1,9 +1,10 @@
 import { createRoot } from "react-dom/client";
+import { HelmetProvider } from "react-helmet-async";
 import App from "./App.tsx";
 import "./index.css";
 
-// Remove SSG placeholder content before React mounts
-const ssgContent = document.getElementById("ssg-content");
-if (ssgContent) ssgContent.remove();
-
-createRoot(document.getElementById("root")!).render(<App />);
+createRoot(document.getElementById("root")!).render(
+  <HelmetProvider>
+    <App />
+  </HelmetProvider>
+);

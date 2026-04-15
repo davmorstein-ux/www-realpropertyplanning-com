@@ -1,75 +1,76 @@
-import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
 
 interface SEOHeadProps {
   title: string;
   description: string;
   canonical?: string;
-  jsonLd?: object;
+  ogImage?: string;
   /** Set to true to add noindex,follow — keeps links crawlable but page out of index */
+  noIndex?: boolean;
+  schemaJson?: object | object[];
+  /** @deprecated Use schemaJson instead */
+  jsonLd?: object;
+  /** @deprecated Use noIndex instead */
   noindex?: boolean;
 }
 
 const SITE_URL = "https://www.realpropertyplanning.com";
+const DEFAULT_OG_IMAGE = "https://www.realpropertyplanning.com/logo.png";
 
-const SEOHead = ({ title, description, canonical, jsonLd, noindex = false }: SEOHeadProps) => {
+const SEOHead = ({
+  title,
+  description,
+  canonical,
+  ogImage,
+  noIndex,
+  schemaJson,
+  jsonLd,
+  noindex,
+}: SEOHeadProps) => {
   const location = useLocation();
-  const canonicalUrl = canonical || `${SITE_URL}${location.pathname === "/" ? "" : location.pathname}`;
+  const canonicalUrl =
+    canonical || `${SITE_URL}${location.pathname === "/" ? "" : location.pathname}`;
+  const image = ogImage || DEFAULT_OG_IMAGE;
+  const shouldNoIndex = noIndex ?? noindex ?? false;
+  const schema = schemaJson ?? jsonLd;
 
-  useEffect(() => {
-    document.title = title;
+  return (
+    <Helmet>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <link rel="canonical" href={canonicalUrl} />
 
-    const setMeta = (name: string, content: string, attr = "name") => {
-      let el = document.querySelector(`meta[${attr}="${name}"]`) as HTMLMetaElement;
-      if (!el) {
-        el = document.createElement("meta");
-        el.setAttribute(attr, name);
-        document.head.appendChild(el);
-      }
-      el.setAttribute("content", content);
-    };
+      <meta
+        name="robots"
+        content={
+          shouldNoIndex
+            ? "noindex,follow,max-image-preview:large"
+            : "index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"
+        }
+      />
 
-    setMeta("description", description);
-    setMeta("og:title", title, "property");
-    setMeta("og:description", description, "property");
-    setMeta("og:url", canonicalUrl, "property");
-    setMeta("og:type", "website", "property");
-    setMeta("twitter:title", title, "name");
-    setMeta("twitter:description", description, "name");
-    setMeta("robots", noindex
-      ? "noindex,follow,max-image-preview:large"
-      : "index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"
-    );
+      {/* Open Graph */}
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={image} />
+      <meta property="og:site_name" content="Real Property Planning" />
+      <meta property="og:locale" content="en_US" />
 
-    // Canonical link
-    let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-    if (!link) {
-      link = document.createElement("link");
-      link.setAttribute("rel", "canonical");
-      document.head.appendChild(link);
-    }
-    link.setAttribute("href", canonicalUrl);
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={image} />
 
-    // JSON-LD
-    const existingScript = document.querySelector('script[data-seo-jsonld]');
-    if (existingScript) existingScript.remove();
-
-    if (jsonLd) {
-      const script = document.createElement("script");
-      script.type = "application/ld+json";
-      script.setAttribute("data-seo-jsonld", "true");
-      script.textContent = JSON.stringify(jsonLd);
-      document.head.appendChild(script);
-    }
-
-    return () => {
-      const script = document.querySelector('script[data-seo-jsonld]');
-      if (script) script.remove();
-    };
-  }, [title, description, canonicalUrl, jsonLd]);
-
-  return null;
+      {/* JSON-LD */}
+      {schema && (
+        <script type="application/ld+json">{JSON.stringify(schema)}</script>
+      )}
+    </Helmet>
+  );
 };
 
 export default SEOHead;
-
