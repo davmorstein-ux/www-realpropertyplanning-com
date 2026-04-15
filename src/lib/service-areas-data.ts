@@ -823,6 +823,10 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
       "Practical preparation guidance tailored to each property's condition and buyer pool",
       "Clear communication and coordination for families managing from a distance",
     ],
+    localFaqs: [
+      { question: "How does the Tacoma market affect estate property pricing?", answer: "Tacoma's neighborhood variation is significant — a home in the Stadium District or Proctor area commands very different pricing than comparable square footage in South Tacoma or Hilltop. David's analysis is neighborhood-specific, accounting for the micro-market dynamics that determine how buyers will evaluate a particular property." },
+      { question: "Are older Tacoma craftsman homes hard to sell as estate properties?", answer: "Not with the right approach. Tacoma's older housing stock attracts a dedicated buyer pool — buyers who appreciate character, historic details, and the community context these homes represent. The key is honest condition assessment and pricing that reflects what that buyer pool will pay, which David provides through his combined broker and appraisal expertise." },
+    ],
   },
   "university-place": {
     tone: "suburban",
