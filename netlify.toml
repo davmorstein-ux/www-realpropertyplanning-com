@@ -2,6 +2,20 @@
   command = "npm run build"
   publish = "dist"
 
+# Non-www to www redirect
+[[redirects]]
+  from = "https://realpropertyplanning.com/*"
+  to = "https://www.realpropertyplanning.com/:splat"
+  status = 301
+  force = true
+
+# Trailing slash removal (except root)
+[[redirects]]
+  from = "/*/"
+  to = "/:splat"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/sitemap.xml"
   to = "/sitemap.xml"
