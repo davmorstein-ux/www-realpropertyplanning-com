@@ -95,10 +95,10 @@ const ForAttorneys = () => (
             ["Divorce Attorneys", "Guide clients through divorce, property division, support, and real estate decisions tied to separation."],
             ["Real Estate Attorneys", "Advise on title, contracts, disputes, ownership rights, and transaction-related legal risk."],
           ].map(([title, desc]) => (
-            <p key={title} className="text-foreground text-lg md:text-xl leading-relaxed">
-              <strong className="text-gold">{title}</strong>
-              <span className="text-muted-foreground"> — </span>
-              <span className="text-muted-foreground">{desc}</span>
+            <p key={title} className="text-xl md:text-2xl leading-relaxed">
+              <strong className="text-[#8B6914]">{title}</strong>
+              <span className="text-[#1B2B4B]"> — </span>
+              <span className="text-[#1B2B4B]">{desc}</span>
             </p>
           ))}
         </div>
@@ -109,7 +109,7 @@ const ForAttorneys = () => (
     <section className="py-8 md:py-12 bg-background">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
-          <p className="text-foreground text-xl md:text-2xl leading-[1.8]">
+          <p className="text-[#1B2B4B] text-2xl md:text-[1.7rem] leading-[1.8]">
             Attorneys working in probate, estate planning, elder law, family law, and divorce regularly encounter real estate questions that fall outside the scope of legal counsel. When a client needs honest property valuation, coordinated sale management, or a professional who can hold a complex multi-party process together — that's where Real Property Planning fits in.
           </p>
         </div>
@@ -120,7 +120,7 @@ const ForAttorneys = () => (
     <section className="py-6 bg-background">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
-          <Link to="/for-attorneys/learn-more" className="text-accent hover:text-gold underline underline-offset-4 text-base font-medium transition-colors">
+          <Link to="/for-attorneys/learn-more" className="text-[#8B6914] hover:text-[#6B4F0E] underline underline-offset-4 text-lg md:text-xl font-semibold transition-colors">
             More information about working with Attorneys →
           </Link>
         </div>
