@@ -42,7 +42,7 @@ const allNodes = [...leftNodes, ...rightNodes];
 const NODE_SIZE = 90;
 const CONTAINER_HEIGHT = 680;
 const NODE_PULSE_MS = 1100;
-const HUB_PULSE_MS = 1150;
+const HUB_PULSE_MS = 1800;
 
 const SpokeNode = ({
   node, cx, cy, isPulsing, onMouseEnter, onMouseLeave,
