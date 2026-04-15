@@ -1149,6 +1149,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     localFaqs: [
       { question: "How does Suquamish's proximity to Bainbridge Island affect property values?", answer: "Suquamish benefits from its location near Bainbridge Island without commanding Bainbridge's premium price points — which creates a specific buyer pool of its own. Buyers who want waterfront-adjacent Kitsap living at accessible price points, and who value the community's natural character, are the core audience for most Suquamish estate properties. David's pricing analysis reflects these dynamics specifically rather than applying Bainbridge Island comparables that don't accurately represent Suquamish's market position." },
     ],
+  },
   manchester: {
     tone: "waterfront",
     descriptor: "Quiet waterfront community on Rich Passage",
