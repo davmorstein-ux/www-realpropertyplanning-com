@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useEffect, useRef, useState, useCallback } from "react";
 
 import iconAttorney from "@/assets/icons/real-estate-attorney-services-icon-washington.webp";
 import iconMovers from "@/assets/icons/senior-movers-relocation-icon-washington.webp";
@@ -41,7 +42,12 @@ const allNodes = [...leftNodes, ...rightNodes];
 const NODE_SIZE = 90;
 const CONTAINER_HEIGHT = 680;
 
-const SpokeNode = ({ node, cx, cy }: { node: SpokeNodeData; cx: number; cy: number }) => (
+const SpokeNode = ({
+  node, cx, cy, isPulsing, onMouseEnter, onMouseLeave,
+}: {
+  node: SpokeNodeData; cx: number; cy: number;
+  isPulsing: boolean; onMouseEnter: () => void; onMouseLeave: () => void;
+}) => (
   <Link
     to={node.to}
     className="absolute flex flex-col items-center gap-2 group"
@@ -51,8 +57,17 @@ const SpokeNode = ({ node, cx, cy }: { node: SpokeNodeData; cx: number; cy: numb
       transform: "translateX(-50%)",
     }}
     aria-label={node.label}
+    onMouseEnter={onMouseEnter}
+    onMouseLeave={onMouseLeave}
   >
-    <div className="w-[90px] h-[90px] rounded-full border-[3px] border-[#C9A84C] bg-[#FAF8F4] flex items-center justify-center transition-all duration-200 group-hover:scale-[1.08] group-hover:border-[#E8C96A] group-hover:shadow-[0_0_12px_rgba(201,168,76,0.3)]">
+    <div
+      className="w-[90px] h-[90px] rounded-full border-[3px] border-[#C9A84C] bg-[#FAF8F4] flex items-center justify-center transition-all duration-200 group-hover:scale-[1.08] group-hover:border-[#E8C96A] group-hover:shadow-[0_0_12px_rgba(201,168,76,0.3)]"
+      style={isPulsing ? {
+        transform: "scale(1.08)",
+        borderColor: "#E8C96A",
+        boxShadow: "0 0 12px rgba(201,168,76,0.3)",
+      } : undefined}
+    >
       <img src={node.icon} alt="" aria-hidden="true" className="w-[72px] h-[72px] object-contain" loading="lazy" />
     </div>
     <span className="text-[12px] text-[#FAF8F4] text-center leading-tight font-medium whitespace-nowrap">
@@ -73,6 +88,42 @@ const MobileSpokeNode = ({ node }: { node: SpokeNodeData }) => (
 const HubAndSpoke = () => {
   const centerX = 500;
   const centerY = CONTAINER_HEIGHT / 2;
+  const [pulsingIndex, setPulsingIndex] = useState<number | null>(null);
+  const hoveredRef = useRef<Set<number>>(new Set());
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const scheduleNext = useCallback(() => {
+    const delay = 2500 + Math.random() * 3500;
+    timeoutRef.current = setTimeout(() => {
+      // Pick a random node that isn't hovered
+      const candidates = Array.from({ length: 10 }, (_, i) => i).filter(i => !hoveredRef.current.has(i));
+      if (candidates.length === 0) {
+        scheduleNext();
+        return;
+      }
+      const pick = candidates[Math.floor(Math.random() * candidates.length)];
+      setPulsingIndex(pick);
+      // Reset after 500ms
+      setTimeout(() => setPulsingIndex(null), 500);
+      scheduleNext();
+    }, delay);
+  }, []);
+
+  useEffect(() => {
+    scheduleNext();
+    return () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
+  }, [scheduleNext]);
+
+  const handleMouseEnter = useCallback((i: number) => {
+    hoveredRef.current.add(i);
+    setPulsingIndex(prev => prev === i ? null : prev);
+  }, []);
+
+  const handleMouseLeave = useCallback((i: number) => {
+    hoveredRef.current.delete(i);
+  }, []);
 
   return (
     <section
@@ -96,8 +147,9 @@ const HubAndSpoke = () => {
                 y1={centerY}
                 x2={centerX + node.dx}
                 y2={centerY + node.dy}
-                stroke="#C9A84C"
-                strokeWidth={2}
+                stroke={pulsingIndex === i ? "#F0D878" : "#C9A84C"}
+                strokeWidth={pulsingIndex === i ? 3 : 2}
+                style={{ transition: "stroke 0.2s ease, stroke-width 0.2s ease" }}
               />
             ))}
           </svg>
@@ -128,7 +180,15 @@ const HubAndSpoke = () => {
 
           {/* Spoke nodes */}
           {allNodes.map((node, i) => (
-            <SpokeNode key={i} node={node} cx={centerX + node.dx} cy={centerY + node.dy} />
+            <SpokeNode
+              key={i}
+              node={node}
+              cx={centerX + node.dx}
+              cy={centerY + node.dy}
+              isPulsing={pulsingIndex === i}
+              onMouseEnter={() => handleMouseEnter(i)}
+              onMouseLeave={() => handleMouseLeave(i)}
+            />
           ))}
         </div>
       </div>
