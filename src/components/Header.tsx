@@ -130,7 +130,7 @@ const Header = () => {
                     </button>
                     {openDropdown === link.label && (
                       <div
-                        className="absolute left-1/2 top-full z-50 mt-2 w-56 -translate-x-1/2 rounded-2xl border border-border bg-card py-2 shadow-lg"
+                        className="absolute left-1/2 top-full z-50 mt-2 min-w-[240px] -translate-x-1/2 rounded-2xl border border-border bg-card py-2 shadow-lg"
                         role="menu"
                         onMouseLeave={() => setOpenDropdown(null)}
                         onKeyDown={(e) => {
@@ -144,7 +144,7 @@ const Header = () => {
                             key={child.href}
                             to={child.href}
                             role="menuitem"
-                            className={`block px-5 py-2.5 text-[15px] transition-colors hover:bg-secondary hover:text-[hsl(216,65%,34%)] ${
+                            className={`block px-5 py-2 text-[15px] whitespace-nowrap transition-colors hover:bg-secondary hover:text-[hsl(216,65%,34%)] ${
                               location.pathname === child.href ? "font-semibold text-[hsl(216,65%,34%)]" : "text-foreground/80"
                             }`}
                           >
