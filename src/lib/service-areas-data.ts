@@ -36,6 +36,10 @@ export interface CityData {
   aeoSupportBullets?: string[];
   /** Override the default AEO support content with FAQ cards */
   aeoSupportFaqs?: { question: string; answer: string }[];
+  /** Custom SEO page title */
+  seoTitle?: string;
+  /** Custom SEO meta description */
+  seoDescription?: string;
 }
 
 export interface CountyData {
@@ -65,6 +69,8 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   bellevue: {
     tone: "premium",
     descriptor: "Eastside luxury and established neighborhoods",
+    seoTitle: "Probate & Estate Real Estate in Bellevue, WA | Real Property Planning",
+    seoDescription: "Estate property sales, probate guidance, and inherited home support in Bellevue, Washington. Serving executors, families, and attorneys on the Eastside.",
     heroHeading: "Probate & Estate Real Estate in Bellevue, Washington",
     heroIntro: "Bellevue is one of the most valuable real estate markets in Washington State — and that value creates both opportunity and complexity for estate property sales. A home in West Bellevue or Beaux Arts Village requires a very different approach than a condo near the Bellevue Square corridor or a property in the Somerset or Newport Hills neighborhoods. Families and executors navigating a probate sale or senior transition in Bellevue need someone who understands the Eastside market at a neighborhood level — not just broad county trends.",
     localKnowledge: "Bellevue's real estate market spans a wide spectrum — from mid-century ramblers in Crossroads to multimillion-dollar estates in West Bellevue, Meydenbauer, and Vuecrest. Accurate pricing requires understanding how neighborhood, lot size, views, and condition interact in a market where buyer expectations are high. David Stein's dual credentials as a licensed broker and state-certified appraiser provide the local depth needed to position estate and transition properties effectively in Bellevue's competitive landscape.",
@@ -95,6 +101,8 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   kirkland: {
     tone: "suburban",
     descriptor: "Waterfront charm and growing neighborhoods",
+    seoTitle: "Probate & Estate Real Estate in Kirkland, WA | Real Property Planning",
+    seoDescription: "Estate property sales, inherited home guidance, and senior transitions in Kirkland, Washington. Local expertise from David Stein, based in Kirkland.",
     heroHeading: "Probate & Estate Real Estate in Kirkland, Washington",
     heroIntro: "Kirkland is home to David Stein — which means Real Property Planning's knowledge of this market goes beyond professional research. From the waterfront neighborhoods near Lake Washington to the established communities of North Kirkland and Totem Lake, David has worked with properties across the full range of Kirkland's housing landscape. For families navigating a probate sale, senior transition, or inherited property in Kirkland, that local depth translates directly into better pricing, more targeted preparation, and a smoother process.",
     localKnowledge: "Kirkland's neighborhoods range from the boutique waterfront of Moss Bay and Houghton to the larger-lot homes of Juanita, Finn Hill, and Totem Lake. Each area attracts different buyers with different expectations. Selling an estate or inherited property in Kirkland requires understanding which improvements matter, how waterfront proximity affects value, and how to position a home that may not be in move-in condition against newer or recently updated listings.",
@@ -125,6 +133,8 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   redmond: {
     tone: "suburban",
     descriptor: "Technology corridor with diverse housing stock",
+    seoTitle: "Probate & Estate Real Estate in Redmond, WA | Real Property Planning",
+    seoDescription: "Probate sales, inherited home guidance, and estate property support in Redmond, Washington. Serving families, executors, and attorneys on the Eastside.",
     heroHeading: "Probate & Estate Real Estate in Redmond, Washington",
     heroIntro: "Redmond's real estate market reflects its dual identity — a technology hub anchored by Microsoft and Nintendo alongside established residential neighborhoods that predate the tech boom by decades. Estate properties in Redmond range from mid-century homes in older neighborhoods to newer construction in master-planned communities, each with its own buyer expectations and pricing dynamics. David Stein works with executors and families throughout Redmond, bringing the local Eastside expertise needed to navigate this varied market accurately.",
     localKnowledge: "Redmond's housing stock includes everything from older homes in downtown Redmond and Education Hill to newer construction in Redmond Ridge, Trilogy, and the Overlake area. These submarkets behave differently, and an estate or inherited property may need very different preparation and pricing strategies depending on location. David Stein's familiarity with Redmond's micro-markets helps clients avoid the common mistake of applying a one-size-fits-all approach.",
@@ -156,6 +166,8 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   bothell: {
     tone: "suburban",
     descriptor: "Cross-county community bridging King and Snohomish",
+    seoTitle: "Probate & Estate Real Estate in Bothell, WA | Real Property Planning",
+    seoDescription: "Estate property sales and probate guidance in Bothell, Washington — serving both King and Snohomish County portions of Bothell and surrounding communities.",
     heroHeading: "Probate & Estate Real Estate in Bothell, Washington",
     heroIntro: "Bothell straddles the King and Snohomish County line — which means estate properties here may fall under different county probate processes depending on which side of the border they sit on. David Stein is familiar with both county systems and serves the full Bothell area, including Canyon Park, the downtown core, and the surrounding communities of Kenmore and Woodinville. For executors managing an estate property in Bothell, this cross-county expertise matters.",
     localKnowledge: "Bothell's real estate spans mid-century homes in the original downtown core, newer construction near Canyon Park and the University of Washington Bothell campus, and properties along the river corridor. The city's position across two counties means comparable sales may come from either side of the boundary, and buyer demographics can shift meaningfully between neighborhoods. David Stein's experience with Bothell's specific market dynamics helps clients price and position properties accurately.",
@@ -182,6 +194,8 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   issaquah: {
     tone: "suburban",
     descriptor: "Foothills communities and family neighborhoods",
+    seoTitle: "Probate & Estate Real Estate in Issaquah, WA | Real Property Planning",
+    seoDescription: "Estate property sales and probate guidance in Issaquah, Washington — serving the Highlands, Talus, Olde Town, and surrounding communities.",
     heroIntro: "Nestled against the Cascade foothills, Issaquah offers a blend of established neighborhoods, newer planned communities, and rural-adjacent properties. For families navigating a probate sale, senior transition, or inherited property situation in Issaquah, the process requires someone who understands the area's unique mix of housing types, lot sizes, and buyer expectations — from the Highlands and Talus to Olde Town Issaquah and surrounding areas. David works with estate properties across Issaquah's varied neighborhoods — from Olde Town's established character to the Highlands' planned community feel. Each area has its own buyer expectations and pricing dynamics that must be reflected in any estate sale strategy.",
     localKnowledge: "Issaquah's real estate landscape includes master-planned communities like Issaquah Highlands and Talus, established neighborhoods near Olde Town, and properties in more rural settings toward the foothills. Each segment has its own pricing dynamics and buyer pool. Estate and inherited properties in Issaquah often require thoughtful preparation to compete effectively, especially when they differ from the newer construction that dominates parts of the market.",
     brokerAppraiserValue: "Issaquah's market is segmented by elevation, community type, and proximity to the foothills — Highlands properties, Talus townhomes, Olde Town homes, and rural-adjacent lots each serve different buyer pools with different expectations. David Stein's certified appraisal credentials provide the segment-specific analysis that Issaquah estate and transition clients need, especially when deferred-maintenance properties compete against the newer construction that dominates the Highlands and Talus.",
@@ -217,6 +231,8 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   sammamish: {
     tone: "premium",
     descriptor: "Plateau living with strong family appeal",
+    seoTitle: "Probate & Estate Real Estate in Sammamish, WA | Real Property Planning",
+    seoDescription: "Estate property sales and probate guidance in Sammamish, Washington. Serving families, executors, and attorneys in one of the Eastside's most sought-after communities.",
     heroHeading: "Probate & Estate Real Estate in Sammamish, Washington",
     heroIntro: "Sammamish consistently ranks among the most desirable communities on the Eastside — with strong schools, newer construction, and a buyer pool that includes tech-sector families and move-up buyers. Estate properties in Sammamish can perform exceptionally well when priced and presented correctly. David Stein works with executors and families throughout Sammamish, providing the honest, condition-informed guidance that turns a well-located estate property into a strong sale outcome.",
     localKnowledge: "Sammamish properties range from well-maintained homes in Pine Lake, Beaver Lake, and Klahanie to larger custom homes throughout the plateau. The market can be competitive for updated properties but challenging for homes that need work. David Stein's understanding of how condition, lot size, and school proximity affect value in Sammamish helps clients set realistic expectations and develop preparation strategies that make sense for their specific situation.",
@@ -224,6 +240,8 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   "mercer-island": {
     tone: "premium",
     descriptor: "Exclusive island community with premium waterfront",
+    seoTitle: "Probate & Estate Real Estate in Mercer Island, WA | Real Property Planning",
+    seoDescription: "Estate property sales and probate guidance on Mercer Island, Washington — one of King County's most distinctive and valuable real estate markets.",
     heroHeading: "Probate & Estate Real Estate on Mercer Island, Washington",
     heroIntro: "Mercer Island is one of the most distinctive real estate markets in King County — an island community with limited inventory, significant property values, and a buyer pool that expects a high level of sophistication in both pricing and presentation. Estate properties on Mercer Island require the kind of careful, condition-adjusted analysis that accounts for the market's nuances — lot size and view premiums, the wide range of home vintages, and buyer expectations that differ significantly from mainland Eastside markets. David works with executors and families on Mercer Island with the analytical rigor these high-value situations require.",
     localKnowledge: "Mercer Island's housing market includes waterfront estates, established homes on the east and west sides of the island, and condos near the town center. The island's limited land area, access via I-90, and strong school district create pricing dynamics that differ significantly from other Eastside communities. David Stein's appraisal credentials help clients understand how lot size, waterfront access, views, and condition interact in a market where generic pricing tools frequently miss the mark.",
@@ -254,6 +272,8 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   newcastle: {
     tone: "premium",
     descriptor: "Hillside community with Lake Washington views",
+    seoTitle: "Probate & Estate Real Estate in Newcastle, WA | Real Property Planning",
+    seoDescription: "Estate property sales and probate guidance in Newcastle, Washington — serving families and executors in this established Eastside community.",
     heroHeading: "Probate & Estate Real Estate in Newcastle, Washington",
     heroIntro: "Newcastle sits between Bellevue and Renton — benefiting from Eastside proximity while maintaining its own community character. Estate properties here often include larger lots and established landscaping that require specific preparation and pricing considerations. David works with executors and families in Newcastle with the same valuation-informed approach he brings to every community in King County.",
     localKnowledge: "Newcastle's housing stock is predominantly newer, with many homes built in the 1990s and 2000s in planned communities like Newcastle Highlands and the Golf Club at Newcastle area. Views are a primary value driver here, and the difference between a property with a panoramic view and one without can be substantial. David Stein helps clients understand how view corridors, lot positioning, and condition affect market value in Newcastle's hillside environment.",
@@ -261,6 +281,8 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   seattle: {
     tone: "urban",
     descriptor: "Urban diversity across dozens of distinct neighborhoods",
+    seoTitle: "Probate & Estate Real Estate in Seattle, WA | Real Property Planning",
+    seoDescription: "Probate sales, inherited home guidance, and senior transitions throughout Seattle's neighborhoods. Serving Capitol Hill, Ballard, West Seattle, Magnolia, and more.",
     heroHeading: "Probate & Estate Real Estate in Seattle, Washington",
     heroIntro: "Seattle's real estate market is as diverse as the city itself — from Capitol Hill condos to Magnolia estates, Ballard craftsmans to West Seattle view properties. Managing a probate sale, inherited home, or senior transition in Seattle means navigating a market where neighborhood context, zoning, and property type can dramatically affect both value and sale strategy. Real Property Planning provides the localized, valuation-informed guidance that Seattle's complex market demands. David Stein has worked with estate properties across Seattle's neighborhoods — understanding not just the broad market but the specific buyer expectations, zoning considerations, and pricing dynamics that vary block by block in a city this complex. From a mid-century craftsman in Ballard that needs a full cleanout to a Capitol Hill condo requiring HOA coordination, the approach is always the same: honest assessment, realistic pricing, and full management of the process.",
     localKnowledge: "Seattle encompasses over 80 distinct neighborhoods, each with its own character, pricing trends, and buyer expectations. A mid-century rambler in Wedgwood presents a very different sale scenario than a Capitol Hill condo or a Craftsman in Wallingford. David Stein's appraisal background and broker experience across Seattle's neighborhoods allow him to develop pricing and preparation strategies that reflect actual local conditions rather than citywide averages.",
@@ -298,6 +320,8 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   renton: {
     tone: "urban",
     descriptor: "South King County hub with evolving neighborhoods",
+    seoTitle: "Probate & Estate Real Estate in Renton, WA | Real Property Planning",
+    seoDescription: "Estate property sales, probate guidance, and inherited home support in Renton, Washington — serving families and executors in south King County.",
     heroHeading: "Probate & Estate Real Estate in Renton, Washington",
     heroIntro: "Renton's real estate market spans a wide range — from established neighborhoods near downtown to newer construction in the Highlands and communities bordering Bellevue and Newcastle. Estate properties in Renton require local pricing knowledge that accounts for this variation. David Stein works with executors and families throughout Renton, providing honest, condition-adjusted guidance that reflects the specific neighborhood, not just broad county trends.",
     localKnowledge: "Renton's market includes everything from lakefront properties and Kennydale mid-century homes to newer developments in the Highlands and established neighborhoods in Benson Hill. The city's proximity to major employers and ongoing development make it a dynamic market where pricing accuracy is especially important. David Stein's appraiser credentials help clients understand how Renton's different submarkets and the city's growth trajectory affect their specific property.",
@@ -374,6 +398,8 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   shoreline: {
     tone: "suburban",
     descriptor: "North Seattle gateway with light rail transformation",
+    seoTitle: "Probate & Estate Real Estate in Shoreline, WA | Real Property Planning",
+    seoDescription: "Estate property sales, probate guidance, and senior transitions in Shoreline, Washington — serving families and executors in north King County.",
     heroHeading: "Probate & Estate Real Estate in Shoreline, Washington",
     heroIntro: "Shoreline has been one of King County's most active real estate markets in recent years — driven by light rail expansion, proximity to Seattle, and a housing stock that includes a high proportion of mid-century homes attractive to buyers seeking value relative to Seattle proper. Estate properties in Shoreline — which often have the deferred maintenance characteristic of older homes — can perform very well when condition is accounted for accurately in pricing. David works with executors and families throughout Shoreline, bringing the condition-adjusted analysis these properties require.",
     localKnowledge: "Shoreline's housing stock is primarily mid-century ramblers and split-levels, many of which have been updated over the decades, alongside newer infill development near the light rail stations. The city's proximity to Seattle, strong school district, and evolving transit access all influence value. David Stein helps clients understand how Shoreline's transformation affects their specific property — whether it's near a station area or in one of the city's quieter residential pockets.",
@@ -422,6 +448,8 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   woodinville: {
     tone: "rural",
     descriptor: "Wine country character with estate-style properties",
+    seoTitle: "Probate & Estate Real Estate in Woodinville, WA | Real Property Planning",
+    seoDescription: "Estate property sales, probate guidance, and senior transitions in Woodinville, Washington. Local expertise from Real Property Planning — mailing address in Woodinville.",
     heroHeading: "Probate & Estate Real Estate in Woodinville, Washington",
     heroIntro: "Woodinville is home to Real Property Planning's mailing address — and it's a community David knows well. From the wine country properties along the Sammamish River corridor to established neighborhoods in Hollywood Hill and Bear Creek, Woodinville's real estate market rewards local knowledge. Estate properties here often include larger lots, horse properties, and rural-adjacent parcels that require specific expertise to price and position correctly. David works with families and executors throughout the Woodinville area with the local familiarity that only comes from being part of the community.",
     localKnowledge: "Woodinville's housing market includes everything from newer townhomes and condos near the town center to larger-lot properties and homes with acreage in the surrounding areas. The Sammamish River corridor, wine district proximity, and equestrian properties all create niche market segments. David Stein's appraisal credentials are especially valuable here, where property characteristics like land area, outbuildings, and rural features can meaningfully affect value.",

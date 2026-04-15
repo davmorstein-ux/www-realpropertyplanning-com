@@ -6,6 +6,7 @@ const KingCounty = () => (
     countyPath="/king-county"
     countySlug="king-county"
     heroH1="Probate & Estate Real Estate in King County, Washington"
+    heroSubheading="Experienced guidance for executors, families, and attorneys navigating property sales throughout King County."
     seoTitle="Probate & Estate Real Estate in King County, WA | Real Property Planning"
     seoDescription="Experienced probate real estate, inherited home sales, and senior transition guidance throughout King County, Washington. Serving Seattle, Bellevue, Kirkland, Redmond & more."
     cities={[
@@ -24,6 +25,16 @@ const KingCounty = () => (
         question: "How is pricing an inherited condo in Bellevue different from pricing a house in Shoreline?",
         answer: "Significantly different. A Bellevue condo involves HOA considerations, building financials, and a buyer pool that skews toward tech-sector buyers with specific expectations about finishes and amenities. A Shoreline house involves lot value, neighborhood trajectory, and a buyer pool that may include developers as well as end-users. David's pricing analysis accounts for these distinctions — not just comparable sales, but the property type, buyer pool, and current demand dynamics specific to that submarket.",
       },
+    ]}
+    localExpertiseHeading="King County's Market Complexity — Why Local Knowledge Matters"
+    localExpertiseBody={[
+      "King County spans over 2,100 square miles and includes some of the most valuable real estate in the Pacific Northwest alongside communities where property values tell a very different story. The difference between accurate pricing and wishful thinking can be $50,000 or more — and in an estate situation, that difference has real consequences for heirs, fiduciaries, and the families involved.",
+      "David has worked with estate properties across King County — from historic Capitol Hill homes to Eastside tech-corridor condos, from Renton ramblers to Mercer Island waterfront estates. Each neighborhood has its own buyer expectations, its own pricing dynamics, and its own preparation considerations. That local, specific knowledge is what separates a well-executed estate sale from one that sits on the market and requires price reductions.",
+    ]}
+    communitiesIntro="Real Property Planning serves families, executors, and professionals throughout King County, including:"
+    closingCtaBody={[
+      "Whether you're just beginning to think about an estate property in King County or are already in the middle of a probate sale, a short conversation can help bring clarity.",
+      "David is based in Kirkland and serves the entire King County area — from Seattle neighborhoods to the Eastside communities he knows best.",
     ]}
     countySpecificFaqs={[
       {
