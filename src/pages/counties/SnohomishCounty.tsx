@@ -5,30 +5,30 @@ const SnohomishCounty = () => (
     countyName="Snohomish County"
     countyPath="/snohomish-county"
     countySlug="snohomish-county"
+    seoTitle="Probate & Estate Real Estate in Snohomish County, WA | Real Property Planning"
+    seoDescription="Experienced probate real estate, inherited home sales, and senior transition guidance throughout Snohomish County. Serving Everett, Edmonds, Lynnwood, Bothell, Woodinville & more."
+    heroH1="Probate & Estate Real Estate in Snohomish County, Washington"
+    heroSubheading="Experienced guidance for executors, families, and attorneys navigating property sales throughout Snohomish County."
     cities={[
       "Everett", "Edmonds", "Lynnwood", "Mukilteo", "Mill Creek", "Bothell",
       "Snohomish", "Lake Stevens", "Marysville", "Monroe", "Arlington",
     ]}
-    localInsight="Snohomish County spans waterfront communities like Edmonds and Mukilteo, established suburbs like Mill Creek and Bothell, and growing towns like Lake Stevens and Monroe — each with its own buyer pool and pricing dynamics. David Stein has worked with estate properties across this full range, helping executors and families navigate the local market with realistic expectations and a clear plan."
-    whoIHelp="David works with executors managing inherited properties in Everett and Lynnwood, families navigating senior transitions from longtime homes in Mill Creek and Mukilteo, trustees overseeing rural acreage near Monroe and Arlington, and attorneys referring estate clients throughout Snohomish County. Many of his clients here are coordinating from Seattle, the Eastside, or out of state entirely."
-    whyCredentialsMatter="Snohomish County's range of property types — from Edmonds waterfront homes to rural acreage near Arlington — creates valuation challenges that standard market analysis often misses. David's dual credentials as a broker and certified appraiser allow him to evaluate condition, lot characteristics, and neighborhood-specific demand with the precision that estate and trust sales require. This is especially important for properties with decades of deferred maintenance or non-standard features."
-    marketOverview="Snohomish County's real estate market reflects its geographic diversity — from the premium waterfront neighborhoods of Edmonds and Mukilteo to the more affordable growth areas around Lake Stevens and Marysville. Estate properties in the county often include homes that have been in families for 30 to 50 years, with the associated accumulation of belongings and deferred maintenance that comes with longtime ownership. The county's proximity to Seattle and Eastside employment centers drives strong demand in many areas, but pricing varies significantly by neighborhood, condition, and lot characteristics. David's familiarity with these micro-markets ensures that each property is priced and marketed for its specific context."
-    localParagraph="Estate and inherited homes in Snohomish County often include longtime family properties with decades of accumulated belongings, outdated systems, and deferred repairs. Some sit in highly desirable neighborhoods where the lot value alone drives strong buyer interest; others require careful preparation and strategic pricing to attract the right buyers. David provides hands-on coordination — managing cleanout vendors, assessing repair-versus-sell-as-is decisions, and communicating consistently with out-of-state executors who cannot be on-site."
-    clientTypes={[
-      "Executors managing inherited properties in Everett, Lynnwood, or Edmonds from out of state",
-      "Attorneys in Snohomish County referring clients with probate or trust-owned real estate",
-      "Families navigating senior transitions from longtime homes in Mill Creek, Bothell, or Mukilteo",
-      "Trustees managing rural acreage properties in Snohomish, Monroe, or Arlington",
-      "Heirs who have inherited property and need guidance on preparation, pricing, and sale timing",
-      "Financial planners advising clients on the best approach for inherited Snohomish County property",
+    localInsight="Snohomish County spans one of the most geographically and economically varied real estate markets in Western Washington — from the waterfront communities of Edmonds and Mukilteo to the established suburbs of Mill Creek and Bothell, the growing towns of Lake Stevens and Monroe, and the rural-adjacent properties of the county's eastern reaches. Estate properties here require someone who understands this full range — not just broad county trends, but the neighborhood-level dynamics that determine how a property should be priced, prepared, and positioned. David Stein serves families, executors, trustees, and attorneys throughout Snohomish County with the dual perspective of a licensed real estate broker and a Washington State Certified Residential Appraiser."
+    aeoQuestion="How do probate and estate property sales work in Snohomish County?"
+    aeoAnswer="The process follows the same general structure as any probate sale in Washington State — establish legal authority, assess the property, develop a preparation and pricing strategy, list, and close — but the specifics vary significantly based on where the property is located within the county. An estate home in Edmonds faces a very different buyer pool than one in Monroe or Marysville. David's approach is always location-specific: the pricing, the preparation recommendations, and the marketing strategy are calibrated to the actual neighborhood and buyer demand, not generalized county averages."
+    aeoSupportFaqs={[
+      {
+        question: "What challenges do executors face when managing Snohomish County estate property?",
+        answer: "Many of the same challenges that arise anywhere — establishing legal authority, managing deferred maintenance, coordinating among heirs — are compounded in Snohomish County by the county's geographic spread. An executor in another state managing a property in rural Snohomish faces very different logistics than one managing a condo in Edmonds. David handles the full process locally, providing regular updates so executors don't need to be physically present for every step.",
+      },
+      {
+        question: "How does pricing differ across Snohomish County's varied communities?",
+        answer: "Significantly. A waterfront property in Edmonds or Mukilteo carries premiums that simply don't apply to comparable square footage in Marysville or Monroe. Mid-county communities like Mill Creek and Bothell have their own pricing dynamics driven by school districts and commute access. David's condition-adjusted, comparable-based analysis accounts for these differences specifically — not through county-wide averages.",
+      },
     ]}
-    typicalSituations={[
-      "Waterfront or view properties in Edmonds and Mukilteo requiring specialized marketing and buyer targeting",
-      "Probate homes in Everett or Lynnwood that need cleanout, repairs, and strategic preparation",
-      "Rural acreage properties in Snohomish, Monroe, or Arlington with unique appraisal considerations",
-      "Estate sales in Mill Creek or Bothell coordinated with out-of-state family members and attorneys",
-      "Inherited homes where siblings disagree about whether to sell, hold, or invest in renovations",
-      "Senior transitions from suburban family homes to smaller residences or assisted living communities",
+    communitiesIntro="Real Property Planning serves families, executors, and professionals throughout Snohomish County, including:"
+    closingCtaBody={[
+      "Whether you're just beginning to navigate an estate property in Snohomish County or are already in the middle of a probate sale, a short conversation with David can help bring clarity and a practical next step.",
     ]}
     countySpecificFaqs={[
       {

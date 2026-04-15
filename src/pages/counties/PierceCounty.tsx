@@ -5,30 +5,34 @@ const PierceCounty = () => (
     countyName="Pierce County"
     countyPath="/pierce-county"
     countySlug="pierce-county"
+    seoTitle="Probate & Estate Real Estate in Pierce County, WA | Real Property Planning"
+    seoDescription="Experienced probate real estate, inherited home sales, and senior transition guidance throughout Pierce County. Serving Tacoma, Puyallup, Gig Harbor, Lakewood & more."
+    heroH1="Probate & Estate Real Estate in Pierce County, Washington"
+    heroSubheading="Experienced guidance for executors, families, and attorneys navigating property sales throughout Pierce County."
     cities={[
       "Tacoma", "University Place", "Gig Harbor", "Puyallup", "Bonney Lake",
       "Lakewood", "Sumner", "Fircrest", "Milton",
     ]}
     localInsight="Pierce County's real estate market stretches from Tacoma's historic neighborhoods to Gig Harbor's waterfront properties — with wide variation in home values, buyer expectations, and property condition. David Stein works with executors, families, and attorneys throughout Pierce County, bringing practical experience with older homes, estate cleanouts, and realistic pricing in a market that rewards informed preparation."
-    whoIHelp="David works with executors managing probate property in Tacoma and Puyallup, trustees overseeing trust-owned homes in Gig Harbor, attorneys referring estate clients across Pierce County, and families coordinating senior transitions from longtime residences in University Place and Fircrest. Many of his Pierce County clients are managing from outside the area and need someone on the ground who can handle the details."
-    whyCredentialsMatter="Pierce County's diverse housing stock — from historic Tacoma craftsmen to Gig Harbor waterfront estates — means that accurate pricing requires more than a standard market analysis. David's dual background as a licensed broker and certified appraiser allows him to assess condition-driven value differences that generic tools miss, helping executors and trustees meet their fiduciary obligations with well-supported pricing decisions."
-    marketOverview="Pierce County offers one of the most diverse real estate landscapes in Western Washington. Tacoma's North End and Stadium District feature historic homes with character details and premium values, while neighborhoods in Lakewood and Parkland serve a more value-oriented buyer pool. Gig Harbor's waterfront market is a distinct segment with its own pricing dynamics and buyer expectations. For estate properties, this diversity means that a one-size-fits-all approach to pricing and marketing is especially risky. David's appraisal experience helps him evaluate each Pierce County property in its specific market context — not based on county-wide averages that obscure important differences."
-    localParagraph="Estate properties in Pierce County frequently involve older homes with character details and deferred maintenance — the kind of properties that automated valuation tools consistently misprice. Tacoma's North End and Stadium District homes attract a different buyer than properties in Puyallup or Lakewood, and Gig Harbor waterfront listings demand specialized marketing. David's appraisal background helps him price each property based on its actual condition and specific market context, not generic comps from across the county."
-    clientTypes={[
-      "Executors managing probate property in Tacoma, Puyallup, or Lakewood",
-      "Attorneys in Pierce County referring clients with inherited or trust-owned homes",
-      "Families coordinating senior transitions from longtime residences in University Place or Fircrest",
-      "Trustees managing Gig Harbor waterfront or view properties with complex valuation needs",
-      "Out-of-state heirs who have inherited Pierce County property and need local coordination",
-      "Senior living professionals facilitating transitions from Pierce County homes",
+    localExpertiseHeading="David's Pierce County Experience"
+    localExpertiseBody={[
+      "David Stein works with estate properties across Pierce County's full geographic and economic range — from Tacoma's historic neighborhoods and Gig Harbor's waterfront properties to Puyallup's family communities and Lakewood's established residential areas. The same dual credential — licensed broker and Washington State Certified Residential Appraiser — that he brings to every market ensures that Pierce County estate properties are priced accurately for their specific condition and neighborhood, not based on county-wide averages that may not apply.",
     ]}
-    typicalSituations={[
-      "Older Tacoma homes with character features but significant deferred maintenance requiring honest pricing",
-      "Inherited properties in University Place or Fircrest needing thorough condition assessment before listing",
-      "Gig Harbor waterfront or view homes with unique valuation, marketing, and buyer pool requirements",
-      "Family coordination for estate properties in Puyallup or Bonney Lake with multiple decision-makers",
-      "Trust-owned homes in Lakewood where the trustee needs sale planning guidance from a distance",
-      "Senior transitions from longtime Pierce County homes to assisted living or family residences",
+    aeoQuestion="How do probate and estate property sales work in Pierce County?"
+    aeoAnswer="The process follows Washington State probate law — establish legal authority, assess the property, develop a pricing and preparation strategy, list, and close — but the specifics are shaped by where the property sits within Pierce County. A waterfront property in Gig Harbor faces a very different buyer pool than a Tacoma craftsman or a Puyallup family home. David's approach is always location-specific and condition-adjusted, ensuring the strategy reflects the actual market for that property."
+    aeoSupportFaqs={[
+      {
+        question: "What makes Pierce County estate sales different from King County sales?",
+        answer: "Pierce County's market has different price points, different buyer demographics, and different neighborhood dynamics than King County — though some border communities like Auburn and Milton share characteristics of both. Pierce County also has its own probate court procedures and local title and legal resources that David is familiar with from years of working in the market.",
+      },
+      {
+        question: "How does David handle older Tacoma homes with significant deferred maintenance?",
+        answer: "With honesty and a clear cost-benefit framework. Tacoma has a significant inventory of older craftsman and mid-century homes — many of which are estate properties. David evaluates each potential improvement for return on investment, helps families decide what to address and what to sell as-is, and coordinates trusted local vendors for cleanout, repairs, and preparation.",
+      },
+    ]}
+    communitiesIntro="Real Property Planning serves families, executors, and professionals throughout Pierce County, including:"
+    closingCtaBody={[
+      "Whether you're just beginning to navigate an estate property in Pierce County or are already in the middle of a probate sale, a short conversation with David can help bring clarity and a practical next step.",
     ]}
     countySpecificFaqs={[
       {
