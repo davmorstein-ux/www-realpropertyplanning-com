@@ -115,44 +115,64 @@ const HubAndSpoke = () => {
   const hoveredRef = useRef<Set<number>>(new Set());
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const unmountedRef = useRef(false);
+  const queueRef = useRef<number[]>([]);
+
+  const getNextNode = useCallback((): number => {
+    // If queue is empty or exhausted, reshuffle all 10
+    if (queueRef.current.length === 0) {
+      const arr = Array.from({ length: 10 }, (_, i) => i);
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      queueRef.current = arr;
+    }
+    // Skip hovered nodes — put them back at the end
+    let attempts = 0;
+    while (queueRef.current.length > 0 && attempts < 10) {
+      const next = queueRef.current[0];
+      if (!hoveredRef.current.has(next)) {
+        queueRef.current.shift();
+        return next;
+      }
+      // Move hovered node to end of queue
+      queueRef.current.push(queueRef.current.shift()!);
+      attempts++;
+    }
+    // All remaining are hovered — just take the first
+    return queueRef.current.shift()!;
+  }, []);
 
   const scheduleNext = useCallback(() => {
     const delay = 1200 + Math.random() * 800;
     timeoutRef.current = setTimeout(() => {
       if (unmountedRef.current) return;
-      const candidates = Array.from({ length: 10 }, (_, i) => i).filter(i => !hoveredRef.current.has(i));
-      if (candidates.length === 0) { scheduleNext(); return; }
-      const pick = candidates[Math.floor(Math.random() * candidates.length)];
+      const pick = getNextNode();
 
-      // Phase 1: node pulse on — CSS transition ramps up over NODE_PULSE_MS/2
+      // Phase 1: node pulse on
       setPulsingIndex(pick);
 
-      // Hold at peak briefly, then ramp down
       setTimeout(() => {
         if (unmountedRef.current) return;
-        // Clear node pulse — CSS transition ramps down over NODE_PULSE_MS/2
         setPulsingIndex(null);
 
-        // Phase 2: wait for node fade-out to complete, then start hub glow
+        // Phase 2: hub glow after node fade-out
         setTimeout(() => {
           if (unmountedRef.current) return;
-          // Hub glow on — CSS transition ramps up over HUB_PULSE_MS/2
           setHubPulsing(true);
 
-          // Hold at peak, then ramp down
           setTimeout(() => {
             if (unmountedRef.current) return;
             setHubPulsing(false);
 
-            // Wait for hub fade-out CSS transition, then schedule next cycle
             setTimeout(() => {
               if (!unmountedRef.current) scheduleNext();
             }, HUB_PULSE_MS / 2);
           }, HUB_PULSE_MS / 2);
-        }, NODE_PULSE_MS / 2); // waits for node fade-out to finish
-      }, NODE_PULSE_MS / 2); // node stays "on" for this long
+        }, NODE_PULSE_MS / 2);
+      }, NODE_PULSE_MS / 2);
     }, delay);
-  }, []);
+  }, [getNextNode]);
 
   useEffect(() => {
     unmountedRef.current = false;
