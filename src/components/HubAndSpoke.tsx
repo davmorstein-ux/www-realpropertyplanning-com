@@ -124,29 +124,33 @@ const HubAndSpoke = () => {
       if (candidates.length === 0) { scheduleNext(); return; }
       const pick = candidates[Math.floor(Math.random() * candidates.length)];
 
-      // Phase 1: node pulse — CSS transition handles the smooth ramp-up
+      // Phase 1: node pulse on — CSS transition ramps up over NODE_PULSE_MS/2
       setPulsingIndex(pick);
 
-      // At the midpoint, begin ramp-down by clearing the pulse state
-      // The CSS ease-in-out transition smoothly returns to normal
+      // Hold at peak briefly, then ramp down
       setTimeout(() => {
         if (unmountedRef.current) return;
+        // Clear node pulse — CSS transition ramps down over NODE_PULSE_MS/2
         setPulsingIndex(null);
 
-        // Phase 2: hub pulse starts right as node finishes returning
+        // Phase 2: wait for node fade-out to complete, then start hub glow
         setTimeout(() => {
           if (unmountedRef.current) return;
+          // Hub glow on — CSS transition ramps up over HUB_PULSE_MS/2
           setHubPulsing(true);
+
+          // Hold at peak, then ramp down
           setTimeout(() => {
             if (unmountedRef.current) return;
             setHubPulsing(false);
-            // Wait for CSS transition to finish returning hub to normal, then schedule next
+
+            // Wait for hub fade-out CSS transition, then schedule next cycle
             setTimeout(() => {
               if (!unmountedRef.current) scheduleNext();
             }, HUB_PULSE_MS / 2);
           }, HUB_PULSE_MS / 2);
-        }, NODE_PULSE_MS / 2);
-      }, NODE_PULSE_MS / 2);
+        }, NODE_PULSE_MS / 2); // waits for node fade-out to finish
+      }, NODE_PULSE_MS / 2); // node stays "on" for this long
     }, delay);
   }, []);
 
