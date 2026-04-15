@@ -595,7 +595,10 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   edmonds: {
     tone: "waterfront",
     descriptor: "Charming waterfront community with historic character",
-    heroIntro: "Edmonds is a waterfront community known for its walkable downtown, ferry access, and strong neighborhood character. Properties in Edmonds — from bowl-area homes with sound views to hillside residences and properties near Highway 99 — require locally informed guidance when the sale involves estate, probate, or transition circumstances. Real Property Planning understands the nuances that affect value throughout Edmonds.",
+    seoTitle: "Probate & Estate Real Estate in Edmonds, WA | Real Property Planning",
+    seoDescription: "Estate property sales, probate guidance, and senior transitions in Edmonds, Washington — one of Snohomish County's most desirable waterfront communities.",
+    heroHeading: "Probate & Estate Real Estate in Edmonds, Washington",
+    heroIntro: "Edmonds is one of Snohomish County's most sought-after communities — a waterfront city with a charming downtown, strong community identity, and a real estate market that reflects its desirability. Estate properties in Edmonds can perform exceptionally well, but they require pricing that accurately accounts for proximity to the waterfront, lot characteristics, and the condition expectations of Edmonds buyers. David Stein works with executors and families in Edmonds, bringing the condition-adjusted analysis and local market knowledge that well-located estate properties deserve.",
     localKnowledge: "Edmonds offers a wide range of property types and price points, from the desirable bowl area near downtown to Perrinville, Westgate, and Firdale. Waterfront proximity, views, walkability, and lot size all play meaningful roles in Edmonds pricing. David Stein's dual credentials help families selling estate or inherited property in Edmonds understand exactly where their home fits in this layered market and how to position it for the best possible outcome.",
     brokerAppraiserValue: "In Edmonds, view corridors, walking distance to the ferry and downtown, and neighborhood character can create wide value differences within a small geographic area. David Stein's appraisal background allows him to account for these micro-factors rather than relying on broad market comparisons that may miss what makes a specific Edmonds property more — or less — valuable.",
     localSituations: [
@@ -617,7 +620,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     aeoQuestion: "What should you consider when selling an inherited home in Edmonds?",
     aeoAnswer: "Edmonds' walkable downtown, waterfront character, and strong buyer demand create specific expectations for estate properties. David Stein's dual credentials as a broker and certified appraiser help families price inherited homes accurately — accounting for the condition gaps between estate properties and the updated homes Edmonds buyers typically expect.",
     aeoSupportFaqs: [
-      { "question": "How does Edmonds buyer expectation affect estate sales?", "answer": "Edmonds buyers value walkability, waterfront proximity, and updated finishes. Estate properties may need targeted preparation to compete effectively." },
+      { "question": "How does waterfront proximity affect estate property values in Edmonds?", "answer": "Significantly — and the premium varies depending on whether the property has water views, is within walking distance of the waterfront, or simply benefits from the Edmonds zip code. David's appraisal-informed analysis accounts for these distinctions precisely, rather than applying a blanket waterfront premium that may not reflect the property's specific situation." },
       { "question": "Can David coordinate an Edmonds estate sale remotely?", "answer": "Yes. David manages the full process locally — property assessment, preparation, listing, and closing — with regular updates for out-of-area families." },
     ],
   },
@@ -642,7 +645,10 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   everett: {
     tone: "urban",
     descriptor: "County seat with waterfront revival and diverse neighborhoods",
-    heroIntro: "As Snohomish County's largest city, Everett offers a diverse housing landscape — from the revitalizing waterfront and Port Gardner district to established neighborhoods in North Everett, Silver Lake, and Lowell. Families and executors managing property transitions in Everett need guidance that accounts for the city's wide range of property types, price points, and neighborhood trajectories.",
+    seoTitle: "Probate & Estate Real Estate in Everett, WA | Real Property Planning",
+    seoDescription: "Estate property sales, probate guidance, and senior transitions in Everett, Washington — Snohomish County's largest city. Serving families and executors throughout.",
+    heroHeading: "Probate & Estate Real Estate in Everett, Washington",
+    heroIntro: "As Snohomish County's largest city, Everett offers a diverse housing landscape — from the revitalizing waterfront and Port Gardner district to established neighborhoods in North Everett, Silver Lake, and Lowell. Families and executors managing property transitions in Everett need guidance that accounts for the city's wide range of property types, price points, and neighborhood trajectories.\n\nDavid Stein works with estate properties across Everett's full range — from the revitalizing waterfront district to established neighborhoods in North Everett, Silver Lake, and Lowell — providing the neighborhood-sensitive pricing and preparation guidance that Everett's varied market requires. As Snohomish County's largest city, Everett has significant price variation between neighborhoods, which makes accurate, location-specific valuation especially important in estate situations.",
     localKnowledge: "Everett's neighborhoods vary significantly in character and value — from the grand historic homes on Grand and Rucker to mid-century ramblers, newer developments near Silver Lake, and waterfront condos on the Port Gardner peninsula. David Stein's experience across Everett's submarkets helps clients understand which areas are appreciating, where buyer demand is strongest, and how to position an estate or inherited property given its specific location and condition.",
     brokerAppraiserValue: "Everett's market spans a wider price range than most Snohomish County cities — from historic Grand Avenue homes and Port Gardner waterfront condos to modest ramblers in South Everett. David Stein's certified appraisal credentials allow him to evaluate where a specific property falls within this range based on condition, neighborhood trajectory, and realistic buyer demand, providing the defensible analysis that Everett estate and transition situations require.",
     localSituations: [
@@ -667,6 +673,10 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
       "Condition-based pricing that reflects Everett's neighborhood-level market dynamics",
       "Practical preparation recommendations focused on buyer expectations and return on investment",
       "Full-service coordination for out-of-state executors and family members",
+    ],
+    localFaqs: [
+      { question: "What are the first steps when selling an inherited home in Everett?", answer: "Secure the property, confirm legal authority, and get an honest assessment of condition and realistic value — before making any decisions about repairs or listing. David can visit the property, evaluate what needs attention, and help develop a clear plan tailored to the specific neighborhood." },
+      { question: "How does Everett's market affect estate property pricing?", answer: "Everett's ongoing revitalization — particularly near the waterfront and downtown core — has created significant variation between neighborhoods. Properties in areas benefiting from development investment may perform better than broad city averages suggest; properties in more static neighborhoods need to be priced accordingly. David's analysis accounts for these distinctions specifically." },
     ],
   },
   "mill-creek": {
