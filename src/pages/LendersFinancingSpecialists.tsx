@@ -153,6 +153,9 @@ const LendersFinancingSpecialists = () => (
                       <a href="https://crosscountrymortgage.com/seattle-wa-5531/jeffrey-mcginnis/" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-gold underline-offset-4 hover:underline">crosscountrymortgage.com</a>
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Hans Westermark */}
@@ -195,9 +198,6 @@ const LendersFinancingSpecialists = () => (
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
             </div>
           </div>
         </div>
