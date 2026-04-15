@@ -1172,6 +1172,8 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   "mount-vernon": {
     tone: "suburban",
     descriptor: "Skagit County seat with diverse housing stock",
+    seoTitle: "Probate & Estate Real Estate in Mount Vernon, WA | Real Property Planning",
+    seoDescription: "Estate property sales, probate guidance, and senior transitions in Mount Vernon, Washington — Skagit County's largest city and county seat.",
     heroHeading: "Probate & Estate Real Estate in Mount Vernon, Washington",
     heroIntro: "Mount Vernon is Skagit County's largest city and county seat — the commercial and administrative center of a county that spans from Puget Sound to the Cascade foothills. Estate properties in Mount Vernon range from established residential neighborhoods to properties on the city's rural edges, each with its own pricing dynamics and buyer expectations. As the county seat, Mount Vernon is also where Skagit County probate proceedings are administered — which means executors managing estate property anywhere in Skagit County will be working within Mount Vernon's court system. David Stein provides the locally coordinated guidance that Skagit County estate situations require, with full property management for families managing the process from the greater Seattle area.",
     localKnowledge: "Mount Vernon's market reflects Skagit County's broader dynamics — steady demand from local buyers, some spillover from buyers priced out of King and Snohomish County markets, and specific interest from buyers seeking the agricultural and small-city character the area offers.",
@@ -1197,6 +1199,8 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   "burlington": {
     tone: "rural",
     descriptor: "Skagit Valley hub with agricultural and rural-adjacent properties",
+    seoTitle: "Probate & Estate Real Estate in Burlington, WA | Real Property Planning",
+    seoDescription: "Estate property sales and probate guidance in Burlington, Washington — including rural, agricultural, and acreage properties in the Skagit Valley.",
     heroHeading: "Probate & Estate Real Estate in Burlington, Washington",
     heroIntro: "Burlington sits at the geographic heart of Skagit County — a community where residential neighborhoods border agricultural land, and where estate properties often include acreage, outbuildings, or rural-adjacent characteristics that standard residential analysis doesn't fully capture. Families and executors managing inherited property near Burlington frequently face the question of whether to sell as-is or explore subdivision or rezoning — decisions that require honest, methodology-based analysis rather than general estimates. David works with executors and families throughout the Burlington area with the appraisal-informed approach these mixed-use and rural-adjacent properties require.",
     localKnowledge: "Burlington's market includes properties that bridge residential and agricultural categories. David's appraisal background is particularly valuable here, where acreage, outbuildings, and zoning considerations affect value in ways standard tools miss.",
@@ -1216,6 +1220,8 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   "anacortes": {
     tone: "waterfront",
     descriptor: "Island-connected waterfront city with San Juan Islands ferry access",
+    seoTitle: "Probate & Estate Real Estate in Anacortes, WA | Real Property Planning",
+    seoDescription: "Estate property sales and probate guidance in Anacortes, Washington — waterfront, marina-adjacent, and residential properties in western Skagit County.",
     heroHeading: "Probate & Estate Real Estate in Anacortes, Washington",
     heroIntro: "Anacortes occupies a unique position in the Skagit County real estate market — an island-connected waterfront city with ferry service to the San Juan Islands and Vancouver Island, a strong boating community, and a buyer pool that extends well beyond Skagit County. Estate properties in Anacortes range from waterfront and water-view homes commanding significant premiums to residential properties in the city's established inland neighborhoods. Getting the pricing right requires understanding both the waterfront premium structure and the condition-based factors that affect how buyers evaluate each specific property. David works with executors and families in Anacortes with the location-specific, condition-adjusted analysis this distinctive market requires.",
     localKnowledge: "Anacortes waterfront is its own market — driven by Puget Sound access, boating lifestyle, San Juan Islands proximity, and a buyer pool from Seattle, the Eastside, and out of state.",
@@ -1235,6 +1241,8 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   "sedro-woolley": {
     tone: "smalltown",
     descriptor: "North Cascades gateway community with timber and agriculture heritage",
+    seoTitle: "Probate & Estate Real Estate in Sedro-Woolley, WA | Real Property Planning",
+    seoDescription: "Estate property sales and probate guidance in Sedro-Woolley, Washington — serving families and executors in eastern Skagit County.",
     heroHeading: "Probate & Estate Real Estate in Sedro-Woolley, Washington",
     heroIntro: "Sedro-Woolley serves as the gateway to the North Cascades — a community with deep roots in the timber and agriculture industries and a housing stock that reflects its history. Estate properties here often include older homes, rural-adjacent parcels, and properties that require honest condition assessment and realistic pricing calibrated to the local buyer pool rather than broader county trends. David works with executors and families in Sedro-Woolley with the practical, condition-adjusted approach that serves these properties best — helping families understand their options and develop a realistic plan for the sale.",
     localKnowledge: "Sedro-Woolley's housing stock reflects its timber and agricultural heritage, with older homes and rural parcels that benefit from condition-based valuation rather than automated estimates.",
@@ -1242,6 +1250,8 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   "la-conner": {
     tone: "waterfront",
     descriptor: "Historic waterfront arts community on the Swinomish Channel",
+    seoTitle: "Probate & Estate Real Estate in La Conner, WA | Real Property Planning",
+    seoDescription: "Estate property sales and probate guidance in La Conner, Washington — one of Skagit County's most distinctive historic waterfront communities.",
     heroHeading: "Probate & Estate Real Estate in La Conner, Washington",
     heroIntro: "La Conner is one of the most distinctive communities in Skagit County — a historic waterfront town on the Swinomish Channel with an arts identity, a strong tourist presence, and a real estate market shaped by its character as much as its location. Estate properties in La Conner attract a specific buyer: someone drawn to the community itself, to the waterfront setting, and to the historic character of the town's architecture and streetscape. Pricing these properties accurately requires understanding that buyer and what they will pay — not applying suburban or rural Skagit County comparables that don't reflect La Conner's distinctive market dynamics. David works with executors and families in La Conner with the community-specific knowledge these properties require.",
     localKnowledge: "La Conner's buyer pool is smaller and more specific than suburban Skagit County markets. Properties here attract buyers seeking the community's historic waterfront character and arts identity.",
@@ -1257,6 +1267,8 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   "concrete": {
     tone: "rural",
     descriptor: "Upper Skagit Valley community at the foot of the North Cascades",
+    seoTitle: "Probate & Estate Real Estate in Concrete, WA | Real Property Planning",
+    seoDescription: "Estate property sales and probate guidance in Concrete, Washington — serving families and executors in the upper Skagit Valley.",
     heroHeading: "Probate & Estate Real Estate in Concrete, Washington",
     heroIntro: "Concrete sits in the upper Skagit Valley at the foot of the North Cascades — a small community with a distinct identity shaped by its industrial history, its proximity to the mountains, and its position as a gateway to North Cascades National Park. Estate properties in Concrete and the surrounding upper Skagit area require pricing calibrated to a buyer pool that values the area's natural setting, recreational access, and rural character — not suburban or urban comparable sales that don't apply. David works with executors and families in Concrete and the upper Skagit Valley, providing the honest, locally-informed guidance that serves these distinctive properties best.",
     localKnowledge: "Concrete's real estate market is driven by recreational access, rural character, and proximity to North Cascades National Park — factors that require locally calibrated pricing.",
@@ -1264,6 +1276,8 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   "bow-edison": {
     tone: "rural",
     descriptor: "Distinctive agricultural villages with farm-to-table culture",
+    seoTitle: "Probate & Estate Real Estate in Bow & Edison, WA | Real Property Planning",
+    seoDescription: "Estate property sales and probate guidance in Bow and Edison, Washington — serving families and executors in these distinctive small Skagit County communities.",
     heroHeading: "Probate & Estate Real Estate in Bow and Edison, Washington",
     heroIntro: "Bow and Edison are two of Skagit County's most beloved small communities — agricultural villages with strong local identities, farm-to-table culture, and a character that attracts buyers seeking rural authenticity rather than suburban convenience. Estate properties in these communities occupy a unique position in the Skagit County market: they appeal to a specific, motivated buyer who understands and values what these places offer — but that buyer pool is small, and pricing must reflect it. A property in Edison or Bow that is priced correctly for its condition and community will find its buyer. One that is overpriced or positioned toward the wrong audience will sit. David works with executors and families in Bow and Edison with the small-community expertise these distinctive properties require — understanding who the buyer is, what they will pay, and how to present the property in a way that speaks to that audience specifically.",
     localKnowledge: "Bow and Edison attract buyers seeking rural authenticity and farm-to-table community character. Properties that embody that character command premiums — but only when priced and presented correctly for the limited buyer pool.",
