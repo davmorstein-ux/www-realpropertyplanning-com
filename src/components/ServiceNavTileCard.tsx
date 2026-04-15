@@ -2,8 +2,30 @@ import { Link } from "react-router-dom";
 import type { ServiceTile } from "./service-nav-tiles-data";
 import tileShell from "@/assets/property-services-tile-shell-washington.webp";
 
+/* SEO-enriched alt text for each tile */
+const tileAltText: Record<string, string> = {
+  "Attorneys": "Probate and estate attorneys real estate support Washington State",
+  "CPAs": "CPA estate and probate real estate guidance Washington State",
+  "Financial\nPlanning": "Financial planning real estate coordination estate transitions",
+  "Mortgage\nLending": "Mortgage lending guidance estate and inherited property Washington State",
+  "Estate\nLiquidation": "Estate liquidation services Puget Sound Washington State",
+  "Realtor": "Real estate broker probate and senior transition sales Washington State",
+  "Real Estate\nAppraiser": "Certified residential appraiser estate and probate valuations Washington State",
+  "Senior Living": "Senior living placement and transition guidance Puget Sound Washington",
+  "Executors": "Executor and personal representative real estate guidance Washington State",
+  "Trustees": "Trustee estate property guidance Washington State",
+  "Wills": "Wills and estate planning real estate Washington State",
+  "Power of\nAttorney": "Power of attorney real estate guidance Washington State",
+  "Probate Terms": "Probate terminology glossary Washington State",
+  "Probate Sales": "Probate real estate sales Washington State King County Snohomish",
+  "The Process": "How probate real estate sales work Washington State",
+  "Home Values\n& Pricing": "Estate home valuation and pricing Puget Sound Washington",
+  "Senior\nTransitions": "Senior housing transition home sale Puget Sound Washington State",
+  "Service Areas": "Real estate service areas King Snohomish Pierce Kitsap County Washington",
+  "Guides &\nResources": "Probate estate and senior transition guides Washington State",
+};
+
 const ServiceNavTileCard = ({ tile, index, columns = 3 }: { tile: ServiceTile; index: number; columns?: number }) => {
-  // Build the inline style for the content container
   const contentStyle: React.CSSProperties = {};
   if (tile.contentOffsetY) {
     contentStyle['--tw-translate-y' as string] = `calc(-10.2% + ${tile.contentOffsetY})`;
@@ -12,10 +34,9 @@ const ServiceNavTileCard = ({ tile, index, columns = 3 }: { tile: ServiceTile; i
     contentStyle['--mobile-offset' as string] = tile.mobileContentOffsetY;
   }
 
-  // Row-based z-index: upper rows get higher z-index so they sit on top of lower rows
   const totalRows = Math.ceil(18 / columns);
   const row = Math.floor(index / columns);
-  const baseZIndex = (totalRows - row) * 2; // e.g. row 0 = 12, row 1 = 10, row 2 = 8...
+  const baseZIndex = (totalRows - row) * 2;
 
   const tileName =
     tile.title === "Wills"
@@ -46,9 +67,10 @@ const ServiceNavTileCard = ({ tile, index, columns = 3 }: { tile: ServiceTile; i
                                ? "estate-liquidation"
                                : undefined;
 
+  const iconAlt = tileAltText[tile.title] || tile.title.replace(/\n/g, " ");
+
   const tileVisual = (
     <>
-      {/* Shell image flows naturally — defines the tile size */}
       <img
         src={tileShell}
         alt=""
@@ -57,14 +79,13 @@ const ServiceNavTileCard = ({ tile, index, columns = 3 }: { tile: ServiceTile; i
         draggable={false}
        loading="lazy"/>
 
-      {/* Icon + label centered together inside the gold trim ring */}
       <span
         className={`absolute inset-[12%] flex flex-col items-center justify-center px-[6px] py-[4px] pointer-events-none sm:px-[10px] sm:py-[6px] ${tile.contentOffsetY ? '' : '-translate-y-[10.2%]'} ${tile.mobileContentOffsetY ? 'has-mobile-offset' : ''}`}
         style={Object.keys(contentStyle).length > 0 ? contentStyle : undefined}
       >
         <img
           src={tile.iconSrc}
-          alt={tile.title}
+          alt={iconAlt}
           className={`tile-icon mx-auto w-[45%] max-h-[38%] object-contain drop-shadow-lg ${tile.mobileIconDown ? 'mobile-icon-down' : ''}`}
           style={{
             ...(tile.iconOffsetY ? { transform: `translateY(${tile.iconOffsetY})` } : {}),
@@ -98,13 +119,13 @@ const ServiceNavTileCard = ({ tile, index, columns = 3 }: { tile: ServiceTile; i
 
       <Link
         to={tile.href}
-        aria-label={tile.title.replace(/\n/g, " ")}
+        aria-label={iconAlt}
         className="service-nav-tile-mobile-hitbox absolute block pointer-events-auto sm:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
       />
 
       <Link
         to={tile.href}
-        aria-label={tile.title.replace(/\n/g, " ")}
+        aria-label={iconAlt}
         className="service-nav-tile-link absolute hidden pointer-events-auto sm:block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
       />
     </div>

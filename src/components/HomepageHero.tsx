@@ -19,10 +19,20 @@ const HomepageHero = () => {
           />
         </div>
 
-        {/* Tagline — serves as the page H1 */}
-        <h1 className="text-[22px] md:text-[28px] tracking-[0.08em] leading-relaxed mb-8 text-white font-medium">
-          Probate, Estate &amp; Senior Transition Real Estate in Washington State
+        {/* H1 — keyword-rich for SEO */}
+        <h1 className="text-[22px] md:text-[28px] tracking-[0.08em] leading-relaxed mb-2 text-white font-medium">
+          Probate Real Estate &amp; Senior Transition Services in Washington State
         </h1>
+
+        {/* Warm subheading */}
+        <p className="text-[18px] md:text-[22px] tracking-[0.04em] leading-relaxed mb-6 text-white/80 font-light">
+          Guiding Families Through Life's Most Important Transitions
+        </p>
+
+        {/* Intro paragraph — SEO enrichment */}
+        <p className="text-[15px] md:text-[16px] leading-relaxed mb-8 text-white/70 max-w-3xl mx-auto">
+          When a family is navigating inherited property, a probate sale, or helping an aging parent make one of the biggest decisions of their life, Real Property Planning provides calm, honest guidance at every step. David Stein is a licensed real estate broker and Washington State Certified Residential Appraiser serving families, executors, attorneys, and professionals throughout King County, Snohomish County, Pierce County, Kitsap County, and across the Puget Sound region.
+        </p>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 mb-8 w-full sm:w-auto">

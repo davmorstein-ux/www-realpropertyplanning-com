@@ -128,21 +128,13 @@ function findTopRoutes(input: string, max = 3): RouteMatch[] {
     .map((s) => s.route);
 }
 
-/* ------------------------------------------------------------------ */
-/*  Suggested prompts                                                  */
-/* ------------------------------------------------------------------ */
-
 const suggestedPrompts = [
-  "I'm an executor",
-  "I need help selling an inherited home",
-  "What does probate mean?",
-  "I'm helping a senior move",
-  "I'm an attorney looking for a resource",
+  { label: "I'm an executor", ariaLabel: "I'm an executor managing estate property in Washington State" },
+  { label: "I need help selling an inherited home", ariaLabel: "I need help selling an inherited home in Washington State" },
+  { label: "What does probate mean?", ariaLabel: "What does probate mean — glossary and explanation" },
+  { label: "I'm helping a senior move", ariaLabel: "I'm helping a senior move — transition guidance and real estate support" },
+  { label: "I'm an attorney looking for a resource", ariaLabel: "I'm an attorney looking for a real estate resource in Washington State" },
 ];
-
-/* ------------------------------------------------------------------ */
-/*  Component                                                          */
-/* ------------------------------------------------------------------ */
 
 const SmartSearchBar = () => {
   const [query, setQuery] = useState("");
@@ -161,7 +153,6 @@ const SmartSearchBar = () => {
     [],
   );
 
-  // Debounced routing suggestions
   useEffect(() => {
     if (!query.trim()) {
       setSuggestions([]);
@@ -214,7 +205,6 @@ const SmartSearchBar = () => {
     }
   }, [suggestions, navigate]);
 
-  /* ---- Voice input ---- */
   const stopListening = useCallback(() => {
     if (isListening && recognitionRef.current) {
       try {
@@ -261,10 +251,8 @@ const SmartSearchBar = () => {
       const lastResult = event.results[event.results.length - 1];
       const transcript = lastResult[0].transcript;
 
-      // Show interim results in the input
       setQuery(transcript);
 
-      // Only navigate on final result
       if (lastResult.isFinal) {
         setVoiceStatus("processing");
         toast.dismiss("voice-listening");
@@ -341,7 +329,6 @@ const SmartSearchBar = () => {
     }
   }, [isListening, startListening, stopListening]);
 
-  // Cleanup on unmount
   useEffect(() => {
     return () => {
       if (recognitionRef.current) {
@@ -460,17 +447,18 @@ const SmartSearchBar = () => {
         <p className="mt-2 text-center text-sm text-destructive/80">{voiceError}</p>
       )}
 
-      {/* Suggested prompts */}
+      {/* Suggested prompts with enriched aria-labels */}
       <div className="flex flex-wrap justify-center gap-3 mt-5">
         {suggestedPrompts.map((prompt) => (
           <button
-            key={prompt}
+            key={prompt.label}
             type="button"
-            onClick={() => handlePromptClick(prompt)}
+            onClick={() => handlePromptClick(prompt.label)}
+            aria-label={prompt.ariaLabel}
             className="premium-pill-3d focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
           >
             <span className="premium-pill-3d__face text-[15px] sm:text-base">
-              {prompt}
+              {prompt.label}
             </span>
           </button>
         ))}
