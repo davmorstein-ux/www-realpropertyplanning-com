@@ -182,13 +182,20 @@ const Header = () => {
             </Link>
           </div>
 
-          <a
-            href="tel:2069003015"
-            className="hidden shrink-0 items-center gap-1.5 text-[14px] font-semibold text-white/90 hover:text-white transition-colors md:flex"
-          >
-            <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0"  loading="lazy"/>
-            (206) 900-3015
-          </a>
+          <div className="hidden shrink-0 flex-col items-center text-center md:flex">
+            <a
+              href="tel:2069003015"
+              className="text-[14px] font-semibold text-white/90 hover:text-white transition-colors"
+            >
+              (206) 900-3015
+            </a>
+            <a
+              href="mailto:info@realpropertyplanning.com"
+              className="text-[13px] text-white/70 hover:text-white transition-colors"
+            >
+              info@realpropertyplanning.com
+            </a>
+          </div>
 
           <button
             className="rounded-lg border border-white/20 bg-white/10 p-3 text-white transition-colors hover:bg-white/20 md:hidden"
