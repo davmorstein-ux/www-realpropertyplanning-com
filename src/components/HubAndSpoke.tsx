@@ -41,6 +41,8 @@ const allNodes = [...leftNodes, ...rightNodes];
 
 const NODE_SIZE = 90;
 const CONTAINER_HEIGHT = 680;
+const NODE_PULSE_MS = 750;
+const HUB_PULSE_MS = 550;
 
 const SpokeNode = ({
   node, cx, cy, isPulsing, onMouseEnter, onMouseLeave,
@@ -89,29 +91,40 @@ const HubAndSpoke = () => {
   const centerX = 500;
   const centerY = CONTAINER_HEIGHT / 2;
   const [pulsingIndex, setPulsingIndex] = useState<number | null>(null);
+  const [hubPulsing, setHubPulsing] = useState(false);
   const hoveredRef = useRef<Set<number>>(new Set());
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const unmountedRef = useRef(false);
 
   const scheduleNext = useCallback(() => {
-    const delay = 2500 + Math.random() * 3500;
+    const delay = 1200 + Math.random() * 800;
     timeoutRef.current = setTimeout(() => {
-      // Pick a random node that isn't hovered
+      if (unmountedRef.current) return;
       const candidates = Array.from({ length: 10 }, (_, i) => i).filter(i => !hoveredRef.current.has(i));
-      if (candidates.length === 0) {
-        scheduleNext();
-        return;
-      }
+      if (candidates.length === 0) { scheduleNext(); return; }
       const pick = candidates[Math.floor(Math.random() * candidates.length)];
+
+      // Phase 1: node pulse
       setPulsingIndex(pick);
-      // Reset after 500ms
-      setTimeout(() => setPulsingIndex(null), 500);
-      scheduleNext();
+      setTimeout(() => {
+        if (unmountedRef.current) return;
+        setPulsingIndex(null);
+        // Phase 2: hub pulse starts immediately after node ends
+        setHubPulsing(true);
+        setTimeout(() => {
+          if (unmountedRef.current) return;
+          setHubPulsing(false);
+          scheduleNext();
+        }, HUB_PULSE_MS);
+      }, NODE_PULSE_MS);
     }, delay);
   }, []);
 
   useEffect(() => {
+    unmountedRef.current = false;
     scheduleNext();
     return () => {
+      unmountedRef.current = true;
       if (timeoutRef.current) clearTimeout(timeoutRef.current);
     };
   }, [scheduleNext]);
@@ -149,7 +162,7 @@ const HubAndSpoke = () => {
                 y2={centerY + node.dy}
                 stroke={pulsingIndex === i ? "#F0D878" : "#C9A84C"}
                 strokeWidth={pulsingIndex === i ? 3 : 2}
-                style={{ transition: "stroke 0.2s ease, stroke-width 0.2s ease" }}
+                style={{ transition: "stroke 0.25s ease, stroke-width 0.25s ease" }}
               />
             ))}
           </svg>
@@ -162,6 +175,8 @@ const HubAndSpoke = () => {
               top: centerY - 360,
               width: 360,
               height: 720,
+              transition: "transform 0.3s ease",
+              transform: hubPulsing ? "scale(1.04)" : "scale(1)",
             }}
           >
             <Link
