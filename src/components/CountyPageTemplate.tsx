@@ -32,15 +32,21 @@ interface CountyPageProps {
   aeoSupportBullets?: string[];
   aeoSupportFaqs?: { question: string; answer: string }[];
   heroH1?: string;
+  heroSubheading?: string;
   seoTitle?: string;
   seoDescription?: string;
+  localExpertiseHeading?: string;
+  localExpertiseBody?: string[];
+  communitiesIntro?: string;
+  closingCtaBody?: string[];
 }
 
 const CountyPageTemplate = ({
   countyName, countyPath, countySlug, cities,
   localInsight, countySpecificFaqs,
   aeoQuestion, aeoAnswer, aeoSupportBullets, aeoSupportFaqs,
-  heroH1, seoTitle, seoDescription,
+  heroH1, heroSubheading, seoTitle, seoDescription,
+  localExpertiseHeading, localExpertiseBody, communitiesIntro, closingCtaBody,
 }: CountyPageProps) => {
   const countyData = counties.find((c) => c.slug === countySlug);
 
