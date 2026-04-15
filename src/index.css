@@ -867,7 +867,6 @@ html, body {
     margin-top: 0.55rem !important;
   }
   .attorney-tiles-grid .premium-tile:nth-child(6) .tile-icon {
-    transform: scale(1.1) !important;
     transform-origin: top center !important;
   }
 }
