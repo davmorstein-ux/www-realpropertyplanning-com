@@ -85,7 +85,11 @@ const probateCaseStudies = [
 const probateVsInherited = [
   {
     label: "Probate Property",
-    description: "Property being administered through court-supervised probate. Legal authority (letters testamentary or letters of administration) is typically required before a sale can proceed. Timelines, court requirements, and fiduciary duties all affect the process.",
+    description: (
+      <>
+        Property being administered through court-supervised probate. Legal authority (<Link to="/terminology" className="text-accent hover:text-gold underline underline-offset-4">letters testamentary or letters of administration</Link>) is typically required before a sale can proceed. Timelines, court requirements, and fiduciary duties all affect the process.
+      </>
+    ),
   },
   {
     label: "Inherited Property (Non-Probate)",
@@ -94,58 +98,62 @@ const probateVsInherited = [
 ];
 
 const whatMakesDifferent = [
-  "Legal authority and court requirements may dictate when and how a sale occurs",
-  "Multiple decision-makers — executors, co-heirs, attorneys, trustees — must coordinate",
-  "Properties often have years of deferred maintenance, clutter, or vacancy",
-  "Pricing must account for condition, legal timelines, and realistic market expectations",
-  "Emotional complexity can affect family communication and decision-making",
-  "Preparation decisions (as-is vs. repair) have a direct impact on sale outcome",
+  "Legal authority and court requirements may dictate when and how a sale can occur",
+  "Multiple decision-makers — executors, co-heirs, attorneys, trustees — must coordinate without conflict",
+  "Properties often have years of deferred maintenance, personal belongings, or extended vacancy",
+  "Pricing must account for actual condition, legal timelines, and realistic market expectations — not automated estimates",
+  "Emotional complexity can affect family communication and slow the decision-making process",
+  "Preparation decisions (as-is vs. selective repairs) have a direct and measurable impact on sale outcome and fiduciary defensibility",
 ];
 
 const timingConsiderations = [
   {
     title: "Before Legal Authority Is Granted",
-    text: "Real Property Planning can assess the property, discuss likely value, and help plan next steps — so you're ready to act as soon as authority is in place.",
+    text: "Many executors and families don't realize help is available before legal authority is formally in place. Real Property Planning can assess the property, provide a realistic picture of likely value and condition, and help you plan next steps — so you're ready to act the moment authority is granted. This early groundwork often saves weeks once probate is officially underway.",
   },
   {
     title: "During Active Probate",
-    text: "Coordinate preparation, cleanout, pricing strategy, and listing timeline in alignment with legal proceedings and court requirements.",
+    text: "Once legal authority is established, David coordinates preparation, cleanout, pricing strategy, and the listing timeline — always in alignment with the legal proceedings and any court requirements. Attorneys receive regular updates and have a single reliable point of contact for all property-related questions. Family members stay informed without being overwhelmed.",
   },
   {
     title: "Post-Probate or Trust Distribution",
-    text: "Once authority is clear, David manages the full sale process — preparation, marketing, negotiation, and closing.",
+    text: "Once authority is clear and the estate is ready to move forward, David manages the full sale process — preparation, professional marketing, negotiation, and closing. For properties that need work, each improvement is evaluated for return on investment before any money is spent.",
   },
 ];
 
-const faqs = [
+const commonQuestionsFaqs = [
   {
-    question: "How long does it take to sell a probate property in Washington?",
-    answer: "Timelines depend on legal authority, property condition, preparation needs, and market conditions. Some properties list within weeks of authority being granted; others need months of preparation. Real Property Planning helps create a realistic timeline based on your specific situation.",
+    question: "Do I need court approval to sell estate property in Washington?",
+    answer: "It depends on the structure of the estate. In a supervised probate, certain actions — including listing and selling real property — may require court approval or be subject to specific notice requirements. In an unsupervised probate, the personal representative may have more flexibility. Your estate attorney is the right person to advise on the legal requirements for your specific situation. David works collaboratively with attorneys to make sure the real estate timeline aligns with whatever legal requirements are in place.",
   },
   {
-    question: "Can an estate property be sold as-is?",
-    answer: "Yes. Many probate and estate properties sell as-is, especially when time or budget constraints make preparation impractical. Real Property Planning evaluates whether an as-is sale or targeted improvements will produce the best overall result for the estate.",
+    question: "Can the property be listed before probate is complete?",
+    answer: "In some cases, yes — depending on the type of probate and the legal authority in place. In others, listing must wait until letters testamentary or letters of administration have been issued. Real Property Planning can assess and prepare the property during the waiting period so everything is ready to move the moment legal authority is confirmed.",
   },
   {
-    question: "What costs are involved in selling a probate property?",
-    answer: "Common costs include cleanout, repairs, staging, real estate commissions, closing costs, and title-related expenses. Real Property Planning helps executors understand likely costs upfront so there are no surprises.",
+    question: "How is estate property priced differently from a standard home?",
+    answer: "Estate properties often have condition factors — deferred maintenance, vacancy, dated interiors — that automated valuation tools and inexperienced agents fail to account for accurately. As a Washington State Certified Residential Appraiser, David applies condition-adjusted comparable analysis to arrive at a price that reflects the home's actual market position. This produces a more defensible number for fiduciary purposes and a more accurate expectation for the family.",
   },
   {
-    question: "Does the executor need court approval to sell in Washington?",
-    answer: "It depends on the estate structure and the authority granted by the court or will. In many cases, a personal representative can sell without additional court confirmation. Legal questions should always be directed to the estate attorney.",
+    question: "What if heirs disagree about pricing or timing?",
+    answer: "This is one of the most common complications in estate property sales — and one of the most manageable when everyone is working from the same data. David's valuation-informed approach gives all parties a shared, objective foundation for the conversation. In cases where heirs have received conflicting price opinions from other agents, a clear, documented market analysis often resolves the disagreement faster than extended negotiation.",
   },
   {
-    question: "How is pricing different for probate property?",
-    answer: "Estate properties often have condition issues that standard market comparisons don't account for. The appraisal background at Real Property Planning allows for evaluating the property more accurately — accounting for deferred maintenance, functional obsolescence, and realistic buyer expectations.",
+    question: "How long does it typically take to sell estate property in Washington?",
+    answer: "It varies significantly based on the property's condition, the stage of probate, market conditions in the specific area, and the family's timeline. Some properties are ready to list within weeks; others require months of preparation. David develops a realistic timeline at the outset — one that accounts for legal proceedings, property preparation, and current market conditions in the specific neighborhood — so families and attorneys know what to expect from the beginning.",
+  },
+  {
+    question: "Does Real Property Planning work with estate attorneys?",
+    answer: "Yes — consistently and collaboratively. David serves as the real estate point of contact so attorneys can focus on the legal administration of the estate. He provides market assessments, coordinates property preparation, manages the listing and sale, and communicates proactively with the legal team throughout. Attorneys who refer clients to Real Property Planning receive regular updates and can reach David directly when questions arise.",
   },
 ];
 
 const jsonLd = articleSchema({
-  headline: "Probate Property Sales & Estate Real Estate",
-  description: "Experienced guidance for probate real estate sales, inherited property, and estate-related home transactions throughout Washington State.",
+  headline: "Probate Real Estate Sales in Washington State",
+  description: "Valuation-informed probate real estate guidance for executors, attorneys, and families throughout Washington State. Serving King, Snohomish, Pierce & Kitsap Counties.",
   url: "/probate-estate-sales",
   datePublished: "2025-01-15",
-  dateModified: "2026-03-15",
+  dateModified: "2026-04-15",
   about: ["Probate real estate", "Estate sales", "Inherited property", "Court-supervised sales", "Fiduciary duties"],
 });
 
@@ -153,8 +161,8 @@ const ProbateEstateSales = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Probate Home Sales in Washington State | Real Property Planning"
-        description="Selling a home through probate in Washington State? We guide families and estates through the process with expertise, patience, and clear next steps. Licensed Broker & Certified Appraiser."
+        title="Probate Real Estate Sales in Washington State | Real Property Planning"
+        description="Valuation-informed probate real estate guidance for executors, attorneys, and families throughout Washington State. Serving King, Snohomish, Pierce & Kitsap Counties."
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema items={[{ name: "Probate & Estate Sales", url: "/probate-estate-sales" }]} />
@@ -165,23 +173,29 @@ const ProbateEstateSales = () => {
       <section className="bg-primary pt-3 md:pt-4 pb-12 md:pb-14">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <img src={iconProbateSales} alt="Probate real estate sales guidance in Washington State" className="mx-auto max-w-[23rem] w-full h-auto object-contain mb-3"  loading="lazy"/>
+            <img src={iconProbateSales} alt="Probate real estate sales guidance Washington State" className="mx-auto max-w-[23rem] w-full h-auto object-contain mb-3" loading="lazy"/>
             <p className="text-gold font-bold tracking-widest uppercase mb-4 text-base">
               Probate & Estate Property Sales
             </p>
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
               Probate Real Estate Sales in Washington State
             </h1>
-            <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
-              When a home is part of a probate case, nothing about the sale follows the normal playbook. Court authority may need to be granted before the property can be listed. The house itself may have been vacant for months, with deferred maintenance that standard market comparisons cannot account for. And the executor, attorney, and family members all need to stay informed without stepping on each other's timelines.
+            <p className="text-lg text-primary-foreground/80 leading-relaxed mb-4">
+              When a home is part of a probate case, nothing about the sale follows the normal playbook.
             </p>
-            <p className="text-lg text-primary-foreground/70 leading-relaxed mb-3">
-              Real Property Planning brings valuation-informed real estate guidance to these situations — giving executors defensible pricing, attorneys a reliable point of coordination, and families the confidence that the property is being handled with care.
+            <p className="text-primary-foreground/70 text-base md:text-lg leading-relaxed mb-4">
+              Court authority may need to be granted before the property can be listed. The house may have been vacant for months, with deferred maintenance that standard market comparisons cannot account for. Meanwhile, the{" "}
+              <Link to="/executors" className="text-gold hover:text-gold/80 underline underline-offset-4 transition-colors">executor</Link>, the{" "}
+              <Link to="/for-attorneys" className="text-gold hover:text-gold/80 underline underline-offset-4 transition-colors">estate attorney</Link>, and family members all need to stay informed — without stepping on each other's timelines. And throughout all of it, carrying costs continue: property taxes, insurance, utilities, and HOA fees that accumulate whether the property is moving forward or sitting still.
+            </p>
+            <p className="text-primary-foreground/70 text-base md:text-lg leading-relaxed mb-5">
+              Real Property Planning brings valuation-informed real estate guidance to these situations — giving executors defensible pricing, attorneys a reliable point of coordination, and families the confidence that the property is being handled with care. David Stein serves families, executors, and legal professionals throughout{" "}
+              <Link to="/counties" className="text-gold hover:text-gold/80 underline underline-offset-4 transition-colors">King County, Snohomish County, Pierce County, Kitsap County</Link>, and across Washington State.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/contact">
- <Button variant="gold" size="lg"className="hover:-light w-full sm:w-auto">
-                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy"/>
+                <Button variant="gold" size="lg" className="w-full sm:w-auto">
+                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy"/>
                   Schedule a Consultation
                 </Button>
               </Link>
@@ -204,8 +218,8 @@ const ProbateEstateSales = () => {
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
               Probate Property vs. Inherited Property — What's the Difference?
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Not all inherited property goes through probate. Understanding the distinction helps determine the right approach:
+            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+              This distinction matters more than most people realize. Understanding which situation you're in determines your legal authority, your timeline, and your options before you can take any action on the property.
             </p>
             <div className="space-y-6">
               {probateVsInherited.map((item, index) => (
@@ -226,7 +240,10 @@ const ProbateEstateSales = () => {
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
               What Makes Estate Property Sales Different
             </h2>
-            <ul className="space-y-4">
+            <p className="text-muted-foreground text-[17px] leading-[1.85] mb-8">
+              Estate property sales are genuinely different from standard real estate transactions — and treating them like ordinary listings is where families and executors most often run into trouble. The challenges are legal, logistical, emotional, and financial — often all at once.
+            </p>
+            <ul className="space-y-4 mb-8">
               {whatMakesDifferent.map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
@@ -234,6 +251,13 @@ const ProbateEstateSales = () => {
                 </li>
               ))}
             </ul>
+            <p className="text-muted-foreground text-[17px] leading-[1.85]">
+              David's dual background as a licensed broker and a{" "}
+              <Link to="/real-estate-appraiser" className="text-accent hover:text-gold underline underline-offset-4">Washington State Certified Residential Appraiser</Link>{" "}
+              means he approaches these situations differently than a standard listing agent. Every pricing decision is grounded in methodology. Every repair recommendation is evaluated through a{" "}
+              <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">return-on-investment</Link>{" "}
+              lens. And every communication is structured to keep attorneys, executors, and family members aligned — not competing.
+            </p>
           </div>
         </div>
       </section>
@@ -267,6 +291,7 @@ const ProbateEstateSales = () => {
           </div>
         </div>
       </section>
+
       {/* Mid-page CTA */}
       <MidPageCTA
         heading="Have a Probate or Estate Property to Discuss?"
@@ -275,7 +300,7 @@ const ProbateEstateSales = () => {
         variant="dark"
       />
 
-      {/* Understanding the Executor's Role in Property Sales */}
+      {/* The Real Estate Side of Estate Administration */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
@@ -286,10 +311,22 @@ const ProbateEstateSales = () => {
               Selling estate property is rarely as simple as putting a sign in the yard. These homes often sit vacant for months while legal authority is established, insurance and utility issues need to be managed, and the property's condition may deteriorate. Meanwhile, carrying costs — taxes, insurance, maintenance, and HOA fees — continue to accumulate.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              Real Property Planning understands these pressures from working through them with hundreds of clients. We help executors, attorneys, and families develop a timeline that accounts for legal proceedings, property preparation, and market conditions — so the sale happens at the right time, not just the fastest time.
+              Real Property Planning understands these pressures from working through them with hundreds of clients. We help{" "}
+              <Link to="/executors" className="text-accent hover:text-gold underline underline-offset-4">executors</Link>, attorneys, and families develop a timeline that accounts for legal proceedings, property preparation, and market conditions — so the sale happens at the right time, not just the fastest time.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              For properties that need work before listing, Each potential improvement is evaluated through a return-on-investment lens informed by certified appraisal training. A $5,000 kitchen cleanup might add $15,000 in sale price; a $40,000 renovation might add only $20,000. These distinctions matter when estate funds are limited and fiduciary duties require defensible decision-making.
+              For properties that need work before listing, each potential improvement is evaluated through a{" "}
+              <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">return-on-investment</Link>{" "}
+              lens informed by{" "}
+              <Link to="/real-estate-appraiser" className="text-accent hover:text-gold underline underline-offset-4">certified appraisal</Link>{" "}
+              training. A $5,000 kitchen cleanup might add $15,000 in sale price; a $40,000 renovation might add only $20,000. These distinctions matter when estate funds are limited and fiduciary duties require defensible decision-making.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              Families and executors throughout the Puget Sound area — from Seattle and Bellevue in King County to Everett and Edmonds in Snohomish County, Tacoma and Puyallup in Pierce County, and Bremerton and Silverdale in Kitsap County — face these same challenges. Real Property Planning's approach is the same regardless of location: assess the property honestly, develop a preparation strategy based on return on investment, price it correctly for its actual condition, and manage the sale with clear communication throughout.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              For{" "}
+              <Link to="/guides/out-of-state-families" className="text-accent hover:text-gold underline underline-offset-4">executors managing property from out of state</Link>, the entire process can be handled remotely — with photo updates, digital document signing, and regular calls to keep you informed without requiring you to travel for every step.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               Whether the property is a mid-century rambler in Shoreline with decades of deferred maintenance or a waterfront home on Mercer Island held in a family trust, David brings the same structured approach: assess, plan, prepare, price, market, and close — with clear communication at every step.
@@ -298,12 +335,15 @@ const ProbateEstateSales = () => {
         </div>
       </section>
 
+      {/* Common Questions About Probate Real Estate */}
+      <PageFAQ faqs={commonQuestionsFaqs} heading="Common Questions About Probate Real Estate Sales in Washington State" />
+
       {/* Legal Disclaimer */}
       <section className="py-12 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <div className="flex items-start gap-4 bg-card border border-border rounded-xl p-6">
-              <img src={warning3d} alt="" aria-hidden="true" className="w-6 h-6 object-contain shrink-0 mt-0.5"  loading="lazy"/>
+              <img src={warning3d} alt="" aria-hidden="true" className="w-6 h-6 object-contain shrink-0 mt-0.5" loading="lazy"/>
               <div>
                 <h3 className="font-serif text-lg text-foreground font-semibold mb-2">Important Note</h3>
                 <p className="text-muted-foreground leading-relaxed text-sm">
@@ -344,8 +384,6 @@ const ProbateEstateSales = () => {
         showCTA
       />
 
-      <PageFAQ faqs={faqs} heading="Probate & Estate Sale FAQs" />
-
       {/* Educational Links */}
       <section className="py-12 bg-background">
         <div className="container px-6 lg:px-8">
@@ -377,20 +415,34 @@ const ProbateEstateSales = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
-              Need Experienced Help Selling a Probate or Estate Property?
+              Ready to Talk?
             </h2>
             <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">
-              Real Property Planning provides a no-pressure consultation to review the property, discuss timing, and outline next steps.
+              Whether{" "}
+              <Link to="/terminology" className="text-gold hover:text-gold/80 underline underline-offset-4 transition-colors">probate</Link>{" "}
+              is just beginning, actively underway, or nearing completion, a short conversation can help you understand your options and develop a practical next step.
             </p>
-            <p className="text-primary-foreground/50 text-base mb-8">
-              A short conversation to understand your situation, answer questions, and plan a practical path forward.
+            <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
+              David works with{" "}
+              <Link to="/executors" className="text-gold hover:text-gold/80 underline underline-offset-4 transition-colors">executors</Link>,{" "}
+              <Link to="/for-attorneys" className="text-gold hover:text-gold/80 underline underline-offset-4 transition-colors">attorneys</Link>, and families throughout{" "}
+              <Link to="/counties" className="text-gold hover:text-gold/80 underline underline-offset-4 transition-colors">King County, Snohomish County, Pierce County, Kitsap County</Link>, and across Washington State. Through eXp Realty's national referral network, he can also connect{" "}
+              <Link to="/guides/out-of-state-families" className="text-gold hover:text-gold/80 underline underline-offset-4 transition-colors">out-of-state</Link>{" "}
+              families with trusted brokers in other states.
             </p>
-            <Link to="/contact">
- <Button variant="gold" size="lg"className="hover:-light">
-                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy"/>
-                Schedule a Consultation
-              </Button>
-            </Link>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <a href="tel:+12069003015">
+                <Button variant="gold" size="lg" className="px-8 py-4 h-auto">
+                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy"/>
+                  Call (206) 900-3015
+                </Button>
+              </a>
+              <Link to="/contact">
+                <Button variant="outline" size="lg" className="px-8 py-4 h-auto border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+                  Send a Message
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
