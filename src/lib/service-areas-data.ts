@@ -1172,6 +1172,8 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
   "mount-vernon": {
     tone: "suburban",
     descriptor: "Skagit County seat with diverse housing stock",
+    seoTitle: "Probate & Estate Real Estate in Mount Vernon, WA | Real Property Planning",
+    seoDescription: "Estate property sales, probate guidance, and senior transitions in Mount Vernon, Washington — Skagit County's largest city and county seat.",
     heroHeading: "Probate & Estate Real Estate in Mount Vernon, Washington",
     heroIntro: "Mount Vernon is Skagit County's largest city and county seat — the commercial and administrative center of a county that spans from Puget Sound to the Cascade foothills. Estate properties in Mount Vernon range from established residential neighborhoods to properties on the city's rural edges, each with its own pricing dynamics and buyer expectations. As the county seat, Mount Vernon is also where Skagit County probate proceedings are administered — which means executors managing estate property anywhere in Skagit County will be working within Mount Vernon's court system. David Stein provides the locally coordinated guidance that Skagit County estate situations require, with full property management for families managing the process from the greater Seattle area.",
     localKnowledge: "Mount Vernon's market reflects Skagit County's broader dynamics — steady demand from local buyers, some spillover from buyers priced out of King and Snohomish County markets, and specific interest from buyers seeking the agricultural and small-city character the area offers.",
