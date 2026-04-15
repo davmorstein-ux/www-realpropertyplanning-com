@@ -31,11 +31,11 @@ const Executors = () => (
     <main id="main-content">
 
     {/* Hero */}
-    <section className="bg-primary pt-3 md:pt-4 pb-12 md:pb-14">
+    <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="flex justify-center mb-3 md:mb-4">
-            <img src={iconExecutors} alt="Executor and personal representative real estate guidance Washington State" className="block w-full max-w-[23rem] h-auto object-contain" loading="lazy" />
+          <div className="flex justify-center mb-1.5 md:mb-2">
+            <img src={iconExecutors} alt="Executor and personal representative real estate guidance Washington State" className="block w-full max-w-[15rem] h-auto object-contain" loading="lazy" />
           </div>
           <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">
             For Executors & Personal Representatives

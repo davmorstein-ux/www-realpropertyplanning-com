@@ -141,7 +141,7 @@ const Terminology = () => {
       <section className="bg-primary pt-16 pb-12 md:pt-32 md:pb-20 lg:pb-24">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <img src={iconProbateTerms} alt="Probate and estate real estate terminology guide for Washington State" className="mx-auto max-w-[23rem] w-full h-auto object-contain mb-3"  loading="lazy"/>
+            <img src={iconProbateTerms} alt="Probate and estate real estate terminology guide for Washington State" className="mx-auto max-w-[15rem] w-full h-auto object-contain mb-3"  loading="lazy"/>
             <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
               Probate Real Estate Resource
             </p>

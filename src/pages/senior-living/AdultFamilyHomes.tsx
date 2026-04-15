@@ -27,13 +27,13 @@ const AdultFamilyHomes = () => (
     />
     <Header />
     <main id="main-content">
-      <section className="bg-primary pt-3 md:pt-4 pb-12 md:pb-14">
+      <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <img
               src={afhHeroIcon}
               alt="Adult Family Home"
-              className="block w-full max-w-[23rem] h-auto mx-auto"
+              className="block w-full max-w-[15rem] h-auto mx-auto"
              loading="lazy"/>
             <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-base">Senior Living</p>
             <h1 className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground leading-tight mb-4">Adult Family Homes</h1>
