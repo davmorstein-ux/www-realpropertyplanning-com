@@ -959,6 +959,10 @@ html, body {
   .premium-tile[data-tile-name="attorneys"] .tile-icon {
     transform: scale(1.1) !important;
   }
+  /* Service Areas: 10% bigger on desktop */
+  .premium-tile[data-tile-name="service-areas"] .tile-icon {
+    transform: scale(1.1) !important;
+  }
 }
 
 @media (min-width: 768px) {
