@@ -407,7 +407,10 @@ const SmartSearchBar = ({ pillsOnly, searchOnly }: SmartSearchBarProps) => {
               aria-label={prompt.ariaLabel}
               className="premium-pill-3d focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 w-full"
             >
-              <span className="premium-pill-3d__face text-[15px] sm:text-base w-full justify-center" style={{ lineHeight: '1.1' }}>
+              <span
+                className="premium-pill-3d__face text-[15px] sm:text-base w-full justify-center"
+                style={{ lineHeight: prompt.label.length > 30 ? '0.75' : undefined }}
+              >
                 {prompt.label}
               </span>
             </button>
