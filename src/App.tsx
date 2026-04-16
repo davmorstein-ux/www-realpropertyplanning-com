@@ -15,10 +15,8 @@ import ForElderLawAttorneys from "./pages/attorneys/ForElderLawAttorneys";
 import ForFamilyLawAttorneys from "./pages/attorneys/ForFamilyLawAttorneys";
 import ForDivorceAttorneys from "./pages/attorneys/ForDivorceAttorneys";
 import ForRealEstateAttorneys from "./pages/attorneys/ForRealEstateAttorneys";
-import HowWeWork from "./pages/HowWeWork";
 import HowTheProcessWorks from "./pages/HowTheProcessWorks";
 import WhyValuationMatters from "./pages/WhyValuationMatters";
-import AttorneyReferral from "./pages/AttorneyReferral";
 import Executors from "./pages/Executors";
 import Trustees from "./pages/Trustees";
 import ForCPAs from "./pages/ForCPAs";
@@ -30,7 +28,6 @@ import FAQ from "./pages/FAQ";
 import Terminology from "./pages/Terminology";
 import Contact from "./pages/Contact";
 import Counties from "./pages/Counties";
-import CitiesWeServe from "./pages/CitiesWeServe";
 import KingCounty from "./pages/counties/KingCounty";
 import SnohomishCounty from "./pages/counties/SnohomishCounty";
 import PierceCounty from "./pages/counties/PierceCounty";
@@ -41,6 +38,8 @@ import SpokaneCounty from "./pages/counties/SpokaneCounty";
 import ThurstonCounty from "./pages/counties/ThurstonCounty";
 import WhatcomCounty from "./pages/counties/WhatcomCounty";
 import BentonCounty from "./pages/counties/BentonCounty";
+import YakimaCounty from "./pages/counties/YakimaCounty";
+import FranklinCounty from "./pages/counties/FranklinCounty";
 import Resources from "./pages/Resources";
 import SeniorMoveManagers from "./pages/resources/SeniorMoveManagers";
 import EstateSaleCompanies from "./pages/resources/EstateSaleCompanies";
@@ -50,29 +49,15 @@ import SeniorLivingCommunities from "./pages/resources/SeniorLivingCommunities";
 import PropertyPreparationServices from "./pages/resources/PropertyPreparationServices";
 import MovingRelocationServices from "./pages/resources/MovingRelocationServices";
 import WashingtonExecutorsChecklist from "./pages/resources/WashingtonExecutorsChecklist";
-import HowToMoveElderlyParents from "./pages/HowToMoveElderlyParents";
-import ForReferralPartners from "./pages/ForReferralPartners";
-import ForProfessionals from "./pages/ForProfessionals";
-import ForSeniorLivingProfessionals from "./pages/ForSeniorLivingProfessionals";
-import TransitionResources from "./pages/TransitionResources";
-import Services from "./pages/Services";
-import Testimonials from "./pages/Testimonials";
-import ProfessionalReferralResource from "./pages/ProfessionalReferralResource";
-import ProfessionalNetwork from "./pages/ProfessionalNetwork";
-import SeniorEstateServices from "./pages/SeniorEstateServices";
-import RetirementReverseMortgage from "./pages/RetirementReverseMortgage";
 import LendersFinancingSpecialists from "./pages/LendersFinancingSpecialists";
+import RetirementReverseMortgage from "./pages/RetirementReverseMortgage";
 import SeniorLivingAndRelocation from "./pages/SeniorLivingAndRelocation";
-import SeniorMoveManagersPage from "./pages/SeniorMoveManagers";
 import AdultFamilyHomes from "./pages/senior-living/AdultFamilyHomes";
 import AssistedLivingCommunities from "./pages/senior-living/AssistedLivingCommunities";
 import MemoryCare from "./pages/senior-living/MemoryCare";
 import NursingAndSkilledCare from "./pages/senior-living/NursingAndSkilledCare";
 import IndependentLiving from "./pages/senior-living/IndependentLiving";
 import PowerOfAttorneys from "./pages/senior-living/PowerOfAttorneys";
-import CityPage from "./pages/CityPage";
-import CityServicePage from "./pages/CityServicePage";
-import ServicePage from "./pages/ServicePage";
 import HowProbateRealEstateWorks from "./pages/guides/HowProbateRealEstateWorks";
 import WhatExecutorsShouldDo from "./pages/guides/WhatExecutorsShouldDo";
 import AppraisalVsCma from "./pages/guides/AppraisalVsCma";
@@ -95,48 +80,14 @@ import TacomaProbateEstate from "./pages/TacomaProbateEstate";
 import SpokaneProbateEstate from "./pages/SpokaneProbateEstate";
 import VancouverWaProbateEstate from "./pages/VancouverWaProbateEstate";
 import EverettProbateEstate from "./pages/EverettProbateEstate";
-import KirklandProbateEstate from "./pages/KirklandProbateEstate";
-import RedmondProbateEstate from "./pages/RedmondProbateEstate";
 import OlympiaProbateEstate from "./pages/OlympiaProbateEstate";
 import BellinghamProbateEstate from "./pages/BellinghamProbateEstate";
-import YakimaProbateEstate from "./pages/YakimaProbateEstate";
-import KennewickProbateEstate from "./pages/KennewickProbateEstate";
-import RichlandProbateEstate from "./pages/RichlandProbateEstate";
-import PascoProbateEstate from "./pages/PascoProbateEstate";
-import RentonProbateEstate from "./pages/RentonProbateEstate";
-import KentProbateEstate from "./pages/KentProbateEstate";
-import FederalWayProbateEstate from "./pages/FederalWayProbateEstate";
-import AuburnProbateEstate from "./pages/AuburnProbateEstate";
-import MarysvilleProbateEstate from "./pages/MarysvilleProbateEstate";
-import Insights from "./pages/Insights";
 import GuidesAndResources from "./pages/GuidesAndResources";
-import FirstStepsInheritedHouse from "./pages/insights/FirstStepsInheritedHouse";
-import OutOfStateInheritedHouse from "./pages/insights/OutOfStateInheritedHouse";
-import EstatePropertyTimeline from "./pages/insights/EstatePropertyTimeline";
-import EstateCleanoutBeforeSale from "./pages/insights/EstateCleanoutBeforeSale";
-import PricingInheritedProperty from "./pages/insights/PricingInheritedProperty";
-import SellWithoutRepairs from "./pages/insights/SellWithoutRepairs";
-import FamilyDisagreementSelling from "./pages/insights/FamilyDisagreementSelling";
-import EmptyHouseBeforeSelling from "./pages/insights/EmptyHouseBeforeSelling";
-import SellOrKeepProperty from "./pages/insights/SellOrKeepProperty";
-import EstatePropertyMistakes from "./pages/insights/EstatePropertyMistakes";
-import OutOfStateExecutorCaseStudy from "./pages/insights/OutOfStateExecutorCaseStudy";
-import HowDoesProbateRealEstateWork from "./pages/insights/HowDoesProbateRealEstateWork";
-import HowToMoveElderlyParentsGuide from "./pages/insights/HowToMoveElderlyParents";
 import PowerOfAttorney from "./pages/PowerOfAttorney";
 import Wills from "./pages/Wills";
 import EstateLiquidation from "./pages/EstateLiquidation";
 import Realtor from "./pages/Realtor";
 import RealEstateAppraiser from "./pages/RealEstateAppraiser";
-import ExecutorsLearnMore from "./pages/ExecutorsLearnMore";
-import TrusteesLearnMore from "./pages/TrusteesLearnMore";
-import ForAttorneysLearnMore from "./pages/ForAttorneysLearnMore";
-import ForCPAsLearnMore from "./pages/ForCPAsLearnMore";
-import ForFinancialPlannersLearnMore from "./pages/ForFinancialPlannersLearnMore";
-import RealtorLearnMore from "./pages/RealtorLearnMore";
-import RealEstateAppraiserLearnMore from "./pages/RealEstateAppraiserLearnMore";
-import SeniorMoveManagersLearnMore from "./pages/SeniorMoveManagersLearnMore";
-import EstateLiquidationLearnMore from "./pages/EstateLiquidationLearnMore";
 import Professionals from "./pages/Professionals";
 import ProbateAttorneys from "./pages/professionals/ProbateAttorneys";
 import SeniorHousingAdvisors from "./pages/professionals/SeniorHousingAdvisors";
@@ -144,13 +95,7 @@ import FinancialPlanners from "./pages/professionals/FinancialPlanners";
 import EstateSale from "./pages/professionals/EstateSale";
 import HomePreparation from "./pages/professionals/HomePreparation";
 import CareManagers from "./pages/professionals/CareManagers";
-import KingCountyServiceArea from "./pages/service-areas/KingCounty";
-import SnohomishCountyServiceArea from "./pages/service-areas/SnohomishCounty";
-import PierceCountyServiceArea from "./pages/service-areas/PierceCounty";
-import KitsapCountyServiceArea from "./pages/service-areas/KitsapCounty";
-import SkagitCountyServiceArea from "./pages/service-areas/SkagitCounty";
-import ThurstonCountyServiceArea from "./pages/service-areas/ThurstonCounty";
-import WhatcomCountyServiceArea from "./pages/service-areas/WhatcomCounty";
+import Testimonials from "./pages/Testimonials";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -162,13 +107,25 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
-        
+
         <Routes>
+          {/* ─── Homepage ─────────────────────────────────────────── */}
           <Route path="/" element={<Index />} />
-          <Route path="/insights" element={<Insights />} />
-          <Route path="/guides-and-resources" element={<GuidesAndResources />} />
+
+          {/* ─── Core commercial pages ────────────────────────────── */}
           <Route path="/probate-estate-sales" element={<ProbateEstateSales />} />
           <Route path="/senior-transitions" element={<SeniorTransitions />} />
+          <Route path="/why-valuation-matters" element={<WhyValuationMatters />} />
+          <Route path="/how-the-process-works" element={<HowTheProcessWorks />} />
+          <Route path="/executors" element={<Executors />} />
+          <Route path="/trustees" element={<Trustees />} />
+          <Route path="/estate-liquidation" element={<EstateLiquidation />} />
+          <Route path="/real-estate-appraiser" element={<RealEstateAppraiser />} />
+          <Route path="/realtor" element={<Realtor />} />
+          <Route path="/wills" element={<Wills />} />
+          <Route path="/power-of-attorney" element={<PowerOfAttorney />} />
+
+          {/* ─── Audience hubs ────────────────────────────────────── */}
           <Route path="/for-attorneys" element={<ForAttorneys />} />
           <Route path="/for-probate-attorneys" element={<ForProbateAttorneys />} />
           <Route path="/for-estate-planning-attorneys" element={<ForEstatePlanningAttorneys />} />
@@ -176,94 +133,37 @@ const App = () => (
           <Route path="/for-family-law-attorneys" element={<ForFamilyLawAttorneys />} />
           <Route path="/for-divorce-attorneys" element={<ForDivorceAttorneys />} />
           <Route path="/real-estate-attorneys" element={<ForRealEstateAttorneys />} />
-          <Route path="/how-we-work" element={<HowWeWork />} />
-          <Route path="/how-the-process-works" element={<HowTheProcessWorks />} />
-          <Route path="/why-valuation-matters" element={<WhyValuationMatters />} />
-          <Route path="/attorney-referral" element={<AttorneyReferral />} />
-          <Route path="/executors" element={<Executors />} />
-          <Route path="/trustees" element={<Trustees />} />
           <Route path="/for-cpas" element={<ForCPAs />} />
           <Route path="/for-financial-planners" element={<ForFinancialPlanners />} />
-          <Route path="/about" element={<AboutPlatform />} />
-          <Route path="/about-david-stein" element={<About />} />
           <Route path="/join-the-network" element={<JoinTheNetwork />} />
-          <Route path="/faq" element={<FAQ />} />
-          <Route path="/terminology" element={<Terminology />} />
-          <Route path="/contact" element={<Contact />} />
+
+          {/* ─── County hubs (canonical: /{county}-county) ────────── */}
           <Route path="/counties" element={<Counties />} />
-          <Route path="/cities-we-serve" element={<CitiesWeServe />} />
-          {/* County hub pages — new URL structure */}
           <Route path="/king-county" element={<KingCounty />} />
           <Route path="/snohomish-county" element={<SnohomishCounty />} />
           <Route path="/pierce-county" element={<PierceCounty />} />
           <Route path="/kitsap-county" element={<KitsapCounty />} />
-          {/* Legacy county URLs — keep for backward compatibility */}
-          <Route path="/counties/king" element={<KingCounty />} />
-          <Route path="/counties/snohomish" element={<SnohomishCounty />} />
-          <Route path="/counties/pierce" element={<PierceCounty />} />
-          <Route path="/counties/kitsap" element={<KitsapCounty />} />
-          <Route path="/counties/skagit" element={<SkagitCounty />} />
-          <Route path="/clark-county-probate-estate-real-estate" element={<ClarkCounty />} />
-          <Route path="/spokane-county-probate-estate-real-estate" element={<SpokaneCounty />} />
-          <Route path="/thurston-county-probate-estate-real-estate" element={<ThurstonCounty />} />
-          <Route path="/whatcom-county-probate-estate-real-estate" element={<WhatcomCounty />} />
-          <Route path="/benton-county-probate-estate-real-estate" element={<BentonCounty />} />
-          {/* Dynamic city pages */}
-          <Route path="/cities/:citySlug" element={<CityPage />} />
-          {/* Dynamic city + service pages */}
-          <Route path="/cities/:citySlug/:serviceSlug" element={<CityServicePage />} />
-          {/* Dynamic service pages */}
-          <Route path="/services/:serviceSlug" element={<ServicePage />} />
-          <Route path="/resources" element={<Resources />} />
-          <Route path="/resources/senior-move-managers" element={<SeniorMoveManagers />} />
-          <Route path="/resources/estate-sale-companies" element={<EstateSaleCompanies />} />
-          <Route path="/resources/probate-estate-attorneys" element={<ProbateEstateAttorneys />} />
-          <Route path="/resources/cpas-financial-advisors" element={<CPAsFinancialAdvisors />} />
-          <Route path="/resources/senior-living-communities" element={<SeniorLivingCommunities />} />
-          <Route path="/resources/property-preparation-services" element={<PropertyPreparationServices />} />
-          <Route path="/resources/moving-relocation-services" element={<MovingRelocationServices />} />
-          <Route path="/resources/washington-executors-10-step-checklist" element={<WashingtonExecutorsChecklist />} />
-          <Route path="/how-to-move-elderly-parents" element={<HowToMoveElderlyParents />} />
-          <Route path="/for-referral-partners" element={<ForReferralPartners />} />
-          <Route path="/for-professionals" element={<ForProfessionals />} />
-          <Route path="/for-senior-living-professionals" element={<ForSeniorLivingProfessionals />} />
-          <Route path="/transition-resources" element={<TransitionResources />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/testimonials" element={<Testimonials />} />
-          <Route path="/professional-referral-resource" element={<ProfessionalReferralResource />} />
-          <Route path="/professional-network" element={<ProfessionalNetwork />} />
-          <Route path="/senior-estate-services" element={<SeniorEstateServices />} />
-          <Route path="/retirement-reverse-mortgage" element={<RetirementReverseMortgage />} />
-          <Route path="/lenders-and-financing-specialists" element={<LendersFinancingSpecialists />} />
-          <Route path="/senior-living-and-relocation" element={<SeniorLivingAndRelocation />} />
-          <Route path="/senior-move-managers" element={<SeniorMoveManagersPage />} />
-          <Route path="/senior-living/adult-family-homes" element={<AdultFamilyHomes />} />
-          <Route path="/senior-living/assisted-living-communities" element={<AssistedLivingCommunities />} />
-          <Route path="/senior-living/memory-care" element={<MemoryCare />} />
-          <Route path="/senior-living/nursing-and-skilled-care" element={<NursingAndSkilledCare />} />
-          <Route path="/senior-living/independent-living" element={<IndependentLiving />} />
-          <Route path="/senior-living/power-of-attorneys" element={<PowerOfAttorneys />} />
-          {/* Custom city pages */}
+          <Route path="/skagit-county" element={<SkagitCounty />} />
+          <Route path="/thurston-county" element={<ThurstonCounty />} />
+          <Route path="/whatcom-county" element={<WhatcomCounty />} />
+          <Route path="/clark-county" element={<ClarkCounty />} />
+          <Route path="/spokane-county" element={<SpokaneCounty />} />
+          <Route path="/benton-county" element={<BentonCounty />} />
+          <Route path="/yakima-county" element={<YakimaCounty />} />
+          <Route path="/franklin-county" element={<FranklinCounty />} />
+
+          {/* ─── Tier-1 city pages (only) ─────────────────────────── */}
           <Route path="/seattle-probate-estate-real-estate" element={<SeattleProbateEstate />} />
           <Route path="/bellevue-probate-estate-real-estate" element={<BellevueProbateEstate />} />
           <Route path="/tacoma-probate-estate-real-estate" element={<TacomaProbateEstate />} />
           <Route path="/spokane-probate-estate-real-estate" element={<SpokaneProbateEstate />} />
           <Route path="/vancouver-wa-probate-estate-real-estate" element={<VancouverWaProbateEstate />} />
           <Route path="/everett-probate-estate-real-estate" element={<EverettProbateEstate />} />
-          <Route path="/kirkland-probate-estate-real-estate" element={<KirklandProbateEstate />} />
-          <Route path="/redmond-probate-estate-real-estate" element={<RedmondProbateEstate />} />
-          <Route path="/olympia-probate-estate-real-estate" element={<OlympiaProbateEstate />} />
           <Route path="/bellingham-probate-estate-real-estate" element={<BellinghamProbateEstate />} />
-          <Route path="/yakima-probate-estate-real-estate" element={<YakimaProbateEstate />} />
-          <Route path="/kennewick-probate-estate-real-estate" element={<KennewickProbateEstate />} />
-          <Route path="/richland-probate-estate-real-estate" element={<RichlandProbateEstate />} />
-          <Route path="/pasco-probate-estate-real-estate" element={<PascoProbateEstate />} />
-          <Route path="/renton-probate-estate-real-estate" element={<RentonProbateEstate />} />
-          <Route path="/kent-probate-estate-real-estate" element={<KentProbateEstate />} />
-          <Route path="/federal-way-probate-estate-real-estate" element={<FederalWayProbateEstate />} />
-          <Route path="/auburn-probate-estate-real-estate" element={<AuburnProbateEstate />} />
-          <Route path="/marysville-probate-estate-real-estate" element={<MarysvilleProbateEstate />} />
-          {/* Cornerstone guide pages */}
+          <Route path="/olympia-probate-estate-real-estate" element={<OlympiaProbateEstate />} />
+
+          {/* ─── Educational guides (canonical: /guides/*) ────────── */}
+          <Route path="/guides-and-resources" element={<GuidesAndResources />} />
           <Route path="/guides/how-probate-real-estate-works" element={<HowProbateRealEstateWorks />} />
           <Route path="/guides/what-executors-should-do" element={<WhatExecutorsShouldDo />} />
           <Route path="/guides/appraisal-vs-cma" element={<AppraisalVsCma />} />
@@ -280,36 +180,8 @@ const App = () => (
           <Route path="/guides/how-long-sell-probate-property" element={<HowLongSellProbateProperty />} />
           <Route path="/guides/executor-first-steps-house" element={<ExecutorFirstStepsHouse />} />
           <Route path="/guides/sell-inherited-house-as-is-or-fix" element={<SellInheritedHouseAsIsOrFix />} />
-          {/* Insight articles */}
-          <Route path="/insights/first-steps-inherited-house-washington" element={<FirstStepsInheritedHouse />} />
-          <Route path="/insights/out-of-state-inherited-house-help" element={<OutOfStateInheritedHouse />} />
-          <Route path="/insights/estate-property-sale-timeline" element={<EstatePropertyTimeline />} />
-          <Route path="/insights/estate-property-cleanout-before-sale" element={<EstateCleanoutBeforeSale />} />
-          <Route path="/insights/pricing-inherited-property-differences" element={<PricingInheritedProperty />} />
-          <Route path="/insights/sell-inherited-house-without-repairs" element={<SellWithoutRepairs />} />
-          <Route path="/insights/family-disagreement-selling-house" element={<FamilyDisagreementSelling />} />
-          <Route path="/insights/empty-house-before-selling" element={<EmptyHouseBeforeSelling />} />
-          <Route path="/insights/sell-or-keep-inherited-property" element={<SellOrKeepProperty />} />
-          <Route path="/insights/estate-property-mistakes" element={<EstatePropertyMistakes />} />
-          <Route path="/insights/out-of-state-executor-case-study" element={<OutOfStateExecutorCaseStudy />} />
-          <Route path="/insights-guidance/how-does-probate-real-estate-work-in-washington" element={<HowDoesProbateRealEstateWork />} />
-          <Route path="/insights-guidance/how-to-move-elderly-parents-safely-and-respectfully" element={<HowToMoveElderlyParentsGuide />} />
-          <Route path="/wills" element={<Wills />} />
-          <Route path="/power-of-attorney" element={<PowerOfAttorney />} />
-          <Route path="/estate-liquidation" element={<EstateLiquidation />} />
-          <Route path="/realtor" element={<Realtor />} />
-          <Route path="/real-estate-appraiser" element={<RealEstateAppraiser />} />
-          {/* Learn More detail pages */}
-          <Route path="/executors/learn-more" element={<ExecutorsLearnMore />} />
-          <Route path="/trustees/learn-more" element={<TrusteesLearnMore />} />
-          <Route path="/for-attorneys/learn-more" element={<ForAttorneysLearnMore />} />
-          <Route path="/for-cpas/learn-more" element={<ForCPAsLearnMore />} />
-          <Route path="/for-financial-planners/learn-more" element={<ForFinancialPlannersLearnMore />} />
-          <Route path="/realtor/learn-more" element={<RealtorLearnMore />} />
-          <Route path="/real-estate-appraiser/learn-more" element={<RealEstateAppraiserLearnMore />} />
-          <Route path="/senior-move-managers/learn-more" element={<SeniorMoveManagersLearnMore />} />
-          <Route path="/estate-liquidation/learn-more" element={<EstateLiquidationLearnMore />} />
-          {/* Professionals hub */}
+
+          {/* ─── Professionals directory (for families) ───────────── */}
           <Route path="/professionals" element={<Professionals />} />
           <Route path="/professionals/probate-attorneys" element={<ProbateAttorneys />} />
           <Route path="/professionals/senior-housing-advisors" element={<SeniorHousingAdvisors />} />
@@ -317,19 +189,145 @@ const App = () => (
           <Route path="/professionals/estate-sale" element={<EstateSale />} />
           <Route path="/professionals/home-preparation" element={<HomePreparation />} />
           <Route path="/professionals/care-managers" element={<CareManagers />} />
-          <Route path="/service-areas/king-county" element={<KingCountyServiceArea />} />
-          <Route path="/service-areas/snohomish-county" element={<SnohomishCountyServiceArea />} />
-          <Route path="/service-areas/pierce-county" element={<PierceCountyServiceArea />} />
-          <Route path="/service-areas/kitsap-county" element={<KitsapCountyServiceArea />} />
-          <Route path="/service-areas/skagit-county" element={<SkagitCountyServiceArea />} />
-          <Route path="/service-areas/thurston-county" element={<ThurstonCountyServiceArea />} />
-          <Route path="/service-areas/whatcom-county" element={<WhatcomCountyServiceArea />} />
-          {/* 301-style redirects for old/wrong URLs */}
+
+          {/* ─── Senior living reference ──────────────────────────── */}
+          <Route path="/senior-living-and-relocation" element={<SeniorLivingAndRelocation />} />
+          <Route path="/senior-living/adult-family-homes" element={<AdultFamilyHomes />} />
+          <Route path="/senior-living/assisted-living-communities" element={<AssistedLivingCommunities />} />
+          <Route path="/senior-living/memory-care" element={<MemoryCare />} />
+          <Route path="/senior-living/nursing-and-skilled-care" element={<NursingAndSkilledCare />} />
+          <Route path="/senior-living/independent-living" element={<IndependentLiving />} />
+          <Route path="/senior-living/power-of-attorneys" element={<PowerOfAttorneys />} />
+
+          {/* ─── Lending ──────────────────────────────────────────── */}
+          <Route path="/lenders-and-financing-specialists" element={<LendersFinancingSpecialists />} />
+          <Route path="/retirement-reverse-mortgage" element={<RetirementReverseMortgage />} />
+
+          {/* ─── Resources directory ──────────────────────────────── */}
+          <Route path="/resources" element={<Resources />} />
+          <Route path="/resources/senior-move-managers" element={<SeniorMoveManagers />} />
+          <Route path="/resources/estate-sale-companies" element={<EstateSaleCompanies />} />
+          <Route path="/resources/probate-estate-attorneys" element={<ProbateEstateAttorneys />} />
+          <Route path="/resources/cpas-financial-advisors" element={<CPAsFinancialAdvisors />} />
+          <Route path="/resources/senior-living-communities" element={<SeniorLivingCommunities />} />
+          <Route path="/resources/property-preparation-services" element={<PropertyPreparationServices />} />
+          <Route path="/resources/moving-relocation-services" element={<MovingRelocationServices />} />
+          <Route path="/resources/washington-executors-10-step-checklist" element={<WashingtonExecutorsChecklist />} />
+
+          {/* ─── Supporting ───────────────────────────────────────── */}
+          <Route path="/about" element={<AboutPlatform />} />
+          <Route path="/about-david-stein" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/terminology" element={<Terminology />} />
+          <Route path="/testimonials" element={<Testimonials />} />
+
+          {/* ══════════════════════════════════════════════════════════
+              REDIRECTS — Phase 2a SEO consolidation
+              All deprecated URLs redirect to the canonical equivalent.
+              Implemented as React Router Navigate (client-side 301 equivalent).
+          ══════════════════════════════════════════════════════════ */}
+
+          {/* Counties — old URL families → /{county}-county */}
+          <Route path="/counties/king" element={<Navigate to="/king-county" replace />} />
+          <Route path="/counties/snohomish" element={<Navigate to="/snohomish-county" replace />} />
+          <Route path="/counties/pierce" element={<Navigate to="/pierce-county" replace />} />
+          <Route path="/counties/kitsap" element={<Navigate to="/kitsap-county" replace />} />
+          <Route path="/counties/skagit" element={<Navigate to="/skagit-county" replace />} />
+          <Route path="/clark-county-probate-estate-real-estate" element={<Navigate to="/clark-county" replace />} />
+          <Route path="/spokane-county-probate-estate-real-estate" element={<Navigate to="/spokane-county" replace />} />
+          <Route path="/thurston-county-probate-estate-real-estate" element={<Navigate to="/thurston-county" replace />} />
+          <Route path="/whatcom-county-probate-estate-real-estate" element={<Navigate to="/whatcom-county" replace />} />
+          <Route path="/benton-county-probate-estate-real-estate" element={<Navigate to="/benton-county" replace />} />
+
+          {/* Service-areas family → /{county}-county */}
+          <Route path="/service-areas/king-county" element={<Navigate to="/king-county" replace />} />
+          <Route path="/service-areas/snohomish-county" element={<Navigate to="/snohomish-county" replace />} />
+          <Route path="/service-areas/pierce-county" element={<Navigate to="/pierce-county" replace />} />
+          <Route path="/service-areas/kitsap-county" element={<Navigate to="/kitsap-county" replace />} />
+          <Route path="/service-areas/skagit-county" element={<Navigate to="/skagit-county" replace />} />
+          <Route path="/service-areas/thurston-county" element={<Navigate to="/thurston-county" replace />} />
+          <Route path="/service-areas/whatcom-county" element={<Navigate to="/whatcom-county" replace />} />
+
+          {/* Tier-2 cities → their county hub */}
+          <Route path="/kirkland-probate-estate-real-estate" element={<Navigate to="/king-county" replace />} />
+          <Route path="/redmond-probate-estate-real-estate" element={<Navigate to="/king-county" replace />} />
+          <Route path="/renton-probate-estate-real-estate" element={<Navigate to="/king-county" replace />} />
+          <Route path="/kent-probate-estate-real-estate" element={<Navigate to="/king-county" replace />} />
+          <Route path="/federal-way-probate-estate-real-estate" element={<Navigate to="/king-county" replace />} />
+          <Route path="/auburn-probate-estate-real-estate" element={<Navigate to="/king-county" replace />} />
+          <Route path="/marysville-probate-estate-real-estate" element={<Navigate to="/snohomish-county" replace />} />
+          <Route path="/yakima-probate-estate-real-estate" element={<Navigate to="/yakima-county" replace />} />
+          <Route path="/kennewick-probate-estate-real-estate" element={<Navigate to="/benton-county" replace />} />
+          <Route path="/richland-probate-estate-real-estate" element={<Navigate to="/benton-county" replace />} />
+          <Route path="/pasco-probate-estate-real-estate" element={<Navigate to="/franklin-county" replace />} />
+
+          {/* Old "cities" hub & dynamic city pages → counties hub */}
+          <Route path="/cities-we-serve" element={<Navigate to="/counties" replace />} />
+          <Route path="/cities/:citySlug" element={<Navigate to="/counties" replace />} />
+          <Route path="/cities/:citySlug/:serviceSlug" element={<Navigate to="/counties" replace />} />
+
+          {/* Dynamic /services/:slug → canonical service pages */}
+          <Route path="/services" element={<Navigate to="/probate-estate-sales" replace />} />
+          <Route path="/services/probate-estate-sales" element={<Navigate to="/probate-estate-sales" replace />} />
+          <Route path="/services/senior-transitions" element={<Navigate to="/senior-transitions" replace />} />
+          <Route path="/services/downsizing-services" element={<Navigate to="/senior-transitions" replace />} />
+          <Route path="/services/executor-support" element={<Navigate to="/executors" replace />} />
+          <Route path="/services/attorney-fiduciary-support" element={<Navigate to="/for-attorneys" replace />} />
+          <Route path="/services/valuation-guidance" element={<Navigate to="/why-valuation-matters" replace />} />
+          <Route path="/services/preparing-home-for-sale" element={<Navigate to="/probate-estate-sales" replace />} />
+          <Route path="/services/divorce-related-home-sales" element={<Navigate to="/for-divorce-attorneys" replace />} />
+          <Route path="/services/trust-estate-property-sales" element={<Navigate to="/trustees" replace />} />
+
+          {/* /insights and /insights-guidance → /guides */}
+          <Route path="/insights" element={<Navigate to="/guides-and-resources" replace />} />
+          <Route path="/insights/first-steps-inherited-house-washington" element={<Navigate to="/guides/executor-first-steps-house" replace />} />
+          <Route path="/insights/out-of-state-inherited-house-help" element={<Navigate to="/guides/out-of-state-families" replace />} />
+          <Route path="/insights/out-of-state-executor-case-study" element={<Navigate to="/guides/out-of-state-families" replace />} />
+          <Route path="/insights/estate-property-sale-timeline" element={<Navigate to="/guides/how-long-sell-probate-property" replace />} />
+          <Route path="/insights/estate-property-cleanout-before-sale" element={<Navigate to="/guides/estate-property-repairs-before-sale" replace />} />
+          <Route path="/insights/empty-house-before-selling" element={<Navigate to="/guides/estate-property-repairs-before-sale" replace />} />
+          <Route path="/insights/pricing-inherited-property-differences" element={<Navigate to="/guides/pricing-house-trust-estate" replace />} />
+          <Route path="/insights/sell-inherited-house-without-repairs" element={<Navigate to="/guides/sell-inherited-house-as-is-or-fix" replace />} />
+          <Route path="/insights/family-disagreement-selling-house" element={<Navigate to="/guides/heirs-disagree-selling-house" replace />} />
+          <Route path="/insights/sell-or-keep-inherited-property" element={<Navigate to="/guides/sell-inherited-house-as-is-or-fix" replace />} />
+          <Route path="/insights/estate-property-mistakes" element={<Navigate to="/guides/what-executors-should-do" replace />} />
+          <Route path="/insights-guidance/how-does-probate-real-estate-work-in-washington" element={<Navigate to="/guides/how-probate-real-estate-works" replace />} />
+          <Route path="/insights-guidance/how-to-move-elderly-parents-safely-and-respectfully" element={<Navigate to="/guides/senior-transition-differences" replace />} />
+          <Route path="/how-to-move-elderly-parents" element={<Navigate to="/guides/senior-transition-differences" replace />} />
+
+          {/* /learn-more pages → fold into parent (Phase 2c will merge content) */}
+          <Route path="/executors/learn-more" element={<Navigate to="/executors" replace />} />
+          <Route path="/trustees/learn-more" element={<Navigate to="/trustees" replace />} />
+          <Route path="/for-attorneys/learn-more" element={<Navigate to="/for-attorneys" replace />} />
+          <Route path="/for-cpas/learn-more" element={<Navigate to="/for-cpas" replace />} />
+          <Route path="/for-financial-planners/learn-more" element={<Navigate to="/for-financial-planners" replace />} />
+          <Route path="/realtor/learn-more" element={<Navigate to="/realtor" replace />} />
+          <Route path="/real-estate-appraiser/learn-more" element={<Navigate to="/real-estate-appraiser" replace />} />
+          <Route path="/senior-move-managers/learn-more" element={<Navigate to="/senior-transitions" replace />} />
+          <Route path="/estate-liquidation/learn-more" element={<Navigate to="/estate-liquidation" replace />} />
+
+          {/* Redundant professional / referral pages → consolidated targets */}
+          <Route path="/professional-referral-resource" element={<Navigate to="/join-the-network" replace />} />
+          <Route path="/professional-network" element={<Navigate to="/join-the-network" replace />} />
+          <Route path="/attorney-referral" element={<Navigate to="/for-attorneys" replace />} />
+          <Route path="/for-referral-partners" element={<Navigate to="/join-the-network" replace />} />
+          <Route path="/for-professionals" element={<Navigate to="/professionals" replace />} />
+          <Route path="/for-senior-living-professionals" element={<Navigate to="/professionals/senior-housing-advisors" replace />} />
+
+          {/* Redundant senior pages → /senior-transitions */}
+          <Route path="/senior-estate-services" element={<Navigate to="/senior-transitions" replace />} />
+          <Route path="/senior-move-managers" element={<Navigate to="/senior-transitions" replace />} />
+          <Route path="/transition-resources" element={<Navigate to="/senior-transitions" replace />} />
+
+          {/* Misc legacy */}
+          <Route path="/how-we-work" element={<Navigate to="/how-the-process-works" replace />} />
           <Route path="/cpas" element={<Navigate to="/for-cpas" replace />} />
           <Route path="/financial-planning" element={<Navigate to="/for-financial-planners" replace />} />
           <Route path="/senior-living" element={<Navigate to="/senior-living-and-relocation" replace />} />
           <Route path="/lenders-financing" element={<Navigate to="/lenders-and-financing-specialists" replace />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+
+          {/* Catch-all */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

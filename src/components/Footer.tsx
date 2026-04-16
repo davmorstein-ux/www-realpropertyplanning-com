@@ -65,7 +65,7 @@ const Footer = () => {
               <li><Link to="/for-financial-planners" className="hover:text-gold transition-colors">For Financial Planners</Link></li>
               <li><Link to="/why-valuation-matters" className="hover:text-gold transition-colors">Valuation &amp; Pricing</Link></li>
               <li><Link to="/how-the-process-works" className="hover:text-gold transition-colors">How the Process Works</Link></li>
-              <li><Link to="/insights" className="hover:text-gold transition-colors">Insights &amp; Guidance</Link></li>
+              <li><Link to="/guides-and-resources" className="hover:text-gold transition-colors">Guides &amp; Resources</Link></li>
               <li><Link to="/faq" className="hover:text-gold transition-colors">FAQs</Link></li>
             </ul>
           </div>
@@ -92,14 +92,14 @@ const Footer = () => {
                 <img src={mappin3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain mt-0.5 shrink-0"  loading="lazy"/>
                 <span>Serving clients throughout Washington State, with a strong focus in Western Washington and the Puget Sound region</span>
               </li>
-              <li><Link to="/service-areas/king-county" className="hover:text-gold transition-colors">Probate and estate real estate in King County</Link></li>
-              <li><Link to="/service-areas/snohomish-county" className="hover:text-gold transition-colors">Probate and estate real estate in Snohomish County</Link></li>
-              <li><Link to="/service-areas/pierce-county" className="hover:text-gold transition-colors">Probate and estate real estate in Pierce County</Link></li>
-              <li><Link to="/service-areas/kitsap-county" className="hover:text-gold transition-colors">Probate and estate real estate in Kitsap County</Link></li>
-              <li><Link to="/service-areas/skagit-county" className="hover:text-gold transition-colors">Estate property guidance in Skagit County</Link></li>
-              <li><Link to="/service-areas/thurston-county" className="hover:text-gold transition-colors">Probate and estate real estate in Thurston County</Link></li>
-              <li><Link to="/service-areas/whatcom-county" className="hover:text-gold transition-colors">Probate and estate real estate in Whatcom County</Link></li>
-              <li><Link to="/cities-we-serve" className="hover:text-gold transition-colors">All Cities We Serve</Link></li>
+              <li><Link to="/king-county" className="hover:text-gold transition-colors">Probate &amp; estate real estate in King County</Link></li>
+              <li><Link to="/snohomish-county" className="hover:text-gold transition-colors">Probate &amp; estate real estate in Snohomish County</Link></li>
+              <li><Link to="/pierce-county" className="hover:text-gold transition-colors">Probate &amp; estate real estate in Pierce County</Link></li>
+              <li><Link to="/kitsap-county" className="hover:text-gold transition-colors">Probate &amp; estate real estate in Kitsap County</Link></li>
+              <li><Link to="/skagit-county" className="hover:text-gold transition-colors">Estate property guidance in Skagit County</Link></li>
+              <li><Link to="/thurston-county" className="hover:text-gold transition-colors">Probate &amp; estate real estate in Thurston County</Link></li>
+              <li><Link to="/whatcom-county" className="hover:text-gold transition-colors">Probate &amp; estate real estate in Whatcom County</Link></li>
+              <li><Link to="/counties" className="hover:text-gold transition-colors">All Washington counties we serve</Link></li>
             </ul>
           </div>
         </div>
