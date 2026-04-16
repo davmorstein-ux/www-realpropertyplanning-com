@@ -721,6 +721,9 @@ html, body {
   .premium-tile:has(.service-nav-tile-link:focus-visible) .tile-icon {
     scale: 1.1 !important;
   }
+  .premium-tile[data-tile-name="realtor"] > div > span {
+    transform: translateY(-3%);
+  }
 }
 /* Non-premium tile icons (cards with group class) */
 .tile-icon-hover {
