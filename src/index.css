@@ -814,9 +814,12 @@ html, body {
     transform-origin: bottom center !important;
     transform: scale(1.365) translateY(14%) !important;
   }
-  /* Realtor: center icon on mobile */
+  /* Realtor: reset icon+text offset on mobile */
+  .premium-tile[data-tile-name="realtor"] > div > span {
+    transform: translateY(0%) !important;
+  }
   .premium-tile[data-tile-name="realtor"] .tile-icon {
-    transform: scale(1.1) translateX(2%) !important;
+    transform: scale(1.1) translateX(0%) translateY(0%) !important;
   }
   /* Senior Moves: nudge icon down */
   .premium-tile[data-tile-name="senior-moves"] .tile-icon {
