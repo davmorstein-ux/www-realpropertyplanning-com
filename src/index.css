@@ -867,7 +867,7 @@ html, body {
   }
   /* Financial Planner: nudge icon down */
   .premium-tile[data-tile-name="financial-planning"] .tile-icon {
-    transform: scale(1.1) translateY(20%) !important;
+    transform: scale(1.1) translateY(16%) !important;
   }
   /* Realtor: nudge text down */
   .premium-tile h3[data-tile-id="realtor"] {
