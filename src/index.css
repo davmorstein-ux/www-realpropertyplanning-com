@@ -696,7 +696,8 @@ html, body {
   .premium-tile .tile-icon {
     transition: scale 0.3s ease-out !important;
   }
-  .premium-tile:has(.service-nav-tile-link:hover) .tile-icon {
+  .premium-tile:has(.service-nav-tile-link:hover) .tile-icon,
+  .premium-tile:has(.service-nav-tile-link:focus-visible) .tile-icon {
     scale: 1.1 !important;
   }
 }
