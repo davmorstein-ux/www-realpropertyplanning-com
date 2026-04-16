@@ -148,6 +148,7 @@ const SmartSearchBar = ({ pillsOnly, searchOnly }: SmartSearchBarProps) => {
   const [suggestions, setSuggestions] = useState<RouteMatch[]>([]);
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const recognitionRef = useRef<any>(null);
+  const attorneyPillTextRef = useRef<HTMLSpanElement | null>(null);
   const navigate = useNavigate();
 
   const supportsVoice = useMemo(
@@ -345,6 +346,17 @@ const SmartSearchBar = ({ pillsOnly, searchOnly }: SmartSearchBarProps) => {
     };
   }, []);
 
+  useEffect(() => {
+    if (!pillsOnly || !attorneyPillTextRef.current) return;
+
+    const frame = window.requestAnimationFrame(() => {
+      const computedLineHeight = window.getComputedStyle(attorneyPillTextRef.current as HTMLSpanElement).lineHeight;
+      console.log("[Attorney resource pill] computed line-height:", computedLineHeight);
+    });
+
+    return () => window.cancelAnimationFrame(frame);
+  }, [pillsOnly]);
+
   const renderSearchBar = () => (
     <div
       className="relative flex items-center rounded-full border-2 border-border bg-card transition-all duration-200 focus-within:border-gold focus-within:ring-2 focus-within:ring-gold/20 sm:rounded-full rounded-[1.5rem]"
@@ -394,7 +406,6 @@ const SmartSearchBar = ({ pillsOnly, searchOnly }: SmartSearchBarProps) => {
     </>
   );
 
-  // Pills-only mode: just the oval prompt buttons in 2x2 grid
   if (pillsOnly) {
     return (
       <div className="w-full max-w-2xl mx-auto">
@@ -412,9 +423,13 @@ const SmartSearchBar = ({ pillsOnly, searchOnly }: SmartSearchBarProps) => {
               >
                 <span className="premium-pill-3d__face text-[15px] sm:text-base w-full justify-center">
                   {isAttorneyResourcePrompt ? (
-                    <span className="flex flex-col items-center" style={{ lineHeight: '1.06' }}>
+                    <span
+                      ref={attorneyPillTextRef}
+                      data-attorney-pill-text="true"
+                      className="flex flex-col items-center !leading-[1.8]"
+                    >
                       <span>I'm an attorney</span>
-                      <span>looking for a resource</span>
+                      <span style={{ marginTop: '4px' }}>looking for a resource</span>
                     </span>
                   ) : (
                     prompt.label
@@ -428,7 +443,6 @@ const SmartSearchBar = ({ pillsOnly, searchOnly }: SmartSearchBarProps) => {
     );
   }
 
-  // Search-only mode: just the search bar and dynamic suggestions
   if (searchOnly) {
     return (
       <div className="w-full max-w-2xl mx-auto overflow-hidden">
@@ -438,7 +452,6 @@ const SmartSearchBar = ({ pillsOnly, searchOnly }: SmartSearchBarProps) => {
     );
   }
 
-  // Default: full component (search + pills together)
   return (
     <div className="w-full max-w-2xl mx-auto mb-10 overflow-hidden">
       {renderSearchBar()}
