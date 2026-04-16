@@ -34,7 +34,7 @@ const AuburnProbateEstate = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEOHead title="Probate & Estate Real Estate in Auburn, Washington | Real Property Planning" description="Guidance for executors and families handling inherited property in Auburn. Honest assessment, realistic pricing, and practical preparation support for homes in any condition." />
+      <SEOHead title="Probate & Estate Real Estate in Auburn, WA" description="Guidance for executors and families handling inherited property in Auburn, WA. Honest assessment, realistic pricing, practical preparation." />
       <BreadcrumbSchema items={[{ name: "King County", url: "/king-county" }, { name: "Auburn", url: "/auburn-probate-estate-real-estate" }]} />
       <Header />
       <main id="main-content">
