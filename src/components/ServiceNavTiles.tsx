@@ -4,22 +4,22 @@ import { tileCategories } from "./service-nav-tiles-data";
 
 const ServiceNavTiles = () => {
   return (
-    <section className="pt-6 pb-20 lg:pt-8 lg:pb-28 bg-secondary">
+    <section className="pt-3 pb-20 lg:pt-4 lg:pb-28 bg-secondary">
       <div className="mx-auto max-w-[3300px] px-0 sm:px-1 lg:px-2">
 
-        {/* 1. Oval prompt buttons — 2 rows of 2 */}
-        <div className="flex flex-col items-center gap-3 mb-4">
-          <SmartSearchBar pillsOnly />
-        </div>
-
-        {/* 2. Heading */}
+        {/* 1. Heading */}
         <h2 className="text-center text-3xl sm:text-4xl lg:text-[2.6rem] font-bold font-serif text-foreground tracking-tight mb-3">
           How can we help today?
         </h2>
 
-        {/* 3. Search bar */}
-        <div className="text-center mb-10">
+        {/* 2. Search bar */}
+        <div className="text-center mb-4">
           <SmartSearchBar searchOnly />
+        </div>
+
+        {/* 3. Oval prompt buttons — 2 rows of 2 */}
+        <div className="flex flex-col items-center gap-3 mb-8">
+          <SmartSearchBar pillsOnly />
         </div>
 
         {tileCategories.map((category) => (
