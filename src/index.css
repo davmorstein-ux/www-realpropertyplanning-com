@@ -832,34 +832,19 @@ html, body {
   }
   /* Power of Attorney: reduce icon size 10% */
   .premium-tile[data-tile-name="power-of-attorney"] .tile-icon {
-    transform: scale(0.9) !important;
+    transform: scale(0.9) translateY(8%) !important;
   }
-  /* Nudge icons upward on mobile for these tiles */
-  .premium-tile[data-tile-name="wills"] .tile-icon,
-  .premium-tile[data-tile-name="senior-living"] .tile-icon,
-  .premium-tile[data-tile-name="probate-terms"] .tile-icon,
-  .premium-tile[data-tile-name="cpas"] .tile-icon {
+  /* Guides & Resources: nudge icon down slightly */
+  .premium-tile[data-tile-name="guides-resources"] .tile-icon {
     transform: scale(1.18) translateY(-14%) !important;
   }
-  /* Lending: move icon further up */
-  .premium-tile[data-tile-name="lending"] .tile-icon {
-    transform: scale(1.18) translateY(-20%) !important;
-  }
-  /* Probate Sales: nudge icon down */
-  .premium-tile[data-tile-name="probate-sales"] .tile-icon {
+  /* Senior Transitions: move icon down */
+  .premium-tile[data-tile-name="senior-transitions"] .tile-icon {
     transform: scale(1.18) translateY(-8%) !important;
   }
-  /* Guides & Resources: move icon up */
-  .premium-tile[data-tile-name="guides-resources"] .tile-icon {
-    transform: scale(1.18) translateY(-18%) !important;
-  }
-  /* Senior Transitions: move icon up */
-  .premium-tile[data-tile-name="senior-transitions"] .tile-icon {
-    transform: scale(1.18) translateY(-16%) !important;
-  }
-  /* Home Values & Pricing: move icon up */
+  /* Home Values & Pricing: nudge icon down slightly */
   .premium-tile[data-tile-name="home-values"] .tile-icon {
-    transform: scale(1.18) translateY(-18%) !important;
+    transform: scale(1.18) translateY(-14%) !important;
   }
 
   .attorney-tiles-grid .premium-tile .tile-icon {
