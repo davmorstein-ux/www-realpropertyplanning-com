@@ -826,9 +826,9 @@ html, body {
   .premium-tile[data-tile-name="service-areas"] .tile-icon {
     transform: scale(1.21) !important;
   }
-  /* Estate Liquidation: reduce icon by 5% */
+  /* Estate Liquidation: nudge icon up 10% */
   .premium-tile[data-tile-name="estate-liquidation"] .tile-icon {
-    transform: scale(1.045) !important;
+    transform: scale(1.045) translateY(-10%) !important;
   }
   /* Nudge icons upward on mobile for these tiles */
   .premium-tile[data-tile-name="wills"] .tile-icon,
