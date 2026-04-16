@@ -850,13 +850,21 @@ html, body {
   .premium-tile[data-tile-name="wills"] .tile-icon {
     transform: scale(1.1) translateY(-10%) !important;
   }
+  /* Attorneys: nudge text up */
+  .premium-tile h3[data-tile-id="attorneys"] {
+    margin-top: -0.75rem !important;
+  }
   /* Mortgage Lending: nudge icon up */
   .premium-tile[data-tile-name="lending"] .tile-icon {
-    transform: scale(1.1) translateY(-8%) !important;
+    transform: scale(1.1) translateY(-12%) !important;
   }
   /* Financial Planner: nudge icon down */
   .premium-tile[data-tile-name="financial-planning"] .tile-icon {
-    transform: scale(1.1) translateY(8%) !important;
+    transform: scale(1.1) translateY(12%) !important;
+  }
+  /* Realtor: nudge text down */
+  .premium-tile h3[data-tile-id="realtor"] {
+    margin-top: 0.15rem !important;
   }
   /* Probate Terms: nudge icon up */
   .premium-tile[data-tile-name="probate-terms"] .tile-icon {
@@ -912,9 +920,11 @@ html, body {
   .premium-tile[data-tile-name="senior-moves"] .tile-icon,
   .premium-tile[data-tile-name="the-process"] .tile-icon,
   .premium-tile[data-tile-name="home-value"] .tile-icon,
-  .premium-tile[data-tile-name="lending"] .tile-icon,
   .premium-tile[data-tile-name="cpas"] .tile-icon {
     transform: translateY(8%) !important;
+  }
+  .premium-tile[data-tile-name="lending"] .tile-icon {
+    transform: translateY(0%) !important;
   }
   .premium-tile[data-tile-name="probate-sales"] .tile-icon {
     transform: translateY(4%) !important;
