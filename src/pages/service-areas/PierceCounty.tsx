@@ -35,8 +35,9 @@ const jsonLd = {
 const PierceCountyServiceArea = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
-      title="Probate, Estate & Senior Transition Real Estate in Pierce County, WA | Real Property Planning"
-      description="Serving families, executors, and seniors throughout Pierce County — Tacoma, Puyallup, Lakewood, Gig Harbor, Bonney Lake, Sumner, and surrounding areas. Probate sales, certified appraisals, and senior transitions."
+      title="Pierce County Probate & Estate Real Estate | WA"
+      canonical="https://www.realpropertyplanning.com/service-areas/pierce-county"
+      description="Probate sales, certified appraisals, and senior transitions for families across Pierce County — Tacoma, Puyallup, Lakewood, Gig Harbor."
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema items={[

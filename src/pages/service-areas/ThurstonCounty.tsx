@@ -34,8 +34,9 @@ const jsonLd = {
 const ThurstonCountyServiceArea = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
-      title="Probate, Estate & Senior Transition Real Estate in Thurston County, WA | Real Property Planning"
-      description="Serving families, executors, and seniors throughout Thurston County — Olympia, Lacey, Tumwater, Yelm, Tenino, and surrounding areas. Probate sales, certified appraisals, and senior transitions."
+      title="Thurston County Probate & Estate Real Estate | WA"
+      canonical="https://www.realpropertyplanning.com/service-areas/thurston-county"
+      description="Probate sales, certified appraisals, and senior transitions for families across Thurston County — Olympia, Lacey, Tumwater, Yelm."
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema items={[

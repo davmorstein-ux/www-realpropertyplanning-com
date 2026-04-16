@@ -34,8 +34,9 @@ const jsonLd = {
 const KitsapCountyServiceArea = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
-      title="Probate, Estate & Senior Transition Real Estate in Kitsap County, WA | Real Property Planning"
-      description="Serving families, executors, and seniors throughout Kitsap County — Bremerton, Silverdale, Poulsbo, Port Orchard, Kingston, and surrounding areas. Probate sales, certified appraisals, and senior transitions."
+      title="Kitsap County Probate & Estate Real Estate | WA"
+      canonical="https://www.realpropertyplanning.com/service-areas/kitsap-county"
+      description="Probate sales, certified appraisals, and senior transitions for families across Kitsap County — Bremerton, Silverdale, Poulsbo, Port Orchard."
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema items={[

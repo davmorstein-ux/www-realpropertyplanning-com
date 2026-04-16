@@ -34,8 +34,9 @@ const jsonLd = {
 const WhatcomCountyServiceArea = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
-      title="Probate, Estate & Senior Transition Real Estate in Whatcom County, WA | Real Property Planning"
-      description="Serving families, executors, and seniors throughout Whatcom County — Bellingham, Ferndale, Lynden, Blaine, Birch Bay, Sumas, and surrounding areas. Probate sales, certified appraisals, and senior transitions."
+      title="Whatcom County Probate & Estate Real Estate | WA"
+      canonical="https://www.realpropertyplanning.com/service-areas/whatcom-county"
+      description="Probate sales, certified appraisals, and senior transitions for families across Whatcom County — Bellingham, Ferndale, Lynden, Blaine."
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema items={[
