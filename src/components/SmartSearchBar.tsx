@@ -131,12 +131,17 @@ function findTopRoutes(input: string, max = 3): RouteMatch[] {
 const suggestedPrompts = [
   { label: "I'm an executor", ariaLabel: "I'm an executor managing estate property in Washington State" },
   { label: "I need help selling an inherited home", ariaLabel: "I need help selling an inherited home in Washington State" },
-  { label: "What does probate mean?", ariaLabel: "What does probate mean — glossary and explanation" },
+  
   { label: "I'm helping a senior move", ariaLabel: "I'm helping a senior move — transition guidance and real estate support" },
   { label: "I'm an attorney looking for a resource", ariaLabel: "I'm an attorney looking for a real estate resource in Washington State" },
 ];
 
-const SmartSearchBar = () => {
+interface SmartSearchBarProps {
+  pillsOnly?: boolean;
+  searchOnly?: boolean;
+}
+
+const SmartSearchBar = ({ pillsOnly, searchOnly }: SmartSearchBarProps) => {
   const [query, setQuery] = useState("");
   const [isListening, setIsListening] = useState(false);
   const [voiceStatus, setVoiceStatus] = useState<"idle" | "listening" | "processing" | "error">("idle");
