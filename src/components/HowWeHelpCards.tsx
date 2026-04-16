@@ -50,7 +50,7 @@ const HowWeHelpCards = () => {
                 <img
                   src={card.iconSrc}
                   alt={card.iconAlt}
-                  className="w-[240px] h-[168px] object-contain"
+                  className={`${card.iconSize} object-contain`}
                   loading="lazy"
                 />
               </div>
