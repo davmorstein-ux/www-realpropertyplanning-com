@@ -10,7 +10,7 @@ import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+
 import { services, isTier1City } from "@/lib/service-areas-data";
 import type { CityData } from "@/lib/service-areas-data";
 import heroIcon from "@/assets/icons/real-estate-service-areas-map-icon-washington.webp";
