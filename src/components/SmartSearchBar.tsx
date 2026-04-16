@@ -474,8 +474,6 @@ const SmartSearchBar = ({ pillsOnly, searchOnly }: SmartSearchBarProps) => {
   );
 };
 
-export default SmartSearchBar;
-            "0 4px 20px -4px hsl(220 35% 15% / 0.08), inset 0 1px 0 hsl(0 0% 100% / 0.7)",
         }}
       >
         <Search className="ml-5 w-5 h-5 text-muted-foreground flex-shrink-0 self-center" />
