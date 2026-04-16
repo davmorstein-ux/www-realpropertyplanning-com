@@ -832,7 +832,7 @@ html, body {
   }
   /* Power of Attorney: reduce icon size 10%, nudge down */
   .premium-tile[data-tile-name="power-of-attorney"] .tile-icon {
-    transform: scale(0.9) translateY(12%) !important;
+    transform: scale(0.9) translateY(16%) !important;
   }
   /* Guides & Resources: nudge icon down */
   .premium-tile[data-tile-name="guides-resources"] .tile-icon {
@@ -848,7 +848,15 @@ html, body {
   }
   /* Wills: nudge icon up */
   .premium-tile[data-tile-name="wills"] .tile-icon {
-    transform: scale(1.1) translateY(-6%) !important;
+    transform: scale(1.1) translateY(-10%) !important;
+  }
+  /* Mortgage Lending: nudge icon up */
+  .premium-tile[data-tile-name="lending"] .tile-icon {
+    transform: scale(1.1) translateY(-4%) !important;
+  }
+  /* Financial Planner: nudge icon down */
+  .premium-tile[data-tile-name="financial-planning"] .tile-icon {
+    transform: scale(1.1) translateY(4%) !important;
   }
 
   .attorney-tiles-grid .premium-tile .tile-icon {
