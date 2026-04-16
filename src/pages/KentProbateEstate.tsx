@@ -34,7 +34,7 @@ const KentProbateEstate = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEOHead title="Probate & Estate Real Estate in Kent, Washington | Real Property Planning" description="Guidance for executors and families handling inherited property in Kent. Straightforward support for family coordination, realistic pricing, and practical next steps." />
+      <SEOHead title="Probate & Estate Real Estate in Kent, WA" description="Guidance for executors and families with inherited property in Kent, WA. Family coordination, realistic pricing, and practical next steps." />
       <BreadcrumbSchema items={[{ name: "King County", url: "/king-county" }, { name: "Kent", url: "/kent-probate-estate-real-estate" }]} />
       <Header />
       <main id="main-content">

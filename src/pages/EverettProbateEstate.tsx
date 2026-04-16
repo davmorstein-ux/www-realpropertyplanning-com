@@ -88,8 +88,8 @@ const EverettProbateEstate = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Probate & Estate Real Estate in Everett, Washington | Real Property Planning"
-        description="Guidance for executors and families handling inherited homes in Everett. Practical help with preparation decisions, realistic pricing, and clear next steps."
+        title="Probate & Estate Real Estate in Everett, WA"
+        description="Guidance for executors and families handling inherited homes in Everett, WA. Practical preparation help, realistic pricing, clear next steps."
       />
       <BreadcrumbSchema
         items={[

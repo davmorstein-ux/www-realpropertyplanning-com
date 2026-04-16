@@ -88,8 +88,8 @@ const TacomaProbateEstate = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Probate & Estate Real Estate in Tacoma, Washington | Real Property Planning"
-        description="Guidance for executors, trustees, and families handling inherited property in Tacoma. Valuation-informed strategy, clear communication, and practical help from start to finish."
+        title="Probate & Estate Real Estate in Tacoma, WA"
+        description="Guidance for executors, trustees, and families with inherited property in Tacoma, WA. Valuation-informed strategy from start to finish."
       />
       <BreadcrumbSchema
         items={[

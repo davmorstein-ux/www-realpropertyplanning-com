@@ -88,8 +88,8 @@ const YakimaProbateEstate = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Probate & Estate Real Estate in Yakima, Washington | Real Property Planning"
-        description="Guidance for executors and families handling inherited property in Yakima. Practical support for property condition decisions, realistic pricing, and coordinated next steps."
+        title="Probate & Estate Real Estate in Yakima, WA"
+        description="Guidance for executors and families with inherited property in Yakima, WA. Property condition decisions, realistic pricing, coordinated steps."
       />
       <BreadcrumbSchema
         items={[

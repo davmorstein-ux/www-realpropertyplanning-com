@@ -88,8 +88,8 @@ const BellinghamProbateEstate = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Probate & Estate Real Estate in Bellingham, Washington | Real Property Planning"
-        description="Guidance for executors and families handling inherited or estate property in Bellingham. Support for out-of-area ownership, unique market conditions, and coordinated property decisions."
+        title="Probate & Estate Real Estate in Bellingham, WA"
+        description="Guidance for executors and families with inherited or estate property in Bellingham, WA. Out-of-area support and coordinated decisions."
       />
       <BreadcrumbSchema
         items={[

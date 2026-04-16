@@ -34,7 +34,7 @@ const FederalWayProbateEstate = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEOHead title="Probate & Estate Real Estate in Federal Way, Washington | Real Property Planning" description="Guidance for executors and families handling inherited property in Federal Way. Support for timing decisions, transition situations, and practical preparation." />
+      <SEOHead title="Probate & Estate Real Estate in Federal Way, WA" description="Guidance for executors and families with inherited property in Federal Way, WA. Help with timing, transitions, and practical preparation." />
       <BreadcrumbSchema items={[{ name: "King County", url: "/king-county" }, { name: "Federal Way", url: "/federal-way-probate-estate-real-estate" }]} />
       <Header />
       <main id="main-content">

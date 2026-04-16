@@ -88,8 +88,8 @@ const KirklandProbateEstate = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Probate & Estate Real Estate in Kirkland, Washington | Real Property Planning"
-        description="Guidance for executors, trustees, and families handling inherited or estate property in Kirkland. Valuation-informed strategy for higher-value homes and downsizing transitions."
+        title="Probate & Estate Real Estate in Kirkland, WA"
+        description="Guidance for executors, trustees, and families with inherited or estate property in Kirkland, WA. Valuation-informed strategy for higher-value homes."
       />
       <BreadcrumbSchema
         items={[

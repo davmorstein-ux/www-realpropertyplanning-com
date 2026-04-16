@@ -76,8 +76,8 @@ const KennewickProbateEstate = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Probate & Estate Real Estate in Kennewick, Washington | Real Property Planning"
-        description="Guidance for executors and families handling inherited property in Kennewick. Practical support for preparation decisions, realistic pricing, and family coordination."
+        title="Probate & Estate Real Estate in Kennewick, WA"
+        description="Guidance for executors and families with inherited property in Kennewick, WA. Practical preparation, realistic pricing, and family coordination."
       />
       <BreadcrumbSchema items={[{ name: "Counties", url: "/counties" }, { name: "Kennewick", url: "/kennewick-probate-estate-real-estate" }]} />
       <Header />

@@ -76,8 +76,8 @@ const RichlandProbateEstate = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Probate & Estate Real Estate in Richland, Washington | Real Property Planning"
-        description="Guidance for executors and families handling inherited property in Richland. Support for orderly transitions, realistic pricing, and thoughtful decision-making in established neighborhoods."
+        title="Probate & Estate Real Estate in Richland, WA"
+        description="Guidance for executors and families with inherited property in Richland, WA. Orderly transitions, realistic pricing, thoughtful decisions."
       />
       <BreadcrumbSchema items={[{ name: "Counties", url: "/counties" }, { name: "Richland", url: "/richland-probate-estate-real-estate" }]} />
       <Header />
