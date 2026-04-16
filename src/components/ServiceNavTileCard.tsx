@@ -63,9 +63,11 @@ const ServiceNavTileCard = ({ tile, index, columns = 3 }: { tile: ServiceTile; i
                            ? "senior-living"
                            : tile.title === "Service Areas"
                              ? "service-areas"
-                             : tile.title.includes("Liquidation")
-                               ? "estate-liquidation"
-                               : undefined;
+                              : tile.title.includes("Liquidation")
+                                ? "estate-liquidation"
+                                : tile.title.includes("Power of")
+                                  ? "power-of-attorney"
+                                  : undefined;
 
   const iconAlt = tileAltText[tile.title] || tile.title.replace(/\n/g, " ");
 
