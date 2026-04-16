@@ -46,7 +46,7 @@ export const tileCategories: TileCategory[] = [
       { title: "Attorneys", subtitle: "", href: "/for-attorneys", iconSrc: iconAttorneys, mobileTextDown: true, mobileIconDown: true, textOffsetY: "6px" },
       { title: "CPAs", subtitle: "", href: "/for-cpas", iconSrc: iconCpas, iconOffsetY: "-4%", mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "12%" },
       { title: "Financial\nPlanning", subtitle: "", href: "/for-financial-planners", iconSrc: iconFinancialPlanning, labelSpacing: "tight", iconOffsetY: "4%", mobileContentOffsetY: "-1%", mobileIconDown: true, mobileIconOffsetY: "0%" },
-      { title: "Mortgage\nLending", subtitle: "", href: "/lenders-and-financing-specialists", iconSrc: iconLending, labelSpacing: "tight", contentOffsetY: "-0.3%", mobileContentOffsetY: "-2%", mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "14%" },
+      { title: "Mortgage\nLending", subtitle: "", href: "/lenders-and-financing-specialists", iconSrc: iconLending, labelSpacing: "tight", contentOffsetY: "-0.8%", mobileContentOffsetY: "-2%", mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "14%" },
       { title: "Estate\nLiquidation", subtitle: "", href: "/estate-liquidation", iconSrc: iconEstateLiquidation, labelSpacing: "tight", mobileTextDown: true, mobileIconDown: true },
       { title: "Realtor", subtitle: "", href: "/realtor", iconSrc: iconRealtor, contentOffsetY: "-0.5%", mobileContentOffsetY: "0.5%", iconScale: 1.1, mobileTextDown: true, mobileIconDown: true },
       { title: "Real Estate\nAppraiser", subtitle: "", href: "/real-estate-appraiser", iconSrc: iconAppraiser, labelSpacing: "tight", mobileTextDown: true, mobileIconDown: true, iconScale: 1.21, textOffsetY: "20px" },
