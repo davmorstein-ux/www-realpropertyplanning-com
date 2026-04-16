@@ -172,18 +172,18 @@ const Contact = () => {
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="name">Full Name *</Label>
-                      <Input id="name" name="name" required placeholder="Your full name" />
+                      <Input id="name" name="name" required aria-required="true" autoComplete="name" placeholder="Your full name" />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="email">Email Address *</Label>
-                      <Input id="email" name="email" type="email" required placeholder="your@email.com" />
+                      <Input id="email" name="email" type="email" required aria-required="true" autoComplete="email" placeholder="your@email.com" />
                     </div>
                   </div>
 
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="phone">Phone Number</Label>
-                      <Input id="phone" name="phone" type="tel" placeholder="(555) 123-4567" />
+                      <Input id="phone" name="phone" type="tel" autoComplete="tel" placeholder="(555) 123-4567" />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="role">Your Role *</Label>
@@ -205,13 +205,13 @@ const Contact = () => {
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="address">Property Address</Label>
-                      <Input id="address" name="address" placeholder="123 Main St, City, State" />
+                      <Input id="address" name="address" autoComplete="street-address" placeholder="123 Main St, City, State" />
                     </div>
                   </div>
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="zip">Zip Code</Label>
-                      <Input id="zip" name="zip" placeholder="98101" />
+                      <Input id="zip" name="zip" autoComplete="postal-code" placeholder="98101" />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="situation">Type of Situation *</Label>
@@ -276,9 +276,11 @@ const Contact = () => {
                     >
                       {isSubmitting ? "Sending..." : "Send My Message"}
                     </Button>
-                    <p className="text-muted-foreground/70 text-[15px] mt-4">
-                      David responds personally to every inquiry.
-                    </p>
+                    <div role="status" aria-live="polite">
+                      <p className="text-muted-foreground/70 text-[15px] mt-4">
+                        David responds personally to every inquiry.
+                      </p>
+                    </div>
                   </div>
                 </form>
               </div>

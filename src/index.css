@@ -696,7 +696,8 @@ html, body {
   .premium-tile .tile-icon {
     transition: scale 0.3s ease-out !important;
   }
-  .premium-tile:has(.service-nav-tile-link:hover) .tile-icon {
+  .premium-tile:has(.service-nav-tile-link:hover) .tile-icon,
+  .premium-tile:has(.service-nav-tile-link:focus-visible) .tile-icon {
     scale: 1.1 !important;
   }
 }
@@ -991,6 +992,21 @@ html, body {
   font-size: 1.0625rem !important;
   line-height: 1.2 !important;
   margin-bottom: 0.25rem !important;
+}
+
+/* ===== WCAG 2.2 AA: Visible focus outlines ===== */
+*:focus-visible {
+  outline: 2px solid hsl(var(--gold));
+  outline-offset: 2px;
+}
+
+/* Inline text links: distinguishable by underline (not color alone) */
+main a:not([class*="btn"]):not([role="menuitem"]):not(.no-underline) {
+  text-decoration-line: underline;
+  text-underline-offset: 3px;
+}
+main a:not([class*="btn"]):not([role="menuitem"]):not(.no-underline):hover {
+  text-decoration-thickness: 2px;
 }
 
 /* Search bar textarea — mobile: allow placeholder to wrap onto 2 lines */
