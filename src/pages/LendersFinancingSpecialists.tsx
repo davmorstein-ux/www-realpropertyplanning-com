@@ -84,7 +84,7 @@ const LendersFinancingSpecialists = () => (
           <div className="bg-secondary border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 p-5 sm:p-6">
             <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-start sm:gap-5">
               <div className="shrink-0">
-                <img src={danBartelPhoto} alt="Daniel Bartel — Retirement Mortgage Specialist, C2 Financial" className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-border shadow-sm"  loading="lazy"/>
+                <img src={danBartelPhoto} alt="Photo of Daniel Bartel" className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-border shadow-sm"  loading="lazy"/>
               </div>
               <div className="flex w-full flex-col items-center sm:flex-1 sm:items-start">
                 <a href="http://www.santadanmortgage.com" target="_blank" rel="noopener noreferrer" className="sm:self-start sm:ml-[58px]">
@@ -114,7 +114,7 @@ const LendersFinancingSpecialists = () => (
                     </div>
                     <div className="flex items-center gap-2 justify-center sm:justify-start">
                       <Globe className="w-4 h-4 text-accent shrink-0" />
-                      <a href="http://www.santadanmortgage.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-gold underline-offset-4 hover:underline">www.santadanmortgage.com</a>
+                      <a href="http://www.santadanmortgage.com" target="_blank" rel="noopener noreferrer" aria-label="Visit Daniel Bartel's website at santadanmortgage.com" className="text-accent hover:text-gold underline-offset-4 hover:underline">www.santadanmortgage.com</a>
                     </div>
                   </div>
                 </div>
@@ -126,7 +126,7 @@ const LendersFinancingSpecialists = () => (
           <div className="bg-secondary border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 p-5 sm:p-6">
             <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-start sm:gap-5">
               <div className="shrink-0">
-                <img src={jeffMcGinnisPhoto} alt="Jeff McGinnis — Senior Loan Officer, CrossCountry Mortgage" className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-border shadow-sm"  loading="lazy"/>
+                <img src={jeffMcGinnisPhoto} alt="Photo of Jeff McGinnis" className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-border shadow-sm"  loading="lazy"/>
               </div>
               <div className="flex w-full flex-col items-center sm:flex-1 sm:items-start">
                 <a href="https://crosscountrymortgage.com/seattle-wa-5531/jeffrey-mcginnis/" target="_blank" rel="noopener noreferrer" className="sm:self-start sm:ml-[58px]">
@@ -156,7 +156,7 @@ const LendersFinancingSpecialists = () => (
                     </div>
                     <div className="flex items-center gap-2 justify-center sm:justify-start">
                       <Globe className="w-4 h-4 text-accent shrink-0" />
-                      <a href="https://crosscountrymortgage.com/seattle-wa-5531/jeffrey-mcginnis/" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-gold underline-offset-4 hover:underline">crosscountrymortgage.com</a>
+                      <a href="https://crosscountrymortgage.com/seattle-wa-5531/jeffrey-mcginnis/" target="_blank" rel="noopener noreferrer" aria-label="Visit Jeff McGinnis's profile at crosscountrymortgage.com" className="text-accent hover:text-gold underline-offset-4 hover:underline">crosscountrymortgage.com</a>
                     </div>
                   </div>
                 </div>
@@ -168,7 +168,7 @@ const LendersFinancingSpecialists = () => (
           <div className="bg-secondary border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 p-5 sm:p-6">
             <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-start sm:gap-5">
               <div className="shrink-0">
-                <img src={hansWestermarkPhoto} alt="Hans Westermark — President, Family First Mortgage" className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-border shadow-sm" loading="lazy"/>
+                <img src={hansWestermarkPhoto} alt="Photo of Hans Westermark" className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-border shadow-sm" loading="lazy"/>
               </div>
               <div className="flex w-full flex-col items-center sm:flex-1 sm:items-start">
                 <a href="https://www.familyfirstmortgagegroup.com/loan-officer/hans-westermark" target="_blank" rel="noopener noreferrer" className="sm:self-start sm:ml-[58px]">
@@ -195,7 +195,7 @@ const LendersFinancingSpecialists = () => (
                     </div>
                     <div className="flex items-center gap-2 justify-center sm:justify-start">
                       <Globe className="w-4 h-4 text-accent shrink-0" />
-                      <a href="https://www.familyfirstmortgagegroup.com/loan-officer/hans-westermark" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-gold underline-offset-4 hover:underline">familyfirstmortgagegroup.com</a>
+                      <a href="https://www.familyfirstmortgagegroup.com/loan-officer/hans-westermark" target="_blank" rel="noopener noreferrer" aria-label="Visit Hans Westermark's website at familyfirstmortgagegroup.com" className="text-accent hover:text-gold underline-offset-4 hover:underline">familyfirstmortgagegroup.com</a>
                     </div>
                   </div>
                   <div className="flex items-center gap-3 mt-4 justify-center sm:justify-start">

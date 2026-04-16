@@ -39,9 +39,9 @@ const HomepageLeadForm = () => {
     }, 500);
   };
 
-  if (submitted) {
+   if (submitted) {
     return (
-      <div className="bg-card rounded-2xl p-8 md:p-10 shadow-lg flex flex-col items-center justify-center text-center min-h-[400px]">
+      <div role="status" aria-live="polite" className="bg-card rounded-2xl p-8 md:p-10 shadow-lg flex flex-col items-center justify-center text-center min-h-[400px]">
         <div className="w-16 h-16 rounded-full bg-gold/10 flex items-center justify-center mb-6">
           <svg className="w-8 h-8 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
