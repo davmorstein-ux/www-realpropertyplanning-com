@@ -4,7 +4,7 @@ import logoBright from "@/assets/real-property-planning-logo-bright-seattle.webp
 
 const LINE1 = "Washington's Professional Hub for Seniors, Families & Estate Transitions";
 const TYPING_DURATION = 10000; // ms
-const FADE_DELAY = 2000; // ms after typing completes
+const FADE_DELAY = 750; // ms after typing completes
 
 const HomepageHero = () => {
   const [charCount, setCharCount] = useState(0);
