@@ -123,28 +123,28 @@ const timingConsiderations = [
 
 const commonQuestionsFaqs = [
   {
-    question: "Do I need court approval to sell estate property in Washington?",
-    answer: "It depends on the structure of the estate. In a supervised probate, certain actions — including listing and selling real property — may require court approval or be subject to specific notice requirements. In an unsupervised probate, the personal representative may have more flexibility. Your estate attorney is the right person to advise on the legal requirements for your specific situation. David works collaboratively with attorneys to make sure the real estate timeline aligns with whatever legal requirements are in place.",
+    question: "What specific Washington court forms or filings affect when we can list the property?",
+    answer: "In a typical Washington probate, the personal representative needs Letters Testamentary (with a will) or Letters of Administration (without one) before listing. If the will grants Nonintervention Powers — which is common in Washington — the PR can usually sell without further court approval. If the estate is supervised, you may need a court order authorizing the sale and confirming the price. We coordinate directly with the estate attorney so the listing date, the offer-acceptance date, and the closing date all line up with whatever order the court requires.",
   },
   {
-    question: "Can the property be listed before probate is complete?",
-    answer: "In some cases, yes — depending on the type of probate and the legal authority in place. In others, listing must wait until letters testamentary or letters of administration have been issued. Real Property Planning can assess and prepare the property during the waiting period so everything is ready to move the moment legal authority is confirmed.",
+    question: "Can we accept the first reasonable offer, or do we need to follow a court bidding process?",
+    answer: "It depends on the type of probate. With Nonintervention Powers, the PR can negotiate and accept like a normal seller. In supervised probates — and in some judicial-confirmation situations — the accepted offer may be subject to overbid at a court hearing. We structure the listing strategy and disclosures around whichever standard applies, so heirs and the attorney are not surprised at the hearing.",
   },
   {
-    question: "How is estate property priced differently from a standard home?",
-    answer: "Estate properties often have condition factors — deferred maintenance, vacancy, dated interiors — that automated valuation tools and inexperienced agents fail to account for accurately. As a Washington State Certified Residential Appraiser, David applies condition-adjusted comparable analysis to arrive at a price that reflects the home's actual market position. This produces a more defensible number for fiduciary purposes and a more accurate expectation for the family.",
+    question: "How do you protect an executor from later claims that the home was sold for too little?",
+    answer: "This is fiduciary defensibility, and it is why we lead with a documented, valuation-based pricing analysis rather than a marketing CMA. The PR's file includes condition photos, comparable-sales adjustments, marketing exposure records, every offer received, and the rationale for the accepted price — the same documentation an appraiser would produce. If a beneficiary later questions the sale price, the answer is in the file.",
   },
   {
-    question: "What if heirs disagree about pricing or timing?",
-    answer: "This is one of the most common complications in estate property sales — and one of the most manageable when everyone is working from the same data. David's valuation-informed approach gives all parties a shared, objective foundation for the conversation. In cases where heirs have received conflicting price opinions from other agents, a clear, documented market analysis often resolves the disagreement faster than extended negotiation.",
+    question: "The house is full of belongings and hasn't been touched in years. Where do you even start?",
+    answer: "We start with a walk-through to separate the property questions from the contents questions. For contents, we coordinate vetted estate-sale companies, donation pickups, and full cleanout crews — and tell you which approach actually nets more for the estate. For the property itself, we identify the small set of repairs that move the appraised value (and therefore the sale price) and the larger set that do not. Most estate homes need far less work than families assume.",
   },
   {
-    question: "How long does it typically take to sell estate property in Washington?",
-    answer: "It varies significantly based on the property's condition, the stage of probate, market conditions in the specific area, and the family's timeline. Some properties are ready to list within weeks; others require months of preparation. David develops a realistic timeline at the outset — one that accounts for legal proceedings, property preparation, and current market conditions in the specific neighborhood — so families and attorneys know what to expect from the beginning.",
+    question: "How does selling during probate affect our tax situation as heirs?",
+    answer: "Inherited property generally receives a stepped-up basis to fair market value as of the date of death — which is why a defensible date-of-death valuation matters. If the property sells reasonably close to that value, capital-gains exposure for the heirs is usually minimal. We are not tax advisors, but we coordinate closely with your CPA or estate attorney and can produce the valuation documentation they need.",
   },
   {
-    question: "Does Real Property Planning work with estate attorneys?",
-    answer: "Yes — consistently and collaboratively. David serves as the real estate point of contact so attorneys can focus on the legal administration of the estate. He provides market assessments, coordinates property preparation, manages the listing and sale, and communicates proactively with the legal team throughout. Attorneys who refer clients to Real Property Planning receive regular updates and can reach David directly when questions arise.",
+    question: "Can you start working with us before the estate attorney is even hired?",
+    answer: "Yes. Many families call us first because the property is the most visible, most stressful piece. We will tell you honestly whether you need an attorney (almost always yes for Washington probate) and refer you to several experienced probate attorneys in your county if you don't have one. Then we work alongside whichever attorney you choose — they handle the legal proceeding, we handle the property.",
   },
 ];
 
@@ -161,8 +161,8 @@ const ProbateEstateSales = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Probate Real Estate Sales in Washington State | Real Property Planning"
-        description="Valuation-informed probate real estate guidance for executors, attorneys, and families throughout Washington State. Serving King, Snohomish, Pierce & Kitsap Counties."
+        title="Probate Real Estate in Washington State | Selling an Estate Home"
+        description="Washington probate property sales handled with court-aligned timelines, fiduciary-defensible pricing, and full coordination with your estate attorney. King, Snohomish, Pierce & Kitsap."
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema items={[{ name: "Probate & Estate Sales", url: "/probate-estate-sales" }]} />
@@ -178,30 +178,30 @@ const ProbateEstateSales = () => {
               Probate & Estate Property Sales
             </p>
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
-              Probate Real Estate Sales in Washington State
+              Selling a Home Through Probate in Washington State
             </h1>
             <p className="text-lg text-primary-foreground/80 leading-relaxed mb-4">
-              When a home is part of a probate case, nothing about the sale follows the normal playbook.
+              A probate sale runs on the court's clock, not the market's — and a typical listing agent isn't built for it.
             </p>
             <p className="text-primary-foreground/70 text-base md:text-lg leading-relaxed mb-4">
-              Court authority may need to be granted before the property can be listed. The house may have been vacant for months, with deferred maintenance that standard market comparisons cannot account for. Meanwhile, the{" "}
-              <Link to="/executors" className="text-gold hover:text-gold/80 underline underline-offset-4 transition-colors">executor</Link>, the{" "}
-              <Link to="/for-attorneys" className="text-gold hover:text-gold/80 underline underline-offset-4 transition-colors">estate attorney</Link>, and family members all need to stay informed — without stepping on each other's timelines. And throughout all of it, carrying costs continue: property taxes, insurance, utilities, and HOA fees that accumulate whether the property is moving forward or sitting still.
+              The property usually can't be listed until Letters Testamentary or Letters of Administration are issued. Pricing has to hold up to fiduciary scrutiny, not just attract showings. The{" "}
+              <Link to="/executors" className="text-gold hover:text-gold/80 underline underline-offset-4 transition-colors">personal representative</Link>, the{" "}
+              <Link to="/for-attorneys" className="text-gold hover:text-gold/80 underline underline-offset-4 transition-colors">estate attorney</Link>, and out-of-state heirs all need the same information at the same time. And the property keeps costing the estate money — taxes, insurance, utilities — every week it sits.
             </p>
             <p className="text-primary-foreground/70 text-base md:text-lg leading-relaxed mb-5">
-              Real Property Planning brings valuation-informed real estate guidance to these situations — giving executors defensible pricing, attorneys a reliable point of coordination, and families the confidence that the property is being handled with care. David Stein serves families, executors, and legal professionals throughout{" "}
-              <Link to="/counties" className="text-gold hover:text-gold/80 underline underline-offset-4 transition-colors">King County, Snohomish County, Pierce County, Kitsap County</Link>, and across Washington State.
+              Real Property Planning handles probate listings as their own discipline. David Stein's dual credential as a licensed broker and a Washington State Certified Residential Appraiser means the price you bring to the court file is the same price the market will support — and the documentation is already in your fiduciary record. Serving{" "}
+              <Link to="/counties" className="text-gold hover:text-gold/80 underline underline-offset-4 transition-colors">King, Snohomish, Pierce, and Kitsap Counties</Link>, with statewide coordination for out-of-state executors.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/contact">
                 <Button variant="gold" size="lg" className="w-full sm:w-auto">
                   <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy"/>
-                  Schedule a Consultation
+                  Talk Through Your Estate
                 </Button>
               </Link>
-              <Link to="/contact">
+              <Link to="/guides/sell-house-during-probate-washington">
                 <Button size="lg" variant="outline3d" className="border-gold/50 bg-transparent text-gold hover:bg-gold hover:text-foreground focus-visible:ring-gold w-full sm:w-auto">
-                  Request a Call
+                  Read the Probate Sale Guide
                 </Button>
               </Link>
             </div>

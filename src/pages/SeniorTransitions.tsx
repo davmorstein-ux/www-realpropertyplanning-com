@@ -65,20 +65,24 @@ const coordinationPartners = [
 
 const faqs = [
   {
-    question: "How does Real Property Planning help seniors who need to sell their home?",
-    answer: "David Stein provides full-service real estate guidance specifically designed for senior housing transitions — from the first conversation about timing and options, through property preparation, pricing, listing, and closing. As both a licensed broker and a certified appraiser, he can give families an honest picture of the home's value in its current condition before any decisions are made. He also coordinates with senior move managers, care teams, attorneys, and family members throughout the process, so the real estate side stays aligned with everything else that's happening.",
+    question: "How do we know it's actually time to sell mom or dad's house?",
+    answer: "Usually the trigger isn't a real estate question — it's a care question. A fall, a hospitalization, a memory-care evaluation, or a frank conversation with the doctor. The real estate decision follows. We help families separate the two: first, what does the care plan look like and on what timeline? Then, working backwards from that, when does the home actually need to be on the market? Often there's more time — and more options — than families assume in the first stressful week.",
   },
   {
-    question: "What if the home needs significant work before selling?",
-    answer: "Many senior homes haven't been updated in years — and that's completely normal. David helps families think through which improvements are worth making before listing and which aren't. In some cases, selling as-is is the right answer. In others, targeted repairs or staging can meaningfully improve the sale price. Because David can assess value from an appraiser's perspective, families get an honest cost-benefit analysis rather than pressure to renovate.",
+    question: "Mom is still living in the house. Can you list it without disrupting her?",
+    answer: "Yes, and we do this often. Showings are scheduled around her routine, not the buyer's convenience. We use lockbox protocols that keep her safe, coordinate with caregivers or family for showing windows, and stage in a way that respects what's still her home. For seniors with cognitive changes, we sometimes recommend listing only after the move — the right answer depends on the person, not a script.",
   },
   {
-    question: "Can Real Property Planning coordinate with a senior move manager or care team?",
-    answer: "Yes — and this coordination is often essential. David works regularly with senior move managers, care coordinators, and placement specialists throughout the Puget Sound area. Real Property Planning has an established relationship with HB Move Management (a division of Hansen Bros. Moving & Storage), one of the most experienced senior moving services in Western Washington. David can make introductions and help align timelines across the full team.",
+    question: "How do we handle 40 years of belongings without traumatizing a parent?",
+    answer: "Slowly, and with the right people. We coordinate with senior move managers — including HB Move Management, a division of Hansen Bros. — who specialize in this exact work: room-by-room sorting, what-stays/what-goes conversations, donations, family heirloom distribution, and estate-sale referrals for the rest. The real estate timeline gets built around their pace, not ahead of it.",
   },
   {
-    question: "How long does it typically take to sell a senior's home?",
-    answer: "It depends on the family's situation, the home's condition, and the current market. Some properties are ready to list within weeks; others require months of preparation. David works at the family's pace and helps set realistic expectations from the beginning — including an honest assessment of market timing, neighborhood conditions, and what buyers in that area are looking for. The goal is always the right outcome, not the fastest one.",
+    question: "Will selling the house affect her Medicaid eligibility or care funding?",
+    answer: "It can — and this is a question for an elder law attorney or care planner before the home is listed, not after. We frequently coordinate with elder law attorneys and Aging Life Care professionals throughout Western Washington and will pause or sequence the sale around their guidance. If you don't have an elder law attorney yet, we can refer you to several we work with regularly.",
+  },
+  {
+    question: "We're three siblings in three different cities. How do you keep us all aligned?",
+    answer: "One designated point of contact in the family, weekly written updates to everyone, and decisions documented in writing. Most senior-transition stress comes from siblings hearing different things at different times. We treat the family as one client and make sure no one is finding out important news from another sibling.",
   },
 ];
 
@@ -95,8 +99,8 @@ const SeniorTransitions = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Senior Housing Transitions | Helping Families in Puget Sound & Washington State | Real Property Planning"
-        description="Patient, experienced guidance for families helping a senior sell their home in Washington State. Serving King, Snohomish, Pierce & Kitsap Counties."
+        title="Senior Home Sales & Downsizing in Washington | Family-Paced Guidance"
+        description="Help for Washington families selling a longtime home during a move to assisted living, memory care, or downsizing. Coordinated with care teams, attorneys, and out-of-state siblings."
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema items={[{ name: "Senior Transitions", url: "/senior-transitions" }]} />
@@ -108,24 +112,24 @@ const SeniorTransitions = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="text-gold font-bold tracking-widest uppercase mb-4 text-base">
-              Selling a Longtime Home Is About More Than Real Estate
+              When the House Has to Catch Up With the Care Plan
             </p>
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
-              Senior Housing Transitions in Washington State
+              Selling a Senior's Longtime Home in Washington
             </h1>
             <p className="text-xl text-primary-foreground/80 leading-relaxed mb-3">
-              When a parent or loved one needs to leave the home they've lived in for decades, the decision rarely feels simple — and it rarely is. Families throughout the Puget Sound area reach out to Real Property Planning not because they have a plan, but because they need one. David Stein works at your family's pace, coordinating the real estate side of the transition with patience, clear communication, and experience that comes from years of working alongside families, care professionals, and trusted advisors across Western Washington.
+              The move to assisted living, memory care, or a smaller home rarely happens on a real estate timeline. It happens on a care timeline — set by a doctor, a fall, or a sibling conversation that finally couldn't wait. Real Property Planning works at the pace your family actually has, coordinating the property side around the care decisions, the elder law guidance, and the people who need to be in the loop.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/contact">
                 <Button variant="gold" size="lg" className="w-full sm:w-auto">
                   <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy" />
-                  Schedule a Consultation
+                  Start a Family Conversation
                 </Button>
               </Link>
-              <Link to="/contact">
+              <Link to="/guides/how-to-move-elderly-parents">
                 <Button size="lg" variant="outline3d" className="border-gold/50 bg-transparent text-gold hover:bg-gold hover:text-foreground focus-visible:ring-gold w-full sm:w-auto">
-                  Request a Call
+                  Read: Moving Elderly Parents
                 </Button>
               </Link>
             </div>

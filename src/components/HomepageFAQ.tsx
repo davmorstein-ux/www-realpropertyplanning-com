@@ -9,32 +9,28 @@ import { homepageFaqSchema } from "@/lib/schema";
 
 const faqs = [
   {
-    q: "What is a probate real estate agent?",
-    a: "A probate real estate agent specializes in selling homes that are part of a deceased person's estate. They understand the legal requirements, court timelines, and family sensitivities involved — and work alongside attorneys and executors to get the property sold properly.",
+    q: "We just lost a parent and inherited a house in Washington — what's the first thing we should do?",
+    a: "Before anything else, identify whether the property will pass through probate or outside of it (through a trust, joint tenancy, or beneficiary designation). That single question determines what authority you need before listing, what your timeline looks like, and which professionals belong on the team. A short conversation usually clarifies it. We then help you sequence the next steps — securing the home, ordering a date-of-death valuation if needed, and coordinating with the estate attorney before any sale work begins.",
   },
   {
-    q: "Do I need a special agent to sell an inherited home in Washington State?",
-    a: "Not legally required, but strongly recommended. Probate sales have specific legal steps, documentation requirements, and timelines. An agent with probate experience — especially one who is also a certified appraiser — can save families significant time, money, and stress.",
+    q: "Do we have to wait for probate to finish before we can sell the house?",
+    a: "Almost never. In Washington, once Letters Testamentary or Letters of Administration are issued, the personal representative typically has authority to list and sell — often within weeks of opening probate, not at the end of it. We can also do all of the preparation work (assessment, cleanout planning, repair scoping, market analysis) during the waiting period so the property is ready to list the moment authority is granted.",
   },
   {
-    q: "What is a senior transition specialist?",
-    a: "A senior transition specialist is a real estate professional trained to support older adults and their families when it's time to move from a longtime home. They coordinate the process thoughtfully — from decluttering and downsizing support to finding appropriate housing and selling the home.",
+    q: "How is your pricing different from a Zillow estimate or a typical agent's CMA?",
+    a: "Automated estimates and standard CMAs assume a home is in average market-ready condition. Estate and senior-owned homes rarely are. Because David Stein is also a Washington State Certified Residential Appraiser, every pricing recommendation is built the way an appraiser would build it — adjusting for actual condition, effective age, functional issues, and the specific micro-market — not the way a listing agent guesses at a number to win a meeting.",
   },
   {
-    q: "What is an estate appraisal and why does it matter?",
-    a: "An estate appraisal is a certified valuation of a property at the time of the owner's death. It's used to set a fair listing price, satisfy court requirements in probate, calculate estate taxes, and ensure heirs are treated fairly. Courts and the IRS have specific requirements — a certified appraiser ensures your appraisal holds up.",
+    q: "We live out of state. Can you really handle the whole property without us flying out?",
+    a: "Yes — this is one of the most common situations we handle. We assess the property in person, send photo and video updates, coordinate cleanout and repair vendors, manage the listing and showings, and walk you through every offer by phone or video. Out-of-state executors and adult children typically never need to travel unless they want to be present for a specific milestone.",
   },
   {
-    q: "How is David Stein different from a regular real estate agent?",
-    a: "David holds two credentials most agents don't: he is both a licensed real estate broker and a Washington State Certified Residential Appraiser. This means he can value a home with professional appraisal standards AND help sell it — providing families with integrated guidance they can trust.",
+    q: "My siblings and I disagree about whether to sell or what it's worth. How do you handle that?",
+    a: "Disagreement among heirs is almost always rooted in working from different numbers. We provide one shared, documented, valuation-grounded analysis that everyone can see — comparable sales, condition adjustments, holding-cost math, and likely net-to-estate at different price points. Most family disagreements resolve within a meeting or two once everyone is looking at the same data instead of guesses.",
   },
   {
-    q: "What areas does Real Property Planning serve?",
-    a: "We serve all of Western Washington and the Puget Sound region, including King, Snohomish, Pierce, Skagit, and Kitsap Counties — cities like Seattle, Bellevue, Everett, Tacoma, Bainbridge Island, and many more.",
-  },
-  {
-    q: "How do I get started?",
-    a: "Simply call (206) 900-3015 or send an email to david@realpropertyplanning.com. There's no pressure — just a calm, honest conversation about your situation.",
+    q: "Where in Washington do you actually work?",
+    a: "We serve the full Puget Sound region directly — King, Snohomish, Pierce, Kitsap, Skagit, Whatcom, and Thurston Counties — and coordinate statewide for Eastern Washington (Spokane, Yakima, Tri-Cities, Vancouver WA) through vetted local partners. Out-of-state executors with Washington property are explicitly part of who we serve.",
   },
 ];
 

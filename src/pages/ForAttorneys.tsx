@@ -29,8 +29,8 @@ const attorneyTiles: ServiceTile[] = [
 const ForAttorneys = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
-      title="Real Estate Support for Attorneys in Washington State | Real Property Planning"
-      description="Real Property Planning provides valuation, preparation, and sale coordination for probate, estate, elder law, family law, and divorce attorneys throughout Washington State."
+      title="Real Estate Partner for Washington Estate, Probate & Family Law Attorneys"
+      description="A single, valuation-trained real estate point of contact for Washington attorneys — handling property, pricing, and coordination so legal counsel stays focused on the file."
     />
     <BreadcrumbSchema items={[{ name: "For Attorneys", url: "/for-attorneys" }]} />
     <Header />
@@ -47,10 +47,10 @@ const ForAttorneys = () => (
             For Attorneys
           </p>
           <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-primary-foreground leading-tight mb-4">
-            Real Estate Support for Probate &amp; Estate Attorneys in Washington State
+            One Real Estate Point of Contact for Your Washington Estate &amp; Probate Files
           </h1>
           <p className="text-primary-foreground text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-6">
-            Real Property Planning handles valuation, preparation, coordination, and sale — so you and your client can focus on legal and financial priorities.
+            When the property side of a matter starts pulling your time — valuation questions, sibling disputes, court-aligned timelines, out-of-state executors — Real Property Planning takes the file. You stay the legal lead; we own the real estate workstream and report back in writing.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link to="/contact">
