@@ -41,6 +41,8 @@ const ServiceNavTileCard = ({ tile, index, columns = 3 }: { tile: ServiceTile; i
   const tileName =
     tile.title === "Attorneys"
       ? "attorneys"
+      : tile.title === "Executors"
+      ? "executors"
       : tile.title === "Wills"
       ? "wills"
       : tile.title === "Senior Moves"
