@@ -933,6 +933,9 @@ html, body {
     transform: translateX(-6%) translateY(6%) scale(1.21) !important;
     transform-origin: center center !important;
   }
+  .premium-tile[data-tile-name="guides-resources"] .tile-icon {
+    transform: scale(1.18) translateX(4%) translateY(-10%) !important;
+  }
 
   .premium-tile h3[data-tile-id="cpas"] {
     margin-top: -0.5rem !important;
