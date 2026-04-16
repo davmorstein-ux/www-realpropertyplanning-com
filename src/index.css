@@ -926,6 +926,9 @@ html, body {
   .premium-tile[data-tile-name="cpas"] .tile-icon {
     transform: translateY(8%) !important;
   }
+  .premium-tile[data-tile-name="the-process"] .tile-icon {
+    transform: scale(1.1) translateY(8%) !important;
+  }
   .premium-tile[data-tile-name="lending"] .tile-icon {
     transform: translateY(0%) !important;
   }
