@@ -832,11 +832,14 @@ html, body {
   }
   /* Nudge icons upward on mobile for these tiles */
   .premium-tile[data-tile-name="wills"] .tile-icon,
-  .premium-tile[data-tile-name="lending"] .tile-icon,
   .premium-tile[data-tile-name="senior-living"] .tile-icon,
   .premium-tile[data-tile-name="probate-terms"] .tile-icon,
   .premium-tile[data-tile-name="cpas"] .tile-icon {
     transform: scale(1.18) translateY(-14%) !important;
+  }
+  /* Lending: move icon further up */
+  .premium-tile[data-tile-name="lending"] .tile-icon {
+    transform: scale(1.18) translateY(-20%) !important;
   }
   /* Probate Sales: nudge icon down */
   .premium-tile[data-tile-name="probate-sales"] .tile-icon {
