@@ -940,6 +940,9 @@ html, body {
   .premium-tile h3[data-tile-id="cpas"] {
     margin-top: -0.5rem !important;
   }
+  .premium-tile[data-tile-name="senior-living"] .tile-icon {
+    transform: scale(1.1) !important;
+  }
 }
 
 @media (min-width: 768px) {
