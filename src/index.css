@@ -812,7 +812,7 @@ html, body {
   }
   /* Realtor: center icon on mobile */
   .premium-tile[data-tile-name="realtor"] .tile-icon {
-    transform: scale(1.1) translateX(6%) !important;
+    transform: scale(1.1) translateX(2%) !important;
   }
   /* Senior Moves: nudge icon down */
   .premium-tile[data-tile-name="senior-moves"] .tile-icon {
@@ -860,7 +860,7 @@ html, body {
   }
   /* Financial Planner: nudge icon down */
   .premium-tile[data-tile-name="financial-planning"] .tile-icon {
-    transform: scale(1.1) translateY(12%) !important;
+    transform: scale(1.1) translateY(16%) !important;
   }
   /* Realtor: nudge text down */
   .premium-tile h3[data-tile-id="realtor"] {
@@ -873,6 +873,10 @@ html, body {
   /* CPAs: nudge icon up */
   .premium-tile[data-tile-name="cpas"] .tile-icon {
     transform: scale(1.1) translateY(-6%) !important;
+  }
+  /* Executors: 10% bigger on mobile */
+  .premium-tile[data-tile-name="executors"] .tile-icon {
+    transform: scale(1.21) !important;
   }
 
   .attorney-tiles-grid .premium-tile .tile-icon {
@@ -914,7 +918,7 @@ html, body {
     margin-top: -1rem !important;
   }
   .premium-tile[data-tile-name="wills"] .tile-icon {
-    transform: translateY(12%) !important;
+    transform: scale(1.1) translateY(12%) !important;
   }
 
   .premium-tile[data-tile-name="senior-moves"] .tile-icon,
@@ -941,6 +945,14 @@ html, body {
     margin-top: -0.5rem !important;
   }
   .premium-tile[data-tile-name="senior-living"] .tile-icon {
+    transform: scale(1.21) !important;
+  }
+  /* Executors: 10% bigger on desktop */
+  .premium-tile[data-tile-name="executors"] .tile-icon {
+    transform: scale(1.1) !important;
+  }
+  /* Attorneys: 10% bigger on desktop */
+  .premium-tile[data-tile-name="attorneys"] .tile-icon {
     transform: scale(1.1) !important;
   }
 }
