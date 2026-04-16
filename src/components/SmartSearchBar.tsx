@@ -346,13 +346,135 @@ const SmartSearchBar = ({ pillsOnly, searchOnly }: SmartSearchBarProps) => {
     };
   }, []);
 
+  // Pills-only mode: just the oval prompt buttons in 2x2 grid
+  if (pillsOnly) {
+    return (
+      <div className="w-full max-w-2xl mx-auto">
+        <div className="grid grid-cols-2 gap-3 px-4">
+          {suggestedPrompts.map((prompt) => (
+            <button
+              key={prompt.label}
+              type="button"
+              onClick={() => handlePromptClick(prompt.label)}
+              aria-label={prompt.ariaLabel}
+              className="premium-pill-3d focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 w-full"
+            >
+              <span className="premium-pill-3d__face text-[15px] sm:text-base w-full justify-center">
+                {prompt.label}
+              </span>
+            </button>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
+  // Search-only mode: just the search bar and dynamic suggestions
+  if (searchOnly) {
+    return (
+      <div className="w-full max-w-2xl mx-auto overflow-hidden">
+        <div
+          className="relative flex items-center rounded-full border-2 border-border bg-card transition-all duration-200 focus-within:border-gold focus-within:ring-2 focus-within:ring-gold/20 sm:rounded-full rounded-[1.5rem]"
+          style={{ boxShadow: "0 4px 20px -4px hsl(220 35% 15% / 0.08), inset 0 1px 0 hsl(0 0% 100% / 0.7)" }}
+        >
+          <Search className="ml-5 w-5 h-5 text-muted-foreground flex-shrink-0 self-center" />
+          <textarea
+            ref={inputRef}
+            value={query}
+            onChange={(e) => setQuery(e.target.value.replace(/\n/g, ""))}
+            onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); handleSubmit(); } }}
+            placeholder="Search…"
+            rows={1}
+            className="flex-1 bg-transparent border-none outline-none py-4 px-4 text-base lg:text-lg text-foreground placeholder:text-muted-foreground/60 font-sans resize-none overflow-hidden search-textarea-mobile"
+            aria-label="Search for help"
+            style={{ lineHeight: '1.4' }}
+          />
+          <button onClick={toggleVoice} aria-label={isListening ? "Stop listening" : supportsVoice ? "Use voice input" : "Voice input not supported"}
+            className={cn("flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center mr-1.5 transition-all duration-200",
+              isListening ? "bg-destructive/10 text-destructive animate-pulse" : voiceStatus === "error" ? "text-destructive/60 hover:text-destructive hover:bg-destructive/5" : "text-muted-foreground hover:text-foreground hover:bg-muted")}>
+            {isListening ? <MicOff className="w-5 h-5" /> : voiceStatus === "processing" ? <Volume2 className="w-5 h-5 animate-pulse" /> : <Mic className="w-5 h-5" />}
+          </button>
+          <button onClick={handleSubmit} aria-label="Search"
+            className="flex-shrink-0 w-10 h-10 rounded-full bg-navy text-primary-foreground flex items-center justify-center mr-1.5 transition-all duration-200 hover:bg-navy-light active:scale-95">
+            <ArrowRight className="w-5 h-5" />
+          </button>
+        </div>
+        {suggestions.length > 0 && (
+          <div className="mt-3 flex flex-wrap justify-center gap-3">
+            {suggestions.map((s) => (
+              <button key={s.path + s.label} type="button" onClick={() => { toast.success(`Taking you to ${s.label}`, { duration: 2000 }); navigate(s.path); }}
+                className="premium-pill-3d focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
+                <span className="premium-pill-3d__face text-[15px] sm:text-base">
+                  <Search className="w-4 h-4 text-gold-dark shrink-0" />
+                  <span>Go to <strong className="font-semibold text-foreground">{s.label}</strong></span>
+                  <ArrowRight className="w-4 h-4 text-muted-foreground shrink-0" />
+                </span>
+              </button>
+            ))}
+          </div>
+        )}
+        {voiceError && !isListening && <p className="mt-2 text-center text-sm text-destructive/80">{voiceError}</p>}
+      </div>
+    );
+  }
+
+  // Default: full component (search + pills together)
   return (
     <div className="w-full max-w-2xl mx-auto mb-10 overflow-hidden">
-      {/* Search bar */}
       <div
         className="relative flex items-center rounded-full border-2 border-border bg-card transition-all duration-200 focus-within:border-gold focus-within:ring-2 focus-within:ring-gold/20 sm:rounded-full rounded-[1.5rem]"
-        style={{
-          boxShadow:
+        style={{ boxShadow: "0 4px 20px -4px hsl(220 35% 15% / 0.08), inset 0 1px 0 hsl(0 0% 100% / 0.7)" }}
+      >
+        <Search className="ml-5 w-5 h-5 text-muted-foreground flex-shrink-0 self-center" />
+        <textarea
+          ref={inputRef}
+          value={query}
+          onChange={(e) => setQuery(e.target.value.replace(/\n/g, ""))}
+          onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); handleSubmit(); } }}
+          placeholder="Search…"
+          rows={1}
+          className="flex-1 bg-transparent border-none outline-none py-4 px-4 text-base lg:text-lg text-foreground placeholder:text-muted-foreground/60 font-sans resize-none overflow-hidden search-textarea-mobile"
+          aria-label="Search for help"
+          style={{ lineHeight: '1.4' }}
+        />
+        <button onClick={toggleVoice} aria-label={isListening ? "Stop listening" : supportsVoice ? "Use voice input" : "Voice input not supported"}
+          className={cn("flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center mr-1.5 transition-all duration-200",
+            isListening ? "bg-destructive/10 text-destructive animate-pulse" : voiceStatus === "error" ? "text-destructive/60 hover:text-destructive hover:bg-destructive/5" : "text-muted-foreground hover:text-foreground hover:bg-muted")}>
+          {isListening ? <MicOff className="w-5 h-5" /> : voiceStatus === "processing" ? <Volume2 className="w-5 h-5 animate-pulse" /> : <Mic className="w-5 h-5" />}
+        </button>
+        <button onClick={handleSubmit} aria-label="Search"
+          className="flex-shrink-0 w-10 h-10 rounded-full bg-navy text-primary-foreground flex items-center justify-center mr-1.5 transition-all duration-200 hover:bg-navy-light active:scale-95">
+          <ArrowRight className="w-5 h-5" />
+        </button>
+      </div>
+      {suggestions.length > 0 && (
+        <div className="mt-3 flex flex-wrap justify-center gap-3">
+          {suggestions.map((s) => (
+            <button key={s.path + s.label} type="button" onClick={() => { toast.success(`Taking you to ${s.label}`, { duration: 2000 }); navigate(s.path); }}
+              className="premium-pill-3d focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
+              <span className="premium-pill-3d__face text-[15px] sm:text-base">
+                <Search className="w-4 h-4 text-gold-dark shrink-0" />
+                <span>Go to <strong className="font-semibold text-foreground">{s.label}</strong></span>
+                <ArrowRight className="w-4 h-4 text-muted-foreground shrink-0" />
+              </span>
+            </button>
+          ))}
+        </div>
+      )}
+      {voiceError && !isListening && <p className="mt-2 text-center text-sm text-destructive/80">{voiceError}</p>}
+      <div className="flex flex-wrap justify-center gap-3 mt-5">
+        {suggestedPrompts.map((prompt) => (
+          <button key={prompt.label} type="button" onClick={() => handlePromptClick(prompt.label)} aria-label={prompt.ariaLabel}
+            className="premium-pill-3d focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
+            <span className="premium-pill-3d__face text-[15px] sm:text-base">{prompt.label}</span>
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default SmartSearchBar;
             "0 4px 20px -4px hsl(220 35% 15% / 0.08), inset 0 1px 0 hsl(0 0% 100% / 0.7)",
         }}
       >
