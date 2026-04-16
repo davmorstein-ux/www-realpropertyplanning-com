@@ -748,7 +748,7 @@ html, body {
     margin-top: -0.5rem !important;
   }
   .premium-tile h3[data-tile-id="financial-planning"] {
-    margin-top: 0.1rem !important;
+    margin-top: 0.35rem !important;
   }
   .premium-tile h3[data-tile-id="wills"] {
     margin-top: -1.2rem !important;
@@ -826,9 +826,9 @@ html, body {
   .premium-tile[data-tile-name="service-areas"] .tile-icon {
     transform: scale(1.21) !important;
   }
-  /* Estate Liquidation: nudge icon up 10% */
+  /* Estate Liquidation: nudge icon up slightly */
   .premium-tile[data-tile-name="estate-liquidation"] .tile-icon {
-    transform: scale(1.045) translateY(-10%) !important;
+    transform: scale(1.045) translateY(-6%) !important;
   }
   /* Nudge icons upward on mobile for these tiles */
   .premium-tile[data-tile-name="wills"] .tile-icon,
