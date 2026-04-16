@@ -866,7 +866,7 @@ html, body {
   }
   /* Mortgage Lending: nudge icon up */
   .premium-tile[data-tile-name="lending"] .tile-icon {
-    transform: scale(1.1) translateY(-22%) !important;
+    transform: scale(1.1) translateY(-32%) !important;
   }
   /* Financial Planner: nudge icon down */
   .premium-tile[data-tile-name="financial-planning"] .tile-icon {
