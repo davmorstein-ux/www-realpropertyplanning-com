@@ -148,7 +148,7 @@ const SmartSearchBar = ({ pillsOnly, searchOnly }: SmartSearchBarProps) => {
   const [suggestions, setSuggestions] = useState<RouteMatch[]>([]);
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const recognitionRef = useRef<any>(null);
-  const attorneyPillTextRef = useRef<HTMLSpanElement | null>(null);
+  
   const navigate = useNavigate();
 
   const supportsVoice = useMemo(
@@ -346,16 +346,6 @@ const SmartSearchBar = ({ pillsOnly, searchOnly }: SmartSearchBarProps) => {
     };
   }, []);
 
-  useEffect(() => {
-    if (!pillsOnly || !attorneyPillTextRef.current) return;
-
-    const frame = window.requestAnimationFrame(() => {
-      const computedLineHeight = window.getComputedStyle(attorneyPillTextRef.current as HTMLSpanElement).lineHeight;
-      console.log("[Attorney resource pill] computed line-height:", computedLineHeight);
-    });
-
-    return () => window.cancelAnimationFrame(frame);
-  }, [pillsOnly]);
 
   const renderSearchBar = () => (
     <div
