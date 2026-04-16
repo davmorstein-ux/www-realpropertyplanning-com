@@ -426,10 +426,10 @@ const SmartSearchBar = ({ pillsOnly, searchOnly }: SmartSearchBarProps) => {
                     <span
                       ref={attorneyPillTextRef}
                       data-attorney-pill-text="true"
-                      className="flex flex-col items-center !leading-[1.8]"
+                      className="block whitespace-pre-line text-center"
+                      style={{ lineHeight: 2.03 }}
                     >
-                      <span>I'm an attorney</span>
-                      <span style={{ marginTop: '4px' }}>looking for a resource</span>
+                      {"I'm an attorney\nlooking for a resource"}
                     </span>
                   ) : (
                     prompt.label
