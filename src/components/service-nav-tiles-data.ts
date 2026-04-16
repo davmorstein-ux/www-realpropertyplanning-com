@@ -71,7 +71,7 @@ export const tileCategories: TileCategory[] = [
       { title: "Home Values\n& Pricing", subtitle: "", href: "/why-valuation-matters", iconSrc: iconHomeValue, labelSpacing: "tight", mobileContentOffsetY: "-1.5%", mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "12%" },
       { title: "Senior\nTransitions", subtitle: "", href: "/senior-move-managers", iconSrc: iconSeniorMoves, labelSpacing: "tight", mobileContentOffsetY: "-3%", mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "10%" },
       { title: "Service Areas", subtitle: "", href: "/counties", iconSrc: iconServiceAreas, iconOffsetY: "4%", mobileTextDown: true, mobileIconDown: true },
-      { title: "Guides &\nResources", subtitle: "", href: "/guides-and-resources", iconSrc: iconResources, labelSpacing: "tight", mobileTextDown: true, mobileIconDown: true },
+      { title: "Guides &\nResources", subtitle: "", href: "/guides-and-resources", iconSrc: iconResources, labelSpacing: "tight", iconOffsetY: "6%", mobileTextDown: true, mobileIconDown: true },
     ],
   },
 ];
