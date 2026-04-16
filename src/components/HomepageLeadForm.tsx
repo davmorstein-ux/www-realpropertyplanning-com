@@ -81,6 +81,8 @@ const HomepageLeadForm = () => {
             type="text"
             name="name"
             required
+            aria-required="true"
+            autoComplete="name"
             className={inputClass}
             placeholder="First and last name"
           />
@@ -95,6 +97,8 @@ const HomepageLeadForm = () => {
             type="email"
             name="email"
             required
+            aria-required="true"
+            autoComplete="email"
             className={inputClass}
             placeholder="name@example.com"
           />
@@ -108,6 +112,7 @@ const HomepageLeadForm = () => {
             id="lead-phone"
             type="tel"
             name="phone"
+            autoComplete="tel"
             className={inputClass}
             placeholder="(555) 123-4567"
           />
@@ -121,6 +126,7 @@ const HomepageLeadForm = () => {
             id="lead-address"
             type="text"
             name="address"
+            autoComplete="street-address"
             className={inputClass}
             placeholder="If you have one in mind"
           />
