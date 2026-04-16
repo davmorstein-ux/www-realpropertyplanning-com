@@ -123,25 +123,26 @@ const CountyPageTemplate = ({
 
       <TrustStrip />
 
-      {/* Services Available — compact grid */}
+      {/* What we handle locally — narrative, not a duplicated services grid */}
       <section className="py-14 lg:py-18 bg-secondary">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-[1140px] mx-auto">
-            <h2 className="font-serif text-2xl text-foreground font-semibold mb-6">
-              What David Can Help With in {countyName}
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-serif text-2xl text-foreground font-semibold mb-4">
+              How a {countyName} Estate Sale Actually Runs
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {services.map((service) => (
-                <Link key={service.slug} to={`/services/${service.slug}`} className="card-3d group p-5">
-                  <h3 className="font-serif text-lg text-foreground font-medium mb-1.5 group-hover:text-gold transition-colors">
-                    {service.shortName}
-                  </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-2">
-                    {service.description}
-                  </p>
-                  <span className="inline-flex items-center text-sm font-medium text-primary group-hover:text-gold transition-colors">
-                    Learn More <ArrowRight className="w-3.5 h-3.5 ml-1 group-hover:translate-x-1 transition-transform" />
-                  </span>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+              In {countyName}, most calls start one of three ways: a personal representative who has just received Letters and needs to know what to do with the house first, an attorney whose client is stuck on the property piece of the file, or an out-of-state heir who has not been inside the home in years. The first conversation is short and concrete — what the property is, who has authority, and what's already been touched.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-5">
+              From there, the work usually includes a date-of-death walk-through with{" "}
+              <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">appraisal-grade pricing analysis</Link>, securing the home and coordinating cleanout, a written prep plan that matches what {countyName} buyers actually expect on this kind of property, and a clean handoff into listing,{" "}
+              <Link to="/how-the-process-works" className="text-accent hover:text-gold underline underline-offset-4">offer review</Link>, and closing. If you're earlier than that — still figuring out what you've inherited — start with the{" "}
+              <Link to="/guides/inherited-house-washington" className="text-accent hover:text-gold underline underline-offset-4">inherited house guide</Link>.
+            </p>
+            <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm">
+              {services.slice(0, 6).map((service) => (
+                <Link key={service.slug} to={`/services/${service.slug}`} className="text-accent hover:text-gold underline underline-offset-4">
+                  {service.shortName}
                 </Link>
               ))}
             </div>
