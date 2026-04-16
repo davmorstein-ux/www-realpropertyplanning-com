@@ -61,7 +61,7 @@ const ForAttorneys = () => (
             </Link>
             <Button
               size="lg"
-              className="px-7 py-4 h-auto rounded-lg bg-[hsl(var(--primary))] text-primary-foreground hover:bg-[hsl(var(--primary)/0.9)]"
+              className="px-7 py-4 h-auto rounded-lg bg-[hsl(215,60%,38%)] text-white hover:bg-[hsl(215,60%,32%)]"
               onClick={() => document.getElementById('areas-of-collaboration')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Attorney Options
@@ -104,10 +104,10 @@ const ForAttorneys = () => (
             ["Divorce Attorneys", "Guide clients through divorce, property division, support, and real estate decisions tied to separation."],
             ["Real Estate Attorneys", "Advise on title, contracts, disputes, ownership rights, and transaction-related legal risk."],
           ].map(([title, desc]) => (
-            <p key={title} className="text-xl md:text-2xl leading-relaxed">
+            <p key={title} className="text-2xl md:text-[1.7rem] leading-relaxed">
               <strong className="text-[#8B6914]">{title}</strong>
-              <span className="text-[#1B2B4B]"> — </span>
-              <span className="text-[#1B2B4B]">{desc}</span>
+              <span className="text-[#131F36]"> — </span>
+              <span className="text-[#131F36]">{desc}</span>
             </p>
           ))}
         </div>

@@ -25,9 +25,14 @@ import expRealtyLogo from "@/assets/exp-realty-real-estate-logo-washington.webp"
 import { useToast } from "@/hooks/use-toast";
 
 const roleOptions = [
-  "Attorney",
-  "Executor",
+  "Individual",
   "Personal Representative",
+  "Attorney",
+  "Tax Attorney",
+  "Financial Planner",
+  "CPA",
+  "Power of Attorney",
+  "Executor",
   "Trustee",
   "Fiduciary",
   "Family Member",
@@ -133,7 +138,7 @@ const Contact = () => {
                 David works with attorneys, executors, fiduciaries, and families across Washington State.
               </p>
               <p className="text-muted-foreground text-[15px] leading-relaxed mb-8">
-                For properties outside Washington, he can connect you with a trusted eXp Realty partner in the right area.
+                For properties outside Washington State, he can connect you with a trusted eXp Realty partner in the right area.
               </p>
 
               {/* Brokerage Info */}
@@ -201,6 +206,12 @@ const Contact = () => {
                     <div className="space-y-2">
                       <Label htmlFor="address">Property Address</Label>
                       <Input id="address" name="address" placeholder="123 Main St, City, State" />
+                    </div>
+                  </div>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <Label htmlFor="zip">Zip Code</Label>
+                      <Input id="zip" name="zip" placeholder="98101" />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="situation">Type of Situation *</Label>
