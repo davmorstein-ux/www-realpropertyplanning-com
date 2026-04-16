@@ -945,7 +945,17 @@ html, body {
     font-size: 0.95rem !important;
   }
   .premium-tile .tile-label-tight[data-tile-id="power-of-attorney"] {
+    margin-top: 0.5rem !important;
+    font-size: 0.95rem !important;
+  }
+  .premium-tile .tile-label-tight[data-tile-id="senior-transitions"] {
     margin-top: 0.3rem !important;
+    font-size: 0.95rem !important;
+  }
+  .premium-tile .tile-label-tight[data-tile-id="guides-resources"] {
+    font-size: 0.95rem !important;
+  }
+  .premium-tile .tile-label-tight[data-tile-id="home-values"] {
     font-size: 0.95rem !important;
   }
 }
