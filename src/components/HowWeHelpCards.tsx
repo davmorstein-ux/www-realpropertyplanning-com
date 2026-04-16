@@ -25,7 +25,7 @@ const cards = [
   {
     iconSrc: estateAppraisalsIcon,
     iconAlt: "Estate appraisal document icon — certified residential appraisals for probate and trusts",
-    iconSize: "w-[200px] h-[140px]",
+    iconSize: "w-[240px] h-[168px]",
     headline: "Estate & Trust Appraisals",
     description: "As a Washington State Certified Residential Appraiser, David provides condition-adjusted, defensible valuations for probate, trust administration, estate settlements, and financial planning purposes — the kind of analysis that holds up when attorneys, courts, and family members ask questions.",
     link: "/real-estate-appraiser",
