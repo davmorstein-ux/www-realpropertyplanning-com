@@ -7,6 +7,7 @@ const cards = [
   {
     iconSrc: inheritedHomeIcon,
     iconAlt: "Inherited home real estate icon — probate and estate property sales in Washington State",
+    iconSize: "w-[240px] h-[168px]",
     headline: "Selling an Inherited Home",
     description: "We handle the details so families don't have to. David Stein's background as both a licensed broker and a certified appraiser means inherited homes are priced honestly — based on actual condition, not an inflated pitch to win a listing. From valuation through closing, we manage the entire process.",
     link: "/probate-estate-sales",
@@ -15,6 +16,7 @@ const cards = [
   {
     iconSrc: seniorHousingIcon,
     iconAlt: "Senior housing transition icon — downsizing and relocation guidance in Washington State",
+    iconSize: "w-[240px] h-[168px]",
     headline: "Senior Housing Transitions",
     description: "Helping seniors and their families navigate the sale of a longtime home with patience and clear communication — whether the next step is assisted living, downsizing, or a move closer to family. We coordinate with care teams, move managers, and advisors throughout the Puget Sound area.",
     link: "/senior-transitions",
@@ -23,6 +25,7 @@ const cards = [
   {
     iconSrc: estateAppraisalsIcon,
     iconAlt: "Estate appraisal document icon — certified residential appraisals for probate and trusts",
+    iconSize: "w-[200px] h-[140px]",
     headline: "Estate & Trust Appraisals",
     description: "As a Washington State Certified Residential Appraiser, David provides condition-adjusted, defensible valuations for probate, trust administration, estate settlements, and financial planning purposes — the kind of analysis that holds up when attorneys, courts, and family members ask questions.",
     link: "/real-estate-appraiser",
@@ -47,7 +50,7 @@ const HowWeHelpCards = () => {
                 <img
                   src={card.iconSrc}
                   alt={card.iconAlt}
-                  className="w-[240px] h-[168px] object-contain"
+                  className={`${card.iconSize} object-contain`}
                   loading="lazy"
                 />
               </div>
