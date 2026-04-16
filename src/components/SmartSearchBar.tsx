@@ -426,7 +426,7 @@ const SmartSearchBar = ({ pillsOnly, searchOnly }: SmartSearchBarProps) => {
                     <span
                       ref={attorneyPillTextRef}
                       data-attorney-pill-text="true"
-                      className="flex flex-col items-center !leading-[2.25]"
+                      className="flex flex-col items-center !leading-[2.8]"
                     >
                       <span>I'm an attorney</span>
                       <span style={{ marginTop: '4px' }}>looking for a resource</span>
