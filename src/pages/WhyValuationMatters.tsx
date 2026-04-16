@@ -102,10 +102,10 @@ const WhyValuationMatters = () => {
               Pricing & Valuation Expertise
             </p>
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-[22px]">
-              Why Accurate Pricing Is the Most Important Decision in Estate Property Sales
+              The One Person on the Deal Who Was Trained to Price the House — Not Just List It
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-[30px]">
-              Real Property Planning brings valuation-informed real estate guidance to probate and estate property sales — helping executors, attorneys, and families navigate pricing, coordination, and next steps with greater clarity and confidence.
+              Most agents pick a number. A licensed broker who is also a Washington State Certified Residential Appraiser builds one — with documented condition adjustments, comparable analysis, and the same logic an appraiser will apply on the buyer's loan. For probate, trust, divorce, and inherited property, that distinction is the whole game.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Link to="/contact">
