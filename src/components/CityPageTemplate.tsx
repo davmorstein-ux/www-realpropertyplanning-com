@@ -120,23 +120,29 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
 
       <TrustStrip />
 
-      {/* Services Available — compact */}
+      {/* What we handle locally — narrative replacing the duplicated services grid */}
       <section className="py-14 lg:py-18 bg-secondary">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-[1140px] mx-auto">
-            <h2 className="font-serif text-2xl text-foreground font-semibold mb-5">
-              Services in {city.name}
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-serif text-2xl text-foreground font-semibold mb-4">
+              How an Estate Sale Tends to Run in {city.name}
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {services.map((service) => (
-                <Link key={service.slug} to={`/cities/${city.slug}/${service.slug}`} className="card-3d group p-5">
-                  <h3 className="font-serif text-lg text-foreground font-medium mb-1.5 group-hover:text-gold transition-colors">
-                    {service.shortName}
-                  </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-2">{service.description}</p>
-                  <span className="inline-flex items-center text-sm font-medium text-primary group-hover:text-gold transition-colors">
-                    Learn More <ArrowRight className="w-3.5 h-3.5 ml-1 group-hover:translate-x-1 transition-transform" />
-                  </span>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+              {city.localKnowledge ||
+                `Most ${city.name} calls start with a property the heirs haven't been inside in months — or years — and a personal representative trying to sort court timing, repairs, and pricing all at once. The first conversation is short and concrete: who has authority, what condition the home is actually in, and what's already been touched.`}
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-5">
+              From there, we run the date-of-death walk-through, line up cleanout and pre-list work that{" "}
+              <Link to={`/${city.countySlug}`} className="text-accent hover:text-gold underline underline-offset-4">{city.county}</Link>{" "}
+              buyers actually pay extra for, build a written pricing analysis the estate file can defend, and handle the sale through closing. If you're earlier than that — still figuring out what was inherited — start with the{" "}
+              <Link to="/guides/inherited-house-washington" className="text-accent hover:text-gold underline underline-offset-4">inherited house in Washington guide</Link>{" "}
+              or the{" "}
+              <Link to="/executors" className="text-accent hover:text-gold underline underline-offset-4">executor roadmap</Link>.
+            </p>
+            <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm">
+              {services.slice(0, 6).map((service) => (
+                <Link key={service.slug} to={`/cities/${city.slug}/${service.slug}`} className="text-accent hover:text-gold underline underline-offset-4">
+                  {service.shortName} in {city.name}
                 </Link>
               ))}
             </div>
