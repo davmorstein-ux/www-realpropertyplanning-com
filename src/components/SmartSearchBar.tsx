@@ -399,22 +399,30 @@ const SmartSearchBar = ({ pillsOnly, searchOnly }: SmartSearchBarProps) => {
     return (
       <div className="w-full max-w-2xl mx-auto">
         <div className="grid grid-cols-2 gap-3 px-4">
-          {suggestedPrompts.map((prompt) => (
-            <button
-              key={prompt.label}
-              type="button"
-              onClick={() => handlePromptClick(prompt.label)}
-              aria-label={prompt.ariaLabel}
-              className="premium-pill-3d focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 w-full"
-            >
-              <span
-                className="premium-pill-3d__face text-[15px] sm:text-base w-full justify-center"
-                style={{ lineHeight: prompt.label.length > 30 ? '0.75' : undefined }}
+          {suggestedPrompts.map((prompt) => {
+            const isAttorneyResourcePrompt = prompt.label === "I'm an attorney looking for a resource";
+
+            return (
+              <button
+                key={prompt.label}
+                type="button"
+                onClick={() => handlePromptClick(prompt.label)}
+                aria-label={prompt.ariaLabel}
+                className="premium-pill-3d focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 w-full"
               >
-                {prompt.label}
-              </span>
-            </button>
-          ))}
+                <span className="premium-pill-3d__face text-[15px] sm:text-base w-full justify-center">
+                  {isAttorneyResourcePrompt ? (
+                    <span className="flex flex-col items-center leading-[0.65]">
+                      <span>I'm an attorney</span>
+                      <span>looking for a resource</span>
+                    </span>
+                  ) : (
+                    prompt.label
+                  )}
+                </span>
+              </button>
+            );
+          })}
         </div>
       </div>
     );
