@@ -930,7 +930,7 @@ html, body {
     transform: translateY(4%) !important;
   }
   .premium-tile[data-tile-name="realtor"] .tile-icon {
-    transform: translateX(2%) translateY(6%) scale(1.1) !important;
+    transform: translateX(-2%) translateY(6%) scale(1.1) !important;
     transform-origin: center center !important;
   }
 
