@@ -723,7 +723,7 @@ html, body {
   }
   /* Realtor tile: nudge icon+text group up on desktop */
   .premium-tile[data-tile-name="realtor"] > div > span {
-    transform: translateY(calc(-10.2% + 1.5%)) !important;
+    transform: translateY(calc(-10.2% + 2%)) !important;
   }
 }
 /* Non-premium tile icons (cards with group class) */
