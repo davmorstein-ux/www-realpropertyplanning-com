@@ -36,7 +36,7 @@ const HomepageTeamSection = () => {
               <img
                 src={tile.icon}
                 alt={tile.label}
-                className="w-12 h-12 object-contain mb-3"
+                className="w-36 h-36 object-contain mb-3"
                 loading="lazy"
               />
               <span className="font-semibold text-base text-foreground">{tile.label}</span>

@@ -69,7 +69,7 @@ const HomepageFAQ = () => {
                 value={`faq-${i}`}
                 className="bg-card border border-border rounded-2xl overflow-hidden data-[state=open]:border-gold/25 transition-colors"
               >
-                <AccordionTrigger className="text-left font-serif text-lg md:text-xl font-semibold text-foreground hover:text-gold hover:no-underline px-6 py-5">
+                <AccordionTrigger className="text-left font-serif text-xl md:text-2xl font-semibold text-foreground hover:text-gold hover:no-underline px-6 py-5">
                   {faq.q}
                 </AccordionTrigger>
                 <AccordionContent className="px-6 pb-5 pt-0 text-muted-foreground text-lg leading-relaxed">
