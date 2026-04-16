@@ -922,12 +922,12 @@ html, body {
   }
 
   .premium-tile[data-tile-name="senior-moves"] .tile-icon,
-  .premium-tile[data-tile-name="the-process"] .tile-icon,
+  .premium-tile[data-tile-name="home-value"] .tile-icon,
   .premium-tile[data-tile-name="cpas"] .tile-icon {
     transform: translateY(8%) !important;
   }
-  .premium-tile[data-tile-name="home-value"] .tile-icon {
-    transform: translateY(14%) !important;
+  .premium-tile[data-tile-name="the-process"] .tile-icon {
+    transform: scale(1.1) translateY(8%) !important;
   }
   .premium-tile[data-tile-name="lending"] .tile-icon {
     transform: translateY(0%) !important;
@@ -940,7 +940,7 @@ html, body {
     transform-origin: center center !important;
   }
   .premium-tile[data-tile-name="guides-resources"] .tile-icon {
-    transform: scale(1.18) translateX(1%) translateY(2%) !important;
+    transform: scale(1.18) translateX(4%) translateY(2%) !important;
   }
 
   .premium-tile h3[data-tile-id="cpas"] {
@@ -955,10 +955,6 @@ html, body {
   }
   /* Attorneys: 10% bigger on desktop */
   .premium-tile[data-tile-name="attorneys"] .tile-icon {
-    transform: scale(1.1) !important;
-  }
-  /* Service Areas: 10% bigger on desktop */
-  .premium-tile[data-tile-name="service-areas"] .tile-icon {
     transform: scale(1.1) !important;
   }
 }
