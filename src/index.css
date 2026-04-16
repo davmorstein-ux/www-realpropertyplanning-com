@@ -805,10 +805,10 @@ html, body {
     transform: scale(1.1) !important;
     transform-origin: top center !important;
   }
-  /* The Process tile: lower icon */
+   /* The Process tile: lower icon */
   .premium-tile[data-tile-name="the-process"] .tile-icon {
     transform-origin: bottom center !important;
-    transform: scale(1.365) translateY(10%) !important;
+    transform: scale(1.365) translateY(14%) !important;
   }
   /* Realtor: center icon on mobile */
   .premium-tile[data-tile-name="realtor"] .tile-icon {
@@ -832,7 +832,7 @@ html, body {
   }
   /* Power of Attorney: reduce icon size 10%, nudge down */
   .premium-tile[data-tile-name="power-of-attorney"] .tile-icon {
-    transform: scale(0.9) translateY(16%) !important;
+    transform: scale(0.9) translateY(20%) !important;
   }
   /* Guides & Resources: nudge icon down */
   .premium-tile[data-tile-name="guides-resources"] .tile-icon {
@@ -840,7 +840,7 @@ html, body {
   }
   /* Senior Transitions: move icon down */
   .premium-tile[data-tile-name="senior-transitions"] .tile-icon {
-    transform: scale(1.18) translateY(-4%) !important;
+    transform: scale(1.18) translateY(0%) !important;
   }
   /* Home Values & Pricing: nudge icon down */
   .premium-tile[data-tile-name="home-values"] .tile-icon {
@@ -852,11 +852,19 @@ html, body {
   }
   /* Mortgage Lending: nudge icon up */
   .premium-tile[data-tile-name="lending"] .tile-icon {
-    transform: scale(1.1) translateY(-4%) !important;
+    transform: scale(1.1) translateY(-8%) !important;
   }
   /* Financial Planner: nudge icon down */
   .premium-tile[data-tile-name="financial-planning"] .tile-icon {
-    transform: scale(1.1) translateY(4%) !important;
+    transform: scale(1.1) translateY(8%) !important;
+  }
+  /* Probate Terms: nudge icon up */
+  .premium-tile[data-tile-name="probate-terms"] .tile-icon {
+    transform: scale(1.1) translateY(-6%) !important;
+  }
+  /* CPAs: nudge icon up */
+  .premium-tile[data-tile-name="cpas"] .tile-icon {
+    transform: scale(1.1) translateY(-6%) !important;
   }
 
   .attorney-tiles-grid .premium-tile .tile-icon {
