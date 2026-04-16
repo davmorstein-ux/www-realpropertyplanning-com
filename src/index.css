@@ -777,6 +777,9 @@ html, body {
   line-height: 0.82 !important;
   margin-top: 0.18rem !important;
 }
+.premium-tile .tile-label-tight[data-tile-id="lending"] {
+  line-height: 1.05 !important;
+}
 
 .service-nav-tile-link {
   position: absolute;
