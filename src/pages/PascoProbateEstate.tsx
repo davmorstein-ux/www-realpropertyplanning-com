@@ -76,8 +76,8 @@ const PascoProbateEstate = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Probate & Estate Real Estate in Pasco, Washington | Real Property Planning"
-        description="Guidance for executors and families handling inherited property in Pasco. Clear support for diverse property conditions, realistic pricing, and coordinated next steps."
+        title="Probate & Estate Real Estate in Pasco, WA"
+        description="Guidance for executors and families with inherited property in Pasco, WA. Support for diverse property conditions and coordinated next steps."
       />
       <BreadcrumbSchema items={[{ name: "Counties", url: "/counties" }, { name: "Pasco", url: "/pasco-probate-estate-real-estate" }]} />
       <Header />

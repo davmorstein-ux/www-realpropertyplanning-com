@@ -89,8 +89,8 @@ const SpokaneProbateEstate = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Probate & Estate Real Estate in Spokane, Washington | Real Property Planning"
-        description="Guidance for executors and families handling inherited property in Spokane. Local coordination, clear communication, and valuation-informed strategy for out-of-area decision-makers."
+        title="Probate & Estate Real Estate in Spokane, WA"
+        description="Guidance for executors and families with inherited property in Spokane, WA. Local coordination and valuation-informed strategy from afar."
       />
       <BreadcrumbSchema
         items={[

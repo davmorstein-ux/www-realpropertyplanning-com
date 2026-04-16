@@ -88,8 +88,8 @@ const OlympiaProbateEstate = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Probate & Estate Real Estate in Olympia, Washington | Real Property Planning"
-        description="Guidance for families, executors, and seniors handling estate or inherited property in Olympia. Support for transitions, timing, and clear next steps."
+        title="Probate & Estate Real Estate in Olympia, WA"
+        description="Guidance for families, executors, and seniors with estate or inherited property in Olympia, WA. Support for transitions, timing, and next steps."
       />
       <BreadcrumbSchema
         items={[

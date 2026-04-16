@@ -34,7 +34,7 @@ const RentonProbateEstate = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEOHead title="Probate & Estate Real Estate in Renton, Washington | Real Property Planning" description="Guidance for executors and families handling inherited property in Renton. Practical support for neighborhood-specific pricing, transition decisions, and coordinated next steps." />
+      <SEOHead title="Probate & Estate Real Estate in Renton, WA" description="Guidance for executors and families with inherited property in Renton, WA. Neighborhood-specific pricing and coordinated next steps." />
       <BreadcrumbSchema items={[{ name: "King County", url: "/king-county" }, { name: "Renton", url: "/renton-probate-estate-real-estate" }]} />
       <Header />
       <main id="main-content">

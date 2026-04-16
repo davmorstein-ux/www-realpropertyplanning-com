@@ -88,8 +88,8 @@ const RedmondProbateEstate = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Probate & Estate Real Estate in Redmond, Washington | Real Property Planning"
-        description="Guidance for executors, trustees, and families handling inherited property in Redmond. Support for relocation, valuation, and coordinated decision-making."
+        title="Probate & Estate Real Estate in Redmond, WA"
+        description="Guidance for executors, trustees, and families with inherited property in Redmond, WA. Relocation, valuation, and coordinated decisions."
       />
       <BreadcrumbSchema
         items={[

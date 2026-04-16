@@ -88,8 +88,8 @@ const VancouverWaProbateEstate = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Probate & Estate Real Estate in Vancouver, Washington | Real Property Planning"
-        description="Guidance for families, executors, and trustees handling inherited property in Vancouver, WA. Support for relocation, timing, and coordinated transitions."
+        title="Probate & Estate Real Estate in Vancouver, WA"
+        description="Guidance for families, executors, and trustees with inherited property in Vancouver, WA. Relocation, timing, and coordinated transitions."
       />
       <BreadcrumbSchema
         items={[
