@@ -7,6 +7,7 @@ const cards = [
   {
     iconSrc: inheritedHomeIcon,
     iconAlt: "Inherited home real estate icon — probate and estate property sales in Washington State",
+    iconSize: "w-[240px] h-[168px]",
     headline: "Selling an Inherited Home",
     description: "We handle the details so families don't have to. David Stein's background as both a licensed broker and a certified appraiser means inherited homes are priced honestly — based on actual condition, not an inflated pitch to win a listing. From valuation through closing, we manage the entire process.",
     link: "/probate-estate-sales",
