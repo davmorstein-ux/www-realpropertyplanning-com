@@ -153,22 +153,64 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
       {/* FAQ */}
       <PageFAQ faqs={faqs} heading={`${city.name} FAQ`} />
 
-      {/* CTA */}
-      <section className="py-16 lg:py-20 bg-primary">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-serif text-3xl text-primary-foreground font-semibold mb-4">
-              Ready to Talk About Your {city.name} Property?
-            </h2>
-            <p className="text-primary-foreground/70 text-lg mb-6">
-              David can walk you through your situation and help you figure out next steps.
-            </p>
-            <Link to="/contact">
-              <Button variant="gold" size="lg">Start a Conversation</Button>
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* CTA — varied by community tone so the closing copy isn't identical city-to-city */}
+      {(() => {
+        const ctaCopy: Record<string, { h2: string; body: string; cta: string }> = {
+          premium: {
+            h2: `Considering an Estate Sale on a ${city.name} Property?`,
+            body: `Send a brief situation overview — the home, who has authority, and what's already been touched. David typically responds within one business day with a recommended next step.`,
+            cta: `Discuss a ${city.name} Estate`,
+          },
+          urban: {
+            h2: `Have a Probate or Inherited Property in ${city.name}?`,
+            body: `One conversation usually clarifies what to do first with the home — even if probate isn't open yet. No commitment, no listing pitch.`,
+            cta: `Start a ${city.name} Conversation`,
+          },
+          suburban: {
+            h2: `Working Through a Family Home in ${city.name}?`,
+            body: `Most ${city.name} families call before they have a plan — just a situation. That's the right time. We'll talk through where things stand and what makes sense first.`,
+            cta: `Talk Through a ${city.name} Sale`,
+          },
+          waterfront: {
+            h2: `Selling a ${city.name} Waterfront or View Property?`,
+            body: `These properties value differently than standard listings. A short call clarifies what the estate file needs, what buyers will actually look at, and where to start.`,
+            cta: `Discuss a ${city.name} Property`,
+          },
+          smalltown: {
+            h2: `Need Help with an Inherited Home in ${city.name}?`,
+            body: `Smaller markets reward accurate pricing and patient preparation. We'll talk through condition, timing, and what's worth doing before the home is listed.`,
+            cta: `Call About ${city.name}`,
+          },
+          military: {
+            h2: `Managing a ${city.name} Property from a Distance?`,
+            body: `On-site coordination, vendor management, and structured updates — built around whatever timeline and travel window you actually have.`,
+            cta: `Coordinate a ${city.name} Sale`,
+          },
+          rural: {
+            h2: `Have an Inherited Property Near ${city.name}?`,
+            body: `Acreage, outbuildings, and rural condition issues need on-site assessment. A short call defines what the property is and what the next concrete step looks like.`,
+            cta: `Walk Through a ${city.name} Property`,
+          },
+        };
+        const copy = ctaCopy[tone] || ctaCopy.suburban;
+        return (
+          <section className="py-16 lg:py-20 bg-primary">
+            <div className="container px-6 lg:px-8">
+              <div className="max-w-3xl mx-auto text-center">
+                <h2 className="font-serif text-3xl text-primary-foreground font-semibold mb-4">
+                  {copy.h2}
+                </h2>
+                <p className="text-primary-foreground/70 text-lg mb-6">
+                  {copy.body}
+                </p>
+                <Link to="/contact">
+                  <Button variant="gold" size="lg">{copy.cta}</Button>
+                </Link>
+              </div>
+            </div>
+          </section>
+        );
+      })()}
 
       {/* Related Links — compact */}
       <section className="py-10 bg-background">
