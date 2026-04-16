@@ -48,7 +48,7 @@ export const tileCategories: TileCategory[] = [
       { title: "Financial\nPlanning", subtitle: "", href: "/for-financial-planners", iconSrc: iconFinancialPlanning, labelSpacing: "tight", iconOffsetY: "4%", mobileContentOffsetY: "-1%", mobileIconDown: true, mobileIconOffsetY: "0%" },
       { title: "Mortgage\nLending", subtitle: "", href: "/lenders-and-financing-specialists", iconSrc: iconLending, labelSpacing: "tight", mobileContentOffsetY: "-2%", mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "14%" },
       { title: "Estate\nLiquidation", subtitle: "", href: "/estate-liquidation", iconSrc: iconEstateLiquidation, labelSpacing: "tight", mobileTextDown: true, mobileIconDown: true },
-      { title: "Realtor", subtitle: "", href: "/realtor", iconSrc: iconRealtor, contentOffsetY: "4%", mobileContentOffsetY: "-4%", mobileTextDown: true, mobileIconDown: true },
+      { title: "Realtor", subtitle: "", href: "/realtor", iconSrc: iconRealtor, mobileTextDown: true, mobileIconDown: true },
       { title: "Real Estate\nAppraiser", subtitle: "", href: "/real-estate-appraiser", iconSrc: iconAppraiser, labelSpacing: "tight", mobileTextDown: true, mobileIconDown: true, iconScale: 1.21, textOffsetY: "20px" },
       { title: "Senior Living", subtitle: "", href: "/senior-living-and-relocation", iconSrc: iconSeniorLiving, mobileTextDown: true, mobileIconDown: true },
     ],
