@@ -474,9 +474,7 @@ const SmartSearchBar = ({ pillsOnly, searchOnly }: SmartSearchBarProps) => {
   );
 };
 
-        }}
-      >
-        <Search className="ml-5 w-5 h-5 text-muted-foreground flex-shrink-0 self-center" />
+export default SmartSearchBar;
 
         <textarea
           ref={inputRef}
