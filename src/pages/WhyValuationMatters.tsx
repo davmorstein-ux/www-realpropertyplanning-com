@@ -57,20 +57,20 @@ const situations = [
 
 const faqs = [
   {
-    question: "Why is valuation expertise especially important in probate situations?",
-    answer: "Probate properties are often in non-standard condition — outdated, cluttered, vacant, or in need of repair. Standard comparative market analyses may not account for these factors. The dual credentials at Real Property Planning — licensed broker and certified appraiser — allow properties to be evaluated with greater accuracy and nuance.",
+    question: "What is the difference between a CMA, a BPO, and an appraisal — and which one do I need?",
+    answer: "A CMA (Comparative Market Analysis) is a listing agent's pricing opinion based on recent comparable sales — useful for marketing, but not a formal valuation. A BPO is a broker's price opinion, often used by lenders and asset managers. An appraisal is a USPAP-compliant valuation by a state-licensed or certified appraiser, with documented adjustments and a supportable conclusion. For probate, trust accounting, divorce, or any situation where the number has to defend itself, you want an appraisal — or at minimum a CMA built by someone trained as an appraiser.",
   },
   {
-    question: "Does Real Property Planning provide formal appraisals?",
-    answer: "Real Property Planning includes Washington state certified residential appraiser credentials. In most client engagements, the primary role is real estate brokerage providing pricing strategy and sale execution. Formal appraisal services are available separately when needed.",
+    question: "Do you do date-of-death appraisals for stepped-up basis?",
+    answer: "Yes. A date-of-death valuation establishes the home's fair market value as of the day the owner passed away — the basis the IRS uses to calculate stepped-up basis for heirs. We can produce this as a formal appraisal report when the CPA or attorney requires one, or as a documented broker valuation when the situation allows for less formality.",
   },
   {
-    question: "How does the appraisal background improve the sale process?",
-    answer: "Understanding how appraisers evaluate property helps Real Property Planning anticipate buyer financing challenges, price properties more accurately, and identify condition issues that could affect value — all before the property reaches the market. This reduces surprises and improves outcomes.",
+    question: "We've already had two agents give us very different prices. How do we know which one to trust?",
+    answer: "Ask both agents to show you the comparables they used and the specific dollar adjustments they made for condition, age, and features. A defensible price has math behind it. A guess has a number behind it. We're happy to do a third opinion that walks you through the actual adjustments — and tells you honestly if one of the first two was right.",
   },
   {
-    question: "Can Real Property Planning help when family members disagree about a property's value?",
-    answer: "Yes. Pricing disagreements are common in inherited and estate situations. Real Property Planning provides objective, market-grounded perspective that helps families move past disagreement toward a realistic plan — often by explaining the factors that drive actual buyer behavior and appraised value.",
+    question: "If you're an appraiser, can you also be the listing agent — isn't that a conflict?",
+    answer: "Real Property Planning provides brokerage services as the listing agent, drawing on appraiser training to inform pricing. When a formal, USPAP-compliant appraisal report is required (for example, for tax filings, court, or trust accounting), that work is done as a separate engagement under appraiser independence rules — not bundled with the listing.",
   },
 ];
 
@@ -78,8 +78,8 @@ const WhyValuationMatters = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Why Valuation Matters in Probate & Estate Property Sales | Real Property Planning"
-        description="Learn why accurate property valuation is critical in probate, estate, and inherited home sales — and how a broker with certified appraisal credentials prevents costly pricing mistakes."
+        title="Estate Property Valuation in Washington | Broker + Certified Appraiser"
+        description="Defensible pricing for probate, trust, and inherited Washington homes — built by a licensed broker who is also a Washington State Certified Residential Appraiser."
         jsonLd={articleSchema({
           headline: "Why Pricing & Valuation Matter in Estate Property Sales",
           description: "How broker and certified appraiser expertise prevents costly pricing mistakes in estate property.",
