@@ -721,6 +721,10 @@ html, body {
   .premium-tile:has(.service-nav-tile-link:focus-visible) .tile-icon {
     scale: 1.1 !important;
   }
+  /* Realtor tile: nudge icon+text group up on desktop */
+  .premium-tile[data-tile-name="realtor"] > div > span {
+    transform: translateY(calc(-10.2% - 3%)) !important;
+  }
 }
 /* Non-premium tile icons (cards with group class) */
 .tile-icon-hover {
