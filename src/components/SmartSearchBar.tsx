@@ -129,10 +129,10 @@ function findTopRoutes(input: string, max = 3): RouteMatch[] {
 }
 
 const suggestedPrompts = [
-  { label: "I'm an executor", ariaLabel: "I'm an executor managing estate property in Washington State" },
-  { label: "I need help selling an inherited home", ariaLabel: "I need help selling an inherited home in Washington State" },
-  { label: "I'm helping a senior move", ariaLabel: "I'm helping a senior move — transition guidance and real estate support" },
-  { label: "I'm an attorney looking for a resource", ariaLabel: "I'm an attorney looking for a real estate resource in Washington State" },
+  { label: "I'm an executor", mobileLabel: "I'm an executor", ariaLabel: "I'm an executor managing estate property in Washington State" },
+  { label: "I need help selling an inherited home", mobileLabel: "I need to sell an inherited home", ariaLabel: "I need help selling an inherited home in Washington State" },
+  { label: "I'm helping a senior move", mobileLabel: "I'm helping a senior move", ariaLabel: "I'm helping a senior move — transition guidance and real estate support" },
+  { label: "I'm an attorney looking for a resource", mobileLabel: "I'm an attorney seeking a resource", ariaLabel: "I'm an attorney looking for a real estate resource in Washington State" },
 ];
 
 interface SmartSearchBarProps {
@@ -410,35 +410,20 @@ const SmartSearchBar = ({ pillsOnly, searchOnly }: SmartSearchBarProps) => {
     return (
       <div className="w-full max-w-2xl mx-auto">
         <div className="grid grid-cols-2 gap-3 px-4">
-          {suggestedPrompts.map((prompt) => {
-            const isAttorneyResourcePrompt = prompt.label === "I'm an attorney looking for a resource";
-
-            return (
-              <button
-                key={prompt.label}
-                type="button"
-                onClick={() => handlePromptClick(prompt.label)}
-                aria-label={prompt.ariaLabel}
-                className="premium-pill-3d focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 w-full"
-              >
-                <span className="premium-pill-3d__face text-[15px] sm:text-base w-full justify-center">
-                  {isAttorneyResourcePrompt ? (
-                    <span
-                      ref={attorneyPillTextRef}
-                      data-attorney-pill-text="true"
-                      className="block text-center"
-                      style={{ lineHeight: 2.5 }}
-                    >
-                      <span className="block">I'm an attorney</span>
-                      <span className="relative top-[2px] block">looking for a resource</span>
-                    </span>
-                  ) : (
-                    prompt.label
-                  )}
-                </span>
-              </button>
-            );
-          })}
+          {suggestedPrompts.map((prompt) => (
+            <button
+              key={prompt.label}
+              type="button"
+              onClick={() => handlePromptClick(prompt.label)}
+              aria-label={prompt.ariaLabel}
+              className="premium-pill-3d homepage-pill focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 w-full"
+            >
+              <span className="premium-pill-3d__face homepage-pill__face w-full justify-center">
+                <span className="sm:hidden">{prompt.mobileLabel}</span>
+                <span className="hidden sm:inline">{prompt.label}</span>
+              </span>
+            </button>
+          ))}
         </div>
       </div>
     );

@@ -684,6 +684,27 @@ html, body {
     inset 0 1px 0 hsl(0 0% 100% / 0.7);
 }
 
+/* Homepage pill buttons — uniform sizing on mobile */
+@media (max-width: 639px) {
+  .homepage-pill {
+    height: 72px;
+    padding: 4px 4px 7px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .homepage-pill .homepage-pill__face {
+    height: 100%;
+    min-height: unset;
+    padding: 0.4rem 0.75rem;
+    font-size: 13px;
+    line-height: 1.25;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 /* ═══════════════════════════════════════════════
    PREMIUM TILE — image-based 3D tile button
 ═══════════════════════════════════════════════ */
