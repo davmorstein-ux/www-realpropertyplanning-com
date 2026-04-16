@@ -1003,7 +1003,7 @@ html, body {
     font-size: 0.95rem !important;
   }
   .premium-tile .tile-label-tight[data-tile-id="lending"] {
-    margin-top: -1.1rem !important;
+    margin-top: -1.5rem !important;
   }
   .premium-tile .tile-label-tight[data-tile-id="estate-liquidation"] {
     margin-top: -0.1rem !important;
