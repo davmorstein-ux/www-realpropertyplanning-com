@@ -28,7 +28,7 @@ const tileAltText: Record<string, string> = {
 const ServiceNavTileCard = ({ tile, index, columns = 3 }: { tile: ServiceTile; index: number; columns?: number }) => {
   const contentStyle: React.CSSProperties = {};
   if (tile.contentOffsetY) {
-    contentStyle['--tw-translate-y' as string] = `calc(-10.2% + ${tile.contentOffsetY})`;
+    contentStyle.transform = `translateY(calc(-10.2% + ${tile.contentOffsetY}))`;
   }
   if (tile.mobileContentOffsetY) {
     contentStyle['--mobile-offset' as string] = tile.mobileContentOffsetY;
