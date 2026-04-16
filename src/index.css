@@ -830,21 +830,25 @@ html, body {
   .premium-tile[data-tile-name="estate-liquidation"] .tile-icon {
     transform: scale(1.045) translateY(-6%) !important;
   }
-  /* Power of Attorney: reduce icon size 10% */
+  /* Power of Attorney: reduce icon size 10%, nudge down */
   .premium-tile[data-tile-name="power-of-attorney"] .tile-icon {
-    transform: scale(0.9) translateY(8%) !important;
+    transform: scale(0.9) translateY(12%) !important;
   }
-  /* Guides & Resources: nudge icon down slightly */
+  /* Guides & Resources: nudge icon down */
   .premium-tile[data-tile-name="guides-resources"] .tile-icon {
-    transform: scale(1.18) translateY(-14%) !important;
+    transform: scale(1.18) translateY(-10%) !important;
   }
   /* Senior Transitions: move icon down */
   .premium-tile[data-tile-name="senior-transitions"] .tile-icon {
-    transform: scale(1.18) translateY(-8%) !important;
+    transform: scale(1.18) translateY(-4%) !important;
   }
-  /* Home Values & Pricing: nudge icon down slightly */
+  /* Home Values & Pricing: nudge icon down */
   .premium-tile[data-tile-name="home-values"] .tile-icon {
-    transform: scale(1.18) translateY(-14%) !important;
+    transform: scale(1.18) translateY(-10%) !important;
+  }
+  /* Wills: nudge icon up */
+  .premium-tile[data-tile-name="wills"] .tile-icon {
+    transform: scale(1.1) translateY(-6%) !important;
   }
 
   .attorney-tiles-grid .premium-tile .tile-icon {
@@ -956,6 +960,7 @@ html, body {
     font-size: 0.95rem !important;
   }
   .premium-tile .tile-label-tight[data-tile-id="home-values"] {
+    margin-top: -0.25rem !important;
     font-size: 0.95rem !important;
   }
 }
