@@ -4,18 +4,23 @@ import { tileCategories } from "./service-nav-tiles-data";
 
 const ServiceNavTiles = () => {
   return (
-    <section className="py-20 lg:py-28 bg-secondary">
+    <section className="pt-6 pb-20 lg:pt-8 lg:pb-28 bg-secondary">
       <div className="mx-auto max-w-[3300px] px-0 sm:px-1 lg:px-2">
-        <div className="text-center mb-14">
-          <SmartSearchBar />
+
+        {/* 1. Oval prompt buttons — 2 rows of 2 */}
+        <div className="flex flex-col items-center gap-3 mb-4">
+          <SmartSearchBar pillsOnly />
         </div>
 
-        <h2 className="text-center text-3xl sm:text-4xl lg:text-[2.6rem] font-bold font-serif text-foreground tracking-tight mb-2">
+        {/* 2. Heading */}
+        <h2 className="text-center text-3xl sm:text-4xl lg:text-[2.6rem] font-bold font-serif text-foreground tracking-tight mb-3">
           How can we help today?
         </h2>
-        <p className="text-center text-muted-foreground text-lg mb-14">
-          Choose a service, role, or next step below.
-        </p>
+
+        {/* 3. Search bar */}
+        <div className="text-center mb-10">
+          <SmartSearchBar searchOnly />
+        </div>
 
         {tileCategories.map((category) => (
           <div key={category.label} className="mb-20 last:mb-0">
@@ -30,7 +35,6 @@ const ServiceNavTiles = () => {
               {category.tiles.map((tile, i) => (
                 <ServiceNavTileCard key={tile.href + tile.title} tile={tile} index={i} />
               ))}
-              {/* Pad incomplete rows with invisible placeholders to keep tile sizes uniform */}
               {category.tiles.length % 3 !== 0 &&
                 Array.from({ length: 3 - (category.tiles.length % 3) }).map((_, i) => (
                   <div key={`placeholder-${i}`} className="invisible pointer-events-none" aria-hidden="true">
