@@ -33,8 +33,9 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-cream">
       <SEOHead
-        title="Probate Real Estate & Senior Transition Services | Puget Sound, Washington | Real Property Planning"
-        description="Probate real estate, estate appraisals & senior transition guidance for families and professionals throughout Washington State. David Stein — eXp Realty. Call (206) 900-3015."
+        title="Probate Real Estate & Senior Transitions | Puget Sound WA"
+        description="Probate real estate, estate appraisals, and senior transition guidance for Washington families and professionals. Call (206) 900-3015."
+        canonical="https://www.realpropertyplanning.com/"
         jsonLd={jsonLd}
       />
       <Header />

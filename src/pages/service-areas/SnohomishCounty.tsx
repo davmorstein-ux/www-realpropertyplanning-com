@@ -35,8 +35,9 @@ const jsonLd = {
 const SnohomishCountyServiceArea = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
-      title="Probate, Estate & Senior Transition Real Estate in Snohomish County, WA | Real Property Planning"
-      description="Serving families, executors, and seniors throughout Snohomish County — Everett, Lynnwood, Marysville, Bothell, Edmonds, Mukilteo, Monroe, and surrounding areas. Probate sales, certified appraisals, and senior transitions."
+      title="Snohomish County Probate & Estate Real Estate | WA"
+      canonical="https://www.realpropertyplanning.com/service-areas/snohomish-county"
+      description="Probate sales, certified appraisals, and senior transitions for families across Snohomish County — Everett, Lynnwood, Marysville, Edmonds."
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema items={[

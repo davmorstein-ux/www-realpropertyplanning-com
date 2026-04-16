@@ -37,8 +37,9 @@ const jsonLd = {
 const SkagitCountyServiceArea = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
-      title="Probate & Estate Real Estate in Skagit County, WA | Real Property Planning"
-      description="Experienced probate real estate, inherited property guidance, and senior transitions throughout Skagit County. Serving Mount Vernon, Burlington, Anacortes, La Conner & more."
+      title="Skagit County Probate & Estate Real Estate | WA"
+      canonical="https://www.realpropertyplanning.com/service-areas/skagit-county"
+      description="Probate real estate, inherited property guidance, and senior transitions across Skagit County — Mount Vernon, Burlington, Anacortes, La Conner."
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema items={[

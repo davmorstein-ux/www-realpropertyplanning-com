@@ -63,8 +63,9 @@ const jsonLd = {
 const KingCountyServiceArea = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
-      title="Probate & Estate Real Estate in King County, WA | Real Property Planning"
-      description="Experienced probate real estate, inherited home sales, and senior transition guidance throughout King County, Washington. Serving Seattle, Bellevue, Kirkland, Redmond & more."
+      title="King County Probate & Estate Real Estate | WA"
+      canonical="https://www.realpropertyplanning.com/service-areas/king-county"
+      description="Probate real estate, inherited home sales, and senior transition guidance across King County — Seattle, Bellevue, Kirkland, Redmond."
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema items={[
