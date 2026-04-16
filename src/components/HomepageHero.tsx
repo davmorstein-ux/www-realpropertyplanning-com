@@ -69,16 +69,11 @@ const HomepageHero = () => {
           className="tracking-[0.04em] leading-relaxed mb-6 pb-6 text-white/80 font-bold"
           style={{
             opacity: showLine2 ? 1 : 0,
-            fontSize: showLine2 ? undefined : '16px',
+            fontSize: showLine2 ? 'clamp(20px, 2.5vw, 24px)' : 'clamp(16px, 2vw, 20px)',
             transition: prefersReducedMotion ? "none" : "opacity 3s ease-in-out, font-size 3s ease-in-out",
           }}
         >
-          <span className="text-[20px] md:text-[24px]" style={{
-            fontSize: showLine2 ? '' : 'calc(1em - 4px)',
-            transition: prefersReducedMotion ? "none" : "font-size 3s ease-in-out",
-          }}>
-            Connecting Families and Professionals, when It Matters Most
-          </span>
+          Connecting Families and Professionals, when It Matters Most
         </p>
 
 
