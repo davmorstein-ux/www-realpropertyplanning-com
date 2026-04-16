@@ -66,13 +66,14 @@ const HomepageHero = () => {
 
         {/* Warm subheading — fades in after typing */}
         <p
-          className="text-[20px] md:text-[24px] tracking-[0.04em] leading-relaxed mb-6 pb-6 text-white/80 font-bold"
+          className="tracking-[0.04em] leading-relaxed mb-6 pb-6 text-white/80 font-bold"
           style={{
             opacity: showLine2 ? 1 : 0,
-            transition: prefersReducedMotion ? "none" : "opacity 3s ease-in-out",
+            fontSize: showLine2 ? 'clamp(20px, 2.5vw, 24px)' : 'clamp(16px, 2vw, 20px)',
+            transition: prefersReducedMotion ? "none" : "opacity 3s ease-in-out, font-size 3s ease-in-out",
           }}
         >
-          Connecting Families and Professionals When It Matters Most
+          Connecting Families and Professionals, when It Matters Most
         </p>
 
 
