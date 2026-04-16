@@ -845,8 +845,19 @@ html, body {
   .premium-tile[data-tile-name="probate-sales"] .tile-icon {
     transform: scale(1.18) translateY(-8%) !important;
   }
+  /* Guides & Resources: move icon up */
+  .premium-tile[data-tile-name="guides-resources"] .tile-icon {
+    transform: scale(1.18) translateY(-18%) !important;
+  }
+  /* Senior Transitions: move icon up */
+  .premium-tile[data-tile-name="senior-transitions"] .tile-icon {
+    transform: scale(1.18) translateY(-16%) !important;
+  }
+  /* Home Values & Pricing: move icon up */
+  .premium-tile[data-tile-name="home-values"] .tile-icon {
+    transform: scale(1.18) translateY(-18%) !important;
+  }
 
-  /* Reset for attorney tiles so they aren't affected */
   .attorney-tiles-grid .premium-tile .tile-icon {
     transform: none !important;
     transform-origin: center center !important;
