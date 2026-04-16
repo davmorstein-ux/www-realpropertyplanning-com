@@ -866,7 +866,7 @@ html, body {
   }
   /* Mortgage Lending: nudge icon up */
   .premium-tile[data-tile-name="lending"] .tile-icon {
-    transform: scale(1.1) translateY(-12%) !important;
+    transform: scale(1.1) translateY(-22%) !important;
   }
   /* Financial Planner: nudge icon down */
   .premium-tile[data-tile-name="financial-planning"] .tile-icon {
@@ -1003,7 +1003,7 @@ html, body {
     font-size: 0.95rem !important;
   }
   .premium-tile .tile-label-tight[data-tile-id="lending"] {
-    margin-top: -0.7rem !important;
+    margin-top: -1.1rem !important;
   }
   .premium-tile .tile-label-tight[data-tile-id="estate-liquidation"] {
     margin-top: -0.1rem !important;
