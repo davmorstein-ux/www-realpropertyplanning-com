@@ -412,7 +412,7 @@ const SmartSearchBar = ({ pillsOnly, searchOnly }: SmartSearchBarProps) => {
               >
                 <span className="premium-pill-3d__face text-[15px] sm:text-base w-full justify-center">
                   {isAttorneyResourcePrompt ? (
-                    <span className="flex flex-col items-center leading-[0.65]">
+                    <span className="flex flex-col items-center" style={{ lineHeight: '0.85' }}>
                       <span>I'm an attorney</span>
                       <span>looking for a resource</span>
                     </span>
