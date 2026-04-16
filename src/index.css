@@ -920,9 +920,11 @@ html, body {
   .premium-tile[data-tile-name="senior-moves"] .tile-icon,
   .premium-tile[data-tile-name="the-process"] .tile-icon,
   .premium-tile[data-tile-name="home-value"] .tile-icon,
-  .premium-tile[data-tile-name="lending"] .tile-icon,
   .premium-tile[data-tile-name="cpas"] .tile-icon {
     transform: translateY(8%) !important;
+  }
+  .premium-tile[data-tile-name="lending"] .tile-icon {
+    transform: translateY(0%) !important;
   }
   .premium-tile[data-tile-name="probate-sales"] .tile-icon {
     transform: translateY(4%) !important;
