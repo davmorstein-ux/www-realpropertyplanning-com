@@ -409,7 +409,7 @@ const SmartSearchBar = ({ pillsOnly, searchOnly }: SmartSearchBarProps) => {
             >
               <span
                 className="premium-pill-3d__face text-[15px] sm:text-base w-full justify-center"
-                style={{ lineHeight: prompt.label.length > 30 ? '1.0' : undefined }}
+                style={{ lineHeight: prompt.label.length > 30 ? '0.75' : undefined }}
               >
                 {prompt.label}
               </span>
