@@ -930,7 +930,7 @@ html, body {
     transform: scale(1.1) translateY(8%) !important;
   }
   .premium-tile[data-tile-name="lending"] .tile-icon {
-    transform: translateY(0%) !important;
+    transform: scale(1.1) translateY(0%) !important;
   }
   .premium-tile[data-tile-name="probate-sales"] .tile-icon {
     transform: translateY(4%) !important;
