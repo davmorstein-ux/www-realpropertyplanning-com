@@ -427,7 +427,7 @@ const SmartSearchBar = ({ pillsOnly, searchOnly }: SmartSearchBarProps) => {
                       ref={attorneyPillTextRef}
                       data-attorney-pill-text="true"
                       className="block whitespace-pre-line text-center"
-                      style={{ lineHeight: 2.03 }}
+                      style={{ lineHeight: 2.5 }}
                     >
                       {"I'm an attorney\nlooking for a resource"}
                     </span>
