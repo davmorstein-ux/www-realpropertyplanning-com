@@ -10,47 +10,47 @@ import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+
 import { services, isTier1City } from "@/lib/service-areas-data";
 import type { CityData } from "@/lib/service-areas-data";
 import heroIcon from "@/assets/icons/real-estate-service-areas-map-icon-washington.webp";
 
-// Tone-specific FAQ sets (kept for SEO uniqueness)
+// Tone-specific FAQ sets — now meaningfully varied per tone, not generic per city
 const toneFaqSets: Record<string, (city: CityData) => { question: string; answer: string }[]> = {
   premium: (city) => [
-    { question: `What should an executor consider before listing a high-value home in ${city.name}?`, answer: `High-value properties require precise pricing and careful preparation. David's appraisal background helps executors understand realistic market position — avoiding costly mistakes from automated estimates.` },
-    { question: `Can David manage the sale if the family lives out of state?`, answer: `Yes. David handles property access, vendor coordination, preparation, and the full sale process — providing detailed updates so distant family members can manage without repeated travel.` },
-    { question: `How does David price estate properties in ${city.name}?`, answer: `David combines broker experience with certified appraiser training to evaluate each property individually — producing pricing that is both competitive and defensible for fiduciary situations.` },
+    { question: `What pricing approach works in a high-value ${city.name} estate?`, answer: `In a market where blocks and views can swing value by six figures, an automated estimate is not a starting point. We anchor pricing in a documented, appraisal-style condition adjustment — the same logic the buyer's lender appraiser will apply — so the number in the court file is the number the market will actually support.` },
+    { question: `How are sibling buyout valuations handled for a ${city.name} property?`, answer: `When one heir wants to keep the home and others want to be cashed out, the price has to be defensible to everyone — and to the attorney drafting the buyout. We provide a written, independent valuation that all parties can rely on, separate from any listing conversation.` },
+    { question: `Does David coordinate with high-net-worth advisors involved in the estate?`, answer: `Yes. Estate planning attorneys, CPAs, and trust officers are routinely part of these files in ${city.name}. We deliver written status updates so every advisor on the team is reading from the same page.` },
   ],
   urban: (city) => [
-    { question: `How does probate affect selling a home in ${city.name}?`, answer: `Probate sales require legal authority before listing. David coordinates with the estate attorney to manage assessment, preparation, pricing, and sale within legal requirements.` },
-    { question: `Is it better to sell an inherited ${city.name} property as-is or invest in updates?`, answer: `It depends on condition and neighborhood expectations. David evaluates each situation, recommending preparation when the return justifies the investment.` },
-    { question: `Can David coordinate the sale from a distance?`, answer: `Yes. David handles the full process locally — from cleanout to closing — keeping distant executors informed with regular updates.` },
+    { question: `Can a ${city.name} estate property be listed before probate is fully open?`, answer: `Generally no — a personal representative needs Letters Testamentary or Letters of Administration before listing. We use the gap to handle the date-of-death valuation, secure the home, and prep the marketing file so listing day isn't day one of the work.` },
+    { question: `How does ${city.name}'s urban market affect inherited condos and townhomes?`, answer: `HOA estoppels, resale certificates, and special assessments routinely surface mid-transaction on urban estate sales. We pull these documents early and price the unit with the actual HOA reality factored in — not a generic per-square-foot comp.` },
+    { question: `What about long-vacant ${city.name} homes that have not been touched in years?`, answer: `Common, especially in older neighborhoods. We start with a condition triage — what is structural, what is cosmetic, what is buyer-pool eliminating — and only recommend repairs where the return on the estate's spend is documented in writing.` },
   ],
   suburban: (city) => [
-    { question: `What are the first steps when selling an inherited home in ${city.name}?`, answer: `Secure the property, confirm legal authority, and get a realistic assessment. David can visit the property, evaluate what needs attention, and help you develop a clear plan.` },
-    { question: `How does David determine the right price?`, answer: `David uses dual credentials as broker and certified appraiser to evaluate based on actual condition and neighborhood-level market data — avoiding both overpricing and underpricing.` },
-    { question: `Does David help with cleanout and preparation?`, answer: `Yes. David coordinates the full preparation process — from organizing vendors to assessing which repairs are worth the investment.` },
+    { question: `Where do most ${city.name} families start when a parent's house needs to sell?`, answer: `Usually with one practical question: do we sort the house first, or get a value first. We do the value walk-through first because it shapes every other decision — what to keep, what to repair, and how fast to move. The cleanout coordination follows.` },
+    { question: `How are repair-vs-as-is decisions made on a ${city.name} suburban estate home?`, answer: `Each repair recommendation gets a documented return estimate. In ${city.name}'s buyer pool, certain updates pay back at sale and others do not — paint and flooring usually do, deeper kitchen and bath work usually does not. The goal is to leave money in the estate, not in the renovation.` },
+    { question: `Can multiple adult children stay in the loop without one person carrying all the calls?`, answer: `Yes. Updates go to a single email thread that includes every named heir and the estate attorney, so no one feels behind and no one has to be the messenger.` },
   ],
   waterfront: (city) => [
-    { question: `How is pricing a waterfront home in ${city.name} different?`, answer: `Waterfront properties involve unique factors — shoreline type, view corridors, bulkhead condition, water access. David's appraiser credentials help evaluate these accurately.` },
-    { question: `Can David help sell from a distance?`, answer: `Yes. David coordinates all on-site activities — providing regular updates so you can manage from anywhere.` },
-    { question: `What preparation is worthwhile before listing?`, answer: `David evaluates which improvements deliver a return and which are better left for the buyer, based on appraisal-informed analysis.` },
+    { question: `What makes valuing a ${city.name} waterfront estate different?`, answer: `Shoreline classification, view corridors, bulkhead condition, dock or buoy rights, and tidelands all materially shift value — and most are invisible to automated estimates. We document each on-site so the price the estate brings to the table can defend itself.` },
+    { question: `How are out-of-town heirs kept informed during a ${city.name} waterfront sale?`, answer: `Photo and video walk-throughs of dock, bulkhead, and shoreline conditions, plus written summaries of every offer. Heirs who haven't been to the property in years can still make confident decisions.` },
+    { question: `Are there preparation items unique to ${city.name} waterfront listings?`, answer: `Often: bulkhead inspection records, septic compliance for shoreline lots, and any HPA or shoreline permit history. We surface these before listing so buyer due diligence does not derail the sale.` },
   ],
   smalltown: (city) => [
-    { question: `What should I know about selling an inherited home in ${city.name}?`, answer: `Smaller markets need accurate pricing. David's appraisal background helps set prices that reflect local demand — avoiding extended time on market.` },
-    { question: `How does David handle estate sales when the family lives far away?`, answer: `David manages the entire process locally with regular updates by phone and email.` },
-    { question: `Is it worth making repairs before selling?`, answer: `David evaluates which improvements justify the cost and delay, using appraisal training to base recommendations on data.` },
+    { question: `Will a ${city.name} estate home actually sell — or sit on the market for months?`, answer: `Smaller markets are unforgiving of overpricing. We price to the actual ${city.name} buyer pool — based on closed comps and condition — rather than to a wider regional average that won't materialize as showings.` },
+    { question: `What if the ${city.name} home has been in the family for forty years and barely updated?`, answer: `Very common here. We separate the "needs to be done before listing" items from the "buyer is going to redo this anyway" items, so the estate isn't paying for renovation a buyer wouldn't pay extra for.` },
+    { question: `Can the whole ${city.name} sale be handled without family driving out repeatedly?`, answer: `Yes. On-site coordination, vendor management, and offer review are all handled locally with written and video updates to the family.` },
   ],
   military: (city) => [
-    { question: `What should military families know about managing inherited property?`, answer: `Military families often face distance challenges. David provides full-service coordination — handling everything on-site with structured updates.` },
-    { question: `How does David price estate property in ${city.name}?`, answer: `David uses dual credentials to evaluate based on condition, demand, and comparable sales — producing accurate, defensible pricing.` },
-    { question: `Can David coordinate if I'm stationed elsewhere?`, answer: `Yes. David handles property access, vendor coordination, preparation, and the complete sale process with consistent updates.` },
+    { question: `What do military families in ${city.name} need to know about an inherited home?`, answer: `Distance and timeline are usually the binding constraints — PCS dates rarely line up with probate timelines. We work to whatever window you actually have, handling on-site work and reporting back in the format your schedule allows.` },
+    { question: `How is pricing handled for ${city.name} homes near base?`, answer: `Buyer demand near military communities is more cyclical than the broader market. We track active listing absorption in the specific submarket and price the estate property to where the buyers actually are right now, not where they were last quarter.` },
+    { question: `Can David coordinate the entire ${city.name} sale while I'm stationed elsewhere?`, answer: `Yes — full on-site coordination, vendor management, showings, and offer review with structured written updates to wherever you are.` },
   ],
   rural: (city) => [
-    { question: `How do you value a rural property near ${city.name}?`, answer: `Rural properties involve acreage, outbuildings, well/septic systems. David's certified appraiser credentials help evaluate these non-standard features accurately.` },
-    { question: `What challenges come with selling inherited rural property?`, answer: `Deferred maintenance, access issues, and zoning restrictions are common. David assesses these factors honestly and helps families understand realistic value.` },
-    { question: `Can David manage a rural estate sale from a distance?`, answer: `Yes. David handles all on-site coordination, ensuring nothing falls through the cracks while keeping distant family members informed.` },
+    { question: `How do you value acreage and outbuildings on a property near ${city.name}?`, answer: `Rural valuation requires looking at acreage usability, well and septic age and condition, outbuilding utility, and access. We document each on-site rather than relying on automated estimates that treat rural parcels like suburban lots.` },
+    { question: `What surfaces most often on inherited rural properties around ${city.name}?`, answer: `Deferred maintenance, unrecorded fence-line and access agreements, and wells or septics nearing end of service life. We flag these before listing so they become disclosure items, not deal-killers.` },
+    { question: `Can a ${city.name}-area rural estate sale be coordinated remotely?`, answer: `Yes. On-site walk-throughs, vendor coordination for property cleanup, and structured updates make remote rural estate sales workable for out-of-area heirs.` },
   ],
 };
 
@@ -120,23 +120,29 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
 
       <TrustStrip />
 
-      {/* Services Available — compact */}
+      {/* What we handle locally — narrative replacing the duplicated services grid */}
       <section className="py-14 lg:py-18 bg-secondary">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-[1140px] mx-auto">
-            <h2 className="font-serif text-2xl text-foreground font-semibold mb-5">
-              Services in {city.name}
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-serif text-2xl text-foreground font-semibold mb-4">
+              How an Estate Sale Tends to Run in {city.name}
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {services.map((service) => (
-                <Link key={service.slug} to={`/cities/${city.slug}/${service.slug}`} className="card-3d group p-5">
-                  <h3 className="font-serif text-lg text-foreground font-medium mb-1.5 group-hover:text-gold transition-colors">
-                    {service.shortName}
-                  </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-2">{service.description}</p>
-                  <span className="inline-flex items-center text-sm font-medium text-primary group-hover:text-gold transition-colors">
-                    Learn More <ArrowRight className="w-3.5 h-3.5 ml-1 group-hover:translate-x-1 transition-transform" />
-                  </span>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+              {city.localKnowledge ||
+                `Most ${city.name} calls start with a property the heirs haven't been inside in months — or years — and a personal representative trying to sort court timing, repairs, and pricing all at once. The first conversation is short and concrete: who has authority, what condition the home is actually in, and what's already been touched.`}
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-5">
+              From there, we run the date-of-death walk-through, line up cleanout and pre-list work that{" "}
+              <Link to={`/${city.countySlug}`} className="text-accent hover:text-gold underline underline-offset-4">{city.county}</Link>{" "}
+              buyers actually pay extra for, build a written pricing analysis the estate file can defend, and handle the sale through closing. If you're earlier than that — still figuring out what was inherited — start with the{" "}
+              <Link to="/guides/inherited-house-washington" className="text-accent hover:text-gold underline underline-offset-4">inherited house in Washington guide</Link>{" "}
+              or the{" "}
+              <Link to="/executors" className="text-accent hover:text-gold underline underline-offset-4">executor roadmap</Link>.
+            </p>
+            <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm">
+              {services.slice(0, 6).map((service) => (
+                <Link key={service.slug} to={`/cities/${city.slug}/${service.slug}`} className="text-accent hover:text-gold underline underline-offset-4">
+                  {service.shortName} in {city.name}
                 </Link>
               ))}
             </div>
@@ -147,22 +153,64 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
       {/* FAQ */}
       <PageFAQ faqs={faqs} heading={`${city.name} FAQ`} />
 
-      {/* CTA */}
-      <section className="py-16 lg:py-20 bg-primary">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-serif text-3xl text-primary-foreground font-semibold mb-4">
-              Ready to Talk About Your {city.name} Property?
-            </h2>
-            <p className="text-primary-foreground/70 text-lg mb-6">
-              David can walk you through your situation and help you figure out next steps.
-            </p>
-            <Link to="/contact">
-              <Button variant="gold" size="lg">Start a Conversation</Button>
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* CTA — varied by community tone so the closing copy isn't identical city-to-city */}
+      {(() => {
+        const ctaCopy: Record<string, { h2: string; body: string; cta: string }> = {
+          premium: {
+            h2: `Considering an Estate Sale on a ${city.name} Property?`,
+            body: `Send a brief situation overview — the home, who has authority, and what's already been touched. David typically responds within one business day with a recommended next step.`,
+            cta: `Discuss a ${city.name} Estate`,
+          },
+          urban: {
+            h2: `Have a Probate or Inherited Property in ${city.name}?`,
+            body: `One conversation usually clarifies what to do first with the home — even if probate isn't open yet. No commitment, no listing pitch.`,
+            cta: `Start a ${city.name} Conversation`,
+          },
+          suburban: {
+            h2: `Working Through a Family Home in ${city.name}?`,
+            body: `Most ${city.name} families call before they have a plan — just a situation. That's the right time. We'll talk through where things stand and what makes sense first.`,
+            cta: `Talk Through a ${city.name} Sale`,
+          },
+          waterfront: {
+            h2: `Selling a ${city.name} Waterfront or View Property?`,
+            body: `These properties value differently than standard listings. A short call clarifies what the estate file needs, what buyers will actually look at, and where to start.`,
+            cta: `Discuss a ${city.name} Property`,
+          },
+          smalltown: {
+            h2: `Need Help with an Inherited Home in ${city.name}?`,
+            body: `Smaller markets reward accurate pricing and patient preparation. We'll talk through condition, timing, and what's worth doing before the home is listed.`,
+            cta: `Call About ${city.name}`,
+          },
+          military: {
+            h2: `Managing a ${city.name} Property from a Distance?`,
+            body: `On-site coordination, vendor management, and structured updates — built around whatever timeline and travel window you actually have.`,
+            cta: `Coordinate a ${city.name} Sale`,
+          },
+          rural: {
+            h2: `Have an Inherited Property Near ${city.name}?`,
+            body: `Acreage, outbuildings, and rural condition issues need on-site assessment. A short call defines what the property is and what the next concrete step looks like.`,
+            cta: `Walk Through a ${city.name} Property`,
+          },
+        };
+        const copy = ctaCopy[tone] || ctaCopy.suburban;
+        return (
+          <section className="py-16 lg:py-20 bg-primary">
+            <div className="container px-6 lg:px-8">
+              <div className="max-w-3xl mx-auto text-center">
+                <h2 className="font-serif text-3xl text-primary-foreground font-semibold mb-4">
+                  {copy.h2}
+                </h2>
+                <p className="text-primary-foreground/70 text-lg mb-6">
+                  {copy.body}
+                </p>
+                <Link to="/contact">
+                  <Button variant="gold" size="lg">{copy.cta}</Button>
+                </Link>
+              </div>
+            </div>
+          </section>
+        );
+      })()}
 
       {/* Related Links — compact */}
       <section className="py-10 bg-background">

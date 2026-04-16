@@ -136,7 +136,14 @@ const ForAttorneys = () => (
       </div>
     </section>
 
-    <CTASection />
+    <CTASection
+      eyebrow="For Counsel"
+      heading="Refer the Property Workstream — Stay the Legal Lead"
+      body="When you have a file where the real estate side is starting to consume billable time you'd rather spend on the legal work, we'll take it. Send a brief situation overview and David will respond within one business day with a recommended scope and a single point of contact for your file."
+      callLabel="Direct Line — (206) 900-3015"
+      messageLabel="Send a File Overview"
+      microcopy="Attorney-to-broker communication. We never contact your client without your direction."
+    />
     <DisclaimerSection />
     </main>
     <Footer />

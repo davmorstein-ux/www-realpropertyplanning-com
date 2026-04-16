@@ -9,7 +9,7 @@ import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+
 import mappin3d from "@/assets/real-estate-service-areas-mappin-washington.webp";
 import heroIcon from "@/assets/icons/real-estate-service-areas-map-icon-washington.webp";
 import { services, counties } from "@/lib/service-areas-data";
@@ -50,18 +50,22 @@ const CountyPageTemplate = ({
 }: CountyPageProps) => {
   const countyData = counties.find((c) => c.slug === countySlug);
 
+  // Truly county-specific defaults — varied by county so the visible text differs
+  // when no countySpecificFaqs are passed.
+  const countySlugUpper = countySlug.charAt(0).toUpperCase() + countySlug.slice(1);
+  const cityList = cities.slice(0, 3).join(", ");
   const defaultCountyFaqs = [
     {
-      question: `How do I sell a house in probate in ${countyName}?`,
-      answer: `Selling probate property in ${countyName} requires legal authority before the property can be listed. David coordinates with the estate attorney and personal representative to assess the property, develop pricing, manage preparation, and handle the sale.`,
+      question: `Does Real Property Planning open ${countyName} probate listings before Letters are issued?`,
+      answer: `No. The property cannot be marketed until the personal representative receives Letters Testamentary or Letters of Administration from the ${countyName} Superior Court. We do, however, use that waiting period for the date-of-death valuation walk-through, securing the home, lining up cleanout vendors, and preparing the marketing file — so the day Letters arrive, you are ready to list rather than starting from zero.`,
     },
     {
-      question: `Can David help if I live out of state but the property is in ${countyName}?`,
-      answer: `Yes. David regularly works with out-of-state executors and trustees, coordinating property access, vendor management, preparation, and the full sale process with regular updates.`,
+      question: `Is there anything specific to ${countyName} that affects how an estate property sells?`,
+      answer: `Yes — buyer expectations, inspection norms, and condition tolerance vary noticeably across ${countySlugUpper} County's submarkets (${cityList}, and surrounding communities). Pricing built on a county-wide average will frequently miss in either direction. Each property here is evaluated on its own block and condition, not pulled off an automated estimate.`,
     },
     {
-      question: `Do I need an appraisal before selling estate property in ${countyName}?`,
-      answer: `It depends on the situation. David's dual credentials as a broker and certified appraiser allow him to provide market analysis informed by appraisal-level discipline, helping you make well-supported pricing decisions.`,
+      question: `Can David handle a ${countyName} estate sale if every heir lives out of state?`,
+      answer: `Routinely. Out-of-state personal representatives are one of the most common situations in ${countyName}. David handles the in-person walk-through, vendor coordination, photo and video updates, showings, and offer review — so the heirs almost never need to travel to ${countyName} to close.`,
     },
   ];
 
@@ -119,25 +123,26 @@ const CountyPageTemplate = ({
 
       <TrustStrip />
 
-      {/* Services Available — compact grid */}
+      {/* What we handle locally — narrative, not a duplicated services grid */}
       <section className="py-14 lg:py-18 bg-secondary">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-[1140px] mx-auto">
-            <h2 className="font-serif text-2xl text-foreground font-semibold mb-6">
-              What David Can Help With in {countyName}
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-serif text-2xl text-foreground font-semibold mb-4">
+              How a {countyName} Estate Sale Actually Runs
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {services.map((service) => (
-                <Link key={service.slug} to={`/services/${service.slug}`} className="card-3d group p-5">
-                  <h3 className="font-serif text-lg text-foreground font-medium mb-1.5 group-hover:text-gold transition-colors">
-                    {service.shortName}
-                  </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-2">
-                    {service.description}
-                  </p>
-                  <span className="inline-flex items-center text-sm font-medium text-primary group-hover:text-gold transition-colors">
-                    Learn More <ArrowRight className="w-3.5 h-3.5 ml-1 group-hover:translate-x-1 transition-transform" />
-                  </span>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+              In {countyName}, most calls start one of three ways: a personal representative who has just received Letters and needs to know what to do with the house first, an attorney whose client is stuck on the property piece of the file, or an out-of-state heir who has not been inside the home in years. The first conversation is short and concrete — what the property is, who has authority, and what's already been touched.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-5">
+              From there, the work usually includes a date-of-death walk-through with{" "}
+              <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">appraisal-grade pricing analysis</Link>, securing the home and coordinating cleanout, a written prep plan that matches what {countyName} buyers actually expect on this kind of property, and a clean handoff into listing,{" "}
+              <Link to="/how-the-process-works" className="text-accent hover:text-gold underline underline-offset-4">offer review</Link>, and closing. If you're earlier than that — still figuring out what you've inherited — start with the{" "}
+              <Link to="/guides/inherited-house-washington" className="text-accent hover:text-gold underline underline-offset-4">inherited house guide</Link>.
+            </p>
+            <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm">
+              {services.slice(0, 6).map((service) => (
+                <Link key={service.slug} to={`/services/${service.slug}`} className="text-accent hover:text-gold underline underline-offset-4">
+                  {service.shortName}
                 </Link>
               ))}
             </div>
