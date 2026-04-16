@@ -830,6 +830,10 @@ html, body {
   .premium-tile[data-tile-name="estate-liquidation"] .tile-icon {
     transform: scale(1.045) translateY(-6%) !important;
   }
+  /* Power of Attorney: reduce icon size 10% */
+  .premium-tile[data-tile-name="power-of-attorney"] .tile-icon {
+    transform: scale(0.9) !important;
+  }
   /* Nudge icons upward on mobile for these tiles */
   .premium-tile[data-tile-name="wills"] .tile-icon,
   .premium-tile[data-tile-name="senior-living"] .tile-icon,
@@ -948,7 +952,7 @@ html, body {
     font-size: 0.95rem !important;
   }
   .premium-tile .tile-label-tight[data-tile-id="estate-liquidation"] {
-    margin-top: 0.1rem !important;
+    margin-top: -0.1rem !important;
     font-size: 0.95rem !important;
   }
   .premium-tile .tile-label-tight[data-tile-id="appraiser"] {
@@ -956,7 +960,7 @@ html, body {
     font-size: 0.95rem !important;
   }
   .premium-tile .tile-label-tight[data-tile-id="power-of-attorney"] {
-    margin-top: 0.5rem !important;
+    margin-top: 0.7rem !important;
     font-size: 0.95rem !important;
   }
   .premium-tile .tile-label-tight[data-tile-id="senior-transitions"] {
