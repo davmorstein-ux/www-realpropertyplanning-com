@@ -32,9 +32,9 @@ type CountyVideo = {
 
 const COUNTY_VIDEOS: Record<string, CountyVideo> = {
   "snohomish-county": {
-    webm: "/county-videos/snohomish-hero.webm",
-    mp4: "/county-videos/snohomish-hero.mp4",
-    poster: "/county-videos/snohomish-hero-poster.webp",
+    webm: "/county-videos/snohomish-hero.webm?v=3",
+    mp4: "/county-videos/snohomish-hero.mp4?v=3",
+    poster: "/county-videos/snohomish-hero-poster.webp?v=3",
   },
 };
 
