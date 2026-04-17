@@ -131,7 +131,7 @@ const InheritedHouseWashington = () => (
 
     <MidPageCTA
       heading="Not Sure What to Do With an Inherited Property?"
-      body="our team provides a no-pressure consultation to assess the property, explain your options, and help you develop a practical plan."
+      body="Our team provides a no-pressure consultation to assess the property, explain your options, and help you develop a practical plan."
       buttonText="Schedule a Consultation"
       microcopy="No pressure. Just practical guidance for your situation."
     />
@@ -147,7 +147,7 @@ const InheritedHouseWashington = () => (
             A conversation with our team early in the process — even before you have made any decisions — can help you understand the property's realistic value, the costs of holding versus selling, and the preparation work that may be needed. This information supports better decision-making by all stakeholders.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            our team's dual credentials as a licensed broker and <Link to="/guides/appraisal-vs-cma" className="text-accent hover:text-gold underline underline-offset-4">certified residential appraiser</Link> mean you get valuation insight that goes beyond what a standard real estate agent can provide. For <Link to="/executors" className="text-accent hover:text-gold underline underline-offset-4">executors managing estate responsibilities</Link>, this early guidance is particularly valuable.
+            Our team's dual credentials as a licensed broker and <Link to="/guides/appraisal-vs-cma" className="text-accent hover:text-gold underline underline-offset-4">certified residential appraiser</Link> mean you get valuation insight that goes beyond what a standard real estate agent can provide. For <Link to="/executors" className="text-accent hover:text-gold underline underline-offset-4">executors managing estate responsibilities</Link>, this early guidance is particularly valuable.
           </p>
         </div>
       </div>
@@ -189,7 +189,7 @@ const InheritedHouseWashington = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">Have Questions About an Inherited Property?</h2>
-          <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">our team provides confidential consultations for heirs, executors, trustees, and families throughout Washington State.</p>
+          <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">Our team provides confidential consultations for heirs, executors, trustees, and families throughout Washington State.</p>
           <Link to="/contact"><Button variant="gold" size="lg"><img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy"/>Schedule a Consultation</Button></Link>
         </div>
       </div>

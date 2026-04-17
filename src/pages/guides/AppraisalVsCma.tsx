@@ -92,7 +92,7 @@ const AppraisalVsCma = () => (
             The quality of a CMA varies enormously depending on the broker's experience, analytical rigor, and understanding of the subject property's condition. A CMA from a broker with appraisal training and estate property experience will be substantially more reliable than one from an agent who primarily handles standard residential transactions.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            our team's CMAs incorporate appraisal-level analysis — including condition adjustments, functional obsolescence assessments, and effective age considerations — giving executors and attorneys a market opinion that is grounded in professional valuation methodology even when a formal appraisal is not required.
+            Our team's CMAs incorporate appraisal-level analysis — including condition adjustments, functional obsolescence assessments, and effective age considerations — giving executors and attorneys a market opinion that is grounded in professional valuation methodology even when a formal appraisal is not required.
           </p>
         </div>
       </div>
@@ -136,7 +136,7 @@ const AppraisalVsCma = () => (
             Most real estate agents produce CMAs based primarily on square footage, bedroom count, and recent nearby sales. They may not have the training to account for the condition issues, functional obsolescence, and deferred maintenance that are common in estate and inherited properties.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-6">
-            our team's certified appraisal background means he evaluates properties the way a lender's appraiser would — assessing effective age, physical depreciation, functional utility, and condition adjustments that automated tools and standard agents miss. This produces more accurate pricing, fewer appraisal surprises during buyer financing, and stronger support for the executor's fiduciary obligations.
+            Our team's certified appraisal background means he evaluates properties the way a lender's appraiser would — assessing effective age, physical depreciation, functional utility, and condition adjustments that automated tools and standard agents miss. This produces more accurate pricing, fewer appraisal surprises during buyer financing, and stronger support for the executor's fiduciary obligations.
           </p>
           <p className="text-muted-foreground leading-relaxed">
             Learn more about <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">why valuation expertise matters</Link> in estate property sales, or explore our team's <Link to="/how-the-process-works" className="text-accent hover:text-gold underline underline-offset-4">step-by-step process</Link>.

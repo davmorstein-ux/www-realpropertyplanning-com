@@ -25,23 +25,23 @@ const services = [
     title: "Objective, Defensible Valuation",
     description: (
       <>
-        our team's <Link to="/real-estate-appraiser" className="text-accent hover:text-gold underline underline-offset-4">certified appraisal</Link> background produces a condition-adjusted, methodology-based market analysis — not a listing pitch. When both parties are working from the same objective foundation, valuation disputes resolve more efficiently. This analysis can also serve as a useful reference point in settlement negotiations.
+        Our team's <Link to="/real-estate-appraiser" className="text-accent hover:text-gold underline underline-offset-4">certified appraisal</Link> background produces a condition-adjusted, methodology-based market analysis — not a listing pitch. When both parties are working from the same objective foundation, valuation disputes resolve more efficiently. This analysis can also serve as a useful reference point in settlement negotiations.
       </>
     ),
   },
   {
     title: "Neutral Representation",
-    description: "our team does not represent either party's interests — he represents the property and the process. His role is to handle the sale fairly, transparently, and professionally, with consistent communication to both parties (or through their attorneys) and no advocacy for either side.",
+    description: "Our team does not represent either party's interests — he represents the property and the process. His role is to handle the sale fairly, transparently, and professionally, with consistent communication to both parties (or through their attorneys) and no advocacy for either side.",
   },
   {
     title: "Structured, Organized Sale Process",
-    description: "our team manages preparation, listing, marketing, showings, negotiation, and closing — providing both parties with regular updates in a format that is factual, clear, and professionally neutral. Neither party has to wonder what is happening or rely on the other for information.",
+    description: "Our team manages preparation, listing, marketing, showings, negotiation, and closing — providing both parties with regular updates in a format that is factual, clear, and professionally neutral. Neither party has to wonder what is happening or rely on the other for information.",
   },
   {
     title: "Market Expertise for the Puget Sound Region",
     description: (
       <>
-        our team brings deep knowledge of real estate conditions throughout{" "}
+        Our team brings deep knowledge of real estate conditions throughout{" "}
         <Link to="/counties" className="text-accent hover:text-gold underline underline-offset-4">King County, Snohomish County, Pierce County, and Kitsap County</Link>{" "}
         — ensuring that pricing decisions reflect actual market conditions in the specific neighborhood, not generalized estimates.
       </>
@@ -52,7 +52,7 @@ const services = [
 const faqs = [
   {
     question: "How does Real Property Planning maintain neutrality when working with divorcing parties?",
-    answer: "our team's role is defined from the beginning as neutral coordinator — his obligation is to the property transaction, not to either party. Communication protocols are established upfront: updates can be sent simultaneously to both parties, routed through respective counsel, or structured in whatever way the attorneys prefer. Pricing and preparation decisions are based on market data, not either party's preference.",
+    answer: "Our team's role is defined from the beginning as neutral coordinator — his obligation is to the property transaction, not to either party. Communication protocols are established upfront: updates can be sent simultaneously to both parties, routed through respective counsel, or structured in whatever way the attorneys prefer. Pricing and preparation decisions are based on market data, not either party's preference.",
   },
   {
     question: "What if one party is living in the home during the sale?",

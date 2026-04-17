@@ -30,7 +30,7 @@ const services = [
   },
   {
     title: "Strategic Sale Guidance",
-    description: "our team advises on timing, pricing, and preparation strategy with fiduciary defensibility in mind. Every repair recommendation is evaluated for return on investment. Every pricing decision is documented with comparable sales support.",
+    description: "Our team advises on timing, pricing, and preparation strategy with fiduciary defensibility in mind. Every repair recommendation is evaluated for return on investment. Every pricing decision is documented with comparable sales support.",
   },
   {
     title: "Property Preparation Coordination",
@@ -38,7 +38,7 @@ const services = [
   },
   {
     title: "Communication With All Parties",
-    description: "our team serves as the single real estate point of contact — keeping executors, co-heirs, and the legal team informed with consistent, clear updates throughout the process.",
+    description: "Our team serves as the single real estate point of contact — keeping executors, co-heirs, and the legal team informed with consistent, clear updates throughout the process.",
   },
   {
     title: "Hands-On Local Support",
@@ -58,7 +58,7 @@ const situations = [
 const faqs = [
   {
     question: "How does Real Property Planning support probate attorneys during property sales?",
-    answer: "our team handles the real estate side completely — property assessment, valuation-informed pricing, preparation coordination, listing, and sale management — while keeping the attorney informed throughout. Attorneys receive consistent updates and have a single point of contact for all property-related questions. The goal is to make the real estate side of probate administration as straightforward as possible so you can focus on the legal work.",
+    answer: "Our team handles the real estate side completely — property assessment, valuation-informed pricing, preparation coordination, listing, and sale management — while keeping the attorney informed throughout. Attorneys receive consistent updates and have a single point of contact for all property-related questions. The goal is to make the real estate side of probate administration as straightforward as possible so you can focus on the legal work.",
   },
   {
     question: "What is the difference between a CMA and the valuation analysis our team provides?",
@@ -70,7 +70,7 @@ const faqs = [
   },
   {
     question: "Do you work with probate attorneys outside of Western Washington?",
-    answer: "our team's primary service area is Western Washington and the Puget Sound region — King, Snohomish, Pierce, and Kitsap Counties, with additional coverage in Skagit County and surrounding areas. For attorneys with clients in other parts of Washington State, our team can discuss appropriate referral connections. For clients outside Washington, eXp Realty's national network can provide trusted broker referrals in most markets.",
+    answer: "Our team's primary service area is Western Washington and the Puget Sound region — King, Snohomish, Pierce, and Kitsap Counties, with additional coverage in Skagit County and surrounding areas. For attorneys with clients in other parts of Washington State, our team can discuss appropriate referral connections. For clients outside Washington, eXp Realty's national network can provide trusted broker referrals in most markets.",
   },
 ];
 
@@ -212,7 +212,7 @@ const ForProbateAttorneys = () => (
             property situation in Washington State, a brief conversation is usually the fastest way to determine how Real Property Planning can support the case.
           </p>
           <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
-            our team works collaboratively with probate attorneys throughout the Puget Sound area and across Washington State — and is available for direct attorney consultations at your convenience.
+            Our team works collaboratively with probate attorneys throughout the Puget Sound area and across Washington State — and is available for direct attorney consultations at your convenience.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+12069003015">

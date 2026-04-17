@@ -14,7 +14,7 @@ const credentials = [
 
 const testimonials = [
   {
-    text: "our team guided our family through a very difficult time with professionalism and genuine compassion. His valuation perspective and market knowledge were incredibly helpful.",
+    text: "Our team guided our family through a very difficult time with professionalism and genuine compassion. His valuation perspective and market knowledge were incredibly helpful.",
     attribution: "Estate Attorney, Seattle",
     tag: "Probate · Valuation",
   },
@@ -24,7 +24,7 @@ const testimonials = [
     tag: "Estate Administration · Communication",
   },
   {
-    text: "our team's dual background in brokerage and appraisal gave us confidence that the property was priced correctly. He made a complicated situation feel manageable.",
+    text: "Our team's dual background in brokerage and appraisal gave us confidence that the property was priced correctly. He made a complicated situation feel manageable.",
     attribution: "Family Member, King County",
     tag: "Inherited Home · Pricing",
   },

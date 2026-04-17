@@ -24,7 +24,7 @@ const services = [
     title: "Accurate Valuation for Planning Purposes",
     description: (
       <>
-        our team's background as a <Link to="/real-estate-appraiser" className="text-accent hover:text-gold underline underline-offset-4">Washington State Certified Residential Appraiser</Link> makes him an especially useful resource when valuation needs to support Medicaid planning, benefit calculations, or financial analysis. The assessment goes beyond a listing agent's price opinion — it's a condition-adjusted, methodology-based market analysis that advisors and attorneys can rely on.
+        Our team's background as a <Link to="/real-estate-appraiser" className="text-accent hover:text-gold underline underline-offset-4">Washington State Certified Residential Appraiser</Link> makes him an especially useful resource when valuation needs to support Medicaid planning, benefit calculations, or financial analysis. The assessment goes beyond a listing agent's price opinion — it's a condition-adjusted, methodology-based market analysis that advisors and attorneys can rely on.
       </>
     ),
   },
@@ -40,7 +40,7 @@ const services = [
     title: "Coordination With the Full Care Team",
     description: (
       <>
-        our team works alongside senior move managers, care coordinators, social workers, and placement specialists — aligning the real estate timeline with the broader transition plan. Real Property Planning has an established relationship with <Link to="/senior-transitions" className="text-accent hover:text-gold underline underline-offset-4">HB Move Management</Link> (a division of Hansen Bros. Moving &amp; Storage), one of the most experienced senior moving services in Western Washington.
+        Our team works alongside senior move managers, care coordinators, social workers, and placement specialists — aligning the real estate timeline with the broader transition plan. Real Property Planning has an established relationship with <Link to="/senior-transitions" className="text-accent hover:text-gold underline underline-offset-4">HB Move Management</Link> (a division of Hansen Bros. Moving &amp; Storage), one of the most experienced senior moving services in Western Washington.
       </>
     ),
   },

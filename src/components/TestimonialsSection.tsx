@@ -4,7 +4,7 @@ import { Star, ExternalLink, Quote } from "lucide-react";
 
 const featuredReviews = [
   {
-    text: "our team brought clarity, professionalism, and calm guidance during a very difficult property transition. His valuation perspective and market knowledge were incredibly helpful.",
+    text: "Our team brought clarity, professionalism, and calm guidance during a very difficult property transition. His valuation perspective and market knowledge were incredibly helpful.",
     label: "Client Review",
     situation: "Estate-related property transition",
   },
@@ -14,7 +14,7 @@ const featuredReviews = [
     situation: "Inherited home and sale preparation",
   },
   {
-    text: "our team's dual background in brokerage and appraisal gave us confidence that the property was priced correctly. He made a complicated situation feel manageable.",
+    text: "Our team's dual background in brokerage and appraisal gave us confidence that the property was priced correctly. He made a complicated situation feel manageable.",
     label: "Professional Referral",
     situation: "Probate property sale coordination",
   },

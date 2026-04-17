@@ -369,7 +369,7 @@ const SeniorTransitions = () => {
               Most families start with a single question. That's enough to get started.
             </p>
             <p className="text-primary-foreground/70 text-base leading-relaxed mb-4">
-              our team welcomes confidential conversations with families at any stage — whether you're just beginning to think about a transition or are already in the middle of one. There is no pressure, no obligation, and no sales pitch. Just experienced, honest guidance for your family's situation.
+              Our team welcomes confidential conversations with families at any stage — whether you're just beginning to think about a transition or are already in the middle of one. There is no pressure, no obligation, and no sales pitch. Just experienced, honest guidance for your family's situation.
             </p>
             <p className="text-primary-foreground/60 text-base leading-relaxed mb-8">
               Families throughout King County, Snohomish County, Pierce County, Kitsap County, and across Washington State are welcome to reach out. Our team can also connect families with trusted brokers in other states through eXp Realty's national referral network.

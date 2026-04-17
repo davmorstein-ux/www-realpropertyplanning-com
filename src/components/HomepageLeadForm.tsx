@@ -51,7 +51,7 @@ const HomepageLeadForm = () => {
           Thanks — Message Received
         </h3>
         <p className="text-muted-foreground text-lg leading-relaxed max-w-sm mb-5">
-          our team will reach out shortly to learn more about your situation.
+          Our team will reach out shortly to learn more about your situation.
         </p>
         <p className="text-muted-foreground/70 text-base leading-relaxed max-w-sm mb-5">
           Need to talk sooner?{" "}

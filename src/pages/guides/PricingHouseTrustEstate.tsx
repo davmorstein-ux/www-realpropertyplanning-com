@@ -138,7 +138,7 @@ const PricingHouseTrustEstate = () => (
 
     <MidPageCTA
       heading="Need Help Pricing an Estate Property?"
-      body="our team's dual credentials as a broker and certified appraiser provide the pricing discipline that estate and trust property requires. A short conversation can help you understand your property's realistic market position."
+      body="Our team's dual credentials as a broker and certified appraiser provide the pricing discipline that estate and trust property requires. A short conversation can help you understand your property's realistic market position."
       buttonText="Schedule a Conversation"
       microcopy="No pressure. Just practical guidance for your situation."
     />

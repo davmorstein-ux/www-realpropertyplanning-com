@@ -162,7 +162,7 @@ const HowProbateRealEstateWorks = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <ProofCallout
-            quote="our team's dual background in brokerage and appraisal gave us confidence that the property was priced correctly. He made a complicated situation feel manageable."
+            quote="Our team's dual background in brokerage and appraisal gave us confidence that the property was priced correctly. He made a complicated situation feel manageable."
             attribution="Family Member, King County"
             context="Probate property sale"
             variant="accent"

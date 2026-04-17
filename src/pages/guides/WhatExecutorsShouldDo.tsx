@@ -29,7 +29,7 @@ const faqs = [
   { question: "Can I start working on the property before probate is filed?", answer: "You can secure the property, maintain insurance, and begin planning. However, selling, making major modifications, or disposing of significant personal property should generally wait until your legal authority is established. Consult the estate attorney for guidance specific to your situation." },
   { question: "Should I clean out the home before getting it assessed?", answer: "Not necessarily. A broker experienced in estate property can assess the home in its current condition. In fact, seeing the property before cleanout helps our team understand the full scope of work needed and provide more accurate timeline and cost estimates." },
   { question: "What if I live out of state?", answer: "Many executors manage properties from a distance. Our team serves as the local point of contact — coordinating property access, vendor management, preparation, and the sale process while keeping you informed through regular updates. Learn more about out-of-state property coordination." },
-  { question: "How do I know if the property needs repairs before selling?", answer: "our team evaluates each potential repair or improvement through a return-on-investment lens, informed by his certified appraisal background. Some improvements significantly increase sale price; others are not worth the cost or delay. This analysis helps you make smart decisions with estate funds." },
+  { question: "How do I know if the property needs repairs before selling?", answer: "Our team evaluates each potential repair or improvement through a return-on-investment lens, informed by his certified appraisal background. Some improvements significantly increase sale price; others are not worth the cost or delay. This analysis helps you make smart decisions with estate funds." },
 ];
 
 const jsonLd = articleSchema({
@@ -116,7 +116,7 @@ const WhatExecutorsShouldDo = () => (
             Getting a professional property assessment early in the process helps with multiple decisions: whether to invest in repairs before selling, how to set realistic expectations with beneficiaries, how to plan the estate's finances during administration, and how to respond to early inquiries from potential buyers or neighbors.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            our team's dual background as a broker and <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">certified residential appraiser</Link> means you get valuation insight grounded in professional methodology — not guesswork.
+            Our team's dual background as a broker and <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">certified residential appraiser</Link> means you get valuation insight grounded in professional methodology — not guesswork.
           </p>
         </div>
       </div>
@@ -155,7 +155,7 @@ const WhatExecutorsShouldDo = () => (
             The key question is which improvements are worth the investment. A $5,000 kitchen cleanup might add $15,000 in sale price. A $40,000 renovation might add only $20,000. Our team evaluates each potential improvement using his appraisal background to estimate the likely return — helping you spend estate funds wisely.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            our team coordinates the entire preparation process — scheduling <Link to="/resources/estate-sale-companies" className="text-accent hover:text-gold underline underline-offset-4">estate sale companies</Link>, cleanout crews, handymen, and <Link to="/resources/property-preparation-services" className="text-accent hover:text-gold underline underline-offset-4">property preparation services</Link> — so you don't have to manage contractors yourself.
+            Our team coordinates the entire preparation process — scheduling <Link to="/resources/estate-sale-companies" className="text-accent hover:text-gold underline underline-offset-4">estate sale companies</Link>, cleanout crews, handymen, and <Link to="/resources/property-preparation-services" className="text-accent hover:text-gold underline underline-offset-4">property preparation services</Link> — so you don't have to manage contractors yourself.
           </p>
         </div>
       </div>
@@ -170,7 +170,7 @@ const WhatExecutorsShouldDo = () => (
             Estate property sales involve multiple people with different interests, timelines, and emotional states. The estate attorney needs the real estate process to align with legal proceedings. Beneficiaries want to understand value and timing. Co-executors need to agree on decisions. CPAs may need information for tax planning.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-6">
-            our team acts as a single point of contact for the real estate side of the equation — communicating clearly with all parties, providing regular updates, and ensuring that decisions are documented and defensible. This reduces the executor's communication burden and keeps the process moving forward.
+            Our team acts as a single point of contact for the real estate side of the equation — communicating clearly with all parties, providing regular updates, and ensuring that decisions are documented and defensible. This reduces the executor's communication burden and keeps the process moving forward.
           </p>
           <p className="text-muted-foreground leading-relaxed">
             Learn more about how our team works with <Link to="/for-attorneys" className="text-accent hover:text-gold underline underline-offset-4">attorneys and fiduciaries</Link> or explore the <Link to="/how-the-process-works" className="text-accent hover:text-gold underline underline-offset-4">full sale process from consultation to closing</Link>.

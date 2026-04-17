@@ -11,7 +11,7 @@ const steps = [
     number: "2",
     title: "Property Review & Assessment",
     description:
-      "our team visits the property and looks at it with fresh eyes — condition, deferred maintenance, what the market is doing nearby. Because he's both a broker and a certified appraiser, the assessment goes deeper than a typical walkthrough.",
+      "Our team visits the property and looks at it with fresh eyes — condition, deferred maintenance, what the market is doing nearby. Because he's both a broker and a certified appraiser, the assessment goes deeper than a typical walkthrough.",
   },
   {
     number: "3",

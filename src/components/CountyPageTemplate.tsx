@@ -217,7 +217,7 @@ const CountyPageTemplate = ({
               ))
             ) : (
               <p className="text-primary-foreground/70 text-lg mb-6">
-                our team can walk you through your situation and help you see what makes sense.
+                Our team can walk you through your situation and help you see what makes sense.
               </p>
             )}
             <Link to="/contact">
