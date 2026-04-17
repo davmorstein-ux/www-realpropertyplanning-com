@@ -159,7 +159,7 @@ const CountyPageTemplate = ({
         </div>
 
         {COUNTY_VIDEOS[countySlug] && (
-          <div className="w-full mt-8">
+          <div className="county-hero-video w-full mt-8">
             <div className="relative w-full overflow-hidden" style={{ aspectRatio: "1920 / 244" }}>
               <video
                 autoPlay
