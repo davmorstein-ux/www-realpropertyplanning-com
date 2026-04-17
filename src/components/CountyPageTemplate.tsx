@@ -41,6 +41,11 @@ const COUNTY_VIDEOS: Record<string, CountyVideo> = {
     mp4: "/county-videos/king-hero.mp4?v=1",
     poster: "/county-videos/king-hero-poster.webp?v=1",
   },
+  "kitsap-county": {
+    webm: "/county-videos/kitsap-hero.webm?v=1",
+    mp4: "/county-videos/kitsap-hero.mp4?v=1",
+    poster: "/county-videos/kitsap-hero-poster.webp?v=1",
+  },
 };
 
 const COUNTY_LOGOS: Record<string, string> = {
