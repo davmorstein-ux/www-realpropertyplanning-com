@@ -203,6 +203,8 @@ const About = () => {
     As more people discover Real Property Planning and reach out, the same thing keeps happening: they tell David they wish this site had existed years ago — when they were going through something similar and didn't know where to turn. That feedback is what keeps the work moving forward.
   </p>
 </div>
+            </div>
+          </div>
         </section>
 
         {/* Section 4: Before Real Estate */}
