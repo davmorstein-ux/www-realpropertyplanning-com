@@ -449,7 +449,7 @@ const About = () => {
           </div>
         </section>
 
-        <RelatedServices currentPath="/about-david-stein" />
+        <RelatedServices currentPath="/about" />
 
         {/* Closing CTA */}
         <section className="py-20 lg:py-28 bg-primary">
