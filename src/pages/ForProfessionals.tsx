@@ -131,6 +131,7 @@ const ForProfessionals = () => {
                   <img
                     src={tile.iconSrc}
                     alt=""
+                    aria-hidden="true"
                     className="h-28 w-28 sm:h-32 sm:w-32 object-contain mix-blend-multiply"
                     loading="lazy"
                   />
