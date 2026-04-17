@@ -85,9 +85,25 @@ const ForProfessionals = () => {
             <p className="text-muted-foreground text-lg leading-relaxed mb-4">
               Many real estate decisions are part of a much larger picture — involving legal planning, financial strategy, and major life transitions.
             </p>
-            <p className="text-muted-foreground text-lg leading-relaxed">
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
               I work alongside trusted professionals to help ensure that property-related decisions are handled with clarity, coordination, and care.
             </p>
+            <p className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-3">Services we coordinate on</p>
+            <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-sm">
+              <Link to="/probate-estate-sales" className="text-accent hover:text-gold underline underline-offset-4">Probate &amp; Estate Sales</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/real-estate-appraiser" className="text-accent hover:text-gold underline underline-offset-4">Estate Appraisals</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/estate-liquidation" className="text-accent hover:text-gold underline underline-offset-4">Estate Liquidation</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/senior-transitions" className="text-accent hover:text-gold underline underline-offset-4">Senior Transitions</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/executors" className="text-accent hover:text-gold underline underline-offset-4">Help for Executors</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/trustees" className="text-accent hover:text-gold underline underline-offset-4">Help for Trustees</Link>
+              <span className="text-muted-foreground/40">·</span>
+              <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">Why Valuation Matters</Link>
+            </div>
           </div>
         </div>
       </section>

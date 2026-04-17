@@ -99,6 +99,9 @@ const Footer = () => {
               <li><Link to="/skagit-county" className="hover:text-gold transition-colors">Estate property guidance in Skagit County</Link></li>
               <li><Link to="/thurston-county" className="hover:text-gold transition-colors">Probate &amp; estate real estate in Thurston County</Link></li>
               <li><Link to="/whatcom-county" className="hover:text-gold transition-colors">Probate &amp; estate real estate in Whatcom County</Link></li>
+              <li><Link to="/clark-county" className="hover:text-gold transition-colors">Probate &amp; estate real estate in Clark County</Link></li>
+              <li><Link to="/spokane-county" className="hover:text-gold transition-colors">Probate &amp; estate real estate in Spokane County</Link></li>
+              <li><Link to="/benton-county" className="hover:text-gold transition-colors">Probate &amp; estate real estate in Benton County</Link></li>
               <li><Link to="/counties" className="hover:text-gold transition-colors">All Washington counties we serve</Link></li>
             </ul>
           </div>

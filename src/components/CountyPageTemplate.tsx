@@ -67,6 +67,51 @@ const COUNTY_LOGOS: Record<string, string> = {
   "whatcom-county": whatcomLogo,
 };
 
+/** Neighboring-county relationships for inter-county SEO link equity */
+const NEIGHBORING_COUNTIES: Record<string, { slug: string; name: string }[]> = {
+  "king-county": [
+    { slug: "snohomish-county", name: "Snohomish County" },
+    { slug: "pierce-county", name: "Pierce County" },
+    { slug: "kitsap-county", name: "Kitsap County" },
+  ],
+  "snohomish-county": [
+    { slug: "king-county", name: "King County" },
+    { slug: "skagit-county", name: "Skagit County" },
+    { slug: "whatcom-county", name: "Whatcom County" },
+  ],
+  "pierce-county": [
+    { slug: "king-county", name: "King County" },
+    { slug: "kitsap-county", name: "Kitsap County" },
+    { slug: "thurston-county", name: "Thurston County" },
+  ],
+  "kitsap-county": [
+    { slug: "king-county", name: "King County" },
+    { slug: "pierce-county", name: "Pierce County" },
+    { slug: "thurston-county", name: "Thurston County" },
+  ],
+  "skagit-county": [
+    { slug: "snohomish-county", name: "Snohomish County" },
+    { slug: "whatcom-county", name: "Whatcom County" },
+  ],
+  "whatcom-county": [
+    { slug: "skagit-county", name: "Skagit County" },
+    { slug: "snohomish-county", name: "Snohomish County" },
+  ],
+  "thurston-county": [
+    { slug: "pierce-county", name: "Pierce County" },
+    { slug: "kitsap-county", name: "Kitsap County" },
+  ],
+  "clark-county": [
+    { slug: "thurston-county", name: "Thurston County" },
+  ],
+  "spokane-county": [
+    { slug: "benton-county", name: "Benton County" },
+  ],
+  "benton-county": [
+    { slug: "spokane-county", name: "Spokane County" },
+  ],
+};
+
 interface CountyPageProps {
   countyName: string;
   countyPath: string;
@@ -373,6 +418,21 @@ const CountyPageTemplate = ({
                 <Link to="/guides/inherited-house-washington" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Inherited House Guide</Link>
               </div>
             </div>
+            {NEIGHBORING_COUNTIES[countySlug] && NEIGHBORING_COUNTIES[countySlug].length > 0 && (
+              <div>
+                <p className="text-sm font-semibold text-muted-foreground mb-2">Neighboring Counties</p>
+                <div className="flex flex-wrap gap-2">
+                  {NEIGHBORING_COUNTIES[countySlug].map((c, i) => (
+                    <span key={c.slug}>
+                      {i > 0 && <span className="text-muted-foreground/40 mr-2">·</span>}
+                      <Link to={`/${c.slug}`} className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">{c.name}</Link>
+                    </span>
+                  ))}
+                  <span className="text-muted-foreground/40">·</span>
+                  <Link to="/counties" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">All Washington counties</Link>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>
