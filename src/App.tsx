@@ -22,7 +22,6 @@ import Trustees from "./pages/Trustees";
 import ForCPAs from "./pages/ForCPAs";
 import ForFinancialPlanners from "./pages/ForFinancialPlanners";
 import About from "./pages/About";
-import AboutPlatform from "./pages/AboutPlatform";
 import JoinTheNetwork from "./pages/JoinTheNetwork";
 import FAQ from "./pages/FAQ";
 import Terminology from "./pages/Terminology";
@@ -215,8 +214,11 @@ const App = () => (
           <Route path="/resources/washington-executors-10-step-checklist" element={<WashingtonExecutorsChecklist />} />
 
           {/* ─── Supporting ───────────────────────────────────────── */}
-          <Route path="/about" element={<AboutPlatform />} />
-          <Route path="/about-david-stein" element={<About />} />
+          {/* /about is the single canonical About page (David Stein leadership/founder) */}
+          <Route path="/about" element={<About />} />
+          {/* Legacy routes → redirect to /about */}
+          <Route path="/about-david-stein" element={<Navigate to="/about" replace />} />
+          <Route path="/about-platform" element={<Navigate to="/about" replace />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/terminology" element={<Terminology />} />

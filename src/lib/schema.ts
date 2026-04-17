@@ -53,7 +53,7 @@ export const davidSteinPerson = {
   "@id": `${SITE_URL}/#david-stein`,
   name: "Real Property Planning",
   jobTitle: "Real Estate Broker and State Certified Residential Appraiser",
-  url: `${SITE_URL}/about-david-stein`,
+  url: `${SITE_URL}/about`,
   worksFor: {
     "@type": "RealEstateAgent",
     "@id": `${SITE_URL}/#organization`,
