@@ -109,10 +109,10 @@ const TacomaProbateEstate = () => {
               Tacoma, Pierce County
             </p>
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-[22px]">
-              Helping Families Navigate Inherited Property in Tacoma
+              Inherited Tacoma Homes — North End Craftsmans to South End Ramblers
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed">
-              When a Tacoma home becomes part of an estate, families are often balancing practical decisions, property condition, timing, and emotion all at once. Clear guidance can make the process more manageable.
+              Many Tacoma estate homes were built before 1950 and carry decades of deferred maintenance — character-rich houses in the North End and Stadium District, mid-century ramblers in the South End, and post-war homes across Hilltop and Eastside. The right move is rarely "fix everything"; it's knowing which targeted repairs the Tacoma buyer pool will actually pay for, and which ones to skip.
             </p>
           </div>
         </div>

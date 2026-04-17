@@ -7,13 +7,13 @@ const PierceCounty = () => (
     countySlug="pierce-county"
     seoTitle="Probate & Estate Real Estate in Pierce County, WA | Real Property Planning"
     seoDescription="Experienced probate real estate, inherited home sales, and senior transition guidance throughout Pierce County. Serving Tacoma, Puyallup, Gig Harbor, Lakewood & more."
-    heroH1="Probate & Estate Real Estate in Pierce County, Washington"
-    heroSubheading="Experienced guidance for executors, families, and attorneys navigating property sales throughout Pierce County."
+    heroH1="Inherited Homes in Tacoma, Gig Harbor, and Across Pierce County"
+    heroSubheading="Tacoma's North End craftsmans, Gig Harbor waterfronts, and Puyallup family homes each face a different buyer pool. Our team brings honest condition assessment and Pierce-County-specific pricing to estate property sales."
     cities={[
       "Tacoma", "University Place", "Gig Harbor", "Puyallup", "Bonney Lake",
       "Lakewood", "Sumner", "Fircrest", "Milton",
     ]}
-    localInsight="Pierce County's real estate market stretches from Tacoma's historic neighborhoods to Gig Harbor's waterfront properties — with wide variation in home values, buyer expectations, and property condition. Real Property Planning works with executors, families, and attorneys throughout Pierce County, bringing practical experience with older homes, estate cleanouts, and realistic pricing in a market that rewards informed preparation."
+    localInsight="Pierce County's housing inventory leans older than its King County neighbors — a significant share of estate properties here are mid-century or pre-war homes carrying years of deferred maintenance. The right strategy depends on the specific neighborhood: a Stadium District craftsman with original woodwork is a different conversation than a Lakewood rambler or a Gig Harbor view lot. Our team brings practical experience with older Pierce County homes, realistic preparation budgets, and pricing that reflects what buyers in that specific submarket will actually pay."
     localExpertiseHeading="Our team's Pierce County Experience"
     localExpertiseBody={[
       "Real Property Planning works with estate properties across Pierce County's full geographic and economic range — from Tacoma's historic neighborhoods and Gig Harbor's waterfront properties to Puyallup's family communities and Lakewood's established residential areas. The same dual credential — licensed broker and Washington State Certified Residential Appraiser — that he brings to every market ensures that Pierce County estate properties are priced accurately for their specific condition and neighborhood, not based on county-wide averages that may not apply.",
