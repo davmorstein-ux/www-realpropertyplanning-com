@@ -140,7 +140,7 @@ const Counties = () => {
                       >
                         <img
                           src={card.logo}
-                          alt={`${card.county} logo`}
+                          alt={`${card.county}, Washington official seal — probate, estate, and senior transition real estate services`}
                           className="w-full h-full object-contain"
                           loading="lazy"
                         />
