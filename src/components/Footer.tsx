@@ -38,9 +38,9 @@ const Footer = () => {
                 <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0"  loading="lazy"/>
                 (206) 900-3015
               </a>
-              <a href="mailto:david@realpropertyplanning.com" className="text-primary-foreground/70 hover:text-gold transition-colors flex items-center gap-2">
+              <a href="mailto:info@realpropertyplanning.com" className="text-primary-foreground/70 hover:text-gold transition-colors flex items-center gap-2">
                 <img src={iconEmail3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0"  loading="lazy"/>
-                david@realpropertyplanning.com
+                info@realpropertyplanning.com
               </a>
               <div className="text-primary-foreground/70 flex items-start gap-2 mt-1">
                 <img src={mappin3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain mt-0.5 shrink-0"  loading="lazy"/>
@@ -152,8 +152,8 @@ const Footer = () => {
         <div className="pt-4 pb-2">
           <p className="text-primary-foreground/70 text-base text-center leading-relaxed max-w-2xl mx-auto">
             realpropertyplanning.com is committed to digital accessibility for people with disabilities. This website meets WCAG 2.1 AA accessibility standards. If you experience any accessibility barriers, please contact us at{" "}
-            <a href="mailto:david@realpropertyplanning.com" className="underline underline-offset-2 hover:text-gold transition-colors font-medium">
-              david@realpropertyplanning.com
+            <a href="mailto:info@realpropertyplanning.com" className="underline underline-offset-2 hover:text-gold transition-colors font-medium">
+              info@realpropertyplanning.com
             </a>{" "}
             and we will assist you.
           </p>
