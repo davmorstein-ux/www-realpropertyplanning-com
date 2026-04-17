@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 import { articleSchema } from "@/lib/schema";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import HubAndSpoke from "@/components/HubAndSpoke";
-import davidSteinHeadshot from "@/assets/david-stein-president-about-2025-v5.jpg";
+
 
 const jsonLd = articleSchema({
   headline: "About Real Property Planning",
