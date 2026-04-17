@@ -28,23 +28,29 @@ type CountyVideo = {
   webm?: string;
   mp4?: string;
   poster?: string;
+  uploadDate?: string;
 };
+
+const SITE_URL = "https://www.realpropertyplanning.com";
 
 const COUNTY_VIDEOS: Record<string, CountyVideo> = {
   "snohomish-county": {
     webm: "/county-videos/snohomish-hero.webm?v=3",
     mp4: "/county-videos/snohomish-hero.mp4?v=3",
     poster: "/county-videos/snohomish-hero-poster.webp?v=3",
+    uploadDate: "2025-04-10",
   },
   "king-county": {
     webm: "/county-videos/king-hero.webm?v=1",
     mp4: "/county-videos/king-hero.mp4?v=1",
     poster: "/county-videos/king-hero-poster.webp?v=1",
+    uploadDate: "2025-04-12",
   },
   "kitsap-county": {
     webm: "/county-videos/kitsap-hero.webm?v=1",
     mp4: "/county-videos/kitsap-hero.mp4?v=1",
     poster: "/county-videos/kitsap-hero-poster.webp?v=1",
+    uploadDate: "2025-04-15",
   },
 };
 
