@@ -7,8 +7,9 @@ const KitsapCounty = () => (
     countySlug="kitsap-county"
     seoTitle="Probate & Estate Real Estate in Kitsap County, WA | Real Property Planning"
     seoDescription="Experienced probate real estate, inherited home sales, and senior transition guidance throughout Kitsap County. Serving Bremerton, Silverdale, Poulsbo, Bainbridge Island & more."
-    heroH1="Probate & Estate Real Estate in Kitsap County, Washington"
-    heroSubheading="Experienced guidance for executors, families, and attorneys navigating property sales throughout the Kitsap Peninsula."
+    heroH1="Kitsap County, WA"
+    heroSubheading="Estate, probate, and senior transition real estate — priced for the peninsula it actually sits on."
+    belowHeroHeading="Serving Every Corner of Kitsap County"
     cities={[
       "Bainbridge Island", "Poulsbo", "Silverdale", "Bremerton",
       "Port Orchard", "Kingston", "Suquamish",
