@@ -109,10 +109,10 @@ const BellevueProbateEstate = () => {
               Bellevue, King County
             </p>
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-[22px]">
-              Helping Families Handle Estate Property in Bellevue With Clarity
+              Bellevue Estate &amp; Trust Property Sales — Built for Higher-Value Homes
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed">
-              Estate and inherited property decisions in Bellevue often involve high-value homes, trust ownership, timing considerations, and the need for careful pricing. Clear guidance can help families and fiduciaries move forward with confidence.
+              Bellevue estate sales often involve trust-owned property, multiple beneficiaries, and homes in the $1.5M–$5M range where a 2% pricing error becomes a six-figure mistake. Bridle Trails, Somerset, West Bellevue, and Newport Shores each carry their own buyer expectations — and the prep that makes sense for a Medina view home is rarely the prep that makes sense for a Crossroads condo.
             </p>
           </div>
         </div>

@@ -5,8 +5,8 @@ const KingCounty = () => (
     countyName="King County"
     countyPath="/king-county"
     countySlug="king-county"
-    heroH1="Probate & Estate Real Estate in King County, Washington"
-    heroSubheading="Experienced guidance for executors, families, and attorneys navigating property sales throughout King County."
+    heroH1="Selling an Inherited Home in Seattle, the Eastside, or South King County"
+    heroSubheading="From Capitol Hill craftsmans to Mercer Island waterfront and Renton ramblers — King County estate properties demand neighborhood-level pricing, not county averages. Our team helps families and executors navigate it carefully."
     seoTitle="Probate & Estate Real Estate in King County, WA | Real Property Planning"
     seoDescription="Experienced probate real estate, inherited home sales, and senior transition guidance throughout King County, Washington. Serving Seattle, Bellevue, Kirkland, Redmond & more."
     cities={[

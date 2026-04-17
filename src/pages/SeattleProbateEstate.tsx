@@ -112,10 +112,10 @@ const SeattleProbateEstate = () => {
               Seattle, King County
             </p>
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-[22px]">
-              Helping Families Navigate Inherited Property in Seattle
+              Selling an Inherited Seattle Home — From Ballard to Beacon Hill
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed">
-              When a home becomes part of an estate, the decisions that follow can feel overwhelming — especially in a market like Seattle where pricing, timing, and property condition can significantly impact the outcome.
+              A Capitol Hill condo, a West Seattle craftsman, and a Magnolia view home are three completely different sales — different buyer pools, different prep decisions, different price ceilings. Estate properties inside Seattle city limits reward neighborhood-specific pricing far more than they reward broad market averages.
             </p>
           </div>
         </div>
