@@ -15,29 +15,7 @@ import { Link } from "react-router-dom";
 import warning3d from "@/assets/property-warning-guidance-icon-washington.webp";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconProbateSales from "@/assets/icons/probate-property-sales-icon-washington.webp";
-import ClientReviewsSection from "@/components/ClientReviewsSection";
 import RealClientSituations from "@/components/RealClientSituations";
-
-const probateReviews = [
-  {
-    text: "The dual background in brokerage and appraisal gave us confidence that the property was priced correctly. He made a complicated situation feel manageable.",
-    highlights: ["priced correctly", "complicated situation feel manageable"],
-    attribution: "Family Member, King County",
-    contextTag: "Probate · Valuation Strategy",
-  },
-  {
-    text: "Real Property Planning guided our family through a very difficult time with professionalism and genuine compassion. His valuation perspective and market knowledge were incredibly helpful.",
-    highlights: ["professionalism and genuine compassion", "valuation perspective"],
-    attribution: "Estate Attorney, Seattle",
-    contextTag: "Probate · Executor",
-  },
-  {
-    text: "We appreciated the patience, thoughtful communication, and realistic guidance throughout the sale of our family property.",
-    highlights: ["patience, thoughtful communication", "realistic guidance"],
-    attribution: "Family Review",
-    contextTag: "Inherited Property",
-  },
-];
 
 const probateCaseStudies = [
   {
