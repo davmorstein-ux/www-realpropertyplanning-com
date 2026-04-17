@@ -26,7 +26,7 @@ const About = () => {
         schemaJson={realEstateAgentSchema}
       />
       <BreadcrumbSchema
-        items={[
+        items={[space-y-6
           { name: "About", url: "/about" },
         ]}
       />
@@ -160,7 +160,7 @@ const About = () => {
                   David didn't set out to specialize in probate and senior transitions. He came to it the way most meaningful things happen — through experience.
                 </p>
                 <p>
-                  He spent 15 years as a contractor before transitioning into real estate. He also built and ran an e-commerce business selling commercial access control and surveillance equipment — which gave him an early, practical understanding of how to build systems that connect people with what they need. That instinct — identify the gap, build the solution — is what eventually led to Real Property Planning.
+                 He spent 15 years as a contractor before transitioning into real estate. He also built and ran an e-commerce business — which gave him an early, practical understanding of how to build systems that connect people with what they need. That instinct — identify the gap, build the solution — is what eventually led to Real Property Planning.
                 </p>
                 <p>
                   The shift toward probate and estate work started with a handful of transactions that were more complex than usual. Rather than find them frustrating, David found them fascinating. He started looking more closely at what families were actually going through in those situations — the confusion, the coordination challenges, the decisions being made without enough information — and something clicked.
