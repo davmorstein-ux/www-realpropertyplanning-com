@@ -21,7 +21,7 @@ const Footer = () => {
               </span>
             </Link>
             <p className="text-primary-foreground/80 text-base font-medium leading-snug mb-2">
-              David Stein
+              Real Property Planning
             </p>
             <p className="text-primary-foreground/70 text-base leading-relaxed mb-0.5">
               Licensed Real Estate Broker — #113972
@@ -74,7 +74,7 @@ const Footer = () => {
           <div>
             <h4 className="text-primary-foreground font-serif text-lg font-semibold mb-5">Resources</h4>
             <ul className="space-y-3 text-primary-foreground/70 text-base">
-              <li><Link to="/about" className="hover:text-gold transition-colors">About David Stein</Link></li>
+              <li><Link to="/about" className="hover:text-gold transition-colors">About Real Property Planning</Link></li>
               <li><Link to="/how-we-work" className="hover:text-gold transition-colors">How We Work</Link></li>
               <li><Link to="/attorney-referral" className="hover:text-gold transition-colors">Referral Resource</Link></li>
               <li><Link to="/terminology" className="hover:text-gold transition-colors">Terminology</Link></li>
@@ -108,10 +108,10 @@ const Footer = () => {
         <div className="footer-divider mb-0" />
         <div className="pt-8 mb-6">
            <p className="text-primary-foreground/70 text-base leading-relaxed max-w-4xl">
-            David Stein provides real estate brokerage and valuation-related guidance based on his experience as a professional real estate broker and state certified appraiser. Legal, tax, and probate-specific advice should be obtained from qualified legal and tax professionals.
+            Real Property Planning provides real estate brokerage and valuation-related guidance based on his experience as a professional real estate broker and state certified appraiser. Legal, tax, and probate-specific advice should be obtained from qualified legal and tax professionals.
           </p>
           <p className="text-primary-foreground/70 text-base leading-relaxed max-w-4xl mt-3">
-            David Stein is a licensed real estate broker in the State of Washington and a Washington state certified real estate appraiser. He is not an attorney, CPA, or tax advisor and does not provide legal, tax, or accounting advice.
+            Real Property Planning is a licensed real estate broker in the State of Washington and a Washington state certified real estate appraiser. He is not an attorney, CPA, or tax advisor and does not provide legal, tax, or accounting advice.
           </p>
         </div>
         
@@ -164,12 +164,12 @@ const Footer = () => {
         <div className="pt-10 pb-2 flex flex-col items-center">
           <img 
             src={expRealtyLogo} 
-            alt="eXp Realty brokerage logo — David Stein is a licensed broker with eXp Realty" 
+            alt="eXp Realty brokerage logo — Real Property Planning is a licensed broker with eXp Realty" 
             className="w-[95px] md:w-[120px] h-auto mb-4"
             loading="lazy"
           />
           <p className="text-primary-foreground/70 text-base text-center leading-relaxed">
-            David Stein | Real Estate Broker · Certified Residential Appraiser | Real Property Planning | eXp Realty
+            Real Property Planning | Real Estate Broker · Certified Residential Appraiser | Real Property Planning | eXp Realty
           </p>
           <p className="text-primary-foreground/70 text-base text-center mt-1">
             Mailing Address: PO Box 1462, Woodinville, WA 98072
@@ -194,7 +194,7 @@ const Footer = () => {
         <div className="footer-divider mb-0" />
         <div className="pt-4">
           <p className="text-primary-foreground/70 text-base text-center">
-            © {new Date().getFullYear()} David Stein, Real Estate Broker – Senior Relocation & Estate Sales. Real Property Planning.
+            © {new Date().getFullYear()} Real Property Planning, Real Estate Broker – Senior Relocation & Estate Sales. Real Property Planning.
           </p>
         </div>
       </div>

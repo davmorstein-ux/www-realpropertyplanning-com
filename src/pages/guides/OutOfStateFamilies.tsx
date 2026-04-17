@@ -35,8 +35,8 @@ const howDavidHelps = [
 ];
 
 const faqs = [
-  { question: "Do I need to fly to Washington to sell the property?", answer: "In most cases, no. David handles property access, vendor coordination, preparation, marketing, and the sale process on your behalf. Many clients manage the entire process remotely through phone calls, email updates, and photo reports. If you do visit, David can maximize that visit to cover key decisions efficiently." },
-  { question: "How do I sign documents if I am not in Washington?", answer: "Washington allows remote notarization and electronic signatures for most real estate transactions. David works with title companies experienced in remote closings to ensure the paperwork process is smooth and convenient regardless of your location." },
+  { question: "Do I need to fly to Washington to sell the property?", answer: "In most cases, no. Our team handles property access, vendor coordination, preparation, marketing, and the sale process on your behalf. Many clients manage the entire process remotely through phone calls, email updates, and photo reports. If you do visit, David can maximize that visit to cover key decisions efficiently." },
+  { question: "How do I sign documents if I am not in Washington?", answer: "Washington allows remote notarization and electronic signatures for most real estate transactions. Our team works with title companies experienced in remote closings to ensure the paperwork process is smooth and convenient regardless of your location." },
   { question: "What if I need someone to manage the property before it is ready to sell?", answer: "David can coordinate ongoing property management needs during the estate administration period — including securing the property, maintaining insurance, managing utilities, and addressing maintenance issues as they arise." },
   { question: "Can David help me find local attorneys or other professionals?", answer: "Yes. David maintains professional relationships with probate attorneys, CPAs, senior move managers, and other service providers throughout Washington State. He can provide referrals when clients need local professional support." },
 ];
@@ -79,7 +79,7 @@ const OutOfStateFamilies = () => (
             If you have been named executor, trustee, or heir for an estate that includes property in Washington State — but you live somewhere else — you face a unique set of challenges. The property may need assessment, preparation, and sale, and you need someone on the ground you can trust to handle it.
           </p>
           <p className="text-lg text-primary-foreground/70 leading-relaxed">
-            David Stein regularly works with out-of-state clients who need experienced, reliable local coordination for estate and inherited property throughout Washington State.
+            Real Property Planning regularly works with out-of-state clients who need experienced, reliable local coordination for estate and inherited property throughout Washington State.
           </p>
         </div>
       </div>
@@ -141,7 +141,7 @@ const OutOfStateFamilies = () => (
 
     <MidPageCTA
       heading="Managing a Property From Out of State?"
-      body="David provides hands-on local coordination so you can manage the sale from wherever you are — with confidence and clear communication."
+      body="Our team provides hands-on local coordination so you can manage the sale from wherever you are — with confidence and clear communication."
       buttonText="Schedule a Conversation"
       microcopy="No pressure. Just practical guidance for your situation."
     />
@@ -199,7 +199,7 @@ const OutOfStateFamilies = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">Need Local Help With a Washington Property?</h2>
-          <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">David provides hands-on local coordination and clear communication — no matter where you are.</p>
+          <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">Our team provides hands-on local coordination and clear communication — no matter where you are.</p>
           <Link to="/contact"><Button variant="gold" size="lg"><img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy"/>Schedule a Conversation</Button></Link>
         </div>
       </div>

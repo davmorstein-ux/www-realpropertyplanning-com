@@ -12,11 +12,11 @@ import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washingto
 const whyReferCards = [
   {
     heading: "Valuation-Informed Guidance",
-    text: "As both a real estate broker and Washington state certified real estate appraiser, David Stein brings added perspective to pricing, property condition, marketability, and sale strategy.",
+    text: "As both a real estate broker and Washington state certified real estate appraiser, Real Property Planning brings added perspective to pricing, property condition, marketability, and sale strategy.",
   },
   {
     heading: "Experienced With Sensitive Transitions",
-    text: "Probate, inherited property, trust sales, and estate-related transitions often require discretion, patience, and a measured approach. David helps clients move forward with clarity and professionalism.",
+    text: "Probate, inherited property, trust sales, and estate-related transitions often require discretion, patience, and a measured approach. Our team helps clients move forward with clarity and professionalism.",
   },
   {
     heading: "Reliable Communication",
@@ -24,26 +24,26 @@ const whyReferCards = [
   },
   {
     heading: "Local Market Knowledge",
-    text: "David Stein serves King County, Snohomish County, Pierce County, and Kitsap County with local insight that helps inform value, preparation strategy, and market positioning across different property types and communities.",
+    text: "Real Property Planning serves King County, Snohomish County, Pierce County, and Kitsap County with local insight that helps inform value, preparation strategy, and market positioning across different property types and communities.",
   },
 ];
 
 const howWeWorkBlocks = [
   {
     heading: "Clear Real Estate Guidance",
-    text: "David Stein helps clients and professional advisors understand property condition, likely market position, preparation options, pricing considerations, and the practical steps involved in bringing real estate to market.",
+    text: "Real Property Planning helps clients and professional advisors understand property condition, likely market position, preparation options, pricing considerations, and the practical steps involved in bringing real estate to market.",
   },
   {
     heading: "Valuation-Informed Perspective",
-    text: "As both a real estate broker and Washington state certified real estate appraiser, David Stein brings added perspective to questions of value, marketability, and sale strategy during estate-related property transitions.",
+    text: "As both a real estate broker and Washington state certified real estate appraiser, Real Property Planning brings added perspective to questions of value, marketability, and sale strategy during estate-related property transitions.",
   },
   {
     heading: "Coordination With Professional Advisors",
-    text: "David Stein works alongside attorneys, fiduciaries, trustees, and other advisors by providing real-estate-related insight, communication, and follow-through within the scope of his professional role.",
+    text: "Real Property Planning works alongside attorneys, fiduciaries, trustees, and other advisors by providing real-estate-related insight, communication, and follow-through within the scope of his professional role.",
   },
   {
     heading: "Support for Executors and Families",
-    text: "Executors, personal representatives, trustees, heirs, and family members are often navigating unfamiliar responsibilities. David Stein helps bring order, clarity, and a more structured process to the real estate side of those decisions.",
+    text: "Executors, personal representatives, trustees, heirs, and family members are often navigating unfamiliar responsibilities. Real Property Planning helps bring order, clarity, and a more structured process to the real estate side of those decisions.",
   },
   {
     heading: "Focus on Important Property Transitions",
@@ -51,7 +51,7 @@ const howWeWorkBlocks = [
   },
   {
     heading: "Experience Across Washington State",
-    text: "David Stein serves clients throughout Washington State, with deep experience in King County, Snohomish County, Pierce County, and Kitsap County. Through eXp Realty's referral network, he can also connect clients with trusted brokers across the U.S. and internationally.",
+    text: "Real Property Planning serves clients throughout Washington State, with deep experience in King County, Snohomish County, Pierce County, and Kitsap County. Through eXp Realty's referral network, he can also connect clients with trusted brokers across the U.S. and internationally.",
   },
 ];
 
@@ -73,7 +73,7 @@ const situations = [
 const differentiators = [
   {
     heading: "Over 20 Years of Real Estate Experience",
-    text: "David Stein brings more than two decades of experience helping clients make informed real estate decisions across changing markets, property types, and life transitions.",
+    text: "Real Property Planning brings more than two decades of experience helping clients make informed real estate decisions across changing markets, property types, and life transitions.",
   },
   {
     heading: "Brokerage Expertise Combined With Valuation Insight",
@@ -81,7 +81,7 @@ const differentiators = [
   },
   {
     heading: "A Calm, Professional Approach to Complex Property Matters",
-    text: "Estate and inherited property situations often involve emotional, practical, and professional complexities at the same time. David Stein is known for a measured approach focused on communication, preparation, value protection, and forward progress.",
+    text: "Estate and inherited property situations often involve emotional, practical, and professional complexities at the same time. Real Property Planning is known for a measured approach focused on communication, preparation, value protection, and forward progress.",
   },
 ];
 
@@ -89,11 +89,11 @@ const AttorneyReferral = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Attorney and Professional Referral Resource for Probate Real Estate | David Stein"
-        description="David Stein is a real estate and valuation resource for attorneys, trustees, executors, and fiduciaries handling probate, trust, and estate property matters throughout Washington State."
+        title="Attorney and Professional Referral Resource for Probate Real Estate | Real Property Planning"
+        description="Real Property Planning is a real estate and valuation resource for attorneys, trustees, executors, and fiduciaries handling probate, trust, and estate property matters throughout Washington State."
         jsonLd={articleSchema({
           headline: "Attorney and Professional Referral Resource for Probate Real Estate",
-          description: "David Stein is a real estate and valuation resource for attorneys, trustees, executors, and fiduciaries handling probate, trust, and estate property matters.",
+          description: "Real Property Planning is a real estate and valuation resource for attorneys, trustees, executors, and fiduciaries handling probate, trust, and estate property matters.",
           url: "/attorney-referral",
           datePublished: "2025-01-15",
           dateModified: "2026-03-15",
@@ -115,10 +115,10 @@ const AttorneyReferral = () => {
               A Real Estate and Valuation Resource for Probate, Trust, and Estate Property Transitions
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-5">
-              Attorneys, fiduciaries, trustees, personal representatives, executors, and family decision-makers often need more than a traditional real estate broker when a property is connected to probate, trust administration, inherited ownership, or estate settlement. David Stein is a licensed real estate broker in the State of Washington and a Washington state certified real estate appraiser with Attorneys, fiduciaries, trustees, personal representatives, executors, and family decision-makers often need more than a traditional real estate broker when a property is connected to probate, trust administration, inherited ownership, or estate settlement. David Stein is a licensed real estate broker in the State of Washington and a Washington state certified real estate appraiser with over 20 years of experience helping clients make informed decisions about important property transitions throughout Washington State.
+              Attorneys, fiduciaries, trustees, personal representatives, executors, and family decision-makers often need more than a traditional real estate broker when a property is connected to probate, trust administration, inherited ownership, or estate settlement. Real Property Planning is a licensed real estate broker in the State of Washington and a Washington state certified real estate appraiser with Attorneys, fiduciaries, trustees, personal representatives, executors, and family decision-makers often need more than a traditional real estate broker when a property is connected to probate, trust administration, inherited ownership, or estate settlement. Real Property Planning is a licensed real estate broker in the State of Washington and a Washington state certified real estate appraiser with over 20 years of experience helping clients make informed decisions about important property transitions throughout Washington State.
             </p>
             <p className="text-lg text-primary-foreground/70 leading-relaxed mb-[30px]">
-              His work is focused on inherited homes, probate property, trust-owned real estate, estate-related sales, and situations where valuation insight, local market knowledge, communication, and practical coordination matter. David works alongside attorneys and related professionals as a real estate resource to help clients move forward with greater clarity, stronger preparation, and a more organized sale strategy.
+              His work is focused on inherited homes, probate property, trust-owned real estate, estate-related sales, and situations where valuation insight, local market knowledge, communication, and practical coordination matter. Our team works alongside attorneys and related professionals as a real estate resource to help clients move forward with greater clarity, stronger preparation, and a more organized sale strategy.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Link to="/contact">
@@ -153,7 +153,7 @@ const AttorneyReferral = () => {
               Professional Perspective
             </p>
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-[22px]">
-              Why Attorneys, Trustees, and Fiduciaries Refer David Stein
+              Why Attorneys, Trustees, and Fiduciaries Refer Real Property Planning
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mb-10">
               Estate-related real property often requires a level of judgment and coordination that goes beyond a standard listing approach. Attorneys and related professionals often need a real estate resource who understands that these matters can involve timing concerns, valuation questions, sensitive family dynamics, title issues, preparation decisions, documentation, and the need for calm communication throughout the process.
@@ -185,10 +185,10 @@ const AttorneyReferral = () => {
               Professional Real Estate Resource
             </p>
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-[22px]">
-              How David Stein Works With Attorneys, Executors, Trustees, and Families
+              How Real Property Planning Works With Attorneys, Executors, Trustees, and Families
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mb-10">
-              Important property transitions often involve more than a standard home sale. Probate, trust administration, inherited real estate, and estate-related property decisions can require coordination among attorneys, fiduciaries, executors, trustees, personal representatives, heirs, and family members. Important property transitions often involve more than a standard home sale. Probate, trust administration, inherited real estate, and estate-related property decisions can require coordination among attorneys, fiduciaries, executors, trustees, personal representatives, heirs, and family members. David Stein works as a real estate and valuation resource to help bring structure, market clarity, and experienced guidance to the real-property side of these matters throughout Washington State.
+              Important property transitions often involve more than a standard home sale. Probate, trust administration, inherited real estate, and estate-related property decisions can require coordination among attorneys, fiduciaries, executors, trustees, personal representatives, heirs, and family members. Important property transitions often involve more than a standard home sale. Probate, trust administration, inherited real estate, and estate-related property decisions can require coordination among attorneys, fiduciaries, executors, trustees, personal representatives, heirs, and family members. Real Property Planning works as a real estate and valuation resource to help bring structure, market clarity, and experienced guidance to the real-property side of these matters throughout Washington State.
             </p>
             <div className="grid md:grid-cols-2 gap-5 lg:gap-6">
               {howWeWorkBlocks.map((block, index) => (
@@ -217,10 +217,10 @@ const AttorneyReferral = () => {
               Representative Matters
             </p>
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-[22px]">
-              Situations Where David Stein Can Help
+              Situations Where Real Property Planning Can Help
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mb-10">
-              Not every property transition follows the same path. David Stein helps clients and referring professionals navigate a wide range of real-estate-related situations connected to probate, trusts, inherited ownership, and estate settlement.
+              Not every property transition follows the same path. Real Property Planning helps clients and referring professionals navigate a wide range of real-estate-related situations connected to probate, trusts, inherited ownership, and estate settlement.
             </p>
             <div className="grid md:grid-cols-2 gap-x-8 gap-y-4 mb-10">
               {situations.map((situation, index) => (
@@ -231,7 +231,7 @@ const AttorneyReferral = () => {
               ))}
             </div>
             <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl">
-              Whether the property is a longtime family home, an outdated inherited residence, a trust-owned property, or an estate asset that needs to be evaluated and prepared for sale, David Stein helps clients move from uncertainty toward a more informed and organized process.
+              Whether the property is a longtime family home, an outdated inherited residence, a trust-owned property, or an estate asset that needs to be evaluated and prepared for sale, Real Property Planning helps clients move from uncertainty toward a more informed and organized process.
             </p>
           </div>
         </div>
@@ -242,10 +242,10 @@ const AttorneyReferral = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-[1140px] mx-auto">
             <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
-              Why David Stein
+              Why Real Property Planning
             </p>
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-10">
-              What Makes David Stein Different
+              What Makes Real Property Planning Different
             </h2>
             <div className="grid lg:grid-cols-3 gap-5 lg:gap-6 mb-10">
               {differentiators.map((item, index) => (
@@ -263,7 +263,7 @@ const AttorneyReferral = () => {
               ))}
             </div>
             <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mb-8">
-              For attorneys, fiduciaries, executors, trustees, and families seeking a knowledgeable real estate resource in King County, Snohomish County, Pierce County, or Kitsap County, David Stein offers experience that extends beyond a conventional listing approach.
+              For attorneys, fiduciaries, executors, trustees, and families seeking a knowledgeable real estate resource in King County, Snohomish County, Pierce County, or Kitsap County, Real Property Planning offers experience that extends beyond a conventional listing approach.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link to="/for-attorneys" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Attorneys & Fiduciaries</Link>
@@ -294,10 +294,10 @@ const AttorneyReferral = () => {
                 Confidential Consultation
               </p>
               <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-4">
-                Discuss a Property Transition With David Stein
+                Discuss a Property Transition With Real Property Planning
               </h2>
               <p className="text-muted-foreground leading-relaxed text-base md:text-lg max-w-3xl mx-auto mb-8">
-                If you are an attorney, executor, trustee, fiduciary, personal representative, or family decision-maker navigating probate property, inherited real estate, trust-owned property, or an estate-related home sale in King County, Snohomish County, Pierce County, or Kitsap County, David Stein provides experienced real estate guidance grounded in market knowledge, valuation insight, and a practical understanding of important property transitions.
+                If you are an attorney, executor, trustee, fiduciary, personal representative, or family decision-maker navigating probate property, inherited real estate, trust-owned property, or an estate-related home sale in King County, Snohomish County, Pierce County, or Kitsap County, Real Property Planning provides experienced real estate guidance grounded in market knowledge, valuation insight, and a practical understanding of important property transitions.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
                 <Link to="/contact">

@@ -26,19 +26,19 @@ const faqs = [
       "Bellingham has a distinct local market shaped by its proximity to Western Washington University, the San Juan Islands, and the Canadian border. Property types range from historic Lettered Streets homes to rural acreage outside city limits. Pricing and buyer expectations vary significantly by neighborhood, and automated estimates often miss these differences.",
   },
   {
-    question: "How does David's appraisal background help with Bellingham properties?",
+    question: "How does our team's appraisal background help with Bellingham properties?",
     answer:
-      "As both a licensed Washington State real estate broker and a state-certified residential appraiser, David provides pricing grounded in actual condition assessment and local market data. This is especially important in Bellingham, where unique property types and location-specific factors can significantly affect value.",
+      "As both a licensed Washington State real estate broker and a state-certified residential appraiser, Our team provides pricing grounded in actual condition assessment and local market data. This is especially important in Bellingham, where unique property types and location-specific factors can significantly affect value.",
   },
   {
     question: "Should I prepare an inherited Bellingham home before selling?",
     answer:
-      "It depends on the property's condition, your timeline, and your goals. David evaluates which improvements are likely to return more than they cost — and which aren't worth the investment. For families managing from a distance, this honest assessment saves both time and money.",
+      "It depends on the property's condition, your timeline, and your goals. Our team evaluates which improvements are likely to return more than they cost — and which aren't worth the investment. For families managing from a distance, this honest assessment saves both time and money.",
   },
   {
     question: "How long does it typically take to sell an estate property in Bellingham?",
     answer:
-      "Timelines depend on the probate or trust process, property condition, and seasonal market factors. Once the property is ready and legal authority is established, well-priced Bellingham homes generally sell within a reasonable timeframe. David helps set realistic expectations based on your specific situation.",
+      "Timelines depend on the probate or trust process, property condition, and seasonal market factors. Once the property is ready and legal authority is established, well-priced Bellingham homes generally sell within a reasonable timeframe. Our team helps set realistic expectations based on your specific situation.",
   },
   {
     question: "What if the inherited property is a second home or vacation property?",
@@ -161,7 +161,7 @@ const BellinghamProbateEstate = () => {
               Property types vary widely — from walkable Lettered Streets Victorians and South Hill craftsmen to rural parcels in the county. Inherited and estate homes here often reflect decades of ownership, and condition can range from well-maintained to significantly deferred. Understanding what a property is actually worth in its current state requires honest, on-the-ground assessment.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              As both a licensed Washington State real estate broker and a state-certified residential appraiser, David Stein brings a valuation-first perspective grounded in actual property condition and comparable market data — not automated estimates that miss Bellingham's local nuances.
+              As both a licensed Washington State real estate broker and a state-certified residential appraiser, Real Property Planning brings a valuation-first perspective grounded in actual property condition and comparable market data — not automated estimates that miss Bellingham's local nuances.
             </p>
           </div>
         </div>
@@ -170,7 +170,7 @@ const BellinghamProbateEstate = () => {
       {/* Mid-page CTA */}
       <MidPageCTA
         heading="Handling a Bellingham Property From a Distance?"
-        body="David provides confidential consultations for executors, trustees, and families dealing with inherited or estate property in Bellingham and Whatcom County — whether you're local or managing from out of the area."
+        body="Our team provides confidential consultations for executors, trustees, and families dealing with inherited or estate property in Bellingham and Whatcom County — whether you're local or managing from out of the area."
         buttonText="Schedule a Consultation"
         microcopy="No pressure. Just practical guidance for your situation."
       />
@@ -189,7 +189,7 @@ const BellinghamProbateEstate = () => {
               David serves as your local point of coordination — visiting the property, assessing its condition, managing cleanout crews and contractors, and communicating with attorneys and family members. The goal is to reduce the logistical burden so you can make informed decisions without unnecessary stress or travel.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              For second homes and vacation properties, there are often additional considerations — seasonal access, shared ownership, deferred maintenance, or unique features that affect marketability. David evaluates these factors honestly and builds a strategy around the property's actual condition and positioning.
+              For second homes and vacation properties, there are often additional considerations — seasonal access, shared ownership, deferred maintenance, or unique features that affect marketability. Our team evaluates these factors honestly and builds a strategy around the property's actual condition and positioning.
             </p>
           </div>
         </div>

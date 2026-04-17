@@ -15,52 +15,52 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const softCta = "If you would like to discuss your specific situation, contact David for guidance.";
+const softCta = "If you would like to discuss your specific situation, contact us for guidance.";
 
 const faqs = [
   {
     question: "How do executors sell a house in Washington State?",
-    answer: `In Washington, an executor typically needs letters testamentary or letters of administration from the probate court before they have legal authority to sell real property. Once authority is established, the executor can engage a real estate broker, prepare the home for sale, and proceed with the listing and transaction. The process involves coordinating legal timelines, property preparation, pricing, and communication with heirs and beneficiaries. David Stein guides executors through each step — from initial property assessment to closing.\n\n${softCta}`,
+    answer: `In Washington, an executor typically needs letters testamentary or letters of administration from the probate court before they have legal authority to sell real property. Once authority is established, the executor can engage a real estate broker, prepare the home for sale, and proceed with the listing and transaction. The process involves coordinating legal timelines, property preparation, pricing, and communication with heirs and beneficiaries. Real Property Planning guides executors through each step — from initial property assessment to closing.\n\n${softCta}`,
   },
   {
     question: "What happens to a house during probate?",
-    answer: `During probate, the home becomes part of the estate and is managed by the executor or personal representative appointed by the court. The property must be maintained, secured, and insured throughout the process. Depending on the terms of the will and the needs of the estate, the home may be sold to pay debts, distributed to beneficiaries, or held temporarily. David Stein works with executors and attorneys to evaluate the property, develop a plan, and manage the real estate side of the process.\n\n${softCta}`,
+    answer: `During probate, the home becomes part of the estate and is managed by the executor or personal representative appointed by the court. The property must be maintained, secured, and insured throughout the process. Depending on the terms of the will and the needs of the estate, the home may be sold to pay debts, distributed to beneficiaries, or held temporarily. Real Property Planning works with executors and attorneys to evaluate the property, develop a plan, and manage the real estate side of the process.\n\n${softCta}`,
   },
   {
     question: "Can a house be sold before probate is completed?",
-    answer: `In some cases, yes — but it depends on the estate structure, the court's requirements, and whether the executor has been granted authority to sell. Some properties held in trust or with survivorship rights may not require probate at all. In other situations, the court may need to approve the sale before it can close. David Stein works with estate attorneys to align the real estate timeline with the legal process, so the sale moves forward as efficiently as possible.\n\n${softCta}`,
+    answer: `In some cases, yes — but it depends on the estate structure, the court's requirements, and whether the executor has been granted authority to sell. Some properties held in trust or with survivorship rights may not require probate at all. In other situations, the court may need to approve the sale before it can close. Real Property Planning works with estate attorneys to align the real estate timeline with the legal process, so the sale moves forward as efficiently as possible.\n\n${softCta}`,
   },
   {
     question: "How do families move elderly parents into assisted living?",
-    answer: `Moving an elderly parent into assisted living involves many moving parts — finding the right community, managing the emotional transition, sorting through a lifetime of belongings, and often selling the family home. Families benefit from working with senior move managers, senior living placement services, and a real estate broker experienced in senior transitions. David Stein provides patient, practical guidance on the property side, coordinating the home sale with the transition timeline so families aren't overwhelmed.\n\n${softCta}`,
+    answer: `Moving an elderly parent into assisted living involves many moving parts — finding the right community, managing the emotional transition, sorting through a lifetime of belongings, and often selling the family home. Families benefit from working with senior move managers, senior living placement services, and a real estate broker experienced in senior transitions. Real Property Planning provides patient, practical guidance on the property side, coordinating the home sale with the transition timeline so families aren't overwhelmed.\n\n${softCta}`,
   },
   {
     question: "Do I need probate before selling a house in Washington?",
-    answer: `It depends on how the property is titled and the estate structure. In many cases, probate or letters testamentary are required before a sale can proceed. Some properties held in trust or with survivorship rights may avoid probate entirely. The legal requirements should be reviewed with an attorney, but on the real estate side, David Stein can help you evaluate the property and prepare a plan so you are ready to move forward once authority is confirmed.\n\n${softCta}`,
+    answer: `It depends on how the property is titled and the estate structure. In many cases, probate or letters testamentary are required before a sale can proceed. Some properties held in trust or with survivorship rights may avoid probate entirely. The legal requirements should be reviewed with an attorney, but on the real estate side, Real Property Planning can help you evaluate the property and prepare a plan so you are ready to move forward once authority is confirmed.\n\n${softCta}`,
   },
   {
     question: "Can a trustee sell trust-owned real estate?",
-    answer: `In most cases, yes — as long as the trust document grants the trustee authority to sell. Trust sales often avoid probate court involvement but still require informed pricing, preparation decisions, and communication with beneficiaries. David Stein works with trustees to coordinate the real estate side of the process with care and professionalism.\n\n${softCta}`,
+    answer: `In most cases, yes — as long as the trust document grants the trustee authority to sell. Trust sales often avoid probate court involvement but still require informed pricing, preparation decisions, and communication with beneficiaries. Real Property Planning works with trustees to coordinate the real estate side of the process with care and professionalism.\n\n${softCta}`,
   },
   {
     question: "What if an inherited house needs repairs before sale?",
-    answer: `Many inherited homes have deferred maintenance, outdated finishes, or condition issues. Whether to repair, update, or sell as-is depends on the property, the market, and the likely return on investment. David Stein helps families and executors evaluate which improvements are worth making and which are not, based on local market conditions and buyer expectations.\n\n${softCta}`,
+    answer: `Many inherited homes have deferred maintenance, outdated finishes, or condition issues. Whether to repair, update, or sell as-is depends on the property, the market, and the likely return on investment. Real Property Planning helps families and executors evaluate which improvements are worth making and which are not, based on local market conditions and buyer expectations.\n\n${softCta}`,
   },
   {
     question: "How is a sale price determined for estate property?",
-    answer: `Pricing estate property requires understanding condition, location, market trends, buyer demand, and comparable sales. Properties with deferred maintenance, vacancy, or unusual characteristics need more careful analysis. David Stein's dual background as a broker and state certified residential appraiser helps clients avoid the costly mistakes of overpricing or underpricing.\n\n${softCta}`,
+    answer: `Pricing estate property requires understanding condition, location, market trends, buyer demand, and comparable sales. Properties with deferred maintenance, vacancy, or unusual characteristics need more careful analysis. Real Property Planning's dual background as a broker and state certified residential appraiser helps clients avoid the costly mistakes of overpricing or underpricing.\n\n${softCta}`,
   },
   {
     question: "What does an executor need to know before listing a property?",
-    answer: `Executors should understand who has legal authority to sell, the property's current condition, whether cleanup or preparation is needed, and what the home is likely worth in its current state. David Stein helps executors evaluate these factors and build a practical plan before listing — reducing surprises and helping the process move forward smoothly.\n\n${softCta}`,
+    answer: `Executors should understand who has legal authority to sell, the property's current condition, whether cleanup or preparation is needed, and what the home is likely worth in its current state. Real Property Planning helps executors evaluate these factors and build a practical plan before listing — reducing surprises and helping the process move forward smoothly.\n\n${softCta}`,
   },
   {
     question: "Can siblings sell an inherited home if they disagree?",
-    answer: `Disagreements among siblings about timing, repairs, pricing, or whether to sell at all are common in inherited property situations. Having clear, objective information about the property's condition and market value often helps reduce conflict. David Stein provides a calm, fact-based perspective that helps families move toward a workable decision.\n\n${softCta}`,
+    answer: `Disagreements among siblings about timing, repairs, pricing, or whether to sell at all are common in inherited property situations. Having clear, objective information about the property's condition and market value often helps reduce conflict. Real Property Planning provides a calm, fact-based perspective that helps families move toward a workable decision.\n\n${softCta}`,
   },
   {
     question: "Should an estate property be sold as-is or improved first?",
-    answer: `It depends on the property, the local market, and the likely return. Some properties benefit meaningfully from targeted cleanup, paint, flooring, or landscaping. Others are better sold as-is, especially when time or budget constraints make preparation impractical. David Stein helps clients evaluate these options with a practical, market-informed perspective.\n\n${softCta}`,
+    answer: `It depends on the property, the local market, and the likely return. Some properties benefit meaningfully from targeted cleanup, paint, flooring, or landscaping. Others are better sold as-is, especially when time or budget constraints make preparation impractical. Real Property Planning helps clients evaluate these options with a practical, market-informed perspective.\n\n${softCta}`,
   },
   {
     question: "How can an attorney or fiduciary refer a client to Real Property Planning?",
@@ -72,31 +72,31 @@ const faqs = [
   },
   {
     question: "Can Real Property Planning help with senior transitions and downsizing decisions?",
-    answer: `Yes. Real Property Planning works with seniors, adult children, attorneys, and trusted advisors navigating housing transitions including downsizing, moves to assisted living, and the sale of a longtime family home. David Stein provides patient, practical guidance focused on timing, value, preparation, and clear communication throughout the process.\n\n${softCta}`,
+    answer: `Yes. Real Property Planning works with seniors, adult children, attorneys, and trusted advisors navigating housing transitions including downsizing, moves to assisted living, and the sale of a longtime family home. Real Property Planning provides patient, practical guidance focused on timing, value, preparation, and clear communication throughout the process.\n\n${softCta}`,
   },
   {
     question: "Do I need an appraisal before selling inherited property?",
-    answer: `Not always, but understanding the property's true market value is critical — especially in estate situations where pricing must be defensible. A broker with appraisal credentials, like David Stein, can provide valuation-informed pricing that satisfies fiduciary obligations without the cost and delay of a formal appraisal in every case.\n\n${softCta}`,
+    answer: `Not always, but understanding the property's true market value is critical — especially in estate situations where pricing must be defensible. A broker with appraisal credentials, like Real Property Planning, can provide valuation-informed pricing that satisfies fiduciary obligations without the cost and delay of a formal appraisal in every case.\n\n${softCta}`,
   },
   {
     question: "Can an executor sell a house before probate is complete?",
-    answer: `In some cases, an executor may be able to sell before the full probate process concludes — but it depends on the estate structure, the will, and whether the court has granted authority. David works with estate attorneys to align the real estate timeline with legal proceedings so the sale happens at the right time.\n\n${softCta}`,
+    answer: `In some cases, an executor may be able to sell before the full probate process concludes — but it depends on the estate structure, the will, and whether the court has granted authority. Our team works with estate attorneys to align the real estate timeline with legal proceedings so the sale happens at the right time.\n\n${softCta}`,
   },
   {
     question: "What repairs should be done before selling an estate property?",
-    answer: `It depends on the property, the budget, and the likely return. Targeted improvements like paint, flooring, and landscaping can increase value significantly. Expensive renovations rarely make financial sense for estate property. David evaluates each situation using his appraisal background to recommend only the improvements worth making.\n\n${softCta}`,
+    answer: `It depends on the property, the budget, and the likely return. Targeted improvements like paint, flooring, and landscaping can increase value significantly. Expensive renovations rarely make financial sense for estate property. Our team evaluates each situation using his appraisal background to recommend only the improvements worth making.\n\n${softCta}`,
   },
   {
     question: "How do siblings decide what to do with an inherited house?",
-    answer: `Disagreements among siblings are common and understandable. Clear, objective information about the property's condition and market value helps reduce conflict. David provides a calm, data-driven perspective that helps families move toward a workable decision — whether that means selling, keeping, or renting the property.\n\n${softCta}`,
+    answer: `Disagreements among siblings are common and understandable. Clear, objective information about the property's condition and market value helps reduce conflict. Our team provides a calm, data-driven perspective that helps families move toward a workable decision — whether that means selling, keeping, or renting the property.\n\n${softCta}`,
   },
   {
     question: "What should an attorney look for in a probate real estate broker?",
-    answer: `Attorneys should look for a broker with probate experience, valuation expertise, clear communication skills, and the ability to coordinate with legal timelines and multiple decision-makers. David Stein's dual credentials as a broker and certified residential appraiser, combined with 20+ years of estate-focused experience, make him a reliable partner for attorneys throughout Washington State.\n\n${softCta}`,
+    answer: `Attorneys should look for a broker with probate experience, valuation expertise, clear communication skills, and the ability to coordinate with legal timelines and multiple decision-makers. Real Property Planning's dual credentials as a broker and certified residential appraiser, combined with 20+ years of estate-focused experience, make him a reliable partner for attorneys throughout Washington State.\n\n${softCta}`,
   },
   {
     question: "How do you prepare a senior's home for sale during a move?",
-    answer: `Preparing a senior's home typically involves sorting decades of belongings, coordinating cleanout, addressing deferred maintenance, and managing the timeline alongside a care transition. David works with families and senior move managers to handle the real estate side with patience and practical planning.\n\n${softCta}`,
+    answer: `Preparing a senior's home typically involves sorting decades of belongings, coordinating cleanout, addressing deferred maintenance, and managing the timeline alongside a care transition. Our team works with families and senior move managers to handle the real estate side with patience and practical planning.\n\n${softCta}`,
   },
 ];
 

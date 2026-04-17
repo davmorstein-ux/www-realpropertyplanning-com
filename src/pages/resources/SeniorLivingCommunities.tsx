@@ -47,7 +47,7 @@ const SeniorLivingCommunities = () => (
               When a senior is transitioning from a longtime family home, finding the right assisted living, independent living, or memory care community is one of the most important decisions a family makes. The right fit depends on care needs, location preferences, budget, and the level of independence desired.
             </p>
             <p className="text-muted-foreground text-base leading-relaxed mb-4">
-              Real Property Planning works with families navigating <Link to="/senior-transitions" className="text-accent hover:text-gold underline underline-offset-4">senior transitions</Link> and often coordinates the home sale alongside a move into a senior living community. David Stein helps align the property timeline with the transition plan so families aren't managing both at once without support.
+              Real Property Planning works with families navigating <Link to="/senior-transitions" className="text-accent hover:text-gold underline underline-offset-4">senior transitions</Link> and often coordinates the home sale alongside a move into a senior living community. Real Property Planning helps align the property timeline with the transition plan so families aren't managing both at once without support.
             </p>
 
             <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mt-12 mb-5">
@@ -55,7 +55,7 @@ const SeniorLivingCommunities = () => (
             </h2>
             <div className="bg-secondary border border-border rounded-xl px-6 py-8 md:px-8 text-center">
               <p className="text-muted-foreground text-base leading-relaxed">
-                David is currently compiling a list of recommended senior living communities throughout Washington State. Check back soon, or <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4">contact David</Link> for a current referral.
+                Our team is currently compiling a list of recommended senior living communities throughout Washington State. Check back soon, or <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4">contact us</Link> for a current referral.
               </p>
             </div>
 

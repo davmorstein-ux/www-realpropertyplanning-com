@@ -21,7 +21,7 @@ const HomepageWarmStatement = () => {
               "We don't just sell homes. We help families move forward."
             </p>
             <p className="text-muted-foreground text-base">
-              — David Stein, Real Property Planning
+              — Real Property Planning, Real Property Planning
             </p>
           </div>
 

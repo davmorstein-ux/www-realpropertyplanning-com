@@ -24,22 +24,22 @@ const faqs = [
   {
     question: "What should an executor do first with a Spokane inherited property?",
     answer:
-      "Secure the property, confirm your legal authority to act, and get an honest assessment of its condition and market value. David can walk through the property on your behalf, identify issues that affect value, and help you understand your options before you commit to anything.",
+      "Secure the property, confirm your legal authority to act, and get an honest assessment of its condition and market value. Our team can walk through the property on your behalf, identify issues that affect value, and help you understand your options before you commit to anything.",
   },
   {
-    question: "How does David's appraisal background help with Spokane properties?",
+    question: "How does our team's appraisal background help with Spokane properties?",
     answer:
-      "As both a licensed Washington State real estate broker and a state-certified residential appraiser, David provides pricing grounded in actual condition assessment and local market data — not automated estimates. This dual perspective is especially valuable when families are making decisions from a distance and need confidence in the numbers.",
+      "As both a licensed Washington State real estate broker and a state-certified residential appraiser, Our team provides pricing grounded in actual condition assessment and local market data — not automated estimates. This dual perspective is especially valuable when families are making decisions from a distance and need confidence in the numbers.",
   },
   {
     question: "How long does it take to sell an inherited home in Spokane?",
     answer:
-      "Timelines depend on the probate or trust administration process, property condition, and market conditions. Once the property is ready and authority is established, well-priced Spokane homes typically sell within a few weeks. David helps set realistic expectations and builds a timeline around your specific situation.",
+      "Timelines depend on the probate or trust administration process, property condition, and market conditions. Once the property is ready and authority is established, well-priced Spokane homes typically sell within a few weeks. Our team helps set realistic expectations and builds a timeline around your specific situation.",
   },
   {
     question: "Should I fix up an inherited property in Spokane before selling?",
     answer:
-      "It depends on the home's condition, your budget, and your timeline. David evaluates which improvements are likely to increase the sale price enough to justify the cost — and which ones aren't worth the investment. When you're managing from a distance, this kind of honest guidance saves time and money.",
+      "It depends on the home's condition, your budget, and your timeline. Our team evaluates which improvements are likely to increase the sale price enough to justify the cost — and which ones aren't worth the investment. When you're managing from a distance, this kind of honest guidance saves time and money.",
   },
   {
     question: "How does David coordinate the process for remote families?",
@@ -119,8 +119,8 @@ const SpokaneProbateEstate = () => {
       </section>
 
       <DirectAnswerBlock
-        question="How does David Stein help families manage inherited property in Spokane?"
-        answer="Many Spokane estate properties are managed by families who live outside the area. David Stein provides reliable, on-the-ground coordination — property assessment, preparation, pricing, and sale management — so out-of-area executors and trustees can make confident decisions without needing to be on-site."
+        question="How does Real Property Planning help families manage inherited property in Spokane?"
+        answer="Many Spokane estate properties are managed by families who live outside the area. Real Property Planning provides reliable, on-the-ground coordination — property assessment, preparation, pricing, and sale management — so out-of-area executors and trustees can make confident decisions without needing to be on-site."
         supportBullets={[
           "Clear guidance for out-of-state executors managing Spokane property from a distance",
           "Valuation-informed pricing based on Spokane's neighborhood-level market dynamics",
@@ -172,7 +172,7 @@ const SpokaneProbateEstate = () => {
               Property condition plays a major role in Spokane estate sales. Many inherited homes have been lived in for decades and may need repairs, cleanout, or preparation before they're ready for market. Knowing which improvements are worth the investment — and which aren't — requires honest, condition-based assessment rather than guesswork.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              As both a licensed Washington State real estate broker and a state-certified residential appraiser, David Stein brings a valuation-first perspective grounded in actual property condition and local market data. This dual expertise is especially valuable when families are coordinating from outside the area and need confidence that the pricing strategy and preparation decisions are sound.
+              As both a licensed Washington State real estate broker and a state-certified residential appraiser, Real Property Planning brings a valuation-first perspective grounded in actual property condition and local market data. This dual expertise is especially valuable when families are coordinating from outside the area and need confidence that the pricing strategy and preparation decisions are sound.
             </p>
           </div>
         </div>
@@ -181,7 +181,7 @@ const SpokaneProbateEstate = () => {
       {/* Mid-page CTA */}
       <MidPageCTA
         heading="Managing a Spokane Property From a Distance?"
-        body="David provides confidential consultations for executors, trustees, and families dealing with inherited or estate property in Spokane — even when you're managing from outside the area."
+        body="Our team provides confidential consultations for executors, trustees, and families dealing with inherited or estate property in Spokane — even when you're managing from outside the area."
         buttonText="Schedule a Consultation"
         microcopy="No pressure. Just practical guidance for your situation."
       />

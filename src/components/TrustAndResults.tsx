@@ -24,7 +24,7 @@ const testimonials = [
     tag: "Estate Administration · Communication",
   },
   {
-    text: "David's dual background in brokerage and appraisal gave us confidence that the property was priced correctly. He made a complicated situation feel manageable.",
+    text: "our team's dual background in brokerage and appraisal gave us confidence that the property was priced correctly. He made a complicated situation feel manageable.",
     attribution: "Family Member, King County",
     tag: "Inherited Home · Pricing",
   },
@@ -61,10 +61,10 @@ const TrustAndResults = () => (
             Trust & Results
           </p>
           <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-4">
-            Why Clients and Professionals Trust David Stein
+            Why Clients and Professionals Trust Real Property Planning
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
-            What keeps clients coming back — and referring others — isn't a sales pitch. It's that David is thorough, honest about what a property is actually worth, and brings a level of valuation expertise that most brokers simply don't have.
+            What keeps clients coming back — and referring others — isn't a sales pitch. It's that Our team is thorough, honest about what a property is actually worth, and brings a level of valuation expertise that most brokers simply don't have.
           </p>
         </div>
 

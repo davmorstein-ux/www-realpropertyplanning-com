@@ -37,7 +37,7 @@ const HeroSection = () => {
             </h1>
             
             <p className="text-lg md:text-xl text-primary-foreground/80 mb-8 leading-relaxed max-w-2xl" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.15)' }}>
-              David Stein works with executors, trustees, attorneys, and families navigating inherited homes, probate sales, trust property, and senior transitions throughout Washington State — with 20+ years of dual expertise as a licensed broker and certified appraiser.
+              Real Property Planning works with executors, trustees, attorneys, and families navigating inherited homes, probate sales, trust property, and senior transitions throughout Washington State — with 20+ years of dual expertise as a licensed broker and certified appraiser.
             </p>
             
             <div className="flex flex-col sm:flex-row items-start gap-4">
@@ -86,7 +86,7 @@ const HeroSection = () => {
               <div className="w-80 h-96 rounded-2xl overflow-hidden border-4 border-gold/30 shadow-2xl">
                 <img
                   src={daveHeadshot}
-                   alt="David Stein, probate real estate specialist and certified appraiser in Western Washington"
+                   alt="Real Property Planning, probate real estate specialist and certified appraiser in Western Washington"
                    className="w-full h-full object-cover object-top"
                    loading="eager"
                    fetchPriority="high"

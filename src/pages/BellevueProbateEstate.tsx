@@ -18,7 +18,7 @@ const faqs = [
   {
     question: "How does selling an inherited home in Bellevue work?",
     answer:
-      "Selling inherited property in Bellevue typically requires legal authority through probate or trust administration before the home can be listed. David coordinates with the estate attorney, trustee, or personal representative to assess the property, develop a defensible pricing strategy, manage preparation, and guide the sale — keeping all parties informed throughout.",
+      "Selling inherited property in Bellevue typically requires legal authority through probate or trust administration before the home can be listed. Our team coordinates with the estate attorney, trustee, or personal representative to assess the property, develop a defensible pricing strategy, manage preparation, and guide the sale — keeping all parties informed throughout.",
   },
   {
     question: "What should a trustee do first with a Bellevue property?",
@@ -26,24 +26,24 @@ const faqs = [
       "Secure the property, review the trust terms with the estate attorney, and get a realistic assessment of the home's condition and current market value. David can evaluate the property, identify factors that affect value, and help you understand your options before committing to a course of action.",
   },
   {
-    question: "How does David Stein's appraisal background benefit Bellevue property sales?",
+    question: "How does Real Property Planning's appraisal background benefit Bellevue property sales?",
     answer:
-      "As both a licensed Washington State real estate broker and a state-certified residential appraiser, David provides pricing strategy grounded in actual condition assessment and neighborhood-level market analysis — not automated estimates. In Bellevue's higher-value market, this dual perspective helps protect families and fiduciaries from costly pricing mistakes.",
+      "As both a licensed Washington State real estate broker and a state-certified residential appraiser, Our team provides pricing strategy grounded in actual condition assessment and neighborhood-level market analysis — not automated estimates. In Bellevue's higher-value market, this dual perspective helps protect families and fiduciaries from costly pricing mistakes.",
   },
   {
     question: "Can David help if multiple beneficiaries are involved?",
     answer:
-      "Yes. Multi-party situations are common in Bellevue estate and trust sales. David provides clear, documented communication so all parties — whether local or out of state — have the same information. His appraisal-informed pricing approach also helps establish defensible value when consensus is needed.",
+      "Yes. Multi-party situations are common in Bellevue estate and trust sales. Our team provides clear, documented communication so all parties — whether local or out of state — have the same information. His appraisal-informed pricing approach also helps establish defensible value when consensus is needed.",
   },
   {
     question: "What preparation is typically needed before selling a Bellevue estate property?",
     answer:
-      "It depends on the property's condition, the neighborhood, and buyer expectations. Bellevue buyers often expect well-presented homes. David evaluates whether targeted preparation — cleaning, repairs, or staging — is likely to increase the sale price enough to justify the cost and delay, using his appraisal background to make that assessment.",
+      "It depends on the property's condition, the neighborhood, and buyer expectations. Bellevue buyers often expect well-presented homes. Our team evaluates whether targeted preparation — cleaning, repairs, or staging — is likely to increase the sale price enough to justify the cost and delay, using his appraisal background to make that assessment.",
   },
   {
     question: "How long does it take to sell an estate property in Bellevue?",
     answer:
-      "Timelines depend on the legal process, property condition, and preparation needs. Once the property is ready and authority is established, well-priced Bellevue homes typically sell within a few weeks. David helps set realistic expectations and builds a plan around your specific situation and constraints.",
+      "Timelines depend on the legal process, property condition, and preparation needs. Once the property is ready and authority is established, well-priced Bellevue homes typically sell within a few weeks. Our team helps set realistic expectations and builds a plan around your specific situation and constraints.",
   },
 ];
 
@@ -162,7 +162,7 @@ const BellevueProbateEstate = () => {
               Buyer expectations in Bellevue are also higher. Condition, presentation, and timing all influence the outcome. Listing a property before it's properly prepared — or pricing it without a clear understanding of the neighborhood market — can cost families tens of thousands of dollars.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              As both a licensed Washington State real estate broker and a state-certified residential appraiser, David Stein brings a valuation-first perspective that provides defensible pricing, organized communication with attorneys and trustees, and greater confidence for families navigating high-stakes property decisions.
+              As both a licensed Washington State real estate broker and a state-certified residential appraiser, Real Property Planning brings a valuation-first perspective that provides defensible pricing, organized communication with attorneys and trustees, and greater confidence for families navigating high-stakes property decisions.
             </p>
           </div>
         </div>
@@ -171,7 +171,7 @@ const BellevueProbateEstate = () => {
       {/* Mid-page CTA */}
       <MidPageCTA
         heading="Have a Property Situation in Bellevue?"
-        body="David provides confidential consultations for executors, attorneys, trustees, and families handling inherited or trust-owned property in Bellevue and throughout King County."
+        body="Our team provides confidential consultations for executors, attorneys, trustees, and families handling inherited or trust-owned property in Bellevue and throughout King County."
         buttonText="Schedule a Consultation"
         microcopy="No pressure. Just practical guidance for your situation."
       />

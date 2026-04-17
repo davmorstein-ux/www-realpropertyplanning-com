@@ -17,19 +17,19 @@ import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washingto
 const faqs = [
   {
     question: "What should I do first with an inherited home in Kennewick?",
-    answer: "Secure the property, confirm your legal authority to act, and get an honest assessment of its condition and market value. David can walk through the home, identify what affects value, and help you understand your options before you commit to anything.",
+    answer: "Secure the property, confirm your legal authority to act, and get an honest assessment of its condition and market value. Our team can walk through the home, identify what affects value, and help you understand your options before you commit to anything.",
   },
   {
-    question: "How does David's appraisal background help in Kennewick?",
-    answer: "As both a licensed Washington State real estate broker and a state-certified residential appraiser, David provides pricing based on actual property condition and local comparable data — not automated estimates. In Kennewick, where condition varies widely and pricing is sensitive, this dual perspective prevents costly mistakes.",
+    question: "How does our team's appraisal background help in Kennewick?",
+    answer: "As both a licensed Washington State real estate broker and a state-certified residential appraiser, Our team provides pricing based on actual property condition and local comparable data — not automated estimates. In Kennewick, where condition varies widely and pricing is sensitive, this dual perspective prevents costly mistakes.",
   },
   {
     question: "Should I renovate a Kennewick inherited home before selling?",
-    answer: "Not always. David evaluates which improvements are likely to return more than they cost — and which aren't worth the investment. Many Kennewick inherited homes benefit more from targeted preparation and honest pricing than from expensive renovations.",
+    answer: "Not always. Our team evaluates which improvements are likely to return more than they cost — and which aren't worth the investment. Many Kennewick inherited homes benefit more from targeted preparation and honest pricing than from expensive renovations.",
   },
   {
     question: "What if family members disagree about selling?",
-    answer: "This is common. David provides objective, condition-based information — realistic market value, preparation costs, and available options — so every family member is working from the same set of facts. That clarity often helps move conversations forward.",
+    answer: "This is common. Our team provides objective, condition-based information — realistic market value, preparation costs, and available options — so every family member is working from the same set of facts. That clarity often helps move conversations forward.",
   },
   {
     question: "Can David help if I don't live in Kennewick?",
@@ -37,7 +37,7 @@ const faqs = [
   },
   {
     question: "How long does it take to sell an inherited home in Kennewick?",
-    answer: "Timelines depend on the probate or trust process, property condition, and market conditions. Once the home is ready and legal authority is established, well-priced Kennewick properties generally sell within a reasonable timeframe. David helps set realistic expectations from the start.",
+    answer: "Timelines depend on the probate or trust process, property condition, and market conditions. Once the home is ready and legal authority is established, well-priced Kennewick properties generally sell within a reasonable timeframe. Our team helps set realistic expectations from the start.",
   },
 ];
 
@@ -134,13 +134,13 @@ const KennewickProbateEstate = () => {
               In a market where pricing is sensitive to condition, the preparation decisions you make before listing can meaningfully affect the outcome. Spending money on the wrong improvements wastes resources; skipping necessary preparation can lead to lower offers or extended time on market.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              As both a licensed Washington State real estate broker and a state-certified residential appraiser, David Stein evaluates inherited properties based on their actual condition, not assumptions. This valuation-first approach helps families make preparation and pricing decisions grounded in facts rather than guesswork.
+              As both a licensed Washington State real estate broker and a state-certified residential appraiser, Real Property Planning evaluates inherited properties based on their actual condition, not assumptions. This valuation-first approach helps families make preparation and pricing decisions grounded in facts rather than guesswork.
             </p>
           </div>
         </div>
       </section>
 
-      <MidPageCTA heading="Questions About a Kennewick Property?" body="David provides confidential consultations for executors, trustees, and families handling inherited or estate property in Kennewick and the Tri-Cities area." buttonText="Schedule a Consultation" microcopy="No pressure. Just practical guidance for your situation." />
+      <MidPageCTA heading="Questions About a Kennewick Property?" body="Our team provides confidential consultations for executors, trustees, and families handling inherited or estate property in Kennewick and the Tri-Cities area." buttonText="Schedule a Consultation" microcopy="No pressure. Just practical guidance for your situation." />
 
       <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
@@ -150,7 +150,7 @@ const KennewickProbateEstate = () => {
               When multiple family members are involved in an inherited property decision, things can stall. One person wants to move quickly. Another wants to wait. A third isn't sure what the house needs or what it's worth. Without a clear framework, these conversations can go in circles.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              David provides objective, condition-based information that gives everyone a common starting point — what the property looks like today, what it's realistically worth, what preparation makes sense, and what the timeline looks like. That shared understanding often helps families move forward together.
+              Our team provides objective, condition-based information that gives everyone a common starting point — what the property looks like today, what it's realistically worth, what preparation makes sense, and what the timeline looks like. That shared understanding often helps families move forward together.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
               From there, he manages the practical steps — coordinating cleanout crews, overseeing targeted repairs, and handling the logistics of getting the property ready and sold — so the family can focus on the decisions that matter most.

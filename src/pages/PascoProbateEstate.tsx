@@ -17,7 +17,7 @@ import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washingto
 const faqs = [
   {
     question: "Can David help with a property in Pasco?",
-    answer: "Yes. David works with executors, trustees, and families handling inherited and estate property throughout Washington State, including Pasco and the broader Tri-Cities region. He provides property assessment, pricing guidance, and coordination support whether you're local or managing from a distance.",
+    answer: "Yes. Our team works with executors, trustees, and families handling inherited and estate property throughout Washington State, including Pasco and the broader Tri-Cities region. He provides property assessment, pricing guidance, and coordination support whether you're local or managing from a distance.",
   },
   {
     question: "What if the inherited property needs significant work?",
@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     question: "How does David price a property in varied condition?",
-    answer: "As both a licensed Washington State real estate broker and a state-certified residential appraiser, David evaluates the property based on its actual condition, location, and local comparable sales. This approach produces defensible pricing that reflects what the market will realistically pay — which is especially important when condition varies significantly.",
+    answer: "As both a licensed Washington State real estate broker and a state-certified residential appraiser, Our team evaluates the property based on its actual condition, location, and local comparable sales. This approach produces defensible pricing that reflects what the market will realistically pay — which is especially important when condition varies significantly.",
   },
   {
     question: "What if I'm not sure whether to sell or keep the property?",
@@ -33,11 +33,11 @@ const faqs = [
   },
   {
     question: "How does David help coordinate the process?",
-    answer: "David manages the practical steps — property access, cleanout coordination, contractor oversight, and communication with attorneys and family members. He keeps the process organized and moving forward so you're not left figuring out logistics on your own.",
+    answer: "Our team manages the practical steps — property access, cleanout coordination, contractor oversight, and communication with attorneys and family members. He keeps the process organized and moving forward so you're not left figuring out logistics on your own.",
   },
   {
     question: "How long does it take to sell an inherited home in Pasco?",
-    answer: "Timelines vary based on the legal process, property condition, and preparation needs. Once the home is ready and authority is established, well-priced Pasco properties typically sell within a reasonable timeframe. David helps set clear expectations from the beginning.",
+    answer: "Timelines vary based on the legal process, property condition, and preparation needs. Once the home is ready and authority is established, well-priced Pasco properties typically sell within a reasonable timeframe. Our team helps set clear expectations from the beginning.",
   },
 ];
 
@@ -134,13 +134,13 @@ const PascoProbateEstate = () => {
               Condition is often the defining factor in Pasco estate sales. A home with a sound roof and updated systems sits in a very different pricing category than one with deferred mechanical work or structural concerns. Families who don't have an honest assessment of where the property falls on that spectrum risk either overpricing and waiting, or underpricing and leaving value behind.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              As both a licensed Washington State real estate broker and a state-certified residential appraiser, David Stein provides condition-based pricing grounded in what the property actually is today. This clarity gives families the foundation they need to make sound decisions — whether that means investing in preparation or pricing the home to sell in its current state.
+              As both a licensed Washington State real estate broker and a state-certified residential appraiser, Real Property Planning provides condition-based pricing grounded in what the property actually is today. This clarity gives families the foundation they need to make sound decisions — whether that means investing in preparation or pricing the home to sell in its current state.
             </p>
           </div>
         </div>
       </section>
 
-      <MidPageCTA heading="Have Questions About a Pasco Property?" body="David provides confidential consultations for executors, trustees, and families handling inherited or estate property in Pasco and the Tri-Cities region. A short conversation can help clarify your options." buttonText="Schedule a Consultation" microcopy="No pressure. Just practical guidance for your situation." />
+      <MidPageCTA heading="Have Questions About a Pasco Property?" body="Our team provides confidential consultations for executors, trustees, and families handling inherited or estate property in Pasco and the Tri-Cities region. A short conversation can help clarify your options." buttonText="Schedule a Consultation" microcopy="No pressure. Just practical guidance for your situation." />
 
       <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">

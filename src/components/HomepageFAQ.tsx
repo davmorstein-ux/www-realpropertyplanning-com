@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     q: "How is your pricing different from a Zillow estimate or a typical agent's CMA?",
-    a: "Automated estimates and standard CMAs assume a home is in average market-ready condition. Estate and senior-owned homes rarely are. Because David Stein is also a Washington State Certified Residential Appraiser, every pricing recommendation is built the way an appraiser would build it — adjusting for actual condition, effective age, functional issues, and the specific micro-market — not the way a listing agent guesses at a number to win a meeting.",
+    a: "Automated estimates and standard CMAs assume a home is in average market-ready condition. Estate and senior-owned homes rarely are. Because Real Property Planning is also a Washington State Certified Residential Appraiser, every pricing recommendation is built the way an appraiser would build it — adjusting for actual condition, effective age, functional issues, and the specific micro-market — not the way a listing agent guesses at a number to win a meeting.",
   },
   {
     q: "We live out of state. Can you really handle the whole property without us flying out?",

@@ -39,7 +39,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Clear communication with multiple heirs, attorneys, and financial advisors — especially when parties are dispersed across time zones",
         "Full-service transaction management navigating Bellevue's competitive market pace",
       ],
-      whyLocal: "Bellevue's market is shaped by tech-industry demand, rapid development, and a wide spread between neighborhoods. An estate property in Bridle Trails faces entirely different buyer expectations than one in Factoria or Lake Hills. Automated tools frequently miss these neighborhood-level distinctions, especially for properties with deferred maintenance competing against the new construction that dominates parts of the Eastside. David Stein's on-site assessment accounts for how Bellevue's specific submarket dynamics, lot characteristics, and condition factors affect realistic pricing.",
+      whyLocal: "Bellevue's market is shaped by tech-industry demand, rapid development, and a wide spread between neighborhoods. An estate property in Bridle Trails faces entirely different buyer expectations than one in Factoria or Lake Hills. Automated tools frequently miss these neighborhood-level distinctions, especially for properties with deferred maintenance competing against the new construction that dominates parts of the Eastside. Real Property Planning's on-site assessment accounts for how Bellevue's specific submarket dynamics, lot characteristics, and condition factors affect realistic pricing.",
     },
     "senior-transitions": {
       intro: "Many Bellevue seniors have lived in their homes for decades — watching the Eastside transform from a quiet suburb into one of the most competitive real estate markets in the state. When it's time to transition from a longtime Bellevue home to assisted living, independent living, or a smaller residence, the sale involves both significant financial stakes and deeply personal decisions. Real Property Planning helps Bellevue families navigate this process with experienced pricing, practical coordination, and a pace that respects the family's timeline.",
@@ -58,7 +58,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Vendor coordination for cleanout, repairs, staging, and high-standard presentation appropriate for Bellevue's market",
         "Full-service management so the family can focus on the transition rather than the transaction logistics",
       ],
-      whyLocal: "Bellevue seniors often own homes that have appreciated dramatically — but the home's current condition may not match what today's Eastside buyers expect. The gap between a home's emotional value to the family and its realistic market position requires honest, condition-based analysis. David Stein's appraisal background helps Bellevue families understand exactly where their property stands — which updates matter, which don't, and how to price a well-loved home in a market driven by newer construction and tech-industry buyer expectations.",
+      whyLocal: "Bellevue seniors often own homes that have appreciated dramatically — but the home's current condition may not match what today's Eastside buyers expect. The gap between a home's emotional value to the family and its realistic market position requires honest, condition-based analysis. Real Property Planning's appraisal background helps Bellevue families understand exactly where their property stands — which updates matter, which don't, and how to price a well-loved home in a market driven by newer construction and tech-industry buyer expectations.",
     },
     "executor-support": {
       intro: "Executors managing estate property in Bellevue face a market where property values are often significant, buyer expectations are high, and the pace of transactions is fast. Whether the estate property is a mid-century rambler in Lake Hills or a view home in Somerset, executors need locally grounded guidance to price accurately, prepare strategically, and coordinate the sale alongside legal and fiduciary requirements. Real Property Planning provides the Eastside expertise and steady communication that Bellevue executors need.",
@@ -77,7 +77,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Regular communication and status updates for executors managing from out of area",
         "End-to-end transaction management from initial property assessment through closing and distribution coordination",
       ],
-      whyLocal: "Bellevue executors face a market where mispricing carries significant financial consequences. Overprice and the property sits while the estate accumulates costs; underprice and beneficiaries may question the executor's judgment. David Stein's dual credentials provide the defensible, neighborhood-specific pricing analysis that Bellevue estate situations require — accounting for the Eastside's development dynamics, submarket differences, and the realistic cost of bringing a deferred-maintenance property to competitive condition.",
+      whyLocal: "Bellevue executors face a market where mispricing carries significant financial consequences. Overprice and the property sits while the estate accumulates costs; underprice and beneficiaries may question the executor's judgment. Real Property Planning's dual credentials provide the defensible, neighborhood-specific pricing analysis that Bellevue estate situations require — accounting for the Eastside's development dynamics, submarket differences, and the realistic cost of bringing a deferred-maintenance property to competitive condition.",
     },
     "attorney-fiduciary-support": {
       intro: "Attorneys and fiduciaries managing property matters on the Eastside need a real estate partner who understands Bellevue's competitive market dynamics, the range of property types across the city's neighborhoods, and the documentation standards that legal proceedings require. Real Property Planning works with Bellevue-area legal professionals as a responsive, credentialed resource for estate, trust, probate, divorce, and guardianship property matters.",
@@ -96,7 +96,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Coordination across legal, financial, and family stakeholders with clear, professional reporting",
         "A consistent, locally expert point of contact for ongoing property-related referrals on the Eastside",
       ],
-      whyLocal: "Bellevue's legal professionals deal with property matters that range from multimillion-dollar estate settlements to trust dispositions in neighborhoods undergoing rapid change. They need a broker who can provide defensible pricing opinions that hold up to scrutiny — not aspirational estimates. David Stein's certified appraisal background produces the property-specific analysis that Eastside attorneys and fiduciaries rely on for court filings, settlement discussions, and fiduciary reporting.",
+      whyLocal: "Bellevue's legal professionals deal with property matters that range from multimillion-dollar estate settlements to trust dispositions in neighborhoods undergoing rapid change. They need a broker who can provide defensible pricing opinions that hold up to scrutiny — not aspirational estimates. Real Property Planning's certified appraisal background produces the property-specific analysis that Eastside attorneys and fiduciaries rely on for court filings, settlement discussions, and fiduciary reporting.",
     },
     "downsizing-services": {
       intro: "Many longtime Bellevue homeowners — especially empty-nesters in Somerset, Bridle Trails, and West Bellevue — reach a point where a 3,500-square-foot home no longer fits their daily life. Downsizing on the Eastside means selling into one of Washington's most competitive markets, where buyer expectations are high and pricing strategy can make a six-figure difference. Real Property Planning helps Bellevue homeowners approach downsizing with clear-eyed market analysis and a preparation plan that reflects what Eastside buyers actually value.",
@@ -115,7 +115,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Strategic guidance on whether the property's highest value is as a renovated residence or a redevelopment opportunity",
         "Patient communication with homeowners and family members who may be navigating this decision over several months",
       ],
-      whyLocal: "Bellevue's downsizing landscape is shaped by the gap between what longtime homeowners remember about the market and what today's Eastside buyers actually pay for. A well-loved Somerset home may need $80,000 in updates to compete with a new-build down the street — or it may be better positioned as a value opportunity. David Stein's appraisal background helps Bellevue homeowners understand exactly where their property stands in a market where pricing precision matters enormously.",
+      whyLocal: "Bellevue's downsizing landscape is shaped by the gap between what longtime homeowners remember about the market and what today's Eastside buyers actually pay for. A well-loved Somerset home may need $80,000 in updates to compete with a new-build down the street — or it may be better positioned as a value opportunity. Real Property Planning's appraisal background helps Bellevue homeowners understand exactly where their property stands in a market where pricing precision matters enormously.",
     },
     "valuation-guidance": {
       intro: "In Bellevue's high-value market, accurate property valuation drives every significant decision — from estate settlements and trust distributions to pre-listing pricing strategy. The gap between an automated estimate and a condition-based assessment can be hundreds of thousands of dollars, especially for older Eastside homes competing against extensive new construction. Real Property Planning provides the valuation depth that Bellevue property decisions demand.",
@@ -134,7 +134,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Assessment of redevelopment potential versus residential value for properties in Bellevue's changing neighborhoods",
         "Credentialed perspective that combines licensed broker market knowledge with certified appraiser analytical methodology",
       ],
-      whyLocal: "Bellevue's property values are driven by neighborhood-level factors that automated tools consistently miss — the difference between a view lot in Somerset and an interior lot two blocks away, the premium for Bridle Trails equestrian character, the redevelopment pressure in Crossroads and Wilburton. David Stein's dual credentials provide the analytical depth that Bellevue's high-stakes property decisions require.",
+      whyLocal: "Bellevue's property values are driven by neighborhood-level factors that automated tools consistently miss — the difference between a view lot in Somerset and an interior lot two blocks away, the premium for Bridle Trails equestrian character, the redevelopment pressure in Crossroads and Wilburton. Real Property Planning's dual credentials provide the analytical depth that Bellevue's high-stakes property decisions require.",
     },
     "preparing-home-for-sale": {
       intro: "Preparing an estate, inherited, or longtime home for sale in Bellevue requires understanding what today's Eastside buyers expect — and what they'll actually pay more for. In a market where new construction sets the standard in many neighborhoods, the preparation strategy for an older home can make or break the outcome. Real Property Planning helps Bellevue property owners make smart preparation decisions based on realistic return analysis, not guesswork.",
@@ -153,7 +153,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Local vendor coordination with contractors and service providers experienced with Eastside properties and standards",
         "Complete preparation management for out-of-area owners — from initial assessment through listing-ready condition",
       ],
-      whyLocal: "Bellevue's buyer expectations are influenced by the extensive new construction and high-end remodels that dominate parts of the Eastside market. Preparing an older home requires understanding which improvements today's Bellevue buyers actually value — updated kitchens and baths matter, but over-improving a $1.2M home with $200K in renovations may not produce proportional return. David Stein's valuation expertise helps sellers invest preparation dollars where they'll have the most impact.",
+      whyLocal: "Bellevue's buyer expectations are influenced by the extensive new construction and high-end remodels that dominate parts of the Eastside market. Preparing an older home requires understanding which improvements today's Bellevue buyers actually value — updated kitchens and baths matter, but over-improving a $1.2M home with $200K in renovations may not produce proportional return. Real Property Planning's valuation expertise helps sellers invest preparation dollars where they'll have the most impact.",
     },
     "divorce-related-home-sales": {
       intro: "Divorce-related property sales in Bellevue often involve significant financial stakes — Eastside home values mean the property is frequently the largest marital asset. Both parties and their attorneys need a broker who can provide objective, defensible valuation and manage the sale with professional discretion in a community where privacy matters. Real Property Planning provides the neutral, credentialed guidance that Bellevue divorce-related sales require.",
@@ -172,7 +172,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Discreet marketing and showing management appropriate for Bellevue neighborhoods where privacy is valued",
         "Clear documentation of all pricing rationale, sale terms, and transaction details for legal records",
       ],
-      whyLocal: "Bellevue divorce-related sales carry financial stakes that amplify the importance of accurate pricing. A valuation difference of 5% on a $2M Eastside home means $100,000 — enough to meaningfully affect settlement terms. David Stein's certified appraisal credentials provide the objective, analytically rigorous valuation that Bellevue family law cases require, while his brokerage experience ensures the sale itself is managed with the professionalism the situation demands.",
+      whyLocal: "Bellevue divorce-related sales carry financial stakes that amplify the importance of accurate pricing. A valuation difference of 5% on a $2M Eastside home means $100,000 — enough to meaningfully affect settlement terms. Real Property Planning's certified appraisal credentials provide the objective, analytically rigorous valuation that Bellevue family law cases require, while his brokerage experience ensures the sale itself is managed with the professionalism the situation demands.",
     },
     "trust-estate-property-sales": {
       intro: "Trust-owned property sales in Bellevue carry fiduciary obligations that demand precision — trustees are accountable for demonstrating that the property was sold at fair market value through a reasonable process. In Bellevue's high-value market, this standard requires more than a casual market analysis. Real Property Planning provides the valuation expertise and documented sale process that Bellevue trustees and their advisors need.",
@@ -191,7 +191,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Regular reporting and status updates that provide trustees with the information they need for trust accounting and beneficiary communication",
         "End-to-end management for out-of-area trustees who need a credentialed local resource on the Eastside",
       ],
-      whyLocal: "Trust property sales in Bellevue require pricing that can withstand beneficiary scrutiny and, if necessary, court review. In a market where the difference between neighborhoods can exceed $500,000, generic pricing approaches create fiduciary risk. David Stein's dual credentials provide trustees with the kind of documented, analytically grounded valuation and sale management that Bellevue's high-stakes trust property situations demand.",
+      whyLocal: "Trust property sales in Bellevue require pricing that can withstand beneficiary scrutiny and, if necessary, court review. In a market where the difference between neighborhoods can exceed $500,000, generic pricing approaches create fiduciary risk. Real Property Planning's dual credentials provide trustees with the kind of documented, analytically grounded valuation and sale management that Bellevue's high-stakes trust property situations demand.",
     },
   },
 
@@ -216,7 +216,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Management of estate property preparation at the standard Mercer Island buyers expect",
         "Full-service transaction coordination from assessment through closing, minimizing family burden during a difficult time",
       ],
-      whyLocal: "Mercer Island's real estate market operates differently from the broader Eastside — limited land area, a distinct buyer pool, and island-specific factors like lake access quality and east-versus-west-side positioning create pricing dynamics that automated tools consistently misjudge. David Stein's on-site evaluation accounts for the characteristics that make each Mercer Island property unique, providing executors and families with the island-specific insight that estate sales here require.",
+      whyLocal: "Mercer Island's real estate market operates differently from the broader Eastside — limited land area, a distinct buyer pool, and island-specific factors like lake access quality and east-versus-west-side positioning create pricing dynamics that automated tools consistently misjudge. Real Property Planning's on-site evaluation accounts for the characteristics that make each Mercer Island property unique, providing executors and families with the island-specific insight that estate sales here require.",
     },
     "senior-transitions": {
       intro: "Many Mercer Island seniors have spent decades on the island — raising families, building community connections, and watching their properties appreciate in one of the region's most desirable neighborhoods. When it's time to transition to a smaller home, assisted living, or a community closer to family, the sale of a Mercer Island property requires careful positioning in a market where every property has distinctive characteristics. Real Property Planning provides the island-focused guidance these families need.",
@@ -235,7 +235,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Vendor coordination for cleanout, updates, and staging at the standard the island market requires",
         "Full-service management that allows the family to focus on the personal aspects of the transition",
       ],
-      whyLocal: "Mercer Island seniors often own homes with characteristics that don't translate neatly into automated valuations — mature landscaping, lake access variations, or mid-century architecture that some buyers prize and others discount. Understanding how these features interact in the island's limited-inventory market requires property-specific assessment, not algorithm output. David Stein helps families see their island home through the market's eyes while respecting the personal significance of the transition.",
+      whyLocal: "Mercer Island seniors often own homes with characteristics that don't translate neatly into automated valuations — mature landscaping, lake access variations, or mid-century architecture that some buyers prize and others discount. Understanding how these features interact in the island's limited-inventory market requires property-specific assessment, not algorithm output. Real Property Planning helps families see their island home through the market's eyes while respecting the personal significance of the transition.",
     },
     "executor-support": {
       intro: "Serving as executor for a Mercer Island estate property carries unique responsibility — the property is likely high-value, the market operates with limited inventory and particular buyer expectations, and the community's private character adds sensitivity. Real Property Planning provides executors with island-specific valuation expertise, professional coordination, and the discreet handling that Mercer Island estate situations require.",
@@ -254,7 +254,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Preparation and presentation management at the standard island buyers expect",
         "End-to-end sale coordination from initial assessment through closing, minimizing the executor's logistical burden",
       ],
-      whyLocal: "On Mercer Island, every estate property has distinctive characteristics — lake frontage, east-side versus west-side positioning, view corridors, mature lots, or mid-century architectural features. Generic Eastside comparisons often miss what makes each island property unique. David Stein's on-site evaluation provides the property-specific insight that executors need for defensible pricing — especially important when beneficiaries have strong opinions and the stakes are high.",
+      whyLocal: "On Mercer Island, every estate property has distinctive characteristics — lake frontage, east-side versus west-side positioning, view corridors, mature lots, or mid-century architectural features. Generic Eastside comparisons often miss what makes each island property unique. Real Property Planning's on-site evaluation provides the property-specific insight that executors need for defensible pricing — especially important when beneficiaries have strong opinions and the stakes are high.",
     },
     "attorney-fiduciary-support": {
       intro: "Attorneys and fiduciaries managing property matters on Mercer Island need a real estate partner with specific island-market expertise — not just Eastside generalist knowledge. The island's limited inventory, lakefront premium dynamics, and distinctive buyer pool create valuation challenges that require hands-on assessment. Real Property Planning provides Mercer Island legal professionals with defensible pricing, clear documentation, and discreet coordination.",
@@ -273,7 +273,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Coordination across multiple stakeholders — attorneys, trustees, beneficiaries, and financial advisors — with clear reporting",
         "A reliable Mercer Island real estate resource for ongoing referrals and property-related legal matters",
       ],
-      whyLocal: "Mercer Island property matters require a broker who understands the island's distinctive market — not just the Eastside broadly. View premiums, lakefront access variations, lot positioning, and the island's limited-inventory dynamics all affect pricing in ways that broad-market comparisons miss. David Stein's certified appraisal background provides attorneys and fiduciaries with the island-specific analysis their Mercer Island cases require.",
+      whyLocal: "Mercer Island property matters require a broker who understands the island's distinctive market — not just the Eastside broadly. View premiums, lakefront access variations, lot positioning, and the island's limited-inventory dynamics all affect pricing in ways that broad-market comparisons miss. Real Property Planning's certified appraisal background provides attorneys and fiduciaries with the island-specific analysis their Mercer Island cases require.",
     },
     "downsizing-services": {
       intro: "Downsizing from a Mercer Island home is a decision shaped by the island's uniquely limited inventory — once you sell, finding another property on the island is difficult. Many island homeowners have lived in their homes for decades, watching values climb while the community around them remained small and private. Real Property Planning helps Mercer Island homeowners evaluate this significant decision with honest valuation, preparation guidance, and a pace that respects the weight of leaving an island home.",
@@ -292,7 +292,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Sale timeline management that aligns with a move to a smaller residence, Eastside retirement community, or out-of-area relocation",
         "Discreet marketing appropriate for a small community where listing activity is noticed by neighbors",
       ],
-      whyLocal: "Mercer Island's downsizing decisions carry a dimension that Eastside mainland properties don't — the island's limited inventory means selling may close the door on island living permanently. David Stein helps Mercer Island homeowners understand their property's realistic market position in a community where every listing is scrutinized, buyer expectations are high, and the emotional stakes of leaving extend beyond the financial transaction.",
+      whyLocal: "Mercer Island's downsizing decisions carry a dimension that Eastside mainland properties don't — the island's limited inventory means selling may close the door on island living permanently. Real Property Planning helps Mercer Island homeowners understand their property's realistic market position in a community where every listing is scrutinized, buyer expectations are high, and the emotional stakes of leaving extend beyond the financial transaction.",
     },
     "valuation-guidance": {
       intro: "Mercer Island's limited inventory, lake-influenced premiums, and exclusive residential character make property valuation more nuanced than in most Eastside communities. Whether for estate settlement, trust administration, or a pre-listing assessment, accurate valuation on the island requires on-site evaluation by someone who understands how Mercer Island's specific factors — lake access, view corridors, lot privacy, and I-90 proximity — interact to drive value. Real Property Planning provides this island-level precision.",
@@ -311,7 +311,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Credentialed perspective combining island market knowledge with certified appraiser analytical methodology",
         "Confidential communication appropriate for a small community where valuation discussions may have sensitive implications",
       ],
-      whyLocal: "Mercer Island's small inventory and island-specific value drivers make automated valuation tools particularly unreliable here. A lakefront property on the east shore may command a different premium than one on the west side — and a home's relationship to I-90 noise, Luther Burbank Park, or the town center affects value in ways that only on-site assessment can capture. David Stein's dual credentials provide the precision that Mercer Island property decisions require.",
+      whyLocal: "Mercer Island's small inventory and island-specific value drivers make automated valuation tools particularly unreliable here. A lakefront property on the east shore may command a different premium than one on the west side — and a home's relationship to I-90 noise, Luther Burbank Park, or the town center affects value in ways that only on-site assessment can capture. Real Property Planning's dual credentials provide the precision that Mercer Island property decisions require.",
     },
     "preparing-home-for-sale": {
       intro: "Preparing a home for sale on Mercer Island means understanding a buyer pool that expects quality but scrutinizes every listing in a limited-inventory market. Island buyers know the community intimately — they notice condition details that mainland buyers might overlook. Real Property Planning helps Mercer Island homeowners make preparation decisions based on what actually drives value on the island, not generic advice about staging and cosmetic updates.",
@@ -330,7 +330,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Management of the full preparation timeline for out-of-area owners with clear progress reporting",
         "Local vendor coordination with contractors experienced on Mercer Island properties",
       ],
-      whyLocal: "Mercer Island's preparation decisions are different from mainland Eastside properties. The island's small, scrutinizing buyer pool means presentation matters enormously — but so does the risk of over-investing in updates that don't produce proportional return. David Stein's valuation expertise helps island homeowners invest preparation dollars strategically, understanding which improvements today's island buyers actually value.",
+      whyLocal: "Mercer Island's preparation decisions are different from mainland Eastside properties. The island's small, scrutinizing buyer pool means presentation matters enormously — but so does the risk of over-investing in updates that don't produce proportional return. Real Property Planning's valuation expertise helps island homeowners invest preparation dollars strategically, understanding which improvements today's island buyers actually value.",
     },
     "divorce-related-home-sales": {
       intro: "Divorce-related property sales on Mercer Island combine high property values with the privacy considerations of a small, close-knit community. The marital home may be the family's most significant asset, and both parties need a broker who can provide objective, defensible valuation while managing the sale with the discretion that island living demands. Real Property Planning provides the neutral, credentialed approach that Mercer Island divorce situations require.",
@@ -349,7 +349,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Clear documentation of pricing rationale, comparable analysis, and sale terms for legal records",
         "Professional handling that minimizes community visibility when discretion is a priority",
       ],
-      whyLocal: "Mercer Island's small community and high property values create unique dynamics for divorce-related sales. Privacy is difficult to maintain when every new listing is noticed, and valuation accuracy matters enormously when the home may represent $3M or more in marital assets. David Stein's dual credentials provide the objective, defensible pricing that family law cases require, while his experience on the island ensures the sale is managed with appropriate discretion.",
+      whyLocal: "Mercer Island's small community and high property values create unique dynamics for divorce-related sales. Privacy is difficult to maintain when every new listing is noticed, and valuation accuracy matters enormously when the home may represent $3M or more in marital assets. Real Property Planning's dual credentials provide the objective, defensible pricing that family law cases require, while his experience on the island ensures the sale is managed with appropriate discretion.",
     },
     "trust-estate-property-sales": {
       intro: "Trust-owned property on Mercer Island represents some of the highest-value residential assets in the Pacific Northwest. Trustees managing island property sales face fiduciary obligations that demand precision — defensible pricing, documented process, and transparent communication with beneficiaries who often have strong opinions about property they may have grown up visiting. Real Property Planning provides the island-specific expertise and fiduciary-grade documentation these situations require.",
@@ -368,7 +368,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Regular reporting that provides trustees with the documentation they need for trust accounting and beneficiary updates",
         "End-to-end sale management for trustees who may be located off-island or out of state",
       ],
-      whyLocal: "Trust property sales on Mercer Island carry elevated scrutiny because the values are significant and the market is small enough that pricing decisions are visible. A trustee who misprices an island property faces questions from beneficiaries who can easily observe comparable sales in a limited-inventory community. David Stein's dual credentials provide the defensible, island-specific analysis that trust administration on Mercer Island requires.",
+      whyLocal: "Trust property sales on Mercer Island carry elevated scrutiny because the values are significant and the market is small enough that pricing decisions are visible. A trustee who misprices an island property faces questions from beneficiaries who can easily observe comparable sales in a limited-inventory community. Real Property Planning's dual credentials provide the defensible, island-specific analysis that trust administration on Mercer Island requires.",
     },
   },
 
@@ -393,7 +393,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Management of preparation logistics across different property types — from village homes to large-lot rural properties",
         "Full-service coordination from initial assessment through closing for executors managing from off-island",
       ],
-      whyLocal: "Bainbridge Island's real estate market is shaped by its ferry-dependent geography, rural-premium character, and the intentional lifestyle that draws buyers to the island. A Winslow village property near the ferry operates in a completely different market segment than a large-lot property on the north end. David Stein's on-site assessment accounts for how Bainbridge's unique island characteristics — lot size, location relative to the ferry and village, rural features, and custom construction — affect realistic pricing.",
+      whyLocal: "Bainbridge Island's real estate market is shaped by its ferry-dependent geography, rural-premium character, and the intentional lifestyle that draws buyers to the island. A Winslow village property near the ferry operates in a completely different market segment than a large-lot property on the north end. Real Property Planning's on-site assessment accounts for how Bainbridge's unique island characteristics — lot size, location relative to the ferry and village, rural features, and custom construction — affect realistic pricing.",
     },
     "senior-transitions": {
       intro: "Bainbridge Island seniors often have deep roots in the island community — relationships built over decades, homes customized to their lives, and a connection to the island's artistic, natural character. When it's time to transition from a Bainbridge home, the decision involves both practical real estate considerations and the personal weight of leaving an intentionally chosen community. Real Property Planning provides patient, island-informed guidance for families navigating this transition.",
@@ -412,7 +412,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Timeline coordination that works with the family's transition plan, including off-island care arrangements",
         "Full-service sale management so the family can focus on the personal aspects of leaving the island",
       ],
-      whyLocal: "Bainbridge seniors are often leaving more than a house — they're leaving an island community they chose deliberately. The property itself may have characteristics that don't translate easily into standard valuations: custom construction, artist studios, larger lots with gardens, or proximity to the Winslow ferry terminal. David Stein's property-specific assessment captures what makes each Bainbridge home unique, helping families price accurately while navigating the emotional dimension of an island transition.",
+      whyLocal: "Bainbridge seniors are often leaving more than a house — they're leaving an island community they chose deliberately. The property itself may have characteristics that don't translate easily into standard valuations: custom construction, artist studios, larger lots with gardens, or proximity to the Winslow ferry terminal. Real Property Planning's property-specific assessment captures what makes each Bainbridge home unique, helping families price accurately while navigating the emotional dimension of an island transition.",
     },
     "executor-support": {
       intro: "Executors managing estate property on Bainbridge Island face a market with unique characteristics — ferry-dependent access, a mix of village and rural property types, and a community where estate situations carry personal visibility. Real Property Planning helps Bainbridge executors navigate the island's distinct market with defensible pricing, practical coordination, and the local knowledge that managing an island estate requires.",
@@ -431,7 +431,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Clear communication with executors managing from off-island, including regular updates and accessible documentation",
         "Full-service management that accounts for ferry scheduling, seasonal patterns, and the practical realities of island property sales",
       ],
-      whyLocal: "Bainbridge estate properties often defy simple market comparisons — the island's mix of Winslow village homes, mid-island neighborhoods, waterfront properties, and large-lot rural estates means every property's value is driven by its specific combination of location, lot characteristics, and construction type. David Stein's on-site assessment provides executors with the property-specific analysis they need for defensible pricing in a market where automated tools consistently miss the mark.",
+      whyLocal: "Bainbridge estate properties often defy simple market comparisons — the island's mix of Winslow village homes, mid-island neighborhoods, waterfront properties, and large-lot rural estates means every property's value is driven by its specific combination of location, lot characteristics, and construction type. Real Property Planning's on-site assessment provides executors with the property-specific analysis they need for defensible pricing in a market where automated tools consistently miss the mark.",
     },
     "attorney-fiduciary-support": {
       intro: "Legal professionals managing property matters on Bainbridge Island need a broker who understands the island's unique real estate dynamics — not just Kitsap County broadly. The ferry-dependent market, premium-rural hybrid property types, and close-knit community create considerations that standard market analysis doesn't address. Real Property Planning provides Bainbridge-area attorneys and fiduciaries with island-specific expertise, defensible pricing, and responsive coordination.",
@@ -450,7 +450,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Responsive communication that works across the water — supporting attorneys based in Seattle, Kitsap, or elsewhere",
         "A reliable Bainbridge Island real estate resource for attorneys with ongoing island property referral needs",
       ],
-      whyLocal: "Bainbridge Island property matters require island-specific expertise. The market's ferry-dependent dynamics, premium-rural hybrid pricing, and limited comparable sales create valuation challenges that broad Kitsap County analysis doesn't address. David Stein's on-site assessment and certified appraisal background provide attorneys and fiduciaries with the property-specific documentation that Bainbridge cases require — whether for court filings, settlement negotiations, or fiduciary reporting.",
+      whyLocal: "Bainbridge Island property matters require island-specific expertise. The market's ferry-dependent dynamics, premium-rural hybrid pricing, and limited comparable sales create valuation challenges that broad Kitsap County analysis doesn't address. Real Property Planning's on-site assessment and certified appraisal background provide attorneys and fiduciaries with the property-specific documentation that Bainbridge cases require — whether for court filings, settlement negotiations, or fiduciary reporting.",
     },
     "downsizing-services": {
       intro: "Downsizing from a Bainbridge Island home means more than selling a house — it means deciding whether to leave an island community with its own rhythm, culture, and lifestyle. Many Bainbridge homeowners chose the island intentionally, and the decision to downsize involves weighing not just property value but ferry-dependent logistics, island community bonds, and the practical realities of maintaining larger rural-premium properties. Real Property Planning helps Bainbridge homeowners navigate this transition with island-specific market insight and patient, thoughtful guidance.",
@@ -469,7 +469,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Coordination of cleanout, preparation, and vendor management for larger island properties with outbuildings, gardens, or acreage",
         "Honest analysis of whether downsizing on the island or relocating to the mainland produces the better financial and lifestyle outcome",
       ],
-      whyLocal: "Bainbridge Island downsizing decisions are shaped by the island's unique market dynamics — limited inventory, ferry-dependent buyer traffic, a premium-rural value spectrum, and an intentional community where homes often sell based on lifestyle fit as much as condition. David Stein's island-specific knowledge helps homeowners understand their property's realistic position in this distinctive market, making a difficult transition more manageable.",
+      whyLocal: "Bainbridge Island downsizing decisions are shaped by the island's unique market dynamics — limited inventory, ferry-dependent buyer traffic, a premium-rural value spectrum, and an intentional community where homes often sell based on lifestyle fit as much as condition. Real Property Planning's island-specific knowledge helps homeowners understand their property's realistic position in this distinctive market, making a difficult transition more manageable.",
     },
     "valuation-guidance": {
       intro: "Bainbridge Island's real estate defies simple valuation — properties range from Winslow village homes to multi-acre rural estates to waterfront properties with private beaches, and automated tools consistently struggle with the island's limited comparable sales and hybrid value drivers. Real Property Planning provides the on-site, island-specific assessment that Bainbridge property decisions require, whether for estate planning, trust administration, or pre-listing strategy.",
@@ -488,7 +488,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Evaluation of highest-and-best-use for properties with acreage, subdivision potential, or mixed-use characteristics",
         "Credentialed perspective that combines island market knowledge with certified appraiser analytical methodology",
       ],
-      whyLocal: "Bainbridge Island's limited inventory and premium-rural hybrid character make it one of the most difficult markets in the region for automated valuation. A three-acre property near Battle Point performs differently than a quarter-acre lot in Winslow — and waterfront values vary enormously based on beach access, bulkhead condition, and exposure. David Stein's on-site assessment captures the island-specific details that drive value here.",
+      whyLocal: "Bainbridge Island's limited inventory and premium-rural hybrid character make it one of the most difficult markets in the region for automated valuation. A three-acre property near Battle Point performs differently than a quarter-acre lot in Winslow — and waterfront values vary enormously based on beach access, bulkhead condition, and exposure. Real Property Planning's on-site assessment captures the island-specific details that drive value here.",
     },
     "preparing-home-for-sale": {
       intro: "Preparing a home for sale on Bainbridge Island means understanding a buyer pool that values the island's character — natural settings, artistic community, rural-premium lifestyle — alongside property condition. Over-preparing for a generic suburban buyer misses what Bainbridge buyers actually want, while under-preparing leaves money on the table. Real Property Planning helps Bainbridge homeowners make smart preparation decisions calibrated to the island's specific market.",
@@ -507,7 +507,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Management of preparation logistics for owners who may be coordinating from Seattle, the Eastside, or out of state",
         "Local vendor coordination with island contractors and service providers who understand Bainbridge's specific property types",
       ],
-      whyLocal: "Bainbridge Island buyers choose the island for its character — they're typically not looking for the same finishes as a downtown Bellevue buyer. Preparation decisions need to reflect this: preserving the property's island character while addressing the condition issues that actually affect value. David Stein's experience with Bainbridge properties helps sellers invest in the right improvements rather than generic updates that may not resonate with island buyers.",
+      whyLocal: "Bainbridge Island buyers choose the island for its character — they're typically not looking for the same finishes as a downtown Bellevue buyer. Preparation decisions need to reflect this: preserving the property's island character while addressing the condition issues that actually affect value. Real Property Planning's experience with Bainbridge properties helps sellers invest in the right improvements rather than generic updates that may not resonate with island buyers.",
     },
     "divorce-related-home-sales": {
       intro: "Divorce-related property sales on Bainbridge Island involve the additional complexity of a small, close-knit community where privacy is valued and listing activity is immediately visible to neighbors. The island's premium property values mean the marital home often represents a major financial asset, and both parties need a broker who can provide defensible valuation while managing the sale with discretion appropriate for island living. Real Property Planning provides this combination.",
@@ -526,7 +526,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Sale coordination that accounts for Bainbridge's ferry-dependent showing schedules and seasonal market patterns",
         "Clear documentation of all pricing rationale and sale terms for legal records",
       ],
-      whyLocal: "Bainbridge Island's small community and limited comparable sales create distinct challenges for divorce-related property valuation. Island properties with unique features — waterfront, acreage, Winslow walkability — require on-site assessment rather than automated estimates, and the small-community dynamics demand a broker who can manage the sale with appropriate discretion. David Stein provides the credentialed objectivity and island familiarity these sensitive situations require.",
+      whyLocal: "Bainbridge Island's small community and limited comparable sales create distinct challenges for divorce-related property valuation. Island properties with unique features — waterfront, acreage, Winslow walkability — require on-site assessment rather than automated estimates, and the small-community dynamics demand a broker who can manage the sale with appropriate discretion. Real Property Planning provides the credentialed objectivity and island familiarity these sensitive situations require.",
     },
     "trust-estate-property-sales": {
       intro: "Trust-owned property on Bainbridge Island often represents a significant family asset tied to decades of island living. Trustees managing the sale face fiduciary obligations that demand defensible pricing — challenging in a market with limited comparable sales, premium-rural hybrid values, and property features (acreage, waterfront, outbuildings) that automated tools handle poorly. Real Property Planning provides the island-specific expertise and documented methodology that Bainbridge trust sales require.",
@@ -545,7 +545,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Regular reporting for trust accounting and beneficiary communications, with defensible documentation at each stage",
         "Complete sale management for trustees located off-island, on the mainland, or out of state",
       ],
-      whyLocal: "Trust property sales on Bainbridge Island require the kind of property-specific analysis that broad market tools cannot provide. The island's limited comparable sales, hybrid value characteristics, and ferry-dependent market rhythms demand on-site assessment by someone with both island knowledge and the analytical credentials that fiduciary documentation requires. David Stein's dual background meets both needs.",
+      whyLocal: "Trust property sales on Bainbridge Island require the kind of property-specific analysis that broad market tools cannot provide. The island's limited comparable sales, hybrid value characteristics, and ferry-dependent market rhythms demand on-site assessment by someone with both island knowledge and the analytical credentials that fiduciary documentation requires. Real Property Planning's dual background meets both needs.",
     },
   },
 
@@ -574,7 +574,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Clear communication with executors and family members about Edmonds' specific market conditions and realistic pricing",
         "Full-service sale coordination from assessment through closing, managing the details so the family doesn't have to",
       ],
-      whyLocal: "Edmonds' real estate market is defined by its walkable downtown, ferry access, and the dramatic view corridors that define neighborhoods like the Bowl. A home with an unobstructed Sound view commands a very different price than one a few blocks away without it. David Stein's on-site assessment captures these block-by-block differences — providing executors and families with Edmonds-specific pricing that accounts for view quality, downtown proximity, and the community's particular buyer expectations.",
+      whyLocal: "Edmonds' real estate market is defined by its walkable downtown, ferry access, and the dramatic view corridors that define neighborhoods like the Bowl. A home with an unobstructed Sound view commands a very different price than one a few blocks away without it. Real Property Planning's on-site assessment captures these block-by-block differences — providing executors and families with Edmonds-specific pricing that accounts for view quality, downtown proximity, and the community's particular buyer expectations.",
     },
     "senior-transitions": {
       intro: "Many Edmonds seniors chose the community deliberately — for its walkable downtown, ferry access, arts scene, and the small-city character that makes daily life enjoyable. Transitioning from a longtime Edmonds home involves practical real estate decisions and the personal weight of leaving a community where relationships and routines are deeply established. Real Property Planning helps Edmonds families navigate this transition with patience, honest pricing, and experienced coordination.",
@@ -593,7 +593,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Preparation guidance appropriate for Edmonds' buyer expectations — what matters, what doesn't, and where to invest",
         "Referrals to trusted moving and transition professionals familiar with Edmonds and south Snohomish County",
       ],
-      whyLocal: "Edmonds seniors often own homes in locations — the Bowl, near the ferry, along the waterfront — where the value is heavily influenced by view quality, walkability, and community character. These aren't factors that automated tools price well. David Stein provides the property-specific assessment that helps families understand exactly what their Edmonds home is worth, which preparation decisions make sense, and how to time the sale alongside the family's transition plan.",
+      whyLocal: "Edmonds seniors often own homes in locations — the Bowl, near the ferry, along the waterfront — where the value is heavily influenced by view quality, walkability, and community character. These aren't factors that automated tools price well. Real Property Planning provides the property-specific assessment that helps families understand exactly what their Edmonds home is worth, which preparation decisions make sense, and how to time the sale alongside the family's transition plan.",
     },
     "executor-support": {
       intro: "Executors managing estate property in Edmonds inherit responsibility for a home in a community where location nuances matter significantly — Sound views, Bowl positioning, ferry proximity, and downtown walkability all affect value in ways that require local expertise. Real Property Planning helps Edmonds executors with property-specific assessment, practical coordination, and the clear communication that estate administration requires.",
@@ -612,7 +612,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Strategic listing timing guidance based on Edmonds' seasonal market patterns",
         "End-to-end management from initial assessment through closing for executors managing from outside the area",
       ],
-      whyLocal: "Edmonds estate properties are often in locations where block-by-block differences in view quality, walkability, and waterfront proximity create significant pricing variation. An executor unfamiliar with these nuances risks mispricing — especially if relying on automated tools that don't distinguish between a Bowl home with Sound views and one without. David Stein's on-site assessment provides the Edmonds-specific analysis that defensible estate pricing requires.",
+      whyLocal: "Edmonds estate properties are often in locations where block-by-block differences in view quality, walkability, and waterfront proximity create significant pricing variation. An executor unfamiliar with these nuances risks mispricing — especially if relying on automated tools that don't distinguish between a Bowl home with Sound views and one without. Real Property Planning's on-site assessment provides the Edmonds-specific analysis that defensible estate pricing requires.",
     },
     "attorney-fiduciary-support": {
       intro: "Attorneys and fiduciaries managing property matters in Edmonds benefit from a broker who understands the community's specific market dynamics — the premium that views, walkability, and ferry access command, and how those factors vary across Edmonds' neighborhoods. Real Property Planning provides Edmonds-area legal professionals with locally grounded property assessments, clear documentation, and responsive coordination.",
@@ -631,7 +631,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Strategic guidance on Edmonds-specific market timing and preparation decisions",
         "A reliable south Snohomish County real estate resource for attorneys with ongoing property referral needs",
       ],
-      whyLocal: "Edmonds property matters require understanding of the community's specific value dynamics. The premium attached to Sound views, Bowl location, ferry proximity, and walkable downtown access varies substantially across the city's neighborhoods — and these distinctions matter for court filings, settlement discussions, and fiduciary pricing documentation. David Stein provides attorneys and fiduciaries with the Edmonds-specific analysis these situations require.",
+      whyLocal: "Edmonds property matters require understanding of the community's specific value dynamics. The premium attached to Sound views, Bowl location, ferry proximity, and walkable downtown access varies substantially across the city's neighborhoods — and these distinctions matter for court filings, settlement discussions, and fiduciary pricing documentation. Real Property Planning provides attorneys and fiduciaries with the Edmonds-specific analysis these situations require.",
     },
 
     "downsizing-services": {
@@ -651,7 +651,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Marketing strategy that emphasizes the lifestyle elements — waterfront walks, ferry access, downtown dining — that make Edmonds properties distinctive",
         "Vendor coordination for cleanout, repairs, and presentation appropriate for Edmonds' buyer expectations",
       ],
-      whyLocal: "Edmonds downsizing decisions involve understanding the specific premiums that drive value here — Sound views that vary block by block in the Bowl, walkability to the ferry terminal and downtown, and the small-city sophistication that attracts a buyer pool distinct from nearby Lynnwood or Mountlake Terrace. David Stein's local knowledge helps Edmonds homeowners price accurately in a market where location-specific value drivers make generic comparisons unreliable.",
+      whyLocal: "Edmonds downsizing decisions involve understanding the specific premiums that drive value here — Sound views that vary block by block in the Bowl, walkability to the ferry terminal and downtown, and the small-city sophistication that attracts a buyer pool distinct from nearby Lynnwood or Mountlake Terrace. Real Property Planning's local knowledge helps Edmonds homeowners price accurately in a market where location-specific value drivers make generic comparisons unreliable.",
     },
     "valuation-guidance": {
       intro: "Accurate property valuation in Edmonds requires understanding the city's layered value drivers — Sound and Olympic views that shift dramatically from block to block, the walkability premium near downtown and the ferry terminal, and the community's character as a small coastal city. Real Property Planning provides the on-site, Edmonds-specific assessment these property decisions require.",
@@ -670,7 +670,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Credentialed perspective combining Edmonds market knowledge with certified appraiser analytical methodology",
         "Guidance on seasonal market timing and how Edmonds' buyer activity patterns affect optimal listing strategy",
       ],
-      whyLocal: "Edmonds is a view-driven market where property values can vary dramatically within a few blocks — a panoramic Sound view in the Bowl commands a substantial premium over an interior lot in the same neighborhood. David Stein's on-site assessment captures the Edmonds-specific factors that actually drive value.",
+      whyLocal: "Edmonds is a view-driven market where property values can vary dramatically within a few blocks — a panoramic Sound view in the Bowl commands a substantial premium over an interior lot in the same neighborhood. Real Property Planning's on-site assessment captures the Edmonds-specific factors that actually drive value.",
     },
     "preparing-home-for-sale": {
       intro: "Preparing a home for sale in Edmonds means understanding a buyer pool drawn to the city's walkable downtown, Puget Sound views, and small-city character. Edmonds buyers are typically looking for lifestyle — they want the view, the ferry access, the waterfront walks. Real Property Planning helps Edmonds homeowners prepare properties that appeal to what Edmonds buyers actually value.",
@@ -689,7 +689,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Timeline and budget management that avoids over-investing in improvements that don't produce proportional return in Edmonds' price ranges",
         "Complete preparation management for out-of-area owners with regular progress reporting",
       ],
-      whyLocal: "Edmonds properties sell based on a combination of condition, views, and lifestyle proximity — and the relative importance of each factor varies by neighborhood. A Bowl home with a panoramic view can tolerate more deferred maintenance than a non-view property in Firdale. David Stein's Edmonds experience helps sellers invest preparation dollars where they'll actually affect the outcome.",
+      whyLocal: "Edmonds properties sell based on a combination of condition, views, and lifestyle proximity — and the relative importance of each factor varies by neighborhood. A Bowl home with a panoramic view can tolerate more deferred maintenance than a non-view property in Firdale. Real Property Planning's Edmonds experience helps sellers invest preparation dollars where they'll actually affect the outcome.",
     },
     "divorce-related-home-sales": {
       intro: "Divorce-related property sales in Edmonds combine the financial stakes of a view-driven market with the sensitivity of a small coastal community where listing activity is noticed. Both parties need a broker who can provide objective, defensible valuation — especially for Edmonds properties where view premiums and ferry proximity create value that's difficult to quantify without on-site assessment. Real Property Planning provides the neutral expertise these situations demand.",
@@ -708,7 +708,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Sale coordination that works within legal timelines while accounting for Edmonds' seasonal buyer patterns",
         "Clear documentation of pricing rationale including view quality, location premiums, and condition analysis",
       ],
-      whyLocal: "Edmonds divorce-related valuations are complicated by the city's view-driven market — the difference between a panoramic Sound view and a partial view can represent hundreds of thousands of dollars, and this premium is invisible to automated tools. David Stein provides the defensible, location-specific analysis that Edmonds family law cases require.",
+      whyLocal: "Edmonds divorce-related valuations are complicated by the city's view-driven market — the difference between a panoramic Sound view and a partial view can represent hundreds of thousands of dollars, and this premium is invisible to automated tools. Real Property Planning provides the defensible, location-specific analysis that Edmonds family law cases require.",
     },
     "trust-estate-property-sales": {
       intro: "Trust-owned property in Edmonds often carries both significant financial value and family significance — many trust properties are longtime homes chosen for their Sound views, walkable downtown access, or ferry-connected lifestyle. Trustees managing the sale need defensible pricing in a market where view premiums require on-site assessment. Real Property Planning provides the Edmonds-specific expertise and documented methodology that trust property sales demand.",
@@ -727,7 +727,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Regular reporting providing trustees with documentation for trust administration and beneficiary updates",
         "Complete sale management for trustees located outside the Edmonds area",
       ],
-      whyLocal: "Trust property sales in Edmonds require understanding the specific factors that drive value in this view-dependent, walkable coastal market. David Stein's dual credentials provide the defensible, Edmonds-specific analysis that trust administration standards demand.",
+      whyLocal: "Trust property sales in Edmonds require understanding the specific factors that drive value in this view-dependent, walkable coastal market. Real Property Planning's dual credentials provide the defensible, Edmonds-specific analysis that trust administration standards demand.",
     },
 
   },
@@ -753,7 +753,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Management of property preparation appropriate for Gig Harbor's buyer expectations — from harbor-village charm to peninsula living",
         "Full-service estate sale coordination for executors managing from off the peninsula",
       ],
-      whyLocal: "Gig Harbor's real estate market reflects its dual identity — a charming harbor village that also serves as a residential peninsula community connected to Tacoma via the Narrows Bridge. Properties with direct harbor views operate in a different market segment than peninsula homes with acreage or Narrows-area properties with bridge proximity. David Stein's on-site assessment accounts for how these Gig Harbor-specific factors affect realistic pricing — especially for estate properties where automated tools miss the community's distinctive value dynamics.",
+      whyLocal: "Gig Harbor's real estate market reflects its dual identity — a charming harbor village that also serves as a residential peninsula community connected to Tacoma via the Narrows Bridge. Properties with direct harbor views operate in a different market segment than peninsula homes with acreage or Narrows-area properties with bridge proximity. Real Property Planning's on-site assessment accounts for how these Gig Harbor-specific factors affect realistic pricing — especially for estate properties where automated tools miss the community's distinctive value dynamics.",
     },
     "senior-transitions": {
       intro: "Many Gig Harbor seniors chose the peninsula for its harbor village character, maritime atmosphere, and the quality of life that comes with small-town living connected to the broader Puget Sound region via the Narrows Bridge. Transitioning from a longtime Gig Harbor home involves both practical property decisions and the personal significance of leaving a deliberately chosen community. Real Property Planning helps Gig Harbor families approach this transition with experienced guidance and local understanding.",
@@ -772,7 +772,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Preparation guidance tailored to Gig Harbor's market — what matters to peninsula buyers and harbor-lifestyle seekers",
         "Referrals to trusted moving and transition professionals on the peninsula and in the broader Tacoma-Pierce County area",
       ],
-      whyLocal: "Gig Harbor seniors often own homes that reflect the community's maritime and peninsula character — harbor views, waterfront access, larger lots, or locations that offer the walkable harbor-village lifestyle. These features drive value in ways that generic Pierce County comparisons don't capture. David Stein helps families understand exactly what their Gig Harbor property is worth based on its specific characteristics — not broad-market averages that miss what makes the peninsula unique.",
+      whyLocal: "Gig Harbor seniors often own homes that reflect the community's maritime and peninsula character — harbor views, waterfront access, larger lots, or locations that offer the walkable harbor-village lifestyle. These features drive value in ways that generic Pierce County comparisons don't capture. Real Property Planning helps families understand exactly what their Gig Harbor property is worth based on its specific characteristics — not broad-market averages that miss what makes the peninsula unique.",
     },
     "executor-support": {
       intro: "Executors managing estate property in Gig Harbor face a market shaped by the peninsula's distinctive character — harbor village charm, waterfront premiums, Narrows Bridge connectivity, and a mix of urban-village and rural property types. Real Property Planning provides Gig Harbor executors with peninsula-specific assessment, practical coordination, and the clear communication that responsible estate administration requires.",
@@ -791,7 +791,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Strategic listing timing guidance considering the peninsula's seasonal buyer patterns",
         "End-to-end sale management for executors coordinating from off the peninsula",
       ],
-      whyLocal: "Gig Harbor executors need pricing that reflects the peninsula's specific market — not broad Pierce County averages. A harbor-view property near downtown Gig Harbor operates in a completely different market segment than a larger-lot property on the rural side of the peninsula. David Stein's on-site evaluation provides the property-specific analysis that Gig Harbor estate pricing requires — especially important where beneficiaries may have outdated or emotionally influenced expectations of what the property is worth.",
+      whyLocal: "Gig Harbor executors need pricing that reflects the peninsula's specific market — not broad Pierce County averages. A harbor-view property near downtown Gig Harbor operates in a completely different market segment than a larger-lot property on the rural side of the peninsula. Real Property Planning's on-site evaluation provides the property-specific analysis that Gig Harbor estate pricing requires — especially important where beneficiaries may have outdated or emotionally influenced expectations of what the property is worth.",
     },
     "attorney-fiduciary-support": {
       intro: "Attorneys and fiduciaries with property matters in Gig Harbor need a broker who understands the peninsula's specific real estate dynamics — harbor-view premiums, the distinction between downtown and rural peninsula properties, and how Narrows Bridge connectivity affects the buyer pool. Real Property Planning provides Gig Harbor-area legal professionals with locally informed assessments, defensible documentation, and professional coordination.",
@@ -810,7 +810,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Clear communication across stakeholders — attorneys, trustees, beneficiaries — with consistent documentation",
         "A reliable Gig Harbor peninsula real estate resource for attorneys with ongoing property referral needs",
       ],
-      whyLocal: "Gig Harbor property matters require peninsula-specific expertise. The harbor-village premium, waterfront access variations, rural lot characteristics, and Narrows Bridge buyer dynamics all affect pricing in ways that general Pierce County comparisons miss. David Stein provides attorneys and fiduciaries with the property-specific, on-site analysis that Gig Harbor cases require for defensible documentation.",
+      whyLocal: "Gig Harbor property matters require peninsula-specific expertise. The harbor-village premium, waterfront access variations, rural lot characteristics, and Narrows Bridge buyer dynamics all affect pricing in ways that general Pierce County comparisons miss. Real Property Planning provides attorneys and fiduciaries with the property-specific, on-site analysis that Gig Harbor cases require for defensible documentation.",
     },
 
     "downsizing-services": {
@@ -830,7 +830,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Coordination of cleanout, vendor management, and property preparation for larger peninsula properties",
         "Marketing strategy that emphasizes the peninsula lifestyle elements that make Gig Harbor properties distinctive",
       ],
-      whyLocal: "Gig Harbor downsizing decisions involve a market shaped by harbor views, maritime character, and peninsula geography. The value difference between a harbor-view home and an interior-lot property can be dramatic — and the buyer pool for each is distinct. David Stein's peninsula knowledge helps Gig Harbor homeowners understand their property's realistic position in a market that generic Tacoma-area comparisons don't accurately reflect.",
+      whyLocal: "Gig Harbor downsizing decisions involve a market shaped by harbor views, maritime character, and peninsula geography. The value difference between a harbor-view home and an interior-lot property can be dramatic — and the buyer pool for each is distinct. Real Property Planning's peninsula knowledge helps Gig Harbor homeowners understand their property's realistic position in a market that generic Tacoma-area comparisons don't accurately reflect.",
     },
     "valuation-guidance": {
       intro: "Property valuation in Gig Harbor is complicated by the peninsula's maritime character — harbor views, waterfront access, Narrows Bridge proximity, and the distinction between the downtown harbor village and the peninsula's more rural areas all create pricing layers that automated tools handle poorly. Real Property Planning provides the on-site, peninsula-specific assessment that Gig Harbor property decisions require.",
@@ -849,7 +849,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Credentialed perspective combining peninsula market knowledge with certified appraiser analytical methodology",
         "Evaluation of seasonal market patterns and optimal timing for peninsula property listings",
       ],
-      whyLocal: "Gig Harbor's peninsula geography creates valuation challenges unique to this market — harbor-view premiums, waterfront access variations, and the rural-to-village spectrum within the community. Automated tools consistently miss the distinctions that drive value here. David Stein's on-site assessment captures what peninsula buyers actually pay for.",
+      whyLocal: "Gig Harbor's peninsula geography creates valuation challenges unique to this market — harbor-view premiums, waterfront access variations, and the rural-to-village spectrum within the community. Automated tools consistently miss the distinctions that drive value here. Real Property Planning's on-site assessment captures what peninsula buyers actually pay for.",
     },
     "preparing-home-for-sale": {
       intro: "Preparing a home for sale in Gig Harbor means understanding a buyer pool attracted to the peninsula's maritime lifestyle, harbor views, and small-town character. Gig Harbor buyers are looking for community fit and waterfront connection as much as finishes and condition. Real Property Planning helps peninsula homeowners make preparation decisions that reflect what Gig Harbor buyers actually value rather than following a generic suburban preparation playbook.",
@@ -868,7 +868,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Budget guidance that focuses preparation investment where it produces measurable return in Gig Harbor's specific market",
         "Complete preparation management for owners coordinating from Tacoma, Seattle, or out of state",
       ],
-      whyLocal: "Gig Harbor properties sell based on a combination of harbor character, view quality, and waterfront access — and preparation strategy needs to emphasize these peninsula-specific elements. A harbor-view home with dated finishes may outperform a fully updated interior-lot property if the views are presented well. David Stein's peninsula experience helps sellers invest preparation dollars where they'll actually affect the outcome.",
+      whyLocal: "Gig Harbor properties sell based on a combination of harbor character, view quality, and waterfront access — and preparation strategy needs to emphasize these peninsula-specific elements. A harbor-view home with dated finishes may outperform a fully updated interior-lot property if the views are presented well. Real Property Planning's peninsula experience helps sellers invest preparation dollars where they'll actually affect the outcome.",
     },
     "divorce-related-home-sales": {
       intro: "Divorce-related property sales in Gig Harbor involve the challenge of valuing peninsula-specific premiums — harbor views, waterfront access, and maritime character — in a market where these features create significant value differences that generic approaches miss. Both parties need a broker who can provide defensible, peninsula-specific valuation while managing the sale with discretion in a community where real estate activity is closely observed. Real Property Planning provides this combination.",
@@ -887,7 +887,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Sale coordination that works within legal timelines while accounting for the peninsula's seasonal market patterns",
         "Clear documentation of pricing rationale including view quality, waterfront features, and peninsula-specific comparable analysis",
       ],
-      whyLocal: "Gig Harbor divorce-related valuations require understanding the peninsula's specific value drivers — harbor views, Narrows Bridge proximity, waterfront access grades, and the maritime lifestyle premium. These factors create valuation complexity that automated tools and broad Pierce County comparisons miss. David Stein provides the peninsula-specific analysis that family law cases involving Gig Harbor property require.",
+      whyLocal: "Gig Harbor divorce-related valuations require understanding the peninsula's specific value drivers — harbor views, Narrows Bridge proximity, waterfront access grades, and the maritime lifestyle premium. These factors create valuation complexity that automated tools and broad Pierce County comparisons miss. Real Property Planning provides the peninsula-specific analysis that family law cases involving Gig Harbor property require.",
     },
     "trust-estate-property-sales": {
       intro: "Trust-owned property in Gig Harbor often represents a significant family asset connected to the peninsula's harbor lifestyle. Trustees managing the sale face fiduciary obligations that demand defensible pricing — challenging in a market where harbor views, waterfront access, and maritime character create value premiums that standard tools don't capture. Real Property Planning provides the peninsula-specific expertise and documented methodology that Gig Harbor trust sales require.",
@@ -906,7 +906,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Regular reporting providing trustees with documentation for trust accounting and beneficiary communications",
         "Complete sale management for trustees located off the peninsula or out of state",
       ],
-      whyLocal: "Trust property sales in Gig Harbor require peninsula-specific expertise — harbor-view premiums, waterfront access variations, and maritime features demand on-site assessment by someone with local knowledge and analytical credentials. David Stein's dual background provides the defensible, Gig Harbor-specific documentation that trust administration on the peninsula requires.",
+      whyLocal: "Trust property sales in Gig Harbor require peninsula-specific expertise — harbor-view premiums, waterfront access variations, and maritime features demand on-site assessment by someone with local knowledge and analytical credentials. Real Property Planning's dual background provides the defensible, Gig Harbor-specific documentation that trust administration on the peninsula requires.",
     },
 
   },
@@ -932,7 +932,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Clear communication with executors and family about Poulsbo's specific market conditions, comparable sales, and realistic pricing",
         "Full-service sale coordination from property assessment through closing",
       ],
-      whyLocal: "Poulsbo's real estate market reflects its identity as a Liberty Bay waterfront community with Scandinavian heritage character and a loyal local following. Properties near the bay or within walking distance of downtown operate in a different market than those in the surrounding rural areas. David Stein's on-site assessment captures these Poulsbo-specific distinctions — providing executors and families with pricing that reflects the community's unique character rather than generic Kitsap County averages.",
+      whyLocal: "Poulsbo's real estate market reflects its identity as a Liberty Bay waterfront community with Scandinavian heritage character and a loyal local following. Properties near the bay or within walking distance of downtown operate in a different market than those in the surrounding rural areas. Real Property Planning's on-site assessment captures these Poulsbo-specific distinctions — providing executors and families with pricing that reflects the community's unique character rather than generic Kitsap County averages.",
     },
     "senior-transitions": {
       intro: "Poulsbo seniors often have deep ties to the community — built around Liberty Bay, the Scandinavian character of downtown, and the relationships that come with small-town living in Kitsap County. Transitioning from a Poulsbo home is both a property decision and a personal milestone. Real Property Planning provides patient, locally informed guidance for families navigating this transition in a community where the sale is more than just a transaction.",
@@ -951,7 +951,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Coordination with Kitsap-area senior living communities and transition professionals",
         "Steady, hands-on management of the sale process from assessment through closing",
       ],
-      whyLocal: "Poulsbo seniors often own homes where the value is tied to community-specific factors — Liberty Bay proximity, downtown walkability, neighborhood character — that automated tools don't price accurately. David Stein helps families understand what their Poulsbo home is really worth, which preparation makes sense for the local buyer pool, and how to time the sale to align with both the family's transition and Poulsbo's seasonal market patterns.",
+      whyLocal: "Poulsbo seniors often own homes where the value is tied to community-specific factors — Liberty Bay proximity, downtown walkability, neighborhood character — that automated tools don't price accurately. Real Property Planning helps families understand what their Poulsbo home is really worth, which preparation makes sense for the local buyer pool, and how to time the sale to align with both the family's transition and Poulsbo's seasonal market patterns.",
     },
     "executor-support": {
       intro: "Executors managing estate property in Poulsbo enter a market shaped by the community's Liberty Bay waterfront, Scandinavian heritage character, and small-town identity. Real Property Planning helps Poulsbo executors with locally grounded assessment, practical coordination, and the sensitive handling that estate sales require in a community where circumstances are often known within the neighborhood.",
@@ -970,7 +970,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Coordination with local vendors for cleanout, preparation, and property maintenance",
         "End-to-end management for executors coordinating from outside the Kitsap area",
       ],
-      whyLocal: "Poulsbo's market is small enough that comparable sales may be limited, but specific enough that broad-area averages miss the value drivers that matter — Liberty Bay proximity, downtown walkability, lot characteristics, and community character. David Stein provides executors with the property-specific, on-site analysis that Poulsbo estate pricing requires — especially important where beneficiaries may not understand how the local market differs from where they currently live.",
+      whyLocal: "Poulsbo's market is small enough that comparable sales may be limited, but specific enough that broad-area averages miss the value drivers that matter — Liberty Bay proximity, downtown walkability, lot characteristics, and community character. Real Property Planning provides executors with the property-specific, on-site analysis that Poulsbo estate pricing requires — especially important where beneficiaries may not understand how the local market differs from where they currently live.",
     },
     "attorney-fiduciary-support": {
       intro: "Attorneys and fiduciaries with property matters in Poulsbo benefit from a broker who understands the community's distinctive real estate dynamics — Liberty Bay waterfront premiums, Scandinavian heritage village character, and the pricing nuances of a small Kitsap County market. Real Property Planning provides Poulsbo-area legal professionals with community-specific assessments, defensible pricing, and responsive coordination.",
@@ -989,7 +989,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Understanding of Poulsbo's limited comparable sales environment and how to build defensible pricing rationale",
         "A reliable Poulsbo and north Kitsap real estate resource for attorneys with ongoing property referral needs",
       ],
-      whyLocal: "Poulsbo property matters require community-specific understanding. Liberty Bay waterfront premiums, downtown Viking Avenue proximity, and the community's distinctive character all affect pricing in ways that broad Kitsap County analysis doesn't capture. David Stein provides attorneys and fiduciaries with the Poulsbo-specific, on-site assessment that defensible pricing documentation in this market requires.",
+      whyLocal: "Poulsbo property matters require community-specific understanding. Liberty Bay waterfront premiums, downtown Viking Avenue proximity, and the community's distinctive character all affect pricing in ways that broad Kitsap County analysis doesn't capture. Real Property Planning provides attorneys and fiduciaries with the Poulsbo-specific, on-site assessment that defensible pricing documentation in this market requires.",
     },
 
     "downsizing-services": {
@@ -1009,7 +1009,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Coordination of cleanout and preparation for properties that may include rural features, gardens, or outbuildings typical of Poulsbo homes",
         "Marketing that reflects the community appeal — Liberty Bay, Viking Avenue, small-town character — that draws buyers to Poulsbo specifically",
       ],
-      whyLocal: "Poulsbo downsizing decisions involve a market driven by community identity — Scandinavian heritage, Liberty Bay waterfront, small-town walkability — factors that create value premiums specific to this community. Broad Kitsap County comparisons undervalue what makes Poulsbo properties distinctive. David Stein's community-specific knowledge helps homeowners understand their property's realistic position in Poulsbo's unique market.",
+      whyLocal: "Poulsbo downsizing decisions involve a market driven by community identity — Scandinavian heritage, Liberty Bay waterfront, small-town walkability — factors that create value premiums specific to this community. Broad Kitsap County comparisons undervalue what makes Poulsbo properties distinctive. Real Property Planning's community-specific knowledge helps homeowners understand their property's realistic position in Poulsbo's unique market.",
     },
     "valuation-guidance": {
       intro: "Property valuation in Poulsbo requires understanding a market shaped by community identity — Liberty Bay waterfront premiums, Viking Avenue walkability, Scandinavian-heritage character, and the transition from in-town homes to the more rural properties surrounding the community. Automated tools consistently miss these Poulsbo-specific value drivers. Real Property Planning provides the on-site, community-focused assessment that Poulsbo property decisions require.",
@@ -1028,7 +1028,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Credentialed perspective combining Poulsbo community knowledge with certified appraiser analytical methodology",
         "Honest guidance on how Poulsbo's seasonal patterns and limited buyer traffic affect timing and pricing strategy",
       ],
-      whyLocal: "Poulsbo's small market and community-driven character make automated valuation particularly unreliable. A home near Liberty Bay and Viking Avenue commands a different premium than a similar home on Poulsbo's rural outskirts — and these distinctions require someone who understands the community. David Stein's on-site assessment captures the Poulsbo-specific factors that drive value in this distinctive market.",
+      whyLocal: "Poulsbo's small market and community-driven character make automated valuation particularly unreliable. A home near Liberty Bay and Viking Avenue commands a different premium than a similar home on Poulsbo's rural outskirts — and these distinctions require someone who understands the community. Real Property Planning's on-site assessment captures the Poulsbo-specific factors that drive value in this distinctive market.",
     },
     "preparing-home-for-sale": {
       intro: "Preparing a home for sale in Poulsbo means understanding a buyer pool drawn to the community's Scandinavian heritage, Liberty Bay charm, and small-town waterfront lifestyle. Poulsbo buyers aren't looking for generic suburban finishes — they want community character, walkability to Viking Avenue, and the quality of life that makes Poulsbo distinctive. Real Property Planning helps Poulsbo homeowners make preparation decisions that align with what local buyers actually value.",
@@ -1047,7 +1047,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Budget management focused on return — understanding which investments matter in Poulsbo's price ranges and buyer expectations",
         "Complete preparation management for out-of-area owners with local vendor coordination and regular progress updates",
       ],
-      whyLocal: "Poulsbo properties sell based on community fit — Scandinavian character, Liberty Bay connection, small-town walkability — and preparation needs to reflect this rather than generic remodeling advice. David Stein's Poulsbo experience helps sellers present their properties in ways that resonate with the buyers specifically drawn to this community.",
+      whyLocal: "Poulsbo properties sell based on community fit — Scandinavian character, Liberty Bay connection, small-town walkability — and preparation needs to reflect this rather than generic remodeling advice. Real Property Planning's Poulsbo experience helps sellers present their properties in ways that resonate with the buyers specifically drawn to this community.",
     },
     "divorce-related-home-sales": {
       intro: "Divorce-related property sales in Poulsbo involve the sensitivity of a small, close-knit community where listing activity is immediately visible to neighbors and friends. Both parties need a broker who can provide objective, defensible valuation of a property whose value may be driven by Poulsbo-specific factors — Liberty Bay proximity, Viking Avenue walkability, community character — while managing the sale with discretion. Real Property Planning provides this locally informed, neutral approach.",
@@ -1066,7 +1066,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Sale coordination that works within legal timelines while respecting Poulsbo's seasonal buyer patterns",
         "Clear documentation of pricing rationale including community-specific comparable analysis",
       ],
-      whyLocal: "Poulsbo divorce-related valuations require someone who understands the community's specific value drivers in a market where comparable sales are limited and every listing is noticed. David Stein provides the defensible, community-specific analysis that family law cases involving Poulsbo property require.",
+      whyLocal: "Poulsbo divorce-related valuations require someone who understands the community's specific value drivers in a market where comparable sales are limited and every listing is noticed. Real Property Planning provides the defensible, community-specific analysis that family law cases involving Poulsbo property require.",
     },
     "trust-estate-property-sales": {
       intro: "Trust-owned property in Poulsbo often represents a family's deep connection to the Liberty Bay community — a home chosen for Poulsbo's Scandinavian character, waterfront lifestyle, and small-town values. Trustees managing the sale face fiduciary obligations that demand defensible pricing in a limited-inventory market where community-specific value drivers require local expertise. Real Property Planning provides the Poulsbo-focused methodology and documentation these trust sales require.",
@@ -1085,7 +1085,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Regular reporting providing trustees with documentation for trust accounting and beneficiary communications",
         "Complete sale management for trustees located outside the Poulsbo community or out of state",
       ],
-      whyLocal: "Trust property sales in Poulsbo require community-specific expertise. Liberty Bay premiums, Viking Avenue walkability, and Poulsbo's distinctive character create value that broad Kitsap County analysis doesn't capture — and trustees need defensible documentation that reflects these local realities. David Stein's dual credentials provide the analytical rigor and community knowledge that Poulsbo trust administration requires.",
+      whyLocal: "Trust property sales in Poulsbo require community-specific expertise. Liberty Bay premiums, Viking Avenue walkability, and Poulsbo's distinctive character create value that broad Kitsap County analysis doesn't capture — and trustees need defensible documentation that reflects these local realities. Real Property Planning's dual credentials provide the analytical rigor and community knowledge that Poulsbo trust administration requires.",
     },
 
   },
@@ -1115,7 +1115,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Clear communication with multiple stakeholders — executors, co-heirs, attorneys, and financial advisors often dispersed nationally",
         "Full-service transaction management calibrated to Seattle's fast-moving, competitive market environment",
       ],
-      whyLocal: "Seattle estate properties exist within a market where neighborhood context changes everything. A mid-century rambler in Wedgwood, a craftsman in Wallingford, and a condo in South Lake Union each operate in fundamentally different submarkets with different buyer pools and pricing dynamics. David Stein's neighborhood-level experience across Seattle allows him to assess each estate property on its own terms — evaluating how condition, lot potential, zoning, and neighborhood trajectory affect realistic pricing for executors and attorneys who need defensible analysis, not automated estimates.",
+      whyLocal: "Seattle estate properties exist within a market where neighborhood context changes everything. A mid-century rambler in Wedgwood, a craftsman in Wallingford, and a condo in South Lake Union each operate in fundamentally different submarkets with different buyer pools and pricing dynamics. Real Property Planning's neighborhood-level experience across Seattle allows him to assess each estate property on its own terms — evaluating how condition, lot potential, zoning, and neighborhood trajectory affect realistic pricing for executors and attorneys who need defensible analysis, not automated estimates.",
     },
     "senior-transitions": {
       intro: "Seattle seniors have often lived through decades of neighborhood transformation — watching their corner of the city evolve while staying rooted in the home they chose years or decades ago. Transitioning from a longtime Seattle home involves navigating a complex urban market where neighborhood dynamics, property types, and buyer expectations vary dramatically across the city. Real Property Planning helps Seattle families approach this transition with neighborhood-specific pricing, practical coordination, and patient guidance.",
@@ -1134,7 +1134,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Timeline coordination that aligns the sale with the move to care or a smaller residence within Seattle's active market",
         "Full-service management so the family can focus on the personal aspects of the transition",
       ],
-      whyLocal: "Seattle seniors often own properties in neighborhoods that have changed dramatically since they moved in — sometimes in ways that significantly affect their home's value and optimal sale strategy. A Ballard craftsman may attract developer interest; a West Seattle home may face different buyer demographics post-bridge-closure concerns; a Beacon Hill property may benefit from transit-oriented demand. David Stein's experience across Seattle's neighborhoods helps families understand how these dynamics affect their specific property.",
+      whyLocal: "Seattle seniors often own properties in neighborhoods that have changed dramatically since they moved in — sometimes in ways that significantly affect their home's value and optimal sale strategy. A Ballard craftsman may attract developer interest; a West Seattle home may face different buyer demographics post-bridge-closure concerns; a Beacon Hill property may benefit from transit-oriented demand. Real Property Planning's experience across Seattle's neighborhoods helps families understand how these dynamics affect their specific property.",
     },
     "executor-support": {
       intro: "Serving as executor for a Seattle estate property means navigating one of the most complex urban real estate markets in the Pacific Northwest. With 80+ neighborhoods, diverse property types, and market dynamics that shift block by block, executors need a broker who can assess the specific property — not just the general market. Real Property Planning provides Seattle executors with neighborhood-level expertise, defensible pricing, and comprehensive coordination.",
@@ -1153,7 +1153,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Regular communication and status updates for executors managing from outside Seattle or out of state",
         "Full transaction management from initial assessment through closing, navigating Seattle's market pace and competitive dynamics",
       ],
-      whyLocal: "Seattle executors face a market where generic pricing can be dangerously inaccurate. A property's value in Fremont may be driven by lot potential; in Magnolia, by view corridors; in Columbia City, by transit proximity and neighborhood trajectory. David Stein's experience across Seattle's neighborhoods provides executors with the property-specific analysis they need — assessing not just what the home is worth as a residence, but whether lot value, zoning, or development interest create alternative strategies that could benefit the estate.",
+      whyLocal: "Seattle executors face a market where generic pricing can be dangerously inaccurate. A property's value in Fremont may be driven by lot potential; in Magnolia, by view corridors; in Columbia City, by transit proximity and neighborhood trajectory. Real Property Planning's experience across Seattle's neighborhoods provides executors with the property-specific analysis they need — assessing not just what the home is worth as a residence, but whether lot value, zoning, or development interest create alternative strategies that could benefit the estate.",
     },
     "attorney-fiduciary-support": {
       intro: "Attorneys and fiduciaries managing property matters in Seattle need a broker who can navigate the city's extraordinary market complexity — 80+ neighborhoods, diverse property types from condos to craftsmans to multifamily, and pricing dynamics that shift within blocks. Real Property Planning works with Seattle-area legal professionals as a responsive, credentialed resource for estate, trust, probate, divorce, and guardianship matters involving Seattle real property.",
@@ -1172,7 +1172,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Coordination across property types — single-family, condo, townhome, multifamily — with appropriate expertise for each",
         "A reliable, credentialed Seattle real estate resource for attorneys with ongoing property-related referral needs",
       ],
-      whyLocal: "Seattle's property matters are complicated by the city's market complexity. A property in Ballard raises different questions than one in Rainier Valley or on Capitol Hill — lot potential, neighborhood trajectory, property type, and buyer demographics all vary dramatically. David Stein's experience across Seattle's neighborhoods, combined with his certified appraisal credentials, provides attorneys and fiduciaries with the versatile, defensible analysis that Seattle's diverse property landscape requires.",
+      whyLocal: "Seattle's property matters are complicated by the city's market complexity. A property in Ballard raises different questions than one in Rainier Valley or on Capitol Hill — lot potential, neighborhood trajectory, property type, and buyer demographics all vary dramatically. Real Property Planning's experience across Seattle's neighborhoods, combined with his certified appraisal credentials, provides attorneys and fiduciaries with the versatile, defensible analysis that Seattle's diverse property landscape requires.",
     },
 
     "downsizing-services": {
@@ -1192,7 +1192,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Vendor coordination for cleanout, contractor work, and presentation across Seattle's varied property types — from vintage homes to mid-century ramblers to condos",
         "Patient communication with homeowners and families navigating an emotional decision in a fast-paced market",
       ],
-      whyLocal: "Seattle's downsizing landscape is complicated by the city's neighborhood diversity and rapid change. A home in Wallingford faces different buyer expectations than one in Columbia City — and zoning changes may mean the property's highest value isn't as a residence at all. David Stein's experience across Seattle's 80+ neighborhoods helps homeowners understand their specific situation rather than relying on citywide averages.",
+      whyLocal: "Seattle's downsizing landscape is complicated by the city's neighborhood diversity and rapid change. A home in Wallingford faces different buyer expectations than one in Columbia City — and zoning changes may mean the property's highest value isn't as a residence at all. Real Property Planning's experience across Seattle's 80+ neighborhoods helps homeowners understand their specific situation rather than relying on citywide averages.",
     },
     "valuation-guidance": {
       intro: "Property values in Seattle can vary by hundreds of thousands of dollars within a few blocks — driven by neighborhood trajectory, view corridors, zoning potential, property type, and condition. Automated tools that rely on citywide averages consistently miss these hyperlocal dynamics. Real Property Planning provides the neighborhood-level, condition-based assessment that Seattle property decisions demand, whether for estate settlement, trust administration, or pre-listing strategy.",
@@ -1211,7 +1211,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Credentialed perspective combining deep Seattle market knowledge with certified appraiser analytical methodology",
         "Property-type versatility: single-family, condo, townhome, duplex, and mixed-use — each requiring different valuation approaches",
       ],
-      whyLocal: "Seattle's market complexity makes automated valuation particularly risky. A mid-century rambler in Ravenna may be valued primarily as a lot in one micro-market and primarily as a home in the next — and the difference can exceed $200,000. David Stein's dual credentials and experience across Seattle's neighborhoods provide the property-specific analysis these high-stakes decisions require.",
+      whyLocal: "Seattle's market complexity makes automated valuation particularly risky. A mid-century rambler in Ravenna may be valued primarily as a lot in one micro-market and primarily as a home in the next — and the difference can exceed $200,000. Real Property Planning's dual credentials and experience across Seattle's neighborhoods provide the property-specific analysis these high-stakes decisions require.",
     },
     "preparing-home-for-sale": {
       intro: "Preparing a home for sale in Seattle varies dramatically by neighborhood, property type, and buyer demographic. A vintage Craftsman in Wallingford needs a different preparation approach than a mid-century rambler in Lake City or a condo in Belltown. Real Property Planning helps Seattle homeowners make preparation decisions based on what buyers in their specific neighborhood actually value — not generic staging advice that ignores the city's market diversity.",
@@ -1230,7 +1230,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Management of Seattle's contractor scheduling and vendor coordination in a market where trades are in high demand",
         "Complete preparation management for out-of-area owners navigating Seattle's fast-moving market remotely",
       ],
-      whyLocal: "Seattle's preparation decisions vary enormously by neighborhood — what works in Laurelhurst doesn't necessarily apply in Georgetown. A $30,000 kitchen update in a $600,000 Rainier Valley home has different return implications than the same investment in a $1.5M Magnolia home. David Stein's neighborhood-level expertise helps Seattle sellers invest preparation dollars where they'll actually affect the outcome.",
+      whyLocal: "Seattle's preparation decisions vary enormously by neighborhood — what works in Laurelhurst doesn't necessarily apply in Georgetown. A $30,000 kitchen update in a $600,000 Rainier Valley home has different return implications than the same investment in a $1.5M Magnolia home. Real Property Planning's neighborhood-level expertise helps Seattle sellers invest preparation dollars where they'll actually affect the outcome.",
     },
     "divorce-related-home-sales": {
       intro: "Divorce-related property sales in Seattle are complicated by the city's market complexity — the marital home's value may be influenced by neighborhood trajectory, development potential, ADU income, or zoning changes that generic valuation approaches miss entirely. Both parties need a broker who can navigate Seattle's diverse neighborhoods with objective, defensible analysis. Real Property Planning provides the credentialed neutrality and neighborhood expertise that Seattle divorce-related sales demand.",
@@ -1249,7 +1249,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Sale coordination that works within legal timelines while navigating Seattle's fast-paced market dynamics",
         "Clear documentation of pricing rationale including neighborhood analysis, comparable selection methodology, and condition assessment",
       ],
-      whyLocal: "Seattle divorce-related valuations are complicated by the city's market diversity — a property in Ballard raises different valuation questions than one in Beacon Hill or West Seattle. Development potential, rental income, ADU capacity, and zoning changes can significantly affect settlement calculations. David Stein provides the versatile, neighborhood-specific analysis that Seattle family law cases require.",
+      whyLocal: "Seattle divorce-related valuations are complicated by the city's market diversity — a property in Ballard raises different valuation questions than one in Beacon Hill or West Seattle. Development potential, rental income, ADU capacity, and zoning changes can significantly affect settlement calculations. Real Property Planning provides the versatile, neighborhood-specific analysis that Seattle family law cases require.",
     },
     "trust-estate-property-sales": {
       intro: "Trust-owned property in Seattle spans the city's full range — from vintage homes in established neighborhoods to condos in dense urban areas to properties with development potential in changing markets. Trustees face fiduciary obligations that demand defensible pricing across this diversity. Real Property Planning provides the neighborhood-level expertise and documented methodology that Seattle trust property sales require, regardless of property type or location within the city.",
@@ -1268,7 +1268,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Regular reporting and documentation for trust accounting and beneficiary communications",
         "End-to-end management across the city for trustees who may be located anywhere in the country",
       ],
-      whyLocal: "Trust property sales in Seattle require versatile expertise — the city's 80+ neighborhoods, diverse property types, and rapidly changing zoning landscape create valuation challenges that demand both local knowledge and analytical rigor. David Stein's dual credentials provide trustees with defensible, neighborhood-specific analysis regardless of where in Seattle the trust property is located.",
+      whyLocal: "Trust property sales in Seattle require versatile expertise — the city's 80+ neighborhoods, diverse property types, and rapidly changing zoning landscape create valuation challenges that demand both local knowledge and analytical rigor. Real Property Planning's dual credentials provide trustees with defensible, neighborhood-specific analysis regardless of where in Seattle the trust property is located.",
     },
 
   },
@@ -1294,7 +1294,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Management of cleanout, preparation, and vendor coordination using Tacoma-based professionals",
         "Full-service estate sale management for executors navigating Tacoma's evolving market",
       ],
-      whyLocal: "Tacoma's real estate market is defined by neighborhood-level variation more than most cities — a property in the Stadium District operates in a fundamentally different market than one in South Tacoma or on Hilltop. Estate properties here face the additional complexity of a city in active transformation, where revitalization can change a neighborhood's pricing dynamics rapidly. David Stein's on-the-ground assessment captures how Tacoma's specific neighborhood context, property condition, and market trajectory affect realistic pricing.",
+      whyLocal: "Tacoma's real estate market is defined by neighborhood-level variation more than most cities — a property in the Stadium District operates in a fundamentally different market than one in South Tacoma or on Hilltop. Estate properties here face the additional complexity of a city in active transformation, where revitalization can change a neighborhood's pricing dynamics rapidly. Real Property Planning's on-the-ground assessment captures how Tacoma's specific neighborhood context, property condition, and market trajectory affect realistic pricing.",
     },
     "senior-transitions": {
       intro: "Tacoma seniors have watched the city transform — from its industrial past to its current identity as a revitalizing urban center with arts districts, waterfront development, and growing neighborhoods. Transitioning from a longtime Tacoma home means selling in a market where neighborhood trajectory matters as much as current condition. Real Property Planning helps Tacoma families navigate this transition with honest pricing, practical coordination, and an understanding of the city's evolving market.",
@@ -1313,7 +1313,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Timeline coordination that accounts for Tacoma's market conditions and the family's care-planning schedule",
         "Referrals to trusted moving and transition professionals in the Tacoma-Pierce County area",
       ],
-      whyLocal: "Tacoma seniors often own homes in neighborhoods that have changed substantially — sometimes in ways that significantly affect value. A North End home may have appreciated dramatically; a Hilltop property may be in the path of revitalization-driven demand; a South Tacoma home may benefit from affordability-seeking buyers. David Stein helps Tacoma families understand how their specific neighborhood's trajectory affects what their home is worth today — not five years ago, and not based on citywide averages.",
+      whyLocal: "Tacoma seniors often own homes in neighborhoods that have changed substantially — sometimes in ways that significantly affect value. A North End home may have appreciated dramatically; a Hilltop property may be in the path of revitalization-driven demand; a South Tacoma home may benefit from affordability-seeking buyers. Real Property Planning helps Tacoma families understand how their specific neighborhood's trajectory affects what their home is worth today — not five years ago, and not based on citywide averages.",
     },
     "executor-support": {
       intro: "Executors managing estate property in Tacoma enter a city where neighborhood context drives pricing more than broad market averages suggest. Tacoma's North End, waterfront, Hilltop, and South Tacoma each present different market dynamics, buyer pools, and preparation requirements. Real Property Planning provides Tacoma executors with neighborhood-specific assessment, defensible pricing, and practical coordination across the city's diverse market.",
@@ -1332,7 +1332,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Regular communication and clear reporting for executors managing from outside the Tacoma area",
         "Full transaction management from assessment through closing, navigating Tacoma's market dynamics and Pierce County procedures",
       ],
-      whyLocal: "Tacoma executors face a market where the gap between neighborhoods is significant and growing — an estate property's value depends heavily on which part of the city it's in and what's happening in that specific neighborhood. David Stein's Tacoma experience helps executors understand how revitalization trends, rental demand, and neighborhood-specific buyer demographics affect their estate property — providing the defensible, location-specific pricing that responsible estate administration requires.",
+      whyLocal: "Tacoma executors face a market where the gap between neighborhoods is significant and growing — an estate property's value depends heavily on which part of the city it's in and what's happening in that specific neighborhood. Real Property Planning's Tacoma experience helps executors understand how revitalization trends, rental demand, and neighborhood-specific buyer demographics affect their estate property — providing the defensible, location-specific pricing that responsible estate administration requires.",
     },
     "attorney-fiduciary-support": {
       intro: "Attorneys and fiduciaries managing property matters in Tacoma need a broker who understands the city's neighborhood-level market dynamics — the distinction between North End established neighborhoods, waterfront properties, revitalizing areas, and working-class communities. Real Property Planning provides Tacoma-area legal professionals with locally grounded assessments, defensible documentation, and professional coordination tailored to Pierce County's urban center.",
@@ -1351,7 +1351,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Clear communication with attorneys, trustees, and beneficiaries who may be located outside the Tacoma area",
         "A reliable Tacoma-Pierce County real estate resource for attorneys with ongoing property-related referral needs",
       ],
-      whyLocal: "Tacoma's property matters require understanding of a city where neighborhood dynamics are evolving rapidly. The North End, Stadium District, Hilltop, waterfront, and South Tacoma each present different pricing environments and buyer expectations — and those dynamics are shifting as the city continues to revitalize. David Stein's Tacoma experience provides attorneys and fiduciaries with the current, neighborhood-specific analysis their cases require.",
+      whyLocal: "Tacoma's property matters require understanding of a city where neighborhood dynamics are evolving rapidly. The North End, Stadium District, Hilltop, waterfront, and South Tacoma each present different pricing environments and buyer expectations — and those dynamics are shifting as the city continues to revitalize. Real Property Planning's Tacoma experience provides attorneys and fiduciaries with the current, neighborhood-specific analysis their cases require.",
     },
 
     "downsizing-services": {
@@ -1371,7 +1371,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Vendor coordination for cleanout, repairs, and presentation appropriate for the specific Tacoma neighborhood's buyer expectations",
         "Patient communication with homeowners navigating an emotional transition in a city where familiar neighborhoods may feel different than they remember",
       ],
-      whyLocal: "Tacoma's downsizing landscape is shaped by the city's rapid revitalization — neighborhoods that were stable and affordable five years ago may have appreciated dramatically, while others present different value dynamics. A North End home faces different buyer expectations than one in South Tacoma or Parkland. David Stein's Tacoma-specific experience helps homeowners understand their property's realistic position in this evolving market.",
+      whyLocal: "Tacoma's downsizing landscape is shaped by the city's rapid revitalization — neighborhoods that were stable and affordable five years ago may have appreciated dramatically, while others present different value dynamics. A North End home faces different buyer expectations than one in South Tacoma or Parkland. Real Property Planning's Tacoma-specific experience helps homeowners understand their property's realistic position in this evolving market.",
     },
     "valuation-guidance": {
       intro: "Property valuation in Tacoma reflects a city in transition — neighborhoods like the Stadium District and Hilltop are revitalizing rapidly, while other areas maintain different pricing dynamics. Automated tools that rely on citywide averages miss the neighborhood-level value shifts that define Tacoma's current market. Real Property Planning provides the on-site, neighborhood-specific assessment that Tacoma property decisions require.",
@@ -1390,7 +1390,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Credentialed perspective combining Tacoma market knowledge with certified appraiser analytical methodology",
         "Evaluation of mixed-use and multi-unit property characteristics common in Tacoma's older neighborhoods",
       ],
-      whyLocal: "Tacoma's property values are being reshaped by revitalization — the Stadium District and North End command premiums that didn't exist a decade ago, while Hilltop and other neighborhoods are in different stages of transition. Automated tools struggle with this rate of change. David Stein's on-site assessment captures the neighborhood-level dynamics that actually drive value in Tacoma today.",
+      whyLocal: "Tacoma's property values are being reshaped by revitalization — the Stadium District and North End command premiums that didn't exist a decade ago, while Hilltop and other neighborhoods are in different stages of transition. Automated tools struggle with this rate of change. Real Property Planning's on-site assessment captures the neighborhood-level dynamics that actually drive value in Tacoma today.",
     },
     "preparing-home-for-sale": {
       intro: "Preparing a home for sale in Tacoma varies significantly by neighborhood — what North End and Stadium District buyers expect differs markedly from buyer expectations in South Tacoma, East Tacoma, or the waterfront areas. Tacoma's diversity of housing stock — Craftsmen, Tudor revivals, mid-century homes, and industrial conversions — means preparation strategy must be calibrated to the specific property and its neighborhood context. Real Property Planning provides this Tacoma-specific preparation guidance.",
@@ -1409,7 +1409,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Character preservation for historic Tacoma homes where buyers value original features alongside updated systems",
         "Complete preparation management for out-of-area owners with regular progress reporting",
       ],
-      whyLocal: "Tacoma's preparation decisions depend on the neighborhood's current buyer profile — a $40,000 renovation in a North End home has different return implications than the same investment in South Tacoma. David Stein's Tacoma experience helps sellers allocate preparation budgets based on what actually moves the needle in their specific neighborhood and price range.",
+      whyLocal: "Tacoma's preparation decisions depend on the neighborhood's current buyer profile — a $40,000 renovation in a North End home has different return implications than the same investment in South Tacoma. Real Property Planning's Tacoma experience helps sellers allocate preparation budgets based on what actually moves the needle in their specific neighborhood and price range.",
     },
     "divorce-related-home-sales": {
       intro: "Divorce-related property sales in Tacoma are complicated by the city's rapid neighborhood-level value changes — a property's worth may be significantly affected by revitalization trends, rental income potential, or development interest that standard approaches don't capture. Both parties need a broker who understands Tacoma's evolving market with enough depth to provide defensible, neighborhood-specific valuation. Real Property Planning provides this expertise with professional neutrality.",
@@ -1428,7 +1428,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Sale coordination that works within legal timelines while navigating Tacoma's neighborhood-specific buyer pools",
         "Clear documentation of pricing rationale including neighborhood trajectory analysis and comparable selection methodology",
       ],
-      whyLocal: "Tacoma divorce-related valuations are complicated by the city's rapid evolution — a North End property may have appreciated 40% in five years while a South Tacoma home followed a different trajectory. These neighborhood-level dynamics affect settlement calculations significantly. David Stein provides the current, Tacoma-specific analysis that family law cases in Pierce County require.",
+      whyLocal: "Tacoma divorce-related valuations are complicated by the city's rapid evolution — a North End property may have appreciated 40% in five years while a South Tacoma home followed a different trajectory. These neighborhood-level dynamics affect settlement calculations significantly. Real Property Planning provides the current, Tacoma-specific analysis that family law cases in Pierce County require.",
     },
     "trust-estate-property-sales": {
       intro: "Trust-owned property in Tacoma spans the city's full range — from established North End homes to properties in revitalizing neighborhoods to multi-unit or mixed-use assets in the city's diverse housing stock. Trustees face fiduciary obligations that demand defensible pricing in a market where neighborhood-level dynamics are shifting rapidly. Real Property Planning provides the Tacoma-specific expertise and documented methodology that trust property sales in this evolving market require.",
@@ -1447,7 +1447,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Regular reporting and documentation for trust accounting and beneficiary communications",
         "Complete sale management for trustees located outside the Tacoma-Pierce County area",
       ],
-      whyLocal: "Trust property sales in Tacoma require understanding of a market in transition. The fiduciary standard demands pricing that reflects current neighborhood dynamics — not historical patterns that may no longer apply. David Stein's Tacoma experience and analytical credentials provide trustees with the defensible, neighborhood-current documentation that Pierce County trust administration requires.",
+      whyLocal: "Trust property sales in Tacoma require understanding of a market in transition. The fiduciary standard demands pricing that reflects current neighborhood dynamics — not historical patterns that may no longer apply. Real Property Planning's Tacoma experience and analytical credentials provide trustees with the defensible, neighborhood-current documentation that Pierce County trust administration requires.",
     },
 
   },
@@ -1468,7 +1468,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "An estate with a Snohomish property that includes shop buildings, fenced pasture, or other rural features that affect both value and buyer pool",
         "A family managing probate from out of state for a longtime Snohomish home that hasn't been updated in decades and contains a lifetime of belongings",
       ],
-      whyLocal: "Snohomish properties often include features — acreage, barns, shop buildings, historic construction, river access — that don't appear in standard suburban comparables. The difference between a well-positioned Snohomish estate sale and a poorly priced one often comes down to understanding which rural and historic features add value in this specific market. David Stein's appraisal background and experience with properties across the Snohomish Valley provides the grounded assessment these situations require.",
+      whyLocal: "Snohomish properties often include features — acreage, barns, shop buildings, historic construction, river access — that don't appear in standard suburban comparables. The difference between a well-positioned Snohomish estate sale and a poorly priced one often comes down to understanding which rural and historic features add value in this specific market. Real Property Planning's appraisal background and experience with properties across the Snohomish Valley provides the grounded assessment these situations require.",
     },
     "senior-transitions": {
       intro: "Seniors in Snohomish often live in homes they've owned for decades — properties with gardens, workshops, and the kind of accumulated living that comes with longtime small-town homeownership. Transitioning from a Snohomish home involves practical challenges around property preparation, realistic pricing for homes that may not match modern buyer expectations, and the emotional weight of leaving a community where relationships run deep.",
@@ -1488,7 +1488,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Multiple co-executors with different opinions about a Snohomish property's value — needing objective, defensible pricing grounded in local market data",
         "An executor responsible for a Snohomish property where the personal property may have significant value requiring separate handling",
       ],
-      whyLocal: "Snohomish estates frequently include property types — acreage with outbuildings, historic homes, properties with agricultural features — where the executor's biggest risk is mispricing due to unfamiliarity with how rural and small-town features affect value. David Stein's appraisal credentials and experience with Snohomish Valley properties provide the defensible foundation executors need.",
+      whyLocal: "Snohomish estates frequently include property types — acreage with outbuildings, historic homes, properties with agricultural features — where the executor's biggest risk is mispricing due to unfamiliarity with how rural and small-town features affect value. Real Property Planning's appraisal credentials and experience with Snohomish Valley properties provide the defensible foundation executors need.",
     },
     "attorney-fiduciary-support": {
       intro: "Attorneys and fiduciaries handling Snohomish property matters need a real estate resource who understands the community's distinctive inventory — historic homes, acreage parcels, properties with outbuildings and rural features that complicate standard valuation. Real Property Planning provides the documentation-grade analysis these situations require.",
@@ -1508,7 +1508,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A homeowner whose Snohomish property has extensive gardens and outdoor features that represent personal investment but may not translate to market premium",
         "A family helping a relative downsize from a rural Snohomish property where the cleanout involves workshop equipment, outdoor items, and decades of accumulated belongings",
       ],
-      whyLocal: "Snohomish downsizers often overestimate the market value of features they personally invested in — workshops, gardens, outbuildings, fencing — while underestimating the appeal of the property's location and small-town character. David Stein's local knowledge helps set realistic expectations about what Snohomish buyers actually pay for.",
+      whyLocal: "Snohomish downsizers often overestimate the market value of features they personally invested in — workshops, gardens, outbuildings, fencing — while underestimating the appeal of the property's location and small-town character. Real Property Planning's local knowledge helps set realistic expectations about what Snohomish buyers actually pay for.",
     },
     "valuation-guidance": {
       intro: "Snohomish properties frequently include features — acreage, outbuildings, historic construction, river proximity — that automated valuation tools handle poorly. Real Property Planning provides the property-specific assessment needed when standard comparables don't capture what makes a Snohomish property unique.",
@@ -1679,7 +1679,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A family deciding whether a Lynnwood property near the light rail should be sold to a developer or a traditional buyer",
         "A senior downsizing from a larger Lynnwood lot to a newer condo or townhome closer to transit amenities",
       ],
-      whyLocal: "Lynnwood seniors who have lived in their homes for 30 or 40 years are watching their neighborhoods transform around them. Light rail, new apartment construction, and shifting commercial corridors all affect property values — sometimes dramatically. David's on-the-ground assessment helps families understand whether their specific property benefits from these changes or whether a more traditional sale approach is appropriate.",
+      whyLocal: "Lynnwood seniors who have lived in their homes for 30 or 40 years are watching their neighborhoods transform around them. Light rail, new apartment construction, and shifting commercial corridors all affect property values — sometimes dramatically. our team's on-the-ground assessment helps families understand whether their specific property benefits from these changes or whether a more traditional sale approach is appropriate.",
     },
     "downsizing-services": {
       intro: "Lynnwood's transformation from a traditional suburb into a light rail-connected urban hub creates interesting downsizing possibilities — newer condos near transit, more manageable townhomes, or a move to a quieter community. Real Property Planning helps Lynnwood homeowners evaluate their property in today's shifting market and make informed decisions about timing, preparation, and pricing.",
@@ -1689,7 +1689,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A couple wanting to move from a high-maintenance Lynnwood lot to a newer, low-maintenance townhome or condo in the area",
         "A homeowner near the Highway 99 corridor weighing developer interest against traditional sale options",
       ],
-      whyLocal: "Lynnwood's downsizing market is being reshaped by light rail and new construction. Homeowners who have been in their properties for decades may find that their home's highest value comes from redevelopment potential rather than traditional residential sale. David helps clients understand which scenario applies to their specific property and neighborhood within Lynnwood's evolving landscape.",
+      whyLocal: "Lynnwood's downsizing market is being reshaped by light rail and new construction. Homeowners who have been in their properties for decades may find that their home's highest value comes from redevelopment potential rather than traditional residential sale. Our team helps clients understand which scenario applies to their specific property and neighborhood within Lynnwood's evolving landscape.",
     },
     "executor-support": {
       intro: "Serving as an executor for a Lynnwood estate property means navigating a market in transition. Light rail, new zoning, and shifting buyer demographics can all affect how an estate property should be priced and positioned. Real Property Planning provides executors with the practical, locally informed guidance needed to manage a Lynnwood estate sale with confidence.",
@@ -1699,7 +1699,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Co-executors who disagree on whether to invest in preparing a Lynnwood property or sell it as-is",
         "An out-of-state executor who needs a local partner to assess property condition and coordinate sale logistics in Lynnwood",
       ],
-      whyLocal: "Executors handling Lynnwood property face a market where values are shifting rapidly in some neighborhoods while remaining stable in others. A property near the City Center station area presents a very different opportunity than one in Martha Lake or north Lynnwood. David's dual credentials help executors understand these distinctions and make decisions that protect the estate's interests.",
+      whyLocal: "Executors handling Lynnwood property face a market where values are shifting rapidly in some neighborhoods while remaining stable in others. A property near the City Center station area presents a very different opportunity than one in Martha Lake or north Lynnwood. our team's dual credentials help executors understand these distinctions and make decisions that protect the estate's interests.",
     },
     "attorney-fiduciary-support": {
       intro: "Attorneys and fiduciaries working with Lynnwood property need a real estate partner who understands how the city's ongoing transformation affects valuation, sale timelines, and buyer interest. Real Property Planning provides the reliable communication and market-specific insight that legal professionals need when coordinating property matters in a changing market.",
@@ -1709,7 +1709,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A trustee overseeing a trust-owned Lynnwood property where the market has shifted significantly since the trust was created",
         "A guardian managing property in a Lynnwood neighborhood where redevelopment interest complicates traditional sale assumptions",
       ],
-      whyLocal: "Lynnwood's legal professionals are encountering property situations shaped by the city's transformation — new zoning overlays, transit-oriented development potential, and shifting neighborhood demographics. David provides the kind of current, locally grounded market insight that helps attorneys and fiduciaries make well-informed recommendations in a market that is actively evolving.",
+      whyLocal: "Lynnwood's legal professionals are encountering property situations shaped by the city's transformation — new zoning overlays, transit-oriented development potential, and shifting neighborhood demographics. Our team provides the kind of current, locally grounded market insight that helps attorneys and fiduciaries make well-informed recommendations in a market that is actively evolving.",
     },
     "valuation-guidance": {
       intro: "Property valuation in Lynnwood requires understanding how the city's light rail expansion, new construction, and evolving zoning are reshaping values neighborhood by neighborhood. Automated tools often lag behind these rapid changes. Real Property Planning provides condition-based, locally informed valuation guidance that reflects Lynnwood's current market reality.",
@@ -1719,7 +1719,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A family dispute over the value of an inherited Lynnwood home where automated estimates conflict with neighborhood reality",
         "A divorce proceeding involving a Lynnwood property where transit-oriented development potential complicates valuation",
       ],
-      whyLocal: "Lynnwood's market is moving faster than most automated tools can track. A property near the City Center station may carry development premium that a standard residential comparison misses entirely. Meanwhile, homes in more established neighborhoods like Alderwood or Martha Lake still trade on traditional residential factors. David's on-site evaluation accounts for these diverging dynamics within the same city.",
+      whyLocal: "Lynnwood's market is moving faster than most automated tools can track. A property near the City Center station may carry development premium that a standard residential comparison misses entirely. Meanwhile, homes in more established neighborhoods like Alderwood or Martha Lake still trade on traditional residential factors. our team's on-site evaluation accounts for these diverging dynamics within the same city.",
     },
     "preparing-home-for-sale": {
       intro: "Preparing a Lynnwood home for sale — especially an estate or longtime family property — requires understanding which improvements matter in today's shifting market. A mid-century rambler near the light rail corridor may need different preparation than a similar home in a quieter Lynnwood neighborhood. Real Property Planning helps families make practical preparation decisions based on the property's specific location and realistic buyer expectations.",
@@ -1729,7 +1729,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A Lynnwood home where the question is whether to invest in preparation or sell as-is to take advantage of current market timing",
         "A property near the light rail where buyer expectations may lean toward developer-ready condition rather than traditional move-in ready",
       ],
-      whyLocal: "In Lynnwood's evolving market, preparation strategy depends heavily on where the property sits within the city's transformation. Homes near light rail stations may benefit from minimal preparation if the primary buyer pool is developers, while properties in established residential neighborhoods still need traditional staging and updates to attract homebuyers. David helps families avoid both over-investing and under-preparing.",
+      whyLocal: "In Lynnwood's evolving market, preparation strategy depends heavily on where the property sits within the city's transformation. Homes near light rail stations may benefit from minimal preparation if the primary buyer pool is developers, while properties in established residential neighborhoods still need traditional staging and updates to attract homebuyers. Our team helps families avoid both over-investing and under-preparing.",
     },
     "divorce-related-home-sales": {
       intro: "Selling a shared home during a divorce in Lynnwood requires objectivity, market accuracy, and an understanding of how the city's shifting dynamics affect property value. Real Property Planning provides the neutral, experienced guidance that both parties and their attorneys need to move forward with clarity in Lynnwood's evolving market.",
@@ -1739,7 +1739,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A mediated settlement requiring an accurate, defensible property valuation in a Lynnwood neighborhood with active development",
         "A divorce-related sale where one party wants to sell quickly and the other believes waiting will increase value due to ongoing development",
       ],
-      whyLocal: "Divorce-related sales in Lynnwood often involve disagreements about value that are amplified by the city's rapid transformation. One party may believe the home has development potential while the other sees it as a standard residential property. David's appraisal credentials provide the objective, defensible basis both attorneys and their clients need for productive negotiations.",
+      whyLocal: "Divorce-related sales in Lynnwood often involve disagreements about value that are amplified by the city's rapid transformation. One party may believe the home has development potential while the other sees it as a standard residential property. our team's appraisal credentials provide the objective, defensible basis both attorneys and their clients need for productive negotiations.",
     },
     "trust-estate-property-sales": {
       intro: "Trust-owned property in Lynnwood may have been placed in trust when the city's market looked very different. As light rail reshapes neighborhoods and new construction changes buyer expectations, trustees need current, locally informed guidance to fulfill their fiduciary obligations. Real Property Planning helps trustees navigate Lynnwood's evolving market with clarity and appropriate documentation.",
@@ -1749,7 +1749,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A trustee deciding whether to sell a Lynnwood property now during the market transformation or hold for further appreciation",
         "A beneficiary questioning the value of a trust-owned Lynnwood home based on automated estimates that may not reflect transit-area dynamics",
       ],
-      whyLocal: "Trust properties in Lynnwood present a unique challenge: the market has changed so rapidly that the assumptions built into many trust documents may no longer reflect reality. David's on-the-ground assessment helps trustees understand how Lynnwood's transformation affects their specific property and develop a sale strategy that meets fiduciary standards in a changing environment.",
+      whyLocal: "Trust properties in Lynnwood present a unique challenge: the market has changed so rapidly that the assumptions built into many trust documents may no longer reflect reality. our team's on-the-ground assessment helps trustees understand how Lynnwood's transformation affects their specific property and develop a sale strategy that meets fiduciary standards in a changing environment.",
     },
   },
 
@@ -1770,7 +1770,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "An estate home along the Sammamish River corridor where flood plain considerations and lot characteristics require specialized understanding",
         "A probate sale involving a Woodinville property with unique features — wine storage, workshop buildings, or hobby farm infrastructure",
       ],
-      whyLocal: "Woodinville's market doesn't behave like a standard suburban community. Properties with acreage, equestrian facilities, or wine district proximity attract a niche buyer pool with specific expectations. Estate properties here often include features — outbuildings, rural infrastructure, specialty landscaping — that automated tools completely miss. David's appraisal background is especially valuable for Woodinville properties where the land, improvements, and location all contribute to value in ways that require on-site assessment.",
+      whyLocal: "Woodinville's market doesn't behave like a standard suburban community. Properties with acreage, equestrian facilities, or wine district proximity attract a niche buyer pool with specific expectations. Estate properties here often include features — outbuildings, rural infrastructure, specialty landscaping — that automated tools completely miss. our team's appraisal background is especially valuable for Woodinville properties where the land, improvements, and location all contribute to value in ways that require on-site assessment.",
     },
     "senior-transitions": {
       intro: "Many Woodinville seniors chose the community for its space, privacy, and rural character — a lifestyle that can become harder to maintain as needs change. When it's time to transition from a large Woodinville property to a more manageable living situation, the sale involves understanding how the property's unique features — acreage, outbuildings, mature landscaping — affect value and buyer appeal.",
@@ -1780,7 +1780,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A longtime Woodinville homeowner whose property requires more maintenance than they can manage and who needs guidance on whether to simplify the lot before selling",
         "A family balancing a parent's preference to stay in Woodinville with the practical need for closer proximity to care resources",
       ],
-      whyLocal: "Woodinville seniors who are transitioning often face a challenge that suburban downsizers don't: their property's value may be deeply tied to features — acreage, outbuildings, equestrian facilities — that require specialized marketing and a buyer pool that's smaller and more specific. David helps families understand how to position these unique Woodinville properties effectively rather than treating them like standard residential listings.",
+      whyLocal: "Woodinville seniors who are transitioning often face a challenge that suburban downsizers don't: their property's value may be deeply tied to features — acreage, outbuildings, equestrian facilities — that require specialized marketing and a buyer pool that's smaller and more specific. Our team helps families understand how to position these unique Woodinville properties effectively rather than treating them like standard residential listings.",
     },
     "downsizing-services": {
       intro: "Downsizing from a larger Woodinville property means understanding what makes the home unique and how to position those features for the right buyer. Whether the property includes acreage, wine country proximity, or rural character, Real Property Planning provides practical guidance on preparing and pricing a Woodinville home so the downsizing process is grounded in realistic market expectations.",
@@ -1790,7 +1790,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A couple leaving a rural-adjacent Woodinville home for a townhome or condo closer to urban amenities",
         "A homeowner whose property has unique features — wine storage, equestrian facilities — that require specialized sale strategy",
       ],
-      whyLocal: "Downsizing from a Woodinville property with rural character, acreage, or specialty features requires a different approach than downsizing from a standard suburban home. The buyer pool is more specific, preparation priorities are different, and pricing accuracy requires understanding how rural-adjacent features contribute to — or complicate — market value. David's dual credentials help Woodinville homeowners navigate these nuances.",
+      whyLocal: "Downsizing from a Woodinville property with rural character, acreage, or specialty features requires a different approach than downsizing from a standard suburban home. The buyer pool is more specific, preparation priorities are different, and pricing accuracy requires understanding how rural-adjacent features contribute to — or complicate — market value. our team's dual credentials help Woodinville homeowners navigate these nuances.",
     },
     "executor-support": {
       intro: "Executors managing a Woodinville estate property often inherit unique challenges — larger lots with outbuildings, equestrian infrastructure, mature landscaping, or wine country proximity that affect both valuation and sale logistics. Real Property Planning provides the grounded, locally informed support executors need to manage these distinctive properties responsibly.",
@@ -1800,7 +1800,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "An out-of-state executor who needs a local partner to assess a Woodinville property with unique rural-adjacent features",
         "Co-executors navigating decisions about whether to sell a Woodinville estate property as-is or invest in preparing the land and structures for market",
       ],
-      whyLocal: "Estate properties in Woodinville frequently include features that make standard probate sale approaches insufficient. Acreage, outbuildings, equestrian facilities, and proximity to the wine district all affect value and marketability in ways that require on-site, hands-on evaluation. David's appraisal background provides executors with the property-specific insight they need to make confident decisions about unique Woodinville estates.",
+      whyLocal: "Estate properties in Woodinville frequently include features that make standard probate sale approaches insufficient. Acreage, outbuildings, equestrian facilities, and proximity to the wine district all affect value and marketability in ways that require on-site, hands-on evaluation. our team's appraisal background provides executors with the property-specific insight they need to make confident decisions about unique Woodinville estates.",
     },
     "attorney-fiduciary-support": {
       intro: "Attorneys and fiduciaries working with Woodinville property need a real estate partner who understands rural-adjacent valuation, acreage properties, and the wine country market's unique dynamics. Real Property Planning provides the reliable, well-documented guidance legal professionals need when property characteristics extend well beyond standard residential norms.",
@@ -1810,7 +1810,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A trustee overseeing a trust-owned Woodinville property where rural features and niche buyer demand make standard market comparisons unreliable",
         "A family law attorney dealing with a divorce involving a Woodinville property where equestrian facilities or hobby farm features affect the settlement",
       ],
-      whyLocal: "Woodinville properties often include features — acreage, outbuildings, specialty improvements — that create valuation complexity for legal proceedings. Standard residential comparisons may miss the value (or limitation) of these features entirely. David's appraisal credentials provide attorneys and fiduciaries with the kind of defensible, property-specific analysis needed for estate settlements, trust administration, and family law proceedings involving non-standard properties.",
+      whyLocal: "Woodinville properties often include features — acreage, outbuildings, specialty improvements — that create valuation complexity for legal proceedings. Standard residential comparisons may miss the value (or limitation) of these features entirely. our team's appraisal credentials provide attorneys and fiduciaries with the kind of defensible, property-specific analysis needed for estate settlements, trust administration, and family law proceedings involving non-standard properties.",
     },
     "valuation-guidance": {
       intro: "Valuing property in Woodinville requires understanding how acreage, outbuildings, wine country proximity, and rural character affect market value. Standard automated tools frequently miss these features or misapply suburban comparables to properties that behave more like rural or estate-style real estate. Real Property Planning provides the hands-on, property-specific valuation insight that Woodinville's unique market demands.",
@@ -1820,7 +1820,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A family disagreement over the value of an inherited Woodinville property where the land and improvements create complex value dynamics",
         "A financial advisor helping a client understand the realistic market value of a Woodinville property before making retirement decisions",
       ],
-      whyLocal: "Woodinville sits at the intersection of suburban, rural, and wine country real estate — and each category carries different valuation dynamics. A property with a productive vineyard is valued differently from one with equestrian facilities, which is valued differently from a standard suburban lot near the Sammamish River. David's on-site assessment accounts for how Woodinville's specific property characteristics interact with actual buyer demand.",
+      whyLocal: "Woodinville sits at the intersection of suburban, rural, and wine country real estate — and each category carries different valuation dynamics. A property with a productive vineyard is valued differently from one with equestrian facilities, which is valued differently from a standard suburban lot near the Sammamish River. our team's on-site assessment accounts for how Woodinville's specific property characteristics interact with actual buyer demand.",
     },
     "preparing-home-for-sale": {
       intro: "Preparing a Woodinville home for sale — especially one with acreage, outbuildings, or rural features — requires a different approach than preparing a standard suburban listing. Real Property Planning helps Woodinville property owners focus preparation efforts on the improvements that matter most for their specific buyer pool and avoid spending money on changes that won't affect value.",
@@ -1830,7 +1830,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A Woodinville home near the wine district where staging and presentation need to match the expectations of lifestyle-oriented buyers",
         "A rural-adjacent property where the question is whether to invest in accessory structure repairs or sell as-is to a buyer who plans their own improvements",
       ],
-      whyLocal: "Preparation for a Woodinville property often extends beyond the house itself — fencing, outbuildings, land presentation, and accessory structures all contribute to buyer perception. Over-improving features that a specific buyer pool won't pay for wastes money, while under-preparing can cause buyers to discount the property unfairly. David's experience with Woodinville's niche market helps sellers invest preparation dollars where they deliver the most return.",
+      whyLocal: "Preparation for a Woodinville property often extends beyond the house itself — fencing, outbuildings, land presentation, and accessory structures all contribute to buyer perception. Over-improving features that a specific buyer pool won't pay for wastes money, while under-preparing can cause buyers to discount the property unfairly. our team's experience with Woodinville's niche market helps sellers invest preparation dollars where they deliver the most return.",
     },
     "divorce-related-home-sales": {
       intro: "Divorce-related property sales in Woodinville can be particularly complex when the marital home includes acreage, outbuildings, or specialty features that make standard valuation approaches unreliable. Real Property Planning provides the objective, property-specific guidance both parties and their attorneys need to reach fair, well-supported conclusions about value.",
@@ -1840,7 +1840,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A mediated settlement involving a Woodinville property with unique characteristics that both parties value differently",
         "A divorce-related sale where one party built custom improvements — workshop, barn, gardens — and believes they add more value than the market may support",
       ],
-      whyLocal: "Divorce settlements involving Woodinville property are often complicated by the home's unique features. One party may have invested heavily in equestrian facilities, a workshop, or landscaping that they value sentimentally at a different level than the market. David's appraisal credentials provide the objective, defensible valuation that helps attorneys and mediators cut through subjective disagreements and reach fair outcomes.",
+      whyLocal: "Divorce settlements involving Woodinville property are often complicated by the home's unique features. One party may have invested heavily in equestrian facilities, a workshop, or landscaping that they value sentimentally at a different level than the market. our team's appraisal credentials provide the objective, defensible valuation that helps attorneys and mediators cut through subjective disagreements and reach fair outcomes.",
     },
     "trust-estate-property-sales": {
       intro: "Trust-owned property in Woodinville often reflects the original owner's lifestyle choices — larger lots, equestrian facilities, gardens, or wine country character — that create unique sale dynamics. Trustees need a real estate partner who understands how these features affect value and who can manage the sale with appropriate fiduciary care and documentation.",
@@ -1850,7 +1850,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A trustee deciding how to handle a Woodinville property with equestrian or hobby farm features that limit the buyer pool",
         "A beneficiary questioning the value of a trust-owned Woodinville property based on online estimates that don't account for rural features",
       ],
-      whyLocal: "Trust properties in Woodinville frequently include features that were meaningful to the original owner — equestrian facilities, gardens, workshops, wine storage — that may appeal to a niche buyer pool. Trustees need to understand which features add market value and which are personal improvements that buyers may not pay for. David's property-specific assessment provides the clarity trustees need to sell responsibly.",
+      whyLocal: "Trust properties in Woodinville frequently include features that were meaningful to the original owner — equestrian facilities, gardens, workshops, wine storage — that may appeal to a niche buyer pool. Trustees need to understand which features add market value and which are personal improvements that buyers may not pay for. our team's property-specific assessment provides the clarity trustees need to sell responsibly.",
     },
   },
 
@@ -1880,7 +1880,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Clear, regular communication with multiple heirs or parties managing the process from different locations",
         "Full transaction management from initial assessment through closing in Kirkland's competitive market",
       ],
-      whyLocal: "Kirkland's market is shaped by its waterfront identity, walkable downtown, and the ongoing transformation of Totem Lake into a mixed-use district. A home in Moss Bay faces entirely different buyer expectations than one on Finn Hill or near the Cross Kirkland Corridor. Automated estimates miss these neighborhood-level distinctions — especially for older estate properties competing against the heavily updated homes that dominate Kirkland's most desirable blocks. David Stein's on-site assessment provides the granular pricing insight that Kirkland estate situations require.",
+      whyLocal: "Kirkland's market is shaped by its waterfront identity, walkable downtown, and the ongoing transformation of Totem Lake into a mixed-use district. A home in Moss Bay faces entirely different buyer expectations than one on Finn Hill or near the Cross Kirkland Corridor. Automated estimates miss these neighborhood-level distinctions — especially for older estate properties competing against the heavily updated homes that dominate Kirkland's most desirable blocks. Real Property Planning's on-site assessment provides the granular pricing insight that Kirkland estate situations require.",
     },
     "senior-transitions": {
       intro: "Many Kirkland seniors have lived in their homes for decades — watching the city evolve from a quiet lakeside town into one of the Eastside's most desirable communities. When it's time to transition from a longtime Kirkland home, the process involves both significant financial considerations and deeply personal connections to the neighborhood. Real Property Planning helps Kirkland families navigate senior transitions with patient, experienced guidance that respects the family's pace while ensuring the property is positioned accurately in Kirkland's competitive market.",
@@ -1899,7 +1899,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Vendor coordination for cleanout, repairs, and staging appropriate for Kirkland's market expectations",
         "Full-service management so the family can focus on their parent's wellbeing rather than transaction logistics",
       ],
-      whyLocal: "Kirkland seniors often own homes in locations that have appreciated significantly — but the home itself may not reflect what today's buyers expect in terms of condition and finish. The gap between emotional value and market reality is especially pronounced in Kirkland, where walkability, waterfront proximity, and neighborhood charm drive premiums that only apply when the property is presented effectively. David's appraisal background helps families understand where their home actually stands and what preparation makes financial sense.",
+      whyLocal: "Kirkland seniors often own homes in locations that have appreciated significantly — but the home itself may not reflect what today's buyers expect in terms of condition and finish. The gap between emotional value and market reality is especially pronounced in Kirkland, where walkability, waterfront proximity, and neighborhood charm drive premiums that only apply when the property is presented effectively. our team's appraisal background helps families understand where their home actually stands and what preparation makes financial sense.",
     },
     "downsizing-services": {
       intro: "Downsizing from a longtime Kirkland home means navigating a market where location carries significant premiums and buyer expectations vary dramatically by neighborhood. Whether moving from a larger Juanita home to a Kirkland condo, from Finn Hill to a smaller waterfront-area property, or leaving the community altogether, the process benefits from someone who understands how Kirkland's distinct submarkets affect both the sale of the current home and realistic expectations for the next step.",
@@ -1909,7 +1909,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A retiree in a Moss Bay home who wants to sell and relocate closer to family — needing accurate pricing for a property in one of Kirkland's most competitive micro-markets",
         "A family helping a parent transition from a Totem Lake area home to a more manageable living situation while the neighborhood undergoes redevelopment",
       ],
-      whyLocal: "Downsizing decisions in Kirkland are complicated by the city's wide range of housing options and the significant price differences between neighborhoods. A Finn Hill home with views may sell at a premium, but replacing that square footage in waterfront Kirkland requires understanding exactly how the proceeds translate. David provides the comparative market analysis that helps Kirkland downsizers make realistic plans rather than assumptions.",
+      whyLocal: "Downsizing decisions in Kirkland are complicated by the city's wide range of housing options and the significant price differences between neighborhoods. A Finn Hill home with views may sell at a premium, but replacing that square footage in waterfront Kirkland requires understanding exactly how the proceeds translate. Our team provides the comparative market analysis that helps Kirkland downsizers make realistic plans rather than assumptions.",
     },
     "executor-support": {
       intro: "Executors managing estate property in Kirkland face a market where the city's waterfront charm, walkable downtown, and strong school districts drive demand — but where property condition and neighborhood location create wide pricing variations. Whether the estate property is a midcentury home in Houghton, a split-level in Juanita, or a condo near downtown Kirkland, executors need locally grounded guidance to meet their fiduciary responsibilities while navigating the city's competitive market.",
@@ -1928,7 +1928,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Regular communication and status updates for executors managing remotely",
         "End-to-end transaction management from initial assessment through closing and distribution coordination",
       ],
-      whyLocal: "Kirkland executors face a market where mispricing carries real consequences — overprice and the property sits while the estate accumulates carrying costs; underprice and beneficiaries question the executor's judgment. With Kirkland's wide range of neighborhood values and the transformation happening around Totem Lake, accurate pricing requires on-the-ground assessment rather than automated tools. David's dual credentials provide the defensible analysis that Kirkland estate situations demand.",
+      whyLocal: "Kirkland executors face a market where mispricing carries real consequences — overprice and the property sits while the estate accumulates carrying costs; underprice and beneficiaries question the executor's judgment. With Kirkland's wide range of neighborhood values and the transformation happening around Totem Lake, accurate pricing requires on-the-ground assessment rather than automated tools. our team's dual credentials provide the defensible analysis that Kirkland estate situations demand.",
     },
     "attorney-fiduciary-support": {
       intro: "Attorneys and fiduciaries managing property matters in Kirkland need a real estate partner who understands the city's waterfront-driven market premiums, the significant pricing variation between neighborhoods, and the documentation standards that legal proceedings require. Real Property Planning works with Kirkland-area legal professionals as a responsive, credentialed resource for estate, trust, probate, divorce, and guardianship property matters across the city's diverse submarkets.",
@@ -1947,7 +1947,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Coordination across legal, financial, and family stakeholders with clear, professional reporting",
         "A consistent, locally expert point of contact for ongoing property-related referrals in Kirkland",
       ],
-      whyLocal: "Kirkland's legal professionals deal with property matters where the city's waterfront identity and walkable charm create expectations that may not align with specific property conditions. A home two blocks from the lake in Houghton and one on a busy Juanita arterial represent dramatically different values — yet both carry the 'Kirkland' address. David provides the neighborhood-granular analysis that attorneys and fiduciaries need for defensible opinions in a market where location within the city matters enormously.",
+      whyLocal: "Kirkland's legal professionals deal with property matters where the city's waterfront identity and walkable charm create expectations that may not align with specific property conditions. A home two blocks from the lake in Houghton and one on a busy Juanita arterial represent dramatically different values — yet both carry the 'Kirkland' address. Our team provides the neighborhood-granular analysis that attorneys and fiduciaries need for defensible opinions in a market where location within the city matters enormously.",
     },
     "valuation-guidance": {
       intro: "Kirkland's real estate market presents valuation challenges that reflect the city's layered geography — waterfront blocks in Moss Bay, hillside view properties on Finn Hill, family neighborhoods in Juanita, and the rapidly evolving Totem Lake corridor. When accurate property valuation matters for estate planning, divorce proceedings, trust administration, or a pending sale, the wide range of Kirkland's submarkets makes generic approaches unreliable. Real Property Planning provides the property-specific valuation insight that Kirkland situations require.",
@@ -1957,7 +1957,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A trustee needing documented valuation for a trust-owned Kirkland property where recent nearby sales may not reflect the subject property's actual condition and features",
         "Heirs questioning an automated estimate for an inherited Kirkland home that doesn't account for view corridors, lot configuration, or deferred maintenance",
       ],
-      whyLocal: "Kirkland's valuation landscape is defined by micro-market premiums that automated tools consistently miss. A Houghton home with filtered lake views may be worth significantly more than a similar home two blocks inland — but only if condition meets buyer expectations. David's certified appraisal credentials and hands-on broker experience provide the analytically grounded, property-specific valuation that Kirkland's layered market demands.",
+      whyLocal: "Kirkland's valuation landscape is defined by micro-market premiums that automated tools consistently miss. A Houghton home with filtered lake views may be worth significantly more than a similar home two blocks inland — but only if condition meets buyer expectations. our team's certified appraisal credentials and hands-on broker experience provide the analytically grounded, property-specific valuation that Kirkland's layered market demands.",
     },
     "preparing-home-for-sale": {
       intro: "Preparing a Kirkland home for sale requires understanding what the city's buyers expect — and those expectations vary significantly by neighborhood. A waterfront-area home in Moss Bay faces different preparation standards than a family home in Juanita or a property near the Totem Lake redevelopment. Real Property Planning helps Kirkland sellers identify which improvements drive return, which can be skipped, and how to present a property that competes effectively in the city's condition-sensitive market.",
@@ -1967,7 +1967,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "An estate property in Juanita that needs cleanout, carpet replacement, and paint to compete with the updated homes that dominate neighborhood listings",
         "A Totem Lake area home where the owner is unsure whether to invest in updates or price for the growing buyer segment interested in renovation opportunities",
       ],
-      whyLocal: "Kirkland buyers are condition-conscious — especially in the waterfront-adjacent and downtown-proximate neighborhoods where premiums are highest. Over-improving a Totem Lake property may not yield the same return as targeted updates in Moss Bay. David's experience with Kirkland's neighborhood-specific buyer expectations helps sellers invest preparation dollars where they matter most, avoiding both under-preparation and over-investment.",
+      whyLocal: "Kirkland buyers are condition-conscious — especially in the waterfront-adjacent and downtown-proximate neighborhoods where premiums are highest. Over-improving a Totem Lake property may not yield the same return as targeted updates in Moss Bay. our team's experience with Kirkland's neighborhood-specific buyer expectations helps sellers invest preparation dollars where they matter most, avoiding both under-preparation and over-investment.",
     },
     "divorce-related-home-sales": {
       intro: "Divorce-related property sales in Kirkland carry the added complexity of a market where neighborhood location creates dramatic value differences — and where both parties may have very different perceptions of what their home is worth based on Kirkland's reputation versus actual property-specific factors. Real Property Planning provides the objective, defensible pricing that divorce situations in Kirkland require, working constructively with both parties and their attorneys.",
@@ -1977,7 +1977,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A mediated divorce involving a Finn Hill home where one party wants to retain the property — needing accurate buyout valuation that accounts for the view premium and deferred maintenance",
         "A contentious divorce where the Kirkland home is the primary asset and both parties need a credentialed broker who can provide court-ready pricing documentation",
       ],
-      whyLocal: "Divorce negotiations involving Kirkland property are complicated by the city's wide range of neighborhood values and the emotional premium both parties often attach to the Kirkland address. Automated estimates may validate one party's expectations while contradicting the other's — neither accurately. David's dual broker and appraiser credentials provide the neutral, property-specific analysis that helps Kirkland divorce situations reach fair resolution based on actual market conditions rather than aspirational pricing.",
+      whyLocal: "Divorce negotiations involving Kirkland property are complicated by the city's wide range of neighborhood values and the emotional premium both parties often attach to the Kirkland address. Automated estimates may validate one party's expectations while contradicting the other's — neither accurately. our team's dual broker and appraiser credentials provide the neutral, property-specific analysis that helps Kirkland divorce situations reach fair resolution based on actual market conditions rather than aspirational pricing.",
     },
     "trust-estate-property-sales": {
       intro: "Trust-owned property in Kirkland requires fiduciary-level care in a market where the city's waterfront charm and Eastside location create significant values — and where trustee decisions are subject to beneficiary scrutiny. Whether the trust property is a longtime family home in Juanita, a condo near downtown Kirkland, or a view property on Finn Hill, Real Property Planning provides trustees with the defensible pricing and professional sale management that trust administration demands.",
@@ -1987,7 +1987,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A trustee preparing to sell a Finn Hill trust property where the views command a premium but the home needs updating — uncertain how condition affects the view-premium relationship",
         "A trust administration involving a Kirkland condo in a newer mixed-use development where HOA factors and building-specific dynamics affect pricing",
       ],
-      whyLocal: "Trust property sales in Kirkland carry elevated scrutiny because the city's values are significant and beneficiaries often have strong opinions based on Kirkland's desirable reputation. A trustee who relies on automated estimates may overprice a dated property or underprice one where location premiums apply — either creating fiduciary exposure. David's dual credentials provide trustees with the defensible, neighborhood-specific analysis that Kirkland trust situations require.",
+      whyLocal: "Trust property sales in Kirkland carry elevated scrutiny because the city's values are significant and beneficiaries often have strong opinions based on Kirkland's desirable reputation. A trustee who relies on automated estimates may overprice a dated property or underprice one where location premiums apply — either creating fiduciary exposure. our team's dual credentials provide trustees with the defensible, neighborhood-specific analysis that Kirkland trust situations require.",
     },
   },
 
@@ -2006,7 +2006,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "An executor coordinating a probate sale for a foothills-adjacent property with larger lot characteristics that differ from the planned communities",
         "An estate property where the family's emotional attachment to the home's mountain and foothill setting complicates objective pricing decisions",
       ],
-      whyLocal: "Issaquah's market is divided between master-planned communities with strict HOA standards and older homes in Olde Town and surrounding areas. An estate property in Olde Town faces very different buyer expectations than one in the Highlands — and pricing either segment incorrectly can delay the sale or leave money on the table. David's on-site evaluation accounts for how Issaquah's foothills geography, community type, and condition factors interact in each submarket.",
+      whyLocal: "Issaquah's market is divided between master-planned communities with strict HOA standards and older homes in Olde Town and surrounding areas. An estate property in Olde Town faces very different buyer expectations than one in the Highlands — and pricing either segment incorrectly can delay the sale or leave money on the table. our team's on-site evaluation accounts for how Issaquah's foothills geography, community type, and condition factors interact in each submarket.",
     },
     "senior-transitions": {
       intro: "Issaquah seniors who have lived in the community for years — whether in established Olde Town neighborhoods or master-planned communities — face a transition market shaped by newer construction and active outdoor-lifestyle buyers. Real Property Planning helps Issaquah families navigate the sale of a longtime home with practical guidance on preparation, pricing, and timing that reflects the community's specific buyer expectations.",
@@ -2016,7 +2016,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A longtime Issaquah homeowner whose property backs to trails or open space but needs condition-based guidance on realistic value",
         "A family managing a parent's transition from a larger foothills-area home while handling the emotional weight of leaving a community they love",
       ],
-      whyLocal: "Issaquah's appeal to active, outdoor-oriented families means buyer expectations tend toward well-maintained, move-in-ready homes. Seniors whose properties have deferred maintenance face a market where preparation decisions directly impact sale outcomes. David helps Issaquah families understand which updates matter most in their specific neighborhood and how to position a longtime home against the newer construction that dominates parts of the market.",
+      whyLocal: "Issaquah's appeal to active, outdoor-oriented families means buyer expectations tend toward well-maintained, move-in-ready homes. Seniors whose properties have deferred maintenance face a market where preparation decisions directly impact sale outcomes. Our team helps Issaquah families understand which updates matter most in their specific neighborhood and how to position a longtime home against the newer construction that dominates parts of the market.",
     },
     "downsizing-services": {
       intro: "Downsizing from an Issaquah home often means leaving a community valued for its trails, mountain views, and family-oriented character. Whether the move is to a smaller home nearby, a senior community, or a different city entirely, the sale of the current property requires pricing and preparation strategies tailored to Issaquah's specific buyer expectations and competitive landscape.",
@@ -2026,7 +2026,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A couple downsizing from an Olde Town home who want to understand whether their older property's character adds or limits value in today's market",
         "A homeowner in Talus evaluating whether to sell now or wait, given ongoing development in the Issaquah area",
       ],
-      whyLocal: "Issaquah downsizers face a specific challenge: the community's newer construction and HOA-maintained neighborhoods set high presentation standards. A home with dated finishes or deferred maintenance may need strategic preparation to compete effectively. David helps Issaquah homeowners determine which improvements deliver meaningful return and which are unnecessary given their property's specific submarket and buyer pool.",
+      whyLocal: "Issaquah downsizers face a specific challenge: the community's newer construction and HOA-maintained neighborhoods set high presentation standards. A home with dated finishes or deferred maintenance may need strategic preparation to compete effectively. Our team helps Issaquah homeowners determine which improvements deliver meaningful return and which are unnecessary given their property's specific submarket and buyer pool.",
     },
     "executor-support": {
       intro: "Executors handling property in Issaquah need to understand how the city's varied housing landscape — from master-planned communities with HOA requirements to older Olde Town homes with different buyer expectations — affects the sale process. Real Property Planning provides executors with clear, practical guidance tailored to Issaquah's specific market segments.",
@@ -2036,7 +2036,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "An out-of-state executor who needs a local partner to assess condition and coordinate the sale of a foothills-area Issaquah property",
         "Co-executors disagreeing on the value of an Issaquah property where automated estimates don't account for condition relative to newer community standards",
       ],
-      whyLocal: "Issaquah estates present distinct challenges depending on whether the property is in a master-planned community or the older housing stock near Olde Town. HOA requirements, community architectural standards, and condition relative to the community's newer homes all affect how the property should be priced and prepared. David provides executors with the submarket-specific insight needed to manage these distinctions confidently.",
+      whyLocal: "Issaquah estates present distinct challenges depending on whether the property is in a master-planned community or the older housing stock near Olde Town. HOA requirements, community architectural standards, and condition relative to the community's newer homes all affect how the property should be priced and prepared. Our team provides executors with the submarket-specific insight needed to manage these distinctions confidently.",
     },
     "attorney-fiduciary-support": {
       intro: "Attorneys and fiduciaries working with Issaquah property benefit from a real estate partner who understands the city's unique structure — master-planned communities with strict HOA governance alongside older residential areas with different market dynamics. Real Property Planning provides the reliable communication and submarket-specific insight that legal professionals need for property matters in Issaquah.",
@@ -2046,7 +2046,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A trustee overseeing trust-owned property in Issaquah where the master-planned community environment creates specific sale requirements",
         "A family law attorney dealing with a shared home in Issaquah where location within the city significantly affects valuation",
       ],
-      whyLocal: "Issaquah's legal professionals encounter property situations where the community structure — HOAs, architectural review boards, trail easements — adds layers of complexity to standard real estate transactions. David's experience across Issaquah's diverse housing segments helps attorneys and fiduciaries navigate these community-specific requirements while providing defensible valuation guidance.",
+      whyLocal: "Issaquah's legal professionals encounter property situations where the community structure — HOAs, architectural review boards, trail easements — adds layers of complexity to standard real estate transactions. our team's experience across Issaquah's diverse housing segments helps attorneys and fiduciaries navigate these community-specific requirements while providing defensible valuation guidance.",
     },
     "valuation-guidance": {
       intro: "Property valuation in Issaquah requires distinguishing between the city's master-planned communities, its Olde Town core, and its foothills-adjacent properties. Each segment carries different value drivers and buyer expectations that automated tools often conflate. Real Property Planning provides the condition-based, submarket-specific valuation insight that Issaquah's varied landscape demands.",
@@ -2056,7 +2056,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A family dispute over the value of an inherited Issaquah property where mountain views and trail proximity add subjective value that needs objective assessment",
         "A financial advisor helping a client understand how their Issaquah property's specific location and condition affect realistic sale price",
       ],
-      whyLocal: "Issaquah's valuation landscape is more segmented than many buyers and sellers realize. A home in the Highlands with mountain views, HOA amenities, and newer construction trades at a fundamentally different level than a similar-sized home in Olde Town with older systems and no HOA. David's on-site evaluation captures these submarket distinctions rather than applying citywide averages that can mislead clients in either direction.",
+      whyLocal: "Issaquah's valuation landscape is more segmented than many buyers and sellers realize. A home in the Highlands with mountain views, HOA amenities, and newer construction trades at a fundamentally different level than a similar-sized home in Olde Town with older systems and no HOA. our team's on-site evaluation captures these submarket distinctions rather than applying citywide averages that can mislead clients in either direction.",
     },
     "preparing-home-for-sale": {
       intro: "Preparing a home for sale in Issaquah means understanding what buyers in each part of the city expect. A Highlands home competes against community standards that emphasize curb appeal and move-in condition, while an Olde Town property may appeal to buyers looking for character and walkability. Real Property Planning helps Issaquah sellers prioritize preparation based on their specific neighborhood and realistic buyer expectations.",
@@ -2066,7 +2066,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A foothills-area home with trail access and natural surroundings where outdoor presentation and landscaping affect first impressions significantly",
         "An estate property in Issaquah where decades of accumulated belongings need coordinated cleanout before the home can be evaluated and prepared",
       ],
-      whyLocal: "Issaquah buyers — particularly in the master-planned communities — have high expectations for move-in condition. But not every update delivers proportional value. David helps Issaquah sellers understand which preparation investments matter in their specific submarket and which improvements buyers in their price range won't pay extra for, avoiding both over-spending and under-preparing.",
+      whyLocal: "Issaquah buyers — particularly in the master-planned communities — have high expectations for move-in condition. But not every update delivers proportional value. Our team helps Issaquah sellers understand which preparation investments matter in their specific submarket and which improvements buyers in their price range won't pay extra for, avoiding both over-spending and under-preparing.",
     },
     "divorce-related-home-sales": {
       intro: "Divorce-related property sales in Issaquah require objectivity about a home's value within its specific community context — whether it's a Highlands home with HOA amenities, an Olde Town property with character appeal, or a foothills lot with mountain views. Real Property Planning provides the neutral, submarket-informed guidance both parties need to reach fair, defensible conclusions.",
@@ -2076,7 +2076,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A mediated settlement involving an Issaquah property where one party believes mountain views add more value than market data supports",
         "A divorce-related sale where the couple purchased during a different market cycle and disagree on how Issaquah's foothills market has shifted",
       ],
-      whyLocal: "Divorce negotiations involving Issaquah property are often complicated by the community's varied submarket dynamics. A Highlands home with mountain views may trade at a premium that an Olde Town property with better walkability doesn't command — or vice versa, depending on market conditions. David's appraisal credentials provide the objective, community-specific analysis that helps both parties and their attorneys move forward productively.",
+      whyLocal: "Divorce negotiations involving Issaquah property are often complicated by the community's varied submarket dynamics. A Highlands home with mountain views may trade at a premium that an Olde Town property with better walkability doesn't command — or vice versa, depending on market conditions. our team's appraisal credentials provide the objective, community-specific analysis that helps both parties and their attorneys move forward productively.",
     },
     "trust-estate-property-sales": {
       intro: "Trust-owned property in Issaquah may be in a master-planned community with HOA requirements, an Olde Town neighborhood with different character and buyer appeal, or a foothills-adjacent lot with unique features. Trustees need a real estate partner who understands how these distinctions affect sale strategy and can manage the process with appropriate fiduciary care.",
@@ -2086,7 +2086,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A trustee deciding how to handle a trust-owned Issaquah property that backs to trails or open space and has features that require specialized marketing",
         "A beneficiary questioning the value of a trust-owned Issaquah home based on automated estimates that don't account for community-specific dynamics",
       ],
-      whyLocal: "Trust properties in Issaquah carry community-specific complexities that standard approaches may overlook. HOA requirements, architectural standards, and the distinction between master-planned and non-HOA neighborhoods all affect how a trustee should approach the sale. David's on-the-ground experience across Issaquah's communities provides trustees with the specificity needed to make well-supported, fiduciary-appropriate decisions.",
+      whyLocal: "Trust properties in Issaquah carry community-specific complexities that standard approaches may overlook. HOA requirements, architectural standards, and the distinction between master-planned and non-HOA neighborhoods all affect how a trustee should approach the sale. our team's on-the-ground experience across Issaquah's communities provides trustees with the specificity needed to make well-supported, fiduciary-appropriate decisions.",
     },
   },
 
@@ -2107,7 +2107,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Multiple beneficiaries disagreeing on the value of a Redmond Ridge home where HOA features and community amenities complicate comparison to older Redmond neighborhoods",
         "An estate property near Marymoor Park where trail access and location appeal create buyer interest but deferred maintenance limits the realistic price range",
       ],
-      whyLocal: "Redmond's transformation from bedroom community to tech hub has created dramatic value differences between neighborhoods that are only minutes apart. An estate home on Education Hill faces different buyer dynamics than one in Bear Creek or Redmond Ridge. Automated valuations frequently miss how campus proximity, light rail expansion, and school boundary changes affect specific properties. David's on-the-ground familiarity with Redmond's micro-markets ensures estates are priced based on how today's buyers actually evaluate these neighborhoods.",
+      whyLocal: "Redmond's transformation from bedroom community to tech hub has created dramatic value differences between neighborhoods that are only minutes apart. An estate home on Education Hill faces different buyer dynamics than one in Bear Creek or Redmond Ridge. Automated valuations frequently miss how campus proximity, light rail expansion, and school boundary changes affect specific properties. our team's on-the-ground familiarity with Redmond's micro-markets ensures estates are priced based on how today's buyers actually evaluate these neighborhoods.",
     },
     "senior-transitions": {
       intro: "Many Redmond seniors settled here when the city was still primarily agricultural and suburban — long before Microsoft and the tech boom reshaped the landscape. Now facing transitions to smaller homes, assisted living, or moves closer to family, these homeowners often find that their properties have appreciated far beyond expectations while the neighborhoods around them have changed significantly. Real Property Planning helps Redmond seniors and their families navigate these transitions with honest pricing guidance and practical coordination.",
@@ -2117,7 +2117,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A longtime homeowner near Bear Creek whose large-lot property appeals to families but requires updates the senior can no longer manage",
         "A Redmond senior relocating to be closer to grandchildren in another state — needing help coordinating the sale, preparation, and timeline simultaneously",
       ],
-      whyLocal: "Redmond seniors often occupy properties that have appreciated enormously but may not match current buyer expectations without strategic preparation. The city's tech-driven market creates specific buyer profiles that differ from neighboring communities. David understands how Redmond's evolution — from its agricultural roots to today's campus-adjacent housing demand — affects realistic pricing for transition properties that may not have been updated in decades.",
+      whyLocal: "Redmond seniors often occupy properties that have appreciated enormously but may not match current buyer expectations without strategic preparation. The city's tech-driven market creates specific buyer profiles that differ from neighboring communities. Our team understands how Redmond's evolution — from its agricultural roots to today's campus-adjacent housing demand — affects realistic pricing for transition properties that may not have been updated in decades.",
     },
     "downsizing-services": {
       intro: "Downsizing in Redmond often means leaving a home purchased when the city was quieter and more affordable — before campuses, light rail, and rapid development reshaped the community. Whether transitioning to a condo in the Overlake area, a smaller home closer to downtown, or moving out of the region entirely, Redmond homeowners benefit from guidance that accounts for the city's distinctive market dynamics and buyer expectations.",
@@ -2127,7 +2127,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A homeowner near Marymoor Park whose property appeals to outdoor-oriented buyers but requires honest assessment of condition-based pricing",
         "A family selling a large Redmond home after the last child has moved out — unsure how to prioritize preparation in a market that moves quickly",
       ],
-      whyLocal: "Redmond's downsizing decisions are uniquely influenced by the city's ongoing transformation. Light rail expansion, campus growth, and changing neighborhood demographics mean that the optimal timing and preparation strategy for a downsizing sale depends heavily on the specific submarket. David's local knowledge helps downsizing homeowners avoid the common mistake of applying generic Eastside assumptions to Redmond's rapidly evolving micro-markets.",
+      whyLocal: "Redmond's downsizing decisions are uniquely influenced by the city's ongoing transformation. Light rail expansion, campus growth, and changing neighborhood demographics mean that the optimal timing and preparation strategy for a downsizing sale depends heavily on the specific submarket. our team's local knowledge helps downsizing homeowners avoid the common mistake of applying generic Eastside assumptions to Redmond's rapidly evolving micro-markets.",
     },
     "executor-support": {
       intro: "Executors handling Redmond estate property face a market that has changed dramatically from when the deceased purchased their home. Properties near Microsoft's campus, along the Sammamish River trail, or in newer communities like Redmond Ridge each present different challenges around valuation, preparation, and buyer expectations. Real Property Planning provides executors with the structured, Redmond-specific guidance needed to manage estate real property responsibly.",
@@ -2137,7 +2137,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "An executor working with a probate attorney on a Redmond home where recent tech-sector layoffs have introduced market uncertainty",
         "Multiple executors managing a Redmond property where disagreements about value stem from comparing the home to its neighbors rather than its actual condition",
       ],
-      whyLocal: "Redmond executors often inherit responsibility for properties in a market they may not fully understand — especially if they're out of state or haven't tracked how dramatically the city has changed. David's dual broker-appraiser background gives executors a credentialed, locally grounded resource who can provide realistic assessments rather than optimistic estimates based on peak comparable sales.",
+      whyLocal: "Redmond executors often inherit responsibility for properties in a market they may not fully understand — especially if they're out of state or haven't tracked how dramatically the city has changed. our team's dual broker-appraiser background gives executors a credentialed, locally grounded resource who can provide realistic assessments rather than optimistic estimates based on peak comparable sales.",
     },
     "attorney-fiduciary-support": {
       intro: "Attorneys and fiduciaries managing Redmond property matters operate in a market shaped by corporate relocations, tech-industry compensation patterns, and rapid neighborhood change. Whether supporting an executor through a probate sale on Education Hill or advising a trustee on an Overlake-area property affected by transit development, these professionals need a real estate partner who understands Redmond's specific dynamics.",
@@ -2147,7 +2147,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "An elder law attorney coordinating a Redmond property sale alongside a client's transition to care facilities in the Eastside corridor",
         "A family law attorney handling a Redmond divorce where both parties' employment at local tech companies adds financial complexity to the property division",
       ],
-      whyLocal: "Redmond's legal and fiduciary property matters are frequently complicated by the city's tech-driven market volatility. Property values can shift meaningfully based on campus expansion plans, light rail station proximity, and corporate hiring cycles. David provides attorneys and fiduciaries with the grounded, credential-backed analysis needed to navigate these Redmond-specific variables.",
+      whyLocal: "Redmond's legal and fiduciary property matters are frequently complicated by the city's tech-driven market volatility. Property values can shift meaningfully based on campus expansion plans, light rail station proximity, and corporate hiring cycles. Our team provides attorneys and fiduciaries with the grounded, credential-backed analysis needed to navigate these Redmond-specific variables.",
     },
     "valuation-guidance": {
       intro: "Valuation in Redmond requires understanding how dramatically different micro-markets coexist within the same city. A modest rambler near downtown Redmond may sit a mile from a Redmond Ridge home worth twice as much — not because of square footage, but because of community standards, school boundaries, and campus proximity. Real Property Planning provides the kind of locally informed, condition-based valuation guidance that automated tools consistently miss in Redmond's complex market.",
@@ -2157,7 +2157,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A trustee comparing a Redmond Ridge property's value to older Redmond neighborhoods and needing expert guidance on how HOA features and community standards affect pricing",
         "A couple considering a pre-sale valuation of their Redmond home as part of retirement planning — unsure how light rail expansion affects their specific location",
       ],
-      whyLocal: "Redmond's valuation landscape is uniquely challenging because the city's rapid development has created adjacent neighborhoods with dramatically different value trajectories. An Education Hill property and an Overlake condo may both carry Redmond addresses but face completely different buyer pools and pricing dynamics. David's certified appraiser background provides the analytical foundation to navigate these distinctions accurately.",
+      whyLocal: "Redmond's valuation landscape is uniquely challenging because the city's rapid development has created adjacent neighborhoods with dramatically different value trajectories. An Education Hill property and an Overlake condo may both carry Redmond addresses but face completely different buyer pools and pricing dynamics. our team's certified appraiser background provides the analytical foundation to navigate these distinctions accurately.",
     },
     "preparing-home-for-sale": {
       intro: "Preparing a Redmond home for sale involves understanding what today's buyers — often tech professionals with specific expectations about finishes, layout, and energy efficiency — actually value. Whether the property is a well-maintained Redmond Ridge home or an older rambler near downtown Redmond that needs meaningful updates, the preparation strategy should reflect the specific neighborhood's buyer profile rather than generic staging advice.",
@@ -2167,7 +2167,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A property near the Sammamish River trail where outdoor features and landscaping are key selling points but indoor spaces need modernization",
         "A longtime family home in Bear Creek where the property's large lot is an asset but the home itself needs honest assessment of cost-effective preparation priorities",
       ],
-      whyLocal: "Redmond's buyer expectations are shaped by the tech industry's influence on the local market. Buyers often compare properties against newer construction with modern layouts and finishes. David helps sellers identify which preparation investments will genuinely affect sale price in Redmond's specific neighborhoods — rather than spending on upgrades that won't move the needle for the property's actual buyer pool.",
+      whyLocal: "Redmond's buyer expectations are shaped by the tech industry's influence on the local market. Buyers often compare properties against newer construction with modern layouts and finishes. Our team helps sellers identify which preparation investments will genuinely affect sale price in Redmond's specific neighborhoods — rather than spending on upgrades that won't move the needle for the property's actual buyer pool.",
     },
     "divorce-related-home-sales": {
       intro: "Divorce-related property sales in Redmond carry unique complexity because the city's tech-driven appreciation has created significant equity in many homes — equity that both parties may value differently based on when they purchased and how they perceive the market's trajectory. Real Property Planning provides the objective, credential-backed guidance needed to navigate Redmond marital property sales with clarity and discretion.",
@@ -2177,7 +2177,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A mediated settlement involving a Redmond Ridge home where HOA features, community amenities, and school boundaries add complexity to equitable valuation",
         "A divorce-related sale where one party wants to retain the Redmond home and needs accurate buyout valuation that accounts for condition and market position",
       ],
-      whyLocal: "Divorce negotiations in Redmond are frequently complicated by the dramatic appreciation many homes have experienced — sometimes doubling or tripling in value during a marriage. Both parties may have very different views of what the property is worth, especially when tech compensation patterns have influenced when improvements were made. David's appraisal credentials provide the objective foundation needed for fair resolution.",
+      whyLocal: "Divorce negotiations in Redmond are frequently complicated by the dramatic appreciation many homes have experienced — sometimes doubling or tripling in value during a marriage. Both parties may have very different views of what the property is worth, especially when tech compensation patterns have influenced when improvements were made. our team's appraisal credentials provide the objective foundation needed for fair resolution.",
     },
     "trust-estate-property-sales": {
       intro: "Trust-owned property in Redmond may be in a master-planned community with specific architectural standards, an older neighborhood where the home predates the city's tech-driven transformation, or a transitional area affected by light rail and campus expansion. Trustees need a real estate partner who understands how these Redmond-specific dynamics affect sale strategy and fiduciary responsibility.",
@@ -2187,7 +2187,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A trustee deciding how to handle a trust-owned property near the Overlake corridor where transit-oriented development has changed the neighborhood's character",
         "A beneficiary questioning the trustee's pricing approach for a Redmond property based on automated estimates that don't reflect the home's actual condition",
       ],
-      whyLocal: "Trust properties in Redmond exist within a market that rewards precision — small differences in location, condition, and neighborhood trajectory can create meaningful value variations. Trustees who rely on generic Eastside data risk either underpricing in strong micro-markets or overpricing in areas where buyer expectations have shifted. David provides the Redmond-specific analysis that supports sound fiduciary decision-making.",
+      whyLocal: "Trust properties in Redmond exist within a market that rewards precision — small differences in location, condition, and neighborhood trajectory can create meaningful value variations. Trustees who rely on generic Eastside data risk either underpricing in strong micro-markets or overpricing in areas where buyer expectations have shifted. Our team provides the Redmond-specific analysis that supports sound fiduciary decision-making.",
     },
   },
 
@@ -2208,7 +2208,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Multiple beneficiaries disagreeing on the value of an Everett property based on their memories of the neighborhood versus its current market trajectory",
         "An estate home in Lowell or Delta where the industrial surroundings and property characteristics require honest assessment rather than aspirational pricing",
       ],
-      whyLocal: "Everett's market is defined by dramatic neighborhood-level variation — a craftsman in Norton-Grand has different dynamics than a rambler near Mall Drive or a view property in Bayside. The city's ongoing waterfront revitalization has created pockets of rapid appreciation adjacent to areas where values remain more stable. David's familiarity with Everett's neighborhood trajectories ensures probate properties are priced based on realistic buyer demand rather than citywide averages.",
+      whyLocal: "Everett's market is defined by dramatic neighborhood-level variation — a craftsman in Norton-Grand has different dynamics than a rambler near Mall Drive or a view property in Bayside. The city's ongoing waterfront revitalization has created pockets of rapid appreciation adjacent to areas where values remain more stable. our team's familiarity with Everett's neighborhood trajectories ensures probate properties are priced based on realistic buyer demand rather than citywide averages.",
     },
     "senior-transitions": {
       intro: "Many Everett seniors have deep roots in the community — often in the same home near Boeing, the naval station, or one of the city's established residential neighborhoods for decades. Transitioning from a longtime Everett home involves not just the logistics of selling property but also the emotional weight of leaving a community where military, aerospace, and working-class heritage have shaped daily life for generations.",
@@ -2218,7 +2218,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A senior couple in North Everett whose craftsman home has character appeal but needs honest assessment of which updates would meaningfully affect sale price",
         "A veteran transitioning from a home near Naval Station Everett to VA-supported housing — needing efficient, straightforward guidance on the property sale",
       ],
-      whyLocal: "Everett's senior transitions often involve properties tied to the city's aerospace and military employment history — homes purchased when Boeing hiring was strong or when the naval station was expanding. These properties may have appreciated differently than the revitalizing waterfront district, and understanding which Everett neighborhoods are trending up versus holding steady is essential for realistic pricing. David helps Everett seniors avoid both underpricing in improving areas and overpricing in neighborhoods where buyer demand is more measured.",
+      whyLocal: "Everett's senior transitions often involve properties tied to the city's aerospace and military employment history — homes purchased when Boeing hiring was strong or when the naval station was expanding. These properties may have appreciated differently than the revitalizing waterfront district, and understanding which Everett neighborhoods are trending up versus holding steady is essential for realistic pricing. Our team helps Everett seniors avoid both underpricing in improving areas and overpricing in neighborhoods where buyer demand is more measured.",
     },
     "downsizing-services": {
       intro: "Downsizing in Everett means leaving a home that may have been purchased during a very different phase of the city's evolution — before waterfront revitalization, before the Paine Field passenger terminal, and before the influx of new development that has begun changing the city's character. Whether moving to a more manageable home within Snohomish County or relocating entirely, Everett homeowners need guidance that reflects the city's current trajectory rather than historical assumptions.",
@@ -2228,7 +2228,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A senior in the Riverside neighborhood whose waterfront-adjacent location creates interest but whose home needs practical assessment of preparation priorities",
         "A downsizing homeowner near Silver Lake whose property's value is complicated by its proximity to both desirable schools and commercial corridors",
       ],
-      whyLocal: "Everett's downsizing decisions are shaped by the city's uneven revitalization — some neighborhoods have seen meaningful appreciation while others remain more stable. Homeowners who've watched waterfront condos go up may overestimate their own property's trajectory, while those in steadily appreciating areas may not realize how much equity they've built. David provides the neighborhood-specific perspective that helps Everett downsizers make informed decisions.",
+      whyLocal: "Everett's downsizing decisions are shaped by the city's uneven revitalization — some neighborhoods have seen meaningful appreciation while others remain more stable. Homeowners who've watched waterfront condos go up may overestimate their own property's trajectory, while those in steadily appreciating areas may not realize how much equity they've built. Our team provides the neighborhood-specific perspective that helps Everett downsizers make informed decisions.",
     },
     "executor-support": {
       intro: "Executors handling estate property in Everett often face practical challenges unique to the county seat — properties with deferred maintenance in transitional neighborhoods, homes near industrial areas where environmental factors affect marketability, and a broad spectrum of housing ages and conditions. Real Property Planning provides executors with structured, locally grounded support for managing estate real property in Everett's complex market.",
@@ -2238,7 +2238,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "An executor working with a Snohomish County probate attorney on an Everett property where the estate's complexity requires coordinated professional support",
         "Multiple executors managing an Everett property where the home's condition and the neighborhood's trajectory create different opinions on sale approach",
       ],
-      whyLocal: "Executors unfamiliar with Everett may not realize how dramatically the city's neighborhoods differ — or how quickly some areas are changing while others remain stable. David's presence in Snohomish County ensures executors receive Everett-specific guidance rather than generic suburban assumptions that don't reflect the county seat's distinctive character and market dynamics.",
+      whyLocal: "Executors unfamiliar with Everett may not realize how dramatically the city's neighborhoods differ — or how quickly some areas are changing while others remain stable. our team's presence in Snohomish County ensures executors receive Everett-specific guidance rather than generic suburban assumptions that don't reflect the county seat's distinctive character and market dynamics.",
     },
     "attorney-fiduciary-support": {
       intro: "Attorneys and fiduciaries managing property matters in Everett work in a market shaped by industrial heritage, military presence, and ongoing urban renewal. Probate estates near the waterfront, trust properties in established residential areas, and divorce-related sales near Boeing or the naval station all carry Everett-specific dynamics that require locally informed real estate guidance.",
@@ -2248,7 +2248,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "An elder law attorney coordinating an Everett client's property sale alongside a transition to care facilities in Snohomish County",
         "A family law attorney handling an Everett divorce where one party's Boeing employment and the home's proximity to Paine Field affect both timing and value considerations",
       ],
-      whyLocal: "Everett's legal property matters frequently involve the city's industrial and military employment dynamics — Boeing shift schedules that affect showing flexibility, naval station transfers that create seasonal buyer patterns, and revitalization timelines that influence neighborhood value trajectories. David provides attorneys and fiduciaries with the grounded, Everett-specific analysis these situations require.",
+      whyLocal: "Everett's legal property matters frequently involve the city's industrial and military employment dynamics — Boeing shift schedules that affect showing flexibility, naval station transfers that create seasonal buyer patterns, and revitalization timelines that influence neighborhood value trajectories. Our team provides attorneys and fiduciaries with the grounded, Everett-specific analysis these situations require.",
     },
     "valuation-guidance": {
       intro: "Valuation in Everett is complicated by the city's wide range of housing stock, neighborhood trajectories, and the influence of large employers on local demand. A craftsman in Norton-Grand, a rambler near Silver Lake, and a newer unit in the waterfront district may all carry Everett addresses but face fundamentally different buyer pools and pricing dynamics. Real Property Planning provides condition-based, neighborhood-specific valuation guidance for Everett's diverse market.",
@@ -2258,7 +2258,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A trustee comparing an Everett property's value to nearby Lynnwood or Mukilteo homes — needing expert guidance on how the county seat's dynamics differ",
         "A divorcing couple whose Silver Lake home has appreciated steadily but where condition issues create disagreement about realistic current value",
       ],
-      whyLocal: "Everett's valuation challenges stem from the city's role as a county seat with industrial, military, and revitalization dynamics all operating simultaneously. Properties in the same zip code can face dramatically different market conditions depending on their specific neighborhood, proximity to employers, and the trajectory of surrounding development. David's certified appraiser background provides the analytical framework to navigate these Everett-specific complexities.",
+      whyLocal: "Everett's valuation challenges stem from the city's role as a county seat with industrial, military, and revitalization dynamics all operating simultaneously. Properties in the same zip code can face dramatically different market conditions depending on their specific neighborhood, proximity to employers, and the trajectory of surrounding development. our team's certified appraiser background provides the analytical framework to navigate these Everett-specific complexities.",
     },
     "preparing-home-for-sale": {
       intro: "Preparing an Everett home for sale requires understanding what the city's buyer pool actually expects — which varies significantly by neighborhood. A North Everett craftsman may benefit from preserving original character while addressing systems and safety, while a Silver Lake rambler might need practical modernization to compete. Real Property Planning helps Everett sellers identify preparation priorities that align with their specific neighborhood's buyer expectations.",
@@ -2268,7 +2268,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A Silver Lake property where basic modernization — kitchen, bathrooms, flooring — would meaningfully affect the sale price versus selling as-is to renovation buyers",
         "A home near the waterfront district where exterior presentation and curb appeal matter more than interior upgrades due to the area's buyer demographic",
       ],
-      whyLocal: "Everett's diverse housing stock means preparation strategies vary dramatically by neighborhood and property type. What works for a Bayside view property doesn't apply to a Lowell ranch, and the budget for preparation should reflect the realistic return in each specific micro-market. David helps Everett sellers avoid over-investing in updates that won't move the needle — or under-preparing in neighborhoods where presentation genuinely affects sale price.",
+      whyLocal: "Everett's diverse housing stock means preparation strategies vary dramatically by neighborhood and property type. What works for a Bayside view property doesn't apply to a Lowell ranch, and the budget for preparation should reflect the realistic return in each specific micro-market. Our team helps Everett sellers avoid over-investing in updates that won't move the needle — or under-preparing in neighborhoods where presentation genuinely affects sale price.",
     },
     "divorce-related-home-sales": {
       intro: "Divorce-related property sales in Everett often involve homes connected to the city's major employers — Boeing, the naval station, and the healthcare systems that serve as the county seat's employment anchors. These sales carry practical complications around work schedules, potential relocation, and the emotional dynamics of dividing a home in a community where both parties may have deep roots.",
@@ -2278,7 +2278,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A mediated settlement involving an Everett home where one party's military service creates timeline and relocation complications",
         "A divorce-related sale in a transitional Everett neighborhood where the property's future value trajectory is uncertain and both parties see it differently",
       ],
-      whyLocal: "Everett divorces frequently involve employment-related complications — Boeing layoff cycles, naval station transfers, and the financial dynamics of single-income transitions in a county-seat market. David provides the objective, locally informed analysis that helps both parties and their attorneys move forward with realistic expectations about the Everett property's value and marketability.",
+      whyLocal: "Everett divorces frequently involve employment-related complications — Boeing layoff cycles, naval station transfers, and the financial dynamics of single-income transitions in a county-seat market. Our team provides the objective, locally informed analysis that helps both parties and their attorneys move forward with realistic expectations about the Everett property's value and marketability.",
     },
     "trust-estate-property-sales": {
       intro: "Trust-owned property in Everett may range from a well-maintained North Everett craftsman to a mid-century home near Silver Lake or a property in a transitional neighborhood where market dynamics are shifting. Trustees need a real estate partner who understands how Everett's specific neighborhood trajectories, buyer demographics, and property conditions affect sale strategy and fiduciary decision-making.",
@@ -2288,7 +2288,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A trustee handling a trust-owned Silver Lake property where the home's condition and neighborhood position require careful analysis of preparation versus as-is sale",
         "A beneficiary questioning the value of a trust-owned Everett property based on automated estimates that don't account for the city's neighborhood-level variation",
       ],
-      whyLocal: "Trust properties in Everett require understanding the county seat's distinctive market dynamics — where industrial heritage, military presence, and urban renewal create conditions that standard suburban analysis doesn't capture. David provides trustees with the Everett-specific insight needed to make well-supported fiduciary decisions in a market where neighborhood trajectory matters as much as property condition.",
+      whyLocal: "Trust properties in Everett require understanding the county seat's distinctive market dynamics — where industrial heritage, military presence, and urban renewal create conditions that standard suburban analysis doesn't capture. Our team provides trustees with the Everett-specific insight needed to make well-supported fiduciary decisions in a market where neighborhood trajectory matters as much as property condition.",
     },
   },
 
@@ -2309,7 +2309,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "An estate home where the deceased was well-known in Duvall's tight-knit community — creating both opportunities and sensitivities around the sale process",
         "Multiple beneficiaries disagreeing about a Duvall property's value because online estimates don't account for rural features, lot size, or the town's limited comparable sales",
       ],
-      whyLocal: "Duvall's real estate market operates differently than nearby Eastside suburbs because of its small inventory, rural character, and the specific buyer profiles drawn to a town of this size. Automated valuations often miss how acreage, outbuildings, river proximity, and the community's small-town identity affect pricing. David's familiarity with Snoqualmie Valley properties helps executors set realistic expectations in a market where standard suburban comparisons fall short.",
+      whyLocal: "Duvall's real estate market operates differently than nearby Eastside suburbs because of its small inventory, rural character, and the specific buyer profiles drawn to a town of this size. Automated valuations often miss how acreage, outbuildings, river proximity, and the community's small-town identity affect pricing. our team's familiarity with Snoqualmie Valley properties helps executors set realistic expectations in a market where standard suburban comparisons fall short.",
     },
     "senior-transitions": {
       intro: "Seniors in Duvall have often lived in the community for decades — drawn by its quiet pace, natural surroundings, and the kind of small-town relationships that make leaving especially difficult. When it's time to transition to a smaller home, assisted living, or a move closer to family, these homeowners face a market with limited senior housing options locally and properties that may include features — gardens, workshops, acreage — that require thoughtful preparation for sale.",
@@ -2319,7 +2319,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A retired couple whose Duvall home sits on a larger lot that's become too much to maintain — needing guidance on whether to sell the property whole or consider a lot-line approach",
         "A senior in Duvall whose community connections make the transition emotionally complex — needing a patient, relationship-oriented process",
       ],
-      whyLocal: "Duvall's limited local senior living options mean most transitions involve relocating to larger nearby communities — Redmond, Woodinville, or Monroe. This creates a two-market challenge: selling a rural-character property in a small market while simultaneously navigating housing options elsewhere. David's valley-wide familiarity helps families coordinate both sides of this transition with realistic expectations and compassionate pacing.",
+      whyLocal: "Duvall's limited local senior living options mean most transitions involve relocating to larger nearby communities — Redmond, Woodinville, or Monroe. This creates a two-market challenge: selling a rural-character property in a small market while simultaneously navigating housing options elsewhere. our team's valley-wide familiarity helps families coordinate both sides of this transition with realistic expectations and compassionate pacing.",
     },
     "downsizing-services": {
       intro: "Downsizing from a Duvall home often means leaving a property with features that don't exist in more compact markets — a large garden, workshop space, riverside access, or the kind of privacy that attracted the homeowner to this valley community in the first place. The decision to downsize is practical, but in Duvall it carries additional complexity because the buyer who values what you're leaving behind may be a very specific type of buyer.",
@@ -2329,7 +2329,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A retiree whose Duvall home has been a hobby property — with workshop, greenhouse, or equestrian features — that needs honest assessment of how these features affect market value",
         "A downsizing homeowner who wants to stay in the Snoqualmie Valley but needs to understand the financial tradeoffs of Duvall versus Carnation or Monroe options",
       ],
-      whyLocal: "Duvall's downsizing market is shaped by the town's small inventory and specific buyer appeal. Properties with rural features attract buyers who are intentionally seeking a small-town lifestyle — but this is a narrower pool than suburban downsizing markets serve. David helps Duvall homeowners understand how their specific property features, lot characteristics, and location within the valley affect realistic timeline and pricing expectations.",
+      whyLocal: "Duvall's downsizing market is shaped by the town's small inventory and specific buyer appeal. Properties with rural features attract buyers who are intentionally seeking a small-town lifestyle — but this is a narrower pool than suburban downsizing markets serve. Our team helps Duvall homeowners understand how their specific property features, lot characteristics, and location within the valley affect realistic timeline and pricing expectations.",
     },
     "executor-support": {
       intro: "Executors managing estate property in Duvall face challenges specific to small-town real estate — limited comparable sales data, properties with rural features that complicate standard valuation, and a buyer pool that's smaller and more specialized than in neighboring Eastside cities. Real Property Planning provides executors with the structured, locally informed support needed to navigate Duvall's distinctive market.",
@@ -2339,7 +2339,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "An executor working with an attorney on a Duvall estate where the limited local comparable sales make pricing particularly challenging",
         "Multiple executors disagreeing about a Duvall property's value because they're comparing it to Eastside suburban homes rather than recognizing the small-town market's different dynamics",
       ],
-      whyLocal: "Duvall's small market means executors can't rely on the volume of comparable sales that larger communities provide. Each property's specific features — lot size, outbuildings, river proximity, and condition — carry more weight in pricing decisions. David's experience with Snoqualmie Valley properties provides executors with the granular, property-specific guidance that automated tools and out-of-area agents consistently miss in communities this size.",
+      whyLocal: "Duvall's small market means executors can't rely on the volume of comparable sales that larger communities provide. Each property's specific features — lot size, outbuildings, river proximity, and condition — carry more weight in pricing decisions. our team's experience with Snoqualmie Valley properties provides executors with the granular, property-specific guidance that automated tools and out-of-area agents consistently miss in communities this size.",
     },
     "attorney-fiduciary-support": {
       intro: "Attorneys and fiduciaries managing Duvall property matters need a real estate partner who understands small-town market dynamics — where limited inventory means longer exposure times, where rural property features require specialized assessment, and where the community's tight-knit character influences how sales are perceived and received.",
@@ -2349,7 +2349,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "An elder law attorney coordinating a Duvall client's property sale alongside a transition to care facilities in Redmond or Woodinville",
         "A family law attorney handling a Duvall divorce where the property's rural features and small-town market dynamics affect equitable distribution calculations",
       ],
-      whyLocal: "Legal matters involving Duvall property carry complications that attorneys accustomed to suburban markets may not anticipate — including how limited inventory affects exposure time, how rural features interact with standard appraisal methods, and how the community's character influences buyer behavior. David provides attorneys and fiduciaries with the Snoqualmie Valley-specific analysis these situations demand.",
+      whyLocal: "Legal matters involving Duvall property carry complications that attorneys accustomed to suburban markets may not anticipate — including how limited inventory affects exposure time, how rural features interact with standard appraisal methods, and how the community's character influences buyer behavior. Our team provides attorneys and fiduciaries with the Snoqualmie Valley-specific analysis these situations demand.",
     },
     "valuation-guidance": {
       intro: "Valuation in Duvall is uniquely challenging because of the town's small inventory, the prevalence of properties with non-standard features, and the limited comparable sales data available. A home in the town core, a property with river frontage, and a parcel with acreage and outbuildings may all carry Duvall addresses but face very different valuation dynamics. Real Property Planning provides the locally grounded, condition-based analysis that Duvall properties require.",
@@ -2359,7 +2359,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A trustee needing guidance on a Duvall property with equestrian or agricultural features that standard residential comparisons don't capture",
         "A homeowner seeking pre-sale valuation of a Duvall property as part of retirement planning — unsure how the town's small-market dynamics affect realistic pricing",
       ],
-      whyLocal: "Duvall's valuation challenges are fundamentally different from suburban Eastside markets. The small number of annual transactions means each comparable sale carries outsized influence, and properties with acreage, outbuildings, or river features require assessment methods that go beyond standard residential analysis. David's certified appraiser background provides the analytical depth that Duvall's distinctive properties demand.",
+      whyLocal: "Duvall's valuation challenges are fundamentally different from suburban Eastside markets. The small number of annual transactions means each comparable sale carries outsized influence, and properties with acreage, outbuildings, or river features require assessment methods that go beyond standard residential analysis. our team's certified appraiser background provides the analytical depth that Duvall's distinctive properties demand.",
     },
     "preparing-home-for-sale": {
       intro: "Preparing a Duvall home for sale requires understanding what draws buyers to this community — and what they'll accept versus what they won't. Buyers choosing Duvall are typically seeking small-town character, space, and privacy — but they still expect functional systems, clean presentation, and honest disclosure about property condition. The preparation strategy should honor the property's character while addressing the practical concerns that affect sale price in a small market.",
@@ -2369,7 +2369,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A larger Duvall property where outbuildings, fencing, and acreage features need practical attention to present well to the specific buyers drawn to this kind of property",
         "A longtime family home where sentimental features and personal landscaping need sensitive handling during preparation for sale",
       ],
-      whyLocal: "Duvall's buyer pool has different expectations than suburban Eastside markets. Over-improving a Duvall home with trendy finishes may not generate the return it would in Redmond or Kirkland, while under-preparing can extend time on market in a community where inventory already moves more slowly. David helps Duvall sellers find the right preparation balance for their specific property and the realistic buyer profile it will attract.",
+      whyLocal: "Duvall's buyer pool has different expectations than suburban Eastside markets. Over-improving a Duvall home with trendy finishes may not generate the return it would in Redmond or Kirkland, while under-preparing can extend time on market in a community where inventory already moves more slowly. Our team helps Duvall sellers find the right preparation balance for their specific property and the realistic buyer profile it will attract.",
     },
     "divorce-related-home-sales": {
       intro: "Divorce-related property sales in Duvall are complicated by the community's small size, limited inventory, and the fact that rural-character properties don't have the volume of comparable sales that larger communities provide. When both parties need clarity on property value, the small-town dynamics and non-standard property features that make Duvall special also make objective valuation more complex.",
@@ -2379,7 +2379,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A mediated settlement involving a Duvall home where one party wants to retain the property — needing accurate buyout valuation in a small market with few comps",
         "A divorce-related sale where the couple's emotional attachment to Duvall's community character is complicating practical sale decisions",
       ],
-      whyLocal: "Divorce negotiations involving Duvall property require understanding that standard suburban valuation methods don't fully apply. The town's limited annual sales volume, the premium or discount that rural features create, and the narrower buyer pool all affect realistic pricing. David's appraisal background provides the objective, locally grounded analysis needed for equitable resolution when Duvall's small-market dynamics make standard approaches insufficient.",
+      whyLocal: "Divorce negotiations involving Duvall property require understanding that standard suburban valuation methods don't fully apply. The town's limited annual sales volume, the premium or discount that rural features create, and the narrower buyer pool all affect realistic pricing. our team's appraisal background provides the objective, locally grounded analysis needed for equitable resolution when Duvall's small-market dynamics make standard approaches insufficient.",
     },
     "trust-estate-property-sales": {
       intro: "Trust-owned property in Duvall may include features that trustees and corporate trust departments rarely encounter — acreage, outbuildings, agricultural elements, or river-adjacent parcels where standard residential trust administration approaches need adaptation. Real Property Planning provides trustees with the locally informed, property-specific guidance that Duvall's distinctive real estate requires.",
@@ -2389,7 +2389,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A trustee handling a trust-owned property along the Snoqualmie Valley where river proximity and environmental considerations affect sale preparation",
         "A beneficiary questioning the value of a trust-owned Duvall property because automated estimates don't account for rural features and limited comparable sales",
       ],
-      whyLocal: "Trust properties in Duvall require fiduciary guidance that accounts for the community's distinctive market — small inventory, specialized buyer interest, and properties with features that don't fit neatly into standard residential categories. David provides trustees with the Snoqualmie Valley knowledge and appraisal foundation needed to make well-supported decisions in a market where the usual suburban assumptions don't apply.",
+      whyLocal: "Trust properties in Duvall require fiduciary guidance that accounts for the community's distinctive market — small inventory, specialized buyer interest, and properties with features that don't fit neatly into standard residential categories. Our team provides trustees with the Snoqualmie Valley knowledge and appraisal foundation needed to make well-supported decisions in a market where the usual suburban assumptions don't apply.",
     },
   },
 
@@ -2417,7 +2417,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Clear communication with multiple heirs or parties managing from different locations, including military relocations",
         "Full transaction management from initial assessment through closing",
       ],
-      whyLocal: "Lakewood's market operates differently from neighboring Tacoma or University Place because of JBLM's influence on buyer demographics, the distinct lakefront enclaves, and the city's wide price range. An estate property on American Lake faces a completely different buyer pool than one near the base. David Stein's on-site assessment accounts for these Lakewood-specific dynamics — military influence, lakefront premiums, and the practical realities of selling estate property in a market with diverse buyer expectations.",
+      whyLocal: "Lakewood's market operates differently from neighboring Tacoma or University Place because of JBLM's influence on buyer demographics, the distinct lakefront enclaves, and the city's wide price range. An estate property on American Lake faces a completely different buyer pool than one near the base. Real Property Planning's on-site assessment accounts for these Lakewood-specific dynamics — military influence, lakefront premiums, and the practical realities of selling estate property in a market with diverse buyer expectations.",
     },
     "senior-transitions": {
       intro: "Many Lakewood seniors have deep roots in the community — some connected to decades of military service, others drawn by the lakefront lifestyle or the city's established neighborhoods. When it's time to transition from a longtime Lakewood home, the process involves understanding how the city's unique market dynamics affect the sale while coordinating the move to a senior living community or family home. Real Property Planning helps Lakewood families navigate this transition with patience and practical expertise.",
@@ -2436,7 +2436,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Vendor coordination for cleanout, repairs, and presentation appropriate for the property's submarket",
         "Full-service management so the family can focus on their parent's wellbeing",
       ],
-      whyLocal: "Lakewood seniors often own homes in neighborhoods where military-influenced buyer cycles and lakefront dynamics create pricing patterns that differ from the broader Pierce County market. A senior selling a home near American Lake faces different considerations than one in a Tillicum neighborhood. David's experience with Lakewood's specific submarkets helps families set realistic expectations and prepare properties in ways that align with actual buyer demand.",
+      whyLocal: "Lakewood seniors often own homes in neighborhoods where military-influenced buyer cycles and lakefront dynamics create pricing patterns that differ from the broader Pierce County market. A senior selling a home near American Lake faces different considerations than one in a Tillicum neighborhood. our team's experience with Lakewood's specific submarkets helps families set realistic expectations and prepare properties in ways that align with actual buyer demand.",
     },
     "downsizing-services": {
       intro: "Downsizing from a Lakewood home involves navigating a market where lakefront properties, military-adjacent neighborhoods, and established suburban areas each attract different buyers and carry different values. Whether moving to a smaller Lakewood home, a Pierce County senior community, or relocating to be near family elsewhere, the process benefits from someone who understands how Lakewood's distinct submarkets affect both the sale proceeds and realistic next-step options.",
@@ -2446,7 +2446,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A senior whose children have relocated away from the JBLM area, considering whether to stay in Lakewood or move closer to family",
         "A homeowner near American Lake weighing whether to sell and downsize within the lakefront community or transition to a more manageable property type",
       ],
-      whyLocal: "Downsizing decisions in Lakewood are complicated by the city's segmented market — lakefront homes, JBLM-adjacent properties, and suburban-interior neighborhoods each have different demand profiles and sale timelines. Understanding how proceeds from one submarket translate into options in another requires the kind of local comparative analysis that David provides.",
+      whyLocal: "Downsizing decisions in Lakewood are complicated by the city's segmented market — lakefront homes, JBLM-adjacent properties, and suburban-interior neighborhoods each have different demand profiles and sale timelines. Understanding how proceeds from one submarket translate into options in another requires the kind of local comparative analysis that Our team provides.",
     },
     "executor-support": {
       intro: "Executors managing estate property in Lakewood face a market with distinctive dynamics — military buyer influence near JBLM, lakefront premiums on American and Gravelly Lakes, and a diverse range of housing types across the city's neighborhoods. Whether the estate property is a lakefront home, a property near the base, or a home in one of Lakewood's established suburban areas, executors need guidance that accounts for these Lakewood-specific factors.",
@@ -2465,7 +2465,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Regular communication for executors managing from out of area — including those on military assignments",
         "End-to-end transaction management from assessment through closing",
       ],
-      whyLocal: "Lakewood executors face a market where JBLM's PCS (Permanent Change of Station) cycles create seasonal buyer fluctuations, and lakefront properties operate in a niche market with limited inventory. An executor who doesn't account for these Lakewood-specific patterns risks mispricing or mistiming the sale. David's local experience helps executors navigate these dynamics with confidence.",
+      whyLocal: "Lakewood executors face a market where JBLM's PCS (Permanent Change of Station) cycles create seasonal buyer fluctuations, and lakefront properties operate in a niche market with limited inventory. An executor who doesn't account for these Lakewood-specific patterns risks mispricing or mistiming the sale. our team's local experience helps executors navigate these dynamics with confidence.",
     },
     "attorney-fiduciary-support": {
       intro: "Attorneys and fiduciaries managing property matters in Lakewood need a real estate partner who understands the city's military-influenced market, lakefront property dynamics, and the diverse housing stock across Lakewood's neighborhoods. Real Property Planning works with Lakewood-area legal professionals as a responsive, credentialed resource for estate, trust, probate, divorce, and guardianship property matters.",
@@ -2484,7 +2484,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Coordination across legal, financial, and family stakeholders with clear reporting",
         "A consistent local resource for ongoing property-related referrals in the JBLM corridor",
       ],
-      whyLocal: "Lakewood's legal professionals encounter property matters where military influence, lakefront premiums, and the city's diverse housing stock create valuation challenges that generic approaches miss. A home on Gravelly Lake and a property in Tillicum represent fundamentally different markets — yet both are 'Lakewood.' David provides the submarket-specific analysis that attorneys and fiduciaries need for defensible opinions.",
+      whyLocal: "Lakewood's legal professionals encounter property matters where military influence, lakefront premiums, and the city's diverse housing stock create valuation challenges that generic approaches miss. A home on Gravelly Lake and a property in Tillicum represent fundamentally different markets — yet both are 'Lakewood.' Our team provides the submarket-specific analysis that attorneys and fiduciaries need for defensible opinions.",
     },
     "valuation-guidance": {
       intro: "Lakewood's real estate market presents distinct valuation challenges — lakefront properties on American Lake and Gravelly Lake operate in a niche market, JBLM-adjacent areas are influenced by military buyer cycles, and the city's broader neighborhoods span a wide price range. When accurate property valuation matters for estate planning, divorce, trust administration, or a pending sale, Lakewood's segmented market makes property-specific assessment essential.",
@@ -2494,7 +2494,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A trustee needing documented valuation for a trust-owned Lakewood property where military rental history complicates the owner-occupied market comparison",
         "Heirs questioning an automated estimate for an inherited Lakewood home that doesn't account for JBLM buyer demographics or the property's specific condition",
       ],
-      whyLocal: "Lakewood's valuation landscape is defined by three distinct submarkets — exclusive lakefront, JBLM-influenced, and suburban-general — that automated tools frequently conflate. A property on American Lake may be worth multiples of a similar-sized home near the base, but only if condition and access meet lakefront buyer expectations. David's certified appraisal credentials provide the property-specific analysis that Lakewood's segmented market requires.",
+      whyLocal: "Lakewood's valuation landscape is defined by three distinct submarkets — exclusive lakefront, JBLM-influenced, and suburban-general — that automated tools frequently conflate. A property on American Lake may be worth multiples of a similar-sized home near the base, but only if condition and access meet lakefront buyer expectations. our team's certified appraisal credentials provide the property-specific analysis that Lakewood's segmented market requires.",
     },
     "preparing-home-for-sale": {
       intro: "Preparing a Lakewood home for sale requires understanding which buyer segment the property will attract — lakefront buyers expect different presentation than military families or suburban families. Real Property Planning helps Lakewood sellers identify which improvements generate return in their specific submarket, avoiding both under-preparation that leaves value on the table and over-investment that the market won't reward.",
@@ -2504,7 +2504,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "An estate property in Lakewood's suburban interior that needs cleanout, paint, and carpet to compete with updated listings in the same price range",
         "A former rental property near JBLM being converted from investment presentation to owner-occupied sale — needing guidance on which tenant-era wear to address",
       ],
-      whyLocal: "Preparation strategy in Lakewood depends heavily on which submarket the property serves. Lakefront homes warrant premium staging and exterior investment; JBLM-adjacent homes need practical, cost-conscious improvements that appeal to military-family budgets. David's experience with Lakewood's distinct buyer segments helps sellers invest preparation dollars where they'll generate the strongest return.",
+      whyLocal: "Preparation strategy in Lakewood depends heavily on which submarket the property serves. Lakefront homes warrant premium staging and exterior investment; JBLM-adjacent homes need practical, cost-conscious improvements that appeal to military-family budgets. our team's experience with Lakewood's distinct buyer segments helps sellers invest preparation dollars where they'll generate the strongest return.",
     },
     "divorce-related-home-sales": {
       intro: "Divorce-related property sales in Lakewood are complicated by the city's segmented market — lakefront homes, JBLM-adjacent properties, and suburban-interior neighborhoods each have different valuations, and spouses may reference very different comparable sales to support their positions. Real Property Planning provides the objective, property-specific pricing that Lakewood divorce situations require, including situations involving military service members and PCS-related timelines.",
@@ -2514,7 +2514,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A mediated divorce involving a Lakewood home where one party wants to retain the property — needing buyout valuation that accounts for JBLM market dynamics",
         "A contentious divorce where the Lakewood home's proximity to the base creates disagreement about whether military rental demand supports a higher or lower valuation",
       ],
-      whyLocal: "Divorce negotiations involving Lakewood property often involve military-specific considerations — PCS timelines, BAH (Basic Allowance for Housing) rental dynamics, and the question of whether the home's value reflects its owner-occupied appeal or its rental income potential. David's experience with JBLM-area properties helps both parties and their attorneys arrive at fair, defensible valuations that account for Lakewood's specific market realities.",
+      whyLocal: "Divorce negotiations involving Lakewood property often involve military-specific considerations — PCS timelines, BAH (Basic Allowance for Housing) rental dynamics, and the question of whether the home's value reflects its owner-occupied appeal or its rental income potential. our team's experience with JBLM-area properties helps both parties and their attorneys arrive at fair, defensible valuations that account for Lakewood's specific market realities.",
     },
     "trust-estate-property-sales": {
       intro: "Trust-owned property in Lakewood may include lakefront homes on American or Gravelly Lake, established suburban properties, or homes in JBLM-adjacent neighborhoods — each requiring different fiduciary considerations. Real Property Planning provides trustees with the locally informed, defensible guidance that Lakewood's segmented real estate market demands.",
@@ -2524,7 +2524,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A trustee preparing to sell a trust-owned home in Lakewood's suburban interior where the property competes against a range of housing types and price points",
         "A beneficiary questioning the trustee's pricing because automated estimates don't distinguish between Lakewood's lakefront and non-lakefront submarkets",
       ],
-      whyLocal: "Trust property sales in Lakewood require fiduciary guidance that accounts for the city's distinct market segments. A trustee who prices a lakefront property based on suburban comps — or vice versa — creates fiduciary exposure. David's dual credentials provide the submarket-specific analysis that Lakewood trust situations demand, ensuring pricing decisions can withstand beneficiary scrutiny.",
+      whyLocal: "Trust property sales in Lakewood require fiduciary guidance that accounts for the city's distinct market segments. A trustee who prices a lakefront property based on suburban comps — or vice versa — creates fiduciary exposure. our team's dual credentials provide the submarket-specific analysis that Lakewood trust situations demand, ensuring pricing decisions can withstand beneficiary scrutiny.",
     },
   },
 
@@ -2552,7 +2552,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Clear communication with multiple heirs or parties managing the process from different locations",
         "Full transaction management accounting for Bothell's dual-county market dynamics",
       ],
-      whyLocal: "Bothell's dual-county position means that a home near the Snohomish County line may compete against Canyon Park listings, while one near downtown Bothell competes with Kenmore or Woodinville. This cross-boundary dynamic makes automated estimates — which typically draw from a single geographic radius — especially unreliable. David Stein's on-site assessment accounts for which comparable sales actually apply to each Bothell property based on its specific location and buyer pool.",
+      whyLocal: "Bothell's dual-county position means that a home near the Snohomish County line may compete against Canyon Park listings, while one near downtown Bothell competes with Kenmore or Woodinville. This cross-boundary dynamic makes automated estimates — which typically draw from a single geographic radius — especially unreliable. Real Property Planning's on-site assessment accounts for which comparable sales actually apply to each Bothell property based on its specific location and buyer pool.",
     },
     "senior-transitions": {
       intro: "Many Bothell seniors have lived in the community through decades of transformation — from a quiet crossroads town to a growing city with a university campus, expanding commercial corridors, and evolving neighborhoods. When it's time to transition from a longtime Bothell home, the sale involves understanding how the city's growth has affected property values while coordinating a move that may lead to a nearby senior community, a family member's home, or a smaller local residence.",
@@ -2571,7 +2571,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Vendor coordination for cleanout, repairs, and staging appropriate for Bothell's market expectations",
         "Full-service management so the family can focus on the transition rather than transaction logistics",
       ],
-      whyLocal: "Bothell seniors often own homes in the original core or established neighborhoods that have been reshaped by the city's growth. The gap between what these homes meant to the family and what today's market values can be significant — especially when competing against newer construction in Canyon Park. David's appraisal background helps families understand where their Bothell property actually stands and what preparation makes practical sense.",
+      whyLocal: "Bothell seniors often own homes in the original core or established neighborhoods that have been reshaped by the city's growth. The gap between what these homes meant to the family and what today's market values can be significant — especially when competing against newer construction in Canyon Park. our team's appraisal background helps families understand where their Bothell property actually stands and what preparation makes practical sense.",
     },
     "downsizing-services": {
       intro: "Downsizing from a Bothell home means navigating a market that spans two counties and includes everything from mid-century homes in the original downtown to newer condos and townhomes near Canyon Park. Whether staying in the Bothell area or relocating, the process benefits from someone who understands how the city's diverse housing options and dual-county dynamics affect both the sale and realistic next-step planning.",
@@ -2581,7 +2581,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A homeowner near Canyon Park whose property competes with newer construction — uncertain whether the home's strengths offset its age in today's market",
         "A family helping a parent transition from a Sammamish River corridor home to a more manageable living situation",
       ],
-      whyLocal: "Downsizing in Bothell is complicated by the city's dual-county housing market and the wide range of replacement options — from established King County neighborhoods to newer Snohomish County developments. Understanding how sale proceeds from one Bothell submarket translate into purchasing power in another requires cross-county market knowledge that David provides.",
+      whyLocal: "Downsizing in Bothell is complicated by the city's dual-county housing market and the wide range of replacement options — from established King County neighborhoods to newer Snohomish County developments. Understanding how sale proceeds from one Bothell submarket translate into purchasing power in another requires cross-county market knowledge that Our team provides.",
     },
     "executor-support": {
       intro: "Executors managing estate property in Bothell face a market where the city's dual-county position, the Canyon Park growth corridor, and the contrast between established neighborhoods and newer development all affect pricing and strategy. Whether the estate property is a mid-century home near downtown, a property near UW Bothell, or a home in the Canyon Park area, executors need guidance that accounts for Bothell's specific cross-county dynamics.",
@@ -2600,7 +2600,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Regular communication for executors managing remotely",
         "End-to-end transaction management accounting for Bothell's dual-county dynamics",
       ],
-      whyLocal: "Bothell executors face the unusual challenge of a market that straddles two counties — meaning comparable sales, buyer demographics, and even tax implications can vary based on which side of the boundary the property sits. David's experience with Bothell's specific cross-county dynamics helps executors avoid the pricing errors that occur when the wrong comparables are applied.",
+      whyLocal: "Bothell executors face the unusual challenge of a market that straddles two counties — meaning comparable sales, buyer demographics, and even tax implications can vary based on which side of the boundary the property sits. our team's experience with Bothell's specific cross-county dynamics helps executors avoid the pricing errors that occur when the wrong comparables are applied.",
     },
     "attorney-fiduciary-support": {
       intro: "Attorneys and fiduciaries managing property matters in Bothell need a real estate partner who understands the city's dual-county market dynamics, the contrast between established and newly developed neighborhoods, and the documentation standards that legal proceedings require. Real Property Planning works with Bothell-area legal professionals as a responsive, credentialed resource for property matters that span King and Snohomish County boundaries.",
@@ -2619,7 +2619,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Coordination across legal, financial, and family stakeholders with clear reporting",
         "A consistent locally expert resource for ongoing property-related referrals in the cross-county corridor",
       ],
-      whyLocal: "Bothell's dual-county position creates property valuation scenarios that attorneys in single-county markets rarely encounter. A defensible pricing opinion for a Bothell property must account for which county's sales are truly comparable — a distinction that automated tools and distant brokers routinely miss. David provides the cross-boundary analysis that Bothell-area attorneys and fiduciaries need.",
+      whyLocal: "Bothell's dual-county position creates property valuation scenarios that attorneys in single-county markets rarely encounter. A defensible pricing opinion for a Bothell property must account for which county's sales are truly comparable — a distinction that automated tools and distant brokers routinely miss. Our team provides the cross-boundary analysis that Bothell-area attorneys and fiduciaries need.",
     },
     "valuation-guidance": {
       intro: "Bothell's dual-county position creates valuation complexity that few other cities present — comparable sales from King County and Snohomish County may support different pricing conclusions, and the city's rapid evolution from a quiet crossroads to a growing university-adjacent community has created neighborhoods with very different value trajectories. Real Property Planning provides the property-specific, cross-county valuation insight that Bothell situations require.",
@@ -2629,7 +2629,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A trustee needing documented valuation for a trust-owned Bothell property near the Canyon Park growth corridor where development activity is changing comparables",
         "Heirs questioning an automated estimate that averaged incompatible sales from both sides of the county line",
       ],
-      whyLocal: "Bothell's valuation challenges stem from its dual-county identity — automated tools that draw comparable sales from a geographic radius inevitably mix King County and Snohomish County markets, producing unreliable estimates. David's certified appraisal credentials and local experience allow him to select the truly relevant comparables for each Bothell property, providing the analytically grounded valuation that cross-county situations demand.",
+      whyLocal: "Bothell's valuation challenges stem from its dual-county identity — automated tools that draw comparable sales from a geographic radius inevitably mix King County and Snohomish County markets, producing unreliable estimates. our team's certified appraisal credentials and local experience allow him to select the truly relevant comparables for each Bothell property, providing the analytically grounded valuation that cross-county situations demand.",
     },
     "preparing-home-for-sale": {
       intro: "Preparing a Bothell home for sale requires understanding whether the property competes against Canyon Park's newer construction, established homes in the original downtown core, or properties along the Sammamish River corridor — each segment with different buyer expectations. Real Property Planning helps Bothell sellers identify which improvements generate return in their specific submarket and avoid preparation that exceeds what the market will reward.",
@@ -2639,7 +2639,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "An estate property near UW Bothell that needs cleanout and presentation — with questions about whether to target student-rental investors or owner-occupants",
         "A Canyon Park area home where the surrounding newer development sets high buyer expectations for condition and finish",
       ],
-      whyLocal: "Preparation strategy in Bothell depends on which submarket the property serves. Downtown-core homes can leverage walkability and character; Canyon Park properties need to match the area's newer construction standards; river corridor homes should highlight their natural setting. David's knowledge of Bothell's distinct buyer expectations in each area helps sellers invest preparation dollars strategically.",
+      whyLocal: "Preparation strategy in Bothell depends on which submarket the property serves. Downtown-core homes can leverage walkability and character; Canyon Park properties need to match the area's newer construction standards; river corridor homes should highlight their natural setting. our team's knowledge of Bothell's distinct buyer expectations in each area helps sellers invest preparation dollars strategically.",
     },
     "divorce-related-home-sales": {
       intro: "Divorce-related property sales in Bothell are complicated by the city's dual-county market — spouses and their attorneys may reference comparable sales from different counties, and the wide range of Bothell's neighborhoods means the same city name can encompass very different property values. Real Property Planning provides the objective, cross-county analysis that Bothell divorce situations require.",
@@ -2649,7 +2649,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A mediated divorce involving a home near UW Bothell where development potential creates disagreement about whether the property's value is residential or speculative",
         "A divorce where one party wants to retain the Bothell home — needing buyout valuation that accurately reflects the property's position in the dual-county market",
       ],
-      whyLocal: "Divorce negotiations involving Bothell property are uniquely complicated by the dual-county dynamic. Each party's attorney may pull comparables from different sides of the King-Snohomish boundary, reaching different conclusions. David's cross-county experience and appraisal credentials provide the neutral, property-specific analysis needed for equitable resolution.",
+      whyLocal: "Divorce negotiations involving Bothell property are uniquely complicated by the dual-county dynamic. Each party's attorney may pull comparables from different sides of the King-Snohomish boundary, reaching different conclusions. our team's cross-county experience and appraisal credentials provide the neutral, property-specific analysis needed for equitable resolution.",
     },
     "trust-estate-property-sales": {
       intro: "Trust-owned property in Bothell presents fiduciary challenges that reflect the city's dual-county position and evolving market — trustees need guidance that accounts for which county's comparables apply, how Canyon Park's growth affects neighboring values, and whether the property's location near UW Bothell creates development considerations. Real Property Planning provides trustees with the cross-county expertise that Bothell trust administration requires.",
@@ -2659,7 +2659,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A trustee preparing to sell a trust-owned home near the Sammamish River corridor where trail access and natural setting create value that desktop valuation tools miss",
         "A beneficiary questioning the trust's pricing because automated estimates mix King County and Snohomish County sales indiscriminately",
       ],
-      whyLocal: "Trust property sales in Bothell require fiduciary guidance that navigates the city's dual-county market with precision. A trustee who applies the wrong county's comparables — or blends both without distinction — creates pricing that may not withstand beneficiary challenge. David's cross-county experience and appraisal background provide the defensible, property-specific analysis that Bothell trust situations demand.",
+      whyLocal: "Trust property sales in Bothell require fiduciary guidance that navigates the city's dual-county market with precision. A trustee who applies the wrong county's comparables — or blends both without distinction — creates pricing that may not withstand beneficiary challenge. our team's cross-county experience and appraisal background provide the defensible, property-specific analysis that Bothell trust situations demand.",
     },
   },
 
@@ -2687,7 +2687,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Clear communication with multiple heirs or parties managing the process from different locations",
         "Full transaction management from initial assessment through closing in Kent's competitive market",
       ],
-      whyLocal: "Kent's housing market is shaped by geography — East Hill homes face different buyer expectations than valley-floor properties or West Hill view homes. The city's proximity to major employers, industrial areas, and transportation corridors creates submarket dynamics that automated estimates frequently flatten into a single 'Kent average.' David Stein's on-site assessment accounts for how specific location, condition, and neighborhood context affect realistic pricing.",
+      whyLocal: "Kent's housing market is shaped by geography — East Hill homes face different buyer expectations than valley-floor properties or West Hill view homes. The city's proximity to major employers, industrial areas, and transportation corridors creates submarket dynamics that automated estimates frequently flatten into a single 'Kent average.' Real Property Planning's on-site assessment accounts for how specific location, condition, and neighborhood context affect realistic pricing.",
     },
     "senior-transitions": {
       intro: "Many Kent seniors have lived on the East Hill or in established valley neighborhoods for decades — watching the city grow from a smaller community into one of South King County's largest cities. When it's time to transition from a longtime Kent home, the process involves understanding how the city's growth and changing demographics have affected property values while coordinating a move that respects the family's pace and priorities.",
@@ -2706,7 +2706,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Vendor coordination for cleanout, repairs, and presentation appropriate for Kent's market",
         "Full-service management so the family can prioritize their parent's transition",
       ],
-      whyLocal: "Kent seniors often own homes in neighborhoods where the surrounding community has changed significantly. The East Hill that a senior remembers from the 1970s looks and functions differently today — and the buyer pool has evolved accordingly. David's experience with Kent's specific submarkets helps families set realistic expectations and prepare properties in ways that match what today's buyers are actually looking for.",
+      whyLocal: "Kent seniors often own homes in neighborhoods where the surrounding community has changed significantly. The East Hill that a senior remembers from the 1970s looks and functions differently today — and the buyer pool has evolved accordingly. our team's experience with Kent's specific submarkets helps families set realistic expectations and prepare properties in ways that match what today's buyers are actually looking for.",
     },
     "downsizing-services": {
       intro: "Downsizing from a Kent home involves navigating one of South King County's most diverse housing markets — where East Hill ramblers, valley townhomes, and West Hill view properties each serve different buyer segments and carry different values. Whether staying in Kent or moving to a smaller community, the process benefits from someone who understands how the city's wide range of housing options and price points affects both the sale and realistic next-step planning.",
@@ -2716,7 +2716,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A homeowner near Panther Lake considering whether to stay in Kent in a smaller home or relocate to a community with more senior-oriented amenities",
         "A family helping a parent transition from a valley-area Kent home where the neighborhood's commercial adjacency affects pricing expectations",
       ],
-      whyLocal: "Downsizing decisions in Kent are complicated by the city's wide price range — an East Hill rambler, a valley condo, and a West Hill view home represent very different values and buyer pools. Understanding how proceeds from one Kent submarket translate into options in another (or in neighboring cities) requires the comparative market knowledge that David provides.",
+      whyLocal: "Downsizing decisions in Kent are complicated by the city's wide price range — an East Hill rambler, a valley condo, and a West Hill view home represent very different values and buyer pools. Understanding how proceeds from one Kent submarket translate into options in another (or in neighboring cities) requires the comparative market knowledge that Our team provides.",
     },
     "executor-support": {
       intro: "Executors managing estate property in Kent face one of South King County's most diverse housing markets — where East Hill, West Hill, valley, and Panther Lake properties each operate in different micro-markets with different buyer expectations. Whether the estate property is a midcentury rambler on the East Hill, a townhome near the valley floor, or a view property on the West Hill, executors need guidance that reflects Kent's neighborhood-level pricing realities.",
@@ -2735,7 +2735,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Regular communication for executors managing from out of area",
         "End-to-end transaction management from assessment through closing",
       ],
-      whyLocal: "Kent executors face a market where the difference between neighborhoods — East Hill versus valley, Panther Lake versus West Hill — can represent significant pricing variation. An executor who relies on a single 'Kent' average risks either leaving money on the table or overpricing into a stale listing. David's South King County experience helps executors price accurately for their property's specific submarket.",
+      whyLocal: "Kent executors face a market where the difference between neighborhoods — East Hill versus valley, Panther Lake versus West Hill — can represent significant pricing variation. An executor who relies on a single 'Kent' average risks either leaving money on the table or overpricing into a stale listing. our team's South King County experience helps executors price accurately for their property's specific submarket.",
     },
     "attorney-fiduciary-support": {
       intro: "Attorneys and fiduciaries managing property matters in Kent need a real estate partner who understands South King County's largest city — its diverse housing stock, the geographic divisions that create distinct micro-markets, and the documentation standards that legal proceedings require. Real Property Planning works with Kent-area legal professionals as a responsive, credentialed resource for estate, trust, probate, divorce, and guardianship property matters across the city's varied neighborhoods.",
@@ -2754,7 +2754,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Coordination across legal, financial, and family stakeholders with clear reporting",
         "A consistent South King County resource for ongoing property-related referrals",
       ],
-      whyLocal: "Kent's attorneys encounter property matters where the city's geographic diversity creates valuation complexity — an East Hill rambler and a valley townhome both carry a Kent address but serve very different markets. David provides the neighborhood-specific analysis that attorneys and fiduciaries need for defensible pricing opinions in a city where 'Kent' encompasses a wider range of values than most clients expect.",
+      whyLocal: "Kent's attorneys encounter property matters where the city's geographic diversity creates valuation complexity — an East Hill rambler and a valley townhome both carry a Kent address but serve very different markets. Our team provides the neighborhood-specific analysis that attorneys and fiduciaries need for defensible pricing opinions in a city where 'Kent' encompasses a wider range of values than most clients expect.",
     },
     "valuation-guidance": {
       intro: "Kent's size and geographic diversity create valuation challenges that simpler markets don't present — East Hill, West Hill, the valley floor, and Panther Lake each have their own comparable-sales patterns, buyer demographics, and pricing dynamics. When accurate property valuation matters for estate planning, divorce, trust administration, or a pending sale, Kent's internal market segmentation makes property-specific assessment essential.",
@@ -2764,7 +2764,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A trustee needing documented valuation for a trust-owned Kent property where the valley location and commercial adjacency complicate standard residential comparisons",
         "Heirs questioning an automated estimate for an inherited Kent home that doesn't account for the property's specific East Hill or West Hill location premium",
       ],
-      whyLocal: "Kent's valuation landscape is complicated by the city's size and the significant pricing differences between its submarkets. Automated tools that average sales across a wide radius produce estimates that don't reflect any specific Kent neighborhood accurately. David's certified appraisal credentials and South King County experience provide the submarket-specific analysis that Kent's diverse housing market requires.",
+      whyLocal: "Kent's valuation landscape is complicated by the city's size and the significant pricing differences between its submarkets. Automated tools that average sales across a wide radius produce estimates that don't reflect any specific Kent neighborhood accurately. our team's certified appraisal credentials and South King County experience provide the submarket-specific analysis that Kent's diverse housing market requires.",
     },
     "preparing-home-for-sale": {
       intro: "Preparing a Kent home for sale requires understanding what buyers expect in the property's specific submarket — East Hill buyers have different expectations than those shopping in the valley or on the West Hill. Real Property Planning helps Kent sellers identify which improvements drive return at their price point and location, avoiding both under-preparation that limits buyer interest and over-investment that the local market won't support.",
@@ -2774,7 +2774,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "An estate property near the valley floor that needs cleanout, paint, and carpet to compete — but where the price point limits how much preparation investment makes financial sense",
         "A Panther Lake area home where newer surrounding construction sets buyer expectations that the older property needs to address strategically",
       ],
-      whyLocal: "Preparation strategy in Kent depends heavily on the property's location and price tier. An East Hill home at one price point warrants different investment than a valley-floor property at another. Over-improving a Kent home beyond what the neighborhood supports wastes the seller's money; under-preparing it costs more in sale price than the preparation would have cost. David's experience with Kent's distinct submarkets helps sellers find the right balance.",
+      whyLocal: "Preparation strategy in Kent depends heavily on the property's location and price tier. An East Hill home at one price point warrants different investment than a valley-floor property at another. Over-improving a Kent home beyond what the neighborhood supports wastes the seller's money; under-preparing it costs more in sale price than the preparation would have cost. our team's experience with Kent's distinct submarkets helps sellers find the right balance.",
     },
     "divorce-related-home-sales": {
       intro: "Divorce-related property sales in Kent are complicated by the city's internal market segmentation — spouses and their attorneys may reference comparable sales from different Kent neighborhoods that support very different value conclusions. The East Hill, West Hill, valley, and Panther Lake areas each function as distinct micro-markets, and accurate pricing requires understanding which comparables truly apply. Real Property Planning provides the objective, neighborhood-specific analysis that Kent divorce situations require.",
@@ -2784,7 +2784,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A mediated divorce involving a Kent home where one party wants to retain the property — needing buyout valuation that accurately reflects the specific neighborhood's market",
         "A contentious divorce where the Kent home's proximity to commercial areas creates disagreement about whether the location depresses or supports value",
       ],
-      whyLocal: "Divorce negotiations involving Kent property are complicated by the city's wide price range and internal diversity. Both parties may be 'right' about Kent values — just referencing different parts of the city. David's experience across Kent's submarkets and his appraisal credentials provide the neutral, property-specific analysis needed for fair resolution when each side's comparable sales tell different stories.",
+      whyLocal: "Divorce negotiations involving Kent property are complicated by the city's wide price range and internal diversity. Both parties may be 'right' about Kent values — just referencing different parts of the city. our team's experience across Kent's submarkets and his appraisal credentials provide the neutral, property-specific analysis needed for fair resolution when each side's comparable sales tell different stories.",
     },
     "trust-estate-property-sales": {
       intro: "Trust-owned property in Kent may be located in any of the city's diverse submarkets — from East Hill ramblers to West Hill view homes to valley-floor properties near commercial corridors. Each location creates different fiduciary considerations for trustees responsible for maximizing trust value while managing the sale appropriately. Real Property Planning provides trustees with the South King County expertise that Kent's varied housing market demands.",
@@ -2794,7 +2794,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A trustee preparing to sell a trust-owned West Hill home where the view premium needs on-site verification — not desktop estimation",
         "A beneficiary questioning the trustee's pricing because automated estimates don't distinguish between Kent's dramatically different submarkets",
       ],
-      whyLocal: "Trust property sales in Kent require fiduciary guidance that accounts for the city's internal market diversity. A trustee who applies citywide Kent averages to an East Hill property — or uses West Hill view-home comparables for a valley-floor property — creates pricing that may not withstand beneficiary scrutiny. David's South King County experience and appraisal credentials provide the submarket-specific analysis that Kent trust situations demand.",
+      whyLocal: "Trust property sales in Kent require fiduciary guidance that accounts for the city's internal market diversity. A trustee who applies citywide Kent averages to an East Hill property — or uses West Hill view-home comparables for a valley-floor property — creates pricing that may not withstand beneficiary scrutiny. our team's South King County experience and appraisal credentials provide the submarket-specific analysis that Kent trust situations demand.",
     },
   },
 
@@ -2821,7 +2821,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Clear communication with multiple heirs and professionals across different locations",
         "Full-service transaction management from initial property assessment through closing",
       ],
-      whyLocal: "Puyallup's market is shaped by the valley's geography — South Hill properties command different premiums than downtown-area homes, and properties with agricultural-heritage characteristics require specialized understanding. Automated tools that average sales across the area miss the elevation, lot-type, and neighborhood distinctions that materially affect value. David's on-site assessment accounts for these valley-specific dynamics.",
+      whyLocal: "Puyallup's market is shaped by the valley's geography — South Hill properties command different premiums than downtown-area homes, and properties with agricultural-heritage characteristics require specialized understanding. Automated tools that average sales across the area miss the elevation, lot-type, and neighborhood distinctions that materially affect value. our team's on-site assessment accounts for these valley-specific dynamics.",
     },
     "senior-transitions": {
       intro: "Many Puyallup seniors have spent decades in their South Hill or downtown-area homes, raising families in the valley community. When it's time to transition to a smaller home, senior living, or a family member's residence, the sale involves both financial considerations and deep personal attachment. Real Property Planning helps Puyallup families navigate this process with experienced pricing and patient coordination.",
@@ -2840,7 +2840,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Vendor coordination for cleanout, repairs, and presentation appropriate for the valley market",
         "Full-service management so the family can focus on the transition",
       ],
-      whyLocal: "Puyallup seniors often own homes with features — larger lots, outbuildings, mature landscaping — that automated tools undervalue. The gap between emotional significance and realistic market position requires locally informed analysis. David's appraisal background helps families understand where their property stands in a valley market where neighborhood, elevation, and lot characteristics all influence pricing.",
+      whyLocal: "Puyallup seniors often own homes with features — larger lots, outbuildings, mature landscaping — that automated tools undervalue. The gap between emotional significance and realistic market position requires locally informed analysis. our team's appraisal background helps families understand where their property stands in a valley market where neighborhood, elevation, and lot characteristics all influence pricing.",
     },
     "executor-support": {
       intro: "Executors managing estate property in Puyallup face a market where South Hill homes, downtown-area properties, and valley-floor locations each carry different value dynamics. Real Property Planning provides the valley expertise and steady communication that Puyallup executors need to price accurately and manage the sale alongside Pierce County probate requirements.",
@@ -2859,7 +2859,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Regular communication for executors managing from out of area",
         "End-to-end transaction management through closing",
       ],
-      whyLocal: "Puyallup executors face a market where the valley's range of property types means comparable selection requires local judgment. David's dual credentials provide the defensible, neighborhood-specific pricing analysis that Puyallup estate situations require.",
+      whyLocal: "Puyallup executors face a market where the valley's range of property types means comparable selection requires local judgment. our team's dual credentials provide the defensible, neighborhood-specific pricing analysis that Puyallup estate situations require.",
     },
     "downsizing-services": {
       intro: "Downsizing from a longtime Puyallup home often means leaving a larger South Hill property or a family home near downtown for something smaller. Real Property Planning helps homeowners manage the sale with clear pricing, practical coordination, and respect for the emotional weight of leaving a home that may hold decades of memories.",
@@ -2876,7 +2876,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Cleanout and vendor coordination so the homeowner isn't managing everything simultaneously",
         "Patient communication throughout a personally significant transition",
       ],
-      whyLocal: "Downsizing in Puyallup often involves properties with characteristics that don't fit standard comparable analysis neatly. David's valley experience helps downsizing clients understand realistic market value for homes where lot and improvements create unique buyer appeal.",
+      whyLocal: "Downsizing in Puyallup often involves properties with characteristics that don't fit standard comparable analysis neatly. our team's valley experience helps downsizing clients understand realistic market value for homes where lot and improvements create unique buyer appeal.",
     },
     "attorney-fiduciary-support": {
       intro: "Attorneys and fiduciaries working on matters involving Puyallup property need a real estate professional who understands the valley's diverse housing stock. Real Property Planning serves as a reliable resource for Pierce County legal professionals handling Puyallup property matters where local expertise affects legal and financial outcomes.",
@@ -2895,7 +2895,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Coordination of property preparation and sale logistics as needed",
         "Objective guidance grounded in appraisal methodology",
       ],
-      whyLocal: "Legal professionals handling Puyallup matters need a partner who understands valley-specific valuation factors. David's dual credentials provide the objective foundation that Pierce County legal proceedings and fiduciary situations require.",
+      whyLocal: "Legal professionals handling Puyallup matters need a partner who understands valley-specific valuation factors. our team's dual credentials provide the objective foundation that Pierce County legal proceedings and fiduciary situations require.",
     },
     "valuation-guidance": {
       intro: "Accurate property valuation in Puyallup requires understanding the valley's distinct submarkets — South Hill properties carry different premiums than downtown-area homes, and lots with outbuildings or acreage need specialized analysis. Real Property Planning provides the valuation insight Puyallup clients need for estate settlements, trust administration, and informed sale decisions.",
@@ -2905,7 +2905,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A trustee needing documented valuation for a trust-owned property with outbuildings that standard comparisons don't address",
         "Heirs questioning an automated estimate that doesn't account for the property's specific neighborhood or lot characteristics",
       ],
-      whyLocal: "Puyallup's valuation landscape is complicated by the valley's geography and wide range of property types. Automated tools that average sales produce estimates that don't reflect any specific Puyallup neighborhood accurately. David's credentials provide the property-specific analysis that valley situations require.",
+      whyLocal: "Puyallup's valuation landscape is complicated by the valley's geography and wide range of property types. Automated tools that average sales produce estimates that don't reflect any specific Puyallup neighborhood accurately. our team's credentials provide the property-specific analysis that valley situations require.",
     },
     "preparing-home-for-sale": {
       intro: "Preparing a Puyallup home for sale requires understanding what buyers expect at the property's specific price point and neighborhood. South Hill buyers have different expectations than those shopping near downtown or in more affordable valley areas. Real Property Planning helps sellers identify which improvements deliver return and which over-invest for their submarket.",
@@ -2915,7 +2915,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "An estate property with outbuildings where preparation strategy depends on whether buyers value or see those features as complications",
         "A valley-floor home where practical curb appeal matters more than luxury upgrades at the price point",
       ],
-      whyLocal: "Preparation strategy in Puyallup depends on the property's location and price tier. A South Hill home warrants different investment than a valley-floor property. David's valley experience helps sellers find the right balance between under-preparation and over-investment.",
+      whyLocal: "Preparation strategy in Puyallup depends on the property's location and price tier. A South Hill home warrants different investment than a valley-floor property. our team's valley experience helps sellers find the right balance between under-preparation and over-investment.",
     },
     "divorce-related-home-sales": {
       intro: "Divorce-related property sales in Puyallup are complicated by the valley's internal market variation — spouses may reference South Hill, downtown, or valley-floor comparables to support different value conclusions. Real Property Planning provides the objective, neighborhood-specific analysis that Puyallup divorce situations require.",
@@ -2925,7 +2925,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A mediated divorce where one party wants to retain the property and needs fair buyout valuation",
         "A contentious divorce where the property's proximity to commercial areas creates location-value disagreement",
       ],
-      whyLocal: "Divorce negotiations involving Puyallup property are complicated by the valley's price range and internal diversity. Both parties may cite 'Puyallup sales' from different neighborhoods. David's valley experience provides the neutral analysis needed for fair resolution.",
+      whyLocal: "Divorce negotiations involving Puyallup property are complicated by the valley's price range and internal diversity. Both parties may cite 'Puyallup sales' from different neighborhoods. our team's valley experience provides the neutral analysis needed for fair resolution.",
     },
     "trust-estate-property-sales": {
       intro: "Trust-owned property in Puyallup may be located anywhere in the valley — from South Hill view homes to downtown-area older properties to lots with agricultural-heritage characteristics. Each creates different fiduciary considerations for trustees. Real Property Planning provides the Pierce County expertise that Puyallup's varied market demands.",
@@ -2935,7 +2935,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A trustee preparing to sell a downtown-area home where charm and walkability appeal to a specific buyer segment",
         "A beneficiary questioning the trustee's pricing because automated estimates don't distinguish South Hill from valley-floor markets",
       ],
-      whyLocal: "Trust property sales in Puyallup require fiduciary guidance that accounts for the valley's diverse property types. David's valley experience and appraisal credentials provide the submarket-specific analysis that fiduciary situations demand.",
+      whyLocal: "Trust property sales in Puyallup require fiduciary guidance that accounts for the valley's diverse property types. our team's valley experience and appraisal credentials provide the submarket-specific analysis that fiduciary situations demand.",
     },
   },
 
@@ -2958,7 +2958,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Clear communication with multiple heirs and professionals across locations",
         "Full-service transaction management from initial assessment through closing",
       ],
-      whyLocal: "Federal Way's market is complicated by geographic spread and internal diversity. A lake-adjacent property, a town-center townhome, and a hillside view home operate in effectively different markets despite sharing a Federal Way address. David's South King County experience and appraisal credentials provide the property-specific analysis estate situations require.",
+      whyLocal: "Federal Way's market is complicated by geographic spread and internal diversity. A lake-adjacent property, a town-center townhome, and a hillside view home operate in effectively different markets despite sharing a Federal Way address. our team's South King County experience and appraisal credentials provide the property-specific analysis estate situations require.",
     },
     "senior-transitions": {
       intro: "Many Federal Way seniors have lived in their homes since the city's major growth period — watching neighborhoods develop and the town center evolve. When it's time to transition from a longtime Federal Way home, the sale involves meaningful financial value and personal attachment. Real Property Planning helps families navigate this process with honest pricing, practical coordination, and patience.",
@@ -2977,7 +2977,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Vendor coordination for cleanout, repairs, and presentation",
         "Full-service management from first consultation through closing",
       ],
-      whyLocal: "Federal Way seniors often own homes that have appreciated but may not match today's buyer expectations. The gap between emotional and realistic market value requires honest, condition-based analysis. David's appraisal background helps families understand exactly where their property stands in a market with increasing competition from newer construction.",
+      whyLocal: "Federal Way seniors often own homes that have appreciated but may not match today's buyer expectations. The gap between emotional and realistic market value requires honest, condition-based analysis. our team's appraisal background helps families understand exactly where their property stands in a market with increasing competition from newer construction.",
     },
     "executor-support": {
       intro: "Executors managing Federal Way estate property face a South King County market where values vary significantly by neighborhood, lake proximity, views, and housing age. Real Property Planning provides the local expertise and reliable communication that Federal Way executors need alongside legal responsibilities.",
@@ -2996,7 +2996,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Guidance on King County probate timelines and market conditions",
         "End-to-end transaction management through closing",
       ],
-      whyLocal: "Federal Way executors face a market where comparable selection requires local judgment. Lake-adjacent, view, and established-neighborhood properties operate in different micro-markets. David's credentials provide the defensible pricing analysis that Federal Way estate situations require.",
+      whyLocal: "Federal Way executors face a market where comparable selection requires local judgment. Lake-adjacent, view, and established-neighborhood properties operate in different micro-markets. our team's credentials provide the defensible pricing analysis that Federal Way estate situations require.",
     },
     "downsizing-services": {
       intro: "Downsizing from a Federal Way home often means leaving a property in an established neighborhood — perhaps near the lakes or in a community where the family has spent decades. Real Property Planning helps homeowners manage the sale with clear pricing and understanding of what the home is worth in today's South King County market.",
@@ -3013,7 +3013,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Cleanout and vendor coordination so the homeowner isn't managing everything simultaneously",
         "Patient communication throughout a personally significant transition",
       ],
-      whyLocal: "Downsizing in Federal Way involves understanding how the city's range of neighborhoods affects buyer demand for each specific property. David's South King experience helps clients understand realistic value and preparation priorities.",
+      whyLocal: "Downsizing in Federal Way involves understanding how the city's range of neighborhoods affects buyer demand for each specific property. our team's South King experience helps clients understand realistic value and preparation priorities.",
     },
     "attorney-fiduciary-support": {
       intro: "Attorneys and fiduciaries handling Federal Way property matters need a real estate professional who understands the city's diverse South King County market and can provide defensible guidance. Real Property Planning serves as a reliable resource for legal professionals with Federal Way property matters.",
@@ -3032,7 +3032,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Coordination of property preparation and sale logistics as needed",
         "Objective guidance grounded in appraisal methodology",
       ],
-      whyLocal: "Legal professionals handling Federal Way matters need a partner who can distinguish between the city's meaningfully different neighborhoods. David's dual credentials provide the objective foundation that South King County legal proceedings require.",
+      whyLocal: "Legal professionals handling Federal Way matters need a partner who can distinguish between the city's meaningfully different neighborhoods. our team's dual credentials provide the objective foundation that South King County legal proceedings require.",
     },
     "valuation-guidance": {
       intro: "Accurate property valuation in Federal Way requires understanding the city's internal market diversity — lake-adjacent homes, mountain-view properties, town-center condos, and established ramblers each follow different value patterns. Real Property Planning provides the valuation insight that Federal Way clients need for estate settlements, trust administration, and property decisions.",
@@ -3042,7 +3042,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A trustee needing documented valuation where mountain views or lake adjacency affect value",
         "Heirs questioning an automated estimate that averages Federal Way sales without distinguishing neighborhoods",
       ],
-      whyLocal: "Federal Way's valuation landscape is complicated by geographic spread and the wide range of property types. Automated tools produce estimates that don't reflect any specific neighborhood accurately. David's credentials provide the property-specific analysis Federal Way situations demand.",
+      whyLocal: "Federal Way's valuation landscape is complicated by geographic spread and the wide range of property types. Automated tools produce estimates that don't reflect any specific neighborhood accurately. our team's credentials provide the property-specific analysis Federal Way situations demand.",
     },
     "preparing-home-for-sale": {
       intro: "Preparing a Federal Way home for sale requires understanding buyer expectations at the property's price point and location. A home near Steel Lake faces different preparation priorities than one near the town center or in an established hillside neighborhood. Real Property Planning helps sellers avoid both under-preparation and over-investment.",
@@ -3052,7 +3052,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "An estate property that needs cleanout and basic updates but where the price point limits preparation investment",
         "A home competing against newer Federal Way construction where strategic updates help attract today's buyers",
       ],
-      whyLocal: "Preparation strategy in Federal Way depends on location and buyer demographic. Lake-adjacent homes warrant different investment than properties in the city's more affordable segments. David's South King experience helps sellers calibrate preparation to their specific submarket.",
+      whyLocal: "Preparation strategy in Federal Way depends on location and buyer demographic. Lake-adjacent homes warrant different investment than properties in the city's more affordable segments. our team's South King experience helps sellers calibrate preparation to their specific submarket.",
     },
     "divorce-related-home-sales": {
       intro: "Divorce-related property sales in Federal Way are complicated by the city's internal diversity — spouses may cite comparable sales from lake-adjacent, view, or established-neighborhood areas to support different value conclusions. Real Property Planning provides the objective, property-specific analysis Federal Way divorce situations require.",
@@ -3062,7 +3062,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A mediated divorce where one party wants to retain the property and needs accurate buyout valuation",
         "A contentious divorce where the property's age relative to newer construction creates disagreement about competitive positioning",
       ],
-      whyLocal: "Divorce negotiations involving Federal Way property are complicated by the city's wide price range. Both parties may cite real sales from different neighborhoods. David's South King experience provides the neutral analysis needed for fair resolution.",
+      whyLocal: "Divorce negotiations involving Federal Way property are complicated by the city's wide price range. Both parties may cite real sales from different neighborhoods. our team's South King experience provides the neutral analysis needed for fair resolution.",
     },
     "trust-estate-property-sales": {
       intro: "Trust-owned property in Federal Way may be near the lakes, in established residential neighborhoods, or in areas affected by newer development. Each creates different fiduciary considerations. Real Property Planning provides trustees with the South King County expertise that Federal Way's diverse market demands.",
@@ -3072,7 +3072,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A trustee preparing to sell a home in an established neighborhood where newer construction affects positioning",
         "A beneficiary questioning the trustee's pricing because automated estimates don't distinguish Federal Way's varied submarkets",
       ],
-      whyLocal: "Trust property sales in Federal Way require fiduciary guidance that accounts for internal market diversity. A trustee who applies citywide averages to a lake-adjacent property creates pricing that may not withstand beneficiary scrutiny. David's credentials provide the submarket analysis fiduciary situations demand.",
+      whyLocal: "Trust property sales in Federal Way require fiduciary guidance that accounts for internal market diversity. A trustee who applies citywide averages to a lake-adjacent property creates pricing that may not withstand beneficiary scrutiny. our team's credentials provide the submarket analysis fiduciary situations demand.",
     },
   },
 
@@ -3095,7 +3095,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Clear communication with multiple heirs and professionals dispersed geographically",
         "Full-service transaction management from initial assessment through closing",
       ],
-      whyLocal: "Burien's market is defined by its micro-neighborhoods — Three Tree Point, Seahurst, downtown, and the corridors each operate as distinct markets. A waterfront home and a corridor-area rambler share a city name but nothing else in terms of value drivers. David's on-site assessment and appraisal credentials capture these distinctions that automated tools consistently miss.",
+      whyLocal: "Burien's market is defined by its micro-neighborhoods — Three Tree Point, Seahurst, downtown, and the corridors each operate as distinct markets. A waterfront home and a corridor-area rambler share a city name but nothing else in terms of value drivers. our team's on-site assessment and appraisal credentials capture these distinctions that automated tools consistently miss.",
     },
     "senior-transitions": {
       intro: "Many Burien seniors have watched their community evolve from a quiet suburb to a city with a revitalized downtown, diverse neighborhoods, and growing appeal. When it's time to transition from a longtime Burien home, the sale involves meaningful financial considerations and the personal weight of leaving a familiar community. Real Property Planning helps families navigate this with neighborhood-specific pricing and patient coordination.",
@@ -3114,7 +3114,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Vendor coordination for cleanout, repairs, and presentation appropriate for the neighborhood",
         "Full-service management so the family can focus on the transition",
       ],
-      whyLocal: "Burien seniors often own homes in neighborhoods where value has shifted meaningfully. David's appraisal background helps families understand where their specific property stands relative to today's market, not general perceptions.",
+      whyLocal: "Burien seniors often own homes in neighborhoods where value has shifted meaningfully. our team's appraisal background helps families understand where their specific property stands relative to today's market, not general perceptions.",
     },
     "executor-support": {
       intro: "Executors managing Burien estate property face a market where micro-neighborhoods create wide value variation within a compact area. Real Property Planning provides the neighborhood-specific guidance and reliable communication that Burien executors need whether the property is a Three Tree Point waterfront home, a Seahurst hillside property, or a downtown-area rambler.",
@@ -3133,7 +3133,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Guidance on how Burien's revitalization affects realistic pricing for estate properties",
         "End-to-end transaction management through closing",
       ],
-      whyLocal: "Burien executors face a market where the difference between neighborhoods can be dramatic — Three Tree Point pricing has virtually nothing in common with 1st Avenue corridor values. David's experience provides the defensible, micro-neighborhood analysis estate situations require when citywide averages are meaningless.",
+      whyLocal: "Burien executors face a market where the difference between neighborhoods can be dramatic — Three Tree Point pricing has virtually nothing in common with 1st Avenue corridor values. our team's experience provides the defensible, micro-neighborhood analysis estate situations require when citywide averages are meaningless.",
     },
     "downsizing-services": {
       intro: "Downsizing from a Burien home often means leaving a neighborhood with distinctive character — whether Three Tree Point's exclusivity, Seahurst's hillside views, or downtown's walkable convenience. Real Property Planning helps homeowners manage the sale with pricing that reflects their specific micro-market.",
@@ -3150,7 +3150,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Cleanout and vendor coordination so the homeowner can focus on the transition",
         "Patient communication throughout the process",
       ],
-      whyLocal: "Downsizing in Burien requires understanding which micro-market the property belongs to — because Three Tree Point, Seahurst, and downtown attract different buyers with different expectations. David's experience helps clients price and prepare for the right audience.",
+      whyLocal: "Downsizing in Burien requires understanding which micro-market the property belongs to — because Three Tree Point, Seahurst, and downtown attract different buyers with different expectations. our team's experience helps clients price and prepare for the right audience.",
     },
     "attorney-fiduciary-support": {
       intro: "Attorneys and fiduciaries handling Burien property matters need a real estate professional who understands how the city's dramatic micro-neighborhood differences affect valuation and sale strategy. Real Property Planning serves as a reliable resource for legal professionals where neighborhood-specific expertise is essential.",
@@ -3169,7 +3169,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Coordination of property preparation and sale logistics as needed",
         "Objective guidance recognizing how Burien's internal diversity affects valuation",
       ],
-      whyLocal: "Legal professionals handling Burien matters need a partner who can distinguish between dramatically different micro-neighborhoods. A Three Tree Point valuation has nothing in common with a corridor-area assessment — and both carry legal consequences if done poorly. David's dual credentials provide the objective foundation Burien proceedings require.",
+      whyLocal: "Legal professionals handling Burien matters need a partner who can distinguish between dramatically different micro-neighborhoods. A Three Tree Point valuation has nothing in common with a corridor-area assessment — and both carry legal consequences if done poorly. our team's dual credentials provide the objective foundation Burien proceedings require.",
     },
     "valuation-guidance": {
       intro: "Accurate property valuation in Burien requires neighborhood-level precision — Three Tree Point waterfront, Seahurst hillside views, downtown-adjacent walkability, and corridor-area properties each follow entirely different value patterns. Real Property Planning provides the micro-market insight Burien clients need for estate settlements, trust administration, and informed decisions.",
@@ -3179,7 +3179,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A trustee needing documented valuation where the micro-neighborhood determines value more than the city address",
         "Heirs questioning an automated estimate that doesn't account for the property's specific neighborhood characteristics",
       ],
-      whyLocal: "Burien's valuation landscape is complicated by dramatic micro-neighborhood differences within a compact area. Automated tools that average sales produce estimates that don't reflect any specific neighborhood. David's on-site assessment captures the factors that make Burien's neighborhoods so different from each other.",
+      whyLocal: "Burien's valuation landscape is complicated by dramatic micro-neighborhood differences within a compact area. Automated tools that average sales produce estimates that don't reflect any specific neighborhood. our team's on-site assessment captures the factors that make Burien's neighborhoods so different from each other.",
     },
     "preparing-home-for-sale": {
       intro: "Preparing a Burien home for sale requires understanding the specific micro-neighborhood's buyer expectations. A Three Tree Point waterfront home, a Seahurst view property, and a downtown-adjacent rambler each need different preparation strategies. Real Property Planning helps sellers calibrate to what their submarket rewards.",
@@ -3189,7 +3189,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A downtown-adjacent rambler where practical updates can meaningfully improve buyer appeal without exceeding the neighborhood's ceiling",
         "An estate property near the 1st Avenue corridor where preparation budget must be calibrated to the realistic price point",
       ],
-      whyLocal: "Preparation strategy in Burien depends entirely on which micro-neighborhood the property belongs to. A Seahurst view home warrants different investment than a corridor-area property. David's Burien experience helps sellers calibrate appropriately.",
+      whyLocal: "Preparation strategy in Burien depends entirely on which micro-neighborhood the property belongs to. A Seahurst view home warrants different investment than a corridor-area property. our team's Burien experience helps sellers calibrate appropriately.",
     },
     "divorce-related-home-sales": {
       intro: "Divorce-related property sales in Burien are complicated by dramatic internal diversity — spouses may cite comparable sales from Three Tree Point, Seahurst, or downtown areas that support wildly different value conclusions. Real Property Planning provides the objective, micro-neighborhood analysis Burien divorce situations require.",
@@ -3199,7 +3199,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A mediated divorce where one party wants to retain the property and needs fair buyout valuation reflecting the actual neighborhood",
         "A contentious divorce where commercial adjacency creates disagreement about residential value impact",
       ],
-      whyLocal: "Divorce negotiations involving Burien property are uniquely complicated because micro-neighborhoods create such wide value variation. Both parties may cite real Burien sales from entirely different neighborhoods. David's micro-market expertise provides the neutral analysis needed when each side's comparables tell dramatically different stories.",
+      whyLocal: "Divorce negotiations involving Burien property are uniquely complicated because micro-neighborhoods create such wide value variation. Both parties may cite real Burien sales from entirely different neighborhoods. our team's micro-market expertise provides the neutral analysis needed when each side's comparables tell dramatically different stories.",
     },
     "trust-estate-property-sales": {
       intro: "Trust-owned property in Burien may be a Three Tree Point waterfront home, a Seahurst hillside view property, a downtown-adjacent rambler, or a corridor-area home — each demanding different fiduciary analysis. Real Property Planning provides trustees with the micro-neighborhood expertise that Burien's uniquely varied market demands.",
@@ -3209,7 +3209,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A trustee preparing to sell a Seahurst home where view quality needs on-site assessment for accurate premium determination",
         "A beneficiary questioning the trustee's pricing because automated estimates average across dramatically different neighborhoods",
       ],
-      whyLocal: "Trust property sales in Burien require fiduciary guidance accounting for dramatic micro-market differences. A trustee who applies citywide averages to a Three Tree Point property creates pricing that won't withstand scrutiny. David's Burien experience provides the micro-neighborhood analysis fiduciary situations demand.",
+      whyLocal: "Trust property sales in Burien require fiduciary guidance accounting for dramatic micro-market differences. A trustee who applies citywide averages to a Three Tree Point property creates pricing that won't withstand scrutiny. our team's Burien experience provides the micro-neighborhood analysis fiduciary situations demand.",
     },
   },
 
@@ -3238,7 +3238,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Clear communication with heirs and professionals who may be split between Kitsap and King County",
         "Full-service transaction management from initial assessment through closing",
       ],
-      whyLocal: "Bremerton's market is uniquely complicated by the uneven pace of revitalization — waterfront and Manette properties operate in a fundamentally different market than homes in outlying neighborhoods. Automated tools that average across Bremerton produce estimates that don't reflect any specific neighborhood accurately. David's Kitsap experience and appraisal credentials provide the on-site, neighborhood-specific analysis that estate situations in a transforming city require.",
+      whyLocal: "Bremerton's market is uniquely complicated by the uneven pace of revitalization — waterfront and Manette properties operate in a fundamentally different market than homes in outlying neighborhoods. Automated tools that average across Bremerton produce estimates that don't reflect any specific neighborhood accurately. our team's Kitsap experience and appraisal credentials provide the on-site, neighborhood-specific analysis that estate situations in a transforming city require.",
     },
     "senior-transitions": {
       intro: "Many Bremerton seniors have deep roots in the community — connected to the Naval Shipyard, the ferry system, or the city's long history as a working waterfront town. When it's time to transition from a longtime Bremerton home, the sale involves both the practical challenge of pricing in a market that's transforming unevenly and the personal weight of leaving a community with strong identity. Real Property Planning helps Bremerton families navigate this process with honest pricing and patient coordination.",
@@ -3257,7 +3257,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Vendor coordination for cleanout, repairs, and presentation appropriate for the neighborhood's market",
         "Full-service management from first consultation through closing",
       ],
-      whyLocal: "Bremerton seniors may own homes in neighborhoods where revitalization has driven values up — or in areas where the market remains more traditional. The gap between general Bremerton headlines and specific neighborhood realities requires on-site, condition-based analysis. David's Kitsap experience helps families understand where their specific property stands in a city that's changing at different speeds.",
+      whyLocal: "Bremerton seniors may own homes in neighborhoods where revitalization has driven values up — or in areas where the market remains more traditional. The gap between general Bremerton headlines and specific neighborhood realities requires on-site, condition-based analysis. our team's Kitsap experience helps families understand where their specific property stands in a city that's changing at different speeds.",
     },
     "executor-support": {
       intro: "Executors managing estate property in Bremerton face a Kitsap County market where the city's revitalization creates neighborhood-level value differences that didn't exist a decade ago. Whether the estate property is a Manette bungalow, a downtown waterfront condo, or an established rambler in the outlying areas, executors need locally grounded guidance. Real Property Planning provides the Bremerton-specific expertise and reliable communication that executors need alongside their legal responsibilities.",
@@ -3276,7 +3276,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Guidance on how Bremerton's military buyer demographics affect marketing and offer expectations",
         "End-to-end transaction management through closing",
       ],
-      whyLocal: "Bremerton executors face a market where the city's transformation makes comparable selection unusually challenging. Recent sales in revitalizing areas may not apply to outlying neighborhoods, and vice versa. David's Kitsap experience and appraisal credentials provide the defensible, neighborhood-specific analysis that Bremerton estate situations require.",
+      whyLocal: "Bremerton executors face a market where the city's transformation makes comparable selection unusually challenging. Recent sales in revitalizing areas may not apply to outlying neighborhoods, and vice versa. our team's Kitsap experience and appraisal credentials provide the defensible, neighborhood-specific analysis that Bremerton estate situations require.",
     },
     "downsizing-services": {
       intro: "Downsizing from a longtime Bremerton home often means leaving a community deeply connected to the Naval Shipyard, the ferry system, and the city's working-waterfront identity. Real Property Planning helps Bremerton homeowners manage the sale with clear pricing that accounts for the city's uneven revitalization and coordination that respects the personal significance of the transition.",
@@ -3293,7 +3293,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Cleanout and vendor coordination so the homeowner can focus on the transition",
         "Patient communication throughout a personally significant change",
       ],
-      whyLocal: "Downsizing in Bremerton requires understanding whether the specific property is in a revitalizing area or a more traditional market — because preparation strategy, buyer expectations, and realistic pricing differ significantly. David's Kitsap experience helps downsizing clients navigate a city where one-size-fits-all market guidance doesn't apply.",
+      whyLocal: "Downsizing in Bremerton requires understanding whether the specific property is in a revitalizing area or a more traditional market — because preparation strategy, buyer expectations, and realistic pricing differ significantly. our team's Kitsap experience helps downsizing clients navigate a city where one-size-fits-all market guidance doesn't apply.",
     },
     "attorney-fiduciary-support": {
       intro: "Attorneys and fiduciaries handling matters involving Bremerton property need a real estate professional who understands the city's revitalization dynamics, military buyer demographics, and neighborhood-level value variation. Real Property Planning serves as a reliable resource for Kitsap County legal professionals with Bremerton property matters where local market knowledge directly affects legal and fiduciary outcomes.",
@@ -3312,7 +3312,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Understanding of how military buyer demographics and VA loan prevalence affect Bremerton transaction dynamics",
         "Objective guidance grounded in appraisal methodology appropriate for a market in transformation",
       ],
-      whyLocal: "Legal professionals handling Bremerton matters need a partner who understands both the revitalization dynamics and the military-influenced buyer pool. David's dual credentials and Kitsap experience provide the objective foundation that Bremerton legal proceedings and fiduciary situations require in a market where neighborhood-level conditions change faster than citywide statistics reflect.",
+      whyLocal: "Legal professionals handling Bremerton matters need a partner who understands both the revitalization dynamics and the military-influenced buyer pool. our team's dual credentials and Kitsap experience provide the objective foundation that Bremerton legal proceedings and fiduciary situations require in a market where neighborhood-level conditions change faster than citywide statistics reflect.",
     },
     "valuation-guidance": {
       intro: "Accurate property valuation in Bremerton requires understanding the city's uneven revitalization — waterfront and Manette properties have appreciated on a different trajectory than established neighborhoods in the outlying areas. Real Property Planning provides the valuation-informed insight that Bremerton clients need for estate settlements, trust administration, and property decisions in a market where transformation creates pricing complexity.",
@@ -3328,7 +3328,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Clear valuation documentation suitable for estate settlement, legal proceedings, or fiduciary review",
         "Objective guidance grounded in certified appraisal methodology and Kitsap County market knowledge",
       ],
-      whyLocal: "Bremerton's valuation landscape is complicated by the city's uneven revitalization — automated tools averaging across the city produce estimates that may significantly over- or understate value depending on the specific neighborhood. David's on-site assessment and appraisal credentials capture the revitalization-driven differences that make Bremerton's neighborhoods so varied.",
+      whyLocal: "Bremerton's valuation landscape is complicated by the city's uneven revitalization — automated tools averaging across the city produce estimates that may significantly over- or understate value depending on the specific neighborhood. our team's on-site assessment and appraisal credentials capture the revitalization-driven differences that make Bremerton's neighborhoods so varied.",
     },
     "preparing-home-for-sale": {
       intro: "Preparing a Bremerton home for sale requires understanding where the property falls in the city's revitalization landscape. A Manette bungalow near the ferry warrants different preparation than an established rambler in an outlying neighborhood. Real Property Planning helps Bremerton sellers calibrate preparation to what their specific submarket rewards.",
@@ -3344,7 +3344,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Vendor coordination for cleanout, repairs, staging, and presentation",
         "Timeline management aligning preparation with optimal listing conditions for the Bremerton submarket",
       ],
-      whyLocal: "Preparation strategy in Bremerton depends heavily on whether the property is in a revitalizing area or a more traditional neighborhood. Over-preparing for an outlying location wastes money; under-preparing a Manette property misses the neighborhood's growing potential. David's Kitsap experience helps sellers calibrate correctly.",
+      whyLocal: "Preparation strategy in Bremerton depends heavily on whether the property is in a revitalizing area or a more traditional neighborhood. Over-preparing for an outlying location wastes money; under-preparing a Manette property misses the neighborhood's growing potential. our team's Kitsap experience helps sellers calibrate correctly.",
     },
     "divorce-related-home-sales": {
       intro: "Divorce-related property sales in Bremerton are complicated by the city's uneven revitalization — one spouse may argue the home has benefited from Bremerton's transformation while the other maintains the specific neighborhood hasn't changed. Real Property Planning provides the objective, neighborhood-specific analysis that Bremerton divorce situations require when the city's internal diversity creates value disagreements.",
@@ -3360,7 +3360,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Neutral communication with both parties and their attorneys throughout the process",
         "Discretion and professionalism throughout a sensitive transaction in a close-knit community",
       ],
-      whyLocal: "Divorce negotiations involving Bremerton property are complicated because the city's revitalization creates genuine disagreement — both parties may be right about 'Bremerton values' while referencing different neighborhoods. David's Kitsap experience provides the neutral, neighborhood-specific analysis needed when the city's transformation makes one-number answers unreliable.",
+      whyLocal: "Divorce negotiations involving Bremerton property are complicated because the city's revitalization creates genuine disagreement — both parties may be right about 'Bremerton values' while referencing different neighborhoods. our team's Kitsap experience provides the neutral, neighborhood-specific analysis needed when the city's transformation makes one-number answers unreliable.",
     },
     "trust-estate-property-sales": {
       intro: "Trust-owned property in Bremerton may be in a revitalizing area like Manette or downtown, near the Naval Shipyard, or in an established outlying neighborhood — and each location creates different fiduciary considerations for trustees managing trust assets. Real Property Planning provides trustees with the Kitsap County expertise that Bremerton's transforming market demands.",
@@ -3376,7 +3376,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Strategic preparation and positioning appropriate for the property's actual neighborhood and buyer pool",
         "Coordination with trust attorneys and financial advisors throughout the sale process",
       ],
-      whyLocal: "Trust property sales in Bremerton require fiduciary guidance that accounts for the city's uneven transformation. A trustee who applies revitalization-driven appreciation to an outlying-area property creates pricing that may not withstand beneficiary scrutiny — and one who ignores Manette's growth undersells the trust asset. David's Kitsap experience provides the neighborhood-specific analysis fiduciary situations demand.",
+      whyLocal: "Trust property sales in Bremerton require fiduciary guidance that accounts for the city's uneven transformation. A trustee who applies revitalization-driven appreciation to an outlying-area property creates pricing that may not withstand beneficiary scrutiny — and one who ignores Manette's growth undersells the trust asset. our team's Kitsap experience provides the neighborhood-specific analysis fiduciary situations demand.",
     },
   },
 
@@ -3401,7 +3401,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Clear communication with multiple heirs and professionals across locations",
         "Full-service transaction management from initial assessment through closing",
       ],
-      whyLocal: "Renton's market moves faster than most cities in South King County — new development, employer-driven demand, and neighborhood-level transformation mean that comparables from even six months ago may not reflect current conditions. David's appraisal credentials and Renton experience provide the current, property-specific analysis that estate situations demand in a rapidly evolving market.",
+      whyLocal: "Renton's market moves faster than most cities in South King County — new development, employer-driven demand, and neighborhood-level transformation mean that comparables from even six months ago may not reflect current conditions. our team's appraisal credentials and Renton experience provide the current, property-specific analysis that estate situations demand in a rapidly evolving market.",
     },
     "senior-transitions": {
       intro: "Many Renton seniors have lived through the city's transformation — from a quieter South King County community to one of the region's most dynamic markets. When it's time to transition from a longtime Renton home, the sale involves significant financial stakes in a market where values have appreciated substantially but buyer expectations have also changed. Real Property Planning helps Renton families navigate this process with honest, current pricing and patient coordination.",
@@ -3420,7 +3420,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Vendor coordination for cleanout, repairs, and presentation appropriate for the submarket",
         "Full-service management so the family can focus on the transition",
       ],
-      whyLocal: "Renton seniors may own homes that have appreciated significantly — but the home's current condition may not match what today's buyers expect in a market driven by newer construction and tech-industry demand. David's appraisal background helps families understand the realistic gap between their home's emotional value and its market position, and which preparation investments close that gap effectively.",
+      whyLocal: "Renton seniors may own homes that have appreciated significantly — but the home's current condition may not match what today's buyers expect in a market driven by newer construction and tech-industry demand. our team's appraisal background helps families understand the realistic gap between their home's emotional value and its market position, and which preparation investments close that gap effectively.",
     },
     "executor-support": {
       intro: "Executors managing estate property in Renton face one of South King County's most dynamic markets — where neighborhood-level transformation, employer-driven demand, and rapid development create pricing complexity that more stable markets don't present. Real Property Planning provides the current, locally grounded guidance that Renton executors need to price accurately and manage the sale alongside fiduciary responsibilities.",
@@ -3439,7 +3439,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Guidance on how Renton's development activity and employer presence affect sale timing and strategy",
         "End-to-end transaction management through closing",
       ],
-      whyLocal: "Renton executors face a market where the pace of change makes pricing especially consequential — overprice and the property sits while the market may shift; underprice and beneficiaries question the executor's judgment in a city where appreciation has been significant. David's current Renton experience and appraisal credentials provide the defensible analysis executors need.",
+      whyLocal: "Renton executors face a market where the pace of change makes pricing especially consequential — overprice and the property sits while the market may shift; underprice and beneficiaries question the executor's judgment in a city where appreciation has been significant. our team's current Renton experience and appraisal credentials provide the defensible analysis executors need.",
     },
     "downsizing-services": {
       intro: "Downsizing from a longtime Renton home means selling in one of South King County's most dynamic markets — where significant appreciation creates financial opportunity but updated buyer expectations require strategic preparation. Real Property Planning helps Renton homeowners manage the sale with current pricing and practical coordination.",
@@ -3456,7 +3456,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Cleanout and vendor coordination for homeowners managing a significant transition",
         "Patient communication throughout the process",
       ],
-      whyLocal: "Downsizing in Renton's dynamic market requires understanding how the city's transformation affects the specific property. David's experience helps clients capture the appreciation their home has earned while preparing strategically for today's buyer expectations.",
+      whyLocal: "Downsizing in Renton's dynamic market requires understanding how the city's transformation affects the specific property. our team's experience helps clients capture the appreciation their home has earned while preparing strategically for today's buyer expectations.",
     },
     "attorney-fiduciary-support": {
       intro: "Attorneys and fiduciaries handling matters involving Renton property need a real estate professional who understands the city's rapid transformation, neighborhood-level dynamics, and how employer-driven demand affects pricing. Real Property Planning serves as a reliable resource for South King County legal professionals with Renton property matters where current, defensible market analysis directly affects legal outcomes.",
@@ -3475,7 +3475,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Understanding of how Renton's employer-driven demand and development activity affect transaction dynamics",
         "Objective guidance grounded in appraisal methodology appropriate for a rapidly evolving market",
       ],
-      whyLocal: "Legal professionals handling Renton matters need a partner who can provide current, defensible pricing in a market that moves faster than most. David's dual credentials and Renton experience provide the objective analysis that South King County legal proceedings require when yesterday's data may not reflect today's market.",
+      whyLocal: "Legal professionals handling Renton matters need a partner who can provide current, defensible pricing in a market that moves faster than most. our team's dual credentials and Renton experience provide the objective analysis that South King County legal proceedings require when yesterday's data may not reflect today's market.",
     },
     "valuation-guidance": {
       intro: "Accurate property valuation in Renton requires current, neighborhood-specific analysis — Kennydale lakefront, Highlands development areas, Benson Hill established neighborhoods, and Landing-adjacent properties each follow different value trajectories. Real Property Planning provides the current-market insight Renton clients need when the city's pace of change makes timing and data currency essential.",
@@ -3491,7 +3491,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Clear valuation documentation suitable for estate settlement, legal proceedings, or fiduciary review",
         "Objective guidance grounded in certified appraisal methodology and current South King County market knowledge",
       ],
-      whyLocal: "Renton's valuation landscape is complicated by the city's pace of change — automated tools using sales from even months ago may not reflect current conditions in the most dynamic neighborhoods. David's credentials and current Renton experience provide the timely, property-specific analysis that Renton situations demand.",
+      whyLocal: "Renton's valuation landscape is complicated by the city's pace of change — automated tools using sales from even months ago may not reflect current conditions in the most dynamic neighborhoods. our team's credentials and current Renton experience provide the timely, property-specific analysis that Renton situations demand.",
     },
     "preparing-home-for-sale": {
       intro: "Preparing a Renton home for sale requires understanding how the city's transformation has raised buyer expectations — and how those expectations differ by neighborhood. A Kennydale home near the lake faces different preparation priorities than a Benson Hill rambler or a Highlands property competing with newer construction. Real Property Planning helps Renton sellers calibrate preparation to what their submarket rewards.",
@@ -3507,7 +3507,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Vendor coordination for cleanout, repairs, staging, and presentation",
         "Timeline management aligning preparation with optimal listing timing in a market that responds to presentation quality",
       ],
-      whyLocal: "Preparation strategy in Renton depends on the neighborhood's position in the city's transformation. A Kennydale property warrants different investment than a Benson Hill home at a different price point. David's current Renton experience helps sellers calibrate preparation to their specific submarket's buyer expectations.",
+      whyLocal: "Preparation strategy in Renton depends on the neighborhood's position in the city's transformation. A Kennydale property warrants different investment than a Benson Hill home at a different price point. our team's current Renton experience helps sellers calibrate preparation to their specific submarket's buyer expectations.",
     },
     "divorce-related-home-sales": {
       intro: "Divorce-related property sales in Renton are complicated by the city's rapid appreciation — one spouse may cite recent sales showing significant gains while the other argues the home's condition doesn't support that level of value. Real Property Planning provides the objective, condition-based analysis that Renton divorce situations require when the city's transformation creates genuine disagreement about property worth.",
@@ -3523,7 +3523,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Neutral communication with both parties and their attorneys",
         "Discretion and professionalism throughout a sensitive transaction in a market where values carry significant weight",
       ],
-      whyLocal: "Divorce negotiations involving Renton property are complicated by the city's rapid appreciation — both parties may be partially right, one citing the neighborhood's trajectory and the other the home's current state. David's condition-based, appraisal-grounded approach provides the neutral analysis needed when market momentum and property reality tell different stories.",
+      whyLocal: "Divorce negotiations involving Renton property are complicated by the city's rapid appreciation — both parties may be partially right, one citing the neighborhood's trajectory and the other the home's current state. our team's condition-based, appraisal-grounded approach provides the neutral analysis needed when market momentum and property reality tell different stories.",
     },
     "trust-estate-property-sales": {
       intro: "Trust-owned property in Renton may be a Kennydale lakefront home, a Highlands rambler in a developing area, or a Benson Hill established property — each requiring different fiduciary analysis in a market where values have shifted significantly. Real Property Planning provides trustees with the current South King County expertise that Renton's dynamic market demands.",
@@ -3539,7 +3539,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Strategic preparation and positioning based on current buyer expectations in the property's neighborhood",
         "Coordination with trust attorneys and financial advisors throughout the sale process",
       ],
-      whyLocal: "Trust property sales in Renton require fiduciary guidance that accounts for the city's rapid and uneven transformation. A trustee using dated valuations or citywide averages in Renton's dynamic market creates pricing that won't withstand beneficiary scrutiny. David's current Renton experience and appraisal credentials provide the timely, property-specific analysis fiduciary situations demand.",
+      whyLocal: "Trust property sales in Renton require fiduciary guidance that accounts for the city's rapid and uneven transformation. A trustee using dated valuations or citywide averages in Renton's dynamic market creates pricing that won't withstand beneficiary scrutiny. our team's current Renton experience and appraisal credentials provide the timely, property-specific analysis fiduciary situations demand.",
     },
   },
 
@@ -3564,7 +3564,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Clear communication with heirs who may be unfamiliar with plateau market dynamics from their metro-area perspective",
         "Full-service transaction management from initial assessment through closing",
       ],
-      whyLocal: "Enumclaw's market operates on fundamentally different principles than metro-area markets — mountain views, acreage, and agricultural features are primary value drivers that automated tools either ignore or misvalue. David's experience with properties that blend residential and rural characteristics provides the on-site analysis that estate situations on the plateau require.",
+      whyLocal: "Enumclaw's market operates on fundamentally different principles than metro-area markets — mountain views, acreage, and agricultural features are primary value drivers that automated tools either ignore or misvalue. our team's experience with properties that blend residential and rural characteristics provides the on-site analysis that estate situations on the plateau require.",
     },
     "senior-transitions": {
       intro: "Many Enumclaw seniors have deep roots in the plateau community — connected to the land, the agricultural heritage, and the small-town way of life. When it's time to transition from a longtime Enumclaw home, the sale often involves unique property characteristics and a market that operates differently from the metro area. Real Property Planning helps Enumclaw families navigate this process with practical guidance that respects both the property's complexity and the personal significance of the transition.",
@@ -3583,7 +3583,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Vendor coordination for properties that may need rural-specific preparation beyond standard residential cleanout",
         "Full-service management so the family can focus on the transition",
       ],
-      whyLocal: "Enumclaw seniors often own properties with features — acreage, outbuildings, mountain views, agricultural improvements — that metro-focused brokers may not know how to evaluate or market. David's experience with the plateau's unique market helps families understand how these features affect realistic pricing and which buyers to target.",
+      whyLocal: "Enumclaw seniors often own properties with features — acreage, outbuildings, mountain views, agricultural improvements — that metro-focused brokers may not know how to evaluate or market. our team's experience with the plateau's unique market helps families understand how these features affect realistic pricing and which buyers to target.",
     },
     "executor-support": {
       intro: "Executors managing estate property in Enumclaw face a market that operates differently from metro-area communities — where acreage, mountain views, agricultural features, and small-town location create pricing dynamics that require plateau-specific understanding. Real Property Planning provides the property-specific expertise and reliable communication that Enumclaw executors need, especially when they're managing from the metro area.",
@@ -3602,7 +3602,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Regular communication for executors managing from the metro area",
         "End-to-end transaction management in a market that requires specialized local knowledge",
       ],
-      whyLocal: "Enumclaw executors — especially those from the metro area — face a market where standard residential valuation approaches may not apply. Properties with acreage, outbuildings, and mountain views require on-site assessment by someone who understands how these features affect value on the plateau. David's experience provides the defensible analysis executors need.",
+      whyLocal: "Enumclaw executors — especially those from the metro area — face a market where standard residential valuation approaches may not apply. Properties with acreage, outbuildings, and mountain views require on-site assessment by someone who understands how these features affect value on the plateau. our team's experience provides the defensible analysis executors need.",
     },
     "downsizing-services": {
       intro: "Downsizing from a longtime Enumclaw home often means leaving a property with characteristics that don't exist in metro-area markets — acreage, mountain views, outbuildings, or agricultural features that have defined the homeowner's daily life. Real Property Planning helps Enumclaw homeowners manage the sale with pricing that accurately reflects these unique features and coordination appropriate for the plateau's specialized market.",
@@ -3619,7 +3619,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Vendor coordination for properties that may need rural-specific preparation",
         "Patient communication throughout a transition that often means leaving a way of life, not just a home",
       ],
-      whyLocal: "Downsizing from an Enumclaw property often involves features that metro-area brokers rarely encounter. David's experience with plateau properties helps clients understand how acreage, views, and agricultural improvements affect realistic value and which buyers will appreciate what the property offers.",
+      whyLocal: "Downsizing from an Enumclaw property often involves features that metro-area brokers rarely encounter. our team's experience with plateau properties helps clients understand how acreage, views, and agricultural improvements affect realistic value and which buyers will appreciate what the property offers.",
     },
     "attorney-fiduciary-support": {
       intro: "Attorneys and fiduciaries handling matters involving Enumclaw property need a real estate professional who understands the plateau's specialized market — where acreage, mountain views, and agricultural features create valuation complexity that standard residential analysis doesn't address. Real Property Planning serves as a reliable resource for legal professionals with Enumclaw property matters.",
@@ -3638,7 +3638,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Coordination of property preparation and sale logistics for specialized plateau properties",
         "Objective guidance grounded in appraisal methodology adapted for the plateau's unique property types",
       ],
-      whyLocal: "Legal professionals handling Enumclaw matters need a partner who understands that plateau properties don't follow metro-area valuation rules. David's dual credentials and experience with rural-residential properties provide the objective foundation that legal proceedings involving Enumclaw's unique market require.",
+      whyLocal: "Legal professionals handling Enumclaw matters need a partner who understands that plateau properties don't follow metro-area valuation rules. our team's dual credentials and experience with rural-residential properties provide the objective foundation that legal proceedings involving Enumclaw's unique market require.",
     },
     "valuation-guidance": {
       intro: "Accurate property valuation in Enumclaw requires understanding the plateau's specialized market — where mountain views, acreage, agricultural features, and distance from employment centers create value patterns that automated tools and metro-focused analysis consistently miss. Real Property Planning provides the plateau-specific insight that Enumclaw clients need for estate settlements, trust administration, and informed decisions.",
@@ -3654,7 +3654,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Clear documentation suitable for estate settlement, legal proceedings, or fiduciary review",
         "Objective guidance grounded in certified appraisal methodology adapted for the plateau's property types",
       ],
-      whyLocal: "Enumclaw's valuation landscape is fundamentally different from metro-area markets. Automated tools trained on suburban comparable patterns produce estimates that miss the acreage premiums, view values, and agricultural-feature contributions that define plateau property worth. David's experience with these property types provides the analysis Enumclaw situations require.",
+      whyLocal: "Enumclaw's valuation landscape is fundamentally different from metro-area markets. Automated tools trained on suburban comparable patterns produce estimates that miss the acreage premiums, view values, and agricultural-feature contributions that define plateau property worth. our team's experience with these property types provides the analysis Enumclaw situations require.",
     },
     "preparing-home-for-sale": {
       intro: "Preparing an Enumclaw home for sale requires understanding the plateau market's specific buyer expectations — which are fundamentally different from metro-area standards. Buyers looking at Enumclaw properties often value views, land, outbuildings, and rural character over the kitchen-and-bathroom updates that drive metro-area sales. Real Property Planning helps Enumclaw sellers prepare strategically for their actual buyer pool.",
@@ -3670,7 +3670,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Vendor coordination for properties that may need rural-specific preparation — clearing, fencing, outbuilding maintenance",
         "Timeline management accounting for the plateau market's seasonal patterns and buyer activity cycles",
       ],
-      whyLocal: "Preparation strategy in Enumclaw follows different rules than metro-area markets. Buyers drawn to the plateau value acreage presentation, view access, and functional outbuildings — not necessarily the same cosmetic updates that drive suburban sales. David's experience with plateau properties helps sellers invest in preparation that their actual buyer pool values.",
+      whyLocal: "Preparation strategy in Enumclaw follows different rules than metro-area markets. Buyers drawn to the plateau value acreage presentation, view access, and functional outbuildings — not necessarily the same cosmetic updates that drive suburban sales. our team's experience with plateau properties helps sellers invest in preparation that their actual buyer pool values.",
     },
     "divorce-related-home-sales": {
       intro: "Divorce-related property sales in Enumclaw are complicated by the plateau's unique property characteristics — acreage, mountain views, outbuildings, and agricultural features create value that's difficult to establish through automated tools or metro-area comparable analysis. Real Property Planning provides the objective, property-specific analysis that Enumclaw divorce situations require.",
@@ -3686,7 +3686,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Neutral communication with both parties and their attorneys",
         "Discretion and professionalism in a small community where privacy matters",
       ],
-      whyLocal: "Divorce negotiations involving Enumclaw property are uniquely challenging because the plateau's value drivers — acreage, views, agricultural features — don't translate easily into standard residential valuation. Both parties may genuinely disagree about what these features are worth. David's experience with plateau properties provides the neutral analysis needed when standard approaches don't apply.",
+      whyLocal: "Divorce negotiations involving Enumclaw property are uniquely challenging because the plateau's value drivers — acreage, views, agricultural features — don't translate easily into standard residential valuation. Both parties may genuinely disagree about what these features are worth. our team's experience with plateau properties provides the neutral analysis needed when standard approaches don't apply.",
     },
     "trust-estate-property-sales": {
       intro: "Trust-owned property in Enumclaw may include acreage with mountain views, agricultural improvements, outbuildings, or downtown homes with small-town character — each creating different fiduciary considerations for trustees managing trust assets in a market unlike metro-area communities. Real Property Planning provides trustees with the plateau-specific expertise that Enumclaw's unique market demands.",
@@ -3702,7 +3702,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Strategic preparation and positioning appropriate for the plateau market's specific buyer pool",
         "Coordination with trust attorneys and financial advisors who may be unfamiliar with Enumclaw's specialized market",
       ],
-      whyLocal: "Trust property sales in Enumclaw require fiduciary guidance that accounts for the plateau's fundamentally different market dynamics. A trustee who applies metro-area valuation assumptions to an Enumclaw acreage property creates pricing that won't withstand beneficiary scrutiny. David's plateau experience and appraisal credentials provide the property-specific analysis fiduciary situations demand.",
+      whyLocal: "Trust property sales in Enumclaw require fiduciary guidance that accounts for the plateau's fundamentally different market dynamics. A trustee who applies metro-area valuation assumptions to an Enumclaw acreage property creates pricing that won't withstand beneficiary scrutiny. our team's plateau experience and appraisal credentials provide the property-specific analysis fiduciary situations demand.",
     },
   },
 };

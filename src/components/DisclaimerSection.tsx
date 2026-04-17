@@ -16,16 +16,16 @@ const DisclaimerSection = () => {
             </h2>
             <div className="space-y-4 text-muted-foreground text-base leading-[1.8]">
               <p>
-                David Stein is a licensed real estate broker in the State of Washington and a Washington state certified real estate appraiser. He is not an attorney, CPA, or tax advisor, and does not provide legal, tax, or accounting advice.
+                Real Property Planning is a licensed real estate broker in the State of Washington and a Washington state certified real estate appraiser. He is not an attorney, CPA, or tax advisor, and does not provide legal, tax, or accounting advice.
               </p>
               <p>
                 Any information presented on this website, in related materials, or in communications regarding probate, estate property, inherited real estate, trust-owned property, or other real property matters is provided for general informational purposes and for matters related to real estate brokerage, market guidance, and valuation-related services only.
               </p>
               <p>
-                Probate, trust administration, estate settlement, inheritance, taxation, title matters, and related legal or financial issues often require guidance from qualified attorneys, CPAs, tax professionals, or other licensed advisors. Visitors, clients, executors, trustees, fiduciaries, personal representatives, heirs, and family members should consult the appropriate professionals regarding matters outside the scope of David Stein's real estate brokerage and appraisal-related services.
+                Probate, trust administration, estate settlement, inheritance, taxation, title matters, and related legal or financial issues often require guidance from qualified attorneys, CPAs, tax professionals, or other licensed advisors. Visitors, clients, executors, trustees, fiduciaries, personal representatives, heirs, and family members should consult the appropriate professionals regarding matters outside the scope of Real Property Planning's real estate brokerage and appraisal-related services.
               </p>
               <p>
-                David Stein's professional services are limited to those within the scope of his licensure and certification in the State of Washington.
+                Real Property Planning's professional services are limited to those within the scope of his licensure and certification in the State of Washington.
               </p>
             </div>
           </div>

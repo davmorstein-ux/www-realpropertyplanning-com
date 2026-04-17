@@ -64,7 +64,7 @@ const ForFinancialPlanners = () => (
             Financial planners working with clients in transition — estate settlements, <Link to="/senior-transitions" className="text-accent hover:text-gold underline underline-offset-4">senior housing changes</Link>, inherited property, or trust-owned real estate — regularly encounter property questions that affect the broader financial picture. What is the home realistically worth in its current condition? Should the client sell now or prepare the property first? How does a senior housing transition interact with the client's retirement income plan?
           </p>
           <p className="text-muted-foreground text-[17px] md:text-lg leading-[1.8]">
-            These decisions benefit from real estate expertise that goes beyond a listing pitch. David Stein's dual background as a licensed real estate broker and a <Link to="/real-estate-appraiser" className="text-accent hover:text-gold underline underline-offset-4">Washington State Certified Residential Appraiser</Link> means your clients receive honest, condition-informed property analysis — the kind that integrates cleanly with the financial planning work you're already doing.
+            These decisions benefit from real estate expertise that goes beyond a listing pitch. Real Property Planning's dual background as a licensed real estate broker and a <Link to="/real-estate-appraiser" className="text-accent hover:text-gold underline underline-offset-4">Washington State Certified Residential Appraiser</Link> means your clients receive honest, condition-informed property analysis — the kind that integrates cleanly with the financial planning work you're already doing.
           </p>
         </div>
       </div>

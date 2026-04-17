@@ -55,11 +55,11 @@ const whyRefer = [
   },
   {
     title: "Help Coordinating Vendors, Cleanout, Repairs, and Preparation",
-    text: "Many estate and transition properties need significant work before they are ready for the market. David coordinates the entire preparation process — scheduling vendors, overseeing cleanout, managing repairs, and evaluating which improvements are worth the investment.",
+    text: "Many estate and transition properties need significant work before they are ready for the market. Our team coordinates the entire preparation process — scheduling vendors, overseeing cleanout, managing repairs, and evaluating which improvements are worth the investment.",
   },
   {
     title: "Respect for Family Dynamics and Fiduciary Responsibilities",
-    text: "David understands that estate and trust situations involve legal obligations, emotional complexity, and multiple stakeholders with different perspectives. He navigates these dynamics with care — presenting facts clearly, listening carefully, and never taking sides.",
+    text: "Our team understands that estate and trust situations involve legal obligations, emotional complexity, and multiple stakeholders with different perspectives. He navigates these dynamics with care — presenting facts clearly, listening carefully, and never taking sides.",
   },
   {
     title: "Local Knowledge of Washington State Markets",
@@ -341,7 +341,7 @@ const ProfessionalReferralResource = () => {
               </Link>
               <Link to="/contact">
                 <Button size="lg" variant="outline3d" className="border-gold/50 bg-transparent text-gold hover:bg-gold hover:text-foreground focus-visible:ring-gold w-full sm:w-auto px-8 h-[52px] text-base rounded-lg">
-                  Contact David Stein
+                  Contact Real Property Planning
                 </Button>
               </Link>
             </div>

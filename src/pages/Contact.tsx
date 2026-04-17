@@ -65,7 +65,7 @@ const Contact = () => {
 
     toast({
       title: "Thanks — Message Received",
-      description: "David will reach out shortly. Need to talk sooner? Call (206) 900-3015.",
+      description: "Our team will reach out shortly. Need to talk sooner? Call (206) 900-3015.",
     });
 
     setIsSubmitting(false);
@@ -135,7 +135,7 @@ const Contact = () => {
               </div>
 
               <p className="text-muted-foreground text-[15px] leading-relaxed mb-4">
-                David works with attorneys, executors, fiduciaries, and families across Washington State.
+                Our team works with attorneys, executors, fiduciaries, and families across Washington State.
               </p>
               <p className="text-muted-foreground text-[15px] leading-relaxed mb-8">
                 For properties outside Washington State, he can connect you with a trusted eXp Realty partner in the right area.
@@ -147,7 +147,7 @@ const Contact = () => {
                   <img src={expRealtyLogo} alt="eXp Realty brokerage logo" className="w-[95px] md:w-[120px] h-auto" loading="lazy" />
                 </div>
                 <div className="space-y-2 text-[15px] text-muted-foreground">
-                  <p className="font-medium text-foreground">David Stein</p>
+                  <p className="font-medium text-foreground">Real Property Planning</p>
                   <p>Licensed Real Estate Broker, Washington State</p>
                   <p className="font-medium text-foreground">eXp Realty</p>
                   <p>Mailing Address: PO Box 1462, Woodinville, WA 98072</p>

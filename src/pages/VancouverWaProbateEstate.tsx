@@ -18,32 +18,32 @@ const faqs = [
   {
     question: "How does selling an inherited home work in Vancouver, WA?",
     answer:
-      "Selling an inherited home in Vancouver requires confirming legal authority (through probate or trust administration), evaluating the property's condition, and developing a pricing and preparation strategy. David coordinates the entire process — from initial assessment through closing — keeping all parties informed and the timeline on track.",
+      "Selling an inherited home in Vancouver requires confirming legal authority (through probate or trust administration), evaluating the property's condition, and developing a pricing and preparation strategy. Our team coordinates the entire process — from initial assessment through closing — keeping all parties informed and the timeline on track.",
   },
   {
     question: "What if the family is split between Washington and Oregon?",
     answer:
-      "This is common in the Vancouver area. David works with families where some members live in Portland, others out of state, and the property is in Clark County. He coordinates communication across all parties, manages local logistics, and ensures the process moves forward smoothly regardless of where each person is located.",
+      "This is common in the Vancouver area. Our team works with families where some members live in Portland, others out of state, and the property is in Clark County. He coordinates communication across all parties, manages local logistics, and ensures the process moves forward smoothly regardless of where each person is located.",
   },
   {
-    question: "How does David's appraisal background help with Vancouver properties?",
+    question: "How does our team's appraisal background help with Vancouver properties?",
     answer:
-      "As both a licensed Washington State real estate broker and a state-certified residential appraiser, David provides pricing grounded in actual condition assessment and local market data — not automated estimates. This dual perspective is especially valuable in Vancouver, where proximity to Portland creates unique pricing dynamics that require careful local analysis.",
+      "As both a licensed Washington State real estate broker and a state-certified residential appraiser, Our team provides pricing grounded in actual condition assessment and local market data — not automated estimates. This dual perspective is especially valuable in Vancouver, where proximity to Portland creates unique pricing dynamics that require careful local analysis.",
   },
   {
     question: "Can David help coordinate a sale alongside a senior transition or relocation?",
     answer:
-      "Yes. Many Vancouver families are managing a property sale at the same time as a move to senior living, a relocation to be closer to family, or a transition between Washington and Oregon. David coordinates the sale timeline with the broader transition — working with moving companies, family members, and other professionals to keep everything aligned.",
+      "Yes. Many Vancouver families are managing a property sale at the same time as a move to senior living, a relocation to be closer to family, or a transition between Washington and Oregon. Our team coordinates the sale timeline with the broader transition — working with moving companies, family members, and other professionals to keep everything aligned.",
   },
   {
     question: "Should I prepare the home before selling?",
     answer:
-      "It depends on the property's condition, your timeline, and the transition situation. David evaluates which improvements are likely to increase the sale price enough to justify the cost and delay — and which aren't. When timing is tight due to a move or transition, he helps prioritize what matters most.",
+      "It depends on the property's condition, your timeline, and the transition situation. Our team evaluates which improvements are likely to increase the sale price enough to justify the cost and delay — and which aren't. When timing is tight due to a move or transition, he helps prioritize what matters most.",
   },
   {
     question: "How long does it take to sell an estate property in Vancouver?",
     answer:
-      "Timelines vary based on the probate or trust process, property condition, and market conditions. Once the property is ready and authority is established, well-priced Vancouver homes typically sell within a few weeks. David helps set realistic expectations and coordinates the sale timeline with any broader transition plans.",
+      "Timelines vary based on the probate or trust process, property condition, and market conditions. Once the property is ready and authority is established, well-priced Vancouver homes typically sell within a few weeks. Our team helps set realistic expectations and coordinates the sale timeline with any broader transition plans.",
   },
 ];
 
@@ -161,7 +161,7 @@ const VancouverWaProbateEstate = () => {
               Whether the property is in Salmon Creek, Felida, the Heights, or closer to downtown, neighborhood-level pricing differences matter. Inherited and estate homes often need thoughtful preparation — and when a move or transition is happening simultaneously, the sequencing of decisions becomes critical.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              As both a licensed Washington State real estate broker and a state-certified residential appraiser, David Stein brings a valuation-first perspective grounded in actual property condition and local market data. This dual expertise provides defensible pricing, clearer communication with attorneys and family members, and greater confidence for families managing complex transitions.
+              As both a licensed Washington State real estate broker and a state-certified residential appraiser, Real Property Planning brings a valuation-first perspective grounded in actual property condition and local market data. This dual expertise provides defensible pricing, clearer communication with attorneys and family members, and greater confidence for families managing complex transitions.
             </p>
           </div>
         </div>
@@ -170,7 +170,7 @@ const VancouverWaProbateEstate = () => {
       {/* Mid-page CTA */}
       <MidPageCTA
         heading="Navigating a Property Transition in Vancouver?"
-        body="David provides confidential consultations for executors, trustees, and families managing inherited property, estate sales, or transition-related decisions in Vancouver and Clark County."
+        body="Our team provides confidential consultations for executors, trustees, and families managing inherited property, estate sales, or transition-related decisions in Vancouver and Clark County."
         buttonText="Schedule a Consultation"
         microcopy="No pressure. Just practical guidance for your situation."
       />

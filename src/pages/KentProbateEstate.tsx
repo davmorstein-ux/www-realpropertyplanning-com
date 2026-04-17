@@ -16,11 +16,11 @@ import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washingto
 
 const faqs = [
   { question: "What should I do first with an inherited home in Kent?", answer: "Secure the property, confirm your legal authority, and get an honest assessment of its condition and value. David can visit the home, evaluate what affects its marketability, and outline your options clearly before you make any decisions." },
-  { question: "How does David's appraisal background help in Kent?", answer: "As both a licensed Washington State real estate broker and a state-certified residential appraiser, David provides pricing based on actual property condition and comparable sales — not automated estimates. In Kent, where home ages and conditions vary block by block, this dual perspective is especially valuable." },
-  { question: "What if siblings disagree about selling?", answer: "This happens often. David provides objective, condition-based information — realistic value, preparation costs, and available options — so every family member works from the same facts. Clear data usually helps conversations move forward." },
-  { question: "Should I fix up a Kent inherited home before selling?", answer: "It depends on the property. David evaluates which improvements are likely to pay for themselves and which aren't worth the cost or delay. Many Kent inherited homes sell well with targeted preparation rather than major renovation." },
-  { question: "Can David help if I live outside Kent?", answer: "Yes. David works with families managing properties from across Washington, out of state, and overseas. He coordinates property access, vendor management, and the sale process so you don't need to make repeated trips." },
-  { question: "How long does it take to sell an inherited home in Kent?", answer: "Timelines vary based on the legal process, condition, and preparation. Once the property is ready and authority is established, well-priced Kent homes typically attract interest within a few weeks. David helps set realistic expectations from the beginning." },
+  { question: "How does our team's appraisal background help in Kent?", answer: "As both a licensed Washington State real estate broker and a state-certified residential appraiser, Our team provides pricing based on actual property condition and comparable sales — not automated estimates. In Kent, where home ages and conditions vary block by block, this dual perspective is especially valuable." },
+  { question: "What if siblings disagree about selling?", answer: "This happens often. Our team provides objective, condition-based information — realistic value, preparation costs, and available options — so every family member works from the same facts. Clear data usually helps conversations move forward." },
+  { question: "Should I fix up a Kent inherited home before selling?", answer: "It depends on the property. Our team evaluates which improvements are likely to pay for themselves and which aren't worth the cost or delay. Many Kent inherited homes sell well with targeted preparation rather than major renovation." },
+  { question: "Can David help if I live outside Kent?", answer: "Yes. Our team works with families managing properties from across Washington, out of state, and overseas. He coordinates property access, vendor management, and the sale process so you don't need to make repeated trips." },
+  { question: "How long does it take to sell an inherited home in Kent?", answer: "Timelines vary based on the legal process, condition, and preparation. Once the property is ready and authority is established, well-priced Kent homes typically attract interest within a few weeks. Our team helps set realistic expectations from the beginning." },
 ];
 
 const KentProbateEstate = () => {
@@ -71,19 +71,19 @@ const KentProbateEstate = () => {
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">Why Straight Talk Matters in Kent</h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">Kent's housing stock covers a broad range — from East Hill ramblers and split-levels to newer construction in the West Hill area and older homes near downtown. Property values can shift meaningfully within a few blocks, and condition is often the biggest variable in inherited home pricing.</p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">Families dealing with a Kent inherited home need to know what they're actually working with — not what an algorithm estimates from satellite photos. Is the roof near end of life? Are there plumbing or electrical issues? Does the layout work for today's buyers? These are the questions that drive real pricing decisions.</p>
-            <p className="text-muted-foreground text-lg leading-relaxed">As both a licensed Washington State real estate broker and a state-certified residential appraiser, David Stein provides that honest, condition-based assessment. The result is pricing you can trust and preparation advice that makes practical sense for your situation.</p>
+            <p className="text-muted-foreground text-lg leading-relaxed">As both a licensed Washington State real estate broker and a state-certified residential appraiser, Real Property Planning provides that honest, condition-based assessment. The result is pricing you can trust and preparation advice that makes practical sense for your situation.</p>
           </div>
         </div>
       </section>
 
-      <MidPageCTA heading="Questions About a Kent Property?" body="David provides confidential consultations for executors, trustees, and families handling inherited or estate property in Kent and South King County." buttonText="Schedule a Consultation" microcopy="No pressure. Just practical guidance for your situation." />
+      <MidPageCTA heading="Questions About a Kent Property?" body="Our team provides confidential consultations for executors, trustees, and families handling inherited or estate property in Kent and South King County." buttonText="Schedule a Consultation" microcopy="No pressure. Just practical guidance for your situation." />
 
       <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">Getting Everyone on the Same Page</h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">When an inherited home involves multiple family members, the biggest obstacle is often not the property itself — it's getting everyone aligned. Different opinions, different timelines, and different levels of knowledge about the home's condition can create friction that stalls the process.</p>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-5">David provides a neutral, fact-based foundation. He assesses the property, presents realistic value and preparation options, and gives every family member the same clear picture to work from. That shared understanding is usually what unlocks forward progress.</p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-5">Our team provides a neutral, fact-based foundation. He assesses the property, presents realistic value and preparation options, and gives every family member the same clear picture to work from. That shared understanding is usually what unlocks forward progress.</p>
             <p className="text-muted-foreground text-lg leading-relaxed">From there, he handles the execution — coordinating cleanout, managing contractors, and guiding the sale process — so the family can step back from the day-to-day logistics.</p>
           </div>
         </div>

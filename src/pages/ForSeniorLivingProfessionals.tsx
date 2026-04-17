@@ -124,7 +124,7 @@ const ForSeniorLivingProfessionals = () => {
               Real Estate Guidance for Senior Living and Transition Professionals
             </h1>
             <p className="text-lg text-primary-foreground/80 leading-relaxed mb-8 max-w-2xl">
-              Real Property Planning works with senior living communities, move managers, downsizing specialists, estate sale companies, and related professionals when a home is part of a major life transition. With dual credentials as a licensed broker and certified appraiser, David Stein brings the market knowledge and professional sensitivity these situations require.
+              Real Property Planning works with senior living communities, move managers, downsizing specialists, estate sale companies, and related professionals when a home is part of a major life transition. With dual credentials as a licensed broker and certified appraiser, Real Property Planning brings the market knowledge and professional sensitivity these situations require.
             </p>
             <Link to="/contact">
  <Button variant="gold" size="lg"className="hover:-light px-8 h-[52px] text-base rounded-lg">

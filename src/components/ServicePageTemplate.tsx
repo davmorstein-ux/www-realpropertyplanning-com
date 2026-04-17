@@ -31,7 +31,7 @@ const ServicePageTemplate = ({ service, introText, situations, benefits }: Servi
     <div className="min-h-screen bg-background">
       <SEOHead
         title={`${service.name} in Washington State | Real Property Planning`}
-        description={`${service.description} David Stein provides ${service.name.toLowerCase()} throughout Washington State with licensed broker and certified appraiser credentials.`}
+        description={`${service.description} Real Property Planning provides ${service.name.toLowerCase()} throughout Washington State with licensed broker and certified appraiser credentials.`}
       />
       <BreadcrumbSchema
         items={[

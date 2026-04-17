@@ -20,24 +20,24 @@ const faqs = [
     answer: "Richland tends to have more stable, established neighborhoods with homes that reflect long-term ownership — many tied to careers at Hanford or Pacific Northwest National Laboratory. Property conditions are often well-maintained but dated, and buyer expectations around presentation can be higher than in neighboring cities.",
   },
   {
-    question: "How does David's appraisal background help with Richland properties?",
-    answer: "As both a licensed Washington State real estate broker and a state-certified residential appraiser, David provides pricing grounded in actual condition assessment and local comparable data. In Richland, where homes tend to be well-built but may need cosmetic updating, this dual perspective ensures pricing reflects reality rather than outdated assumptions.",
+    question: "How does our team's appraisal background help with Richland properties?",
+    answer: "As both a licensed Washington State real estate broker and a state-certified residential appraiser, Our team provides pricing grounded in actual condition assessment and local comparable data. In Richland, where homes tend to be well-built but may need cosmetic updating, this dual perspective ensures pricing reflects reality rather than outdated assumptions.",
   },
   {
     question: "Should I update a Richland home before selling?",
-    answer: "It depends on the home's condition relative to buyer expectations in the neighborhood. David evaluates which updates are likely to return more than they cost and which aren't necessary. In Richland's more established neighborhoods, targeted cosmetic improvements can make a meaningful difference — but not every update is worth the investment.",
+    answer: "It depends on the home's condition relative to buyer expectations in the neighborhood. Our team evaluates which updates are likely to return more than they cost and which aren't necessary. In Richland's more established neighborhoods, targeted cosmetic improvements can make a meaningful difference — but not every update is worth the investment.",
   },
   {
     question: "Can David help if I live outside the Tri-Cities?",
-    answer: "Yes. David works with executors and families who live outside the area — whether across the state or out of state. He coordinates property access, vendor management, preparation, and the sale process so you can make decisions without unnecessary travel.",
+    answer: "Yes. Our team works with executors and families who live outside the area — whether across the state or out of state. He coordinates property access, vendor management, preparation, and the sale process so you can make decisions without unnecessary travel.",
   },
   {
     question: "What if the estate involves a long-term family home?",
-    answer: "Long-term ownership is common in Richland. These homes often carry sentimental value alongside practical considerations. David provides an honest, respectful assessment of the property's condition and market position, giving families the facts they need to make decisions at their own pace.",
+    answer: "Long-term ownership is common in Richland. These homes often carry sentimental value alongside practical considerations. Our team provides an honest, respectful assessment of the property's condition and market position, giving families the facts they need to make decisions at their own pace.",
   },
   {
     question: "How long does it take to sell an estate property in Richland?",
-    answer: "Timelines depend on the legal process, property condition, and preparation needs. Once the home is ready and authority is established, well-priced Richland properties typically attract interest within a reasonable timeframe. David helps set realistic expectations based on your specific situation.",
+    answer: "Timelines depend on the legal process, property condition, and preparation needs. Once the home is ready and authority is established, well-priced Richland properties typically attract interest within a reasonable timeframe. Our team helps set realistic expectations based on your specific situation.",
   },
 ];
 
@@ -134,13 +134,13 @@ const RichlandProbateEstate = () => {
               Many inherited Richland homes are structurally sound but cosmetically dated. Flooring, paint, fixtures, and landscaping may reflect the owner's preferences from twenty years ago. Understanding which updates matter to today's buyers — and which don't — requires honest assessment, not guesswork.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              As both a licensed Washington State real estate broker and a state-certified residential appraiser, David Stein brings a valuation-first perspective that accounts for condition, location, and realistic buyer expectations. This means pricing that's defensible and preparation advice that's practical.
+              As both a licensed Washington State real estate broker and a state-certified residential appraiser, Real Property Planning brings a valuation-first perspective that accounts for condition, location, and realistic buyer expectations. This means pricing that's defensible and preparation advice that's practical.
             </p>
           </div>
         </div>
       </section>
 
-      <MidPageCTA heading="Handling an Estate Property in Richland?" body="David provides confidential consultations for executors, trustees, and families managing inherited or estate property in Richland and the Tri-Cities area." buttonText="Schedule a Consultation" microcopy="No pressure. Just practical guidance for your situation." />
+      <MidPageCTA heading="Handling an Estate Property in Richland?" body="Our team provides confidential consultations for executors, trustees, and families managing inherited or estate property in Richland and the Tri-Cities area." buttonText="Schedule a Consultation" microcopy="No pressure. Just practical guidance for your situation." />
 
       <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
@@ -150,7 +150,7 @@ const RichlandProbateEstate = () => {
               Richland families often want the sale process to feel organized, respectful, and well-paced. They're not looking for pressure — they want clarity about what the home needs, what it's worth, and how the timeline works.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              David provides that structure. He coordinates with family members, manages vendors and preparation logistics, communicates with attorneys when needed, and keeps everyone informed with clear, consistent updates. The goal is a process that feels steady and well-managed from start to finish.
+              Our team provides that structure. He coordinates with family members, manages vendors and preparation logistics, communicates with attorneys when needed, and keeps everyone informed with clear, consistent updates. The goal is a process that feels steady and well-managed from start to finish.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
               For families where the home carries significant sentimental value, this measured approach matters. Decisions don't need to be rushed — but they do need to be informed.

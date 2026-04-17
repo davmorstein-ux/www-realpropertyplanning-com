@@ -18,17 +18,17 @@ const faqs = [
   {
     question: "How does selling an inherited home work in Tacoma?",
     answer:
-      "Selling an inherited home in Tacoma typically requires confirming legal authority (through probate or trust administration), evaluating the property's condition, and developing a realistic pricing and preparation strategy. David coordinates the entire process — from initial assessment through closing — keeping all parties informed and the timeline on track.",
+      "Selling an inherited home in Tacoma typically requires confirming legal authority (through probate or trust administration), evaluating the property's condition, and developing a realistic pricing and preparation strategy. Our team coordinates the entire process — from initial assessment through closing — keeping all parties informed and the timeline on track.",
   },
   {
     question: "What should a Tacoma executor do first with an inherited property?",
     answer:
-      "Secure the property, confirm your legal authority, and get an honest assessment of its condition and value. Many Tacoma inherited homes have years of deferred maintenance. David can walk through the property, identify issues that affect value, and help you understand your options before committing to any course of action.",
+      "Secure the property, confirm your legal authority, and get an honest assessment of its condition and value. Many Tacoma inherited homes have years of deferred maintenance. Our team can walk through the property, identify issues that affect value, and help you understand your options before committing to any course of action.",
   },
   {
-    question: "How does David Stein's appraisal background help with Tacoma properties?",
+    question: "How does Real Property Planning's appraisal background help with Tacoma properties?",
     answer:
-      "As both a licensed Washington State real estate broker and a state-certified residential appraiser, David provides pricing grounded in actual condition assessment and neighborhood-level market data — not automated estimates. This is especially valuable in Tacoma, where property values can vary significantly from one neighborhood to the next.",
+      "As both a licensed Washington State real estate broker and a state-certified residential appraiser, Our team provides pricing grounded in actual condition assessment and neighborhood-level market data — not automated estimates. This is especially valuable in Tacoma, where property values can vary significantly from one neighborhood to the next.",
   },
   {
     question: "Can David help if I live out of state but the property is in Tacoma?",
@@ -43,7 +43,7 @@ const faqs = [
   {
     question: "How long does it take to sell an estate property in Tacoma?",
     answer:
-      "Timelines vary based on the probate or trust administration process, property condition, and current market conditions. Once the property is ready and authority is established, well-priced Tacoma homes typically sell within a few weeks. David helps set realistic expectations and builds a timeline around your specific situation.",
+      "Timelines vary based on the probate or trust administration process, property condition, and current market conditions. Once the property is ready and authority is established, well-priced Tacoma homes typically sell within a few weeks. Our team helps set realistic expectations and builds a timeline around your specific situation.",
   },
 ];
 
@@ -162,7 +162,7 @@ const TacomaProbateEstate = () => {
               Many inherited properties in Tacoma have been lived in for decades. Deferred maintenance, dated systems, and personal belongings are common. Practical strategy — knowing when to invest in preparation and when to sell as-is — matters as much as marketing. The wrong approach can cost families time, money, and unnecessary stress.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              As both a licensed Washington State real estate broker and a state-certified residential appraiser, David Stein brings a valuation-first perspective grounded in actual property condition and neighborhood-level market data. This dual expertise provides defensible pricing, clearer communication with attorneys and courts, and greater confidence for families navigating difficult decisions.
+              As both a licensed Washington State real estate broker and a state-certified residential appraiser, Real Property Planning brings a valuation-first perspective grounded in actual property condition and neighborhood-level market data. This dual expertise provides defensible pricing, clearer communication with attorneys and courts, and greater confidence for families navigating difficult decisions.
             </p>
           </div>
         </div>
@@ -171,7 +171,7 @@ const TacomaProbateEstate = () => {
       {/* Mid-page CTA */}
       <MidPageCTA
         heading="Have a Property Situation in Tacoma?"
-        body="David provides confidential consultations for executors, trustees, and families dealing with inherited or estate property in Tacoma and throughout Pierce County."
+        body="Our team provides confidential consultations for executors, trustees, and families dealing with inherited or estate property in Tacoma and throughout Pierce County."
         buttonText="Schedule a Consultation"
         microcopy="No pressure. Just practical guidance for your situation."
       />
@@ -190,7 +190,7 @@ const TacomaProbateEstate = () => {
               David serves as a local point of coordination. He manages property access, works with cleanout crews, contractors, and preparation vendors, communicates with attorneys and other parties, and keeps you informed throughout the process — reducing unnecessary travel and giving you confidence that nothing is falling through the cracks.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Whether you're managing from Portland, Phoenix, or across the country, David's goal is to make the process as clear and manageable as possible from wherever you are.
+              Whether you're managing from Portland, Phoenix, or across the country, our team's goal is to make the process as clear and manageable as possible from wherever you are.
             </p>
           </div>
         </div>

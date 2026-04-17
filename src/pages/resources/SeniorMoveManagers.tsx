@@ -47,7 +47,7 @@ const SeniorMoveManagers = () => (
               Senior move managers coordinate and manage the physical and emotional aspects of relocating seniors — whether moving to a smaller home, an assisted living community, or closer to family. They handle sorting, packing, floor-plan design, unpacking, and settling in, so families don't have to manage every detail during an already stressful time.
             </p>
             <p className="text-muted-foreground text-base leading-relaxed mb-4">
-              Real Property Planning works with senior move managers regularly as part of <Link to="/senior-transitions" className="text-accent hover:text-gold underline underline-offset-4">senior transition</Link> situations. When a home needs to be sold alongside a move, David Stein coordinates with the move manager to align timelines, property preparation, and the sale process.
+              Real Property Planning works with senior move managers regularly as part of <Link to="/senior-transitions" className="text-accent hover:text-gold underline underline-offset-4">senior transition</Link> situations. When a home needs to be sold alongside a move, Real Property Planning coordinates with the move manager to align timelines, property preparation, and the sale process.
             </p>
 
             <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mt-12 mb-5">
@@ -55,7 +55,7 @@ const SeniorMoveManagers = () => (
             </h2>
             <div className="bg-secondary border border-border rounded-xl px-6 py-8 md:px-8 text-center">
               <p className="text-muted-foreground text-base leading-relaxed">
-                David is currently compiling a list of recommended senior move managers throughout Washington State. Check back soon, or <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4">contact David</Link> for a current referral.
+                Our team is currently compiling a list of recommended senior move managers throughout Washington State. Check back soon, or <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4">contact us</Link> for a current referral.
               </p>
             </div>
 

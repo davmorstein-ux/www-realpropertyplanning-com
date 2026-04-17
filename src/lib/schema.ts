@@ -47,11 +47,11 @@ export const areaServed = [
   { "@type": "City", name: "La Conner", containedInPlace: { "@type": "State", name: "Washington" } },
 ];
 
-/** Person schema for David Stein — reusable entity across the site */
+/** Person schema for Real Property Planning — reusable entity across the site */
 export const davidSteinPerson = {
   "@type": "Person",
   "@id": `${SITE_URL}/#david-stein`,
-  name: "David Stein",
+  name: "Real Property Planning",
   jobTitle: "Real Estate Broker and State Certified Residential Appraiser",
   url: `${SITE_URL}/about-david-stein`,
   worksFor: {
@@ -186,7 +186,7 @@ export const realEstateAgentSchema = {
       },
       image: LOGO_URL,
       description:
-        "Real Property Planning is Washington State's professional resource hub for probate real estate, inherited property sales, estate appraisals, and senior housing transitions. Led by David Stein — a licensed real estate broker and Washington State Certified Residential Appraiser — serving families, executors, attorneys, and professionals throughout the Puget Sound region.",
+        "Real Property Planning is Washington State's professional resource hub for probate real estate, inherited property sales, estate appraisals, and senior housing transitions. Led by Real Property Planning — a licensed real estate broker and Washington State Certified Residential Appraiser — serving families, executors, attorneys, and professionals throughout the Puget Sound region.",
       telephone: "(206) 900-3015",
       email: "info@realpropertyplanning.com",
       address: {
@@ -420,7 +420,7 @@ export const homepageFaqSchema = {
     },
     {
       "@type": "Question",
-      name: "How is David Stein different from a regular real estate agent?",
+      name: "How is Real Property Planning different from a regular real estate agent?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "David holds two credentials most agents don't: he is both a licensed real estate broker and a Washington State Certified Residential Appraiser. This means he can value a home with professional appraisal standards AND help sell it — providing families with integrated guidance they can trust.",
@@ -447,7 +447,7 @@ export const homepageFaqSchema = {
       name: "Can Real Property Planning help out-of-state executors?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes — this is one of the most common situations we work with. David manages the full property process locally, including assessment, cleanout coordination, repairs, listing, and sale, with regular updates so out-of-state executors never need to be present for every step.",
+        text: "Yes — this is one of the most common situations we work with. Our team manages the full property process locally, including assessment, cleanout coordination, repairs, listing, and sale, with regular updates so out-of-state executors never need to be present for every step.",
       },
     },
     {

@@ -64,7 +64,7 @@ const ForCPAs = () => (
             CPAs working with estates, trusts, and clients in transition regularly encounter real estate questions that fall outside the scope of tax and accounting work — but that directly affect the financial decisions you're helping clients make. When an inherited property's realistic market value matters to a tax calculation, when a client needs to decide whether to sell as-is or invest in preparation, or when the timing of a sale affects a broader financial picture, Real Property Planning provides the property-side expertise that helps everyone work from the same accurate information.
           </p>
           <p className="text-muted-foreground text-[17px] md:text-lg leading-[1.8]">
-            David Stein's dual background as a licensed real estate broker and a <Link to="/real-estate-appraiser" className="text-accent hover:text-gold underline underline-offset-4">Washington State Certified Residential Appraiser</Link> makes him an unusually reliable resource for CPAs who need honest, documented property analysis — not a listing pitch.
+            Real Property Planning's dual background as a licensed real estate broker and a <Link to="/real-estate-appraiser" className="text-accent hover:text-gold underline underline-offset-4">Washington State Certified Residential Appraiser</Link> makes him an unusually reliable resource for CPAs who need honest, documented property analysis — not a listing pitch.
           </p>
         </div>
       </div>
