@@ -22,15 +22,9 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="About David Stein | Real Property Planning | Kirkland, Washington"
-        description="David Stein is a licensed real estate broker and Washington State Certified Residential Appraiser specializing in probate, estate, and senior transition real estate throughout the Puget Sound region."
-        jsonLd={{
-          "@context": "https://schema.org",
-          ...davidSteinPerson,
-          description:
-            "David Stein is a licensed Washington State real estate broker and certified residential appraiser specializing in probate, estate, and senior transition real estate throughout the Puget Sound region.",
-          image: "https://realpropertyplanning.com/dave-headshot.jpg",
-        }}
+        title="About Real Property Planning | Senior Transitions & Estate Hub"
+        description="Real Property Planning is Washington State's resource hub for senior transitions, probate, and estate real estate — coordinating brokers, appraisers, and trusted professionals across the Puget Sound region."
+        schemaJson={realEstateAgentSchema}
       />
       <BreadcrumbSchema
         items={[
