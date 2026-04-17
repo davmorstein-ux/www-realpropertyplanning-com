@@ -186,7 +186,7 @@ const VancouverWaProbateEstate = () => {
               Many Vancouver property situations involve more than just selling a home. A parent may be moving to senior living while the family home needs to be prepared and sold. An executor in Portland may be managing a Clark County estate. A family may be relocating out of state and needs the sale coordinated with their move timeline.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              our team serves as a central point of coordination — managing property access, working with cleanout crews, contractors, moving companies, and other vendors, communicating with attorneys and family members, and keeping the timeline aligned with the broader transition.
+              Our team serves as a central point of coordination — managing property access, working with cleanout crews, contractors, moving companies, and other vendors, communicating with attorneys and family members, and keeping the timeline aligned with the broader transition.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
               The goal is to reduce the logistical burden so families can focus on the people and decisions that matter most — not the day-to-day details of preparing and selling a property.

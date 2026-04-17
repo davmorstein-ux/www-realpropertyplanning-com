@@ -23,17 +23,17 @@ const services = [
     title: "Clear, Defensible Valuation",
     description: (
       <>
-        our team's background as a <Link to="/real-estate-appraiser" className="text-accent hover:text-gold underline underline-offset-4">Washington State Certified Residential Appraiser</Link> means clients receive a condition-adjusted, methodology-based market assessment — not just a listing agent's price opinion. This is especially valuable when valuation needs to support trust decisions, beneficiary conversations, or planning-related financial analysis.
+        Our team's background as a <Link to="/real-estate-appraiser" className="text-accent hover:text-gold underline underline-offset-4">Washington State Certified Residential Appraiser</Link> means clients receive a condition-adjusted, methodology-based market assessment — not just a listing agent's price opinion. This is especially valuable when valuation needs to support trust decisions, beneficiary conversations, or planning-related financial analysis.
       </>
     ),
   },
   {
     title: "Strategic Sale Planning",
-    description: "our team advises on timing, preparation, and market positioning — always in alignment with the broader estate plan and the client's specific situation. Decisions about what to repair, when to list, and how to price are made with both market knowledge and fiduciary awareness.",
+    description: "Our team advises on timing, preparation, and market positioning — always in alignment with the broader estate plan and the client's specific situation. Decisions about what to repair, when to list, and how to price are made with both market knowledge and fiduciary awareness.",
   },
   {
     title: "Coordination With Advisors",
-    description: "our team works collaboratively with attorneys, CPAs, and financial planners — ensuring that everyone involved in the client's plan is working from the same real estate information. One consistent point of contact. Regular updates. No gaps in communication.",
+    description: "Our team works collaboratively with attorneys, CPAs, and financial planners — ensuring that everyone involved in the client's plan is working from the same real estate information. One consistent point of contact. Regular updates. No gaps in communication.",
   },
   {
     title: "Property Preparation Oversight",

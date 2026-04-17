@@ -63,7 +63,7 @@ const whyRefer = [
   },
   {
     title: "Local Knowledge of Washington State Markets",
-    text: "our team serves clients throughout Washington State — with detailed knowledge of neighborhood-level pricing patterns, buyer expectations, and the practical realities of selling estate properties in each market.",
+    text: "Our team serves clients throughout Washington State — with detailed knowledge of neighborhood-level pricing patterns, buyer expectations, and the practical realities of selling estate properties in each market.",
   },
 ];
 

@@ -190,7 +190,7 @@ const SeattleProbateEstate = () => {
               Many executors and trustees managing Seattle property live hundreds or thousands of miles away. Coordinating vendors, accessing the property, understanding local conditions, and managing a sale remotely is stressful — especially when you're also grieving.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              our team serves as a local point of coordination. He manages property access, works with cleanout crews, contractors, and staging vendors, communicates with attorneys and other parties, and keeps you informed throughout the process — reducing unnecessary travel and giving you confidence that nothing is falling through the cracks.
+              Our team serves as a local point of coordination. He manages property access, works with cleanout crews, contractors, and staging vendors, communicates with attorneys and other parties, and keeps you informed throughout the process — reducing unnecessary travel and giving you confidence that nothing is falling through the cracks.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
               Whether you're in California, Texas, New York, or overseas, our team's goal is to make the process as clear and manageable as possible from wherever you are.

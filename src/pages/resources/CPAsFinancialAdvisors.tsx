@@ -55,7 +55,7 @@ const CPAsFinancialAdvisors = () => (
             </h2>
             <div className="bg-secondary border border-border rounded-xl px-6 py-8 md:px-8 text-center">
               <p className="text-muted-foreground text-base leading-relaxed">
-                our team is currently compiling a list of recommended CPAs and financial advisors throughout Washington State. Check back soon, or <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4">Contact us</Link> for a current referral.
+                Our team is currently compiling a list of recommended CPAs and financial advisors throughout Washington State. Check back soon, or <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4">Contact us</Link> for a current referral.
               </p>
             </div>
 

@@ -186,7 +186,7 @@ const BellinghamProbateEstate = () => {
               A significant number of Bellingham estate properties belong to families who don't live nearby. The owner may have retired here, used the property as a vacation home, or held it for decades before passing it to the next generation. In any case, the family handling the property now often faces the same challenge: making sound decisions about a home they can't easily visit.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              our team serves as your local point of coordination — visiting the property, assessing its condition, managing cleanout crews and contractors, and communicating with attorneys and family members. The goal is to reduce the logistical burden so you can make informed decisions without unnecessary stress or travel.
+              Our team serves as your local point of coordination — visiting the property, assessing its condition, managing cleanout crews and contractors, and communicating with attorneys and family members. The goal is to reduce the logistical burden so you can make informed decisions without unnecessary stress or travel.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
               For second homes and vacation properties, there are often additional considerations — seasonal access, shared ownership, deferred maintenance, or unique features that affect marketability. Our team evaluates these factors honestly and builds a strategy around the property's actual condition and positioning.

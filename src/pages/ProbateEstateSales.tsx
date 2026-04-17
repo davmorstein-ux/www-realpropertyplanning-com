@@ -230,7 +230,7 @@ const ProbateEstateSales = () => {
               ))}
             </ul>
             <p className="text-muted-foreground text-[17px] leading-[1.85]">
-              our team's dual background as a licensed broker and a{" "}
+              Our team's dual background as a licensed broker and a{" "}
               <Link to="/real-estate-appraiser" className="text-accent hover:text-gold underline underline-offset-4">Washington State Certified Residential Appraiser</Link>{" "}
               means he approaches these situations differently than a standard listing agent. Every pricing decision is grounded in methodology. Every repair recommendation is evaluated through a{" "}
               <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">return-on-investment</Link>{" "}

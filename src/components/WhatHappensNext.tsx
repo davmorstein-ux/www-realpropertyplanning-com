@@ -10,7 +10,7 @@ const steps = [
   {
     iconSrc: iconPhone3d,
     title: "A short conversation",
-    text: "our team will ask a few questions to understand your situation",
+    text: "Our team will ask a few questions to understand your situation",
   },
   {
     iconSrc: iconChat3d,

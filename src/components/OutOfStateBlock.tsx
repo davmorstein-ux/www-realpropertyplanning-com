@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 
 const points = [
-  "our team handles property visits, vendor coordination, and inspections in person — so you don't have to fly back and forth.",
+  "Our team handles property visits, vendor coordination, and inspections in person — so you don't have to fly back and forth.",
   "You'll get regular updates with photos and clear communication. No guessing about what's happening.",
   "He coordinates directly with local attorneys, cleanout crews, contractors, and other professionals on your behalf.",
   "Pricing is honest and defensible, so you can make confident decisions even from 2,000 miles away.",
-  "our team regularly works with executors, trustees, and family members who are managing things from out of state — it's one of his most common situations.",
+  "Our team regularly works with executors, trustees, and family members who are managing things from out of state — it's one of his most common situations.",
 ];
 
 const OutOfStateBlock = () => (

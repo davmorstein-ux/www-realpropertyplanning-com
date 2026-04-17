@@ -44,7 +44,7 @@ const faqs = [
   {
     question: "How does our team coordinate the process for remote families?",
     answer:
-      "our team serves as your local point of coordination. He manages property access, works with cleanout crews, contractors, and preparation vendors, communicates with attorneys and other parties, and provides clear updates throughout — so you always know where things stand without needing to be there in person.",
+      "Our team serves as your local point of coordination. He manages property access, works with cleanout crews, contractors, and preparation vendors, communicates with attorneys and other parties, and provides clear updates throughout — so you always know where things stand without needing to be there in person.",
   },
 ];
 
@@ -197,7 +197,7 @@ const SpokaneProbateEstate = () => {
               One of the most common challenges with Spokane estate properties is distance. The executor, trustee, or primary decision-maker often lives in Western Washington, out of state, or even overseas. Managing vendors, accessing the property, and making informed decisions from afar is stressful — especially when you're also managing grief or family dynamics.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              our team serves as your boots-on-the-ground coordinator. He manages property access, works with cleanout crews, contractors, and preparation vendors, communicates with attorneys and other parties, and provides clear, consistent updates — so you always know where things stand without needing to be there in person.
+              Our team serves as your boots-on-the-ground coordinator. He manages property access, works with cleanout crews, contractors, and preparation vendors, communicates with attorneys and other parties, and provides clear, consistent updates — so you always know where things stand without needing to be there in person.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
               The goal is simple: minimize your travel, reduce your stress, and give you confidence that the process is moving forward thoughtfully and professionally.

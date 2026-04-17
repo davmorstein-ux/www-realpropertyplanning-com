@@ -150,7 +150,7 @@ const PascoProbateEstate = () => {
               When an inherited property needs attention — whether that's a cleanout, targeted repairs, or just an honest evaluation — someone needs to manage the details. For families who aren't local or who are managing multiple responsibilities, that coordination can feel like a full-time job on its own.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              our team steps into that role. He manages property access, works with cleanout crews and contractors, communicates with attorneys and other professionals, and provides clear updates so the family always knows where things stand. The process stays organized and moves forward without depending on anyone making repeated trips to Pasco.
+              Our team steps into that role. He manages property access, works with cleanout crews and contractors, communicates with attorneys and other professionals, and provides clear updates so the family always knows where things stand. The process stays organized and moves forward without depending on anyone making repeated trips to Pasco.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
               The goal is straightforward: take the logistical weight off the family so they can focus on the decisions that matter — not the day-to-day details of getting a property ready to sell.

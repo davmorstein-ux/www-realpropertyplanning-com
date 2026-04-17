@@ -130,7 +130,7 @@ const OutOfStateFamilies = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <ProofCallout
-            quote="our team guided our family through a very difficult time with professionalism and genuine compassion. His valuation perspective and market knowledge were incredibly helpful."
+            quote="Our team guided our family through a very difficult time with professionalism and genuine compassion. His valuation perspective and market knowledge were incredibly helpful."
             attribution="Estate Attorney, Seattle"
             context="Out-of-state estate coordination"
             variant="accent"

@@ -238,7 +238,7 @@ const ForRealEstateAttorneys = () => (
             When a client's legal matter involves real property in Washington State, Real Property Planning provides a reliable, professional resource for the market and logistics side of the situation.
           </p>
           <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
-            our team serves clients throughout{" "}
+            Our team serves clients throughout{" "}
             <Link to="/counties" className="text-gold hover:text-gold/80 underline underline-offset-4 transition-colors">King County, Snohomish County, Pierce County, Kitsap County</Link>, and across Washington State. A brief conversation is usually the most efficient way to determine how we can support your client's situation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

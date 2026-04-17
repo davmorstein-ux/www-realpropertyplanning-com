@@ -31,7 +31,7 @@ const services = [
   },
   {
     title: "Neutral, Professional Coordination",
-    description: "our team's role is not to represent either party's interests — it's to handle the property professionally and move the process forward. He maintains clear, consistent communication with both parties (or through their respective counsel) and manages the sale with the goal of a fair outcome, not a fast commission.",
+    description: "Our team's role is not to represent either party's interests — it's to handle the property professionally and move the process forward. He maintains clear, consistent communication with both parties (or through their respective counsel) and manages the sale with the goal of a fair outcome, not a fast commission.",
   },
   {
     title: "Structured Process Guidance",
@@ -50,7 +50,7 @@ const faqs = [
   },
   {
     question: "How does valuation work when parties disagree on what the home is worth?",
-    answer: "our team provides a condition-adjusted, comparable-supported market analysis grounded in his certified appraisal training. Because the analysis is methodology-based rather than opinion-based, it gives both parties and their attorneys a shared factual foundation — which often resolves valuation disputes more efficiently than competing agent opinions.",
+    answer: "Our team provides a condition-adjusted, comparable-supported market analysis grounded in his certified appraisal training. Because the analysis is methodology-based rather than opinion-based, it gives both parties and their attorneys a shared factual foundation — which often resolves valuation disputes more efficiently than competing agent opinions.",
   },
   {
     question: "Can the home be sold during active legal proceedings?",
@@ -167,7 +167,7 @@ const ForFamilyLawAttorneys = () => (
             If you have a client navigating a family law matter that involves real property in Washington State, a brief conversation is usually the most efficient starting point.
           </p>
           <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
-            our team works collaboratively with family law attorneys throughout the Puget Sound area — providing the neutral, structured real estate support that helps complex situations move forward.
+            Our team works collaboratively with family law attorneys throughout the Puget Sound area — providing the neutral, structured real estate support that helps complex situations move forward.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+12069003015">

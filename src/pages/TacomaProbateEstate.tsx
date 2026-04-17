@@ -187,7 +187,7 @@ const TacomaProbateEstate = () => {
               Many families managing Tacoma estate property live elsewhere — across the state, across the country, or even internationally. Coordinating vendors, accessing the property, understanding local conditions, and managing a sale remotely adds significant stress during an already difficult time.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              our team serves as a local point of coordination. He manages property access, works with cleanout crews, contractors, and preparation vendors, communicates with attorneys and other parties, and keeps you informed throughout the process — reducing unnecessary travel and giving you confidence that nothing is falling through the cracks.
+              Our team serves as a local point of coordination. He manages property access, works with cleanout crews, contractors, and preparation vendors, communicates with attorneys and other parties, and keeps you informed throughout the process — reducing unnecessary travel and giving you confidence that nothing is falling through the cracks.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
               Whether you're managing from Portland, Phoenix, or across the country, our team's goal is to make the process as clear and manageable as possible from wherever you are.

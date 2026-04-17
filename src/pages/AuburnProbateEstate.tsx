@@ -83,7 +83,7 @@ const AuburnProbateEstate = () => {
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">From Cleanup to Closing — Practical Coordination</h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">When an inherited Auburn home needs work, someone has to manage the details — organizing a cleanout, getting contractor bids, making decisions about what to fix and what to leave. For families who aren't local or who are already managing other responsibilities, this can feel overwhelming.</p>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-5">our team takes on that coordination. He manages the cleanout process, oversees targeted repairs, works with vendors, and keeps the family updated on progress. Everything is documented, communicated clearly, and aligned with the pricing and preparation strategy.</p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-5">Our team takes on that coordination. He manages the cleanout process, oversees targeted repairs, works with vendors, and keeps the family updated on progress. Everything is documented, communicated clearly, and aligned with the pricing and preparation strategy.</p>
             <p className="text-muted-foreground text-lg leading-relaxed">The goal is to get the property positioned well for market without wasting the estate's resources on improvements that won't pay for themselves.</p>
           </div>
         </div>
