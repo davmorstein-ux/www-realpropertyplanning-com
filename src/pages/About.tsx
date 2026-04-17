@@ -184,24 +184,25 @@ const About = () => {
                 It's Personal, Too
               </h2>
               <div className="space-y-6 text-muted-foreground leading-relaxed text-lg">
-                <p>
-                  For David, this work has never been purely professional.
-                </p>
-                <p>
-                  When his mother passed away after a battle with cancer, she left behind very little of tangible value — no will, no estate plan, just a car and some furniture that still needed to be dealt with. Even that small process had its complications. It was a quiet reminder that no transition, however simple it looks from the outside, is actually simple when you're the one going through it.
-                </p>
-                <p>
-                  His father, now 93 years old and still serving as president of the Wayne Adult Community Center in New Jersey — presiding over city council meetings once a month — is a daily reminder that aging doesn't mean slowing down. And his brother, who has lived in a group home for years due to a condition called Agenesis of the Corpus Callosum, gave David a firsthand understanding of what it means to navigate care systems, group living environments, and the decisions families make when a loved one needs a different kind of support.
-                </p>
-                <p>
-                  These experiences don't make David an expert in every dimension of what his clients are going through. But they make him someone who genuinely understands the weight of it.
-                </p>
-                <p>
-                  As more people discover Real Property Planning and reach out, the same thing keeps happening: they tell David they wish this site had existed years ago — when they were going through something similar and didn't know where to turn. That feedback is what keeps the work moving forward.
-                </p>
-              </div>
-            </div>
-          </div>
+  <p>
+    For David, this work has never been purely professional.
+  </p>
+  <p>
+    When his mother passed away after a battle with cancer, she left behind very little of tangible value — no will, no estate plan, just a car and some furniture that still needed to be dealt with. Even that small process had its complications. It was a quiet reminder that no transition, however simple it looks from the outside, is actually simple when you're the one going through it.
+  </p>
+  <p>
+    His father, now 93 years old and still serving as president of the Wayne Adult Community Center in New Jersey — presiding over city council meetings once a month — is a daily reminder that aging doesn't mean slowing down. David grew up close to his brother and three sisters, and that bond has only deepened over the years. It's the kind of family where people show up for each other — and that instinct carries directly into how David shows up for his clients.
+  </p>
+  <p>
+    His brother, who has lived in a group home for years due to a condition called Agenesis Corpus Callosum, gave David a firsthand understanding of what it means to navigate care systems, group living environments, and the decisions families make when a loved one needs a different kind of support.
+  </p>
+  <p>
+    These experiences don't make David an expert in every dimension of what his clients are going through. But they make him someone who genuinely understands the weight of it.
+  </p>
+  <p>
+    As more people discover Real Property Planning and reach out, the same thing keeps happening: they tell David they wish this site had existed years ago — when they were going through something similar and didn't know where to turn. That feedback is what keeps the work moving forward.
+  </p>
+</div>
         </section>
 
         {/* Section 4: Before Real Estate */}
