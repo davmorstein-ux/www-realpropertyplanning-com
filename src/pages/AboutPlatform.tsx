@@ -84,6 +84,58 @@ const AboutPlatform = () => {
           </div>
         </section>
 
+        {/* Leadership: David Stein */}
+        <section className="py-16 lg:py-20 bg-background">
+          <div className="container px-6 lg:px-8">
+            <figure className="max-w-xl mx-auto text-center">
+              <img
+                src={davidSteinHeadshot}
+                alt="David Stein, President of Real Property Planning"
+                width={224}
+                height={224}
+                loading="lazy"
+                className="w-56 h-56 rounded-full object-cover mx-auto shadow-lg ring-1 ring-border"
+              />
+              <figcaption className="mt-6">
+                <div className="font-serif text-2xl text-foreground font-semibold">
+                  David Stein
+                </div>
+                <div className="text-muted-foreground mt-1">
+                  President of Real Property Planning
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        {/* Why I Created Real Property Planning */}
+        <section className="py-16 lg:py-20 bg-secondary">
+          <div className="container px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
+                Why I Created Real Property Planning
+              </h2>
+              <div className="space-y-5 text-muted-foreground text-lg leading-relaxed">
+                <p>
+                  I created Real Property Planning to be a calm, trustworthy, practical resource for the people who need it most — seniors weighing major housing decisions, families helping a parent transition, executors and trustees managing inherited property, and the professionals who quietly hold all of it together.
+                </p>
+                <p>
+                  After years of working alongside families navigating probate, estate sales, and senior moves, I kept seeing the same gap: the attorney, the care coordinator, the move manager, the appraiser, and the real estate broker were each doing good work — but no one was connecting the pieces for the family. People were left to coordinate it themselves, often from another state, often while grieving.
+                </p>
+                <p>
+                  Real Property Planning exists to close that gap. It is a platform — not a personal brand — built to bring clear guidance, vetted professionals, and step-by-step resources into one place, so families can move forward with confidence and professionals can serve their clients more completely.
+                </p>
+                <p>
+                  My role is to lead and grow this platform with the same standards I bring to every client relationship: integrity, patience, and respect for the weight of these decisions.
+                </p>
+                <p className="text-foreground font-semibold not-italic">
+                  — David Stein, President, Real Property Planning
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Section 1: What This Is */}
         <section className="py-20 lg:py-28 bg-background">
           <div className="container px-6 lg:px-8">
