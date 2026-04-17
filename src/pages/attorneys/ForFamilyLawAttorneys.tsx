@@ -62,7 +62,7 @@ const ForFamilyLawAttorneys = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
       title="Real Estate Support for Family Law Attorneys in Washington State | Real Property Planning"
-      description="Real Property Planning provides neutral, valuation-informed real estate support for family law attorneys and their clients navigating property decisions in Washington State."
+      description="Real Property Planning provides neutral, experienced real estate support for family law attorneys and their clients navigating property decisions in Washington State."
     />
     <BreadcrumbSchema
       items={[

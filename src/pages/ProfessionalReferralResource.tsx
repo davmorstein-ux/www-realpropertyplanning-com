@@ -24,7 +24,7 @@ const whoIWorkWith = [
   },
   {
     title: "Trustees and Fiduciaries",
-    text: "Trustees managing trust-owned real estate need accurate market data, honest condition assessments, and a structured path to sale. Real Property Planning provides valuation-informed pricing and professional coordination that supports fiduciary obligations and keeps beneficiaries informed.",
+    text: "Trustees managing trust-owned real estate need accurate market data, honest condition assessments, and a structured path to sale. Real Property Planning provides condition-based pricing and professional coordination that supports fiduciary obligations and keeps beneficiaries informed.",
   },
   {
     title: "CPAs and Financial Professionals",
@@ -81,7 +81,7 @@ const referralSituations = [
 const processSteps = [
   { title: "Initial Confidential Conversation", text: "A private discussion about the property, the people involved, and the circumstances — with no obligation and no pressure." },
   { title: "Property and Situation Review", text: "An in-person assessment of the home's condition, location, and any factors that affect value, timeline, or preparation needs." },
-  { title: "Valuation-Informed Pricing Discussion", text: "A realistic pricing perspective grounded in certified appraisal experience — not automated estimates or aspirational numbers." },
+  { title: "Condition-Based Pricing Discussion", text: "A realistic pricing perspective grounded in certified appraisal experience — not automated estimates or aspirational numbers." },
   { title: "Preparation, Cleanout, and Repair Strategy", text: "A clear plan for getting the property market-ready, including vendor coordination and cost-benefit analysis of potential improvements." },
   { title: "Listing, Marketing, Negotiation, and Closing", text: "Professional marketing, thorough offer evaluation, skilled negotiation, and attentive transaction management through closing day." },
   { title: "Consistent Communication From Start to Finish", text: "Regular updates to all stakeholders — the referring professional, the client, family members, and legal counsel — so everyone stays informed." },

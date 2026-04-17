@@ -142,7 +142,7 @@ const SeniorTransitions = () => {
         answer="Real Property Planning provides step-by-step guidance for seniors and families navigating the sale of a longtime home — whether the next step is assisted living, a memory care community, a smaller residence, or a move closer to family. As both a licensed real estate broker and a Washington State Certified Residential Appraiser, Real Property Planning brings something most agents can't offer: an honest, valuation-based understanding of what the home is actually worth in its current condition — not an inflated number designed to win a listing."
         supportBullets={[
           "Patient, respectful coordination that honors the emotional weight of the transition",
-          "Valuation-informed pricing based on actual condition — not automated estimates or pressure to list quickly",
+          "Condition-based pricing based on actual condition — not automated estimates or pressure to list quickly",
           "Practical help with cleanout coordination, repairs, staging, and sale readiness",
           "Clear communication with adult children, out-of-state family members, care teams, and attorneys",
           "Referral connections to trusted senior move managers, care advisors, and estate professionals throughout the Puget Sound area",

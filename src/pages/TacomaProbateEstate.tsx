@@ -89,7 +89,7 @@ const TacomaProbateEstate = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Probate & Estate Real Estate in Tacoma, WA"
-        description="Guidance for executors, trustees, and families with inherited property in Tacoma, WA. Valuation-informed strategy from start to finish."
+        description="Guidance for executors, trustees, and families with inherited property in Tacoma, WA. Local Pierce County expertise from start to finish."
       />
       <BreadcrumbSchema
         items={[
@@ -217,8 +217,8 @@ const TacomaProbateEstate = () => {
                   desc: "I visit the property and assess its condition, identify issues that affect value, and note what preparation might be worthwhile — and what isn't worth the cost or delay.",
                 },
                 {
-                  title: "Valuation-Informed Pricing Strategy",
-                  desc: "Using my appraisal background and Tacoma-specific market data, I develop a pricing strategy that's defensible, realistic, and tailored to the neighborhood and condition of the home.",
+                  title: "Tacoma Pricing Strategy",
+                  desc: "Drawing on certified appraisal experience and Tacoma-specific market data, we develop pricing that's defensible, realistic, and tailored to the neighborhood and condition of the home.",
                 },
                 {
                   title: "Coordinating Preparation and Next Steps",

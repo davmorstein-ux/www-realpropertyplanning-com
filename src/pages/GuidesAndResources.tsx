@@ -156,7 +156,7 @@ const categories: Category[] = [
       {
         title: "How Do You Price a House in a Trust or Estate?",
         description:
-          "Valuation-informed strategies that protect fiduciaries and support informed decisions.",
+          "Evidence-based strategies that protect fiduciaries and support informed decisions.",
         href: "/guides/pricing-house-trust-estate",
       },
       {

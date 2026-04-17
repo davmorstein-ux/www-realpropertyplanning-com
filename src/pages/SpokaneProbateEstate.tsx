@@ -90,7 +90,7 @@ const SpokaneProbateEstate = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Probate & Estate Real Estate in Spokane, WA"
-        description="Guidance for executors and families with inherited property in Spokane, WA. Local coordination and valuation-informed strategy from afar."
+        description="Guidance for executors and families with inherited property in Spokane, WA. Local on-the-ground coordination for out-of-area decision-makers."
       />
       <BreadcrumbSchema
         items={[
@@ -123,7 +123,7 @@ const SpokaneProbateEstate = () => {
         answer="Many Spokane estate properties are managed by families who live outside the area. Real Property Planning provides reliable, on-the-ground coordination — property assessment, preparation, pricing, and sale management — so out-of-area executors and trustees can make confident decisions without needing to be on-site."
         supportBullets={[
           "Clear guidance for out-of-state executors managing Spokane property from a distance",
-          "Valuation-informed pricing based on Spokane's neighborhood-level market dynamics",
+          "Pricing analysis grounded in Spokane's neighborhood-level market dynamics",
           "Full-service coordination from cleanout through closing with regular updates",
         ]}
       />

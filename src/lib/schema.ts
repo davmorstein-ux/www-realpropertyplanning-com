@@ -117,7 +117,7 @@ export const serviceSchemas = [
     "@id": `${SITE_URL}/#service-probate-sales`,
     name: "Probate Real Estate Sales",
     description:
-      "Full-service real estate guidance for executors, trustees, and families selling estate property during probate in Washington State. Includes property assessment, valuation-informed pricing, preparation coordination, listing, and sale management.",
+      "Full-service real estate guidance for executors, trustees, and families selling estate property during probate in Washington State. Includes property assessment, condition-based pricing, preparation coordination, listing, and sale management.",
     provider: { "@id": `${SITE_URL}/#organization` },
     areaServed: areaServed,
     url: `${SITE_URL}/probate-estate-sales`,
@@ -150,7 +150,7 @@ export const serviceSchemas = [
     "@id": `${SITE_URL}/#service-inherited-property`,
     name: "Inherited Home Sales",
     description:
-      "Comprehensive real estate guidance for families and executors selling inherited property in Washington State. Includes honest condition assessment, valuation-informed pricing, cleanout coordination, and full sale management.",
+      "Comprehensive real estate guidance for families and executors selling inherited property in Washington State. Includes honest condition assessment, condition-based pricing, cleanout coordination, and full sale management.",
     provider: { "@id": `${SITE_URL}/#organization` },
     areaServed: areaServed,
     url: `${SITE_URL}/executors`,
@@ -260,7 +260,7 @@ export const realEstateAgentSchema = {
         "Senior downsizing Puget Sound",
         "Out-of-state executor coordination",
         "Estate property preparation",
-        "Valuation-informed pricing",
+        "Condition-based pricing",
         "Probate sales King County",
         "Probate sales Snohomish County",
         "Probate sales Pierce County",

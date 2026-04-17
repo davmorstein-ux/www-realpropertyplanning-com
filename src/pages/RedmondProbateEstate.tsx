@@ -38,7 +38,7 @@ const faqs = [
   {
     question: "What if multiple family members are involved in the decision?",
     answer:
-      "Multi-party situations are common in estate sales. Our team provides clear, documented communication so all decision-makers — whether local or out of state — have the same information. His appraisal-informed pricing approach also helps establish defensible value when consensus is needed.",
+      "Multi-party situations are common in estate sales. Our team provides clear, documented communication so all decision-makers — whether local or out of state — have the same information. Pricing grounded in certified appraisal methodology also helps establish defensible value when consensus is needed.",
   },
   {
     question: "How long does it take to sell an estate property in Redmond?",

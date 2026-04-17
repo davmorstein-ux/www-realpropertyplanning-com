@@ -6,7 +6,7 @@ const qualities = [
     desc: "Regular updates and plain-language explanations — no jargon, no surprises.",
   },
   {
-    label: "Valuation-Informed Pricing",
+    label: "Defensible, Condition-Based Pricing",
     desc: "Pricing grounded in certified appraisal methodology, not inflated listing pitches.",
   },
   {

@@ -207,7 +207,7 @@ const ExecutorSellBeforeProbate = () => (
       steps={[
         { title: "What Executors Should Do Before Selling", description: "A step-by-step guide covering the first five things every executor should handle.", href: "/guides/what-executors-should-do" },
         { title: "How Probate Real Estate Works in Washington", description: "Understand the legal process, timeline, and key decisions involved in selling property through probate.", href: "/guides/how-probate-real-estate-works" },
-        { title: "Do I Need an Appraisal Before Selling?", description: "When a formal appraisal helps — and when a valuation-informed market analysis may be enough.", href: "/guides/appraisal-before-selling-inherited-property" },
+        { title: "Do I Need an Appraisal Before Selling?", description: "When a formal appraisal helps — and when a evidence-based market analysis may be enough.", href: "/guides/appraisal-before-selling-inherited-property" },
       ]}
     />
 

@@ -31,7 +31,7 @@ const countyCards = [
   {
     county: "Kitsap County",
     href: "/kitsap-county",
-    intro: "Waterfront properties, naval community transitions, and rural acreage create a market where automated valuations consistently miss the mark. Local knowledge and appraisal-informed pricing are essential here.",
+    intro: "Waterfront properties, naval community transitions, and rural acreage create a market where automated valuations consistently miss the mark. Local knowledge and condition-based pricing are essential here.",
   },
   {
     county: "Skagit County",

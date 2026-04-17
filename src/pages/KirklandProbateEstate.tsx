@@ -38,7 +38,7 @@ const faqs = [
   {
     question: "What if multiple family members are involved in the decision?",
     answer:
-      "Multi-party situations are common in Kirkland estate and trust sales. Our team provides clear, documented communication so all parties — whether local or out of state — have the same information. His appraisal-informed pricing approach also helps establish defensible value when consensus is needed.",
+      "Multi-party situations are common in Kirkland estate and trust sales. Our team provides clear, documented communication so all parties — whether local or out of state — have the same information. Pricing grounded in certified appraisal methodology also helps establish defensible value when consensus is needed.",
   },
   {
     question: "How long does it take to sell an estate property in Kirkland?",
@@ -89,7 +89,7 @@ const KirklandProbateEstate = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Probate & Estate Real Estate in Kirkland, WA"
-        description="Guidance for executors, trustees, and families with inherited or estate property in Kirkland, WA. Valuation-informed strategy for higher-value homes."
+        description="Guidance for executors, trustees, and families with inherited or estate property in Kirkland, WA. Local expertise for higher-value Eastside homes."
       />
       <BreadcrumbSchema
         items={[

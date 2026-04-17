@@ -25,8 +25,8 @@ const steps = [
   },
   {
     number: "02",
-    title: "Property Review and Valuation-Informed Pricing Discussion",
-    text: "Real Property Planning visits the property to assess its condition, identify features that affect value, and evaluate what the market is likely to see. Unlike a standard comparative market analysis, the assessment draws on certified appraisal experience — giving you a realistic pricing perspective that accounts for deferred maintenance, outdated systems, unusual layouts, and condition-related factors that automated tools consistently miss.",
+    title: "Property Review and Pricing Discussion",
+    text: "Real Property Planning visits the property to assess its condition, identify features that affect value, and evaluate what the market is likely to see. The assessment draws on certified appraisal experience — giving you a realistic pricing perspective that accounts for deferred maintenance, outdated systems, unusual layouts, and condition-related factors that automated tools consistently miss.",
     details: "This step often includes a candid conversation about what the property is worth in its current condition versus what it could be worth with targeted preparation — helping you make informed decisions about where to invest time and money.",
   },
   {
@@ -129,9 +129,9 @@ const HowTheProcessWorks = () => {
 
       <DirectAnswerBlock
         question="How do estate and probate property sales work in Washington State?"
-        answer="Real Property Planning follows a clear seven-step process: initial consultation, property evaluation and valuation-informed pricing, preparation and vendor coordination, listing and marketing, offer review and negotiation, escrow and closing management, and post-sale support. Each step is designed for the unique complexity of estate, probate, and senior transition sales — where legal requirements, family dynamics, and property condition all shape the timeline."
+        answer="Real Property Planning follows a clear seven-step process: initial consultation, property evaluation and pricing discussion, preparation and vendor coordination, listing and marketing, offer review and negotiation, escrow and closing management, and post-sale support. Each step is designed for the unique complexity of estate, probate, and senior transition sales — where legal requirements, family dynamics, and property condition all shape the timeline."
         supportSteps={[
-          { label: "Evaluate", desc: "Property assessment and valuation-informed pricing discussion" },
+          { label: "Evaluate", desc: "On-site property review and pricing discussion" },
           { label: "Prepare", desc: "Cleanout, repairs, and vendor coordination managed for you" },
           { label: "Sell", desc: "Marketing, negotiation, escrow, and closing — handled end to end" },
         ]}

@@ -115,7 +115,7 @@ const CountyPageTemplate = ({
         supportBullets={aeoSupportBullets}
         supportFaqs={aeoSupportFaqs}
         supportSteps={!aeoSupportBullets && !aeoSupportFaqs ? [
-          { label: "Evaluate", desc: "Property assessment and valuation-informed pricing" },
+          { label: "Evaluate", desc: "On-site property review and pricing analysis" },
           { label: "Prepare", desc: "Cleanout, repairs, and vendor coordination" },
           { label: "Sell", desc: "Marketing, negotiation, and closing" },
         ] : undefined}

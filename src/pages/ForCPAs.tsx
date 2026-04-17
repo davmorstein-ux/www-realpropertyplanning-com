@@ -12,7 +12,7 @@ import CTASection from "@/components/CTASection";
 
 const jsonLd = articleSchema({
   headline: "Real Estate Guidance for CPAs and Their Clients in Washington State",
-  description: "Real Property Planning provides valuation-informed real estate support for CPAs whose clients face inherited property, probate sales, or estate transitions in Washington State.",
+  description: "Real Property Planning provides experienced real estate support for CPAs whose clients face inherited property, probate sales, or estate transitions in Washington State.",
   url: "/for-cpas",
   datePublished: "2025-01-15",
   dateModified: "2026-04-14",
@@ -23,7 +23,7 @@ const ForCPAs = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
       title="Real Estate Guidance for CPAs | Estate & Inherited Property Support | Real Property Planning"
-      description="Real Property Planning provides valuation-informed real estate support for CPAs whose clients face inherited property, probate sales, or estate transitions in Washington State."
+      description="Real Property Planning provides experienced real estate support for CPAs whose clients face inherited property, probate sales, or estate transitions in Washington State."
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema items={[{ name: "For CPAs", url: "/for-cpas" }]} />
@@ -44,7 +44,7 @@ const ForCPAs = () => (
             Real Estate Guidance for CPAs and Their Clients in Washington State
           </h1>
           <p className="text-primary-foreground/70 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-3" style={{ maskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)' }}>
-            Practical, valuation-informed property guidance when your clients face inherited property, estate settlement, or trust administration decisions.
+            Practical, evidence-based property guidance when your clients face inherited property, estate settlement, or trust administration decisions.
           </p>
           <Link to="/contact">
             <Button variant="gold" size="lg" className="px-7 py-4 h-auto rounded-lg">

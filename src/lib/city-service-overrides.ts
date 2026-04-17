@@ -65,7 +65,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
       scenarios: [
         "A newly appointed executor managing a high-value Bellevue estate property while living out of state and unfamiliar with Eastside market dynamics",
         "An estate property in a Bellevue neighborhood experiencing redevelopment pressure, where the land value may exceed the structure value",
-        "Co-executors who disagree on the property's value and need defensible, appraisal-informed pricing to resolve the discussion",
+        "Co-executors who disagree on the property's value and need defensible, pricing grounded in certified appraisal methodology to resolve the discussion",
         "An estate home in Bellevue that has been vacant and needs assessment, cleanout, and preparation before it can compete with updated listings",
         "An executor coordinating with multiple professionals — probate attorney, CPA, financial advisor — on a Bellevue property with significant value at stake",
       ],
@@ -1916,7 +1916,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
       scenarios: [
         "A newly appointed executor managing a Kirkland estate property while living out of state — unfamiliar with how waterfront proximity and neighborhood character affect pricing",
         "An estate home in Kirkland's Totem Lake area where ongoing redevelopment creates uncertainty about property positioning and buyer interest",
-        "Co-executors who disagree about a Kirkland property's value and need defensible, appraisal-informed pricing to resolve the discussion",
+        "Co-executors who disagree about a Kirkland property's value and need defensible, pricing grounded in certified appraisal methodology to resolve the discussion",
         "An estate property that has been vacant and needs assessment, cleanout, and preparation before it can compete with Kirkland's updated listings",
         "An executor coordinating with a probate attorney and CPA on a Kirkland property where the neighborhood's premium location elevates financial stakes",
       ],
@@ -3315,7 +3315,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
       whyLocal: "Legal professionals handling Bremerton matters need a partner who understands both the revitalization dynamics and the military-influenced buyer pool. Our team's dual credentials and Kitsap experience provide the objective foundation that Bremerton legal proceedings and fiduciary situations require in a market where neighborhood-level conditions change faster than citywide statistics reflect.",
     },
     "valuation-guidance": {
-      intro: "Accurate property valuation in Bremerton requires understanding the city's uneven revitalization — waterfront and Manette properties have appreciated on a different trajectory than established neighborhoods in the outlying areas. Real Property Planning provides the valuation-informed insight that Bremerton clients need for estate settlements, trust administration, and property decisions in a market where transformation creates pricing complexity.",
+      intro: "Accurate property valuation in Bremerton requires understanding the city's uneven revitalization — waterfront and Manette properties have appreciated on a different trajectory than established neighborhoods in the outlying areas. Real Property Planning provides the condition-based valuation insight that Bremerton clients need for estate settlements, trust administration, and property decisions in a market where transformation creates pricing complexity.",
       scenarios: [
         "An executor needing valuation of a Manette estate property where the neighborhood's rapid transformation makes recent comparables essential",
         "Divorcing spouses who disagree on their Bremerton home's value because one cites revitalization-driven appreciation while the other argues the specific neighborhood hasn't benefited",
