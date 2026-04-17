@@ -33,6 +33,19 @@ type CountyVideo = {
 
 const SITE_URL = "https://www.realpropertyplanning.com";
 
+const COUNTY_WEBSITES: Record<string, string> = {
+  "benton-county":    "https://www.co.benton.wa.us",
+  "clark-county":     "https://www.clark.wa.gov",
+  "king-county":      "https://kingcounty.gov",
+  "kitsap-county":    "https://www.kitsapgov.com",
+  "pierce-county":    "https://www.piercecountywa.gov",
+  "skagit-county":    "https://www.skagitcounty.net",
+  "snohomish-county": "https://snohomishcountywa.gov",
+  "spokane-county":   "https://www.spokanecounty.org",
+  "thurston-county":  "https://www.thurstoncountywa.gov",
+  "whatcom-county":   "https://www.whatcomcounty.us",
+};
+
 const COUNTY_VIDEOS: Record<string, CountyVideo> = {
   "snohomish-county": {
     webm: "/county-videos/snohomish-hero.webm?v=3",
