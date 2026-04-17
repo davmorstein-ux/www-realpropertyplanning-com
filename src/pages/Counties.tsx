@@ -48,19 +48,19 @@ const countyCards = [
   },
   {
     county: "Skagit County",
-    href: "/counties/skagit",
+    href: "/skagit-county",
     logo: skagitCountyLogo,
     intro: "Agricultural properties, small-town homes, and waterfront parcels in the Skagit Valley require a different approach than urban markets. Estate sales here often involve unique zoning, acreage, and condition considerations.",
   },
   {
     county: "Clark County",
-    href: "/clark-county-probate-estate-real-estate",
+    href: "/clark-county",
     logo: clarkCountyLogo,
     intro: "Cross-state families, Portland-area relocation dynamics, and a rapidly growing market make Clark County estate sales uniquely complex — especially for executors coordinating from Oregon or beyond.",
   },
   {
     county: "Spokane County",
-    href: "/spokane-county-probate-estate-real-estate",
+    href: "/spokane-county",
     logo: spokaneCountyLogo,
     intro: "Eastern Washington's largest metro area, with a housing market distinct from the Puget Sound region. Out-of-area executors often need hands-on coordination for inherited properties in Spokane's established neighborhoods.",
   },
