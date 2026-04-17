@@ -35,7 +35,6 @@ const About = () => {
       <BreadcrumbSchema
         items={[
           { name: "About", url: "/about" },
-          { name: "David Stein", url: "/about-david-stein" },
         ]}
       />
       <Header />
