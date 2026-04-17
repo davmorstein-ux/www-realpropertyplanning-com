@@ -24,6 +24,20 @@ import thurstonLogo from "@/assets/counties/thurston-county-logo.webp";
 import whatcomLogo from "@/assets/counties/whatcom-county-logo.webp";
 import { services, counties } from "@/lib/service-areas-data";
 
+type CountyVideo = {
+  webm?: string;
+  mp4?: string;
+  poster?: string;
+};
+
+const COUNTY_VIDEOS: Record<string, CountyVideo> = {
+  "snohomish-county": {
+    webm: "/county-videos/snohomish-hero.webm",
+    mp4: "/county-videos/snohomish-hero.mp4",
+    poster: "/county-videos/snohomish-hero-poster.webp",
+  },
+};
+
 const COUNTY_LOGOS: Record<string, string> = {
   "benton-county": bentonLogo,
   "clark-county": clarkLogo,
@@ -144,6 +158,30 @@ const CountyPageTemplate = ({
             </p>
           </div>
         </div>
+
+        {COUNTY_VIDEOS[countySlug] && (
+          <div className="w-full mt-8">
+            <div className="relative w-full overflow-hidden" style={{ aspectRatio: "21 / 9" }}>
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="metadata"
+                poster={COUNTY_VIDEOS[countySlug].poster}
+                aria-label={`Scenic video of ${countyName}`}
+                className="absolute inset-0 w-full h-full object-cover"
+              >
+                {COUNTY_VIDEOS[countySlug].webm && (
+                  <source src={COUNTY_VIDEOS[countySlug].webm} type="video/webm" />
+                )}
+                {COUNTY_VIDEOS[countySlug].mp4 && (
+                  <source src={COUNTY_VIDEOS[countySlug].mp4} type="video/mp4" />
+                )}
+              </video>
+            </div>
+          </div>
+        )}
       </section>
 
       <DirectAnswerBlock
