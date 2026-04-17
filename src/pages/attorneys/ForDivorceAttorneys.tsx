@@ -68,7 +68,7 @@ const ForDivorceAttorneys = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
       title="Real Estate Support for Divorce Attorneys in Washington State | Real Property Planning"
-      description="Neutral, valuation-informed real estate support for divorce attorneys and their clients navigating marital home sales in Washington State. Serving the Puget Sound region."
+      description="Neutral, experienced real estate support for divorce attorneys and their clients navigating marital home sales in Washington State. Serving the Puget Sound region."
     />
     <BreadcrumbSchema
       items={[

@@ -16,7 +16,7 @@ const serviceContent: Record<string, { introText: string; situations: string[]; 
       "An out-of-state executor needs local coordination for property management and sale",
     ],
     benefits: [
-      "Valuation-informed pricing based on actual condition and local market context",
+      "Condition-based pricing based on actual condition and local market context",
       "Coordination of cleanout, repairs, and preparation with trusted vendors",
       "Clear communication with attorneys, co-executors, and family members throughout the process",
       "Experience with court-supervised sales and probate procedural requirements",
@@ -56,7 +56,7 @@ const serviceContent: Record<string, { introText: string; situations: string[]; 
     benefits: [
       "Practical, no-pressure guidance tailored to your timeline and priorities",
       "Coordination of cleanout, repairs, and preparation vendors",
-      "Valuation-informed pricing that reflects your home's actual condition and market position",
+      "Condition-based pricing that reflects your home's actual condition and market position",
       "Timeline management that accounts for your transition needs",
       "Referral connections if you're moving to another part of Washington or out of state",
       "Experience with the unique considerations of selling a longtime family home",
@@ -76,7 +76,7 @@ const serviceContent: Record<string, { introText: string; situations: string[]; 
       "Clear roadmap from initial property assessment through sale and closing",
       "Coordination of all preparation work — cleanout, repairs, and staging",
       "Regular communication and documentation suitable for probate proceedings",
-      "Valuation-informed pricing that supports the executor's fiduciary obligations",
+      "Condition-based pricing that supports the executor's fiduciary obligations",
       "Experience managing estate sales with multiple heirs and complex family dynamics",
       "Local coordination for executors managing from a distance",
     ],
@@ -169,7 +169,7 @@ const serviceContent: Record<string, { introText: string; situations: string[]; 
     ],
     benefits: [
       "Understanding of trustee responsibilities and trust administration requirements",
-      "Valuation-informed pricing that supports fiduciary accountability",
+      "Condition-based pricing that supports fiduciary accountability",
       "Professional documentation and communication suitable for trust records",
       "Coordination with trust attorneys, CPAs, and beneficiaries throughout the process",
       "Full-service sale management from property assessment through closing",

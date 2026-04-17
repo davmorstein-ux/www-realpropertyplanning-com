@@ -128,7 +128,7 @@ const commonQuestionsFaqs = [
 
 const jsonLd = articleSchema({
   headline: "Probate Real Estate Sales in Washington State",
-  description: "Valuation-informed probate real estate guidance for executors, attorneys, and families throughout Washington State. Serving King, Snohomish, Pierce & Kitsap Counties.",
+  description: "Evidence-based probate real estate guidance for executors, attorneys, and families throughout Washington State. Serving King, Snohomish, Pierce & Kitsap Counties.",
   url: "/probate-estate-sales",
   datePublished: "2025-01-15",
   dateModified: "2026-04-15",

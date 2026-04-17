@@ -1086,7 +1086,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     aeoQuestion: "How should you approach inherited property decisions in Poulsbo?",
     aeoAnswer: "Poulsbo's Scandinavian-influenced character, waterfront setting, and tight-knit community create a distinctive market for estate properties. Real Property Planning's dual credentials as a broker and certified appraiser provide the valuation depth needed for accurate pricing — especially for properties with waterfront proximity or unique architectural character.",
     aeoSupportBullets: [
-      "Valuation-informed pricing that reflects Poulsbo's unique community character",
+      "Condition-based pricing that reflects Poulsbo's unique community character",
       "Practical coordination for families managing property from outside Kitsap County",
       "Thoughtful preparation strategy that respects the property and the process",
     ],

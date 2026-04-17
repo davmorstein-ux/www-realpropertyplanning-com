@@ -260,7 +260,7 @@ export const realEstateAgentSchema = {
         "Senior downsizing Puget Sound",
         "Out-of-state executor coordination",
         "Estate property preparation",
-        "Valuation-informed pricing",
+        "Condition-based pricing",
         "Probate sales King County",
         "Probate sales Snohomish County",
         "Probate sales Pierce County",
