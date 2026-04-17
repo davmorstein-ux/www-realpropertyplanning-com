@@ -4,6 +4,8 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import CTASection from "@/components/CTASection";
 import ZillowReviewsCarousel from "@/components/ZillowReviewsCarousel";
+import HowWeHelpCards from "@/components/HowWeHelpCards";
+import HomepageWarmStatement from "@/components/HomepageWarmStatement";
 import { Phone, Mail, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
 import davidSteinPhoto from "@/assets/providers/realtor-david-stein-headshot-seattle.webp";
@@ -103,6 +105,12 @@ const Realtor = () => (
 
       {/* Zillow Reviews */}
       <ZillowReviewsCarousel />
+
+      {/* How We Help */}
+      <HowWeHelpCards />
+
+      {/* Warm Statement */}
+      <HomepageWarmStatement />
 
       {/* More information link */}
       <section className="py-6 bg-background">
