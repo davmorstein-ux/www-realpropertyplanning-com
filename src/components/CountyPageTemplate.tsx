@@ -76,6 +76,7 @@ interface CountyPageProps {
   localExpertiseBody?: string[];
   communitiesIntro?: string;
   closingCtaBody?: string[];
+  belowHeroHeading?: string;
 }
 
 const CountyPageTemplate = ({
@@ -84,6 +85,7 @@ const CountyPageTemplate = ({
   aeoQuestion, aeoAnswer, aeoSupportBullets, aeoSupportFaqs,
   heroH1, heroSubheading, seoTitle, seoDescription,
   localExpertiseHeading, localExpertiseBody, communitiesIntro, closingCtaBody,
+  belowHeroHeading,
 }: CountyPageProps) => {
   const countyData = counties.find((c) => c.slug === countySlug);
 
@@ -149,13 +151,10 @@ const CountyPageTemplate = ({
               {heroH1 || `Estate & Inherited Property Sales in ${countyName}`}
             </h1>
             {heroSubheading && (
-              <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4 font-serif italic">
+              <p className="text-xl text-primary-foreground/85 leading-relaxed font-serif italic">
                 {heroSubheading}
               </p>
             )}
-            <p className="text-lg text-primary-foreground/80 leading-relaxed">
-              {localInsight || `Licensed broker and certified appraiser guidance for probate, estate, and senior property transitions in ${countyName}.`}
-            </p>
           </div>
         </div>
 
