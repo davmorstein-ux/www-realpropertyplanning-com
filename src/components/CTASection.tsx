@@ -20,7 +20,7 @@ export interface CTASectionProps {
 const CTASection = ({
   eyebrow = "Let's Talk",
   heading = "Not Sure Where to Start? That's Exactly Where Most People Are.",
-  body = "A short conversation is usually the fastest way to get clarity. David works with families throughout Washington and can connect you with a trusted partner if the property is in another state.",
+  body = "A short conversation is usually the fastest way to get clarity. Our team works with families throughout Washington and can connect you with a trusted partner if the property is in another state.",
   callLabel = "Call (206) 900-3015",
   messageLabel = "Send a Message",
   microcopy = "Just a practical conversation about your situation.",

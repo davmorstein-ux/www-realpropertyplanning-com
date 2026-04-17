@@ -17,7 +17,7 @@ import heroIcon from "@/assets/icons/probate-guidance-book-open-icon-washington.
 const faqs = [
   { question: "Should I renovate an inherited home before selling?", answer: "Usually, no. Full renovations rarely make financial sense for estate properties. Targeted improvements — deep cleaning, paint, landscaping, minor repairs — often deliver the best return. A professional assessment can identify which specific improvements are worth the investment." },
   { question: "What repairs add the most value to an estate home?", answer: "Cosmetic updates typically offer the best return: fresh paint, cleaned carpets, basic landscaping, working appliances, and functional plumbing and electrical. Major structural work should only be done if it is preventing the sale entirely or if the return clearly justifies the cost." },
-  { question: "Can I sell an estate property as-is?", answer: "Yes. Selling as-is is always an option. However, properties sold as-is typically sell for less than prepared properties. David can help you compare the likely as-is sale price versus the likely price after targeted preparation, so you can make an informed decision." },
+  { question: "Can I sell an estate property as-is?", answer: "Yes. Selling as-is is always an option. However, properties sold as-is typically sell for less than prepared properties. Our team can help you compare the likely as-is sale price versus the likely price after targeted preparation, so you can make an informed decision." },
   { question: "Who pays for repairs on an estate property?", answer: "Repair costs are typically paid from estate funds. The executor should consult with the estate attorney about what expenditures are appropriate and keep clear records of all spending for estate accounting purposes." },
   { question: "How do I decide which repairs to skip?", answer: "Focus on return on investment. If a $2,000 improvement is likely to increase the sale price by $8,000, it makes sense. If a $15,000 repair only adds $5,000 in value, it probably does not. A broker with appraisal experience can help you evaluate these trade-offs." },
 ];
@@ -141,7 +141,7 @@ const EstatePropertyRepairs = () => (
 
     <MidPageCTA
       heading="Not Sure What's Worth Fixing?"
-      body="David evaluates each potential improvement through a return-on-investment lens, informed by his appraisal background. A short conversation can help you decide where estate funds are best spent."
+      body="our team evaluates each potential improvement through a return-on-investment lens, informed by his appraisal background. A short conversation can help you decide where estate funds are best spent."
       buttonText="Schedule a Conversation"
       microcopy="No pressure. Just practical guidance for your situation."
     />

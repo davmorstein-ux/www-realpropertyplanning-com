@@ -47,7 +47,7 @@ const CPAsFinancialAdvisors = () => (
               CPAs and financial advisors play a critical role in estate and inherited property situations — advising on estate tax obligations, capital gains considerations, stepped-up basis calculations, and the financial implications of holding versus selling property. Their guidance helps families and fiduciaries make informed decisions.
             </p>
             <p className="text-muted-foreground text-base leading-relaxed mb-4">
-              Real Property Planning works with CPAs and financial advisors to provide property-specific market data and <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">valuation insights</Link> that support tax and financial planning. Learn more about <Link to="/for-cpas" className="text-accent hover:text-gold underline underline-offset-4">how David works with CPAs</Link> and <Link to="/for-financial-planners" className="text-accent hover:text-gold underline underline-offset-4">financial planners</Link>.
+              Real Property Planning works with CPAs and financial advisors to provide property-specific market data and <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">valuation insights</Link> that support tax and financial planning. Learn more about <Link to="/for-cpas" className="text-accent hover:text-gold underline underline-offset-4">how our team works with CPAs</Link> and <Link to="/for-financial-planners" className="text-accent hover:text-gold underline underline-offset-4">financial planners</Link>.
             </p>
 
             <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mt-12 mb-5">
@@ -55,7 +55,7 @@ const CPAsFinancialAdvisors = () => (
             </h2>
             <div className="bg-secondary border border-border rounded-xl px-6 py-8 md:px-8 text-center">
               <p className="text-muted-foreground text-base leading-relaxed">
-                David is currently compiling a list of recommended CPAs and financial advisors throughout Washington State. Check back soon, or <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4">contact David</Link> for a current referral.
+                our team is currently compiling a list of recommended CPAs and financial advisors throughout Washington State. Check back soon, or <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4">Contact us</Link> for a current referral.
               </p>
             </div>
 

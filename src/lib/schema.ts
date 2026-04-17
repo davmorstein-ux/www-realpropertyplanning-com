@@ -423,7 +423,7 @@ export const homepageFaqSchema = {
       name: "How is Real Property Planning different from a regular real estate agent?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "David holds two credentials most agents don't: he is both a licensed real estate broker and a Washington State Certified Residential Appraiser. This means he can value a home with professional appraisal standards AND help sell it — providing families with integrated guidance they can trust.",
+        text: "our team holds two credentials most agents don't: he is both a licensed real estate broker and a Washington State Certified Residential Appraiser. This means he can value a home with professional appraisal standards AND help sell it — providing families with integrated guidance they can trust.",
       },
     },
     {
@@ -463,7 +463,7 @@ export const homepageFaqSchema = {
       name: "Is there a cost to consult with Real Property Planning?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Initial consultations are free and carry no obligation. David typically responds within one business day. Call (206) 900-3015 or visit realpropertyplanning.com to get started.",
+        text: "Initial consultations are free and carry no obligation. We typically respond within one business day. Call (206) 900-3015 or visit realpropertyplanning.com to get started.",
       },
     },
   ],

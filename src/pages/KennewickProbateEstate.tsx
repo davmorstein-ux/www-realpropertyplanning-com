@@ -32,8 +32,8 @@ const faqs = [
     answer: "This is common. Our team provides objective, condition-based information — realistic market value, preparation costs, and available options — so every family member is working from the same set of facts. That clarity often helps move conversations forward.",
   },
   {
-    question: "Can David help if I don't live in Kennewick?",
-    answer: "Yes. David regularly works with executors and family members who live outside the Tri-Cities. He coordinates property access, vendor management, and the sale process so you can make informed decisions without unnecessary travel.",
+    question: "Can our team help if I don't live in Kennewick?",
+    answer: "Yes. Our team regularly works with executors and family members who live outside the Tri-Cities. He coordinates property access, vendor management, and the sale process so you can make informed decisions without unnecessary travel.",
   },
   {
     question: "How long does it take to sell an inherited home in Kennewick?",

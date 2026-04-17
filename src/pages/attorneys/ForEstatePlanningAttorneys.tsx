@@ -23,21 +23,21 @@ const services = [
     title: "Clear, Defensible Valuation",
     description: (
       <>
-        David's background as a <Link to="/real-estate-appraiser" className="text-accent hover:text-gold underline underline-offset-4">Washington State Certified Residential Appraiser</Link> means clients receive a condition-adjusted, methodology-based market assessment — not just a listing agent's price opinion. This is especially valuable when valuation needs to support trust decisions, beneficiary conversations, or planning-related financial analysis.
+        our team's background as a <Link to="/real-estate-appraiser" className="text-accent hover:text-gold underline underline-offset-4">Washington State Certified Residential Appraiser</Link> means clients receive a condition-adjusted, methodology-based market assessment — not just a listing agent's price opinion. This is especially valuable when valuation needs to support trust decisions, beneficiary conversations, or planning-related financial analysis.
       </>
     ),
   },
   {
     title: "Strategic Sale Planning",
-    description: "David advises on timing, preparation, and market positioning — always in alignment with the broader estate plan and the client's specific situation. Decisions about what to repair, when to list, and how to price are made with both market knowledge and fiduciary awareness.",
+    description: "our team advises on timing, preparation, and market positioning — always in alignment with the broader estate plan and the client's specific situation. Decisions about what to repair, when to list, and how to price are made with both market knowledge and fiduciary awareness.",
   },
   {
     title: "Coordination With Advisors",
-    description: "David works collaboratively with attorneys, CPAs, and financial planners — ensuring that everyone involved in the client's plan is working from the same real estate information. One consistent point of contact. Regular updates. No gaps in communication.",
+    description: "our team works collaboratively with attorneys, CPAs, and financial planners — ensuring that everyone involved in the client's plan is working from the same real estate information. One consistent point of contact. Regular updates. No gaps in communication.",
   },
   {
     title: "Property Preparation Oversight",
-    description: "When preparation is needed before a sale, David coordinates vendors, manages the process, and keeps the client and their advisors informed — without adding to their administrative burden.",
+    description: "When preparation is needed before a sale, our team coordinates vendors, manages the process, and keeps the client and their advisors informed — without adding to their administrative burden.",
   },
 ];
 
@@ -145,7 +145,7 @@ const ForEstatePlanningAttorneys = () => (
             Discuss a Client Situation
           </h2>
           <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">
-            If you work with clients who hold real property as part of their estate plan — and who will eventually need to sell, transfer, or make decisions about that property — David welcomes the opportunity to be a resource for your practice.
+            If you work with clients who hold real property as part of their estate plan — and who will eventually need to sell, transfer, or make decisions about that property — our team welcomes the opportunity to be a resource for your practice.
           </p>
           <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
             A brief conversation is the most efficient way to discuss how Real Property Planning can support your clients in Washington State.

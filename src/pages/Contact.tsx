@@ -278,7 +278,7 @@ const Contact = () => {
                     </Button>
                     <div role="status" aria-live="polite">
                       <p className="text-muted-foreground/70 text-[15px] mt-4">
-                        David responds personally to every inquiry.
+                        We respond personally to every inquiry.
                       </p>
                     </div>
                   </div>

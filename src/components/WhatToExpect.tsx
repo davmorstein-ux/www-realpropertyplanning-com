@@ -5,25 +5,25 @@ const steps = [
     number: "1",
     title: "Initial Conversation",
     description:
-      "It usually starts with a phone call. You tell David what's going on — whether it's a probate situation, an inherited home, or a parent who needs to move — and he listens before offering any direction.",
+      "It usually starts with a phone call. You tell our team what's going on — whether it's a probate situation, an inherited home, or a parent who needs to move — and he listens before offering any direction.",
   },
   {
     number: "2",
     title: "Property Review & Assessment",
     description:
-      "David visits the property and looks at it with fresh eyes — condition, deferred maintenance, what the market is doing nearby. Because he's both a broker and a certified appraiser, the assessment goes deeper than a typical walkthrough.",
+      "our team visits the property and looks at it with fresh eyes — condition, deferred maintenance, what the market is doing nearby. Because he's both a broker and a certified appraiser, the assessment goes deeper than a typical walkthrough.",
   },
   {
     number: "3",
     title: "Strategy & Pricing",
     description:
-      "Based on what he's found, David puts together a plan — realistic pricing backed by valuation data, what preparation makes sense (if any), and a timeline that fits your situation. No surprises.",
+      "Based on what he's found, our team puts together a plan — realistic pricing backed by valuation data, what preparation makes sense (if any), and a timeline that fits your situation. No surprises.",
   },
   {
     number: "4",
     title: "Execution & Coordination",
     description:
-      "From here, David handles the day-to-day — coordinating vendors, managing the listing, communicating with attorneys and family members, and keeping things moving. You stay informed without having to manage every detail.",
+      "From here, our team handles the day-to-day — coordinating vendors, managing the listing, communicating with attorneys and family members, and keeping things moving. You stay informed without having to manage every detail.",
   },
 ];
 

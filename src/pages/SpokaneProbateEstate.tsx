@@ -17,9 +17,9 @@ import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washingto
 
 const faqs = [
   {
-    question: "Can David help if I live outside Spokane?",
+    question: "Can our team help if I live outside Spokane?",
     answer:
-      "Yes. David regularly works with executors, trustees, and family members who live outside the Spokane area — whether across the state, across the country, or internationally. He coordinates property access, vendor management, preparation, and the sale process so you don't need to make unnecessary trips.",
+      "Yes. Our team regularly works with executors, trustees, and family members who live outside the Spokane area — whether across the state, across the country, or internationally. He coordinates property access, vendor management, preparation, and the sale process so you don't need to make unnecessary trips.",
   },
   {
     question: "What should an executor do first with a Spokane inherited property?",
@@ -42,9 +42,9 @@ const faqs = [
       "It depends on the home's condition, your budget, and your timeline. Our team evaluates which improvements are likely to increase the sale price enough to justify the cost — and which ones aren't worth the investment. When you're managing from a distance, this kind of honest guidance saves time and money.",
   },
   {
-    question: "How does David coordinate the process for remote families?",
+    question: "How does our team coordinate the process for remote families?",
     answer:
-      "David serves as your local point of coordination. He manages property access, works with cleanout crews, contractors, and preparation vendors, communicates with attorneys and other parties, and provides clear updates throughout — so you always know where things stand without needing to be there in person.",
+      "our team serves as your local point of coordination. He manages property access, works with cleanout crews, contractors, and preparation vendors, communicates with attorneys and other parties, and provides clear updates throughout — so you always know where things stand without needing to be there in person.",
   },
 ];
 
@@ -197,7 +197,7 @@ const SpokaneProbateEstate = () => {
               One of the most common challenges with Spokane estate properties is distance. The executor, trustee, or primary decision-maker often lives in Western Washington, out of state, or even overseas. Managing vendors, accessing the property, and making informed decisions from afar is stressful — especially when you're also managing grief or family dynamics.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              David serves as your boots-on-the-ground coordinator. He manages property access, works with cleanout crews, contractors, and preparation vendors, communicates with attorneys and other parties, and provides clear, consistent updates — so you always know where things stand without needing to be there in person.
+              our team serves as your boots-on-the-ground coordinator. He manages property access, works with cleanout crews, contractors, and preparation vendors, communicates with attorneys and other parties, and provides clear, consistent updates — so you always know where things stand without needing to be there in person.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
               The goal is simple: minimize your travel, reduce your stress, and give you confidence that the process is moving forward thoughtfully and professionally.

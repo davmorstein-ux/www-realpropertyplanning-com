@@ -28,7 +28,7 @@ const faqs = [
     answer: "It depends on the home's condition relative to buyer expectations in the neighborhood. Our team evaluates which updates are likely to return more than they cost and which aren't necessary. In Richland's more established neighborhoods, targeted cosmetic improvements can make a meaningful difference — but not every update is worth the investment.",
   },
   {
-    question: "Can David help if I live outside the Tri-Cities?",
+    question: "Can our team help if I live outside the Tri-Cities?",
     answer: "Yes. Our team works with executors and families who live outside the area — whether across the state or out of state. He coordinates property access, vendor management, preparation, and the sale process so you can make decisions without unnecessary travel.",
   },
   {

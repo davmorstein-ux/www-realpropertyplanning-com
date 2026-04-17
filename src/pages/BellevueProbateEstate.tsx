@@ -23,7 +23,7 @@ const faqs = [
   {
     question: "What should a trustee do first with a Bellevue property?",
     answer:
-      "Secure the property, review the trust terms with the estate attorney, and get a realistic assessment of the home's condition and current market value. David can evaluate the property, identify factors that affect value, and help you understand your options before committing to a course of action.",
+      "Secure the property, review the trust terms with the estate attorney, and get a realistic assessment of the home's condition and current market value. Our team can evaluate the property, identify factors that affect value, and help you understand your options before committing to a course of action.",
   },
   {
     question: "How does Real Property Planning's appraisal background benefit Bellevue property sales?",
@@ -31,7 +31,7 @@ const faqs = [
       "As both a licensed Washington State real estate broker and a state-certified residential appraiser, Our team provides pricing strategy grounded in actual condition assessment and neighborhood-level market analysis — not automated estimates. In Bellevue's higher-value market, this dual perspective helps protect families and fiduciaries from costly pricing mistakes.",
   },
   {
-    question: "Can David help if multiple beneficiaries are involved?",
+    question: "Can our team help if multiple beneficiaries are involved?",
     answer:
       "Yes. Multi-party situations are common in Bellevue estate and trust sales. Our team provides clear, documented communication so all parties — whether local or out of state — have the same information. His appraisal-informed pricing approach also helps establish defensible value when consensus is needed.",
   },
@@ -184,10 +184,10 @@ const BellevueProbateEstate = () => {
               Support for Families, Trustees, and Busy Professionals
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              Bellevue estate and trust property transitions often involve busy professionals, out-of-state beneficiaries, attorneys, and trustees who need a reliable local resource they can count on. David serves as a central point of coordination — managing the details so no one has to do it alone.
+              Bellevue estate and trust property transitions often involve busy professionals, out-of-state beneficiaries, attorneys, and trustees who need a reliable local resource they can count on. Our team serves as a central point of coordination — managing the details so no one has to do it alone.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              That means clear communication with all parties, coordinating vendors for cleanout, repairs, and staging, overseeing property preparation, and handling the process with discretion. Whether you're a trustee managing responsibilities alongside a demanding career, an attorney advising a client, or a family member navigating an emotional transition, David keeps things organized and moving forward.
+              That means clear communication with all parties, coordinating vendors for cleanout, repairs, and staging, overseeing property preparation, and handling the process with discretion. Whether you're a trustee managing responsibilities alongside a demanding career, an attorney advising a client, or a family member navigating an emotional transition, our team keeps things organized and moving forward.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
               Complex situations — multiple beneficiaries, sensitive family dynamics, or properties that require significant preparation — are handled with professionalism and care.

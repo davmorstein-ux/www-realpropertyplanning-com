@@ -23,7 +23,7 @@ interface RealClientSituationsProps {
 const RealClientSituations = ({
   studies,
   heading = "Real Client Situations",
-  subheading = "Every situation is different. Here are a few examples of how David has helped clients work through complex property transitions.",
+  subheading = "Every situation is different. Here are a few examples of how our team has helped clients work through complex property transitions.",
   background = "bg-background",
   showCTA = false,
 }: RealClientSituationsProps) => (
@@ -63,7 +63,7 @@ const RealClientSituations = ({
                 {(study.howHelped || study.approach) && (
                   <div>
                     <p className="text-sm font-semibold uppercase tracking-wide text-gold mb-1">
-                      {study.howHelped ? "How David Helped" : "Approach"}
+                      {study.howHelped ? "How We Helped" : "Approach"}
                     </p>
                     <p className="text-muted-foreground leading-relaxed">{study.howHelped || study.approach}</p>
                   </div>

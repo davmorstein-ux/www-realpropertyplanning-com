@@ -20,7 +20,7 @@ const toneFaqSets: Record<string, (city: CityData) => { question: string; answer
   premium: (city) => [
     { question: `What pricing approach works in a high-value ${city.name} estate?`, answer: `In a market where blocks and views can swing value by six figures, an automated estimate is not a starting point. We anchor pricing in a documented, appraisal-style condition adjustment — the same logic the buyer's lender appraiser will apply — so the number in the court file is the number the market will actually support.` },
     { question: `How are sibling buyout valuations handled for a ${city.name} property?`, answer: `When one heir wants to keep the home and others want to be cashed out, the price has to be defensible to everyone — and to the attorney drafting the buyout. We provide a written, independent valuation that all parties can rely on, separate from any listing conversation.` },
-    { question: `Does David coordinate with high-net-worth advisors involved in the estate?`, answer: `Yes. Estate planning attorneys, CPAs, and trust officers are routinely part of these files in ${city.name}. We deliver written status updates so every advisor on the team is reading from the same page.` },
+    { question: `Does our team coordinate with high-net-worth advisors involved in the estate?`, answer: `Yes. Estate planning attorneys, CPAs, and trust officers are routinely part of these files in ${city.name}. We deliver written status updates so every advisor on the team is reading from the same page.` },
   ],
   urban: (city) => [
     { question: `Can a ${city.name} estate property be listed before probate is fully open?`, answer: `Generally no — a personal representative needs Letters Testamentary or Letters of Administration before listing. We use the gap to handle the date-of-death valuation, secure the home, and prep the marketing file so listing day isn't day one of the work.` },
@@ -45,7 +45,7 @@ const toneFaqSets: Record<string, (city: CityData) => { question: string; answer
   military: (city) => [
     { question: `What do military families in ${city.name} need to know about an inherited home?`, answer: `Distance and timeline are usually the binding constraints — PCS dates rarely line up with probate timelines. We work to whatever window you actually have, handling on-site work and reporting back in the format your schedule allows.` },
     { question: `How is pricing handled for ${city.name} homes near base?`, answer: `Buyer demand near military communities is more cyclical than the broader market. We track active listing absorption in the specific submarket and price the estate property to where the buyers actually are right now, not where they were last quarter.` },
-    { question: `Can David coordinate the entire ${city.name} sale while I'm stationed elsewhere?`, answer: `Yes — full on-site coordination, vendor management, showings, and offer review with structured written updates to wherever you are.` },
+    { question: `Can our team coordinate the entire ${city.name} sale while I'm stationed elsewhere?`, answer: `Yes — full on-site coordination, vendor management, showings, and offer review with structured written updates to wherever you are.` },
   ],
   rural: (city) => [
     { question: `How do you value acreage and outbuildings on a property near ${city.name}?`, answer: `Rural valuation requires looking at acreage usability, well and septic age and condition, outbuilding utility, and access. We document each on-site rather than relying on automated estimates that treat rural parcels like suburban lots.` },
@@ -158,7 +158,7 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
         const ctaCopy: Record<string, { h2: string; body: string; cta: string }> = {
           premium: {
             h2: `Considering an Estate Sale on a ${city.name} Property?`,
-            body: `Send a brief situation overview — the home, who has authority, and what's already been touched. David typically responds within one business day with a recommended next step.`,
+            body: `Send a brief situation overview — the home, who has authority, and what's already been touched. We typically respond within one business day with a recommended next step.`,
             cta: `Discuss a ${city.name} Estate`,
           },
           urban: {

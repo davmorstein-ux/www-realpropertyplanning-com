@@ -15,7 +15,7 @@ const SnohomishCounty = () => (
     ]}
     localInsight="Snohomish County spans one of the most geographically and economically varied real estate markets in Western Washington — from the waterfront communities of Edmonds and Mukilteo to the established suburbs of Mill Creek and Bothell, the growing towns of Lake Stevens and Monroe, and the rural-adjacent properties of the county's eastern reaches. Estate properties here require someone who understands this full range — not just broad county trends, but the neighborhood-level dynamics that determine how a property should be priced, prepared, and positioned. Real Property Planning serves families, executors, trustees, and attorneys throughout Snohomish County with the dual perspective of a licensed real estate broker and a Washington State Certified Residential Appraiser."
     aeoQuestion="How do probate and estate property sales work in Snohomish County?"
-    aeoAnswer="The process follows the same general structure as any probate sale in Washington State — establish legal authority, assess the property, develop a preparation and pricing strategy, list, and close — but the specifics vary significantly based on where the property is located within the county. An estate home in Edmonds faces a very different buyer pool than one in Monroe or Marysville. our team's approach is always location-specific: the pricing, the preparation recommendations, and the marketing strategy are calibrated to the actual neighborhood and buyer demand, not generalized county averages."
+    aeoAnswer="The process follows the same general structure as any probate sale in Washington State — establish legal authority, assess the property, develop a preparation and pricing strategy, list, and close — but the specifics vary significantly based on where the property is located within the county. An estate home in Edmonds faces a very different buyer pool than one in Monroe or Marysville. Our team's approach is always location-specific: the pricing, the preparation recommendations, and the marketing strategy are calibrated to the actual neighborhood and buyer demand, not generalized county averages."
     aeoSupportFaqs={[
       {
         question: "What challenges do executors face when managing Snohomish County estate property?",
@@ -23,7 +23,7 @@ const SnohomishCounty = () => (
       },
       {
         question: "How does pricing differ across Snohomish County's varied communities?",
-        answer: "Significantly. A waterfront property in Edmonds or Mukilteo carries premiums that simply don't apply to comparable square footage in Marysville or Monroe. Mid-county communities like Mill Creek and Bothell have their own pricing dynamics driven by school districts and commute access. our team's condition-adjusted, comparable-based analysis accounts for these differences specifically — not through county-wide averages.",
+        answer: "Significantly. A waterfront property in Edmonds or Mukilteo carries premiums that simply don't apply to comparable square footage in Marysville or Monroe. Mid-county communities like Mill Creek and Bothell have their own pricing dynamics driven by school districts and commute access. Our team's condition-adjusted, comparable-based analysis accounts for these differences specifically — not through county-wide averages.",
       },
     ]}
     communitiesIntro="Real Property Planning serves families, executors, and professionals throughout Snohomish County, including:"
@@ -33,7 +33,7 @@ const SnohomishCounty = () => (
     countySpecificFaqs={[
       {
         question: "How is selling a waterfront estate home in Edmonds different from selling in Everett?",
-        answer: "Edmonds waterfront properties command premium prices and attract a specific buyer pool that values walkability, ferry access, and community character. Everett properties serve a broader market with different price expectations and preparation considerations. our team's appraisal background helps him price each property within its specific micro-market — ensuring an Edmonds waterfront home is not underpriced by generic county comps, and an Everett property is not overpriced by comparison to premium neighborhoods.",
+        answer: "Edmonds waterfront properties command premium prices and attract a specific buyer pool that values walkability, ferry access, and community character. Everett properties serve a broader market with different price expectations and preparation considerations. Our team's appraisal background helps him price each property within its specific micro-market — ensuring an Edmonds waterfront home is not underpriced by generic county comps, and an Everett property is not overpriced by comparison to premium neighborhoods.",
       },
       {
         question: "What should I do with a rural property near Monroe or Arlington that was left to multiple heirs?",
@@ -44,8 +44,8 @@ const SnohomishCounty = () => (
         answer: "Longtime family homes in Mill Creek often need organized cleanout, condition assessment, and a realistic conversation about preparation before listing. Our team guides families through this step by step — evaluating the property, coordinating vendors, and helping you decide what is worth investing in versus what buyers in that neighborhood will accept. The pace can be tailored to what the family is ready for.",
       },
       {
-        question: "Does David work with attorneys who handle probate cases in Snohomish County Superior Court?",
-        answer: "Yes. David regularly coordinates with probate attorneys on Snohomish County estate sales, providing property assessments, market analysis, and coordinated sale management that aligns with court timelines and fiduciary requirements. Attorneys refer clients to David because he communicates clearly, follows through, and understands the legal context surrounding estate property sales.",
+        question: "Does our team work with attorneys who handle probate cases in Snohomish County Superior Court?",
+        answer: "Yes. Our team regularly coordinates with probate attorneys on Snohomish County estate sales, providing property assessments, market analysis, and coordinated sale management that aligns with court timelines and fiduciary requirements. Attorneys refer clients to our team because he communicates clearly, follows through, and understands the legal context surrounding estate property sales.",
       },
       {
         question: "How do I manage an inherited Snohomish County property from out of state?",

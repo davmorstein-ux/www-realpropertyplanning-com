@@ -16,7 +16,7 @@ import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washingto
 
 const faqs = [
   {
-    question: "Can David help with an inherited property in Yakima?",
+    question: "Can our team help with an inherited property in Yakima?",
     answer:
       "Yes. Our team works with executors, trustees, and families handling inherited and estate property throughout Washington State, including Yakima and the surrounding area. He coordinates the process remotely when needed and provides on-the-ground support for property assessment and preparation.",
   },

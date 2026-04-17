@@ -176,8 +176,8 @@ const HowTheProcessWorks = () => {
             <Accordion type="single" collapsible className="space-y-3">
               {[
                 { value: "complexity", q: "Why are estate sales more complex?", a: "The decision-maker may not live locally. Legal authority may not yet be established. The property may have been vacant for months. Family members may disagree about timing, pricing, or whether to sell at all." },
-                { value: "early", q: "Why does David start earlier than most agents?", a: "Early planning prevents the most common and costly mistakes. David often begins before the property is ready to list — assessing condition, coordinating with attorneys, and helping families align on strategy." },
-                { value: "adapt", q: "How does the process adapt to each situation?", a: "Some clients need immediate sale guidance. Others need time, planning, family coordination, or valuation-related clarity. David adapts — whether that means a compressed timeline for a court-ordered sale or a longer runway for family decision-making." },
+                { value: "early", q: "Why does our team start earlier than most agents?", a: "Early planning prevents the most common and costly mistakes. Our team often begins before the property is ready to list — assessing condition, coordinating with attorneys, and helping families align on strategy." },
+                { value: "adapt", q: "How does the process adapt to each situation?", a: "Some clients need immediate sale guidance. Others need time, planning, family coordination, or valuation-related clarity. Our team adapts — whether that means a compressed timeline for a court-ordered sale or a longer runway for family decision-making." },
               ].map((item) => (
                 <AccordionItem key={item.value} value={item.value} className="bg-card border border-border rounded-2xl overflow-hidden data-[state=open]:border-gold/25 transition-colors">
                   <AccordionTrigger className="text-left font-serif text-base md:text-lg font-semibold text-foreground hover:text-gold hover:no-underline px-6 py-5">
@@ -195,7 +195,7 @@ const HowTheProcessWorks = () => {
 
       <MidPageCTA
         heading="Ready to Get Started?"
-        body="Whether you are an executor, attorney, trustee, or family member — David can walk you through the process and help you plan next steps."
+        body="Whether you are an executor, attorney, trustee, or family member — our team can walk you through the process and help you plan next steps."
         buttonText="Schedule a Consultation"
         microcopy="No pressure. Just practical guidance for your situation."
       />
@@ -234,7 +234,7 @@ const HowTheProcessWorks = () => {
               Want to talk through your situation and next steps?
             </h2>
             <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
-              Whether you are an executor, trustee, attorney, or family member — David is available for a no-obligation conversation about your property and circumstances.
+              Whether you are an executor, trustee, attorney, or family member — our team is available for a no-obligation conversation about your property and circumstances.
             </p>
             <div className="flex justify-center">
               <Link to="/contact">

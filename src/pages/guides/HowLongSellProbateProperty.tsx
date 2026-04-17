@@ -115,7 +115,7 @@ const HowLongSellProbateProperty = () => (
 
     <MidPageCTA
       heading="Wondering About Your Timeline?"
-      body="Every situation is different. A short conversation with David can help you understand where you are in the process and what realistic expectations look like."
+      body="Every situation is different. A short conversation with our team can help you understand where you are in the process and what realistic expectations look like."
       buttonText="Schedule a Conversation"
       microcopy="No pressure. Just practical guidance for your situation."
     />

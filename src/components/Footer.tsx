@@ -183,7 +183,7 @@ const Footer = () => {
         <div className="footer-divider mb-0" />
         <div className="mt-0 pt-6 pb-4">
           <p className="text-primary-foreground/70 text-base text-center leading-relaxed max-w-3xl mx-auto mb-2">
-            Serving buyers, sellers, families, attorneys, executors, trustees, and fiduciaries throughout Washington State, with a strong focus in Western Washington and the Puget Sound region. Through eXp Realty's referral network, David can also help connect clients with trusted brokers across the U.S. and internationally.
+            Serving buyers, sellers, families, attorneys, executors, trustees, and fiduciaries throughout Washington State, with a strong focus in Western Washington and the Puget Sound region. Through eXp Realty's referral network, our team can also help connect clients with trusted brokers across the U.S. and internationally.
           </p>
           <p className="text-primary-foreground/70 text-base text-center leading-relaxed max-w-2xl mx-auto">
             Specializing in probate real estate, inherited property, estate sales, senior transitions, and valuation-informed strategy for attorneys, executors, trustees, heirs, beneficiaries, seniors, and families. Proudly serving families, executors, attorneys, CPAs, financial planners, and senior care professionals throughout the Puget Sound region — including Seattle, Bellevue, Everett, Tacoma, Bremerton, Woodinville, and surrounding communities.

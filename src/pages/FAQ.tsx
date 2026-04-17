@@ -215,12 +215,12 @@ const FAQ = () => {
               Have a question not listed here?
             </h2>
             <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
-              David welcomes confidential conversations with attorneys, executors, trustees, families, and financial professionals. A short call can often clarify your next steps.
+              our team welcomes confidential conversations with attorneys, executors, trustees, families, and financial professionals. A short call can often clarify your next steps.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link to="/contact">
                 <Button variant="gold" size="lg">
-                  Contact David
+                  Contact us
                 </Button>
               </Link>
               <a

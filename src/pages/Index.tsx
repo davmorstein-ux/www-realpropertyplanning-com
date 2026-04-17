@@ -130,7 +130,7 @@ const Index = () => {
                 Start With a Question
               </h2>
               <p className="text-primary-foreground/75 text-lg leading-relaxed mb-6">
-                Confidential. Practical. No obligation. David typically responds within one business day.
+                Confidential. Practical. No obligation. We typically respond within one business day.
               </p>
               <div className="space-y-4">
                 <a href="tel:2069003015" className="flex items-center gap-3 text-primary-foreground hover:text-gold transition-colors">

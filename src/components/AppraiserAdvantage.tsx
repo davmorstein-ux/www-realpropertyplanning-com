@@ -10,7 +10,7 @@ const advantages = [
   {
     title: "Reduced Risk of Costly Mistakes",
     description:
-      "Overpricing causes the property to sit. Underpricing means the estate loses money. David's valuation training helps avoid both — and that difference matters most in estate situations where there's no room for error.",
+      "Overpricing causes the property to sit. Underpricing means the estate loses money. Our team's valuation training helps avoid both — and that difference matters most in estate situations where there's no room for error.",
   },
   {
     title: "Stronger Guidance for Fiduciaries",
@@ -20,7 +20,7 @@ const advantages = [
   {
     title: "Informed Preparation Decisions",
     description:
-      "Families often ask whether it's worth fixing up the house before selling. David's analysis looks at what improvements actually return value — so you're not spending money on things the market won't reward.",
+      "Families often ask whether it's worth fixing up the house before selling. Our team's analysis looks at what improvements actually return value — so you're not spending money on things the market won't reward.",
   },
 ];
 
@@ -36,7 +36,7 @@ const AppraiserAdvantage = () => (
             The Appraiser Advantage
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
-            Most brokers price a property based on recent sales and experience — and that's a reasonable starting point. But David also brings formal appraisal training, which means his pricing is built on structured methodology. In estate and probate situations, that difference can be what prevents a dispute, protects a fiduciary, or keeps a deal from falling apart.
+            Most brokers price a property based on recent sales and experience — and that's a reasonable starting point. But our team also brings formal appraisal training, which means his pricing is built on structured methodology. In estate and probate situations, that difference can be what prevents a dispute, protects a fiduciary, or keeps a deal from falling apart.
           </p>
         </div>
 

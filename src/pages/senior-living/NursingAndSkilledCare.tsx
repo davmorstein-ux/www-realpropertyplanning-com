@@ -41,7 +41,7 @@ const NursingAndSkilledCare = () => (
             <div className="bg-secondary border border-border rounded-xl px-6 py-8 md:px-8 text-center">
               <p className="text-muted-foreground text-base leading-relaxed">
                 This page is being developed with detailed information about nursing and skilled care facilities throughout Washington State. Check back soon, or{" "}
-                <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4">contact David</Link> for guidance.
+                <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4">Contact us</Link> for guidance.
               </p>
             </div>
             <div className="mt-8 text-center">

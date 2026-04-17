@@ -25,36 +25,36 @@ const services = [
     title: "Accurate Market Valuation",
     description: (
       <>
-        A shared, objective market value is often the most important tool for moving a family law property matter forward. David provides a condition-adjusted, comparable-supported market analysis — not a listing agent's pitch — that both parties can evaluate from the same factual foundation.
+        A shared, objective market value is often the most important tool for moving a family law property matter forward. Our team provides a condition-adjusted, comparable-supported market analysis — not a listing agent's pitch — that both parties can evaluate from the same factual foundation.
       </>
     ),
   },
   {
     title: "Neutral, Professional Coordination",
-    description: "David's role is not to represent either party's interests — it's to handle the property professionally and move the process forward. He maintains clear, consistent communication with both parties (or through their respective counsel) and manages the sale with the goal of a fair outcome, not a fast commission.",
+    description: "our team's role is not to represent either party's interests — it's to handle the property professionally and move the process forward. He maintains clear, consistent communication with both parties (or through their respective counsel) and manages the sale with the goal of a fair outcome, not a fast commission.",
   },
   {
     title: "Structured Process Guidance",
-    description: "Many clients navigating family law situations have never managed a home sale on their own. David explains each step clearly, manages the preparation and listing process, and provides regular updates so clients always know where things stand.",
+    description: "Many clients navigating family law situations have never managed a home sale on their own. Our team explains each step clearly, manages the preparation and listing process, and provides regular updates so clients always know where things stand.",
   },
   {
     title: "Calm, Consistent Communication",
-    description: "In situations where communication between parties is strained, David's structured approach to updates — consistent, factual, and professionally neutral — reduces opportunities for misunderstanding and conflict.",
+    description: "In situations where communication between parties is strained, our team's structured approach to updates — consistent, factual, and professionally neutral — reduces opportunities for misunderstanding and conflict.",
   },
 ];
 
 const faqs = [
   {
     question: "Can Real Property Planning work with both parties in a family law property situation?",
-    answer: "Yes — David's role is explicitly neutral. He provides objective market analysis and manages the sale process professionally, without advocacy for either party. Communication protocols can be structured to route through respective counsel if that is preferred.",
+    answer: "Yes — our team's role is explicitly neutral. He provides objective market analysis and manages the sale process professionally, without advocacy for either party. Communication protocols can be structured to route through respective counsel if that is preferred.",
   },
   {
     question: "How does valuation work when parties disagree on what the home is worth?",
-    answer: "David provides a condition-adjusted, comparable-supported market analysis grounded in his certified appraisal training. Because the analysis is methodology-based rather than opinion-based, it gives both parties and their attorneys a shared factual foundation — which often resolves valuation disputes more efficiently than competing agent opinions.",
+    answer: "our team provides a condition-adjusted, comparable-supported market analysis grounded in his certified appraisal training. Because the analysis is methodology-based rather than opinion-based, it gives both parties and their attorneys a shared factual foundation — which often resolves valuation disputes more efficiently than competing agent opinions.",
   },
   {
     question: "Can the home be sold during active legal proceedings?",
-    answer: "In many cases, yes — though the specifics depend on court orders, agreements between parties, and the legal structure of the proceeding. David works in alignment with whatever legal requirements are in place and coordinates with both attorneys to ensure the real estate process supports rather than complicates the legal timeline.",
+    answer: "In many cases, yes — though the specifics depend on court orders, agreements between parties, and the legal structure of the proceeding. Our team works in alignment with whatever legal requirements are in place and coordinates with both attorneys to ensure the real estate process supports rather than complicates the legal timeline.",
   },
 ];
 
@@ -167,7 +167,7 @@ const ForFamilyLawAttorneys = () => (
             If you have a client navigating a family law matter that involves real property in Washington State, a brief conversation is usually the most efficient starting point.
           </p>
           <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
-            David works collaboratively with family law attorneys throughout the Puget Sound area — providing the neutral, structured real estate support that helps complex situations move forward.
+            our team works collaboratively with family law attorneys throughout the Puget Sound area — providing the neutral, structured real estate support that helps complex situations move forward.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+12069003015">

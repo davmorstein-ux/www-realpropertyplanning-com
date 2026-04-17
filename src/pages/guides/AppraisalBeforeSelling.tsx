@@ -16,7 +16,7 @@ import heroIcon from "@/assets/icons/probate-guidance-book-open-icon-washington.
 
 const faqs = [
   { question: "Is an appraisal legally required before selling inherited property?", answer: "Not always. Washington State does not mandate a formal appraisal for every estate sale. However, certain situations — such as court oversight, multi-heir disputes, or tax reporting — may require or strongly benefit from one. The estate attorney can advise on legal requirements specific to your case." },
-  { question: "What is the difference between an appraisal and a CMA?", answer: "An appraisal is a formal, independent opinion of value performed by a licensed appraiser following strict professional standards. A CMA (comparative market analysis) is an informal estimate prepared by a real estate broker based on recent sales. David's dual credentials allow him to provide market analysis with appraisal-level rigor." },
+  { question: "What is the difference between an appraisal and a CMA?", answer: "An appraisal is a formal, independent opinion of value performed by a licensed appraiser following strict professional standards. A CMA (comparative market analysis) is an informal estimate prepared by a real estate broker based on recent sales. Our team's dual credentials allow him to provide market analysis with appraisal-level rigor." },
   { question: "How much does an estate property appraisal cost?", answer: "Formal appraisals for estate properties typically range from $400 to $800 or more, depending on property complexity, location, and purpose. The cost is usually justified when the valuation will be used for court proceedings, tax filings, or resolving disputes among heirs." },
   { question: "Can an online estimate replace a professional assessment?", answer: "No. Online valuation tools (Zestimate, Redfin estimates, etc.) rely on algorithms that cannot account for property condition, deferred maintenance, needed repairs, or estate-specific circumstances. These tools routinely miss the mark by 10–20% or more on inherited properties." },
   { question: "When should I get the property appraised vs. just assessed?", answer: "If you need a formal document for court, tax, or legal purposes, get an appraisal. If you need to understand the property's likely sale price to make planning decisions, a professional assessment from someone with appraisal credentials can provide that insight more quickly and affordably." },
@@ -125,7 +125,7 @@ const AppraisalBeforeSelling = () => (
             This is especially true when all heirs agree to sell, the estate is straightforward, and there are no court requirements for a formal appraisal. A valuation-informed market analysis considers the same factors a formal appraisal would — comparable sales, condition adjustments, market trends — but delivers the conclusion in a format designed for sale planning rather than legal documentation.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            David's <Link to="/guides/appraisal-vs-cma" className="text-accent hover:text-gold underline underline-offset-4">dual credentials as broker and certified appraiser</Link> mean his market assessments carry the analytical rigor of appraisal methodology, giving families confidence in pricing decisions even without a formal appraisal report.
+            our team's <Link to="/guides/appraisal-vs-cma" className="text-accent hover:text-gold underline underline-offset-4">dual credentials as broker and certified appraiser</Link> mean his market assessments carry the analytical rigor of appraisal methodology, giving families confidence in pricing decisions even without a formal appraisal report.
           </p>
         </div>
       </div>
@@ -133,7 +133,7 @@ const AppraisalBeforeSelling = () => (
 
     <MidPageCTA
       heading="Not Sure Which You Need?"
-      body="David can help you determine whether a formal appraisal or a professional market assessment is the right approach for your situation — and explain the practical difference."
+      body="our team can help you determine whether a formal appraisal or a professional market assessment is the right approach for your situation — and explain the practical difference."
       buttonText="Schedule a Conversation"
       microcopy="No pressure. Just practical guidance for your situation."
     />

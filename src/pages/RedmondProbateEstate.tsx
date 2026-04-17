@@ -23,7 +23,7 @@ const faqs = [
   {
     question: "What should I do first with an inherited Redmond property?",
     answer:
-      "Secure the property, review the legal authority with the estate attorney, and get a realistic assessment of the home's condition and current market value. David can evaluate the property, identify factors that affect value, and help you understand your options before committing to a course of action.",
+      "Secure the property, review the legal authority with the estate attorney, and get a realistic assessment of the home's condition and current market value. Our team can evaluate the property, identify factors that affect value, and help you understand your options before committing to a course of action.",
   },
   {
     question: "How does Real Property Planning's appraisal background benefit Redmond property sales?",
@@ -31,7 +31,7 @@ const faqs = [
       "As both a licensed Washington State real estate broker and a state-certified residential appraiser, Our team provides pricing strategy grounded in actual condition assessment and neighborhood-level market analysis — not automated estimates. In Redmond's competitive market, this dual perspective helps protect families from costly pricing mistakes.",
   },
   {
-    question: "Can David help if I'm relocating and need to sell an inherited property?",
+    question: "Can our team help if I'm relocating and need to sell an inherited property?",
     answer:
       "Yes. Relocation-driven property decisions are common in Redmond. Whether you're moving into or out of the area, Our team helps coordinate timing, preparation, and sale strategy so the property process aligns with your broader transition — reducing stress and keeping things organized.",
   },

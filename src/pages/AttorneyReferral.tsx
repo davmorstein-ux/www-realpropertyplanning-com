@@ -177,7 +177,7 @@ const AttorneyReferral = () => {
         </div>
       </section>
 
-      {/* Section 3: How David Works */}
+      {/* Section 3: How our team Works */}
       <section className="pt-12 pb-12 md:pt-16 md:pb-16 lg:pt-[84px] lg:pb-[84px] bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-[1140px] mx-auto">
@@ -237,7 +237,7 @@ const AttorneyReferral = () => {
         </div>
       </section>
 
-      {/* Section 5: What Makes David Different */}
+      {/* Section 5: What Makes our team Different */}
       <section className="pt-12 pb-12 md:pt-16 md:pb-16 lg:pt-[84px] lg:pb-[84px] bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-[1140px] mx-auto">

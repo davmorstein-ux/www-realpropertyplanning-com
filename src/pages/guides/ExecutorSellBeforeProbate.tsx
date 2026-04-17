@@ -135,7 +135,7 @@ const ExecutorSellBeforeProbate = () => (
 
     <MidPageCTA
       heading="Waiting for Probate Authority?"
-      body="Use this time wisely. A short conversation with David can help you understand what to prepare now so you're ready to move forward as soon as legal authority is granted."
+      body="Use this time wisely. A short conversation with our team can help you understand what to prepare now so you're ready to move forward as soon as legal authority is granted."
       buttonText="Schedule a Conversation"
       microcopy="No pressure. Just practical guidance for your situation."
     />

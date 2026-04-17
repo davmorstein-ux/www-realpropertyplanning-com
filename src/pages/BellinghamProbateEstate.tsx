@@ -16,9 +16,9 @@ import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washingto
 
 const faqs = [
   {
-    question: "Can David help with an inherited property in Bellingham if I live out of the area?",
+    question: "Can our team help with an inherited property in Bellingham if I live out of the area?",
     answer:
-      "Yes. David regularly works with families managing Bellingham properties from Seattle, out of state, or farther. He coordinates property access, vendor management, preparation, and the sale process — keeping you informed without requiring unnecessary trips.",
+      "Yes. Our team regularly works with families managing Bellingham properties from Seattle, out of state, or farther. He coordinates property access, vendor management, preparation, and the sale process — keeping you informed without requiring unnecessary trips.",
   },
   {
     question: "What makes Bellingham's real estate market different from the rest of Washington?",
@@ -43,7 +43,7 @@ const faqs = [
   {
     question: "What if the inherited property is a second home or vacation property?",
     answer:
-      "Second homes and vacation properties are common in the Bellingham area. These properties may have deferred maintenance, shared ownership, or unique characteristics that affect pricing. David assesses the property's condition and market positioning to develop a strategy that accounts for these factors.",
+      "Second homes and vacation properties are common in the Bellingham area. These properties may have deferred maintenance, shared ownership, or unique characteristics that affect pricing. Our team assesses the property's condition and market positioning to develop a strategy that accounts for these factors.",
   },
 ];
 
@@ -186,7 +186,7 @@ const BellinghamProbateEstate = () => {
               A significant number of Bellingham estate properties belong to families who don't live nearby. The owner may have retired here, used the property as a vacation home, or held it for decades before passing it to the next generation. In any case, the family handling the property now often faces the same challenge: making sound decisions about a home they can't easily visit.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              David serves as your local point of coordination — visiting the property, assessing its condition, managing cleanout crews and contractors, and communicating with attorneys and family members. The goal is to reduce the logistical burden so you can make informed decisions without unnecessary stress or travel.
+              our team serves as your local point of coordination — visiting the property, assessing its condition, managing cleanout crews and contractors, and communicating with attorneys and family members. The goal is to reduce the logistical burden so you can make informed decisions without unnecessary stress or travel.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
               For second homes and vacation properties, there are often additional considerations — seasonal access, shared ownership, deferred maintenance, or unique features that affect marketability. Our team evaluates these factors honestly and builds a strategy around the property's actual condition and positioning.

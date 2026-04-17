@@ -31,7 +31,7 @@ const faqs = [
       "As both a licensed Washington State real estate broker and a state-certified residential appraiser, Our team provides pricing strategy grounded in actual condition assessment and neighborhood-level market analysis. In Kirkland's higher-value market, this dual perspective helps protect families and fiduciaries from costly pricing mistakes.",
   },
   {
-    question: "Can David help if the family is downsizing or transitioning into senior living?",
+    question: "Can our team help if the family is downsizing or transitioning into senior living?",
     answer:
       "Yes. Many Kirkland families reach out when a parent is moving into assisted living, independent living, or memory care. Our team helps coordinate the timing of the property sale with the transition, working with families, care professionals, and attorneys to keep the process organized and manageable.",
   },

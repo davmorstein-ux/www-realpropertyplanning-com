@@ -14,12 +14,12 @@ const credentials = [
 
 const testimonials = [
   {
-    text: "David guided our family through a very difficult time with professionalism and genuine compassion. His valuation perspective and market knowledge were incredibly helpful.",
+    text: "our team guided our family through a very difficult time with professionalism and genuine compassion. His valuation perspective and market knowledge were incredibly helpful.",
     attribution: "Estate Attorney, Seattle",
     tag: "Probate · Valuation",
   },
   {
-    text: "We didn't know where to start. David made the entire process manageable and kept us informed every step of the way.",
+    text: "We didn't know where to start. Our team made the entire process manageable and kept us informed every step of the way.",
     attribution: "Executor, Snohomish County",
     tag: "Estate Administration · Communication",
   },
@@ -165,7 +165,7 @@ const TrustAndResults = () => (
                     <p className="text-muted-foreground text-base leading-relaxed">{snap.challenge}</p>
                   </div>
                   <div>
-                    <p className="text-xs font-bold uppercase tracking-wider text-gold mb-1">How David Helped</p>
+                    <p className="text-xs font-bold uppercase tracking-wider text-gold mb-1">How We Helped</p>
                     <p className="text-muted-foreground text-base leading-relaxed">{snap.howHelped}</p>
                   </div>
                   <div className="pt-2 border-t border-border">
