@@ -76,6 +76,7 @@ interface CountyPageProps {
   localExpertiseBody?: string[];
   communitiesIntro?: string;
   closingCtaBody?: string[];
+  belowHeroHeading?: string;
 }
 
 const CountyPageTemplate = ({
@@ -84,6 +85,7 @@ const CountyPageTemplate = ({
   aeoQuestion, aeoAnswer, aeoSupportBullets, aeoSupportFaqs,
   heroH1, heroSubheading, seoTitle, seoDescription,
   localExpertiseHeading, localExpertiseBody, communitiesIntro, closingCtaBody,
+  belowHeroHeading,
 }: CountyPageProps) => {
   const countyData = counties.find((c) => c.slug === countySlug);
 
@@ -149,13 +151,10 @@ const CountyPageTemplate = ({
               {heroH1 || `Estate & Inherited Property Sales in ${countyName}`}
             </h1>
             {heroSubheading && (
-              <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4 font-serif italic">
+              <p className="text-xl text-primary-foreground/85 leading-relaxed font-serif italic">
                 {heroSubheading}
               </p>
             )}
-            <p className="text-lg text-primary-foreground/80 leading-relaxed">
-              {localInsight || `Licensed broker and certified appraiser guidance for probate, estate, and senior property transitions in ${countyName}.`}
-            </p>
           </div>
         </div>
 
@@ -183,6 +182,21 @@ const CountyPageTemplate = ({
           </div>
         )}
       </section>
+
+      {localInsight && (
+        <section className="py-14 lg:py-18 bg-background">
+          <div className="container px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="font-serif text-2xl text-foreground font-semibold mb-5">
+                {belowHeroHeading || `Serving Every Corner of ${countyName}`}
+              </h2>
+              <p className="text-muted-foreground text-lg leading-relaxed">
+                {localInsight}
+              </p>
+            </div>
+          </div>
+        </section>
+      )}
 
       <DirectAnswerBlock
         question={aeoQuestion || `How do probate and estate property sales work in ${countyName}?`}
