@@ -242,7 +242,7 @@ const About = () => {
                 </p>
                 <p>
                   David built this site for both of them. And he built it to meet{" "}
-                  
+                  <a
                     href="https://www.w3.org/WAI/standards-guidelines/wcag/"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -383,7 +383,7 @@ const About = () => {
                     Read More Client Reviews
                   </Link>
                   <span className="text-muted-foreground/40">·</span>
-                  
+                  <a
                     href="https://www.zillow.com/profile/dstein2112#reviews"
                     target="_blank"
                     rel="noopener noreferrer"
