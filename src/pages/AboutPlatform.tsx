@@ -91,10 +91,10 @@ const AboutPlatform = () => {
               <img
                 src={davidSteinHeadshot}
                 alt="David Stein, President of Real Property Planning"
-                width={224}
-                height={224}
+                width={320}
+                height={400}
                 loading="lazy"
-                className="w-56 h-56 rounded-full object-cover mx-auto shadow-lg ring-1 ring-border"
+                className="w-64 md:w-72 h-auto aspect-[4/5] object-cover mx-auto rounded-2xl"
               />
               <figcaption className="mt-6">
                 <div className="font-serif text-2xl text-foreground font-semibold">
