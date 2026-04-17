@@ -124,7 +124,7 @@ const CountyPageTemplate = ({
       <main id="main-content">
 
       {/* Hero — concise */}
-      <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
+      <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14 [&:has(>_.county-hero-video)]:pb-0">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl">
             <div className="flex justify-center mb-4 md:mb-5">
@@ -159,7 +159,7 @@ const CountyPageTemplate = ({
         </div>
 
         {COUNTY_VIDEOS[countySlug] && (
-          <div className="w-full mt-8">
+          <div className="county-hero-video w-full mt-8">
             <div className="relative w-full overflow-hidden" style={{ aspectRatio: "1920 / 244" }}>
               <video
                 autoPlay
