@@ -12,7 +12,30 @@ import { Link } from "react-router-dom";
 
 import mappin3d from "@/assets/real-estate-service-areas-mappin-washington.webp";
 import heroIcon from "@/assets/icons/real-estate-service-areas-map-icon-washington.webp";
+import bentonLogo from "@/assets/counties/benton-county-logo.webp";
+import clarkLogo from "@/assets/counties/clark-county-logo.webp";
+import kingLogo from "@/assets/counties/king-county-logo.webp";
+import kitsapLogo from "@/assets/counties/kitsap-county-logo.webp";
+import pierceLogo from "@/assets/counties/pierce-county-logo.webp";
+import skagitLogo from "@/assets/counties/skagit-county-logo.webp";
+import snohomishLogo from "@/assets/counties/snohomish-county-logo.webp";
+import spokaneLogo from "@/assets/counties/spokane-county-logo.webp";
+import thurstonLogo from "@/assets/counties/thurston-county-logo.webp";
+import whatcomLogo from "@/assets/counties/whatcom-county-logo.webp";
 import { services, counties } from "@/lib/service-areas-data";
+
+const COUNTY_LOGOS: Record<string, string> = {
+  "benton-county": bentonLogo,
+  "clark-county": clarkLogo,
+  "king-county": kingLogo,
+  "kitsap-county": kitsapLogo,
+  "pierce-county": pierceLogo,
+  "skagit-county": skagitLogo,
+  "snohomish-county": snohomishLogo,
+  "spokane-county": spokaneLogo,
+  "thurston-county": thurstonLogo,
+  "whatcom-county": whatcomLogo,
+};
 
 interface CountyPageProps {
   countyName: string;
@@ -88,8 +111,22 @@ const CountyPageTemplate = ({
       <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl">
-            <div className="flex justify-center mb-1.5 md:mb-2">
-              <img src={heroIcon} alt="" aria-hidden="true" className="block w-full max-w-[15rem] h-auto object-contain" loading="lazy" />
+            <div className="flex justify-center mb-4 md:mb-5">
+              {COUNTY_LOGOS[countySlug] ? (
+                <div
+                  className="flex items-center justify-center rounded-full bg-[#F7F5F0] w-[120px] h-[120px] md:w-[180px] md:h-[180px] p-4"
+                  style={{ boxShadow: "0 4px 12px rgba(0,0,0,0.08)" }}
+                >
+                  <img
+                    src={COUNTY_LOGOS[countySlug]}
+                    alt={`${countyName} official logo`}
+                    className="w-full h-full object-contain"
+                    loading="eager"
+                  />
+                </div>
+              ) : (
+                <img src={heroIcon} alt="" aria-hidden="true" className="block w-full max-w-[15rem] h-auto object-contain" loading="lazy" />
+              )}
             </div>
             <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">
               {countyName}
