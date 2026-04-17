@@ -567,6 +567,26 @@ const applyMetadata = (
   return out;
 };
 
+const writeRouteHtmlVariants = async (
+  distDir: string,
+  route: string,
+  routeHtml: string
+) => {
+  const relativeRoutePath = route.slice(1);
+  const directoryIndexPath = path.join(distDir, relativeRoutePath, "index.html");
+  const htmlAliasPath = path.join(distDir, `${relativeRoutePath}.html`);
+
+  await Promise.all([
+    mkdir(path.dirname(directoryIndexPath), { recursive: true }),
+    mkdir(path.dirname(htmlAliasPath), { recursive: true }),
+  ]);
+
+  await Promise.all([
+    writeFile(directoryIndexPath, routeHtml, "utf8"),
+    writeFile(htmlAliasPath, routeHtml, "utf8"),
+  ]);
+};
+
 const routeMetadataPlugin = {
   name: "route-metadata-prerender",
   apply: "build" as const,
@@ -591,9 +611,7 @@ const routeMetadataPlugin = {
         .filter(([route]) => route !== "/")
         .map(async ([route, metadata]) => {
           const routeHtml = applyMetadata(baseHtml, route, metadata);
-          const routeDir = path.join(distDir, route.slice(1));
-          await mkdir(routeDir, { recursive: true });
-          await writeFile(path.join(routeDir, "index.html"), routeHtml, "utf8");
+          await writeRouteHtmlVariants(distDir, route, routeHtml);
         })
     );
   },
