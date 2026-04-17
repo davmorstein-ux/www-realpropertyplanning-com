@@ -25,20 +25,20 @@ const challenges = [
   "Handling unexpected property issues — plumbing failures, security concerns, weather damage — from a distance",
 ];
 
-const howDavidHelps = [
-  "Visits the property, takes detailed photos and video, and provides an honest assessment of condition and value",
-  "Coordinates cleanout crews, repair vendors, landscapers, and staging teams on your behalf",
-  "Provides regular photo updates and status reports so you always know what is happening",
-  "Manages the listing, marketing, showings, and negotiations without requiring you to travel",
-  "Communicates with your attorney, CPA, and other stakeholders to keep everyone aligned",
-  "Handles inspection responses, appraisal coordination, and closing logistics remotely",
+const howWeHelp = [
+  "Visit the property, take detailed photos and video, and provide an honest assessment of condition and value",
+  "Coordinate cleanout crews, repair vendors, landscapers, and staging teams on your behalf",
+  "Provide regular photo updates and status reports so you always know what is happening",
+  "Manage the listing, marketing, showings, and negotiations without requiring you to travel",
+  "Communicate with your attorney, CPA, and other stakeholders to keep everyone aligned",
+  "Handle inspection responses, appraisal coordination, and closing logistics remotely",
 ];
 
 const faqs = [
   { question: "Do I need to fly to Washington to sell the property?", answer: "In most cases, no. Our team handles property access, vendor coordination, preparation, marketing, and the sale process on your behalf. Many clients manage the entire process remotely through phone calls, email updates, and photo reports. If you do visit, our team can maximize that visit to cover key decisions efficiently." },
   { question: "How do I sign documents if I am not in Washington?", answer: "Washington allows remote notarization and electronic signatures for most real estate transactions. Our team works with title companies experienced in remote closings to ensure the paperwork process is smooth and convenient regardless of your location." },
-  { question: "What if I need someone to manage the property before it is ready to sell?", answer: "our team can coordinate ongoing property management needs during the estate administration period — including securing the property, maintaining insurance, managing utilities, and addressing maintenance issues as they arise." },
-  { question: "Can our team help me find local attorneys or other professionals?", answer: "Yes. Our team maintains professional relationships with probate attorneys, CPAs, senior move managers, and other service providers throughout Washington State. He can provide referrals when clients need local professional support." },
+  { question: "What if I need someone to manage the property before it is ready to sell?", answer: "Our team can coordinate ongoing property management needs during the estate administration period — including securing the property, maintaining insurance, managing utilities, and addressing maintenance issues as they arise." },
+  { question: "Can our team help me find local attorneys or other professionals?", answer: "Yes. Our team maintains professional relationships with probate attorneys, CPAs, senior move managers, and other service providers throughout Washington State. We can provide referrals when clients need local professional support." },
 ];
 
 const jsonLd = articleSchema({
@@ -109,12 +109,12 @@ const OutOfStateFamilies = () => (
     <section className="py-16 lg:py-24 bg-secondary">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
-          <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">How our team Provides Boots-on-the-Ground Support</h2>
+          <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">How Our Team Provides Boots-on-the-Ground Support</h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-            our team serves as your local point of contact throughout the entire process — from first property visit through closing day:
+            Our team serves as your local point of contact throughout the entire process — from first property visit through closing day:
           </p>
           <ul className="space-y-4">
-            {howDavidHelps.map((item, i) => (
+            {howWeHelp.map((item, i) => (
               <li key={i} className="flex items-start gap-3">
                 <GoldCheck3D size={20} className="mt-0.5" />
                 <span className="text-foreground leading-relaxed">{item}</span>
