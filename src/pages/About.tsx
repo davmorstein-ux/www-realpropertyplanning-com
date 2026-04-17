@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 import GoldCheck3D from "@/components/GoldCheck3D";
 
 import daveHeadshot from "@/assets/david-stein-real-estate-agent-seattle.webp";
-import davidSteinPresidentHeadshot from "@/assets/david-stein-president-headshot-2025.jpg";
+import davidSteinPresidentHeadshot from "@/assets/david-stein-president-headshot-2025-v3.jpg";
 import AgentCredentialBlock from "@/components/AgentCredentialBlock";
 import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
