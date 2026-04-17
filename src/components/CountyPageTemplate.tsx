@@ -36,6 +36,11 @@ const COUNTY_VIDEOS: Record<string, CountyVideo> = {
     mp4: "/county-videos/snohomish-hero.mp4?v=3",
     poster: "/county-videos/snohomish-hero-poster.webp?v=3",
   },
+  "king-county": {
+    webm: "/county-videos/king-hero.webm?v=1",
+    mp4: "/county-videos/king-hero.mp4?v=1",
+    poster: "/county-videos/king-hero-poster.webp?v=1",
+  },
 };
 
 const COUNTY_LOGOS: Record<string, string> = {
