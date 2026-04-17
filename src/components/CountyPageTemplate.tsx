@@ -217,17 +217,35 @@ const CountyPageTemplate = ({
           <div className="max-w-3xl">
             <div className="flex justify-center mb-4 md:mb-5">
               {COUNTY_LOGOS[countySlug] ? (
-                <div
-                  className="flex items-center justify-center rounded-full bg-[#F7F5F0] w-[120px] h-[120px] md:w-[180px] md:h-[180px] p-4"
-                  style={{ boxShadow: "0 4px 12px rgba(0,0,0,0.08)" }}
-                >
-                  <img
-                    src={COUNTY_LOGOS[countySlug]}
-                    alt={`${countyName}, Washington official seal — probate, estate, and senior transition real estate services`}
-                    className="w-full h-full object-contain"
-                    loading="eager"
-                  />
-                </div>
+                COUNTY_WEBSITES[countySlug] ? (
+                  <a
+                    href={COUNTY_WEBSITES[countySlug]}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Visit the official ${countyName}, Washington website`}
+                    className="flex items-center justify-center rounded-full bg-[#F7F5F0] w-[120px] h-[120px] md:w-[180px] md:h-[180px] p-4 transition-transform duration-200 hover:scale-105"
+                    style={{ boxShadow: "0 4px 12px rgba(0,0,0,0.08)" }}
+                  >
+                    <img
+                      src={COUNTY_LOGOS[countySlug]}
+                      alt={`${countyName}, Washington official seal — probate, estate, and senior transition real estate services`}
+                      className="w-full h-full object-contain"
+                      loading="eager"
+                    />
+                  </a>
+                ) : (
+                  <div
+                    className="flex items-center justify-center rounded-full bg-[#F7F5F0] w-[120px] h-[120px] md:w-[180px] md:h-[180px] p-4"
+                    style={{ boxShadow: "0 4px 12px rgba(0,0,0,0.08)" }}
+                  >
+                    <img
+                      src={COUNTY_LOGOS[countySlug]}
+                      alt={`${countyName}, Washington official seal — probate, estate, and senior transition real estate services`}
+                      className="w-full h-full object-contain"
+                      loading="eager"
+                    />
+                  </div>
+                )
               ) : (
                 <img src={heroIcon} alt="" aria-hidden="true" className="block w-full max-w-[15rem] h-auto object-contain" loading="lazy" />
               )}
