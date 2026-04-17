@@ -22,7 +22,6 @@ import Trustees from "./pages/Trustees";
 import ForCPAs from "./pages/ForCPAs";
 import ForFinancialPlanners from "./pages/ForFinancialPlanners";
 import About from "./pages/About";
-import AboutPlatform from "./pages/AboutPlatform";
 import JoinTheNetwork from "./pages/JoinTheNetwork";
 import FAQ from "./pages/FAQ";
 import Terminology from "./pages/Terminology";
