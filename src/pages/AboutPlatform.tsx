@@ -97,7 +97,7 @@ const AboutPlatform = () => {
                 className="w-64 md:w-72 h-auto aspect-[4/5] object-cover mx-auto rounded-2xl"
               />
               <figcaption className="mt-6">
-                <div className="font-serif text-2xl text-foreground font-semibold">
+                <div className="font-serif text-2xl text-foreground font-bold">
                   David Stein
                 </div>
                 <div className="text-muted-foreground mt-1">
