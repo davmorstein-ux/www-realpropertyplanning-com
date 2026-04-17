@@ -44,7 +44,7 @@ const About = () => {
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl">
               <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight">
-                About David Stein
+                About Real Property Planning
               </h1>
               <p className="text-lg md:text-xl text-gold leading-relaxed mt-3 font-medium tracking-wide">
                 President of Real Property Planning
