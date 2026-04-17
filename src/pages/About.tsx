@@ -62,14 +62,14 @@ const About = () => {
         {/* Leadership headshot — David Stein */}
         <section className="py-16 lg:py-20 bg-background">
           <div className="container px-6 lg:px-8">
-            <figure className="max-w-xs mx-auto text-center">
+            <figure className="max-w-[260px] mx-auto text-center">
               <img
                 src={davidSteinPresidentHeadshot}
                 alt="David Stein, President of Real Property Planning"
-                width={224}
-                height={224}
+                width={260}
+                height={325}
                 loading="lazy"
-                className="w-56 h-56 mx-auto rounded-full object-cover shadow-md ring-1 ring-border"
+                className="w-[260px] h-[325px] mx-auto rounded-2xl object-cover object-top shadow-sm"
               />
               <figcaption className="mt-5">
                 <p className="font-serif text-2xl text-foreground font-semibold leading-tight">
