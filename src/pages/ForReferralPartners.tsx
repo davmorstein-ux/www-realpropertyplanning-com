@@ -53,8 +53,8 @@ const ForReferralPartners = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Real Estate Support for Professional Partners | Real Property Planning"
-        description="A coordinated approach to property decisions involving legal planning, financial strategy, and life transitions. Collaborate with a licensed broker and certified appraiser."
+        title="Referral Partners | Probate & Estate Real Estate Network | WA"
+        description="Refer clients with confidence. Real Property Planning partners with attorneys, CPAs, financial planners, and senior living advisors on probate and estate property across Washington State."
       />
       <BreadcrumbSchema items={[{ name: "For Professional Partners", url: "/for-referral-partners" }]} />
       <Header />
