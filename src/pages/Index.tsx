@@ -17,6 +17,8 @@ import WhatHappensNext from "@/components/WhatHappensNext";
 import HomepageHero from "@/components/HomepageHero";
 import HomepageFAQ from "@/components/HomepageFAQ";
 import HomepageTeamSection from "@/components/HomepageTeamSection";
+import HowWeHelpCards from "@/components/HowWeHelpCards";
+import HomepageWarmStatement from "@/components/HomepageWarmStatement";
 
 const serviceAreas = [
   { county: "King County", href: "/counties/king", cities: "Seattle, Bellevue, Kirkland, Redmond, Renton, Bothell, Shoreline, Mercer Island, Burien, Kent, Auburn, Federal Way" },
@@ -44,6 +46,12 @@ const Index = () => {
 
       {/* 2. SERVICE NAV TILES */}
       <ServiceNavTiles />
+
+      {/* HOW WE HELP */}
+      <HowWeHelpCards />
+
+      {/* WARM STATEMENT */}
+      <HomepageWarmStatement />
 
       {/* TEAM SECTION */}
       <HomepageTeamSection />
