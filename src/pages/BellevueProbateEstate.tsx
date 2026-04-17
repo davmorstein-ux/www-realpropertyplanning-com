@@ -33,7 +33,7 @@ const faqs = [
   {
     question: "Can our team help if multiple beneficiaries are involved?",
     answer:
-      "Yes. Multi-party situations are common in Bellevue estate and trust sales. Our team provides clear, documented communication so all parties — whether local or out of state — have the same information. His appraisal-informed pricing approach also helps establish defensible value when consensus is needed.",
+      "Yes. Multi-party situations are common in Bellevue estate and trust sales. Our team provides clear, documented communication so all parties — whether local or out of state — have the same information. Pricing grounded in certified appraisal methodology also helps establish defensible value when consensus is needed.",
   },
   {
     question: "What preparation is typically needed before selling a Bellevue estate property?",
@@ -89,7 +89,7 @@ const BellevueProbateEstate = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Probate & Estate Real Estate in Bellevue, WA"
-        description="Guidance for executors, trustees, and families with inherited or trust-owned property in Bellevue, WA. Valuation-informed, discreet support."
+        description="Guidance for executors, trustees, and families with inherited or trust-owned property in Bellevue, WA. Discreet support across Eastside neighborhoods."
       />
       <BreadcrumbSchema
         items={[
@@ -136,7 +136,7 @@ const BellevueProbateEstate = () => {
                 "Multiple family members or beneficiaries involved in decisions",
                 "High-value property where pricing mistakes can be costly",
                 "Home needing preparation before sale to meet Bellevue buyer expectations",
-                "Attorney or fiduciary seeking a reliable, valuation-informed real estate resource",
+                "Attorney or fiduciary seeking a reliable Eastside real estate resource",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <GoldCheck3D size={22} className="mt-0.5 shrink-0" />
@@ -217,8 +217,8 @@ const BellevueProbateEstate = () => {
                   desc: "I visit the property, assess its condition, review ownership structure, and identify factors that may affect value, preparation needs, or the sales approach.",
                 },
                 {
-                  title: "Valuation-Informed Pricing Strategy",
-                  desc: "Using my appraisal background and Bellevue neighborhood-level market data, I develop a pricing strategy that's defensible, realistic, and designed to protect the interests of all parties.",
+                  title: "Eastside Pricing Strategy",
+                  desc: "Drawing on certified appraisal experience and Bellevue neighborhood-level market data, we develop pricing that's defensible, realistic, and designed to protect the interests of all parties.",
                 },
                 {
                   title: "Coordinating Preparation and Next Steps",

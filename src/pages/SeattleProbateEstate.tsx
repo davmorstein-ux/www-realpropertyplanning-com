@@ -92,7 +92,7 @@ const SeattleProbateEstate = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Probate & Estate Real Estate in Seattle, WA"
-        description="Guidance for executors, trustees, and families with inherited property in Seattle, WA. Valuation-informed strategy and full coordination."
+        description="Guidance for executors, trustees, and families with inherited property in Seattle, WA. Hands-on local coordination from listing through closing."
       />
       <BreadcrumbSchema
         items={[

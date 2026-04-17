@@ -220,8 +220,8 @@ const VancouverWaProbateEstate = () => {
                   desc: "When a sale needs to coordinate with a move, a senior transition, or a cross-state relocation, I build a realistic timeline that accounts for all the moving parts.",
                 },
                 {
-                  title: "Valuation-Informed Pricing",
-                  desc: "Using my appraisal background and Vancouver-specific market data, I develop a pricing strategy that's defensible, realistic, and aligned with the property's actual condition and location.",
+                  title: "Vancouver Pricing Strategy",
+                  desc: "Drawing on certified appraisal experience and Vancouver-specific market data, we develop pricing that's defensible, realistic, and aligned with the property's actual condition and location.",
                 },
                 {
                   title: "Guiding the Process to Completion",
