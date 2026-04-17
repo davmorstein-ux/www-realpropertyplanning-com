@@ -17,7 +17,7 @@ import heroIcon from "@/assets/icons/probate-guidance-book-open-icon-washington.
 const faqs = [
   { question: "Is pricing an estate home different from pricing a regular home?", answer: "Yes. Estate properties often have deferred maintenance, dated finishes, and condition issues that standard market comparisons do not capture. Pricing must account for the property's actual condition — not its potential after renovation. A broker with appraisal experience can make these adjustments accurately." },
   { question: "Should I use a Zestimate or online estimate to price estate property?", answer: "No. Online valuation tools assume the property is in average condition. Estate homes are almost never in average condition. These tools routinely miss the mark by 10–20% or more, which can lead to overpricing (extended market time) or underpricing (lost estate value)." },
-  { question: "What is a valuation-informed pricing strategy?", answer: "It combines market comparison data (recent sales of similar properties) with condition-based adjustments (accounting for the property's actual state). David's appraisal credentials allow him to make these adjustments with professional rigor, resulting in pricing that is both competitive and defensible." },
+  { question: "What is a valuation-informed pricing strategy?", answer: "It combines market comparison data (recent sales of similar properties) with condition-based adjustments (accounting for the property's actual state). Our team's appraisal credentials allow him to make these adjustments with professional rigor, resulting in pricing that is both competitive and defensible." },
   { question: "How does the executor justify the sale price to beneficiaries?", answer: "Having a documented, professionally prepared pricing analysis protects the executor. It demonstrates that the price was based on objective market data and professional judgment — not guesswork or convenience. This is especially important when heirs have different expectations." },
   { question: "Can a property in a trust be priced differently than one in probate?", answer: "The pricing methodology is the same — condition-based market analysis. The difference is in the legal authority: trust property can often be sold more quickly because it avoids probate court oversight. This timing advantage can affect strategy but not the underlying valuation approach." },
 ];
@@ -138,7 +138,7 @@ const PricingHouseTrustEstate = () => (
 
     <MidPageCTA
       heading="Need Help Pricing an Estate Property?"
-      body="David's dual credentials as a broker and certified appraiser provide the pricing discipline that estate and trust property requires. A short conversation can help you understand your property's realistic market position."
+      body="our team's dual credentials as a broker and certified appraiser provide the pricing discipline that estate and trust property requires. A short conversation can help you understand your property's realistic market position."
       buttonText="Schedule a Conversation"
       microcopy="No pressure. Just practical guidance for your situation."
     />

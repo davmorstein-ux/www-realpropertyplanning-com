@@ -64,8 +64,8 @@ const CountyPageTemplate = ({
       answer: `Yes — buyer expectations, inspection norms, and condition tolerance vary noticeably across ${countySlugUpper} County's submarkets (${cityList}, and surrounding communities). Pricing built on a county-wide average will frequently miss in either direction. Each property here is evaluated on its own block and condition, not pulled off an automated estimate.`,
     },
     {
-      question: `Can David handle a ${countyName} estate sale if every heir lives out of state?`,
-      answer: `Routinely. Out-of-state personal representatives are one of the most common situations in ${countyName}. David handles the in-person walk-through, vendor coordination, photo and video updates, showings, and offer review — so the heirs almost never need to travel to ${countyName} to close.`,
+      question: `Can our team handle a ${countyName} estate sale if every heir lives out of state?`,
+      answer: `Routinely. Out-of-state personal representatives are one of the most common situations in ${countyName}. Our team handles the in-person walk-through, vendor coordination, photo and video updates, showings, and offer review — so the heirs almost never need to travel to ${countyName} to close.`,
     },
   ];
 
@@ -217,7 +217,7 @@ const CountyPageTemplate = ({
               ))
             ) : (
               <p className="text-primary-foreground/70 text-lg mb-6">
-                David can walk you through your situation and help you see what makes sense.
+                our team can walk you through your situation and help you see what makes sense.
               </p>
             )}
             <Link to="/contact">

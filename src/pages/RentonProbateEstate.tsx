@@ -19,8 +19,8 @@ const faqs = [
   { question: "How does our team's appraisal background help in Renton?", answer: "As both a licensed Washington State real estate broker and a state-certified residential appraiser, Our team provides pricing based on actual property condition and local comparable data — not automated estimates. In Renton, where neighborhoods and conditions vary widely, this dual perspective prevents costly pricing mistakes." },
   { question: "Should I renovate before selling an inherited Renton home?", answer: "Not always. Our team evaluates which improvements are likely to return more than they cost — and which aren't worth the investment. Many inherited homes benefit more from targeted preparation and honest pricing than from expensive renovations." },
   { question: "What if family members live in different places?", answer: "This is common. Our team coordinates with family members across locations, provides clear information everyone can review, and manages the local logistics so decisions can move forward without requiring everyone to be present." },
-  { question: "Can David help if I don't live in Renton?", answer: "Yes. David regularly works with executors and families managing properties remotely. He handles property access, vendor coordination, and the sale process so you can make informed decisions without unnecessary travel." },
-  { question: "How long does it take to sell an inherited home in Renton?", answer: "Timelines depend on the probate or trust process, property condition, and preparation needs. Once the home is ready and authority is established, well-priced Renton properties generally sell within a reasonable timeframe. David sets realistic expectations from the start." },
+  { question: "Can our team help if I don't live in Renton?", answer: "Yes. Our team regularly works with executors and families managing properties remotely. He handles property access, vendor coordination, and the sale process so you can make informed decisions without unnecessary travel." },
+  { question: "How long does it take to sell an inherited home in Renton?", answer: "Timelines depend on the probate or trust process, property condition, and preparation needs. Once the home is ready and authority is established, well-priced Renton properties generally sell within a reasonable timeframe. Our team sets realistic expectations from the start." },
 ];
 
 const RentonProbateEstate = () => {
@@ -84,7 +84,7 @@ const RentonProbateEstate = () => {
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">Helping Families Stay Organized Through the Process</h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">Inherited property decisions in Renton often involve multiple people with different schedules, perspectives, and levels of involvement. Without a clear framework, the process can stall or create unnecessary tension.</p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">Our team provides the structure — an honest property assessment, a realistic pricing strategy, and a clear sequence of next steps that everyone can understand. From there, he manages the preparation logistics, vendor coordination, and communication so the family can focus on making decisions rather than managing details.</p>
-            <p className="text-muted-foreground text-lg leading-relaxed">Whether the transition involves a straightforward sale or a more complex situation — like a parent moving to care while the home is prepared — David keeps the process organized and on track.</p>
+            <p className="text-muted-foreground text-lg leading-relaxed">Whether the transition involves a straightforward sale or a more complex situation — like a parent moving to care while the home is prepared — our team keeps the process organized and on track.</p>
           </div>
         </div>
       </section>

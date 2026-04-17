@@ -120,7 +120,7 @@ const Executors = () => (
       eyebrow="For Executors"
       heading="Tell Me What's Happening with the House"
       body="Most executors call the first time without a plan — just a situation. That's the right time to call. We'll talk through where the estate stands, what the property needs first, and how to keep your fiduciary file clean from day one."
-      callLabel="Call David — (206) 900-3015"
+      callLabel="Call our team — (206) 900-3015"
       messageLabel="Email About an Estate"
       microcopy="Confidential. No commitment. We can also coordinate directly with your estate attorney."
     />

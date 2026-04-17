@@ -15,15 +15,15 @@ const KitsapCounty = () => (
     ]}
     localInsight="Kitsap County occupies a unique position in the Puget Sound real estate market — a peninsula community connected to Seattle by ferry but maintaining its own distinct character, lifestyle, and pricing dynamics. From the waterfront communities of Bainbridge Island and Poulsbo to the military-influenced market in Bremerton and the suburban growth of Silverdale, Kitsap County's estate properties require someone who understands the peninsula's specific dynamics. Real Property Planning serves families, executors, trustees, and attorneys throughout Kitsap County — bringing the dual perspective of a licensed real estate broker and a Washington State Certified Residential Appraiser to every property situation."
     aeoQuestion="How do probate and estate property sales work in Kitsap County?"
-    aeoAnswer="The process follows Washington State probate law, but Kitsap County has its own probate court, local title companies, and professional ecosystem that Our team is familiar with from years of working in the market. An estate property in Kitsap requires pricing calibrated to the peninsula's buyer pool — which includes Seattle commuters drawn by ferry access, military personnel, local buyers, and retirees seeking waterfront lifestyle at more accessible price points than King County. our team's approach accounts for all of these factors in developing a realistic pricing and preparation strategy."
+    aeoAnswer="The process follows Washington State probate law, but Kitsap County has its own probate court, local title companies, and professional ecosystem that Our team is familiar with from years of working in the market. An estate property in Kitsap requires pricing calibrated to the peninsula's buyer pool — which includes Seattle commuters drawn by ferry access, military personnel, local buyers, and retirees seeking waterfront lifestyle at more accessible price points than King County. Our team's approach accounts for all of these factors in developing a realistic pricing and preparation strategy."
     aeoSupportFaqs={[
       {
         question: "How does the ferry connection to Seattle affect Kitsap property values?",
-        answer: "Significantly — and the impact varies considerably depending on the property's proximity to ferry terminals and the commute experience it offers. Properties in Bainbridge Island, Kingston, and Bremerton that offer practical ferry commutes to Seattle command premiums that reflect that access. Properties further from ferry routes have their own buyer pool and pricing dynamics. our team's location-specific analysis captures these distinctions accurately.",
+        answer: "Significantly — and the impact varies considerably depending on the property's proximity to ferry terminals and the commute experience it offers. Properties in Bainbridge Island, Kingston, and Bremerton that offer practical ferry commutes to Seattle command premiums that reflect that access. Properties further from ferry routes have their own buyer pool and pricing dynamics. Our team's location-specific analysis captures these distinctions accurately.",
       },
       {
         question: "What makes Kitsap County estate sales unique?",
-        answer: "Several factors: the island and peninsula geography creates natural boundaries and specific buyer pools; waterfront and water-view properties are more prevalent than in most mainland markets; and the county's mix of military, tech-commuter, and local buyers creates more diverse demand dynamics than more homogeneous markets. David navigates all of these factors with the condition-adjusted, location-specific approach he brings to every county he serves.",
+        answer: "Several factors: the island and peninsula geography creates natural boundaries and specific buyer pools; waterfront and water-view properties are more prevalent than in most mainland markets; and the county's mix of military, tech-commuter, and local buyers creates more diverse demand dynamics than more homogeneous markets. Our team navigates all of these factors with the condition-adjusted, location-specific approach he brings to every county he serves.",
       },
     ]}
     communitiesIntro="Real Property Planning serves families, executors, and professionals throughout Kitsap County, including:"
@@ -41,15 +41,15 @@ const KitsapCounty = () => (
       },
       {
         question: "Are waterfront properties on the Kitsap Peninsula harder to price accurately?",
-        answer: "Yes. Waterfront and water-view properties require assessments that account for shoreline type, view corridors, bulkhead condition, and access — factors that automated valuation tools consistently miss. our team's certified appraiser credentials give him the training and experience to evaluate these features accurately, helping executors and trustees set prices that reflect actual market value.",
+        answer: "Yes. Waterfront and water-view properties require assessments that account for shoreline type, view corridors, bulkhead condition, and access — factors that automated valuation tools consistently miss. Our team's certified appraiser credentials give him the training and experience to evaluate these features accurately, helping executors and trustees set prices that reflect actual market value.",
       },
       {
-        question: "Can David manage a Kitsap County sale if I live in Seattle or out of state?",
+        question: "Can our team manage a Kitsap County sale if I live in Seattle or out of state?",
         answer: "Absolutely. The ferry-separated geography of Kitsap County makes remote management common. Our team handles property access, vendor coordination, preparation, showings, and the full sale process — providing consistent updates so you can manage your executor or trustee responsibilities from wherever you are.",
       },
       {
         question: "What makes selling a home in Poulsbo or Kingston different from other Kitsap communities?",
-        answer: "Poulsbo and Kingston attract buyers drawn to small-town character, Scandinavian heritage, and waterfront proximity. The buyer pool is smaller and more specific than in Bremerton or Silverdale, which means accurate pricing and targeted marketing are especially important. our team's local market awareness and appraisal discipline help position these properties to attract the right buyers without extended market time.",
+        answer: "Poulsbo and Kingston attract buyers drawn to small-town character, Scandinavian heritage, and waterfront proximity. The buyer pool is smaller and more specific than in Bremerton or Silverdale, which means accurate pricing and targeted marketing are especially important. Our team's local market awareness and appraisal discipline help position these properties to attract the right buyers without extended market time.",
       },
     ]}
   />

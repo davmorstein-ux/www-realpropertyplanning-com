@@ -51,7 +51,7 @@ const HomepageLeadForm = () => {
           Thanks — Message Received
         </h3>
         <p className="text-muted-foreground text-lg leading-relaxed max-w-sm mb-5">
-          David will reach out shortly to learn more about your situation.
+          our team will reach out shortly to learn more about your situation.
         </p>
         <p className="text-muted-foreground/70 text-base leading-relaxed max-w-sm mb-5">
           Need to talk sooner?{" "}
@@ -67,7 +67,7 @@ const HomepageLeadForm = () => {
         Send a Message
       </h3>
       <p className="text-muted-foreground text-base leading-relaxed mb-6">
-        Share a few details and David will follow up directly — usually within one business day.
+        Share a few details and our team will follow up directly — usually within one business day.
       </p>
 
       <form className="space-y-5" onSubmit={handleSubmit}>
@@ -174,7 +174,7 @@ const HomepageLeadForm = () => {
             name="notes"
             rows={2}
             className={`${inputClass} resize-none`}
-            placeholder="Timeline, concerns, questions — anything that would help David understand your situation"
+            placeholder="Timeline, concerns, questions — anything that would help our team understand your situation"
           />
         </div>
 
@@ -189,7 +189,7 @@ const HomepageLeadForm = () => {
       </form>
 
       <p className="text-muted-foreground text-base text-center mt-4">
-        David responds personally.
+        We respond personally.
       </p>
     </div>
   );

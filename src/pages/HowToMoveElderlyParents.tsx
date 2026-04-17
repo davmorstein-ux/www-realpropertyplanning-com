@@ -289,7 +289,7 @@ const HowToMoveElderlyParents = () => (
                 Real Property Planning provides experienced, thoughtful support for families throughout Washington State who are navigating <Link to="/senior-transitions" className="text-accent hover:text-gold underline underline-offset-4">senior transitions</Link> and the real estate decisions that come with them. Whether you're just beginning to think about a move or already coordinating a transition, Real Property Planning is here to help.
               </p>
               <p className="text-muted-foreground text-base leading-relaxed">
-                <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4">Contact David</Link> for a confidential conversation about your family's situation.
+                <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4">Contact us</Link> for a confidential conversation about your family's situation.
               </p>
             </div>
           </div>

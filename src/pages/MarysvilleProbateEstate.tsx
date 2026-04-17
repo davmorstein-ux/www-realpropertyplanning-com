@@ -15,11 +15,11 @@ import { realEstateAgentSchema, areaServed } from "@/lib/schema";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 
 const faqs = [
-  { question: "What should I do first with an inherited home in Marysville?", answer: "Secure the property, confirm your legal authority to act, and get an honest assessment of its condition and value. David can visit the home, identify what affects its marketability, and outline your options before you make any decisions." },
+  { question: "What should I do first with an inherited home in Marysville?", answer: "Secure the property, confirm your legal authority to act, and get an honest assessment of its condition and value. Our team can visit the home, identify what affects its marketability, and outline your options before you make any decisions." },
   { question: "How does our team's appraisal background help in Marysville?", answer: "As both a licensed Washington State real estate broker and a state-certified residential appraiser, Our team provides pricing based on actual property condition and local sales data — not automated estimates. In Marysville, where property ages and conditions range widely, this dual perspective helps families avoid pricing missteps." },
   { question: "Should I fix up the home before selling?", answer: "It depends on the property's condition and your timeline. Our team evaluates which improvements are likely to pay for themselves and which aren't worth the expense. Many Marysville inherited homes benefit from targeted cleanup and cosmetic work rather than major renovation." },
   { question: "What if family members have different opinions about selling?", answer: "This is common. Our team provides objective, condition-based information — realistic value, preparation options, and practical tradeoffs — so every family member has the same clear picture to work from. Shared facts usually help conversations move forward." },
-  { question: "Can David help if I don't live in Marysville?", answer: "Yes. Our team works with executors and families managing Snohomish County properties from other parts of the state and beyond. He handles property access, vendor coordination, and the sale process so decisions can move forward without requiring repeated trips." },
+  { question: "Can our team help if I don't live in Marysville?", answer: "Yes. Our team works with executors and families managing Snohomish County properties from other parts of the state and beyond. He handles property access, vendor coordination, and the sale process so decisions can move forward without requiring repeated trips." },
   { question: "How long does it take to sell an inherited home in Marysville?", answer: "Timelines depend on the legal process, property condition, and preparation scope. Once the home is ready and authority is established, appropriately priced Marysville properties generally sell within a reasonable timeframe. Our team helps set clear expectations from the start." },
 ];
 
@@ -84,7 +84,7 @@ const MarysvilleProbateEstate = () => {
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">Supporting Family-Led Decisions</h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">Inherited property decisions in Marysville are usually family decisions — and that means balancing different perspectives, schedules, and levels of involvement. One person may be ready to move forward while another needs more information. Someone may live locally while others are hours away.</p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">Our team provides the information that helps everyone get aligned — a clear picture of the property's condition, a realistic sense of value, and a practical outline of what needs to happen next. From there, he manages the logistics so the family can focus on the decisions rather than the details.</p>
-            <p className="text-muted-foreground text-lg leading-relaxed">Whether it's coordinating a cleanout, getting the property ready for market, or managing communication with attorneys and other parties, David keeps things moving at a pace that works for the family.</p>
+            <p className="text-muted-foreground text-lg leading-relaxed">Whether it's coordinating a cleanout, getting the property ready for market, or managing communication with attorneys and other parties, our team keeps things moving at a pace that works for the family.</p>
           </div>
         </div>
       </section>

@@ -31,14 +31,14 @@ const faqs = [
       "As both a licensed Washington State real estate broker and a state-certified residential appraiser, Our team provides pricing grounded in actual condition assessment and neighborhood-level market data — not automated estimates. This is especially valuable in Tacoma, where property values can vary significantly from one neighborhood to the next.",
   },
   {
-    question: "Can David help if I live out of state but the property is in Tacoma?",
+    question: "Can our team help if I live out of state but the property is in Tacoma?",
     answer:
-      "Yes. David regularly works with out-of-state executors and family members managing Tacoma properties remotely. He coordinates property access, vendor management, preparation, and the sale process — keeping you informed at every step so you don't need to make unnecessary trips.",
+      "Yes. Our team regularly works with out-of-state executors and family members managing Tacoma properties remotely. He coordinates property access, vendor management, preparation, and the sale process — keeping you informed at every step so you don't need to make unnecessary trips.",
   },
   {
     question: "Should I fix up an inherited home in Tacoma before selling?",
     answer:
-      "It depends on the home's condition, your budget, and your timeline. David uses his appraisal background to evaluate which improvements are likely to increase the sale price enough to justify the cost — and which ones aren't worth the investment. Sometimes selling as-is is the right call; other times, targeted preparation makes a meaningful difference.",
+      "It depends on the home's condition, your budget, and your timeline. Our team uses his appraisal background to evaluate which improvements are likely to increase the sale price enough to justify the cost — and which ones aren't worth the investment. Sometimes selling as-is is the right call; other times, targeted preparation makes a meaningful difference.",
   },
   {
     question: "How long does it take to sell an estate property in Tacoma?",
@@ -187,7 +187,7 @@ const TacomaProbateEstate = () => {
               Many families managing Tacoma estate property live elsewhere — across the state, across the country, or even internationally. Coordinating vendors, accessing the property, understanding local conditions, and managing a sale remotely adds significant stress during an already difficult time.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              David serves as a local point of coordination. He manages property access, works with cleanout crews, contractors, and preparation vendors, communicates with attorneys and other parties, and keeps you informed throughout the process — reducing unnecessary travel and giving you confidence that nothing is falling through the cracks.
+              our team serves as a local point of coordination. He manages property access, works with cleanout crews, contractors, and preparation vendors, communicates with attorneys and other parties, and keeps you informed throughout the process — reducing unnecessary travel and giving you confidence that nothing is falling through the cracks.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
               Whether you're managing from Portland, Phoenix, or across the country, our team's goal is to make the process as clear and manageable as possible from wherever you are.

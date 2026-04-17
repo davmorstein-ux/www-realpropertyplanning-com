@@ -117,7 +117,7 @@ const ExecutorFirstStepsHouse = () => (
 
     <MidPageCTA
       heading="Just Named as Executor?"
-      body="The first few weeks can feel overwhelming. A short conversation with David can help you prioritize what matters most and understand the process ahead."
+      body="The first few weeks can feel overwhelming. A short conversation with our team can help you prioritize what matters most and understand the process ahead."
       buttonText="Schedule a Conversation"
       microcopy="No pressure. Just practical guidance for your situation."
     />

@@ -35,10 +35,10 @@ const howDavidHelps = [
 ];
 
 const faqs = [
-  { question: "Do I need to fly to Washington to sell the property?", answer: "In most cases, no. Our team handles property access, vendor coordination, preparation, marketing, and the sale process on your behalf. Many clients manage the entire process remotely through phone calls, email updates, and photo reports. If you do visit, David can maximize that visit to cover key decisions efficiently." },
+  { question: "Do I need to fly to Washington to sell the property?", answer: "In most cases, no. Our team handles property access, vendor coordination, preparation, marketing, and the sale process on your behalf. Many clients manage the entire process remotely through phone calls, email updates, and photo reports. If you do visit, our team can maximize that visit to cover key decisions efficiently." },
   { question: "How do I sign documents if I am not in Washington?", answer: "Washington allows remote notarization and electronic signatures for most real estate transactions. Our team works with title companies experienced in remote closings to ensure the paperwork process is smooth and convenient regardless of your location." },
-  { question: "What if I need someone to manage the property before it is ready to sell?", answer: "David can coordinate ongoing property management needs during the estate administration period — including securing the property, maintaining insurance, managing utilities, and addressing maintenance issues as they arise." },
-  { question: "Can David help me find local attorneys or other professionals?", answer: "Yes. David maintains professional relationships with probate attorneys, CPAs, senior move managers, and other service providers throughout Washington State. He can provide referrals when clients need local professional support." },
+  { question: "What if I need someone to manage the property before it is ready to sell?", answer: "our team can coordinate ongoing property management needs during the estate administration period — including securing the property, maintaining insurance, managing utilities, and addressing maintenance issues as they arise." },
+  { question: "Can our team help me find local attorneys or other professionals?", answer: "Yes. Our team maintains professional relationships with probate attorneys, CPAs, senior move managers, and other service providers throughout Washington State. He can provide referrals when clients need local professional support." },
 ];
 
 const jsonLd = articleSchema({
@@ -109,9 +109,9 @@ const OutOfStateFamilies = () => (
     <section className="py-16 lg:py-24 bg-secondary">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
-          <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">How David Provides Boots-on-the-Ground Support</h2>
+          <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">How our team Provides Boots-on-the-Ground Support</h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-            David serves as your local point of contact throughout the entire process — from first property visit through closing day:
+            our team serves as your local point of contact throughout the entire process — from first property visit through closing day:
           </p>
           <ul className="space-y-4">
             {howDavidHelps.map((item, i) => (
@@ -130,7 +130,7 @@ const OutOfStateFamilies = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <ProofCallout
-            quote="David guided our family through a very difficult time with professionalism and genuine compassion. His valuation perspective and market knowledge were incredibly helpful."
+            quote="our team guided our family through a very difficult time with professionalism and genuine compassion. His valuation perspective and market knowledge were incredibly helpful."
             attribution="Estate Attorney, Seattle"
             context="Out-of-state estate coordination"
             variant="accent"
@@ -151,10 +151,10 @@ const OutOfStateFamilies = () => (
         <div className="max-w-3xl mx-auto">
           <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">What Should You Do First?</h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-            If you are an out-of-state executor, trustee, or family member responsible for Washington property, the best first step is a phone conversation. David can learn about your situation, answer initial questions, and outline what needs to happen — often before you need to make any firm decisions.
+            If you are an out-of-state executor, trustee, or family member responsible for Washington property, the best first step is a phone conversation. Our team can learn about your situation, answer initial questions, and outline what needs to happen — often before you need to make any firm decisions.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-6">
-            From there, David visits the property, provides a detailed condition report with photos, and develops a realistic plan for preparation and sale. You stay informed at every step without needing to manage the details yourself.
+            From there, our team visits the property, provides a detailed condition report with photos, and develops a realistic plan for preparation and sale. You stay informed at every step without needing to manage the details yourself.
           </p>
           <p className="text-muted-foreground leading-relaxed">
             Learn more about the full <Link to="/how-the-process-works" className="text-accent hover:text-gold underline underline-offset-4">sale process from consultation to closing</Link>, or explore guidance specifically for <Link to="/executors" className="text-accent hover:text-gold underline underline-offset-4">executors and personal representatives</Link>.

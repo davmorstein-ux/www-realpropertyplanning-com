@@ -56,7 +56,7 @@ const coordinationPartners = [
     title: "Trusted Advisors",
     description: (
       <>
-        Attorneys, financial planners, CPAs, and fiduciaries need the real estate side of a senior transition handled with accuracy and professionalism. our team's background as a{" "}
+        Attorneys, financial planners, CPAs, and fiduciaries need the real estate side of a senior transition handled with accuracy and professionalism. Our team's background as a{" "}
         <Link to="/real-estate-appraiser" className="text-accent hover:text-gold underline underline-offset-4">certified appraiser</Link> means advisors receive reliable valuation guidance — not listing estimates — which matters for financial planning, Medicaid planning, and estate documentation purposes.
       </>
     ),
@@ -283,13 +283,13 @@ const SeniorTransitions = () => {
               {[
                 {
                   value: "emotional",
-                  q: "How does David handle the emotional side of a senior home sale?",
-                  a: "Slowly, and with respect. Most families reach out during one of the hardest periods they've been through — a parent's health declining, a difficult family decision, the end of an era. David doesn't rush the conversation or the process. He listens first, asks questions about the family's situation and priorities, and builds a plan that fits the family's pace — not a standard listing timeline. Many clients say what they appreciated most wasn't the sale itself, but the way it was handled.",
+                  q: "How does our team handle the emotional side of a senior home sale?",
+                  a: "Slowly, and with respect. Most families reach out during one of the hardest periods they've been through — a parent's health declining, a difficult family decision, the end of an era. Our team doesn't rush the conversation or the process. He listens first, asks questions about the family's situation and priorities, and builds a plan that fits the family's pace — not a standard listing timeline. Many clients say what they appreciated most wasn't the sale itself, but the way it was handled.",
                 },
                 {
                   value: "condition",
                   q: "What about a home with decades of deferred maintenance?",
-                  a: "This is one of the most common situations Our team works with, and it's where his appraisal background genuinely helps. Rather than guessing what the home might sell for, David can assess the property's current condition and give families an honest picture of their options: sell as-is, make targeted improvements, or something in between. He can also help coordinate the cleanout, repairs, and staging process through trusted local contractors and service providers — so families don't have to manage that on their own.",
+                  a: "This is one of the most common situations Our team works with, and it's where his appraisal background genuinely helps. Rather than guessing what the home might sell for, our team can assess the property's current condition and give families an honest picture of their options: sell as-is, make targeted improvements, or something in between. He can also help coordinate the cleanout, repairs, and staging process through trusted local contractors and service providers — so families don't have to manage that on their own.",
                 },
                 {
                   value: "remote",
@@ -369,10 +369,10 @@ const SeniorTransitions = () => {
               Most families start with a single question. That's enough to get started.
             </p>
             <p className="text-primary-foreground/70 text-base leading-relaxed mb-4">
-              David welcomes confidential conversations with families at any stage — whether you're just beginning to think about a transition or are already in the middle of one. There is no pressure, no obligation, and no sales pitch. Just experienced, honest guidance for your family's situation.
+              our team welcomes confidential conversations with families at any stage — whether you're just beginning to think about a transition or are already in the middle of one. There is no pressure, no obligation, and no sales pitch. Just experienced, honest guidance for your family's situation.
             </p>
             <p className="text-primary-foreground/60 text-base leading-relaxed mb-8">
-              Families throughout King County, Snohomish County, Pierce County, Kitsap County, and across Washington State are welcome to reach out. David can also connect families with trusted brokers in other states through eXp Realty's national referral network.
+              Families throughout King County, Snohomish County, Pierce County, Kitsap County, and across Washington State are welcome to reach out. Our team can also connect families with trusted brokers in other states through eXp Realty's national referral network.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a href="tel:+12069003015">

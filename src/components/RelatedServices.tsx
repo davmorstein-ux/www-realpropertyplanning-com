@@ -23,7 +23,7 @@ const ALL: Record<string, RelatedLink> = {
   counties: { href: "/counties", label: "Counties We Serve", description: "Service-area hubs across Washington State." },
   transitionResources: { href: "/transition-resources", label: "Transition Resources", description: "A starting point for families navigating a major housing transition." },
   faq: { href: "/faq", label: "FAQ", description: "Common questions about probate property, valuation, and senior transitions." },
-  contact: { href: "/contact", label: "Contact David", description: "Start a confidential conversation about a specific property." },
+  contact: { href: "/contact", label: "Contact us", description: "Start a confidential conversation about a specific property." },
   resources: { href: "/resources", label: "Professional Resources", description: "Trusted attorneys, CPAs, and senior-care professionals across Washington." },
   poa: { href: "/senior-living/power-of-attorneys", label: "Power of Attorneys", description: "How POA authority connects to real estate decisions during senior transitions." },
 

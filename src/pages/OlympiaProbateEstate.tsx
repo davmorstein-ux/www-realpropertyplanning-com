@@ -23,7 +23,7 @@ const faqs = [
   {
     question: "What should I do first with an inherited Olympia property?",
     answer:
-      "Secure the property, review the legal authority with the estate attorney, and get a realistic assessment of the home's condition and current market value. David can evaluate the property, identify factors that affect value, and help you understand your options before committing to a course of action.",
+      "Secure the property, review the legal authority with the estate attorney, and get a realistic assessment of the home's condition and current market value. Our team can evaluate the property, identify factors that affect value, and help you understand your options before committing to a course of action.",
   },
   {
     question: "How does Real Property Planning's appraisal background benefit Olympia property sales?",
@@ -31,7 +31,7 @@ const faqs = [
       "As both a licensed Washington State real estate broker and a state-certified residential appraiser, Our team provides pricing strategy grounded in actual condition assessment and neighborhood-level market analysis. In Olympia, where many estate properties reflect decades of ownership, this dual perspective helps families avoid pricing mistakes tied to deferred maintenance or outdated improvements.",
   },
   {
-    question: "Can David help with a property transition tied to retirement or senior living?",
+    question: "Can our team help with a property transition tied to retirement or senior living?",
     answer:
       "Yes. Many Olympia families reach out when a parent or loved one is transitioning into retirement, assisted living, or long-term care. Our team helps coordinate the timing of the property sale with the transition, working with families and professionals to keep the process organized and manageable.",
   },

@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     question: "Does probate property have to be sold at fair market value?",
-    answer: "Executors and personal representatives have a fiduciary duty to act in the best interest of the estate, which generally means achieving fair market value. our team's dual credentials as a broker and certified appraiser help ensure pricing decisions are defensible and well-supported by market data.",
+    answer: "Executors and personal representatives have a fiduciary duty to act in the best interest of the estate, which generally means achieving fair market value. Our team's dual credentials as a broker and certified appraiser help ensure pricing decisions are defensible and well-supported by market data.",
   },
   {
     question: "What happens if heirs disagree about selling?",
@@ -236,7 +236,7 @@ const HowProbateRealEstateWorks = () => (
             Most real estate agents handle one or two probate transactions in their career. Real Property Planning focuses his practice on probate, estate, and transition-related real estate — bringing both brokerage expertise and certified appraisal knowledge to every engagement.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-6">
-            This dual background means the executor and attorney receive more accurate property assessments, stronger pricing strategy, better preparation guidance, and more confident decision-making support throughout the process. It also means David can anticipate appraisal-related challenges that could derail a buyer's financing — and address them before they become problems.
+            This dual background means the executor and attorney receive more accurate property assessments, stronger pricing strategy, better preparation guidance, and more confident decision-making support throughout the process. It also means our team can anticipate appraisal-related challenges that could derail a buyer's financing — and address them before they become problems.
           </p>
           <p className="text-muted-foreground leading-relaxed">
             For <Link to="/executors" className="text-accent hover:text-gold underline underline-offset-4">executors managing estate property</Link> for the first time, this combination of expertise provides a single point of contact who can handle the real estate side completely — from initial assessment through closing. For <Link to="/for-attorneys" className="text-accent hover:text-gold underline underline-offset-4">attorneys referring clients</Link>, it means a reliable, professional partner who understands fiduciary obligations and communicates clearly.

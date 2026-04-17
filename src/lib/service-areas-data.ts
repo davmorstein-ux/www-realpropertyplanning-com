@@ -94,7 +94,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     aeoQuestion: "How do estate and probate property sales work in Bellevue's high-value market?",
     aeoAnswer: "Bellevue's market rewards accurate pricing and professional presentation — even for estate properties with deferred maintenance. Buyers in Bellevue have high expectations for condition and finish, which means the preparation strategy matters as much as the pricing. Our team evaluates each property with both a broker's understanding of buyer expectations and an appraiser's methodology for condition-adjusted value — so families get honest guidance on what to address before listing and what to leave alone.",
     localFaqs: [
-      { question: "How is selling an inherited Bellevue home different from a standard sale?", answer: "Bellevue's buyer pool includes tech-sector employees, international buyers, and move-up families — all of whom have specific expectations. An estate home with dated finishes or deferred maintenance needs to be priced and positioned carefully to appeal to the buyers most likely to see its value. our team's preparation analysis helps families make targeted decisions rather than over-investing in renovations that don't deliver return." },
+      { question: "How is selling an inherited Bellevue home different from a standard sale?", answer: "Bellevue's buyer pool includes tech-sector employees, international buyers, and move-up families — all of whom have specific expectations. An estate home with dated finishes or deferred maintenance needs to be priced and positioned carefully to appeal to the buyers most likely to see its value. Our team's preparation analysis helps families make targeted decisions rather than over-investing in renovations that don't deliver return." },
       { question: "What about inherited condos in the Bellevue downtown corridor?", answer: "Condo sales in Bellevue involve HOA documentation, building financials, and resale certificate requirements that add complexity to an already detailed process. Our team coordinates the full documentation process so executors don't have to manage it independently." },
     ],
   },
@@ -124,10 +124,10 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
       "Financial advisors needing Kirkland property valuations that account for the city's walkability and waterfront premiums",
     ],
     aeoQuestion: "How do estate property sales work in Kirkland's competitive market?",
-    aeoAnswer: "Kirkland's market is driven by proximity to Lake Washington, the Eastside tech corridor, and a community character that attracts buyers from across the region. Estate properties here can perform extremely well when priced and presented correctly — and underperform when condition issues aren't addressed honestly upfront. our team's approach starts with an accurate, condition-adjusted picture of what the property is worth in today's market, then develops a preparation strategy that maximizes outcome without over-spending estate funds.",
+    aeoAnswer: "Kirkland's market is driven by proximity to Lake Washington, the Eastside tech corridor, and a community character that attracts buyers from across the region. Estate properties here can perform extremely well when priced and presented correctly — and underperform when condition issues aren't addressed honestly upfront. Our team's approach starts with an accurate, condition-adjusted picture of what the property is worth in today's market, then develops a preparation strategy that maximizes outcome without over-spending estate funds.",
     localFaqs: [
-      { question: "What makes Kirkland estate sales different from other Eastside markets?", answer: "Kirkland's waterfront and near-waterfront properties carry significant premiums that require careful comparable analysis — properties just a few blocks from the lake can vary by hundreds of thousands of dollars in value. our team's certified appraisal background ensures these distinctions are reflected accurately in the pricing strategy." },
-      { question: "Does David work with senior transitions in Kirkland?", answer: "Yes — senior housing transitions are one of Real Property Planning's core services, and Kirkland has a significant population of longtime homeowners who are navigating this decision. Our team coordinates with senior move managers and care professionals throughout the area to ensure the real estate timeline fits the broader transition plan." },
+      { question: "What makes Kirkland estate sales different from other Eastside markets?", answer: "Kirkland's waterfront and near-waterfront properties carry significant premiums that require careful comparable analysis — properties just a few blocks from the lake can vary by hundreds of thousands of dollars in value. Our team's certified appraisal background ensures these distinctions are reflected accurately in the pricing strategy." },
+      { question: "Does our team work with senior transitions in Kirkland?", answer: "Yes — senior housing transitions are one of Real Property Planning's core services, and Kirkland has a significant population of longtime homeowners who are navigating this decision. Our team coordinates with senior move managers and care professionals throughout the area to ensure the real estate timeline fits the broader transition plan." },
     ],
   },
   redmond: {
@@ -156,7 +156,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
       "Financial advisors needing current Redmond property valuations for estate planning in a rapidly appreciating market",
     ],
     aeoQuestion: "How are estate property sales handled in Redmond's tech-adjacent market?",
-    aeoAnswer: "Redmond attracts a buyer pool that includes tech employees, international buyers, and families seeking Eastside schools — a demographic with high expectations for condition and move-in readiness. Estate homes that don't meet those expectations need to be priced accordingly and positioned toward the buyers most likely to see their value. our team's condition-adjusted analysis ensures the pricing reflects market reality rather than wishful thinking.",
+    aeoAnswer: "Redmond attracts a buyer pool that includes tech employees, international buyers, and families seeking Eastside schools — a demographic with high expectations for condition and move-in readiness. Estate homes that don't meet those expectations need to be priced accordingly and positioned toward the buyers most likely to see their value. Our team's condition-adjusted analysis ensures the pricing reflects market reality rather than wishful thinking.",
     aeoSupportBullets: [
       "Submarket-specific pricing for Education Hill, Overlake, Trilogy, and Redmond Ridge",
       "Preparation strategy tailored to each property's competitive landscape",
@@ -223,9 +223,9 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
       "Full coordination of cleanout, repairs, and sale management",
     ],
     localFaqs: [
-      { question: "What are the first steps when selling an inherited home in Issaquah?", answer: "Secure the property, confirm your legal authority to act, and get a realistic assessment of condition and value. David can visit the property, evaluate what needs attention, and help you develop a clear plan — whether the home is in Olde Town, the Highlands, Talus, or the surrounding area." },
-      { question: "How does David determine the right price for an Issaquah estate property?", answer: "Through a condition-adjusted comparable analysis grounded in certified appraisal methodology. This means David doesn't just pull nearby sales — he evaluates how the subject property's specific condition, location within Issaquah, and current buyer demand affect its realistic market position. The result is a defensible price that holds up to scrutiny from co-heirs, attorneys, and the market itself." },
-      { question: "Does David help with cleanout and preparation?", answer: "Yes — Our team coordinates with trusted local vendors for estate cleanout, targeted repairs, and staging as needed. He evaluates each potential improvement through a return-on-investment lens so families don't over-spend on preparation that won't meaningfully improve the outcome." },
+      { question: "What are the first steps when selling an inherited home in Issaquah?", answer: "Secure the property, confirm your legal authority to act, and get a realistic assessment of condition and value. Our team can visit the property, evaluate what needs attention, and help you develop a clear plan — whether the home is in Olde Town, the Highlands, Talus, or the surrounding area." },
+      { question: "How does our team determine the right price for an Issaquah estate property?", answer: "Through a condition-adjusted comparable analysis grounded in certified appraisal methodology. This means our team doesn't just pull nearby sales — he evaluates how the subject property's specific condition, location within Issaquah, and current buyer demand affect its realistic market position. The result is a defensible price that holds up to scrutiny from co-heirs, attorneys, and the market itself." },
+      { question: "Does our team help with cleanout and preparation?", answer: "Yes — Our team coordinates with trusted local vendors for estate cleanout, targeted repairs, and staging as needed. He evaluates each potential improvement through a return-on-investment lens so families don't over-spend on preparation that won't meaningfully improve the outcome." },
     ],
   },
   sammamish: {
@@ -266,7 +266,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     aeoAnswer: "Mercer Island's premium market demands valuation expertise that reflects the island's unique buyer pool and property characteristics. Real Property Planning's dual credentials as a broker and certified appraiser provide the defensible, condition-based pricing that executors, trustees, and families need when significant value is at stake.",
     aeoSupportFaqs: [
       { "question": "Why does valuation expertise matter on Mercer Island?", "answer": "The island's premium pricing and distinctive properties mean automated tools often miss the condition and lot factors that drive buyer decisions and appraised value." },
-      { "question": "Can David manage a Mercer Island estate sale remotely?", "answer": "Yes. Our team handles property assessment, preparation coordination, marketing, and closing — keeping out-of-state families informed throughout." },
+      { "question": "Can our team manage a Mercer Island estate sale remotely?", "answer": "Yes. Our team handles property assessment, preparation coordination, marketing, and closing — keeping out-of-state families informed throughout." },
     ],
   },
   newcastle: {
@@ -304,7 +304,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
       "Financial advisors needing Seattle property valuations that go beyond citywide averages to reflect actual neighborhood conditions",
     ],
     aeoQuestion: "How do estate and probate property sales work in Seattle's diverse neighborhoods?",
-    aeoAnswer: "Seattle's neighborhood-driven market means an estate property in Capitol Hill faces entirely different buyer expectations than one in Ballard, Magnolia, or Rainier Valley — and pricing must reflect those differences. A home in Magnolia may appeal to families seeking views and quiet streets; a Rainier Valley property may attract investors and first-time buyers; a Ballard craftsman may command a premium based on lot value alone regardless of condition. our team's dual credentials as a licensed broker and a Washington State Certified Residential Appraiser provide the neighborhood-sensitive pricing and preparation strategy that Seattle estate sales require.",
+    aeoAnswer: "Seattle's neighborhood-driven market means an estate property in Capitol Hill faces entirely different buyer expectations than one in Ballard, Magnolia, or Rainier Valley — and pricing must reflect those differences. A home in Magnolia may appeal to families seeking views and quiet streets; a Rainier Valley property may attract investors and first-time buyers; a Ballard craftsman may command a premium based on lot value alone regardless of condition. Our team's dual credentials as a licensed broker and a Washington State Certified Residential Appraiser provide the neighborhood-sensitive pricing and preparation strategy that Seattle estate sales require.",
     aeoSupportBullets: [
       "Neighborhood-level pricing that reflects Seattle's micro-market dynamics",
       "Condition-based valuation for older homes with deferred maintenance",
@@ -312,9 +312,9 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
       "Established relationships with local cleanout crews, contractors, and senior move professionals",
     ],
     localFaqs: [
-      { question: "What are the first steps when selling an inherited home in Seattle?", answer: "Secure the property, confirm your legal authority to act, and get an honest condition and value assessment before making any decisions. David can visit the property, walk through what needs attention, and help you develop a clear, realistic plan — whether the home is in Magnolia or Rainier Valley, Capitol Hill or West Seattle." },
+      { question: "What are the first steps when selling an inherited home in Seattle?", answer: "Secure the property, confirm your legal authority to act, and get an honest condition and value assessment before making any decisions. Our team can visit the property, walk through what needs attention, and help you develop a clear, realistic plan — whether the home is in Magnolia or Rainier Valley, Capitol Hill or West Seattle." },
       { question: "How does Seattle's market affect estate property pricing?", answer: "Seattle's overall market strength can mask significant variation at the neighborhood and property level. An estate home with deferred maintenance in a high-demand neighborhood like Ballard may still attract multiple offers — but only if it's priced correctly for its condition. Overpricing based on neighborhood comps without condition adjustments is one of the most common mistakes in estate sales, and it typically results in price reductions that signal weakness to buyers." },
-      { question: "Does David handle estate properties in all Seattle neighborhoods?", answer: "Yes — David serves the full city of Seattle, including Capitol Hill, Ballard, Magnolia, West Seattle, Beacon Hill, Rainier Valley, Northgate, Shoreline-adjacent neighborhoods, and everything in between. Neighborhood knowledge is a core part of how he approaches pricing and preparation strategy." },
+      { question: "Does our team handle estate properties in all Seattle neighborhoods?", answer: "Yes — our team serves the full city of Seattle, including Capitol Hill, Ballard, Magnolia, West Seattle, Beacon Hill, Rainier Valley, Northgate, Shoreline-adjacent neighborhoods, and everything in between. Neighborhood knowledge is a core part of how he approaches pricing and preparation strategy." },
     ],
   },
   renton: {
@@ -451,7 +451,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     seoTitle: "Probate & Estate Real Estate in Woodinville, WA | Real Property Planning",
     seoDescription: "Estate property sales, probate guidance, and senior transitions in Woodinville, Washington. Local expertise from Real Property Planning — mailing address in Woodinville.",
     heroHeading: "Probate & Estate Real Estate in Woodinville, Washington",
-    heroIntro: "Woodinville is home to Real Property Planning's mailing address — and it's a community David knows well. From the wine country properties along the Sammamish River corridor to established neighborhoods in Hollywood Hill and Bear Creek, Woodinville's real estate market rewards local knowledge. Estate properties here often include larger lots, horse properties, and rural-adjacent parcels that require specific expertise to price and position correctly. Our team works with families and executors throughout the Woodinville area with the local familiarity that only comes from being part of the community.",
+    heroIntro: "Woodinville is home to Real Property Planning's mailing address — and it's a community our team knows well. From the wine country properties along the Sammamish River corridor to established neighborhoods in Hollywood Hill and Bear Creek, Woodinville's real estate market rewards local knowledge. Estate properties here often include larger lots, horse properties, and rural-adjacent parcels that require specific expertise to price and position correctly. Our team works with families and executors throughout the Woodinville area with the local familiarity that only comes from being part of the community.",
     localKnowledge: "Woodinville's housing market includes everything from newer townhomes and condos near the town center to larger-lot properties and homes with acreage in the surrounding areas. The Sammamish River corridor, wine district proximity, and equestrian properties all create niche market segments. Real Property Planning's appraisal credentials are especially valuable here, where property characteristics like land area, outbuildings, and rural features can meaningfully affect value.",
     brokerAppraiserValue: "Woodinville's wine-country character and rural-residential properties create a market where automated tools trained on suburban data consistently fall short. Estate-style lots, equestrian properties, and wine-district-adjacent homes each require fundamentally different valuation approaches. Real Property Planning's certified appraisal credentials provide the property-specific analysis Woodinville clients need when acreage, outbuildings, and rural character are primary value drivers.",
     localSituations: [
@@ -623,8 +623,8 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     aeoQuestion: "What should you consider when selling an inherited home in Edmonds?",
     aeoAnswer: "Edmonds' walkable downtown, waterfront character, and strong buyer demand create specific expectations for estate properties. Real Property Planning's dual credentials as a broker and certified appraiser help families price inherited homes accurately — accounting for the condition gaps between estate properties and the updated homes Edmonds buyers typically expect.",
     aeoSupportFaqs: [
-      { "question": "How does waterfront proximity affect estate property values in Edmonds?", "answer": "Significantly — and the premium varies depending on whether the property has water views, is within walking distance of the waterfront, or simply benefits from the Edmonds zip code. our team's appraisal-informed analysis accounts for these distinctions precisely, rather than applying a blanket waterfront premium that may not reflect the property's specific situation." },
-      { "question": "Can David coordinate an Edmonds estate sale remotely?", "answer": "Yes. Our team manages the full process locally — property assessment, preparation, listing, and closing — with regular updates for out-of-area families." },
+      { "question": "How does waterfront proximity affect estate property values in Edmonds?", "answer": "Significantly — and the premium varies depending on whether the property has water views, is within walking distance of the waterfront, or simply benefits from the Edmonds zip code. Our team's appraisal-informed analysis accounts for these distinctions precisely, rather than applying a blanket waterfront premium that may not reflect the property's specific situation." },
+      { "question": "Can our team coordinate an Edmonds estate sale remotely?", "answer": "Yes. Our team manages the full process locally — property assessment, preparation, listing, and closing — with regular updates for out-of-area families." },
     ],
   },
   "mountlake-terrace": {
@@ -654,7 +654,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     seoTitle: "Probate & Estate Real Estate in Everett, WA | Real Property Planning",
     seoDescription: "Estate property sales, probate guidance, and senior transitions in Everett, Washington — Snohomish County's largest city. Serving families and executors throughout.",
     heroHeading: "Probate & Estate Real Estate in Everett, Washington",
-    heroIntro: "As Snohomish County's largest city, Everett offers a diverse housing landscape — from the revitalizing waterfront and Port Gardner district to established neighborhoods in North Everett, Silver Lake, and Lowell. Families and executors managing property transitions in Everett need guidance that accounts for the city's wide range of property types, price points, and neighborhood trajectories.\n\nDavid Stein works with estate properties across Everett's full range — from the revitalizing waterfront district to established neighborhoods in North Everett, Silver Lake, and Lowell — providing the neighborhood-sensitive pricing and preparation guidance that Everett's varied market requires. As Snohomish County's largest city, Everett has significant price variation between neighborhoods, which makes accurate, location-specific valuation especially important in estate situations.",
+    heroIntro: "As Snohomish County's largest city, Everett offers a diverse housing landscape — from the revitalizing waterfront and Port Gardner district to established neighborhoods in North Everett, Silver Lake, and Lowell. Families and executors managing property transitions in Everett need guidance that accounts for the city's wide range of property types, price points, and neighborhood trajectories.\n\nReal Property Planning works with estate properties across Everett's full range — from the revitalizing waterfront district to established neighborhoods in North Everett, Silver Lake, and Lowell — providing the neighborhood-sensitive pricing and preparation guidance that Everett's varied market requires. As Snohomish County's largest city, Everett has significant price variation between neighborhoods, which makes accurate, location-specific valuation especially important in estate situations.",
     localKnowledge: "Everett's neighborhoods vary significantly in character and value — from the grand historic homes on Grand and Rucker to mid-century ramblers, newer developments near Silver Lake, and waterfront condos on the Port Gardner peninsula. Real Property Planning's experience across Everett's submarkets helps clients understand which areas are appreciating, where buyer demand is strongest, and how to position an estate or inherited property given its specific location and condition.",
     brokerAppraiserValue: "Everett's market spans a wider price range than most Snohomish County cities — from historic Grand Avenue homes and Port Gardner waterfront condos to modest ramblers in South Everett. Real Property Planning's certified appraisal credentials allow him to evaluate where a specific property falls within this range based on condition, neighborhood trajectory, and realistic buyer demand, providing the defensible analysis that Everett estate and transition situations require.",
     localSituations: [
@@ -681,8 +681,8 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
       "Full-service coordination for out-of-state executors and family members",
     ],
     localFaqs: [
-      { question: "What are the first steps when selling an inherited home in Everett?", answer: "Secure the property, confirm legal authority, and get an honest assessment of condition and realistic value — before making any decisions about repairs or listing. David can visit the property, evaluate what needs attention, and help develop a clear plan tailored to the specific neighborhood." },
-      { question: "How does Everett's market affect estate property pricing?", answer: "Everett's ongoing revitalization — particularly near the waterfront and downtown core — has created significant variation between neighborhoods. Properties in areas benefiting from development investment may perform better than broad city averages suggest; properties in more static neighborhoods need to be priced accordingly. our team's analysis accounts for these distinctions specifically." },
+      { question: "What are the first steps when selling an inherited home in Everett?", answer: "Secure the property, confirm legal authority, and get an honest assessment of condition and realistic value — before making any decisions about repairs or listing. Our team can visit the property, evaluate what needs attention, and help develop a clear plan tailored to the specific neighborhood." },
+      { question: "How does Everett's market affect estate property pricing?", answer: "Everett's ongoing revitalization — particularly near the waterfront and downtown core — has created significant variation between neighborhoods. Properties in areas benefiting from development investment may perform better than broad city averages suggest; properties in more static neighborhoods need to be priced accordingly. Our team's analysis accounts for these distinctions specifically." },
     ],
   },
   "mill-creek": {
@@ -732,7 +732,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     aeoAnswer: "Snohomish's small-town character and rural-adjacent properties create valuation challenges that automated tools handle poorly. Real Property Planning's certified appraisal credentials allow him to evaluate acreage, outbuildings, and non-standard features with the accuracy that estate and trust sales demand.",
     aeoSupportFaqs: [
       { "question": "Why is valuation expertise important for Snohomish properties?", "answer": "Acreage, outbuildings, and rural-adjacent lots require hands-on evaluation that automated tools consistently miss." },
-      { "question": "Can David help with a Snohomish property I inherited from out of state?", "answer": "Yes. Our team coordinates the full process locally — assessment, cleanout, preparation, and sale — with regular updates so you can manage from a distance." },
+      { "question": "Can our team help with a Snohomish property I inherited from out of state?", "answer": "Yes. Our team coordinates the full process locally — assessment, cleanout, preparation, and sale — with regular updates so you can manage from a distance." },
     ],
   },
   "lake-stevens": {
@@ -741,7 +741,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     seoTitle: "Probate & Estate Real Estate in Lake Stevens & Monroe, WA | Real Property Planning",
     seoDescription: "Estate property sales and probate guidance in Lake Stevens and Monroe, Washington — serving growing east Snohomish County communities.",
     heroHeading: "Probate & Estate Real Estate in Lake Stevens and Monroe, Washington",
-    heroIntro: "Lake Stevens and Monroe have been among Snohomish County's fastest-growing communities — attracting buyers seeking more space, newer construction, and relative affordability compared to closer-in suburbs. Estate properties in these communities range from older homes in established neighborhoods to newer construction that requires different pricing considerations. David serves executors and families throughout east Snohomish County with honest, condition-adjusted guidance calibrated to these specific markets.",
+    heroIntro: "Lake Stevens and Monroe have been among Snohomish County's fastest-growing communities — attracting buyers seeking more space, newer construction, and relative affordability compared to closer-in suburbs. Estate properties in these communities range from older homes in established neighborhoods to newer construction that requires different pricing considerations. Our team serves executors and families throughout east Snohomish County with honest, condition-adjusted guidance calibrated to these specific markets.",
     localKnowledge: "Lake Stevens' housing ranges from established homes near the lake and the original town center to newer construction in rapidly developing subdivisions throughout the community. The lake itself remains a major amenity and value driver, but distance from the water creates meaningful price variations. Real Property Planning helps clients understand how Lake Stevens' growth trajectory and property-specific characteristics affect realistic market positioning.",
   },
   marysville: {
@@ -824,7 +824,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
       "Clear communication and coordination for families managing from a distance",
     ],
     localFaqs: [
-      { question: "How does the Tacoma market affect estate property pricing?", answer: "Tacoma's neighborhood variation is significant — a home in the Stadium District or Proctor area commands very different pricing than comparable square footage in South Tacoma or Hilltop. our team's analysis is neighborhood-specific, accounting for the micro-market dynamics that determine how buyers will evaluate a particular property." },
+      { question: "How does the Tacoma market affect estate property pricing?", answer: "Tacoma's neighborhood variation is significant — a home in the Stadium District or Proctor area commands very different pricing than comparable square footage in South Tacoma or Hilltop. Our team's analysis is neighborhood-specific, accounting for the micro-market dynamics that determine how buyers will evaluate a particular property." },
       { question: "Are older Tacoma craftsman homes hard to sell as estate properties?", answer: "Not with the right approach. Tacoma's older housing stock attracts a dedicated buyer pool — buyers who appreciate character, historic details, and the community context these homes represent. The key is honest condition assessment and pricing that reflects what that buyer pool will pay, which Our team provides through his combined broker and appraisal expertise." },
     ],
   },
@@ -873,7 +873,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     seoTitle: "Probate & Estate Real Estate in Puyallup, WA | Real Property Planning",
     seoDescription: "Estate property sales and probate guidance in Puyallup, Washington — serving families and executors in Pierce County's established family community.",
     heroHeading: "Probate & Estate Real Estate in Puyallup, Washington",
-    heroIntro: "Puyallup is one of Pierce County's most established family communities — with a strong local identity, a varied housing stock, and a buyer pool that values community character alongside practical considerations like schools and commute access. Estate properties in Puyallup range from older homes in established neighborhoods to newer construction in developing areas, each requiring pricing calibrated to its specific location and condition. David serves executors and families throughout Puyallup with the honest, practical guidance estate situations require.",
+    heroIntro: "Puyallup is one of Pierce County's most established family communities — with a strong local identity, a varied housing stock, and a buyer pool that values community character alongside practical considerations like schools and commute access. Estate properties in Puyallup range from older homes in established neighborhoods to newer construction in developing areas, each requiring pricing calibrated to its specific location and condition. Our team serves executors and families throughout Puyallup with the honest, practical guidance estate situations require.",
     localKnowledge: "Puyallup's housing ranges from older homes near downtown and South Hill to newer developments in the surrounding areas. The valley's agricultural heritage means some properties come with unique lot characteristics, outbuildings, or zoning considerations. Real Property Planning helps clients in Puyallup understand how these factors — along with condition, school proximity, and neighborhood context — affect realistic pricing and buyer interest.",
     brokerAppraiserValue: "Puyallup's valley location creates distinct valuation dynamics — South Hill properties command different premiums than downtown-area homes, and agricultural-heritage lots with outbuildings or acreage require appraisal experience to price accurately. Real Property Planning's dual credentials help Puyallup clients understand how these valley-specific factors affect realistic market value for estate, probate, and transition properties.",
     localSituations: [
@@ -922,7 +922,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     aeoAnswer: "Gig Harbor's waterfront character, premium neighborhoods, and distinctive properties require thoughtful strategy for estate and trust sales. Real Property Planning's dual credentials as a broker and certified appraiser provide the valuation depth needed to price these properties accurately and guide families through the process with care.",
     aeoSupportFaqs: [
       { "question": "Why does Gig Harbor require specialized pricing?", "answer": "Waterfront proximity, view premiums, and community character create pricing nuances that automated tools and standard market analysis often miss." },
-      { "question": "Can David coordinate a Gig Harbor estate sale from a distance?", "answer": "Yes. Our team manages property assessment, preparation, marketing, and closing — providing regular updates to families and fiduciaries who aren't local." },
+      { "question": "Can our team coordinate a Gig Harbor estate sale from a distance?", "answer": "Yes. Our team manages property assessment, preparation, marketing, and closing — providing regular updates to families and fiduciaries who aren't local." },
     ],
   },
   fircrest: {
@@ -1119,7 +1119,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     aeoAnswer: "Bainbridge Island's premium market, distinctive architecture, and island logistics demand thoughtful strategy for estate and trust property sales. Real Property Planning's dual credentials as a broker and certified appraiser provide the valuation depth needed for properties where unique character, waterfront access, and community context all affect value.",
     aeoSupportFaqs: [
       { "question": "Why do Bainbridge Island properties need specialized pricing?", "answer": "The island's distinctive architecture, waterfront premiums, and small-market dynamics mean standard comparisons often don't capture what drives actual buyer behavior." },
-      { "question": "Can David manage the full sale process on Bainbridge Island?", "answer": "Yes. Our team coordinates property assessment, preparation, marketing, and closing — handling ferry logistics and local vendor coordination for families who aren't on-island." },
+      { "question": "Can our team manage the full sale process on Bainbridge Island?", "answer": "Yes. Our team coordinates property assessment, preparation, marketing, and closing — handling ferry logistics and local vendor coordination for families who aren't on-island." },
     ],
   },
   "port-orchard": {
@@ -1128,7 +1128,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     seoTitle: "Probate & Estate Real Estate in Silverdale & Port Orchard, WA | Real Property Planning",
     seoDescription: "Estate property sales and probate guidance in Silverdale and Port Orchard, Washington — serving families and executors throughout central and south Kitsap County.",
     heroHeading: "Probate & Estate Real Estate in Silverdale and Port Orchard, Washington",
-    heroIntro: "Silverdale and Port Orchard serve as the commercial and residential centers of central and south Kitsap County — communities with their own distinct characters and buyer pools. Silverdale's suburban growth and proximity to the naval base creates consistent demand; Port Orchard's waterfront character and established neighborhoods attract buyers seeking a more traditional community feel. Estate properties in both communities require location-specific pricing and preparation guidance. David serves executors and families throughout central and south Kitsap County with the practical, valuation-informed approach these markets require.",
+    heroIntro: "Silverdale and Port Orchard serve as the commercial and residential centers of central and south Kitsap County — communities with their own distinct characters and buyer pools. Silverdale's suburban growth and proximity to the naval base creates consistent demand; Port Orchard's waterfront character and established neighborhoods attract buyers seeking a more traditional community feel. Estate properties in both communities require location-specific pricing and preparation guidance. Our team serves executors and families throughout central and south Kitsap County with the practical, valuation-informed approach these markets require.",
   },
   kingston: {
     tone: "waterfront",
@@ -1147,7 +1147,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     heroIntro: "Suquamish sits on the Kitsap Peninsula directly across from Bainbridge Island — a community with deep cultural roots, waterfront character, and proximity to both the Kingston ferry and Bainbridge Island's market influence. Estate properties in Suquamish attract buyers drawn to the area's natural setting, water access, and relative affordability compared to neighboring Bainbridge Island. Our team works with executors and families in Suquamish with the same honest, condition-adjusted guidance he brings to every Kitsap community — ensuring the property is priced accurately for the buyers most likely to value it.",
     localKnowledge: "Suquamish's housing includes waterfront and water-view properties along Agate Passage and Port Madison, along with established homes in the community's residential areas. The community's historical significance, proximity to Bainbridge Island and Poulsbo, and limited inventory create a niche market. Real Property Planning helps Suquamish clients navigate these local factors with honest, property-specific pricing guidance.",
     localFaqs: [
-      { question: "How does Suquamish's proximity to Bainbridge Island affect property values?", answer: "Suquamish benefits from its location near Bainbridge Island without commanding Bainbridge's premium price points — which creates a specific buyer pool of its own. Buyers who want waterfront-adjacent Kitsap living at accessible price points, and who value the community's natural character, are the core audience for most Suquamish estate properties. our team's pricing analysis reflects these dynamics specifically rather than applying Bainbridge Island comparables that don't accurately represent Suquamish's market position." },
+      { question: "How does Suquamish's proximity to Bainbridge Island affect property values?", answer: "Suquamish benefits from its location near Bainbridge Island without commanding Bainbridge's premium price points — which creates a specific buyer pool of its own. Buyers who want waterfront-adjacent Kitsap living at accessible price points, and who value the community's natural character, are the core audience for most Suquamish estate properties. Our team's pricing analysis reflects these dynamics specifically rather than applying Bainbridge Island comparables that don't accurately represent Suquamish's market position." },
     ],
   },
   manchester: {
@@ -1188,11 +1188,11 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     localFaqs: [
       {
         question: "What are the first steps when selling an inherited home in Mount Vernon?",
-        answer: "Secure the property, confirm your legal authority to act, and get an honest assessment of condition and value before making any decisions. For Skagit County estate properties, probate proceedings are administered through Skagit County Superior Court in Mount Vernon — your estate attorney can advise on the specific legal requirements for your situation. David can assess the property, help you understand your options, and coordinate the full sale process locally.",
+        answer: "Secure the property, confirm your legal authority to act, and get an honest assessment of condition and value before making any decisions. For Skagit County estate properties, probate proceedings are administered through Skagit County Superior Court in Mount Vernon — your estate attorney can advise on the specific legal requirements for your situation. Our team can assess the property, help you understand your options, and coordinate the full sale process locally.",
       },
       {
         question: "How active is the Mount Vernon real estate market for estate properties?",
-        answer: "Mount Vernon's market reflects Skagit County's broader dynamics — steady demand from local buyers, some spillover from buyers priced out of King and Snohomish County markets, and specific interest from buyers seeking the agricultural and small-city character the area offers. Estate properties in good condition and priced accurately for their actual condition typically attract motivated buyers. our team's condition-adjusted analysis ensures the pricing reflects the Mount Vernon market specifically.",
+        answer: "Mount Vernon's market reflects Skagit County's broader dynamics — steady demand from local buyers, some spillover from buyers priced out of King and Snohomish County markets, and specific interest from buyers seeking the agricultural and small-city character the area offers. Estate properties in good condition and priced accurately for their actual condition typically attract motivated buyers. Our team's condition-adjusted analysis ensures the pricing reflects the Mount Vernon market specifically.",
       },
     ],
   },
@@ -1203,7 +1203,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     seoDescription: "Estate property sales and probate guidance in Burlington, Washington — including rural, agricultural, and acreage properties in the Skagit Valley.",
     heroHeading: "Probate & Estate Real Estate in Burlington, Washington",
     heroIntro: "Burlington sits at the geographic heart of Skagit County — a community where residential neighborhoods border agricultural land, and where estate properties often include acreage, outbuildings, or rural-adjacent characteristics that standard residential analysis doesn't fully capture. Families and executors managing inherited property near Burlington frequently face the question of whether to sell as-is or explore subdivision or rezoning — decisions that require honest, methodology-based analysis rather than general estimates. Our team works with executors and families throughout the Burlington area with the appraisal-informed approach these mixed-use and rural-adjacent properties require.",
-    localKnowledge: "Burlington's market includes properties that bridge residential and agricultural categories. our team's appraisal background is particularly valuable here, where acreage, outbuildings, and zoning considerations affect value in ways standard tools miss.",
+    localKnowledge: "Burlington's market includes properties that bridge residential and agricultural categories. Our team's appraisal background is particularly valuable here, where acreage, outbuildings, and zoning considerations affect value in ways standard tools miss.",
     aeoQuestion: "What should executors know about estate sales in the Burlington area?",
     aeoAnswer: "Burlington's market has strengthened significantly in recent years, making it attractive for estate property sales — provided the property is priced and prepared correctly. The cross-county nature of nearby Bothell and the agricultural character of Burlington properties mean executors should confirm zoning and work with a professional who understands rural-adjacent valuation. Our team helps clarify these factors early.",
     localFaqs: [
@@ -1213,7 +1213,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
       },
       {
         question: "How does agricultural zoning affect inherited property values near Burlington?",
-        answer: "Agricultural zoning can enhance value — particularly for properties with productive farmland, good soil, or water rights — but it can also restrict the buyer pool to those specifically seeking agricultural use. our team's valuation analysis accounts for these factors specifically, helping families understand what their property is actually worth to the buyers most likely to purchase it.",
+        answer: "Agricultural zoning can enhance value — particularly for properties with productive farmland, good soil, or water rights — but it can also restrict the buyer pool to those specifically seeking agricultural use. Our team's valuation analysis accounts for these factors specifically, helping families understand what their property is actually worth to the buyers most likely to purchase it.",
       },
     ],
   },
@@ -1226,11 +1226,11 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     heroIntro: "Anacortes occupies a unique position in the Skagit County real estate market — an island-connected waterfront city with ferry service to the San Juan Islands and Vancouver Island, a strong boating community, and a buyer pool that extends well beyond Skagit County. Estate properties in Anacortes range from waterfront and water-view homes commanding significant premiums to residential properties in the city's established inland neighborhoods. Getting the pricing right requires understanding both the waterfront premium structure and the condition-based factors that affect how buyers evaluate each specific property. Our team works with executors and families in Anacortes with the location-specific, condition-adjusted analysis this distinctive market requires.",
     localKnowledge: "Anacortes waterfront is its own market — driven by Puget Sound access, boating lifestyle, San Juan Islands proximity, and a buyer pool from Seattle, the Eastside, and out of state.",
     aeoQuestion: "How do estate and probate property sales work in Anacortes?",
-    aeoAnswer: "Anacortes estate properties involve waterfront premiums, marina proximity, and a buyer pool that extends well beyond Skagit County. our team's condition-adjusted, location-specific analysis ensures these premiums are reflected accurately rather than applied as a blanket markup — giving executors a defensible pricing foundation for this distinctive market.",
+    aeoAnswer: "Anacortes estate properties involve waterfront premiums, marina proximity, and a buyer pool that extends well beyond Skagit County. Our team's condition-adjusted, location-specific analysis ensures these premiums are reflected accurately rather than applied as a blanket markup — giving executors a defensible pricing foundation for this distinctive market.",
     localFaqs: [
       {
         question: "How is selling a waterfront estate property in Anacortes different from other Skagit County sales?",
-        answer: "The buyer pool is broader, the premiums are more significant, and the condition expectations are higher. Anacortes waterfront buyers often come from Seattle, the Eastside, and out of state — which means the marketing reach and the pricing analysis need to reflect that wider audience. our team's approach to Anacortes waterfront estate properties accounts for the specific location, water access type, and condition factors that determine where a property sits within the local premium structure.",
+        answer: "The buyer pool is broader, the premiums are more significant, and the condition expectations are higher. Anacortes waterfront buyers often come from Seattle, the Eastside, and out of state — which means the marketing reach and the pricing analysis need to reflect that wider audience. Our team's approach to Anacortes waterfront estate properties accounts for the specific location, water access type, and condition factors that determine where a property sits within the local premium structure.",
       },
       {
         question: "Does the San Juan Islands ferry connection affect Anacortes property values?",
@@ -1256,11 +1256,11 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     heroIntro: "La Conner is one of the most distinctive communities in Skagit County — a historic waterfront town on the Swinomish Channel with an arts identity, a strong tourist presence, and a real estate market shaped by its character as much as its location. Estate properties in La Conner attract a specific buyer: someone drawn to the community itself, to the waterfront setting, and to the historic character of the town's architecture and streetscape. Pricing these properties accurately requires understanding that buyer and what they will pay — not applying suburban or rural Skagit County comparables that don't reflect La Conner's distinctive market dynamics. Our team works with executors and families in La Conner with the community-specific knowledge these properties require.",
     localKnowledge: "La Conner's buyer pool is smaller and more specific than suburban Skagit County markets. Properties here attract buyers seeking the community's historic waterfront character and arts identity.",
     aeoQuestion: "What should I know about selling an inherited home in La Conner?",
-    aeoAnswer: "La Conner's buyer pool is smaller and more specific than suburban Skagit County markets — which means presentation, condition, and pricing need to be calibrated carefully to attract the buyers who will pay a premium for what La Conner offers. our team's honest, condition-adjusted analysis gives families a realistic picture of what the property will attract.",
+    aeoAnswer: "La Conner's buyer pool is smaller and more specific than suburban Skagit County markets — which means presentation, condition, and pricing need to be calibrated carefully to attract the buyers who will pay a premium for what La Conner offers. Our team's honest, condition-adjusted analysis gives families a realistic picture of what the property will attract.",
     localFaqs: [
       {
         question: "What should I know about selling an inherited home in La Conner?",
-        answer: "La Conner's buyer pool is smaller and more specific than suburban Skagit County markets — which means presentation, condition, and pricing need to be calibrated carefully to attract the buyers who will pay a premium for what La Conner offers. Overpricing relative to condition is particularly costly in small community markets, where the pool of motivated buyers at any given time is limited. our team's honest, condition-adjusted analysis gives families a realistic picture of what the property will attract and at what price.",
+        answer: "La Conner's buyer pool is smaller and more specific than suburban Skagit County markets — which means presentation, condition, and pricing need to be calibrated carefully to attract the buyers who will pay a premium for what La Conner offers. Overpricing relative to condition is particularly costly in small community markets, where the pool of motivated buyers at any given time is limited. Our team's honest, condition-adjusted analysis gives families a realistic picture of what the property will attract and at what price.",
       },
     ],
   },
@@ -1284,7 +1284,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     localFaqs: [
       {
         question: "What should I know about selling an inherited property in Edison or Bow?",
-        answer: "These communities attract buyers who are specifically seeking what they offer — rural character, agricultural surroundings, small-community lifestyle. Marketing to that buyer means understanding them: where they come from, what they're looking for, and what they'll pay for the right property in the right condition. our team's approach to small Skagit community sales is calibrated to the actual buyer demand in these specific locations, not derived from broader county averages that don't apply here.",
+        answer: "These communities attract buyers who are specifically seeking what they offer — rural character, agricultural surroundings, small-community lifestyle. Marketing to that buyer means understanding them: where they come from, what they're looking for, and what they'll pay for the right property in the right condition. Our team's approach to small Skagit community sales is calibrated to the actual buyer demand in these specific locations, not derived from broader county averages that don't apply here.",
       },
       {
         question: "How does the farm-to-table and rural character of Bow and Edison affect property values?",
@@ -1309,7 +1309,7 @@ export const services: ServiceData[] = [
       "Co-heirs who need objective guidance and clear communication",
       "Out-of-state family members who need local coordination",
     ],
-    whyValuationMatters: "Estate properties often present in non-standard condition — deferred maintenance, accumulated belongings, outdated finishes. Automated valuations and generic market comparisons frequently miss the mark. our team's dual credentials as a licensed broker and certified appraiser allow him to assess actual condition, identify realistic value ranges, and develop pricing strategies that protect estate interests while attracting qualified buyers.",
+    whyValuationMatters: "Estate properties often present in non-standard condition — deferred maintenance, accumulated belongings, outdated finishes. Automated valuations and generic market comparisons frequently miss the mark. Our team's dual credentials as a licensed broker and certified appraiser allow him to assess actual condition, identify realistic value ranges, and develop pricing strategies that protect estate interests while attracting qualified buyers.",
   },
   {
     name: "Senior Transitions",
@@ -1353,7 +1353,7 @@ export const services: ServiceData[] = [
       "Out-of-state executors who need local property management and sale coordination",
       "Attorneys advising executors on real estate matters",
     ],
-    whyValuationMatters: "Executors have a fiduciary duty to act in the best interest of the estate. Mispricing a property — whether too high or too low — can delay the process, reduce net proceeds, or expose the executor to questions from beneficiaries or the court. our team's appraisal background provides the kind of pricing clarity executors need to fulfill their responsibilities with confidence.",
+    whyValuationMatters: "Executors have a fiduciary duty to act in the best interest of the estate. Mispricing a property — whether too high or too low — can delay the process, reduce net proceeds, or expose the executor to questions from beneficiaries or the court. Our team's appraisal background provides the kind of pricing clarity executors need to fulfill their responsibilities with confidence.",
   },
   {
     name: "Attorney & Fiduciary Real Estate Support",
@@ -1368,7 +1368,7 @@ export const services: ServiceData[] = [
       "Trustees managing trust-owned real estate",
       "Guardians and conservators with real property responsibilities",
     ],
-    whyValuationMatters: "Legal professionals need a real estate partner who can provide defensible pricing opinions, clear documentation, and reliable communication. our team's appraiser credentials and broker experience create a combination that supports legal and fiduciary decision-making with objective, market-grounded information.",
+    whyValuationMatters: "Legal professionals need a real estate partner who can provide defensible pricing opinions, clear documentation, and reliable communication. Our team's appraiser credentials and broker experience create a combination that supports legal and fiduciary decision-making with objective, market-grounded information.",
   },
   {
     name: "Valuation Guidance",
@@ -1383,7 +1383,7 @@ export const services: ServiceData[] = [
       "Homeowners who want an honest, condition-based assessment before listing",
       "Financial advisors helping clients make property-related decisions",
     ],
-    whyValuationMatters: "Many property decisions — from estate distribution to sale pricing — depend on an accurate understanding of value. Online estimates and automated tools often fail to account for condition, deferred maintenance, or unique property characteristics. our team's state-certified appraisal background provides a level of valuation insight that goes well beyond what a typical broker can offer.",
+    whyValuationMatters: "Many property decisions — from estate distribution to sale pricing — depend on an accurate understanding of value. Online estimates and automated tools often fail to account for condition, deferred maintenance, or unique property characteristics. Our team's state-certified appraisal background provides a level of valuation insight that goes well beyond what a typical broker can offer.",
   },
   {
     name: "Preparing a Home for Sale",
@@ -1397,7 +1397,7 @@ export const services: ServiceData[] = [
       "Homeowners who need guidance on which repairs and updates are worth the investment",
       "Out-of-area property owners who need someone to coordinate preparation locally",
     ],
-    whyValuationMatters: "Not every repair or update delivers a return. our team's appraisal background helps clients understand which improvements are likely to affect value and which are not — avoiding unnecessary spending while focusing preparation efforts where they matter most.",
+    whyValuationMatters: "Not every repair or update delivers a return. Our team's appraisal background helps clients understand which improvements are likely to affect value and which are not — avoiding unnecessary spending while focusing preparation efforts where they matter most.",
   },
   {
     name: "Divorce-Related Home Sales",
@@ -1411,7 +1411,7 @@ export const services: ServiceData[] = [
       "Mediators coordinating property-related settlement terms",
       "Individuals who need an objective property valuation during proceedings",
     ],
-    whyValuationMatters: "Divorce-related sales often involve disagreements about value. our team's appraiser credentials provide an objective, defensible basis for pricing discussions — helping both parties and their attorneys move forward with confidence rather than speculation.",
+    whyValuationMatters: "Divorce-related sales often involve disagreements about value. Our team's appraiser credentials provide an objective, defensible basis for pricing discussions — helping both parties and their attorneys move forward with confidence rather than speculation.",
   },
   {
     name: "Trust & Estate Property Sales",
@@ -1426,7 +1426,7 @@ export const services: ServiceData[] = [
       "Beneficiaries of a trust that holds real property",
       "Corporate trustees and trust departments",
     ],
-    whyValuationMatters: "Trust property sales carry fiduciary obligations. Trustees need defensible pricing, clear documentation, and a transparent process. our team's combined broker and appraiser credentials provide the kind of objective, well-supported guidance that meets fiduciary standards.",
+    whyValuationMatters: "Trust property sales carry fiduciary obligations. Trustees need defensible pricing, clear documentation, and a transparent process. Our team's combined broker and appraiser credentials provide the kind of objective, well-supported guidance that meets fiduciary standards.",
   },
 ];
 
@@ -1862,92 +1862,92 @@ export function getToneHowWeHelpHeading(tone?: CommunityTone, serviceSlug?: stri
   switch (s) {
     case "probate-estate-sales":
       switch (t) {
-        case "premium": return "How David Guides Estate Property Sales";
+        case "premium": return "How our team Guides Estate Property Sales";
         case "urban": return "Experienced Probate Sale Support";
-        case "waterfront": return "How David Helps With Estate Property";
+        case "waterfront": return "How our team Helps With Estate Property";
         case "smalltown": return "Guiding Your Estate Sale, Step by Step";
         case "military": return "Practical Probate Sale Guidance";
-        case "rural": return "How David Helps With Estate Property Sales";
+        case "rural": return "How our team Helps With Estate Property Sales";
         default: return "How Real Property Planning Supports Estate Sales";
       }
     case "senior-transitions":
       switch (t) {
         case "premium": return "Supporting Your Family's Transition";
         case "urban": return "Experienced Senior Transition Support";
-        case "waterfront": return "How David Supports Senior Moves";
+        case "waterfront": return "How our team Supports Senior Moves";
         case "smalltown": return "Walking With You Through the Transition";
         case "military": return "Practical Senior Transition Guidance";
-        case "rural": return "How David Helps Families in Transition";
+        case "rural": return "How our team Helps Families in Transition";
         default: return "How Real Property Planning Supports Senior Transitions";
       }
     case "downsizing-services":
       switch (t) {
-        case "premium": return "How David Supports Your Downsizing Plan";
+        case "premium": return "How our team Supports Your Downsizing Plan";
         case "urban": return "Practical Downsizing Guidance";
-        case "waterfront": return "How David Helps With Downsizing";
+        case "waterfront": return "How our team Helps With Downsizing";
         case "smalltown": return "Steady Guidance for Your Next Chapter";
         case "military": return "Clear, Practical Downsizing Support";
-        case "rural": return "How David Helps You Downsize";
+        case "rural": return "How our team Helps You Downsize";
         default: return "How Real Property Planning Helps With Downsizing";
       }
     case "executor-support":
       switch (t) {
-        case "premium": return "How David Supports Executors";
+        case "premium": return "How our team Supports Executors";
         case "urban": return "Experienced Executor Real Estate Support";
-        case "waterfront": return "How David Helps Executors Navigate the Process";
+        case "waterfront": return "How our team Helps Executors Navigate the Process";
         case "smalltown": return "Guiding Executors Through Each Step";
         case "military": return "Clear Guidance for Executor Responsibilities";
-        case "rural": return "How David Helps With Executor Duties";
+        case "rural": return "How our team Helps With Executor Duties";
         default: return "How Real Property Planning Supports Executors";
       }
     case "attorney-fiduciary-support":
       switch (t) {
-        case "premium": return "How David Works With Legal Professionals";
+        case "premium": return "How our team Works With Legal Professionals";
         case "urban": return "A Reliable Resource for Attorneys and Fiduciaries";
-        case "waterfront": return "How David Supports Attorneys and Fiduciaries";
+        case "waterfront": return "How our team Supports Attorneys and Fiduciaries";
         case "smalltown": return "Working With Your Legal Team";
         case "military": return "Practical Support for Legal Professionals";
-        case "rural": return "How David Partners With Attorneys";
+        case "rural": return "How our team Partners With Attorneys";
         default: return "How Real Property Planning Works With Legal Professionals";
       }
     case "valuation-guidance":
       switch (t) {
-        case "premium": return "How David Provides Valuation Clarity";
+        case "premium": return "How our team Provides Valuation Clarity";
         case "urban": return "Experienced Valuation Support";
-        case "waterfront": return "How David Brings Valuation Insight";
+        case "waterfront": return "How our team Brings Valuation Insight";
         case "smalltown": return "Honest, Grounded Valuation Guidance";
         case "military": return "Clear Property Valuation Support";
-        case "rural": return "How David Provides Honest Valuation";
+        case "rural": return "How our team Provides Honest Valuation";
         default: return "How Real Property Planning Delivers Valuation Insight";
       }
     case "preparing-home-for-sale":
       switch (t) {
-        case "premium": return "How David Manages Property Preparation";
+        case "premium": return "How our team Manages Property Preparation";
         case "urban": return "Coordinated Home Preparation Support";
-        case "waterfront": return "How David Helps Prepare Your Home";
+        case "waterfront": return "How our team Helps Prepare Your Home";
         case "smalltown": return "Getting Your Home Ready, Practically";
         case "military": return "Efficient Home Preparation Guidance";
-        case "rural": return "How David Coordinates Property Preparation";
+        case "rural": return "How our team Coordinates Property Preparation";
         default: return "How Real Property Planning Prepares Homes for Sale";
       }
     case "divorce-related-home-sales":
       switch (t) {
-        case "premium": return "How David Handles Divorce-Related Sales";
+        case "premium": return "How our team Handles Divorce-Related Sales";
         case "urban": return "Objective Support for Divorce Property Sales";
-        case "waterfront": return "How David Helps With Divorce-Related Property";
+        case "waterfront": return "How our team Helps With Divorce-Related Property";
         case "smalltown": return "Discreet, Professional Sale Guidance";
         case "military": return "Clear Guidance for Divorce-Related Sales";
-        case "rural": return "How David Manages Divorce Property Sales";
+        case "rural": return "How our team Manages Divorce Property Sales";
         default: return "How Real Property Planning Supports Divorce Sales";
       }
     case "trust-estate-property-sales":
       switch (t) {
-        case "premium": return "How David Supports Trust Property Sales";
+        case "premium": return "How our team Supports Trust Property Sales";
         case "urban": return "Experienced Trust Property Sale Guidance";
-        case "waterfront": return "How David Helps With Trust-Owned Property";
+        case "waterfront": return "How our team Helps With Trust-Owned Property";
         case "smalltown": return "Guiding Trustees Through the Sale Process";
         case "military": return "Practical Trust Property Sale Support";
-        case "rural": return "How David Helps Sell Trust-Owned Property";
+        case "rural": return "How our team Helps Sell Trust-Owned Property";
         default: return "How Real Property Planning Supports Trust Sales";
       }
     default:
@@ -2005,7 +2005,7 @@ export function getToneCTABody(cityName: string, tone?: CommunityTone): string {
       return `Reach out to discuss your property and what the process looks like from here.`;
     case "smalltown":
     case "rural":
-      return `Contact David to discuss your situation — no pressure, no obligation.`;
+      return `Contact us to discuss your situation — no pressure, no obligation.`;
     default:
       return `Schedule a consultation to discuss your ${cityName} property situation.`;
   }
@@ -3229,7 +3229,7 @@ const deepCTAHeadings: Record<CommunityTone, string[]> = {
   suburban: [
     "Need Help With a Property in {city}?",
     "Ready to Take the Next Step?",
-    "Talk With David About Your {city} Home",
+    "Talk With our team About Your {city} Home",
     "Get Clear Guidance for Your {city} Property",
     "Let's Talk About Your {city} Property",
     "Your {city} Home Deserves Experienced Guidance",
@@ -3239,7 +3239,7 @@ const deepCTAHeadings: Record<CommunityTone, string[]> = {
     "Ready to Talk About Next Steps?",
     "Let's Discuss Your Options",
     "Get Locally Informed Guidance in {city}",
-    "Talk With David About Your {city} Home",
+    "Talk With our team About Your {city} Home",
     "Ready to Move Forward on Your {city} Property?",
   ],
   smalltown: [
@@ -3247,7 +3247,7 @@ const deepCTAHeadings: Record<CommunityTone, string[]> = {
     "Let's Talk About Your Property",
     "Get in Touch",
     "Ready for Honest, Local Guidance?",
-    "Let David Help With Your {city} Property",
+    "Let our team Help With Your {city} Property",
     "Take the Next Step With Confidence",
   ],
   military: [
@@ -3256,7 +3256,7 @@ const deepCTAHeadings: Record<CommunityTone, string[]> = {
     "Schedule a Conversation",
     "Get Straightforward Guidance in {city}",
     "Ready to Take Action on Your Property?",
-    "Talk With David About Your {city} Home",
+    "Talk With our team About Your {city} Home",
   ],
   rural: [
     "Ready to Discuss Your Property?",
@@ -3264,7 +3264,7 @@ const deepCTAHeadings: Record<CommunityTone, string[]> = {
     "Get Honest, Local Guidance",
     "Take the Next Step on Your {city} Property",
     "Ready for Grounded, Practical Advice?",
-    "Let David Help With Your Property",
+    "Let our team Help With Your Property",
   ],
 };
 
@@ -3275,14 +3275,14 @@ const deepCTABodies: Record<CommunityTone, string[]> = {
     "Reach out for a conversation about your property and what the path forward looks like.",
   ],
   urban: [
-    "Contact David to discuss your {city} property situation — no obligation, no pressure.",
+    "Contact us to discuss your {city} property situation — no obligation, no pressure.",
     "Schedule a consultation to get clear, practical guidance for your property decision.",
     "Reach out to discuss your situation and learn how Our team can help.",
   ],
   suburban: [
     "Real Property Planning provides clear, experienced guidance for families and professionals in {city}.",
     "Schedule a consultation to discuss your property, your timeline, and your questions.",
-    "Contact David for an honest conversation about your {city} property and your options.",
+    "Contact us for an honest conversation about your {city} property and your options.",
   ],
   waterfront: [
     "Reach out to discuss your {city} waterfront or water-view property and your options.",
@@ -3290,17 +3290,17 @@ const deepCTABodies: Record<CommunityTone, string[]> = {
     "Schedule a conversation about your property and what the process looks like from here.",
   ],
   smalltown: [
-    "Contact David to discuss your situation — no pressure, no obligation.",
+    "Contact us to discuss your situation — no pressure, no obligation.",
     "Reach out for an honest conversation about your property and your options.",
     "Our team provides steady, experienced guidance for families in {city}.",
   ],
   military: [
     "Schedule a consultation to discuss your property situation and timeline.",
     "Our team provides clear, practical guidance that works within your schedule.",
-    "Contact David to discuss your property — straightforward guidance, no pressure.",
+    "Contact us to discuss your property — straightforward guidance, no pressure.",
   ],
   rural: [
-    "Contact David to discuss your property — honest guidance based on actual property evaluation.",
+    "Contact us to discuss your property — honest guidance based on actual property evaluation.",
     "Schedule a consultation to talk about your rural property and your options.",
     "Reach out for practical, locally grounded guidance on your property decision.",
   ],
@@ -3311,7 +3311,7 @@ const deepCTAButtons: string[] = [
   "Get in Touch",
   "Start a Conversation",
   "Request a Consultation",
-  "Contact David",
+  "Contact us",
 ];
 
 /** Deterministically pick a CTA heading variant based on city+service combination */

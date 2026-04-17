@@ -34,9 +34,9 @@ const faqs = [
       "As both a licensed Washington State real estate broker and a state-certified residential appraiser, Our team provides pricing strategy rooted in actual condition assessment and neighborhood-level market data — not automated estimates. This dual perspective is especially valuable in Seattle, where neighborhood pricing differences can be significant.",
   },
   {
-    question: "Can David help if I live out of state but the property is in Seattle?",
+    question: "Can our team help if I live out of state but the property is in Seattle?",
     answer:
-      "Yes. David regularly works with out-of-state executors, trustees, and heirs managing Seattle properties remotely. He coordinates property access, vendor management, preparation, and the entire sale process — keeping you informed at every step so you don't need to make unnecessary trips.",
+      "Yes. Our team regularly works with out-of-state executors, trustees, and heirs managing Seattle properties remotely. He coordinates property access, vendor management, preparation, and the entire sale process — keeping you informed at every step so you don't need to make unnecessary trips.",
   },
   {
     question: "What should be done before listing an inherited home in Seattle?",
@@ -190,7 +190,7 @@ const SeattleProbateEstate = () => {
               Many executors and trustees managing Seattle property live hundreds or thousands of miles away. Coordinating vendors, accessing the property, understanding local conditions, and managing a sale remotely is stressful — especially when you're also grieving.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              David serves as a local point of coordination. He manages property access, works with cleanout crews, contractors, and staging vendors, communicates with attorneys and other parties, and keeps you informed throughout the process — reducing unnecessary travel and giving you confidence that nothing is falling through the cracks.
+              our team serves as a local point of coordination. He manages property access, works with cleanout crews, contractors, and staging vendors, communicates with attorneys and other parties, and keeps you informed throughout the process — reducing unnecessary travel and giving you confidence that nothing is falling through the cracks.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
               Whether you're in California, Texas, New York, or overseas, our team's goal is to make the process as clear and manageable as possible from wherever you are.

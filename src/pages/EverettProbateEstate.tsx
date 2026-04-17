@@ -21,9 +21,9 @@ const faqs = [
       "Secure the property, confirm your legal authority to act, and get an honest assessment of its condition and value. Many Everett inherited homes have years of deferred maintenance. Our team can walk through the property, identify issues that affect value, and help you understand your options before you commit to anything.",
   },
   {
-    question: "How does David help with homes that need a lot of work?",
+    question: "How does our team help with homes that need a lot of work?",
     answer:
-      "David uses his appraisal background to evaluate which repairs and improvements are likely to increase the sale price enough to justify the cost — and which ones aren't worth the investment. Sometimes selling as-is is the right call; other times, targeted preparation makes a meaningful difference. The key is making that decision based on data, not guesswork.",
+      "our team uses his appraisal background to evaluate which repairs and improvements are likely to increase the sale price enough to justify the cost — and which ones aren't worth the investment. Sometimes selling as-is is the right call; other times, targeted preparation makes a meaningful difference. The key is making that decision based on data, not guesswork.",
   },
   {
     question: "How does our team's dual expertise benefit Everett sellers?",
@@ -36,9 +36,9 @@ const faqs = [
       "This is common. Our team provides objective, data-driven information — condition assessment, realistic pricing, and a clear explanation of options — so families can make decisions based on facts rather than assumptions. Having a neutral, professional perspective often helps move conversations forward.",
   },
   {
-    question: "Can David help if I don't live in the Everett area?",
+    question: "Can our team help if I don't live in the Everett area?",
     answer:
-      "Yes. David regularly works with executors and family members managing Everett properties from outside the area. He coordinates property access, vendor management, preparation, and the sale process — keeping you informed at every step so you don't need to make unnecessary trips.",
+      "Yes. Our team regularly works with executors and family members managing Everett properties from outside the area. He coordinates property access, vendor management, preparation, and the sale process — keeping you informed at every step so you don't need to make unnecessary trips.",
   },
   {
     question: "How long does it take to sell an inherited home in Everett?",
@@ -190,7 +190,7 @@ const EverettProbateEstate = () => {
               Our team provides a clear, professional perspective: an honest assessment of the property's condition, realistic pricing based on local market data, and a straightforward explanation of the options. This kind of neutral, fact-based guidance often helps families move past uncertainty and toward a decision everyone can understand.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Whether family members are local, scattered across the state, or across the country, David keeps everyone informed with consistent communication throughout the process.
+              Whether family members are local, scattered across the state, or across the country, our team keeps everyone informed with consistent communication throughout the process.
             </p>
           </div>
         </div>

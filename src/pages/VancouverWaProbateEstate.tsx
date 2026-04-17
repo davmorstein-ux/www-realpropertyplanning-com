@@ -31,7 +31,7 @@ const faqs = [
       "As both a licensed Washington State real estate broker and a state-certified residential appraiser, Our team provides pricing grounded in actual condition assessment and local market data — not automated estimates. This dual perspective is especially valuable in Vancouver, where proximity to Portland creates unique pricing dynamics that require careful local analysis.",
   },
   {
-    question: "Can David help coordinate a sale alongside a senior transition or relocation?",
+    question: "Can our team help coordinate a sale alongside a senior transition or relocation?",
     answer:
       "Yes. Many Vancouver families are managing a property sale at the same time as a move to senior living, a relocation to be closer to family, or a transition between Washington and Oregon. Our team coordinates the sale timeline with the broader transition — working with moving companies, family members, and other professionals to keep everything aligned.",
   },
@@ -186,7 +186,7 @@ const VancouverWaProbateEstate = () => {
               Many Vancouver property situations involve more than just selling a home. A parent may be moving to senior living while the family home needs to be prepared and sold. An executor in Portland may be managing a Clark County estate. A family may be relocating out of state and needs the sale coordinated with their move timeline.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              David serves as a central point of coordination — managing property access, working with cleanout crews, contractors, moving companies, and other vendors, communicating with attorneys and family members, and keeping the timeline aligned with the broader transition.
+              our team serves as a central point of coordination — managing property access, working with cleanout crews, contractors, moving companies, and other vendors, communicating with attorneys and family members, and keeping the timeline aligned with the broader transition.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
               The goal is to reduce the logistical burden so families can focus on the people and decisions that matter most — not the day-to-day details of preparing and selling a property.

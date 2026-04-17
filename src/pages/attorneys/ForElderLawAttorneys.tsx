@@ -24,7 +24,7 @@ const services = [
     title: "Accurate Valuation for Planning Purposes",
     description: (
       <>
-        David's background as a <Link to="/real-estate-appraiser" className="text-accent hover:text-gold underline underline-offset-4">Washington State Certified Residential Appraiser</Link> makes him an especially useful resource when valuation needs to support Medicaid planning, benefit calculations, or financial analysis. The assessment goes beyond a listing agent's price opinion — it's a condition-adjusted, methodology-based market analysis that advisors and attorneys can rely on.
+        our team's background as a <Link to="/real-estate-appraiser" className="text-accent hover:text-gold underline underline-offset-4">Washington State Certified Residential Appraiser</Link> makes him an especially useful resource when valuation needs to support Medicaid planning, benefit calculations, or financial analysis. The assessment goes beyond a listing agent's price opinion — it's a condition-adjusted, methodology-based market analysis that advisors and attorneys can rely on.
       </>
     ),
   },
@@ -32,7 +32,7 @@ const services = [
     title: "Patient, Respectful Sale Coordination",
     description: (
       <>
-        <Link to="/senior-transitions" className="text-accent hover:text-gold underline underline-offset-4">Senior home sales</Link> are not standard transactions. David works at the family's pace — allowing time for emotional preparation, coordinating with the care team, and managing the property preparation and sale in a way that respects the weight of the transition. His affiliation with the <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-gold underline underline-offset-4">Aging Life Care Association</a> and the National Association of Senior Advocates reflects a commitment to this work that goes beyond real estate.
+        <Link to="/senior-transitions" className="text-accent hover:text-gold underline underline-offset-4">Senior home sales</Link> are not standard transactions. Our team works at the family's pace — allowing time for emotional preparation, coordinating with the care team, and managing the property preparation and sale in a way that respects the weight of the transition. His affiliation with the <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-gold underline underline-offset-4">Aging Life Care Association</a> and the National Association of Senior Advocates reflects a commitment to this work that goes beyond real estate.
       </>
     ),
   },
@@ -40,13 +40,13 @@ const services = [
     title: "Coordination With the Full Care Team",
     description: (
       <>
-        David works alongside senior move managers, care coordinators, social workers, and placement specialists — aligning the real estate timeline with the broader transition plan. Real Property Planning has an established relationship with <Link to="/senior-transitions" className="text-accent hover:text-gold underline underline-offset-4">HB Move Management</Link> (a division of Hansen Bros. Moving &amp; Storage), one of the most experienced senior moving services in Western Washington.
+        our team works alongside senior move managers, care coordinators, social workers, and placement specialists — aligning the real estate timeline with the broader transition plan. Real Property Planning has an established relationship with <Link to="/senior-transitions" className="text-accent hover:text-gold underline underline-offset-4">HB Move Management</Link> (a division of Hansen Bros. Moving &amp; Storage), one of the most experienced senior moving services in Western Washington.
       </>
     ),
   },
   {
     title: "Out-of-Area Family Coordination",
-    description: "Many elder law clients have adult children managing the process from other states. David handles the property locally — with consistent updates to the family, the attorney, and the care team — so no one has to travel for every step.",
+    description: "Many elder law clients have adult children managing the process from other states. Our team handles the property locally — with consistent updates to the family, the attorney, and the care team — so no one has to travel for every step.",
   },
 ];
 
@@ -184,7 +184,7 @@ const ForElderLawAttorneys = () => (
             Discuss a Client Situation
           </h2>
           <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">
-            If you work with senior clients who will need to make property decisions as part of a life transition, Medicaid plan, or estate matter, David welcomes the conversation.
+            If you work with senior clients who will need to make property decisions as part of a life transition, Medicaid plan, or estate matter, our team welcomes the conversation.
           </p>
           <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
             Real Property Planning serves elder law attorneys and their clients throughout{" "}

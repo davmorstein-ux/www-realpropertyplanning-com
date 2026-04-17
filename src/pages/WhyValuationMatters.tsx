@@ -189,7 +189,7 @@ const WhyValuationMatters = () => {
               ))}
             </ul>
             <p className="text-muted-foreground mt-8 leading-relaxed">
-              Executors and trustees can learn more about <Link to="/executors" className="text-accent hover:text-gold underline underline-offset-4">how David supports the sale process</Link>. Attorneys may also find value in the <Link to="/for-attorneys" className="text-accent hover:text-gold underline underline-offset-4">attorney referral resources</Link>.
+              Executors and trustees can learn more about <Link to="/executors" className="text-accent hover:text-gold underline underline-offset-4">how our team supports the sale process</Link>. Attorneys may also find value in the <Link to="/for-attorneys" className="text-accent hover:text-gold underline underline-offset-4">attorney referral resources</Link>.
             </p>
           </div>
         </div>
@@ -216,7 +216,7 @@ const WhyValuationMatters = () => {
                   How does this prevent surprises during the sale?
                 </AccordionTrigger>
                 <AccordionContent className="px-6 pb-5 pt-0 text-muted-foreground leading-relaxed">
-                  David anticipates appraisal challenges before they derail a deal, prices properties to attract serious buyers while protecting estate value, and advises families on which repairs will actually move the needle. The result is fewer surprises, faster closings, and pricing decisions that hold up under scrutiny.
+                  our team anticipates appraisal challenges before they derail a deal, prices properties to attract serious buyers while protecting estate value, and advises families on which repairs will actually move the needle. The result is fewer surprises, faster closings, and pricing decisions that hold up under scrutiny.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>

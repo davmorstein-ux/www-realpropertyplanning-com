@@ -19,14 +19,14 @@ const PierceCounty = () => (
       "Real Property Planning works with estate properties across Pierce County's full geographic and economic range — from Tacoma's historic neighborhoods and Gig Harbor's waterfront properties to Puyallup's family communities and Lakewood's established residential areas. The same dual credential — licensed broker and Washington State Certified Residential Appraiser — that he brings to every market ensures that Pierce County estate properties are priced accurately for their specific condition and neighborhood, not based on county-wide averages that may not apply.",
     ]}
     aeoQuestion="How do probate and estate property sales work in Pierce County?"
-    aeoAnswer="The process follows Washington State probate law — establish legal authority, assess the property, develop a pricing and preparation strategy, list, and close — but the specifics are shaped by where the property sits within Pierce County. A waterfront property in Gig Harbor faces a very different buyer pool than a Tacoma craftsman or a Puyallup family home. our team's approach is always location-specific and condition-adjusted, ensuring the strategy reflects the actual market for that property."
+    aeoAnswer="The process follows Washington State probate law — establish legal authority, assess the property, develop a pricing and preparation strategy, list, and close — but the specifics are shaped by where the property sits within Pierce County. A waterfront property in Gig Harbor faces a very different buyer pool than a Tacoma craftsman or a Puyallup family home. Our team's approach is always location-specific and condition-adjusted, ensuring the strategy reflects the actual market for that property."
     aeoSupportFaqs={[
       {
         question: "What makes Pierce County estate sales different from King County sales?",
         answer: "Pierce County's market has different price points, different buyer demographics, and different neighborhood dynamics than King County — though some border communities like Auburn and Milton share characteristics of both. Pierce County also has its own probate court procedures and local title and legal resources that Our team is familiar with from years of working in the market.",
       },
       {
-        question: "How does David handle older Tacoma homes with significant deferred maintenance?",
+        question: "How does our team handle older Tacoma homes with significant deferred maintenance?",
         answer: "With honesty and a clear cost-benefit framework. Tacoma has a significant inventory of older craftsman and mid-century homes — many of which are estate properties. Our team evaluates each potential improvement for return on investment, helps families decide what to address and what to sell as-is, and coordinates trusted local vendors for cleanout, repairs, and preparation.",
       },
     ]}
@@ -41,15 +41,15 @@ const PierceCounty = () => (
       },
       {
         question: "Is pricing a Gig Harbor waterfront home different from pricing a home in Lakewood?",
-        answer: "Significantly. Gig Harbor waterfront properties attract a premium buyer pool with different expectations than Lakewood's value-oriented market. our team's dual credentials as a broker and appraiser allow him to assess waterfront premiums, view adjustments, and condition factors specific to each micro-market — ensuring each property is positioned for its actual buyer pool.",
+        answer: "Significantly. Gig Harbor waterfront properties attract a premium buyer pool with different expectations than Lakewood's value-oriented market. Our team's dual credentials as a broker and appraiser allow him to assess waterfront premiums, view adjustments, and condition factors specific to each micro-market — ensuring each property is positioned for its actual buyer pool.",
       },
       {
         question: "What if the heirs disagree about whether to fix up or sell the Pierce County property as-is?",
         answer: "Heir disagreements about preparation strategy are common in Pierce County estates. Our team provides objective, condition-based analysis showing what specific improvements are likely to return and what the as-is value looks like — giving all parties the data they need to make an informed decision rather than arguing based on assumptions.",
       },
       {
-        question: "Can David manage a Pierce County estate sale if I live out of state?",
-        answer: "Yes. David regularly coordinates Pierce County estate sales for executors and trustees who live in Seattle, Portland, California, and beyond. He manages property access, vendor coordination, cleanout supervision, and the full sale process — providing consistent updates so you can fulfill your fiduciary role without repeated travel to the area.",
+        question: "Can our team manage a Pierce County estate sale if I live out of state?",
+        answer: "Yes. Our team regularly coordinates Pierce County estate sales for executors and trustees who live in Seattle, Portland, California, and beyond. He manages property access, vendor coordination, cleanout supervision, and the full sale process — providing consistent updates so you can fulfill your fiduciary role without repeated travel to the area.",
       },
       {
         question: "How long does it typically take to sell an inherited home in Pierce County?",
