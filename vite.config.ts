@@ -27,11 +27,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     h1: "Probate, Estate & Senior Transition Real Estate in Washington State",
     intro:
       "Guiding seniors, families, and professionals through real estate and housing transitions across Washington State — downsizing, relocation, probate, inherited property, and senior living decisions — with calm guidance, practical coordination, and clear next steps.",
-    sections: [
-      "Probate & Estate Property Sales — Experienced guidance for selling inherited homes, trust-owned real estate, and estate property across King, Snohomish, Pierce, Skagit, and Kitsap Counties.",
-      "Senior Transitions & Downsizing Support — Thoughtful real estate guidance for families navigating a move from a longtime home to assisted living, independent living, or smaller housing.",
-      "Valuation-Informed Strategy — Pricing insight grounded in certified appraisal methodology and professional valuation experience.",
-    ],
+    sections: [],
     cities: [
       "Seattle", "Bellevue", "Kirkland", "Redmond", "Mercer Island", "Issaquah",
       "Everett", "Edmonds", "Lynnwood", "Mukilteo", "Mill Creek",
@@ -45,8 +41,8 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     description:
       "A trusted real estate resource for attorneys handling probate and estate matters in Washington State. Licensed Broker & Certified Appraiser with deep expertise in inherited and court-supervised property sales.",
     h1: "Real Estate Support for Probate & Estate Attorneys",
-    quickAnswerQ: "How does David Stein support attorneys with estate and probate real estate?",
-    quickAnswerA: "David handles the real estate side of estate, probate, and family law matters — property assessment, valuation-informed pricing, preparation coordination, and sale management — so attorneys and their clients can focus on the legal and financial priorities.",
+    quickAnswerQ: "How does Real Property Planning support attorneys with estate and probate real estate?",
+    quickAnswerA: "Our team handles the real estate side of estate, probate, and family law matters — property assessment, condition-based pricing, preparation coordination, and sale management — so attorneys and their clients can focus on the legal and financial priorities.",
     intro:
       "Real Property Planning works with attorneys and their clients when real property is involved in probate, trust administration, estate transitions, and senior housing moves throughout Washington State.",
   },
@@ -56,9 +52,9 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "Are you an executor managing a probate property in Washington? Get calm, step-by-step guidance on pricing, preparing, and selling inherited real estate. Serving King, Snohomish & surrounding counties.",
     h1: "Guidance for Executors Managing Inherited Property",
     quickAnswerQ: "What should an executor do when there is real estate in the estate?",
-    quickAnswerA: "Secure the property, confirm your legal authority to act, and get a realistic assessment of the home's condition and market value. David Stein — a licensed Washington broker and certified residential appraiser — handles property evaluation, preparation, pricing, and the full sale process.",
+    quickAnswerA: "Secure the property, confirm your legal authority to act, and get a realistic assessment of the home's condition and market value. Our team — combining licensed Washington brokerage and certified residential appraisal expertise — handles property evaluation, preparation, pricing, and the full sale process.",
     intro:
-      "First time managing an estate property? David Stein walks executors and trustees through every step — assessing the home, coordinating preparation, pricing it right, and handling the sale from start to finish.",
+      "First time managing an estate property? Our team walks executors and trustees through every step — assessing the home, coordinating preparation, pricing it right, and handling the sale from start to finish.",
   },
   "/probate-estate-sales": {
     title: "Probate Home Sales in Washington State | Real Property Planning",
@@ -66,7 +62,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "Selling a home through probate in Washington State? We guide families and estates through the process with expertise, patience, and clear next steps. Licensed Broker & Certified Appraiser.",
     h1: "Probate Real Estate Sales in Washington State",
     intro:
-      "Probate sales involve court timelines, fiduciary duties, deferred maintenance, and family coordination. David Stein manages the entire real estate process throughout Washington State so executors and attorneys can focus on what they do best.",
+      "Probate sales involve court timelines, fiduciary duties, deferred maintenance, and family coordination. Our team manages the entire real estate process throughout Washington State so executors and attorneys can focus on what they do best.",
   },
   "/why-valuation-matters": {
     title: "Why Valuation Matters for Probate & Inherited Property | Real Property Planning",
@@ -76,7 +72,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     quickAnswerQ: "Why does property valuation matter in estate and probate sales?",
     quickAnswerA: "Accurate valuation prevents the two most expensive mistakes in estate property sales: overpricing that leads to months of carrying costs and lost buyer interest, and underpricing that leaves tens of thousands of dollars on the table.",
     intro:
-      "Accurate valuation is the foundation of every successful estate property sale. David Stein's dual credentials as a real estate broker and certified appraiser provide a unique perspective on pricing strategy throughout Washington State.",
+      "Accurate valuation is the foundation of every successful estate property sale. Combined real estate broker and certified appraiser credentials provide a unique perspective on pricing strategy throughout Washington State.",
   },
   "/senior-transitions": {
     title: "Senior Housing Transitions & Downsizing in Washington State | Real Property Planning",
@@ -99,20 +95,20 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "From initial consultation to closing day — here is exactly how Real Property Planning helps executors, attorneys, and families sell probate, inherited, and trust-owned property throughout Washington State.",
   },
   "/how-we-work": {
-    title: "How David Stein Works With Attorneys, Executors, Trustees & Families",
+    title: "How We Work With Attorneys, Executors, Trustees & Families",
     description:
-      "Learn how David Stein collaborates with attorneys, executors, trustees, and families to provide real estate guidance, valuation insight, and practical coordination during estate property transitions.",
-    h1: "How David Stein Works With Attorneys, Executors, Trustees, and Families",
+      "Learn how Real Property Planning collaborates with attorneys, executors, trustees, and families to provide real estate guidance, valuation insight, and practical coordination during estate property transitions.",
+    h1: "How We Work With Attorneys, Executors, Trustees, and Families",
     intro:
-      "David Stein collaborates with attorneys, executors, trustees, and families to provide real estate guidance, valuation insight, and practical coordination during probate, trust, and estate property transitions.",
+      "Our team collaborates with attorneys, executors, trustees, and families to provide real estate guidance, valuation insight, and practical coordination during probate, trust, and estate property transitions.",
   },
   "/attorney-referral": {
     title: "Attorney & Professional Referral Resource | Real Property Planning",
     description:
-      "David Stein is a real estate and valuation resource for attorneys, trustees, executors, and fiduciaries handling probate, trust, and estate property matters throughout Washington State.",
+      "Real Property Planning is a real estate and valuation resource for attorneys, trustees, executors, and fiduciaries handling probate, trust, and estate property matters throughout Washington State.",
     h1: "Attorney and Professional Referral Resource for Probate Real Estate",
     intro:
-      "David Stein is a real estate and valuation resource for attorneys, trustees, executors, and fiduciaries handling probate, trust, and estate property matters throughout Washington State.",
+      "Real Property Planning is a real estate and valuation resource for attorneys, trustees, executors, and fiduciaries handling probate, trust, and estate property matters throughout Washington State.",
   },
   "/for-cpas": {
     title: "Real Estate Guidance for CPAs | Real Property Planning",
