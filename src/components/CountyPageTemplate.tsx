@@ -12,7 +12,30 @@ import { Link } from "react-router-dom";
 
 import mappin3d from "@/assets/real-estate-service-areas-mappin-washington.webp";
 import heroIcon from "@/assets/icons/real-estate-service-areas-map-icon-washington.webp";
+import bentonLogo from "@/assets/counties/benton-county-logo.webp";
+import clarkLogo from "@/assets/counties/clark-county-logo.webp";
+import kingLogo from "@/assets/counties/king-county-logo.webp";
+import kitsapLogo from "@/assets/counties/kitsap-county-logo.webp";
+import pierceLogo from "@/assets/counties/pierce-county-logo.webp";
+import skagitLogo from "@/assets/counties/skagit-county-logo.webp";
+import snohomishLogo from "@/assets/counties/snohomish-county-logo.webp";
+import spokaneLogo from "@/assets/counties/spokane-county-logo.webp";
+import thurstonLogo from "@/assets/counties/thurston-county-logo.webp";
+import whatcomLogo from "@/assets/counties/whatcom-county-logo.webp";
 import { services, counties } from "@/lib/service-areas-data";
+
+const COUNTY_LOGOS: Record<string, string> = {
+  "benton-county": bentonLogo,
+  "clark-county": clarkLogo,
+  "king-county": kingLogo,
+  "kitsap-county": kitsapLogo,
+  "pierce-county": pierceLogo,
+  "skagit-county": skagitLogo,
+  "snohomish-county": snohomishLogo,
+  "spokane-county": spokaneLogo,
+  "thurston-county": thurstonLogo,
+  "whatcom-county": whatcomLogo,
+};
 
 interface CountyPageProps {
   countyName: string;
