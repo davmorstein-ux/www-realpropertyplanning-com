@@ -369,13 +369,6 @@ const ProbateEstateSales = () => {
         </div>
       </section>
 
-      <ClientReviewsSection
-        reviews={probateReviews}
-        heading="Client Reviews & Experiences"
-        subheading="Feedback from clients and professionals who worked with our team on probate and estate property situations."
-        background="bg-secondary"
-      />
-
       <RealClientSituations
         studies={probateCaseStudies}
         heading="Real Client Situations"
