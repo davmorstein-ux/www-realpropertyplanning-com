@@ -39,7 +39,7 @@ const probateCaseStudies = [
     label: "Family Coordination",
     situation: "Four adult siblings inherited a family home in Kitsap County after their father passed. All four had equal ownership, and none lived near the property.",
     challenge: "The siblings had different views on timing — one wanted to hold, two wanted to sell quickly, and one was unsure. Confusion about the home's value made it harder to reach agreement.",
-    howHelped: "Real Property Planning provided a clear, valuation-informed pricing assessment so everyone was working from the same numbers. He walked the family through market data, explained the cost of holding versus selling, and coordinated the preparation and sale with regular updates to all four siblings.",
+    howHelped: "Real Property Planning provided a clear, condition-based pricing assessment so everyone was working from the same numbers. He walked the family through market data, explained the cost of holding versus selling, and coordinated the preparation and sale with regular updates to all four siblings.",
     outcome: "The family reached agreement within two weeks. The home sold at a price everyone felt was fair, and the process was far less stressful than expected.",
   },
   {
@@ -55,7 +55,7 @@ const probateCaseStudies = [
     label: "Valuation Strategy",
     situation: "An executor inherited a home in Snohomish County and had received two very different price opinions from other agents.",
     challenge: "One agent suggested listing high to 'test the market.' The other recommended a much lower price to sell fast. Neither was supported by detailed analysis.",
-    howHelped: "Real Property Planning conducted a thorough property review and provided a valuation-informed pricing strategy — walking the executor through comparable sales, condition adjustments, and current market trends.",
+    howHelped: "Real Property Planning conducted a thorough property review and provided a condition-based pricing strategy — walking the executor through comparable sales, condition adjustments, and current market trends.",
     outcome: "The executor chose a well-supported list price. The home received strong interest and sold close to asking.",
   },
 ];

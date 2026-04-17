@@ -216,7 +216,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
       "Financial advisors needing Issaquah property valuations that account for the wide spread between community segments",
     ],
     aeoQuestion: "What are the first decisions to make with an inherited home in Issaquah?",
-    aeoAnswer: "Issaquah's segmented market — from Highlands planned communities to Olde Town homes — means inherited properties compete in very different buyer pools depending on location. Real Property Planning evaluates each property's specific context and provides valuation-informed guidance on preparation, pricing, and timing.",
+    aeoAnswer: "Issaquah's segmented market — from Highlands planned communities to Olde Town homes — means inherited properties compete in very different buyer pools depending on location. Real Property Planning evaluates each property's specific context and provides practical, evidence-based guidance on preparation, pricing, and timing.",
     aeoSupportBullets: [
       "Community-specific pricing for Highlands, Talus, Olde Town, and foothills-adjacent properties",
       "Honest guidance on preparation investments that deliver meaningful return",
@@ -275,7 +275,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     seoTitle: "Probate & Estate Real Estate in Newcastle, WA | Real Property Planning",
     seoDescription: "Estate property sales and probate guidance in Newcastle, Washington — serving families and executors in this established Eastside community.",
     heroHeading: "Probate & Estate Real Estate in Newcastle, Washington",
-    heroIntro: "Newcastle sits between Bellevue and Renton — benefiting from Eastside proximity while maintaining its own community character. Estate properties here often include larger lots and established landscaping that require specific preparation and pricing considerations. Our team works with executors and families in Newcastle with the same valuation-informed approach he brings to every community in King County.",
+    heroIntro: "Newcastle sits between Bellevue and Renton — benefiting from Eastside proximity while maintaining its own community character. Estate properties here often include larger lots and established landscaping that require specific preparation and pricing considerations. Our team works with executors and families in Newcastle with the same evidence-based approach he brings to every community in King County.",
     localKnowledge: "Newcastle's housing stock is predominantly newer, with many homes built in the 1990s and 2000s in planned communities like Newcastle Highlands and the Golf Club at Newcastle area. Views are a primary value driver here, and the difference between a property with a panoramic view and one without can be substantial. Real Property Planning helps clients understand how view corridors, lot positioning, and condition affect market value in Newcastle's hillside environment.",
   },
   seattle: {
@@ -284,7 +284,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     seoTitle: "Probate & Estate Real Estate in Seattle, WA | Real Property Planning",
     seoDescription: "Probate sales, inherited home guidance, and senior transitions throughout Seattle's neighborhoods. Serving Capitol Hill, Ballard, West Seattle, Magnolia, and more.",
     heroHeading: "Probate & Estate Real Estate in Seattle, Washington",
-    heroIntro: "Seattle's real estate market is as diverse as the city itself — from Capitol Hill condos to Magnolia estates, Ballard craftsmans to West Seattle view properties. Managing a probate sale, inherited home, or senior transition in Seattle means navigating a market where neighborhood context, zoning, and property type can dramatically affect both value and sale strategy. Real Property Planning provides the localized, valuation-informed guidance that Seattle's complex market demands. Real Property Planning has worked with estate properties across Seattle's neighborhoods — understanding not just the broad market but the specific buyer expectations, zoning considerations, and pricing dynamics that vary block by block in a city this complex. From a mid-century craftsman in Ballard that needs a full cleanout to a Capitol Hill condo requiring HOA coordination, the approach is always the same: honest assessment, realistic pricing, and full management of the process.",
+    heroIntro: "Seattle's real estate market is as diverse as the city itself — from Capitol Hill condos to Magnolia estates, Ballard craftsmans to West Seattle view properties. Managing a probate sale, inherited home, or senior transition in Seattle means navigating a market where neighborhood context, zoning, and property type can dramatically affect both value and sale strategy. Real Property Planning provides the localized, practical, evidence-based guidance that Seattle's complex market demands. Real Property Planning has worked with estate properties across Seattle's neighborhoods — understanding not just the broad market but the specific buyer expectations, zoning considerations, and pricing dynamics that vary block by block in a city this complex. From a mid-century craftsman in Ballard that needs a full cleanout to a Capitol Hill condo requiring HOA coordination, the approach is always the same: honest assessment, realistic pricing, and full management of the process.",
     localKnowledge: "Seattle encompasses over 80 distinct neighborhoods, each with its own character, pricing trends, and buyer expectations. A mid-century rambler in Wedgwood presents a very different sale scenario than a Capitol Hill condo or a Craftsman in Wallingford. Real Property Planning's appraisal background and broker experience across Seattle's neighborhoods allow him to develop pricing and preparation strategies that reflect actual local conditions rather than citywide averages.",
     brokerAppraiserValue: "Seattle's market complexity makes generic pricing approaches especially risky for estate and inherited properties. Automated estimates often miss critical factors like lot potential, view corridors, ADU feasibility, and condition-based adjustments that vary block by block. Real Property Planning's certified appraisal credentials and hands-on broker experience provide the granular analysis Seattle properties require for confident decision-making.",
     localSituations: [
@@ -471,7 +471,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
       "Financial advisors needing Woodinville property valuations for estate settlement where rural-residential features create pricing complexity",
     ],
     aeoQuestion: "What should you know about selling an inherited home in Woodinville?",
-    aeoAnswer: "Woodinville's mix of established neighborhoods, wine country adjacency, and newer developments creates pricing nuances that require local expertise. Real Property Planning evaluates each property based on its specific location, condition, and buyer pool — providing the honest, valuation-informed guidance that families need during property transitions.",
+    aeoAnswer: "Woodinville's mix of established neighborhoods, wine country adjacency, and newer developments creates pricing nuances that require local expertise. Real Property Planning evaluates each property based on its specific location, condition, and buyer pool — providing the honest, practical, evidence-based guidance that families need during property transitions.",
     aeoSupportBullets: [
       "Property-specific pricing that accounts for Woodinville's diverse housing stock",
       "Clear preparation guidance — what improvements matter and what to skip",
@@ -623,7 +623,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     aeoQuestion: "What should you consider when selling an inherited home in Edmonds?",
     aeoAnswer: "Edmonds' walkable downtown, waterfront character, and strong buyer demand create specific expectations for estate properties. Real Property Planning's dual credentials as a broker and certified appraiser help families price inherited homes accurately — accounting for the condition gaps between estate properties and the updated homes Edmonds buyers typically expect.",
     aeoSupportFaqs: [
-      { "question": "How does waterfront proximity affect estate property values in Edmonds?", "answer": "Significantly — and the premium varies depending on whether the property has water views, is within walking distance of the waterfront, or simply benefits from the Edmonds zip code. Our team's appraisal-informed analysis accounts for these distinctions precisely, rather than applying a blanket waterfront premium that may not reflect the property's specific situation." },
+      { "question": "How does waterfront proximity affect estate property values in Edmonds?", "answer": "Significantly — and the premium varies depending on whether the property has water views, is within walking distance of the waterfront, or simply benefits from the Edmonds zip code. Our team's appraisal-grounded analysis accounts for these distinctions precisely, rather than applying a blanket waterfront premium that may not reflect the property's specific situation." },
       { "question": "Can our team coordinate an Edmonds estate sale remotely?", "answer": "Yes. Our team manages the full process locally — property assessment, preparation, listing, and closing — with regular updates for out-of-area families." },
     ],
   },
@@ -817,7 +817,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
       "Financial advisors needing Tacoma property valuations that distinguish between the city's dramatically different submarkets",
     ],
     aeoQuestion: "What should executors and families know about selling inherited property in Tacoma?",
-    aeoAnswer: "Tacoma's diverse neighborhoods — from the North End to Hilltop to the waterfront — create distinct buyer pools and pricing dynamics for estate properties. Real Property Planning provides practical, valuation-informed guidance that helps executors and families navigate preparation decisions, pricing strategy, and the full sale process with confidence.",
+    aeoAnswer: "Tacoma's diverse neighborhoods — from the North End to Hilltop to the waterfront — create distinct buyer pools and pricing dynamics for estate properties. Real Property Planning provides practical, practical, evidence-based guidance that helps executors and families navigate preparation decisions, pricing strategy, and the full sale process with confidence.",
     aeoSupportBullets: [
       "Neighborhood-specific pricing that reflects Tacoma's diverse market dynamics",
       "Practical preparation guidance tailored to each property's condition and buyer pool",
@@ -1128,7 +1128,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     seoTitle: "Probate & Estate Real Estate in Silverdale & Port Orchard, WA | Real Property Planning",
     seoDescription: "Estate property sales and probate guidance in Silverdale and Port Orchard, Washington — serving families and executors throughout central and south Kitsap County.",
     heroHeading: "Probate & Estate Real Estate in Silverdale and Port Orchard, Washington",
-    heroIntro: "Silverdale and Port Orchard serve as the commercial and residential centers of central and south Kitsap County — communities with their own distinct characters and buyer pools. Silverdale's suburban growth and proximity to the naval base creates consistent demand; Port Orchard's waterfront character and established neighborhoods attract buyers seeking a more traditional community feel. Estate properties in both communities require location-specific pricing and preparation guidance. Our team serves executors and families throughout central and south Kitsap County with the practical, valuation-informed approach these markets require.",
+    heroIntro: "Silverdale and Port Orchard serve as the commercial and residential centers of central and south Kitsap County — communities with their own distinct characters and buyer pools. Silverdale's suburban growth and proximity to the naval base creates consistent demand; Port Orchard's waterfront character and established neighborhoods attract buyers seeking a more traditional community feel. Estate properties in both communities require location-specific pricing and preparation guidance. Our team serves executors and families throughout central and south Kitsap County with the practical, evidence-based approach these markets require.",
   },
   kingston: {
     tone: "waterfront",
@@ -1202,7 +1202,7 @@ const cityContent: Record<string, Omit<CityData, "name" | "slug" | "county" | "c
     seoTitle: "Probate & Estate Real Estate in Burlington, WA | Real Property Planning",
     seoDescription: "Estate property sales and probate guidance in Burlington, Washington — including rural, agricultural, and acreage properties in the Skagit Valley.",
     heroHeading: "Probate & Estate Real Estate in Burlington, Washington",
-    heroIntro: "Burlington sits at the geographic heart of Skagit County — a community where residential neighborhoods border agricultural land, and where estate properties often include acreage, outbuildings, or rural-adjacent characteristics that standard residential analysis doesn't fully capture. Families and executors managing inherited property near Burlington frequently face the question of whether to sell as-is or explore subdivision or rezoning — decisions that require honest, methodology-based analysis rather than general estimates. Our team works with executors and families throughout the Burlington area with the appraisal-informed approach these mixed-use and rural-adjacent properties require.",
+    heroIntro: "Burlington sits at the geographic heart of Skagit County — a community where residential neighborhoods border agricultural land, and where estate properties often include acreage, outbuildings, or rural-adjacent characteristics that standard residential analysis doesn't fully capture. Families and executors managing inherited property near Burlington frequently face the question of whether to sell as-is or explore subdivision or rezoning — decisions that require honest, methodology-based analysis rather than general estimates. Our team works with executors and families throughout the Burlington area with the appraisal-grounded approach these mixed-use and rural-adjacent properties require.",
     localKnowledge: "Burlington's market includes properties that bridge residential and agricultural categories. Our team's appraisal background is particularly valuable here, where acreage, outbuildings, and zoning considerations affect value in ways standard tools miss.",
     aeoQuestion: "What should executors know about estate sales in the Burlington area?",
     aeoAnswer: "Burlington's market has strengthened significantly in recent years, making it attractive for estate property sales — provided the property is priced and prepared correctly. The cross-county nature of nearby Bothell and the agricultural character of Burlington properties mean executors should confirm zoning and work with a professional who understands rural-adjacent valuation. Our team helps clarify these factors early.",
@@ -1338,7 +1338,7 @@ export const services: ServiceData[] = [
       "Couples whose children have moved out and who no longer need the space",
       "Homeowners who want to simplify their living situation and reduce maintenance",
     ],
-    whyValuationMatters: "Homeowners who have lived in a property for many years often have an emotional attachment that can make objective pricing difficult. A valuation-informed approach provides a realistic market perspective, helping sellers understand what their home is actually worth in its current condition and how preparation decisions affect the final outcome.",
+    whyValuationMatters: "Homeowners who have lived in a property for many years often have an emotional attachment that can make objective pricing difficult. A evidence-based approach provides a realistic market perspective, helping sellers understand what their home is actually worth in its current condition and how preparation decisions affect the final outcome.",
   },
   {
     name: "Executor Real Estate Support",
@@ -1374,7 +1374,7 @@ export const services: ServiceData[] = [
     name: "Valuation Guidance",
     slug: "valuation-guidance",
     shortName: "Valuation Guidance",
-    description: "Providing valuation-informed insight for inherited, estate, and transition-related property decisions where pricing accuracy is critical.",
+    description: "Providing evidence-based pricing insight for inherited, estate, and transition-related property decisions where pricing accuracy is critical.",
     cityIntroTemplate: "Accurate property valuation in {city} matters for estate settlements, trust administration, and transition planning. Real Property Planning combines licensed broker and certified appraiser credentials to provide clear, condition-based guidance for properties in {city} and {county}.",
     targetAudience: [
       "Executors and trustees who need an accurate understanding of property value",
@@ -1418,7 +1418,7 @@ export const services: ServiceData[] = [
     slug: "trust-estate-property-sales",
     shortName: "Trust Property Sales",
     description: "Assisting trustees and fiduciaries with the valuation, preparation, and sale of trust-owned residential real estate.",
-    cityIntroTemplate: "Managing a trust-owned property sale in {city} involves specific fiduciary responsibilities and practical coordination. Real Property Planning assists trustees and fiduciaries with trust property sales in {city}, providing clear communication and valuation-informed strategy.",
+    cityIntroTemplate: "Managing a trust-owned property sale in {city} involves specific fiduciary responsibilities and practical coordination. Real Property Planning assists trustees and fiduciaries with trust property sales in {city}, providing clear communication and structured, evidence-based strategy.",
     targetAudience: [
       "Trustees managing trust-owned residential real estate",
       "Successor trustees who have recently assumed responsibility",
@@ -1622,7 +1622,7 @@ export function getCommonSituations(cityName: string, cityData?: CityData): stri
 /** Why local matters — uses city-specific if available */
 export function getWhyLocalMatters(cityName: string, countyName: string, cityData?: CityData): string {
   if (cityData?.localKnowledge) return cityData.localKnowledge;
-  return `Every neighborhood in ${cityName} has its own pricing dynamics, buyer expectations, and property characteristics. A valuation-informed approach — one that accounts for condition, location, and realistic market positioning — helps clients avoid costly mispricing and unnecessary delays. Real Property Planning's dual credentials as a licensed Washington real estate broker and state-certified residential appraiser provide a level of market insight that benefits clients throughout ${countyName}.`;
+  return `Every neighborhood in ${cityName} has its own pricing dynamics, buyer expectations, and property characteristics. A evidence-based approach — one that accounts for condition, location, and realistic market positioning — helps clients avoid costly mispricing and unnecessary delays. Real Property Planning's dual credentials as a licensed Washington real estate broker and state-certified residential appraiser provide a level of market insight that benefits clients throughout ${countyName}.`;
 }
 
 /** Why broker/appraiser — uses city-specific if available */
@@ -1977,7 +1977,7 @@ export function getToneHowWeHelpLead(cityName: string, serviceName: string, tone
     case "military":
       return `Real Property Planning provides clear, practical guidance for ${serviceName.toLowerCase()} in ${cityName}:`;
     default:
-      return `Real Property Planning provides valuation-informed guidance for every ${serviceName.toLowerCase()} engagement:`;
+      return `Real Property Planning provides practical, evidence-based guidance for every ${serviceName.toLowerCase()} engagement:`;
   }
 }
 
@@ -2024,7 +2024,7 @@ type ToneServiceKey = `${CommunityTone}:${string}`;
 
 const deepIntroBank: Record<string, Record<CommunityTone, string>> = {
   "probate-estate-sales": {
-    premium: `In established, higher-value communities, probate and estate sales carry added complexity — from navigating multiple interested parties to pricing homes that reflect both premium location and real-world condition. In {city}, {county}, Real Property Planning provides the valuation-informed guidance that executors, attorneys, and families need to handle estate property with clarity and confidence.`,
+    premium: `In established, higher-value communities, probate and estate sales carry added complexity — from navigating multiple interested parties to pricing homes that reflect both premium location and real-world condition. In {city}, {county}, Real Property Planning provides the practical, evidence-based guidance that executors, attorneys, and families need to handle estate property with clarity and confidence.`,
     urban: `Urban estate sales move quickly and involve diverse property types — condos, townhomes, multifamily, and single-family homes across distinct neighborhoods. In {city}, the pace and complexity of the market make experienced guidance essential. Real Property Planning works with executors and attorneys who need a broker who understands city-market dynamics and can price estate property based on actual condition and realistic demand.`,
     suburban: `In family-oriented communities like {city}, estate and probate properties are often longtime family homes — well-loved but showing their age. Selling them effectively means understanding what buyers in {city} expect and how to position a home that may not match the newer construction nearby. Real Property Planning provides practical guidance grounded in local market knowledge and condition-based pricing.`,
     waterfront: `Waterfront and water-influenced communities present distinct challenges for estate sales — from view-driven premiums to properties with aging bulkheads, marine exposure, or unique lot configurations. In {city}, Real Property Planning helps executors and families price and prepare estate property with the local insight that waterfront markets require.`,
@@ -2045,7 +2045,7 @@ const deepIntroBank: Record<string, Record<CommunityTone, string>> = {
     premium: `Downsizing from a premium home in {city} is a significant financial decision — the home may have appreciated substantially, and getting the pricing right matters. Real Property Planning helps {city} homeowners approach downsizing with a realistic understanding of their home's current value, the preparation that makes sense, and the timing that aligns with their next chapter.`,
     urban: `In {city}'s urban market, downsizing often means moving from a single-family home to a condo, townhome, or smaller residence in a different neighborhood. Real Property Planning helps homeowners in {city} navigate the transition with clear pricing guidance and practical coordination.`,
     suburban: `For homeowners in {city} whose children have moved out and who no longer need the space, downsizing is a practical decision that deserves experienced guidance. Real Property Planning works with families in {city} to assess their home's condition, understand realistic market value, and plan a sale that aligns with their next living arrangement.`,
-    waterfront: `Downsizing from a waterfront property in {city} involves specific market considerations — waterfront premiums, specialized property features, and a buyer pool with distinct expectations. Real Property Planning provides valuation-informed guidance for homeowners ready to simplify.`,
+    waterfront: `Downsizing from a waterfront property in {city} involves specific market considerations — waterfront premiums, specialized property features, and a buyer pool with distinct expectations. Real Property Planning provides practical, evidence-based guidance for homeowners ready to simplify.`,
     smalltown: `In {city}, downsizing often means leaving a home where the family has deep roots. Real Property Planning provides honest, practical guidance for homeowners who are ready to simplify — helping them understand what their property is worth and how to prepare it for sale.`,
     military: `Military families in {city} who are downsizing after retirement or a change in duty status benefit from a broker who understands the practical realities of military transitions. Real Property Planning provides clear, efficient guidance for the sale process.`,
     rural: `Downsizing from a rural property in {city} often involves considerations that standard downsizing guides don't address — acreage, outbuildings, septic systems, and rural buyer expectations. Real Property Planning provides on-the-ground assessment and honest pricing guidance.`,
@@ -2087,7 +2087,7 @@ const deepIntroBank: Record<string, Record<CommunityTone, string>> = {
     rural: `Rural properties in {city} may need preparation that goes beyond standard residential concerns — outbuilding maintenance, land clearing, septic inspection, or well certification. Real Property Planning coordinates all aspects of rural property preparation.`,
   },
   "divorce-related-home-sales": {
-    premium: `Divorce-related property sales in {city} often involve homes with significant value, making accurate pricing essential for a fair settlement. Real Property Planning provides objective, valuation-informed guidance with the discretion and professionalism that {city} clients and their attorneys expect.`,
+    premium: `Divorce-related property sales in {city} often involve homes with significant value, making accurate pricing essential for a fair settlement. Real Property Planning provides objective, practical, evidence-based guidance with the discretion and professionalism that {city} clients and their attorneys expect.`,
     urban: `In {city}'s urban market, divorce-related sales can involve a range of property types and complex neighborhood dynamics. Real Property Planning provides neutral, experienced guidance — working with both parties and their attorneys to manage the sale process fairly and efficiently.`,
     suburban: `Divorce-related home sales in {city} benefit from a broker who can remain objective while maintaining clear communication with both parties. Real Property Planning provides condition-based pricing, neutral coordination, and a professional process that reduces friction.`,
     waterfront: `Selling a waterfront property in {city} during a divorce requires specialized valuation — waterfront premiums, view corridors, and marine-related condition factors all affect fair pricing. Real Property Planning provides the objective, defensible guidance this situation demands.`,
@@ -2098,7 +2098,7 @@ const deepIntroBank: Record<string, Record<CommunityTone, string>> = {
   "trust-estate-property-sales": {
     premium: `Trust property sales in {city}'s premium market require transparency, defensible pricing, and clear communication with beneficiaries. Real Property Planning works with trustees and estate attorneys to manage trust-owned property sales in {city} with the professionalism and documentation that fiduciary standards demand.`,
     urban: `Managing trust property in {city}'s urban environment requires a broker who understands both the real estate market and the fiduciary obligations involved. Real Property Planning provides trustees with experienced guidance — from property assessment through closing.`,
-    suburban: `For trustees managing property in {city}, the sale process needs to be transparent, well-documented, and defensible. Real Property Planning provides the clear communication and valuation-informed pricing that trust administration requires.`,
+    suburban: `For trustees managing property in {city}, the sale process needs to be transparent, well-documented, and defensible. Real Property Planning provides the clear communication and condition-based pricing that trust administration requires.`,
     waterfront: `Trust-owned waterfront properties in {city} require specialized valuation that accounts for premium features, limited comparable sales, and the specific documentation standards of trust administration. Real Property Planning provides the expertise trustees need.`,
     smalltown: `In {city}, trust property sales are often handled within a community context where reputation and integrity matter. Real Property Planning provides trustees with professional, well-documented sale coordination that meets fiduciary standards.`,
     military: `Trustees managing trust property in {city}'s military-connected market benefit from a broker who understands the local buyer demographics and can coordinate the sale efficiently within trust administration timelines.`,
@@ -2483,7 +2483,7 @@ const deepScenarioBank: Record<string, Partial<Record<CommunityTone, string[]>>>
     premium: [
       "A divorcing couple in {city} whose home has appreciated significantly and accurate pricing is essential for fair settlement",
       "A family law attorney in {city} who needs a neutral broker with defensible valuation credentials for a high-value property",
-      "A {city} property where both parties disagree on value and need objective, appraisal-informed guidance",
+      "A {city} property where both parties disagree on value and need objective, appraisal-grounded guidance",
       "A high-value marital home in {city} where discretion and professional handling are paramount",
       "A divorce proceeding in {city} where the property sale needs careful coordination with legal timelines",
     ],
@@ -3151,14 +3151,14 @@ const deepWhyLocalBank: Record<string, Partial<Record<CommunityTone, string>>> =
   "valuation-guidance": {
     premium: `Accurate valuation in {city}'s premium market requires more than pulling comparable sales — it demands understanding how specific property characteristics interact with premium buyer expectations. Real Property Planning's dual credentials as a broker and certified appraiser provide the granular, condition-based analysis that premium property valuation requires — whether for estate settlement, pre-listing strategy, or fiduciary reporting.`,
     urban: `Property values in {city} can shift dramatically across neighborhoods, blocks, and even individual properties based on lot potential, zoning, and use. Real Property Planning's familiarity with {city}'s urban market allows him to provide valuation guidance that reflects real neighborhood-level dynamics rather than citywide averages or algorithm-generated estimates.`,
-    suburban: `Suburban property valuation in {city} often comes down to condition — how a home compares to the recently updated homes that buyers are using as benchmarks. Automated tools frequently overstate value for properties with deferred maintenance or dated finishes. Real Property Planning's appraisal-informed assessment accounts for the gap between algorithm output and actual market reality.`,
+    suburban: `Suburban property valuation in {city} often comes down to condition — how a home compares to the recently updated homes that buyers are using as benchmarks. Automated tools frequently overstate value for properties with deferred maintenance or dated finishes. Real Property Planning's appraisal-grounded assessment accounts for the gap between algorithm output and actual market reality.`,
     waterfront: `Waterfront valuations in {city} are among the most complex in residential real estate. View quality, shoreline type, access, marine exposure, and dock condition all affect value in ways that automated tools can't capture. Real Property Planning's certified appraisal credentials provide the property-specific analysis that waterfront valuation in {city} demands.`,
     smalltown: `In {city}'s smaller market, valuation guidance needs to account for limited comparable sales and the wide variation in property characteristics. Standard automated tools trained on larger markets often misjudge properties in communities like {city}. Real Property Planning provides locally grounded, condition-based analysis that reflects what properties actually sell for in this specific market.`,
     military: `Property valuation in {city} is influenced by military-market factors that generic tools don't consider — base proximity, PCS-driven demand cycles, and VA buyer expectations all affect what properties are actually worth. Real Property Planning accounts for these dynamics to provide valuation guidance that is both accurate and defensible.`,
     rural: `Rural property valuation in {city} requires on-the-ground assessment — acreage, outbuildings, septic/well systems, road access, and land characteristics all contribute to value in ways that desktop analysis cannot capture. Real Property Planning's hands-on approach provides the property-specific evaluation that rural valuation decisions in {city} require.`,
   },
   "preparing-home-for-sale": {
-    premium: `In {city}'s premium market, the gap between an underprepared property and a properly presented one can represent a significant dollar difference. Real Property Planning's appraisal-informed perspective helps owners, executors, and trustees understand which preparations actually affect premium-market buyers' decisions — avoiding both over-investment in cosmetic upgrades and under-investment that leaves value on the table.`,
+    premium: `In {city}'s premium market, the gap between an underprepared property and a properly presented one can represent a significant dollar difference. Real Property Planning's appraisal-grounded perspective helps owners, executors, and trustees understand which preparations actually affect premium-market buyers' decisions — avoiding both over-investment in cosmetic upgrades and under-investment that leaves value on the table.`,
     urban: `Preparing estate and transition properties for sale in {city}'s urban market often involves navigating access logistics, vendor coordination in dense neighborhoods, and strategic decisions about property positioning. Real Property Planning's experience with {city}'s urban market helps sellers focus preparation efforts where they'll have the most impact on the final outcome.`,
     suburban: `In {city}'s suburban market, preparation strategy is about understanding buyer expectations. Homes competing against recently updated listings need to present well — but not every update delivers return. Real Property Planning helps families and executors in {city} make practical, budget-conscious preparation decisions based on what actually affects sale price in their specific neighborhood.`,
     waterfront: `Waterfront property preparation in {city} extends beyond standard residential concerns — marine exposure wear, deck and dock condition, moisture management, and view presentation all matter to waterfront buyers. Real Property Planning helps sellers understand which waterfront-specific preparations are worth the investment given {city}'s buyer expectations and seasonal market patterns.`,

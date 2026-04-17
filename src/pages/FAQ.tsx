@@ -76,7 +76,7 @@ const faqs = [
   },
   {
     question: "Do I need an appraisal before selling inherited property?",
-    answer: `Not always, but understanding the property's true market value is critical — especially in estate situations where pricing must be defensible. A broker with appraisal credentials, like Real Property Planning, can provide valuation-informed pricing that satisfies fiduciary obligations without the cost and delay of a formal appraisal in every case.\n\n${softCta}`,
+    answer: `Not always, but understanding the property's true market value is critical — especially in estate situations where pricing must be defensible. A broker with appraisal credentials, like Real Property Planning, can provide condition-based pricing that satisfies fiduciary obligations without the cost and delay of a formal appraisal in every case.\n\n${softCta}`,
   },
   {
     question: "Can an executor sell a house before probate is complete?",

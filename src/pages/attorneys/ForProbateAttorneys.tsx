@@ -58,15 +58,15 @@ const situations = [
 const faqs = [
   {
     question: "How does Real Property Planning support probate attorneys during property sales?",
-    answer: "Our team handles the real estate side completely — property assessment, valuation-informed pricing, preparation coordination, listing, and sale management — while keeping the attorney informed throughout. Attorneys receive consistent updates and have a single point of contact for all property-related questions. The goal is to make the real estate side of probate administration as straightforward as possible so you can focus on the legal work.",
+    answer: "Our team handles the real estate side completely — property assessment, condition-based pricing, preparation coordination, listing, and sale management — while keeping the attorney informed throughout. Attorneys receive consistent updates and have a single point of contact for all property-related questions. The goal is to make the real estate side of probate administration as straightforward as possible so you can focus on the legal work.",
   },
   {
     question: "What is the difference between a CMA and the valuation analysis our team provides?",
-    answer: "A standard comparative market analysis (CMA) is produced by most listing agents and reflects a general price range based on nearby sales. It is not a formal appraisal, and it typically does not account for condition in a documented, methodology-based way. Our team's valuation-informed pricing combines his certified appraisal training with current market data — producing a condition-adjusted, comparable-supported price opinion that is more defensible for fiduciary purposes than a standard CMA. For situations requiring a formal appraisal (date-of-death valuations, for example), our team can discuss appropriate referral resources.",
+    answer: "A standard comparative market analysis (CMA) is produced by most listing agents and reflects a general price range based on nearby sales. It is not a formal appraisal, and it typically does not account for condition in a documented, methodology-based way. Our team's condition-based pricing combines his certified appraisal training with current market data — producing a condition-adjusted, comparable-supported price opinion that is more defensible for fiduciary purposes than a standard CMA. For situations requiring a formal appraisal (date-of-death valuations, for example), our team can discuss appropriate referral resources.",
   },
   {
     question: "Can you help when heirs disagree about value or timing?",
-    answer: "Yes — and this is one of the most common situations our team works with. When heirs have received conflicting price opinions or have different views on what the property is worth, a clear, documented valuation-informed analysis often resolves the disagreement faster than continued negotiation. Our team can present the analysis to all parties — together or separately — and walk through the comparable data in plain language.",
+    answer: "Yes — and this is one of the most common situations our team works with. When heirs have received conflicting price opinions or have different views on what the property is worth, a clear, documented evidence-based analysis often resolves the disagreement faster than continued negotiation. Our team can present the analysis to all parties — together or separately — and walk through the comparable data in plain language.",
   },
   {
     question: "Do you work with probate attorneys outside of Western Washington?",

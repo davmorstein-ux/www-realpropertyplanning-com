@@ -30,7 +30,7 @@ const countyMeta = [
     eyebrow: "King County Communities",
     heading: "King County Cities Served",
     intro: "King County includes a wide range of urban, suburban, waterfront, and estate-oriented markets. Probate, inherited, and trust-related real estate decisions often vary significantly depending on the city, neighborhood, and property type.",
-    outro: "From Seattle and Bellevue to Kirkland, Redmond, Renton, Bothell, Issaquah, and beyond, Real Property Planning helps clients approach estate-related real property decisions with local perspective and valuation-informed guidance.",
+    outro: "From Seattle and Bellevue to Kirkland, Redmond, Renton, Bothell, Issaquah, and beyond, Real Property Planning helps clients approach estate-related real property decisions with local perspective and practical, evidence-based guidance.",
     bg: "bg-secondary",
   },
   {
