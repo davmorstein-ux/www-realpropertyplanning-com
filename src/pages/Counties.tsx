@@ -8,59 +8,78 @@ import RelatedServices from "@/components/RelatedServices";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import mappin3d from "@/assets/real-estate-service-areas-mappin-washington.webp";
 import iconServiceAreas from "@/assets/icons/real-estate-service-areas-map-icon-washington.webp";
 import { services } from "@/lib/service-areas-data";
+import kingCountyLogo from "@/assets/counties/king-county-logo.webp";
+import snohomishCountyLogo from "@/assets/counties/snohomish-county-logo.webp";
+import pierceCountyLogo from "@/assets/counties/pierce-county-logo.webp";
+import kitsapCountyLogo from "@/assets/counties/kitsap-county-logo.webp";
+import skagitCountyLogo from "@/assets/counties/skagit-county-logo.webp";
+import clarkCountyLogo from "@/assets/counties/clark-county-logo.webp";
+import spokaneCountyLogo from "@/assets/counties/spokane-county-logo.webp";
+import thurstonCountyLogo from "@/assets/counties/thurston-county-logo.webp";
+import whatcomCountyLogo from "@/assets/counties/whatcom-county-logo.webp";
+import bentonCountyLogo from "@/assets/counties/benton-county-logo.webp";
 
 const countyCards = [
   {
     county: "King County",
     href: "/king-county",
+    logo: kingCountyLogo,
     intro: "Washington's largest and most competitive real estate market. Estate properties range from Capitol Hill bungalows to Eastside homes valued well over a million dollars — making accurate pricing and experienced coordination especially critical.",
   },
   {
     county: "Snohomish County",
     href: "/snohomish-county",
+    logo: snohomishCountyLogo,
     intro: "Diverse housing stock from established Edmonds neighborhoods to newer Marysville developments. Executors and families here often need help with deferred maintenance, realistic pricing, and coordinating vendors for homes that haven't been updated in decades.",
   },
   {
     county: "Pierce County",
     href: "/pierce-county",
+    logo: pierceCountyLogo,
     intro: "Military-adjacent communities, established Tacoma neighborhoods, and growing suburban areas each present unique challenges for estate sales. Pierce County properties often require careful condition assessment and realistic buyer-pool analysis.",
   },
   {
     county: "Kitsap County",
     href: "/kitsap-county",
+    logo: kitsapCountyLogo,
     intro: "Waterfront properties, naval community transitions, and rural acreage create a market where automated valuations consistently miss the mark. Local knowledge and condition-based pricing are essential here.",
   },
   {
     county: "Skagit County",
     href: "/counties/skagit",
+    logo: skagitCountyLogo,
     intro: "Agricultural properties, small-town homes, and waterfront parcels in the Skagit Valley require a different approach than urban markets. Estate sales here often involve unique zoning, acreage, and condition considerations.",
   },
   {
     county: "Clark County",
     href: "/clark-county-probate-estate-real-estate",
+    logo: clarkCountyLogo,
     intro: "Cross-state families, Portland-area relocation dynamics, and a rapidly growing market make Clark County estate sales uniquely complex — especially for executors coordinating from Oregon or beyond.",
   },
   {
     county: "Spokane County",
     href: "/spokane-county-probate-estate-real-estate",
+    logo: spokaneCountyLogo,
     intro: "Eastern Washington's largest metro area, with a housing market distinct from the Puget Sound region. Out-of-area executors often need hands-on coordination for inherited properties in Spokane's established neighborhoods.",
   },
   {
     county: "Thurston County",
     href: "/thurston-county",
+    logo: thurstonCountyLogo,
     intro: "State capital region with a mix of government-adjacent homes, established neighborhoods, and rural acreage. Retiree transitions and estate planning follow-through are especially common here.",
   },
   {
     county: "Whatcom County",
     href: "/whatcom-county",
+    logo: whatcomCountyLogo,
     intro: "Bellingham and surrounding communities attract second-home owners and retirees, creating frequent distance-ownership challenges when estates need to be settled or seniors need to transition.",
   },
   {
     county: "Benton County",
     href: "/benton-county",
+    logo: bentonCountyLogo,
     intro: "Tri-Cities area properties often involve practical pricing challenges, multi-generational family homes, and executors coordinating from Western Washington or out of state.",
   },
 ];
@@ -114,8 +133,18 @@ const Counties = () => {
               >
                 <div className="card-3d-premium__inner h-full">
                   <div className="card-3d-premium__face flex h-full flex-col px-7 py-7 md:px-8 md:py-8">
-                    <div className="flex items-center gap-3 mb-4">
-                      <img src={mappin3d} alt="" aria-hidden="true" className="w-8 h-8 object-contain shrink-0 transition-transform duration-300 ease-out group-hover:scale-110"  loading="lazy"/>
+                    <div className="flex items-center mb-4" style={{ columnGap: "12px" }}>
+                      <span
+                        className="shrink-0 inline-flex items-center justify-center rounded-full bg-[#F7F5F0] w-9 h-9 md:w-11 md:h-11 transition-transform duration-300 ease-out group-hover:scale-105"
+                        style={{ padding: "4px" }}
+                      >
+                        <img
+                          src={card.logo}
+                          alt={`${card.county} logo`}
+                          className="w-full h-full object-contain"
+                          loading="lazy"
+                        />
+                      </span>
                       <h2 className="font-serif text-xl text-foreground font-semibold group-hover:text-gold transition-colors">
                         {card.county}
                       </h2>
