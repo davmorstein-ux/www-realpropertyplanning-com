@@ -112,7 +112,7 @@ const AboutPlatform = () => {
         <section className="py-16 lg:py-20 bg-secondary">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
-              <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
+              <h2 className="font-serif text-4xl md:text-5xl text-foreground font-bold tracking-tight mb-8">
                 Why I Created Real Property Planning
               </h2>
               <div className="space-y-5 text-muted-foreground text-lg leading-relaxed">
@@ -140,7 +140,7 @@ const AboutPlatform = () => {
         <section className="py-20 lg:py-28 bg-background">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
-              <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
+              <h2 className="font-serif text-4xl md:text-5xl text-foreground font-bold tracking-tight mb-8">
                 What This Is
               </h2>
               <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
@@ -166,7 +166,7 @@ const AboutPlatform = () => {
         <section className="py-20 lg:py-28 bg-secondary">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
-              <h2 className="font-serif text-3xl text-foreground font-semibold mb-8">
+              <h2 className="font-serif text-4xl md:text-5xl text-foreground font-bold tracking-tight mb-10">
                 Who This Is For
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-8">
@@ -174,7 +174,7 @@ const AboutPlatform = () => {
               </p>
               <div className="space-y-8">
                 <div className="bg-card border border-border rounded-xl p-7">
-                  <h3 className="font-serif text-xl text-foreground font-semibold mb-3">
+                  <h3 className="font-serif text-2xl text-foreground font-bold mb-4">
                     Seniors and Their Families
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -182,7 +182,7 @@ const AboutPlatform = () => {
                   </p>
                 </div>
                 <div className="bg-card border border-border rounded-xl p-7">
-                  <h3 className="font-serif text-xl text-foreground font-semibold mb-3">
+                  <h3 className="font-serif text-2xl text-foreground font-bold mb-4">
                     Families Managing Inherited Property or Probate
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -190,7 +190,7 @@ const AboutPlatform = () => {
                   </p>
                 </div>
                 <div className="bg-card border border-border rounded-xl p-7">
-                  <h3 className="font-serif text-xl text-foreground font-semibold mb-3">
+                  <h3 className="font-serif text-2xl text-foreground font-bold mb-4">
                     Professionals Who Serve This Community
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -206,7 +206,7 @@ const AboutPlatform = () => {
         <section className="py-20 lg:py-28 bg-background">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
-              <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
+              <h2 className="font-serif text-4xl md:text-5xl text-foreground font-bold tracking-tight mb-8">
                 Why This Exists
               </h2>
               <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
@@ -234,13 +234,13 @@ const AboutPlatform = () => {
         <section className="py-20 lg:py-28 bg-secondary">
           <div className="container px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
-              <h2 className="font-serif text-3xl text-foreground font-semibold mb-10 text-center">
+              <h2 className="font-serif text-4xl md:text-5xl text-foreground font-bold tracking-tight mb-12 text-center">
                 What You'll Find Here
               </h2>
               <div className="grid md:grid-cols-2 gap-6">
                 {whatYoullFind.map((item, i) => (
                   <div key={i} className="bg-card border border-border rounded-xl p-7">
-                    <h3 className="font-serif text-lg text-foreground font-semibold mb-3">
+                    <h3 className="font-serif text-xl text-foreground font-bold mb-4">
                       {item.heading}
                     </h3>
                     <p className="text-muted-foreground leading-relaxed">
@@ -257,7 +257,7 @@ const AboutPlatform = () => {
         <section className="py-20 lg:py-28 bg-background">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
-              <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
+              <h2 className="font-serif text-4xl md:text-5xl text-foreground font-bold tracking-tight mb-8">
                 Built for Accessibility
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed">
@@ -274,7 +274,7 @@ const AboutPlatform = () => {
         <section className="py-20 lg:py-28 bg-secondary">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
-              <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
+              <h2 className="font-serif text-4xl md:text-5xl text-foreground font-bold tracking-tight mb-8">
                 A Growing Network
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-8">
@@ -302,7 +302,7 @@ const AboutPlatform = () => {
         <section className="py-12 lg:py-16 bg-cream">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
-              <h3 className="font-serif text-xl text-foreground font-semibold mb-3">
+              <h3 className="font-serif text-2xl text-foreground font-bold mb-4">
                 Professional Memberships &amp; Affiliations
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-6">
