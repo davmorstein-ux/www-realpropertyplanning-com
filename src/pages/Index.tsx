@@ -15,8 +15,6 @@ import LeadMagnetBlock from "@/components/LeadMagnetBlock";
 import EducationalPathways from "@/components/EducationalPathways";
 import WhatHappensNext from "@/components/WhatHappensNext";
 import HomepageHero from "@/components/HomepageHero";
-import HowWeHelpCards from "@/components/HowWeHelpCards";
-import HomepageWarmStatement from "@/components/HomepageWarmStatement";
 import HomepageFAQ from "@/components/HomepageFAQ";
 import HomepageTeamSection from "@/components/HomepageTeamSection";
 
@@ -47,13 +45,7 @@ const Index = () => {
       {/* 2. SERVICE NAV TILES */}
       <ServiceNavTiles />
 
-      {/* 3. HOW WE HELP — 3 icon cards */}
-      <HowWeHelpCards />
-
-      {/* 4. WARM STATEMENT + PULLQUOTE */}
-      <HomepageWarmStatement />
-
-      {/* 5. TEAM SECTION */}
+      {/* TEAM SECTION */}
       <HomepageTeamSection />
 
       {/* 6. FAQ */}
