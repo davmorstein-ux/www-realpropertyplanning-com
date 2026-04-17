@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 import GoldCheck3D from "@/components/GoldCheck3D";
 
 import daveHeadshot from "@/assets/david-stein-real-estate-agent-seattle.webp";
+import davidSteinPresidentHeadshot from "@/assets/david-stein-president-real-property-planning.jpg";
 import AgentCredentialBlock from "@/components/AgentCredentialBlock";
 import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
@@ -57,6 +58,30 @@ const About = () => {
         </section>
 
         <TrustStrip />
+
+        {/* Leadership headshot — David Stein */}
+        <section className="py-16 lg:py-20 bg-background">
+          <div className="container px-6 lg:px-8">
+            <figure className="max-w-xs mx-auto text-center">
+              <img
+                src={davidSteinPresidentHeadshot}
+                alt="David Stein, President of Real Property Planning"
+                width={224}
+                height={224}
+                loading="lazy"
+                className="w-56 h-56 mx-auto rounded-full object-cover shadow-md ring-1 ring-border"
+              />
+              <figcaption className="mt-5">
+                <p className="font-serif text-2xl text-foreground font-semibold leading-tight">
+                  David Stein
+                </p>
+                <p className="text-muted-foreground text-base mt-1">
+                  President of Real Property Planning
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
 
         {/* Why I Created Real Property Planning — vision & mission */}
         <section className="py-20 lg:py-28 bg-cream">
