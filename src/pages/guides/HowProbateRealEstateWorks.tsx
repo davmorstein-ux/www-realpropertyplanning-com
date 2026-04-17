@@ -26,11 +26,11 @@ const faqs = [
   },
   {
     question: "Does probate property have to be sold at fair market value?",
-    answer: "Executors and personal representatives have a fiduciary duty to act in the best interest of the estate, which generally means achieving fair market value. David's dual credentials as a broker and certified appraiser help ensure pricing decisions are defensible and well-supported by market data.",
+    answer: "Executors and personal representatives have a fiduciary duty to act in the best interest of the estate, which generally means achieving fair market value. our team's dual credentials as a broker and certified appraiser help ensure pricing decisions are defensible and well-supported by market data.",
   },
   {
     question: "What happens if heirs disagree about selling?",
-    answer: "Disagreements among heirs are common in probate situations. When pricing disputes arise, David provides objective, data-driven market analysis that can help move the conversation forward. Legal questions about authority and heir rights should be directed to the estate attorney.",
+    answer: "Disagreements among heirs are common in probate situations. When pricing disputes arise, Our team provides objective, data-driven market analysis that can help move the conversation forward. Legal questions about authority and heir rights should be directed to the estate attorney.",
   },
   {
     question: "Do I need a specialized agent for probate real estate?",
@@ -133,7 +133,7 @@ const HowProbateRealEstateWorks = () => (
             Coordinating the real estate timeline with the legal process is one of the most important aspects of a successful probate sale. The executor, attorney, and broker need to work together to align property preparation with legal milestones — so the home reaches the market at the right time, in the right condition, at the right price.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            David Stein regularly coordinates with estate attorneys throughout Washington State to ensure the real estate process supports — rather than conflicts with — the overall estate administration timeline.
+            Real Property Planning regularly coordinates with estate attorneys throughout Washington State to ensure the real estate process supports — rather than conflicts with — the overall estate administration timeline.
           </p>
         </div>
       </div>
@@ -148,7 +148,7 @@ const HowProbateRealEstateWorks = () => (
             Pricing probate property is fundamentally different from pricing a standard home sale. Estate properties often have years of deferred maintenance, outdated kitchens and bathrooms, aging mechanical systems, and physical conditions that automated valuation tools and standard market comparisons do not account for.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-6">
-            As both a licensed real estate broker and a Washington State certified residential appraiser, David evaluates probate properties with a depth of analysis that goes beyond a standard comparative market analysis. He assesses the property's effective age, functional utility, physical depreciation, and market position — then develops a pricing strategy that reflects what buyers will actually pay given the property's real condition.
+            As both a licensed real estate broker and a Washington State certified residential appraiser, Our team evaluates probate properties with a depth of analysis that goes beyond a standard comparative market analysis. He assesses the property's effective age, functional utility, physical depreciation, and market position — then develops a pricing strategy that reflects what buyers will actually pay given the property's real condition.
           </p>
           <p className="text-muted-foreground leading-relaxed">
             This matters because overpricing leads to extended market time and declining buyer interest, while underpricing can create fiduciary concerns and leave estate value on the table. Accurate, defensible pricing protects both the executor's fiduciary obligations and the estate's financial interests. Learn more about <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">why valuation expertise matters in estate sales</Link>.
@@ -162,7 +162,7 @@ const HowProbateRealEstateWorks = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <ProofCallout
-            quote="David's dual background in brokerage and appraisal gave us confidence that the property was priced correctly. He made a complicated situation feel manageable."
+            quote="our team's dual background in brokerage and appraisal gave us confidence that the property was priced correctly. He made a complicated situation feel manageable."
             attribution="Family Member, King County"
             context="Probate property sale"
             variant="accent"
@@ -173,7 +173,7 @@ const HowProbateRealEstateWorks = () => (
 
     <MidPageCTA
       heading="Navigating a Probate Property Situation?"
-      body="David provides a no-pressure consultation to review the property, discuss timing and legal coordination, and outline practical next steps."
+      body="Our team provides a no-pressure consultation to review the property, discuss timing and legal coordination, and outline practical next steps."
       buttonText="Schedule a Consultation"
       microcopy="No pressure. Just practical guidance for your situation."
     />
@@ -190,7 +190,7 @@ const HowProbateRealEstateWorks = () => (
             Common preparation needs include removing decades of accumulated personal property, addressing deferred maintenance issues (roof, plumbing, electrical), updating cosmetic elements that affect buyer perception, clearing landscaping, and ensuring the property is safe and presentable for showings.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            David coordinates this entire process — scheduling vendors, managing timelines, and overseeing the work so the executor does not have to be on-site or manage contractors personally. He evaluates each potential improvement through a return-on-investment lens, advising the executor on which investments are likely to increase the sale price enough to justify the cost. See the full <Link to="/how-the-process-works" className="text-accent hover:text-gold underline underline-offset-4">step-by-step sale process</Link>.
+            Our team coordinates this entire process — scheduling vendors, managing timelines, and overseeing the work so the executor does not have to be on-site or manage contractors personally. He evaluates each potential improvement through a return-on-investment lens, advising the executor on which investments are likely to increase the sale price enough to justify the cost. See the full <Link to="/how-the-process-works" className="text-accent hover:text-gold underline underline-offset-4">step-by-step sale process</Link>.
           </p>
         </div>
       </div>
@@ -233,7 +233,7 @@ const HowProbateRealEstateWorks = () => (
         <div className="max-w-3xl mx-auto">
           <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">How Does a Broker With Appraisal Credentials Help?</h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-            Most real estate agents handle one or two probate transactions in their career. David Stein focuses his practice on probate, estate, and transition-related real estate — bringing both brokerage expertise and certified appraisal knowledge to every engagement.
+            Most real estate agents handle one or two probate transactions in their career. Real Property Planning focuses his practice on probate, estate, and transition-related real estate — bringing both brokerage expertise and certified appraisal knowledge to every engagement.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-6">
             This dual background means the executor and attorney receive more accurate property assessments, stronger pricing strategy, better preparation guidance, and more confident decision-making support throughout the process. It also means David can anticipate appraisal-related challenges that could derail a buyer's financing — and address them before they become problems.
@@ -290,7 +290,7 @@ const HowProbateRealEstateWorks = () => (
             Have a Probate Property Situation to Discuss?
           </h2>
           <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">
-            David provides confidential, no-pressure consultations for executors, attorneys, trustees, and families dealing with probate property throughout Washington State.
+            Our team provides confidential, no-pressure consultations for executors, attorneys, trustees, and families dealing with probate property throughout Washington State.
           </p>
           <p className="text-primary-foreground/50 text-base mb-8">
             A short conversation to understand your situation, answer questions, and plan practical next steps.

@@ -41,13 +41,13 @@ const whatFamiliesNeed = [
 const coordinationPartners = [
   {
     title: "Family Members",
-    description: "Adult children, spouses, and extended family members are almost always involved — and they don't always agree. Some family members want to sell quickly; others want to hold on. Some are local; others are managing everything from another state. David works with all of them, providing consistent communication and clear guidance that keeps the process moving without pressure.",
+    description: "Adult children, spouses, and extended family members are almost always involved — and they don't always agree. Some family members want to sell quickly; others want to hold on. Some are local; others are managing everything from another state. Our team works with all of them, providing consistent communication and clear guidance that keeps the process moving without pressure.",
   },
   {
     title: "Care Professionals",
     description: (
       <>
-        Senior move managers, care coordinators, social workers, and placement specialists are often working alongside families during a transition. David coordinates with the care team to make sure the real estate timeline fits the broader plan — not the other way around. Real Property Planning has established relationships with senior move professionals in the Puget Sound area, including{" "}
+        Senior move managers, care coordinators, social workers, and placement specialists are often working alongside families during a transition. Our team coordinates with the care team to make sure the real estate timeline fits the broader plan — not the other way around. Real Property Planning has established relationships with senior move professionals in the Puget Sound area, including{" "}
         <a href="https://hbmovemanagement.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-gold underline underline-offset-4">HB Move Management</a>, a division of Hansen Bros. Moving &amp; Storage, one of the most experienced senior moving services in Western Washington.
       </>
     ),
@@ -56,7 +56,7 @@ const coordinationPartners = [
     title: "Trusted Advisors",
     description: (
       <>
-        Attorneys, financial planners, CPAs, and fiduciaries need the real estate side of a senior transition handled with accuracy and professionalism. David's background as a{" "}
+        Attorneys, financial planners, CPAs, and fiduciaries need the real estate side of a senior transition handled with accuracy and professionalism. our team's background as a{" "}
         <Link to="/real-estate-appraiser" className="text-accent hover:text-gold underline underline-offset-4">certified appraiser</Link> means advisors receive reliable valuation guidance — not listing estimates — which matters for financial planning, Medicaid planning, and estate documentation purposes.
       </>
     ),
@@ -139,7 +139,7 @@ const SeniorTransitions = () => {
 
       <DirectAnswerBlock
         question="How does Real Property Planning support senior housing transitions?"
-        answer="Real Property Planning provides step-by-step guidance for seniors and families navigating the sale of a longtime home — whether the next step is assisted living, a memory care community, a smaller residence, or a move closer to family. As both a licensed real estate broker and a Washington State Certified Residential Appraiser, David Stein brings something most agents can't offer: an honest, valuation-based understanding of what the home is actually worth in its current condition — not an inflated number designed to win a listing."
+        answer="Real Property Planning provides step-by-step guidance for seniors and families navigating the sale of a longtime home — whether the next step is assisted living, a memory care community, a smaller residence, or a move closer to family. As both a licensed real estate broker and a Washington State Certified Residential Appraiser, Real Property Planning brings something most agents can't offer: an honest, valuation-based understanding of what the home is actually worth in its current condition — not an inflated number designed to win a listing."
         supportBullets={[
           "Patient, respectful coordination that honors the emotional weight of the transition",
           "Valuation-informed pricing based on actual condition — not automated estimates or pressure to list quickly",
@@ -148,7 +148,7 @@ const SeniorTransitions = () => {
           "Referral connections to trusted senior move managers, care advisors, and estate professionals throughout the Puget Sound area",
         ]}
         supportSteps={[
-          { label: "Your Timeline", desc: "The process is built around your family's timeline, not a sales calendar. From initial conversation through closing, David coordinates preparation, pricing, and the sale itself — keeping every family member and professional advisor informed at every step." },
+          { label: "Your Timeline", desc: "The process is built around your family's timeline, not a sales calendar. From initial conversation through closing, Our team coordinates preparation, pricing, and the sale itself — keeping every family member and professional advisor informed at every step." },
         ]}
       />
 
@@ -176,7 +176,7 @@ const SeniorTransitions = () => {
               When Do Families Reach Out About Senior Home Sales?
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              There is no single moment that brings a family to this conversation. Some reach out after a health event changes everything overnight. Others have been watching a parent slow down for years and finally feel it's time to act. David works with families across King County, Snohomish County, Pierce County, Kitsap County, and throughout Washington State — in situations including:
+              There is no single moment that brings a family to this conversation. Some reach out after a health event changes everything overnight. Others have been watching a parent slow down for years and finally feel it's time to act. Our team works with families across King County, Snohomish County, Pierce County, Kitsap County, and throughout Washington State — in situations including:
             </p>
             <ul className="space-y-4">
               {transitionSituations.map((item, index) => (
@@ -227,7 +227,7 @@ const SeniorTransitions = () => {
               The home may have decades of deferred maintenance. The seller may be emotionally attached in ways that make pricing conversations difficult. Family members may disagree about timing or repairs. There may be a care team, an attorney, and a financial planner all involved — each with their own timeline and priorities. And the senior themselves may still be living in the home during the sale process.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              David Stein's dual background as a licensed real estate broker and a Washington State{" "}
+              Real Property Planning's dual background as a licensed real estate broker and a Washington State{" "}
               <Link to="/real-estate-appraiser" className="text-accent hover:text-gold underline underline-offset-4">Certified Residential Appraiser</Link> means he approaches every senior transition sale differently than a typical listing agent. He can assess the home's true condition and value before any pricing conversation begins — which means families get honest guidance from the start, not a number that sounds good but leads to price reductions later.
             </p>
             <p className="text-muted-foreground leading-relaxed">
@@ -248,7 +248,7 @@ const SeniorTransitions = () => {
               Coordinating With Family, Care Professionals &amp; Trusted Advisors
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Senior transitions rarely involve just one person. David works collaboratively with everyone involved to keep the real estate process aligned with the broader plan:
+              Senior transitions rarely involve just one person. Our team works collaboratively with everyone involved to keep the real estate process aligned with the broader plan:
             </p>
             <div className="space-y-6">
               {coordinationPartners.map((partner, index) => (
@@ -259,7 +259,7 @@ const SeniorTransitions = () => {
               ))}
             </div>
             <p className="text-muted-foreground mt-8 leading-relaxed">
-              Attorneys and financial planners who work with senior clients can learn more about David's <Link to="/for-attorneys" className="text-accent hover:text-gold underline underline-offset-4">referral approach for legal professionals</Link> or the <Link to="/how-the-process-works" className="text-accent hover:text-gold underline underline-offset-4">step-by-step sale process</Link>.
+              Attorneys and financial planners who work with senior clients can learn more about our team's <Link to="/for-attorneys" className="text-accent hover:text-gold underline underline-offset-4">referral approach for legal professionals</Link> or the <Link to="/how-the-process-works" className="text-accent hover:text-gold underline underline-offset-4">step-by-step sale process</Link>.
             </p>
           </div>
         </div>
@@ -267,7 +267,7 @@ const SeniorTransitions = () => {
 
       <MidPageCTA
         heading="Planning a Senior Housing Transition?"
-        body="David works at the family's pace — with patience, clear communication, and experienced coordination."
+        body="Our team works at the family's pace — with patience, clear communication, and experienced coordination."
         buttonText="Schedule a Consultation"
         microcopy="No pressure. Just practical guidance for your family's situation."
       />
@@ -289,17 +289,17 @@ const SeniorTransitions = () => {
                 {
                   value: "condition",
                   q: "What about a home with decades of deferred maintenance?",
-                  a: "This is one of the most common situations David works with, and it's where his appraisal background genuinely helps. Rather than guessing what the home might sell for, David can assess the property's current condition and give families an honest picture of their options: sell as-is, make targeted improvements, or something in between. He can also help coordinate the cleanout, repairs, and staging process through trusted local contractors and service providers — so families don't have to manage that on their own.",
+                  a: "This is one of the most common situations Our team works with, and it's where his appraisal background genuinely helps. Rather than guessing what the home might sell for, David can assess the property's current condition and give families an honest picture of their options: sell as-is, make targeted improvements, or something in between. He can also help coordinate the cleanout, repairs, and staging process through trusted local contractors and service providers — so families don't have to manage that on their own.",
                 },
                 {
                   value: "remote",
                   q: "Can families coordinate from out of state?",
-                  a: "Yes — and this is more common than most people expect. Many of the families David works with have adult children managing the process from out of state, sometimes from across the country. David provides consistent written updates, is available for calls at times that work across time zones, and can manage the full property preparation and sale process locally so family members don't need to be physically present for every step.",
+                  a: "Yes — and this is more common than most people expect. Many of the families Our team works with have adult children managing the process from out of state, sometimes from across the country. Our team provides consistent written updates, is available for calls at times that work across time zones, and can manage the full property preparation and sale process locally so family members don't need to be physically present for every step.",
                 },
                 {
                   value: "timeline",
                   q: "How long does it typically take to sell a senior's home?",
-                  a: "There's no single answer, because every family's situation is different. Some families are ready to move quickly; others need months of preparation before the home is ready to list. David works backward from the family's actual timeline — whether that's driven by a care facility move-in date, a financial need, or simply when the family feels ready. The goal is a sale that happens at the right time, not just the fastest time.",
+                  a: "There's no single answer, because every family's situation is different. Some families are ready to move quickly; others need months of preparation before the home is ready to list. Our team works backward from the family's actual timeline — whether that's driven by a care facility move-in date, a financial need, or simply when the family feels ready. The goal is a sale that happens at the right time, not just the fastest time.",
                 },
               ].map((item) => (
                 <AccordionItem key={item.value} value={item.value} className="bg-card border border-border rounded-2xl overflow-hidden data-[state=open]:border-gold/25 transition-colors">
@@ -321,7 +321,7 @@ const SeniorTransitions = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <ProofCallout
-              quote="We appreciated David's patience, thoughtful communication, and realistic guidance throughout the sale of our family property."
+              quote="We appreciated our team's patience, thoughtful communication, and realistic guidance throughout the sale of our family property."
               attribution="Family Review"
               context="Inherited home and sale preparation"
               variant="accent"

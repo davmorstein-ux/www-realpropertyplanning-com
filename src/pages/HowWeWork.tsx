@@ -12,19 +12,19 @@ import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washingto
 const contentBlocks = [
   {
     heading: "Clear Real Estate Guidance",
-    text: "David Stein helps clients and professional advisors understand property condition, likely market position, preparation options, pricing considerations, and the practical steps involved in bringing real estate to market.",
+    text: "Real Property Planning helps clients and professional advisors understand property condition, likely market position, preparation options, pricing considerations, and the practical steps involved in bringing real estate to market.",
   },
   {
     heading: "Valuation-Informed Perspective",
-    text: "As both a real estate broker and Washington state certified real estate appraiser, David Stein brings added perspective to questions of value, marketability, and sale strategy during estate-related property transitions.",
+    text: "As both a real estate broker and Washington state certified real estate appraiser, Real Property Planning brings added perspective to questions of value, marketability, and sale strategy during estate-related property transitions.",
   },
   {
     heading: "Coordination With Professional Advisors",
-    text: "David Stein works alongside attorneys, fiduciaries, trustees, and other advisors by providing real-estate-related insight, communication, and follow-through within the scope of his professional role.",
+    text: "Real Property Planning works alongside attorneys, fiduciaries, trustees, and other advisors by providing real-estate-related insight, communication, and follow-through within the scope of his professional role.",
   },
   {
     heading: "Support for Executors and Families",
-    text: "Executors, personal representatives, trustees, heirs, and family members are often navigating unfamiliar responsibilities. David Stein helps bring order, clarity, and a more structured process to the real estate side of those decisions.",
+    text: "Executors, personal representatives, trustees, heirs, and family members are often navigating unfamiliar responsibilities. Real Property Planning helps bring order, clarity, and a more structured process to the real estate side of those decisions.",
   },
   {
     heading: "Focus on Important Property Transitions",
@@ -32,7 +32,7 @@ const contentBlocks = [
   },
   {
     heading: "Experience Across Washington State",
-    text: "David Stein serves clients throughout Washington State, with deep experience in King County, Snohomish County, Pierce County, and Kitsap County. Through eXp Realty's referral network, he can also connect clients with trusted brokers across the U.S. and internationally.",
+    text: "Real Property Planning serves clients throughout Washington State, with deep experience in King County, Snohomish County, Pierce County, and Kitsap County. Through eXp Realty's referral network, he can also connect clients with trusted brokers across the U.S. and internationally.",
   },
 ];
 
@@ -40,11 +40,11 @@ const HowWeWork = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="How David Stein Works With Attorneys, Executors, Trustees & Families | Washington State"
-        description="Learn how David Stein collaborates with attorneys, executors, trustees, and families to provide real estate guidance, valuation insight, and practical coordination during probate, trust, and estate property transitions."
+        title="How Real Property Planning Works With Attorneys, Executors, Trustees & Families | Washington State"
+        description="Learn how Real Property Planning collaborates with attorneys, executors, trustees, and families to provide real estate guidance, valuation insight, and practical coordination during probate, trust, and estate property transitions."
         jsonLd={articleSchema({
-          headline: "How David Stein Works With Attorneys, Executors, Trustees & Families",
-          description: "How David Stein collaborates with attorneys, executors, trustees, and families during probate, trust, and estate property transitions.",
+          headline: "How Real Property Planning Works With Attorneys, Executors, Trustees & Families",
+          description: "How Real Property Planning collaborates with attorneys, executors, trustees, and families during probate, trust, and estate property transitions.",
           url: "/how-we-work",
           datePublished: "2025-01-15",
           dateModified: "2026-03-15",
@@ -63,10 +63,10 @@ const HowWeWork = () => {
               Professional Real Estate Resource
             </p>
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
-              How David Stein Works With Attorneys, Executors, Trustees, and Families
+              How Real Property Planning Works With Attorneys, Executors, Trustees, and Families
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed">
-              Important property transitions often involve more than a standard home sale. Probate, trust administration, inherited real estate, and estate-related property decisions can require coordination among attorneys, fiduciaries, executors, trustees, personal representatives, heirs, and family members. Important property transitions often involve more than a standard home sale. Probate, trust administration, inherited real estate, and estate-related property decisions can require coordination among attorneys, fiduciaries, executors, trustees, personal representatives, heirs, and family members. David Stein works as a real estate and valuation resource to help bring structure, market clarity, and experienced guidance to the real-property side of these matters throughout Washington State.
+              Important property transitions often involve more than a standard home sale. Probate, trust administration, inherited real estate, and estate-related property decisions can require coordination among attorneys, fiduciaries, executors, trustees, personal representatives, heirs, and family members. Important property transitions often involve more than a standard home sale. Probate, trust administration, inherited real estate, and estate-related property decisions can require coordination among attorneys, fiduciaries, executors, trustees, personal representatives, heirs, and family members. Real Property Planning works as a real estate and valuation resource to help bring structure, market clarity, and experienced guidance to the real-property side of these matters throughout Washington State.
             </p>
           </div>
         </div>
@@ -95,10 +95,10 @@ const HowWeWork = () => {
             {/* CTA */}
             <div className="mt-16 bg-card border border-border rounded-[18px] px-7 py-9 md:px-10 md:py-11 text-center">
               <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-4">
-                Discuss a Property Transition With David Stein
+                Discuss a Property Transition With Real Property Planning
               </h2>
               <p className="text-muted-foreground leading-relaxed text-base md:text-lg max-w-3xl mx-auto mb-8">
-                If you are an attorney, executor, trustee, fiduciary, or family member navigating probate property, inherited real estate, or trust-owned property anywhere in Washington State, David Stein provides experienced real estate guidance grounded in market knowledge, valuation insight, and a practical understanding of complex property transitions.
+                If you are an attorney, executor, trustee, fiduciary, or family member navigating probate property, inherited real estate, or trust-owned property anywhere in Washington State, Real Property Planning provides experienced real estate guidance grounded in market knowledge, valuation insight, and a practical understanding of complex property transitions.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
                 <Link to="/contact">

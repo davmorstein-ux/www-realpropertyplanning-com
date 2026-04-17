@@ -113,11 +113,11 @@ const timingConsiderations = [
   },
   {
     title: "During Active Probate",
-    text: "Once legal authority is established, David coordinates preparation, cleanout, pricing strategy, and the listing timeline — always in alignment with the legal proceedings and any court requirements. Attorneys receive regular updates and have a single reliable point of contact for all property-related questions. Family members stay informed without being overwhelmed.",
+    text: "Once legal authority is established, Our team coordinates preparation, cleanout, pricing strategy, and the listing timeline — always in alignment with the legal proceedings and any court requirements. Attorneys receive regular updates and have a single reliable point of contact for all property-related questions. Family members stay informed without being overwhelmed.",
   },
   {
     title: "Post-Probate or Trust Distribution",
-    text: "Once authority is clear and the estate is ready to move forward, David manages the full sale process — preparation, professional marketing, negotiation, and closing. For properties that need work, each improvement is evaluated for return on investment before any money is spent.",
+    text: "Once authority is clear and the estate is ready to move forward, Our team manages the full sale process — preparation, professional marketing, negotiation, and closing. For properties that need work, each improvement is evaluated for return on investment before any money is spent.",
   },
 ];
 
@@ -189,7 +189,7 @@ const ProbateEstateSales = () => {
               <Link to="/for-attorneys" className="text-gold hover:text-gold/80 underline underline-offset-4 transition-colors">estate attorney</Link>, and out-of-state heirs all need the same information at the same time. And the property keeps costing the estate money — taxes, insurance, utilities — every week it sits.
             </p>
             <p className="text-primary-foreground/70 text-base md:text-lg leading-relaxed mb-5">
-              Real Property Planning handles probate listings as their own discipline. David Stein's dual credential as a licensed broker and a Washington State Certified Residential Appraiser means the price you bring to the court file is the same price the market will support — and the documentation is already in your fiduciary record. Serving{" "}
+              Real Property Planning handles probate listings as their own discipline. Real Property Planning's dual credential as a licensed broker and a Washington State Certified Residential Appraiser means the price you bring to the court file is the same price the market will support — and the documentation is already in your fiduciary record. Serving{" "}
               <Link to="/counties" className="text-gold hover:text-gold/80 underline underline-offset-4 transition-colors">King, Snohomish, Pierce, and Kitsap Counties</Link>, with statewide coordination for out-of-state executors.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -252,7 +252,7 @@ const ProbateEstateSales = () => {
               ))}
             </ul>
             <p className="text-muted-foreground text-[17px] leading-[1.85]">
-              David's dual background as a licensed broker and a{" "}
+              our team's dual background as a licensed broker and a{" "}
               <Link to="/real-estate-appraiser" className="text-accent hover:text-gold underline underline-offset-4">Washington State Certified Residential Appraiser</Link>{" "}
               means he approaches these situations differently than a standard listing agent. Every pricing decision is grounded in methodology. Every repair recommendation is evaluated through a{" "}
               <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">return-on-investment</Link>{" "}
@@ -329,7 +329,7 @@ const ProbateEstateSales = () => {
               <Link to="/guides/out-of-state-families" className="text-accent hover:text-gold underline underline-offset-4">executors managing property from out of state</Link>, the entire process can be handled remotely — with photo updates, digital document signing, and regular calls to keep you informed without requiring you to travel for every step.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Whether the property is a mid-century rambler in Shoreline with decades of deferred maintenance or a waterfront home on Mercer Island held in a family trust, David brings the same structured approach: assess, plan, prepare, price, market, and close — with clear communication at every step.
+              Whether the property is a mid-century rambler in Shoreline with decades of deferred maintenance or a waterfront home on Mercer Island held in a family trust, Our team brings the same structured approach: assess, plan, prepare, price, market, and close — with clear communication at every step.
             </p>
           </div>
         </div>
@@ -372,14 +372,14 @@ const ProbateEstateSales = () => {
       <ClientReviewsSection
         reviews={probateReviews}
         heading="Client Reviews & Experiences"
-        subheading="Feedback from clients and professionals who worked with David on probate and estate property situations."
+        subheading="Feedback from clients and professionals who worked with our team on probate and estate property situations."
         background="bg-secondary"
       />
 
       <RealClientSituations
         studies={probateCaseStudies}
         heading="Real Client Situations"
-        subheading="Examples of how David has helped executors and families handle complex probate property transitions."
+        subheading="Examples of how Our team has helped executors and families handle complex probate property transitions."
         background="bg-background"
         showCTA
       />
@@ -423,7 +423,7 @@ const ProbateEstateSales = () => {
               is just beginning, actively underway, or nearing completion, a short conversation can help you understand your options and develop a practical next step.
             </p>
             <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
-              David works with{" "}
+              Our team works with{" "}
               <Link to="/executors" className="text-gold hover:text-gold/80 underline underline-offset-4 transition-colors">executors</Link>,{" "}
               <Link to="/for-attorneys" className="text-gold hover:text-gold/80 underline underline-offset-4 transition-colors">attorneys</Link>, and families throughout{" "}
               <Link to="/counties" className="text-gold hover:text-gold/80 underline underline-offset-4 transition-colors">King County, Snohomish County, Pierce County, Kitsap County</Link>, and across Washington State. Through eXp Realty's national referral network, he can also connect{" "}

@@ -15,7 +15,7 @@ const faqs = [
   },
   {
     question: "Can Real Property Planning help if we don't know what to do yet?",
-    answer: "Absolutely. Many families reach out before they have a clear plan. A confidential conversation with David Stein can help you understand your options, identify next steps, and determine which professionals you may need to involve.",
+    answer: "Absolutely. Many families reach out before they have a clear plan. A confidential conversation with Real Property Planning can help you understand your options, identify next steps, and determine which professionals you may need to involve.",
   },
   {
     question: "What types of professionals are typically involved in an estate or senior transition?",
@@ -23,7 +23,7 @@ const faqs = [
   },
   {
     question: "Is Real Property Planning a referral service?",
-    answer: "No. Real Property Planning is a professional real estate brokerage led by David Stein, a licensed broker and certified appraiser. The resource pages on this site are provided as a helpful starting point — not as paid referrals or endorsements.",
+    answer: "No. Real Property Planning is a professional real estate brokerage led by Real Property Planning, a licensed broker and certified appraiser. The resource pages on this site are provided as a helpful starting point — not as paid referrals or endorsements.",
   },
 ];
 import { Button } from "@/components/ui/button";
@@ -140,7 +140,7 @@ const helpfulGuides = [
   {
     href: "/how-the-process-works",
     title: "How the Process Works",
-    description: "A step-by-step overview of how David guides clients from initial conversation through closing.",
+    description: "A step-by-step overview of how Our team guides clients from initial conversation through closing.",
   },
 ];
 
@@ -407,7 +407,7 @@ const TransitionResources = () => {
             <p className="text-muted-foreground text-base md:text-[17px] leading-relaxed">
               With over 20 years of experience and dual credentials as a
               licensed real estate broker and state-certified residential
-              appraiser, David Stein brings the market knowledge, valuation
+              appraiser, Real Property Planning brings the market knowledge, valuation
               insight, and professional sensitivity that these situations
               require. Real Property Planning serves families and professionals
               throughout Washington State.

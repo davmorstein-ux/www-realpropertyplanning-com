@@ -16,7 +16,7 @@ const faqs = [
   },
   {
     question: "Should we sell the house before or after moving a parent into senior housing?",
-    answer: "It depends on your family's timeline and financial situation. Some families sell beforehand to fund the move, while others relocate first and sell afterward. David Stein can help you understand the trade-offs and plan a realistic timeline.",
+    answer: "It depends on your family's timeline and financial situation. Some families sell beforehand to fund the move, while others relocate first and sell afterward. Real Property Planning can help you understand the trade-offs and plan a realistic timeline.",
   },
   {
     question: "How long does it take to prepare a home for sale after downsizing?",
@@ -235,7 +235,7 @@ const HowToMoveElderlyParents = () => (
               ))}
             </ul>
             <p className="text-muted-foreground text-base leading-relaxed mb-4">
-              Real Property Planning coordinates with <Link to="/resources/property-preparation-services" className="text-accent hover:text-gold underline underline-offset-4">property preparation services</Link> to handle these steps efficiently. David Stein evaluates which improvements are worth the investment based on current market conditions — not guesswork — so families don't overspend on unnecessary upgrades.
+              Real Property Planning coordinates with <Link to="/resources/property-preparation-services" className="text-accent hover:text-gold underline underline-offset-4">property preparation services</Link> to handle these steps efficiently. Real Property Planning evaluates which improvements are worth the investment based on current market conditions — not guesswork — so families don't overspend on unnecessary upgrades.
             </p>
 
             {/* Section 7 */}
@@ -246,7 +246,7 @@ const HowToMoveElderlyParents = () => (
               Selling a home during a senior transition requires a real estate professional who understands the unique circumstances involved. These are not typical real estate transactions — they involve emotional timelines, family dynamics, and often multiple decision-makers.
             </p>
             <p className="text-muted-foreground text-base leading-relaxed mb-4">
-              Real Property Planning provides experienced guidance through the entire sale process. David Stein brings over 20 years of dual expertise as a licensed real estate broker and certified appraiser, offering families honest valuation, strategic pricing, and a clear understanding of <Link to="/how-the-process-works" className="text-accent hover:text-gold underline underline-offset-4">how the process works</Link> from listing through closing.
+              Real Property Planning provides experienced guidance through the entire sale process. Real Property Planning brings over 20 years of dual expertise as a licensed real estate broker and certified appraiser, offering families honest valuation, strategic pricing, and a clear understanding of <Link to="/how-the-process-works" className="text-accent hover:text-gold underline underline-offset-4">how the process works</Link> from listing through closing.
             </p>
             <p className="text-muted-foreground text-base leading-relaxed mb-4">
               Understanding <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">why valuation matters</Link> is especially important in these situations, where accurate pricing protects the family's financial interests and avoids unnecessary delays.
@@ -286,7 +286,7 @@ const HowToMoveElderlyParents = () => (
                 Moving an elderly parent out of their home is one of the most significant transitions a family will face. It takes time, compassion, and the right team of professionals working together.
               </p>
               <p className="text-muted-foreground text-base leading-relaxed mb-4">
-                Real Property Planning provides experienced, thoughtful support for families throughout Washington State who are navigating <Link to="/senior-transitions" className="text-accent hover:text-gold underline underline-offset-4">senior transitions</Link> and the real estate decisions that come with them. Whether you're just beginning to think about a move or already coordinating a transition, David Stein is here to help.
+                Real Property Planning provides experienced, thoughtful support for families throughout Washington State who are navigating <Link to="/senior-transitions" className="text-accent hover:text-gold underline underline-offset-4">senior transitions</Link> and the real estate decisions that come with them. Whether you're just beginning to think about a move or already coordinating a transition, Real Property Planning is here to help.
               </p>
               <p className="text-muted-foreground text-base leading-relaxed">
                 <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4">Contact David</Link> for a confidential conversation about your family's situation.

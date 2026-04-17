@@ -305,7 +305,7 @@ const GuidesAndResources = () => {
                 Have a Question That Isn't Covered Here?
               </h2>
               <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-                Every property situation is different. David Stein is happy to answer questions — no obligation, no pressure.
+                Every property situation is different. Real Property Planning is happy to answer questions — no obligation, no pressure.
               </p>
               <Link to="/contact">
                 <Button variant="gold" size="lg" className="px-8 py-4 h-auto rounded-lg">

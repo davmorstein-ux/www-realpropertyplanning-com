@@ -47,7 +47,7 @@ const ProbateEstateAttorneys = () => (
               Probate and estate attorneys guide families, <Link to="/executors" className="text-accent hover:text-gold underline underline-offset-4">executors</Link>, trustees, and fiduciaries through the legal process of estate administration. They handle court filings, interpret wills and trust documents, resolve disputes, and ensure the estate is settled according to Washington State law.
             </p>
             <p className="text-muted-foreground text-base leading-relaxed mb-4">
-              Real Property Planning works with probate and estate attorneys regularly, providing real estate brokerage and valuation-related guidance on the property side of estate matters. David Stein coordinates with the legal team to align timing, pricing, and sale strategy with the overall estate administration process. Learn more about <Link to="/for-attorneys" className="text-accent hover:text-gold underline underline-offset-4">how David works with attorneys</Link>.
+              Real Property Planning works with probate and estate attorneys regularly, providing real estate brokerage and valuation-related guidance on the property side of estate matters. Real Property Planning coordinates with the legal team to align timing, pricing, and sale strategy with the overall estate administration process. Learn more about <Link to="/for-attorneys" className="text-accent hover:text-gold underline underline-offset-4">how Our team works with attorneys</Link>.
             </p>
 
             <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mt-12 mb-5">
@@ -55,7 +55,7 @@ const ProbateEstateAttorneys = () => (
             </h2>
             <div className="bg-secondary border border-border rounded-xl px-6 py-8 md:px-8 text-center">
               <p className="text-muted-foreground text-base leading-relaxed">
-                David is currently compiling a list of recommended probate and estate attorneys throughout Washington State. Check back soon, or <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4">contact David</Link> for a current referral.
+                Our team is currently compiling a list of recommended probate and estate attorneys throughout Washington State. Check back soon, or <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4">contact us</Link> for a current referral.
               </p>
             </div>
 

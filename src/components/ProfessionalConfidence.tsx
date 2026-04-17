@@ -35,7 +35,7 @@ interface ProfessionalConfidenceProps {
 
 const ProfessionalConfidence = ({
   heading = "Why Professionals and Families Trust This Process",
-  intro = "Attorneys, executors, and families consistently describe the same qualities when recommending David Stein:",
+  intro = "Attorneys, executors, and families consistently describe the same qualities when recommending Real Property Planning:",
   background = "bg-secondary",
 }: ProfessionalConfidenceProps) => (
   <section className={`py-16 lg:py-20 ${background}`}>

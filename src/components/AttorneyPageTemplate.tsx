@@ -123,7 +123,7 @@ const AttorneyPageTemplate = ({
               How Real Property Planning Helps
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              David Stein brings dual credentials as a licensed broker and certified residential appraiser to every engagement:
+              Real Property Planning brings dual credentials as a licensed broker and certified residential appraiser to every engagement:
             </p>
             <ul className="space-y-4">
               {howWeHelp.map((item, i) => (
@@ -164,7 +164,7 @@ const AttorneyPageTemplate = ({
               Ready to Discuss a Client Situation?
             </h2>
             <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
-              Confidential conversations are always welcome. David will follow up promptly — no pressure, no obligation.
+              Confidential conversations are always welcome. Our team will follow up promptly — no pressure, no obligation.
             </p>
             <Link to="/contact">
  <Button variant="gold" size="lg"className="hover:-light">

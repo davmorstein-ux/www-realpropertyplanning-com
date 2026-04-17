@@ -74,7 +74,7 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
         title={city.seoTitle || `Probate & Estate Real Estate in ${city.name}, WA | Real Property Planning`}
         description={city.seoDescription || (city.descriptor
           ? `${city.descriptor} — Probate, estate, and senior transition guidance in ${city.name}, ${city.county}.`
-          : `Probate, estate, and senior transition real estate guidance in ${city.name}, ${city.county}. Licensed broker and certified appraiser David Stein.`
+          : `Probate, estate, and senior transition real estate guidance in ${city.name}, ${city.county}. Licensed broker and certified appraiser Real Property Planning.`
         )}
         noindex={!tier1}
       />

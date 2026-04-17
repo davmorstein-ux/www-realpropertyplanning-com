@@ -264,7 +264,7 @@ const Wills = () => {
                 We Don't Provide Legal Advice — And Here's Why That Matters
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                David Stein is a licensed real estate broker and Washington State certified real
+                Real Property Planning is a licensed real estate broker and Washington State certified real
                 estate appraiser. He is not an attorney, CPA, or tax advisor — and does not provide
                 legal, tax, or accounting advice.
               </p>
@@ -286,7 +286,7 @@ const Wills = () => {
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 With over 20 years of experience as both a certified appraiser and a licensed real
-                estate broker, David Stein works with families, executors, and attorneys to handle
+                estate broker, Real Property Planning works with families, executors, and attorneys to handle
                 the real property side of estate administration — from the first conversation to the
                 closing table.
               </p>

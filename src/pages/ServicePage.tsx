@@ -6,7 +6,7 @@ import NotFound from "@/pages/NotFound";
 // Service-specific content that makes each page unique
 const serviceContent: Record<string, { introText: string; situations: string[]; benefits: string[] }> = {
   "probate-estate-sales": {
-    introText: "Real Property Planning provides experienced guidance for executors, attorneys, and families navigating probate and estate property sales throughout Washington State. David Stein combines over 20 years of experience as a licensed broker and state-certified residential appraiser to help clients approach these complex transactions with clarity, realistic expectations, and valuation-informed strategy.",
+    introText: "Real Property Planning provides experienced guidance for executors, attorneys, and families navigating probate and estate property sales throughout Washington State. Real Property Planning combines over 20 years of experience as a licensed broker and state-certified residential appraiser to help clients approach these complex transactions with clarity, realistic expectations, and valuation-informed strategy.",
     situations: [
       "A loved one has passed and the estate includes real property that needs to be sold",
       "An executor or personal representative needs guidance on pricing, preparation, and sale timeline",
@@ -25,7 +25,7 @@ const serviceContent: Record<string, { introText: string; situations: string[]; 
     ],
   },
   "senior-transitions": {
-    introText: "Real Property Planning supports seniors and their families through the sale of a longtime home — one of the most significant transitions a family can face. David Stein provides patient, experienced guidance that addresses the practical, financial, and emotional aspects of selling a family home during a senior transition.",
+    introText: "Real Property Planning supports seniors and their families through the sale of a longtime home — one of the most significant transitions a family can face. Real Property Planning provides patient, experienced guidance that addresses the practical, financial, and emotional aspects of selling a family home during a senior transition.",
     situations: [
       "A senior parent is moving to assisted living, independent living, or a family member's home",
       "The family home needs significant preparation before it can be listed for sale",
@@ -44,7 +44,7 @@ const serviceContent: Record<string, { introText: string; situations: string[]; 
     ],
   },
   "downsizing-services": {
-    introText: "Real Property Planning helps homeowners who are ready to simplify their living situation — whether moving to a smaller home, a retirement community, or closer to family. David Stein provides practical guidance on preparing, pricing, and selling your current home while coordinating the timeline with your next chapter.",
+    introText: "Real Property Planning helps homeowners who are ready to simplify their living situation — whether moving to a smaller home, a retirement community, or closer to family. Real Property Planning provides practical guidance on preparing, pricing, and selling your current home while coordinating the timeline with your next chapter.",
     situations: [
       "You're ready to move to a smaller, more manageable home",
       "You're relocating closer to family or to a retirement community",
@@ -63,7 +63,7 @@ const serviceContent: Record<string, { introText: string; situations: string[]; 
     ],
   },
   "executor-support": {
-    introText: "Real Property Planning provides executors and personal representatives with clear, experienced guidance on managing and selling estate real property. David Stein understands the responsibilities executors face and provides the practical support, communication, and valuation expertise that helps them fulfill their duties with confidence.",
+    introText: "Real Property Planning provides executors and personal representatives with clear, experienced guidance on managing and selling estate real property. Real Property Planning understands the responsibilities executors face and provides the practical support, communication, and valuation expertise that helps them fulfill their duties with confidence.",
     situations: [
       "You've been named executor and aren't sure where to start with the property",
       "The estate property needs assessment, cleanout, or repairs before it can be sold",
@@ -82,7 +82,7 @@ const serviceContent: Record<string, { introText: string; situations: string[]; 
     ],
   },
   "attorney-fiduciary-support": {
-    introText: "Real Property Planning serves as a reliable real estate resource for attorneys and fiduciaries who need experienced, communicative support on estate, trust, and probate property matters. David Stein's dual credentials as a licensed broker and certified appraiser provide the valuation perspective and professional communication that legal and fiduciary professionals expect.",
+    introText: "Real Property Planning serves as a reliable real estate resource for attorneys and fiduciaries who need experienced, communicative support on estate, trust, and probate property matters. Real Property Planning's dual credentials as a licensed broker and certified appraiser provide the valuation perspective and professional communication that legal and fiduciary professionals expect.",
     situations: [
       "You represent an estate that includes real property requiring sale",
       "A trustee client needs guidance on trust-owned property valuation and sale strategy",
@@ -101,7 +101,7 @@ const serviceContent: Record<string, { introText: string; situations: string[]; 
     ],
   },
   "valuation-guidance": {
-    introText: "Real Property Planning provides valuation-informed insight for inherited, estate, and transition-related property decisions where pricing accuracy is critical. As both a licensed Washington real estate broker and a state-certified residential appraiser, David Stein brings a unique combination of market expertise and formal valuation training to every client engagement.",
+    introText: "Real Property Planning provides valuation-informed insight for inherited, estate, and transition-related property decisions where pricing accuracy is critical. As both a licensed Washington real estate broker and a state-certified residential appraiser, Real Property Planning brings a unique combination of market expertise and formal valuation training to every client engagement.",
     situations: [
       "You need to understand a property's realistic value for estate settlement or tax purposes",
       "The property has condition issues that make automated valuations unreliable",
@@ -120,7 +120,7 @@ const serviceContent: Record<string, { introText: string; situations: string[]; 
     ],
   },
   "preparing-home-for-sale": {
-    introText: "Real Property Planning coordinates property preparation — from cleanout and repairs to staging and presentation — so the home is positioned for the best possible outcome. David Stein helps clients make smart decisions about what to fix, what to skip, and how to present the property to attract the right buyers at the right price.",
+    introText: "Real Property Planning coordinates property preparation — from cleanout and repairs to staging and presentation — so the home is positioned for the best possible outcome. Real Property Planning helps clients make smart decisions about what to fix, what to skip, and how to present the property to attract the right buyers at the right price.",
     situations: [
       "An inherited or estate property needs cleanout and preparation before listing",
       "A longtime family home has accumulated belongings and deferred maintenance",
@@ -139,7 +139,7 @@ const serviceContent: Record<string, { introText: string; situations: string[]; 
     ],
   },
   "divorce-related-home-sales": {
-    introText: "Real Property Planning assists with the sale of marital property during divorce proceedings, providing the discretion, objectivity, and clear communication that these sensitive situations require. David Stein works with divorcing parties and their attorneys to manage the sale process fairly and efficiently.",
+    introText: "Real Property Planning assists with the sale of marital property during divorce proceedings, providing the discretion, objectivity, and clear communication that these sensitive situations require. Real Property Planning works with divorcing parties and their attorneys to manage the sale process fairly and efficiently.",
     situations: [
       "A divorce agreement requires the sale of the marital home",
       "Both parties need an objective assessment of the property's value",
@@ -158,7 +158,7 @@ const serviceContent: Record<string, { introText: string; situations: string[]; 
     ],
   },
   "trust-estate-property-sales": {
-    introText: "Real Property Planning assists trustees and fiduciaries with the valuation, preparation, and sale of trust-owned residential real estate. David Stein understands the specific responsibilities trustees face and provides the documentation, communication, and pricing expertise that trust administration requires.",
+    introText: "Real Property Planning assists trustees and fiduciaries with the valuation, preparation, and sale of trust-owned residential real estate. Real Property Planning understands the specific responsibilities trustees face and provides the documentation, communication, and pricing expertise that trust administration requires.",
     situations: [
       "A trust document requires the sale of real property",
       "A trustee needs realistic valuation guidance for trust accounting purposes",

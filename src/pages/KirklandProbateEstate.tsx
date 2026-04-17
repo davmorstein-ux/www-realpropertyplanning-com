@@ -18,7 +18,7 @@ const faqs = [
   {
     question: "How does selling an inherited home in Kirkland work?",
     answer:
-      "Selling inherited property in Kirkland typically requires legal authority through probate or trust administration. David coordinates with the estate attorney, trustee, or personal representative to assess the property, develop a defensible pricing strategy, manage preparation, and guide the sale — keeping all parties informed throughout the process.",
+      "Selling inherited property in Kirkland typically requires legal authority through probate or trust administration. Our team coordinates with the estate attorney, trustee, or personal representative to assess the property, develop a defensible pricing strategy, manage preparation, and guide the sale — keeping all parties informed throughout the process.",
   },
   {
     question: "What makes Kirkland properties different in estate situations?",
@@ -26,24 +26,24 @@ const faqs = [
       "Kirkland's market includes a mix of waterfront properties, higher-value neighborhoods like Juanita, Houghton, and Moss Bay, and homes with location-specific premiums. Pricing these properties requires neighborhood-level awareness and an understanding of how condition, view, and lot characteristics affect value — not just automated estimates.",
   },
   {
-    question: "How does David Stein's appraisal background help with Kirkland property sales?",
+    question: "How does Real Property Planning's appraisal background help with Kirkland property sales?",
     answer:
-      "As both a licensed Washington State real estate broker and a state-certified residential appraiser, David provides pricing strategy grounded in actual condition assessment and neighborhood-level market analysis. In Kirkland's higher-value market, this dual perspective helps protect families and fiduciaries from costly pricing mistakes.",
+      "As both a licensed Washington State real estate broker and a state-certified residential appraiser, Our team provides pricing strategy grounded in actual condition assessment and neighborhood-level market analysis. In Kirkland's higher-value market, this dual perspective helps protect families and fiduciaries from costly pricing mistakes.",
   },
   {
     question: "Can David help if the family is downsizing or transitioning into senior living?",
     answer:
-      "Yes. Many Kirkland families reach out when a parent is moving into assisted living, independent living, or memory care. David helps coordinate the timing of the property sale with the transition, working with families, care professionals, and attorneys to keep the process organized and manageable.",
+      "Yes. Many Kirkland families reach out when a parent is moving into assisted living, independent living, or memory care. Our team helps coordinate the timing of the property sale with the transition, working with families, care professionals, and attorneys to keep the process organized and manageable.",
   },
   {
     question: "What if multiple family members are involved in the decision?",
     answer:
-      "Multi-party situations are common in Kirkland estate and trust sales. David provides clear, documented communication so all parties — whether local or out of state — have the same information. His appraisal-informed pricing approach also helps establish defensible value when consensus is needed.",
+      "Multi-party situations are common in Kirkland estate and trust sales. Our team provides clear, documented communication so all parties — whether local or out of state — have the same information. His appraisal-informed pricing approach also helps establish defensible value when consensus is needed.",
   },
   {
     question: "How long does it take to sell an estate property in Kirkland?",
     answer:
-      "Timelines depend on the legal process, property condition, and preparation needs. Once the property is ready and authority is established, well-priced Kirkland homes typically sell within a few weeks. David helps set realistic expectations and builds a plan around your specific situation and constraints.",
+      "Timelines depend on the legal process, property condition, and preparation needs. Once the property is ready and authority is established, well-priced Kirkland homes typically sell within a few weeks. Our team helps set realistic expectations and builds a plan around your specific situation and constraints.",
   },
 ];
 
@@ -162,7 +162,7 @@ const KirklandProbateEstate = () => {
               Higher price points increase sensitivity to pricing strategy. A home priced too high may sit on the market, raising questions from beneficiaries and courts. A home priced too low leaves money on the table. Waterfront and location-specific differences compound this challenge — view corridors, lot access, and proximity to amenities all influence value in ways that automated tools cannot reliably capture.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              As both a licensed Washington State real estate broker and a state-certified residential appraiser, David Stein brings a valuation-first perspective that provides defensible pricing, organized communication with attorneys and trustees, and greater confidence for families navigating complex property decisions in Kirkland.
+              As both a licensed Washington State real estate broker and a state-certified residential appraiser, Real Property Planning brings a valuation-first perspective that provides defensible pricing, organized communication with attorneys and trustees, and greater confidence for families navigating complex property decisions in Kirkland.
             </p>
           </div>
         </div>
@@ -171,7 +171,7 @@ const KirklandProbateEstate = () => {
       {/* Mid-page CTA */}
       <MidPageCTA
         heading="Have a Property Situation in Kirkland?"
-        body="David provides confidential consultations for executors, attorneys, trustees, and families handling inherited or estate property in Kirkland and throughout King County."
+        body="Our team provides confidential consultations for executors, attorneys, trustees, and families handling inherited or estate property in Kirkland and throughout King County."
         buttonText="Schedule a Consultation"
         microcopy="No pressure. Just practical guidance for your situation."
       />
@@ -187,7 +187,7 @@ const KirklandProbateEstate = () => {
               Many Kirkland families reach out when a parent or loved one is transitioning into assisted living, independent living, or memory care. These situations are often emotionally complex, and the property decisions that accompany them can feel overwhelming — especially when timing, family dynamics, and financial considerations are all in play.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              David works with families to coordinate the timing of the property sale with the transition itself, ensuring that move plans, care arrangements, and sale preparation are aligned. He also communicates clearly with all family members and professionals involved, reducing confusion and keeping the process moving forward.
+              Our team works with families to coordinate the timing of the property sale with the transition itself, ensuring that move plans, care arrangements, and sale preparation are aligned. He also communicates clearly with all family members and professionals involved, reducing confusion and keeping the process moving forward.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
               Whether the transition is planned or sudden, having a calm, experienced resource who understands both the property and the human side of the process can make a meaningful difference.
