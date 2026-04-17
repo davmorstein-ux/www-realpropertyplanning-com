@@ -183,6 +183,21 @@ const CountyPageTemplate = ({
         )}
       </section>
 
+      {localInsight && (
+        <section className="py-14 lg:py-18 bg-background">
+          <div className="container px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="font-serif text-2xl text-foreground font-semibold mb-5">
+                {belowHeroHeading || `Serving Every Corner of ${countyName}`}
+              </h2>
+              <p className="text-muted-foreground text-lg leading-relaxed">
+                {localInsight}
+              </p>
+            </div>
+          </div>
+        </section>
+      )}
+
       <DirectAnswerBlock
         question={aeoQuestion || `How do probate and estate property sales work in ${countyName}?`}
         answer={aeoAnswer || `Real Property Planning provides experienced guidance for executors, trustees, attorneys, and families selling probate, inherited, and trust-held property in ${countyName}. Each property is carefully evaluated, and defensible pricing is provided based on licensed broker and certified appraiser expertise.`}
