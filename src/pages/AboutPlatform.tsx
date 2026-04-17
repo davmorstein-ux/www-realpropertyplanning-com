@@ -84,52 +84,30 @@ const AboutPlatform = () => {
           </div>
         </section>
 
-        {/* Leadership: David Stein */}
-        <section className="py-16 lg:py-20 bg-background">
-          <div className="container px-6 lg:px-8">
-            <figure className="max-w-xl mx-auto text-center">
-              <img
-                src={davidSteinHeadshot}
-                alt="David Stein, President of Real Property Planning"
-                width={320}
-                height={400}
-                loading="lazy"
-                className="w-64 md:w-72 h-auto aspect-[4/5] object-cover mx-auto rounded-2xl"
-              />
-              <figcaption className="mt-6">
-                <div className="font-serif text-3xl text-foreground font-bold">
-                  David Stein
-                </div>
-                <div className="text-muted-foreground mt-1">
-                  President of Real Property Planning
-                </div>
-              </figcaption>
-            </figure>
-          </div>
-        </section>
-
-        {/* Why I Created Real Property Planning */}
+        {/* Why Real Property Planning Exists */}
         <section className="py-16 lg:py-20 bg-secondary">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
               <h2 className="font-serif text-4xl md:text-5xl text-foreground font-bold tracking-tight mb-8">
-                Why I Created Real Property Planning
+                Why Real Property Planning Exists
               </h2>
               <div className="space-y-5 text-muted-foreground text-lg leading-relaxed">
                 <p>
-                  I created Real Property Planning to be a calm, trustworthy, practical resource for the people who need it most — seniors weighing major housing decisions, families helping a parent transition, executors and trustees managing inherited property, and the professionals who quietly hold all of it together.
+                  Real Property Planning was created to be a calm, trustworthy, practical resource for the people who need it most — seniors weighing major housing decisions, families helping a parent transition, executors and trustees managing inherited property, and the professionals who quietly hold all of it together.
                 </p>
                 <p>
-                  After years of working alongside families navigating probate, estate sales, and senior moves, I kept seeing the same gap: the attorney, the care coordinator, the move manager, the appraiser, and the real estate broker were each doing good work — but no one was connecting the pieces for the family. People were left to coordinate it themselves, often from another state, often while grieving.
+                  Across years of work alongside families navigating probate, estate sales, and senior moves, the same gap kept appearing: the attorney, the care coordinator, the move manager, the appraiser, and the real estate broker were each doing good work — but no one was connecting the pieces for the family. People were left to coordinate it themselves, often from another state, often while grieving.
                 </p>
                 <p>
                   Real Property Planning exists to close that gap. It is a platform — not a personal brand — built to bring clear guidance, vetted professionals, and step-by-step resources into one place, so families can move forward with confidence and professionals can serve their clients more completely.
                 </p>
                 <p>
-                  My role is to lead and grow this platform with the same standards I bring to every client relationship: integrity, patience, and respect for the weight of these decisions.
+                  The platform is led with the same standards brought to every client relationship: integrity, patience, and respect for the weight of these decisions.
                 </p>
-                <p className="text-foreground font-semibold not-italic">
-                  — David Stein, President, Real Property Planning
+                <p className="pt-4">
+                  <Link to="/about-david-stein" className="text-gold hover:underline font-semibold">
+                    Meet the President of Real Property Planning →
+                  </Link>
                 </p>
               </div>
             </div>
