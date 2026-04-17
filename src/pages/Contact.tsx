@@ -119,9 +119,9 @@ const Contact = () => {
 
                 <div>
                   <p className="mb-1 font-medium text-foreground">Email</p>
-                  <a href="mailto:david@realpropertyplanning.com" className="inline-flex items-center text-muted-foreground transition-colors hover:text-gold">
+                  <a href="mailto:info@realpropertyplanning.com" className="inline-flex items-center text-muted-foreground transition-colors hover:text-gold">
                     <img src={iconEmail3d} alt="" aria-hidden="true" className="mr-2 w-5 h-5 shrink-0 object-contain"  loading="lazy"/>
-                    <span>david@realpropertyplanning.com</span>
+                    <span>info@realpropertyplanning.com</span>
                   </a>
                 </div>
 

@@ -283,10 +283,10 @@ const JoinTheNetwork = () => {
                     (206) 900-3015
                   </Button>
                 </a>
-                <a href="mailto:david@realpropertyplanning.com">
+                <a href="mailto:info@realpropertyplanning.com">
                   <Button variant="gold" size="lg">
                     <img src={iconEmail3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy" />
-                    david@realpropertyplanning.com
+                    info@realpropertyplanning.com
                   </Button>
                 </a>
               </div>

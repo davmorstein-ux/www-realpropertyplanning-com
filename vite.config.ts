@@ -425,7 +425,7 @@ const buildSsgContent = (meta: RouteMeta) => {
   ssgParts.push(`<p style="margin:4px 0;color:#444">Licensed Real Estate Brokerage &amp; Certified Residential Appraisal</p>`);
   ssgParts.push(`<p style="margin:4px 0;color:#444">eXp Realty</p>`);
   ssgParts.push(`<p style="margin:4px 0;color:#555">Phone: <a href="tel:2069003015" style="color:#1a365d">(206) 900-3015</a></p>`);
-  ssgParts.push(`<p style="margin:4px 0;color:#555">Email: <a href="mailto:david@realpropertyplanning.com" style="color:#1a365d">david@realpropertyplanning.com</a></p>`);
+  ssgParts.push(`<p style="margin:4px 0;color:#555">Email: <a href="mailto:info@realpropertyplanning.com" style="color:#1a365d">info@realpropertyplanning.com</a></p>`);
   ssgParts.push(`<p style="margin:4px 0;color:#555">Mailing Address: PO Box 1462, Woodinville, WA 98072</p>`);
   ssgParts.push(`<p style="margin:4px 0;color:#555">Office: 1455 NW Leary Way, Seattle, WA 98107</p>`);
   ssgParts.push(`</div>`);

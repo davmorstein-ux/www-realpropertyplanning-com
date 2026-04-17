@@ -188,7 +188,7 @@ export const realEstateAgentSchema = {
       description:
         "Real Property Planning is Washington State's professional resource hub for probate real estate, inherited property sales, estate appraisals, and senior housing transitions. Led by David Stein — a licensed real estate broker and Washington State Certified Residential Appraiser — serving families, executors, attorneys, and professionals throughout the Puget Sound region.",
       telephone: "(206) 900-3015",
-      email: "david@realpropertyplanning.com",
+      email: "info@realpropertyplanning.com",
       address: {
         "@type": "PostalAddress",
         streetAddress: "1455 NW Leary Way",
@@ -216,7 +216,7 @@ export const realEstateAgentSchema = {
       contactPoint: {
         "@type": "ContactPoint",
         telephone: "(206) 900-3015",
-        email: "david@realpropertyplanning.com",
+        email: "info@realpropertyplanning.com",
         contactType: "customer service",
         areaServed: "US-WA",
         availableLanguage: "English",
@@ -352,7 +352,7 @@ export function countyPageSchema(countyName: string, url: string, description: s
     url: `${SITE_URL}${url}`,
     description,
     telephone: "(206) 900-3015",
-    email: "david@realpropertyplanning.com",
+    email: "info@realpropertyplanning.com",
     areaServed: {
       "@type": "AdministrativeArea",
       name: countyName,
@@ -439,7 +439,7 @@ export const homepageFaqSchema = {
       name: "How do I get started?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Simply call (206) 900-3015 or send an email to david@realpropertyplanning.com. There's no pressure — just a calm, honest conversation about your situation.",
+        text: "Simply call (206) 900-3015 or send an email to info@realpropertyplanning.com. There's no pressure — just a calm, honest conversation about your situation.",
       },
     },
     {

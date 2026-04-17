@@ -52,7 +52,7 @@ const CTASection = ({
                 {callLabel}
               </Button>
             </a>
-            <a href="mailto:david@realpropertyplanning.com">
+            <a href="mailto:info@realpropertyplanning.com">
               <Button
                 variant="gold"
                 size="lg"
@@ -71,8 +71,8 @@ const CTASection = ({
 
           <div className="flex items-center justify-center gap-2 text-muted-foreground">
             <img src={iconEmail3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0" loading="lazy"/>
-            <a href="mailto:david@realpropertyplanning.com" className="hover:text-gold transition-colors">
-              david@realpropertyplanning.com
+            <a href="mailto:info@realpropertyplanning.com" className="hover:text-gold transition-colors">
+              info@realpropertyplanning.com
             </a>
           </div>
         </div>

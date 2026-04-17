@@ -31,7 +31,7 @@ const HomepageLeadForm = () => {
       `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nProperty Address: ${address}\nSource Page: ${sourcePage}\nHow They Found Us: ${foundVia}${notes ? `\nAdditional Notes: ${notes}` : ""}\n\nMessage:\n${message}`
     );
 
-    window.location.href = `mailto:david@realpropertyplanning.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:info@realpropertyplanning.com?subject=${subject}&body=${body}`;
 
     setTimeout(() => {
       setSending(false);
