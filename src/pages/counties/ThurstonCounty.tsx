@@ -3,8 +3,10 @@ import CountyPageTemplate from "@/components/CountyPageTemplate";
 const ThurstonCounty = () => (
   <CountyPageTemplate
     countyName="Thurston County"
-    countyPath="/thurston-county-probate-estate-real-estate"
+    countyPath="/thurston-county"
     countySlug="thurston-county"
+    seoTitle="Thurston County Probate & Estate Real Estate | Real Property Planning"
+    seoDescription="Probate, inherited property, and senior transitions across Thurston County — Olympia, Lacey, Tumwater, Yelm, and surrounding communities."
     cities={[
       "Olympia", "Lacey", "Tumwater", "Yelm", "Rainier",
       "Tenino", "Bucoda", "Rochester",

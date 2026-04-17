@@ -35,7 +35,7 @@ const Index = () => {
       <SEOHead
         title="Probate Real Estate & Senior Transitions | Puget Sound WA"
         description="Probate real estate, estate appraisals, and senior transition guidance for Washington families and professionals. Call (206) 900-3015."
-        canonical="https://www.realpropertyplanning.com/"
+        canonical="https://www.realpropertyplanning.com"
         jsonLd={jsonLd}
       />
       <Header />

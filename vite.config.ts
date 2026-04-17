@@ -23,7 +23,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
   "/": {
     title: "Probate & Estate Real Estate in Washington State | Real Property Planning",
     description:
-      "Calm, experienced guidance for families navigating probate, inherited property, and senior housing transitions across Washington State. Licensed Broker & Certified Appraiser. Call (206) 900-3015.",
+      "Calm, experienced guidance for probate, inherited property, and senior housing transitions across Washington State. Call (206) 900-3015.",
     h1: "Probate, Estate & Senior Transition Real Estate in Washington State",
     intro:
       "Guiding seniors, families, and professionals through real estate and housing transitions across Washington State — downsizing, relocation, probate, inherited property, and senior living decisions — with calm guidance, practical coordination, and clear next steps.",
@@ -246,9 +246,9 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     ],
   },
   "/skagit-county": {
-    title: "Probate & Estate Real Estate in Skagit County, WA | Real Property Planning",
+    title: "Skagit County Probate & Estate Real Estate | Real Property Planning",
     description:
-      "Estate and inherited property guidance for Mount Vernon, Anacortes, Burlington, and Skagit Valley communities. Local pricing for waterfront and farm properties.",
+      "Estate and inherited property guidance for Mount Vernon, Anacortes, Burlington, and the Skagit Valley. Local pricing for waterfront and farm properties.",
     h1: "Estate and Inherited Property Sales in Skagit County",
     intro:
       "Skagit County estate properties span Anacortes waterfront homes, Mount Vernon and Burlington town houses, and rural farmland in the valley — each with valuation considerations standard market analysis often misses.",

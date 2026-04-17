@@ -5,8 +5,8 @@ const SkagitCounty = () => (
     countyName="Skagit County"
     countyPath="/counties/skagit"
     countySlug="skagit-county"
-    seoTitle="Probate & Estate Real Estate in Skagit County, WA | Real Property Planning"
-    seoDescription="Experienced probate real estate, inherited property guidance, and senior transitions throughout Skagit County. Serving Mount Vernon, Burlington, Anacortes, La Conner & more."
+    seoTitle="Skagit County Probate & Estate Real Estate | Real Property Planning"
+    seoDescription="Probate, inherited property, and senior transitions across Skagit County — Mount Vernon, Burlington, Anacortes, La Conner, and more."
     heroH1="Probate & Estate Real Estate in Skagit County, Washington"
     heroSubheading="Experienced guidance for executors, families, and attorneys navigating property sales throughout Skagit County — including waterfront, agricultural, and rural properties."
     cities={[
