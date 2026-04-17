@@ -53,9 +53,9 @@ const WhatcomCounty = () => (
       },
     ]}
     aeoQuestion="What should you consider when selling inherited property in Whatcom County?"
-    aeoAnswer="Whatcom County's mix of university-town energy in Bellingham, border-area dynamics in Blaine, and rural properties throughout the county creates valuation challenges that require hands-on expertise. Real Property Planning provides valuation-informed guidance that helps executors and families make confident preparation and pricing decisions."
+    aeoAnswer="Whatcom County's mix of university-town energy in Bellingham, border-area dynamics in Blaine, and rural properties throughout the county creates pricing challenges that benefit from hands-on local expertise. Real Property Planning provides clear, condition-based guidance that helps executors and families make confident preparation and pricing decisions."
     aeoSupportFaqs={[
-      { question: "Why does Whatcom County need specialized valuation?", answer: "Border proximity, seasonal tourism, and rural properties with acreage create pricing dynamics that automated tools and standard market analysis often miss." },
+      { question: "Why does Whatcom County need specialized pricing analysis?", answer: "Border proximity, seasonal tourism, and rural properties with acreage create pricing dynamics that automated tools and standard market analysis often miss." },
       { question: "Can our team help with a Whatcom County property from out of state?", answer: "Yes. Our team coordinates the full process locally and keeps you informed throughout — from property assessment through closing." },
     ]}
   />

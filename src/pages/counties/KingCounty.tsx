@@ -47,7 +47,7 @@ const KingCounty = () => (
       },
       {
         question: "Should I get a formal appraisal before selling an inherited King County home?",
-        answer: "It depends on your situation. A formal USPAP-compliant appraisal is required in some probate and estate tax situations — your estate attorney can advise on whether it's legally required for your case. For most estate property sales, our team's valuation-informed market analysis — grounded in certified appraisal methodology — provides the defensible pricing foundation that executors and fiduciaries need without the additional cost and timeline of a separate formal appraisal. Our team can help you understand which approach is right for your specific situation.",
+        answer: "It depends on your situation. A formal USPAP-compliant appraisal is required in some probate and estate tax situations — your estate attorney can advise on whether it's legally required for your case. For most estate property sales, a market analysis grounded in certified appraisal methodology provides the defensible pricing foundation that executors and fiduciaries need without the additional cost and timeline of a separate formal appraisal. Our team can help you understand which approach is right for your specific situation.",
       },
       {
         question: "What challenges do executors face when selling a Seattle or Eastside home?",
