@@ -10,10 +10,9 @@ import StatewideSupport from "@/components/StatewideSupport";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import GoldCheck3D from "@/components/GoldCheck3D";
+import HubAndSpoke from "@/components/HubAndSpoke";
 
 import daveHeadshot from "@/assets/david-stein-real-estate-agent-seattle.webp";
-import davidSteinPresidentHeadshot from "@/assets/david-stein-president-headshot-2025-v5.jpg";
-import AgentCredentialBlock from "@/components/AgentCredentialBlock";
 import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconEmail3d from "@/assets/icons/real-estate-email-contact-icon-washington.webp";
@@ -44,33 +43,12 @@ const About = () => {
           </div>
         </section>
 
+        {/* Hub and Spoke Diagram — restored */}
+        <HubAndSpoke />
+
         <TrustStrip />
 
-        {/* Leadership headshot — David Stein */}
-        <section className="py-16 lg:py-20 bg-background">
-          <div className="container px-6 lg:px-8">
-            <figure className="max-w-[260px] mx-auto text-center">
-              <img
-                src={davidSteinPresidentHeadshot}
-                alt="David Stein, President of Real Property Planning"
-                width={260}
-                height={325}
-                loading="lazy"
-                className="w-[260px] h-[325px] mx-auto rounded-2xl object-cover object-top shadow-sm"
-              />
-              <figcaption className="mt-5">
-                <p className="font-serif text-2xl text-foreground font-semibold leading-tight">
-                  David Stein
-                </p>
-                <p className="text-muted-foreground text-base mt-1">
-                  President of Real Property Planning
-                </p>
-              </figcaption>
-            </figure>
-          </div>
-        </section>
-
-        {/* Why I Created Real Property Planning — vision & mission */}
+        {/* Vision & Mission — moved up, directly after TrustStrip */}
         <section className="py-20 lg:py-28 bg-cream">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
@@ -148,16 +126,23 @@ const About = () => {
                   </p>
                 </div>
               </div>
-              <div>
-                <div className="rounded-lg overflow-hidden border-2 border-gold/20 shadow-lg">
+
+              {/* Headshot — reduced size, rounded corners, updated caption */}
+              <div className="flex flex-col items-center">
+                <div className="w-[160px] h-[200px] rounded-2xl overflow-hidden border-2 border-gold/20 shadow-md">
                   <img
                     src={daveHeadshot}
                     alt="David Stein licensed real estate broker and certified appraiser Kirkland Washington"
-                    className="w-full h-auto object-cover"
+                    className="w-full h-full object-cover object-top"
                     loading="eager"
                   />
                 </div>
-                <AgentCredentialBlock />
+                <p className="mt-4 font-serif text-lg text-foreground font-semibold leading-tight text-center">
+                  David Stein
+                </p>
+                <p className="text-muted-foreground text-sm mt-1 text-center">
+                  President, Real Property Planning
+                </p>
               </div>
             </div>
           </div>
@@ -257,7 +242,7 @@ const About = () => {
                 </p>
                 <p>
                   David built this site for both of them. And he built it to meet{" "}
-                  <a
+                  
                     href="https://www.w3.org/WAI/standards-guidelines/wcag/"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -382,10 +367,7 @@ const About = () => {
                     attribution: "— Robert K., Personal Representative, Snohomish County",
                   },
                 ].map((review, i) => (
-                  <blockquote
-                    key={i}
-                    className="border-l-4 border-gold/40 pl-6 py-2"
-                  >
+                  <blockquote key={i} className="border-l-4 border-gold/40 pl-6 py-2">
                     <p className="text-foreground/90 text-lg italic leading-relaxed mb-2">
                       "{review.quote}"
                     </p>
@@ -401,7 +383,7 @@ const About = () => {
                     Read More Client Reviews
                   </Link>
                   <span className="text-muted-foreground/40">·</span>
-                  <a
+                  
                     href="https://www.zillow.com/profile/dstein2112#reviews"
                     target="_blank"
                     rel="noopener noreferrer"
