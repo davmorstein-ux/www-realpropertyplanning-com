@@ -194,76 +194,96 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     intro:
       "David Stein serves clients throughout Washington State — including Seattle, Bellevue, Kirkland, Everett, Tacoma, Gig Harbor, Bremerton, Bainbridge Island, and dozens of other communities.",
   },
-  "/counties/king": {
-    title: "King County Probate Real Estate | Real Property Planning",
+  "/king-county": {
+    title: "Probate & Estate Real Estate in King County, WA | Real Property Planning",
     description:
-      "Probate real estate and inherited property sales guidance for executors, attorneys, and families in King County — Seattle, Bellevue, Kirkland, Redmond, and surrounding communities.",
-    h1: "Estate and Inherited Property Sales in King County",
-    quickAnswerQ: "How do probate and estate property sales work in King County?",
-    quickAnswerA: "King County's intense buyer demand and wide price variation make accurate pricing especially critical for estate sales. Real Property Planning evaluates each property's condition and market position, coordinates preparation and sale, and provides defensible pricing backed by certified appraisal expertise that standard agents cannot match.",
+      "Selling an inherited home in Seattle, the Eastside, or South King County. Neighborhood-level pricing for Capitol Hill, Mercer Island, Renton, Bellevue, and beyond.",
+    h1: "Selling an Inherited Home in Seattle, the Eastside, or South King County",
+    quickAnswerQ: "How does selling estate property work in King County's competitive market?",
+    quickAnswerA: "King County's market is active, but condition-impaired or vacant estate properties don't automatically benefit. Our team starts with an honest, condition-adjusted valuation calibrated to the specific neighborhood and buyer pool — not a county-wide average.",
     intro:
-      "King County is Washington's largest and most competitive real estate market. Estate properties here range from Capitol Hill bungalows to Eastside homes valued well over a million dollars — making accurate pricing and experienced coordination especially critical.",
+      "From Capitol Hill craftsmans to Mercer Island waterfront and Renton ramblers — King County estate properties demand neighborhood-level pricing, not county averages. Our team helps families and executors navigate it carefully.",
     cities: [
       "Seattle", "Bellevue", "Kirkland", "Redmond", "Bothell", "Woodinville",
       "Issaquah", "Sammamish", "Mercer Island", "Shoreline", "Renton", "Newcastle",
       "Kenmore", "Lake Forest Park", "Burien", "Federal Way", "Kent",
     ],
   },
-  "/counties/snohomish": {
-    title: "Snohomish County Probate Real Estate | Real Property Planning",
+  "/snohomish-county": {
+    title: "Probate & Estate Real Estate in Snohomish County, WA | Real Property Planning",
     description:
-      "Probate real estate and inherited property sales support for families and fiduciaries in Snohomish County — Everett, Edmonds, Lynnwood, Mukilteo, and surrounding areas.",
-    h1: "Estate and Inherited Property Sales in Snohomish County",
-    quickAnswerQ: "How do inherited home decisions and pricing work in Snohomish County?",
-    quickAnswerA: "Snohomish County spans waterfront communities like Edmonds and Mukilteo, established suburbs like Mill Creek and Bothell, and growing towns like Lake Stevens and Monroe — each with its own buyer pool and pricing dynamics. David Stein evaluates each property in its specific context.",
+      "Estate property sales from Edmonds to Monroe. Waterfront homes in Mukilteo, family houses in Mill Creek, rural acreage near Arlington — priced for the actual neighborhood.",
+    h1: "Estate Property Sales from Edmonds to Monroe — Snohomish County, WA",
+    quickAnswerQ: "How do probate and estate property sales work in Snohomish County?",
+    quickAnswerA: "Snohomish County stretches from Edmonds and Mukilteo waterfronts to Mill Creek suburbs to rural acreage near Monroe and Arlington — each with its own buyer pool. Our team prices and prepares each estate property for the specific neighborhood it sits in.",
     intro:
-      "Snohomish County spans waterfront communities, established suburbs, and growing towns — each with its own buyer pool and pricing dynamics that require local expertise for estate and inherited property sales.",
+      "Waterfront homes in Mukilteo, longtime family houses in Mill Creek, rural acreage near Arlington — every Snohomish corner has its own buyer pool. Our team prices and prepares each estate property for the actual neighborhood it sits in.",
     cities: [
       "Everett", "Edmonds", "Lynnwood", "Mukilteo", "Mill Creek", "Bothell",
       "Snohomish", "Lake Stevens", "Marysville", "Monroe", "Arlington",
     ],
   },
-  "/counties/pierce": {
-    title: "Pierce County Probate Real Estate | Real Property Planning",
+  "/pierce-county": {
+    title: "Probate & Estate Real Estate in Pierce County, WA | Real Property Planning",
     description:
-      "Probate real estate and inherited property sales guidance for executors and families in Pierce County — Tacoma, Puyallup, Gig Harbor, Lakewood, and surrounding communities.",
-    h1: "Estate and Inherited Property Sales in Pierce County",
-    quickAnswerQ: "What should executors and families know about selling inherited property in Pierce County?",
-    quickAnswerA: "Pierce County's diverse neighborhoods — from Tacoma's North End to Gig Harbor's waterfront — create distinct buyer pools and pricing dynamics. David Stein provides practical, valuation-informed guidance for estate property preparation, pricing, and sale.",
+      "Inherited homes in Tacoma's North End, Gig Harbor waterfronts, and Puyallup family communities. Honest condition assessment and Pierce-County-specific pricing.",
+    h1: "Inherited Homes in Tacoma, Gig Harbor, and Across Pierce County",
+    quickAnswerQ: "What should executors know about selling inherited property in Pierce County?",
+    quickAnswerA: "Pierce County's housing inventory leans older — many estate properties are pre-1950 craftsmans or mid-century homes carrying years of deferred maintenance. The right strategy depends on the specific neighborhood: a Stadium District craftsman is a different conversation than a Lakewood rambler or a Gig Harbor view lot.",
     intro:
-      "Pierce County's diverse communities require locally informed guidance for estate property sales. David Stein works with executors, trustees, and families throughout Tacoma, Gig Harbor, Puyallup, Lakewood, and surrounding areas.",
+      "Tacoma's North End craftsmans, Gig Harbor waterfronts, and Puyallup family homes each face a different buyer pool. Our team brings honest condition assessment and Pierce-County-specific pricing to estate property sales.",
     cities: [
       "Tacoma", "University Place", "Gig Harbor", "Puyallup", "Bonney Lake",
       "Lakewood", "Sumner", "Fircrest", "Milton",
     ],
   },
-  "/counties/kitsap": {
-    title: "Kitsap County Probate Real Estate | Real Property Planning",
+  "/kitsap-county": {
+    title: "Probate & Estate Real Estate in Kitsap County, WA | Real Property Planning",
     description:
-      "Probate real estate and inherited property sales guidance for executors and families in Kitsap County — Bainbridge Island, Poulsbo, Bremerton, Silverdale, and surrounding areas.",
+      "Estate property guidance for Bainbridge Island, Poulsbo, Bremerton, Silverdale, and Kitsap waterfront communities. Local pricing and coordination.",
     h1: "Estate and Inherited Property Sales in Kitsap County",
-    quickAnswerQ: "How do probate and estate property sales work in Kitsap County?",
-    quickAnswerA: "Kitsap County's waterfront properties, military-adjacent communities, and island logistics create unique valuation and coordination challenges for estate sales. David Stein's dual credentials as a broker and certified appraiser provide the depth needed for these distinctive properties.",
     intro:
-      "Kitsap County's waterfront properties, military-adjacent communities, and island logistics create unique challenges for estate property sales that require locally informed, valuation-based guidance.",
+      "Kitsap County's waterfront properties, military-adjacent communities, and ferry-served islands create distinctive valuation considerations for estate sales — Bainbridge premiums, Bremerton revitalization dynamics, and Poulsbo's small-town buyer pool each behave differently.",
     cities: [
       "Bainbridge Island", "Poulsbo", "Silverdale", "Bremerton",
       "Port Orchard", "Kingston", "Suquamish",
     ],
   },
-  "/counties/skagit": {
-    title: "Skagit County Probate Real Estate | Real Property Planning",
+  "/skagit-county": {
+    title: "Probate & Estate Real Estate in Skagit County, WA | Real Property Planning",
     description:
-      "Probate real estate and inherited property sales guidance for families and fiduciaries in Skagit County — Mount Vernon, Anacortes, Burlington, and surrounding communities.",
+      "Estate and inherited property guidance for Mount Vernon, Anacortes, Burlington, and Skagit Valley communities. Local pricing for waterfront and farm properties.",
     h1: "Estate and Inherited Property Sales in Skagit County",
-    quickAnswerQ: "How do estate property sales work in Skagit County?",
-    quickAnswerA: "Skagit County's agricultural heritage, waterfront communities, and small-town character create valuation considerations that standard market analysis often misses. David Stein provides hands-on guidance for estate and inherited property sales throughout the county.",
     intro:
-      "Skagit County's agricultural heritage, waterfront communities, and small-town character create unique dynamics for estate property sales that benefit from experienced, valuation-informed guidance.",
+      "Skagit County estate properties span Anacortes waterfront homes, Mount Vernon and Burlington town houses, and rural farmland in the valley — each with valuation considerations standard market analysis often misses.",
     cities: [
       "Mount Vernon", "Burlington", "Anacortes", "Sedro-Woolley",
       "La Conner", "Concrete", "Bow", "Edison",
     ],
+  },
+  "/seattle-probate-estate-real-estate": {
+    title: "Probate & Estate Real Estate in Seattle, WA | Real Property Planning",
+    description:
+      "Selling an inherited Seattle home — from Ballard to Beacon Hill. Neighborhood-specific pricing for Capitol Hill condos, West Seattle craftsmans, and Magnolia view homes.",
+    h1: "Selling an Inherited Seattle Home — From Ballard to Beacon Hill",
+    intro:
+      "A Capitol Hill condo, a West Seattle craftsman, and a Magnolia view home are three completely different sales — different buyer pools, different prep decisions, different price ceilings. Estate properties inside Seattle city limits reward neighborhood-specific pricing far more than they reward broad market averages.",
+  },
+  "/bellevue-probate-estate-real-estate": {
+    title: "Probate & Estate Real Estate in Bellevue, WA | Real Property Planning",
+    description:
+      "Bellevue estate and trust property sales for higher-value homes — Bridle Trails, Somerset, West Bellevue, Newport Shores, and Medina. Defensible pricing for fiduciaries.",
+    h1: "Bellevue Estate & Trust Property Sales — Built for Higher-Value Homes",
+    intro:
+      "Bellevue estate sales often involve trust-owned property, multiple beneficiaries, and homes in the $1.5M–$5M range where a 2% pricing error becomes a six-figure mistake. Bridle Trails, Somerset, West Bellevue, and Newport Shores each carry their own buyer expectations — and the prep that makes sense for a Medina view home is rarely the prep that makes sense for a Crossroads condo.",
+  },
+  "/tacoma-probate-estate-real-estate": {
+    title: "Probate & Estate Real Estate in Tacoma, WA | Real Property Planning",
+    description:
+      "Inherited Tacoma homes — North End craftsmans, Stadium District character homes, South End ramblers. Targeted prep for the Tacoma buyer pool.",
+    h1: "Inherited Tacoma Homes — North End Craftsmans to South End Ramblers",
+    intro:
+      "Many Tacoma estate homes were built before 1950 and carry decades of deferred maintenance — character-rich houses in the North End and Stadium District, mid-century ramblers in the South End, and post-war homes across Hilltop and Eastside. The right move is rarely \"fix everything\"; it's knowing which targeted repairs the Tacoma buyer pool will actually pay for, and which ones to skip.",
   },
   "/resources": {
     title: "Resources | Real Property Planning",
