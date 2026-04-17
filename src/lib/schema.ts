@@ -47,15 +47,28 @@ export const areaServed = [
   { "@type": "City", name: "La Conner", containedInPlace: { "@type": "State", name: "Washington" } },
 ];
 
-/** Person schema for Real Property Planning — reusable entity across the site */
+/** Person schema for David Stein — reusable entity across the site */
 export const davidSteinPerson = {
   "@type": "Person",
   "@id": `${SITE_URL}/#david-stein`,
-  name: "Real Property Planning",
-  jobTitle: "Real Estate Broker and State Certified Residential Appraiser",
+  name: "David Stein",
+  jobTitle: "Real Estate Broker and Washington State Certified Residential Appraiser",
   url: `${SITE_URL}/about`,
-  worksFor: {
-    "@type": "RealEstateAgent",
+  worksFor: [
+    {
+      "@type": "RealEstateAgent",
+      name: "eXp Realty",
+      url: "https://www.exprealty.com",
+    },
+    {
+      "@type": "Organization",
+      "@id": `${SITE_URL}/#organization`,
+      name: BUSINESS_NAME,
+      url: SITE_URL,
+    },
+  ],
+  founderOf: {
+    "@type": "Organization",
     "@id": `${SITE_URL}/#organization`,
     name: BUSINESS_NAME,
   },
@@ -76,7 +89,7 @@ export const davidSteinPerson = {
     },
   ],
   memberOf: [
-    { "@type": "Organization", name: "Aging Life Care Association", url: "https://www.aginglifecare.org" },
+    { "@type": "Organization", name: "Aging Life Care Association (Corporate Partner)", url: "https://www.aginglifecare.org" },
     { "@type": "Organization", name: "National Association of Senior Advocates", url: "https://www.naosa.org" },
     {
       "@type": "Organization",
@@ -104,7 +117,7 @@ export const davidSteinPerson = {
   ],
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Kirkland",
+    addressLocality: "Woodinville",
     addressRegion: "WA",
     addressCountry: "US",
   },
@@ -191,11 +204,23 @@ export const realEstateAgentSchema = {
       email: "info@realpropertyplanning.com",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "1455 NW Leary Way",
-        addressLocality: "Seattle",
+        streetAddress: "PO Box 1462",
+        addressLocality: "Woodinville",
         addressRegion: "WA",
-        postalCode: "98107",
+        postalCode: "98072",
         addressCountry: "US",
+      },
+      location: {
+        "@type": "Place",
+        name: "Real Property Planning — Seattle Office",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "1455 NW Leary Way",
+          addressLocality: "Seattle",
+          addressRegion: "WA",
+          postalCode: "98107",
+          addressCountry: "US",
+        },
       },
       founder: davidSteinPerson,
       employee: davidSteinPerson,
