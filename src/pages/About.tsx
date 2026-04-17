@@ -46,6 +46,9 @@ const About = () => {
               <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight">
                 About David Stein
               </h1>
+              <p className="text-lg md:text-xl text-gold leading-relaxed mt-3 font-medium tracking-wide">
+                President of Real Property Planning
+              </p>
               <p className="text-xl md:text-2xl text-primary-foreground/80 leading-relaxed mt-4 font-serif italic">
                 Broker. Appraiser. Builder of a Better Process.
               </p>
@@ -54,6 +57,50 @@ const About = () => {
         </section>
 
         <TrustStrip />
+
+        {/* Why I Created Real Property Planning — vision & mission */}
+        <section className="py-20 lg:py-28 bg-cream">
+          <div className="container px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto">
+              <p className="text-sm uppercase tracking-[0.18em] text-gold font-semibold mb-4">
+                Vision &amp; Mission
+              </p>
+              <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-8 leading-tight">
+                Why I Created Real Property Planning
+              </h2>
+              <div className="space-y-6 text-foreground/85 leading-relaxed text-lg">
+                <p>
+                  Real Property Planning was created to be something the industry has long been
+                  missing: a calm, trustworthy, and genuinely practical resource for the moments
+                  when a home becomes part of a much larger life transition.
+                </p>
+                <p>
+                  After years of walking alongside families through probate sales, estate
+                  appraisals, and senior moves, I kept seeing the same pattern. People weren't
+                  short on options — they were short on clarity. Executors didn't know which step
+                  came first. Adult children didn't know who to trust. Attorneys and CPAs needed a
+                  real estate partner who understood the legal and emotional weight of the work,
+                  not just the transaction.
+                </p>
+                <p>
+                  So I built Real Property Planning as a platform — a place where seniors,
+                  families, executors, trustees, and the professionals who serve them can find
+                  honest guidance, plain-English answers, and a coordinated team of specialists
+                  for the road ahead. The goal isn't to put any one person at the center. The goal
+                  is to make the path forward feel less heavy for the people walking it.
+                </p>
+                <p className="font-serif italic text-xl text-foreground border-l-4 border-gold pl-6 py-2">
+                  This work is personal to me. My hope is that this resource brings clarity,
+                  steadiness, and a little more peace of mind to every family and professional who
+                  finds it.
+                </p>
+                <p className="text-base text-muted-foreground pt-2">
+                  — David Stein, President, Real Property Planning
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Section 1: The Short Version */}
         <section className="py-20 lg:py-28 bg-background">
