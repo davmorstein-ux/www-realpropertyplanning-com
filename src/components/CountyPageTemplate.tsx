@@ -145,7 +145,7 @@ const CountyPageTemplate = ({
                 >
                   <img
                     src={COUNTY_LOGOS[countySlug]}
-                    alt={`${countyName} official logo`}
+                    alt={`${countyName}, Washington official seal — probate, estate, and senior transition real estate services`}
                     className="w-full h-full object-contain"
                     loading="eager"
                   />
