@@ -26,7 +26,7 @@ const About = () => {
         schemaJson={realEstateAgentSchema}
       />
       <BreadcrumbSchema
-        items={[space-y-6
+        items={[
           { name: "About", url: "/about" },
         ]}
       />
