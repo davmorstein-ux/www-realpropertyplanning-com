@@ -8,7 +8,7 @@ import RelatedServices from "@/components/RelatedServices";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import iconServiceAreas from "@/assets/icons/real-estate-service-areas-map-icon-washington.webp";
+import iconServiceAreas from "@/assets/icons/real-estate-service-areas-map-illustration-washington.webp";
 import { services } from "@/lib/service-areas-data";
 import kingCountyLogo from "@/assets/counties/king-county-logo.webp";
 import snohomishCountyLogo from "@/assets/counties/snohomish-county-logo.webp";
@@ -99,7 +99,7 @@ const Counties = () => {
       <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <img src={iconServiceAreas} alt="" aria-hidden="true" className="mx-auto max-w-[15rem] w-full h-auto object-contain mb-1.5"  loading="lazy"/>
+            <img src={iconServiceAreas} alt="Service areas map illustration" width="240" height="240" className="mx-auto w-full max-w-[15rem] aspect-square h-auto object-contain mb-1.5" loading="lazy"/>
             <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
               Service Areas
             </p>
