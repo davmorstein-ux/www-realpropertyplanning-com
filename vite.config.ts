@@ -90,7 +90,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "From initial consultation to closing day — here is exactly how Real Property Planning helps executors, attorneys, and families sell probate, inherited, and trust-owned property throughout Washington State.",
     h1: "How the Process Works",
     quickAnswerQ: "How does the estate and probate property sale process work?",
-    quickAnswerA: "Real Property Planning follows a clear seven-step process: initial consultation, property evaluation and valuation-informed pricing, preparation and vendor coordination, listing and marketing, offer review and negotiation, escrow and closing management, and post-sale support.",
+    quickAnswerA: "Real Property Planning follows a clear seven-step process: initial consultation, property evaluation and condition-based pricing, preparation and vendor coordination, listing and marketing, offer review and negotiation, escrow and closing management, and post-sale support.",
     intro:
       "From initial consultation to closing day — here is exactly how Real Property Planning helps executors, attorneys, and families sell probate, inherited, and trust-owned property throughout Washington State.",
   },
@@ -172,7 +172,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "Ready to talk through your situation? Reach out to Real Property Planning for calm, knowledgeable guidance on probate, inherited property, or senior housing transitions. Call (206) 900-3015.",
     h1: "Get in Touch",
     intro:
-      "Have a property tied to probate, a trust, an inheritance, or a senior transition? Contact David Stein for a confidential consultation. Serving clients throughout Washington State.",
+      "Have a property tied to probate, a trust, an inheritance, or a senior transition? Contact Real Property Planning for a confidential consultation. Serving clients throughout Washington State.",
   },
   "/counties": {
     title: "Washington State Service Areas | Probate & Estate Real Estate",
@@ -180,15 +180,15 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "Real Property Planning provides probate real estate, inherited property, estate sale, valuation, and senior transition support for clients throughout Washington State.",
     h1: "Washington State Service Areas",
     intro:
-      "Real Property Planning provides probate real estate, inherited property, estate sale, valuation-informed strategy, and senior transition support for clients throughout Washington State, with especially strong experience in Western Washington and the Puget Sound region.",
+      "Real Property Planning provides probate real estate, inherited property, estate sale, condition-based pricing strategy, and senior transition support for clients throughout Washington State, with especially strong experience in Western Washington and the Puget Sound region.",
   },
   "/cities-we-serve": {
     title: "Cities We Serve Throughout Washington State | Real Property Planning",
     description:
-      "David Stein serves cities throughout Washington State for probate real estate, inherited property, trust-owned homes, and estate-related sales.",
+      "Real Property Planning serves cities throughout Washington State for probate real estate, inherited property, trust-owned homes, and estate-related sales.",
     h1: "Cities We Serve Throughout Washington State",
     intro:
-      "David Stein serves clients throughout Washington State — including Seattle, Bellevue, Kirkland, Everett, Tacoma, Gig Harbor, Bremerton, Bainbridge Island, and dozens of other communities.",
+      "Real Property Planning serves clients throughout Washington State — including Seattle, Bellevue, Kirkland, Everett, Tacoma, Gig Harbor, Bremerton, Bainbridge Island, and dozens of other communities.",
   },
   "/king-county": {
     title: "Probate & Estate Real Estate in King County, WA | Real Property Planning",
@@ -367,7 +367,7 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "Explore Real Property Planning's services including probate property sales, senior transitions, executor support, and estate-related real estate guidance throughout Washington State.",
     h1: "Real Property Planning Services",
     quickAnswerQ: "What services does Real Property Planning provide?",
-    quickAnswerA: "Real Property Planning provides probate property sales, senior transition support, executor and trustee guidance, attorney referral coordination, and valuation-informed pricing strategy — backed by dual credentials as a licensed brokerage with certified residential appraisal expertise.",
+    quickAnswerA: "Real Property Planning provides probate property sales, senior transition support, executor and trustee guidance, attorney referral coordination, and condition-based pricing strategy — backed by dual credentials as a licensed brokerage with certified residential appraisal expertise.",
     intro:
       "Probate property sales, senior transitions, executor support, and estate-related real estate guidance throughout Washington State.",
   },
