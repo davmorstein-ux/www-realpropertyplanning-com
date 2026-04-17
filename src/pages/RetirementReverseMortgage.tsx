@@ -16,8 +16,8 @@ import crossCountryLogo from "@/assets/providers/real-estate-lenders-crosscountr
 const RetirementReverseMortgage = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
-      title="Lenders & Financing Specialists | Real Property Planning"
-      description="Supporting clients with financing options and long-term planning. Connect with trusted lending professionals who help you explore reverse mortgage and retirement strategies."
+      title="Retirement & Reverse Mortgage Guidance | Real Property Planning"
+      description="Reverse mortgage and retirement financing guidance for Washington seniors and families. Trusted lending professionals supporting long-term housing and estate planning decisions."
     />
     <BreadcrumbSchema
       items={[
