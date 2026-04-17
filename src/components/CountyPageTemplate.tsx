@@ -126,11 +126,25 @@ const CountyPageTemplate = ({
 
   const faqs = countySpecificFaqs || defaultCountyFaqs;
 
+  const video = COUNTY_VIDEOS[countySlug];
+  const videoSchema = video
+    ? {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        name: `Aerial View of ${countyName}, Washington`,
+        description: `Scenic aerial footage of ${countyName}, Washington — context for probate, estate, and senior transition real estate services provided by Real Property Planning.`,
+        thumbnailUrl: [`${SITE_URL}${(video.poster || "").split("?")[0]}`],
+        contentUrl: `${SITE_URL}${(video.mp4 || video.webm || "").split("?")[0]}`,
+        uploadDate: video.uploadDate || "2025-04-01",
+      }
+    : undefined;
+
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
         title={seoTitle || `Probate Real Estate & Inherited Property Sales in ${countyName} | Real Property Planning`}
         description={seoDescription || `Probate real estate and inherited property sales guidance for executors, attorneys, and families in ${countyName}, Washington State.`}
+        schemaJson={videoSchema}
       />
       <BreadcrumbSchema items={[
         { name: "Counties", url: "/counties" },
@@ -184,7 +198,7 @@ const CountyPageTemplate = ({
                 playsInline
                 preload="metadata"
                 poster={COUNTY_VIDEOS[countySlug].poster}
-                aria-label={`Scenic video of ${countyName}`}
+                aria-label={`Aerial video showcasing ${countyName}, Washington`}
                 className="absolute inset-0 w-full h-full object-cover"
               >
                 {COUNTY_VIDEOS[countySlug].webm && (
