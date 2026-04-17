@@ -15,8 +15,8 @@ const contentBlocks = [
     text: "Real Property Planning helps clients and professional advisors understand property condition, likely market position, preparation options, pricing considerations, and the practical steps involved in bringing real estate to market.",
   },
   {
-    heading: "Valuation-Informed Perspective",
-    text: "As both a real estate broker and Washington state certified real estate appraiser, Real Property Planning brings added perspective to questions of value, marketability, and sale strategy during estate-related property transitions.",
+    heading: "Grounded in Real Estate and Appraisal Experience",
+    text: "Real Property Planning brings dual experience as a real estate broker and Washington state certified residential appraiser, adding depth to questions of value, marketability, and sale strategy during estate-related property transitions.",
   },
   {
     heading: "Coordination With Professional Advisors",
