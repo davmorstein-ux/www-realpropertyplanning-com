@@ -46,12 +46,6 @@ const About = () => {
               <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight">
                 About Real Property Planning
               </h1>
-              <p className="text-lg md:text-xl text-gold leading-relaxed mt-3 font-medium tracking-wide">
-                President of Real Property Planning
-              </p>
-              <p className="text-xl md:text-2xl text-primary-foreground/80 leading-relaxed mt-4 font-serif italic">
-                Broker. Appraiser. Builder of a Better Process.
-              </p>
             </div>
           </div>
         </section>
