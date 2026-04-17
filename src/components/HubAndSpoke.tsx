@@ -144,7 +144,7 @@ const HubAndSpoke = () => {
   }, []);
 
   const scheduleNext = useCallback(() => {
-    const delay = 600 + Math.random() * 400;
+    const delay = 350 + Math.random() * 300;
     timeoutRef.current = setTimeout(() => {
       if (unmountedRef.current) return;
       const pick = getNextNode();
