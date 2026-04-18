@@ -93,6 +93,66 @@ const countyCards = [
     logo: bentonCountyLogo,
     intro: "Tri-Cities area properties often involve practical pricing challenges, multi-generational family homes, and executors coordinating from Western Washington or out of state.",
   },
+  {
+    county: "Cowlitz County",
+    href: "/cowlitz-county",
+    logo: cowlitzCountyLogo,
+    intro: "From Longview's established neighborhoods to rural properties along the Toutle River corridor, Cowlitz County estate sales require local market knowledge and condition-adjusted pricing. Real Property Planning coordinates the full process for families and executors throughout the area.",
+  },
+  {
+    county: "Grays Harbor County",
+    href: "/grays-harbor-county",
+    logo: graysHarborCountyLogo,
+    intro: "Grays Harbor spans the coastal communities of Ocean Shores and Westport to the urban twin cities of Aberdeen and Hoquiam. Estate and inherited properties here range from coastal cottages to rural timber parcels — each requiring a different pricing and preparation approach.",
+  },
+  {
+    county: "Island County",
+    href: "/island-county",
+    logo: islandCountyLogo,
+    intro: "Whidbey and Camano Islands offer waterfront living, rural character, and communities that attract retirees and second-home owners. Estate properties on the islands require locally informed guidance and coordination for families managing from the mainland.",
+  },
+  {
+    county: "Jefferson County",
+    href: "/jefferson-county",
+    logo: jeffersonCountyLogo,
+    intro: "Jefferson County's Olympic Peninsula setting — from Port Townsend's Victorian waterfront to the rural Hood Canal communities — creates a distinctive market for estate and inherited properties. Real Property Planning provides experienced guidance for executors and families throughout the area.",
+  },
+  {
+    county: "Lewis County",
+    href: "/lewis-county",
+    logo: lewisCountyLogo,
+    intro: "Lewis County stretches from Chehalis and Centralia along I-5 to the rural communities of the Cascade foothills. Estate properties here often include older homes, rural acreage, and agricultural parcels that benefit from condition-based pricing and local coordination.",
+  },
+  {
+    county: "Mason County",
+    href: "/mason-county",
+    logo: masonCountyLogo,
+    intro: "Mason County's Hood Canal waterfront, Shelton's small-city character, and the surrounding rural communities create a varied market for estate and transition properties. Waterfront premiums, rural acreage, and limited comparable sales all call for experienced, on-the-ground guidance.",
+  },
+  {
+    county: "Pacific County",
+    href: "/pacific-county",
+    logo: pacificCountyLogo,
+    intro: "Pacific County's Long Beach Peninsula, Raymond, and South Bend communities offer coastal and rural properties that attract a specific buyer pool. Estate sales here require pricing calibrated to the local market and buyer demographics — not broad regional averages.",
+  },
+  {
+    county: "San Juan County",
+    href: "/san-juan-county",
+    logo: sanJuanCountyLogo,
+    intro: "The San Juan Islands are one of Washington's most distinctive and sought-after real estate markets. Estate properties on San Juan, Orcas, Lopez, and the smaller islands require specialized valuation and coordination for families managing from the mainland or out of state.",
+  },
+  {
+    county: "Skamania County",
+    href: "/skamania-county",
+    logo: skamaniCountyLogo,
+    intro: "Skamania County's Columbia River Gorge setting — anchored by Stevenson and the surrounding communities — creates a niche market for estate and rural properties. Limited comparable sales and unique property characteristics make experienced, locally informed guidance especially important here.",
+  },
+  {
+    county: "Wahkiakum County",
+    href: "/wahkiakum-county",
+    logo: wahkiakumCountyLogo,
+    intro: "Wahkiakum County is Washington's smallest county by population — a rural, river-delta community along the Columbia where estate properties often include acreage, agricultural character, and limited market activity. Real Property Planning provides practical, honest guidance for families navigating property decisions in this distinctive area.",
+  },
 ];
 
 const Counties = () => {
