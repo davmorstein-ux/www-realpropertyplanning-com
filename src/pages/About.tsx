@@ -244,9 +244,9 @@ const About = () => {
                   and how to assess a property's condition with a trained eye rather than a checklist.
                 </p>
                 <p>
-                  He also ran a successful e-commerce business selling commercial access control and security systems —
-                  an experience that taught him how to build something from scratch, how to connect buyers with exactly
-                  what they need, and how to think about a website as a tool rather than a brochure.
+                  He also ran a successful e-commerce business — an experience that taught him how to build
+                  something from scratch, how to connect buyers with exactly what they need, and how to think
+                  about a website as a tool rather than a brochure.
                 </p>
                 <p>
                   Both of those backgrounds show up every day in how he works. The contractor's eye for condition. The
