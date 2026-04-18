@@ -421,6 +421,12 @@ const CountyPageTemplate = ({
                 poster={COUNTY_VIDEOS[countySlug].poster}
                 aria-label={`Aerial video showcasing ${countyName}, Washington`}
                 className="absolute inset-0 w-full h-full object-cover"
+                style={{
+                  willChange: "transform",
+                  transform: "translateZ(0)",
+                  backfaceVisibility: "hidden",
+                  WebkitBackfaceVisibility: "hidden",
+                }}
               >
                 {COUNTY_VIDEOS[countySlug].webm && (
                   <source src={COUNTY_VIDEOS[countySlug].webm} type="video/webm" />
