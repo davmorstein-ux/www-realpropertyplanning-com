@@ -25,11 +25,7 @@ const About = () => {
         description="Real Property Planning is Washington State's resource hub for senior transitions, probate, and estate real estate — coordinating brokers, appraisers, and trusted professionals across the Puget Sound region."
         schemaJson={realEstateAgentSchema}
       />
-      <BreadcrumbSchema
-        items={[
-          { name: "About", url: "/about" },
-        ]}
-      />
+      <BreadcrumbSchema items={[{ name: "About", url: "/about" }]} />
       <Header />
       <main id="main-content">
         {/* Hero */}
@@ -52,41 +48,34 @@ const About = () => {
         <section className="py-20 lg:py-28 bg-cream">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
-              <p className="text-sm uppercase tracking-[0.18em] text-gold font-semibold mb-4">
-                Vision &amp; Mission
-              </p>
+              <p className="text-sm uppercase tracking-[0.18em] text-gold font-semibold mb-4">Vision &amp; Mission</p>
               <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-8 leading-tight">
                 Why I Created Real Property Planning
               </h2>
               <div className="space-y-6 text-foreground/85 leading-relaxed text-lg">
                 <p>
-                  Real Property Planning was created to be something the industry has long been
-                  missing: a calm, trustworthy, and genuinely practical resource for the moments
-                  when a home becomes part of a much larger life transition.
+                  Real Property Planning was created to be something the industry has long been missing: a calm,
+                  trustworthy, and genuinely practical resource for the moments when a home becomes part of a much
+                  larger life transition.
                 </p>
                 <p>
-                  After years of walking alongside families through probate sales, estate
-                  appraisals, and senior moves, I kept seeing the same pattern. People weren't
-                  short on options — they were short on clarity. Executors didn't know which step
-                  came first. Adult children didn't know who to trust. Attorneys and CPAs needed a
-                  real estate partner who understood the legal and emotional weight of the work,
-                  not just the transaction.
+                  After years of walking alongside families through probate sales, estate appraisals, and senior moves,
+                  I kept seeing the same pattern. People weren't short on options — they were short on clarity.
+                  Executors didn't know which step came first. Adult children didn't know who to trust. Attorneys and
+                  CPAs needed a real estate partner who understood the legal and emotional weight of the work, not just
+                  the transaction.
                 </p>
                 <p>
-                  So I built Real Property Planning as a platform — a place where seniors,
-                  families, executors, trustees, and the professionals who serve them can find
-                  honest guidance, plain-English answers, and a coordinated team of specialists
-                  for the road ahead. The goal isn't to put any one person at the center. The goal
-                  is to make the path forward feel less heavy for the people walking it.
+                  So I built Real Property Planning as a platform — a place where seniors, families, executors,
+                  trustees, and the professionals who serve them can find honest guidance, plain-English answers, and a
+                  coordinated team of specialists for the road ahead. The goal isn't to put any one person at the
+                  center. The goal is to make the path forward feel less heavy for the people walking it.
                 </p>
                 <p className="font-serif italic text-xl text-foreground border-l-4 border-gold pl-6 py-2">
-                  This work is personal to me. My hope is that this resource brings clarity,
-                  steadiness, and a little more peace of mind to every family and professional who
-                  finds it.
+                  This work is personal to me. My hope is that this resource brings clarity, steadiness, and a little
+                  more peace of mind to every family and professional who finds it.
                 </p>
-                <p className="text-base text-muted-foreground pt-2">
-                  — David Stein, President, Real Property Planning
-                </p>
+                <p className="text-base text-muted-foreground pt-2">— David Stein, President, Real Property Planning</p>
               </div>
             </div>
           </div>
@@ -97,32 +86,44 @@ const About = () => {
           <div className="container px-6 lg:px-8">
             <div className="grid lg:grid-cols-3 gap-12 items-start">
               <div className="lg:col-span-2">
-                <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-                  The Short Version
-                </h2>
+                <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">The Short Version</h2>
                 <div className="space-y-6 text-muted-foreground leading-relaxed text-lg">
                   <p>
                     David Stein is a licensed Washington State real estate broker and a{" "}
-                    <Link to="/real-estate-appraiser" className="text-accent hover:text-gold underline underline-offset-4">
+                    <Link
+                      to="/real-estate-appraiser"
+                      className="text-accent hover:text-gold underline underline-offset-4"
+                    >
                       Washington State Certified Residential Appraiser
                     </Link>{" "}
-                    with over 20 years of experience in both disciplines. He lives in Kirkland, Washington, and serves families, executors, attorneys, CPAs, financial planners, and senior care professionals throughout the{" "}
+                    with over 20 years of experience in both disciplines. He lives in Kirkland, Washington, and serves
+                    families, executors, attorneys, CPAs, financial planners, and senior care professionals throughout
+                    the{" "}
                     <Link to="/counties" className="text-accent hover:text-gold underline underline-offset-4">
                       Puget Sound region
                     </Link>{" "}
                     — specializing in{" "}
-                    <Link to="/probate-estate-sales" className="text-accent hover:text-gold underline underline-offset-4">
+                    <Link
+                      to="/probate-estate-sales"
+                      className="text-accent hover:text-gold underline underline-offset-4"
+                    >
                       probate real estate
-                    </Link>, {" "}
+                    </Link>
+                    ,{" "}
                     <Link to="/executors" className="text-accent hover:text-gold underline underline-offset-4">
                       inherited property
-                    </Link>, estate sales, and{" "}
+                    </Link>
+                    , estate sales, and{" "}
                     <Link to="/senior-transitions" className="text-accent hover:text-gold underline underline-offset-4">
                       senior housing transitions
-                    </Link>.
+                    </Link>
+                    .
                   </p>
                   <p>
-                    He founded Real Property Planning after years of working through probate and senior transition situations and noticing the same problem every time: too many moving parts, too many professionals working in silos, and families left trying to coordinate it all on their own. This site is his answer to that problem.
+                    He founded Real Property Planning after years of working through probate and senior transition
+                    situations and noticing the same problem every time: too many moving parts, too many professionals
+                    working in silos, and families left trying to coordinate it all on their own. This site is his
+                    answer to that problem.
                   </p>
                 </div>
               </div>
@@ -140,9 +141,7 @@ const About = () => {
                 <p className="mt-4 font-serif text-lg text-foreground font-semibold leading-tight text-center">
                   David Stein
                 </p>
-                <p className="text-muted-foreground text-sm mt-1 text-center">
-                  President, Real Property Planning
-                </p>
+                <p className="text-muted-foreground text-sm mt-1 text-center">President, Real Property Planning</p>
               </div>
             </div>
           </div>
@@ -152,24 +151,41 @@ const About = () => {
         <section className="py-20 lg:py-28 bg-cream">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
-              <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-                How David Got Here
-              </h2>
+              <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">How David Got Here</h2>
               <div className="space-y-6 text-muted-foreground leading-relaxed text-lg">
                 <p>
-                  David didn't set out to specialize in probate and senior transitions. He came to it the way most meaningful things happen — through experience.
+                  David didn't set out to specialize in probate and senior transitions. He came to it the way most
+                  meaningful things happen — through experience.
                 </p>
                 <p>
-                 He spent 15 years as a contractor before transitioning into real estate. He also built and ran an e-commerce business — which gave him an early, practical understanding of how to build systems that connect people with what they need. That instinct — identify the gap, build the solution — is what eventually led to Real Property Planning.
+                  <p>
+                    He spent 15 years as a contractor before transitioning into real estate — first earning his license
+                    as a real estate broker, then adding his Washington State Certified Residential Appraiser
+                    credential. Those two disciplines, practiced together over more than two decades, gave him something
+                    few real estate professionals have: the ability to evaluate a property's true market value and guide
+                    its sale from the same seat. He also built and ran an e-commerce business — which gave him an early,
+                    practical understanding of how to build systems that connect people with what they need. That
+                    instinct — identify the gap, build the solution — is what eventually led to Real Property Planning.
+                    But it was the daily reality of working alongside families in probate, estate, and senior transition
+                    situations, armed with both a broker's market knowledge and an appraiser's analytical discipline,
+                    that made clear what was missing and why Real Property Planning needed to exist.
+                  </p>
                 </p>
                 <p>
-                  The shift toward probate and estate work started with a handful of transactions that were more complex than usual. Rather than find them frustrating, David found them fascinating. He started looking more closely at what families were actually going through in those situations — the confusion, the coordination challenges, the decisions being made without enough information — and something clicked.
+                  The shift toward probate and estate work started with a handful of transactions that were more complex
+                  than usual. Rather than find them frustrating, David found them fascinating. He started looking more
+                  closely at what families were actually going through in those situations — the confusion, the
+                  coordination challenges, the decisions being made without enough information — and something clicked.
                 </p>
                 <blockquote className="border-l-4 border-gold/40 pl-6 py-2 my-8 italic text-foreground/90 text-lg">
-                  "I kept seeing the same void. Families were dealing with attorneys, appraisers, real estate agents, senior care professionals, and cleanout crews — all separately, all at different times, none of them coordinating with each other. Someone needed to connect those dots."
+                  "I kept seeing the same void. Families were dealing with attorneys, appraisers, real estate agents,
+                  senior care professionals, and cleanout crews — all separately, all at different times, none of them
+                  coordinating with each other. Someone needed to connect those dots."
                 </blockquote>
                 <p>
-                  That realization became Real Property Planning — a resource hub designed to give families, professionals, and seniors a single place to find guidance, make connections, and navigate one of life's most complicated transitions.
+                  That realization became Real Property Planning — a resource hub designed to give families,
+                  professionals, and seniors a single place to find guidance, make connections, and navigate one of
+                  life's most complicated transitions.
                 </p>
               </div>
             </div>
@@ -180,29 +196,37 @@ const About = () => {
         <section className="py-20 lg:py-28 bg-background">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
-              <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-                It's Personal, Too
-              </h2>
+              <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">It's Personal, Too</h2>
               <div className="space-y-6 text-muted-foreground leading-relaxed text-lg">
-  <p>
-    For David, this work has never been purely professional.
-  </p>
-  <p>
-    When his mother passed away after a battle with cancer, she left behind very little of tangible value — no will, no estate plan, just a car and some furniture that still needed to be dealt with. Even that small process had its complications. It was a quiet reminder that no transition, however simple it looks from the outside, is actually simple when you're the one going through it.
-  </p>
-  <p>
-    His father, now 93 years old and still serving as president of the Wayne Adult Community Center in New Jersey — presiding over city council meetings once a month — is a daily reminder that aging doesn't mean slowing down. David grew up close to his brother and three sisters, and that bond has only deepened over the years. It's the kind of family where people show up for each other — and that instinct carries directly into how David shows up for his clients.
-  </p>
-  <p>
-    His brother, who has lived in a group home for years due to a condition called Agenesis Corpus Callosum, gave David a firsthand understanding of what it means to navigate care systems, group living environments, and the decisions families make when a loved one needs a different kind of support.
-  </p>
-  <p>
-    These experiences don't make David an expert in every dimension of what his clients are going through. But they make him someone who genuinely understands the weight of it.
-  </p>
-  <p>
-    As more people discover Real Property Planning and reach out, the same thing keeps happening: they tell David they wish this site had existed years ago — when they were going through something similar and didn't know where to turn. That feedback is what keeps the work moving forward.
-  </p>
-</div>
+                <p>For David, this work has never been purely professional.</p>
+                <p>
+                  When his mother passed away after a battle with cancer, she left behind very little of tangible value
+                  — no will, no estate plan, just a car and some furniture that still needed to be dealt with. Even that
+                  small process had its complications. It was a quiet reminder that no transition, however simple it
+                  looks from the outside, is actually simple when you're the one going through it.
+                </p>
+                <p>
+                  His father, now 93 years old and still serving as president of the Wayne Adult Community Center in New
+                  Jersey — presiding over city council meetings once a month — is a daily reminder that aging doesn't
+                  mean slowing down. David grew up close to his brother and three sisters, and that bond has only
+                  deepened over the years. It's the kind of family where people show up for each other — and that
+                  instinct carries directly into how David shows up for his clients.
+                </p>
+                <p>
+                  His brother, who has lived in a group home for years due to a condition called Agenesis Corpus
+                  Callosum, gave David a firsthand understanding of what it means to navigate care systems, group living
+                  environments, and the decisions families make when a loved one needs a different kind of support.
+                </p>
+                <p>
+                  These experiences don't make David an expert in every dimension of what his clients are going through.
+                  But they make him someone who genuinely understands the weight of it.
+                </p>
+                <p>
+                  As more people discover Real Property Planning and reach out, the same thing keeps happening: they
+                  tell David they wish this site had existed years ago — when they were going through something similar
+                  and didn't know where to turn. That feedback is what keeps the work moving forward.
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -211,18 +235,22 @@ const About = () => {
         <section className="py-20 lg:py-28 bg-cream">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
-              <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-                Before Real Estate
-              </h2>
+              <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">Before Real Estate</h2>
               <div className="space-y-6 text-muted-foreground leading-relaxed text-lg">
                 <p>
-                  David graduated from Rutgers University and moved to the Pacific Northwest in 1987 — drawn to the region and never left. Before real estate, he spent 15 years in construction and contracting, which gave him a working knowledge of how homes are actually built, what deferred maintenance really means, and how to assess a property's condition with a trained eye rather than a checklist.
+                  David graduated from Rutgers University and moved to the Pacific Northwest in 1987 — drawn to the
+                  region and never left. Before real estate, he spent 15 years in construction and contracting, which
+                  gave him a working knowledge of how homes are actually built, what deferred maintenance really means,
+                  and how to assess a property's condition with a trained eye rather than a checklist.
                 </p>
                 <p>
-                  He also ran a successful e-commerce business selling commercial access control and security systems — an experience that taught him how to build something from scratch, how to connect buyers with exactly what they need, and how to think about a website as a tool rather than a brochure.
+                  He also ran a successful e-commerce business selling commercial access control and security systems —
+                  an experience that taught him how to build something from scratch, how to connect buyers with exactly
+                  what they need, and how to think about a website as a tool rather than a brochure.
                 </p>
                 <p>
-                  Both of those backgrounds show up every day in how he works. The contractor's eye for condition. The builder's instinct for systems. The entrepreneur's comfort with complexity.
+                  Both of those backgrounds show up every day in how he works. The contractor's eye for condition. The
+                  builder's instinct for systems. The entrepreneur's comfort with complexity.
                 </p>
               </div>
             </div>
@@ -238,10 +266,16 @@ const About = () => {
               </h2>
               <div className="space-y-6 text-muted-foreground leading-relaxed text-lg">
                 <p>
-                  Real Property Planning wasn't built to be a typical real estate website. It was built to be an ecosystem — a place where anyone touched by the world of estate property, probate, senior transitions, or inherited real estate could find honest guidance, make trusted connections, and understand their options without feeling overwhelmed.
+                  Real Property Planning wasn't built to be a typical real estate website. It was built to be an
+                  ecosystem — a place where anyone touched by the world of estate property, probate, senior transitions,
+                  or inherited real estate could find honest guidance, make trusted connections, and understand their
+                  options without feeling overwhelmed.
                 </p>
                 <p>
-                  The families who come here are usually not in an easy moment. They're managing grief, responsibility, family dynamics, and financial decisions they've never faced before — often all at once. The professionals who come here are looking for reliable resources and collaborative partners, not just referral lists.
+                  The families who come here are usually not in an easy moment. They're managing grief, responsibility,
+                  family dynamics, and financial decisions they've never faced before — often all at once. The
+                  professionals who come here are looking for reliable resources and collaborative partners, not just
+                  referral lists.
                 </p>
                 <p>
                   David built this site for both of them. And he built it to meet{" "}
@@ -253,10 +287,12 @@ const About = () => {
                   >
                     WCAG 2.1 AA accessibility standards
                   </a>{" "}
-                  — because some of the people who need it most are seniors who deserve a site that's easy to navigate with confidence.
+                  — because some of the people who need it most are seniors who deserve a site that's easy to navigate
+                  with confidence.
                 </p>
                 <p>
-                  Every day is an opportunity to meet new people and do something meaningful. When David sees a void, he figures out how to fill it. That's what happened here.
+                  Every day is an opportunity to meet new people and do something meaningful. When David sees a void, he
+                  figures out how to fill it. That's what happened here.
                 </p>
               </div>
             </div>
@@ -267,9 +303,7 @@ const About = () => {
         <section className="py-20 lg:py-28 bg-cream">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
-              <h2 className="font-serif text-3xl text-foreground font-semibold mb-8">
-                Credentials &amp; Affiliations
-              </h2>
+              <h2 className="font-serif text-3xl text-foreground font-semibold mb-8">Credentials &amp; Affiliations</h2>
 
               <div className="space-y-10">
                 {/* Licenses */}
@@ -279,8 +313,16 @@ const About = () => {
                   </h3>
                   <ul className="space-y-3">
                     {[
-                      <>Licensed Real Estate Broker — Washington State #113972 |{" "}
-                        <a href="https://www.exprealty.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-gold underline underline-offset-4">eXp Realty</a>
+                      <>
+                        Licensed Real Estate Broker — Washington State #113972 |{" "}
+                        <a
+                          href="https://www.exprealty.com"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-accent hover:text-gold underline underline-offset-4"
+                        >
+                          eXp Realty
+                        </a>
                       </>,
                       "Washington State Certified Residential Appraiser — #1702080",
                       "20+ years of experience in both disciplines",
@@ -295,13 +337,20 @@ const About = () => {
 
                 {/* Memberships */}
                 <div>
-                  <h3 className="font-serif text-xl text-foreground font-semibold mb-4">
-                    Professional Memberships
-                  </h3>
+                  <h3 className="font-serif text-xl text-foreground font-semibold mb-4">Professional Memberships</h3>
                   <ul className="space-y-3">
                     {[
-                      <>Corporate Partner,{" "}
-                        <a href="https://www.aginglifecare.org/" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-gold underline underline-offset-4">Aging Life Care Association</a> (ALCA)
+                      <>
+                        Corporate Partner,{" "}
+                        <a
+                          href="https://www.aginglifecare.org/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-accent hover:text-gold underline underline-offset-4"
+                        >
+                          Aging Life Care Association
+                        </a>{" "}
+                        (ALCA)
                       </>,
                       "Member, National Association of Estate Planners & Councils (NAEPC)",
                       "Recognized Member, National Association of Senior Advocates — Best Real Estate Agent 2026",
@@ -316,17 +365,27 @@ const About = () => {
 
                 {/* Based In */}
                 <div>
-                  <h3 className="font-serif text-xl text-foreground font-semibold mb-4">
-                    Based In
-                  </h3>
+                  <h3 className="font-serif text-xl text-foreground font-semibold mb-4">Based In</h3>
                   <ul className="space-y-3">
                     {[
                       "Kirkland, Washington",
-                      <>Serving clients throughout the{" "}
-                        <Link to="/counties" className="text-accent hover:text-gold underline underline-offset-4">Puget Sound region</Link> and Washington State
+                      <>
+                        Serving clients throughout the{" "}
+                        <Link to="/counties" className="text-accent hover:text-gold underline underline-offset-4">
+                          Puget Sound region
+                        </Link>{" "}
+                        and Washington State
                       </>,
-                      <>National referral connections through{" "}
-                        <a href="https://www.exprealty.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-gold underline underline-offset-4">eXp Realty</a>
+                      <>
+                        National referral connections through{" "}
+                        <a
+                          href="https://www.exprealty.com"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-accent hover:text-gold underline underline-offset-4"
+                        >
+                          eXp Realty
+                        </a>
                       </>,
                     ].map((item, i) => (
                       <li key={i} className="flex items-start gap-3">
@@ -353,36 +412,40 @@ const About = () => {
                 What Clients Say About Working With David
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-10">
-                David's clients consistently describe the same experience: he goes further than expected, stays involved longer than required, and communicates in a way that makes complicated situations feel manageable. Many become friends. Most say they'd call him first if they ever had to do it again.
+                David's clients consistently describe the same experience: he goes further than expected, stays involved
+                longer than required, and communicates in a way that makes complicated situations feel manageable. Many
+                become friends. Most say they'd call him first if they ever had to do it again.
               </p>
               <div className="space-y-8">
                 {[
                   {
-                    quote: "We appreciated David's patience, thoughtful communication, and realistic guidance throughout the sale of our family property.",
+                    quote:
+                      "We appreciated David's patience, thoughtful communication, and realistic guidance throughout the sale of our family property.",
                     attribution: "— Family Review",
                   },
                   {
-                    quote: "Real Property Planning brought clarity, professionalism, and calm guidance during a very difficult property transition.",
+                    quote:
+                      "Real Property Planning brought clarity, professionalism, and calm guidance during a very difficult property transition.",
                     attribution: "— Margaret T., Executor, King County",
                   },
                   {
-                    quote: "I was completely overwhelmed as a first-time executor. David walked me through every step and made the entire process feel manageable.",
+                    quote:
+                      "I was completely overwhelmed as a first-time executor. David walked me through every step and made the entire process feel manageable.",
                     attribution: "— Robert K., Personal Representative, Snohomish County",
                   },
                 ].map((review, i) => (
                   <blockquote key={i} className="border-l-4 border-gold/40 pl-6 py-2">
-                    <p className="text-foreground/90 text-lg italic leading-relaxed mb-2">
-                      "{review.quote}"
-                    </p>
-                    <footer className="text-muted-foreground text-sm font-medium">
-                      {review.attribution}
-                    </footer>
+                    <p className="text-foreground/90 text-lg italic leading-relaxed mb-2">"{review.quote}"</p>
+                    <footer className="text-muted-foreground text-sm font-medium">{review.attribution}</footer>
                   </blockquote>
                 ))}
               </div>
               <div className="mt-8 pt-6 border-t border-border">
                 <div className="flex flex-wrap gap-3">
-                  <Link to="/testimonials" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">
+                  <Link
+                    to="/testimonials"
+                    className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm"
+                  >
                     Read More Client Reviews
                   </Link>
                   <span className="text-muted-foreground/40">·</span>
@@ -404,19 +467,21 @@ const About = () => {
         <section className="py-20 lg:py-28 bg-background">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
-              <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-                A Note on How David Works
-              </h2>
+              <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">A Note on How David Works</h2>
               <div className="space-y-6 text-muted-foreground leading-relaxed text-lg">
                 <p>
-                  David will tell you he's a little quirky. He's also direct, genuinely enthusiastic about this work, and tends to stay in people's lives longer than a typical transaction would require. He asks a lot of questions — not to delay, but because he actually wants to understand your situation before offering advice.
+                  David will tell you he's a little quirky. He's also direct, genuinely enthusiastic about this work,
+                  and tends to stay in people's lives longer than a typical transaction would require. He asks a lot of
+                  questions — not to delay, but because he actually wants to understand your situation before offering
+                  advice.
                 </p>
                 <p>
-                  When you leave a conversation with David, the goal is that you feel three things: valued, clear on what comes next, and a little more energized than when you started. Whether he ends up being the right fit for your situation or simply points you toward someone who is, you'll walk away with more than you came with.
+                  When you leave a conversation with David, the goal is that you feel three things: valued, clear on
+                  what comes next, and a little more energized than when you started. Whether he ends up being the right
+                  fit for your situation or simply points you toward someone who is, you'll walk away with more than you
+                  came with.
                 </p>
-                <p className="font-medium text-foreground">
-                  That's the point of all of this.
-                </p>
+                <p className="font-medium text-foreground">That's the point of all of this.</p>
               </div>
             </div>
           </div>
@@ -438,12 +503,19 @@ const About = () => {
                 Reach out directly — by phone, email, or the{" "}
                 <Link to="/contact" className="text-gold hover:text-gold/80 underline underline-offset-4">
                   contact form
-                </Link>. He responds personally, usually within one business day.
+                </Link>
+                . He responds personally, usually within one business day.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4 mb-4">
                 <a href="tel:2069003015">
                   <Button variant="navy3d" size="lg" className="px-8">
-                    <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy" />
+                    <img
+                      src={iconPhone3d}
+                      alt=""
+                      aria-hidden="true"
+                      className="w-5 h-5 mr-2 object-contain shrink-0"
+                      loading="lazy"
+                    />
                     Call (206) 900-3015
                   </Button>
                 </a>
@@ -454,13 +526,20 @@ const About = () => {
                 </a>
               </div>
               <div className="flex items-center justify-center gap-2 text-primary-foreground/60 mt-6">
-                <img src={iconEmail3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0" loading="lazy" />
+                <img
+                  src={iconEmail3d}
+                  alt=""
+                  aria-hidden="true"
+                  className="w-5 h-5 object-contain shrink-0"
+                  loading="lazy"
+                />
                 <a href="mailto:david@realpropertyplanning.com" className="hover:text-gold transition-colors">
                   david@realpropertyplanning.com
                 </a>
               </div>
               <p className="text-primary-foreground/50 text-base mt-6">
-                There's no pressure, no obligation, and no sales pitch. Just an honest conversation about your situation.
+                There's no pressure, no obligation, and no sales pitch. Just an honest conversation about your
+                situation.
               </p>
             </div>
           </div>
