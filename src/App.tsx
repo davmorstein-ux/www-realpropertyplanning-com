@@ -43,6 +43,12 @@ import CowlitzCounty from "./pages/counties/CowlitzCounty";
 import GraysHarborCounty from "./pages/counties/GraysHarborCounty";
 import IslandCounty from "./pages/counties/IslandCounty";
 import JeffersonCounty from "./pages/counties/JeffersonCounty";
+import LewisCounty from "./pages/counties/LewisCounty";
+import MasonCounty from "./pages/counties/MasonCounty";
+import PacificCounty from "./pages/counties/PacificCounty";
+import SanJuanCounty from "./pages/counties/SanJuanCounty";
+import SkamaniaCounty from "./pages/counties/SkamaniaCounty";
+import WahkiakumCounty from "./pages/counties/WahkiakumCounty";
 import Resources from "./pages/Resources";
 import SeniorMoveManagers from "./pages/resources/SeniorMoveManagers";
 import EstateSaleCompanies from "./pages/resources/EstateSaleCompanies";
@@ -158,6 +164,12 @@ const App = () => (
           <Route path="/grays-harbor-county" element={<GraysHarborCounty />} />
           <Route path="/island-county" element={<IslandCounty />} />
           <Route path="/jefferson-county" element={<JeffersonCounty />} />
+          <Route path="/lewis-county" element={<LewisCounty />} />
+          <Route path="/mason-county" element={<MasonCounty />} />
+          <Route path="/pacific-county" element={<PacificCounty />} />
+          <Route path="/san-juan-county" element={<SanJuanCounty />} />
+          <Route path="/skamania-county" element={<SkamaniaCounty />} />
+          <Route path="/wahkiakum-county" element={<WahkiakumCounty />} />
 
           {/* ─── Tier-1 city pages (only) ─────────────────────────── */}
           <Route path="/seattle-probate-estate-real-estate" element={<SeattleProbateEstate />} />
