@@ -86,9 +86,9 @@ const COUNTY_VIDEOS: Record<string, CountyVideo> = {
     uploadDate: "2025-04-17",
   },
   "pierce-county": {
-    webm: "/county-videos/pierce-hero.webm?v=1",
-    mp4: "/county-videos/pierce-hero.mp4?v=1",
-    poster: "/county-videos/pierce-hero-poster.webp?v=1",
+    webm: "/county-videos/pierce-hero.webm?v=2",
+    mp4: "/county-videos/pierce-hero.mp4?v=2",
+    poster: "/county-videos/pierce-hero-poster.webp?v=2",
     uploadDate: "2025-04-17",
   },
 };

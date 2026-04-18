@@ -39,6 +39,8 @@ import WhatcomCounty from "./pages/counties/WhatcomCounty";
 import BentonCounty from "./pages/counties/BentonCounty";
 import YakimaCounty from "./pages/counties/YakimaCounty";
 import FranklinCounty from "./pages/counties/FranklinCounty";
+import CowlitzCounty from "./pages/counties/CowlitzCounty";
+import GraysHarborCounty from "./pages/counties/GraysHarborCounty";
 import Resources from "./pages/Resources";
 import SeniorMoveManagers from "./pages/resources/SeniorMoveManagers";
 import EstateSaleCompanies from "./pages/resources/EstateSaleCompanies";
@@ -150,6 +152,8 @@ const App = () => (
           <Route path="/benton-county" element={<BentonCounty />} />
           <Route path="/yakima-county" element={<YakimaCounty />} />
           <Route path="/franklin-county" element={<FranklinCounty />} />
+          <Route path="/cowlitz-county" element={<CowlitzCounty />} />
+          <Route path="/grays-harbor-county" element={<GraysHarborCounty />} />
 
           {/* ─── Tier-1 city pages (only) ─────────────────────────── */}
           <Route path="/seattle-probate-estate-real-estate" element={<SeattleProbateEstate />} />
