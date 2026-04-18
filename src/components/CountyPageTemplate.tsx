@@ -105,6 +105,12 @@ const COUNTY_VIDEOS: Record<string, CountyVideo> = {
     poster: "/county-videos/island-hero-poster.webp?v=3",
     uploadDate: "2026-04-18",
   },
+  "skagit-county": {
+    webm: "/county-videos/skagit-hero.webm?v=1",
+    mp4: "/county-videos/skagit-hero.mp4?v=1",
+    poster: "/county-videos/skagit-hero-poster.webp?v=1",
+    uploadDate: "2026-04-18",
+  },
   "whatcom-county": {
     webm: "/county-videos/whatcom-hero.webm?v=1",
     mp4: "/county-videos/whatcom-hero.mp4?v=1",
