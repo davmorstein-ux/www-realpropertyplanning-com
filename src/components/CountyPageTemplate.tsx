@@ -100,10 +100,10 @@ const COUNTY_VIDEOS: Record<string, CountyVideo> = {
     uploadDate: "2025-04-15",
   },
   "island-county": {
-    webm: "/county-videos/island-hero.webm?v=1",
-    mp4: "/county-videos/island-hero.mp4?v=1",
-    poster: "/county-videos/island-hero-poster.webp?v=1",
-    uploadDate: "2025-04-18",
+    webm: "/county-videos/island-hero.webm?v=2",
+    mp4: "/county-videos/island-hero.mp4?v=2",
+    poster: "/county-videos/island-hero-poster.webp?v=2",
+    uploadDate: "2026-04-18",
   },
   "whatcom-county": {
     webm: "/county-videos/whatcom-hero.webm?v=1",
