@@ -34,7 +34,7 @@ const Index = () => {
     <div className="min-h-screen bg-cream">
       <SEOHead
         title="Probate Real Estate & Senior Transitions | Puget Sound WA"
-        description="Probate real estate, estate appraisals, and senior transition guidance for Washington families and professionals. Call (206) 900-3015."
+        description="Real Property Planning is Washington State's resource hub for probate real estate, inherited home sales, senior transitions, and estate guidance — connecting families, executors, attorneys, and professionals with trusted expertise. David Stein brings over 20 years of experience as a licensed real estate broker and Washington State Certified Residential Appraiser."
         canonical="https://www.realpropertyplanning.com"
         jsonLd={jsonLd}
       />
