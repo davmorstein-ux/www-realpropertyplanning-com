@@ -217,8 +217,36 @@ const CountyPageTemplate = ({
       }
     : undefined;
 
+  const navigate = useNavigate();
+  const touchStartX = useRef<number | null>(null);
+  const currentIndex = COUNTY_ORDER.findIndex((c) => c.slug === countySlug);
+  const prevCounty = currentIndex >= 0
+    ? COUNTY_ORDER[(currentIndex - 1 + COUNTY_ORDER.length) % COUNTY_ORDER.length]
+    : null;
+  const nextCounty = currentIndex >= 0
+    ? COUNTY_ORDER[(currentIndex + 1) % COUNTY_ORDER.length]
+    : null;
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    if (window.innerWidth >= 768) return;
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (window.innerWidth >= 768 || touchStartX.current === null) return;
+    const deltaX = e.changedTouches[0].clientX - touchStartX.current;
+    touchStartX.current = null;
+    if (Math.abs(deltaX) < 50) return;
+    if (deltaX < 0 && nextCounty) navigate(nextCounty.path);
+    else if (deltaX > 0 && prevCounty) navigate(prevCounty.path);
+  };
+
   return (
-    <div className="min-h-screen bg-background">
+    <div
+      className="min-h-screen bg-background"
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+    >
       <SEOHead
         title={seoTitle || `Probate Real Estate & Inherited Property Sales in ${countyName} | Real Property Planning`}
         description={seoDescription || `Probate real estate and inherited property sales guidance for executors, attorneys, and families in ${countyName}, Washington State.`}
