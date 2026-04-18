@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
-import { realEstateAgentSchema } from "@/lib/schema";
+import { realEstateAgentSchema, organizationSchema } from "@/lib/schema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
@@ -27,7 +27,7 @@ const serviceAreas = [
   { county: "Kitsap County", href: "/counties/kitsap", cities: "Bremerton, Silverdale, Poulsbo, Port Orchard, Bainbridge Island, Kingston" },
 ];
 
-const jsonLd = realEstateAgentSchema;
+const jsonLd = [realEstateAgentSchema, organizationSchema];
 
 const Index = () => {
   return (
@@ -36,7 +36,7 @@ const Index = () => {
         title="Probate Real Estate & Senior Transitions | Puget Sound WA"
         description="Real Property Planning is Washington State's resource hub for probate real estate, inherited home sales, senior transitions, and estate guidance — connecting families, executors, attorneys, and professionals with trusted expertise. David Stein brings over 20 years of experience as a licensed real estate broker and Washington State Certified Residential Appraiser."
         canonical="https://www.realpropertyplanning.com"
-        jsonLd={jsonLd}
+        schemaJson={jsonLd}
       />
       <Header />
       <main id="main-content">
