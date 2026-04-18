@@ -160,7 +160,7 @@ const Counties = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Service Areas | Probate Real Estate Across Puget Sound | Real Property Planning"
-        description="Serving King, Snohomish, Pierce, Skagit, and Kitsap Counties — probate property sales, estate appraisals, and senior transitions in Seattle, Bellevue, Everett, Tacoma, and surrounding communities."
+        description="Probate real estate, inherited home sales, and senior transition guidance across Washington State — serving King, Snohomish, Pierce, Kitsap, Skagit, Whatcom, Clark, Thurston, Spokane, Benton, Cowlitz, Grays Harbor, Island, Jefferson, Lewis, Mason, Pacific, San Juan, Skamania, Wahkiakum, Yakima, Franklin and surrounding counties."
       />
       <BreadcrumbSchema items={[{ name: "Service Areas", url: "/counties" }]} />
       <Header />
