@@ -8,7 +8,21 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useRef } from "react";
+
+const COUNTY_ORDER = [
+  { slug: "king-county",      path: "/king-county",      name: "King County" },
+  { slug: "snohomish-county", path: "/snohomish-county", name: "Snohomish County" },
+  { slug: "pierce-county",    path: "/pierce-county",    name: "Pierce County" },
+  { slug: "kitsap-county",    path: "/kitsap-county",    name: "Kitsap County" },
+  { slug: "skagit-county",    path: "/skagit-county",    name: "Skagit County" },
+  { slug: "whatcom-county",   path: "/whatcom-county",   name: "Whatcom County" },
+  { slug: "thurston-county",  path: "/thurston-county",  name: "Thurston County" },
+  { slug: "clark-county",     path: "/clark-county",     name: "Clark County" },
+  { slug: "spokane-county",   path: "/spokane-county",   name: "Spokane County" },
+  { slug: "benton-county",    path: "/benton-county",    name: "Benton County" },
+];
 
 import mappin3d from "@/assets/real-estate-service-areas-mappin-washington.webp";
 import heroIcon from "@/assets/icons/real-estate-service-areas-map-icon-washington.webp";
@@ -203,8 +217,36 @@ const CountyPageTemplate = ({
       }
     : undefined;
 
+  const navigate = useNavigate();
+  const touchStartX = useRef<number | null>(null);
+  const currentIndex = COUNTY_ORDER.findIndex((c) => c.slug === countySlug);
+  const prevCounty = currentIndex >= 0
+    ? COUNTY_ORDER[(currentIndex - 1 + COUNTY_ORDER.length) % COUNTY_ORDER.length]
+    : null;
+  const nextCounty = currentIndex >= 0
+    ? COUNTY_ORDER[(currentIndex + 1) % COUNTY_ORDER.length]
+    : null;
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    if (window.innerWidth >= 768) return;
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (window.innerWidth >= 768 || touchStartX.current === null) return;
+    const deltaX = e.changedTouches[0].clientX - touchStartX.current;
+    touchStartX.current = null;
+    if (Math.abs(deltaX) < 50) return;
+    if (deltaX < 0 && nextCounty) navigate(nextCounty.path);
+    else if (deltaX > 0 && prevCounty) navigate(prevCounty.path);
+  };
+
   return (
-    <div className="min-h-screen bg-background">
+    <div
+      className="min-h-screen bg-background"
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+    >
       <SEOHead
         title={seoTitle || `Probate Real Estate & Inherited Property Sales in ${countyName} | Real Property Planning`}
         description={seoDescription || `Probate real estate and inherited property sales guidance for executors, attorneys, and families in ${countyName}, Washington State.`}
@@ -473,6 +515,33 @@ const CountyPageTemplate = ({
           </div>
         </div>
       </section>
+
+      {prevCounty && nextCounty && (
+        <nav
+          aria-label="County navigation"
+          className="md:hidden border-t border-border bg-background px-6 py-5"
+        >
+          <p className="text-xs text-muted-foreground/80 text-center mb-3 italic">
+            Swipe left or right to explore nearby counties
+          </p>
+          <div className="flex items-center justify-between gap-4">
+            <Link
+              to={prevCounty.path}
+              className="flex items-center gap-1 text-accent hover:text-gold transition-colors text-sm font-medium"
+            >
+              <span aria-hidden="true">←</span>
+              <span>{prevCounty.name}</span>
+            </Link>
+            <Link
+              to={nextCounty.path}
+              className="flex items-center gap-1 text-accent hover:text-gold transition-colors text-sm font-medium"
+            >
+              <span>{nextCounty.name}</span>
+              <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+        </nav>
+      )}
 
       <RelatedServices currentPath={countyPath} />
       <DisclaimerSection />
