@@ -30,8 +30,7 @@ import pacificCountyLogo from "@/assets/counties/pacific-county-logo.webp";
 import sanJuanCountyLogo from "@/assets/counties/san-juan-county-logo.webp";
 import skamaniCountyLogo from "@/assets/counties/skamania-county-logo.webp";
 import wahkiakumCountyLogo from "@/assets/counties/wahkiakum-county-logo.webp";
-// Grays Harbor logo not yet uploaded — fallback to generic icon until available.
-const graysHarborCountyLogo = fallbackCountyLogo;
+import graysHarborCountyLogo from "@/assets/counties/grays-harbor-county-logo.webp";
 
 const countyCards = [
   {

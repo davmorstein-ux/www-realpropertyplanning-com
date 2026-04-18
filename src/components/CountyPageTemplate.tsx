@@ -45,8 +45,7 @@ import pacificLogo from "@/assets/counties/pacific-county-logo.webp";
 import sanJuanLogo from "@/assets/counties/san-juan-county-logo.webp";
 import skamaniаLogo from "@/assets/counties/skamania-county-logo.webp";
 import wahkiakumLogo from "@/assets/counties/wahkiakum-county-logo.webp";
-// Grays Harbor logo not yet uploaded — fallback to hero icon until available.
-const graysHarborLogo = heroIcon;
+import graysHarborLogo from "@/assets/counties/grays-harbor-county-logo.webp";
 import { services, counties } from "@/lib/service-areas-data";
 
 type CountyVideo = {
