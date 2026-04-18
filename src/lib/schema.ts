@@ -302,6 +302,51 @@ export const realEstateAgentSchema = {
   ],
 };
 
+/** Organization schema — positions Real Property Planning as a hub/ecosystem, not centered on any individual */
+export const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": `${SITE_URL}/#hub-organization`,
+  name: BUSINESS_NAME,
+  alternateName: "Real Property Planning Resource Hub",
+  description:
+    "Real Property Planning is Washington State's resource hub and professional ecosystem for probate real estate, inherited home sales, senior transitions, and estate guidance — connecting families, executors, attorneys, CPAs, financial planners, and other professionals with trusted expertise across the state.",
+  url: SITE_URL,
+  logo: {
+    "@type": "ImageObject",
+    url: LOGO_URL,
+    width: 400,
+    height: 400,
+  },
+  image: LOGO_URL,
+  telephone: "(206) 900-3015",
+  email: "info@realpropertyplanning.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "PO Box 1462",
+    addressLocality: "Woodinville",
+    addressRegion: "WA",
+    postalCode: "98072",
+    addressCountry: "US",
+  },
+  areaServed: { "@type": "State", name: "Washington" },
+  knowsAbout: [
+    "Probate real estate",
+    "Estate sales",
+    "Senior transitions",
+    "Inherited property",
+    "Real estate appraisal",
+  ],
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "(206) 900-3015",
+    email: "info@realpropertyplanning.com",
+    contactType: "customer service",
+    areaServed: "US-WA",
+    availableLanguage: "English",
+  },
+};
+
 const publisher = {
   "@type": "Organization",
   name: BUSINESS_NAME,
