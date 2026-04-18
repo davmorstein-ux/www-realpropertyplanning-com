@@ -100,9 +100,9 @@ const COUNTY_VIDEOS: Record<string, CountyVideo> = {
     uploadDate: "2025-04-15",
   },
   "island-county": {
-    webm: "/county-videos/island-hero.webm?v=4",
-    mp4: "/county-videos/island-hero.mp4?v=4",
-    poster: "/county-videos/island-hero-poster.webp?v=4",
+    webm: "/county-videos/island-hero.webm?v=5",
+    mp4: "/county-videos/island-hero.mp4?v=5",
+    poster: "/county-videos/island-hero-poster.webp?v=5",
     uploadDate: "2026-04-18",
   },
   "skagit-county": {
@@ -112,9 +112,9 @@ const COUNTY_VIDEOS: Record<string, CountyVideo> = {
     uploadDate: "2026-04-18",
   },
   "whatcom-county": {
-    webm: "/county-videos/whatcom-hero.webm?v=2",
-    mp4: "/county-videos/whatcom-hero.mp4?v=2",
-    poster: "/county-videos/whatcom-hero-poster.webp?v=2",
+    webm: "/county-videos/whatcom-hero.webm?v=3",
+    mp4: "/county-videos/whatcom-hero.mp4?v=3",
+    poster: "/county-videos/whatcom-hero-poster.webp?v=3",
     uploadDate: "2026-04-18",
   },
   "pierce-county": {
