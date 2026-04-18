@@ -516,6 +516,33 @@ const CountyPageTemplate = ({
         </div>
       </section>
 
+      {prevCounty && nextCounty && (
+        <nav
+          aria-label="County navigation"
+          className="md:hidden border-t border-border bg-background px-6 py-5"
+        >
+          <p className="text-xs text-muted-foreground/80 text-center mb-3 italic">
+            Swipe left or right to explore nearby counties
+          </p>
+          <div className="flex items-center justify-between gap-4">
+            <Link
+              to={prevCounty.path}
+              className="flex items-center gap-1 text-accent hover:text-gold transition-colors text-sm font-medium"
+            >
+              <span aria-hidden="true">←</span>
+              <span>{prevCounty.name}</span>
+            </Link>
+            <Link
+              to={nextCounty.path}
+              className="flex items-center gap-1 text-accent hover:text-gold transition-colors text-sm font-medium"
+            >
+              <span>{nextCounty.name}</span>
+              <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+        </nav>
+      )}
+
       <RelatedServices currentPath={countyPath} />
       <DisclaimerSection />
       </main>
