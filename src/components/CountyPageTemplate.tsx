@@ -88,10 +88,10 @@ const COUNTY_VIDEOS: Record<string, CountyVideo> = {
     uploadDate: "2025-04-10",
   },
   "king-county": {
-    webm: "/county-videos/king-hero.webm?v=1",
-    mp4: "/county-videos/king-hero.mp4?v=1",
-    poster: "/county-videos/king-hero-poster.webp?v=1",
-    uploadDate: "2025-04-12",
+    webm: "/county-videos/king-hero.webm?v=4",
+    mp4: "/county-videos/king-hero.mp4?v=4",
+    poster: "/county-videos/king-hero-poster.webp?v=4",
+    uploadDate: "2026-04-18",
   },
   "kitsap-county": {
     webm: "/county-videos/kitsap-hero.webm?v=1",
