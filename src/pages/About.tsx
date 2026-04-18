@@ -71,7 +71,7 @@ const About = () => {
                   coordinated team of specialists for the road ahead. The goal isn't to put any one person at the
                   center. The goal is to make the path forward feel less heavy for the people walking it.
                 </p>
-                <p className="font-serif italic text-2xl md:text-3xl text-foreground font-semibold border-l-4 border-gold pl-6 py-2">
+                <p className="font-serif italic text-3xl md:text-4xl lg:text-5xl text-foreground font-semibold border-l-4 border-gold pl-6 py-2">
                   This work is personal to me. My hope is that this resource brings clarity, steadiness, and a little
                   more peace of mind to every family and professional who finds it.
                 </p>
