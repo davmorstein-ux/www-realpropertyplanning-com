@@ -85,6 +85,12 @@ const COUNTY_VIDEOS: Record<string, CountyVideo> = {
     poster: "/county-videos/whatcom-hero-poster.webp?v=1",
     uploadDate: "2025-04-17",
   },
+  "pierce-county": {
+    webm: "/county-videos/pierce-hero.webm?v=1",
+    mp4: "/county-videos/pierce-hero.mp4?v=1",
+    poster: "/county-videos/pierce-hero-poster.webp?v=1",
+    uploadDate: "2025-04-17",
+  },
 };
 
 const COUNTY_LOGOS: Record<string, string> = {
