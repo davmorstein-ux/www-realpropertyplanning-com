@@ -36,18 +36,17 @@ import snohomishLogo from "@/assets/counties/snohomish-county-logo.webp";
 import spokaneLogo from "@/assets/counties/spokane-county-logo.webp";
 import thurstonLogo from "@/assets/counties/thurston-county-logo.webp";
 import whatcomLogo from "@/assets/counties/whatcom-county-logo.webp";
-// Fallback placeholders — logo files for these counties have not been uploaded yet.
-// When the real /assets/counties/<slug>-county-logo.webp files are added, swap these aliases for direct imports.
-const cowlitzLogo = heroIcon;
+import cowlitzLogo from "@/assets/counties/cowlitz-county-logo.webp";
+import islandLogo from "@/assets/counties/island-county-logo.webp";
+import jeffersonLogo from "@/assets/counties/jefferson-county-logo.webp";
+import lewisLogo from "@/assets/counties/lewis-county-logo.webp";
+import masonLogo from "@/assets/counties/mason-county-logo.webp";
+import pacificLogo from "@/assets/counties/pacific-county-logo.webp";
+import sanJuanLogo from "@/assets/counties/san-juan-county-logo.webp";
+import skamaniаLogo from "@/assets/counties/skamania-county-logo.webp";
+import wahkiakumLogo from "@/assets/counties/wahkiakum-county-logo.webp";
+// Grays Harbor logo not yet uploaded — fallback to hero icon until available.
 const graysHarborLogo = heroIcon;
-const islandLogo = heroIcon;
-const jeffersonLogo = heroIcon;
-const lewisLogo = heroIcon;
-const masonLogo = heroIcon;
-const pacificLogo = heroIcon;
-const sanJuanLogo = heroIcon;
-const skamaniаLogo = heroIcon;
-const wahkiakumLogo = heroIcon;
 import { services, counties } from "@/lib/service-areas-data";
 
 type CountyVideo = {

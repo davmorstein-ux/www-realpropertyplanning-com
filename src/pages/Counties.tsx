@@ -21,16 +21,17 @@ import thurstonCountyLogo from "@/assets/counties/thurston-county-logo.webp";
 import whatcomCountyLogo from "@/assets/counties/whatcom-county-logo.webp";
 import bentonCountyLogo from "@/assets/counties/benton-county-logo.webp";
 import fallbackCountyLogo from "@/assets/icons/real-estate-service-areas-map-icon-washington.webp";
-const cowlitzCountyLogo = fallbackCountyLogo;
+import cowlitzCountyLogo from "@/assets/counties/cowlitz-county-logo.webp";
+import islandCountyLogo from "@/assets/counties/island-county-logo.webp";
+import jeffersonCountyLogo from "@/assets/counties/jefferson-county-logo.webp";
+import lewisCountyLogo from "@/assets/counties/lewis-county-logo.webp";
+import masonCountyLogo from "@/assets/counties/mason-county-logo.webp";
+import pacificCountyLogo from "@/assets/counties/pacific-county-logo.webp";
+import sanJuanCountyLogo from "@/assets/counties/san-juan-county-logo.webp";
+import skamaniCountyLogo from "@/assets/counties/skamania-county-logo.webp";
+import wahkiakumCountyLogo from "@/assets/counties/wahkiakum-county-logo.webp";
+// Grays Harbor logo not yet uploaded — fallback to generic icon until available.
 const graysHarborCountyLogo = fallbackCountyLogo;
-const islandCountyLogo = fallbackCountyLogo;
-const jeffersonCountyLogo = fallbackCountyLogo;
-const lewisCountyLogo = fallbackCountyLogo;
-const masonCountyLogo = fallbackCountyLogo;
-const pacificCountyLogo = fallbackCountyLogo;
-const sanJuanCountyLogo = fallbackCountyLogo;
-const skamaniCountyLogo = fallbackCountyLogo;
-const wahkiakumCountyLogo = fallbackCountyLogo;
 
 const countyCards = [
   {
