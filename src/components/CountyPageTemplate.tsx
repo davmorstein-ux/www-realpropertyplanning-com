@@ -8,7 +8,21 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useRef } from "react";
+
+const COUNTY_ORDER = [
+  { slug: "king-county",      path: "/king-county",      name: "King County" },
+  { slug: "snohomish-county", path: "/snohomish-county", name: "Snohomish County" },
+  { slug: "pierce-county",    path: "/pierce-county",    name: "Pierce County" },
+  { slug: "kitsap-county",    path: "/kitsap-county",    name: "Kitsap County" },
+  { slug: "skagit-county",    path: "/skagit-county",    name: "Skagit County" },
+  { slug: "whatcom-county",   path: "/whatcom-county",   name: "Whatcom County" },
+  { slug: "thurston-county",  path: "/thurston-county",  name: "Thurston County" },
+  { slug: "clark-county",     path: "/clark-county",     name: "Clark County" },
+  { slug: "spokane-county",   path: "/spokane-county",   name: "Spokane County" },
+  { slug: "benton-county",    path: "/benton-county",    name: "Benton County" },
+];
 
 import mappin3d from "@/assets/real-estate-service-areas-mappin-washington.webp";
 import heroIcon from "@/assets/icons/real-estate-service-areas-map-icon-washington.webp";
