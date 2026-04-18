@@ -100,9 +100,9 @@ const COUNTY_VIDEOS: Record<string, CountyVideo> = {
     uploadDate: "2025-04-15",
   },
   "island-county": {
-    webm: "/county-videos/island-hero.webm?v=6",
-    mp4: "/county-videos/island-hero.mp4?v=6",
-    poster: "/county-videos/island-hero-poster.webp?v=6",
+    webm: "/county-videos/island-hero.webm?v=7",
+    mp4: "/county-videos/island-hero.mp4?v=7",
+    poster: "/county-videos/island-hero-poster.webp?v=7",
     uploadDate: "2026-04-18",
   },
   "skagit-county": {
