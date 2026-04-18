@@ -1549,6 +1549,117 @@ export const counties: CountyData[] = [
       city("Bow-Edison", "Skagit County", "skagit-county", "bow-edison"),
     ],
   },
+  {
+    name: "Cowlitz County",
+    slug: "cowlitz-county",
+    cities: [
+      city("Longview", "Cowlitz County", "cowlitz-county"),
+      city("Kelso", "Cowlitz County", "cowlitz-county"),
+      city("Castle Rock", "Cowlitz County", "cowlitz-county"),
+      city("Woodland", "Cowlitz County", "cowlitz-county"),
+      city("Kalama", "Cowlitz County", "cowlitz-county"),
+      city("Ryderwood", "Cowlitz County", "cowlitz-county"),
+      city("Toutle", "Cowlitz County", "cowlitz-county"),
+    ],
+  },
+  {
+    name: "Grays Harbor County",
+    slug: "grays-harbor-county",
+    cities: [
+      city("Aberdeen", "Grays Harbor County", "grays-harbor-county"),
+      city("Hoquiam", "Grays Harbor County", "grays-harbor-county"),
+      city("Ocean Shores", "Grays Harbor County", "grays-harbor-county"),
+      city("Westport", "Grays Harbor County", "grays-harbor-county"),
+      city("Montesano", "Grays Harbor County", "grays-harbor-county"),
+      city("Elma", "Grays Harbor County", "grays-harbor-county"),
+      city("McCleary", "Grays Harbor County", "grays-harbor-county"),
+    ],
+  },
+  {
+    name: "Island County",
+    slug: "island-county",
+    cities: [
+      city("Oak Harbor", "Island County", "island-county"),
+      city("Coupeville", "Island County", "island-county"),
+      city("Langley", "Island County", "island-county"),
+      city("Freeland", "Island County", "island-county"),
+      city("Clinton", "Island County", "island-county"),
+      city("Camano Island", "Island County", "island-county"),
+      city("Stanwood", "Island County", "island-county", "stanwood-island"),
+    ],
+  },
+  {
+    name: "Jefferson County",
+    slug: "jefferson-county",
+    cities: [
+      city("Port Townsend", "Jefferson County", "jefferson-county"),
+      city("Sequim", "Jefferson County", "jefferson-county"),
+      city("Port Hadlock", "Jefferson County", "jefferson-county"),
+      city("Quilcene", "Jefferson County", "jefferson-county"),
+      city("Brinnon", "Jefferson County", "jefferson-county"),
+    ],
+  },
+  {
+    name: "Lewis County",
+    slug: "lewis-county",
+    cities: [
+      city("Chehalis", "Lewis County", "lewis-county"),
+      city("Centralia", "Lewis County", "lewis-county"),
+      city("Morton", "Lewis County", "lewis-county"),
+      city("Winlock", "Lewis County", "lewis-county"),
+      city("Napavine", "Lewis County", "lewis-county"),
+      city("Toledo", "Lewis County", "lewis-county"),
+    ],
+  },
+  {
+    name: "Mason County",
+    slug: "mason-county",
+    cities: [
+      city("Shelton", "Mason County", "mason-county"),
+      city("Belfair", "Mason County", "mason-county"),
+      city("Union", "Mason County", "mason-county"),
+      city("Hoodsport", "Mason County", "mason-county"),
+      city("Allyn", "Mason County", "mason-county"),
+    ],
+  },
+  {
+    name: "Pacific County",
+    slug: "pacific-county",
+    cities: [
+      city("Long Beach", "Pacific County", "pacific-county"),
+      city("Raymond", "Pacific County", "pacific-county"),
+      city("South Bend", "Pacific County", "pacific-county"),
+      city("Ilwaco", "Pacific County", "pacific-county"),
+      city("Naselle", "Pacific County", "pacific-county"),
+    ],
+  },
+  {
+    name: "San Juan County",
+    slug: "san-juan-county",
+    cities: [
+      city("Friday Harbor", "San Juan County", "san-juan-county"),
+      city("Eastsound", "San Juan County", "san-juan-county"),
+      city("Lopez Island", "San Juan County", "san-juan-county"),
+      city("Deer Harbor", "San Juan County", "san-juan-county"),
+    ],
+  },
+  {
+    name: "Skamania County",
+    slug: "skamania-county",
+    cities: [
+      city("Stevenson", "Skamania County", "skamania-county"),
+      city("North Bonneville", "Skamania County", "skamania-county"),
+      city("Carson", "Skamania County", "skamania-county"),
+    ],
+  },
+  {
+    name: "Wahkiakum County",
+    slug: "wahkiakum-county",
+    cities: [
+      city("Cathlamet", "Wahkiakum County", "wahkiakum-county"),
+      city("Skamokawa", "Wahkiakum County", "wahkiakum-county"),
+    ],
+  },
 ];
 
 // ─── Tier Classification ────────────────────────────────────────────────
