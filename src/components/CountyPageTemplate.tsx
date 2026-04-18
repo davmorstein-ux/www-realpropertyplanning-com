@@ -36,6 +36,18 @@ import snohomishLogo from "@/assets/counties/snohomish-county-logo.webp";
 import spokaneLogo from "@/assets/counties/spokane-county-logo.webp";
 import thurstonLogo from "@/assets/counties/thurston-county-logo.webp";
 import whatcomLogo from "@/assets/counties/whatcom-county-logo.webp";
+// Fallback placeholders — logo files for these counties have not been uploaded yet.
+// When the real /assets/counties/<slug>-county-logo.webp files are added, swap these aliases for direct imports.
+const cowlitzLogo = heroIcon;
+const graysHarborLogo = heroIcon;
+const islandLogo = heroIcon;
+const jeffersonLogo = heroIcon;
+const lewisLogo = heroIcon;
+const masonLogo = heroIcon;
+const pacificLogo = heroIcon;
+const sanJuanLogo = heroIcon;
+const skamaniаLogo = heroIcon;
+const wahkiakumLogo = heroIcon;
 import { services, counties } from "@/lib/service-areas-data";
 
 type CountyVideo = {
@@ -58,6 +70,16 @@ const COUNTY_WEBSITES: Record<string, string> = {
   "spokane-county":   "https://www.spokanecounty.org",
   "thurston-county":  "https://www.thurstoncountywa.gov",
   "whatcom-county":   "https://www.whatcomcounty.us",
+  "cowlitz-county":      "https://www.co.cowlitz.wa.us",
+  "grays-harbor-county": "https://www.graysharborcounty.net",
+  "island-county":       "https://www.islandcountywa.gov",
+  "jefferson-county":    "https://www.jeffersoncountywa.gov",
+  "lewis-county":        "https://www.lewiscountywa.gov",
+  "mason-county":        "https://www.masoncountywa.gov",
+  "pacific-county":      "https://www.pacificcounty.org",
+  "san-juan-county":     "https://www.sanjuanco.com",
+  "skamania-county":     "https://www.skamaniacounty.org",
+  "wahkiakum-county":    "https://www.wahkiakumcounty.org",
 };
 
 const COUNTY_VIDEOS: Record<string, CountyVideo> = {
@@ -104,6 +126,16 @@ const COUNTY_LOGOS: Record<string, string> = {
   "spokane-county": spokaneLogo,
   "thurston-county": thurstonLogo,
   "whatcom-county": whatcomLogo,
+  "cowlitz-county":     cowlitzLogo,
+  "grays-harbor-county": graysHarborLogo,
+  "island-county":      islandLogo,
+  "jefferson-county":   jeffersonLogo,
+  "lewis-county":       lewisLogo,
+  "mason-county":       masonLogo,
+  "pacific-county":     pacificLogo,
+  "san-juan-county":    sanJuanLogo,
+  "skamania-county":    skamaniаLogo,
+  "wahkiakum-county":   wahkiakumLogo,
 };
 
 /** Neighboring-county relationships for inter-county SEO link equity */
@@ -148,6 +180,55 @@ const NEIGHBORING_COUNTIES: Record<string, { slug: string; name: string }[]> = {
   ],
   "benton-county": [
     { slug: "spokane-county", name: "Spokane County" },
+  ],
+  "cowlitz-county": [
+    { slug: "clark-county", name: "Clark County" },
+    { slug: "wahkiakum-county", name: "Wahkiakum County" },
+    { slug: "lewis-county", name: "Lewis County" },
+    { slug: "skamania-county", name: "Skamania County" },
+  ],
+  "grays-harbor-county": [
+    { slug: "mason-county", name: "Mason County" },
+    { slug: "lewis-county", name: "Lewis County" },
+    { slug: "pacific-county", name: "Pacific County" },
+  ],
+  "island-county": [
+    { slug: "skagit-county", name: "Skagit County" },
+    { slug: "snohomish-county", name: "Snohomish County" },
+  ],
+  "jefferson-county": [
+    { slug: "clallam-county", name: "Clallam County" },
+    { slug: "mason-county", name: "Mason County" },
+    { slug: "kitsap-county", name: "Kitsap County" },
+  ],
+  "lewis-county": [
+    { slug: "thurston-county", name: "Thurston County" },
+    { slug: "grays-harbor-county", name: "Grays Harbor County" },
+    { slug: "cowlitz-county", name: "Cowlitz County" },
+    { slug: "pierce-county", name: "Pierce County" },
+  ],
+  "mason-county": [
+    { slug: "kitsap-county", name: "Kitsap County" },
+    { slug: "thurston-county", name: "Thurston County" },
+    { slug: "grays-harbor-county", name: "Grays Harbor County" },
+    { slug: "jefferson-county", name: "Jefferson County" },
+  ],
+  "pacific-county": [
+    { slug: "grays-harbor-county", name: "Grays Harbor County" },
+    { slug: "wahkiakum-county", name: "Wahkiakum County" },
+    { slug: "cowlitz-county", name: "Cowlitz County" },
+  ],
+  "san-juan-county": [
+    { slug: "skagit-county", name: "Skagit County" },
+    { slug: "island-county", name: "Island County" },
+  ],
+  "skamania-county": [
+    { slug: "clark-county", name: "Clark County" },
+    { slug: "cowlitz-county", name: "Cowlitz County" },
+  ],
+  "wahkiakum-county": [
+    { slug: "pacific-county", name: "Pacific County" },
+    { slug: "cowlitz-county", name: "Cowlitz County" },
   ],
 };
 
