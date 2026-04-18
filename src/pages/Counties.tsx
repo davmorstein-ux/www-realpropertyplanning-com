@@ -178,7 +178,7 @@ const Counties = () => {
               Probate &amp; Estate Real Estate Guidance by County
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-5">
-              Every county in Washington has its own market dynamics, housing stock, and buyer expectations. Estate properties in Seattle's urban neighborhoods sell differently than inherited homes in Spokane's established communities or waterfront parcels on Bainbridge Island. Real Property Planning provides county-specific guidance so executors, trustees, attorneys, and families get pricing and coordination tailored to where the property actually sits.
+              Every county in Washington has its own market dynamics, housing stock, and buyer expectations. Estate properties in Seattle's urban neighborhoods sell differently than inherited homes in Spokane's established communities or waterfront parcels on Bainbridge Island. Real Property Planning provides county-specific guidance so executors, trustees, attorneys, and families get pricing and coordination tailored to where the property actually sits. Real Property Planning now serves families, executors, attorneys, and professionals across more than 20 Washington counties — from the urban Puget Sound region to the Olympic Peninsula, the Columbia River Gorge, and beyond.
             </p>
             <p className="text-lg text-primary-foreground/70 leading-relaxed mb-5">
               As a licensed broker and state-certified residential appraiser with over 20 years of experience, Real Property Planning evaluates each property based on its real condition and local market context — not generic statewide assumptions. Select a county below to learn more about service in that area.
