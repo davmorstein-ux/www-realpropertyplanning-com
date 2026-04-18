@@ -20,6 +20,17 @@ import spokaneCountyLogo from "@/assets/counties/spokane-county-logo.webp";
 import thurstonCountyLogo from "@/assets/counties/thurston-county-logo.webp";
 import whatcomCountyLogo from "@/assets/counties/whatcom-county-logo.webp";
 import bentonCountyLogo from "@/assets/counties/benton-county-logo.webp";
+import fallbackCountyLogo from "@/assets/icons/real-estate-service-areas-map-icon-washington.webp";
+const cowlitzCountyLogo = fallbackCountyLogo;
+const graysHarborCountyLogo = fallbackCountyLogo;
+const islandCountyLogo = fallbackCountyLogo;
+const jeffersonCountyLogo = fallbackCountyLogo;
+const lewisCountyLogo = fallbackCountyLogo;
+const masonCountyLogo = fallbackCountyLogo;
+const pacificCountyLogo = fallbackCountyLogo;
+const sanJuanCountyLogo = fallbackCountyLogo;
+const skamaniCountyLogo = fallbackCountyLogo;
+const wahkiakumCountyLogo = fallbackCountyLogo;
 
 const countyCards = [
   {
