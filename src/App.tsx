@@ -250,26 +250,20 @@ const App = () => (
               Implemented as React Router Navigate (client-side 301 equivalent).
           ══════════════════════════════════════════════════════════ */}
 
-          {/* Counties — old URL families → /{county}-county */}
-          <Route path="/counties/king" element={<Navigate to="/king-county" replace />} />
-          <Route path="/counties/snohomish" element={<Navigate to="/snohomish-county" replace />} />
-          <Route path="/counties/pierce" element={<Navigate to="/pierce-county" replace />} />
-          <Route path="/counties/kitsap" element={<Navigate to="/kitsap-county" replace />} />
-          <Route path="/counties/skagit" element={<Navigate to="/skagit-county" replace />} />
-          <Route path="/clark-county-probate-estate-real-estate" element={<Navigate to="/clark-county" replace />} />
-          <Route path="/spokane-county-probate-estate-real-estate" element={<Navigate to="/spokane-county" replace />} />
-          <Route path="/thurston-county-probate-estate-real-estate" element={<Navigate to="/thurston-county" replace />} />
-          <Route path="/whatcom-county-probate-estate-real-estate" element={<Navigate to="/whatcom-county" replace />} />
-          <Route path="/benton-county-probate-estate-real-estate" element={<Navigate to="/benton-county" replace />} />
-
-          {/* Service-areas family → /{county}-county */}
-          <Route path="/service-areas/king-county" element={<Navigate to="/king-county" replace />} />
-          <Route path="/service-areas/snohomish-county" element={<Navigate to="/snohomish-county" replace />} />
-          <Route path="/service-areas/pierce-county" element={<Navigate to="/pierce-county" replace />} />
-          <Route path="/service-areas/kitsap-county" element={<Navigate to="/kitsap-county" replace />} />
-          <Route path="/service-areas/skagit-county" element={<Navigate to="/skagit-county" replace />} />
-          <Route path="/service-areas/thurston-county" element={<Navigate to="/thurston-county" replace />} />
-          <Route path="/service-areas/whatcom-county" element={<Navigate to="/whatcom-county" replace />} />
+          {/* Counties — old URL families → /{county}-county
+              Covers: /counties/{slug}, /counties/{slug}-county,
+                      /service-areas/{slug}-county, and *-probate-estate-real-estate */}
+          {[
+            "king", "snohomish", "pierce", "kitsap", "skagit", "thurston", "whatcom",
+            "clark", "spokane", "benton", "yakima", "franklin", "cowlitz",
+            "grays-harbor", "island", "jefferson", "lewis", "mason", "pacific",
+            "san-juan", "skamania", "wahkiakum",
+          ].flatMap((slug) => [
+            <Route key={`c1-${slug}`} path={`/counties/${slug}`} element={<Navigate to={`/${slug}-county`} replace />} />,
+            <Route key={`c2-${slug}`} path={`/counties/${slug}-county`} element={<Navigate to={`/${slug}-county`} replace />} />,
+            <Route key={`sa-${slug}`} path={`/service-areas/${slug}-county`} element={<Navigate to={`/${slug}-county`} replace />} />,
+            <Route key={`pe-${slug}`} path={`/${slug}-county-probate-estate-real-estate`} element={<Navigate to={`/${slug}-county`} replace />} />,
+          ])}
 
           {/* Tier-2 cities → their county hub */}
           <Route path="/kirkland-probate-estate-real-estate" element={<Navigate to="/king-county" replace />} />
