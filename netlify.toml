@@ -2,33 +2,10 @@
   command = "npm run build"
   publish = "dist"
 
-# HTTP non-www to HTTPS www
-[[redirects]]
-  from = "http://realpropertyplanning.com/*"
-  to = "https://www.realpropertyplanning.com/:splat"
-  status = 301
-  force = true
+# Domain primary (www/non-www) redirects are handled by the hosting layer.
+# Do NOT add hardcoded www<->apex redirects here — they cause ERR_TOO_MANY_REDIRECTS.
 
-# HTTP www to HTTPS www
-[[redirects]]
-  from = "http://www.realpropertyplanning.com/*"
-  to = "https://www.realpropertyplanning.com/:splat"
-  status = 301
-  force = true
 
-# HTTPS non-www to HTTPS www
-[[redirects]]
-  from = "https://realpropertyplanning.com/*"
-  to = "https://www.realpropertyplanning.com/:splat"
-  status = 301
-  force = true
-
-# Trailing slash removal (except root)
-[[redirects]]
-  from = "/*/"
-  to = "/:splat"
-  status = 301
-  force = true
 
 [[redirects]]
   from = "/sitemap.xml"
