@@ -57,7 +57,7 @@ const EstatePropertyRepairs = () => (
             What Repairs Should Be Done Before Selling an Estate Property?
           </h1>
           <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
-            Not all repairs are worth making. The key is identifying which improvements will meaningfully increase the sale price relative to their cost — and which ones will consume estate funds without delivering a proportional return.
+            Written for executors, trustees, and families deciding which repairs are worth making on an inherited or estate home before listing it. Not all repairs are worth making. The key is identifying which improvements will meaningfully increase the sale price relative to their cost — and which ones will consume estate funds without delivering a proportional return.
           </p>
           <p className="text-lg text-primary-foreground/70 leading-relaxed">
             This guide helps executors and families make smart, informed decisions about preparing an inherited or estate property for sale.
