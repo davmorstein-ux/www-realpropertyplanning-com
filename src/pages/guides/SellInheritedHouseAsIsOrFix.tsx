@@ -57,7 +57,7 @@ const SellInheritedHouseAsIsOrFix = () => (
             Should You Sell an Inherited House As-Is or Fix It Up?
           </h1>
           <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
-            There is no single right answer. The best approach depends on the property's condition, the local market, repair costs, and how much time and money the estate can invest. In many cases, a middle path — targeted improvements rather than full renovation — produces the best outcome.
+            Written for heirs, executors, and families weighing whether to invest in repairs on an inherited Washington State home or sell it as-is. There is no single right answer. The best approach depends on the property's condition, the local market, repair costs, and how much time and money the estate can invest. In many cases, a middle path — targeted improvements rather than full renovation — produces the best outcome.
           </p>
           <p className="text-lg text-primary-foreground/70 leading-relaxed">
             This guide helps you think through the decision using practical criteria rather than guesswork.
