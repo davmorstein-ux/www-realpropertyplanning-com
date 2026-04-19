@@ -44,7 +44,7 @@ const Trustees = () => (
             Trustees
           </h1>
           <p className="text-primary-foreground/70 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-3" style={{ maskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)' }}>
-            Practical real estate guidance for trustees and successor trustees managing trust-held property in Washington State.
+            This page is for trustees and successor trustees overseeing real property held in a Washington State trust. Practical real estate guidance for trustees managing trust-held property — built around fiduciary duties, beneficiary coordination, and defensible pricing.
           </p>
           <Link to="/contact">
             <Button variant="gold" size="lg" className="px-7 py-4 h-auto rounded-lg">
