@@ -5,25 +5,25 @@ const steps = [
     number: "1",
     title: "Initial Conversation",
     description:
-      "It usually starts with a phone call. You tell our team what's going on — whether it's a probate situation, an inherited home, or a parent who needs to move — and he listens before offering any direction.",
+      "It usually starts with a phone call. You tell Real Property Planning what's going on — whether it's a probate situation, an inherited home, or a parent who needs to move — and the conversation starts with listening, before any direction is offered.",
   },
   {
     number: "2",
     title: "Property Review & Assessment",
     description:
-      "Our team visits the property and looks at it with fresh eyes — condition, deferred maintenance, what the market is doing nearby. Because he's both a broker and a certified appraiser, the assessment goes deeper than a typical walkthrough.",
+      "Real Property Planning visits the property and looks at it with fresh eyes — condition, deferred maintenance, what the market is doing nearby. With both broker and certified appraiser credentials in-house, the assessment goes deeper than a typical walkthrough.",
   },
   {
     number: "3",
     title: "Strategy & Pricing",
     description:
-      "Based on what he's found, our team puts together a plan — realistic pricing backed by valuation data, what preparation makes sense (if any), and a timeline that fits your situation. No surprises.",
+      "Based on what's found at the property, Real Property Planning puts together a plan — realistic pricing backed by valuation data, what preparation makes sense (if any), and a timeline that fits your situation. No surprises.",
   },
   {
     number: "4",
     title: "Execution & Coordination",
     description:
-      "From here, our team handles the day-to-day — coordinating vendors, managing the listing, communicating with attorneys and family members, and keeping things moving. You stay informed without having to manage every detail.",
+      "From here, Real Property Planning handles the day-to-day — coordinating vendors, managing the listing, communicating with attorneys and family members, and keeping things moving. You stay informed without having to manage every detail.",
   },
 ];
 

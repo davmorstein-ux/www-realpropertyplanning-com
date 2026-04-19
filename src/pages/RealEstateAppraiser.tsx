@@ -37,6 +37,9 @@ const RealEstateAppraiser = () => (
             <p className="text-primary-foreground/80 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
               Objective, defensible property valuations for families, executors, trustees, and professionals during important life transitions.
             </p>
+            <p className="text-primary-foreground/70 text-sm md:text-base leading-relaxed max-w-2xl mx-auto mt-4">
+              Appraisal services are provided through Stein Appraisal, David Stein's independent Washington State certified residential appraisal practice.
+            </p>
           </div>
         </div>
       </section>
