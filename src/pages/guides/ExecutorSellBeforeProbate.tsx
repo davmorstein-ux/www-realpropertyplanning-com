@@ -57,7 +57,7 @@ const ExecutorSellBeforeProbate = () => (
             Can an Executor Sell a House Before Probate in Washington?
           </h1>
           <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
-            Generally, no. In Washington State, an executor typically needs court-issued letters testamentary before they have legal authority to sell real property. However, there is a great deal you can — and should — do to prepare while probate is pending.
+            Written for executors and personal representatives in Washington State who need to know whether they can list an estate property before probate is granted. Generally, no. In Washington State, an executor typically needs court-issued letters testamentary before they have legal authority to sell real property. However, there is a great deal you can — and should — do to prepare while probate is pending.
           </p>
           <p className="text-lg text-primary-foreground/70 leading-relaxed">
             This guide explains what authority is required, what exceptions may apply, and how to use the waiting period productively.
