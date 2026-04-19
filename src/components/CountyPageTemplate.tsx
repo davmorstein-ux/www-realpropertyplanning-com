@@ -88,9 +88,9 @@ const COUNTY_VIDEOS: Record<string, CountyVideo> = {
     uploadDate: "2025-04-10",
   },
   "king-county": {
-    webm: "/county-videos/king-hero.webm?v=4",
-    mp4: "/county-videos/king-hero.mp4?v=4",
-    poster: "/county-videos/king-hero-poster.webp?v=4",
+    webm: "/county-videos/king-hero.webm?v=2",
+    mp4: "/county-videos/king-hero.mp4?v=2",
+    poster: "/county-videos/king-hero-poster.webp?v=2",
     uploadDate: "2026-04-18",
   },
   "kitsap-county": {
@@ -100,9 +100,9 @@ const COUNTY_VIDEOS: Record<string, CountyVideo> = {
     uploadDate: "2025-04-15",
   },
   "island-county": {
-    webm: "/county-videos/island-hero.webm?v=7",
-    mp4: "/county-videos/island-hero.mp4?v=7",
-    poster: "/county-videos/island-hero-poster.webp?v=7",
+    webm: "/county-videos/island-hero.webm?v=2",
+    mp4: "/county-videos/island-hero.mp4?v=2",
+    poster: "/county-videos/island-hero-poster.webp?v=2",
     uploadDate: "2026-04-18",
   },
   "skagit-county": {
