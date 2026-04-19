@@ -36,6 +36,14 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
       "Mount Vernon", "Burlington", "Anacortes",
     ],
   },
+  "/for-attorneys/how-it-works": {
+    title: "How Real Property Planning Works With Attorneys | Referral Process",
+    description:
+      "A clear, document-style walkthrough of how Real Property Planning supports Washington estate, probate, and family law attorneys from referral through closing — including what we handle and how to make a referral.",
+    h1: "How Real Property Planning Works With Attorneys",
+    intro:
+      "This page is for Washington State estate and probate attorneys who refer clients for real estate services. It walks through exactly what happens after the referral, what Real Property Planning handles on your behalf, and how to send a file over.",
+  },
   "/for-attorneys": {
     title: "Probate Real Estate Services for Attorneys in Washington State | Real Property Planning",
     description:
