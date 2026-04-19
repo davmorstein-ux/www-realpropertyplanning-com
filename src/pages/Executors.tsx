@@ -114,7 +114,31 @@ const Executors = () => (
       </div>
     </section>
 
-    <PageFAQ faqs={executorFaqs} heading="What Washington Executors Most Often Ask" eyebrow="For Personal Representatives" />
+    <PageFAQ faqs={executorFaqs} heading="What Washington Executors Most Often Ask" eyebrow="For Personal Representatives" id="executors-main" />
+
+    <PageFAQ
+      faqs={[
+        {
+          question: "What does an executor need to do before listing an inherited home in Washington?",
+          answer: "Before listing, an executor should secure the property (locks, insurance, mail forwarding), confirm Letters Testamentary or Letters of Administration have been issued by the court, obtain a date-of-death valuation for tax and accounting purposes, and coordinate with the estate attorney on whether court approval is required for the sale. Real Property Planning handles the property-side steps so the legal workstream stays clean.",
+        },
+        {
+          question: "What is the difference between date-of-death value and listing price?",
+          answer: "The date-of-death value is the fair market value of the home on the day the decedent passed — it sets the new tax basis for the estate and heirs. The listing price is what the home is offered for today, based on current market conditions, condition, and comparable sales. The two numbers are often different, especially if months have passed or the market has shifted, and both should be documented separately in the estate file.",
+        },
+        {
+          question: "How long does it typically take to sell a home through probate in Washington State?",
+          answer: "Most Washington probate sales close within 60 to 120 days from listing, though the full timeline depends on whether the personal representative has Nonintervention Powers, the home's condition, and how quickly cleanout and preparation can be completed. Real Property Planning sequences the work so the property is ready to list as soon as the estate is positioned to sell.",
+        },
+        {
+          question: "Can an executor sell a home without court approval in Washington?",
+          answer: "Yes, in most Washington probates. If the personal representative has been granted Nonintervention Powers (which is the default in most solvent estates), the home can typically be sold without separate court approval for the sale itself. Confirm this with the estate attorney before signing a listing agreement, since intervention probates and certain estate situations still require court confirmation.",
+        },
+      ]}
+      heading="Common Executor Questions"
+      eyebrow="Quick Answers"
+      id="executors-quick"
+    />
 
     <CTASection
       eyebrow="For Executors"

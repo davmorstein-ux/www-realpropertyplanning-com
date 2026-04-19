@@ -330,7 +330,31 @@ const SeniorTransitions = () => {
         </div>
       </section>
 
-      <PageFAQ faqs={faqs} heading="Senior Transition FAQs" />
+      <PageFAQ faqs={faqs} heading="Senior Transition FAQs" id="senior-transitions-main" />
+
+      <PageFAQ
+        faqs={[
+          {
+            question: "How do I help a parent sell their home when they are moving to assisted living?",
+            answer: "Start by aligning the home sale timeline with the assisted living move-in date — the two rarely need to happen simultaneously. Real Property Planning coordinates with the senior move manager, handles cleanout and light preparation, and sequences the listing so proceeds are available when needed for care costs. The parent does not need to be present for showings or vendor visits.",
+          },
+          {
+            question: "What is the difference between downsizing and a senior transition?",
+            answer: "Downsizing is moving from a larger home to a smaller one — often by choice and on the senior's own timeline. A senior transition is broader: it usually involves a move into assisted living, memory care, or family housing, and is often driven by a health event or care need. Senior transitions typically involve more coordination with care professionals, family members, and sometimes attorneys or financial advisors.",
+          },
+          {
+            question: "How far in advance should we start planning a senior home sale?",
+            answer: "Ideally three to six months before the move, though Real Property Planning regularly works with families on shorter timelines. Earlier planning gives time for thoughtful sorting, gradual cleanout, and decisions about what to keep, gift, or sell — without the pressure of a deadline. When the move is urgent, the platform compresses the timeline while keeping the family informed at every step.",
+          },
+          {
+            question: "What professionals should be involved in a senior housing transition?",
+            answer: "Most transitions involve a senior move manager (sorting, packing, settling in), a real estate professional with senior transition experience, a placement specialist or care advisor, and sometimes an elder law attorney, financial planner, or CPA. Real Property Planning coordinates with all of these professionals so the family has one consistent point of contact for the property side.",
+          },
+        ]}
+        heading="Common Senior Transition Questions"
+        eyebrow="Quick Answers"
+        id="senior-transitions-quick"
+      />
 
       {/* Educational Links */}
       <section className="py-12 bg-background">

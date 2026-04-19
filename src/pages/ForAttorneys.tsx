@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconAttorneys from "@/assets/icons/probate-attorney-services-icon-washington.webp";
 import CTASection from "@/components/CTASection";
+import PageFAQ from "@/components/PageFAQ";
 import ServiceNavTileCard from "@/components/ServiceNavTileCard";
 import type { ServiceTile } from "@/components/service-nav-tiles-data";
 import iconProbate from "@/assets/icons/probate-property-sales-icon-washington.webp";
@@ -140,6 +141,30 @@ const ForAttorneys = () => (
         </div>
       </div>
     </section>
+
+    <PageFAQ
+      faqs={[
+        {
+          question: "What types of real estate matters does Real Property Planning handle for attorney referrals?",
+          answer: "Real Property Planning handles probate sales, trust property sales, estate liquidations, divorce-related real estate, elder law transitions (including sales tied to assisted living or memory care moves), date-of-death and retrospective valuations, and partition or co-owner buyout valuations. The platform covers the full property workstream so attorneys can stay focused on the legal file.",
+        },
+        {
+          question: "Can Real Property Planning provide date-of-death valuations for estate cases?",
+          answer: "Yes. Real Property Planning includes a Washington State Certified Real Estate Appraiser, so date-of-death and retrospective valuations are produced in-house with proper USPAP-compliant documentation. These are accepted by estate attorneys, CPAs, and the IRS for basis-step-up and estate tax filings.",
+        },
+        {
+          question: "How quickly can Real Property Planning respond to a new attorney referral?",
+          answer: "Attorney referrals receive a response within one business day, often the same day. The first contact includes a recommended scope, a single point of contact for the file, and confirmation that the client will not be contacted without the attorney's direction.",
+        },
+        {
+          question: "Does Real Property Planning work with out-of-state heirs or executors?",
+          answer: "Yes — out-of-state personal representatives and trustees are one of the most common client types. Real Property Planning handles in-person walk-throughs, vendor coordination, cleanout, photo and video updates, showings, and offer presentation by phone or video so the fiduciary rarely needs to travel.",
+        },
+      ]}
+      heading="Attorney Referral Questions"
+      eyebrow="Quick Answers"
+      id="for-attorneys-quick"
+    />
 
     <CTASection
       eyebrow="For Counsel"

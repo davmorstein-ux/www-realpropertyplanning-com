@@ -15,11 +15,13 @@ interface PageFAQProps {
   faqs: FAQItem[];
   heading?: string;
   eyebrow?: string;
+  id?: string;
 }
 
-const PageFAQ = ({ faqs, heading = "Frequently Asked Questions", eyebrow = "Common Questions" }: PageFAQProps) => {
+const PageFAQ = ({ faqs, heading = "Frequently Asked Questions", eyebrow = "Common Questions", id = "default" }: PageFAQProps) => {
   useEffect(() => {
-    const existingScript = document.querySelector('script[data-page-faq-jsonld]');
+    const selector = `script[data-page-faq-jsonld="${id}"]`;
+    const existingScript = document.querySelector(selector);
     if (existingScript) existingScript.remove();
 
     const faqJsonLd = {
@@ -37,15 +39,15 @@ const PageFAQ = ({ faqs, heading = "Frequently Asked Questions", eyebrow = "Comm
 
     const script = document.createElement("script");
     script.type = "application/ld+json";
-    script.setAttribute("data-page-faq-jsonld", "true");
+    script.setAttribute("data-page-faq-jsonld", id);
     script.textContent = JSON.stringify(faqJsonLd);
     document.head.appendChild(script);
 
     return () => {
-      const s = document.querySelector('script[data-page-faq-jsonld]');
+      const s = document.querySelector(selector);
       if (s) s.remove();
     };
-  }, [faqs]);
+  }, [faqs, id]);
 
   return (
     <section className="py-16 lg:py-24 bg-secondary">
