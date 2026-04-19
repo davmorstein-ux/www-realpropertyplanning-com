@@ -9,6 +9,7 @@ import Index from "./pages/Index";
 import ProbateEstateSales from "./pages/ProbateEstateSales";
 import SeniorTransitions from "./pages/SeniorTransitions";
 import ForAttorneys from "./pages/ForAttorneys";
+import ForAttorneysHowItWorks from "./pages/attorneys/ForAttorneysHowItWorks";
 import ForProbateAttorneys from "./pages/attorneys/ForProbateAttorneys";
 import ForEstatePlanningAttorneys from "./pages/attorneys/ForEstatePlanningAttorneys";
 import ForElderLawAttorneys from "./pages/attorneys/ForElderLawAttorneys";
@@ -136,6 +137,7 @@ const App = () => (
 
           {/* ─── Audience hubs ────────────────────────────────────── */}
           <Route path="/for-attorneys" element={<ForAttorneys />} />
+          <Route path="/for-attorneys/how-it-works" element={<ForAttorneysHowItWorks />} />
           <Route path="/for-probate-attorneys" element={<ForProbateAttorneys />} />
           <Route path="/for-estate-planning-attorneys" element={<ForEstatePlanningAttorneys />} />
           <Route path="/for-elder-law-attorneys" element={<ForElderLawAttorneys />} />
