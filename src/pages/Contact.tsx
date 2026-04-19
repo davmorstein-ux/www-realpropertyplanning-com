@@ -135,10 +135,10 @@ const Contact = () => {
               </div>
 
               <p className="text-muted-foreground text-[15px] leading-relaxed mb-4">
-                Our team works with attorneys, executors, fiduciaries, and families across Washington State.
+                Real Property Planning works with attorneys, executors, fiduciaries, and families across Washington State.
               </p>
               <p className="text-muted-foreground text-[15px] leading-relaxed mb-8">
-                Through his eXp Realty network, Real Property Planning can connect you with a trusted broker anywhere in the country.
+                Through David Stein's eXp Realty network, Real Property Planning can connect you with a trusted broker anywhere in the country.
               </p>
 
               {/* Brokerage Info */}
