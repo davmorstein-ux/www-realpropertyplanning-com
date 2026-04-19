@@ -57,7 +57,7 @@ const PricingHouseTrustEstate = () => (
             How Do You Price a House in a Trust or Estate?
           </h1>
           <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
-            Pricing estate and trust property requires a different approach than pricing a typical home sale. The property is usually in non-standard condition, the decision-makers often have competing interests, and the executor or trustee has a fiduciary obligation to act in the estate's best interest. Getting the price right protects everyone involved.
+            Written for executors, trustees, and attorneys who need a defensible pricing approach for a home held in a trust or estate. Pricing estate and trust property requires a different approach than pricing a typical home sale. The property is usually in non-standard condition, the decision-makers often have competing interests, and the executor or trustee has a fiduciary obligation to act in the estate's best interest. Getting the price right protects everyone involved.
           </p>
           <p className="text-lg text-primary-foreground/70 leading-relaxed">
             This guide explains why standard pricing methods fall short and what a valuation-informed approach looks like in practice.
