@@ -57,7 +57,7 @@ const HeirsDisagreeSelling = () => (
             What Happens If Heirs Disagree on Selling a House?
           </h1>
           <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
-            Disagreements between heirs are one of the most common — and most stressful — challenges in inherited property situations. When siblings or family members cannot agree on whether to sell, when to sell, or what price to accept, the process can stall, relationships can fracture, and the estate can lose value.
+            Written for heirs, executors, and families dealing with disagreement among siblings or beneficiaries about whether — or how — to sell an inherited home. Disagreements between heirs are one of the most common — and most stressful — challenges in inherited property situations. When siblings or family members cannot agree on whether to sell, when to sell, or what price to accept, the process can stall, relationships can fracture, and the estate can lose value.
           </p>
           <p className="text-lg text-primary-foreground/70 leading-relaxed">
             This guide explains what typically happens, what options exist, and how families can find a path forward.
