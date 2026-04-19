@@ -31,7 +31,7 @@ const ServiceAreasSection = () => {
             Serving Clients Throughout Washington State
           </h2>
           <p className="text-primary-foreground/70 text-lg">
-            With a strong focus in Western Washington and the Puget Sound region, and referral connections available across the U.S. and internationally through eXp Realty.
+            With a strong focus in Western Washington and the Puget Sound region. Through David Stein's eXp Realty network, Real Property Planning can connect clients with a trusted broker anywhere in the country.
           </p>
         </div>
         

@@ -43,7 +43,7 @@ const WhyChooseSection = () => {
               When families face the complex intersection of real estate and estate administration, they need more than a real estate agent — they need a licensed broker and certified appraiser who understands both the legal intricacies and the emotional journey.
             </p>
             <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-              I'm Real Property Planning, and I've dedicated my career to becoming the Puget Sound region's most trusted expert in probate and estate property transactions. As both a licensed real estate broker and a Washington State Certified Real Estate Appraiser, I bring a unique dual perspective that ensures accurate valuations and optimal outcomes. My license is held by eXp Realty.
+              Real Property Planning is an independent hub for probate, estate, and senior transition real estate in Washington State. Led by President David Stein — a licensed real estate broker and a Washington State Certified Residential Appraiser — the platform brings a dual perspective that supports accurate valuations and sound outcomes. David Stein's real estate license is held under eXp Realty; appraisal services are provided through Stein Appraisal.
             </p>
             
             <div className="space-y-4">
