@@ -118,7 +118,7 @@ const SeniorTransitions = () => {
               Selling a Senior's Longtime Home in Washington
             </h1>
             <p className="text-xl text-primary-foreground/80 leading-relaxed mb-3">
-              The move to assisted living, memory care, or a smaller home rarely happens on a real estate timeline. It happens on a care timeline — set by a doctor, a fall, or a sibling conversation that finally couldn't wait. Real Property Planning works at the pace your family actually has, coordinating the property side around the care decisions, the elder law guidance, and the people who need to be in the loop.
+              This page is for seniors and their families navigating downsizing, relocation, or a move into assisted living, memory care, or a smaller home. The move rarely happens on a real estate timeline. It happens on a care timeline — set by a doctor, a fall, or a sibling conversation that finally couldn't wait. Real Property Planning works at the pace your family actually has, coordinating the property side around the care decisions, the elder law guidance, and the people who need to be in the loop.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/contact">

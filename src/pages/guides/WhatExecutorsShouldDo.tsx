@@ -70,7 +70,7 @@ const WhatExecutorsShouldDo = () => (
             What Executors Should Do Before Selling an Inherited Home
           </h1>
           <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
-            If you have been named executor or personal representative and the estate includes real property, there are several important steps to take before the home can be listed for sale. Taking these steps in the right order protects the estate, prevents costly mistakes, and sets the stage for a smoother sale process.
+            Written for newly-appointed executors and personal representatives in Washington State preparing to manage and eventually sell an inherited home. If you have been named executor or personal representative and the estate includes real property, there are several important steps to take before the home can be listed for sale. Taking these steps in the right order protects the estate, prevents costly mistakes, and sets the stage for a smoother sale process.
           </p>
           <p className="text-lg text-primary-foreground/70 leading-relaxed">
             This guide covers the practical first steps — from securing the property through getting a professional assessment — so you know what to do, when to do it, and who to involve.

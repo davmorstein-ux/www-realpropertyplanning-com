@@ -76,7 +76,7 @@ const OutOfStateFamilies = () => (
             How Out-of-State Families Can Manage a Washington Property Sale
           </h1>
           <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
-            If you have been named executor, trustee, or heir for an estate that includes property in Washington State — but you live somewhere else — you face a unique set of challenges. The property may need assessment, preparation, and sale, and you need someone on the ground you can trust to handle it.
+            Written for out-of-state executors, trustees, and heirs responsible for a Washington State estate property they cannot manage in person. If you have been named executor, trustee, or heir for an estate that includes property in Washington State — but you live somewhere else — you face a unique set of challenges. The property may need assessment, preparation, and sale, and you need someone on the ground you can trust to handle it.
           </p>
           <p className="text-lg text-primary-foreground/70 leading-relaxed">
             Real Property Planning regularly works with out-of-state clients who need experienced, reliable local coordination for estate and inherited property throughout Washington State.

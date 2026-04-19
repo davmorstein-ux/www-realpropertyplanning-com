@@ -57,7 +57,7 @@ const TaxesSellingInheritedHouseWashington = () => (
             What Taxes Do You Pay When Selling an Inherited House in Washington?
           </h1>
           <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
-            The short answer: it depends on timing, the property's value at the date of death, and how long you hold the property before selling. In many cases, the tax impact is smaller than people expect — thanks to what is called a "stepped-up basis."
+            Written for heirs and families who need a plain-English overview of the federal and Washington State tax considerations involved in selling an inherited home. The short answer: it depends on timing, the property's value at the date of death, and how long you hold the property before selling. In many cases, the tax impact is smaller than people expect — thanks to what is called a "stepped-up basis."
           </p>
           <p className="text-lg text-primary-foreground/70 leading-relaxed">
             This guide explains the key tax concepts in plain language. It is not tax advice — always work with a qualified CPA or tax attorney for your specific situation.

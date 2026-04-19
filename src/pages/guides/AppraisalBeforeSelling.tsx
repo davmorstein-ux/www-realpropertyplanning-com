@@ -57,7 +57,7 @@ const AppraisalBeforeSelling = () => (
             Do I Need an Appraisal Before Selling Inherited Property?
           </h1>
           <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
-            It depends on your situation. A formal appraisal is not always legally required, but understanding the property's true value before making decisions is almost always essential — especially for estate and inherited properties where condition, deferred maintenance, and emotional pricing can lead to costly mistakes.
+            Written for executors, trustees, and families weighing whether to order a formal appraisal on an inherited or estate property in Washington State. It depends on your situation. A formal appraisal is not always legally required, but understanding the property's true value before making decisions is almost always essential — especially for estate and inherited properties where condition, deferred maintenance, and emotional pricing can lead to costly mistakes.
           </p>
           <p className="text-lg text-primary-foreground/70 leading-relaxed">
             This guide explains when a formal appraisal is needed, when a professional assessment is sufficient, and why accurate valuation protects everyone involved.

@@ -80,7 +80,7 @@ const InheritedHouseWashington = () => (
             What to Do With an Inherited House in Washington State
           </h1>
           <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
-            Inheriting a house brings both opportunity and responsibility. Whether the property came to you through a will, trust, or joint ownership, you face important decisions about what to do next — and the choices you make early can significantly affect your financial outcome and family relationships.
+            Written for individuals and families who have just inherited a house in Washington State and need to understand their options. Inheriting a house brings both opportunity and responsibility. Whether the property came to you through a will, trust, or joint ownership, you face important decisions about what to do next — and the choices you make early can significantly affect your financial outcome and family relationships.
           </p>
           <p className="text-lg text-primary-foreground/70 leading-relaxed">
             This guide walks through your main options, the factors that should inform your decision, and when professional guidance can make a meaningful difference.

@@ -57,7 +57,7 @@ const HowLongSellProbateProperty = () => (
             How Long Does It Take to Sell a Probate Property?
           </h1>
           <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
-            Most probate property sales in Washington take between 4 and 12 months from the date of death to closing — but the range depends on court timelines, property condition, and family coordination.
+            Written for executors, attorneys, and families who need a realistic timeline for selling a probate property in Washington State. Most probate property sales in Washington take between 4 and 12 months from the date of death to closing — but the range depends on court timelines, property condition, and family coordination.
           </p>
           <p className="text-lg text-primary-foreground/70 leading-relaxed">
             This guide breaks down the realistic timeline, explains what affects it, and shows how planning can shorten the process significantly.

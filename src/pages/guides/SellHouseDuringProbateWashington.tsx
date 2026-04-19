@@ -57,7 +57,7 @@ const SellHouseDuringProbateWashington = () => (
             Can You Sell a House During Probate in Washington State?
           </h1>
           <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
-            Yes. In Washington State, you can sell a house during probate — but only after the court has granted the executor or personal representative legal authority through letters testamentary.
+            Written for executors, personal representatives, and families who need to know whether and when an estate home can be sold during a Washington probate. Yes. In Washington State, you can sell a house during probate — but only after the court has granted the executor or personal representative legal authority through letters testamentary.
           </p>
           <p className="text-lg text-primary-foreground/70 leading-relaxed">
             This guide explains how the process works, what authority is needed, and how to avoid the most common mistakes families make during a probate sale.

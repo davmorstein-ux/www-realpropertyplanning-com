@@ -50,7 +50,7 @@ const ForAttorneys = () => (
             One Real Estate Point of Contact for Your Washington Estate &amp; Probate Files
           </h1>
           <p className="text-primary-foreground text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-6">
-            When the property side of a matter starts pulling your time — valuation questions, sibling disputes, court-aligned timelines, out-of-state executors — Real Property Planning takes the file. You stay the legal lead; we own the real estate workstream and report back in writing.
+            This page is built for Washington estate, probate, and family law attorneys who need a reliable real estate partner for client referrals. When the property side of a matter starts pulling your time — valuation questions, sibling disputes, court-aligned timelines, out-of-state executors — Real Property Planning takes the file. You stay the legal lead; we own the real estate workstream and report back in writing.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link to="/contact">

@@ -74,7 +74,7 @@ const HowProbateRealEstateWorks = () => (
             How Probate Real Estate Sales Work in Washington State
           </h1>
           <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
-            Selling property through probate in Washington involves legal authority, court oversight, property preparation, and careful pricing. This guide explains the process step by step — so executors, attorneys, and families know what to expect and how to avoid common pitfalls.
+            Written for executors, attorneys, and families who need a clear walkthrough of how a probate property sale works in Washington State. Selling property through probate in Washington involves legal authority, court oversight, property preparation, and careful pricing. This guide explains the process step by step — so executors, attorneys, and families know what to expect and how to avoid common pitfalls.
           </p>
           <p className="text-lg text-primary-foreground/70 leading-relaxed">
             Whether you are a first-time executor or an attorney referring a client, understanding the probate real estate process helps you make better decisions and protect the estate's interests.

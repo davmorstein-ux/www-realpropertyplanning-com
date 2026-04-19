@@ -56,7 +56,7 @@ const AppraisalVsCma = () => (
             Appraisal vs. CMA: What Estate Property Sellers Need to Know
           </h1>
           <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
-            A formal appraisal and a comparative market analysis (CMA) both aim to estimate property value — but they serve different purposes, carry different weight, and are produced differently. When a property is part of a probate case, trust, or estate, understanding this distinction helps executors, attorneys, and families make better-informed decisions.
+            Written for executors, attorneys, and families who need to understand which kind of valuation a probate or estate file actually requires. A formal appraisal and a comparative market analysis (CMA) both aim to estimate property value — but they serve different purposes, carry different weight, and are produced differently. When a property is part of a probate case, trust, or estate, understanding this distinction helps executors, attorneys, and families make better-informed decisions.
           </p>
         </div>
       </div>
