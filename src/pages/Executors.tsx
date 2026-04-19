@@ -72,7 +72,7 @@ const Executors = () => (
             You Were Named Executor. The House Doesn't Have to Be Yours to Figure Out Alone.
           </h1>
           <p className="text-primary-foreground/85 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-4">
-            Most personal representatives have never sold an estate home before — and many are doing it from another state, while grieving, while siblings are calling, while the carrying costs keep running. Real Property Planning takes the property workstream off your plate: securing the home, the date-of-death valuation, the cleanout, the pricing your file can defend, and the sale itself.
+            This page is for court-appointed and family executors managing inherited or estate property in Washington State. Most personal representatives have never sold an estate home before — and many are doing it from another state, while grieving, while siblings are calling, while the carrying costs keep running. Real Property Planning takes the property workstream off your plate: securing the home, the date-of-death valuation, the cleanout, the pricing your file can defend, and the sale itself.
           </p>
           <p className="text-primary-foreground/70 text-[15px] md:text-base leading-relaxed max-w-2xl mx-auto mb-5">
             Local across <Link to="/counties" className="text-accent hover:text-gold underline underline-offset-4 transition-colors">King, Snohomish, Pierce, and Kitsap Counties</Link>, with full out-of-state PR support statewide.
