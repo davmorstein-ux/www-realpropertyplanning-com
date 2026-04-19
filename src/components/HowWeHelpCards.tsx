@@ -27,7 +27,7 @@ const cards = [
     iconAlt: "Estate appraisal document icon — certified residential appraisals for probate and trusts",
     iconSize: "w-[240px] h-[168px]",
     headline: "Estate & Trust Appraisals",
-    description: "As a Washington State Certified Residential Appraiser, Our team provides condition-adjusted, defensible valuations for probate, trust administration, estate settlements, and financial planning purposes — the kind of analysis that holds up when attorneys, courts, and family members ask questions.",
+    description: "As a Washington State Certified Residential Appraiser, Real Property Planning provides condition-adjusted, defensible valuations for probate, trust administration, estate settlements, and financial planning purposes — the kind of analysis that holds up when attorneys, courts, and family members ask questions.",
     link: "/real-estate-appraiser",
     proLink: { label: "See all professional resources →", href: "/professionals" },
   },

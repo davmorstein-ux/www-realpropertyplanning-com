@@ -14,17 +14,17 @@ const credentials = [
 
 const testimonials = [
   {
-    text: "Our team guided our family through a very difficult time with professionalism and genuine compassion. His valuation perspective and market knowledge were incredibly helpful.",
+    text: "Real Property Planning guided our family through a very difficult time with professionalism and genuine compassion. The valuation perspective and market knowledge were incredibly helpful.",
     attribution: "Estate Attorney, Seattle",
     tag: "Probate · Valuation",
   },
   {
-    text: "We didn't know where to start. Our team made the entire process manageable and kept us informed every step of the way.",
+    text: "We didn't know where to start. Real Property Planning made the entire process manageable and kept us informed every step of the way.",
     attribution: "Executor, Snohomish County",
     tag: "Estate Administration · Communication",
   },
   {
-    text: "Our team's dual background in brokerage and appraisal gave us confidence that the property was priced correctly. He made a complicated situation feel manageable.",
+    text: "Real Property Planning's dual background in brokerage and appraisal gave us confidence that the property was priced correctly. They made a complicated situation feel manageable.",
     attribution: "Family Member, King County",
     tag: "Inherited Home · Pricing",
   },

@@ -47,43 +47,51 @@ export const areaServed = [
   { "@type": "City", name: "La Conner", containedInPlace: { "@type": "State", name: "Washington" } },
 ];
 
-/** Person schema for David Stein — reusable entity across the site */
+/** Person schema for David Stein — President of Real Property Planning */
 export const davidSteinPerson = {
   "@type": "Person",
   "@id": `${SITE_URL}/#david-stein`,
   name: "David Stein",
-  jobTitle: "Real Estate Broker and Washington State Certified Residential Appraiser",
+  jobTitle: "President, Real Property Planning",
   url: `${SITE_URL}/about`,
-  worksFor: [
-    {
-      "@type": "RealEstateAgent",
-      name: "eXp Realty",
-      url: "https://www.exprealty.com",
-    },
-    {
-      "@type": "Organization",
-      "@id": `${SITE_URL}/#organization`,
-      name: BUSINESS_NAME,
-      url: SITE_URL,
-    },
-  ],
+  worksFor: {
+    "@type": "Organization",
+    "@id": `${SITE_URL}/#organization`,
+    name: BUSINESS_NAME,
+    url: SITE_URL,
+  },
   founderOf: {
     "@type": "Organization",
     "@id": `${SITE_URL}/#organization`,
     name: BUSINESS_NAME,
   },
+  affiliation: [
+    {
+      "@type": "Organization",
+      name: "eXp Realty",
+      url: "https://www.exprealty.com",
+      description:
+        "License broker only — David Stein's Washington State real estate license is held under eXp Realty. eXp Realty is not an owner, partner, or affiliate of Real Property Planning.",
+    },
+    {
+      "@type": "Organization",
+      name: "Stein Appraisal",
+      description:
+        "David Stein's independent Washington State certified residential appraisal practice. Stein Appraisal is separate from Real Property Planning and from eXp Realty.",
+    },
+  ],
   hasCredential: [
     {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "license",
-      name: "Washington State Real Estate Broker License",
+      name: "Washington State Real Estate Broker License (held under eXp Realty)",
       recognizedBy: { "@type": "Organization", name: "Washington State Department of Licensing" },
       identifier: "113972",
     },
     {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "certification",
-      name: "Washington State Certified Residential Appraiser",
+      name: "Washington State Certified Residential Appraiser (Stein Appraisal)",
       recognizedBy: { "@type": "Organization", name: "Washington State Department of Licensing" },
       identifier: "1702080",
     },
@@ -199,7 +207,7 @@ export const realEstateAgentSchema = {
       },
       image: LOGO_URL,
       description:
-        "Real Property Planning is Washington State's professional resource hub for probate real estate, inherited property sales, estate appraisals, and senior housing transitions. Led by Real Property Planning — a licensed real estate broker and Washington State Certified Residential Appraiser — serving families, executors, attorneys, and professionals throughout the Puget Sound region.",
+        "Real Property Planning is Washington State's independent professional resource hub and ecosystem for probate real estate, inherited property sales, estate appraisals, and senior housing transitions — serving families, executors, attorneys, and professionals throughout the Puget Sound region. Led by President David Stein. Real estate license held under eXp Realty; appraisal services provided through Stein Appraisal.",
       telephone: "(206) 900-3015",
       email: "info@realpropertyplanning.com",
       address: {
@@ -267,11 +275,6 @@ export const realEstateAgentSchema = {
           "@type": "Organization",
           name: "National Association of Estate Planners & Councils",
           url: "https://www.naepc.org",
-        },
-        {
-          "@type": "Organization",
-          name: "eXp Realty",
-          url: "https://www.exprealty.com",
         },
       ],
       knowsAbout: [
@@ -493,7 +496,7 @@ export const homepageFaqSchema = {
       name: "How is Real Property Planning different from a regular real estate agent?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Our team holds two credentials most agents don't: he is both a licensed real estate broker and a Washington State Certified Residential Appraiser. This means he can value a home with professional appraisal standards AND help sell it — providing families with integrated guidance they can trust.",
+        text: "Real Property Planning brings two credentials most real estate practices don't combine: a licensed real estate broker and a Washington State Certified Residential Appraiser. That means properties can be valued with professional appraisal standards and sold with integrated guidance — under one platform families can trust.",
       },
     },
     {

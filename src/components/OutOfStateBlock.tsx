@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 
 const points = [
-  "Our team handles property visits, vendor coordination, and inspections in person — so you don't have to fly back and forth.",
+  "Real Property Planning handles property visits, vendor coordination, and inspections in person — so you don't have to fly back and forth.",
   "You'll get regular updates with photos and clear communication. No guessing about what's happening.",
-  "He coordinates directly with local attorneys, cleanout crews, contractors, and other professionals on your behalf.",
+  "Real Property Planning coordinates directly with local attorneys, cleanout crews, contractors, and other professionals on your behalf.",
   "Pricing is honest and defensible, so you can make confident decisions even from 2,000 miles away.",
-  "Our team regularly works with executors, trustees, and family members who are managing things from out of state — it's one of his most common situations.",
+  "Real Property Planning regularly works with executors, trustees, and family members who are managing things from out of state — it's one of the most common situations handled.",
 ];
 
 const OutOfStateBlock = () => (
@@ -22,7 +22,7 @@ const OutOfStateBlock = () => (
           Managing Washington Property From a Distance?
         </h2>
         <p className="text-muted-foreground text-lg leading-relaxed mb-8 text-center">
-          This is one of the situations our team sees most often: someone inherits a Washington property but lives in another state. The logistics feel impossible — you can't be there to check on the house, manage vendors, or oversee the sale. Our team steps in as your local point of contact and handles the details on the ground so you don't have to fly back and forth.
+          This is one of the situations Real Property Planning sees most often: someone inherits a Washington property but lives in another state. The logistics feel impossible — you can't be there to check on the house, manage vendors, or oversee the sale. Real Property Planning steps in as your local point of contact and handles the details on the ground so you don't have to fly back and forth.
         </p>
 
         <ul className="space-y-4 mb-10">
