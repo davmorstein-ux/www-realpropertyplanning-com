@@ -397,6 +397,246 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     intro:
       "Practical answers to common questions about probate, inherited homes, senior transitions, pricing, and the professionals who help — written in plain language for families, executors, trustees, and professionals throughout Washington State.",
   },
+
+  // ─── Counties (remaining 17) — H1 pattern: "{County}, WA" ──────────────
+  "/whatcom-county": {
+    title: "Probate & Estate Real Estate in Whatcom County, WA | Real Property Planning",
+    description: "Estate and inherited property guidance for Bellingham, Ferndale, Lynden, and the Whatcom County communities. Local pricing for waterfront, rural, and in-town homes.",
+    h1: "Whatcom County, WA",
+    intro: "From Bellingham bayfront homes to Lynden farmhouses and Ferndale family neighborhoods, Whatcom County estate properties span very different buyer pools. Our team prices and prepares each property for the actual market it sits in.",
+  },
+  "/thurston-county": {
+    title: "Probate & Estate Real Estate in Thurston County, WA | Real Property Planning",
+    description: "Estate and inherited property sales across Olympia, Lacey, Tumwater, and the South Sound. Honest condition assessment and Thurston-County-specific pricing.",
+    h1: "Thurston County, WA",
+    intro: "Olympia's older established neighborhoods, Lacey's mid-century inventory, and Tumwater's family communities each carry different buyer expectations. Our team brings condition-based pricing calibrated to the actual neighborhood.",
+  },
+  "/clark-county": {
+    title: "Probate & Estate Real Estate in Clark County, WA | Real Property Planning",
+    description: "Estate and inherited property guidance for Vancouver, Camas, Battle Ground, Ridgefield, and the Southwest Washington market. Pricing built for the local Portland-metro buyer pool.",
+    h1: "Clark County, WA",
+    intro: "Clark County estate sales play to a Portland-influenced buyer pool — Vancouver waterfront condos, Camas family homes, and Battle Ground acreage each behave differently. Our team prices for the actual sub-market, not the metro average.",
+  },
+  "/spokane-county": {
+    title: "Probate & Estate Real Estate in Spokane County, WA | Real Property Planning",
+    description: "Estate and inherited property guidance for Spokane, Spokane Valley, Liberty Lake, and the Inland Northwest. Honest condition-based pricing for the Spokane buyer pool.",
+    h1: "Spokane County, WA",
+    intro: "Spokane's South Hill craftsmans, Spokane Valley ramblers, and Liberty Lake newer construction draw different buyers and tolerate different prep choices. Our team brings condition-adjusted pricing built for the Spokane market — not Westside assumptions.",
+  },
+  "/benton-county": {
+    title: "Probate & Estate Real Estate in Benton County, WA | Real Property Planning",
+    description: "Estate and inherited property guidance for Kennewick, Richland, West Richland, and the Tri-Cities. Local pricing calibrated to the Benton County buyer pool.",
+    h1: "Benton County, WA",
+    intro: "Tri-Cities estate properties — Kennewick family homes, Richland mid-centurys, West Richland newer construction — reward neighborhood-specific pricing and an honest read on condition. Our team handles the full sale process with that local discipline.",
+  },
+  "/yakima-county": {
+    title: "Probate & Estate Real Estate in Yakima County, WA | Real Property Planning",
+    description: "Estate and inherited property guidance for Yakima, Selah, Sunnyside, and the lower Yakima Valley. Honest pricing calibrated to local buyer expectations and decades-held homes.",
+    h1: "Yakima County, WA",
+    intro: "Yakima Valley buyers expect honest pricing and negotiate hard on condition. Our team prices each estate property based on its actual features — not Westside comparables that don't translate.",
+  },
+  "/franklin-county": {
+    title: "Probate & Estate Real Estate in Franklin County, WA | Real Property Planning",
+    description: "Estate and inherited property guidance for Pasco, West Pasco, and the Tri-Cities side of Franklin County. Pricing built for the local agricultural-and-suburban buyer pool.",
+    h1: "Franklin County, WA",
+    intro: "Pasco's growing neighborhoods and Franklin County's mix of newer construction and rural acreage call for buyer-pool-specific pricing. Our team brings condition-based valuation and full sale coordination for executors, trustees, and families.",
+  },
+  "/cowlitz-county": {
+    title: "Probate & Estate Real Estate in Cowlitz County, WA | Real Property Planning",
+    description: "Estate and inherited property guidance for Longview, Kelso, Castle Rock, and the Lower Columbia. Honest pricing for Cowlitz County's regional buyer pool.",
+    h1: "Cowlitz County, WA",
+    intro: "Longview's established neighborhoods, Kelso family homes, and Castle Rock acreage each carry their own pricing dynamics. Our team brings condition-adjusted valuation built for the Cowlitz County market.",
+  },
+  "/grays-harbor-county": {
+    title: "Probate & Estate Real Estate in Grays Harbor County, WA | Real Property Planning",
+    description: "Estate and inherited property guidance for Aberdeen, Hoquiam, Montesano, Ocean Shores, and the Washington coast. Local pricing for coastal and inland properties.",
+    h1: "Grays Harbor County, WA",
+    intro: "Coastal properties in Ocean Shores, working-town homes in Aberdeen and Hoquiam, and rural acreage near Montesano all behave differently. Our team prices each estate property for the buyer pool it actually competes in.",
+  },
+  "/island-county": {
+    title: "Probate & Estate Real Estate in Island County, WA | Real Property Planning",
+    description: "Estate and inherited property guidance for Whidbey Island, Camano Island, Oak Harbor, Coupeville, Langley, and Freeland. Local pricing for waterfront and view homes.",
+    h1: "Island County, WA",
+    intro: "Whidbey and Camano estate properties — waterfront, view lots, and inland family homes — each carry distinct buyer pools shaped by ferry access, the Naval base, and second-home demand. Our team prices for the actual sub-market.",
+  },
+  "/jefferson-county": {
+    title: "Probate & Estate Real Estate in Jefferson County, WA | Real Property Planning",
+    description: "Estate and inherited property guidance for Port Townsend, Port Hadlock, Chimacum, and the Olympic Peninsula. Local pricing for historic, waterfront, and rural homes.",
+    h1: "Jefferson County, WA",
+    intro: "Port Townsend's Victorian-era homes, Port Hadlock waterfront properties, and Chimacum acreage attract different buyers and reward different prep choices. Our team brings condition-based pricing calibrated to the local market.",
+  },
+  "/lewis-county": {
+    title: "Probate & Estate Real Estate in Lewis County, WA | Real Property Planning",
+    description: "Estate and inherited property guidance for Centralia, Chehalis, Napavine, and the I-5 corridor through Lewis County. Honest local pricing for in-town and rural homes.",
+    h1: "Lewis County, WA",
+    intro: "Lewis County's mix of established Centralia and Chehalis neighborhoods, smaller-town homes, and rural acreage each behave differently. Our team prices each estate property for the actual buyer pool — not regional averages.",
+  },
+  "/mason-county": {
+    title: "Probate & Estate Real Estate in Mason County, WA | Real Property Planning",
+    description: "Estate and inherited property guidance for Shelton, Belfair, Allyn, Hoodsport, and Mason County's waterfront and rural communities. Local pricing for varied property types.",
+    h1: "Mason County, WA",
+    intro: "Mason County estate properties span Shelton in-town homes, Belfair and Allyn waterfront, and rural acreage across the peninsula. Our team brings condition-based pricing built for each sub-market's specific buyer pool.",
+  },
+  "/pacific-county": {
+    title: "Probate & Estate Real Estate in Pacific County, WA | Real Property Planning",
+    description: "Estate and inherited property guidance for Long Beach, Ilwaco, Raymond, South Bend, and Pacific County's coastal communities. Honest pricing for coastal and inland properties.",
+    h1: "Pacific County, WA",
+    intro: "Long Beach Peninsula vacation homes, Ilwaco coastal properties, and Raymond and South Bend in-town houses each face very different buyer pools. Our team prices each estate property for its actual market.",
+  },
+  "/san-juan-county": {
+    title: "Probate & Estate Real Estate in San Juan County, WA | Real Property Planning",
+    description: "Estate and inherited property guidance for San Juan Island, Orcas Island, Lopez Island, and the San Juans. Local pricing for waterfront, view, and island properties.",
+    h1: "San Juan County, WA",
+    intro: "San Juan, Orcas, and Lopez Island estate properties draw a specific buyer pool shaped by ferry access, second-home demand, and limited inventory. Our team prices each property for the actual island sub-market.",
+  },
+  "/skamania-county": {
+    title: "Probate & Estate Real Estate in Skamania County, WA | Real Property Planning",
+    description: "Estate and inherited property guidance for Stevenson, Carson, North Bonneville, and the Columbia River Gorge area. Local pricing for rural, view, and waterfront homes.",
+    h1: "Skamania County, WA",
+    intro: "Skamania County's Columbia Gorge properties — Stevenson in-town homes, Carson rural acreage, and view lots near North Bonneville — each carry their own pricing dynamics. Our team brings condition-based valuation tailored to the local market.",
+  },
+  "/wahkiakum-county": {
+    title: "Probate & Estate Real Estate in Wahkiakum County, WA | Real Property Planning",
+    description: "Estate and inherited property guidance for Cathlamet, Skamokawa, and Wahkiakum County's Lower Columbia communities. Local pricing for rural, river, and in-town homes.",
+    h1: "Wahkiakum County, WA",
+    intro: "Wahkiakum County estate properties — Cathlamet town homes, Skamokawa river properties, and rural acreage — each face a small, specific buyer pool. Our team brings honest pricing and full sale coordination for executors and families.",
+  },
+
+  // ─── Single-page service hubs ──────────────────────────────────────────
+  "/real-estate-appraiser": {
+    title: "Certified Real Estate Appraiser in Washington State | Real Property Planning",
+    description: "Licensed and certified real estate appraiser serving all of Washington State. Residential, estate, probate, and senior transition appraisals accepted by courts, lenders, and the IRS.",
+    h1: "Certified Residential Real Estate Appraiser in Washington State",
+    intro: "Washington State Certified Residential Appraiser providing valuations for probate, estate, trust, divorce, and senior transition matters — accepted by courts, lenders, attorneys, and the IRS.",
+  },
+  "/realtor": {
+    title: "Realtor | Real Property Planning",
+    description: "Experienced real estate guidance for seniors, families, executors, and professionals navigating important property decisions in Washington State.",
+    h1: "Realtor Serving Seniors, Families, and Estate Transitions",
+    intro: "Experienced real estate guidance for seniors, families, executors, trustees, and the professionals who advise them throughout Washington State.",
+  },
+  "/wills": {
+    title: "Wills & Real Estate | What Families Need to Know | Real Property Planning",
+    description: "Learn how wills affect real property decisions in Washington State. Understand what executors, heirs, and families should know about selling or transferring a home during estate administration.",
+    h1: "Wills and Real Estate in Washington State",
+    intro: "How wills affect real property decisions in Washington State — what executors, heirs, and families should know about selling or transferring a home during estate administration.",
+  },
+  "/power-of-attorney": {
+    title: "Power of Attorney & Real Estate in Washington State | Real Property Planning",
+    description: "If you hold Power of Attorney for an aging parent or loved one in Washington State, we can help you navigate real estate decisions, home sales, and certified appraisals with confidence.",
+    h1: "Power of Attorney and Real Estate in Washington State",
+    intro: "Practical guidance for agents holding Power of Attorney who must make real estate decisions for an aging parent or loved one — including sales, valuations, and timing.",
+  },
+  "/estate-liquidation": {
+    title: "Estate Liquidation & Estate Sales | Real Property Planning",
+    description: "Estate liquidation services in Washington State — from estate sales and cleanouts to donation coordination and preparing the home for market. Guidance for executors, heirs, and families.",
+    h1: "Estate Liquidation and Estate Sales in Washington State",
+    intro: "Coordinating estate sales, cleanouts, donation logistics, and preparing the home for market — practical estate liquidation guidance for executors, heirs, and families throughout Washington State.",
+  },
+  "/trustees": {
+    title: "Trustees — Real Estate Guidance for Trust-Held Property | Real Property Planning",
+    description: "Practical real estate guidance for trustees and successor trustees selling trust-held property throughout Washington State.",
+    h1: "Real Estate Guidance for Trustees and Successor Trustees",
+    intro: "Practical, fiduciary-aware real estate guidance for trustees and successor trustees managing the sale of trust-held property throughout Washington State.",
+  },
+
+  // ─── Educational guides (16) — each with unique H1/title/description ──
+  "/guides/how-probate-real-estate-works": {
+    title: "How Probate Real Estate Sales Work in Washington State | Real Property Planning",
+    description: "A comprehensive guide to how probate property sales work in Washington — including legal authority, timing, pricing, preparation, and what executors and attorneys need to know.",
+    h1: "How Probate Real Estate Sales Work in Washington State",
+    intro: "A comprehensive walkthrough of how probate property sales work in Washington — legal authority, timing, pricing, preparation, and what executors and attorneys need to know.",
+  },
+  "/guides/what-executors-should-do": {
+    title: "What Executors Should Do Before Selling an Inherited Home | Real Property Planning",
+    description: "A practical step-by-step guide for executors and personal representatives — from securing the property and confirming authority to pricing, preparation, and managing the sale.",
+    h1: "What Executors Should Do Before Selling an Inherited Home",
+    intro: "Step-by-step guidance for executors and personal representatives — securing the property, confirming authority, pricing, preparing, and managing the sale.",
+  },
+  "/guides/appraisal-vs-cma": {
+    title: "Appraisal vs. CMA for Probate & Estate Property | Real Property Planning",
+    description: "Understand the difference between a formal appraisal and a CMA — and why it matters when selling probate, estate, or inherited property in Washington State.",
+    h1: "Appraisal vs. CMA: What's the Difference for Estate Property?",
+    intro: "When does an estate need a formal appraisal versus a Comparative Market Analysis? A clear breakdown of the differences and when each is appropriate.",
+  },
+  "/guides/out-of-state-families": {
+    title: "How Out-of-State Families Can Manage a Washington Property Sale | Real Property Planning",
+    description: "Practical guidance for remote executors, trustees, heirs, and families managing the sale of inherited or estate property in Washington State from out of state.",
+    h1: "How Out-of-State Families Manage a Washington Property Sale",
+    intro: "Practical guidance for remote executors, trustees, heirs, and families managing the sale of inherited or estate property in Washington State from out of state.",
+  },
+  "/guides/senior-transition-differences": {
+    title: "How Senior Transition Sales Differ From Ordinary Home Sales | Real Property Planning",
+    description: "Understanding the emotional, logistical, and practical differences between selling a longtime family home during a senior transition and a conventional real estate transaction.",
+    h1: "How Senior Transition Sales Differ From Ordinary Home Sales",
+    intro: "Understanding the emotional, logistical, and practical differences between selling a longtime family home during a senior transition and a conventional real estate transaction.",
+  },
+  "/guides/inherited-house-washington": {
+    title: "What to Do With an Inherited House in Washington State | Real Property Planning",
+    description: "A practical guide to your options when you inherit a house in Washington — including selling, keeping, renting, valuation, preparation, tax considerations, and family coordination.",
+    h1: "What to Do With an Inherited House in Washington State",
+    intro: "Your options when you inherit a house in Washington — selling, keeping, renting, valuation, preparation, tax considerations, and family coordination.",
+  },
+  "/guides/executor-sell-house-before-probate-washington": {
+    title: "Can an Executor Sell a House Before Probate in Washington? | Real Property Planning",
+    description: "Understanding when an executor can — and cannot — sell estate property in Washington State. Learn what steps to take while waiting for legal authority.",
+    h1: "Can an Executor Sell a House Before Probate in Washington?",
+    intro: "When an executor can — and cannot — sell estate property in Washington State, and what to do while waiting for legal authority.",
+  },
+  "/guides/appraisal-before-selling-inherited-property": {
+    title: "Do I Need an Appraisal Before Selling Inherited Property? | Real Property Planning",
+    description: "When a formal appraisal is needed for inherited property — and when a professional market assessment may be enough. A practical guide for executors and families.",
+    h1: "Do I Need an Appraisal Before Selling Inherited Property?",
+    intro: "When a formal appraisal is needed for inherited property — and when a professional market assessment is enough.",
+  },
+  "/guides/estate-property-repairs-before-sale": {
+    title: "What Repairs Should Be Done Before Selling an Estate Property? | Real Property Planning",
+    description: "A practical guide to deciding which repairs and improvements are worth making before selling an inherited or estate home — and which ones to skip.",
+    h1: "What Repairs Should Be Done Before Selling an Estate Property?",
+    intro: "Which repairs and improvements are worth making before selling an inherited or estate home — and which ones to skip.",
+  },
+  "/guides/heirs-disagree-selling-house": {
+    title: "What Happens If Heirs Disagree on Selling a House? | Real Property Planning",
+    description: "Practical guidance for families navigating heir disagreements about inherited property — understanding options, reaching agreement, and moving forward.",
+    h1: "What Happens If Heirs Disagree on Selling a House?",
+    intro: "Practical guidance for families navigating heir disagreements about inherited property — options, reaching agreement, and moving forward.",
+  },
+  "/guides/pricing-house-trust-estate": {
+    title: "How Do You Price a House in a Trust or Estate? | Real Property Planning",
+    description: "A practical guide to pricing estate and trust-owned property — why standard approaches fail and what valuation-informed strategy looks like.",
+    h1: "How Do You Price a House in a Trust or Estate?",
+    intro: "A practical guide to pricing estate and trust-owned property — why standard approaches fall short and what valuation-informed strategy looks like.",
+  },
+  "/guides/sell-house-during-probate-washington": {
+    title: "Can You Sell a House During Probate in Washington State? | Real Property Planning",
+    description: "Yes — once the executor has court-issued authority. Learn how the process works, what to expect, and how to avoid common mistakes when selling during probate.",
+    h1: "Can You Sell a House During Probate in Washington State?",
+    intro: "Yes — once the executor has court-issued authority. How the process works, what to expect, and how to avoid common mistakes.",
+  },
+  "/guides/taxes-selling-inherited-house-washington": {
+    title: "What Taxes Do You Pay When Selling an Inherited House in Washington? | Real Property Planning",
+    description: "Understanding capital gains, stepped-up basis, estate taxes, and other tax considerations when selling inherited property in Washington State.",
+    h1: "What Taxes Do You Pay When Selling an Inherited House in Washington?",
+    intro: "Capital gains, stepped-up basis, estate taxes, and other tax considerations when selling inherited property in Washington State.",
+  },
+  "/guides/how-long-sell-probate-property": {
+    title: "How Long Does It Take to Sell a Probate Property? | Real Property Planning",
+    description: "Realistic timelines for probate property sales in Washington State — from court authority to closing. Understand what affects the timeline and how to plan.",
+    h1: "How Long Does It Take to Sell a Probate Property?",
+    intro: "Realistic timelines for probate property sales in Washington State — from court authority to closing — and what affects the timeline.",
+  },
+  "/guides/executor-first-steps-house": {
+    title: "What Should an Executor Do First With a House? | Real Property Planning",
+    description: "A practical guide to the first decisions an executor needs to make about estate property — from securing the home to planning for sale.",
+    h1: "What Should an Executor Do First With a House?",
+    intro: "The first decisions an executor needs to make about estate property — from securing the home to planning for sale.",
+  },
+  "/guides/sell-inherited-house-as-is-or-fix": {
+    title: "Should You Sell an Inherited House As-Is or Fix It Up? | Real Property Planning",
+    description: "A practical guide to deciding whether to sell an inherited property as-is or invest in repairs. Understand the trade-offs and when each approach makes sense.",
+    h1: "Should You Sell an Inherited House As-Is or Fix It Up?",
+    intro: "Deciding whether to sell an inherited property as-is or invest in repairs — the trade-offs and when each approach makes sense.",
+  },
 };
 
 const DEFAULT_SHELL_META: RouteMeta = ROUTE_METADATA["/"] || {
