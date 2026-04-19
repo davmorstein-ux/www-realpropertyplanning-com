@@ -57,7 +57,7 @@ const ExecutorFirstStepsHouse = () => (
             What Should an Executor Do First With a House?
           </h1>
           <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
-            Secure the property, confirm insurance, and begin documenting its condition. These three steps protect the estate and give you a foundation for every decision that follows.
+            Written for newly-appointed executors and personal representatives in Washington State who have just taken responsibility for an estate home. Secure the property, confirm insurance, and begin documenting its condition. These three steps protect the estate and give you a foundation for every decision that follows.
           </p>
           <p className="text-lg text-primary-foreground/70 leading-relaxed">
             Being named executor often comes with immediate pressure to make decisions about the house. This guide walks through what to do first — and what can wait.
