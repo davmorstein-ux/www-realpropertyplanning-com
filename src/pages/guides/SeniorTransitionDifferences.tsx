@@ -65,7 +65,7 @@ const SeniorTransitionDifferences = () => (
             How Senior Transition Sales Differ From Ordinary Home Sales
           </h1>
           <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
-            When a senior is moving out of a longtime family home — whether to assisted living, a smaller residence, or closer to family — the sale process looks and feels fundamentally different from a conventional home transaction. Understanding these differences helps families plan realistically and choose the right professional support.
+            Written for adult children and families helping a senior parent sell a longtime family home as part of a move into assisted living, downsizing, or relocating closer to family. When a senior is moving out of a longtime family home — whether to assisted living, a smaller residence, or closer to family — the sale process looks and feels fundamentally different from a conventional home transaction. Understanding these differences helps families plan realistically and choose the right professional support.
           </p>
         </div>
       </div>
