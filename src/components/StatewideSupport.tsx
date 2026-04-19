@@ -50,7 +50,7 @@ const StatewideSupport = ({ background = "bg-secondary" }: StatewideSupportProps
               While much of the work is concentrated in King, Snohomish, Pierce, and Kitsap Counties, clients are assisted across the entire state when guidance is needed.
             </p>
             <p>
-              For situations outside the immediate area, Real Property Planning works through eXp Realty's nationwide and international network to connect clients with trusted professionals — while remaining involved to help ensure consistency, communication, and a smooth overall process.
+              For situations outside the immediate area, Real Property Planning can connect clients with a trusted broker anywhere in the country through David Stein's eXp Realty network — while remaining involved to help ensure consistency, communication, and a smooth overall process.
             </p>
           </div>
 

@@ -396,7 +396,7 @@ const SeniorTransitions = () => {
               Our team welcomes confidential conversations with families at any stage — whether you're just beginning to think about a transition or are already in the middle of one. There is no pressure, no obligation, and no sales pitch. Just experienced, honest guidance for your family's situation.
             </p>
             <p className="text-primary-foreground/60 text-base leading-relaxed mb-8">
-              Families throughout King County, Snohomish County, Pierce County, Kitsap County, and across Washington State are welcome to reach out. Our team can also connect families with trusted brokers in other states through eXp Realty's national referral network.
+              Families throughout King County, Snohomish County, Pierce County, Kitsap County, and across Washington State are welcome to reach out. Through David Stein's eXp Realty network, Real Property Planning can also connect families with a trusted broker anywhere in the country.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a href="tel:+12069003015">

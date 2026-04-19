@@ -70,7 +70,7 @@ const faqs = [
   },
   {
     question: "Do you work with probate attorneys outside of Western Washington?",
-    answer: "Our team's primary service area is Western Washington and the Puget Sound region — King, Snohomish, Pierce, and Kitsap Counties, with additional coverage in Skagit County and surrounding areas. For attorneys with clients in other parts of Washington State, our team can discuss appropriate referral connections. For clients outside Washington, eXp Realty's national network can provide trusted broker referrals in most markets.",
+    answer: "Our team's primary service area is Western Washington and the Puget Sound region — King, Snohomish, Pierce, and Kitsap Counties, with additional coverage in Skagit County and surrounding areas. For attorneys with clients in other parts of Washington State, our team can discuss appropriate referral connections. For clients outside Washington, Real Property Planning can connect attorneys and clients with a trusted broker anywhere in the country through David Stein's eXp Realty network.",
   },
 ];
 

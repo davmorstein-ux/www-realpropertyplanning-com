@@ -56,18 +56,18 @@ const Realtor = () => (
                 </div>
                 <div className="flex w-full flex-col items-center sm:flex-1 sm:items-start">
                   <a href="https://davestein.exprealty.com" target="_blank" rel="noopener noreferrer" className="inline-block">
-                    <img src={expRealtyLogo} alt="eXp Realty logo" className="h-[120px] w-auto object-contain mx-auto sm:mx-0 sm:-translate-x-[10px] block"  loading="lazy"/>
+                    <img src={expRealtyLogo} alt="eXp Realty — license held under eXp Realty (real estate license disclosure)" className="h-[120px] w-auto object-contain mx-auto sm:mx-0 sm:-translate-x-[10px] block"  loading="lazy"/>
                   </a>
                   <div className="w-full mt-1 text-center sm:text-left">
                     <p className="text-foreground font-semibold text-base">David Stein</p>
-                    <p className="text-muted-foreground text-sm mb-0.5">Real Estate Broker</p>
-                    <p className="text-muted-foreground text-sm mb-1.5">Real Property Planning</p>
+                    <p className="text-muted-foreground text-sm mb-0.5">President, Real Property Planning</p>
+                    <p className="text-muted-foreground text-sm mb-1.5">Real Property Planning — independent hub for Washington State</p>
                     <p className="text-muted-foreground text-sm leading-relaxed mb-3">
                       Specializing in senior transitions, probate and estate property sales, and trust-held real estate throughout Washington State.
                     </p>
                     <div className="text-muted-foreground text-xs leading-relaxed mb-3 space-y-0.5">
-                      <p>Real Estate Broker — License #113972</p>
-                      <p>WA Certified Residential Appraiser — #1702080</p>
+                      <p>Washington State Licensed Real Estate Broker — License held under eXp Realty</p>
+                      <p>Washington State Certified Residential Appraiser — Stein Appraisal</p>
                     </div>
                     <div className="space-y-1.5 text-sm">
                       <div className="flex items-center gap-2 justify-center sm:justify-start">

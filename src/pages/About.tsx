@@ -314,7 +314,7 @@ const About = () => {
                   <ul className="space-y-3">
                     {[
                       <>
-                        Licensed Real Estate Broker — Washington State #113972 |{" "}
+                        Washington State Licensed Real Estate Broker — License held under{" "}
                         <a
                           href="https://www.exprealty.com"
                           target="_blank"
@@ -324,7 +324,7 @@ const About = () => {
                           eXp Realty
                         </a>
                       </>,
-                      "Washington State Certified Residential Appraiser — #1702080",
+                      "Washington State Certified Residential Appraiser — Stein Appraisal",
                       "20+ years of experience in both disciplines",
                     ].map((item, i) => (
                       <li key={i} className="flex items-start gap-3">
@@ -377,7 +377,7 @@ const About = () => {
                         and Washington State
                       </>,
                       <>
-                        National referral connections through{" "}
+                        Nationwide broker connections through David Stein's{" "}
                         <a
                           href="https://www.exprealty.com"
                           target="_blank"
@@ -385,7 +385,8 @@ const About = () => {
                           className="text-accent hover:text-gold underline underline-offset-4"
                         >
                           eXp Realty
-                        </a>
+                        </a>{" "}
+                        network
                       </>,
                     ].map((item, i) => (
                       <li key={i} className="flex items-start gap-3">

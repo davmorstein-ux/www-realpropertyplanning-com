@@ -138,18 +138,17 @@ const Contact = () => {
                 Our team works with attorneys, executors, fiduciaries, and families across Washington State.
               </p>
               <p className="text-muted-foreground text-[15px] leading-relaxed mb-8">
-                For properties outside Washington State, he can connect you with a trusted eXp Realty partner in the right area.
+                Through his eXp Realty network, Real Property Planning can connect you with a trusted broker anywhere in the country.
               </p>
 
               {/* Brokerage Info */}
               <div className="pt-8 border-t border-border">
                 <div className="flex flex-col items-center md:items-start mb-5">
-                  <img src={expRealtyLogo} alt="eXp Realty brokerage logo" className="w-[95px] md:w-[120px] h-auto" loading="lazy" />
+                  <img src={expRealtyLogo} alt="eXp Realty — license held under eXp Realty (real estate license disclosure)" className="w-[95px] md:w-[120px] h-auto" loading="lazy" />
                 </div>
                 <div className="space-y-2 text-[15px] text-muted-foreground">
                   <p className="font-medium text-foreground">Real Property Planning</p>
-                  <p>Licensed Real Estate Broker, Washington State</p>
-                  <p className="font-medium text-foreground">eXp Realty</p>
+                  <p>Washington State Licensed Real Estate Broker — License held under eXp Realty</p>
                   <p>Mailing Address: PO Box 1462, Woodinville, WA 98072</p>
                   <p>Office Address: 1455 NW Leary Way, Seattle, WA 98107</p>
                 </div>

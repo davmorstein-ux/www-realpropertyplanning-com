@@ -24,15 +24,14 @@ const Footer = () => {
               Real Property Planning
             </p>
             <p className="text-primary-foreground/70 text-base leading-relaxed mb-0.5">
-              Licensed Real Estate Broker — #113972
+              Washington State Licensed Real Estate Broker — License held under eXp Realty
             </p>
             <p className="text-primary-foreground/70 text-base leading-relaxed mb-1">
-              WA Certified Residential Appraiser — #1702080
+              Washington State Certified Residential Appraiser — Stein Appraisal
             </p>
             <p className="text-primary-foreground/70 text-base leading-relaxed mb-3">
               Specializing in probate, estate, inherited property &amp; senior transition real estate
             </p>
-            <p className="text-primary-foreground/70 text-base leading-relaxed mb-3">eXp Realty</p>
             <div className="flex flex-col gap-2 text-base">
               <a href="tel:2069003015" className="text-primary-foreground/70 hover:text-gold transition-colors flex items-center gap-2">
                 <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0"  loading="lazy"/>
@@ -167,12 +166,12 @@ const Footer = () => {
         <div className="pt-10 pb-2 flex flex-col items-center">
           <img 
             src={expRealtyLogo} 
-            alt="eXp Realty brokerage logo — Real Property Planning is a licensed broker with eXp Realty" 
+            alt="eXp Realty — license held under eXp Realty (real estate license disclosure)" 
             className="w-[95px] md:w-[120px] h-auto mb-4"
             loading="lazy"
           />
           <p className="text-primary-foreground/70 text-base text-center leading-relaxed">
-            Real Property Planning | Real Estate Broker · Certified Residential Appraiser | Real Property Planning | eXp Realty
+            Real Property Planning — independent hub for probate, estate, and senior transition real estate in Washington State. David Stein, President. License held under eXp Realty. Appraisal services provided through Stein Appraisal.
           </p>
           <p className="text-primary-foreground/70 text-base text-center mt-1">
             Mailing Address: PO Box 1462, Woodinville, WA 98072
@@ -186,7 +185,7 @@ const Footer = () => {
         <div className="footer-divider mb-0" />
         <div className="mt-0 pt-6 pb-4">
           <p className="text-primary-foreground/70 text-base text-center leading-relaxed max-w-3xl mx-auto mb-2">
-            Serving buyers, sellers, families, attorneys, executors, trustees, and fiduciaries throughout Washington State, with a strong focus in Western Washington and the Puget Sound region. Through eXp Realty's referral network, our team can also help connect clients with trusted brokers across the U.S. and internationally.
+            Serving buyers, sellers, families, attorneys, executors, trustees, and fiduciaries throughout Washington State, with a strong focus in Western Washington and the Puget Sound region. Through David Stein's eXp Realty network, Real Property Planning can connect clients with a trusted broker anywhere in the country.
           </p>
           <p className="text-primary-foreground/70 text-base text-center leading-relaxed max-w-2xl mx-auto">
             Specializing in probate real estate, inherited property, estate sales, senior transitions, and structured, evidence-based strategy for attorneys, executors, trustees, heirs, beneficiaries, seniors, and families. Proudly serving families, executors, attorneys, CPAs, financial planners, and senior care professionals throughout the Puget Sound region — including Seattle, Bellevue, Everett, Tacoma, Bremerton, Woodinville, and surrounding communities.
