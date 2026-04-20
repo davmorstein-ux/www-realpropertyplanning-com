@@ -193,7 +193,7 @@ const ProbateEstateSales = () => {
               <h2 className="font-serif text-xl md:text-2xl text-[hsl(0_70%_30%)] font-semibold mb-4 leading-snug">
                 Why Probate Home Sales Require Special Handling
               </h2>
-              <p className="text-foreground/75 text-base leading-tight">
+<p className="text-foreground/75 text-base leading-none">
                 Selling a home through probate in Washington State is different from a traditional home sale. Probate sales often involve court timelines, executor responsibilities, multiple interested parties, and pricing that must stand up to fiduciary scrutiny.
               </p>
             </article>
@@ -201,7 +201,7 @@ const ProbateEstateSales = () => {
               <h2 className="font-serif text-xl md:text-2xl text-[hsl(0_70%_30%)] font-semibold mb-4 leading-snug">
                 How David Stein Helps With Probate Real Estate
               </h2>
-              <p className="text-foreground/75 text-base leading-tight">
+<p className="text-foreground/75 text-base leading-none">
                 David Stein helps families, executors, trustees, and attorneys navigate the probate real estate process from property assessment and pricing through preparation, listing, negotiation, and closing.
               </p>
             </article>
@@ -209,7 +209,7 @@ const ProbateEstateSales = () => {
               <h2 className="font-serif text-xl md:text-2xl text-[hsl(0_70%_30%)] font-semibold mb-4 leading-snug">
                 Serving Probate Clients Across Washington
               </h2>
-              <p className="text-foreground/75 text-base leading-tight">
+              <p className="text-foreground/75 text-base leading-none">
                 Serving <Link to="/counties" className="text-accent hover:text-gold underline underline-offset-4">King, Snohomish, Pierce, and Kitsap Counties</Link>, with statewide coordination for out-of-state executors and families managing inherited property from a distance.
               </p>
             </article>
