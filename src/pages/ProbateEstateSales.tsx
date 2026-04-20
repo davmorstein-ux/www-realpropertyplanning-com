@@ -345,7 +345,7 @@ const ProbateEstateSales = () => {
       <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
+            <h2 className="font-serif text-3xl text-[hsl(0_70%_30%)] font-semibold mb-4">
               Timing and Coordination in Probate Sales
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
