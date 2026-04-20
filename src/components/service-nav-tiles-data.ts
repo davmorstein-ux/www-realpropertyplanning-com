@@ -17,6 +17,7 @@ import iconEstateLiquidation from "@/assets/icons/estate-liquidation-services-ic
 import iconPowerOfAttorney from "@/assets/icons/power-of-attorney-icon-washington.webp";
 import iconRealtor from "@/assets/icons/realtor-real-estate-agent-icon-washington.webp";
 import iconAppraiser from "@/assets/icons/real-estate-appraiser-icon-washington.webp";
+import iconSeniorPlacement from "@/assets/icons/senior-placement-advisor-icon-washington.webp";
 
 export interface ServiceTile {
   title: string;
@@ -68,7 +69,7 @@ export const tileCategories: TileCategory[] = [
     label: "Planning & Next Steps",
     tiles: [
       { title: "Probate Sales", subtitle: "", href: "/probate-estate-sales", iconSrc: iconProbateSales, iconOffsetY: "-4%", mobileContentOffsetY: "-2%", mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "19%" },
-      { title: "Senior\nPlacement", subtitle: "", href: "/senior-placement", iconSrc: iconSeniorLiving, labelSpacing: "tight", mobileTextDown: true, mobileIconDown: true },
+      { title: "Senior\nPlacement", subtitle: "", href: "/senior-placement", iconSrc: iconSeniorPlacement, labelSpacing: "tight", mobileTextDown: true, mobileIconDown: true },
       { title: "Home Values\n& Pricing", subtitle: "", href: "/why-valuation-matters", iconSrc: iconHomeValue, labelSpacing: "tight", iconOffsetY: "4%", mobileContentOffsetY: "-1.5%", mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "12%" },
       { title: "Senior\nHome Sale", subtitle: "", href: "/senior-move-managers", iconSrc: iconSeniorMoves, labelSpacing: "tight", iconOffsetY: "4%", mobileContentOffsetY: "-3%", mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "10%" },
       { title: "Service Areas", subtitle: "", href: "/counties", iconSrc: iconServiceAreas, iconOffsetY: "4%", iconScale: 1.1, mobileTextDown: true, mobileIconDown: true },
