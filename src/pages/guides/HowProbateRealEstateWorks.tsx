@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import heroIcon from "@/assets/probate-real-estate-sales-washington-guide.webp";
+import probateTimeline from "@/assets/probate-timeline.svg";
 
 const faqs = [
   {
@@ -80,6 +81,13 @@ const HowProbateRealEstateWorks = () => (
             Whether you are a first-time executor or an attorney referring a client, understanding the probate real estate process helps you make better decisions and protect the estate's interests.
           </p>
         </div>
+      </div>
+    </section>
+
+    {/* Probate Timeline Diagram */}
+    <section className="bg-background py-8 md:py-12">
+      <div className="w-full">
+        <img src={probateTimeline} alt="Probate real estate sale timeline — 7 steps from owner passing through distribution of proceeds in Washington State" className="w-full h-auto block" loading="lazy" />
       </div>
     </section>
 

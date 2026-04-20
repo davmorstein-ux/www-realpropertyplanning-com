@@ -15,6 +15,7 @@ import { Link } from "react-router-dom";
 import warning3d from "@/assets/property-warning-guidance-icon-washington.webp";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconProbateSales from "@/assets/probate-real-estate-sales-washington-guide.webp";
+import probateTimeline from "@/assets/probate-timeline.svg";
 import RealClientSituations from "@/components/RealClientSituations";
 
 const probateCaseStudies = [
@@ -185,6 +186,13 @@ const ProbateEstateSales = () => {
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Probate Timeline Diagram */}
+      <section className="bg-background py-8 md:py-12">
+        <div className="w-full">
+          <img src={probateTimeline} alt="Probate real estate sale timeline — 7 steps from owner passing through distribution of proceeds in Washington State" className="w-full h-auto block" loading="lazy" />
         </div>
       </section>
 

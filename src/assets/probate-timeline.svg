@@ -1,0 +1,128 @@
+<svg width="800" viewBox="0 0 800 980" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Probate real estate sale timeline showing 7 steps from death of owner through distribution of proceeds" font-family="Georgia, 'Times New Roman', serif">
+  <title>Probate Real Estate Sale Timeline — Washington State</title>
+  <desc>A 7-step vertical timeline showing the probate real estate sale process in Washington State, including executor appointment, property assessment, listing, offer, closing, and distribution of proceeds. Created by Real Property Planning — David Stein, Licensed Broker and Certified Appraiser.</desc>
+
+  <!-- Background -->
+  <rect width="800" height="980" fill="#ffffff"/>
+
+  <!-- Title block -->
+  <rect x="0" y="0" width="800" height="72" fill="#0f2d52"/>
+  <text x="400" y="30" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff" font-family="Georgia, serif">Probate Real Estate Sale — Step by Step</text>
+  <text x="400" y="54" text-anchor="middle" font-size="13" fill="#9ab4cc" font-family="Arial, sans-serif">Washington State  |  David Stein, Licensed Broker &amp; Certified Residential Appraiser  |  (206) 900-3015</text>
+
+  <!-- Vertical spine -->
+  <line x1="90" y1="90" x2="90" y2="790" stroke="#cbd5e1" stroke-width="2"/>
+
+  <!-- ── STEP 1 ── -->
+  <circle cx="90" cy="114" r="24" fill="#64748b"/>
+  <text x="90" y="121" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff" font-family="Arial, sans-serif">1</text>
+  <rect x="130" y="90" width="630" height="66" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <rect x="130" y="90" width="6" height="66" rx="3" fill="#64748b"/>
+  <text x="150" y="116" font-size="17" font-weight="700" fill="#1e293b" font-family="Georgia, serif">Owner passes away</text>
+  <text x="150" y="138" font-size="14" fill="#475569" font-family="Arial, sans-serif">Estate enters probate. The property cannot be sold yet.</text>
+
+  <!-- connector -->
+  <line x1="90" y1="138" x2="90" y2="162" stroke="#cbd5e1" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- ── STEP 2 ── -->
+  <circle cx="90" cy="186" r="24" fill="#185FA5"/>
+  <text x="90" y="193" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff" font-family="Arial, sans-serif">2</text>
+  <rect x="130" y="162" width="630" height="80" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <rect x="130" y="162" width="6" height="80" rx="3" fill="#185FA5"/>
+  <text x="150" y="188" font-size="17" font-weight="700" fill="#1e3a5f" font-family="Georgia, serif">Executor appointed by the court</text>
+  <text x="150" y="210" font-size="14" fill="#1e3a5f" font-family="Arial, sans-serif">Court issues Letters Testamentary or Letters of Administration.</text>
+  <text x="150" y="228" font-size="14" fill="#1e3a5f" font-family="Arial, sans-serif">Legal authority to act on the estate is now in place.</text>
+
+  <!-- connector -->
+  <line x1="90" y1="242" x2="90" y2="262" stroke="#cbd5e1" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- ── STEP 3 ── -->
+  <circle cx="90" cy="286" r="24" fill="#0f6e56"/>
+  <text x="90" y="293" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff" font-family="Arial, sans-serif">3</text>
+  <rect x="130" y="262" width="630" height="80" rx="8" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+  <rect x="130" y="262" width="6" height="80" rx="3" fill="#0f6e56"/>
+  <text x="150" y="288" font-size="17" font-weight="700" fill="#064e3b" font-family="Georgia, serif">Property secured &amp; assessed</text>
+  <text x="150" y="310" font-size="14" fill="#064e3b" font-family="Arial, sans-serif">David Stein visits the property, evaluates its condition, and builds</text>
+  <text x="150" y="328" font-size="14" fill="#064e3b" font-family="Arial, sans-serif">a pricing strategy using his dual broker + appraiser expertise.</text>
+
+  <!-- connector -->
+  <line x1="90" y1="342" x2="90" y2="362" stroke="#cbd5e1" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- ── STEP 4 ── -->
+  <circle cx="90" cy="386" r="24" fill="#0f6e56"/>
+  <text x="90" y="393" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff" font-family="Arial, sans-serif">4</text>
+  <rect x="130" y="362" width="630" height="80" rx="8" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+  <rect x="130" y="362" width="6" height="80" rx="3" fill="#0f6e56"/>
+  <text x="150" y="388" font-size="17" font-weight="700" fill="#064e3b" font-family="Georgia, serif">Property prepared &amp; listed</text>
+  <text x="150" y="410" font-size="14" fill="#064e3b" font-family="Arial, sans-serif">Cleanout, repairs, and staging are coordinated by David.</text>
+  <text x="150" y="428" font-size="14" fill="#064e3b" font-family="Arial, sans-serif">Home is listed at a court-defensible, market-supported price.</text>
+
+  <!-- connector -->
+  <line x1="90" y1="442" x2="90" y2="462" stroke="#cbd5e1" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- ── STEP 5 ── -->
+  <circle cx="90" cy="486" r="24" fill="#534AB7"/>
+  <text x="90" y="493" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff" font-family="Arial, sans-serif">5</text>
+  <rect x="130" y="462" width="630" height="80" rx="8" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1"/>
+  <rect x="130" y="462" width="6" height="80" rx="3" fill="#534AB7"/>
+  <text x="150" y="488" font-size="17" font-weight="700" fill="#3b0764" font-family="Georgia, serif">Offer received &amp; negotiated</text>
+  <text x="150" y="510" font-size="14" fill="#3b0764" font-family="Arial, sans-serif">Executors, attorneys, and heirs are kept aligned throughout.</text>
+  <text x="150" y="528" font-size="14" fill="#3b0764" font-family="Arial, sans-serif">Each offer is reviewed for fiduciary defensibility.</text>
+
+  <!-- connector -->
+  <line x1="90" y1="542" x2="90" y2="562" stroke="#cbd5e1" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- ── STEP 6 ── -->
+  <circle cx="90" cy="586" r="24" fill="#534AB7"/>
+  <text x="90" y="593" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff" font-family="Arial, sans-serif">6</text>
+  <rect x="130" y="562" width="630" height="80" rx="8" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1"/>
+  <rect x="130" y="562" width="6" height="80" rx="3" fill="#534AB7"/>
+  <text x="150" y="588" font-size="17" font-weight="700" fill="#3b0764" font-family="Georgia, serif">Sale closes</text>
+  <text x="150" y="610" font-size="14" fill="#3b0764" font-family="Arial, sans-serif">Title transfers. All required documentation is filed.</text>
+  <text x="150" y="628" font-size="14" fill="#3b0764" font-family="Arial, sans-serif">David coordinates with escrow, attorneys, and the court.</text>
+
+  <!-- connector -->
+  <line x1="90" y1="642" x2="90" y2="662" stroke="#cbd5e1" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- ── STEP 7 ── -->
+  <circle cx="90" cy="686" r="24" fill="#15803d"/>
+  <text x="90" y="693" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff" font-family="Arial, sans-serif">7</text>
+  <rect x="130" y="662" width="630" height="80" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+  <rect x="130" y="662" width="6" height="80" rx="3" fill="#15803d"/>
+  <text x="150" y="688" font-size="17" font-weight="700" fill="#14532d" font-family="Georgia, serif">Proceeds distributed to heirs</text>
+  <text x="150" y="710" font-size="14" fill="#14532d" font-family="Arial, sans-serif">Debts and estate costs are settled from the sale proceeds.</text>
+  <text x="150" y="728" font-size="14" fill="#14532d" font-family="Arial, sans-serif">Remaining funds distributed per the will or Washington State law.</text>
+
+  <!-- Divider -->
+  <line x1="30" y1="762" x2="770" y2="762" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Key notes heading -->
+  <text x="30" y="786" font-size="15" font-weight="700" fill="#1e293b" font-family="Georgia, serif">Key things to know</text>
+
+  <!-- Note cards -->
+  <rect x="30" y="798" width="228" height="76" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="44" y="820" font-size="13" font-weight="700" fill="#0f2d52" font-family="Arial, sans-serif">No court approval needed</text>
+  <text x="44" y="838" font-size="12" fill="#475569" font-family="Arial, sans-serif">Washington is a non-supervised</text>
+  <text x="44" y="854" font-size="12" fill="#475569" font-family="Arial, sans-serif">probate state in most cases.</text>
+
+  <rect x="286" y="798" width="228" height="76" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="300" y="820" font-size="13" font-weight="700" fill="#0f2d52" font-family="Arial, sans-serif">Act early — costs add up</text>
+  <text x="300" y="838" font-size="12" fill="#475569" font-family="Arial, sans-serif">Carrying costs accumulate every</text>
+  <text x="300" y="854" font-size="12" fill="#475569" font-family="Arial, sans-serif">week the property sits vacant.</text>
+
+  <rect x="542" y="798" width="228" height="76" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="556" y="820" font-size="13" font-weight="700" fill="#0f2d52" font-family="Arial, sans-serif">Start before letters issue</text>
+  <text x="556" y="838" font-size="12" fill="#475569" font-family="Arial, sans-serif">David can begin assessment</text>
+  <text x="556" y="854" font-size="12" fill="#475569" font-family="Arial, sans-serif">before authority is granted.</text>
+
+  <!-- CTA bar -->
+  <rect x="30" y="892" width="740" height="52" rx="8" fill="#0f2d52"/>
+  <text x="400" y="923" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff" font-family="Arial, sans-serif">Questions? Call David Stein directly — (206) 900-3015  |  realpropertyplanning.com</text>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#cbd5e1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+</svg>
