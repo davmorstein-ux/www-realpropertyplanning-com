@@ -50,8 +50,8 @@ const executorFaqs = [
 const Executors = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
-      title="Executor's Guide to Selling Estate Property in Washington State"
-      description="Practical, fiduciary-aware help for Washington personal representatives — securing the house, court-aligned timing, defensible pricing, and out-of-state coordination."
+      title="Executor's Guide to Selling Estate Property in WA"
+      description="Practical, fiduciary-aware help for Washington personal representatives — securing the home, court-aligned timing, and defensible pricing."
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema items={[{ name: "For Executors", url: "/executors" }]} />
