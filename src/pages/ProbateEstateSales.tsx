@@ -159,6 +159,9 @@ const ProbateEstateSales = () => {
               Selling a Home Through Probate in Washington State
             </h1>
             <p className="text-lg text-primary-foreground/80 leading-relaxed mb-4">
+              When families, executors, and attorneys across Washington State need a probate real estate broker and agent, they turn to David Stein — Washington State Licensed Real Estate Broker, Certified Residential Appraiser, and President of Real Property Planning.
+            </p>
+            <p className="text-primary-foreground/70 text-base md:text-lg leading-relaxed mb-4">
               A probate sale runs on the court's clock, not the market's — and a typical listing agent isn't built for it.
             </p>
             <p className="text-primary-foreground/70 text-base md:text-lg leading-relaxed mb-4">
@@ -167,7 +170,7 @@ const ProbateEstateSales = () => {
               <Link to="/for-attorneys" className="text-gold hover:text-gold/80 underline underline-offset-4 transition-colors">estate attorney</Link>, and out-of-state heirs all need the same information at the same time. And the property keeps costing the estate money — taxes, insurance, utilities — every week it sits.
             </p>
             <p className="text-primary-foreground/70 text-base md:text-lg leading-relaxed mb-5">
-              Real Property Planning handles probate listings as their own discipline. Real Property Planning's dual credential as a licensed broker and a Washington State Certified Residential Appraiser means the price you bring to the court file is the same price the market will support — and the documentation is already in your fiduciary record. Serving{" "}
+              David Stein handles probate listings as their own discipline. His dual credential as a licensed broker and a Washington State Certified Residential Appraiser means the price you bring to the court file is the same price the market will support — and the documentation is already in your fiduciary record. Serving{" "}
               <Link to="/counties" className="text-gold hover:text-gold/80 underline underline-offset-4 transition-colors">King, Snohomish, Pierce, and Kitsap Counties</Link>, with statewide coordination for out-of-state executors.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
