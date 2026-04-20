@@ -895,6 +895,36 @@ html, body {
   }
 }
 
+/* Senior Placement tile: remove any visible box behind the icon */
+.premium-tile:has(.service-nav-tile-link[href="/senior-placement"]),
+.premium-tile:has(.service-nav-tile-mobile-hitbox[href="/senior-placement"]),
+.premium-tile:has(.service-nav-tile-link[href="/senior-placement"]) > div,
+.premium-tile:has(.service-nav-tile-mobile-hitbox[href="/senior-placement"]) > div,
+.premium-tile:has(.service-nav-tile-link[href="/senior-placement"]) > div > span,
+.premium-tile:has(.service-nav-tile-mobile-hitbox[href="/senior-placement"]) > div > span,
+.premium-tile:has(.service-nav-tile-link[href="/senior-placement"]) .tile-icon,
+.premium-tile:has(.service-nav-tile-mobile-hitbox[href="/senior-placement"]) .tile-icon,
+.premium-tile:has(.service-nav-tile-link[href="/senior-placement"]) > div::before,
+.premium-tile:has(.service-nav-tile-mobile-hitbox[href="/senior-placement"]) > div::before,
+.premium-tile:has(.service-nav-tile-link[href="/senior-placement"]) > div::after,
+.premium-tile:has(.service-nav-tile-mobile-hitbox[href="/senior-placement"]) > div::after,
+.premium-tile:has(.service-nav-tile-link[href="/senior-placement"]) > div > span::before,
+.premium-tile:has(.service-nav-tile-mobile-hitbox[href="/senior-placement"]) > div > span::before,
+.premium-tile:has(.service-nav-tile-link[href="/senior-placement"]) > div > span::after,
+.premium-tile:has(.service-nav-tile-mobile-hitbox[href="/senior-placement"]) > div > span::after {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.premium-tile:has(.service-nav-tile-link[href="/senior-placement"]) .tile-icon,
+.premium-tile:has(.service-nav-tile-mobile-hitbox[href="/senior-placement"]) .tile-icon {
+  mix-blend-mode: multiply;
+}
+
 /* Attorney tiles: reduce text size on mobile so it fits within tile face */
 @media (max-width: 639px) {
   .attorney-tiles-grid .premium-tile h3 {
