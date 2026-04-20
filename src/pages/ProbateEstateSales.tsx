@@ -190,7 +190,7 @@ const ProbateEstateSales = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 md:gap-10">
             <article className="bg-card border border-border rounded-lg p-7 md:p-8 shadow-sm">
-              <h2 className="font-serif text-xl md:text-2xl text-foreground font-semibold mb-4 leading-snug">
+              <h2 className="font-serif text-xl md:text-2xl text-[hsl(0_70%_30%)] font-semibold mb-4 leading-snug">
                 Why Probate Home Sales Require Special Handling
               </h2>
               <p className="text-foreground/75 text-base leading-relaxed">
