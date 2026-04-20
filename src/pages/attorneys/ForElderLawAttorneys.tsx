@@ -198,7 +198,7 @@ const ForElderLawAttorneys = () => (
               </Button>
             </a>
             <Link to="/contact">
-              <Button variant="outline" size="lg" className="px-8 py-4 h-auto border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+              <Button variant="navy3d" size="lg" className="px-8 py-4 h-auto !border-2 !border-gold">
                 Send a Message
               </Button>
             </Link>
