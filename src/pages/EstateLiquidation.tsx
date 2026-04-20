@@ -12,8 +12,8 @@ import iconEstateLiquidation from "@/assets/icons/estate-liquidation-services-ic
 const EstateLiquidation = () => (
   <>
     <SEOHead
-      title="Estate Liquidation & Estate Sales | Real Property Planning"
-      description="Estate liquidation services in Washington State — from estate sales and cleanouts to donation coordination and preparing the home for market. Guidance for executors, heirs, and families."
+      title="Estate Liquidation & Estate Sales in Washington"
+      description="Estate liquidation in Washington State — estate sales, cleanouts, donation coordination, and preparing the home for market. Help for executors and families."
       canonical="https://www.realpropertyplanning.com/estate-liquidation"
     />
     <BreadcrumbSchema
