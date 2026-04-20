@@ -66,7 +66,7 @@ const HowProbateRealEstateWorks = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl">
             <div className="flex justify-center mb-1.5 md:mb-2">
-              <img src={heroIcon} alt="Probate real estate sales guide — house, gavel, last will and testament, and petition for probate" className="block w-full max-w-[20rem] h-auto object-contain bg-white rounded-xl p-3" loading="lazy" />
+              <img src={heroIcon} alt="Probate real estate sales guide — house, gavel, last will and testament, and petition for probate" className="block w-full max-w-[20rem] h-auto object-contain" loading="lazy" />
             </div>
 
           <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">Educational Guide</p>
