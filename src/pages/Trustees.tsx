@@ -23,8 +23,8 @@ const jsonLd = articleSchema({
 const Trustees = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
-      title="Trustees — Real Estate Guidance for Trust-Held Property | Real Property Planning"
-      description="Practical real estate guidance for trustees and successor trustees selling trust-held property throughout Washington State."
+      title="Trustees — Selling Trust-Held Property in Washington"
+      description="Practical real estate guidance for trustees and successor trustees selling trust-held property throughout Washington State, with fiduciary care."
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema items={[{ name: "Trustees", url: "/trustees" }]} />
