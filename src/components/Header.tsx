@@ -12,6 +12,7 @@ const primaryLinks = [
     { href: "/senior-estate-services", label: "Senior & Estate Services" },
     { href: "/probate-estate-sales", label: "Probate & Estate Sales" },
     { href: "/senior-transitions", label: "Senior Transitions" },
+    { href: "/senior-placement", label: "Senior Placement" },
     { href: "/executors", label: "For Executors" },
     { href: "/how-the-process-works", label: "How the Process Works" },
     { href: "/why-valuation-matters", label: "Why Valuation Matters" },

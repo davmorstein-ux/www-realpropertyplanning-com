@@ -8,6 +8,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import Index from "./pages/Index";
 import ProbateEstateSales from "./pages/ProbateEstateSales";
 import SeniorTransitions from "./pages/SeniorTransitions";
+import SeniorPlacement from "./pages/SeniorPlacement";
 import ForAttorneys from "./pages/ForAttorneys";
 import ForAttorneysHowItWorks from "./pages/attorneys/ForAttorneysHowItWorks";
 import ForProbateAttorneys from "./pages/attorneys/ForProbateAttorneys";
@@ -125,6 +126,7 @@ const App = () => (
           {/* ─── Core commercial pages ────────────────────────────── */}
           <Route path="/probate-estate-sales" element={<ProbateEstateSales />} />
           <Route path="/senior-transitions" element={<SeniorTransitions />} />
+          <Route path="/senior-placement" element={<SeniorPlacement />} />
           <Route path="/why-valuation-matters" element={<WhyValuationMatters />} />
           <Route path="/how-the-process-works" element={<HowTheProcessWorks />} />
           <Route path="/executors" element={<Executors />} />
