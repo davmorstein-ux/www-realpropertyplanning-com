@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 
 import warning3d from "@/assets/property-warning-guidance-icon-washington.webp";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
-import iconProbateSales from "@/assets/icons/probate-property-sales-icon-washington.webp";
+import iconProbateSales from "@/assets/probate-real-estate-sales-washington-guide.webp";
 import RealClientSituations from "@/components/RealClientSituations";
 
 const probateCaseStudies = [
@@ -151,7 +151,7 @@ const ProbateEstateSales = () => {
       <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <img src={iconProbateSales} alt="Probate real estate sales guidance Washington State" className="mx-auto max-w-[15rem] w-full h-auto object-contain mb-1.5" loading="lazy"/>
+            <img src={iconProbateSales} alt="Probate real estate sales guidance Washington State — house, gavel, last will and testament, and petition for probate" className="mx-auto max-w-[20rem] w-full h-auto object-contain mb-1.5 bg-white rounded-xl p-3" loading="lazy"/>
             <p className="text-gold font-bold tracking-widest uppercase mb-4 text-base">
               Probate & Estate Property Sales
             </p>
