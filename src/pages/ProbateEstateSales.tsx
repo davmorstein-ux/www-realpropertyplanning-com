@@ -209,7 +209,7 @@ const ProbateEstateSales = () => {
               <h2 className="font-serif text-xl md:text-2xl text-[hsl(0_70%_30%)] font-semibold mb-4 leading-snug">
                 Serving Probate Clients Across Washington
               </h2>
-              <p className="text-foreground/75 text-base leading-tight">
+              <p className="text-foreground/75 text-base leading-none">
                 Serving <Link to="/counties" className="text-accent hover:text-gold underline underline-offset-4">King, Snohomish, Pierce, and Kitsap Counties</Link>, with statewide coordination for out-of-state executors and families managing inherited property from a distance.
               </p>
             </article>
