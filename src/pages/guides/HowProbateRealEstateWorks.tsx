@@ -13,7 +13,7 @@ import ProofCallout from "@/components/ProofCallout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
-import heroIcon from "@/assets/icons/probate-guidance-book-open-icon-washington.webp";
+import heroIcon from "@/assets/probate-real-estate-sales-washington-guide.webp";
 
 const faqs = [
   {
@@ -66,7 +66,7 @@ const HowProbateRealEstateWorks = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl">
             <div className="flex justify-center mb-1.5 md:mb-2">
-              <img src={heroIcon} alt="" aria-hidden="true" className="block w-full max-w-[15rem] h-auto object-contain" loading="lazy" />
+              <img src={heroIcon} alt="Probate real estate sales guide — house, gavel, last will and testament, and petition for probate" className="block w-full max-w-[20rem] h-auto object-contain bg-white rounded-xl p-3" loading="lazy" />
             </div>
 
           <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">Educational Guide</p>
@@ -84,6 +84,42 @@ const HowProbateRealEstateWorks = () => (
     </section>
 
     <TrustStrip />
+
+    {/* Your Probate Real Estate Broker & Agent */}
+    <section className="py-16 lg:py-20 bg-background">
+      <div className="container px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
+            Your Probate Real Estate Broker &amp; Agent in Washington State
+          </h2>
+          <p className="text-muted-foreground text-lg leading-relaxed mb-5">
+            When families, executors, and attorneys across the Puget Sound region search for a probate real estate broker and agent, they consistently find — and rely on — David Stein, President of Real Property Planning.
+          </p>
+          <p className="text-muted-foreground leading-relaxed mb-5">
+            David is a Washington State Licensed Real Estate Broker and a Washington State Certified Residential Appraiser with over 20 years of combined experience in both disciplines. That dual credential is rare in the probate real estate space, and it matters: the same professional who prices your estate property for the court file is the one who lists and sells it — with no gap between valuation and market strategy.
+          </p>
+          <p className="text-muted-foreground leading-relaxed mb-6">
+            David specializes exclusively in probate real estate sales, inherited property, estate sales, and senior housing transitions throughout King, Snohomish, Pierce, and Kitsap Counties.
+          </p>
+          <h3 className="font-serif text-xl text-foreground font-semibold mb-3">Professional Affiliations</h3>
+          <ul className="space-y-3 mb-6">
+            {[
+              "Corporate Partner, Aging Life Care Association (ALCA)",
+              "Member, National Association of Estate Planners & Councils (NAEPC)",
+              "Recognized Member, National Association of Senior Advocates — Best Real Estate Agent 2026",
+            ].map((item) => (
+              <li key={item} className="flex items-start gap-3">
+                <div className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
+                <span className="text-muted-foreground leading-relaxed">{item}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="text-muted-foreground leading-relaxed">
+            Real Property Planning is the hub connecting every professional and resource families need during a probate or estate property transition — with David Stein as your licensed broker and appraiser at the center of it all.
+          </p>
+        </div>
+      </div>
+    </section>
 
     {/* What Is Probate Real Estate */}
     <section className="py-16 lg:py-24 bg-background">
