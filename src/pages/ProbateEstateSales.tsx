@@ -149,30 +149,26 @@ const ProbateEstateSales = () => {
       <main id="main-content">
 
       {/* Hero */}
-      <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
+      <section className="bg-primary pt-1.5 md:pt-2 pb-16 md:pb-20">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <img src={iconProbateSales} alt="Probate real estate sales guidance Washington State — house, gavel, last will and testament, and petition for probate" className="mx-auto max-w-[20rem] w-full h-auto object-contain mb-1.5" loading="lazy"/>
-            <p className="text-gold font-bold tracking-widest uppercase mb-4 text-base">
+          <div className="max-w-2xl mx-auto text-center">
+            <img src={iconProbateSales} alt="Probate real estate sales guidance Washington State — house, gavel, last will and testament, and petition for probate" className="mx-auto max-w-[18rem] w-full h-auto object-contain mb-4" loading="lazy"/>
+            <p className="text-gold font-bold tracking-widest uppercase mb-6 text-sm md:text-base">
               Probate & Estate Property Sales
             </p>
-            <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
+            <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-8">
               Selling a Home Through Probate in Washington State
             </h1>
-            <p className="text-lg text-primary-foreground/80 leading-relaxed mb-4">
-              David Stein — Washington State Licensed Real Estate Broker & Certified Residential Appraiser — is Washington State's go-to probate real estate broker and agent for families, executors, and attorneys.
+            <p className="text-xl md:text-2xl text-primary-foreground/90 font-serif leading-snug mb-8">
+              Washington probate real estate guidance for families, executors, trustees, and attorneys.
             </p>
-            <p className="text-primary-foreground/70 text-base md:text-lg leading-relaxed mb-4">
-              Probate sales run on the court's clock. Pricing must hold up to fiduciary scrutiny. Multiple parties need to stay aligned. And carrying costs accumulate every week the property sits.
+            <p className="text-base md:text-lg text-primary-foreground/75 leading-relaxed mb-10 max-w-xl mx-auto">
+              Work with a Washington State Licensed Real Estate Broker and Certified Residential Appraiser who understands probate timelines, fiduciary pricing, and the steps required to sell estate property with confidence.
             </p>
-            <p className="text-primary-foreground/70 text-base md:text-lg leading-relaxed mb-5">
-              David Stein handles all of it — from pre-listing assessment through closing — serving{" "}
-              <Link to="/counties" className="text-gold hover:text-gold/80 underline underline-offset-4 transition-colors">King, Snohomish, Pierce, and Kitsap Counties</Link>, with statewide coordination for out-of-state executors.
+            <p className="text-gold font-semibold text-sm md:text-base tracking-wide mb-10">
+              Licensed Broker • Certified Residential Appraiser • 20+ Years Experience
             </p>
-            <p className="text-gold font-semibold text-base mb-6">
-              Licensed Broker · Certified Appraiser · 20+ Years Experience
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">
                 <Button variant="gold" size="lg" className="w-full sm:w-auto">
                   <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy"/>
@@ -185,6 +181,66 @@ const ProbateEstateSales = () => {
                 </Button>
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* High-Intent 3-Block Section */}
+      <section className="bg-background py-14 md:py-20">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 md:gap-10">
+            <article className="bg-card border border-border rounded-lg p-7 md:p-8 shadow-sm">
+              <h2 className="font-serif text-xl md:text-2xl text-foreground font-semibold mb-4 leading-snug">
+                Why Probate Home Sales Require Special Handling
+              </h2>
+              <p className="text-foreground/75 text-base leading-relaxed">
+                Selling a home through probate in Washington State is different from a traditional home sale. Probate sales often involve court timelines, executor responsibilities, multiple interested parties, and pricing that must stand up to fiduciary scrutiny.
+              </p>
+            </article>
+            <article className="bg-card border border-border rounded-lg p-7 md:p-8 shadow-sm">
+              <h2 className="font-serif text-xl md:text-2xl text-foreground font-semibold mb-4 leading-snug">
+                How David Stein Helps With Probate Real Estate
+              </h2>
+              <p className="text-foreground/75 text-base leading-relaxed">
+                David Stein helps families, executors, trustees, and attorneys navigate the probate real estate process from property assessment and pricing through preparation, listing, negotiation, and closing.
+              </p>
+            </article>
+            <article className="bg-card border border-border rounded-lg p-7 md:p-8 shadow-sm">
+              <h2 className="font-serif text-xl md:text-2xl text-foreground font-semibold mb-4 leading-snug">
+                Serving Probate Clients Across Washington
+              </h2>
+              <p className="text-foreground/75 text-base leading-relaxed">
+                Serving <Link to="/counties" className="text-accent hover:text-gold underline underline-offset-4">King, Snohomish, Pierce, and Kitsap Counties</Link>, with statewide coordination for out-of-state executors and families managing inherited property from a distance.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      {/* Search-Focused Intro Section */}
+      <section className="bg-muted/30 py-14 md:py-20 border-y border-border">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold leading-tight mb-6">
+              Need Help Selling Probate Property in Washington State?
+            </h2>
+            <p className="text-foreground/80 text-base md:text-lg leading-relaxed mb-8">
+              If you are an executor, trustee, or family member trying to sell a home through probate in Washington State, this page should immediately explain what to expect, how the process works, and how to move forward with the right pricing and sale strategy. Real Property Planning provides probate real estate guidance designed to help families make informed decisions and avoid costly delays.
+            </p>
+            <ul className="space-y-3 text-foreground/80 text-base md:text-lg">
+              <li className="flex items-start gap-3">
+                <span className="text-gold font-bold mt-1 shrink-0">•</span>
+                <span>Understand the probate sale process</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-gold font-bold mt-1 shrink-0">•</span>
+                <span>Price the property using defensible market and appraisal methodology</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-gold font-bold mt-1 shrink-0">•</span>
+                <span>Coordinate the sale from pre-listing through closing</span>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
