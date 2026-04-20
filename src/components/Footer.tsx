@@ -54,7 +54,7 @@ const Footer = () => {
           
           {/* Services */}
           <div>
-            <h4 className="text-primary-foreground font-serif text-lg font-semibold mb-5">Services</h4>
+            <h3 className="text-primary-foreground font-serif text-lg font-semibold mb-5">Services</h3>
             <ul className="space-y-3 text-primary-foreground/70 text-base">
               <li><Link to="/probate-estate-sales" className="hover:text-gold transition-colors">Probate &amp; Estate Sales</Link></li>
               <li><Link to="/executors" className="hover:text-gold transition-colors">Help for Executors</Link></li>
@@ -71,7 +71,7 @@ const Footer = () => {
           
           {/* Resources */}
           <div>
-            <h4 className="text-primary-foreground font-serif text-lg font-semibold mb-5">Resources</h4>
+            <h3 className="text-primary-foreground font-serif text-lg font-semibold mb-5">Resources</h3>
             <ul className="space-y-3 text-primary-foreground/70 text-base">
               <li><Link to="/about" className="hover:text-gold transition-colors">About Real Property Planning</Link></li>
               <li><Link to="/how-we-work" className="hover:text-gold transition-colors">How We Work</Link></li>
@@ -85,7 +85,7 @@ const Footer = () => {
           
           {/* Service Areas */}
           <div>
-            <h4 className="text-primary-foreground font-serif text-lg font-semibold mb-5">Service Areas</h4>
+            <h3 className="text-primary-foreground font-serif text-lg font-semibold mb-5">Service Areas</h3>
             <ul className="space-y-3 text-primary-foreground/70 text-base">
               <li className="flex items-start gap-2">
                 <img src={mappin3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain mt-0.5 shrink-0"  loading="lazy"/>
@@ -120,7 +120,7 @@ const Footer = () => {
         {/* Professional Affiliations */}
         <div className="footer-divider mb-0" />
         <div className="pt-8 pb-6 flex flex-col items-center">
-          <h4 className="text-primary-foreground font-serif text-[28px] font-bold mb-5">Professional Memberships &amp; Affiliations</h4>
+          <h3 className="text-primary-foreground font-serif text-[28px] font-bold mb-5">Professional Memberships &amp; Affiliations</h3>
           <div className="flex justify-center items-center" style={{ gap: '40px' }}>
             <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer">
               <img
