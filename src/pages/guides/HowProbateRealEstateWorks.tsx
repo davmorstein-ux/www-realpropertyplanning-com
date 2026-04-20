@@ -14,7 +14,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import heroIcon from "@/assets/probate-real-estate-sales-washington-guide.webp";
-import probateTimeline from "@/assets/probate-timeline.svg";
+import probateTimeline from "@/assets/probate-timeline.webp";
 
 const faqs = [
   {
