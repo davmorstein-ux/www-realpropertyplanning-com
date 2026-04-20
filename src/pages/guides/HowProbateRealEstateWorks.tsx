@@ -50,8 +50,8 @@ const jsonLd = articleSchema({
 const HowProbateRealEstateWorks = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
-      title="How Probate Real Estate Sales Work in Washington State | Real Property Planning"
-      description="A comprehensive guide to how probate property sales work in Washington — including legal authority, timing, pricing, preparation, and what executors and attorneys need to know."
+      title="How Probate Real Estate Sales Work in Washington | David Stein, Broker & Appraiser"
+      description="David Stein explains how probate real estate sales work in Washington State. Licensed Broker & Certified Appraiser serving King, Snohomish, Pierce & Kitsap Counties."
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema items={[
