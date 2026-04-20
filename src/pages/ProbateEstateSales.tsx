@@ -15,7 +15,7 @@ import { Link } from "react-router-dom";
 import warning3d from "@/assets/property-warning-guidance-icon-washington.webp";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconProbateSales from "@/assets/probate-real-estate-sales-washington-guide.webp";
-import probateTimeline from "@/assets/probate-timeline.svg";
+import probateTimeline from "@/assets/probate-timeline.webp";
 import RealClientSituations from "@/components/RealClientSituations";
 
 const probateCaseStudies = [
