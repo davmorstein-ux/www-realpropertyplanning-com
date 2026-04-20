@@ -100,7 +100,7 @@ const CitiesWeServe = () => {
                 </Button>
               </Link>
               <Link to="/counties">
-                <Button size="lg" variant="outline3d" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-medium px-7 py-4 h-auto rounded-lg w-full sm:w-auto">
+                <Button size="lg" variant="navy3d" className="!border-2 !border-gold font-medium px-7 py-4 h-auto rounded-lg w-full sm:w-auto">
                   <MessageSquare className="w-4 h-4 mr-2" />
                   Explore County Pages
                 </Button>
