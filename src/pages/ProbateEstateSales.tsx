@@ -193,7 +193,7 @@ const ProbateEstateSales = () => {
               <h2 className="font-serif text-xl md:text-2xl text-[hsl(0_70%_30%)] font-semibold mb-4 leading-snug">
                 Why Probate Home Sales Require Special Handling
               </h2>
-              <p className="text-foreground/75 text-base leading-tight">
+<p className="text-foreground/75 text-base leading-none">
                 Selling a home through probate in Washington State is different from a traditional home sale. Probate sales often involve court timelines, executor responsibilities, multiple interested parties, and pricing that must stand up to fiduciary scrutiny.
               </p>
             </article>
