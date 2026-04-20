@@ -258,7 +258,7 @@ const ProbateEstateSales = () => {
       <section className="py-16 lg:py-20 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
+            <h2 className="font-serif text-3xl text-[hsl(0_70%_30%)] font-semibold mb-6">
               Your Probate Real Estate Broker &amp; Agent in Washington State
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
