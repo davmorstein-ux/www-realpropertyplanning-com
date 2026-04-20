@@ -13,8 +13,8 @@ import iconAppraiser from "@/assets/icons/real-estate-appraiser-icon-washington.
 const RealEstateAppraiser = () => (
   <>
     <SEOHead
-      title="Certified Real Estate Appraiser in Washington State | Real Property Planning"
-      description="Licensed and certified real estate appraiser serving all of Washington State. Residential, estate, probate, and senior transition appraisals accepted by courts, lenders, and the IRS."
+      title="Certified Real Estate Appraiser in Washington State"
+      description="Washington State Certified Residential Appraiser. Estate, probate, and senior transition appraisals accepted by courts, lenders, and the IRS."
       canonical="https://www.realpropertyplanning.com/real-estate-appraiser"
     />
     <BreadcrumbSchema

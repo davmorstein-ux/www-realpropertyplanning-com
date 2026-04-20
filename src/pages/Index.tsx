@@ -34,7 +34,7 @@ const Index = () => {
     <div className="min-h-screen bg-cream">
       <SEOHead
         title="Probate Real Estate & Senior Transitions | Puget Sound WA"
-        description="Real Property Planning is Washington State's resource hub for probate real estate, inherited home sales, senior transitions, and estate guidance — connecting families, executors, attorneys, and professionals with trusted expertise. David Stein brings over 20 years of experience as a licensed real estate broker and Washington State Certified Residential Appraiser."
+        description="Washington State resource for probate real estate, inherited home sales, and senior transitions — guidance for families, executors, and attorneys."
         canonical="https://www.realpropertyplanning.com"
         schemaJson={jsonLd}
       />

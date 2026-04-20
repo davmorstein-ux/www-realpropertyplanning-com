@@ -88,8 +88,8 @@ const HowTheProcessWorks = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="How Estate & Probate Property Sales Work — 7-Step Process | Real Property Planning"
-        description="Real Property Planning's step-by-step process for selling estate, probate, and inherited property in Washington State — from initial consultation through closing and post-sale support."
+        title="How Estate & Probate Property Sales Work in WA"
+        description="A step-by-step look at selling estate, probate, and inherited property in Washington State — from initial consultation through closing."
         jsonLd={articleSchema({
           headline: "How the Process Works — Estate Property Sales",
           description: "A seven-step process for selling estate, probate, and inherited property in Washington State.",

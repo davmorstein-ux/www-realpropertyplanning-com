@@ -78,8 +78,8 @@ const WhyValuationMatters = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Estate Property Valuation in Washington | Broker + Certified Appraiser"
-        description="Defensible pricing for probate, trust, and inherited Washington homes — built by a licensed broker who is also a Washington State Certified Residential Appraiser."
+        title="Estate Property Valuation in Washington State"
+        description="Defensible pricing for probate, trust, and inherited Washington homes — from a licensed broker and Washington State Certified Residential Appraiser."
         jsonLd={articleSchema({
           headline: "Why Pricing & Valuation Matter in Estate Property Sales",
           description: "How broker and certified appraiser expertise prevents costly pricing mistakes in estate property.",
