@@ -17,7 +17,7 @@ import iconEstateLiquidation from "@/assets/icons/estate-liquidation-services-ic
 import iconPowerOfAttorney from "@/assets/icons/power-of-attorney-icon-washington.webp";
 import iconRealtor from "@/assets/icons/realtor-real-estate-agent-icon-washington.webp";
 import iconAppraiser from "@/assets/icons/real-estate-appraiser-icon-washington.webp";
-import iconSeniorPlacement from "@/assets/icons/senior-placement-advisor-icon-washington.webp";
+import iconSeniorPlacement from "@/assets/icons/senior-placement-advisor-icon-washington.png";
 
 export interface ServiceTile {
   title: string;
