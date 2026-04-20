@@ -8,6 +8,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import Index from "./pages/Index";
 import ProbateEstateSales from "./pages/ProbateEstateSales";
 import SeniorTransitions from "./pages/SeniorTransitions";
+import SeniorPlacement from "./pages/SeniorPlacement";
 import ForAttorneys from "./pages/ForAttorneys";
 import ForAttorneysHowItWorks from "./pages/attorneys/ForAttorneysHowItWorks";
 import ForProbateAttorneys from "./pages/attorneys/ForProbateAttorneys";
