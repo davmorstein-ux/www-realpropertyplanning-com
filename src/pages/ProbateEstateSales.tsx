@@ -316,7 +316,7 @@ const ProbateEstateSales = () => {
       <section className="py-20 lg:py-28 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
+            <h2 className="font-serif text-3xl text-[hsl(0_70%_30%)] font-semibold mb-6">
               What Makes Estate Property Sales Different
             </h2>
             <p className="text-muted-foreground text-[17px] leading-[1.85] mb-8">
