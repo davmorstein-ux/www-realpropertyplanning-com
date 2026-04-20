@@ -61,6 +61,7 @@ export const tileCategories: TileCategory[] = [
       { title: "Wills", subtitle: "", href: "/wills", iconSrc: iconWills, mobileTextDown: true, mobileIconDown: true },
       { title: "Power of\nAttorney", subtitle: "", href: "/power-of-attorney", iconSrc: iconPowerOfAttorney, labelSpacing: "tight", mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "-6%" },
       { title: "Probate Terms", subtitle: "", href: "/terminology", iconSrc: iconProbateTerms, iconOffsetY: "-9%", mobileTextDown: true, mobileIconDown: true },
+      { title: "The Process", subtitle: "", href: "/how-the-process-works", iconSrc: iconTheProcess, mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "14%" },
     ],
   },
   {
