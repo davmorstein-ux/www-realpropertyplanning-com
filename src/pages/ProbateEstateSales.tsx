@@ -198,7 +198,7 @@ const ProbateEstateSales = () => {
               </p>
             </article>
             <article className="bg-card border border-border rounded-lg p-7 md:p-8 shadow-sm">
-              <h2 className="font-serif text-xl md:text-2xl text-foreground font-semibold mb-4 leading-snug">
+              <h2 className="font-serif text-xl md:text-2xl text-[hsl(0_70%_30%)] font-semibold mb-4 leading-snug">
                 How David Stein Helps With Probate Real Estate
               </h2>
               <p className="text-foreground/75 text-base leading-relaxed">
@@ -206,7 +206,7 @@ const ProbateEstateSales = () => {
               </p>
             </article>
             <article className="bg-card border border-border rounded-lg p-7 md:p-8 shadow-sm">
-              <h2 className="font-serif text-xl md:text-2xl text-foreground font-semibold mb-4 leading-snug">
+              <h2 className="font-serif text-xl md:text-2xl text-[hsl(0_70%_30%)] font-semibold mb-4 leading-snug">
                 Serving Probate Clients Across Washington
               </h2>
               <p className="text-foreground/75 text-base leading-relaxed">
