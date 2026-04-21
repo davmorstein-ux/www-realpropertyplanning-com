@@ -36,6 +36,7 @@ const primaryLinks = [
   ]},
   { href: "/about", label: "About" },
   { href: "/resources", label: "Resources", children: [
+    { href: "/guides-and-resources", label: "Guides & Resources" },
     { href: "/resources", label: "Resources" },
     { href: "/professionals", label: "Find a Professional" },
     { href: "/insights", label: "Insights & Guidance" },
