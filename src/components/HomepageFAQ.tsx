@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import {
   Accordion,
   AccordionContent,
@@ -35,24 +35,13 @@ const faqs = [
 ];
 
 const HomepageFAQ = () => {
-  useEffect(() => {
-    const existing = document.querySelector('script[data-homepage-faq-jsonld]');
-    if (existing) existing.remove();
-
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.setAttribute("data-homepage-faq-jsonld", "true");
-    script.textContent = JSON.stringify(homepageFaqSchema);
-    document.head.appendChild(script);
-
-    return () => {
-      const s = document.querySelector('script[data-homepage-faq-jsonld]');
-      if (s) s.remove();
-    };
-  }, []);
-
   return (
     <section className="py-16 lg:py-24 bg-secondary">
+      <Helmet>
+        <script type="application/ld+json" data-homepage-faq-jsonld="true">
+          {JSON.stringify(homepageFaqSchema)}
+        </script>
+      </Helmet>
       <div className="container px-6 lg:px-8">
         <div className="max-w-[900px] mx-auto">
           <h2 className="font-serif text-4xl text-foreground font-semibold mb-10 text-center">
