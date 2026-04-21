@@ -18,6 +18,7 @@ import iconPowerOfAttorney from "@/assets/icons/power-of-attorney-icon-washingto
 import iconRealtor from "@/assets/icons/realtor-real-estate-agent-icon-washington.webp";
 import iconAppraiser from "@/assets/icons/real-estate-appraiser-icon-washington.webp";
 import iconSeniorPlacement from "@/assets/icons/senior-placement-advisor-icon-washington.webp";
+import iconFundSeniorLiving from "@/assets/icons/fund-senior-living-icon-washington.webp";
 
 export interface ServiceTile {
   title: string;
@@ -73,7 +74,7 @@ export const tileCategories: TileCategory[] = [
       { title: "Senior\nPlacement", subtitle: "", href: "/senior-placement", iconSrc: iconSeniorPlacement, labelSpacing: "tight", mobileTextDown: true, mobileIconDown: true },
       { title: "Home Values\n& Pricing", subtitle: "", href: "/why-valuation-matters", iconSrc: iconHomeValue, labelSpacing: "tight", iconOffsetY: "4%", mobileContentOffsetY: "-1.5%", mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "12%" },
       { title: "Senior\nHome Sale", subtitle: "", href: "/senior-move-managers", iconSrc: iconSeniorMoves, labelSpacing: "tight", iconOffsetY: "4%", mobileContentOffsetY: "-3%", mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "10%" },
-      { title: "Fund\nSenior Living", subtitle: "", href: "/sell-house-fund-senior-living", iconSrc: iconSeniorMoves, labelSpacing: "tight", iconOffsetY: "4%", mobileContentOffsetY: "-3%", mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "10%" },
+      { title: "Fund\nSenior Living", subtitle: "", href: "/sell-house-fund-senior-living", iconSrc: iconFundSeniorLiving, labelSpacing: "tight", iconOffsetY: "4%", mobileContentOffsetY: "-3%", mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "10%" },
       { title: "Service Areas", subtitle: "", href: "/counties", iconSrc: iconServiceAreas, iconOffsetY: "4%", iconScale: 1.1, mobileTextDown: true, mobileIconDown: true },
       { title: "Guides &\nResources", subtitle: "", href: "/guides-and-resources", iconSrc: iconResources, labelSpacing: "tight", iconOffsetY: "12%", mobileTextDown: true, mobileIconDown: true },
     ],
