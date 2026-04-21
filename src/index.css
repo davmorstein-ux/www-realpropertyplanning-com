@@ -891,9 +891,9 @@ html, body {
   .premium-tile[data-tile-name="paying-for-senior-living"] .tile-icon {
     transform: scale(1) translateY(50%) !important;
   }
-  /* Senior Home Sales: nudge text down by 6 nudges total */
+  /* Senior Home Sales: nudge text down by 8 nudges total (increased by 2) */
   .premium-tile[data-tile-name="senior-transitions"] h3 {
-    margin-top: 1.5rem !important;
+    margin-top: 2.0rem !important;
   }
   /* Senior Placement: nudge text down 5 nudges total, icon down 25% */
   .premium-tile:has(.service-nav-tile-mobile-hitbox[href="/senior-placement"]) h3 {
@@ -914,9 +914,9 @@ html, body {
   .premium-tile[data-tile-name="cpas"] .tile-icon {
     transform: scale(1.1) translateY(-6%) !important;
   }
-  /* Executors: 10% bigger on mobile */
+  /* Executors: increase icon by 10% (to 20% total) */
   .premium-tile[data-tile-name="executors"] .tile-icon {
-    transform: scale(1.21) !important;
+    transform: scale(1.331) !important;
   }
 
   .attorney-tiles-grid .premium-tile .tile-icon {
