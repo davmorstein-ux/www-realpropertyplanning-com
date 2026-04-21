@@ -29,8 +29,15 @@ const SEOHead = ({
   noindex,
 }: SEOHeadProps) => {
   const location = useLocation();
-  const canonicalUrl =
+  const stripTrailingSlash = (url: string) => {
+    // Preserve root "/" and root of origin; strip trailing slash otherwise
+    if (!url) return url;
+    if (url === "/" || /^https?:\/\/[^/]+\/?$/.test(url)) return url;
+    return url.replace(/\/+$/, "");
+  };
+  const rawCanonical =
     canonical || `${SITE_URL}${location.pathname === "/" ? "" : location.pathname}`;
+  const canonicalUrl = stripTrailingSlash(rawCanonical);
   const image = ogImage || DEFAULT_OG_IMAGE;
   const shouldNoIndex = noIndex ?? noindex ?? false;
   const schema = schemaJson ?? jsonLd;
