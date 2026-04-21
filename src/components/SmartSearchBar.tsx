@@ -409,8 +409,7 @@ const SmartSearchBar = ({ pillsOnly, searchOnly }: SmartSearchBarProps) => {
               className="premium-pill-3d homepage-pill focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 w-full"
             >
               <span className="premium-pill-3d__face homepage-pill__face w-full justify-center">
-                <span className="sm:hidden">{prompt.mobileLabel}</span>
-                <span className="hidden sm:inline">{prompt.label}</span>
+                {prompt.label}
               </span>
             </button>
           ))}
