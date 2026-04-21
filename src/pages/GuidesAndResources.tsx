@@ -239,15 +239,13 @@ const GuidesAndResources = () => {
         <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
-              <div className="flex justify-center mb-5">
-                <img
-                  src={iconResources}
-                  alt=""
-                  aria-hidden="true"
-                  className="w-16 h-16 object-contain drop-shadow-lg"
-                  loading="eager"
-                />
-              </div>
+              <img
+                src={iconResources}
+                alt=""
+                aria-hidden="true"
+                className="mx-auto max-w-[18rem] w-full h-auto object-contain mb-4"
+                loading="eager"
+              />
               <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-primary-foreground leading-tight mb-4">
                 Guides & Resources
               </h1>
