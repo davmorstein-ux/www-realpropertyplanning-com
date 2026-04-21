@@ -754,9 +754,6 @@ html, body {
   .premium-tile h3[data-tile-id="cpas"] {
     margin-top: -0.5rem !important;
   }
-  .premium-tile h3[data-tile-id="financial-planning"] {
-    margin-top: 0.35rem !important;
-  }
   .premium-tile h3[data-tile-id="wills"] {
     margin-top: -1.2rem !important;
   }
@@ -867,13 +864,10 @@ html, body {
   .premium-tile h3[data-tile-id="attorneys"] {
     margin-top: -0.75rem !important;
   }
-  /* Mortgage Lending: nudge icon up */
-  .premium-tile[data-tile-name="lending"] .tile-icon {
-    transform: scale(1.1) translateY(-32%) !important;
-  }
-  /* Financial Planner: nudge icon down */
+  /* Mortgage Lending + Financial Planning: match centered mobile composition */
+  .premium-tile[data-tile-name="lending"] .tile-icon,
   .premium-tile[data-tile-name="financial-planning"] .tile-icon {
-    transform: scale(1.1) translateY(12%) !important;
+    transform: scale(1.1) translateY(-32%) !important;
   }
   /* Realtor: nudge text down */
   .premium-tile h3[data-tile-id="realtor"] {
@@ -1057,6 +1051,7 @@ html, body {
   .premium-tile .tile-label-tight[data-tile-id="lending"] {
     font-size: 0.95rem !important;
   }
+  .premium-tile .tile-label-tight[data-tile-id="financial-planning"],
   .premium-tile .tile-label-tight[data-tile-id="lending"] {
     margin-top: -1.5rem !important;
   }
