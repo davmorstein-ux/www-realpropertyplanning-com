@@ -19,6 +19,7 @@ import iconRealtor from "@/assets/icons/realtor-real-estate-agent-icon-washingto
 import iconAppraiser from "@/assets/icons/real-estate-appraiser-icon-washington.webp";
 import iconSeniorPlacement from "@/assets/icons/senior-placement-advisor-icon-washington.webp";
 import iconFundSeniorLiving from "@/assets/icons/fund-senior-living-icon-washington.webp";
+import iconPayingForSeniorLiving from "@/assets/icons/paying-for-senior-living-icon-washington.webp";
 
 export interface ServiceTile {
   title: string;
