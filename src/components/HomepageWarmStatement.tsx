@@ -17,7 +17,7 @@ const HomepageWarmStatement = () => {
 
           {/* Pullquote */}
           <div className="bg-card border-l-4 border-gold rounded-lg p-8 mb-10 text-left">
-            <p className="text-xl text-foreground font-serif italic leading-relaxed mb-3">
+            <p className="font-serif leading-relaxed mb-3 text-[18px] text-[#1f2937] opacity-100 not-italic">
               "We don't just sell homes. We help families move forward."
             </p>
             <p className="text-muted-foreground text-base">
