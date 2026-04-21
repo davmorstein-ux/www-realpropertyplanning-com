@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -5,117 +6,126 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 
+// Homepage stays eager — fastest possible first paint, no Suspense flash on "/"
 import Index from "./pages/Index";
-import ProbateEstateSales from "./pages/ProbateEstateSales";
-import SeniorTransitions from "./pages/SeniorTransitions";
-import SeniorPlacement from "./pages/SeniorPlacement";
-import SellHouseFundSeniorLiving from "./pages/SellHouseFundSeniorLiving";
-import ForAttorneys from "./pages/ForAttorneys";
-import ForAttorneysHowItWorks from "./pages/attorneys/ForAttorneysHowItWorks";
-import ForProbateAttorneys from "./pages/attorneys/ForProbateAttorneys";
-import ForEstatePlanningAttorneys from "./pages/attorneys/ForEstatePlanningAttorneys";
-import ForElderLawAttorneys from "./pages/attorneys/ForElderLawAttorneys";
-import ForFamilyLawAttorneys from "./pages/attorneys/ForFamilyLawAttorneys";
-import ForDivorceAttorneys from "./pages/attorneys/ForDivorceAttorneys";
-import ForRealEstateAttorneys from "./pages/attorneys/ForRealEstateAttorneys";
-import HowTheProcessWorks from "./pages/HowTheProcessWorks";
-import WhyValuationMatters from "./pages/WhyValuationMatters";
-import Executors from "./pages/Executors";
-import Trustees from "./pages/Trustees";
-import ForCPAs from "./pages/ForCPAs";
-import ForFinancialPlanners from "./pages/ForFinancialPlanners";
-import About from "./pages/About";
-import JoinTheNetwork from "./pages/JoinTheNetwork";
-import FAQ from "./pages/FAQ";
-import Terminology from "./pages/Terminology";
-import Contact from "./pages/Contact";
-import Counties from "./pages/Counties";
-import KingCounty from "./pages/counties/KingCounty";
-import SnohomishCounty from "./pages/counties/SnohomishCounty";
-import PierceCounty from "./pages/counties/PierceCounty";
-import KitsapCounty from "./pages/counties/KitsapCounty";
-import SkagitCounty from "./pages/counties/SkagitCounty";
-import ClarkCounty from "./pages/counties/ClarkCounty";
-import SpokaneCounty from "./pages/counties/SpokaneCounty";
-import ThurstonCounty from "./pages/counties/ThurstonCounty";
-import WhatcomCounty from "./pages/counties/WhatcomCounty";
-import BentonCounty from "./pages/counties/BentonCounty";
-import YakimaCounty from "./pages/counties/YakimaCounty";
-import FranklinCounty from "./pages/counties/FranklinCounty";
-import CowlitzCounty from "./pages/counties/CowlitzCounty";
-import GraysHarborCounty from "./pages/counties/GraysHarborCounty";
-import IslandCounty from "./pages/counties/IslandCounty";
-import JeffersonCounty from "./pages/counties/JeffersonCounty";
-import LewisCounty from "./pages/counties/LewisCounty";
-import MasonCounty from "./pages/counties/MasonCounty";
-import PacificCounty from "./pages/counties/PacificCounty";
-import SanJuanCounty from "./pages/counties/SanJuanCounty";
-import SkamaniaCounty from "./pages/counties/SkamaniaCounty";
-import WahkiakumCounty from "./pages/counties/WahkiakumCounty";
-import Resources from "./pages/Resources";
-import SeniorMoveManagers from "./pages/resources/SeniorMoveManagers";
-import SeniorMoveManagersFull from "./pages/SeniorMoveManagers";
-import EstateSaleCompanies from "./pages/resources/EstateSaleCompanies";
-import ProbateEstateAttorneys from "./pages/resources/ProbateEstateAttorneys";
-import CPAsFinancialAdvisors from "./pages/resources/CPAsFinancialAdvisors";
-import SeniorLivingCommunities from "./pages/resources/SeniorLivingCommunities";
-import PropertyPreparationServices from "./pages/resources/PropertyPreparationServices";
-import MovingRelocationServices from "./pages/resources/MovingRelocationServices";
-import WashingtonExecutorsChecklist from "./pages/resources/WashingtonExecutorsChecklist";
-import LendersFinancingSpecialists from "./pages/LendersFinancingSpecialists";
-import RetirementReverseMortgage from "./pages/RetirementReverseMortgage";
-import SeniorLivingAndRelocation from "./pages/SeniorLivingAndRelocation";
-import AdultFamilyHomes from "./pages/senior-living/AdultFamilyHomes";
-import AssistedLivingCommunities from "./pages/senior-living/AssistedLivingCommunities";
-import MemoryCare from "./pages/senior-living/MemoryCare";
-import NursingAndSkilledCare from "./pages/senior-living/NursingAndSkilledCare";
-import IndependentLiving from "./pages/senior-living/IndependentLiving";
-import PowerOfAttorneys from "./pages/senior-living/PowerOfAttorneys";
-import HowProbateRealEstateWorks from "./pages/guides/HowProbateRealEstateWorks";
-import WhatExecutorsShouldDo from "./pages/guides/WhatExecutorsShouldDo";
-import AppraisalVsCma from "./pages/guides/AppraisalVsCma";
-import OutOfStateFamilies from "./pages/guides/OutOfStateFamilies";
-import SeniorTransitionDifferences from "./pages/guides/SeniorTransitionDifferences";
-import InheritedHouseWashington from "./pages/guides/InheritedHouseWashington";
-import ExecutorSellBeforeProbate from "./pages/guides/ExecutorSellBeforeProbate";
-import AppraisalBeforeSelling from "./pages/guides/AppraisalBeforeSelling";
-import EstatePropertyRepairs from "./pages/guides/EstatePropertyRepairs";
-import HeirsDisagreeSelling from "./pages/guides/HeirsDisagreeSelling";
-import PricingHouseTrustEstate from "./pages/guides/PricingHouseTrustEstate";
-import SellHouseDuringProbateWashington from "./pages/guides/SellHouseDuringProbateWashington";
-import TaxesSellingInheritedHouseWashington from "./pages/guides/TaxesSellingInheritedHouseWashington";
-import HowLongSellProbateProperty from "./pages/guides/HowLongSellProbateProperty";
-import ExecutorFirstStepsHouse from "./pages/guides/ExecutorFirstStepsHouse";
-import SellInheritedHouseAsIsOrFix from "./pages/guides/SellInheritedHouseAsIsOrFix";
-import ProbateVsTrustSaleWashington from "./pages/guides/ProbateVsTrustSaleWashington";
-import WhoHasAuthoritySellProbateProperty from "./pages/guides/WhoHasAuthoritySellProbateProperty";
-import ProbateHouseSaleTimelineWashington from "./pages/guides/ProbateHouseSaleTimelineWashington";
-import RepairsBeforeSellingProbateHomeWashington from "./pages/guides/RepairsBeforeSellingProbateHomeWashington";
-import SeattleProbateEstate from "./pages/SeattleProbateEstate";
-import BellevueProbateEstate from "./pages/BellevueProbateEstate";
-import TacomaProbateEstate from "./pages/TacomaProbateEstate";
-import SpokaneProbateEstate from "./pages/SpokaneProbateEstate";
-import VancouverWaProbateEstate from "./pages/VancouverWaProbateEstate";
-import EverettProbateEstate from "./pages/EverettProbateEstate";
-import OlympiaProbateEstate from "./pages/OlympiaProbateEstate";
-import BellinghamProbateEstate from "./pages/BellinghamProbateEstate";
-import GuidesAndResources from "./pages/GuidesAndResources";
-import PowerOfAttorney from "./pages/PowerOfAttorney";
-import Wills from "./pages/Wills";
-import EstateLiquidation from "./pages/EstateLiquidation";
-import Realtor from "./pages/Realtor";
-import RealEstateAppraiser from "./pages/RealEstateAppraiser";
-import Professionals from "./pages/Professionals";
-import ProbateAttorneys from "./pages/professionals/ProbateAttorneys";
-import SeniorHousingAdvisors from "./pages/professionals/SeniorHousingAdvisors";
-import FinancialPlanners from "./pages/professionals/FinancialPlanners";
-import EstateSale from "./pages/professionals/EstateSale";
-import HomePreparation from "./pages/professionals/HomePreparation";
-import CareManagers from "./pages/professionals/CareManagers";
-import Testimonials from "./pages/Testimonials";
-import NotFound from "./pages/NotFound";
+
+// All other routes are lazy-loaded so the homepage bundle stays small.
+const ProbateEstateSales = lazy(() => import("./pages/ProbateEstateSales"));
+const SeniorTransitions = lazy(() => import("./pages/SeniorTransitions"));
+const SeniorPlacement = lazy(() => import("./pages/SeniorPlacement"));
+const SellHouseFundSeniorLiving = lazy(() => import("./pages/SellHouseFundSeniorLiving"));
+const ForAttorneys = lazy(() => import("./pages/ForAttorneys"));
+const ForAttorneysHowItWorks = lazy(() => import("./pages/attorneys/ForAttorneysHowItWorks"));
+const ForProbateAttorneys = lazy(() => import("./pages/attorneys/ForProbateAttorneys"));
+const ForEstatePlanningAttorneys = lazy(() => import("./pages/attorneys/ForEstatePlanningAttorneys"));
+const ForElderLawAttorneys = lazy(() => import("./pages/attorneys/ForElderLawAttorneys"));
+const ForFamilyLawAttorneys = lazy(() => import("./pages/attorneys/ForFamilyLawAttorneys"));
+const ForDivorceAttorneys = lazy(() => import("./pages/attorneys/ForDivorceAttorneys"));
+const ForRealEstateAttorneys = lazy(() => import("./pages/attorneys/ForRealEstateAttorneys"));
+const HowTheProcessWorks = lazy(() => import("./pages/HowTheProcessWorks"));
+const WhyValuationMatters = lazy(() => import("./pages/WhyValuationMatters"));
+const Executors = lazy(() => import("./pages/Executors"));
+const Trustees = lazy(() => import("./pages/Trustees"));
+const ForCPAs = lazy(() => import("./pages/ForCPAs"));
+const ForFinancialPlanners = lazy(() => import("./pages/ForFinancialPlanners"));
+const About = lazy(() => import("./pages/About"));
+const JoinTheNetwork = lazy(() => import("./pages/JoinTheNetwork"));
+const FAQ = lazy(() => import("./pages/FAQ"));
+const Terminology = lazy(() => import("./pages/Terminology"));
+const Contact = lazy(() => import("./pages/Contact"));
+const Counties = lazy(() => import("./pages/Counties"));
+const KingCounty = lazy(() => import("./pages/counties/KingCounty"));
+const SnohomishCounty = lazy(() => import("./pages/counties/SnohomishCounty"));
+const PierceCounty = lazy(() => import("./pages/counties/PierceCounty"));
+const KitsapCounty = lazy(() => import("./pages/counties/KitsapCounty"));
+const SkagitCounty = lazy(() => import("./pages/counties/SkagitCounty"));
+const ClarkCounty = lazy(() => import("./pages/counties/ClarkCounty"));
+const SpokaneCounty = lazy(() => import("./pages/counties/SpokaneCounty"));
+const ThurstonCounty = lazy(() => import("./pages/counties/ThurstonCounty"));
+const WhatcomCounty = lazy(() => import("./pages/counties/WhatcomCounty"));
+const BentonCounty = lazy(() => import("./pages/counties/BentonCounty"));
+const YakimaCounty = lazy(() => import("./pages/counties/YakimaCounty"));
+const FranklinCounty = lazy(() => import("./pages/counties/FranklinCounty"));
+const CowlitzCounty = lazy(() => import("./pages/counties/CowlitzCounty"));
+const GraysHarborCounty = lazy(() => import("./pages/counties/GraysHarborCounty"));
+const IslandCounty = lazy(() => import("./pages/counties/IslandCounty"));
+const JeffersonCounty = lazy(() => import("./pages/counties/JeffersonCounty"));
+const LewisCounty = lazy(() => import("./pages/counties/LewisCounty"));
+const MasonCounty = lazy(() => import("./pages/counties/MasonCounty"));
+const PacificCounty = lazy(() => import("./pages/counties/PacificCounty"));
+const SanJuanCounty = lazy(() => import("./pages/counties/SanJuanCounty"));
+const SkamaniaCounty = lazy(() => import("./pages/counties/SkamaniaCounty"));
+const WahkiakumCounty = lazy(() => import("./pages/counties/WahkiakumCounty"));
+const Resources = lazy(() => import("./pages/Resources"));
+const SeniorMoveManagers = lazy(() => import("./pages/resources/SeniorMoveManagers"));
+const SeniorMoveManagersFull = lazy(() => import("./pages/SeniorMoveManagers"));
+const EstateSaleCompanies = lazy(() => import("./pages/resources/EstateSaleCompanies"));
+const ProbateEstateAttorneys = lazy(() => import("./pages/resources/ProbateEstateAttorneys"));
+const CPAsFinancialAdvisors = lazy(() => import("./pages/resources/CPAsFinancialAdvisors"));
+const SeniorLivingCommunities = lazy(() => import("./pages/resources/SeniorLivingCommunities"));
+const PropertyPreparationServices = lazy(() => import("./pages/resources/PropertyPreparationServices"));
+const MovingRelocationServices = lazy(() => import("./pages/resources/MovingRelocationServices"));
+const WashingtonExecutorsChecklist = lazy(() => import("./pages/resources/WashingtonExecutorsChecklist"));
+const LendersFinancingSpecialists = lazy(() => import("./pages/LendersFinancingSpecialists"));
+const RetirementReverseMortgage = lazy(() => import("./pages/RetirementReverseMortgage"));
+const SeniorLivingAndRelocation = lazy(() => import("./pages/SeniorLivingAndRelocation"));
+const AdultFamilyHomes = lazy(() => import("./pages/senior-living/AdultFamilyHomes"));
+const AssistedLivingCommunities = lazy(() => import("./pages/senior-living/AssistedLivingCommunities"));
+const MemoryCare = lazy(() => import("./pages/senior-living/MemoryCare"));
+const NursingAndSkilledCare = lazy(() => import("./pages/senior-living/NursingAndSkilledCare"));
+const IndependentLiving = lazy(() => import("./pages/senior-living/IndependentLiving"));
+const PowerOfAttorneys = lazy(() => import("./pages/senior-living/PowerOfAttorneys"));
+const HowProbateRealEstateWorks = lazy(() => import("./pages/guides/HowProbateRealEstateWorks"));
+const WhatExecutorsShouldDo = lazy(() => import("./pages/guides/WhatExecutorsShouldDo"));
+const AppraisalVsCma = lazy(() => import("./pages/guides/AppraisalVsCma"));
+const OutOfStateFamilies = lazy(() => import("./pages/guides/OutOfStateFamilies"));
+const SeniorTransitionDifferences = lazy(() => import("./pages/guides/SeniorTransitionDifferences"));
+const InheritedHouseWashington = lazy(() => import("./pages/guides/InheritedHouseWashington"));
+const ExecutorSellBeforeProbate = lazy(() => import("./pages/guides/ExecutorSellBeforeProbate"));
+const AppraisalBeforeSelling = lazy(() => import("./pages/guides/AppraisalBeforeSelling"));
+const EstatePropertyRepairs = lazy(() => import("./pages/guides/EstatePropertyRepairs"));
+const HeirsDisagreeSelling = lazy(() => import("./pages/guides/HeirsDisagreeSelling"));
+const PricingHouseTrustEstate = lazy(() => import("./pages/guides/PricingHouseTrustEstate"));
+const SellHouseDuringProbateWashington = lazy(() => import("./pages/guides/SellHouseDuringProbateWashington"));
+const TaxesSellingInheritedHouseWashington = lazy(() => import("./pages/guides/TaxesSellingInheritedHouseWashington"));
+const HowLongSellProbateProperty = lazy(() => import("./pages/guides/HowLongSellProbateProperty"));
+const ExecutorFirstStepsHouse = lazy(() => import("./pages/guides/ExecutorFirstStepsHouse"));
+const SellInheritedHouseAsIsOrFix = lazy(() => import("./pages/guides/SellInheritedHouseAsIsOrFix"));
+const ProbateVsTrustSaleWashington = lazy(() => import("./pages/guides/ProbateVsTrustSaleWashington"));
+const WhoHasAuthoritySellProbateProperty = lazy(() => import("./pages/guides/WhoHasAuthoritySellProbateProperty"));
+const ProbateHouseSaleTimelineWashington = lazy(() => import("./pages/guides/ProbateHouseSaleTimelineWashington"));
+const RepairsBeforeSellingProbateHomeWashington = lazy(() => import("./pages/guides/RepairsBeforeSellingProbateHomeWashington"));
+const SeattleProbateEstate = lazy(() => import("./pages/SeattleProbateEstate"));
+const BellevueProbateEstate = lazy(() => import("./pages/BellevueProbateEstate"));
+const TacomaProbateEstate = lazy(() => import("./pages/TacomaProbateEstate"));
+const SpokaneProbateEstate = lazy(() => import("./pages/SpokaneProbateEstate"));
+const VancouverWaProbateEstate = lazy(() => import("./pages/VancouverWaProbateEstate"));
+const EverettProbateEstate = lazy(() => import("./pages/EverettProbateEstate"));
+const OlympiaProbateEstate = lazy(() => import("./pages/OlympiaProbateEstate"));
+const BellinghamProbateEstate = lazy(() => import("./pages/BellinghamProbateEstate"));
+const GuidesAndResources = lazy(() => import("./pages/GuidesAndResources"));
+const PowerOfAttorney = lazy(() => import("./pages/PowerOfAttorney"));
+const Wills = lazy(() => import("./pages/Wills"));
+const EstateLiquidation = lazy(() => import("./pages/EstateLiquidation"));
+const Realtor = lazy(() => import("./pages/Realtor"));
+const RealEstateAppraiser = lazy(() => import("./pages/RealEstateAppraiser"));
+const Professionals = lazy(() => import("./pages/Professionals"));
+const ProbateAttorneys = lazy(() => import("./pages/professionals/ProbateAttorneys"));
+const SeniorHousingAdvisors = lazy(() => import("./pages/professionals/SeniorHousingAdvisors"));
+const FinancialPlanners = lazy(() => import("./pages/professionals/FinancialPlanners"));
+const EstateSale = lazy(() => import("./pages/professionals/EstateSale"));
+const HomePreparation = lazy(() => import("./pages/professionals/HomePreparation"));
+const CareManagers = lazy(() => import("./pages/professionals/CareManagers"));
+const Testimonials = lazy(() => import("./pages/Testimonials"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
+
+// Minimal full-viewport fallback in brand cream — no spinner, no layout shift,
+// matches the page background so navigation feels instant on fast chunks.
+const RouteFallback = () => (
+  <div className="min-h-screen bg-cream" aria-hidden="true" />
+);
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -125,6 +135,7 @@ const App = () => (
       <BrowserRouter>
         <ScrollToTop />
 
+        <Suspense fallback={<RouteFallback />}>
         <Routes>
           {/* ─── Homepage ─────────────────────────────────────────── */}
           <Route path="/" element={<Index />} />
@@ -361,6 +372,7 @@ const App = () => (
           {/* Catch-all */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+        </Suspense>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
