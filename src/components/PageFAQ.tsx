@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import {
   Accordion,
   AccordionContent,
@@ -19,38 +19,26 @@ interface PageFAQProps {
 }
 
 const PageFAQ = ({ faqs, heading = "Frequently Asked Questions", eyebrow = "Common Questions", id = "default" }: PageFAQProps) => {
-  useEffect(() => {
-    const selector = `script[data-page-faq-jsonld="${id}"]`;
-    const existingScript = document.querySelector(selector);
-    if (existingScript) existingScript.remove();
-
-    const faqJsonLd = {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: faqs.map((faq) => ({
-        "@type": "Question",
-        name: faq.question,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: faq.answer,
-        },
-      })),
-    };
-
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.setAttribute("data-page-faq-jsonld", id);
-    script.textContent = JSON.stringify(faqJsonLd);
-    document.head.appendChild(script);
-
-    return () => {
-      const s = document.querySelector(selector);
-      if (s) s.remove();
-    };
-  }, [faqs, id]);
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
 
   return (
     <section className="py-16 lg:py-24 bg-secondary">
+      <Helmet>
+        <script type="application/ld+json" data-page-faq-jsonld={id}>
+          {JSON.stringify(faqJsonLd)}
+        </script>
+      </Helmet>
       <div className="container px-6 lg:px-8">
         <div className="max-w-[900px] mx-auto">
           <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-base">{eyebrow}</p>
