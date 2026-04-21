@@ -13,6 +13,7 @@ const primaryLinks = [
     { href: "/probate-estate-sales", label: "Probate & Estate Sales" },
     { href: "/senior-transitions", label: "Senior Transitions" },
     { href: "/senior-placement", label: "Senior Placement" },
+    { href: "/sell-house-fund-senior-living", label: "Fund Senior Living" },
     { href: "/executors", label: "For Executors" },
     { href: "/how-the-process-works", label: "How the Process Works" },
     { href: "/why-valuation-matters", label: "Why Valuation Matters" },
