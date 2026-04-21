@@ -64,7 +64,6 @@ const coordinationPartners = [
   },
 ];
 
-
 const jsonLd = articleSchema({
   headline: "Senior Housing Transitions in Washington State",
   description: "Patient, experienced guidance for families helping a senior sell their home in Washington State. Serving King, Snohomish, Pierce & Kitsap Counties.",
