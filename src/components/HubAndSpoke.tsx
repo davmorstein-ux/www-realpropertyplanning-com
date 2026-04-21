@@ -276,17 +276,15 @@ const HubAndSpoke = () => {
         </div>
       </div>
 
-      {/* Mobile layout */}
+      {/* Mobile layout — center brand wordmark instead of duplicating the header logo */}
       <div className="md:hidden container px-6">
-        <div className="flex justify-center mb-8">
-          <Link to="/">
-            <img
-              src={logo}
-              alt="Real Property Planning — return to homepage"
-              className="w-[150px] h-auto cursor-pointer transition-transform duration-300 hover:scale-105"
-              loading="lazy"
-            />
-          </Link>
+        <div className="text-center mb-8">
+          <p className="text-sm uppercase tracking-[0.18em] text-gold font-semibold">
+            Real Property Planning
+          </p>
+          <p className="text-primary-foreground/70 text-base mt-2">
+            A coordinated network of trusted professionals
+          </p>
         </div>
         <div className="grid grid-cols-2 gap-6 justify-items-center">
           {allNodes.map((node, i) => (

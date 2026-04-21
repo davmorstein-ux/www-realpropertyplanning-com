@@ -8,11 +8,11 @@ const HomepageWarmStatement = () => {
           <h2 className="font-serif text-4xl text-foreground font-semibold mb-8">
             This Is More Than a Real Estate Transaction
           </h2>
-          <p className="text-xl text-muted-foreground leading-relaxed mb-10">
-            When a family is navigating the loss of a loved one — or helping an aging parent make one of the biggest decisions of their life — the last thing they need is confusion, pressure, or a process that feels rushed.
+          <p className="text-xl text-muted-foreground leading-relaxed mb-6">
+            When a family is navigating the loss of a loved one — or helping an aging parent through one of life's biggest decisions — the last thing they need is pressure or a process that feels rushed.
           </p>
           <p className="text-xl text-muted-foreground leading-relaxed mb-10">
-            Real Property Planning was built around a simple belief: that families deserve calm, clear, honest guidance at every step.
+            Real Property Planning was built around a simple belief: families deserve calm, clear, honest guidance at every step.
           </p>
 
           {/* Pullquote */}
