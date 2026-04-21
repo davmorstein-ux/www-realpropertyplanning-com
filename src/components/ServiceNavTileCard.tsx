@@ -148,7 +148,7 @@ const ServiceNavTileCard = ({ tile, index, columns = 3 }: { tile: ServiceTile; i
       <Link
         to={tile.href}
         aria-label={iconAlt}
-        className="service-nav-tile-link absolute hidden pointer-events-auto sm:block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+        className="service-nav-tile-link absolute hidden pointer-events-auto sm:block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 my-0 px-px"
       />
     </div>
   );
