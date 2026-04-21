@@ -1002,6 +1002,10 @@ html, body {
     display: block;
     transform: translateY(-6px);
   }
+  /* Paying for Senior Living: desktop-only icon size +15% (mobile keeps inline scale 0.7) */
+  .premium-tile:has(.service-nav-tile-link[href="/sell-house-fund-senior-living"]) .tile-icon {
+    transform: translateY(-4%) scale(0.805) !important;
+  }
   /* Executors: 10% bigger on desktop */
   .premium-tile[data-tile-name="executors"] .tile-icon {
     transform: scale(1.1) !important;
