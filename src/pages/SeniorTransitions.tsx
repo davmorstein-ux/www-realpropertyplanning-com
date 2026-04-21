@@ -110,17 +110,22 @@ const SeniorTransitions = () => {
       {/* Hero */}
       <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <p className="text-gold font-bold tracking-widest uppercase mb-4 text-base">
-              When the House Has to Catch Up With the Care Plan
-            </p>
+          <div className="max-w-3xl mx-auto text-center">
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
-              Selling a Senior's Longtime Home in Washington
+              Selling a Senior's Longtime Home in Washington State
             </h1>
-            <p className="text-xl text-primary-foreground/80 leading-relaxed mb-3">
-              This page is for seniors and their families navigating downsizing, relocation, or a move into assisted living, memory care, or a smaller home. The move rarely happens on a real estate timeline. It happens on a care timeline — set by a doctor, a fall, or a sibling conversation that finally couldn't wait. Real Property Planning works at the pace your family actually has, coordinating the property side around the care decisions, the elder law guidance, and the people who need to be in the loop.
+            <p className="text-lg md:text-xl text-primary-foreground/90 leading-relaxed mb-10 max-w-2xl mx-auto">
+              Patient, respectful coordination — at your family's pace, not a sales calendar.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-10 max-w-3xl mx-auto">
+              <p className="text-primary-foreground text-lg leading-relaxed">
+                Real Property Planning works around the care plan — not the other way around.
+              </p>
+              <p className="text-primary-foreground text-lg leading-relaxed">
+                Coordinating with families, care teams, attorneys, and advisors throughout Puget Sound.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">
                 <Button variant="gold" size="lg" className="w-full sm:w-auto">
                   <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy" />
