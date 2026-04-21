@@ -176,7 +176,7 @@ const SeniorPlacement = () => {
                     key={opt.title}
                     className="card-3d p-6 bg-card flex flex-col"
                   >
-                    <h3 className="font-serif text-xl text-red-800 font-bold mb-3 text-center min-h-[3.5rem] flex items-center justify-center">
+                    <h3 className="font-serif text-xl text-red-800 font-bold mb-3 text-center min-h-14 flex items-start justify-center">
                       {opt.title}
                     </h3>
                     <p className="text-foreground/85 text-base leading-relaxed whitespace-pre-line">
