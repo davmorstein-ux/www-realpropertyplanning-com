@@ -12,6 +12,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
+import fundSeniorLivingIcon from "@/assets/icons/fund-senior-living-icon-washington.webp";
 
 const steps = [
   {
@@ -98,6 +99,7 @@ const SellHouseFundSeniorLiving = () => {
         <section className="pt-3 md:pt-4 pb-14 md:pb-16 bg-primary">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
+              <img src={fundSeniorLivingIcon} alt="" aria-hidden="true" className="mx-auto max-w-[18rem] w-full h-auto object-contain mb-4" loading="lazy" />
               <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl text-primary-foreground font-semibold mb-6 leading-tight">
                 How to Sell a Parent's House to Pay for Senior Living
               </h1>
