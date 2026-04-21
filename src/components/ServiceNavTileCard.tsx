@@ -79,7 +79,9 @@ const ServiceNavTileCard = ({ tile, index, columns = 3 }: { tile: ServiceTile; i
                                       ? "guides-resources"
                                       : tile.title.includes("Home Values")
                                         ? "home-values"
-                                        : undefined;
+                                        : tile.title.includes("Paying for")
+                                          ? "paying-for-senior-living"
+                                          : undefined;
 
   const iconAlt = tileAltText[tile.title] || tile.title.replace(/\n/g, " ");
   const isSeniorPlacement = tile.href === "/senior-placement";
