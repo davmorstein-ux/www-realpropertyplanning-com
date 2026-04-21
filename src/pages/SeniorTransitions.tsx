@@ -64,29 +64,6 @@ const coordinationPartners = [
   },
 ];
 
-const faqs = [
-  {
-    question: "How do we know it's actually time to sell mom or dad's house?",
-    answer: "Usually the trigger isn't a real estate question — it's a care question. A fall, a hospitalization, a memory-care evaluation, or a frank conversation with the doctor. The real estate decision follows. We help families separate the two: first, what does the care plan look like and on what timeline? Then, working backwards from that, when does the home actually need to be on the market? Often there's more time — and more options — than families assume in the first stressful week.",
-  },
-  {
-    question: "Mom is still living in the house. Can you list it without disrupting her?",
-    answer: "Yes, and we do this often. Showings are scheduled around her routine, not the buyer's convenience. We use lockbox protocols that keep her safe, coordinate with caregivers or family for showing windows, and stage in a way that respects what's still her home. For seniors with cognitive changes, we sometimes recommend listing only after the move — the right answer depends on the person, not a script.",
-  },
-  {
-    question: "How do we handle 40 years of belongings without traumatizing a parent?",
-    answer: "Slowly, and with the right people. We coordinate with senior move managers — including HB Move Management, a division of Hansen Bros. — who specialize in this exact work: room-by-room sorting, what-stays/what-goes conversations, donations, family heirloom distribution, and estate-sale referrals for the rest. The real estate timeline gets built around their pace, not ahead of it.",
-  },
-  {
-    question: "Will selling the house affect her Medicaid eligibility or care funding?",
-    answer: "It can — and this is a question for an elder law attorney or care planner before the home is listed, not after. We frequently coordinate with elder law attorneys and Aging Life Care professionals throughout Western Washington and will pause or sequence the sale around their guidance. If you don't have an elder law attorney yet, we can refer you to several we work with regularly.",
-  },
-  {
-    question: "We're three siblings in three different cities. How do you keep us all aligned?",
-    answer: "One designated point of contact in the family, weekly written updates to everyone, and decisions documented in writing. Most senior-transition stress comes from siblings hearing different things at different times. We treat the family as one client and make sure no one is finding out important news from another sibling.",
-  },
-];
-
 const jsonLd = articleSchema({
   headline: "Senior Housing Transitions in Washington State",
   description: "Patient, experienced guidance for families helping a senior sell their home in Washington State. Serving King, Snohomish, Pierce & Kitsap Counties.",
@@ -337,10 +314,28 @@ const SeniorTransitions = () => {
         </div>
       </section>
 
-      <PageFAQ faqs={faqs} heading="Senior Transition FAQs" id="senior-transitions-main" />
-
       <PageFAQ
         faqs={[
+          {
+            question: "How do we know it's actually time to sell mom or dad's house?",
+            answer: "Usually the trigger isn't a real estate question — it's a care question. A fall, a hospitalization, a memory-care evaluation, or a frank conversation with the doctor. The real estate decision follows. We help families separate the two: first, what does the care plan look like and on what timeline? Then, working backwards from that, when does the home actually need to be on the market? Often there's more time — and more options — than families assume in the first stressful week.",
+          },
+          {
+            question: "Mom is still living in the house. Can you list it without disrupting her?",
+            answer: "Yes, and we do this often. Showings are scheduled around her routine, not the buyer's convenience. We use lockbox protocols that keep her safe, coordinate with caregivers or family for showing windows, and stage in a way that respects what's still her home. For seniors with cognitive changes, we sometimes recommend listing only after the move — the right answer depends on the person, not a script.",
+          },
+          {
+            question: "How do we handle 40 years of belongings without traumatizing a parent?",
+            answer: "Slowly, and with the right people. We coordinate with senior move managers — including HB Move Management, a division of Hansen Bros. — who specialize in this exact work: room-by-room sorting, what-stays/what-goes conversations, donations, family heirloom distribution, and estate-sale referrals for the rest. The real estate timeline gets built around their pace, not ahead of it.",
+          },
+          {
+            question: "Will selling the house affect her Medicaid eligibility or care funding?",
+            answer: "It can — and this is a question for an elder law attorney or care planner before the home is listed, not after. We frequently coordinate with elder law attorneys and Aging Life Care professionals throughout Western Washington and will pause or sequence the sale around their guidance. If you don't have an elder law attorney yet, we can refer you to several we work with regularly.",
+          },
+          {
+            question: "We're three siblings in three different cities. How do you keep us all aligned?",
+            answer: "One designated point of contact in the family, weekly written updates to everyone, and decisions documented in writing. Most senior-transition stress comes from siblings hearing different things at different times. We treat the family as one client and make sure no one is finding out important news from another sibling.",
+          },
           {
             question: "How do I help a parent sell their home when they are moving to assisted living?",
             answer: "Start by aligning the home sale timeline with the assisted living move-in date — the two rarely need to happen simultaneously. Real Property Planning coordinates with the senior move manager, handles cleanout and light preparation, and sequences the listing so proceeds are available when needed for care costs. The parent does not need to be present for showings or vendor visits.",
@@ -358,9 +353,8 @@ const SeniorTransitions = () => {
             answer: "Most transitions involve a senior move manager (sorting, packing, settling in), a real estate professional with senior transition experience, a placement specialist or care advisor, and sometimes an elder law attorney, financial planner, or CPA. Real Property Planning coordinates with all of these professionals so the family has one consistent point of contact for the property side.",
           },
         ]}
-        heading="Common Senior Transition Questions"
-        eyebrow="Quick Answers"
-        id="senior-transitions-quick"
+        heading="Frequently Asked Questions"
+        id="senior-transitions-faq"
       />
 
       {/* Educational Links */}
