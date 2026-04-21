@@ -158,18 +158,20 @@ const SellHouseFundSeniorLiving = () => {
                     <div className="shrink-0">
                       <div
                         style={{
-                          background: 'radial-gradient(circle at 35% 35%, #1a3a6b, #0a1d3d)',
+                          background: 'radial-gradient(circle at 38% 38%, #2a4a8b, #0a1d3d 70%)',
                           border: '2px solid #c9a84c',
                           borderRadius: '50%',
-                          boxShadow: 'inset -2px -2px 6px rgba(0,0,0,0.5), inset 2px 2px 6px rgba(255,255,255,0.15), 3px 3px 8px rgba(0,0,0,0.4)',
-                          color: '#c9a84c',
-                          fontWeight: 700,
-                          fontSize: '18px',
-                          width: '48px',
-                          height: '48px',
+                          width: '52px',
+                          height: '52px',
+                          minWidth: '52px',
+                          boxShadow: 'inset 3px 3px 8px rgba(255,255,255,0.2), inset -3px -3px 8px rgba(0,0,0,0.6), 4px 4px 10px rgba(0,0,0,0.5), -1px -1px 4px rgba(255,255,255,0.1)',
                           display: 'flex',
                           alignItems: 'center',
-                          justifyContent: 'center'
+                          justifyContent: 'center',
+                          color: '#c9a84c',
+                          fontSize: '20px',
+                          fontWeight: 700,
+                          textShadow: '1px 1px 2px rgba(0,0,0,0.8)'
                         }}
                       >
                         {idx + 1}
