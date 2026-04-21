@@ -111,17 +111,18 @@ const SeniorTransitions = () => {
       <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
+            <img src={heart3d} alt="" aria-hidden="true" className="mx-auto max-w-[18rem] w-full h-auto object-contain mb-4" loading="lazy" />
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
               Selling a Senior's Longtime Home in Washington State
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/90 leading-relaxed mb-10 max-w-2xl mx-auto">
               Patient, respectful coordination — at your family's pace, not a sales calendar.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-10 max-w-3xl mx-auto">
-              <p className="text-primary-foreground text-lg leading-relaxed">
+            <div className="flex flex-col md:flex-row md:flex-nowrap md:justify-center md:items-center gap-4 md:gap-10 mb-10 mx-auto">
+              <p className="text-primary-foreground text-lg leading-relaxed md:whitespace-nowrap text-center">
                 Real Property Planning works around the care plan — not the other way around.
               </p>
-              <p className="text-primary-foreground text-lg leading-relaxed">
+              <p className="text-primary-foreground text-lg leading-relaxed md:whitespace-nowrap text-center">
                 Coordinating with families, care teams, attorneys, and advisors throughout Puget Sound.
               </p>
             </div>
