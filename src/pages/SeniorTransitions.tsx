@@ -112,6 +112,7 @@ const SeniorTransitions = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <img src={seniorHomeSalesIcon} alt="" aria-hidden="true" className="mx-auto max-w-[18rem] w-full h-auto object-contain mb-4 [mix-blend-mode:multiply]" loading="lazy" />
+            <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6 mt-4">
               Selling a Senior's Longtime Home in Washington State
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/90 leading-relaxed mb-10 max-w-2xl mx-auto">
