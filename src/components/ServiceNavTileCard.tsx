@@ -123,7 +123,14 @@ const ServiceNavTileCard = ({ tile, index, columns = 3 }: { tile: ServiceTile; i
           data-tile-id={tile.title === "Attorneys" ? "attorneys" : tile.title === "CPAs" ? "cpas" : tile.title.includes("Senior Living") ? "senior-living" : tile.title.includes("Financial") ? "financial-planning" : tile.title === "Senior Moves" ? "senior-moves" : tile.title === "Probate Sales" ? "probate-sales" : tile.title === "The Process" ? "the-process" : tile.title === "Home Value" ? "home-value" : tile.title.includes("Lending") ? "lending" : tile.title === "Wills" ? "wills" : tile.title === "Realtor" ? "realtor" : tile.title.includes("Appraiser") ? "appraiser" : tile.title.includes("Liquidation") ? "estate-liquidation" : tile.title.includes("Power of") ? "power-of-attorney" : tile.title.includes("Transitions") ? "senior-transitions" : tile.title.includes("Guides") ? "guides-resources" : tile.title.includes("Home Values") ? "home-values" : undefined}
           style={tile.textOffsetY ? { transform: `translateY(${tile.textOffsetY})` } : undefined}
         >
-          {tile.title}
+          {tile.title === "Paying for\nSenior Living" ? (
+            <>
+              <span className="paying-for-line block">Paying for</span>
+              <span className="block">Senior Living</span>
+            </>
+          ) : (
+            tile.title
+          )}
         </h3>
       </span>
     </>
