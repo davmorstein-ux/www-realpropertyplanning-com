@@ -13,6 +13,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
+import seniorHousingComparison from "@/assets/senior-housing-comparison.webp";
 
 const housingOptions = [
   {
@@ -185,6 +186,18 @@ const SeniorPlacement = () => {
                 ))}
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Senior Housing Comparison Chart */}
+        <section className="bg-secondary">
+          <div className="w-full">
+            <img
+              src={seniorHousingComparison}
+              alt="Senior Housing Options Side by Side comparison chart — Independent Living, Assisted Living, Memory Care, and Adult Family Home in Washington State"
+              className="w-full h-auto block"
+              loading="lazy"
+            />
           </div>
         </section>
 
