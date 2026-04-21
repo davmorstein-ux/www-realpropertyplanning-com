@@ -1,6 +1,6 @@
 const DisclaimerSection = () => {
   return (
-    <section data-nosnippet className="pt-8 pb-16 md:pt-12 md:pb-16 lg:pt-16 lg:pb-16 bg-secondary">
+    <section data-nosnippet="true" className="pt-8 pb-16 md:pt-12 md:pb-16 lg:pt-16 lg:pb-16 bg-secondary">
       <div className="container px-6 lg:px-8">
         <div className="max-w-[1060px] mx-auto">
           <div className="bg-card border-[1.5px] border-border/80 rounded-2xl px-6 py-6 md:px-10 md:py-10"
