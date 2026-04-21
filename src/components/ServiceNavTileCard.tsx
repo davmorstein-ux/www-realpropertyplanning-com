@@ -98,19 +98,23 @@ const ServiceNavTileCard = ({ tile, index, columns = 3 }: { tile: ServiceTile; i
         className={`absolute inset-[12%] flex flex-col items-center justify-center px-[6px] py-[4px] pointer-events-none sm:px-[10px] sm:py-[6px] ${tile.contentOffsetY ? '' : '-translate-y-[10.2%]'} ${tile.mobileContentOffsetY ? 'has-mobile-offset' : ''}`}
         style={Object.keys(contentStyle).length > 0 ? contentStyle : undefined}
       >
-        <img
-          src={tile.iconSrc}
-          alt={iconAlt}
-          className={`tile-icon mx-auto w-[45%] max-h-[38%] object-contain drop-shadow-lg ${tile.mobileIconDown ? 'mobile-icon-down' : ''}`}
-          style={{
-            ...(isSeniorPlacement ? { mixBlendMode: "multiply" as const, background: "transparent", backgroundColor: "transparent" } : {}),
-            ...(tile.iconOffsetY ? { transform: `translateY(${tile.iconOffsetY})` } : {}),
-            ...(tile.iconScale && !tile.iconOffsetY ? { transform: `scale(${tile.iconScale})` } : {}),
-            ...(tile.iconScale && tile.iconOffsetY ? { transform: `translateY(${tile.iconOffsetY}) scale(${tile.iconScale})` } : {}),
-            ...(tile.mobileIconOffsetY ? { '--mobile-icon-mt': tile.mobileIconOffsetY } as React.CSSProperties : {}),
-          }}
-          loading="lazy"
-        />
+        {tile.iconSrc ? (
+          <img
+            src={tile.iconSrc}
+            alt={iconAlt}
+            className={`tile-icon mx-auto w-[45%] max-h-[38%] object-contain drop-shadow-lg ${tile.mobileIconDown ? 'mobile-icon-down' : ''}`}
+            style={{
+              ...(isSeniorPlacement ? { mixBlendMode: "multiply" as const, background: "transparent", backgroundColor: "transparent" } : {}),
+              ...(tile.iconOffsetY ? { transform: `translateY(${tile.iconOffsetY})` } : {}),
+              ...(tile.iconScale && !tile.iconOffsetY ? { transform: `scale(${tile.iconScale})` } : {}),
+              ...(tile.iconScale && tile.iconOffsetY ? { transform: `translateY(${tile.iconOffsetY}) scale(${tile.iconScale})` } : {}),
+              ...(tile.mobileIconOffsetY ? { '--mobile-icon-mt': tile.mobileIconOffsetY } as React.CSSProperties : {}),
+            }}
+            loading="lazy"
+          />
+        ) : (
+          <span aria-hidden="true" className="block w-[45%] max-h-[38%]" style={{ aspectRatio: "1 / 1" }} />
+        )}
         <h3
           className={`-mt-6 max-w-[92%] text-center font-serif text-[0.8rem] font-bold leading-[1.15] tracking-tight text-foreground sm:text-[1.1rem] md:text-[1.3rem] lg:text-[1.5rem] xl:text-[1.8rem] whitespace-pre-line ${tile.labelSpacing ? 'tile-label-tight' : ''} ${tile.mobileTextDown ? 'mobile-text-down' : ''}`}
           data-mobile-tight={tile.labelSpacing ? "true" : undefined}
