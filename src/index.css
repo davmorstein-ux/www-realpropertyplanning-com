@@ -887,6 +887,10 @@ html, body {
   .premium-tile[data-tile-name="paying-for-senior-living"] .tile-icon {
     transform: scale(1) translateY(60%) !important;
   }
+  /* Senior Home Sales: nudge text down only by 2 nudges */
+  .premium-tile[data-tile-name="senior-transitions"] h3 {
+    margin-top: 0.5rem !important;
+  }
   /* Realtor: nudge text down */
   .premium-tile h3[data-tile-id="realtor"] {
     margin-top: 0.15rem !important;
