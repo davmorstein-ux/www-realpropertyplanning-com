@@ -164,13 +164,14 @@ const SeniorPlacement = () => {
         </section>
 
         {/* Senior Housing Comparison Chart */}
-        <section className="bg-secondary">
-          <div className="w-full">
+        <section style={{ background: "transparent", backgroundColor: "transparent", backgroundImage: "none" }}>
+          <div className="w-full" style={{ background: "transparent", backgroundColor: "transparent", backgroundImage: "none" }}>
             <img
               src={seniorHousingComparison}
               alt="Senior Housing Options Side by Side comparison chart — Independent Living, Assisted Living, Memory Care, and Adult Family Home in Washington State"
               className="w-full h-auto block"
               loading="lazy"
+              style={{ background: "transparent", backgroundColor: "transparent", mixBlendMode: "multiply", border: "none", boxShadow: "none" }}
             />
           </div>
         </section>
