@@ -35,6 +35,7 @@ export interface ServiceTile {
   mobileIconOffsetY?: string;
   iconScale?: number;
   textOffsetY?: string;
+  mobileLargeText?: boolean;
 }
 
 export interface TileCategory {
