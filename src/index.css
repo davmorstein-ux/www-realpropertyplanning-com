@@ -865,6 +865,9 @@ html, body {
     margin-top: -0.75rem !important;
   }
   /* Mortgage Lending + Financial Planning: match centered mobile composition */
+  .premium-tile[data-tile-name="financial-planning"] > div > span {
+    transform: translateY(-9%) !important;
+  }
   .premium-tile[data-tile-name="lending"] .tile-icon,
   .premium-tile[data-tile-name="financial-planning"] .tile-icon {
     transform: scale(1.1) translateY(-32%) !important;
