@@ -18,7 +18,7 @@ import iconPowerOfAttorney from "@/assets/icons/power-of-attorney-icon-washingto
 import iconRealtor from "@/assets/icons/realtor-real-estate-agent-icon-washington.webp";
 import iconAppraiser from "@/assets/icons/real-estate-appraiser-icon-washington.webp";
 import iconSeniorPlacement from "@/assets/icons/senior-placement-advisor-icon-washington.webp";
-import iconFundSeniorLiving from "@/assets/icons/senior-home-sales-for-sale-icon-washington.webp";
+import iconFundSeniorLiving from "@/assets/icons/senior-home-sales-for-sale-icon-washington.png";
 import iconPayingForSeniorLiving from "@/assets/icons/paying-for-senior-living-icon-washington.webp";
 
 export interface ServiceTile {
