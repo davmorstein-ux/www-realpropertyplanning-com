@@ -1017,7 +1017,10 @@ html, body {
   .premium-tile[data-tile-name="executors"] h3 {
     margin-top: -1rem !important;
   }
-  /* Attorneys: 10% bigger on desktop */
+  /* Probate Terms: lower h3 to match The Process line placement on desktop */
+  .premium-tile[data-tile-name="probate-terms"] h3 {
+    margin-top: 0.5rem !important;
+  }
   .premium-tile[data-tile-name="attorneys"] .tile-icon {
     transform: scale(1.1) !important;
   }
