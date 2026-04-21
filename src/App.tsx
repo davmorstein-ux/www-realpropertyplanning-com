@@ -89,6 +89,8 @@ import ExecutorFirstStepsHouse from "./pages/guides/ExecutorFirstStepsHouse";
 import SellInheritedHouseAsIsOrFix from "./pages/guides/SellInheritedHouseAsIsOrFix";
 import ProbateVsTrustSaleWashington from "./pages/guides/ProbateVsTrustSaleWashington";
 import WhoHasAuthoritySellProbateProperty from "./pages/guides/WhoHasAuthoritySellProbateProperty";
+import ProbateHouseSaleTimelineWashington from "./pages/guides/ProbateHouseSaleTimelineWashington";
+import RepairsBeforeSellingProbateHomeWashington from "./pages/guides/RepairsBeforeSellingProbateHomeWashington";
 import SeattleProbateEstate from "./pages/SeattleProbateEstate";
 import BellevueProbateEstate from "./pages/BellevueProbateEstate";
 import TacomaProbateEstate from "./pages/TacomaProbateEstate";
@@ -210,6 +212,8 @@ const App = () => (
           <Route path="/guides/sell-inherited-house-as-is-or-fix" element={<SellInheritedHouseAsIsOrFix />} />
           <Route path="/guides/probate-vs-trust-sale-washington" element={<ProbateVsTrustSaleWashington />} />
           <Route path="/guides/who-has-authority-sell-probate-property-washington" element={<WhoHasAuthoritySellProbateProperty />} />
+          <Route path="/guides/probate-house-sale-timeline-washington" element={<ProbateHouseSaleTimelineWashington />} />
+          <Route path="/guides/repairs-before-selling-probate-home-washington" element={<RepairsBeforeSellingProbateHomeWashington />} />
 
           {/* ─── Professionals directory (for families) ───────────── */}
           <Route path="/professionals" element={<Professionals />} />
