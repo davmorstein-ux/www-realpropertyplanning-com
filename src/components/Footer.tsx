@@ -108,7 +108,7 @@ const Footer = () => {
         
         {/* Disclaimer */}
         <div className="footer-divider mb-0" />
-        <div className="pt-8 mb-6">
+        <div className="pt-8 mb-6" data-nosnippet="true">
            <p className="text-primary-foreground/70 text-base leading-relaxed max-w-4xl">
             Real Property Planning provides real estate brokerage and valuation-related guidance grounded in deep regional experience as a licensed professional real estate brokerage and Washington State certified residential appraisal practice. Legal, tax, and probate-specific advice should be obtained from qualified legal and tax professionals.
           </p>
