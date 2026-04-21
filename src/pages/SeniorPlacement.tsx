@@ -165,7 +165,7 @@ const SeniorPlacement = () => {
             <img
               src={seniorHousingComparison}
               alt="Senior Housing Options Side by Side comparison chart — Independent Living, Assisted Living, Memory Care, and Adult Family Home in Washington State"
-              style={{ maxWidth: '700px', width: '100%', margin: '0 auto', display: 'block' }}
+              style={{ maxWidth: '720px', width: '100%', margin: '2rem auto', display: 'block' }}
               loading="lazy"
             />
           </div>
