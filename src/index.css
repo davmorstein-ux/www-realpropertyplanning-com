@@ -1021,6 +1021,7 @@ html, body {
   .premium-tile[data-tile-name="probate-terms"] h3 {
     transform: translateY(2px) !important;
   }
+  .premium-tile[data-tile-name="attorneys"] .tile-icon {
     transform: scale(1.1) !important;
   }
   /* Service Areas: 10% bigger on desktop */
