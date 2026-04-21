@@ -163,6 +163,18 @@ const SeniorPlacement = () => {
           </div>
         </section>
 
+        {/* Senior Housing Comparison Chart */}
+        <section className="bg-secondary">
+          <div className="w-full">
+            <img
+              src={seniorHousingComparison}
+              alt="Senior Housing Options Side by Side comparison chart — Independent Living, Assisted Living, Memory Care, and Adult Family Home in Washington State"
+              className="w-full h-auto block"
+              loading="lazy"
+            />
+          </div>
+        </section>
+
         {/* Section 2: Housing Options */}
         <section className="py-16 md:py-20 bg-secondary">
           <div className="container px-6 lg:px-8">
@@ -186,18 +198,6 @@ const SeniorPlacement = () => {
                 ))}
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* Senior Housing Comparison Chart */}
-        <section className="bg-secondary">
-          <div className="w-full">
-            <img
-              src={seniorHousingComparison}
-              alt="Senior Housing Options Side by Side comparison chart — Independent Living, Assisted Living, Memory Care, and Adult Family Home in Washington State"
-              className="w-full h-auto block"
-              loading="lazy"
-            />
           </div>
         </section>
 
