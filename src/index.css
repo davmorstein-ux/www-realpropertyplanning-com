@@ -992,7 +992,10 @@ html, body {
     margin-top: -0.5rem !important;
   }
   .premium-tile[data-tile-name="senior-living"] .tile-icon {
-    transform: scale(1.21) !important;
+    transform: scale(1.39) !important;
+  }
+  .premium-tile h3[data-tile-id="senior-living"] {
+    transform: translateY(6px) !important;
   }
   /* Executors: 10% bigger on desktop */
   .premium-tile[data-tile-name="executors"] .tile-icon {
