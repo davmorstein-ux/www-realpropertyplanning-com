@@ -745,6 +745,9 @@ html, body {
   .premium-tile h3.mobile-text-down {
     margin-top: -0.15rem !important;
   }
+  .premium-tile h3.mobile-text-large {
+    font-size: 0.92rem !important;
+  }
   .premium-tile .mobile-icon-down {
     margin-top: var(--mobile-icon-mt, 4%) !important;
   }
