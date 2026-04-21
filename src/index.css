@@ -891,6 +891,13 @@ html, body {
   .premium-tile[data-tile-name="senior-transitions"] h3 {
     margin-top: 1.0rem !important;
   }
+  /* Senior Placement: nudge text down 3 nudges, icon down 50% */
+  .premium-tile:has(.service-nav-tile-mobile-hitbox[href="/senior-placement"]) h3 {
+    margin-top: 0.75rem !important;
+  }
+  .premium-tile:has(.service-nav-tile-mobile-hitbox[href="/senior-placement"]) .tile-icon {
+    transform: translateY(50%) !important;
+  }
   /* Realtor: nudge text down */
   .premium-tile h3[data-tile-id="realtor"] {
     margin-top: 0.15rem !important;
