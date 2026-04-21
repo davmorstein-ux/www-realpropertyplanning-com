@@ -1362,4 +1362,13 @@ h3 + .text-muted-foreground, h4 + .text-muted-foreground {
   color: #e5e7eb !important;
 }
 
+/* 6. Homepage tile labels — exempt from accessibility font size overrides */
+.tile-label,
+[data-tile-id],
+.premium-tile h3,
+.service-nav-tile h3 {
+  font-size: unset !important;
+  line-height: unset !important;
+  letter-spacing: unset !important;
+}
 
