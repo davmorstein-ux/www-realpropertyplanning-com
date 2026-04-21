@@ -1,11 +1,9 @@
-import { Helmet } from "react-helmet-async";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { homepageFaqSchema } from "@/lib/schema";
 
 const faqs = [
   {
@@ -37,11 +35,6 @@ const faqs = [
 const HomepageFAQ = () => {
   return (
     <section className="py-16 lg:py-24 bg-secondary">
-      <Helmet>
-        <script type="application/ld+json" data-homepage-faq-jsonld="true">
-          {JSON.stringify(homepageFaqSchema)}
-        </script>
-      </Helmet>
       <div className="container px-6 lg:px-8">
         <div className="max-w-[900px] mx-auto">
           <h2 className="font-serif text-4xl text-foreground font-semibold mb-10 text-center">
