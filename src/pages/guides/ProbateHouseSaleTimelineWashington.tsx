@@ -144,7 +144,7 @@ const ProbateHouseSaleTimelineWashington = () => (
             </p>
             <div className="flex flex-wrap gap-3">
               <Link to="/contact">
-                <Button variant="gold" size="lg" className="rounded-lg">Talk to David</Button>
+                <Button variant="gold" size="lg" className="rounded-lg">Contact</Button>
               </Link>
               <a href="tel:2069003015">
                 <Button variant="outline" size="lg" className="rounded-lg bg-transparent text-primary-foreground border-primary-foreground/40 hover:bg-primary-foreground/10 hover:text-primary-foreground">

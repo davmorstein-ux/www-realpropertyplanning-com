@@ -181,7 +181,7 @@ const ProbateEstateSales = () => {
                 </Button>
               </Link>
               <Link to="/guides/sell-house-during-probate-washington">
-                <Button size="lg" variant="outline3d" className="border-gold/50 bg-transparent text-gold hover:bg-gold hover:text-foreground focus-visible:ring-gold w-full sm:w-auto">
+                <Button size="lg" variant="outline3d" className="bg-white !text-[#0f2d52] border-2 border-[#0f2d52] hover:bg-[#0f2d52] hover:!text-white focus-visible:ring-[#0f2d52] w-full sm:w-auto">
                   Read the Probate Sale Guide
                 </Button>
               </Link>
@@ -253,7 +253,7 @@ const ProbateEstateSales = () => {
       {/* Probate Timeline Diagram */}
       <section className="bg-background py-8 md:py-12">
         <div className="w-full">
-          <img src={probateTimeline} alt="Probate real estate sale timeline — 7 steps from owner passing through distribution of proceeds in Washington State" className="w-full h-auto block" loading="lazy" />
+          <img src={probateTimeline} alt="Probate real estate sale timeline — 7 steps from owner passing through distribution of proceeds in Washington State" className="w-full h-auto block mx-auto" style={{ maxWidth: '700px' }} loading="lazy" />
         </div>
       </section>
 
