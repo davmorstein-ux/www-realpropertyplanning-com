@@ -66,6 +66,18 @@ const categories: Category[] = [
           "Capital gains, stepped-up basis, and Washington estate tax considerations families and executors should understand.",
         href: "/guides/taxes-selling-inherited-house-washington",
       },
+      {
+        title: "Probate vs Trust Sale in Washington — What's the Difference?",
+        description:
+          "Key differences between probate sales and trust sales in Washington State — process, timeline, and legal authority.",
+        href: "/guides/probate-vs-trust-sale-washington",
+      },
+      {
+        title: "Who Has Authority to Sell Probate Property in Washington?",
+        description:
+          "Personal representatives, Letters Testamentary, and what's required before any real estate action can be taken.",
+        href: "/guides/who-has-authority-sell-probate-property-washington",
+      },
     ],
   },
   {
