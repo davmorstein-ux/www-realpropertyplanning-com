@@ -1306,11 +1306,13 @@ body, body * {
 /* 3. Quote and testimonial text */
 blockquote,
 blockquote p,
+q,
+.quote-text,
 .italic,
 em.italic,
 p.italic {
   font-size: max(1.125rem, 18px) !important;
-  color: #1f2937;
+  color: #1f2937 !important;
   opacity: 1 !important;
 }
 
@@ -1328,7 +1330,7 @@ h1 + .text-muted-foreground, h2 + .text-muted-foreground,
 h3 + .text-muted-foreground, h4 + .text-muted-foreground {
   font-size: max(1.0625rem, 17px) !important;
   line-height: 1.75 !important;
-  color: #4b5563;
+  color: #4b5563 !important;
   opacity: 1 !important;
 }
 
@@ -1346,8 +1348,8 @@ h3 + .text-muted-foreground, h4 + .text-muted-foreground {
   .card-3d
 ):not(.premium-tile):not(.premium-shell-tile) :where(p, li, span) {
   font-size: max(1rem, 16px) !important;
-  color: #1f2937;
-  font-weight: 400;
+  color: #1f2937 !important;
+  font-weight: 400 !important;
   opacity: 1 !important;
 }
 

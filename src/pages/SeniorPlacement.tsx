@@ -129,7 +129,7 @@ const SeniorPlacement = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/contact">
                   <Button variant="navy3d" size="lg" className="px-8 py-4 h-auto !border-2 !border-gold w-full sm:w-auto">
-                    Talk to David
+                    Contact
                   </Button>
                 </Link>
                 <a href="tel:2069003015">
