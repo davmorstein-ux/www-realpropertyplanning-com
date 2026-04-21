@@ -22,7 +22,7 @@ const housingOptions = [
   },
   {
     title: "Assisted Living",
-    body: "For seniors who need help with daily activities such as bathing, dressing, medication, and meals. Staff available around the clock. Hundreds of licensed communities across Washington State.",
+    body: "For seniors who need help with daily activities such as bathing, dressing, medication, and meals. Staff available around the clock.\n\nHundreds of licensed communities across Washington State.",
   },
   {
     title: "Memory Care",
