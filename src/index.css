@@ -1269,3 +1269,95 @@ main a:not([class*="btn"]):not([role="menuitem"]):not(.no-underline):hover {
   }
 }
 
+/* =========================================================
+   GLOBAL SENIOR-FRIENDLY ACCESSIBILITY OVERRIDES (WCAG 2.1 AA)
+   Applies to all pages. Text-only — no layout/color/border changes.
+   ========================================================= */
+
+/* 1. Minimum font size: never below 16px anywhere */
+body, body * {
+  font-size: max(1em, 16px);
+}
+
+/* Preserve large display headings (they already exceed 16px via 1em) */
+
+/* 2. Body text contrast — kill faded muted-foreground on light backgrounds */
+.text-muted-foreground {
+  color: #374151 !important;
+  opacity: 1 !important;
+}
+
+/* On navy/dark backgrounds, lift muted text to light gray */
+.bg-primary .text-muted-foreground,
+.bg-navy .text-muted-foreground,
+.bg-navy-dark .text-muted-foreground,
+.bg-foreground .text-muted-foreground,
+[class*="bg-navy"] .text-muted-foreground,
+[class*="bg-primary"] .text-muted-foreground {
+  color: #e5e7eb !important;
+  opacity: 1 !important;
+}
+
+/* Remove faded opacity utilities on text elements */
+:where(p, span, li, h1, h2, h3, h4, h5, h6, a, blockquote, figcaption, label) {
+  opacity: 1 !important;
+}
+
+/* 3. Quote and testimonial text */
+blockquote,
+blockquote p,
+.italic,
+em.italic,
+p.italic {
+  font-size: max(1.125rem, 18px) !important;
+  color: #1f2937;
+  opacity: 1 !important;
+}
+
+/* On dark backgrounds, keep quotes legible in light tone */
+[class*="bg-navy"] blockquote,
+[class*="bg-primary"] blockquote,
+[class*="bg-navy"] .italic,
+[class*="bg-primary"] .italic {
+  color: #e5e7eb !important;
+}
+
+/* 4. Subtitles and supporting paragraphs under headings */
+h1 + p, h2 + p, h3 + p, h4 + p,
+h1 + .text-muted-foreground, h2 + .text-muted-foreground,
+h3 + .text-muted-foreground, h4 + .text-muted-foreground {
+  font-size: max(1.0625rem, 17px) !important;
+  line-height: 1.75 !important;
+  color: #4b5563;
+  opacity: 1 !important;
+}
+
+[class*="bg-navy"] :where(h1, h2, h3, h4) + p,
+[class*="bg-primary"] :where(h1, h2, h3, h4) + p {
+  color: #e5e7eb !important;
+}
+
+/* 5. Card body text — readable, never faded */
+:where(
+  [class*="rounded-"][class*="bg-card"],
+  [class*="rounded-"][class*="bg-background"],
+  [class*="rounded-"][class*="bg-white"],
+  [data-card],
+  .card-3d
+):not(.premium-tile):not(.premium-shell-tile) :where(p, li, span) {
+  font-size: max(1rem, 16px) !important;
+  color: #1f2937;
+  font-weight: 400;
+  opacity: 1 !important;
+}
+
+/* Preserve light text on dark/navy cards */
+:where(
+  .card-3d-blue-skin,
+  [class*="bg-navy"],
+  [class*="bg-primary"]
+) :where(p, li, span) {
+  color: #e5e7eb !important;
+}
+
+
