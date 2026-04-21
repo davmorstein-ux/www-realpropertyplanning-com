@@ -179,7 +179,7 @@ const SeniorPlacement = () => {
                     <h3 className="font-serif text-xl text-red-800 font-bold mb-3 text-center">
                       {opt.title}
                     </h3>
-                    <p className="text-foreground/85 text-base leading-relaxed">
+                    <p className="text-foreground/85 text-base leading-relaxed whitespace-pre-line">
                       {opt.body}
                     </p>
                   </div>
