@@ -258,7 +258,7 @@ const Wills = () => {
           </section>
 
           {/* Professional Disclosure */}
-          <section className="py-16 sm:py-20 bg-background">
+          <section className="py-16 sm:py-20 bg-background" data-nosnippet="true">
             <div className="mx-auto max-w-3xl px-6">
               <h2 className="font-serif text-2xl sm:text-3xl font-semibold text-foreground mb-6">
                 We Don't Provide Legal Advice — And Here's Why That Matters

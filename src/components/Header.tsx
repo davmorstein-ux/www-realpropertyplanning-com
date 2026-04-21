@@ -92,7 +92,7 @@ const Header = () => {
         Skip to main content
       </a>
       <header
-        data-nosnippet
+        data-nosnippet="true"
         className={`fixed left-0 right-0 top-0 z-50 border-b transition-all duration-300 ${
           scrolled
             ? "border-border shadow-[0_2px_10px_rgba(0,0,0,0.06)]"

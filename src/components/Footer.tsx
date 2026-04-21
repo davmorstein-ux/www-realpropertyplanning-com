@@ -10,7 +10,7 @@ import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washingto
 
 const Footer = () => {
   return (
-    <footer data-nosnippet className="bg-navy-dark py-16">
+    <footer data-nosnippet="true" className="bg-navy-dark py-16">
       <div className="container px-6 lg:px-8">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand & NAP */}
@@ -108,7 +108,7 @@ const Footer = () => {
         
         {/* Disclaimer */}
         <div className="footer-divider mb-0" />
-        <div className="pt-8 mb-6">
+        <div className="pt-8 mb-6" data-nosnippet="true">
            <p className="text-primary-foreground/70 text-base leading-relaxed max-w-4xl">
             Real Property Planning provides real estate brokerage and valuation-related guidance grounded in deep regional experience as a licensed professional real estate brokerage and Washington State certified residential appraisal practice. Legal, tax, and probate-specific advice should be obtained from qualified legal and tax professionals.
           </p>
