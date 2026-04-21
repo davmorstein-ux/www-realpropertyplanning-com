@@ -231,7 +231,7 @@ const SeniorPlacement = () => {
                 The cost of senior care — which can range from $3,000 to $10,000 or more per month in Washington State — is often funded in whole or in part by proceeds from selling the family home. That means the timing of the home sale directly affects when and where a senior can move.
               </p>
               <p className="text-foreground text-base md:text-lg leading-relaxed">
-                David Stein coordinates the real estate side of this transition with the care side — working alongside placement advisors, care managers, attorneys, and financial planners to make sure the home sells at the right time, for the right price, without disrupting the senior's move into their new setting.
+                David Stein coordinates the real estate side of this transition with the care side — working alongside placement advisors, care managers, attorneys, and financial planners to make sure the home sells at the right time, for the right price, without disrupting the senior's move into their new setting. For families ready to take the next step, <Link to="/sell-house-fund-senior-living" className="text-primary font-semibold underline underline-offset-2 hover:text-primary/80">learn how to sell a parent's house to fund senior living</Link>.
               </p>
             </div>
           </div>
