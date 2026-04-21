@@ -106,7 +106,7 @@ const ServiceNavTileCard = ({ tile, index, columns = 3 }: { tile: ServiceTile; i
             alt={iconAlt}
             className={`tile-icon mx-auto w-[45%] max-h-[38%] object-contain drop-shadow-lg ${tile.mobileIconDown ? 'mobile-icon-down' : ''}`}
             style={{
-              ...(isSeniorPlacement ? { mixBlendMode: "multiply" as const, background: "transparent", backgroundColor: "transparent" } : {}),
+              ...(needsTransparentBlend ? { mixBlendMode: "multiply" as const, background: "transparent", backgroundColor: "transparent", border: "none", boxShadow: "none" } : {}),
               ...(tile.iconOffsetY ? { transform: `translateY(${tile.iconOffsetY})` } : {}),
               ...(tile.iconScale && !tile.iconOffsetY ? { transform: `scale(${tile.iconScale})` } : {}),
               ...(tile.iconScale && tile.iconOffsetY ? { transform: `translateY(${tile.iconOffsetY}) scale(${tile.iconScale})` } : {}),
