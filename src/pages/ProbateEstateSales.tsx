@@ -162,14 +162,14 @@ const ProbateEstateSales = () => {
             <p className="text-lg md:text-xl text-primary-foreground/90 leading-relaxed mb-12 max-w-2xl mx-auto">
               David Stein — Licensed Broker &amp; Certified Residential Appraiser — (206) 900-3015
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-12 w-full items-center">
-              <p className="text-primary-foreground text-lg leading-relaxed md:whitespace-nowrap text-center">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-12 w-full items-start">
+              <p className="text-primary-foreground text-lg leading-relaxed text-center">
                 The court sets the timeline. We work within it.
               </p>
-              <p className="text-primary-foreground text-lg leading-relaxed md:whitespace-nowrap text-center">
+              <p className="text-primary-foreground text-lg leading-relaxed text-center">
                 Pricing must hold up to fiduciary scrutiny.
               </p>
-              <p className="text-primary-foreground text-lg leading-relaxed md:whitespace-nowrap text-center">
+              <p className="text-primary-foreground text-lg leading-relaxed text-center">
                 Every party stays informed. Every step is documented.
               </p>
             </div>
