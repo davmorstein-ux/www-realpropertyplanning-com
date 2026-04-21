@@ -156,7 +156,22 @@ const SellHouseFundSeniorLiving = () => {
                     className="card-3d p-6 md:p-8 bg-card flex flex-col sm:flex-row gap-5 sm:gap-6"
                   >
                     <div className="shrink-0">
-                      <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground border-2 border-gold flex items-center justify-center font-serif text-3xl font-bold">
+                      <div
+                        style={{
+                          background: 'radial-gradient(circle at 35% 35%, #1a3a6b, #0a1d3d)',
+                          border: '2px solid #c9a84c',
+                          borderRadius: '50%',
+                          boxShadow: 'inset -2px -2px 6px rgba(0,0,0,0.5), inset 2px 2px 6px rgba(255,255,255,0.15), 3px 3px 8px rgba(0,0,0,0.4)',
+                          color: '#c9a84c',
+                          fontWeight: 700,
+                          fontSize: '18px',
+                          width: '48px',
+                          height: '48px',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center'
+                        }}
+                      >
                         {idx + 1}
                       </div>
                     </div>
