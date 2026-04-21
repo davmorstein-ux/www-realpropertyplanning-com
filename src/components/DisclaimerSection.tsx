@@ -15,6 +15,9 @@ const DisclaimerSection = () => {
               Professional Disclaimer
             </h2>
             <div className="space-y-4 text-muted-foreground text-base leading-[1.8]">
+              <p className="text-foreground font-medium">
+                David Stein is the licensed Washington State real estate broker and certified residential appraiser behind Real Property Planning.
+              </p>
               <p>
                 Real Property Planning provides licensed real estate brokerage and Washington State certified residential appraisal services. We are not attorneys, CPAs, or tax advisors, and we do not provide legal, tax, or accounting advice.
               </p>
