@@ -128,7 +128,7 @@ const SeniorPlacement = () => {
                 When a parent or loved one can no longer safely stay in their home, families face two decisions at once: where does mom or dad go next, and what happens to the house? Real Property Planning connects both — coordinating trusted senior placement advisors alongside the real estate expertise needed to sell the family home on the family's timeline.
               </p>
               <p className="text-gold font-bold text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-8">
-                David Stein — Licensed Real Estate Broker &amp; Certified Residential Appraiser — (206) 900-3015
+                David Stein — Real Property Planning — (206) 900-3015
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/contact">
