@@ -128,11 +128,14 @@ function findTopRoutes(input: string, max = 3): RouteMatch[] {
     .map((s) => s.route);
 }
 
+// Note: aria-label intentionally omitted so the visible button text is the
+// accessible name — this prevents screen readers (and some audit tools) from
+// announcing the label twice (e.g. "I'm an executor I'm an executor").
 const suggestedPrompts = [
-  { label: "I'm an executor", ariaLabel: "I'm an executor managing estate property in Washington State" },
-  { label: "I need help selling an inherited home", ariaLabel: "I need help selling an inherited home in Washington State" },
-  { label: "I'm helping a senior move", ariaLabel: "I'm helping a senior move — transition guidance and real estate support" },
-  { label: "I'm an attorney looking for a resource", ariaLabel: "I'm an attorney looking for a real estate resource in Washington State" },
+  { label: "I'm an executor" },
+  { label: "I need help selling an inherited home" },
+  { label: "I'm helping a senior move" },
+  { label: "I'm an attorney looking for a resource" },
 ];
 
 interface SmartSearchBarProps {
@@ -405,7 +408,6 @@ const SmartSearchBar = ({ pillsOnly, searchOnly }: SmartSearchBarProps) => {
               key={prompt.label}
               type="button"
               onClick={() => handlePromptClick(prompt.label)}
-              aria-label={prompt.ariaLabel}
               className="premium-pill-3d homepage-pill focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 w-full"
             >
               <span className="premium-pill-3d__face homepage-pill__face w-full justify-center">
@@ -433,7 +435,7 @@ const SmartSearchBar = ({ pillsOnly, searchOnly }: SmartSearchBarProps) => {
       {renderSuggestions()}
       <div className="flex flex-wrap justify-center gap-3 mt-5">
         {suggestedPrompts.map((prompt) => (
-          <button key={prompt.label} type="button" onClick={() => handlePromptClick(prompt.label)} aria-label={prompt.ariaLabel}
+          <button key={prompt.label} type="button" onClick={() => handlePromptClick(prompt.label)}
             className="premium-pill-3d focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
             <span className="premium-pill-3d__face text-[15px] sm:text-base">{prompt.label}</span>
           </button>
