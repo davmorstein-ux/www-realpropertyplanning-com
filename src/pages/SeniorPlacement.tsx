@@ -115,20 +115,14 @@ const SeniorPlacement = () => {
         <section className="pt-3 md:pt-4 pb-14 md:pb-16 bg-primary">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
-              <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">
-                Senior Placement
-              </p>
-              <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl text-primary-foreground font-semibold mb-4 leading-tight">
+              <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl text-primary-foreground font-semibold mb-6 leading-tight">
                 Senior Placement in Washington State
               </h1>
-              <p className="text-primary-foreground/90 text-lg md:text-xl font-medium mb-6">
+              <p className="text-primary-foreground/90 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl mx-auto">
                 Helping families find the right housing — and handle the home that comes with it.
               </p>
-              <p className="text-primary-foreground/85 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-6">
-                When a parent or loved one can no longer safely stay in their home, families face two decisions at once: where does mom or dad go next, and what happens to the house? Real Property Planning connects both — coordinating trusted senior placement advisors alongside the real estate expertise needed to sell the family home on the family's timeline.
-              </p>
-              <p className="text-gold font-bold text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-8">
-                David Stein — Real Property Planning — (206) 900-3015
+              <p className="text-primary-foreground text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
+                Real Property Planning connects trusted senior placement advisors with real estate expertise — so both decisions get handled.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/contact">

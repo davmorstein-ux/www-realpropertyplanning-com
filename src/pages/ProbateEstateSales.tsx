@@ -151,23 +151,28 @@ const ProbateEstateSales = () => {
       {/* Hero */}
       <section className="bg-primary pt-1.5 md:pt-2 pb-16 md:pb-20">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-2xl mx-auto text-center">
+          <div className="max-w-3xl mx-auto text-center">
             <img src={iconProbateSales} alt="Probate real estate sales guidance Washington State — house, gavel, last will and testament, and petition for probate" className="mx-auto max-w-[18rem] w-full h-auto object-contain mb-4" loading="lazy"/>
             <p className="text-gold font-bold tracking-widest uppercase mb-6 text-sm md:text-base">
-              Probate & Estate Property Sales
+              Probate &amp; Estate Property Sales
             </p>
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-8">
               Selling a Home Through Probate in Washington State
             </h1>
-            <p className="text-xl md:text-2xl text-primary-foreground/90 font-serif leading-snug mb-8">
-              Washington probate real estate guidance for families, executors, trustees, and attorneys.
+            <p className="text-lg md:text-xl text-primary-foreground/90 leading-relaxed mb-12 max-w-2xl mx-auto">
+              David Stein — Licensed Broker &amp; Certified Residential Appraiser — (206) 900-3015
             </p>
-            <p className="text-base md:text-lg text-primary-foreground/75 leading-relaxed mb-10 max-w-xl mx-auto">
-              Work with a Washington State Licensed Real Estate Broker and Certified Residential Appraiser who understands probate timelines, fiduciary pricing, and the steps required to sell estate property with confidence.
-            </p>
-            <p className="text-gold font-semibold text-sm md:text-base tracking-wide mb-10">
-              Licensed Broker • Certified Residential Appraiser • 20+ Years Experience
-            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-12 max-w-3xl mx-auto">
+              <p className="text-primary-foreground text-lg leading-relaxed">
+                The court sets the timeline. We work within it.
+              </p>
+              <p className="text-primary-foreground text-lg leading-relaxed">
+                Pricing must hold up to fiduciary scrutiny.
+              </p>
+              <p className="text-primary-foreground text-lg leading-relaxed">
+                Every party stays informed. Every step is documented.
+              </p>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">
                 <Button variant="gold" size="lg" className="w-full sm:w-auto">
