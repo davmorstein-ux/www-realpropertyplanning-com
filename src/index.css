@@ -1171,3 +1171,66 @@ main a:not([class*="btn"]):not([role="menuitem"]):not(.no-underline):hover {
   }
 }
 
+/* ═══════════════════════════════════════════════
+   WCAG 2.1 AA: Card text accessibility
+   Sitewide minimum sizes, weights, and contrast for
+   any card-style content block (excludes premium tile
+   nav grid which has its own optimized typography).
+═══════════════════════════════════════════════ */
+
+/* Targets typical card containers across the site:
+   shadcn Card, raw .rounded-* + bg-card/bg-background/bg-white wrappers
+   used in guides, repair cards, comparison cards, step cards, etc. */
+:where(
+  [class*="rounded-"][class*="bg-card"],
+  [class*="rounded-"][class*="bg-background"],
+  [class*="rounded-"][class*="bg-white"],
+  [data-card],
+  .card-3d,
+  .card-3d-blue-skin
+):not(.premium-tile):not(.premium-shell-tile) {
+  /* Card titles — bold, ≥18px, high contrast */
+  & :where(h2, h3, h4, h5, h6) {
+    font-weight: 700;
+    color: hsl(220 40% 12%);
+  }
+  & :where(h3, h4, h5, h6) {
+    font-size: max(1.125rem, 18px);
+    line-height: 1.35;
+  }
+
+  /* Body text — ≥16px, line-height 1.7, AA contrast */
+  & :where(p, li, span:not([class*="badge"]):not([class*="pill"])) {
+    font-size: max(1rem, 16px);
+    line-height: 1.7;
+  }
+
+  /* Force previously-faded muted text to AA contrast on light card backgrounds */
+  & .text-muted-foreground {
+    color: hsl(220 25% 25%) !important;
+  }
+
+  /* Cost / impact / meta labels (.text-gold inside cards) — readable, not faded */
+  & .text-gold {
+    color: hsl(42 70% 28%) !important;
+    font-weight: 600;
+    font-size: max(0.9375rem, 15px);
+  }
+}
+
+/* Desktop already scales body text via earlier rules — keep those wins */
+@media (min-width: 768px) {
+  :where(
+    [class*="rounded-"][class*="bg-card"],
+    [class*="rounded-"][class*="bg-background"],
+    [class*="rounded-"][class*="bg-white"],
+    [data-card],
+    .card-3d,
+    .card-3d-blue-skin
+  ):not(.premium-tile):not(.premium-shell-tile) {
+    & :where(p, li) {
+      line-height: 1.7 !important;
+    }
+  }
+}
+
