@@ -78,6 +78,12 @@ const categories: Category[] = [
           "Personal representatives, Letters Testamentary, and what's required before any real estate action can be taken.",
         href: "/guides/who-has-authority-sell-probate-property-washington",
       },
+      {
+        title: "Probate House Sale Timeline in Washington State",
+        description:
+          "A realistic, step-by-step guide to how long a probate property sale actually takes — from death to distribution of proceeds.",
+        href: "/guides/probate-house-sale-timeline-washington",
+      },
     ],
   },
   {
@@ -188,6 +194,12 @@ const categories: Category[] = [
         description:
           "Common pricing, preparation, timing, and communication errors — and how to avoid them.",
         href: "/insights/estate-property-mistakes",
+      },
+      {
+        title: "What Repairs Should Be Made Before Selling a Probate Home?",
+        description:
+          "A practical guide to which improvements are worth the investment in an estate property — and which ones to skip.",
+        href: "/guides/repairs-before-selling-probate-home-washington",
       },
     ],
   },
