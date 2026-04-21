@@ -123,9 +123,9 @@ type Card = { title: string; meta?: string; body: string };
 
 const CardGrid = ({ items, accent }: { items: Card[]; accent: "green" | "amber" | "red" }) => {
   const borderClass = {
-    green: "border-t-4 border-t-green-600",
-    amber: "border-t-4 border-t-amber-500",
-    red: "border-t-4 border-t-red-600",
+    green: "border-t-4 border-t-[#15803d]",
+    amber: "border-t-4 border-t-[#b45309]",
+    red: "border-t-4 border-t-[#b91c1c]",
   }[accent];
   return (
     <div className="grid md:grid-cols-2 gap-5">
