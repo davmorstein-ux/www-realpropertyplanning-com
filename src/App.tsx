@@ -53,6 +53,7 @@ import SkamaniaCounty from "./pages/counties/SkamaniaCounty";
 import WahkiakumCounty from "./pages/counties/WahkiakumCounty";
 import Resources from "./pages/Resources";
 import SeniorMoveManagers from "./pages/resources/SeniorMoveManagers";
+import SeniorMoveManagersFull from "./pages/SeniorMoveManagers";
 import EstateSaleCompanies from "./pages/resources/EstateSaleCompanies";
 import ProbateEstateAttorneys from "./pages/resources/ProbateEstateAttorneys";
 import CPAsFinancialAdvisors from "./pages/resources/CPAsFinancialAdvisors";
@@ -337,7 +338,7 @@ const App = () => (
 
           {/* Redundant senior pages → /senior-transitions */}
           <Route path="/senior-estate-services" element={<Navigate to="/senior-transitions" replace />} />
-          <Route path="/senior-move-managers" element={<Navigate to="/senior-transitions" replace />} />
+          <Route path="/senior-move-managers" element={<SeniorMoveManagersFull />} />
           <Route path="/transition-resources" element={<Navigate to="/senior-transitions" replace />} />
 
           {/* Misc legacy */}
