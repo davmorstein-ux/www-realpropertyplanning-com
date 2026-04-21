@@ -261,7 +261,10 @@ const GuidesAndResources = () => {
               <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-primary-foreground leading-tight mb-4">
                 Guides & Resources
               </h1>
-              <p className="text-primary-foreground/80 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
+              <p className="text-primary-foreground text-lg md:text-xl leading-relaxed max-w-3xl mx-auto mb-4 font-medium">
+                Everything you need to understand probate real estate, inherited property, and senior housing transitions — organized by topic and written in plain language.
+              </p>
+              <p className="text-primary-foreground/80 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
                 Practical answers to common questions about probate, inherited homes, senior transitions, pricing, and the professionals who help.
               </p>
             </div>

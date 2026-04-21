@@ -138,6 +138,26 @@ const Index = () => {
       {/* 2. SERVICE NAV TILES */}
       <ServiceNavTiles />
 
+      {/* GUIDES & RESOURCES BANNER */}
+      <section className="bg-navy border-y-2 border-gold py-12 md:py-14">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="font-serif text-2xl md:text-3xl lg:text-[2rem] font-semibold text-primary-foreground leading-tight mb-4">
+              Looking for answers about probate, inherited homes, or senior transitions?
+            </h2>
+            <p className="text-primary-foreground/85 text-base md:text-lg leading-relaxed mb-7 max-w-3xl mx-auto">
+              Browse our complete library of plain-language guides — organized by topic and written for families, executors, and professionals.
+            </p>
+            <Link to="/guides-and-resources">
+              <Button variant="gold" size="lg" className="px-8 py-4 h-auto rounded-lg text-base md:text-lg">
+                Browse All Guides & Resources
+                <ChevronRight className="w-5 h-5 ml-1" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* HOW WE HELP */}
       <HowWeHelpCards />
 
