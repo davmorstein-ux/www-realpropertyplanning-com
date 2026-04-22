@@ -143,7 +143,7 @@ const Footer = () => {
               </a>
             </div>
             {/* Right column: NAEPC + King County Collaborative Law */}
-            <div className="flex flex-col items-center gap-6 w-[260px]">
+            <div className="flex flex-col items-center gap-6 w-[480px]">
               <a href="https://www.naepc.org" target="_blank" rel="noopener noreferrer">
                 <img
                   src={naepcLogo}
