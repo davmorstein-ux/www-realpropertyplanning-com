@@ -355,7 +355,22 @@ const SmartSearchBar = ({ pillsOnly, searchOnly }: SmartSearchBarProps) => {
       className="relative flex items-center rounded-full border-2 border-border bg-card transition-all duration-200 focus-within:border-gold focus-within:ring-2 focus-within:ring-gold/20 sm:rounded-full rounded-[1.5rem]"
       style={{ boxShadow: "0 4px 20px -4px hsl(220 35% 15% / 0.08), inset 0 1px 0 hsl(0 0% 100% / 0.7)" }}
     >
-      <Search className="ml-5 w-5 h-5 text-muted-foreground flex-shrink-0 self-center" />
+      <span
+        className="ml-4 flex-shrink-0 self-center inline-flex items-center justify-center w-9 h-9 rounded-full"
+        style={{
+          background: "linear-gradient(180deg, #ffffff 0%, #e9ecf2 100%)",
+          boxShadow:
+            "inset 0 1px 0 rgba(255,255,255,0.9), inset 0 -1px 2px rgba(20,30,55,0.12), 0 1px 2px rgba(20,30,55,0.18), 0 2px 6px rgba(20,30,55,0.10)",
+          border: "1px solid rgba(20,30,55,0.10)",
+        }}
+        aria-hidden="true"
+      >
+        <Search
+          className="w-[18px] h-[18px] text-navy"
+          strokeWidth={2.5}
+          style={{ filter: "drop-shadow(0 1px 0 rgba(255,255,255,0.85)) drop-shadow(0 1px 1px rgba(20,30,55,0.25))" }}
+        />
+      </span>
       <textarea
         ref={inputRef}
         value={query}
@@ -368,13 +383,38 @@ const SmartSearchBar = ({ pillsOnly, searchOnly }: SmartSearchBarProps) => {
         style={{ lineHeight: '1.5' }}
       />
       <button onClick={toggleVoice} aria-label={isListening ? "Stop listening" : supportsVoice ? "Use voice input" : "Voice input not supported"}
-        className={cn("flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center mr-1.5 transition-all duration-200",
-          isListening ? "bg-destructive/10 text-destructive animate-pulse" : voiceStatus === "error" ? "text-destructive/60 hover:text-destructive hover:bg-destructive/5" : "text-muted-foreground hover:text-foreground hover:bg-muted")}>
-        {isListening ? <MicOff className="w-5 h-5" /> : voiceStatus === "processing" ? <Volume2 className="w-5 h-5 animate-pulse" /> : <Mic className="w-5 h-5" />}
+        className={cn("flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center mr-1.5 transition-all duration-200 hover:-translate-y-[1px] active:translate-y-[1px]",
+          isListening && "animate-pulse")}
+        style={{
+          background: isListening
+            ? "linear-gradient(180deg, #fde2e2 0%, #f5b9b9 100%)"
+            : "linear-gradient(180deg, #ffffff 0%, #e6e9f0 100%)",
+          border: "1px solid rgba(20,30,55,0.12)",
+          boxShadow:
+            "inset 0 1px 0 rgba(255,255,255,0.95), inset 0 -1px 2px rgba(20,30,55,0.14), 0 1px 2px rgba(20,30,55,0.16), 0 3px 8px rgba(20,30,55,0.12)",
+        }}
+      >
+        {isListening
+          ? <MicOff className="w-5 h-5 text-destructive" strokeWidth={2.5} style={{ filter: "drop-shadow(0 1px 0 rgba(255,255,255,0.85)) drop-shadow(0 1px 1px rgba(20,30,55,0.25))" }} />
+          : voiceStatus === "processing"
+            ? <Volume2 className="w-5 h-5 text-navy animate-pulse" strokeWidth={2.5} style={{ filter: "drop-shadow(0 1px 0 rgba(255,255,255,0.85)) drop-shadow(0 1px 1px rgba(20,30,55,0.25))" }} />
+            : <Mic className="w-5 h-5 text-navy" strokeWidth={2.5} style={{ filter: "drop-shadow(0 1px 0 rgba(255,255,255,0.85)) drop-shadow(0 1px 1px rgba(20,30,55,0.25))" }} />}
       </button>
       <button onClick={handleSubmit} aria-label="Search"
-        className="flex-shrink-0 w-10 h-10 rounded-full bg-navy text-primary-foreground flex items-center justify-center mr-1.5 transition-all duration-200 hover:bg-navy-light active:scale-95">
-        <ArrowRight className="w-5 h-5" />
+        className="relative overflow-hidden flex-shrink-0 w-10 h-10 rounded-full text-primary-foreground flex items-center justify-center mr-1.5 transition-all duration-200 hover:-translate-y-[1px] active:translate-y-[1px]"
+        style={{
+          background: "linear-gradient(180deg, #2e4a7a 0%, #1a3056 60%, #0f2040 100%)",
+          border: "1px solid rgba(10,20,40,0.55)",
+          boxShadow:
+            "inset 0 1px 0 rgba(255,255,255,0.35), inset 0 -2px 3px rgba(0,0,0,0.30), 0 2px 4px rgba(15,30,55,0.35), 0 6px 14px rgba(15,30,55,0.25)",
+        }}
+      >
+        <span
+          className="pointer-events-none absolute left-[12%] top-[8%] h-[42%] w-[76%] rounded-full"
+          style={{ background: "linear-gradient(180deg, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0) 100%)" }}
+          aria-hidden="true"
+        />
+        <ArrowRight className="relative w-5 h-5" strokeWidth={3} style={{ filter: "drop-shadow(0 1px 0 rgba(0,0,0,0.35)) drop-shadow(0 -1px 0 rgba(255,255,255,0.25))" }} />
       </button>
     </div>
   );
