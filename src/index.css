@@ -725,6 +725,10 @@ html, body {
   .premium-tile[data-tile-name="realtor"] > div > span {
     transform: translateY(calc(-10.2% + 2%)) !important;
   }
+  /* Realtor tile: vertical position of icon at 25% on desktop */
+  .premium-tile[data-tile-name="realtor"] .tile-icon {
+    transform: translateY(25%) scale(1.1) !important;
+  }
 }
 /* Non-premium tile icons (cards with group class) */
 .tile-icon-hover {
