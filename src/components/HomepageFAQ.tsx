@@ -48,7 +48,7 @@ const HomepageFAQ = () => {
                 className="bg-card border border-border rounded-2xl overflow-hidden data-[state=open]:border-gold/25 transition-colors"
               >
                 <AccordionTrigger
-                  className="text-left font-serif font-semibold text-foreground hover:text-gold hover:no-underline px-6 py-6 min-h-[64px]"
+                  className="text-left font-serif font-bold text-foreground hover:text-gold hover:no-underline px-6 py-6 min-h-[64px]"
                   style={{ fontSize: "23px", lineHeight: 1.35 }}
                 >
                   {faq.q}
