@@ -60,7 +60,7 @@ const HomepageHero = () => {
                 padding: "0 2rem",
                 backgroundColor: "transparent",
                 color: "#ffffff",
-                border: "2px solid rgba(255,255,255,0.5)",
+                border: "2px solid #2563eb",
               }}
             >
               Send a Message
