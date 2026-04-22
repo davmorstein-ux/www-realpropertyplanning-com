@@ -139,19 +139,19 @@ const Footer = () => {
                 loading="lazy"
               />
             </a>
-            <a href="https://www.naosa.org" target="_blank" rel="noopener noreferrer">
-              <img
-                src={naosaBadge}
-                alt="National Association of Senior Advocates - Best Real Estate Agent 2026"
-                className="w-auto object-contain max-h-[240px]"
-                loading="lazy"
-              />
-            </a>
             <a href="https://www.kingcountycollaborativelaw.org" target="_blank" rel="noopener noreferrer">
               <img
                 src={kccLogo}
                 alt="Friends of King County Collaborative Law"
                 className="w-auto object-contain max-h-[100px]"
+                loading="lazy"
+              />
+            </a>
+            <a href="https://www.naosa.org" target="_blank" rel="noopener noreferrer">
+              <img
+                src={naosaBadge}
+                alt="National Association of Senior Advocates - Best Real Estate Agent 2026"
+                className="w-auto object-contain max-h-[240px]"
                 loading="lazy"
               />
             </a>
