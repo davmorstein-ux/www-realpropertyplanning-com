@@ -20,7 +20,7 @@ const HomepageTeamSection = () => {
       <div className="container px-6 lg:px-8">
         <div className="max-w-[680px] mx-auto text-center mb-12">
           <h2 className="font-serif text-foreground font-semibold mb-6 text-xl">
-            You Don't Navigate This Alone
+            You Do Not Have To Navigate This Alone
           </h2>
           <p className="text-xl text-muted-foreground leading-relaxed">
             Families dealing with inherited property, probate, or a senior housing transition rarely need just one kind of help. They need a coordinated team — a real estate professional, an attorney, a care advisor, a financial planner — all working together. Real Property Planning connects families with the right professionals for their situation, across Western Washington. Real Property Planning is a Corporate Partner of the Aging Life Care Association, a recognized member of the National Association of Senior Advocates, and a member of the National Association of Estate Planners & Councils — professional affiliations that reflect a commitment to this work that goes beyond real estate.
