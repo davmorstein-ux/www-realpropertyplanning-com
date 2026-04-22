@@ -180,6 +180,13 @@ html, body {
     line-height: revert-layer !important;
   }
 
+  /* Exempt homepage tile labels from sitewide accessibility font-size overrides */
+  .tile-label, [data-tile-id], .premium-tile h3, .service-nav-tile h3 {
+    font-size: unset !important;
+    line-height: unset !important;
+    letter-spacing: unset !important;
+  }
+
   /* Keep footer legal disclaimers small */
   footer .text-\[13px\] {
     font-size: 13px !important;
