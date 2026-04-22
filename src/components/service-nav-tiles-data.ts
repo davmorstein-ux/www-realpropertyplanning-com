@@ -80,7 +80,7 @@ export const tileCategories: TileCategory[] = [
       { title: "Home Values\n& Pricing", subtitle: "", href: "/why-valuation-matters", iconSrc: iconHomeValue, labelSpacing: "tight", iconOffsetY: "4%", mobileContentOffsetY: "-1.5%", mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "12%", mobileSmallText: true },
       { title: "Senior\nHome Sales", subtitle: "", href: "/senior-transitions", iconSrc: iconFundSeniorLiving, labelSpacing: "tight", iconOffsetY: "4%", iconScale: 1.05, mobileContentOffsetY: "3%", mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "-10%", mobileSmallText: true, mobileTextOffsetY: "0.6rem" },
       { title: "Paying for\nSenior Living", subtitle: "", href: "/sell-house-fund-senior-living", iconSrc: iconPayingForSeniorLiving, labelSpacing: "tight", iconOffsetY: "-4%", iconScale: 0.7, mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "-22%", mobileContentOffsetY: "11%", mobileSmallText: true },
-      { title: "Service Areas", subtitle: "", href: "/counties", iconSrc: iconServiceAreas, iconOffsetY: "4%", iconScale: 1.1, mobileTextDown: true, mobileIconDown: true, mobileSmallText: true },
+      { title: "Service Areas", subtitle: "", href: "/counties", iconSrc: iconServiceAreas, iconOffsetY: "-5%", iconScale: 1.1, mobileTextDown: true, mobileIconDown: true, mobileSmallText: true, textOffsetY: "-5%" },
       { title: "Guides &\nResources", subtitle: "", href: "/guides-and-resources", iconSrc: iconResources, labelSpacing: "tight", iconOffsetY: "12%", mobileTextDown: true, mobileIconDown: true, mobileSmallText: true },
     ],
   },
