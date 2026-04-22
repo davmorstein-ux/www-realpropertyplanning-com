@@ -694,7 +694,7 @@ html, body {
 /* Homepage pill buttons — uniform sizing on mobile */
 @media (max-width: 639px) {
   .homepage-pill {
-    height: 72px;
+    height: 80px;
     padding: 4px 4px 7px;
     display: inline-flex;
     align-items: center;
@@ -703,9 +703,9 @@ html, body {
   .homepage-pill .homepage-pill__face {
     height: 100%;
     min-height: unset;
-    padding: 0.4rem 0.75rem;
-    font-size: 13px;
-    line-height: 1.25;
+    padding: 0.5rem 0.85rem;
+    font-size: 16px;
+    line-height: 1.3;
     display: inline-flex;
     align-items: center;
     justify-content: center;
