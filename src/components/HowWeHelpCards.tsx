@@ -37,7 +37,7 @@ const HowWeHelpCards = () => {
   return (
     <section className="py-16 lg:py-24 bg-background">
       <div className="container px-6 lg:px-8">
-        <h2 className="font-serif text-foreground font-semibold text-center mb-12 text-4xl">
+        <h2 className="font-serif text-red-900 font-semibold text-center mb-12 text-4xl">
           How We Help
         </h2>
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
