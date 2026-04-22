@@ -64,7 +64,7 @@ export const tileCategories: TileCategory[] = [
   {
     label: "Roles & Responsibilities",
     tiles: [
-      { title: "Executors", subtitle: "", href: "/executors", iconSrc: iconExecutors, iconOffsetY: "-2%", mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "3%", mobileXSmallText: true },
+      { title: "Executors", subtitle: "", href: "/executors", iconSrc: iconExecutors, iconOffsetY: "-2%", mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "5%", mobileXSmallText: true },
       { title: "Trustees", subtitle: "", href: "/trustees", iconSrc: iconTrustees, mobileTextDown: true, mobileIconDown: true },
       { title: "Wills", subtitle: "", href: "/wills", iconSrc: iconWills, mobileTextDown: true, mobileIconDown: true, mobileSmallText: true },
       { title: "Power of\nAttorney", subtitle: "", href: "/power-of-attorney", iconSrc: iconPowerOfAttorney, labelSpacing: "tight", mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "-6%", mobileXSmallText: true },
