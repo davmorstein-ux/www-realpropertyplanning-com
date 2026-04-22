@@ -124,7 +124,7 @@ const Footer = () => {
           <h3 className="text-primary-foreground font-serif text-[28px] font-bold mb-5">Professional Memberships &amp; Affiliations</h3>
           <div className="flex justify-center gap-8">
             {/* Left column: ALCA + Senior Advocates */}
-            <div className="flex flex-col items-center gap-6 w-[260px]">
+            <div className="flex flex-col items-center gap-6 w-[320px]">
               <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer">
                 <img
                   src={alcaLogo}
@@ -137,13 +137,13 @@ const Footer = () => {
                 <img
                   src={naosaBadge}
                   alt="National Association of Senior Advocates - Best Real Estate Agent 2026"
-                  className="w-full object-contain max-h-[200px]"
+                  className="w-full object-contain max-h-[220px]"
                   loading="lazy"
                 />
               </a>
             </div>
             {/* Right column: NAEPC + King County Collaborative Law */}
-            <div className="flex flex-col items-center gap-6 w-[260px]">
+            <div className="flex flex-col items-center gap-6 w-[480px]">
               <a href="https://www.naepc.org" target="_blank" rel="noopener noreferrer">
                 <img
                   src={naepcLogo}
