@@ -19,7 +19,7 @@ const HomepageTeamSection = () => {
     <section className="py-16 lg:py-24 bg-background">
       <div className="container px-6 lg:px-8">
         <div className="max-w-[680px] mx-auto text-center mb-12">
-          <h2 className="font-serif text-foreground font-semibold mb-6 text-xl">
+          <h2 className="font-serif text-[hsl(0,70%,30%)] font-semibold mb-6 text-xl">
             You Do Not Have To Navigate This Alone
           </h2>
           <p className="text-xl text-muted-foreground leading-relaxed">
