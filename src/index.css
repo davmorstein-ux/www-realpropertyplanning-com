@@ -904,9 +904,9 @@ html, body {
   .premium-tile[data-tile-name="paying-for-senior-living"] h3 {
     margin-top: 2.25rem !important;
   }
-  /* Paying for Senior Living: icon vertical position 35%, reduced 10% */
+  /* Paying for Senior Living: icon vertical position 50% */
   .premium-tile[data-tile-name="paying-for-senior-living"] .tile-icon {
-    transform: scale(1) translateY(35%) !important;
+    transform: scale(1) translateY(50%) !important;
   }
   /* Senior Home Sales: nudge text down by 8 nudges total (increased by 2) */
   .premium-tile[data-tile-name="senior-transitions"] h3 {
