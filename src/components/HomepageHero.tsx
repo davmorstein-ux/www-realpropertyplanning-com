@@ -31,7 +31,7 @@ const HomepageHero = () => {
         </h1>
 
         {/* Warm subheading */}
-        <p className="tracking-[0.04em] leading-relaxed mb-8 pb-2 font-semibold text-[18px] md:text-[22px] max-w-2xl" style={{ color: "#ffffff" }}>
+        <p className="hero-bright-subheading tracking-[0.04em] leading-relaxed mb-8 pb-2 font-semibold text-[18px] md:text-[22px] max-w-2xl">
           Connecting families and professionals, when it matters most.
         </p>
 
