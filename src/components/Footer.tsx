@@ -35,24 +35,24 @@ const Footer = () => {
             </p>
             <div className="flex flex-col gap-0.5 text-base">
               <a href="tel:2069003015" className="text-primary-foreground/70 hover:text-gold transition-colors flex items-center gap-1.5">
-                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0"  loading="lazy"/>
+                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0" loading="lazy"/>
                 (206) 900-3015
               </a>
               <a href="mailto:info@realpropertyplanning.com" className="text-primary-foreground/70 hover:text-gold transition-colors flex items-center gap-1.5">
-                <img src={iconEmail3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0"  loading="lazy"/>
+                <img src={iconEmail3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0" loading="lazy"/>
                 info@realpropertyplanning.com
               </a>
               <div className="text-primary-foreground/70 flex items-start gap-1.5 mt-0.5">
-                <img src={mappin3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain mt-0.5 shrink-0"  loading="lazy"/>
+                <img src={mappin3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain mt-0.5 shrink-0" loading="lazy"/>
                 <span>Mailing: PO Box 1462, Woodinville, WA 98072</span>
               </div>
               <div className="text-primary-foreground/70 flex items-start gap-1.5">
-                <img src={mappin3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain mt-0.5 shrink-0"  loading="lazy"/>
+                <img src={mappin3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain mt-0.5 shrink-0" loading="lazy"/>
                 <span>Office: 1455 NW Leary Way, Seattle, WA 98107</span>
               </div>
             </div>
           </div>
-          
+
           {/* Services */}
           <div>
             <h3 className="text-primary-foreground font-serif text-lg font-semibold mb-2">Services</h3>
@@ -69,7 +69,7 @@ const Footer = () => {
               <li><Link to="/faq" className="hover:text-gold transition-colors">FAQs</Link></li>
             </ul>
           </div>
-          
+
           {/* Resources */}
           <div>
             <h3 className="text-primary-foreground font-serif text-lg font-semibold mb-2">Resources</h3>
@@ -83,13 +83,13 @@ const Footer = () => {
               <li><Link to="/professionals" className="hover:text-gold transition-colors">Professional Resources</Link></li>
             </ul>
           </div>
-          
+
           {/* Service Areas */}
           <div>
             <h3 className="text-primary-foreground font-serif text-lg font-semibold mb-2">Service Areas</h3>
             <ul className="space-y-0.5 text-primary-foreground/70 text-base">
               <li className="flex items-start gap-2">
-                <img src={mappin3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain mt-0.5 shrink-0"  loading="lazy"/>
+                <img src={mappin3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain mt-0.5 shrink-0" loading="lazy"/>
                 <span>Serving clients throughout Washington State, with a strong focus in Western Washington and the Puget Sound region</span>
               </li>
               <li><Link to="/king-county" className="hover:text-gold transition-colors">Probate &amp; estate real estate in King County</Link></li>
@@ -106,25 +106,25 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        
+
         {/* Disclaimer */}
         <div className="footer-divider mb-0" />
         <div className="pt-8 mb-6" data-nosnippet="true">
-           <p className="text-primary-foreground/70 text-base leading-relaxed max-w-4xl">
+          <p className="text-primary-foreground/70 text-base leading-relaxed max-w-4xl">
             Real Property Planning provides real estate brokerage and valuation-related guidance grounded in deep regional experience as a licensed professional real estate brokerage and Washington State certified residential appraisal practice. Legal, tax, and probate-specific advice should be obtained from qualified legal and tax professionals.
           </p>
           <p className="text-primary-foreground/70 text-base leading-relaxed max-w-4xl mt-3">
             Real Property Planning is a licensed real estate brokerage in the State of Washington and a Washington State certified residential appraisal practice. Real Property Planning is not a law firm, accounting firm, or tax advisor and does not provide legal, tax, or accounting advice.
           </p>
         </div>
-        
+
         {/* Professional Affiliations */}
         <div className="footer-divider mb-0" />
         <div className="pt-8 pb-6 flex flex-col items-center">
           <h3 className="text-primary-foreground font-serif font-bold mb-5 text-3xl">Professional Memberships &amp; Affiliations</h3>
-          <div className="flex justify-center gap-8">
+          <div className="flex justify-center gap-4">
             {/* Left column: ALCA + Senior Advocates */}
-            <div className="flex flex-col items-center gap-6 w-[320px]">
+            <div className="flex flex-col items-center gap-4 w-[320px]">
               <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer">
                 <img
                   src={alcaLogo}
@@ -143,7 +143,7 @@ const Footer = () => {
               </a>
             </div>
             {/* Right column: NAEPC + King County Collaborative Law */}
-            <div className="flex flex-col items-center gap-6 w-[480px]">
+            <div className="flex flex-col items-center gap-4 w-[480px]">
               <a href="https://www.naepc.org" target="_blank" rel="noopener noreferrer">
                 <img
                   src={naepcLogo}
@@ -179,9 +179,9 @@ const Footer = () => {
         {/* Brokerage Compliance */}
         <div className="footer-divider mb-0" />
         <div className="pt-10 pb-2 flex flex-col items-center">
-          <img 
-            src={expRealtyLogo} 
-            alt="eXp Realty — license held under eXp Realty (real estate license disclosure)" 
+          <img
+            src={expRealtyLogo}
+            alt="eXp Realty — license held under eXp Realty (real estate license disclosure)"
             className="w-[95px] md:w-[120px] h-auto mb-4"
             loading="lazy"
           />
