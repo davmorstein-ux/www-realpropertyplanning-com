@@ -122,40 +122,45 @@ const Footer = () => {
         <div className="footer-divider mb-0" />
         <div className="pt-8 pb-6 flex flex-col items-center">
           <h3 className="text-primary-foreground font-serif text-[28px] font-bold mb-5">Professional Memberships &amp; Affiliations</h3>
-          <div className="flex flex-wrap justify-center items-center" style={{ gap: '40px' }}>
-            <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer">
-              <img
-                src={alcaLogo}
-                alt="Aging Life Care Association Corporate Partner"
-                className="w-auto object-contain max-h-[140px]"
-                loading="lazy"
-              />
-            </a>
-            <a href="https://www.naepc.org" target="_blank" rel="noopener noreferrer">
-              <img
-                src={naepcLogo}
-                alt="National Association of Estate Planners & Councils"
-                className="w-auto object-contain max-h-[140px]"
-                loading="lazy"
-              />
-            </a>
-            <a href="https://www.kingcountycollaborativelaw.org" target="_blank" rel="noopener noreferrer">
-              <img
-                src={kccLogo}
-                alt="Friends of King County Collaborative Law"
-                className="w-auto object-contain max-h-[140px]"
-                style={{ width: '470px', maxWidth: '100%' }}
-                loading="lazy"
-              />
-            </a>
-            <a href="https://www.naosa.org" target="_blank" rel="noopener noreferrer">
-              <img
-                src={naosaBadge}
-                alt="National Association of Senior Advocates - Best Real Estate Agent 2026"
-                className="w-auto object-contain max-h-[240px]"
-                loading="lazy"
-              />
-            </a>
+          <div className="grid grid-cols-2 gap-6 max-w-[900px] mx-auto">
+            {/* Left column: ALCA + Senior Advocates */}
+            <div className="flex flex-col items-center gap-6">
+              <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer">
+                <img
+                  src={alcaLogo}
+                  alt="Aging Life Care Association Corporate Partner"
+                  className="w-auto object-contain max-h-[140px]"
+                  loading="lazy"
+                />
+              </a>
+              <a href="https://www.naosa.org" target="_blank" rel="noopener noreferrer">
+                <img
+                  src={naosaBadge}
+                  alt="National Association of Senior Advocates - Best Real Estate Agent 2026"
+                  className="w-auto object-contain max-h-[200px]"
+                  loading="lazy"
+                />
+              </a>
+            </div>
+            {/* Right column: NAEPC + King County Collaborative Law */}
+            <div className="flex flex-col items-center gap-6">
+              <a href="https://www.naepc.org" target="_blank" rel="noopener noreferrer">
+                <img
+                  src={naepcLogo}
+                  alt="National Association of Estate Planners & Councils"
+                  className="w-full object-contain max-h-[140px]"
+                  loading="lazy"
+                />
+              </a>
+              <a href="https://www.kingcountycollaborativelaw.org" target="_blank" rel="noopener noreferrer">
+                <img
+                  src={kccLogo}
+                  alt="Friends of King County Collaborative Law"
+                  className="w-full object-contain max-h-[140px]"
+                  loading="lazy"
+                />
+              </a>
+            </div>
           </div>
         </div>
 
