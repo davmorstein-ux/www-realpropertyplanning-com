@@ -1157,6 +1157,9 @@ html, body {
   .premium-tile h3.mobile-text-small[data-tile-id="financial-planning"] {
     font-size: 0.7rem !important;
   }
+  .premium-tile h3.mobile-text-small[data-tile-id="lending"] {
+    font-size: 0.7rem !important;
+  }
   .premium-tile .tile-label-tight[data-tile-id="home-values"] {
     margin-top: -0.25rem !important;
     font-size: 0.95rem !important;
