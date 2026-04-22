@@ -174,7 +174,7 @@ const Index = () => {
       <section className="py-12 lg:py-16 bg-cream">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-3">
+            <h2 className="font-serif text-2xl md:text-3xl text-red-900 font-semibold mb-3">
               Not sure where to start?
             </h2>
             <p className="text-muted-foreground text-lg mb-6">
