@@ -6,6 +6,7 @@ import expRealtyLogo from "@/assets/exp-realty-real-estate-logo-washington.webp"
 import alcaLogo from "@/assets/senior-advocates-alca-partner-washington.webp";
 import naosaBadge from "@/assets/senior-advocates-naosa-badge-washington.webp";
 import naepcLogo from "@/assets/estate-planners-naepc-badge-washington.webp";
+import kccLogo from "@/assets/king-county-collaborative-law-logo.webp";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 
 const Footer = () => {
@@ -121,7 +122,7 @@ const Footer = () => {
         <div className="footer-divider mb-0" />
         <div className="pt-8 pb-6 flex flex-col items-center">
           <h3 className="text-primary-foreground font-serif text-[28px] font-bold mb-5">Professional Memberships &amp; Affiliations</h3>
-          <div className="flex justify-center items-center" style={{ gap: '40px' }}>
+          <div className="flex flex-wrap justify-center items-center" style={{ gap: '40px' }}>
             <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer">
               <img
                 src={alcaLogo}
@@ -143,6 +144,14 @@ const Footer = () => {
                 src={naosaBadge}
                 alt="National Association of Senior Advocates - Best Real Estate Agent 2026"
                 className="w-auto object-contain max-h-[240px]"
+                loading="lazy"
+              />
+            </a>
+            <a href="https://www.kingcountycollaborativelaw.org" target="_blank" rel="noopener noreferrer">
+              <img
+                src={kccLogo}
+                alt="Friends of King County Collaborative Law"
+                className="w-auto object-contain max-h-[100px]"
                 loading="lazy"
               />
             </a>
