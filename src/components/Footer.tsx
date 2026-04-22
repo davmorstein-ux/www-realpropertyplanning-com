@@ -124,7 +124,7 @@ const Footer = () => {
           <h3 className="text-primary-foreground font-serif text-[28px] font-bold mb-5">Professional Memberships &amp; Affiliations</h3>
           <div className="flex justify-center gap-8">
             {/* Left column: ALCA + Senior Advocates */}
-            <div className="flex flex-col items-center gap-6 w-[260px]">
+            <div className="flex flex-col items-center gap-6 w-[320px]">
               <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer">
                 <img
                   src={alcaLogo}
