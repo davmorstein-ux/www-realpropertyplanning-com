@@ -26,7 +26,7 @@ const HomepageHero = () => {
         </div>
 
         {/* H1 — static, calm, immediately readable */}
-        <h1 className="font-sans text-[18px] md:text-[22px] font-bold tracking-[0.04em] leading-relaxed mb-3 text-white pt-6 max-w-3xl">
+        <h1 className="font-sans text-[18px] font-bold tracking-[0.04em] leading-relaxed mb-3 text-white pt-6 max-w-3xl md:text-sm">
           Washington's Professional Hub for Seniors, Families &amp; Estate Transitions
         </h1>
 
