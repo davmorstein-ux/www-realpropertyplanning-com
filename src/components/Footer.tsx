@@ -122,7 +122,7 @@ const Footer = () => {
         <div className="footer-divider mb-0" />
         <div className="pt-8 pb-6 flex flex-col items-center">
           <h3 className="text-primary-foreground font-serif text-[28px] font-bold mb-5">Professional Memberships &amp; Affiliations</h3>
-          <div className="grid grid-cols-2 gap-6 max-w-[900px] mx-auto">
+          <div className="grid grid-cols-2 gap-2 mx-auto">
             {/* Left column: ALCA + Senior Advocates */}
             <div className="flex flex-col items-center gap-6">
               <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer">
