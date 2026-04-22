@@ -5,7 +5,7 @@ const HomepageWarmStatement = () => {
     <section className="py-16 lg:py-24 bg-cream">
       <div className="container px-6 lg:px-8">
         <div className="max-w-[680px] mx-auto text-center">
-          <h2 className="font-serif text-4xl text-foreground font-semibold mb-8">
+          <h2 className="font-serif text-foreground mb-8 font-bold text-xl">
             This Is More Than a Real Estate Transaction
           </h2>
           <p className="text-xl text-muted-foreground leading-relaxed mb-6">
@@ -17,7 +17,7 @@ const HomepageWarmStatement = () => {
 
           {/* Pullquote */}
           <div className="bg-card border-l-4 border-gold rounded-lg p-8 mb-10 text-left">
-            <p className="font-serif leading-relaxed mb-3 text-[#1f2937] opacity-100 not-italic text-4xl">
+            <p className="font-serif leading-relaxed mb-3 opacity-100 not-italic text-slate-800 font-bold text-3xl">
               "We don't just sell homes. We help families move forward."
             </p>
             <p className="text-muted-foreground text-base">
