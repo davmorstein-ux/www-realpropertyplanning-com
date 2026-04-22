@@ -1128,8 +1128,26 @@ html, body {
 }
 
 /* ═══════════════════════════════════════════════
-   SECTION EYEBROW LABEL
+   MOBILE TILE LABEL STANDARDIZATION (≤767px)
+   Reference: "Senior Living" font-size; "Senior Move Managers" line-spacing
 ═══════════════════════════════════════════════ */
+@media (max-width: 767px) {
+  /* All tile labels: same font-size, same vertical position */
+  .premium-tile h3.tile-label,
+  .premium-tile h3.tile-label-tight {
+    font-size: 0.8rem !important;
+    margin-top: -0.45rem !important;
+    letter-spacing: -0.01em !important;
+  }
+  /* Two-line tile labels: tight line spacing matching "Senior Move Managers" */
+  .premium-tile h3.tile-label-tight {
+    line-height: 0.82 !important;
+  }
+  /* Single-line tile labels */
+  .premium-tile h3.tile-label:not(.tile-label-tight) {
+    line-height: 1.15 !important;
+  }
+}
 .section-eyebrow {
   @apply text-gold font-bold tracking-[0.18em] uppercase text-base mb-3;
 }
