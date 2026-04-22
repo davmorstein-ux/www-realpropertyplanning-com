@@ -363,9 +363,9 @@ const SmartSearchBar = ({ pillsOnly, searchOnly }: SmartSearchBarProps) => {
         onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); handleSubmit(); } }}
         placeholder="Search…"
         rows={1}
-        className="flex-1 bg-transparent border-none outline-none py-4 px-4 text-base lg:text-lg text-foreground placeholder:text-muted-foreground/60 font-sans resize-none overflow-hidden search-textarea-mobile"
+        className="flex-1 bg-transparent border-none outline-none py-4 px-4 text-[18px] lg:text-[19px] text-foreground placeholder:text-muted-foreground/70 font-sans resize-none overflow-hidden search-textarea-mobile"
         aria-label="Search for help"
-        style={{ lineHeight: '1.4' }}
+        style={{ lineHeight: '1.5' }}
       />
       <button onClick={toggleVoice} aria-label={isListening ? "Stop listening" : supportsVoice ? "Use voice input" : "Voice input not supported"}
         className={cn("flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center mr-1.5 transition-all duration-200",
