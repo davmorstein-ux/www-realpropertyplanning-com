@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <footer data-nosnippet="true" className="bg-navy-dark py-16">
       <div className="container px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {/* Brand & NAP */}
           <div className="lg:col-span-1">
             <Link to="/" className="block mb-4">
@@ -21,19 +21,19 @@ const Footer = () => {
                 Real Property Planning
               </span>
             </Link>
-            <p className="text-primary-foreground/80 text-sm font-medium leading-snug mb-1">
+            <p className="text-primary-foreground/80 text-sm font-medium leading-tight mb-0.5">
               Real Property Planning
             </p>
-            <p className="text-primary-foreground/70 text-sm leading-snug mb-0.5">
+            <p className="text-primary-foreground/70 text-sm leading-tight mb-0.5">
               Washington State Licensed Real Estate Broker — License held under eXp Realty
             </p>
-            <p className="text-primary-foreground/70 text-sm leading-snug mb-0.5">
+            <p className="text-primary-foreground/70 text-sm leading-tight mb-0.5">
               Washington State Certified Residential Appraiser — Stein Appraisal
             </p>
-            <p className="text-primary-foreground/70 text-sm leading-snug mb-1">
+            <p className="text-primary-foreground/70 text-sm leading-tight mb-0.5">
               Specializing in probate, estate, inherited property &amp; senior transition real estate
             </p>
-            <div className="flex flex-col gap-1 text-base">
+            <div className="flex flex-col gap-0.5 text-base">
               <a href="tel:2069003015" className="text-primary-foreground/70 hover:text-gold transition-colors flex items-center gap-1.5">
                 <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0"  loading="lazy"/>
                 (206) 900-3015
@@ -55,8 +55,8 @@ const Footer = () => {
           
           {/* Services */}
           <div>
-            <h3 className="text-primary-foreground font-serif text-lg font-semibold mb-5">Services</h3>
-            <ul className="space-y-1 text-primary-foreground/70 text-base">
+            <h3 className="text-primary-foreground font-serif text-lg font-semibold mb-2">Services</h3>
+            <ul className="space-y-0.5 text-primary-foreground/70 text-base">
               <li><Link to="/probate-estate-sales" className="hover:text-gold transition-colors">Probate &amp; Estate Sales</Link></li>
               <li><Link to="/executors" className="hover:text-gold transition-colors">Help for Executors</Link></li>
               <li><Link to="/senior-transitions" className="hover:text-gold transition-colors">Senior Transitions</Link></li>
@@ -72,8 +72,8 @@ const Footer = () => {
           
           {/* Resources */}
           <div>
-            <h3 className="text-primary-foreground font-serif text-lg font-semibold mb-5">Resources</h3>
-            <ul className="space-y-1 text-primary-foreground/70 text-base">
+            <h3 className="text-primary-foreground font-serif text-lg font-semibold mb-2">Resources</h3>
+            <ul className="space-y-0.5 text-primary-foreground/70 text-base">
               <li><Link to="/about" className="hover:text-gold transition-colors">About Real Property Planning</Link></li>
               <li><Link to="/how-we-work" className="hover:text-gold transition-colors">How We Work</Link></li>
               <li><Link to="/attorney-referral" className="hover:text-gold transition-colors">Referral Resource</Link></li>
@@ -86,8 +86,8 @@ const Footer = () => {
           
           {/* Service Areas */}
           <div>
-            <h3 className="text-primary-foreground font-serif text-lg font-semibold mb-5">Service Areas</h3>
-            <ul className="space-y-1 text-primary-foreground/70 text-base">
+            <h3 className="text-primary-foreground font-serif text-lg font-semibold mb-2">Service Areas</h3>
+            <ul className="space-y-0.5 text-primary-foreground/70 text-base">
               <li className="flex items-start gap-2">
                 <img src={mappin3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain mt-0.5 shrink-0"  loading="lazy"/>
                 <span>Serving clients throughout Washington State, with a strong focus in Western Washington and the Puget Sound region</span>
