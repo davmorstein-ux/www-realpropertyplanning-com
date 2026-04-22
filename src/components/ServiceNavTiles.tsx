@@ -26,7 +26,7 @@ const ServiceNavTiles = () => {
           <div key={category.label} className="mb-20 last:mb-0">
             <div className="mx-auto max-w-[1200px] mb-10 mt-8">
               <div className="bg-navy rounded-lg px-6 py-3">
-                <h3 className="text-center text-xl sm:text-2xl lg:text-[1.75rem] font-bold text-primary-foreground tracking-[0.12em] uppercase leading-none">
+                <h3 className="text-center text-xl sm:text-2xl font-bold text-primary-foreground tracking-[0.12em] uppercase leading-none lg:text-3xl">
                   {category.label}
                 </h3>
               </div>
