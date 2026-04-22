@@ -143,7 +143,8 @@ const Footer = () => {
               <img
                 src={kccLogo}
                 alt="Friends of King County Collaborative Law"
-                className="w-auto object-contain max-h-[100px]"
+                className="w-auto object-contain max-h-[140px]"
+                style={{ width: '470px', maxWidth: '100%' }}
                 loading="lazy"
               />
             </a>
