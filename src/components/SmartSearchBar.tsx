@@ -363,7 +363,7 @@ const SmartSearchBar = ({ pillsOnly, searchOnly }: SmartSearchBarProps) => {
         onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); handleSubmit(); } }}
         placeholder="Search…"
         rows={1}
-        className="flex-1 bg-transparent border-none outline-none py-4 px-4 text-[18px] lg:text-[19px] text-foreground placeholder:text-muted-foreground/70 font-sans resize-none overflow-hidden search-textarea-mobile"
+        className="flex-1 bg-transparent border-none outline-none py-4 px-4 text-[18px] lg:text-[19px] text-foreground placeholder:text-muted-foreground/70 font-sans font-bold placeholder:font-bold resize-none overflow-hidden search-textarea-mobile"
         aria-label="Search for help"
         style={{ lineHeight: '1.5' }}
       />
@@ -410,7 +410,7 @@ const SmartSearchBar = ({ pillsOnly, searchOnly }: SmartSearchBarProps) => {
               onClick={() => handlePromptClick(prompt.label)}
               className="premium-pill-3d homepage-pill focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 w-full"
             >
-              <span className="premium-pill-3d__face homepage-pill__face w-full justify-center font-semibold">
+              <span className="premium-pill-3d__face homepage-pill__face w-full justify-center font-bold">
                 {prompt.label}
               </span>
             </button>
