@@ -839,9 +839,9 @@ html, body {
   .premium-tile[data-tile-name="senior-moves"] .tile-icon {
     transform: scale(1.1) translateY(30%) !important;
   }
-  /* Senior Moves: increased text size (reduced by one) */
+  /* Senior Moves: reduced font size one more */
   .premium-tile:has(.service-nav-tile-mobile-hitbox[href="/senior-move-managers"]) h3 {
-    font-size: 1.15rem !important;
+    font-size: 1.0rem !important;
   }
   /* Appraiser: raise icon more */
   .premium-tile[data-tile-name="appraiser"] .tile-icon {
