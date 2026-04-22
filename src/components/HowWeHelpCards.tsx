@@ -26,7 +26,7 @@ const cards = [
     iconSrc: estateAppraisalsIcon,
     iconAlt: "Estate appraisal document icon — certified residential appraisals for probate and trusts",
     iconSize: "w-[240px] h-[168px]",
-    headline: "Estate & Trust Appraisals",
+    headline: "Estate & Trust\nAppraisals",
     description: "As a Washington State Certified Residential Appraiser, Real Property Planning provides condition-adjusted, defensible valuations for probate, trust administration, estate settlements, and financial planning purposes — the kind of analysis that holds up when attorneys, courts, and family members ask questions.",
     link: "/real-estate-appraiser",
     proLink: { label: "See all professional resources →", href: "/professionals" },
@@ -54,7 +54,7 @@ const HowWeHelpCards = () => {
                   loading="lazy"
                 />
               </div>
-              <h3 className="font-serif font-bold text-red-900 mb-3 text-center text-xl">
+              <h3 className="font-serif font-bold text-red-900 mb-3 text-center text-xl whitespace-pre-line">
                 {card.headline}
               </h3>
               <p className="text-muted-foreground text-lg leading-relaxed mb-4 flex-1">
