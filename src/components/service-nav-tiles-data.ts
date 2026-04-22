@@ -56,7 +56,7 @@ export const tileCategories: TileCategory[] = [
       { title: "Mortgage\nLending", subtitle: "", href: "/lenders-and-financing-specialists", iconSrc: iconLending, labelSpacing: "tight", contentOffsetY: "1.2%", mobileContentOffsetY: "-2%", mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "14%" },
       { title: "Estate\nLiquidation", subtitle: "", href: "/estate-liquidation", iconSrc: iconEstateLiquidation, labelSpacing: "tight", mobileTextDown: true, mobileIconDown: true },
       { title: "Realtor", subtitle: "", href: "/realtor", iconSrc: iconRealtor, contentOffsetY: "-0.5%", mobileContentOffsetY: "0.5%", iconOffsetY: "25%", iconScale: 1.1, mobileTextDown: true, mobileIconDown: true },
-      { title: "Real Estate\nAppraiser", subtitle: "", href: "/real-estate-appraiser", iconSrc: iconAppraiser, labelSpacing: "tight", mobileTextDown: true, mobileIconDown: true, iconScale: 1.21, textOffsetY: "20px", mobileSmallText: true },
+      { title: "Real Estate\nAppraiser", subtitle: "", href: "/real-estate-appraiser", iconSrc: iconAppraiser, labelSpacing: "tight", mobileTextDown: true, mobileIconDown: true, iconScale: 1.21, textOffsetY: "20px", mobileSmallText: true, mobileTextOffsetY: "3%" },
       { title: "Senior Living", subtitle: "", href: "/senior-living-and-relocation", iconSrc: iconSeniorLiving, mobileTextDown: true, mobileIconDown: true, mobileSmallText: true },
       { title: "Senior Move\nManagers", subtitle: "", href: "/senior-move-managers", iconSrc: iconSeniorMoves, labelSpacing: "tight", iconOffsetY: "4%", mobileContentOffsetY: "-2%", mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "10%", mobileSmallText: true },
     ],
