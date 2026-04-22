@@ -121,7 +121,7 @@ const Footer = () => {
         {/* Professional Affiliations */}
         <div className="footer-divider mb-0" />
         <div className="pt-8 pb-6 flex flex-col items-center">
-          <h3 className="text-primary-foreground font-serif font-bold mb-5 text-2xl">Professional Memberships &amp; Affiliations</h3>
+          <h3 className="text-primary-foreground font-serif font-bold mb-5 text-3xl">Professional Memberships &amp; Affiliations</h3>
           <div className="flex justify-center gap-8">
             {/* Left column: ALCA + Senior Advocates */}
             <div className="flex flex-col items-center gap-6 w-[320px]">
