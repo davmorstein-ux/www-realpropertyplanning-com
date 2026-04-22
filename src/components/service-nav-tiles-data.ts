@@ -81,7 +81,7 @@ export const tileCategories: TileCategory[] = [
       { title: "Senior\nHome Sales", subtitle: "", href: "/senior-transitions", iconSrc: iconFundSeniorLiving, labelSpacing: "tight", iconOffsetY: "4%", iconScale: 1.05, mobileContentOffsetY: "3%", mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "-10%", mobileSmallText: true, mobileTextOffsetY: "0.6rem" },
       { title: "Paying for\nSenior Living", subtitle: "", href: "/sell-house-fund-senior-living", iconSrc: iconPayingForSeniorLiving, labelSpacing: "tight", iconOffsetY: "-4%", iconScale: 0.7, mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "-22%", mobileContentOffsetY: "11%", mobileSmallText: true },
       { title: "Service Areas", subtitle: "", href: "/counties", iconSrc: iconServiceAreas, iconOffsetY: "4%", iconScale: 1.1, mobileTextDown: true, mobileIconDown: true },
-      { title: "Guides &\nResources", subtitle: "", href: "/guides-and-resources", iconSrc: iconResources, labelSpacing: "tight", iconOffsetY: "12%", mobileTextDown: true, mobileIconDown: true },
+      { title: "Guides &\nResources", subtitle: "", href: "/guides-and-resources", iconSrc: iconResources, labelSpacing: "tight", iconOffsetY: "12%", mobileTextDown: true, mobileIconDown: true, mobileSmallText: true },
     ],
   },
 ];
