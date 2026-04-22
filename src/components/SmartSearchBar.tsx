@@ -355,7 +355,22 @@ const SmartSearchBar = ({ pillsOnly, searchOnly }: SmartSearchBarProps) => {
       className="relative flex items-center rounded-full border-2 border-border bg-card transition-all duration-200 focus-within:border-gold focus-within:ring-2 focus-within:ring-gold/20 sm:rounded-full rounded-[1.5rem]"
       style={{ boxShadow: "0 4px 20px -4px hsl(220 35% 15% / 0.08), inset 0 1px 0 hsl(0 0% 100% / 0.7)" }}
     >
-      <Search className="ml-5 w-5 h-5 text-muted-foreground flex-shrink-0 self-center" />
+      <span
+        className="ml-4 flex-shrink-0 self-center inline-flex items-center justify-center w-9 h-9 rounded-full"
+        style={{
+          background: "linear-gradient(180deg, #ffffff 0%, #e9ecf2 100%)",
+          boxShadow:
+            "inset 0 1px 0 rgba(255,255,255,0.9), inset 0 -1px 2px rgba(20,30,55,0.12), 0 1px 2px rgba(20,30,55,0.18), 0 2px 6px rgba(20,30,55,0.10)",
+          border: "1px solid rgba(20,30,55,0.10)",
+        }}
+        aria-hidden="true"
+      >
+        <Search
+          className="w-[18px] h-[18px] text-navy"
+          strokeWidth={2.5}
+          style={{ filter: "drop-shadow(0 1px 0 rgba(255,255,255,0.85)) drop-shadow(0 1px 1px rgba(20,30,55,0.25))" }}
+        />
+      </span>
       <textarea
         ref={inputRef}
         value={query}
