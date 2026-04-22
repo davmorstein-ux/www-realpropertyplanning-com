@@ -47,11 +47,14 @@ const HomepageFAQ = () => {
                 value={`faq-${i}`}
                 className="bg-card border border-border rounded-2xl overflow-hidden data-[state=open]:border-gold/25 transition-colors"
               >
-                <AccordionTrigger className="text-left font-serif text-[20px] md:text-[24px] leading-snug font-semibold text-foreground hover:text-gold hover:no-underline px-6 py-6 min-h-[60px]">
+                <AccordionTrigger
+                  className="text-left font-serif font-semibold text-foreground hover:text-gold hover:no-underline px-6 py-6 min-h-[64px]"
+                  style={{ fontSize: "23px", lineHeight: 1.35 }}
+                >
                   {faq.q}
                 </AccordionTrigger>
-                <AccordionContent className="px-6 pb-6 pt-0 text-foreground/80 text-[18px] md:text-[19px] leading-[1.7]">
-                  {faq.a}
+                <AccordionContent className="px-6 pb-6 pt-0 text-foreground/85">
+                  <div style={{ fontSize: "19px", lineHeight: 1.7 }}>{faq.a}</div>
                 </AccordionContent>
               </AccordionItem>
             ))}
