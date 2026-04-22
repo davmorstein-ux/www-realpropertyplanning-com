@@ -30,23 +30,23 @@ const Footer = () => {
             <p className="text-primary-foreground/70 text-sm leading-snug mb-0.5">
               Washington State Certified Residential Appraiser — Stein Appraisal
             </p>
-            <p className="text-primary-foreground/70 text-sm leading-snug mb-2">
+            <p className="text-primary-foreground/70 text-sm leading-snug mb-1">
               Specializing in probate, estate, inherited property &amp; senior transition real estate
             </p>
-            <div className="flex flex-col gap-2 text-base">
-              <a href="tel:2069003015" className="text-primary-foreground/70 hover:text-gold transition-colors flex items-center gap-2">
+            <div className="flex flex-col gap-1 text-base">
+              <a href="tel:2069003015" className="text-primary-foreground/70 hover:text-gold transition-colors flex items-center gap-1.5">
                 <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0"  loading="lazy"/>
                 (206) 900-3015
               </a>
-              <a href="mailto:info@realpropertyplanning.com" className="text-primary-foreground/70 hover:text-gold transition-colors flex items-center gap-2">
+              <a href="mailto:info@realpropertyplanning.com" className="text-primary-foreground/70 hover:text-gold transition-colors flex items-center gap-1.5">
                 <img src={iconEmail3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0"  loading="lazy"/>
                 info@realpropertyplanning.com
               </a>
-              <div className="text-primary-foreground/70 flex items-start gap-2 mt-1">
+              <div className="text-primary-foreground/70 flex items-start gap-1.5 mt-0.5">
                 <img src={mappin3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain mt-0.5 shrink-0"  loading="lazy"/>
                 <span>Mailing: PO Box 1462, Woodinville, WA 98072</span>
               </div>
-              <div className="text-primary-foreground/70 flex items-start gap-2">
+              <div className="text-primary-foreground/70 flex items-start gap-1.5">
                 <img src={mappin3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain mt-0.5 shrink-0"  loading="lazy"/>
                 <span>Office: 1455 NW Leary Way, Seattle, WA 98107</span>
               </div>
@@ -56,7 +56,7 @@ const Footer = () => {
           {/* Services */}
           <div>
             <h3 className="text-primary-foreground font-serif text-lg font-semibold mb-5">Services</h3>
-            <ul className="space-y-3 text-primary-foreground/70 text-base">
+            <ul className="space-y-1 text-primary-foreground/70 text-base">
               <li><Link to="/probate-estate-sales" className="hover:text-gold transition-colors">Probate &amp; Estate Sales</Link></li>
               <li><Link to="/executors" className="hover:text-gold transition-colors">Help for Executors</Link></li>
               <li><Link to="/senior-transitions" className="hover:text-gold transition-colors">Senior Transitions</Link></li>
@@ -73,7 +73,7 @@ const Footer = () => {
           {/* Resources */}
           <div>
             <h3 className="text-primary-foreground font-serif text-lg font-semibold mb-5">Resources</h3>
-            <ul className="space-y-3 text-primary-foreground/70 text-base">
+            <ul className="space-y-1 text-primary-foreground/70 text-base">
               <li><Link to="/about" className="hover:text-gold transition-colors">About Real Property Planning</Link></li>
               <li><Link to="/how-we-work" className="hover:text-gold transition-colors">How We Work</Link></li>
               <li><Link to="/attorney-referral" className="hover:text-gold transition-colors">Referral Resource</Link></li>
@@ -87,7 +87,7 @@ const Footer = () => {
           {/* Service Areas */}
           <div>
             <h3 className="text-primary-foreground font-serif text-lg font-semibold mb-5">Service Areas</h3>
-            <ul className="space-y-3 text-primary-foreground/70 text-base">
+            <ul className="space-y-1 text-primary-foreground/70 text-base">
               <li className="flex items-start gap-2">
                 <img src={mappin3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain mt-0.5 shrink-0"  loading="lazy"/>
                 <span>Serving clients throughout Washington State, with a strong focus in Western Washington and the Puget Sound region</span>
