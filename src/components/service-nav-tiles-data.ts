@@ -51,7 +51,7 @@ export const tileCategories: TileCategory[] = [
     label: "Professionals & Services",
     tiles: [
       { title: "Attorneys", subtitle: "", href: "/for-attorneys", iconSrc: iconAttorneys, mobileTextDown: true, mobileIconDown: true, textOffsetY: "6px", mobileSmallText: true },
-      { title: "CPAs", subtitle: "", href: "/for-cpas", iconSrc: iconCpas, iconOffsetY: "-4%", mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "12%" },
+      { title: "CPAs", subtitle: "", href: "/for-cpas", iconSrc: iconCpas, iconOffsetY: "-4%", mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "12%", mobileSmallText: true },
       { title: "Financial\nPlanning", subtitle: "", href: "/for-financial-planners", iconSrc: iconFinancialPlanning, labelSpacing: "tight", iconOffsetY: "4%", mobileContentOffsetY: "-2%", mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "14%", mobileSmallText: true },
       { title: "Mortgage\nLending", subtitle: "", href: "/lenders-and-financing-specialists", iconSrc: iconLending, labelSpacing: "tight", contentOffsetY: "1.2%", mobileContentOffsetY: "-2%", mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "14%", mobileSmallText: true },
       { title: "Estate\nLiquidation", subtitle: "", href: "/estate-liquidation", iconSrc: iconEstateLiquidation, labelSpacing: "tight", mobileTextDown: true, mobileIconDown: true, mobileSmallText: true },
