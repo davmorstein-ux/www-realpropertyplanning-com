@@ -25,8 +25,11 @@ const ServiceNavTiles = () => {
         {tileCategories.map((category) => (
           <div key={category.label} className="mb-20 last:mb-0">
             <div className="mx-auto max-w-[1200px] mb-10 mt-8">
-              <div className="bg-navy rounded-lg px-6 py-5">
-                <h3 className="text-center text-4xl sm:text-5xl lg:text-[5.5rem] text-primary-foreground tracking-[0.12em] uppercase leading-none font-bold">
+              <div className="bg-navy rounded-lg px-6 py-4">
+                <h3
+                  className="text-center text-primary-foreground tracking-[0.12em] uppercase leading-none font-bold"
+                  style={{ fontSize: "clamp(2rem, 4vw, 4.5rem)" }}
+                >
                   {category.label}
                 </h3>
               </div>
