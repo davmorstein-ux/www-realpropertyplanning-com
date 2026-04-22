@@ -27,7 +27,7 @@ const HomepageWarmStatement = () => {
 
           <Link to="/contact">
             <button className="inline-flex items-center justify-center h-[54px] px-10 rounded-lg bg-gold text-primary font-bold text-lg shadow-md hover:brightness-110 transition-all">
-              Contact
+              Contact Us Now
             </button>
           </Link>
         </div>
