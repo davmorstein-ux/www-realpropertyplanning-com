@@ -1130,6 +1130,12 @@ html, body {
     margin-top: 0.3rem !important;
     font-size: 0.95rem !important;
   }
+  .premium-tile h3.mobile-text-small[data-tile-id="senior-transitions"] {
+    font-size: 0.7rem !important;
+  }
+  .premium-tile h3.mobile-text-xsmall[data-tile-id="senior-transitions"] {
+    font-size: 0.6rem !important;
+  }
   .premium-tile .tile-label-tight[data-tile-id="guides-resources"] {
     font-size: 0.95rem !important;
   }
