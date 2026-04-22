@@ -762,6 +762,9 @@ html, body {
   .premium-tile h3.mobile-text-small {
     font-size: 0.7rem !important;
   }
+  .premium-tile h3.mobile-text-xsmall {
+    font-size: 0.6rem !important;
+  }
   .premium-tile .mobile-icon-down {
     margin-top: var(--mobile-icon-mt, 4%) !important;
   }
