@@ -923,9 +923,9 @@ html, body {
   .premium-tile h3[data-tile-id="realtor"] {
     margin-top: 0.15rem !important;
   }
-  /* Probate Terms: nudge icon up, vertical position -5% */
+  /* Probate Terms: nudge icon up, vertical position -10% */
   .premium-tile[data-tile-name="probate-terms"] .tile-icon {
-    transform: scale(1.1) translateY(-5%) !important;
+    transform: scale(1.1) translateY(-10%) !important;
   }
   /* CPAs: nudge icon up */
   .premium-tile[data-tile-name="cpas"] .tile-icon {
