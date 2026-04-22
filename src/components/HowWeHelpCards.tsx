@@ -37,7 +37,7 @@ const HowWeHelpCards = () => {
   return (
     <section className="py-16 lg:py-24 bg-background">
       <div className="container px-6 lg:px-8">
-        <h2 className="font-serif text-[2.5rem] text-foreground font-semibold text-center mb-12">
+        <h2 className="font-serif text-foreground font-semibold text-center mb-12 text-4xl">
           How We Help
         </h2>
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -54,7 +54,7 @@ const HowWeHelpCards = () => {
                   loading="lazy"
                 />
               </div>
-              <h3 className="font-serif text-3xl font-bold text-red-900 mb-3 text-center">
+              <h3 className="font-serif font-bold text-red-900 mb-3 text-center text-xl">
                 {card.headline}
               </h3>
               <p className="text-muted-foreground text-lg leading-relaxed mb-4 flex-1">
