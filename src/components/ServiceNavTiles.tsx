@@ -27,7 +27,7 @@ const ServiceNavTiles = () => {
             <div className="mx-auto max-w-[1200px] mb-10 mt-8">
               <div className="bg-navy rounded-lg px-6 py-4">
                 <h3
-                  className="text-center text-primary-foreground tracking-[0.12em] uppercase leading-none font-bold"
+                  className="text-center text-primary-foreground tracking-[0.12em] uppercase leading-none font-bold text-4xl"
                   style={{ fontSize: "clamp(2rem, 4vw, 4.5rem)" }}
                 >
                   {category.label}
