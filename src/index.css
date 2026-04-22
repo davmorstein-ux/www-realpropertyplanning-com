@@ -1148,6 +1148,10 @@ html, body {
     line-height: 1.15 !important;
   }
 }
+
+/* ═══════════════════════════════════════════════
+   SECTION EYEBROW LABEL
+═══════════════════════════════════════════════ */
 .section-eyebrow {
   @apply text-gold font-bold tracking-[0.18em] uppercase text-base mb-3;
 }
