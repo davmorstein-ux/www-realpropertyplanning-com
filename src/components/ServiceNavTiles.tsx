@@ -8,7 +8,10 @@ const ServiceNavTiles = () => {
       <div className="mx-auto max-w-[3300px] px-0 sm:px-1 lg:px-2">
 
         {/* 1. Heading */}
-        <h2 className="text-center text-4xl md:text-5xl font-bold font-serif text-foreground tracking-tight mb-3">
+        <h2
+          className="text-center font-serif text-foreground tracking-tight mb-3"
+          style={{ fontSize: '2.5rem', fontWeight: 'bold' }}
+        >
           How can we help today?
         </h2>
 
