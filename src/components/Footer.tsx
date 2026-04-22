@@ -21,16 +21,16 @@ const Footer = () => {
                 Real Property Planning
               </span>
             </Link>
-            <p className="text-primary-foreground/80 text-base font-medium leading-snug mb-2">
+            <p className="text-primary-foreground/80 text-sm font-medium leading-snug mb-1">
               Real Property Planning
             </p>
-            <p className="text-primary-foreground/70 text-base leading-relaxed mb-0.5">
+            <p className="text-primary-foreground/70 text-sm leading-snug mb-0.5">
               Washington State Licensed Real Estate Broker — License held under eXp Realty
             </p>
-            <p className="text-primary-foreground/70 text-base leading-relaxed mb-1">
+            <p className="text-primary-foreground/70 text-sm leading-snug mb-0.5">
               Washington State Certified Residential Appraiser — Stein Appraisal
             </p>
-            <p className="text-primary-foreground/70 text-base leading-relaxed mb-3">
+            <p className="text-primary-foreground/70 text-sm leading-snug mb-2">
               Specializing in probate, estate, inherited property &amp; senior transition real estate
             </p>
             <div className="flex flex-col gap-2 text-base">
