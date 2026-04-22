@@ -75,7 +75,7 @@ export const tileCategories: TileCategory[] = [
   {
     label: "Planning & Next Steps",
     tiles: [
-      { title: "Probate Sales", subtitle: "", href: "/probate-estate-sales", iconSrc: iconProbateSales, iconOffsetY: "-4%", mobileContentOffsetY: "-2%", mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "19%" },
+      { title: "Probate Sales", subtitle: "", href: "/probate-estate-sales", iconSrc: iconProbateSales, iconOffsetY: "-4%", mobileContentOffsetY: "-2%", mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "19%", mobileSmallText: true },
       { title: "Senior\nPlacement", subtitle: "", href: "/senior-placement", iconSrc: iconSeniorPlacement, labelSpacing: "tight", mobileTextDown: true, mobileIconDown: true, mobileLargeText: true, mobileIconOffsetY: "-10%" },
       { title: "Home Values\n& Pricing", subtitle: "", href: "/why-valuation-matters", iconSrc: iconHomeValue, labelSpacing: "tight", iconOffsetY: "4%", mobileContentOffsetY: "-1.5%", mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "12%" },
       { title: "Senior\nHome Sales", subtitle: "", href: "/senior-transitions", iconSrc: iconFundSeniorLiving, labelSpacing: "tight", iconOffsetY: "4%", iconScale: 1.05, mobileContentOffsetY: "3%", mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "-10%", mobileLargeText: true, mobileTextOffsetY: "0.6rem" },
