@@ -36,7 +36,7 @@ const HomepageFAQ = () => {
   return (
     <section className="py-16 lg:py-24 bg-secondary">
       <div className="container px-6 lg:px-8">
-        <div className="max-w-[900px] mx-auto">
+        <div className="max-w-[1080px] mx-auto">
           <h2 className="font-serif text-foreground mb-10 text-center font-bold text-2xl">
             Common Questions
           </h2>
