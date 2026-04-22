@@ -31,7 +31,7 @@ const HomepageTeamSection = () => {
           {tiles.map((tile) => (
             <div
               key={tile.label}
-              className="bg-card rounded-2xl shadow-sm border border-border p-6 flex flex-col items-center text-center"
+              className="bg-card rounded-2xl shadow-sm border border-border p-6 flex flex-col items-center"
             >
               <img
                 src={tile.icon}
@@ -39,7 +39,7 @@ const HomepageTeamSection = () => {
                 className="w-36 h-36 object-contain mb-3"
                 loading="lazy"
               />
-              <span className="font-semibold text-base text-foreground">{tile.label}</span>
+              <span className="text-foreground text-xl font-bold text-center">{tile.label}</span>
             </div>
           ))}
         </div>
