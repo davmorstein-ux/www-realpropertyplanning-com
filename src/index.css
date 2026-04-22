@@ -182,9 +182,9 @@ html, body {
 
   /* Exempt homepage tile labels from sitewide accessibility font-size overrides */
   .tile-label, [data-tile-id], .premium-tile h3, .service-nav-tile h3 {
-    font-size: unset !important;
-    line-height: unset !important;
-    letter-spacing: unset !important;
+    font-size: revert-layer !important;
+    line-height: revert-layer !important;
+    letter-spacing: revert-layer !important;
   }
 
   /* Keep footer legal disclaimers small */
@@ -1069,19 +1069,22 @@ html, body {
 }
 
 @media (min-width: 768px) {
-  .premium-tile .tile-label-tight {
+  .premium-tile .tile-label-tight,
+  .premium-tile h3.tile-label {
     font-size: 1.05rem !important;
   }
 }
 
 @media (min-width: 1024px) {
-  .premium-tile .tile-label-tight {
+  .premium-tile .tile-label-tight,
+  .premium-tile h3.tile-label {
     font-size: 1.2rem !important;
   }
 }
 
 @media (min-width: 1280px) {
-  .premium-tile .tile-label-tight {
+  .premium-tile .tile-label-tight,
+  .premium-tile h3.tile-label {
     font-size: 1.45rem !important;
   }
 }
