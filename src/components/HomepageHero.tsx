@@ -26,12 +26,12 @@ const HomepageHero = () => {
         </div>
 
         {/* H1 — static, calm, immediately readable */}
-        <h1 className="text-[22px] md:text-[28px] tracking-[0.06em] leading-relaxed mb-3 text-white font-medium pt-6 max-w-3xl">
+        <h1 className="text-[22px] tracking-[0.06em] leading-relaxed mb-3 text-white pt-6 max-w-3xl md:text-sm font-bold">
           Washington's Professional Hub for Seniors, Families &amp; Estate Transitions
         </h1>
 
         {/* Warm subheading */}
-        <p className="hero-bright-subheading tracking-[0.04em] leading-relaxed mb-8 pb-2 font-semibold text-[18px] md:text-[22px] max-w-2xl">
+        <p className="hero-bright-subheading tracking-[0.04em] leading-relaxed mb-8 pb-2 font-semibold text-[18px] md:text-[22px] max-w-2xl font-mono">
           Connecting families and professionals, when it matters most.
         </p>
 
