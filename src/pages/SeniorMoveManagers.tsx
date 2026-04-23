@@ -208,21 +208,21 @@ const SeniorMoveManagers = () => (
                     <p className="text-muted-foreground text-sm leading-relaxed mb-3">
                       HB Move Management is a proud division of Hansen Bros. Moving &amp; Storage, one of the oldest and most respected service providers in the Puget Sound region. Their services go far beyond traditional moving — helping people prepare, survive the move, and get settled in their new home.
                     </p>
-                    <div className="space-y-1.5 text-sm">
-                      <div className="flex items-start gap-2 justify-center sm:justify-start">
-                        <MapPin className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+                    <div className="space-y-0.5 text-sm">
+                      <div className="flex items-center gap-2 justify-center sm:justify-start">
+                        <img src={iconPin3d} alt="" aria-hidden="true" className="w-6 h-6 object-contain shrink-0" loading="lazy" />
                         <span className="text-muted-foreground">10750 Aurora Ave N, Seattle, WA 98133</span>
                       </div>
                       <div className="flex items-center gap-2 justify-center sm:justify-start">
-                        <Phone className="w-4 h-4 text-accent shrink-0" />
+                        <img src={iconCall3d} alt="" aria-hidden="true" className="w-6 h-6 object-contain shrink-0" loading="lazy" />
                         <a href="tel:+12062574314" className="text-accent hover:text-gold underline-offset-4 hover:underline">(206) 257-4314</a>
                       </div>
                       <div className="flex items-center gap-2 justify-center sm:justify-start">
-                        <Mail className="w-4 h-4 text-accent shrink-0" />
+                        <img src={iconMail3d} alt="" aria-hidden="true" className="w-6 h-6 object-contain shrink-0" loading="lazy" />
                         <a href="mailto:info@hbmovemanagement.com" className="text-accent hover:text-gold underline-offset-4 hover:underline break-all">info@hbmovemanagement.com</a>
                       </div>
                       <div className="flex items-center gap-2 justify-center sm:justify-start">
-                        <Globe className="w-4 h-4 text-accent shrink-0" />
+                        <img src={iconGlobe3d} alt="" aria-hidden="true" className="w-6 h-6 object-contain shrink-0" loading="lazy" />
                         <a href="https://www.hbmovemanagement.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-gold underline-offset-4 hover:underline">www.hbmovemanagement.com</a>
                       </div>
                     </div>
@@ -253,25 +253,25 @@ const SeniorMoveManagers = () => (
                     <p className="text-muted-foreground text-sm leading-relaxed mb-3">
                       Tina's passion for assisting older adults and their families has continued to grow and thrive. While it is important to attend to the details and challenges of moving and transitioning loved ones, it is equally essential to address any emotional and physical limitations that they and/or their families may be suffering, which may be affecting the process. Tina works closely with health care and senior service professionals to connect with families that face these challenges.
                     </p>
-                    <div className="space-y-1.5 text-sm">
-                      <div className="flex items-start gap-2 justify-center sm:justify-start">
-                        <MapPin className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+                    <div className="space-y-0.5 text-sm">
+                      <div className="flex items-center gap-2 justify-center sm:justify-start">
+                        <img src={iconPin3d} alt="" aria-hidden="true" className="w-6 h-6 object-contain shrink-0" loading="lazy" />
                         <span className="text-muted-foreground">P.O. Box 8246, Tacoma, WA 98419</span>
                       </div>
                       <div className="flex items-center gap-2 justify-center sm:justify-start">
-                        <Phone className="w-4 h-4 text-accent shrink-0" />
+                        <img src={iconCall3d} alt="" aria-hidden="true" className="w-6 h-6 object-contain shrink-0" loading="lazy" />
                         <a href="tel:+12063538617" className="text-accent hover:text-gold underline-offset-4 hover:underline">(206) 353-8617</a>
                       </div>
                       <div className="flex items-center gap-2 justify-center sm:justify-start">
-                        <Phone className="w-4 h-4 text-accent shrink-0" />
+                        <img src={iconCall3d} alt="" aria-hidden="true" className="w-6 h-6 object-contain shrink-0" loading="lazy" />
                         <a href="tel:+12535073398" className="text-accent hover:text-gold underline-offset-4 hover:underline">(253) 507-3398</a>
                       </div>
                       <div className="flex items-center gap-2 justify-center sm:justify-start">
-                        <Mail className="w-4 h-4 text-accent shrink-0" />
+                        <img src={iconMail3d} alt="" aria-hidden="true" className="w-6 h-6 object-contain shrink-0" loading="lazy" />
                         <a href="mailto:tina@monarchtransitions.com" className="text-accent hover:text-gold underline-offset-4 hover:underline break-all">tina@monarchtransitions.com</a>
                       </div>
                       <div className="flex items-center gap-2 justify-center sm:justify-start">
-                        <Globe className="w-4 h-4 text-accent shrink-0" />
+                        <img src={iconGlobe3d} alt="" aria-hidden="true" className="w-6 h-6 object-contain shrink-0" loading="lazy" />
                         <a href="https://www.monarchtransitions.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-gold underline-offset-4 hover:underline">www.monarchtransitions.com</a>
                       </div>
                     </div>
