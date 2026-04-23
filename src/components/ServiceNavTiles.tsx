@@ -36,12 +36,12 @@ const ServiceNavTiles = () => {
                 </h3>
               </div>
             </div>
-            <div className="mx-auto grid w-full max-w-[1200px] grid-cols-2 items-start justify-items-center gap-0 sm:grid-cols-4 isolate">
+            <div className="mx-auto grid w-full max-w-[1200px] grid-cols-2 items-start justify-items-center gap-0 sm:grid-cols-5 isolate">
               {category.tiles.map((tile, i) => (
                 <ServiceNavTileCard key={tile.href + tile.title} tile={tile} index={i} />
               ))}
-              {category.tiles.length % 4 !== 0 &&
-                Array.from({ length: 4 - (category.tiles.length % 4) }).map((_, i) => (
+              {category.tiles.length % 5 !== 0 &&
+                Array.from({ length: 4 - (category.tiles.length % 5) }).map((_, i) => (
                   <div key={`placeholder-${i}`} className="invisible pointer-events-none" aria-hidden="true">
                     <ServiceNavTileCard tile={category.tiles[0]} index={category.tiles.length + i} />
                   </div>
