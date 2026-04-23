@@ -125,7 +125,7 @@ const SeniorMoveManagers = () => (
             <div className="grid gap-6 sm:grid-cols-3">
               {whoWeHelpCards.map((card) => (
                 <div key={card.label} className="bg-background border border-border rounded-xl p-5 sm:p-6 shadow-sm text-center">
-                  <img src={card.icon} alt="" aria-hidden="true" className="w-16 h-16 object-contain mx-auto mb-3" loading="lazy" />
+                  <card.Icon className="mx-auto mb-3" size={64} />
                   <h3 className="font-serif text-lg font-semibold text-foreground mb-2">{card.label}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">{card.text}</p>
                 </div>
