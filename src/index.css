@@ -1150,11 +1150,11 @@ body {
   }
 }
 
-/* Tablet only: shift tile text vertically by -5% */
+/* Tablet only: shift tile text vertically by 0 */
 @media (min-width: 768px) and (max-width: 1023px) {
   .premium-tile h3.tile-label,
   .premium-tile .tile-label-tight {
-    transform: translateY(-5%) !important;
+    transform: translateY(0) !important;
   }
 }
 
