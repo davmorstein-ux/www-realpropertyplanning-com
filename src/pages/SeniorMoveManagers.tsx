@@ -16,20 +16,23 @@ import iconPin3d from "@/assets/icons/real-estate-location-pin-3d-icon-washingto
 import iconCall3d from "@/assets/icons/real-estate-phone-handset-3d-icon-washington.png";
 import iconMail3d from "@/assets/icons/real-estate-email-envelope-3d-icon-washington.png";
 import iconGlobe3d from "@/assets/icons/real-estate-website-globe-3d-icon-washington.png";
+import iconFamily3d from "@/assets/icons/senior-family-3d-icon-washington.png";
+import iconHome3d from "@/assets/icons/senior-home-3d-icon-washington.png";
+import iconHeart3d from "@/assets/icons/senior-care-heart-3d-icon-washington.png";
 
 const whoWeHelpCards = [
   {
-    icon: Users,
+    icon: iconFamily3d,
     label: "Families of Aging Parents",
     text: "Adult children helping a parent leave the home they have lived in for years — whether the move is to a smaller home, an independent living community, or an assisted living or memory care facility.",
   },
   {
-    icon: Home,
+    icon: iconHome3d,
     label: "Seniors Downsizing",
     text: "Older adults who are ready to simplify, move closer to family, or transition into a community that better fits their current lifestyle and needs.",
   },
   {
-    icon: HeartHandshake,
+    icon: iconHeart3d,
     label: "Senior Care Coordinators & Social Workers",
     text: "Professionals who work with seniors and their families and need a trusted real estate partner who understands the pace, sensitivities, and unique demands of senior transitions.",
   },
@@ -124,7 +127,7 @@ const SeniorMoveManagers = () => (
             <div className="grid gap-6 sm:grid-cols-3">
               {whoWeHelpCards.map((card) => (
                 <div key={card.label} className="bg-background border border-border rounded-xl p-5 sm:p-6 shadow-sm text-center">
-                  <card.icon className="w-8 h-8 text-accent mx-auto mb-3" />
+                  <img src={card.icon} alt="" aria-hidden="true" className="w-16 h-16 object-contain mx-auto mb-3" loading="lazy" />
                   <h3 className="font-serif text-lg font-semibold text-foreground mb-2">{card.label}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">{card.text}</p>
                 </div>
