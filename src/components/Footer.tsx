@@ -187,9 +187,6 @@ const Footer = () => {
             className="w-[95px] md:w-[120px] h-auto mb-4"
             loading="lazy"
           />
-          <p className="text-primary-foreground/70 text-base text-center leading-relaxed">
-            Real Property Planning — independent hub for probate, estate, and senior transition real estate in Washington State. David Stein, President. License held under eXp Realty. Appraisal services provided through Stein Appraisal.
-          </p>
           <p className="text-primary-foreground/70 text-base text-center mt-1">
             Mailing Address: PO Box 1462, Woodinville, WA 98072
           </p>
