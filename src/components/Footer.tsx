@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 import mappin3d from "@/assets/real-estate-service-areas-mappin-washington.webp";
 import iconEmail3d from "@/assets/icons/real-estate-email-contact-icon-washington.webp";
-import expRealtyLogo from "@/assets/exp-realty-real-estate-logo-washington.webp";
+
 import alcaLogo from "@/assets/senior-advocates-alca-partner-washington.webp";
 import naosaBadge from "@/assets/senior-advocates-naosa-badge-washington.webp";
 import naepcLogo from "@/assets/estate-planners-naepc-badge-washington.webp";
@@ -25,7 +25,7 @@ const Footer = () => {
               Real Property Planning
             </p>
             <p className="text-primary-foreground/70 text-sm leading-tight mb-0.5">
-              Washington State Licensed Real Estate Broker — License held under eXp Realty
+              David Stein is a Washington State Licensed Real Estate Broker — David Stein's real estate license is held under eXp Realty
             </p>
             <p className="text-primary-foreground/70 text-sm leading-tight mb-0.5">
               Washington State Certified Residential Appraiser — Stein Appraisal
@@ -181,17 +181,8 @@ const Footer = () => {
         {/* Brokerage Compliance */}
         <div className="footer-divider mb-0" />
         <div className="pt-10 pb-2 flex flex-col items-center">
-          <img
-            src={expRealtyLogo}
-            alt="eXp Realty — license held under eXp Realty (real estate license disclosure)"
-            className="w-[95px] md:w-[120px] h-auto mb-4"
-            loading="lazy"
-          />
           <p className="text-primary-foreground/70 text-base text-center mt-1">
             Mailing Address: PO Box 1462, Woodinville, WA 98072
-          </p>
-          <p className="text-primary-foreground/70 text-base text-center mt-1">
-            Office Address: 1455 NW Leary Way, Seattle, WA 98107
           </p>
         </div>
 
