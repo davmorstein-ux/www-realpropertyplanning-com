@@ -6,11 +6,10 @@ const ServiceNavTiles = () => {
   return (
     <section className="pt-3 pb-20 lg:pt-4 lg:pb-28 bg-secondary">
       <div className="mx-auto max-w-[3300px] px-0 sm:px-1 lg:px-2">
-
         {/* 1. Heading */}
         <h2
           className="text-center font-serif text-red-900 tracking-tight mb-3"
-          style={{ fontSize: '2.5rem', fontWeight: 'bold' }}
+          style={{ fontSize: "2.5rem", fontWeight: "bold" }}
         >
           How can we help today?
         </h2>
@@ -37,20 +36,16 @@ const ServiceNavTiles = () => {
                 </h3>
               </div>
             </div>
-            <div className="mx-auto grid w-full max-w-[1200px] grid-cols-2 items-start justify-items-center gap-0 sm:grid-cols-3 isolate">
+            <div className="mx-auto grid w-full max-w-[1200px] grid-cols-2 items-start justify-items-center gap-0 sm:grid-cols-4 isolate">
               {category.tiles.map((tile, i) => (
                 <ServiceNavTileCard key={tile.href + tile.title} tile={tile} index={i} />
               ))}
-              {category.tiles.length % 3 !== 0 &&
-                Array.from({ length: 3 - (category.tiles.length % 3) }).map((_, i) => (
+              {category.tiles.length % 4 !== 0 &&
+                Array.from({ length: 4 - (category.tiles.length % 4) }).map((_, i) => (
                   <div key={`placeholder-${i}`} className="invisible pointer-events-none" aria-hidden="true">
-                    <ServiceNavTileCard
-                      tile={category.tiles[0]}
-                      index={category.tiles.length + i}
-                    />
+                    <ServiceNavTileCard tile={category.tiles[0]} index={category.tiles.length + i} />
                   </div>
-                ))
-              }
+                ))}
             </div>
           </div>
         ))}
