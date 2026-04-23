@@ -788,7 +788,7 @@ html, body {
   }
   /* Mobile-only: lower the vertical offset of the Service Areas tile label */
   .premium-tile[data-tile-name="service-areas"] h3.tile-label {
-    margin-top: 30% !important;
+    margin-top: 35% !important;
   }
   /* Mobile-only: Service Areas tile icon vertical offset */
   .premium-tile[data-tile-name="service-areas"] .tile-icon {
