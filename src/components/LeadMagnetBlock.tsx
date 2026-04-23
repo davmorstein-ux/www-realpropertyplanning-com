@@ -26,13 +26,37 @@ const LeadMagnetBlock = () => {
         <div className="max-w-3xl mx-auto">
           <div className="text-center">
             {/* Premium 3D icon + badge */}
-            <div className="mx-auto mb-5 flex h-[72px] w-[72px] items-center justify-center rounded-full bg-gradient-to-b from-gold/25 to-gold/10 border border-gold/30 shadow-[0_4px_16px_rgba(201,168,76,0.18),inset_0_1px_0_rgba(255,255,255,0.12),inset_0_-1px_0_rgba(0,0,0,0.1)]">
-              <FileText className="h-8 w-8 text-gold drop-shadow-[0_1px_2px_rgba(0,0,0,0.25)]" />
+            <div
+              className="mx-auto mb-5 flex h-[72px] w-[72px] items-center justify-center rounded-full relative overflow-hidden"
+              style={{
+                background: "linear-gradient(to bottom, #f5c842 0%, #c49a1a 100%)",
+                border: "1px solid rgba(255,255,255,0.2)",
+                boxShadow: "0 8px 16px rgba(0,0,0,0.4), inset 0 2px 4px rgba(255,255,255,0.3), inset 0 -2px 4px rgba(0,0,0,0.3)",
+              }}
+            >
+              <span
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-x-2 top-1 h-3 rounded-full"
+                style={{ background: "linear-gradient(to bottom, rgba(255,255,255,0.45), rgba(255,255,255,0))" }}
+              />
+              <FileText className="h-8 w-8 text-primary drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)] relative z-10" />
             </div>
 
             <div className="inline-flex items-center justify-center mb-4">
-              <span className="inline-block px-5 py-1.5 rounded-full text-gold font-bold tracking-[0.18em] uppercase text-xs bg-gradient-to-b from-gold/15 to-gold/5 border border-gold/25 shadow-[0_2px_8px_rgba(201,168,76,0.12),inset_0_1px_0_rgba(255,255,255,0.1),inset_0_-1px_0_rgba(0,0,0,0.08)]">
-                Free Resource
+              <span
+                className="relative inline-block px-5 py-1.5 rounded-full text-primary font-bold tracking-[0.18em] uppercase text-xs overflow-hidden"
+                style={{
+                  background: "linear-gradient(to bottom, #f5c842 0%, #c49a1a 100%)",
+                  border: "1px solid rgba(255,255,255,0.2)",
+                  boxShadow: "0 8px 16px rgba(0,0,0,0.4), inset 0 2px 4px rgba(255,255,255,0.3), inset 0 -2px 4px rgba(0,0,0,0.3)",
+                }}
+              >
+                <span
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-x-2 top-0.5 h-1.5 rounded-full"
+                  style={{ background: "linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0))" }}
+                />
+                <span className="relative z-10">Free Resource</span>
               </span>
             </div>
 
@@ -55,9 +79,22 @@ const LeadMagnetBlock = () => {
           {/* Who it's for */}
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             {whoItsFor.map((item, i) => (
-              <div key={i} className="flex items-center gap-2 bg-primary-foreground/10 rounded-full px-4 py-2">
-                <item.icon className="w-4 h-4 text-gold shrink-0" />
-                <span className="text-primary-foreground/85 text-sm font-medium">{item.label}</span>
+              <div
+                key={i}
+                className="relative flex items-center gap-2 rounded-full px-4 py-2 overflow-hidden"
+                style={{
+                  background: "linear-gradient(to bottom, #f5c842 0%, #c49a1a 100%)",
+                  border: "1px solid rgba(255,255,255,0.2)",
+                  boxShadow: "0 8px 16px rgba(0,0,0,0.4), inset 0 2px 4px rgba(255,255,255,0.3), inset 0 -2px 4px rgba(0,0,0,0.3)",
+                }}
+              >
+                <span
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-x-2 top-0.5 h-1.5 rounded-full"
+                  style={{ background: "linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0))" }}
+                />
+                <item.icon className="w-4 h-4 text-primary shrink-0 relative z-10" />
+                <span className="text-primary text-sm font-semibold relative z-10">{item.label}</span>
               </div>
             ))}
           </div>
