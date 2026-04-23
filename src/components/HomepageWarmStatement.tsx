@@ -5,7 +5,7 @@ const HomepageWarmStatement = () => {
     <section className="py-16 lg:py-24 bg-cream">
       <div className="container px-6 lg:px-8">
         <div className="max-w-[680px] mx-auto text-center">
-          <h2 className="font-serif mb-8 font-bold text-lg whitespace-pre-line text-center" style={{ color: '#8B0000', lineHeight: 1.2 }}>
+          <h2 className="font-serif mb-8 font-bold whitespace-pre-line" style={{ color: '#8B0000', lineHeight: 1.2, textAlign: 'center', fontSize: '32px' }}>
             {"This Is More Than a Real Estate Transaction"}
           </h2>
           <p className="text-[19px] md:text-[20px] text-foreground/80 leading-[1.75] mb-6">
