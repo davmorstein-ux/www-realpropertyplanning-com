@@ -786,6 +786,10 @@ html, body {
   .premium-tile .mobile-icon-down {
     margin-top: var(--mobile-icon-mt, 4%) !important;
   }
+  /* Mobile-only: lower the vertical offset of tile label text */
+  .premium-tile h3.tile-label {
+    margin-top: 0.4rem !important;
+  }
   .premium-tile h3[data-tile-id="cpas"] {
     margin-top: -0.5rem !important;
   }
