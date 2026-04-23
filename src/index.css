@@ -5,7 +5,8 @@
 @tailwind utilities;
 
 /* Global overflow safeguard */
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 
@@ -45,7 +46,7 @@ html, body {
     --ring: 220 45% 18%;
 
     --radius: 0.375rem;
-    
+
     /* Custom Estate Palette */
     --gold: 42 55% 55%;
     --gold-light: 42 45% 72%;
@@ -118,7 +119,7 @@ html, body {
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 18px;
     font-weight: 420;
     line-height: 1.75;
@@ -132,18 +133,15 @@ html, body {
      Sitewide minimum sizes for small-text utilities and inline tiny sizes.
      Applied on all viewports; desktop overrides below scale further. */
   :where(.text-xs) {
-    font-size: 1rem !important;       /* 16px floor */
+    font-size: 1rem !important; /* 16px floor */
     line-height: 1.6 !important;
   }
   :where(.text-sm) {
-    font-size: 1.0625rem !important;  /* 17px floor */
+    font-size: 1.0625rem !important; /* 17px floor */
     line-height: 1.65 !important;
   }
-  :where(
-    .text-\[10px\], .text-\[11px\], .text-\[12px\],
-    .text-\[13px\], .text-\[14px\], .text-\[15px\]
-  ) {
-    font-size: 1rem !important;       /* 16px floor for inline tiny sizes */
+  :where(.text-\[10px\], .text-\[11px\], .text-\[12px\], .text-\[13px\], .text-\[14px\], .text-\[15px\]) {
+    font-size: 1rem !important; /* 16px floor for inline tiny sizes */
   }
 
   /* Desktop: larger text for older readers */
@@ -154,8 +152,13 @@ html, body {
     }
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cormorant Garamond', serif;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Cormorant Garamond", serif;
     line-height: 1.25;
     letter-spacing: -0.015em;
     color: hsl(220 40% 12%);
@@ -163,7 +166,13 @@ html, body {
 
   /* Desktop-only large paragraph text */
   @media (min-width: 768px) {
-    p, li, label, td, th, blockquote, figcaption {
+    p,
+    li,
+    label,
+    td,
+    th,
+    blockquote,
+    figcaption {
       font-size: 1.3rem !important;
       line-height: 2 !important;
     }
@@ -177,13 +186,25 @@ html, body {
     }
 
     /* Force common smaller text utilities to render larger on desktop */
-    :where(.text-xs, .text-sm, .text-base, .text-lg, .text-\[15px\], .text-\[14px\], .text-\[13px\], .text-\[12px\], .text-\[11px\], .text-\[10px\]) {
+    :where(
+      .text-xs,
+      .text-sm,
+      .text-base,
+      .text-lg,
+      .text-\[15px\],
+      .text-\[14px\],
+      .text-\[13px\],
+      .text-\[12px\],
+      .text-\[11px\],
+      .text-\[10px\]
+    ) {
       font-size: 1.3rem !important;
       line-height: 2 !important;
     }
 
     /* Ensure link text and span text also scale up */
-    a, span {
+    a,
+    span {
       font-size: inherit;
     }
   }
@@ -199,7 +220,10 @@ html, body {
   }
 
   /* Exempt homepage tile labels from sitewide accessibility font-size overrides */
-  .tile-label, [data-tile-id], .premium-tile h3, .service-nav-tile h3 {
+  .tile-label,
+  [data-tile-id],
+  .premium-tile h3,
+  .service-nav-tile h3 {
     font-size: revert-layer !important;
     line-height: revert-layer !important;
     letter-spacing: revert-layer !important;
@@ -226,7 +250,9 @@ html, body {
   }
 
   /* Input text styling */
-  input, textarea, select {
+  input,
+  textarea,
+  select {
     font-weight: 450;
     color: hsl(220 35% 15%);
   }
@@ -253,11 +279,11 @@ html, body {
 
 @layer utilities {
   .font-serif {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: "Cormorant Garamond", serif;
   }
-  
+
   .font-sans {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
   }
 }
 
@@ -274,7 +300,7 @@ html, body {
 }
 .premium-divider::before,
 .premium-divider::after {
-  content: '';
+  content: "";
   height: 2px;
   width: 5rem;
   border-radius: 9999px;
@@ -302,29 +328,29 @@ html, body {
   background: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(40 25% 97%) 50%, hsl(38 18% 94%) 100%);
   border: 2px solid hsl(42 55% 62% / 0.5);
   box-shadow:
-    0 8px 24px -4px rgba(0,0,0,0.13),
-    0 4px 10px -3px rgba(0,0,0,0.08),
-    0 2px 4px -1px rgba(0,0,0,0.05),
+    0 8px 24px -4px rgba(0, 0, 0, 0.13),
+    0 4px 10px -3px rgba(0, 0, 0, 0.08),
+    0 2px 4px -1px rgba(0, 0, 0, 0.05),
     0 1px 0 0 hsl(36 14% 82%),
-    inset 0 1px 0 0 rgba(255,255,255,0.9),
-    inset 0 -1px 2px 0 rgba(0,0,0,0.04);
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.9),
+    inset 0 -1px 2px 0 rgba(0, 0, 0, 0.04);
 }
 /* Top-edge glossy highlight */
 .card-3d::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 2px;
   left: 8%;
   right: 8%;
   height: 2px;
   border-radius: 9999px;
-  background: linear-gradient(to right, transparent, rgba(255,255,255,0.85), transparent);
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.85), transparent);
   pointer-events: none;
   z-index: 2;
 }
 /* Bottom ledge depth */
 .card-3d::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -1px;
   left: 4%;
@@ -339,18 +365,18 @@ html, body {
   transform: translateY(-4px);
   border-color: hsl(42 60% 52% / 0.7);
   box-shadow:
-    0 14px 34px -6px rgba(0,0,0,0.17),
-    0 6px 14px -4px rgba(0,0,0,0.10),
-    0 3px 6px -2px rgba(0,0,0,0.06),
+    0 14px 34px -6px rgba(0, 0, 0, 0.17),
+    0 6px 14px -4px rgba(0, 0, 0, 0.1),
+    0 3px 6px -2px rgba(0, 0, 0, 0.06),
     0 2px 0 0 hsl(36 14% 80%),
-    inset 0 1px 0 0 rgba(255,255,255,0.9),
-    inset 0 -1px 2px 0 rgba(0,0,0,0.04);
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.9),
+    inset 0 -1px 2px 0 rgba(0, 0, 0, 0.04);
 }
 .card-3d:active {
   transform: translateY(1px);
   box-shadow:
-    0 2px 6px -2px rgba(0,0,0,0.12),
-    inset 0 1px 3px 0 rgba(0,0,0,0.06);
+    0 2px 6px -2px rgba(0, 0, 0, 0.12),
+    inset 0 1px 3px 0 rgba(0, 0, 0, 0.06);
 }
 /* Dark section variant */
 .bg-navy .card-3d,
@@ -368,15 +394,15 @@ html, body {
   background: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 15% 98%) 50%, hsl(210 12% 96%) 100%);
   border: 2px solid hsl(210 85% 58% / 0.45);
   box-shadow:
-    0 8px 24px -4px rgba(0,0,0,0.11),
-    0 4px 10px -3px rgba(0,0,0,0.07),
-    0 2px 4px -1px rgba(0,0,0,0.04),
+    0 8px 24px -4px rgba(0, 0, 0, 0.11),
+    0 4px 10px -3px rgba(0, 0, 0, 0.07),
+    0 2px 4px -1px rgba(0, 0, 0, 0.04),
     0 1px 0 0 hsl(210 30% 82%),
-    inset 0 1px 0 0 rgba(255,255,255,0.95),
-    inset 0 -1px 2px 0 rgba(0,0,0,0.03);
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.95),
+    inset 0 -1px 2px 0 rgba(0, 0, 0, 0.03);
 }
 .card-3d-blue-skin::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 2px;
   left: 8%;
@@ -388,7 +414,7 @@ html, body {
   z-index: 2;
 }
 .card-3d-blue-skin::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -1px;
   left: 4%;
@@ -403,18 +429,18 @@ html, body {
   transform: translateY(-4px);
   border-color: hsl(210 85% 50% / 0.7);
   box-shadow:
-    0 14px 34px -6px rgba(0,0,0,0.15),
-    0 6px 14px -4px rgba(0,0,0,0.09),
-    0 3px 6px -2px rgba(0,0,0,0.05),
+    0 14px 34px -6px rgba(0, 0, 0, 0.15),
+    0 6px 14px -4px rgba(0, 0, 0, 0.09),
+    0 3px 6px -2px rgba(0, 0, 0, 0.05),
     0 2px 0 0 hsl(210 40% 78%),
-    inset 0 1px 0 0 rgba(255,255,255,0.95),
-    inset 0 -1px 2px 0 rgba(0,0,0,0.03);
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.95),
+    inset 0 -1px 2px 0 rgba(0, 0, 0, 0.03);
 }
 .card-3d-blue-skin:active {
   transform: translateY(1px);
   box-shadow:
-    0 2px 6px -2px rgba(0,0,0,0.12),
-    inset 0 1px 3px 0 rgba(0,0,0,0.06);
+    0 2px 6px -2px rgba(0, 0, 0, 0.12),
+    inset 0 1px 3px 0 rgba(0, 0, 0, 0.06);
 }
 
 /* ═══════════════════════════════════════════════
@@ -442,16 +468,22 @@ html, body {
 .card-3d-premium {
   @apply relative cursor-pointer transition-all duration-200;
   border-radius: 22px;
-  background: linear-gradient(180deg, hsl(40 25% 96%) 0%, hsl(38 18% 91%) 40%, hsl(36 14% 86%) 80%, hsl(34 12% 82%) 100%);
+  background: linear-gradient(
+    180deg,
+    hsl(40 25% 96%) 0%,
+    hsl(38 18% 91%) 40%,
+    hsl(36 14% 86%) 80%,
+    hsl(34 12% 82%) 100%
+  );
   border: 1.5px solid hsl(38 20% 80%);
   padding: 8px 8px 12px 8px; /* thick shell: 8px sides/top, 12px bottom ledge */
   box-shadow:
-    0 10px 30px -6px rgba(0,0,0,0.18),
-    0 6px 14px -4px rgba(0,0,0,0.10),
-    0 3px 6px -2px rgba(0,0,0,0.07),
-    0 1px 2px 0 rgba(0,0,0,0.04),
-    inset 0 1px 0 0 rgba(255,255,255,0.85),
-    inset 0 -2px 0 0 rgba(0,0,0,0.05);
+    0 10px 30px -6px rgba(0, 0, 0, 0.18),
+    0 6px 14px -4px rgba(0, 0, 0, 0.1),
+    0 3px 6px -2px rgba(0, 0, 0, 0.07),
+    0 1px 2px 0 rgba(0, 0, 0, 0.04),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.85),
+    inset 0 -2px 0 0 rgba(0, 0, 0, 0.05);
 }
 
 /* GOLD TRIM RING — thick prominent gold border */
@@ -472,28 +504,28 @@ html, body {
   background: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(40 30% 99%) 50%, hsl(40 20% 97%) 100%);
   border-radius: 11px;
   box-shadow:
-    inset 0 3px 6px 0 rgba(255,255,255,0.95),
-    inset 0 -2px 4px 0 rgba(0,0,0,0.04),
-    inset 0 0 0 1px rgba(255,255,255,0.5);
+    inset 0 3px 6px 0 rgba(255, 255, 255, 0.95),
+    inset 0 -2px 4px 0 rgba(0, 0, 0, 0.04),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.5);
 }
 
 /* Top-edge glossy highlight on outer body */
 .card-3d-premium::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 2px;
   left: 6%;
   right: 6%;
   height: 3px;
   border-radius: 9999px;
-  background: linear-gradient(to right, transparent, rgba(255,255,255,0.9), transparent);
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.9), transparent);
   pointer-events: none;
   z-index: 2;
 }
 
 /* Bottom base shadow — thick ledge underside */
 .card-3d-premium::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 3%;
@@ -508,12 +540,12 @@ html, body {
 .card-3d-premium:hover {
   transform: translateY(-4px);
   box-shadow:
-    0 16px 40px -8px rgba(0,0,0,0.20),
-    0 10px 20px -6px rgba(0,0,0,0.12),
-    0 4px 8px -2px rgba(0,0,0,0.07),
-    0 1px 2px 0 rgba(0,0,0,0.04),
-    inset 0 1px 0 0 rgba(255,255,255,0.85),
-    inset 0 -2px 0 0 rgba(0,0,0,0.05);
+    0 16px 40px -8px rgba(0, 0, 0, 0.2),
+    0 10px 20px -6px rgba(0, 0, 0, 0.12),
+    0 4px 8px -2px rgba(0, 0, 0, 0.07),
+    0 1px 2px 0 rgba(0, 0, 0, 0.04),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.85),
+    inset 0 -2px 0 0 rgba(0, 0, 0, 0.05);
 }
 
 .card-3d-premium:hover .card-3d-premium__inner {
@@ -528,9 +560,9 @@ html, body {
   transform: translateY(1px);
   padding-bottom: 8px;
   box-shadow:
-    0 3px 8px -3px rgba(0,0,0,0.14),
-    0 1px 3px -1px rgba(0,0,0,0.08),
-    inset 0 2px 3px 0 rgba(0,0,0,0.06);
+    0 3px 8px -3px rgba(0, 0, 0, 0.14),
+    0 1px 3px -1px rgba(0, 0, 0, 0.08),
+    inset 0 2px 3px 0 rgba(0, 0, 0, 0.06);
 }
 
 /* ═══════════════════════════════════════════════
@@ -539,16 +571,22 @@ html, body {
 .card-3d-blue {
   @apply relative cursor-pointer transition-all duration-200;
   border-radius: 22px;
-  background: linear-gradient(180deg, hsl(210 15% 96%) 0%, hsl(210 12% 91%) 40%, hsl(210 10% 86%) 80%, hsl(210 8% 82%) 100%);
+  background: linear-gradient(
+    180deg,
+    hsl(210 15% 96%) 0%,
+    hsl(210 12% 91%) 40%,
+    hsl(210 10% 86%) 80%,
+    hsl(210 8% 82%) 100%
+  );
   border: 1.5px solid hsl(210 15% 80%);
   padding: 8px 8px 12px 8px;
   box-shadow:
-    0 10px 30px -6px rgba(0,0,0,0.18),
-    0 6px 14px -4px rgba(0,0,0,0.10),
-    0 3px 6px -2px rgba(0,0,0,0.07),
-    0 1px 2px 0 rgba(0,0,0,0.04),
-    inset 0 1px 0 0 rgba(255,255,255,0.85),
-    inset 0 -2px 0 0 rgba(0,0,0,0.05);
+    0 10px 30px -6px rgba(0, 0, 0, 0.18),
+    0 6px 14px -4px rgba(0, 0, 0, 0.1),
+    0 3px 6px -2px rgba(0, 0, 0, 0.07),
+    0 1px 2px 0 rgba(0, 0, 0, 0.04),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.85),
+    inset 0 -2px 0 0 rgba(0, 0, 0, 0.05);
 }
 .card-3d-blue .card-3d-blue__inner {
   @apply relative;
@@ -565,24 +603,24 @@ html, body {
   background: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 20% 99%) 50%, hsl(210 15% 97%) 100%);
   border-radius: 11px;
   box-shadow:
-    inset 0 3px 6px 0 rgba(255,255,255,0.95),
-    inset 0 -2px 4px 0 rgba(0,0,0,0.04),
-    inset 0 0 0 1px rgba(255,255,255,0.5);
+    inset 0 3px 6px 0 rgba(255, 255, 255, 0.95),
+    inset 0 -2px 4px 0 rgba(0, 0, 0, 0.04),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.5);
 }
 .card-3d-blue::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 2px;
   left: 6%;
   right: 6%;
   height: 3px;
   border-radius: 9999px;
-  background: linear-gradient(to right, transparent, rgba(255,255,255,0.9), transparent);
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.9), transparent);
   pointer-events: none;
   z-index: 2;
 }
 .card-3d-blue::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 3%;
@@ -596,12 +634,12 @@ html, body {
 .card-3d-blue:hover {
   transform: translateY(-4px);
   box-shadow:
-    0 16px 40px -8px rgba(0,0,0,0.20),
-    0 10px 20px -6px rgba(0,0,0,0.12),
-    0 4px 8px -2px rgba(0,0,0,0.07),
-    0 1px 2px 0 rgba(0,0,0,0.04),
-    inset 0 1px 0 0 rgba(255,255,255,0.85),
-    inset 0 -2px 0 0 rgba(0,0,0,0.05);
+    0 16px 40px -8px rgba(0, 0, 0, 0.2),
+    0 10px 20px -6px rgba(0, 0, 0, 0.12),
+    0 4px 8px -2px rgba(0, 0, 0, 0.07),
+    0 1px 2px 0 rgba(0, 0, 0, 0.04),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.85),
+    inset 0 -2px 0 0 rgba(0, 0, 0, 0.05);
 }
 .card-3d-blue:hover .card-3d-blue__inner {
   border-color: hsl(205 85% 45%);
@@ -614,9 +652,9 @@ html, body {
   transform: translateY(1px);
   padding-bottom: 8px;
   box-shadow:
-    0 3px 8px -3px rgba(0,0,0,0.14),
-    0 1px 3px -1px rgba(0,0,0,0.08),
-    inset 0 2px 3px 0 rgba(0,0,0,0.06);
+    0 3px 8px -3px rgba(0, 0, 0, 0.14),
+    0 1px 3px -1px rgba(0, 0, 0, 0.08),
+    inset 0 2px 3px 0 rgba(0, 0, 0, 0.06);
 }
 
 /* ═══════════════════════════════════════════════
@@ -627,7 +665,12 @@ html, body {
   @apply relative inline-flex cursor-pointer transition-all duration-200 ease-out;
   border-radius: 9999px;
   padding: 4px 4px 8px;
-  background: linear-gradient(180deg, hsl(var(--ivory) / 0.98) 0%, hsl(var(--secondary)) 55%, hsl(var(--ivory-dark)) 100%);
+  background: linear-gradient(
+    180deg,
+    hsl(var(--ivory) / 0.98) 0%,
+    hsl(var(--secondary)) 55%,
+    hsl(var(--ivory-dark)) 100%
+  );
   border: 1px solid hsl(var(--gold-light) / 0.55);
   box-shadow:
     0 10px 22px -16px hsl(var(--foreground) / 0.22),
@@ -637,7 +680,7 @@ html, body {
     inset 0 -1px 0 hsl(36 18% 78% / 0.24);
 }
 .premium-pill-3d::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 2px;
   left: 10%;
@@ -648,7 +691,7 @@ html, body {
   pointer-events: none;
 }
 .premium-pill-3d::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 6%;
   right: 6%;
@@ -683,7 +726,7 @@ html, body {
   box-shadow:
     0 16px 28px -18px hsl(var(--foreground) / 0.26),
     0 7px 0 hsl(36 18% 78% / 0.98),
-    0 4px 10px -2px hsl(var(--foreground) / 0.10),
+    0 4px 10px -2px hsl(var(--foreground) / 0.1),
     inset 0 1px 0 hsl(0 0% 100% / 0.96);
 }
 .premium-pill-3d:hover .premium-pill-3d__face {
@@ -800,16 +843,16 @@ html, body {
   .premium-tile h3[data-tile-id="wills"] {
     margin-top: -1.2rem !important;
   }
-  }
-  .premium-tile h3[data-tile-id="senior-moves"],
-  .premium-tile h3[data-tile-id="probate-sales"],
-  .premium-tile h3[data-tile-id="the-process"],
-  .premium-tile h3[data-tile-id="home-value"],
-  .premium-tile h3[data-tile-id="lending"],
-  .premium-tile h3[data-tile-id="senior-living"],
-  .premium-tile h3[data-tile-id="realtor"] {
-    margin-top: -0.5rem !important;
-  }
+}
+.premium-tile h3[data-tile-id="senior-moves"],
+.premium-tile h3[data-tile-id="probate-sales"],
+.premium-tile h3[data-tile-id="the-process"],
+.premium-tile h3[data-tile-id="home-value"],
+.premium-tile h3[data-tile-id="lending"],
+.premium-tile h3[data-tile-id="senior-living"],
+.premium-tile h3[data-tile-id="realtor"] {
+  margin-top: -0.5rem !important;
+}
 @media (max-width: 639px) {
   .premium-tile h3[data-tile-id="senior-moves"] {
     margin-top: 0.15rem !important;
@@ -855,7 +898,7 @@ html, body {
     transform: scale(1.1) !important;
     transform-origin: top center !important;
   }
-   /* The Process tile: lower icon */
+  /* The Process tile: lower icon */
   .premium-tile[data-tile-name="the-process"] .tile-icon {
     transform-origin: bottom center !important;
     transform: scale(1.365) translateY(14%) !important;
@@ -936,7 +979,7 @@ html, body {
   }
   /* Senior Home Sales: nudge text down by 8 nudges total (increased by 2) */
   .premium-tile[data-tile-name="senior-transitions"] h3 {
-    margin-top: 2.0rem !important;
+    margin-top: 2rem !important;
   }
   /* Senior Placement: nudge text down 5 nudges total, icon down 25% */
   .premium-tile:has(.service-nav-tile-mobile-hitbox[href="/senior-placement"]) h3 {
@@ -1204,8 +1247,6 @@ html, body {
   }
 }
 
-
-
 /* ═══════════════════════════════════════════════
    SECTION EYEBROW LABEL
 ═══════════════════════════════════════════════ */
@@ -1221,11 +1262,11 @@ html, body {
   background: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(40 25% 97%) 50%, hsl(38 18% 95%) 100%) !important;
   border-color: hsl(42 55% 62% / 0.4) !important;
   box-shadow:
-    0 6px 18px -4px rgba(0,0,0,0.10),
-    0 3px 8px -3px rgba(0,0,0,0.06),
+    0 6px 18px -4px rgba(0, 0, 0, 0.1),
+    0 3px 8px -3px rgba(0, 0, 0, 0.06),
     0 1px 0 0 hsl(36 14% 85%),
-    inset 0 1px 0 0 rgba(255,255,255,0.85),
-    inset 0 -1px 2px 0 rgba(0,0,0,0.03) !important;
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.85),
+    inset 0 -1px 2px 0 rgba(0, 0, 0, 0.03) !important;
 }
 
 /* ═══════════════════════════════════════════════
@@ -1267,8 +1308,13 @@ html, body {
 
 /* Floating animation for will vault icon */
 @keyframes will-vault-float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
 }
 .will-vault-float {
   animation: will-vault-float 4s ease-in-out infinite;
@@ -1328,28 +1374,68 @@ main a:not([class*="btn"]):not([role="menuitem"]):not(.no-underline):hover {
    shadcn Card, raw .rounded-* + bg-card/bg-background/bg-white wrappers
    used in guides, repair cards, comparison cards, step cards, etc. */
 /* Card title sizing/weight (h3-h6 inside any card-style container) */
-:where([class*="rounded-"][class*="bg-card"], [class*="rounded-"][class*="bg-background"], [class*="rounded-"][class*="bg-white"], [data-card], .card-3d, .card-3d-blue-skin):not(.premium-tile):not(.premium-shell-tile) :where(h2, h3, h4, h5, h6) {
+:where(
+    [class*="rounded-"][class*="bg-card"],
+    [class*="rounded-"][class*="bg-background"],
+    [class*="rounded-"][class*="bg-white"],
+    [data-card],
+    .card-3d,
+    .card-3d-blue-skin
+  ):not(.premium-tile):not(.premium-shell-tile)
+  :where(h2, h3, h4, h5, h6) {
   font-weight: 700;
   color: hsl(220 40% 12%);
 }
-:where([class*="rounded-"][class*="bg-card"], [class*="rounded-"][class*="bg-background"], [class*="rounded-"][class*="bg-white"], [data-card], .card-3d, .card-3d-blue-skin):not(.premium-tile):not(.premium-shell-tile) :where(h3, h4, h5, h6) {
+:where(
+    [class*="rounded-"][class*="bg-card"],
+    [class*="rounded-"][class*="bg-background"],
+    [class*="rounded-"][class*="bg-white"],
+    [data-card],
+    .card-3d,
+    .card-3d-blue-skin
+  ):not(.premium-tile):not(.premium-shell-tile)
+  :where(h3, h4, h5, h6) {
   font-size: max(1.125rem, 18px);
   line-height: 1.35;
 }
 
 /* Card body text — ≥16px, line-height 1.7 */
-:where([class*="rounded-"][class*="bg-card"], [class*="rounded-"][class*="bg-background"], [class*="rounded-"][class*="bg-white"], [data-card], .card-3d, .card-3d-blue-skin):not(.premium-tile):not(.premium-shell-tile) :where(p, li) {
+:where(
+    [class*="rounded-"][class*="bg-card"],
+    [class*="rounded-"][class*="bg-background"],
+    [class*="rounded-"][class*="bg-white"],
+    [data-card],
+    .card-3d,
+    .card-3d-blue-skin
+  ):not(.premium-tile):not(.premium-shell-tile)
+  :where(p, li) {
   font-size: max(1rem, 16px);
   line-height: 1.7;
 }
 
 /* Force muted text inside cards to meet AA contrast on light backgrounds */
-:where([class*="rounded-"][class*="bg-card"], [class*="rounded-"][class*="bg-background"], [class*="rounded-"][class*="bg-white"], [data-card], .card-3d, .card-3d-blue-skin):not(.premium-tile):not(.premium-shell-tile) .text-muted-foreground {
+:where(
+    [class*="rounded-"][class*="bg-card"],
+    [class*="rounded-"][class*="bg-background"],
+    [class*="rounded-"][class*="bg-white"],
+    [data-card],
+    .card-3d,
+    .card-3d-blue-skin
+  ):not(.premium-tile):not(.premium-shell-tile)
+  .text-muted-foreground {
   color: hsl(220 25% 25%) !important;
 }
 
 /* Cost / impact / meta labels (.text-gold inside cards) — readable & ≥15px/600 */
-:where([class*="rounded-"][class*="bg-card"], [class*="rounded-"][class*="bg-background"], [class*="rounded-"][class*="bg-white"], [data-card], .card-3d, .card-3d-blue-skin):not(.premium-tile):not(.premium-shell-tile) .text-gold {
+:where(
+    [class*="rounded-"][class*="bg-card"],
+    [class*="rounded-"][class*="bg-background"],
+    [class*="rounded-"][class*="bg-white"],
+    [data-card],
+    .card-3d,
+    .card-3d-blue-skin
+  ):not(.premium-tile):not(.premium-shell-tile)
+  .text-gold {
   color: hsl(42 70% 28%) !important;
   font-weight: 600;
   font-size: max(0.9375rem, 15px);
@@ -1357,7 +1443,15 @@ main a:not([class*="btn"]):not([role="menuitem"]):not(.no-underline):hover {
 
 /* Desktop: enforce 1.7 line-height on card body text */
 @media (min-width: 768px) {
-  :where([class*="rounded-"][class*="bg-card"], [class*="rounded-"][class*="bg-background"], [class*="rounded-"][class*="bg-white"], [data-card], .card-3d, .card-3d-blue-skin):not(.premium-tile):not(.premium-shell-tile) :where(p, li) {
+  :where(
+      [class*="rounded-"][class*="bg-card"],
+      [class*="rounded-"][class*="bg-background"],
+      [class*="rounded-"][class*="bg-white"],
+      [data-card],
+      .card-3d,
+      .card-3d-blue-skin
+    ):not(.premium-tile):not(.premium-shell-tile)
+    :where(p, li) {
     line-height: 1.7 !important;
   }
 }
@@ -1368,7 +1462,8 @@ main a:not([class*="btn"]):not([role="menuitem"]):not(.no-underline):hover {
    ========================================================= */
 
 /* 1. Minimum font size: never below 16px anywhere (excludes homepage tile labels) */
-body, body *:not(.tile-label):not([data-tile-id]) {
+body,
+body *:not(.tile-label):not([data-tile-id]) {
   font-size: max(1em, 16px);
 }
 
@@ -1418,9 +1513,14 @@ p.italic {
 }
 
 /* 4. Subtitles and supporting paragraphs under headings */
-h1 + p, h2 + p, h3 + p, h4 + p,
-h1 + .text-muted-foreground, h2 + .text-muted-foreground,
-h3 + .text-muted-foreground, h4 + .text-muted-foreground {
+h1 + p,
+h2 + p,
+h3 + p,
+h4 + p,
+h1 + .text-muted-foreground,
+h2 + .text-muted-foreground,
+h3 + .text-muted-foreground,
+h4 + .text-muted-foreground {
   font-size: max(1.0625rem, 17px) !important;
   line-height: 1.75 !important;
   color: #4b5563 !important;
@@ -1434,12 +1534,13 @@ h3 + .text-muted-foreground, h4 + .text-muted-foreground {
 
 /* 5. Card body text — readable, never faded */
 :where(
-  [class*="rounded-"][class*="bg-card"],
-  [class*="rounded-"][class*="bg-background"],
-  [class*="rounded-"][class*="bg-white"],
-  [data-card],
-  .card-3d
-):not(.premium-tile):not(.premium-shell-tile) :where(p, li, span) {
+    [class*="rounded-"][class*="bg-card"],
+    [class*="rounded-"][class*="bg-background"],
+    [class*="rounded-"][class*="bg-white"],
+    [data-card],
+    .card-3d
+  ):not(.premium-tile):not(.premium-shell-tile)
+  :where(p, li, span) {
   font-size: max(1rem, 16px) !important;
   color: #1f2937 !important;
   font-weight: 400 !important;
@@ -1447,11 +1548,7 @@ h3 + .text-muted-foreground, h4 + .text-muted-foreground {
 }
 
 /* Preserve light text on dark/navy cards */
-:where(
-  .card-3d-blue-skin,
-  [class*="bg-navy"],
-  [class*="bg-primary"]
-) :where(p, li, span) {
+:where(.card-3d-blue-skin, [class*="bg-navy"], [class*="bg-primary"]) :where(p, li, span) {
   color: #e5e7eb !important;
 }
 
@@ -1487,7 +1584,7 @@ p {
 }
 
 h1 {
-  font-size: 48px !important;
+  font-size: 26px !important;
 }
 
 h2 {
@@ -1509,4 +1606,3 @@ button,
 [role="button"] {
   font-size: 18px !important;
 }
-
