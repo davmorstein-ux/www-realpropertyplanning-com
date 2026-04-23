@@ -202,21 +202,22 @@ const Terminology = () => {
               <p className="text-muted-foreground leading-relaxed text-base md:text-lg max-w-3xl mx-auto mb-8">
                 If you are navigating the sale of inherited property, a probate home, trust-owned real estate, or a property transition involving an executor, trustee, attorney, or family estate, experienced guidance can help bring clarity, order, and confidence to the process.
               </p>
-              <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
-                <Link to="/contact">
+              <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4">
+                <Link to="/contact" className="w-full sm:w-auto">
                   <Button
                     variant="navy3d"
                     size="lg"
+                    className="bg-primary hover:bg-primary text-white font-semibold text-base px-7 py-4 h-auto rounded-lg w-full sm:w-auto inline-flex items-center justify-center"
                   >
                     <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy"/>
                     Request a Confidential Consultation
                   </Button>
                 </Link>
-                <Link to="/contact">
+                <Link to="/contact" className="w-full sm:w-auto">
                   <Button
                     size="lg"
                     variant="outline3d"
-                    className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-medium px-7 py-4 h-auto rounded-lg w-full sm:w-auto"
+                    className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold text-base px-7 py-4 h-auto rounded-lg w-full sm:w-auto inline-flex items-center justify-center"
                   >
                     <MessageSquare className="w-4 h-4 mr-2" />
                     Discuss a Probate Property
