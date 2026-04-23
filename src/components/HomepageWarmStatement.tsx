@@ -7,7 +7,7 @@ const HomepageWarmStatement = () => {
         <div className="max-w-[680px] mx-auto text-center">
           <h2
             className="font-serif mb-8 font-bold whitespace-pre-line"
-            style={{ color: "#8B0000", lineHeight: 1.2, textAlign: "center", fontSize: "32px" }}
+            style={{ color: "#8B0000", lineHeight: 1.2, textAlign: "center", fontSize: "28px" }}
           >
             {"This Is More Than a Real Estate Transaction"}
           </h2>
