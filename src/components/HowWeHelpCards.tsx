@@ -9,6 +9,7 @@ const cards = [
     iconAlt: "Inherited home real estate icon — probate and estate property sales in Washington State",
     iconSize: "w-[240px] h-[168px]",
     headline: "Selling an Inherited Home",
+    headlineClass: "text-xl",
     description: "We handle the details so families don't have to. Real Property Planning's background as both a licensed broker and a certified appraiser means inherited homes are priced honestly — based on actual condition, not an inflated pitch to win a listing. From valuation through closing, we manage the entire process.",
     link: "/probate-estate-sales",
     proLink: { label: "Find a probate attorney →", href: "/professionals/probate-attorneys" },
@@ -18,6 +19,7 @@ const cards = [
     iconAlt: "Senior housing transition icon — downsizing and relocation guidance in Washington State",
     iconSize: "w-[240px] h-[168px]",
     headline: "Senior Housing Transitions",
+    headlineClass: "text-xl",
     description: "Helping seniors and their families navigate the sale of a longtime home with patience and clear communication — whether the next step is assisted living, downsizing, or a move closer to family. We coordinate with care teams, move managers, and advisors throughout the Puget Sound area.",
     link: "/senior-transitions",
     proLink: { label: "Find a senior housing advisor →", href: "/professionals/senior-housing-advisors" },
@@ -27,6 +29,7 @@ const cards = [
     iconAlt: "Estate appraisal document icon — certified residential appraisals for probate and trusts",
     iconSize: "w-[240px] h-[168px]",
     headline: " Estate & Trust Appraisals",
+    headlineClass: "text-2xl",
     description: "As a Washington State Certified Residential Appraiser, Real Property Planning provides condition-adjusted, defensible valuations for probate, trust administration, estate settlements, and financial planning purposes — the kind of analysis that holds up when attorneys, courts, and family members ask questions.",
     link: "/real-estate-appraiser",
     proLink: { label: "See all professional resources →", href: "/professionals" },
@@ -37,7 +40,7 @@ const HowWeHelpCards = () => {
   return (
     <section className="py-16 lg:py-24 bg-background">
       <div className="container px-6 lg:px-8">
-        <h2 className="font-serif text-red-900 font-semibold text-center mb-12 text-4xl">
+        <h2 className="font-serif text-red-900 font-semibold text-center mb-12 text-3xl">
           How We Help
         </h2>
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -54,7 +57,7 @@ const HowWeHelpCards = () => {
                   loading="lazy"
                 />
               </div>
-              <h3 className="font-serif font-bold text-red-900 mb-3 whitespace-pre-line text-xl leading-none text-center">
+              <h3 className={`font-serif font-bold text-red-900 mb-3 whitespace-pre-line leading-none text-center ${card.headlineClass || 'text-xl'}`}>
                 {card.headline}
               </h3>
               <p className="text-muted-foreground text-lg leading-relaxed mb-4 flex-1">
