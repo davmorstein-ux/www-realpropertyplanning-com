@@ -21,12 +21,12 @@ import { Icon3DFamily, Icon3DHome, Icon3DHeart } from "@/components/icons/Icon3D
 const whoWeHelpCards = [
   {
     Icon: Icon3DFamily,
-    label: "Families of Aging Parents\n\n",
+    label: "Families of Aging Parents",
     text: "Adult children helping a parent leave the home they have lived in for years — whether the move is to a smaller home, an independent living community, or an assisted living or memory care facility.",
   },
   {
     Icon: Icon3DHome,
-    label: "Seniors Downsizing\n\n",
+    label: "Seniors Downsizing",
     text: "Older adults who are ready to simplify, move closer to family, or transition into a community that better fits their current lifestyle and needs.",
   },
   {
