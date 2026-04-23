@@ -7,7 +7,7 @@ const HomepageWarmStatement = () => {
         <div className="max-w-[680px] mx-auto text-center">
           <h2
             className="font-serif mb-8 font-bold whitespace-pre-line"
-            style={{ color: "#8B0000", lineHeight: 1.2, textAlign: "center", fontSize: "48px" }}
+            style={{ color: "#8B0000", lineHeight: 1.2, textAlign: "center", fontSize: "32px" }}
           >
             {"This Is More Than a Real Estate Transaction"}
           </h2>
@@ -24,7 +24,7 @@ const HomepageWarmStatement = () => {
           <div className="bg-card border-l-4 border-gold rounded-lg p-8 mb-10 text-left">
             <p
               className="font-serif leading-relaxed mb-3 opacity-100 italic text-slate-800 font-bold text-center"
-              style={{ fontSize: "32px" }}
+              style={{ fontSize: "48px" }}
             >
               "We don't just sell homes. We help families move forward."
             </p>
