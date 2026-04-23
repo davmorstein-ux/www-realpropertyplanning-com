@@ -1483,30 +1483,30 @@ h3 + .text-muted-foreground, h4 + .text-muted-foreground {
    =========================================================== */
 body,
 p {
-  font-size: 18px;
+  font-size: 18px !important;
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 48px !important;
 }
 
 h2 {
-  font-size: 36px;
+  font-size: 36px !important;
 }
 
 h3 {
-  font-size: 28px;
+  font-size: 28px !important;
 }
 
 .card-title,
 [data-card-title],
 .CardTitle {
-  font-size: 24px;
+  font-size: 24px !important;
 }
 
 button,
 .btn,
 [role="button"] {
-  font-size: 18px;
+  font-size: 18px !important;
 }
 
