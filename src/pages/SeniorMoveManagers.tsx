@@ -235,7 +235,7 @@ const SeniorMoveManagers = () => (
                 <div className="w-full flex flex-col items-center sm:flex-1 sm:items-start">
                   <div className="w-full mt-1 text-center sm:text-left">
                     <a href="https://www.monarchtransitions.com" target="_blank" rel="noopener noreferrer" className="inline-block">
-                      <img src={monarchLogo} alt="Monarch Transitions logo" className="h-[240px] w-auto object-contain mx-auto sm:mx-0 sm:-translate-x-[70px] block" loading="lazy" />
+                      <img src={monarchLogo} alt="Monarch Transitions logo" className="h-[140px] w-auto object-contain mx-auto sm:mx-0 block mb-2" loading="lazy" />
                     </a>
                     <p className="text-foreground font-semibold text-base">Tina Baril</p>
                     <p className="text-muted-foreground text-sm mb-0.5">Owner</p>
