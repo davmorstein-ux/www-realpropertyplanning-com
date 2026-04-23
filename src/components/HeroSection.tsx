@@ -10,15 +10,12 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-[90vh] flex items-center bg-primary">
       <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-navy-dark opacity-95" />
-
+      
       {/* Subtle pattern overlay */}
-      <div
-        className="absolute inset-0 opacity-5"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }}
-      />
-
+      <div className="absolute inset-0 opacity-5" style={{
+        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+      }} />
+      
       <div className="container relative z-10 px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
@@ -35,67 +32,45 @@ const HeroSection = () => {
               />
             </div>
 
-            <h1
-              className="font-serif text-3xl md:text-4xl lg:text-5xl text-primary-foreground font-medium leading-tight mb-4"
-              style={{ textShadow: "0 1px 3px rgba(0,0,0,0.3)" }}
-            >
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-primary-foreground font-medium leading-tight mb-4" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.3)' }}>
               Probate, Estate &amp; Senior Transition Real Estate
             </h1>
-
-            <p
-              className="text-lg md:text-xl text-primary-foreground/80 mb-8 leading-relaxed max-w-2xl"
-              style={{ textShadow: "0 1px 2px rgba(0,0,0,0.15)" }}
-            >
-              Real Property Planning works with executors, trustees, attorneys, and families navigating inherited homes,
-              probate sales, trust property, and senior transitions throughout Washington State — with 20+ years of dual
-              expertise as a licensed broker and certified appraiser.
+            
+            <p className="text-lg md:text-xl text-primary-foreground/80 mb-8 leading-relaxed max-w-2xl" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.15)' }}>
+              Real Property Planning works with executors, trustees, attorneys, and families navigating inherited homes, probate sales, trust property, and senior transitions throughout Washington State — with 20+ years of dual expertise as a licensed broker and certified appraiser.
             </p>
-
+            
             <div className="flex flex-col sm:flex-row items-start gap-4">
               <a href="tel:+12069003015">
-                <Button variant="gold" size="lg" className="text-primary px-8">
-                  <img
-                    src={iconPhone3d}
-                    alt=""
-                    aria-hidden="true"
-                    className="w-5 h-5 mr-2 object-contain shrink-0"
-                    loading="lazy"
-                  />
+                <Button variant="gold" 
+                  size="lg" 
+                  className="text-primary px-8"
+                >
+                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy"/>
                   Call (206) 900-3015
                 </Button>
               </a>
-              <Button
-                size="lg"
-                variant="outline3d"
+              <Button 
+                size="lg" 
+                variant="outline3d" 
                 className="border-gold/50 bg-transparent text-gold hover:bg-gold hover:text-foreground focus-visible:ring-gold"
               >
-                <img
-                  src={iconEmail3d}
-                  alt=""
-                  aria-hidden="true"
-                  className="w-5 h-5 object-contain shrink-0 mr-2"
-                  loading="lazy"
-                />
+                <img src={iconEmail3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0 mr-2"  loading="lazy"/>
                 Contact Me
               </Button>
             </div>
-            <p
-              className="mt-2 text-primary-foreground/70 text-base max-w-md"
-              style={{ textShadow: "0 1px 2px rgba(0,0,0,0.15)" }}
-            >
-              <a href="/contact" className="underline underline-offset-2 hover:text-gold transition-colors">
-                Request a call back
-              </a>
+            <p className="mt-2 text-primary-foreground/70 text-base max-w-md" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.15)' }}>
+              <a href="/contact" className="underline underline-offset-2 hover:text-gold transition-colors">Request a call back</a>
             </p>
             <p className="mt-2 text-primary-foreground/70 text-base max-w-md">
               A short conversation to understand your situation and discuss next steps. No pressure.
             </p>
-
+            
             <div className="mt-12 pt-8 border-t border-primary-foreground/20">
               <p className="text-primary-foreground/60 text-base mb-3">Proudly Serving</p>
               <div className="flex flex-wrap gap-3">
                 {["King County", "Snohomish County", "Pierce County", "Kitsap County"].map((county) => (
-                  <span
+                  <span 
                     key={county}
                     className="px-4 py-2 bg-primary-foreground/10 rounded-full text-primary-foreground/90 text-base"
                   >
@@ -111,11 +86,11 @@ const HeroSection = () => {
               <div className="w-80 h-96 rounded-2xl overflow-hidden border-4 border-gold/30 shadow-2xl">
                 <img
                   src={daveHeadshot}
-                  alt="Real Property Planning, probate real estate specialist and certified appraiser in Western Washington"
-                  className="w-full h-full object-cover object-top"
-                  loading="eager"
-                  fetchPriority="high"
-                />
+                   alt="Real Property Planning, probate real estate specialist and certified appraiser in Western Washington"
+                   className="w-full h-full object-cover object-top"
+                   loading="eager"
+                   fetchPriority="high"
+                 />
               </div>
               <div className="absolute -bottom-4 -right-4 w-80 h-96 rounded-2xl border-2 border-gold/20 -z-10" />
             </div>
