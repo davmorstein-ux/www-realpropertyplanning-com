@@ -226,6 +226,55 @@ const SeniorMoveManagers = () => (
                 </div>
               </div>
             </div>
+
+            <div className="bg-background border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 p-5 sm:p-6 mt-6">
+              <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-start sm:gap-5">
+                <div className="shrink-0">
+                  <img src={tinaBarilPhoto} alt="Tina Baril — Monarch Transitions" className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-border shadow-sm" loading="lazy" />
+                </div>
+                <div className="w-full flex flex-col items-center sm:flex-1 sm:items-start">
+                  <div className="w-full mt-1 text-center sm:text-left">
+                    <a href="https://www.monarchtransitions.com" target="_blank" rel="noopener noreferrer" className="inline-block">
+                      <img src={monarchLogo} alt="Monarch Transitions logo" className="h-[240px] w-auto object-contain mx-auto sm:mx-0 sm:-translate-x-[70px] block" loading="lazy" />
+                    </a>
+                    <p className="text-foreground font-semibold text-base">Tina Baril</p>
+                    <p className="text-muted-foreground text-sm mb-0.5">Owner</p>
+                    <p className="text-muted-foreground text-sm mb-1.5">Monarch Transitions · Senior Move Managers</p>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-3">
+                      Let us assist and guide you through a low-stress moving experience. At Monarch Transitions, we specialize in assisting older adults and their families with the emotional and physical aspects of moving and transition. Understanding the unique challenges seniors face, we offer expertise in resources and approaches that save money, reduce stress and produce quality results.
+                    </p>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-3">
+                      Monarch Transitions is in its 16th year continuing the family business with the mother-son team of Tina Baril and Avery Baril. They continue to serve the families and service partners of Pierce, South King, Thurston and Kitsap counties.
+                    </p>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-3">
+                      Tina's passion for assisting older adults and their families has continued to grow and thrive. While it is important to attend to the details and challenges of moving and transitioning loved ones, it is equally essential to address any emotional and physical limitations that they and/or their families may be suffering, which may be affecting the process. Tina works closely with health care and senior service professionals to connect with families that face these challenges.
+                    </p>
+                    <div className="space-y-1.5 text-sm">
+                      <div className="flex items-start gap-2 justify-center sm:justify-start">
+                        <MapPin className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+                        <span className="text-muted-foreground">P.O. Box 8246, Tacoma, WA 98419</span>
+                      </div>
+                      <div className="flex items-center gap-2 justify-center sm:justify-start">
+                        <Phone className="w-4 h-4 text-accent shrink-0" />
+                        <a href="tel:+12063538617" className="text-accent hover:text-gold underline-offset-4 hover:underline">(206) 353-8617</a>
+                      </div>
+                      <div className="flex items-center gap-2 justify-center sm:justify-start">
+                        <Phone className="w-4 h-4 text-accent shrink-0" />
+                        <a href="tel:+12535073398" className="text-accent hover:text-gold underline-offset-4 hover:underline">(253) 507-3398</a>
+                      </div>
+                      <div className="flex items-center gap-2 justify-center sm:justify-start">
+                        <Mail className="w-4 h-4 text-accent shrink-0" />
+                        <a href="mailto:tina@monarchtransitions.com" className="text-accent hover:text-gold underline-offset-4 hover:underline break-all">tina@monarchtransitions.com</a>
+                      </div>
+                      <div className="flex items-center gap-2 justify-center sm:justify-start">
+                        <Globe className="w-4 h-4 text-accent shrink-0" />
+                        <a href="https://www.monarchtransitions.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-gold underline-offset-4 hover:underline">www.monarchtransitions.com</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
