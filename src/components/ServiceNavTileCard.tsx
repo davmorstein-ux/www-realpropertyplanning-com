@@ -195,7 +195,7 @@ const ServiceNavTileCard = ({ tile, index, columns = 3 }: { tile: ServiceTile; i
   return (
     <div
       data-tile-name={tileName}
-      className="premium-tile relative block w-full text-center -my-[22%] -mx-[4%] scale-[1.45] sm:-my-[28%] sm:-mx-[4%] sm:scale-[1.4] pointer-events-none hover:!z-[100]"
+      className="premium-tile relative block w-full text-center -my-[22%] -mx-[4%] scale-[1.45] sm:-my-[20%] sm:-mx-[4%] sm:scale-[1.4] pointer-events-none hover:!z-[100]"
       style={{ zIndex: baseZIndex }}
     >
       <div aria-hidden="true" className="relative block w-full h-full pointer-events-none">
