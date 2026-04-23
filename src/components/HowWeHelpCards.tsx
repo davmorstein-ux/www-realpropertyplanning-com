@@ -47,7 +47,7 @@ const HowWeHelpCards = () => {
           {cards.map((card) => (
             <div
               key={card.headline}
-              className="bg-card rounded-2xl shadow-md p-8 flex flex-col items-start"
+              className="bg-card rounded-2xl shadow-md p-8 flex flex-col items-center"
             >
               <div className="w-full flex justify-center mb-6">
                 <img
