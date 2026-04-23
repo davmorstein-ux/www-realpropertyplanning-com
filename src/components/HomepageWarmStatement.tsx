@@ -5,8 +5,8 @@ const HomepageWarmStatement = () => {
     <section className="py-16 lg:py-24 bg-cream">
       <div className="container px-6 lg:px-8">
         <div className="max-w-[680px] mx-auto text-center">
-          <h2 className="font-serif text-red-900 mb-8 font-bold text-lg whitespace-pre-line">
-            {"This Is More Than\na Real Estate Transaction\n"}
+          <h2 className="font-serif mb-8 font-bold text-lg whitespace-pre-line text-center" style={{ color: '#8B0000', lineHeight: 1.2 }}>
+            {"This Is More Than a Real Estate Transaction"}
           </h2>
           <p className="text-[19px] md:text-[20px] text-foreground/80 leading-[1.75] mb-6">
             When a family is navigating the loss of a loved one — or helping an aging parent through one of life's biggest decisions — the last thing they need is pressure or a process that feels rushed.
