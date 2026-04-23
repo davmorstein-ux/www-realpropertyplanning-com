@@ -9,6 +9,8 @@ import { Phone, Mail, Globe, MapPin, Users, Home, HeartHandshake } from "lucide-
 import { Button } from "@/components/ui/button";
 import ericRovnerPhoto from "@/assets/providers/senior-movers-eric-rovner-washington.webp";
 import hbmmLogo from "@/assets/providers/senior-movers-hbmovemanagement-logo-washington.webp";
+import tinaBarilPhoto from "@/assets/providers/senior-movers-tina-baril-washington.webp";
+import monarchLogo from "@/assets/providers/senior-movers-monarch-transitions-logo-washington.webp";
 import iconSeniorMoves from "@/assets/icons/senior-movers-relocation-icon-washington.webp";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 
