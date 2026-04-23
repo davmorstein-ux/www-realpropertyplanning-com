@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import type { ServiceTile } from "./service-nav-tiles-data";
+import type { ServiceTile } from "./service-nav-tiles-data";-my-[22%] -mx-[4%] scale-[1.45] sm:-my-[22%] sm:-mx-[4%] sm:scale-[1.1]
 import tileShell from "@/assets/property-services-tile-shell-washington.webp";
 
 /* SEO-enriched alt text for each tile */
