@@ -57,7 +57,7 @@ const HowWeHelpCards = () => {
                   loading="lazy"
                 />
               </div>
-              <h3 className={`font-serif font-bold text-red-900 mb-3 whitespace-pre-line leading-none text-center ${card.headlineClass || 'text-xl'}`}>
+              <h3 className="font-serif font-bold mb-3 whitespace-pre-line leading-none text-center" style={{ color: '#8B0000', fontSize: '22px' }}>
                 {card.headline}
               </h3>
               <p className="text-muted-foreground text-lg leading-relaxed mb-4 flex-1">
