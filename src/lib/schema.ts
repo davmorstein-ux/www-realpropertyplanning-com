@@ -207,7 +207,7 @@ export const realEstateAgentSchema = {
       },
       image: LOGO_URL,
       description:
-        "Real Property Planning is Washington State's independent professional resource hub and ecosystem for probate real estate, inherited property sales, estate appraisals, and senior housing transitions — serving families, executors, attorneys, and professionals throughout the Puget Sound region. Led by President David Stein. Real estate license held under eXp Realty; appraisal services provided through Stein Appraisal.",
+        "Real Property Planning is Washington State's independent professional resource hub and ecosystem for probate real estate, inherited property sales, estate appraisals, and senior housing transitions — serving families, executors, attorneys, and professionals throughout the Puget Sound region. Led by President David Stein. David Stein's real estate license is held under eXp Realty; appraisal services provided through Stein Appraisal.",
       telephone: "(206) 900-3015",
       email: "info@realpropertyplanning.com",
       address: {

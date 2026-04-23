@@ -687,7 +687,7 @@ const buildSsgContent = (meta: RouteMeta) => {
   ssgParts.push(`<div style="margin-top:28px;padding:20px;border:1px solid #e5e5e5;border-radius:8px;background:#fafafa">`);
   ssgParts.push(`<h2 style="font-size:1.2rem;margin:0 0 12px 0">Real Property Planning</h2>`);
   ssgParts.push(`<p style="margin:4px 0;color:#444">Independent hub for probate, estate &amp; senior transition real estate in Washington State</p>`);
-  ssgParts.push(`<p style="margin:4px 0;color:#444">Washington State Licensed Real Estate Broker — License held under eXp Realty</p>`);
+  ssgParts.push(`<p style="margin:4px 0;color:#444">David Stein — Washington State Licensed Real Estate Broker — David Stein's real estate license is held under eXp Realty</p>`);
   ssgParts.push(`<p style="margin:4px 0;color:#444">Washington State Certified Residential Appraiser — Stein Appraisal</p>`);
   ssgParts.push(`<p style="margin:4px 0;color:#555">Phone: <a href="tel:2069003015" style="color:#1a365d">(206) 900-3015</a></p>`);
   ssgParts.push(`<p style="margin:4px 0;color:#555">Email: <a href="mailto:info@realpropertyplanning.com" style="color:#1a365d">info@realpropertyplanning.com</a></p>`);
