@@ -3,10 +3,7 @@ import logoBright from "@/assets/real-property-planning-logo-bright-seattle.webp
 
 const HomepageHero = () => {
   return (
-    <section
-      className="relative flex flex-col items-center justify-center"
-      style={{ backgroundColor: "#0a1628" }}
-    >
+    <section className="relative flex flex-col items-center justify-center" style={{ backgroundColor: "#0a1628" }}>
       <div className="flex flex-col items-center px-6 lg:px-8 py-1 lg:py-1 w-full max-w-6xl mx-auto text-center">
         {/* Logo — fixed-height wrapper prevents CLS; image overflows to show full artwork */}
         <div
@@ -26,7 +23,10 @@ const HomepageHero = () => {
         </div>
 
         {/* H1 — static, calm, immediately readable */}
-        <h1 className="font-sans text-[18px] font-bold tracking-[0.04em] leading-relaxed mb-3 text-white pt-6 max-w-3xl md:text-sm">
+        <h1
+          className="font-sans font-bold tracking-[0.04em] leading-tight mb-3 text-white pt-6 max-w-3xl"
+          style={{ fontSize: "26px" }}
+        >
           Washington's Professional Hub for Seniors, Families &amp; Estate Transitions
         </h1>
 
