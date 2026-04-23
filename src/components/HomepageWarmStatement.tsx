@@ -5,24 +5,30 @@ const HomepageWarmStatement = () => {
     <section className="py-16 lg:py-24 bg-cream">
       <div className="container px-6 lg:px-8">
         <div className="max-w-[680px] mx-auto text-center">
-          <h2 className="font-serif mb-8 font-bold whitespace-pre-line" style={{ color: '#8B0000', lineHeight: 1.2, textAlign: 'center', fontSize: '32px' }}>
+          <h2
+            className="font-serif mb-8 font-bold whitespace-pre-line"
+            style={{ color: "#8B0000", lineHeight: 1.2, textAlign: "center", fontSize: "48px" }}
+          >
             {"This Is More Than a Real Estate Transaction"}
           </h2>
           <p className="text-[19px] md:text-[20px] text-foreground/80 leading-[1.75] mb-6">
-            When a family is navigating the loss of a loved one — or helping an aging parent through one of life's biggest decisions — the last thing they need is pressure or a process that feels rushed.
+            When a family is navigating the loss of a loved one — or helping an aging parent through one of life's
+            biggest decisions — the last thing they need is pressure or a process that feels rushed.
           </p>
           <p className="text-[19px] md:text-[20px] text-foreground/80 leading-[1.75] mb-10">
-            Real Property Planning was built around a simple belief: families deserve calm, clear, honest guidance at every step.
+            Real Property Planning was built around a simple belief: families deserve calm, clear, honest guidance at
+            every step.
           </p>
 
           {/* Pullquote */}
           <div className="bg-card border-l-4 border-gold rounded-lg p-8 mb-10 text-left">
-            <p className="font-serif leading-relaxed mb-3 opacity-100 italic text-slate-800 font-bold text-center" style={{ fontSize: '32px' }}>
+            <p
+              className="font-serif leading-relaxed mb-3 opacity-100 italic text-slate-800 font-bold text-center"
+              style={{ fontSize: "32px" }}
+            >
               "We don't just sell homes. We help families move forward."
             </p>
-            <p className="text-muted-foreground text-base">
-              — David Stein, Real Property Planning
-            </p>
+            <p className="text-muted-foreground text-base">— David Stein, Real Property Planning</p>
           </div>
 
           <Link to="/contact">
