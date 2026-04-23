@@ -792,7 +792,7 @@ html, body {
   }
   /* Mobile-only: Service Areas tile icon vertical offset */
   .premium-tile[data-tile-name="service-areas"] .tile-icon {
-    translate: 0 35% !important;
+    translate: 0 45% !important;
   }
   .premium-tile h3[data-tile-id="cpas"] {
     margin-top: -0.5rem !important;
