@@ -21,12 +21,12 @@ import { Icon3DFamily, Icon3DHome, Icon3DHeart } from "@/components/icons/Icon3D
 const whoWeHelpCards = [
   {
     Icon: Icon3DFamily,
-    label: "Families of Aging Parents",
+    label: "Families of Aging Parents\n\n",
     text: "Adult children helping a parent leave the home they have lived in for years — whether the move is to a smaller home, an independent living community, or an assisted living or memory care facility.",
   },
   {
     Icon: Icon3DHome,
-    label: "Seniors Downsizing",
+    label: "Seniors Downsizing\n\n",
     text: "Older adults who are ready to simplify, move closer to family, or transition into a community that better fits their current lifestyle and needs.",
   },
   {
@@ -126,7 +126,7 @@ const SeniorMoveManagers = () => (
               {whoWeHelpCards.map((card) => (
                 <div key={card.label} className="bg-background border border-border rounded-xl p-5 sm:p-6 shadow-sm text-center">
                   <card.Icon className="mx-auto mb-1.5" size={64} />
-                  <h3 className="font-serif text-lg font-semibold text-[#8B0000] leading-tight mb-1">{card.label}</h3>
+                  <h3 className="font-serif font-semibold text-[#8B0000] leading-tight mb-1 text-center text-lg">{card.label}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">{card.text}</p>
                 </div>
               ))}
