@@ -788,7 +788,7 @@ html, body {
   }
   /* Mobile-only: lower the vertical offset of tile label text */
   .premium-tile h3.tile-label {
-    margin-top: 0.4rem !important;
+    margin-top: 30% !important;
   }
   .premium-tile h3[data-tile-id="cpas"] {
     margin-top: -0.5rem !important;
