@@ -5,7 +5,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import CTASection from "@/components/CTASection";
 import { Link } from "react-router-dom";
-import { Phone, Mail, Globe, MapPin, Users, Home, HeartHandshake } from "lucide-react";
+import { Users, Home, HeartHandshake } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ericRovnerPhoto from "@/assets/providers/senior-movers-eric-rovner-washington.webp";
 import hbmmLogo from "@/assets/providers/senior-movers-hbmovemanagement-logo-washington.webp";
@@ -13,6 +13,10 @@ import tinaBarilPhoto from "@/assets/providers/senior-movers-tina-baril-washingt
 import monarchLogo from "@/assets/providers/senior-movers-monarch-transitions-logo-washington.webp";
 import iconSeniorMoves from "@/assets/icons/senior-movers-relocation-icon-washington.webp";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
+import iconPin3d from "@/assets/icons/real-estate-location-pin-3d-icon-washington.png";
+import iconCall3d from "@/assets/icons/real-estate-phone-handset-3d-icon-washington.png";
+import iconMail3d from "@/assets/icons/real-estate-email-envelope-3d-icon-washington.png";
+import iconGlobe3d from "@/assets/icons/real-estate-website-globe-3d-icon-washington.png";
 
 const whoWeHelpCards = [
   {
