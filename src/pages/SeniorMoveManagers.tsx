@@ -1,5 +1,5 @@
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Footer from "@/components/Footer";Icon: Icon3DFamily,
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import DisclaimerSection from "@/components/DisclaimerSection";
@@ -19,19 +19,23 @@ import iconGlobe3d from "@/assets/icons/real-estate-website-globe-3d-icon-washin
 import { Icon3DFamily, Icon3DHome, Icon3DHeart } from "@/components/icons/Icon3D";
 
 const whoWeHelpCards = [
+ const whoWeHelpCards = [
   {
     Icon: Icon3DFamily,
     label: "Families of Aging Parents",
+    fontSize: "1rem",
     text: "Adult children helping a parent leave the home they have lived in for years — whether the move is to a smaller home, an independent living community, or an assisted living or memory care facility.",
   },
   {
     Icon: Icon3DHome,
     label: "Seniors Downsizing",
+    fontSize: "1rem",
     text: "Older adults who are ready to simplify, move closer to family, or transition into a community that better fits their current lifestyle and needs.",
   },
   {
     Icon: Icon3DHeart,
     label: "Senior Care Coordinators & Social Workers",
+    fontSize: "0.72rem",
     text: "Professionals who work with seniors and their families and need a trusted real estate partner who understands the pace, sensitivities, and unique demands of senior transitions.",
   },
 ];
@@ -124,14 +128,14 @@ const SeniorMoveManagers = () => (
             </h2>
             <div className="grid gap-6 sm:grid-cols-3">
               {whoWeHelpCards.map((card) => (
-                <div key={card.label} className="bg-background border border-border rounded-xl p-5 sm:p-6 shadow-sm text-center flex flex-col">
+                <<div key={card.label} className="bg-background border border-border rounded-xl p-5 sm:p-6 shadow-sm text-center flex flex-col">
   <card.Icon className="mx-auto mb-1.5" size={64} />
-  <h3
-    className="font-serif font-semibold text-[#8B0000] leading-tight mb-1 text-center"
-    style={{ fontSize: card.label.length > 20 ? '0.78rem' : '1rem', minHeight: '3.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
-  >
-    {card.label}
-  </h3>
+ <h3
+  className="font-serif font-semibold text-[#8B0000] leading-tight mb-1 text-center"
+  style={{ fontSize: card.fontSize, minHeight: '3.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+>
+  {card.label}
+</h3>
   <p className="text-muted-foreground text-sm leading-relaxed">{card.text}</p>
 </div>
               ))}
