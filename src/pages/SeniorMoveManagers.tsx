@@ -176,7 +176,7 @@ const SeniorMoveManagers = () => (
                     justifyContent: "center",
                   }}
                 >
-                  Senior Care Coordinators &amp; Social Workers
+                  Care Coordinators &amp; Social Workers
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
                   Professionals who work with seniors and their families and need a trusted real estate partner who
