@@ -18,27 +18,6 @@ import iconMail3d from "@/assets/icons/real-estate-email-envelope-3d-icon-washin
 import iconGlobe3d from "@/assets/icons/real-estate-website-globe-3d-icon-washington.png";
 import { Icon3DFamily, Icon3DHome, Icon3DHeart } from "@/components/icons/Icon3D";
 
-const whoWeHelpCards = [
-  {
-    Icon: Icon3DFamily,
-    label: "Families of Aging Parents",
-    fontSize: "1rem",
-    text: "Adult children helping a parent leave the home they have lived in for years — whether the move is to a smaller home, an independent living community, or an assisted living or memory care facility.",
-  },
-  {
-    Icon: Icon3DHome,
-    label: "Seniors Downsizing",
-    fontSize: "1rem",
-    text: "Older adults who are ready to simplify, move closer to family, or transition into a community that better fits their current lifestyle and needs.",
-  },
-  {
-    Icon: Icon3DHeart,
-    label: "Senior Care Coordinators & Social Workers",
-    fontSize: "0.72rem",
-    text: "Professionals who work with seniors and their families and need a trusted real estate partner who understands the pace, sensitivities, and unique demands of senior transitions.",
-  },
-];
-
 const realEstateSideItems = [
   {
     title: "Certified Home Valuation",
@@ -78,20 +57,36 @@ const SeniorMoveManagers = () => (
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <div className="flex justify-center mb-1.5 md:mb-2">
-              <img src={iconSeniorMoves} alt="Senior move management and downsizing coordination in Washington State" className="block w-full max-w-[15rem] h-auto object-contain" loading="lazy" />
+              <img
+                src={iconSeniorMoves}
+                alt="Senior move management and downsizing coordination in Washington State"
+                className="block w-full max-w-[15rem] h-auto object-contain"
+                loading="lazy"
+              />
             </div>
-            <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">
-              Senior Transitions
-            </p>
+            <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">Senior Transitions</p>
             <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-primary-foreground leading-tight mb-4">
               Senior Move Managers
             </h1>
-            <p className="text-primary-foreground/70 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-3" style={{ maskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)' }}>
-              Practical, compassionate help for older adults and families preparing to downsize, organize, pack, relocate, or settle into a new home.
+            <p
+              className="text-primary-foreground/70 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-3"
+              style={{
+                maskImage: "linear-gradient(to bottom, black 60%, transparent 100%)",
+                WebkitMaskImage: "linear-gradient(to bottom, black 60%, transparent 100%)",
+              }}
+            >
+              Practical, compassionate help for older adults and families preparing to downsize, organize, pack,
+              relocate, or settle into a new home.
             </p>
             <Link to="/contact">
               <Button variant="gold" size="lg" className="px-7 py-4 h-auto rounded-lg">
-                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy" />
+                <img
+                  src={iconPhone3d}
+                  alt=""
+                  aria-hidden="true"
+                  className="w-5 h-5 mr-2 object-contain shrink-0"
+                  loading="lazy"
+                />
                 Request a Consultation
               </Button>
             </Link>
@@ -108,10 +103,15 @@ const SeniorMoveManagers = () => (
             </h2>
             <div className="text-muted-foreground text-base md:text-lg leading-relaxed space-y-4">
               <p>
-                When an aging parent can no longer safely or comfortably remain in the home they have lived in for decades, families are often thrust into an unfamiliar and emotionally charged situation — all while trying to care for someone they love. Questions come fast. Should we sell the house? What is it worth? How do we coordinate the move with finding a new place? How do we do all of this without overwhelming Mom or Dad?
+                When an aging parent can no longer safely or comfortably remain in the home they have lived in for
+                decades, families are often thrust into an unfamiliar and emotionally charged situation — all while
+                trying to care for someone they love. Questions come fast. Should we sell the house? What is it worth?
+                How do we coordinate the move with finding a new place? How do we do all of this without overwhelming
+                Mom or Dad?
               </p>
               <p>
-                Real Property Planning exists to help families answer those questions with calm, experienced guidance — and to handle the real estate side of the transition so families can focus on what matters most.
+                Real Property Planning exists to help families answer those questions with calm, experienced guidance —
+                and to handle the real estate side of the transition so families can focus on what matters most.
               </p>
             </div>
           </div>
@@ -128,18 +128,60 @@ const SeniorMoveManagers = () => (
             <div className="grid gap-6 sm:grid-cols-3">
               <div className="bg-background border border-border rounded-xl p-5 sm:p-6 shadow-sm text-center flex flex-col">
                 <Icon3DFamily className="mx-auto mb-1.5" size={64} />
-                <h3 className="font-serif font-semibold text-[#8B0000] text-center mb-1" style={{ fontSize: "1rem", minHeight: "3.5rem", display: "flex", alignItems: "center", justifyContent: "center" }}>Families of Aging Parents</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">Adult children helping a parent leave the home they have lived in for years — whether the move is to a smaller home, an independent living community, or an assisted living or memory care facility.</p>
+                <h3
+                  className="font-serif font-semibold text-[#8B0000] text-center mb-1"
+                  style={{
+                    fontSize: "1rem",
+                    minHeight: "3.5rem",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  Families of Aging Parents
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Adult children helping a parent leave the home they have lived in for years — whether the move is to a
+                  smaller home, an independent living community, or an assisted living or memory care facility.
+                </p>
               </div>
               <div className="bg-background border border-border rounded-xl p-5 sm:p-6 shadow-sm text-center flex flex-col">
                 <Icon3DHome className="mx-auto mb-1.5" size={64} />
-                <h3 className="font-serif font-semibold text-[#8B0000] text-center mb-1" style={{ fontSize: "1rem", minHeight: "3.5rem", display: "flex", alignItems: "center", justifyContent: "center" }}>Seniors Downsizing</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">Older adults who are ready to simplify, move closer to family, or transition into a community that better fits their current lifestyle and needs.</p>
+                <h3
+                  className="font-serif font-semibold text-[#8B0000] text-center mb-1"
+                  style={{
+                    fontSize: "1rem",
+                    minHeight: "3.5rem",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  Seniors Downsizing
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Older adults who are ready to simplify, move closer to family, or transition into a community that
+                  better fits their current lifestyle and needs.
+                </p>
               </div>
               <div className="bg-background border border-border rounded-xl p-5 sm:p-6 shadow-sm text-center flex flex-col">
                 <Icon3DHeart className="mx-auto mb-1.5" size={64} />
-                <h3 className="font-serif font-semibold text-[#8B0000] text-center mb-1" style={{ fontSize: "0.72rem", minHeight: "3.5rem", display: "flex", alignItems: "center", justifyContent: "center" }}>Senior Care Coordinators &amp; Social Workers</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">Professionals who work with seniors and their families and need a trusted real estate partner who understands the pace, sensitivities, and unique demands of senior transitions.</p>
+                <h3
+                  className="font-serif font-semibold text-[#8B0000] text-center mb-1"
+                  style={{
+                    fontSize: "0.72rem",
+                    minHeight: "3.5rem",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  Senior Care Coordinators &amp; Social Workers
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Professionals who work with seniors and their families and need a trusted real estate partner who
+                  understands the pace, sensitivities, and unique demands of senior transitions.
+                </p>
               </div>
             </div>
           </div>
@@ -154,7 +196,9 @@ const SeniorMoveManagers = () => (
               The Real Estate Side of a Senior Transition
             </h2>
             <p className="text-muted-foreground text-base md:text-lg leading-relaxed text-center mb-10">
-              The family home is often the most valuable asset involved in a senior transition — and what happens to it can directly affect the family's ability to fund assisted living, distribute assets fairly, or simply move forward. Here is how Real Property Planning helps:
+              The family home is often the most valuable asset involved in a senior transition — and what happens to it
+              can directly affect the family's ability to fund assisted living, distribute assets fairly, or simply move
+              forward. Here is how Real Property Planning helps:
             </p>
             <div className="space-y-5">
               {realEstateSideItems.map((item) => (
@@ -176,7 +220,11 @@ const SeniorMoveManagers = () => (
               From Independent Living to Assisted Living
             </h2>
             <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-              Senior housing transitions do not always start from a family home. Sometimes a parent is already living in an independent living or retirement community when their needs change and a move to assisted living or memory care becomes necessary. When that transition involves owned real estate — whether a condo, a home being held, or another property — Real Property Planning can help families manage that piece of the puzzle quickly and with care.
+              Senior housing transitions do not always start from a family home. Sometimes a parent is already living in
+              an independent living or retirement community when their needs change and a move to assisted living or
+              memory care becomes necessary. When that transition involves owned real estate — whether a condo, a home
+              being held, or another property — Real Property Planning can help families manage that piece of the puzzle
+              quickly and with care.
             </p>
           </div>
         </div>
@@ -190,13 +238,15 @@ const SeniorMoveManagers = () => (
               Serving Families Throughout Washington State
             </h2>
             <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-              From Seattle and the Eastside to Everett, Tacoma, Olympia, Bellingham, Spokane, and every community in between — Real Property Planning provides senior transition real estate guidance throughout Washington State. Whether the family home is in a major metro area or a small rural community, we are here to help.
+              From Seattle and the Eastside to Everett, Tacoma, Olympia, Bellingham, Spokane, and every community in
+              between — Real Property Planning provides senior transition real estate guidance throughout Washington
+              State. Whether the family home is in a major metro area or a small rural community, we are here to help.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Featured Senior Move Manager */}
+      {/* Featured Senior Move Managers */}
       <section className="py-10 md:py-14 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
@@ -206,35 +256,93 @@ const SeniorMoveManagers = () => (
             <div className="bg-background border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 p-5 sm:p-6">
               <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-start sm:gap-5">
                 <div className="shrink-0">
-                  <img src={ericRovnerPhoto} alt="Eric Rovner — HB Move Management" className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-border shadow-sm" loading="lazy" />
+                  <img
+                    src={ericRovnerPhoto}
+                    alt="Eric Rovner — HB Move Management"
+                    className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-border shadow-sm"
+                    loading="lazy"
+                  />
                 </div>
                 <div className="w-full flex flex-col items-center sm:flex-1 sm:items-start">
                   <div className="w-full mt-1 text-center sm:text-left">
-                    <a href="https://www.hbmovemanagement.com" target="_blank" rel="noopener noreferrer" className="inline-block">
-                      <img src={hbmmLogo} alt="HB Move Management logo" className="h-[240px] w-auto object-contain mx-auto sm:mx-0 sm:-translate-x-[70px] block" loading="lazy" />
+                    <a
+                      href="https://www.hbmovemanagement.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block"
+                    >
+                      <img
+                        src={hbmmLogo}
+                        alt="HB Move Management logo"
+                        className="h-[240px] w-auto object-contain mx-auto sm:mx-0 sm:-translate-x-[70px] block"
+                        loading="lazy"
+                      />
                     </a>
                     <p className="text-foreground font-semibold text-base">Eric Rovner</p>
                     <p className="text-muted-foreground text-sm mb-0.5">Vice President of Marketing</p>
                     <p className="text-muted-foreground text-sm mb-1.5">HB Move Management · Hansen Bros. Moving</p>
                     <p className="text-muted-foreground text-sm leading-relaxed mb-3">
-                      HB Move Management is a proud division of Hansen Bros. Moving &amp; Storage, one of the oldest and most respected service providers in the Puget Sound region. Their services go far beyond traditional moving — helping people prepare, survive the move, and get settled in their new home.
+                      HB Move Management is a proud division of Hansen Bros. Moving &amp; Storage, one of the oldest and
+                      most respected service providers in the Puget Sound region. Their services go far beyond
+                      traditional moving — helping people prepare, survive the move, and get settled in their new home.
                     </p>
                     <div className="space-y-0.5 text-sm">
                       <div className="flex items-center gap-2 justify-center sm:justify-start">
-                        <img src={iconPin3d} alt="" aria-hidden="true" className="w-6 h-6 object-contain shrink-0" loading="lazy" />
+                        <img
+                          src={iconPin3d}
+                          alt=""
+                          aria-hidden="true"
+                          className="w-6 h-6 object-contain shrink-0"
+                          loading="lazy"
+                        />
                         <span className="text-muted-foreground">10750 Aurora Ave N, Seattle, WA 98133</span>
                       </div>
                       <div className="flex items-center gap-2 justify-center sm:justify-start">
-                        <img src={iconCall3d} alt="" aria-hidden="true" className="w-6 h-6 object-contain shrink-0" loading="lazy" />
-                        <a href="tel:+12062574314" className="text-accent hover:text-gold underline-offset-4 hover:underline">(206) 257-4314</a>
+                        <img
+                          src={iconCall3d}
+                          alt=""
+                          aria-hidden="true"
+                          className="w-6 h-6 object-contain shrink-0"
+                          loading="lazy"
+                        />
+                        <a
+                          href="tel:+12062574314"
+                          className="text-accent hover:text-gold underline-offset-4 hover:underline"
+                        >
+                          (206) 257-4314
+                        </a>
                       </div>
                       <div className="flex items-center gap-2 justify-center sm:justify-start">
-                        <img src={iconMail3d} alt="" aria-hidden="true" className="w-6 h-6 object-contain shrink-0" loading="lazy" />
-                        <a href="mailto:info@hbmovemanagement.com" className="text-accent hover:text-gold underline-offset-4 hover:underline break-all">info@hbmovemanagement.com</a>
+                        <img
+                          src={iconMail3d}
+                          alt=""
+                          aria-hidden="true"
+                          className="w-6 h-6 object-contain shrink-0"
+                          loading="lazy"
+                        />
+                        <a
+                          href="mailto:info@hbmovemanagement.com"
+                          className="text-accent hover:text-gold underline-offset-4 hover:underline break-all"
+                        >
+                          info@hbmovemanagement.com
+                        </a>
                       </div>
                       <div className="flex items-center gap-2 justify-center sm:justify-start">
-                        <img src={iconGlobe3d} alt="" aria-hidden="true" className="w-6 h-6 object-contain shrink-0" loading="lazy" />
-                        <a href="https://www.hbmovemanagement.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-gold underline-offset-4 hover:underline">www.hbmovemanagement.com</a>
+                        <img
+                          src={iconGlobe3d}
+                          alt=""
+                          aria-hidden="true"
+                          className="w-6 h-6 object-contain shrink-0"
+                          loading="lazy"
+                        />
+                        <a
+                          href="https://www.hbmovemanagement.com"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-accent hover:text-gold underline-offset-4 hover:underline"
+                        >
+                          www.hbmovemanagement.com
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -245,45 +353,121 @@ const SeniorMoveManagers = () => (
             <div className="bg-background border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 p-5 sm:p-6 mt-6">
               <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-start sm:gap-5">
                 <div className="shrink-0">
-                  <img src={tinaBarilPhoto} alt="Tina Baril — Monarch Transitions" className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-border shadow-sm" loading="lazy" />
+                  <img
+                    src={tinaBarilPhoto}
+                    alt="Tina Baril — Monarch Transitions"
+                    className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-border shadow-sm"
+                    loading="lazy"
+                  />
                 </div>
                 <div className="w-full flex flex-col items-center sm:flex-1 sm:items-start">
                   <div className="w-full mt-1 text-center sm:text-left">
-                    <a href="https://www.monarchtransitions.com" target="_blank" rel="noopener noreferrer" className="inline-block">
-                      <img src={monarchLogo} alt="Monarch Transitions logo" className="h-[140px] w-auto object-contain mx-auto sm:mx-0 block mb-2" loading="lazy" />
+                    <a
+                      href="https://www.monarchtransitions.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block"
+                    >
+                      <img
+                        src={monarchLogo}
+                        alt="Monarch Transitions logo"
+                        className="h-[140px] w-auto object-contain mx-auto sm:mx-0 block mb-2"
+                        loading="lazy"
+                      />
                     </a>
                     <p className="text-foreground font-semibold text-base">Tina Baril</p>
                     <p className="text-muted-foreground text-sm mb-0.5">Owner</p>
                     <p className="text-muted-foreground text-sm mb-1.5">Monarch Transitions · Senior Move Managers</p>
                     <p className="text-muted-foreground text-sm leading-relaxed mb-3">
-                      Let us assist and guide you through a low-stress moving experience. At Monarch Transitions, we specialize in assisting older adults and their families with the emotional and physical aspects of moving and transition. Understanding the unique challenges seniors face, we offer expertise in resources and approaches that save money, reduce stress and produce quality results.
+                      Let us assist and guide you through a low-stress moving experience. At Monarch Transitions, we
+                      specialize in assisting older adults and their families with the emotional and physical aspects of
+                      moving and transition. Understanding the unique challenges seniors face, we offer expertise in
+                      resources and approaches that save money, reduce stress and produce quality results.
                     </p>
                     <p className="text-muted-foreground text-sm leading-relaxed mb-3">
-                      Monarch Transitions is in its 16th year continuing the family business with the mother-son team of Tina Baril and Avery Baril. They continue to serve the families and service partners of Pierce, South King, Thurston and Kitsap counties.
+                      Monarch Transitions is in its 16th year continuing the family business with the mother-son team of
+                      Tina Baril and Avery Baril. They continue to serve the families and service partners of Pierce,
+                      South King, Thurston and Kitsap counties.
                     </p>
                     <p className="text-muted-foreground text-sm leading-relaxed mb-3">
-                      Tina's passion for assisting older adults and their families has continued to grow and thrive. While it is important to attend to the details and challenges of moving and transitioning loved ones, it is equally essential to address any emotional and physical limitations that they and/or their families may be suffering, which may be affecting the process. Tina works closely with health care and senior service professionals to connect with families that face these challenges.
+                      Tina's passion for assisting older adults and their families has continued to grow and thrive.
+                      While it is important to attend to the details and challenges of moving and transitioning loved
+                      ones, it is equally essential to address any emotional and physical limitations that they and/or
+                      their families may be suffering, which may be affecting the process. Tina works closely with
+                      health care and senior service professionals to connect with families that face these challenges.
                     </p>
                     <div className="space-y-0.5 text-sm">
                       <div className="flex items-center gap-2 justify-center sm:justify-start">
-                        <img src={iconPin3d} alt="" aria-hidden="true" className="w-6 h-6 object-contain shrink-0" loading="lazy" />
+                        <img
+                          src={iconPin3d}
+                          alt=""
+                          aria-hidden="true"
+                          className="w-6 h-6 object-contain shrink-0"
+                          loading="lazy"
+                        />
                         <span className="text-muted-foreground">P.O. Box 8246, Tacoma, WA 98419</span>
                       </div>
                       <div className="flex items-center gap-2 justify-center sm:justify-start">
-                        <img src={iconCall3d} alt="" aria-hidden="true" className="w-6 h-6 object-contain shrink-0" loading="lazy" />
-                        <a href="tel:+12063538617" className="text-accent hover:text-gold underline-offset-4 hover:underline">(206) 353-8617</a>
+                        <img
+                          src={iconCall3d}
+                          alt=""
+                          aria-hidden="true"
+                          className="w-6 h-6 object-contain shrink-0"
+                          loading="lazy"
+                        />
+                        <a
+                          href="tel:+12063538617"
+                          className="text-accent hover:text-gold underline-offset-4 hover:underline"
+                        >
+                          (206) 353-8617
+                        </a>
                       </div>
                       <div className="flex items-center gap-2 justify-center sm:justify-start">
-                        <img src={iconCall3d} alt="" aria-hidden="true" className="w-6 h-6 object-contain shrink-0" loading="lazy" />
-                        <a href="tel:+12535073398" className="text-accent hover:text-gold underline-offset-4 hover:underline">(253) 507-3398</a>
+                        <img
+                          src={iconCall3d}
+                          alt=""
+                          aria-hidden="true"
+                          className="w-6 h-6 object-contain shrink-0"
+                          loading="lazy"
+                        />
+                        <a
+                          href="tel:+12535073398"
+                          className="text-accent hover:text-gold underline-offset-4 hover:underline"
+                        >
+                          (253) 507-3398
+                        </a>
                       </div>
                       <div className="flex items-center gap-2 justify-center sm:justify-start">
-                        <img src={iconMail3d} alt="" aria-hidden="true" className="w-6 h-6 object-contain shrink-0" loading="lazy" />
-                        <a href="mailto:tina@monarchtransitions.com" className="text-accent hover:text-gold underline-offset-4 hover:underline break-all">tina@monarchtransitions.com</a>
+                        <img
+                          src={iconMail3d}
+                          alt=""
+                          aria-hidden="true"
+                          className="w-6 h-6 object-contain shrink-0"
+                          loading="lazy"
+                        />
+                        <a
+                          href="mailto:tina@monarchtransitions.com"
+                          className="text-accent hover:text-gold underline-offset-4 hover:underline break-all"
+                        >
+                          tina@monarchtransitions.com
+                        </a>
                       </div>
                       <div className="flex items-center gap-2 justify-center sm:justify-start">
-                        <img src={iconGlobe3d} alt="" aria-hidden="true" className="w-6 h-6 object-contain shrink-0" loading="lazy" />
-                        <a href="https://www.monarchtransitions.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-gold underline-offset-4 hover:underline">www.monarchtransitions.com</a>
+                        <img
+                          src={iconGlobe3d}
+                          alt=""
+                          aria-hidden="true"
+                          className="w-6 h-6 object-contain shrink-0"
+                          loading="lazy"
+                        />
+                        <a
+                          href="https://www.monarchtransitions.com"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-accent hover:text-gold underline-offset-4 hover:underline"
+                        >
+                          www.monarchtransitions.com
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -298,7 +482,10 @@ const SeniorMoveManagers = () => (
       <section className="py-6 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <Link to="/senior-move-managers/learn-more" className="text-accent hover:text-gold underline underline-offset-4 text-base font-medium transition-colors">
+            <Link
+              to="/senior-move-managers/learn-more"
+              className="text-accent hover:text-gold underline underline-offset-4 text-base font-medium transition-colors"
+            >
               More information about Senior Move Managers →
             </Link>
           </div>
