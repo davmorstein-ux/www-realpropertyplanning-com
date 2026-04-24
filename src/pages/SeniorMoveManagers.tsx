@@ -126,24 +126,21 @@ const SeniorMoveManagers = () => (
               Who We Help
             </h2>
             <div className="grid gap-6 sm:grid-cols-3">
-              {whoWeHelpCards.map((card) => (
-                <div key={card.label} className="bg-background border border-border rounded-xl p-5 sm:p-6 shadow-sm text-center flex flex-col">
-                  <card.Icon className="mx-auto mb-1.5" size={64} />
-                  <h3
-                    className="font-serif font-semibold text-[#8B0000] leading-tight mb-1 text-center"
-                    style={{
-                      fontSize: card.label === "Senior Care Coordinators & Social Workers" ? "0.72rem" : "1rem",
-                      minHeight: "3.5rem",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center"
-                    }}
-                  >
-                    {card.label}
-                  </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{card.text}</p>
-                </div>
-              ))}
+              <div className="bg-background border border-border rounded-xl p-5 sm:p-6 shadow-sm text-center flex flex-col">
+                <Icon3DFamily className="mx-auto mb-1.5" size={64} />
+                <h3 className="font-serif font-semibold text-[#8B0000] text-center mb-1" style={{ fontSize: "1rem", minHeight: "3.5rem", display: "flex", alignItems: "center", justifyContent: "center" }}>Families of Aging Parents</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">Adult children helping a parent leave the home they have lived in for years — whether the move is to a smaller home, an independent living community, or an assisted living or memory care facility.</p>
+              </div>
+              <div className="bg-background border border-border rounded-xl p-5 sm:p-6 shadow-sm text-center flex flex-col">
+                <Icon3DHome className="mx-auto mb-1.5" size={64} />
+                <h3 className="font-serif font-semibold text-[#8B0000] text-center mb-1" style={{ fontSize: "1rem", minHeight: "3.5rem", display: "flex", alignItems: "center", justifyContent: "center" }}>Seniors Downsizing</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">Older adults who are ready to simplify, move closer to family, or transition into a community that better fits their current lifestyle and needs.</p>
+              </div>
+              <div className="bg-background border border-border rounded-xl p-5 sm:p-6 shadow-sm text-center flex flex-col">
+                <Icon3DHeart className="mx-auto mb-1.5" size={64} />
+                <h3 className="font-serif font-semibold text-[#8B0000] text-center mb-1" style={{ fontSize: "0.72rem", minHeight: "3.5rem", display: "flex", alignItems: "center", justifyContent: "center" }}>Senior Care Coordinators &amp; Social Workers</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">Professionals who work with seniors and their families and need a trusted real estate partner who understands the pace, sensitivities, and unique demands of senior transitions.</p>
+              </div>
             </div>
           </div>
         </div>
