@@ -166,13 +166,10 @@ const SeniorMoveManagers = () => (
               </div>
               <div className="bg-background border border-border rounded-xl p-5 sm:p-6 shadow-sm text-center flex flex-col">
                 <Icon3DHeart className="mx-auto mb-1.5" size={64} />
-                <h3 className="font-serif font-semibold text-[#8B0000] text-center mb-1" style={{ minHeight: "3.5rem", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <span style={{ fontSize: "15px !important", lineHeight: "1.3", color: "#8B0000" }}>Care Coordinators &amp; Social Workers</span>
+                <h3 style={{ fontFamily: "Georgia, serif", fontWeight: "600", color: "#8B0000", textAlign: "center", marginBottom: "4px", fontSize: "18px", lineHeight: "1.3", minHeight: "3.5rem", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                  Care Coordinators &amp; Social Workers
                 </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  Professionals who work with seniors and their families and need a trusted real estate partner who
-                  understands the pace, sensitivities, and unique demands of senior transitions.
-                </p>
+                <p className="text-muted-foreground text-sm leading-relaxed">Professionals who work with seniors and their families and need a trusted real estate partner who understands the pace, sensitivities, and unique demands of senior transitions.</p>
               </div>
             </div>
           </div>
