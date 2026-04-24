@@ -127,7 +127,7 @@ const SeniorMoveManagers = () => (
                 <Icon3DFamily className="mx-auto mb-1.5" size={64} />
                 <h3
                   className="font-serif font-semibold text-[#8B0000] leading-tight mb-1 text-center flex items-center justify-center"
-                  style={{ fontSize: "1rem", minHeight: "4rem", backgroundColor: "transparent" }}
+                  style={{ fontSize: "1rem", minHeight: "5rem", backgroundColor: "transparent" }}
                 >
                   Families of Aging Parents
                 </h3>
@@ -139,7 +139,7 @@ const SeniorMoveManagers = () => (
                 <Icon3DHome className="mx-auto mb-1.5" size={64} />
                 <h3
                   className="font-serif font-semibold text-[#8B0000] leading-tight mb-1 text-center flex items-center justify-center"
-                  style={{ fontSize: "1rem", minHeight: "4rem", backgroundColor: "transparent" }}
+                  style={{ fontSize: "1rem", minHeight: "5rem", backgroundColor: "transparent" }}
                 >
                   Seniors Downsizing
                 </h3>
@@ -151,7 +151,7 @@ const SeniorMoveManagers = () => (
                 <Icon3DHeart className="mx-auto mb-1.5" size={64} />
                 <h3
                   className="font-serif font-semibold text-[#8B0000] leading-tight mb-1 text-center flex items-center justify-center"
-                  style={{ fontSize: "1rem", minHeight: "4rem", backgroundColor: "transparent" }}
+                  style={{ fontSize: "0.85rem", minHeight: "5rem", backgroundColor: "transparent" }}
                 >
                   Senior Care Coordinators &amp; Social Workers
                 </h3>
