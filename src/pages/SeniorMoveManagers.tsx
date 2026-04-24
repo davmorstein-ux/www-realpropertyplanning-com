@@ -1,5 +1,5 @@
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";Icon: Icon3DFamily,
+import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import DisclaimerSection from "@/components/DisclaimerSection";
@@ -19,7 +19,6 @@ import iconGlobe3d from "@/assets/icons/real-estate-website-globe-3d-icon-washin
 import { Icon3DFamily, Icon3DHome, Icon3DHeart } from "@/components/icons/Icon3D";
 
 const whoWeHelpCards = [
- const whoWeHelpCards = [
   {
     Icon: Icon3DFamily,
     label: "Families of Aging Parents",
@@ -128,11 +127,22 @@ const SeniorMoveManagers = () => (
             </h2>
             <div className="grid gap-6 sm:grid-cols-3">
               {whoWeHelpCards.map((card) => (
-                <<div key={card.label} className="bg-background border border-border rounded-xl p-5 sm:p-6 shadow-sm text-center flex flex-col">
-  <card.Icon className="mx-auto mb-1.5" size={64} />
-<h3 className="font-serif font-semibold text-[#8B0000] leading-tight mb-1 text-center" style={{ fontSize: card.label === "Senior Care Coordinators & Social Workers" ? "0.72rem" : "1rem", minHeight: "3.5rem", display: "flex", alignItems: "center", justifyContent: "center" }}>{card.label}</h3>
-  <p className="text-muted-foreground text-sm leading-relaxed">{card.text}</p>
-</div>
+                <div key={card.label} className="bg-background border border-border rounded-xl p-5 sm:p-6 shadow-sm text-center flex flex-col">
+                  <card.Icon className="mx-auto mb-1.5" size={64} />
+                  <h3
+                    className="font-serif font-semibold text-[#8B0000] leading-tight mb-1 text-center"
+                    style={{
+                      fontSize: card.label === "Senior Care Coordinators & Social Workers" ? "0.72rem" : "1rem",
+                      minHeight: "3.5rem",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center"
+                    }}
+                  >
+                    {card.label}
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{card.text}</p>
+                </div>
               ))}
             </div>
           </div>
