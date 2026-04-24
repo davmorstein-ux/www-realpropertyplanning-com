@@ -126,8 +126,8 @@ const SeniorMoveManagers = () => (
               <div className="bg-background border border-border rounded-xl p-5 sm:p-6 shadow-sm text-center">
                 <Icon3DFamily className="mx-auto mb-1.5" size={64} />
                 <h3
-                  className="font-serif font-semibold text-[#8B0000] leading-tight mb-1 text-center"
-                  style={{ fontSize: "1.1rem", backgroundColor: "transparent" }}
+                  className="font-serif font-semibold text-[#8B0000] leading-tight mb-1 text-center flex items-center justify-center"
+                  style={{ fontSize: "1rem", minHeight: "4rem", backgroundColor: "transparent" }}
                 >
                   Families of Aging Parents
                 </h3>
@@ -138,8 +138,8 @@ const SeniorMoveManagers = () => (
               <div className="bg-background border border-border rounded-xl p-5 sm:p-6 shadow-sm text-center">
                 <Icon3DHome className="mx-auto mb-1.5" size={64} />
                 <h3
-                  className="font-serif font-semibold text-[#8B0000] leading-tight mb-1 text-center"
-                  style={{ fontSize: "1.1rem", backgroundColor: "transparent" }}
+                  className="font-serif font-semibold text-[#8B0000] leading-tight mb-1 text-center flex items-center justify-center"
+                  style={{ fontSize: "1rem", minHeight: "4rem", backgroundColor: "transparent" }}
                 >
                   Seniors Downsizing
                 </h3>
@@ -150,8 +150,8 @@ const SeniorMoveManagers = () => (
               <div className="bg-background border border-border rounded-xl p-5 sm:p-6 shadow-sm text-center">
                 <Icon3DHeart className="mx-auto mb-1.5" size={64} />
                 <h3
-                  className="font-serif font-semibold text-[#8B0000] leading-tight mb-1 text-center"
-                  style={{ fontSize: "0.75rem", backgroundColor: "transparent" }}
+                  className="font-serif font-semibold text-[#8B0000] leading-tight mb-1 text-center flex items-center justify-center"
+                  style={{ fontSize: "1rem", minHeight: "4rem", backgroundColor: "transparent" }}
                 >
                   Senior Care Coordinators &amp; Social Workers
                 </h3>
