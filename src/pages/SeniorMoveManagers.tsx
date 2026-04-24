@@ -132,7 +132,7 @@ const SeniorMoveManagers = () => (
                   className="font-serif font-semibold text-[#8B0000] text-center mb-1"
                   style={{
                     fontSize: "1rem",
-                    minHeight: "3.5rem",
+                    minHeight: "6rem",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
