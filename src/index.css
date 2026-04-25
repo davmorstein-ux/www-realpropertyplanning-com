@@ -1660,7 +1660,7 @@ button,
 }
 
 .affiliation-marquee-track {
-  animation: affiliation-marquee-scroll 60s linear infinite;
+  animation: affiliation-marquee-scroll 120s linear infinite;
   will-change: transform;
 }
 
