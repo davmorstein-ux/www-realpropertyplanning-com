@@ -1709,8 +1709,8 @@ img[src*="real-estate-phone-handset-3d-icon-washington"] {
   width: 48px !important;
   object-fit: contain;
   object-position: left center;
-  margin-left: -8px;
-  margin-right: -8px;
+  margin-left: -4px;
+  margin-right: -12px;
   background: transparent;
 }
 
