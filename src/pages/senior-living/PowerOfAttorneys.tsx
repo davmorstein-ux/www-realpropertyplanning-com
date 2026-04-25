@@ -508,14 +508,14 @@ const PowerOfAttorneys = () => {
                 href="tel:+12069003015"
                 className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-gold text-primary font-semibold rounded-lg hover:bg-gold/90 transition-colors text-base"
               >
-                <Phone className="w-4 h-4" />
+                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" />
                 Call (206) 900-3015
               </a>
               <Link
                 to="/contact"
                 className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-primary-foreground/10 text-primary-foreground font-semibold rounded-lg border border-primary-foreground/20 hover:bg-primary-foreground/20 transition-colors text-base"
               >
-                <Mail className="w-4 h-4" />
+                <img src={iconEmail3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" />
                 Send a Message
               </Link>
             </div>
