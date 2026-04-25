@@ -51,7 +51,7 @@ const ZillowReviewsCarousel = () => {
   return (
     <section
       className="py-16 lg:py-20"
-      style={{ backgroundColor: "hsl(220 45% 10%)" }}
+      style={{ backgroundColor: "hsl(220 30% 96%)" }}
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
