@@ -6,7 +6,8 @@ import RelatedServices from "@/components/RelatedServices";
 import PageFAQ from "@/components/PageFAQ";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import { Link } from "react-router-dom";
-import { Phone, Mail } from "lucide-react";
+import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
+import iconEmail3d from "@/assets/icons/real-estate-email-envelope-3d-icon-washington.webp";
 import { useLayoutEffect, useRef, useState, useCallback } from "react";
 import redSphere from "@/assets/property-accent-sphere-washington.webp";
 
