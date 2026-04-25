@@ -1,9 +1,21 @@
 import { Link } from "react-router-dom";
-import logoBright from "@/assets/real-property-planning-logo-bright-seattle.webp";
+import { Helmet } from "react-helmet-async";
+import logoBrightDesktop from "@/assets/real-property-planning-logo-bright-seattle-desktop.webp";
+import logoBrightMobile from "@/assets/real-property-planning-logo-bright-seattle-mobile.webp";
 
 const HomepageHero = () => {
   return (
     <section className="relative flex flex-col items-center justify-center" style={{ backgroundColor: "#0a1628" }}>
+      <Helmet>
+        <link
+          rel="preload"
+          as="image"
+          href={logoBrightMobile}
+          imageSrcSet={`${logoBrightMobile} 600w, ${logoBrightDesktop} 864w`}
+          imageSizes="(max-width: 767px) 85vw, (max-width: 1023px) 726px, 864px"
+          fetchPriority="high"
+        />
+      </Helmet>
       <div className="flex flex-col items-center px-6 lg:px-8 py-1 lg:py-1 w-full max-w-6xl mx-auto text-center">
         {/* Logo — fixed-height wrapper prevents CLS; image overflows to show full artwork */}
         <div
@@ -11,7 +23,9 @@ const HomepageHero = () => {
           style={{ height: "clamp(259px, 35vw, 415px)" }}
         >
           <img
-            src={logoBright}
+            src={logoBrightDesktop}
+            srcSet={`${logoBrightMobile} 600w, ${logoBrightDesktop} 864w`}
+            sizes="(max-width: 767px) 85vw, (max-width: 1023px) 726px, 864px"
             alt="Real Property Planning — probate and estate real estate guidance in Washington State"
             className="w-full h-auto absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
             style={{ zIndex: 1 }}
@@ -19,6 +33,7 @@ const HomepageHero = () => {
             height={1050}
             loading="eager"
             fetchPriority="high"
+            decoding="async"
           />
         </div>
 
