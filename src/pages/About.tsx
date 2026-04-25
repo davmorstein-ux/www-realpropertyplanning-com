@@ -54,7 +54,7 @@ const About = () => {
                   loading="eager"
                 />
               </div>
-              <p className="mt-4 font-serif text-lg text-foreground font-semibold leading-tight text-center">
+              <p className="mt-4 font-serif text-3xl text-foreground font-semibold leading-tight text-center">
                 David Stein
               </p>
               <p className="text-muted-foreground text-sm mt-1 text-center">President, Real Property Planning</p>
@@ -91,7 +91,7 @@ const About = () => {
                   coordinated team of specialists for the road ahead. The goal isn't to put any one person at the
                   center. The goal is to make the path forward feel less heavy for the people walking it.
                 </p>
-                <p className="font-serif italic text-4xl md:text-5xl lg:text-6xl text-foreground font-semibold border-l-4 border-gold pl-6 py-2 text-center">
+                <p className="font-serif italic text-6xl md:text-7xl lg:text-8xl text-foreground font-semibold border-l-4 border-gold pl-6 py-2 text-center">
                   This work is personal to me. My hope is that this resource brings clarity, steadiness, and a little
                   more peace of mind to every family and professional who finds it.
                 </p>
