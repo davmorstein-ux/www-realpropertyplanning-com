@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useRef } from "react";
 import alcaLogo from "@/assets/senior-advocates-alca-partner-washington.webp";
 import naosaBadge from "@/assets/senior-advocates-naosa-badge-washington.webp";
 import naepcLogo from "@/assets/estate-planners-naepc-logo-washington.webp";
@@ -43,85 +43,74 @@ const AffiliationBadgeGrid = ({ naepcAlt, className }: AffiliationBadgeGridProps
     },
   ];
 
+  // Duplicate the list so the marquee can loop seamlessly:
+  // animating from 0 to -50% lands exactly on the start of the second copy.
+  const loop = [...badges, ...badges];
   const trackRef = useRef<HTMLDivElement | null>(null);
-  const [index, setIndex] = useState(0);
-  const [paused, setPaused] = useState(false);
-  const count = badges.length;
 
-  // Auto-advance
-  useEffect(() => {
-    if (paused) return;
-    const id = window.setInterval(() => {
-      setIndex((i) => (i + 1) % count);
-    }, 4500);
-    return () => window.clearInterval(id);
-  }, [paused, count]);
-
-  // Smooth scroll to active item
-  useEffect(() => {
+  const nudge = (dir: 1 | -1) => {
     const track = trackRef.current;
     if (!track) return;
-    const child = track.children[index] as HTMLElement | undefined;
-    if (!child) return;
-    const left = child.offsetLeft - (track.clientWidth - child.clientWidth) / 2;
-    track.scrollTo({ left, behavior: "smooth" });
-  }, [index]);
-
-  const prev = () => setIndex((i) => (i - 1 + count) % count);
-  const next = () => setIndex((i) => (i + 1) % count);
+    // Pause the animation briefly while we nudge, then resume.
+    track.style.animationPlayState = "paused";
+    track.scrollBy?.({ left: dir * 240, behavior: "smooth" });
+    window.setTimeout(() => {
+      if (trackRef.current) trackRef.current.style.animationPlayState = "running";
+    }, 1200);
+  };
 
   return (
     <div className={`mx-auto w-full ${className || ""}`}>
-      <div
-        className="relative mx-auto max-w-[640px]"
-        onMouseEnter={() => setPaused(true)}
-        onMouseLeave={() => setPaused(false)}
-      >
+      <div className="relative mx-auto max-w-[760px] group">
         {/* Edge fades */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-background to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-background to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-20 bg-gradient-to-r from-background to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-20 bg-gradient-to-l from-background to-transparent" />
 
-        {/* Track */}
-        <div
-          ref={trackRef}
-          className="flex items-center gap-8 overflow-x-hidden scroll-smooth px-12 py-4"
-          aria-label="Professional memberships and affiliations"
-        >
-          {badges.map((b, i) => {
-            const img = (
-              <img
-                src={b.src}
-                alt={b.alt}
-                loading="lazy"
-                className={`max-h-full max-w-full object-contain ${b.blend ? "mix-blend-multiply" : ""}`}
-              />
-            );
-            return (
-              <div
-                key={i}
-                className="shrink-0 flex items-center justify-center w-[160px] h-[160px] md:w-[180px] md:h-[180px] p-3"
-              >
-                {b.href ? (
-                  <a
-                    href={b.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center w-full h-full"
-                  >
-                    {img}
-                  </a>
-                ) : (
-                  img
-                )}
-              </div>
-            );
-          })}
+        {/* Viewport */}
+        <div className="overflow-hidden px-12 py-4">
+          <div
+            ref={trackRef}
+            className="flex items-center gap-12 w-max affiliation-marquee-track"
+            aria-label="Professional memberships and affiliations"
+          >
+            {loop.map((b, i) => {
+              const img = (
+                <img
+                  src={b.src}
+                  alt={b.alt}
+                  loading="lazy"
+                  aria-hidden={i >= badges.length ? true : undefined}
+                  className={`max-h-full max-w-full object-contain ${b.blend ? "mix-blend-multiply" : ""}`}
+                />
+              );
+              return (
+                <div
+                  key={i}
+                  className="shrink-0 flex items-center justify-center w-[240px] h-[240px] md:w-[270px] md:h-[270px] p-3"
+                >
+                  {b.href ? (
+                    <a
+                      href={b.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center w-full h-full"
+                      tabIndex={i >= badges.length ? -1 : 0}
+                    >
+                      {img}
+                    </a>
+                  ) : (
+                    img
+                  )}
+                </div>
+              );
+            })}
+          </div>
         </div>
 
         {/* Controls */}
         <button
           type="button"
-          onClick={prev}
+          onClick={() => nudge(-1)}
           aria-label="Previous affiliation"
           className="absolute left-1 top-1/2 -translate-y-1/2 z-20 inline-flex h-9 w-9 items-center justify-center rounded-full bg-background/70 text-foreground/70 hover:text-foreground hover:bg-background shadow-sm transition"
         >
@@ -129,7 +118,7 @@ const AffiliationBadgeGrid = ({ naepcAlt, className }: AffiliationBadgeGridProps
         </button>
         <button
           type="button"
-          onClick={next}
+          onClick={() => nudge(1)}
           aria-label="Next affiliation"
           className="absolute right-1 top-1/2 -translate-y-1/2 z-20 inline-flex h-9 w-9 items-center justify-center rounded-full bg-background/70 text-foreground/70 hover:text-foreground hover:bg-background shadow-sm transition"
         >
