@@ -1646,4 +1646,18 @@ body::before {
   background-size: 22px 22px;
 }
 
+/* ============================================================
+   Subtle house-outline pattern on light/cream surfaces only.
+   Tile size ~120px with a ~70px house centered, gold accent
+   (#C9A84C) at 6% opacity. Barely visible, never distracting.
+   ============================================================ */
+.bg-background,
+.bg-cream,
+.bg-secondary,
+.bg-muted,
+.bg-card {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'><g fill='none' stroke='%23C9A84C' stroke-width='1.4' stroke-linejoin='round' stroke-linecap='round' opacity='0.06'><path d='M25 60 L60 32 L95 60'/><path d='M33 56 L33 90 L87 90 L87 56'/><path d='M52 90 L52 70 L68 70 L68 90'/></g></svg>");
+  background-repeat: repeat;
+  background-size: 120px 120px;
+}
 
