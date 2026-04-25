@@ -1644,6 +1644,6 @@ button,
   background-size: 200px auto;
   mix-blend-mode: multiply;
   filter: sepia(1) saturate(2) hue-rotate(5deg) brightness(0.9);
-  opacity: 0.12;
+  opacity: 0.072;
 }
 
