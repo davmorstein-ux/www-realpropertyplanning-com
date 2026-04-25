@@ -104,64 +104,46 @@ const About = () => {
         {/* Section 1: The Short Version */}
         <section className="py-20 lg:py-28 bg-background">
           <div className="container px-6 lg:px-8">
-            <div className="grid lg:grid-cols-3 gap-12 items-start">
-              <div className="lg:col-span-2">
-                <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">The Short Version</h2>
-                <div className="space-y-6 text-muted-foreground leading-relaxed text-lg">
-                  <p>
-                    David Stein is a licensed Washington State real estate broker and a{" "}
-                    <Link
-                      to="/real-estate-appraiser"
-                      className="text-accent hover:text-gold underline underline-offset-4"
-                    >
-                      Washington State Certified Residential Appraiser
-                    </Link>{" "}
-                    with over 20 years of experience in both disciplines. He lives in Kirkland, Washington, and serves
-                    families, executors, attorneys, CPAs, financial planners, and senior care professionals throughout
-                    the{" "}
-                    <Link to="/counties" className="text-accent hover:text-gold underline underline-offset-4">
-                      Puget Sound region
-                    </Link>{" "}
-                    — specializing in{" "}
-                    <Link
-                      to="/probate-estate-sales"
-                      className="text-accent hover:text-gold underline underline-offset-4"
-                    >
-                      probate real estate
-                    </Link>
-                    ,{" "}
-                    <Link to="/executors" className="text-accent hover:text-gold underline underline-offset-4">
-                      inherited property
-                    </Link>
-                    , estate sales, and{" "}
-                    <Link to="/senior-transitions" className="text-accent hover:text-gold underline underline-offset-4">
-                      senior housing transitions
-                    </Link>
-                    .
-                  </p>
-                  <p>
-                    He founded Real Property Planning after years of working through probate and senior transition
-                    situations and noticing the same problem every time: too many moving parts, too many professionals
-                    working in silos, and families left trying to coordinate it all on their own. This site is his
-                    answer to that problem.
-                  </p>
-                </div>
-              </div>
-
-              {/* Headshot — reduced size, rounded corners, updated caption */}
-              <div className="flex flex-col items-center">
-                <div className="w-[160px] h-[200px] rounded-2xl overflow-hidden border-2 border-gold/20 shadow-md">
-                  <img
-                    src={daveHeadshot}
-                    alt="David Stein licensed real estate broker and certified appraiser Kirkland Washington"
-                    className="w-full h-full object-cover object-top"
-                    loading="eager"
-                  />
-                </div>
-                <p className="mt-4 font-serif text-lg text-foreground font-semibold leading-tight text-center">
-                  David Stein
+            <div className="max-w-3xl">
+              <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">The Short Version</h2>
+              <div className="space-y-6 text-muted-foreground leading-relaxed text-lg">
+                <p>
+                  David Stein is a licensed Washington State real estate broker and a{" "}
+                  <Link
+                    to="/real-estate-appraiser"
+                    className="text-accent hover:text-gold underline underline-offset-4"
+                  >
+                    Washington State Certified Residential Appraiser
+                  </Link>{" "}
+                  with over 20 years of experience in both disciplines. He lives in Kirkland, Washington, and serves
+                  families, executors, attorneys, CPAs, financial planners, and senior care professionals throughout
+                  the{" "}
+                  <Link to="/counties" className="text-accent hover:text-gold underline underline-offset-4">
+                    Puget Sound region
+                  </Link>{" "}
+                  — specializing in{" "}
+                  <Link
+                    to="/probate-estate-sales"
+                    className="text-accent hover:text-gold underline underline-offset-4"
+                  >
+                    probate real estate
+                  </Link>
+                  ,{" "}
+                  <Link to="/executors" className="text-accent hover:text-gold underline underline-offset-4">
+                    inherited property
+                  </Link>
+                  , estate sales, and{" "}
+                  <Link to="/senior-transitions" className="text-accent hover:text-gold underline underline-offset-4">
+                    senior housing transitions
+                  </Link>
+                  .
                 </p>
-                <p className="text-muted-foreground text-sm mt-1 text-center">President, Real Property Planning</p>
+                <p>
+                  He founded Real Property Planning after years of working through probate and senior transition
+                  situations and noticing the same problem every time: too many moving parts, too many professionals
+                  working in silos, and families left trying to coordinate it all on their own. This site is his
+                  answer to that problem.
+                </p>
               </div>
             </div>
           </div>
