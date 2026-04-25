@@ -118,23 +118,23 @@ const RetirementReverseMortgage = () => (
 
                   <div className="space-y-1.5 text-sm">
                     <div className="flex items-start gap-2 justify-center sm:justify-start">
-                      <MapPin className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+                      <img src={iconMapPin3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0 mt-0.5" loading="lazy" />
                       <span className="text-muted-foreground">1721 Hewitt Ave Ste. 612, Everett, WA 98201</span>
                     </div>
                     <div className="flex items-center gap-2 justify-center sm:justify-start">
-                      <Phone className="w-4 h-4 text-accent shrink-0" />
+                      <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" />
                       <a href="tel:+12063105766" className="text-accent hover:text-gold underline-offset-4 hover:underline">
                         (206) 310-5766
                       </a>
                     </div>
                     <div className="flex items-center gap-2 justify-center sm:justify-start">
-                      <Mail className="w-4 h-4 text-accent shrink-0" />
+                      <img src={iconEmail3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" />
                       <a href="mailto:santadan@c2financial.com" className="text-accent hover:text-gold underline-offset-4 hover:underline break-all">
                         santadan@c2financial.com
                       </a>
                     </div>
                     <div className="flex items-center gap-2 justify-center sm:justify-start">
-                      <Globe className="w-4 h-4 text-accent shrink-0" />
+                      <img src={iconGlobe3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" />
                       <a href="http://www.santadanmortgage.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-gold underline-offset-4 hover:underline">
                         www.santadanmortgage.com
                       </a>
@@ -175,23 +175,23 @@ const RetirementReverseMortgage = () => (
 
                   <div className="space-y-1.5 text-sm">
                     <div className="flex items-start gap-2 justify-center sm:justify-start">
-                      <MapPin className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+                      <img src={iconMapPin3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0 mt-0.5" loading="lazy" />
                       <span className="text-muted-foreground">1000 Dexter Ave N, Suite 310, Seattle, WA 98109</span>
                     </div>
                     <div className="flex items-center gap-2 justify-center sm:justify-start">
-                      <Phone className="w-4 h-4 text-accent shrink-0" />
+                      <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" />
                       <a href="tel:+12062835626" className="text-accent hover:text-gold underline-offset-4 hover:underline">
                         (206) 283-5626
                       </a>
                     </div>
                     <div className="flex items-center gap-2 justify-center sm:justify-start">
-                      <Mail className="w-4 h-4 text-accent shrink-0" />
+                      <img src={iconEmail3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" />
                       <a href="mailto:jejj.mcginnis@ccm.com" className="text-accent hover:text-gold underline-offset-4 hover:underline break-all">
                         jejj.mcginnis@ccm.com
                       </a>
                     </div>
                     <div className="flex items-center gap-2 justify-center sm:justify-start">
-                      <Globe className="w-4 h-4 text-accent shrink-0" />
+                      <img src={iconGlobe3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" />
                       <a href="https://crosscountrymortgage.com/seattle-wa-5531/jeffrey-mcginnis/" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-gold underline-offset-4 hover:underline">
                         crosscountrymortgage.com
                       </a>
