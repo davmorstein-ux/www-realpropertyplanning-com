@@ -57,14 +57,19 @@ const AffiliationBadgeGrid = ({ naepcAlt, className }: AffiliationBadgeGridProps
             aria-label="Professional memberships and affiliations"
           >
             {loop.map((b, i) => {
+              const isRealtor = b.alt === "REALTOR® badge";
               const img = (
                 <img
                   src={b.src}
                   alt={b.alt}
                   loading="lazy"
                   aria-hidden={i >= badges.length ? true : undefined}
-                  style={{ height: "150px", width: "auto" }}
-                  className="max-w-none object-contain mix-blend-multiply"
+                  style={{
+                    height: "150px",
+                    width: "auto",
+                    mixBlendMode: isRealtor ? "screen" : "multiply",
+                  }}
+                  className="max-w-none object-contain"
                 />
               );
               return (
