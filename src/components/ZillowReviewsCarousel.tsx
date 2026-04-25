@@ -60,13 +60,13 @@ const ZillowReviewsCarousel = () => {
           {/* Header */}
           <div className="text-center mb-10">
             <div className="flex items-center justify-center gap-2 mb-3">
-              <span className="text-sm font-semibold tracking-wider uppercase" style={{ color: "hsl(42 55% 55%)" }}>
+              <span className="text-sm font-semibold tracking-wider uppercase" style={{ color: "hsl(38 55% 38%)" }}>
                 Reviews from Zillow
               </span>
               <span className="text-lg">⭐</span>
-              <span className="font-bold text-white text-lg">5.0</span>
+              <span className="font-bold text-lg" style={{ color: "hsl(220 45% 15%)" }}>5.0</span>
             </div>
-            <h2 className="font-serif text-3xl md:text-4xl font-semibold text-white">
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold" style={{ color: "hsl(220 45% 15%)" }}>
               What Clients Are Saying
             </h2>
           </div>
