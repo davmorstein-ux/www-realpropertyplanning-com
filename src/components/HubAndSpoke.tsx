@@ -22,27 +22,27 @@ interface SpokeNodeData {
 }
 
 const leftNodes: SpokeNodeData[] = [
-  { label: "Attorneys", to: "/for-attorneys", icon: iconAttorney, dx: -260, dy: -240 },
-  { label: "Senior Move Managers", to: "/senior-move-managers", icon: iconMovers, dx: -340, dy: -120 },
-  { label: "Adult Family Homes", to: "/senior-living-and-relocation", icon: iconAdultFamily, dx: -400, dy: 0 },
-  { label: "Senior Living Placement", to: "/senior-living-and-relocation", icon: iconPlacement, dx: -340, dy: 120 },
-  { label: "Mortgage & Lending", to: "/lenders-and-financing-specialists", icon: iconLending, dx: -260, dy: 240 },
+  { label: "Attorneys", to: "/for-attorneys", icon: iconAttorney, dx: -360, dy: -300 },
+  { label: "Senior Move Managers", to: "/senior-move-managers", icon: iconMovers, dx: -460, dy: -150 },
+  { label: "Adult Family Homes", to: "/senior-living-and-relocation", icon: iconAdultFamily, dx: -520, dy: 0 },
+  { label: "Senior Living Placement", to: "/senior-living-and-relocation", icon: iconPlacement, dx: -460, dy: 150 },
+  { label: "Mortgage & Lending", to: "/lenders-and-financing-specialists", icon: iconLending, dx: -360, dy: 300 },
 ];
 
 const rightNodes: SpokeNodeData[] = [
-  { label: "Real Estate Brokers", to: "/realtor", icon: iconRealtor, dx: 260, dy: -240 },
-  { label: "Appraisers", to: "/real-estate-appraiser", icon: iconAppraiser, dx: 340, dy: -120 },
-  { label: "CPAs", to: "/for-cpas", icon: iconCPA, dx: 400, dy: 0 },
-  { label: "Financial Planners", to: "/for-financial-planners", icon: iconFinancial, dx: 340, dy: 120 },
-  { label: "Estate Liquidators", to: "/estate-liquidation", icon: iconLiquidation, dx: 260, dy: 240 },
+  { label: "Real Estate Brokers", to: "/realtor", icon: iconRealtor, dx: 360, dy: -300 },
+  { label: "Appraisers", to: "/real-estate-appraiser", icon: iconAppraiser, dx: 460, dy: -150 },
+  { label: "CPAs", to: "/for-cpas", icon: iconCPA, dx: 520, dy: 0 },
+  { label: "Financial Planners", to: "/for-financial-planners", icon: iconFinancial, dx: 460, dy: 150 },
+  { label: "Estate Liquidators", to: "/estate-liquidation", icon: iconLiquidation, dx: 360, dy: 300 },
 ];
 
 const allNodes = [...leftNodes, ...rightNodes];
 
 const NODE_SIZE = 90;
-const CONTAINER_HEIGHT = 680;
-const NODE_PULSE_MS = 2200;
-const HUB_PULSE_MS = 2500;
+const CONTAINER_HEIGHT = 800;
+const NODE_PULSE_MS = 900;
+const HUB_PULSE_MS = 1000;
 
 const SpokeNode = ({
   node, cx, cy, isPulsing, onMouseEnter, onMouseLeave,
