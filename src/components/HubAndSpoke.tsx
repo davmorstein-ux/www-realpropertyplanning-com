@@ -116,6 +116,8 @@ const HubAndSpoke = () => {
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const unmountedRef = useRef(false);
   const queueRef = useRef<number[]>([]);
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const isVisibleRef = useRef(true);
 
   const getNextNode = useCallback((): number => {
     // If queue is empty or exhausted, reshuffle all 10
@@ -147,6 +149,8 @@ const HubAndSpoke = () => {
     const delay = 200 + Math.random() * 170;
     timeoutRef.current = setTimeout(() => {
       if (unmountedRef.current) return;
+      // Pause when off-screen — loop will be restarted on re-entry
+      if (!isVisibleRef.current) return;
       const pick = getNextNode();
 
       // Phase 1: node pulse on
@@ -166,7 +170,7 @@ const HubAndSpoke = () => {
             setHubPulsing(false);
 
             setTimeout(() => {
-              if (!unmountedRef.current) scheduleNext();
+              if (!unmountedRef.current && isVisibleRef.current) scheduleNext();
             }, HUB_PULSE_MS / 2);
           }, HUB_PULSE_MS / 2);
         }, NODE_PULSE_MS / 2);
@@ -181,6 +185,28 @@ const HubAndSpoke = () => {
       unmountedRef.current = true;
       if (timeoutRef.current) clearTimeout(timeoutRef.current);
     };
+  }, [scheduleNext]);
+
+  // Pause the animation loop when the diagram is off-screen; resume on re-entry.
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el || typeof IntersectionObserver === "undefined") return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          const wasVisible = isVisibleRef.current;
+          isVisibleRef.current = entry.isIntersecting;
+          if (!wasVisible && entry.isIntersecting) {
+            // Resume: kick the loop if it had idled out
+            if (timeoutRef.current) clearTimeout(timeoutRef.current);
+            scheduleNext();
+          }
+        }
+      },
+      { threshold: 0 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
   }, [scheduleNext]);
 
   const handleMouseEnter = useCallback((i: number) => {
