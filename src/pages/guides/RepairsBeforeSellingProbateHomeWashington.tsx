@@ -7,7 +7,7 @@ import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
 import { articleSchema } from "@/lib/schema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Phone } from "lucide-react";
+import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import {
   Accordion,
   AccordionContent,
