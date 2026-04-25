@@ -61,7 +61,7 @@ const AffiliationBadgeGrid = ({ naepcAlt, className }: AffiliationBadgeGridProps
 
   return (
     <div className={`mx-auto w-full ${className || ""}`}>
-      <div className="relative mx-auto max-w-[760px] group">
+      <div className="relative mx-auto w-[90%] max-w-[1400px] group">
         {/* Edge fades */}
         <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-20 bg-gradient-to-r from-background to-transparent" />
         <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-20 bg-gradient-to-l from-background to-transparent" />
