@@ -51,7 +51,7 @@ const ZillowReviewsCarousel = () => {
   return (
     <section
       className="py-16 lg:py-20"
-      style={{ backgroundColor: "hsl(220 45% 10%)" }}
+      style={{ backgroundColor: "hsl(220 30% 96%)" }}
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
@@ -60,13 +60,13 @@ const ZillowReviewsCarousel = () => {
           {/* Header */}
           <div className="text-center mb-10">
             <div className="flex items-center justify-center gap-2 mb-3">
-              <span className="text-sm font-semibold tracking-wider uppercase" style={{ color: "hsl(42 55% 55%)" }}>
+              <span className="text-sm font-semibold tracking-wider uppercase" style={{ color: "hsl(38 55% 38%)" }}>
                 Reviews from Zillow
               </span>
               <span className="text-lg">⭐</span>
-              <span className="font-bold text-white text-lg">5.0</span>
+              <span className="font-bold text-lg" style={{ color: "hsl(220 45% 15%)" }}>5.0</span>
             </div>
-            <h2 className="font-serif text-3xl md:text-4xl font-semibold text-white">
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold" style={{ color: "hsl(220 45% 15%)" }}>
               What Clients Are Saying
             </h2>
           </div>
@@ -77,16 +77,18 @@ const ZillowReviewsCarousel = () => {
             <button
               onClick={prev}
               aria-label="Previous review"
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 md:-translate-x-14 z-10 w-10 h-10 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 flex items-center justify-center transition-colors"
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 md:-translate-x-14 z-10 w-10 h-10 rounded-full border flex items-center justify-center transition-colors"
+              style={{ borderColor: "hsl(220 20% 75%)", backgroundColor: "hsl(0 0% 100%)" }}
             >
-              <ChevronLeft className="w-5 h-5 text-white/80" />
+              <ChevronLeft className="w-5 h-5" style={{ color: "hsl(220 35% 25%)" }} />
             </button>
             <button
               onClick={next}
               aria-label="Next review"
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 md:translate-x-14 z-10 w-10 h-10 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 flex items-center justify-center transition-colors"
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 md:translate-x-14 z-10 w-10 h-10 rounded-full border flex items-center justify-center transition-colors"
+              style={{ borderColor: "hsl(220 20% 75%)", backgroundColor: "hsl(0 0% 100%)" }}
             >
-              <ChevronRight className="w-5 h-5 text-white/80" />
+              <ChevronRight className="w-5 h-5" style={{ color: "hsl(220 35% 25%)" }} />
             </button>
 
             {/* Card */}
@@ -100,31 +102,31 @@ const ZillowReviewsCarousel = () => {
               }`}
             >
               <div
-                className="rounded-xl border p-6 md:p-10 text-center"
+                className="rounded-xl border p-6 md:p-10 text-center shadow-md"
                 style={{
-                  backgroundColor: "hsl(220 42% 18%)",
-                  borderColor: "hsl(0 0% 100% / 0.12)",
+                  backgroundColor: "hsl(0 0% 100%)",
+                  borderColor: "hsl(220 20% 88%)",
                 }}
               >
                 {/* Stars */}
                 <div className="flex items-center justify-center gap-0.5 mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-[hsl(42,55%,55%)] text-[hsl(42,55%,55%)]" />
+                    <Star key={i} className="w-4 h-4 fill-[hsl(42,75%,48%)] text-[hsl(42,75%,48%)]" />
                   ))}
                 </div>
 
                 {/* Title */}
-                <p className="text-sm mb-4 italic" style={{ color: "hsl(40 30% 88%)" }}>{review.title}</p>
+                <p className="text-sm mb-4 italic" style={{ color: "hsl(220 20% 35%)" }}>{review.title}</p>
 
                 {/* Body */}
-                <p className="text-base md:text-[17px] leading-relaxed mb-6" style={{ color: "hsl(40 40% 97%)" }}>
+                <p className="text-base md:text-[17px] leading-relaxed mb-6" style={{ color: "hsl(220 25% 15%)" }}>
                   "{review.text}"
                 </p>
 
                 {/* Attribution */}
-                <div className="border-t pt-4" style={{ borderColor: "hsl(0 0% 100% / 0.15)" }}>
-                  <p className="font-semibold text-sm" style={{ color: "hsl(0 0% 100%)" }}>{review.name}</p>
-                  <p className="text-xs mt-0.5" style={{ color: "hsl(0 0% 100% / 0.7)" }}>{review.date}</p>
+                <div className="border-t pt-4" style={{ borderColor: "hsl(220 20% 88%)" }}>
+                  <p className="font-semibold text-sm" style={{ color: "hsl(220 45% 15%)" }}>{review.name}</p>
+                  <p className="text-xs mt-0.5" style={{ color: "hsl(220 15% 45%)" }}>{review.date}</p>
                 </div>
               </div>
             </div>
@@ -139,8 +141,8 @@ const ZillowReviewsCarousel = () => {
                 aria-label={`Go to review ${i + 1}`}
                 className={`rounded-full transition-all duration-300 ${
                   i === current
-                    ? "w-6 h-2 bg-[hsl(42,55%,55%)]"
-                    : "w-2 h-2 bg-white/20 hover:bg-white/40"
+                    ? "w-6 h-2 bg-[hsl(42,75%,48%)]"
+                    : "w-2 h-2 bg-[hsl(220,20%,75%)] hover:bg-[hsl(220,25%,55%)]"
                 }`}
               />
             ))}
@@ -152,7 +154,8 @@ const ZillowReviewsCarousel = () => {
               href="https://www.zillow.com/profile/dstein2112#reviews"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-white/50 hover:text-white/70 underline underline-offset-4 transition-colors"
+              className="text-sm underline underline-offset-4 transition-colors"
+              style={{ color: "hsl(220 30% 35%)" }}
             >
               See all reviews on Zillow →
             </a>
