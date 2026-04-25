@@ -86,11 +86,11 @@ const AffiliationBadgeGrid = ({ naepcAlt, className }: AffiliationBadgeGridProps
               const isCenter = offset === 0;
 
               // 3D placement
-              const translateX = offset * 220; // horizontal spread
-              const translateZ = isCenter ? 0 : -180 * Math.min(abs, 2);
-              const rotateY = Math.max(-60, Math.min(60, offset * -35));
-              const scale = isCenter ? 1 : Math.max(0.55, 1 - abs * 0.18);
-              const opacity = abs >= 3 ? 0 : isCenter ? 1 : Math.max(0.35, 1 - abs * 0.25);
+              const translateX = offset * 360; // wider horizontal spread to prevent overlap
+              const translateZ = isCenter ? 0 : -260 * Math.min(abs, 2);
+              const rotateY = Math.max(-60, Math.min(60, offset * -38));
+              const scale = isCenter ? 1 : Math.max(0.45, 0.7 - (abs - 1) * 0.18);
+              const opacity = abs >= 3 ? 0 : isCenter ? 1 : Math.max(0.3, 0.85 - (abs - 1) * 0.3);
               const zIndex = 100 - abs;
 
               const img = (
