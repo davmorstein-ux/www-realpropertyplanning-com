@@ -13,28 +13,28 @@ const AffiliationBadgeGrid = ({ naepcAlt, className }: AffiliationBadgeGridProps
 
   return (
     <div className={`mx-auto w-full ${className || ""}`}>
-      <div className="grid grid-cols-2 gap-4 px-4 mx-auto max-w-[480px]">
-        <div className="flex items-center justify-center aspect-square p-4">
+      <div className="grid grid-cols-2 gap-2 px-2 mx-auto max-w-[420px]">
+        <div className="flex items-center justify-center aspect-square p-2">
           <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full h-full">
             <img src={alcaLogo} alt="Aging Life Care Association Corporate Partner" className="max-h-full max-w-full object-contain" loading="lazy" />
           </a>
         </div>
-        <div className="flex items-center justify-center aspect-square p-4">
+        <div className="flex items-center justify-center aspect-square p-2">
           <a href="https://www.naosa.org" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full h-full">
             <img src={naosaBadge} alt="National Association of Senior Advocates - Best Real Estate Agent 2026" className="max-h-full max-w-full object-contain" loading="lazy" />
           </a>
         </div>
-        <div className="flex items-center justify-center aspect-square p-4">
+        <div className="flex items-center justify-center aspect-square p-2">
           <a href="https://www.naepc.org" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full h-full">
             <img src={naepcSrc} alt="National Association of Estate Planners & Councils" className="max-h-full max-w-full object-contain" loading="lazy" />
           </a>
         </div>
-        <div className="flex items-center justify-center aspect-square p-4">
+        <div className="flex items-center justify-center aspect-square p-2">
           <img src="/badges/realtor-badge.png" alt="REALTOR® badge" className="max-h-full max-w-full object-contain" loading="lazy" />
         </div>
-        <div className="flex items-center justify-center aspect-square p-4">
+        <div className="flex items-center justify-center aspect-square p-2">
           <a href="https://www.kingcountycollaborativelaw.org" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full h-full">
-            <img src={kccLogo} alt="Friends of King County Collaborative Law" className="max-h-full max-w-full object-contain" loading="lazy" />
+            <img src={kccLogo} alt="Friends of King County Collaborative Law" className="max-h-full max-w-full object-contain mix-blend-multiply" loading="lazy" />
           </a>
         </div>
       </div>

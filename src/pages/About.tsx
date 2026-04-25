@@ -402,7 +402,7 @@ const About = () => {
                 </div>
               </div>
 
-              <div className="mt-10">
+              <div className="mt-6">
                 <AffiliationBadgeGrid />
               </div>
             </div>
