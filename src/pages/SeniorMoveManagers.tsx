@@ -12,10 +12,10 @@ import tinaBarilPhoto from "@/assets/providers/senior-movers-tina-baril-washingt
 import monarchLogo from "@/assets/providers/senior-movers-monarch-transitions-logo-washington.webp";
 import iconSeniorMoves from "@/assets/icons/senior-movers-relocation-icon-washington.webp";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
-import iconPin3d from "@/assets/icons/real-estate-location-pin-3d-icon-washington.png";
-import iconCall3d from "@/assets/icons/real-estate-phone-handset-3d-icon-washington.png";
-import iconMail3d from "@/assets/icons/real-estate-email-envelope-3d-icon-washington.png";
-import iconGlobe3d from "@/assets/icons/real-estate-website-globe-3d-icon-washington.png";
+import iconPin3d from "@/assets/icons/real-estate-location-pin-3d-icon-washington.webp";
+import iconCall3d from "@/assets/icons/real-estate-phone-handset-3d-icon-washington.webp";
+import iconMail3d from "@/assets/icons/real-estate-email-envelope-3d-icon-washington.webp";
+import iconGlobe3d from "@/assets/icons/real-estate-website-globe-3d-icon-washington.webp";
 import { Icon3DFamily, Icon3DHome, Icon3DHeart } from "@/components/icons/Icon3D";
 
 const realEstateSideItems = [
