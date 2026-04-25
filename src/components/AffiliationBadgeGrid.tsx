@@ -63,7 +63,7 @@ const AffiliationBadgeGrid = ({ naepcAlt, className }: AffiliationBadgeGridProps
   const loop = [...badges, ...badges];
 
   return (
-    <div className={`mx-auto w-full ${className || ""}`}>
+    <div className={`mx-auto w-full ${className || ""}`} ref={containerRef}>
       <div className="relative mx-auto w-full max-w-3xl">
         {/* Edge fades */}
         <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-background to-transparent" />
@@ -73,6 +73,7 @@ const AffiliationBadgeGrid = ({ naepcAlt, className }: AffiliationBadgeGridProps
         <div className="overflow-hidden py-4">
           <div
             className="flex items-center gap-16 w-max affiliation-marquee-track"
+            style={{ animationPlayState: isVisible ? "running" : "paused" }}
             aria-label="Professional memberships and affiliations"
           >
             {loop.map((b, i) => {
