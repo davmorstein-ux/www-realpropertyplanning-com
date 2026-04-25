@@ -86,8 +86,7 @@ const ServiceNavTileCard = ({ tile, index, columns = 3 }: { tile: ServiceTile; i
   const iconAlt = tileAltText[tile.title] || tile.title.replace(/\n/g, " ");
   const isSeniorPlacement = tile.href === "/senior-placement";
   const isPayingForSeniorLiving = tile.href === "/sell-house-fund-senior-living";
-  const isRealtor = tile.href === "/realtor";
-  const needsTransparentBlend = isSeniorPlacement || isPayingForSeniorLiving || isRealtor;
+  const needsTransparentBlend = isSeniorPlacement || isPayingForSeniorLiving;
 
   const tileVisual = (
     <>
