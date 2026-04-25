@@ -1094,10 +1094,10 @@ body {
     transform: translateY(4%) !important;
   }
   .premium-tile[data-tile-name="realtor"] > div > span {
-    transform: translateY(calc(-10.2% + 15%)) !important;
+    transform: translateY(calc(-10.2% + 8%)) !important;
   }
   .premium-tile[data-tile-name="realtor"] .tile-icon {
-    transform: translateX(-2%) translateY(15%) scale(1.21) !important;
+    transform: translateX(-2%) translateY(8%) scale(1.21) !important;
     transform-origin: center center !important;
   }
   .premium-tile[data-tile-name="guides-resources"] .tile-icon {
