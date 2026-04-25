@@ -89,22 +89,6 @@ const AffiliationBadgeGrid = ({ naepcAlt, className }: AffiliationBadgeGridProps
                 </div>
               );
             })}
-                  {b.href ? (
-                    <a
-                      href={b.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center h-full"
-                      tabIndex={i >= badges.length ? -1 : 0}
-                    >
-                      {img}
-                    </a>
-                  ) : (
-                    img
-                  )}
-                </div>
-              );
-            })}
           </div>
         </div>
       </div>
