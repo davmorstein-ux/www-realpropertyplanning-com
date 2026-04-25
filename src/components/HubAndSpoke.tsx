@@ -191,26 +191,48 @@ const HubAndSpoke = () => {
     };
   }, [scheduleNext]);
 
-  // Pause the animation loop when the diagram is off-screen; resume on re-entry.
+  // Pause when off-screen OR when tab is hidden; resume when both are true again.
   useEffect(() => {
+    const resumeIfNeeded = (wasVisible: boolean) => {
+      const nextVisible = inViewRef.current && tabActiveRef.current;
+      isVisibleRef.current = nextVisible;
+      if (!wasVisible && nextVisible) {
+        if (timeoutRef.current) clearTimeout(timeoutRef.current);
+        scheduleNext();
+      }
+    };
+
     const el = sectionRef.current;
-    if (!el || typeof IntersectionObserver === "undefined") return;
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          const wasVisible = isVisibleRef.current;
-          isVisibleRef.current = entry.isIntersecting;
-          if (!wasVisible && entry.isIntersecting) {
-            // Resume: kick the loop if it had idled out
-            if (timeoutRef.current) clearTimeout(timeoutRef.current);
-            scheduleNext();
+    let observer: IntersectionObserver | null = null;
+    if (el && typeof IntersectionObserver !== "undefined") {
+      observer = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            const wasVisible = isVisibleRef.current;
+            inViewRef.current = entry.isIntersecting;
+            resumeIfNeeded(wasVisible);
           }
-        }
-      },
-      { threshold: 0 }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
+        },
+        { threshold: 0 }
+      );
+      observer.observe(el);
+    }
+
+    const onVisibility = () => {
+      const wasVisible = isVisibleRef.current;
+      tabActiveRef.current = !document.hidden;
+      resumeIfNeeded(wasVisible);
+    };
+    if (typeof document !== "undefined") {
+      document.addEventListener("visibilitychange", onVisibility);
+    }
+
+    return () => {
+      observer?.disconnect();
+      if (typeof document !== "undefined") {
+        document.removeEventListener("visibilitychange", onVisibility);
+      }
+    };
   }, [scheduleNext]);
 
   const handleMouseEnter = useCallback((i: number) => {
