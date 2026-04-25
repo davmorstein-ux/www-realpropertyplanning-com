@@ -77,16 +77,18 @@ const ZillowReviewsCarousel = () => {
             <button
               onClick={prev}
               aria-label="Previous review"
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 md:-translate-x-14 z-10 w-10 h-10 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 flex items-center justify-center transition-colors"
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 md:-translate-x-14 z-10 w-10 h-10 rounded-full border flex items-center justify-center transition-colors"
+              style={{ borderColor: "hsl(220 20% 75%)", backgroundColor: "hsl(0 0% 100%)" }}
             >
-              <ChevronLeft className="w-5 h-5 text-white/80" />
+              <ChevronLeft className="w-5 h-5" style={{ color: "hsl(220 35% 25%)" }} />
             </button>
             <button
               onClick={next}
               aria-label="Next review"
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 md:translate-x-14 z-10 w-10 h-10 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 flex items-center justify-center transition-colors"
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 md:translate-x-14 z-10 w-10 h-10 rounded-full border flex items-center justify-center transition-colors"
+              style={{ borderColor: "hsl(220 20% 75%)", backgroundColor: "hsl(0 0% 100%)" }}
             >
-              <ChevronRight className="w-5 h-5 text-white/80" />
+              <ChevronRight className="w-5 h-5" style={{ color: "hsl(220 35% 25%)" }} />
             </button>
 
             {/* Card */}
