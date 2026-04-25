@@ -108,7 +108,7 @@ const MobileSpokeNode = ({ node }: { node: SpokeNodeData }) => (
 );
 
 const HubAndSpoke = () => {
-  const centerX = 500;
+  const centerX = 640;
   const centerY = CONTAINER_HEIGHT / 2;
   const [pulsingIndex, setPulsingIndex] = useState<number | null>(null);
   const [hubPulsing, setHubPulsing] = useState(false);
