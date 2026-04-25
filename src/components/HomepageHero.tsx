@@ -13,7 +13,7 @@ const HomepageHero = () => {
           href={logoBrightMobile}
           imageSrcSet={`${logoBrightMobile} 600w, ${logoBrightDesktop} 864w`}
           imageSizes="(max-width: 767px) 85vw, (max-width: 1023px) 726px, 864px"
-          fetchpriority="high"
+          fetchPriority="high"
         />
       </Helmet>
       <div className="flex flex-col items-center px-6 lg:px-8 py-1 lg:py-1 w-full max-w-6xl mx-auto text-center">
