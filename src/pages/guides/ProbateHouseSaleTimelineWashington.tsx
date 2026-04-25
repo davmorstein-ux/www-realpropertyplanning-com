@@ -7,7 +7,8 @@ import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
 import { articleSchema } from "@/lib/schema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Check, Phone, AlertTriangle } from "lucide-react";
+import { Check, AlertTriangle } from "lucide-react";
+import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import {
   Accordion,
   AccordionContent,
@@ -148,7 +149,7 @@ const ProbateHouseSaleTimelineWashington = () => (
               </Link>
               <a href="tel:2069003015">
                 <Button variant="outline" size="lg" className="rounded-lg bg-transparent text-primary-foreground border-primary-foreground/40 hover:bg-primary-foreground/10 hover:text-primary-foreground">
-                  <Phone className="w-4 h-4 mr-2" />
+                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 mr-2 object-contain shrink-0" loading="lazy" />
                   Call (206) 900-3015
                 </Button>
               </a>
@@ -343,7 +344,7 @@ const ProbateHouseSaleTimelineWashington = () => (
             <div className="flex flex-wrap justify-center gap-3">
               <a href="tel:2069003015">
                 <Button variant="gold" size="lg" className="rounded-lg">
-                  <Phone className="w-4 h-4 mr-2" />
+                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 mr-2 object-contain shrink-0" loading="lazy" />
                   Call (206) 900-3015
                 </Button>
               </a>

@@ -6,7 +6,10 @@ import CTASection from "@/components/CTASection";
 import RelatedServices from "@/components/RelatedServices";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import { Link } from "react-router-dom";
-import { Phone, Mail, Globe, MapPin } from "lucide-react";
+import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
+import iconEmail3d from "@/assets/icons/real-estate-email-envelope-3d-icon-washington.webp";
+import iconGlobe3d from "@/assets/icons/real-estate-website-globe-3d-icon-washington.webp";
+import iconMapPin3d from "@/assets/icons/real-estate-location-pin-3d-icon-washington.webp";
 import afhHeroIcon from "@/assets/icons/senior-adult-family-home-hero-washington.webp";
 import mariaCorbuPhoto from "@/assets/providers/senior-placement-maria-corbu-washington.webp";
 import victoria1Logo from "@/assets/providers/senior-adult-family-home-victoria1-logo-washington.webp";
@@ -79,23 +82,23 @@ const AdultFamilyHomes = () => (
 
                     <div className="space-y-1.5 text-sm">
                       <div className="flex items-start gap-2 justify-center sm:justify-start">
-                        <MapPin className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+                        <img src={iconMapPin3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0 mt-0.5" loading="lazy" />
                         <span className="text-muted-foreground">13321 31st Ave NE, Seattle, WA 98125</span>
                       </div>
                       <div className="flex items-center gap-2 justify-center sm:justify-start">
-                        <Phone className="w-4 h-4 text-accent shrink-0" />
+                        <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" />
                         <a href="tel:+14255033808" className="text-accent hover:text-gold underline-offset-4 hover:underline">
                           (425) 503-3808
                         </a>
                       </div>
                       <div className="flex items-center gap-2 justify-center sm:justify-start">
-                        <Mail className="w-4 h-4 text-accent shrink-0" />
+                        <img src={iconEmail3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" />
                         <a href="mailto:maria610unz@yahoo.com" className="text-accent hover:text-gold underline-offset-4 hover:underline break-all">
                           maria610unz@yahoo.com
                         </a>
                       </div>
                       <div className="flex items-center gap-2 justify-center sm:justify-start">
-                        <Globe className="w-4 h-4 text-accent shrink-0" />
+                        <img src={iconGlobe3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" />
                         <a href="https://www.victoria1afh.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-gold underline-offset-4 hover:underline">
                           www.victoria1afh.com
                         </a>

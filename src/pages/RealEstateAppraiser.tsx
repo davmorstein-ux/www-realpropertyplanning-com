@@ -3,7 +3,8 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import CTASection from "@/components/CTASection";
-import { Phone, Mail } from "lucide-react";
+import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
+import iconEmail3d from "@/assets/icons/real-estate-email-envelope-3d-icon-washington.webp";
 import { Link } from "react-router-dom";
 import davidSteinPhoto from "@/assets/providers/realtor-david-stein-headshot-seattle.webp";
 import steinAppraisalLogo from "@/assets/stein-appraisal-appraiser-logo-washington.webp";
@@ -69,11 +70,11 @@ const RealEstateAppraiser = () => (
                     </div>
                     <div className="space-y-1.5 text-sm">
                       <div className="flex items-center gap-2 justify-center sm:justify-start">
-                        <Phone className="w-4 h-4 text-accent shrink-0" />
+                        <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" />
                         <a href="tel:+12069003015" className="text-accent hover:text-gold underline-offset-4 hover:underline">(206) 900-3015</a>
                       </div>
                       <div className="flex items-center gap-2 justify-center sm:justify-start">
-                        <Mail className="w-4 h-4 text-accent shrink-0" />
+                        <img src={iconEmail3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" />
                         <a href="mailto:dave@steinappraisal.com" className="text-accent hover:text-gold underline-offset-4 hover:underline break-all">dave@steinappraisal.com</a>
                       </div>
                     </div>
