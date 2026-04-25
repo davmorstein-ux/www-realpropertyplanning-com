@@ -188,63 +188,6 @@ const SeniorMoveManagers = () => (
         </div>
       </section>
 
-      {/* SECTION 3: Real Estate Side */}
-      <section className="py-10 md:py-14 bg-background">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground text-center mb-4">
-              The Real Estate Side of a Senior Transition
-            </h2>
-            <p className="text-muted-foreground text-base md:text-lg leading-relaxed text-center mb-10">
-              The family home is often the most valuable asset involved in a senior transition — and what happens to it
-              can directly affect the family's ability to fund assisted living, distribute assets fairly, or simply move
-              forward. Here is how Real Property Planning helps:
-            </p>
-            <div className="space-y-5">
-              {realEstateSideItems.map((item) => (
-                <div key={item.title} className="bg-secondary border border-border rounded-xl p-5 sm:p-6">
-                  <h3 className="font-serif text-lg font-semibold text-foreground mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{item.text}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 4: Independent to Assisted */}
-      <section className="py-10 md:py-14 bg-secondary">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-4">
-              From Independent Living to Assisted Living
-            </h2>
-            <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-              Senior housing transitions do not always start from a family home. Sometimes a parent is already living in
-              an independent living or retirement community when their needs change and a move to assisted living or
-              memory care becomes necessary. When that transition involves owned real estate — whether a condo, a home
-              being held, or another property — Real Property Planning can help families manage that piece of the puzzle
-              quickly and with care.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 5: Serving All of WA */}
-      <section className="py-10 md:py-14 bg-background">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-4">
-              Serving Families Throughout Washington State
-            </h2>
-            <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-              From Seattle and the Eastside to Everett, Tacoma, Olympia, Bellingham, Spokane, and every community in
-              between — Real Property Planning provides senior transition real estate guidance throughout Washington
-              State. Whether the family home is in a major metro area or a small rural community, we are here to help.
-            </p>
-          </div>
-        </div>
-      </section>
 
       {/* Featured Senior Move Managers */}
       <section className="py-10 md:py-14 bg-secondary">
@@ -474,6 +417,63 @@ const SeniorMoveManagers = () => (
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      {/* SECTION 3: Real Estate Side */}
+      <section className="py-10 md:py-14 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground text-center mb-4">
+              The Real Estate Side of a Senior Transition
+            </h2>
+            <p className="text-muted-foreground text-base md:text-lg leading-relaxed text-center mb-10">
+              The family home is often the most valuable asset involved in a senior transition — and what happens to it
+              can directly affect the family's ability to fund assisted living, distribute assets fairly, or simply move
+              forward. Here is how Real Property Planning helps:
+            </p>
+            <div className="space-y-5">
+              {realEstateSideItems.map((item) => (
+                <div key={item.title} className="bg-secondary border border-border rounded-xl p-5 sm:p-6">
+                  <h3 className="font-serif text-lg font-semibold text-foreground mb-2">{item.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{item.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 4: Independent to Assisted */}
+      <section className="py-10 md:py-14 bg-secondary">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-4">
+              From Independent Living to Assisted Living
+            </h2>
+            <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
+              Senior housing transitions do not always start from a family home. Sometimes a parent is already living in
+              an independent living or retirement community when their needs change and a move to assisted living or
+              memory care becomes necessary. When that transition involves owned real estate — whether a condo, a home
+              being held, or another property — Real Property Planning can help families manage that piece of the puzzle
+              quickly and with care.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 5: Serving All of WA */}
+      <section className="py-10 md:py-14 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-4">
+              Serving Families Throughout Washington State
+            </h2>
+            <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
+              From Seattle and the Eastside to Everett, Tacoma, Olympia, Bellingham, Spokane, and every community in
+              between — Real Property Planning provides senior transition real estate guidance throughout Washington
+              State. Whether the family home is in a major metro area or a small rural community, we are here to help.
+            </p>
           </div>
         </div>
       </section>
