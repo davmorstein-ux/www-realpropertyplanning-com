@@ -35,7 +35,7 @@ const Realtor = () => (
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <div className="flex justify-center mb-1.5 md:mb-2">
-              <img src={iconRealtor} alt="Realtor" className="block w-full max-w-[15rem] h-auto object-contain"  loading="lazy"/>
+              <img src={iconRealtor} alt="Realtor" className="block w-full max-w-[15rem] h-auto object-contain" style={{ mixBlendMode: "multiply", background: "transparent" }} loading="lazy"/>
             </div>
             <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">Real Estate</p>
             <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-primary-foreground leading-tight mb-4">Realtor</h1>
