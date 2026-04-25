@@ -29,7 +29,7 @@ const AffiliationBadgeGrid = ({ naepcAlt, className }: AffiliationBadgeGridProps
     },
     {
       href: null as string | null,
-      src: "/badges/realtor-badge.png",
+      src: "/badges/nar-logo.png",
       alt: "REALTOR® badge",
     },
     {
