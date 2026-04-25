@@ -1640,10 +1640,10 @@ button,
 .bg-muted,
 .bg-card {
   background-image:
-    linear-gradient(hsl(var(--background) / 0.88), hsl(var(--background) / 0.88)),
+    linear-gradient(hsl(var(--background) / 0.94), hsl(var(--background) / 0.94)),
     url("/real-property-planning-logo-pattern.webp");
   background-repeat: repeat, repeat;
-  background-size: auto, 120px auto;
+  background-size: auto, 80px auto;
   background-blend-mode: normal, multiply;
 }
 
