@@ -220,6 +220,7 @@ const HubAndSpoke = () => {
 
   return (
     <section
+      ref={sectionRef}
       className="bg-[#1B2A4A] pt-6 pb-2"
       aria-label="Real Property Planning professional ecosystem hub connecting families with attorneys, appraisers, real estate brokers, CPAs, financial planners, estate liquidators, adult family homes, senior living placement, senior move managers, and mortgage and lending specialists throughout Washington State"
     >
