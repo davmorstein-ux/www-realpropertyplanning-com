@@ -99,7 +99,13 @@ const ZillowReviewsCarousel = () => {
                   : "opacity-100 translate-x-0"
               }`}
             >
-              <div className="rounded-xl border border-white/10 bg-white/[0.04] p-6 md:p-10 text-center">
+              <div
+                className="rounded-xl border p-6 md:p-10 text-center"
+                style={{
+                  backgroundColor: "hsl(220 42% 18%)",
+                  borderColor: "hsl(0 0% 100% / 0.12)",
+                }}
+              >
                 {/* Stars */}
                 <div className="flex items-center justify-center gap-0.5 mb-4">
                   {[...Array(5)].map((_, i) => (
@@ -108,17 +114,17 @@ const ZillowReviewsCarousel = () => {
                 </div>
 
                 {/* Title */}
-                <p className="text-white/60 text-sm mb-4 italic">{review.title}</p>
+                <p className="text-sm mb-4 italic" style={{ color: "hsl(40 30% 88%)" }}>{review.title}</p>
 
                 {/* Body */}
-                <p className="text-white/90 text-base md:text-[17px] leading-relaxed mb-6">
+                <p className="text-base md:text-[17px] leading-relaxed mb-6" style={{ color: "hsl(40 40% 97%)" }}>
                   "{review.text}"
                 </p>
 
                 {/* Attribution */}
-                <div className="border-t border-white/10 pt-4">
-                  <p className="text-white font-semibold text-sm">{review.name}</p>
-                  <p className="text-white/40 text-xs mt-0.5">{review.date}</p>
+                <div className="border-t pt-4" style={{ borderColor: "hsl(0 0% 100% / 0.15)" }}>
+                  <p className="font-semibold text-sm" style={{ color: "hsl(0 0% 100%)" }}>{review.name}</p>
+                  <p className="text-xs mt-0.5" style={{ color: "hsl(0 0% 100% / 0.7)" }}>{review.date}</p>
                 </div>
               </div>
             </div>
