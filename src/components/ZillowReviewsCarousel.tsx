@@ -141,8 +141,8 @@ const ZillowReviewsCarousel = () => {
                 aria-label={`Go to review ${i + 1}`}
                 className={`rounded-full transition-all duration-300 ${
                   i === current
-                    ? "w-6 h-2 bg-[hsl(42,55%,55%)]"
-                    : "w-2 h-2 bg-white/20 hover:bg-white/40"
+                    ? "w-6 h-2 bg-[hsl(42,75%,48%)]"
+                    : "w-2 h-2 bg-[hsl(220,20%,75%)] hover:bg-[hsl(220,25%,55%)]"
                 }`}
               />
             ))}
@@ -154,7 +154,8 @@ const ZillowReviewsCarousel = () => {
               href="https://www.zillow.com/profile/dstein2112#reviews"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-white/50 hover:text-white/70 underline underline-offset-4 transition-colors"
+              className="text-sm underline underline-offset-4 transition-colors"
+              style={{ color: "hsl(220 30% 35%)" }}
             >
               See all reviews on Zillow →
             </a>
