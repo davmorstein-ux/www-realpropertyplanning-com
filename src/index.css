@@ -1094,14 +1094,13 @@ body {
     transform: translateY(4%) !important;
   }
   .premium-tile[data-tile-name="realtor"] > div > span {
-    transform: translateY(calc(-10.2% + 4%)) !important;
+    transform: translateY(-10.2%) !important;
   }
   .premium-tile[data-tile-name="realtor"] .tile-icon {
-    transform: translateX(-2%) translateY(4%) scale(1.21) !important;
-    transform-origin: center center !important;
+    transform: translateX(-2%) scale(1.21) !important;
   }
-  .premium-tile[data-tile-name="realtor"] h3[data-tile-id="realtor"] {
-    transform: translateY(4%) !important;
+  .premium-tile[data-tile-name="estate-liquidation"] .tile-icon {
+    transform: scale(1.045) translateY(4%) !important;
   }
   .premium-tile[data-tile-name="guides-resources"] .tile-icon {
     transform: scale(1.18) translateX(0%) translateY(2%) !important;
