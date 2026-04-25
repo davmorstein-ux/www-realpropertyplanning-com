@@ -76,7 +76,7 @@ const Realtor = () => (
                       </div>
                       <div className="flex items-center gap-2 justify-center sm:justify-start">
                         <Mail className="w-4 h-4 text-accent shrink-0" />
-                        <a href="mailto:david@realpropertyplanning.com" className="text-accent hover:text-gold underline-offset-4 hover:underline break-all">david@realpropertyplanning.com</a>
+                        <a href="mailto:dave.stein@exprealty.com" className="text-accent hover:text-gold underline-offset-4 hover:underline break-all">dave.stein@exprealty.com</a>
                       </div>
                       <div className="flex items-center gap-2 justify-center sm:justify-start">
                         <Globe className="w-4 h-4 text-accent shrink-0" />

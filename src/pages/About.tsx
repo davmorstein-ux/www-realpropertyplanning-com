@@ -524,7 +524,7 @@ const About = () => {
                     Call (206) 900-3015
                   </Button>
                 </a>
-                <a href="mailto:david@realpropertyplanning.com">
+                <a href="mailto:dave.stein@exprealty.com">
                   <Button variant="gold" size="lg" className="px-8">
                     Send a Message
                   </Button>
@@ -538,8 +538,8 @@ const About = () => {
                   className="w-5 h-5 object-contain shrink-0"
                   loading="lazy"
                 />
-                <a href="mailto:david@realpropertyplanning.com" className="hover:text-gold transition-colors">
-                  david@realpropertyplanning.com
+                <a href="mailto:dave.stein@exprealty.com" className="hover:text-gold transition-colors">
+                  dave.stein@exprealty.com
                 </a>
               </div>
               <p className="text-primary-foreground/50 text-base mt-6">
