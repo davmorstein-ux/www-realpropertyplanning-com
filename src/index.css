@@ -1708,6 +1708,9 @@ img[src*="real-estate-phone-handset-3d-icon-washington"] {
   height: 48px !important;
   width: 48px !important;
   object-fit: contain;
+  object-position: left center;
+  margin-left: -8px;
+  margin-right: -8px;
   background: transparent;
 }
 
@@ -1717,6 +1720,7 @@ img[src*="real-estate-website-globe-3d-icon-washington"] {
   height: 32px !important;
   width: 32px !important;
   object-fit: contain;
+  object-position: left center;
   mix-blend-mode: multiply;
   background: transparent;
 }
