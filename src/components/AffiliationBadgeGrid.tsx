@@ -1,5 +1,4 @@
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useRef } from "react";
+import { useEffect, useState } from "react";
 import alcaLogo from "@/assets/senior-advocates-alca-partner-washington.webp";
 import naosaBadge from "@/assets/senior-advocates-naosa-badge-washington.webp";
 import naepcLogo from "@/assets/estate-planners-naepc-logo-washington.webp";
@@ -43,87 +42,103 @@ const AffiliationBadgeGrid = ({ naepcAlt, className }: AffiliationBadgeGridProps
     },
   ];
 
-  // Duplicate the list so the marquee can loop seamlessly:
-  // animating from 0 to -50% lands exactly on the start of the second copy.
-  const loop = [...badges, ...badges];
-  const trackRef = useRef<HTMLDivElement | null>(null);
+  const count = badges.length;
+  const [active, setActive] = useState(0);
+  const [paused, setPaused] = useState(false);
 
-  const nudge = (dir: 1 | -1) => {
-    const track = trackRef.current;
-    if (!track) return;
-    // Pause the animation briefly while we nudge, then resume.
-    track.style.animationPlayState = "paused";
-    track.scrollBy?.({ left: dir * 240, behavior: "smooth" });
-    window.setTimeout(() => {
-      if (trackRef.current) trackRef.current.style.animationPlayState = "running";
-    }, 1200);
+  // Slow, continuous auto-rotation
+  useEffect(() => {
+    if (paused) return;
+    const id = window.setInterval(() => {
+      setActive((i) => (i + 1) % count);
+    }, 3500);
+    return () => window.clearInterval(id);
+  }, [paused, count]);
+
+  // Compute the shortest signed offset (-N/2 .. +N/2) so the carousel
+  // rotates the short way around the loop.
+  const signedOffset = (i: number) => {
+    let d = i - active;
+    if (d > count / 2) d -= count;
+    if (d < -count / 2) d += count;
+    return d;
   };
 
   return (
     <div className={`mx-auto w-full ${className || ""}`}>
-      <div className="relative mx-auto w-[90%] max-w-[1400px] group">
-        {/* Edge fades */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-20 bg-gradient-to-r from-background to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-20 bg-gradient-to-l from-background to-transparent" />
-
-        {/* Viewport */}
-        <div className="overflow-hidden px-12 py-4">
+      <div
+        className="relative mx-auto w-[90%] max-w-[1400px]"
+        onMouseEnter={() => setPaused(true)}
+        onMouseLeave={() => setPaused(false)}
+      >
+        <div
+          className="relative h-[320px] md:h-[360px] flex items-center justify-center"
+          style={{ perspective: "1200px" }}
+          aria-label="Professional memberships and affiliations"
+        >
           <div
-            ref={trackRef}
-            className="flex items-center gap-12 w-max affiliation-marquee-track"
-            aria-label="Professional memberships and affiliations"
+            className="relative w-full h-full"
+            style={{ transformStyle: "preserve-3d" }}
           >
-            {loop.map((b, i) => {
+            {badges.map((b, i) => {
+              const offset = signedOffset(i);
+              const abs = Math.abs(offset);
+              const isCenter = offset === 0;
+
+              // 3D placement
+              const translateX = offset * 220; // horizontal spread
+              const translateZ = isCenter ? 0 : -180 * Math.min(abs, 2);
+              const rotateY = Math.max(-60, Math.min(60, offset * -35));
+              const scale = isCenter ? 1 : Math.max(0.55, 1 - abs * 0.18);
+              const opacity = abs >= 3 ? 0 : isCenter ? 1 : Math.max(0.35, 1 - abs * 0.25);
+              const zIndex = 100 - abs;
+
               const img = (
                 <img
                   src={b.src}
                   alt={b.alt}
                   loading="lazy"
-                  aria-hidden={i >= badges.length ? true : undefined}
                   className={`max-h-full max-w-full object-contain ${b.blend ? "mix-blend-multiply" : ""}`}
                 />
               );
+
               return (
-                <div
+                <button
                   key={i}
-                  className="shrink-0 flex items-center justify-center w-[240px] h-[240px] md:w-[270px] md:h-[270px] p-3"
+                  type="button"
+                  onClick={() => setActive(i)}
+                  aria-label={`Show ${b.alt}`}
+                  aria-current={isCenter ? "true" : undefined}
+                  className="absolute left-1/2 top-1/2 flex items-center justify-center w-[260px] h-[260px] md:w-[300px] md:h-[300px] p-3 outline-none focus-visible:ring-2 focus-visible:ring-gold rounded-md"
+                  style={{
+                    transform: `translate(-50%, -50%) translate3d(${translateX}px, 0, ${translateZ}px) rotateY(${rotateY}deg) scale(${scale})`,
+                    opacity,
+                    zIndex,
+                    transition:
+                      "transform 1100ms cubic-bezier(0.22, 1, 0.36, 1), opacity 700ms ease",
+                    transformStyle: "preserve-3d",
+                    backfaceVisibility: "hidden",
+                    pointerEvents: abs > 2 ? "none" : "auto",
+                  }}
                 >
-                  {b.href ? (
+                  {b.href && isCenter ? (
                     <a
                       href={b.href}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center justify-center w-full h-full"
-                      tabIndex={i >= badges.length ? -1 : 0}
+                      onClick={(e) => e.stopPropagation()}
                     >
                       {img}
                     </a>
                   ) : (
                     img
                   )}
-                </div>
+                </button>
               );
             })}
           </div>
         </div>
-
-        {/* Controls */}
-        <button
-          type="button"
-          onClick={() => nudge(-1)}
-          aria-label="Previous affiliation"
-          className="absolute left-1 top-1/2 -translate-y-1/2 z-20 inline-flex h-9 w-9 items-center justify-center rounded-full bg-background/70 text-foreground/70 hover:text-foreground hover:bg-background shadow-sm transition"
-        >
-          <ChevronLeft className="h-5 w-5" />
-        </button>
-        <button
-          type="button"
-          onClick={() => nudge(1)}
-          aria-label="Next affiliation"
-          className="absolute right-1 top-1/2 -translate-y-1/2 z-20 inline-flex h-9 w-9 items-center justify-center rounded-full bg-background/70 text-foreground/70 hover:text-foreground hover:bg-background shadow-sm transition"
-        >
-          <ChevronRight className="h-5 w-5" />
-        </button>
       </div>
     </div>
   );
