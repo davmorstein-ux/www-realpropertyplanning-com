@@ -1706,7 +1706,8 @@ button,
 img[src*="real-estate-phone-contact-icon-washington"],
 img[src*="real-estate-phone-handset-3d-icon-washington"] {
   height: 32px !important;
-  width: auto !important;
+  width: 32px !important;
+  object-fit: contain;
   background: transparent;
 }
 
@@ -1714,7 +1715,8 @@ img[src*="real-estate-email-contact-icon-washington"],
 img[src*="real-estate-email-envelope-3d-icon-washington"],
 img[src*="real-estate-website-globe-3d-icon-washington"] {
   height: 32px !important;
-  width: auto !important;
+  width: 32px !important;
+  object-fit: contain;
   mix-blend-mode: multiply;
   background: transparent;
 }
