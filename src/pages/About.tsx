@@ -54,7 +54,7 @@ const About = () => {
                   loading="eager"
                 />
               </div>
-              <p className="mt-4 font-serif text-3xl text-foreground font-semibold leading-tight text-center">
+              <p className="mt-4 font-serif text-4xl text-foreground font-bold leading-tight text-center">
                 David Stein
               </p>
               <p className="text-muted-foreground text-sm mt-1 text-center">President, Real Property Planning</p>
@@ -356,6 +356,8 @@ const About = () => {
                       </>,
                       "Member, National Association of Estate Planners & Councils (NAEPC)",
                       "Recognized Member, National Association of Senior Advocates — Best Real Estate Agent 2026",
+                      "Member, EKCEPC: East King County Estate Planning Council",
+                      "Member, KCCL: King County Collaborative Law",
                     ].map((item, i) => (
                       <li key={i} className="flex items-start gap-3">
                         <GoldCheck3D size={18} className="mt-1 shrink-0" />
