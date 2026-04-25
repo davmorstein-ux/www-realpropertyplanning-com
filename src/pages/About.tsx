@@ -42,6 +42,26 @@ const About = () => {
         {/* Hub and Spoke Diagram — restored */}
         <HubAndSpoke />
 
+        {/* Headshot — moved here, above Vision & Mission */}
+        <section className="py-12 lg:py-16 bg-background">
+          <div className="container px-6 lg:px-8">
+            <div className="flex flex-col items-center">
+              <div className="w-[160px] h-[200px] rounded-2xl overflow-hidden border-2 border-gold/20 shadow-md">
+                <img
+                  src={daveHeadshot}
+                  alt="David Stein licensed real estate broker and certified appraiser Kirkland Washington"
+                  className="w-full h-full object-cover object-top"
+                  loading="eager"
+                />
+              </div>
+              <p className="mt-4 font-serif text-lg text-foreground font-semibold leading-tight text-center">
+                David Stein
+              </p>
+              <p className="text-muted-foreground text-sm mt-1 text-center">President, Real Property Planning</p>
+            </div>
+          </div>
+        </section>
+
         <TrustStrip />
 
         {/* Vision & Mission — moved up, directly after TrustStrip */}
