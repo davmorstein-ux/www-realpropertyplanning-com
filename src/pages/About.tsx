@@ -43,7 +43,7 @@ const About = () => {
         <HubAndSpoke />
 
         {/* Headshot — moved here, above Vision & Mission */}
-        <section className="pt-12 lg:pt-16 pb-4 lg:pb-6 bg-background">
+        <section className="pt-12 pb-4 bg-background">
           <div className="container px-6 lg:px-8">
             <div className="flex flex-col items-center">
               <div className="w-[160px] h-[200px] rounded-2xl overflow-hidden border-2 border-gold/20 shadow-md">
@@ -65,7 +65,7 @@ const About = () => {
         <TrustStrip />
 
         {/* Vision & Mission — moved up, directly after TrustStrip */}
-        <section className="pt-8 lg:pt-12 pb-20 lg:pb-28 bg-cream">
+        <section className="pt-8 pb-12 bg-cream">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
               <p className="text-sm uppercase tracking-[0.18em] text-gold font-semibold mb-4">Vision &amp; Mission</p>
@@ -102,7 +102,7 @@ const About = () => {
         </section>
 
         {/* Section 1: The Short Version */}
-        <section className="py-20 lg:py-28 bg-background">
+        <section className="py-12 bg-background">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl">
               <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">The Short Version</h2>
@@ -150,7 +150,7 @@ const About = () => {
         </section>
 
         {/* Section 2: How David Got Here */}
-        <section className="py-20 lg:py-28 bg-cream">
+        <section className="py-12 bg-cream">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
               <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">How David Got Here</h2>
@@ -195,7 +195,7 @@ const About = () => {
         </section>
 
         {/* Section 3: It's Personal, Too */}
-        <section className="py-20 lg:py-28 bg-background">
+        <section className="py-12 bg-background">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
               <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">It's Personal, Too</h2>
@@ -234,7 +234,7 @@ const About = () => {
         </section>
 
         {/* Section 4: Before Real Estate */}
-        <section className="py-20 lg:py-28 bg-cream">
+        <section className="py-12 bg-cream">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
               <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">Before Real Estate</h2>
@@ -260,7 +260,7 @@ const About = () => {
         </section>
 
         {/* Section 5: Why Real Property Planning Exists */}
-        <section className="py-20 lg:py-28 bg-background">
+        <section className="py-12 bg-background">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
               <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
@@ -302,7 +302,7 @@ const About = () => {
         </section>
 
         {/* Section 6: Credentials & Affiliations */}
-        <section className="py-20 lg:py-28 bg-cream">
+        <section className="py-12 bg-cream">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
               <h2 className="font-serif text-3xl text-foreground font-semibold mb-8">Credentials &amp; Affiliations</h2>
@@ -410,7 +410,7 @@ const About = () => {
         </section>
 
         {/* Section 7: What Clients Say */}
-        <section className="py-20 lg:py-28 bg-secondary">
+        <section className="py-12 bg-secondary">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
               <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
@@ -469,7 +469,7 @@ const About = () => {
         </section>
 
         {/* Section 8: A Note on How David Works */}
-        <section className="py-20 lg:py-28 bg-background">
+        <section className="py-12 bg-background">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
               <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">A Note on How David Works</h2>
@@ -495,7 +495,7 @@ const About = () => {
         <RelatedServices currentPath="/about" />
 
         {/* Closing CTA */}
-        <section className="py-20 lg:py-28 bg-primary">
+        <section className="py-12 bg-primary">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
