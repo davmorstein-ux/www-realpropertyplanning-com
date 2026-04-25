@@ -1097,7 +1097,7 @@ body {
     transform: translateY(calc(-10.2% + 4%)) !important;
   }
   .premium-tile[data-tile-name="realtor"] .tile-icon {
-    transform: translateX(-2%) scale(1.21) translateY(4%) !important;
+    transform: translateX(-2%) scale(1.21) translateY(-2%) !important;
   }
   .premium-tile[data-tile-name="estate-liquidation"] .tile-icon {
     transform: scale(0.9405) translateY(4%) !important;
