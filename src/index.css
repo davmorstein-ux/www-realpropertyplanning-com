@@ -1100,7 +1100,7 @@ body {
     transform: translateX(-2%) scale(1.21) !important;
   }
   .premium-tile[data-tile-name="estate-liquidation"] .tile-icon {
-    transform: scale(1.045) translateY(4%) !important;
+    transform: scale(0.9405) translateY(4%) !important;
   }
   .premium-tile[data-tile-name="guides-resources"] .tile-icon {
     transform: scale(1.18) translateX(0%) translateY(2%) !important;
