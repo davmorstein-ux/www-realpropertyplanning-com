@@ -62,15 +62,10 @@ const Realtor = () => (
                   </a>
                   <div className="w-full mt-1 text-center sm:text-left">
                     <p className="text-foreground font-semibold text-base">David Stein</p>
-                    <p className="text-muted-foreground text-sm mb-0.5">President, Real Property Planning</p>
-                    <p className="text-muted-foreground text-sm mb-1.5">Independent hub for Washington State</p>
+                    <p className="text-muted-foreground text-sm mb-1.5">Real Estate Broker/Realtor</p>
                     <p className="text-muted-foreground text-sm leading-relaxed mb-3">
                       With over 20 years of experience, David Stein has bought and sold single family homes, multi-family properties, condominiums, investment properties, new construction, renovations, mobile homes, manufactured homes, houseboats, floating homes, and vacant land throughout the Puget Sound region. As a broker with eXp Realty — the largest independent real estate brokerage in the world with over 83,000 agents across 28 countries — David combines deep local knowledge with a powerful nationwide network, ensuring every client receives both personal attention and broad reach.
                     </p>
-                    <div className="text-muted-foreground text-xs leading-relaxed mb-3 space-y-0.5">
-                      <p>Washington State Licensed Real Estate Broker — David Stein's real estate license is held under eXp Realty</p>
-                      <p>Washington State Certified Residential Appraiser — Stein Appraisal</p>
-                    </div>
                     <div className="space-y-1.5 text-sm">
                       <div className="flex items-center gap-2 justify-center sm:justify-start">
                         <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" />
