@@ -1720,6 +1720,7 @@ img[src*="real-estate-website-globe-3d-icon-washington"] {
   height: 32px !important;
   width: 32px !important;
   object-fit: contain;
+  object-position: left center;
   mix-blend-mode: multiply;
   background: transparent;
 }
