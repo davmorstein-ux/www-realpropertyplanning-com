@@ -11,7 +11,10 @@ interface AffiliationBadgeGridProps {
 
 const AffiliationBadgeGrid = ({ naepcAlt, className }: AffiliationBadgeGridProps = {}) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const [isVisible, setIsVisible] = useState(true);
+  const [inView, setInView] = useState(true);
+  const [tabActive, setTabActive] = useState(
+    typeof document === "undefined" ? true : !document.hidden
+  );
 
   useEffect(() => {
     const el = containerRef.current;
@@ -19,7 +22,7 @@ const AffiliationBadgeGrid = ({ naepcAlt, className }: AffiliationBadgeGridProps
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
-          setIsVisible(entry.isIntersecting);
+          setInView(entry.isIntersecting);
         }
       },
       { threshold: 0 }
@@ -27,6 +30,15 @@ const AffiliationBadgeGrid = ({ naepcAlt, className }: AffiliationBadgeGridProps
     observer.observe(el);
     return () => observer.disconnect();
   }, []);
+
+  useEffect(() => {
+    if (typeof document === "undefined") return;
+    const onVisibility = () => setTabActive(!document.hidden);
+    document.addEventListener("visibilitychange", onVisibility);
+    return () => document.removeEventListener("visibilitychange", onVisibility);
+  }, []);
+
+  const isVisible = inView && tabActive;
 
   const naepcSrc = naepcAlt ? "/assets/naepc-logo.png" : naepcLogo;
 
