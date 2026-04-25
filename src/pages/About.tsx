@@ -43,7 +43,7 @@ const About = () => {
         <HubAndSpoke />
 
         {/* Headshot — moved here, above Vision & Mission */}
-        <section className="py-12 lg:py-16 bg-background">
+        <section className="pt-12 lg:pt-16 pb-4 lg:pb-6 bg-background">
           <div className="container px-6 lg:px-8">
             <div className="flex flex-col items-center">
               <div className="w-[160px] h-[200px] rounded-2xl overflow-hidden border-2 border-gold/20 shadow-md">
@@ -65,7 +65,7 @@ const About = () => {
         <TrustStrip />
 
         {/* Vision & Mission — moved up, directly after TrustStrip */}
-        <section className="py-20 lg:py-28 bg-cream">
+        <section className="pt-8 lg:pt-12 pb-20 lg:pb-28 bg-cream">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
               <p className="text-sm uppercase tracking-[0.18em] text-gold font-semibold mb-4">Vision &amp; Mission</p>
