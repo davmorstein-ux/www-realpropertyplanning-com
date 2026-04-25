@@ -199,11 +199,11 @@ const HubAndSpoke = () => {
     >
       {/* Desktop layout */}
       <div className="hidden md:block">
-        <div className="relative mx-auto" style={{ width: 1000, height: CONTAINER_HEIGHT }}>
+        <div className="relative mx-auto" style={{ width: 1280, height: CONTAINER_HEIGHT }}>
           {/* SVG connecting lines */}
           <svg
             className="absolute inset-0 pointer-events-none"
-            width={1000}
+            width={1280}
             height={CONTAINER_HEIGHT}
             aria-hidden="true"
           >
