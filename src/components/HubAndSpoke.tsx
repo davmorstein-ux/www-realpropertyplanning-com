@@ -117,7 +117,11 @@ const HubAndSpoke = () => {
   const unmountedRef = useRef(false);
   const queueRef = useRef<number[]>([]);
   const sectionRef = useRef<HTMLElement | null>(null);
-  const isVisibleRef = useRef(true);
+  const inViewRef = useRef(true);
+  const tabActiveRef = useRef(
+    typeof document === "undefined" ? true : !document.hidden
+  );
+  const isVisibleRef = useRef(true); // inView && tabActive
 
   const getNextNode = useCallback((): number => {
     // If queue is empty or exhausted, reshuffle all 10
