@@ -84,6 +84,14 @@ const Realtor = () => (
                         <img src={iconGlobe3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" />
                         <a href="https://davestein.exprealty.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-gold underline-offset-4 hover:underline">davestein.exprealty.com</a>
                       </div>
+                      <div className="flex items-center gap-2 justify-center sm:justify-start text-muted-foreground">
+                        <span className="w-4 h-4 shrink-0" aria-hidden="true" />
+                        <span>eXp Realty — 1455 NW Leary Way, Seattle, WA 98107</span>
+                      </div>
+                      <div className="flex items-center gap-2 justify-center sm:justify-start text-muted-foreground">
+                        <span className="w-4 h-4 shrink-0" aria-hidden="true" />
+                        <span>Real Estate License #113972</span>
+                      </div>
                     </div>
                     <div className="mt-4 pt-4 border-t border-border/50">
                       <p className="text-foreground font-semibold text-xs uppercase tracking-widest mb-2">Proud member of the:</p>
