@@ -1113,7 +1113,7 @@ body {
     margin-top: -0.5rem !important;
   }
   .premium-tile[data-tile-name="senior-living"] .tile-icon {
-    transform: scale(1.39) !important;
+    transform: scale(1.39) translateY(4%) !important;
   }
   .premium-tile h3[data-tile-id="senior-living"] {
     transform: translateY(6px) !important;
