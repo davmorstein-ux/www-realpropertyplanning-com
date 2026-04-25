@@ -102,31 +102,31 @@ const ZillowReviewsCarousel = () => {
               }`}
             >
               <div
-                className="rounded-xl border p-6 md:p-10 text-center"
+                className="rounded-xl border p-6 md:p-10 text-center shadow-md"
                 style={{
-                  backgroundColor: "hsl(220 42% 18%)",
-                  borderColor: "hsl(0 0% 100% / 0.12)",
+                  backgroundColor: "hsl(0 0% 100%)",
+                  borderColor: "hsl(220 20% 88%)",
                 }}
               >
                 {/* Stars */}
                 <div className="flex items-center justify-center gap-0.5 mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-[hsl(42,55%,55%)] text-[hsl(42,55%,55%)]" />
+                    <Star key={i} className="w-4 h-4 fill-[hsl(42,75%,48%)] text-[hsl(42,75%,48%)]" />
                   ))}
                 </div>
 
                 {/* Title */}
-                <p className="text-sm mb-4 italic" style={{ color: "hsl(40 30% 88%)" }}>{review.title}</p>
+                <p className="text-sm mb-4 italic" style={{ color: "hsl(220 20% 35%)" }}>{review.title}</p>
 
                 {/* Body */}
-                <p className="text-base md:text-[17px] leading-relaxed mb-6" style={{ color: "hsl(40 40% 97%)" }}>
+                <p className="text-base md:text-[17px] leading-relaxed mb-6" style={{ color: "hsl(220 25% 15%)" }}>
                   "{review.text}"
                 </p>
 
                 {/* Attribution */}
-                <div className="border-t pt-4" style={{ borderColor: "hsl(0 0% 100% / 0.15)" }}>
-                  <p className="font-semibold text-sm" style={{ color: "hsl(0 0% 100%)" }}>{review.name}</p>
-                  <p className="text-xs mt-0.5" style={{ color: "hsl(0 0% 100% / 0.7)" }}>{review.date}</p>
+                <div className="border-t pt-4" style={{ borderColor: "hsl(220 20% 88%)" }}>
+                  <p className="font-semibold text-sm" style={{ color: "hsl(220 45% 15%)" }}>{review.name}</p>
+                  <p className="text-xs mt-0.5" style={{ color: "hsl(220 15% 45%)" }}>{review.date}</p>
                 </div>
               </div>
             </div>
