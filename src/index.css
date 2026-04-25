@@ -1695,3 +1695,27 @@ button,
     animation: none;
   }
 }
+
+/* ============================================================
+   Global 3D contact icon normalization (phone, email, globe).
+   Targets icons by filename so all imports update at once.
+   - Uniform 32px height, auto width
+   - Blend modes hide baked-in backgrounds (black for phone,
+     white for email/globe)
+   ============================================================ */
+img[src*="real-estate-phone-contact-icon-washington"],
+img[src*="real-estate-phone-handset-3d-icon-washington"] {
+  height: 32px !important;
+  width: auto !important;
+  mix-blend-mode: screen;
+  background: transparent;
+}
+
+img[src*="real-estate-email-contact-icon-washington"],
+img[src*="real-estate-email-envelope-3d-icon-washington"],
+img[src*="real-estate-website-globe-3d-icon-washington"] {
+  height: 32px !important;
+  width: auto !important;
+  mix-blend-mode: multiply;
+  background: transparent;
+}
