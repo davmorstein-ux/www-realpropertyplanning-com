@@ -13,26 +13,26 @@ const AffiliationBadgeGrid = ({ naepcAlt, className }: AffiliationBadgeGridProps
 
   return (
     <div className={`mx-auto w-full ${className || ""}`}>
-      <div className="grid grid-cols-2 gap-2 px-2 mx-auto max-w-[420px]">
-        <div className="flex items-center justify-center aspect-square p-2">
+      <div className="flex flex-wrap items-center justify-center gap-x-1 gap-y-1 mx-auto max-w-[560px]">
+        <div className="flex items-center justify-center w-[96px] h-[96px] p-1">
           <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full h-full">
-            <img src={alcaLogo} alt="Aging Life Care Association Corporate Partner" className="max-h-full max-w-full object-contain" loading="lazy" />
+            <img src={alcaLogo} alt="Aging Life Care Association Corporate Partner" className="max-h-full max-w-full object-contain mix-blend-multiply" loading="lazy" />
           </a>
         </div>
-        <div className="flex items-center justify-center aspect-square p-2">
+        <div className="flex items-center justify-center w-[96px] h-[96px] p-1">
           <a href="https://www.naosa.org" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full h-full">
             <img src={naosaBadge} alt="National Association of Senior Advocates - Best Real Estate Agent 2026" className="max-h-full max-w-full object-contain" loading="lazy" />
           </a>
         </div>
-        <div className="flex items-center justify-center aspect-square p-2">
+        <div className="flex items-center justify-center w-[96px] h-[96px] p-1">
           <a href="https://www.naepc.org" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full h-full">
             <img src={naepcSrc} alt="National Association of Estate Planners & Councils" className="max-h-full max-w-full object-contain" loading="lazy" />
           </a>
         </div>
-        <div className="flex items-center justify-center aspect-square p-2">
+        <div className="flex items-center justify-center w-[96px] h-[96px] p-1">
           <img src="/badges/realtor-badge.png" alt="REALTOR® badge" className="max-h-full max-w-full object-contain" loading="lazy" />
         </div>
-        <div className="flex items-center justify-center aspect-square p-2">
+        <div className="flex items-center justify-center w-[96px] h-[96px] p-1">
           <a href="https://www.kingcountycollaborativelaw.org" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full h-full">
             <img src={kccLogo} alt="Friends of King County Collaborative Law" className="max-h-full max-w-full object-contain mix-blend-multiply" loading="lazy" />
           </a>
