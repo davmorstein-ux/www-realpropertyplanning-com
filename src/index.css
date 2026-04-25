@@ -1627,24 +1627,3 @@ button,
   background-size: 22px 22px;
 }
 
-/* ============================================================
-   Real Property Planning logo tiled across light/cream surfaces.
-   Uses the actual brand logo WebP as a repeating background.
-   background-blend-mode: multiply drops the white background of
-   the logo so only the roofline/chimney mark shows through at
-   ~12% strength against the cream surface.
-   ============================================================ */
-.bg-background,
-.bg-cream,
-.bg-secondary,
-.bg-muted,
-.bg-card {
-  background-image:
-    linear-gradient(hsl(var(--background) / 0.94), hsl(var(--background) / 0.94)),
-    url("/real-property-planning-logo-pattern.webp");
-  background-repeat: repeat, repeat;
-  background-size: auto, 80px auto;
-  background-blend-mode: normal, multiply;
-}
-
-
