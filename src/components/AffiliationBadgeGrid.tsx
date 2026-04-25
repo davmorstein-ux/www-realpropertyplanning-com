@@ -58,6 +58,7 @@ const AffiliationBadgeGrid = ({ naepcAlt, className }: AffiliationBadgeGridProps
           >
             {loop.map((b, i) => {
               const isRealtor = b.alt === "REALTOR® badge";
+              const badgeHeight = isRealtor ? "220px" : "150px";
               const img = (
                 <img
                   src={b.src}
@@ -65,7 +66,7 @@ const AffiliationBadgeGrid = ({ naepcAlt, className }: AffiliationBadgeGridProps
                   loading="lazy"
                   aria-hidden={i >= badges.length ? true : undefined}
                   style={{
-                    height: "150px",
+                    height: badgeHeight,
                     width: "auto",
                     mixBlendMode: isRealtor ? "screen" : "multiply",
                   }}
