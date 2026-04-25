@@ -62,7 +62,7 @@ const RealEstateAppraiser = () => (
                     <p className="text-muted-foreground text-sm mb-0.5">Certified Residential Appraiser</p>
                     <p className="text-muted-foreground text-sm mb-1.5">Real Property Planning</p>
                     <p className="text-muted-foreground text-sm leading-relaxed mb-3">
-                      Providing objective, certified residential appraisals for estate settlements, probate proceedings, trust administration, and senior transition property decisions throughout Washington State.
+                      David Stein has been a Washington State Certified Residential Appraiser for over 20 years, serving the Puget Sound region with integrity and precision. He provides appraisals for attorneys, homeowners, executors, appraisal management companies, investors, and banks — including estate and date-of-death appraisals, divorce and litigation support, and retrospective valuations. Whether you need a straightforward market value opinion or a carefully documented appraisal for a complex legal matter, David brings the same calm, professional approach to every assignment.
                     </p>
                     <div className="text-muted-foreground text-xs leading-relaxed mb-3 space-y-0.5">
                       <p>WA Certified Residential Appraiser — #1702080</p>
