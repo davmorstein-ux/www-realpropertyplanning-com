@@ -1647,3 +1647,29 @@ button,
   opacity: 0.043;
 }
 
+
+/* ============================================================
+   Affiliation badge marquee — continuous, linear, seamless loop.
+   The track contains the badge list duplicated twice; animating
+   from 0 to -50% lands on the start of the second copy, so the
+   loop restart is visually invisible.
+   ============================================================ */
+@keyframes affiliation-marquee-scroll {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-50%, 0, 0); }
+}
+
+.affiliation-marquee-track {
+  animation: affiliation-marquee-scroll 60s linear infinite;
+  will-change: transform;
+}
+
+.group:hover .affiliation-marquee-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .affiliation-marquee-track {
+    animation: none;
+  }
+}
