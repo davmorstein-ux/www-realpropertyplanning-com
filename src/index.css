@@ -1707,7 +1707,6 @@ img[src*="real-estate-phone-contact-icon-washington"],
 img[src*="real-estate-phone-handset-3d-icon-washington"] {
   height: 32px !important;
   width: auto !important;
-  mix-blend-mode: screen;
   background: transparent;
 }
 
