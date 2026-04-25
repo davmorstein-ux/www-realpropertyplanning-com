@@ -16,7 +16,6 @@ const AffiliationBadgeGrid = ({ naepcAlt, className }: AffiliationBadgeGridProps
       href: "https://www.aginglifecare.org",
       src: alcaLogo,
       alt: "Aging Life Care Association Corporate Partner",
-      blend: true,
     },
     {
       href: "https://www.naosa.org",
@@ -37,75 +36,54 @@ const AffiliationBadgeGrid = ({ naepcAlt, className }: AffiliationBadgeGridProps
       href: "https://www.kingcountycollaborativelaw.org",
       src: kccLogo,
       alt: "Friends of King County Collaborative Law",
-      blend: true,
     },
   ];
 
-  const count = badges.length;
-  const step = 360 / count; // angle between badges around the ring
-  const radius = 520; // ring radius in px
+  // Duplicate so the marquee loops seamlessly: animating the track
+  // from 0 to -50% lands exactly on the start of the second copy.
+  const loop = [...badges, ...badges];
 
   return (
     <div className={`mx-auto w-full ${className || ""}`}>
       <div className="relative mx-auto w-[90%] max-w-[1400px]">
-        {/* Stage with perspective; mask fades the side/edges for depth */}
-        <div
-          className="relative h-[360px] md:h-[400px] mx-auto"
-          style={{
-            perspective: "1000px",
-            perspectiveOrigin: "50% 50%",
-            WebkitMaskImage:
-              "linear-gradient(to right, transparent 0%, black 18%, black 82%, transparent 100%)",
-            maskImage:
-              "linear-gradient(to right, transparent 0%, black 18%, black 82%, transparent 100%)",
-          }}
-          aria-label="Professional memberships and affiliations"
-        >
-          {/* Rotating ring — pure CSS, constant linear infinite spin */}
+        {/* Edge fades */}
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-background to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-background to-transparent" />
+
+        {/* Viewport */}
+        <div className="overflow-hidden py-4">
           <div
-            className="absolute left-1/2 top-1/2 affiliation-ring-spin"
-            style={{
-              transformStyle: "preserve-3d",
-              width: 0,
-              height: 0,
-            }}
+            className="flex items-center gap-16 w-max affiliation-marquee-track"
+            aria-label="Professional memberships and affiliations"
           >
-            {badges.map((b, i) => {
-              const angle = i * step;
+            {loop.map((b, i) => {
               const img = (
                 <img
                   src={b.src}
                   alt={b.alt}
                   loading="lazy"
-                  className={`max-h-full max-w-full object-contain ${b.blend ? "mix-blend-multiply" : ""}`}
+                  aria-hidden={i >= badges.length ? true : undefined}
+                  className="h-[150px] w-auto max-w-none object-contain mix-blend-multiply"
                 />
               );
               return (
                 <div
                   key={i}
-                  className="absolute affiliation-ring-item"
-                  style={{
-                    // Position around the ring, then counter-rotate the
-                    // badge so it always faces the viewer at its ring slot.
-                    transform: `translate(-50%, -50%) rotateY(${angle}deg) translateZ(${radius}px) rotateY(${-angle}deg)`,
-                    transformStyle: "preserve-3d",
-                    backfaceVisibility: "hidden",
-                  }}
+                  className="shrink-0 flex items-center justify-center h-[150px]"
                 >
-                  <div className="flex items-center justify-center w-[260px] h-[260px] md:w-[300px] md:h-[300px] p-3">
-                    {b.href ? (
-                      <a
-                        href={b.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center justify-center w-full h-full"
-                      >
-                        {img}
-                      </a>
-                    ) : (
-                      img
-                    )}
-                  </div>
+                  {b.href ? (
+                    <a
+                      href={b.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center h-full"
+                      tabIndex={i >= badges.length ? -1 : 0}
+                    >
+                      {img}
+                    </a>
+                  ) : (
+                    img
+                  )}
                 </div>
               );
             })}
