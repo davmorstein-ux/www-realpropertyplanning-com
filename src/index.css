@@ -1673,3 +1673,25 @@ button,
     animation: none;
   }
 }
+
+/* ============================================================
+   Affiliation 3D rotating ring — constant linear infinite spin.
+   The ring lives inside a perspective stage. Pure CSS only:
+   no JS timers, no snapping, no pause/resume.
+   ============================================================ */
+@keyframes affiliation-ring-spin {
+  from { transform: rotateY(0deg); }
+  to   { transform: rotateY(-360deg); }
+}
+
+.affiliation-ring-spin {
+  animation: affiliation-ring-spin 36s linear infinite;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .affiliation-ring-spin {
+    animation: none;
+  }
+}
