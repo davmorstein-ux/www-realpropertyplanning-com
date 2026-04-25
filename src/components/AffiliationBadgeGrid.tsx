@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import alcaLogo from "@/assets/senior-advocates-alca-partner-washington.webp";
 import naosaBadge from "@/assets/senior-advocates-naosa-badge-washington.webp";
 import naepcLogo from "@/assets/estate-planners-naepc-logo-washington.webp";
@@ -9,6 +10,24 @@ interface AffiliationBadgeGridProps {
 }
 
 const AffiliationBadgeGrid = ({ naepcAlt, className }: AffiliationBadgeGridProps = {}) => {
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el || typeof IntersectionObserver === "undefined") return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          setIsVisible(entry.isIntersecting);
+        }
+      },
+      { threshold: 0 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   const naepcSrc = naepcAlt ? "/assets/naepc-logo.png" : naepcLogo;
 
   const badges = [
