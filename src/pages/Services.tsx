@@ -43,8 +43,8 @@ const Services = () => {
   return (
     <>
       <SEOHead
-        title="Senior Relocation & Estate Real Estate Services | Real Property Planning"
-        description="Real Property Planning provides senior relocation home sales, estate and inherited property sales, probate real estate, trust property sales, clean-out coordination, and market analysis throughout Washington State."
+        title="Probate & Estate Real Estate Services in Washington State | Real Property Planning"
+        description="From probate property sales to senior downsizing coordination, Real Property Planning provides calm, professional real estate guidance for families and professionals throughout Washington State."
         canonical="https://www.realpropertyplanning.com/services"
       />
       <BreadcrumbSchema
