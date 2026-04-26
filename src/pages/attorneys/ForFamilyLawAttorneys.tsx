@@ -61,8 +61,8 @@ const faqs = [
 const ForFamilyLawAttorneys = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
-      title="Real Estate Support for Family Law Attorneys in Washington State | Real Property Planning"
-      description="Real Property Planning provides neutral, experienced real estate support for family law attorneys and their clients navigating property decisions in Washington State."
+      title="Real Estate Support for Family Law & Divorce Attorneys in Washington State | Real Property Planning"
+      description="Real Property Planning provides neutral real estate broker and appraisal support for Washington State family law attorneys handling divorce, gray divorce, and marital home decisions."
     />
     <BreadcrumbSchema
       items={[

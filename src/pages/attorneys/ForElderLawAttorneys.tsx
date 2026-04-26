@@ -62,7 +62,7 @@ const ForElderLawAttorneys = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
       title="Real Estate Support for Elder Law Attorneys in Washington State | Real Property Planning"
-      description="Real Property Planning helps elder law attorneys and their clients navigate senior home sales, Medicaid planning property decisions, and estate transitions in Washington State."
+      description="Trusted real estate broker and certified appraiser support for Washington State elder law attorneys — senior home sales, Medicaid planning property decisions, and senior transitions."
     />
     <BreadcrumbSchema
       items={[

@@ -79,8 +79,8 @@ const faqs = [
 const ForRealEstateAttorneys = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
-      title="Real Estate Brokerage Support for Real Estate Attorneys in Washington State | Real Property Planning"
-      description="Real Property Planning works alongside real estate attorneys to provide market analysis, property coordination, and sale management when clients need both legal and real estate expertise."
+      title="Brokerage Support for Real Estate Attorneys in Washington State | Real Property Planning"
+      description="Real Property Planning works alongside Washington State real estate attorneys to provide market analysis, property coordination, and probate sale management when clients need both legal and real estate expertise."
     />
     <BreadcrumbSchema
       items={[
