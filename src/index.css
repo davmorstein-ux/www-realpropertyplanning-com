@@ -1120,10 +1120,10 @@ body {
   .premium-tile h3[data-tile-id="senior-living"] {
     transform: translateY(6px) !important;
   }
-  /* Paying for Senior Living: nudge top "Paying for" line up on desktop only */
+  /* Paying for Senior Living: tighten spacing between the two label lines */
   .premium-tile h3 .paying-for-line {
     display: block;
-    transform: translateY(-6px);
+    transform: translateY(6px);
   }
   /* Paying for Senior Living: desktop-only icon size +15% (mobile keeps inline scale 0.7) */
   .premium-tile:has(.service-nav-tile-link[href="/sell-house-fund-senior-living"]) .tile-icon {

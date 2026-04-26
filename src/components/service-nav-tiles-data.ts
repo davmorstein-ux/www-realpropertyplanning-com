@@ -20,6 +20,7 @@ import iconAppraiser from "@/assets/icons/real-estate-appraiser-icon-washington.
 import iconSeniorPlacement from "@/assets/icons/senior-placement-advisor-icon-washington.webp";
 import iconFundSeniorLiving from "@/assets/icons/senior-home-sales-for-sale-icon-washington.webp";
 import iconPayingForSeniorLiving from "@/assets/icons/paying-for-senior-living-icon-washington.webp";
+import iconGrayDivorce from "@/assets/icons/gray-divorce-rings-document-icon-washington.png";
 
 export interface ServiceTile {
   title: string;
@@ -79,6 +80,7 @@ export const tileCategories: TileCategory[] = [
       { title: "Senior\nPlacement", subtitle: "", href: "/senior-placement", iconSrc: iconSeniorPlacement, labelSpacing: "tight", mobileTextDown: true, mobileIconDown: true, mobileSmallText: true, mobileIconOffsetY: "-10%" },
       { title: "Home Values\n& Pricing", subtitle: "", href: "/why-valuation-matters", iconSrc: iconHomeValue, labelSpacing: "tight", iconOffsetY: "4%", mobileContentOffsetY: "-1.5%", mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "12%", mobileSmallText: true },
       { title: "Senior\nHome Sales", subtitle: "", href: "/senior-transitions", iconSrc: iconFundSeniorLiving, labelSpacing: "tight", iconOffsetY: "4%", iconScale: 1.05, mobileContentOffsetY: "3%", mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "-10%", mobileSmallText: true, mobileTextOffsetY: "0.6rem" },
+      { title: "Gray Divorce\n& Silver Tsunami", subtitle: "", href: "/gray-divorce-real-estate", iconSrc: iconGrayDivorce, labelSpacing: "tight", iconOffsetY: "4%", iconScale: 1.0, mobileTextDown: true, mobileIconDown: true, mobileSmallText: true },
       { title: "Paying for\nSenior Living", subtitle: "", href: "/sell-house-fund-senior-living", iconSrc: iconPayingForSeniorLiving, labelSpacing: "tight", iconOffsetY: "-4%", iconScale: 0.7, mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "-22%", mobileContentOffsetY: "11%", mobileSmallText: true },
       { title: "Service Areas", subtitle: "", href: "/counties", iconSrc: iconServiceAreas, iconOffsetY: "4%", iconScale: 1.1, mobileTextDown: true, mobileIconDown: true, mobileSmallText: true, mobileIconOffsetY: "-15%", mobileTextOffsetY: "-15%" },
       { title: "Guides &\nResources", subtitle: "", href: "/guides-and-resources", iconSrc: iconResources, labelSpacing: "tight", iconOffsetY: "12%", mobileTextDown: true, mobileIconDown: true, mobileSmallText: true },
