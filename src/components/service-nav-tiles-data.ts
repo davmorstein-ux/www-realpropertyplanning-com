@@ -58,8 +58,6 @@ export const tileCategories: TileCategory[] = [
       { title: "Estate\nLiquidation", subtitle: "", href: "/estate-liquidation", iconSrc: iconEstateLiquidation, labelSpacing: "tight", mobileTextDown: true, mobileIconDown: true, mobileSmallText: true },
       { title: "Realtor", subtitle: "", href: "/realtor", iconSrc: iconRealtor, contentOffsetY: "15%", mobileContentOffsetY: "20%", iconOffsetY: "25%", iconScale: 1.1, mobileTextDown: true, mobileIconDown: true, mobileSmallText: true },
       { title: "Real Estate\nAppraiser", subtitle: "", href: "/real-estate-appraiser", iconSrc: iconAppraiser, labelSpacing: "tight", mobileTextDown: true, mobileIconDown: true, iconScale: 1.21, textOffsetY: "20px", mobileSmallText: true, mobileTextOffsetY: "1%" },
-      { title: "Senior Living", subtitle: "", href: "/senior-living-and-relocation", iconSrc: iconSeniorLiving, mobileTextDown: true, mobileIconDown: true, mobileSmallText: true },
-      { title: "Senior Move\nManagers", subtitle: "", href: "/senior-move-managers", iconSrc: iconSeniorMoves, labelSpacing: "tight", iconOffsetY: "4%", mobileContentOffsetY: "-2%", mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "10%", mobileSmallText: true },
     ],
   },
   {
@@ -77,6 +75,8 @@ export const tileCategories: TileCategory[] = [
     label: "Planning & Next Steps",
     tiles: [
       { title: "Probate Sales", subtitle: "", href: "/probate-estate-sales", iconSrc: iconProbateSales, iconOffsetY: "-4%", mobileContentOffsetY: "-2%", mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "19%", mobileSmallText: true },
+      { title: "Senior Living", subtitle: "", href: "/senior-living-and-relocation", iconSrc: iconSeniorLiving, mobileTextDown: true, mobileIconDown: true, mobileSmallText: true },
+      { title: "Senior Move\nManagers", subtitle: "", href: "/senior-move-managers", iconSrc: iconSeniorMoves, labelSpacing: "tight", iconOffsetY: "4%", mobileContentOffsetY: "-2%", mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "10%", mobileSmallText: true },
       { title: "Senior\nPlacement", subtitle: "", href: "/senior-placement", iconSrc: iconSeniorPlacement, labelSpacing: "tight", mobileTextDown: true, mobileIconDown: true, mobileSmallText: true, mobileIconOffsetY: "-10%" },
       { title: "Home Values\n& Pricing", subtitle: "", href: "/why-valuation-matters", iconSrc: iconHomeValue, labelSpacing: "tight", iconOffsetY: "4%", mobileContentOffsetY: "-1.5%", mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "12%", mobileSmallText: true },
       { title: "Senior\nHome Sales", subtitle: "", href: "/senior-transitions", iconSrc: iconFundSeniorLiving, labelSpacing: "tight", iconOffsetY: "4%", iconScale: 1.05, mobileContentOffsetY: "3%", mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "-10%", mobileSmallText: true, mobileTextOffsetY: "0.6rem" },
