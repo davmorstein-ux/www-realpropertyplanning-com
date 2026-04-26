@@ -4,8 +4,8 @@ const HomePreparation = () => {
   return (
     <ProfessionPageTemplate
       title="Home Preparation & Staging"
-      metaTitle="Home Preparation & Staging for Estate Sales | Western Washington | Real Property Planning"
-      metaDescription="Find contractors, cleaners, and staging professionals in the Puget Sound area who help prepare inherited homes and longtime family residences for a successful sale."
+      metaTitle="Home Preparation & Staging for Estate Sales in Washington State | Real Property Planning"
+      metaDescription="Contractors, cleaners, and staging professionals across Washington State who help prepare inherited homes and longtime family residences for a successful probate or senior transition sale."
       helpHeadline="How Home Preparation Specialists Help Your Family"
       helpRows={[
         { icon: "🔧", text: "Assess the home's condition and coordinate repairs, cleaning, and improvements that make the biggest difference to buyers" },

@@ -4,8 +4,8 @@ const CareManagers = () => {
   return (
     <ProfessionPageTemplate
       title="Aging Life Care Managers & Social Workers"
-      metaTitle="Aging Life Care Managers & Social Workers | Puget Sound | Real Property Planning"
-      metaDescription="Find certified aging life care managers and geriatric social workers serving Western Washington — helping families coordinate care, navigate elder care decisions, and support older adults through major life transitions."
+      metaTitle="Aging Life Care Managers & Social Workers in Washington State | Real Property Planning"
+      metaDescription="Certified aging life care managers and geriatric social workers across Washington State — helping families coordinate care, elder decisions, and senior housing transitions."
       helpHeadline="How a Care Manager Helps Your Family"
       helpRows={[
         { icon: "❤️", text: "Assesses the older adult's medical, emotional, and daily living needs — and creates a personalized care plan" },

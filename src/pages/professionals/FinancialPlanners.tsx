@@ -4,8 +4,8 @@ const FinancialPlanners = () => {
   return (
     <ProfessionPageTemplate
       title="Financial Planners & Advisors"
-      metaTitle="Financial Planners for Estate & Senior Transitions | Western Washington | Real Property Planning"
-      metaDescription="Find financial advisors and planners in the Puget Sound region who specialize in inherited assets, estate tax planning, and financial decisions during senior transitions."
+      metaTitle="Financial Planners for Estates & Senior Transitions in Washington State | Real Property Planning"
+      metaDescription="Financial advisors and planners across Washington State who specialize in inherited assets, estate tax planning, divorce, and financial decisions during senior transitions."
       helpHeadline="How a Financial Planner Helps Your Family"
       helpRows={[
         { icon: "💰", text: "Reviews inherited assets and helps beneficiaries understand their financial options after a loss" },
