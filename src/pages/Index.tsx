@@ -124,7 +124,7 @@ const Index = () => {
         <script type="application/ld+json">{homepageFaqJsonLd}</script>
       </Helmet>
       <SEOHead
-        title="Probate Real Estate & Senior Transition Services in Washington State | Real Property Planning"
+        title="Probate Real Estate & Senior Transitions | Real Property Planning"
         description="Real Property Planning helps families, executors, attorneys, and seniors navigate probate real estate, inherited homes, estate sales, and senior transitions throughout Washington State."
         canonical="https://www.realpropertyplanning.com"
         schemaJson={jsonLd}
