@@ -203,7 +203,7 @@ const GrayDivorceRealEstate = () => {
           </div>
         </section>
 
-        <RelatedServices />
+        <RelatedServices currentPath="/gray-divorce-real-estate" />
         <DisclaimerSection />
       </main>
       <Footer />
