@@ -34,8 +34,8 @@ const jsonLd = articleSchema({
 const SellInheritedHouseAsIsOrFix = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
-      title="Should You Sell an Inherited House As-Is or Fix It Up? | Real Property Planning"
-      description="A practical guide to deciding whether to sell an inherited property as-is or invest in repairs. Understand the trade-offs and when each approach makes sense."
+      title="Sell an Inherited House As-Is or Fix It Up in Washington? | Real Property Planning"
+      description="A practical Washington State guide to deciding whether to sell an inherited or probate property as-is or invest in repairs. Trade-offs and when each approach makes sense."
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema items={[

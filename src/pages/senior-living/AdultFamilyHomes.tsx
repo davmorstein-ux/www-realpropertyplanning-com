@@ -17,8 +17,8 @@ import victoria1Logo from "@/assets/providers/senior-adult-family-home-victoria1
 const AdultFamilyHomes = () => (
   <>
     <SEOHead
-      title="Adult Family Homes | Senior Living | Real Property Planning"
-      description="Learn about adult family homes — smaller, home-like settings offering personalized care for seniors throughout Washington State."
+      title="Adult Family Homes in Washington State | Real Property Planning"
+      description="A guide to adult family homes — smaller, home-like senior care settings throughout Washington State — plus support for selling the family home and coordinating the senior transition."
       canonical="https://www.realpropertyplanning.com/senior-living/adult-family-homes"
     />
     <BreadcrumbSchema

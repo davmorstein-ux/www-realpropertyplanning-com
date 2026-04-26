@@ -34,8 +34,8 @@ const jsonLd = articleSchema({
 const EstatePropertyRepairs = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
-      title="What Repairs Should Be Done Before Selling an Estate Property? | Real Property Planning"
-      description="A practical guide to deciding which repairs and improvements are worth making before selling an inherited or estate home — and which ones to skip."
+      title="Repairs Worth Making Before Selling an Estate Property in Washington | Real Property Planning"
+      description="A practical guide to deciding which repairs and improvements are worth making before selling an inherited or estate home in Washington State — and which to skip."
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema items={[

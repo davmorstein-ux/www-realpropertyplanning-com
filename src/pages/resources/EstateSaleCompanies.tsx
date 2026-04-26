@@ -11,8 +11,8 @@ import heroIcon from "@/assets/icons/probate-estate-resources-icon-washington.we
 const EstateSaleCompanies = () => (
   <>
     <SEOHead
-      title="Estate Sale Companies | Resources | Real Property Planning"
-      description="Estate sale companies throughout Washington State that organize, price, and conduct sales of personal property and household contents during probate and estate transitions."
+      title="Estate Sale Companies in Washington State | Real Property Planning"
+      description="Estate sale companies across Washington State that organize, price, and conduct sales of personal property and household contents during probate and senior transitions."
       canonical="https://www.realpropertyplanning.com/resources/estate-sale-companies"
     />
     <BreadcrumbSchema

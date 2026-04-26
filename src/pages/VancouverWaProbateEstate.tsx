@@ -88,8 +88,8 @@ const VancouverWaProbateEstate = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Probate & Estate Real Estate in Vancouver, WA"
-        description="Guidance for families, executors, and trustees with inherited property in Vancouver, WA. Relocation, timing, and coordinated transitions."
+        title="Probate Real Estate & Estate Sales in Vancouver, WA | Real Property Planning"
+        description="Probate, inherited property, and senior transition real estate guidance for executors, trustees, and families in Vancouver, Clark County, Washington — from valuation through closing."
       />
       <BreadcrumbSchema
         items={[

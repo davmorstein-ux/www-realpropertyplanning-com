@@ -88,8 +88,8 @@ const OlympiaProbateEstate = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Probate & Estate Real Estate in Olympia, WA"
-        description="Guidance for families, executors, and seniors with estate or inherited property in Olympia, WA. Support for transitions, timing, and next steps."
+        title="Probate Real Estate & Estate Sales in Olympia, WA | Real Property Planning"
+        description="Probate, inherited property, and senior transition real estate guidance for executors, trustees, and families in Olympia, Thurston County, Washington — from valuation through closing."
       />
       <BreadcrumbSchema
         items={[

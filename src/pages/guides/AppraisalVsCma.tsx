@@ -33,8 +33,8 @@ const jsonLd = articleSchema({
 const AppraisalVsCma = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
-      title="Appraisal vs. CMA for Probate & Estate Property | Real Property Planning"
-      description="Understand the difference between a formal appraisal and a CMA — and why it matters when selling probate, estate, or inherited property in Washington State."
+      title="Appraisal vs. CMA for Probate & Estate Property in Washington State | Real Property Planning"
+      description="The difference between a formal appraisal and a CMA — and why it matters when selling probate, estate, or inherited property in Washington State."
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema items={[

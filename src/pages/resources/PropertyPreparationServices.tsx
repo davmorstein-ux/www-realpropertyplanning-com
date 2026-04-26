@@ -11,8 +11,8 @@ import heroIcon from "@/assets/icons/probate-estate-resources-icon-washington.we
 const PropertyPreparationServices = () => (
   <>
     <SEOHead
-      title="Property Preparation Services | Resources | Real Property Planning"
-      description="Cleanout, staging, repair, and preparation services for estate and transition properties throughout Washington State."
+      title="Property Preparation Services for Estates in Washington State | Real Property Planning"
+      description="Cleanout, staging, repair, and preparation services for probate, estate, and senior transition properties throughout Washington State."
       canonical="https://www.realpropertyplanning.com/resources/property-preparation-services"
     />
     <BreadcrumbSchema

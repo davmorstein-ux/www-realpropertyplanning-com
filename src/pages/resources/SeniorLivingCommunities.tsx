@@ -11,8 +11,8 @@ import heroIcon from "@/assets/icons/probate-estate-resources-icon-washington.we
 const SeniorLivingCommunities = () => (
   <>
     <SEOHead
-      title="Senior Living Communities | Resources | Real Property Planning"
-      description="Assisted living, independent living, and memory care communities throughout Washington State for families navigating senior housing transitions."
+      title="Senior Living Communities in Washington State | Real Property Planning"
+      description="Independent living, assisted living, and memory care communities throughout Washington State for families navigating senior transitions and inherited home decisions."
       canonical="https://www.realpropertyplanning.com/resources/senior-living-communities"
     />
     <BreadcrumbSchema

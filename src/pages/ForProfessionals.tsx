@@ -48,8 +48,8 @@ const ForProfessionals = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Real Estate Resources for Attorneys, Executors & Fiduciaries | Real Property Planning"
-        description="Real Property Planning partners with estate planning attorneys, elder law attorneys, CPAs, and fiduciaries to provide trusted real estate guidance for their clients throughout Washington State."
+        title="Real Estate Resources for Attorneys, Executors, Fiduciaries & Divorce Counsel in Washington State | Real Property Planning"
+        description="Real Property Planning partners with Washington State estate planning attorneys, probate counsel, elder law and divorce attorneys, CPAs, and fiduciaries to provide trusted real estate guidance for probate, senior transitions, and gray divorce."
       />
       <BreadcrumbSchema items={[{ name: "For Professionals", url: "/for-professionals" }]} />
       <Header />

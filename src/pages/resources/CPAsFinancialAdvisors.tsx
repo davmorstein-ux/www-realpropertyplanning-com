@@ -11,8 +11,8 @@ import heroIcon from "@/assets/icons/probate-estate-resources-icon-washington.we
 const CPAsFinancialAdvisors = () => (
   <>
     <SEOHead
-      title="CPAs & Financial Advisors | Resources | Real Property Planning"
-      description="CPAs and financial advisors throughout Washington State who assist with estate tax, capital gains, and financial planning for inherited and estate property."
+      title="CPAs & Financial Advisors for Estates in Washington State | Real Property Planning"
+      description="CPAs and financial advisors across Washington State who help families with estate tax, capital gains, and financial planning for inherited property and senior transitions."
       canonical="https://www.realpropertyplanning.com/resources/cpas-financial-advisors"
     />
     <BreadcrumbSchema

@@ -88,8 +88,8 @@ const EverettProbateEstate = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Probate & Estate Real Estate in Everett, WA"
-        description="Guidance for executors and families handling inherited homes in Everett, WA. Practical preparation help, realistic pricing, clear next steps."
+        title="Probate Real Estate & Estate Sales in Everett, WA | Real Property Planning"
+        description="Probate, inherited property, and senior transition real estate guidance for executors, trustees, and families in Everett, Snohomish County, Washington — from valuation through closing."
       />
       <BreadcrumbSchema
         items={[

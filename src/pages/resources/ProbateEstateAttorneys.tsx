@@ -11,8 +11,8 @@ import heroIcon from "@/assets/icons/probate-estate-resources-icon-washington.we
 const ProbateEstateAttorneys = () => (
   <>
     <SEOHead
-      title="Probate & Estate Attorneys | Resources | Real Property Planning"
-      description="Probate and estate attorneys throughout Washington State who guide families, executors, and fiduciaries through estate administration and property-related legal matters."
+      title="Probate & Estate Attorneys in Washington State | Real Property Planning"
+      description="Probate and estate attorneys throughout Washington State who guide executors, trustees, and families through estate administration and inherited property matters."
       canonical="https://www.realpropertyplanning.com/resources/probate-estate-attorneys"
     />
     <BreadcrumbSchema
