@@ -75,8 +75,8 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Contact Real Property Planning | Probate & Estate Real Estate in Washington State"
-        description="Ready to talk through your situation? Reach out to Real Property Planning for calm, knowledgeable guidance on probate, inherited property, or senior housing transitions. Call (206) 900-3015."
+        title="Contact Real Property Planning | Probate Real Estate & Senior Transitions in Washington State"
+        description="Talk with Real Property Planning about probate real estate, inherited property, or senior housing transitions anywhere in Washington State. Call (206) 900-3015 for calm, knowledgeable guidance."
         jsonLd={realEstateAgentSchema}
       />
       <BreadcrumbSchema items={[{ name: "Contact", url: "/contact" }]} />
