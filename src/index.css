@@ -1152,7 +1152,7 @@ body {
     transform: translateY(-10.2%) !important;
   }
   .premium-tile[data-tile-name="the-process"] .tile-icon {
-    transform: scale(1.1) translateY(-10%) !important;
+    transform: scale(1.1) translateY(25%) !important;
   }
   .premium-tile h3[data-tile-id="the-process"] {
     margin-top: -0.5rem !important;
