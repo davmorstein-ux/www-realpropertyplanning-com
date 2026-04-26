@@ -73,7 +73,7 @@ const GrayDivorceRealEstate = () => {
                   </Button>
                 </Link>
                 <a href="tel:2069003015">
-                  <Button size="lg" variant="outline3d" className="border-gold/50 bg-transparent text-gold hover:bg-gold hover:text-foreground focus-visible:ring-gold w-full sm:w-auto">
+                  <Button size="lg" variant="outline3d" className="border-gold bg-white text-foreground hover:bg-gold hover:text-foreground focus-visible:ring-gold w-full sm:w-auto">
                     Call (206) 900-3015
                   </Button>
                 </a>
