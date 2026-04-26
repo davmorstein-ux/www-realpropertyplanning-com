@@ -88,8 +88,8 @@ const BellevueProbateEstate = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Probate & Estate Real Estate in Bellevue, WA"
-        description="Guidance for executors, trustees, and families with inherited or trust-owned property in Bellevue, WA. Discreet support across Eastside neighborhoods."
+        title="Probate Real Estate & Estate Sales in Bellevue, WA | Real Property Planning"
+        description="Probate, inherited property, and senior transition real estate guidance for executors, trustees, and families in Bellevue, King County, Washington — from valuation through closing."
       />
       <BreadcrumbSchema
         items={[
