@@ -34,8 +34,8 @@ const jsonLd = articleSchema({
 const AppraisalBeforeSelling = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
-      title="Do I Need an Appraisal Before Selling Inherited Property? | Real Property Planning"
-      description="When a formal appraisal is needed for inherited property — and when a professional market assessment may be enough. A practical guide for executors and families."
+      title="Do I Need an Appraisal Before Selling Inherited Property in Washington? | Real Property Planning"
+      description="When a formal appraisal is needed for inherited property in Washington State — and when a professional market assessment is enough. A practical guide for executors and families."
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema items={[

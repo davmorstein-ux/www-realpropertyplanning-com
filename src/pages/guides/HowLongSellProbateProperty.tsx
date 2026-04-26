@@ -34,7 +34,7 @@ const jsonLd = articleSchema({
 const HowLongSellProbateProperty = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
-      title="How Long Does It Take to Sell a Probate Property? | Real Property Planning"
+      title="How Long Does It Take to Sell a Probate Property in Washington? | Real Property Planning"
       description="Realistic timelines for probate property sales in Washington State — from court authority to closing. Understand what affects the timeline and how to plan."
       jsonLd={jsonLd}
     />
