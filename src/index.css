@@ -1147,17 +1147,16 @@ body {
   .premium-tile[data-tile-name="probate-terms"] h3 {
     transform: translateY(8px) !important;
   }
-  /* The Process: lift text and icon to vertically center with row */
+  /* The Process: align icon and text with Probate Terms tile */
   .premium-tile[data-tile-name="the-process"] > div > span {
-    transform: translateY(calc(-10.2% - 4%)) !important;
+    transform: translateY(-10.2%) !important;
+  }
+  .premium-tile[data-tile-name="the-process"] .tile-icon {
+    transform: scale(1.1) translateY(-10%) !important;
   }
   .premium-tile h3[data-tile-id="the-process"] {
-    margin-top: -1rem !important;
-  }
-  /* Gray Divorce: shrink desktop font so full title fits inside the tile */
-  .premium-tile:has(.service-nav-tile-link[href="/gray-divorce-real-estate"]) h3.tile-label {
-    font-size: 0.85rem !important;
-    line-height: 0.95 !important;
+    margin-top: -0.5rem !important;
+    transform: translateY(8px) !important;
   }
   .premium-tile[data-tile-name="attorneys"] .tile-icon {
     transform: scale(1.1) !important;
