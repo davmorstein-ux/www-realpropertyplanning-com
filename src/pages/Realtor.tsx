@@ -18,8 +18,8 @@ import iconRealtor from "@/assets/icons/realtor-real-estate-agent-icon-washingto
 const Realtor = () => (
   <>
     <SEOHead
-      title="Realtor | Real Property Planning"
-      description="Experienced real estate guidance for seniors, families, executors, and professionals navigating important property decisions in Washington State."
+      title="David Stein — Probate & Senior Transition Real Estate Broker in Washington State | Real Property Planning"
+      description="David Stein is a Washington State licensed real estate broker specializing in probate property sales, inherited homes, and senior transition real estate for families and professionals statewide."
       canonical="https://www.realpropertyplanning.com/realtor"
     />
     <BreadcrumbSchema
