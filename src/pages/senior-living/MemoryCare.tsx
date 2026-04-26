@@ -11,8 +11,8 @@ import memoryCareHeroIcon from "@/assets/icons/senior-memory-care-hero-washingto
 const MemoryCare = () => (
   <>
     <SEOHead
-      title="Memory Care | Senior Living | Real Property Planning"
-      description="Learn about memory care programs designed for individuals living with Alzheimer's or dementia throughout Washington State."
+      title="Memory Care Communities in Washington State | Real Property Planning"
+      description="A guide to memory care options for individuals living with Alzheimer's or dementia in Washington State, plus support for the senior housing transition and family home sale."
       canonical="https://www.realpropertyplanning.com/senior-living/memory-care"
     />
     <BreadcrumbSchema

@@ -10,8 +10,8 @@ import { Link } from "react-router-dom";
 const IndependentLiving = () => (
   <>
     <SEOHead
-      title="Independent Living | Senior Living | Real Property Planning"
-      description="Learn about independent living communities for active seniors seeking a maintenance-free lifestyle throughout Washington State."
+      title="Independent Living Communities in Washington State | Real Property Planning"
+      description="A guide to independent living communities for active seniors in Washington State — and how to coordinate the home sale and senior transition that funds the move."
       canonical="https://www.realpropertyplanning.com/senior-living/independent-living"
     />
     <BreadcrumbSchema
