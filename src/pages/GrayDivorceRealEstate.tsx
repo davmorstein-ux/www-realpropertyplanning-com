@@ -85,7 +85,7 @@ const GrayDivorceRealEstate = () => {
         <TrustStrip />
 
         {/* Intro */}
-        <section className="py-20 lg:py-28 bg-background">
+        <section className="py-12 bg-background">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
               <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">A New Kind of Transition</h2>
@@ -100,7 +100,7 @@ const GrayDivorceRealEstate = () => {
         </section>
 
         {/* What Makes Gray Divorce Different */}
-        <section className="py-20 lg:py-28 bg-secondary">
+        <section className="py-12 bg-secondary">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
               <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
@@ -125,7 +125,7 @@ const GrayDivorceRealEstate = () => {
         </section>
 
         {/* Intersection of Aging and Divorce */}
-        <section className="py-20 lg:py-28 bg-background">
+        <section className="py-12 bg-background">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
               <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">The Intersection of Aging and Divorce</h2>
@@ -140,7 +140,7 @@ const GrayDivorceRealEstate = () => {
         </section>
 
         {/* For Divorce Attorneys */}
-        <section className="py-20 lg:py-28 bg-secondary">
+        <section className="py-12 bg-secondary">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
               <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">For Divorce Attorneys</h2>
@@ -174,7 +174,7 @@ const GrayDivorceRealEstate = () => {
         </section>
 
         {/* Closing CTA */}
-        <section className="py-20 lg:py-28 bg-primary">
+        <section className="py-12 bg-primary">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
