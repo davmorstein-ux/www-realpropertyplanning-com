@@ -10,7 +10,7 @@ import GoldCheck3D from "@/components/GoldCheck3D";
 import RelatedServices from "@/components/RelatedServices";
 import { articleSchema } from "@/lib/schema";
 
-import grayDivorceIcon from "@/assets/icons/attorney-divorce-real-estate-icon-washington.webp";
+import grayDivorceIcon from "@/assets/icons/gray-divorce-split-house-couple-washington.png";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 
 const davidServices = [
@@ -57,6 +57,7 @@ const GrayDivorceRealEstate = () => {
                 alt=""
                 aria-hidden="true"
                 className="mx-auto max-w-[18rem] w-full h-auto object-contain mb-4"
+                style={{ mixBlendMode: "multiply" }}
                 loading="lazy"
               />
               <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6 mt-4">
@@ -72,10 +73,19 @@ const GrayDivorceRealEstate = () => {
                     Start a Confidential Conversation
                   </Button>
                 </Link>
-                <a href="tel:2069003015">
-                  <Button size="lg" variant="outline3d" className="border-gold bg-white text-foreground hover:bg-gold hover:text-foreground focus-visible:ring-gold w-full sm:w-auto">
+                <a href="tel:2069003015" className="w-full sm:w-auto">
+                  <button
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 rounded-lg font-bold tracking-wide shadow-lg hover:brightness-110 transition-all min-w-[240px]"
+                    style={{
+                      height: "54px",
+                      fontSize: "18px",
+                      padding: "0 2rem",
+                      backgroundColor: "#2563eb",
+                      color: "#ffffff",
+                    }}
+                  >
                     Call (206) 900-3015
-                  </Button>
+                  </button>
                 </a>
               </div>
             </div>
