@@ -1120,10 +1120,13 @@ body {
   .premium-tile h3[data-tile-id="senior-living"] {
     transform: translateY(6px) !important;
   }
-  /* Paying for Senior Living: tighten spacing between the two label lines */
+  /* Paying for Senior Living: keep two label lines distinct (no overlap) */
   .premium-tile h3 .paying-for-line {
     display: block;
-    transform: translateY(6px);
+    transform: translateY(-2px);
+  }
+  .premium-tile:has(.service-nav-tile-link[href="/sell-house-fund-senior-living"]) h3.tile-label-tight {
+    line-height: 1.05 !important;
   }
   /* Paying for Senior Living: desktop-only icon size +15% (mobile keeps inline scale 0.7) */
   .premium-tile:has(.service-nav-tile-link[href="/sell-house-fund-senior-living"]) .tile-icon {
