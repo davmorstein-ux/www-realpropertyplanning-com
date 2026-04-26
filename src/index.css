@@ -1183,6 +1183,28 @@ body {
   }
 }
 
+/* Gray Divorce tile: smaller font across all breakpoints so the long two-line label fits */
+.premium-tile:has(.service-nav-tile-link[href="/gray-divorce-real-estate"]) h3.tile-label,
+.premium-tile:has(.service-nav-tile-mobile-hitbox[href="/gray-divorce-real-estate"]) h3.tile-label {
+  font-size: 0.65rem !important;
+  line-height: 0.95 !important;
+}
+@media (min-width: 640px) {
+  .premium-tile:has(.service-nav-tile-link[href="/gray-divorce-real-estate"]) h3.tile-label {
+    font-size: 0.85rem !important;
+  }
+}
+@media (min-width: 1024px) {
+  .premium-tile:has(.service-nav-tile-link[href="/gray-divorce-real-estate"]) h3.tile-label {
+    font-size: 1.05rem !important;
+  }
+}
+@media (min-width: 1280px) {
+  .premium-tile:has(.service-nav-tile-link[href="/gray-divorce-real-estate"]) h3.tile-label {
+    font-size: 1.2rem !important;
+  }
+}
+
 @media (min-width: 1024px) {
   .premium-tile .tile-label-tight,
   .premium-tile h3.tile-label {
