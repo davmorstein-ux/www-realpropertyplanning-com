@@ -8,6 +8,7 @@ import ScrollToTop from "./components/ScrollToTop";
 
 // Homepage stays eager — fastest possible first paint, no Suspense flash on "/"
 import Index from "./pages/Index";
+const NewHomePreview = lazy(() => import("./pages/NewHomePreview"));
 
 // All other routes are lazy-loaded so the homepage bundle stays small.
 const ProbateEstateSales = lazy(() => import("./pages/ProbateEstateSales"));
@@ -139,6 +140,7 @@ const App = () => (
         <Routes>
           {/* ─── Homepage ─────────────────────────────────────────── */}
           <Route path="/" element={<Index />} />
+          <Route path="/new-home" element={<NewHomePreview />} />
 
           {/* ─── Core commercial pages ────────────────────────────── */}
           <Route path="/probate-estate-sales" element={<ProbateEstateSales />} />
