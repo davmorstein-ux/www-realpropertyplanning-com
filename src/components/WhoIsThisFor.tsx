@@ -66,7 +66,7 @@ const WhoIsThisFor = () => {
             </p>
             <Link
               to="/join-the-network"
-              className="mt-auto inline-flex items-center justify-center gap-2 rounded-lg px-8 py-4 min-h-[52px] font-bold tracking-[0.02em] text-base md:text-lg no-underline"
+              className="explore-btn mt-auto inline-flex items-center justify-center gap-2 rounded-lg px-8 py-4 min-h-[52px] font-bold tracking-[0.02em] text-base md:text-lg no-underline"
               style={{ backgroundColor: "#1e3a5f", color: "#ffffff" }}
             >
               <span style={{ color: "#ffffff" }}>Explore Network</span>
