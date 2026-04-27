@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
