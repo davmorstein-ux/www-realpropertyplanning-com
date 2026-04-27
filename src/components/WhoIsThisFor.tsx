@@ -64,9 +64,9 @@ const WhoIsThisFor = () => {
               Connect, collaborate, and support your clients
             </p>
             <Link to="/join-the-network" className="mt-auto">
-              <Button variant="navy3d" size="lg" className="px-8 py-4 h-auto rounded-lg text-base md:text-lg !text-white">
-                Explore Network
-                <ChevronRight className="w-5 h-5 ml-1" />
+              <Button variant="navy3d" size="lg" className="px-8 py-4 h-auto rounded-lg text-base md:text-lg !text-white [&_*]:!text-white">
+                <span style={{ color: "#ffffff" }}>Explore Network</span>
+                <ChevronRight className="w-5 h-5 ml-1" style={{ color: "#ffffff" }} />
               </Button>
             </Link>
           </div>
