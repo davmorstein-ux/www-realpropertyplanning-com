@@ -78,8 +78,8 @@ const PowerOfAttorney = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Power of Attorney & Real Estate Decisions in Washington State | Real Property Planning"
-        description="Holding Power of Attorney for an aging parent in Washington State? Real estate guidance for home sales, senior transitions, and certified appraisals from a licensed broker."
+        title="Power of Attorney & Real Estate in Washington"
+        description="Holding Power of Attorney for an aging parent in Washington? Guidance for real estate decisions, home sales, and certified appraisals."
         jsonLd={jsonLd}
       />
       <Header />

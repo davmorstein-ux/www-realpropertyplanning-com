@@ -44,8 +44,8 @@ const jsonLd = articleSchema({
 const WhatExecutorsShouldDo = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
-      title="What Executors Should Do Before Selling an Inherited Home in Washington | Real Property Planning"
-      description="A step-by-step guide for Washington State executors and personal representatives — securing the property, confirming authority, pricing, preparation, and managing the probate sale."
+      title="What Executors Should Do Before Selling an Inherited Home | Real Property Planning"
+      description="A practical step-by-step guide for executors and personal representatives — from securing the property and confirming authority to pricing, preparation, and managing the sale."
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema items={[

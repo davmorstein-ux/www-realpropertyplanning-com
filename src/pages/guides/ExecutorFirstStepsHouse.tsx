@@ -34,8 +34,8 @@ const jsonLd = articleSchema({
 const ExecutorFirstStepsHouse = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
-      title="What Should an Executor Do First With a House in Washington? | Real Property Planning"
-      description="The first decisions a Washington State executor needs to make about estate property — from securing the home to planning the probate sale."
+      title="What Should an Executor Do First With a House? | Real Property Planning"
+      description="A practical guide to the first decisions an executor needs to make about estate property — from securing the home to planning for sale."
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema items={[

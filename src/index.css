@@ -1120,13 +1120,10 @@ body {
   .premium-tile h3[data-tile-id="senior-living"] {
     transform: translateY(6px) !important;
   }
-  /* Paying for Senior Living: match tight line-height of Home Values & Senior Home Sales */
+  /* Paying for Senior Living: nudge top "Paying for" line up on desktop only */
   .premium-tile h3 .paying-for-line {
     display: block;
-    transform: none;
-  }
-  .premium-tile:has(.service-nav-tile-link[href="/sell-house-fund-senior-living"]) h3.tile-label-tight {
-    line-height: 0.82 !important;
+    transform: translateY(-6px);
   }
   /* Paying for Senior Living: desktop-only icon size +15% (mobile keeps inline scale 0.7) */
   .premium-tile:has(.service-nav-tile-link[href="/sell-house-fund-senior-living"]) .tile-icon {
@@ -1145,17 +1142,6 @@ body {
   }
   /* Probate Terms: tiny desktop-only downward correction to match The Process */
   .premium-tile[data-tile-name="probate-terms"] h3 {
-    transform: translateY(8px) !important;
-  }
-  /* The Process: align icon and text with Probate Terms tile */
-  .premium-tile[data-tile-name="the-process"] > div > span {
-    transform: translateY(-10.2%) !important;
-  }
-  .premium-tile[data-tile-name="the-process"] .tile-icon {
-    transform: scale(1.1) translateY(20%) !important;
-  }
-  .premium-tile h3[data-tile-id="the-process"] {
-    margin-top: -0.5rem !important;
     transform: translateY(8px) !important;
   }
   .premium-tile[data-tile-name="attorneys"] .tile-icon {
@@ -1181,8 +1167,6 @@ body {
     transform: translateY(0) !important;
   }
 }
-
-/* Gray Divorce tile uses default tile label font sizing (matches Senior Home Sales) */
 
 @media (min-width: 1024px) {
   .premium-tile .tile-label-tight,
@@ -1749,13 +1733,4 @@ img[src*="real-estate-website-globe-3d-icon-washington"] {
   object-position: left center;
   mix-blend-mode: multiply;
   background: transparent;
-}
-
-/* Laptop-only vertical adjustment for "Real Estate Appraiser" tile text */
-@media (min-width: 1024px) and (max-width: 1535px) {
-  .premium-tile h3.tile-label-tight[data-tile-id="appraiser"],
-  .premium-tile h3.tile-label[data-tile-id="appraiser"] {
-    transform: translateY(-5%) !important;
-    margin-top: -5% !important;
-  }
 }

@@ -60,8 +60,8 @@ const Wills = () => {
   return (
     <>
       <SEOHead
-        title="Wills, Probate & Real Estate in Washington State | Real Property Planning"
-        description="How wills affect probate real estate decisions in Washington State — what executors, heirs, and families should know about selling or transferring an inherited home."
+        title="Wills & Real Estate in Washington State"
+        description="How wills affect real property decisions in Washington — what executors, heirs, and families should know about selling or transferring a home."
         canonical="https://www.realpropertyplanning.com/wills"
         jsonLd={schemaData}
       />

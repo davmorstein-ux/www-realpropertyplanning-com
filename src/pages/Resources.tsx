@@ -64,8 +64,8 @@ const Resources = () => {
   return (
     <>
       <SEOHead
-        title="Probate & Senior Transition Real Estate Resources | Real Property Planning"
-        description="Free guides, checklists, and educational resources for families, executors, and professionals navigating probate real estate and senior housing transitions in Washington State."
+        title="Resources | Real Property Planning"
+        description="Trusted professionals and service providers for probate, estate, and senior transition needs throughout Washington State."
         canonical="https://www.realpropertyplanning.com/resources"
       />
       <BreadcrumbSchema

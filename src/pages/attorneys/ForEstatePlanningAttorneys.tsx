@@ -45,7 +45,7 @@ const ForEstatePlanningAttorneys = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
       title="Real Estate Support for Estate Planning Attorneys in Washington State | Real Property Planning"
-      description="Real Property Planning helps Washington State estate planning attorneys and their clients with property valuation, sale timing, and probate real estate coordination."
+      description="Real Property Planning helps estate planning attorneys and their clients navigate property valuation, sale timing, and real estate coordination throughout Washington State."
     />
     <BreadcrumbSchema
       items={[

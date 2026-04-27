@@ -49,8 +49,8 @@ const HANDLED: string[] = [
 const ForAttorneysHowItWorks = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
-      title="How Real Property Planning Works With Washington Attorneys | Referral Process"
-      description="A clear walkthrough of how Real Property Planning supports Washington State estate, probate, divorce, and family law attorneys from referral through closing of probate and inherited property sales."
+      title="How Real Property Planning Works With Attorneys | Referral Process"
+      description="A clear, document-style walkthrough of how Real Property Planning supports Washington estate, probate, and family law attorneys from referral through closing — including what we handle and how to make a referral."
       canonical="https://www.realpropertyplanning.com/for-attorneys/how-it-works"
     />
     <BreadcrumbSchema

@@ -11,8 +11,8 @@ import heroIcon from "@/assets/icons/probate-estate-resources-icon-washington.we
 const SeniorMoveManagers = () => (
   <>
     <SEOHead
-      title="Senior Move Managers in Washington State | Real Property Planning"
-      description="Senior move management professionals across Washington State who coordinate downsizing, packing, and the physical and emotional aspects of senior housing transitions."
+      title="Senior Move Managers | Resources | Real Property Planning"
+      description="Senior move management professionals throughout Washington State who coordinate and manage the physical and emotional aspects of relocating seniors."
       canonical="https://www.realpropertyplanning.com/resources/senior-move-managers"
     />
     <BreadcrumbSchema

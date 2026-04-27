@@ -34,7 +34,7 @@ const MarysvilleProbateEstate = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEOHead title="Probate Real Estate & Estate Sales in Marysville, WA | Real Property Planning" description="Probate, inherited property, and senior transition real estate guidance for executors, trustees, and families in Marysville, Snohomish County, Washington — from valuation through closing." />
+      <SEOHead title="Probate & Estate Real Estate in Marysville, WA" description="Guidance for executors and families with inherited property in Marysville, WA. Family-led decisions, preparation, and realistic pricing." />
       <BreadcrumbSchema items={[{ name: "Snohomish County", url: "/snohomish-county" }, { name: "Marysville", url: "/marysville-probate-estate-real-estate" }]} />
       <Header />
       <main id="main-content">

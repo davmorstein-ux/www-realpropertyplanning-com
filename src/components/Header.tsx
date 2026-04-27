@@ -12,7 +12,6 @@ const primaryLinks = [
     { href: "/senior-estate-services", label: "Senior & Estate Services" },
     { href: "/probate-estate-sales", label: "Probate & Estate Sales" },
     { href: "/senior-transitions", label: "Senior Transitions" },
-    { href: "/gray-divorce-real-estate", label: "Gray Divorce & the Silver Tsunami" },
     { href: "/senior-placement", label: "Senior Placement" },
     { href: "/sell-house-fund-senior-living", label: "Paying for Senior Living" },
     { href: "/executors", label: "For Executors" },

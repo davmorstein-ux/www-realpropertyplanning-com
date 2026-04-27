@@ -88,8 +88,8 @@ const BellinghamProbateEstate = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Probate Real Estate & Estate Sales in Bellingham, WA | Real Property Planning"
-        description="Probate, inherited property, and senior transition real estate guidance for executors, trustees, and families in Bellingham, Whatcom County, Washington — from valuation through closing."
+        title="Probate & Estate Real Estate in Bellingham, WA"
+        description="Guidance for executors and families with inherited or estate property in Bellingham, WA. Out-of-area support and coordinated decisions."
       />
       <BreadcrumbSchema
         items={[

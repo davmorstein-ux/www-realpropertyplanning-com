@@ -88,8 +88,8 @@ const YakimaProbateEstate = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Probate Real Estate & Estate Sales in Yakima, WA | Real Property Planning"
-        description="Probate, inherited property, and senior transition real estate guidance for executors, trustees, and families in Yakima, Yakima County, Washington — from valuation through closing."
+        title="Probate & Estate Real Estate in Yakima, WA"
+        description="Guidance for executors and families with inherited property in Yakima, WA. Property condition decisions, realistic pricing, coordinated steps."
       />
       <BreadcrumbSchema
         items={[

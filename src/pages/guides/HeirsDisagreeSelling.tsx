@@ -34,8 +34,8 @@ const jsonLd = articleSchema({
 const HeirsDisagreeSelling = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
-      title="What Happens If Heirs Disagree on Selling a House in Washington? | Real Property Planning"
-      description="Practical guidance for Washington State families navigating heir disagreements about inherited property — understanding options, reaching agreement, and moving forward."
+      title="What Happens If Heirs Disagree on Selling a House? | Real Property Planning"
+      description="Practical guidance for families navigating heir disagreements about inherited property — understanding options, reaching agreement, and moving forward."
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema items={[

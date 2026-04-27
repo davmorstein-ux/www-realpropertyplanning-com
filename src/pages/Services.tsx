@@ -43,8 +43,8 @@ const Services = () => {
   return (
     <>
       <SEOHead
-        title="Probate, Estate, Senior Transition & Divorce Real Estate Services in Washington State | Real Property Planning"
-        description="Probate property sales, inherited home coordination, senior downsizing, and neutral real estate support for divorce and gray divorce — calm, experienced guidance for Washington State families and professionals."
+        title="Senior Relocation & Estate Real Estate Services | Real Property Planning"
+        description="Real Property Planning provides senior relocation home sales, estate and inherited property sales, probate real estate, trust property sales, clean-out coordination, and market analysis throughout Washington State."
         canonical="https://www.realpropertyplanning.com/services"
       />
       <BreadcrumbSchema

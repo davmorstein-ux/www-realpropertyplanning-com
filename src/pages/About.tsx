@@ -21,8 +21,8 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="About David Stein — Probate Real Estate Broker & Certified Appraiser | Real Property Planning"
-        description="Meet David Stein — Washington State licensed real estate broker and certified residential appraiser with 20+ years of experience in probate, estate, and senior transition real estate."
+        title="About Real Property Planning | Senior Transitions & Estate Hub"
+        description="Real Property Planning is Washington State's resource hub for senior transitions, probate, and estate real estate — coordinating brokers, appraisers, and trusted professionals across the Puget Sound region."
         schemaJson={realEstateAgentSchema}
       />
       <BreadcrumbSchema items={[{ name: "About", url: "/about" }]} />

@@ -42,8 +42,8 @@ const jsonLd = articleSchema({
 const SeniorTransitionDifferences = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
-      title="How Senior Transition Sales Differ From Ordinary Home Sales in Washington | Real Property Planning"
-      description="The emotional, logistical, and practical differences between selling a longtime family home during a Washington State senior transition and a conventional real estate transaction."
+      title="How Senior Transition Sales Differ From Ordinary Home Sales | Real Property Planning"
+      description="Understanding the emotional, logistical, and practical differences between selling a longtime family home during a senior transition and a conventional real estate transaction."
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema items={[

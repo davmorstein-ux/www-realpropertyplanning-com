@@ -76,8 +76,8 @@ const PascoProbateEstate = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Probate Real Estate & Estate Sales in Pasco, WA | Real Property Planning"
-        description="Probate, inherited property, and senior transition real estate guidance for executors, trustees, and families in Pasco, Franklin County, Washington — from valuation through closing."
+        title="Probate & Estate Real Estate in Pasco, WA"
+        description="Guidance for executors and families with inherited property in Pasco, WA. Support for diverse property conditions and coordinated next steps."
       />
       <BreadcrumbSchema items={[{ name: "Counties", url: "/counties" }, { name: "Pasco", url: "/pasco-probate-estate-real-estate" }]} />
       <Header />

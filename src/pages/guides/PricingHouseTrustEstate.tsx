@@ -34,8 +34,8 @@ const jsonLd = articleSchema({
 const PricingHouseTrustEstate = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
-      title="How to Price a House in a Trust or Estate in Washington State | Real Property Planning"
-      description="A practical guide to pricing trust and estate property in Washington State — why standard approaches fail and what valuation-informed strategy looks like."
+      title="How Do You Price a House in a Trust or Estate? | Real Property Planning"
+      description="A practical guide to pricing estate and trust-owned property — why standard approaches fail and what valuation-informed strategy looks like."
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema items={[

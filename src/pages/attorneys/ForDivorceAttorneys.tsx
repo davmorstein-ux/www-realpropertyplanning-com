@@ -67,8 +67,8 @@ const faqs = [
 const ForDivorceAttorneys = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
-      title="Real Estate Support for Divorce & Gray Divorce Attorneys in Washington State | Real Property Planning"
-      description="Neutral, experienced real estate broker and certified appraiser support for Washington State divorce and gray divorce attorneys — marital home valuation, sale, and senior transition coordination."
+      title="Real Estate Support for Divorce Attorneys in Washington State | Real Property Planning"
+      description="Neutral, experienced real estate support for divorce attorneys and their clients navigating marital home sales in Washington State. Serving the Puget Sound region."
     />
     <BreadcrumbSchema
       items={[

@@ -99,8 +99,8 @@ const SeniorPlacement = () => {
   return (
     <>
       <SEOHead
-        title="Senior Placement & Family Home Sales in Washington State | Real Property Planning"
-        description="Real Property Planning helps Washington State families coordinate senior placement with the sale of the family home — licensed broker and certified appraiser serving King, Snohomish, Pierce & Kitsap Counties."
+        title="Senior Placement in Washington State | David Stein | Real Property Planning"
+        description="David Stein helps Washington State families navigate senior placement and the sale of the family home. Licensed Broker & Certified Appraiser serving King, Snohomish, Pierce & Kitsap Counties."
         canonical="https://www.realpropertyplanning.com/senior-placement"
       />
       <BreadcrumbSchema

@@ -11,8 +11,8 @@ import heroIcon from "@/assets/icons/probate-estate-resources-icon-washington.we
 const MovingRelocationServices = () => (
   <>
     <SEOHead
-      title="Moving & Relocation Services for Estates & Seniors in Washington State | Real Property Planning"
-      description="Movers and relocation specialists in Washington State experienced with probate, estate, and senior transition moves — vetted partners for families and executors."
+      title="Moving & Relocation Services | Resources | Real Property Planning"
+      description="Moving companies and relocation specialists experienced with estate and senior transitions throughout Washington State."
       canonical="https://www.realpropertyplanning.com/resources/moving-relocation-services"
     />
     <BreadcrumbSchema

@@ -10,8 +10,8 @@ import { Link } from "react-router-dom";
 const NursingAndSkilledCare = () => (
   <>
     <SEOHead
-      title="Nursing & Skilled Care Facilities in Washington State | Real Property Planning"
-      description="A guide to nursing and skilled care facilities providing 24-hour medical support across Washington State, plus help coordinating the family home sale and senior transition."
+      title="Nursing & Skilled Care | Senior Living | Real Property Planning"
+      description="Learn about nursing and skilled care facilities providing 24-hour medical support for seniors throughout Washington State."
       canonical="https://www.realpropertyplanning.com/senior-living/nursing-and-skilled-care"
     />
     <BreadcrumbSchema

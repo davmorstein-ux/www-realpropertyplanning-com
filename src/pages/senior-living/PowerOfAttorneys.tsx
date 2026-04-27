@@ -76,8 +76,8 @@ const PowerOfAttorneys = () => {
   return (
   <>
     <SEOHead
-      title="Power of Attorney & Real Estate Decisions in Washington State | Real Property Planning"
-      description="How a power of attorney works for real estate decisions in Washington State — guidance for agents, families, and professionals managing senior transitions and inherited property."
+      title="Power of Attorney & Real Estate Decisions | Real Property Planning"
+      description="Understanding how a power of attorney works in real estate — for families, executors, and professionals navigating property decisions in Washington State."
       canonical="https://www.realpropertyplanning.com/senior-living/power-of-attorneys"
     />
     <BreadcrumbSchema

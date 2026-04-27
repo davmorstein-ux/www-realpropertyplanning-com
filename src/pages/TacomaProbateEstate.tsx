@@ -88,8 +88,8 @@ const TacomaProbateEstate = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Probate Real Estate & Estate Sales in Tacoma, WA | Real Property Planning"
-        description="Probate, inherited property, and senior transition real estate guidance for executors, trustees, and families in Tacoma, Pierce County, Washington — from valuation through closing."
+        title="Probate & Estate Real Estate in Tacoma, WA"
+        description="Guidance for executors, trustees, and families with inherited property in Tacoma, WA. Local Pierce County expertise from start to finish."
       />
       <BreadcrumbSchema
         items={[

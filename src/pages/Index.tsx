@@ -20,7 +20,6 @@ import HomepageFAQ from "@/components/HomepageFAQ";
 import HomepageTeamSection from "@/components/HomepageTeamSection";
 import HowWeHelpCards from "@/components/HowWeHelpCards";
 import HomepageWarmStatement from "@/components/HomepageWarmStatement";
-import WhoIsThisFor from "@/components/WhoIsThisFor";
 
 const serviceAreas = [
   { county: "King County", href: "/counties/king", cities: "Seattle, Bellevue, Kirkland, Redmond, Renton, Bothell, Shoreline, Mercer Island, Burien, Kent, Auburn, Federal Way" },
@@ -125,8 +124,8 @@ const Index = () => {
         <script type="application/ld+json">{homepageFaqJsonLd}</script>
       </Helmet>
       <SEOHead
-        title="Probate Real Estate & Senior Transitions | Real Property Planning"
-        description="Real Property Planning helps families, executors, attorneys, and seniors navigate probate real estate, inherited homes, estate sales, and senior transitions throughout Washington State."
+        title="Probate Real Estate & Senior Transitions | Puget Sound WA"
+        description="Washington State resource for probate real estate, inherited home sales, and senior transitions — guidance for families, executors, and attorneys."
         canonical="https://www.realpropertyplanning.com"
         schemaJson={jsonLd}
       />
@@ -135,9 +134,6 @@ const Index = () => {
 
       {/* 1. HERO — PNW background, calm headline, two CTAs */}
       <HomepageHero />
-
-      {/* WHO IS THIS FOR */}
-      <WhoIsThisFor />
 
       {/* 2. SERVICE NAV TILES */}
       <ServiceNavTiles />

@@ -4,8 +4,8 @@ const ProbateAttorneys = () => {
   return (
     <ProfessionPageTemplate
       title="Probate & Estate Attorneys"
-      metaTitle="Probate & Estate Attorneys in Washington State | Real Property Planning"
-      metaDescription="Experienced probate and estate attorneys serving Washington State — helping families and executors navigate estate settlement, inherited property, and probate court."
+      metaTitle="Probate Attorneys in Western Washington | Real Property Planning"
+      metaDescription="Find experienced probate and estate attorneys serving King, Snohomish, Pierce, Skagit, and Kitsap Counties — helping families navigate estate settlement, inherited property, and probate court."
       helpHeadline="How a Probate Attorney Helps Your Family"
       helpRows={[
         { icon: "📋", text: "Guides executors and personal representatives through every legal step of settling an estate" },

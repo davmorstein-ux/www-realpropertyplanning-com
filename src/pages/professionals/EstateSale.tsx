@@ -4,8 +4,8 @@ const EstateSale = () => {
   return (
     <ProfessionPageTemplate
       title="Estate Sale & Personal Property"
-      metaTitle="Estate Sale & Personal Property Specialists in Washington State | Real Property Planning"
-      metaDescription="Trusted estate sale companies and personal property specialists across Washington State — helping families sort, value, and sell belongings during probate, downsizing, and senior transitions."
+      metaTitle="Estate Sale & Personal Property Specialists | Puget Sound | Real Property Planning"
+      metaDescription="Find trusted estate sale companies and personal property specialists serving Western Washington — helping families sort, value, and sell belongings from an estate or senior downsizing."
       helpHeadline="How an Estate Sale Specialist Helps Your Family"
       helpRows={[
         { icon: "🏷️", text: "Inventories, prices, and manages the sale of household contents — from furniture and art to everyday items" },

@@ -234,8 +234,8 @@ const GuidesAndResources = () => {
   return (
     <>
       <SEOHead
-        title="Probate, Estate & Senior Transition Real Estate Guides | Washington State | Real Property Planning"
-        description="Practical guides and educational resources for Washington State families, executors, trustees, and professionals navigating probate real estate, inherited property, pricing, and senior transitions."
+        title="Guides & Resources | Probate, Estate & Senior Transition Guidance | Real Property Planning"
+        description="Clear, practical guides for families, executors, trustees, and professionals navigating probate, inherited property, senior transitions, pricing, and real estate decisions in Washington State."
         canonical="https://www.realpropertyplanning.com/guides-and-resources"
       />
       <BreadcrumbSchema

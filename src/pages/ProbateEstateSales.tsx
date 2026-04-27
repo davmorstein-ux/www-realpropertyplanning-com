@@ -140,8 +140,8 @@ const ProbateEstateSales = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Probate Real Estate Sales in Washington State | Real Property Planning"
-        description="Probate property sales throughout Washington State — David Stein, licensed real estate broker and certified residential appraiser, guides families, executors, and attorneys through court-aligned home sales."
+        title="Probate Real Estate Broker & Agent in Washington State | David Stein | Real Property Planning"
+        description="David Stein — Washington State Licensed Real Estate Broker & Certified Appraiser specializing in probate real estate sales in King, Snohomish, Pierce & Kitsap Counties. Real Property Planning."
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema items={[{ name: "Probate & Estate Sales", url: "/probate-estate-sales" }]} />

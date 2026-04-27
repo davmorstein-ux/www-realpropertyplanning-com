@@ -10,8 +10,8 @@ import { Link } from "react-router-dom";
 const AssistedLivingCommunities = () => (
   <>
     <SEOHead
-      title="Assisted Living Communities in Washington State | Real Property Planning"
-      description="A guide to assisted living communities across Washington State — plus practical help selling the family home and coordinating the senior transition."
+      title="Assisted Living Communities | Senior Living | Real Property Planning"
+      description="Learn about assisted living communities offering daily support, social activities, and on-site amenities for seniors throughout Washington State."
       canonical="https://www.realpropertyplanning.com/senior-living/assisted-living-communities"
     />
     <BreadcrumbSchema
