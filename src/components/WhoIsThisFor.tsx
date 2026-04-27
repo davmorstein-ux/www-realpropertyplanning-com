@@ -7,6 +7,7 @@ import professionalsIcon from "@/assets/who-is-this-for-professionals-icon.png";
 const WhoIsThisFor = () => {
   return (
     <section className="py-16 md:py-20 lg:py-24 bg-cream">
+      <style>{`.explore-btn, .explore-btn * { color: #ffffff !important; }`}</style>
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-12 md:mb-14">
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-primary font-semibold">
@@ -65,7 +66,7 @@ const WhoIsThisFor = () => {
             </p>
             <Link
               to="/join-the-network"
-              className="mt-auto inline-flex items-center justify-center gap-2 rounded-lg px-8 py-4 min-h-[52px] font-bold tracking-[0.02em] text-base md:text-lg no-underline"
+              className="explore-btn mt-auto inline-flex items-center justify-center gap-2 rounded-lg px-8 py-4 min-h-[52px] font-bold tracking-[0.02em] text-base md:text-lg no-underline"
               style={{ backgroundColor: "#1e3a5f", color: "#ffffff" }}
             >
               <span style={{ color: "#ffffff" }}>Explore Network</span>
