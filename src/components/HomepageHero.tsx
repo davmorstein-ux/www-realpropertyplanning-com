@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { ShieldCheck, HeartHandshake, MapPin } from "lucide-react";
 
 /**
  * Homepage hero — floating island header + full-viewport Pine Ridge photo + trust bar.
@@ -167,25 +166,6 @@ const HomepageHero = () => {
             padding: "0 24px",
           }}
         >
-          <p
-            style={{
-              ...fontBody,
-              color: "#ffffff",
-              fontSize: 18,
-              fontWeight: 600,
-              letterSpacing: "0.12em",
-              textTransform: "uppercase",
-              marginBottom: 18,
-              padding: "8px 18px",
-              background: "rgba(8,13,25,0.55)",
-              borderRadius: 4,
-              backdropFilter: "blur(4px)",
-              WebkitBackdropFilter: "blur(4px)",
-              textShadow: "0 2px 10px rgba(0,0,0,0.6)",
-            }}
-          >
-            Guiding Families Through Every Transition
-          </p>
           <h1
             style={{
               ...fontHead,
@@ -241,7 +221,7 @@ const HomepageHero = () => {
       </section>
 
       {/* ===== Trust Bar ===== */}
-      <section style={{ background: "#1a5fa8", padding: "32px 24px" }}>
+      <section style={{ background: "#1a5fa8", padding: "40px 24px" }}>
         <div
           style={{
             maxWidth: 1280,
@@ -252,19 +232,28 @@ const HomepageHero = () => {
           }}
         >
           {[
-            { Icon: ShieldCheck, title: "LICENSED & CERTIFIED", text: "WA State Broker & Certified Residential Appraiser" },
-            { Icon: HeartHandshake, title: "FAMILY-FOCUSED", text: "Calm guidance through sensitive transitions" },
-            { Icon: MapPin, title: "STATEWIDE SERVICE", text: "Serving all of Western Washington & Puget Sound" },
-          ].map(({ Icon, title, text }) => (
-            <div key={title} style={{ display: "flex", gap: 16, alignItems: "flex-start", color: "#fff" }}>
-              <Icon size={32} strokeWidth={1.6} color="#ffffff" aria-hidden style={{ flexShrink: 0, marginTop: 2 }} />
-              <div>
-                <div style={{ ...fontBody, fontWeight: 700, fontSize: 15, letterSpacing: "0.08em", marginBottom: 4 }}>
-                  {title}
-                </div>
-                <div style={{ ...fontBody, fontSize: 16, color: "rgba(255,255,255,0.95)", lineHeight: 1.5 }}>
-                  {text}
-                </div>
+            { emoji: "🏛️", title: "LICENSED & CERTIFIED", text: "WA State Broker & Certified Residential Appraiser" },
+            { emoji: "🤝", title: "FAMILY-FOCUSED", text: "Calm guidance through sensitive transitions" },
+            { emoji: "🗺️", title: "STATEWIDE SERVICE", text: "Serving all of Western Washington & Puget Sound" },
+          ].map(({ emoji, title, text }) => (
+            <div key={title} style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", color: "#fff", padding: "0 8px" }}>
+              <div
+                aria-hidden
+                style={{
+                  fontSize: 48,
+                  lineHeight: 1,
+                  marginBottom: 12,
+                  background: "transparent",
+                  filter: "drop-shadow(0 4px 6px rgba(0,0,0,0.35))",
+                }}
+              >
+                {emoji}
+              </div>
+              <div style={{ ...fontBody, fontWeight: 700, fontSize: 15, letterSpacing: "0.08em", marginBottom: 6 }}>
+                {title}
+              </div>
+              <div style={{ ...fontBody, fontSize: 16, color: "rgba(255,255,255,0.95)", lineHeight: 1.5 }}>
+                {text}
               </div>
             </div>
           ))}
