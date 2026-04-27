@@ -1734,3 +1734,16 @@ img[src*="real-estate-website-globe-3d-icon-washington"] {
   mix-blend-mode: multiply;
   background: transparent;
 }
+
+/* ==================================================================
+ * Senior Readability — Site-wide Minimum Type Sizes
+ * Body text: min 16px. Button text: min 15px.
+ * Uses :where() for zero specificity so component styles still win
+ * when they intentionally set a larger size.
+ * ================================================================== */
+:where(body, p, li, a, span, div, label, td, th, dd, dt, blockquote) {
+  font-size: max(1em, 16px);
+}
+:where(button, .btn, [role="button"], a.button) {
+  font-size: max(1em, 15px);
+}

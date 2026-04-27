@@ -441,18 +441,16 @@ const SmartSearchBar = ({ pillsOnly, searchOnly }: SmartSearchBarProps) => {
 
   if (pillsOnly) {
     return (
-      <div className="w-full max-w-2xl mx-auto">
-        <div className="grid grid-cols-2 gap-3 px-4">
+      <div className="w-full max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 px-4">
           {suggestedPrompts.map((prompt) => (
             <button
               key={prompt.label}
               type="button"
               onClick={() => handlePromptClick(prompt.label)}
-              className="premium-pill-3d homepage-pill focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 w-full"
+              className="bg-navy hover:bg-navy-dark text-primary-foreground font-semibold text-[16px] sm:text-[17px] leading-snug px-6 py-5 rounded-md shadow-md hover:shadow-lg transition-all duration-200 text-center min-h-[64px] flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
             >
-              <span className="premium-pill-3d__face homepage-pill__face w-full justify-center font-bold">
-                {prompt.label}
-              </span>
+              {prompt.label}
             </button>
           ))}
         </div>
