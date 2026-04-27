@@ -136,6 +136,9 @@ const Index = () => {
       {/* 1. HERO — PNW background, calm headline, two CTAs */}
       <HomepageHero />
 
+      {/* WHO IS THIS FOR */}
+      <WhoIsThisFor />
+
       {/* 2. SERVICE NAV TILES */}
       <ServiceNavTiles />
 
