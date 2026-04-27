@@ -117,6 +117,8 @@ const ForEstatePlanningAttorneys = () => (
       </div>
     </section>
 
+    <JamesJacksonCard />
+
     {/* How We Support Your Clients */}
     <section className="py-16 lg:py-24 bg-secondary">
       <div className="container px-6 lg:px-8">
