@@ -200,8 +200,6 @@ const ForProbateAttorneys = () => (
       </div>
     </section>
 
-    <JamesJacksonCard />
-
     <PageFAQ faqs={faqs} heading="Frequently Asked Questions" />
 
     {/* CTA */}
