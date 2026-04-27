@@ -6,6 +6,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import GoldCheck3D from "@/components/GoldCheck3D";
 import PageFAQ from "@/components/PageFAQ";
+import JamesJacksonCard from "@/components/JamesJacksonCard";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
@@ -196,6 +197,8 @@ const ForProbateAttorneys = () => (
         </div>
       </div>
     </section>
+
+    <JamesJacksonCard />
 
     <PageFAQ faqs={faqs} heading="Frequently Asked Questions" />
 
