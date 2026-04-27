@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
@@ -129,7 +129,6 @@ const Index = () => {
         canonical="https://www.realpropertyplanning.com"
         schemaJson={jsonLd}
       />
-      <Header />
       <main id="main-content">
 
       {/* 1. HERO — PNW background, calm headline, two CTAs */}
