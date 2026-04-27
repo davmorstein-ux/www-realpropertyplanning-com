@@ -232,9 +232,9 @@ const HomepageHero = () => {
           }}
         >
           {[
-            { emoji: "🏛️", title: "LICENSED & CERTIFIED", text: "WA State Broker & Certified Residential Appraiser" },
-            { emoji: "🤝", title: "FAMILY-FOCUSED", text: "Calm guidance through sensitive transitions" },
-            { emoji: "🗺️", title: "STATEWIDE SERVICE", text: "Serving all of Western Washington & Puget Sound" },
+            { emoji: "🌐", title: "TRUSTED PROFESSIONAL NETWORK", text: "Vetted brokers, appraisers, attorneys & senior specialists" },
+            { emoji: "🤝", title: "FAMILY & SENIOR FOCUSED", text: "Connecting families with the right professionals at the right time" },
+            { emoji: "📍", title: "SERVING WASHINGTON STATE", text: "Resources and professionals across Western Washington & Puget Sound" },
           ].map(({ emoji, title, text }) => (
             <div key={title} style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", color: "#fff", padding: "0 8px" }}>
               <div
