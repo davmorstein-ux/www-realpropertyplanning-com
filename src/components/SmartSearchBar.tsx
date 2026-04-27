@@ -450,7 +450,12 @@ const SmartSearchBar = ({ pillsOnly, searchOnly }: SmartSearchBarProps) => {
               onClick={() => handlePromptClick(prompt.label)}
               className="homepage-cta-card group flex items-center justify-between gap-5 w-full text-left bg-white text-navy hover:bg-white hover:text-navy rounded-xl px-7 py-6 min-h-[88px] font-bold text-[19px] leading-snug border-[3px] border-navy hover:border-[#0f1d3a] shadow-[0_8px_20px_rgba(15,30,55,0.28),0_2px_4px_rgba(15,30,55,0.18)] hover:shadow-[0_12px_28px_rgba(15,30,55,0.35),0_4px_8px_rgba(15,30,55,0.20)] transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
             >
-              <span className="flex-1 font-bold">{prompt.label}</span>
+              <span
+                className="flex-1 !font-bold !text-[19px]"
+                style={{ fontWeight: 700, fontSize: "19px" }}
+              >
+                {prompt.label}
+              </span>
               <span aria-hidden className="text-[34px] leading-none font-black shrink-0 text-navy group-hover:translate-x-2 transition-transform duration-200">→</span>
             </button>
           ))}
