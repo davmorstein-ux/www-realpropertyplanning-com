@@ -63,16 +63,13 @@ const WhoIsThisFor = () => {
             <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mb-8 max-w-sm">
               Connect, collaborate, and support your clients
             </p>
-            <Link to="/join-the-network" className="mt-auto" style={{ color: "#ffffff" }}>
-              <Button
-                variant="navy3d"
-                size="lg"
-                className="px-8 py-4 h-auto rounded-lg text-base md:text-lg !text-white [&_*]:!text-white [&>span:first-child]:hidden"
-                style={{ color: "#ffffff" }}
-              >
-                <span className="!text-white" style={{ color: "#ffffff" }}>Explore Network</span>
-                <ChevronRight className="w-5 h-5 ml-1 !text-white" style={{ color: "#ffffff" }} />
-              </Button>
+            <Link
+              to="/join-the-network"
+              className="mt-auto inline-flex items-center justify-center gap-2 rounded-lg px-8 py-4 min-h-[52px] font-bold tracking-[0.02em] text-base md:text-lg no-underline"
+              style={{ backgroundColor: "#1e3a5f", color: "#ffffff" }}
+            >
+              <span style={{ color: "#ffffff" }}>Explore Network</span>
+              <span aria-hidden="true" style={{ color: "#ffffff" }}>›</span>
             </Link>
           </div>
         </div>
