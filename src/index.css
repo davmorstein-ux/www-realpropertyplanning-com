@@ -1753,7 +1753,9 @@ img[src*="real-estate-website-globe-3d-icon-washington"] {
 
 /* Laptop-only vertical adjustment for "Real Estate Appraiser" tile text */
 @media (min-width: 1024px) and (max-width: 1535px) {
-  .premium-tile .tile-label-tight[data-tile-id="appraiser"] {
+  .premium-tile h3.tile-label-tight[data-tile-id="appraiser"],
+  .premium-tile h3.tile-label[data-tile-id="appraiser"] {
     transform: translateY(-5%) !important;
+    margin-top: -5% !important;
   }
 }
