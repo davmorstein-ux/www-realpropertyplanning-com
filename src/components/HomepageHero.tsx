@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { ShieldCheck, HeartHandshake, MapPin } from "lucide-react";
 
 /**
  * Homepage hero — floating island header + full-viewport Pine Ridge photo + trust bar.
@@ -169,11 +170,18 @@ const HomepageHero = () => {
           <p
             style={{
               ...fontBody,
-              color: "rgba(255,255,255,0.92)",
+              color: "#ffffff",
               fontSize: 18,
-              fontWeight: 400,
-              letterSpacing: "0.08em",
-              marginBottom: 16,
+              fontWeight: 600,
+              letterSpacing: "0.12em",
+              textTransform: "uppercase",
+              marginBottom: 18,
+              padding: "8px 18px",
+              background: "rgba(8,13,25,0.55)",
+              borderRadius: 4,
+              backdropFilter: "blur(4px)",
+              WebkitBackdropFilter: "blur(4px)",
+              textShadow: "0 2px 10px rgba(0,0,0,0.6)",
             }}
           >
             Guiding Families Through Every Transition
@@ -244,20 +252,18 @@ const HomepageHero = () => {
           }}
         >
           {[
-            { icon: "🛡️", title: "LICENSED & CERTIFIED", text: "WA State Broker & Certified Residential Appraiser" },
-            { icon: "🤝", title: "FAMILY-FOCUSED", text: "Calm guidance through sensitive transitions" },
-            { icon: "📍", title: "STATEWIDE SERVICE", text: "Serving all of Western Washington & Puget Sound" },
-          ].map((item) => (
-            <div key={item.title} style={{ display: "flex", gap: 16, alignItems: "flex-start", color: "#fff" }}>
-              <div style={{ fontSize: 30, lineHeight: 1 }} aria-hidden>
-                {item.icon}
-              </div>
+            { Icon: ShieldCheck, title: "LICENSED & CERTIFIED", text: "WA State Broker & Certified Residential Appraiser" },
+            { Icon: HeartHandshake, title: "FAMILY-FOCUSED", text: "Calm guidance through sensitive transitions" },
+            { Icon: MapPin, title: "STATEWIDE SERVICE", text: "Serving all of Western Washington & Puget Sound" },
+          ].map(({ Icon, title, text }) => (
+            <div key={title} style={{ display: "flex", gap: 16, alignItems: "flex-start", color: "#fff" }}>
+              <Icon size={32} strokeWidth={1.6} color="#ffffff" aria-hidden style={{ flexShrink: 0, marginTop: 2 }} />
               <div>
-                <div style={{ ...fontBody, fontWeight: 700, fontSize: 14, letterSpacing: "0.08em", marginBottom: 4 }}>
-                  {item.title}
+                <div style={{ ...fontBody, fontWeight: 700, fontSize: 15, letterSpacing: "0.08em", marginBottom: 4 }}>
+                  {title}
                 </div>
-                <div style={{ ...fontBody, fontSize: 14, color: "rgba(255,255,255,0.92)", lineHeight: 1.45 }}>
-                  {item.text}
+                <div style={{ ...fontBody, fontSize: 16, color: "rgba(255,255,255,0.95)", lineHeight: 1.5 }}>
+                  {text}
                 </div>
               </div>
             </div>
