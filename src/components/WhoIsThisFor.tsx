@@ -7,6 +7,7 @@ import professionalsIcon from "@/assets/who-is-this-for-professionals-icon.png";
 const WhoIsThisFor = () => {
   return (
     <section className="py-16 md:py-20 lg:py-24 bg-cream">
+      <style>{`.explore-btn, .explore-btn * { color: #ffffff !important; }`}</style>
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-12 md:mb-14">
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-primary font-semibold">
