@@ -4,6 +4,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
+import JamesJacksonCard from "@/components/JamesJacksonCard";
 import GoldCheck3D from "@/components/GoldCheck3D";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -136,6 +137,8 @@ const ForEstatePlanningAttorneys = () => (
         </div>
       </div>
     </section>
+
+    <JamesJacksonCard />
 
     {/* CTA */}
     <section className="py-20 lg:py-28 bg-primary">
