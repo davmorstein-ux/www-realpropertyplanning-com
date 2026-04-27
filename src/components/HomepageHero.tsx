@@ -66,7 +66,7 @@ const HomepageHero = () => {
             <img
               src="/rpp-logo.webp"
               alt="Real Property Planning"
-              style={{ height: 52, width: "auto", display: "block" }}
+              style={{ height: 88, width: "auto", maxWidth: "none", display: "block", objectFit: "contain" }}
             />
           </Link>
           <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
@@ -232,7 +232,7 @@ const HomepageHero = () => {
           }}
         >
           {[
-            { emoji: "🌐", title: "TRUSTED PROFESSIONAL NETWORK", text: "Vetted brokers, appraisers, attorneys & senior specialists" },
+            { emoji: "🌐", title: "TRUSTED PROFESSIONAL NETWORK", text: "Connecting families with trusted local professionals" },
             { emoji: "🤝", title: "FAMILY & SENIOR FOCUSED", text: "Connecting families with the right professionals at the right time" },
             { emoji: "📍", title: "SERVING WASHINGTON STATE", text: "Resources and professionals across Western Washington & Puget Sound" },
           ].map(({ emoji, title, text }) => (
