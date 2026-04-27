@@ -7,7 +7,15 @@ import professionalsIcon from "@/assets/who-is-this-for-professionals-icon.png";
 const WhoIsThisFor = () => {
   return (
     <section className="py-10 md:py-12 lg:py-14 bg-cream">
-      <style>{`.explore-btn, .explore-btn * { color: #ffffff !important; }`}</style>
+      <style>{`
+        .explore-btn,
+        .explore-btn *,
+        .explore-btn span {
+          color: #ffffff !important;
+          -webkit-text-fill-color: #ffffff !important;
+          text-decoration-color: #ffffff !important;
+        }
+      `}</style>
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-6 md:mb-8">
           <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-primary font-semibold">
@@ -69,8 +77,8 @@ const WhoIsThisFor = () => {
               className="explore-btn mt-auto inline-flex items-center justify-center gap-2 rounded-lg px-6 py-2.5 min-h-[40px] font-extrabold tracking-[0.02em] text-base md:text-lg no-underline"
               style={{ backgroundColor: "#2c5282", color: "#ffffff", textShadow: "0 1px 2px rgba(0,0,0,0.45)" }}
             >
-              <span style={{ color: "#ffffff" }}>Explore Network</span>
-              <span aria-hidden="true" style={{ color: "#ffffff" }}>›</span>
+              <span className="explore-label" style={{ color: "#ffffff", WebkitTextFillColor: "#ffffff" }}>Explore Network</span>
+              <span aria-hidden="true" style={{ color: "#ffffff", WebkitTextFillColor: "#ffffff" }}>›</span>
             </Link>
           </div>
         </div>
