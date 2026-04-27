@@ -161,9 +161,9 @@ const HomepageHero = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            justifyContent: "center",
+            justifyContent: "flex-end",
             textAlign: "center",
-            padding: "0 24px",
+            padding: "0 24px 50px",
           }}
         >
           <h1
