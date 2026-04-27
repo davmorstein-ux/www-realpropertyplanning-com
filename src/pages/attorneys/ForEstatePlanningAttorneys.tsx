@@ -140,8 +140,6 @@ const ForEstatePlanningAttorneys = () => (
       </div>
     </section>
 
-    <JamesJacksonCard />
-
     {/* CTA */}
     <section className="py-20 lg:py-28 bg-primary">
       <div className="container px-6 lg:px-8">
