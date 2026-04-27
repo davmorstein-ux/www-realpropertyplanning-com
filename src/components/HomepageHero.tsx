@@ -137,7 +137,7 @@ const HomepageHero = () => {
       <section
         style={{
           position: "relative",
-          height: "60vh",
+          height: "55vh",
           width: "100%",
           backgroundImage: "url('/hero-photo.png')",
           backgroundSize: "cover",
