@@ -448,10 +448,10 @@ const SmartSearchBar = ({ pillsOnly, searchOnly }: SmartSearchBarProps) => {
               key={prompt.label}
               type="button"
               onClick={() => handlePromptClick(prompt.label)}
-              className="homepage-cta-card group flex items-center justify-between gap-4 w-full text-left bg-navy text-primary-foreground border-l-4 border-[#1a5fa8] rounded-md px-6 py-5 min-h-[72px] font-semibold text-[18px] leading-snug shadow-[0_4px_12px_rgba(15,30,55,0.25)] hover:bg-[#1a5fa8] hover:shadow-[0_8px_20px_rgba(15,30,55,0.35)] hover:-translate-y-[1px] active:translate-y-0 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+              className="homepage-cta-card group flex items-center justify-between gap-4 w-full text-left bg-white text-navy border-2 border-navy rounded-xl px-6 py-5 min-h-[72px] font-bold text-[19px] leading-snug shadow-[0_4px_12px_rgba(15,30,55,0.18)] hover:bg-navy hover:text-white hover:border-[#1a5fa8] hover:shadow-[0_10px_24px_rgba(15,30,55,0.35)] hover:-translate-y-[2px] active:translate-y-0 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
             >
               <span className="flex-1">{prompt.label}</span>
-              <span aria-hidden className="text-[22px] leading-none shrink-0 opacity-80 group-hover:opacity-100 group-hover:translate-x-1 transition-transform duration-200">→</span>
+              <span aria-hidden className="text-[32px] leading-none font-black shrink-0 text-[#1a5fa8] group-hover:text-gold group-hover:translate-x-2 transition-all duration-200">→</span>
             </button>
           ))}
         </div>
