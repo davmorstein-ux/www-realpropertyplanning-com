@@ -448,13 +448,10 @@ const SmartSearchBar = ({ pillsOnly, searchOnly }: SmartSearchBarProps) => {
               key={prompt.label}
               type="button"
               onClick={() => handlePromptClick(prompt.label)}
-              className="homepage-cta-card group flex items-center justify-between gap-5 w-full text-left text-white rounded-xl px-7 py-6 min-h-[88px] font-bold text-[18px] sm:text-[19px] leading-snug border border-[rgba(255,255,255,0.12)] shadow-[0_8px_20px_rgba(15,30,55,0.28),0_2px_4px_rgba(15,30,55,0.18),inset_0_1px_0_rgba(255,255,255,0.18)] hover:shadow-[0_3px_8px_rgba(15,30,55,0.30),inset_0_1px_0_rgba(255,255,255,0.22)] hover:translate-y-[2px] active:translate-y-[3px] active:shadow-[0_1px_3px_rgba(15,30,55,0.30)] transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
-              style={{
-                background: "linear-gradient(180deg, #2a4170 0%, #1B2B4B 55%, #14213d 100%)",
-              }}
+              className="homepage-cta-card group flex items-center justify-between gap-5 w-full text-left bg-white text-navy hover:bg-navy hover:text-white rounded-xl px-7 py-6 min-h-[88px] font-bold text-[18px] sm:text-[19px] leading-snug border-[3px] border-navy shadow-[0_8px_20px_rgba(15,30,55,0.28),0_2px_4px_rgba(15,30,55,0.18)] hover:shadow-[0_3px_8px_rgba(15,30,55,0.30)] hover:translate-y-[2px] active:translate-y-[3px] active:shadow-[0_1px_3px_rgba(15,30,55,0.30)] transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
             >
-              <span className="flex-1 drop-shadow-[0_1px_1px_rgba(0,0,0,0.35)]">{prompt.label}</span>
-              <span aria-hidden className="text-[34px] leading-none font-black shrink-0 text-gold drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)] group-hover:translate-x-2 transition-transform duration-200">→</span>
+              <span className="flex-1">{prompt.label}</span>
+              <span aria-hidden className="text-[34px] leading-none font-black shrink-0 text-navy group-hover:text-white group-hover:translate-x-2 transition-all duration-200">→</span>
             </button>
           ))}
         </div>
