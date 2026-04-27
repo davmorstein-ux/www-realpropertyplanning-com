@@ -67,7 +67,7 @@ const WhoIsThisFor = () => {
               <Button
                 variant="navy3d"
                 size="lg"
-                className="px-8 py-4 h-auto rounded-lg text-base md:text-lg !text-white [&_*]:!text-white"
+                className="px-8 py-4 h-auto rounded-lg text-base md:text-lg !text-white [&_*]:!text-white [&>span:first-child]:hidden"
                 style={{ color: "#ffffff" }}
               >
                 <span className="!text-white" style={{ color: "#ffffff" }}>Explore Network</span>
