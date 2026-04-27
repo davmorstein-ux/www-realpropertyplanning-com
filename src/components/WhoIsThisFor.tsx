@@ -77,8 +77,8 @@ const WhoIsThisFor = () => {
               className="explore-btn mt-auto inline-flex items-center justify-center gap-2 rounded-lg px-6 py-2.5 min-h-[40px] font-extrabold tracking-[0.02em] text-base md:text-lg no-underline"
               style={{ backgroundColor: "#2c5282", color: "#ffffff", textShadow: "0 1px 2px rgba(0,0,0,0.45)" }}
             >
-              <span className="explore-label" style={{ color: "#ffffff", WebkitTextFillColor: "#ffffff" }}>Explore Network</span>
-              <span aria-hidden="true" style={{ color: "#ffffff", WebkitTextFillColor: "#ffffff" }}>›</span>
+              <span className="explore-label font-bold" style={{ color: "#ffffff", WebkitTextFillColor: "#ffffff", fontWeight: 700 }}>Explore Network</span>
+              <span aria-hidden="true" className="font-bold" style={{ color: "#ffffff", WebkitTextFillColor: "#ffffff", fontWeight: 700 }}>›</span>
             </Link>
           </div>
         </div>
