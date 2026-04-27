@@ -150,7 +150,7 @@ const HomepageHero = () => {
             position: "absolute",
             inset: 0,
             background:
-              "linear-gradient(180deg, rgba(8,13,25,0.35) 0%, rgba(8,13,25,0.45) 55%, rgba(8,13,25,0.78) 100%)",
+              "linear-gradient(180deg, rgba(8,13,25,0.15) 0%, rgba(8,13,25,0.22) 55%, rgba(8,13,25,0.55) 100%)",
           }}
         />
         <div
@@ -240,9 +240,9 @@ const HomepageHero = () => {
               <div
                 aria-hidden
                 style={{
-                  fontSize: 48,
+                  fontSize: 32,
                   lineHeight: 1,
-                  marginBottom: 12,
+                  marginBottom: 6,
                   background: "transparent",
                   filter: "drop-shadow(0 4px 6px rgba(0,0,0,0.35))",
                 }}
