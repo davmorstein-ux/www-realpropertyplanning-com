@@ -14,7 +14,7 @@ const NAV = [
   { label: "Downsizing", href: "/sell-house-fund-senior-living" },
   { label: "Property Valuation", href: "/why-valuation-matters" },
   { label: "Resources", href: "/resources" },
-  { label: "About David", href: "/about" },
+  { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -137,7 +137,7 @@ const HomepageHero = () => {
       <section
         style={{
           position: "relative",
-          height: "100vh",
+          height: "60vh",
           width: "100%",
           backgroundImage: "url('/hero-photo.png')",
           backgroundSize: "cover",
@@ -176,7 +176,7 @@ const HomepageHero = () => {
               marginBottom: 16,
             }}
           >
-            Washington State's Trusted Choice
+            Guiding Families Through Every Transition
           </p>
           <h1
             style={{
@@ -192,7 +192,7 @@ const HomepageHero = () => {
               textShadow: "0 4px 24px rgba(0,0,0,0.45)",
             }}
           >
-            Probate &amp; Estate Real Estate
+            Probate · Senior Transitions · Estate Sales
           </h1>
           <div style={{ display: "flex", gap: 14, marginTop: 36, flexWrap: "wrap", justifyContent: "center" }}>
             <Link
