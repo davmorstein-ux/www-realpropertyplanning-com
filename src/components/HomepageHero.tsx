@@ -221,14 +221,14 @@ const HomepageHero = () => {
       </section>
 
       {/* ===== Trust Bar ===== */}
-      <section style={{ background: "#1a5fa8", padding: "40px 24px" }}>
+      <section style={{ background: "#1a5fa8", padding: "20px 24px" }}>
         <div
           style={{
             maxWidth: 1280,
             margin: "0 auto",
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-            gap: 28,
+            gap: 20,
           }}
         >
           {[
