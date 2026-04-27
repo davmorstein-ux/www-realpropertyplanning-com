@@ -183,7 +183,7 @@ const HomepageHero = () => {
               ...fontHead,
               color: "#fff",
               fontWeight: 800,
-              fontSize: "clamp(2.6rem, 7vw, 6rem)",
+              fontSize: "clamp(4.5rem, 9vw, 8rem)",
               lineHeight: 1.02,
               textTransform: "uppercase",
               letterSpacing: "0.01em",
