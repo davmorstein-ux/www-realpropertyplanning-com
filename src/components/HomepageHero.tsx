@@ -118,8 +118,8 @@ const HomepageHero = () => {
                   ...fontBody,
                   color: "rgba(255,255,255,0.92)",
                   textDecoration: "none",
-                  fontSize: 12,
-                  fontWeight: 600,
+                  fontSize: 15,
+                  fontWeight: 800,
                   letterSpacing: "0.08em",
                   textTransform: "uppercase",
                   paddingBottom: 4,
@@ -150,7 +150,7 @@ const HomepageHero = () => {
             position: "absolute",
             inset: 0,
             background:
-              "linear-gradient(180deg, rgba(8,13,25,0.15) 0%, rgba(8,13,25,0.22) 55%, rgba(8,13,25,0.55) 100%)",
+              "linear-gradient(180deg, rgba(8,13,25,0.85) 0%, rgba(8,13,25,0.55) 22%, rgba(8,13,25,0.18) 50%, rgba(8,13,25,0.20) 75%, rgba(8,13,25,0.55) 100%)",
           }}
         />
         <div
