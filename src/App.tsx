@@ -109,6 +109,7 @@ const PowerOfAttorney = lazy(() => import("./pages/PowerOfAttorney"));
 const GrayDivorce = lazy(() => import("./pages/GrayDivorce"));
 const Wills = lazy(() => import("./pages/Wills"));
 const EstateLiquidation = lazy(() => import("./pages/EstateLiquidation"));
+const EstateLiquidationLearnMore = lazy(() => import("./pages/EstateLiquidationLearnMore"));
 const Realtor = lazy(() => import("./pages/Realtor"));
 const RealEstateAppraiser = lazy(() => import("./pages/RealEstateAppraiser"));
 const Professionals = lazy(() => import("./pages/Professionals"));
