@@ -298,20 +298,20 @@ const HomepageHero = () => {
       </section>
 
       {/* ===== Trust Bar ===== */}
-      <section style={{ background: "#1a5fa8", padding: "20px 24px" }}>
+      <section style={{ background: "#1a5fa8", padding: isMobile ? "24px 20px" : "20px 24px" }}>
         <div
           style={{
             maxWidth: 1280,
             margin: "0 auto",
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-            gap: 20,
+            gridTemplateColumns: isMobile ? "1fr" : "repeat(auto-fit, minmax(260px, 1fr))",
+            gap: isMobile ? 24 : 20,
           }}
         >
           {[
             { emoji: "🌐", title: "TRUSTED PROFESSIONAL NETWORK", text: "Connecting families with trusted local professionals" },
             { emoji: "🤝", title: "FAMILY & SENIOR FOCUSED", text: "Connecting families with the right professionals at the right time" },
-            { emoji: "📍", title: "SERVING WASHINGTON STATE", text: "Resources and professionals across Western Washington & Puget Sound" },
+            { emoji: "📍", title: "SERVING WASHINGTON STATE", text: "Resources and professionals across all of Washington State" },
           ].map(({ emoji, title, text }) => (
             <div key={title} style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", color: "#fff", padding: "0 8px" }}>
               <div
