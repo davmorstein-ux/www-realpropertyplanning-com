@@ -10,11 +10,11 @@ import iconAttorneys from "@/assets/icons/probate-attorney-services-icon-washing
 import CTASection from "@/components/CTASection";
 import PageFAQ from "@/components/PageFAQ";
 import tileFamilyLaw from "@/assets/Family_Law_Attorneys_webP_new.webp";
-import tileProbate from "@/assets/Probate_Attorneys_webP_new_2.webp";
+import tileProbate from "@/assets/Probate_Attorneys_webP_new.webp";
 import tileRealEstate from "@/assets/Real_Estate_Attorney_webP_new.webp";
 import tileDivorce from "@/assets/Divorce_Attorney_webP_new.webp";
 import tileElderLaw from "@/assets/Elder_Law_Attorney_webP_new.webp";
-import tileEstatePlanning from "@/assets/Estate_Planning_Attorney_webP_new_2.webp";
+import tileEstatePlanning from "@/assets/Estate_Planning_Attorney_webP_new.webp";
 
 const attorneyTiles = [
   { src: tileFamilyLaw, alt: "Family Law Attorneys" },
@@ -82,16 +82,13 @@ const ForAttorneys = () => (
               Areas of Collaboration
             </h2>
           </div>
-          <div className="mx-auto w-full max-w-[1200px] grid grid-cols-2 sm:grid-cols-3 gap-6">
+          <div className="mx-auto grid w-full max-w-[1200px] grid-cols-2 items-start gap-0 sm:grid-cols-3 attorney-tiles-grid">
             {attorneyTiles.map((tile) => (
               <a
                 key={tile.alt}
                 href="https://realpropertyplanning.com/for-attorneys"
                 aria-label={tile.alt}
-                className="block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                style={{ transition: "transform 0.3s ease" }}
-                onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
-                onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
+                className="tile-hover block w-full overflow-hidden rounded-[8px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
               >
                 <img
                   src={tile.src}
