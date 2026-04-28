@@ -216,11 +216,11 @@ const HomepageHero = () => {
       <section
         style={{
           position: "relative",
-          height: "55vh",
+          height: isMobile ? "50vh" : "55vh",
           width: "100%",
           backgroundImage: "url('/hero-photo.png')",
           backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundPosition: isMobile ? "center 30%" : "center",
         }}
       >
         <div
