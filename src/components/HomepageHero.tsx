@@ -74,31 +74,31 @@ const HomepageHero = () => {
           transition: "all 0.45s ease",
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16 }}>
-          <Link to="/" style={{ display: "flex", alignItems: "center" }}>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: isMobile ? 8 : 16 }}>
+          <Link to="/" style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
             <img
               src="/rpp-logo.webp"
               alt="Real Property Planning"
-              style={{ height: 88, width: "auto", maxWidth: "none", display: "block", objectFit: "contain" }}
+              style={{ height: isMobile ? 56 : 88, width: "auto", maxWidth: "none", display: "block", objectFit: "contain" }}
             />
           </Link>
-          <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: isMobile ? 6 : 12 }}>
             <Link
               to="/contact"
               style={{
                 ...fontBody,
                 color: "#fff",
                 border: "1px solid rgba(255,255,255,0.85)",
-                padding: "10px 18px",
+                padding: isMobile ? "6px 8px" : "10px 18px",
                 borderRadius: 6,
                 fontWeight: 700,
-                fontSize: 13,
+                fontSize: isMobile ? 10 : 13,
                 letterSpacing: "0.06em",
                 textDecoration: "none",
                 whiteSpace: "nowrap",
               }}
             >
-              SCHEDULE A CONSULTATION
+              {isMobile ? "CONSULT" : "SCHEDULE A CONSULTATION"}
             </Link>
             <a
               href="tel:2069003015"
@@ -106,44 +106,108 @@ const HomepageHero = () => {
                 ...fontBody,
                 color: "#fff",
                 background: "#1a5fa8",
-                padding: "10px 18px",
+                padding: isMobile ? "6px 8px" : "10px 18px",
                 borderRadius: 6,
                 fontWeight: 700,
-                fontSize: 13,
+                fontSize: isMobile ? 10 : 13,
                 letterSpacing: "0.06em",
                 textDecoration: "none",
                 whiteSpace: "nowrap",
               }}
             >
-              CALL (206) 900-3015
+              {isMobile ? "CALL" : "CALL (206) 900-3015"}
             </a>
+            {isMobile && (
+              <button
+                aria-label="Open menu"
+                onClick={() => setMenuOpen((v) => !v)}
+                style={{
+                  background: "transparent",
+                  border: "1px solid rgba(255,255,255,0.6)",
+                  borderRadius: 6,
+                  padding: 8,
+                  cursor: "pointer",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                  width: 36,
+                  height: 32,
+                }}
+              >
+                <span style={{ display: "block", height: 2, background: "#fff", borderRadius: 1 }} />
+                <span style={{ display: "block", height: 2, background: "#fff", borderRadius: 1 }} />
+                <span style={{ display: "block", height: 2, background: "#fff", borderRadius: 1 }} />
+              </button>
+            )}
           </div>
         </div>
 
-        <nav style={{ marginTop: 10, display: "flex", flexWrap: "wrap", gap: 22 }}>
-          {NAV.map((item) => {
-            const active = pathname === item.href;
-            return (
-              <Link
-                key={item.href}
-                to={item.href}
-                style={{
-                  ...fontBody,
-                  color: "rgba(255,255,255,0.92)",
-                  textDecoration: "none",
-                  fontSize: 15,
-                  fontWeight: 800,
-                  letterSpacing: "0.08em",
-                  textTransform: "uppercase",
-                  paddingBottom: 4,
-                  borderBottom: active ? "1px solid #fff" : "1px solid transparent",
-                }}
-              >
-                {item.label}
-              </Link>
-            );
-          })}
-        </nav>
+        {!isMobile && (
+          <nav style={{ marginTop: 10, display: "flex", flexWrap: "wrap", gap: 22 }}>
+            {NAV.map((item) => {
+              const active = pathname === item.href;
+              return (
+                <Link
+                  key={item.href}
+                  to={item.href}
+                  style={{
+                    ...fontBody,
+                    color: "rgba(255,255,255,0.92)",
+                    textDecoration: "none",
+                    fontSize: 15,
+                    fontWeight: 800,
+                    letterSpacing: "0.08em",
+                    textTransform: "uppercase",
+                    paddingBottom: 4,
+                    borderBottom: active ? "1px solid #fff" : "1px solid transparent",
+                  }}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
+          </nav>
+        )}
+
+        {isMobile && menuOpen && (
+          <nav
+            style={{
+              marginTop: 12,
+              display: "flex",
+              flexDirection: "column",
+              gap: 4,
+              background: "rgba(8,13,25,0.95)",
+              borderRadius: 10,
+              padding: 12,
+              border: "1px solid rgba(255,255,255,0.1)",
+            }}
+          >
+            {NAV.map((item) => {
+              const active = pathname === item.href;
+              return (
+                <Link
+                  key={item.href}
+                  to={item.href}
+                  onClick={() => setMenuOpen(false)}
+                  style={{
+                    ...fontBody,
+                    color: "rgba(255,255,255,0.95)",
+                    textDecoration: "none",
+                    fontSize: 15,
+                    fontWeight: 700,
+                    letterSpacing: "0.06em",
+                    textTransform: "uppercase",
+                    padding: "12px 10px",
+                    borderRadius: 6,
+                    background: active ? "rgba(255,255,255,0.08)" : "transparent",
+                  }}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
+          </nav>
+        )}
       </header>
 
       {/* ===== Hero ===== */}
