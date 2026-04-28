@@ -20,6 +20,14 @@ import imgPowerOfAttorney from "@/assets/roles/power-of-attorney-tile-washington
 import imgProbateTerms from "@/assets/roles/probate-terms-tile-washington.webp";
 import imgTheProcess from "@/assets/roles/the-probate-process-tile-washington.webp";
 
+import imgProbateSales from "@/assets/planning/probate-sales-tile-washington.webp";
+import imgSeniorPlacement from "@/assets/planning/senior-placement-tile-washington.webp";
+import imgHomeValues from "@/assets/planning/home-values-pricing-tile-washington.webp";
+import imgSeniorHomeSales from "@/assets/planning/senior-home-sales-tile-washington.webp";
+import imgPayingSeniorLiving from "@/assets/planning/paying-for-senior-living-tile-washington.webp";
+import imgServiceAreas from "@/assets/planning/service-areas-tile-washington.webp";
+import imgGuidesResources from "@/assets/planning/guides-resources-tile-washington.webp";
+
 const professionalImageTiles: ProfessionalImageTileData[] = [
   { alt: "Probate and estate attorneys real estate support Washington State", href: "/for-attorneys", src: imgAttorneys },
   { alt: "CPA estate and probate real estate guidance Washington State", href: "/for-cpas", src: imgCpas },
@@ -39,6 +47,16 @@ const rolesImageTiles: ProfessionalImageTileData[] = [
   { alt: "Power of Attorney roles and responsibilities Washington State", href: "/power-of-attorney", src: imgPowerOfAttorney },
   { alt: "Probate terms and terminology glossary Washington State", href: "/terminology", src: imgProbateTerms },
   { alt: "The probate process steps overview Washington State", href: "/how-the-process-works", src: imgTheProcess },
+];
+
+const planningImageTiles: ProfessionalImageTileData[] = [
+  { alt: "Probate sales estate inventory Washington State", href: "/probate-estate-sales", src: imgProbateSales },
+  { alt: "Senior placement advisor housing transition Washington State", href: "/senior-placement", src: imgSeniorPlacement },
+  { alt: "Home values and pricing estate property Washington State", href: "/why-valuation-matters", src: imgHomeValues },
+  { alt: "Senior home sales transition Washington State", href: "/senior-transitions", src: imgSeniorHomeSales },
+  { alt: "Paying for senior living costs guidance Washington State", href: "/sell-house-fund-senior-living", src: imgPayingSeniorLiving },
+  { alt: "Service areas Washington State counties coverage", href: "/counties", src: imgServiceAreas },
+  { alt: "Guides and resources estate planning Washington State", href: "/guides-and-resources", src: imgGuidesResources },
 ];
 
 const ServiceNavTiles = () => {
