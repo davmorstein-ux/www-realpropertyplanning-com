@@ -215,6 +215,8 @@ const HomepageHero = () => {
                         cursor: "pointer",
                         display: "inline-flex",
                         alignItems: "center",
+                        alignSelf: "center",
+                        verticalAlign: "middle",
                         gap: 6,
                         padding: 0,
                         paddingBottom: 4,
