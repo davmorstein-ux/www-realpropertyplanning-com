@@ -20,12 +20,14 @@ const NAV = [
 
 const HomepageHero = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(() =>
+    typeof window !== "undefined" ? window.innerWidth < 769 : false
+  );
   const [menuOpen, setMenuOpen] = useState(false);
   const { pathname } = useLocation();
 
   useEffect(() => {
-    const check = () => setIsMobile(window.innerWidth < 768);
+    const check = () => setIsMobile(window.innerWidth < 769);
     check();
     window.addEventListener("resize", check);
     return () => window.removeEventListener("resize", check);
