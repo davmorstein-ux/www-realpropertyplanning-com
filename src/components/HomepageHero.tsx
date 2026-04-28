@@ -319,19 +319,19 @@ const HomepageHero = () => {
               <div
                 aria-hidden
                 style={{
-                  fontSize: isMobile ? 20 : 32,
+                  fontSize: isMobile ? 28 : 32,
                   lineHeight: 1,
-                  marginBottom: isMobile ? 2 : 6,
+                  marginBottom: isMobile ? 4 : 6,
                   background: "transparent",
                   filter: "drop-shadow(0 4px 6px rgba(0,0,0,0.35))",
                 }}
               >
                 {emoji}
               </div>
-              <div style={{ ...fontBody, fontWeight: 700, fontSize: isMobile ? 11 : 15, letterSpacing: "0.08em", marginBottom: isMobile ? 2 : 6 }}>
+              <div style={{ ...fontBody, fontWeight: 700, fontSize: isMobile ? 14 : 15, letterSpacing: "0.08em", marginBottom: isMobile ? 4 : 6 }}>
                 {title}
               </div>
-              <div style={{ ...fontBody, fontSize: isMobile ? 10 : 16, color: "rgba(255,255,255,0.95)", lineHeight: isMobile ? 1.3 : 1.5 }}>
+              <div style={{ ...fontBody, fontSize: isMobile ? 13 : 16, color: "rgba(255,255,255,0.95)", lineHeight: isMobile ? 1.4 : 1.5 }}>
                 {text}
               </div>
             </div>
