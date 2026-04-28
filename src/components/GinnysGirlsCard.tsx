@@ -27,8 +27,7 @@ const GinnysGirlsCard = () => (
                   className="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover border-2 border-border shadow-sm"
                   loading="lazy"
                 />
-                <p className="text-foreground font-semibold text-xs mt-1.5 text-center">Meriann Roberts</p>
-                <p className="text-muted-foreground text-[11px] text-center">Owner</p>
+                <p className="text-foreground font-semibold text-xs mt-1.5 text-center">Meriann Roberts - Owner</p>
               </div>
               <div className="flex flex-col items-center">
                 <img
@@ -37,8 +36,7 @@ const GinnysGirlsCard = () => (
                   className="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover border-2 border-border shadow-sm"
                   loading="lazy"
                 />
-                <p className="text-foreground font-semibold text-xs mt-1.5 text-center">Abigail McKee</p>
-                <p className="text-muted-foreground text-[11px] text-center">Manager</p>
+                <p className="text-foreground font-semibold text-xs mt-1.5 text-center">Abigail McKee - Manager</p>
               </div>
             </div>
             <div className="flex w-full flex-col items-center sm:flex-1 sm:items-start">
@@ -51,10 +49,9 @@ const GinnysGirlsCard = () => (
                 />
               </div>
               <div className="w-full mt-2 text-center sm:pl-[58px] sm:text-left">
-                <p className="text-foreground font-semibold text-lg">Meriann Roberts &middot; Abigail McKee</p>
-                <p className="text-muted-foreground text-sm mb-3">
-                  Owner &middot; Manager · Ginny's Girls Estate Services
-                </p>
+                <p className="text-foreground font-semibold text-lg">Meriann Roberts - Owner</p>
+                <p className="text-foreground font-semibold text-lg">Abigail McKee - Manager</p>
+                <p className="text-muted-foreground text-sm mb-3">Ginny's Girls Estate Services</p>
                 <p className="text-muted-foreground text-sm leading-relaxed mb-3">
                   Ginny's is a family owned and operated company, based in Edmonds, WA providing senior move management, estate sales, residential clear outs and personal property appraisals. We work throughout North King and Snohomish counties serving families in transition, offering:
                 </p>
