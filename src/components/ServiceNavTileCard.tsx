@@ -106,7 +106,8 @@ const ServiceNavTileCard = ({ tile, index, columns = 3 }: { tile: ServiceTile; i
         {tile.iconSrc ? (
           <img
             src={tile.iconSrc}
-            alt={iconAlt}
+            alt=""
+            aria-hidden="true"
             className={`tile-icon mx-auto w-[45%] max-h-[38%] object-contain drop-shadow-lg ${tile.mobileIconDown ? 'mobile-icon-down' : ''}`}
             style={{
               ...(needsTransparentBlend ? { mixBlendMode: "multiply" as const, background: "transparent", backgroundColor: "transparent", border: "none", boxShadow: "none" } : {}),
