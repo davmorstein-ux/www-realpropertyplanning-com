@@ -109,6 +109,7 @@ const PowerOfAttorney = lazy(() => import("./pages/PowerOfAttorney"));
 const GrayDivorce = lazy(() => import("./pages/GrayDivorce"));
 const Wills = lazy(() => import("./pages/Wills"));
 const EstateLiquidation = lazy(() => import("./pages/EstateLiquidation"));
+const EstateLiquidationLearnMore = lazy(() => import("./pages/EstateLiquidationLearnMore"));
 const Realtor = lazy(() => import("./pages/Realtor"));
 const RealEstateAppraiser = lazy(() => import("./pages/RealEstateAppraiser"));
 const Professionals = lazy(() => import("./pages/Professionals"));
@@ -153,6 +154,7 @@ const App = () => (
           <Route path="/executors" element={<Executors />} />
           <Route path="/trustees" element={<Trustees />} />
           <Route path="/estate-liquidation" element={<EstateLiquidation />} />
+          <Route path="/estate-liquidation/learn-more" element={<EstateLiquidationLearnMore />} />
           <Route path="/real-estate-appraiser" element={<RealEstateAppraiser />} />
           <Route path="/realtor" element={<Realtor />} />
           <Route path="/wills" element={<Wills />} />
