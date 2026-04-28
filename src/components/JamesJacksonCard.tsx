@@ -12,7 +12,7 @@ const JamesJacksonCard = () => (
           Featured Provider
         </p>
         <h2 className="font-serif text-3xl text-foreground font-semibold mb-8 text-center">
-          James Jackson — Estate Planning Attorney
+          James Jackson — Trust &amp; Probate Attorney
         </h2>
 
         <div className="bg-secondary border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 p-5 sm:p-6">
@@ -37,13 +37,13 @@ const JamesJacksonCard = () => (
               <div className="w-full mt-2 text-center sm:pl-[58px] sm:text-left">
                 <p className="text-foreground font-semibold text-lg">James Jackson</p>
                 <p className="text-muted-foreground text-sm mb-3">
-                  Estate Planning Attorney · Ketter Sheppard
+                  Trust Attorney · Probate Attorney · Ketter, Sheppard &amp; Jackson, LLP
                 </p>
                 <p className="text-muted-foreground text-sm leading-relaxed mb-3">
-                  James Jackson is an estate planning attorney with Ketter Sheppard in Seattle, Washington. He works with individuals, families, and business owners on estate planning, trust administration, probate, and tax planning matters — helping clients structure plans that protect what they have built and pass it on with clarity. James focuses on practical, plain-language counsel, working closely with clients and their other advisors to ensure each plan reflects the family's goals and circumstances.
+                  Ketter, Sheppard &amp; Jackson, LLP is a Seattle-based firm with roots going back to 1984, when David Ketter and Ken Sheppard founded the firm as one of the first tenants of Wells Fargo Center in downtown Seattle. The firm has built a long-standing reputation in tax, trust and estates, business law, and civil litigation.
                 </p>
                 <p className="text-muted-foreground text-sm leading-relaxed mb-3">
-                  James earned his J.D. from Seattle University School of Law and an LL.M. in Taxation from the University of Washington School of Law. He is admitted to practice in Washington and New York.
+                  Jim's practice includes trust and estate planning and administration, guardianship, related real estate matters, and civil litigation. Jim practiced in New York with Horenstein, Josepher &amp; Gewanter, P.C., and served as Senior Attorney for the New York State Division of Housing and Community Renewal. He holds a J.D. from Touro College Jacob D. Fuchsberg Law Center and an LLM in Taxation from the University of Washington School of Law, and is admitted to practice in Washington and New York.
                 </p>
                 <div className="space-y-1.5 text-sm">
                   <div className="flex items-start gap-2 justify-center sm:justify-start">
