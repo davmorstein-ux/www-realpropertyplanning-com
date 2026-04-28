@@ -17,12 +17,12 @@ import tileElderLaw from "@/assets/Elder_Law_Attorney_webP_new.webp";
 import tileEstatePlanning from "@/assets/Estate_Planning_Attorney_webP_new.webp";
 
 const attorneyTiles = [
-  { src: tileFamilyLaw, alt: "Family Law Attorneys", href: "/for-family-law-attorneys" },
-  { src: tileProbate, alt: "Probate Attorneys", href: "/for-probate-attorneys" },
-  { src: tileRealEstate, alt: "Real Estate Attorneys", href: "/for-real-estate-attorneys" },
+  { src: tileFamilyLaw, alt: "Family Law Attorneys", href: "https://realpropertyplanning.com/for-attorneys" },
+  { src: tileProbate, alt: "Probate Attorneys", href: "https://realpropertyplanning.com/for-attorneys" },
+  { src: tileRealEstate, alt: "Real Estate Attorneys", href: "https://realpropertyplanning.com/for-attorneys" },
   { src: tileDivorce, alt: "Divorce Attorneys", href: "/for-divorce-attorneys" },
-  { src: tileElderLaw, alt: "Elder Law Attorneys", href: "/for-elder-law-attorneys" },
-  { src: tileEstatePlanning, alt: "Estate Planning Attorneys", href: "/for-estate-planning-attorneys" },
+  { src: tileElderLaw, alt: "Elder Law Attorneys", href: "https://realpropertyplanning.com/for-attorneys" },
+  { src: tileEstatePlanning, alt: "Estate Planning Attorneys", href: "https://realpropertyplanning.com/for-attorneys" },
 ];
 
 const ForAttorneys = () => (
