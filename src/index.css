@@ -789,15 +789,7 @@ body {
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
 }
 
-/* Universal tile icon hover — uses CSS `scale` so it composes with any `transform` */
 @media (min-width: 640px) {
-  .premium-tile .tile-icon {
-    transition: scale 0.3s ease-out !important;
-  }
-  .premium-tile:has(.service-nav-tile-link:hover) .tile-icon,
-  .premium-tile:has(.service-nav-tile-link:focus-visible) .tile-icon {
-    scale: 1.1 !important;
-  }
   /* Realtor tile: nudge icon+text group up on desktop */
   .premium-tile[data-tile-name="realtor"] > div > span {
     transform: translateY(calc(-10.2% + 2%)) !important;
