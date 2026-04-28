@@ -27,7 +27,7 @@ const GinnysGirlsCard = () => (
                   className="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover border-2 border-border shadow-sm"
                   loading="lazy"
                 />
-                <p className="text-foreground font-semibold text-xs mt-1.5 text-center">Meriann Roberts - Owner</p>
+                <p className="text-foreground font-semibold text-xs mt-1.5 text-center">Meriann Roberts</p>
               </div>
               <div className="flex flex-col items-center">
                 <img
@@ -36,7 +36,7 @@ const GinnysGirlsCard = () => (
                   className="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover border-2 border-border shadow-sm"
                   loading="lazy"
                 />
-                <p className="text-foreground font-semibold text-xs mt-1.5 text-center">Abigail McKee - Manager</p>
+                <p className="text-foreground font-semibold text-xs mt-1.5 text-center">Abigail McKee</p>
               </div>
             </div>
             <div className="flex w-full flex-col items-center sm:flex-1 sm:items-start">
