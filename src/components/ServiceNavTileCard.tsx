@@ -106,7 +106,8 @@ const ServiceNavTileCard = ({ tile, index, columns = 3 }: { tile: ServiceTile; i
         {tile.iconSrc ? (
           <img
             src={tile.iconSrc}
-            alt={iconAlt}
+            alt=""
+            aria-hidden="true"
             className={`tile-icon mx-auto w-[45%] max-h-[38%] object-contain drop-shadow-lg ${tile.mobileIconDown ? 'mobile-icon-down' : ''}`}
             style={{
               ...(needsTransparentBlend ? { mixBlendMode: "multiply" as const, background: "transparent", backgroundColor: "transparent", border: "none", boxShadow: "none" } : {}),
@@ -145,10 +146,10 @@ const ServiceNavTileCard = ({ tile, index, columns = 3 }: { tile: ServiceTile; i
   return (
     <div
       data-tile-name={tileName}
-      className="premium-tile tile-hover relative block w-full text-center -my-[22%] -mx-[4%] scale-[1.45] sm:-my-[22%] sm:-mx-[6%] sm:scale-[1.588] pointer-events-none cursor-pointer"
+      className="premium-tile relative block w-full text-center -my-[22%] -mx-[4%] scale-[1.45] sm:-my-[22%] sm:-mx-[6%] sm:scale-[1.588] pointer-events-none cursor-pointer"
       style={{ zIndex: baseZIndex }}
     >
-      <div aria-hidden="true" className="relative block w-full h-full pointer-events-none">
+      <div aria-hidden="true" className="tile-hover relative block w-full h-full pointer-events-auto overflow-hidden">
         {tileVisual}
       </div>
 
