@@ -68,6 +68,20 @@ const GrayDivorce = () => {
           </div>
         </section>
 
+        {/* Section 2 — Washington Community Property */}
+        <section className="py-14 lg:py-20 bg-secondary">
+          <div className="container px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-6 leading-tight">
+                Washington State Is a Community Property State
+              </h2>
+              <p className="text-foreground/90 text-lg leading-[1.7]">
+                This matters enormously in a gray divorce. Washington's community property laws treat most assets and debts acquired during marriage as equally owned by both spouses — including the family home, retirement accounts, rental properties, and business interests — regardless of whose name appears on the title or who earned the income. However, Washington courts aim for a "just and equitable" division rather than an automatic 50/50 split, taking into account factors like the length of the marriage, each spouse's earning capacity, age, health, and career sacrifices made during the marriage.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <DisclaimerSection />
       </main>
       <Footer />
