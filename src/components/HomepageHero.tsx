@@ -21,6 +21,7 @@ const NAV: NavItem[] = [
     href: "/services",
     children: [
       { label: "All Services", href: "/services" },
+      { label: "Probate Sales", href: "/probate-estate-sales" },
       { label: "Senior & Estate Services", href: "/senior-estate-services" },
       { label: "Senior Placement", href: "/senior-placement" },
       { label: "For Executors", href: "/executors" },
