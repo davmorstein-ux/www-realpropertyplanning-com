@@ -1,6 +1,6 @@
 import meriannPhoto from "@/assets/meriann-roberts-ginnys-girls-owner.webp";
 import abigailPhoto from "@/assets/abigail-mckee-ginnys-girls-manager.webp";
-import ginnysGirlsLogo from "@/assets/ginnys-girls-estate-services-logo.png";
+import ginnysGirlsLogo from "@/assets/ginnys-girls-estate-services-logo-v3.webp";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconEmail3d from "@/assets/icons/real-estate-email-envelope-3d-icon-washington.webp";
 import iconMapPin3d from "@/assets/icons/real-estate-location-pin-3d-icon-washington.webp";
@@ -46,7 +46,7 @@ const GinnysGirlsCard = () => (
                 <img
                   src={ginnysGirlsLogo}
                   alt="Ginny's Girls Estate Services logo"
-                  className="h-[320px] w-auto object-contain mx-auto sm:mx-0 block"
+                  className="h-auto w-full max-w-[420px] object-contain mx-auto sm:mx-0 block rounded-md"
                   loading="lazy"
                 />
               </div>
