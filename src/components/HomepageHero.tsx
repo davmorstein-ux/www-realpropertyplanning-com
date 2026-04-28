@@ -273,6 +273,7 @@ const HomepageHero = () => {
                               key={child.href}
                               to={child.href}
                               role="menuitem"
+                              className="nav-link-hover"
                               onClick={() => setOpenDropdown(null)}
                               style={{
                                 ...fontBody,
