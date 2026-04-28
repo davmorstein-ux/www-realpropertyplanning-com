@@ -331,7 +331,7 @@ const HomepageHero = () => {
               <div className={isMobile ? "text-xl font-bold" : ""} style={{ ...fontBody, fontWeight: 700, fontSize: isMobile ? 14 : 15, letterSpacing: "0.08em", marginBottom: isMobile ? 4 : 6 }}>
                 {title}
               </div>
-              <div style={{ ...fontBody, fontSize: isMobile ? 13 : 16, color: "rgba(255,255,255,0.95)", lineHeight: isMobile ? 1.4 : 1.5 }}>
+              <div className={isMobile ? "font-sans font-bold" : ""} style={{ ...fontBody, fontSize: isMobile ? 13 : 16, color: "rgba(255,255,255,0.95)", lineHeight: isMobile ? 1.4 : 1.5 }}>
                 {text}
               </div>
             </div>
