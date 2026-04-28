@@ -44,6 +44,19 @@ const HomepageHero = () => {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const openMenu = (label: string) => {
+    if (closeTimerRef.current) {
+      clearTimeout(closeTimerRef.current);
+      closeTimerRef.current = null;
+    }
+    setOpenDropdown(label);
+  };
+  const scheduleClose = () => {
+    if (closeTimerRef.current) clearTimeout(closeTimerRef.current);
+    closeTimerRef.current = setTimeout(() => setOpenDropdown(null), 150);
+  };
   const { pathname } = useLocation();
 
   useEffect(() => {
@@ -200,8 +213,8 @@ const HomepageHero = () => {
                   <div
                     key={item.label}
                     style={{ position: "relative" }}
-                    onMouseEnter={() => setOpenDropdown(item.label)}
-                    onMouseLeave={() => setOpenDropdown(null)}
+                    onMouseEnter={() => openMenu(item.label)}
+                    onMouseLeave={scheduleClose}
                   >
                     <button
                       type="button"
@@ -241,14 +254,14 @@ const HomepageHero = () => {
                           top: "100%",
                           left: "50%",
                           transform: "translateX(-50%)",
-                          marginTop: 8,
+                          marginTop: 0,
                           minWidth: 260,
                           background: "rgba(8,13,25,0.97)",
                           backdropFilter: "blur(10px)",
                           WebkitBackdropFilter: "blur(10px)",
                           border: "1px solid rgba(255,255,255,0.12)",
                           borderRadius: 10,
-                          padding: 8,
+                          padding: "16px 8px 8px",
                           boxShadow: "0 12px 32px rgba(0,0,0,0.4)",
                           zIndex: 60,
                         }}
