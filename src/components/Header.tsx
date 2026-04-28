@@ -18,6 +18,7 @@ const primaryLinks = [
     { href: "/how-the-process-works", label: "How the Process Works" },
     { href: "/why-valuation-matters", label: "Why Valuation Matters" },
     { href: "/professional-referral-resource", label: "Professional Referral Resource" },
+    { href: "/gray-divorce", label: "Gray Divorce" },
   ]},
   { href: "/counties", label: "Counties", children: [
     { href: "/counties", label: "All Counties" },
