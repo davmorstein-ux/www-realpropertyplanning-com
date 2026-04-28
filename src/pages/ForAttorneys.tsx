@@ -82,18 +82,19 @@ const ForAttorneys = () => (
               Areas of Collaboration
             </h2>
           </div>
-          <div className="mx-auto grid w-full max-w-[1200px] grid-cols-2 items-start gap-0 sm:grid-cols-3 attorney-tiles-grid">
+          <div className="mx-auto grid w-full max-w-[1200px] grid-cols-2 items-stretch gap-0 sm:grid-cols-3 attorney-tiles-grid">
             {attorneyTiles.map((tile) => (
               <a
                 key={tile.alt}
                 href="https://realpropertyplanning.com/for-attorneys"
                 aria-label={tile.alt}
-                className="tile-hover block w-full overflow-hidden rounded-[8px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                className="tile-hover block w-full h-full overflow-hidden rounded-[8px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                style={{ aspectRatio: "1 / 1" }}
               >
                 <img
                   src={tile.src}
                   alt={tile.alt}
-                  className="block w-full h-auto select-none"
+                  className="block w-full h-full object-contain select-none"
                   draggable={false}
                   loading="lazy"
                 />
