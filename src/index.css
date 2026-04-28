@@ -1753,3 +1753,31 @@ img[src*="real-estate-website-globe-3d-icon-washington"] {
   font-weight: 700 !important;
   font-size: 19px !important;
 }
+
+/* ==================================================================
+ * Homepage nav link hover — gold color shift + left-to-right underline
+ * Applied to all top-level nav items in HomepageHero (links + Services button).
+ * ================================================================== */
+.nav-link-hover {
+  position: relative;
+  transition: color 0.2s ease;
+}
+.nav-link-hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 100%;
+  background-color: #C9A84C;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.2s ease;
+  pointer-events: none;
+}
+.nav-link-hover:hover {
+  color: #C9A84C !important;
+}
+.nav-link-hover:hover::after {
+  transform: scaleX(1);
+}
