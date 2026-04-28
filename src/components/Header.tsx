@@ -1,12 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "@/assets/real-property-planning-logo-bright-seattle.webp";
 
 /**
- * Site-wide header. Mirrors the homepage floating nav (HomepageHero) so users
+ * Site-wide header. Mirrors the homepage floating island nav (HomepageHero) so users
  * experience identical navigation across every page: same items, same dropdown
- * contents, same hover effects (gold text + underline), same dropdown behavior
- * (hover-open with 150ms close delay, no disappearing gap), same CTAs.
+ * contents, same hover effects, same dropdown behavior, same CTAs, and same
+ * visual treatment.
  */
 type NavChild = { label: string; href: string };
 type NavItem = { label: string; href: string; children?: NavChild[] };
@@ -39,6 +38,7 @@ const NAV: NavItem[] = [
 const fontBody = { fontFamily: "'DM Sans', system-ui, sans-serif" };
 
 const Header = () => {
+  const [scrolled, setScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(() =>
     typeof window !== "undefined" ? window.innerWidth < 769 : false
   );
@@ -94,6 +94,10 @@ const Header = () => {
         "https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=DM+Sans:wght@400;600;700&display=swap";
       document.head.appendChild(link);
     }
+    const onScroll = () => setScrolled(window.scrollY > 30);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
@@ -108,15 +112,18 @@ const Header = () => {
         data-nosnippet="true"
         style={{
           position: "fixed",
-          top: 0,
-          left: 0,
-          right: 0,
+          top: 16,
+          left: "50%",
+          transform: "translateX(-50%)",
+          width: "min(1280px, calc(100% - 48px))",
           zIndex: 50,
-          backgroundColor: "rgba(8, 13, 25, 0.97)",
-          backdropFilter: "blur(10px)",
-          WebkitBackdropFilter: "blur(10px)",
-          borderBottom: "1px solid rgba(255,255,255,0.08)",
+          borderRadius: 14,
           padding: "14px 24px",
+          backgroundColor: scrolled ? "rgba(8, 13, 25, 0.82)" : "rgba(8, 13, 25, 0)",
+          backdropFilter: scrolled ? "blur(10px)" : "none",
+          WebkitBackdropFilter: scrolled ? "blur(10px)" : "none",
+          border: scrolled ? "1px solid rgba(255,255,255,0.08)" : "1px solid rgba(255,255,255,0)",
+          transition: "all 0.45s ease",
           ...fontBody,
           color: "#fff",
         }}
@@ -127,14 +134,12 @@ const Header = () => {
             alignItems: "center",
             justifyContent: "space-between",
             gap: isMobile ? 8 : 16,
-            maxWidth: 1280,
-            margin: "0 auto",
           }}
         >
           <Link to="/" style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
             <img
-              src={logo}
-              alt="Real Property Planning — probate and estate real estate guidance in Washington State"
+              src="/rpp-logo.webp"
+              alt="Real Property Planning"
               style={{ height: isMobile ? 56 : 88, width: "auto", maxWidth: "none", display: "block", objectFit: "contain" }}
               loading="lazy"
             />
@@ -210,9 +215,6 @@ const Header = () => {
               justifyContent: "space-between",
               alignItems: "center",
               width: "100%",
-              maxWidth: 1280,
-              marginLeft: "auto",
-              marginRight: "auto",
               gap: 12,
             }}
           >
