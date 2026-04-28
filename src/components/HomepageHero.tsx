@@ -177,7 +177,7 @@ const HomepageHero = () => {
         </div>
 
         {!isMobile && (
-          <nav ref={dropdownRef} style={{ marginTop: 10, display: "flex", flexWrap: "wrap", gap: 22, alignItems: "center" }}>
+          <nav ref={dropdownRef} style={{ marginTop: 10, display: "flex", flexWrap: "nowrap", justifyContent: "space-between", alignItems: "center", width: "100%", gap: 12 }}>
             {NAV.map((item) => {
               const active =
                 pathname === item.href ||
@@ -217,6 +217,10 @@ const HomepageHero = () => {
                         gap: 6,
                         padding: 0,
                         paddingBottom: 4,
+                        lineHeight: "inherit",
+                        margin: 0,
+                        appearance: "none",
+                        WebkitAppearance: "none",
                       }}
                       aria-haspopup="true"
                       aria-expanded={isOpen}
