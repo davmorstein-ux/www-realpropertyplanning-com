@@ -17,6 +17,7 @@ import iconCall3d from "@/assets/icons/real-estate-phone-handset-3d-icon-washing
 import iconMail3d from "@/assets/icons/real-estate-email-envelope-3d-icon-washington.webp";
 import iconGlobe3d from "@/assets/icons/real-estate-website-globe-3d-icon-washington.webp";
 import { Icon3DFamily, Icon3DHome, Icon3DHeart } from "@/components/icons/Icon3D";
+import GinnysGirlsCard from "@/components/GinnysGirlsCard";
 
 const realEstateSideItems = [
   {
