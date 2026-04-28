@@ -10,11 +10,11 @@ import iconAttorneys from "@/assets/icons/probate-attorney-services-icon-washing
 import CTASection from "@/components/CTASection";
 import PageFAQ from "@/components/PageFAQ";
 import tileFamilyLaw from "@/assets/Family_Law_Attorneys_webP_new.webp";
-import tileProbate from "@/assets/Probate_Attorneys_webP_new.webp";
+import tileProbate from "@/assets/Probate_Attorneys_webP_new_2.webp";
 import tileRealEstate from "@/assets/Real_Estate_Attorney_webP_new.webp";
 import tileDivorce from "@/assets/Divorce_Attorney_webP_new.webp";
 import tileElderLaw from "@/assets/Elder_Law_Attorney_webP_new.webp";
-import tileEstatePlanning from "@/assets/Estate_Planning_Attorney_webP_new.webp";
+import tileEstatePlanning from "@/assets/Estate_Planning_Attorney_webP_new_2.webp";
 
 const attorneyTiles = [
   { src: tileFamilyLaw, alt: "Family Law Attorneys" },
