@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 /**
@@ -7,13 +7,28 @@ import { Link, useLocation } from "react-router-dom";
  * <Header /> is intentionally still rendered above it; this floating header sits on
  * top of the hero photo as a homepage-only visual treatment.
  */
-const NAV = [
+type NavChild = { label: string; href: string };
+type NavItem = { label: string; href: string; children?: NavChild[] };
+
+const NAV: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "Probate & Estate", href: "/probate-estate-sales" },
   { label: "Senior Transitions", href: "/senior-transitions" },
   { label: "Downsizing", href: "/sell-house-fund-senior-living" },
   { label: "Property Valuation", href: "/why-valuation-matters" },
-  { label: "Gray Divorce", href: "/gray-divorce" },
+  {
+    label: "Services",
+    href: "/services",
+    children: [
+      { label: "All Services", href: "/services" },
+      { label: "Senior & Estate Services", href: "/senior-estate-services" },
+      { label: "Senior Placement", href: "/senior-placement" },
+      { label: "For Executors", href: "/executors" },
+      { label: "How the Process Works", href: "/how-the-process-works" },
+      { label: "Professional Referral Resource", href: "/professional-referral-resource" },
+      { label: "Gray Divorce", href: "/gray-divorce" },
+    ],
+  },
   { label: "Resources", href: "/resources" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
