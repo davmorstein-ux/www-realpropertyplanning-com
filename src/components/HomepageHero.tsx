@@ -206,6 +206,7 @@ const HomepageHero = () => {
                     <button
                       type="button"
                       data-nav-button=""
+                      className="nav-link-hover"
                       onClick={() => setOpenDropdown(isOpen ? null : item.label)}
                       style={{
                         ...linkStyle,
@@ -286,7 +287,7 @@ const HomepageHero = () => {
               }
 
               return (
-                <Link key={item.href} to={item.href} style={linkStyle}>
+                <Link key={item.href} to={item.href} className="nav-link-hover" style={linkStyle}>
                   {item.label}
                 </Link>
               );
