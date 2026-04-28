@@ -82,21 +82,25 @@ const ForAttorneys = () => (
               Areas of Collaboration
             </h2>
           </div>
-          <div className="mx-auto grid w-full max-w-[1200px] grid-cols-2 items-stretch gap-0 sm:grid-cols-3 attorney-tiles-grid">
+          <div
+            className="mx-auto w-full max-w-[1200px] attorney-tiles-grid grid grid-cols-2 sm:grid-cols-3 gap-0"
+            style={{ gridTemplateColumns: "repeat(var(--cols, 3), 1fr)", gridAutoRows: "1fr", alignItems: "stretch" }}
+          >
             {attorneyTiles.map((tile) => (
               <a
                 key={tile.alt}
                 href="https://realpropertyplanning.com/for-attorneys"
                 aria-label={tile.alt}
-                className="tile-hover block w-full h-full overflow-hidden rounded-[8px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                style={{ aspectRatio: "1 / 1" }}
+                className="tile-hover overflow-hidden rounded-[8px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                style={{ display: "block", width: "100%", height: "100%" }}
               >
                 <img
                   src={tile.src}
                   alt={tile.alt}
-                  className="block w-full h-full object-contain select-none"
+                  className="select-none"
                   draggable={false}
                   loading="lazy"
+                  style={{ width: "100%", height: "100%", objectFit: "contain" }}
                 />
               </a>
             ))}
