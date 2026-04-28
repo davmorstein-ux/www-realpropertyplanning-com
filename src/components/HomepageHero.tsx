@@ -307,7 +307,7 @@ const HomepageHero = () => {
             margin: "0 auto",
             display: "grid",
             gridTemplateColumns: isMobile ? "1fr" : "repeat(auto-fit, minmax(260px, 1fr))",
-            gap: isMobile ? 8 : 20,
+            gap: isMobile ? 14 : 20,
           }}
         >
           {[
