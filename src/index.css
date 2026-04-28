@@ -1621,9 +1621,9 @@ h3 {
   font-size: 24px !important;
 }
 
-button,
+button:not([data-nav-button]),
 .btn,
-[role="button"] {
+[role="button"]:not([data-nav-button]) {
   font-size: 18px !important;
 }
 
