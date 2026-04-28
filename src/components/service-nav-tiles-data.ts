@@ -20,6 +20,7 @@ import iconAppraiser from "@/assets/icons/real-estate-appraiser-icon-washington.
 import iconSeniorPlacement from "@/assets/icons/senior-placement-advisor-icon-washington.webp";
 import iconFundSeniorLiving from "@/assets/icons/senior-home-sales-for-sale-icon-washington.webp";
 import iconPayingForSeniorLiving from "@/assets/icons/paying-for-senior-living-icon-washington.webp";
+import iconGrayDivorce from "@/assets/gray-divorce-washington.webp";
 
 export interface ServiceTile {
   title: string;
@@ -81,8 +82,8 @@ export const tileCategories: TileCategory[] = [
       { title: "Senior\nHome Sales", subtitle: "", href: "/senior-transitions", iconSrc: iconFundSeniorLiving, labelSpacing: "tight", iconOffsetY: "4%", iconScale: 1.05, mobileContentOffsetY: "3%", mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "-10%", mobileSmallText: true, mobileTextOffsetY: "0.6rem" },
       { title: "Paying for\nSenior Living", subtitle: "", href: "/sell-house-fund-senior-living", iconSrc: iconPayingForSeniorLiving, labelSpacing: "tight", iconOffsetY: "-4%", iconScale: 0.7, mobileTextDown: true, mobileIconDown: true, mobileIconOffsetY: "-22%", mobileContentOffsetY: "11%", mobileSmallText: true },
       { title: "Service Areas", subtitle: "", href: "/counties", iconSrc: iconServiceAreas, iconOffsetY: "4%", iconScale: 1.1, mobileTextDown: true, mobileIconDown: true, mobileSmallText: true, mobileIconOffsetY: "-15%", mobileTextOffsetY: "-15%" },
-      { title: "Gray Divorce", subtitle: "", href: "/gray-divorce", iconSrc: iconResources, mobileTextDown: true, mobileIconDown: true, mobileSmallText: true },
       { title: "Guides &\nResources", subtitle: "", href: "/guides-and-resources", iconSrc: iconResources, labelSpacing: "tight", iconOffsetY: "12%", mobileTextDown: true, mobileIconDown: true, mobileSmallText: true },
+      { title: "Gray Divorce", subtitle: "", href: "/gray-divorce", iconSrc: iconGrayDivorce, mobileTextDown: true, mobileIconDown: true, mobileSmallText: true },
     ],
   },
 ];
