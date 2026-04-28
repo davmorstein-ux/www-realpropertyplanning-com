@@ -17,12 +17,12 @@ import tileElderLaw from "@/assets/Elder_Law_Attorney_webP_new.webp";
 import tileEstatePlanning from "@/assets/Estate_Planning_Attorney_webP_new.webp";
 
 const attorneyTiles = [
-  { src: tileFamilyLaw, alt: "Family Law Attorneys" },
-  { src: tileProbate, alt: "Probate Attorneys" },
-  { src: tileRealEstate, alt: "Real Estate Attorneys" },
-  { src: tileDivorce, alt: "Divorce Attorneys" },
-  { src: tileElderLaw, alt: "Elder Law Attorneys" },
-  { src: tileEstatePlanning, alt: "Estate Planning Attorneys" },
+  { src: tileFamilyLaw, alt: "Family Law Attorneys", href: "https://realpropertyplanning.com/for-attorneys" },
+  { src: tileProbate, alt: "Probate Attorneys", href: "https://realpropertyplanning.com/for-attorneys" },
+  { src: tileRealEstate, alt: "Real Estate Attorneys", href: "https://realpropertyplanning.com/for-attorneys" },
+  { src: tileDivorce, alt: "Divorce Attorneys", href: "/for-divorce-attorneys" },
+  { src: tileElderLaw, alt: "Elder Law Attorneys", href: "https://realpropertyplanning.com/for-attorneys" },
+  { src: tileEstatePlanning, alt: "Estate Planning Attorneys", href: "https://realpropertyplanning.com/for-attorneys" },
 ];
 
 const ForAttorneys = () => (
@@ -86,7 +86,7 @@ const ForAttorneys = () => (
             {attorneyTiles.map((tile) => (
               <a
                 key={tile.alt}
-                href="https://realpropertyplanning.com/for-attorneys"
+                href={tile.href}
                 aria-label={tile.alt}
                 className="tile-hover block w-full overflow-hidden rounded-[8px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
               >
