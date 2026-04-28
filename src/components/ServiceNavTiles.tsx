@@ -3,8 +3,8 @@ import ServiceNavTileCard from "./ServiceNavTileCard";
 import ProfessionalImageTile, { type ProfessionalImageTileData } from "./ProfessionalImageTile";
 import { tileCategories } from "./service-nav-tiles-data";
 
-import imgAttorneys from "@/assets/professionals/attorneys-tile-washington.webp";
-import imgCpas from "@/assets/professionals/cpas-tile-washington-v2.webp";
+import imgAttorneys from "@/assets/professionals/attorneys-tile-washington-v2.webp";
+import imgCpas from "@/assets/professionals/cpas-tile-washington-v3.webp";
 import imgBroker from "@/assets/professionals/real-estate-broker-tile-washington.webp";
 import imgAppraiser from "@/assets/professionals/real-estate-appraiser-tile-washington.webp";
 import imgFinancial from "@/assets/professionals/financial-planning-tile-washington.webp";
@@ -13,7 +13,7 @@ import imgSeniorLiving from "@/assets/professionals/senior-living-tile-washingto
 import imgSeniorMove from "@/assets/professionals/senior-move-managers-tile-washington.webp";
 import imgEstateLiquidation from "@/assets/professionals/estate-liquidation-tile-washington.webp";
 
-import imgExecutors from "@/assets/roles/executors-tile-washington.webp";
+import imgExecutors from "@/assets/roles/executors-tile-washington-v2.webp";
 import imgTrustees from "@/assets/roles/trustees-tile-washington.webp";
 import imgWills from "@/assets/roles/wills-tile-washington-v2.webp";
 import imgPowerOfAttorney from "@/assets/roles/power-of-attorney-tile-washington.webp";
