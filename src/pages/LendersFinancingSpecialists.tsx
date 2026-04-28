@@ -63,13 +63,16 @@ const LendersFinancingSpecialists = () => (
       </div>
     </section>
 
-    {/* More information link */}
-    <section className="py-6 bg-background">
+    {/* Intro paragraphs — Reverse mortgage for senior care */}
+    <section className="py-12 md:py-16 bg-background">
       <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center">
-          <Link to="/retirement-reverse-mortgage" className="text-accent hover:text-gold underline underline-offset-4 text-base font-medium transition-colors">
-            More information about Lenders & Financing →
-          </Link>
+        <div className="max-w-3xl mx-auto">
+          <p className="text-muted-foreground text-lg leading-relaxed mb-5">
+            One of the most important — and least understood — applications of a reverse mortgage is helping families manage the cost of senior care when one spouse needs to move into a memory care facility, skilled nursing home, or assisted living community while the other remains at home.
+          </p>
+          <p className="text-muted-foreground text-lg leading-relaxed">
+            For many retired couples, the family home represents their largest financial asset. A reverse mortgage allows the spouse remaining at home to convert a portion of that home equity into tax-free funds — without making monthly mortgage payments — while continuing to live in the home. Those funds can then be used to cover the cost of the other spouse's care facility, property taxes, homeowner's insurance, and everyday living expenses.
+          </p>
         </div>
       </div>
     </section>
