@@ -10,12 +10,6 @@ const GinnysGirlsCard = () => (
   <section className="py-16 lg:py-20 bg-background">
     <div className="container px-6 lg:px-8">
       <div className="max-w-[900px] mx-auto">
-        <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm text-center">
-          Featured Provider
-        </p>
-        <h2 className="font-serif text-3xl text-foreground font-semibold mb-8 text-center">
-          Ginny's Girls Estate Services
-        </h2>
 
         <div className="bg-secondary border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 p-5 sm:p-6">
           <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-start sm:gap-5">
