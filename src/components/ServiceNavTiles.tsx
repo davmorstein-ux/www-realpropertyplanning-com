@@ -27,6 +27,7 @@ import imgSeniorHomeSales from "@/assets/planning/senior-home-sales-tile-washing
 import imgPayingSeniorLiving from "@/assets/planning/paying-for-senior-living-tile-washington.webp";
 import imgServiceAreas from "@/assets/planning/service-areas-tile-washington.webp";
 import imgGuidesResources from "@/assets/planning/guides-resources-tile-washington.webp";
+import imgGrayDivorce from "@/assets/planning/gray-divorce-tile-washington.webp";
 
 const professionalImageTiles: ProfessionalImageTileData[] = [
   { alt: "Probate and estate attorneys real estate support Washington State", href: "/for-attorneys", src: imgAttorneys },
@@ -57,6 +58,7 @@ const planningImageTiles: ProfessionalImageTileData[] = [
   { alt: "Paying for senior living costs guidance Washington State", href: "/sell-house-fund-senior-living", src: imgPayingSeniorLiving },
   { alt: "Service areas Washington State counties coverage", href: "/counties", src: imgServiceAreas },
   { alt: "Guides and resources estate planning Washington State", href: "/guides-and-resources", src: imgGuidesResources },
+  { alt: "Gray divorce family home guidance Washington State", href: "/gray-divorce", src: imgGrayDivorce },
 ];
 
 const ServiceNavTiles = () => {

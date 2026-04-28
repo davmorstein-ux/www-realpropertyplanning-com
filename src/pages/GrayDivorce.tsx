@@ -5,7 +5,7 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import grayDivorceIcon from "@/assets/gray-divorce-washington.webp";
+import grayDivorceIcon from "@/assets/planning/gray-divorce-tile-washington.webp";
 
 const GrayDivorce = () => {
   return (
