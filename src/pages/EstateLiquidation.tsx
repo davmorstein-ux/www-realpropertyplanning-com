@@ -49,6 +49,17 @@ const EstateLiquidation = () => (
         </div>
       </section>
 
+      {/* Overview */}
+      <section className="pt-10 md:pt-14 pb-2 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <p className="text-foreground text-lg md:text-xl leading-[1.7] font-light">
+              Estate liquidators help families and individuals convert personal property into cash, typically following a death, divorce, downsizing, or relocation. They evaluate, organize, price, and sell the contents of a home through estate sales, online auctions, or buyouts. A professional estate liquidator handles everything from advertising and staging the sale to managing buyers and processing payments — relieving families of an overwhelming task during an already difficult time. Whether you need to clear out an entire home or sell a few high-value items, estate liquidators provide the expertise and resources to maximize the value of your belongings efficiently and respectfully.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* More information link */}
       <section className="py-6 bg-background">
         <div className="container px-6 lg:px-8">
