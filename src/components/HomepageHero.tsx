@@ -213,8 +213,8 @@ const HomepageHero = () => {
                   <div
                     key={item.label}
                     style={{ position: "relative" }}
-                    onMouseEnter={() => setOpenDropdown(item.label)}
-                    onMouseLeave={() => setOpenDropdown(null)}
+                    onMouseEnter={() => openMenu(item.label)}
+                    onMouseLeave={scheduleClose}
                   >
                     <button
                       type="button"
