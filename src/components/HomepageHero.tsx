@@ -40,6 +40,9 @@ const HomepageHero = () => {
     typeof window !== "undefined" ? window.innerWidth < 769 : false
   );
   const [menuOpen, setMenuOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
   const { pathname } = useLocation();
 
   useEffect(() => {
@@ -51,7 +54,19 @@ const HomepageHero = () => {
 
   useEffect(() => {
     setMenuOpen(false);
+    setOpenDropdown(null);
+    setMobileExpanded(null);
   }, [pathname]);
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setOpenDropdown(null);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   useEffect(() => {
     const id = "rpp-preview-fonts";
