@@ -287,7 +287,7 @@ const HomepageHero = () => {
               }
 
               return (
-                <Link key={item.href} to={item.href} style={linkStyle}>
+                <Link key={item.href} to={item.href} className="nav-link-hover" style={linkStyle}>
                   {item.label}
                 </Link>
               );
