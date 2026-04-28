@@ -7,7 +7,7 @@ import CTASection from "@/components/CTASection";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
-import iconEstateLiquidation from "@/assets/icons/estate-liquidation-services-icon-washington.webp";
+import iconEstateLiquidation from "@/assets/icons/estate-liquidation-hero-washington.png";
 
 const Section = ({ id, title, children }: { id: string; title: string; children: React.ReactNode }) => (
   <section id={id} className="py-10 md:py-14 bg-background">
