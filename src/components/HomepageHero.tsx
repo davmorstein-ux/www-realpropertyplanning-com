@@ -205,6 +205,7 @@ const HomepageHero = () => {
                   >
                     <button
                       type="button"
+                      data-nav-button=""
                       onClick={() => setOpenDropdown(isOpen ? null : item.label)}
                       style={{
                         ...linkStyle,
