@@ -55,17 +55,23 @@ const GinnysGirlsCard = () => (
                 <p className="text-muted-foreground text-sm leading-relaxed mb-3">
                   Ginny's is a family owned and operated company, based in Edmonds, WA providing senior move management, estate sales, residential clear outs and personal property appraisals. We work throughout North King and Snohomish counties serving families in transition, offering:
                 </p>
-                <ul className="text-muted-foreground text-sm leading-relaxed mb-3 list-disc pl-5 space-y-2 text-left">
-                  <li><span className="font-semibold text-foreground">Comprehensive senior move management services.</span> Certified by NASMM (National Association of Senior Move Managers), our team can provide space planning, sorting, packing, oversight of the move, unpacking and resettling.</li>
-                  <li><span className="font-semibold text-foreground">In house estate sales in unoccupied homes.</span> Ginny's takes care of the belongings left behind after a move or death, maximizing the value for the client.</li>
-                  <li><span className="font-semibold text-foreground">Residential clear outs.</span> When the family is ready, our fantastic clear out team will remove items from the home, taking them to donation, discard or recycle, leaving the home empty and ready for the next step.</li>
-                  <li><span className="font-semibold text-foreground">Personal property appraisals.</span> Having earned certification from ISA (International Society of Appraisers), we are able to provide or facilitate valuation of the client's items.</li>
-                </ul>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-3 text-left">
+                  Comprehensive senior move management services. Certified by NASMM (National Association of Senior Move Managers), our team can provide space planning, sorting, packing, oversight of the move, unpacking and resettling.
+                </p>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-3 text-left">
+                  In house estate sales in unoccupied homes. Ginny's takes care of the belongings left behind after a move or death, maximizing the value for the client.
+                </p>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-3 text-left">
+                  Residential clear outs. When the family is ready, our fantastic clear out team will remove items from the home, taking them to donation, discard or recycle, leaving the home empty and ready for the next step.
+                </p>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-3 text-left">
+                  Personal property appraisals. Having earned certification from ISA (International Society of Appraisers), we are able to provide or facilitate valuation of the client's items.
+                </p>
                 <p className="text-muted-foreground text-sm leading-relaxed mb-3">
                   We work with the utmost professionalism and compassion to take the burden off the client and provide solutions during times of change.
                 </p>
                 <p className="text-muted-foreground text-sm leading-relaxed mb-3">
-                  <span className="font-semibold text-foreground">Memberships:</span> NASMM — National Association of Senior Move Managers · ASEL — American Society of Estate Liquidators
+                  Memberships: NASMM — National Association of Senior Move Managers · ASEL — American Society of Estate Liquidators
                 </p>
                 <div className="space-y-1.5 text-sm">
                   <div className="flex items-start gap-2 justify-center sm:justify-start">
