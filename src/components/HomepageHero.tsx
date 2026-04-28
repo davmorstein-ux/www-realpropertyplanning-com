@@ -13,6 +13,7 @@ const NAV = [
   { label: "Senior Transitions", href: "/senior-transitions" },
   { label: "Downsizing", href: "/sell-house-fund-senior-living" },
   { label: "Property Valuation", href: "/why-valuation-matters" },
+  { label: "Gray Divorce", href: "/gray-divorce" },
   { label: "Resources", href: "/resources" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
