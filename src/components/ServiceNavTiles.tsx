@@ -13,6 +13,13 @@ import imgSeniorLiving from "@/assets/professionals/senior-living-tile-washingto
 import imgSeniorMove from "@/assets/professionals/senior-move-managers-tile-washington.webp";
 import imgEstateLiquidation from "@/assets/professionals/estate-liquidation-tile-washington.webp";
 
+import imgExecutors from "@/assets/roles/executors-tile-washington.webp";
+import imgTrustees from "@/assets/roles/trustees-tile-washington.webp";
+import imgWills from "@/assets/roles/wills-tile-washington.webp";
+import imgPowerOfAttorney from "@/assets/roles/power-of-attorney-tile-washington.webp";
+import imgProbateTerms from "@/assets/roles/probate-terms-tile-washington.webp";
+import imgTheProcess from "@/assets/roles/the-probate-process-tile-washington.webp";
+
 const professionalImageTiles: ProfessionalImageTileData[] = [
   { alt: "Probate and estate attorneys real estate support Washington State", href: "/for-attorneys", src: imgAttorneys },
   { alt: "CPA estate and probate real estate guidance Washington State", href: "/for-cpas", src: imgCpas },
@@ -23,6 +30,15 @@ const professionalImageTiles: ProfessionalImageTileData[] = [
   { alt: "Senior living placement and transition guidance Puget Sound Washington", href: "/senior-living-and-relocation", src: imgSeniorLiving },
   { alt: "Senior move managers relocation services Washington State", href: "/senior-move-managers", src: imgSeniorMove },
   { alt: "Estate liquidation services Puget Sound Washington State", href: "/estate-liquidation", src: imgEstateLiquidation },
+];
+
+const rolesImageTiles: ProfessionalImageTileData[] = [
+  { alt: "Executors roles and responsibilities probate Washington State", href: "/executors", src: imgExecutors },
+  { alt: "Trustees roles and responsibilities estate Washington State", href: "/trustees", src: imgTrustees },
+  { alt: "Wills last will and testament guidance Washington State", href: "/wills", src: imgWills },
+  { alt: "Power of Attorney roles and responsibilities Washington State", href: "/power-of-attorney", src: imgPowerOfAttorney },
+  { alt: "Probate terms and terminology glossary Washington State", href: "/terminology", src: imgProbateTerms },
+  { alt: "The probate process steps overview Washington State", href: "/how-the-process-works", src: imgTheProcess },
 ];
 
 const ServiceNavTiles = () => {
@@ -49,6 +65,12 @@ const ServiceNavTiles = () => {
 
         {tileCategories.map((category) => {
           const isProfessionals = category.label === "Professionals & Services";
+          const isRoles = category.label === "Roles & Responsibilities";
+          const imageTiles = isProfessionals
+            ? professionalImageTiles
+            : isRoles
+              ? rolesImageTiles
+              : null;
           return (
             <div key={category.label} className="mb-20 last:mb-0">
               <div className="mx-auto max-w-[1200px] mb-10 mt-8">
@@ -61,9 +83,9 @@ const ServiceNavTiles = () => {
                   </h3>
                 </div>
               </div>
-              {isProfessionals ? (
+              {imageTiles ? (
                 <div className="mx-auto grid w-full max-w-[1200px] grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 px-4 sm:px-0">
-                  {professionalImageTiles.map((tile) => (
+                  {imageTiles.map((tile) => (
                     <ProfessionalImageTile key={tile.href} tile={tile} />
                   ))}
                 </div>
