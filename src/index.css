@@ -780,17 +780,13 @@ body {
   @apply relative cursor-pointer;
 }
 
-/* Hover lift effect for all homepage service tiles (desktop only) */
-@media (min-width: 640px) {
-  .premium-tile {
-    transition: scale 0.25s ease, filter 0.25s ease;
-    scale: 1;
-  }
-  .premium-tile:has(.service-nav-tile-link:hover),
-  .premium-tile:has(.service-nav-tile-link:focus-visible) {
-    scale: 1.03;
-    filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.15));
-  }
+.tile-hover {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tile-hover:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
 }
 
 /* Universal tile icon hover — uses CSS `scale` so it composes with any `transform` */
