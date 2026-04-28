@@ -84,11 +84,14 @@ const ServiceNavTiles = () => {
         {tileCategories.map((category) => {
           const isProfessionals = category.label === "Professionals & Services";
           const isRoles = category.label === "Roles & Responsibilities";
+          const isPlanning = category.label === "Planning & Next Steps";
           const imageTiles = isProfessionals
             ? professionalImageTiles
             : isRoles
               ? rolesImageTiles
-              : null;
+              : isPlanning
+                ? planningImageTiles
+                : null;
           return (
             <div key={category.label} className="mb-20 last:mb-0">
               <div className="mx-auto max-w-[1200px] mb-10 mt-8">
