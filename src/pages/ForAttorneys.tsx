@@ -9,22 +9,20 @@ import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washingto
 import iconAttorneys from "@/assets/icons/probate-attorney-services-icon-washington.webp";
 import CTASection from "@/components/CTASection";
 import PageFAQ from "@/components/PageFAQ";
-import ServiceNavTileCard from "@/components/ServiceNavTileCard";
-import type { ServiceTile } from "@/components/service-nav-tiles-data";
-import iconProbate from "@/assets/icons/probate-property-sales-icon-washington.webp";
-import iconDivorce from "@/assets/icons/attorney-divorce-property-icon-washington.webp";
-import iconElderLaw from "@/assets/icons/attorney-elder-law-icon-washington.webp";
-import iconEstatePlanning from "@/assets/icons/attorney-estate-planning-icon-washington.webp";
-import iconFamilyLaw from "@/assets/icons/attorney-family-law-property-icon-washington.webp";
-import iconRealEstateAttorney from "@/assets/icons/real-estate-attorney-services-icon-washington.webp";
+import tileFamilyLaw from "@/assets/Family_Law_Attorneys_webP_new.webp";
+import tileProbate from "@/assets/Probate_Attorneys_webP_new.webp";
+import tileRealEstate from "@/assets/Real_Estate_Attorney_webP_new.webp";
+import tileDivorce from "@/assets/Divorce_Attorney_webP_new.webp";
+import tileElderLaw from "@/assets/Elder_Law_Attorney_webP_new.webp";
+import tileEstatePlanning from "@/assets/Estate_Planning_Attorney_webP_new.webp";
 
-const attorneyTiles: ServiceTile[] = [
-  { title: "Probate\nAttorneys", subtitle: "", href: "/for-probate-attorneys", iconSrc: iconProbate },
-  { title: "Estate Planning\nAttorneys", subtitle: "", href: "/for-estate-planning-attorneys", iconSrc: iconEstatePlanning },
-  { title: "Elder Law\nAttorneys", subtitle: "", href: "/for-elder-law-attorneys", iconSrc: iconElderLaw },
-  { title: "Family Law\nAttorneys", subtitle: "", href: "/for-family-law-attorneys", iconSrc: iconFamilyLaw },
-  { title: "Divorce\nAttorneys", subtitle: "", href: "/for-divorce-attorneys", iconSrc: iconDivorce },
-  { title: "Real Estate\nAttorneys", subtitle: "", href: "/real-estate-attorneys", iconSrc: iconRealEstateAttorney },
+const attorneyTiles = [
+  { src: tileFamilyLaw, alt: "Family Law Attorneys" },
+  { src: tileProbate, alt: "Probate Attorneys" },
+  { src: tileRealEstate, alt: "Real Estate Attorneys" },
+  { src: tileDivorce, alt: "Divorce Attorneys" },
+  { src: tileElderLaw, alt: "Elder Law Attorneys" },
+  { src: tileEstatePlanning, alt: "Estate Planning Attorneys" },
 ];
 
 const ForAttorneys = () => (
@@ -85,8 +83,21 @@ const ForAttorneys = () => (
             </h2>
           </div>
           <div className="mx-auto grid w-full max-w-[1200px] grid-cols-2 items-start gap-0 sm:grid-cols-3 attorney-tiles-grid">
-            {attorneyTiles.map((tile, index) => (
-              <ServiceNavTileCard key={tile.href + tile.title} tile={tile} index={index} />
+            {attorneyTiles.map((tile) => (
+              <a
+                key={tile.alt}
+                href="https://realpropertyplanning.com/for-attorneys"
+                aria-label={tile.alt}
+                className="tile-hover block w-full overflow-hidden rounded-[8px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+              >
+                <img
+                  src={tile.src}
+                  alt={tile.alt}
+                  className="block w-full h-auto select-none"
+                  draggable={false}
+                  loading="lazy"
+                />
+              </a>
             ))}
           </div>
         </div>
