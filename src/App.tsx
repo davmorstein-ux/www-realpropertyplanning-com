@@ -106,6 +106,7 @@ const OlympiaProbateEstate = lazy(() => import("./pages/OlympiaProbateEstate"));
 const BellinghamProbateEstate = lazy(() => import("./pages/BellinghamProbateEstate"));
 const GuidesAndResources = lazy(() => import("./pages/GuidesAndResources"));
 const PowerOfAttorney = lazy(() => import("./pages/PowerOfAttorney"));
+const GrayDivorce = lazy(() => import("./pages/GrayDivorce"));
 const Wills = lazy(() => import("./pages/Wills"));
 const EstateLiquidation = lazy(() => import("./pages/EstateLiquidation"));
 const Realtor = lazy(() => import("./pages/Realtor"));
@@ -156,6 +157,7 @@ const App = () => (
           <Route path="/realtor" element={<Realtor />} />
           <Route path="/wills" element={<Wills />} />
           <Route path="/power-of-attorney" element={<PowerOfAttorney />} />
+          <Route path="/gray-divorce" element={<GrayDivorce />} />
 
           {/* ─── Audience hubs ────────────────────────────────────── */}
           <Route path="/for-attorneys" element={<ForAttorneys />} />

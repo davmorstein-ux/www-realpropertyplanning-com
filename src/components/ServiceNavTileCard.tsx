@@ -22,6 +22,7 @@ const tileAltText: Record<string, string> = {
   "Home Values\n& Pricing": "Estate home valuation and pricing Puget Sound Washington",
   "Senior\nTransitions": "Senior housing transition home sale Puget Sound Washington State",
   "Service Areas": "Real estate service areas King Snohomish Pierce Kitsap County Washington",
+  "Gray Divorce": "Gray divorce family home guidance Washington State couples over 50",
   "Guides &\nResources": "Probate estate and senior transition guides Washington State",
 };
 
