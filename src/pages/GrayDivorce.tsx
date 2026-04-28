@@ -188,6 +188,26 @@ const GrayDivorce = () => {
           </div>
         </section>
 
+        {/* Featured Divorce Attorneys callout */}
+        <section className="py-12 lg:py-16 bg-background">
+          <div className="container px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto">
+              <Link
+                to="/for-divorce-attorneys"
+                className="block bg-primary border-2 border-gold rounded-xl px-8 py-8 md:px-10 md:py-10 text-center shadow-md hover:shadow-lg transition-shadow duration-300 group"
+              >
+                <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">
+                  Featured Divorce Attorneys
+                </p>
+                <p className="font-serif text-2xl md:text-3xl text-primary-foreground font-semibold leading-snug">
+                  Looking for a Divorce Attorney? Meet our Featured Divorce Attorneys{" "}
+                  <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
+                </p>
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* Final CTA */}
         <section className="py-16 lg:py-24 bg-primary">
           <div className="container px-6 lg:px-8">

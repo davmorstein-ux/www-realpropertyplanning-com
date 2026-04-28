@@ -6,6 +6,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import GoldCheck3D from "@/components/GoldCheck3D";
 import PageFAQ from "@/components/PageFAQ";
+import DominikMusafiaCard from "@/components/DominikMusafiaCard";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
@@ -159,6 +160,8 @@ const ForDivorceAttorneys = () => (
         </div>
       </div>
     </section>
+
+    <DominikMusafiaCard />
 
     <PageFAQ faqs={faqs} heading="Frequently Asked Questions" />
 
