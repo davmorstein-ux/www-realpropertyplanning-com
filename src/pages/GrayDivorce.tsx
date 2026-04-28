@@ -54,6 +54,20 @@ const GrayDivorce = () => {
           </div>
         </section>
 
+        {/* Section 1 — What Is Gray Divorce */}
+        <section className="py-14 lg:py-20 bg-background">
+          <div className="container px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-6 leading-tight">
+                What Is Gray Divorce?
+              </h2>
+              <p className="text-foreground/90 text-lg leading-[1.7]">
+                Gray divorce refers to the growing trend of couples over age 50 ending long-term marriages. While divorce rates among younger adults have actually declined in recent years, divorce among those over 50 has more than doubled since 1990. Today, nearly 1 in 4 divorces in the U.S. involves someone over age 50, and among adults over 65, divorce rates continue to climb. The reasons are varied — empty nest syndrome, growing apart after decades together, differing retirement goals, infidelity, and increased financial independence among women. Whatever the reason, gray divorce brings unique challenges that younger couples rarely face, particularly when it comes to real estate, retirement assets, and long-term financial security.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <DisclaimerSection />
       </main>
       <Footer />
