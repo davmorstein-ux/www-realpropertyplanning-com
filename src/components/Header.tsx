@@ -1,65 +1,78 @@
-import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown } from "lucide-react";
-import { useState, useRef, useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "@/assets/real-property-planning-logo-bright-seattle.webp";
-import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 
-const primaryLinks = [
-  { href: "/", label: "Home" },
-  { href: "/services", label: "Services", children: [
-    { href: "/services", label: "All Services" },
-    { href: "/senior-estate-services", label: "Senior & Estate Services" },
-    { href: "/probate-estate-sales", label: "Probate & Estate Sales" },
-    { href: "/senior-transitions", label: "Senior Transitions" },
-    { href: "/senior-placement", label: "Senior Placement" },
-    { href: "/sell-house-fund-senior-living", label: "Paying for Senior Living" },
-    { href: "/executors", label: "For Executors" },
-    { href: "/how-the-process-works", label: "How the Process Works" },
-    { href: "/why-valuation-matters", label: "Why Valuation Matters" },
-    { href: "/professional-referral-resource", label: "Professional Referral Resource" },
-    { href: "/gray-divorce", label: "Gray Divorce" },
-  ]},
-  { href: "/counties", label: "Counties", children: [
-    { href: "/counties", label: "All Counties" },
-    { href: "/king-county", label: "King County" },
-    { href: "/snohomish-county", label: "Snohomish County" },
-    { href: "/pierce-county", label: "Pierce County" },
-    { href: "/kitsap-county", label: "Kitsap County" },
-    { href: "/cities-we-serve", label: "Cities We Serve" },
-  ]},
-  { href: "/for-professionals", label: "For Professionals", children: [
-    { href: "/for-professionals", label: "Overview" },
-    { href: "/for-attorneys", label: "Attorneys" },
-    { href: "/for-financial-planners", label: "Financial Professionals" },
-    { href: "/for-senior-living-professionals", label: "Senior & Transition Professionals" },
-    { href: "/lenders-and-financing-specialists", label: "Lenders & Financing Specialists" },
-  ]},
-  { href: "/about", label: "About" },
-  { href: "/resources", label: "Resources", children: [
-    { href: "/guides-and-resources", label: "Guides & Resources" },
-    { href: "/resources", label: "Resources" },
-    { href: "/professionals", label: "Find a Professional" },
-    { href: "/insights", label: "Insights & Guidance" },
-    { href: "/senior-living-and-relocation", label: "Senior Living & Relocation" },
-    { href: "/lenders-and-financing-specialists", label: "Lenders & Financing" },
-    { href: "/contact", label: "Contact" },
-  ]},
+/**
+ * Site-wide header. Mirrors the homepage floating nav (HomepageHero) so users
+ * experience identical navigation across every page: same items, same dropdown
+ * contents, same hover effects (gold text + underline), same dropdown behavior
+ * (hover-open with 150ms close delay, no disappearing gap), same CTAs.
+ */
+type NavChild = { label: string; href: string };
+type NavItem = { label: string; href: string; children?: NavChild[] };
+
+const NAV: NavItem[] = [
+  { label: "Home", href: "/" },
+  { label: "Probate & Estate", href: "/probate-estate-sales" },
+  { label: "Senior Transitions", href: "/senior-transitions" },
+  { label: "Downsizing", href: "/sell-house-fund-senior-living" },
+  { label: "Property Valuation", href: "/why-valuation-matters" },
+  {
+    label: "Services",
+    href: "/services",
+    children: [
+      { label: "All Services", href: "/services" },
+      { label: "Probate Sales", href: "/probate-estate-sales" },
+      { label: "Senior & Estate Services", href: "/senior-estate-services" },
+      { label: "Senior Placement", href: "/senior-placement" },
+      { label: "For Executors", href: "/executors" },
+      { label: "How the Process Works", href: "/how-the-process-works" },
+      { label: "Professional Referral Resource", href: "/professional-referral-resource" },
+      { label: "Gray Divorce", href: "/gray-divorce" },
+    ],
+  },
+  { label: "Resources", href: "/resources" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
 ];
 
+const fontBody = { fontFamily: "'DM Sans', system-ui, sans-serif" };
+
 const Header = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(() =>
+    typeof window !== "undefined" ? window.innerWidth < 769 : false
+  );
+  const [menuOpen, setMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
-  const [scrolled, setScrolled] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
-  const location = useLocation();
+  const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const { pathname } = useLocation();
+
+  const openMenu = (label: string) => {
+    if (closeTimerRef.current) {
+      clearTimeout(closeTimerRef.current);
+      closeTimerRef.current = null;
+    }
+    setOpenDropdown(label);
+  };
+  const scheduleClose = () => {
+    if (closeTimerRef.current) clearTimeout(closeTimerRef.current);
+    closeTimerRef.current = setTimeout(() => setOpenDropdown(null), 150);
+  };
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 10);
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    const check = () => setIsMobile(window.innerWidth < 769);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
   }, []);
+
+  useEffect(() => {
+    setMenuOpen(false);
+    setOpenDropdown(null);
+    setMobileExpanded(null);
+  }, [pathname]);
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
@@ -72,20 +85,19 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
-    setMobileMenuOpen(false);
-    setOpenDropdown(null);
-    setMobileExpanded(null);
-  }, [location.pathname]);
-
-  const isActive = (href: string, children?: { href: string }[]) => {
-    if (location.pathname === href) return true;
-    if (children) return children.some((c) => location.pathname === c.href);
-    return false;
-  };
+    const id = "rpp-preview-fonts";
+    if (!document.getElementById(id)) {
+      const link = document.createElement("link");
+      link.id = id;
+      link.rel = "stylesheet";
+      link.href =
+        "https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=DM+Sans:wght@400;600;700&display=swap";
+      document.head.appendChild(link);
+    }
+  }, []);
 
   return (
     <>
-      {/* Skip to content — accessibility */}
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:bg-primary focus:text-primary-foreground focus:px-4 focus:py-2 focus:rounded-md focus:text-base"
@@ -94,180 +106,331 @@ const Header = () => {
       </a>
       <header
         data-nosnippet="true"
-        className={`fixed left-0 right-0 top-0 z-50 border-b transition-all duration-300 ${
-          scrolled
-            ? "border-border shadow-[0_2px_10px_rgba(0,0,0,0.06)]"
-            : "border-transparent"
-        }`}
-        style={{ borderBottomWidth: "1px", backgroundColor: "#0a1628" }}
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          right: 0,
+          zIndex: 50,
+          backgroundColor: "rgba(8, 13, 25, 0.97)",
+          backdropFilter: "blur(10px)",
+          WebkitBackdropFilter: "blur(10px)",
+          borderBottom: "1px solid rgba(255,255,255,0.08)",
+          padding: "14px 24px",
+          ...fontBody,
+          color: "#fff",
+        }}
       >
         <div
-          className={`mx-auto flex max-w-[1520px] items-center px-4 transition-all duration-300 md:px-6 lg:px-10 ${
-            scrolled ? "h-[90px] md:h-[100px]" : "h-[100px] md:h-[114px]"
-          }`}
-          ref={dropdownRef}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            gap: isMobile ? 8 : 16,
+            maxWidth: 1280,
+            margin: "0 auto",
+          }}
         >
-          <nav aria-label="Main navigation" className="hidden shrink-0 items-center gap-4 md:flex lg:gap-6 xl:gap-7">
-            {primaryLinks.map((link) => (
-              <div key={link.label} className="relative">
-                {link.children ? (
-                  <>
-                    <button
-                      className={`inline-flex items-center gap-1 text-[15px] font-medium tracking-[0.02em] transition-colors hover:text-blue-300 lg:text-[16px] ${
-                        isActive(link.href, link.children)
-                          ? "font-semibold text-white"
-                          : "text-white/80"
-                      }`}
-                      onClick={() => setOpenDropdown(openDropdown === link.label ? null : link.label)}
-                      onMouseEnter={() => setOpenDropdown(link.label)}
-                      aria-expanded={openDropdown === link.label}
-                      aria-haspopup="true"
-                      onKeyDown={(e) => {
-                        if (e.key === "Escape") {
-                          setOpenDropdown(null);
-                          (e.target as HTMLElement).focus();
-                        }
-                      }}
-                    >
-                      {link.label}
-                      <ChevronDown className={`h-3.5 w-3.5 transition-transform ${openDropdown === link.label ? "rotate-180" : ""}`} />
-                    </button>
-                    {openDropdown === link.label && (
-                      <div
-                        className="absolute left-1/2 top-full z-50 mt-2 min-w-[240px] -translate-x-1/2 rounded-2xl border border-border bg-card py-2 shadow-lg"
-                        role="menu"
-                        onMouseLeave={() => setOpenDropdown(null)}
-                        onKeyDown={(e) => {
-                          if (e.key === "Escape") {
-                            setOpenDropdown(null);
-                          }
-                        }}
-                      >
-                        {link.children.map((child) => (
-                          <Link
-                            key={child.href}
-                            to={child.href}
-                            role="menuitem"
-                            className={`block px-5 py-2 text-[15px] whitespace-nowrap transition-colors hover:bg-secondary hover:text-[hsl(216,65%,34%)] ${
-                              location.pathname === child.href ? "font-semibold text-[hsl(216,65%,34%)]" : "text-foreground/80"
-                            }`}
-                          >
-                            {child.label}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </>
-                ) : (
-                  <Link
-                    to={link.href}
-                    className={`text-[14px] font-medium tracking-[0.02em] transition-colors hover:text-blue-300 lg:text-[15px] ${
-                      isActive(link.href)
-                        ? "font-semibold text-white"
-                        : "text-white/80"
-                    }`}
-                  >
-                    {link.label}
-                  </Link>
-                )}
-              </div>
-            ))}
-          </nav>
-
-          <div className="flex flex-1 justify-center lg:justify-center">
-            <Link to="/" className="flex items-center">
-              <img
-                src={logo}
-                alt="Real Property Planning — probate and estate real estate guidance in Washington State"
-                className={`h-auto max-h-[90px] w-[400px] object-contain transition-all duration-300 md:w-[425px] lg:w-[775px] xl:w-[875px] ${
-                  scrolled ? "w-[350px] md:w-[350px] lg:w-[625px] xl:w-[700px]" : ""
-                }`}
-               loading="lazy"/>
+          <Link to="/" style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
+            <img
+              src={logo}
+              alt="Real Property Planning — probate and estate real estate guidance in Washington State"
+              style={{ height: isMobile ? 56 : 88, width: "auto", maxWidth: "none", display: "block", objectFit: "contain" }}
+              loading="lazy"
+            />
+          </Link>
+          <div style={{ display: "flex", alignItems: "center", gap: isMobile ? 6 : 12 }}>
+            <Link
+              to="/contact"
+              style={{
+                ...fontBody,
+                color: "#fff",
+                border: "1px solid rgba(255,255,255,0.85)",
+                padding: isMobile ? "6px 8px" : "10px 18px",
+                borderRadius: 6,
+                fontWeight: 700,
+                fontSize: isMobile ? 10 : 13,
+                letterSpacing: "0.06em",
+                textDecoration: "none",
+                whiteSpace: "nowrap",
+              }}
+            >
+              {isMobile ? "CONSULT" : "SCHEDULE A CONSULTATION"}
             </Link>
-          </div>
-
-          <div className="hidden shrink-0 flex-col items-center text-center md:flex">
             <a
               href="tel:2069003015"
-              className="text-[14px] font-semibold text-white/90 hover:text-white transition-colors"
+              style={{
+                ...fontBody,
+                color: "#fff",
+                background: "#1a5fa8",
+                padding: isMobile ? "6px 8px" : "10px 18px",
+                borderRadius: 6,
+                fontWeight: 700,
+                fontSize: isMobile ? 10 : 13,
+                letterSpacing: "0.06em",
+                textDecoration: "none",
+                whiteSpace: "nowrap",
+              }}
             >
-              (206) 900-3015
+              {isMobile ? "CALL" : "CALL (206) 900-3015"}
             </a>
-            <a
-              href="mailto:info@realpropertyplanning.com"
-              className="text-[13px] text-white/70 hover:text-white transition-colors"
-            >
-              info@realpropertyplanning.com
-            </a>
+            {isMobile && (
+              <button
+                aria-label="Open menu"
+                onClick={() => setMenuOpen((v) => !v)}
+                style={{
+                  background: "transparent",
+                  border: "1px solid rgba(255,255,255,0.6)",
+                  borderRadius: 6,
+                  padding: 8,
+                  cursor: "pointer",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                  width: 36,
+                  height: 32,
+                }}
+              >
+                <span style={{ display: "block", height: 2, background: "#fff", borderRadius: 1 }} />
+                <span style={{ display: "block", height: 2, background: "#fff", borderRadius: 1 }} />
+                <span style={{ display: "block", height: 2, background: "#fff", borderRadius: 1 }} />
+              </button>
+            )}
           </div>
-
-          <button
-            className="rounded-lg border border-white/20 bg-white/10 p-3 text-white transition-colors hover:bg-white/20 md:hidden"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {mobileMenuOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
-          </button>
         </div>
 
-        {mobileMenuOpen && (
-          <div className="border-t border-border bg-white px-6 pb-6 pt-5 md:hidden">
-            <nav aria-label="Mobile navigation" className="flex flex-col gap-0.5">
-              {primaryLinks.map((link) => (
-                <div key={link.label}>
-                  {link.children ? (
-                    <>
-                      <button
-                        className={`flex w-full items-center justify-between py-3.5 text-left text-[17px] transition-colors hover:text-[hsl(216,65%,34%)] ${
-                          isActive(link.href, link.children) ? "font-bold text-[hsl(216,65%,34%)]" : "font-medium text-foreground"
-                        }`}
-                        onClick={() => setMobileExpanded(mobileExpanded === link.label ? null : link.label)}
+        {!isMobile && (
+          <nav
+            ref={dropdownRef}
+            aria-label="Main navigation"
+            style={{
+              marginTop: 10,
+              display: "flex",
+              flexWrap: "nowrap",
+              justifyContent: "space-between",
+              alignItems: "center",
+              width: "100%",
+              maxWidth: 1280,
+              marginLeft: "auto",
+              marginRight: "auto",
+              gap: 12,
+            }}
+          >
+            {NAV.map((item) => {
+              const active =
+                pathname === item.href ||
+                (item.children && item.children.some((c) => c.href === pathname));
+              const linkStyle = {
+                ...fontBody,
+                color: "rgba(255,255,255,0.92)",
+                textDecoration: "none",
+                fontSize: 15,
+                fontWeight: 800 as const,
+                letterSpacing: "0.08em",
+                textTransform: "uppercase" as const,
+                paddingBottom: 4,
+                borderBottom: active ? "1px solid #fff" : "1px solid transparent",
+              };
+
+              if (item.children) {
+                const isOpen = openDropdown === item.label;
+                return (
+                  <div
+                    key={item.label}
+                    style={{ position: "relative" }}
+                    onMouseEnter={() => openMenu(item.label)}
+                    onMouseLeave={scheduleClose}
+                  >
+                    <button
+                      type="button"
+                      data-nav-button=""
+                      className="nav-link-hover"
+                      onClick={() => setOpenDropdown(isOpen ? null : item.label)}
+                      style={{
+                        ...linkStyle,
+                        background: "transparent",
+                        border: "none",
+                        borderBottom: linkStyle.borderBottom,
+                        cursor: "pointer",
+                        display: "inline-flex",
+                        alignItems: "center",
+                        alignSelf: "center",
+                        verticalAlign: "middle",
+                        gap: 6,
+                        padding: 0,
+                        paddingBottom: 4,
+                        lineHeight: "inherit",
+                        margin: 0,
+                        transform: "translateY(-4px)",
+                        appearance: "none",
+                        WebkitAppearance: "none",
+                      }}
+                      aria-haspopup="true"
+                      aria-expanded={isOpen}
+                    >
+                      {item.label}
+                      <span style={{ fontSize: 10, transform: isOpen ? "rotate(180deg)" : "none", transition: "transform 0.2s" }}>▾</span>
+                    </button>
+                    {isOpen && (
+                      <div
+                        role="menu"
+                        style={{
+                          position: "absolute",
+                          top: "100%",
+                          left: "50%",
+                          transform: "translateX(-50%)",
+                          marginTop: 0,
+                          minWidth: 260,
+                          background: "rgba(8,13,25,0.97)",
+                          backdropFilter: "blur(10px)",
+                          WebkitBackdropFilter: "blur(10px)",
+                          border: "1px solid rgba(255,255,255,0.12)",
+                          borderRadius: 10,
+                          padding: "16px 8px 8px",
+                          boxShadow: "0 12px 32px rgba(0,0,0,0.4)",
+                          zIndex: 60,
+                        }}
                       >
-                        {link.label}
-                        <ChevronDown className={`h-5 w-5 transition-transform ${mobileExpanded === link.label ? "rotate-180" : ""}`} />
-                      </button>
-                      {mobileExpanded === link.label && (
-                        <div className="mb-2 flex flex-col gap-0.5 border-l-2 border-gold/30 pl-5">
-                          {link.children.map((child) => (
+                        {item.children.map((child) => {
+                          const childActive = pathname === child.href;
+                          return (
                             <Link
                               key={child.href}
                               to={child.href}
-                              className={`py-3 text-[15px] transition-colors hover:text-[hsl(216,65%,34%)] ${
-                                location.pathname === child.href ? "font-bold text-[hsl(216,65%,34%)]" : "text-foreground/80"
-                              }`}
+                              role="menuitem"
+                              className="nav-link-hover"
+                              onClick={() => setOpenDropdown(null)}
+                              style={{
+                                ...fontBody,
+                                display: "block",
+                                padding: "10px 14px",
+                                color: childActive ? "#fff" : "rgba(255,255,255,0.88)",
+                                background: childActive ? "rgba(255,255,255,0.08)" : "transparent",
+                                textDecoration: "none",
+                                fontSize: 13,
+                                fontWeight: 700,
+                                letterSpacing: "0.06em",
+                                textTransform: "uppercase",
+                                borderRadius: 6,
+                                whiteSpace: "nowrap",
+                              }}
                             >
                               {child.label}
                             </Link>
-                          ))}
-                        </div>
-                      )}
-                    </>
-                  ) : (
-                    <Link
-                      to={link.href}
-                      className={`block py-3.5 text-[17px] transition-colors hover:text-[hsl(216,65%,34%)] ${
-                        location.pathname === link.href ? "font-bold text-[hsl(216,65%,34%)]" : "font-medium text-foreground"
-                      }`}
-                    >
-                      {link.label}
-                    </Link>
-                  )}
-                </div>
-              ))}
-              <div className="mt-3 border-t border-border pt-4">
-                <Link to="/contact">
-                  <Button className="h-[52px] w-full rounded-lg bg-[hsl(216,65%,34%)] text-base font-semibold text-white hover:bg-[hsl(216,65%,28%)]">
-                    <img src={iconPhone3d} alt="" aria-hidden="true" className="mr-2 h-5 w-5 shrink-0 object-contain"  loading="lazy"/>
-                    Schedule a Consultation
-                  </Button>
+                          );
+                        })}
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+
+              return (
+                <Link key={item.href} to={item.href} className="nav-link-hover" style={linkStyle}>
+                  {item.label}
                 </Link>
-              </div>
-            </nav>
-          </div>
+              );
+            })}
+          </nav>
+        )}
+
+        {isMobile && menuOpen && (
+          <nav
+            aria-label="Mobile navigation"
+            style={{
+              marginTop: 12,
+              display: "flex",
+              flexDirection: "column",
+              gap: 4,
+              background: "rgba(8,13,25,0.95)",
+              borderRadius: 10,
+              padding: 12,
+              border: "1px solid rgba(255,255,255,0.1)",
+            }}
+          >
+            {NAV.map((item) => {
+              const active =
+                pathname === item.href ||
+                (item.children && item.children.some((c) => c.href === pathname));
+              const baseStyle = {
+                ...fontBody,
+                color: "rgba(255,255,255,0.95)",
+                textDecoration: "none",
+                fontSize: 15,
+                fontWeight: 700 as const,
+                letterSpacing: "0.06em",
+                textTransform: "uppercase" as const,
+                padding: "12px 10px",
+                borderRadius: 6,
+                background: active ? "rgba(255,255,255,0.08)" : "transparent",
+              };
+
+              if (item.children) {
+                const isExpanded = mobileExpanded === item.label;
+                return (
+                  <div key={item.label}>
+                    <button
+                      type="button"
+                      onClick={() => setMobileExpanded(isExpanded ? null : item.label)}
+                      style={{
+                        ...baseStyle,
+                        width: "100%",
+                        border: "none",
+                        cursor: "pointer",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "space-between",
+                        textAlign: "left",
+                      }}
+                      aria-expanded={isExpanded}
+                    >
+                      <span>{item.label}</span>
+                      <span style={{ fontSize: 12, transform: isExpanded ? "rotate(180deg)" : "none", transition: "transform 0.2s" }}>▾</span>
+                    </button>
+                    {isExpanded && (
+                      <div style={{ display: "flex", flexDirection: "column", gap: 2, paddingLeft: 12, borderLeft: "2px solid rgba(255,255,255,0.15)", marginLeft: 10, marginTop: 4, marginBottom: 4 }}>
+                        {item.children.map((child) => {
+                          const childActive = pathname === child.href;
+                          return (
+                            <Link
+                              key={child.href}
+                              to={child.href}
+                              onClick={() => setMenuOpen(false)}
+                              style={{
+                                ...fontBody,
+                                color: childActive ? "#fff" : "rgba(255,255,255,0.85)",
+                                textDecoration: "none",
+                                fontSize: 13,
+                                fontWeight: 600,
+                                letterSpacing: "0.05em",
+                                textTransform: "uppercase",
+                                padding: "10px 10px",
+                                borderRadius: 6,
+                                background: childActive ? "rgba(255,255,255,0.08)" : "transparent",
+                              }}
+                            >
+                              {child.label}
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+
+              return (
+                <Link key={item.href} to={item.href} onClick={() => setMenuOpen(false)} style={baseStyle}>
+                  {item.label}
+                </Link>
+              );
+            })}
+          </nav>
         )}
       </header>
 
-      <div className="h-[100px] md:h-[114px]" />
+      {/* Spacer to preserve layout below the fixed header (prevents CLS). */}
+      <div style={{ height: isMobile ? 110 : 156 }} aria-hidden="true" />
     </>
   );
 };
