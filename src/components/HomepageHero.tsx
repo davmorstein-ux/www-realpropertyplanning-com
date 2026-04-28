@@ -300,14 +300,14 @@ const HomepageHero = () => {
       </section>
 
       {/* ===== Trust Bar ===== */}
-      <section style={{ background: "#1a5fa8", padding: isMobile ? "24px 20px" : "20px 24px" }}>
+      <section style={{ background: "#1a5fa8", padding: isMobile ? "12px 20px" : "20px 24px" }}>
         <div
           style={{
             maxWidth: 1280,
             margin: "0 auto",
             display: "grid",
             gridTemplateColumns: isMobile ? "1fr" : "repeat(auto-fit, minmax(260px, 1fr))",
-            gap: isMobile ? 24 : 20,
+            gap: isMobile ? 8 : 20,
           }}
         >
           {[
@@ -319,19 +319,19 @@ const HomepageHero = () => {
               <div
                 aria-hidden
                 style={{
-                  fontSize: 32,
+                  fontSize: isMobile ? 20 : 32,
                   lineHeight: 1,
-                  marginBottom: 6,
+                  marginBottom: isMobile ? 2 : 6,
                   background: "transparent",
                   filter: "drop-shadow(0 4px 6px rgba(0,0,0,0.35))",
                 }}
               >
                 {emoji}
               </div>
-              <div style={{ ...fontBody, fontWeight: 700, fontSize: 15, letterSpacing: "0.08em", marginBottom: 6 }}>
+              <div style={{ ...fontBody, fontWeight: 700, fontSize: isMobile ? 11 : 15, letterSpacing: "0.08em", marginBottom: isMobile ? 2 : 6 }}>
                 {title}
               </div>
-              <div style={{ ...fontBody, fontSize: 16, color: "rgba(255,255,255,0.95)", lineHeight: 1.5 }}>
+              <div style={{ ...fontBody, fontSize: isMobile ? 10 : 16, color: "rgba(255,255,255,0.95)", lineHeight: isMobile ? 1.3 : 1.5 }}>
                 {text}
               </div>
             </div>
