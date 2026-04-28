@@ -86,7 +86,7 @@ const ForAttorneys = () => (
             {attorneyTiles.map((tile) => (
               <a
                 key={tile.alt}
-                href="https://realpropertyplanning.com/for-attorneys"
+                href={tile.href}
                 aria-label={tile.alt}
                 className="tile-hover block w-full overflow-hidden rounded-[8px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
               >
