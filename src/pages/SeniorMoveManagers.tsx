@@ -17,6 +17,7 @@ import iconCall3d from "@/assets/icons/real-estate-phone-handset-3d-icon-washing
 import iconMail3d from "@/assets/icons/real-estate-email-envelope-3d-icon-washington.webp";
 import iconGlobe3d from "@/assets/icons/real-estate-website-globe-3d-icon-washington.webp";
 import { Icon3DFamily, Icon3DHome, Icon3DHeart } from "@/components/icons/Icon3D";
+import GinnysGirlsCard from "@/components/GinnysGirlsCard";
 
 const realEstateSideItems = [
   {
@@ -194,7 +195,7 @@ const SeniorMoveManagers = () => (
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground text-center mb-8">
-              Featured Senior Move Manager
+              Featured Senior Move Managers
             </h2>
             <div className="bg-background border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 p-5 sm:p-6">
               <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-start sm:gap-5">
@@ -420,6 +421,7 @@ const SeniorMoveManagers = () => (
           </div>
         </div>
       </section>
+      <GinnysGirlsCard />
       {/* SECTION 3: Real Estate Side */}
       <section className="py-10 md:py-14 bg-background">
         <div className="container px-6 lg:px-8">
