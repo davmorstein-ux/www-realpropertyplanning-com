@@ -222,6 +222,7 @@ const HomepageHero = () => {
                         paddingBottom: 4,
                         lineHeight: "inherit",
                         margin: 0,
+                        transform: "translateY(-4px)",
                         appearance: "none",
                         WebkitAppearance: "none",
                       }}
