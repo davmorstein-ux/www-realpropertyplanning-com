@@ -104,6 +104,8 @@ const ForDivorceAttorneys = () => (
       </div>
     </section>
 
+    <DominikMusafiaCard />
+
     {/* Opening */}
     <section className="py-16 lg:py-20 bg-secondary">
       <div className="container px-6 lg:px-8">
@@ -160,8 +162,6 @@ const ForDivorceAttorneys = () => (
         </div>
       </div>
     </section>
-
-    <DominikMusafiaCard />
 
     <PageFAQ faqs={faqs} heading="Frequently Asked Questions" />
 
