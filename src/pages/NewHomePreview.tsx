@@ -141,7 +141,7 @@ export default function NewHomePreview() {
           position: "relative",
           height: "100vh",
           width: "100%",
-          backgroundImage: "url('/hero-photo.png')",
+          backgroundImage: "url('/hero-photo.webp')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

@@ -1,4 +1,4 @@
-import jamesJacksonPhoto from "@/assets/james-jackson-estate-planning-attorney-seattle.jpg";
+import jamesJacksonPhoto from "@/assets/james-jackson-estate-planning-attorney-seattle.webp";
 import ketterSheppardLogo from "@/assets/ketter-sheppard-law-firm-logo.webp";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconEmail3d from "@/assets/icons/real-estate-email-envelope-3d-icon-washington.webp";

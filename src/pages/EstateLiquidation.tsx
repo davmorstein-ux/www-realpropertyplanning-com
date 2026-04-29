@@ -7,7 +7,7 @@ import CTASection from "@/components/CTASection";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
-import iconEstateLiquidation from "@/assets/icons/estate-liquidation-hero-washington.png";
+import iconEstateLiquidation from "@/assets/icons/estate-liquidation-hero-washington.webp";
 import GinnysGirlsCard from "@/components/GinnysGirlsCard";
 
 const EstateLiquidation = () => (
