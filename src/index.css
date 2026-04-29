@@ -1795,20 +1795,32 @@ img[src*="real-estate-website-globe-3d-icon-washington"] {
   opacity: 1 !important;
 }
 
-/* On dark navy backgrounds, ensure descriptive text is bright white.
- * Tailwind's text-primary-foreground/XX and text-white/XX classes
- * apply alpha to the text color via --tw-text-opacity. Force to 1. */
-[class*="text-primary-foreground/"],
-[class*="text-white/"],
-[class*="text-foreground/"],
-[class*="text-muted-foreground/"],
-[class*="text-gold/"],
+/* Override Tailwind alpha-modified text colors so descriptive copy
+ * always renders at the full token color (no transparency). Tailwind v3
+ * compiles e.g. `text-primary-foreground/80` to
+ * `color: hsl(var(--primary-foreground) / 0.8)` — we restore alpha to 1
+ * by re-declaring the color at full opacity with !important. */
+[class*="text-primary-foreground/"] {
+  color: hsl(var(--primary-foreground)) !important;
+}
+[class*="text-white/"] {
+  color: #ffffff !important;
+}
+[class*="text-foreground/"] {
+  color: hsl(var(--foreground)) !important;
+}
+[class*="text-muted-foreground/"] {
+  color: hsl(var(--muted-foreground)) !important;
+}
+[class*="text-gold/"] {
+  color: hsl(var(--gold, 42 60% 54%)) !important;
+}
 [class*="text-accent/"] {
-  --tw-text-opacity: 1 !important;
+  color: hsl(var(--accent)) !important;
 }
 
-/* Restore decorative/utility opacity for non-text elements that
- * legitimately need reduced opacity (logos, separators, icons). */
-img, svg, hr, [aria-hidden="true"]:not(p):not(span):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+/* Restore decorative/utility opacity for non-text visual elements
+ * (logos, separators, icons) that may legitimately use opacity. */
+img, svg, hr {
   opacity: revert !important;
 }
