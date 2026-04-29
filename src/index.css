@@ -1781,3 +1781,46 @@ img[src*="real-estate-website-globe-3d-icon-washington"] {
 .nav-link-hover:hover::after {
   transform: scaleX(1);
 }
+
+/* ==================================================================
+ * ACCESSIBILITY — Senior Readability Text Opacity Enforcement
+ * Site-wide rule: all body text, paragraphs, list items, spans, and
+ * descriptive copy must render at full opacity for readability.
+ * Overrides Tailwind alpha modifiers (e.g. text-white/70,
+ * text-primary-foreground/80, text-muted-foreground/40) and any
+ * inline opacity reductions on text elements.
+ * Images, icons, and decorative elements are explicitly excluded.
+ * ================================================================== */
+:where(p, li, span, h1, h2, h3, h4, h5, h6, label, dd, dt, blockquote, figcaption, td, th, a, div) {
+  opacity: 1 !important;
+}
+
+/* Override Tailwind alpha-modified text colors so descriptive copy
+ * always renders at the full token color (no transparency). Tailwind v3
+ * compiles e.g. `text-primary-foreground/80` to
+ * `color: hsl(var(--primary-foreground) / 0.8)` — we restore alpha to 1
+ * by re-declaring the color at full opacity with !important. */
+[class*="text-primary-foreground/"] {
+  color: hsl(var(--primary-foreground)) !important;
+}
+[class*="text-white/"] {
+  color: #ffffff !important;
+}
+[class*="text-foreground/"] {
+  color: hsl(var(--foreground)) !important;
+}
+[class*="text-muted-foreground/"] {
+  color: hsl(var(--muted-foreground)) !important;
+}
+[class*="text-gold/"] {
+  color: hsl(var(--gold, 42 60% 54%)) !important;
+}
+[class*="text-accent/"] {
+  color: hsl(var(--accent)) !important;
+}
+
+/* Restore decorative/utility opacity for non-text visual elements
+ * (logos, separators, icons) that may legitimately use opacity. */
+img, svg, hr {
+  opacity: revert !important;
+}
