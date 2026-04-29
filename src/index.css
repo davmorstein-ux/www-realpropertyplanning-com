@@ -1781,3 +1781,34 @@ img[src*="real-estate-website-globe-3d-icon-washington"] {
 .nav-link-hover:hover::after {
   transform: scaleX(1);
 }
+
+/* ==================================================================
+ * ACCESSIBILITY — Senior Readability Text Opacity Enforcement
+ * Site-wide rule: all body text, paragraphs, list items, spans, and
+ * descriptive copy must render at full opacity for readability.
+ * Overrides Tailwind alpha modifiers (e.g. text-white/70,
+ * text-primary-foreground/80, text-muted-foreground/40) and any
+ * inline opacity reductions on text elements.
+ * Images, icons, and decorative elements are explicitly excluded.
+ * ================================================================== */
+:where(p, li, span, h1, h2, h3, h4, h5, h6, label, dd, dt, blockquote, figcaption, td, th, a, div) {
+  opacity: 1 !important;
+}
+
+/* On dark navy backgrounds, ensure descriptive text is bright white.
+ * Tailwind's text-primary-foreground/XX and text-white/XX classes
+ * apply alpha to the text color via --tw-text-opacity. Force to 1. */
+[class*="text-primary-foreground/"],
+[class*="text-white/"],
+[class*="text-foreground/"],
+[class*="text-muted-foreground/"],
+[class*="text-gold/"],
+[class*="text-accent/"] {
+  --tw-text-opacity: 1 !important;
+}
+
+/* Restore decorative/utility opacity for non-text elements that
+ * legitimately need reduced opacity (logos, separators, icons). */
+img, svg, hr, [aria-hidden="true"]:not(p):not(span):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+  opacity: revert !important;
+}
