@@ -69,13 +69,7 @@ const SeniorMoveManagers = () => (
             <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-primary-foreground leading-tight mb-4">
               Senior Move Managers
             </h1>
-            <p
-              className="text-primary-foreground/70 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-3"
-              style={{
-                maskImage: "linear-gradient(to bottom, black 60%, transparent 100%)",
-                WebkitMaskImage: "linear-gradient(to bottom, black 60%, transparent 100%)",
-              }}
-            >
+            <p className="text-white opacity-100 font-semibold text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-3">
               Practical, compassionate help for older adults and families preparing to downsize, organize, pack,
               relocate, or settle into a new home.
             </p>
