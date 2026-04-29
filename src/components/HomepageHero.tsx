@@ -409,7 +409,7 @@ const HomepageHero = () => {
           position: "relative",
           height: isMobile ? "50vh" : "55vh",
           width: "100%",
-          backgroundImage: "url('/hero-photo.png')",
+          backgroundImage: "url('/hero-photo.webp')",
           backgroundSize: "cover",
           backgroundPosition: isMobile ? "center 30%" : "center",
         }}
