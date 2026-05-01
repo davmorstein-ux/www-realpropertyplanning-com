@@ -31,26 +31,45 @@ const About = () => {
       <main id="main-content">
         {/* Hero */}
         <section
-          className="relative overflow-hidden bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24"
+          className="relative overflow-hidden bg-primary flex items-center justify-center min-h-[300px] md:min-h-[420px] lg:min-h-[480px]"
           style={{
             backgroundImage: `url(${aboutHeroBg})`,
             backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundPosition: "center center",
+            backgroundRepeat: "no-repeat",
           }}
         >
           {/* Dark overlay for text contrast */}
           <div className="absolute inset-0 bg-primary/55 z-[1]" aria-hidden="true" />
           {/* Animated network overlay */}
           <NetworkCanvas className="z-[2]" />
-          <div className="container relative z-[3] px-6 lg:px-8">
-            <div className="max-w-3xl">
-              <h1
-                className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight"
-                style={{ textShadow: "0 2px 8px rgba(0,0,0,0.55)" }}
-              >
-                About Real Property Planning
-              </h1>
-            </div>
+          <div className="container relative z-[3] px-6 lg:px-8 text-center">
+            <p
+              className="text-white font-semibold uppercase mb-4"
+              style={{
+                fontSize: "16px",
+                letterSpacing: "0.1em",
+                textShadow: "0 2px 6px rgba(0,0,0,0.8)",
+              }}
+            >
+              About Real Property Planning
+            </p>
+            <h1
+              className="font-serif font-semibold leading-tight mx-auto"
+              style={{
+                color: "#FFFFFF",
+                fontSize: "clamp(36px, 7vw, 72px)",
+                textShadow:
+                  "0 0 30px rgba(255,255,255,0.6), 0 2px 8px rgba(0,0,0,0.9)",
+                backgroundImage:
+                  "linear-gradient(180deg, #ffffff 0%, #f5f7fa 45%, #d8dde6 100%)",
+                WebkitBackgroundClip: "text",
+                backgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
+              REAL PROPERTY PLANNING
+            </h1>
           </div>
         </section>
 
