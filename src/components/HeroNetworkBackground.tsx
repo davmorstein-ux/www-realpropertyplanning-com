@@ -380,7 +380,7 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
         if (tr.headTime > 1200) trails.delete(key);
       }
 
-      // ---- Draw base lines ----
+      // ---- Draw base lines (visible-to-visible) ----
       for (const e of edgeList) {
         const a = nodes[e.i];
         const b = nodes[e.j];
@@ -389,6 +389,40 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
         ctx.beginPath();
         ctx.moveTo(a.x, a.y);
         ctx.lineTo(b.x, b.y);
+        ctx.stroke();
+      }
+
+      // ---- Draw ghost edges (one endpoint outside canvas) with edge-fading gradient ----
+      // Strategy: draw from the visible node to the canvas-boundary intersection of
+      // the line, with a linear gradient that goes 0.4 -> 0 across that segment.
+      for (const e of ghostEdgeList) {
+        const ni = nodes[e.i];
+        const nj = nodes[e.j];
+        const visible = ni.ghost ? nj : ni;
+        const ghost = ni.ghost ? ni : nj;
+
+        // Find intersection of the segment (visible -> ghost) with the canvas border.
+        const dx = ghost.x - visible.x;
+        const dy = ghost.y - visible.y;
+        // Parametric tt in (0,1] where ghost lies; we want the smallest tt where the
+        // point exits the rect [0,width] x [0,height].
+        let tt = 1;
+        if (dx > 0) tt = Math.min(tt, (width - visible.x) / dx);
+        else if (dx < 0) tt = Math.min(tt, (0 - visible.x) / dx);
+        if (dy > 0) tt = Math.min(tt, (height - visible.y) / dy);
+        else if (dy < 0) tt = Math.min(tt, (0 - visible.y) / dy);
+        tt = Math.max(0, Math.min(1, tt));
+        const ex = visible.x + dx * tt;
+        const ey = visible.y + dy * tt;
+
+        const grad = ctx.createLinearGradient(visible.x, visible.y, ex, ey);
+        grad.addColorStop(0, "rgba(80, 150, 255, 0.4)");
+        grad.addColorStop(1, "rgba(80, 150, 255, 0)");
+        ctx.strokeStyle = grad;
+        ctx.lineWidth = 0.8;
+        ctx.beginPath();
+        ctx.moveTo(visible.x, visible.y);
+        ctx.lineTo(ex, ey);
         ctx.stroke();
       }
 
