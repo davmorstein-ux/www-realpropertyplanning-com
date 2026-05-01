@@ -4,17 +4,16 @@ interface Node {
   x: number;
   y: number;
   r: number;
+  // brief flare added when a signal arrives (intensity 0..1)
+  flare: number;
 }
 
-interface LinePulse {
-  active: boolean;
-  // 0=idle, 1=fadeIn, 2=hold, 3=fadeOut
-  stage: 0 | 1 | 2 | 3;
-  stageElapsed: number; // ms elapsed in current stage
-  fadeInDur: number;
-  holdDur: number;
-  fadeOutDur: number;
-  cooldown: number; // ms before this line is eligible to glow again
+interface Signal {
+  // edge endpoints (node indices); signal travels a -> b
+  a: number;
+  b: number;
+  progress: number; // 0..1
+  duration: number; // ms
 }
 
 const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
@@ -32,12 +31,14 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
     let dpr = Math.min(window.devicePixelRatio || 1, 2);
 
     const NODE_COUNT = 75;
+    const LEFT_EXTRA_COUNT = 12; // extra nodes seeded into the left third
     const CONNECT_DIST = 320;
+    const MAX_CONCURRENT_SIGNALS = 3;
 
     let nodes: Node[] = [];
-    const linePulses = new Map<string, LinePulse>();
-    // Forced edges (key "i-j" with i<j) that always render regardless of distance
     const forcedEdges = new Set<string>();
+    let edgeList: { i: number; j: number; key: string }[] = [];
+    const signals: Signal[] = [];
 
     const initNodes = () => {
       nodes = [];
@@ -52,13 +53,11 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
       for (let r = 0; r < rows; r++) {
         for (let c = 0; c < cols; c++) cells.push({ c, r });
       }
-      // Fisher-Yates shuffle so we don't fill row-by-row when cells > NODE_COUNT
       for (let i = cells.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [cells[i], cells[j]] = [cells[j], cells[i]];
       }
 
-      // Slightly less dense around the centered logo (ellipse exclusion).
       const cx = width / 2;
       const cy = height / 2;
       const exclusionRX = Math.min(width * 0.22, 260);
@@ -73,27 +72,38 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
         const x = c * cellW + jx;
         const y = r * cellH + jy;
 
-        // Thin out near the center; keep edges fully populated.
         const dx = (x - cx) / exclusionRX;
         const dy = (y - cy) / exclusionRY;
         const distNorm = Math.hypot(dx, dy);
         if (distNorm < 1 && Math.random() > distNorm * 0.85) continue;
 
-        nodes.push({ x, y, r: 2 + Math.random() * 1 });
+        nodes.push({ x, y, r: 2 + Math.random() * 1, flare: 0 });
         placed++;
       }
 
-      // Top up with random points if exclusion thinning left us short.
       while (placed < NODE_COUNT) {
         nodes.push({
           x: Math.random() * width,
           y: Math.random() * height,
           r: 2 + Math.random() * 1,
+          flare: 0,
         });
         placed++;
       }
 
+      // Extra nodes biased to the left third for balance
+      const leftMax = width / 3;
+      for (let k = 0; k < LEFT_EXTRA_COUNT; k++) {
+        nodes.push({
+          x: Math.random() * leftMax,
+          y: Math.random() * height,
+          r: 2 + Math.random() * 1,
+          flare: 0,
+        });
+      }
+
       ensureConnectivity();
+      buildEdgeList();
     };
 
     const ensureConnectivity = () => {
@@ -109,7 +119,6 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
           }
         }
       }
-      // Force-connect any node with <2 connections to its 2 nearest neighbors
       for (let i = 0; i < n; i++) {
         if (neighborCount[i] >= 2) continue;
         const dists: { j: number; d: number }[] = [];
@@ -128,7 +137,6 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
           }
         }
       }
-      // Union-find: merge any disconnected components
       const parent = Array.from({ length: n }, (_, i) => i);
       const find = (x: number): number => (parent[x] === x ? x : (parent[x] = find(parent[x])));
       const union = (a: number, b: number) => {
@@ -169,6 +177,18 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
       }
     };
 
+    const buildEdgeList = () => {
+      edgeList = [];
+      for (let i = 0; i < nodes.length; i++) {
+        for (let j = i + 1; j < nodes.length; j++) {
+          const d = Math.hypot(nodes[i].x - nodes[j].x, nodes[i].y - nodes[j].y);
+          const key = `${i}-${j}`;
+          if (d > CONNECT_DIST && !forcedEdges.has(key)) continue;
+          edgeList.push({ i, j, key });
+        }
+      }
+    };
+
     const resize = () => {
       const rect = canvas.getBoundingClientRect();
       width = rect.width;
@@ -184,29 +204,39 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
     const ro = new ResizeObserver(resize);
     ro.observe(canvas);
 
-    const lineKey = (i: number, j: number) => (i < j ? `${i}-${j}` : `${j}-${i}`);
+    // Trails: per-edge progress where the signal has passed.
+    // Map key -> { trailEnd: 0..1 (highest progress reached), age: ms since signal moved over it }
+    interface Trail {
+      trailEnd: number; // 0..1, head furthest along the line
+      direction: 1 | -1; // 1 means a->b; -1 means b->a (matches edge i,j ordering)
+      headTime: number; // ms since trail head reached trailEnd
+      // brightness decays over ~1000ms
+    }
+    const trails = new Map<string, Trail>();
 
-    const MAX_CONCURRENT_GLOWS = 3;
+    let nextSignalIn = 800 + Math.random() * 1500;
 
-    const randFadeDur = () => 3000 + Math.random() * 2000; // 3-5s
-    const randHoldDur = () => 1000 + Math.random() * 1000; // 1-2s
-    const randCooldown = () => 4000 + Math.random() * 8000;
-
-    const getOrCreatePulse = (key: string): LinePulse => {
-      let p = linePulses.get(key);
-      if (!p) {
-        p = {
-          active: false,
-          stage: 0,
-          stageElapsed: 0,
-          fadeInDur: randFadeDur(),
-          holdDur: randHoldDur(),
-          fadeOutDur: randFadeDur(),
-          cooldown: Math.random() * 6000, // staggered initial eligibility
-        };
-        linePulses.set(key, p);
+    const spawnSignal = () => {
+      if (signals.length >= MAX_CONCURRENT_SIGNALS) return;
+      if (edgeList.length === 0) return;
+      // Try a few times to pick an edge that's not already carrying a signal
+      const busy = new Set<string>();
+      for (const s of signals) {
+        const key = s.a < s.b ? `${s.a}-${s.b}` : `${s.b}-${s.a}`;
+        busy.add(key);
       }
-      return p;
+      for (let attempt = 0; attempt < 10; attempt++) {
+        const e = edgeList[Math.floor(Math.random() * edgeList.length)];
+        if (busy.has(e.key)) continue;
+        const reverse = Math.random() < 0.5;
+        signals.push({
+          a: reverse ? e.j : e.i,
+          b: reverse ? e.i : e.j,
+          progress: 0,
+          duration: 2000 + Math.random() * 1000, // 2-3s
+        });
+        return;
+      }
     };
 
     let lastT = performance.now();
@@ -219,110 +249,127 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
       ctx.fillStyle = "#020810";
       ctx.fillRect(0, 0, width, height);
 
-      // ---- Pass 1: update pulse states (gated by global active count) ----
-      // First, advance all currently-active pulses and tick cooldowns.
-      let activeCount = 0;
-      const eligible: LinePulse[] = [];
-
-      // Build edge list once per frame for stable iteration.
-      const edges: { i: number; j: number; key: string }[] = [];
-      for (let i = 0; i < nodes.length; i++) {
-        for (let j = i + 1; j < nodes.length; j++) {
-          const d = Math.hypot(nodes[i].x - nodes[j].x, nodes[i].y - nodes[j].y);
-          const key = `${i}-${j}`;
-          if (d > CONNECT_DIST && !forcedEdges.has(key)) continue;
-          edges.push({ i, j, key });
-        }
+      // ---- Update signals ----
+      nextSignalIn -= dt;
+      if (nextSignalIn <= 0) {
+        spawnSignal();
+        nextSignalIn = 2000 + Math.random() * 2000; // 2-4s
       }
 
-      for (const e of edges) {
-        const p = getOrCreatePulse(e.key);
-        if (p.active) {
-          p.stageElapsed += dt;
-          if (p.stage === 1 && p.stageElapsed >= p.fadeInDur) {
-            p.stage = 2;
-            p.stageElapsed = 0;
-          } else if (p.stage === 2 && p.stageElapsed >= p.holdDur) {
-            p.stage = 3;
-            p.stageElapsed = 0;
-          } else if (p.stage === 3 && p.stageElapsed >= p.fadeOutDur) {
-            // finished cycle
-            p.active = false;
-            p.stage = 0;
-            p.stageElapsed = 0;
-            p.cooldown = randCooldown();
-            p.fadeInDur = randFadeDur();
-            p.holdDur = randHoldDur();
-            p.fadeOutDur = randFadeDur();
-          }
-          if (p.active) activeCount++;
+      for (let s = signals.length - 1; s >= 0; s--) {
+        const sig = signals[s];
+        sig.progress += dt / sig.duration;
+        const a = nodes[sig.a];
+        const b = nodes[sig.b];
+        const key = sig.a < sig.b ? `${sig.a}-${sig.b}` : `${sig.b}-${sig.a}`;
+
+        // Map signal progress to trail progress in the canonical edge direction (i<j).
+        // If signal goes from larger index to smaller, direction is -1 and progress is 1-p.
+        const direction: 1 | -1 = sig.a < sig.b ? 1 : -1;
+        const canonicalProgress = direction === 1 ? sig.progress : 1 - sig.progress;
+        let tr = trails.get(key);
+        if (!tr) {
+          tr = { trailEnd: canonicalProgress, direction, headTime: 0 };
+          trails.set(key, tr);
         } else {
-          p.cooldown -= dt;
-          if (p.cooldown <= 0) eligible.push(p);
+          tr.direction = direction;
+          tr.trailEnd = canonicalProgress;
+          tr.headTime = 0;
+        }
+
+        if (sig.progress >= 1) {
+          // arrived: flare destination node
+          b.flare = Math.max(b.flare, 1);
+          // Mark trail as fully traversed; let it fade out via its own age
+          tr.trailEnd = direction === 1 ? 1 : 0;
+          tr.headTime = 0;
+          signals.splice(s, 1);
         }
       }
 
-      // Activate up to (MAX - activeCount) eligible pulses, picked randomly.
-      let slots = MAX_CONCURRENT_GLOWS - activeCount;
-      while (slots > 0 && eligible.length > 0) {
-        const idx = Math.floor(Math.random() * eligible.length);
-        const p = eligible.splice(idx, 1)[0];
-        p.active = true;
-        p.stage = 1;
-        p.stageElapsed = 0;
-        slots--;
+      // Age trails (brief brightened trail, fade within 1s)
+      for (const [key, tr] of trails) {
+        // headTime grows when no active signal is updating this trail
+        const stillActive = signals.some((s) => {
+          const k = s.a < s.b ? `${s.a}-${s.b}` : `${s.b}-${s.a}`;
+          return k === key;
+        });
+        if (!stillActive) tr.headTime += dt;
+        if (tr.headTime > 1200) trails.delete(key);
       }
 
-      // ---- Pass 2: draw lines ----
-      for (const e of edges) {
+      // ---- Draw base lines ----
+      for (const e of edgeList) {
         const a = nodes[e.i];
         const b = nodes[e.j];
-        const p = linePulses.get(e.key)!;
-
-        // intensity 0..1 from staged timing (smoothed)
-        let intensity = 0;
-        if (p.active) {
-          if (p.stage === 1) {
-            const t01 = Math.min(1, p.stageElapsed / p.fadeInDur);
-            intensity = 0.5 - 0.5 * Math.cos(t01 * Math.PI); // ease in/out
-          } else if (p.stage === 2) {
-            intensity = 1;
-          } else if (p.stage === 3) {
-            const t01 = Math.min(1, p.stageElapsed / p.fadeOutDur);
-            intensity = 0.5 + 0.5 * Math.cos(t01 * Math.PI);
-          }
-        }
-
-        // Base values are CONSTANT — every line is always visible at >= 0.45
-        const baseR = 80, baseG = 150, baseB = 255, baseA = 0.45;
-        const glowR = 140, glowG = 210, glowB = 255, glowA = 0.95;
-        const r = baseR + (glowR - baseR) * intensity;
-        const g = baseG + (glowG - baseG) * intensity;
-        const bl = baseB + (glowB - baseB) * intensity;
-        const al = baseA + (glowA - baseA) * intensity;
-
-        ctx.save();
-        if (intensity > 0) {
-          ctx.shadowBlur = 6 * intensity;
-          ctx.shadowColor = "#88ccff";
-        }
-        ctx.strokeStyle = `rgba(${r | 0}, ${g | 0}, ${bl | 0}, ${al})`;
-        ctx.lineWidth = 0.8 + 0.7 * intensity;
+        ctx.strokeStyle = "rgba(80, 150, 255, 0.45)";
+        ctx.lineWidth = 0.8;
         ctx.beginPath();
         ctx.moveTo(a.x, a.y);
         ctx.lineTo(b.x, b.y);
         ctx.stroke();
+      }
+
+      // ---- Draw trail brightening on top of base lines ----
+      for (const [key, tr] of trails) {
+        const [iStr, jStr] = key.split("-");
+        const i = parseInt(iStr, 10);
+        const j = parseInt(jStr, 10);
+        const a = nodes[i];
+        const b = nodes[j];
+
+        // brightness fades from 1 -> 0 over 1000ms after head stops moving
+        const fade = Math.max(0, 1 - tr.headTime / 1000);
+        if (fade <= 0) continue;
+
+        // Trail segment: from edge start (in canonical direction) up to trailEnd
+        // If direction is -1, trail occupies the b->a segment; we draw from j-end back to (j - trailEnd along i->j parameter).
+        const start = tr.direction === 1 ? 0 : tr.trailEnd;
+        const end = tr.direction === 1 ? tr.trailEnd : 1;
+        if (end <= start) continue;
+        const sx = a.x + (b.x - a.x) * start;
+        const sy = a.y + (b.y - a.y) * start;
+        const ex = a.x + (b.x - a.x) * end;
+        const ey = a.y + (b.y - a.y) * end;
+
+        ctx.save();
+        ctx.shadowBlur = 6 * fade;
+        ctx.shadowColor = "#88ccff";
+        ctx.strokeStyle = `rgba(140, 210, 255, ${0.85 * fade})`;
+        ctx.lineWidth = 1.4;
+        ctx.beginPath();
+        ctx.moveTo(sx, sy);
+        ctx.lineTo(ex, ey);
+        ctx.stroke();
         ctx.restore();
       }
 
-      // draw stationary nodes
-      for (const n of nodes) {
+      // ---- Draw signal heads ----
+      for (const sig of signals) {
+        const a = nodes[sig.a];
+        const b = nodes[sig.b];
+        const x = a.x + (b.x - a.x) * sig.progress;
+        const y = a.y + (b.y - a.y) * sig.progress;
         ctx.save();
-        ctx.shadowBlur = 15;
-        ctx.shadowColor = "#6ab0ff";
+        ctx.shadowBlur = 10;
+        ctx.shadowColor = "#aaddff";
+        ctx.fillStyle = "#aaddff";
+        ctx.beginPath();
+        ctx.arc(x, y, 3, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+      }
+
+      // ---- Draw nodes (with optional flare) ----
+      for (const n of nodes) {
+        // Flare decays over ~500ms (using a simple exponential)
+        if (n.flare > 0) n.flare = Math.max(0, n.flare - dt / 500);
+        ctx.save();
+        ctx.shadowBlur = 15 + 5 * n.flare; // 15 -> 20 at peak flare
+        ctx.shadowColor = n.flare > 0 ? "#aaddff" : "#6ab0ff";
         ctx.fillStyle = "rgba(220, 235, 255, 0.95)";
         ctx.beginPath();
-        ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+        ctx.arc(n.x, n.y, n.r + n.flare * 0.6, 0, Math.PI * 2);
         ctx.fill();
         ctx.restore();
       }
