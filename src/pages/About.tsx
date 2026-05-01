@@ -41,10 +41,11 @@ const RotatingTagline = () => {
 
   return (
     <div style={{ height: "2.5rem", display: "flex", alignItems: "center", justifyContent: "center", marginTop: "16px" }}>
-      <p
+      <span
         key={index}
         className="tagline-fade"
         style={{
+          display: "block",
           color: "#ffffff",
           fontSize: "1.5rem",
           fontStyle: "italic",
@@ -55,7 +56,7 @@ const RotatingTagline = () => {
         }}
       >
         {TAGLINES[index]}
-      </p>
+      </span>
     </div>
   );
 };
