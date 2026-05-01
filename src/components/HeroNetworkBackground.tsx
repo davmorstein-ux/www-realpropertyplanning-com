@@ -170,10 +170,12 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
           const a = nodes[i];
           const b = nodes[j];
           const d = Math.hypot(a.x - b.x, a.y - b.y);
-          if (d > CONNECT_DIST) continue;
+          const key = `${i}-${j}`;
+          const isForced = forcedEdges.has(key);
+          if (d > CONNECT_DIST && !isForced) continue;
 
-          const fade = 1 - d / CONNECT_DIST;
-          const key = lineKey(i, j);
+          // For forced edges beyond CONNECT_DIST, hold a soft minimum fade
+          const fade = d <= CONNECT_DIST ? 1 - d / CONNECT_DIST : 0.25;
           const p = getOrCreatePulse(key);
 
           // update pulse state
