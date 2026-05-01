@@ -141,15 +141,23 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
 
     const lineKey = (i: number, j: number) => (i < j ? `${i}-${j}` : `${j}-${i}`);
 
+    const MAX_CONCURRENT_GLOWS = 3;
+
+    const randFadeDur = () => 3000 + Math.random() * 2000; // 3-5s
+    const randHoldDur = () => 1000 + Math.random() * 1000; // 1-2s
+    const randCooldown = () => 4000 + Math.random() * 8000;
+
     const getOrCreatePulse = (key: string): LinePulse => {
       let p = linePulses.get(key);
       if (!p) {
         p = {
-          phase: 0,
-          duration: 1500 + Math.random() * 1500,
-          delay: 0,
           active: false,
-          cooldown: Math.random() * 4000, // stagger initial activations
+          stage: 0,
+          stageElapsed: 0,
+          fadeInDur: randFadeDur(),
+          holdDur: randHoldDur(),
+          fadeOutDur: randFadeDur(),
+          cooldown: Math.random() * 6000, // staggered initial eligibility
         };
         linePulses.set(key, p);
       }
