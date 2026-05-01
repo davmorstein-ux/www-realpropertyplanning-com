@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import shellBg from "@/assets/professionals/clean-button-tile-shell.webp";
+import tileShell from "@/assets/professionals/clean-button-tile-shell.webp";
+import goldRing from "@/assets/professionals/gold-ring-overlay.webp";
 
 export interface ProfessionalImageTileData {
   src: string;
@@ -17,46 +18,50 @@ const ProfessionalImageTile = ({ tile }: { tile: ProfessionalImageTileData }) =>
       height: "280px",
       textDecoration: "none",
     }}>
-      <img src={shellBg} alt="" aria-hidden="true" style={{
+      {/* Layer 1: tile shell background */}
+      <img src={tileShell} alt="" aria-hidden="true" style={{
         width: "100%",
         height: "100%",
-        objectFit: "contain",
-        display: "block",
-        pointerEvents: "none",
+        position: "absolute",
+        top: 0,
+        left: 0,
+        objectFit: "fill",
       }} loading="lazy" />
 
-      {/* Circular photo with gold ring — masks baked-in rings */}
-      <div style={{
+      {/* Layer 2: circular photo, clipped to circle */}
+      <img src={tile.src} alt={tile.alt} style={{
         position: "absolute",
         top: "6%",
         left: "50%",
         transform: "translateX(-50%)",
-        width: "62%",
+        width: "68%",
         aspectRatio: "1",
         borderRadius: "50%",
         overflow: "hidden",
-        border: "4px solid #b8962e",
-      }}>
-        <img src={tile.src} alt={tile.alt} style={{
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
-          objectPosition: "center",
-          display: "block",
-        }} loading="lazy" />
-      </div>
+        objectFit: "cover",
+        objectPosition: "center",
+      }} loading="lazy" />
 
-      {/* Label */}
+      {/* Layer 3: gold ring overlay */}
+      <img src={goldRing} alt="" aria-hidden="true" style={{
+        position: "absolute",
+        top: "6%",
+        left: "50%",
+        transform: "translateX(-50%)",
+        width: "68%",
+        aspectRatio: "1",
+        pointerEvents: "none",
+      }} loading="lazy" />
+
+      {/* Layer 4: label text */}
       <span style={{
         position: "absolute",
         bottom: "7%",
-        left: "50%",
-        transform: "translateX(-50%)",
-        width: "90%",
+        width: "100%",
+        textAlign: "center",
         fontFamily: "Georgia, serif",
         fontSize: "1.1rem",
         fontWeight: 700,
-        textAlign: "center",
         color: "#1a2744",
         lineHeight: 1.3,
       }}>
