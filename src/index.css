@@ -1739,7 +1739,6 @@ img[src*="real-estate-website-globe-3d-icon-washington"] {
  * ================================================================== */
 :where(body, p, li, a, span, div, label, td, th, dd, dt, blockquote) {
   font-size: max(1em, 16px);
-  opacity: 1 !important;
 }
 :where(button, .btn, [role="button"], a.button) {
   font-size: max(1em, 15px);
@@ -1809,12 +1808,12 @@ img, svg, hr {
 }
 
 #rotating-tagline {
-  animation: taglineFade 4.5s ease-in-out forwards !important;
+  animation: taglineFade 4.5s ease-in-out forwards;
 }
 
 @keyframes taglineFade {
-  0%   { opacity: 0 !important; }
-  15%  { opacity: 1 !important; }
-  80%  { opacity: 1 !important; }
-  100% { opacity: 0 !important; }
+  0%   { opacity: 0; }
+  15%  { opacity: 1; }
+  80%  { opacity: 1; }
+  100% { opacity: 0; }
 }
