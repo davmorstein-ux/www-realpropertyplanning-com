@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
@@ -12,6 +12,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import GoldCheck3D from "@/components/GoldCheck3D";
 import HeroNetworkBackground from "@/components/HeroNetworkBackground";
+import { useReducedMotion } from "@/hooks/use-reduced-motion";
+import { useIsVisible } from "@/hooks/use-is-visible";
 
 import daveHeadshot from "@/assets/david-stein-real-estate-agent-seattle.webp";
 import aboutHeroLogo from "@/assets/real-property-planning-logo-v4.png";
@@ -30,27 +32,28 @@ const TAGLINES = [
 const About = () => {
   const [taglineIndex, setTaglineIndex] = useState(0);
   const [visible, setVisible] = useState(true);
+  const heroRef = useRef<HTMLElement>(null);
+  const heroVisible = useIsVisible(heroRef);
+  const reducedMotion = useReducedMotion();
 
   useEffect(() => {
+    // Skip rotation entirely when reduced motion is preferred or hero is off-screen
+    if (reducedMotion || !heroVisible) return;
+
     const DISPLAY = 4500;
     const FADE = 800;
     const CYCLE = DISPLAY + FADE * 2;
 
-    console.log("[Tagline] Starting with:", TAGLINES[0]);
     const interval = setInterval(() => {
       setVisible(false);
       setTimeout(() => {
-        setTaglineIndex((i) => {
-          const next = (i + 1) % TAGLINES.length;
-          console.log("[Tagline] Now showing:", TAGLINES[next]);
-          return next;
-        });
+        setTaglineIndex((i) => (i + 1) % TAGLINES.length);
         setVisible(true);
       }, FADE);
     }, CYCLE);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [reducedMotion, heroVisible]);
 
   return (
     <div className="min-h-screen bg-background">
