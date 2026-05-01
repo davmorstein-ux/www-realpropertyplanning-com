@@ -174,8 +174,6 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
           const isForced = forcedEdges.has(key);
           if (d > CONNECT_DIST && !isForced) continue;
 
-          // For forced edges beyond CONNECT_DIST, hold a soft minimum fade
-          const fade = d <= CONNECT_DIST ? 1 - d / CONNECT_DIST : 0.25;
           const p = getOrCreatePulse(key);
 
           // update pulse state
@@ -184,8 +182,9 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
             if (p.phase >= 1) {
               p.phase = 0;
               p.active = false;
-              p.cooldown = 800 + Math.random() * 3500;
-              p.duration = 1500 + Math.random() * 1500;
+              p.cooldown = 800 + Math.random() * 2500;
+              // 2-4 second glow cycle per line
+              p.duration = 2000 + Math.random() * 2000;
             }
           } else {
             p.cooldown -= dt;
@@ -198,20 +197,26 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
           // intensity: smooth 0 -> 1 -> 0 over phase
           const intensity = p.active ? Math.sin(p.phase * Math.PI) : 0;
 
-          // base + pulse blend
-          const baseR = 80, baseG = 150, baseB = 255, baseA = 0.3 * fade;
-          const glowR = 140, glowG = 210, glowB = 255, glowA = 0.9 * fade;
+          // Base values are CONSTANT — every line is always visible at >= 0.45
+          const baseR = 80, baseG = 150, baseB = 255, baseA = 0.45;
+          const glowR = 140, glowG = 210, glowB = 255, glowA = 0.95;
           const r = baseR + (glowR - baseR) * intensity;
           const g = baseG + (glowG - baseG) * intensity;
           const bl = baseB + (glowB - baseB) * intensity;
           const al = baseA + (glowA - baseA) * intensity;
 
+          ctx.save();
+          if (intensity > 0) {
+            ctx.shadowBlur = 6 * intensity;
+            ctx.shadowColor = "#88ccff";
+          }
           ctx.strokeStyle = `rgba(${r | 0}, ${g | 0}, ${bl | 0}, ${al})`;
-          ctx.lineWidth = 0.8;
+          ctx.lineWidth = 0.8 + 0.7 * intensity;
           ctx.beginPath();
           ctx.moveTo(a.x, a.y);
           ctx.lineTo(b.x, b.y);
           ctx.stroke();
+          ctx.restore();
         }
       }
 
