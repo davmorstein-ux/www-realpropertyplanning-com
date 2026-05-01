@@ -44,7 +44,7 @@ const About = () => {
               backgroundSize: "50%",
               backgroundPosition: "center center",
               backgroundRepeat: "repeat",
-              filter: "brightness(0.7) saturate(0.85)",
+              filter: "brightness(1.1) saturate(1.3) contrast(1.4)",
             }}
           />
 
