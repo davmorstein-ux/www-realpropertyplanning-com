@@ -29,8 +29,38 @@ const TAGLINES = [
   "Clarity when it matters most",
 ];
 
+const RotatingTagline = () => {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setIndex(i => (i + 1) % TAGLINES.length);
+    }, 4500);
+    return () => clearInterval(id);
+  }, []);
+
+  return (
+    <div style={{ height: "2.5rem", display: "flex", alignItems: "center", justifyContent: "center", marginTop: "16px" }}>
+      <p
+        key={index}
+        className="tagline-fade"
+        style={{
+          color: "#ffffff",
+          fontSize: "1.5rem",
+          fontStyle: "italic",
+          fontWeight: 600,
+          textAlign: "center",
+          textShadow: "0 2px 12px rgba(0,0,0,0.9)",
+          margin: 0,
+        }}
+      >
+        {TAGLINES[index]}
+      </p>
+    </div>
+  );
+};
+
 const About = () => {
-  const [taglineIndex, setTaglineIndex] = useState(0);
   const reducedMotion = useReducedMotion();
 
   useEffect(() => {
