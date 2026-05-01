@@ -38,7 +38,7 @@ const About = () => {
             style={{
               backgroundImage: `url(${aboutHeroBg})`,
               backgroundSize: "cover",
-              backgroundPosition: "center center",
+              backgroundPosition: "center 65%",
               backgroundRepeat: "no-repeat",
               filter: "brightness(1.4) contrast(1.1)",
             }}
