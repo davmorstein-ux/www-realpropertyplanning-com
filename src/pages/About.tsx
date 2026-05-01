@@ -30,16 +30,20 @@ const About = () => {
       <Header />
       <main id="main-content">
         {/* Hero */}
-        <section className="relative overflow-hidden bg-primary flex items-center justify-center min-h-[300px] md:min-h-[420px] lg:min-h-[480px]">
+        <section
+          className="relative overflow-hidden flex items-center justify-center min-h-[300px] md:min-h-[420px] lg:min-h-[480px]"
+          style={{ backgroundColor: "#050d1a" }}
+        >
           {/* Background image (filtered to brighten the logo and nodes) */}
           <div
             aria-hidden="true"
             className="absolute inset-0 z-0"
             style={{
               backgroundImage: `url(${aboutHeroBg})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center 65%",
+              backgroundSize: "75%",
+              backgroundPosition: "center center",
               backgroundRepeat: "no-repeat",
+              backgroundColor: "#050d1a",
               filter: "brightness(1.4) contrast(1.1)",
             }}
           />
