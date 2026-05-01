@@ -1808,7 +1808,7 @@ img, svg, hr {
 }
 
 #rotating-tagline {
-  animation: taglineFade 6s ease-in-out forwards;
+  animation: taglineFade 7.5s ease-in-out forwards;
 }
 
 @keyframes taglineFade {
