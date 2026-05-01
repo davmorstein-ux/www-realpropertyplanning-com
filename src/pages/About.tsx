@@ -94,8 +94,8 @@ const About = () => {
                 fontSize: "clamp(1.1rem, 2.8vw, 1.5rem)",
                 textShadow: "0 2px 10px rgba(0,0,0,0.9), 0 0 20px rgba(100,160,255,0.3)",
                 lineHeight: 1.5,
-                opacity: visible ? 1 : 0,
-                transition: "opacity 0.8s ease-in-out",
+                opacity: reducedMotion ? 1 : visible ? 1 : 0,
+                transition: reducedMotion ? "none" : "opacity 0.8s ease-in-out",
               }}
             >
               {TAGLINES[taglineIndex]}
