@@ -128,17 +128,14 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
 
       // Ghost nodes outside the canvas — invisible, but their connecting lines fade
       // toward the edge to suggest the network continues beyond view.
-      const GHOST_COUNT = 100;
-      const perSide = Math.ceil(GHOST_COUNT / 4);
-      const offsetRange = () => 20 + Math.random() * 180; // 20–200px outside edge
+      // Placed 100–300px outside each edge, distributed so every visible edge node
+      // gets multiple outward lines.
+      const perSide = 30; // 30 ghosts/side -> ~120 ghost nodes
+      const offsetRange = () => 100 + Math.random() * 200; // 100–300px outside edge
       for (let k = 0; k < perSide; k++) {
-        // top
         nodes.push({ x: Math.random() * width, y: -offsetRange(), r: 0, flare: 0, ghost: true });
-        // bottom
         nodes.push({ x: Math.random() * width, y: height + offsetRange(), r: 0, flare: 0, ghost: true });
-        // left
         nodes.push({ x: -offsetRange(), y: Math.random() * height, r: 0, flare: 0, ghost: true });
-        // right
         nodes.push({ x: width + offsetRange(), y: Math.random() * height, r: 0, flare: 0, ghost: true });
       }
 
