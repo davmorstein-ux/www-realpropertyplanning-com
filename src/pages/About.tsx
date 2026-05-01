@@ -36,10 +36,15 @@ const About = () => {
     const FADE = 800;
     const CYCLE = DISPLAY + FADE * 2;
 
+    console.log("[Tagline] Starting with:", TAGLINES[0]);
     const interval = setInterval(() => {
       setVisible(false);
       setTimeout(() => {
-        setTaglineIndex((i) => (i + 1) % TAGLINES.length);
+        setTaglineIndex((i) => {
+          const next = (i + 1) % TAGLINES.length;
+          console.log("[Tagline] Now showing:", TAGLINES[next]);
+          return next;
+        });
         setVisible(true);
       }, FADE);
     }, CYCLE);
