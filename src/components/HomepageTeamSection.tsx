@@ -35,13 +35,11 @@ const HomepageTeamSection = () => {
           </p>
         </div>
 
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(4, 300px)",
-          gap: "24px",
+        <div className="grid grid-cols-2 lg:grid-cols-4 justify-items-center" style={{
+          gap: "32px",
           justifyContent: "center",
-          maxWidth: "1380px",
           margin: "0 auto",
+          maxWidth: "960px",
         }}>
           {tiles.map((tile) => (
             <ProfessionalImageTile key={tile.href} tile={tile} />
