@@ -102,6 +102,19 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
         });
       }
 
+      // Loose ring of nodes surrounding the logo so it reads as the network hub.
+      const RING_COUNT = 14;
+      for (let k = 0; k < RING_COUNT; k++) {
+        // Even angle distribution with jitter so it doesn't look mechanical
+        const angle = (k / RING_COUNT) * Math.PI * 2 + (Math.random() - 0.5) * 0.35;
+        const radius = 180 + Math.random() * 100; // 180-280px
+        const x = cx + Math.cos(angle) * radius;
+        const y = cy + Math.sin(angle) * radius;
+        // Skip points that fall outside the hero
+        if (x < 6 || x > width - 6 || y < 6 || y > height - 6) continue;
+        nodes.push({ x, y, r: 2 + Math.random() * 1, flare: 0 });
+      }
+
       ensureConnectivity();
       buildEdgeList();
     };
