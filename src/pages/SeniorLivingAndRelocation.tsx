@@ -142,7 +142,7 @@ const SeniorLivingAndRelocation = () => {
                     <Link
                       key={option.title}
                       to={option.path}
-                      className="card-3d-blue group block no-underline w-[170px] h-[240px] sm:w-[180px] sm:h-[240px] overflow-hidden"
+                      className="card-3d-blue group block no-underline w-[200px] h-[220px] sm:w-[210px] sm:h-[220px] overflow-hidden"
                     >
                       <div className="card-3d-blue__inner h-full">
                         <div className="card-3d-blue__face h-full flex flex-col items-center overflow-hidden">
@@ -164,7 +164,7 @@ const SeniorLivingAndRelocation = () => {
                           </div>
                           {/* Label area — fills remaining space */}
                           <div className="flex-1 w-full flex items-center justify-center text-center p-2">
-                            <h3 className="m-0 font-serif text-[19px] sm:text-[14px] font-bold text-foreground group-hover:text-accent transition-colors text-center leading-tight">
+                            <h3 className="m-0 font-serif text-[19px] sm:text-[14px] font-bold text-foreground group-hover:text-accent transition-colors text-center" style={{ lineHeight: "1.2" }}>
                               {forcedLabelLines ? (
                                 <>
                                   <span className="block">{forcedLabelLines[0]}</span>
