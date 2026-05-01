@@ -3,44 +3,6 @@ import ServiceNavTileCard from "./ServiceNavTileCard";
 import ProfessionalImageTile, { type ProfessionalImageTileData } from "./ProfessionalImageTile";
 import { tileCategories } from "./service-nav-tiles-data";
 
-import imgAttorneys from "@/assets/professionals/attorneys-tile-washington-v2.webp";
-import imgCpas from "@/assets/professionals/cpas-tile-washington-v3.webp";
-import imgBroker from "@/assets/professionals/real-estate-broker-tile-washington.webp";
-import imgAppraiser from "@/assets/professionals/real-estate-appraiser-tile-washington.webp";
-import imgFinancial from "@/assets/professionals/financial-planning-tile-washington.webp";
-import imgLending from "@/assets/professionals/mortgage-lending-tile-washington.webp";
-import imgSeniorLiving from "@/assets/professionals/senior-living-tile-washington.webp";
-import imgSeniorMove from "@/assets/professionals/senior-move-managers-tile-washington.webp";
-import imgEstateLiquidation from "@/assets/professionals/estate-liquidation-tile-washington.webp";
-
-import imgExecutors from "@/assets/roles/executors-tile-washington-v2.webp";
-import imgTrustees from "@/assets/roles/trustees-tile-washington.webp";
-import imgWills from "@/assets/roles/wills-tile-washington-v2.webp";
-import imgPowerOfAttorney from "@/assets/roles/power-of-attorney-tile-washington.webp";
-import imgProbateTerms from "@/assets/roles/probate-terms-tile-washington.webp";
-import imgTheProcess from "@/assets/roles/the-probate-process-tile-washington.webp";
-
-import imgProbateSales from "@/assets/planning/probate-sales-tile-washington.webp";
-import imgSeniorPlacement from "@/assets/planning/senior-placement-tile-washington.webp";
-import imgHomeValues from "@/assets/planning/home-values-pricing-tile-washington.webp";
-import imgSeniorHomeSales from "@/assets/planning/senior-home-sales-tile-washington.webp";
-import imgPayingSeniorLiving from "@/assets/planning/paying-for-senior-living-tile-washington.webp";
-import imgServiceAreas from "@/assets/planning/service-areas-tile-washington.webp";
-import imgGuidesResources from "@/assets/planning/guides-resources-tile-washington.webp";
-import imgGrayDivorce from "@/assets/planning/gray-divorce-tile-washington.webp";
-
-const professionalImageTiles: ProfessionalImageTileData[] = [
-  { alt: "Probate and estate attorneys real estate support Washington State", href: "/for-attorneys", src: imgAttorneys, label: "Attorneys" },
-  { alt: "CPA estate and probate real estate guidance Washington State", href: "/for-cpas", src: imgCpas, label: "CPAs" },
-  { alt: "Real estate broker probate and senior transition sales Washington State", href: "/realtor", src: imgBroker, label: "Real Estate Broker" },
-  { alt: "Certified residential appraiser estate and probate valuations Washington State", href: "/real-estate-appraiser", src: imgAppraiser, label: "Real Estate Appraiser" },
-  { alt: "Financial planning real estate coordination estate transitions", href: "/for-financial-planners", src: imgFinancial, label: "Financial Planning" },
-  { alt: "Mortgage lending guidance estate and inherited property Washington State", href: "/lenders-and-financing-specialists", src: imgLending, label: "Mortgage Lending" },
-  { alt: "Senior living placement and transition guidance Puget Sound Washington", href: "/senior-living-and-relocation", src: imgSeniorLiving, label: "Senior Living" },
-  { alt: "Senior move managers relocation services Washington State", href: "/senior-move-managers", src: imgSeniorMove, label: "Senior Move Managers" },
-  { alt: "Estate liquidation services Puget Sound Washington State", href: "/estate-liquidation", src: imgEstateLiquidation, label: "Estate Liquidation" },
-];
-
 const rolesImageTiles: ProfessionalImageTileData[] = [
   { alt: "Executors roles and responsibilities probate Washington State", href: "/executors", src: imgExecutors, label: "Executors" },
   { alt: "Trustees roles and responsibilities estate Washington State", href: "/trustees", src: imgTrustees, label: "Trustees" },
