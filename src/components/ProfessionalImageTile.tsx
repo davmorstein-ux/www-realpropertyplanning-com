@@ -14,8 +14,8 @@ const ProfessionalImageTile = ({ tile }: { tile: ProfessionalImageTileData }) =>
     <Link to={tile.href} aria-label={tile.alt} style={{
       display: "block",
       position: "relative",
-      width: "220px",
-      height: "280px",
+      width: "300px",
+      height: "360px",
       textDecoration: "none",
     }}>
       {/* Layer 1: tile shell background */}
@@ -28,27 +28,33 @@ const ProfessionalImageTile = ({ tile }: { tile: ProfessionalImageTileData }) =>
         objectFit: "fill",
       }} loading="lazy" />
 
-      {/* Layer 2: circular photo, clipped to circle */}
-      <img src={tile.src} alt={tile.alt} style={{
+      {/* Layer 2: circular photo, clipped to circle via wrapper div */}
+      <div style={{
         position: "absolute",
-        top: "6%",
+        top: "5%",
         left: "50%",
         transform: "translateX(-50%)",
-        width: "68%",
+        width: "75%",
         aspectRatio: "1",
         borderRadius: "50%",
         overflow: "hidden",
-        objectFit: "cover",
-        objectPosition: "center",
-      }} loading="lazy" />
+      }}>
+        <img src={tile.src} alt={tile.alt} style={{
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          objectPosition: "center",
+          display: "block",
+        }} loading="lazy" />
+      </div>
 
       {/* Layer 3: gold ring overlay */}
       <img src={goldRing} alt="" aria-hidden="true" style={{
         position: "absolute",
-        top: "6%",
+        top: "5%",
         left: "50%",
         transform: "translateX(-50%)",
-        width: "68%",
+        width: "75%",
         aspectRatio: "1",
         pointerEvents: "none",
       }} loading="lazy" />
@@ -56,11 +62,11 @@ const ProfessionalImageTile = ({ tile }: { tile: ProfessionalImageTileData }) =>
       {/* Layer 4: label text */}
       <span style={{
         position: "absolute",
-        bottom: "7%",
+        bottom: "6%",
         width: "100%",
         textAlign: "center",
         fontFamily: "Georgia, serif",
-        fontSize: "1.1rem",
+        fontSize: "1.2rem",
         fontWeight: 700,
         color: "#1a2744",
         lineHeight: 1.3,
