@@ -10,7 +10,6 @@ import StatewideSupport from "@/components/StatewideSupport";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import GoldCheck3D from "@/components/GoldCheck3D";
-import HubAndSpoke from "@/components/HubAndSpoke";
 import NetworkCanvas from "@/components/NetworkCanvas";
 
 import daveHeadshot from "@/assets/david-stein-real-estate-agent-seattle.webp";
@@ -54,9 +53,6 @@ const About = () => {
             </div>
           </div>
         </section>
-
-        {/* Hub and Spoke Diagram — restored */}
-        <HubAndSpoke />
 
         {/* Headshot — moved here, above Vision & Mission */}
         <section className="pt-12 pb-4 bg-background">
