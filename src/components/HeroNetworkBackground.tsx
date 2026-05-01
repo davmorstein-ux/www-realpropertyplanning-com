@@ -118,6 +118,30 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
         nodes.push({ x, y, r: 2 + Math.random() * 1, flare: 0 });
       }
 
+      // Cluster of nodes below the logo (lower-center) for visual weight under the hub.
+      const BOTTOM_COUNT = 11;
+      for (let k = 0; k < BOTTOM_COUNT; k++) {
+        const x = width * (0.30 + Math.random() * 0.40); // 30%-70%
+        const y = height * (0.60 + Math.random() * 0.35); // 60%-95%
+        nodes.push({ x, y, r: 2 + Math.random() * 1, flare: 0 });
+      }
+
+      // Ghost nodes outside the canvas — invisible, but their connecting lines fade
+      // toward the edge to suggest the network continues beyond view.
+      const GHOST_COUNT = 100;
+      const perSide = Math.ceil(GHOST_COUNT / 4);
+      const offsetRange = () => 20 + Math.random() * 180; // 20–200px outside edge
+      for (let k = 0; k < perSide; k++) {
+        // top
+        nodes.push({ x: Math.random() * width, y: -offsetRange(), r: 0, flare: 0, ghost: true });
+        // bottom
+        nodes.push({ x: Math.random() * width, y: height + offsetRange(), r: 0, flare: 0, ghost: true });
+        // left
+        nodes.push({ x: -offsetRange(), y: Math.random() * height, r: 0, flare: 0, ghost: true });
+        // right
+        nodes.push({ x: width + offsetRange(), y: Math.random() * height, r: 0, flare: 0, ghost: true });
+      }
+
       ensureConnectivity();
       buildEdgeList();
     };
