@@ -296,15 +296,19 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
 
     const spawnSignal = () => {
       if (signals.length >= MAX_CONCURRENT_SIGNALS) return;
-      if (edgeList.length === 0) return;
-      // Try a few times to pick an edge that's not already carrying a signal
+      const pool = edgeList.length + ghostEdgeList.length;
+      if (pool === 0) return;
       const busy = new Set<string>();
       for (const s of signals) {
         const key = s.a < s.b ? `${s.a}-${s.b}` : `${s.b}-${s.a}`;
         busy.add(key);
       }
       for (let attempt = 0; attempt < 10; attempt++) {
-        const e = edgeList[Math.floor(Math.random() * edgeList.length)];
+        // ~20% of signals come from the ghost pool so the network feels alive at edges.
+        const fromGhost = ghostEdgeList.length > 0 && Math.random() < 0.2;
+        const list = fromGhost ? ghostEdgeList : edgeList;
+        if (list.length === 0) continue;
+        const e = list[Math.floor(Math.random() * list.length)];
         if (busy.has(e.key)) continue;
         const reverse = Math.random() < 0.5;
         signals.push({
