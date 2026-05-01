@@ -32,16 +32,15 @@ const TAGLINES = [
 const About = () => {
   const [taglineIndex, setTaglineIndex] = useState(0);
   const heroRef = useRef<HTMLElement>(null);
-  const heroVisible = useIsVisible(heroRef);
   const reducedMotion = useReducedMotion();
 
   useEffect(() => {
-    if (reducedMotion || !heroVisible) return;
+    if (reducedMotion) return;
     const timer = setInterval(() => {
       setTaglineIndex((prev) => (prev + 1) % TAGLINES.length);
     }, 4500);
     return () => clearInterval(timer);
-  }, [reducedMotion, heroVisible]);
+  }, [reducedMotion]);
 
   return (
     <div className="min-h-screen bg-background">
