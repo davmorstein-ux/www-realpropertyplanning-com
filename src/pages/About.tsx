@@ -13,7 +13,8 @@ import GoldCheck3D from "@/components/GoldCheck3D";
 import NetworkCanvas from "@/components/NetworkCanvas";
 
 import daveHeadshot from "@/assets/david-stein-real-estate-agent-seattle.webp";
-import aboutHeroBg from "@/assets/about-hero-network-bg.png";
+import aboutHeroBg from "@/assets/about-hero-network-background.png";
+import aboutHeroLogo from "@/assets/real-property-planning-logo-v4.png";
 import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconEmail3d from "@/assets/icons/real-estate-email-contact-icon-washington.webp";
@@ -31,24 +32,29 @@ const About = () => {
       <main id="main-content">
         {/* Hero */}
         <section
-          className="relative overflow-hidden flex items-center justify-center min-h-[300px] md:min-h-[420px] lg:min-h-[480px]"
-          style={{ backgroundColor: "#050d1a" }}
+          className="relative overflow-hidden w-full h-[260px] md:h-[420px]"
+          style={{
+            backgroundImage: `url(${aboutHeroBg})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center center",
+            backgroundRepeat: "no-repeat",
+            backgroundColor: "#050d1a",
+          }}
         >
-          {/* Background image (filtered to brighten the logo and nodes) */}
-          <div
-            aria-hidden="true"
-            className="absolute inset-0 z-0"
-            style={{
-              backgroundImage: `url(${aboutHeroBg})`,
-              backgroundSize: "75%",
-              backgroundPosition: "center center",
-              backgroundRepeat: "no-repeat",
-              backgroundColor: "#050d1a",
-              filter: "brightness(1.4) contrast(1.1)",
-            }}
-          />
-          {/* Animated network overlay */}
-          <NetworkCanvas className="z-[2]" />
+          {/* Pulsing line animation overlay */}
+          <NetworkCanvas className="z-[1]" />
+
+          {/* Centered logo */}
+          <div className="absolute inset-0 z-[2] flex items-center justify-center">
+            <img
+              src={aboutHeroLogo}
+              alt="Real Property Planning"
+              className="w-[220px] md:w-[380px] h-auto object-contain"
+              loading="eager"
+              fetchPriority="high"
+            />
+          </div>
+
           {/* Visually hidden h1 for SEO/accessibility */}
           <h1 className="sr-only">About Real Property Planning</h1>
         </section>
