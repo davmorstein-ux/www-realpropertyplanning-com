@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
@@ -12,6 +12,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import GoldCheck3D from "@/components/GoldCheck3D";
 import HeroNetworkBackground from "@/components/HeroNetworkBackground";
+import { useReducedMotion } from "@/hooks/use-reduced-motion";
+import { useIsVisible } from "@/hooks/use-is-visible";
 
 import daveHeadshot from "@/assets/david-stein-real-estate-agent-seattle.webp";
 import aboutHeroLogo from "@/assets/real-property-planning-logo-v4.png";
@@ -30,27 +32,28 @@ const TAGLINES = [
 const About = () => {
   const [taglineIndex, setTaglineIndex] = useState(0);
   const [visible, setVisible] = useState(true);
+  const heroRef = useRef<HTMLElement>(null);
+  const heroVisible = useIsVisible(heroRef);
+  const reducedMotion = useReducedMotion();
 
   useEffect(() => {
+    // Skip rotation entirely when reduced motion is preferred or hero is off-screen
+    if (reducedMotion || !heroVisible) return;
+
     const DISPLAY = 4500;
     const FADE = 800;
     const CYCLE = DISPLAY + FADE * 2;
 
-    console.log("[Tagline] Starting with:", TAGLINES[0]);
     const interval = setInterval(() => {
       setVisible(false);
       setTimeout(() => {
-        setTaglineIndex((i) => {
-          const next = (i + 1) % TAGLINES.length;
-          console.log("[Tagline] Now showing:", TAGLINES[next]);
-          return next;
-        });
+        setTaglineIndex((i) => (i + 1) % TAGLINES.length);
         setVisible(true);
       }, FADE);
     }, CYCLE);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [reducedMotion, heroVisible]);
 
   return (
     <div className="min-h-screen bg-background">
@@ -64,11 +67,12 @@ const About = () => {
       <main id="main-content">
         {/* Hero */}
         <section
+          ref={heroRef}
           className="relative overflow-hidden w-full h-[340px] md:h-[480px]"
           style={{ backgroundColor: "#020810" }}
         >
           {/* Programmatic network canvas background */}
-          <HeroNetworkBackground />
+          <HeroNetworkBackground paused={!heroVisible || reducedMotion} />
 
           {/* Centered logo + tagline */}
           <div className="absolute inset-0 z-[2] flex flex-col items-center justify-center">
@@ -90,8 +94,8 @@ const About = () => {
                 fontSize: "clamp(1.1rem, 2.8vw, 1.5rem)",
                 textShadow: "0 2px 10px rgba(0,0,0,0.9), 0 0 20px rgba(100,160,255,0.3)",
                 lineHeight: 1.5,
-                opacity: visible ? 1 : 0,
-                transition: "opacity 0.8s ease-in-out",
+                opacity: reducedMotion ? 1 : visible ? 1 : 0,
+                transition: reducedMotion ? "none" : "opacity 0.8s ease-in-out",
               }}
             >
               {TAGLINES[taglineIndex]}
@@ -111,7 +115,7 @@ const About = () => {
                   src={daveHeadshot}
                   alt="David Stein licensed real estate broker and certified appraiser Kirkland Washington"
                   className="w-full h-full object-cover object-top"
-                  loading="eager"
+                  loading="lazy"
                 />
               </div>
               <p className="mt-4 font-serif text-4xl text-foreground font-bold leading-tight text-center">
