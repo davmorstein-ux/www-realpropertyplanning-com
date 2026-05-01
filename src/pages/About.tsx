@@ -43,7 +43,7 @@ const RotatingTagline = () => {
     <div style={{ height: "2.5rem", display: "flex", alignItems: "center", justifyContent: "center", marginTop: "16px" }}>
       <span
         key={index}
-        className="tagline-fade"
+        id="rotating-tagline"
         style={{
           display: "block",
           color: "#ffffff",
