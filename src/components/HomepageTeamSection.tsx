@@ -20,6 +20,52 @@ const tiles = [
   { img: imgEstateLiquidation, label: "Estate Liquidation" },
 ];
 
+const ServiceTile = ({ image, label, alt }: { image: string; label: string; alt: string }) => (
+  <div style={{
+    width: "220px",
+    height: "280px",
+    backgroundColor: "#faf8f4",
+    borderRadius: "16px",
+    border: "2px solid rgba(180, 140, 50, 0.4)",
+    boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "flex-start",
+    padding: "20px 12px 12px 12px",
+    gap: "16px",
+  }}>
+    <div style={{
+      width: "160px",
+      height: "160px",
+      borderRadius: "50%",
+      overflow: "hidden",
+      border: "4px solid #b8962e",
+      flexShrink: 0,
+    }}>
+      <img src={image} alt={alt} style={{ width: "100%", height: "100%", objectFit: "cover" }} loading="lazy" />
+    </div>
+    <div style={{
+      height: "48px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+    }}>
+      <p style={{
+        fontFamily: "serif",
+        fontSize: "1.1rem",
+        fontWeight: 600,
+        textAlign: "center",
+        color: "#1a2744",
+        margin: 0,
+        lineHeight: 1.3,
+      }}>
+        {label}
+      </p>
+    </div>
+  </div>
+);
+
 const HomepageTeamSection = () => {
   return (
     <section className="py-16 lg:py-24 bg-background">
@@ -33,26 +79,16 @@ const HomepageTeamSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto justify-items-center">
+        <div style={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "center",
+          gap: "24px",
+          maxWidth: "1060px",
+          margin: "0 auto",
+        }}>
           {tiles.map((tile) => (
-            <div
-              key={tile.label}
-              className="w-56 h-72 bg-[#faf8f4] rounded-2xl border-2 border-yellow-700/40 shadow-md flex flex-col items-center justify-start p-4 gap-3"
-            >
-              <div className="w-44 h-44 rounded-full overflow-hidden border-4 border-yellow-600 shrink-0">
-                <img
-                  src={tile.img}
-                  alt={tile.label}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
-              </div>
-              <div className="h-12 flex items-center justify-center">
-                <span className="font-serif text-lg font-semibold text-center text-primary leading-tight">
-                  {tile.label}
-                </span>
-              </div>
-            </div>
+            <ServiceTile key={tile.label} image={tile.img} label={tile.label} alt={tile.label} />
           ))}
         </div>
       </div>
