@@ -35,7 +35,7 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
     const NODE_COUNT = 75;
     const LEFT_EXTRA_COUNT = 12; // extra nodes seeded into the left third
     const CONNECT_DIST = 320;
-    const MAX_CONCURRENT_SIGNALS = 3;
+    const MAX_CONCURRENT_SIGNALS = 10;
 
     let nodes: Node[] = [];
     const forcedEdges = new Set<string>();
