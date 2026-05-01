@@ -95,25 +95,7 @@ const About = () => {
                   "brightness(1.4) contrast(1.15) drop-shadow(0 0 12px rgba(100,160,255,0.5))",
               }}
             />
-            <style>{`@keyframes fadeInOut { 0% { opacity: 0; } 10% { opacity: 1; } 80% { opacity: 1; } 100% { opacity: 0; } }`}</style>
-            <p
-              key={taglineIndex}
-              style={{
-                animation: "fadeInOut 4.5s ease-in-out forwards",
-                color: "#ffffff",
-                fontSize: "1.5rem",
-                fontStyle: "italic",
-                fontWeight: 600,
-                textAlign: "center",
-                textShadow: "0 2px 12px rgba(0,0,0,0.9)",
-                margin: 0,
-                marginTop: "16px",
-                position: "relative",
-                zIndex: 20,
-              }}
-            >
-              {TAGLINES[taglineIndex]}
-            </p>
+            <RotatingTagline />
           </div>
 
           {/* Visually hidden h1 for SEO/accessibility */}
