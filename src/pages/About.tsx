@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 import GoldCheck3D from "@/components/GoldCheck3D";
 import HeroNetworkBackground from "@/components/HeroNetworkBackground";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
-import { useIsVisible } from "@/hooks/use-is-visible";
+
 
 import daveHeadshot from "@/assets/david-stein-real-estate-agent-seattle.webp";
 import aboutHeroLogo from "@/assets/real-property-planning-logo-v4.png";
@@ -32,16 +32,15 @@ const TAGLINES = [
 const About = () => {
   const [taglineIndex, setTaglineIndex] = useState(0);
   const heroRef = useRef<HTMLElement>(null);
-  const heroVisible = useIsVisible(heroRef);
   const reducedMotion = useReducedMotion();
 
   useEffect(() => {
-    if (reducedMotion || !heroVisible) return;
+    if (reducedMotion) return;
     const timer = setInterval(() => {
       setTaglineIndex((prev) => (prev + 1) % TAGLINES.length);
     }, 4500);
     return () => clearInterval(timer);
-  }, [reducedMotion, heroVisible]);
+  }, [reducedMotion]);
 
   return (
     <div className="min-h-screen bg-background">
@@ -60,7 +59,7 @@ const About = () => {
           style={{ backgroundColor: "#020810" }}
         >
           {/* Programmatic network canvas background */}
-          <HeroNetworkBackground paused={!heroVisible || reducedMotion} />
+          <HeroNetworkBackground paused={reducedMotion} />
 
           {/* Centered logo + tagline */}
           <div className="absolute inset-0 z-[2] flex flex-col items-center justify-center">
