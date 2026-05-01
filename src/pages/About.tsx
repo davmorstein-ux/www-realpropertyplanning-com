@@ -90,10 +90,11 @@ const About = () => {
             <p
               className="mt-5 md:mt-8 px-6 text-center font-serif italic select-none"
               style={{
-                color: "#c8d8f0",
-                fontSize: "clamp(1.1rem, 2.8vw, 1.5rem)",
-                textShadow: "0 2px 10px rgba(0,0,0,0.9), 0 0 20px rgba(100,160,255,0.3)",
+                color: "#e8f0ff",
+                fontSize: "clamp(1.15rem, 3vw, 1.6rem)",
+                textShadow: "0 0 16px rgba(0,0,0,1), 0 0 30px rgba(0,0,0,0.8), 0 0 8px rgba(100,170,255,0.4)",
                 lineHeight: 1.5,
+                letterSpacing: "0.02em",
                 opacity: reducedMotion ? 1 : visible ? 1 : 0,
                 transition: reducedMotion ? "none" : "opacity 0.8s ease-in-out",
               }}
