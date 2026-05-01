@@ -6,6 +6,8 @@ interface Node {
   r: number;
   // brief flare added when a signal arrives (intensity 0..1)
   flare: number;
+  // ghost nodes live just outside the canvas; never drawn, used to extend lines off-edge
+  ghost?: boolean;
 }
 
 interface Signal {
@@ -38,6 +40,7 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
     let nodes: Node[] = [];
     const forcedEdges = new Set<string>();
     let edgeList: { i: number; j: number; key: string }[] = [];
+    let ghostEdgeList: { i: number; j: number; key: string }[] = []; // edges where exactly one endpoint is a ghost
     const signals: Signal[] = [];
 
     const initNodes = () => {
@@ -115,6 +118,30 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
         nodes.push({ x, y, r: 2 + Math.random() * 1, flare: 0 });
       }
 
+      // Cluster of nodes below the logo (lower-center) for visual weight under the hub.
+      const BOTTOM_COUNT = 11;
+      for (let k = 0; k < BOTTOM_COUNT; k++) {
+        const x = width * (0.30 + Math.random() * 0.40); // 30%-70%
+        const y = height * (0.60 + Math.random() * 0.35); // 60%-95%
+        nodes.push({ x, y, r: 2 + Math.random() * 1, flare: 0 });
+      }
+
+      // Ghost nodes outside the canvas — invisible, but their connecting lines fade
+      // toward the edge to suggest the network continues beyond view.
+      const GHOST_COUNT = 100;
+      const perSide = Math.ceil(GHOST_COUNT / 4);
+      const offsetRange = () => 20 + Math.random() * 180; // 20–200px outside edge
+      for (let k = 0; k < perSide; k++) {
+        // top
+        nodes.push({ x: Math.random() * width, y: -offsetRange(), r: 0, flare: 0, ghost: true });
+        // bottom
+        nodes.push({ x: Math.random() * width, y: height + offsetRange(), r: 0, flare: 0, ghost: true });
+        // left
+        nodes.push({ x: -offsetRange(), y: Math.random() * height, r: 0, flare: 0, ghost: true });
+        // right
+        nodes.push({ x: width + offsetRange(), y: Math.random() * height, r: 0, flare: 0, ghost: true });
+      }
+
       ensureConnectivity();
       buildEdgeList();
     };
@@ -122,20 +149,26 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
     const ensureConnectivity = () => {
       forcedEdges.clear();
       const n = nodes.length;
-      const neighborCount: number[] = new Array(n).fill(0);
-      for (let i = 0; i < n; i++) {
-        for (let j = i + 1; j < n; j++) {
+      // Build a list of visible-node indices to operate on (ignore ghosts).
+      const vis: number[] = [];
+      for (let i = 0; i < n; i++) if (!nodes[i].ghost) vis.push(i);
+
+      const neighborCount = new Map<number, number>();
+      for (const i of vis) neighborCount.set(i, 0);
+      for (let a = 0; a < vis.length; a++) {
+        for (let b = a + 1; b < vis.length; b++) {
+          const i = vis[a], j = vis[b];
           const d = Math.hypot(nodes[i].x - nodes[j].x, nodes[i].y - nodes[j].y);
           if (d <= CONNECT_DIST) {
-            neighborCount[i]++;
-            neighborCount[j]++;
+            neighborCount.set(i, (neighborCount.get(i) || 0) + 1);
+            neighborCount.set(j, (neighborCount.get(j) || 0) + 1);
           }
         }
       }
-      for (let i = 0; i < n; i++) {
-        if (neighborCount[i] >= 2) continue;
+      for (const i of vis) {
+        if ((neighborCount.get(i) || 0) >= 2) continue;
         const dists: { j: number; d: number }[] = [];
-        for (let j = 0; j < n; j++) {
+        for (const j of vis) {
           if (j === i) continue;
           dists.push({ j, d: Math.hypot(nodes[i].x - nodes[j].x, nodes[i].y - nodes[j].y) });
         }
@@ -145,28 +178,37 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
           const key = i < j ? `${i}-${j}` : `${j}-${i}`;
           if (!forcedEdges.has(key)) {
             forcedEdges.add(key);
-            neighborCount[i]++;
-            neighborCount[j]++;
+            neighborCount.set(i, (neighborCount.get(i) || 0) + 1);
+            neighborCount.set(j, (neighborCount.get(j) || 0) + 1);
           }
         }
       }
-      const parent = Array.from({ length: n }, (_, i) => i);
-      const find = (x: number): number => (parent[x] === x ? x : (parent[x] = find(parent[x])));
+      // Union-find over visible nodes only.
+      const parent = new Map<number, number>();
+      for (const i of vis) parent.set(i, i);
+      const find = (x: number): number => {
+        const px = parent.get(x)!;
+        if (px === x) return x;
+        const r = find(px);
+        parent.set(x, r);
+        return r;
+      };
       const union = (a: number, b: number) => {
         const ra = find(a), rb = find(b);
-        if (ra !== rb) parent[ra] = rb;
+        if (ra !== rb) parent.set(ra, rb);
       };
-      for (let i = 0; i < n; i++) {
-        for (let j = i + 1; j < n; j++) {
+      for (let a = 0; a < vis.length; a++) {
+        for (let b = a + 1; b < vis.length; b++) {
+          const i = vis[a], j = vis[b];
           const d = Math.hypot(nodes[i].x - nodes[j].x, nodes[i].y - nodes[j].y);
           const key = `${i}-${j}`;
           if (d <= CONNECT_DIST || forcedEdges.has(key)) union(i, j);
         }
       }
-      let safety = n;
+      let safety = vis.length;
       while (safety-- > 0) {
         const roots = new Map<number, number[]>();
-        for (let i = 0; i < n; i++) {
+        for (const i of vis) {
           const r = find(i);
           if (!roots.has(r)) roots.set(r, []);
           roots.get(r)!.push(i);
@@ -192,12 +234,35 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
 
     const buildEdgeList = () => {
       edgeList = [];
-      for (let i = 0; i < nodes.length; i++) {
-        for (let j = i + 1; j < nodes.length; j++) {
+      ghostEdgeList = [];
+      const n = nodes.length;
+      // Visible-to-visible edges (existing logic).
+      for (let i = 0; i < n; i++) {
+        if (nodes[i].ghost) continue;
+        for (let j = i + 1; j < n; j++) {
+          if (nodes[j].ghost) continue;
           const d = Math.hypot(nodes[i].x - nodes[j].x, nodes[i].y - nodes[j].y);
           const key = `${i}-${j}`;
           if (d > CONNECT_DIST && !forcedEdges.has(key)) continue;
           edgeList.push({ i, j, key });
+        }
+      }
+      // For each ghost node, link to its 1–2 nearest visible nodes within ~CONNECT_DIST.
+      for (let i = 0; i < n; i++) {
+        if (!nodes[i].ghost) continue;
+        const dists: { j: number; d: number }[] = [];
+        for (let j = 0; j < n; j++) {
+          if (i === j || nodes[j].ghost) continue;
+          const d = Math.hypot(nodes[i].x - nodes[j].x, nodes[i].y - nodes[j].y);
+          if (d > CONNECT_DIST) continue;
+          dists.push({ j, d });
+        }
+        dists.sort((a, b) => a.d - b.d);
+        const links = Math.min(dists.length, 1 + (Math.random() < 0.4 ? 1 : 0));
+        for (let k = 0; k < links; k++) {
+          const j = dists[k].j;
+          const a = Math.min(i, j), b = Math.max(i, j);
+          ghostEdgeList.push({ i: a, j: b, key: `${a}-${b}` });
         }
       }
     };
@@ -231,15 +296,19 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
 
     const spawnSignal = () => {
       if (signals.length >= MAX_CONCURRENT_SIGNALS) return;
-      if (edgeList.length === 0) return;
-      // Try a few times to pick an edge that's not already carrying a signal
+      const pool = edgeList.length + ghostEdgeList.length;
+      if (pool === 0) return;
       const busy = new Set<string>();
       for (const s of signals) {
         const key = s.a < s.b ? `${s.a}-${s.b}` : `${s.b}-${s.a}`;
         busy.add(key);
       }
       for (let attempt = 0; attempt < 10; attempt++) {
-        const e = edgeList[Math.floor(Math.random() * edgeList.length)];
+        // ~20% of signals come from the ghost pool so the network feels alive at edges.
+        const fromGhost = ghostEdgeList.length > 0 && Math.random() < 0.2;
+        const list = fromGhost ? ghostEdgeList : edgeList;
+        if (list.length === 0) continue;
+        const e = list[Math.floor(Math.random() * list.length)];
         if (busy.has(e.key)) continue;
         const reverse = Math.random() < 0.5;
         signals.push({
@@ -311,7 +380,7 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
         if (tr.headTime > 1200) trails.delete(key);
       }
 
-      // ---- Draw base lines ----
+      // ---- Draw base lines (visible-to-visible) ----
       for (const e of edgeList) {
         const a = nodes[e.i];
         const b = nodes[e.j];
@@ -320,6 +389,40 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
         ctx.beginPath();
         ctx.moveTo(a.x, a.y);
         ctx.lineTo(b.x, b.y);
+        ctx.stroke();
+      }
+
+      // ---- Draw ghost edges (one endpoint outside canvas) with edge-fading gradient ----
+      // Strategy: draw from the visible node to the canvas-boundary intersection of
+      // the line, with a linear gradient that goes 0.4 -> 0 across that segment.
+      for (const e of ghostEdgeList) {
+        const ni = nodes[e.i];
+        const nj = nodes[e.j];
+        const visible = ni.ghost ? nj : ni;
+        const ghost = ni.ghost ? ni : nj;
+
+        // Find intersection of the segment (visible -> ghost) with the canvas border.
+        const dx = ghost.x - visible.x;
+        const dy = ghost.y - visible.y;
+        // Parametric tt in (0,1] where ghost lies; we want the smallest tt where the
+        // point exits the rect [0,width] x [0,height].
+        let tt = 1;
+        if (dx > 0) tt = Math.min(tt, (width - visible.x) / dx);
+        else if (dx < 0) tt = Math.min(tt, (0 - visible.x) / dx);
+        if (dy > 0) tt = Math.min(tt, (height - visible.y) / dy);
+        else if (dy < 0) tt = Math.min(tt, (0 - visible.y) / dy);
+        tt = Math.max(0, Math.min(1, tt));
+        const ex = visible.x + dx * tt;
+        const ey = visible.y + dy * tt;
+
+        const grad = ctx.createLinearGradient(visible.x, visible.y, ex, ey);
+        grad.addColorStop(0, "rgba(80, 150, 255, 0.4)");
+        grad.addColorStop(1, "rgba(80, 150, 255, 0)");
+        ctx.strokeStyle = grad;
+        ctx.lineWidth = 0.8;
+        ctx.beginPath();
+        ctx.moveTo(visible.x, visible.y);
+        ctx.lineTo(ex, ey);
         ctx.stroke();
       }
 
@@ -375,7 +478,8 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
 
       // ---- Draw nodes (with optional flare) ----
       for (const n of nodes) {
-        // Flare decays over ~500ms (using a simple exponential)
+        if (n.ghost) continue; // ghost nodes are never drawn
+        // Flare decays over ~500ms
         if (n.flare > 0) n.flare = Math.max(0, n.flare - dt / 500);
         ctx.save();
         ctx.shadowBlur = 15 + 5 * n.flare; // 15 -> 20 at peak flare
