@@ -42,7 +42,6 @@ const About = () => {
 
     const DISPLAY = 4500;
     const FADE = 800;
-    const CYCLE = DISPLAY + FADE * 2;
 
     const interval = setInterval(() => {
       setVisible(false);
@@ -50,7 +49,7 @@ const About = () => {
         setTaglineIndex((i) => (i + 1) % TAGLINES.length);
         setVisible(true);
       }, FADE);
-    }, CYCLE);
+    }, DISPLAY + FADE);
 
     return () => clearInterval(interval);
   }, [reducedMotion, heroVisible]);
@@ -87,28 +86,21 @@ const About = () => {
                   "brightness(1.4) contrast(1.15) drop-shadow(0 0 12px rgba(100,160,255,0.5))",
               }}
             />
-            <div style={{
-              backgroundColor: "rgba(0,0,0,0.75)",
-              borderRadius: "8px",
-              padding: "12px 28px",
-              marginTop: "16px",
-              zIndex: 20,
+            <p style={{
               position: "relative",
+              zIndex: 20,
+              marginTop: "16px",
+              color: "#ffffff",
+              opacity: reducedMotion ? 1 : visible ? 1 : 0,
+              transition: reducedMotion ? "none" : "opacity 0.8s ease-in-out",
+              fontSize: "1.5rem",
+              fontStyle: "italic",
+              fontWeight: 600,
+              textAlign: "center",
+              textShadow: "0 2px 12px rgba(0,0,0,0.9), 0 0 4px rgba(0,0,0,0.9)",
             }}>
-              <p style={{
-                color: "#ffffff",
-                opacity: reducedMotion ? 1 : visible ? 1 : 0,
-                transition: reducedMotion ? "none" : "opacity 0.8s ease-in-out",
-                fontSize: "1.5rem",
-                fontStyle: "italic",
-                fontWeight: 600,
-                textAlign: "center",
-                margin: 0,
-                whiteSpace: "nowrap",
-              }}>
-                {TAGLINES[taglineIndex]}
-              </p>
-            </div>
+              {TAGLINES[taglineIndex]}
+            </p>
           </div>
 
           {/* Visually hidden h1 for SEO/accessibility */}
