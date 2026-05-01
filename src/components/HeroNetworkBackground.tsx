@@ -244,22 +244,54 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
           edgeList.push({ i, j, key });
         }
       }
-      // For each ghost node, link to its 1–2 nearest visible nodes within ~CONNECT_DIST.
+      // For each visible node within 150px of any canvas edge, attach 2–4 outward
+      // lines toward ghost nodes lying off that edge. This guarantees the
+      // "infinite network" effect is dense and obvious on every side.
+      const EDGE_PROXIMITY = 150;
+      const ghostsBySide = {
+        top: [] as number[],
+        bottom: [] as number[],
+        left: [] as number[],
+        right: [] as number[],
+      };
       for (let i = 0; i < n; i++) {
         if (!nodes[i].ghost) continue;
-        const dists: { j: number; d: number }[] = [];
-        for (let j = 0; j < n; j++) {
-          if (i === j || nodes[j].ghost) continue;
-          const d = Math.hypot(nodes[i].x - nodes[j].x, nodes[i].y - nodes[j].y);
-          if (d > CONNECT_DIST) continue;
-          dists.push({ j, d });
-        }
-        dists.sort((a, b) => a.d - b.d);
-        const links = Math.min(dists.length, 1 + (Math.random() < 0.4 ? 1 : 0));
-        for (let k = 0; k < links; k++) {
-          const j = dists[k].j;
-          const a = Math.min(i, j), b = Math.max(i, j);
-          ghostEdgeList.push({ i: a, j: b, key: `${a}-${b}` });
+        if (nodes[i].y < 0) ghostsBySide.top.push(i);
+        else if (nodes[i].y > height) ghostsBySide.bottom.push(i);
+        else if (nodes[i].x < 0) ghostsBySide.left.push(i);
+        else if (nodes[i].x > width) ghostsBySide.right.push(i);
+      }
+
+      const seen = new Set<string>();
+      for (let i = 0; i < n; i++) {
+        const v = nodes[i];
+        if (v.ghost) continue;
+        const sides: ("top" | "bottom" | "left" | "right")[] = [];
+        if (v.y < EDGE_PROXIMITY) sides.push("top");
+        if (height - v.y < EDGE_PROXIMITY) sides.push("bottom");
+        if (v.x < EDGE_PROXIMITY) sides.push("left");
+        if (width - v.x < EDGE_PROXIMITY) sides.push("right");
+        if (sides.length === 0) continue;
+
+        const desired = 2 + Math.floor(Math.random() * 3); // 2-4 outward lines
+        for (let s = 0; s < desired; s++) {
+          const side = sides[Math.floor(Math.random() * sides.length)];
+          const pool = ghostsBySide[side];
+          if (pool.length === 0) continue;
+          // Pick one of the nearest ghosts on that side for a believable angle
+          const candidates: { j: number; d: number }[] = [];
+          for (const j of pool) {
+            const d = Math.hypot(nodes[j].x - v.x, nodes[j].y - v.y);
+            candidates.push({ j, d });
+          }
+          candidates.sort((a, b) => a.d - b.d);
+          const pick = candidates[Math.floor(Math.random() * Math.min(6, candidates.length))];
+          if (!pick) continue;
+          const a = Math.min(i, pick.j), b = Math.max(i, pick.j);
+          const key = `${a}-${b}`;
+          if (seen.has(key)) continue;
+          seen.add(key);
+          ghostEdgeList.push({ i: a, j: b, key });
         }
       }
     };
