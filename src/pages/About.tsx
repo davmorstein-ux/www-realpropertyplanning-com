@@ -31,22 +31,15 @@ const TAGLINES = [
 
 const About = () => {
   const [taglineIndex, setTaglineIndex] = useState(0);
-  const [opacity, setOpacity] = useState(1);
   const heroRef = useRef<HTMLElement>(null);
   const heroVisible = useIsVisible(heroRef);
   const reducedMotion = useReducedMotion();
 
   useEffect(() => {
     if (reducedMotion || !heroVisible) return;
-
     const timer = setInterval(() => {
-      setOpacity(0);
-      setTimeout(() => {
-        setTaglineIndex((prev) => (prev + 1) % TAGLINES.length);
-        setOpacity(1);
-      }, 800);
+      setTaglineIndex((prev) => (prev + 1) % TAGLINES.length);
     }, 4500);
-
     return () => clearInterval(timer);
   }, [reducedMotion, heroVisible]);
 
@@ -82,20 +75,23 @@ const About = () => {
                   "brightness(1.4) contrast(1.15) drop-shadow(0 0 12px rgba(100,160,255,0.5))",
               }}
             />
-            <p style={{
-              opacity: opacity,
-              transition: "opacity 0.8s ease-in-out",
-              color: "#ffffff",
-              fontSize: "1.5rem",
-              fontStyle: "italic",
-              fontWeight: 600,
-              textAlign: "center",
-              textShadow: "0 2px 12px rgba(0,0,0,0.9)",
-              margin: 0,
-              marginTop: "16px",
-              position: "relative",
-              zIndex: 20,
-            }}>
+            <style>{`@keyframes fadeInOut { 0% { opacity: 0; } 10% { opacity: 1; } 80% { opacity: 1; } 100% { opacity: 0; } }`}</style>
+            <p
+              key={taglineIndex}
+              style={{
+                animation: "fadeInOut 4.5s ease-in-out forwards",
+                color: "#ffffff",
+                fontSize: "1.5rem",
+                fontStyle: "italic",
+                fontWeight: 600,
+                textAlign: "center",
+                textShadow: "0 2px 12px rgba(0,0,0,0.9)",
+                margin: 0,
+                marginTop: "16px",
+                position: "relative",
+                zIndex: 20,
+              }}
+            >
               {TAGLINES[taglineIndex]}
             </p>
           </div>
