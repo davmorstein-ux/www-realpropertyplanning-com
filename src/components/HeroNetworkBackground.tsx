@@ -149,20 +149,26 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
     const ensureConnectivity = () => {
       forcedEdges.clear();
       const n = nodes.length;
-      const neighborCount: number[] = new Array(n).fill(0);
-      for (let i = 0; i < n; i++) {
-        for (let j = i + 1; j < n; j++) {
+      // Build a list of visible-node indices to operate on (ignore ghosts).
+      const vis: number[] = [];
+      for (let i = 0; i < n; i++) if (!nodes[i].ghost) vis.push(i);
+
+      const neighborCount = new Map<number, number>();
+      for (const i of vis) neighborCount.set(i, 0);
+      for (let a = 0; a < vis.length; a++) {
+        for (let b = a + 1; b < vis.length; b++) {
+          const i = vis[a], j = vis[b];
           const d = Math.hypot(nodes[i].x - nodes[j].x, nodes[i].y - nodes[j].y);
           if (d <= CONNECT_DIST) {
-            neighborCount[i]++;
-            neighborCount[j]++;
+            neighborCount.set(i, (neighborCount.get(i) || 0) + 1);
+            neighborCount.set(j, (neighborCount.get(j) || 0) + 1);
           }
         }
       }
-      for (let i = 0; i < n; i++) {
-        if (neighborCount[i] >= 2) continue;
+      for (const i of vis) {
+        if ((neighborCount.get(i) || 0) >= 2) continue;
         const dists: { j: number; d: number }[] = [];
-        for (let j = 0; j < n; j++) {
+        for (const j of vis) {
           if (j === i) continue;
           dists.push({ j, d: Math.hypot(nodes[i].x - nodes[j].x, nodes[i].y - nodes[j].y) });
         }
@@ -172,28 +178,37 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
           const key = i < j ? `${i}-${j}` : `${j}-${i}`;
           if (!forcedEdges.has(key)) {
             forcedEdges.add(key);
-            neighborCount[i]++;
-            neighborCount[j]++;
+            neighborCount.set(i, (neighborCount.get(i) || 0) + 1);
+            neighborCount.set(j, (neighborCount.get(j) || 0) + 1);
           }
         }
       }
-      const parent = Array.from({ length: n }, (_, i) => i);
-      const find = (x: number): number => (parent[x] === x ? x : (parent[x] = find(parent[x])));
+      // Union-find over visible nodes only.
+      const parent = new Map<number, number>();
+      for (const i of vis) parent.set(i, i);
+      const find = (x: number): number => {
+        const px = parent.get(x)!;
+        if (px === x) return x;
+        const r = find(px);
+        parent.set(x, r);
+        return r;
+      };
       const union = (a: number, b: number) => {
         const ra = find(a), rb = find(b);
-        if (ra !== rb) parent[ra] = rb;
+        if (ra !== rb) parent.set(ra, rb);
       };
-      for (let i = 0; i < n; i++) {
-        for (let j = i + 1; j < n; j++) {
+      for (let a = 0; a < vis.length; a++) {
+        for (let b = a + 1; b < vis.length; b++) {
+          const i = vis[a], j = vis[b];
           const d = Math.hypot(nodes[i].x - nodes[j].x, nodes[i].y - nodes[j].y);
           const key = `${i}-${j}`;
           if (d <= CONNECT_DIST || forcedEdges.has(key)) union(i, j);
         }
       }
-      let safety = n;
+      let safety = vis.length;
       while (safety-- > 0) {
         const roots = new Map<number, number[]>();
-        for (let i = 0; i < n; i++) {
+        for (const i of vis) {
           const r = find(i);
           if (!roots.has(r)) roots.set(r, []);
           roots.get(r)!.push(i);
@@ -219,12 +234,35 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
 
     const buildEdgeList = () => {
       edgeList = [];
-      for (let i = 0; i < nodes.length; i++) {
-        for (let j = i + 1; j < nodes.length; j++) {
+      ghostEdgeList = [];
+      const n = nodes.length;
+      // Visible-to-visible edges (existing logic).
+      for (let i = 0; i < n; i++) {
+        if (nodes[i].ghost) continue;
+        for (let j = i + 1; j < n; j++) {
+          if (nodes[j].ghost) continue;
           const d = Math.hypot(nodes[i].x - nodes[j].x, nodes[i].y - nodes[j].y);
           const key = `${i}-${j}`;
           if (d > CONNECT_DIST && !forcedEdges.has(key)) continue;
           edgeList.push({ i, j, key });
+        }
+      }
+      // For each ghost node, link to its 1–2 nearest visible nodes within ~CONNECT_DIST.
+      for (let i = 0; i < n; i++) {
+        if (!nodes[i].ghost) continue;
+        const dists: { j: number; d: number }[] = [];
+        for (let j = 0; j < n; j++) {
+          if (i === j || nodes[j].ghost) continue;
+          const d = Math.hypot(nodes[i].x - nodes[j].x, nodes[i].y - nodes[j].y);
+          if (d > CONNECT_DIST) continue;
+          dists.push({ j, d });
+        }
+        dists.sort((a, b) => a.d - b.d);
+        const links = Math.min(dists.length, 1 + (Math.random() < 0.4 ? 1 : 0));
+        for (let k = 0; k < links; k++) {
+          const j = dists[k].j;
+          const a = Math.min(i, j), b = Math.max(i, j);
+          ghostEdgeList.push({ i: a, j: b, key: `${a}-${b}` });
         }
       }
     };
