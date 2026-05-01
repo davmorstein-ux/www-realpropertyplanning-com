@@ -334,7 +334,8 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
       }
       for (let attempt = 0; attempt < 10; attempt++) {
         // ~20% of signals come from the ghost pool so the network feels alive at edges.
-        const fromGhost = ghostEdgeList.length > 0 && Math.random() < 0.2;
+        // ~50% of signals come from the ghost pool so edge activity is obvious.
+        const fromGhost = ghostEdgeList.length > 0 && Math.random() < 0.5;
         const list = fromGhost ? ghostEdgeList : edgeList;
         if (list.length === 0) continue;
         const e = list[Math.floor(Math.random() * list.length)];
