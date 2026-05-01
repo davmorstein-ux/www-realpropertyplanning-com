@@ -97,8 +97,6 @@ const About = () => {
               fontStyle: "italic",
               fontWeight: 600,
               textAlign: "center",
-              margin: 0,
-              marginTop: "16px",
               textShadow: "0 2px 12px rgba(0,0,0,0.9), 0 0 4px rgba(0,0,0,0.9)",
             }}>
               {TAGLINES[taglineIndex]}
