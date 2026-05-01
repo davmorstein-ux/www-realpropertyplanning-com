@@ -68,7 +68,7 @@ const About = () => {
         {/* Hero */}
         <section
           ref={heroRef}
-          className="relative overflow-hidden w-full h-[340px] md:h-[480px]"
+          className="relative overflow-hidden w-full h-[340px] md:h-[500px]"
           style={{ backgroundColor: "#020810" }}
         >
           {/* Programmatic network canvas background */}
