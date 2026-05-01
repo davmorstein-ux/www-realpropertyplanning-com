@@ -7,12 +7,14 @@ interface Node {
 }
 
 interface LinePulse {
-  // phase 0..1 over duration
-  phase: number;
-  duration: number; // ms
-  delay: number; // ms until next pulse starts after current ends
   active: boolean;
-  cooldown: number; // ms remaining before next pulse
+  // 0=idle, 1=fadeIn, 2=hold, 3=fadeOut
+  stage: 0 | 1 | 2 | 3;
+  stageElapsed: number; // ms elapsed in current stage
+  fadeInDur: number;
+  holdDur: number;
+  fadeOutDur: number;
+  cooldown: number; // ms before this line is eligible to glow again
 }
 
 const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
