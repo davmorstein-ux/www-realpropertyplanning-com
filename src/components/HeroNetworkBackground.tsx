@@ -40,6 +40,7 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
     let nodes: Node[] = [];
     const forcedEdges = new Set<string>();
     let edgeList: { i: number; j: number; key: string }[] = [];
+    let ghostEdgeList: { i: number; j: number; key: string }[] = []; // edges where exactly one endpoint is a ghost
     const signals: Signal[] = [];
 
     const initNodes = () => {
