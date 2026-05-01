@@ -35,7 +35,7 @@ const RotatingTagline = () => {
   useEffect(() => {
     const id = setInterval(() => {
       setIndex(i => (i + 1) % TAGLINES.length);
-    }, 7500);
+    }, 10000);
     return () => clearInterval(id);
   }, []);
 
