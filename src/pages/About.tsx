@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 import GoldCheck3D from "@/components/GoldCheck3D";
 import HeroNetworkBackground from "@/components/HeroNetworkBackground";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
-import { useIsVisible } from "@/hooks/use-is-visible";
+
 
 import daveHeadshot from "@/assets/david-stein-real-estate-agent-seattle.webp";
 import aboutHeroLogo from "@/assets/real-property-planning-logo-v4.png";
