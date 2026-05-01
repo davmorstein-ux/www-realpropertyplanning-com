@@ -59,7 +59,7 @@ const About = () => {
           style={{ backgroundColor: "#020810" }}
         >
           {/* Programmatic network canvas background */}
-          <HeroNetworkBackground paused={!heroVisible || reducedMotion} />
+          <HeroNetworkBackground paused={reducedMotion} />
 
           {/* Centered logo + tagline */}
           <div className="absolute inset-0 z-[2] flex flex-col items-center justify-center">
