@@ -92,17 +92,17 @@ const About = () => {
               style={{
                 position: "relative",
                 zIndex: 10,
-                backgroundColor: "rgba(2, 8, 16, 0.7)",
+                backgroundColor: "rgba(0, 0, 0, 0.75)",
                 borderRadius: "8px",
                 padding: "10px 24px",
-                border: "2px solid red",
-                color: "#ffffff",
-                fontSize: "1.25rem",
+                color: "white",
+                fontSize: "1.5rem",
+                fontWeight: 600,
                 textShadow: "0 0 16px rgba(0,0,0,1), 0 0 30px rgba(0,0,0,0.8), 0 0 8px rgba(100,170,255,0.4)",
                 lineHeight: 1.5,
                 letterSpacing: "0.02em",
-                opacity: 1,
-                transition: "none",
+                opacity: reducedMotion ? 1 : visible ? 1 : 0,
+                transition: reducedMotion ? "none" : "opacity 0.8s ease-in-out",
               }}
             >
               {TAGLINES[taglineIndex]}
