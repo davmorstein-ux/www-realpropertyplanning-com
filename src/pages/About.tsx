@@ -29,16 +29,40 @@ const TAGLINES = [
   "Clarity when it matters most",
 ];
 
-const About = () => {
-  const [taglineIndex, setTaglineIndex] = useState(0);
-  const reducedMotion = useReducedMotion();
+const RotatingTagline = () => {
+  const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setTaglineIndex((prev) => (prev + 1) % TAGLINES.length);
+    const id = setInterval(() => {
+      setIndex(i => (i + 1) % TAGLINES.length);
     }, 4500);
-    return () => clearInterval(timer);
+    return () => clearInterval(id);
   }, []);
+
+  return (
+    <div style={{ height: "2.5rem", display: "flex", alignItems: "center", justifyContent: "center", marginTop: "16px" }}>
+      <p
+        key={index}
+        className="tagline-fade"
+        style={{
+          color: "#ffffff",
+          fontSize: "1.5rem",
+          fontStyle: "italic",
+          fontWeight: 600,
+          textAlign: "center",
+          textShadow: "0 2px 12px rgba(0,0,0,0.9)",
+          margin: 0,
+        }}
+      >
+        {TAGLINES[index]}
+      </p>
+    </div>
+  );
+};
+
+const About = () => {
+  const reducedMotion = useReducedMotion();
+
 
   return (
     <div className="min-h-screen bg-background">
@@ -71,25 +95,7 @@ const About = () => {
                   "brightness(1.4) contrast(1.15) drop-shadow(0 0 12px rgba(100,160,255,0.5))",
               }}
             />
-            <style>{`@keyframes fadeInOut { 0% { opacity: 0; } 10% { opacity: 1; } 80% { opacity: 1; } 100% { opacity: 0; } }`}</style>
-            <p
-              key={taglineIndex}
-              style={{
-                animation: "fadeInOut 4.5s ease-in-out forwards",
-                color: "#ffffff",
-                fontSize: "1.5rem",
-                fontStyle: "italic",
-                fontWeight: 600,
-                textAlign: "center",
-                textShadow: "0 2px 12px rgba(0,0,0,0.9)",
-                margin: 0,
-                marginTop: "16px",
-                position: "relative",
-                zIndex: 20,
-              }}
-            >
-              {TAGLINES[taglineIndex]}
-            </p>
+            <RotatingTagline />
           </div>
 
           {/* Visually hidden h1 for SEO/accessibility */}
