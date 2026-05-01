@@ -18,9 +18,21 @@ interface Signal {
   duration: number; // ms
 }
 
-const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
+const HeroNetworkBackground = ({
+  className = "",
+  paused = false,
+}: {
+  className?: string;
+  paused?: boolean;
+}) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const rafRef = useRef<number | null>(null);
+  const pausedRef = useRef(paused);
+
+  // Keep ref in sync so the animation loop reads the latest value
+  useEffect(() => {
+    pausedRef.current = paused;
+  }, [paused]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
