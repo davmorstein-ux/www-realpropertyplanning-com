@@ -63,12 +63,6 @@ const RotatingTagline = () => {
 const About = () => {
   const reducedMotion = useReducedMotion();
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTaglineIndex((prev) => (prev + 1) % TAGLINES.length);
-    }, 4500);
-    return () => clearInterval(timer);
-  }, []);
 
   return (
     <div className="min-h-screen bg-background">
