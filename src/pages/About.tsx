@@ -36,10 +36,15 @@ const About = () => {
     const FADE = 800;
     const CYCLE = DISPLAY + FADE * 2;
 
+    console.log("[Tagline] Starting with:", TAGLINES[0]);
     const interval = setInterval(() => {
       setVisible(false);
       setTimeout(() => {
-        setTaglineIndex((i) => (i + 1) % TAGLINES.length);
+        setTaglineIndex((i) => {
+          const next = (i + 1) % TAGLINES.length;
+          console.log("[Tagline] Now showing:", TAGLINES[next]);
+          return next;
+        });
         setVisible(true);
       }, FADE);
     }, CYCLE);
@@ -79,11 +84,12 @@ const About = () => {
               }}
             />
             <p
-              className="mt-4 md:mt-6 px-6 text-center font-serif italic select-none"
+              className="mt-5 md:mt-8 px-6 text-center font-serif italic select-none"
               style={{
                 color: "#c8d8f0",
-                fontSize: "clamp(1rem, 2.5vw, 1.4rem)",
-                textShadow: "0 1px 6px rgba(0,0,0,0.7)",
+                fontSize: "clamp(1.1rem, 2.8vw, 1.5rem)",
+                textShadow: "0 2px 10px rgba(0,0,0,0.9), 0 0 20px rgba(100,160,255,0.3)",
+                lineHeight: 1.5,
                 opacity: visible ? 1 : 0,
                 transition: "opacity 0.8s ease-in-out",
               }}
