@@ -87,26 +87,28 @@ const About = () => {
                   "brightness(1.4) contrast(1.15) drop-shadow(0 0 12px rgba(100,160,255,0.5))",
               }}
             />
-            <p
-              className="mt-5 md:mt-8 px-6 text-center font-serif italic select-none"
-              style={{
-                position: "relative",
-                zIndex: 10,
-                backgroundColor: "rgba(0, 0, 0, 0.75)",
-                borderRadius: "8px",
-                padding: "10px 24px",
-                color: "white",
-                fontSize: "1.5rem",
-                fontWeight: 600,
-                textShadow: "0 0 16px rgba(0,0,0,1), 0 0 30px rgba(0,0,0,0.8), 0 0 8px rgba(100,170,255,0.4)",
-                lineHeight: 1.5,
-                letterSpacing: "0.02em",
+            <div style={{
+              backgroundColor: "rgba(0,0,0,0.75)",
+              borderRadius: "8px",
+              padding: "12px 28px",
+              marginTop: "16px",
+              zIndex: 20,
+              position: "relative",
+            }}>
+              <p style={{
+                color: "#ffffff",
                 opacity: reducedMotion ? 1 : visible ? 1 : 0,
                 transition: reducedMotion ? "none" : "opacity 0.8s ease-in-out",
-              }}
-            >
-              {TAGLINES[taglineIndex]}
-            </p>
+                fontSize: "1.5rem",
+                fontStyle: "italic",
+                fontWeight: 600,
+                textAlign: "center",
+                margin: 0,
+                whiteSpace: "nowrap",
+              }}>
+                {TAGLINES[taglineIndex]}
+              </p>
+            </div>
           </div>
 
           {/* Visually hidden h1 for SEO/accessibility */}
