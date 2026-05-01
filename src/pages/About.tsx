@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
@@ -31,16 +31,14 @@ const TAGLINES = [
 
 const About = () => {
   const [taglineIndex, setTaglineIndex] = useState(0);
-  const heroRef = useRef<HTMLElement>(null);
   const reducedMotion = useReducedMotion();
 
   useEffect(() => {
-    if (reducedMotion) return;
     const timer = setInterval(() => {
       setTaglineIndex((prev) => (prev + 1) % TAGLINES.length);
     }, 4500);
     return () => clearInterval(timer);
-  }, [reducedMotion]);
+  }, []);
 
   return (
     <div className="min-h-screen bg-background">
@@ -54,7 +52,6 @@ const About = () => {
       <main id="main-content">
         {/* Hero */}
         <section
-          ref={heroRef}
           className="relative overflow-hidden w-full h-[340px] md:h-[500px]"
           style={{ backgroundColor: "#020810" }}
         >
