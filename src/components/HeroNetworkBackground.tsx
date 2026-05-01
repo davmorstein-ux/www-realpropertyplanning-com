@@ -45,99 +45,80 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
 
     const initNodes = () => {
       nodes = [];
-      // Grid-seeded random placement for even coverage across the hero.
-      const aspect = Math.max(width / Math.max(height, 1), 0.1);
-      const rows = Math.max(2, Math.round(Math.sqrt(NODE_COUNT / aspect)));
-      const cols = Math.max(2, Math.ceil(NODE_COUNT / rows));
-      const cellW = width / cols;
-      const cellH = height / rows;
-
-      const cells: { c: number; r: number }[] = [];
-      for (let r = 0; r < rows; r++) {
-        for (let c = 0; c < cols; c++) cells.push({ c, r });
-      }
-      for (let i = cells.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [cells[i], cells[j]] = [cells[j], cells[i]];
-      }
-
       const cx = width / 2;
       const cy = height / 2;
       const exclusionRX = Math.min(width * 0.22, 260);
       const exclusionRY = Math.min(height * 0.32, 130);
 
-      let placed = 0;
-      let idx = 0;
-      while (placed < NODE_COUNT && idx < cells.length) {
-        const { c, r } = cells[idx++];
-        const jx = (Math.random() * 0.85 + 0.075) * cellW;
-        const jy = (Math.random() * 0.85 + 0.075) * cellH;
-        const x = c * cellW + jx;
-        const y = r * cellH + jy;
+      // ---- Even visible-node distribution ----
+      // Build a candidate list from a uniform grid (with jitter), then filter so
+      // no two nodes are closer than MIN_DIST. Result: no cluster of 5+ nodes
+      // within a 100px radius anywhere on the canvas.
+      const MIN_DIST = 70; // enforced minimum spacing between any two visible nodes
+      const TARGET_COUNT = 95; // total visible nodes target
+      const aspect = Math.max(width / Math.max(height, 1), 0.1);
+      const oversample = 1.6;
+      const rows = Math.max(3, Math.round(Math.sqrt((TARGET_COUNT * oversample) / aspect)));
+      const cols = Math.max(3, Math.ceil((TARGET_COUNT * oversample) / rows));
+      const cellW = width / cols;
+      const cellH = height / rows;
 
-        const dx = (x - cx) / exclusionRX;
-        const dy = (y - cy) / exclusionRY;
+      const candidates: { x: number; y: number }[] = [];
+      for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < cols; c++) {
+          const jx = (Math.random() * 0.85 + 0.075) * cellW;
+          const jy = (Math.random() * 0.85 + 0.075) * cellH;
+          candidates.push({ x: c * cellW + jx, y: r * cellH + jy });
+        }
+      }
+      for (let i = candidates.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [candidates[i], candidates[j]] = [candidates[j], candidates[i]];
+      }
+
+      const accepted: { x: number; y: number }[] = [];
+      const tooClose = (x: number, y: number, minD: number) => {
+        for (const p of accepted) {
+          if (Math.hypot(p.x - x, p.y - y) < minD) return true;
+        }
+        return false;
+      };
+
+      for (const cand of candidates) {
+        if (accepted.length >= TARGET_COUNT) break;
+        const dx = (cand.x - cx) / exclusionRX;
+        const dy = (cand.y - cy) / exclusionRY;
         const distNorm = Math.hypot(dx, dy);
         if (distNorm < 1 && Math.random() > distNorm * 0.85) continue;
-
-        nodes.push({ x, y, r: 2 + Math.random() * 1, flare: 0 });
-        placed++;
+        if (tooClose(cand.x, cand.y, MIN_DIST)) continue;
+        accepted.push(cand);
       }
 
-      while (placed < NODE_COUNT) {
-        nodes.push({
-          x: Math.random() * width,
-          y: Math.random() * height,
-          r: 2 + Math.random() * 1,
-          flare: 0,
-        });
-        placed++;
-      }
-
-      // Extra nodes biased to the left third for balance
-      const leftMax = width / 3;
-      for (let k = 0; k < LEFT_EXTRA_COUNT; k++) {
-        nodes.push({
-          x: Math.random() * leftMax,
-          y: Math.random() * height,
-          r: 2 + Math.random() * 1,
-          flare: 0,
-        });
+      for (const p of accepted) {
+        nodes.push({ x: p.x, y: p.y, r: 2 + Math.random() * 1, flare: 0 });
       }
 
       // Loose ring of nodes surrounding the logo so it reads as the network hub.
       const RING_COUNT = 14;
       for (let k = 0; k < RING_COUNT; k++) {
-        // Even angle distribution with jitter so it doesn't look mechanical
         const angle = (k / RING_COUNT) * Math.PI * 2 + (Math.random() - 0.5) * 0.35;
-        const radius = 180 + Math.random() * 100; // 180-280px
+        const radius = 180 + Math.random() * 100;
         const x = cx + Math.cos(angle) * radius;
         const y = cy + Math.sin(angle) * radius;
-        // Skip points that fall outside the hero
         if (x < 6 || x > width - 6 || y < 6 || y > height - 6) continue;
+        if (tooClose(x, y, MIN_DIST * 0.85)) continue;
+        accepted.push({ x, y });
         nodes.push({ x, y, r: 2 + Math.random() * 1, flare: 0 });
       }
 
-      // Cluster of nodes below the logo (lower-center) for visual weight under the hub.
-      const BOTTOM_COUNT = 11;
-      for (let k = 0; k < BOTTOM_COUNT; k++) {
-        const x = width * (0.30 + Math.random() * 0.40); // 30%-70%
-        const y = height * (0.60 + Math.random() * 0.35); // 60%-95%
-        nodes.push({ x, y, r: 2 + Math.random() * 1, flare: 0 });
-      }
-
-      // Ghost nodes outside the canvas — invisible, but their connecting lines fade
-      // toward the edge to suggest the network continues beyond view.
-      // Placed 100–300px outside each edge, distributed so every visible edge node
-      // gets multiple outward lines.
-      const perSide = 30; // 30 ghosts/side -> ~120 ghost nodes
-      const offsetRange = () => 100 + Math.random() * 200; // 100–300px outside edge
-      for (let k = 0; k < perSide; k++) {
-        nodes.push({ x: Math.random() * width, y: -offsetRange(), r: 0, flare: 0, ghost: true });
-        nodes.push({ x: Math.random() * width, y: height + offsetRange(), r: 0, flare: 0, ghost: true });
-        nodes.push({ x: -offsetRange(), y: Math.random() * height, r: 0, flare: 0, ghost: true });
-        nodes.push({ x: width + offsetRange(), y: Math.random() * height, r: 0, flare: 0, ghost: true });
-      }
+      // ---- Ghost nodes (exactly 120, banded 50–400px outside each edge) ----
+      const offset = () => 50 + Math.random() * 350;
+      const pushGhost = (x: number, y: number) =>
+        nodes.push({ x, y, r: 2 + Math.random() * 1, flare: 0, ghost: true });
+      for (let k = 0; k < 35; k++) pushGhost(Math.random() * width, -offset());
+      for (let k = 0; k < 35; k++) pushGhost(Math.random() * width, height + offset());
+      for (let k = 0; k < 25; k++) pushGhost(-offset(), Math.random() * height);
+      for (let k = 0; k < 25; k++) pushGhost(width + offset(), Math.random() * height);
 
       ensureConnectivity();
       buildEdgeList();
@@ -244,50 +225,26 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
           edgeList.push({ i, j, key });
         }
       }
-      // For each visible node within 150px of any canvas edge, attach 2–4 outward
-      // lines toward ghost nodes lying off that edge. This guarantees the
-      // "infinite network" effect is dense and obvious on every side.
-      const EDGE_PROXIMITY = 150;
-      const ghostsBySide = {
-        top: [] as number[],
-        bottom: [] as number[],
-        left: [] as number[],
-        right: [] as number[],
-      };
-      for (let i = 0; i < n; i++) {
-        if (!nodes[i].ghost) continue;
-        if (nodes[i].y < 0) ghostsBySide.top.push(i);
-        else if (nodes[i].y > height) ghostsBySide.bottom.push(i);
-        else if (nodes[i].x < 0) ghostsBySide.left.push(i);
-        else if (nodes[i].x > width) ghostsBySide.right.push(i);
-      }
-
+      // Each ghost node connects to its 2–4 nearest visible nodes. This produces
+      // hundreds of inward connections from every side, creating the impression
+      // of a network that continues far beyond the visible area.
       const seen = new Set<string>();
-      for (let i = 0; i < n; i++) {
-        const v = nodes[i];
-        if (v.ghost) continue;
-        const sides: ("top" | "bottom" | "left" | "right")[] = [];
-        if (v.y < EDGE_PROXIMITY) sides.push("top");
-        if (height - v.y < EDGE_PROXIMITY) sides.push("bottom");
-        if (v.x < EDGE_PROXIMITY) sides.push("left");
-        if (width - v.x < EDGE_PROXIMITY) sides.push("right");
-        if (sides.length === 0) continue;
+      const visIdxs: number[] = [];
+      for (let i = 0; i < n; i++) if (!nodes[i].ghost) visIdxs.push(i);
 
-        const desired = 2 + Math.floor(Math.random() * 3); // 2-4 outward lines
-        for (let s = 0; s < desired; s++) {
-          const side = sides[Math.floor(Math.random() * sides.length)];
-          const pool = ghostsBySide[side];
-          if (pool.length === 0) continue;
-          // Pick one of the nearest ghosts on that side for a believable angle
-          const candidates: { j: number; d: number }[] = [];
-          for (const j of pool) {
-            const d = Math.hypot(nodes[j].x - v.x, nodes[j].y - v.y);
-            candidates.push({ j, d });
-          }
-          candidates.sort((a, b) => a.d - b.d);
-          const pick = candidates[Math.floor(Math.random() * Math.min(6, candidates.length))];
-          if (!pick) continue;
-          const a = Math.min(i, pick.j), b = Math.max(i, pick.j);
+      for (let i = 0; i < n; i++) {
+        const g = nodes[i];
+        if (!g.ghost) continue;
+        const dists: { j: number; d: number }[] = [];
+        for (const j of visIdxs) {
+          const d = Math.hypot(nodes[j].x - g.x, nodes[j].y - g.y);
+          dists.push({ j, d });
+        }
+        dists.sort((a, b) => a.d - b.d);
+        const desired = 2 + Math.floor(Math.random() * 3); // 2-4
+        for (let k = 0; k < Math.min(desired, dists.length); k++) {
+          const j = dists[k].j;
+          const a = Math.min(i, j), b = Math.max(i, j);
           const key = `${a}-${b}`;
           if (seen.has(key)) continue;
           seen.add(key);
@@ -446,7 +403,7 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
         const ey = visible.y + dy * tt;
 
         const grad = ctx.createLinearGradient(visible.x, visible.y, ex, ey);
-        grad.addColorStop(0, "rgba(80, 150, 255, 0.6)");
+        grad.addColorStop(0, "rgba(80, 150, 255, 0.65)");
         grad.addColorStop(1, "rgba(80, 150, 255, 0)");
         ctx.strokeStyle = grad;
         ctx.lineWidth = 1;
@@ -454,6 +411,17 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
         ctx.moveTo(visible.x, visible.y);
         ctx.lineTo(ex, ey);
         ctx.stroke();
+
+        // Draw the ghost node's glowing dot right at the canvas edge so it
+        // appears half-clipped, reinforcing that the network continues outside.
+        ctx.save();
+        ctx.shadowBlur = 10;
+        ctx.shadowColor = "#6ab0ff";
+        ctx.fillStyle = "rgba(220, 235, 255, 0.85)";
+        ctx.beginPath();
+        ctx.arc(ex, ey, ghost.r || 2.5, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
       }
 
       // ---- Draw trail brightening on top of base lines ----
