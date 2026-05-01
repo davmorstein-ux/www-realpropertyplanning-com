@@ -445,10 +445,10 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
         const ey = visible.y + dy * tt;
 
         const grad = ctx.createLinearGradient(visible.x, visible.y, ex, ey);
-        grad.addColorStop(0, "rgba(80, 150, 255, 0.4)");
+        grad.addColorStop(0, "rgba(80, 150, 255, 0.6)");
         grad.addColorStop(1, "rgba(80, 150, 255, 0)");
         ctx.strokeStyle = grad;
-        ctx.lineWidth = 0.8;
+        ctx.lineWidth = 1;
         ctx.beginPath();
         ctx.moveTo(visible.x, visible.y);
         ctx.lineTo(ex, ey);
