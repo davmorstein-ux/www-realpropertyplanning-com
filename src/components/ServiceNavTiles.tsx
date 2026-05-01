@@ -3,6 +3,22 @@ import ServiceNavTileCard from "./ServiceNavTileCard";
 import ProfessionalImageTile, { type ProfessionalImageTileData } from "./ProfessionalImageTile";
 import { tileCategories } from "./service-nav-tiles-data";
 
+import imgExecutors from "@/assets/roles/executors-tile-washington-v2.webp";
+import imgTrustees from "@/assets/roles/trustees-tile-washington.webp";
+import imgWills from "@/assets/roles/wills-tile-washington-v2.webp";
+import imgPowerOfAttorney from "@/assets/roles/power-of-attorney-tile-washington.webp";
+import imgProbateTerms from "@/assets/roles/probate-terms-tile-washington.webp";
+import imgTheProcess from "@/assets/roles/the-probate-process-tile-washington.webp";
+
+import imgProbateSales from "@/assets/planning/probate-sales-tile-washington.webp";
+import imgSeniorPlacement from "@/assets/planning/senior-placement-tile-washington.webp";
+import imgHomeValues from "@/assets/planning/home-values-pricing-tile-washington.webp";
+import imgSeniorHomeSales from "@/assets/planning/senior-home-sales-tile-washington.webp";
+import imgPayingSeniorLiving from "@/assets/planning/paying-for-senior-living-tile-washington.webp";
+import imgServiceAreas from "@/assets/planning/service-areas-tile-washington.webp";
+import imgGuidesResources from "@/assets/planning/guides-resources-tile-washington.webp";
+import imgGrayDivorce from "@/assets/planning/gray-divorce-tile-washington.webp";
+
 const rolesImageTiles: ProfessionalImageTileData[] = [
   { alt: "Executors roles and responsibilities probate Washington State", href: "/executors", src: imgExecutors, label: "Executors" },
   { alt: "Trustees roles and responsibilities estate Washington State", href: "/trustees", src: imgTrustees, label: "Trustees" },
