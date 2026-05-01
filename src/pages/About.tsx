@@ -33,14 +33,21 @@ const About = () => {
         {/* Hero */}
         <section
           className="relative overflow-hidden w-full h-[260px] md:h-[420px]"
-          style={{
-            backgroundImage: `url(${aboutHeroBg})`,
-            backgroundSize: "50%",
-            backgroundPosition: "center center",
-            backgroundRepeat: "repeat",
-            backgroundColor: "#050d1a",
-          }}
+          style={{ backgroundColor: "#050d1a" }}
         >
+          {/* Background image (dimmed so star bursts feel like a backdrop) */}
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 z-0"
+            style={{
+              backgroundImage: `url(${aboutHeroBg})`,
+              backgroundSize: "50%",
+              backgroundPosition: "center center",
+              backgroundRepeat: "repeat",
+              filter: "brightness(0.7) saturate(0.85)",
+            }}
+          />
+
           {/* Pulsing line animation overlay */}
           <NetworkCanvas className="z-[1]" />
 
@@ -49,7 +56,7 @@ const About = () => {
             <img
               src={aboutHeroLogo}
               alt="Real Property Planning"
-              className="w-[220px] md:w-[380px] h-auto object-contain"
+              className="w-[260px] md:w-[480px] h-auto object-contain"
               loading="eager"
               fetchPriority="high"
             />
