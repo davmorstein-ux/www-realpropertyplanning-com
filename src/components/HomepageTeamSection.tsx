@@ -1,14 +1,14 @@
 import ProfessionalImageTile, { type ProfessionalImageTileData } from "./ProfessionalImageTile";
 
-import imgAttorneys from "@/assets/professionals/attorneys-professional-washington.webp";
-import imgCPAs from "@/assets/professionals/cpas-professional-washington.webp";
-import imgBroker from "@/assets/professionals/real-estate-broker-professional-washington.webp";
-import imgAppraiser from "@/assets/professionals/real-estate-appraiser-professional-washington.webp";
+import imgAttorneys from "@/assets/Attorneys_ring_webP.webp";
+import imgCPAs from "@/assets/CPAs_ring_webP.webp";
+import imgBroker from "@/assets/Real_Estate_Broker_webP.png";
+import imgAppraiser from "@/assets/Real_Estate_Apppraiser_webP.png";
 import imgFinancial from "@/assets/professionals/financial-planning-professional-washington.webp";
-import imgMortgage from "@/assets/professionals/mortgage-lender-professional-washington.webp";
-import imgSeniorLiving from "@/assets/professionals/senior-living-professional-washington.webp";
-import imgSeniorMove from "@/assets/professionals/senior-move-managers-professional-washington.webp";
-import imgEstateLiquidation from "@/assets/professionals/estate-liquidation-professional-washington.webp";
+import imgMortgage from "@/assets/Mortgage_Lender_webP.webp";
+import imgSeniorLiving from "@/assets/Senior_Living_ring_webP.webp";
+import imgSeniorMove from "@/assets/SEnior_Move_Managers_ring_webP.png";
+import imgEstateLiquidation from "@/assets/Estate_Liquidation_webP.png";
 
 const tiles: ProfessionalImageTileData[] = [
   { src: imgAttorneys, alt: "Attorneys", label: "Attorneys", href: "/for-attorneys" },
