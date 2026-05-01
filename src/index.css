@@ -1809,13 +1809,12 @@ img, svg, hr {
 }
 
 #rotating-tagline {
-  opacity: 0;
   animation: taglineFade 4.5s ease-in-out forwards !important;
 }
 
 @keyframes taglineFade {
-  0%   { opacity: 0; }
-  15%  { opacity: 1; }
-  80%  { opacity: 1; }
-  100% { opacity: 0; }
+  0%   { opacity: 0 !important; }
+  15%  { opacity: 1 !important; }
+  80%  { opacity: 1 !important; }
+  100% { opacity: 0 !important; }
 }
