@@ -29,11 +29,13 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
     let height = 0;
     let dpr = Math.min(window.devicePixelRatio || 1, 2);
 
-    const NODE_COUNT = 36;
-    const CONNECT_DIST = 220;
+    const NODE_COUNT = 50;
+    const CONNECT_DIST = 300;
 
     let nodes: Node[] = [];
     const linePulses = new Map<string, LinePulse>();
+    // Forced edges (key "i-j" with i<j) that always render regardless of distance
+    const forcedEdges = new Set<string>();
 
     const initNodes = () => {
       nodes = [];
@@ -43,6 +45,80 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
           y: Math.random() * height,
           r: 2 + Math.random() * 1,
         });
+      }
+      ensureConnectivity();
+    };
+
+    const ensureConnectivity = () => {
+      forcedEdges.clear();
+      const n = nodes.length;
+      const neighborCount: number[] = new Array(n).fill(0);
+      for (let i = 0; i < n; i++) {
+        for (let j = i + 1; j < n; j++) {
+          const d = Math.hypot(nodes[i].x - nodes[j].x, nodes[i].y - nodes[j].y);
+          if (d <= CONNECT_DIST) {
+            neighborCount[i]++;
+            neighborCount[j]++;
+          }
+        }
+      }
+      // Force-connect any node with <2 connections to its 2 nearest neighbors
+      for (let i = 0; i < n; i++) {
+        if (neighborCount[i] >= 2) continue;
+        const dists: { j: number; d: number }[] = [];
+        for (let j = 0; j < n; j++) {
+          if (j === i) continue;
+          dists.push({ j, d: Math.hypot(nodes[i].x - nodes[j].x, nodes[i].y - nodes[j].y) });
+        }
+        dists.sort((a, b) => a.d - b.d);
+        for (let k = 0; k < Math.min(2, dists.length); k++) {
+          const j = dists[k].j;
+          const key = i < j ? `${i}-${j}` : `${j}-${i}`;
+          if (!forcedEdges.has(key)) {
+            forcedEdges.add(key);
+            neighborCount[i]++;
+            neighborCount[j]++;
+          }
+        }
+      }
+      // Union-find: merge any disconnected components
+      const parent = Array.from({ length: n }, (_, i) => i);
+      const find = (x: number): number => (parent[x] === x ? x : (parent[x] = find(parent[x])));
+      const union = (a: number, b: number) => {
+        const ra = find(a), rb = find(b);
+        if (ra !== rb) parent[ra] = rb;
+      };
+      for (let i = 0; i < n; i++) {
+        for (let j = i + 1; j < n; j++) {
+          const d = Math.hypot(nodes[i].x - nodes[j].x, nodes[i].y - nodes[j].y);
+          const key = `${i}-${j}`;
+          if (d <= CONNECT_DIST || forcedEdges.has(key)) union(i, j);
+        }
+      }
+      let safety = n;
+      while (safety-- > 0) {
+        const roots = new Map<number, number[]>();
+        for (let i = 0; i < n; i++) {
+          const r = find(i);
+          if (!roots.has(r)) roots.set(r, []);
+          roots.get(r)!.push(i);
+        }
+        if (roots.size <= 1) break;
+        const groups = Array.from(roots.values());
+        const a = groups[0];
+        let best = { i: -1, j: -1, d: Infinity };
+        for (let g = 1; g < groups.length; g++) {
+          for (const i of a) {
+            for (const j of groups[g]) {
+              const d = Math.hypot(nodes[i].x - nodes[j].x, nodes[i].y - nodes[j].y);
+              if (d < best.d) best = { i, j, d };
+            }
+          }
+        }
+        if (best.i < 0) break;
+        const key = best.i < best.j ? `${best.i}-${best.j}` : `${best.j}-${best.i}`;
+        forcedEdges.add(key);
+        union(best.i, best.j);
       }
     };
 
