@@ -44,21 +44,35 @@ const About = () => {
               backgroundSize: "50%",
               backgroundPosition: "center center",
               backgroundRepeat: "repeat",
-              filter: "brightness(1.1) saturate(1.3) contrast(1.4)",
+              filter: "brightness(0.85) saturate(1.2) contrast(1.6)",
+            }}
+          />
+
+          {/* Vignette overlay — darkens outer edges to subdue large star bursts */}
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 z-[1] pointer-events-none"
+            style={{
+              background:
+                "radial-gradient(ellipse at center, rgba(0,5,20,0.0) 30%, rgba(0,5,20,0.55) 100%)",
             }}
           />
 
           {/* Pulsing line animation overlay */}
-          <NetworkCanvas className="z-[1]" />
+          <NetworkCanvas className="z-[2]" />
 
           {/* Centered logo */}
-          <div className="absolute inset-0 z-[2] flex items-center justify-center">
+          <div className="absolute inset-0 z-[3] flex items-center justify-center">
             <img
               src={aboutHeroLogo}
               alt="Real Property Planning"
               className="w-[260px] md:w-[480px] h-auto object-contain"
               loading="eager"
               fetchPriority="high"
+              style={{
+                filter:
+                  "brightness(1.4) contrast(1.15) drop-shadow(0 0 12px rgba(100,160,255,0.5))",
+              }}
             />
           </div>
 
