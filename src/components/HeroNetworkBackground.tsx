@@ -403,7 +403,7 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
         const ey = visible.y + dy * tt;
 
         const grad = ctx.createLinearGradient(visible.x, visible.y, ex, ey);
-        grad.addColorStop(0, "rgba(80, 150, 255, 0.6)");
+        grad.addColorStop(0, "rgba(80, 150, 255, 0.65)");
         grad.addColorStop(1, "rgba(80, 150, 255, 0)");
         ctx.strokeStyle = grad;
         ctx.lineWidth = 1;
@@ -411,6 +411,17 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
         ctx.moveTo(visible.x, visible.y);
         ctx.lineTo(ex, ey);
         ctx.stroke();
+
+        // Draw the ghost node's glowing dot right at the canvas edge so it
+        // appears half-clipped, reinforcing that the network continues outside.
+        ctx.save();
+        ctx.shadowBlur = 10;
+        ctx.shadowColor = "#6ab0ff";
+        ctx.fillStyle = "rgba(220, 235, 255, 0.85)";
+        ctx.beginPath();
+        ctx.arc(ex, ey, ghost.r || 2.5, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
       }
 
       // ---- Draw trail brightening on top of base lines ----
