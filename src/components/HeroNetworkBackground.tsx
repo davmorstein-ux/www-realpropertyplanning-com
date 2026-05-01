@@ -6,6 +6,8 @@ interface Node {
   r: number;
   // brief flare added when a signal arrives (intensity 0..1)
   flare: number;
+  // ghost nodes live just outside the canvas; never drawn, used to extend lines off-edge
+  ghost?: boolean;
 }
 
 interface Signal {
