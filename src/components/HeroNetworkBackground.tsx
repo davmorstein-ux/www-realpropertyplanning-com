@@ -478,7 +478,8 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
 
       // ---- Draw nodes (with optional flare) ----
       for (const n of nodes) {
-        // Flare decays over ~500ms (using a simple exponential)
+        if (n.ghost) continue; // ghost nodes are never drawn
+        // Flare decays over ~500ms
         if (n.flare > 0) n.flare = Math.max(0, n.flare - dt / 500);
         ctx.save();
         ctx.shadowBlur = 15 + 5 * n.flare; // 15 -> 20 at peak flare
