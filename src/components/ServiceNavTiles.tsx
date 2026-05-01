@@ -84,7 +84,9 @@ const ServiceNavTiles = () => {
                   </h3>
                 </div>
               </div>
-              {imageTiles ? (
+              {isProfessionals ? (
+                <div style={{ height: "40px" }} />
+              ) : imageTiles ? (
                 <div className="mx-auto grid w-full max-w-[1200px] grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 px-4 sm:px-0">
                   {imageTiles.map((tile) => (
                     <ProfessionalImageTile key={tile.href} tile={tile} />
