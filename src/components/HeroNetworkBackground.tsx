@@ -344,7 +344,7 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
       for (const e of edgeList) {
         const a = nodes[e.i];
         const b = nodes[e.j];
-        ctx.strokeStyle = "rgba(80, 150, 255, 0.45)";
+        ctx.strokeStyle = "rgba(100, 170, 255, 0.7)";
         ctx.lineWidth = 0.8;
         ctx.beginPath();
         ctx.moveTo(a.x, a.y);
