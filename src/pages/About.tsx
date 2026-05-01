@@ -10,10 +10,9 @@ import StatewideSupport from "@/components/StatewideSupport";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import GoldCheck3D from "@/components/GoldCheck3D";
-import NetworkCanvas from "@/components/NetworkCanvas";
+import HeroNetworkBackground from "@/components/HeroNetworkBackground";
 
 import daveHeadshot from "@/assets/david-stein-real-estate-agent-seattle.webp";
-import aboutHeroBg from "@/assets/about-hero-network-background.png";
 import aboutHeroLogo from "@/assets/real-property-planning-logo-v4.png";
 import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
@@ -32,37 +31,14 @@ const About = () => {
       <main id="main-content">
         {/* Hero */}
         <section
-          className="relative overflow-hidden w-full h-[260px] md:h-[420px]"
-          style={{ backgroundColor: "#050d1a" }}
+          className="relative overflow-hidden w-full h-[280px] md:h-[420px]"
+          style={{ backgroundColor: "#020810" }}
         >
-          {/* Background image (dimmed so star bursts feel like a backdrop) */}
-          <div
-            aria-hidden="true"
-            className="absolute inset-0 z-0"
-            style={{
-              backgroundImage: `url(${aboutHeroBg})`,
-              backgroundSize: "50%",
-              backgroundPosition: "center center",
-              backgroundRepeat: "repeat",
-              filter: "brightness(0.85) saturate(1.2) contrast(1.6)",
-            }}
-          />
-
-          {/* Vignette overlay — darkens outer edges to subdue large star bursts */}
-          <div
-            aria-hidden="true"
-            className="absolute inset-0 z-[1] pointer-events-none"
-            style={{
-              background:
-                "radial-gradient(ellipse at center, rgba(0,5,20,0.0) 30%, rgba(0,5,20,0.55) 100%)",
-            }}
-          />
-
-          {/* Pulsing line animation overlay */}
-          <NetworkCanvas className="z-[2]" />
+          {/* Programmatic network canvas background */}
+          <HeroNetworkBackground />
 
           {/* Centered logo */}
-          <div className="absolute inset-0 z-[3] flex items-center justify-center">
+          <div className="absolute inset-0 z-[2] flex items-center justify-center">
             <img
               src={aboutHeroLogo}
               alt="Real Property Planning"
