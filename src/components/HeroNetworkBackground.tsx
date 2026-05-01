@@ -505,7 +505,7 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
       ref={canvasRef}
       aria-hidden="true"
       className={`absolute inset-0 w-full h-full block ${className}`}
-      style={{ backgroundColor: "#020810", transform: "scale(0.92)", transformOrigin: "center center" }}
+      style={{ backgroundColor: "#020810", transform: "scale(1.12)", transformOrigin: "center center" }}
     />
   );
 };
