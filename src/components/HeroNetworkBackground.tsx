@@ -295,6 +295,12 @@ const HeroNetworkBackground = ({
     let lastT = performance.now();
 
     const draw = (t: number) => {
+      // When paused, keep requesting frames but skip all work
+      if (pausedRef.current) {
+        lastT = t;
+        rafRef.current = requestAnimationFrame(draw);
+        return;
+      }
       const dt = Math.min(t - lastT, 64);
       lastT = t;
 
