@@ -31,8 +31,8 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
     let height = 0;
     let dpr = Math.min(window.devicePixelRatio || 1, 2);
 
-    const NODE_COUNT = 50;
-    const CONNECT_DIST = 300;
+    const NODE_COUNT = 75;
+    const CONNECT_DIST = 320;
 
     let nodes: Node[] = [];
     const linePulses = new Map<string, LinePulse>();
@@ -41,13 +41,58 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
 
     const initNodes = () => {
       nodes = [];
-      for (let i = 0; i < NODE_COUNT; i++) {
+      // Grid-seeded random placement for even coverage across the hero.
+      const aspect = Math.max(width / Math.max(height, 1), 0.1);
+      const rows = Math.max(2, Math.round(Math.sqrt(NODE_COUNT / aspect)));
+      const cols = Math.max(2, Math.ceil(NODE_COUNT / rows));
+      const cellW = width / cols;
+      const cellH = height / rows;
+
+      const cells: { c: number; r: number }[] = [];
+      for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < cols; c++) cells.push({ c, r });
+      }
+      // Fisher-Yates shuffle so we don't fill row-by-row when cells > NODE_COUNT
+      for (let i = cells.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [cells[i], cells[j]] = [cells[j], cells[i]];
+      }
+
+      // Slightly less dense around the centered logo (ellipse exclusion).
+      const cx = width / 2;
+      const cy = height / 2;
+      const exclusionRX = Math.min(width * 0.22, 260);
+      const exclusionRY = Math.min(height * 0.32, 130);
+
+      let placed = 0;
+      let idx = 0;
+      while (placed < NODE_COUNT && idx < cells.length) {
+        const { c, r } = cells[idx++];
+        const jx = (Math.random() * 0.85 + 0.075) * cellW;
+        const jy = (Math.random() * 0.85 + 0.075) * cellH;
+        const x = c * cellW + jx;
+        const y = r * cellH + jy;
+
+        // Thin out near the center; keep edges fully populated.
+        const dx = (x - cx) / exclusionRX;
+        const dy = (y - cy) / exclusionRY;
+        const distNorm = Math.hypot(dx, dy);
+        if (distNorm < 1 && Math.random() > distNorm * 0.85) continue;
+
+        nodes.push({ x, y, r: 2 + Math.random() * 1 });
+        placed++;
+      }
+
+      // Top up with random points if exclusion thinning left us short.
+      while (placed < NODE_COUNT) {
         nodes.push({
           x: Math.random() * width,
           y: Math.random() * height,
           r: 2 + Math.random() * 1,
         });
+        placed++;
       }
+
       ensureConnectivity();
     };
 
