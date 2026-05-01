@@ -35,9 +35,9 @@ const About = () => {
           className="relative overflow-hidden w-full h-[260px] md:h-[420px]"
           style={{
             backgroundImage: `url(${aboutHeroBg})`,
-            backgroundSize: "cover",
+            backgroundSize: "50%",
             backgroundPosition: "center center",
-            backgroundRepeat: "no-repeat",
+            backgroundRepeat: "repeat",
             backgroundColor: "#050d1a",
           }}
         >
