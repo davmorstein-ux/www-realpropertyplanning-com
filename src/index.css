@@ -1824,3 +1824,14 @@ img[src*="real-estate-website-globe-3d-icon-washington"] {
 img, svg, hr {
   opacity: revert !important;
 }
+
+.tagline-fade {
+  animation: taglineFade 4.5s ease-in-out forwards;
+}
+
+@keyframes taglineFade {
+  0%   { opacity: 0; }
+  15%  { opacity: 1; }
+  80%  { opacity: 1; }
+  100% { opacity: 0; }
+}
