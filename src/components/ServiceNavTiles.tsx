@@ -66,7 +66,7 @@ const ServiceNavTiles = () => {
           const isRoles = category.label === "Roles & Responsibilities";
           const isPlanning = category.label === "Planning & Next Steps";
           const imageTiles = isProfessionals
-            ? professionalImageTiles
+            ? null
             : isRoles
               ? rolesImageTiles
               : isPlanning
