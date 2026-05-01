@@ -319,10 +319,11 @@ const HeroNetworkBackground = ({ className = "" }: { className?: string }) => {
       ctx.fillRect(0, 0, width, height);
 
       // ---- Update signals ----
+      // Spawn frequently so 8–10 signals stay active most of the time.
       nextSignalIn -= dt;
-      if (nextSignalIn <= 0) {
+      while (nextSignalIn <= 0) {
         spawnSignal();
-        nextSignalIn = 2000 + Math.random() * 2000; // 2-4s
+        nextSignalIn += 180 + Math.random() * 220; // ~180–400ms between spawns
       }
 
       for (let s = signals.length - 1; s >= 0; s--) {
