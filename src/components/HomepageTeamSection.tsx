@@ -1,17 +1,23 @@
-import iconAttorneys from "@/assets/icons/probate-attorney-services-icon-washington.webp";
-import iconFinancialPlanning from "@/assets/icons/estate-financial-planning-icon-washington.webp";
-import iconSeniorMoves from "@/assets/icons/senior-movers-relocation-hero-washington.webp";
-import iconAppraiser from "@/assets/icons/real-estate-appraiser-icon-washington.webp";
-import iconRealtor from "@/assets/icons/realtor-real-estate-agent-icon-washington.webp";
-import iconExecutors from "@/assets/icons/probate-executors-services-icon-washington.webp";
+import imgAttorneys from "@/assets/professionals/attorneys-professional-washington.webp";
+import imgCPAs from "@/assets/professionals/cpas-professional-washington.webp";
+import imgBroker from "@/assets/professionals/real-estate-broker-professional-washington.webp";
+import imgAppraiser from "@/assets/professionals/real-estate-appraiser-professional-washington.webp";
+import imgFinancial from "@/assets/professionals/financial-planning-professional-washington.webp";
+import imgMortgage from "@/assets/professionals/mortgage-lender-professional-washington.webp";
+import imgSeniorLiving from "@/assets/professionals/senior-living-professional-washington.webp";
+import imgSeniorMove from "@/assets/professionals/senior-move-managers-professional-washington.webp";
+import imgEstateLiquidation from "@/assets/professionals/estate-liquidation-professional-washington.webp";
 
 const tiles = [
-  { icon: iconRealtor, label: "Real Estate Broker" },
-  { icon: iconAppraiser, label: "Certified Appraiser" },
-  { icon: iconAttorneys, label: "Estate Attorney" },
-  { icon: iconFinancialPlanning, label: "Financial Planner" },
-  { icon: iconSeniorMoves, label: "Senior Move Manager" },
-  { icon: iconExecutors, label: "Executor Advisor" },
+  { img: imgAttorneys, label: "Attorneys" },
+  { img: imgCPAs, label: "CPAs" },
+  { img: imgBroker, label: "Real Estate Broker" },
+  { img: imgAppraiser, label: "Real Estate Appraiser" },
+  { img: imgFinancial, label: "Financial Planning" },
+  { img: imgMortgage, label: "Mortgage Lending" },
+  { img: imgSeniorLiving, label: "Senior Living" },
+  { img: imgSeniorMove, label: "Senior Move Managers" },
+  { img: imgEstateLiquidation, label: "Estate Liquidation" },
 ];
 
 const HomepageTeamSection = () => {
@@ -27,19 +33,25 @@ const HomepageTeamSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-5 max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto justify-items-center">
           {tiles.map((tile) => (
             <div
               key={tile.label}
-              className="bg-card rounded-2xl shadow-sm border border-border p-6 flex flex-col items-center"
+              className="w-56 h-72 bg-[#faf8f4] rounded-2xl border-2 border-yellow-700/40 shadow-md flex flex-col items-center justify-start p-4 gap-3"
             >
-              <img
-                src={tile.icon}
-                alt={tile.label}
-                className="w-36 h-36 object-contain mb-3"
-                loading="lazy"
-              />
-              <span className="text-foreground text-xl font-bold text-center">{tile.label}</span>
+              <div className="w-44 h-44 rounded-full overflow-hidden border-4 border-yellow-600 shrink-0">
+                <img
+                  src={tile.img}
+                  alt={tile.label}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="h-12 flex items-center justify-center">
+                <span className="font-serif text-lg font-semibold text-center text-primary leading-tight">
+                  {tile.label}
+                </span>
+              </div>
             </div>
           ))}
         </div>
