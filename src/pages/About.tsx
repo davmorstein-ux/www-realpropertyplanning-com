@@ -19,7 +19,34 @@ import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconEmail3d from "@/assets/icons/real-estate-email-contact-icon-washington.webp";
 
+const TAGLINES = [
+  "Guiding families through life's transitions",
+  "Calm guidance for complex real estate decisions",
+  "Connecting families with trusted professionals",
+  "Probate, estate & senior moves — handled with care",
+  "Clarity when it matters most",
+];
+
 const About = () => {
+  const [taglineIndex, setTaglineIndex] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    const DISPLAY = 4500;
+    const FADE = 800;
+    const CYCLE = DISPLAY + FADE * 2;
+
+    const interval = setInterval(() => {
+      setVisible(false);
+      setTimeout(() => {
+        setTaglineIndex((i) => (i + 1) % TAGLINES.length);
+        setVisible(true);
+      }, FADE);
+    }, CYCLE);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
@@ -32,14 +59,14 @@ const About = () => {
       <main id="main-content">
         {/* Hero */}
         <section
-          className="relative overflow-hidden w-full h-[280px] md:h-[420px]"
+          className="relative overflow-hidden w-full h-[340px] md:h-[480px]"
           style={{ backgroundColor: "#020810" }}
         >
           {/* Programmatic network canvas background */}
           <HeroNetworkBackground />
 
-          {/* Centered logo */}
-          <div className="absolute inset-0 z-[2] flex items-center justify-center">
+          {/* Centered logo + tagline */}
+          <div className="absolute inset-0 z-[2] flex flex-col items-center justify-center">
             <img
               src={aboutHeroLogo}
               alt="Real Property Planning"
@@ -51,6 +78,18 @@ const About = () => {
                   "brightness(1.4) contrast(1.15) drop-shadow(0 0 12px rgba(100,160,255,0.5))",
               }}
             />
+            <p
+              className="mt-4 md:mt-6 px-6 text-center font-serif italic select-none"
+              style={{
+                color: "#c8d8f0",
+                fontSize: "clamp(1rem, 2.5vw, 1.4rem)",
+                textShadow: "0 1px 6px rgba(0,0,0,0.7)",
+                opacity: visible ? 1 : 0,
+                transition: "opacity 0.8s ease-in-out",
+              }}
+            >
+              {TAGLINES[taglineIndex]}
+            </p>
           </div>
 
           {/* Visually hidden h1 for SEO/accessibility */}
