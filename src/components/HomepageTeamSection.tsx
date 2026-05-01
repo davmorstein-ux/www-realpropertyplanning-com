@@ -1,3 +1,5 @@
+import ProfessionalImageTile, { type ProfessionalImageTileData } from "./ProfessionalImageTile";
+
 import imgAttorneys from "@/assets/professionals/attorneys-professional-washington.webp";
 import imgCPAs from "@/assets/professionals/cpas-professional-washington.webp";
 import imgBroker from "@/assets/professionals/real-estate-broker-professional-washington.webp";
@@ -8,63 +10,17 @@ import imgSeniorLiving from "@/assets/professionals/senior-living-professional-w
 import imgSeniorMove from "@/assets/professionals/senior-move-managers-professional-washington.webp";
 import imgEstateLiquidation from "@/assets/professionals/estate-liquidation-professional-washington.webp";
 
-const tiles = [
-  { img: imgAttorneys, label: "Attorneys" },
-  { img: imgCPAs, label: "CPAs" },
-  { img: imgBroker, label: "Real Estate Broker" },
-  { img: imgAppraiser, label: "Real Estate Appraiser" },
-  { img: imgFinancial, label: "Financial Planning" },
-  { img: imgMortgage, label: "Mortgage Lending" },
-  { img: imgSeniorLiving, label: "Senior Living" },
-  { img: imgSeniorMove, label: "Senior Move Managers" },
-  { img: imgEstateLiquidation, label: "Estate Liquidation" },
+const tiles: ProfessionalImageTileData[] = [
+  { src: imgAttorneys, alt: "Attorneys", label: "Attorneys", href: "/for-attorneys" },
+  { src: imgCPAs, alt: "CPAs", label: "CPAs", href: "/for-cpas" },
+  { src: imgBroker, alt: "Real Estate Broker", label: "Real Estate Broker", href: "/realtor" },
+  { src: imgAppraiser, alt: "Real Estate Appraiser", label: "Real Estate Appraiser", href: "/real-estate-appraiser" },
+  { src: imgFinancial, alt: "Financial Planning", label: "Financial Planning", href: "/for-financial-planners" },
+  { src: imgMortgage, alt: "Mortgage Lending", label: "Mortgage Lending", href: "/lenders-and-financing-specialists" },
+  { src: imgSeniorLiving, alt: "Senior Living", label: "Senior Living", href: "/senior-living-and-relocation" },
+  { src: imgSeniorMove, alt: "Senior Move Managers", label: "Senior Move Managers", href: "/senior-move-managers" },
+  { src: imgEstateLiquidation, alt: "Estate Liquidation", label: "Estate Liquidation", href: "/estate-liquidation" },
 ];
-
-const ServiceTile = ({ image, label, alt }: { image: string; label: string; alt: string }) => (
-  <div style={{
-    width: "220px",
-    height: "280px",
-    backgroundColor: "#faf8f4",
-    borderRadius: "16px",
-    border: "2px solid rgba(180, 140, 50, 0.4)",
-    boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "flex-start",
-    padding: "20px 12px 12px 12px",
-    gap: "16px",
-  }}>
-    <div style={{
-      width: "160px",
-      height: "160px",
-      borderRadius: "50%",
-      overflow: "hidden",
-      border: "4px solid #b8962e",
-      flexShrink: 0,
-    }}>
-      <img src={image} alt={alt} style={{ width: "100%", height: "100%", objectFit: "cover" }} loading="lazy" />
-    </div>
-    <div style={{
-      height: "48px",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-    }}>
-      <p style={{
-        fontFamily: "serif",
-        fontSize: "1.1rem",
-        fontWeight: 600,
-        textAlign: "center",
-        color: "#1a2744",
-        margin: 0,
-        lineHeight: 1.3,
-      }}>
-        {label}
-      </p>
-    </div>
-  </div>
-);
 
 const HomepageTeamSection = () => {
   return (
@@ -80,15 +36,15 @@ const HomepageTeamSection = () => {
         </div>
 
         <div style={{
-          display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "center",
+          display: "grid",
+          gridTemplateColumns: "repeat(4, 220px)",
           gap: "24px",
+          justifyContent: "center",
           maxWidth: "1060px",
           margin: "0 auto",
         }}>
           {tiles.map((tile) => (
-            <ServiceTile key={tile.label} image={tile.img} label={tile.label} alt={tile.label} />
+            <ProfessionalImageTile key={tile.href} tile={tile} />
           ))}
         </div>
       </div>
