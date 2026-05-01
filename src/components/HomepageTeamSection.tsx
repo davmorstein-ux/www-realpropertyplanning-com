@@ -37,10 +37,10 @@ const HomepageTeamSection = () => {
 
         <div style={{
           display: "grid",
-          gridTemplateColumns: "repeat(4, 220px)",
+          gridTemplateColumns: "repeat(4, 300px)",
           gap: "24px",
           justifyContent: "center",
-          maxWidth: "1060px",
+          maxWidth: "1380px",
           margin: "0 auto",
         }}>
           {tiles.map((tile) => (
