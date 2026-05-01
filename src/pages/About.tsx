@@ -11,8 +11,10 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import GoldCheck3D from "@/components/GoldCheck3D";
 import HubAndSpoke from "@/components/HubAndSpoke";
+import NetworkCanvas from "@/components/NetworkCanvas";
 
 import daveHeadshot from "@/assets/david-stein-real-estate-agent-seattle.webp";
+import aboutHeroBg from "@/assets/about-hero-network-bg.png";
 import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconEmail3d from "@/assets/icons/real-estate-email-contact-icon-washington.webp";
@@ -29,10 +31,24 @@ const About = () => {
       <Header />
       <main id="main-content">
         {/* Hero */}
-        <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24">
-          <div className="container px-6 lg:px-8">
+        <section
+          className="relative overflow-hidden bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-24"
+          style={{
+            backgroundImage: `url(${aboutHeroBg})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          {/* Dark overlay for text contrast */}
+          <div className="absolute inset-0 bg-primary/55 z-[1]" aria-hidden="true" />
+          {/* Animated network overlay */}
+          <NetworkCanvas className="z-[2]" />
+          <div className="container relative z-[3] px-6 lg:px-8">
             <div className="max-w-3xl">
-              <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight">
+              <h1
+                className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight"
+                style={{ textShadow: "0 2px 8px rgba(0,0,0,0.55)" }}
+              >
                 About Real Property Planning
               </h1>
             </div>
