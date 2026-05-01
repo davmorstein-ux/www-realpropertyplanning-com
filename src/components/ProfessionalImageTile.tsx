@@ -19,7 +19,7 @@ const ProfessionalImageTile = ({ tile }: { tile: ProfessionalImageTileData }) =>
       width: "200px",
     }}>
       {/* Circle + ring wrapper */}
-      <div style={{ position: "relative", width: "180px", height: "180px" }}>
+      <div style={{ position: "relative", width: "180px", height: "180px", background: "transparent" }}>
         {/* Photo clipped to circle */}
         <img src={tile.src} alt={tile.alt} style={{
           position: "absolute",
@@ -37,6 +37,7 @@ const ProfessionalImageTile = ({ tile }: { tile: ProfessionalImageTileData }) =>
           width: "100%",
           height: "100%",
           pointerEvents: "none",
+          mixBlendMode: "multiply",
         }} loading="lazy" />
       </div>
       {/* Label */}
