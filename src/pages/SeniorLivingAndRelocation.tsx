@@ -142,42 +142,39 @@ const SeniorLivingAndRelocation = () => {
                     <Link
                       key={option.title}
                       to={option.path}
-                      className="card-3d-blue group block no-underline w-[170px] h-[200px] sm:w-[180px] sm:h-[210px]"
+                      className="card-3d-blue group block no-underline w-[170px] h-[220px] sm:w-[180px] sm:h-[220px] overflow-hidden"
                     >
                       <div className="card-3d-blue__inner h-full">
-                        <div className="card-3d-blue__face h-full px-3 pt-3 pb-2 flex flex-col items-center">
-                          {option.title === "Adult Family Homes" ? (
-                            <img src={iconAfh3d} alt="Adult Family Homes" className="h-[105px] max-w-[150px] shrink-0 object-contain mt-1 transition-transform duration-300 ease-out group-hover:scale-110"  loading="lazy"/>
-                          ) : option.title === "Assisted Living Communities" ? (
-                            <img src={iconAssistedLiving3d} alt="Assisted Living Communities" className="h-[105px] max-w-[150px] shrink-0 object-contain mt-1 transition-transform duration-300 ease-out group-hover:scale-110"  loading="lazy"/>
-                          ) : option.title === "Memory Care" ? (
-                            <img src={iconMemoryCare3d} alt="Memory Care" className="h-[105px] max-w-[150px] shrink-0 object-contain mt-1 transition-transform duration-300 ease-out group-hover:scale-110"  loading="lazy"/>
-                          ) : option.title === "Nursing & Skilled Care" ? (
-                            <img src={iconNursingCare3d} alt="Nursing & Skilled Care" className="h-[105px] max-w-[150px] shrink-0 object-contain mt-1 transition-transform duration-300 ease-out group-hover:scale-110"  loading="lazy"/>
-                          ) : option.title === "Independent Living" ? (
-                            <img src={iconIndependentLiving3d} alt="Independent Living" className="h-[105px] max-w-[150px] shrink-0 object-contain mt-1 transition-transform duration-300 ease-out group-hover:scale-110"  loading="lazy"/>
-                          ) : (
-                            <div className="w-14 h-14 shrink-0 rounded-2xl bg-gradient-to-b from-[hsl(205_80%_92%)] to-[hsl(205_60%_85%)] border border-[hsl(205_70%_75%/0.5)] shadow-[inset_0_1px_2px_rgba(255,255,255,0.8),0_2px_4px_rgba(0,0,0,0.08)] mt-3" />
-                          )}
-                          {forcedLabelLines ? (
-                            <div className="relative w-full flex-1 mt-3 px-1">
-                              <div className="absolute inset-x-0 bottom-[12px] translate-y-[6px] flex flex-col items-center justify-center">
-                                <h3 className="m-0 font-serif text-[19px] sm:text-[14px] font-bold text-foreground group-hover:text-accent transition-colors text-center">
-                                  <span className="block leading-[1.02]">{forcedLabelLines[0]}</span>
-                                  <span className="-mt-0.5 block leading-[1.02]">{forcedLabelLines[1]}</span>
-                                </h3>
-                              </div>
-                            </div>
-                          ) : (
-                            <div className="flex flex-col items-center justify-end w-full flex-1 mt-3 px-1">
-                              <h3
-                                className="font-serif text-[19px] sm:text-[14px] font-bold text-foreground group-hover:text-accent transition-colors text-center"
-                                style={{ lineHeight: "1.15" }}
-                              >
-                                {option.title}
-                              </h3>
-                            </div>
-                          )}
+                        <div className="card-3d-blue__face h-full flex flex-col items-center overflow-hidden">
+                          {/* Image area — fixed height */}
+                          <div className="h-28 w-full flex items-center justify-center shrink-0 pt-2">
+                            {option.title === "Adult Family Homes" ? (
+                              <img src={iconAfh3d} alt="Adult Family Homes" className="h-[105px] max-w-[150px] object-contain transition-transform duration-300 ease-out group-hover:scale-110" loading="lazy"/>
+                            ) : option.title === "Assisted Living Communities" ? (
+                              <img src={iconAssistedLiving3d} alt="Assisted Living Communities" className="h-[105px] max-w-[150px] object-contain transition-transform duration-300 ease-out group-hover:scale-110" loading="lazy"/>
+                            ) : option.title === "Memory Care" ? (
+                              <img src={iconMemoryCare3d} alt="Memory Care" className="h-[105px] max-w-[150px] object-contain transition-transform duration-300 ease-out group-hover:scale-110" loading="lazy"/>
+                            ) : option.title === "Nursing & Skilled Care" ? (
+                              <img src={iconNursingCare3d} alt="Nursing & Skilled Care" className="h-[105px] max-w-[150px] object-contain transition-transform duration-300 ease-out group-hover:scale-110" loading="lazy"/>
+                            ) : option.title === "Independent Living" ? (
+                              <img src={iconIndependentLiving3d} alt="Independent Living" className="h-[105px] max-w-[150px] object-contain transition-transform duration-300 ease-out group-hover:scale-110" loading="lazy"/>
+                            ) : (
+                              <div className="w-14 h-14 rounded-2xl bg-gradient-to-b from-[hsl(205_80%_92%)] to-[hsl(205_60%_85%)] border border-[hsl(205_70%_75%/0.5)] shadow-[inset_0_1px_2px_rgba(255,255,255,0.8),0_2px_4px_rgba(0,0,0,0.08)]" />
+                            )}
+                          </div>
+                          {/* Label area — fills remaining space */}
+                          <div className="flex-1 w-full flex items-center justify-center text-center p-2">
+                            <h3 className="m-0 font-serif text-[19px] sm:text-[14px] font-bold text-foreground group-hover:text-accent transition-colors text-center leading-tight">
+                              {forcedLabelLines ? (
+                                <>
+                                  <span className="block">{forcedLabelLines[0]}</span>
+                                  <span className="block">{forcedLabelLines[1]}</span>
+                                </>
+                              ) : (
+                                option.title
+                              )}
+                            </h3>
+                          </div>
                         </div>
                       </div>
                     </Link>
