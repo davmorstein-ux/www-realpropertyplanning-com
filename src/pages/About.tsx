@@ -67,11 +67,12 @@ const About = () => {
       <main id="main-content">
         {/* Hero */}
         <section
+          ref={heroRef}
           className="relative overflow-hidden w-full h-[340px] md:h-[480px]"
           style={{ backgroundColor: "#020810" }}
         >
           {/* Programmatic network canvas background */}
-          <HeroNetworkBackground />
+          <HeroNetworkBackground paused={!heroVisible || reducedMotion} />
 
           {/* Centered logo + tagline */}
           <div className="absolute inset-0 z-[2] flex flex-col items-center justify-center">
