@@ -64,7 +64,7 @@ const planningImageTiles: ProfessionalImageTileData[] = [
 
 const ServiceNavTiles = () => {
   return (
-    <section className="pt-3 pb-20 lg:pt-4 lg:pb-28 bg-secondary">
+    <section className="pt-3 pb-20 lg:pt-4 lg:pb-28 bg-transparent">
       <div className="mx-auto max-w-[3300px] px-0 sm:px-1 lg:px-2">
         {/* 1. Heading */}
         <h2
@@ -110,7 +110,7 @@ const ServiceNavTiles = () => {
               {isProfessionals ? (
                 <div
                   className="grid grid-cols-2 sm:grid-cols-4 mx-auto"
-                  style={{ gap: "24px", padding: "32px", justifyItems: "center", maxWidth: "1100px", background: "transparent" }}
+                  style={{ gap: "24px", padding: "32px", justifyItems: "center", maxWidth: "1100px", background: "none" }}
                 >
                   {professionalTiles.map((tile) => (
                     <Link
@@ -124,7 +124,8 @@ const ServiceNavTiles = () => {
                         textDecoration: "none",
                         cursor: "pointer",
                         transition: "transform 0.2s ease",
-                        background: "transparent",
+                        background: "none",
+                        padding: "0",
                       }}
                       onMouseEnter={e => e.currentTarget.style.transform = "scale(1.05)"}
                       onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
@@ -132,7 +133,7 @@ const ServiceNavTiles = () => {
                       <img
                         src={tile.src}
                         alt={tile.label}
-                        style={{ width: "240px", height: "240px", objectFit: "contain", background: "transparent", mixBlendMode: "multiply" as const }}
+                        style={{ width: "240px", height: "240px", objectFit: "contain", display: "block", background: "none" }}
                         loading="lazy"
                       />
                       <span style={{
