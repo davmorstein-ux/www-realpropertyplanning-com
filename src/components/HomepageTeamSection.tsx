@@ -1,14 +1,14 @@
 import ProfessionalImageTile, { type ProfessionalImageTileData } from "./ProfessionalImageTile";
 
-import imgAttorneys from "@/assets/Attorneys_ring_webP.webp";
-import imgCPAs from "@/assets/CPAs_ring_webP.webp";
-import imgBroker from "@/assets/Real_Estate_Broker_webP.png";
-import imgAppraiser from "@/assets/Real_Estate_Apppraiser_webP.png";
-import imgFinancial from "@/assets/professionals/financial-planning-professional-washington.webp";
-import imgMortgage from "@/assets/Mortgage_Lender_webP.webp";
-import imgSeniorLiving from "@/assets/Senior_Living_ring_webP.webp";
-import imgSeniorMove from "@/assets/SEnior_Move_Managers_ring_webP.png";
-import imgEstateLiquidation from "@/assets/Estate_Liquidation_webP.png";
+import imgAttorneys from "@/assets/Atorneys_webP.webp";
+import imgCPAs from "@/assets/CPAs_webP.webp";
+import imgBroker from "@/assets/Real_Estate_Broker_webP.webp";
+import imgAppraiser from "@/assets/Real_Estate_Appraiser_webP.webp";
+import imgFinancial from "@/assets/Financial_Planning_webP.webp";
+import imgMortgage from "@/assets/Mortgage_Lending_webP.webp";
+import imgSeniorLiving from "@/assets/Senior_Living_webP.webp";
+import imgSeniorMove from "@/assets/SEnior_Move_Managers_webP.webp";
+import imgEstateLiquidation from "@/assets/Estate_Liquidation_webP.webp";
 
 const tiles: ProfessionalImageTileData[] = [
   { src: imgAttorneys, alt: "Attorneys", label: "Attorneys", href: "/for-attorneys" },
