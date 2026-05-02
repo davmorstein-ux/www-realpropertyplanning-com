@@ -180,10 +180,6 @@ const Index = () => {
         {/* WARM STATEMENT */}
         <HomepageWarmStatement />
 
-        {/* TEAM SECTION */}
-        <div style={{ background: "transparent", isolation: "isolate" }}>
-          <HomepageTeamSection />
-        </div>
 
         {/* 6. FAQ */}
         <HomepageFAQ />
