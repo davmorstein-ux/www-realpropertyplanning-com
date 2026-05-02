@@ -136,7 +136,7 @@ const homepageFaqJsonLd = `{
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-cream">
+    <div className="min-h-screen" style={{ backgroundColor: "hsl(var(--cream))" }}>
       <Helmet>
         <script type="application/ld+json">{homepageFaqJsonLd}</script>
       </Helmet>
