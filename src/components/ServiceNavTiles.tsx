@@ -108,7 +108,49 @@ const ServiceNavTiles = () => {
                 </div>
               </div>
               {isProfessionals ? (
-                <div style={{ height: "40px" }} />
+                <div style={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(4, 1fr)",
+                  gap: "24px",
+                  padding: "32px",
+                  justifyItems: "center",
+                  maxWidth: "960px",
+                  margin: "0 auto",
+                }} className="!grid-cols-2 sm:!grid-cols-4">
+                  {professionalTiles.map((tile) => (
+                    <Link
+                      key={tile.label}
+                      to={tile.href}
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        gap: "12px",
+                        textDecoration: "none",
+                        cursor: "pointer",
+                        transition: "transform 0.2s ease",
+                      }}
+                      onMouseEnter={e => e.currentTarget.style.transform = "scale(1.05)"}
+                      onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
+                    >
+                      <img
+                        src={tile.src}
+                        alt={tile.label}
+                        style={{ width: "180px", height: "180px", objectFit: "contain" }}
+                        loading="lazy"
+                      />
+                      <span style={{
+                        fontFamily: "Georgia, serif",
+                        fontSize: "1.1rem",
+                        fontWeight: 700,
+                        color: "#1a2744",
+                        textAlign: "center",
+                      }}>
+                        {tile.label}
+                      </span>
+                    </Link>
+                  ))}
+                </div>
               ) : imageTiles ? (
                 <div className="mx-auto grid w-full max-w-[1200px] grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 px-4 sm:px-0">
                   {imageTiles.map((tile) => (
