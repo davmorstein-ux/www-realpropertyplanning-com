@@ -132,7 +132,7 @@ const ServiceNavTiles = () => {
                       <img
                         src={tile.src}
                         alt={tile.label}
-                        style={{ width: "240px", height: "240px", objectFit: "contain" }}
+                        style={{ width: "240px", height: "240px", objectFit: "contain", background: "transparent", mixBlendMode: "multiply" as const }}
                         loading="lazy"
                       />
                       <span style={{
