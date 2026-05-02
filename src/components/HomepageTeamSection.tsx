@@ -87,11 +87,12 @@ const HomepageTeamSection = () => {
             background: "transparent",
           }}
         >
-          {tiles.map((tile) => (
+          {tiles.map((tile, i) => (
             <Link
               key={tile.href}
               to={tile.href}
               className="no-card"
+              ref={i === 0 ? debugRef as any : undefined}
               style={{
                 display: "flex",
                 flexDirection: "column",
