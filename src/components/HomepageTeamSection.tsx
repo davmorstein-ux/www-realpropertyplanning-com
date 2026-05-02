@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { useEffect, useRef } from "react";
 
 import imgAttorneys from "@/assets/attorneys-probate-estate-washington.png";
 import imgCPAs from "@/assets/cpas-probate-estate-washington.png";
