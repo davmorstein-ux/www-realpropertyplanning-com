@@ -22,7 +22,7 @@ const tiles = [
   { src: imgEstateLiquidation, label: "Estate Liquidation", href: "/estate-liquidation" },
 ];
 
-const CREAM = "rgb(249, 246, 241)";
+const CREAM = "#f9f6f1";
 
 const HomepageTeamSection = () => {
   return (
