@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 
-import imgAttorneys from "@/assets/attorneys-probate-estate-washington.png";
-import imgCPAs from "@/assets/cpas-probate-estate-washington.png";
-import imgBroker from "@/assets/real-estate-broker-probate-washington.png";
-import imgAppraiser from "@/assets/real-estate-appraiser-probate-washington.png";
-import imgFinancial from "@/assets/financial-planning-probate-estate-washington.png";
-import imgMortgage from "@/assets/mortgage-lending-probate-estate-washington.png";
-import imgSeniorLiving from "@/assets/senior-living-probate-estate-washington.png";
-import imgSeniorMove from "@/assets/senior-move-managers-probate-washington.png";
-import imgEstateLiquidation from "@/assets/estate-liquidation-probate-washington.png";
+import imgAttorneys from "@/assets/Attorneys_Trans.png";
+import imgCPAs from "@/assets/CPAs_trans.png";
+import imgBroker from "@/assets/Real_Estate_Broker_Trans.png";
+import imgAppraiser from "@/assets/Real_Estate_Appraiser_trans.png";
+import imgFinancial from "@/assets/Financial_Planning_trans.png";
+import imgMortgage from "@/assets/Mortgage_Lenders_Trans.png";
+import imgSeniorLiving from "@/assets/Senior_Living_Trans.png";
+import imgSeniorMove from "@/assets/Senior_Move_Managers_Trans.png";
+import imgEstateLiquidation from "@/assets/Estate_Liquidations_Trans.png";
 
 const tiles = [
   { src: imgAttorneys, label: "Attorneys", href: "/for-attorneys" },
@@ -25,8 +25,8 @@ const tiles = [
 const HomepageTeamSection = () => {
   return (
     <section style={{ background: "transparent", padding: "64px 0" }}>
-      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 24px", background: "transparent" }}>
-        <div style={{ maxWidth: "680px", margin: "0 auto 48px auto", textAlign: "center", background: "transparent" }}>
+      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 24px" }}>
+        <div style={{ maxWidth: "680px", margin: "0 auto 48px auto", textAlign: "center" }}>
           <h2
             style={{
               fontFamily: "Georgia, serif",
@@ -46,6 +46,7 @@ const HomepageTeamSection = () => {
           </p>
         </div>
         <div
+          className="homepage-team-grid"
           style={{
             display: "flex",
             flexWrap: "wrap",

@@ -1821,3 +1821,6 @@ img, svg, hr {
 .professionals-grid > * {
   background: transparent !important;
 }
+style={{
+  display: "flex",
+  flexWrap: "wrap",
