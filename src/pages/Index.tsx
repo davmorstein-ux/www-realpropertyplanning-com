@@ -16,7 +16,7 @@ import EducationalPathways from "@/components/EducationalPathways";
 import WhatHappensNext from "@/components/WhatHappensNext";
 import HomepageHero from "@/components/HomepageHero";
 import HomepageFAQ from "@/components/HomepageFAQ";
-import HomepageTeamSection from "@/components/HomepageTeamSection";
+
 import HowWeHelpCards from "@/components/HowWeHelpCards";
 import HomepageWarmStatement from "@/components/HomepageWarmStatement";
 
@@ -180,10 +180,6 @@ const Index = () => {
         {/* WARM STATEMENT */}
         <HomepageWarmStatement />
 
-        {/* TEAM SECTION */}
-        <div style={{ background: "transparent", isolation: "isolate" }}>
-          <HomepageTeamSection />
-        </div>
 
         {/* 6. FAQ */}
         <HomepageFAQ />
