@@ -24,6 +24,37 @@ const tiles = [
 ];
 
 const HomepageTeamSection = () => {
+  const debugRef = useRef<HTMLAnchorElement>(null);
+  useEffect(() => {
+    const el = debugRef.current;
+    if (!el) return;
+    const s = window.getComputedStyle(el);
+    console.log("DEBUG LINK computed:", JSON.stringify({
+      backgroundColor: s.backgroundColor,
+      border: s.border,
+      borderRadius: s.borderRadius,
+      boxShadow: s.boxShadow,
+    }));
+    const img = el.querySelector("img");
+    if (img) {
+      const si = window.getComputedStyle(img);
+      console.log("DEBUG IMG computed:", JSON.stringify({
+        backgroundColor: si.backgroundColor,
+        border: si.border,
+        borderRadius: si.borderRadius,
+        boxShadow: si.boxShadow,
+      }));
+    }
+    // Walk up parents
+    let p: HTMLElement | null = el;
+    while (p && p !== document.body) {
+      const ps = window.getComputedStyle(p);
+      if (ps.backgroundColor !== "rgba(0, 0, 0, 0)" && ps.backgroundColor !== "transparent") {
+        console.log("DEBUG non-transparent parent:", p.tagName, p.className, "bg:", ps.backgroundColor);
+      }
+      p = p.parentElement;
+    }
+  }, []);
   return (
     <section style={{ background: "transparent", padding: "64px 0" }}>
       <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 24px" }}>
