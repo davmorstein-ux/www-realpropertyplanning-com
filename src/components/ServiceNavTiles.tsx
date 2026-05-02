@@ -12,6 +12,7 @@ import imgLending from "@/assets/professionals/mortgage-lending-tile-washington.
 import imgSeniorLiving from "@/assets/professionals/senior-living-tile-washington.webp";
 import imgSeniorMove from "@/assets/professionals/senior-move-managers-tile-washington.webp";
 import imgEstateLiquidation from "@/assets/professionals/estate-liquidation-tile-washington.webp";
+import imgMedicare from "@/assets/professionals/medicare-provider-washington.png";
 
 import imgExecutors from "@/assets/roles/executors-tile-washington-v2.webp";
 import imgTrustees from "@/assets/roles/trustees-tile-washington.webp";
@@ -39,6 +40,7 @@ const professionalImageTiles: ProfessionalImageTileData[] = [
   { alt: "Senior living placement and transition guidance Puget Sound Washington", href: "/senior-living-and-relocation", src: imgSeniorLiving },
   { alt: "Senior move managers relocation services Washington State", href: "/senior-move-managers", src: imgSeniorMove },
   { alt: "Estate liquidation services Puget Sound Washington State", href: "/estate-liquidation", src: imgEstateLiquidation },
+  { alt: "Medicare provider guidance and support Washington State", href: "/medicare-provider", src: imgMedicare },
 ];
 
 const rolesImageTiles: ProfessionalImageTileData[] = [
