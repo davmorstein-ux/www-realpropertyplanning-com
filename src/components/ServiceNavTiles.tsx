@@ -1,30 +1,17 @@
-import { Link } from "react-router-dom";
 import SmartSearchBar from "./SmartSearchBar";
 import ServiceNavTileCard from "./ServiceNavTileCard";
 import ProfessionalImageTile, { type ProfessionalImageTileData } from "./ProfessionalImageTile";
 import { tileCategories } from "./service-nav-tiles-data";
 
-import imgAttorneys from "@/assets/attorneys-probate-estate-washington.png";
-import imgCPAs from "@/assets/cpas-probate-estate-washington.png";
-import imgBroker from "@/assets/real-estate-broker-probate-washington.png";
-import imgAppraiser from "@/assets/real-estate-appraiser-probate-washington.png";
-import imgFinancial from "@/assets/financial-planning-probate-estate-washington.png";
-import imgMortgage from "@/assets/mortgage-lending-probate-estate-washington.png";
-import imgSeniorLiving from "@/assets/senior-living-probate-estate-washington.png";
-import imgSeniorMove from "@/assets/senior-move-managers-probate-washington.png";
-import imgEstateLiquidation from "@/assets/estate-liquidation-probate-washington.png";
-
-const professionalTiles = [
-  { src: imgAttorneys, label: "Attorneys", href: "/for-attorneys" },
-  { src: imgCPAs, label: "CPAs", href: "/for-cpas" },
-  { src: imgBroker, label: "Real Estate Broker", href: "/realtor" },
-  { src: imgAppraiser, label: "Real Estate Appraiser", href: "/real-estate-appraiser" },
-  { src: imgFinancial, label: "Financial Planning", href: "/for-financial-planners" },
-  { src: imgMortgage, label: "Mortgage Lending", href: "/lenders-and-financing-specialists" },
-  { src: imgSeniorLiving, label: "Senior Living", href: "/senior-living-and-relocation" },
-  { src: imgSeniorMove, label: "Senior Move Managers", href: "/senior-move-managers" },
-  { src: imgEstateLiquidation, label: "Estate Liquidation", href: "/estate-liquidation" },
-];
+import imgAttorneys from "@/assets/professionals/attorneys-tile-washington-v2.webp";
+import imgCpas from "@/assets/professionals/cpas-tile-washington-v3.webp";
+import imgBroker from "@/assets/professionals/real-estate-broker-tile-washington.webp";
+import imgAppraiser from "@/assets/professionals/real-estate-appraiser-tile-washington.webp";
+import imgFinancial from "@/assets/professionals/financial-planning-tile-washington.webp";
+import imgLending from "@/assets/professionals/mortgage-lending-tile-washington.webp";
+import imgSeniorLiving from "@/assets/professionals/senior-living-tile-washington.webp";
+import imgSeniorMove from "@/assets/professionals/senior-move-managers-tile-washington.webp";
+import imgEstateLiquidation from "@/assets/professionals/estate-liquidation-tile-washington.webp";
 
 import imgExecutors from "@/assets/roles/executors-tile-washington-v2.webp";
 import imgTrustees from "@/assets/roles/trustees-tile-washington.webp";
@@ -42,29 +29,41 @@ import imgServiceAreas from "@/assets/planning/service-areas-tile-washington.web
 import imgGuidesResources from "@/assets/planning/guides-resources-tile-washington.webp";
 import imgGrayDivorce from "@/assets/planning/gray-divorce-tile-washington.webp";
 
+const professionalImageTiles: ProfessionalImageTileData[] = [
+  { alt: "Probate and estate attorneys real estate support Washington State", href: "/for-attorneys", src: imgAttorneys },
+  { alt: "CPA estate and probate real estate guidance Washington State", href: "/for-cpas", src: imgCpas },
+  { alt: "Real estate broker probate and senior transition sales Washington State", href: "/realtor", src: imgBroker },
+  { alt: "Certified residential appraiser estate and probate valuations Washington State", href: "/real-estate-appraiser", src: imgAppraiser },
+  { alt: "Financial planning real estate coordination estate transitions", href: "/for-financial-planners", src: imgFinancial },
+  { alt: "Mortgage lending guidance estate and inherited property Washington State", href: "/lenders-and-financing-specialists", src: imgLending },
+  { alt: "Senior living placement and transition guidance Puget Sound Washington", href: "/senior-living-and-relocation", src: imgSeniorLiving },
+  { alt: "Senior move managers relocation services Washington State", href: "/senior-move-managers", src: imgSeniorMove },
+  { alt: "Estate liquidation services Puget Sound Washington State", href: "/estate-liquidation", src: imgEstateLiquidation },
+];
+
 const rolesImageTiles: ProfessionalImageTileData[] = [
-  { alt: "Executors roles and responsibilities probate Washington State", href: "/executors", src: imgExecutors, label: "Executors" },
-  { alt: "Trustees roles and responsibilities estate Washington State", href: "/trustees", src: imgTrustees, label: "Trustees" },
-  { alt: "Wills last will and testament guidance Washington State", href: "/wills", src: imgWills, label: "Wills" },
-  { alt: "Power of Attorney roles and responsibilities Washington State", href: "/power-of-attorney", src: imgPowerOfAttorney, label: "Power of Attorney" },
-  { alt: "Probate terms and terminology glossary Washington State", href: "/terminology", src: imgProbateTerms, label: "Probate Terms" },
-  { alt: "The probate process steps overview Washington State", href: "/how-the-process-works", src: imgTheProcess, label: "The Process" },
+  { alt: "Executors roles and responsibilities probate Washington State", href: "/executors", src: imgExecutors },
+  { alt: "Trustees roles and responsibilities estate Washington State", href: "/trustees", src: imgTrustees },
+  { alt: "Wills last will and testament guidance Washington State", href: "/wills", src: imgWills },
+  { alt: "Power of Attorney roles and responsibilities Washington State", href: "/power-of-attorney", src: imgPowerOfAttorney },
+  { alt: "Probate terms and terminology glossary Washington State", href: "/terminology", src: imgProbateTerms },
+  { alt: "The probate process steps overview Washington State", href: "/how-the-process-works", src: imgTheProcess },
 ];
 
 const planningImageTiles: ProfessionalImageTileData[] = [
-  { alt: "Probate sales estate inventory Washington State", href: "/probate-estate-sales", src: imgProbateSales, label: "Probate Sales" },
-  { alt: "Senior placement advisor housing transition Washington State", href: "/senior-placement", src: imgSeniorPlacement, label: "Senior Placement" },
-  { alt: "Home values and pricing estate property Washington State", href: "/why-valuation-matters", src: imgHomeValues, label: "Home Values" },
-  { alt: "Senior home sales transition Washington State", href: "/senior-transitions", src: imgSeniorHomeSales, label: "Senior Home Sales" },
-  { alt: "Paying for senior living costs guidance Washington State", href: "/sell-house-fund-senior-living", src: imgPayingSeniorLiving, label: "Paying for Senior Living" },
-  { alt: "Service areas Washington State counties coverage", href: "/counties", src: imgServiceAreas, label: "Service Areas" },
-  { alt: "Guides and resources estate planning Washington State", href: "/guides-and-resources", src: imgGuidesResources, label: "Guides & Resources" },
-  { alt: "Gray divorce family home guidance Washington State", href: "/gray-divorce", src: imgGrayDivorce, label: "Gray Divorce" },
+  { alt: "Probate sales estate inventory Washington State", href: "/probate-estate-sales", src: imgProbateSales },
+  { alt: "Senior placement advisor housing transition Washington State", href: "/senior-placement", src: imgSeniorPlacement },
+  { alt: "Home values and pricing estate property Washington State", href: "/why-valuation-matters", src: imgHomeValues },
+  { alt: "Senior home sales transition Washington State", href: "/senior-transitions", src: imgSeniorHomeSales },
+  { alt: "Paying for senior living costs guidance Washington State", href: "/sell-house-fund-senior-living", src: imgPayingSeniorLiving },
+  { alt: "Service areas Washington State counties coverage", href: "/counties", src: imgServiceAreas },
+  { alt: "Guides and resources estate planning Washington State", href: "/guides-and-resources", src: imgGuidesResources },
+  { alt: "Gray divorce family home guidance Washington State", href: "/gray-divorce", src: imgGrayDivorce },
 ];
 
 const ServiceNavTiles = () => {
   return (
-    <section className="pt-3 pb-20 lg:pt-4 lg:pb-28 bg-transparent">
+    <section className="pt-3 pb-20 lg:pt-4 lg:pb-28 bg-secondary">
       <div className="mx-auto max-w-[3300px] px-0 sm:px-1 lg:px-2">
         {/* 1. Heading */}
         <h2
@@ -89,7 +88,7 @@ const ServiceNavTiles = () => {
           const isRoles = category.label === "Roles & Responsibilities";
           const isPlanning = category.label === "Planning & Next Steps";
           const imageTiles = isProfessionals
-            ? null
+            ? professionalImageTiles
             : isRoles
               ? rolesImageTiles
               : isPlanning
@@ -107,55 +106,7 @@ const ServiceNavTiles = () => {
                   </h3>
                 </div>
               </div>
-              {isProfessionals ? (
-              <div
-                  className="professionals-grid"
-                  style={{
-                    display: "grid",
-                    gridTemplateColumns: "repeat(4, auto)",
-                    gap: "32px",
-                    padding: "32px",
-                    justifyContent: "center",
-                    background: "transparent",
-                  }}
-                >
-                  {professionalTiles.map((tile) => (
-                    <Link
-                      key={tile.label}
-                      to={tile.href}
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        alignItems: "center",
-                        gap: "12px",
-                        textDecoration: "none",
-                        cursor: "pointer",
-                        transition: "transform 0.2s ease",
-                        background: "none",
-                        padding: "0",
-                      }}
-                      onMouseEnter={e => e.currentTarget.style.transform = "scale(1.05)"}
-                      onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
-                    >
-                      <img
-                        src={tile.src}
-                        alt={tile.label}
-                        style={{ width: "240px", height: "240px", objectFit: "contain", display: "block", background: "none" }}
-                        loading="lazy"
-                      />
-                      <span style={{
-                        fontFamily: "Georgia, serif",
-                        fontSize: "1.1rem",
-                        fontWeight: 700,
-                        color: "#1a2744",
-                        textAlign: "center",
-                      }}>
-                        {tile.label}
-                      </span>
-                    </Link>
-                  ))}
-                </div>
-              ) : imageTiles ? (
+              {imageTiles ? (
                 <div className="mx-auto grid w-full max-w-[1200px] grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 px-4 sm:px-0">
                   {imageTiles.map((tile) => (
                     <ProfessionalImageTile key={tile.href} tile={tile} />
