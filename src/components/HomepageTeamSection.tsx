@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 
-import imgAttorneys from "@/assets/attorneys-probate-estate-washington.png";
-import imgCPAs from "@/assets/cpas-probate-estate-washington.png";
-import imgBroker from "@/assets/real-estate-broker-probate-washington.png";
-import imgAppraiser from "@/assets/real-estate-appraiser-probate-washington.png";
-import imgFinancial from "@/assets/financial-planning-probate-estate-washington.png";
-import imgMortgage from "@/assets/mortgage-lending-probate-estate-washington.png";
-import imgSeniorLiving from "@/assets/senior-living-probate-estate-washington.png";
-import imgSeniorMove from "@/assets/senior-move-managers-probate-washington.png";
-import imgEstateLiquidation from "@/assets/estate-liquidation-probate-washington.png";
+import imgAttorneys from "@/assets/Attorneys_Trans.png";
+import imgCPAs from "@/assets/CPAs_trans.png";
+import imgBroker from "@/assets/Real_Estate_Broker_Trans.png";
+import imgAppraiser from "@/assets/Real_Estate_Appraiser_trans.png";
+import imgFinancial from "@/assets/Financial_Planning_trans.png";
+import imgMortgage from "@/assets/Mortgage_Lenders_Trans.png";
+import imgSeniorLiving from "@/assets/Senior_Living_Trans.png";
+import imgSeniorMove from "@/assets/Senior_Move_Managers_Trans.png";
+import imgEstateLiquidation from "@/assets/Estate_Liquidations_Trans.png";
 
 const tiles = [
   { src: imgAttorneys, label: "Attorneys", href: "/for-attorneys" },
@@ -45,28 +45,17 @@ const HomepageTeamSection = () => {
             their situation, across Western Washington.
           </p>
         </div>
-        <div
-          className="homepage-team-grid"
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            gap: "32px",
-            justifyContent: "center",
-            background: "transparent",
-          }}
-        >
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "32px", justifyContent: "center" }}>
           {tiles.map((tile) => (
             <Link
               key={tile.href}
               to={tile.href}
-              className="no-card"
               style={{
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
                 gap: "12px",
                 textDecoration: "none",
-                background: "transparent",
                 padding: "0",
                 width: "200px",
                 flexShrink: 0,
@@ -83,8 +72,7 @@ const HomepageTeamSection = () => {
                   height: "200px",
                   objectFit: "contain",
                   display: "block",
-                  background: "transparent",
-                  imageRendering: "auto",
+                  backgroundColor: "rgb(249, 246, 241)",
                 }}
                 loading="lazy"
               />
