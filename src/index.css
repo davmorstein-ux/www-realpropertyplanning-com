@@ -1821,10 +1821,7 @@ img, svg, hr {
 .professionals-grid > * {
   background: transparent !important;
 }
-style={{
-  display: "flex",
-  flexWrap: "wrap",
-  .homepage-team-grid > a {
+.homepage-team-grid > a {
   background: transparent !important;
 }
 
