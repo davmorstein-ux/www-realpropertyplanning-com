@@ -1824,3 +1824,14 @@ img, svg, hr {
 style={{
   display: "flex",
   flexWrap: "wrap",
+  .homepage-team-grid > a {
+  background: transparent !important;
+}
+
+.homepage-team-grid {
+  background: transparent !important;
+}
+
+.homepage-team-grid img {
+  background: transparent !important;
+}
