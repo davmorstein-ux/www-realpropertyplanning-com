@@ -12,7 +12,7 @@ import imgLending from "@/assets/professionals/mortgage-lending-tile-washington.
 import imgSeniorLiving from "@/assets/professionals/senior-living-tile-washington.webp";
 import imgSeniorMove from "@/assets/professionals/senior-move-managers-tile-washington.webp";
 import imgEstateLiquidation from "@/assets/professionals/estate-liquidation-tile-washington.webp";
-import imgMedicare from "@/assets/professionals/medicare-provider-washington.png";
+import imgMedicare from "@/assets/professionals/medicare-providers-tile-washington.webp";
 
 import imgExecutors from "@/assets/roles/executors-tile-washington-v2.webp";
 import imgTrustees from "@/assets/roles/trustees-tile-washington.webp";
