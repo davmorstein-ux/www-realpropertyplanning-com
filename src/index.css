@@ -1832,3 +1832,9 @@ img, svg, hr {
 .homepage-team-grid img {
   background: transparent !important;
 }
+
+a.no-card {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}

@@ -59,6 +59,7 @@ const HomepageTeamSection = () => {
             <Link
               key={tile.href}
               to={tile.href}
+              className="no-card"
               style={{
                 display: "flex",
                 flexDirection: "column",
