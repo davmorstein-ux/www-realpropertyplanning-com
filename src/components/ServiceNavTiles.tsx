@@ -108,9 +108,16 @@ const ServiceNavTiles = () => {
                 </div>
               </div>
               {isProfessionals ? (
-                <div
-                  className="grid grid-cols-2 sm:grid-cols-4 mx-auto"
-                  style={{ gap: "24px", padding: "32px", justifyItems: "center", maxWidth: "1100px", background: "none" }}
+              <div
+                  className="professionals-grid"
+                  style={{
+                    display: "grid",
+                    gridTemplateColumns: "repeat(4, auto)",
+                    gap: "32px",
+                    padding: "32px",
+                    justifyContent: "center",
+                    background: "transparent",
+                  }}
                 >
                   {professionalTiles.map((tile) => (
                     <Link

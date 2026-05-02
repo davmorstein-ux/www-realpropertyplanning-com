@@ -1817,3 +1817,7 @@ img, svg, hr {
   75%  { opacity: 1; }
   100% { opacity: 0; }
 }
+
+.professionals-grid > * {
+  background: transparent !important;
+}
