@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 
-import imgAttorneys from "@/assets/attorneys-probate-estate-washington.png";
-import imgCPAs from "@/assets/cpas-probate-estate-washington.png";
-import imgBroker from "@/assets/real-estate-broker-probate-washington.png";
-import imgAppraiser from "@/assets/real-estate-appraiser-probate-washington.png";
-import imgFinancial from "@/assets/financial-planning-probate-estate-washington.png";
-import imgMortgage from "@/assets/mortgage-lending-probate-estate-washington.png";
-import imgSeniorLiving from "@/assets/senior-living-probate-estate-washington.png";
-import imgSeniorMove from "@/assets/senior-move-managers-probate-washington.png";
-import imgEstateLiquidation from "@/assets/estate-liquidation-probate-washington.png";
+import imgAttorneys from "@/assets/Attorneys_Trans.png";
+import imgCPAs from "@/assets/CPAs_trans.png";
+import imgBroker from "@/assets/Real_Estate_Broker_Trans.png";
+import imgAppraiser from "@/assets/Real_Estate_Appraiser_trans.png";
+import imgFinancial from "@/assets/Financial_Planning_trans.png";
+import imgMortgage from "@/assets/Mortgage_Lenders_Trans.png";
+import imgSeniorLiving from "@/assets/Senior_Living_Trans.png";
+import imgSeniorMove from "@/assets/Senior_Move_Managers_Trans.png";
+import imgEstateLiquidation from "@/assets/Estate_Liquidations_Trans.png";
 
 const tiles = [
   { src: imgAttorneys, label: "Attorneys", href: "/for-attorneys" },
@@ -25,7 +25,7 @@ const tiles = [
 const HomepageTeamSection = () => {
   return (
     <section style={{ background: "transparent", padding: "64px 0" }}>
-      <div style={{ maxWidth: "960px", margin: "0 auto", padding: "0 24px" }}>
+      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 24px" }}>
         <div style={{ maxWidth: "680px", margin: "0 auto 48px auto", textAlign: "center" }}>
           <h2
             style={{
@@ -47,8 +47,8 @@ const HomepageTeamSection = () => {
         </div>
         <div
           style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(4, auto)",
+            display: "flex",
+            flexWrap: "wrap",
             gap: "32px",
             justifyContent: "center",
             background: "transparent",
@@ -66,6 +66,8 @@ const HomepageTeamSection = () => {
                 textDecoration: "none",
                 background: "transparent",
                 padding: "0",
+                width: "200px",
+                flexShrink: 0,
                 transition: "transform 0.2s ease",
               }}
               onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
@@ -80,6 +82,7 @@ const HomepageTeamSection = () => {
                   objectFit: "contain",
                   display: "block",
                   background: "transparent",
+                  imageRendering: "auto",
                 }}
                 loading="lazy"
               />
@@ -90,6 +93,7 @@ const HomepageTeamSection = () => {
                   fontWeight: 700,
                   color: "#1a2744",
                   textAlign: "center",
+                  lineHeight: 1.3,
                 }}
               >
                 {tile.label}
