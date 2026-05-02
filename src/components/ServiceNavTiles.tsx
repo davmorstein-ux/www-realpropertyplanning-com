@@ -1,7 +1,30 @@
+import { Link } from "react-router-dom";
 import SmartSearchBar from "./SmartSearchBar";
 import ServiceNavTileCard from "./ServiceNavTileCard";
 import ProfessionalImageTile, { type ProfessionalImageTileData } from "./ProfessionalImageTile";
 import { tileCategories } from "./service-nav-tiles-data";
+
+import imgAttorneys from "@/assets/Atorneys_webP.webp";
+import imgCPAs from "@/assets/CPAs_webP.webp";
+import imgBroker from "@/assets/Real_Estate_Broker_webP.webp";
+import imgAppraiser from "@/assets/Real_Estate_Appraiser_webP.webp";
+import imgFinancial from "@/assets/Financial_Planning_webP.webp";
+import imgMortgage from "@/assets/Mortgage_Lending_webP.webp";
+import imgSeniorLiving from "@/assets/Senior_Living_webP.webp";
+import imgSeniorMove from "@/assets/SEnior_Move_Managers_webP.webp";
+import imgEstateLiquidation from "@/assets/Estate_Liquidation_webP.webp";
+
+const professionalTiles = [
+  { src: imgAttorneys, label: "Attorneys", href: "/for-attorneys" },
+  { src: imgCPAs, label: "CPAs", href: "/for-cpas" },
+  { src: imgBroker, label: "Real Estate Broker", href: "/realtor" },
+  { src: imgAppraiser, label: "Real Estate Appraiser", href: "/real-estate-appraiser" },
+  { src: imgFinancial, label: "Financial Planning", href: "/for-financial-planners" },
+  { src: imgMortgage, label: "Mortgage Lending", href: "/lenders-and-financing-specialists" },
+  { src: imgSeniorLiving, label: "Senior Living", href: "/senior-living-and-relocation" },
+  { src: imgSeniorMove, label: "Senior Move Managers", href: "/senior-move-managers" },
+  { src: imgEstateLiquidation, label: "Estate Liquidation", href: "/estate-liquidation" },
+];
 
 import imgExecutors from "@/assets/roles/executors-tile-washington-v2.webp";
 import imgTrustees from "@/assets/roles/trustees-tile-washington.webp";
@@ -85,7 +108,44 @@ const ServiceNavTiles = () => {
                 </div>
               </div>
               {isProfessionals ? (
-                <div style={{ height: "40px" }} />
+                <div
+                  className="grid grid-cols-2 sm:grid-cols-4 mx-auto"
+                  style={{ gap: "24px", padding: "32px", justifyItems: "center", maxWidth: "960px" }}
+                >
+                  {professionalTiles.map((tile) => (
+                    <Link
+                      key={tile.label}
+                      to={tile.href}
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        gap: "12px",
+                        textDecoration: "none",
+                        cursor: "pointer",
+                        transition: "transform 0.2s ease",
+                      }}
+                      onMouseEnter={e => e.currentTarget.style.transform = "scale(1.05)"}
+                      onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
+                    >
+                      <img
+                        src={tile.src}
+                        alt={tile.label}
+                        style={{ width: "180px", height: "180px", objectFit: "contain" }}
+                        loading="lazy"
+                      />
+                      <span style={{
+                        fontFamily: "Georgia, serif",
+                        fontSize: "1.1rem",
+                        fontWeight: 700,
+                        color: "#1a2744",
+                        textAlign: "center",
+                      }}>
+                        {tile.label}
+                      </span>
+                    </Link>
+                  ))}
+                </div>
               ) : imageTiles ? (
                 <div className="mx-auto grid w-full max-w-[1200px] grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 px-4 sm:px-0">
                   {imageTiles.map((tile) => (
