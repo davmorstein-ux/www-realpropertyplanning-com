@@ -781,7 +781,9 @@ body {
 }
 
 .tile-hover {
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .tile-hover:hover {
@@ -1653,7 +1655,6 @@ button:not([data-nav-button]),
   opacity: 0.032;
 }
 
-
 /* ============================================================
    Affiliation badge marquee — continuous, linear, seamless loop.
    The track contains the badge list duplicated twice; animating
@@ -1661,8 +1662,12 @@ button:not([data-nav-button]),
    loop restart is visually invisible.
    ============================================================ */
 @keyframes affiliation-marquee-scroll {
-  from { transform: translate3d(0, 0, 0); }
-  to   { transform: translate3d(-50%, 0, 0); }
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
 }
 
 .affiliation-marquee-track {
@@ -1686,8 +1691,12 @@ button:not([data-nav-button]),
    no JS timers, no snapping, no pause/resume.
    ============================================================ */
 @keyframes affiliation-ring-spin {
-  from { transform: rotateY(0deg); }
-  to   { transform: rotateY(-360deg); }
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
 }
 
 .affiliation-ring-spin {
@@ -1764,14 +1773,14 @@ img[src*="real-estate-website-globe-3d-icon-washington"] {
   bottom: 0;
   height: 1px;
   width: 100%;
-  background-color: #C9A84C;
+  background-color: #c9a84c;
   transform: scaleX(0);
   transform-origin: left center;
   transition: transform 0.2s ease;
   pointer-events: none;
 }
 .nav-link-hover:hover {
-  color: #C9A84C !important;
+  color: #c9a84c !important;
 }
 .nav-link-hover:hover::after {
   transform: scaleX(1);
@@ -1803,7 +1812,9 @@ img[src*="real-estate-website-globe-3d-icon-washington"] {
 
 /* Restore decorative/utility opacity for non-text visual elements
  * (logos, separators, icons) that may legitimately use opacity. */
-img, svg, hr {
+img,
+svg,
+hr {
   opacity: revert !important;
 }
 
@@ -1812,10 +1823,18 @@ img, svg, hr {
 }
 
 @keyframes taglineFade {
-  0%   { opacity: 0; }
-  20%  { opacity: 1; }
-  75%  { opacity: 1; }
-  100% { opacity: 0; }
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .professionals-grid > * {
@@ -1837,4 +1856,12 @@ a.no-card {
   background: transparent !important;
   box-shadow: none !important;
   border: none !important;
+}
+section .homepage-team-grid a,
+section .homepage-team-grid a:hover,
+section .homepage-team-grid a:focus {
+  background: #f9f6f1 !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
 }
