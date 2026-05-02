@@ -25,8 +25,8 @@ const tiles = [
 const HomepageTeamSection = () => {
   return (
     <section style={{ background: "transparent", padding: "64px 0" }}>
-      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 24px" }}>
-        <div style={{ maxWidth: "680px", margin: "0 auto 48px auto", textAlign: "center" }}>
+      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 24px", background: "transparent" }}>
+        <div style={{ maxWidth: "680px", margin: "0 auto 48px auto", textAlign: "center", background: "transparent" }}>
           <h2
             style={{
               fontFamily: "Georgia, serif",
