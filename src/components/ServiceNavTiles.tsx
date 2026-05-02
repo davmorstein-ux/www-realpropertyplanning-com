@@ -4,15 +4,15 @@ import ServiceNavTileCard from "./ServiceNavTileCard";
 import ProfessionalImageTile, { type ProfessionalImageTileData } from "./ProfessionalImageTile";
 import { tileCategories } from "./service-nav-tiles-data";
 
-import imgAttorneys from "@/assets/Atorneys_webP.webp";
-import imgCPAs from "@/assets/CPAs_webP.webp";
-import imgBroker from "@/assets/Real_Estate_Broker_webP.webp";
-import imgAppraiser from "@/assets/Real_Estate_Appraiser_webP.webp";
-import imgFinancial from "@/assets/Financial_Planning_webP.webp";
-import imgMortgage from "@/assets/Mortgage_Lending_webP.webp";
-import imgSeniorLiving from "@/assets/Senior_Living_webP.webp";
-import imgSeniorMove from "@/assets/SEnior_Move_Managers_webP.webp";
-import imgEstateLiquidation from "@/assets/Estate_Liquidation_webP.webp";
+import imgAttorneys from "@/assets/attorneys-probate-estate-washington.png";
+import imgCPAs from "@/assets/cpas-probate-estate-washington.png";
+import imgBroker from "@/assets/real-estate-broker-probate-washington.png";
+import imgAppraiser from "@/assets/real-estate-appraiser-probate-washington.png";
+import imgFinancial from "@/assets/financial-planning-probate-estate-washington.png";
+import imgMortgage from "@/assets/mortgage-lending-probate-estate-washington.png";
+import imgSeniorLiving from "@/assets/senior-living-probate-estate-washington.png";
+import imgSeniorMove from "@/assets/senior-move-managers-probate-washington.png";
+import imgEstateLiquidation from "@/assets/estate-liquidation-probate-washington.png";
 
 const professionalTiles = [
   { src: imgAttorneys, label: "Attorneys", href: "/for-attorneys" },
