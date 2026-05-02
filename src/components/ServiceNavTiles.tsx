@@ -40,6 +40,7 @@ const professionalImageTiles: ProfessionalImageTileData[] = [
   { alt: "Senior living placement and transition guidance Puget Sound Washington", href: "/senior-living-and-relocation", src: imgSeniorLiving },
   { alt: "Senior move managers relocation services Washington State", href: "/senior-move-managers", src: imgSeniorMove },
   { alt: "Estate liquidation services Puget Sound Washington State", href: "/estate-liquidation", src: imgEstateLiquidation },
+  { alt: "Medicare provider guidance and support Washington State", href: "/medicare-provider", src: imgMedicare },
 ];
 
 const rolesImageTiles: ProfessionalImageTileData[] = [
