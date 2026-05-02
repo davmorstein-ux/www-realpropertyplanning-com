@@ -22,11 +22,13 @@ const tiles = [
   { src: imgEstateLiquidation, label: "Estate Liquidation", href: "/estate-liquidation" },
 ];
 
+const CREAM = "rgb(249, 246, 241)";
+
 const HomepageTeamSection = () => {
   return (
-    <section style={{ background: "transparent", padding: "64px 0" }}>
-      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 24px" }}>
-        <div style={{ maxWidth: "680px", margin: "0 auto 48px auto", textAlign: "center" }}>
+    <section style={{ background: CREAM, padding: "64px 0" }}>
+      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 24px", background: CREAM }}>
+        <div style={{ maxWidth: "680px", margin: "0 auto 48px auto", textAlign: "center", background: CREAM }}>
           <h2
             style={{
               fontFamily: "Georgia, serif",
@@ -45,7 +47,7 @@ const HomepageTeamSection = () => {
             their situation, across Western Washington.
           </p>
         </div>
-        <div style={{ display: "flex", flexWrap: "wrap", gap: "32px", justifyContent: "center" }}>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "32px", justifyContent: "center", background: CREAM }}>
           {tiles.map((tile) => (
             <Link
               key={tile.href}
@@ -56,6 +58,7 @@ const HomepageTeamSection = () => {
                 alignItems: "center",
                 gap: "12px",
                 textDecoration: "none",
+                backgroundColor: CREAM,
                 padding: "0",
                 width: "200px",
                 flexShrink: 0,
@@ -72,7 +75,7 @@ const HomepageTeamSection = () => {
                   height: "200px",
                   objectFit: "contain",
                   display: "block",
-                  backgroundColor: "rgb(249, 246, 241)",
+                  backgroundColor: CREAM,
                 }}
                 loading="lazy"
               />
