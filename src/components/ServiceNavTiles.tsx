@@ -110,7 +110,7 @@ const ServiceNavTiles = () => {
               {isProfessionals ? (
                 <div
                   className="grid grid-cols-2 sm:grid-cols-4 mx-auto"
-                  style={{ gap: "24px", padding: "32px", justifyItems: "center", maxWidth: "960px" }}
+                  style={{ gap: "24px", padding: "32px", justifyItems: "center", maxWidth: "1100px", background: "transparent" }}
                 >
                   {professionalTiles.map((tile) => (
                     <Link
@@ -124,6 +124,7 @@ const ServiceNavTiles = () => {
                         textDecoration: "none",
                         cursor: "pointer",
                         transition: "transform 0.2s ease",
+                        background: "transparent",
                       }}
                       onMouseEnter={e => e.currentTarget.style.transform = "scale(1.05)"}
                       onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
@@ -131,7 +132,7 @@ const ServiceNavTiles = () => {
                       <img
                         src={tile.src}
                         alt={tile.label}
-                        style={{ width: "180px", height: "180px", objectFit: "contain" }}
+                        style={{ width: "240px", height: "240px", objectFit: "contain" }}
                         loading="lazy"
                       />
                       <span style={{
