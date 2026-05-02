@@ -1,48 +1,100 @@
-import ProfessionalImageTile, { type ProfessionalImageTileData } from "./ProfessionalImageTile";
+import { Link } from "react-router-dom";
 
-import imgAttorneys from "@/assets/Atorneys_webP.webp";
-import imgCPAs from "@/assets/CPAs_webP.webp";
-import imgBroker from "@/assets/Real_Estate_Broker_webP.webp";
-import imgAppraiser from "@/assets/Real_Estate_Appraiser_webP.webp";
-import imgFinancial from "@/assets/Financial_Planning_webP.webp";
-import imgMortgage from "@/assets/Mortgage_Lending_webP.webp";
-import imgSeniorLiving from "@/assets/Senior_Living_webP.webp";
-import imgSeniorMove from "@/assets/SEnior_Move_Managers_webP.webp";
-import imgEstateLiquidation from "@/assets/Estate_Liquidation_webP.webp";
+import imgAttorneys from "@/assets/Attorneys_Trans.png";
+import imgCPAs from "@/assets/CPAs_trans.png";
+import imgBroker from "@/assets/Real_Estate_Broker_Trans.png";
+import imgAppraiser from "@/assets/Real_Estate_Appraiser_trans.png";
+import imgFinancial from "@/assets/Financial_Planning_trans.png";
+import imgMortgage from "@/assets/Mortgage_Lenders_Trans.png";
+import imgSeniorLiving from "@/assets/Senior_Living_Trans.png";
+import imgSeniorMove from "@/assets/Senior_Move_Managers_Trans.png";
+import imgEstateLiquidation from "@/assets/Estate_Liquidations_Trans.png";
 
-const tiles: ProfessionalImageTileData[] = [
-  { src: imgAttorneys, alt: "Attorneys", label: "Attorneys", href: "/for-attorneys" },
-  { src: imgCPAs, alt: "CPAs", label: "CPAs", href: "/for-cpas" },
-  { src: imgBroker, alt: "Real Estate Broker", label: "Real Estate Broker", href: "/realtor" },
-  { src: imgAppraiser, alt: "Real Estate Appraiser", label: "Real Estate Appraiser", href: "/real-estate-appraiser" },
-  { src: imgFinancial, alt: "Financial Planning", label: "Financial Planning", href: "/for-financial-planners" },
-  { src: imgMortgage, alt: "Mortgage Lending", label: "Mortgage Lending", href: "/lenders-and-financing-specialists" },
-  { src: imgSeniorLiving, alt: "Senior Living", label: "Senior Living", href: "/senior-living-and-relocation" },
-  { src: imgSeniorMove, alt: "Senior Move Managers", label: "Senior Move Managers", href: "/senior-move-managers" },
-  { src: imgEstateLiquidation, alt: "Estate Liquidation", label: "Estate Liquidation", href: "/estate-liquidation" },
+const tiles = [
+  { src: imgAttorneys, label: "Attorneys", href: "/for-attorneys" },
+  { src: imgCPAs, label: "CPAs", href: "/for-cpas" },
+  { src: imgBroker, label: "Real Estate Broker", href: "/realtor" },
+  { src: imgAppraiser, label: "Real Estate Appraiser", href: "/real-estate-appraiser" },
+  { src: imgFinancial, label: "Financial Planning", href: "/for-financial-planners" },
+  { src: imgMortgage, label: "Mortgage Lending", href: "/lenders-and-financing-specialists" },
+  { src: imgSeniorLiving, label: "Senior Living", href: "/senior-living-and-relocation" },
+  { src: imgSeniorMove, label: "Senior Move Managers", href: "/senior-move-managers" },
+  { src: imgEstateLiquidation, label: "Estate Liquidation", href: "/estate-liquidation" },
 ];
 
 const HomepageTeamSection = () => {
   return (
-    <section className="py-16 lg:py-24 bg-background">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-[680px] mx-auto text-center mb-12">
-          <h2 className="font-serif text-[hsl(0,70%,30%)] font-semibold mb-6 text-xl">
+    <section style={{ background: "transparent", padding: "64px 0" }}>
+      <div style={{ maxWidth: "960px", margin: "0 auto", padding: "0 24px" }}>
+        <div style={{ maxWidth: "680px", margin: "0 auto 48px auto", textAlign: "center" }}>
+          <h2
+            style={{
+              fontFamily: "Georgia, serif",
+              color: "hsl(0,70%,30%)",
+              fontWeight: 600,
+              marginBottom: "24px",
+              fontSize: "1.25rem",
+            }}
+          >
             You Do Not Have To Navigate This Alone
           </h2>
-          <p className="text-xl text-muted-foreground leading-relaxed">
-            Families dealing with inherited property, probate, or a senior housing transition rarely need just one kind of help. They need a coordinated team — a real estate professional, an attorney, a care advisor, a financial planner — all working together. Real Property Planning connects families with the right professionals for their situation, across Western Washington. Real Property Planning is a Corporate Partner of the Aging Life Care Association, a recognized member of the National Association of Senior Advocates, and a member of the National Association of Estate Planners & Councils — professional affiliations that reflect a commitment to this work that goes beyond real estate.
+          <p style={{ fontSize: "1.25rem", color: "var(--muted-foreground)", lineHeight: 1.7 }}>
+            Families dealing with inherited property, probate, or a senior housing transition rarely need just one kind
+            of help. They need a coordinated team — a real estate professional, an attorney, a care advisor, a financial
+            planner — all working together. Real Property Planning connects families with the right professionals for
+            their situation, across Western Washington.
           </p>
         </div>
-
-        <div className="grid grid-cols-2 lg:grid-cols-4 justify-items-center" style={{
-          gap: "32px",
-          justifyContent: "center",
-          margin: "0 auto",
-          maxWidth: "960px",
-        }}>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(4, auto)",
+            gap: "32px",
+            justifyContent: "center",
+            background: "transparent",
+          }}
+        >
           {tiles.map((tile) => (
-            <ProfessionalImageTile key={tile.href} tile={tile} />
+            <Link
+              key={tile.href}
+              to={tile.href}
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                gap: "12px",
+                textDecoration: "none",
+                background: "transparent",
+                padding: "0",
+                transition: "transform 0.2s ease",
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
+              onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
+            >
+              <img
+                src={tile.src}
+                alt={tile.label}
+                style={{
+                  width: "200px",
+                  height: "200px",
+                  objectFit: "contain",
+                  display: "block",
+                  background: "transparent",
+                }}
+                loading="lazy"
+              />
+              <span
+                style={{
+                  fontFamily: "Georgia, serif",
+                  fontSize: "1.1rem",
+                  fontWeight: 700,
+                  color: "#1a2744",
+                  textAlign: "center",
+                }}
+              >
+                {tile.label}
+              </span>
+            </Link>
           ))}
         </div>
       </div>
