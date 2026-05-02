@@ -1,7 +1,30 @@
+import { Link } from "react-router-dom";
 import SmartSearchBar from "./SmartSearchBar";
 import ServiceNavTileCard from "./ServiceNavTileCard";
 import ProfessionalImageTile, { type ProfessionalImageTileData } from "./ProfessionalImageTile";
 import { tileCategories } from "./service-nav-tiles-data";
+
+import imgAttorneys from "@/assets/Atorneys_webP.webp";
+import imgCPAs from "@/assets/CPAs_webP.webp";
+import imgBroker from "@/assets/Real_Estate_Broker_webP.webp";
+import imgAppraiser from "@/assets/Real_Estate_Appraiser_webP.webp";
+import imgFinancial from "@/assets/Financial_Planning_webP.webp";
+import imgMortgage from "@/assets/Mortgage_Lending_webP.webp";
+import imgSeniorLiving from "@/assets/Senior_Living_webP.webp";
+import imgSeniorMove from "@/assets/SEnior_Move_Managers_webP.webp";
+import imgEstateLiquidation from "@/assets/Estate_Liquidation_webP.webp";
+
+const professionalTiles = [
+  { src: imgAttorneys, label: "Attorneys", href: "/for-attorneys" },
+  { src: imgCPAs, label: "CPAs", href: "/for-cpas" },
+  { src: imgBroker, label: "Real Estate Broker", href: "/realtor" },
+  { src: imgAppraiser, label: "Real Estate Appraiser", href: "/real-estate-appraiser" },
+  { src: imgFinancial, label: "Financial Planning", href: "/for-financial-planners" },
+  { src: imgMortgage, label: "Mortgage Lending", href: "/lenders-and-financing-specialists" },
+  { src: imgSeniorLiving, label: "Senior Living", href: "/senior-living-and-relocation" },
+  { src: imgSeniorMove, label: "Senior Move Managers", href: "/senior-move-managers" },
+  { src: imgEstateLiquidation, label: "Estate Liquidation", href: "/estate-liquidation" },
+];
 
 import imgExecutors from "@/assets/roles/executors-tile-washington-v2.webp";
 import imgTrustees from "@/assets/roles/trustees-tile-washington.webp";
