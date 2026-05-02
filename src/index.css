@@ -1813,7 +1813,7 @@ img, svg, hr {
 
 @keyframes taglineFade {
   0%   { opacity: 0; }
-  15%  { opacity: 1; }
+  22%  { opacity: 1; }
   78%  { opacity: 1; }
   100% { opacity: 0; }
 }
