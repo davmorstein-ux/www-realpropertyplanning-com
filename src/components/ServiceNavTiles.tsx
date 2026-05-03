@@ -37,7 +37,7 @@ const professionalImageTiles: ProfessionalImageTileData[] = [
   { alt: "Certified residential appraiser estate and probate valuations Washington State", href: "/real-estate-appraiser", src: imgAppraiser },
   { alt: "Financial planning real estate coordination estate transitions", href: "/for-financial-planners", src: imgFinancial },
   { alt: "Mortgage lending guidance estate and inherited property Washington State", href: "/lenders-and-financing-specialists", src: imgLending },
-  { alt: "Senior living placement and transition guidance Puget Sound Washington", href: "/senior-living-and-relocation", src: imgSeniorLiving },
+  { alt: "Senior living advisor placement and transition guidance Washington State", href: "/senior-living-and-relocation", src: imgSeniorLiving },
   { alt: "Senior move managers relocation services Washington State", href: "/senior-move-managers", src: imgSeniorMove },
   { alt: "Estate liquidation services Puget Sound Washington State", href: "/estate-liquidation", src: imgEstateLiquidation },
   { alt: "Medicare providers guidance and support Washington State", href: "/medicare-providers", src: imgMedicare },
