@@ -3,16 +3,14 @@ import ServiceNavTileCard from "./ServiceNavTileCard";
 import ProfessionalImageTile, { type ProfessionalImageTileData } from "./ProfessionalImageTile";
 import { tileCategories } from "./service-nav-tiles-data";
 
-import imgAttorneys from "@/assets/professionals/attorneys-tile-washington-v3.png";
-import imgCpas from "@/assets/professionals/cpas-tile-washington-v4.png";
-import imgBroker from "@/assets/professionals/real-estate-broker-tile-washington-v2.png";
-import imgAppraiser from "@/assets/professionals/real-estate-appraiser-tile-washington-v2.png";
-import imgFinancial from "@/assets/professionals/financial-planning-tile-washington-v2.png";
-import imgLending from "@/assets/professionals/mortgage-lending-tile-washington-v2.png";
-import imgSeniorLiving from "@/assets/professionals/senior-living-tile-washington-v2.png";
-import imgSeniorMove from "@/assets/professionals/senior-move-managers-tile-washington-v2.png";
-import imgEstateLiquidation from "@/assets/professionals/estate-liquidation-tile-washington-v2.png";
-import imgMedicare from "@/assets/professionals/medicare-providers-tile-washington-v2.png";
+import imgAttorneys from "@/assets/professionals/attorneys-tile-washington-v4.png";
+import imgCpas from "@/assets/professionals/cpas-tile-washington-v5.png";
+import imgBroker from "@/assets/professionals/real-estate-broker-tile-washington-v3.png";
+import imgAppraiser from "@/assets/professionals/real-estate-appraiser-tile-washington-v3.png";
+import imgFinancial from "@/assets/professionals/financial-planning-tile-washington-v3.png";
+import imgLending from "@/assets/professionals/mortgage-lending-tile-washington-v3.png";
+import imgSeniorLiving from "@/assets/professionals/senior-living-tile-washington-v3.png";
+import imgSeniorMove from "@/assets/professionals/senior-move-managers-tile-washington-v3.png";
 
 import imgExecutors from "@/assets/roles/executors-tile-washington-v2.webp";
 import imgTrustees from "@/assets/roles/trustees-tile-washington.webp";
@@ -39,8 +37,6 @@ const professionalImageTiles: ProfessionalImageTileData[] = [
   { alt: "Mortgage lending guidance estate and inherited property Washington State", href: "/lenders-and-financing-specialists", src: imgLending },
   { alt: "Senior living advisor placement and transition guidance Washington State", href: "/senior-living-and-relocation", src: imgSeniorLiving },
   { alt: "Senior move managers relocation services Washington State", href: "/senior-move-managers", src: imgSeniorMove },
-  { alt: "Estate liquidation services Puget Sound Washington State", href: "/estate-liquidation", src: imgEstateLiquidation },
-  { alt: "Medicare providers guidance and support Washington State", href: "/medicare-providers", src: imgMedicare },
 ];
 
 const rolesImageTiles: ProfessionalImageTileData[] = [
