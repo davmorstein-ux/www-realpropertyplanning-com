@@ -12,6 +12,8 @@ import iconGlobe3d from "@/assets/icons/real-estate-website-globe-3d-icon-washin
 import iconMapPin3d from "@/assets/icons/real-estate-location-pin-3d-icon-washington.webp";
 import afhHeroIcon from "@/assets/icons/senior-adult-family-home-hero-washington.webp";
 import mariaCorbuPhoto from "@/assets/providers/senior-placement-maria-corbu-washington.webp";
+import fengquanSongPhoto from "@/assets/providers/senior-afh-fengquan-song-aura-living-washington.webp";
+import auraLivingLogo from "@/assets/providers/senior-afh-aura-living-care-logo-washington.webp";
 import victoria1Logo from "@/assets/providers/senior-adult-family-home-victoria1-logo-washington.webp";
 
 const AdultFamilyHomes = () => (
@@ -109,9 +111,68 @@ const AdultFamilyHomes = () => (
               </div>
             </div>
 
+            {/* Aura Living Care */}
+            <div className="bg-secondary border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 p-5 sm:p-6 mt-8">
+              <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-start sm:gap-5">
+                <div className="shrink-0">
+                  <img
+                    src={fengquanSongPhoto}
+                    alt="Fengquan Song — Founder & CEO of Aura Living Care"
+                    className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-border shadow-sm"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="flex w-full flex-col items-center sm:flex-1 sm:items-start">
+                  <a href="https://www.auralivingcare.com" target="_blank" rel="noopener noreferrer" className="sm:self-start">
+                    <img
+                      src={auraLivingLogo}
+                      alt="Aura Living Care logo"
+                      className="h-[42px] w-auto object-contain mx-auto sm:mx-0 block"
+                      loading="lazy"
+                    />
+                  </a>
+                  <div className="w-full mt-1 text-center sm:pl-[58px] sm:text-left">
+                    <p className="text-muted-foreground text-sm mb-1.5">Founder &amp; CEO: Fengquan Song</p>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-3">
+                      Fengquan Song is a multi-sector entrepreneur and senior engineer who brings a unique, precision-driven perspective to the healthcare and senior living industry. By applying high-level technical expertise and systematic operational frameworks to elderly care, he has redefined the standards for boutique residential facilities. As the founder of Aura Living, Fengquan has successfully scaled a premier senior care brand across strategic locations in the Greater Seattle area, including Magnolia, Shoreline, Kent and more. His leadership is defined by a commitment to Operational Excellence — integrating tech-enabled management systems to ensure uncompromising safety, medication accuracy, and superior care quality. Beyond senior living, Fengquan manages a diverse business portfolio spanning construction and professional services. He leverages this cross-industry expertise to build resilient, service-oriented communities that prioritize social impact and an elevated quality of life for all residents.
+                    </p>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-3">
+                      Aura Living is a premier provider of Adult Family Home (AFH) services in the Greater Seattle area, setting a new benchmark for boutique senior living. We integrate sophisticated, data-driven management systems with deeply compassionate, person-centered care to ensure uncompromising safety and quality. Our mission is to redefine the transitional care experience by bridging the life dignity and care profession. Through our strategic network in Magnolia, Shoreline, and Kent, we deliver a high-standard, clinical-grade environment within a warm, intimate home setting — providing the personalized attention every senior deserves.
+                    </p>
+                    <div className="space-y-1.5 text-sm">
+                      <div className="flex items-start gap-2 justify-center sm:justify-start">
+                        <img src={iconMapPin3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0 mt-0.5" loading="lazy" />
+                        <span className="text-muted-foreground">Magnolia: 3410 35th Ave W, Seattle, WA 98199</span>
+                      </div>
+                      <div className="flex items-start gap-2 justify-center sm:justify-start">
+                        <img src={iconMapPin3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0 mt-0.5" loading="lazy" />
+                        <span className="text-muted-foreground">Kent: 10315 SE 225th Pl, Kent, WA 98031</span>
+                      </div>
+                      <div className="flex items-start gap-2 justify-center sm:justify-start">
+                        <img src={iconMapPin3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0 mt-0.5" loading="lazy" />
+                        <span className="text-muted-foreground">Shoreline: 15520 30th Ave NE, Shoreline, WA 98155</span>
+                      </div>
+                      <div className="flex items-center gap-2 justify-center sm:justify-start">
+                        <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" />
+                        <a href="tel:+12142054091" className="text-accent hover:text-gold underline-offset-4 hover:underline">(214) 205-4091</a>
+                      </div>
+                      <div className="flex items-center gap-2 justify-center sm:justify-start">
+                        <img src={iconEmail3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" />
+                        <a href="mailto:aura@auralivingcare.com" className="text-accent hover:text-gold underline-offset-4 hover:underline break-all">aura@auralivingcare.com</a>
+                      </div>
+                      <div className="flex items-center gap-2 justify-center sm:justify-start">
+                        <img src={iconGlobe3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" />
+                        <a href="https://www.auralivingcare.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-gold underline-offset-4 hover:underline">www.auralivingcare.com</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div className="mt-10 text-center">
               <Link to="/senior-living-and-relocation" className="text-accent hover:text-gold underline underline-offset-4 text-base font-medium">
-                ← Back to Senior Living & Relocation
+                ← Back to Senior Living &amp; Relocation
               </Link>
             </div>
           </div>
