@@ -16,7 +16,7 @@ const ProfessionalImageTile = ({ tile }: { tile: ProfessionalImageTileData }) =>
       <img
         src={tile.src}
         alt={tile.alt}
-        className="block w-full h-auto select-none"
+        className="block w-full h-auto select-none scale-110"
         draggable={false}
         loading="lazy"
       />
