@@ -10,7 +10,7 @@ import imgAppraiser from "@/assets/professionals/real-estate-appraiser-tile-wash
 import imgFinancial from "@/assets/professionals/financial-planning-tile-washington-v2.png";
 import imgLending from "@/assets/professionals/mortgage-lending-tile-washington-v2.png";
 import imgSeniorLiving from "@/assets/professionals/senior-living-tile-washington-v2.png";
-import imgSeniorMove from "@/assets/professionals/senior-move-managers-tile-washington.webp";
+import imgSeniorMove from "@/assets/professionals/senior-move-managers-tile-washington-v2.png";
 import imgEstateLiquidation from "@/assets/professionals/estate-liquidation-tile-washington-v2.png";
 import imgMedicare from "@/assets/professionals/medicare-providers-tile-washington-v2.png";
 
