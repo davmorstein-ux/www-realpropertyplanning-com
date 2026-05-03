@@ -205,27 +205,27 @@ const Header = () => {
               aria-label={menuOpen ? "Close menu" : "Open menu"}
               onClick={() => setMenuOpen((v) => !v)}
               style={{
-                background: "transparent",
-                border: "1.5px solid rgba(255,255,255,0.55)",
-                borderRadius: 10,
-                padding: "5px 10px 3px",
+                background: "rgba(255,255,255,0.10)",
+                border: "2px solid rgba(255,255,255,0.5)",
+                borderRadius: 12,
+                padding: "8px 12px 6px",
                 cursor: "pointer",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center",
-                minWidth: 54,
-                minHeight: 54,
+                minWidth: 70,
+                minHeight: 60,
                 gap: 0,
                 flexShrink: 0,
               }}
             >
-              <div style={{ display: "flex", flexDirection: "column", gap: 4, marginBottom: 3 }}>
-                <span style={{ display: "block", width: 24, height: 2.5, background: "#fff", borderRadius: 2 }} />
-                <span style={{ display: "block", width: 24, height: 2.5, background: "#fff", borderRadius: 2 }} />
-                <span style={{ display: "block", width: 24, height: 2.5, background: "#fff", borderRadius: 2 }} />
+              <div style={{ display: "flex", flexDirection: "column", gap: 5, marginBottom: 5 }}>
+                <span style={{ display: "block", width: 32, height: 4, background: "#fff", borderRadius: 2 }} />
+                <span style={{ display: "block", width: 32, height: 4, background: "#fff", borderRadius: 2 }} />
+                <span style={{ display: "block", width: 32, height: 4, background: "#fff", borderRadius: 2 }} />
               </div>
-              <span style={{ ...fontBody, color: "#fff", fontSize: 8, fontWeight: 800, letterSpacing: "0.1em", lineHeight: 1, textTransform: "uppercase" as const }}>
+              <span style={{ ...fontBody, color: "#fff", fontSize: 11, fontWeight: 800, letterSpacing: "0.12em", lineHeight: 1, textTransform: "uppercase" as const }}>
                 MENU
               </span>
             </button>
