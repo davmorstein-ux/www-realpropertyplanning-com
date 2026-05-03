@@ -25,7 +25,7 @@ const ProfessionalImageTile = ({ tile }: { tile: ProfessionalImageTileData }) =>
         src={tile.src}
         alt={tile.alt}
         className="select-none"
-        style={{ width: "100%", height: "100%", display: "block", margin: "-20px" }}
+        style={{ width: "100%", height: "100%", display: "block", margin: "-40px" }}
         draggable={false}
         loading="lazy"
       />

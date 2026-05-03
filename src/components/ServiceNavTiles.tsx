@@ -105,7 +105,7 @@ const planningImageTiles: ProfessionalImageTileData[] = [
 
 const ServiceNavTiles = () => {
   return (
-    <section className="pt-3 pb-20 lg:pt-4 lg:pb-28" style={{ background: "#ffffff", isolation: "auto" }}>
+    <section className="pb-20 lg:pb-28" style={{ background: "#ffffff", isolation: "auto", padding: "0" }}>
       <div
         className="mx-auto max-w-[3300px] px-0 sm:px-1 lg:px-2"
         style={{ background: "transparent", overflow: "visible" }}
@@ -160,8 +160,8 @@ const ServiceNavTiles = () => {
               </div>
               {imageTiles ? (
                 <div
-                  className="mx-auto grid w-full max-w-[1200px] grid-cols-2 sm:grid-cols-4 px-0"
-                  style={{ gap: "0px", width: "100%", background: "transparent" }}
+                  className="mx-auto grid w-full max-w-[1200px] px-0"
+                  style={{ gap: "0px", width: "100%", background: "transparent", gridTemplateColumns: "repeat(4, 1fr)" }}
                 >
                   {imageTiles.map((tile) => (
                     <ProfessionalImageTile key={tile.href} tile={tile} />
