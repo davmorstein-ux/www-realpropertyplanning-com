@@ -37,8 +37,6 @@ const professionalImageTiles: ProfessionalImageTileData[] = [
   { alt: "Mortgage lending guidance estate and inherited property Washington State", href: "/lenders-and-financing-specialists", src: imgLending },
   { alt: "Senior living advisor placement and transition guidance Washington State", href: "/senior-living-and-relocation", src: imgSeniorLiving },
   { alt: "Senior move managers relocation services Washington State", href: "/senior-move-managers", src: imgSeniorMove },
-  { alt: "Estate liquidation services Puget Sound Washington State", href: "/estate-liquidation", src: imgEstateLiquidation },
-  { alt: "Medicare providers guidance and support Washington State", href: "/medicare-providers", src: imgMedicare },
 ];
 
 const rolesImageTiles: ProfessionalImageTileData[] = [
