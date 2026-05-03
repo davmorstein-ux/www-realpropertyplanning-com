@@ -30,8 +30,6 @@ const ProfessionalImageTile = ({ tile }: { tile: ProfessionalImageTileData }) =>
         draggable={false}
         loading="lazy"
       />
-        loading="lazy"
-      />
     </Link>
   );
 };
