@@ -169,7 +169,7 @@ const ServiceNavTiles = () => {
               {imageTiles ? (
                 <div
                   className="mx-auto grid w-full max-w-[1200px] grid-cols-2 sm:grid-cols-4 px-0 bg-navy"
-                  style={{ gap: "0px", width: "100%" }}
+                  style={{ gap: "6px", padding: "6px", width: "100%" }}
                 >
                   {imageTiles.map((tile) => (
                     <ProfessionalImageTile key={tile.href} tile={tile} />
