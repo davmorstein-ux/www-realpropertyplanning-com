@@ -1,4 +1,5 @@
 import SmartSearchBar from "./SmartSearchBar";
+import SmartSearchBar from "./SmartSearchBar";
 import ServiceNavTileCard from "./ServiceNavTileCard";
 import ProfessionalImageTile, { type ProfessionalImageTileData } from "./ProfessionalImageTile";
 import { tileCategories } from "./service-nav-tiles-data";
@@ -113,7 +114,7 @@ const planningImageTiles: ProfessionalImageTileData[] = [
 
 const ServiceNavTiles = () => {
   return (
-    <section className="pt-3 pb-20 lg:pt-4 lg:pb-28 bg-transparent">
+    <section className="pt-3 pb-20 lg:pt-4 lg:pb-28" style={{ background: "transparent" }}>
       <div className="mx-auto max-w-[3300px] px-0 sm:px-1 lg:px-2">
         {/* 1. Heading */}
         <h2
@@ -157,7 +158,10 @@ const ServiceNavTiles = () => {
                 </div>
               </div>
               {imageTiles ? (
-                <div className="mx-auto grid w-full max-w-[1200px] grid-cols-2 sm:grid-cols-4 gap-1 sm:gap-2 px-2 sm:px-0 bg-transparent">
+                <div
+                  className="mx-auto grid w-full max-w-[1200px] grid-cols-2 sm:grid-cols-4 px-2 sm:px-0"
+                  style={{ background: "transparent", gap: "4px" }}
+                >
                   {imageTiles.map((tile) => (
                     <ProfessionalImageTile key={tile.href} tile={tile} />
                   ))}
