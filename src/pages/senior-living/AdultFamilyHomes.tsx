@@ -12,6 +12,8 @@ import iconGlobe3d from "@/assets/icons/real-estate-website-globe-3d-icon-washin
 import iconMapPin3d from "@/assets/icons/real-estate-location-pin-3d-icon-washington.webp";
 import afhHeroIcon from "@/assets/icons/senior-adult-family-home-hero-washington.webp";
 import mariaCorbuPhoto from "@/assets/providers/senior-placement-maria-corbu-washington.webp";
+import fengquanSongPhoto from "@/assets/providers/senior-afh-fengquan-song-aura-living-washington.webp";
+import auraLivingLogo from "@/assets/providers/senior-afh-aura-living-care-logo-washington.webp";
 import victoria1Logo from "@/assets/providers/senior-adult-family-home-victoria1-logo-washington.webp";
 
 const AdultFamilyHomes = () => (
