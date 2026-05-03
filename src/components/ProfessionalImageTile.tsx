@@ -13,6 +13,7 @@ const ProfessionalImageTile = ({ tile }: { tile: ProfessionalImageTileData }) =>
       aria-label={tile.alt}
       style={{
         background: "transparent",
+        backgroundColor: "transparent",
         border: "none",
         boxShadow: "none",
         padding: 0,
