@@ -123,15 +123,15 @@ const AdultFamilyHomes = () => (
                   />
                 </div>
                 <div className="flex w-full flex-col items-center sm:flex-1 sm:items-start">
-                  <a href="https://www.auralivingcare.com" target="_blank" rel="noopener noreferrer" className="sm:self-start">
-                    <img
-                      src={auraLivingLogo}
-                      alt="Aura Living Care logo"
-                      className="h-[42px] w-auto object-contain mx-auto sm:mx-0 block"
-                      loading="lazy"
-                    />
-                  </a>
                   <div className="w-full mt-1 text-center sm:pl-[58px] sm:text-left">
+                    <a href="https://www.auralivingcare.com" target="_blank" rel="noopener noreferrer" className="inline-block mb-2">
+                      <img
+                        src={auraLivingLogo}
+                        alt="Aura Living Care logo"
+                        className="h-[168px] w-auto object-contain mx-auto sm:mx-0 block"
+                        loading="lazy"
+                      />
+                    </a>
                     <p className="text-muted-foreground text-sm mb-1.5">Founder &amp; CEO: Fengquan Song</p>
                     <p className="text-muted-foreground text-sm leading-relaxed mb-3">
                       Fengquan Song is a multi-sector entrepreneur and senior engineer who brings a unique, precision-driven perspective to the healthcare and senior living industry. By applying high-level technical expertise and systematic operational frameworks to elderly care, he has redefined the standards for boutique residential facilities. As the founder of Aura Living, Fengquan has successfully scaled a premier senior care brand across strategic locations in the Greater Seattle area, including Magnolia, Shoreline, Kent and more. His leadership is defined by a commitment to Operational Excellence — integrating tech-enabled management systems to ensure uncompromising safety, medication accuracy, and superior care quality. Beyond senior living, Fengquan manages a diverse business portfolio spanning construction and professional services. He leverages this cross-industry expertise to build resilient, service-oriented communities that prioritize social impact and an elevated quality of life for all residents.
