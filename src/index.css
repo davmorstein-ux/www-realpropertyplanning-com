@@ -16,7 +16,7 @@ body {
     --background: 40 20% 98%;
     --foreground: 220 35% 15%;
 
-    --card: 0 0% 100% / 0;
+    --card: 0 0% 100%;
     --card-foreground: 220 35% 15%;
 
     --popover: 0 0% 100%;
@@ -781,9 +781,7 @@ body {
 }
 
 .tile-hover {
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .tile-hover:hover {
@@ -1655,6 +1653,7 @@ button:not([data-nav-button]),
   opacity: 0.032;
 }
 
+
 /* ============================================================
    Affiliation badge marquee — continuous, linear, seamless loop.
    The track contains the badge list duplicated twice; animating
@@ -1662,12 +1661,8 @@ button:not([data-nav-button]),
    loop restart is visually invisible.
    ============================================================ */
 @keyframes affiliation-marquee-scroll {
-  from {
-    transform: translate3d(0, 0, 0);
-  }
-  to {
-    transform: translate3d(-50%, 0, 0);
-  }
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-50%, 0, 0); }
 }
 
 .affiliation-marquee-track {
@@ -1691,12 +1686,8 @@ button:not([data-nav-button]),
    no JS timers, no snapping, no pause/resume.
    ============================================================ */
 @keyframes affiliation-ring-spin {
-  from {
-    transform: rotateY(0deg);
-  }
-  to {
-    transform: rotateY(-360deg);
-  }
+  from { transform: rotateY(0deg); }
+  to   { transform: rotateY(-360deg); }
 }
 
 .affiliation-ring-spin {
@@ -1773,14 +1764,14 @@ img[src*="real-estate-website-globe-3d-icon-washington"] {
   bottom: 0;
   height: 1px;
   width: 100%;
-  background-color: #c9a84c;
+  background-color: #C9A84C;
   transform: scaleX(0);
   transform-origin: left center;
   transition: transform 0.2s ease;
   pointer-events: none;
 }
 .nav-link-hover:hover {
-  color: #c9a84c !important;
+  color: #C9A84C !important;
 }
 .nav-link-hover:hover::after {
   transform: scaleX(1);
@@ -1812,9 +1803,7 @@ img[src*="real-estate-website-globe-3d-icon-washington"] {
 
 /* Restore decorative/utility opacity for non-text visual elements
  * (logos, separators, icons) that may legitimately use opacity. */
-img,
-svg,
-hr {
+img, svg, hr {
   opacity: revert !important;
 }
 
@@ -1823,16 +1812,8 @@ hr {
 }
 
 @keyframes taglineFade {
-  0% {
-    opacity: 0;
-  }
-  22% {
-    opacity: 1;
-  }
-  78% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+  0%   { opacity: 0; }
+  22%  { opacity: 1; }
+  78%  { opacity: 1; }
+  100% { opacity: 0; }
 }

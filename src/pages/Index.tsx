@@ -1,3 +1,4 @@
+
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
@@ -21,28 +22,10 @@ import HowWeHelpCards from "@/components/HowWeHelpCards";
 import HomepageWarmStatement from "@/components/HomepageWarmStatement";
 
 const serviceAreas = [
-  {
-    county: "King County",
-    href: "/counties/king",
-    cities:
-      "Seattle, Bellevue, Kirkland, Redmond, Renton, Bothell, Shoreline, Mercer Island, Burien, Kent, Auburn, Federal Way",
-  },
-  {
-    county: "Snohomish County",
-    href: "/counties/snohomish",
-    cities:
-      "Everett, Edmonds, Lynnwood, Marysville, Mukilteo, Mill Creek, Mountlake Terrace, Monroe, Bothell, Woodinville",
-  },
-  {
-    county: "Pierce County",
-    href: "/counties/pierce",
-    cities: "Tacoma, Puyallup, Lakewood, Gig Harbor, Bonney Lake, Sumner, Auburn, University Place",
-  },
-  {
-    county: "Kitsap County",
-    href: "/counties/kitsap",
-    cities: "Bremerton, Silverdale, Poulsbo, Port Orchard, Bainbridge Island, Kingston",
-  },
+  { county: "King County", href: "/counties/king", cities: "Seattle, Bellevue, Kirkland, Redmond, Renton, Bothell, Shoreline, Mercer Island, Burien, Kent, Auburn, Federal Way" },
+  { county: "Snohomish County", href: "/counties/snohomish", cities: "Everett, Edmonds, Lynnwood, Marysville, Mukilteo, Mill Creek, Mountlake Terrace, Monroe, Bothell, Woodinville" },
+  { county: "Pierce County", href: "/counties/pierce", cities: "Tacoma, Puyallup, Lakewood, Gig Harbor, Bonney Lake, Sumner, Auburn, University Place" },
+  { county: "Kitsap County", href: "/counties/kitsap", cities: "Bremerton, Silverdale, Poulsbo, Port Orchard, Bainbridge Island, Kingston" },
 ];
 
 const jsonLd = [realEstateAgentSchema, organizationSchema];
@@ -136,7 +119,7 @@ const homepageFaqJsonLd = `{
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-cream">
       <Helmet>
         <script type="application/ld+json">{homepageFaqJsonLd}</script>
       </Helmet>
@@ -146,175 +129,142 @@ const Index = () => {
         canonical="https://www.realpropertyplanning.com"
         schemaJson={jsonLd}
       />
-      <main id="main-content" style={{ background: "transparent" }}>
-        {/* 1. HERO — PNW background, calm headline, two CTAs */}
-        <HomepageHero />
+      <main id="main-content">
 
-        {/* 2. SERVICE NAV TILES */}
-        <div style={{ background: "transparent", backgroundImage: "none" }}>
-          <ServiceNavTiles />
+      {/* 1. HERO — PNW background, calm headline, two CTAs */}
+      <HomepageHero />
+
+      {/* 2. SERVICE NAV TILES */}
+      <ServiceNavTiles />
+
+      {/* GUIDES & RESOURCES BANNER */}
+      <section className="bg-navy border-y-2 border-gold py-12 md:py-14">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="font-serif text-2xl md:text-3xl lg:text-[2rem] font-semibold text-primary-foreground leading-tight mb-4">
+              Looking for answers about probate, inherited homes, or senior transitions?
+            </h2>
+            <p className="text-primary-foreground/85 text-base md:text-lg leading-relaxed mb-7 max-w-3xl mx-auto">
+              Browse our complete library of plain-language guides — organized by topic and written for families, executors, and professionals.
+            </p>
+            <Link to="/guides-and-resources">
+              <Button variant="gold" size="lg" className="px-8 py-4 h-auto rounded-lg text-base md:text-lg">
+                Browse All Guides & Resources
+                <ChevronRight className="w-5 h-5 ml-1" />
+              </Button>
+            </Link>
+          </div>
         </div>
-        {/* GUIDES & RESOURCES BANNER */}
-        <section className="bg-navy border-y-2 border-gold py-12 md:py-14">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="font-serif text-2xl md:text-3xl lg:text-[2rem] font-semibold text-primary-foreground leading-tight mb-4">
-                Looking for answers about probate, inherited homes, or senior transitions?
-              </h2>
-              <p className="text-primary-foreground/85 text-base md:text-lg leading-relaxed mb-7 max-w-3xl mx-auto">
-                Browse our complete library of plain-language guides — organized by topic and written for families,
-                executors, and professionals.
-              </p>
-              <Link to="/guides-and-resources">
-                <Button variant="gold" size="lg" className="px-8 py-4 h-auto rounded-lg text-base md:text-lg">
-                  Browse All Guides & Resources
-                  <ChevronRight className="w-5 h-5 ml-1" />
-                </Button>
-              </Link>
-            </div>
+      </section>
+
+      {/* HOW WE HELP */}
+      <HowWeHelpCards />
+
+      {/* WARM STATEMENT */}
+      <HomepageWarmStatement />
+
+      {/* TEAM SECTION */}
+      <HomepageTeamSection />
+
+      {/* 6. FAQ */}
+      <HomepageFAQ />
+
+      {/* 7. WHEN SHOULD YOU CALL */}
+      <section className="py-12 lg:py-16 bg-cream">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="font-serif text-2xl md:text-3xl text-red-900 font-semibold mb-3">
+              Not sure where to start?
+            </h2>
+            <p className="text-muted-foreground text-lg mb-6">
+              Most people call because something happened — not because they have a plan. That's okay.
+            </p>
+            <Link to="/contact">
+              <Button variant="gold" size="lg" className="px-8 py-4 h-auto rounded-lg">
+                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-10 h-10 mr-2.5 object-contain shrink-0" style={{ background: 'transparent' }}  loading="lazy"/>
+                Schedule a Conversation
+              </Button>
+            </Link>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* HOW WE HELP */}
-        <HowWeHelpCards />
+      {/* 8. LEAD MAGNET */}
+      <LeadMagnetBlock />
 
-        {/* WARM STATEMENT */}
-        <HomepageWarmStatement />
-
-        {/* TEAM SECTION */}
-        <HomepageTeamSection />
-
-        {/* 6. FAQ */}
-        <HomepageFAQ />
-
-        {/* 7. WHEN SHOULD YOU CALL */}
-        <section className="py-12 lg:py-16 bg-cream">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="font-serif text-2xl md:text-3xl text-red-900 font-semibold mb-3">
-                Not sure where to start?
-              </h2>
-              <p className="text-muted-foreground text-lg mb-6">
-                Most people call because something happened — not because they have a plan. That's okay.
-              </p>
-              <Link to="/contact">
-                <Button variant="gold" size="lg" className="px-8 py-4 h-auto rounded-lg">
-                  <img
-                    src={iconPhone3d}
-                    alt=""
-                    aria-hidden="true"
-                    className="w-10 h-10 mr-2.5 object-contain shrink-0"
-                    style={{ background: "transparent" }}
-                    loading="lazy"
-                  />
-                  Schedule a Conversation
-                </Button>
-              </Link>
-            </div>
+      {/* 9. AREAS SERVED */}
+      <section className="py-14 lg:py-20 bg-navy relative overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.03]" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath d='M100 20 L130 80 L160 140 H40 L70 80 Z' fill='%23fff'/%3E%3Cpath d='M100 50 L120 90 L140 130 H60 L80 90 Z' fill='%23fff'/%3E%3C/svg%3E")`,
+          backgroundSize: '300px',
+        }} />
+        <div className="mx-auto max-w-[1100px] px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-8">
+            <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-3">
+              Serving Clients Across Washington State
+            </h2>
+            <p className="text-primary-foreground/60 text-lg max-w-2xl mx-auto">
+              Based in Western Washington with referral connections nationwide.
+            </p>
           </div>
-        </section>
-
-        {/* 8. LEAD MAGNET */}
-        <LeadMagnetBlock />
-
-        {/* 9. AREAS SERVED */}
-        <section className="py-14 lg:py-20 bg-navy relative overflow-hidden">
-          <div
-            className="absolute inset-0 opacity-[0.03]"
-            style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath d='M100 20 L130 80 L160 140 H40 L70 80 Z' fill='%23fff'/%3E%3Cpath d='M100 50 L120 90 L140 130 H60 L80 90 Z' fill='%23fff'/%3E%3C/svg%3E")`,
-              backgroundSize: "300px",
-            }}
-          />
-          <div className="mx-auto max-w-[1100px] px-6 lg:px-8 relative z-10">
-            <div className="text-center mb-8">
-              <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-3">
-                Serving Clients Across Washington State
-              </h2>
-              <p className="text-primary-foreground/60 text-lg max-w-2xl mx-auto">
-                Based in Western Washington with referral connections nationwide.
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-              {serviceAreas.map((area, i) => (
-                <Link key={i} to={area.href} className="card-3d group p-6">
-                  <div className="flex items-center gap-3 mb-2">
-                    <img
-                      src={mappin3d}
-                      alt=""
-                      aria-hidden="true"
-                      className="w-10 h-10 object-contain shrink-0"
-                      loading="lazy"
-                    />
-                    <h3 className="font-serif text-xl text-foreground font-semibold group-hover:text-gold transition-colors">
-                      {area.county}
-                    </h3>
-                  </div>
-                  <p className="text-muted-foreground text-sm">{area.cities}</p>
-                </Link>
-              ))}
-            </div>
-            <div className="text-center mt-8">
-              <Link to="/counties">
-                <Button variant="gold" size="lg" className="focus-visible:ring-gold">
-                  View All Service Areas
-                  <ChevronRight className="w-4 h-4 ml-1" />
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* 10. CONTACT */}
-        <section className="py-14 lg:py-20 bg-navy-dark">
-          <div className="mx-auto max-w-[1100px] px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
-              <div>
-                <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-4">
-                  Start With a Question
-                </h2>
-                <p className="text-primary-foreground/75 text-lg leading-relaxed mb-6">
-                  Confidential. Practical. No obligation. We typically respond within one business day.
-                </p>
-                <div className="space-y-4">
-                  <a
-                    href="tel:2069003015"
-                    className="flex items-center gap-3 text-primary-foreground hover:text-gold transition-colors"
-                  >
-                    <img
-                      src={iconPhone3d}
-                      alt=""
-                      aria-hidden="true"
-                      className="h-10 w-10 shrink-0 object-contain"
-                      loading="lazy"
-                    />
-                    <span className="text-lg font-semibold">(206) 900-3015</span>
-                  </a>
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {serviceAreas.map((area, i) => (
+              <Link key={i} to={area.href} className="card-3d group p-6">
+                <div className="flex items-center gap-3 mb-2">
+                  <img src={mappin3d} alt="" aria-hidden="true" className="w-10 h-10 object-contain shrink-0"  loading="lazy"/>
+                  <h3 className="font-serif text-xl text-foreground font-semibold group-hover:text-gold transition-colors">
+                    {area.county}
+                  </h3>
                 </div>
-                <div className="mt-8 flex items-center gap-3">
-                  <img
-                    src={expRealtyLogo}
-                    alt="eXp Realty — David Stein's real estate license is held under eXp Realty (real estate license disclosure)"
-                    className="h-6 w-auto opacity-50"
-                    loading="lazy"
-                  />
-                  <span className="text-primary-foreground/40 text-sm">
-                    David Stein's real estate license is held under eXp Realty · Appraisal via Stein Appraisal
-                  </span>
-                </div>
-              </div>
-              <div>
-                <WhatHappensNext variant="dark" />
-              </div>
-              <HomepageLeadForm />
-            </div>
+                <p className="text-muted-foreground text-sm">{area.cities}</p>
+              </Link>
+            ))}
           </div>
-        </section>
+          <div className="text-center mt-8">
+            <Link to="/counties">
+              <Button variant="gold" size="lg" className="focus-visible:ring-gold">
+                View All Service Areas
+                <ChevronRight className="w-4 h-4 ml-1" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
 
-        {/* 11. EDUCATIONAL PATHWAYS */}
-        <EducationalPathways />
+      {/* 10. CONTACT */}
+      <section className="py-14 lg:py-20 bg-navy-dark">
+        <div className="mx-auto max-w-[1100px] px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
+            <div>
+              <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-4">
+                Start With a Question
+              </h2>
+              <p className="text-primary-foreground/75 text-lg leading-relaxed mb-6">
+                Confidential. Practical. No obligation. We typically respond within one business day.
+              </p>
+              <div className="space-y-4">
+                <a href="tel:2069003015" className="flex items-center gap-3 text-primary-foreground hover:text-gold transition-colors">
+                  <img src={iconPhone3d} alt="" aria-hidden="true" className="h-10 w-10 shrink-0 object-contain"  loading="lazy"/>
+                  <span className="text-lg font-semibold">(206) 900-3015</span>
+                </a>
+              </div>
+              <div className="mt-8 flex items-center gap-3">
+                <img src={expRealtyLogo} alt="eXp Realty — David Stein's real estate license is held under eXp Realty (real estate license disclosure)" className="h-6 w-auto opacity-50" loading="lazy" />
+                <span className="text-primary-foreground/40 text-sm">David Stein's real estate license is held under eXp Realty · Appraisal via Stein Appraisal</span>
+              </div>
+            </div>
+            <div>
+              <WhatHappensNext variant="dark" />
+            </div>
+            <HomepageLeadForm />
+          </div>
+        </div>
+      </section>
 
-        <DisclaimerSection />
+      {/* 11. EDUCATIONAL PATHWAYS */}
+      <EducationalPathways />
+
+      <DisclaimerSection />
       </main>
       <Footer />
     </div>
