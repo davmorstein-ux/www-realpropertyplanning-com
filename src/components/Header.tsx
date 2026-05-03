@@ -118,7 +118,7 @@ const Header = () => {
           width: isMobile ? "calc(100% - 8px)" : "min(1280px, calc(100% - 48px))",
           zIndex: 50,
           borderRadius: isMobile ? 12 : 14,
-          padding: isMobile ? "10px 12px" : "14px 24px",
+          padding: isMobile ? "8px 8px" : "14px 24px",
           backgroundColor: scrolled ? "rgba(8, 13, 25, 0.82)" : "rgba(8, 13, 25, 0)",
           backdropFilter: scrolled ? "blur(10px)" : "none",
           WebkitBackdropFilter: scrolled ? "blur(10px)" : "none",
