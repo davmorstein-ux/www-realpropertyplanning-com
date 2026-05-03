@@ -148,8 +148,15 @@ const ServiceNavTiles = () => {
                 ? planningImageTiles
                 : null;
           return (
-            <div key={category.label} className="mb-20 last:mb-0" style={{ background: "transparent" }}>
-              <div className="mx-auto max-w-[1200px] mb-10 mt-8" style={{ background: "transparent" }}>
+            <div
+              key={category.label}
+              className="mb-20 last:mb-0"
+              style={{ background: "transparent", backgroundColor: "transparent" }}
+            >
+              <div
+                className="mx-auto max-w-[1200px] mb-10 mt-8"
+                style={{ background: "transparent", backgroundColor: "transparent" }}
+              >
                 <div className="bg-navy rounded-lg px-6 py-4">
                   <h3
                     className="text-center text-primary-foreground tracking-[0.12em] uppercase leading-none font-bold text-3xl"
