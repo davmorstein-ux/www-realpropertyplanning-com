@@ -128,81 +128,167 @@ const Header = () => {
           color: "#fff",
         }}
       >
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            gap: isMobile ? 8 : 16,
-          }}
-        >
-          <Link to="/" style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
-            <img
-              src="/rpp-logo.webp"
-              alt="Real Property Planning"
-              style={{ height: isMobile ? 56 : 88, width: "auto", maxWidth: "none", display: "block", objectFit: "contain" }}
-              loading="lazy"
-            />
-          </Link>
-          <div style={{ display: "flex", alignItems: "center", gap: isMobile ? 6 : 12 }}>
-            <Link
-              to="/contact"
-              style={{
-                ...fontBody,
-                color: "#fff",
-                border: "1px solid rgba(255,255,255,0.85)",
-                padding: isMobile ? "6px 8px" : "10px 18px",
-                borderRadius: 6,
-                fontWeight: 700,
-                fontSize: isMobile ? 10 : 13,
-                letterSpacing: "0.06em",
-                textDecoration: "none",
-                whiteSpace: "nowrap",
-              }}
-            >
-              {isMobile ? "CONSULT" : "SCHEDULE A CONSULTATION"}
+        {isMobile ? (
+          /* ── Mobile header layout ── */
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              gap: 8,
+            }}
+          >
+            {/* Logo – far left */}
+            <Link to="/" style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
+              <img
+                src="/rpp-logo.webp"
+                alt="Real Property Planning"
+                style={{ height: 52, width: "auto", maxWidth: "none", display: "block", objectFit: "contain" }}
+                loading="lazy"
+              />
             </Link>
-            <a
-              href="tel:2069003015"
-              style={{
-                ...fontBody,
-                color: "#fff",
-                background: "#1a5fa8",
-                padding: isMobile ? "6px 8px" : "10px 18px",
-                borderRadius: 6,
-                fontWeight: 700,
-                fontSize: isMobile ? 10 : 13,
-                letterSpacing: "0.06em",
-                textDecoration: "none",
-                whiteSpace: "nowrap",
-              }}
-            >
-              {isMobile ? "CALL" : "CALL (206) 900-3015"}
-            </a>
-            {isMobile && (
-              <button
-                aria-label="Open menu"
-                onClick={() => setMenuOpen((v) => !v)}
+
+            {/* CTA buttons – shifted left, away from hamburger */}
+            <div style={{ display: "flex", alignItems: "center", gap: 8, marginRight: "auto", marginLeft: 10 }}>
+              <Link
+                to="/contact"
                 style={{
-                  background: "transparent",
-                  border: "1px solid rgba(255,255,255,0.6)",
-                  borderRadius: 6,
-                  padding: 8,
-                  cursor: "pointer",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "space-between",
-                  width: 36,
-                  height: 32,
+                  ...fontBody,
+                  color: "#fff",
+                  border: "1px solid rgba(255,255,255,0.7)",
+                  padding: "8px 10px",
+                  borderRadius: 8,
+                  fontWeight: 700,
+                  fontSize: 11,
+                  letterSpacing: "0.05em",
+                  textDecoration: "none",
+                  whiteSpace: "nowrap",
+                  minHeight: 48,
+                  minWidth: 48,
+                  display: "inline-flex",
+                  alignItems: "center",
+                  justifyContent: "center",
                 }}
               >
-                <span style={{ display: "block", height: 2, background: "#fff", borderRadius: 1 }} />
-                <span style={{ display: "block", height: 2, background: "#fff", borderRadius: 1 }} />
-                <span style={{ display: "block", height: 2, background: "#fff", borderRadius: 1 }} />
-              </button>
-            )}
+                CONSULT
+              </Link>
+              <a
+                href="tel:2069003015"
+                style={{
+                  ...fontBody,
+                  color: "#fff",
+                  background: "#1a5fa8",
+                  padding: "10px 14px",
+                  borderRadius: 8,
+                  fontWeight: 800,
+                  fontSize: 14,
+                  letterSpacing: "0.04em",
+                  textDecoration: "none",
+                  whiteSpace: "nowrap",
+                  minHeight: 52,
+                  minWidth: 52,
+                  display: "inline-flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: 6,
+                }}
+              >
+                {/* Phone icon */}
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ flexShrink: 0 }}>
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+                CALL
+              </a>
+            </div>
+
+            {/* Hamburger menu – large, with MENU label and rounded border */}
+            <button
+              aria-label={menuOpen ? "Close menu" : "Open menu"}
+              onClick={() => setMenuOpen((v) => !v)}
+              style={{
+                background: "transparent",
+                border: "1.5px solid rgba(255,255,255,0.6)",
+                borderRadius: 10,
+                padding: "6px 12px 4px",
+                cursor: "pointer",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                minWidth: 56,
+                minHeight: 56,
+                gap: 0,
+                flexShrink: 0,
+              }}
+            >
+              {/* Three bars – larger */}
+              <div style={{ display: "flex", flexDirection: "column", gap: 5, marginBottom: 3 }}>
+                <span style={{ display: "block", width: 26, height: 2.5, background: "#fff", borderRadius: 2 }} />
+                <span style={{ display: "block", width: 26, height: 2.5, background: "#fff", borderRadius: 2 }} />
+                <span style={{ display: "block", width: 26, height: 2.5, background: "#fff", borderRadius: 2 }} />
+              </div>
+              {/* MENU label beneath bars */}
+              <span style={{ ...fontBody, color: "#fff", fontSize: 9, fontWeight: 800, letterSpacing: "0.12em", lineHeight: 1, textTransform: "uppercase" as const }}>
+                MENU
+              </span>
+            </button>
           </div>
-        </div>
+        ) : (
+          /* ── Desktop header layout (unchanged) ── */
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              gap: 16,
+            }}
+          >
+            <Link to="/" style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
+              <img
+                src="/rpp-logo.webp"
+                alt="Real Property Planning"
+                style={{ height: 88, width: "auto", maxWidth: "none", display: "block", objectFit: "contain" }}
+                loading="lazy"
+              />
+            </Link>
+            <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+              <Link
+                to="/contact"
+                style={{
+                  ...fontBody,
+                  color: "#fff",
+                  border: "1px solid rgba(255,255,255,0.85)",
+                  padding: "10px 18px",
+                  borderRadius: 6,
+                  fontWeight: 700,
+                  fontSize: 13,
+                  letterSpacing: "0.06em",
+                  textDecoration: "none",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                SCHEDULE A CONSULTATION
+              </Link>
+              <a
+                href="tel:2069003015"
+                style={{
+                  ...fontBody,
+                  color: "#fff",
+                  background: "#1a5fa8",
+                  padding: "10px 18px",
+                  borderRadius: 6,
+                  fontWeight: 700,
+                  fontSize: 13,
+                  letterSpacing: "0.06em",
+                  textDecoration: "none",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                CALL (206) 900-3015
+              </a>
+            </div>
+          </div>
+        )}
 
         {!isMobile && (
           <nav
