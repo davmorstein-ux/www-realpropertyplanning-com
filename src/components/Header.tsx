@@ -226,7 +226,7 @@ const Header = () => {
                 <span style={{ display: "block", width: 34, height: 4.5, background: "#fff", borderRadius: 3 }} />
                 <span style={{ display: "block", width: 34, height: 4.5, background: "#fff", borderRadius: 3 }} />
               </div>
-              <span style={{ ...fontBody, color: "#fff", fontSize: 12, fontWeight: 900, letterSpacing: "0.14em", lineHeight: 1 }}>
+              <span style={{ ...fontBody, color: "#fff", fontSize: 13, fontWeight: 900, letterSpacing: "0.15em", lineHeight: 1, marginTop: 2 }}>
                 MENU
               </span>
             </button>
