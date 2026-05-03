@@ -10,8 +10,16 @@ const ProfessionalImageTile = ({ tile }: { tile: ProfessionalImageTileData }) =>
   return (
     <Link
       to={tile.href}
-      aria-label={alt(tile.alt)}
-      className="tile-hover block w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+      aria-label={tile.alt}
+      style={{
+        background: "transparent",
+        border: "none",
+        boxShadow: "none",
+        padding: 0,
+        margin: 0,
+        display: "block",
+      }}
+      className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
     >
       <img
         src={tile.src}
@@ -23,7 +31,5 @@ const ProfessionalImageTile = ({ tile }: { tile: ProfessionalImageTileData }) =>
     </Link>
   );
 };
-
-const alt = (s: string) => s;
 
 export default ProfessionalImageTile;
