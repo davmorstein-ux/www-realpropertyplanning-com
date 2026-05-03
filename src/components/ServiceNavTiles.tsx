@@ -105,7 +105,7 @@ const planningImageTiles: ProfessionalImageTileData[] = [
 
 const ServiceNavTiles = () => {
   return (
-    <section className="pt-3 pb-20 lg:pt-4 lg:pb-28" style={{ background: "transparent", isolation: "auto" }}>
+    <section className="pt-3 pb-20 lg:pt-4 lg:pb-28" style={{ background: "#ffffff", isolation: "auto" }}>
       <div
         className="mx-auto max-w-[3300px] px-0 sm:px-1 lg:px-2"
         style={{ background: "transparent", overflow: "visible" }}
