@@ -31,15 +31,43 @@ import imgGuidesResources from "@/assets/planning/guides-resources-tile-washingt
 import imgGrayDivorce from "@/assets/planning/gray-divorce-tile-washington.webp";
 
 const professionalImageTiles: ProfessionalImageTileData[] = [
-  { alt: "Probate and estate attorneys real estate support Washington State", href: "/for-attorneys", src: imgAttorneys },
+  {
+    alt: "Probate and estate attorneys real estate support Washington State",
+    href: "/for-attorneys",
+    src: imgAttorneys,
+  },
   { alt: "CPA estate and probate real estate guidance Washington State", href: "/for-cpas", src: imgCpas },
   { alt: "Real estate broker probate and senior transition sales Washington State", href: "/realtor", src: imgBroker },
-  { alt: "Certified residential appraiser estate and probate valuations Washington State", href: "/real-estate-appraiser", src: imgAppraiser },
-  { alt: "Financial planning real estate coordination estate transitions", href: "/for-financial-planners", src: imgFinancial },
-  { alt: "Mortgage lending guidance estate and inherited property Washington State", href: "/lenders-and-financing-specialists", src: imgLending },
-  { alt: "Senior living placement and transition guidance Puget Sound Washington", href: "/senior-living-and-relocation", src: imgSeniorLiving },
-  { alt: "Senior move managers relocation services Washington State", href: "/senior-move-managers", src: imgSeniorMove },
-  { alt: "Estate liquidation services Puget Sound Washington State", href: "/estate-liquidation", src: imgEstateLiquidation },
+  {
+    alt: "Certified residential appraiser estate and probate valuations Washington State",
+    href: "/real-estate-appraiser",
+    src: imgAppraiser,
+  },
+  {
+    alt: "Financial planning real estate coordination estate transitions",
+    href: "/for-financial-planners",
+    src: imgFinancial,
+  },
+  {
+    alt: "Mortgage lending guidance estate and inherited property Washington State",
+    href: "/lenders-and-financing-specialists",
+    src: imgLending,
+  },
+  {
+    alt: "Senior living placement and transition guidance Puget Sound Washington",
+    href: "/senior-living-and-relocation",
+    src: imgSeniorLiving,
+  },
+  {
+    alt: "Senior move managers relocation services Washington State",
+    href: "/senior-move-managers",
+    src: imgSeniorMove,
+  },
+  {
+    alt: "Estate liquidation services Puget Sound Washington State",
+    href: "/estate-liquidation",
+    src: imgEstateLiquidation,
+  },
   { alt: "Medicare providers guidance and support Washington State", href: "/medicare-providers", src: imgMedicare },
 ];
 
@@ -47,25 +75,45 @@ const rolesImageTiles: ProfessionalImageTileData[] = [
   { alt: "Executors roles and responsibilities probate Washington State", href: "/executors", src: imgExecutors },
   { alt: "Trustees roles and responsibilities estate Washington State", href: "/trustees", src: imgTrustees },
   { alt: "Wills last will and testament guidance Washington State", href: "/wills", src: imgWills },
-  { alt: "Power of Attorney roles and responsibilities Washington State", href: "/power-of-attorney", src: imgPowerOfAttorney },
+  {
+    alt: "Power of Attorney roles and responsibilities Washington State",
+    href: "/power-of-attorney",
+    src: imgPowerOfAttorney,
+  },
   { alt: "Probate terms and terminology glossary Washington State", href: "/terminology", src: imgProbateTerms },
   { alt: "The probate process steps overview Washington State", href: "/how-the-process-works", src: imgTheProcess },
 ];
 
 const planningImageTiles: ProfessionalImageTileData[] = [
   { alt: "Probate sales estate inventory Washington State", href: "/probate-estate-sales", src: imgProbateSales },
-  { alt: "Senior placement advisor housing transition Washington State", href: "/senior-placement", src: imgSeniorPlacement },
-  { alt: "Home values and pricing estate property Washington State", href: "/why-valuation-matters", src: imgHomeValues },
+  {
+    alt: "Senior placement advisor housing transition Washington State",
+    href: "/senior-placement",
+    src: imgSeniorPlacement,
+  },
+  {
+    alt: "Home values and pricing estate property Washington State",
+    href: "/why-valuation-matters",
+    src: imgHomeValues,
+  },
   { alt: "Senior home sales transition Washington State", href: "/senior-transitions", src: imgSeniorHomeSales },
-  { alt: "Paying for senior living costs guidance Washington State", href: "/sell-house-fund-senior-living", src: imgPayingSeniorLiving },
+  {
+    alt: "Paying for senior living costs guidance Washington State",
+    href: "/sell-house-fund-senior-living",
+    src: imgPayingSeniorLiving,
+  },
   { alt: "Service areas Washington State counties coverage", href: "/counties", src: imgServiceAreas },
-  { alt: "Guides and resources estate planning Washington State", href: "/guides-and-resources", src: imgGuidesResources },
+  {
+    alt: "Guides and resources estate planning Washington State",
+    href: "/guides-and-resources",
+    src: imgGuidesResources,
+  },
   { alt: "Gray divorce family home guidance Washington State", href: "/gray-divorce", src: imgGrayDivorce },
 ];
 
 const ServiceNavTiles = () => {
   return (
-    <section className="pt-3 pb-20 lg:pt-4 lg:pb-28 bg-secondary">
+    <section className="pt-3 pb-20 lg:pt-4 lg:pb-28 bg-transparent">
       <div className="mx-auto max-w-[3300px] px-0 sm:px-1 lg:px-2">
         {/* 1. Heading */}
         <h2
