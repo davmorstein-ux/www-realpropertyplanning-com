@@ -114,7 +114,10 @@ const planningImageTiles: ProfessionalImageTileData[] = [
 const ServiceNavTiles = () => {
   return (
     <section className="pt-3 pb-20 lg:pt-4 lg:pb-28" style={{ background: "transparent" }}>
-      <div className="mx-auto max-w-[3300px] px-0 sm:px-1 lg:px-2" style={{ background: "transparent" }}>
+      <div
+        className="mx-auto max-w-[3300px] px-0 sm:px-1 lg:px-2"
+        style={{ background: "transparent", overflow: "visible" }}
+      >
         {/* 1. Heading */}
         <h2
           className="text-center font-serif text-red-900 tracking-tight mb-3"
@@ -146,7 +149,7 @@ const ServiceNavTiles = () => {
                 : null;
           return (
             <div key={category.label} className="mb-20 last:mb-0" style={{ background: "transparent" }}>
-              <div className="mx-auto max-w-[1200px] mb-10 mt-8">
+              <div className="mx-auto max-w-[1200px] mb-10 mt-8" style={{ background: "transparent" }}>
                 <div className="bg-navy rounded-lg px-6 py-4">
                   <h3
                     className="text-center text-primary-foreground tracking-[0.12em] uppercase leading-none font-bold text-3xl"
