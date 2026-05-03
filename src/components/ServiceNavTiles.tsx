@@ -3,16 +3,14 @@ import ServiceNavTileCard from "./ServiceNavTileCard";
 import ProfessionalImageTile, { type ProfessionalImageTileData } from "./ProfessionalImageTile";
 import { tileCategories } from "./service-nav-tiles-data";
 
-import imgAttorneys from "@/assets/professionals/attorneys-tile-washington-v3.png";
-import imgCpas from "@/assets/professionals/cpas-tile-washington-v4.png";
-import imgBroker from "@/assets/professionals/real-estate-broker-tile-washington-v2.png";
-import imgAppraiser from "@/assets/professionals/real-estate-appraiser-tile-washington-v2.png";
-import imgFinancial from "@/assets/professionals/financial-planning-tile-washington-v2.png";
-import imgLending from "@/assets/professionals/mortgage-lending-tile-washington-v2.png";
-import imgSeniorLiving from "@/assets/professionals/senior-living-tile-washington-v2.png";
-import imgSeniorMove from "@/assets/professionals/senior-move-managers-tile-washington-v2.png";
-import imgEstateLiquidation from "@/assets/professionals/estate-liquidation-tile-washington-v2.png";
-import imgMedicare from "@/assets/professionals/medicare-providers-tile-washington-v2.png";
+import imgAttorneys from "@/assets/professionals/attorneys-tile-washington-v4.png";
+import imgCpas from "@/assets/professionals/cpas-tile-washington-v5.png";
+import imgBroker from "@/assets/professionals/real-estate-broker-tile-washington-v3.png";
+import imgAppraiser from "@/assets/professionals/real-estate-appraiser-tile-washington-v3.png";
+import imgFinancial from "@/assets/professionals/financial-planning-tile-washington-v3.png";
+import imgLending from "@/assets/professionals/mortgage-lending-tile-washington-v3.png";
+import imgSeniorLiving from "@/assets/professionals/senior-living-tile-washington-v3.png";
+import imgSeniorMove from "@/assets/professionals/senior-move-managers-tile-washington-v3.png";
 
 import imgExecutors from "@/assets/roles/executors-tile-washington-v2.webp";
 import imgTrustees from "@/assets/roles/trustees-tile-washington.webp";
