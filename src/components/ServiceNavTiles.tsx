@@ -1,5 +1,4 @@
 import SmartSearchBar from "./SmartSearchBar";
-import SmartSearchBar from "./SmartSearchBar";
 import ServiceNavTileCard from "./ServiceNavTileCard";
 import ProfessionalImageTile, { type ProfessionalImageTileData } from "./ProfessionalImageTile";
 import { tileCategories } from "./service-nav-tiles-data";
@@ -160,7 +159,7 @@ const ServiceNavTiles = () => {
               {imageTiles ? (
                 <div
                   className="mx-auto grid w-full max-w-[1200px] grid-cols-2 sm:grid-cols-4 px-2 sm:px-0"
-                  style={{ background: "transparent", gap: "4px" }}
+                  style={{ background: "transparent", gap: "0px" }}
                 >
                   {imageTiles.map((tile) => (
                     <ProfessionalImageTile key={tile.href} tile={tile} />
