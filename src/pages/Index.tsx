@@ -146,7 +146,7 @@ const Index = () => {
         canonical="https://www.realpropertyplanning.com"
         schemaJson={jsonLd}
       />
-      <main id="main-content">
+      <main id="main-content" style={{ background: "transparent" }}>
         {/* 1. HERO — PNW background, calm headline, two CTAs */}
         <HomepageHero />
 
