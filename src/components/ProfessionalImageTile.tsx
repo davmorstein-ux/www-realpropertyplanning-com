@@ -13,6 +13,7 @@ const ProfessionalImageTile = ({ tile }: { tile: ProfessionalImageTileData }) =>
       aria-label={tile.alt}
       style={{
         background: "transparent",
+        backgroundColor: "transparent",
         border: "none",
         boxShadow: "none",
         padding: 0,
@@ -25,6 +26,7 @@ const ProfessionalImageTile = ({ tile }: { tile: ProfessionalImageTileData }) =>
         src={tile.src}
         alt={tile.alt}
         className="block w-full h-auto select-none"
+        style={{ background: "transparent", backgroundColor: "transparent" }}
         draggable={false}
         loading="lazy"
       />
