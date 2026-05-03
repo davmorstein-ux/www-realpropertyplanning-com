@@ -151,8 +151,9 @@ const Index = () => {
         <HomepageHero />
 
         {/* 2. SERVICE NAV TILES */}
-        <ServiceNavTiles />
-
+        <div style={{ background: "transparent", backgroundImage: "none" }}>
+          <ServiceNavTiles />
+        </div>
         {/* GUIDES & RESOURCES BANNER */}
         <section className="bg-navy border-y-2 border-gold py-12 md:py-14">
           <div className="container px-6 lg:px-8">
