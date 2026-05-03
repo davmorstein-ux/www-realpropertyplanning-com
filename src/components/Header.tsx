@@ -208,16 +208,17 @@ const Header = () => {
                 background: "rgba(255,255,255,0.12)",
                 border: "2.5px solid rgba(255,255,255,0.6)",
                 borderRadius: 14,
-                padding: "10px 14px 7px",
+                padding: "8px 12px 6px",
                 cursor: "pointer",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center",
-                width: 72,
-                height: 62,
+                minWidth: 72,
+                minHeight: 62,
                 gap: 0,
                 flexShrink: 0,
+                overflow: "visible",
               }}
             >
               <div style={{ display: "flex", flexDirection: "column", gap: 6, marginBottom: 6 }}>
