@@ -3,16 +3,16 @@ import ServiceNavTileCard from "./ServiceNavTileCard";
 import ProfessionalImageTile, { type ProfessionalImageTileData } from "./ProfessionalImageTile";
 import { tileCategories } from "./service-nav-tiles-data";
 
-import imgAttorneys from "@/assets/professionals/attorneys-tile-washington-v2.webp";
-import imgCpas from "@/assets/professionals/cpas-tile-washington-v3.webp";
-import imgBroker from "@/assets/professionals/real-estate-broker-tile-washington.webp";
-import imgAppraiser from "@/assets/professionals/real-estate-appraiser-tile-washington.webp";
-import imgFinancial from "@/assets/professionals/financial-planning-tile-washington.webp";
-import imgLending from "@/assets/professionals/mortgage-lending-tile-washington.webp";
-import imgSeniorLiving from "@/assets/professionals/senior-living-tile-washington.webp";
+import imgAttorneys from "@/assets/professionals/attorneys-tile-washington-v3.png";
+import imgCpas from "@/assets/professionals/cpas-tile-washington-v4.png";
+import imgBroker from "@/assets/professionals/real-estate-broker-tile-washington-v2.png";
+import imgAppraiser from "@/assets/professionals/real-estate-appraiser-tile-washington-v2.png";
+import imgFinancial from "@/assets/professionals/financial-planning-tile-washington-v2.png";
+import imgLending from "@/assets/professionals/mortgage-lending-tile-washington-v2.png";
+import imgSeniorLiving from "@/assets/professionals/senior-living-tile-washington-v2.png";
 import imgSeniorMove from "@/assets/professionals/senior-move-managers-tile-washington.webp";
-import imgEstateLiquidation from "@/assets/professionals/estate-liquidation-tile-washington.webp";
-import imgMedicare from "@/assets/professionals/medicare-providers-tile-washington.webp";
+import imgEstateLiquidation from "@/assets/professionals/estate-liquidation-tile-washington-v2.png";
+import imgMedicare from "@/assets/professionals/medicare-providers-tile-washington-v2.png";
 
 import imgExecutors from "@/assets/roles/executors-tile-washington-v2.webp";
 import imgTrustees from "@/assets/roles/trustees-tile-washington.webp";
