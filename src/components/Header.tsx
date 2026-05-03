@@ -112,10 +112,10 @@ const Header = () => {
         data-nosnippet="true"
         style={{
           position: "fixed",
-          top: 16,
+          top: isMobile ? 8 : 16,
           left: "50%",
           transform: "translateX(-50%)",
-          width: isMobile ? "calc(100% - 16px)" : "min(1280px, calc(100% - 48px))",
+          width: isMobile ? "calc(100% - 8px)" : "min(1280px, calc(100% - 48px))",
           zIndex: 50,
           borderRadius: isMobile ? 12 : 14,
           padding: isMobile ? "10px 12px" : "14px 24px",
