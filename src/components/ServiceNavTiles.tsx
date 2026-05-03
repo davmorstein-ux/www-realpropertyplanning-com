@@ -154,7 +154,7 @@ const ServiceNavTiles = () => {
               style={{ background: "transparent", backgroundColor: "transparent" }}
             >
               <div
-                className="mx-auto max-w-[1200px] mb-10 mt-8"
+                className="mx-auto max-w-[1200px] mb-2 mt-8"
                 style={{ background: "transparent", backgroundColor: "transparent" }}
               >
                 <div className="bg-navy rounded-lg px-6 py-4">
