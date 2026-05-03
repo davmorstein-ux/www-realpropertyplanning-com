@@ -166,24 +166,33 @@ const HomepageHero = () => {
             </a>
             {isMobile && (
               <button
-                aria-label="Open menu"
+                aria-label={menuOpen ? "Close menu" : "Open menu"}
                 onClick={() => setMenuOpen((v) => !v)}
                 style={{
-                  background: "transparent",
-                  border: "1px solid rgba(255,255,255,0.6)",
-                  borderRadius: 6,
-                  padding: 8,
+                  background: "rgba(255,255,255,0.12)",
+                  border: "2.5px solid rgba(255,255,255,0.6)",
+                  borderRadius: 14,
+                  padding: "8px 12px 6px",
                   cursor: "pointer",
                   display: "flex",
                   flexDirection: "column",
-                  justifyContent: "space-between",
-                  width: 36,
-                  height: 32,
+                  alignItems: "center",
+                  justifyContent: "center",
+                  minWidth: 72,
+                  minHeight: 62,
+                  gap: 0,
+                  flexShrink: 0,
+                  overflow: "visible",
                 }}
               >
-                <span style={{ display: "block", height: 2, background: "#fff", borderRadius: 1 }} />
-                <span style={{ display: "block", height: 2, background: "#fff", borderRadius: 1 }} />
-                <span style={{ display: "block", height: 2, background: "#fff", borderRadius: 1 }} />
+                <div style={{ display: "flex", flexDirection: "column", gap: 6, marginBottom: 6 }}>
+                  <span style={{ display: "block", width: 34, height: 4.5, background: "#fff", borderRadius: 3 }} />
+                  <span style={{ display: "block", width: 34, height: 4.5, background: "#fff", borderRadius: 3 }} />
+                  <span style={{ display: "block", width: 34, height: 4.5, background: "#fff", borderRadius: 3 }} />
+                </div>
+                <span style={{ ...fontBody, color: "#fff", fontSize: 13, fontWeight: 900, letterSpacing: "0.15em", lineHeight: 1, marginTop: 2 }}>
+                  MENU
+                </span>
               </button>
             )}
           </div>

@@ -118,7 +118,7 @@ const Header = () => {
           width: isMobile ? "100%" : "min(1280px, calc(100% - 48px))",
           zIndex: 50,
           borderRadius: isMobile ? 0 : 14,
-          padding: isMobile ? "8px 10px" : "14px 24px",
+          padding: isMobile ? "6px 8px" : "14px 24px",
           backgroundColor: isMobile ? "rgba(8, 13, 25, 0.95)" : (scrolled ? "rgba(8, 13, 25, 0.82)" : "rgba(8, 13, 25, 0)"),
           backdropFilter: isMobile ? "blur(10px)" : (scrolled ? "blur(10px)" : "none"),
           WebkitBackdropFilter: isMobile ? "blur(10px)" : (scrolled ? "blur(10px)" : "none"),
@@ -205,27 +205,28 @@ const Header = () => {
               aria-label={menuOpen ? "Close menu" : "Open menu"}
               onClick={() => setMenuOpen((v) => !v)}
               style={{
-                background: "transparent",
-                border: "1.5px solid rgba(255,255,255,0.55)",
-                borderRadius: 10,
-                padding: "5px 10px 3px",
+                background: "rgba(255,255,255,0.12)",
+                border: "2.5px solid rgba(255,255,255,0.6)",
+                borderRadius: 14,
+                padding: "8px 12px 6px",
                 cursor: "pointer",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center",
-                minWidth: 54,
-                minHeight: 54,
+                minWidth: 72,
+                minHeight: 62,
                 gap: 0,
                 flexShrink: 0,
+                overflow: "visible",
               }}
             >
-              <div style={{ display: "flex", flexDirection: "column", gap: 4, marginBottom: 3 }}>
-                <span style={{ display: "block", width: 24, height: 2.5, background: "#fff", borderRadius: 2 }} />
-                <span style={{ display: "block", width: 24, height: 2.5, background: "#fff", borderRadius: 2 }} />
-                <span style={{ display: "block", width: 24, height: 2.5, background: "#fff", borderRadius: 2 }} />
+              <div style={{ display: "flex", flexDirection: "column", gap: 6, marginBottom: 6 }}>
+                <span style={{ display: "block", width: 34, height: 4.5, background: "#fff", borderRadius: 3 }} />
+                <span style={{ display: "block", width: 34, height: 4.5, background: "#fff", borderRadius: 3 }} />
+                <span style={{ display: "block", width: 34, height: 4.5, background: "#fff", borderRadius: 3 }} />
               </div>
-              <span style={{ ...fontBody, color: "#fff", fontSize: 8, fontWeight: 800, letterSpacing: "0.1em", lineHeight: 1, textTransform: "uppercase" as const }}>
+              <span style={{ ...fontBody, color: "#fff", fontSize: 13, fontWeight: 900, letterSpacing: "0.15em", lineHeight: 1, marginTop: 2 }}>
                 MENU
               </span>
             </button>
