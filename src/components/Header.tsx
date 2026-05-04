@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import headerLogo from "@/assets/real-property-planning-logo-transparent.png";
+import headerLogo from "@/assets/real-property-planning-logo-v5.png";
 
 /**
  * Site-wide header. Mirrors the homepage floating island nav (HomepageHero) so users
