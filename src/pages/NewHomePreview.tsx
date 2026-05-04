@@ -65,7 +65,7 @@ export default function NewHomePreview() {
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16 }}>
           <Link to="/new-home" style={{ display: "flex", alignItems: "center" }}>
             <img
-              src="/rpp-logo.webp"
+              src="/rpp-logo-v4.png"
               alt="Real Property Planning"
               style={{ height: 52, width: "auto", display: "block" }}
             />
