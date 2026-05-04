@@ -206,6 +206,9 @@ const JoinTheNetwork = () => {
           </div>
         </section>
 
+        {/* Section 3.5: Application Form */}
+        <ApplicationForm />
+
         {/* Section 4: How It Works */}
         <section className="py-20 lg:py-28 bg-secondary">
           <div className="container px-6 lg:px-8">
