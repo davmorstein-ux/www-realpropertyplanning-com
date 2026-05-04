@@ -244,9 +244,9 @@ const Header = () => {
           >
             <Link to="/" style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
               <img
-                src="/rpp-logo.webp"
+                src={headerLogo}
                 alt="Real Property Planning"
-                style={{ height: 88, width: "auto", maxWidth: "none", display: "block", objectFit: "contain" }}
+                style={{ height: 60, width: "auto", maxWidth: "none", display: "block", objectFit: "contain" }}
                 loading="lazy"
               />
             </Link>
