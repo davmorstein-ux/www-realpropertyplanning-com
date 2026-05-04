@@ -9,12 +9,12 @@ import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washingto
 import iconAttorneys from "@/assets/icons/probate-attorney-services-icon-washington.webp";
 import CTASection from "@/components/CTASection";
 import PageFAQ from "@/components/PageFAQ";
-import tileFamilyLaw from "@/assets/FAMILY_LAW_TILE_Clean_transparent.png";
-import tileProbate from "@/assets/PROBATE_TILE_Clean_transparent.png";
-import tileRealEstate from "@/assets/REAL_ESTATE_TILE_Clean_transparent.png";
-import tileDivorce from "@/assets/DIVORCE_TILE_Clean_transparent.png";
-import tileElderLaw from "@/assets/ELDER_LAW_TILE_Clean_transparent.png";
-import tileEstatePlanning from "@/assets/ESTATE_PLANNING_TILE_Clean_transparent.png";
+import tileFamilyLaw from "@/assets/FAMILY_LAW_TILE_cropped.png";
+import tileProbate from "@/assets/PROBATE_TILE_cropped.png";
+import tileRealEstate from "@/assets/REAL_ESTATE_TILE_cropped.png";
+import tileDivorce from "@/assets/DIVORCE_TILE_cropped.png";
+import tileElderLaw from "@/assets/ELDER_LAW_TILE_cropped.png";
+import tileEstatePlanning from "@/assets/ESTATE_PLANNING_TILE_cropped.png";
 
 const attorneyTiles = [
   { src: tileFamilyLaw, alt: "Family Law Attorneys", href: "/for-family-law-attorneys" },
