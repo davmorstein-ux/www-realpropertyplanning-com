@@ -11,7 +11,7 @@ import imgFinancial from "@/assets/professionals/financial-planning-tile-washing
 import imgLending from "@/assets/professionals/mortgage-lending-tile-washington-v2.png";
 import imgSeniorLiving from "@/assets/professionals/senior-living-tile-washington-v2.png";
 import imgSeniorMove from "@/assets/professionals/senior-move-managers-tile-washington-v2.png";
-import imgMedicareProviders from "@/assets/professionals/medicare-providers-tile-washington-v3.png";
+
 
 import imgExecutors from "@/assets/roles/executors-tile-washington-v3.png";
 import imgTrustees from "@/assets/roles/trustees-tile-washington-v2.png";
@@ -38,7 +38,7 @@ const professionalImageTiles: ProfessionalImageTileData[] = [
   { alt: "Mortgage lending guidance estate and inherited property Washington State", href: "/lenders-and-financing-specialists", src: imgLending },
   { alt: "Senior living advisor placement and transition guidance Washington State", href: "/senior-living-and-relocation", src: imgSeniorLiving },
   { alt: "Senior move managers relocation services Washington State", href: "/senior-move-managers", src: imgSeniorMove },
-  { alt: "Medicare providers senior coverage guidance Washington State", href: "/medicare-providers", src: imgMedicareProviders },
+  
 ];
 
 const rolesImageTiles: ProfessionalImageTileData[] = [
