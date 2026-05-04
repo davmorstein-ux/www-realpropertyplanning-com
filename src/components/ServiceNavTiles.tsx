@@ -21,7 +21,7 @@ import imgProbateTerms from "@/assets/roles/probate-terms-tile-washington-v2.png
 import imgTheProcess from "@/assets/roles/the-probate-process-tile-washington-v2.png";
 
 import imgProbateSales from "@/assets/planning/probate-sales-tile-washington-v2.png";
-
+import imgPlanningSeniorLiving from "@/assets/planning/senior-living-tile-washington-v2.png";
 import imgHomeValues from "@/assets/planning/home-values-pricing-tile-washington-v2.png";
 import imgSeniorHomeSales from "@/assets/planning/senior-home-sales-tile-washington-v2.png";
 import imgPayingSeniorLiving from "@/assets/planning/paying-for-senior-living-tile-washington-v2.png";
@@ -52,7 +52,7 @@ const rolesImageTiles: ProfessionalImageTileData[] = [
 
 const planningImageTiles: ProfessionalImageTileData[] = [
   { alt: "Probate sales estate inventory Washington State", href: "/probate-sales", src: imgProbateSales },
-  
+  { alt: "Senior living communities and housing options Washington State", href: "/senior-living-and-relocation", src: imgPlanningSeniorLiving },
   { alt: "Home values and pricing estate property Washington State", href: "/home-values-pricing", src: imgHomeValues },
   { alt: "Senior home sales transition Washington State", href: "/senior-home-sales", src: imgSeniorHomeSales },
   { alt: "Paying for senior living costs guidance Washington State", href: "/paying-for-senior-living", src: imgPayingSeniorLiving },
