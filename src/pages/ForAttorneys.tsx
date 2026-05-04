@@ -20,7 +20,7 @@ const attorneyTiles = [
   { src: tileFamilyLaw, alt: "Family Law Attorneys", href: "/for-family-law-attorneys" },
   { src: tileProbate, alt: "Probate Attorneys", href: "/for-probate-attorneys" },
   { src: tileRealEstate, alt: "Real Estate Attorneys", href: "/real-estate-attorneys" },
-  { src: tileDivorce, alt: "Divorce Attorneys", href: "/for-divorce-attorneys" },
+  { src: tileDivorce, alt: "Divorce Attorneys", href: "/grey-divorce" },
   { src: tileElderLaw, alt: "Elder Law Attorneys", href: "/for-elder-law-attorneys" },
   { src: tileEstatePlanning, alt: "Estate Planning Attorneys", href: "/for-estate-planning-attorneys" },
 ];
