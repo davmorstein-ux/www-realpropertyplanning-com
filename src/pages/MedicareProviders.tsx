@@ -138,8 +138,77 @@ const MedicareProviders = () => (
         </div>
       </section>
 
-      {/* Medicare & Life Transitions */}
+      {/* Featured Provider — Spears Agency */}
       <section className="py-14 md:py-20 bg-secondary">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-[900px] mx-auto">
+            <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm text-center">
+              Featured Provider
+            </p>
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-8 text-center">
+              Spears Agency — Medicare Specialists
+            </h2>
+
+            <div className="bg-card border border-border rounded-xl overflow-hidden shadow-sm p-5 sm:p-6">
+              <div className="flex flex-col items-center gap-6 md:flex-row md:items-start md:gap-8">
+                {/* Left: logo + headshot */}
+                <div className="flex flex-col items-center shrink-0 gap-4">
+                  <img
+                    src={spearsLogo}
+                    alt="Spears Agency logo"
+                    className="w-[120px] h-auto object-contain"
+                    loading="lazy"
+                  />
+                  <img
+                    src={heidiPhoto}
+                    alt="Photo of Heidi Bolton, Medicare Advisor at Spears Agency"
+                    className="w-[150px] h-[150px] rounded-full object-cover border-2 border-border shadow-sm"
+                    loading="lazy"
+                  />
+                </div>
+
+                {/* Right: content */}
+                <div className="flex-1 text-center md:text-left">
+                  {/* Agency block */}
+                  <h3 className="font-serif text-xl font-bold text-foreground mb-2">Spears Agency</h3>
+                  <p className="text-foreground text-base leading-relaxed mb-5">
+                    The Spears Agency is located in Monroe, WA, but we are licensed and serve clients in WA, ID, AZ, OR, &amp; NV. We are recognized in the top 5% of agencies nationwide within our carrier network because we lead with education, and offer reliable coverage solutions based on client needs.
+                  </p>
+
+                  {/* Advisor block */}
+                  <h3 className="font-serif text-xl font-bold text-foreground mb-2">
+                    Heidi Bolton — Medicare Advisor, Spears Agency
+                  </h3>
+                  <p className="text-foreground text-base leading-relaxed mb-4">
+                    Heidi Bolton has an extensive background in Medicare where she specializes in helping individuals navigate Medicare with clarity and confidence — whether you're turning 65, retiring, losing employer coverage, reviewing your current plan, or just answering general questions about your coverage throughout the year. Medicare can feel overwhelming, but Heidi simplifies the process and gives you peace of mind about your decisions.
+                  </p>
+                  <p className="text-foreground text-base leading-relaxed mb-4">
+                    Heidi believes strongly in doing what's right for her clients — not what's easiest or most profitable. She takes the time to truly understand your unique situation, answer your questions, and present options that make sense for your needs and budget. Her clients are treated like family, given honest advice and year-round support.
+                  </p>
+                  <p className="text-foreground text-base leading-relaxed mb-5">
+                    Part of what makes Medicare tricky are the penalties that can happen if you don't follow Medicare's rules — rules the average person isn't aware of. This is why planning ahead matters. Heidi wants to connect with clients as they approach age 65 to make sure you're receiving accurate information and can avoid potential Medicare penalties.
+                  </p>
+
+                  {/* Contact block */}
+                  <div className="space-y-2 text-base">
+                    <div className="flex items-center gap-2 justify-center md:justify-start">
+                      <img src={iconPhone3dContact} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0" loading="lazy" />
+                      <a href="tel:+13608376089" className="text-accent hover:text-gold underline-offset-4 hover:underline font-semibold text-lg">(360) 837-6089</a>
+                    </div>
+                    <div className="flex items-start gap-2 justify-center md:justify-start">
+                      <img src={iconMapPin3dContact} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0 mt-0.5" loading="lazy" />
+                      <span className="text-foreground">14655 Fryelands Blvd SE, Ste 123, Monroe, WA 98272</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Medicare & Life Transitions */}
+      <section className="py-14 md:py-20 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-6">
