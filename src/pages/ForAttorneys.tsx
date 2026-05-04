@@ -88,12 +88,14 @@ const ForAttorneys = () => (
                 key={tile.alt}
                 href={tile.href}
                 aria-label={tile.alt}
-                className="tile-hover block w-full overflow-hidden rounded-[8px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                style={{ background: "transparent" }}
+                className="block w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 hover:scale-105 transition-transform duration-200"
               >
                 <img
                   src={tile.src}
                   alt={tile.alt}
                   className="block w-full h-auto select-none"
+                  style={{ background: "transparent" }}
                   draggable={false}
                   loading="lazy"
                 />
