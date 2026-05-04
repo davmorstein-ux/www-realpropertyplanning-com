@@ -75,20 +75,11 @@ const GreyDivorce = () => (
       {/* Hero */}
       <section className="pt-6 md:pt-8 pb-14 md:pb-20 bg-primary">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-5xl mx-auto relative">
-            {/* Mobile: static centered image */}
+          <div className="max-w-3xl mx-auto text-center">
             <img
               src={greyDivorceCircle}
               alt="Older couple facing grey divorce with divorce agreement and house keys"
-              className="block md:hidden w-[180px] h-auto object-contain mx-auto mb-6"
-              loading="eager"
-            />
-            {/* Desktop: absolute upper-right medallion */}
-            <img
-              src={greyDivorceCircle}
-              alt=""
-              aria-hidden="true"
-              className="hidden md:block absolute top-0 right-0 w-[260px] h-auto object-contain"
+              className="block mx-auto w-[220px] md:w-[260px] h-auto object-contain mb-6"
               loading="eager"
             />
             <p className="font-sans text-sm md:text-base tracking-[0.2em] uppercase text-gold font-semibold mb-4">
