@@ -123,7 +123,7 @@ const Header = () => {
           backgroundColor: isMobile ? "rgba(8, 13, 25, 0.95)" : "rgba(8, 13, 25, 0.95)",
           backdropFilter: "blur(10px)",
           WebkitBackdropFilter: "blur(10px)",
-          border: isMobile ? "none" : (scrolled ? "1px solid rgba(255,255,255,0.08)" : "1px solid rgba(255,255,255,0)"),
+          border: isMobile ? "none" : "1px solid rgba(255,255,255,0.08)",
           borderBottom: isMobile ? "1px solid rgba(255,255,255,0.1)" : undefined,
           transition: "all 0.45s ease",
           ...fontBody,
