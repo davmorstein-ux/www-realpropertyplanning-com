@@ -3,33 +3,33 @@ import ServiceNavTileCard from "./ServiceNavTileCard";
 import ProfessionalImageTile, { type ProfessionalImageTileData } from "./ProfessionalImageTile";
 import { tileCategories } from "./service-nav-tiles-data";
 
-import imgAttorneys from "@/assets/professionals/attorneys-tile-washington-v3.png";
-import imgCpas from "@/assets/professionals/cpas-tile-washington-v4.png";
-import imgBroker from "@/assets/professionals/real-estate-broker-tile-washington-v2.png";
-import imgAppraiser from "@/assets/professionals/real-estate-appraiser-tile-washington-v2.png";
-import imgFinancial from "@/assets/professionals/financial-planning-tile-washington-v2.png";
-import imgLending from "@/assets/professionals/mortgage-lending-tile-washington-v2.png";
-import imgSeniorLiving from "@/assets/professionals/senior-living-tile-washington-v2.png";
-import imgSeniorMove from "@/assets/professionals/senior-move-managers-tile-washington-v2.png";
+import imgAttorneys from "@/assets/professionals/attorneys-tile-washington-v3.webp";
+import imgCpas from "@/assets/professionals/cpas-tile-washington-v4.webp";
+import imgBroker from "@/assets/professionals/real-estate-broker-tile-washington-v2.webp";
+import imgAppraiser from "@/assets/professionals/real-estate-appraiser-tile-washington-v2.webp";
+import imgFinancial from "@/assets/professionals/financial-planning-tile-washington-v2.webp";
+import imgLending from "@/assets/professionals/mortgage-lending-tile-washington-v2.webp";
+import imgSeniorLiving from "@/assets/professionals/senior-living-tile-washington-v2.webp";
+import imgSeniorMove from "@/assets/professionals/senior-move-managers-tile-washington-v2.webp";
 
 
-import imgExecutors from "@/assets/roles/executors-tile-washington-v3.png";
-import imgTrustees from "@/assets/roles/trustees-tile-washington-v2.png";
-import imgWills from "@/assets/roles/wills-tile-washington-v3.png";
-import imgPowerOfAttorney from "@/assets/roles/power-of-attorney-tile-washington-v2.png";
-import imgProbateTerms from "@/assets/roles/probate-terms-tile-washington-v2.png";
-import imgTheProcess from "@/assets/roles/the-probate-process-tile-washington-v2.png";
-import imgTitleEscrow from "@/assets/roles/title-escrow-tile-washington-v2.png";
+import imgExecutors from "@/assets/roles/executors-tile-washington-v3.webp";
+import imgTrustees from "@/assets/roles/trustees-tile-washington-v2.webp";
+import imgWills from "@/assets/roles/wills-tile-washington-v3.webp";
+import imgPowerOfAttorney from "@/assets/roles/power-of-attorney-tile-washington-v2.webp";
+import imgProbateTerms from "@/assets/roles/probate-terms-tile-washington-v2.webp";
+import imgTheProcess from "@/assets/roles/the-probate-process-tile-washington-v2.webp";
+import imgTitleEscrow from "@/assets/roles/title-escrow-tile-washington-v2.webp";
 
-import imgProbateSales from "@/assets/planning/probate-sales-tile-washington-v2.png";
-import imgPlanningSeniorLiving from "@/assets/planning/senior-living-tile-washington-v2.png";
-import imgHomeValues from "@/assets/planning/home-values-pricing-tile-washington-v2.png";
-import imgSeniorHomeSales from "@/assets/planning/senior-home-sales-tile-washington-v2.png";
-import imgPayingSeniorLiving from "@/assets/planning/paying-for-senior-living-tile-washington-v2.png";
-import imgServiceAreas from "@/assets/planning/service-areas-tile-washington-v2.png";
-import imgGuidesResources from "@/assets/planning/guides-resources-tile-washington-v2.png";
-import imgGrayDivorce from "@/assets/planning/gray-divorce-tile-washington-v2.png";
-import imgPlanningMedicareProviders from "@/assets/planning/medicare-providers-tile-washington-v2.png";
+import imgProbateSales from "@/assets/planning/probate-sales-tile-washington-v2.webp";
+import imgPlanningSeniorLiving from "@/assets/planning/senior-living-tile-washington-v2.webp";
+import imgHomeValues from "@/assets/planning/home-values-pricing-tile-washington-v2.webp";
+import imgSeniorHomeSales from "@/assets/planning/senior-home-sales-tile-washington-v2.webp";
+import imgPayingSeniorLiving from "@/assets/planning/paying-for-senior-living-tile-washington-v2.webp";
+import imgServiceAreas from "@/assets/planning/service-areas-tile-washington-v2.webp";
+import imgGuidesResources from "@/assets/planning/guides-resources-tile-washington-v2.webp";
+import imgGrayDivorce from "@/assets/planning/gray-divorce-tile-washington-v2.webp";
+import imgPlanningMedicareProviders from "@/assets/planning/medicare-providers-tile-washington-v2.webp";
 
 const professionalImageTiles: ProfessionalImageTileData[] = [
   { alt: "Probate and estate attorneys real estate support Washington State", href: "/for-attorneys", src: imgAttorneys },
