@@ -102,6 +102,175 @@ const steps = [
   },
 ];
 
+const ApplicationForm = () => {
+  const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setSending(true);
+
+    const form = e.currentTarget;
+    const fd = new FormData(form);
+    const get = (k: string) => (fd.get(k) as string) || "Not provided";
+
+    const subject = encodeURIComponent(`Network Application from ${get("name")}`);
+    const body = encodeURIComponent(
+      [
+        `Name: ${get("name")}`,
+        `Title / Role: ${get("title")}`,
+        `Company / Firm: ${get("company")}`,
+        `Phone: ${get("phone")}`,
+        `Email: ${get("email")}`,
+        `Website: ${get("website") || "Not provided"}`,
+        `City / Service Area: ${get("city")}`,
+        `Specialty: ${get("specialty")}`,
+        `How they heard about us: ${get("referral_source") || "Not specified"}`,
+        ``,
+        `About their practice:`,
+        get("about"),
+      ].join("\n")
+    );
+
+    window.location.href = `mailto:info@realpropertyplanning.com?subject=${subject}&body=${body}`;
+
+    setTimeout(() => {
+      setSending(false);
+      setSubmitted(true);
+    }, 500);
+  };
+
+  if (submitted) {
+    return (
+      <section className="py-20 lg:py-28 bg-secondary">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-2xl mx-auto text-center">
+            <div className="w-16 h-16 rounded-full bg-gold/10 flex items-center justify-center mb-6 mx-auto">
+              <svg className="w-8 h-8 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <h3 className="font-serif text-2xl text-foreground font-semibold mb-3">
+              Thank You for Applying
+            </h3>
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              We review every submission personally and will be in touch soon.
+            </p>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  return (
+    <section className="py-20 lg:py-28 bg-secondary">
+      <div className="container px-6 lg:px-8">
+        <div className="max-w-2xl mx-auto">
+          <h2 className="font-serif text-3xl text-foreground font-semibold mb-4 text-center">
+            Apply to Join the Network
+          </h2>
+          <p className="text-muted-foreground text-lg leading-relaxed mb-10 text-center">
+            Tell us about your practice. There's no cost and no commitment — just a quick introduction so we can learn how your services fit.
+          </p>
+
+          <div className="bg-card border border-border rounded-xl p-7 md:p-10">
+            <form onSubmit={handleSubmit} className="space-y-5">
+              <div className="grid md:grid-cols-2 gap-5">
+                <div>
+                  <label htmlFor="app-name" className="block text-base font-medium text-foreground mb-1.5">
+                    Your Name <span className="text-destructive">*</span>
+                  </label>
+                  <input id="app-name" name="name" required className={inputClass} placeholder="First and last name" />
+                </div>
+                <div>
+                  <label htmlFor="app-title" className="block text-base font-medium text-foreground mb-1.5">
+                    Your Title / Role <span className="text-destructive">*</span>
+                  </label>
+                  <input id="app-title" name="title" required className={inputClass} placeholder="e.g. Managing Attorney" />
+                </div>
+              </div>
+
+              <div>
+                <label htmlFor="app-company" className="block text-base font-medium text-foreground mb-1.5">
+                  Company or Firm Name <span className="text-destructive">*</span>
+                </label>
+                <input id="app-company" name="company" required className={inputClass} placeholder="Your firm or business name" />
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-5">
+                <div>
+                  <label htmlFor="app-phone" className="block text-base font-medium text-foreground mb-1.5">
+                    Phone Number <span className="text-destructive">*</span>
+                  </label>
+                  <input id="app-phone" name="phone" type="tel" required className={inputClass} placeholder="(555) 123-4567" />
+                </div>
+                <div>
+                  <label htmlFor="app-email" className="block text-base font-medium text-foreground mb-1.5">
+                    Email Address <span className="text-destructive">*</span>
+                  </label>
+                  <input id="app-email" name="email" type="email" required className={inputClass} placeholder="you@example.com" />
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-5">
+                <div>
+                  <label htmlFor="app-website" className="block text-base font-medium text-foreground mb-1.5">
+                    Website <span className="text-muted-foreground text-base font-normal">(optional)</span>
+                  </label>
+                  <input id="app-website" name="website" type="url" className={inputClass} placeholder="https://yoursite.com" />
+                </div>
+                <div>
+                  <label htmlFor="app-city" className="block text-base font-medium text-foreground mb-1.5">
+                    City / Primary Service Area <span className="text-destructive">*</span>
+                  </label>
+                  <input id="app-city" name="city" required className={inputClass} placeholder="e.g. Seattle, Bellevue" />
+                </div>
+              </div>
+
+              <div>
+                <label htmlFor="app-specialty" className="block text-base font-medium text-foreground mb-1.5">
+                  Professional Specialty <span className="text-destructive">*</span>
+                </label>
+                <select id="app-specialty" name="specialty" required className={inputClass} defaultValue="">
+                  <option value="" disabled>Select your specialty...</option>
+                  {specialtyOptions.map((opt) => (
+                    <option key={opt} value={opt}>{opt}</option>
+                  ))}
+                </select>
+              </div>
+
+              <div>
+                <label htmlFor="app-referral" className="block text-base font-medium text-foreground mb-1.5">
+                  How did you hear about Real Property Planning? <span className="text-muted-foreground text-base font-normal">(optional)</span>
+                </label>
+                <input id="app-referral" name="referral_source" className={inputClass} placeholder="Google, referral, colleague, etc." />
+              </div>
+
+              <div>
+                <label htmlFor="app-about" className="block text-base font-medium text-foreground mb-1.5">
+                  Tell us about your practice and the clients you serve <span className="text-destructive">*</span>
+                </label>
+                <textarea
+                  id="app-about"
+                  name="about"
+                  required
+                  rows={4}
+                  className={`${inputClass} resize-none`}
+                  placeholder="A brief description of your services, typical clients, and geographic focus"
+                />
+              </div>
+
+              <Button type="submit" variant="gold" className="w-full py-3.5 h-auto rounded-[14px] text-base" disabled={sending}>
+                {sending ? "Sending..." : "Submit My Application"}
+              </Button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 const JoinTheNetwork = () => {
   return (
     <div className="min-h-screen bg-background">
