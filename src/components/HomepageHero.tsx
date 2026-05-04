@@ -423,15 +423,6 @@ const HomepageHero = () => {
         }}
       >
         <div
-          aria-hidden
-          style={{
-            position: "absolute",
-            inset: 0,
-            background:
-              "linear-gradient(180deg, rgba(8,13,25,0.88) 0%, rgba(8,13,25,0.75) 40%, rgba(8,13,25,0.82) 100%)",
-          }}
-        />
-        <div
           style={{
             position: "relative",
             zIndex: 2,
