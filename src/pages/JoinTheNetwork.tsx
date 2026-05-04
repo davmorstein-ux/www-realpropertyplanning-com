@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
@@ -9,6 +10,29 @@ import { Link } from "react-router-dom";
 import { articleSchema } from "@/lib/schema";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconEmail3d from "@/assets/icons/real-estate-email-contact-icon-washington.webp";
+
+const specialtyOptions = [
+  "Elder Law Attorney",
+  "Estate Planning Attorney",
+  "Probate Attorney",
+  "Family Law & Divorce Attorney",
+  "Real Estate Attorney",
+  "Financial Planner & Advisor",
+  "CPA & Tax Professional",
+  "Medicare Advisor",
+  "Senior Living Advisor & Placement Specialist",
+  "Care Manager & Geriatric Care Consultant",
+  "Senior Move Manager",
+  "Estate Sale Company",
+  "Reverse Mortgage Specialist",
+  "Mortgage Lender",
+  "Mental Health Professional",
+  "Mediator & Collaborative Divorce Professional",
+  "Other",
+];
+
+const inputClass =
+  "w-full rounded-lg border border-border bg-background px-4 py-3.5 text-foreground text-[17px] placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-gold/30 focus:border-gold/50 transition";
 
 const jsonLd = articleSchema({
   headline: "Join the Real Property Planning Network",
