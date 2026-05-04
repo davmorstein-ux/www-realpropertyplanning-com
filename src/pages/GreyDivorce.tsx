@@ -73,31 +73,28 @@ const GreyDivorce = () => (
     <Header />
     <main id="main-content">
       {/* Hero */}
-      <section className="pt-6 md:pt-8 pb-14 md:pb-20 bg-primary">
+      <section className="pt-6 md:pt-8 pb-14 md:pb-20 bg-primary relative">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12">
-            <div className="flex-1 text-center md:text-left">
-              <p className="font-sans text-sm md:text-base tracking-[0.2em] uppercase text-gold font-semibold mb-4">
-                Planning &amp; Next Steps
-              </p>
-              <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl text-primary-foreground font-semibold mb-6 leading-tight">
-                Grey Divorce and the Grey Tsunami
-              </h1>
-              <p className="text-primary-foreground text-lg md:text-xl leading-relaxed mb-4 max-w-2xl">
-                A clear guide to late-life divorce, aging, real estate decisions, retirement planning, and family transitions after age 50.
-              </p>
-              <p className="text-primary-foreground text-base md:text-lg leading-relaxed max-w-2xl">
-                Grey divorce refers to divorce after age 50. As America's older population grows, more families are facing late-life decisions involving marriage, housing, retirement, care, estate planning, and the family home. This guide explains how grey divorce and the Grey Tsunami connect — and why thoughtful real estate planning matters.
-              </p>
-            </div>
-            <div className="flex-shrink-0">
-              <img
-                src={greyDivorceCircle}
-                alt="Older couple facing grey divorce with divorce agreement and house keys"
-                className="w-[280px] md:w-[420px] lg:w-[480px] h-auto object-contain"
-                loading="eager"
-              />
-            </div>
+          <div className="max-w-5xl mx-auto relative">
+            {/* Image floated to upper right */}
+            <img
+              src={greyDivorceCircle}
+              alt="Older couple facing grey divorce with divorce agreement and house keys"
+              className="w-[200px] md:w-[260px] h-auto object-contain mx-auto mb-6 md:float-right md:ml-8 md:mb-4 md:mt-0"
+              loading="eager"
+            />
+            <p className="font-sans text-sm md:text-base tracking-[0.2em] uppercase text-gold font-semibold mb-4">
+              Planning &amp; Next Steps
+            </p>
+            <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl text-primary-foreground font-semibold mb-6 leading-tight">
+              Grey Divorce and the Grey Tsunami
+            </h1>
+            <p className="text-primary-foreground text-lg md:text-xl leading-relaxed mb-4">
+              A clear guide to late-life divorce, aging, real estate decisions, retirement planning, and family transitions after age 50.
+            </p>
+            <p className="text-primary-foreground text-base md:text-lg leading-relaxed">
+              Grey divorce refers to divorce after age 50. As America's older population grows, more families are facing late-life decisions involving marriage, housing, retirement, care, estate planning, and the family home. This guide explains how grey divorce and the Grey Tsunami connect — and why thoughtful real estate planning matters.
+            </p>
           </div>
         </div>
       </section>
