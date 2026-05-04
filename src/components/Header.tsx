@@ -142,11 +142,11 @@ const Header = () => {
             }}
           >
             {/* Logo – far left */}
-            <Link to="/" style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
+            <Link to="/" style={{ display: "flex", alignItems: "center", flexShrink: 0, background: "transparent", backgroundColor: "transparent", border: "none", boxShadow: "none" }}>
               <img
                 src={headerLogo}
                 alt="Real Property Planning"
-                style={{ height: 40, width: "auto", maxWidth: "none", display: "block", objectFit: "contain" }}
+                style={{ height: 40, width: "auto", maxWidth: "none", display: "block", objectFit: "contain", background: "transparent", backgroundColor: "transparent", border: "none", boxShadow: "none" }}
                 loading="lazy"
               />
             </Link>
@@ -242,11 +242,11 @@ const Header = () => {
               gap: 16,
             }}
           >
-            <Link to="/" style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
+            <Link to="/" style={{ display: "flex", alignItems: "center", flexShrink: 0, background: "transparent", backgroundColor: "transparent", border: "none", boxShadow: "none" }}>
               <img
                 src={headerLogo}
                 alt="Real Property Planning"
-                style={{ height: 60, width: "auto", maxWidth: "none", display: "block", objectFit: "contain" }}
+                style={{ height: 60, width: "auto", maxWidth: "none", display: "block", objectFit: "contain", background: "transparent", backgroundColor: "transparent", border: "none", boxShadow: "none" }}
                 loading="lazy"
               />
             </Link>
