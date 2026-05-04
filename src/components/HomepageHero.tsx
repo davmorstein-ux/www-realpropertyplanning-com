@@ -416,7 +416,6 @@ const HomepageHero = () => {
       <section
         style={{
           position: "relative",
-          height: isMobile ? "50vh" : "55vh",
           width: "100%",
           backgroundImage: "url('/hero-photo.webp')",
           backgroundSize: "cover",
@@ -429,41 +428,146 @@ const HomepageHero = () => {
             position: "absolute",
             inset: 0,
             background:
-              "linear-gradient(180deg, rgba(8,13,25,0.85) 0%, rgba(8,13,25,0.55) 22%, rgba(8,13,25,0.18) 50%, rgba(8,13,25,0.20) 75%, rgba(8,13,25,0.55) 100%)",
+              "linear-gradient(180deg, rgba(8,13,25,0.88) 0%, rgba(8,13,25,0.75) 40%, rgba(8,13,25,0.82) 100%)",
           }}
         />
         <div
           style={{
             position: "relative",
             zIndex: 2,
-            height: "100%",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "flex-end",
+            maxWidth: 1200,
+            margin: "0 auto",
+            padding: isMobile ? "140px 20px 48px" : "180px 32px 64px",
             textAlign: "center",
-            padding: "0 24px 50px",
           }}
         >
+          {/* Eyebrow */}
+          <p
+            style={{
+              ...fontBody,
+              color: "#c9a14a",
+              fontSize: isMobile ? 12 : 14,
+              fontWeight: 700,
+              letterSpacing: "0.14em",
+              textTransform: "uppercase",
+              marginBottom: isMobile ? 16 : 20,
+            }}
+          >
+            Washington State Real Estate — Probate · Estate · Senior Transitions
+          </p>
+
+          {/* Main Headline */}
           <h1
             style={{
               ...fontHead,
               color: "#fff",
               fontWeight: 800,
-              fontSize: "clamp(4.5rem, 9vw, 8rem)",
-              lineHeight: 1.02,
+              fontSize: isMobile ? "2.2rem" : "clamp(3rem, 5.5vw, 4.5rem)",
+              lineHeight: 1.08,
               textTransform: "uppercase",
               letterSpacing: "0.01em",
-              margin: 0,
-              maxWidth: 1100,
+              margin: "0 auto",
+              maxWidth: 900,
               textShadow: "0 4px 24px rgba(0,0,0,0.45)",
             }}
           >
-            Probate · Senior Transitions · Estate Sales
+            Real Estate Help When Life Gets Complicated
           </h1>
-          <div style={{ display: "flex", gap: 14, marginTop: 36, flexWrap: "wrap", justifyContent: "center" }}>
-            <Link
-              to="/about"
+
+          {/* Subheadline */}
+          <p
+            style={{
+              ...fontBody,
+              color: "rgba(255,255,255,0.88)",
+              fontSize: isMobile ? 16 : 19,
+              lineHeight: 1.65,
+              maxWidth: 780,
+              margin: "20px auto 0",
+            }}
+          >
+            Serving families, seniors, executors, and the attorneys and professionals who support them — with calm, experienced real estate guidance across Washington State.
+          </p>
+
+          {/* Audience Cards */}
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: isMobile ? "1fr" : "repeat(3, 1fr)",
+              gap: isMobile ? 16 : 20,
+              marginTop: isMobile ? 32 : 48,
+              textAlign: "left",
+            }}
+          >
+            {[
+              {
+                emoji: "🏡",
+                title: "For Families & Seniors",
+                text: "Navigating probate, inherited property, downsizing, or a senior housing transition?",
+                btn: "Get Guidance",
+                href: "/senior-transitions",
+              },
+              {
+                emoji: "⚖️",
+                title: "For Attorneys & Fiduciaries",
+                text: "Need a trusted real estate partner for your probate, estate, or divorce clients?",
+                btn: "See How We Help",
+                href: "/for-attorneys",
+              },
+              {
+                emoji: "🤝",
+                title: "For Professionals",
+                text: "Medicare advisors, senior living specialists, care managers, and others — join our referral network.",
+                btn: "Join the Network",
+                href: "/join-network",
+              },
+            ].map((card) => (
+              <div
+                key={card.title}
+                style={{
+                  background: "rgba(255,255,255,0.06)",
+                  border: "1px solid rgba(255,255,255,0.12)",
+                  borderRadius: 12,
+                  padding: isMobile ? "20px 18px" : "28px 24px",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 10,
+                }}
+              >
+                <div style={{ fontSize: 28, lineHeight: 1 }} aria-hidden>{card.emoji}</div>
+                <h3 style={{ ...fontBody, color: "#fff", fontWeight: 700, fontSize: isMobile ? 17 : 18, margin: 0 }}>
+                  {card.title}
+                </h3>
+                <p style={{ ...fontBody, color: "rgba(255,255,255,0.82)", fontSize: isMobile ? 14 : 15, lineHeight: 1.55, margin: 0, flex: 1 }}>
+                  {card.text}
+                </p>
+                <Link
+                  to={card.href}
+                  style={{
+                    ...fontBody,
+                    display: "inline-block",
+                    background: "#1a5fa8",
+                    color: "#fff",
+                    padding: "10px 20px",
+                    borderRadius: 6,
+                    fontWeight: 700,
+                    fontSize: 13,
+                    letterSpacing: "0.06em",
+                    textDecoration: "none",
+                    textAlign: "center",
+                    marginTop: 4,
+                    alignSelf: "flex-start",
+                  }}
+                >
+                  {card.btn} →
+                </Link>
+              </div>
+            ))}
+          </div>
+
+          {/* CTA row */}
+          <div style={{ display: "flex", gap: 14, marginTop: isMobile ? 32 : 44, flexWrap: "wrap", justifyContent: "center" }}>
+            <a
+              href="tel:2069003015"
               style={{
                 ...fontBody,
                 background: "#1a5fa8",
@@ -476,8 +580,8 @@ const HomepageHero = () => {
                 textDecoration: "none",
               }}
             >
-              WHO WE ARE
-            </Link>
+              CALL (206) 900-3015
+            </a>
             <Link
               to="/contact"
               style={{
@@ -493,49 +597,9 @@ const HomepageHero = () => {
                 border: "1px solid rgba(255,255,255,0.85)",
               }}
             >
-              CONTACT US
+              SCHEDULE A CONSULTATION
             </Link>
           </div>
-        </div>
-      </section>
-
-      {/* ===== Trust Bar ===== */}
-      <section style={{ background: "#1a5fa8", padding: isMobile ? "12px 20px" : "20px 24px" }}>
-        <div
-          style={{
-            maxWidth: 1280,
-            margin: "0 auto",
-            display: "grid",
-            gridTemplateColumns: isMobile ? "1fr" : "repeat(auto-fit, minmax(260px, 1fr))",
-            gap: isMobile ? 14 : 20,
-          }}
-        >
-          {[
-            { emoji: "🌐", title: "TRUSTED PROFESSIONAL NETWORK", text: "Connecting families with trusted local professionals" },
-            { emoji: "🤝", title: "FAMILY & SENIOR FOCUSED", text: "Connecting families with the right professionals at the right time" },
-            { emoji: "📍", title: "SERVING WASHINGTON STATE", text: "Resources and professionals across all of Washington State" },
-          ].map(({ emoji, title, text }) => (
-            <div key={title} style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", color: "#fff", padding: "0 8px" }}>
-              <div
-                aria-hidden
-                style={{
-                  fontSize: isMobile ? 28 : 32,
-                  lineHeight: 1,
-                  marginBottom: isMobile ? 4 : 6,
-                  background: "transparent",
-                  filter: "drop-shadow(0 4px 6px rgba(0,0,0,0.35))",
-                }}
-              >
-                {emoji}
-              </div>
-              <div className={isMobile ? "text-xl font-bold" : ""} style={{ ...fontBody, fontWeight: 700, fontSize: isMobile ? 14 : 15, letterSpacing: "0.08em", marginBottom: isMobile ? 4 : 6 }}>
-                {title}
-              </div>
-              <div className={isMobile ? "font-sans font-bold" : ""} style={{ ...fontBody, fontSize: isMobile ? 13 : 16, color: "rgba(255,255,255,0.95)", lineHeight: isMobile ? 1.4 : 1.5 }}>
-                {text}
-              </div>
-            </div>
-          ))}
         </div>
       </section>
     </div>
