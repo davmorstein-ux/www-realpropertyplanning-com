@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import headerLogo from "@/assets/real-property-planning-logo-v7.png";
+
 
 /**
  * Site-wide header. Mirrors the homepage floating island nav (HomepageHero) so users
@@ -142,14 +142,7 @@ const Header = () => {
             }}
           >
             {/* Logo – far left */}
-            <Link to="/" style={{ display: "flex", alignItems: "center", flexShrink: 0, background: "rgba(255,255,255,0.22)", backdropFilter: "blur(10px)", WebkitBackdropFilter: "blur(10px)", borderRadius: 10, padding: "4px 8px", border: "1px solid rgba(255,255,255,0.18)", boxShadow: "0 2px 8px rgba(0,0,0,0.1)" }}>
-              <img
-                src={headerLogo}
-                alt="Real Property Planning"
-                style={{ height: 40, width: "auto", maxWidth: "none", display: "block", objectFit: "contain", background: "transparent", backgroundColor: "transparent", border: "none", boxShadow: "none" }}
-                loading="lazy"
-              />
-            </Link>
+            <div style={{ flexShrink: 0, height: 40 }} />
 
             {/* CTA buttons – centered in remaining space */}
             <div style={{ display: "flex", alignItems: "center", gap: 6, flex: "1 1 auto", justifyContent: "center" }}>
@@ -242,14 +235,7 @@ const Header = () => {
               gap: 16,
             }}
           >
-            <Link to="/" style={{ display: "flex", alignItems: "center", flexShrink: 0, background: "rgba(255,255,255,0.22)", backdropFilter: "blur(10px)", WebkitBackdropFilter: "blur(10px)", borderRadius: 10, padding: "6px 10px", border: "1px solid rgba(255,255,255,0.18)", boxShadow: "0 2px 8px rgba(0,0,0,0.1)" }}>
-              <img
-                src={headerLogo}
-                alt="Real Property Planning"
-                style={{ height: 60, width: "auto", maxWidth: "none", display: "block", objectFit: "contain", background: "transparent", backgroundColor: "transparent", border: "none", boxShadow: "none" }}
-                loading="lazy"
-              />
-            </Link>
+            <div style={{ flexShrink: 0, height: 60 }} />
             <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
               <Link
                 to="/contact"
