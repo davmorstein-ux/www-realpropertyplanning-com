@@ -19,6 +19,7 @@ import imgWills from "@/assets/roles/wills-tile-washington-v3.png";
 import imgPowerOfAttorney from "@/assets/roles/power-of-attorney-tile-washington-v2.png";
 import imgProbateTerms from "@/assets/roles/probate-terms-tile-washington-v2.png";
 import imgTheProcess from "@/assets/roles/the-probate-process-tile-washington-v2.png";
+import imgTitleEscrow from "@/assets/roles/title-escrow-tile-washington-v2.png";
 
 import imgProbateSales from "@/assets/planning/probate-sales-tile-washington-v2.png";
 import imgPlanningSeniorLiving from "@/assets/planning/senior-living-tile-washington-v2.png";
