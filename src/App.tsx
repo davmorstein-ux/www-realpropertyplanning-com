@@ -141,6 +141,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
+        <StickyContactSidebar />
 
         <Suspense fallback={<RouteFallback />}>
         <Routes>
