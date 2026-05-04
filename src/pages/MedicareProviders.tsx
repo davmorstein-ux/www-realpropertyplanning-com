@@ -195,6 +195,10 @@ const MedicareProviders = () => (
                       <img src={iconPhone3dContact} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0" loading="lazy" />
                       <a href="tel:+13608376089" className="text-accent hover:text-gold underline-offset-4 hover:underline font-semibold text-lg">(360) 837-6089</a>
                     </div>
+                    <div className="flex items-center gap-2 justify-center md:justify-start">
+                      <span className="w-5 h-5 flex items-center justify-center shrink-0 text-base" aria-hidden="true">🌐</span>
+                      <a href="https://spearsagencyllc.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-gold underline-offset-4 hover:underline">spearsagencyllc.com</a>
+                    </div>
                     <div className="flex items-start gap-2 justify-center md:justify-start">
                       <img src={iconMapPin3dContact} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0 mt-0.5" loading="lazy" />
                       <span className="text-foreground">14655 Fryelands Blvd SE, Ste 123, Monroe, WA 98272</span>
