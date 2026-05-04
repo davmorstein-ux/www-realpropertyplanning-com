@@ -141,8 +141,6 @@ const Header = () => {
               width: "100%",
             }}
           >
-            {/* Logo – far left */}
-            <div style={{ flexShrink: 0, height: 40 }} />
 
             {/* CTA buttons – centered in remaining space */}
             <div style={{ display: "flex", alignItems: "center", gap: 6, flex: "1 1 auto", justifyContent: "center" }}>
@@ -235,7 +233,7 @@ const Header = () => {
               gap: 16,
             }}
           >
-            <div style={{ flexShrink: 0, height: 60 }} />
+            
             <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
               <Link
                 to="/contact"
