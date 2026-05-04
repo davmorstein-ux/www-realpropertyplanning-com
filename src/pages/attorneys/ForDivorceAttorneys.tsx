@@ -84,23 +84,33 @@ const ForDivorceAttorneys = () => (
     {/* Hero */}
     <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
       <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center">
-          <img src={iconDivorce} alt="Divorce attorney marital home sale neutral real estate Washington State" className="mx-auto max-w-[15rem] w-full h-auto object-contain mb-1.5" loading="lazy"/>
-          <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
-            For Divorce Attorneys
-          </p>
-          <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
-            Real Estate Support for Divorce Attorneys and Their Clients in Washington State
-          </h1>
-          <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-3">
-            Providing Clarity and Neutrality During Complex Transitions
-          </p>
-          <Link to="/contact">
-            <Button variant="gold" size="lg" className="px-7 py-4 h-auto rounded-lg">
-              <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy"/>
-              Schedule a Conversation
-            </Button>
-          </Link>
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12">
+          <div className="flex-1 text-center md:text-left">
+            <img src={iconDivorce} alt="Divorce attorney marital home sale neutral real estate Washington State" className="mx-auto md:mx-0 max-w-[15rem] w-full h-auto object-contain mb-1.5" loading="lazy"/>
+            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
+              For Divorce Attorneys
+            </p>
+            <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
+              Real Estate Support for Divorce Attorneys and Their Clients in Washington State
+            </h1>
+            <p className="text-lg md:text-xl text-primary-foreground leading-relaxed mb-3">
+              Providing Clarity and Neutrality During Complex Transitions
+            </p>
+            <Link to="/contact">
+              <Button variant="gold" size="lg" className="px-7 py-4 h-auto rounded-lg">
+                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy"/>
+                Schedule a Conversation
+              </Button>
+            </Link>
+          </div>
+          <div className="flex-shrink-0">
+            <img
+              src={divorceCircle}
+              alt="Divorce attorney consultation with couple"
+              className="w-[280px] md:w-[420px] lg:w-[480px] h-auto object-contain"
+              loading="eager"
+            />
+          </div>
         </div>
       </div>
     </section>
