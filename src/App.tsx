@@ -161,6 +161,7 @@ const App = () => (
           <Route path="/wills" element={<Wills />} />
           <Route path="/power-of-attorney" element={<PowerOfAttorney />} />
           <Route path="/gray-divorce" element={<GrayDivorce />} />
+          <Route path="/medicare-providers" element={<MedicareProviders />} />
 
           {/* ─── Audience hubs ────────────────────────────────────── */}
           <Route path="/for-attorneys" element={<ForAttorneys />} />
