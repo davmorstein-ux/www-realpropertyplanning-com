@@ -82,7 +82,7 @@ const ForAttorneys = () => (
               Areas of Collaboration
             </h2>
           </div>
-          <div className="mx-auto grid w-full max-w-[1200px] grid-cols-2 items-start gap-0 sm:grid-cols-3 attorney-tiles-grid">
+          <div className="mx-auto grid w-full max-w-[1200px] grid-cols-2 items-start gap-4 sm:grid-cols-3 attorney-tiles-grid">
             {attorneyTiles.map((tile) => (
               <a
                 key={tile.alt}
