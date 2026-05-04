@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import headerLogo from "@/assets/real-property-planning-logo-v4.webp";
 
 /**
  * Site-wide header. Mirrors the homepage floating island nav (HomepageHero) so users
@@ -143,7 +144,7 @@ const Header = () => {
             {/* Logo – far left */}
             <Link to="/" style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
               <img
-                src="/rpp-logo.webp"
+                src={headerLogo}
                 alt="Real Property Planning"
                 style={{ height: 40, width: "auto", maxWidth: "none", display: "block", objectFit: "contain" }}
                 loading="lazy"
@@ -243,9 +244,9 @@ const Header = () => {
           >
             <Link to="/" style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
               <img
-                src="/rpp-logo.webp"
+                src={headerLogo}
                 alt="Real Property Planning"
-                style={{ height: 88, width: "auto", maxWidth: "none", display: "block", objectFit: "contain" }}
+                style={{ height: 60, width: "auto", maxWidth: "none", display: "block", objectFit: "contain" }}
                 loading="lazy"
               />
             </Link>
