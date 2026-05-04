@@ -19,8 +19,11 @@ const ProfessionalImageTile = ({ tile }: { tile: ProfessionalImageTileData }) =>
         padding: 0,
         margin: 0,
         display: "block",
+        cursor: "pointer",
+        transition: "transform 0.2s ease, box-shadow 0.2s ease",
+        borderRadius: "0.5rem",
       }}
-      className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+      className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 hover:scale-105 hover:shadow-lg active:scale-105 active:shadow-lg"
     >
       <img
         src={tile.src}
