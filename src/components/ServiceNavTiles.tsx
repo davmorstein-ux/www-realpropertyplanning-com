@@ -12,12 +12,12 @@ import imgLending from "@/assets/professionals/mortgage-lending-tile-washington-
 import imgSeniorLiving from "@/assets/professionals/senior-living-tile-washington-v2.png";
 import imgSeniorMove from "@/assets/professionals/senior-move-managers-tile-washington-v2.png";
 
-import imgExecutors from "@/assets/roles/executors-tile-washington-v2.webp";
-import imgTrustees from "@/assets/roles/trustees-tile-washington.webp";
-import imgWills from "@/assets/roles/wills-tile-washington-v2.webp";
-import imgPowerOfAttorney from "@/assets/roles/power-of-attorney-tile-washington.webp";
-import imgProbateTerms from "@/assets/roles/probate-terms-tile-washington.webp";
-import imgTheProcess from "@/assets/roles/the-probate-process-tile-washington.webp";
+import imgExecutors from "@/assets/roles/executors-tile-washington-v3.png";
+import imgTrustees from "@/assets/roles/trustees-tile-washington-v2.png";
+import imgWills from "@/assets/roles/wills-tile-washington-v3.png";
+import imgPowerOfAttorney from "@/assets/roles/power-of-attorney-tile-washington-v2.png";
+import imgProbateTerms from "@/assets/roles/probate-terms-tile-washington-v2.png";
+import imgTheProcess from "@/assets/roles/the-probate-process-tile-washington-v2.png";
 
 import imgProbateSales from "@/assets/planning/probate-sales-tile-washington.webp";
 import imgSeniorPlacement from "@/assets/planning/senior-placement-tile-washington.webp";
