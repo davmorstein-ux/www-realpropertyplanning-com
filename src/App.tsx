@@ -107,6 +107,7 @@ const BellinghamProbateEstate = lazy(() => import("./pages/BellinghamProbateEsta
 const GuidesAndResources = lazy(() => import("./pages/GuidesAndResources"));
 const PowerOfAttorney = lazy(() => import("./pages/PowerOfAttorney"));
 const GrayDivorce = lazy(() => import("./pages/GrayDivorce"));
+const MedicareProviders = lazy(() => import("./pages/MedicareProviders"));
 const Wills = lazy(() => import("./pages/Wills"));
 const EstateLiquidation = lazy(() => import("./pages/EstateLiquidation"));
 const EstateLiquidationLearnMore = lazy(() => import("./pages/EstateLiquidationLearnMore"));
