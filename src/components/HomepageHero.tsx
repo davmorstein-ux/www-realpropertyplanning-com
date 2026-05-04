@@ -462,7 +462,7 @@ const HomepageHero = () => {
               textShadow: "0 4px 24px rgba(0,0,0,0.45)",
             }}
           >
-            Real Estate Help When Life Gets Complicated
+            Helping Families, Seniors, and Professionals Navigate What Comes Next
           </h1>
 
           {/* Subheadline */}
