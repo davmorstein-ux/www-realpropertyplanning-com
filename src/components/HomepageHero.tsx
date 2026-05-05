@@ -440,7 +440,7 @@ const HomepageHero = () => {
       </section>
 
       {/* ===== Trust Bar ===== */}
-      <section style={{ background: "#1a2f4e", padding: isMobile ? "16px 20px" : "28px 24px" }}>
+      <section className="bg-navy" style={{ background: "#1a2f4e", padding: isMobile ? "16px 20px" : "28px 24px" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto" }}>
           <h1
             style={{
