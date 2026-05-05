@@ -438,7 +438,7 @@ const HomepageHero = () => {
           <h1
             style={{
               ...fontHead,
-              color: "#fff",
+              color: "#c9a84c",
               fontWeight: 800,
               fontSize: "clamp(4.5rem, 9vw, 8rem)",
               lineHeight: 1.02,
@@ -451,46 +451,25 @@ const HomepageHero = () => {
           >
             Probate · Senior Transitions · Estate Sales
           </h1>
-          <div style={{ display: "flex", gap: 14, marginTop: 36, flexWrap: "wrap", justifyContent: "center" }}>
-            <Link
-              to="/about"
-              style={{
-                ...fontBody,
-                background: "#1a5fa8",
-                color: "#fff",
-                padding: "14px 28px",
-                borderRadius: 6,
-                fontWeight: 700,
-                fontSize: 14,
-                letterSpacing: "0.08em",
-                textDecoration: "none",
-              }}
-            >
-              WHO WE ARE
-            </Link>
-            <Link
-              to="/contact"
-              style={{
-                ...fontBody,
-                background: "rgba(8,13,25,0.55)",
-                color: "#fff",
-                padding: "14px 28px",
-                borderRadius: 6,
-                fontWeight: 700,
-                fontSize: 14,
-                letterSpacing: "0.08em",
-                textDecoration: "none",
-                border: "1px solid rgba(255,255,255,0.85)",
-              }}
-            >
-              CONTACT US
-            </Link>
-          </div>
+          <p
+            style={{
+              ...fontBody,
+              color: "#fff",
+              fontSize: "clamp(1rem, 2vw, 1.35rem)",
+              fontWeight: 500,
+              marginTop: 18,
+              maxWidth: 800,
+              lineHeight: 1.5,
+              textShadow: "0 2px 12px rgba(0,0,0,0.4)",
+            }}
+          >
+            Washington State's trusted hub for probate, estate, senior transitions, and professional resources
+          </p>
         </div>
       </section>
 
       {/* ===== Trust Bar ===== */}
-      <section style={{ background: "#1a5fa8", padding: isMobile ? "12px 20px" : "20px 24px" }}>
+      <section style={{ background: "#1a2f4e", padding: isMobile ? "12px 20px" : "20px 24px" }}>
         <div
           style={{
             maxWidth: 1280,
@@ -518,10 +497,10 @@ const HomepageHero = () => {
               >
                 {emoji}
               </div>
-              <div className={isMobile ? "text-xl font-bold" : ""} style={{ ...fontBody, fontWeight: 700, fontSize: isMobile ? 14 : 15, letterSpacing: "0.08em", marginBottom: isMobile ? 4 : 6 }}>
+              <div className={isMobile ? "text-xl font-bold" : ""} style={{ ...fontBody, fontWeight: 700, fontSize: isMobile ? 14 : 15, letterSpacing: "0.08em", marginBottom: isMobile ? 4 : 6, color: "#c9a84c" }}>
                 {title}
               </div>
-              <div className={isMobile ? "font-sans font-bold" : ""} style={{ ...fontBody, fontSize: isMobile ? 13 : 16, color: "rgba(255,255,255,0.95)", lineHeight: isMobile ? 1.4 : 1.5 }}>
+              <div className={isMobile ? "font-sans font-bold" : ""} style={{ ...fontBody, fontSize: isMobile ? 13 : 16, color: "#fff", lineHeight: isMobile ? 1.4 : 1.5 }}>
                 {text}
               </div>
             </div>

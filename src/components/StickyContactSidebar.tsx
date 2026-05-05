@@ -5,7 +5,7 @@ const StickyContactSidebar = () => {
   return (
     <div
       className="fixed left-0 top-1/2 -translate-y-1/2 z-[1000] hidden lg:block"
-      style={{ width: 80 }}
+      style={{ width: 60 }}
     >
       <Link
         to="/join-network"
