@@ -33,12 +33,17 @@ export default function ProfessionalsButton() {
       speed: 0.001 + Math.random() * 0.002,
     }));
 
-    const el = canvas.closest("a");
+    const el = canvas.parentElement?.parentElement as HTMLAnchorElement | null;
+    let cleanupListeners: (() => void) | undefined;
     if (el) {
       const enter = () => { setHovered(true); hoveredRef.current = true; };
       const leave = () => { setHovered(false); hoveredRef.current = false; };
       el.addEventListener("mouseenter", enter);
       el.addEventListener("mouseleave", leave);
+      cleanupListeners = () => {
+        el.removeEventListener("mouseenter", enter);
+        el.removeEventListener("mouseleave", leave);
+      };
     }
 
     function animate() {
