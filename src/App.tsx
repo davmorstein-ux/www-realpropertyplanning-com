@@ -182,30 +182,52 @@ const App = () => (
           <Route path="/for-financial-planners" element={<ForFinancialPlanners />} />
           <Route path="/join-the-network" element={<JoinTheNetwork />} />
 
-          {/* ─── County hubs (canonical: /{county}-county) ────────── */}
+          {/* ─── County hubs ─────────────────────────────────────── */}
           <Route path="/counties" element={<Counties />} />
           <Route path="/king-county" element={<KingCounty />} />
+          <Route path="/counties/king" element={<KingCounty />} />
           <Route path="/snohomish-county" element={<SnohomishCounty />} />
+          <Route path="/counties/snohomish" element={<SnohomishCounty />} />
           <Route path="/pierce-county" element={<PierceCounty />} />
+          <Route path="/counties/pierce" element={<PierceCounty />} />
           <Route path="/kitsap-county" element={<KitsapCounty />} />
+          <Route path="/counties/kitsap" element={<KitsapCounty />} />
           <Route path="/skagit-county" element={<SkagitCounty />} />
+          <Route path="/counties/skagit" element={<SkagitCounty />} />
           <Route path="/thurston-county" element={<ThurstonCounty />} />
+          <Route path="/counties/thurston" element={<ThurstonCounty />} />
           <Route path="/whatcom-county" element={<WhatcomCounty />} />
+          <Route path="/counties/whatcom" element={<WhatcomCounty />} />
           <Route path="/clark-county" element={<ClarkCounty />} />
+          <Route path="/counties/clark" element={<ClarkCounty />} />
           <Route path="/spokane-county" element={<SpokaneCounty />} />
+          <Route path="/counties/spokane" element={<SpokaneCounty />} />
           <Route path="/benton-county" element={<BentonCounty />} />
+          <Route path="/counties/benton" element={<BentonCounty />} />
           <Route path="/yakima-county" element={<YakimaCounty />} />
+          <Route path="/counties/yakima" element={<YakimaCounty />} />
           <Route path="/franklin-county" element={<FranklinCounty />} />
+          <Route path="/counties/franklin" element={<FranklinCounty />} />
           <Route path="/cowlitz-county" element={<CowlitzCounty />} />
+          <Route path="/counties/cowlitz" element={<CowlitzCounty />} />
           <Route path="/grays-harbor-county" element={<GraysHarborCounty />} />
+          <Route path="/counties/grays-harbor" element={<GraysHarborCounty />} />
           <Route path="/island-county" element={<IslandCounty />} />
+          <Route path="/counties/island" element={<IslandCounty />} />
           <Route path="/jefferson-county" element={<JeffersonCounty />} />
+          <Route path="/counties/jefferson" element={<JeffersonCounty />} />
           <Route path="/lewis-county" element={<LewisCounty />} />
+          <Route path="/counties/lewis" element={<LewisCounty />} />
           <Route path="/mason-county" element={<MasonCounty />} />
+          <Route path="/counties/mason" element={<MasonCounty />} />
           <Route path="/pacific-county" element={<PacificCounty />} />
+          <Route path="/counties/pacific" element={<PacificCounty />} />
           <Route path="/san-juan-county" element={<SanJuanCounty />} />
+          <Route path="/counties/san-juan" element={<SanJuanCounty />} />
           <Route path="/skamania-county" element={<SkamaniaCounty />} />
+          <Route path="/counties/skamania" element={<SkamaniaCounty />} />
           <Route path="/wahkiakum-county" element={<WahkiakumCounty />} />
+          <Route path="/counties/wahkiakum" element={<WahkiakumCounty />} />
 
           {/* ─── Tier-1 city pages (only) ─────────────────────────── */}
           <Route path="/seattle-probate-estate-real-estate" element={<SeattleProbateEstate />} />
@@ -291,15 +313,15 @@ const App = () => (
           ══════════════════════════════════════════════════════════ */}
 
           {/* Counties — old URL families → /{county}-county
-              Covers: /counties/{slug}, /counties/{slug}-county,
-                      /service-areas/{slug}-county, and *-probate-estate-real-estate */}
+              Covers: /counties/{slug}-county,
+                      /service-areas/{slug}-county, and *-probate-estate-real-estate
+              Note: /counties/{slug} are now direct routes above */}
           {[
             "king", "snohomish", "pierce", "kitsap", "skagit", "thurston", "whatcom",
             "clark", "spokane", "benton", "yakima", "franklin", "cowlitz",
             "grays-harbor", "island", "jefferson", "lewis", "mason", "pacific",
             "san-juan", "skamania", "wahkiakum",
           ].flatMap((slug) => [
-            <Route key={`c1-${slug}`} path={`/counties/${slug}`} element={<Navigate to={`/${slug}-county`} replace />} />,
             <Route key={`c2-${slug}`} path={`/counties/${slug}-county`} element={<Navigate to={`/${slug}-county`} replace />} />,
             <Route key={`sa-${slug}`} path={`/service-areas/${slug}-county`} element={<Navigate to={`/${slug}-county`} replace />} />,
             <Route key={`pe-${slug}`} path={`/${slug}-county-probate-estate-real-estate`} element={<Navigate to={`/${slug}-county`} replace />} />,
