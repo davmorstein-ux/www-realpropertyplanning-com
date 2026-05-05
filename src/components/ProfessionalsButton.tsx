@@ -146,7 +146,7 @@ export default function ProfessionalsButton() {
             left: 0,
             width: W,
             height: H,
-            zIndex: 1,
+            zIndex: 2,
             opacity: hovered ? 0 : 1,
             transition: "opacity 0.4s ease",
             display: "block",
@@ -163,7 +163,7 @@ export default function ProfessionalsButton() {
             left: 0,
             width: W,
             height: H,
-            zIndex: 1,
+            zIndex: 3,
             opacity: hovered ? 1 : 0,
             transition: "opacity 0.4s ease",
             display: "block",
@@ -180,10 +180,9 @@ export default function ProfessionalsButton() {
             left: 0,
             width: W,
             height: H,
-            zIndex: 2,
+            zIndex: 4,
             pointerEvents: "none",
             clipPath: "polygon(0 0, 100% 50%, 0 100%)",
-            mixBlendMode: "screen",
           }}
         />
       </div>
