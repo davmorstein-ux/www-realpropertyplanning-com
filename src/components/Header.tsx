@@ -115,15 +115,12 @@ const Header = () => {
         data-nosnippet="true"
         style={{
           position: "fixed",
-          top: 16,
-          left: "50%",
-          transform: "translateX(-50%)",
-          width: "min(1280px, calc(100% - 48px))",
-          zIndex: 50,
-          borderRadius: 14,
+          top: 0,
+          left: 0,
+          width: "100%",
+          zIndex: 2000,
           padding: "14px 24px",
           backgroundColor: "#1a2f4e",
-          border: "1px solid rgba(255,255,255,0.08)",
           ...fontBody,
           color: "#fff",
         }}
