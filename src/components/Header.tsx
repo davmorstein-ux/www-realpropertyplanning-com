@@ -204,7 +204,13 @@ const Header = () => {
               gap: 16,
             }}
           >
-            
+            <Link to="/" style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
+              <img
+                src="/rpp-logo-v4.png"
+                alt="Real Property Planning"
+                style={{ height: 88, width: "auto", maxWidth: "none", display: "block", objectFit: "contain" }}
+              />
+            </Link>
             <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
               <a
                 href="tel:2069003015"
