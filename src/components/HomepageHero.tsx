@@ -412,9 +412,9 @@ const HomepageHero = () => {
         }}
       >
         <img
-           src="/hero-photo-mobile.webp"
-           srcSet="/hero-photo-mobile.webp 800w, /hero-photo.webp 1832w"
-           sizes="(max-width: 768px) 100vw, 100vw"
+          src={isMobile ? "/hero-photo-mobile.webp" : "/hero-photo.webp"}
+          srcSet="/hero-photo-mobile.webp 800w, /hero-photo.webp 1832w"
+          sizes="100vw"
           alt="Washington State residential property — Real Property Planning"
           fetchPriority="high"
           loading="eager"
