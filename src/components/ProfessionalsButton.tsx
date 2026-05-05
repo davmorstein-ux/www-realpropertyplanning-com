@@ -1,83 +1,36 @@
-import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
-import defaultBtn from "@/assets/for-professionals-sidebar-button.png";
-import hoverBtn from "@/assets/for-professionals-sidebar-button-green.png";
+import { useEffect, useRef } from "react";
+import blueButton from "@/assets/for-professionals-sidebar-button.png";
 
 export default function ProfessionalsButton() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
-  const [hovered, setHovered] = useState(false);
-  const hoveredRef = useRef(false);
-
-  useEffect(() => {
-    hoveredRef.current = hovered;
-  }, [hovered]);
-
-  useEffect(() => {
-    const el = document.getElementById("professionals-btn");
-    if (!el) return;
-    const enter = () => setHovered(true);
-    const leave = () => setHovered(false);
-    el.addEventListener("mouseenter", enter);
-    el.addEventListener("mouseleave", leave);
-    return () => {
-      el.removeEventListener("mouseenter", enter);
-      el.removeEventListener("mouseleave", leave);
-    };
-  }, []);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
-    const W = 160;
-    const H = 117;
+
+    const W = 160, H = 117;
     canvas.width = W;
     canvas.height = H;
+    let animId: number;
 
-    const nodes = Array.from({ length: 14 }, () => ({
+    const nodes = Array.from({ length: 8 }, () => ({
       x: Math.random() * W,
       y: Math.random() * H,
       vx: (Math.random() - 0.5) * 0.15,
       vy: (Math.random() - 0.5) * 0.15,
     }));
 
-    const pulses = Array.from({ length: 5 }, () => ({
-      from: Math.floor(Math.random() * nodes.length),
-      to: Math.floor(Math.random() * nodes.length),
+    const pulses = Array.from({ length: 3 }, () => ({
+      from: Math.floor(Math.random() * 8),
+      to: Math.floor(Math.random() * 8),
       progress: Math.random(),
       speed: 0.001 + Math.random() * 0.002,
     }));
 
-    let colorProgress = 0;
-    let animId: number;
-
-    function lerpColor(t: number) {
-      return {
-        r: Math.round(100 + (80 - 100) * t),
-        g: Math.round(180 + (255 - 180) * t),
-        b: Math.round(255 + (120 - 255) * t),
-      };
-    }
-
-    function insideTriangle(x: number, y: number) {
-      const v0x = W, v0y = H / 2;
-      const v1x = 0, v1y = H;
-      const v2x = 0, v2y = 0;
-      const d1 = (x - v1x) * (v2y - v1y) - (v2x - v1x) * (y - v1y);
-      const d2 = (x - v2x) * (v0y - v2y) - (v0x - v2x) * (y - v2y);
-      const d3 = (x - v0x) * (v1y - v0y) - (v1x - v0x) * (y - v0y);
-      const hasNeg = d1 < 0 || d2 < 0 || d3 < 0;
-      const hasPos = d1 > 0 || d2 > 0 || d3 > 0;
-      return !(hasNeg && hasPos);
-    }
-
     function animate() {
       ctx!.clearRect(0, 0, W, H);
-
-      colorProgress += hoveredRef.current ? 0.02 : -0.02;
-      colorProgress = Math.max(0, Math.min(1, colorProgress));
-      const c = lerpColor(colorProgress);
 
       nodes.forEach((n) => {
         n.x += n.vx;
@@ -95,7 +48,7 @@ export default function ProfessionalsButton() {
             ctx!.beginPath();
             ctx!.moveTo(nodes[i].x, nodes[i].y);
             ctx!.lineTo(nodes[j].x, nodes[j].y);
-            ctx!.strokeStyle = `rgba(${c.r},${c.g},${c.b},${0.2 * (1 - dist / 75)})`;
+            ctx!.strokeStyle = `rgba(100,180,255,${0.2 * (1 - dist / 75)})`;
             ctx!.lineWidth = 0.6;
             ctx!.stroke();
           }
@@ -103,10 +56,9 @@ export default function ProfessionalsButton() {
       }
 
       nodes.forEach((n) => {
-        if (!insideTriangle(n.x, n.y)) return;
         ctx!.beginPath();
         ctx!.arc(n.x, n.y, 1.8, 0, Math.PI * 2);
-        ctx!.fillStyle = `rgba(${c.r},${c.g},${c.b},0.6)`;
+        ctx!.fillStyle = "rgba(150,210,255,0.7)";
         ctx!.fill();
       });
 
@@ -123,12 +75,12 @@ export default function ProfessionalsButton() {
         const py = from.y + (to.y - from.y) * p.progress;
         const alpha = Math.sin(p.progress * Math.PI);
         ctx!.beginPath();
-        ctx!.arc(px, py, 3, 0, Math.PI * 2);
-        ctx!.fillStyle = `rgba(255,255,255,${alpha * 0.7})`;
+        ctx!.arc(px, py, 5, 0, Math.PI * 2);
+        ctx!.fillStyle = `rgba(100,180,255,${alpha * 0.3})`;
         ctx!.fill();
         ctx!.beginPath();
-        ctx!.arc(px, py, 6, 0, Math.PI * 2);
-        ctx!.fillStyle = `rgba(${c.r},${c.g},${c.b},${alpha * 0.4})`;
+        ctx!.arc(px, py, 2.5, 0, Math.PI * 2);
+        ctx!.fillStyle = `rgba(255,255,255,${alpha * 0.8})`;
         ctx!.fill();
       });
 
@@ -140,9 +92,8 @@ export default function ProfessionalsButton() {
   }, []);
 
   return (
-    <Link
-      id="professionals-btn"
-      to="/professionals"
+    <a
+      href="/professionals"
       className="hidden lg:block"
       style={{
         position: "fixed",
@@ -157,6 +108,19 @@ export default function ProfessionalsButton() {
       }}
     >
       <div style={{ position: "relative", width: 160, height: 117 }}>
+        <img
+          src={blueButton}
+          alt="For Professionals"
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: 160,
+            height: 117,
+            zIndex: 1,
+          }}
+          loading="eager"
+        />
         <canvas
           ref={canvasRef}
           aria-hidden="true"
@@ -167,53 +131,11 @@ export default function ProfessionalsButton() {
             width: 160,
             height: 117,
             clipPath: "polygon(0 0, 100% 50%, 0 100%)",
-            zIndex: 3,
-            pointerEvents: "none" as const,
-          }}
-        />
-        <img
-          src={defaultBtn}
-          alt="For Professionals"
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: 160,
-            height: 117,
-            opacity: hovered ? 0 : 1,
-            transition: "opacity 0.3s ease",
-            zIndex: 1,
-          }}
-          loading="eager"
-        />
-        <img
-          src={hoverBtn}
-          alt=""
-          aria-hidden="true"
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: 160,
-            height: 117,
-            opacity: hovered ? 1 : 0,
-            transition: "opacity 0.3s ease",
             zIndex: 2,
+            pointerEvents: "none",
           }}
-          loading="eager"
         />
-        <div style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          color: "white",
-          fontSize: 10,
-          zIndex: 10,
-          pointerEvents: "none",
-        }}>
-          {hovered ? "HOVER:ON" : "HOVER:OFF"}
-        </div>
       </div>
-    </Link>
+    </a>
   );
 }
