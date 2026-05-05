@@ -408,11 +408,26 @@ const HomepageHero = () => {
           position: "relative",
           height: isMobile ? "50vh" : "55vh",
           width: "100%",
-          backgroundImage: "url('/hero-photo.webp')",
-          backgroundSize: "cover",
-          backgroundPosition: isMobile ? "center 30%" : "center",
+          overflow: "hidden",
         }}
       >
+        <img
+          src={isMobile ? "/hero-photo-mobile.webp" : "/hero-photo.webp"}
+          srcSet="/hero-photo-mobile.webp 800w, /hero-photo.webp 1832w"
+          sizes="100vw"
+          alt="Washington State residential property — Real Property Planning"
+          fetchPriority="high"
+          loading="eager"
+          decoding="async"
+          style={{
+            position: "absolute",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            objectPosition: isMobile ? "center 30%" : "center",
+          }}
+        />
         <div
           aria-hidden
           style={{
