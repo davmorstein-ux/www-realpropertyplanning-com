@@ -45,7 +45,7 @@ const NAV: NavItem[] = [
 const fontBody = { fontFamily: "'DM Sans', system-ui, sans-serif" };
 
 const Header = () => {
-  const [scrolled, setScrolled] = useState(false);
+  
   const [isMobile, setIsMobile] = useState(() =>
     typeof window !== "undefined" ? window.innerWidth < 769 : false
   );
@@ -101,10 +101,6 @@ const Header = () => {
         "https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=DM+Sans:wght@400;600;700&display=swap";
       document.head.appendChild(link);
     }
-    const onScroll = () => setScrolled(window.scrollY > 30);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
@@ -119,18 +115,12 @@ const Header = () => {
         data-nosnippet="true"
         style={{
           position: "fixed",
-          top: 16,
-          left: "50%",
-          transform: "translateX(-50%)",
-          width: "min(1280px, calc(100% - 48px))",
+          top: 0,
+          left: 0,
+          width: "100%",
           zIndex: 2000,
-          borderRadius: 14,
           padding: "14px 24px",
-          backgroundColor: scrolled ? "rgba(8, 13, 25, 0.82)" : "rgba(8, 13, 25, 0)",
-          backdropFilter: scrolled ? "blur(10px)" : "none",
-          WebkitBackdropFilter: scrolled ? "blur(10px)" : "none",
-          border: scrolled ? "1px solid rgba(255,255,255,0.08)" : "1px solid rgba(255,255,255,0)",
-          transition: "all 0.45s ease",
+          backgroundColor: "#1a2f4e",
           ...fontBody,
           color: "#fff",
         }}
