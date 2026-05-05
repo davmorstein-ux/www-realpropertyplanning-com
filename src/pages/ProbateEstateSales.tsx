@@ -198,7 +198,6 @@ const ProbateEstateSales = () => {
             <ProofCallout
               quote="The dual background in brokerage and appraisal gave us confidence that the property was priced correctly. He made a complicated situation feel manageable."
               attribution="Professional Referral"
-              context="Probate property sale coordination"
               variant="accent"
             />
           </div>
