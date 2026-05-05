@@ -182,8 +182,7 @@ export default function ProfessionalsButton() {
             height: 117,
             opacity: hovered ? 0 : 1,
             transition: "opacity 0.3s ease",
-            zIndex: 2,
-            mixBlendMode: "screen" as const,
+            zIndex: 1,
           }}
           loading="eager"
         />
@@ -200,7 +199,6 @@ export default function ProfessionalsButton() {
             opacity: hovered ? 1 : 0,
             transition: "opacity 0.3s ease",
             zIndex: 2,
-            mixBlendMode: "screen" as const,
           }}
           loading="eager"
         />
