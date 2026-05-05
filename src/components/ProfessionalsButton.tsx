@@ -95,7 +95,7 @@ export default function ProfessionalsButton() {
             ctx!.beginPath();
             ctx!.moveTo(nodes[i].x, nodes[i].y);
             ctx!.lineTo(nodes[j].x, nodes[j].y);
-            ctx!.strokeStyle = `rgba(${c.r},${c.g},${c.b},${0.3 * (1 - dist / 75)})`;
+            ctx!.strokeStyle = `rgba(${c.r},${c.g},${c.b},${0.2 * (1 - dist / 75)})`;
             ctx!.lineWidth = 0.6;
             ctx!.stroke();
           }
@@ -106,7 +106,7 @@ export default function ProfessionalsButton() {
         if (!insideTriangle(n.x, n.y)) return;
         ctx!.beginPath();
         ctx!.arc(n.x, n.y, 1.8, 0, Math.PI * 2);
-        ctx!.fillStyle = `rgba(${c.r},${c.g},${c.b},0.95)`;
+        ctx!.fillStyle = `rgba(${c.r},${c.g},${c.b},0.6)`;
         ctx!.fill();
       });
 
@@ -124,11 +124,11 @@ export default function ProfessionalsButton() {
         const alpha = Math.sin(p.progress * Math.PI);
         ctx!.beginPath();
         ctx!.arc(px, py, 3, 0, Math.PI * 2);
-        ctx!.fillStyle = `rgba(255,255,255,${alpha})`;
+        ctx!.fillStyle = `rgba(255,255,255,${alpha * 0.7})`;
         ctx!.fill();
         ctx!.beginPath();
         ctx!.arc(px, py, 6, 0, Math.PI * 2);
-        ctx!.fillStyle = `rgba(${c.r},${c.g},${c.b},${alpha * 0.3})`;
+        ctx!.fillStyle = `rgba(${c.r},${c.g},${c.b},${alpha * 0.4})`;
         ctx!.fill();
       });
 
@@ -182,8 +182,7 @@ export default function ProfessionalsButton() {
             height: 117,
             opacity: hovered ? 0 : 1,
             transition: "opacity 0.3s ease",
-            zIndex: 2,
-            mixBlendMode: "screen" as const,
+            zIndex: 1,
           }}
           loading="eager"
         />
@@ -200,7 +199,6 @@ export default function ProfessionalsButton() {
             opacity: hovered ? 1 : 0,
             transition: "opacity 0.3s ease",
             zIndex: 2,
-            mixBlendMode: "screen" as const,
           }}
           loading="eager"
         />
