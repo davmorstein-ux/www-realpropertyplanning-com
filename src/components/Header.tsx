@@ -116,12 +116,12 @@ const Header = () => {
         data-nosnippet="true"
         style={{
           position: "fixed",
-          top: 16,
+          top: 0,
           left: "50%",
           transform: "translateX(-50%)",
           width: "min(1280px, calc(100% - 48px))",
           zIndex: 50,
-          borderRadius: 14,
+          borderRadius: 0,
           padding: "14px 24px",
           backgroundColor: scrolled ? "rgba(8, 13, 25, 0.95)" : "rgba(0, 0, 0, 0)",
           backdropFilter: scrolled ? "blur(10px)" : "blur(10px)",
