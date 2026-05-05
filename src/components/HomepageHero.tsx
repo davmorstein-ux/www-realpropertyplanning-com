@@ -465,11 +465,27 @@ const HomepageHero = () => {
               fontWeight: 400,
               textAlign: "center",
               marginTop: 8,
-              marginBottom: isMobile ? 14 : 22,
+              marginBottom: 4,
               lineHeight: 1.5,
             }}
           >
-            When families face life's biggest transitions, we connect them<br />with the right guidance, resources, and professionals — all in one place.
+            When life brings its biggest transitions — probate, estate sales, senior housing, downsizing — Real Property Planning connects families, seniors, executors, and professionals with the right people and resources.
+          </p>
+          <p
+            style={{
+              fontFamily: "'DM Sans', system-ui, sans-serif",
+              color: "#ffffff",
+              opacity: 1,
+              fontSize: "1rem",
+              fontWeight: 600,
+              textAlign: "center",
+              marginTop: 12,
+              marginBottom: isMobile ? 14 : 22,
+              lineHeight: 1.5,
+              letterSpacing: "0.05em",
+            }}
+          >
+            Free to use <span style={{ color: "#f0c040" }}>·</span> Built for families <span style={{ color: "#f0c040" }}>·</span> Trusted by professionals
           </p>
         </div>
       </section>
