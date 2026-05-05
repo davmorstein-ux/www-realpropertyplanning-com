@@ -446,7 +446,7 @@ const HomepageHero = () => {
             style={{
               fontFamily: "'Cormorant Garamond', 'Georgia', serif",
               color: "#c9a84c",
-              fontSize: "2rem",
+              fontSize: "2.5rem",
               fontWeight: 800,
               textAlign: "center",
               margin: 0,
@@ -457,10 +457,11 @@ const HomepageHero = () => {
           </h1>
           <p
             style={{
-              ...fontBody,
+              fontFamily: "'DM Sans', system-ui, sans-serif",
               color: "#ffffff",
+              opacity: 1,
               fontSize: "1.1rem",
-              fontWeight: 500,
+              fontWeight: 400,
               textAlign: "center",
               marginTop: 8,
               marginBottom: isMobile ? 14 : 22,
