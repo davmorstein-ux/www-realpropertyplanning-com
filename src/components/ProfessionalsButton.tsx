@@ -20,9 +20,9 @@ export default function ProfessionalsButton() {
       console.error("Canvas 2D context failed to initialize");
       return;
     }
-    console.log("Canvas initialized successfully, size:", W, "x", H);
     const W = 160;
     const H = 117;
+    console.log("Canvas initialized successfully, size:", W, "x", H);
     canvas.width = W;
     canvas.height = H;
 
@@ -42,6 +42,7 @@ export default function ProfessionalsButton() {
 
     let colorProgress = 0;
     let animId: number;
+    let frameCount = 0;
 
     function lerpColor(t: number) {
       return {
