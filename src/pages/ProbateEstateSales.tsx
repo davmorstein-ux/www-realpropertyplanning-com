@@ -189,29 +189,20 @@ const ProbateEstateSales = () => {
       <main id="main-content">
 
       {/* SECTION 1 — Hero (unchanged) */}
-      <section className="bg-primary pt-1.5 md:pt-2 pb-16 md:pb-20">
+      <section className="bg-primary pt-1.5 md:pt-2 pb-10 md:pb-14">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <img src={iconProbateSales} alt="Probate estate sale scene — house with sold sign, probate court documents, keys, and scale of justice in gold circular frame" className="mx-auto max-w-[16rem] md:max-w-[20rem] w-full h-auto object-contain mb-6" loading="eager"/>
-            <p className="text-gold font-bold tracking-widest uppercase mb-6 text-sm md:text-base">
+            <img src={iconProbateSales} alt="Probate estate sale scene — house with sold sign, probate court documents, keys, and scale of justice in gold circular frame" className="mx-auto max-w-[16rem] md:max-w-[20rem] w-full h-auto object-contain mb-4" loading="eager"/>
+            <p className="text-gold font-bold tracking-widest uppercase mb-4 text-sm md:text-base">
               Probate &amp; Estate Property Sales
             </p>
-            <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-8">
+            <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-5">
               Selling a Home Through Probate in Washington State
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/90 leading-relaxed mb-12 max-w-2xl mx-auto">
-              David Stein — Licensed Broker &amp; Certified Residential Appraiser — (206) 900-3015
-            </p>
-            <div className="flex flex-col items-center gap-4 mb-12 w-full">
-              <p className="text-primary-foreground text-lg leading-relaxed text-center">
-                The court sets the timeline. We work within it.
-              </p>
-              <p className="text-primary-foreground text-lg leading-relaxed text-center">
-                Pricing must hold up to fiduciary scrutiny.
-              </p>
-              <p className="text-primary-foreground text-lg leading-relaxed text-center">
-                Every party stays informed. Every step is documented.
-              </p>
+            <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 mb-6">
+              <span className="inline-flex items-center text-xs md:text-sm text-primary-foreground/80 bg-white/10 rounded-full px-3 py-1">✓ Court-aligned timelines</span>
+              <span className="inline-flex items-center text-xs md:text-sm text-primary-foreground/80 bg-white/10 rounded-full px-3 py-1">✓ Fiduciary-grade pricing</span>
+              <span className="inline-flex items-center text-xs md:text-sm text-primary-foreground/80 bg-white/10 rounded-full px-3 py-1">✓ Full documentation</span>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">
