@@ -192,7 +192,7 @@ const ProbateEstateSales = () => {
       <section className="bg-primary pt-1.5 md:pt-2 pb-16 md:pb-20">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <img src={iconProbateSales} alt="Probate real estate sales guidance Washington State — house, gavel, last will and testament, and petition for probate" className="mx-auto max-w-[18rem] w-full h-auto object-contain mb-4" loading="lazy"/>
+            <img src={iconProbateSales} alt="Probate estate sale scene — house with sold sign, probate court documents, keys, and scale of justice in gold circular frame" className="mx-auto max-w-[16rem] md:max-w-[20rem] w-full h-auto object-contain mb-6" loading="eager"/>
             <p className="text-gold font-bold tracking-widest uppercase mb-6 text-sm md:text-base">
               Probate &amp; Estate Property Sales
             </p>
