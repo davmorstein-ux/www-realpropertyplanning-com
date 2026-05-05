@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import forProfessionalsBtn from "@/assets/for-professionals-sidebar-button.png";
+import defaultBtn from "@/assets/for-professionals-sidebar-button.png";
+import hoverBtn from "@/assets/for-professionals-sidebar-button-green.png";
 
 const StickyContactSidebar = () => {
   return (
@@ -9,13 +10,20 @@ const StickyContactSidebar = () => {
     >
       <Link
         to="/professionals"
-        className="block transition-[filter] duration-200 ease-out hover:brightness-110"
+        className="group relative block"
         aria-label="For Professionals"
       >
         <img
-          src={forProfessionalsBtn}
+          src={defaultBtn}
           alt="For Professionals"
-          className="w-full h-auto"
+          className="w-full h-auto transition-opacity duration-300 ease-in-out group-hover:opacity-0"
+          loading="eager"
+        />
+        <img
+          src={hoverBtn}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-auto opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"
           loading="eager"
         />
       </Link>
