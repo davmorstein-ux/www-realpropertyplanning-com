@@ -124,11 +124,11 @@ export default function ProfessionalsButton() {
         const alpha = Math.sin(p.progress * Math.PI);
         ctx!.beginPath();
         ctx!.arc(px, py, 3, 0, Math.PI * 2);
-        ctx!.fillStyle = `rgba(255,255,255,${alpha})`;
+        ctx!.fillStyle = `rgba(255,255,255,${alpha * 0.7})`;
         ctx!.fill();
         ctx!.beginPath();
         ctx!.arc(px, py, 6, 0, Math.PI * 2);
-        ctx!.fillStyle = `rgba(${c.r},${c.g},${c.b},${alpha * 0.3})`;
+        ctx!.fillStyle = `rgba(${c.r},${c.g},${c.b},${alpha * 0.4})`;
         ctx!.fill();
       });
 
