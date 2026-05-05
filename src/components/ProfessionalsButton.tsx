@@ -106,7 +106,7 @@ export default function ProfessionalsButton() {
         if (!insideTriangle(n.x, n.y)) return;
         ctx!.beginPath();
         ctx!.arc(n.x, n.y, 1.8, 0, Math.PI * 2);
-        ctx!.fillStyle = `rgba(${c.r},${c.g},${c.b},0.95)`;
+        ctx!.fillStyle = `rgba(${c.r},${c.g},${c.b},0.6)`;
         ctx!.fill();
       });
 
