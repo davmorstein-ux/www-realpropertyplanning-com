@@ -46,7 +46,6 @@ const NAV: NavItem[] = [
 const fontBody = { fontFamily: "'DM Sans', system-ui, sans-serif" };
 
 const Header = () => {
-  const [scrolled, setScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(() =>
     typeof window !== "undefined" ? window.innerWidth < 769 : false
   );
@@ -102,10 +101,6 @@ const Header = () => {
         "https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=DM+Sans:wght@400;600;700&display=swap";
       document.head.appendChild(link);
     }
-    const onScroll = () => setScrolled(window.scrollY > 30);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
@@ -118,14 +113,15 @@ const Header = () => {
       </a>
       <header
         data-nosnippet="true"
+        className="site-header"
         style={{
           position: "fixed",
-          top: isMobile ? 0 : 16,
-          left: isMobile ? 0 : "50%",
-          transform: isMobile ? "none" : "translateX(-50%)",
-          width: isMobile ? "100%" : "min(1280px, calc(100% - 48px))",
+          top: 0,
+          left: 0,
+          width: "100%",
           zIndex: 2000,
-          borderRadius: isMobile ? 0 : 14,
+          opacity: 1,
+          borderRadius: 0,
           padding: isMobile ? "6px 8px" : "14px 24px",
           backgroundColor: "#1a2f4e",
           backdropFilter: "none",
