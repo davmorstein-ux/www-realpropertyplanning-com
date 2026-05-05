@@ -53,33 +53,30 @@ const ProbateEstateSales = () => {
       <main id="main-content">
 
       {/* SECTION 1 — Hero */}
-      <section className="bg-primary pt-1.5 md:pt-2 pb-10 md:pb-14">
+      <section className="bg-primary pt-6 md:pt-10 pb-10 md:pb-14">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <img src={iconProbateSales} alt="Probate estate sale scene — house with sold sign, probate court documents, keys, and scale of justice in gold circular frame" className="mx-auto max-w-[16rem] md:max-w-[20rem] w-full h-auto object-contain mb-4" loading="eager"/>
-            <p className="text-gold font-bold tracking-widest uppercase mb-4 text-sm md:text-base">
+            <img src={iconProbateSales} alt="Probate estate sale scene — house with sold sign, probate court documents, keys, and scale of justice in gold circular frame" className="mx-auto max-w-[16rem] md:max-w-[20rem] w-full h-auto object-contain mb-5" loading="eager"/>
+            <p className="text-gold font-bold uppercase mb-3" style={{ fontSize: '20px', letterSpacing: '0.18em' }}>
               Probate &amp; Estate Property Sales
             </p>
-            <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-5">
+            <h1 className="font-serif text-primary-foreground font-semibold leading-tight mb-5" style={{ fontSize: 'clamp(36px, 5vw, 46px)' }}>
               Selling a Home Through Probate in Washington State
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-5">
-              A probate sale runs on the court's clock, not the market's — and a typical listing agent isn't built for it.
-            </p>
             <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 mb-6">
-              <span className="inline-flex items-center text-xs md:text-sm text-primary-foreground/80 bg-white/10 rounded-full px-3 py-1">✓ Court-aligned timelines</span>
-              <span className="inline-flex items-center text-xs md:text-sm text-primary-foreground/80 bg-white/10 rounded-full px-3 py-1">✓ Fiduciary-grade pricing</span>
-              <span className="inline-flex items-center text-xs md:text-sm text-primary-foreground/80 bg-white/10 rounded-full px-3 py-1">✓ Full documentation</span>
+              <span className="inline-flex items-center text-primary-foreground bg-white/10 rounded-full px-3 py-1" style={{ fontSize: '16px' }}>✓ Court-aligned timelines</span>
+              <span className="inline-flex items-center text-primary-foreground bg-white/10 rounded-full px-3 py-1" style={{ fontSize: '16px' }}>✓ Fiduciary-grade pricing</span>
+              <span className="inline-flex items-center text-primary-foreground bg-white/10 rounded-full px-3 py-1" style={{ fontSize: '16px' }}>✓ Full documentation</span>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">
-                <Button variant="gold" size="lg" className="w-full sm:w-auto">
+                <Button variant="gold" size="lg" className="w-full sm:w-auto px-8 py-4 h-auto">
                   <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy"/>
                   Talk Through Your Estate
                 </Button>
               </Link>
               <Link to="/guides/sell-house-during-probate-washington">
-                <Button size="lg" variant="outline3d" className="bg-white !text-[#0f2d52] border-2 border-[#0f2d52] hover:bg-[#0f2d52] hover:!text-white focus-visible:ring-[#0f2d52] w-full sm:w-auto">
+                <Button size="lg" variant="outline3d" className="bg-white !text-[#0f2d52] border-2 border-[#0f2d52] hover:bg-[#0f2d52] hover:!text-white focus-visible:ring-[#0f2d52] w-full sm:w-auto px-8 py-4 h-auto">
                   Read the Probate Sale Guide
                 </Button>
               </Link>
