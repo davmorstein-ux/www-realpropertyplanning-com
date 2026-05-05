@@ -493,7 +493,7 @@ const Header = () => {
       </header>
 
       {/* Spacer to preserve layout below the fixed header (prevents CLS). */}
-      <div style={{ height: isMobile ? 64 : 156 }} aria-hidden="true" />
+      <div style={{ height: isMobile ? 64 : 120 }} aria-hidden="true" />
     </>
   );
 };
