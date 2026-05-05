@@ -1,92 +1,15 @@
-import { useEffect, useRef, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
-
-/**
- * Homepage hero — floating island header + full-viewport Pine Ridge photo + trust bar.
- * This component is rendered on `/` only (see src/pages/Index.tsx). The site-wide
- * <Header /> is intentionally still rendered above it; this floating header sits on
- * top of the hero photo as a homepage-only visual treatment.
- */
-type NavChild = { label: string; href: string };
-type NavItem = { label: string; href: string; children?: NavChild[] };
-
-const NAV: NavItem[] = [
-  { label: "Home", href: "/" },
-  { label: "Probate & Estate", href: "/probate-estate-sales" },
-  {
-    label: "Senior Transitions",
-    href: "/senior-transitions",
-    children: [
-      { label: "Senior Transitions", href: "/senior-transitions" },
-      { label: "Downsizing", href: "/sell-house-fund-senior-living" },
-    ],
-  },
-  { label: "Property Valuation", href: "/why-valuation-matters" },
-  {
-    label: "Services",
-    href: "/services",
-    children: [
-      { label: "All Services", href: "/services" },
-      { label: "Probate Sales", href: "/probate-estate-sales" },
-      { label: "Senior & Estate Services", href: "/senior-estate-services" },
-      { label: "Senior Placement", href: "/senior-placement" },
-      { label: "For Executors", href: "/executors" },
-      { label: "How the Process Works", href: "/how-the-process-works" },
-      { label: "Professional Referral Resource", href: "/professional-referral-resource" },
-      { label: "Gray Divorce", href: "/gray-divorce" },
-    ],
-  },
-  { label: "Resources", href: "/resources" },
-  
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
-];
+import { useEffect, useState } from "react";
 
 const HomepageHero = () => {
-  const [scrolled, setScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(() =>
     typeof window !== "undefined" ? window.innerWidth < 769 : false
   );
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
-  const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
-  const dropdownRef = useRef<HTMLDivElement>(null);
-  const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  const openMenu = (label: string) => {
-    if (closeTimerRef.current) {
-      clearTimeout(closeTimerRef.current);
-      closeTimerRef.current = null;
-    }
-    setOpenDropdown(label);
-  };
-  const scheduleClose = () => {
-    if (closeTimerRef.current) clearTimeout(closeTimerRef.current);
-    closeTimerRef.current = setTimeout(() => setOpenDropdown(null), 150);
-  };
-  const { pathname } = useLocation();
 
   useEffect(() => {
     const check = () => setIsMobile(window.innerWidth < 769);
     check();
     window.addEventListener("resize", check);
     return () => window.removeEventListener("resize", check);
-  }, []);
-
-  useEffect(() => {
-    setMenuOpen(false);
-    setOpenDropdown(null);
-    setMobileExpanded(null);
-  }, [pathname]);
-
-  useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
-        setOpenDropdown(null);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   useEffect(() => {
@@ -99,14 +22,9 @@ const HomepageHero = () => {
         "https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=DM+Sans:wght@400;600;700&display=swap";
       document.head.appendChild(link);
     }
-    const onScroll = () => setScrolled(window.scrollY > 30);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   const fontBody = { fontFamily: "'DM Sans', system-ui, sans-serif" };
-  const fontHead = { fontFamily: "'Barlow Condensed', 'DM Sans', sans-serif" };
 
   return (
     <div style={{ ...fontBody, background: "#0b1220", color: "#fff" }}>
