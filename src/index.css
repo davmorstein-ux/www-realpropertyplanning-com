@@ -1777,15 +1777,6 @@ img[src*="real-estate-website-globe-3d-icon-washington"] {
   transform: scaleX(1);
 }
 
-.site-header {
-  background-color: #1a2f4e !important;
-  opacity: 1 !important;
-  position: fixed !important;
-  top: 0 !important;
-  width: 100% !important;
-  z-index: 2000 !important;
-}
-
 /* Override Tailwind alpha-modified text colors so descriptive copy
  * always renders at the full token color (no transparency). Tailwind v3
  * compiles e.g. `text-primary-foreground/80` to

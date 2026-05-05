@@ -20,7 +20,6 @@ import HomepageFAQ from "@/components/HomepageFAQ";
 import HomepageTeamSection from "@/components/HomepageTeamSection";
 import HowWeHelpCards from "@/components/HowWeHelpCards";
 import HomepageWarmStatement from "@/components/HomepageWarmStatement";
-import Header from "@/components/Header";
 
 const serviceAreas = [
   { county: "King County", href: "/counties/king", cities: "Seattle, Bellevue, Kirkland, Redmond, Renton, Bothell, Shoreline, Mercer Island, Burien, Kent, Auburn, Federal Way" },
@@ -130,7 +129,6 @@ const Index = () => {
         canonical="https://www.realpropertyplanning.com"
         schemaJson={jsonLd}
       />
-      <Header />
       <main id="main-content">
 
       {/* 1. HERO — PNW background, calm headline, two CTAs */}
