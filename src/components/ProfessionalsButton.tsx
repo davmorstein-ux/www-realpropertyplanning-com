@@ -146,7 +146,7 @@ export default function ProfessionalsButton() {
             left: 0,
             width: W,
             height: H,
-            zIndex: 1,
+            zIndex: 2,
             opacity: hovered ? 0 : 1,
             transition: "opacity 0.4s ease",
             display: "block",
