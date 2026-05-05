@@ -7,7 +7,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import ProofCallout from "@/components/ProofCallout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Scale, Users, Wrench, BarChart3, Heart, Hammer, BookOpen, MessageSquare, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconProbateSales from "@/assets/probate-estate-sales-hero.png";
@@ -15,13 +15,21 @@ import iconProbateSales from "@/assets/probate-estate-sales-hero.png";
 // ── Data ──
 
 const whatMakesDifferentTiles = [
-  { icon: Scale, label: "Legal Authority", text: "Court requirements may dictate when and how a sale can occur." },
-  { icon: Users, label: "Multiple Decision-Makers", text: "Executors, co-heirs, attorneys, and trustees must coordinate." },
-  { icon: Wrench, label: "Property Condition", text: "Deferred maintenance, belongings, and vacancy are common." },
-  { icon: BarChart3, label: "Honest Pricing", text: "Value must reflect actual condition — not automated estimates." },
-  { icon: Heart, label: "Emotional Complexity", text: "Family dynamics can slow communication and decisions." },
-  { icon: Hammer, label: "Preparation Strategy", text: "As-is vs. repairs has a direct impact on fiduciary defensibility." },
+  { emoji: "⚖️", label: "Legal Authority", text: "Court requirements may dictate when and how a sale can occur." },
+  { emoji: "🤝", label: "Multiple Decision-Makers", text: "Executors, co-heirs, attorneys, and trustees must coordinate." },
+  { emoji: "🏚️", label: "Property Condition", text: "Deferred maintenance, belongings, and vacancy are common." },
+  { emoji: "💰", label: "Honest Pricing", text: "Value must reflect actual condition — not automated estimates." },
+  { emoji: "🫂", label: "Emotional Complexity", text: "Family dynamics can slow communication and decisions." },
+  { emoji: "🔨", label: "Preparation Strategy", text: "As-is vs. repairs has a direct impact on fiduciary defensibility." },
 ];
+
+const card3dStyle = {
+  background: 'white',
+  border: '1px solid rgba(0,0,0,0.08)',
+  borderRadius: '16px',
+  boxShadow: '0 4px 6px rgba(0,0,0,0.07), 0 10px 20px rgba(0,0,0,0.05)',
+  transition: 'all 0.2s ease',
+};
 
 const jsonLd = articleSchema({
   headline: "Probate Real Estate Sales in Washington State",
@@ -91,7 +99,7 @@ const ProbateEstateSales = () => {
               This distinction matters more than most people realize. Understanding which situation you're in determines your legal authority, your timeline, and your options before you can take any action on the property.
             </p>
             <div className="grid md:grid-cols-2 gap-5">
-              <div className="bg-card border border-border rounded-xl p-6">
+              <div className="p-6 hover:-translate-y-1" style={card3dStyle} onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 8px 16px rgba(0,0,0,0.12), 0 20px 40px rgba(0,0,0,0.08)'; }} onMouseLeave={e => { e.currentTarget.style.boxShadow = card3dStyle.boxShadow; }}>
                 <h3 className="font-serif text-lg text-foreground font-semibold mb-2">Probate Property</h3>
                 <p className="text-muted-foreground leading-relaxed text-[15px] mb-4">
                   Court-supervised. Legal authority required before the sale can proceed.
@@ -100,7 +108,7 @@ const ProbateEstateSales = () => {
                   Learn more →
                 </Link>
               </div>
-              <div className="bg-card border border-border rounded-xl p-6">
+              <div className="p-6 hover:-translate-y-1" style={card3dStyle} onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 8px 16px rgba(0,0,0,0.12), 0 20px 40px rgba(0,0,0,0.08)'; }} onMouseLeave={e => { e.currentTarget.style.boxShadow = card3dStyle.boxShadow; }}>
                 <h3 className="font-serif text-lg text-foreground font-semibold mb-2">Inherited Property (Non-Probate)</h3>
                 <p className="text-muted-foreground leading-relaxed text-[15px] mb-4">
                   Passes outside probate via trust or joint tenancy. Fewer legal hurdles, but still complex.
@@ -125,18 +133,20 @@ const ProbateEstateSales = () => {
               Estate property sales are genuinely different from standard real estate transactions — and treating them like ordinary listings is where families and executors most often run into trouble.
             </p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              {whatMakesDifferentTiles.map((tile, i) => {
-                const Icon = tile.icon;
-                return (
-                  <div key={i} className="bg-card border border-border rounded-xl p-6 flex flex-col items-start">
-                    <div className="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center mb-4">
-                      <Icon className="w-5 h-5 text-gold" />
-                    </div>
+              {whatMakesDifferentTiles.map((tile, i) => (
+                  <div
+                    key={i}
+                    className="p-6 flex flex-col items-start cursor-default hover:-translate-y-1"
+                    style={card3dStyle}
+                    onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 8px 16px rgba(0,0,0,0.12), 0 20px 40px rgba(0,0,0,0.08)'; }}
+                    onMouseLeave={e => { e.currentTarget.style.boxShadow = card3dStyle.boxShadow; }}
+                  >
+                    <span className="text-[48px] leading-none mb-4" role="img" aria-hidden="true">{tile.emoji}</span>
                     <h3 className="font-serif text-base text-foreground font-semibold mb-2">{tile.label}</h3>
                     <p className="text-muted-foreground text-[15px] leading-relaxed">{tile.text}</p>
                   </div>
-                );
-              })}
+                ))}
+
             </div>
           </div>
         </div>
@@ -188,7 +198,6 @@ const ProbateEstateSales = () => {
             <ProofCallout
               quote="The dual background in brokerage and appraisal gave us confidence that the property was priced correctly. He made a complicated situation feel manageable."
               attribution="Professional Referral"
-              context="Probate property sale coordination"
               variant="accent"
             />
           </div>
@@ -201,30 +210,42 @@ const ProbateEstateSales = () => {
           <div className="max-w-4xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-8">Explore Further</h2>
             <div className="grid md:grid-cols-3 gap-5">
-              <Link to="/client-stories" className="group bg-card border border-border rounded-xl p-6 hover:border-gold/40 transition-colors flex flex-col">
-                <div className="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center mb-4">
-                  <BookOpen className="w-5 h-5 text-gold" />
-                </div>
+              <Link
+                to="/client-stories"
+                className="group flex flex-col p-6 hover:-translate-y-1"
+                style={card3dStyle}
+                onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 8px 16px rgba(0,0,0,0.12), 0 20px 40px rgba(0,0,0,0.08)'; }}
+                onMouseLeave={e => { e.currentTarget.style.boxShadow = card3dStyle.boxShadow; }}
+              >
+                <span className="text-[48px] leading-none mb-4" role="img" aria-hidden="true">📖</span>
                 <h3 className="font-serif text-lg text-foreground font-semibold mb-2 group-hover:text-gold transition-colors">Client Stories</h3>
                 <p className="text-muted-foreground text-[15px] leading-relaxed mb-4 flex-1">See how we've helped executors, families, and trustees navigate real situations.</p>
                 <span className="text-accent group-hover:text-gold text-sm font-medium transition-colors inline-flex items-center gap-1">
                   View stories <ArrowRight className="w-3.5 h-3.5" />
                 </span>
               </Link>
-              <Link to="/faq" className="group bg-card border border-border rounded-xl p-6 hover:border-gold/40 transition-colors flex flex-col">
-                <div className="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center mb-4">
-                  <MessageSquare className="w-5 h-5 text-gold" />
-                </div>
+              <Link
+                to="/faq"
+                className="group flex flex-col p-6 hover:-translate-y-1"
+                style={card3dStyle}
+                onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 8px 16px rgba(0,0,0,0.12), 0 20px 40px rgba(0,0,0,0.08)'; }}
+                onMouseLeave={e => { e.currentTarget.style.boxShadow = card3dStyle.boxShadow; }}
+              >
+                <span className="text-[48px] leading-none mb-4" role="img" aria-hidden="true">💬</span>
                 <h3 className="font-serif text-lg text-foreground font-semibold mb-2 group-hover:text-gold transition-colors">Common Questions</h3>
                 <p className="text-muted-foreground text-[15px] leading-relaxed mb-4 flex-1">Answers to the questions executors and families ask most.</p>
                 <span className="text-accent group-hover:text-gold text-sm font-medium transition-colors inline-flex items-center gap-1">
                   Read FAQs <ArrowRight className="w-3.5 h-3.5" />
                 </span>
               </Link>
-              <Link to="/how-the-process-works" className="group bg-card border border-border rounded-xl p-6 hover:border-gold/40 transition-colors flex flex-col">
-                <div className="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center mb-4">
-                  <ArrowRight className="w-5 h-5 text-gold" />
-                </div>
+              <Link
+                to="/how-the-process-works"
+                className="group flex flex-col p-6 hover:-translate-y-1"
+                style={card3dStyle}
+                onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 8px 16px rgba(0,0,0,0.12), 0 20px 40px rgba(0,0,0,0.08)'; }}
+                onMouseLeave={e => { e.currentTarget.style.boxShadow = card3dStyle.boxShadow; }}
+              >
+                <span className="text-[48px] leading-none mb-4" role="img" aria-hidden="true">🗺️</span>
                 <h3 className="font-serif text-lg text-foreground font-semibold mb-2 group-hover:text-gold transition-colors">How the Process Works</h3>
                 <p className="text-muted-foreground text-[15px] leading-relaxed mb-4 flex-1">A clear walkthrough from assessment to closing.</p>
                 <span className="text-accent group-hover:text-gold text-sm font-medium transition-colors inline-flex items-center gap-1">
