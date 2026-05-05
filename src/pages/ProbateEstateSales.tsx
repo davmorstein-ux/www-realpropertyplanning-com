@@ -141,7 +141,7 @@ const ProbateEstateSales = () => {
                     onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 8px 16px rgba(0,0,0,0.12), 0 20px 40px rgba(0,0,0,0.08)'; }}
                     onMouseLeave={e => { e.currentTarget.style.boxShadow = card3dStyle.boxShadow; }}
                   >
-                    <span className="text-[48px] leading-none mb-4" role="img" aria-hidden="true">{tile.emoji}</span>
+                    <span className="leading-none mb-4" style={{ fontSize: "48px" }} role="img" aria-hidden="true">{tile.emoji}</span>
                     <h3 className="font-serif text-base text-foreground font-semibold mb-2">{tile.label}</h3>
                     <p className="text-muted-foreground text-[15px] leading-relaxed">{tile.text}</p>
                   </div>
@@ -217,7 +217,7 @@ const ProbateEstateSales = () => {
                 onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 8px 16px rgba(0,0,0,0.12), 0 20px 40px rgba(0,0,0,0.08)'; }}
                 onMouseLeave={e => { e.currentTarget.style.boxShadow = card3dStyle.boxShadow; }}
               >
-                <span className="text-[48px] leading-none mb-4" role="img" aria-hidden="true">📖</span>
+                <span className="leading-none mb-4" style={{ fontSize: "48px" }} role="img" aria-hidden="true">📖</span>
                 <h3 className="font-serif text-lg text-foreground font-semibold mb-2 group-hover:text-gold transition-colors">Client Stories</h3>
                 <p className="text-muted-foreground text-[15px] leading-relaxed mb-4 flex-1">See how we've helped executors, families, and trustees navigate real situations.</p>
                 <span className="text-accent group-hover:text-gold text-sm font-medium transition-colors inline-flex items-center gap-1">
@@ -231,7 +231,7 @@ const ProbateEstateSales = () => {
                 onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 8px 16px rgba(0,0,0,0.12), 0 20px 40px rgba(0,0,0,0.08)'; }}
                 onMouseLeave={e => { e.currentTarget.style.boxShadow = card3dStyle.boxShadow; }}
               >
-                <span className="text-[48px] leading-none mb-4" role="img" aria-hidden="true">💬</span>
+                <span className="leading-none mb-4" style={{ fontSize: "48px" }} role="img" aria-hidden="true">💬</span>
                 <h3 className="font-serif text-lg text-foreground font-semibold mb-2 group-hover:text-gold transition-colors">Common Questions</h3>
                 <p className="text-muted-foreground text-[15px] leading-relaxed mb-4 flex-1">Answers to the questions executors and families ask most.</p>
                 <span className="text-accent group-hover:text-gold text-sm font-medium transition-colors inline-flex items-center gap-1">
@@ -245,7 +245,7 @@ const ProbateEstateSales = () => {
                 onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 8px 16px rgba(0,0,0,0.12), 0 20px 40px rgba(0,0,0,0.08)'; }}
                 onMouseLeave={e => { e.currentTarget.style.boxShadow = card3dStyle.boxShadow; }}
               >
-                <span className="text-[48px] leading-none mb-4" role="img" aria-hidden="true">🗺️</span>
+                <span className="leading-none mb-4" style={{ fontSize: "48px" }} role="img" aria-hidden="true">🗺️</span>
                 <h3 className="font-serif text-lg text-foreground font-semibold mb-2 group-hover:text-gold transition-colors">How the Process Works</h3>
                 <p className="text-muted-foreground text-[15px] leading-relaxed mb-4 flex-1">A clear walkthrough from assessment to closing.</p>
                 <span className="text-accent group-hover:text-gold text-sm font-medium transition-colors inline-flex items-center gap-1">
