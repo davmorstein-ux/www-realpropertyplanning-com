@@ -600,11 +600,11 @@ body {
 .card-3d-blue .card-3d-blue__inner {
   @apply relative;
   border-radius: 14px;
-  border: 3px solid hsl(205 80% 50%);
+  border: 3px solid hsl(var(--gold));
   box-shadow:
-    0 0 0 1.5px hsl(205 70% 65% / 0.6),
-    0 0 6px 0 hsl(205 70% 55% / 0.15),
-    inset 0 0 0 1px hsl(205 75% 72% / 0.4);
+    0 0 0 1.5px hsl(var(--gold) / 0.5),
+    0 0 6px 0 hsl(var(--gold) / 0.12),
+    inset 0 0 0 1px hsl(var(--gold) / 0.3);
   overflow: hidden;
 }
 .card-3d-blue .card-3d-blue__face {
@@ -651,11 +651,11 @@ body {
     inset 0 -2px 0 0 rgba(0, 0, 0, 0.05);
 }
 .card-3d-blue:hover .card-3d-blue__inner {
-  border-color: hsl(205 85% 45%);
+  border-color: hsl(var(--gold));
   box-shadow:
-    0 0 0 1.5px hsl(205 75% 55% / 0.7),
-    0 0 10px 0 hsl(205 80% 50% / 0.25),
-    inset 0 0 0 1px hsl(205 80% 65% / 0.5);
+    0 0 0 1.5px hsl(var(--gold) / 0.6),
+    0 0 10px 0 hsl(var(--gold) / 0.2),
+    inset 0 0 0 1px hsl(var(--gold) / 0.4);
 }
 .card-3d-blue:active {
   transform: translateY(1px);
