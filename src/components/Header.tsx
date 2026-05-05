@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
-
 /**
  * Site-wide header. Mirrors the homepage floating island nav (HomepageHero) so users
  * experience identical navigation across every page: same items, same dropdown
@@ -46,9 +45,7 @@ const fontBody = { fontFamily: "'DM Sans', system-ui, sans-serif" };
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [isMobile, setIsMobile] = useState(() =>
-    typeof window !== "undefined" ? window.innerWidth < 769 : false
-  );
+  const [isMobile, setIsMobile] = useState(() => (typeof window !== "undefined" ? window.innerWidth < 769 : false));
   const [menuOpen, setMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
@@ -123,13 +120,13 @@ const Header = () => {
           left: "50%",
           transform: "translateX(-50%)",
           width: "min(1280px, calc(100% - 48px))",
-          zIndex: 2000,
+          zIndex: 50,
           borderRadius: 14,
           padding: "14px 24px",
-          backgroundColor: scrolled ? "rgba(8, 13, 25, 0.82)" : "rgba(8, 13, 25, 0)",
-          backdropFilter: scrolled ? "blur(10px)" : "none",
-          WebkitBackdropFilter: scrolled ? "blur(10px)" : "none",
-          border: scrolled ? "1px solid rgba(255,255,255,0.08)" : "1px solid rgba(255,255,255,0)",
+          backgroundColor: scrolled ? "rgba(8, 13, 25, 0.95)" : "transparent",
+          backdropFilter: scrolled ? "blur(10px)" : "blur(10px)",
+          WebkitBackdropFilter: scrolled ? "blur(10px)" : "blur(10px)",
+          border: scrolled ? "1px solid rgba(255,255,255,0.08)" : "1px solid rgba(255,255,255,0.08)",
           transition: "all 0.45s ease",
           ...fontBody,
           color: "#fff",
@@ -188,7 +185,17 @@ const Header = () => {
                   <span style={{ display: "block", width: 34, height: 4.5, background: "#fff", borderRadius: 3 }} />
                   <span style={{ display: "block", width: 34, height: 4.5, background: "#fff", borderRadius: 3 }} />
                 </div>
-                <span style={{ ...fontBody, color: "#fff", fontSize: 13, fontWeight: 900, letterSpacing: "0.15em", lineHeight: 1, marginTop: 2 }}>
+                <span
+                  style={{
+                    ...fontBody,
+                    color: "#fff",
+                    fontSize: 13,
+                    fontWeight: 900,
+                    letterSpacing: "0.15em",
+                    lineHeight: 1,
+                    marginTop: 2,
+                  }}
+                >
                   MENU
                 </span>
               </button>
@@ -249,8 +256,7 @@ const Header = () => {
           >
             {NAV.map((item) => {
               const active =
-                pathname === item.href ||
-                (item.children && item.children.some((c) => c.href === pathname));
+                pathname === item.href || (item.children && item.children.some((c) => c.href === pathname));
               const linkStyle = {
                 ...fontBody,
                 color: "rgba(255,255,255,0.92)",
@@ -300,7 +306,15 @@ const Header = () => {
                       aria-expanded={isOpen}
                     >
                       {item.label}
-                      <span style={{ fontSize: 10, transform: isOpen ? "rotate(180deg)" : "none", transition: "transform 0.2s" }}>▾</span>
+                      <span
+                        style={{
+                          fontSize: 10,
+                          transform: isOpen ? "rotate(180deg)" : "none",
+                          transition: "transform 0.2s",
+                        }}
+                      >
+                        ▾
+                      </span>
                     </button>
                     {isOpen && (
                       <div
@@ -381,8 +395,7 @@ const Header = () => {
           >
             {NAV.map((item) => {
               const active =
-                pathname === item.href ||
-                (item.children && item.children.some((c) => c.href === pathname));
+                pathname === item.href || (item.children && item.children.some((c) => c.href === pathname));
               const baseStyle = {
                 ...fontBody,
                 color: "rgba(255,255,255,0.95)",
@@ -416,10 +429,29 @@ const Header = () => {
                       aria-expanded={isExpanded}
                     >
                       <span>{item.label}</span>
-                      <span style={{ fontSize: 12, transform: isExpanded ? "rotate(180deg)" : "none", transition: "transform 0.2s" }}>▾</span>
+                      <span
+                        style={{
+                          fontSize: 12,
+                          transform: isExpanded ? "rotate(180deg)" : "none",
+                          transition: "transform 0.2s",
+                        }}
+                      >
+                        ▾
+                      </span>
                     </button>
                     {isExpanded && (
-                      <div style={{ display: "flex", flexDirection: "column", gap: 2, paddingLeft: 12, borderLeft: "2px solid rgba(255,255,255,0.15)", marginLeft: 10, marginTop: 4, marginBottom: 4 }}>
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "column",
+                          gap: 2,
+                          paddingLeft: 12,
+                          borderLeft: "2px solid rgba(255,255,255,0.15)",
+                          marginLeft: 10,
+                          marginTop: 4,
+                          marginBottom: 4,
+                        }}
+                      >
                         {item.children.map((child) => {
                           const childActive = pathname === child.href;
                           return (
