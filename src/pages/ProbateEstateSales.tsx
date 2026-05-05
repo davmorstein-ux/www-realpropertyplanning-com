@@ -22,7 +22,7 @@ import { Scale, Users, Wrench, BarChart3, Heart, Hammer } from "lucide-react";
 
 import warning3d from "@/assets/property-warning-guidance-icon-washington.webp";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
-import iconProbateSales from "@/assets/probate-real-estate-sales-washington-guide.webp";
+import iconProbateSales from "@/assets/probate-estate-sales-hero.png";
 import probateTimeline from "@/assets/probate-timeline.webp";
 
 // ── Data ──
