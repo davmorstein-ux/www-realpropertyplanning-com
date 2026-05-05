@@ -113,7 +113,7 @@ export default function ProfessionalsButton() {
     }
 
     animate();
-    return () => cancelAnimationFrame(animId);
+    return () => { cancelAnimationFrame(animId); cleanupListeners?.(); };
   }, []);
 
   return (
