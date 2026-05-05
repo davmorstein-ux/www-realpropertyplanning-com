@@ -469,7 +469,7 @@ const HomepageHero = () => {
               lineHeight: 1.5,
             }}
           >
-            When life brings its biggest transitions — probate, estate sales, senior housing, downsizing — Real Property Planning connects families, seniors, executors, and professionals with the right people and resources.
+            When life brings its biggest transitions — probate, estate sales, senior housing, downsizing —<br />Real Property Planning connects families, seniors, executors, and professionals with the right people and resources.
           </p>
           <p
             style={{
