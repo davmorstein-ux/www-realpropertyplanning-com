@@ -124,7 +124,7 @@ const Header = () => {
           left: isMobile ? 0 : "50%",
           transform: isMobile ? "none" : "translateX(-50%)",
           width: isMobile ? "100%" : "min(1280px, calc(100% - 48px))",
-          zIndex: 50,
+          zIndex: 2000,
           borderRadius: isMobile ? 0 : 14,
           padding: isMobile ? "6px 8px" : "14px 24px",
           backgroundColor: isMobile ? "rgba(8, 13, 25, 0.95)" : "rgba(8, 13, 25, 0.95)",
