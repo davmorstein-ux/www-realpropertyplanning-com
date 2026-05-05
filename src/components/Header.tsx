@@ -32,6 +32,7 @@ const NAV: NavItem[] = [
     ],
   },
   { label: "Resources", href: "/resources" },
+  { label: "Join the Network", href: "/join-network" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
