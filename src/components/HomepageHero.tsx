@@ -468,42 +468,8 @@ const HomepageHero = () => {
               lineHeight: 1.5,
             }}
           >
-            Washington State's trusted hub for probate, estate, senior transitions, and professional resources
+            When families face life's biggest transitions, we connect them with the right guidance, resources, and professionals — all in one place.
           </p>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: isMobile ? "1fr" : "repeat(auto-fit, minmax(260px, 1fr))",
-              gap: isMobile ? 14 : 20,
-            }}
-          >
-          {[
-            { emoji: "🌐", title: "TRUSTED PROFESSIONAL NETWORK", text: "Connecting families with trusted local professionals" },
-            { emoji: "🤝", title: "FAMILY & SENIOR FOCUSED", text: "Connecting families with the right professionals at the right time" },
-            { emoji: "📍", title: "SERVING WASHINGTON STATE", text: "Resources and professionals across all of Washington State" },
-          ].map(({ emoji, title, text }) => (
-            <div key={title} style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", color: "#fff", padding: "0 8px" }}>
-              <div
-                aria-hidden
-                style={{
-                  fontSize: isMobile ? 28 : 32,
-                  lineHeight: 1,
-                  marginBottom: isMobile ? 4 : 6,
-                  background: "transparent",
-                  filter: "drop-shadow(0 4px 6px rgba(0,0,0,0.35))",
-                }}
-              >
-                {emoji}
-              </div>
-              <div className={isMobile ? "text-xl font-bold" : ""} style={{ ...fontBody, fontWeight: 700, fontSize: isMobile ? 14 : 15, letterSpacing: "0.08em", marginBottom: isMobile ? 4 : 6, color: "#c9a84c" }}>
-                {title}
-              </div>
-              <div className={isMobile ? "font-sans font-bold" : ""} style={{ ...fontBody, fontSize: isMobile ? 13 : 16, color: "#fff", lineHeight: isMobile ? 1.4 : 1.5 }}>
-                {text}
-              </div>
-            </div>
-          ))}
-          </div>
         </div>
       </section>
     </div>
