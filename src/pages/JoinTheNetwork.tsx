@@ -240,7 +240,7 @@ const ApplicationForm = () => {
                   required
                   rows={4}
                   className={`${inputClass} resize-none`}
-                  placeholder="A brief description of your services, typical clients, and geographic focus"
+                  placeholder="A brief description about your company and a short bio about yourself."
                 />
               </div>
 
