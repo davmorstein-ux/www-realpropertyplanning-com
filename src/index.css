@@ -1543,7 +1543,7 @@ h4 + .text-muted-foreground {
 
 [class*="bg-navy"] :where(h1, h2, h3, h4) + p,
 [class*="bg-primary"] :where(h1, h2, h3, h4) + p {
-  color: #e5e7eb !important;
+  color: #ffffff !important;
 }
 
 /* 5. Card body text — readable, never faded */
