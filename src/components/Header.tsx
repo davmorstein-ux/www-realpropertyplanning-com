@@ -123,7 +123,7 @@ const Header = () => {
           zIndex: 50,
           borderRadius: 14,
           padding: "14px 24px",
-          backgroundColor: scrolled ? "rgba(8, 13, 25, 0.95)" : "rgba(8, 13, 25, 0.15)",
+          backgroundColor: scrolled ? "rgba(8, 13, 25, 0.95)" : "rgba(0, 0, 0, 0)",
           backdropFilter: scrolled ? "blur(10px)" : "blur(10px)",
           WebkitBackdropFilter: scrolled ? "blur(10px)" : "blur(10px)",
           border: scrolled ? "1px solid rgba(255,255,255,0.08)" : "1px solid rgba(255,255,255,0.08)",
@@ -493,7 +493,7 @@ const Header = () => {
       </header>
 
       {/* Spacer to preserve layout below the fixed header (prevents CLS). */}
-      <div style={{ height: isMobile ? 64 : 120 }} aria-hidden="true" />
+      <div style={{ height: isMobile ? 64 : 140 }} aria-hidden="true" />
     </>
   );
 };
