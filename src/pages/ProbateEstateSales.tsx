@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
@@ -11,12 +12,20 @@ import MidPageCTA from "@/components/MidPageCTA";
 import ProofCallout from "@/components/ProofCallout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { Scale, Users, Wrench, BarChart3, Heart, Hammer } from "lucide-react";
 
 import warning3d from "@/assets/property-warning-guidance-icon-washington.webp";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconProbateSales from "@/assets/probate-real-estate-sales-washington-guide.webp";
 import probateTimeline from "@/assets/probate-timeline.webp";
-import RealClientSituations from "@/components/RealClientSituations";
+
+// ── Data ──
 
 const probateCaseStudies = [
   {
@@ -61,30 +70,6 @@ const probateCaseStudies = [
   },
 ];
 
-const probateVsInherited = [
-  {
-    label: "Probate Property",
-    description: (
-      <>
-        Property being administered through court-supervised probate. Legal authority (<Link to="/terminology" className="text-accent hover:text-gold underline underline-offset-4">letters testamentary or letters of administration</Link>) is typically required before a sale can proceed. Timelines, court requirements, and fiduciary duties all affect the process.
-      </>
-    ),
-  },
-  {
-    label: "Inherited Property (Non-Probate)",
-    description: "Property that passes outside of probate — through a trust, joint tenancy, or beneficiary designation. These situations may have fewer legal hurdles but still involve condition concerns, family coordination, and pricing decisions.",
-  },
-];
-
-const whatMakesDifferent = [
-  "Legal authority and court requirements may dictate when and how a sale can occur",
-  "Multiple decision-makers — executors, co-heirs, attorneys, trustees — must coordinate without conflict",
-  "Properties often have years of deferred maintenance, personal belongings, or extended vacancy",
-  "Pricing must account for actual condition, legal timelines, and realistic market expectations — not automated estimates",
-  "Emotional complexity can affect family communication and slow the decision-making process",
-  "Preparation decisions (as-is vs. selective repairs) have a direct and measurable impact on sale outcome and fiduciary defensibility",
-];
-
 const timingConsiderations = [
   {
     title: "Before Legal Authority Is Granted",
@@ -127,6 +112,15 @@ const commonQuestionsFaqs = [
   },
 ];
 
+const whatMakesDifferentTiles = [
+  { icon: Scale, label: "Legal Authority", text: "Court requirements may dictate when and how a sale can occur." },
+  { icon: Users, label: "Multiple Decision-Makers", text: "Executors, co-heirs, attorneys, and trustees must coordinate." },
+  { icon: Wrench, label: "Property Condition", text: "Deferred maintenance, belongings, and vacancy are common." },
+  { icon: BarChart3, label: "Honest Pricing", text: "Value must reflect actual condition — not automated estimates." },
+  { icon: Heart, label: "Emotional Complexity", text: "Family dynamics can slow communication and decisions." },
+  { icon: Hammer, label: "Preparation Strategy", text: "As-is vs. repairs has a direct impact on fiduciary defensibility." },
+];
+
 const jsonLd = articleSchema({
   headline: "Probate Real Estate Sales in Washington State",
   description: "Evidence-based probate real estate guidance for executors, attorneys, and families throughout Washington State. Serving King, Snohomish, Pierce & Kitsap Counties.",
@@ -135,6 +129,52 @@ const jsonLd = articleSchema({
   dateModified: "2026-04-15",
   about: ["Probate real estate", "Estate sales", "Inherited property", "Court-supervised sales", "Fiduciary duties"],
 });
+
+// ── Expandable Case Study Card ──
+
+const CaseStudyCard = ({ study }: { study: typeof probateCaseStudies[number] }) => {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="card-3d p-6 md:p-7 flex flex-col min-w-[300px] md:min-w-0">
+      {study.label && (
+        <span className="text-[11px] font-semibold uppercase tracking-wider text-gold/70 bg-gold/5 rounded-full px-2.5 py-0.5 self-start mb-3">
+          {study.label}
+        </span>
+      )}
+      <h3 className="font-serif text-lg text-foreground font-semibold mb-3">{study.title}</h3>
+      <p className="text-sm font-semibold uppercase tracking-wide text-gold mb-1">Situation</p>
+      <p className="text-muted-foreground leading-relaxed text-[15px] mb-3">{study.situation}</p>
+      {open && (
+        <div className="space-y-3 animate-in fade-in duration-200">
+          {study.challenge && (
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-wide text-gold mb-1">Challenge</p>
+              <p className="text-muted-foreground leading-relaxed text-[15px]">{study.challenge}</p>
+            </div>
+          )}
+          {study.howHelped && (
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-wide text-gold mb-1">How We Helped</p>
+              <p className="text-muted-foreground leading-relaxed text-[15px]">{study.howHelped}</p>
+            </div>
+          )}
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-wide text-gold mb-1">Outcome</p>
+            <p className="text-foreground leading-relaxed font-medium text-[15px]">{study.outcome}</p>
+          </div>
+        </div>
+      )}
+      <button
+        onClick={() => setOpen(!open)}
+        className="mt-4 text-accent hover:text-gold transition-colors text-sm font-medium self-start"
+      >
+        {open ? "Show less ↑" : "Read more ↓"}
+      </button>
+    </div>
+  );
+};
+
+// ── Page ──
 
 const ProbateEstateSales = () => {
   return (
@@ -148,7 +188,7 @@ const ProbateEstateSales = () => {
       <Header />
       <main id="main-content">
 
-      {/* Hero */}
+      {/* SECTION 1 — Hero (unchanged) */}
       <section className="bg-primary pt-1.5 md:pt-2 pb-16 md:pb-20">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
@@ -190,7 +230,7 @@ const ProbateEstateSales = () => {
         </div>
       </section>
 
-      {/* High-Intent 3-Block Section */}
+      {/* High-Intent 3-Block Section (unchanged) */}
       <section className="bg-background py-14 md:py-20">
         <div className="container px-6 lg:px-8">
           <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 md:gap-10">
@@ -222,7 +262,7 @@ const ProbateEstateSales = () => {
         </div>
       </section>
 
-      {/* Search-Focused Intro Section */}
+      {/* Search-Focused Intro Section (unchanged) */}
       <section className="bg-muted/30 py-14 md:py-20 border-y border-border">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
@@ -250,7 +290,7 @@ const ProbateEstateSales = () => {
         </div>
       </section>
 
-      {/* Probate Timeline Diagram */}
+      {/* Probate Timeline Diagram (unchanged) */}
       <section className="bg-background py-8 md:py-12">
         <div className="w-full">
           <img src={probateTimeline} alt="Probate real estate sale timeline — 7 steps from owner passing through distribution of proceeds in Washington State" style={{ maxWidth: '720px', width: '100%', margin: '2rem auto', display: 'block' }} loading="lazy" />
@@ -259,7 +299,7 @@ const ProbateEstateSales = () => {
 
       <TrustStrip />
 
-      {/* Your Probate Real Estate Broker & Agent */}
+      {/* Your Probate Real Estate Broker & Agent (unchanged) */}
       <section className="py-16 lg:py-20 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
@@ -295,47 +335,89 @@ const ProbateEstateSales = () => {
         </div>
       </section>
 
-      {/* Probate vs Inherited */}
+      {/* SECTION 2 — Probate vs Inherited: Two-tile accordion cards */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-[hsl(0_70%_30%)] font-semibold mb-4">
               Probate Property vs. Inherited Property — What's the Difference?
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               This distinction matters more than most people realize. Understanding which situation you're in determines your legal authority, your timeline, and your options before you can take any action on the property.
             </p>
-            <div className="space-y-6">
-              {probateVsInherited.map((item, index) => (
-                <div key={index} className="bg-card border border-border rounded-xl p-6">
-                  <h3 className="font-serif text-lg text-foreground font-semibold mb-2">{item.label}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{item.description}</p>
-                </div>
-              ))}
+            <div className="grid md:grid-cols-2 gap-5">
+              {/* Card 1 — Probate Property */}
+              <div className="bg-card border border-border rounded-xl overflow-hidden">
+                <Accordion type="single" collapsible>
+                  <AccordionItem value="probate" className="border-b-0">
+                    <div className="p-6 pb-0">
+                      <h3 className="font-serif text-lg text-foreground font-semibold mb-2">Probate Property</h3>
+                      <p className="text-muted-foreground leading-relaxed text-[15px]">
+                        Court-supervised. Legal authority required before the sale can proceed.
+                      </p>
+                    </div>
+                    <AccordionTrigger className="px-6 py-3 text-accent hover:text-gold text-sm font-medium hover:no-underline justify-start gap-1">
+                      Learn more
+                    </AccordionTrigger>
+                    <AccordionContent className="px-6 pb-6">
+                      <p className="text-muted-foreground leading-relaxed text-[15px]">
+                        Property being administered through court-supervised probate. Legal authority (<Link to="/terminology" className="text-accent hover:text-gold underline underline-offset-4">letters testamentary or letters of administration</Link>) is typically required before a sale can proceed. Timelines, court requirements, and fiduciary duties all affect the process.
+                      </p>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+              </div>
+              {/* Card 2 — Inherited Property */}
+              <div className="bg-card border border-border rounded-xl overflow-hidden">
+                <Accordion type="single" collapsible>
+                  <AccordionItem value="inherited" className="border-b-0">
+                    <div className="p-6 pb-0">
+                      <h3 className="font-serif text-lg text-foreground font-semibold mb-2">Inherited Property (Non-Probate)</h3>
+                      <p className="text-muted-foreground leading-relaxed text-[15px]">
+                        Passes outside probate via trust or joint tenancy. Fewer legal hurdles, but still complex.
+                      </p>
+                    </div>
+                    <AccordionTrigger className="px-6 py-3 text-accent hover:text-gold text-sm font-medium hover:no-underline justify-start gap-1">
+                      Learn more
+                    </AccordionTrigger>
+                    <AccordionContent className="px-6 pb-6">
+                      <p className="text-muted-foreground leading-relaxed text-[15px]">
+                        Property that passes outside of probate — through a trust, joint tenancy, or beneficiary designation. These situations may have fewer legal hurdles but still involve condition concerns, family coordination, and pricing decisions.
+                      </p>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* What Makes These Sales Different */}
+      {/* SECTION 3 — What Makes Estate Property Sales Different: 3-col icon tile grid */}
       <section className="py-20 lg:py-28 bg-secondary">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-3xl text-[hsl(0_70%_30%)] font-semibold mb-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-serif text-3xl text-[hsl(0_70%_30%)] font-semibold mb-4">
               What Makes Estate Property Sales Different
             </h2>
-            <p className="text-muted-foreground text-[17px] leading-[1.85] mb-8">
+            <p className="text-muted-foreground text-[17px] leading-[1.85] mb-10">
               Estate property sales are genuinely different from standard real estate transactions — and treating them like ordinary listings is where families and executors most often run into trouble. The challenges are legal, logistical, emotional, and financial — often all at once.
             </p>
-            <ul className="space-y-4 mb-8">
-              {whatMakesDifferent.map((item, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <div className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
-                  <span className="text-muted-foreground">{item}</span>
-                </li>
-              ))}
-            </ul>
-            <p className="text-muted-foreground text-[17px] leading-[1.85]">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {whatMakesDifferentTiles.map((tile, i) => {
+                const Icon = tile.icon;
+                return (
+                  <div key={i} className="bg-card border border-border rounded-xl p-6 flex flex-col items-start">
+                    <div className="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center mb-4">
+                      <Icon className="w-5 h-5 text-gold" />
+                    </div>
+                    <h3 className="font-serif text-base text-foreground font-semibold mb-2">{tile.label}</h3>
+                    <p className="text-muted-foreground text-[15px] leading-relaxed">{tile.text}</p>
+                  </div>
+                );
+              })}
+            </div>
+            <p className="text-muted-foreground text-[17px] leading-[1.85] mt-10">
               Our team's dual background as a licensed broker and a{" "}
               <Link to="/real-estate-appraiser" className="text-accent hover:text-gold underline underline-offset-4">Washington State Certified Residential Appraiser</Link>{" "}
               means he approaches these situations differently than a standard listing agent. Every pricing decision is grounded in methodology. Every repair recommendation is evaluated through a{" "}
@@ -346,7 +428,7 @@ const ProbateEstateSales = () => {
         </div>
       </section>
 
-      {/* Timing and Coordination */}
+      {/* SECTION 4 — Timing and Coordination (unchanged) */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
@@ -376,7 +458,7 @@ const ProbateEstateSales = () => {
         </div>
       </section>
 
-      {/* Mid-page CTA */}
+      {/* Mid-page CTA (unchanged) */}
       <MidPageCTA
         heading="Have a Probate or Estate Property to Discuss?"
         body="A brief conversation can help you understand your options and decide on a practical next step."
@@ -384,45 +466,59 @@ const ProbateEstateSales = () => {
         variant="dark"
       />
 
-      {/* The Real Estate Side of Estate Administration */}
+      {/* SECTION 5 — The Real Estate Side: Collapsed accordion */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
-              The Real Estate Side of Estate Administration
+              How We Manage the Real Estate Side
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Selling estate property is rarely as simple as putting a sign in the yard. These homes often sit vacant for months while legal authority is established, insurance and utility issues need to be managed, and the property's condition may deteriorate. Meanwhile, carrying costs — taxes, insurance, maintenance, and HOA fees — continue to accumulate.
+              From vacant property carrying costs to out-of-state coordination — here's how we handle the details.
             </p>
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              Real Property Planning understands these pressures from working through them with hundreds of clients. We help{" "}
-              <Link to="/executors" className="text-accent hover:text-gold underline underline-offset-4">executors</Link>, attorneys, and families develop a timeline that accounts for legal proceedings, property preparation, and market conditions — so the sale happens at the right time, not just the fastest time.
-            </p>
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              For properties that need work before listing, each potential improvement is evaluated through a{" "}
-              <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">return-on-investment</Link>{" "}
-              lens informed by{" "}
-              <Link to="/real-estate-appraiser" className="text-accent hover:text-gold underline underline-offset-4">certified appraisal</Link>{" "}
-              training. A $5,000 kitchen cleanup might add $15,000 in sale price; a $40,000 renovation might add only $20,000. These distinctions matter when estate funds are limited and fiduciary duties require defensible decision-making.
-            </p>
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              Families and executors throughout the Puget Sound area — from Seattle and Bellevue in King County to Everett and Edmonds in Snohomish County, Tacoma and Puyallup in Pierce County, and Bremerton and Silverdale in Kitsap County — face these same challenges. Real Property Planning's approach is the same regardless of location: assess the property honestly, develop a preparation strategy based on return on investment, price it correctly for its actual condition, and manage the sale with clear communication throughout.
-            </p>
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              For{" "}
-              <Link to="/guides/out-of-state-families" className="text-accent hover:text-gold underline underline-offset-4">executors managing property from out of state</Link>, the entire process can be handled remotely — with photo updates, digital document signing, and regular calls to keep you informed without requiring you to travel for every step.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              Whether the property is a mid-century rambler in Shoreline with decades of deferred maintenance or a waterfront home on Mercer Island held in a family trust, Our team brings the same structured approach: assess, plan, prepare, price, market, and close — with clear communication at every step.
-            </p>
+            <Accordion type="single" collapsible>
+              <AccordionItem value="real-estate-side" className="bg-card border border-border rounded-xl overflow-hidden data-[state=open]:border-gold/25 transition-colors">
+                <AccordionTrigger className="px-6 py-5 text-left font-serif text-base md:text-lg font-semibold text-foreground hover:text-gold hover:no-underline">
+                  The Real Estate Side of Estate Administration
+                </AccordionTrigger>
+                <AccordionContent className="px-6 pb-6 pt-0">
+                  <div className="space-y-5 text-muted-foreground leading-relaxed">
+                    <p>
+                      Selling estate property is rarely as simple as putting a sign in the yard. These homes often sit vacant for months while legal authority is established, insurance and utility issues need to be managed, and the property's condition may deteriorate. Meanwhile, carrying costs — taxes, insurance, maintenance, and HOA fees — continue to accumulate.
+                    </p>
+                    <p>
+                      Real Property Planning understands these pressures from working through them with hundreds of clients. We help{" "}
+                      <Link to="/executors" className="text-accent hover:text-gold underline underline-offset-4">executors</Link>, attorneys, and families develop a timeline that accounts for legal proceedings, property preparation, and market conditions — so the sale happens at the right time, not just the fastest time.
+                    </p>
+                    <p>
+                      For properties that need work before listing, each potential improvement is evaluated through a{" "}
+                      <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">return-on-investment</Link>{" "}
+                      lens informed by{" "}
+                      <Link to="/real-estate-appraiser" className="text-accent hover:text-gold underline underline-offset-4">certified appraisal</Link>{" "}
+                      training. A $5,000 kitchen cleanup might add $15,000 in sale price; a $40,000 renovation might add only $20,000. These distinctions matter when estate funds are limited and fiduciary duties require defensible decision-making.
+                    </p>
+                    <p>
+                      Families and executors throughout the Puget Sound area — from Seattle and Bellevue in King County to Everett and Edmonds in Snohomish County, Tacoma and Puyallup in Pierce County, and Bremerton and Silverdale in Kitsap County — face these same challenges. Real Property Planning's approach is the same regardless of location: assess the property honestly, develop a preparation strategy based on return on investment, price it correctly for its actual condition, and manage the sale with clear communication throughout.
+                    </p>
+                    <p>
+                      For{" "}
+                      <Link to="/guides/out-of-state-families" className="text-accent hover:text-gold underline underline-offset-4">executors managing property from out of state</Link>, the entire process can be handled remotely — with photo updates, digital document signing, and regular calls to keep you informed without requiring you to travel for every step.
+                    </p>
+                    <p>
+                      Whether the property is a mid-century rambler in Shoreline with decades of deferred maintenance or a waterfront home on Mercer Island held in a family trust, Our team brings the same structured approach: assess, plan, prepare, price, market, and close — with clear communication at every step.
+                    </p>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
         </div>
       </section>
 
-      {/* Common Questions About Probate Real Estate */}
+      {/* SECTION 6 — Common Questions FAQ accordion (unchanged component, consistent styling) */}
       <PageFAQ faqs={commonQuestionsFaqs} heading="Common Questions About Probate Real Estate Sales in Washington State" />
 
-      {/* Legal Disclaimer */}
+      {/* Legal Disclaimer (unchanged) */}
       <section className="py-12 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
@@ -439,7 +535,7 @@ const ProbateEstateSales = () => {
         </div>
       </section>
 
-      {/* Testimonial */}
+      {/* Testimonial (unchanged) */}
       <section className="py-14 lg:py-16 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
@@ -453,15 +549,48 @@ const ProbateEstateSales = () => {
         </div>
       </section>
 
-      <RealClientSituations
-        studies={probateCaseStudies}
-        heading="Real Client Situations"
-        subheading="Examples of how Our team has helped executors and families handle complex probate property transitions."
-        background="bg-background"
-        showCTA
-      />
+      {/* SECTION 7 — Real Client Situations: 2-col grid with expandable cards */}
+      <section className="py-16 lg:py-24 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
+              Real Client Situations
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-10">
+              Examples of how Our team has helped executors and families handle complex probate property transitions.
+            </p>
+            <div className="grid md:grid-cols-2 gap-5">
+              {probateCaseStudies.map((study, i) => (
+                <CaseStudyCard key={i} study={study} />
+              ))}
+            </div>
 
-      {/* Educational Links */}
+            {/* CTA below cards */}
+            <div className="mt-14 text-center">
+              <div className="premium-divider mb-8">
+                <span className="premium-divider-dot" />
+              </div>
+              <h3 className="font-serif text-2xl md:text-[1.7rem] text-foreground font-semibold mb-4">
+                A Clear Next Step
+              </h3>
+              <p className="text-muted-foreground text-lg leading-relaxed mb-8 max-w-xl mx-auto">
+                If you're dealing with a situation like this, a short conversation can help bring clarity.
+              </p>
+              <Link to="/contact">
+                <Button variant="gold" size="lg" className="px-10 py-4 h-auto text-base">
+                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy"/>
+                  Schedule a Consultation
+                </Button>
+              </Link>
+              <p className="text-muted-foreground/70 text-sm mt-4">
+                No pressure. Just practical guidance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Educational Links (unchanged) */}
       <section className="py-12 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
@@ -487,7 +616,7 @@ const ProbateEstateSales = () => {
 
       <RelatedServices currentPath="/probate-estate-sales" />
 
-      {/* Bottom CTA */}
+      {/* SECTION 8 — Bottom CTA (unchanged) */}
       <section className="py-20 lg:py-28 bg-primary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
