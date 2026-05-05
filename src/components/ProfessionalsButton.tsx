@@ -163,7 +163,7 @@ export default function ProfessionalsButton() {
             left: 0,
             width: W,
             height: H,
-            zIndex: 1,
+            zIndex: 3,
             opacity: hovered ? 1 : 0,
             transition: "opacity 0.4s ease",
             display: "block",
