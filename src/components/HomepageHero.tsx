@@ -131,23 +131,6 @@ const HomepageHero = () => {
             />
           </Link>
           <div style={{ display: "flex", alignItems: "center", gap: isMobile ? 6 : 12 }}>
-            <Link
-              to="/contact"
-              style={{
-                ...fontBody,
-                color: "#fff",
-                border: "1px solid rgba(255,255,255,0.85)",
-                padding: isMobile ? "6px 8px" : "10px 18px",
-                borderRadius: 6,
-                fontWeight: 700,
-                fontSize: isMobile ? 10 : 13,
-                letterSpacing: "0.06em",
-                textDecoration: "none",
-                whiteSpace: "nowrap",
-              }}
-            >
-              {isMobile ? "CONSULT" : "SCHEDULE A CONSULTATION"}
-            </Link>
             <a
               href="tel:2069003015"
               style={{
@@ -430,7 +413,7 @@ const HomepageHero = () => {
             position: "absolute",
             inset: 0,
             background:
-              "linear-gradient(180deg, rgba(8,13,25,0.85) 0%, rgba(8,13,25,0.55) 22%, rgba(8,13,25,0.18) 50%, rgba(8,13,25,0.20) 75%, rgba(8,13,25,0.55) 100%)",
+              "linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 30%, rgba(0,0,0,0.05) 50%, rgba(0,0,0,0) 60%, rgba(0,0,0,0) 100%)",
           }}
         />
         <div

@@ -236,23 +236,6 @@ const Header = () => {
           >
             
             <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-              <Link
-                to="/contact"
-                style={{
-                  ...fontBody,
-                  color: "#fff",
-                  border: "1px solid rgba(255,255,255,0.85)",
-                  padding: "10px 18px",
-                  borderRadius: 6,
-                  fontWeight: 700,
-                  fontSize: 13,
-                  letterSpacing: "0.06em",
-                  textDecoration: "none",
-                  whiteSpace: "nowrap",
-                }}
-              >
-                SCHEDULE A CONSULTATION
-              </Link>
               <a
                 href="tel:2069003015"
                 style={{
