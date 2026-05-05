@@ -37,7 +37,7 @@ const NAV: NavItem[] = [
     ],
   },
   { label: "Resources", href: "/resources" },
-  { label: "Join the Network", href: "/join-network" },
+  
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
@@ -445,22 +445,23 @@ const HomepageHero = () => {
           <h1
             style={{
               fontFamily: "'Cormorant Garamond', 'Georgia', serif",
-              color: "#c9a84c",
-              fontSize: "2.5rem",
-              fontWeight: 800,
+              color: "#f0c040",
+              fontSize: "3rem",
+              fontWeight: 900,
               textAlign: "center",
               margin: 0,
               letterSpacing: "0.04em",
+              textShadow: "0 2px 8px rgba(0,0,0,0.4)",
             }}
           >
-            Probate · Senior Transitions · Estate Sales
+            Senior Transitions · Estate Sales · Probate
           </h1>
           <p
             style={{
               fontFamily: "'DM Sans', system-ui, sans-serif",
               color: "#ffffff",
               opacity: 1,
-              fontSize: "1.1rem",
+              fontSize: "1.2rem",
               fontWeight: 400,
               textAlign: "center",
               marginTop: 8,
@@ -468,7 +469,7 @@ const HomepageHero = () => {
               lineHeight: 1.5,
             }}
           >
-            When families face life's biggest transitions, we connect them with the right guidance, resources, and professionals — all in one place.
+            When families face life's biggest transitions, we connect them with the right guidance, resources, and professionals —<br />all in one place.
           </p>
         </div>
       </section>
