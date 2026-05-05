@@ -102,9 +102,6 @@ const SellHouseDuringProbateWashington = () => (
           <h1 className="font-serif text-primary-foreground font-semibold leading-tight mb-5" style={{ fontSize: "clamp(36px, 5vw, 46px)" }}>
             Can You Sell a House During Probate in Washington State?
           </h1>
-          <p className="text-primary-foreground leading-relaxed mb-6" style={{ fontSize: "20px" }}>
-            &nbsp;
-          </p>
           <Link to="/contact">
             <Button variant="gold" size="lg" className="px-8 py-4 h-auto">
               <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy" />
