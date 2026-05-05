@@ -11,7 +11,7 @@ import MidPageCTA from "@/components/MidPageCTA";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
-import heroIcon from "@/assets/icons/probate-guidance-book-open-icon-washington.webp";
+import heroImage from "@/assets/probate-educational-guide-hero.png";
 import {
   Collapsible,
   CollapsibleTrigger,
