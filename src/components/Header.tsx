@@ -14,8 +14,14 @@ type NavItem = { label: string; href: string; children?: NavChild[] };
 const NAV: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "Probate & Estate", href: "/probate-estate-sales" },
-  { label: "Senior Transitions", href: "/senior-transitions" },
-  { label: "Downsizing", href: "/sell-house-fund-senior-living" },
+  {
+    label: "Senior Transitions",
+    href: "/senior-transitions",
+    children: [
+      { label: "Senior Transitions", href: "/senior-transitions" },
+      { label: "Downsizing", href: "/sell-house-fund-senior-living" },
+    ],
+  },
   { label: "Property Valuation", href: "/why-valuation-matters" },
   {
     label: "Services",
