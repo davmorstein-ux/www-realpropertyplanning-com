@@ -95,7 +95,7 @@ export default function ProfessionalsButton() {
             ctx!.beginPath();
             ctx!.moveTo(nodes[i].x, nodes[i].y);
             ctx!.lineTo(nodes[j].x, nodes[j].y);
-            ctx!.strokeStyle = `rgba(${c.r},${c.g},${c.b},${0.3 * (1 - dist / 75)})`;
+            ctx!.strokeStyle = `rgba(${c.r},${c.g},${c.b},${0.2 * (1 - dist / 75)})`;
             ctx!.lineWidth = 0.6;
             ctx!.stroke();
           }
