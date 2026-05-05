@@ -15,6 +15,17 @@ const StickyContactSidebar = () => {
         className="w-full h-auto"
         loading="eager"
       />
+      <div
+        className="absolute rounded-full pointer-events-none"
+        style={{
+          width: 40,
+          height: 40,
+          top: "60%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          animation: "globePulse 2.5s ease-in-out infinite",
+        }}
+      />
     </Link>
   );
 };
