@@ -119,6 +119,10 @@ const SellHouseDuringProbateWashington = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto space-y-4">
 
+          <p className="font-serif text-foreground font-semibold leading-snug" style={{ fontSize: "22px" }}>
+            The short answer is yes — but timing, authority, and process all matter. Here's what you need to know.
+          </p>
+
           {/* Tile 1 */}
           <AccordionTile
             title="What This Means in Practice"
