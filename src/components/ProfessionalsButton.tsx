@@ -103,7 +103,6 @@ export default function ProfessionalsButton() {
         zIndex: 1000,
         width: 160,
         height: 117,
-        display: "block",
         cursor: "pointer",
         textDecoration: "none",
       }}
