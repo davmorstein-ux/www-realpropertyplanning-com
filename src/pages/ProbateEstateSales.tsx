@@ -235,10 +235,10 @@ const ProbateEstateSales = () => {
             </article>
             <article className="bg-card border border-border rounded-lg p-7 md:p-8 shadow-sm">
               <h2 className="font-serif text-xl md:text-2xl text-[hsl(0_70%_30%)] font-semibold mb-4 leading-snug text-center">
-                How David Stein Helps With Probate Real Estate
+                Probate Real Estate Is Its Own Discipline
               </h2>
               <p className="text-foreground/75 text-base leading-none">
-                David Stein helps families, executors, trustees, and attorneys navigate the probate real estate process from property assessment and pricing through preparation, listing, negotiation, and closing.
+                Families, executors, trustees, and attorneys get one point of contact — from property assessment and honest pricing through preparation, listing, negotiation, and closing. No handoffs. No surprises.
               </p>
             </article>
             <article className="bg-card border border-border rounded-lg p-7 md:p-8 shadow-sm">
