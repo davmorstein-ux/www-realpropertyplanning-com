@@ -446,7 +446,7 @@ const HomepageHero = () => {
             style={{
               fontFamily: "'Cormorant Garamond', 'Georgia', serif",
               color: "#f0c040",
-              fontSize: "3rem",
+              fontSize: "3.5rem",
               fontWeight: 900,
               textAlign: "center",
               margin: 0,
@@ -469,7 +469,7 @@ const HomepageHero = () => {
               lineHeight: 1.5,
             }}
           >
-            When families face life's biggest transitions, we connect them with the right guidance, resources, and professionals —<br />all in one place.
+            When families face life's biggest transitions, we connect them<br />with the right guidance, resources, and professionals — all in one place.
           </p>
         </div>
       </section>
