@@ -16,7 +16,11 @@ export default function ProfessionalsButton() {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
-    if (!ctx) return;
+    if (!ctx) {
+      console.error("Canvas 2D context failed to initialize");
+      return;
+    }
+    console.log("Canvas initialized successfully, size:", W, "x", H);
     const W = 160;
     const H = 117;
     canvas.width = W;
@@ -60,6 +64,9 @@ export default function ProfessionalsButton() {
     }
 
     function animate() {
+      if (frameCount < 3) { console.log("frame:", frameCount, "colorProgress:", colorProgress, "hovered:", hoveredRef.current); frameCount++; }
+      ctx!.fillStyle = "rgba(255,0,0,0.5)";
+      ctx!.fillRect(0, 0, 20, 20);
       ctx!.clearRect(0, 0, W, H);
 
       colorProgress += hoveredRef.current ? 0.04 : -0.04;
