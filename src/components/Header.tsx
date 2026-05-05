@@ -38,7 +38,6 @@ const NAV: NavItem[] = [
     ],
   },
   { label: "Resources", href: "/resources" },
-  { label: "Join the Network", href: "/join-network" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
@@ -120,18 +119,17 @@ const Header = () => {
         data-nosnippet="true"
         style={{
           position: "fixed",
-          top: isMobile ? 0 : 16,
-          left: isMobile ? 0 : "50%",
-          transform: isMobile ? "none" : "translateX(-50%)",
-          width: isMobile ? "100%" : "min(1280px, calc(100% - 48px))",
-          zIndex: 2000,
-          borderRadius: isMobile ? 0 : 14,
-          padding: isMobile ? "6px 8px" : "14px 24px",
-          backgroundColor: isMobile ? "rgba(8, 13, 25, 0.95)" : "rgba(8, 13, 25, 0.95)",
-          backdropFilter: "blur(10px)",
-          WebkitBackdropFilter: "blur(10px)",
-          border: isMobile ? "none" : "1px solid rgba(255,255,255,0.08)",
-          borderBottom: isMobile ? "1px solid rgba(255,255,255,0.1)" : undefined,
+          top: 16,
+          left: "50%",
+          transform: "translateX(-50%)",
+          width: "min(1280px, calc(100% - 48px))",
+          zIndex: 50,
+          borderRadius: 14,
+          padding: "14px 24px",
+          backgroundColor: scrolled ? "rgba(8, 13, 25, 0.82)" : "rgba(8, 13, 25, 0.95)",
+          backdropFilter: scrolled ? "blur(10px)" : "blur(10px)",
+          WebkitBackdropFilter: scrolled ? "blur(10px)" : "blur(10px)",
+          border: scrolled ? "1px solid rgba(255,255,255,0.08)" : "1px solid rgba(255,255,255,0.08)",
           transition: "all 0.45s ease",
           ...fontBody,
           color: "#fff",
@@ -139,16 +137,7 @@ const Header = () => {
       >
         {isMobile ? (
           /* ── Mobile header layout ── */
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              gap: 6,
-              width: "100%",
-            }}
-          >
-            {/* Logo */}
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8 }}>
             <Link to="/" style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
               <img
                 src="/rpp-logo-v4.png"
@@ -156,87 +145,54 @@ const Header = () => {
                 style={{ height: 56, width: "auto", maxWidth: "none", display: "block", objectFit: "contain" }}
               />
             </Link>
-
-            {/* CTA buttons – centered in remaining space */}
-            <div style={{ display: "flex", alignItems: "center", gap: 6, flex: "1 1 auto", justifyContent: "center" }}>
-              <Link
-                to="/contact"
-                style={{
-                  ...fontBody,
-                  color: "#fff",
-                  border: "1px solid rgba(255,255,255,0.6)",
-                  padding: "6px 10px",
-                  borderRadius: 8,
-                  fontWeight: 700,
-                  fontSize: 11,
-                  letterSpacing: "0.04em",
-                  textDecoration: "none",
-                  whiteSpace: "nowrap",
-                  minHeight: 48,
-                  display: "inline-flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                CONSULT
-              </Link>
+            <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
               <a
                 href="tel:2069003015"
                 style={{
                   ...fontBody,
                   color: "#fff",
                   background: "#1a5fa8",
-                  padding: "8px 14px",
-                  borderRadius: 8,
-                  fontWeight: 800,
-                  fontSize: 14,
-                  letterSpacing: "0.04em",
+                  padding: "6px 8px",
+                  borderRadius: 6,
+                  fontWeight: 700,
+                  fontSize: 10,
+                  letterSpacing: "0.06em",
                   textDecoration: "none",
                   whiteSpace: "nowrap",
-                  minHeight: 52,
-                  display: "inline-flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  gap: 6,
                 }}
               >
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ flexShrink: 0 }}>
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
-                </svg>
                 CALL
               </a>
+              <button
+                aria-label={menuOpen ? "Close menu" : "Open menu"}
+                onClick={() => setMenuOpen((v) => !v)}
+                style={{
+                  background: "rgba(255,255,255,0.12)",
+                  border: "2.5px solid rgba(255,255,255,0.6)",
+                  borderRadius: 14,
+                  padding: "8px 12px 6px",
+                  cursor: "pointer",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  minWidth: 72,
+                  minHeight: 62,
+                  gap: 0,
+                  flexShrink: 0,
+                  overflow: "visible",
+                }}
+              >
+                <div style={{ display: "flex", flexDirection: "column", gap: 6, marginBottom: 6 }}>
+                  <span style={{ display: "block", width: 34, height: 4.5, background: "#fff", borderRadius: 3 }} />
+                  <span style={{ display: "block", width: 34, height: 4.5, background: "#fff", borderRadius: 3 }} />
+                  <span style={{ display: "block", width: 34, height: 4.5, background: "#fff", borderRadius: 3 }} />
+                </div>
+                <span style={{ ...fontBody, color: "#fff", fontSize: 13, fontWeight: 900, letterSpacing: "0.15em", lineHeight: 1, marginTop: 2 }}>
+                  MENU
+                </span>
+              </button>
             </div>
-
-            {/* Hamburger menu – large, with MENU label and rounded border */}
-            <button
-              aria-label={menuOpen ? "Close menu" : "Open menu"}
-              onClick={() => setMenuOpen((v) => !v)}
-              style={{
-                background: "rgba(255,255,255,0.12)",
-                border: "2.5px solid rgba(255,255,255,0.6)",
-                borderRadius: 14,
-                padding: "8px 12px 6px",
-                cursor: "pointer",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-                minWidth: 72,
-                minHeight: 62,
-                gap: 0,
-                flexShrink: 0,
-                overflow: "visible",
-              }}
-            >
-              <div style={{ display: "flex", flexDirection: "column", gap: 6, marginBottom: 6 }}>
-                <span style={{ display: "block", width: 34, height: 4.5, background: "#fff", borderRadius: 3 }} />
-                <span style={{ display: "block", width: 34, height: 4.5, background: "#fff", borderRadius: 3 }} />
-                <span style={{ display: "block", width: 34, height: 4.5, background: "#fff", borderRadius: 3 }} />
-              </div>
-              <span style={{ ...fontBody, color: "#fff", fontSize: 13, fontWeight: 900, letterSpacing: "0.15em", lineHeight: 1, marginTop: 2 }}>
-                MENU
-              </span>
-            </button>
           </div>
         ) : (
           /* ── Desktop header layout (unchanged) ── */
@@ -248,7 +204,13 @@ const Header = () => {
               gap: 16,
             }}
           >
-            
+            <Link to="/" style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
+              <img
+                src="/rpp-logo-v4.png"
+                alt="Real Property Planning"
+                style={{ height: 88, width: "auto", maxWidth: "none", display: "block", objectFit: "contain" }}
+              />
+            </Link>
             <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
               <a
                 href="tel:2069003015"
