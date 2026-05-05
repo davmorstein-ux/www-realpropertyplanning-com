@@ -435,18 +435,22 @@ const HomepageHero = () => {
             padding: "0 24px 50px",
           }}
         >
+          {/* Content moved to trust bar */}
+        </div>
+      </section>
+
+      {/* ===== Trust Bar ===== */}
+      <section style={{ background: "#1a2f4e", padding: isMobile ? "16px 20px" : "28px 24px" }}>
+        <div style={{ maxWidth: 1280, margin: "0 auto" }}>
           <h1
             style={{
-              ...fontHead,
+              fontFamily: "'Cormorant Garamond', 'Georgia', serif",
               color: "#c9a84c",
-              fontWeight: 800,
-              fontSize: "clamp(4.5rem, 9vw, 8rem)",
-              lineHeight: 1.02,
-              textTransform: "uppercase",
-              letterSpacing: "0.01em",
+              fontSize: "clamp(1.6rem, 3vw, 2.4rem)",
+              fontWeight: 700,
+              textAlign: "center",
               margin: 0,
-              maxWidth: 1100,
-              textShadow: "0 4px 24px rgba(0,0,0,0.45)",
+              letterSpacing: "0.04em",
             }}
           >
             Probate · Senior Transitions · Estate Sales
@@ -455,30 +459,23 @@ const HomepageHero = () => {
             style={{
               ...fontBody,
               color: "#fff",
-              fontSize: "clamp(1rem, 2vw, 1.35rem)",
-              fontWeight: 500,
-              marginTop: 18,
-              maxWidth: 800,
+              fontSize: "clamp(0.95rem, 1.6vw, 1.15rem)",
+              fontWeight: 400,
+              textAlign: "center",
+              marginTop: 8,
+              marginBottom: isMobile ? 14 : 22,
               lineHeight: 1.5,
-              textShadow: "0 2px 12px rgba(0,0,0,0.4)",
             }}
           >
             Washington State's trusted hub for probate, estate, senior transitions, and professional resources
           </p>
-        </div>
-      </section>
-
-      {/* ===== Trust Bar ===== */}
-      <section style={{ background: "#1a2f4e", padding: isMobile ? "12px 20px" : "20px 24px" }}>
-        <div
-          style={{
-            maxWidth: 1280,
-            margin: "0 auto",
-            display: "grid",
-            gridTemplateColumns: isMobile ? "1fr" : "repeat(auto-fit, minmax(260px, 1fr))",
-            gap: isMobile ? 14 : 20,
-          }}
-        >
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: isMobile ? "1fr" : "repeat(auto-fit, minmax(260px, 1fr))",
+              gap: isMobile ? 14 : 20,
+            }}
+          >
           {[
             { emoji: "🌐", title: "TRUSTED PROFESSIONAL NETWORK", text: "Connecting families with trusted local professionals" },
             { emoji: "🤝", title: "FAMILY & SENIOR FOCUSED", text: "Connecting families with the right professionals at the right time" },
