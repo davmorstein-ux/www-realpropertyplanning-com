@@ -148,6 +148,14 @@ const Header = () => {
               width: "100%",
             }}
           >
+            {/* Logo */}
+            <Link to="/" style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
+              <img
+                src="/rpp-logo-v4.png"
+                alt="Real Property Planning"
+                style={{ height: 56, width: "auto", maxWidth: "none", display: "block", objectFit: "contain" }}
+              />
+            </Link>
 
             {/* CTA buttons – centered in remaining space */}
             <div style={{ display: "flex", alignItems: "center", gap: 6, flex: "1 1 auto", justifyContent: "center" }}>
