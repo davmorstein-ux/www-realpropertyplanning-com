@@ -346,6 +346,7 @@ const App = () => (
           <Route path="/cities/:citySlug/:serviceSlug" element={<Navigate to="/counties" replace />} />
 
           {/* Dynamic /services/:slug → canonical service pages */}
+          <Route path="/probate-sales" element={<Navigate to="/probate-estate-sales" replace />} />
           <Route path="/services" element={<Navigate to="/probate-estate-sales" replace />} />
           <Route path="/services/probate-estate-sales" element={<Navigate to="/probate-estate-sales" replace />} />
           <Route path="/services/senior-transitions" element={<Navigate to="/senior-transitions" replace />} />
