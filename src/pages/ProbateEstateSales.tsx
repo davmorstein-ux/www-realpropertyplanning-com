@@ -7,7 +7,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import ProofCallout from "@/components/ProofCallout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Scale, Users, Wrench, BarChart3, Heart, Hammer, BookOpen, MessageSquare, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconProbateSales from "@/assets/probate-estate-sales-hero.png";
@@ -15,13 +15,21 @@ import iconProbateSales from "@/assets/probate-estate-sales-hero.png";
 // ── Data ──
 
 const whatMakesDifferentTiles = [
-  { icon: Scale, label: "Legal Authority", text: "Court requirements may dictate when and how a sale can occur." },
-  { icon: Users, label: "Multiple Decision-Makers", text: "Executors, co-heirs, attorneys, and trustees must coordinate." },
-  { icon: Wrench, label: "Property Condition", text: "Deferred maintenance, belongings, and vacancy are common." },
-  { icon: BarChart3, label: "Honest Pricing", text: "Value must reflect actual condition — not automated estimates." },
-  { icon: Heart, label: "Emotional Complexity", text: "Family dynamics can slow communication and decisions." },
-  { icon: Hammer, label: "Preparation Strategy", text: "As-is vs. repairs has a direct impact on fiduciary defensibility." },
+  { emoji: "⚖️", label: "Legal Authority", text: "Court requirements may dictate when and how a sale can occur." },
+  { emoji: "🤝", label: "Multiple Decision-Makers", text: "Executors, co-heirs, attorneys, and trustees must coordinate." },
+  { emoji: "🏚️", label: "Property Condition", text: "Deferred maintenance, belongings, and vacancy are common." },
+  { emoji: "💰", label: "Honest Pricing", text: "Value must reflect actual condition — not automated estimates." },
+  { emoji: "🫂", label: "Emotional Complexity", text: "Family dynamics can slow communication and decisions." },
+  { emoji: "🔨", label: "Preparation Strategy", text: "As-is vs. repairs has a direct impact on fiduciary defensibility." },
 ];
+
+const card3dStyle = {
+  background: 'white',
+  border: '1px solid rgba(0,0,0,0.08)',
+  borderRadius: '16px',
+  boxShadow: '0 4px 6px rgba(0,0,0,0.07), 0 10px 20px rgba(0,0,0,0.05)',
+  transition: 'all 0.2s ease',
+};
 
 const jsonLd = articleSchema({
   headline: "Probate Real Estate Sales in Washington State",
