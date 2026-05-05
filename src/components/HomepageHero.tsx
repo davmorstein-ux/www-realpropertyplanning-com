@@ -461,31 +461,17 @@ const HomepageHero = () => {
             style={{
               fontFamily: "'Cormorant Garamond', 'Georgia', serif",
               color: "#f0c040",
-              fontSize: "4rem",
+              fontSize: "clamp(22px, 4vw, 4rem)",
               fontWeight: 900,
               textAlign: "center",
               margin: 0,
-              letterSpacing: "0.04em",
+              letterSpacing: "0.08em",
               textShadow: "0 2px 8px rgba(0,0,0,0.4)",
             }}
           >
             Senior Transitions · Estate Sales · Probate
           </h1>
-          <p
-            style={{
-              fontFamily: "'DM Sans', system-ui, sans-serif",
-              color: "#ffffff",
-              opacity: 1,
-              fontSize: "1.2rem",
-              fontWeight: 400,
-              textAlign: "center",
-              marginTop: 8,
-              marginBottom: 4,
-              lineHeight: 1.5,
-            }}
-          >
-            When life brings its biggest transitions — probate, estate sales, senior housing, downsizing —<br />Real Property Planning connects families, seniors, executors, and professionals with the right people and resources.
-          </p>
+          {/* Warm statement moved to Index.tsx below hero */}
           <p
             style={{
               fontFamily: "'DM Sans', system-ui, sans-serif",
