@@ -446,7 +446,7 @@ const HomepageHero = () => {
             style={{
               fontFamily: "'Cormorant Garamond', 'Georgia', serif",
               color: "#f0c040",
-              fontSize: "3.5rem",
+              fontSize: "4rem",
               fontWeight: 900,
               textAlign: "center",
               margin: 0,
@@ -485,7 +485,7 @@ const HomepageHero = () => {
               letterSpacing: "0.05em",
             }}
           >
-            Free to use <span style={{ color: "#f0c040" }}>·</span> Built for families <span style={{ color: "#f0c040" }}>·</span> Trusted by professionals
+            A free-to-use hub <span style={{ color: "#f0c040" }}>·</span> Built for families <span style={{ color: "#f0c040" }}>·</span> Trusted by professionals
           </p>
         </div>
       </section>
