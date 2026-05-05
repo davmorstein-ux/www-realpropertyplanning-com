@@ -13,6 +13,19 @@ export default function ProfessionalsButton() {
   }, [hovered]);
 
   useEffect(() => {
+    const el = document.getElementById("professionals-btn");
+    if (!el) return;
+    const enter = () => setHovered(true);
+    const leave = () => setHovered(false);
+    el.addEventListener("mouseenter", enter);
+    el.addEventListener("mouseleave", leave);
+    return () => {
+      el.removeEventListener("mouseenter", enter);
+      el.removeEventListener("mouseleave", leave);
+    };
+  }, []);
+
+  useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
@@ -21,21 +34,19 @@ export default function ProfessionalsButton() {
     const H = 117;
     canvas.width = W;
     canvas.height = H;
-    canvas.width = W;
-    canvas.height = H;
 
     const nodes = Array.from({ length: 14 }, () => ({
       x: Math.random() * W,
       y: Math.random() * H,
-      vx: (Math.random() - 0.5) * 0.4,
-      vy: (Math.random() - 0.5) * 0.4,
+      vx: (Math.random() - 0.5) * 0.15,
+      vy: (Math.random() - 0.5) * 0.15,
     }));
 
     const pulses = Array.from({ length: 5 }, () => ({
       from: Math.floor(Math.random() * nodes.length),
       to: Math.floor(Math.random() * nodes.length),
       progress: Math.random(),
-      speed: 0.003 + Math.random() * 0.004,
+      speed: 0.001 + Math.random() * 0.002,
     }));
 
     let colorProgress = 0;
@@ -64,7 +75,7 @@ export default function ProfessionalsButton() {
     function animate() {
       ctx!.clearRect(0, 0, W, H);
 
-      colorProgress += hoveredRef.current ? 0.04 : -0.04;
+      colorProgress += hoveredRef.current ? 0.02 : -0.02;
       colorProgress = Math.max(0, Math.min(1, colorProgress));
       const c = lerpColor(colorProgress);
 
@@ -130,9 +141,8 @@ export default function ProfessionalsButton() {
 
   return (
     <Link
+      id="professionals-btn"
       to="/professionals"
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
       className="hidden lg:block"
       style={{
         position: "fixed",
@@ -158,7 +168,6 @@ export default function ProfessionalsButton() {
             height: 117,
             clipPath: "polygon(0 0, 100% 50%, 0 100%)",
             zIndex: 3,
-            mixBlendMode: "screen" as const,
             pointerEvents: "none" as const,
           }}
         />
@@ -174,6 +183,7 @@ export default function ProfessionalsButton() {
             opacity: hovered ? 0 : 1,
             transition: "opacity 0.3s ease",
             zIndex: 2,
+            mixBlendMode: "screen" as const,
           }}
           loading="eager"
         />
@@ -190,6 +200,7 @@ export default function ProfessionalsButton() {
             opacity: hovered ? 1 : 0,
             transition: "opacity 0.3s ease",
             zIndex: 2,
+            mixBlendMode: "screen" as const,
           }}
           loading="eager"
         />
