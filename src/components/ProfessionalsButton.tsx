@@ -16,13 +16,11 @@ export default function ProfessionalsButton() {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
-    if (!ctx) {
-      console.error("Canvas 2D context failed to initialize");
-      return;
-    }
+    if (!ctx) return;
     const W = 160;
     const H = 117;
-    console.log("Canvas initialized successfully, size:", W, "x", H);
+    canvas.width = W;
+    canvas.height = H;
     canvas.width = W;
     canvas.height = H;
 
