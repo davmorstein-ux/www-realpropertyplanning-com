@@ -202,6 +202,17 @@ export default function ProfessionalsButton() {
           }}
           loading="eager"
         />
+        <div style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          color: "white",
+          fontSize: 10,
+          zIndex: 10,
+          pointerEvents: "none",
+        }}>
+          {hovered ? "HOVER:ON" : "HOVER:OFF"}
+        </div>
       </div>
     </Link>
   );
