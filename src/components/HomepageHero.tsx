@@ -121,10 +121,10 @@ const HomepageHero = () => {
           zIndex: 50,
           borderRadius: 14,
           padding: "14px 24px",
-          backgroundColor: scrolled ? "rgba(8, 13, 25, 0.82)" : "rgba(8, 13, 25, 0)",
-          backdropFilter: scrolled ? "blur(10px)" : "none",
-          WebkitBackdropFilter: scrolled ? "blur(10px)" : "none",
-          border: scrolled ? "1px solid rgba(255,255,255,0.08)" : "1px solid rgba(255,255,255,0)",
+          backgroundColor: "#1a2f4e",
+          backdropFilter: "none",
+          WebkitBackdropFilter: "none",
+          border: "1px solid rgba(255,255,255,0.08)",
           transition: "all 0.45s ease",
         }}
       >
