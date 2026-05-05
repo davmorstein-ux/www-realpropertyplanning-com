@@ -3,24 +3,11 @@ import { useEffect, useRef, useState, useCallback } from "react";
 import defaultBtn from "@/assets/for-professionals-sidebar-button.png";
 import hoverBtn from "@/assets/for-professionals-sidebar-button-green.png";
 
-interface SidebarNode {
-  x: number;
-  y: number;
-  r: number;
-}
-
-interface SidebarSignal {
-  a: number;
-  b: number;
-  progress: number;
-  duration: number;
-}
-
 const StickyContactSidebar = () => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const rafRef = useRef<number | null>(null);
   const hoveredRef = useRef(false);
-  const colorBlendRef = useRef(0); // 0 = blue, 1 = green
+  const colorProgressRef = useRef(0);
   const [hovered, setHovered] = useState(false);
 
   const handleMouseEnter = useCallback(() => {
@@ -38,200 +25,160 @@ const StickyContactSidebar = () => {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    let width = 0;
-    let height = 0;
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const W = 160, H = 117;
+    canvas.width = W;
+    canvas.height = H;
 
-    const NODE_COUNT = 18;
-    const CONNECT_DIST = 60;
-    const MAX_SIGNALS = 4;
+    // Nodes with slow movement
+    const nodes: { x: number; y: number; vx: number; vy: number }[] = [];
+    for (let i = 0; i < 12; i++) {
+      nodes.push({
+        x: Math.random() * W,
+        y: Math.random() * H,
+        vx: (Math.random() - 0.5) * 0.3,
+        vy: (Math.random() - 0.5) * 0.3,
+      });
+    }
 
-    let nodes: SidebarNode[] = [];
-    let edges: { i: number; j: number }[] = [];
-    const signals: SidebarSignal[] = [];
-    let nextSignalIn = 500;
+    // Pulses traveling between nodes
+    const pulses: { from: number; to: number; progress: number; speed: number }[] = [];
+    for (let i = 0; i < 4; i++) {
+      const a = Math.floor(Math.random() * nodes.length);
+      let b = Math.floor(Math.random() * nodes.length);
+      while (b === a) b = Math.floor(Math.random() * nodes.length);
+      pulses.push({ from: a, to: b, progress: 0, speed: 0.004 + Math.random() * 0.003 });
+    }
 
-    const initNodes = () => {
-      nodes = [];
-      edges = [];
-      // Scatter nodes across the triangle area (points right: 0,0 -> 100%,50% -> 0,100%)
-      for (let i = 0; i < NODE_COUNT; i++) {
-        // Generate points biased toward the triangle interior
-        let x: number, y: number;
-        let attempts = 0;
-        do {
-          x = Math.random() * width;
-          y = Math.random() * height;
-          attempts++;
-          // Point is inside triangle if x <= width * (1 - |y/height - 0.5| * 2)
-          // i.e. x/width <= 1 - |2*y/height - 1|
-        } while (x / width > 1 - Math.abs(2 * y / height - 1) + 0.05 && attempts < 50);
+    function lerpColor(t: number) {
+      return {
+        r: Math.round(100 + (80 - 100) * t),
+        g: Math.round(180 + (255 - 180) * t),
+        b: Math.round(255 + (120 - 255) * t),
+      };
+    }
 
-        nodes.push({ x, y, r: 1.5 + Math.random() * 0.8 });
+    function inTriangle(x: number, y: number) {
+      // Triangle: (0,0) -> (W, H/2) -> (0, H)
+      // Using cross-product sign checks
+      const edge1x = W, edge1y = H / 2;
+      const edge2x = -W, edge2y = H / 2;
+      const edge3x = 0, edge3y = -H;
+
+      const d1 = x * edge1y - y * edge1x;
+      const d2 = (x - W) * edge2y - (y - H / 2) * edge2x;
+      const d3 = x * edge3y - (y - H) * edge3x;
+
+      const hasNeg = d1 < 0 || d2 < 0 || d3 < 0;
+      const hasPos = d1 > 0 || d2 > 0 || d3 > 0;
+      return !(hasNeg && hasPos);
+    }
+
+    const animate = () => {
+      ctx.clearRect(0, 0, W, H);
+
+      // Smooth color transition
+      colorProgressRef.current += hoveredRef.current ? 0.05 : -0.05;
+      colorProgressRef.current = Math.max(0, Math.min(1, colorProgressRef.current));
+      const c = lerpColor(colorProgressRef.current);
+
+      // Move nodes
+      for (const n of nodes) {
+        n.x += n.vx;
+        n.y += n.vy;
+        if (n.x < 0 || n.x > W) n.vx *= -1;
+        if (n.y < 0 || n.y > H) n.vy *= -1;
       }
 
-      // Build edges
+      // Draw lines between close nodes
       for (let i = 0; i < nodes.length; i++) {
         for (let j = i + 1; j < nodes.length; j++) {
-          const d = Math.hypot(nodes[i].x - nodes[j].x, nodes[i].y - nodes[j].y);
-          if (d <= CONNECT_DIST) {
-            edges.push({ i, j });
+          const dx = nodes[i].x - nodes[j].x;
+          const dy = nodes[i].y - nodes[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 80) {
+            ctx.beginPath();
+            ctx.moveTo(nodes[i].x, nodes[i].y);
+            ctx.lineTo(nodes[j].x, nodes[j].y);
+            ctx.strokeStyle = `rgba(${c.r},${c.g},${c.b},${0.25 * (1 - dist / 80)})`;
+            ctx.lineWidth = 0.5;
+            ctx.stroke();
           }
         }
-      }
-      // Ensure each node has at least one connection
-      for (let i = 0; i < nodes.length; i++) {
-        const hasEdge = edges.some(e => e.i === i || e.j === i);
-        if (!hasEdge) {
-          let bestJ = -1, bestD = Infinity;
-          for (let j = 0; j < nodes.length; j++) {
-            if (j === i) continue;
-            const d = Math.hypot(nodes[i].x - nodes[j].x, nodes[i].y - nodes[j].y);
-            if (d < bestD) { bestD = d; bestJ = j; }
-          }
-          if (bestJ >= 0) edges.push({ i: Math.min(i, bestJ), j: Math.max(i, bestJ) });
-        }
-      }
-    };
-
-    const resize = () => {
-      const rect = canvas.getBoundingClientRect();
-      width = rect.width;
-      height = rect.height;
-      canvas.width = Math.floor(width * dpr);
-      canvas.height = Math.floor(height * dpr);
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      initNodes();
-    };
-
-    resize();
-    const ro = new ResizeObserver(resize);
-    ro.observe(canvas);
-
-    let lastT = performance.now();
-
-    const draw = (t: number) => {
-      const dt = Math.min(t - lastT, 64);
-      lastT = t;
-
-      // Smoothly blend color
-      const target = hoveredRef.current ? 1 : 0;
-      colorBlendRef.current += (target - colorBlendRef.current) * Math.min(1, dt / 150);
-
-      const blend = colorBlendRef.current;
-
-      // Interpolate colors
-      const lineR = 100 + (50 - 100) * blend;
-      const lineG = 160 + (220 - 160) * blend;
-      const lineB = 255 + (100 - 255) * blend;
-
-      const pulseR = 150 + (100 - 150) * blend;
-      const pulseG = 200 + (255 - 200) * blend;
-      const pulseB = 255 + (150 - 255) * blend;
-
-      ctx.clearRect(0, 0, width, height);
-
-      // Spawn signals
-      nextSignalIn -= dt;
-      if (nextSignalIn <= 0 && signals.length < MAX_SIGNALS && edges.length > 0) {
-        const e = edges[Math.floor(Math.random() * edges.length)];
-        const reverse = Math.random() < 0.5;
-        signals.push({
-          a: reverse ? e.j : e.i,
-          b: reverse ? e.i : e.j,
-          progress: 0,
-          duration: 1500 + Math.random() * 1000,
-        });
-        nextSignalIn = 300 + Math.random() * 500;
-      }
-
-      // Update signals
-      for (let s = signals.length - 1; s >= 0; s--) {
-        signals[s].progress += dt / signals[s].duration;
-        if (signals[s].progress >= 1) signals.splice(s, 1);
-      }
-
-      // Draw lines
-      for (const e of edges) {
-        ctx.strokeStyle = `rgba(${lineR}, ${lineG}, ${lineB}, 0.3)`;
-        ctx.lineWidth = 0.6;
-        ctx.beginPath();
-        ctx.moveTo(nodes[e.i].x, nodes[e.i].y);
-        ctx.lineTo(nodes[e.j].x, nodes[e.j].y);
-        ctx.stroke();
-      }
-
-      // Draw signal pulses
-      for (const sig of signals) {
-        const a = nodes[sig.a];
-        const b = nodes[sig.b];
-        const x = a.x + (b.x - a.x) * sig.progress;
-        const y = a.y + (b.y - a.y) * sig.progress;
-        ctx.save();
-        ctx.shadowBlur = 6;
-        ctx.shadowColor = `rgba(${pulseR}, ${pulseG}, ${pulseB}, 0.8)`;
-        ctx.fillStyle = `rgba(${pulseR}, ${pulseG}, ${pulseB}, 1)`;
-        ctx.beginPath();
-        ctx.arc(x, y, 2, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.restore();
       }
 
       // Draw nodes
       for (const n of nodes) {
-        ctx.save();
-        ctx.shadowBlur = 8;
-        ctx.shadowColor = `rgba(${lineR}, ${lineG}, ${lineB}, 0.6)`;
-        ctx.fillStyle = "rgba(255, 255, 255, 0.9)";
+        if (!inTriangle(n.x, n.y)) continue;
         ctx.beginPath();
-        ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+        ctx.arc(n.x, n.y, 2, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(${c.r},${c.g},${c.b},0.9)`;
         ctx.fill();
-        ctx.restore();
       }
 
-      rafRef.current = requestAnimationFrame(draw);
+      // Draw and update pulses
+      for (let i = 0; i < pulses.length; i++) {
+        const p = pulses[i];
+        p.progress += p.speed;
+        const from = nodes[p.from];
+        const to = nodes[p.to];
+        const px = from.x + (to.x - from.x) * p.progress;
+        const py = from.y + (to.y - from.y) * p.progress;
+        ctx.beginPath();
+        ctx.arc(px, py, 3, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(255,255,255,${1 - p.progress})`;
+        ctx.fill();
+        if (p.progress >= 1) {
+          pulses[i] = {
+            from: p.to,
+            to: Math.floor(Math.random() * nodes.length),
+            progress: 0,
+            speed: 0.004 + Math.random() * 0.003,
+          };
+        }
+      }
+
+      rafRef.current = requestAnimationFrame(animate);
     };
 
-    rafRef.current = requestAnimationFrame(draw);
+    rafRef.current = requestAnimationFrame(animate);
 
     return () => {
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
-      ro.disconnect();
     };
   }, []);
 
   return (
     <div
       className="fixed left-0 top-1/2 -translate-y-1/2 z-[1000] hidden lg:block"
-      style={{ width: 160 }}
+      style={{ width: 160, height: 117 }}
     >
       <Link
         to="/professionals"
-        className="group relative block"
+        className="relative block"
+        style={{ width: 160, height: 117 }}
         aria-label="For Professionals"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        {/* Animated network canvas behind images */}
         <canvas
           ref={canvasRef}
           aria-hidden="true"
-          className="absolute inset-0 w-full h-full pointer-events-none"
-          style={{ clipPath: "polygon(0 0, 100% 50%, 0 100%)" }}
+          className="absolute top-0 left-0 pointer-events-none"
+          style={{ width: 160, height: 117, clipPath: "polygon(0 0, 100% 50%, 0 100%)", zIndex: 1 }}
         />
-        {/* Blue default image */}
         <img
           src={defaultBtn}
           alt="For Professionals"
-          className={`w-full h-auto transition-opacity duration-300 ease-in-out ${hovered ? "opacity-0" : "opacity-100"}`}
+          className="absolute top-0 left-0 transition-opacity duration-300 ease-in-out"
+          style={{ width: 160, height: 117, zIndex: 2, opacity: hovered ? 0 : 1 }}
           loading="eager"
         />
-        {/* Green hover image */}
         <img
           src={hoverBtn}
           alt=""
           aria-hidden="true"
-          className={`absolute inset-0 w-full h-auto transition-opacity duration-300 ease-in-out ${hovered ? "opacity-100" : "opacity-0"}`}
+          className="absolute top-0 left-0 transition-opacity duration-300 ease-in-out"
+          style={{ width: 160, height: 117, zIndex: 2, opacity: hovered ? 1 : 0 }}
           loading="eager"
         />
       </Link>
