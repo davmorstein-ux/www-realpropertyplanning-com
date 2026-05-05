@@ -25,9 +25,10 @@ const StickyContactSidebar = () => {
             height: 30,
             top: "52%",
             left: "65%",
-            transform: "translate(-50%, -50%)",
+            transform: "translate(-50%, -50%) translateZ(0)",
+            willChange: "transform, opacity",
             animation: "globeGlow 2.5s ease-in-out infinite",
-            background: "transparent",
+            background: "radial-gradient(circle, rgba(34, 197, 94, 0.6) 0%, transparent 70%)",
           }}
         />
       </Link>
