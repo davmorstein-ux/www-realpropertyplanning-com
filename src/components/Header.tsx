@@ -45,7 +45,7 @@ const NAV: NavItem[] = [
 const fontBody = { fontFamily: "'DM Sans', system-ui, sans-serif" };
 
 const Header = () => {
-  const [scrolled] = useState(false);
+  
   const [isMobile, setIsMobile] = useState(() =>
     typeof window !== "undefined" ? window.innerWidth < 769 : false
   );
