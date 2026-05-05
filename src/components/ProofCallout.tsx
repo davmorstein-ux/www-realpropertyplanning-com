@@ -32,7 +32,7 @@ const ProofCallout = ({
           isAccent ? "text-gold/25" : "text-gold/18"
         }`}
       />
-      <p className="text-foreground text-lg leading-relaxed italic pr-10 mb-5">
+      <p className="text-foreground text-[19px] leading-[1.7] italic pr-10 mb-5">
         "{quote}"
       </p>
       <div className="flex items-center justify-between">
