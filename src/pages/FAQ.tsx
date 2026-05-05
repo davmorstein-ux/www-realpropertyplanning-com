@@ -67,6 +67,30 @@ const faqs = [
     answer: `Attorneys and fiduciaries can reach out directly by phone or through the contact page. Real Property Planning works as a real estate resource for professional referral partners, providing experienced guidance on property value, sale preparation, market strategy, and transaction coordination. The goal is to make the referring professional look well-supported throughout the process.\n\n${softCta}`,
   },
   {
+    question: "What specific Washington court forms or filings affect when we can list the property?",
+    answer: `In a typical Washington probate, the personal representative needs Letters Testamentary (with a will) or Letters of Administration (without one) before listing. If the will grants Nonintervention Powers — which is common in Washington — the PR can usually sell without further court approval. If the estate is supervised, you may need a court order authorizing the sale and confirming the price. We coordinate directly with the estate attorney so the listing date, the offer-acceptance date, and the closing date all line up with whatever order the court requires.\n\n${softCta}`,
+  },
+  {
+    question: "Can we accept the first reasonable offer, or do we need to follow a court bidding process?",
+    answer: `It depends on the type of probate. With Nonintervention Powers, the PR can negotiate and accept like a normal seller. In supervised probates — and in some judicial-confirmation situations — the accepted offer may be subject to overbid at a court hearing. We structure the listing strategy and disclosures around whichever standard applies, so heirs and the attorney are not surprised at the hearing.\n\n${softCta}`,
+  },
+  {
+    question: "How do you protect an executor from later claims that the home was sold for too little?",
+    answer: `This is fiduciary defensibility, and it is why we lead with a documented, valuation-based pricing analysis rather than a marketing CMA. The PR's file includes condition photos, comparable-sales adjustments, marketing exposure records, every offer received, and the rationale for the accepted price — the same documentation an appraiser would produce. If a beneficiary later questions the sale price, the answer is in the file.\n\n${softCta}`,
+  },
+  {
+    question: "The house is full of belongings and hasn't been touched in years. Where do you even start?",
+    answer: `We start with a walk-through to separate the property questions from the contents questions. For contents, we coordinate vetted estate-sale companies, donation pickups, and full cleanout crews — and tell you which approach actually nets more for the estate. For the property itself, we identify the small set of repairs that move the appraised value (and therefore the sale price) and the larger set that do not. Most estate homes need far less work than families assume.\n\n${softCta}`,
+  },
+  {
+    question: "How does selling during probate affect our tax situation as heirs?",
+    answer: `Inherited property generally receives a stepped-up basis to fair market value as of the date of death — which is why a defensible date-of-death valuation matters. If the property sells reasonably close to that value, capital-gains exposure for the heirs is usually minimal. We are not tax advisors, but we coordinate closely with your CPA or estate attorney and can produce the valuation documentation they need.\n\n${softCta}`,
+  },
+  {
+    question: "Can you start working with us before the estate attorney is even hired?",
+    answer: `Yes. Many families call us first because the property is the most visible, most stressful piece. We will tell you honestly whether you need an attorney (almost always yes for Washington probate) and refer you to several experienced probate attorneys in your county if you don't have one. Then we work alongside whichever attorney you choose — they handle the legal proceeding, we handle the property.\n\n${softCta}`,
+  },
+  {
     question: "What counties does Real Property Planning serve?",
     answer: `Real Property Planning serves clients throughout King County, Snohomish County, Pierce County, and Kitsap County throughout Washington State. Each county has its own market dynamics, pricing patterns, and buyer expectations. Local knowledge helps clients make better-informed decisions about probate property, inherited homes, estate sales, and senior transitions.\n\n${softCta}`,
   },

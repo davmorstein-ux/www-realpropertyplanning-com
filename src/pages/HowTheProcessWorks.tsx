@@ -202,6 +202,34 @@ const HowTheProcessWorks = () => {
 
       <PageFAQ faqs={faqs} heading="Process FAQs" />
 
+      {/* The Real Estate Side of Estate Administration */}
+      <section className="py-16 lg:py-24 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
+              The Real Estate Side of Estate Administration
+            </h2>
+            <div className="space-y-5 text-muted-foreground leading-relaxed">
+              <p>
+                Selling estate property is rarely as simple as putting a sign in the yard. These homes often sit vacant for months while legal authority is established, insurance and utility issues need to be managed, and the property's condition may deteriorate. Meanwhile, carrying costs — taxes, insurance, maintenance, and HOA fees — continue to accumulate.
+              </p>
+              <p>
+                Real Property Planning understands these pressures from working through them with hundreds of clients. We help <Link to="/executors" className="text-accent hover:text-gold underline underline-offset-4">executors</Link>, attorneys, and families develop a timeline that accounts for legal proceedings, property preparation, and market conditions — so the sale happens at the right time, not just the fastest time.
+              </p>
+              <p>
+                For properties that need work before listing, each potential improvement is evaluated through a <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">return-on-investment</Link> lens informed by <Link to="/real-estate-appraiser" className="text-accent hover:text-gold underline underline-offset-4">certified appraisal</Link> training. A $5,000 kitchen cleanup might add $15,000 in sale price; a $40,000 renovation might add only $20,000. These distinctions matter when estate funds are limited and fiduciary duties require defensible decision-making.
+              </p>
+              <p>
+                Families and executors throughout the Puget Sound area — from Seattle and Bellevue in King County to Everett and Edmonds in Snohomish County, Tacoma and Puyallup in Pierce County, and Bremerton and Silverdale in Kitsap County — face these same challenges. Real Property Planning's approach is the same regardless of location: assess the property honestly, develop a preparation strategy based on return on investment, price it correctly for its actual condition, and manage the sale with clear communication throughout.
+              </p>
+              <p>
+                For <Link to="/guides/out-of-state-families" className="text-accent hover:text-gold underline underline-offset-4">executors managing property from out of state</Link>, the entire process can be handled remotely — with photo updates, digital document signing, and regular calls to keep you informed without requiring you to travel for every step.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Related Resources */}
       <section className="py-12 bg-background">
         <div className="container px-6 lg:px-8">

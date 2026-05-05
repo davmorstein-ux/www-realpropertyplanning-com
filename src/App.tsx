@@ -13,6 +13,7 @@ const NewHomePreview = lazy(() => import("./pages/NewHomePreview"));
 
 // All other routes are lazy-loaded so the homepage bundle stays small.
 const ProbateEstateSales = lazy(() => import("./pages/ProbateEstateSales"));
+const ClientStories = lazy(() => import("./pages/ClientStories"));
 const SeniorTransitions = lazy(() => import("./pages/SeniorTransitions"));
 const SeniorPlacement = lazy(() => import("./pages/SeniorPlacement"));
 const SellHouseFundSeniorLiving = lazy(() => import("./pages/SellHouseFundSeniorLiving"));
@@ -151,6 +152,7 @@ const App = () => (
 
           {/* ─── Core commercial pages ────────────────────────────── */}
           <Route path="/probate-estate-sales" element={<ProbateEstateSales />} />
+          <Route path="/client-stories" element={<ClientStories />} />
           <Route path="/senior-transitions" element={<SeniorTransitions />} />
           <Route path="/senior-placement" element={<SeniorPlacement />} />
           <Route path="/sell-house-fund-senior-living" element={<SellHouseFundSeniorLiving />} />
