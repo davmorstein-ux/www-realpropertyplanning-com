@@ -5,7 +5,7 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import greyDivorceCircle from "@/assets/grey-divorce-circle-transparent.png";
+import greyDivorceCircle from "@/assets/grey-divorce-circle-transparent.webp";
 
 const whyReasons = [
   { title: "Empty Nest Transitions", body: "When children leave home, couples may realize they've grown apart. The shared purpose of parenting no longer masks deeper incompatibilities." },

@@ -40,7 +40,7 @@ const AffiliationBadgeGrid = ({ naepcAlt, className }: AffiliationBadgeGridProps
 
   const isVisible = inView && tabActive;
 
-  const naepcSrc = naepcAlt ? "/assets/naepc-logo.png" : naepcLogo;
+  const naepcSrc = naepcAlt ? "/assets/naepc-logo.webp" : naepcLogo;
 
   const badges = [
     {

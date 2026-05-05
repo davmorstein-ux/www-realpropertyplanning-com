@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconDivorce from "@/assets/icons/attorney-divorce-property-icon-washington.webp";
-import divorceCircle from "@/assets/divorce-circle-transparent.png";
+import divorceCircle from "@/assets/divorce-circle-transparent.webp";
 
 const intersections = [
   "Establishing a shared, defensible market value for the marital home",
