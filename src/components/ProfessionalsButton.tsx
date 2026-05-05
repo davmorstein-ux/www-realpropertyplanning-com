@@ -1,8 +1,11 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import blueButton from "@/assets/for-professionals-sidebar-button.png";
+import greenButton from "@/assets/for-professionals-sidebar-button-green.png";
 
 export default function ProfessionalsButton() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const [hovered, setHovered] = useState(false);
+  const hoveredRef = useRef(false);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -14,6 +17,7 @@ export default function ProfessionalsButton() {
     canvas.width = W;
     canvas.height = H;
     let animId: number;
+    let colorProgress = 0;
 
     const nodes = Array.from({ length: 8 }, () => ({
       x: Math.random() * W,
@@ -29,8 +33,24 @@ export default function ProfessionalsButton() {
       speed: 0.001 + Math.random() * 0.002,
     }));
 
+    const el = canvas.closest("a");
+    if (el) {
+      const enter = () => { setHovered(true); hoveredRef.current = true; };
+      const leave = () => { setHovered(false); hoveredRef.current = false; };
+      el.addEventListener("mouseenter", enter);
+      el.addEventListener("mouseleave", leave);
+    }
+
     function animate() {
       ctx!.clearRect(0, 0, W, H);
+
+      colorProgress += hoveredRef.current ? 0.02 : -0.02;
+      colorProgress = Math.max(0, Math.min(1, colorProgress));
+      const blueR = 100, blueG = 180, blueB = 255;
+      const greenR = 80, greenG = 255, greenB = 120;
+      const r = Math.round(blueR + (greenR - blueR) * colorProgress);
+      const g = Math.round(blueG + (greenG - blueG) * colorProgress);
+      const b = Math.round(blueB + (greenB - blueB) * colorProgress);
 
       nodes.forEach((n) => {
         n.x += n.vx;
@@ -48,7 +68,7 @@ export default function ProfessionalsButton() {
             ctx!.beginPath();
             ctx!.moveTo(nodes[i].x, nodes[i].y);
             ctx!.lineTo(nodes[j].x, nodes[j].y);
-            ctx!.strokeStyle = `rgba(100,180,255,${0.2 * (1 - dist / 75)})`;
+            ctx!.strokeStyle = `rgba(${r},${g},${b},${0.2 * (1 - dist / 75)})`;
             ctx!.lineWidth = 0.6;
             ctx!.stroke();
           }
@@ -58,7 +78,7 @@ export default function ProfessionalsButton() {
       nodes.forEach((n) => {
         ctx!.beginPath();
         ctx!.arc(n.x, n.y, 1.8, 0, Math.PI * 2);
-        ctx!.fillStyle = "rgba(150,210,255,0.7)";
+        ctx!.fillStyle = `rgba(${r},${g},${b},0.7)`;
         ctx!.fill();
       });
 
@@ -76,7 +96,7 @@ export default function ProfessionalsButton() {
         const alpha = Math.sin(p.progress * Math.PI);
         ctx!.beginPath();
         ctx!.arc(px, py, 5, 0, Math.PI * 2);
-        ctx!.fillStyle = `rgba(100,180,255,${alpha * 0.3})`;
+        ctx!.fillStyle = `rgba(${r},${g},${b},${alpha * 0.3})`;
         ctx!.fill();
         ctx!.beginPath();
         ctx!.arc(px, py, 2.5, 0, Math.PI * 2);
@@ -118,6 +138,24 @@ export default function ProfessionalsButton() {
             width: 160,
             height: 117,
             zIndex: 1,
+            opacity: hovered ? 0 : 1,
+            transition: "opacity 0.3s ease",
+          }}
+          loading="eager"
+        />
+        <img
+          src={greenButton}
+          alt=""
+          aria-hidden="true"
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: 160,
+            height: 117,
+            zIndex: 1,
+            opacity: hovered ? 1 : 0,
+            transition: "opacity 0.3s ease",
           }}
           loading="eager"
         />
