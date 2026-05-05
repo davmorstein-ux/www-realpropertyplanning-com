@@ -102,12 +102,6 @@ const SellHouseDuringProbateWashington = () => (
           <h1 className="font-serif text-primary-foreground font-semibold leading-tight mb-5" style={{ fontSize: "clamp(36px, 5vw, 46px)" }}>
             Can You Sell a House During Probate in Washington State?
           </h1>
-          <Link to="/contact">
-            <Button variant="gold" size="lg" className="px-8 py-4 h-auto">
-              <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy" />
-              Talk to Our Team →
-            </Button>
-          </Link>
         </div>
       </div>
     </section>
@@ -119,7 +113,7 @@ const SellHouseDuringProbateWashington = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto space-y-4">
 
-          <p className="font-serif text-foreground font-semibold leading-snug" style={{ fontSize: "22px" }}>
+          <p className="font-serif text-foreground font-semibold leading-snug text-center" style={{ fontSize: "22px" }}>
             The short answer is yes — but timing, authority, and process all matter. Here's what you need to know.
           </p>
 
