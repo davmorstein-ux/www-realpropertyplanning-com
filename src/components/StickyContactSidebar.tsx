@@ -5,7 +5,7 @@ const StickyContactSidebar = () => {
   return (
     <Link
       to="/join-network"
-      className="fixed left-0 top-1/2 -translate-y-1/2 z-[1000] hidden lg:block transition-shadow duration-300 hover:[box-shadow:0_0_15px_5px_rgba(34,197,94,0.6)]"
+      className="fixed left-0 top-1/2 -translate-y-1/2 z-[1000] hidden lg:block join-network-sidebar"
       style={{ width: 80 }}
       aria-label="Join the Network"
     >
