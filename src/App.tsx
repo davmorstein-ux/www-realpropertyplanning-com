@@ -313,15 +313,15 @@ const App = () => (
           ══════════════════════════════════════════════════════════ */}
 
           {/* Counties — old URL families → /{county}-county
-              Covers: /counties/{slug}, /counties/{slug}-county,
-                      /service-areas/{slug}-county, and *-probate-estate-real-estate */}
+              Covers: /counties/{slug}-county,
+                      /service-areas/{slug}-county, and *-probate-estate-real-estate
+              Note: /counties/{slug} are now direct routes above */}
           {[
             "king", "snohomish", "pierce", "kitsap", "skagit", "thurston", "whatcom",
             "clark", "spokane", "benton", "yakima", "franklin", "cowlitz",
             "grays-harbor", "island", "jefferson", "lewis", "mason", "pacific",
             "san-juan", "skamania", "wahkiakum",
           ].flatMap((slug) => [
-            <Route key={`c1-${slug}`} path={`/counties/${slug}`} element={<Navigate to={`/${slug}-county`} replace />} />,
             <Route key={`c2-${slug}`} path={`/counties/${slug}-county`} element={<Navigate to={`/${slug}-county`} replace />} />,
             <Route key={`sa-${slug}`} path={`/service-areas/${slug}-county`} element={<Navigate to={`/${slug}-county`} replace />} />,
             <Route key={`pe-${slug}`} path={`/${slug}-county-probate-estate-real-estate`} element={<Navigate to={`/${slug}-county`} replace />} />,
