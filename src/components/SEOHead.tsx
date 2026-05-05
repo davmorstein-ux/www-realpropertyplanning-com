@@ -16,7 +16,7 @@ interface SEOHeadProps {
 }
 
 const SITE_URL = "https://www.realpropertyplanning.com";
-const DEFAULT_OG_IMAGE = "https://www.realpropertyplanning.com/logo.png";
+const DEFAULT_OG_IMAGE = "https://www.realpropertyplanning.com/logo.webp";
 
 const SEOHead = ({
   title,

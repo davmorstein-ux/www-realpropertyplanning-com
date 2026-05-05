@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import joinNetworkBtn from "@/assets/JoinNetwork_Button_v4_transparent.png";
+import joinNetworkBtn from "@/assets/JoinNetwork_Button_v4_transparent.webp";
 
 const StickyContactSidebar = () => {
   return (

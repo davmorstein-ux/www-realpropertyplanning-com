@@ -1,5 +1,5 @@
 const SITE_URL = "https://www.realpropertyplanning.com";
-const LOGO_URL = `${SITE_URL}/logo.png`;
+const LOGO_URL = `${SITE_URL}/logo.webp`;
 const BUSINESS_NAME = "Real Property Planning";
 
 export const areaServed = [

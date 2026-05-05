@@ -137,7 +137,7 @@ const Header = () => {
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8 }}>
             <Link to="/" style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
               <img
-                src="/rpp-logo-v4.png"
+                src="/rpp-logo-v4.webp"
                 alt="Real Property Planning"
                 style={{ height: 56, width: "auto", maxWidth: "none", display: "block", objectFit: "contain" }}
               />
@@ -213,7 +213,7 @@ const Header = () => {
           >
             <Link to="/" style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
               <img
-                src="/rpp-logo-v4.png"
+                src="/rpp-logo-v4.webp"
                 alt="Real Property Planning"
                 style={{ height: 88, width: "auto", maxWidth: "none", display: "block", objectFit: "contain" }}
               />

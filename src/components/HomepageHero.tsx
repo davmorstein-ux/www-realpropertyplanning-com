@@ -131,7 +131,7 @@ const HomepageHero = () => {
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: isMobile ? 8 : 16 }}>
           <Link to="/" style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
             <img
-              src="/rpp-logo-v4.png"
+              src="/rpp-logo-v4.webp"
               alt="Real Property Planning"
               style={{ height: isMobile ? 56 : 88, width: "auto", maxWidth: "none", display: "block", objectFit: "contain" }}
             />
