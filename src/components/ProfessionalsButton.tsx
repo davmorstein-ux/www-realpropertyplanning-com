@@ -16,9 +16,13 @@ export default function ProfessionalsButton() {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
-    if (!ctx) return;
+    if (!ctx) {
+      console.error("Canvas 2D context failed to initialize");
+      return;
+    }
     const W = 160;
     const H = 117;
+    console.log("Canvas initialized successfully, size:", W, "x", H);
     canvas.width = W;
     canvas.height = H;
 
@@ -38,6 +42,7 @@ export default function ProfessionalsButton() {
 
     let colorProgress = 0;
     let animId: number;
+    let frameCount = 0;
 
     function lerpColor(t: number) {
       return {
@@ -60,7 +65,10 @@ export default function ProfessionalsButton() {
     }
 
     function animate() {
+      if (frameCount < 3) { console.log("frame:", frameCount, "colorProgress:", colorProgress, "hovered:", hoveredRef.current); frameCount++; }
       ctx!.clearRect(0, 0, W, H);
+      ctx!.fillStyle = "rgba(255,0,0,0.5)";
+      ctx!.fillRect(0, 0, 20, 20);
 
       colorProgress += hoveredRef.current ? 0.04 : -0.04;
       colorProgress = Math.max(0, Math.min(1, colorProgress));
