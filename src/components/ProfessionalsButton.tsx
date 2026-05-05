@@ -180,10 +180,9 @@ export default function ProfessionalsButton() {
             left: 0,
             width: W,
             height: H,
-            zIndex: 2,
+            zIndex: 4,
             pointerEvents: "none",
             clipPath: "polygon(0 0, 100% 50%, 0 100%)",
-            mixBlendMode: "screen",
           }}
         />
       </div>
