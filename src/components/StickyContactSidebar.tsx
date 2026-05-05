@@ -8,7 +8,7 @@ const StickyContactSidebar = () => {
       style={{ width: 60 }}
     >
       <Link
-        to="/join-network"
+        to="/join-the-network"
         className="relative block"
         aria-label="Join the Network"
       >
