@@ -143,6 +143,7 @@ const Header = () => {
                 style={{ height: 56, width: "auto", maxWidth: "none", display: "block", objectFit: "contain" }}
               />
             </Link>
+            <ProfessionalsButton />
             <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
               <a
                 href="tel:2069003015"
