@@ -2,8 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import blueButton from "@/assets/for-professionals-sidebar-button.png";
 import greenButton from "@/assets/for-professionals-sidebar-button-green.png";
 
-const W = 280;
-const H = 52;
+const W = 200;
+const H = 38;
 
 export default function ProfessionalsButton() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -41,7 +41,7 @@ export default function ProfessionalsButton() {
       ctx.clearRect(0, 0, W, H);
 
       const target = hoveredRef.current ? 1 : 0;
-      colorRef.current += (target - colorRef.current) * 0.04;
+      colorRef.current += (target - colorRef.current) * 0.12;
       const t = colorRef.current;
 
       const r = Math.round(100 + (80 - 100) * t);
