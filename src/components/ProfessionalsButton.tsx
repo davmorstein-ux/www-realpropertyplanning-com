@@ -129,8 +129,10 @@ export default function ProfessionalsButton() {
             left: 0,
             width: W,
             height: H,
-            zIndex: 1,
+            objectFit: "fill",
             display: "block",
+            transition: "none",
+            zIndex: 1,
           }}
         />
         <canvas
