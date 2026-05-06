@@ -220,7 +220,7 @@ const Header = () => {
                 style={{ height: 88, width: "auto", maxWidth: "none", display: "block", objectFit: "contain" }}
               />
             </Link>
-            <div style={{ background: "red", padding: 4, flexShrink: 0, minWidth: 280, height: 52 }}><ProfessionalsButton /></div>
+            <ProfessionalsButton />
             <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
               <a
                 href="tel:2069003015"
