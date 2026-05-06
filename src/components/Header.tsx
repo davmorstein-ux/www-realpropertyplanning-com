@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import ProfessionalsButton from "./ProfessionalsButton";
 
 /**
  * Site-wide header. Mirrors the homepage floating island nav (HomepageHero) so users
@@ -142,6 +143,7 @@ const Header = () => {
                 style={{ height: 56, width: "auto", maxWidth: "none", display: "block", objectFit: "contain" }}
               />
             </Link>
+            <ProfessionalsButton />
             <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
               <a
                 href="tel:2069003015"
@@ -218,6 +220,7 @@ const Header = () => {
                 style={{ height: 88, width: "auto", maxWidth: "none", display: "block", objectFit: "contain" }}
               />
             </Link>
+            <ProfessionalsButton />
             <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
               <a
                 href="tel:2069003015"

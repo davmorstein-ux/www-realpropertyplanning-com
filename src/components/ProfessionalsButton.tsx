@@ -2,8 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import blueButton from "@/assets/for-professionals-sidebar-button.png";
 import greenButton from "@/assets/for-professionals-sidebar-button-green.png";
 
-const W = 120;
-const H = 88;
+const W = 280;
+const H = 52;
 
 export default function ProfessionalsButton() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -11,7 +11,6 @@ export default function ProfessionalsButton() {
   const hoveredRef = useRef(false);
   const colorRef = useRef(0);
 
-  // Sync hovered state to ref so animation loop can read it
   useEffect(() => {
     hoveredRef.current = hovered;
   }, [hovered]);
@@ -22,7 +21,6 @@ export default function ProfessionalsButton() {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    // Nodes
     const nodes = Array.from({ length: 8 }, () => ({
       x: Math.random() * W,
       y: Math.random() * H,
@@ -30,7 +28,6 @@ export default function ProfessionalsButton() {
       vy: (Math.random() - 0.5) * 0.15,
     }));
 
-    // Pulses
     const pulses = Array.from({ length: 3 }, () => ({
       from: Math.floor(Math.random() * 8),
       to: Math.floor(Math.random() * 8),
@@ -43,7 +40,6 @@ export default function ProfessionalsButton() {
     function animate() {
       ctx.clearRect(0, 0, W, H);
 
-      // Smoothly transition color 0=blue 1=green
       const target = hoveredRef.current ? 1 : 0;
       colorRef.current += (target - colorRef.current) * 0.04;
       const t = colorRef.current;
@@ -52,7 +48,6 @@ export default function ProfessionalsButton() {
       const g = Math.round(180 + (255 - 180) * t);
       const b = Math.round(255 + (120 - 255) * t);
 
-      // Move nodes
       nodes.forEach((n) => {
         n.x += n.vx;
         n.y += n.vy;
@@ -60,7 +55,6 @@ export default function ProfessionalsButton() {
         if (n.y < 0 || n.y > H) n.vy *= -1;
       });
 
-      // Draw lines
       for (let i = 0; i < nodes.length; i++) {
         for (let j = i + 1; j < nodes.length; j++) {
           const dx = nodes[i].x - nodes[j].x;
@@ -77,7 +71,6 @@ export default function ProfessionalsButton() {
         }
       }
 
-      // Draw nodes
       nodes.forEach((n) => {
         ctx.beginPath();
         ctx.arc(n.x, n.y, 1.5, 0, Math.PI * 2);
@@ -85,7 +78,6 @@ export default function ProfessionalsButton() {
         ctx.fill();
       });
 
-      // Draw pulses
       pulses.forEach((p) => {
         p.progress += p.speed;
         if (p.progress >= 1) {
@@ -98,12 +90,10 @@ export default function ProfessionalsButton() {
         const px = from.x + (to.x - from.x) * p.progress;
         const py = from.y + (to.y - from.y) * p.progress;
         const alpha = Math.sin(p.progress * Math.PI);
-        // Glow
         ctx.beginPath();
         ctx.arc(px, py, 5, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(${r},${g},${b},${alpha * 0.3})`;
         ctx.fill();
-        // Core
         ctx.beginPath();
         ctx.arc(px, py, 2, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(255,255,255,${alpha * 0.9})`;
@@ -123,14 +113,9 @@ export default function ProfessionalsButton() {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
-        position: "fixed",
-        left: 0,
-        top: "50%",
-        transform: "translateY(-50%)",
-        zIndex: 1000,
+        display: "block",
         width: W,
         height: H,
-        display: "block",
         cursor: "pointer",
         textDecoration: "none",
       }}
@@ -161,7 +146,7 @@ export default function ProfessionalsButton() {
             height: H,
             zIndex: 2,
             pointerEvents: "none",
-            clipPath: "polygon(0 0, 100% 50%, 0 100%)",
+            borderRadius: "4px",
             mixBlendMode: "screen",
           }}
         />
