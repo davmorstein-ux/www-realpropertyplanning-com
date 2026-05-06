@@ -5,7 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
-import ProfessionalsButton from "./components/ProfessionalsButton";
+
 
 // Homepage stays eager — fastest possible first paint, no Suspense flash on "/"
 import Index from "./pages/Index";
@@ -142,7 +142,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
-        <ProfessionalsButton />
+        
 
         <Suspense fallback={<RouteFallback />}>
         <Routes>
