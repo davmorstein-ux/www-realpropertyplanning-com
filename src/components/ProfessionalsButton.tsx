@@ -41,7 +41,7 @@ export default function ProfessionalsButton() {
       ctx.clearRect(0, 0, W, H);
 
       const target = hoveredRef.current ? 1 : 0;
-      colorRef.current += (target - colorRef.current) * 0.04;
+      colorRef.current += (target - colorRef.current) * 0.12;
       const t = colorRef.current;
 
       const r = Math.round(100 + (80 - 100) * t);
