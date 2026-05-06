@@ -136,9 +136,8 @@ export default function ProfessionalsButton() {
       }}
     >
       <div style={{ position: "relative", width: W, height: H }}>
-        {/* Blue image — visible by default, fades out on hover */}
         <img
-          src={blueButton}
+          src={hovered ? greenButton : blueButton}
           alt="For Professionals"
           style={{
             position: "absolute",
@@ -146,30 +145,10 @@ export default function ProfessionalsButton() {
             left: 0,
             width: W,
             height: H,
-            zIndex: 2,
-            opacity: hovered ? 0 : 1,
-            transition: "opacity 0.4s ease",
+            zIndex: 1,
             display: "block",
           }}
         />
-        {/* Green image — hidden by default, fades in on hover */}
-        <img
-          src={greenButton}
-          alt=""
-          aria-hidden="true"
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: W,
-            height: H,
-            zIndex: 3,
-            opacity: hovered ? 1 : 0,
-            transition: "opacity 0.4s ease",
-            display: "block",
-          }}
-        />
-        {/* Canvas animation on top of both images */}
         <canvas
           ref={canvasRef}
           width={W}
@@ -180,9 +159,10 @@ export default function ProfessionalsButton() {
             left: 0,
             width: W,
             height: H,
-            zIndex: 4,
+            zIndex: 2,
             pointerEvents: "none",
             clipPath: "polygon(0 0, 100% 50%, 0 100%)",
+            mixBlendMode: "screen",
           }}
         />
       </div>
