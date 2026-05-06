@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -52,6 +53,195 @@ const categories = [
   },
 ];
 
+const professionOptions = [
+  "Attorney",
+  "CPA / Tax Advisor",
+  "Financial Planner",
+  "Senior Move Manager",
+  "Senior Housing Advisor",
+  "Estate Liquidator",
+  "Real Estate Appraiser",
+  "Lender / Financing Specialist",
+  "Other",
+];
+
+const countyOptions = [
+  "King",
+  "Snohomish",
+  "Pierce",
+  "Kitsap",
+  "Skagit",
+  "Thurston",
+  "Whatcom",
+  "Clark",
+  "Spokane",
+  "Benton",
+];
+
+const ProfessionalSignupForm = () => {
+  const [submitted, setSubmitted] = useState(false);
+  const [counties, setCounties] = useState<string[]>([]);
+
+  const toggleCounty = (county: string) => {
+    setCounties((prev) =>
+      prev.includes(county) ? prev.filter((c) => c !== county) : [...prev, county]
+    );
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setSubmitted(true);
+  };
+
+  if (submitted) {
+    return (
+      <div className="bg-card rounded-2xl border border-border shadow-sm p-10 md:p-14 text-center">
+        <h3 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-4">
+          Thank You
+        </h3>
+        <p className="text-muted-foreground text-lg leading-relaxed max-w-xl mx-auto">
+          Thank you for submitting your information. We review all applications and will be in touch within 2–3 business days.
+        </p>
+      </div>
+    );
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="bg-card rounded-2xl border border-border shadow-sm p-8 md:p-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-5">
+        {/* Full Name */}
+        <div className="flex flex-col gap-2">
+          <label className="text-foreground font-medium text-[18px]">Full Name *</label>
+          <input
+            type="text"
+            required
+            className="w-full rounded-lg border border-border bg-background px-4 py-3 text-foreground text-base focus:outline-none focus:ring-2 focus:ring-ring"
+          />
+        </div>
+
+        {/* Company */}
+        <div className="flex flex-col gap-2">
+          <label className="text-foreground font-medium text-[18px]">Company / Business Name *</label>
+          <input
+            type="text"
+            required
+            className="w-full rounded-lg border border-border bg-background px-4 py-3 text-foreground text-base focus:outline-none focus:ring-2 focus:ring-ring"
+          />
+        </div>
+
+        {/* Profession */}
+        <div className="flex flex-col gap-2">
+          <label className="text-foreground font-medium text-[18px]">Profession / Service Type *</label>
+          <select
+            required
+            className="w-full rounded-lg border border-border bg-background px-4 py-3 text-foreground text-base focus:outline-none focus:ring-2 focus:ring-ring"
+            defaultValue=""
+          >
+            <option value="" disabled>Select one…</option>
+            {professionOptions.map((opt) => (
+              <option key={opt} value={opt}>{opt}</option>
+            ))}
+          </select>
+        </div>
+
+        {/* Phone */}
+        <div className="flex flex-col gap-2">
+          <label className="text-foreground font-medium text-[18px]">Phone Number *</label>
+          <input
+            type="tel"
+            required
+            className="w-full rounded-lg border border-border bg-background px-4 py-3 text-foreground text-base focus:outline-none focus:ring-2 focus:ring-ring"
+          />
+        </div>
+
+        {/* Email */}
+        <div className="flex flex-col gap-2">
+          <label className="text-foreground font-medium text-[18px]">Email Address *</label>
+          <input
+            type="email"
+            required
+            className="w-full rounded-lg border border-border bg-background px-4 py-3 text-foreground text-base focus:outline-none focus:ring-2 focus:ring-ring"
+          />
+        </div>
+
+        {/* Website */}
+        <div className="flex flex-col gap-2">
+          <label className="text-foreground font-medium text-[18px]">Website URL</label>
+          <input
+            type="url"
+            className="w-full rounded-lg border border-border bg-background px-4 py-3 text-foreground text-base focus:outline-none focus:ring-2 focus:ring-ring"
+            placeholder="https://"
+          />
+        </div>
+
+        {/* Counties - full width */}
+        <div className="flex flex-col gap-2 md:col-span-2">
+          <label className="text-foreground font-medium text-[18px]">Counties Served *</label>
+          <div className="flex flex-wrap gap-x-5 gap-y-3">
+            {countyOptions.map((county) => (
+              <label key={county} className="flex items-center gap-2 cursor-pointer text-foreground text-base">
+                <input
+                  type="checkbox"
+                  checked={counties.includes(county)}
+                  onChange={() => toggleCounty(county)}
+                  className="w-5 h-5 rounded border-border accent-[hsl(var(--gold))]"
+                />
+                {county}
+              </label>
+            ))}
+          </div>
+        </div>
+
+        {/* About - full width */}
+        <div className="flex flex-col gap-2 md:col-span-2">
+          <label className="text-foreground font-medium text-[18px]">About You / Your Services *</label>
+          <textarea
+            required
+            rows={4}
+            placeholder="Briefly describe your background, services, and why families and executors choose to work with you."
+            className="w-full rounded-lg border border-border bg-background px-4 py-3 text-foreground text-base focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+          />
+        </div>
+
+        {/* Headshot */}
+        <div className="flex flex-col gap-2">
+          <label className="text-foreground font-medium text-[18px]">Headshot</label>
+          <input
+            type="file"
+            accept="image/jpeg,image/png,image/webp"
+            className="w-full text-foreground text-base file:mr-3 file:rounded-lg file:border-0 file:bg-secondary file:px-4 file:py-2 file:text-foreground file:font-medium file:cursor-pointer"
+          />
+        </div>
+
+        {/* Company Logo */}
+        <div className="flex flex-col gap-2">
+          <label className="text-foreground font-medium text-[18px]">Company Logo</label>
+          <input
+            type="file"
+            accept="image/jpeg,image/png,image/webp"
+            className="w-full text-foreground text-base file:mr-3 file:rounded-lg file:border-0 file:bg-secondary file:px-4 file:py-2 file:text-foreground file:font-medium file:cursor-pointer"
+          />
+        </div>
+
+        {/* How did you hear */}
+        <div className="flex flex-col gap-2 md:col-span-2">
+          <label className="text-foreground font-medium text-[18px]">How did you hear about Real Property Planning?</label>
+          <input
+            type="text"
+            className="w-full rounded-lg border border-border bg-background px-4 py-3 text-foreground text-base focus:outline-none focus:ring-2 focus:ring-ring"
+          />
+        </div>
+      </div>
+
+      <div className="mt-8 text-center">
+        <Button type="submit" variant="gold" size="lg" className="px-8 py-4 h-auto text-lg">
+          Submit My Information
+        </Button>
+      </div>
+    </form>
+  );
+};
+
 const Professionals = () => {
   return (
     <div className="min-h-screen bg-background">
@@ -64,18 +254,35 @@ const Professionals = () => {
       <main id="main-content">
 
       {/* Hero */}
-      <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
+      <section className="bg-primary pt-12 md:pt-16 pb-14 md:pb-20">
         <div className="container px-6 lg:px-8">
           <div className="max-w-[700px] mx-auto text-center">
             <h1 className="font-serif text-[2.5rem] text-primary-foreground font-semibold leading-tight mb-6">
               The Right Team Makes All the Difference
             </h1>
-            <p className="text-xl text-primary-foreground/75 leading-relaxed">
+            <p className="text-xl text-primary-foreground leading-relaxed">
               Navigating a probate sale, inherited home, or senior housing transition often means working with several professionals at once. This page highlights experienced specialists across Western Washington who families trust during these transitions.
             </p>
-            <p className="text-xl text-primary-foreground/75 leading-relaxed mt-4">
+            <p className="text-xl text-primary-foreground leading-relaxed mt-4">
               Each professional listed here works in areas that commonly intersect with real estate — so families can find the right help in one place.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Sign-Up Form */}
+      <section className="py-16 lg:py-24 bg-secondary">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center mb-10">
+            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-4">
+              Join the Real Property Planning Network
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              Complete the form below to be considered as a featured service provider for families, executors, and seniors across Western Washington.
+            </p>
+          </div>
+          <div className="max-w-4xl mx-auto">
+            <ProfessionalSignupForm />
           </div>
         </div>
       </section>
