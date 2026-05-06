@@ -40,13 +40,7 @@ export default function ProfessionalsButton() {
     function animate() {
       ctx.clearRect(0, 0, W, H);
 
-      const target = hoveredRef.current ? 1 : 0;
-      const speed = 0.08;
-      if (hoveredRef.current) {
-        colorRef.current = Math.min(1, colorRef.current + speed);
-      } else {
-        colorRef.current = Math.max(0, colorRef.current - speed);
-      }
+      colorRef.current = hoveredRef.current ? 1 : 0;
       const t = colorRef.current;
 
       const r = Math.round(100 + (80 - 100) * t);
