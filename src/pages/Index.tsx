@@ -140,8 +140,8 @@ const Index = () => {
           style={{
             fontFamily: "'DM Sans', system-ui, sans-serif",
             color: "#1B2B4B",
-            fontSize: 22,
-            fontWeight: 500,
+            fontSize: 26,
+            fontWeight: 700,
             lineHeight: 1.6,
             maxWidth: 900,
             margin: "0 auto",
