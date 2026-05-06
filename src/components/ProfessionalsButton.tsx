@@ -2,8 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import blueButton from "@/assets/for-professionals-sidebar-button.png";
 import greenButton from "@/assets/for-professionals-sidebar-button-green.png";
 
-const W = 280;
-const H = 52;
+const W = 200;
+const H = 38;
 
 export default function ProfessionalsButton() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
