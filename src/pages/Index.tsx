@@ -152,7 +152,10 @@ const Index = () => {
           When life brings its biggest transitions — probate, estate sales, senior housing, downsizing — Real Property Planning connects families, seniors, executors, and professionals with the right people and resources.
         </p>
       </div>
-import ServiceNavTiles from "@/components/ServiceNavTiles";
+
+      {/* 2. SERVICE NAV TILES */}
+      <ServiceNavTiles />
+
 
       {/* GUIDES & RESOURCES BANNER */}
       <section className="bg-navy border-y-2 border-gold py-12 md:py-14">
