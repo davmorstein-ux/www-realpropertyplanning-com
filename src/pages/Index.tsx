@@ -181,8 +181,7 @@ const Index = () => {
       {/* WARM STATEMENT */}
       <HomepageWarmStatement />
 
-      {/* TEAM SECTION */}
-      <HomepageTeamSection />
+      {/* PROFESSIONALS & SERVICES (replaces old Team Section) */}
 
       {/* PROFESSIONALS & SERVICES */}
       <ProfessionalsAndServices />
