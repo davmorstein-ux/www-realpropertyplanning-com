@@ -15,7 +15,7 @@ const styles = `
   .rpp-row-2-center .rpp-tile:nth-child(2) { grid-column: 3; }
   .rpp-row-2-center .rpp-tile:nth-child(3) { grid-column: 4; }
   .rpp-tile { perspective: 900px; perspective-origin: 50% 20%; cursor: pointer; width: 100%; }
-  .rpp-brochure { width: 100%; height: 420px; overflow: hidden; background: #FDFAF5; border-radius: 5px; border: 1px solid rgba(184,154,90,.40); position: relative; transform-origin: bottom center; transform-style: preserve-3d; box-shadow: 0 4px 0 1px rgba(155,132,78,.20), 0 8px 0 1px rgba(130,110,60,.11), 0 20px 44px rgba(18,36,63,.22); display: flex; flex-direction: column; transition: box-shadow .4s ease; }
+  .rpp-brochure { width: 100%; height: 420px !important; min-height: 420px !important; max-height: 420px !important; overflow: hidden; background: #FDFAF5; border-radius: 5px; border: 1px solid rgba(184,154,90,.40); position: relative; transform-origin: bottom center; transform-style: preserve-3d; box-shadow: 0 4px 0 1px rgba(155,132,78,.20), 0 8px 0 1px rgba(130,110,60,.11), 0 20px 44px rgba(18,36,63,.22); display: flex; flex-direction: column; transition: box-shadow .4s ease; }
   .rpp-tile:hover .rpp-brochure { box-shadow: 0 4px 0 1px rgba(155,132,78,.20), 0 8px 0 1px rgba(130,110,60,.11), 0 32px 64px rgba(18,36,63,.30); }
   .rpp-brochure::before { content: ''; position: absolute; inset: 0; background: #F0EAE0; border-radius: 5px; transform: translateY(5px) translateZ(-4px); z-index: -1; }
   .rpp-brochure::after { content: ''; position: absolute; inset: 0; background: #E5DED3; border-radius: 5px; transform: translateY(10px) translateZ(-8px); z-index: -2; }
@@ -27,9 +27,9 @@ const styles = `
   .rpp-card-inner { padding: 10px 8px 0; perspective: 700px; perspective-origin: 50% 100%; transform-style: preserve-3d; overflow: visible; flex: 1; display: flex; flex-direction: column; }
   .rpp-photo-hinge { width: 100%; transform-origin: bottom center; transform: rotateX(0deg); transition: transform .72s cubic-bezier(.33,1,.68,1); backface-visibility: hidden; display: block; line-height: 0; font-size: 0; overflow: visible; }
   .rpp-tile:hover .rpp-photo-hinge { transform: rotateX(-33deg); }
-  .rpp-house-img { display: block; width: 100%; height: auto; aspect-ratio: 560/420; object-fit: cover; margin: 0; filter: drop-shadow(0 2px 8px rgba(18,36,63,.16)); transition: filter .5s ease; vertical-align: bottom; }
+  .rpp-house-img { display: block; width: 100% !important; height: 200px !important; object-fit: cover !important; margin: 0; filter: drop-shadow(0 2px 8px rgba(18,36,63,.16)); transition: filter .5s ease; vertical-align: bottom; }
   .rpp-tile:hover .rpp-house-img { filter: drop-shadow(-3px 14px 28px rgba(18,36,63,.40)); }
-  .rpp-text-area { position: relative; margin-top: 0; padding-top: 0; height: 130px; flex-shrink: 0; display: flex; flex-direction: column; justify-content: flex-start; overflow: hidden; }
+  .rpp-text-area { position: relative; margin-top: 0; padding-top: 0; height: 110px !important; min-height: 110px !important; max-height: 110px !important; flex-shrink: 0; display: flex; flex-direction: column; justify-content: flex-start; overflow: hidden; }
   .rpp-static-content { padding: 12px 10px 0; }
   .rpp-category-pill { display: block; font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: #b89a5a; margin-bottom: 5px; transition: opacity .15s ease; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .rpp-tile-title { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 24px; color: #12243F; line-height: 1.15; transition: opacity .15s ease; }
@@ -39,7 +39,7 @@ const styles = `
   .rpp-overlay-tagline { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 14px; color: #FFF; text-align: center; line-height: 1.5; width: 100%; }
   .rpp-overlay-cta { font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .10em; text-transform: uppercase; color: #d4b87a; border-bottom: 1px solid rgba(212,184,122,.6); padding-bottom: 2px; white-space: nowrap; text-decoration: none; transition: color .2s, border-color .2s; flex-shrink: 0; }
   .rpp-overlay-cta:hover { color: #fff; border-color: rgba(255,255,255,.7); }
-  .rpp-tile-footer { display: flex; align-items: center; justify-content: space-between; padding: 11px 12px 12px; border-top: 1.5px solid rgba(184,154,90,.28); background: #FDFAF5; border-radius: 0 0 5px 5px; gap: 8px; position: relative; z-index: 40; flex-shrink: 0; min-height: 54px; }
+  .rpp-tile-footer { display: flex; align-items: center; justify-content: space-between; padding: 11px 12px 12px; border-top: 1.5px solid rgba(184,154,90,.28); background: #FDFAF5; border-radius: 0 0 5px 5px; gap: 8px; position: relative; z-index: 40; flex-shrink: 0; height: 54px !important; min-height: 54px !important; max-height: 54px !important; }
   .rpp-provider-label { font-size: 11px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: #1a3a6b; line-height: 1.4; flex: 1; }
   .rpp-arrow-wrap { margin-left: auto; width: 30px; height: 30px; border: 1.5px solid #1a3a6b; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: background .25s; flex-shrink: 0; }
   .rpp-tile:hover .rpp-arrow-wrap { background: #1a3a6b; }
