@@ -184,6 +184,9 @@ const Index = () => {
       {/* TEAM SECTION */}
       <HomepageTeamSection />
 
+      {/* PROFESSIONALS & SERVICES */}
+      <ProfessionalsAndServices />
+
       {/* 6. FAQ */}
       <HomepageFAQ />
 
