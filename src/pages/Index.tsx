@@ -18,6 +18,7 @@ import WhatHappensNext from "@/components/WhatHappensNext";
 import HomepageHero from "@/components/HomepageHero";
 import HomepageFAQ from "@/components/HomepageFAQ";
 import HomepageTeamSection from "@/components/HomepageTeamSection";
+import ProfessionalsAndServices from "@/components/ProfessionalsAndServices";
 import HowWeHelpCards from "@/components/HowWeHelpCards";
 import HomepageWarmStatement from "@/components/HomepageWarmStatement";
 
@@ -182,6 +183,9 @@ const Index = () => {
 
       {/* TEAM SECTION */}
       <HomepageTeamSection />
+
+      {/* PROFESSIONALS & SERVICES */}
+      <ProfessionalsAndServices />
 
       {/* 6. FAQ */}
       <HomepageFAQ />
