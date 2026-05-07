@@ -82,84 +82,68 @@ const RppTile = ({ pill, title, tagline, cta, provider, imgSrc }) => (
   </div>
 );
 
-const ProfessionalsAndServices = () => (
+const FeaturedAttorneys = () => (
   <div className="rpp-grid-wrap">
     <style>{styles}</style>
     <div className="rpp-section">
       <div className="rpp-grid-row rpp-row-1">
         <RppTile
           pill="Legal Services"
-          title="Attorneys"
-          tagline="Probate & Estate Attorneys"
+          title="Divorce Attorneys"
+          tagline="Legal Guidance Through Divorce & Property Division"
           cta="View Featured Attorneys →"
           provider="Information & Featured Providers"
-          imgSrc="/tiles/set1/attorneys.webp"
+          imgSrc="/tiles/attorneys/divorce-attorneys.webp"
         />
         <RppTile
-          pill="Tax & Accounting"
-          title="Certified Public Accountants"
-          tagline="Expert Tax Guidance for Estate Matters"
-          cta="View Featured CPAs →"
+          pill="Legal Services"
+          title="Elder Law Attorneys"
+          tagline="Protecting Seniors' Rights & Long-Term Planning"
+          cta="View Featured Attorneys →"
           provider="Information & Featured Providers"
-          imgSrc="/tiles/set1/certified-public-accountants.webp"
+          imgSrc="/tiles/attorneys/elder-law-attorneys.webp"
         />
         <RppTile
-          pill="Real Estate"
-          title="Real Estate Brokers"
-          tagline="Selling Estate & Senior Properties"
-          cta="View Featured Brokers →"
+          pill="Legal Services"
+          title="Family Law Attorneys"
+          tagline="Compassionate Legal Support for Families in Transition"
+          cta="View Featured Attorneys →"
           provider="Information & Featured Providers"
-          imgSrc="/tiles/set1/real-estate-brokers.webp"
+          imgSrc="/tiles/attorneys/family-law-attorneys.webp"
         />
         <RppTile
-          pill="Real Estate"
-          title="Real Estate Appraisers"
-          tagline="Certified Property Valuations"
-          cta="View Featured Appraisers →"
+          pill="Legal Services"
+          title="Probate Attorneys"
+          tagline="Expert Guidance Through the Probate Process"
+          cta="View Featured Attorneys →"
           provider="Information & Featured Providers"
-          imgSrc="/tiles/set1/real-estate-appraisers.webp"
+          imgSrc="/tiles/attorneys/probate-attorneys.webp"
         />
         <RppTile
-          pill="Financial Services"
-          title="Financial Planners"
-          tagline="Protecting Wealth Through Transitions"
-          cta="View Featured Planners →"
+          pill="Legal Services"
+          title="Real Estate Attorneys"
+          tagline="Protecting Your Interests in Every Property Transaction"
+          cta="View Featured Attorneys →"
           provider="Information & Featured Providers"
-          imgSrc="/tiles/set1/financial-planners.webp"
+          imgSrc="/tiles/attorneys/real-estate-attorneys.webp"
         />
       </div>
-      <div className="rpp-grid-row rpp-row-2 rpp-row-2-center">
+      <div className="rpp-grid-row rpp-row-2 rpp-row-2-1">
         <RppTile
-          pill="Lending"
-          title="Mortgage Lenders"
-          tagline="Financing Inherited Real Estate"
-          cta="View Featured Lenders →"
+          pill="Legal Services"
+          title="Estate Planning Attorneys"
+          tagline="Planning Today for Peace of Mind Tomorrow"
+          cta="View Featured Attorneys →"
           provider="Information & Featured Providers"
-          imgSrc="/tiles/set1/mortgage-lenders.webp"
-        />
-        <RppTile
-          pill="Senior Services"
-          title="Senior Living Advisors"
-          tagline="Expert Guidance for Senior Living"
-          cta="View Featured Advisors →"
-          provider="Information & Featured Providers"
-          imgSrc="/tiles/set1/senior-living-advisors.webp"
-        />
-        <RppTile
-          pill="Senior Services"
-          title="Senior Move Managers"
-          tagline="Compassionate Moves for Seniors"
-          cta="View Featured Managers →"
-          provider="Information & Featured Providers"
-          imgSrc="/tiles/set1/senior-move-managers.webp"
+          imgSrc="/tiles/attorneys/estate-planning-attorneys.webp"
         />
       </div>
       <div className="rpp-provider-bar">
-        <div className="rpp-provider-bar-text"><strong>Are you a professional serving estate, probate or senior transition clients?</strong> Join Washington State's most trusted referral network.</div>
+        <div className="rpp-provider-bar-text"><strong>Are you an attorney serving estate, probate or senior transition clients?</strong> Join Washington State's most trusted referral network.</div>
         <button className="rpp-provider-bar-btn">Get Featured →</button>
       </div>
     </div>
   </div>
 );
 
-export default ProfessionalsAndServices;
+export default FeaturedAttorneys;
