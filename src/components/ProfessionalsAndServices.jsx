@@ -83,6 +83,10 @@ const ProfessionalsAndServices = () => (
   <div className="rpp-grid-wrap">
     <style>{styles}</style>
     <div className="rpp-section">
+      <div style={{ textAlign: 'center', marginBottom: '40px', paddingTop: '48px' }}>
+        <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: '13px', fontWeight: 700, letterSpacing: '.18em', textTransform: 'uppercase', color: '#b89a5a', display: 'block', marginBottom: '10px' }}>Washington State</span>
+        <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '40px', fontWeight: 700, color: '#12243F', lineHeight: 1.15, margin: 0 }}>Professionals &amp; Services</h2>
+      </div>
       <div className="rpp-grid-row rpp-row-1">
         <RppTile pill="Legal Services" title="Attorneys" tagline="Probate & Estate Attorneys" cta="View Featured Attorneys →" provider="Information & Featured Providers" imgSrc="/tiles/set1/attorneys.webp" />
         <RppTile pill="Tax & Accounting" title="Certified Public Accountants" tagline="Expert Tax Guidance for Estate Matters" cta="View Featured CPAs →" provider="Information & Featured Providers" imgSrc="/tiles/set1/certified-public-accountants.webp" />
