@@ -10,7 +10,7 @@ import { ChevronRight } from "lucide-react";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import mappin3d from "@/assets/real-estate-service-areas-mappin-washington.webp";
 import expRealtyLogo from "@/assets/exp-realty-real-estate-logo-washington.webp";
-import ServiceNavTiles from "@/components/ServiceNavTiles";
+
 import HomepageLeadForm from "@/components/HomepageLeadForm";
 import LeadMagnetBlock from "@/components/LeadMagnetBlock";
 import EducationalPathways from "@/components/EducationalPathways";
@@ -152,8 +152,6 @@ const Index = () => {
         </p>
       </div>
 
-      {/* 2. SERVICE NAV TILES */}
-      <ServiceNavTiles />
 
       {/* GUIDES & RESOURCES BANNER */}
       <section className="bg-navy border-y-2 border-gold py-12 md:py-14">
