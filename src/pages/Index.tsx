@@ -184,8 +184,11 @@ const Index = () => {
       {/* WARM STATEMENT */}
       <HomepageWarmStatement />
 
-      {/* SERVICE NAV TILES */}
-      <ServiceNavTiles />
+      {/* ROLES & RESPONSIBILITIES */}
+      <RolesAndResponsibilities />
+
+      {/* PLANNING & NEXT STEPS */}
+      <PlanningAndNextSteps />
 
       {/* 6. FAQ */}
       <HomepageFAQ />
