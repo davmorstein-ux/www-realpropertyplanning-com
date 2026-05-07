@@ -3,7 +3,7 @@ import React from 'react';
 const styles = `
   @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap');
   .rpp-grid-wrap * { box-sizing: border-box; margin: 0; padding: 0; }
-  .rpp-section { font-family: 'Montserrat', sans-serif; padding: 0 28px 64px; }
+  .rpp-section { font-family: 'Montserrat', sans-serif; padding: 0 40px 64px; }
   .rpp-grid-row { display: grid; gap: 20px; max-width: 1300px; margin: 0 auto 20px; }
   .rpp-row-1 { grid-template-columns: repeat(5, 1fr); }
   .rpp-row-2 { grid-template-columns: repeat(5, 1fr); }
@@ -15,7 +15,7 @@ const styles = `
   .rpp-row-2-center .rpp-tile:nth-child(2) { grid-column: 3; }
   .rpp-row-2-center .rpp-tile:nth-child(3) { grid-column: 4; }
   .rpp-tile { perspective: 900px; perspective-origin: 50% 20%; cursor: pointer; width: 100%; }
-  .rpp-brochure { width: 100%; height: 380px; background: #FDFAF5; border-radius: 5px; border: 1px solid rgba(184,154,90,.40); position: relative; transform-origin: bottom center; transform-style: preserve-3d; box-shadow: 0 4px 0 1px rgba(155,132,78,.20), 0 8px 0 1px rgba(130,110,60,.11), 0 20px 44px rgba(18,36,63,.22); display: flex; flex-direction: column; transition: box-shadow .4s ease; }
+  .rpp-brochure { width: 100%; height: 420px; overflow: hidden; background: #FDFAF5; border-radius: 5px; border: 1px solid rgba(184,154,90,.40); position: relative; transform-origin: bottom center; transform-style: preserve-3d; box-shadow: 0 4px 0 1px rgba(155,132,78,.20), 0 8px 0 1px rgba(130,110,60,.11), 0 20px 44px rgba(18,36,63,.22); display: flex; flex-direction: column; transition: box-shadow .4s ease; }
   .rpp-tile:hover .rpp-brochure { box-shadow: 0 4px 0 1px rgba(155,132,78,.20), 0 8px 0 1px rgba(130,110,60,.11), 0 32px 64px rgba(18,36,63,.30); }
   .rpp-brochure::before { content: ''; position: absolute; inset: 0; background: #F0EAE0; border-radius: 5px; transform: translateY(5px) translateZ(-4px); z-index: -1; }
   .rpp-brochure::after { content: ''; position: absolute; inset: 0; background: #E5DED3; border-radius: 5px; transform: translateY(10px) translateZ(-8px); z-index: -2; }
