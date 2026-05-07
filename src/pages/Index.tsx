@@ -152,8 +152,6 @@ const Index = () => {
         </p>
       </div>
 
-      {/* 2. SERVICE NAV TILES */}
-      <ServiceNavTiles />
 
       {/* GUIDES & RESOURCES BANNER */}
       <section className="bg-navy border-y-2 border-gold py-12 md:py-14">
