@@ -153,8 +153,8 @@ const Index = () => {
         </p>
       </div>
 
-      {/* 2. SERVICE NAV TILES */}
-      <ServiceNavTiles />
+      {/* PROFESSIONALS & SERVICES */}
+      <ProfessionalsAndServices />
 
 
       {/* GUIDES & RESOURCES BANNER */}
@@ -183,10 +183,8 @@ const Index = () => {
       {/* WARM STATEMENT */}
       <HomepageWarmStatement />
 
-      {/* PROFESSIONALS & SERVICES (replaces old Team Section) */}
-
-      {/* PROFESSIONALS & SERVICES */}
-      <ProfessionalsAndServices />
+      {/* SERVICE NAV TILES */}
+      <ServiceNavTiles />
 
       {/* 6. FAQ */}
       <HomepageFAQ />
