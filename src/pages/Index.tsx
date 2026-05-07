@@ -10,6 +10,7 @@ import { ChevronRight } from "lucide-react";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import mappin3d from "@/assets/real-estate-service-areas-mappin-washington.webp";
 import expRealtyLogo from "@/assets/exp-realty-real-estate-logo-washington.webp";
+import ServiceNavTiles from "@/components/ServiceNavTiles";
 
 import HomepageLeadForm from "@/components/HomepageLeadForm";
 import LeadMagnetBlock from "@/components/LeadMagnetBlock";
@@ -151,6 +152,9 @@ const Index = () => {
           When life brings its biggest transitions — probate, estate sales, senior housing, downsizing — Real Property Planning connects families, seniors, executors, and professionals with the right people and resources.
         </p>
       </div>
+
+      {/* 2. SERVICE NAV TILES */}
+      <ServiceNavTiles />
 
 
       {/* GUIDES & RESOURCES BANNER */}
