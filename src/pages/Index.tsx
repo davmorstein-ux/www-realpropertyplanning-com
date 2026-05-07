@@ -157,6 +157,11 @@ const Index = () => {
       {/* PROFESSIONALS & SERVICES */}
       <ProfessionalsAndServices />
 
+      {/* ROLES & RESPONSIBILITIES */}
+      <RolesAndResponsibilities />
+
+      {/* PLANNING & NEXT STEPS */}
+      <PlanningAndNextSteps />
 
       {/* GUIDES & RESOURCES BANNER */}
       <section className="bg-navy border-y-2 border-gold py-12 md:py-14">
@@ -183,12 +188,6 @@ const Index = () => {
 
       {/* WARM STATEMENT */}
       <HomepageWarmStatement />
-
-      {/* ROLES & RESPONSIBILITIES */}
-      <RolesAndResponsibilities />
-
-      {/* PLANNING & NEXT STEPS */}
-      <PlanningAndNextSteps />
 
       {/* 6. FAQ */}
       <HomepageFAQ />
