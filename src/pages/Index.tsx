@@ -10,7 +10,8 @@ import { ChevronRight } from "lucide-react";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import mappin3d from "@/assets/real-estate-service-areas-mappin-washington.webp";
 import expRealtyLogo from "@/assets/exp-realty-real-estate-logo-washington.webp";
-import ServiceNavTiles from "@/components/ServiceNavTiles";
+import RolesAndResponsibilities from "@/components/RolesAndResponsibilities";
+import PlanningAndNextSteps from "@/components/PlanningAndNextSteps";
 
 import HomepageLeadForm from "@/components/HomepageLeadForm";
 import LeadMagnetBlock from "@/components/LeadMagnetBlock";
@@ -183,8 +184,11 @@ const Index = () => {
       {/* WARM STATEMENT */}
       <HomepageWarmStatement />
 
-      {/* SERVICE NAV TILES */}
-      <ServiceNavTiles />
+      {/* ROLES & RESPONSIBILITIES */}
+      <RolesAndResponsibilities />
+
+      {/* PLANNING & NEXT STEPS */}
+      <PlanningAndNextSteps />
 
       {/* 6. FAQ */}
       <HomepageFAQ />
