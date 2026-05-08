@@ -153,14 +153,8 @@ const Index = () => {
         </p>
       </div>
 
-      {/* PROFESSIONALS & SERVICES */}
-      <ProfessionalsAndServices />
-
-      {/* ROLES & RESPONSIBILITIES */}
-      <RolesAndResponsibilities />
-
-      {/* PLANNING & NEXT STEPS */}
-      <PlanningAndNextSteps />
+      {/* HOMEPAGE NAVIGATION */}
+      <HomepageNav />
 
       {/* GUIDES & RESOURCES BANNER */}
       <section className="bg-navy border-y-2 border-gold py-12 md:py-14">
