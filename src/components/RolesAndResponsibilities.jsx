@@ -2,7 +2,7 @@ import React from 'react';
 
 const styles = `
   @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap');
-  .p2-wrap * { box-sizing: border-box; margin: 0; padding: 0; }
+  .p2-wrap { overflow: visible; } .p2-wrap * { box-sizing: border-box; margin: 0; padding: 0; }
   .p2-section { font-family: 'Montserrat', sans-serif; padding: 0 40px 64px; overflow: visible; }
   .p2-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1300px; margin: 0 auto 20px; padding-top: 25px; overflow: visible; }
   .p2-tile { width: 100%; cursor: pointer; text-decoration: none; display: block; overflow: visible; }
