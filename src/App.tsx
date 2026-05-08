@@ -17,6 +17,7 @@ const ClientStories = lazy(() => import("./pages/ClientStories"));
 const SeniorTransitions = lazy(() => import("./pages/SeniorTransitions"));
 const HelpingAgingParents = lazy(() => import("./pages/HelpingAgingParents"));
 const EstateProbateInheritedProperty = lazy(() => import("./pages/EstateProbateInheritedProperty"));
+const WhatShouldWeDoFirst = lazy(() => import("./pages/WhatShouldWeDoFirst"));
 const SeniorPlacement = lazy(() => import("./pages/SeniorPlacement"));
 const SellHouseFundSeniorLiving = lazy(() => import("./pages/SellHouseFundSeniorLiving"));
 const ForAttorneys = lazy(() => import("./pages/ForAttorneys"));
