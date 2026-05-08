@@ -13,6 +13,19 @@ type NavItem = { label: string; href: string; children?: NavChild[] };
 
 const NAV: NavItem[] = [
   { label: "Home", href: "/" },
+  {
+    label: "Start Here",
+    href: "/what-should-we-do-first",
+    children: [
+      { label: "What Should We Do First?", href: "/what-should-we-do-first" },
+      { label: "Helping an Aging Parent", href: "/helping-aging-parents" },
+      { label: "Estate, Probate & Inherited Property", href: "/estate-probate-inherited-property" },
+      { label: "What To Do With the House", href: "/what-to-do-with-the-house" },
+      { label: "Housing & Care Options", href: "/understanding-housing-care-options" },
+      { label: "Senior Transitions", href: "/understanding-senior-transitions" },
+      { label: "Professional Team", href: "/building-your-trusted-professional-team" },
+    ],
+  },
   { label: "Probate & Estate", href: "/probate-estate-sales" },
   {
     label: "Senior Transitions",

@@ -13,6 +13,27 @@ const Footer = () => {
   return (
     <footer data-nosnippet="true" className="bg-navy-dark py-16">
       <div className="container px-6 lg:px-8">
+        {/* Guided Journeys */}
+        <div className="mb-8 pb-8 border-b border-primary-foreground/10">
+          <h3 className="text-primary-foreground font-serif text-lg font-semibold mb-3">Guided Journeys</h3>
+          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-1 text-primary-foreground/70 text-base">
+            <li><Link to="/what-should-we-do-first" className="hover:text-gold transition-colors">What Should We Do First?</Link></li>
+            <li><Link to="/helping-aging-parents" className="hover:text-gold transition-colors">Helping an Aging Parent</Link></li>
+            <li><Link to="/estate-probate-inherited-property" className="hover:text-gold transition-colors">Estate, Probate & Inherited Property</Link></li>
+            <li><Link to="/what-to-do-with-the-house" className="hover:text-gold transition-colors">What To Do With the House</Link></li>
+            <li><Link to="/understanding-housing-care-options" className="hover:text-gold transition-colors">Housing & Care Options</Link></li>
+            <li><Link to="/understanding-senior-transitions" className="hover:text-gold transition-colors">Understanding Senior Transitions</Link></li>
+            <li><Link to="/aging-in-place-staying-home-safely" className="hover:text-gold transition-colors">Aging in Place Safely</Link></li>
+            <li><Link to="/estate-planning-powers-of-attorney" className="hover:text-gold transition-colors">Estate Planning & POA</Link></li>
+            <li><Link to="/executor-responsibilities-first-steps" className="hover:text-gold transition-colors">Executor First Steps</Link></li>
+            <li><Link to="/downsizing-preparing-for-transition" className="hover:text-gold transition-colors">Downsizing & Transition</Link></li>
+            <li><Link to="/preparing-home-for-sale-during-transition" className="hover:text-gold transition-colors">Preparing the Home for Sale</Link></li>
+            <li><Link to="/selling-an-inherited-home" className="hover:text-gold transition-colors">Selling an Inherited Home</Link></li>
+            <li><Link to="/date-of-death-valuation-property-appraisals" className="hover:text-gold transition-colors">Date-of-Death Valuation</Link></li>
+            <li><Link to="/building-your-trusted-professional-team" className="hover:text-gold transition-colors">Building Your Professional Team</Link></li>
+          </ul>
+        </div>
+
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {/* Brand & NAP */}
           <div className="lg:col-span-1">
