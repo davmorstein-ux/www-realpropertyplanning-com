@@ -13,7 +13,7 @@ const styles = `
   .p2corner.tr { top: 8px; right: 8px; border-top: 1.5px solid #b89a5a; border-right: 1.5px solid #b89a5a; }
   .p2corner.bl { bottom: 8px; left: 8px; border-bottom: 1.5px solid #b89a5a; border-left: 1.5px solid #b89a5a; }
   .p2corner.br { bottom: 8px; right: 8px; border-bottom: 1.5px solid #b89a5a; border-right: 1.5px solid #b89a5a; }
-  .p2img { display: block; width: 100%; height: auto; flex-shrink: 0; transition: transform .4s ease; }
+  .p2img { width: 100%; height: auto; object-fit: contain; object-position: top center; display: block; }
   .p2tile:hover .p2img { transform: scale(1.03); }
   .p2body { padding: 12px 10px 0; overflow: hidden; position: relative; height: 100px; flex-shrink: 0; }
   .p2pill { display: block; font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: #b89a5a; margin-bottom: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; transition: opacity .15s ease; }
