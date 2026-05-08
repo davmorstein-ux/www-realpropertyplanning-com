@@ -9,21 +9,7 @@ import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washingto
 import iconAttorneys from "@/assets/icons/probate-attorney-services-icon-washington.webp";
 import CTASection from "@/components/CTASection";
 import PageFAQ from "@/components/PageFAQ";
-import tileFamilyLaw from "@/assets/FAMILY_LAW_TILE_cropped.webp";
-import tileProbate from "@/assets/PROBATE_TILE_cropped.webp";
-import tileRealEstate from "@/assets/REAL_ESTATE_TILE_cropped.webp";
-import tileDivorce from "@/assets/DIVORCE_TILE_cropped.webp";
-import tileElderLaw from "@/assets/ELDER_LAW_TILE_cropped.webp";
-import tileEstatePlanning from "@/assets/ESTATE_PLANNING_TILE_cropped.webp";
-
-const attorneyTiles = [
-  { src: tileFamilyLaw, alt: "Family Law Attorneys", href: "/for-family-law-attorneys" },
-  { src: tileProbate, alt: "Probate Attorneys", href: "/for-probate-attorneys" },
-  { src: tileRealEstate, alt: "Real Estate Attorneys", href: "/real-estate-attorneys" },
-  { src: tileDivorce, alt: "Divorce Attorneys", href: "/grey-divorce" },
-  { src: tileElderLaw, alt: "Elder Law Attorneys", href: "/for-elder-law-attorneys" },
-  { src: tileEstatePlanning, alt: "Estate Planning Attorneys", href: "/for-estate-planning-attorneys" },
-];
+import FeaturedAttorneys from "@/components/FeaturedAttorneys";
 
 const ForAttorneys = () => (
   <div className="min-h-screen bg-background">
@@ -71,40 +57,7 @@ const ForAttorneys = () => (
     </section>
 
     {/* Attorney Specialty Tiles */}
-    <section id="areas-of-collaboration" className="pt-6 md:pt-8 pb-12 lg:pb-16 bg-background">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-[1200px] mx-auto">
-          <p className="text-center text-muted-foreground text-lg md:text-xl leading-[1.8] font-bold mb-4 md:mb-6">
-            Select the area of law that best fits your client's situation below.
-          </p>
-          <div className="text-center mb-8">
-            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-bold mb-3">
-              Areas of Collaboration
-            </h2>
-          </div>
-          <div className="mx-auto grid w-full max-w-[1200px] grid-cols-2 items-start gap-4 sm:grid-cols-3 attorney-tiles-grid">
-            {attorneyTiles.map((tile) => (
-              <a
-                key={tile.alt}
-                href={tile.href}
-                aria-label={tile.alt}
-                style={{ background: "transparent" }}
-                className="block w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 hover:scale-105 transition-transform duration-200"
-              >
-                <img
-                  src={tile.src}
-                  alt={tile.alt}
-                  className="block w-full h-auto select-none"
-                  style={{ background: "transparent" }}
-                  draggable={false}
-                  loading="lazy"
-                />
-              </a>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
+    <FeaturedAttorneys />
 
     {/* Attorney type definitions */}
     <section className="pt-6 md:pt-8 pb-8 md:pb-10 bg-background">
