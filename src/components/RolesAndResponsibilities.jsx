@@ -36,6 +36,7 @@ const styles = `
   .p2heading { text-align: center; margin-bottom: 40px; padding-top: 48px; }
   .p2eyebrow { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: #b89a5a; display: block; margin-bottom: 10px; }
   .p2h2 { font-family: 'Cormorant Garamond', serif; font-size: 40px; font-weight: 700; color: #12243F; line-height: 1.15; margin: 0; }
+  #roles-section .p2card { height: 380px !important; min-height: 380px !important; max-height: 380px !important; overflow: hidden !important; }
 `;
 
 
@@ -66,7 +67,7 @@ const P2Tile = ({ pill, title, tagline, imgSrc, href }) => (
 
 
 const RolesAndResponsibilities = () => (
-  <div className="p2wrap">
+  <div id="roles-section" className="p2wrap">
     <style>{styles}</style>
     <div className="p2section">
       <div className="p2heading">
