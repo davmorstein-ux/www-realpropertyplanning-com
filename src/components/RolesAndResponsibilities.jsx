@@ -6,10 +6,8 @@ const styles = `
   .rr-section { font-family: 'Montserrat', sans-serif; padding: 0 40px 64px; }
   .rr-grid-row { display: grid; gap: 20px; max-width: 1300px; margin: 0 auto 20px; grid-template-columns: repeat(4, 1fr); }
   .rr-tile { perspective: 900px; perspective-origin: 50% 20%; cursor: pointer; width: 100%; }
-  .rr-brochure { width: 100%; height: 420px !important; min-height: 420px !important; max-height: 420px !important; overflow: hidden; background: #FDFAF5; border-radius: 5px; border: 1px solid rgba(184,154,90,.40); position: relative; transform: rotateX(28deg); transform-origin: bottom center; transform-style: preserve-3d; box-shadow: 0 4px 0 1px rgba(155,132,78,.20), 0 8px 0 1px rgba(130,110,60,.11), 0 20px 44px rgba(18,36,63,.22); display: flex; flex-direction: column; transition: box-shadow .4s ease; }
-  .rr-tile:hover .rr-brochure { box-shadow: 0 4px 0 1px rgba(155,132,78,.20), 0 8px 0 1px rgba(130,110,60,.11), 0 32px 64px rgba(18,36,63,.30); }
-  .rr-brochure::before { content: ''; position: absolute; inset: 0; background: #F0EAE0; border-radius: 5px; transform: translateY(5px) translateZ(-4px); z-index: -1; }
-  .rr-brochure::after { content: ''; position: absolute; inset: 0; background: #E5DED3; border-radius: 5px; transform: translateY(10px) translateZ(-8px); z-index: -2; }
+  .rr-brochure { width: 100%; height: 420px !important; min-height: 420px !important; max-height: 420px !important; overflow: visible; padding-top: 20px; background: #FDFAF5; border-radius: 5px; border: 1px solid rgba(184,154,90,.40); position: relative; box-shadow: 0 2px 12px rgba(18,36,63,.12); display: flex; flex-direction: column; transition: box-shadow .4s ease; }
+  .rr-tile:hover .rr-brochure { box-shadow: 0 4px 20px rgba(18,36,63,.18); }
   .rr-corner { position: absolute; width: 14px; height: 14px; pointer-events: none; z-index: 50; }
   .rr-corner.tl { top: 8px; left: 8px; border-top: 1.5px solid #b89a5a; border-left: 1.5px solid #b89a5a; }
   .rr-corner.tr { top: 8px; right: 8px; border-top: 1.5px solid #b89a5a; border-right: 1.5px solid #b89a5a; }
@@ -30,7 +28,7 @@ const styles = `
   .rr-overlay-tagline { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 14px; color: #FFF; text-align: center; line-height: 1.5; width: 100%; }
   .rr-overlay-cta { font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .10em; text-transform: uppercase; color: #d4b87a; border-bottom: 1px solid rgba(212,184,122,.6); padding-bottom: 2px; white-space: nowrap; text-decoration: none; transition: color .2s, border-color .2s; flex-shrink: 0; }
   .rr-overlay-cta:hover { color: #fff; border-color: rgba(255,255,255,.7); }
-  .rr-tile-footer { display: flex; align-items: center; justify-content: space-between; padding: 11px 12px 12px; border-top: 1.5px solid rgba(184,154,90,.28); background: #FDFAF5; border-radius: 0 0 5px 5px; gap: 8px; position: relative; z-index: 40; flex-shrink: 0; height: 54px !important; min-height: 54px !important; max-height: 54px !important; }
+  .rr-tile-footer { display: flex; align-items: center; justify-content: space-between; padding: 11px 12px 12px; border-top: 1.5px solid rgba(184,154,90,.28); background: #FDFAF5; border-radius: 0 0 5px 5px; gap: 8px; position: relative; z-index: 40; flex-shrink: 0; height: 54px !important; min-height: 54px !important; max-height: 54px !important; overflow: hidden; }
   .rr-provider-label { font-size: 11px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: #1a3a6b; line-height: 1.4; flex: 1; }
   .rr-arrow-wrap { margin-left: auto; width: 30px; height: 30px; border: 1.5px solid #1a3a6b; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: background .25s; flex-shrink: 0; }
   .rr-tile:hover .rr-arrow-wrap { background: #1a3a6b; }
