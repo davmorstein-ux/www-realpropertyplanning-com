@@ -15,8 +15,8 @@ interface SEOHeadProps {
   noindex?: boolean;
 }
 
-const SITE_URL = "https://www.realpropertyplanning.com";
-const DEFAULT_OG_IMAGE = "https://www.realpropertyplanning.com/logo.webp";
+const SITE_URL = "https://realpropertyplanning.com";
+const DEFAULT_OG_IMAGE = "https://realpropertyplanning.com/logo.webp";
 
 const SEOHead = ({
   title,

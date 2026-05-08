@@ -55,7 +55,7 @@ type CountyVideo = {
   uploadDate?: string;
 };
 
-const SITE_URL = "https://www.realpropertyplanning.com";
+const SITE_URL = "https://realpropertyplanning.com";
 
 const COUNTY_WEBSITES: Record<string, string> = {
   "benton-county":    "https://www.co.benton.wa.us",
