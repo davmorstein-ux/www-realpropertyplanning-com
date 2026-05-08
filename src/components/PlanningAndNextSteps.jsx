@@ -5,7 +5,7 @@ const styles = `
   #planning-section .pns-grid-wrap * { box-sizing: border-box; margin: 0; padding: 0; }
   #planning-section .pns-section { font-family: 'Montserrat', sans-serif; padding: 0 40px 64px; }
   #planning-section .pns-grid-row { display: grid; gap: 20px; max-width: 1300px; margin: 30px auto 20px; grid-template-columns: repeat(4, 1fr); }
-  #planning-section .pns-tile { width: 100%; display: flex; flex-direction: column; cursor: pointer; }
+  #planning-section .pns-tile { width: 100%; display: flex; flex-direction: column; cursor: pointer; text-decoration: none; color: inherit; }
   #planning-section .pns-brochure { width: 100%; background: #FDFAF5; border-radius: 5px; border: 1px solid rgba(184,154,90,.40); box-shadow: 0 8px 24px rgba(18,36,63,.15); display: flex; flex-direction: column; overflow: visible; position: relative; transition: box-shadow .4s ease; }
   #planning-section .pns-tile:hover .pns-brochure { box-shadow: 0 12px 32px rgba(18,36,63,.22); }
   #planning-section .pns-corner { position: absolute; width: 14px; height: 14px; pointer-events: none; z-index: 50; }
@@ -15,7 +15,7 @@ const styles = `
   #planning-section .pns-corner.br { bottom: 8px; right: 8px; border-bottom: 1.5px solid #b89a5a; border-right: 1.5px solid #b89a5a; }
   #planning-section .pns-card-inner { padding: 30px 0 0; overflow: visible; flex: 1; display: flex; flex-direction: column; }
   #planning-section .pns-photo-hinge { width: 100%; display: block; line-height: 0; font-size: 0; overflow: visible; }
-  #planning-section .pns-house-img { display: block; width: 100%; height: 220px; object-fit: cover; border-radius: 5px 5px 0 0; }
+  #planning-section .pns-house-img { display: block; width: 100%; height: 220px; object-fit: contain; border-radius: 5px 5px 0 0; }
   #planning-section .pns-text-area { height: 120px; overflow: hidden; padding: 10px; flex-shrink: 0; position: relative; display: flex; flex-direction: column; justify-content: flex-start; }
   #planning-section .pns-static-content { padding: 4px 2px 0; }
   #planning-section .pns-category-pill { display: block; font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: #b89a5a; margin-bottom: 5px; transition: opacity .15s ease; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -36,8 +36,8 @@ const styles = `
   #planning-section .pns-provider-bar-btn:hover { background: #d4b87a; }
 `;
 
-const PnsTile = ({ pill, title, tagline, cta, provider, imgSrc }) => (
-  <div className="pns-tile">
+const PnsTile = ({ pill, title, tagline, cta, provider, imgSrc, href }) => (
+  <a className="pns-tile" href={href} aria-label={`Open ${title}`}>
     <div className="pns-brochure">
       <div className="pns-corner tl" /><div className="pns-corner tr" />
       <div className="pns-corner bl" /><div className="pns-corner br" />
@@ -52,7 +52,6 @@ const PnsTile = ({ pill, title, tagline, cta, provider, imgSrc }) => (
           </div>
           <div className="pns-hover-panel">
             <div className="pns-overlay-tagline">{tagline}</div>
-            
           </div>
         </div>
       </div>
@@ -63,7 +62,7 @@ const PnsTile = ({ pill, title, tagline, cta, provider, imgSrc }) => (
         </div>
       </div>
     </div>
-  </div>
+  </a>
 );
 
 const PlanningAndNextSteps = () => (
@@ -76,14 +75,14 @@ const PlanningAndNextSteps = () => (
           <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '40px', fontWeight: 700, color: '#12243F', lineHeight: 1.15, margin: 0 }}>Planning &amp; Next Steps</h2>
         </div>
         <div className="pns-grid-row">
-          <PnsTile pill="Senior Living" title="Senior Living Options" tagline="Finding the Right Community for You" cta="Learn More →" provider="Information & Featured Providers" imgSrc="/tiles/set3/senior-living-options.webp" />
-          <PnsTile pill="Real Estate" title="Home Values & Pricing" tagline="Understanding What Your Property Is Worth" cta="Learn More →" provider="Information & Featured Providers" imgSrc="/tiles/set3/home-values-pricing.webp" />
-          <PnsTile pill="Real Estate" title="Senior Home Sales" tagline="Selling Your Home With Care & Confidence" cta="Learn More →" provider="Information & Featured Providers" imgSrc="/tiles/set3/senior-home-sales.webp" />
-          <PnsTile pill="Financial" title="Paying for Senior Living" tagline="Planning & Funding Your Next Chapter" cta="Learn More →" provider="Information & Featured Providers" imgSrc="/tiles/set3/paying-for-senior-living.webp" />
-          <PnsTile pill="Washington State" title="Service Areas" tagline="Local Expertise Across Washington State" cta="Learn More →" provider="Information & Featured Providers" imgSrc="/tiles/set3/service-areas.webp" />
-          <PnsTile pill="Education" title="Guides & Resources" tagline="Practical Tools for Every Step of the Way" cta="Learn More →" provider="Information & Featured Providers" imgSrc="/tiles/set3/guides-resources.webp" />
-          <PnsTile pill="Life Transitions" title="Grey Divorce" tagline="Real Estate & Housing After Divorce" cta="Learn More →" provider="Information & Featured Providers" imgSrc="/tiles/set3/grey-divorce.webp" />
-          <PnsTile pill="Senior Planning" title="Medicare Providers" tagline="Coverage Guidance for Seniors & Families" cta="Learn More →" provider="Information & Featured Providers" imgSrc="/tiles/set3/medicare-providers.webp" />
+          <PnsTile pill="Senior Living" title="Senior Living Options" tagline="Finding the Right Community for You" cta="Learn More →" provider="Information & Featured Providers" imgSrc="/tiles/set3/senior-living-options.webp" href="/senior-living" />
+          <PnsTile pill="Real Estate" title="Home Values & Pricing" tagline="Understanding What Your Property Is Worth" cta="Learn More →" provider="Information & Featured Providers" imgSrc="/tiles/set3/home-values-pricing.webp" href="/why-valuation-matters" />
+          <PnsTile pill="Real Estate" title="Senior Home Sales" tagline="Selling Your Home With Care & Confidence" cta="Learn More →" provider="Information & Featured Providers" imgSrc="/tiles/set3/senior-home-sales.webp" href="/sell-house-fund-senior-living" />
+          <PnsTile pill="Financial" title="Paying for Senior Living" tagline="Planning & Funding Your Next Chapter" cta="Learn More →" provider="Information & Featured Providers" imgSrc="/tiles/set3/paying-for-senior-living.webp" href="/financial-planning" />
+          <PnsTile pill="Washington State" title="Service Areas" tagline="Local Expertise Across Washington State" cta="Learn More →" provider="Information & Featured Providers" imgSrc="/tiles/set3/service-areas.webp" href="/counties" />
+          <PnsTile pill="Education" title="Guides & Resources" tagline="Practical Tools for Every Step of the Way" cta="Learn More →" provider="Information & Featured Providers" imgSrc="/tiles/set3/guides-resources.webp" href="/resources" />
+          <PnsTile pill="Life Transitions" title="Grey Divorce" tagline="Real Estate & Housing After Divorce" cta="Learn More →" provider="Information & Featured Providers" imgSrc="/tiles/set3/grey-divorce.webp" href="/grey-divorce" />
+          <PnsTile pill="Senior Planning" title="Medicare Providers" tagline="Coverage Guidance for Seniors & Families" cta="Learn More →" provider="Information & Featured Providers" imgSrc="/tiles/set3/medicare-providers.webp" href="/medicare-providers" />
         </div>
         <div className="pns-provider-bar">
           <div className="pns-provider-bar-text"><strong>Planning ahead?</strong> Connect with experienced professionals across Washington State.</div>

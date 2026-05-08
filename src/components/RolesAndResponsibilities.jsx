@@ -15,7 +15,7 @@ const styles = `
   #roles-section .r2-corner.tr { top: 8px; right: 8px; border-top: 1.5px solid #b89a5a; border-right: 1.5px solid #b89a5a; }
   #roles-section .r2-corner.bl { bottom: 8px; left: 8px; border-bottom: 1.5px solid #b89a5a; border-left: 1.5px solid #b89a5a; }
   #roles-section .r2-corner.br { bottom: 8px; right: 8px; border-bottom: 1.5px solid #b89a5a; border-right: 1.5px solid #b89a5a; }
-  #roles-section .r2-img { display: block; width: 100%; height: 210px; object-fit: cover; object-position: top center; flex-shrink: 0; transform: rotateX(45deg); transform-origin: bottom center; transition: transform 0.6s cubic-bezier(.33,1,.68,1); }
+  #roles-section .r2-img { display: block; width: 100%; height: 210px; object-fit: contain; object-position: top center; flex-shrink: 0; transform: rotateX(45deg); transform-origin: bottom center; transition: transform 0.6s cubic-bezier(.33,1,.68,1); }
   #roles-section .r2-tile:hover .r2-img { transform: rotateX(0deg); }
   #roles-section .r2-body { flex: 1; padding: 12px 10px 0; overflow: hidden; position: relative; }
   #roles-section .r2-pill { display: block; font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: #b89a5a; margin-bottom: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; transition: opacity .15s ease; }
@@ -63,14 +63,14 @@ const Tile = ({ pill, title, tagline, provider, imgSrc, href }) => (
 );
 
 const tiles = [
-  { pill: "Roles & Responsibilities", title: "Executors", tagline: "Understanding the Executor's Role", imgSrc: "/tiles/set2/executors.webp", href: "/roles/executors" },
-  { pill: "Roles & Responsibilities", title: "Trustees", tagline: "Managing Trust Assets & Obligations", imgSrc: "/tiles/set2/trustees.webp", href: "/roles/trustees" },
-  { pill: "Estate Planning", title: "Wills", tagline: "What Every Will Should Include", imgSrc: "/tiles/set2/wills.webp", href: "/roles/wills" },
-  { pill: "Education", title: "Probate Terms", tagline: "Key Terms Every Family Should Know", imgSrc: "/tiles/set2/probate-terms.webp", href: "/roles/probate-terms" },
-  { pill: "Education", title: "The Probate Process", tagline: "Step-by-Step Guide to Probate", imgSrc: "/tiles/set2/the-probate-process.webp", href: "/roles/probate-process" },
-  { pill: "Real Estate", title: "Probate Estate Sales", tagline: "Selling an Inherited Property the Right Way", imgSrc: "/tiles/set2/probate-estate-sales.webp", href: "/roles/probate-estate-sales" },
-  { pill: "Real Estate", title: "Title & Escrow", tagline: "Protecting Ownership Through Closing", imgSrc: "/tiles/set2/title-escrow.webp", href: "/roles/title-escrow" },
-  { pill: "Estate Planning", title: "Power of Attorney", tagline: "Granting Authority to Act on Your Behalf", imgSrc: "/tiles/set2/power-of-attorney.webp", href: "/roles/power-of-attorney" },
+  { pill: "Roles & Responsibilities", title: "Executors", tagline: "Understanding the Executor's Role", imgSrc: "/tiles/set2/executors.webp", href: "/executors" },
+  { pill: "Roles & Responsibilities", title: "Trustees", tagline: "Managing Trust Assets & Obligations", imgSrc: "/tiles/set2/trustees.webp", href: "/trustees" },
+  { pill: "Estate Planning", title: "Wills", tagline: "What Every Will Should Include", imgSrc: "/tiles/set2/wills.webp", href: "/wills" },
+  { pill: "Education", title: "Probate Terms", tagline: "Key Terms Every Family Should Know", imgSrc: "/tiles/set2/probate-terms.webp", href: "/terminology" },
+  { pill: "Education", title: "The Probate Process", tagline: "Step-by-Step Guide to Probate", imgSrc: "/tiles/set2/the-probate-process.webp", href: "/how-the-process-works" },
+  { pill: "Real Estate", title: "Probate Estate Sales", tagline: "Selling an Inherited Property the Right Way", imgSrc: "/tiles/set2/probate-estate-sales.webp", href: "/probate-estate-sales" },
+  { pill: "Real Estate", title: "Title & Escrow", tagline: "Protecting Ownership Through Closing", imgSrc: "/tiles/set2/title-escrow.webp", href: "/title-and-escrow" },
+  { pill: "Estate Planning", title: "Power of Attorney", tagline: "Granting Authority to Act on Your Behalf", imgSrc: "/tiles/set2/power-of-attorney.webp", href: "/power-of-attorney" },
 ];
 
 const RolesAndResponsibilities = () => (
