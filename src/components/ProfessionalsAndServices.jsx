@@ -4,7 +4,7 @@ const styles = `
   @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap');
   .rpp-grid-wrap * { box-sizing: border-box; margin: 0; padding: 0; }
   .rpp-section { font-family: 'Montserrat', sans-serif; padding: 0 40px 64px; }
-  .rpp-grid-row { display: grid; gap: 20px; max-width: 1300px; margin: 0 auto 20px; }
+  .rpp-grid-row { display: grid; gap: 20px; max-width: 1300px; margin: 30px auto 20px; }
   .rpp-row-1 { grid-template-columns: repeat(4, 1fr); }
   .rpp-row-2 { grid-template-columns: repeat(4, 1fr); }
   .rpp-row-2-1 { grid-template-columns: repeat(4, 1fr); }
@@ -19,7 +19,7 @@ const styles = `
   .rpp-corner.tr { top: 8px; right: 8px; border-top: 1.5px solid #b89a5a; border-right: 1.5px solid #b89a5a; }
   .rpp-corner.bl { bottom: 8px; left: 8px; border-bottom: 1.5px solid #b89a5a; border-left: 1.5px solid #b89a5a; }
   .rpp-corner.br { bottom: 8px; right: 8px; border-bottom: 1.5px solid #b89a5a; border-right: 1.5px solid #b89a5a; }
-  .rpp-card-inner { padding: 0; overflow: visible; flex: 1; display: flex; flex-direction: column; }
+  .rpp-card-inner { padding: 30px 0 0; overflow: visible; flex: 1; display: flex; flex-direction: column; }
   .rpp-photo-hinge { width: 100%; display: block; line-height: 0; font-size: 0; overflow: visible; }
   .rpp-house-img { display: block; width: 100%; height: 220px; object-fit: cover; border-radius: 5px 5px 0 0; }
   .rpp-text-area { height: 120px; overflow: hidden; padding: 10px; flex-shrink: 0; position: relative; display: flex; flex-direction: column; justify-content: flex-start; }
