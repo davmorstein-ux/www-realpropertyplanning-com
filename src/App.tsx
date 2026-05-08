@@ -158,6 +158,7 @@ const App = () => (
           <Route path="/probate-estate-sales" element={<ProbateEstateSales />} />
           <Route path="/client-stories" element={<ClientStories />} />
           <Route path="/senior-transitions" element={<SeniorTransitions />} />
+          <Route path="/helping-aging-parents" element={<HelpingAgingParents />} />
           <Route path="/senior-placement" element={<SeniorPlacement />} />
           <Route path="/sell-house-fund-senior-living" element={<SellHouseFundSeniorLiving />} />
           <Route path="/why-valuation-matters" element={<WhyValuationMatters />} />
