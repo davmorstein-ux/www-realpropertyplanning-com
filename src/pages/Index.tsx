@@ -22,7 +22,7 @@ import HomepageFAQ from "@/components/HomepageFAQ";
 
 import HowWeHelpCards from "@/components/HowWeHelpCards";
 import HomepageWarmStatement from "@/components/HomepageWarmStatement";
-import PathwayChooser from "@/components/PathwayChooser";
+import SituationCards from "@/components/SituationCards";
 import HomepageOrientation from "@/components/HomepageOrientation";
 
 const serviceAreas = [
