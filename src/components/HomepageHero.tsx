@@ -459,7 +459,7 @@ const HomepageHero = () => {
       {/* ===== Trust Bar ===== */}
       <section className="bg-navy" style={{ background: "#1a2f4e", padding: isMobile ? "16px 20px" : "28px 24px" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto" }}>
-          <h1
+          <h1 className="text-center font-bold"
             style={{
               fontFamily: "'Cormorant Garamond', 'Georgia', serif",
               color: "#f0c040",
