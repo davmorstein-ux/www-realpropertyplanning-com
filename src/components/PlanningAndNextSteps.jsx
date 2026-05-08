@@ -13,8 +13,9 @@ const styles = `
   .p3corner.tr { top: 8px; right: 8px; border-top: 1.5px solid #b89a5a; border-right: 1.5px solid #b89a5a; }
   .p3corner.bl { bottom: 8px; left: 8px; border-bottom: 1.5px solid #b89a5a; border-left: 1.5px solid #b89a5a; }
   .p3corner.br { bottom: 8px; right: 8px; border-bottom: 1.5px solid #b89a5a; border-right: 1.5px solid #b89a5a; }
-  .p3img { display: block; width: 100%; height: 215px; object-fit: cover; object-position: top center; flex-shrink: 0; transition: transform .4s ease; }
-  .p3tile:hover .p3img { transform: scale(1.04); }
+  .p3imgbox { width: 100%; height: 220px; flex-shrink: 0; background: #FDFAF5; display: flex; align-items: flex-start; justify-content: center; overflow: hidden; transition: transform .4s ease; }
+  .p3tile:hover .p3imgbox { transform: scale(1.03); }
+  .p3img { display: block; width: 100%; height: 220px; object-fit: contain; object-position: top center; }
   .p3body { flex: 1; padding: 12px 10px 0; overflow: hidden; position: relative; }
   .p3pill { display: block; font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: #b89a5a; margin-bottom: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; transition: opacity .15s ease; }
   .p3title { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 22px; color: #12243F; line-height: 1.15; transition: opacity .15s ease; }
@@ -43,7 +44,9 @@ const P3Tile = ({ pill, title, tagline, imgSrc, href }) => (
     <div className="p3card">
       <div className="p3corner tl" /><div className="p3corner tr" />
       <div className="p3corner bl" /><div className="p3corner br" />
-      <img className="p3img" src={imgSrc} alt={title} loading="lazy" />
+      <div className="p3imgbox">
+        <img className="p3img" src={imgSrc} alt={title} loading="lazy" />
+      </div>
       <div className="p3body">
         <span className="p3pill">{pill}</span>
         <div className="p3title">{title}</div>
