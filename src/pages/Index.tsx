@@ -10,8 +10,7 @@ import { ChevronRight } from "lucide-react";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import mappin3d from "@/assets/real-estate-service-areas-mappin-washington.webp";
 import expRealtyLogo from "@/assets/exp-realty-real-estate-logo-washington.webp";
-import RolesAndResponsibilities from "@/components/RolesAndResponsibilities";
-import PlanningAndNextSteps from "@/components/PlanningAndNextSteps";
+import HomepageNav from "@/components/HomepageNav";
 
 import HomepageLeadForm from "@/components/HomepageLeadForm";
 import LeadMagnetBlock from "@/components/LeadMagnetBlock";
@@ -20,7 +19,7 @@ import WhatHappensNext from "@/components/WhatHappensNext";
 import HomepageHero from "@/components/HomepageHero";
 import HomepageFAQ from "@/components/HomepageFAQ";
 
-import ProfessionalsAndServices from "@/components/ProfessionalsAndServices";
+
 import HowWeHelpCards from "@/components/HowWeHelpCards";
 import HomepageWarmStatement from "@/components/HomepageWarmStatement";
 
@@ -154,14 +153,8 @@ const Index = () => {
         </p>
       </div>
 
-      {/* PROFESSIONALS & SERVICES */}
-      <ProfessionalsAndServices />
-
-      {/* ROLES & RESPONSIBILITIES */}
-      <RolesAndResponsibilities />
-
-      {/* PLANNING & NEXT STEPS */}
-      <PlanningAndNextSteps />
+      {/* HOMEPAGE NAVIGATION */}
+      <HomepageNav />
 
       {/* GUIDES & RESOURCES BANNER */}
       <section className="bg-navy border-y-2 border-gold py-12 md:py-14">
