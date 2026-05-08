@@ -62,7 +62,7 @@ const GreyDivorce = () => (
     <SEOHead
       title="Grey Divorce and the Grey Tsunami: Real Estate, Retirement and Family Planning After 50"
       description="Learn what grey divorce means, how it connects to the Grey Tsunami, and why real estate, retirement, estate planning, and senior housing decisions matter for adults divorcing after age 50."
-      canonical="https://www.realpropertyplanning.com/grey-divorce"
+      canonical="https://realpropertyplanning.com/grey-divorce"
     />
     <BreadcrumbSchema
       items={[

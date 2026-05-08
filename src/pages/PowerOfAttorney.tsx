@@ -71,7 +71,7 @@ const jsonLd = {
   "@type": "WebPage",
   name: "Power of Attorney & Real Estate in Washington State",
   description: "If you hold Power of Attorney for an aging parent or loved one in Washington State, we can help you navigate real estate decisions, home sales, and certified appraisals with confidence.",
-  url: "https://www.realpropertyplanning.com/power-of-attorney",
+  url: "https://realpropertyplanning.com/power-of-attorney",
 };
 
 const PowerOfAttorney = () => {

@@ -13,13 +13,13 @@ const MovingRelocationServices = () => (
     <SEOHead
       title="Moving & Relocation Services | Resources | Real Property Planning"
       description="Moving companies and relocation specialists experienced with estate and senior transitions throughout Washington State."
-      canonical="https://www.realpropertyplanning.com/resources/moving-relocation-services"
+      canonical="https://realpropertyplanning.com/resources/moving-relocation-services"
     />
     <BreadcrumbSchema
       items={[
-        { name: "Home", url: "https://www.realpropertyplanning.com" },
-        { name: "Resources", url: "https://www.realpropertyplanning.com/resources" },
-        { name: "Moving & Relocation Services", url: "https://www.realpropertyplanning.com/resources/moving-relocation-services" },
+        { name: "Home", url: "https://realpropertyplanning.com" },
+        { name: "Resources", url: "https://realpropertyplanning.com/resources" },
+        { name: "Moving & Relocation Services", url: "https://realpropertyplanning.com/resources/moving-relocation-services" },
       ]}
     />
     <Header />

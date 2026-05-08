@@ -13,13 +13,13 @@ const MemoryCare = () => (
     <SEOHead
       title="Memory Care | Senior Living | Real Property Planning"
       description="Learn about memory care programs designed for individuals living with Alzheimer's or dementia throughout Washington State."
-      canonical="https://www.realpropertyplanning.com/senior-living/memory-care"
+      canonical="https://realpropertyplanning.com/senior-living/memory-care"
     />
     <BreadcrumbSchema
       items={[
-        { name: "Home", url: "https://www.realpropertyplanning.com" },
-        { name: "Senior Living & Relocation", url: "https://www.realpropertyplanning.com/senior-living-and-relocation" },
-        { name: "Memory Care", url: "https://www.realpropertyplanning.com/senior-living/memory-care" },
+        { name: "Home", url: "https://realpropertyplanning.com" },
+        { name: "Senior Living & Relocation", url: "https://realpropertyplanning.com/senior-living-and-relocation" },
+        { name: "Memory Care", url: "https://realpropertyplanning.com/senior-living/memory-care" },
       ]}
     />
     <Header />

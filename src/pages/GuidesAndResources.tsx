@@ -236,12 +236,12 @@ const GuidesAndResources = () => {
       <SEOHead
         title="Guides & Resources | Probate, Estate & Senior Transition Guidance | Real Property Planning"
         description="Clear, practical guides for families, executors, trustees, and professionals navigating probate, inherited property, senior transitions, pricing, and real estate decisions in Washington State."
-        canonical="https://www.realpropertyplanning.com/guides-and-resources"
+        canonical="https://realpropertyplanning.com/guides-and-resources"
       />
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://www.realpropertyplanning.com" },
-          { name: "Guides & Resources", url: "https://www.realpropertyplanning.com/guides-and-resources" },
+          { name: "Home", url: "https://realpropertyplanning.com" },
+          { name: "Guides & Resources", url: "https://realpropertyplanning.com/guides-and-resources" },
         ]}
       />
       <Header />

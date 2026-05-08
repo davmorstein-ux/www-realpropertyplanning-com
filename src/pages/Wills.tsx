@@ -53,7 +53,7 @@ const Wills = () => {
     headline: "Wills and Real Estate — What Families and Executors Need to Know",
     description:
       "Understand how wills affect real property decisions. Learn what executors, heirs, and families should know about selling or transferring a home during estate administration in Washington State.",
-    url: "https://www.realpropertyplanning.com/wills",
+    url: "https://realpropertyplanning.com/wills",
     about: ["Wills", "Real Estate", "Estate Administration", "Probate", "Executors"],
   });
 
@@ -62,13 +62,13 @@ const Wills = () => {
       <SEOHead
         title="Wills & Real Estate in Washington State"
         description="How wills affect real property decisions in Washington — what executors, heirs, and families should know about selling or transferring a home."
-        canonical="https://www.realpropertyplanning.com/wills"
+        canonical="https://realpropertyplanning.com/wills"
         jsonLd={schemaData}
       />
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://www.realpropertyplanning.com" },
-          { name: "Wills", url: "https://www.realpropertyplanning.com/wills" },
+          { name: "Home", url: "https://realpropertyplanning.com" },
+          { name: "Wills", url: "https://realpropertyplanning.com/wills" },
         ]}
       />
       <div className="min-h-screen flex flex-col" data-nosnippet>

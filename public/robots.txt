@@ -28,4 +28,4 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-Sitemap: https://www.realpropertyplanning.com/sitemap.xml
+Sitemap: https://realpropertyplanning.com/sitemap.xml

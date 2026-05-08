@@ -11,12 +11,12 @@ const Testimonials = () => {
       <SEOHead
         title="Testimonials & Reviews | Real Property Planning"
         description="Read client reviews and testimonials about working with Real Property Planning for probate property sales, estate transitions, and senior moves throughout Washington State."
-        canonical="https://www.realpropertyplanning.com/testimonials"
+        canonical="https://realpropertyplanning.com/testimonials"
       />
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://www.realpropertyplanning.com/" },
-          { name: "Testimonials", url: "https://www.realpropertyplanning.com/testimonials" },
+          { name: "Home", url: "https://realpropertyplanning.com/" },
+          { name: "Testimonials", url: "https://realpropertyplanning.com/testimonials" },
         ]}
       />
       <Header />

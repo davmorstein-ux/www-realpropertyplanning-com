@@ -21,13 +21,13 @@ const AdultFamilyHomes = () => (
     <SEOHead
       title="Adult Family Homes | Senior Living | Real Property Planning"
       description="Learn about adult family homes — smaller, home-like settings offering personalized care for seniors throughout Washington State."
-      canonical="https://www.realpropertyplanning.com/senior-living/adult-family-homes"
+      canonical="https://realpropertyplanning.com/senior-living/adult-family-homes"
     />
     <BreadcrumbSchema
       items={[
-        { name: "Home", url: "https://www.realpropertyplanning.com" },
-        { name: "Senior Living & Relocation", url: "https://www.realpropertyplanning.com/senior-living-and-relocation" },
-        { name: "Adult Family Homes", url: "https://www.realpropertyplanning.com/senior-living/adult-family-homes" },
+        { name: "Home", url: "https://realpropertyplanning.com" },
+        { name: "Senior Living & Relocation", url: "https://realpropertyplanning.com/senior-living-and-relocation" },
+        { name: "Adult Family Homes", url: "https://realpropertyplanning.com/senior-living/adult-family-homes" },
       ]}
     />
     <Header />

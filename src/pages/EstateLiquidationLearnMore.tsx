@@ -29,13 +29,13 @@ const EstateLiquidationLearnMore = () => (
     <SEOHead
       title="Estate Liquidation & Estate Sales Explained — Washington State"
       description="A detailed guide to estate liquidation and estate sales: what they are, when families need them, how the process works, what can be sold, and how liquidators are paid."
-      canonical="https://www.realpropertyplanning.com/estate-liquidation/learn-more"
+      canonical="https://realpropertyplanning.com/estate-liquidation/learn-more"
     />
     <BreadcrumbSchema
       items={[
-        { name: "Home", url: "https://www.realpropertyplanning.com" },
-        { name: "Estate Liquidation", url: "https://www.realpropertyplanning.com/estate-liquidation" },
-        { name: "Learn More", url: "https://www.realpropertyplanning.com/estate-liquidation/learn-more" },
+        { name: "Home", url: "https://realpropertyplanning.com" },
+        { name: "Estate Liquidation", url: "https://realpropertyplanning.com/estate-liquidation" },
+        { name: "Learn More", url: "https://realpropertyplanning.com/estate-liquidation/learn-more" },
       ]}
     />
     <Header />

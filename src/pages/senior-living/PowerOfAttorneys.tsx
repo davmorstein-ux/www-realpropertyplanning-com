@@ -78,13 +78,13 @@ const PowerOfAttorneys = () => {
     <SEOHead
       title="Power of Attorney & Real Estate Decisions | Real Property Planning"
       description="Understanding how a power of attorney works in real estate — for families, executors, and professionals navigating property decisions in Washington State."
-      canonical="https://www.realpropertyplanning.com/senior-living/power-of-attorneys"
+      canonical="https://realpropertyplanning.com/senior-living/power-of-attorneys"
     />
     <BreadcrumbSchema
       items={[
-        { name: "Home", url: "https://www.realpropertyplanning.com" },
-        { name: "Senior Living & Relocation", url: "https://www.realpropertyplanning.com/senior-living-and-relocation" },
-        { name: "Power of Attorneys", url: "https://www.realpropertyplanning.com/senior-living/power-of-attorneys" },
+        { name: "Home", url: "https://realpropertyplanning.com" },
+        { name: "Senior Living & Relocation", url: "https://realpropertyplanning.com/senior-living-and-relocation" },
+        { name: "Power of Attorneys", url: "https://realpropertyplanning.com/senior-living/power-of-attorneys" },
       ]}
     />
     <Header />

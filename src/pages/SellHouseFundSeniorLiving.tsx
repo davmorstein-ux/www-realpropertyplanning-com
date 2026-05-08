@@ -81,15 +81,15 @@ const SellHouseFundSeniorLiving = () => {
       <SEOHead
         title="How to Sell a Parent's House to Pay for Senior Living in Washington State | Real Property Planning"
         description="Learn how Washington State families use home sale proceeds to pay for assisted living, memory care, and adult family home placement. David Stein — Licensed Broker & Certified Appraiser — (206) 900-3015."
-        canonical="https://www.realpropertyplanning.com/sell-house-fund-senior-living"
+        canonical="https://realpropertyplanning.com/sell-house-fund-senior-living"
       />
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://www.realpropertyplanning.com/" },
-          { name: "Services", url: "https://www.realpropertyplanning.com/services" },
+          { name: "Home", url: "https://realpropertyplanning.com/" },
+          { name: "Services", url: "https://realpropertyplanning.com/services" },
           {
             name: "Sell a House to Fund Senior Living",
-            url: "https://www.realpropertyplanning.com/sell-house-fund-senior-living",
+            url: "https://realpropertyplanning.com/sell-house-fund-senior-living",
           },
         ]}
       />

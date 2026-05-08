@@ -19,9 +19,9 @@ const SeniorEstateServices = () => {
       />
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://www.realpropertyplanning.com/" },
-          { name: "Services", url: "https://www.realpropertyplanning.com/services" },
-          { name: "Senior & Estate Services", url: "https://www.realpropertyplanning.com/senior-estate-services" },
+          { name: "Home", url: "https://realpropertyplanning.com/" },
+          { name: "Services", url: "https://realpropertyplanning.com/services" },
+          { name: "Senior & Estate Services", url: "https://realpropertyplanning.com/senior-estate-services" },
         ]}
       />
       <Header />

@@ -51,7 +51,7 @@ const ForAttorneysHowItWorks = () => (
     <SEOHead
       title="How Real Property Planning Works With Attorneys | Referral Process"
       description="A clear, document-style walkthrough of how Real Property Planning supports Washington estate, probate, and family law attorneys from referral through closing — including what we handle and how to make a referral."
-      canonical="https://www.realpropertyplanning.com/for-attorneys/how-it-works"
+      canonical="https://realpropertyplanning.com/for-attorneys/how-it-works"
     />
     <BreadcrumbSchema
       items={[

@@ -54,12 +54,12 @@ const MedicareProviders = () => (
     <SEOHead
       title="Medicare Providers in Washington State | Real Property Planning"
       description="Connect with trusted Medicare specialists in Washington State. Learn about Medicare Parts A, B, C, and D, enrollment timing, and how Medicare planning fits into senior life transitions."
-      canonical="https://www.realpropertyplanning.com/medicare-providers"
+      canonical="https://realpropertyplanning.com/medicare-providers"
     />
     <BreadcrumbSchema
       items={[
-        { name: "Home", url: "https://www.realpropertyplanning.com" },
-        { name: "Medicare Providers", url: "https://www.realpropertyplanning.com/medicare-providers" },
+        { name: "Home", url: "https://realpropertyplanning.com" },
+        { name: "Medicare Providers", url: "https://realpropertyplanning.com/medicare-providers" },
       ]}
     />
     <Header />

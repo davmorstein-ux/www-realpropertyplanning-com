@@ -13,13 +13,13 @@ const ProbateEstateAttorneys = () => (
     <SEOHead
       title="Probate & Estate Attorneys | Resources | Real Property Planning"
       description="Probate and estate attorneys throughout Washington State who guide families, executors, and fiduciaries through estate administration and property-related legal matters."
-      canonical="https://www.realpropertyplanning.com/resources/probate-estate-attorneys"
+      canonical="https://realpropertyplanning.com/resources/probate-estate-attorneys"
     />
     <BreadcrumbSchema
       items={[
-        { name: "Home", url: "https://www.realpropertyplanning.com" },
-        { name: "Resources", url: "https://www.realpropertyplanning.com/resources" },
-        { name: "Probate & Estate Attorneys", url: "https://www.realpropertyplanning.com/resources/probate-estate-attorneys" },
+        { name: "Home", url: "https://realpropertyplanning.com" },
+        { name: "Resources", url: "https://realpropertyplanning.com/resources" },
+        { name: "Probate & Estate Attorneys", url: "https://realpropertyplanning.com/resources/probate-estate-attorneys" },
       ]}
     />
     <Header />

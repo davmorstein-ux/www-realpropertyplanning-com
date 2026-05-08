@@ -15,12 +15,12 @@ const EstateLiquidation = () => (
     <SEOHead
       title="Estate Liquidation & Estate Sales in Washington"
       description="Estate liquidation in Washington State — estate sales, cleanouts, donation coordination, and preparing the home for market. Help for executors and families."
-      canonical="https://www.realpropertyplanning.com/estate-liquidation"
+      canonical="https://realpropertyplanning.com/estate-liquidation"
     />
     <BreadcrumbSchema
       items={[
-        { name: "Home", url: "https://www.realpropertyplanning.com" },
-        { name: "Estate Liquidation", url: "https://www.realpropertyplanning.com/estate-liquidation" },
+        { name: "Home", url: "https://realpropertyplanning.com" },
+        { name: "Estate Liquidation", url: "https://realpropertyplanning.com/estate-liquidation" },
       ]}
     />
     <Header />
