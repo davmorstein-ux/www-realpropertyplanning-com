@@ -2,44 +2,44 @@ import React from 'react';
 
 const styles = `
   @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap');
-  .rpp-grid-wrap * { box-sizing: border-box; margin: 0; padding: 0; }
-  .rpp-section { font-family: 'Montserrat', sans-serif; padding: 0 40px 64px; }
-  .rpp-grid-row { display: grid; gap: 20px; max-width: 1300px; margin: 30px auto 20px; }
-  .rpp-row-1 { grid-template-columns: repeat(4, 1fr); }
-  .rpp-row-2 { grid-template-columns: repeat(4, 1fr); }
-  .rpp-row-2-1 { grid-template-columns: repeat(4, 1fr); }
-  .rpp-row-2-2 { grid-template-columns: repeat(4, 1fr); }
-  .rpp-row-2-3 { grid-template-columns: repeat(4, 1fr); }
-  .rpp-row-2-center { grid-template-columns: repeat(4, 1fr); }
-  .rpp-tile { width: 100%; display: flex; flex-direction: column; cursor: pointer; }
-  .rpp-brochure { width: 100%; background: #FDFAF5; border-radius: 5px; border: 1px solid rgba(184,154,90,.40); box-shadow: 0 8px 24px rgba(18,36,63,.15); display: flex; flex-direction: column; overflow: visible; position: relative; transition: box-shadow .4s ease; }
-  .rpp-tile:hover .rpp-brochure { box-shadow: 0 12px 32px rgba(18,36,63,.22); }
-  .rpp-corner { position: absolute; width: 14px; height: 14px; pointer-events: none; z-index: 50; }
-  .rpp-corner.tl { top: 8px; left: 8px; border-top: 1.5px solid #b89a5a; border-left: 1.5px solid #b89a5a; }
-  .rpp-corner.tr { top: 8px; right: 8px; border-top: 1.5px solid #b89a5a; border-right: 1.5px solid #b89a5a; }
-  .rpp-corner.bl { bottom: 8px; left: 8px; border-bottom: 1.5px solid #b89a5a; border-left: 1.5px solid #b89a5a; }
-  .rpp-corner.br { bottom: 8px; right: 8px; border-bottom: 1.5px solid #b89a5a; border-right: 1.5px solid #b89a5a; }
-  .rpp-card-inner { padding: 30px 0 0; overflow: visible; flex: 1; display: flex; flex-direction: column; }
-  .rpp-photo-hinge { width: 100%; display: block; line-height: 0; font-size: 0; overflow: visible; }
-  .rpp-house-img { display: block; width: 100%; height: 220px; object-fit: cover; border-radius: 5px 5px 0 0; }
-  .rpp-text-area { height: 120px; overflow: hidden; padding: 10px; flex-shrink: 0; position: relative; display: flex; flex-direction: column; justify-content: flex-start; }
-  .rpp-static-content { padding: 4px 2px 0; }
-  .rpp-category-pill { display: block; font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: #b89a5a; margin-bottom: 5px; transition: opacity .15s ease; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .rpp-tile-title { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 24px; color: #12243F; line-height: 1.15; transition: opacity .15s ease; }
-  .rpp-tile:hover .rpp-category-pill, .rpp-tile:hover .rpp-tile-title { opacity: 0; }
-  .rpp-hover-panel { position: absolute; inset: 0; background: rgba(10,20,46,.97); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 14px; gap: 12px; opacity: 0; transition: opacity .28s ease .15s; z-index: 30; pointer-events: none; overflow: hidden; }
-  .rpp-tile:hover .rpp-hover-panel { opacity: 1; pointer-events: auto; }
-  .rpp-overlay-tagline { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 14px; color: #FFF; text-align: center; line-height: 1.5; width: 100%; }
-  .rpp-tile-footer { height: 50px; flex-shrink: 0; display: flex; align-items: center; padding: 0 12px; border-top: 1.5px solid rgba(184,154,90,.28); background: #FDFAF5; border-radius: 0 0 5px 5px; gap: 8px; justify-content: space-between; }
-  .rpp-provider-label { font-size: 11px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: #1a3a6b; line-height: 1.4; flex: 1; }
-  .rpp-arrow-wrap { margin-left: auto; width: 30px; height: 30px; border: 1.5px solid #1a3a6b; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: background .25s; flex-shrink: 0; }
-  .rpp-tile:hover .rpp-arrow-wrap { background: #1a3a6b; }
-  .rpp-arrow-wrap svg { width: 12px; height: 12px; stroke: #1a3a6b; fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; transition: stroke .25s, transform .25s; }
-  .rpp-tile:hover .rpp-arrow-wrap svg { stroke: #fff; transform: translateX(1px); }
-  .rpp-provider-bar { max-width: 1300px; margin: 36px auto 0; background: #1a3a6b; border-radius: 8px; padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-  .rpp-provider-bar-text { font-size: 14px; color: #c8d5e8; line-height: 1.6; }
-  .rpp-provider-bar-btn { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: .08em; background: #b89a5a; color: #fff; border: none; border-radius: 4px; padding: 12px 24px; cursor: pointer; white-space: nowrap; transition: background .2s; }
-  .rpp-provider-bar-btn:hover { background: #d4b87a; }
+  #professionals-section .rpp-grid-wrap * { box-sizing: border-box; margin: 0; padding: 0; }
+  #professionals-section .rpp-section { font-family: 'Montserrat', sans-serif; padding: 0 40px 64px; }
+  #professionals-section .rpp-grid-row { display: grid; gap: 20px; max-width: 1300px; margin: 30px auto 20px; }
+  #professionals-section .rpp-row-1 { grid-template-columns: repeat(4, 1fr); }
+  #professionals-section .rpp-row-2 { grid-template-columns: repeat(4, 1fr); }
+  #professionals-section .rpp-row-2-1 { grid-template-columns: repeat(4, 1fr); }
+  #professionals-section .rpp-row-2-2 { grid-template-columns: repeat(4, 1fr); }
+  #professionals-section .rpp-row-2-3 { grid-template-columns: repeat(4, 1fr); }
+  #professionals-section .rpp-row-2-center { grid-template-columns: repeat(4, 1fr); }
+  #professionals-section .rpp-tile { width: 100%; display: flex; flex-direction: column; cursor: pointer; }
+  #professionals-section .rpp-brochure { width: 100%; background: #FDFAF5; border-radius: 5px; border: 1px solid rgba(184,154,90,.40); box-shadow: 0 8px 24px rgba(18,36,63,.15); display: flex; flex-direction: column; overflow: visible; position: relative; transition: box-shadow .4s ease; }
+  #professionals-section .rpp-tile:hover .rpp-brochure { box-shadow: 0 12px 32px rgba(18,36,63,.22); }
+  #professionals-section .rpp-corner { position: absolute; width: 14px; height: 14px; pointer-events: none; z-index: 50; }
+  #professionals-section .rpp-corner.tl { top: 8px; left: 8px; border-top: 1.5px solid #b89a5a; border-left: 1.5px solid #b89a5a; }
+  #professionals-section .rpp-corner.tr { top: 8px; right: 8px; border-top: 1.5px solid #b89a5a; border-right: 1.5px solid #b89a5a; }
+  #professionals-section .rpp-corner.bl { bottom: 8px; left: 8px; border-bottom: 1.5px solid #b89a5a; border-left: 1.5px solid #b89a5a; }
+  #professionals-section .rpp-corner.br { bottom: 8px; right: 8px; border-bottom: 1.5px solid #b89a5a; border-right: 1.5px solid #b89a5a; }
+  #professionals-section .rpp-card-inner { padding: 30px 0 0; overflow: visible; flex: 1; display: flex; flex-direction: column; }
+  #professionals-section .rpp-photo-hinge { width: 100%; display: block; line-height: 0; font-size: 0; overflow: visible; }
+  #professionals-section .rpp-house-img { display: block; width: 100%; height: 220px; object-fit: cover; border-radius: 5px 5px 0 0; }
+  #professionals-section .rpp-text-area { height: 120px; overflow: hidden; padding: 10px; flex-shrink: 0; position: relative; display: flex; flex-direction: column; justify-content: flex-start; }
+  #professionals-section .rpp-static-content { padding: 4px 2px 0; }
+  #professionals-section .rpp-category-pill { display: block; font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: #b89a5a; margin-bottom: 5px; transition: opacity .15s ease; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  #professionals-section .rpp-tile-title { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 24px; color: #12243F; line-height: 1.15; transition: opacity .15s ease; }
+  #professionals-section .rpp-tile:hover .rpp-category-pill, #professionals-section .rpp-tile:hover .rpp-tile-title { opacity: 0; }
+  #professionals-section .rpp-hover-panel { position: absolute; inset: 0; background: rgba(10,20,46,.97); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 14px; gap: 12px; opacity: 0; transition: opacity .28s ease .15s; z-index: 30; pointer-events: none; overflow: hidden; }
+  #professionals-section .rpp-tile:hover .rpp-hover-panel { opacity: 1; pointer-events: auto; }
+  #professionals-section .rpp-overlay-tagline { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 14px; color: #FFF; text-align: center; line-height: 1.5; width: 100%; }
+  #professionals-section .rpp-tile-footer { height: 50px; flex-shrink: 0; display: flex; align-items: center; padding: 0 12px; border-top: 1.5px solid rgba(184,154,90,.28); background: #FDFAF5; border-radius: 0 0 5px 5px; gap: 8px; justify-content: space-between; }
+  #professionals-section .rpp-provider-label { font-size: 11px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: #1a3a6b; line-height: 1.4; flex: 1; }
+  #professionals-section .rpp-arrow-wrap { margin-left: auto; width: 30px; height: 30px; border: 1.5px solid #1a3a6b; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: background .25s; flex-shrink: 0; }
+  #professionals-section .rpp-tile:hover .rpp-arrow-wrap { background: #1a3a6b; }
+  #professionals-section .rpp-arrow-wrap svg { width: 12px; height: 12px; stroke: #1a3a6b; fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; transition: stroke .25s, transform .25s; }
+  #professionals-section .rpp-tile:hover .rpp-arrow-wrap svg { stroke: #fff; transform: translateX(1px); }
+  #professionals-section .rpp-provider-bar { max-width: 1300px; margin: 36px auto 0; background: #1a3a6b; border-radius: 8px; padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+  #professionals-section .rpp-provider-bar-text { font-size: 14px; color: #c8d5e8; line-height: 1.6; }
+  #professionals-section .rpp-provider-bar-btn { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: .08em; background: #b89a5a; color: #fff; border: none; border-radius: 4px; padding: 12px 24px; cursor: pointer; white-space: nowrap; transition: background .2s; }
+  #professionals-section .rpp-provider-bar-btn:hover { background: #d4b87a; }
 `;
 
 
@@ -74,26 +74,28 @@ const RppTile = ({ pill, title, tagline, cta, provider, imgSrc }) => (
 );
 
 const ProfessionalsAndServices = () => (
-  <div className="rpp-grid-wrap">
-    <style>{styles}</style>
-    <div className="rpp-section">
-      <div style={{ textAlign: 'center', marginBottom: '40px', paddingTop: '48px' }}>
-        <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: '13px', fontWeight: 700, letterSpacing: '.18em', textTransform: 'uppercase', color: '#b89a5a', display: 'block', marginBottom: '10px' }}>Washington State</span>
-        <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '40px', fontWeight: 700, color: '#12243F', lineHeight: 1.15, margin: 0 }}>Professionals &amp; Services</h2>
-      </div>
-      <div className="rpp-grid-row rpp-row-1">
-        <RppTile pill="Legal Services" title="Attorneys" tagline="Probate & Estate Attorneys" cta="View Featured Attorneys →" provider="Information & Featured Providers" imgSrc="/tiles/set1/attorneys.webp" />
-        <RppTile pill="Tax & Accounting" title="Certified Public Accountants" tagline="Expert Tax Guidance for Estate Matters" cta="View Featured CPAs →" provider="Information & Featured Providers" imgSrc="/tiles/set1/certified-public-accountants.webp" />
-        <RppTile pill="Real Estate" title="Real Estate Brokers" tagline="Selling Estate & Senior Properties" cta="View Featured Brokers →" provider="Information & Featured Providers" imgSrc="/tiles/set1/real-estate-brokers.webp" />
-        <RppTile pill="Real Estate" title="Real Estate Appraisers" tagline="Certified Property Valuations" cta="View Featured Appraisers →" provider="Information & Featured Providers" imgSrc="/tiles/set1/real-estate-appraisers.webp" />
-        <RppTile pill="Financial Services" title="Financial Planners" tagline="Protecting Wealth Through Transitions" cta="View Featured Planners →" provider="Information & Featured Providers" imgSrc="/tiles/set1/financial-planners.webp" />
-        <RppTile pill="Lending" title="Mortgage Lenders" tagline="Financing Inherited Real Estate" cta="View Featured Lenders →" provider="Information & Featured Providers" imgSrc="/tiles/set1/mortgage-lenders.webp" />
-        <RppTile pill="Senior Services" title="Senior Living Advisors" tagline="Expert Guidance for Senior Living" cta="View Featured Advisors →" provider="Information & Featured Providers" imgSrc="/tiles/set1/senior-living-advisors.webp" />
-        <RppTile pill="Senior Services" title="Senior Move Managers" tagline="Compassionate Moves for Seniors" cta="View Featured Managers →" provider="Information & Featured Providers" imgSrc="/tiles/set1/senior-move-managers.webp" />
-      </div>
-      <div className="rpp-provider-bar">
-        <div className="rpp-provider-bar-text"><strong>Are you a professional serving estate, probate or senior transition clients?</strong> Join Washington State's most trusted referral network.</div>
-        <button className="rpp-provider-bar-btn">Get Featured →</button>
+  <div id="professionals-section">
+    <div className="rpp-grid-wrap">
+      <style>{styles}</style>
+      <div className="rpp-section">
+        <div style={{ textAlign: 'center', marginBottom: '40px', paddingTop: '48px' }}>
+          <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: '13px', fontWeight: 700, letterSpacing: '.18em', textTransform: 'uppercase', color: '#b89a5a', display: 'block', marginBottom: '10px' }}>Washington State</span>
+          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '40px', fontWeight: 700, color: '#12243F', lineHeight: 1.15, margin: 0 }}>Professionals &amp; Services</h2>
+        </div>
+        <div className="rpp-grid-row rpp-row-1">
+          <RppTile pill="Legal Services" title="Attorneys" tagline="Probate & Estate Attorneys" cta="View Featured Attorneys →" provider="Information & Featured Providers" imgSrc="/tiles/set1/attorneys.webp" />
+          <RppTile pill="Tax & Accounting" title="Certified Public Accountants" tagline="Expert Tax Guidance for Estate Matters" cta="View Featured CPAs →" provider="Information & Featured Providers" imgSrc="/tiles/set1/certified-public-accountants.webp" />
+          <RppTile pill="Real Estate" title="Real Estate Brokers" tagline="Selling Estate & Senior Properties" cta="View Featured Brokers →" provider="Information & Featured Providers" imgSrc="/tiles/set1/real-estate-brokers.webp" />
+          <RppTile pill="Real Estate" title="Real Estate Appraisers" tagline="Certified Property Valuations" cta="View Featured Appraisers →" provider="Information & Featured Providers" imgSrc="/tiles/set1/real-estate-appraisers.webp" />
+          <RppTile pill="Financial Services" title="Financial Planners" tagline="Protecting Wealth Through Transitions" cta="View Featured Planners →" provider="Information & Featured Providers" imgSrc="/tiles/set1/financial-planners.webp" />
+          <RppTile pill="Lending" title="Mortgage Lenders" tagline="Financing Inherited Real Estate" cta="View Featured Lenders →" provider="Information & Featured Providers" imgSrc="/tiles/set1/mortgage-lenders.webp" />
+          <RppTile pill="Senior Services" title="Senior Living Advisors" tagline="Expert Guidance for Senior Living" cta="View Featured Advisors →" provider="Information & Featured Providers" imgSrc="/tiles/set1/senior-living-advisors.webp" />
+          <RppTile pill="Senior Services" title="Senior Move Managers" tagline="Compassionate Moves for Seniors" cta="View Featured Managers →" provider="Information & Featured Providers" imgSrc="/tiles/set1/senior-move-managers.webp" />
+        </div>
+        <div className="rpp-provider-bar">
+          <div className="rpp-provider-bar-text"><strong>Are you a professional serving estate, probate or senior transition clients?</strong> Join Washington State's most trusted referral network.</div>
+          <button className="rpp-provider-bar-btn">Get Featured →</button>
+        </div>
       </div>
     </div>
   </div>
