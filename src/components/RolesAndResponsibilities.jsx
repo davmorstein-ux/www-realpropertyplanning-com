@@ -34,7 +34,7 @@ const RolesAndResponsibilities = () => {
         .r2-card:hover .r2-hover { opacity: 1; }
         .r2-tagline { font-family: 'Montserrat', sans-serif !important; font-weight: 600 !important; font-size: 14px !important; color: #FFF !important; text-align: center; line-height: 1.5; }
         .r2-footer { height: 52px !important; flex-shrink: 0 !important; display: flex; align-items: center; padding: 0 12px; border-top: 1.5px solid rgba(184,154,90,0.28); background: #FDFAF5; gap: 8px; justify-content: space-between; }
-        .r2-label { font-family: 'Montserrat', sans-serif !important; font-size: 10px !important; font-weight: 700 !important; letter-spacing: 0.04em; text-transform: uppercase; color: #1a3a6b !important; line-height: 1.4; flex: 1; }
+        .r2-label { font-family: 'Montserrat', sans-serif !important; font-size: 13px !important; font-weight: 700 !important; letter-spacing: 0.04em; text-transform: uppercase; color: #1a3a6b !important; line-height: 1.4; flex: 1; }
         .r2-arrow { margin-left: auto; width: 28px; height: 28px; border: 1.5px solid #1a3a6b; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: background 0.25s; flex-shrink: 0; }
         .r2-card:hover .r2-arrow { background: #1a3a6b; }
         .r2-arrow svg { width: 11px; height: 11px; stroke: #1a3a6b; fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; transition: stroke 0.25s; }
@@ -42,11 +42,8 @@ const RolesAndResponsibilities = () => {
         .r2-bar { max-width: 1300px; margin: 36px auto 0; background: #1a3a6b; border-radius: 8px; padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
         .r2-bar-text { font-family: 'Montserrat', sans-serif !important; font-size: 14px !important; color: #c8d5e8; line-height: 1.6; }
         .r2-bar-btn { font-family: 'Montserrat', sans-serif !important; font-size: 13px !important; font-weight: 700 !important; letter-spacing: 0.08em; background: #b89a5a; color: #fff; border: none; border-radius: 4px; padding: 12px 24px; cursor: pointer; white-space: nowrap; }
-        /* === ULTRA-SPECIFIC FONT-SIZE OVERRIDES === */
-        div#r2-section div.r2-grid a.r2-card div.r2-body span.r2-pill { font-size: 13px !important; }
-        div#r2-section div.r2-grid a.r2-card div.r2-body div.r2-title { font-size: 26px !important; }
       `}</style>
-      <div id="r2-section" className="r2-section">
+      <div className="r2-section">
         <div className="r2-heading">
           <span className="r2-eyebrow">Washington State</span>
           <h2 className="r2-h2">Roles &amp; Responsibilities</h2>
