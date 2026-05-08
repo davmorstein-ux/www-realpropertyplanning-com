@@ -151,12 +151,10 @@ const faqs = [
 ];
 
 const continueJourney = [
-  { href: "/helping-aging-parents", title: "Helping an Aging Parent or Loved One", description: "A calm roadmap for senior transitions and family decisions.", icon: iconHeartHands },
+  { href: "/downsizing-preparing-for-transition", title: "Downsizing & Preparing for a Transition", description: "A calm, practical roadmap for organizing and moving.", icon: iconHeartHands },
   { href: "/understanding-housing-care-options", title: "Understanding Housing & Care Options", description: "Compare assisted living, adult family homes, memory care, and more.", icon: iconAssisted },
+  { href: "/aging-in-place-staying-home-safely", title: "Aging in Place & Staying at Home Safely", description: "Plan ahead for safety, support, and independence at home.", icon: iconDocument },
   { href: "/what-to-do-with-the-house", title: "What To Do With the House", description: "A guided decision roadmap for the home.", icon: iconHome },
-  { href: "/power-of-attorney", title: "Estate Planning & Powers of Attorney", description: "Understand the legal documents most families need.", icon: iconDocument },
-  { href: "/estate-probate-inherited-property", title: "Managing an Estate, Probate, or Inherited Property", description: "A guided path for executors, trustees, and heirs.", icon: iconExecutor },
-  { href: "/professionals", title: "Building Your Trusted Professional Team", description: "Meet the coordinated team supporting Washington families.", icon: iconBookOpen },
 ];
 
 const nextSteps = [
