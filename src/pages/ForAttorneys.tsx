@@ -10,10 +10,6 @@ import iconAttorneys from "@/assets/icons/probate-attorney-services-icon-washing
 import CTASection from "@/components/CTASection";
 import PageFAQ from "@/components/PageFAQ";
 import FeaturedAttorneys from "@/components/FeaturedAttorneys";
-  { src: tileDivorce, alt: "Divorce Attorneys", href: "/grey-divorce" },
-  { src: tileElderLaw, alt: "Elder Law Attorneys", href: "/for-elder-law-attorneys" },
-  { src: tileEstatePlanning, alt: "Estate Planning Attorneys", href: "/for-estate-planning-attorneys" },
-];
 
 const ForAttorneys = () => (
   <div className="min-h-screen bg-background">
