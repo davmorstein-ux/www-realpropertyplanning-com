@@ -36,8 +36,8 @@ const styles = `
   #planning-section .pns-provider-bar-btn:hover { background: #d4b87a; }
 `;
 
-const PnsTile = ({ pill, title, tagline, cta, provider, imgSrc }) => (
-  <div className="pns-tile">
+const PnsTile = ({ pill, title, tagline, cta, provider, imgSrc, href }) => (
+  <a className="pns-tile" href={href} aria-label={`Open ${title}`}>
     <div className="pns-brochure">
       <div className="pns-corner tl" /><div className="pns-corner tr" />
       <div className="pns-corner bl" /><div className="pns-corner br" />
@@ -52,7 +52,6 @@ const PnsTile = ({ pill, title, tagline, cta, provider, imgSrc }) => (
           </div>
           <div className="pns-hover-panel">
             <div className="pns-overlay-tagline">{tagline}</div>
-            
           </div>
         </div>
       </div>
@@ -63,7 +62,7 @@ const PnsTile = ({ pill, title, tagline, cta, provider, imgSrc }) => (
         </div>
       </div>
     </div>
-  </div>
+  </a>
 );
 
 const PlanningAndNextSteps = () => (
@@ -76,14 +75,14 @@ const PlanningAndNextSteps = () => (
           <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '40px', fontWeight: 700, color: '#12243F', lineHeight: 1.15, margin: 0 }}>Planning &amp; Next Steps</h2>
         </div>
         <div className="pns-grid-row">
-          <PnsTile pill="Senior Living" title="Senior Living Options" tagline="Finding the Right Community for You" cta="Learn More →" provider="Information & Featured Providers" imgSrc="/tiles/set3/senior-living-options.webp" />
-          <PnsTile pill="Real Estate" title="Home Values & Pricing" tagline="Understanding What Your Property Is Worth" cta="Learn More →" provider="Information & Featured Providers" imgSrc="/tiles/set3/home-values-pricing.webp" />
-          <PnsTile pill="Real Estate" title="Senior Home Sales" tagline="Selling Your Home With Care & Confidence" cta="Learn More →" provider="Information & Featured Providers" imgSrc="/tiles/set3/senior-home-sales.webp" />
-          <PnsTile pill="Financial" title="Paying for Senior Living" tagline="Planning & Funding Your Next Chapter" cta="Learn More →" provider="Information & Featured Providers" imgSrc="/tiles/set3/paying-for-senior-living.webp" />
-          <PnsTile pill="Washington State" title="Service Areas" tagline="Local Expertise Across Washington State" cta="Learn More →" provider="Information & Featured Providers" imgSrc="/tiles/set3/service-areas.webp" />
-          <PnsTile pill="Education" title="Guides & Resources" tagline="Practical Tools for Every Step of the Way" cta="Learn More →" provider="Information & Featured Providers" imgSrc="/tiles/set3/guides-resources.webp" />
-          <PnsTile pill="Life Transitions" title="Grey Divorce" tagline="Real Estate & Housing After Divorce" cta="Learn More →" provider="Information & Featured Providers" imgSrc="/tiles/set3/grey-divorce.webp" />
-          <PnsTile pill="Senior Planning" title="Medicare Providers" tagline="Coverage Guidance for Seniors & Families" cta="Learn More →" provider="Information & Featured Providers" imgSrc="/tiles/set3/medicare-providers.webp" />
+          <PnsTile pill="Senior Living" title="Senior Living Options" tagline="Finding the Right Community for You" cta="Learn More →" provider="Information & Featured Providers" imgSrc="/tiles/set3/senior-living-options.webp" href="/senior-living" />
+          <PnsTile pill="Real Estate" title="Home Values & Pricing" tagline="Understanding What Your Property Is Worth" cta="Learn More →" provider="Information & Featured Providers" imgSrc="/tiles/set3/home-values-pricing.webp" href="/why-valuation-matters" />
+          <PnsTile pill="Real Estate" title="Senior Home Sales" tagline="Selling Your Home With Care & Confidence" cta="Learn More →" provider="Information & Featured Providers" imgSrc="/tiles/set3/senior-home-sales.webp" href="/sell-house-fund-senior-living" />
+          <PnsTile pill="Financial" title="Paying for Senior Living" tagline="Planning & Funding Your Next Chapter" cta="Learn More →" provider="Information & Featured Providers" imgSrc="/tiles/set3/paying-for-senior-living.webp" href="/financial-planning" />
+          <PnsTile pill="Washington State" title="Service Areas" tagline="Local Expertise Across Washington State" cta="Learn More →" provider="Information & Featured Providers" imgSrc="/tiles/set3/service-areas.webp" href="/counties" />
+          <PnsTile pill="Education" title="Guides & Resources" tagline="Practical Tools for Every Step of the Way" cta="Learn More →" provider="Information & Featured Providers" imgSrc="/tiles/set3/guides-resources.webp" href="/resources" />
+          <PnsTile pill="Life Transitions" title="Grey Divorce" tagline="Real Estate & Housing After Divorce" cta="Learn More →" provider="Information & Featured Providers" imgSrc="/tiles/set3/grey-divorce.webp" href="/grey-divorce" />
+          <PnsTile pill="Senior Planning" title="Medicare Providers" tagline="Coverage Guidance for Seniors & Families" cta="Learn More →" provider="Information & Featured Providers" imgSrc="/tiles/set3/medicare-providers.webp" href="/medicare-providers" />
         </div>
         <div className="pns-provider-bar">
           <div className="pns-provider-bar-text"><strong>Planning ahead?</strong> Connect with experienced professionals across Washington State.</div>
