@@ -183,6 +183,7 @@ const App = () => (
           <Route path="/executor-responsibilities-first-steps" element={<ExecutorResponsibilitiesFirstSteps />} />
           <Route path="/preparing-home-for-sale-during-transition" element={<PreparingHomeForSaleDuringTransition />} />
           <Route path="/selling-an-inherited-home" element={<SellingAnInheritedHome />} />
+          <Route path="/aging-in-place-staying-home-safely" element={<AgingInPlaceStayingHomeSafely />} />
           <Route path="/date-of-death-valuation-property-appraisals" element={<DateOfDeathValuationPropertyAppraisals />} />
           <Route path="/senior-placement" element={<SeniorPlacement />} />
           <Route path="/sell-house-fund-senior-living" element={<SellHouseFundSeniorLiving />} />
