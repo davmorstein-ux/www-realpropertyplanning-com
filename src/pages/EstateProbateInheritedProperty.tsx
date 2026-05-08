@@ -206,12 +206,11 @@ const resources = [
 ];
 
 const continueJourney = [
-  { href: "/guides/how-probate-real-estate-works", title: "Understanding Probate Real Estate", description: "The full Washington probate sale process, demystified.", icon: iconBookOpen },
-  { href: "/executors", title: "Executor Responsibilities", description: "What personal representatives are expected to do.", icon: iconExecutor },
-  { href: "/real-estate-appraiser", title: "Date-of-Death Valuation", description: "Why and how estate properties are appraised.", icon: iconAppraiser },
-  { href: "/probate-estate-sales", title: "Selling an Inherited Property", description: "How estate sales differ from ordinary listings.", icon: iconHome },
-  { href: "/guides/repairs-before-selling-probate-home-washington", title: "Preparing an Estate Home for Sale", description: "What to fix, what to skip, and what to leave as-is.", icon: iconHome },
-  { href: "/professionals", title: "Building Your Trusted Professional Team", description: "Meet the coordinated network of estate professionals.", icon: iconHandshake },
+  { href: "/executor-responsibilities-first-steps", title: "Executor Responsibilities & First Steps", description: "A first-step roadmap for executors and personal representatives.", icon: iconExecutor },
+  { href: "/selling-an-inherited-home", title: "Selling an Inherited Home", description: "How estate sales differ from ordinary listings.", icon: iconHome },
+  { href: "/date-of-death-valuation-property-appraisals", title: "Date-of-Death Valuation", description: "Why and how estate properties are appraised.", icon: iconAppraiser },
+  { href: "/what-to-do-with-the-house", title: "What To Do With the House", description: "A guided decision roadmap for the home.", icon: iconBriefcase },
+  { href: "/building-your-trusted-professional-team", title: "Building Your Trusted Professional Team", description: "Meet the coordinated network of estate professionals.", icon: iconHandshake },
 ];
 
 const nextSteps = [
