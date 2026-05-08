@@ -645,6 +645,92 @@ const ROUTE_METADATA: Record<string, RouteMeta> = {
     h1: "Should You Sell an Inherited House As-Is or Fix It Up?",
     intro: "Deciding whether to sell an inherited property as-is or invest in repairs — the trade-offs and when each approach makes sense.",
   },
+
+  // ===== Guided Journey Hub pages =====
+  "/helping-aging-parents": {
+    title: "Helping Aging Parents — A Calm Family Roadmap | Real Property Planning",
+    description: "Guidance for adult children and families supporting aging parents — housing, caregiving, downsizing, and major life decisions across Washington State.",
+    h1: "Helping Aging Parents — A Calm Family Roadmap",
+    intro: "A guided journey for families helping a parent or loved one through housing, care, and major life transitions — calm, practical, and free of pressure.",
+  },
+  "/estate-probate-inherited-property": {
+    title: "Estate, Probate & Inherited Property — Guided Journey | Real Property Planning",
+    description: "A clear roadmap for executors, trustees, heirs, and families managing estate, probate, and inherited property matters in Washington State.",
+    h1: "Estate, Probate & Inherited Property — Where to Begin",
+    intro: "A guided journey for executors, trustees, and heirs handling probate, estate settlement, and inherited real estate — step by step.",
+  },
+  "/what-should-we-do-first": {
+    title: "What Should We Do First? — Guided First Steps | Real Property Planning",
+    description: "A calm starting point for families facing housing, estate, or transition decisions. Plain-language first steps before any major move.",
+    h1: "What Should We Do First?",
+    intro: "When several decisions feel urgent at once, this guided journey helps families take a calm, ordered first step — before making any big move.",
+  },
+  "/what-to-do-with-the-house": {
+    title: "What To Do With the House — Sell, Keep, or Prepare | Real Property Planning",
+    description: "A guided roadmap for families deciding what to do with a family or inherited home — sell, keep, repair, or prepare for transition.",
+    h1: "What To Do With the House",
+    intro: "Sell, keep, repair, or prepare? A calm, guided journey for families weighing what to do with a family home or inherited property.",
+  },
+  "/understanding-housing-care-options": {
+    title: "Understanding Housing & Care Options | Real Property Planning",
+    description: "Plain-language overview of independent living, assisted living, memory care, adult family homes, and in-home support across Washington State.",
+    h1: "Understanding Housing & Care Options",
+    intro: "Compare independent living, assisted living, memory care, adult family homes, and in-home support — a calm orientation for families.",
+  },
+  "/understanding-senior-transitions": {
+    title: "Understanding Senior Transitions | Real Property Planning",
+    description: "A guided overview of senior moves, downsizing, housing changes, and family coordination across Washington State.",
+    h1: "Understanding Senior Transitions",
+    intro: "A calm guide to senior moves, downsizing, and the housing, care, and family coordination that goes with them.",
+  },
+  "/date-of-death-valuation-property-appraisals": {
+    title: "Date-of-Death Valuation & Estate Property Appraisals | Real Property Planning",
+    description: "Certified date-of-death valuations and estate property appraisals for probate, trusts, stepped-up basis, and tax filings in Washington State.",
+    h1: "Date-of-Death Valuation & Estate Property Appraisals",
+    intro: "A certified date-of-death appraisal supports stepped-up basis, estate filings, and fair distribution among heirs — performed to professional appraisal standards.",
+  },
+  "/estate-planning-powers-of-attorney": {
+    title: "Estate Planning & Powers of Attorney — Guided Overview | Real Property Planning",
+    description: "Plain-language overview of wills, trusts, powers of attorney, and estate planning basics for Washington State families.",
+    h1: "Estate Planning & Powers of Attorney",
+    intro: "A calm orientation to wills, trusts, powers of attorney, and the planning steps that protect families before a crisis develops.",
+  },
+  "/building-your-trusted-professional-team": {
+    title: "Building Your Trusted Professional Team | Real Property Planning",
+    description: "Connect with attorneys, CPAs, lenders, care managers, and other vetted professionals supporting estate, probate, and senior transition decisions.",
+    h1: "Building Your Trusted Professional Team",
+    intro: "Estates and senior transitions often require a coordinated team. This guided journey helps families connect with the right vetted professionals.",
+  },
+  "/downsizing-preparing-for-transition": {
+    title: "Downsizing & Preparing for a Transition | Real Property Planning",
+    description: "A calm, step-by-step guide to downsizing, sorting belongings, and preparing a longtime home for a senior move or major life transition.",
+    h1: "Downsizing & Preparing for a Transition",
+    intro: "Decades of belongings, a longtime home, and a major move ahead — a calm, step-by-step roadmap for families preparing to downsize.",
+  },
+  "/executor-responsibilities-first-steps": {
+    title: "Executor Responsibilities — First Steps | Real Property Planning",
+    description: "A practical roadmap for newly appointed executors and personal representatives in Washington State — duties, timelines, and first 30–60 days.",
+    h1: "Executor Responsibilities — First Steps",
+    intro: "Just appointed as executor or personal representative? A clear roadmap of your duties, timelines, and the most important first steps.",
+  },
+  "/preparing-home-for-sale-during-transition": {
+    title: "Preparing a Home for Sale During a Major Transition | Real Property Planning",
+    description: "Coordinated cleanout, repairs, and staging for estate, probate, and senior transition home sales across Washington State.",
+    h1: "Preparing a Home for Sale During a Transition",
+    intro: "Cleanout, repairs, staging — coordinated preparation for homes being sold during probate, estate settlement, or a senior move.",
+  },
+  "/selling-an-inherited-home": {
+    title: "Selling an Inherited Home — Calm Roadmap | Real Property Planning",
+    description: "A calm, plain-language roadmap for heirs, executors, and families selling an inherited home in Washington State — taxes, basis, timing, and process.",
+    h1: "Selling an Inherited Home",
+    intro: "A calm roadmap for heirs and executors selling an inherited home — covering taxes, basis, timing, heirs' coordination, and the sale process.",
+  },
+  "/aging-in-place-staying-home-safely": {
+    title: "Aging in Place & Staying Home Safely | Real Property Planning",
+    description: "A calm guide to aging in place, evaluating safety, and planning ahead for caregiving and housing decisions in Washington State.",
+    h1: "Aging in Place & Staying at Home Safely",
+    intro: "What aging in place really means — how families evaluate safety, plan ahead, and weigh in-home support against future housing changes.",
+  },
 };
 
 const DEFAULT_SHELL_META: RouteMeta = ROUTE_METADATA["/"] || {
