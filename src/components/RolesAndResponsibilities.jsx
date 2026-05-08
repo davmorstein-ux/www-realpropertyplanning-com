@@ -3,9 +3,9 @@ import React from 'react';
 const styles = `
   @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap');
   .p2-wrap * { box-sizing: border-box; margin: 0; padding: 0; }
-  .p2-section { font-family: 'Montserrat', sans-serif; padding: 0 40px 64px; }
-  .p2-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1300px; margin: 0 auto 20px; padding-top: 10px; }
-  .p2-tile { width: 100%; cursor: pointer; text-decoration: none; display: block; }
+  .p2-section { font-family: 'Montserrat', sans-serif; padding: 0 40px 64px; overflow: visible; }
+  .p2-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1300px; margin: 0 auto 20px; padding-top: 25px; overflow: visible; }
+  .p2-tile { width: 100%; cursor: pointer; text-decoration: none; display: block; overflow: visible; }
   .p2-card { width: 100%; height: 420px; background: #FDFAF5; border-radius: 5px; border: 1px solid rgba(184,154,90,.40); box-shadow: 0 8px 24px rgba(18,36,63,.15); display: flex; flex-direction: column; position: relative; transition: box-shadow .4s ease; overflow: visible; }
   .p2-tile:hover .p2-card { box-shadow: 0 12px 32px rgba(18,36,63,.22); }
   .p2-corner { position: absolute; width: 14px; height: 14px; pointer-events: none; z-index: 50; }
