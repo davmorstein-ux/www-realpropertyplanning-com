@@ -1673,8 +1673,11 @@ button:not([data-nav-button]),
   /* Exempt all tile section pill/title/label typography from global overrides */
   .p1pill, .p2pill, .p3pill, .papill { font-size: 13px !important; }
   .p1title, .p2title, .p3title, .patitle { font-size: 26px !important; }
-  .p1label, .p2label, .p3label, .palabel { font-size: 11px !important; }
-  .r2-label { font-size: 11px !important; font-family: 'Montserrat', sans-serif !important; letter-spacing: 0.04em !important; }
+  .r2-label { font-size: 13px !important; font-family: 'Montserrat', sans-serif !important; }
+  .p1label { font-size: 13px !important; font-family: 'Montserrat', sans-serif !important; }
+  .p2label { font-size: 13px !important; font-family: 'Montserrat', sans-serif !important; }
+  .p3label { font-size: 13px !important; font-family: 'Montserrat', sans-serif !important; }
+  .palabel { font-size: 13px !important; font-family: 'Montserrat', sans-serif !important; }
   .r2-pill { font-size: 13px !important; }
 
 
