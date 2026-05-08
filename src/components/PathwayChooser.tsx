@@ -11,7 +11,7 @@ const pathways = [
     description:
       "Guidance for senior transitions, housing options, downsizing, and care planning.",
     cta: "Start Here",
-    href: "/senior-transitions",
+    href: "/helping-aging-parents",
   },
   {
     icon: probateIcon,
@@ -19,7 +19,7 @@ const pathways = [
     description:
       "Resources for executors, trustees, heirs, probate matters, appraisals, and estate property decisions.",
     cta: "Start Here",
-    href: "/probate-estate-sales",
+    href: "/estate-probate-inherited-property",
   },
   {
     icon: proIcon,
