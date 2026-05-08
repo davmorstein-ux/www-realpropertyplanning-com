@@ -21,7 +21,7 @@ const styles = `
   .rpp-corner.br { bottom: 8px; right: 8px; border-bottom: 1.5px solid #b89a5a; border-right: 1.5px solid #b89a5a; }
   .rpp-card-inner { padding: 30px 0 0; overflow: visible; flex: 1; display: flex; flex-direction: column; }
   .rpp-photo-hinge { width: 100%; display: block; line-height: 0; font-size: 0; overflow: visible; }
-  .rpp-house-img { display: block; width: 100%; height: 220px; object-fit: cover; border-radius: 5px 5px 0 0; }
+  .rpp-house-img { display: block; width: 100%; height: 200px; object-fit: cover; object-position: top center; border-radius: 5px 5px 0 0; }
   .rpp-text-area { height: 120px; overflow: hidden; padding: 10px; flex-shrink: 0; position: relative; display: flex; flex-direction: column; justify-content: flex-start; }
   .rpp-static-content { padding: 4px 2px 0; }
   .rpp-category-pill { display: block; font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: #b89a5a; margin-bottom: 5px; transition: opacity .15s ease; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
