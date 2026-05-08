@@ -148,12 +148,11 @@ const checklist = [
 ];
 
 const continueJourney = [
-  { href: "/helping-aging-parents", title: "Helping an Aging Parent or Loved One", description: "A calm roadmap for senior transitions and family decisions.", icon: iconHeartHands },
-  { href: "/estate-probate-inherited-property", title: "Managing an Estate, Probate, or Inherited Property", description: "A guided path for executors, trustees, and heirs.", icon: iconExecutor },
-  { href: "/senior-living-and-relocation", title: "Understanding Housing & Care Options", description: "Compare assisted living, adult family homes, memory care, and more.", icon: iconAssisted },
-  { href: "/real-estate-appraiser", title: "Date-of-Death Valuation", description: "Learn when an estate valuation or appraisal may be needed.", icon: iconDocument },
-  { href: "/guides/repairs-before-selling-probate-home-washington", title: "Preparing a Home for Sale", description: "Understand what to repair, clean out, or leave alone.", icon: iconHome },
-  { href: "/professionals", title: "Building Your Trusted Professional Team", description: "Meet the coordinated team supporting Washington families.", icon: iconBookOpen },
+  { href: "/date-of-death-valuation-property-appraisals", title: "Date-of-Death Valuation", description: "Learn when an estate valuation or appraisal may be needed.", icon: iconDocument },
+  { href: "/preparing-home-for-sale-during-transition", title: "Preparing a Home for Sale", description: "Practical guidance for repairs, cleanout, and readiness.", icon: iconHome },
+  { href: "/selling-an-inherited-home", title: "Selling an Inherited Home", description: "How estate sales differ from ordinary listings.", icon: iconExecutor },
+  { href: "/downsizing-preparing-for-transition", title: "Downsizing & Preparing for a Transition", description: "A calm, practical roadmap for organizing and moving.", icon: iconHeartHands },
+  { href: "/building-your-trusted-professional-team", title: "Building Your Trusted Professional Team", description: "Meet the coordinated team supporting Washington families.", icon: iconBookOpen },
 ];
 
 const nextSteps = [
