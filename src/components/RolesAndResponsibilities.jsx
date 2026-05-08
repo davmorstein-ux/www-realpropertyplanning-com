@@ -42,8 +42,11 @@ const RolesAndResponsibilities = () => {
         .r2-bar { max-width: 1300px; margin: 36px auto 0; background: #1a3a6b; border-radius: 8px; padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
         .r2-bar-text { font-family: 'Montserrat', sans-serif !important; font-size: 14px !important; color: #c8d5e8; line-height: 1.6; }
         .r2-bar-btn { font-family: 'Montserrat', sans-serif !important; font-size: 13px !important; font-weight: 700 !important; letter-spacing: 0.08em; background: #b89a5a; color: #fff; border: none; border-radius: 4px; padding: 12px 24px; cursor: pointer; white-space: nowrap; }
+        /* === ULTRA-SPECIFIC FONT-SIZE OVERRIDES === */
+        div#r2-section div.r2-grid a.r2-card div.r2-body span.r2-pill { font-size: 13px !important; }
+        div#r2-section div.r2-grid a.r2-card div.r2-body div.r2-title { font-size: 26px !important; }
       `}</style>
-      <div className="r2-section">
+      <div id="r2-section" className="r2-section">
         <div className="r2-heading">
           <span className="r2-eyebrow">Washington State</span>
           <h2 className="r2-h2">Roles &amp; Responsibilities</h2>
