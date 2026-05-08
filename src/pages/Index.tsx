@@ -138,6 +138,9 @@ const Index = () => {
       {/* 1. HERO — PNW background, calm headline, two CTAs */}
       <HomepageHero />
 
+      {/* ORIENTATION — what this website is and who it is for */}
+      <HomepageOrientation />
+
       {/* PATHWAY CHOOSER — visitor self-segmentation */}
       <PathwayChooser />
 
