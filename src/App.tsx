@@ -128,6 +128,7 @@ const Testimonials = lazy(() => import("./pages/Testimonials"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const Roles = lazy(() => import("./pages/Roles"));
 const Planning = lazy(() => import("./pages/Planning"));
+const ProfessionalsPage = lazy(() => import("./pages/ProfessionalsPage"));
 
 const queryClient = new QueryClient();
 
@@ -270,6 +271,7 @@ const App = () => (
           <Route path="/professionals" element={<Professionals />} />
           <Route path="/roles" element={<Roles />} />
           <Route path="/planning" element={<Planning />} />
+          <Route path="/professionals-services" element={<ProfessionalsPage />} />
           <Route path="/professionals/probate-attorneys" element={<ProbateAttorneys />} />
           <Route path="/professionals/senior-housing-advisors" element={<SeniorHousingAdvisors />} />
           <Route path="/professionals/financial-planners" element={<FinancialPlanners />} />
