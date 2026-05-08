@@ -6,16 +6,16 @@ const styles = `
   .p2section { font-family: 'Montserrat', sans-serif; padding: 0 40px 64px; }
   .p2grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1300px; margin: 0 auto 20px; }
   .p2tile { width: 100%; cursor: pointer; text-decoration: none; display: block; }
-  .p2card { width: 100%; background: #FDFAF5; border-radius: 5px; border: 1px solid rgba(184,154,90,.40); box-shadow: 0 8px 24px rgba(18,36,63,.15); display: flex; flex-direction: column; position: relative; transition: box-shadow .4s ease, transform .4s ease; }
+  .p2card { width: 100%; height: 380px; background: #FDFAF5; border-radius: 5px; border: 1px solid rgba(184,154,90,.40); box-shadow: 0 8px 24px rgba(18,36,63,.15); display: flex; flex-direction: column; position: relative; transition: box-shadow .4s ease, transform .4s ease; overflow: hidden; }
   .p2tile:hover .p2card { box-shadow: 0 16px 40px rgba(18,36,63,.25); transform: translateY(-6px); }
   .p2corner { position: absolute; width: 14px; height: 14px; pointer-events: none; z-index: 50; }
   .p2corner.tl { top: 8px; left: 8px; border-top: 1.5px solid #b89a5a; border-left: 1.5px solid #b89a5a; }
   .p2corner.tr { top: 8px; right: 8px; border-top: 1.5px solid #b89a5a; border-right: 1.5px solid #b89a5a; }
   .p2corner.bl { bottom: 8px; left: 8px; border-bottom: 1.5px solid #b89a5a; border-left: 1.5px solid #b89a5a; }
   .p2corner.br { bottom: 8px; right: 8px; border-bottom: 1.5px solid #b89a5a; border-right: 1.5px solid #b89a5a; }
-  .p2img { display: block; width: 100%; height: auto; flex-shrink: 0; transition: transform .4s ease; }
-  .p2tile:hover .p2img { transform: scale(1.03); }
-  .p2body { padding: 12px 10px 0; overflow: hidden; position: relative; height: 100px; flex-shrink: 0; }
+  .p2img { display: block; width: 100%; height: 215px; object-fit: cover; object-position: top center; flex-shrink: 0; transition: transform .4s ease; }
+  .p2tile:hover .p2img { transform: scale(1.04); }
+  .p2body { flex: 1; padding: 12px 10px 0; overflow: hidden; position: relative; }
   .p2pill { display: block; font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: #b89a5a; margin-bottom: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; transition: opacity .15s ease; }
   .p2title { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 22px; color: #12243F; line-height: 1.15; transition: opacity .15s ease; }
   .p2tile:hover .p2pill, .p2tile:hover .p2title { opacity: 0; }
