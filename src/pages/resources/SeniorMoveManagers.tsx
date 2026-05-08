@@ -14,13 +14,13 @@ const SeniorMoveManagers = () => (
     <SEOHead
       title="Senior Move Managers | Resources | Real Property Planning"
       description="Senior move management professionals throughout Washington State who coordinate and manage the physical and emotional aspects of relocating seniors."
-      canonical="https://www.realpropertyplanning.com/resources/senior-move-managers"
+      canonical="https://realpropertyplanning.com/resources/senior-move-managers"
     />
     <BreadcrumbSchema
       items={[
-        { name: "Home", url: "https://www.realpropertyplanning.com" },
-        { name: "Resources", url: "https://www.realpropertyplanning.com/resources" },
-        { name: "Senior Move Managers", url: "https://www.realpropertyplanning.com/resources/senior-move-managers" },
+        { name: "Home", url: "https://realpropertyplanning.com" },
+        { name: "Resources", url: "https://realpropertyplanning.com/resources" },
+        { name: "Senior Move Managers", url: "https://realpropertyplanning.com/resources/senior-move-managers" },
       ]}
     />
     <Header />

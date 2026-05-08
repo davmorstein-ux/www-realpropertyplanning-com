@@ -130,7 +130,7 @@ const Index = () => {
       <SEOHead
         title="Real Property Planning | Probate, Estate & Senior Transitions — Washington State"
         description="Washington State's trusted resource for probate real estate, estate sales, and senior transitions — connecting families, executors, and attorneys with professional guidance statewide."
-        canonical="https://www.realpropertyplanning.com"
+        canonical="https://realpropertyplanning.com"
         schemaJson={jsonLd}
       />
       <main id="main-content">

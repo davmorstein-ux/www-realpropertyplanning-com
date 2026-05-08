@@ -45,12 +45,12 @@ const Services = () => {
       <SEOHead
         title="Senior Relocation & Estate Real Estate Services | Real Property Planning"
         description="Real Property Planning provides senior relocation home sales, estate and inherited property sales, probate real estate, trust property sales, clean-out coordination, and market analysis throughout Washington State."
-        canonical="https://www.realpropertyplanning.com/services"
+        canonical="https://realpropertyplanning.com/services"
       />
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://www.realpropertyplanning.com/" },
-          { name: "Services", url: "https://www.realpropertyplanning.com/services" },
+          { name: "Home", url: "https://realpropertyplanning.com/" },
+          { name: "Services", url: "https://realpropertyplanning.com/services" },
         ]}
       />
       <Header />

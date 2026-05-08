@@ -73,16 +73,16 @@ const WashingtonExecutorsChecklist = () => {
       <SEOHead
         title="Washington Executor's 10-Step Checklist for Handling Real Estate | Real Property Planning"
         description="A practical free resource for Washington executors, trustees, and families handling estate real estate. Learn the 10 key steps to protect the property, understand value, and move forward with confidence."
-        canonical="https://www.realpropertyplanning.com/resources/washington-executors-10-step-checklist"
+        canonical="https://realpropertyplanning.com/resources/washington-executors-10-step-checklist"
         jsonLd={jsonLd}
       />
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://www.realpropertyplanning.com" },
-          { name: "Resources", url: "https://www.realpropertyplanning.com/resources" },
+          { name: "Home", url: "https://realpropertyplanning.com" },
+          { name: "Resources", url: "https://realpropertyplanning.com/resources" },
           {
             name: "Washington Executor's 10-Step Checklist",
-            url: "https://www.realpropertyplanning.com/resources/washington-executors-10-step-checklist",
+            url: "https://realpropertyplanning.com/resources/washington-executors-10-step-checklist",
           },
         ]}
       />

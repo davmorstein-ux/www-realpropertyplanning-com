@@ -12,13 +12,13 @@ const IndependentLiving = () => (
     <SEOHead
       title="Independent Living | Senior Living | Real Property Planning"
       description="Learn about independent living communities for active seniors seeking a maintenance-free lifestyle throughout Washington State."
-      canonical="https://www.realpropertyplanning.com/senior-living/independent-living"
+      canonical="https://realpropertyplanning.com/senior-living/independent-living"
     />
     <BreadcrumbSchema
       items={[
-        { name: "Home", url: "https://www.realpropertyplanning.com" },
-        { name: "Senior Living & Relocation", url: "https://www.realpropertyplanning.com/senior-living-and-relocation" },
-        { name: "Independent Living", url: "https://www.realpropertyplanning.com/senior-living/independent-living" },
+        { name: "Home", url: "https://realpropertyplanning.com" },
+        { name: "Senior Living & Relocation", url: "https://realpropertyplanning.com/senior-living-and-relocation" },
+        { name: "Independent Living", url: "https://realpropertyplanning.com/senior-living/independent-living" },
       ]}
     />
     <Header />

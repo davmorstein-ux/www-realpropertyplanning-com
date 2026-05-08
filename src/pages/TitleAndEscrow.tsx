@@ -46,12 +46,12 @@ const TitleAndEscrow = () => (
     <SEOHead
       title="Title & Escrow Services in Washington State | Real Property Planning"
       description="Learn how title and escrow services protect buyers, sellers, and families during probate and estate real estate transactions in Washington State."
-      canonical="https://www.realpropertyplanning.com/title-and-escrow"
+      canonical="https://realpropertyplanning.com/title-and-escrow"
     />
     <BreadcrumbSchema
       items={[
-        { name: "Home", url: "https://www.realpropertyplanning.com" },
-        { name: "Title & Escrow", url: "https://www.realpropertyplanning.com/title-and-escrow" },
+        { name: "Home", url: "https://realpropertyplanning.com" },
+        { name: "Title & Escrow", url: "https://realpropertyplanning.com/title-and-escrow" },
       ]}
     />
     <Header />

@@ -12,13 +12,13 @@ const NursingAndSkilledCare = () => (
     <SEOHead
       title="Nursing & Skilled Care | Senior Living | Real Property Planning"
       description="Learn about nursing and skilled care facilities providing 24-hour medical support for seniors throughout Washington State."
-      canonical="https://www.realpropertyplanning.com/senior-living/nursing-and-skilled-care"
+      canonical="https://realpropertyplanning.com/senior-living/nursing-and-skilled-care"
     />
     <BreadcrumbSchema
       items={[
-        { name: "Home", url: "https://www.realpropertyplanning.com" },
-        { name: "Senior Living & Relocation", url: "https://www.realpropertyplanning.com/senior-living-and-relocation" },
-        { name: "Nursing & Skilled Care", url: "https://www.realpropertyplanning.com/senior-living/nursing-and-skilled-care" },
+        { name: "Home", url: "https://realpropertyplanning.com" },
+        { name: "Senior Living & Relocation", url: "https://realpropertyplanning.com/senior-living-and-relocation" },
+        { name: "Nursing & Skilled Care", url: "https://realpropertyplanning.com/senior-living/nursing-and-skilled-care" },
       ]}
     />
     <Header />

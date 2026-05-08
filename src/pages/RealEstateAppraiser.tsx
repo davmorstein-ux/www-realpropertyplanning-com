@@ -16,12 +16,12 @@ const RealEstateAppraiser = () => (
     <SEOHead
       title="Certified Real Estate Appraiser in Washington State"
       description="Washington State Certified Residential Appraiser. Estate, probate, and senior transition appraisals accepted by courts, lenders, and the IRS."
-      canonical="https://www.realpropertyplanning.com/real-estate-appraiser"
+      canonical="https://realpropertyplanning.com/real-estate-appraiser"
     />
     <BreadcrumbSchema
       items={[
-        { name: "Home", url: "https://www.realpropertyplanning.com" },
-        { name: "Real Estate Appraiser", url: "https://www.realpropertyplanning.com/real-estate-appraiser" },
+        { name: "Home", url: "https://realpropertyplanning.com" },
+        { name: "Real Estate Appraiser", url: "https://realpropertyplanning.com/real-estate-appraiser" },
       ]}
     />
     <Header />

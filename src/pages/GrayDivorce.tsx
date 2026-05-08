@@ -13,12 +13,12 @@ const GrayDivorce = () => {
       <SEOHead
         title="Gray Divorce and the Family Home in Washington State | Real Property Planning"
         description="Guidance for Washington State couples over 50 navigating the family home during divorce. Calm, neutral real estate coordination from a Licensed Broker & Certified Appraiser."
-        canonical="https://www.realpropertyplanning.com/gray-divorce"
+        canonical="https://realpropertyplanning.com/gray-divorce"
       />
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://www.realpropertyplanning.com/" },
-          { name: "Gray Divorce", url: "https://www.realpropertyplanning.com/gray-divorce" },
+          { name: "Home", url: "https://realpropertyplanning.com/" },
+          { name: "Gray Divorce", url: "https://realpropertyplanning.com/gray-divorce" },
         ]}
       />
       <Header />

@@ -13,13 +13,13 @@ const EstateSaleCompanies = () => (
     <SEOHead
       title="Estate Sale Companies | Resources | Real Property Planning"
       description="Estate sale companies throughout Washington State that organize, price, and conduct sales of personal property and household contents during probate and estate transitions."
-      canonical="https://www.realpropertyplanning.com/resources/estate-sale-companies"
+      canonical="https://realpropertyplanning.com/resources/estate-sale-companies"
     />
     <BreadcrumbSchema
       items={[
-        { name: "Home", url: "https://www.realpropertyplanning.com" },
-        { name: "Resources", url: "https://www.realpropertyplanning.com/resources" },
-        { name: "Estate Sale Companies", url: "https://www.realpropertyplanning.com/resources/estate-sale-companies" },
+        { name: "Home", url: "https://realpropertyplanning.com" },
+        { name: "Resources", url: "https://realpropertyplanning.com/resources" },
+        { name: "Estate Sale Companies", url: "https://realpropertyplanning.com/resources/estate-sale-companies" },
       ]}
     />
     <Header />

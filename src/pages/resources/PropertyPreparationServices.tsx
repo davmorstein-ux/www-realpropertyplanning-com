@@ -13,13 +13,13 @@ const PropertyPreparationServices = () => (
     <SEOHead
       title="Property Preparation Services | Resources | Real Property Planning"
       description="Cleanout, staging, repair, and preparation services for estate and transition properties throughout Washington State."
-      canonical="https://www.realpropertyplanning.com/resources/property-preparation-services"
+      canonical="https://realpropertyplanning.com/resources/property-preparation-services"
     />
     <BreadcrumbSchema
       items={[
-        { name: "Home", url: "https://www.realpropertyplanning.com" },
-        { name: "Resources", url: "https://www.realpropertyplanning.com/resources" },
-        { name: "Property Preparation Services", url: "https://www.realpropertyplanning.com/resources/property-preparation-services" },
+        { name: "Home", url: "https://realpropertyplanning.com" },
+        { name: "Resources", url: "https://realpropertyplanning.com/resources" },
+        { name: "Property Preparation Services", url: "https://realpropertyplanning.com/resources/property-preparation-services" },
       ]}
     />
     <Header />

@@ -101,13 +101,13 @@ const SeniorPlacement = () => {
       <SEOHead
         title="Senior Placement in Washington State | David Stein | Real Property Planning"
         description="David Stein helps Washington State families navigate senior placement and the sale of the family home. Licensed Broker & Certified Appraiser serving King, Snohomish, Pierce & Kitsap Counties."
-        canonical="https://www.realpropertyplanning.com/senior-placement"
+        canonical="https://realpropertyplanning.com/senior-placement"
       />
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://www.realpropertyplanning.com/" },
-          { name: "Services", url: "https://www.realpropertyplanning.com/services" },
-          { name: "Senior Placement", url: "https://www.realpropertyplanning.com/senior-placement" },
+          { name: "Home", url: "https://realpropertyplanning.com/" },
+          { name: "Services", url: "https://realpropertyplanning.com/services" },
+          { name: "Senior Placement", url: "https://realpropertyplanning.com/senior-placement" },
         ]}
       />
       <Header />

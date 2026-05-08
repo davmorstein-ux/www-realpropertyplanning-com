@@ -12,13 +12,13 @@ const AssistedLivingCommunities = () => (
     <SEOHead
       title="Assisted Living Communities | Senior Living | Real Property Planning"
       description="Learn about assisted living communities offering daily support, social activities, and on-site amenities for seniors throughout Washington State."
-      canonical="https://www.realpropertyplanning.com/senior-living/assisted-living-communities"
+      canonical="https://realpropertyplanning.com/senior-living/assisted-living-communities"
     />
     <BreadcrumbSchema
       items={[
-        { name: "Home", url: "https://www.realpropertyplanning.com" },
-        { name: "Senior Living & Relocation", url: "https://www.realpropertyplanning.com/senior-living-and-relocation" },
-        { name: "Assisted Living Communities", url: "https://www.realpropertyplanning.com/senior-living/assisted-living-communities" },
+        { name: "Home", url: "https://realpropertyplanning.com" },
+        { name: "Senior Living & Relocation", url: "https://realpropertyplanning.com/senior-living-and-relocation" },
+        { name: "Assisted Living Communities", url: "https://realpropertyplanning.com/senior-living/assisted-living-communities" },
       ]}
     />
     <Header />

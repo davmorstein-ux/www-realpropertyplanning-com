@@ -43,12 +43,12 @@ const SeniorMoveManagers = () => (
     <SEOHead
       title="Senior Housing Transitions & Downsizing in Washington State | Real Property Planning"
       description="Helping families and seniors navigate the move from a longtime family home to senior or assisted living across Washington State. Compassionate real estate guidance, certified appraisals, and trusted local partners."
-      canonical="https://www.realpropertyplanning.com/senior-move-managers"
+      canonical="https://realpropertyplanning.com/senior-move-managers"
     />
     <BreadcrumbSchema
       items={[
-        { name: "Home", url: "https://www.realpropertyplanning.com" },
-        { name: "Senior Move Managers", url: "https://www.realpropertyplanning.com/senior-move-managers" },
+        { name: "Home", url: "https://realpropertyplanning.com" },
+        { name: "Senior Move Managers", url: "https://realpropertyplanning.com/senior-move-managers" },
       ]}
     />
     <Header />

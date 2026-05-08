@@ -81,12 +81,12 @@ const SeniorLivingAndRelocation = () => {
       <SEOHead
         title="Senior Living & Relocation | Real Property Planning"
         description="Helping families navigate housing transitions — from understanding senior living options to coordinating the sale of a family home."
-        canonical="https://www.realpropertyplanning.com/senior-living-and-relocation"
+        canonical="https://realpropertyplanning.com/senior-living-and-relocation"
       />
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://www.realpropertyplanning.com" },
-          { name: "Senior Living & Relocation", url: "https://www.realpropertyplanning.com/senior-living-and-relocation" },
+          { name: "Home", url: "https://realpropertyplanning.com" },
+          { name: "Senior Living & Relocation", url: "https://realpropertyplanning.com/senior-living-and-relocation" },
         ]}
       />
       <Header />

@@ -13,13 +13,13 @@ const CPAsFinancialAdvisors = () => (
     <SEOHead
       title="CPAs & Financial Advisors | Resources | Real Property Planning"
       description="CPAs and financial advisors throughout Washington State who assist with estate tax, capital gains, and financial planning for inherited and estate property."
-      canonical="https://www.realpropertyplanning.com/resources/cpas-financial-advisors"
+      canonical="https://realpropertyplanning.com/resources/cpas-financial-advisors"
     />
     <BreadcrumbSchema
       items={[
-        { name: "Home", url: "https://www.realpropertyplanning.com" },
-        { name: "Resources", url: "https://www.realpropertyplanning.com/resources" },
-        { name: "CPAs & Financial Advisors", url: "https://www.realpropertyplanning.com/resources/cpas-financial-advisors" },
+        { name: "Home", url: "https://realpropertyplanning.com" },
+        { name: "Resources", url: "https://realpropertyplanning.com/resources" },
+        { name: "CPAs & Financial Advisors", url: "https://realpropertyplanning.com/resources/cpas-financial-advisors" },
       ]}
     />
     <Header />
