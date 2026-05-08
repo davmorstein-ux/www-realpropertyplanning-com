@@ -26,8 +26,8 @@ const pathways = [
     title: "Are You a Professional or Advisor?",
     description:
       "Connect with trusted professionals, referral resources, and collaborative support for clients and families.",
-    cta: "Join the Network",
-    href: "/join-the-network",
+    cta: "Start Here",
+    href: "/building-your-trusted-professional-team",
   },
 ];
 
