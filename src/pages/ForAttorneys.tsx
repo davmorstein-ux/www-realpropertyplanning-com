@@ -9,17 +9,7 @@ import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washingto
 import iconAttorneys from "@/assets/icons/probate-attorney-services-icon-washington.webp";
 import CTASection from "@/components/CTASection";
 import PageFAQ from "@/components/PageFAQ";
-import tileFamilyLaw from "@/assets/FAMILY_LAW_TILE_cropped.webp";
-import tileProbate from "@/assets/PROBATE_TILE_cropped.webp";
-import tileRealEstate from "@/assets/REAL_ESTATE_TILE_cropped.webp";
-import tileDivorce from "@/assets/DIVORCE_TILE_cropped.webp";
-import tileElderLaw from "@/assets/ELDER_LAW_TILE_cropped.webp";
-import tileEstatePlanning from "@/assets/ESTATE_PLANNING_TILE_cropped.webp";
-
-const attorneyTiles = [
-  { src: tileFamilyLaw, alt: "Family Law Attorneys", href: "/for-family-law-attorneys" },
-  { src: tileProbate, alt: "Probate Attorneys", href: "/for-probate-attorneys" },
-  { src: tileRealEstate, alt: "Real Estate Attorneys", href: "/real-estate-attorneys" },
+import FeaturedAttorneys from "@/components/FeaturedAttorneys";
   { src: tileDivorce, alt: "Divorce Attorneys", href: "/grey-divorce" },
   { src: tileElderLaw, alt: "Elder Law Attorneys", href: "/for-elder-law-attorneys" },
   { src: tileEstatePlanning, alt: "Estate Planning Attorneys", href: "/for-estate-planning-attorneys" },
