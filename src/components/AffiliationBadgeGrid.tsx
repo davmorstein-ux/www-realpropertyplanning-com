@@ -1,4 +1,3 @@
-import { useEffect, useRef, useState } from "react";
 import alcaLogo from "@/assets/senior-advocates-alca-partner-washington.webp";
 import naosaBadge from "@/assets/senior-advocates-naosa-badge-washington.webp";
 import naepcLogo from "@/assets/estate-planners-naepc-logo-washington.webp";
@@ -10,36 +9,6 @@ interface AffiliationBadgeGridProps {
 }
 
 const AffiliationBadgeGrid = ({ naepcAlt, className }: AffiliationBadgeGridProps = {}) => {
-  const containerRef = useRef<HTMLDivElement | null>(null);
-  const [inView, setInView] = useState(true);
-  const [tabActive, setTabActive] = useState(
-    typeof document === "undefined" ? true : !document.hidden
-  );
-
-  useEffect(() => {
-    const el = containerRef.current;
-    if (!el || typeof IntersectionObserver === "undefined") return;
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          setInView(entry.isIntersecting);
-        }
-      },
-      { threshold: 0 }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
-
-  useEffect(() => {
-    if (typeof document === "undefined") return;
-    const onVisibility = () => setTabActive(!document.hidden);
-    document.addEventListener("visibilitychange", onVisibility);
-    return () => document.removeEventListener("visibilitychange", onVisibility);
-  }, []);
-
-  const isVisible = inView && tabActive;
-
   const naepcSrc = naepcAlt ? "/assets/naepc-logo.webp" : naepcLogo;
 
   const badges = [
@@ -70,65 +39,45 @@ const AffiliationBadgeGrid = ({ naepcAlt, className }: AffiliationBadgeGridProps
     },
   ];
 
-  // Duplicate so the marquee loops seamlessly: animating the track
-  // from 0 to -50% lands exactly on the start of the second copy.
-  const loop = [...badges, ...badges];
-
   return (
-    <div className={`mx-auto w-full ${className || ""}`} ref={containerRef}>
-      <div className="relative mx-auto w-full max-w-3xl">
-        {/* Edge fades */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-background to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-background to-transparent" />
-
-        {/* Viewport */}
-        <div className="overflow-hidden py-4">
-          <div
-            className="flex items-center gap-16 w-max affiliation-marquee-track"
-            style={{ animationPlayState: isVisible ? "running" : "paused" }}
-            aria-label="Professional memberships and affiliations"
-          >
-            {loop.map((b, i) => {
-              const isRealtor = b.alt === "REALTOR® badge";
-              const badgeHeight = "150px";
-              const img = (
-                <img
-                  src={b.src}
-                  alt={b.alt}
-                  loading="lazy"
-                  aria-hidden={i >= badges.length ? true : undefined}
-                  style={{
-                    height: badgeHeight,
-                    width: "auto",
-                    mixBlendMode: isRealtor ? "screen" : "multiply",
-                  }}
-                  className="max-w-none object-contain"
-                />
-              );
-              return (
-                <div
-                  key={i}
-                  className="shrink-0 flex items-center justify-center h-[150px]"
+    <div className={`mx-auto w-full ${className || ""}`}>
+      <ul
+        className="mx-auto flex flex-wrap items-center justify-center gap-x-10 gap-y-6 md:gap-x-14 max-w-5xl"
+        aria-label="Professional memberships and affiliations"
+      >
+        {badges.map((b, i) => {
+          const isRealtor = b.alt === "REALTOR® badge";
+          const img = (
+            <img
+              src={b.src}
+              alt={b.alt}
+              loading="lazy"
+              style={{
+                height: "110px",
+                width: "auto",
+                mixBlendMode: isRealtor ? "screen" : "multiply",
+              }}
+              className="max-w-full object-contain"
+            />
+          );
+          return (
+            <li key={i} className="flex items-center justify-center">
+              {b.href ? (
+                <a
+                  href={b.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center"
                 >
-                  {b.href ? (
-                    <a
-                      href={b.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center h-full"
-                      tabIndex={i >= badges.length ? -1 : 0}
-                    >
-                      {img}
-                    </a>
-                  ) : (
-                    img
-                  )}
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </div>
+                  {img}
+                </a>
+              ) : (
+                img
+              )}
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 };
