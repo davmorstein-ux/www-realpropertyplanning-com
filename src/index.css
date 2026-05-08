@@ -1679,7 +1679,13 @@ button:not([data-nav-button]),
   .p3label { font-size: 13px !important; font-family: 'Montserrat', sans-serif !important; }
   .palabel { font-size: 13px !important; font-family: 'Montserrat', sans-serif !important; }
   .r2-pill { font-size: 13px !important; }
-
+  .hn-question { font-size: 38px !important; font-family: 'Cormorant Garamond', serif !important; color: #8B1A1A !important; }
+  .hn-title { font-size: 34px !important; font-family: 'Cormorant Garamond', serif !important; color: #8B1A1A !important; }
+  .hn-eyebrow { font-size: 16px !important; font-family: 'Montserrat', sans-serif !important; }
+  .hn-sub { font-size: 18px !important; font-family: 'Montserrat', sans-serif !important; }
+  .hn-h2 { font-size: 44px !important; font-family: 'Cormorant Garamond', serif !important; }
+  .hn-item { font-size: 13px !important; font-family: 'Montserrat', sans-serif !important; }
+  .hn-cta { font-size: 12px !important; font-family: 'Montserrat', sans-serif !important; }
 
 /* ============================================================
    Affiliation badge marquee — continuous, linear, seamless loop.
