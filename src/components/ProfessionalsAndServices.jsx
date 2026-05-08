@@ -6,7 +6,7 @@ const styles = `
   .p1section { font-family: 'Montserrat', sans-serif; padding: 0 40px 64px; }
   .p1grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1300px; margin: 0 auto 20px; }
   .p1tile { width: 100%; cursor: pointer; text-decoration: none; display: block; }
-  .p1card { width: 100%; height: 420px; background: #FDFAF5; border-radius: 5px; border: 1px solid rgba(184,154,90,.40); box-shadow: 0 8px 24px rgba(18,36,63,.15); display: flex; flex-direction: column; position: relative; transition: box-shadow .4s ease, transform .4s ease; overflow: hidden; }
+  .p1card { width: 100%; height: 420px; background: #FDFAF5; border-radius: 5px; border: 1px solid rgba(184,154,90,.40); box-shadow: 0 8px 24px rgba(18,36,63,.15); display: flex; flex-direction: column; position: relative; transition: box-shadow .4s ease, transform .4s ease; overflow-x: clip; overflow-y: visible; }
   .p1tile:hover .p1card { box-shadow: 0 16px 40px rgba(18,36,63,.25); transform: translateY(-6px); }
   .p1corner { position: absolute; width: 14px; height: 14px; pointer-events: none; z-index: 50; }
   .p1corner.tl { top: 8px; left: 8px; border-top: 1.5px solid #b89a5a; border-left: 1.5px solid #b89a5a; }
