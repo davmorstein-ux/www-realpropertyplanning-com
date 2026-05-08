@@ -57,40 +57,7 @@ const ForAttorneys = () => (
     </section>
 
     {/* Attorney Specialty Tiles */}
-    <section id="areas-of-collaboration" className="pt-6 md:pt-8 pb-12 lg:pb-16 bg-background">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-[1200px] mx-auto">
-          <p className="text-center text-muted-foreground text-lg md:text-xl leading-[1.8] font-bold mb-4 md:mb-6">
-            Select the area of law that best fits your client's situation below.
-          </p>
-          <div className="text-center mb-8">
-            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-bold mb-3">
-              Areas of Collaboration
-            </h2>
-          </div>
-          <div className="mx-auto grid w-full max-w-[1200px] grid-cols-2 items-start gap-4 sm:grid-cols-3 attorney-tiles-grid">
-            {attorneyTiles.map((tile) => (
-              <a
-                key={tile.alt}
-                href={tile.href}
-                aria-label={tile.alt}
-                style={{ background: "transparent" }}
-                className="block w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 hover:scale-105 transition-transform duration-200"
-              >
-                <img
-                  src={tile.src}
-                  alt={tile.alt}
-                  className="block w-full h-auto select-none"
-                  style={{ background: "transparent" }}
-                  draggable={false}
-                  loading="lazy"
-                />
-              </a>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
+    <FeaturedAttorneys />
 
     {/* Attorney type definitions */}
     <section className="pt-6 md:pt-8 pb-8 md:pb-10 bg-background">
