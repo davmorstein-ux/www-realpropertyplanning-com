@@ -141,8 +141,8 @@ const Index = () => {
       {/* ORIENTATION — what this website is and who it is for */}
       <HomepageOrientation />
 
-      {/* PATHWAY CHOOSER — visitor self-segmentation */}
-      <PathwayChooser />
+      {/* SITUATION CARDS — what best describes your situation? */}
+      <SituationCards />
 
 
       {/* HOMEPAGE NAVIGATION */}
