@@ -11,7 +11,7 @@ const styles = `
   #professionals-section .rpp-row-2-2 { grid-template-columns: repeat(4, 1fr); }
   #professionals-section .rpp-row-2-3 { grid-template-columns: repeat(4, 1fr); }
   #professionals-section .rpp-row-2-center { grid-template-columns: repeat(4, 1fr); }
-  #professionals-section .rpp-tile { width: 100%; display: flex; flex-direction: column; cursor: pointer; }
+  #professionals-section .rpp-tile { width: 100%; display: flex; flex-direction: column; cursor: pointer; text-decoration: none; color: inherit; }
   #professionals-section .rpp-brochure { width: 100%; background: #FDFAF5; border-radius: 5px; border: 1px solid rgba(184,154,90,.40); box-shadow: 0 8px 24px rgba(18,36,63,.15); display: flex; flex-direction: column; overflow: visible; position: relative; transition: box-shadow .4s ease; }
   #professionals-section .rpp-tile:hover .rpp-brochure { box-shadow: 0 12px 32px rgba(18,36,63,.22); }
   #professionals-section .rpp-corner { position: absolute; width: 14px; height: 14px; pointer-events: none; z-index: 50; }
@@ -21,7 +21,7 @@ const styles = `
   #professionals-section .rpp-corner.br { bottom: 8px; right: 8px; border-bottom: 1.5px solid #b89a5a; border-right: 1.5px solid #b89a5a; }
   #professionals-section .rpp-card-inner { padding: 30px 0 0; overflow: visible; flex: 1; display: flex; flex-direction: column; }
   #professionals-section .rpp-photo-hinge { width: 100%; display: block; line-height: 0; font-size: 0; overflow: visible; }
-  #professionals-section .rpp-house-img { display: block; width: 100%; height: 220px; object-fit: cover; border-radius: 5px 5px 0 0; }
+  #professionals-section .rpp-house-img { display: block; width: 100%; height: 220px; object-fit: contain; border-radius: 5px 5px 0 0; }
   #professionals-section .rpp-text-area { height: 120px; overflow: hidden; padding: 10px; flex-shrink: 0; position: relative; display: flex; flex-direction: column; justify-content: flex-start; }
   #professionals-section .rpp-static-content { padding: 4px 2px 0; }
   #professionals-section .rpp-category-pill { display: block; font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: #b89a5a; margin-bottom: 5px; transition: opacity .15s ease; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }

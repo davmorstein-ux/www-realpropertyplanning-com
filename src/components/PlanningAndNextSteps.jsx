@@ -5,7 +5,7 @@ const styles = `
   #planning-section .pns-grid-wrap * { box-sizing: border-box; margin: 0; padding: 0; }
   #planning-section .pns-section { font-family: 'Montserrat', sans-serif; padding: 0 40px 64px; }
   #planning-section .pns-grid-row { display: grid; gap: 20px; max-width: 1300px; margin: 30px auto 20px; grid-template-columns: repeat(4, 1fr); }
-  #planning-section .pns-tile { width: 100%; display: flex; flex-direction: column; cursor: pointer; }
+  #planning-section .pns-tile { width: 100%; display: flex; flex-direction: column; cursor: pointer; text-decoration: none; color: inherit; }
   #planning-section .pns-brochure { width: 100%; background: #FDFAF5; border-radius: 5px; border: 1px solid rgba(184,154,90,.40); box-shadow: 0 8px 24px rgba(18,36,63,.15); display: flex; flex-direction: column; overflow: visible; position: relative; transition: box-shadow .4s ease; }
   #planning-section .pns-tile:hover .pns-brochure { box-shadow: 0 12px 32px rgba(18,36,63,.22); }
   #planning-section .pns-corner { position: absolute; width: 14px; height: 14px; pointer-events: none; z-index: 50; }
@@ -15,7 +15,7 @@ const styles = `
   #planning-section .pns-corner.br { bottom: 8px; right: 8px; border-bottom: 1.5px solid #b89a5a; border-right: 1.5px solid #b89a5a; }
   #planning-section .pns-card-inner { padding: 30px 0 0; overflow: visible; flex: 1; display: flex; flex-direction: column; }
   #planning-section .pns-photo-hinge { width: 100%; display: block; line-height: 0; font-size: 0; overflow: visible; }
-  #planning-section .pns-house-img { display: block; width: 100%; height: 220px; object-fit: cover; border-radius: 5px 5px 0 0; }
+  #planning-section .pns-house-img { display: block; width: 100%; height: 220px; object-fit: contain; border-radius: 5px 5px 0 0; }
   #planning-section .pns-text-area { height: 120px; overflow: hidden; padding: 10px; flex-shrink: 0; position: relative; display: flex; flex-direction: column; justify-content: flex-start; }
   #planning-section .pns-static-content { padding: 4px 2px 0; }
   #planning-section .pns-category-pill { display: block; font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: #b89a5a; margin-bottom: 5px; transition: opacity .15s ease; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
