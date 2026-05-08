@@ -63,9 +63,6 @@ const HomepageNav = () => {
       `}</style>
       <div className="hn-section">
         <div className="hn-heading">
-          <h2 className="hn-h2">Welcome to Real Property Planning</h2>
-          <span className="hn-eyebrow">A free-to-use hub · Built for families · Trusted by professionals</span>
-          <p className="hn-sub">Connecting families, seniors, and professionals with the right people and resources.</p>
           <div className="hn-question">What services are you looking for?</div>
         </div>
         <div className="hn-grid">
