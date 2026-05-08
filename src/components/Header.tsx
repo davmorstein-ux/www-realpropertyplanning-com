@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import ProfessionalsButton from "./ProfessionalsButton";
+
 
 /**
  * Site-wide header. Mirrors the homepage floating island nav (HomepageHero) so users
