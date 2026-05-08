@@ -46,7 +46,7 @@ const bodyStyle = {
 
 const pillStyle = {
   display: 'block',
-  fontSize: '11px',
+  fontSize: '13px',
   fontWeight: 700,
   letterSpacing: '0.18em',
   textTransform: 'uppercase',
@@ -61,7 +61,7 @@ const pillStyle = {
 const titleStyle = {
   fontFamily: "'Cormorant Garamond', serif",
   fontWeight: 700,
-  fontSize: '22px',
+  fontSize: '26px',
   color: '#12243F',
   lineHeight: 1.15,
 };
