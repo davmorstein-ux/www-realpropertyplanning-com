@@ -4,7 +4,7 @@ const styles = `
   @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap');
   .rr-grid-wrap * { box-sizing: border-box; margin: 0; padding: 0; }
   .rr-section { font-family: 'Montserrat', sans-serif; padding: 0 40px 64px; }
-  .rr-grid-row { display: grid; gap: 20px; max-width: 1300px; margin: 0 auto 20px; grid-template-columns: repeat(4, 1fr); }
+  .rr-grid-row { display: grid; gap: 20px; max-width: 1300px; margin: 30px auto 20px; grid-template-columns: repeat(4, 1fr); }
   .rr-tile { width: 100%; display: flex; flex-direction: column; cursor: pointer; }
   .rr-brochure { width: 100%; background: #FDFAF5; border-radius: 5px; border: 1px solid rgba(184,154,90,.40); box-shadow: 0 8px 24px rgba(18,36,63,.15); display: flex; flex-direction: column; overflow: visible; position: relative; transition: box-shadow .4s ease; }
   .rr-tile:hover .rr-brochure { box-shadow: 0 12px 32px rgba(18,36,63,.22); }
@@ -13,10 +13,10 @@ const styles = `
   .rr-corner.tr { top: 8px; right: 8px; border-top: 1.5px solid #b89a5a; border-right: 1.5px solid #b89a5a; }
   .rr-corner.bl { bottom: 8px; left: 8px; border-bottom: 1.5px solid #b89a5a; border-left: 1.5px solid #b89a5a; }
   .rr-corner.br { bottom: 8px; right: 8px; border-bottom: 1.5px solid #b89a5a; border-right: 1.5px solid #b89a5a; }
-  .rr-card-inner { padding: 0; overflow: visible; flex: 1; display: flex; flex-direction: column; }
+  .rr-card-inner { padding: 30px 0 0; overflow: visible; flex: 1; display: flex; flex-direction: column; }
   .rr-photo-hinge { width: 100%; display: block; line-height: 0; font-size: 0; overflow: visible; }
-  .rr-house-img { display: block; width: 100%; height: 220px; object-fit: cover; border-radius: 5px 5px 0 0; }
-  .rr-text-area { height: 120px; overflow: hidden; padding: 10px; flex-shrink: 0; position: relative; display: flex; flex-direction: column; justify-content: flex-start; }
+  .rr-house-img { display: block; width: 100%; height: 180px; object-fit: cover; border-radius: 5px 5px 0 0; }
+  .rr-text-area { height: 140px; overflow: hidden; padding: 10px; flex-shrink: 0; position: relative; display: flex; flex-direction: column; justify-content: flex-start; }
   .rr-static-content { padding: 4px 2px 0; }
   .rr-category-pill { display: block; font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: #b89a5a; margin-bottom: 5px; transition: opacity .15s ease; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .rr-tile-title { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 24px; color: #12243F; line-height: 1.15; transition: opacity .15s ease; }
