@@ -159,10 +159,9 @@ const faqs = [
 const continueJourney = [
   { href: "/understanding-senior-transitions", title: "Understanding Senior Transitions", description: "Guidance for the emotional and logistical changes ahead.", icon: iconHeartHands },
   { href: "/understanding-housing-care-options", title: "Understanding Housing & Care Options", description: "Compare assisted living, adult family homes, memory care, and more.", icon: iconAssisted },
+  { href: "/aging-in-place-staying-home-safely", title: "Aging in Place & Staying at Home Safely", description: "Plan ahead for safety, support, and independence at home.", icon: iconExecutor },
   { href: "/what-to-do-with-the-house", title: "What To Do With the House", description: "A guided decision roadmap for the home.", icon: iconHome },
-  { href: "/helping-aging-parents", title: "Helping an Aging Parent or Loved One", description: "A calm roadmap for senior transitions and family decisions.", icon: iconHeartHands },
-  { href: "/estate-planning-powers-of-attorney", title: "Estate Planning & Powers of Attorney", description: "Understand the legal documents most families need.", icon: iconDocument },
-  { href: "/building-your-trusted-professional-team", title: "Building Your Trusted Professional Team", description: "Meet the coordinated team supporting Washington families.", icon: iconBookOpen },
+  { href: "/preparing-home-for-sale-during-transition", title: "Preparing a Home for Sale During a Transition", description: "Practical guidance for repairs, cleanout, and readiness.", icon: iconBookOpen },
 ];
 
 const nextSteps = [
