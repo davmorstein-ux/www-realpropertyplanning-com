@@ -94,7 +94,7 @@ const RolesAndResponsibilities = () => {
 
   return (
     <div style={{ fontFamily: "'Montserrat', sans-serif", padding: '0 40px 64px' }}>
-      <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+      <style>{`@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap');`}</style>
       <div style={{ textAlign: 'center', marginBottom: '40px', paddingTop: '48px' }}>
         <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: '13px', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#b89a5a', display: 'block', marginBottom: '10px' }}>Washington State</span>
         <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '40px', fontWeight: 700, color: '#12243F', lineHeight: 1.15, margin: 0 }}>Roles &amp; Responsibilities</h2>
