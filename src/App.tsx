@@ -126,6 +126,8 @@ const HomePreparation = lazy(() => import("./pages/professionals/HomePreparation
 const CareManagers = lazy(() => import("./pages/professionals/CareManagers"));
 const Testimonials = lazy(() => import("./pages/Testimonials"));
 const NotFound = lazy(() => import("./pages/NotFound"));
+const Roles = lazy(() => import("./pages/Roles"));
+const Planning = lazy(() => import("./pages/Planning"));
 
 const queryClient = new QueryClient();
 
@@ -266,6 +268,8 @@ const App = () => (
 
           {/* ─── Professionals directory (for families) ───────────── */}
           <Route path="/professionals" element={<Professionals />} />
+          <Route path="/roles" element={<Roles />} />
+          <Route path="/planning" element={<Planning />} />
           <Route path="/professionals/probate-attorneys" element={<ProbateAttorneys />} />
           <Route path="/professionals/senior-housing-advisors" element={<SeniorHousingAdvisors />} />
           <Route path="/professionals/financial-planners" element={<FinancialPlanners />} />
