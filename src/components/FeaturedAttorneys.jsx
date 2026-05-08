@@ -6,16 +6,16 @@ const styles = `
   .pasection { font-family: 'Montserrat', sans-serif; padding: 0 40px 64px; }
   .pagrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 1300px; margin: 0 auto 20px; }
   .patile { width: 100%; cursor: pointer; text-decoration: none; display: block; }
-  .pacard { width: 100%; background: #FDFAF5; border-radius: 5px; border: 1px solid rgba(184,154,90,.40); box-shadow: 0 8px 24px rgba(18,36,63,.15); display: flex; flex-direction: column; position: relative; transition: box-shadow .4s ease, transform .4s ease; }
+  .pacard { width: 100%; height: 380px; background: #FDFAF5; border-radius: 5px; border: 1px solid rgba(184,154,90,.40); box-shadow: 0 8px 24px rgba(18,36,63,.15); display: flex; flex-direction: column; position: relative; transition: box-shadow .4s ease, transform .4s ease; overflow: hidden; }
   .patile:hover .pacard { box-shadow: 0 16px 40px rgba(18,36,63,.25); transform: translateY(-6px); }
   .pacorner { position: absolute; width: 14px; height: 14px; pointer-events: none; z-index: 50; }
   .pacorner.tl { top: 8px; left: 8px; border-top: 1.5px solid #b89a5a; border-left: 1.5px solid #b89a5a; }
   .pacorner.tr { top: 8px; right: 8px; border-top: 1.5px solid #b89a5a; border-right: 1.5px solid #b89a5a; }
   .pacorner.bl { bottom: 8px; left: 8px; border-bottom: 1.5px solid #b89a5a; border-left: 1.5px solid #b89a5a; }
   .pacorner.br { bottom: 8px; right: 8px; border-bottom: 1.5px solid #b89a5a; border-right: 1.5px solid #b89a5a; }
-  .paimg { display: block; width: 100%; height: auto; flex-shrink: 0; transition: transform .4s ease; }
-  .patile:hover .paimg { transform: scale(1.03); }
-  .pabody { padding: 12px 10px 0; overflow: hidden; position: relative; height: 100px; flex-shrink: 0; }
+  .paimg { display: block; width: 100%; height: 215px; object-fit: cover; object-position: top center; flex-shrink: 0; transition: transform .4s ease; }
+  .patile:hover .paimg { transform: scale(1.04); }
+  .pabody { flex: 1; padding: 12px 10px 0; overflow: hidden; position: relative; }
   .papill { display: block; font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: #b89a5a; margin-bottom: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; transition: opacity .15s ease; }
   .patitle { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 22px; color: #12243F; line-height: 1.15; transition: opacity .15s ease; }
   .patile:hover .papill, .patile:hover .patitle { opacity: 0; }
