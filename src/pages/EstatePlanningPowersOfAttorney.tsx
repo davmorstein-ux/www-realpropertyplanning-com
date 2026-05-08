@@ -17,6 +17,7 @@ import iconHome from "@/assets/icons/probate-property-home-icon-washington.webp"
 import iconExecutor from "@/assets/icons/probate-executors-services-icon-washington.webp";
 import iconArrow from "@/assets/icons/property-guidance-arrow-icon-washington.webp";
 import iconPhone from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
+import JourneyOrientation from "@/components/JourneyOrientation";
 
 interface Pathway {
   letter: string;
@@ -216,6 +217,16 @@ const EstatePlanningPowersOfAttorney = () => {
             </div>
           </div>
         </section>
+
+        <JourneyOrientation
+          items={[
+            "You do not have a will or power of attorney in place",
+            "A parent's documents may be outdated",
+            "You are unsure who should serve as executor or agent",
+            "You want to protect your family from probate confusion",
+            "You are planning ahead — calmly, before a crisis"
+          ]}
+        />
 
         {/* REASSURANCE */}
         <section className="py-10 lg:py-12 bg-cream">

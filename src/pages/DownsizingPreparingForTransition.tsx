@@ -17,6 +17,7 @@ import iconBookOpen from "@/assets/icons/probate-guidance-book-open-icon-washing
 import iconDocument from "@/assets/icons/probate-document-icon-washington.webp";
 import iconArrow from "@/assets/icons/property-guidance-arrow-icon-washington.webp";
 import iconPhone from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
+import JourneyOrientation from "@/components/JourneyOrientation";
 
 interface Pathway {
   letter: string;
@@ -217,6 +218,16 @@ const DownsizingPreparingForTransition = () => {
             </div>
           </div>
         </section>
+
+        <JourneyOrientation
+          items={[
+            "A move to a smaller home or community is being considered",
+            "Decades of belongings need to be sorted",
+            "The family home needs to be cleared and prepared",
+            "You feel overwhelmed by where to begin",
+            "You want a calm, step-by-step plan"
+          ]}
+        />
 
         {/* REASSURANCE */}
         <section className="py-10 lg:py-12 bg-cream">

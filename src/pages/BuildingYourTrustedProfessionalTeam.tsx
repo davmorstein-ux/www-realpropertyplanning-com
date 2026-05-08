@@ -17,6 +17,7 @@ import iconAssisted from "@/assets/icons/senior-assisted-living-icon-washington.
 import iconHome from "@/assets/icons/probate-property-home-icon-washington.webp";
 import iconArrow from "@/assets/icons/property-guidance-arrow-icon-washington.webp";
 import iconPhone from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
+import JourneyOrientation from "@/components/JourneyOrientation";
 
 interface Pathway {
   letter: string;
@@ -232,6 +233,16 @@ const BuildingYourTrustedProfessionalTeam = () => {
             </div>
           </div>
         </section>
+
+        <JourneyOrientation
+          items={[
+            "You are unsure which professionals you actually need",
+            "You want vetted referrals — not cold internet searches",
+            "You are coordinating attorneys, CPAs, lenders, or care providers",
+            "You want one calm point of contact",
+            "You are supporting a family member from out of state"
+          ]}
+        />
 
         {/* REASSURANCE */}
         <section className="py-10 lg:py-12 bg-cream">

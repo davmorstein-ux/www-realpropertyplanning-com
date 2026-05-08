@@ -17,6 +17,7 @@ import iconBookOpen from "@/assets/icons/probate-guidance-book-open-icon-washing
 import iconAssisted from "@/assets/icons/senior-assisted-living-icon-washington.webp";
 import iconArrow from "@/assets/icons/property-guidance-arrow-icon-washington.webp";
 import iconPhone from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
+import JourneyOrientation from "@/components/JourneyOrientation";
 
 interface Pathway {
   letter: string;
@@ -227,6 +228,17 @@ const ExecutorResponsibilitiesFirstSteps = () => {
             </div>
           </div>
         </section>
+
+        <JourneyOrientation
+          items={[
+            "You were recently named executor or personal representative",
+            "You are unsure what your legal duties actually are",
+            "A loved one recently passed away",
+            "You need to know what to do in the first 30–60 days",
+            "You want to avoid common executor mistakes",
+            "You are coordinating heirs, attorneys, and property decisions"
+          ]}
+        />
 
         {/* REASSURANCE */}
         <section className="py-10 lg:py-12 bg-cream">

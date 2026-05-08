@@ -25,6 +25,7 @@ import iconBriefcase from "@/assets/icons/real-estate-agent-briefcase-icon-washi
 import iconBookOpen from "@/assets/icons/probate-guidance-book-open-icon-washington.webp";
 import iconPhone from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconPlacement from "@/assets/icons/senior-placement-advisor-icon-washington.webp";
+import JourneyOrientation from "@/components/JourneyOrientation";
 
 const SITE_URL = "https://realpropertyplanning.com";
 
@@ -214,6 +215,17 @@ const HelpingAgingParents = () => {
             </div>
           </div>
         </section>
+
+        <JourneyOrientation
+          items={[
+            "You are worried about a parent living alone",
+            "Your family is discussing caregiving or housing options",
+            "A parent may need additional support at home",
+            "You feel overwhelmed by the number of decisions",
+            "You are unsure where to begin",
+            "You want to plan calmly — before a crisis"
+          ]}
+        />
 
         {/* YOU ARE NOT ALONE */}
         <section className="py-10 lg:py-12 bg-cream">

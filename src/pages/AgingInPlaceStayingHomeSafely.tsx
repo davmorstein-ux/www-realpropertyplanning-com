@@ -21,6 +21,7 @@ import iconMemoryCare from "@/assets/icons/senior-memory-care-3d-icon-washington
 import iconIndependent from "@/assets/icons/senior-independent-living-icon-washington.webp";
 import iconEstatePlanning from "@/assets/icons/estate-wills-planning-icon-washington.webp";
 import iconExecutors from "@/assets/icons/probate-executors-services-icon-washington.webp";
+import JourneyOrientation from "@/components/JourneyOrientation";
 
 interface Pathway {
   letter: string;
@@ -233,6 +234,16 @@ const AgingInPlaceStayingHomeSafely = () => {
             </div>
           </div>
         </section>
+
+        <JourneyOrientation
+          items={[
+            "A parent or loved one wants to stay in their home",
+            "You are evaluating safety, mobility, or daily support",
+            "You want to plan ahead — before a fall or crisis",
+            "You are weighing in-home care vs. a future move",
+            "You want practical guidance, not pressure to sell"
+          ]}
+        />
 
         {/* REASSURANCE */}
         <section className="py-10 lg:py-12 bg-cream">

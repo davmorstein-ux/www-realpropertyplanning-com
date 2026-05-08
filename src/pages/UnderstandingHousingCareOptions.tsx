@@ -17,6 +17,7 @@ import iconDocument from "@/assets/icons/probate-document-icon-washington.webp";
 import iconBookOpen from "@/assets/icons/probate-guidance-book-open-icon-washington.webp";
 import iconArrow from "@/assets/icons/property-guidance-arrow-icon-washington.webp";
 import iconPhone from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
+import JourneyOrientation from "@/components/JourneyOrientation";
 
 interface Pathway {
   letter: string;
@@ -203,6 +204,16 @@ const UnderstandingHousingCareOptions = () => {
             </div>
           </div>
         </section>
+
+        <JourneyOrientation
+          items={[
+            "You are comparing assisted living, memory care, or in-home support",
+            "A parent's needs are changing",
+            "You are unsure what level of care is appropriate",
+            "You want to understand costs and tradeoffs",
+            "You need help knowing what questions to ask"
+          ]}
+        />
 
         {/* REASSURANCE */}
         <section className="py-10 lg:py-12 bg-cream">

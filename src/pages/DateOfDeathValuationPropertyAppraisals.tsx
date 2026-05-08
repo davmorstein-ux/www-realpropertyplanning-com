@@ -17,6 +17,7 @@ import iconDocument from "@/assets/icons/probate-document-icon-washington.webp";
 import iconBookOpen from "@/assets/icons/probate-guidance-book-open-icon-washington.webp";
 import iconArrow from "@/assets/icons/property-guidance-arrow-icon-washington.webp";
 import iconPhone from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
+import JourneyOrientation from "@/components/JourneyOrientation";
 
 interface Pathway {
   letter: string;
@@ -216,6 +217,16 @@ const DateOfDeathValuationPropertyAppraisals = () => {
             </div>
           </div>
         </section>
+
+        <JourneyOrientation
+          items={[
+            "You need a date-of-death value for tax or estate filings",
+            "You inherited property and need a stepped-up basis",
+            "An attorney or CPA asked for a certified appraisal",
+            "You are settling an estate or trust",
+            "You want a credentialed valuation — not just a Zillow estimate"
+          ]}
+        />
 
         {/* REASSURANCE */}
         <section className="py-10 lg:py-12 bg-cream">

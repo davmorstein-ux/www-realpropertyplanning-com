@@ -25,6 +25,7 @@ import iconAttorney from "@/assets/icons/probate-attorney-services-icon-washingt
 import iconMovers from "@/assets/icons/senior-movers-relocation-icon-washington.webp";
 import iconChecklist from "@/assets/icons/executors-clipboard-checklist-icon-washington.webp";
 import iconArrow from "@/assets/icons/property-guidance-arrow-icon-washington.webp";
+import JourneyOrientation from "@/components/JourneyOrientation";
 
 interface Stage {
   letter: string;
@@ -268,6 +269,17 @@ const EstateProbateInheritedProperty = () => {
             </div>
           </div>
         </section>
+
+        <JourneyOrientation
+          items={[
+            "A loved one recently passed away",
+            "You inherited a home or property",
+            "You were named executor or trustee",
+            "Your family is unsure what steps come next",
+            "You want to avoid costly mistakes",
+            "You are coordinating decisions from out of state"
+          ]}
+        />
 
         {/* REASSURANCE */}
         <section className="py-10 lg:py-12 bg-cream">

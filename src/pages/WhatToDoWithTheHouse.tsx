@@ -17,6 +17,7 @@ import iconAssisted from "@/assets/icons/senior-assisted-living-icon-washington.
 import iconBookOpen from "@/assets/icons/probate-guidance-book-open-icon-washington.webp";
 import iconArrow from "@/assets/icons/property-guidance-arrow-icon-washington.webp";
 import iconPhone from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
+import JourneyOrientation from "@/components/JourneyOrientation";
 
 interface Decision {
   letter: string;
@@ -208,6 +209,17 @@ const WhatToDoWithTheHouse = () => {
             </div>
           </div>
         </section>
+
+        <JourneyOrientation
+          items={[
+            "Your family is deciding whether to sell or keep a home",
+            "You are unsure whether repairs are worthwhile",
+            "The property may be inherited or part of an estate",
+            "You feel overwhelmed by the preparation process",
+            "Family members have different opinions",
+            "You want an unbiased valuation before deciding"
+          ]}
+        />
 
         {/* REASSURANCE */}
         <section className="py-10 lg:py-12 bg-cream">
