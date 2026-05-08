@@ -13,8 +13,9 @@ const styles = `
   .pacorner.tr { top: 8px; right: 8px; border-top: 1.5px solid #b89a5a; border-right: 1.5px solid #b89a5a; }
   .pacorner.bl { bottom: 8px; left: 8px; border-bottom: 1.5px solid #b89a5a; border-left: 1.5px solid #b89a5a; }
   .pacorner.br { bottom: 8px; right: 8px; border-bottom: 1.5px solid #b89a5a; border-right: 1.5px solid #b89a5a; }
-  .paimg { display: block; width: 100%; height: 215px; object-fit: cover; object-position: top center; flex-shrink: 0; transition: transform .4s ease; }
-  .patile:hover .paimg { transform: scale(1.04); }
+  .paimgbox { width: 100%; height: 220px; flex-shrink: 0; background: #FDFAF5; display: flex; align-items: flex-start; justify-content: center; overflow: hidden; transition: transform .4s ease; }
+  .patile:hover .paimgbox { transform: scale(1.03); }
+  .paimg { display: block; width: 100%; height: 220px; object-fit: contain; object-position: top center; }
   .pabody { flex: 1; padding: 12px 10px 0; overflow: hidden; position: relative; }
   .papill { display: block; font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: #b89a5a; margin-bottom: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; transition: opacity .15s ease; }
   .patitle { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 22px; color: #12243F; line-height: 1.15; transition: opacity .15s ease; }
@@ -43,7 +44,9 @@ const PATile = ({ pill, title, tagline, imgSrc, href }) => (
     <div className="pacard">
       <div className="pacorner tl" /><div className="pacorner tr" />
       <div className="pacorner bl" /><div className="pacorner br" />
-      <img className="paimg" src={imgSrc} alt={title} loading="lazy" />
+      <div className="paimgbox">
+        <img className="paimg" src={imgSrc} alt={title} loading="lazy" />
+      </div>
       <div className="pabody">
         <span className="papill">{pill}</span>
         <div className="patitle">{title}</div>
