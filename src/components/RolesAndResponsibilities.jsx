@@ -7,7 +7,7 @@ const styles = `
   #roles-section .r2-wrap * { box-sizing: border-box; margin: 0; padding: 0; }
   #roles-section .r2-section { font-family: 'Montserrat', sans-serif; padding: 0 40px 64px; overflow: visible; }
   #roles-section .r2-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1300px; margin: 0 auto 20px; overflow: visible; padding-top: 25px; }
-  #roles-section .r2-tile { width: 100%; cursor: pointer; overflow: visible; }
+  #roles-section .r2-tile { display: block; width: 100%; cursor: pointer; overflow: visible; text-decoration: none; color: inherit; }
   #roles-section .r2-card { width: 100%; height: 400px; background: #FDFAF5; border-radius: 5px; border: 1px solid rgba(184,154,90,.40); box-shadow: 0 8px 24px rgba(18,36,63,.15); display: flex; flex-direction: column; position: relative; transition: box-shadow .4s ease; overflow: visible; }
   #roles-section .r2-tile:hover .r2-card { box-shadow: 0 12px 32px rgba(18,36,63,.22); }
   #roles-section .r2-corner { position: absolute; width: 14px; height: 14px; pointer-events: none; z-index: 50; }
@@ -38,8 +38,8 @@ const styles = `
   #roles-section .r2-h2 { font-family: 'Cormorant Garamond', serif; font-size: 40px; font-weight: 700; color: #12243F; line-height: 1.15; margin: 0; }
 `;
 
-const Tile = ({ pill, title, tagline, provider, imgSrc }) => (
-  <div className="r2-tile">
+const Tile = ({ pill, title, tagline, provider, imgSrc, href }) => (
+  <a className="r2-tile" href={href} aria-label={`Open ${title}`}>
     <div className="r2-card">
       <div className="r2-corner tl" /><div className="r2-corner tr" />
       <div className="r2-corner bl" /><div className="r2-corner br" />
@@ -58,18 +58,18 @@ const Tile = ({ pill, title, tagline, provider, imgSrc }) => (
         </div>
       </div>
     </div>
-  </div>
+  </a>
 );
 
 const tiles = [
-  { pill: "Roles & Responsibilities", title: "Executors", tagline: "Understanding the Executor's Role", imgSrc: "/tiles/set2/executors.webp" },
-  { pill: "Roles & Responsibilities", title: "Trustees", tagline: "Managing Trust Assets & Obligations", imgSrc: "/tiles/set2/trustees.webp" },
-  { pill: "Estate Planning", title: "Wills", tagline: "What Every Will Should Include", imgSrc: "/tiles/set2/wills.webp" },
-  { pill: "Education", title: "Probate Terms", tagline: "Key Terms Every Family Should Know", imgSrc: "/tiles/set2/probate-terms.webp" },
-  { pill: "Education", title: "The Probate Process", tagline: "Step-by-Step Guide to Probate", imgSrc: "/tiles/set2/the-probate-process.webp" },
-  { pill: "Real Estate", title: "Probate Estate Sales", tagline: "Selling an Inherited Property the Right Way", imgSrc: "/tiles/set2/probate-estate-sales.webp" },
-  { pill: "Real Estate", title: "Title & Escrow", tagline: "Protecting Ownership Through Closing", imgSrc: "/tiles/set2/title-escrow.webp" },
-  { pill: "Estate Planning", title: "Power of Attorney", tagline: "Granting Authority to Act on Your Behalf", imgSrc: "/tiles/set2/power-of-attorney.webp" },
+  { pill: "Roles & Responsibilities", title: "Executors", tagline: "Understanding the Executor's Role", imgSrc: "/tiles/set2/executors.webp", href: "/roles/executors" },
+  { pill: "Roles & Responsibilities", title: "Trustees", tagline: "Managing Trust Assets & Obligations", imgSrc: "/tiles/set2/trustees.webp", href: "/roles/trustees" },
+  { pill: "Estate Planning", title: "Wills", tagline: "What Every Will Should Include", imgSrc: "/tiles/set2/wills.webp", href: "/roles/wills" },
+  { pill: "Education", title: "Probate Terms", tagline: "Key Terms Every Family Should Know", imgSrc: "/tiles/set2/probate-terms.webp", href: "/roles/probate-terms" },
+  { pill: "Education", title: "The Probate Process", tagline: "Step-by-Step Guide to Probate", imgSrc: "/tiles/set2/the-probate-process.webp", href: "/roles/probate-process" },
+  { pill: "Real Estate", title: "Probate Estate Sales", tagline: "Selling an Inherited Property the Right Way", imgSrc: "/tiles/set2/probate-estate-sales.webp", href: "/roles/probate-estate-sales" },
+  { pill: "Real Estate", title: "Title & Escrow", tagline: "Protecting Ownership Through Closing", imgSrc: "/tiles/set2/title-escrow.webp", href: "/roles/title-escrow" },
+  { pill: "Estate Planning", title: "Power of Attorney", tagline: "Granting Authority to Act on Your Behalf", imgSrc: "/tiles/set2/power-of-attorney.webp", href: "/roles/power-of-attorney" },
 ];
 
 const RolesAndResponsibilities = () => (
@@ -83,7 +83,7 @@ const RolesAndResponsibilities = () => (
         </div>
         <div className="r2-grid">
           {tiles.map(t => (
-            <Tile key={t.title} pill={t.pill} title={t.title} tagline={t.tagline} provider="Information & Featured Providers" imgSrc={t.imgSrc} />
+            <Tile key={t.title} pill={t.pill} title={t.title} tagline={t.tagline} provider="Information & Featured Providers" imgSrc={t.imgSrc} href={t.href} />
           ))}
         </div>
         <div className="r2-bar">
