@@ -17,6 +17,7 @@ export const servicePageSequence: ServicePageEntry[] = [
   { path: "/senior-transitions", label: "Senior Transitions" },
   { path: "/executors", label: "Executors" },
   { path: "/wills", label: "Wills" },
+  { path: "/aging-in-place-staying-home-safely", label: "Aging in Place & Staying at Home Safely" },
 
   // ── Senior Living & Relocation hub + sub-pages ──
   { path: "/senior-living-and-relocation", label: "Senior Living & Relocation" },
