@@ -180,7 +180,7 @@ const HelpingAgingParents = () => {
       <Header />
       <main id="main-content">
         {/* HERO */}
-        <section className="bg-primary pt-16 pb-16 lg:pt-28 lg:pb-24">
+        <section className="bg-primary pt-12 pb-10 lg:pt-20 lg:pb-14">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl">
               <p className="text-gold font-bold tracking-[0.2em] uppercase mb-4 text-sm">
@@ -208,7 +208,7 @@ const HelpingAgingParents = () => {
         </section>
 
         {/* YOU ARE NOT ALONE */}
-        <section className="py-16 lg:py-20 bg-cream">
+        <section className="py-10 lg:py-12 bg-cream">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
               <Heart className="w-10 h-10 text-gold mx-auto mb-6" aria-hidden="true" />
@@ -226,9 +226,9 @@ const HelpingAgingParents = () => {
         </section>
 
         {/* ROADMAP */}
-        <section id="roadmap" className="py-16 lg:py-24 bg-secondary scroll-mt-20">
+        <section id="roadmap" className="py-10 lg:py-14 bg-secondary scroll-mt-20">
           <div className="container px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto mb-12 text-center">
+            <div className="max-w-4xl mx-auto mb-8 text-center">
               <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">
                 Guided Roadmap
               </p>
@@ -304,7 +304,7 @@ const HelpingAgingParents = () => {
         />
 
         {/* HELPFUL RESOURCES */}
-        <section className="py-16 lg:py-24 bg-background">
+        <section className="py-10 lg:py-14 bg-background">
           <div className="container px-6 lg:px-8">
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-10">
@@ -339,7 +339,7 @@ const HelpingAgingParents = () => {
         </section>
 
         {/* TRUSTED PROFESSIONAL NETWORK */}
-        <section className="py-16 lg:py-24 bg-secondary">
+        <section className="py-10 lg:py-14 bg-secondary">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
               <img
@@ -369,7 +369,7 @@ const HelpingAgingParents = () => {
         </section>
 
         {/* SIMPLE NEXT STEPS */}
-        <section className="py-16 lg:py-24 bg-cream">
+        <section className="py-10 lg:py-14 bg-cream">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
               <div className="text-center mb-10">
@@ -400,7 +400,7 @@ const HelpingAgingParents = () => {
         </section>
 
         {/* CTA */}
-        <section className="py-16 lg:py-24 bg-primary">
+        <section className="py-10 lg:py-14 bg-primary">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-5">
