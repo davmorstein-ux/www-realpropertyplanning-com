@@ -24,6 +24,7 @@ const UnderstandingSeniorTransitions = lazy(() => import("./pages/UnderstandingS
 const EstatePlanningPowersOfAttorney = lazy(() => import("./pages/EstatePlanningPowersOfAttorney"));
 const BuildingYourTrustedProfessionalTeam = lazy(() => import("./pages/BuildingYourTrustedProfessionalTeam"));
 const DownsizingPreparingForTransition = lazy(() => import("./pages/DownsizingPreparingForTransition"));
+const ExecutorResponsibilitiesFirstSteps = lazy(() => import("./pages/ExecutorResponsibilitiesFirstSteps"));
 const DateOfDeathValuationPropertyAppraisals = lazy(() => import("./pages/DateOfDeathValuationPropertyAppraisals"));
 const SeniorPlacement = lazy(() => import("./pages/SeniorPlacement"));
 const SellHouseFundSeniorLiving = lazy(() => import("./pages/SellHouseFundSeniorLiving"));
@@ -176,6 +177,7 @@ const App = () => (
           <Route path="/estate-planning-powers-of-attorney" element={<EstatePlanningPowersOfAttorney />} />
           <Route path="/building-your-trusted-professional-team" element={<BuildingYourTrustedProfessionalTeam />} />
           <Route path="/downsizing-preparing-for-transition" element={<DownsizingPreparingForTransition />} />
+          <Route path="/executor-responsibilities-first-steps" element={<ExecutorResponsibilitiesFirstSteps />} />
           <Route path="/date-of-death-valuation-property-appraisals" element={<DateOfDeathValuationPropertyAppraisals />} />
           <Route path="/senior-placement" element={<SeniorPlacement />} />
           <Route path="/sell-house-fund-senior-living" element={<SellHouseFundSeniorLiving />} />
