@@ -125,11 +125,10 @@ const understand = [
 
 const continueJourney = [
   { href: "/helping-aging-parents", title: "Helping an Aging Parent", description: "A calm roadmap for senior transitions and family decisions.", icon: iconHeartHands },
-  { href: "/estate-probate-inherited-property", title: "Estate & Probate Guidance", description: "A guided path for executors, trustees, and heirs.", icon: iconExecutor },
-  { href: "/senior-living-and-relocation", title: "Housing & Care Options", description: "Understand the major senior living options side by side.", icon: iconAssisted },
-  { href: "/guides/inherited-house-washington", title: "Property Decisions", description: "Sell, keep, rent, or transfer — compare your options.", icon: iconHome },
-  { href: "/professionals", title: "Professional Network", description: "Meet the coordinated team supporting families across Washington.", icon: iconHandshake },
-  { href: "/guides-and-resources", title: "Educational Library", description: "Plain-language guides to the most common questions.", icon: iconBookOpen },
+  { href: "/estate-probate-inherited-property", title: "Estate, Probate & Inherited Property", description: "A guided path for executors, trustees, and heirs.", icon: iconExecutor },
+  { href: "/understanding-housing-care-options", title: "Understanding Housing & Care Options", description: "Compare assisted living, adult family homes, memory care, and more.", icon: iconAssisted },
+  { href: "/what-to-do-with-the-house", title: "What To Do With the House", description: "Sell, keep, rent, or transfer — compare your options.", icon: iconHome },
+  { href: "/building-your-trusted-professional-team", title: "Building Your Trusted Professional Team", description: "Meet the coordinated team supporting Washington families.", icon: iconHandshake },
 ];
 
 const nextSteps = [
