@@ -23,6 +23,7 @@ import HomepageFAQ from "@/components/HomepageFAQ";
 import HowWeHelpCards from "@/components/HowWeHelpCards";
 import HomepageWarmStatement from "@/components/HomepageWarmStatement";
 import PathwayChooser from "@/components/PathwayChooser";
+import HomepageOrientation from "@/components/HomepageOrientation";
 
 const serviceAreas = [
   { county: "King County", href: "/counties/king", cities: "Seattle, Bellevue, Kirkland, Redmond, Renton, Bothell, Shoreline, Mercer Island, Burien, Kent, Auburn, Federal Way" },
@@ -136,6 +137,9 @@ const Index = () => {
 
       {/* 1. HERO — PNW background, calm headline, two CTAs */}
       <HomepageHero />
+
+      {/* ORIENTATION — what this website is and who it is for */}
+      <HomepageOrientation />
 
       {/* PATHWAY CHOOSER — visitor self-segmentation */}
       <PathwayChooser />
