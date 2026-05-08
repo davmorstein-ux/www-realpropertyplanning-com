@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import ProfessionalsButton from "./ProfessionalsButton";
 import { Link, useLocation } from "react-router-dom";
 
 /**
@@ -137,7 +136,6 @@ const HomepageHero = () => {
               style={{ height: isMobile ? 56 : 88, width: "auto", maxWidth: "none", display: "block", objectFit: "contain" }}
             />
           </Link>
-          {!isMobile && <ProfessionalsButton />}
           <div style={{ display: "flex", alignItems: "center", gap: isMobile ? 6 : 12 }}>
             <a
               href="tel:2069003015"
