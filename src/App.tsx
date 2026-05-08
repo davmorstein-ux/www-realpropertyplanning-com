@@ -128,6 +128,7 @@ const Testimonials = lazy(() => import("./pages/Testimonials"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const Roles = lazy(() => import("./pages/Roles"));
 const Planning = lazy(() => import("./pages/Planning"));
+const ProfessionalsPage = lazy(() => import("./pages/ProfessionalsPage"));
 
 const queryClient = new QueryClient();
 

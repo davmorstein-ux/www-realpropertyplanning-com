@@ -3,7 +3,7 @@ import React from 'react';
 const sections = [
   {
     title: "Professionals & Services",
-    href: "/professionals",
+    href: "/professionals-services",
     img: "/tiles/set1/attorneys.webp",
     items: [
       "Attorneys", "Certified Public Accountants", "Real Estate Brokers",
