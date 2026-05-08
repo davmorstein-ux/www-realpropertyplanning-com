@@ -144,12 +144,10 @@ const considerations = [
 ];
 
 const continueJourney = [
-  { href: "/helping-aging-parents", title: "Helping an Aging Parent or Loved One", description: "A calm roadmap for senior transitions and family decisions.", icon: iconHeartHands },
-  { href: "/what-to-do-with-the-house", title: "What To Do With the House", description: "A guided decision roadmap for the home.", icon: iconHome },
-  { href: "/senior-housing-transitions", title: "Downsizing & Preparing for a Transition", description: "Practical guidance for moving from a long-time home.", icon: iconAssisted },
-  { href: "/power-of-attorney", title: "Estate Planning & Powers of Attorney", description: "Understand the legal documents most families need.", icon: iconDocument },
-  { href: "/professionals", title: "Building Your Trusted Professional Team", description: "Meet the coordinated team supporting Washington families.", icon: iconBookOpen },
-  { href: "/senior-transitions", title: "Understanding Senior Transitions", description: "An overview of the most common life-stage moves.", icon: iconExecutor },
+  { href: "/understanding-senior-transitions", title: "Understanding Senior Transitions", description: "An overview of the most common life-stage moves.", icon: iconHeartHands },
+  { href: "/aging-in-place-staying-home-safely", title: "Aging in Place & Staying at Home Safely", description: "Plan ahead for safety, support, and independence at home.", icon: iconHome },
+  { href: "/estate-planning-powers-of-attorney", title: "Estate Planning & Powers of Attorney", description: "Understand the legal documents most families need.", icon: iconDocument },
+  { href: "/what-to-do-with-the-house", title: "What To Do With the House", description: "A guided decision roadmap for the home.", icon: iconExecutor },
 ];
 
 const nextSteps = [
