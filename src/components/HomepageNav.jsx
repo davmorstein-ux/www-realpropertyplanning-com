@@ -41,16 +41,16 @@ const HomepageNav = () => {
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap');
         .hn-section { font-family: 'Montserrat', sans-serif; padding: 48px 40px 64px; max-width: 1300px; margin: 0 auto; }
         .hn-heading { text-align: center; margin-bottom: 48px; }
-        .hn-eyebrow { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #b89a5a; display: block; margin-bottom: 10px; }
+        .hn-eyebrow { font-family: 'Montserrat', sans-serif; font-size: 15px; font-weight: 600; letter-spacing: 0.08em; color: #4a5568; display: block; margin-top: 14px; }
         .hn-h2 { font-family: 'Cormorant Garamond', serif; font-size: 44px; font-weight: 700; color: #12243F; line-height: 1.15; margin: 0 0 16px; }
-        .hn-sub { font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 400; color: #4a5568; line-height: 1.7; max-width: 760px; margin: 0 auto; }
+        .hn-sub { font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 500; color: #4a5568; line-height: 1.7; max-width: 760px; margin: 0 auto; }
         .hn-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
         .hn-card { display: flex; flex-direction: column; background: #FDFAF5; border-radius: 8px; border: 1px solid rgba(184,154,90,0.40); box-shadow: 0 8px 24px rgba(18,36,63,0.15); overflow: hidden; text-decoration: none; cursor: pointer; transition: box-shadow 0.4s ease, transform 0.4s ease; }
         .hn-card:hover { box-shadow: 0 20px 48px rgba(18,36,63,0.25); transform: translateY(-8px); }
         .hn-img { display: block; width: 100%; height: 260px; object-fit: contain; object-position: center center; background: #FDFAF5; flex-shrink: 0; }
         .hn-body { padding: 24px 28px; flex: 1; border-top: 1.5px solid rgba(184,154,90,0.28); }
-        .hn-title { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 700; color: #12243F; line-height: 1.2; margin-bottom: 16px; }
-        .hn-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 6px 12px; }
+        .hn-title { font-family: 'Cormorant Garamond', serif; font-size: 34px; font-weight: 700; color: #12243F; line-height: 1.2; margin-bottom: 16px; }
+        .hn-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px; }
         .hn-item { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 500; color: #4a5568; line-height: 1.4; padding-left: 12px; position: relative; }
         .hn-item::before { content: '›'; position: absolute; left: 0; color: #b89a5a; font-weight: 700; }
         .hn-footer { display: flex; align-items: center; justify-content: space-between; padding: 16px 28px; border-top: 1.5px solid rgba(184,154,90,0.28); background: #FDFAF5; }
@@ -62,8 +62,8 @@ const HomepageNav = () => {
       `}</style>
       <div className="hn-section">
         <div className="hn-heading">
-          <span className="hn-eyebrow">A free-to-use hub · Built for families · Trusted by professionals</span>
           <h2 className="hn-h2">Welcome to Real Property Planning</h2>
+          <span className="hn-eyebrow">A free-to-use hub · Built for families · Trusted by professionals</span>
           <p className="hn-sub">Connecting families, seniors, and professionals with the right people and resources.</p>
         </div>
         <div className="hn-grid">
