@@ -20,6 +20,7 @@ const EstateProbateInheritedProperty = lazy(() => import("./pages/EstateProbateI
 const WhatShouldWeDoFirst = lazy(() => import("./pages/WhatShouldWeDoFirst"));
 const WhatToDoWithTheHouse = lazy(() => import("./pages/WhatToDoWithTheHouse"));
 const UnderstandingHousingCareOptions = lazy(() => import("./pages/UnderstandingHousingCareOptions"));
+const UnderstandingSeniorTransitions = lazy(() => import("./pages/UnderstandingSeniorTransitions"));
 const SeniorPlacement = lazy(() => import("./pages/SeniorPlacement"));
 const SellHouseFundSeniorLiving = lazy(() => import("./pages/SellHouseFundSeniorLiving"));
 const ForAttorneys = lazy(() => import("./pages/ForAttorneys"));
@@ -167,6 +168,7 @@ const App = () => (
           <Route path="/what-should-we-do-first" element={<WhatShouldWeDoFirst />} />
           <Route path="/what-to-do-with-the-house" element={<WhatToDoWithTheHouse />} />
           <Route path="/understanding-housing-care-options" element={<UnderstandingHousingCareOptions />} />
+          <Route path="/understanding-senior-transitions" element={<UnderstandingSeniorTransitions />} />
           <Route path="/senior-placement" element={<SeniorPlacement />} />
           <Route path="/sell-house-fund-senior-living" element={<SellHouseFundSeniorLiving />} />
           <Route path="/why-valuation-matters" element={<WhyValuationMatters />} />
