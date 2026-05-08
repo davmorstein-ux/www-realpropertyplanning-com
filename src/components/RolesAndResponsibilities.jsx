@@ -24,8 +24,6 @@ const styles = `
   .rr-hover-panel { position: absolute; inset: 0; background: rgba(10,20,46,.97); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 14px; gap: 12px; opacity: 0; transition: opacity .28s ease .15s; z-index: 30; pointer-events: none; overflow: hidden; }
   .rr-tile:hover .rr-hover-panel { opacity: 1; pointer-events: auto; }
   .rr-overlay-tagline { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 14px; color: #FFF; text-align: center; line-height: 1.5; width: 100%; }
-  .rr-overlay-cta { font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .10em; text-transform: uppercase; color: #d4b87a; border-bottom: 1px solid rgba(212,184,122,.6); padding-bottom: 2px; white-space: nowrap; text-decoration: none; transition: color .2s, border-color .2s; flex-shrink: 0; }
-  .rr-overlay-cta:hover { color: #fff; border-color: rgba(255,255,255,.7); }
   .rr-tile-footer { height: 50px; flex-shrink: 0; display: flex; align-items: center; padding: 0 12px; border-top: 1.5px solid rgba(184,154,90,.28); background: #FDFAF5; border-radius: 0 0 5px 5px; gap: 8px; justify-content: space-between; }
   .rr-provider-label { font-size: 11px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: #1a3a6b; line-height: 1.4; flex: 1; }
   .rr-arrow-wrap { margin-left: auto; width: 30px; height: 30px; border: 1.5px solid #1a3a6b; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: background .25s; flex-shrink: 0; }
@@ -54,7 +52,7 @@ const RrTile = ({ pill, title, tagline, cta, provider, imgSrc }) => (
           </div>
           <div className="rr-hover-panel">
             <div className="rr-overlay-tagline">{tagline}</div>
-            <a href="#" className="rr-overlay-cta">{cta}</a>
+            
           </div>
         </div>
       </div>
