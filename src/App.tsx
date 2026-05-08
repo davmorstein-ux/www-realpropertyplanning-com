@@ -15,6 +15,7 @@ const NewHomePreview = lazy(() => import("./pages/NewHomePreview"));
 const ProbateEstateSales = lazy(() => import("./pages/ProbateEstateSales"));
 const ClientStories = lazy(() => import("./pages/ClientStories"));
 const SeniorTransitions = lazy(() => import("./pages/SeniorTransitions"));
+const HelpingAgingParents = lazy(() => import("./pages/HelpingAgingParents"));
 const SeniorPlacement = lazy(() => import("./pages/SeniorPlacement"));
 const SellHouseFundSeniorLiving = lazy(() => import("./pages/SellHouseFundSeniorLiving"));
 const ForAttorneys = lazy(() => import("./pages/ForAttorneys"));
@@ -157,6 +158,7 @@ const App = () => (
           <Route path="/probate-estate-sales" element={<ProbateEstateSales />} />
           <Route path="/client-stories" element={<ClientStories />} />
           <Route path="/senior-transitions" element={<SeniorTransitions />} />
+          <Route path="/helping-aging-parents" element={<HelpingAgingParents />} />
           <Route path="/senior-placement" element={<SeniorPlacement />} />
           <Route path="/sell-house-fund-senior-living" element={<SellHouseFundSeniorLiving />} />
           <Route path="/why-valuation-matters" element={<WhyValuationMatters />} />
