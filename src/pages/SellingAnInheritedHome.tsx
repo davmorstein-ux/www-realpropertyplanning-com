@@ -17,6 +17,7 @@ import iconHeartHands from "@/assets/icons/senior-care-heart-hands-icon-washingt
 import iconAssisted from "@/assets/icons/senior-assisted-living-icon-washington.webp";
 import iconArrow from "@/assets/icons/property-guidance-arrow-icon-washington.webp";
 import iconPhone from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
+import JourneyOrientation from "@/components/JourneyOrientation";
 
 interface Pathway {
   letter: string;
@@ -229,6 +230,16 @@ const SellingAnInheritedHome = () => {
             </div>
           </div>
         </section>
+
+        <JourneyOrientation
+          items={[
+            "You inherited a home and are unsure what to do next",
+            "The property is going through probate or trust administration",
+            "Multiple heirs are involved in the decision",
+            "You want to understand taxes, basis, and timing",
+            "You need a calm, organized roadmap to a sale"
+          ]}
+        />
 
         {/* REASSURANCE */}
         <section className="py-10 lg:py-12 bg-cream">

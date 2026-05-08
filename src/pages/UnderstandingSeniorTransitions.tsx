@@ -17,6 +17,7 @@ import iconDocument from "@/assets/icons/probate-document-icon-washington.webp";
 import iconBookOpen from "@/assets/icons/probate-guidance-book-open-icon-washington.webp";
 import iconArrow from "@/assets/icons/property-guidance-arrow-icon-washington.webp";
 import iconPhone from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
+import JourneyOrientation from "@/components/JourneyOrientation";
 
 interface Pathway {
   letter: string;
@@ -210,6 +211,16 @@ const UnderstandingSeniorTransitions = () => {
             </div>
           </div>
         </section>
+
+        <JourneyOrientation
+          items={[
+            "A move or downsizing is being considered",
+            "A senior in your family needs more support",
+            "You want to plan a transition gently and calmly",
+            "You are juggling housing, care, and the family home",
+            "You are unsure what order to handle things in"
+          ]}
+        />
 
         {/* REASSURANCE */}
         <section className="py-10 lg:py-12 bg-cream">

@@ -17,6 +17,7 @@ import iconHeartHands from "@/assets/icons/senior-care-heart-hands-icon-washingt
 import iconAssisted from "@/assets/icons/senior-assisted-living-icon-washington.webp";
 import iconArrow from "@/assets/icons/property-guidance-arrow-icon-washington.webp";
 import iconPhone from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
+import JourneyOrientation from "@/components/JourneyOrientation";
 
 interface Pathway {
   letter: string;
@@ -228,6 +229,16 @@ const PreparingHomeForSaleDuringTransition = () => {
             </div>
           </div>
         </section>
+
+        <JourneyOrientation
+          items={[
+            "A home needs to be prepared for sale during a major life change",
+            "The property is part of an estate, probate, or downsizing move",
+            "You are unsure which repairs are worth doing",
+            "You need help coordinating cleanout, repairs, and staging",
+            "You are managing the process from out of state"
+          ]}
+        />
 
         {/* REASSURANCE */}
         <section className="py-10 lg:py-12 bg-cream">

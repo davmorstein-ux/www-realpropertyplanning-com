@@ -18,6 +18,7 @@ import iconBookOpen from "@/assets/icons/probate-guidance-book-open-icon-washing
 import iconExecutor from "@/assets/icons/probate-executors-services-icon-washington.webp";
 import iconArrow from "@/assets/icons/property-guidance-arrow-icon-washington.webp";
 import iconPhone from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
+import JourneyOrientation from "@/components/JourneyOrientation";
 
 interface Pathway {
   letter: string;
@@ -184,6 +185,16 @@ const WhatShouldWeDoFirst = () => {
             </div>
           </div>
         </section>
+
+        <JourneyOrientation
+          items={[
+            "You are not sure where to begin",
+            "Several decisions feel urgent at once",
+            "You need a calm, ordered first step",
+            "You are helping a parent, spouse, or sibling",
+            "You want clarity before making any big move"
+          ]}
+        />
 
         {/* REASSURANCE */}
         <section className="py-10 lg:py-12 bg-cream">
