@@ -121,6 +121,14 @@ const resources = [
   },
 ];
 
+const continueJourney = [
+  { href: "/understanding-housing-care-options", title: "Understanding Housing & Care Options", description: "Compare assisted living, adult family homes, memory care, and more.", icon: iconAssisted },
+  { href: "/understanding-senior-transitions", title: "Understanding Senior Transitions", description: "An overview of the most common life-stage moves.", icon: iconHeartHands },
+  { href: "/aging-in-place-staying-home-safely", title: "Aging in Place & Staying at Home Safely", description: "Plan ahead for safety, support, and independence at home.", icon: iconIndependent },
+  { href: "/what-to-do-with-the-house", title: "What To Do With the House", description: "A guided decision roadmap for the family home.", icon: iconHome },
+  { href: "/estate-planning-powers-of-attorney", title: "Estate Planning & Powers of Attorney", description: "Understand the legal documents most families need.", icon: iconPOA },
+];
+
 const faqs = [
   {
     question: "When is it time to consider additional care?",
