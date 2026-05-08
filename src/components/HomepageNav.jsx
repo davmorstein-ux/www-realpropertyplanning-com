@@ -41,7 +41,7 @@ const HomepageNav = () => {
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap');
         .hn-section { font-family: 'Montserrat', sans-serif; padding: 48px 40px 64px; max-width: 1300px; margin: 0 auto; }
         .hn-heading { text-align: center; margin-bottom: 48px; }
-        .hn-eyebrow { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #b89a5a; display: block; margin-bottom: 10px; }
+        .hn-eyebrow { font-family: 'Montserrat', sans-serif; font-size: 15px; font-weight: 600; letter-spacing: 0.08em; color: #4a5568; display: block; margin-top: 14px; }
         .hn-h2 { font-family: 'Cormorant Garamond', serif; font-size: 44px; font-weight: 700; color: #12243F; line-height: 1.15; margin: 0 0 16px; }
         .hn-sub { font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 400; color: #4a5568; line-height: 1.7; max-width: 760px; margin: 0 auto; }
         .hn-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }

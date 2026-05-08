@@ -136,22 +136,6 @@ const Index = () => {
       {/* 1. HERO — PNW background, calm headline, two CTAs */}
       <HomepageHero />
 
-      {/* Warm statement — moved from hero trust bar */}
-      <div className="bg-cream text-center" style={{ padding: "32px 24px" }}>
-        <p
-          style={{
-            fontFamily: "'DM Sans', system-ui, sans-serif",
-            color: "#1B2B4B",
-            fontSize: 26,
-            fontWeight: 700,
-            lineHeight: 1.6,
-            maxWidth: 900,
-            margin: "0 auto",
-          }}
-        >
-          When life brings its biggest transitions — probate, estate sales, senior housing, downsizing — Real Property Planning connects families, seniors, executors, and professionals with the right people and resources.
-        </p>
-      </div>
 
       {/* HOMEPAGE NAVIGATION */}
       <HomepageNav />

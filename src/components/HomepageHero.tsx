@@ -474,22 +474,6 @@ const HomepageHero = () => {
             Senior Transitions · Estate Sales · Probate
           </h1>
           {/* Warm statement moved to Index.tsx below hero */}
-          <p
-            style={{
-              fontFamily: "'DM Sans', system-ui, sans-serif",
-              color: "#ffffff",
-              opacity: 1,
-              fontSize: "1rem",
-              fontWeight: 600,
-              textAlign: "center",
-              marginTop: 12,
-              marginBottom: isMobile ? 14 : 22,
-              lineHeight: 1.5,
-              letterSpacing: "0.05em",
-            }}
-          >
-            A free-to-use hub <span style={{ color: "#f0c040" }}>·</span> Built for families <span style={{ color: "#f0c040" }}>·</span> Trusted by professionals
-          </p>
         </div>
       </section>
     </div>
