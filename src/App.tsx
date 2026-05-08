@@ -27,6 +27,7 @@ const DownsizingPreparingForTransition = lazy(() => import("./pages/DownsizingPr
 const ExecutorResponsibilitiesFirstSteps = lazy(() => import("./pages/ExecutorResponsibilitiesFirstSteps"));
 const PreparingHomeForSaleDuringTransition = lazy(() => import("./pages/PreparingHomeForSaleDuringTransition"));
 const SellingAnInheritedHome = lazy(() => import("./pages/SellingAnInheritedHome"));
+const AgingInPlaceStayingHomeSafely = lazy(() => import("./pages/AgingInPlaceStayingHomeSafely"));
 const DateOfDeathValuationPropertyAppraisals = lazy(() => import("./pages/DateOfDeathValuationPropertyAppraisals"));
 const SeniorPlacement = lazy(() => import("./pages/SeniorPlacement"));
 const SellHouseFundSeniorLiving = lazy(() => import("./pages/SellHouseFundSeniorLiving"));
