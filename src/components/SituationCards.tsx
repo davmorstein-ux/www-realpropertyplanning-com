@@ -70,23 +70,23 @@ const SituationCards = () => {
               aria-label={`${s.title} — ${s.description} — ${s.cta}`}
               className="group flex h-full flex-col rounded-2xl bg-white border border-gold/30 shadow-[0_8px_24px_-12px_rgba(27,43,75,0.25)] hover:shadow-[0_18px_40px_-16px_rgba(27,43,75,0.45)] hover:-translate-y-1 hover:border-gold transition-all duration-300 overflow-hidden no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
             >
-              <div className="relative w-full overflow-hidden bg-cream flex items-center justify-center p-4" style={{ aspectRatio: "4 / 3" }}>
+              <div className="relative w-full overflow-hidden bg-cream flex items-center justify-center" style={{ aspectRatio: "1 / 1" }}>
                 <img
                   src={s.image}
                   alt={s.alt}
-                  className="max-w-full max-h-full w-auto h-auto object-contain transition-transform duration-500 group-hover:scale-[1.03]"
+                  className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
                   loading="lazy"
                 />
               </div>
 
               <div className="flex flex-1 flex-col items-center text-center px-6 pt-6 pb-7">
-                <h3 className="font-serif text-[22px] md:text-[24px] font-semibold text-navy leading-snug mb-3 min-h-[64px] flex items-center justify-center">
+                <h3 className="font-serif text-[24px] md:text-[26px] font-semibold text-navy leading-snug mb-3 min-h-[72px] flex items-center justify-center">
                   {s.title}
                 </h3>
-                <p className="text-foreground text-[17px] md:text-[18px] leading-relaxed mb-6 min-h-[60px]">
+                <p className="text-foreground text-[18px] md:text-[19px] leading-relaxed mb-6 min-h-[84px] flex items-center justify-center">
                   {s.description}
                 </p>
-                <span className="mt-auto inline-flex items-center justify-center gap-2 w-full max-w-[280px] h-[56px] px-6 rounded-xl bg-gradient-to-b from-gold to-gold-dark text-navy font-semibold text-[17px] shadow-md group-hover:shadow-lg group-hover:translate-x-1 transition-all duration-300 whitespace-nowrap">
+                <span className="mt-auto inline-flex items-center justify-center gap-2 w-full max-w-[280px] h-[58px] px-6 rounded-xl bg-gradient-to-b from-gold to-gold-dark text-navy font-semibold text-[18px] shadow-md group-hover:shadow-lg group-hover:translate-x-1 transition-all duration-300 whitespace-nowrap">
                   {s.cta}
                   <ArrowRight className="w-5 h-5" aria-hidden="true" />
                 </span>
