@@ -6,8 +6,7 @@ import { featuredHomepageTiles } from "./professional-network-tiles-data";
 
 /**
  * Calm, curated 6-tile preview of the Trusted Professional Network.
- * Lives on the homepage; links to the full ~30-tile grid on
- * /building-your-trusted-professional-team.
+ * Lives on the homepage; links to the full finalized tile ecosystem.
  */
 const ProfessionalNetworkPreview = () => {
   return (
@@ -22,7 +21,7 @@ const ProfessionalNetworkPreview = () => {
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-5 mb-10">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-5 mb-10">
           {featuredHomepageTiles.map((tile) => (
             <ProfessionalNetworkCard key={tile.href} tile={tile} />
           ))}
