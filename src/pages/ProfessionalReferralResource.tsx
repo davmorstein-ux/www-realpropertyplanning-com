@@ -129,7 +129,7 @@ const ProfessionalReferralResource = () => {
               Real estate guidance for attorneys, fiduciaries, executors, trustees, seniors, and families navigating probate, estate property sales, inherited homes, and major housing transitions throughout Washington State.
             </p>
             <p className="text-base text-primary-foreground/70 leading-relaxed mb-3">
-              Real Property Planning is a licensed real estate brokerage with state-certified residential appraisal expertise, helping clients make informed property decisions during complex and often emotional transitions. We work closely with professional referral partners who want their clients served with care, discretion, responsiveness, and practical follow-through.
+              Real Property Planning is an educational and connection hub that helps clients make informed property decisions during complex and often emotional transitions, and connects them with appropriately licensed professionals when needed. We work closely with professional referral partners who want their clients served with care, discretion, responsiveness, and practical follow-through.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/contact">
