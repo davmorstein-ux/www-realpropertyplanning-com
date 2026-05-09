@@ -340,46 +340,41 @@ body {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 14px !important;
+  gap: 10px !important;
   width: 100%;
   max-width: 280px;
-  min-height: 64px;
-  padding: 0 32px !important;
-  border-radius: 14px;
+  min-height: 58px;
+  padding: 0 28px !important;
+  border-radius: 12px;
   background: linear-gradient(180deg, hsl(var(--gold-light)) 0%, hsl(var(--gold)) 100%);
   color: hsl(var(--navy-dark)) !important;
   font-family: 'Inter', sans-serif !important;
-  font-size: 22px !important;
-  font-weight: 800 !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
   line-height: 1.2 !important;
-  letter-spacing: 0.06em !important;
-  text-transform: uppercase !important;
+  letter-spacing: 0 !important;
   text-align: center;
   text-decoration: none !important;
   white-space: nowrap;
-  box-shadow: 0 4px 12px hsl(var(--navy-dark) / 0.22);
+  box-shadow: 0 4px 12px hsl(var(--navy-dark) / 0.18);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .gold-cta:hover,
 .gold-cta:focus-visible {
   color: hsl(var(--navy-dark)) !important;
   text-decoration: none !important;
-  box-shadow: 0 8px 20px hsl(var(--navy-dark) / 0.32);
+  box-shadow: 0 6px 16px hsl(var(--navy-dark) / 0.28);
   transform: translateX(2px);
 }
 .gold-cta svg {
-  width: 24px !important;
-  height: 24px !important;
+  width: 20px !important;
+  height: 20px !important;
   stroke: currentColor;
   fill: none;
-  stroke-width: 2.6;
+  stroke-width: 2.4;
   stroke-linecap: round;
   stroke-linejoin: round;
   flex-shrink: 0;
-}
-@media (max-width: 767px) {
-  .gold-cta { font-size: 20px !important; min-height: 60px; }
-  .gold-cta svg { width: 22px !important; height: 22px !important; }
 }
 
 /* ═══════════════════════════════════════════════
@@ -1771,7 +1766,7 @@ button:not([data-nav-button]),
   .hn-sub { font-size: 18px !important; font-family: 'Montserrat', sans-serif !important; }
   .hn-h2 { font-size: 44px !important; font-family: 'Cormorant Garamond', serif !important; }
   .hn-item { font-size: 16px !important; font-family: 'Montserrat', sans-serif !important; }
-  .gold-cta { font-family: 'Inter', sans-serif !important; line-height: 1.2 !important; }
+  .gold-cta { font-size: 18px !important; font-family: 'Inter', sans-serif !important; font-weight: 700 !important; line-height: 1.2 !important; }
   .hn-list { grid-template-columns: 1fr !important; }
 
 /* ============================================================
