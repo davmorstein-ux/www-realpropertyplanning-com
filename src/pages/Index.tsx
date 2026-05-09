@@ -4,9 +4,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import { realEstateAgentSchema, organizationSchema } from "@/lib/schema";
 import { Helmet } from "react-helmet-async";
-import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 
 import HomepageHero from "@/components/HomepageHero";
 import HomepageFAQ from "@/components/HomepageFAQ";
@@ -124,13 +122,16 @@ const Index = () => {
       {/* 2. SITUATION-BASED GUIDANCE — Where Are You In The Process? */}
       <SituationCards />
 
-      {/* 3. BROADER CATEGORY ORIENTATION — secondary navigation pathways */}
+      {/* 3. FAQ — supports immediate questions before broader pathways */}
+      <HomepageFAQ />
+
+      {/* 4. BROADER CATEGORY ORIENTATION — secondary navigation pathways */}
       <HomepageNav />
 
-      {/* 4. REASSURANCE / TRUST */}
+      {/* 5. REASSURANCE / TRUST */}
       <HomepageWarmStatement />
 
-      {/* 5. NEXT STEP — quieter Tier 2 CTA strip */}
+      {/* 6. NEXT STEP — quieter Tier 2 CTA strip */}
       <section className="py-10 lg:py-12 bg-navy">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto flex flex-col md:flex-row items-center justify-between gap-5 text-center md:text-left">
@@ -142,18 +143,15 @@ const Index = () => {
                 Start with a calm, no-pressure conversation.
               </p>
             </div>
-            <Link to="/contact" className="shrink-0">
-              <Button variant="gold" size="lg" className="px-7 py-4 h-auto rounded-lg text-base">
-                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-7 h-7 mr-2 object-contain shrink-0" loading="lazy" />
-                Schedule a Conversation
-              </Button>
+            <Link to="/contact" className="gold-cta shrink-0">
+              Schedule a Conversation
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
             </Link>
           </div>
         </div>
       </section>
-
-      {/* FAQ — kept for SEO/AEO discovery */}
-      <HomepageFAQ />
 
       <DisclaimerSection />
       </main>

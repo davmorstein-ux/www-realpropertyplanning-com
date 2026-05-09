@@ -26,27 +26,24 @@ const faqs = [
 
 const HomepageFAQ = () => {
   return (
-    <section className="py-12 lg:py-16 bg-secondary">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-[920px] mx-auto">
-          <h2 className="font-serif text-navy mb-8 text-center font-semibold text-[28px] md:text-[36px] leading-tight">
+    <section className="py-10 md:py-12 bg-secondary">
+      <div className="container px-5 md:px-8">
+        <div className="max-w-[960px] mx-auto">
+          <h2 className="font-serif text-navy mb-6 md:mb-7 text-center font-semibold text-[34px] md:text-[44px] leading-tight">
             Common Questions
           </h2>
-          <Accordion type="single" collapsible className="space-y-3">
+          <Accordion type="single" collapsible className="space-y-3 md:space-y-4">
             {faqs.map((faq, i) => (
               <AccordionItem
                 key={i}
                 value={`faq-${i}`}
-                className="bg-card border border-border rounded-xl overflow-hidden data-[state=open]:border-gold/25 transition-colors"
+                className="bg-card border-2 border-border rounded-xl overflow-hidden data-[state=open]:border-gold transition-colors shadow-sm"
               >
-                <AccordionTrigger
-                  className="text-left font-serif font-semibold text-foreground hover:text-gold hover:no-underline px-5 py-5 min-h-[64px]"
-                  style={{ fontSize: "19px", lineHeight: 1.4 }}
-                >
-                  {faq.q}
+                <AccordionTrigger className="homepage-faq-trigger text-left px-5 md:px-6 py-4 md:py-5 min-h-[68px] gap-4 [&>svg]:h-6 [&>svg]:w-6 [&>svg]:text-navy [&>svg]:shrink-0">
+                  <span>{faq.q}</span>
                 </AccordionTrigger>
-                <AccordionContent className="px-5 pb-5 pt-0 text-foreground">
-                  <div style={{ fontSize: "18px", lineHeight: 1.7 }}>{faq.a}</div>
+                <AccordionContent className="px-5 md:px-6 pb-5 md:pb-6 pt-0 text-foreground">
+                  <div className="homepage-faq-answer">{faq.a}</div>
                 </AccordionContent>
               </AccordionItem>
             ))}
