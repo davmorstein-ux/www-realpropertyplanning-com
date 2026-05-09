@@ -424,7 +424,7 @@ const App = () => (
 
           {/* Redundant professional / referral pages → consolidated targets */}
           <Route path="/professional-referral-resource" element={<Navigate to="/join-the-network" replace />} />
-          <Route path="/professional-network" element={<Navigate to="/join-the-network" replace />} />
+          <Route path="/professional-network" element={<Navigate to="/building-your-trusted-professional-team" replace />} />
           <Route path="/attorney-referral" element={<Navigate to="/for-attorneys" replace />} />
           <Route path="/for-referral-partners" element={<Navigate to="/join-the-network" replace />} />
           <Route path="/for-professionals" element={<Navigate to="/professionals" replace />} />
