@@ -12,6 +12,7 @@ import HomepageHero from "@/components/HomepageHero";
 import HomepageFAQ from "@/components/HomepageFAQ";
 import HomepageWarmStatement from "@/components/HomepageWarmStatement";
 import SituationCards from "@/components/SituationCards";
+import ProfessionalNetworkPreview from "@/components/ProfessionalNetworkPreview";
 
 const jsonLd = [realEstateAgentSchema, organizationSchema];
 
