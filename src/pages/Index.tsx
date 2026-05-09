@@ -123,7 +123,10 @@ const Index = () => {
       {/* 2. SITUATION IDENTIFICATION + GUIDED PATHWAYS (merged) */}
       <SituationCards />
 
-      {/* 3. REASSURANCE / TRUST */}
+      {/* 3. PROFESSIONAL NETWORK — curated 6-tile preview */}
+      <ProfessionalNetworkPreview />
+
+      {/* 4. REASSURANCE / TRUST */}
       <HomepageWarmStatement />
 
       {/* 5. NEXT STEP — quieter Tier 2 CTA strip */}
