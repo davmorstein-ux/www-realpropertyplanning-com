@@ -53,7 +53,7 @@ const HomepageNav = () => {
           .hn-subhead { font-size: 20px; }
           .hn-heading { margin-bottom: 44px; }
           .hn-grid { grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: none; }
-          .hn-img { height: 220px; }
+          .hn-img { height: 300px; padding: 8px; }
           .hn-title { font-size: 28px; }
         }
       `}</style>
