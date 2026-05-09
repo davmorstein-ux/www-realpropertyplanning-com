@@ -11,7 +11,7 @@ import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washingto
 import HomepageHero from "@/components/HomepageHero";
 import HomepageFAQ from "@/components/HomepageFAQ";
 import HomepageWarmStatement from "@/components/HomepageWarmStatement";
-import SituationCards from "@/components/SituationCards";
+import HomepageNav from "@/components/HomepageNav";
 import ProfessionalNetworkPreview from "@/components/ProfessionalNetworkPreview";
 
 const jsonLd = [realEstateAgentSchema, organizationSchema];
@@ -120,8 +120,8 @@ const Index = () => {
       {/* 1. HERO — short, calm, clear */}
       <HomepageHero />
 
-      {/* 2. SITUATION IDENTIFICATION + GUIDED PATHWAYS (merged) */}
-      <SituationCards />
+      {/* 2. ORIENTATION — 3 calm high-level entry categories */}
+      <HomepageNav />
 
       {/* 3. PROFESSIONAL NETWORK — curated 6-tile preview */}
       <ProfessionalNetworkPreview />
