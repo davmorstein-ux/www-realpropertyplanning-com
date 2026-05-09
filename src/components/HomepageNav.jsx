@@ -37,7 +37,8 @@ const HomepageNav = () => {
         .hn-card { display: flex; flex-direction: column; background: #FDFAF5; border-radius: 16px; border: 2px solid rgba(184,154,90,0.40); box-shadow: 0 8px 24px rgba(18,36,63,0.15); overflow: hidden; text-decoration: none; cursor: pointer; transition: box-shadow 0.3s ease, transform 0.3s ease; color: inherit; }
         .hn-card:hover, .hn-card:focus-visible { box-shadow: 0 18px 40px rgba(18,36,63,0.25); transform: translateY(-4px); border-color: #b89a5a; outline: none; }
 
-        .hn-img { display: block; width: 100%; aspect-ratio: 4 / 3; height: auto; object-fit: contain; background: #FDFAF5; flex-shrink: 0; padding: 0; }
+        .hn-img-frame { position: relative; width: 100%; aspect-ratio: 500 / 445; overflow: hidden; background: #FDFAF5; display: flex; align-items: center; justify-content: center; flex-shrink: 0; padding: 0; }
+        .hn-img { display: block; width: 100%; height: 100%; object-fit: contain; background: #FDFAF5; flex-shrink: 0; padding: 0; }
         .hn-body { padding: 20px 22px 8px; flex: 1; text-align: center; }
         .hn-title { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 700; color: #8B1A1A; line-height: 1.25; margin: 0 0 10px; }
         .hn-blurb { font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 400; color: #1B2B4B; line-height: 1.6; margin: 0; }
@@ -53,7 +54,7 @@ const HomepageNav = () => {
           .hn-subhead { font-size: 20px; }
           .hn-heading { margin-bottom: 44px; }
           .hn-grid { grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: none; }
-          .hn-img { padding: 0; }
+          .hn-img-frame { padding: 0; }
           .hn-title { font-size: 28px; }
         }
       `}</style>
@@ -64,7 +65,9 @@ const HomepageNav = () => {
         <div className="hn-grid">
           {sections.map((s) => (
             <a key={s.title} className="hn-card" href={s.href} aria-label={`${s.title} — ${s.blurb}`}>
-              <img className="hn-img" src={s.img} alt="" aria-hidden="true" loading="lazy" />
+              <div className="hn-img-frame">
+                <img className="hn-img" src={s.img} alt="" aria-hidden="true" loading="lazy" />
+              </div>
               <div className="hn-body">
                 <div className="hn-title">{s.title}</div>
                 <p className="hn-blurb">{s.blurb}</p>
