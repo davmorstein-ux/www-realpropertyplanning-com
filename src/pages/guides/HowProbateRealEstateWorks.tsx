@@ -277,7 +277,7 @@ const HowProbateRealEstateWorks = () => (
         <div className="max-w-3xl mx-auto">
           <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">How Does a Broker With Appraisal Credentials Help?</h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-            Most real estate agents handle one or two probate transactions in their career. Real Property Planning focuses his practice on probate, estate, and transition-related real estate — bringing both brokerage expertise and certified appraisal knowledge to every engagement.
+            Most real estate agents handle one or two probate transactions in their career. Real Property Planning focuses its practice on probate, estate, and transition-related real estate — bringing both brokerage expertise and certified appraisal knowledge to every engagement.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-6">
             This dual background means the executor and attorney receive more accurate property assessments, stronger pricing strategy, better preparation guidance, and more confident decision-making support throughout the process. It also means our team can anticipate appraisal-related challenges that could derail a buyer's financing — and address them before they become problems.

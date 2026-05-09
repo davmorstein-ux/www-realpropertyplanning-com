@@ -35,7 +35,7 @@ const KingCounty = () => (
     communitiesIntro="Real Property Planning serves families, executors, and professionals throughout King County, including:"
     closingCtaBody={[
       "Whether you're just beginning to think about an estate property in King County or are already in the middle of a probate sale, a short conversation can help bring clarity.",
-      "Our team is based in Kirkland and serves the entire King County area — from Seattle neighborhoods to the Eastside communities he knows best.",
+      "Our team is based in Kirkland and serves the entire King County area — from Seattle neighborhoods to the Eastside communities we know best.",
     ]}
     countySpecificFaqs={[
       {

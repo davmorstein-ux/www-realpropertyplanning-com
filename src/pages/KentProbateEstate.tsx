@@ -84,7 +84,7 @@ const KentProbateEstate = () => {
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">Getting Everyone on the Same Page</h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">When an inherited home involves multiple family members, the biggest obstacle is often not the property itself — it's getting everyone aligned. Different opinions, different timelines, and different levels of knowledge about the home's condition can create friction that stalls the process.</p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">Our team provides a neutral, fact-based foundation. He assesses the property, presents realistic value and preparation options, and gives every family member the same clear picture to work from. That shared understanding is usually what unlocks forward progress.</p>
-            <p className="text-muted-foreground text-lg leading-relaxed">From there, he handles the execution — coordinating cleanout, managing contractors, and guiding the sale process — so the family can step back from the day-to-day logistics.</p>
+            <p className="text-muted-foreground text-lg leading-relaxed">From there, our team handles the execution — coordinating cleanout, managing contractors, and guiding the sale process — so the family can step back from the day-to-day logistics.</p>
           </div>
         </div>
       </section>

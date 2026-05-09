@@ -71,7 +71,7 @@ const MarysvilleProbateEstate = () => {
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">Why Local Awareness Matters in Marysville</h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">Marysville's neighborhoods range from established areas near downtown and along State Avenue to newer developments in the Smokey Point corridor and toward Lake Goodwin. Property values reflect this diversity — and inherited homes don't always fit neatly into the averages that online tools produce.</p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">Many inherited Marysville homes were built in the 1990s and early 2000s. They're typically solid construction but may have dated finishes, aging systems, or landscaping that's gotten ahead of the owner. Understanding how these factors affect buyer perception — and whether addressing them is worth the cost — requires someone willing to walk the property and give honest feedback.</p>
-            <p className="text-muted-foreground text-lg leading-relaxed">As both a licensed Washington State real estate broker and a state-certified residential appraiser, Real Property Planning provides that ground-level assessment. His pricing reflects the property's actual condition and position within Marysville's market — giving families a reliable foundation for decision-making.</p>
+            <p className="text-muted-foreground text-lg leading-relaxed">As both a licensed Washington State real estate broker and a state-certified residential appraiser, Real Property Planning provides that ground-level assessment. Our pricing reflects the property's actual condition and position within Marysville's market — giving families a reliable foundation for decision-making.</p>
           </div>
         </div>
       </section>
@@ -83,7 +83,7 @@ const MarysvilleProbateEstate = () => {
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">Supporting Family-Led Decisions</h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">Inherited property decisions in Marysville are usually family decisions — and that means balancing different perspectives, schedules, and levels of involvement. One person may be ready to move forward while another needs more information. Someone may live locally while others are hours away.</p>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-5">Our team provides the information that helps everyone get aligned — a clear picture of the property's condition, a realistic sense of value, and a practical outline of what needs to happen next. From there, he manages the logistics so the family can focus on the decisions rather than the details.</p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-5">Our team provides the information that helps everyone get aligned — a clear picture of the property's condition, a realistic sense of value, and a practical outline of what needs to happen next. From there, our team manages the logistics so the family can focus on the decisions rather than the details.</p>
             <p className="text-muted-foreground text-lg leading-relaxed">Whether it's coordinating a cleanout, getting the property ready for market, or managing communication with attorneys and other parties, our team keeps things moving at a pace that works for the family.</p>
           </div>
         </div>

@@ -20,7 +20,7 @@ const contentBlocks = [
   },
   {
     heading: "Coordination With Professional Advisors",
-    text: "Real Property Planning works alongside attorneys, fiduciaries, trustees, and other advisors by providing real-estate-related insight, communication, and follow-through within the scope of his professional role.",
+    text: "Real Property Planning works alongside attorneys, fiduciaries, trustees, and other advisors by providing real-estate-related insight, communication, and follow-through within the scope of its professional role.",
   },
   {
     heading: "Support for Executors and Families",

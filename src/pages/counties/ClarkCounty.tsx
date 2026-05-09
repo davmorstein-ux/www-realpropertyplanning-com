@@ -45,7 +45,7 @@ const ClarkCounty = () => (
       },
       {
         question: "Should I sell a Vancouver estate home as-is or invest in preparation?",
-        answer: "It depends on the property's condition, location within Vancouver, and the current buyer expectations for that neighborhood. A home near downtown Vancouver's revitalized core may benefit from targeted preparation, while a property in a more established subdivision might sell well as-is. Our team evaluates each situation individually, using his appraisal background to assess which investments are likely to improve the outcome.",
+        answer: "It depends on the property's condition, location within Vancouver, and the current buyer expectations for that neighborhood. A home near downtown Vancouver's revitalized core may benefit from targeted preparation, while a property in a more established subdivision might sell well as-is. Our team evaluates each situation individually, using our appraisal background to assess which investments are likely to improve the outcome.",
       },
       {
         question: "Can our team help if the executor lives in Portland and the property is in Clark County?",

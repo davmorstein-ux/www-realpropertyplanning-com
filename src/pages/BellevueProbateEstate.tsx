@@ -38,7 +38,7 @@ const faqs = [
   {
     question: "What preparation is typically needed before selling a Bellevue estate property?",
     answer:
-      "It depends on the property's condition, the neighborhood, and buyer expectations. Bellevue buyers often expect well-presented homes. Our team evaluates whether targeted preparation — cleaning, repairs, or staging — is likely to increase the sale price enough to justify the cost and delay, using his appraisal background to make that assessment.",
+      "It depends on the property's condition, the neighborhood, and buyer expectations. Bellevue buyers often expect well-presented homes. Our team evaluates whether targeted preparation — cleaning, repairs, or staging — is likely to increase the sale price enough to justify the cost and delay, using our appraisal background to make that assessment.",
   },
   {
     question: "How long does it take to sell an estate property in Bellevue?",

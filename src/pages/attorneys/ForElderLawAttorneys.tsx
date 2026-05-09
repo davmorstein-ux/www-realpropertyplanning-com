@@ -32,7 +32,7 @@ const services = [
     title: "Patient, Respectful Sale Coordination",
     description: (
       <>
-        <Link to="/senior-transitions" className="text-accent hover:text-gold underline underline-offset-4">Senior home sales</Link> are not standard transactions. Our team works at the family's pace — allowing time for emotional preparation, coordinating with the care team, and managing the property preparation and sale in a way that respects the weight of the transition. His affiliation with the <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-gold underline underline-offset-4">Aging Life Care Association</a> and the National Association of Senior Advocates reflects a commitment to this work that goes beyond real estate.
+        <Link to="/senior-transitions" className="text-accent hover:text-gold underline underline-offset-4">Senior home sales</Link> are not standard transactions. Our team works at the family's pace — allowing time for emotional preparation, coordinating with the care team, and managing the property preparation and sale in a way that respects the weight of the transition. Our affiliation with the <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-gold underline underline-offset-4">Aging Life Care Association</a> and the National Association of Senior Advocates reflects a commitment to this work that goes beyond real estate.
       </>
     ),
   },

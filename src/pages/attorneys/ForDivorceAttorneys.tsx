@@ -33,7 +33,7 @@ const services = [
   },
   {
     title: "Neutral Representation",
-    description: "Our team does not represent either party's interests — he represents the property and the process. His role is to handle the sale fairly, transparently, and professionally, with consistent communication to both parties (or through their attorneys) and no advocacy for either side.",
+    description: "Our team does not represent either party's interests — our team represents the property and the process. Our role is to handle the sale fairly, transparently, and professionally, with consistent communication to both parties (or through their attorneys) and no advocacy for either side.",
   },
   {
     title: "Structured, Organized Sale Process",
@@ -54,7 +54,7 @@ const services = [
 const faqs = [
   {
     question: "How does Real Property Planning maintain neutrality when working with divorcing parties?",
-    answer: "Our team's role is defined from the beginning as neutral coordinator — his obligation is to the property transaction, not to either party. Communication protocols are established upfront: updates can be sent simultaneously to both parties, routed through respective counsel, or structured in whatever way the attorneys prefer. Pricing and preparation decisions are based on market data, not either party's preference.",
+    answer: "Our team's role is defined from the beginning as neutral coordinator — our obligation is to the property transaction, not to either party. Communication protocols are established upfront: updates can be sent simultaneously to both parties, routed through respective counsel, or structured in whatever way the attorneys prefer. Pricing and preparation decisions are based on market data, not either party's preference.",
   },
   {
     question: "What if one party is living in the home during the sale?",

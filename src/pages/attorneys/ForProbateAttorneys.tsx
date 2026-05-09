@@ -63,7 +63,7 @@ const faqs = [
   },
   {
     question: "What is the difference between a CMA and the valuation analysis our team provides?",
-    answer: "A standard comparative market analysis (CMA) is produced by most listing agents and reflects a general price range based on nearby sales. It is not a formal appraisal, and it typically does not account for condition in a documented, methodology-based way. Our team's condition-based pricing combines his certified appraisal training with current market data — producing a condition-adjusted, comparable-supported price opinion that is more defensible for fiduciary purposes than a standard CMA. For situations requiring a formal appraisal (date-of-death valuations, for example), our team can discuss appropriate referral resources.",
+    answer: "A standard comparative market analysis (CMA) is produced by most listing agents and reflects a general price range based on nearby sales. It is not a formal appraisal, and it typically does not account for condition in a documented, methodology-based way. Our team's condition-based pricing combines our certified appraisal training with current market data — producing a condition-adjusted, comparable-supported price opinion that is more defensible for fiduciary purposes than a standard CMA. For situations requiring a formal appraisal (date-of-death valuations, for example), our team can discuss appropriate referral resources.",
   },
   {
     question: "Can you help when heirs disagree about value or timing?",

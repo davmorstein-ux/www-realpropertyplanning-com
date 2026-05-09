@@ -27,7 +27,7 @@ const studies = [
     label: "Family Coordination",
     situation: "Four adult siblings inherited a family home in Kitsap County after their father passed. All four had equal ownership, and none lived near the property.",
     challenge: "The siblings had different views on timing — one wanted to hold, two wanted to sell quickly, and one was unsure. Confusion about the home's value made it harder to reach agreement.",
-    howHelped: "Real Property Planning provided a clear, condition-based pricing assessment so everyone was working from the same numbers. He walked the family through market data, explained the cost of holding versus selling, and coordinated the preparation and sale with regular updates to all four siblings.",
+    howHelped: "Real Property Planning provided a clear, condition-based pricing assessment so everyone was working from the same numbers. Real Property Planning walked the family through market data, explained the cost of holding versus selling, and coordinated the preparation and sale with regular updates to all four siblings.",
     outcome: "The family reached agreement within two weeks. The home sold at a price everyone felt was fair, and the process was far less stressful than expected.",
   },
   {
@@ -35,7 +35,7 @@ const studies = [
     label: "Senior Transition",
     situation: "A longtime homeowner in her early 80s was moving to assisted living. Her two adult children were helping coordinate the transition and sale of the family home in King County.",
     challenge: "The home held 40 years of memories. The family wasn't sure how to prepare the property, when to list, or how to manage the timeline alongside the move.",
-    howHelped: "Real Property Planning recommended a phased approach: start with a gentle cleanout, address targeted improvements, and list at a time aligned with the transition. He coordinated vendors and kept everyone informed throughout.",
+    howHelped: "Real Property Planning recommended a phased approach: start with a gentle cleanout, address targeted improvements, and list at a time aligned with the transition. Real Property Planning coordinated vendors and kept everyone informed throughout.",
     outcome: "The home sold within a month of listing. The family described the experience as respectful and well-paced.",
   },
   {

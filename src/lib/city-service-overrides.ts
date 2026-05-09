@@ -172,7 +172,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Discreet marketing and showing management appropriate for Bellevue neighborhoods where privacy is valued",
         "Clear documentation of all pricing rationale, sale terms, and transaction details for legal records",
       ],
-      whyLocal: "Bellevue divorce-related sales carry financial stakes that amplify the importance of accurate pricing. A valuation difference of 5% on a $2M Eastside home means $100,000 — enough to meaningfully affect settlement terms. Real Property Planning's certified appraisal credentials provide the objective, analytically rigorous valuation that Bellevue family law cases require, while his brokerage experience ensures the sale itself is managed with the professionalism the situation demands.",
+      whyLocal: "Bellevue divorce-related sales carry financial stakes that amplify the importance of accurate pricing. A valuation difference of 5% on a $2M Eastside home means $100,000 — enough to meaningfully affect settlement terms. Real Property Planning's certified appraisal credentials provide the objective, analytically rigorous valuation that Bellevue family law cases require, while our brokerage experience ensures the sale itself is managed with the professionalism the situation demands.",
     },
     "trust-estate-property-sales": {
       intro: "Trust-owned property sales in Bellevue carry fiduciary obligations that demand precision — trustees are accountable for demonstrating that the property was sold at fair market value through a reasonable process. In Bellevue's high-value market, this standard requires more than a casual market analysis. Real Property Planning provides the valuation expertise and documented sale process that Bellevue trustees and their advisors need.",
@@ -1172,7 +1172,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Coordination across property types — single-family, condo, townhome, multifamily — with appropriate expertise for each",
         "A reliable, credentialed Seattle real estate resource for attorneys with ongoing property-related referral needs",
       ],
-      whyLocal: "Seattle's property matters are complicated by the city's market complexity. A property in Ballard raises different questions than one in Rainier Valley or on Capitol Hill — lot potential, neighborhood trajectory, property type, and buyer demographics all vary dramatically. Real Property Planning's experience across Seattle's neighborhoods, combined with his certified appraisal credentials, provides attorneys and fiduciaries with the versatile, defensible analysis that Seattle's diverse property landscape requires.",
+      whyLocal: "Seattle's property matters are complicated by the city's market complexity. A property in Ballard raises different questions than one in Rainier Valley or on Capitol Hill — lot potential, neighborhood trajectory, property type, and buyer demographics all vary dramatically. Real Property Planning's experience across Seattle's neighborhoods, combined with our certified appraisal credentials, provides attorneys and fiduciaries with the versatile, defensible analysis that Seattle's diverse property landscape requires.",
     },
 
     "downsizing-services": {
@@ -2784,7 +2784,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A mediated divorce involving a Kent home where one party wants to retain the property — needing buyout valuation that accurately reflects the specific neighborhood's market",
         "A contentious divorce where the Kent home's proximity to commercial areas creates disagreement about whether the location depresses or supports value",
       ],
-      whyLocal: "Divorce negotiations involving Kent property are complicated by the city's wide price range and internal diversity. Both parties may be 'right' about Kent values — just referencing different parts of the city. Our team's experience across Kent's submarkets and his appraisal credentials provide the neutral, property-specific analysis needed for fair resolution when each side's comparable sales tell different stories.",
+      whyLocal: "Divorce negotiations involving Kent property are complicated by the city's wide price range and internal diversity. Both parties may be 'right' about Kent values — just referencing different parts of the city. Our team's experience across Kent's submarkets and our appraisal credentials provide the neutral, property-specific analysis needed for fair resolution when each side's comparable sales tell different stories.",
     },
     "trust-estate-property-sales": {
       intro: "Trust-owned property in Kent may be located in any of the city's diverse submarkets — from East Hill ramblers to West Hill view homes to valley-floor properties near commercial corridors. Each location creates different fiduciary considerations for trustees responsible for maximizing trust value while managing the sale appropriately. Real Property Planning provides trustees with the South King County expertise that Kent's varied housing market demands.",

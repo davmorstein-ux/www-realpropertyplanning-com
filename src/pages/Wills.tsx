@@ -264,9 +264,7 @@ const Wills = () => {
                 We Don't Provide Legal Advice — And Here's Why That Matters
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Real Property Planning is a licensed real estate broker and Washington State certified real
-                estate appraiser. He is not an attorney, CPA, or tax advisor — and does not provide
-                legal, tax, or accounting advice.
+                Real Property Planning is an educational and connection hub. Real Property Planning is not an attorney, CPA, or tax advisor, and does not provide legal, tax, or accounting advice.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 That distinction is important. When families are navigating a will, they need

@@ -38,7 +38,7 @@ const faqs = [
   {
     question: "Should I prepare the home before selling?",
     answer:
-      "It depends on the property's condition, your timeline, and the transition situation. Our team evaluates which improvements are likely to increase the sale price enough to justify the cost and delay — and which aren't. When timing is tight due to a move or transition, he helps prioritize what matters most.",
+      "It depends on the property's condition, your timeline, and the transition situation. Our team evaluates which improvements are likely to increase the sale price enough to justify the cost and delay — and which aren't. When timing is tight due to a move or transition, our team helps prioritize what matters most.",
   },
   {
     question: "How long does it take to sell an estate property in Vancouver?",

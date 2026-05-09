@@ -41,7 +41,7 @@ const faqs = [
   {
     question: "What should be done before listing an inherited home in Seattle?",
     answer:
-      "It depends on the property's condition, location, and your timeline. Our team evaluates whether to sell as-is or invest in targeted preparation — using his appraisal background to determine which improvements are likely to increase the sale price enough to justify the cost and delay.",
+      "It depends on the property's condition, location, and your timeline. Our team evaluates whether to sell as-is or invest in targeted preparation — using our appraisal background to determine which improvements are likely to increase the sale price enough to justify the cost and delay.",
   },
   {
     question: "How long does it take to sell a probate property in Seattle?",
