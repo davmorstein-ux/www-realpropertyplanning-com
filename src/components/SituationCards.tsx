@@ -1,15 +1,10 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import iconAgingParent from "@/assets/icons/senior-care-heart-hands-icon-washington.webp";
-import iconProbate from "@/assets/icons/probate-property-home-icon-washington.webp";
-import iconHouse from "@/assets/icons/senior-home-sales-couple-house-icon-washington.webp";
-import iconCare from "@/assets/icons/senior-assisted-living-icon-washington.webp";
-import iconPlanning from "@/assets/icons/estate-wills-planning-icon-washington.webp";
-import iconExecutor from "@/assets/icons/executors-clipboard-checklist-icon-washington.webp";
 
 const situations = [
   {
-    icon: iconAgingParent,
+    image: "/tiles/set3/senior-home-sales.webp",
+    alt: "Helping an aging parent — senior care guidance Washington State",
     title: "Helping an Aging Parent",
     description:
       "Worried about a parent's safety, care, or future housing decisions.",
@@ -17,7 +12,8 @@ const situations = [
     href: "/helping-aging-parents",
   },
   {
-    icon: iconProbate,
+    image: "/tiles/set2/probate-estate-sales.webp",
+    alt: "Probate and inherited property guidance Washington State",
     title: "A Loved One Recently Passed Away",
     description:
       "Trying to understand probate, inherited property, or what comes next.",
@@ -25,7 +21,8 @@ const situations = [
     href: "/estate-probate-inherited-property",
   },
   {
-    icon: iconHouse,
+    image: "/tiles/set1/real-estate-brokers.webp",
+    alt: "Decisions about an inherited or family home Washington State",
     title: "Deciding What To Do With the House",
     description:
       "Unsure whether to sell, keep, rent, repair, or prepare a property.",
@@ -33,7 +30,8 @@ const situations = [
     href: "/what-to-do-with-the-house",
   },
   {
-    icon: iconCare,
+    image: "/tiles/set3/senior-living-options.webp",
+    alt: "Senior living and care options Washington State",
     title: "Exploring Housing & Care Options",
     description:
       "Considering assisted living, memory care, or aging in place.",
@@ -41,7 +39,8 @@ const situations = [
     href: "/understanding-housing-care-options",
   },
   {
-    icon: iconPlanning,
+    image: "/tiles/set2/wills.webp",
+    alt: "Estate planning, wills, and powers of attorney Washington State",
     title: "Planning Before a Crisis",
     description:
       "Quietly organizing legal, caregiving, and property planning ahead of time.",
@@ -49,7 +48,8 @@ const situations = [
     href: "/estate-planning-powers-of-attorney",
   },
   {
-    icon: iconExecutor,
+    image: "/tiles/set2/executors.webp",
+    alt: "Executor and trustee first steps Washington State",
     title: "Serving as Executor or Trustee",
     description:
       "Recently named executor or trustee and unsure what comes first.",
@@ -76,34 +76,33 @@ const SituationCards = () => {
             <Link
               key={s.href}
               to={s.href}
-              className="group relative block rounded-2xl bg-white border-2 border-gold/30 shadow-[0_8px_24px_-12px_rgba(27,43,75,0.25)] hover:shadow-[0_18px_40px_-16px_rgba(27,43,75,0.45)] hover:-translate-y-1 hover:border-gold transition-all duration-300 overflow-hidden"
+              className="group relative block rounded-2xl bg-white border-2 border-gold/30 shadow-[0_8px_24px_-12px_rgba(27,43,75,0.25)] hover:shadow-[0_18px_40px_-16px_rgba(27,43,75,0.45)] hover:-translate-y-1 hover:border-gold transition-all duration-300 overflow-hidden no-underline"
             >
               <div
                 className="absolute inset-y-0 left-0 w-1.5 bg-gradient-to-b from-gold to-gold-dark"
                 aria-hidden="true"
               />
-              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5 sm:gap-6 p-6 sm:p-7 pl-7 sm:pl-9">
-                <div className="shrink-0 flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-navy to-navy-dark shadow-inner">
+              <div className="flex flex-col sm:flex-row items-center sm:items-stretch gap-5 sm:gap-6 p-5 sm:p-6 pl-6 sm:pl-8">
+                <div className="shrink-0 w-full sm:w-[180px] h-[140px] sm:h-auto rounded-xl overflow-hidden bg-cream">
                   <img
-                    src={s.icon}
-                    alt=""
-                    aria-hidden="true"
-                    className="w-14 h-14 sm:w-16 sm:h-16 object-contain drop-shadow-lg transition-transform duration-300 group-hover:scale-110"
+                    src={s.image}
+                    alt={s.alt}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
                   />
                 </div>
 
                 <div className="flex-1 text-center sm:text-left flex flex-col justify-between gap-4 min-w-0">
                   <div>
-                    <h3 className="font-serif text-[22px] sm:text-2xl font-semibold text-navy leading-snug mb-2">
+                    <h3 className="font-serif text-[22px] sm:text-[26px] font-semibold text-navy leading-snug mb-2 no-underline">
                       {s.title}
                     </h3>
-                    <p className="text-foreground text-base sm:text-lg leading-relaxed">
+                    <p className="text-foreground text-[18px] sm:text-[19px] leading-relaxed no-underline">
                       {s.description}
                     </p>
                   </div>
 
-                  <span className="inline-flex items-center justify-center sm:justify-start gap-2 self-center sm:self-start px-6 py-3 min-h-[52px] rounded-xl bg-gradient-to-b from-gold to-gold-dark text-navy font-semibold text-base shadow-md group-hover:shadow-lg group-hover:translate-x-1 transition-all duration-300 whitespace-nowrap">
+                  <span className="inline-flex items-center justify-center sm:justify-start gap-2 self-center sm:self-start px-6 py-3 min-h-[52px] rounded-xl bg-gradient-to-b from-gold to-gold-dark text-navy font-semibold text-base shadow-md group-hover:shadow-lg group-hover:translate-x-1 transition-all duration-300 whitespace-nowrap no-underline">
                     {s.cta}
                     <ArrowRight className="w-5 h-5" aria-hidden="true" />
                   </span>

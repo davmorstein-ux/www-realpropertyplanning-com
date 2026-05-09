@@ -14,10 +14,10 @@ const ProfessionalNetworkPreview = () => {
       <div className="container px-5 md:px-8">
         <div className="max-w-3xl mx-auto text-center mb-10">
           <h2 className="font-serif text-[26px] md:text-[34px] lg:text-[38px] font-semibold text-navy leading-tight mb-3">
-            A Trusted Professional Network
+            A Trusted Support Network
           </h2>
           <p className="text-foreground text-lg leading-relaxed">
-            You don't have to assemble the team alone — these are the kinds of professionals who often work together on estate and senior transitions.
+            Real Property Planning helps families coordinate the professionals who often work together on estate and senior transitions — so you don't have to assemble the team alone.
           </p>
         </div>
 
@@ -30,7 +30,7 @@ const ProfessionalNetworkPreview = () => {
         <div className="text-center">
           <Link to="/building-your-trusted-professional-team">
             <Button variant="gold" size="lg" className="px-8 py-4 h-auto rounded-lg text-base">
-              Explore the Full Professional Network
+              Explore the Full Support Network
               <ChevronRight className="w-5 h-5 ml-1" />
             </Button>
           </Link>

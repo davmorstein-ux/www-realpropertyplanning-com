@@ -29,7 +29,7 @@ const HomepageFAQ = () => {
     <section className="py-12 lg:py-16 bg-secondary">
       <div className="container px-6 lg:px-8">
         <div className="max-w-[920px] mx-auto">
-          <h2 className="font-serif text-navy mb-8 text-center font-semibold text-xl md:text-2xl">
+          <h2 className="font-serif text-navy mb-8 text-center font-semibold text-[28px] md:text-[36px] leading-tight">
             Common Questions
           </h2>
           <Accordion type="single" collapsible className="space-y-3">
