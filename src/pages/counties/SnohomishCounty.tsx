@@ -45,11 +45,11 @@ const SnohomishCounty = () => (
       },
       {
         question: "Does our team work with attorneys who handle probate cases in Snohomish County Superior Court?",
-        answer: "Yes. Our team regularly coordinates with probate attorneys on Snohomish County estate sales, providing property assessments, market analysis, and coordinated sale management that aligns with court timelines and fiduciary requirements. Attorneys refer clients to our team because he communicates clearly, follows through, and understands the legal context surrounding estate property sales.",
+        answer: "Yes. Our team regularly coordinates with probate attorneys on Snohomish County estate sales, providing property assessments, market analysis, and coordinated sale management that aligns with court timelines and fiduciary requirements. Attorneys refer clients to our team because our team communicates clearly, follows through, and understands the legal context surrounding estate property sales.",
       },
       {
         question: "How do I manage an inherited Snohomish County property from out of state?",
-        answer: "Our team handles the full process locally — securing the property, coordinating cleanout, managing preparation, listing, showing, negotiating, and closing. He provides regular updates via phone and email so you can fulfill your executor or trustee responsibilities without needing to fly in repeatedly. Many of his Snohomish County clients manage the entire process from a distance.",
+        answer: "Our team handles the full process locally — securing the property, coordinating cleanout, managing preparation, listing, showing, negotiating, and closing. Our team provides regular updates via phone and email so you can fulfill your executor or trustee responsibilities without needing to fly in repeatedly. Many of our Snohomish County clients manage the entire process from a distance.",
       },
     ]}
   />
