@@ -119,13 +119,10 @@ const Index = () => {
       {/* 1. HERO — short, calm, clear */}
       <HomepageHero />
 
-      {/* 2. SITUATION IDENTIFICATION */}
+      {/* 2. SITUATION IDENTIFICATION + GUIDED PATHWAYS (merged) */}
       <SituationCards />
 
-      {/* 3. GUIDED PATHWAYS */}
-      <HomepageNav />
-
-      {/* 4. REASSURANCE / TRUST */}
+      {/* 3. REASSURANCE / TRUST */}
       <HomepageWarmStatement />
 
       {/* 5. NEXT STEP — quieter Tier 2 CTA strip */}
