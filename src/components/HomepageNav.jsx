@@ -59,8 +59,7 @@ const HomepageNav = () => {
       `}</style>
       <div className="hn-section">
         <div className="hn-heading">
-          <h2 className="hn-question">Where Would You Like To Begin?</h2>
-          <p className="hn-subhead">Three calm starting points — choose whichever fits where you are right now.</p>
+          <h2 className="hn-question">Advice and Answers</h2>
         </div>
         <div className="hn-grid">
           {sections.map((s) => (
