@@ -29,7 +29,7 @@ const faqs = [
   { question: "Can I start working on the property before probate is filed?", answer: "You can secure the property, maintain insurance, and begin planning. However, selling, making major modifications, or disposing of significant personal property should generally wait until your legal authority is established. Consult the estate attorney for guidance specific to your situation." },
   { question: "Should I clean out the home before getting it assessed?", answer: "Not necessarily. A broker experienced in estate property can assess the home in its current condition. In fact, seeing the property before cleanout helps our team understand the full scope of work needed and provide more accurate timeline and cost estimates." },
   { question: "What if I live out of state?", answer: "Many executors manage properties from a distance. Our team serves as the local point of contact — coordinating property access, vendor management, preparation, and the sale process while keeping you informed through regular updates. Learn more about out-of-state property coordination." },
-  { question: "How do I know if the property needs repairs before selling?", answer: "Our team evaluates each potential repair or improvement through a return-on-investment lens, informed by his certified appraisal background. Some improvements significantly increase sale price; others are not worth the cost or delay. This analysis helps you make smart decisions with estate funds." },
+  { question: "How do I know if the property needs repairs before selling?", answer: "Our team evaluates each potential repair or improvement through a return-on-investment lens, informed by our certified appraisal background. Some improvements significantly increase sale price; others are not worth the cost or delay. This analysis helps you make smart decisions with estate funds." },
 ];
 
 const jsonLd = articleSchema({
@@ -152,7 +152,7 @@ const WhatExecutorsShouldDo = () => (
             Inherited homes often need significant preparation before they are ready for the market. The personal belongings need to be sorted, donated, or removed. Deferred maintenance may need to be addressed. Landscaping, cleaning, and sometimes light staging are needed to present the property effectively.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-6">
-            The key question is which improvements are worth the investment. A $5,000 kitchen cleanup might add $15,000 in sale price. A $40,000 renovation might add only $20,000. Our team evaluates each potential improvement using his appraisal background to estimate the likely return — helping you spend estate funds wisely.
+            The key question is which improvements are worth the investment. A $5,000 kitchen cleanup might add $15,000 in sale price. A $40,000 renovation might add only $20,000. Our team evaluates each potential improvement using our appraisal background to estimate the likely return — helping you spend estate funds wisely.
           </p>
           <p className="text-muted-foreground leading-relaxed">
             Our team coordinates the entire preparation process — scheduling <Link to="/resources/estate-sale-companies" className="text-accent hover:text-gold underline underline-offset-4">estate sale companies</Link>, cleanout crews, handymen, and <Link to="/resources/property-preparation-services" className="text-accent hover:text-gold underline underline-offset-4">property preparation services</Link> — so you don't have to manage contractors yourself.

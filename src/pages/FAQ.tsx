@@ -108,7 +108,7 @@ const faqs = [
   },
   {
     question: "What repairs should be done before selling an estate property?",
-    answer: `It depends on the property, the budget, and the likely return. Targeted improvements like paint, flooring, and landscaping can increase value significantly. Expensive renovations rarely make financial sense for estate property. Our team evaluates each situation using his appraisal background to recommend only the improvements worth making.\n\n${softCta}`,
+    answer: `It depends on the property, the budget, and the likely return. Targeted improvements like paint, flooring, and landscaping can increase value significantly. Expensive renovations rarely make financial sense for estate property. Our team evaluates each situation using our appraisal background to recommend only the improvements worth making.\n\n${softCta}`,
   },
   {
     question: "How do siblings decide what to do with an inherited house?",

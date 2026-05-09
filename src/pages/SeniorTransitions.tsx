@@ -212,7 +212,7 @@ const SeniorTransitions = () => {
             </p>
             <p className="text-muted-foreground leading-relaxed mb-6">
               Real Property Planning's dual background as a licensed real estate broker and a Washington State{" "}
-              <Link to="/real-estate-appraiser" className="text-accent hover:text-gold underline underline-offset-4">Certified Residential Appraiser</Link> means he approaches every senior transition sale differently than a typical listing agent. He can assess the home's true condition and value before any pricing conversation begins — which means families get honest guidance from the start, not a number that sounds good but leads to price reductions later.
+              <Link to="/real-estate-appraiser" className="text-accent hover:text-gold underline underline-offset-4">Certified Residential Appraiser</Link> means our team approaches every senior transition sale differently than a typical listing agent. Our team can assess the home's true condition and value before any pricing conversation begins — which means families get honest guidance from the start, not a number that sounds good but leads to price reductions later.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               His affiliation with the{" "}

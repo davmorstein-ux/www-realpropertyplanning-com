@@ -38,7 +38,7 @@ const faqs = [
   {
     question: "Should I fix up an inherited home in Tacoma before selling?",
     answer:
-      "It depends on the home's condition, your budget, and your timeline. Our team uses his appraisal background to evaluate which improvements are likely to increase the sale price enough to justify the cost — and which ones aren't worth the investment. Sometimes selling as-is is the right call; other times, targeted preparation makes a meaningful difference.",
+      "It depends on the home's condition, your budget, and your timeline. Our team uses our appraisal background to evaluate which improvements are likely to increase the sale price enough to justify the cost — and which ones aren't worth the investment. Sometimes selling as-is is the right call; other times, targeted preparation makes a meaningful difference.",
   },
   {
     question: "How long does it take to sell an estate property in Tacoma?",

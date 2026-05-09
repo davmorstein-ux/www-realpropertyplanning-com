@@ -153,7 +153,7 @@ const KennewickProbateEstate = () => {
               Our team provides objective, condition-based information that gives everyone a common starting point — what the property looks like today, what it's realistically worth, what preparation makes sense, and what the timeline looks like. That shared understanding often helps families move forward together.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              From there, he manages the practical steps — coordinating cleanout crews, overseeing targeted repairs, and handling the logistics of getting the property ready and sold — so the family can focus on the decisions that matter most.
+              From there, our team manages the practical steps — coordinating cleanout crews, overseeing targeted repairs, and handling the logistics of getting the property ready and sold — so the family can focus on the decisions that matter most.
             </p>
           </div>
         </div>

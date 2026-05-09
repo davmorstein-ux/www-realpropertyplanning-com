@@ -125,7 +125,7 @@ const AppraisalBeforeSelling = () => (
             This is especially true when all heirs agree to sell, the estate is straightforward, and there are no court requirements for a formal appraisal. A valuation-informed market analysis considers the same factors a formal appraisal would — comparable sales, condition adjustments, market trends — but delivers the conclusion in a format designed for sale planning rather than legal documentation.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            Our team's <Link to="/guides/appraisal-vs-cma" className="text-accent hover:text-gold underline underline-offset-4">dual credentials as broker and certified appraiser</Link> mean his market assessments carry the analytical rigor of appraisal methodology, giving families confidence in pricing decisions even without a formal appraisal report.
+            Our team's <Link to="/guides/appraisal-vs-cma" className="text-accent hover:text-gold underline underline-offset-4">dual credentials as broker and certified appraiser</Link> mean our market assessments carry the analytical rigor of appraisal methodology, giving families confidence in pricing decisions even without a formal appraisal report.
           </p>
         </div>
       </div>

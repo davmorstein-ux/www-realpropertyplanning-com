@@ -50,7 +50,7 @@ const faqs = [
   },
   {
     question: "How does valuation work when parties disagree on what the home is worth?",
-    answer: "Our team provides a condition-adjusted, comparable-supported market analysis grounded in his certified appraisal training. Because the analysis is methodology-based rather than opinion-based, it gives both parties and their attorneys a shared factual foundation — which often resolves valuation disputes more efficiently than competing agent opinions.",
+    answer: "Our team provides a condition-adjusted, comparable-supported market analysis grounded in our certified appraisal training. Because the analysis is methodology-based rather than opinion-based, it gives both parties and their attorneys a shared factual foundation — which often resolves valuation disputes more efficiently than competing agent opinions.",
   },
   {
     question: "Can the home be sold during active legal proceedings?",

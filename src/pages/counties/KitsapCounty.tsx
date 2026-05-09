@@ -24,7 +24,7 @@ const KitsapCounty = () => (
       },
       {
         question: "What makes Kitsap County estate sales unique?",
-        answer: "Several factors: the island and peninsula geography creates natural boundaries and specific buyer pools; waterfront and water-view properties are more prevalent than in most mainland markets; and the county's mix of military, tech-commuter, and local buyers creates more diverse demand dynamics than more homogeneous markets. Our team navigates all of these factors with the condition-adjusted, location-specific approach he brings to every county he serves.",
+        answer: "Several factors: the island and peninsula geography creates natural boundaries and specific buyer pools; waterfront and water-view properties are more prevalent than in most mainland markets; and the county's mix of military, tech-commuter, and local buyers creates more diverse demand dynamics than more homogeneous markets. Our team navigates all of these factors with the condition-adjusted, location-specific approach we bring to every county we serve.",
       },
     ]}
     communitiesIntro="Real Property Planning serves families, executors, and professionals throughout Kitsap County, including:"

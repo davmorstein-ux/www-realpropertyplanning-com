@@ -1172,7 +1172,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "Coordination across property types — single-family, condo, townhome, multifamily — with appropriate expertise for each",
         "A reliable, credentialed Seattle real estate resource for attorneys with ongoing property-related referral needs",
       ],
-      whyLocal: "Seattle's property matters are complicated by the city's market complexity. A property in Ballard raises different questions than one in Rainier Valley or on Capitol Hill — lot potential, neighborhood trajectory, property type, and buyer demographics all vary dramatically. Real Property Planning's experience across Seattle's neighborhoods, combined with his certified appraisal credentials, provides attorneys and fiduciaries with the versatile, defensible analysis that Seattle's diverse property landscape requires.",
+      whyLocal: "Seattle's property matters are complicated by the city's market complexity. A property in Ballard raises different questions than one in Rainier Valley or on Capitol Hill — lot potential, neighborhood trajectory, property type, and buyer demographics all vary dramatically. Real Property Planning's experience across Seattle's neighborhoods, combined with our certified appraisal credentials, provides attorneys and fiduciaries with the versatile, defensible analysis that Seattle's diverse property landscape requires.",
     },
 
     "downsizing-services": {

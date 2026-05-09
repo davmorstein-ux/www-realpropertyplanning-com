@@ -83,7 +83,7 @@ const RentonProbateEstate = () => {
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">Helping Families Stay Organized Through the Process</h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">Inherited property decisions in Renton often involve multiple people with different schedules, perspectives, and levels of involvement. Without a clear framework, the process can stall or create unnecessary tension.</p>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-5">Our team provides the structure — an honest property assessment, a realistic pricing strategy, and a clear sequence of next steps that everyone can understand. From there, he manages the preparation logistics, vendor coordination, and communication so the family can focus on making decisions rather than managing details.</p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-5">Our team provides the structure — an honest property assessment, a realistic pricing strategy, and a clear sequence of next steps that everyone can understand. From there, our team manages the preparation logistics, vendor coordination, and communication so the family can focus on making decisions rather than managing details.</p>
             <p className="text-muted-foreground text-lg leading-relaxed">Whether the transition involves a straightforward sale or a more complex situation — like a parent moving to care while the home is prepared — our team keeps the process organized and on track.</p>
           </div>
         </div>

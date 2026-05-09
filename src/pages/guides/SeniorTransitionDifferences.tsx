@@ -121,7 +121,7 @@ const SeniorTransitionDifferences = () => (
             A conventional listing agent focuses on getting the home sold quickly. A broker experienced in senior transitions understands that the timeline, communication style, and preparation process need to account for the family's emotional and logistical reality.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-6">
-            Our team's dual credentials as a broker and certified appraiser mean the family gets accurate pricing grounded in the property's actual condition — not an inflated number designed to win the listing. His experience with senior transitions means he knows how to communicate with empathy, coordinate with care professionals, and manage the practical details so the family can focus on the people who matter most.
+            Our team's dual credentials as a broker and certified appraiser mean the family gets accurate pricing grounded in the property's actual condition — not an inflated number designed to win the listing. Our experience with senior transitions means we know how to communicate with empathy, coordinate with care professionals, and manage the practical details so the family can focus on the people who matter most.
           </p>
           <p className="text-muted-foreground leading-relaxed">
             Learn more about our team's approach to <Link to="/senior-transitions" className="text-accent hover:text-gold underline underline-offset-4">senior transition real estate</Link> or read about how families have described the experience on the <Link to="/testimonials" className="text-accent hover:text-gold underline underline-offset-4">testimonials page</Link>.

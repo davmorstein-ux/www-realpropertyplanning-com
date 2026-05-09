@@ -33,7 +33,7 @@ const services = [
   },
   {
     title: "Neutral Representation",
-    description: "Our team does not represent either party's interests — he represents the property and the process. His role is to handle the sale fairly, transparently, and professionally, with consistent communication to both parties (or through their attorneys) and no advocacy for either side.",
+    description: "Our team does not represent either party's interests — our team represents the property and the process. Our role is to handle the sale fairly, transparently, and professionally, with consistent communication to both parties (or through their attorneys) and no advocacy for either side.",
   },
   {
     title: "Structured, Organized Sale Process",

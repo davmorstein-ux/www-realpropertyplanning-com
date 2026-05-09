@@ -36,7 +36,7 @@ const BentonCounty = () => (
       },
       {
         question: "What should I know about selling an inherited home in Kennewick with significant deferred maintenance?",
-        answer: "Kennewick buyers expect practical value, and deferred maintenance directly affects what they will pay. Rather than guessing which repairs are worth making, our team uses his appraisal background to evaluate which improvements are likely to improve the sale price enough to justify the cost — and which are better left for the buyer to address. This honest, data-driven approach helps executors avoid overspending on preparation.",
+        answer: "Kennewick buyers expect practical value, and deferred maintenance directly affects what they will pay. Rather than guessing which repairs are worth making, our team uses our appraisal background to evaluate which improvements are likely to improve the sale price enough to justify the cost — and which are better left for the buyer to address. This honest, data-driven approach helps executors avoid overspending on preparation.",
       },
       {
         question: "Is selling estate property near Prosser different from selling in the Tri-Cities urban core?",
