@@ -11,218 +11,105 @@ import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washingto
 
 const Footer = () => {
   return (
-    <footer data-nosnippet="true" className="bg-navy-dark py-16">
+    <footer data-nosnippet="true" className="bg-navy-dark py-12">
       <div className="container px-6 lg:px-8">
-        {/* Guided Journeys */}
-        <div className="mb-8 pb-8 border-b border-primary-foreground/10">
-          <h3 className="text-primary-foreground font-serif text-lg font-semibold mb-3">Guided Journeys</h3>
-          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-1 text-primary-foreground/70 text-base">
-            <li><Link to="/what-should-we-do-first" className="hover:text-gold transition-colors">What Should We Do First?</Link></li>
-            <li><Link to="/helping-aging-parents" className="hover:text-gold transition-colors">Helping an Aging Parent</Link></li>
-            <li><Link to="/estate-probate-inherited-property" className="hover:text-gold transition-colors">Estate, Probate & Inherited Property</Link></li>
-            <li><Link to="/what-to-do-with-the-house" className="hover:text-gold transition-colors">What To Do With the House</Link></li>
-            <li><Link to="/understanding-housing-care-options" className="hover:text-gold transition-colors">Housing & Care Options</Link></li>
-            <li><Link to="/understanding-senior-transitions" className="hover:text-gold transition-colors">Understanding Senior Transitions</Link></li>
-            <li><Link to="/aging-in-place-staying-home-safely" className="hover:text-gold transition-colors">Aging in Place Safely</Link></li>
-            <li><Link to="/estate-planning-powers-of-attorney" className="hover:text-gold transition-colors">Estate Planning & POA</Link></li>
-            <li><Link to="/executor-responsibilities-first-steps" className="hover:text-gold transition-colors">Executor First Steps</Link></li>
-            <li><Link to="/downsizing-preparing-for-transition" className="hover:text-gold transition-colors">Downsizing & Transition</Link></li>
-            <li><Link to="/preparing-home-for-sale-during-transition" className="hover:text-gold transition-colors">Preparing the Home for Sale</Link></li>
-            <li><Link to="/selling-an-inherited-home" className="hover:text-gold transition-colors">Selling an Inherited Home</Link></li>
-            <li><Link to="/date-of-death-valuation-property-appraisals" className="hover:text-gold transition-colors">Date-of-Death Valuation</Link></li>
-            <li><Link to="/building-your-trusted-professional-team" className="hover:text-gold transition-colors">Building Your Professional Team</Link></li>
-          </ul>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        {/* Compact link grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
           {/* Brand & NAP */}
-          <div className="lg:col-span-1">
-            <Link to="/" className="block mb-4">
+          <div>
+            <Link to="/" className="block mb-3">
               <span className="font-serif text-xl text-primary-foreground font-semibold">
                 Real Property Planning
               </span>
             </Link>
-            <p className="text-primary-foreground/80 text-sm font-medium leading-tight mb-0.5">
-              Real Property Planning
+            <p className="text-primary-foreground text-base leading-relaxed mb-4">
+              Probate, estate &amp; senior transition real estate — Washington State.
             </p>
-            <p className="text-primary-foreground/70 text-sm leading-tight mb-0.5">
-              David Stein is a Washington State Licensed Real Estate Broker — David Stein's real estate license is held under eXp Realty
-            </p>
-            <p className="text-primary-foreground/70 text-sm leading-tight mb-0.5">
-              Washington State Certified Residential Appraiser — Stein Appraisal
-            </p>
-            <p className="text-primary-foreground/70 text-sm leading-tight mb-0.5">
-              Specializing in probate, estate, inherited property &amp; senior transition real estate
-            </p>
-            <div className="flex flex-col gap-0.5 text-base">
-              <a href="tel:2069003015" className="text-primary-foreground/70 hover:text-gold transition-colors flex items-center gap-1.5">
+            <div className="flex flex-col gap-1.5 text-base">
+              <a href="tel:2069003015" className="text-primary-foreground hover:text-gold transition-colors flex items-center gap-2">
                 <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0" loading="lazy"/>
                 (206) 900-3015
               </a>
-              <a href="mailto:info@realpropertyplanning.com" className="text-primary-foreground/70 hover:text-gold transition-colors flex items-center gap-1.5">
+              <a href="mailto:info@realpropertyplanning.com" className="text-primary-foreground hover:text-gold transition-colors flex items-center gap-2">
                 <img src={iconEmail3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0" loading="lazy"/>
                 info@realpropertyplanning.com
               </a>
-              <div className="text-primary-foreground/70 flex items-start gap-1.5 mt-0.5">
+              <div className="text-primary-foreground flex items-start gap-2 mt-1">
                 <img src={mappin3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain mt-0.5 shrink-0" loading="lazy"/>
-                <span>Mailing: PO Box 1462, Woodinville, WA 98072</span>
-              </div>
-              <div className="text-primary-foreground/70 flex items-start gap-1.5">
-                <img src={mappin3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain mt-0.5 shrink-0" loading="lazy"/>
-                <span>Office: 1455 NW Leary Way, Seattle, WA 98107</span>
+                <span>PO Box 1462, Woodinville, WA 98072</span>
               </div>
             </div>
+          </div>
+
+          {/* Guided Journeys (curated, not exhaustive) */}
+          <div>
+            <h3 className="text-primary-foreground font-serif text-lg font-semibold mb-3">Guided Journeys</h3>
+            <ul className="space-y-1.5 text-primary-foreground text-base">
+              <li><Link to="/helping-aging-parents" className="hover:text-gold transition-colors">Helping an Aging Parent</Link></li>
+              <li><Link to="/estate-probate-inherited-property" className="hover:text-gold transition-colors">Estate &amp; Probate</Link></li>
+              <li><Link to="/what-to-do-with-the-house" className="hover:text-gold transition-colors">What To Do With the House</Link></li>
+              <li><Link to="/understanding-housing-care-options" className="hover:text-gold transition-colors">Housing &amp; Care Options</Link></li>
+              <li><Link to="/executor-responsibilities-first-steps" className="hover:text-gold transition-colors">Executor First Steps</Link></li>
+              <li><Link to="/estate-planning-powers-of-attorney" className="hover:text-gold transition-colors">Estate Planning &amp; POA</Link></li>
+            </ul>
           </div>
 
           {/* Services */}
           <div>
-            <h3 className="text-primary-foreground font-serif text-lg font-semibold mb-2">Services</h3>
-            <ul className="space-y-0.5 text-primary-foreground/70 text-base">
+            <h3 className="text-primary-foreground font-serif text-lg font-semibold mb-3">Services</h3>
+            <ul className="space-y-1.5 text-primary-foreground text-base">
               <li><Link to="/probate-estate-sales" className="hover:text-gold transition-colors">Probate &amp; Estate Sales</Link></li>
-              <li><Link to="/executors" className="hover:text-gold transition-colors">Help for Executors</Link></li>
               <li><Link to="/senior-transitions" className="hover:text-gold transition-colors">Senior Transitions</Link></li>
-              <li><Link to="/for-attorneys" className="hover:text-gold transition-colors">For Attorneys &amp; Fiduciaries</Link></li>
-              <li><Link to="/for-cpas" className="hover:text-gold transition-colors">For CPAs</Link></li>
-              <li><Link to="/for-financial-planners" className="hover:text-gold transition-colors">For Financial Planners</Link></li>
               <li><Link to="/why-valuation-matters" className="hover:text-gold transition-colors">Valuation &amp; Pricing</Link></li>
-              <li><Link to="/how-the-process-works" className="hover:text-gold transition-colors">How the Process Works</Link></li>
+              <li><Link to="/for-attorneys" className="hover:text-gold transition-colors">For Attorneys &amp; Fiduciaries</Link></li>
               <li><Link to="/guides-and-resources" className="hover:text-gold transition-colors">Guides &amp; Resources</Link></li>
+            </ul>
+          </div>
+
+          {/* About / Contact */}
+          <div>
+            <h3 className="text-primary-foreground font-serif text-lg font-semibold mb-3">About</h3>
+            <ul className="space-y-1.5 text-primary-foreground text-base">
+              <li><Link to="/about" className="hover:text-gold transition-colors">About Real Property Planning</Link></li>
+              <li><Link to="/how-we-work" className="hover:text-gold transition-colors">How We Work</Link></li>
+              <li><Link to="/contact" className="hover:text-gold transition-colors">Contact</Link></li>
+              <li><Link to="/counties" className="hover:text-gold transition-colors">Service Areas</Link></li>
               <li><Link to="/faq" className="hover:text-gold transition-colors">FAQs</Link></li>
             </ul>
           </div>
+        </div>
 
-          {/* Resources */}
-          <div>
-            <h3 className="text-primary-foreground font-serif text-lg font-semibold mb-2">Resources</h3>
-            <ul className="space-y-0.5 text-primary-foreground/70 text-base">
-              <li><Link to="/about" className="hover:text-gold transition-colors">About Real Property Planning</Link></li>
-              <li><Link to="/how-we-work" className="hover:text-gold transition-colors">How We Work</Link></li>
-              <li><Link to="/attorney-referral" className="hover:text-gold transition-colors">Referral Resource</Link></li>
-              <li><Link to="/terminology" className="hover:text-gold transition-colors">Terminology</Link></li>
-              <li><Link to="/contact" className="hover:text-gold transition-colors">Contact</Link></li>
-              <li><Link to="/resources" className="hover:text-gold transition-colors">Resources</Link></li>
-              <li><Link to="/professionals" className="hover:text-gold transition-colors">Professional Resources</Link></li>
-            </ul>
-          </div>
-
-          {/* Service Areas */}
-          <div>
-            <h3 className="text-primary-foreground font-serif text-lg font-semibold mb-2">Service Areas</h3>
-            <ul className="space-y-0.5 text-primary-foreground/70 text-base">
-              <li className="flex items-start gap-2">
-                <img src={mappin3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain mt-0.5 shrink-0" loading="lazy"/>
-                <span>Serving clients throughout Washington State, with a strong focus in Western Washington and the Puget Sound region</span>
-              </li>
-              <li><Link to="/counties/king" className="hover:text-gold transition-colors">Probate &amp; estate real estate in King County</Link></li>
-              <li><Link to="/counties/snohomish" className="hover:text-gold transition-colors">Probate &amp; estate real estate in Snohomish County</Link></li>
-              <li><Link to="/counties/pierce" className="hover:text-gold transition-colors">Probate &amp; estate real estate in Pierce County</Link></li>
-              <li><Link to="/counties/kitsap" className="hover:text-gold transition-colors">Probate &amp; estate real estate in Kitsap County</Link></li>
-              <li><Link to="/counties/skagit" className="hover:text-gold transition-colors">Estate property guidance in Skagit County</Link></li>
-              <li><Link to="/counties/thurston" className="hover:text-gold transition-colors">Probate &amp; estate real estate in Thurston County</Link></li>
-              <li><Link to="/counties/whatcom" className="hover:text-gold transition-colors">Probate &amp; estate real estate in Whatcom County</Link></li>
-              <li><Link to="/counties/clark" className="hover:text-gold transition-colors">Probate &amp; estate real estate in Clark County</Link></li>
-              <li><Link to="/counties/spokane" className="hover:text-gold transition-colors">Probate &amp; estate real estate in Spokane County</Link></li>
-              <li><Link to="/counties/benton" className="hover:text-gold transition-colors">Probate &amp; estate real estate in Benton County</Link></li>
-              <li><Link to="/counties" className="hover:text-gold transition-colors">All Washington counties we serve</Link></li>
-            </ul>
+        {/* Affiliations — quieter row */}
+        <div className="border-t border-primary-foreground pt-8 mb-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-[760px] mx-auto items-center">
+            <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer" className="flex justify-center">
+              <img src={alcaLogo} alt="Aging Life Care Association Corporate Partner" className="object-contain max-h-[72px] w-auto" loading="lazy" />
+            </a>
+            <a href="https://www.naepc.org" target="_blank" rel="noopener noreferrer" className="flex justify-center">
+              <img src={naepcLogo} alt="National Association of Estate Planners & Councils" className="object-contain max-h-[72px] w-auto" loading="lazy" />
+            </a>
+            <a href="https://www.naosa.org" target="_blank" rel="noopener noreferrer" className="flex justify-center">
+              <img src={naosaBadge} alt="National Association of Senior Advocates - Best Real Estate Agent 2026" className="object-contain max-h-[88px] w-auto" loading="lazy" />
+            </a>
+            <a href="https://www.kingcountycollaborativelaw.org" target="_blank" rel="noopener noreferrer" className="flex justify-center">
+              <img src={kccLogo} alt="Friends of King County Collaborative Law" className="object-contain max-h-[72px] w-auto" loading="lazy" />
+            </a>
           </div>
         </div>
 
-        {/* Disclaimer */}
-        <div className="footer-divider mb-0" />
-        <div className="pt-8 mb-6" data-nosnippet="true">
-          <p className="text-primary-foreground/70 text-base leading-relaxed max-w-4xl">
-            Real Property Planning is a hub for Professionals, Seniors, Families & Estate Transitions created by David Stein. Legal, tax, and probate-specific advice should be obtained from qualified legal and tax professionals.
+        {/* Compliance & disclaimer — single compact block */}
+        <div className="border-t border-primary-foreground pt-6 text-center" data-nosnippet="true">
+          <p className="text-primary-foreground text-sm leading-relaxed max-w-3xl mx-auto mb-3">
+            David Stein is a Washington State Licensed Real Estate Broker (license held under eXp Realty) and a Washington State Certified Residential Appraiser (Stein Appraisal). Real Property Planning is not a law firm or tax advisor. For legal, tax, or probate-specific advice, consult a qualified professional.
           </p>
-          <p className="text-primary-foreground/70 text-base leading-relaxed max-w-4xl mt-3">
-            David Stein is a licensed real estate broker in the State of Washington and a Washington State certified residential appraiser. Real Property Planning is not a law firm, accounting firm, or tax advisor and does not provide legal, tax, or accounting advice.
-          </p>
-        </div>
-
-        {/* Professional Affiliations */}
-        <div className="footer-divider mb-0" />
-        <div className="pt-8 pb-6 flex flex-col items-center">
-          <h3 className="text-primary-foreground font-serif font-bold mb-5 text-3xl">Professional Memberships &amp; Affiliations</h3>
-          <div className="grid grid-cols-2 gap-4 w-full max-w-[800px] mx-auto px-4">
-            <div className="flex items-center justify-center p-2">
-              <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer">
-                <img
-                  src={alcaLogo}
-                  alt="Aging Life Care Association Corporate Partner"
-                  className="w-full object-contain max-h-[120px]"
-                  loading="lazy"
-                />
-              </a>
-            </div>
-            <div className="flex items-center justify-center p-2">
-              <a href="https://www.naepc.org" target="_blank" rel="noopener noreferrer">
-                <img
-                  src={naepcLogo}
-                  alt="National Association of Estate Planners & Councils"
-                  className="w-full object-contain max-h-[120px]"
-                  loading="lazy"
-                />
-              </a>
-            </div>
-            <div className="flex items-center justify-center p-2">
-              <a href="https://www.naosa.org" target="_blank" rel="noopener noreferrer">
-                <img
-                  src={naosaBadge}
-                  alt="National Association of Senior Advocates - Best Real Estate Agent 2026"
-                  className="w-full object-contain max-h-[160px]"
-                  loading="lazy"
-                />
-              </a>
-            </div>
-            <div className="flex items-center justify-center p-2">
-              <a href="https://www.kingcountycollaborativelaw.org" target="_blank" rel="noopener noreferrer">
-                <img
-                  src={kccLogo}
-                  alt="Friends of King County Collaborative Law"
-                  className="w-full object-contain max-h-[120px]"
-                  loading="lazy"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-
-        {/* Accessibility Statement */}
-        <div className="footer-divider mb-0" />
-        <div className="pt-4 pb-2">
-          <p className="text-primary-foreground/70 text-base text-center leading-relaxed max-w-2xl mx-auto">
-            realpropertyplanning.com is committed to digital accessibility for people with disabilities. This website meets WCAG 2.1 AA accessibility standards. If you experience any accessibility barriers, please contact us at{" "}
-            <a href="mailto:info@realpropertyplanning.com" className="underline underline-offset-2 hover:text-gold transition-colors font-medium">
+          <p className="text-primary-foreground text-sm leading-relaxed max-w-2xl mx-auto mb-3">
+            Accessibility questions or concerns:{" "}
+            <a href="mailto:info@realpropertyplanning.com" className="underline underline-offset-2 hover:text-gold transition-colors">
               info@realpropertyplanning.com
-            </a>{" "}
-            and we will assist you.
+            </a>
           </p>
-        </div>
-
-        {/* Brokerage Compliance */}
-        <div className="footer-divider mb-0" />
-        <div className="pt-10 pb-2 flex flex-col items-center">
-          <p className="text-primary-foreground/70 text-base text-center mt-1">
-            Mailing Address: PO Box 1462, Woodinville, WA 98072
-          </p>
-        </div>
-
-        {/* Geo / Service Area SEO */}
-        <div className="footer-divider mb-0" />
-        <div className="mt-0 pt-6 pb-4">
-          <p className="text-primary-foreground/70 text-base text-center leading-relaxed max-w-3xl mx-auto mb-2">
-            Serving buyers, sellers, families, attorneys, executors, trustees, and fiduciaries throughout Washington State, with a strong focus in Western Washington and the Puget Sound region. Through David Stein's eXp Realty network, Real Property Planning can connect clients with a trusted broker anywhere in the country.
-          </p>
-          <p className="text-primary-foreground/70 text-base text-center leading-relaxed max-w-2xl mx-auto">
-            Specializing in probate real estate, inherited property, estate sales, senior transitions, and structured, evidence-based strategy for attorneys, executors, trustees, heirs, beneficiaries, seniors, and families. Proudly serving families, executors, attorneys, CPAs, financial planners, and senior care professionals throughout the Puget Sound region — including Seattle, Bellevue, Everett, Tacoma, Bremerton, Woodinville, and surrounding communities.
-          </p>
-        </div>
-
-        {/* Copyright */}
-        <div className="footer-divider mb-0" />
-        <div className="pt-4">
-          <p className="text-primary-foreground/70 text-base text-center">
-            © {new Date().getFullYear()} Real Property Planning, Real Estate Broker – Senior Relocation & Estate Sales. Real Property Planning.
+          <p className="text-primary-foreground text-sm">
+            © {new Date().getFullYear()} Real Property Planning
           </p>
         </div>
       </div>
