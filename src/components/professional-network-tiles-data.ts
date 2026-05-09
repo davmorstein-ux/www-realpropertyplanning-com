@@ -83,8 +83,8 @@ export const professionalNetworkCategories: ProfessionalNetworkCategory[] = [
 export const featuredHomepageTiles: ProfessionalNetworkTile[] = [
   professionalNetworkCategories[0].tiles[2], // Probate Attorneys
   professionalNetworkCategories[1].tiles[0], // CPAs
+  professionalNetworkCategories[1].tiles[3], // Real Estate Appraisers
   professionalNetworkCategories[2].tiles[0], // Senior Living Advisors
   professionalNetworkCategories[3].tiles[0], // Real Estate Brokers
   professionalNetworkCategories[3].tiles[1], // Senior Move Managers
-  professionalNetworkCategories[4].tiles[0], // Executors
 ];
