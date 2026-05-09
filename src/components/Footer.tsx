@@ -99,16 +99,16 @@ const Footer = () => {
 
         {/* Compliance & disclaimer — single compact block */}
         <div className="border-t border-primary-foreground pt-6 text-center" data-nosnippet="true">
-          <p className="text-primary-foreground text-sm leading-relaxed max-w-3xl mx-auto mb-3">
+          <p className="text-primary-foreground text-base leading-relaxed max-w-3xl mx-auto mb-3">
             David Stein is a Washington State Licensed Real Estate Broker (license held under eXp Realty) and a Washington State Certified Residential Appraiser (Stein Appraisal). Real Property Planning is not a law firm or tax advisor. For legal, tax, or probate-specific advice, consult a qualified professional.
           </p>
-          <p className="text-primary-foreground text-sm leading-relaxed max-w-2xl mx-auto mb-3">
+          <p className="text-primary-foreground text-base leading-relaxed max-w-2xl mx-auto mb-3">
             Accessibility questions or concerns:{" "}
             <a href="mailto:info@realpropertyplanning.com" className="underline underline-offset-2 hover:text-gold transition-colors">
               info@realpropertyplanning.com
             </a>
           </p>
-          <p className="text-primary-foreground text-sm">
+          <p className="text-primary-foreground text-base">
             © {new Date().getFullYear()} Real Property Planning
           </p>
         </div>
