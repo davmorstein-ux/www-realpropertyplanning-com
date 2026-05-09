@@ -2,8 +2,8 @@ import ProfessionalNetworkCard from "./ProfessionalNetworkCard";
 import { professionalNetworkCategories } from "./professional-network-tiles-data";
 
 /**
- * Full Professional Network grid — ~30 tiles grouped into 5 logical categories.
- * Lives on /building-your-trusted-professional-team and any dedicated network page.
+ * Full Professional Network grid — finalized 30-tile premium ecosystem.
+ * Lives on /building-your-trusted-professional-team.
  */
 const ProfessionalNetworkGrid = () => {
   return (
@@ -18,7 +18,7 @@ const ProfessionalNetworkGrid = () => {
           </p>
         </div>
 
-        <div className="space-y-12 md:space-y-16 max-w-6xl mx-auto">
+        <div className="space-y-12 md:space-y-16 max-w-7xl mx-auto">
           {professionalNetworkCategories.map((cat) => (
             <div key={cat.label}>
               <div className="mb-6 md:mb-8">
@@ -29,7 +29,7 @@ const ProfessionalNetworkGrid = () => {
                   {cat.tagline}
                 </p>
               </div>
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 md:gap-6">
                 {cat.tiles.map((tile) => (
                   <ProfessionalNetworkCard key={tile.href} tile={tile} />
                 ))}
