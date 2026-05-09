@@ -204,7 +204,7 @@ const PowerOfAttorney = () => {
             <div className={proseWrap}>
               <h2 className={h2Class}>Important Note About Legal Authority</h2>
               <p className={pClass}>
-                Real Property Planning provides real estate brokerage and certified appraisal services. We do not provide legal advice. Before taking any real estate action under Power of Attorney, we strongly recommend consulting with a qualified Washington State attorney to confirm the scope and validity of your authority.
+                Real Property Planning is an educational and connection hub and does not provide legal advice. Before taking any real estate action under Power of Attorney, we strongly recommend consulting with a qualified Washington State attorney to confirm the scope and validity of your authority.
               </p>
               <p className={pClass}>
                 If you need a referral to an elder law attorney in Washington State, we are happy to help connect you with a trusted professional.

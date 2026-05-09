@@ -243,7 +243,7 @@ const SeniorEstateServices = () => {
         <div className="max-w-[1100px] mx-auto px-6 lg:px-8">
           <div className="bg-card border border-border rounded-[16px] p-7 md:p-9 max-w-3xl mx-auto text-center">
             <p className="text-muted-foreground text-[15px] leading-relaxed">
-              Real Property Planning is a licensed real estate brokerage in Washington State with state-certified residential appraisal expertise. We are not attorneys, CPAs, or tax advisors, and do not provide legal, tax, or accounting advice. Legal, tax, and probate-specific questions should be directed to qualified professionals.
+              Real Property Planning is an educational and connection hub serving Washington State families. We do not provide legal, tax, accounting, financial, brokerage, or appraisal services directly. Legal, tax, and probate-specific questions should be directed to qualified, appropriately licensed professionals.
             </p>
           </div>
         </div>
