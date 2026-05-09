@@ -13,13 +13,6 @@ import HomepageFAQ from "@/components/HomepageFAQ";
 import HomepageWarmStatement from "@/components/HomepageWarmStatement";
 import SituationCards from "@/components/SituationCards";
 
-const serviceAreas = [
-  { county: "King County", href: "/counties/king", cities: "Seattle, Bellevue, Kirkland, Redmond, Renton, Bothell, Shoreline, Mercer Island, Burien, Kent, Auburn, Federal Way" },
-  { county: "Snohomish County", href: "/counties/snohomish", cities: "Everett, Edmonds, Lynnwood, Marysville, Mukilteo, Mill Creek, Mountlake Terrace, Monroe, Bothell, Woodinville" },
-  { county: "Pierce County", href: "/counties/pierce", cities: "Tacoma, Puyallup, Lakewood, Gig Harbor, Bonney Lake, Sumner, Auburn, University Place" },
-  { county: "Kitsap County", href: "/counties/kitsap", cities: "Bremerton, Silverdale, Poulsbo, Port Orchard, Bainbridge Island, Kingston" },
-];
-
 const jsonLd = [realEstateAgentSchema, organizationSchema];
 
 const homepageFaqJsonLd = `{
