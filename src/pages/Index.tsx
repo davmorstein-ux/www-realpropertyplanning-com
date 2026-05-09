@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
-import HomepageNav from "@/components/HomepageNav";
+
 import HomepageHero from "@/components/HomepageHero";
 import HomepageFAQ from "@/components/HomepageFAQ";
 import HomepageWarmStatement from "@/components/HomepageWarmStatement";
@@ -119,13 +119,10 @@ const Index = () => {
       {/* 1. HERO — short, calm, clear */}
       <HomepageHero />
 
-      {/* 2. SITUATION IDENTIFICATION */}
+      {/* 2. SITUATION IDENTIFICATION + GUIDED PATHWAYS (merged) */}
       <SituationCards />
 
-      {/* 3. GUIDED PATHWAYS */}
-      <HomepageNav />
-
-      {/* 4. REASSURANCE / TRUST */}
+      {/* 3. REASSURANCE / TRUST */}
       <HomepageWarmStatement />
 
       {/* 5. NEXT STEP — quieter Tier 2 CTA strip */}
