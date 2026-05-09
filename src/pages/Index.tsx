@@ -12,6 +12,7 @@ import HomepageHero from "@/components/HomepageHero";
 import HomepageFAQ from "@/components/HomepageFAQ";
 import HomepageWarmStatement from "@/components/HomepageWarmStatement";
 import SituationCards from "@/components/SituationCards";
+import ProfessionalNetworkPreview from "@/components/ProfessionalNetworkPreview";
 
 const jsonLd = [realEstateAgentSchema, organizationSchema];
 
@@ -122,7 +123,10 @@ const Index = () => {
       {/* 2. SITUATION IDENTIFICATION + GUIDED PATHWAYS (merged) */}
       <SituationCards />
 
-      {/* 3. REASSURANCE / TRUST */}
+      {/* 3. PROFESSIONAL NETWORK — curated 6-tile preview */}
+      <ProfessionalNetworkPreview />
+
+      {/* 4. REASSURANCE / TRUST */}
       <HomepageWarmStatement />
 
       {/* 5. NEXT STEP — quieter Tier 2 CTA strip */}
