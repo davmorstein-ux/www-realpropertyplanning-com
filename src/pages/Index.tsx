@@ -5,7 +5,6 @@ import SEOHead from "@/components/SEOHead";
 import { realEstateAgentSchema, organizationSchema } from "@/lib/schema";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 
 import HomepageHero from "@/components/HomepageHero";
 import HomepageFAQ from "@/components/HomepageFAQ";
@@ -146,7 +145,9 @@ const Index = () => {
             </div>
             <Link to="/contact" className="gold-cta shrink-0">
               Schedule a Conversation
-              <img src={iconPhone3d} alt="" aria-hidden="true" className="w-7 h-7 object-contain shrink-0" loading="lazy" />
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
             </Link>
           </div>
         </div>
