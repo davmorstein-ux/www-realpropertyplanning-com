@@ -8,11 +8,11 @@ const HomepageWarmStatement = () => {
           <p className="font-serif text-navy text-[26px] md:text-[34px] leading-snug font-semibold mb-8">
             Real Property Planning helps families move forward with clear guidance, trusted connections, and a coordinated team.
           </p>
-          <Link
-            to="/about"
-            className="inline-block text-gold-dark hover:text-gold text-[20px] md:text-[22px] font-semibold underline-offset-4 hover:underline"
-          >
-            Learn how we work →
+          <Link to="/about" className="gold-cta mx-auto">
+            Learn how we work
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
           </Link>
         </div>
       </div>
