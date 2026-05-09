@@ -18,6 +18,7 @@ import iconHome from "@/assets/icons/probate-property-home-icon-washington.webp"
 import iconArrow from "@/assets/icons/property-guidance-arrow-icon-washington.webp";
 import iconPhone from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import JourneyOrientation from "@/components/JourneyOrientation";
+import ProfessionalNetworkGrid from "@/components/ProfessionalNetworkGrid";
 
 interface Pathway {
   letter: string;
