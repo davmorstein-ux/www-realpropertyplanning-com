@@ -12,7 +12,7 @@ import HomepageHero from "@/components/HomepageHero";
 import HomepageFAQ from "@/components/HomepageFAQ";
 import HomepageWarmStatement from "@/components/HomepageWarmStatement";
 import HomepageNav from "@/components/HomepageNav";
-import ProfessionalNetworkPreview from "@/components/ProfessionalNetworkPreview";
+
 
 const jsonLd = [realEstateAgentSchema, organizationSchema];
 
@@ -122,9 +122,6 @@ const Index = () => {
 
       {/* 2. ORIENTATION — 3 calm high-level entry categories */}
       <HomepageNav />
-
-      {/* 3. PROFESSIONAL NETWORK — curated 6-tile preview */}
-      <ProfessionalNetworkPreview />
 
       {/* 4. REASSURANCE / TRUST */}
       <HomepageWarmStatement />
