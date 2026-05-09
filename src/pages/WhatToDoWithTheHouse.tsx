@@ -211,6 +211,7 @@ const WhatToDoWithTheHouse = () => {
         </section>
 
         <JourneyOrientation
+          tone="transition"
           items={[
             "Your family is deciding whether to sell or keep a home",
             "You are unsure whether repairs are worthwhile",

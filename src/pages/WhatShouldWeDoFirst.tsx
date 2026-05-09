@@ -187,6 +187,7 @@ const WhatShouldWeDoFirst = () => {
         </section>
 
         <JourneyOrientation
+          tone="caregiving"
           items={[
             "You are not sure where to begin",
             "Several decisions feel urgent at once",

@@ -219,6 +219,7 @@ const DateOfDeathValuationPropertyAppraisals = () => {
         </section>
 
         <JourneyOrientation
+          tone="valuation"
           items={[
             "You need a date-of-death value for tax or estate filings",
             "You inherited property and need a stepped-up basis",

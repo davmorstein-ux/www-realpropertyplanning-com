@@ -232,6 +232,7 @@ const SellingAnInheritedHome = () => {
         </section>
 
         <JourneyOrientation
+          tone="probate"
           items={[
             "You inherited a home and are unsure what to do next",
             "The property is going through probate or trust administration",

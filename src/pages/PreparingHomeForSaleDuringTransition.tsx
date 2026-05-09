@@ -231,6 +231,7 @@ const PreparingHomeForSaleDuringTransition = () => {
         </section>
 
         <JourneyOrientation
+          tone="transition"
           items={[
             "A home needs to be prepared for sale during a major life change",
             "The property is part of an estate, probate, or downsizing move",

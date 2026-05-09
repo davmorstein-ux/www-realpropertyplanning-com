@@ -206,6 +206,7 @@ const UnderstandingHousingCareOptions = () => {
         </section>
 
         <JourneyOrientation
+          tone="caregiving"
           items={[
             "You are comparing assisted living, memory care, or in-home support",
             "A parent's needs are changing",
