@@ -1,44 +1,11 @@
-// Premium professional-network tile data — full ~30-tile ecosystem grouped
-// into five logical categories. Used on the Building Your Trusted Professional
-// Team page (full grid) and the homepage (curated preview).
-
-import iconEstatePlanningAttorney from "@/assets/icons/attorney-estate-planning-icon-washington.webp";
-import iconProbateAttorney from "@/assets/icons/probate-attorney-services-icon-washington.webp";
-import iconElderLawAttorney from "@/assets/icons/attorney-elder-law-icon-washington.webp";
-import iconFamilyLawAttorney from "@/assets/icons/attorney-family-law-property-icon-washington.webp";
-import iconDivorceAttorney from "@/assets/icons/attorney-divorce-real-estate-icon-washington.webp";
-import iconRealEstateAttorney from "@/assets/icons/real-estate-attorney-services-icon-washington.webp";
-import iconPOA from "@/assets/icons/attorney-power-of-attorney-icon-washington.webp";
-
-import iconCPAs from "@/assets/icons/estate-cpas-financial-icon-washington.webp";
-import iconFinancialPlanner from "@/assets/icons/estate-financial-planning-icon-washington.webp";
-import iconLending from "@/assets/icons/real-estate-lending-services-icon-washington.webp";
-
-import iconSeniorPlacement from "@/assets/icons/senior-placement-advisor-icon-washington.webp";
-import iconAdultFamilyHome from "@/assets/icons/senior-adult-family-home-icon-washington.webp";
-import iconAssistedLiving from "@/assets/icons/senior-assisted-living-icon-washington.webp";
-import iconMemoryCare from "@/assets/icons/senior-memory-care-balanced-icon-washington.webp";
-import iconIndependentLiving from "@/assets/icons/senior-independent-living-icon-washington.webp";
-import iconNursingCare from "@/assets/icons/senior-nursing-care-icon-washington.webp";
-import iconMedicare from "@/assets/professionals/medicare-providers-tile-washington-v3.webp";
-
-import iconBroker from "@/assets/icons/realtor-real-estate-agent-icon-washington.webp";
-import iconAppraiser from "@/assets/icons/real-estate-appraiser-3d-icon-washington.webp";
-import iconLiquidation from "@/assets/icons/estate-liquidation-services-icon-washington.webp";
-import iconMoveManagers from "@/assets/icons/senior-movers-relocation-icon-washington.webp";
-import iconPropertyPrep from "@/assets/icons/real-estate-agent-briefcase-icon-washington.webp";
-import iconTitleEscrow from "@/assets/icons/probate-document-icon-washington.webp";
-
-import iconExecutors from "@/assets/icons/executors-clipboard-checklist-icon-washington.webp";
-import iconTrustees from "@/assets/icons/estate-trustees-services-icon-washington.webp";
-import iconCareManagers from "@/assets/icons/senior-care-heart-hands-icon-washington.webp";
-import iconWills from "@/assets/icons/estate-wills-planning-icon-washington.webp";
-import iconGuides from "@/assets/icons/probate-guidance-book-open-icon-washington.webp";
+// Finalized professional-network tile data.
+// Uses only the newest cinematic 560×420 premium tile ecosystem in /public/tiles.
+// Do not mix these with older icon-only or earlier 3D generations.
 
 export interface ProfessionalNetworkTile {
   title: string;
   href: string;
-  iconSrc: string;
+  imageSrc: string;
   altText: string;
 }
 
@@ -50,72 +17,74 @@ export interface ProfessionalNetworkCategory {
 
 export const professionalNetworkCategories: ProfessionalNetworkCategory[] = [
   {
-    label: "Legal Professionals",
-    tagline: "Attorneys who guide families through estates, probate, and major life transitions.",
+    label: "Attorney Guidance",
+    tagline: "Legal professionals for estate planning, probate, family transitions, and property-related decisions.",
     tiles: [
-      { title: "Estate Planning Attorneys", href: "/attorneys/for-estate-planning-attorneys", iconSrc: iconEstatePlanningAttorney, altText: "Estate planning attorneys Washington State" },
-      { title: "Probate Attorneys", href: "/attorneys/for-probate-attorneys", iconSrc: iconProbateAttorney, altText: "Probate attorneys Washington State" },
-      { title: "Elder Law Attorneys", href: "/attorneys/for-elder-law-attorneys", iconSrc: iconElderLawAttorney, altText: "Elder law attorneys Washington State" },
-      { title: "Family Law Attorneys", href: "/attorneys/for-family-law-attorneys", iconSrc: iconFamilyLawAttorney, altText: "Family law attorneys Washington State" },
-      { title: "Divorce Attorneys", href: "/attorneys/for-divorce-attorneys", iconSrc: iconDivorceAttorney, altText: "Divorce attorneys real estate Washington State" },
-      { title: "Real Estate Attorneys", href: "/attorneys/for-real-estate-attorneys", iconSrc: iconRealEstateAttorney, altText: "Real estate attorneys Washington State" },
-      { title: "Power of Attorney", href: "/power-of-attorney", iconSrc: iconPOA, altText: "Power of attorney guidance Washington State" },
+      { title: "Attorneys", href: "/for-attorneys", imageSrc: "/tiles/set1/attorneys.webp", altText: "Attorneys supporting estate and property transitions in Washington State" },
+      { title: "Estate Planning Attorneys", href: "/for-estate-planning-attorneys", imageSrc: "/tiles/attorneys/estate-planning-attorneys.webp", altText: "Estate planning attorneys Washington State" },
+      { title: "Probate Attorneys", href: "/for-probate-attorneys", imageSrc: "/tiles/attorneys/probate-attorneys.webp", altText: "Probate attorneys Washington State" },
+      { title: "Elder Law Attorneys", href: "/for-elder-law-attorneys", imageSrc: "/tiles/attorneys/elder-law-attorneys.webp", altText: "Elder law attorneys Washington State" },
+      { title: "Family Law Attorneys", href: "/for-family-law-attorneys", imageSrc: "/tiles/attorneys/family-law-attorneys.webp", altText: "Family law attorneys Washington State" },
+      { title: "Divorce Attorneys", href: "/for-divorce-attorneys", imageSrc: "/tiles/attorneys/divorce-attorneys.webp", altText: "Divorce attorneys real estate Washington State" },
+      { title: "Real Estate Attorneys", href: "/real-estate-attorneys", imageSrc: "/tiles/attorneys/real-estate-attorneys.webp", altText: "Real estate attorneys Washington State" },
     ],
   },
   {
-    label: "Financial Professionals",
-    tagline: "CPAs, planners, and lenders who help families align money decisions with property decisions.",
+    label: "Financial, Lending & Valuation",
+    tagline: "Professional guidance for tax questions, planning decisions, financing, and credible property value.",
     tiles: [
-      { title: "CPAs", href: "/for-cpas", iconSrc: iconCPAs, altText: "CPAs estate guidance Washington State" },
-      { title: "Financial Planners", href: "/for-financial-planners", iconSrc: iconFinancialPlanner, altText: "Financial planners estate transitions Washington State" },
-      { title: "Mortgage & Lending", href: "/lenders-and-financing-specialists", iconSrc: iconLending, altText: "Mortgage and lending specialists Washington State" },
+      { title: "CPAs", href: "/for-cpas", imageSrc: "/tiles/set1/certified-public-accountants.webp", altText: "CPAs supporting estate transitions in Washington State" },
+      { title: "Financial Planners", href: "/for-financial-planners", imageSrc: "/tiles/set1/financial-planners.webp", altText: "Financial planners for estate and senior transitions in Washington State" },
+      { title: "Mortgage Lenders", href: "/lenders-and-financing-specialists", imageSrc: "/tiles/set1/mortgage-lenders.webp", altText: "Mortgage lenders and financing specialists Washington State" },
+      { title: "Real Estate Appraisers", href: "/real-estate-appraiser", imageSrc: "/tiles/set1/real-estate-appraisers.webp", altText: "Certified real estate appraisers Washington State" },
+      { title: "Home Values & Pricing", href: "/why-valuation-matters", imageSrc: "/tiles/set3/home-values-pricing.webp", altText: "Home values and pricing guidance Washington State" },
     ],
   },
   {
-    label: "Housing & Care Professionals",
-    tagline: "Specialists who help seniors and families understand housing and care options.",
+    label: "Senior Housing & Care Decisions",
+    tagline: "Calm support for families comparing care options, living arrangements, and senior housing transitions.",
     tiles: [
-      { title: "Senior Living Advisors", href: "/senior-living-and-relocation", iconSrc: iconSeniorPlacement, altText: "Senior living placement advisors Washington State" },
-      { title: "Adult Family Homes", href: "/senior-living/adult-family-homes", iconSrc: iconAdultFamilyHome, altText: "Adult family homes Washington State" },
-      { title: "Assisted Living", href: "/senior-living/assisted-living-communities", iconSrc: iconAssistedLiving, altText: "Assisted living communities Washington State" },
-      { title: "Memory Care", href: "/senior-living/memory-care", iconSrc: iconMemoryCare, altText: "Memory care communities Washington State" },
-      { title: "Independent Living", href: "/senior-living/independent-living", iconSrc: iconIndependentLiving, altText: "Independent living communities Washington State" },
-      { title: "Nursing & Skilled Care", href: "/senior-living/nursing-and-skilled-care", iconSrc: iconNursingCare, altText: "Nursing and skilled care Washington State" },
-      { title: "Medicare Providers", href: "/medicare-providers", iconSrc: iconMedicare, altText: "Medicare providers Washington State" },
+      { title: "Senior Living Advisors", href: "/senior-living-and-relocation", imageSrc: "/tiles/set1/senior-living-advisors.webp", altText: "Senior living advisors Washington State" },
+      { title: "Senior Living Options", href: "/understanding-housing-care-options", imageSrc: "/tiles/set3/senior-living-options.webp", altText: "Senior living options Washington State" },
+      { title: "Medicare Providers", href: "/medicare-providers", imageSrc: "/tiles/set3/medicare-providers.webp", altText: "Medicare providers Washington State" },
+      { title: "Paying for Senior Living", href: "/sell-house-fund-senior-living", imageSrc: "/tiles/set3/paying-for-senior-living.webp", altText: "Paying for senior living guidance Washington State" },
+      { title: "Senior Home Sales", href: "/senior-transitions", imageSrc: "/tiles/set3/senior-home-sales.webp", altText: "Senior home sales Washington State" },
     ],
   },
   {
-    label: "Property & Transition Professionals",
-    tagline: "The hands-on team that prepares, values, and sells the home with care.",
+    label: "Property, Sale & Transition Support",
+    tagline: "Hands-on property support for preparing, valuing, selling, and coordinating the home side of a transition.",
     tiles: [
-      { title: "Real Estate Brokers", href: "/realtor", iconSrc: iconBroker, altText: "Real estate brokers Washington State" },
-      { title: "Real Estate Appraisers", href: "/real-estate-appraiser", iconSrc: iconAppraiser, altText: "Certified residential appraisers Washington State" },
-      { title: "Estate Liquidators", href: "/resources/estate-sale-companies", iconSrc: iconLiquidation, altText: "Estate liquidation services Washington State" },
-      { title: "Senior Move Managers", href: "/senior-move-managers", iconSrc: iconMoveManagers, altText: "Senior move managers Washington State" },
-      { title: "Property Preparation", href: "/resources/property-preparation-services", iconSrc: iconPropertyPrep, altText: "Property preparation services Washington State" },
-      { title: "Title & Escrow", href: "/title-and-escrow", iconSrc: iconTitleEscrow, altText: "Title and escrow services Washington State" },
+      { title: "Real Estate Brokers", href: "/realtor", imageSrc: "/tiles/set1/real-estate-brokers.webp", altText: "Real estate brokers Washington State" },
+      { title: "Senior Move Managers", href: "/senior-move-managers", imageSrc: "/tiles/set1/senior-move-managers.webp", altText: "Senior move managers Washington State" },
+      { title: "Probate & Estate Sales", href: "/probate-estate-sales", imageSrc: "/tiles/set2/probate-estate-sales.webp", altText: "Probate and estate sales Washington State" },
+      { title: "Title & Escrow", href: "/title-and-escrow", imageSrc: "/tiles/set2/title-escrow.webp", altText: "Title and escrow services Washington State" },
+      { title: "Service Areas", href: "/counties", imageSrc: "/tiles/set3/service-areas.webp", altText: "Washington State service areas" },
     ],
   },
   {
-    label: "Support & Coordination Professionals",
-    tagline: "The roles, fiduciaries, and resources that hold the whole process together.",
+    label: "Estate Roles, Guides & Planning",
+    tagline: "Fiduciary roles and educational resources that help families understand what happens next.",
     tiles: [
-      { title: "Executors", href: "/executors", iconSrc: iconExecutors, altText: "Executor guidance Washington State" },
-      { title: "Trustees", href: "/trustees", iconSrc: iconTrustees, altText: "Trustee guidance Washington State" },
-      { title: "Care Managers", href: "/professionals/care-managers", iconSrc: iconCareManagers, altText: "Aging life care managers Washington State" },
-      { title: "Wills & Estate Docs", href: "/wills", iconSrc: iconWills, altText: "Wills and estate documents Washington State" },
-      { title: "Guides & Resources", href: "/guides-and-resources", iconSrc: iconGuides, altText: "Guides and resources Washington State" },
+      { title: "Executors", href: "/executors", imageSrc: "/tiles/set2/executors.webp", altText: "Executor guidance Washington State" },
+      { title: "Trustees", href: "/trustees", imageSrc: "/tiles/set2/trustees.webp", altText: "Trustee guidance Washington State" },
+      { title: "Power of Attorney", href: "/power-of-attorney", imageSrc: "/tiles/set2/power-of-attorney.webp", altText: "Power of attorney guidance Washington State" },
+      { title: "Wills & Estate Docs", href: "/wills", imageSrc: "/tiles/set2/wills.webp", altText: "Wills and estate documents Washington State" },
+      { title: "The Probate Process", href: "/how-the-process-works", imageSrc: "/tiles/set2/the-probate-process.webp", altText: "Probate process guidance Washington State" },
+      { title: "Probate Terms", href: "/terminology", imageSrc: "/tiles/set2/probate-terms.webp", altText: "Probate terminology guidance Washington State" },
+      { title: "Guides & Resources", href: "/guides-and-resources", imageSrc: "/tiles/set3/guides-resources.webp", altText: "Guides and resources Washington State" },
+      { title: "Gray Divorce", href: "/gray-divorce", imageSrc: "/tiles/set3/grey-divorce.webp", altText: "Gray divorce real estate guidance Washington State" },
     ],
   },
 ];
 
-// Curated 6 tiles for the homepage preview — one strong representative per category,
-// plus the two highest-intent picks (Probate Attorneys, Real Estate Brokers).
+// Curated 6-tile homepage preview only. The full 30-tile ecosystem remains on
+// the trusted professional team page.
 export const featuredHomepageTiles: ProfessionalNetworkTile[] = [
-  professionalNetworkCategories[0].tiles[1], // Probate Attorneys
+  professionalNetworkCategories[0].tiles[2], // Probate Attorneys
   professionalNetworkCategories[1].tiles[0], // CPAs
   professionalNetworkCategories[2].tiles[0], // Senior Living Advisors
   professionalNetworkCategories[3].tiles[0], // Real Estate Brokers
-  professionalNetworkCategories[3].tiles[1], // Real Estate Appraisers
+  professionalNetworkCategories[3].tiles[1], // Senior Move Managers
   professionalNetworkCategories[4].tiles[0], // Executors
 ];
