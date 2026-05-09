@@ -57,12 +57,9 @@ const SituationCards = () => {
     <section className="py-14 md:py-20 bg-cream">
       <div className="container px-5 md:px-8">
         <div className="max-w-3xl mx-auto text-center mb-10 md:mb-14">
-          <h2 className="font-serif text-[28px] md:text-4xl lg:text-[44px] font-semibold text-navy leading-tight mb-4">
-            Where Are You in This Journey?
+          <h2 className="font-serif text-[32px] md:text-[44px] lg:text-[52px] font-semibold text-navy leading-tight">
+            Where Are You In The Process?
           </h2>
-          <p className="text-foreground text-lg md:text-xl leading-relaxed">
-            Choose whichever feels closest. You don't have to figure this out alone — and there's no rush.
-          </p>
         </div>
 
         <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
