@@ -377,6 +377,9 @@ const BuildingYourTrustedProfessionalTeam = () => {
           </div>
         </section>
 
+        {/* Full Professional Network — ~30 tiles in 5 categories */}
+        <ProfessionalNetworkGrid />
+
         {/* FAQ */}
         <PageFAQ
           faqs={faqs}
