@@ -64,14 +64,16 @@ const SituationCards = () => {
               key={s.href}
               to={s.href}
               aria-label={`${s.title} — ${s.description} — ${s.cta}`}
-              className="group block rounded-2xl bg-cream overflow-hidden transition-all duration-300 hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+              className="group block rounded-2xl overflow-hidden bg-cream transition-all duration-300 hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
             >
-              <img
-                src={s.image}
-                alt={`${s.title} — ${s.description}`}
-                className="w-full h-auto block transition-transform duration-500 group-hover:scale-[1.02]"
-                loading="lazy"
-              />
+              <div className="relative w-full overflow-hidden bg-cream" style={{ aspectRatio: "420 / 490" }}>
+                <img
+                  src={s.image}
+                  alt={`${s.title} — ${s.description}`}
+                  className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+                  loading="lazy"
+                />
+              </div>
               <span className="sr-only">{s.cta}</span>
             </Link>
           ))}
