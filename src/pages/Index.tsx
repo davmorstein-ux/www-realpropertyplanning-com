@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
-import HomepageNav from "@/components/HomepageNav";
+
 import HomepageHero from "@/components/HomepageHero";
 import HomepageFAQ from "@/components/HomepageFAQ";
 import HomepageWarmStatement from "@/components/HomepageWarmStatement";
