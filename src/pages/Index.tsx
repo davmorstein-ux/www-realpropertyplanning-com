@@ -128,27 +128,24 @@ const Index = () => {
       {/* 4. REASSURANCE / TRUST */}
       <HomepageWarmStatement />
 
-      {/* 5. NEXT STEP — single primary CTA */}
-      <section className="py-14 lg:py-20 bg-navy">
+      {/* 5. NEXT STEP — quieter Tier 2 CTA strip */}
+      <section className="py-10 lg:py-12 bg-navy">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-2xl mx-auto text-center">
-            <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-4">
-              Not sure where to begin?
-            </h2>
-            <p className="text-primary-foreground/85 text-lg md:text-xl leading-relaxed mb-8">
-              Start with a calm, no-pressure conversation. We typically respond within one business day.
-            </p>
-            <Link to="/contact">
-              <Button variant="gold" size="lg" className="px-10 py-5 h-auto rounded-lg text-lg">
-                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-9 h-9 mr-2.5 object-contain shrink-0" loading="lazy" />
+          <div className="max-w-3xl mx-auto flex flex-col md:flex-row items-center justify-between gap-5 text-center md:text-left">
+            <div>
+              <h2 className="font-serif text-2xl md:text-[28px] text-primary-foreground font-semibold leading-snug mb-1">
+                Not sure where to begin?
+              </h2>
+              <p className="text-primary-foreground text-base md:text-lg">
+                Start with a calm, no-pressure conversation.
+              </p>
+            </div>
+            <Link to="/contact" className="shrink-0">
+              <Button variant="gold" size="lg" className="px-7 py-4 h-auto rounded-lg text-base">
+                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-7 h-7 mr-2 object-contain shrink-0" loading="lazy" />
                 Schedule a Conversation
               </Button>
             </Link>
-            <div className="mt-5">
-              <a href="tel:2069003015" className="text-gold hover:brightness-110 underline-offset-4 hover:underline text-base font-medium">
-                Or call (206) 900-3015
-              </a>
-            </div>
           </div>
         </div>
       </section>
