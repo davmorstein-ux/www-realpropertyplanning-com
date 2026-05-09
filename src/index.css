@@ -296,6 +296,43 @@ body {
   }
 }
 
+
+/* Homepage FAQ — larger, high-contrast accordion text */
+.homepage-faq-trigger {
+  color: hsl(var(--navy)) !important;
+  font-family: "Inter", sans-serif !important;
+  font-size: 21px !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  text-decoration: none !important;
+}
+.homepage-faq-trigger:hover,
+.homepage-faq-trigger:focus-visible {
+  color: hsl(var(--gold-dark)) !important;
+  text-decoration: none !important;
+}
+.homepage-faq-trigger span {
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+}
+.homepage-faq-answer {
+  color: hsl(var(--foreground)) !important;
+  font-size: 18px !important;
+  font-weight: 500 !important;
+  line-height: 1.7 !important;
+}
+@media (min-width: 768px) {
+  .homepage-faq-trigger {
+    font-size: 24px !important;
+    min-height: 74px !important;
+  }
+  .homepage-faq-answer {
+    font-size: 20px !important;
+    line-height: 1.75 !important;
+  }
+}
+
 /* ═══════════════════════════════════════════════
    UNIFIED GOLD CTA BUTTON — homepage tile sections
 ═══════════════════════════════════════════════ */
