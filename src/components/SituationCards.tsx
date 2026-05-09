@@ -12,31 +12,31 @@ const situations = [
     icon: iconAgingParent,
     title: "Helping an Aging Parent",
     description:
-      "We are worried about a parent's safety, caregiving needs, or future housing decisions.",
-    cta: "Start Here",
+      "Worried about a parent's safety, care, or future housing decisions.",
+    cta: "Explore Guidance",
     href: "/helping-aging-parents",
   },
   {
     icon: iconProbate,
     title: "A Loved One Recently Passed Away",
     description:
-      "We are trying to understand probate, inherited property, executor responsibilities, or next steps.",
-    cta: "Explore the Process",
+      "Trying to understand probate, inherited property, or what comes next.",
+    cta: "Understand the Process",
     href: "/estate-probate-inherited-property",
   },
   {
     icon: iconHouse,
-    title: "Trying To Decide What To Do With the House",
+    title: "Deciding What To Do With the House",
     description:
-      "We are unsure whether to sell, keep, rent, repair, or prepare a property.",
-    cta: "View Options",
+      "Unsure whether to sell, keep, rent, repair, or prepare a property.",
+    cta: "Explore Options",
     href: "/what-to-do-with-the-house",
   },
   {
     icon: iconCare,
     title: "Exploring Housing & Care Options",
     description:
-      "We are considering assisted living, memory care, caregiving support, or aging in place.",
+      "Considering assisted living, memory care, or aging in place.",
     cta: "Learn More",
     href: "/understanding-housing-care-options",
   },
@@ -44,15 +44,15 @@ const situations = [
     icon: iconPlanning,
     title: "Planning Before a Crisis",
     description:
-      "We want to better organize legal, caregiving, housing, and property planning before an emergency happens.",
-    cta: "Start Planning",
+      "Quietly organizing legal, caregiving, and property planning ahead of time.",
+    cta: "Explore Planning",
     href: "/estate-planning-powers-of-attorney",
   },
   {
     icon: iconExecutor,
     title: "Serving as Executor or Trustee",
     description:
-      "I was named executor or trustee and am unsure what responsibilities or steps come next.",
+      "Recently named executor or trustee and unsure what comes first.",
     cta: "View First Steps",
     href: "/executor-responsibilities-first-steps",
   },
