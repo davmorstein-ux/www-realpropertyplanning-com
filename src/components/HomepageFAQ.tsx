@@ -34,27 +34,27 @@ const faqs = [
 
 const HomepageFAQ = () => {
   return (
-    <section className="py-16 lg:py-24 bg-secondary">
+    <section className="py-12 lg:py-16 bg-secondary">
       <div className="container px-6 lg:px-8">
-        <div className="max-w-[1080px] mx-auto">
-          <h2 className="font-serif text-[hsl(0,70%,30%)] mb-10 text-center font-bold text-2xl">
+        <div className="max-w-[920px] mx-auto">
+          <h2 className="font-serif text-navy mb-8 text-center font-semibold text-xl md:text-2xl">
             Common Questions
           </h2>
-          <Accordion type="single" collapsible className="space-y-4">
+          <Accordion type="single" collapsible className="space-y-3">
             {faqs.map((faq, i) => (
               <AccordionItem
                 key={i}
                 value={`faq-${i}`}
-                className="bg-card border border-border rounded-2xl overflow-hidden data-[state=open]:border-gold/25 transition-colors"
+                className="bg-card border border-border rounded-xl overflow-hidden data-[state=open]:border-gold/25 transition-colors"
               >
                 <AccordionTrigger
-                  className="text-left font-serif font-bold text-foreground hover:text-gold hover:no-underline px-6 py-6 min-h-[64px]"
-                  style={{ fontSize: "23px", lineHeight: 1.35 }}
+                  className="text-left font-serif font-semibold text-foreground hover:text-gold hover:no-underline px-5 py-5 min-h-[64px]"
+                  style={{ fontSize: "19px", lineHeight: 1.4 }}
                 >
                   {faq.q}
                 </AccordionTrigger>
-                <AccordionContent className="px-6 pb-6 pt-0 text-foreground/85">
-                  <div style={{ fontSize: "19px", lineHeight: 1.7 }}>{faq.a}</div>
+                <AccordionContent className="px-5 pb-5 pt-0 text-foreground">
+                  <div style={{ fontSize: "18px", lineHeight: 1.7 }}>{faq.a}</div>
                 </AccordionContent>
               </AccordionItem>
             ))}
