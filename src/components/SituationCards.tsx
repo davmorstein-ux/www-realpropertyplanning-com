@@ -80,10 +80,10 @@ const SituationCards = () => {
               </div>
 
               <div className="flex flex-1 flex-col items-center text-center px-6 pt-6 pb-7">
-                <h3 className="font-serif text-[24px] md:text-[26px] font-semibold text-navy leading-snug mb-3 min-h-[72px] flex items-center justify-center">
+                <h3 className="font-serif text-[24px] md:text-[26px] font-semibold text-navy leading-snug mb-3 h-[72px] flex items-start justify-center">
                   {s.title}
                 </h3>
-                <p className="text-foreground text-[18px] md:text-[19px] leading-relaxed mb-6 min-h-[84px] flex items-center justify-center">
+                <p className="text-foreground text-[18px] md:text-[19px] leading-relaxed mb-6 h-[88px] flex items-start justify-center">
                   {s.description}
                 </p>
                 <span className="mt-auto inline-flex items-center justify-center gap-2 w-full max-w-[280px] h-[58px] px-6 rounded-xl bg-gradient-to-b from-gold to-gold-dark text-navy font-semibold text-[18px] shadow-md group-hover:shadow-lg group-hover:translate-x-1 transition-all duration-300 whitespace-nowrap">
