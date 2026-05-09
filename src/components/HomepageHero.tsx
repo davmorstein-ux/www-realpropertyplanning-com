@@ -461,7 +461,7 @@ const HomepageHero = () => {
             style={{
               fontFamily: "'Cormorant Garamond', 'Georgia', serif",
               color: "#f0c040",
-              fontSize: "42px",
+              fontSize: isMobile ? "30px" : "56px",
               fontWeight: 700,
               textAlign: "center",
               margin: 0,
