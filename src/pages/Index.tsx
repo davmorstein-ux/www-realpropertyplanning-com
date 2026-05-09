@@ -6,24 +6,12 @@ import { realEstateAgentSchema, organizationSchema } from "@/lib/schema";
 import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ChevronRight } from "lucide-react";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
-import mappin3d from "@/assets/real-estate-service-areas-mappin-washington.webp";
-import expRealtyLogo from "@/assets/exp-realty-real-estate-logo-washington.webp";
 import HomepageNav from "@/components/HomepageNav";
-
-import HomepageLeadForm from "@/components/HomepageLeadForm";
-import LeadMagnetBlock from "@/components/LeadMagnetBlock";
-import EducationalPathways from "@/components/EducationalPathways";
-import WhatHappensNext from "@/components/WhatHappensNext";
 import HomepageHero from "@/components/HomepageHero";
 import HomepageFAQ from "@/components/HomepageFAQ";
-
-
-import HowWeHelpCards from "@/components/HowWeHelpCards";
 import HomepageWarmStatement from "@/components/HomepageWarmStatement";
 import SituationCards from "@/components/SituationCards";
-import HomepageOrientation from "@/components/HomepageOrientation";
 
 const serviceAreas = [
   { county: "King County", href: "/counties/king", cities: "Seattle, Bellevue, Kirkland, Redmond, Renton, Bothell, Shoreline, Mercer Island, Burien, Kent, Auburn, Federal Way" },
