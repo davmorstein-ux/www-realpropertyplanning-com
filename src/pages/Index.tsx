@@ -12,6 +12,7 @@ import HomepageHero from "@/components/HomepageHero";
 import HomepageFAQ from "@/components/HomepageFAQ";
 import HomepageWarmStatement from "@/components/HomepageWarmStatement";
 import SituationCards from "@/components/SituationCards";
+import HomepageNav from "@/components/HomepageNav";
 
 
 const jsonLd = [realEstateAgentSchema, organizationSchema];
@@ -122,6 +123,9 @@ const Index = () => {
 
       {/* 2. SITUATION-BASED GUIDANCE — Where Are You In The Process? */}
       <SituationCards />
+
+      {/* 3. BROADER CATEGORY ORIENTATION — secondary navigation pathways */}
+      <HomepageNav />
 
       {/* 4. REASSURANCE / TRUST */}
       <HomepageWarmStatement />

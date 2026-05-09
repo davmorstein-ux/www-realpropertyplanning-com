@@ -70,11 +70,11 @@ const SituationCards = () => {
               aria-label={`${s.title} — ${s.description} — ${s.cta}`}
               className="group flex h-full flex-col rounded-2xl bg-white border border-gold/30 shadow-[0_8px_24px_-12px_rgba(27,43,75,0.25)] hover:shadow-[0_18px_40px_-16px_rgba(27,43,75,0.45)] hover:-translate-y-1 hover:border-gold transition-all duration-300 overflow-hidden no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
             >
-              <div className="relative w-full overflow-hidden bg-cream" style={{ aspectRatio: "5 / 3" }}>
+              <div className="relative w-full overflow-hidden bg-cream flex items-center justify-center p-4" style={{ aspectRatio: "4 / 3" }}>
                 <img
                   src={s.image}
                   alt={s.alt}
-                  className="absolute inset-0 w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
+                  className="max-w-full max-h-full w-auto h-auto object-contain transition-transform duration-500 group-hover:scale-[1.03]"
                   loading="lazy"
                 />
               </div>
@@ -86,7 +86,7 @@ const SituationCards = () => {
                 <p className="text-foreground text-[17px] md:text-[18px] leading-relaxed mb-6 min-h-[60px]">
                   {s.description}
                 </p>
-                <span className="mt-auto inline-flex items-center justify-center gap-2 px-6 py-3 min-h-[52px] rounded-xl bg-gradient-to-b from-gold to-gold-dark text-navy font-semibold text-base shadow-md group-hover:shadow-lg group-hover:translate-x-1 transition-all duration-300 whitespace-nowrap">
+                <span className="mt-auto inline-flex items-center justify-center gap-2 w-full max-w-[280px] h-[56px] px-6 rounded-xl bg-gradient-to-b from-gold to-gold-dark text-navy font-semibold text-[17px] shadow-md group-hover:shadow-lg group-hover:translate-x-1 transition-all duration-300 whitespace-nowrap">
                   {s.cta}
                   <ArrowRight className="w-5 h-5" aria-hidden="true" />
                 </span>
