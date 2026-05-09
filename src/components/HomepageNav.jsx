@@ -44,9 +44,7 @@ const HomepageNav = () => {
         .hn-blurb { font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 400; color: #1B2B4B; line-height: 1.6; margin: 0; }
 
         .hn-footer { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 16px 22px 22px; }
-        .hn-cta { display: inline-flex; align-items: center; justify-content: center; gap: 10px; height: 58px; padding: 0 28px; border-radius: 12px; background: linear-gradient(180deg, #d4af6a 0%, #b89a5a 100%); color: #12243F; font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 700; letter-spacing: 0.02em; box-shadow: 0 4px 12px rgba(18,36,63,0.18); transition: transform 0.25s ease, box-shadow 0.25s ease; width: 100%; max-width: 280px; }
-        .hn-card:hover .hn-cta { transform: translateX(2px); box-shadow: 0 6px 16px rgba(18,36,63,0.28); }
-        .hn-cta svg { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+        .hn-card:hover .gold-cta { transform: translateX(2px); box-shadow: 0 6px 16px rgba(18,36,63,0.28); }
 
         @media (min-width: 768px) {
           .hn-section { padding: 64px 32px 72px; }
