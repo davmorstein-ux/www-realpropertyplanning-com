@@ -217,6 +217,7 @@ const HelpingAgingParents = () => {
         </section>
 
         <JourneyOrientation
+          tone="caregiving"
           items={[
             "You are worried about a parent living alone",
             "Your family is discussing caregiving or housing options",

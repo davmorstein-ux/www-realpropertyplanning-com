@@ -271,6 +271,7 @@ const EstateProbateInheritedProperty = () => {
         </section>
 
         <JourneyOrientation
+          tone="probate"
           items={[
             "A loved one recently passed away",
             "You inherited a home or property",

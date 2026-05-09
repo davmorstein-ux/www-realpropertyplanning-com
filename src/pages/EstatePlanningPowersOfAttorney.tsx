@@ -219,6 +219,7 @@ const EstatePlanningPowersOfAttorney = () => {
         </section>
 
         <JourneyOrientation
+          tone="probate"
           items={[
             "You do not have a will or power of attorney in place",
             "A parent's documents may be outdated",

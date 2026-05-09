@@ -236,6 +236,7 @@ const AgingInPlaceStayingHomeSafely = () => {
         </section>
 
         <JourneyOrientation
+          tone="caregiving"
           items={[
             "A parent or loved one wants to stay in their home",
             "You are evaluating safety, mobility, or daily support",

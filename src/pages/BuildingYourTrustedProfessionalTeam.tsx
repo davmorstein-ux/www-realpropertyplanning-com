@@ -235,6 +235,7 @@ const BuildingYourTrustedProfessionalTeam = () => {
         </section>
 
         <JourneyOrientation
+          tone="valuation"
           items={[
             "You are unsure which professionals you actually need",
             "You want vetted referrals — not cold internet searches",

@@ -230,6 +230,7 @@ const ExecutorResponsibilitiesFirstSteps = () => {
         </section>
 
         <JourneyOrientation
+          tone="probate"
           items={[
             "You were recently named executor or personal representative",
             "You are unsure what your legal duties actually are",

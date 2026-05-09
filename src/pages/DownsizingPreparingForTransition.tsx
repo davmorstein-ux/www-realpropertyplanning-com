@@ -220,6 +220,7 @@ const DownsizingPreparingForTransition = () => {
         </section>
 
         <JourneyOrientation
+          tone="transition"
           items={[
             "A move to a smaller home or community is being considered",
             "Decades of belongings need to be sorted",

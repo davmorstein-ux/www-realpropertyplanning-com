@@ -213,6 +213,7 @@ const UnderstandingSeniorTransitions = () => {
         </section>
 
         <JourneyOrientation
+          tone="caregiving"
           items={[
             "A move or downsizing is being considered",
             "A senior in your family needs more support",
