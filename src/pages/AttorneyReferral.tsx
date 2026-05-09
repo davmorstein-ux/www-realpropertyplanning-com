@@ -51,7 +51,7 @@ const howWeWorkBlocks = [
   },
   {
     heading: "Experience Across Washington State",
-    text: "Real Property Planning serves clients throughout Washington State, with deep experience in King County, Snohomish County, Pierce County, and Kitsap County. Through David Stein's eXp Realty network, Real Property Planning can also connect clients with a trusted broker anywhere in the country.",
+    text: "Real Property Planning serves clients throughout Washington State, with deep experience in King County, Snohomish County, Pierce County, and Kitsap County. Through our eXp Realty network, Real Property Planning can also connect clients with a trusted broker anywhere in the country.",
   },
 ];
 

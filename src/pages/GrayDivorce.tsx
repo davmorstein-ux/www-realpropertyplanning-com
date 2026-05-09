@@ -125,7 +125,7 @@ const GrayDivorce = () => {
                 {[
                   {
                     title: "Selling the Family Home",
-                    body: "Whether it's a straightforward sale or a more complex situation involving an estate, trust, or court oversight, David Stein has the experience to guide both parties through the process with sensitivity and professionalism.",
+                    body: "Whether it's a straightforward sale or a more complex situation involving an estate, trust, or court oversight, Real Property Planning has the experience to guide both parties through the process with sensitivity and professionalism.",
                   },
                   {
                     title: "Pricing & Valuation",
@@ -216,7 +216,7 @@ const GrayDivorce = () => {
                 Going Through a Gray Divorce? Let's Talk.
               </h2>
               <p className="text-primary-foreground/90 text-lg md:text-xl leading-[1.7] mb-10 max-w-2xl mx-auto">
-                Whether you need a home valuation, help selling the family home, or simply want to understand your options, David Stein is here to help — with no pressure and no judgment.
+                Whether you need a home valuation, help selling the family home, or simply want to understand your options, Real Property Planning is here to help — with no pressure and no judgment.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/contact">

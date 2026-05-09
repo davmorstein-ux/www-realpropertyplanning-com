@@ -1,6 +1,6 @@
 <svg width="800" viewBox="0 0 800 980" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Probate real estate sale timeline showing 7 steps from death of owner through distribution of proceeds" font-family="Georgia, 'Times New Roman', serif">
   <title>Probate Real Estate Sale Timeline — Washington State</title>
-  <desc>A 7-step vertical timeline showing the probate real estate sale process in Washington State, including executor appointment, property assessment, listing, offer, closing, and distribution of proceeds. Created by Real Property Planning — David Stein, Licensed Broker and Certified Appraiser.</desc>
+  <desc>A 7-step vertical timeline showing the probate real estate sale process in Washington State, including executor appointment, property assessment, listing, offer, closing, and distribution of proceeds. Created by Real Property Planning — Real Property Planning.</desc>
 
   <!-- Background -->
   <rect width="800" height="980" fill="#ffffff"/>
@@ -8,7 +8,7 @@
   <!-- Title block -->
   <rect x="0" y="0" width="800" height="72" fill="#0f2d52"/>
   <text x="400" y="30" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff" font-family="Georgia, serif">Probate Real Estate Sale — Step by Step</text>
-  <text x="400" y="54" text-anchor="middle" font-size="13" fill="#9ab4cc" font-family="Arial, sans-serif">Washington State  |  David Stein, Licensed Broker &amp; Certified Residential Appraiser  |  (206) 900-3015</text>
+  <text x="400" y="54" text-anchor="middle" font-size="13" fill="#9ab4cc" font-family="Arial, sans-serif">Washington State  |  Real Property Planning  |  (206) 900-3015</text>
 
   <!-- Vertical spine -->
   <line x1="90" y1="90" x2="90" y2="790" stroke="#cbd5e1" stroke-width="2"/>
@@ -42,7 +42,7 @@
   <rect x="130" y="262" width="630" height="80" rx="8" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
   <rect x="130" y="262" width="6" height="80" rx="3" fill="#0f6e56"/>
   <text x="150" y="288" font-size="17" font-weight="700" fill="#064e3b" font-family="Georgia, serif">Property secured &amp; assessed</text>
-  <text x="150" y="310" font-size="14" fill="#064e3b" font-family="Arial, sans-serif">David Stein visits the property, evaluates its condition, and builds</text>
+  <text x="150" y="310" font-size="14" fill="#064e3b" font-family="Arial, sans-serif">Our team visits the property, evaluates its condition, and builds</text>
   <text x="150" y="328" font-size="14" fill="#064e3b" font-family="Arial, sans-serif">a pricing strategy using his dual broker + appraiser expertise.</text>
 
   <!-- connector -->
@@ -117,7 +117,7 @@
 
   <!-- CTA bar -->
   <rect x="30" y="892" width="740" height="52" rx="8" fill="#0f2d52"/>
-  <text x="400" y="923" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff" font-family="Arial, sans-serif">Questions? Call David Stein directly — (206) 900-3015  |  realpropertyplanning.com</text>
+  <text x="400" y="923" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff" font-family="Arial, sans-serif">Questions? Call Real Property Planning — (206) 900-3015  |  realpropertyplanning.com</text>
 
   <!-- Arrow marker -->
   <defs>

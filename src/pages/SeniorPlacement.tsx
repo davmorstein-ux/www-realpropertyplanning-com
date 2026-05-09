@@ -56,7 +56,7 @@ const team = [
   },
   {
     role: "Real Estate Broker & Appraiser",
-    body: "Evaluates the home, coordinates preparation, prices it accurately, and manages the sale. David Stein holds both credentials — rare in this field.",
+    body: "Evaluates the home, coordinates preparation, prices it accurately, and manages the sale. Real Property Planning brings both credentials — rare in this field.",
   },
   {
     role: "Senior Move Manager",
@@ -86,7 +86,7 @@ const faqs = [
     a: "Not always — but for many families the home is the primary asset available to fund care. An elder law attorney and financial planner can help evaluate all options including bridge loans and Medicaid planning.",
   },
   {
-    q: "Can David Stein start working on the home before placement is finalized?",
+    q: "Can Real Property Planning start working on the home before placement is finalized?",
     a: "Yes. David can assess the home, develop a pricing strategy, and begin coordinating preparation before the senior has moved — so the home is ready to list the moment the family is ready.",
   },
   {
@@ -99,8 +99,8 @@ const SeniorPlacement = () => {
   return (
     <>
       <SEOHead
-        title="Senior Placement in Washington State | David Stein | Real Property Planning"
-        description="David Stein helps Washington State families navigate senior placement and the sale of the family home. Licensed Broker & Certified Appraiser serving King, Snohomish, Pierce & Kitsap Counties."
+        title="Senior Placement in Washington State | Real Property Planning"
+        description="Real Property Planning helps Washington State families navigate senior placement and the sale of the family home. Licensed Broker & Certified Appraiser serving King, Snohomish, Pierce & Kitsap Counties."
         canonical="https://realpropertyplanning.com/senior-placement"
       />
       <BreadcrumbSchema
@@ -227,7 +227,7 @@ const SeniorPlacement = () => {
                 The cost of senior care — which can range from $3,000 to $10,000 or more per month in Washington State — is often funded in whole or in part by proceeds from selling the family home. That means the timing of the home sale directly affects when and where a senior can move.
               </p>
               <p className="text-foreground text-base md:text-lg leading-relaxed">
-                David Stein coordinates the real estate side of this transition with the care side — working alongside placement advisors, care managers, attorneys, and financial planners to make sure the home sells at the right time, for the right price, without disrupting the senior's move into their new setting. For families ready to take the next step, <Link to="/sell-house-fund-senior-living" className="text-primary font-semibold underline underline-offset-2 hover:text-primary/80">learn how to sell a parent's house to fund senior living</Link>.
+                Real Property Planning coordinates the real estate side of this transition with the care side — working alongside placement advisors, care managers, attorneys, and financial planners to make sure the home sells at the right time, for the right price, without disrupting the senior's move into their new setting. For families ready to take the next step, <Link to="/sell-house-fund-senior-living" className="text-primary font-semibold underline underline-offset-2 hover:text-primary/80">learn how to sell a parent's house to fund senior living</Link>.
               </p>
             </div>
           </div>
@@ -314,7 +314,7 @@ const SeniorPlacement = () => {
                 Ready to Talk?
               </h2>
               <p className="text-primary-foreground/90 text-base md:text-lg leading-relaxed mb-8">
-                Most families start with a single question. David Stein is happy to hear it — no pressure, no obligation.
+                Most families start with a single question. Our team is happy to hear it — no pressure, no obligation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="tel:2069003015">

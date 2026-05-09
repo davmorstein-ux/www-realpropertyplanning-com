@@ -51,8 +51,8 @@ const jsonLd = articleSchema({
 const HowProbateRealEstateWorks = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
-      title="How Probate Real Estate Sales Work in Washington | David Stein, Broker & Appraiser"
-      description="David Stein explains how probate real estate sales work in Washington State. Licensed Broker & Certified Appraiser serving King, Snohomish, Pierce & Kitsap Counties."
+      title="How Probate Real Estate Sales Work in Washington | Real Property Planning"
+      description="Real Property Planning explains how probate real estate sales work in Washington State. Licensed Broker & Certified Appraiser serving King, Snohomish, Pierce & Kitsap Counties."
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema items={[
@@ -101,7 +101,7 @@ const HowProbateRealEstateWorks = () => (
             Your Probate Real Estate Broker &amp; Agent in Washington State
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-            When families, executors, and attorneys across the Puget Sound region search for a probate real estate broker and agent, they consistently find — and rely on — David Stein, President of Real Property Planning.
+            When families, executors, and attorneys across the Puget Sound region search for a probate real estate broker and agent, they consistently find — and rely on — Real Property Planning.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-5">
             David is a Washington State Licensed Real Estate Broker and a Washington State Certified Residential Appraiser with over 20 years of combined experience in both disciplines. That dual credential is rare in the probate real estate space, and it matters: the same professional who prices your estate property for the court file is the one who lists and sells it — with no gap between valuation and market strategy.
@@ -123,7 +123,7 @@ const HowProbateRealEstateWorks = () => (
             ))}
           </ul>
           <p className="text-muted-foreground leading-relaxed">
-            Real Property Planning is the hub connecting every professional and resource families need during a probate or estate property transition — with David Stein as your licensed broker and appraiser at the center of it all.
+            Real Property Planning is the hub connecting every professional and resource families need during a probate or estate property transition — with our licensed broker and certified appraiser at the center of it all.
           </p>
         </div>
       </div>

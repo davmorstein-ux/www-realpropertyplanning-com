@@ -332,7 +332,7 @@ const App = () => (
           <Route path="/resources/washington-executors-10-step-checklist" element={<WashingtonExecutorsChecklist />} />
 
           {/* ─── Supporting ───────────────────────────────────────── */}
-          {/* /about is the single canonical About page (David Stein leadership/founder) */}
+          {/* /about is the single canonical About page (brand-neutral About page) */}
           <Route path="/about" element={<About />} />
           {/* Legacy routes → redirect to /about */}
           <Route path="/about-david-stein" element={<Navigate to="/about" replace />} />

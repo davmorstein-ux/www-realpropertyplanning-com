@@ -86,7 +86,7 @@ const relatedCards = [
 
 const jsonLd = articleSchema({
   headline: "Probate vs Trust Sale in Washington State — What's the Difference?",
-  description: "David Stein explains the key differences between probate sales and trust sales in Washington State.",
+  description: "Real Property Planning explains the key differences between probate sales and trust sales in Washington State.",
   url: "/guides/probate-vs-trust-sale-washington",
   datePublished: "2026-04-21",
   dateModified: "2026-04-21",
@@ -97,7 +97,7 @@ const ProbateVsTrustSaleWashington = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
       title="Probate vs Trust Sale in Washington State — What's the Difference? | Real Property Planning"
-      description="David Stein explains the key differences between probate sales and trust sales in Washington State. Licensed Broker & Certified Appraiser serving King, Snohomish, Pierce & Kitsap Counties — (206) 900-3015."
+      description="Real Property Planning explains the key differences between probate sales and trust sales in Washington State. Licensed Broker & Certified Appraiser serving King, Snohomish, Pierce & Kitsap Counties — (206) 900-3015."
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema
@@ -120,7 +120,7 @@ const ProbateVsTrustSaleWashington = () => (
               For executors, trustees, attorneys, and families who need to understand which process applies to their situation.
             </p>
             <p className="text-lg text-gold font-bold leading-relaxed mb-6">
-              David Stein — Licensed Real Estate Broker &amp; Certified Residential Appraiser — (206) 900-3015
+              Real Property Planning — Licensed Real Estate Broker &amp; Certified Residential Appraiser — (206) 900-3015
             </p>
             <div className="flex flex-wrap gap-3">
               <Link to="/contact">
@@ -265,9 +265,9 @@ const ProbateVsTrustSaleWashington = () => (
       <section className="py-14 md:py-20 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-3xl text-foreground font-semibold mb-5">How David Stein Works With Both</h2>
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-5">How Real Property Planning Works With Both</h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              Whether a property is going through probate or trust administration, David Stein brings the same discipline to every sale — accurate condition-based pricing, coordinated preparation, and clear communication with all parties involved.
+              Whether a property is going through probate or trust administration, Real Property Planning brings the same discipline to every sale — accurate condition-based pricing, coordinated preparation, and clear communication with all parties involved.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
               For probate sales, David works directly with the executor and estate attorney — providing regular updates, handling all property preparation coordination, and ensuring the pricing documentation supports the executor's fiduciary obligations.
@@ -324,7 +324,7 @@ const ProbateVsTrustSaleWashington = () => (
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-4">Ready to Talk?</h2>
             <p className="text-lg text-primary-foreground/85 leading-relaxed mb-8">
-              David Stein works with executors, trustees, and attorneys throughout Washington State. No pressure — just practical guidance.
+              Real Property Planning works with executors, trustees, and attorneys throughout Washington State. No pressure — just practical guidance.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               <a href="tel:2069003015">

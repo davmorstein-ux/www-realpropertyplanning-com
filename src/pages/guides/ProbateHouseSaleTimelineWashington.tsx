@@ -19,7 +19,7 @@ import {
 const steps = [
   {
     title: "Weeks 1–4: Death and initial steps",
-    body: "The estate enters probate. The executor secures the property, changes locks, notifies insurance, and begins gathering documentation. No real estate action can be taken yet — but David Stein can begin assessing the property and developing a pricing strategy during this period.",
+    body: "The estate enters probate. The executor secures the property, changes locks, notifies insurance, and begins gathering documentation. No real estate action can be taken yet — but Real Property Planning can begin assessing the property and developing a pricing strategy during this period.",
   },
   {
     title: "Weeks 4–8: Petitioning the court",
@@ -31,7 +31,7 @@ const steps = [
   },
   {
     title: "Weeks 10–16: Property preparation",
-    body: "Cleanout, minor repairs, staging, and landscaping are coordinated. The length of this phase depends heavily on the condition of the property and the extent of personal belongings left behind. David Stein coordinates all vendors so the executor does not need to be on-site.",
+    body: "Cleanout, minor repairs, staging, and landscaping are coordinated. The length of this phase depends heavily on the condition of the property and the extent of personal belongings left behind. Real Property Planning coordinates all vendors so the executor does not need to be on-site.",
   },
   {
     title: "Weeks 14–20: Listing and marketing",
@@ -107,7 +107,7 @@ const relatedCards = [
 
 const jsonLd = articleSchema({
   headline: "Probate House Sale Timeline in Washington State",
-  description: "David Stein explains the realistic timeline for selling a probate property in Washington State — from death to distribution of proceeds.",
+  description: "Real Property Planning explains the realistic timeline for selling a probate property in Washington State — from death to distribution of proceeds.",
   url: "/guides/probate-house-sale-timeline-washington",
   datePublished: "2026-04-21",
   dateModified: "2026-04-21",
@@ -118,7 +118,7 @@ const ProbateHouseSaleTimelineWashington = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
       title="Probate House Sale Timeline in Washington State | Real Property Planning"
-      description="David Stein explains the realistic timeline for selling a probate property in Washington State — from death to distribution of proceeds. Licensed Broker & Certified Appraiser — (206) 900-3015."
+      description="Real Property Planning explains the realistic timeline for selling a probate property in Washington State — from death to distribution of proceeds. Licensed Broker & Certified Appraiser — (206) 900-3015."
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema
@@ -141,7 +141,7 @@ const ProbateHouseSaleTimelineWashington = () => (
               A realistic, step-by-step guide to how long a probate property sale actually takes — and what affects the timeline.
             </p>
             <p className="text-lg text-gold font-bold leading-relaxed mb-6">
-              David Stein — Licensed Real Estate Broker &amp; Certified Residential Appraiser — (206) 900-3015
+              Real Property Planning — Licensed Real Estate Broker &amp; Certified Residential Appraiser — (206) 900-3015
             </p>
             <div className="flex flex-wrap gap-3">
               <Link to="/contact">
@@ -280,9 +280,9 @@ const ProbateHouseSaleTimelineWashington = () => (
       <section className="py-14 md:py-20 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-3xl text-foreground font-semibold mb-5">How David Stein Reduces Timeline Delays</h2>
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-5">How Real Property Planning Reduces Timeline Delays</h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              David Stein begins working with families before Letters Testamentary are issued — assessing the property, coordinating early preparation, and developing a pricing strategy so everything is ready to move the moment legal authority is granted.
+              Real Property Planning begins working with families before Letters Testamentary are issued — assessing the property, coordinating early preparation, and developing a pricing strategy so everything is ready to move the moment legal authority is granted.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
               His dual credential as a Licensed Broker and Certified Residential Appraiser means the pricing decision is made once — accurately — without the back-and-forth that comes when a broker's estimate and an appraiser's valuation don't match.
@@ -339,7 +339,7 @@ const ProbateHouseSaleTimelineWashington = () => (
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-4">Ready to Talk?</h2>
             <p className="text-lg text-primary-foreground/85 leading-relaxed mb-8">
-              David Stein works with executors, trustees, and attorneys throughout Washington State. No pressure — just practical guidance.
+              Real Property Planning works with executors, trustees, and attorneys throughout Washington State. No pressure — just practical guidance.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               <a href="tel:2069003015">

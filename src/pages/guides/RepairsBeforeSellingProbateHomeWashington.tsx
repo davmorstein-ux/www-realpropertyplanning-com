@@ -112,7 +112,7 @@ const relatedCards = [
 
 const jsonLd = articleSchema({
   headline: "What Repairs Should Be Made Before Selling a Probate Home?",
-  description: "David Stein explains which repairs are worth making before selling an estate property in Washington State — and which ones to skip.",
+  description: "Real Property Planning explains which repairs are worth making before selling an estate property in Washington State — and which ones to skip.",
   url: "/guides/repairs-before-selling-probate-home-washington",
   datePublished: "2026-04-21",
   dateModified: "2026-04-21",
@@ -144,7 +144,7 @@ const RepairsBeforeSellingProbateHomeWashington = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
       title="What Repairs Should Be Made Before Selling a Probate Home in Washington? | Real Property Planning"
-      description="David Stein explains which repairs are worth making before selling an estate property in Washington State — and which ones to skip. Licensed Broker & Certified Appraiser — (206) 900-3015."
+      description="Real Property Planning explains which repairs are worth making before selling an estate property in Washington State — and which ones to skip. Licensed Broker & Certified Appraiser — (206) 900-3015."
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema
@@ -167,7 +167,7 @@ const RepairsBeforeSellingProbateHomeWashington = () => (
               A practical guide to deciding which improvements are worth the investment — and which ones to skip.
             </p>
             <p className="text-lg text-gold font-bold leading-relaxed mb-6">
-              David Stein — Licensed Real Estate Broker &amp; Certified Residential Appraiser — (206) 900-3015
+              Real Property Planning — Licensed Real Estate Broker &amp; Certified Residential Appraiser — (206) 900-3015
             </p>
             <div className="flex flex-wrap gap-3">
               <Link to="/contact">
@@ -208,7 +208,7 @@ const RepairsBeforeSellingProbateHomeWashington = () => (
               Every potential improvement to a probate property should be evaluated through one lens: will this investment return more than it costs at closing?
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              David Stein's dual background as a Licensed Broker and Certified Residential Appraiser means every repair recommendation is grounded in methodology — not guesswork. He evaluates each potential improvement based on comparable sales data, buyer behavior in the current market, and the property's specific condition.
+              A dual background as a Licensed Broker and Certified Residential Appraiser means every repair recommendation is grounded in methodology — not guesswork. He evaluates each potential improvement based on comparable sales data, buyer behavior in the current market, and the property's specific condition.
             </p>
             <div className="rounded-lg bg-background border-l-4 border-gold p-6 shadow-sm">
               <p className="text-foreground text-base md:text-lg leading-relaxed">
@@ -262,7 +262,7 @@ const RepairsBeforeSellingProbateHomeWashington = () => (
                 Selling as-is does not mean giving the property away. It means pricing it accurately for its actual condition and marketing it to buyers who are specifically looking for properties they can improve themselves — investors, contractors, and experienced buyers who understand the estate sale market.
               </p>
               <p className="text-foreground text-base md:text-lg leading-relaxed">
-                David Stein evaluates every estate property honestly — recommending the preparation approach that will produce the best financial outcome for the estate given its specific condition, timeline, and market position.
+                Real Property Planning evaluates every estate property honestly — recommending the preparation approach that will produce the best financial outcome for the estate given its specific condition, timeline, and market position.
               </p>
             </div>
           </div>
@@ -273,9 +273,9 @@ const RepairsBeforeSellingProbateHomeWashington = () => (
       <section className="py-14 md:py-20 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-3xl text-foreground font-semibold mb-5">How David Stein Evaluates Repairs</h2>
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-5">How Real Property Planning Evaluates Repairs</h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              David Stein's dual background as a Licensed Broker and Certified Residential Appraiser means every repair recommendation is grounded in comparable sales data and current buyer behavior — not general contractor estimates or guesswork.
+              A dual background as a Licensed Broker and Certified Residential Appraiser means every repair recommendation is grounded in comparable sales data and current buyer behavior — not general contractor estimates or guesswork.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               David manages vendor coordination for all preparation work — scheduling contractors, overseeing the work, and ensuring the property is ready to list without the executor needing to be on-site.
@@ -329,7 +329,7 @@ const RepairsBeforeSellingProbateHomeWashington = () => (
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-4">Ready to Talk?</h2>
             <p className="text-lg text-primary-foreground/85 leading-relaxed mb-8">
-              David Stein evaluates every estate property honestly — recommending the preparation approach that will produce the best outcome for the estate. No pressure — just practical guidance.
+              Real Property Planning evaluates every estate property honestly — recommending the preparation approach that will produce the best outcome for the estate. No pressure — just practical guidance.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               <a href="tel:2069003015">
