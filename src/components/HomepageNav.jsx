@@ -71,7 +71,7 @@ const HomepageNav = () => {
                 <p className="hn-blurb">{s.blurb}</p>
               </div>
               <div className="hn-footer">
-                <span className="hn-cta">
+                <span className="gold-cta">
                   Explore
                   <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
                 </span>
