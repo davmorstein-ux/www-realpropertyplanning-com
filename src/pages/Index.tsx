@@ -123,9 +123,6 @@ const Index = () => {
       {/* 2. ORIENTATION — 3 calm high-level entry categories */}
       <HomepageNav />
 
-      {/* 3. PROFESSIONAL NETWORK — curated 6-tile preview */}
-      <ProfessionalNetworkPreview />
-
       {/* 4. REASSURANCE / TRUST */}
       <HomepageWarmStatement />
 
