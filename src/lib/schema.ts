@@ -47,11 +47,11 @@ export const areaServed = [
   { "@type": "City", name: "La Conner", containedInPlace: { "@type": "State", name: "Washington" } },
 ];
 
-/** Person schema for David Stein — President of Real Property Planning */
+/** Person schema for Real Property Planning — President of Real Property Planning */
 export const davidSteinPerson = {
   "@type": "Person",
   "@id": `${SITE_URL}/#david-stein`,
-  name: "David Stein",
+  name: "Real Property Planning",
   jobTitle: "President, Real Property Planning",
   url: `${SITE_URL}/about`,
   worksFor: {
@@ -71,13 +71,13 @@ export const davidSteinPerson = {
       name: "eXp Realty",
       url: "https://www.exprealty.com",
       description:
-        "License broker only — David Stein's Washington State real estate license is held under eXp Realty. eXp Realty is not an owner, partner, or affiliate of Real Property Planning.",
+        "License broker only — Real Property Planning's Washington State real estate license is held under eXp Realty. eXp Realty is not an owner, partner, or affiliate of Real Property Planning.",
     },
     {
       "@type": "Organization",
       name: "Stein Appraisal",
       description:
-        "David Stein's independent Washington State certified residential appraisal practice. Stein Appraisal is separate from Real Property Planning and from eXp Realty.",
+        "An independent Washington State certified residential appraisal practice. Stein Appraisal is separate from Real Property Planning and from eXp Realty.",
     },
   ],
   hasCredential: [
@@ -207,7 +207,7 @@ export const realEstateAgentSchema = {
       },
       image: LOGO_URL,
       description:
-        "Real Property Planning is Washington State's independent professional resource hub and ecosystem for probate real estate, inherited property sales, estate appraisals, and senior housing transitions — serving families, executors, attorneys, and professionals throughout the Puget Sound region. Led by President David Stein. David Stein's real estate license is held under eXp Realty; appraisal services provided through Stein Appraisal.",
+        "Real Property Planning is Washington State's independent professional resource hub and ecosystem for probate real estate, inherited property sales, estate appraisals, and senior housing transitions — serving families, executors, attorneys, and professionals throughout the Puget Sound region. Real estate licenses are held under eXp Realty; appraisal services are provided through Stein Appraisal.",
       telephone: "(206) 900-3015",
       email: "info@realpropertyplanning.com",
       address: {

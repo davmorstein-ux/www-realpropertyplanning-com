@@ -100,7 +100,7 @@ const Footer = () => {
         {/* Compliance & disclaimer — single compact block */}
         <div className="border-t border-primary-foreground pt-6 text-center" data-nosnippet="true">
           <p className="text-primary-foreground text-base leading-relaxed max-w-3xl mx-auto mb-3">
-            David Stein is a Washington State Licensed Real Estate Broker (license held under eXp Realty) and a Washington State Certified Residential Appraiser (Stein Appraisal). Real Property Planning is not a law firm or tax advisor. For legal, tax, or probate-specific advice, consult a qualified professional.
+            Real Property Planning — independent hub for probate, estate, and senior transition real estate in Washington State. License held under eXp Realty. Appraisal services provided through Stein Appraisal. Real Property Planning is not a law firm or tax advisor. For legal, tax, or probate-specific advice, consult a qualified professional.
           </p>
           <p className="text-primary-foreground text-base leading-relaxed max-w-2xl mx-auto mb-3">
             Accessibility questions or concerns:{" "}

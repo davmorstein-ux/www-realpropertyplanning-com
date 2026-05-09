@@ -69,7 +69,7 @@ const relatedCards = [
 
 const jsonLd = articleSchema({
   headline: "Who Has Authority to Sell Probate Property in Washington State?",
-  description: "David Stein explains who has legal authority to sell estate property in Washington State.",
+  description: "Real Property Planning explains who has legal authority to sell estate property in Washington State.",
   url: "/guides/who-has-authority-sell-probate-property-washington",
   datePublished: "2026-04-21",
   dateModified: "2026-04-21",
@@ -80,7 +80,7 @@ const WhoHasAuthoritySellProbateProperty = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
       title="Who Has Authority to Sell Probate Property in Washington State? | Real Property Planning"
-      description="David Stein explains who has legal authority to sell estate property in Washington State — including personal representatives, trustees, and what Letters Testamentary mean for your sale. (206) 900-3015."
+      description="Real Property Planning explains who has legal authority to sell estate property in Washington State — including personal representatives, trustees, and what Letters Testamentary mean for your sale. (206) 900-3015."
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema
@@ -103,7 +103,7 @@ const WhoHasAuthoritySellProbateProperty = () => (
               For executors, trustees, attorneys, and families who need to understand legal authority before any real estate action can be taken.
             </p>
             <p className="text-lg text-gold font-bold leading-relaxed mb-6">
-              David Stein — Licensed Real Estate Broker &amp; Certified Residential Appraiser — (206) 900-3015
+              Real Property Planning — Licensed Real Estate Broker &amp; Certified Residential Appraiser — (206) 900-3015
             </p>
             <div className="flex flex-wrap gap-3">
               <Link to="/contact">
@@ -229,9 +229,9 @@ const WhoHasAuthoritySellProbateProperty = () => (
       <section className="py-14 md:py-20 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-3xl text-foreground font-semibold mb-5">How David Stein Works Within This Framework</h2>
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-5">How Real Property Planning Works Within This Framework</h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              David Stein regularly works with personal representatives, trustees, estate attorneys, and families throughout Washington State. He understands exactly what documentation is required before a sale can proceed — and he coordinates directly with legal counsel to ensure every step is properly authorized.
+              Real Property Planning regularly works with personal representatives, trustees, estate attorneys, and families throughout Washington State. Our team understands exactly what documentation is required before a sale can proceed — and we coordinate directly with legal counsel to ensure every step is properly authorized.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               David can begin working with the family before Letters Testamentary are issued — assessing the property, developing a pricing strategy, and coordinating preparation so everything is ready the moment legal authority is in place.
@@ -285,7 +285,7 @@ const WhoHasAuthoritySellProbateProperty = () => (
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-4">Ready to Talk?</h2>
             <p className="text-lg text-primary-foreground/85 leading-relaxed mb-8">
-              David Stein works with personal representatives, trustees, and attorneys throughout Washington State. No pressure — just practical guidance.
+              Real Property Planning works with personal representatives, trustees, and attorneys throughout Washington State. No pressure — just practical guidance.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               <a href="tel:2069003015">

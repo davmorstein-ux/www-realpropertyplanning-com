@@ -138,21 +138,21 @@ const Contact = () => {
                 Real Property Planning works with attorneys, executors, fiduciaries, and families across Washington State.
               </p>
               <p className="text-muted-foreground text-[15px] leading-relaxed mb-8">
-                Through David Stein's eXp Realty network, Real Property Planning can connect you with a trusted broker anywhere in the country.
+                Through our eXp Realty network, Real Property Planning can connect you with a trusted broker anywhere in the country.
               </p>
 
               {/* Brokerage Info */}
               <div className="pt-8 border-t border-border">
                 <div className="space-y-2 text-[15px] text-muted-foreground">
                   <p className="font-medium text-foreground">Real Property Planning</p>
-                  <p>David Stein — Washington State Licensed Real Estate Broker</p>
+                  <p>Real Property Planning — Washington State Licensed Real Estate Broker</p>
                   <p>Washington State Certified Residential Appraiser — Stein Appraisal</p>
-                  <p>David Stein's real estate license is held under eXp Realty</p>
+                  <p>Real estate licenses are held under eXp Realty</p>
                   <p>Mailing Address: PO Box 1462, Woodinville, WA 98072</p>
                   <p>Office Address: 1455 NW Leary Way, Seattle, WA 98107</p>
                 </div>
                 <div className="mt-4 flex flex-col items-center md:items-start">
-                  <img src={expRealtyLogo} alt="David Stein's real estate license is held under eXp Realty." className="w-[70px] h-auto opacity-70" loading="lazy" />
+                  <img src={expRealtyLogo} alt="Real estate licenses are held under eXp Realty." className="w-[70px] h-auto opacity-70" loading="lazy" />
                 </div>
               </div>
             </div>

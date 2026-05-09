@@ -17,7 +17,7 @@ import fundSeniorLivingIcon from "@/assets/icons/fund-senior-living-icon-washing
 const steps = [
   {
     title: "Understand what the home is actually worth",
-    body: "David Stein's dual credential as a Licensed Broker and Certified Residential Appraiser means families get a professional valuation — not a listing pitch. That number becomes the foundation for every financial decision that follows.",
+    body: "A dual credential as a Licensed Broker and Certified Residential Appraiser means families get a professional valuation — not a listing pitch. That number becomes the foundation for every financial decision that follows.",
   },
   {
     title: "Figure out the timeline",
@@ -29,7 +29,7 @@ const steps = [
   },
   {
     title: "Price it correctly for its condition",
-    body: "Overpricing causes the home to sit and carrying costs to pile up. Underpricing leaves money on the table that could have funded months of additional care. David's appraisal background means the price is set based on methodology — not optimism.",
+    body: "Overpricing causes the home to sit and carrying costs to pile up. Underpricing leaves money on the table that could have funded months of additional care. An appraisal background means the price is set based on methodology — not optimism.",
   },
   {
     title: "Close and fund the care plan",
@@ -80,7 +80,7 @@ const SellHouseFundSeniorLiving = () => {
     <>
       <SEOHead
         title="How to Sell a Parent's House to Pay for Senior Living in Washington State | Real Property Planning"
-        description="Learn how Washington State families use home sale proceeds to pay for assisted living, memory care, and adult family home placement. David Stein — Licensed Broker & Certified Appraiser — (206) 900-3015."
+        description="Learn how Washington State families use home sale proceeds to pay for assisted living, memory care, and adult family home placement. Real Property Planning — Licensed Broker & Certified Appraiser — (206) 900-3015."
         canonical="https://realpropertyplanning.com/sell-house-fund-senior-living"
       />
       <BreadcrumbSchema
@@ -107,7 +107,7 @@ const SellHouseFundSeniorLiving = () => {
                 For most Washington State families, the home is the key to affording the care their parent needs.
               </p>
               <p className="text-primary-foreground text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
-                David Stein coordinates the home sale with the care plan — so the timing and the proceeds work together.
+                Real Property Planning coordinates the home sale with the care plan — so the timing and the proceeds work together.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/contact">
@@ -290,7 +290,7 @@ const SellHouseFundSeniorLiving = () => {
                 Ready to Talk?
               </h2>
               <p className="text-primary-foreground/90 text-base md:text-lg leading-relaxed mb-8">
-                Most families start with a single question. David Stein is happy to hear it — no pressure, no obligation.
+                Most families start with a single question. Our team is happy to hear it — no pressure, no obligation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="tel:2069003015">
