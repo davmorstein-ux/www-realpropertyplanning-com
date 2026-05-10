@@ -168,27 +168,65 @@ const ProbateEstateSales = () => {
               Timing and Coordination in Probate Sales
             </h2>
             <div className="space-y-5">
-              <div className="flex gap-5 items-start">
-                <span className="text-gold font-serif text-2xl font-semibold shrink-0 leading-none pt-1">01</span>
-                <div>
-                  <h3 className="font-serif text-lg text-foreground font-semibold mb-1">Before Legal Authority Is Granted</h3>
-                  <p className="text-muted-foreground leading-relaxed">We can assess the property and help you plan before legal authority is formally granted.</p>
-                </div>
-              </div>
-              <div className="flex gap-5 items-start">
-                <span className="text-gold font-serif text-2xl font-semibold shrink-0 leading-none pt-1">02</span>
-                <div>
-                  <h3 className="font-serif text-lg text-foreground font-semibold mb-1">During Active Probate</h3>
-                  <p className="text-muted-foreground leading-relaxed">Once authority is established, we coordinate preparation, pricing, and listing — in step with the legal proceedings.</p>
-                </div>
-              </div>
-              <div className="flex gap-5 items-start">
-                <span className="text-gold font-serif text-2xl font-semibold shrink-0 leading-none pt-1">03</span>
-                <div>
-                  <h3 className="font-serif text-lg text-foreground font-semibold mb-1">Post-Probate or Trust Distribution</h3>
-                  <p className="text-muted-foreground leading-relaxed">We manage preparation, marketing, negotiation, and closing — evaluating every repair for return on investment.</p>
-                </div>
-              </div>
+              {[
+                { hour: 1, title: "Before Legal Authority Is Granted", desc: "We can assess the property and help you plan before legal authority is formally granted." },
+                { hour: 2, title: "During Active Probate", desc: "Once authority is established, we coordinate preparation, pricing, and listing — in step with the legal proceedings." },
+                { hour: 3, title: "Post-Probate or Trust Distribution", desc: "We manage preparation, marketing, negotiation, and closing — evaluating every repair for return on investment." },
+              ].map(({ hour, title, desc }) => {
+                const angle = hour * 30; // degrees from 12
+                const rad = (angle - 90) * (Math.PI / 180);
+                const cx = 32, cy = 32, len = 14;
+                const hx = cx + Math.cos(rad) * len;
+                const hy = cy + Math.sin(rad) * len;
+                return (
+                  <div key={hour} className="flex gap-5 items-center">
+                    <svg
+                      width="64"
+                      height="64"
+                      viewBox="0 0 64 64"
+                      aria-hidden="true"
+                      className="shrink-0"
+                      style={{ filter: "drop-shadow(0 4px 8px rgba(0,0,0,0.20))" }}
+                    >
+                      <defs>
+                        <radialGradient id={`clockFace${hour}`} cx="40%" cy="35%" r="70%">
+                          <stop offset="0%" stopColor="#FFFFFF" />
+                          <stop offset="70%" stopColor="#FAF6EC" />
+                          <stop offset="100%" stopColor="#EFE6CC" />
+                        </radialGradient>
+                        <linearGradient id={`clockRim${hour}`} x1="0%" y1="0%" x2="0%" y2="100%">
+                          <stop offset="0%" stopColor="#E2C66A" />
+                          <stop offset="50%" stopColor="#C9A84C" />
+                          <stop offset="100%" stopColor="#8C7530" />
+                        </linearGradient>
+                      </defs>
+                      {/* Outer rim */}
+                      <circle cx="32" cy="32" r="30" fill={`url(#clockRim${hour})`} />
+                      {/* Inner face */}
+                      <circle cx="32" cy="32" r="25" fill={`url(#clockFace${hour})`} stroke="#1E3A5F" strokeWidth="0.5" />
+                      {/* Hour ticks */}
+                      {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((i) => {
+                        const a = (i * 30 - 90) * (Math.PI / 180);
+                        const x1 = 32 + Math.cos(a) * 22;
+                        const y1 = 32 + Math.sin(a) * 22;
+                        const x2 = 32 + Math.cos(a) * 25;
+                        const y2 = 32 + Math.sin(a) * 25;
+                        return <line key={i} x1={x1} y1={y1} x2={x2} y2={y2} stroke="#1E3A5F" strokeWidth={i % 3 === 0 ? 1.8 : 1} strokeLinecap="round" />;
+                      })}
+                      {/* Minute hand pointing to 12 */}
+                      <line x1="32" y1="32" x2="32" y2="14" stroke="#C9A84C" strokeWidth="2.5" strokeLinecap="round" />
+                      {/* Hour hand */}
+                      <line x1="32" y1="32" x2={hx} y2={hy} stroke="#1E3A5F" strokeWidth="3.5" strokeLinecap="round" />
+                      {/* Center cap */}
+                      <circle cx="32" cy="32" r="2.5" fill="#C9A84C" stroke="#8C7530" strokeWidth="0.5" />
+                    </svg>
+                    <div>
+                      <h3 className="font-serif text-lg text-foreground font-semibold mb-1">{title}</h3>
+                      <p className="text-muted-foreground leading-relaxed">{desc}</p>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
             <p className="text-muted-foreground mt-8">
               <Link to="/how-the-process-works" className="text-accent hover:text-gold underline underline-offset-4 transition-colors">
