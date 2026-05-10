@@ -42,7 +42,7 @@ const HomepageNav = () => {
               <div className="card-3d-blue__inner h-full relative">
                 <div className="card-3d-blue__face h-full">
                   <div className="flex h-full flex-col">
-                    <div className="relative w-full overflow-hidden bg-transparent flex items-center justify-center" style={{ aspectRatio: "500 / 445" }}>
+                    <div className="relative w-full overflow-hidden bg-transparent flex items-center justify-center" style={{ aspectRatio: "500 / 312" }}>
                       <img
                         src={s.img}
                         alt=""
@@ -51,14 +51,14 @@ const HomepageNav = () => {
                         className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
                       />
                     </div>
-                    <div className="relative flex flex-1 flex-col items-center text-center px-6 pt-6 pb-7 overflow-hidden">
-                      <h3 className="font-serif text-[24px] md:text-[26px] font-semibold text-navy leading-snug mb-3 transition-opacity duration-200 group-hover:opacity-0">
+                    <div className="relative flex flex-1 flex-col items-center text-center overflow-hidden" style={{ padding: "16px" }}>
+                      <h3 className="font-serif text-[22px] md:text-[24px] font-semibold text-navy leading-snug mb-3 transition-opacity duration-200 group-hover:opacity-0">
                         {s.title}
                       </h3>
-                      <p className="text-foreground text-[17px] md:text-[18px] leading-relaxed mb-6 transition-opacity duration-200 group-hover:opacity-0">
+                      <p className="text-foreground text-[14px] leading-relaxed mb-6 transition-opacity duration-200 group-hover:opacity-0">
                         {s.blurb}
                       </p>
-                      <span className="gold-cta mt-auto transition-opacity duration-200 group-hover:opacity-0">
+                      <span className="gold-cta mt-auto transition-opacity duration-200 group-hover:opacity-0" style={{ padding: "10px 16px" }}>
                         Explore
                         <svg viewBox="0 0 24 24" aria-hidden="true">
                           <polyline points="9 18 15 12 9 6" />
