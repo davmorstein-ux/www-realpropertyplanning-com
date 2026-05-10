@@ -109,7 +109,7 @@ const HomepageHero = () => {
   return (
     <div style={{ ...fontBody, background: "#FFFFFF", color: "#1E3A5F" }}>
       {/* ===== Stacked Header (homepage-only) ===== */}
-      <header style={{ position: "relative", zIndex: 50, width: "100%" }}>
+      <header style={{ position: "sticky", top: 0, zIndex: 9999, width: "100%", boxShadow: "0 2px 12px rgba(0,0,0,0.12)" }}>
         {/* Row 1 — Top bar (navy) */}
         <div style={{ background: "#1E3A5F", width: "100%" }}>
           <div
