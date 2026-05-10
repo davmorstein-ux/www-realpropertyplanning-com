@@ -203,12 +203,12 @@ const HomepageHero = () => {
                 justifyContent: "center",
                 alignItems: "center",
                 gap: 28,
-                backgroundColor: scrolled ? "rgba(245, 240, 230, 0.95)" : "rgb(245, 240, 230)",
-                backdropFilter: scrolled ? "blur(8px)" : "none",
-                WebkitBackdropFilter: scrolled ? "blur(8px)" : "none",
+                backgroundColor: scrolled ? "rgba(245, 240, 230, 0.55)" : "rgba(245, 240, 230, 1)",
+                backdropFilter: scrolled ? "blur(16px)" : "none",
+                WebkitBackdropFilter: scrolled ? "blur(16px)" : "none",
                 borderRadius: "50px",
-                boxShadow: "0 4px 20px rgba(30,58,95,0.12)",
-                border: "1px solid rgba(30,58,95,0.10)",
+                boxShadow: scrolled ? "0 8px 32px rgba(30,58,95,0.22)" : "0 4px 20px rgba(30,58,95,0.12)",
+                border: scrolled ? "1px solid rgba(30,58,95,0.22)" : "1px solid rgba(30,58,95,0.10)",
                 transition: "all 0.3s ease",
               }}
             >
