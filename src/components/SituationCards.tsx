@@ -81,46 +81,47 @@ const SituationCards = () => {
                         loading="lazy"
                       />
                     </div>
-                    <div className="flex flex-1 flex-col items-center text-center px-6 pt-6 pb-7">
-                      <h3 className="font-serif text-[24px] md:text-[26px] font-semibold text-navy leading-snug mb-3 h-[72px] flex items-start justify-center transition-colors duration-300 group-hover:text-accent">
+                    <div className="relative flex flex-1 flex-col items-center text-center px-6 pt-6 pb-7 overflow-hidden">
+                      <h3 className="font-serif text-[24px] md:text-[26px] font-semibold text-navy leading-snug mb-3 h-[72px] flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0">
                         {s.title}
                       </h3>
-                      <p className="text-foreground text-[18px] md:text-[19px] leading-relaxed mb-6 h-[88px] flex items-start justify-center">
+                      <p className="text-foreground text-[18px] md:text-[19px] leading-relaxed mb-6 h-[88px] flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0">
                         {s.description}
                       </p>
-                      <span className="gold-cta mt-auto">
+                      <span className="gold-cta mt-auto transition-opacity duration-200 group-hover:opacity-0">
                         {s.cta}
                         <ArrowRight aria-hidden="true" />
                       </span>
+                      <div
+                        aria-hidden="true"
+                        className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100"
+                        style={{
+                          background: "rgba(10, 20, 46, 0.97)",
+                          zIndex: 10,
+                          display: "flex",
+                          flexDirection: "column",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          textAlign: "center",
+                          padding: "1.25rem 1.5rem",
+                          transition: "opacity 0.28s ease 0.1s",
+                        }}
+                      >
+                        <h3 className="font-serif text-white text-[24px] md:text-[26px] font-bold leading-snug mb-3">
+                          {s.title}
+                        </h3>
+                        <span
+                          className="inline-flex items-center gap-2 text-[16px] font-bold tracking-wide"
+                          style={{ color: "#C9A84C", fontFamily: "'Inter', sans-serif" }}
+                        >
+                          {s.cta}
+                          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                            <polyline points="9 18 15 12 9 6" />
+                          </svg>
+                        </span>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div
-                  aria-hidden="true"
-                  className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                  style={{
-                    background: "rgba(14, 30, 62, 0.85)",
-                    zIndex: 10,
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    textAlign: "center",
-                    padding: "0 2rem",
-                  }}
-                >
-                  <p className="text-white text-[18px] md:text-[20px] font-medium leading-relaxed mb-5" style={{ fontFamily: "'Inter', sans-serif" }}>
-                    {s.description}
-                  </p>
-                  <span
-                    className="inline-flex items-center gap-2 text-[16px] font-bold tracking-wide"
-                    style={{ color: "#C9A84C", fontFamily: "'Inter', sans-serif" }}
-                  >
-                    Explore Guidance
-                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                      <polyline points="9 18 15 12 9 6" />
-                    </svg>
-                  </span>
                 </div>
               </div>
             </Link>
