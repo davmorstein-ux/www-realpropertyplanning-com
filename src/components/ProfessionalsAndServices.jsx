@@ -6,14 +6,9 @@ const styles = `
   .p1section { font-family: 'Montserrat', sans-serif; padding: 0 40px 64px; }
   .p1grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1300px; margin: 0 auto 20px; }
   .p1tile { width: 100%; cursor: pointer; text-decoration: none; display: block; }
-  .p1card { width: 100%; height: 380px; background: #FDFAF5; border-radius: 5px; border: 1px solid rgba(184,154,90,.40); box-shadow: 0 8px 24px rgba(18,36,63,.15); display: flex; flex-direction: column; position: relative; transition: box-shadow .4s ease, transform .4s ease; overflow: hidden; }
-  .p1tile:hover .p1card { box-shadow: 0 16px 40px rgba(18,36,63,.25); transform: translateY(-6px); }
-  .p1corner { position: absolute; width: 14px; height: 14px; pointer-events: none; z-index: 50; }
-  .p1corner.tl { top: 8px; left: 8px; border-top: 1.5px solid #b89a5a; border-left: 1.5px solid #b89a5a; }
-  .p1corner.tr { top: 8px; right: 8px; border-top: 1.5px solid #b89a5a; border-right: 1.5px solid #b89a5a; }
-  .p1corner.bl { bottom: 8px; left: 8px; border-bottom: 1.5px solid #b89a5a; border-left: 1.5px solid #b89a5a; }
-  .p1corner.br { bottom: 8px; right: 8px; border-bottom: 1.5px solid #b89a5a; border-right: 1.5px solid #b89a5a; }
-  .p1imgbox { width: 100%; height: 220px; flex-shrink: 0; background: #FDFAF5; display: flex; align-items: flex-start; justify-content: center; overflow: hidden; transition: transform .4s ease; }
+  .p1card { width: 100%; height: 380px; background: #FFFFFF; border-radius: 16px; border: 2px solid #C9A84C; box-shadow: 0 2px 4px rgba(0,0,0,0.06), 0 8px 16px rgba(0,0,0,0.08), 0 16px 32px rgba(0,0,0,0.06), inset 0 0 0 1px rgba(201,168,76,0.35); display: flex; flex-direction: column; position: relative; transition: all 0.3s ease; overflow: hidden; }
+  .p1tile:hover .p1card { box-shadow: 0 4px 8px rgba(0,0,0,0.08), 0 12px 24px rgba(0,0,0,0.10), 0 24px 48px rgba(0,0,0,0.08), inset 0 0 0 1px rgba(201,168,76,0.5); transform: translateY(-6px); }
+  .p1imgbox { width: 100%; height: 220px; flex-shrink: 0; background: #FFFFFF; display: flex; align-items: flex-start; justify-content: center; overflow: hidden; transition: transform .4s ease; }
   .p1tile:hover .p1imgbox { transform: scale(1.03); }
   .p1img { display: block; width: 100%; height: 220px; object-fit: contain; object-position: top center; }
   .p1body { flex: 1; padding: 12px 10px 0; overflow: hidden; position: relative; }
@@ -23,7 +18,7 @@ const styles = `
   .p1hover { position: absolute; inset: 0; background: rgba(10,20,46,.97); display: flex; align-items: center; justify-content: center; padding: 14px; opacity: 0; transition: opacity .28s ease .1s; z-index: 30; }
   .p1tile:hover .p1hover { opacity: 1; }
   .p1tagline { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 14px; color: #FFF; text-align: center; line-height: 1.5; }
-  .p1footer { height: 52px; flex-shrink: 0; display: flex; align-items: center; padding: 0 12px; border-top: 1.5px solid rgba(184,154,90,.28); background: #FDFAF5; border-radius: 0 0 5px 5px; gap: 8px; justify-content: space-between; }
+  .p1footer { height: 52px; flex-shrink: 0; display: flex; align-items: center; padding: 0 12px; border-top: 1.5px solid rgba(201,168,76,0.35); background: #FFFFFF; gap: 8px; justify-content: space-between; }
   .p1label { font-size: 10px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: #1a3a6b; line-height: 1.4; flex: 1; }
   .p1arrow { margin-left: auto; width: 28px; height: 28px; border: 1.5px solid #1a3a6b; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: background .25s; flex-shrink: 0; }
   .p1tile:hover .p1arrow { background: #1a3a6b; }
@@ -42,8 +37,6 @@ const styles = `
 const P1Tile = ({ pill, title, tagline, imgSrc, href }) => (
   <a className="p1tile" href={href}>
     <div className="p1card">
-      <div className="p1corner tl" /><div className="p1corner tr" />
-      <div className="p1corner bl" /><div className="p1corner br" />
       <div className="p1imgbox">
         <img className="p1img" src={imgSrc} alt={title} loading="lazy" />
       </div>
