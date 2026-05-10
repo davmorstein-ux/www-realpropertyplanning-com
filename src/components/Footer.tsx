@@ -1,13 +1,12 @@
 import { Link } from "react-router-dom";
 
-import mappin3d from "@/assets/real-estate-service-areas-mappin-washington.webp";
-import iconEmail3d from "@/assets/icons/real-estate-email-contact-icon-washington.webp";
-
 import alcaLogo from "@/assets/senior-advocates-alca-partner-washington.webp";
 import naosaBadge from "@/assets/senior-advocates-naosa-badge-washington.webp";
 import naepcLogo from "@/assets/estate-planners-naepc-badge-washington.webp";
 import kccLogo from "@/assets/king-county-collaborative-law-logo.webp";
-import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
+import iconPhone3d from "@/assets/icons/real-estate-phone-handset-3d-icon-washington.webp";
+import iconEmail3d from "@/assets/icons/real-estate-email-envelope-3d-icon-washington.webp";
+import iconPin3d from "@/assets/icons/real-estate-location-pin-3d-icon-washington.webp";
 
 const Footer = () => {
   return (
