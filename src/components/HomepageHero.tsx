@@ -184,7 +184,10 @@ const HomepageHero = () => {
         {!isMobile && (
           <div
             style={{
-              background: "#FAF7F0",
+              backgroundColor: scrolled ? "rgba(245, 240, 230, 0.92)" : "rgb(245, 240, 230)",
+              backdropFilter: scrolled ? "blur(8px)" : "none",
+              WebkitBackdropFilter: scrolled ? "blur(8px)" : "none",
+              transition: "all 0.3s ease",
               width: "100%",
               borderBottom: "1px solid rgba(30,58,95,0.12)",
               boxShadow: "0 2px 6px rgba(30,58,95,0.06)",
@@ -195,13 +198,14 @@ const HomepageHero = () => {
               style={{
                 maxWidth: 1100,
                 margin: "0 auto",
+                width: "100%",
                 minHeight: 50,
                 padding: "0 24px",
                 display: "flex",
                 flexWrap: "nowrap",
-                justifyContent: "space-between",
+                justifyContent: "center",
                 alignItems: "center",
-                gap: 12,
+                gap: 28,
               }}
             >
               {NAV.map((item) => {
