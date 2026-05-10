@@ -457,20 +457,6 @@ const HomepageHero = () => {
       {/* ===== Trust Bar ===== */}
       <section className="bg-navy" style={{ background: "#1a2f4e", padding: isMobile ? "16px 20px" : "28px 24px" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto" }}>
-          <h1 className="text-center font-bold"
-            style={{
-              fontFamily: "'Cormorant Garamond', 'Georgia', serif",
-              color: "#f0c040",
-              fontSize: isMobile ? "30px" : "56px",
-              fontWeight: 700,
-              textAlign: "center",
-              margin: 0,
-              letterSpacing: "0.08em",
-              textShadow: "0 2px 8px rgba(0,0,0,0.4)",
-            }}
-          >
-            Senior Transitions · Estate Sales · Probate
-          </h1>
           {/* Warm statement moved to Index.tsx below hero */}
         </div>
       </section>
