@@ -155,23 +155,31 @@ const ProbateEstateSales = () => {
               This distinction matters more than most people realize. Understanding which situation you're in determines your legal authority, your timeline, and your options before you can take any action on the property.
             </p>
             <div className="grid md:grid-cols-2 gap-5">
-              <div className="p-6 hover:-translate-y-1" style={card3dStyle} onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 8px 16px rgba(0,0,0,0.12), 0 20px 40px rgba(0,0,0,0.08)'; }} onMouseLeave={e => { e.currentTarget.style.boxShadow = card3dStyle.boxShadow; }}>
-                <h3 className="font-serif text-lg text-foreground font-semibold mb-2">Probate Property</h3>
-                <p className="text-muted-foreground leading-relaxed text-[15px] mb-4">
-                  Court-supervised. Legal authority required before the sale can proceed.
-                </p>
-                <Link to="/terminology" className="text-accent hover:text-gold text-sm font-medium transition-colors">
-                  Learn more →
-                </Link>
+              <div className="card-3d-blue">
+                <div className="card-3d-blue__inner">
+                  <div className="card-3d-blue__face p-6">
+                    <h3 className="font-serif text-lg text-foreground font-semibold mb-2">Probate Property</h3>
+                    <p className="text-muted-foreground leading-relaxed text-[15px] mb-4">
+                      Court-supervised. Legal authority required before the sale can proceed.
+                    </p>
+                    <Link to="/terminology" className="text-accent hover:text-gold text-sm font-medium transition-colors">
+                      Learn more →
+                    </Link>
+                  </div>
+                </div>
               </div>
-              <div className="p-6 hover:-translate-y-1" style={card3dStyle} onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 8px 16px rgba(0,0,0,0.12), 0 20px 40px rgba(0,0,0,0.08)'; }} onMouseLeave={e => { e.currentTarget.style.boxShadow = card3dStyle.boxShadow; }}>
-                <h3 className="font-serif text-lg text-foreground font-semibold mb-2">Inherited Property (Non-Probate)</h3>
-                <p className="text-muted-foreground leading-relaxed text-[15px] mb-4">
-                  Passes outside probate via trust or joint tenancy. Fewer legal hurdles, but still complex.
-                </p>
-                <Link to="/guides/inherited-house-washington" className="text-accent hover:text-gold text-sm font-medium transition-colors">
-                  Learn more →
-                </Link>
+              <div className="card-3d-blue">
+                <div className="card-3d-blue__inner">
+                  <div className="card-3d-blue__face p-6">
+                    <h3 className="font-serif text-lg text-foreground font-semibold mb-2">Inherited Property (Non-Probate)</h3>
+                    <p className="text-muted-foreground leading-relaxed text-[15px] mb-4">
+                      Passes outside probate via trust or joint tenancy. Fewer legal hurdles, but still complex.
+                    </p>
+                    <Link to="/guides/inherited-house-washington" className="text-accent hover:text-gold text-sm font-medium transition-colors">
+                      Learn more →
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
