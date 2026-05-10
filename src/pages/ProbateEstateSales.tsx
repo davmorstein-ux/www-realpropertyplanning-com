@@ -32,16 +32,6 @@ const whatMakesDifferentTiles = [
   { icon: iconPreparationStrategy, label: "Preparation Strategy", text: "As-is vs. repairs has a direct impact on fiduciary defensibility." },
 ];
 
-const card3dStyle = {
-  background: '#FFFFFF',
-  border: '2px solid #C9A84C',
-  borderRadius: '16px',
-  boxShadow: '0 2px 4px rgba(0,0,0,0.06), 0 8px 16px rgba(0,0,0,0.08), 0 16px 32px rgba(0,0,0,0.06)',
-  transition: 'all 0.3s ease',
-};
-
-const card3dHoverShadow = '0 8px 16px rgba(0,0,0,0.10), 0 20px 40px rgba(0,0,0,0.12), 0 0 0 2px #C9A84C';
-
 const jsonLd = articleSchema({
   headline: "Probate Real Estate Sales in Washington State",
   description: "Evidence-based probate real estate guidance for executors, attorneys, and families throughout Washington State. Serving King, Snohomish, Pierce & Kitsap Counties.",
