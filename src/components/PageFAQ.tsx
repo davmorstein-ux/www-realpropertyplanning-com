@@ -52,7 +52,7 @@ const PageFAQ = ({ faqs, heading = "Frequently Asked Questions", eyebrow = "Comm
                 value={`faq-${index}`}
                 className="bg-card border border-border rounded-2xl overflow-hidden data-[state=open]:border-gold/25 transition-colors"
               >
-                <AccordionTrigger className="text-left font-serif text-base md:text-lg font-semibold text-foreground hover:text-gold hover:no-underline px-6 py-5">
+                <AccordionTrigger className="text-left font-serif text-[18px] font-[600] text-foreground hover:text-gold hover:no-underline px-6 py-5">
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="px-6 pb-5 pt-0 text-muted-foreground leading-relaxed">
