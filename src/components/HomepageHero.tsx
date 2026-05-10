@@ -128,7 +128,12 @@ const HomepageHero = () => {
               <img
                 src="/rpp-logo-v4.webp"
                 alt="Real Property Planning"
-                style={{ height: '72px', width: 'auto', objectFit: 'contain' }}
+                style={{
+                  height: '80px',
+                  width: 'auto',
+                  objectFit: 'contain',
+                  display: 'block'
+                }}
               />
             </Link>
             <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
@@ -483,17 +488,15 @@ const HomepageHero = () => {
           >
             WELCOME TO REAL PROPERTY PLANNING
           </h2>
-          <p
-            style={{
-              fontFamily: "'DM Sans', system-ui, sans-serif",
-              color: "rgba(255,255,255,0.92)",
-              fontSize: isMobile ? "34px" : "58px",
-              fontWeight: 600,
-              lineHeight: 1.4,
-              margin: isMobile ? "8px 0 0" : "10px 0 0",
-              letterSpacing: "0.02em",
-            }}
-          >
+          <p style={{
+            fontFamily: "'DM Sans', system-ui, sans-serif",
+            fontSize: '22px',
+            fontWeight: '500',
+            color: 'white',
+            letterSpacing: '0.3px',
+            margin: '0',
+            padding: '0'
+          }}>
             Guidance for Senior Transitions, Estate Sales &amp; Probate
           </p>
         </div>
