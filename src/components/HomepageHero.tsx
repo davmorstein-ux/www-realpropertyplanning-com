@@ -455,9 +455,35 @@ const HomepageHero = () => {
       </section>
 
       {/* ===== Trust Bar ===== */}
-      <section className="bg-navy" style={{ background: "#1a2f4e", padding: isMobile ? "16px 20px" : "28px 24px" }}>
-        <div style={{ maxWidth: 1280, margin: "0 auto" }}>
-          {/* Warm statement moved to Index.tsx below hero */}
+      <section className="bg-navy" style={{ background: "#1a2f4e", padding: isMobile ? "20px 20px" : "36px 24px" }}>
+        <div style={{ maxWidth: 1280, margin: "0 auto", textAlign: "center" }}>
+          <h2
+            style={{
+              fontFamily: "'Cormorant Garamond', 'Georgia', serif",
+              color: "#f0c040",
+              fontSize: isMobile ? "28px" : "48px",
+              fontWeight: 700,
+              lineHeight: 1.2,
+              margin: 0,
+              letterSpacing: "0.04em",
+              textShadow: "0 2px 8px rgba(0,0,0,0.4)",
+            }}
+          >
+            WELCOME TO REAL PROPERTY PLANNING.
+          </h2>
+          <p
+            style={{
+              fontFamily: "'DM Sans', system-ui, sans-serif",
+              color: "rgba(255,255,255,0.92)",
+              fontSize: isMobile ? "15px" : "20px",
+              fontWeight: 600,
+              lineHeight: 1.4,
+              margin: isMobile ? "8px 0 0" : "10px 0 0",
+              letterSpacing: "0.02em",
+            }}
+          >
+            A Roadmap for Senior Transitions - Estate Sales &amp; Probate
+          </p>
         </div>
       </section>
     </div>
