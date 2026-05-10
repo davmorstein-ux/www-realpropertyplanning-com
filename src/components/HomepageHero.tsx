@@ -208,13 +208,14 @@ const HomepageHero = () => {
                 const active =
                   pathname === item.href || (item.children && item.children.some((c) => c.href === pathname));
                 const linkStyle = {
-                  ...fontBody,
+                  fontFamily: "'DM Sans', system-ui, sans-serif",
                   color: "#1E3A5F",
                   textDecoration: "none",
-                  fontSize: 14,
-                  fontWeight: 800 as const,
-                  letterSpacing: "0.08em",
+                  fontSize: "14px",
+                  fontWeight: 600 as const,
+                  letterSpacing: "0.5px",
                   textTransform: "uppercase" as const,
+                  lineHeight: 1,
                   paddingBottom: 4,
                   borderBottom: active ? "2px solid #1E3A5F" : "2px solid transparent",
                 };
