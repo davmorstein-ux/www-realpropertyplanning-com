@@ -4,7 +4,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import { articleSchema } from "@/lib/schema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
-import ProofCallout from "@/components/ProofCallout";
+
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
@@ -34,11 +34,13 @@ const whatMakesDifferentTiles = [
 
 const card3dStyle = {
   background: 'white',
-  border: '1px solid rgba(0,0,0,0.08)',
+  border: '1px solid #C9A84C',
   borderRadius: '16px',
-  boxShadow: '0 4px 6px rgba(0,0,0,0.07), 0 10px 20px rgba(0,0,0,0.05)',
-  transition: 'all 0.2s ease',
+  boxShadow: '0 1px 2px rgba(27,43,75,0.06), 0 4px 8px rgba(27,43,75,0.06), 0 12px 24px rgba(27,43,75,0.08)',
+  transition: 'transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease',
 };
+
+const card3dHoverShadow = '0 4px 8px rgba(27,43,75,0.1), 0 12px 20px rgba(27,43,75,0.12), 0 24px 48px rgba(27,43,75,0.14)';
 
 const jsonLd = articleSchema({
   headline: "Probate Real Estate Sales in Washington State",
@@ -142,12 +144,12 @@ const ProbateEstateSales = () => {
               {whatMakesDifferentTiles.map((tile, i) => (
                   <div
                     key={i}
-                    className="p-6 flex flex-col items-start cursor-default hover:-translate-y-1"
+                    className="p-6 flex flex-col items-start cursor-default"
                     style={card3dStyle}
-                    onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 8px 16px rgba(0,0,0,0.12), 0 20px 40px rgba(0,0,0,0.08)'; }}
-                    onMouseLeave={e => { e.currentTarget.style.boxShadow = card3dStyle.boxShadow; }}
+                    onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = card3dHoverShadow; e.currentTarget.style.borderColor = '#E2C66A'; }}
+                    onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = card3dStyle.boxShadow; e.currentTarget.style.borderColor = '#C9A84C'; }}
                   >
-                    <img src={tile.icon} alt="" aria-hidden="true" loading="lazy" width={56} height={56} className="mb-4 object-contain shrink-0" style={{ width: 56, height: 56 }} />
+                    <img src={tile.icon} alt="" aria-hidden="true" loading="lazy" width="80" height="80" className="mb-4 shrink-0" style={{ width: 80, height: 80, objectFit: 'contain' }} />
                     <h3 className="font-serif text-base text-foreground font-semibold mb-2">{tile.label}</h3>
                     <p className="text-muted-foreground text-[15px] leading-relaxed">{tile.text}</p>
                   </div>
@@ -197,18 +199,6 @@ const ProbateEstateSales = () => {
         </div>
       </section>
 
-      {/* SECTION 5 — Pull Quote */}
-      <section className="py-14 lg:py-16 bg-secondary">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <ProofCallout
-              quote="The dual background in brokerage and appraisal gave us confidence that the property was priced correctly. He made a complicated situation feel manageable."
-              attribution="Professional Referral"
-              variant="accent"
-            />
-          </div>
-        </div>
-      </section>
 
       {/* SECTION 6 — Explore Further (3-tile nav grid) */}
       <section className="py-16 lg:py-20 bg-background">
@@ -218,12 +208,12 @@ const ProbateEstateSales = () => {
             <div className="grid md:grid-cols-3 gap-5">
               <Link
                 to="/client-stories"
-                className="group flex flex-col p-6 hover:-translate-y-1"
+                className="group flex flex-col p-6"
                 style={card3dStyle}
-                onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 8px 16px rgba(0,0,0,0.12), 0 20px 40px rgba(0,0,0,0.08)'; }}
-                onMouseLeave={e => { e.currentTarget.style.boxShadow = card3dStyle.boxShadow; }}
+                onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = card3dHoverShadow; e.currentTarget.style.borderColor = '#E2C66A'; }}
+                onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = card3dStyle.boxShadow; e.currentTarget.style.borderColor = '#C9A84C'; }}
               >
-                <img src={iconClientStories} alt="" aria-hidden="true" loading="lazy" width={56} height={56} className="mb-4 object-contain shrink-0" style={{ width: 56, height: 56 }} />
+                <img src={iconClientStories} alt="" aria-hidden="true" loading="lazy" width="80" height="80" className="mb-4 shrink-0" style={{ width: 80, height: 80, objectFit: 'contain' }} />
                 <h3 className="font-serif text-lg text-foreground font-semibold mb-2 group-hover:text-gold transition-colors">Client Stories</h3>
                 <p className="text-muted-foreground text-[15px] leading-relaxed mb-4 flex-1">See how we've helped executors, families, and trustees navigate real situations.</p>
                 <span className="text-accent group-hover:text-gold text-sm font-medium transition-colors inline-flex items-center gap-1">
@@ -232,12 +222,12 @@ const ProbateEstateSales = () => {
               </Link>
               <Link
                 to="/faq"
-                className="group flex flex-col p-6 hover:-translate-y-1"
+                className="group flex flex-col p-6"
                 style={card3dStyle}
-                onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 8px 16px rgba(0,0,0,0.12), 0 20px 40px rgba(0,0,0,0.08)'; }}
-                onMouseLeave={e => { e.currentTarget.style.boxShadow = card3dStyle.boxShadow; }}
+                onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = card3dHoverShadow; e.currentTarget.style.borderColor = '#E2C66A'; }}
+                onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = card3dStyle.boxShadow; e.currentTarget.style.borderColor = '#C9A84C'; }}
               >
-                <img src={iconCommonQuestions} alt="" aria-hidden="true" loading="lazy" width={56} height={56} className="mb-4 object-contain shrink-0" style={{ width: 56, height: 56 }} />
+                <img src={iconCommonQuestions} alt="" aria-hidden="true" loading="lazy" width="80" height="80" className="mb-4 shrink-0" style={{ width: 80, height: 80, objectFit: 'contain' }} />
                 <h3 className="font-serif text-lg text-foreground font-semibold mb-2 group-hover:text-gold transition-colors">Common Questions</h3>
                 <p className="text-muted-foreground text-[15px] leading-relaxed mb-4 flex-1">Answers to the questions executors and families ask most.</p>
                 <span className="text-accent group-hover:text-gold text-sm font-medium transition-colors inline-flex items-center gap-1">
@@ -246,12 +236,12 @@ const ProbateEstateSales = () => {
               </Link>
               <Link
                 to="/how-the-process-works"
-                className="group flex flex-col p-6 hover:-translate-y-1"
+                className="group flex flex-col p-6"
                 style={card3dStyle}
-                onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 8px 16px rgba(0,0,0,0.12), 0 20px 40px rgba(0,0,0,0.08)'; }}
-                onMouseLeave={e => { e.currentTarget.style.boxShadow = card3dStyle.boxShadow; }}
+                onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = card3dHoverShadow; e.currentTarget.style.borderColor = '#E2C66A'; }}
+                onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = card3dStyle.boxShadow; e.currentTarget.style.borderColor = '#C9A84C'; }}
               >
-                <img src={iconHowProcessWorks} alt="" aria-hidden="true" loading="lazy" width={56} height={56} className="mb-4 object-contain shrink-0" style={{ width: 56, height: 56 }} />
+                <img src={iconHowProcessWorks} alt="" aria-hidden="true" loading="lazy" width="80" height="80" className="mb-4 shrink-0" style={{ width: 80, height: 80, objectFit: 'contain' }} />
                 <h3 className="font-serif text-lg text-foreground font-semibold mb-2 group-hover:text-gold transition-colors">How the Process Works</h3>
                 <p className="text-muted-foreground text-[15px] leading-relaxed mb-4 flex-1">A clear walkthrough from assessment to closing.</p>
                 <span className="text-accent group-hover:text-gold text-sm font-medium transition-colors inline-flex items-center gap-1">
