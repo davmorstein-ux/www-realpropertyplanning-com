@@ -146,7 +146,7 @@ const ProbateEstateSales = () => {
                     key={i}
                     className="p-6 flex flex-col items-start cursor-default"
                     style={card3dStyle}
-                    onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = card3dHoverShadow; e.currentTarget.style.borderColor = '#E2C66A'; }}
+                    onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-6px)'; e.currentTarget.style.boxShadow = card3dHoverShadow; e.currentTarget.style.borderColor = '#E2C66A'; }}
                     onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = card3dStyle.boxShadow; e.currentTarget.style.borderColor = '#C9A84C'; }}
                   >
                     <img src={tile.icon} alt="" aria-hidden="true" loading="lazy" width="80" height="80" className="mb-4 shrink-0" style={{ width: 80, height: 80, objectFit: 'contain' }} />
@@ -210,7 +210,7 @@ const ProbateEstateSales = () => {
                 to="/client-stories"
                 className="group flex flex-col p-6"
                 style={card3dStyle}
-                onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = card3dHoverShadow; e.currentTarget.style.borderColor = '#E2C66A'; }}
+                onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-6px)'; e.currentTarget.style.boxShadow = card3dHoverShadow; e.currentTarget.style.borderColor = '#E2C66A'; }}
                 onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = card3dStyle.boxShadow; e.currentTarget.style.borderColor = '#C9A84C'; }}
               >
                 <img src={iconClientStories} alt="" aria-hidden="true" loading="lazy" width="80" height="80" className="mb-4 shrink-0" style={{ width: 80, height: 80, objectFit: 'contain' }} />
@@ -224,7 +224,7 @@ const ProbateEstateSales = () => {
                 to="/faq"
                 className="group flex flex-col p-6"
                 style={card3dStyle}
-                onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = card3dHoverShadow; e.currentTarget.style.borderColor = '#E2C66A'; }}
+                onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-6px)'; e.currentTarget.style.boxShadow = card3dHoverShadow; e.currentTarget.style.borderColor = '#E2C66A'; }}
                 onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = card3dStyle.boxShadow; e.currentTarget.style.borderColor = '#C9A84C'; }}
               >
                 <img src={iconCommonQuestions} alt="" aria-hidden="true" loading="lazy" width="80" height="80" className="mb-4 shrink-0" style={{ width: 80, height: 80, objectFit: 'contain' }} />
@@ -238,7 +238,7 @@ const ProbateEstateSales = () => {
                 to="/how-the-process-works"
                 className="group flex flex-col p-6"
                 style={card3dStyle}
-                onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = card3dHoverShadow; e.currentTarget.style.borderColor = '#E2C66A'; }}
+                onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-6px)'; e.currentTarget.style.boxShadow = card3dHoverShadow; e.currentTarget.style.borderColor = '#E2C66A'; }}
                 onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = card3dStyle.boxShadow; e.currentTarget.style.borderColor = '#C9A84C'; }}
               >
                 <img src={iconHowProcessWorks} alt="" aria-hidden="true" loading="lazy" width="80" height="80" className="mb-4 shrink-0" style={{ width: 80, height: 80, objectFit: 'contain' }} />
