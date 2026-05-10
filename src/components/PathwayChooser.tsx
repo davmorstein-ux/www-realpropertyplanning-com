@@ -37,7 +37,7 @@ const PathwayChooser = () => {
       <div className="container px-5 md:px-8">
         <div className="max-w-3xl mx-auto text-center mb-10 md:mb-12">
           <h2 className="font-serif text-[28px] md:text-4xl lg:text-[44px] font-semibold text-red-900 leading-tight mb-4">
-            Where Are You In The Process?
+            Choose the topic that best fits your situation:
           </h2>
           <p className="text-foreground text-lg md:text-xl leading-relaxed">
             Choose the situation that best fits you, and we'll guide you from there.
