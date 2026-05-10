@@ -11,10 +11,18 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
+// 3D WebP icons reused across the site for the 5 top-level cards
+import iconLivingIndependently from "@/assets/icons/senior-independent-living-icon-washington.webp";
+import iconHelpAtHome from "@/assets/icons/senior-care-heart-hands-icon-washington.webp";
+import iconHousingOptions from "@/assets/icons/senior-adult-family-home-3d-washington.webp";
+import iconHealthCrisis from "@/assets/icons/senior-nursing-care-icon-washington.webp";
+import iconFinancesLegal from "@/assets/icons/estate-financial-planning-icon-washington.webp";
+
 export interface FlowNode {
   path: string;          // full path e.g. "/helping-an-aging-parent/exploring-care-options"
   label: string;         // card label / page heading
   icon: LucideIcon;
+  image?: string;        // optional richer 3D WebP icon (preferred when present)
   subtext?: string;      // one-line context shown on the page
   children?: FlowNode[];
 }
@@ -29,6 +37,7 @@ export const AGING_PARENT_ROOT: FlowNode = {
       path: "/helping-an-aging-parent/living-independently",
       label: "My parent is still living independently",
       icon: Home,
+      image: iconLivingIndependently,
       subtext: "What would you like to plan for next?",
       children: [
         { path: "/helping-an-aging-parent/living-independently/staying-safe-at-home", label: "Staying safe at home", icon: ShieldAlert },
@@ -41,6 +50,7 @@ export const AGING_PARENT_ROOT: FlowNode = {
       path: "/helping-an-aging-parent/needs-help-at-home",
       label: "My parent needs more help at home",
       icon: HandHelping,
+      image: iconHelpAtHome,
       subtext: "What kind of support are you looking into?",
       children: [
         { path: "/helping-an-aging-parent/needs-help-at-home/in-home-care", label: "In-home caregivers & support", icon: Stethoscope },
@@ -53,6 +63,7 @@ export const AGING_PARENT_ROOT: FlowNode = {
       path: "/helping-an-aging-parent/exploring-care-options",
       label: "We're exploring care or housing options",
       icon: Building2,
+      image: iconHousingOptions,
       subtext: "What are you trying to figure out?",
       children: [
         { path: "/helping-an-aging-parent/exploring-care-options/types-of-housing", label: "What types of senior housing exist?", icon: Building2 },
@@ -65,6 +76,7 @@ export const AGING_PARENT_ROOT: FlowNode = {
       path: "/helping-an-aging-parent/health-crisis",
       label: "There's been a health crisis or emergency",
       icon: Activity,
+      image: iconHealthCrisis,
       subtext: "What do you need help with right now?",
       children: [
         { path: "/helping-an-aging-parent/health-crisis/hospital-discharge", label: "Hospital discharge planning", icon: Hospital },
@@ -77,6 +89,7 @@ export const AGING_PARENT_ROOT: FlowNode = {
       path: "/helping-an-aging-parent/finances-and-legal",
       label: "My parent's finances and legal documents need attention",
       icon: Scale,
+      image: iconFinancesLegal,
       subtext: "What would you like to address first?",
       children: [
         { path: "/helping-an-aging-parent/finances-and-legal/power-of-attorney", label: "Power of attorney & legal documents", icon: KeyRound },
