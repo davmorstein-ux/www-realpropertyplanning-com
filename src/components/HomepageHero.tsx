@@ -109,17 +109,7 @@ const HomepageHero = () => {
   return (
     <div style={{ ...fontBody, background: "#FFFFFF", color: "#1E3A5F", paddingTop: isMobile ? 70 : 120 }}>
       {/* ===== Stacked Header (homepage-only) ===== */}
-      <header
-        style={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          right: 0,
-          width: "100%",
-          zIndex: 9999,
-          boxShadow: "0 2px 12px rgba(0,0,0,0.12)",
-        }}
-      >
+      <header style={{ position: "fixed", top: 0, left: 0, right: 0, width: "100%", zIndex: 9999, boxShadow: "0 2px 12px rgba(0,0,0,0.12)" }}>
         {/* Row 1 — Top bar (navy) */}
         <div style={{ background: "#1E3A5F", width: "100%" }}>
           <div
@@ -139,10 +129,10 @@ const HomepageHero = () => {
                 src="/rpp-logo-v4.webp"
                 alt="Real Property Planning"
                 style={{
-                  height: "90px",
-                  width: "auto",
-                  objectFit: "contain",
-                  display: "block",
+                  height: '90px',
+                  width: 'auto',
+                  objectFit: 'contain',
+                  display: 'block'
                 }}
               />
             </Link>
@@ -484,19 +474,31 @@ const HomepageHero = () => {
       {/* ===== Trust Bar ===== */}
       <section className="bg-navy" style={{ background: "#1a2f4e", padding: isMobile ? "20px 20px" : "36px 24px" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto", textAlign: "center" }}>
-          <p
+          <h2
             style={{
-              fontFamily: "'DM Sans', system-ui, sans-serif",
-              fontSize: isMobile ? "18px" : "28px",
-              fontWeight: 500,
-              color: "white",
-              letterSpacing: "0.3px",
+              fontFamily: "'Cormorant Garamond', 'Georgia', serif",
+              color: "#f0c040",
+              fontSize: isMobile ? "32px" : "52px",
+              fontWeight: 700,
+              lineHeight: 1.2,
               margin: 0,
-              padding: 0,
-              display: "block",
-              width: "100%",
+              letterSpacing: "0.04em",
+              textShadow: "0 2px 8px rgba(0,0,0,0.4)",
             }}
           >
+            WELCOME TO REAL PROPERTY PLANNING
+          </h2>
+          <p style={{
+            fontFamily: "'DM Sans', system-ui, sans-serif",
+            fontSize: isMobile ? '18px' : '28px',
+            fontWeight: '500',
+            color: 'white',
+            letterSpacing: '0.3px',
+            margin: '0',
+            padding: '0',
+            display: 'block',
+            width: '100%'
+          }}>
             Guidance for Senior Transitions, Estate Sales &amp; Probate
           </p>
         </div>
