@@ -17,7 +17,7 @@ const Footer = () => {
           {/* Brand & NAP — 4/12 */}
           <div className="lg:col-span-4">
             <Link to="/" className="block mb-4">
-              <span className="font-serif text-[28px] text-primary-foreground font-bold leading-tight tracking-tight">
+              <span className="font-serif text-primary-foreground" style={{ fontSize: '22px', fontWeight: '700', letterSpacing: '0.5px' }}>
                 Real Property Planning
               </span>
             </Link>
@@ -27,18 +27,18 @@ const Footer = () => {
             <ul className="flex flex-col gap-4 text-[16px] text-left">
               <li>
                 <a href="tel:2069003015" className="text-primary-foreground hover:text-gold transition-colors flex items-center gap-3.5 leading-tight">
-                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-8 h-8 object-contain shrink-0" loading="lazy" />
+                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-[28px] h-[28px] object-contain shrink-0" loading="lazy" />
                   <span>(206) 900-3015</span>
                 </a>
               </li>
               <li>
                 <a href="mailto:info@realpropertyplanning.com" className="text-primary-foreground hover:text-gold transition-colors flex items-center gap-3.5 break-all leading-tight">
-                  <img src={iconEmail3d} alt="" aria-hidden="true" className="w-8 h-8 object-contain shrink-0" loading="lazy" />
+                  <img src={iconEmail3d} alt="" aria-hidden="true" className="w-[28px] h-[28px] object-contain shrink-0" loading="lazy" />
                   <span>info@realpropertyplanning.com</span>
                 </a>
               </li>
               <li className="text-primary-foreground flex items-start gap-3.5 leading-snug">
-                <img src={iconPin3d} alt="" aria-hidden="true" className="w-8 h-8 object-contain mt-0.5 shrink-0" loading="lazy" />
+                <img src={iconPin3d} alt="" aria-hidden="true" className="w-[28px] h-[28px] object-contain mt-0.5 shrink-0" loading="lazy" />
                 <span>PO Box 1462, Woodinville, WA 98072</span>
               </li>
             </ul>
