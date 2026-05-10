@@ -1,11 +1,9 @@
 
 import Footer from "@/components/Footer";
-import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import { realEstateAgentSchema, organizationSchema } from "@/lib/schema";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import carRideCoastalImage from "@/assets/car-ride-coastal-senior-couple.webp";
 
 import HomepageHero from "@/components/HomepageHero";
 import HomepageFAQ from "@/components/HomepageFAQ";
