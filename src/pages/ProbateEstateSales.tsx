@@ -96,7 +96,7 @@ const ProbateEstateSales = () => {
                   letterSpacing: "3px",
                   textTransform: "uppercase",
                   color: "white",
-                  marginBottom: "20px",
+                  marginBottom: "48px",
                 }}
               >
                 Probate &amp; Estate Property Sales
