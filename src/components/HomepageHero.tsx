@@ -37,16 +37,14 @@ const NAV: NavItem[] = [
     ],
   },
   { label: "Resources", href: "/resources" },
-  
+
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
 
 const HomepageHero = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [isMobile, setIsMobile] = useState(() =>
-    typeof window !== "undefined" ? window.innerWidth < 769 : false
-  );
+  const [isMobile, setIsMobile] = useState(() => (typeof window !== "undefined" ? window.innerWidth < 769 : false));
   const [menuOpen, setMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
@@ -133,7 +131,13 @@ const HomepageHero = () => {
             <img
               src="/rpp-logo-v4.webp"
               alt="Real Property Planning"
-              style={{ height: isMobile ? 56 : 88, width: "auto", maxWidth: "none", display: "block", objectFit: "contain" }}
+              style={{
+                height: isMobile ? 56 : 88,
+                width: "auto",
+                maxWidth: "none",
+                display: "block",
+                objectFit: "contain",
+              }}
             />
           </Link>
           <div style={{ display: "flex", alignItems: "center", gap: isMobile ? 6 : 12 }}>
@@ -180,7 +184,17 @@ const HomepageHero = () => {
                   <span style={{ display: "block", width: 34, height: 4.5, background: "#fff", borderRadius: 3 }} />
                   <span style={{ display: "block", width: 34, height: 4.5, background: "#fff", borderRadius: 3 }} />
                 </div>
-                <span style={{ ...fontBody, color: "#fff", fontSize: 13, fontWeight: 900, letterSpacing: "0.15em", lineHeight: 1, marginTop: 2 }}>
+                <span
+                  style={{
+                    ...fontBody,
+                    color: "#fff",
+                    fontSize: 13,
+                    fontWeight: 900,
+                    letterSpacing: "0.15em",
+                    lineHeight: 1,
+                    marginTop: 2,
+                  }}
+                >
                   MENU
                 </span>
               </button>
@@ -189,11 +203,21 @@ const HomepageHero = () => {
         </div>
 
         {!isMobile && (
-          <nav ref={dropdownRef} style={{ marginTop: 10, display: "flex", flexWrap: "nowrap", justifyContent: "space-between", alignItems: "center", width: "100%", gap: 12 }}>
+          <nav
+            ref={dropdownRef}
+            style={{
+              marginTop: 10,
+              display: "flex",
+              flexWrap: "nowrap",
+              justifyContent: "space-between",
+              alignItems: "center",
+              width: "100%",
+              gap: 12,
+            }}
+          >
             {NAV.map((item) => {
               const active =
-                pathname === item.href ||
-                (item.children && item.children.some((c) => c.href === pathname));
+                pathname === item.href || (item.children && item.children.some((c) => c.href === pathname));
               const linkStyle = {
                 ...fontBody,
                 color: "rgba(255,255,255,0.92)",
@@ -243,7 +267,15 @@ const HomepageHero = () => {
                       aria-expanded={isOpen}
                     >
                       {item.label}
-                      <span style={{ fontSize: 10, transform: isOpen ? "rotate(180deg)" : "none", transition: "transform 0.2s" }}>▾</span>
+                      <span
+                        style={{
+                          fontSize: 10,
+                          transform: isOpen ? "rotate(180deg)" : "none",
+                          transition: "transform 0.2s",
+                        }}
+                      >
+                        ▾
+                      </span>
                     </button>
                     {isOpen && (
                       <div
@@ -323,8 +355,7 @@ const HomepageHero = () => {
           >
             {NAV.map((item) => {
               const active =
-                pathname === item.href ||
-                (item.children && item.children.some((c) => c.href === pathname));
+                pathname === item.href || (item.children && item.children.some((c) => c.href === pathname));
               const baseStyle = {
                 ...fontBody,
                 color: "rgba(255,255,255,0.95)",
@@ -358,10 +389,29 @@ const HomepageHero = () => {
                       aria-expanded={isExpanded}
                     >
                       <span>{item.label}</span>
-                      <span style={{ fontSize: 12, transform: isExpanded ? "rotate(180deg)" : "none", transition: "transform 0.2s" }}>▾</span>
+                      <span
+                        style={{
+                          fontSize: 12,
+                          transform: isExpanded ? "rotate(180deg)" : "none",
+                          transition: "transform 0.2s",
+                        }}
+                      >
+                        ▾
+                      </span>
                     </button>
                     {isExpanded && (
-                      <div style={{ display: "flex", flexDirection: "column", gap: 2, paddingLeft: 12, borderLeft: "2px solid rgba(255,255,255,0.15)", marginLeft: 10, marginTop: 4, marginBottom: 4 }}>
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "column",
+                          gap: 2,
+                          paddingLeft: 12,
+                          borderLeft: "2px solid rgba(255,255,255,0.15)",
+                          marginLeft: 10,
+                          marginTop: 4,
+                          marginBottom: 4,
+                        }}
+                      >
                         {item.children.map((child) => {
                           const childActive = pathname === child.href;
                           return (
@@ -475,7 +525,7 @@ const HomepageHero = () => {
             style={{
               fontFamily: "'DM Sans', system-ui, sans-serif",
               color: "rgba(255,255,255,0.92)",
-              fontSize: isMobile ? "24px" : "36px",
+              fontSize: isMobile ? "28px" : "48px",
               fontWeight: 600,
               lineHeight: 1.4,
               margin: isMobile ? "8px 0 0" : "10px 0 0",
