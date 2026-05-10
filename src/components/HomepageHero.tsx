@@ -453,55 +453,33 @@ const HomepageHero = () => {
       </header>
 
       {/* ===== Hero ===== */}
+      <style>{`@keyframes rppHeroFadeIn { from { opacity: 0 } to { opacity: 1 } }`}</style>
       <section
         style={{
           position: "relative",
-          height: isMobile ? "50vh" : "55vh",
           width: "100%",
+          background: "transparent",
           overflow: "hidden",
         }}
       >
         <img
-          src={isMobile ? "/hero-photo-mobile.webp" : "/hero-photo.webp"}
-          srcSet="/hero-photo-mobile.webp 800w, /hero-photo.webp 1832w"
-          sizes="100vw"
-          alt="Washington State residential property — Real Property Planning"
+          src="/homepage-car-ride.webp"
+          alt="Senior couple by a red convertible on a coastal road with a SOLD Real Property Planning sign and Next Chapter moving truck"
           fetchPriority="high"
           loading="eager"
           decoding="async"
           style={{
-            position: "absolute",
-            inset: 0,
+            display: "block",
             width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            objectPosition: isMobile ? "center 30%" : "center",
+            height: "auto",
+            minHeight: isMobile ? 200 : undefined,
+            objectFit: "contain",
+            objectPosition: "center",
+            background: "transparent",
+            opacity: 0,
+            animation: "rppHeroFadeIn 1.2s ease forwards",
           }}
         />
-        <div
-          aria-hidden
-          style={{
-            position: "absolute",
-            inset: 0,
-            background:
-              "linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 30%, rgba(0,0,0,0.05) 50%, rgba(0,0,0,0) 60%, rgba(0,0,0,0) 100%)",
-          }}
-        />
-        <div
-          style={{
-            position: "relative",
-            zIndex: 2,
-            height: "100%",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "flex-end",
-            textAlign: "center",
-            padding: "0 24px 50px",
-          }}
-        >
-          {/* Content moved to trust bar */}
-        </div>
       </section>
 
       {/* ===== Trust Bar ===== */}
