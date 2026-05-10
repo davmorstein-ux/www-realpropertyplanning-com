@@ -89,7 +89,7 @@ const ProbateEstateSales = () => {
               />
               <h1
                 className="font-serif text-primary-foreground mb-5"
-              style={{ fontSize: "64px !important" as any, fontWeight: 800, lineHeight: 1.1 }}
+                style={{ fontSize: "clamp(40px, 6vw, 64px)", fontWeight: 800, lineHeight: 1.1 }}
               >
                 Probate &amp; Estate Property Sales
               </h1>
