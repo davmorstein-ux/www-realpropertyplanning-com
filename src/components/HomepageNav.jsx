@@ -95,6 +95,7 @@ const HomepageNav = () => {
                     </div>
                   </div>
                 </div>
+              </div>
             </a>
           ))}
         </div>
