@@ -145,8 +145,8 @@ const HomepageHero = () => {
               href="tel:2069003015"
               style={{
                 ...fontBody,
-                color: "#fff",
-                background: "#1a5fa8",
+                color: "#FFFFFF",
+                background: "#1E3A5F",
                 padding: isMobile ? "6px 8px" : "10px 18px",
                 borderRadius: 6,
                 fontWeight: 700,
