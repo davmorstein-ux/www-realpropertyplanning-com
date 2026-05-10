@@ -32,16 +32,6 @@ const whatMakesDifferentTiles = [
   { icon: iconPreparationStrategy, label: "Preparation Strategy", text: "As-is vs. repairs has a direct impact on fiduciary defensibility." },
 ];
 
-const card3dStyle = {
-  background: '#FFFFFF',
-  border: '2px solid #C9A84C',
-  borderRadius: '16px',
-  boxShadow: '0 2px 4px rgba(0,0,0,0.06), 0 8px 16px rgba(0,0,0,0.08), 0 16px 32px rgba(0,0,0,0.06)',
-  transition: 'all 0.3s ease',
-};
-
-const card3dHoverShadow = '0 8px 16px rgba(0,0,0,0.10), 0 20px 40px rgba(0,0,0,0.12), 0 0 0 2px #C9A84C';
-
 const jsonLd = articleSchema({
   headline: "Probate Real Estate Sales in Washington State",
   description: "Evidence-based probate real estate guidance for executors, attorneys, and families throughout Washington State. Serving King, Snohomish, Pierce & Kitsap Counties.",
@@ -155,23 +145,31 @@ const ProbateEstateSales = () => {
               This distinction matters more than most people realize. Understanding which situation you're in determines your legal authority, your timeline, and your options before you can take any action on the property.
             </p>
             <div className="grid md:grid-cols-2 gap-5">
-              <div className="p-6 hover:-translate-y-1" style={card3dStyle} onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 8px 16px rgba(0,0,0,0.12), 0 20px 40px rgba(0,0,0,0.08)'; }} onMouseLeave={e => { e.currentTarget.style.boxShadow = card3dStyle.boxShadow; }}>
-                <h3 className="font-serif text-lg text-foreground font-semibold mb-2">Probate Property</h3>
-                <p className="text-muted-foreground leading-relaxed text-[15px] mb-4">
-                  Court-supervised. Legal authority required before the sale can proceed.
-                </p>
-                <Link to="/terminology" className="text-accent hover:text-gold text-sm font-medium transition-colors">
-                  Learn more →
-                </Link>
+              <div className="card-3d-blue">
+                <div className="card-3d-blue__inner">
+                  <div className="card-3d-blue__face p-6">
+                    <h3 className="font-serif text-lg text-foreground font-semibold mb-2">Probate Property</h3>
+                    <p className="text-muted-foreground leading-relaxed text-[15px] mb-4">
+                      Court-supervised. Legal authority required before the sale can proceed.
+                    </p>
+                    <Link to="/terminology" className="text-accent hover:text-gold text-sm font-medium transition-colors">
+                      Learn more →
+                    </Link>
+                  </div>
+                </div>
               </div>
-              <div className="p-6 hover:-translate-y-1" style={card3dStyle} onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 8px 16px rgba(0,0,0,0.12), 0 20px 40px rgba(0,0,0,0.08)'; }} onMouseLeave={e => { e.currentTarget.style.boxShadow = card3dStyle.boxShadow; }}>
-                <h3 className="font-serif text-lg text-foreground font-semibold mb-2">Inherited Property (Non-Probate)</h3>
-                <p className="text-muted-foreground leading-relaxed text-[15px] mb-4">
-                  Passes outside probate via trust or joint tenancy. Fewer legal hurdles, but still complex.
-                </p>
-                <Link to="/guides/inherited-house-washington" className="text-accent hover:text-gold text-sm font-medium transition-colors">
-                  Learn more →
-                </Link>
+              <div className="card-3d-blue">
+                <div className="card-3d-blue__inner">
+                  <div className="card-3d-blue__face p-6">
+                    <h3 className="font-serif text-lg text-foreground font-semibold mb-2">Inherited Property (Non-Probate)</h3>
+                    <p className="text-muted-foreground leading-relaxed text-[15px] mb-4">
+                      Passes outside probate via trust or joint tenancy. Fewer legal hurdles, but still complex.
+                    </p>
+                    <Link to="/guides/inherited-house-washington" className="text-accent hover:text-gold text-sm font-medium transition-colors">
+                      Learn more →
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -190,19 +188,16 @@ const ProbateEstateSales = () => {
             </p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {whatMakesDifferentTiles.map((tile, i) => (
-                  <div
-                    key={i}
-                    className="p-6 flex flex-col items-start cursor-default"
-                    style={card3dStyle}
-                    onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-6px)'; e.currentTarget.style.boxShadow = card3dHoverShadow; e.currentTarget.style.borderColor = '#E2C66A'; }}
-                    onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = card3dStyle.boxShadow; e.currentTarget.style.borderColor = '#C9A84C'; }}
-                  >
-                    <img src={tile.icon} alt="" aria-hidden="true" loading="lazy" width="80" height="80" className="mb-4 shrink-0" style={{ width: 80, height: 80, objectFit: 'contain' }} />
-                    <h3 className="font-serif text-base text-foreground font-semibold mb-2">{tile.label}</h3>
-                    <p className="text-muted-foreground text-[15px] leading-relaxed">{tile.text}</p>
+                <div key={i} className="card-3d-blue cursor-default">
+                  <div className="card-3d-blue__inner">
+                    <div className="card-3d-blue__face p-6 flex flex-col items-start">
+                      <img src={tile.icon} alt="" aria-hidden="true" loading="lazy" width="80" height="80" className="mb-4 shrink-0" style={{ width: 80, height: 80, objectFit: 'contain' }} />
+                      <h3 className="font-serif text-base text-foreground font-semibold mb-2">{tile.label}</h3>
+                      <p className="text-muted-foreground text-[15px] leading-relaxed">{tile.text}</p>
+                    </div>
                   </div>
-                ))}
-
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -292,47 +287,41 @@ const ProbateEstateSales = () => {
           <div className="max-w-4xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-8">Explore Further</h2>
             <div className="grid md:grid-cols-3 gap-5">
-              <Link
-                to="/client-stories"
-                className="group flex flex-col p-6"
-                style={card3dStyle}
-                onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-6px)'; e.currentTarget.style.boxShadow = card3dHoverShadow; e.currentTarget.style.borderColor = '#E2C66A'; }}
-                onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = card3dStyle.boxShadow; e.currentTarget.style.borderColor = '#C9A84C'; }}
-              >
-                <img src={iconClientStories} alt="" aria-hidden="true" loading="lazy" width="80" height="80" className="mb-4 shrink-0" style={{ width: 80, height: 80, objectFit: 'contain' }} />
-                <h3 className="font-serif text-lg text-foreground font-semibold mb-2 group-hover:text-gold transition-colors">Client Stories</h3>
-                <p className="text-muted-foreground text-[15px] leading-relaxed mb-4 flex-1">See how we've helped executors, families, and trustees navigate real situations.</p>
-                <span className="text-accent group-hover:text-gold text-sm font-medium transition-colors inline-flex items-center gap-1">
-                  View stories <ArrowRight className="w-3.5 h-3.5" />
-                </span>
+              <Link to="/client-stories" className="card-3d-blue group block">
+                <div className="card-3d-blue__inner">
+                  <div className="card-3d-blue__face p-6 flex flex-col h-full">
+                    <img src={iconClientStories} alt="" aria-hidden="true" loading="lazy" width="80" height="80" className="mb-4 shrink-0" style={{ width: 80, height: 80, objectFit: 'contain' }} />
+                    <h3 className="font-serif text-lg text-foreground font-semibold mb-2 group-hover:text-gold transition-colors">Client Stories</h3>
+                    <p className="text-muted-foreground text-[15px] leading-relaxed mb-4 flex-1">See how we've helped executors, families, and trustees navigate real situations.</p>
+                    <span className="text-accent group-hover:text-gold text-sm font-medium transition-colors inline-flex items-center gap-1">
+                      View stories <ArrowRight className="w-3.5 h-3.5" />
+                    </span>
+                  </div>
+                </div>
               </Link>
-              <Link
-                to="/faq"
-                className="group flex flex-col p-6"
-                style={card3dStyle}
-                onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-6px)'; e.currentTarget.style.boxShadow = card3dHoverShadow; e.currentTarget.style.borderColor = '#E2C66A'; }}
-                onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = card3dStyle.boxShadow; e.currentTarget.style.borderColor = '#C9A84C'; }}
-              >
-                <img src={iconCommonQuestions} alt="" aria-hidden="true" loading="lazy" width="80" height="80" className="mb-4 shrink-0" style={{ width: 80, height: 80, objectFit: 'contain' }} />
-                <h3 className="font-serif text-lg text-foreground font-semibold mb-2 group-hover:text-gold transition-colors">Common Questions</h3>
-                <p className="text-muted-foreground text-[15px] leading-relaxed mb-4 flex-1">Answers to the questions executors and families ask most.</p>
-                <span className="text-accent group-hover:text-gold text-sm font-medium transition-colors inline-flex items-center gap-1">
-                  Read FAQs <ArrowRight className="w-3.5 h-3.5" />
-                </span>
+              <Link to="/faq" className="card-3d-blue group block">
+                <div className="card-3d-blue__inner">
+                  <div className="card-3d-blue__face p-6 flex flex-col h-full">
+                    <img src={iconCommonQuestions} alt="" aria-hidden="true" loading="lazy" width="80" height="80" className="mb-4 shrink-0" style={{ width: 80, height: 80, objectFit: 'contain' }} />
+                    <h3 className="font-serif text-lg text-foreground font-semibold mb-2 group-hover:text-gold transition-colors">Common Questions</h3>
+                    <p className="text-muted-foreground text-[15px] leading-relaxed mb-4 flex-1">Answers to the questions executors and families ask most.</p>
+                    <span className="text-accent group-hover:text-gold text-sm font-medium transition-colors inline-flex items-center gap-1">
+                      Read FAQs <ArrowRight className="w-3.5 h-3.5" />
+                    </span>
+                  </div>
+                </div>
               </Link>
-              <Link
-                to="/how-the-process-works"
-                className="group flex flex-col p-6"
-                style={card3dStyle}
-                onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-6px)'; e.currentTarget.style.boxShadow = card3dHoverShadow; e.currentTarget.style.borderColor = '#E2C66A'; }}
-                onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = card3dStyle.boxShadow; e.currentTarget.style.borderColor = '#C9A84C'; }}
-              >
-                <img src={iconHowProcessWorks} alt="" aria-hidden="true" loading="lazy" width="80" height="80" className="mb-4 shrink-0" style={{ width: 80, height: 80, objectFit: 'contain' }} />
-                <h3 className="font-serif text-lg text-foreground font-semibold mb-2 group-hover:text-gold transition-colors">How the Process Works</h3>
-                <p className="text-muted-foreground text-[15px] leading-relaxed mb-4 flex-1">A clear walkthrough from assessment to closing.</p>
-                <span className="text-accent group-hover:text-gold text-sm font-medium transition-colors inline-flex items-center gap-1">
-                  See the process <ArrowRight className="w-3.5 h-3.5" />
-                </span>
+              <Link to="/how-the-process-works" className="card-3d-blue group block">
+                <div className="card-3d-blue__inner">
+                  <div className="card-3d-blue__face p-6 flex flex-col h-full">
+                    <img src={iconHowProcessWorks} alt="" aria-hidden="true" loading="lazy" width="80" height="80" className="mb-4 shrink-0" style={{ width: 80, height: 80, objectFit: 'contain' }} />
+                    <h3 className="font-serif text-lg text-foreground font-semibold mb-2 group-hover:text-gold transition-colors">How the Process Works</h3>
+                    <p className="text-muted-foreground text-[15px] leading-relaxed mb-4 flex-1">A clear walkthrough from assessment to closing.</p>
+                    <span className="text-accent group-hover:text-gold text-sm font-medium transition-colors inline-flex items-center gap-1">
+                      See the process <ArrowRight className="w-3.5 h-3.5" />
+                    </span>
+                  </div>
+                </div>
               </Link>
             </div>
           </div>
