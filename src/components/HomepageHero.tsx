@@ -116,7 +116,7 @@ const HomepageHero = () => {
             style={{
               maxWidth: 1280,
               margin: "0 auto",
-              minHeight: 70,
+              minHeight: 100,
               padding: isMobile ? "10px 16px" : "10px 24px",
               display: "flex",
               alignItems: "center",
@@ -129,7 +129,7 @@ const HomepageHero = () => {
                 src="/rpp-logo-v4.webp"
                 alt="Real Property Planning"
                 style={{
-                  height: '80px',
+                  height: '90px',
                   width: 'auto',
                   objectFit: 'contain',
                   display: 'block'
