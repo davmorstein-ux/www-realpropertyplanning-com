@@ -11,12 +11,11 @@ import StatewideSupport from "@/components/StatewideSupport";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import GoldCheck3D from "@/components/GoldCheck3D";
-import HeroNetworkBackground from "@/components/HeroNetworkBackground";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 
 
 import daveHeadshot from "@/assets/david-stein-real-estate-agent-seattle.webp";
-import aboutHeroImage from "@/assets/about_hero_clean.png";
+import aboutHeroImage from "@/assets/about_hero_clean_v3.png";
 import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconEmail3d from "@/assets/icons/real-estate-email-contact-icon-washington.webp";
