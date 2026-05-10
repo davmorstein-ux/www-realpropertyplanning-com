@@ -15,7 +15,7 @@ const NewHomePreview = lazy(() => import("./pages/NewHomePreview"));
 const ProbateEstateSales = lazy(() => import("./pages/ProbateEstateSales"));
 const ClientStories = lazy(() => import("./pages/ClientStories"));
 const SeniorTransitions = lazy(() => import("./pages/SeniorTransitions"));
-const HelpingAgingParents = lazy(() => import("./pages/HelpingAgingParents"));
+const ChoiceFlowPage = lazy(() => import("./components/ChoiceFlowPage"));
 const EstateProbateInheritedProperty = lazy(() => import("./pages/EstateProbateInheritedProperty"));
 const WhatShouldWeDoFirst = lazy(() => import("./pages/WhatShouldWeDoFirst"));
 const WhatToDoWithTheHouse = lazy(() => import("./pages/WhatToDoWithTheHouse"));
@@ -171,7 +171,9 @@ const App = () => (
           <Route path="/probate-estate-sales" element={<ProbateEstateSales />} />
           <Route path="/client-stories" element={<ClientStories />} />
           <Route path="/senior-transitions" element={<SeniorTransitions />} />
-          <Route path="/helping-aging-parents" element={<HelpingAgingParents />} />
+          <Route path="/helping-aging-parents" element={<ChoiceFlowPage />} />
+          <Route path="/helping-an-aging-parent" element={<ChoiceFlowPage />} />
+          <Route path="/helping-an-aging-parent/*" element={<ChoiceFlowPage />} />
           <Route path="/estate-probate-inherited-property" element={<EstateProbateInheritedProperty />} />
           <Route path="/what-should-we-do-first" element={<WhatShouldWeDoFirst />} />
           <Route path="/what-to-do-with-the-house" element={<WhatToDoWithTheHouse />} />
