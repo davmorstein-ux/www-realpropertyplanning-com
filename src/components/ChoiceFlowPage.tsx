@@ -94,14 +94,14 @@ const ChoiceGrid = ({ choices }: { choices: FlowNode[] }) => {
   // Up to 5 cards: 1 col mobile, 2 cols tablet, 3 cols desktop so all 5 fit above the fold.
   return (
     <ul
-      className={`grid gap-5 sm:gap-6 lg:gap-7 grid-cols-1 sm:grid-cols-2 ${
+      className={`grid gap-5 sm:gap-6 lg:gap-7 grid-cols-1 sm:grid-cols-2 items-stretch ${
         choices.length >= 5 ? "lg:grid-cols-3" : ""
       }`}
     >
       {choices.map((choice) => {
         const Icon = choice.icon;
         return (
-          <li key={choice.path}>
+          <li key={choice.path} className="h-full">
             <Link
               to={choice.path}
               className="card-3d-blue group block h-full min-h-[176px] sm:min-h-[192px] no-underline"
@@ -116,10 +116,11 @@ const ChoiceGrid = ({ choices }: { choices: FlowNode[] }) => {
                           alt=""
                           aria-hidden="true"
                           loading="lazy"
-                          className="shrink-0 w-14 h-14 sm:w-[56px] sm:h-[56px] object-contain"
+                          style={{ width: 56, height: 56 }}
+                          className="shrink-0 object-contain"
                         />
                       ) : (
-                        <span className="shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br from-gold/20 to-gold/10 text-gold flex items-center justify-center">
+                        <span style={{ width: 56, height: 56 }} className="shrink-0 rounded-xl bg-gradient-to-br from-gold/20 to-gold/10 text-gold flex items-center justify-center">
                           <Icon className="w-7 h-7" aria-hidden="true" />
                         </span>
                       )}
