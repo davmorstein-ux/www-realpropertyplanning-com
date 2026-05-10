@@ -69,8 +69,17 @@ const HomepageNav = () => {
                 </div>
                 <div
                   aria-hidden="true"
-                  className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center text-center px-8 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                  style={{ background: "rgba(14, 30, 62, 0.85)" }}
+                  className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                  style={{
+                    background: "rgba(14, 30, 62, 0.85)",
+                    zIndex: 10,
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    textAlign: "center",
+                    padding: "0 2rem",
+                  }}
                 >
                   <p className="text-white text-[18px] md:text-[20px] font-medium leading-relaxed mb-5" style={{ fontFamily: "'Inter', sans-serif" }}>
                     {s.blurb}
