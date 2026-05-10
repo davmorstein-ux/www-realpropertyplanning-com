@@ -461,7 +461,7 @@ const HomepageHero = () => {
             style={{
               fontFamily: "'Cormorant Garamond', 'Georgia', serif",
               color: "#f0c040",
-              fontSize: isMobile ? "28px" : "48px",
+              fontSize: isMobile ? "32px" : "52px",
               fontWeight: 700,
               lineHeight: 1.2,
               margin: 0,
@@ -469,13 +469,13 @@ const HomepageHero = () => {
               textShadow: "0 2px 8px rgba(0,0,0,0.4)",
             }}
           >
-            WELCOME TO REAL PROPERTY PLANNING.
+            WELCOME TO REAL PROPERTY PLANNING
           </h2>
           <p
             style={{
               fontFamily: "'DM Sans', system-ui, sans-serif",
               color: "rgba(255,255,255,0.92)",
-              fontSize: isMobile ? "15px" : "20px",
+              fontSize: isMobile ? "17px" : "24px",
               fontWeight: 600,
               lineHeight: 1.4,
               margin: isMobile ? "8px 0 0" : "10px 0 0",
