@@ -37,7 +37,12 @@ const HomepageFAQ = () => {
               <AccordionItem
                 key={i}
                 value={`faq-${i}`}
-                className="bg-card border-2 border-border rounded-xl overflow-hidden data-[state=open]:border-gold transition-colors shadow-sm"
+                className="homepage-faq-item rounded-xl overflow-hidden transition-colors"
+                style={{
+                  backgroundColor: '#FFFFFF',
+                  border: '1px solid #C9A84C',
+                  boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
+                }}
               >
                 <AccordionTrigger className="homepage-faq-trigger text-left px-5 md:px-6 py-4 md:py-5 min-h-[68px] gap-4 [&>svg]:h-6 [&>svg]:w-6 [&>svg]:text-navy [&>svg]:shrink-0">
                   <span>{faq.q}</span>

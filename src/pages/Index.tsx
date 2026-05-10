@@ -154,16 +154,6 @@ const Index = () => {
         </div>
       </section>
 
-      <div style={{ padding: "40px 0", width: "100%", animation: "rppFadeIn 1.2s ease forwards", opacity: 0 }}>
-        <style>{`@keyframes rppFadeIn { from { opacity: 0; } to { opacity: 1; } }`}</style>
-        <img
-          src={carRideCoastalImage}
-          alt="Senior couple driving a red convertible along a scenic coastal road"
-          style={{ width: "100%", height: "auto", objectFit: "contain", display: "block" }}
-        />
-      </div>
-
-      <DisclaimerSection />
       </main>
       <Footer />
     </div>
