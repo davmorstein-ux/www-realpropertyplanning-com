@@ -261,12 +261,12 @@ const ProbateEstateSales = () => {
                           alt=""
                           aria-hidden="true"
                           loading="lazy"
-                          width="80"
-                          height="80"
-                          className="mb-4 shrink-0"
-                          style={{ width: 80, height: 80, objectFit: "contain" }}
-                        />
-                        <h3 className="font-serif text-base text-foreground font-semibold mb-2">{tile.label}</h3>
+                        width="96"
+                        height="96"
+                        className="mb-4 shrink-0"
+                        style={{ width: 96, height: 96, objectFit: "contain" }}
+                      />
+                      <h3 className="font-serif text-base text-foreground font-semibold mb-2">{tile.label}</h3>
                         <p className="text-muted-foreground text-[15px] leading-relaxed">{tile.text}</p>
                       </div>
                     </div>
@@ -491,123 +491,7 @@ const ProbateEstateSales = () => {
           </div>
         </section>
 
-        {/* SECTION 7 — Ready to Talk? (closing CTA) */}
-        <section className="py-20 lg:py-28 bg-primary">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
-                Ready to Talk?
-              </h2>
-              <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">
-                Whether{" "}
-                <Link
-                  to="/terminology"
-                  className="text-gold hover:text-gold/80 underline underline-offset-4 transition-colors"
-                >
-                  probate
-                </Link>{" "}
-                is just beginning, actively underway, or nearing completion, a short conversation can help you
-                understand your options and develop a practical next step.
-              </p>
-              <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
-                Our team works with{" "}
-                <Link
-                  to="/executors"
-                  className="text-gold hover:text-gold/80 underline underline-offset-4 transition-colors"
-                >
-                  executors
-                </Link>
-                ,{" "}
-                <Link
-                  to="/for-attorneys"
-                  className="text-gold hover:text-gold/80 underline underline-offset-4 transition-colors"
-                >
-                  attorneys
-                </Link>
-                , and families throughout{" "}
-                <Link
-                  to="/counties"
-                  className="text-gold hover:text-gold/80 underline underline-offset-4 transition-colors"
-                >
-                  King County, Snohomish County, Pierce County, Kitsap County
-                </Link>
-                , and across Washington State. Through our eXp Realty network, Real Property Planning can also connect{" "}
-                <Link
-                  to="/guides/out-of-state-families"
-                  className="text-gold hover:text-gold/80 underline underline-offset-4 transition-colors"
-                >
-                  out-of-state
-                </Link>{" "}
-                families with trusted brokers in other states.
-              </p>
-              <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-                <a href="tel:+12069003015" className="w-full sm:w-auto">
-                  <button
-                    type="button"
-                    className="w-full font-bold text-white"
-                    style={{
-                      minWidth: "260px",
-                      padding: "16px 32px",
-                      fontSize: "17px",
-                      letterSpacing: "0.3px",
-                      border: "2px solid rgba(255, 255, 255, 0.75)",
-                      borderRadius: "10px",
-                      background: "linear-gradient(135deg, #D4A843, #C9A84C, #A07820)",
-                      boxShadow: "0 4px 12px rgba(201,168,76,0.45), 0 8px 24px rgba(201,168,76,0.25)",
-                      transition: "all 0.3s ease",
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.background = "linear-gradient(135deg, #E2BB55, #D4B35A, #B08A28)";
-                      e.currentTarget.style.transform = "translateY(-3px)";
-                      e.currentTarget.style.boxShadow =
-                        "0 8px 20px rgba(201,168,76,0.55), 0 14px 32px rgba(201,168,76,0.35)";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.background = "linear-gradient(135deg, #D4A843, #C9A84C, #A07820)";
-                      e.currentTarget.style.transform = "translateY(0)";
-                      e.currentTarget.style.boxShadow =
-                        "0 4px 12px rgba(201,168,76,0.45), 0 8px 24px rgba(201,168,76,0.25)";
-                    }}
-                  >
-                    Call (206) 900-3015
-                  </button>
-                </a>
-                <Link to="/contact" className="w-full sm:w-auto">
-                  <button
-                    type="button"
-                    className="w-full font-bold"
-                    style={{
-                      minWidth: "260px",
-                      padding: "16px 32px",
-                      fontSize: "17px",
-                      letterSpacing: "0.3px",
-                      color: "#C9A84C",
-                      background: "transparent",
-                      border: "2px solid #C9A84C",
-                      borderRadius: "10px",
-                      boxShadow: "none",
-                      transition: "all 0.3s ease",
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.background = "rgba(201,168,76,0.08)";
-                      e.currentTarget.style.transform = "translateY(-3px)";
-                      e.currentTarget.style.boxShadow = "0 0 16px rgba(201,168,76,0.35)";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.background = "transparent";
-                      e.currentTarget.style.transform = "translateY(0)";
-                      e.currentTarget.style.boxShadow = "none";
-                    }}
-                  >
-                    Send a Message
-                  </button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
 
-        <DisclaimerSection />
       </main>
       <Footer />
     </div>
