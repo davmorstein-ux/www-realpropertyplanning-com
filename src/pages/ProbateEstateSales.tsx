@@ -58,7 +58,7 @@ const ProbateEstateSales = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <img src={iconProbateSales} alt="Probate estate sale scene — house with sold sign, probate court documents, keys, and scale of justice in gold circular frame" className="mx-auto max-w-[16rem] md:max-w-[20rem] w-full h-auto object-contain mb-5" loading="eager"/>
-            <h1 className="font-serif text-primary-foreground mb-5" style={{ fontSize: 'clamp(40px, 6vw, 72px)', fontWeight: 800, lineHeight: 1.1 }}>
+            <h1 className="font-serif text-primary-foreground mb-5" style={{ fontSize: 'clamp(48px, 8vw, 80px)', fontWeight: 800, lineHeight: 1.1 }}>
               Probate &amp; Estate Property Sales
             </h1>
             <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 mb-6">
