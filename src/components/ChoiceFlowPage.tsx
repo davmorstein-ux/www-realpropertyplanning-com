@@ -1,5 +1,5 @@
 import { useLocation, Link, Navigate } from "react-router-dom";
-import { ChevronLeft, ArrowRight } from "lucide-react";
+import { ChevronLeft } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -104,15 +104,29 @@ const ChoiceGrid = ({ choices }: { choices: FlowNode[] }) => {
           <li key={choice.path}>
             <Link
               to={choice.path}
-              className="group h-full flex items-center gap-4 bg-white border-2 border-gold/25 rounded-2xl p-5 md:p-6 shadow-[0_4px_14px_-8px_rgba(27,43,75,0.18)] hover:border-gold/60 hover:-translate-y-0.5 hover:shadow-[0_10px_24px_-12px_rgba(27,43,75,0.28)] transition-all"
+              className="card-3d-blue group block h-full min-h-[160px] sm:min-h-[180px]"
             >
-              <span className="shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-gold/20 to-gold/10 text-gold flex items-center justify-center">
-                <Icon className="w-6 h-6" aria-hidden="true" />
-              </span>
-              <span className="font-serif text-lg md:text-xl text-navy font-semibold leading-snug flex-1 group-hover:text-[hsl(var(--gold-dark))] transition-colors">
-                {choice.label}
-              </span>
-              <ArrowRight className="w-5 h-5 text-gold shrink-0" aria-hidden="true" />
+              <div className="card-3d-blue__inner h-full">
+                <div className="card-3d-blue__face h-full">
+                  <div className="flex h-full flex-col justify-between px-6 pb-6 pt-7 sm:px-7 sm:pb-7 sm:pt-8">
+                    <div className="flex items-start gap-4">
+                      <span className="shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-gold/20 to-gold/10 text-gold flex items-center justify-center">
+                        <Icon className="w-6 h-6" aria-hidden="true" />
+                      </span>
+                      <h3
+                        className="font-serif text-lg sm:text-xl font-extrabold text-foreground leading-snug flex-1 group-hover:text-accent transition-colors"
+                        style={{ textShadow: "0 1px 4px hsla(220, 30%, 15%, 0.25)" }}
+                      >
+                        {choice.label}
+                      </h3>
+                    </div>
+                    <div className="mt-4 flex items-center gap-1.5 text-sm font-semibold text-gold group-hover:text-[hsl(var(--gold-dark))] transition-colors">
+                      <span>Learn more</span>
+                      <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1">→</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </Link>
           </li>
         );
