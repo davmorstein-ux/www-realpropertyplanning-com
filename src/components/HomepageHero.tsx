@@ -488,19 +488,7 @@ const HomepageHero = () => {
             style={{
               fontFamily: "'Cormorant Garamond', 'Georgia', serif",
               color: "#f0c040",
-              fontSize: isMobile ? "32px" : "52px",
-              fontWeight: 700,
-              lineHeight: 1.2,
-              margin: 0,
-              letterSpacing: "0.04em",
-              textShadow: "0 2px 8px rgba(0,0,0,0.4)",
-            }}
-          >
-            WELCOME TO REAL PROPERTY PLANNING
-          </h2>
-          <p
-            style={{
-              fontFamily: "'DM Sans', system-ui, sans-serif",
+                           fontFamily: "'DM Sans', system-ui, sans-serif",
               fontSize: "36px",
               fontWeight: "500",
               color: "white",
