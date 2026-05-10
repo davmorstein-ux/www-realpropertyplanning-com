@@ -16,7 +16,7 @@ import { useReducedMotion } from "@/hooks/use-reduced-motion";
 
 
 import daveHeadshot from "@/assets/david-stein-real-estate-agent-seattle.webp";
-import aboutHeroLogo from "@/assets/real-property-planning-logo-v4.webp";
+import aboutHeroImage from "@/assets/about_hero_clean.png";
 import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconEmail3d from "@/assets/icons/real-estate-email-contact-icon-washington.webp";
@@ -76,30 +76,14 @@ const About = () => {
       <Header />
       <main id="main-content">
         {/* Hero */}
-        <section
-          className="relative overflow-hidden w-full h-[340px] md:h-[500px]"
-          style={{ backgroundColor: "#020810" }}
-        >
-          {/* Programmatic network canvas background */}
-          <HeroNetworkBackground paused={reducedMotion} />
-
-          {/* Centered logo + tagline */}
-          <div className="absolute inset-0 z-[2] flex flex-col items-center justify-center">
-            <img
-              src={aboutHeroLogo}
-              alt="Real Property Planning"
-              className="w-[260px] md:w-[480px] h-auto object-contain"
-              loading="eager"
-              fetchPriority="high"
-              style={{
-                filter:
-                  "brightness(1.4) contrast(1.15) drop-shadow(0 0 12px rgba(100,160,255,0.5))",
-              }}
-            />
-            <RotatingTagline />
-          </div>
-
-          {/* Visually hidden h1 for SEO/accessibility */}
+        <section className="relative overflow-hidden w-full" style={{ backgroundColor: "#f5f0e8" }}>
+          <img
+            src={aboutHeroImage}
+            alt="Real Property Planning — Senior Transitions"
+            className="w-full h-auto object-cover"
+            loading="eager"
+            fetchPriority="high"
+          />
           <h1 className="sr-only">About Real Property Planning</h1>
         </section>
 
