@@ -163,8 +163,8 @@ const HomepageHero = () => {
                 aria-label={menuOpen ? "Close menu" : "Open menu"}
                 onClick={() => setMenuOpen((v) => !v)}
                 style={{
-                  background: "rgba(255,255,255,0.12)",
-                  border: "2.5px solid rgba(255,255,255,0.6)",
+                  background: "rgba(30,58,95,0.06)",
+                  border: "2.5px solid rgba(30,58,95,0.6)",
                   borderRadius: 14,
                   padding: "8px 12px 6px",
                   cursor: "pointer",
@@ -180,14 +180,14 @@ const HomepageHero = () => {
                 }}
               >
                 <div style={{ display: "flex", flexDirection: "column", gap: 6, marginBottom: 6 }}>
-                  <span style={{ display: "block", width: 34, height: 4.5, background: "#fff", borderRadius: 3 }} />
-                  <span style={{ display: "block", width: 34, height: 4.5, background: "#fff", borderRadius: 3 }} />
-                  <span style={{ display: "block", width: 34, height: 4.5, background: "#fff", borderRadius: 3 }} />
+                  <span style={{ display: "block", width: 34, height: 4.5, background: "#1E3A5F", borderRadius: 3 }} />
+                  <span style={{ display: "block", width: 34, height: 4.5, background: "#1E3A5F", borderRadius: 3 }} />
+                  <span style={{ display: "block", width: 34, height: 4.5, background: "#1E3A5F", borderRadius: 3 }} />
                 </div>
                 <span
                   style={{
                     ...fontBody,
-                    color: "#fff",
+                    color: "#1E3A5F",
                     fontSize: 13,
                     fontWeight: 900,
                     letterSpacing: "0.15em",
