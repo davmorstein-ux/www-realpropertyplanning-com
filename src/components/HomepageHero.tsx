@@ -480,30 +480,6 @@ const HomepageHero = () => {
             animation: "rppHeroFadeIn 1.2s ease forwards",
           }}
         />
-        <div
-          aria-hidden
-          style={{
-            position: "absolute",
-            inset: 0,
-            background:
-              "linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 30%, rgba(0,0,0,0.05) 50%, rgba(0,0,0,0) 60%, rgba(0,0,0,0) 100%)",
-          }}
-        />
-        <div
-          style={{
-            position: "relative",
-            zIndex: 2,
-            height: "100%",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "flex-end",
-            textAlign: "center",
-            padding: "0 24px 50px",
-          }}
-        >
-          {/* Content moved to trust bar */}
-        </div>
       </section>
 
       {/* ===== Trust Bar ===== */}
