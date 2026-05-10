@@ -1,50 +1,53 @@
 import { Link } from "react-router-dom";
 
-import mappin3d from "@/assets/real-estate-service-areas-mappin-washington.webp";
-import iconEmail3d from "@/assets/icons/real-estate-email-contact-icon-washington.webp";
-
 import alcaLogo from "@/assets/senior-advocates-alca-partner-washington.webp";
 import naosaBadge from "@/assets/senior-advocates-naosa-badge-washington.webp";
 import naepcLogo from "@/assets/estate-planners-naepc-badge-washington.webp";
 import kccLogo from "@/assets/king-county-collaborative-law-logo.webp";
-import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
+import iconPhone3d from "@/assets/icons/real-estate-phone-handset-3d-icon-washington.webp";
+import iconEmail3d from "@/assets/icons/real-estate-email-envelope-3d-icon-washington.webp";
+import iconPin3d from "@/assets/icons/real-estate-location-pin-3d-icon-washington.webp";
 
 const Footer = () => {
   return (
-    <footer data-nosnippet="true" className="bg-navy-dark py-12">
-      <div className="container px-6 lg:px-8">
-        {/* Compact link grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
-          {/* Brand & NAP */}
-          <div>
-            <Link to="/" className="block mb-3">
-              <span className="font-serif text-xl text-primary-foreground font-semibold">
+    <footer data-nosnippet="true" className="bg-navy-dark py-14 md:py-16">
+      <div className="container px-6 lg:px-10">
+        {/* Compact link grid — wider Guided Journeys column so links never clip */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 mb-12">
+          {/* Brand & NAP — 4/12 */}
+          <div className="lg:col-span-4">
+            <Link to="/" className="block mb-4">
+              <span className="font-serif text-2xl text-primary-foreground font-semibold leading-tight">
                 Real Property Planning
               </span>
             </Link>
-            <p className="text-primary-foreground text-base leading-relaxed mb-4">
+            <p className="text-primary-foreground text-[15px] leading-relaxed mb-5">
               Probate, estate &amp; senior transition real estate — Washington State.
             </p>
-            <div className="flex flex-col gap-1.5 text-base">
-              <a href="tel:2069003015" className="text-primary-foreground hover:text-gold transition-colors flex items-center gap-2">
-                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0" loading="lazy"/>
-                (206) 900-3015
-              </a>
-              <a href="mailto:info@realpropertyplanning.com" className="text-primary-foreground hover:text-gold transition-colors flex items-center gap-2">
-                <img src={iconEmail3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0" loading="lazy"/>
-                info@realpropertyplanning.com
-              </a>
-              <div className="text-primary-foreground flex items-start gap-2 mt-1">
-                <img src={mappin3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain mt-0.5 shrink-0" loading="lazy"/>
+            <ul className="flex flex-col gap-3 text-[15px] text-left">
+              <li>
+                <a href="tel:2069003015" className="text-primary-foreground hover:text-gold transition-colors flex items-center gap-3">
+                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-7 h-7 object-contain shrink-0" loading="lazy" />
+                  <span>(206) 900-3015</span>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:info@realpropertyplanning.com" className="text-primary-foreground hover:text-gold transition-colors flex items-center gap-3 break-all">
+                  <img src={iconEmail3d} alt="" aria-hidden="true" className="w-7 h-7 object-contain shrink-0" loading="lazy" />
+                  <span>info@realpropertyplanning.com</span>
+                </a>
+              </li>
+              <li className="text-primary-foreground flex items-start gap-3">
+                <img src={iconPin3d} alt="" aria-hidden="true" className="w-7 h-7 object-contain mt-0.5 shrink-0" loading="lazy" />
                 <span>PO Box 1462, Woodinville, WA 98072</span>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
 
-          {/* Guided Journeys (curated, not exhaustive) */}
-          <div>
-            <h3 className="text-primary-foreground font-serif text-lg font-semibold mb-3">Guided Journeys</h3>
-            <ul className="space-y-1.5 text-primary-foreground text-base">
+          {/* Guided Journeys — 4/12 (wider so links never clip) */}
+          <div className="lg:col-span-4">
+            <h3 className="text-primary-foreground font-serif text-lg font-semibold mb-4">Guided Journeys</h3>
+            <ul className="space-y-2.5 text-primary-foreground text-[15px] leading-snug">
               <li><Link to="/helping-aging-parents" className="hover:text-gold transition-colors">Helping an Aging Parent</Link></li>
               <li><Link to="/estate-probate-inherited-property" className="hover:text-gold transition-colors">Estate &amp; Probate</Link></li>
               <li><Link to="/what-to-do-with-the-house" className="hover:text-gold transition-colors">What To Do With the House</Link></li>
@@ -54,23 +57,23 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Services */}
-          <div>
-            <h3 className="text-primary-foreground font-serif text-lg font-semibold mb-3">Services</h3>
-            <ul className="space-y-1.5 text-primary-foreground text-base">
+          {/* Services — 2/12 */}
+          <div className="lg:col-span-2">
+            <h3 className="text-primary-foreground font-serif text-lg font-semibold mb-4">Services</h3>
+            <ul className="space-y-2.5 text-primary-foreground text-[15px] leading-snug">
               <li><Link to="/probate-estate-sales" className="hover:text-gold transition-colors">Probate &amp; Estate Sales</Link></li>
               <li><Link to="/senior-transitions" className="hover:text-gold transition-colors">Senior Transitions</Link></li>
               <li><Link to="/why-valuation-matters" className="hover:text-gold transition-colors">Valuation &amp; Pricing</Link></li>
-              <li><Link to="/for-attorneys" className="hover:text-gold transition-colors">For Attorneys &amp; Fiduciaries</Link></li>
+              <li><Link to="/for-attorneys" className="hover:text-gold transition-colors">For Attorneys</Link></li>
               <li><Link to="/guides-and-resources" className="hover:text-gold transition-colors">Guides &amp; Resources</Link></li>
             </ul>
           </div>
 
-          {/* About / Contact */}
-          <div>
-            <h3 className="text-primary-foreground font-serif text-lg font-semibold mb-3">About</h3>
-            <ul className="space-y-1.5 text-primary-foreground text-base">
-              <li><Link to="/about" className="hover:text-gold transition-colors">About Real Property Planning</Link></li>
+          {/* About — 2/12 */}
+          <div className="lg:col-span-2">
+            <h3 className="text-primary-foreground font-serif text-lg font-semibold mb-4">About</h3>
+            <ul className="space-y-2.5 text-primary-foreground text-[15px] leading-snug">
+              <li><Link to="/about" className="hover:text-gold transition-colors">About</Link></li>
               <li><Link to="/how-we-work" className="hover:text-gold transition-colors">How We Work</Link></li>
               <li><Link to="/contact" className="hover:text-gold transition-colors">Contact</Link></li>
               <li><Link to="/counties" className="hover:text-gold transition-colors">Service Areas</Link></li>
@@ -80,8 +83,8 @@ const Footer = () => {
         </div>
 
         {/* Affiliations — quieter row */}
-        <div className="border-t border-primary-foreground pt-8 mb-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-[760px] mx-auto items-center">
+        <div className="border-t border-primary-foreground/30 pt-10 mb-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-[820px] mx-auto items-center">
             <a href="https://www.aginglifecare.org" target="_blank" rel="noopener noreferrer" className="flex justify-center">
               <img src={alcaLogo} alt="Aging Life Care Association Corporate Partner" className="object-contain max-h-[72px] w-auto" loading="lazy" />
             </a>
