@@ -475,14 +475,14 @@ const HomepageHero = () => {
             style={{
               fontFamily: "'DM Sans', system-ui, sans-serif",
               color: "rgba(255,255,255,0.92)",
-              fontSize: isMobile ? "17px" : "24px",
+              fontSize: isMobile ? "19px" : "28px",
               fontWeight: 600,
               lineHeight: 1.4,
               margin: isMobile ? "8px 0 0" : "10px 0 0",
               letterSpacing: "0.02em",
             }}
           >
-            A Roadmap for Senior Transitions - Estate Sales &amp; Probate
+            Guidance for Senior Transitions, Estate Sales &amp; Probate
           </p>
         </div>
       </section>
