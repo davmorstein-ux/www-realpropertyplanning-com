@@ -109,7 +109,17 @@ const HomepageHero = () => {
   return (
     <div style={{ ...fontBody, background: "#FFFFFF", color: "#1E3A5F", paddingTop: isMobile ? 70 : 120 }}>
       {/* ===== Stacked Header (homepage-only) ===== */}
-      <header style={{ position: "fixed", top: 0, left: 0, right: 0, width: "100%", zIndex: 9999, boxShadow: "0 2px 12px rgba(0,0,0,0.12)" }}>
+      <header
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          right: 0,
+          width: "100%",
+          zIndex: 9999,
+          boxShadow: "0 2px 12px rgba(0,0,0,0.12)",
+        }}
+      >
         {/* Row 1 — Top bar (navy) */}
         <div style={{ background: "#1E3A5F", width: "100%" }}>
           <div
@@ -129,10 +139,10 @@ const HomepageHero = () => {
                 src="/rpp-logo-v4.webp"
                 alt="Real Property Planning"
                 style={{
-                  height: '90px',
-                  width: 'auto',
-                  objectFit: 'contain',
-                  display: 'block'
+                  height: "90px",
+                  width: "auto",
+                  objectFit: "contain",
+                  display: "block",
                 }}
               />
             </Link>
@@ -488,17 +498,19 @@ const HomepageHero = () => {
           >
             WELCOME TO REAL PROPERTY PLANNING
           </h2>
-          <p style={{
-            fontFamily: "'DM Sans', system-ui, sans-serif",
-            fontSize: isMobile ? '18px' : '28px',
-            fontWeight: '500',
-            color: 'white',
-            letterSpacing: '0.3px',
-            margin: '0',
-            padding: '0',
-            display: 'block',
-            width: '100%'
-          }}>
+          <p
+            style={{
+              fontFamily: "'DM Sans', system-ui, sans-serif",
+              fontSize: "36px",
+              fontWeight: "500",
+              color: "white",
+              letterSpacing: "0.3px",
+              margin: "0",
+              padding: "0",
+              display: "block",
+              width: "100%",
+            }}
+          >
             Guidance for Senior Transitions, Estate Sales &amp; Probate
           </p>
         </div>
