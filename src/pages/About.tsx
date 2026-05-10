@@ -11,55 +11,15 @@ import StatewideSupport from "@/components/StatewideSupport";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import GoldCheck3D from "@/components/GoldCheck3D";
-import HeroNetworkBackground from "@/components/HeroNetworkBackground";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 
 
 import daveHeadshot from "@/assets/david-stein-real-estate-agent-seattle.webp";
-import aboutHeroImage from "@/assets/about_hero_clean.png";
+import aboutHeroImage from "@/assets/about_hero_clean_v3.png";
 import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconEmail3d from "@/assets/icons/real-estate-email-contact-icon-washington.webp";
 
-const TAGLINES = [
-  "Guiding families through life's transitions",
-  "Calm guidance for complex real estate decisions",
-  "Connecting families with trusted professionals",
-  "Probate, estate & senior moves — handled with care",
-  "Clarity when it matters most",
-];
-
-const RotatingTagline = () => {
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const id = setInterval(() => {
-      setIndex(i => (i + 1) % TAGLINES.length);
-    }, 14000);
-    return () => clearInterval(id);
-  }, []);
-
-  return (
-    <div style={{ height: "2.5rem", display: "flex", alignItems: "center", justifyContent: "center", marginTop: "16px" }}>
-      <span
-        key={index}
-        id="rotating-tagline"
-        style={{
-          display: "block",
-          color: "#ffffff",
-          fontSize: "1.5rem",
-          fontStyle: "italic",
-          fontWeight: 600,
-          textAlign: "center",
-          textShadow: "0 2px 12px rgba(0,0,0,0.9)",
-          margin: 0,
-        }}
-      >
-        {TAGLINES[index]}
-      </span>
-    </div>
-  );
-};
 
 const About = () => {
   const reducedMotion = useReducedMotion();
