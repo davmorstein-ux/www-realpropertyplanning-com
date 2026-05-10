@@ -249,7 +249,7 @@ const WhoHasAuthoritySellProbateProperty = () => (
             <Accordion type="single" collapsible className="w-full">
               {faqs.map((f, i) => (
                 <AccordionItem key={i} value={`item-${i}`}>
-                  <AccordionTrigger className="text-left text-base md:text-lg font-semibold text-foreground">{f.q}</AccordionTrigger>
+                  <AccordionTrigger className="text-left font-serif text-foreground hover:text-gold hover:no-underline px-6 py-5" style={{ fontSize: '20px', fontWeight: '700' }}>{f.q}</AccordionTrigger>
                   <AccordionContent className="text-base text-muted-foreground leading-relaxed">{f.a}</AccordionContent>
                 </AccordionItem>
               ))}

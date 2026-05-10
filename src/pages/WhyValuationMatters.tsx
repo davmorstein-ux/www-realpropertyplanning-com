@@ -204,7 +204,7 @@ const WhyValuationMatters = () => {
             </h2>
             <Accordion type="single" collapsible className="space-y-3">
               <AccordionItem value="cma" className="bg-card border border-border rounded-2xl overflow-hidden data-[state=open]:border-gold/25 transition-colors">
-                <AccordionTrigger className="text-left font-serif text-base md:text-lg font-semibold text-foreground hover:text-gold hover:no-underline px-6 py-5">
+                <AccordionTrigger className="text-left font-serif text-foreground hover:text-gold hover:no-underline px-6 py-5" style={{ fontSize: '20px', fontWeight: '700' }}>
                   How is Real Property Planning's pricing different from a standard agent's CMA?
                 </AccordionTrigger>
                 <AccordionContent className="px-6 pb-5 pt-0 text-muted-foreground leading-relaxed">
@@ -212,7 +212,7 @@ const WhyValuationMatters = () => {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="anticipate" className="bg-card border border-border rounded-2xl overflow-hidden data-[state=open]:border-gold/25 transition-colors">
-                <AccordionTrigger className="text-left font-serif text-base md:text-lg font-semibold text-foreground hover:text-gold hover:no-underline px-6 py-5">
+                <AccordionTrigger className="text-left font-serif text-foreground hover:text-gold hover:no-underline px-6 py-5" style={{ fontSize: '20px', fontWeight: '700' }}>
                   How does this prevent surprises during the sale?
                 </AccordionTrigger>
                 <AccordionContent className="px-6 pb-5 pt-0 text-muted-foreground leading-relaxed">
