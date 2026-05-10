@@ -253,15 +253,6 @@ const WhatShouldWeDoFirst = () => {
           id="what-should-we-do-first"
         />
 
-
-
-
-
-
-
-
-
-
         {/* CTA */}
         <section className="py-10 lg:py-14 bg-primary">
           <div className="container px-6 lg:px-8">
