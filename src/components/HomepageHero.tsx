@@ -107,7 +107,7 @@ const HomepageHero = () => {
   const fontHead = { fontFamily: "'Barlow Condensed', 'DM Sans', sans-serif" };
 
   return (
-    <div style={{ ...fontBody, background: "#FFFFFF", color: "#1E3A5F" }}>
+    <div style={{ ...fontBody, background: "#FFFFFF", color: "#1E3A5F", paddingTop: isMobile ? 70 : 120 }}>
       {/* ===== Stacked Header (homepage-only) ===== */}
       <header style={{ position: "fixed", top: 0, left: 0, right: 0, width: "100%", zIndex: 9999, boxShadow: "0 2px 12px rgba(0,0,0,0.12)" }}>
         {/* Row 1 — Top bar (navy) */}
