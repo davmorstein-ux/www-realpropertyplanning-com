@@ -88,8 +88,14 @@ const ProbateEstateSales = () => {
                 loading="eager"
               />
               <h1
-                className="font-serif text-primary-foreground mb-5"
-                style={{ fontSize: "clamp(40px, 6vw, 64px)", fontWeight: 800, lineHeight: 1.1 }}
+                className="text-primary-foreground"
+                style={{
+                  fontFamily: '"Playfair Display", Georgia, serif',
+                  fontSize: "72px",
+                  fontWeight: 900,
+                  lineHeight: 1.1,
+                  margin: "0 0 1.25rem 0",
+                }}
               >
                 Probate &amp; Estate Property Sales
               </h1>
