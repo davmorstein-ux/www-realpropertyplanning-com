@@ -261,12 +261,12 @@ const ProbateEstateSales = () => {
                           alt=""
                           aria-hidden="true"
                           loading="lazy"
-                          width="80"
-                          height="80"
-                          className="mb-4 shrink-0"
-                          style={{ width: 80, height: 80, objectFit: "contain" }}
-                        />
-                        <h3 className="font-serif text-base text-foreground font-semibold mb-2">{tile.label}</h3>
+                        width="96"
+                        height="96"
+                        className="mb-4 shrink-0"
+                        style={{ width: 96, height: 96, objectFit: "contain" }}
+                      />
+                      <h3 className="font-serif text-base text-foreground font-semibold mb-2">{tile.label}</h3>
                         <p className="text-muted-foreground text-[15px] leading-relaxed">{tile.text}</p>
                       </div>
                     </div>
