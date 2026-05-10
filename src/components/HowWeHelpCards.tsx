@@ -43,39 +43,51 @@ const HowWeHelpCards = () => {
         <h2 className="font-serif text-red-900 font-semibold text-center mb-12 text-3xl">
           How We Help
         </h2>
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {cards.map((card) => (
-            <div
+            <Link
               key={card.headline}
-              className="bg-card rounded-2xl shadow-md p-8 flex flex-col items-center"
+              to={card.link}
+              className="card-3d-blue group block h-full"
             >
-              <div className="w-full flex justify-center mb-6">
-                <img
-                  src={card.iconSrc}
-                  alt={card.iconAlt}
-                  className={`${card.iconSize} object-contain`}
-                  loading="lazy"
-                />
+              <div className="card-3d-blue__inner h-full">
+                <div className="card-3d-blue__face h-full">
+                  <div className="flex h-full flex-col px-7 pb-7 pt-8">
+                    <div className="w-full flex justify-center mb-5">
+                      <img
+                        src={card.iconSrc}
+                        alt={card.iconAlt}
+                        className={`${card.iconSize} object-contain`}
+                        loading="lazy"
+                      />
+                    </div>
+                    <h3
+                      className="font-serif font-extrabold mb-3 text-center text-foreground group-hover:text-accent transition-colors"
+                      style={{ fontSize: '22px', textShadow: "0 1px 4px hsla(220, 30%, 15%, 0.25)" }}
+                    >
+                      {card.headline}
+                    </h3>
+                    <p className="text-muted-foreground text-[15px] leading-relaxed mb-5 flex-1">
+                      {card.description}
+                    </p>
+                    <div className="flex items-center gap-1.5 text-sm font-semibold text-gold group-hover:text-[hsl(var(--gold-dark))] transition-colors mb-3">
+                      <span>Learn more</span>
+                      <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1">→</span>
+                    </div>
+                    <span
+                      className="text-muted-foreground text-sm underline underline-offset-2 hover:text-gold transition-colors"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        window.location.href = card.proLink.href;
+                      }}
+                    >
+                      {card.proLink.label}
+                    </span>
+                  </div>
+                </div>
               </div>
-              <h3 className="font-serif font-bold mb-3 whitespace-pre-line leading-none" style={{ color: '#8B0000', textAlign: 'center', fontSize: '22px' }}>
-                {card.headline}
-              </h3>
-              <p className="text-muted-foreground text-lg leading-relaxed mb-4 flex-1">
-                {card.description}
-              </p>
-              <Link
-                to={card.link}
-                className="text-gold font-semibold text-lg underline underline-offset-4 hover:text-gold-dark transition-colors mb-3"
-              >
-                Learn More →
-              </Link>
-              <Link
-                to={card.proLink.href}
-                className="text-muted-foreground text-sm underline underline-offset-2 hover:text-gold transition-colors"
-              >
-                {card.proLink.label}
-              </Link>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
