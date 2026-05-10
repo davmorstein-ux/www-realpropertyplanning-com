@@ -11,10 +11,18 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
+// 3D WebP icons reused across the site for the 5 top-level cards
+import iconLivingIndependently from "@/assets/icons/senior-independent-living-icon-washington.webp";
+import iconHelpAtHome from "@/assets/icons/senior-care-heart-hands-icon-washington.webp";
+import iconHousingOptions from "@/assets/icons/senior-adult-family-home-3d-washington.webp";
+import iconHealthCrisis from "@/assets/icons/senior-nursing-care-icon-washington.webp";
+import iconFinancesLegal from "@/assets/icons/estate-financial-planning-icon-washington.webp";
+
 export interface FlowNode {
   path: string;          // full path e.g. "/helping-an-aging-parent/exploring-care-options"
   label: string;         // card label / page heading
   icon: LucideIcon;
+  image?: string;        // optional richer 3D WebP icon (preferred when present)
   subtext?: string;      // one-line context shown on the page
   children?: FlowNode[];
 }
