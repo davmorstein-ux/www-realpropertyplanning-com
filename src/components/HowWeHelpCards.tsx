@@ -45,11 +45,7 @@ const HowWeHelpCards = () => {
         </h2>
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {cards.map((card) => (
-            <Link
-              key={card.headline}
-              to={card.link}
-              className="card-3d-blue group block h-full"
-            >
+            <div key={card.headline} className="card-3d-blue group block h-full">
               <div className="card-3d-blue__inner h-full">
                 <div className="card-3d-blue__face h-full">
                   <div className="flex h-full flex-col px-7 pb-7 pt-8">
@@ -62,7 +58,7 @@ const HowWeHelpCards = () => {
                       />
                     </div>
                     <h3
-                      className="font-serif font-extrabold mb-3 text-center text-foreground group-hover:text-accent transition-colors"
+                      className="font-serif font-extrabold mb-3 text-center text-foreground"
                       style={{ fontSize: '22px', textShadow: "0 1px 4px hsla(220, 30%, 15%, 0.25)" }}
                     >
                       {card.headline}
@@ -70,24 +66,23 @@ const HowWeHelpCards = () => {
                     <p className="text-muted-foreground text-[15px] leading-relaxed mb-5 flex-1">
                       {card.description}
                     </p>
-                    <div className="flex items-center gap-1.5 text-sm font-semibold text-gold group-hover:text-[hsl(var(--gold-dark))] transition-colors mb-3">
+                    <Link
+                      to={card.link}
+                      className="inline-flex items-center gap-1.5 text-sm font-semibold text-gold hover:text-[hsl(var(--gold-dark))] transition-colors mb-3"
+                    >
                       <span>Learn more</span>
                       <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1">→</span>
-                    </div>
-                    <span
+                    </Link>
+                    <Link
+                      to={card.proLink.href}
                       className="text-muted-foreground text-sm underline underline-offset-2 hover:text-gold transition-colors"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        window.location.href = card.proLink.href;
-                      }}
                     >
                       {card.proLink.label}
-                    </span>
+                    </Link>
                   </div>
                 </div>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       </div>
