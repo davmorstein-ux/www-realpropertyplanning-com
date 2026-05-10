@@ -98,6 +98,8 @@ export const AGING_PARENT_ROOT: FlowNode = {
         { path: "/helping-an-aging-parent/finances-and-legal/property-decisions", label: "Property & real estate decisions", icon: Landmark },
       ],
     },
+  ],
+};
 
 // Build a flat lookup map of path -> node, plus parent map for breadcrumbs/back links.
 export interface FlowLookupEntry {
