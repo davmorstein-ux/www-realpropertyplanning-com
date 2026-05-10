@@ -58,11 +58,8 @@ const ProbateEstateSales = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <img src={iconProbateSales} alt="Probate estate sale scene — house with sold sign, probate court documents, keys, and scale of justice in gold circular frame" className="mx-auto max-w-[16rem] md:max-w-[20rem] w-full h-auto object-contain mb-5" loading="eager"/>
-            <p className="text-gold font-bold uppercase mb-3" style={{ fontSize: '20px', letterSpacing: '0.18em' }}>
+            <h1 className="font-serif text-primary-foreground font-extrabold leading-tight mb-5" style={{ fontSize: 'clamp(36px, 5.5vw, 56px)' }}>
               Probate &amp; Estate Property Sales
-            </p>
-            <h1 className="font-serif text-primary-foreground font-semibold leading-tight mb-5" style={{ fontSize: 'clamp(36px, 5vw, 46px)' }}>
-              Selling a Home Through Probate in Washington State
             </h1>
             <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 mb-6">
               <span className="inline-flex items-center text-primary-foreground bg-white/10 rounded-full px-3 py-1" style={{ fontSize: '16px' }}>✓ Court-aligned timelines</span>
