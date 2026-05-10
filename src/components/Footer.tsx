@@ -13,66 +13,66 @@ const Footer = () => {
     <footer data-nosnippet="true" className="bg-navy-dark py-14 md:py-16">
       <div className="container px-6 lg:px-10">
         {/* Compact link grid — wider Guided Journeys column so links never clip */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-14 mb-12 text-left">
           {/* Brand & NAP — 4/12 */}
           <div className="lg:col-span-4">
             <Link to="/" className="block mb-4">
-              <span className="font-serif text-2xl text-primary-foreground font-semibold leading-tight">
+              <span className="font-serif text-[28px] text-primary-foreground font-bold leading-tight tracking-tight">
                 Real Property Planning
               </span>
             </Link>
-            <p className="text-primary-foreground text-[15px] leading-relaxed mb-5">
+            <p className="text-primary-foreground text-[16px] leading-[1.7] mb-7 max-w-[320px]">
               Probate, estate &amp; senior transition real estate — Washington State.
             </p>
-            <ul className="flex flex-col gap-3 text-[15px] text-left">
+            <ul className="flex flex-col gap-4 text-[16px] text-left">
               <li>
-                <a href="tel:2069003015" className="text-primary-foreground hover:text-gold transition-colors flex items-center gap-3">
-                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-7 h-7 object-contain shrink-0" loading="lazy" />
+                <a href="tel:2069003015" className="text-primary-foreground hover:text-gold transition-colors flex items-center gap-3.5 leading-tight">
+                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-8 h-8 object-contain shrink-0" loading="lazy" />
                   <span>(206) 900-3015</span>
                 </a>
               </li>
               <li>
-                <a href="mailto:info@realpropertyplanning.com" className="text-primary-foreground hover:text-gold transition-colors flex items-center gap-3 break-all">
-                  <img src={iconEmail3d} alt="" aria-hidden="true" className="w-7 h-7 object-contain shrink-0" loading="lazy" />
+                <a href="mailto:info@realpropertyplanning.com" className="text-primary-foreground hover:text-gold transition-colors flex items-center gap-3.5 break-all leading-tight">
+                  <img src={iconEmail3d} alt="" aria-hidden="true" className="w-8 h-8 object-contain shrink-0" loading="lazy" />
                   <span>info@realpropertyplanning.com</span>
                 </a>
               </li>
-              <li className="text-primary-foreground flex items-start gap-3">
-                <img src={iconPin3d} alt="" aria-hidden="true" className="w-7 h-7 object-contain mt-0.5 shrink-0" loading="lazy" />
+              <li className="text-primary-foreground flex items-start gap-3.5 leading-snug">
+                <img src={iconPin3d} alt="" aria-hidden="true" className="w-8 h-8 object-contain mt-0.5 shrink-0" loading="lazy" />
                 <span>PO Box 1462, Woodinville, WA 98072</span>
               </li>
             </ul>
           </div>
 
           {/* Guided Journeys — 4/12 (wider so links never clip) */}
-          <div className="lg:col-span-4">
-            <h3 className="text-primary-foreground font-serif text-lg font-semibold mb-4">Guided Journeys</h3>
-            <ul className="space-y-2.5 text-primary-foreground text-[15px] leading-snug">
-              <li><Link to="/helping-aging-parents" className="hover:text-gold transition-colors">Helping an Aging Parent</Link></li>
-              <li><Link to="/estate-probate-inherited-property" className="hover:text-gold transition-colors">Estate &amp; Probate</Link></li>
-              <li><Link to="/what-to-do-with-the-house" className="hover:text-gold transition-colors">What To Do With the House</Link></li>
-              <li><Link to="/understanding-housing-care-options" className="hover:text-gold transition-colors">Housing &amp; Care Options</Link></li>
-              <li><Link to="/executor-responsibilities-first-steps" className="hover:text-gold transition-colors">Executor First Steps</Link></li>
-              <li><Link to="/estate-planning-powers-of-attorney" className="hover:text-gold transition-colors">Estate Planning &amp; POA</Link></li>
+          <div className="lg:col-span-4 min-w-0">
+            <h3 className="text-primary-foreground font-serif text-xl font-semibold mb-5">Guided Journeys</h3>
+            <ul className="space-y-3 text-primary-foreground text-[16px] leading-snug">
+              <li><Link to="/helping-aging-parents" className="hover:text-gold transition-colors break-words">Helping an Aging Parent</Link></li>
+              <li><Link to="/estate-probate-inherited-property" className="hover:text-gold transition-colors break-words">Estate &amp; Probate</Link></li>
+              <li><Link to="/what-to-do-with-the-house" className="hover:text-gold transition-colors break-words">What To Do With the House</Link></li>
+              <li><Link to="/understanding-housing-care-options" className="hover:text-gold transition-colors break-words">Housing &amp; Care Options</Link></li>
+              <li><Link to="/executor-responsibilities-first-steps" className="hover:text-gold transition-colors break-words">Executor First Steps</Link></li>
+              <li><Link to="/estate-planning-powers-of-attorney" className="hover:text-gold transition-colors break-words">Estate Planning &amp; POA</Link></li>
             </ul>
           </div>
 
           {/* Services — 2/12 */}
-          <div className="lg:col-span-2">
-            <h3 className="text-primary-foreground font-serif text-lg font-semibold mb-4">Services</h3>
-            <ul className="space-y-2.5 text-primary-foreground text-[15px] leading-snug">
-              <li><Link to="/probate-estate-sales" className="hover:text-gold transition-colors">Probate &amp; Estate Sales</Link></li>
-              <li><Link to="/senior-transitions" className="hover:text-gold transition-colors">Senior Transitions</Link></li>
-              <li><Link to="/why-valuation-matters" className="hover:text-gold transition-colors">Valuation &amp; Pricing</Link></li>
-              <li><Link to="/for-attorneys" className="hover:text-gold transition-colors">For Attorneys</Link></li>
-              <li><Link to="/guides-and-resources" className="hover:text-gold transition-colors">Guides &amp; Resources</Link></li>
+          <div className="lg:col-span-2 min-w-0">
+            <h3 className="text-primary-foreground font-serif text-xl font-semibold mb-5">Services</h3>
+            <ul className="space-y-3 text-primary-foreground text-[16px] leading-snug">
+              <li><Link to="/probate-estate-sales" className="hover:text-gold transition-colors break-words">Probate &amp; Estate Sales</Link></li>
+              <li><Link to="/senior-transitions" className="hover:text-gold transition-colors break-words">Senior Transitions</Link></li>
+              <li><Link to="/why-valuation-matters" className="hover:text-gold transition-colors break-words">Valuation &amp; Pricing</Link></li>
+              <li><Link to="/for-attorneys" className="hover:text-gold transition-colors break-words">For Attorneys</Link></li>
+              <li><Link to="/guides-and-resources" className="hover:text-gold transition-colors break-words">Guides &amp; Resources</Link></li>
             </ul>
           </div>
 
           {/* About — 2/12 */}
-          <div className="lg:col-span-2">
-            <h3 className="text-primary-foreground font-serif text-lg font-semibold mb-4">About</h3>
-            <ul className="space-y-2.5 text-primary-foreground text-[15px] leading-snug">
+          <div className="lg:col-span-2 min-w-0">
+            <h3 className="text-primary-foreground font-serif text-xl font-semibold mb-5">About</h3>
+            <ul className="space-y-3 text-primary-foreground text-[16px] leading-snug">
               <li><Link to="/about" className="hover:text-gold transition-colors">About</Link></li>
               <li><Link to="/how-we-work" className="hover:text-gold transition-colors">How We Work</Link></li>
               <li><Link to="/contact" className="hover:text-gold transition-colors">Contact</Link></li>
