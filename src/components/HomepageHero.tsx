@@ -475,7 +475,7 @@ const HomepageHero = () => {
             style={{
               fontFamily: "'DM Sans', system-ui, sans-serif",
               color: "rgba(255,255,255,0.92)",
-              fontSize: isMobile ? "19px" : "28px",
+              fontSize: isMobile ? "24px" : "36px",
               fontWeight: 600,
               lineHeight: 1.4,
               margin: isMobile ? "8px 0 0" : "10px 0 0",
