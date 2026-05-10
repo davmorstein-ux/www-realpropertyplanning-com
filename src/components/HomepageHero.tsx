@@ -490,12 +490,14 @@ const HomepageHero = () => {
           </h2>
           <p style={{
             fontFamily: "'DM Sans', system-ui, sans-serif",
-            fontSize: '22px',
+            fontSize: isMobile ? '18px' : '28px',
             fontWeight: '500',
             color: 'white',
             letterSpacing: '0.3px',
             margin: '0',
-            padding: '0'
+            padding: '0',
+            display: 'block',
+            width: '100%'
           }}>
             Guidance for Senior Transitions, Estate Sales &amp; Probate
           </p>
