@@ -107,7 +107,7 @@ const HomepageHero = () => {
   const fontHead = { fontFamily: "'Barlow Condensed', 'DM Sans', sans-serif" };
 
   return (
-    <div style={{ ...fontBody, background: "#0b1220", color: "#fff" }}>
+    <div style={{ ...fontBody, background: "#FFFFFF", color: "#1E3A5F" }}>
       {/* ===== Floating Header Island (homepage-only) ===== */}
       <header
         style={{
@@ -119,10 +119,10 @@ const HomepageHero = () => {
           zIndex: 50,
           borderRadius: 14,
           padding: "14px 24px",
-          backgroundColor: scrolled ? "rgba(8, 13, 25, 0.82)" : "rgba(8, 13, 25, 0)",
+          backgroundColor: scrolled ? "rgba(255, 255, 255, 0.92)" : "rgba(255, 255, 255, 0)",
           backdropFilter: scrolled ? "blur(10px)" : "none",
           WebkitBackdropFilter: scrolled ? "blur(10px)" : "none",
-          border: scrolled ? "1px solid rgba(255,255,255,0.08)" : "1px solid rgba(255,255,255,0)",
+          border: scrolled ? "1px solid rgba(30,58,95,0.12)" : "1px solid rgba(255,255,255,0)",
           transition: "all 0.45s ease",
         }}
       >
@@ -145,8 +145,8 @@ const HomepageHero = () => {
               href="tel:2069003015"
               style={{
                 ...fontBody,
-                color: "#fff",
-                background: "#1a5fa8",
+                color: "#FFFFFF",
+                background: "#1E3A5F",
                 padding: isMobile ? "6px 8px" : "10px 18px",
                 borderRadius: 6,
                 fontWeight: 700,
@@ -163,8 +163,8 @@ const HomepageHero = () => {
                 aria-label={menuOpen ? "Close menu" : "Open menu"}
                 onClick={() => setMenuOpen((v) => !v)}
                 style={{
-                  background: "rgba(255,255,255,0.12)",
-                  border: "2.5px solid rgba(255,255,255,0.6)",
+                  background: "rgba(30,58,95,0.06)",
+                  border: "2.5px solid rgba(30,58,95,0.6)",
                   borderRadius: 14,
                   padding: "8px 12px 6px",
                   cursor: "pointer",
@@ -180,14 +180,14 @@ const HomepageHero = () => {
                 }}
               >
                 <div style={{ display: "flex", flexDirection: "column", gap: 6, marginBottom: 6 }}>
-                  <span style={{ display: "block", width: 34, height: 4.5, background: "#fff", borderRadius: 3 }} />
-                  <span style={{ display: "block", width: 34, height: 4.5, background: "#fff", borderRadius: 3 }} />
-                  <span style={{ display: "block", width: 34, height: 4.5, background: "#fff", borderRadius: 3 }} />
+                  <span style={{ display: "block", width: 34, height: 4.5, background: "#1E3A5F", borderRadius: 3 }} />
+                  <span style={{ display: "block", width: 34, height: 4.5, background: "#1E3A5F", borderRadius: 3 }} />
+                  <span style={{ display: "block", width: 34, height: 4.5, background: "#1E3A5F", borderRadius: 3 }} />
                 </div>
                 <span
                   style={{
                     ...fontBody,
-                    color: "#fff",
+                    color: "#1E3A5F",
                     fontSize: 13,
                     fontWeight: 900,
                     letterSpacing: "0.15em",
@@ -220,14 +220,14 @@ const HomepageHero = () => {
                 pathname === item.href || (item.children && item.children.some((c) => c.href === pathname));
               const linkStyle = {
                 ...fontBody,
-                color: "rgba(255,255,255,0.92)",
+                color: "#1E3A5F",
                 textDecoration: "none",
                 fontSize: 15,
                 fontWeight: 800 as const,
                 letterSpacing: "0.08em",
                 textTransform: "uppercase" as const,
                 paddingBottom: 4,
-                borderBottom: active ? "1px solid #fff" : "1px solid transparent",
+                borderBottom: active ? "1px solid #1E3A5F" : "1px solid transparent",
               };
 
               if (item.children) {
