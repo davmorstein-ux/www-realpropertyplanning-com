@@ -129,7 +129,7 @@ const HomepageHero = () => {
                 src="/rpp-logo-v4.webp"
                 alt="Real Property Planning"
                 style={{
-                  height: isMobile ? 50 : 56,
+                  height: 64,
                   width: "auto",
                   display: "block",
                   objectFit: "contain",
@@ -492,7 +492,7 @@ const HomepageHero = () => {
             style={{
               fontFamily: "'DM Sans', system-ui, sans-serif",
               color: "rgba(255,255,255,0.92)",
-              fontSize: isMobile ? "28px" : "48px",
+              fontSize: isMobile ? "34px" : "58px",
               fontWeight: 600,
               lineHeight: 1.4,
               margin: isMobile ? "8px 0 0" : "10px 0 0",
