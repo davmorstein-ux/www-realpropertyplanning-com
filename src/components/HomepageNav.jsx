@@ -39,7 +39,7 @@ const HomepageNav = () => {
               aria-label={`${s.title} — ${s.blurb}`}
               className="card-3d-blue group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
             >
-              <div className="card-3d-blue__inner h-full">
+              <div className="card-3d-blue__inner h-full relative">
                 <div className="card-3d-blue__face h-full">
                   <div className="flex h-full flex-col">
                     <div className="relative w-full overflow-hidden bg-transparent flex items-center justify-center" style={{ aspectRatio: "500 / 445" }}>
@@ -66,6 +66,24 @@ const HomepageNav = () => {
                       </span>
                     </div>
                   </div>
+                </div>
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center text-center px-8 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                  style={{ background: "rgba(14, 30, 62, 0.85)" }}
+                >
+                  <p className="text-white text-[18px] md:text-[20px] font-medium leading-relaxed mb-5" style={{ fontFamily: "'Inter', sans-serif" }}>
+                    {s.blurb}
+                  </p>
+                  <span
+                    className="inline-flex items-center gap-2 text-[16px] font-bold tracking-wide"
+                    style={{ color: "#C9A84C", fontFamily: "'Inter', sans-serif" }}
+                  >
+                    Explore Guidance
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                  </span>
                 </div>
               </div>
             </a>
