@@ -220,14 +220,14 @@ const HomepageHero = () => {
                 pathname === item.href || (item.children && item.children.some((c) => c.href === pathname));
               const linkStyle = {
                 ...fontBody,
-                color: "rgba(255,255,255,0.92)",
+                color: "#1E3A5F",
                 textDecoration: "none",
                 fontSize: 15,
                 fontWeight: 800 as const,
                 letterSpacing: "0.08em",
                 textTransform: "uppercase" as const,
                 paddingBottom: 4,
-                borderBottom: active ? "1px solid #fff" : "1px solid transparent",
+                borderBottom: active ? "1px solid #1E3A5F" : "1px solid transparent",
               };
 
               if (item.children) {
