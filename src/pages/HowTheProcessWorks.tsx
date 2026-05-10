@@ -180,7 +180,7 @@ const HowTheProcessWorks = () => {
                 { value: "adapt", q: "How does the process adapt to each situation?", a: "Some clients need immediate sale guidance. Others need time, planning, family coordination, or valuation-related clarity. Our team adapts — whether that means a compressed timeline for a court-ordered sale or a longer runway for family decision-making." },
               ].map((item) => (
                 <AccordionItem key={item.value} value={item.value} className="bg-card border border-border rounded-2xl overflow-hidden data-[state=open]:border-gold/25 transition-colors">
-                  <AccordionTrigger className="text-left font-serif text-base md:text-lg font-semibold text-foreground hover:text-gold hover:no-underline px-6 py-5">
+                  <AccordionTrigger className="text-left font-serif text-foreground hover:text-gold hover:no-underline px-6 py-5" style={{ fontSize: '20px', fontWeight: '700' }}>
                     {item.q}
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-5 pt-0 text-muted-foreground leading-relaxed">

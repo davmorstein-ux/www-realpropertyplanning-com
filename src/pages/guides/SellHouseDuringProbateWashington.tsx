@@ -224,7 +224,7 @@ const SellHouseDuringProbateWashington = () => (
                   value={`faq-${index}`}
                   className="bg-secondary border border-border rounded-xl overflow-hidden data-[state=open]:border-gold/25 transition-colors"
                 >
-                  <AccordionTrigger className="text-left font-serif font-semibold text-foreground hover:text-gold hover:no-underline px-5 py-4" style={{ fontSize: "18px" }}>
+                  <AccordionTrigger className="text-left font-serif text-foreground hover:text-gold hover:no-underline px-6 py-5" style={{ fontSize: '20px', fontWeight: '700' }}>
                     {faq.question}
                   </AccordionTrigger>
                   <AccordionContent className="px-5 pb-4 pt-0 text-muted-foreground leading-relaxed" style={{ fontSize: "18px" }}>

@@ -233,7 +233,7 @@ const SellHouseFundSeniorLiving = () => {
               <Accordion type="single" collapsible className="w-full">
                 {faqs.map((faq, idx) => (
                   <AccordionItem key={idx} value={`item-${idx}`}>
-                    <AccordionTrigger className="text-left font-serif text-lg md:text-xl text-foreground font-semibold">
+                    <AccordionTrigger className="text-left font-serif text-foreground hover:text-gold hover:no-underline px-6 py-5" style={{ fontSize: '20px', fontWeight: '700' }}>
                       {faq.q}
                     </AccordionTrigger>
                     <AccordionContent className="text-foreground/85 text-base md:text-lg leading-relaxed">

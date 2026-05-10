@@ -166,7 +166,7 @@ const Terminology = () => {
                   value={`category-${catIndex}`}
                   className="bg-card border border-border rounded-2xl overflow-hidden data-[state=open]:border-gold/25 transition-colors duration-200"
                 >
-                  <AccordionTrigger className="text-left font-serif text-lg md:text-xl font-semibold text-foreground hover:text-gold hover:no-underline px-6 py-[22px] md:px-6 md:py-[22px]">
+                  <AccordionTrigger className="text-left font-serif text-foreground hover:text-gold hover:no-underline px-6 py-5" style={{ fontSize: '20px', fontWeight: '700' }}>
                     <h3 className="pr-4">{category.title}</h3>
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-6 md:px-6 md:pb-6 pt-0">

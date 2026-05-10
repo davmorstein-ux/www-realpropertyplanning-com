@@ -253,7 +253,7 @@ const MedicareProviders = () => (
                   value={`faq-${i}`}
                   className="border border-border rounded-lg px-6 bg-secondary"
                 >
-                  <AccordionTrigger className="text-left text-foreground font-semibold text-base md:text-lg py-5 hover:no-underline">
+                  <AccordionTrigger className="text-left font-serif text-foreground hover:text-gold hover:no-underline px-6 py-5" style={{ fontSize: '20px', fontWeight: '700' }}>
                     {faq.q}
                   </AccordionTrigger>
                   <AccordionContent className="text-foreground text-base leading-relaxed pb-5">
