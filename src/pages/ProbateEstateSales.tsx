@@ -34,11 +34,13 @@ const whatMakesDifferentTiles = [
 
 const card3dStyle = {
   background: 'white',
-  border: '1px solid rgba(0,0,0,0.08)',
+  border: '1px solid #C9A84C',
   borderRadius: '16px',
-  boxShadow: '0 4px 6px rgba(0,0,0,0.07), 0 10px 20px rgba(0,0,0,0.05)',
-  transition: 'all 0.2s ease',
+  boxShadow: '0 1px 2px rgba(27,43,75,0.06), 0 4px 8px rgba(27,43,75,0.06), 0 12px 24px rgba(27,43,75,0.08)',
+  transition: 'transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease',
 };
+
+const card3dHoverShadow = '0 4px 8px rgba(27,43,75,0.1), 0 12px 20px rgba(27,43,75,0.12), 0 24px 48px rgba(27,43,75,0.14)';
 
 const jsonLd = articleSchema({
   headline: "Probate Real Estate Sales in Washington State",
