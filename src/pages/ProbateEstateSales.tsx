@@ -65,7 +65,7 @@ const jsonLd = articleSchema({
   dateModified: "2026-05-05",
   about: ["Probate real estate", "Estate sales", "Inherited property", "Court-supervised sales", "Fiduciary duties"],
 });
-h1 {
+
 const ProbateEstateSales = () => {
   return (
     <div className="min-h-screen bg-background">
