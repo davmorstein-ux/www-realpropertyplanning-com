@@ -348,17 +348,65 @@ const ProbateEstateSales = () => {
               <Link to="/guides/out-of-state-families" className="text-gold hover:text-gold/80 underline underline-offset-4 transition-colors">out-of-state</Link>{" "}
               families with trusted brokers in other states.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <a href="tel:+12069003015">
-                <Button variant="gold" size="lg" className="px-8 py-4 h-auto">
-                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy"/>
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+              <a href="tel:+12069003015" className="w-full sm:w-auto">
+                <button
+                  type="button"
+                  className="w-full font-bold text-white"
+                  style={{
+                    minWidth: '260px',
+                    padding: '16px 32px',
+                    fontSize: '17px',
+                    letterSpacing: '0.3px',
+                    border: '2px solid rgba(255, 255, 255, 0.75)',
+                    borderRadius: '10px',
+                    background: 'linear-gradient(135deg, #D4A843, #C9A84C, #A07820)',
+                    boxShadow: '0 4px 12px rgba(201,168,76,0.45), 0 8px 24px rgba(201,168,76,0.25)',
+                    transition: 'all 0.3s ease',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = 'linear-gradient(135deg, #E2BB55, #D4B35A, #B08A28)';
+                    e.currentTarget.style.transform = 'translateY(-3px)';
+                    e.currentTarget.style.boxShadow = '0 8px 20px rgba(201,168,76,0.55), 0 14px 32px rgba(201,168,76,0.35)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = 'linear-gradient(135deg, #D4A843, #C9A84C, #A07820)';
+                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.boxShadow = '0 4px 12px rgba(201,168,76,0.45), 0 8px 24px rgba(201,168,76,0.25)';
+                  }}
+                >
                   Call (206) 900-3015
-                </Button>
+                </button>
               </a>
-              <Link to="/contact">
-                <Button variant="navy3d" size="lg" className="px-8 py-4 h-auto !border-2 !border-gold">
+              <Link to="/contact" className="w-full sm:w-auto">
+                <button
+                  type="button"
+                  className="w-full font-bold"
+                  style={{
+                    minWidth: '260px',
+                    padding: '16px 32px',
+                    fontSize: '17px',
+                    letterSpacing: '0.3px',
+                    color: '#C9A84C',
+                    background: 'transparent',
+                    border: '2px solid #C9A84C',
+                    borderRadius: '10px',
+                    boxShadow: 'none',
+                    transition: 'all 0.3s ease',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = 'rgba(201,168,76,0.08)';
+                    e.currentTarget.style.transform = 'translateY(-3px)';
+                    e.currentTarget.style.boxShadow = '0 0 16px rgba(201,168,76,0.35)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = 'transparent';
+                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.boxShadow = 'none';
+                  }}
+                >
                   Send a Message
-                </Button>
+                </button>
               </Link>
             </div>
           </div>
