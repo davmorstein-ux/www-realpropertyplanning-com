@@ -1,5 +1,5 @@
 import { useLocation, Link, Navigate } from "react-router-dom";
-import { ChevronLeft, ArrowRight } from "lucide-react";
+import { ChevronLeft } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
