@@ -184,28 +184,32 @@ const HomepageHero = () => {
         {!isMobile && (
           <div
             style={{
-              backgroundColor: scrolled ? "rgba(245, 240, 230, 0.92)" : "rgb(245, 240, 230)",
-              backdropFilter: scrolled ? "blur(8px)" : "none",
-              WebkitBackdropFilter: scrolled ? "blur(8px)" : "none",
-              transition: "all 0.3s ease",
               width: "100%",
-              borderBottom: "1px solid rgba(30,58,95,0.12)",
-              boxShadow: "0 2px 6px rgba(30,58,95,0.06)",
+              backgroundColor: "transparent",
+              padding: "8px 24px",
+              display: "flex",
+              justifyContent: "center",
             }}
           >
             <nav
               ref={dropdownRef}
               style={{
-                maxWidth: 1100,
-                margin: "0 auto",
+                maxWidth: "1100px",
                 width: "100%",
-                minHeight: 50,
-                padding: "0 24px",
+                minHeight: "50px",
+                padding: "0 32px",
                 display: "flex",
                 flexWrap: "nowrap",
                 justifyContent: "center",
                 alignItems: "center",
                 gap: 28,
+                backgroundColor: scrolled ? "rgba(245, 240, 230, 0.95)" : "rgb(245, 240, 230)",
+                backdropFilter: scrolled ? "blur(8px)" : "none",
+                WebkitBackdropFilter: scrolled ? "blur(8px)" : "none",
+                borderRadius: "50px",
+                boxShadow: "0 4px 20px rgba(30,58,95,0.12)",
+                border: "1px solid rgba(30,58,95,0.10)",
+                transition: "all 0.3s ease",
               }}
             >
               {NAV.map((item) => {
