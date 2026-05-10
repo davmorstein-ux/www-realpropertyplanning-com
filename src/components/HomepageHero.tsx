@@ -107,7 +107,7 @@ const HomepageHero = () => {
   const fontHead = { fontFamily: "'Barlow Condensed', 'DM Sans', sans-serif" };
 
   return (
-    <div style={{ ...fontBody, background: "#0b1220", color: "#fff" }}>
+    <div style={{ ...fontBody, background: "#FFFFFF", color: "#1E3A5F" }}>
       {/* ===== Floating Header Island (homepage-only) ===== */}
       <header
         style={{
