@@ -193,7 +193,7 @@ const HomepageHero = () => {
             <nav
               ref={dropdownRef}
               style={{
-                maxWidth: 1280,
+                maxWidth: 1100,
                 margin: "0 auto",
                 minHeight: 50,
                 padding: "0 24px",
