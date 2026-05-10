@@ -231,6 +231,7 @@ const HomepageHero = () => {
                     >
                       <button
                         type="button"
+                        data-nav-button=""
                         className="nav-link-hover"
                         onClick={() => setOpenDropdown(isOpen ? null : item.label)}
                         style={{
