@@ -198,19 +198,16 @@ const ProbateEstateSales = () => {
             </p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {whatMakesDifferentTiles.map((tile, i) => (
-                  <div
-                    key={i}
-                    className="p-6 flex flex-col items-start cursor-default"
-                    style={card3dStyle}
-                    onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-6px)'; e.currentTarget.style.boxShadow = card3dHoverShadow; e.currentTarget.style.borderColor = '#E2C66A'; }}
-                    onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = card3dStyle.boxShadow; e.currentTarget.style.borderColor = '#C9A84C'; }}
-                  >
-                    <img src={tile.icon} alt="" aria-hidden="true" loading="lazy" width="80" height="80" className="mb-4 shrink-0" style={{ width: 80, height: 80, objectFit: 'contain' }} />
-                    <h3 className="font-serif text-base text-foreground font-semibold mb-2">{tile.label}</h3>
-                    <p className="text-muted-foreground text-[15px] leading-relaxed">{tile.text}</p>
+                <div key={i} className="card-3d-blue cursor-default">
+                  <div className="card-3d-blue__inner">
+                    <div className="card-3d-blue__face p-6 flex flex-col items-start">
+                      <img src={tile.icon} alt="" aria-hidden="true" loading="lazy" width="80" height="80" className="mb-4 shrink-0" style={{ width: 80, height: 80, objectFit: 'contain' }} />
+                      <h3 className="font-serif text-base text-foreground font-semibold mb-2">{tile.label}</h3>
+                      <p className="text-muted-foreground text-[15px] leading-relaxed">{tile.text}</p>
+                    </div>
                   </div>
-                ))}
-
+                </div>
+              ))}
             </div>
           </div>
         </div>
