@@ -23,64 +23,56 @@ const sections = [
 
 const HomepageNav = () => {
   return (
-    <>
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap');
-
-        .hn-section { font-family: 'Montserrat', sans-serif; padding: 56px 20px 64px; max-width: 1300px; margin: 0 auto; }
-        .hn-heading { text-align: center; margin-bottom: 36px; }
-        .hn-question { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 700; color: #8B1A1A; line-height: 1.2; text-align: center; margin: 0 0 12px; }
-        .hn-subhead { font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 500; color: #1B2B4B; line-height: 1.6; max-width: 640px; margin: 0 auto; }
-
-        .hn-grid { display: grid; grid-template-columns: 1fr; gap: 20px; max-width: 720px; margin: 0 auto; }
-
-        .hn-card { display: flex; flex-direction: column; background: #FDFAF5; border-radius: 16px; border: 2px solid rgba(184,154,90,0.40); box-shadow: 0 8px 24px rgba(18,36,63,0.15); overflow: hidden; text-decoration: none; cursor: pointer; transition: box-shadow 0.3s ease, transform 0.3s ease; color: inherit; }
-        .hn-card:hover, .hn-card:focus-visible { box-shadow: 0 18px 40px rgba(18,36,63,0.25); transform: translateY(-4px); border-color: #b89a5a; outline: none; }
-
-        .hn-img-frame { position: relative; width: 100%; aspect-ratio: 500 / 445; overflow: hidden; background: transparent; display: flex; align-items: center; justify-content: center; flex-shrink: 0; padding: 0; }
-        .hn-img { display: block; width: 100%; height: 100%; object-fit: contain; background: transparent; flex-shrink: 0; padding: 0; }
-        .hn-body { padding: 20px 22px 8px; flex: 1; text-align: center; }
-        .hn-title { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 700; color: #8B1A1A; line-height: 1.25; margin: 0 0 10px; }
-        .hn-blurb { font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 400; color: #1B2B4B; line-height: 1.6; margin: 0; }
-
-        .hn-footer { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 16px 22px 22px; }
-        .hn-card:hover .gold-cta { transform: translateX(2px); box-shadow: 0 6px 16px rgba(18,36,63,0.28); }
-
-        @media (min-width: 768px) {
-          .hn-section { padding: 64px 32px 72px; }
-          .hn-question { font-size: 38px; margin-bottom: 14px; }
-          .hn-subhead { font-size: 20px; }
-          .hn-heading { margin-bottom: 44px; }
-          .hn-grid { grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: none; }
-          .hn-img-frame { padding: 0; }
-          .hn-title { font-size: 28px; }
-        }
-      `}</style>
-      <div className="hn-section">
-        <div className="hn-heading">
-          <h2 className="hn-question">Advice and Answers</h2>
+    <section className="py-14 md:py-16 bg-cream">
+      <div className="container px-5 md:px-8">
+        <div className="max-w-3xl mx-auto text-center mb-10 md:mb-12">
+          <h2 className="font-serif text-[32px] md:text-[40px] font-bold text-navy leading-tight">
+            Advice and Answers
+          </h2>
         </div>
-        <div className="hn-grid">
+
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-stretch">
           {sections.map((s) => (
-            <a key={s.title} className="hn-card" href={s.href} aria-label={`${s.title} — ${s.blurb}`}>
-              <div className="hn-img-frame">
-                <img className="hn-img" src={s.img} alt="" aria-hidden="true" loading="lazy" />
-              </div>
-              <div className="hn-body">
-                <div className="hn-title">{s.title}</div>
-                <p className="hn-blurb">{s.blurb}</p>
-              </div>
-              <div className="hn-footer">
-                <span className="gold-cta">
-                  Explore
-                  <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
-                </span>
+            <a
+              key={s.title}
+              href={s.href}
+              aria-label={`${s.title} — ${s.blurb}`}
+              className="card-3d-blue group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+            >
+              <div className="card-3d-blue__inner h-full">
+                <div className="card-3d-blue__face h-full">
+                  <div className="flex h-full flex-col">
+                    <div className="relative w-full overflow-hidden bg-transparent flex items-center justify-center" style={{ aspectRatio: "500 / 445" }}>
+                      <img
+                        src={s.img}
+                        alt=""
+                        aria-hidden="true"
+                        loading="lazy"
+                        className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
+                      />
+                    </div>
+                    <div className="flex flex-1 flex-col items-center text-center px-6 pt-6 pb-7">
+                      <h3 className="font-serif text-[24px] md:text-[26px] font-semibold text-navy leading-snug mb-3 transition-colors duration-300 group-hover:text-accent">
+                        {s.title}
+                      </h3>
+                      <p className="text-foreground text-[17px] md:text-[18px] leading-relaxed mb-6">
+                        {s.blurb}
+                      </p>
+                      <span className="gold-cta mt-auto">
+                        Explore
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                          <polyline points="9 18 15 12 9 6" />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </a>
           ))}
         </div>
       </div>
-    </>
+    </section>
   );
 };
 
