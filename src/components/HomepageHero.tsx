@@ -128,12 +128,7 @@ const HomepageHero = () => {
               <img
                 src="/rpp-logo-v4.webp"
                 alt="Real Property Planning"
-                style={{
-                  height: 64,
-                  width: "auto",
-                  display: "block",
-                  objectFit: "contain",
-                }}
+                style={{ height: '72px', width: 'auto', objectFit: 'contain' }}
               />
             </Link>
             <div style={{ display: "flex", alignItems: "center", gap: 10 }}>

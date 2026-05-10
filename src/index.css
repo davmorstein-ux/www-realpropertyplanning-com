@@ -298,10 +298,13 @@ body {
 
 
 /* Homepage FAQ — larger, high-contrast accordion text */
+.homepage-faq-item:hover {
+  background-color: rgba(201,168,76,0.06) !important;
+}
 .homepage-faq-trigger {
-  color: hsl(var(--navy)) !important;
+  color: #1E3A5F !important;
   font-family: "Inter", sans-serif !important;
-  font-size: 21px !important;
+  font-size: 16px !important;
   font-weight: 700 !important;
   line-height: 1.35 !important;
   text-decoration: none !important;
