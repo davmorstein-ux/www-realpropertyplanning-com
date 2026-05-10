@@ -286,38 +286,38 @@ const ProbateEstateSales = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-8">Explore Further</h2>
-            <div className="grid md:grid-cols-3 gap-5">
-              <Link to="/client-stories" className="card-3d-blue group block">
-                <div className="card-3d-blue__inner">
+            <div className="grid md:grid-cols-3 gap-5 items-stretch">
+              <Link to="/client-stories" className="card-3d-blue group block h-full">
+                <div className="card-3d-blue__inner h-full">
                   <div className="card-3d-blue__face p-6 flex flex-col h-full">
                     <img src={iconClientStories} alt="" aria-hidden="true" loading="lazy" width="80" height="80" className="mb-4 shrink-0" style={{ width: 80, height: 80, objectFit: 'contain' }} />
                     <h3 className="font-serif text-lg text-foreground font-semibold mb-2 group-hover:text-gold transition-colors">Client Stories</h3>
-                    <p className="text-muted-foreground text-[15px] leading-relaxed mb-4 flex-1">See how we've helped executors, families, and trustees navigate real situations.</p>
-                    <span className="text-accent group-hover:text-gold text-sm font-medium transition-colors inline-flex items-center gap-1">
+                    <p className="text-muted-foreground text-[15px] leading-relaxed mb-4">See how we've helped executors, families, and trustees navigate real situations.</p>
+                    <span className="mt-auto text-accent group-hover:text-gold text-sm font-medium transition-colors inline-flex items-center gap-1">
                       View stories <ArrowRight className="w-3.5 h-3.5" />
                     </span>
                   </div>
                 </div>
               </Link>
-              <Link to="/faq" className="card-3d-blue group block">
-                <div className="card-3d-blue__inner">
+              <Link to="/faq" className="card-3d-blue group block h-full">
+                <div className="card-3d-blue__inner h-full">
                   <div className="card-3d-blue__face p-6 flex flex-col h-full">
                     <img src={iconCommonQuestions} alt="" aria-hidden="true" loading="lazy" width="80" height="80" className="mb-4 shrink-0" style={{ width: 80, height: 80, objectFit: 'contain' }} />
                     <h3 className="font-serif text-lg text-foreground font-semibold mb-2 group-hover:text-gold transition-colors">Common Questions</h3>
-                    <p className="text-muted-foreground text-[15px] leading-relaxed mb-4 flex-1">Answers to the questions executors and families ask most.</p>
-                    <span className="text-accent group-hover:text-gold text-sm font-medium transition-colors inline-flex items-center gap-1">
+                    <p className="text-muted-foreground text-[15px] leading-relaxed mb-4">Answers to the questions executors and families ask most.</p>
+                    <span className="mt-auto text-accent group-hover:text-gold text-sm font-medium transition-colors inline-flex items-center gap-1">
                       Read FAQs <ArrowRight className="w-3.5 h-3.5" />
                     </span>
                   </div>
                 </div>
               </Link>
-              <Link to="/how-the-process-works" className="card-3d-blue group block">
-                <div className="card-3d-blue__inner">
+              <Link to="/how-the-process-works" className="card-3d-blue group block h-full">
+                <div className="card-3d-blue__inner h-full">
                   <div className="card-3d-blue__face p-6 flex flex-col h-full">
                     <img src={iconHowProcessWorks} alt="" aria-hidden="true" loading="lazy" width="80" height="80" className="mb-4 shrink-0" style={{ width: 80, height: 80, objectFit: 'contain' }} />
                     <h3 className="font-serif text-lg text-foreground font-semibold mb-2 group-hover:text-gold transition-colors">How the Process Works</h3>
-                    <p className="text-muted-foreground text-[15px] leading-relaxed mb-4 flex-1">A clear walkthrough from assessment to closing.</p>
-                    <span className="text-accent group-hover:text-gold text-sm font-medium transition-colors inline-flex items-center gap-1">
+                    <p className="text-muted-foreground text-[15px] leading-relaxed mb-4">A clear walkthrough from assessment to closing.</p>
+                    <span className="mt-auto text-accent group-hover:text-gold text-sm font-medium transition-colors inline-flex items-center gap-1">
                       See the process <ArrowRight className="w-3.5 h-3.5" />
                     </span>
                   </div>
