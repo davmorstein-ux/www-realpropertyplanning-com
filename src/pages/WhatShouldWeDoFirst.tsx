@@ -186,34 +186,8 @@ const WhatShouldWeDoFirst = () => {
           </div>
         </section>
 
-        <JourneyOrientation
-          tone="caregiving"
-          items={[
-            "You are not sure where to begin",
-            "Several decisions feel urgent at once",
-            "You need a calm, ordered first step",
-            "You are helping a parent, spouse, or sibling",
-            "You want clarity before making any big move"
-          ]}
-        />
 
-        {/* REASSURANCE */}
-        <section className="py-10 lg:py-12 bg-cream">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center">
-              <HeartHandshake className="w-10 h-10 text-gold mx-auto mb-5" aria-hidden="true" />
-              <h2 className="font-serif text-2xl md:text-3xl text-navy font-semibold mb-4">
-                You Are Not Expected to Have All the Answers
-              </h2>
-              <p className="text-navy text-lg md:text-xl leading-relaxed">
-                Most people arrive here unsure where to begin. This site is designed to
-                help you understand the process, learn what questions to ask, avoid
-                common mistakes, and connect with trusted professionals — at your own
-                pace.
-              </p>
-            </div>
-          </div>
-        </section>
+
 
         {/* PATHWAYS */}
         <section id="pathways" className="py-10 lg:py-14 bg-secondary scroll-mt-20">
@@ -279,44 +253,8 @@ const WhatShouldWeDoFirst = () => {
           id="what-should-we-do-first"
         />
 
-        {/* WHAT TO UNDERSTAND */}
-        <section className="py-10 lg:py-14 bg-background">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-7">
-                <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">
-                  Educational Compass
-                </p>
-                <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold mb-3">
-                  Many People Do Not Know What Questions to Ask
-                </h2>
-                <p className="text-navy text-lg leading-relaxed max-w-2xl mx-auto">
-                  Confusion is normal. Most families don't initially know what order
-                  things happen, which professionals to involve, or what options exist.
-                  These are the areas families typically need to understand.
-                </p>
-              </div>
-              <div className="bg-white border-2 border-gold/25 rounded-2xl p-6 md:p-8 shadow-[0_8px_24px_-12px_rgba(27,43,75,0.18)]">
-                <p className="text-navy font-serif text-xl md:text-2xl font-semibold mb-5">
-                  Families Often Need to Understand:
-                </p>
-                <ul className="grid sm:grid-cols-2 gap-3">
-                  {understand.map((item) => (
-                    <li
-                      key={item}
-                      className="flex items-center gap-3 bg-cream border border-gold/20 rounded-xl px-4 py-3 min-h-[60px]"
-                    >
-                      <CheckCircle2 className="w-6 h-6 text-gold shrink-0" aria-hidden="true" />
-                      <span className="text-navy font-semibold text-base md:text-lg">
-                        {item}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
+
+
 
         {/* CONTINUE YOUR JOURNEY */}
         <section className="py-10 lg:py-14 bg-secondary">
@@ -358,36 +296,8 @@ const WhatShouldWeDoFirst = () => {
           </div>
         </section>
 
-        {/* SIMPLE NEXT STEPS */}
-        <section className="py-10 lg:py-14 bg-cream">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto">
-              <div className="text-center mb-7">
-                <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">
-                  Simple Next Steps
-                </p>
-                <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold">
-                  A Calm, Clear Action Plan
-                </h2>
-              </div>
-              <ol className="space-y-4">
-                {nextSteps.map((step, i) => (
-                  <li
-                    key={step}
-                    className="flex items-center gap-5 bg-white border border-gold/25 rounded-2xl p-5 shadow-[0_4px_14px_-8px_rgba(27,43,75,0.2)]"
-                  >
-                    <span className="shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-gold to-[hsl(var(--gold-dark))] text-white font-serif text-2xl font-bold flex items-center justify-center">
-                      {i + 1}
-                    </span>
-                    <span className="text-navy font-semibold text-lg md:text-xl leading-snug">
-                      {step}
-                    </span>
-                  </li>
-                ))}
-              </ol>
-            </div>
-          </div>
-        </section>
+
+
 
         {/* CTA */}
         <section className="py-10 lg:py-14 bg-primary">
