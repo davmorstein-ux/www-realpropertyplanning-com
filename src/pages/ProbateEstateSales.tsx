@@ -11,16 +11,25 @@ import { ArrowRight } from "lucide-react";
 
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconProbateSales from "@/assets/probate-estate-sales-hero.png";
+import iconLegalAuthority from "@/assets/icons/legal-authority-3d.webp";
+import iconMultipleDecisionMakers from "@/assets/icons/multiple-decision-makers-3d.webp";
+import iconPropertyCondition from "@/assets/icons/property-condition-3d.webp";
+import iconHonestPricing from "@/assets/icons/honest-pricing-3d.webp";
+import iconEmotionalComplexity from "@/assets/icons/emotional-complexity-3d.webp";
+import iconPreparationStrategy from "@/assets/icons/preparation-strategy-3d.webp";
+import iconClientStories from "@/assets/icons/client-stories-3d.webp";
+import iconCommonQuestions from "@/assets/icons/common-questions-3d.webp";
+import iconHowProcessWorks from "@/assets/icons/how-the-process-works-3d.webp";
 
 // ── Data ──
 
 const whatMakesDifferentTiles = [
-  { emoji: "⚖️", label: "Legal Authority", text: "Court requirements may dictate when and how a sale can occur." },
-  { emoji: "🤝", label: "Multiple Decision-Makers", text: "Executors, co-heirs, attorneys, and trustees must coordinate." },
-  { emoji: "🏚️", label: "Property Condition", text: "Deferred maintenance, belongings, and vacancy are common." },
-  { emoji: "💰", label: "Honest Pricing", text: "Value must reflect actual condition — not automated estimates." },
-  { emoji: "🫂", label: "Emotional Complexity", text: "Family dynamics can slow communication and decisions." },
-  { emoji: "🔨", label: "Preparation Strategy", text: "As-is vs. repairs has a direct impact on fiduciary defensibility." },
+  { icon: iconLegalAuthority, label: "Legal Authority", text: "Court requirements may dictate when and how a sale can occur." },
+  { icon: iconMultipleDecisionMakers, label: "Multiple Decision-Makers", text: "Executors, co-heirs, attorneys, and trustees must coordinate." },
+  { icon: iconPropertyCondition, label: "Property Condition", text: "Deferred maintenance, belongings, and vacancy are common." },
+  { icon: iconHonestPricing, label: "Honest Pricing", text: "Value must reflect actual condition — not automated estimates." },
+  { icon: iconEmotionalComplexity, label: "Emotional Complexity", text: "Family dynamics can slow communication and decisions." },
+  { icon: iconPreparationStrategy, label: "Preparation Strategy", text: "As-is vs. repairs has a direct impact on fiduciary defensibility." },
 ];
 
 const card3dStyle = {
@@ -138,7 +147,7 @@ const ProbateEstateSales = () => {
                     onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 8px 16px rgba(0,0,0,0.12), 0 20px 40px rgba(0,0,0,0.08)'; }}
                     onMouseLeave={e => { e.currentTarget.style.boxShadow = card3dStyle.boxShadow; }}
                   >
-                    <span className="leading-none mb-4" style={{ fontSize: "48px" }} role="img" aria-hidden="true">{tile.emoji}</span>
+                    <img src={tile.icon} alt="" aria-hidden="true" loading="lazy" width={56} height={56} className="mb-4 object-contain shrink-0" style={{ width: 56, height: 56 }} />
                     <h3 className="font-serif text-base text-foreground font-semibold mb-2">{tile.label}</h3>
                     <p className="text-muted-foreground text-[15px] leading-relaxed">{tile.text}</p>
                   </div>
@@ -214,7 +223,7 @@ const ProbateEstateSales = () => {
                 onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 8px 16px rgba(0,0,0,0.12), 0 20px 40px rgba(0,0,0,0.08)'; }}
                 onMouseLeave={e => { e.currentTarget.style.boxShadow = card3dStyle.boxShadow; }}
               >
-                <span className="leading-none mb-4" style={{ fontSize: "48px" }} role="img" aria-hidden="true">📖</span>
+                <img src={iconClientStories} alt="" aria-hidden="true" loading="lazy" width={56} height={56} className="mb-4 object-contain shrink-0" style={{ width: 56, height: 56 }} />
                 <h3 className="font-serif text-lg text-foreground font-semibold mb-2 group-hover:text-gold transition-colors">Client Stories</h3>
                 <p className="text-muted-foreground text-[15px] leading-relaxed mb-4 flex-1">See how we've helped executors, families, and trustees navigate real situations.</p>
                 <span className="text-accent group-hover:text-gold text-sm font-medium transition-colors inline-flex items-center gap-1">
@@ -228,7 +237,7 @@ const ProbateEstateSales = () => {
                 onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 8px 16px rgba(0,0,0,0.12), 0 20px 40px rgba(0,0,0,0.08)'; }}
                 onMouseLeave={e => { e.currentTarget.style.boxShadow = card3dStyle.boxShadow; }}
               >
-                <span className="leading-none mb-4" style={{ fontSize: "48px" }} role="img" aria-hidden="true">💬</span>
+                <img src={iconCommonQuestions} alt="" aria-hidden="true" loading="lazy" width={56} height={56} className="mb-4 object-contain shrink-0" style={{ width: 56, height: 56 }} />
                 <h3 className="font-serif text-lg text-foreground font-semibold mb-2 group-hover:text-gold transition-colors">Common Questions</h3>
                 <p className="text-muted-foreground text-[15px] leading-relaxed mb-4 flex-1">Answers to the questions executors and families ask most.</p>
                 <span className="text-accent group-hover:text-gold text-sm font-medium transition-colors inline-flex items-center gap-1">
@@ -242,7 +251,7 @@ const ProbateEstateSales = () => {
                 onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 8px 16px rgba(0,0,0,0.12), 0 20px 40px rgba(0,0,0,0.08)'; }}
                 onMouseLeave={e => { e.currentTarget.style.boxShadow = card3dStyle.boxShadow; }}
               >
-                <span className="leading-none mb-4" style={{ fontSize: "48px" }} role="img" aria-hidden="true">🗺️</span>
+                <img src={iconHowProcessWorks} alt="" aria-hidden="true" loading="lazy" width={56} height={56} className="mb-4 object-contain shrink-0" style={{ width: 56, height: 56 }} />
                 <h3 className="font-serif text-lg text-foreground font-semibold mb-2 group-hover:text-gold transition-colors">How the Process Works</h3>
                 <p className="text-muted-foreground text-[15px] leading-relaxed mb-4 flex-1">A clear walkthrough from assessment to closing.</p>
                 <span className="text-accent group-hover:text-gold text-sm font-medium transition-colors inline-flex items-center gap-1">
