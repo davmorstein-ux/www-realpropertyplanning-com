@@ -79,17 +79,65 @@ const ProbateEstateSales = () => {
               <span className="inline-flex items-center text-primary-foreground bg-white/10 rounded-full px-3 py-1" style={{ fontSize: '16px' }}>✓ Fiduciary-grade pricing</span>
               <span className="inline-flex items-center text-primary-foreground bg-white/10 rounded-full px-3 py-1" style={{ fontSize: '16px' }}>✓ Full documentation</span>
             </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact">
-                <Button variant="gold" size="lg" className="w-full sm:w-auto px-8 py-4 h-auto">
-                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy"/>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link to="/contact" className="w-full sm:w-auto">
+                <button
+                  type="button"
+                  className="w-full font-bold text-white"
+                  style={{
+                    minWidth: '260px',
+                    padding: '16px 32px',
+                    fontSize: '17px',
+                    letterSpacing: '0.3px',
+                    border: 'none',
+                    borderRadius: '10px',
+                    background: 'linear-gradient(135deg, #D4A843, #C9A84C, #A07820)',
+                    boxShadow: '0 4px 12px rgba(201,168,76,0.45), 0 8px 24px rgba(201,168,76,0.25)',
+                    transition: 'all 0.3s ease',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = 'linear-gradient(135deg, #E2BB55, #D4B35A, #B08A28)';
+                    e.currentTarget.style.transform = 'translateY(-3px)';
+                    e.currentTarget.style.boxShadow = '0 8px 20px rgba(201,168,76,0.55), 0 14px 32px rgba(201,168,76,0.35)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = 'linear-gradient(135deg, #D4A843, #C9A84C, #A07820)';
+                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.boxShadow = '0 4px 12px rgba(201,168,76,0.45), 0 8px 24px rgba(201,168,76,0.25)';
+                  }}
+                >
                   Talk Through Your Estate
-                </Button>
+                </button>
               </Link>
-              <Link to="/guides/sell-house-during-probate-washington">
-                <Button size="lg" variant="outline3d" className="bg-white !text-[#0f2d52] border-2 border-[#0f2d52] hover:bg-[#0f2d52] hover:!text-white focus-visible:ring-[#0f2d52] w-full sm:w-auto px-8 py-4 h-auto">
+              <Link to="/guides/sell-house-during-probate-washington" className="w-full sm:w-auto">
+                <button
+                  type="button"
+                  className="w-full font-bold"
+                  style={{
+                    minWidth: '260px',
+                    padding: '16px 32px',
+                    fontSize: '17px',
+                    letterSpacing: '0.3px',
+                    color: '#C9A84C',
+                    background: 'transparent',
+                    border: '2px solid #C9A84C',
+                    borderRadius: '10px',
+                    boxShadow: 'none',
+                    transition: 'all 0.3s ease',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = 'rgba(201,168,76,0.08)';
+                    e.currentTarget.style.transform = 'translateY(-3px)';
+                    e.currentTarget.style.boxShadow = '0 0 16px rgba(201,168,76,0.35)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = 'transparent';
+                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.boxShadow = 'none';
+                  }}
+                >
                   Read the Probate Sale Guide
-                </Button>
+                </button>
               </Link>
             </div>
           </div>
