@@ -89,7 +89,7 @@ const ProbateEstateSales = () => {
                     padding: '16px 32px',
                     fontSize: '17px',
                     letterSpacing: '0.3px',
-                    border: 'none',
+                    border: '2px solid rgba(255, 255, 255, 0.75)',
                     borderRadius: '10px',
                     background: 'linear-gradient(135deg, #D4A843, #C9A84C, #A07820)',
                     boxShadow: '0 4px 12px rgba(201,168,76,0.45), 0 8px 24px rgba(201,168,76,0.25)',
