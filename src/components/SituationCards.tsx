@@ -70,7 +70,7 @@ const SituationCards = () => {
               aria-label={`${s.title} — ${s.description} — ${s.cta}`}
               className="group flex h-full flex-col rounded-2xl bg-white border border-gold/30 shadow-[0_8px_24px_-12px_rgba(27,43,75,0.25)] hover:shadow-[0_18px_40px_-16px_rgba(27,43,75,0.45)] hover:-translate-y-1 hover:border-gold transition-all duration-300 overflow-hidden no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
             >
-              <div className="relative w-full overflow-hidden bg-cream flex items-center justify-center" style={{ aspectRatio: "500 / 445" }}>
+              <div className="relative w-full overflow-hidden bg-transparent flex items-center justify-center" style={{ aspectRatio: "500 / 445" }}>
                 <img
                   src={s.image}
                   alt={s.alt}
