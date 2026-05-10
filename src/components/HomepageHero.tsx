@@ -109,7 +109,7 @@ const HomepageHero = () => {
   return (
     <div style={{ ...fontBody, background: "#FFFFFF", color: "#1E3A5F" }}>
       {/* ===== Stacked Header (homepage-only) ===== */}
-      <header style={{ position: "relative", zIndex: 50, width: "100%" }}>
+      <header style={{ position: "sticky", top: 0, zIndex: 9999, width: "100%", boxShadow: "0 2px 12px rgba(0,0,0,0.12)" }}>
         {/* Row 1 — Top bar (navy) */}
         <div style={{ background: "#1E3A5F", width: "100%" }}>
           <div
@@ -208,13 +208,14 @@ const HomepageHero = () => {
                 const active =
                   pathname === item.href || (item.children && item.children.some((c) => c.href === pathname));
                 const linkStyle = {
-                  ...fontBody,
+                  fontFamily: "'DM Sans', system-ui, sans-serif",
                   color: "#1E3A5F",
                   textDecoration: "none",
-                  fontSize: 14,
-                  fontWeight: 800 as const,
-                  letterSpacing: "0.08em",
+                  fontSize: "14px",
+                  fontWeight: 600 as const,
+                  letterSpacing: "0.5px",
                   textTransform: "uppercase" as const,
+                  lineHeight: 1,
                   paddingBottom: 4,
                   borderBottom: active ? "2px solid #1E3A5F" : "2px solid transparent",
                 };
