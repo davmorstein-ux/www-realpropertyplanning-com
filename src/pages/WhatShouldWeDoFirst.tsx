@@ -175,8 +175,9 @@ const WhatShouldWeDoFirst = () => {
           </div>
           {/* Navy bar below image */}
           <div style={{ backgroundColor: '#1a2f4e', width: '100%', padding: '28px 40px', lineHeight: '0', marginTop: '-4px' }}>
-            <p style={{ fontFamily: 'Georgia, serif', color: 'white', fontWeight: '800', fontSize: '32px', textAlign: 'center', margin: '0', lineHeight: '1.3' }}>
-              A simple starting point for families, seniors, executors, and loved ones navigating major life, housing, estate, probate, and property decisions.
+            <p style={{ fontFamily: 'Georgia, serif', color: 'white', fontWeight: '800', fontSize: '38px', textAlign: 'center', margin: '0', lineHeight: '1.4' }}>
+              A simple starting point for families, seniors, executors, and loved ones<br />
+              navigating major life, housing, estate, probate, and property decisions.
             </p>
           </div>
         </section>
