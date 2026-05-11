@@ -232,7 +232,7 @@ const SeniorLivingAndRelocation = () => {
                 My role is not to recommend specific communities or make placement decisions. Instead, I help families understand how real estate timing and strategy connect to the larger transition — and I work alongside the professionals who specialize in senior placement and care coordination.
               </p>
               <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                Together, we can help ensure that housing decisions — both the home being left and the home being chosen — are handled thoughtfully and with the family's best interests in mind.
+                Together, this resource can help ensure that housing decisions — both the home being left and the home being chosen — are handled thoughtfully and with the family's best interests in mind.
               </p>
             </div>
           </div>

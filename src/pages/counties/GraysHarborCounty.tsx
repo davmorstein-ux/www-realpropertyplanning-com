@@ -34,7 +34,7 @@ const GraysHarborCounty = () => (
     ]}
     communitiesIntro="Real Property Planning serves families, executors, and professionals throughout Grays Harbor County, including:"
     closingCtaBody={[
-      "Whether you're managing an inherited home in Aberdeen or a coastal property in Ocean Shores, we can help you understand your options and take the right next step.",
+      "Whether you're managing an inherited home in Aberdeen or a coastal property in Ocean Shores, this resource can help you understand your options and take the right next step.",
       "Our team brings the same careful, coordinated approach to Grays Harbor County that we bring to every engagement across Western Washington.",
     ]}
     countySpecificFaqs={[

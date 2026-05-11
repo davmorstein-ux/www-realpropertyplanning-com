@@ -64,7 +64,7 @@ const TrustAndResults = () => (
             Why Clients and Professionals Trust Real Property Planning
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
-            What keeps clients coming back — and referring others — isn't a sales pitch. It's that Our team is thorough, honest about what a property is actually worth, and brings a level of valuation expertise that most brokers simply don't have.
+            What keeps clients coming back — and referring others — isn't a sales pitch. It's that the professionals in this network are thorough, honest about what a property is actually worth, and bring a level of valuation expertise that most brokers simply don't have.
           </p>
         </div>
 

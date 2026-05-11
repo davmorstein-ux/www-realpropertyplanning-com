@@ -50,7 +50,7 @@ const GinnysGirlsCard = () => (
                   Ginny's is a family owned and operated company, based in Edmonds, WA providing senior move management, estate sales, residential clear outs and personal property appraisals. We work throughout North King and Snohomish counties serving families in transition, offering:
                 </p>
                 <p className="text-muted-foreground text-sm leading-relaxed mb-3 text-left">
-                  Comprehensive senior move management services. Certified by NASMM (National Association of Senior Move Managers), our team can provide space planning, sorting, packing, oversight of the move, unpacking and resettling.
+                  Comprehensive senior move management services. Certified by NASMM (National Association of Senior Move Managers), the professionals in this network can provide space planning, sorting, packing, oversight of the move, unpacking and resettling.
                 </p>
                 <p className="text-muted-foreground text-sm leading-relaxed mb-3 text-left">
                   In house estate sales in unoccupied homes. Ginny's takes care of the belongings left behind after a move or death, maximizing the value for the client.
