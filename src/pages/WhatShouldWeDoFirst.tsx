@@ -164,7 +164,7 @@ const WhatShouldWeDoFirst = () => {
         {/* HERO */}
         <section className="w-full overflow-hidden">
           {/* Watercolor image */}
-          <div className="relative w-full">
+          <div className="relative w-full" style={{ display: 'block', lineHeight: 0 }}>
             <img
               src="/assets/car_ride_start_banner_clean.png"
               alt="Begin your journey — Real Property Planning"
@@ -182,7 +182,7 @@ const WhatShouldWeDoFirst = () => {
           </div>
           {/* Navy bar below image */}
           <div style={{ backgroundColor: '#1a2f4e' }} className="w-full py-5 flex items-center justify-center">
-            <p className="font-serif text-white font-bold text-2xl md:text-3xl text-center tracking-wide">
+            <p style={{ fontFamily: 'Georgia, serif', color: 'white', fontWeight: '800', fontSize: '36px', textAlign: 'center', margin: '0', padding: '0 24px' }}>
               What Should We Do First?
             </p>
           </div>
