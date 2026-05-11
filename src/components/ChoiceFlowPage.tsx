@@ -49,7 +49,7 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
                       loading="eager"
                     />
                     <div style={{ backgroundColor: '#1a2f4e', width: '100%', padding: '24px 40px' }}>
-                      <div className="font-serif" style={{ color: 'white', fontWeight: 800, textAlign: 'center', margin: 0, lineHeight: 1.05, fontSize: 'clamp(80px, 12vw, 220px)' }}>
+                      <div className="font-serif text-[32px] md:text-[40px] lg:text-[44px]" style={{ color: 'white', fontWeight: 600, textAlign: 'center', margin: 0, lineHeight: 1.2 }}>
                         Helping an Aging Parent
                       </div>
                     </div>
