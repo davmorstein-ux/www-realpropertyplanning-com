@@ -81,21 +81,23 @@ const JourneyOrientation = ({
   title,
   className = "",
   tone = "default",
+  hideLeadIn = false,
 }: JourneyOrientationProps) => {
   const cfg = TONE_CONFIG[tone];
   const heading = title ?? cfg.defaultTitle;
+  const showLeadIn = !hideLeadIn && cfg.leadIn;
 
   return (
     <section className={`${cfg.section} ${className}`}>
       <div className="container px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <h2 className={cfg.title}>{heading}</h2>
-          {cfg.leadIn && (
+          {showLeadIn && (
             <p className="text-navy text-[18px] md:text-[19px] text-center mb-7 md:mb-9">
               {cfg.leadIn}
             </p>
           )}
-          {!cfg.leadIn && <div className="mb-4 md:mb-6" />}
+          {!showLeadIn && <div className="mb-4 md:mb-6" />}
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
             {items.map((item) => (
               <li key={item} className={cfg.card}>
