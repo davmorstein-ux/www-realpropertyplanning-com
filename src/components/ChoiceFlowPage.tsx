@@ -77,6 +77,8 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
               {/* Choice cards or placeholder */}
               {hasChildren ? (
                 <ChoiceGrid choices={node.children!} />
+              ) : node.content ? (
+                <ContentBlock content={node.content} />
               ) : (
                 <ComingSoon />
               )}
