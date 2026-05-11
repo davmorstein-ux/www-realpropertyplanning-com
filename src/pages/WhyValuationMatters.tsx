@@ -104,7 +104,7 @@ const WhyValuationMatters = () => {
           style={{ display: 'block' }}
         />
         <div style={{ backgroundColor: '#1a2f4e', width: '100%', padding: '24px 40px', lineHeight: '1' }}>
-          <div style={{ fontFamily: 'Georgia, serif', color: 'white', fontWeight: '800', fontSize: '54px', textAlign: 'center', margin: '0' }}>
+          <div style={{ fontFamily: 'Georgia, serif', color: 'white', fontWeight: '800', fontSize: '48px', textAlign: 'center', margin: '0' }}>
             Pricing &amp; Valuation Expertise
           </div>
         </div>
