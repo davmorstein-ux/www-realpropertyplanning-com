@@ -4,17 +4,17 @@ import { Star, ExternalLink, Quote } from "lucide-react";
 
 const featuredReviews = [
   {
-    text: "Our team brought clarity, professionalism, and calm guidance during a very difficult property transition. His valuation perspective and market knowledge were incredibly helpful.",
+    text: "The valuation perspective and market knowledge brought real clarity during a very difficult property transition. We finally understood what the property was worth and why.",
     label: "Client Review",
     situation: "Estate-related property transition",
   },
   {
-    text: "We appreciated our team's patience, thoughtful communication, and realistic guidance throughout the sale of our family property.",
+    text: "The patience, thoughtful communication, and realistic guidance throughout the sale of our family property made a hard process feel manageable.",
     label: "Family Review",
     situation: "Inherited home and sale preparation",
   },
   {
-    text: "Our team's dual background in brokerage and appraisal gave us confidence that the property was priced correctly. He made a complicated situation feel manageable.",
+    text: "Having someone with both brokerage and appraisal expertise gave us confidence that the property was priced correctly. A complicated situation became manageable.",
     label: "Professional Referral",
     situation: "Probate property sale coordination",
   },
