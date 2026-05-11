@@ -40,14 +40,22 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
             <div className="max-w-4xl mx-auto">
               {/* Hero image — root page only */}
               {isRoot && (
-                <div className="w-full mb-10" style={{ lineHeight: 0 }}>
-                  <img
-                    src={agingParentHero}
-                    alt="Helping an aging parent — Real Property Planning"
-                    className="w-full h-auto object-cover rounded-xl"
-                    loading="eager"
-                  />
-                </div>
+                <>
+                  <div style={{ width: '100vw', position: 'relative', left: '50%', transform: 'translateX(-50%)', lineHeight: 0 }}>
+                    <img
+                      src={agingParentHero}
+                      alt="Helping an aging parent — Real Property Planning"
+                      style={{ width: '100%', height: 'auto', display: 'block' }}
+                      loading="eager"
+                    />
+                    <div style={{ backgroundColor: '#1a2f4e', width: '100%', padding: '24px 40px' }}>
+                      <p style={{ fontFamily: 'Georgia, serif', color: 'white', fontWeight: '800', fontSize: '36px', textAlign: 'center', margin: '0' }}>
+                        Helping an Aging Parent
+                      </p>
+                    </div>
+                  </div>
+                  <div style={{ marginBottom: '40px' }} />
+                </>
               )}
 
               {/* Breadcrumb / back link */}
@@ -77,9 +85,14 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
 
               {/* Heading */}
               <header className="mb-10 text-center">
-                <h1 className="font-serif text-3xl md:text-5xl text-navy font-semibold leading-tight mb-4">
-                  {node.label}
-                </h1>
+                {!isRoot && (
+                  <h1 className="font-serif text-3xl md:text-5xl text-navy font-semibold leading-tight mb-4">
+                    {node.label}
+                  </h1>
+                )}
+                {isRoot && (
+                  <h1 className="sr-only">Helping an Aging Parent</h1>
+                )}
                 {node.subtext && (
                   <p className="text-navy/80 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
                     {node.subtext}
