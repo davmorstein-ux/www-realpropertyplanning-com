@@ -166,7 +166,7 @@ const WhatShouldWeDoFirst = () => {
           {/* Watercolor image */}
           <div className="relative w-full" style={{ display: 'block', lineHeight: 0 }}>
             <img
-              src="/assets/car_ride_start_banner_clean.png"
+              src="/assets/car_ride_start_banner_clean_v2.png"
               alt="Begin your journey — Real Property Planning"
               className="w-full h-auto object-cover"
               loading="eager"
