@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { AGING_PARENT_LOOKUP, type FlowNode } from "@/lib/aging-parent-flow";
+import agingParentHero from "@/assets/aging_parent_hero_clean.png";
 
 /**
  * Renders a single page in the guided choice flow based on the current pathname.
@@ -37,6 +38,18 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
         <section className="py-10 lg:py-16 bg-cream">
           <div className="container px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
+              {/* Hero image — root page only */}
+              {isRoot && (
+                <div className="w-full mb-10" style={{ lineHeight: 0 }}>
+                  <img
+                    src={agingParentHero}
+                    alt="Helping an aging parent — Real Property Planning"
+                    className="w-full h-auto object-cover rounded-xl"
+                    loading="eager"
+                  />
+                </div>
+              )}
+
               {/* Breadcrumb / back link */}
               <nav aria-label="Breadcrumb" className="mb-8">
                 {isRoot ? (
