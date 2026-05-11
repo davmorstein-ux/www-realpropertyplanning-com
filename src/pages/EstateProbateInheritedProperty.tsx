@@ -259,8 +259,8 @@ const EstateProbateInheritedProperty = () => {
         {/* BLUE BAND — TITLE */}
         <section className="bg-primary pt-12 pb-10 lg:pt-20 lg:pb-14">
           <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl">
-              <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.75rem] text-primary-foreground font-semibold leading-tight">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="font-serif text-4xl md:text-5xl lg:text-[3.25rem] text-primary-foreground font-semibold leading-tight">
                 A Roadmap for Managing an Estate, Probate or Inherited Property
               </h1>
             </div>
