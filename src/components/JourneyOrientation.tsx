@@ -11,6 +11,7 @@ interface JourneyOrientationProps {
    * journey categories feel slightly different in pacing and emphasis.
    */
   tone?: JourneyTone;
+  hideLeadIn?: boolean;
 }
 
 const TONE_CONFIG: Record<
