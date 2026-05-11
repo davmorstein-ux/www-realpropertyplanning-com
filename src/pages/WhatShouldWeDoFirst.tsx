@@ -172,18 +172,11 @@ const WhatShouldWeDoFirst = () => {
               loading="eager"
               fetchPriority="high"
             />
-            {/* Text overlay on image */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <p className="font-serif text-xl md:text-3xl lg:text-4xl text-white font-bold text-center max-w-4xl px-8"
-                style={{ textShadow: '0 2px 12px rgba(0,0,0,0.55)' }}>
-                A simple starting point for families, seniors, executors, and loved ones navigating major life, housing, estate, probate, and property decisions.
-              </p>
-            </div>
           </div>
           {/* Navy bar below image */}
-          <div style={{ backgroundColor: '#1a2f4e' }} className="w-full py-5 flex items-center justify-center">
-            <p style={{ fontFamily: 'Georgia, serif', color: 'white', fontWeight: '800', fontSize: '36px', textAlign: 'center', margin: '0', padding: '0 24px' }}>
-              What Should We Do First?
+          <div style={{ backgroundColor: '#1a2f4e', width: '100%', padding: '28px 40px', lineHeight: '0', marginTop: '-4px' }}>
+            <p style={{ fontFamily: 'Georgia, serif', color: 'white', fontWeight: '800', fontSize: '32px', textAlign: 'center', margin: '0', lineHeight: '1.3' }}>
+              A simple starting point for families, seniors, executors, and loved ones navigating major life, housing, estate, probate, and property decisions.
             </p>
           </div>
         </section>
