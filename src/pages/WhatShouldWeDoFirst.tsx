@@ -162,36 +162,29 @@ const WhatShouldWeDoFirst = () => {
       <Header />
       <main id="main-content">
         {/* HERO */}
-        <section className="relative w-full overflow-hidden" style={{ backgroundColor: '#f5f0e8' }}>
-          <img
-            src="/assets/car_ride_start_banner_clean.png"
-            alt="Begin your journey — Real Property Planning"
-            className="w-full h-auto object-cover"
-            loading="eager"
-            fetchPriority="high"
-          />
-          <div className="absolute inset-0 flex items-center">
-            <div className="container px-6 lg:px-8">
-              <div className="max-w-3xl">
-                <p className="text-gold font-bold tracking-[0.2em] uppercase mb-4 text-sm">
-                  Start Here
-                </p>
-                <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.75rem] text-white font-semibold leading-tight mb-5"
-                  style={{ textShadow: '0 2px 8px rgba(0,0,0,0.4)' }}>
-                  What Should We Do First?
-                </h1>
-                <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-7 max-w-2xl"
-                  style={{ textShadow: '0 1px 4px rgba(0,0,0,0.3)' }}>
-                  A simple starting point for families, seniors, executors, and loved ones navigating major life, housing, estate, probate, and property decisions.
-                </p>
-                <a href="#pathways">
-                  <Button variant="gold" size="lg" className="px-8 h-[56px] text-base rounded-lg">
-                    <Compass className="w-5 h-5 mr-2" aria-hidden="true" />
-                    Start Here
-                  </Button>
-                </a>
-              </div>
+        <section className="w-full overflow-hidden">
+          {/* Watercolor image */}
+          <div className="relative w-full">
+            <img
+              src="/assets/car_ride_start_banner_clean.png"
+              alt="Begin your journey — Real Property Planning"
+              className="w-full h-auto object-cover"
+              loading="eager"
+              fetchPriority="high"
+            />
+            {/* Text overlay on image */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <p className="font-serif text-xl md:text-3xl lg:text-4xl text-white font-bold text-center max-w-4xl px-8"
+                style={{ textShadow: '0 2px 12px rgba(0,0,0,0.55)' }}>
+                A simple starting point for families, seniors, executors, and loved ones navigating major life, housing, estate, probate, and property decisions.
+              </p>
             </div>
+          </div>
+          {/* Navy bar below image */}
+          <div style={{ backgroundColor: '#1a2f4e' }} className="w-full py-5 flex items-center justify-center">
+            <p className="font-serif text-white font-bold text-2xl md:text-3xl text-center tracking-wide">
+              What Should We Do First?
+            </p>
           </div>
         </section>
 
