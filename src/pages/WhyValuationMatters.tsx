@@ -93,29 +93,20 @@ const WhyValuationMatters = () => {
       <Header />
       <main id="main-content">
 
-      {/* Hero */}
-      <section className="bg-primary pt-16 pb-14 md:pt-[84px] md:pb-[72px] lg:pt-[112px] lg:pb-[96px]">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <img src={iconHomeValue} alt="" aria-hidden="true" className="mx-auto max-w-[15rem] w-full h-auto object-contain mb-1.5"  loading="lazy"/>
-            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
-              Pricing & Valuation Expertise
-            </p>
-            <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-[22px]">
-              The One Person on the Deal Who Was Trained to Price the House — Not Just List It
-            </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-[30px]">
-              Most agents pick a number. A licensed broker who is also a Washington State Certified Residential Appraiser builds one — with documented condition adjustments, comparable analysis, and the same logic an appraiser will apply on the buyer's loan. For probate, trust, divorce, and inherited property, that distinction is the whole game.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <Link to="/contact">
- <Button variant="gold" size="lg"className="hover:-light font-medium px-7 py-4 h-auto rounded-lg w-full sm:w-auto">
-                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy"/>
-                  Discuss a Property
-                </Button>
-              </Link>
-            </div>
-          </div>
+      {/* HERO */}
+      <section className="w-full overflow-hidden" style={{ lineHeight: 0 }}>
+        <img
+          src="/assets/valuation_hero_clean.png"
+          alt="Why Valuation Matters — Real Property Planning"
+          className="w-full h-auto object-cover"
+          loading="eager"
+          fetchPriority="high"
+          style={{ display: 'block' }}
+        />
+        <div style={{ backgroundColor: '#1a2f4e', width: '100%', padding: '24px 40px', lineHeight: '1' }}>
+          <p style={{ fontFamily: 'Georgia, serif', color: 'white', fontWeight: '800', fontSize: '36px', textAlign: 'center', margin: '0' }}>
+            Pricing &amp; Valuation Expertise
+          </p>
         </div>
       </section>
 
