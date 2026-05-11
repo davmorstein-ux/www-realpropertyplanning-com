@@ -336,6 +336,27 @@ body {
   }
 }
 
+/* Site-wide accordion trigger styling */
+.accordion-trigger-styled {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  background-color: white !important;
+  border-radius: 12px !important;
+  border: 1px solid #d4b896 !important;
+  padding: 20px 24px !important;
+  text-decoration: none !important;
+  color: #1E3A5F !important;
+}
+.accordion-trigger-styled:hover {
+  color: hsl(var(--gold-dark)) !important;
+  text-decoration: none !important;
+}
+@media (min-width: 768px) {
+  .accordion-trigger-styled {
+    font-size: 20px !important;
+  }
+}
+
 /* ═══════════════════════════════════════════════
    UNIFIED GOLD CTA BUTTON — homepage tile sections
 ═══════════════════════════════════════════════ */
