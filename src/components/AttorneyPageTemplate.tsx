@@ -164,7 +164,7 @@ const AttorneyPageTemplate = ({
               Ready to Discuss a Client Situation?
             </h2>
             <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
-              Confidential conversations are always welcome. Our team will follow up promptly — no pressure, no obligation.
+              Confidential conversations are always welcome. The professionals in this network will follow up promptly — no pressure, no obligation.
             </p>
             <Link to="/contact">
  <Button variant="gold" size="lg"className="hover:-light">

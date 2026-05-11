@@ -1679,7 +1679,7 @@ const cityServiceOverrides: Record<string, Record<string, CityServiceOverride>> 
         "A family deciding whether a Lynnwood property near the light rail should be sold to a developer or a traditional buyer",
         "A senior downsizing from a larger Lynnwood lot to a newer condo or townhome closer to transit amenities",
       ],
-      whyLocal: "Lynnwood seniors who have lived in their homes for 30 or 40 years are watching their neighborhoods transform around them. Light rail, new apartment construction, and shifting commercial corridors all affect property values — sometimes dramatically. Our team's on-the-ground assessment helps families understand whether their specific property benefits from these changes or whether a more traditional sale approach is appropriate.",
+      whyLocal: "Lynnwood seniors who have lived in their homes for 30 or 40 years are watching their neighborhoods transform around them. Light rail, new apartment construction, and shifting commercial corridors all affect property values — sometimes dramatically. The on-the-ground assessment from the professionals in this network helps families understand whether their specific property benefits from these changes or whether a more traditional sale approach is appropriate.",
     },
     "downsizing-services": {
       intro: "Lynnwood's transformation from a traditional suburb into a light rail-connected urban hub creates interesting downsizing possibilities — newer condos near transit, more manageable townhomes, or a move to a quieter community. Real Property Planning helps Lynnwood homeowners evaluate their property in today's shifting market and make informed decisions about timing, preparation, and pricing.",

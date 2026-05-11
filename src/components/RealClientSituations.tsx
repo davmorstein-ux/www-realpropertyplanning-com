@@ -23,7 +23,7 @@ interface RealClientSituationsProps {
 const RealClientSituations = ({
   studies,
   heading = "Real Client Situations",
-  subheading = "Every situation is different. Here are a few examples of how our team has helped clients work through complex property transitions.",
+  subheading = "Every situation is different. Here are a few examples of how the professionals in this network have helped clients work through complex property transitions.",
   background = "bg-background",
   showCTA = false,
 }: RealClientSituationsProps) => (

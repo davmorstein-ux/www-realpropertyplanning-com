@@ -140,7 +140,7 @@ const RealEstateAppraiser = () => (
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-4">Serving All of Washington State</h2>
             <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-              From King County and Snohomish County to Pierce, Thurston, Whatcom, Skagit, Clark, Spokane, and every county in between — Real Property Planning provides certified appraisal services throughout Washington State. Whether your property is in a major metro area or a rural community, we can help.
+              From King County and Snohomish County to Pierce, Thurston, Whatcom, Skagit, Clark, Spokane, and every county in between — Real Property Planning provides certified appraisal services throughout Washington State. Whether your property is in a major metro area or a rural community, this resource can help.
             </p>
           </div>
         </div>
