@@ -74,10 +74,10 @@ const PlanningAndNextSteps = () => (
         <h2 className="p3h2">Planning &amp; Next Steps</h2>
       </div>
       <div className="p3grid">
-        <P3Tile pill="Senior Living" title="Senior Living Options" tagline="Finding the Right Community for You" imgSrc="/tiles/set3/senior-living-options.webp" href="/senior-living" />
+        <P3Tile pill="Senior Living" title="Senior Living Options" tagline="Finding the Right Community for You" imgSrc="/tiles/set3/senior-living-options.webp" href="/senior-living-and-relocation" />
         <P3Tile pill="Real Estate" title="Home Values & Pricing" tagline="Understanding What Your Property Is Worth" imgSrc="/tiles/set3/home-values-pricing.webp" href="/why-valuation-matters" />
         <P3Tile pill="Real Estate" title="Senior Home Sales" tagline="Selling Your Home With Care & Confidence" imgSrc="/tiles/set3/senior-home-sales.webp" href="/sell-house-fund-senior-living" />
-        <P3Tile pill="Financial" title="Paying for Senior Living" tagline="Planning & Funding Your Next Chapter" imgSrc="/tiles/set3/paying-for-senior-living.webp" href="/financial-planning" />
+        <P3Tile pill="Financial" title="Paying for Senior Living" tagline="Planning & Funding Your Next Chapter" imgSrc="/tiles/set3/paying-for-senior-living.webp" href="/for-financial-planners" />
         <P3Tile pill="Washington State" title="Service Areas" tagline="Local Expertise Across Washington State" imgSrc="/tiles/set3/service-areas.webp" href="/counties" />
         <P3Tile pill="Education" title="Guides & Resources" tagline="Practical Tools for Every Step of the Way" imgSrc="/tiles/set3/guides-resources.webp" href="/resources" />
         <P3Tile pill="Life Transitions" title="Grey Divorce" tagline="Real Estate & Housing After Divorce" imgSrc="/tiles/set3/grey-divorce.webp" href="/grey-divorce" />
