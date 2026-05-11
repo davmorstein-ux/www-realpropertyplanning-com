@@ -77,6 +77,8 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
               {/* Choice cards or placeholder */}
               {hasChildren ? (
                 <ChoiceGrid choices={node.children!} />
+              ) : node.content ? (
+                <ContentBlock content={node.content} />
               ) : (
                 <ComingSoon />
               )}
@@ -153,6 +155,24 @@ const ComingSoon = () => (
     <p className="text-navy/70 text-base md:text-lg leading-relaxed">
       We're putting together clear, helpful guidance for this step. Check back shortly.
     </p>
+  </div>
+);
+
+const ContentBlock = ({ content }: { content: NonNullable<FlowNode["content"]> }) => (
+  <div className="space-y-6 max-w-3xl mx-auto">
+    <p className="text-navy/80 text-lg leading-relaxed">{content.intro}</p>
+    {content.sections.map((section, i) => (
+      <div key={i}>
+        <h2 className="font-serif text-xl font-semibold text-navy mb-2">{section.heading}</h2>
+        <p className="text-navy/75 text-base leading-relaxed whitespace-pre-line">{section.body}</p>
+      </div>
+    ))}
+    <div className="bg-gold/10 border border-gold/30 rounded-xl p-6 mt-8">
+      <p className="text-navy/80 text-base leading-relaxed">{content.closing}</p>
+      <a href="/connect" className="inline-block mt-4 px-6 py-3 bg-navy text-white font-semibold rounded-lg hover:bg-navy/90 transition-colors">
+        Connect With Our Team
+      </a>
+    </div>
   </div>
 );
 
