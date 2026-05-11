@@ -26,6 +26,7 @@ import iconMovers from "@/assets/icons/senior-movers-relocation-icon-washington.
 import iconChecklist from "@/assets/icons/executors-clipboard-checklist-icon-washington.webp";
 import iconArrow from "@/assets/icons/property-guidance-arrow-icon-washington.webp";
 import JourneyOrientation from "@/components/JourneyOrientation";
+import heroImage from "@/assets/managing-estate-probate-inherited-property-hero-washington.webp";
 
 interface Stage {
   letter: string;
