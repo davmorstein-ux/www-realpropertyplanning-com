@@ -246,33 +246,30 @@ const EstateProbateInheritedProperty = () => {
       />
       <Header />
       <main id="main-content">
-        {/* HERO */}
+        {/* HERO IMAGE */}
+        <section className="bg-primary">
+          <img
+            src={heroImage}
+            alt="Managing an estate, probate, or inherited property in Washington State"
+            className="w-full h-auto block"
+            loading="eager"
+          />
+        </section>
+
+        {/* BLUE BAND — TITLE */}
         <section className="bg-primary pt-12 pb-10 lg:pt-20 lg:pb-14">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl">
-              <p className="text-gold font-bold tracking-[0.2em] uppercase mb-4 text-sm">
-                Estate Journey Hub
-              </p>
-              <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.75rem] text-primary-foreground font-semibold leading-tight mb-6">
-                Managing an Estate, Probate, or Inherited Property
+              <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.75rem] text-primary-foreground font-semibold leading-tight">
+                A Roadmap for Managing an Estate, Probate or Inherited Property
               </h1>
-              <p className="text-lg md:text-xl text-primary-foreground/85 leading-relaxed mb-8 max-w-2xl">
-                A guided roadmap for executors, trustees, heirs, and families navigating
-                estate settlement, probate questions, inherited homes, property value,
-                and next-step decisions.
-              </p>
-              <a href="#roadmap">
-                <Button variant="gold" size="lg" className="px-8 h-[56px] text-base rounded-lg">
-                  <Compass className="w-5 h-5 mr-2" aria-hidden="true" />
-                  Start Here
-                </Button>
-              </a>
             </div>
           </div>
         </section>
 
         <JourneyOrientation
           tone="probate"
+          hideLeadIn
           items={[
             "A loved one recently passed away",
             "You inherited a home or property",
