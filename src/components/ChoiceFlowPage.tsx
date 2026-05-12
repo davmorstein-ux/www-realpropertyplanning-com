@@ -53,7 +53,7 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
                     {/* Blue band — standardized height */}
                     <div className="bg-primary py-9 md:py-10">
                       <div className="container px-6 lg:px-8">
-                        <div className="font-serif text-[32px] md:text-[40px] lg:text-[44px]" style={{ color: 'white', fontWeight: 600, textAlign: 'center', margin: 0, lineHeight: 1.2 }}>
+                        <div className="font-serif text-[32px] md:text-[40px] lg:text-6xl" style={{ color: 'white', fontWeight: 600, textAlign: 'center', margin: 0, lineHeight: 1.2 }}>
                           Helping an Aging Parent
                         </div>
                       </div>
