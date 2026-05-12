@@ -5,12 +5,8 @@ import SEOHead from "@/components/SEOHead";
 import { articleSchema } from "@/lib/schema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
-import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-
-import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
-import iconProbateSales from "@/assets/probate-estate-sales-hero.png";
 import iconLegalAuthority from "@/assets/icons/legal-authority-3d.webp";
 import iconMultipleDecisionMakers from "@/assets/icons/multiple-decision-makers-3d.webp";
 import iconPropertyCondition from "@/assets/icons/property-condition-3d.webp";
@@ -78,113 +74,9 @@ const ProbateEstateSales = () => {
       <Header />
       <main id="main-content">
         {/* SECTION 1 — Hero */}
-        <section className="bg-primary pt-6 md:pt-10 pb-10 md:pb-14">
+        <section className="pt-6 md:pt-10 pb-10 md:pb-14">
           <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center">
-              <img
-                src={iconProbateSales}
-                alt="Probate estate sale scene — house with sold sign, probate court documents, keys, and scale of justice in gold circular frame"
-                className="mx-auto max-w-[16rem] md:max-w-[20rem] w-full h-auto object-contain mb-5"
-                loading="eager"
-              />
-              <h1
-                style={{
-                  fontFamily: "'DM Sans', system-ui, sans-serif",
-                  fontSize: "72px",
-                  fontWeight: 900,
-                  lineHeight: 1.1,
-                  letterSpacing: "3px",
-                  textTransform: "uppercase",
-                  color: "white",
-                  marginBottom: "48px",
-                }}
-              >
-                Probate &amp; Estate Property Sales
-              </h1>
-              <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 mb-6">
-                <span
-                  className="inline-flex items-center text-primary-foreground bg-white/10 rounded-full px-3 py-1"
-                  style={{ fontSize: "16px" }}
-                >
-                  ✓ Court-aligned timelines
-                </span>
-                <span
-                  className="inline-flex items-center text-primary-foreground bg-white/10 rounded-full px-3 py-1"
-                  style={{ fontSize: "16px" }}
-                >
-                  ✓ Fiduciary-grade pricing
-                </span>
-                <span
-                  className="inline-flex items-center text-primary-foreground bg-white/10 rounded-full px-3 py-1"
-                  style={{ fontSize: "16px" }}
-                >
-                  ✓ Full documentation
-                </span>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Link to="/contact" className="w-full sm:w-auto">
-                  <button
-                    type="button"
-                    className="w-full font-bold text-white"
-                    style={{
-                      minWidth: "260px",
-                      padding: "16px 32px",
-                      fontSize: "17px",
-                      letterSpacing: "0.3px",
-                      border: "2px solid rgba(255, 255, 255, 0.75)",
-                      borderRadius: "10px",
-                      background: "linear-gradient(135deg, #D4A843, #C9A84C, #A07820)",
-                      boxShadow: "0 4px 12px rgba(201,168,76,0.45), 0 8px 24px rgba(201,168,76,0.25)",
-                      transition: "all 0.3s ease",
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.background = "linear-gradient(135deg, #E2BB55, #D4B35A, #B08A28)";
-                      e.currentTarget.style.transform = "translateY(-3px)";
-                      e.currentTarget.style.boxShadow =
-                        "0 8px 20px rgba(201,168,76,0.55), 0 14px 32px rgba(201,168,76,0.35)";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.background = "linear-gradient(135deg, #D4A843, #C9A84C, #A07820)";
-                      e.currentTarget.style.transform = "translateY(0)";
-                      e.currentTarget.style.boxShadow =
-                        "0 4px 12px rgba(201,168,76,0.45), 0 8px 24px rgba(201,168,76,0.25)";
-                    }}
-                  >
-                    Talk Through Your Estate
-                  </button>
-                </Link>
-                <Link to="/guides/sell-house-during-probate-washington" className="w-full sm:w-auto">
-                  <button
-                    type="button"
-                    className="w-full font-bold"
-                    style={{
-                      minWidth: "260px",
-                      padding: "16px 32px",
-                      fontSize: "17px",
-                      letterSpacing: "0.3px",
-                      color: "#C9A84C",
-                      background: "transparent",
-                      border: "2px solid #C9A84C",
-                      borderRadius: "10px",
-                      boxShadow: "none",
-                      transition: "all 0.3s ease",
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.background = "rgba(201,168,76,0.08)";
-                      e.currentTarget.style.transform = "translateY(-3px)";
-                      e.currentTarget.style.boxShadow = "0 0 16px rgba(201,168,76,0.35)";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.background = "transparent";
-                      e.currentTarget.style.transform = "translateY(0)";
-                      e.currentTarget.style.boxShadow = "none";
-                    }}
-                  >
-                    Read the Probate Sale Guide
-                  </button>
-                </Link>
-              </div>
-            </div>
+            <div className="max-w-3xl mx-auto text-center" />
           </div>
         </section>
 
