@@ -9,24 +9,20 @@ const ProfessionalsPage = () => (
     <Header />
     <main className="flex-1">
       <section className="pt-0 pb-0 lg:pt-0 lg:pb-0 bg-cream">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div style={{ width: '100vw', position: 'relative', left: '50%', transform: 'translateX(-50%)', lineHeight: 0 }}>
-              <img
-                src={heroImage}
-                alt="Professionals and services — Washington State estate, probate, and senior transition specialists"
-                className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
-                loading="eager"
-              />
-              {/* Thin white gap */}
-              <div className="bg-white h-[3px]" aria-hidden="true" />
-              {/* Blue band — standardized height */}
-              <div className="bg-primary py-9 md:py-10">
-                <div className="container px-6 lg:px-8">
-                  <div className="font-serif text-[32px] md:text-[40px] lg:text-[44px]" style={{ color: 'white', fontWeight: 600, textAlign: 'center', margin: 0, lineHeight: 1.2 }}>
-                    Professionals &amp; Services
-                  </div>
-                </div>
+        <div style={{ lineHeight: 0 }}>
+          <img
+            src={heroImage}
+            alt="Professionals and services — Washington State estate, probate, and senior transition specialists"
+            className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
+            loading="eager"
+          />
+          {/* Thin white gap */}
+          <div className="bg-white h-[3px]" aria-hidden="true" />
+          {/* Blue band — standardized height */}
+          <div className="bg-primary py-9 md:py-10">
+            <div className="container px-6 lg:px-8">
+              <div className="font-serif text-[32px] md:text-[40px] lg:text-[44px]" style={{ color: 'white', fontWeight: 600, textAlign: 'center', margin: 0, lineHeight: 1.2 }}>
+                Professionals &amp; Services
               </div>
             </div>
           </div>
