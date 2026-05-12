@@ -41,7 +41,7 @@ const ForFinancialPlanners = () => (
     </section>
 
     {/* Thin white gap */}
-    <div className="bg-white h-1.5" aria-hidden="true" />
+    <div className="bg-white h-[3px]" aria-hidden="true" />
 
     {/* Blue band — title (standardized height) */}
     <section className="bg-primary py-9 md:py-10">
