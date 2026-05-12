@@ -35,7 +35,7 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
       <Header />
 
       <main id="main-content" className="flex-1">
-        <section className="py-10 lg:py-16 bg-cream">
+        <section className="pt-0 pb-10 lg:pt-0 lg:pb-16 bg-cream">
           <div className="container px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
               {/* Hero image — root page only */}
