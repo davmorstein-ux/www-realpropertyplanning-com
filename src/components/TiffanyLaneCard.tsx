@@ -36,7 +36,7 @@ const TiffanyLaneCard = () => (
               <div className="w-full mt-2 text-center sm:pl-[58px] sm:text-left">
                 <p className="text-foreground font-semibold text-lg">Tiffany Lane</p>
                 <p className="text-muted-foreground text-sm mb-3">
-                  Financial Planner · New York Life — Seattle General Office
+                  Financial Professional · New York Life — Seattle General Office
                 </p>
                 <p className="text-muted-foreground text-sm leading-relaxed mb-3">
                   With a deep personal understanding of how life transitions impact families, I focus on guiding retirees—and their loved ones—through every step of their financial journey. After witnessing my own family navigate the complexities of Alzheimer's and elder care, I've dedicated my career to helping others plan with confidence. Not only do I assist retirees, but I also work closely with their adult children, offering guidance so families can navigate estate planning, downsizing, and legacy protection together. Let's ensure everyone involved is supported, and your next chapter is exactly as you envision.
