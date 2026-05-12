@@ -9,7 +9,7 @@ const ProfessionalsPage = () => (
     <Header />
     <main className="flex-1">
       {/* Hero image — standardized height, flush with header */}
-      <section className="bg-white">
+      <section className="bg-white p-0 m-0 leading-[0] text-[0]">
         <img
           src={heroImage}
           alt="Professionals and services — Washington State estate, probate, and senior transition specialists"
