@@ -63,8 +63,7 @@ const ProfessionalsAndServices = () => (
     <style>{styles}</style>
     <div className="p1section">
       <div className="p1heading">
-        <span className="p1eyebrow">Washington State</span>
-        <h2 className="p1h2">Professionals &amp; Services</h2>
+        <h2 className="p1h2">Choose the Professional that Meets Your Needs</h2>
       </div>
       <div className="p1grid">
         <P1Tile pill="Legal Services" title="Attorneys" tagline="Probate & Estate Attorneys" imgSrc="/tiles/set1/attorneys.webp" href="/for-attorneys" />
