@@ -45,12 +45,17 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
                     <img
                       src={agingParentHero}
                       alt="Helping an aging parent — Real Property Planning"
-                      style={{ width: '100%', height: 'auto', display: 'block' }}
+                      className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
                       loading="eager"
                     />
-                    <div style={{ backgroundColor: '#1a2f4e', width: '100%', padding: '24px 40px' }}>
-                      <div className="font-serif text-[32px] md:text-[40px] lg:text-[44px]" style={{ color: 'white', fontWeight: 600, textAlign: 'center', margin: 0, lineHeight: 1.2 }}>
-                        Helping an Aging Parent
+                    {/* Thin white gap */}
+                    <div className="bg-white h-1.5" aria-hidden="true" />
+                    {/* Blue band — standardized height */}
+                    <div className="bg-primary py-9 md:py-10">
+                      <div className="container px-6 lg:px-8">
+                        <div className="font-serif text-[32px] md:text-[40px] lg:text-[44px]" style={{ color: 'white', fontWeight: 600, textAlign: 'center', margin: 0, lineHeight: 1.2 }}>
+                          Helping an Aging Parent
+                        </div>
                       </div>
                     </div>
                   </div>
