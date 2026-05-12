@@ -94,7 +94,7 @@ const WhyValuationMatters = () => {
       <main id="main-content">
 
       {/* HERO */}
-      <section className="w-full overflow-hidden" style={{ lineHeight: 0 }}>
+      <section className="w-full overflow-hidden -mt-16 md:-mt-[140px]" style={{ lineHeight: 0 }}>
         <img
           src="/assets/valuation_hero_clean.png"
           alt="Why Valuation Matters — Real Property Planning"
