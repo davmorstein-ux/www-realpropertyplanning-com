@@ -8,7 +8,7 @@ const ProfessionalsPage = () => (
   <div className="min-h-screen flex flex-col">
     <Header />
     <main className="flex-1">
-      <section className="pt-0 pb-10 lg:pt-0 lg:pb-16 bg-cream">
+      <section className="pt-0 pb-0 lg:pt-0 lg:pb-0 bg-cream">
         <div className="container px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div style={{ width: '100vw', position: 'relative', left: '50%', transform: 'translateX(-50%)', lineHeight: 0 }}>
