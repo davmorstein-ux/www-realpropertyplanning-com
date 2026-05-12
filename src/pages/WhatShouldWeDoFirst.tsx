@@ -162,7 +162,7 @@ const WhatShouldWeDoFirst = () => {
       <Header />
       <main id="main-content">
         {/* HERO */}
-        <section className="w-full overflow-hidden">
+        <section className="w-full overflow-hidden -mt-16 md:-mt-[140px]">
           {/* Watercolor image */}
           <div className="relative w-full" style={{ display: 'block', lineHeight: 0 }}>
             <img
