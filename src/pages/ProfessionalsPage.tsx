@@ -20,10 +20,8 @@ const ProfessionalsPage = () => (
           <div className="bg-white h-[3px]" aria-hidden="true" />
           {/* Blue band — standardized height */}
           <div className="bg-primary py-9 md:py-10">
-            <div className="container px-6 lg:px-8">
-              <div className="font-serif text-[32px] md:text-[40px] lg:text-6xl" style={{ color: 'white', fontWeight: 600, textAlign: 'center', margin: 0, lineHeight: 1.2 }}>
-                Professionals &amp; Services
-              </div>
+            <div style={{ color: '#ffffff', fontFamily: '"Cormorant Garamond", serif', fontWeight: 600, textAlign: 'center', lineHeight: 1.2, fontSize: 'clamp(32px, 5vw, 60px)', opacity: 1, margin: 0 }}>
+              Professionals &amp; Services
             </div>
           </div>
         </div>
