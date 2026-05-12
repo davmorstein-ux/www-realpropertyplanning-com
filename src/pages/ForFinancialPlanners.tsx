@@ -71,6 +71,8 @@ const ForFinancialPlanners = () => (
       </div>
     </section>
 
+    <TiffanyLaneCard />
+
     {/* More information link */}
     <section className="py-6 bg-background">
       <div className="container px-6 lg:px-8">
