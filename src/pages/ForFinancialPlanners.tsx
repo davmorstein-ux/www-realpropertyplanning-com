@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconFinancialPlanning from "@/assets/icons/estate-financial-planning-icon-washington.webp";
 import CTASection from "@/components/CTASection";
+import TiffanyLaneCard from "@/components/TiffanyLaneCard";
 
 const jsonLd = articleSchema({
   headline: "Real Estate Guidance for Financial Planners and Their Clients in Washington State",
