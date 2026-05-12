@@ -31,27 +31,19 @@ const ForCPAs = () => (
     <main id="main-content">
 
     {/* Hero */}
-    <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center">
-          <div className="flex justify-center mb-1.5 md:mb-2">
-            <img src={iconCpas} alt="CPA estate and probate real estate guidance Washington State Puget Sound" className="block w-full max-w-[15rem] h-auto object-contain" loading="lazy"/>
-          </div>
-          <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">
-            For CPAs
-          </p>
-          <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-primary-foreground leading-tight mb-4">
-            Real Estate Guidance for CPAs and Their Clients in Washington State
+    <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
+      <div style={{ lineHeight: 0 }}>
+        <img
+          src="/assets/cpas_hero_clean.png"
+          alt="Guidance for CPAs and tax professionals — Washington State estate and probate real estate"
+          className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
+          loading="eager"
+        />
+        <div className="bg-white h-[3px]" aria-hidden="true" />
+        <div className="bg-primary py-9 md:py-10">
+          <h1 className="font-serif text-[32px] md:text-[40px] lg:text-[44px]" style={{ fontWeight: 600, color: 'white', textAlign: 'center', margin: 0 }}>
+            GUIDANCE FOR CPAs &amp; TAX PROFESSIONALS
           </h1>
-          <p className="text-primary-foreground/70 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-3" style={{ maskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)' }}>
-            Practical, evidence-based property guidance when your clients face inherited property, estate settlement, or trust administration decisions.
-          </p>
-          <Link to="/contact">
-            <Button variant="gold" size="lg" className="px-7 py-4 h-auto rounded-lg">
-              <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy"/>
-              Discuss a Client Situation
-            </Button>
-          </Link>
         </div>
       </div>
     </section>
