@@ -74,9 +74,24 @@ const ProbateEstateSales = () => {
       <Header />
       <main id="main-content">
         {/* SECTION 1 — Hero */}
-        <section className="pt-6 md:pt-10 pb-10 md:pb-14">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center" />
+        <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
+          <div className="relative w-full" style={{ display: 'block', lineHeight: 0 }}>
+            <img
+              src="/assets/estate_probate_sales_hero_clean.png"
+              alt="Probate and estate property sale scene with family reviewing belongings outside a Washington home"
+              className="w-full h-auto object-cover"
+              loading="eager"
+              fetchPriority="high"
+            />
+          </div>
+          <div className="bg-white h-[3px]" aria-hidden="true" />
+          <div className="bg-primary" style={{ width: '100%', padding: '28px 40px' }}>
+            <h2
+              className="font-serif text-[32px] md:text-[40px] lg:text-[44px]"
+              style={{ fontWeight: 600, color: 'white', textAlign: 'center', margin: 0 }}
+            >
+              PROBATE &amp; ESTATE PROPERTY SALES
+            </h2>
           </div>
         </section>
 
