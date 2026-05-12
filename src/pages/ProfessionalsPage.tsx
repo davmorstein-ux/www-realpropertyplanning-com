@@ -8,7 +8,7 @@ const ProfessionalsPage = () => (
   <div className="min-h-screen flex flex-col">
     <Header />
     <main className="flex-1">
-      <section className="pt-0 pb-0 lg:pt-0 lg:pb-0 bg-cream">
+      <section className="pt-0 pb-0 lg:pt-0 lg:pb-0 bg-transparent">
         <div style={{ lineHeight: 0 }}>
           <img
             src={heroImage}
