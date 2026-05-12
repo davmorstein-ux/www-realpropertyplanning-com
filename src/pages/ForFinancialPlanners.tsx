@@ -31,7 +31,7 @@ const ForFinancialPlanners = () => (
     <main id="main-content">
 
     {/* Hero image — standardized height */}
-    <section className="bg-white -mt-16 md:-mt-[140px]">
+    <section className="bg-white">
       <img
         src={heroImage}
         alt="Financial planners guidance — estate and senior transition real estate in Washington State"

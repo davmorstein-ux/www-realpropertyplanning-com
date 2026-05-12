@@ -94,7 +94,7 @@ const WhyValuationMatters = () => {
       <main id="main-content">
 
       {/* HERO */}
-      <section className="w-full overflow-hidden -mt-16 md:-mt-[140px]" style={{ lineHeight: 0 }}>
+      <section className="w-full overflow-hidden" style={{ lineHeight: 0 }}>
         <img
           src="/assets/valuation_hero_clean.png"
           alt="Why Valuation Matters — Real Property Planning"
@@ -103,6 +103,8 @@ const WhyValuationMatters = () => {
           fetchPriority="high"
           style={{ display: 'block' }}
         />
+        {/* Thin white gap */}
+        <div className="bg-white h-[3px]" aria-hidden="true" />
         <div style={{ backgroundColor: '#1a2f4e', width: '100%', padding: '24px 40px', lineHeight: '1' }}>
           <div style={{ fontFamily: "'Cormorant Garamond', 'Georgia', serif", color: 'white', fontSize: '52px', fontWeight: 700, lineHeight: 1.2, letterSpacing: '0.04em', textAlign: 'center', margin: '0' }}>
             Pricing &amp; Valuation Expertise

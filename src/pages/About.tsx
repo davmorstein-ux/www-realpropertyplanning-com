@@ -36,7 +36,7 @@ const About = () => {
       <Header />
       <main id="main-content">
         {/* Hero */}
-        <section className="relative overflow-hidden w-full -mt-16 md:-mt-[140px]" style={{ backgroundColor: "#f5f0e8" }}>
+        <section className="relative overflow-hidden w-full" style={{ backgroundColor: "#f5f0e8" }}>
           <img
             src={aboutHeroImage}
             alt="Real Property Planning — Senior Transitions"

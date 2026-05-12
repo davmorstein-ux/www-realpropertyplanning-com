@@ -162,7 +162,7 @@ const WhatShouldWeDoFirst = () => {
       <Header />
       <main id="main-content">
         {/* HERO */}
-        <section className="w-full overflow-hidden -mt-16 md:-mt-[140px]">
+        <section className="w-full overflow-hidden">
           {/* Watercolor image */}
           <div className="relative w-full" style={{ display: 'block', lineHeight: 0 }}>
             <img
@@ -173,8 +173,10 @@ const WhatShouldWeDoFirst = () => {
               fetchPriority="high"
             />
           </div>
+          {/* Thin white gap */}
+          <div className="bg-white h-[3px]" aria-hidden="true" />
           {/* Navy bar below image */}
-          <div style={{ backgroundColor: '#1a2f4e', width: '100%', padding: '28px 40px', lineHeight: '0', marginTop: '-4px' }}>
+          <div style={{ backgroundColor: '#1a2f4e', width: '100%', padding: '28px 40px', lineHeight: '0' }}>
             <p style={{ fontFamily: 'Georgia, serif', color: 'white', fontWeight: '800', fontSize: '38px', textAlign: 'center', margin: '0', lineHeight: '1.4' }}>
               A simple starting point for families, seniors, executors, and loved ones<br />
               navigating major life, housing, estate, probate, and property decisions.
