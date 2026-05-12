@@ -19,7 +19,7 @@ const ProfessionalsPage = () => (
       </section>
 
       {/* Thin white gap — site standard */}
-      <div className="bg-white h-[6px]" aria-hidden="true" />
+      <div className="bg-white h-[3px]" aria-hidden="true" />
 
       {/* Blue band — title */}
       <section className="bg-primary py-9 md:py-10">
