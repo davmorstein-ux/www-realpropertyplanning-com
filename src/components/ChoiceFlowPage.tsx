@@ -49,7 +49,7 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
                       loading="eager"
                     />
                     {/* Thin white gap */}
-                    <div className="bg-white h-1.5" aria-hidden="true" />
+                    <div className="bg-white h-[3px]" aria-hidden="true" />
                     {/* Blue band — standardized height */}
                     <div className="bg-primary py-9 md:py-10">
                       <div className="container px-6 lg:px-8">

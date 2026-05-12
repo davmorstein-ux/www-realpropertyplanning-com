@@ -257,7 +257,7 @@ const EstateProbateInheritedProperty = () => {
         </section>
 
         {/* Thin white gap */}
-        <div className="bg-white h-1.5" aria-hidden="true" />
+        <div className="bg-white h-[3px]" aria-hidden="true" />
 
         {/* BLUE BAND — TITLE (standardized height) */}
         <section className="bg-primary py-9 md:py-10">
