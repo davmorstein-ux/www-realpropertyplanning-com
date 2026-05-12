@@ -29,7 +29,7 @@ const TiffanyLaneCard = () => (
                 <img
                   src={nyLifeLogo}
                   alt="New York Life logo"
-                  className="h-[64px] w-auto object-contain mx-auto sm:mx-0 block"
+                  className="w-[120px] h-auto object-contain mx-auto sm:mx-0 block"
                   loading="lazy"
                 />
               </div>
