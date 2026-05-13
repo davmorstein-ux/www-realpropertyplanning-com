@@ -40,7 +40,7 @@ const situations = [
     title: "Planning Before a Crisis",
     description: "Quietly organizing legal, caregiving, and property planning ahead of time.",
     cta: "Explore Planning",
-    href: "/estate-planning-powers-of-attorney",
+    href: "/planning-before-a-crisis",
   },
   {
     image: "/tiles/journey/serving-executor-trustee.webp",
