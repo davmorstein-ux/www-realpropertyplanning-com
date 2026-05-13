@@ -29,8 +29,6 @@ const PlanningSubPageLayout = ({
   seoDescription,
   canonicalPath,
   breadcrumbName,
-  heroHeadline,
-  heroSubheadline,
   bandTitle,
   children,
   disclaimer,
