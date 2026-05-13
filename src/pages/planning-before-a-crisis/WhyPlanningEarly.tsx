@@ -12,7 +12,7 @@ const WhyPlanningEarly = () => (
     seoDescription="When housing and property decisions are made under pressure, families pay the price — financially and emotionally. Here's what's at stake when planning is left too late."
     canonicalPath="/planning-before-a-crisis/why-planning-early"
     breadcrumbName="Why Planning Early"
-    bandTitle="WHY PLANNING EARLY MAKES SUCH A DIFFERENCE"
+    bandTitle="WHY  PLANNING  EARLY  MAKES  SUCH  A  DIFFERENCE"
     disclaimer="The information on this page is for general guidance only and does not constitute legal, tax, or financial advice. Please consult qualified professionals for your specific situation."
   >
     <SubH2>The Moment Nobody Expects</SubH2>
