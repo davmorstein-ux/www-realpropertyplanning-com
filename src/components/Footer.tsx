@@ -13,18 +13,18 @@ const Footer = () => {
     <footer data-nosnippet="true" className="bg-navy-dark py-14 md:py-16">
       <div className="container px-6 lg:px-10">
         {/* Compact link grid — wider Guided Journeys column so links never clip */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-14 mb-12 text-left">
-          {/* Brand & NAP — 4/12 */}
-          <div className="lg:col-span-4">
-            <Link to="/" className="block mb-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10 mb-12 text-left">
+          {/* Brand & NAP — 3/12 */}
+          <div className="lg:col-span-3">
+            <Link to="/" className="block mb-2.5">
               <span className="font-serif text-primary-foreground" style={{ fontSize: '22px', fontWeight: '700', letterSpacing: '0.5px' }}>
                 Real Property Planning
               </span>
             </Link>
-            <p className="text-primary-foreground text-[16px] leading-[1.7] mb-7 max-w-[320px]">
+            <p className="text-primary-foreground text-[16px] leading-[1.7] mb-5 max-w-[320px]">
               Probate, estate &amp; senior transition real estate — Washington State.
             </p>
-            <ul className="flex flex-col gap-4 text-[16px] text-left">
+            <ul className="flex flex-col gap-2.5 text-[16px] text-left">
               <li>
                 <a href="tel:2069003015" className="text-primary-foreground hover:text-gold transition-colors flex items-center gap-3.5 leading-tight">
                   <img src={iconPhone3d} alt="" aria-hidden="true" className="w-[28px] h-[28px] object-contain shrink-0" loading="lazy" />
@@ -44,10 +44,10 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Guided Journeys — 4/12 (wider so links never clip) */}
+          {/* Guided Journeys — 4/12 */}
           <div className="lg:col-span-4 min-w-0">
-            <h3 className="text-primary-foreground font-serif text-xl font-semibold mb-5">Guided Journeys</h3>
-            <ul className="space-y-3 text-primary-foreground text-[16px] leading-snug">
+            <h3 className="text-primary-foreground font-serif text-xl font-semibold mb-3">Guided Journeys</h3>
+            <ul className="space-y-1.5 text-primary-foreground text-[16px] leading-snug">
               <li><Link to="/helping-aging-parents" className="hover:text-gold transition-colors break-words">Helping an Aging Parent</Link></li>
               <li><Link to="/estate-probate-inherited-property" className="hover:text-gold transition-colors break-words">Estate &amp; Probate</Link></li>
               <li><Link to="/what-to-do-with-the-house" className="hover:text-gold transition-colors break-words">What To Do With the House</Link></li>
@@ -57,10 +57,10 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Services — 2/12 */}
-          <div className="lg:col-span-2 min-w-0">
-            <h3 className="text-primary-foreground font-serif text-xl font-semibold mb-5">Services</h3>
-            <ul className="space-y-3 text-primary-foreground text-[16px] leading-snug">
+          {/* Services — 3/12 */}
+          <div className="lg:col-span-3 min-w-0">
+            <h3 className="text-primary-foreground font-serif text-xl font-semibold mb-3">Services</h3>
+            <ul className="space-y-1.5 text-primary-foreground text-[16px] leading-snug">
               <li><Link to="/probate-estate-sales" className="hover:text-gold transition-colors break-words">Probate &amp; Estate Sales</Link></li>
               <li><Link to="/senior-transitions" className="hover:text-gold transition-colors break-words">Senior Transitions</Link></li>
               <li><Link to="/why-valuation-matters" className="hover:text-gold transition-colors break-words">Valuation &amp; Pricing</Link></li>
@@ -71,8 +71,8 @@ const Footer = () => {
 
           {/* About — 2/12 */}
           <div className="lg:col-span-2 min-w-0">
-            <h3 className="text-primary-foreground font-serif text-xl font-semibold mb-5">About</h3>
-            <ul className="space-y-3 text-primary-foreground text-[16px] leading-snug">
+            <h3 className="text-primary-foreground font-serif text-xl font-semibold mb-3">About</h3>
+            <ul className="space-y-1.5 text-primary-foreground text-[16px] leading-snug">
               <li><Link to="/about" className="hover:text-gold transition-colors">About</Link></li>
               <li><Link to="/how-we-work" className="hover:text-gold transition-colors">How We Work</Link></li>
               <li><Link to="/contact" className="hover:text-gold transition-colors">Contact</Link></li>
