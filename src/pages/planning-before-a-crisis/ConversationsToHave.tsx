@@ -12,8 +12,6 @@ const ConversationsToHave = () => (
     seoDescription="Most families never ask an aging parent what they actually want. These are the questions worth asking — before circumstances force the answer."
     canonicalPath="/planning-before-a-crisis/conversations-to-have"
     breadcrumbName="Conversations to Have"
-    heroHeadline="The Questions Most Families Never Ask — Until It's Too Late"
-    heroSubheadline="These aren't easy conversations. But they're far easier now than they will be in the middle of a crisis — and the answers matter enormously."
     bandTitle="THE CONVERSATIONS WORTH HAVING NOW"
     disclaimer="The information on this page is for general guidance only and does not constitute legal, tax, or financial advice. Please consult qualified professionals for your specific situation."
   >
