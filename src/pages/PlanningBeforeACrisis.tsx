@@ -40,7 +40,7 @@ const tiles = [
   {
     title: "How Real Property Planning Can Help",
     description:
-      "Calm, unhurried guidance from David Stein, coordinated with the other professionals who matter.",
+      "Calm, unhurried guidance coordinated across the professionals who matter most to your situation.",
     href: "/planning-before-a-crisis/how-we-can-help",
   },
 ];
