@@ -175,8 +175,7 @@ const WhatShouldWeDoFirst = () => {
             />
           </div>
           <HeroBandTitle as="p">
-            A simple starting point for families, seniors, executors, and loved ones<br />
-            navigating major life, housing, estate, probate, and property decisions.
+            A starting point for senior housing transitions, care and probate decisions
           </HeroBandTitle>
         </section>
 
