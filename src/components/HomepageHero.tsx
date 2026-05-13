@@ -482,37 +482,40 @@ const HomepageHero = () => {
               fontWeight: 700,
               letterSpacing: "0.2em",
               textTransform: "uppercase" as const,
-              margin: "0 0 12px 0",
+              margin: 0,
             }}
           >
-            YOUR WASHINGTON STATE ESTATE &amp; SENIOR HOUSING RESOURCE
+            WELCOM  TO  REAL  PROPERTY  PLANNING
           </p>
-          <h2
+        </div>
+      </section>
+
+      {/* ===== Intro ===== */}
+      <section style={{ background: "#F5F0E6", padding: isMobile ? "32px 20px" : "48px 24px" }}>
+        <div style={{ maxWidth: 1280, margin: "0 auto", textAlign: "center" }}>
+          <p
             style={{
-              fontFamily: "'Cormorant Garamond', 'Georgia', serif",
-              color: "#f0c040",
-              fontSize: isMobile ? "28px" : "44px",
-              fontWeight: 700,
-              lineHeight: 1.2,
-              margin: "0 0 16px 0",
-              letterSpacing: "0.02em",
-              textShadow: "0 2px 8px rgba(0,0,0,0.4)",
+              fontFamily: "'DM Sans', system-ui, sans-serif",
+              color: "#1E3A5F",
+              fontSize: isMobile ? "16px" : "20px",
+              fontWeight: 500,
+              lineHeight: 1.7,
+              margin: "0 0 8px 0",
             }}
           >
-            A Trusted Resource for Seniors, Families &amp; Estate Professionals in Washington State
-          </h2>
-          <p style={{
-            fontFamily: "'DM Sans', system-ui, sans-serif",
-            fontSize: isMobile ? '16px' : '22px',
-            fontWeight: '500',
-            color: 'white',
-            letterSpacing: '0.3px',
-            margin: '0',
-            padding: '0',
-            display: 'block',
-            width: '100%'
-          }}>
-            Guidance, education, and professional connections for housing transitions, inherited property, probate, and estate decisions — all in one place.
+            For seniors, families, and estate professionals in Washington State
+          </p>
+          <p
+            style={{
+              fontFamily: "'DM Sans', system-ui, sans-serif",
+              color: "#1E3A5F",
+              fontSize: isMobile ? "16px" : "20px",
+              fontWeight: 500,
+              lineHeight: 1.7,
+              margin: 0,
+            }}
+          >
+            Housing transitions · Inherited property · Probate · Estate planning
           </p>
         </div>
       </section>
