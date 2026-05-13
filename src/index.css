@@ -173,7 +173,7 @@ body {
     color: hsl(220 40% 12%);
   }
 
-  /* Desktop-only large paragraph text */
+  /* Desktop-only body text at 18px */
   @media (min-width: 768px) {
     p,
     li,
@@ -182,19 +182,19 @@ body {
     th,
     blockquote,
     figcaption {
-      font-size: 1.3rem !important;
-      line-height: 2 !important;
+      font-size: 1rem !important;
+      line-height: 1.7 !important;
     }
 
     p {
-      margin-bottom: 0.75em;
+      margin-bottom: 0.5em;
     }
 
     p + p {
-      margin-top: 0.9em;
+      margin-top: 0.6em;
     }
 
-    /* Force common smaller text utilities to render larger on desktop */
+    /* Force common body text utilities to 18px (1rem at 18px root) */
     :where(
       .text-xs,
       .text-sm,
@@ -207,8 +207,8 @@ body {
       .text-\[11px\],
       .text-\[10px\]
     ) {
-      font-size: 1.3rem !important;
-      line-height: 2 !important;
+      font-size: 1rem !important;
+      line-height: 1.7 !important;
     }
 
     /* Ensure link text and span text also scale up */
@@ -216,6 +216,14 @@ body {
     span {
       font-size: inherit;
     }
+
+    /* Preserve rem-based heading sizes from 22px root era */
+    :is(h1, h2, h3, h4, h5, h6):is(.text-6xl) { font-size: 82.5px !important; }
+    :is(h1, h2, h3, h4, h5, h6):is(.text-5xl) { font-size: 66px !important; }
+    :is(h1, h2, h3, h4, h5, h6):is(.text-4xl) { font-size: 49.5px !important; }
+    :is(h1, h2, h3, h4, h5, h6):is(.text-3xl) { font-size: 41.25px !important; }
+    :is(h1, h2, h3, h4, h5, h6):is(.text-2xl) { font-size: 33px !important; }
+    :is(h1, h2, h3, h4, h5, h6):is(.text-xl)  { font-size: 27.5px !important; }
   }
 
   /* Keep tile button text unchanged */
