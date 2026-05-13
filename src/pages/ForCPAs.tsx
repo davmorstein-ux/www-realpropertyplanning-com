@@ -42,7 +42,7 @@ const ForCPAs = () => (
         <div className="bg-white h-[3px]" aria-hidden="true" />
         <div className="bg-primary py-9 md:py-10">
           <h1 className="font-serif text-[32px] md:text-[40px] lg:text-[44px]" style={{ fontWeight: 600, color: 'white', textAlign: 'center', margin: 0 }}>
-            GUIDANCE FOR CPAs &amp; TAX PROFESSIONALS
+            CPA &amp; TAX PROFESSIONAL GUIDANCE
           </h1>
         </div>
       </div>
