@@ -129,11 +129,8 @@ const Index = () => {
       <section className="py-14 lg:py-20 bg-cream">
         <div className="container px-6 lg:px-8">
           <div className="max-w-2xl mx-auto text-center">
-            <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-base">
-              Not Sure Where to Start?
-            </p>
             <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-4">
-              Answer a Few Quick Questions
+              Not Sure Where to Start?
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               Answer a few quick questions and we'll point you in the right direction.
