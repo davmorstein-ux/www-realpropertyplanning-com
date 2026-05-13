@@ -485,7 +485,7 @@ const HomepageHero = () => {
               margin: 0,
             }}
           >
-            WELCOM  TO  REAL  PROPERTY  PLANNING
+            WELCOME  TO  REAL  PROPERTY  PLANNING
           </p>
         </div>
       </section>
