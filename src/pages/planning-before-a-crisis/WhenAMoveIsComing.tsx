@@ -11,7 +11,7 @@ const WhenAMoveIsComing = () => (
     seoDescription="You can see the signs. A parent is struggling at home. A health event has changed things. Here's what to do when the question is no longer 'if' but 'when.'"
     canonicalPath="/planning-before-a-crisis/when-a-move-is-coming"
     breadcrumbName="When a Move Is Coming"
-    bandTitle="WHEN A MOVE SEEMS LIKE IT'S COMING"
+    bandTitle="WHEN  A  MOVE  SEEMS  LIKE  IT'S  COMING"
     disclaimer="The information on this page is for general guidance only and does not constitute legal, tax, or financial advice. Please consult qualified professionals for your specific situation."
   >
     <SubH2>The Window Before the Crisis</SubH2>
