@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -10,31 +11,37 @@ const tiles = [
     title: "Why Planning Early Makes Such a Difference",
     description:
       "Avoid rushed real estate decisions, legal gaps, family conflict, and missed options when time is short.",
+    href: "/planning-before-a-crisis/why-planning-early",
   },
   {
     title: "The Conversations Worth Having Now",
     description:
       "The questions families wish they'd asked sooner — about home, care, authority, and wishes.",
+    href: "/planning-before-a-crisis/conversations-to-have",
   },
   {
     title: "The Legal Documents That Matter Most",
     description:
       "Powers of attorney, healthcare directives, wills, trusts, and beneficiary designations explained simply.",
+    href: "/planning-before-a-crisis/legal-documents",
   },
   {
     title: "The Property Questions to Think Through",
     description:
       "Valuation, condition, co-ownership, and tax considerations to weigh well before any decision is made.",
+    href: "/planning-before-a-crisis/property-questions",
   },
   {
     title: "When a Move Seems Like It's Coming",
     description:
       "Practical steps when months — not years — separate today from a likely housing transition.",
+    href: "/planning-before-a-crisis/when-a-move-is-coming",
   },
   {
     title: "How Real Property Planning Can Help",
     description:
       "Calm, unhurried guidance from David Stein, coordinated with the other professionals who matter.",
+    href: "/planning-before-a-crisis/how-we-can-help",
   },
 ];
 
