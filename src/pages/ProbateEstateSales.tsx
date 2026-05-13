@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";

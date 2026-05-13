@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
