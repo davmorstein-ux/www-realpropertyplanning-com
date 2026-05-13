@@ -478,7 +478,7 @@ const HomepageHero = () => {
             style={{
               fontFamily: "'DM Sans', system-ui, sans-serif",
               color: "#C9A84C",
-              fontSize: isMobile ? "13px" : "16px",
+              fontSize: isMobile ? "28px" : "40px",
               fontWeight: 700,
               letterSpacing: "0.2em",
               textTransform: "uppercase" as const,
@@ -497,7 +497,7 @@ const HomepageHero = () => {
             style={{
               fontFamily: "'DM Sans', system-ui, sans-serif",
               color: "#1E3A5F",
-              fontSize: isMobile ? "16px" : "20px",
+              fontSize: isMobile ? "20px" : "22px",
               fontWeight: 500,
               lineHeight: 1.7,
               margin: "0 0 8px 0",
@@ -509,7 +509,7 @@ const HomepageHero = () => {
             style={{
               fontFamily: "'DM Sans', system-ui, sans-serif",
               color: "#1E3A5F",
-              fontSize: isMobile ? "16px" : "20px",
+              fontSize: isMobile ? "20px" : "22px",
               fontWeight: 500,
               lineHeight: 1.7,
               margin: 0,
