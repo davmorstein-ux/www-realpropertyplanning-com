@@ -125,6 +125,29 @@ const Index = () => {
       {/* 4. BROADER CATEGORY ORIENTATION — secondary navigation pathways */}
       <HomepageNav />
 
+      {/* 4.5 — GUIDED ENTRY POINT */}
+      <section className="py-14 lg:py-20 bg-cream">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-2xl mx-auto text-center">
+            <p className="text-gold-dark font-bold tracking-[0.15em] uppercase mb-3 text-base">
+              Not Sure Where to Start?
+            </p>
+            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-4">
+              Answer a Few Quick Questions
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              Answer a few quick questions and we'll point you in the right direction.
+            </p>
+            <Link to="/where-to-start" className="gold-cta">
+              Help Me Find My Way
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* 5. NEXT STEP — quieter Tier 2 CTA strip */}
       <section className="py-10 lg:py-12 bg-navy">
         <div className="container px-6 lg:px-8">
