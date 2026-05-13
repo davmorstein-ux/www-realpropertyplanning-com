@@ -3,7 +3,7 @@ import HeroBandTitle from "@/components/HeroBandTitle";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import ProfessionalsAndServices from "@/components/ProfessionalsAndServices";
-import heroImage from "@/assets/professionals-hero.png";
+import heroImage from "@/assets/professionals-hero.webp";
 
 const ProfessionalsPage = () => (
   <div className="min-h-screen flex flex-col">

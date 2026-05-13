@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import seniorIcon from "@/assets/icons/senior-care-heart-hands-icon-washington.webp";
 import probateIcon from "@/assets/icons/probate-property-home-icon-washington.webp";
-import proIcon from "@/assets/icons/professional-network-nodes-icon-washington.png";
+import proIcon from "@/assets/icons/professional-network-nodes-icon-washington.webp";
 
 const pathways = [
   {

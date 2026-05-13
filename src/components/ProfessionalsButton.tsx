@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import blueButton from "@/assets/for-professionals-sidebar-button.png";
-import greenButton from "@/assets/for-professionals-sidebar-button-green.png";
+import blueButton from "@/assets/for-professionals-sidebar-button.webp";
+import greenButton from "@/assets/for-professionals-sidebar-button-green.webp";
 
 const W = 200;
 const H = 38;

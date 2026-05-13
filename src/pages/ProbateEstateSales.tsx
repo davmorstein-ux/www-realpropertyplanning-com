@@ -78,7 +78,7 @@ const ProbateEstateSales = () => {
         <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
           <div className="relative w-full" style={{ display: 'block', lineHeight: 0 }}>
             <img
-              src="/assets/estate_probate_sales_hero_clean.png"
+              src="/assets/estate_probate_sales_hero_clean.webp"
               alt="Probate and estate property sale scene with family reviewing belongings outside a Washington home"
               className="w-full h-auto object-cover"
               loading="eager"

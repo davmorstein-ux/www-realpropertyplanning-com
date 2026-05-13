@@ -4,19 +4,19 @@ const sections = [
   {
     title: "Professionals & Services",
     href: "/professionals-services",
-    img: "/tiles/nav/professional-services.png",
+    img: "/tiles/nav/professional-services.webp",
     blurb: "Connect with vetted attorneys, CPAs, lenders, brokers, and senior care advisors.",
   },
   {
     title: "Roles & Responsibilities",
     href: "/roles",
-    img: "/tiles/nav/roles-and-responsibilities.png",
+    img: "/tiles/nav/roles-and-responsibilities.webp",
     blurb: "Understand the duties of executors, trustees, and personal representatives.",
   },
   {
     title: "Planning & Next Steps",
     href: "/planning",
-    img: "/tiles/nav/planning-and-next-steps.png",
+    img: "/tiles/nav/planning-and-next-steps.webp",
     blurb: "Senior living options, home pricing, and the calm steps to take next.",
   },
 ];
