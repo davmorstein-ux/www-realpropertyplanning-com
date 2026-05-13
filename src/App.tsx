@@ -23,6 +23,12 @@ const UnderstandingHousingCareOptions = lazy(() => import("./pages/Understanding
 const UnderstandingSeniorTransitions = lazy(() => import("./pages/UnderstandingSeniorTransitions"));
 const EstatePlanningPowersOfAttorney = lazy(() => import("./pages/EstatePlanningPowersOfAttorney"));
 const PlanningBeforeACrisis = lazy(() => import("./pages/PlanningBeforeACrisis"));
+const PBCWhyPlanningEarly = lazy(() => import("./pages/planning-before-a-crisis/WhyPlanningEarly"));
+const PBCConversationsToHave = lazy(() => import("./pages/planning-before-a-crisis/ConversationsToHave"));
+const PBCLegalDocuments = lazy(() => import("./pages/planning-before-a-crisis/LegalDocuments"));
+const PBCPropertyQuestions = lazy(() => import("./pages/planning-before-a-crisis/PropertyQuestions"));
+const PBCWhenAMoveIsComing = lazy(() => import("./pages/planning-before-a-crisis/WhenAMoveIsComing"));
+const PBCHowWeCanHelp = lazy(() => import("./pages/planning-before-a-crisis/HowWeCanHelp"));
 const BuildingYourTrustedProfessionalTeam = lazy(() => import("./pages/BuildingYourTrustedProfessionalTeam"));
 const DownsizingPreparingForTransition = lazy(() => import("./pages/DownsizingPreparingForTransition"));
 const ExecutorResponsibilitiesFirstSteps = lazy(() => import("./pages/ExecutorResponsibilitiesFirstSteps"));
@@ -182,6 +188,12 @@ const App = () => (
           <Route path="/understanding-senior-transitions" element={<UnderstandingSeniorTransitions />} />
           <Route path="/estate-planning-powers-of-attorney" element={<EstatePlanningPowersOfAttorney />} />
           <Route path="/planning-before-a-crisis" element={<PlanningBeforeACrisis />} />
+          <Route path="/planning-before-a-crisis/why-planning-early" element={<PBCWhyPlanningEarly />} />
+          <Route path="/planning-before-a-crisis/conversations-to-have" element={<PBCConversationsToHave />} />
+          <Route path="/planning-before-a-crisis/legal-documents" element={<PBCLegalDocuments />} />
+          <Route path="/planning-before-a-crisis/property-questions" element={<PBCPropertyQuestions />} />
+          <Route path="/planning-before-a-crisis/when-a-move-is-coming" element={<PBCWhenAMoveIsComing />} />
+          <Route path="/planning-before-a-crisis/how-we-can-help" element={<PBCHowWeCanHelp />} />
           <Route path="/building-your-trusted-professional-team" element={<BuildingYourTrustedProfessionalTeam />} />
           <Route path="/downsizing-preparing-for-transition" element={<DownsizingPreparingForTransition />} />
           <Route path="/executor-responsibilities-first-steps" element={<ExecutorResponsibilitiesFirstSteps />} />
