@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 const situations = [
   {
-    image: "/tiles/journey/helping-aging-parent.png",
+    image: "/tiles/journey/helping-aging-parent.webp",
     alt: "Helping an aging parent — senior care guidance Washington State",
     title: "Helping an Aging Parent",
     description: "Worried about a parent's safety, care, or future housing decisions.",
@@ -11,7 +11,7 @@ const situations = [
     href: "/helping-aging-parents",
   },
   {
-    image: "/tiles/journey/loved-one-passed-away.png",
+    image: "/tiles/journey/loved-one-passed-away.webp",
     alt: "Probate and inherited property guidance Washington State",
     title: "A Loved One Recently Passed Away",
     description: "Trying to understand probate, inherited property, or what comes next.",
@@ -19,7 +19,7 @@ const situations = [
     href: "/estate-probate-inherited-property",
   },
   {
-    image: "/tiles/journey/deciding-what-to-do-with-house.png",
+    image: "/tiles/journey/deciding-what-to-do-with-house.webp",
     alt: "Decisions about an inherited or family home Washington State",
     title: "Deciding What To Do With the House",
     description: "Unsure whether to sell, keep, rent, repair, or prepare a property.",
@@ -27,7 +27,7 @@ const situations = [
     href: "/what-to-do-with-the-house",
   },
   {
-    image: "/tiles/journey/housing-care-options.png",
+    image: "/tiles/journey/housing-care-options.webp",
     alt: "Senior living and care options Washington State",
     title: "Exploring Housing & Care Options",
     description: "Considering assisted living, memory care, or aging in place.",
@@ -35,7 +35,7 @@ const situations = [
     href: "/understanding-housing-care-options",
   },
   {
-    image: "/tiles/journey/planning-before-crisis.png",
+    image: "/tiles/journey/planning-before-crisis.webp",
     alt: "Estate planning, wills, and powers of attorney Washington State",
     title: "Planning Before a Crisis",
     description: "Quietly organizing legal, caregiving, and property planning ahead of time.",
@@ -43,7 +43,7 @@ const situations = [
     href: "/estate-planning-powers-of-attorney",
   },
   {
-    image: "/tiles/journey/serving-executor-trustee.png",
+    image: "/tiles/journey/serving-executor-trustee.webp",
     alt: "Executor and trustee first steps Washington State",
     title: "Serving as Executor or Trustee",
     description: "Recently named executor or trustee and unsure what comes first.",

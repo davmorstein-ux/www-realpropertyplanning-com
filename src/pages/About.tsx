@@ -15,7 +15,7 @@ import { useReducedMotion } from "@/hooks/use-reduced-motion";
 
 
 import daveHeadshot from "@/assets/david-stein-real-estate-agent-seattle.webp";
-import aboutHeroImage from "@/assets/about_hero_downtown_clean_v2.png";
+import aboutHeroImage from "@/assets/about_hero_downtown_clean_v2.webp";
 import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconEmail3d from "@/assets/icons/real-estate-email-contact-icon-washington.webp";

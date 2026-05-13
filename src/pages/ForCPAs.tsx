@@ -35,7 +35,7 @@ const ForCPAs = () => (
     <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
       <div style={{ lineHeight: 0 }}>
         <img
-          src="/assets/cpas_hero_clean.png"
+          src="/assets/cpas_hero_clean.webp"
           alt="Guidance for CPAs and tax professionals — Washington State estate and probate real estate"
           className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
           loading="eager"
