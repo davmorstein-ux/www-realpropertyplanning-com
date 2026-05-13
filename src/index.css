@@ -153,11 +153,11 @@ body {
     line-height: 1.7 !important;
   }
 
-  /* Desktop: larger text for older readers */
+  /* Desktop: consistent 18px body text */
   @media (min-width: 768px) {
     body {
-      font-size: 22px;
-      line-height: 1.95;
+      font-size: 18px;
+      line-height: 1.75;
     }
   }
 
