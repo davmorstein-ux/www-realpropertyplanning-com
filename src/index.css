@@ -1703,6 +1703,22 @@ h4 + .text-muted-foreground {
   }
 }
 
+/* Global standardized hero blue band title — beats global p/h1/h2 !important rules */
+.hero-band-title,
+p.hero-band-title,
+h1.hero-band-title,
+h2.hero-band-title,
+h3.hero-band-title {
+  font-family: "Cormorant Garamond", serif !important;
+  font-weight: 600 !important;
+  color: #ffffff !important;
+  text-align: center !important;
+  line-height: 1.2 !important;
+  font-size: clamp(32px, 5vw, 60px) !important;
+  margin: 0 !important;
+  opacity: 1 !important;
+}
+
 /* ===========================================================
    Global accessibility font-size overrides (elderly readability)
    =========================================================== */
