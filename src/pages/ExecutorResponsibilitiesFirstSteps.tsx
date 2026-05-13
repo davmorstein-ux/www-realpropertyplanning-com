@@ -218,18 +218,6 @@ const ExecutorResponsibilitiesFirstSteps = () => {
 
         <HeroBandTitle>SERVING&nbsp; AS&nbsp; EXECUTOR&nbsp; &amp;&nbsp; TRUSTEE</HeroBandTitle>
 
-        <JourneyOrientation
-          tone="probate"
-          items={[
-            "You were recently named executor or personal representative",
-            "You are unsure what your legal duties actually are",
-            "A loved one recently passed away",
-            "You need to know what to do in the first 30–60 days",
-            "You want to avoid common executor mistakes",
-            "You are coordinating heirs, attorneys, and property decisions"
-          ]}
-        />
-
         {/* REASSURANCE */}
         <section className="py-10 lg:py-12 bg-cream">
           <div className="container px-6 lg:px-8">
