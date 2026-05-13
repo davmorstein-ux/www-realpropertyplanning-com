@@ -82,9 +82,10 @@ const PlanningBeforeACrisis = () => {
 
             <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
               {tiles.map((t) => (
-                <div
+                <Link
                   key={t.title}
-                  className="card-3d-blue block h-full"
+                  to={t.href}
+                  className="card-3d-blue block h-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
                   aria-label={t.title}
                 >
                   <div className="card-3d-blue__inner h-full relative">
@@ -99,7 +100,7 @@ const PlanningBeforeACrisis = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
