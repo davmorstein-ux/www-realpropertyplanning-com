@@ -474,23 +474,36 @@ const HomepageHero = () => {
       {/* ===== Trust Bar ===== */}
       <section className="bg-navy" style={{ background: "#1a2f4e", padding: isMobile ? "20px 20px" : "36px 24px" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto", textAlign: "center" }}>
+          <p
+            style={{
+              fontFamily: "'DM Sans', system-ui, sans-serif",
+              color: "#C9A84C",
+              fontSize: isMobile ? "13px" : "16px",
+              fontWeight: 700,
+              letterSpacing: "0.2em",
+              textTransform: "uppercase" as const,
+              margin: "0 0 12px 0",
+            }}
+          >
+            YOUR WASHINGTON STATE ESTATE &amp; SENIOR HOUSING RESOURCE
+          </p>
           <h2
             style={{
               fontFamily: "'Cormorant Garamond', 'Georgia', serif",
               color: "#f0c040",
-              fontSize: isMobile ? "32px" : "52px",
+              fontSize: isMobile ? "28px" : "44px",
               fontWeight: 700,
               lineHeight: 1.2,
-              margin: 0,
-              letterSpacing: "0.04em",
+              margin: "0 0 16px 0",
+              letterSpacing: "0.02em",
               textShadow: "0 2px 8px rgba(0,0,0,0.4)",
             }}
           >
-            Not Sure Where to Start? You're in the Right Place.
+            A Trusted Resource for Seniors, Families &amp; Estate Professionals in Washington State
           </h2>
           <p style={{
             fontFamily: "'DM Sans', system-ui, sans-serif",
-            fontSize: isMobile ? '18px' : '28px',
+            fontSize: isMobile ? '16px' : '22px',
             fontWeight: '500',
             color: 'white',
             letterSpacing: '0.3px',
@@ -499,7 +512,7 @@ const HomepageHero = () => {
             display: 'block',
             width: '100%'
           }}>
-            This is a resource hub for seniors, families, and professionals navigating housing transitions, inherited property, and estate decisions in Washington State.
+            Guidance, education, and professional connections for housing transitions, inherited property, probate, and estate decisions — all in one place.
           </p>
         </div>
       </section>
