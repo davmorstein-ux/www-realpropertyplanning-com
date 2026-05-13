@@ -22,6 +22,7 @@ const WhatToDoWithTheHouse = lazy(() => import("./pages/WhatToDoWithTheHouse"));
 const UnderstandingHousingCareOptions = lazy(() => import("./pages/UnderstandingHousingCareOptions"));
 const UnderstandingSeniorTransitions = lazy(() => import("./pages/UnderstandingSeniorTransitions"));
 const EstatePlanningPowersOfAttorney = lazy(() => import("./pages/EstatePlanningPowersOfAttorney"));
+const PlanningBeforeACrisis = lazy(() => import("./pages/PlanningBeforeACrisis"));
 const BuildingYourTrustedProfessionalTeam = lazy(() => import("./pages/BuildingYourTrustedProfessionalTeam"));
 const DownsizingPreparingForTransition = lazy(() => import("./pages/DownsizingPreparingForTransition"));
 const ExecutorResponsibilitiesFirstSteps = lazy(() => import("./pages/ExecutorResponsibilitiesFirstSteps"));
@@ -180,6 +181,7 @@ const App = () => (
           <Route path="/understanding-housing-care-options" element={<UnderstandingHousingCareOptions />} />
           <Route path="/understanding-senior-transitions" element={<UnderstandingSeniorTransitions />} />
           <Route path="/estate-planning-powers-of-attorney" element={<EstatePlanningPowersOfAttorney />} />
+          <Route path="/planning-before-a-crisis" element={<PlanningBeforeACrisis />} />
           <Route path="/building-your-trusted-professional-team" element={<BuildingYourTrustedProfessionalTeam />} />
           <Route path="/downsizing-preparing-for-transition" element={<DownsizingPreparingForTransition />} />
           <Route path="/executor-responsibilities-first-steps" element={<ExecutorResponsibilitiesFirstSteps />} />
