@@ -188,16 +188,25 @@ const WhatToDoWithTheHouse = () => {
       <Header />
       <main id="main-content">
         {/* HERO */}
-        <section className="bg-primary pt-12 pb-10 lg:pt-20 lg:pb-14">
+        <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
+          <div style={{ lineHeight: 0 }}>
+            <img
+              src={heroImage}
+              alt="Quiet Washington street with craftsman homes — deciding what to do with an inherited or family home"
+              className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
+              loading="eager"
+            />
+            <HeroBandTitle>What To Do With the House</HeroBandTitle>
+          </div>
+        </section>
+
+        <section className="bg-background pt-10 pb-8 lg:pt-14 lg:pb-10">
           <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl">
+            <div className="max-w-3xl mx-auto text-center">
               <p className="text-gold font-bold tracking-[0.2em] uppercase mb-4 text-sm">
                 Decision Roadmap
               </p>
-              <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.75rem] text-primary-foreground font-semibold leading-tight mb-5">
-                What To Do With the House
-              </h1>
-              <p className="text-lg md:text-xl text-primary-foreground/85 leading-relaxed mb-7 max-w-2xl">
+              <p className="text-lg md:text-xl text-foreground leading-relaxed mb-7">
                 A guided roadmap for families, seniors, executors, trustees, and heirs
                 facing important decisions about a home during a senior transition,
                 estate matter, probate situation, or inherited property process.
