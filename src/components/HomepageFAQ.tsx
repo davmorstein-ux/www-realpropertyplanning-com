@@ -45,7 +45,7 @@ const HomepageFAQ = () => {
                 }}
               >
                 <AccordionTrigger className="homepage-faq-trigger text-left px-5 md:px-6 py-4 md:py-5 min-h-[68px] gap-4 [&>svg]:h-6 [&>svg]:w-6 [&>svg]:text-navy [&>svg]:shrink-0">
-                  <span>{faq.q}</span>
+                  <span className="text-base md:text-lg font-bold">{faq.q}</span>
                 </AccordionTrigger>
                 <AccordionContent className="px-5 md:px-6 pb-5 md:pb-6 pt-0 text-foreground">
                   <div className="homepage-faq-answer">{faq.a}</div>

@@ -1,4 +1,3 @@
-
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import { realEstateAgentSchema, organizationSchema } from "@/lib/schema";
@@ -7,7 +6,6 @@ import { Link } from "react-router-dom";
 
 import HomepageHero from "@/components/HomepageHero";
 import HomepageFAQ from "@/components/HomepageFAQ";
-import HomepageWarmStatement from "@/components/HomepageWarmStatement";
 import SituationCards from "@/components/SituationCards";
 import HomepageNav from "@/components/HomepageNav";
 
@@ -127,10 +125,7 @@ const Index = () => {
       {/* 4. BROADER CATEGORY ORIENTATION — secondary navigation pathways */}
       <HomepageNav />
 
-      {/* 5. REASSURANCE / TRUST */}
-      <HomepageWarmStatement />
-
-      {/* 6. NEXT STEP — quieter Tier 2 CTA strip */}
+      {/* 5. NEXT STEP — quieter Tier 2 CTA strip */}
       <section className="py-10 lg:py-12 bg-navy">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto flex flex-col md:flex-row items-center justify-between gap-5 text-center md:text-left">
