@@ -18,6 +18,8 @@ import iconBookOpen from "@/assets/icons/probate-guidance-book-open-icon-washing
 import iconArrow from "@/assets/icons/property-guidance-arrow-icon-washington.webp";
 import iconPhone from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import JourneyOrientation from "@/components/JourneyOrientation";
+import HeroBandTitle from "@/components/HeroBandTitle";
+import heroImage from "@/assets/understanding-housing-care-options-hero-washington.webp";
 
 interface Pathway {
   letter: string;
@@ -180,17 +182,28 @@ const UnderstandingHousingCareOptions = () => {
       <BreadcrumbSchema items={[{ name: "Understanding Housing & Care Options", url: "/understanding-housing-care-options" }]} />
       <Header />
       <main id="main-content">
-        {/* HERO */}
-        <section className="bg-primary pt-12 pb-10 lg:pt-20 lg:pb-14">
+        {/* HERO IMAGE */}
+        <section className="w-full overflow-hidden">
+          <img
+            src={heroImage}
+            alt="Family touring a Washington senior living community to understand housing and care options"
+            className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover"
+            width={1600}
+            height={900}
+            loading="eager"
+            fetchPriority="high"
+          />
+        </section>
+        <HeroBandTitle>UNDERSTANDING HOUSING AND CARE OPTIONS</HeroBandTitle>
+
+        {/* INTRO */}
+        <section className="bg-background pt-10 pb-8 lg:pt-14 lg:pb-10">
           <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl">
+            <div className="max-w-3xl mx-auto text-center">
               <p className="text-gold font-bold tracking-[0.2em] uppercase mb-4 text-sm">
                 Guided Roadmap
               </p>
-              <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.75rem] text-primary-foreground font-semibold leading-tight mb-5">
-                Understanding Housing & Care Options
-              </h1>
-              <p className="text-lg md:text-xl text-primary-foreground/85 leading-relaxed mb-7 max-w-2xl">
+              <p className="text-lg md:text-xl text-foreground leading-relaxed mb-7">
                 A guided roadmap for families and seniors exploring assisted living,
                 adult family homes, memory care, independent living, caregiving
                 support, and other important housing decisions.
