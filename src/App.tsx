@@ -32,6 +32,12 @@ const PBCHowWeCanHelp = lazy(() => import("./pages/planning-before-a-crisis/HowW
 const BuildingYourTrustedProfessionalTeam = lazy(() => import("./pages/BuildingYourTrustedProfessionalTeam"));
 const DownsizingPreparingForTransition = lazy(() => import("./pages/DownsizingPreparingForTransition"));
 const ExecutorResponsibilitiesFirstSteps = lazy(() => import("./pages/ExecutorResponsibilitiesFirstSteps"));
+const ERFFirst30Days = lazy(() => import("./pages/executor-responsibilities-first-steps/First30Days"));
+const ERFLegalDuties = lazy(() => import("./pages/executor-responsibilities-first-steps/LegalDuties"));
+const ERFPropertyDecisions = lazy(() => import("./pages/executor-responsibilities-first-steps/PropertyDecisions"));
+const ERFWorkingWithProfessionals = lazy(() => import("./pages/executor-responsibilities-first-steps/WorkingWithProfessionals"));
+const ERFCommonMistakes = lazy(() => import("./pages/executor-responsibilities-first-steps/CommonMistakes"));
+const ERFWhenYouNeedExtraHelp = lazy(() => import("./pages/executor-responsibilities-first-steps/WhenYouNeedExtraHelp"));
 const PreparingHomeForSaleDuringTransition = lazy(() => import("./pages/PreparingHomeForSaleDuringTransition"));
 const SellingAnInheritedHome = lazy(() => import("./pages/SellingAnInheritedHome"));
 const AgingInPlaceStayingHomeSafely = lazy(() => import("./pages/AgingInPlaceStayingHomeSafely"));
@@ -197,6 +203,12 @@ const App = () => (
           <Route path="/building-your-trusted-professional-team" element={<BuildingYourTrustedProfessionalTeam />} />
           <Route path="/downsizing-preparing-for-transition" element={<DownsizingPreparingForTransition />} />
           <Route path="/executor-responsibilities-first-steps" element={<ExecutorResponsibilitiesFirstSteps />} />
+          <Route path="/executor-responsibilities-first-steps/first-30-days" element={<ERFFirst30Days />} />
+          <Route path="/executor-responsibilities-first-steps/legal-duties" element={<ERFLegalDuties />} />
+          <Route path="/executor-responsibilities-first-steps/property-decisions" element={<ERFPropertyDecisions />} />
+          <Route path="/executor-responsibilities-first-steps/working-with-professionals" element={<ERFWorkingWithProfessionals />} />
+          <Route path="/executor-responsibilities-first-steps/common-mistakes" element={<ERFCommonMistakes />} />
+          <Route path="/executor-responsibilities-first-steps/when-you-need-extra-help" element={<ERFWhenYouNeedExtraHelp />} />
           <Route path="/preparing-home-for-sale-during-transition" element={<PreparingHomeForSaleDuringTransition />} />
           <Route path="/selling-an-inherited-home" element={<SellingAnInheritedHome />} />
           <Route path="/aging-in-place-staying-home-safely" element={<AgingInPlaceStayingHomeSafely />} />
