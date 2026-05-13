@@ -18,6 +18,8 @@ import iconBookOpen from "@/assets/icons/probate-guidance-book-open-icon-washing
 import iconArrow from "@/assets/icons/property-guidance-arrow-icon-washington.webp";
 import iconPhone from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import JourneyOrientation from "@/components/JourneyOrientation";
+import HeroBandTitle from "@/components/HeroBandTitle";
+import heroImage from "@/assets/what-to-do-with-the-house-hero-washington.webp";
 
 interface Decision {
   letter: string;
