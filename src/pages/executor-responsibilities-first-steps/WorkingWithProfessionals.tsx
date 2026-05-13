@@ -10,7 +10,7 @@ const WorkingWithProfessionals = () => (
     seoDescription="Executors rarely work alone. Here's who you need, in what order, and what to expect from each professional involved in estate administration."
     canonicalPath="/executor-responsibilities-first-steps/working-with-professionals"
     breadcrumbName="Working With Attorneys & Professionals"
-    bandTitle="WORKING  WITH  ATTORNEYS  &amp;  PROFESSIONALS"
+    bandTitle="WORKING  WITH  ATTORNEYS  &  PROFESSIONALS"
     disclaimer={DISCLAIMER}
   >
     <SubH2>The Team Around an Estate</SubH2>
