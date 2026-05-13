@@ -256,19 +256,7 @@ const EstateProbateInheritedProperty = () => {
           />
         </section>
 
-        {/* Thin white gap */}
-        <div className="bg-white h-[3px]" aria-hidden="true" />
-
-        {/* BLUE BAND — TITLE (standardized height) */}
-        <section className="bg-primary py-9 md:py-10">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="font-serif text-4xl md:text-5xl lg:text-[3.25rem] text-primary-foreground font-semibold leading-tight">
-                A Roadmap for Managing an Estate, Probate or Inherited Property
-              </h1>
-            </div>
-          </div>
-        </section>
+        <HeroBandTitle>A Roadmap for Managing an Estate, Probate or Inherited Property</HeroBandTitle>
 
         <JourneyOrientation
           tone="probate"

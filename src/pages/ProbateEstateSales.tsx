@@ -84,15 +84,7 @@ const ProbateEstateSales = () => {
               fetchPriority="high"
             />
           </div>
-          <div className="bg-white h-[3px]" aria-hidden="true" />
-          <div className="bg-primary" style={{ width: '100%', padding: '28px 40px' }}>
-            <h2
-              className="font-serif text-[32px] md:text-[40px] lg:text-[44px]"
-              style={{ fontWeight: 600, color: 'white', textAlign: 'center', margin: 0 }}
-            >
-              PROBATE &amp; ESTATE PROPERTY SALES
-            </h2>
-          </div>
+          <HeroBandTitle as="h2">PROBATE &amp; ESTATE PROPERTY SALES</HeroBandTitle>
         </section>
 
         {/* SECTION 2 — Probate vs. Inherited (two tiles, no accordions) */}
