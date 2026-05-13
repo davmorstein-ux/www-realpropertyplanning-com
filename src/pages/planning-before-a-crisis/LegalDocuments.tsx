@@ -11,7 +11,7 @@ const LegalDocuments = () => (
     seoDescription="Four documents that protect your family's ability to act when it matters most — explained in plain language for Washington State families."
     canonicalPath="/planning-before-a-crisis/legal-documents"
     breadcrumbName="Legal Documents"
-    bandTitle="THE LEGAL DOCUMENTS THAT MATTER MOST"
+    bandTitle="THE LEGAL  DOCUMENTS  THAT  MATTER  MOST"
     disclaimer="The information on this page is for general guidance only and does not constitute legal, tax, or financial advice. Please consult a licensed Washington State attorney for estate planning documents."
   >
     <SubH2>Why Documents Matter More Than Most Families Realize</SubH2>
