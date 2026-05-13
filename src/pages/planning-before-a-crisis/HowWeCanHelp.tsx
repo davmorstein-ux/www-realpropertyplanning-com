@@ -11,8 +11,6 @@ const HowWeCanHelp = () => (
     seoDescription="Real Property Planning is a resource hub for seniors, families, and professionals navigating housing transitions, estate property, and inherited homes across Washington State."
     canonicalPath="/planning-before-a-crisis/how-we-can-help"
     breadcrumbName="How We Can Help"
-    heroHeadline="A Hub for Families and Professionals Navigating Senior Housing and Estate Property"
-    heroSubheadline="Real Property Planning brings together the resources, guidance, and professional connections that seniors, families, and estate professionals need — all in one place, for Washington State."
     bandTitle="HOW REAL PROPERTY PLANNING CAN HELP"
     disclaimer="Real Property Planning provides real estate brokerage services through eXp Realty and residential appraisal services through Stein Appraisal. The information on this site is for general guidance only and does not constitute legal, tax, or financial advice."
   >

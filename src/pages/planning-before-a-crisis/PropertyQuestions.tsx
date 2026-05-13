@@ -11,8 +11,6 @@ const PropertyQuestions = () => (
     seoDescription="What is the home worth? What condition is it in? Who inherits it — and what happens if they disagree? The property questions families wish they'd thought through earlier."
     canonicalPath="/planning-before-a-crisis/property-questions"
     breadcrumbName="Property Questions"
-    heroHeadline="The Home Is Often the Biggest Asset. It Deserves a Plan."
-    heroSubheadline="For most families, the family home represents decades of equity and deep personal meaning. Thinking through the property questions early — before decisions are forced — protects both."
     bandTitle="THE PROPERTY QUESTIONS TO THINK THROUGH"
     disclaimer="The information on this page is for general guidance only and does not constitute legal, tax, or financial advice. Please consult qualified professionals for your specific situation."
   >

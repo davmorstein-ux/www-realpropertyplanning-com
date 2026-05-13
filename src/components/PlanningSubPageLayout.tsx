@@ -48,38 +48,14 @@ const PlanningSubPageLayout = ({
       />
       <Header />
       <main id="main-content">
-        {/* HERO — placeholder navy gradient until hero images are provided */}
-        <section
-          className="bg-primary text-white"
-          style={{
-            background:
-              "linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(220 45% 18%) 100%)",
-          }}
-        >
-          <div className="container px-5 md:px-8 py-16 md:py-24 lg:py-28">
-            <div className="max-w-4xl">
-              <h1
-                className="font-serif font-semibold leading-tight mb-5"
-                style={{
-                  color: "#ffffff",
-                  fontSize: "clamp(30px, 4.6vw, 52px)",
-                  lineHeight: 1.15,
-                }}
-              >
-                {heroHeadline}
-              </h1>
-              <p
-                className="font-sans"
-                style={{
-                  color: "#ffffff",
-                  fontSize: "clamp(17px, 1.5vw, 21px)",
-                  lineHeight: 1.6,
-                }}
-              >
-                {heroSubheadline}
-              </p>
-            </div>
-          </div>
+        {/* HERO IMAGE */}
+        <section className="bg-white">
+          <img
+            src={heroImage}
+            alt="Planning before a crisis — thoughtful estate and property planning in Washington State"
+            className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
+            loading="eager"
+          />
         </section>
 
         {/* BLUE BAND */}

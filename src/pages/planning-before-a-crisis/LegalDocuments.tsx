@@ -11,8 +11,6 @@ const LegalDocuments = () => (
     seoDescription="Four documents that protect your family's ability to act when it matters most — explained in plain language for Washington State families."
     canonicalPath="/planning-before-a-crisis/legal-documents"
     breadcrumbName="Legal Documents"
-    heroHeadline="Four Documents. Enormous Peace of Mind."
-    heroSubheadline="Without the right legal documents in place, families can find themselves locked out of accounts, unable to sell property, and powerless to help — even when they're trying to do the right thing."
     bandTitle="THE LEGAL DOCUMENTS THAT MATTER MOST"
     disclaimer="The information on this page is for general guidance only and does not constitute legal, tax, or financial advice. Please consult a licensed Washington State attorney for estate planning documents."
   >
