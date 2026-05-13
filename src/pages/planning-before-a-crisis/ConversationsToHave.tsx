@@ -12,7 +12,7 @@ const ConversationsToHave = () => (
     seoDescription="Most families never ask an aging parent what they actually want. These are the questions worth asking — before circumstances force the answer."
     canonicalPath="/planning-before-a-crisis/conversations-to-have"
     breadcrumbName="Conversations to Have"
-    bandTitle="THE CONVERSATIONS WORTH HAVING NOW"
+    bandTitle="THE  CONVERSATIONS  WORTH  HAVING  NOW"
     disclaimer="The information on this page is for general guidance only and does not constitute legal, tax, or financial advice. Please consult qualified professionals for your specific situation."
   >
     <SubH2>Why These Conversations Get Avoided</SubH2>
