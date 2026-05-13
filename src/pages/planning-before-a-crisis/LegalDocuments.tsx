@@ -16,10 +16,7 @@ const LegalDocuments = () => (
   >
     <SubH2>Why Documents Matter More Than Most Families Realize</SubH2>
     <P>
-      The legal side of estate and senior planning isn't complicated to understand — but it's easy to put off. And when a health event happens, or someone passes away without the right documents in place, families discover just how much those pieces of paper matter.
-    </P>
-    <P>
-      This page explains the four documents that come up most often when families are navigating a transition involving property and housing in Washington State. This is not legal advice — you'll want a Washington State estate planning attorney to draft and execute these properly. But understanding what they are and why they matter is a useful starting point.
+      Estate and senior planning documents are easy to put off — until a health event or death reveals how much they matter. Below are the four documents that come up most often in Washington State property and housing transitions. This is general guidance, not legal advice; a Washington estate planning attorney should draft and execute them.
     </P>
 
     <Divider />
