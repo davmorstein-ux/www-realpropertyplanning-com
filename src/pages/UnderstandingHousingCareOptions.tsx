@@ -194,7 +194,7 @@ const UnderstandingHousingCareOptions = () => {
             fetchPriority="high"
           />
         </section>
-        <HeroBandTitle>UNDERSTANDING HOUSING AND CARE OPTIONS</HeroBandTitle>
+        <HeroBandTitle>UNDERSTANDING&nbsp;&nbsp;HOUSING&nbsp;&nbsp;AND&nbsp;&nbsp;CARE&nbsp;&nbsp;OPTIONS</HeroBandTitle>
 
         {/* INTRO */}
         <section className="bg-background pt-10 pb-8 lg:pt-14 lg:pb-10">
