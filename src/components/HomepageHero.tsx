@@ -486,7 +486,7 @@ const HomepageHero = () => {
               textShadow: "0 2px 8px rgba(0,0,0,0.4)",
             }}
           >
-            WELCOME TO REAL PROPERTY PLANNING
+            Not Sure Where to Start? You're in the Right Place.
           </h2>
           <p style={{
             fontFamily: "'DM Sans', system-ui, sans-serif",
@@ -499,7 +499,7 @@ const HomepageHero = () => {
             display: 'block',
             width: '100%'
           }}>
-            Guidance for Senior Transitions, Estate Sales &amp; Probate
+            This is a resource hub for seniors, families, and professionals navigating housing transitions, inherited property, and estate decisions in Washington State.
           </p>
         </div>
       </section>
