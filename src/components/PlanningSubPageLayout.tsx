@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import HeroBandTitle from "@/components/HeroBandTitle";
+import heroImage from "@/assets/planning-before-a-crisis-hero-washington.webp";
 
 interface PlanningSubPageLayoutProps {
   /** Browser tab + meta title */
@@ -15,10 +16,6 @@ interface PlanningSubPageLayoutProps {
   canonicalPath: string;
   /** Breadcrumb name for this leaf page */
   breadcrumbName: string;
-  /** Hero headline (H1) */
-  heroHeadline: string;
-  /** Hero subheadline */
-  heroSubheadline: string;
   /** Blue band ALL CAPS title */
   bandTitle: string;
   /** Body sections */
