@@ -257,7 +257,7 @@ const EstateProbateInheritedProperty = () => {
           />
         </section>
 
-        <HeroBandTitle>A Roadmap for Managing an Estate, Probate or Inherited Property</HeroBandTitle>
+        <HeroBandTitle>A LOVED ONE RECENTLY PASSED AWAY</HeroBandTitle>
 
         <JourneyOrientation
           tone="probate"
