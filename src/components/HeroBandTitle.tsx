@@ -34,7 +34,7 @@ const HeroBandTitle = ({
     fontWeight: 600,
     textAlign: "center" as const,
     lineHeight: 1.2,
-    fontSize: "clamp(24px, 3.6vw, 44px)",
+    fontSize: "clamp(18px, 2.6vw, 32px)",
     opacity: 1,
     margin: 0,
   };
