@@ -58,7 +58,7 @@ const SituationCards = () => {
       <div className="container px-5 md:px-8">
         <div className="max-w-3xl mx-auto text-center mb-10 md:mb-14">
           <h2 className="font-serif text-[32px] md:text-[44px] lg:text-[52px] font-semibold text-navy leading-tight">
-            Choose the topic that best fits your situation:
+            ​
           </h2>
         </div>
 
