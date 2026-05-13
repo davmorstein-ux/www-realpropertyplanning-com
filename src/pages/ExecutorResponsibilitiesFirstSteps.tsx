@@ -7,6 +7,8 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Compass, HeartHandshake, CheckCircle2 } from "lucide-react";
+import HeroBandTitle from "@/components/HeroBandTitle";
+import heroImage from "@/assets/executor-trustee-hero-washington.webp";
 import { articleSchema } from "@/lib/schema";
 
 import iconExecutor from "@/assets/icons/probate-executors-services-icon-washington.webp";
@@ -204,6 +206,18 @@ const ExecutorResponsibilitiesFirstSteps = () => {
       <BreadcrumbSchema items={[{ name: "Executor Responsibilities & First Steps", url: "/executor-responsibilities-first-steps" }]} />
       <Header />
       <main id="main-content">
+        {/* HERO IMAGE */}
+        <section className="bg-white">
+          <img
+            src={heroImage}
+            alt="Serving as executor and trustee — guidance for Washington families"
+            className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
+            loading="eager"
+          />
+        </section>
+
+        <HeroBandTitle>SERVING&nbsp; AS&nbsp; EXECUTOR&nbsp; &amp;&nbsp; TRUSTEE</HeroBandTitle>
+
         {/* HERO */}
         <section className="bg-primary pt-12 pb-10 lg:pt-20 lg:pb-14">
           <div className="container px-6 lg:px-8">
