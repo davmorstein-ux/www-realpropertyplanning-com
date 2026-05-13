@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -10,31 +11,37 @@ const tiles = [
     title: "Why Planning Early Makes Such a Difference",
     description:
       "Avoid rushed real estate decisions, legal gaps, family conflict, and missed options when time is short.",
+    href: "/planning-before-a-crisis/why-planning-early",
   },
   {
     title: "The Conversations Worth Having Now",
     description:
       "The questions families wish they'd asked sooner — about home, care, authority, and wishes.",
+    href: "/planning-before-a-crisis/conversations-to-have",
   },
   {
     title: "The Legal Documents That Matter Most",
     description:
       "Powers of attorney, healthcare directives, wills, trusts, and beneficiary designations explained simply.",
+    href: "/planning-before-a-crisis/legal-documents",
   },
   {
     title: "The Property Questions to Think Through",
     description:
       "Valuation, condition, co-ownership, and tax considerations to weigh well before any decision is made.",
+    href: "/planning-before-a-crisis/property-questions",
   },
   {
     title: "When a Move Seems Like It's Coming",
     description:
       "Practical steps when months — not years — separate today from a likely housing transition.",
+    href: "/planning-before-a-crisis/when-a-move-is-coming",
   },
   {
     title: "How Real Property Planning Can Help",
     description:
       "Calm, unhurried guidance from David Stein, coordinated with the other professionals who matter.",
+    href: "/planning-before-a-crisis/how-we-can-help",
   },
 ];
 
@@ -75,9 +82,10 @@ const PlanningBeforeACrisis = () => {
 
             <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
               {tiles.map((t) => (
-                <div
+                <Link
                   key={t.title}
-                  className="card-3d-blue block h-full"
+                  to={t.href}
+                  className="card-3d-blue block h-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
                   aria-label={t.title}
                 >
                   <div className="card-3d-blue__inner h-full relative">
@@ -92,7 +100,7 @@ const PlanningBeforeACrisis = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
