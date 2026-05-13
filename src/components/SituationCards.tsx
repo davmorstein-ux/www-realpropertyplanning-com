@@ -19,12 +19,12 @@ const situations = [
     href: "/estate-probate-inherited-property",
   },
   {
-    image: "/tiles/journey/deciding-what-to-do-with-house.webp",
-    alt: "Decisions about an inherited or family home Washington State",
-    title: "Deciding What To Do With the House",
-    description: "Unsure whether to sell, keep, rent, repair, or prepare a property.",
-    cta: "Explore Options",
-    href: "/what-to-do-with-the-house",
+    image: "/tiles/journey/serving-executor-trustee.webp",
+    alt: "Executor and trustee first steps Washington State",
+    title: "Serving as Executor or Trustee",
+    description: "Recently named executor or trustee and unsure what comes first.",
+    cta: "View First Steps",
+    href: "/executor-responsibilities-first-steps",
   },
   {
     image: "/tiles/journey/housing-care-options.webp",
@@ -43,12 +43,12 @@ const situations = [
     href: "/planning-before-a-crisis",
   },
   {
-    image: "/tiles/journey/serving-executor-trustee.webp",
-    alt: "Executor and trustee first steps Washington State",
-    title: "Serving as Executor or Trustee",
-    description: "Recently named executor or trustee and unsure what comes first.",
-    cta: "View First Steps",
-    href: "/executor-responsibilities-first-steps",
+    image: "/tiles/journey/deciding-what-to-do-with-house.webp",
+    alt: "Decisions about an inherited or family home Washington State",
+    title: "Deciding What To Do With the House",
+    description: "Unsure whether to sell, keep, rent, repair, or prepare a property.",
+    cta: "Explore Options",
+    href: "/what-to-do-with-the-house",
   },
 ];
 
