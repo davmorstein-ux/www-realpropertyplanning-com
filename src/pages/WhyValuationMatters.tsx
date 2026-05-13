@@ -1,4 +1,5 @@
 import GoldCheck3D from "@/components/GoldCheck3D";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -103,13 +104,7 @@ const WhyValuationMatters = () => {
           fetchPriority="high"
           style={{ display: 'block' }}
         />
-        {/* Thin white gap */}
-        <div className="bg-white h-[3px]" aria-hidden="true" />
-        <div style={{ backgroundColor: '#1a2f4e', width: '100%', padding: '24px 40px', lineHeight: '1' }}>
-          <div style={{ fontFamily: "'Cormorant Garamond', 'Georgia', serif", color: 'white', fontSize: '52px', fontWeight: 700, lineHeight: 1.2, letterSpacing: '0.04em', textAlign: 'center', margin: '0' }}>
-            Pricing &amp; Valuation Expertise
-          </div>
-        </div>
+        <HeroBandTitle>Pricing &amp; Valuation Expertise</HeroBandTitle>
       </section>
 
       <DirectAnswerBlock

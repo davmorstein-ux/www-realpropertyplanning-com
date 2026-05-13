@@ -1,4 +1,5 @@
 import { useLocation, Link, Navigate } from "react-router-dom";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import { ChevronLeft } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -48,16 +49,7 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
                       className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
                       loading="eager"
                     />
-                    {/* Thin white gap */}
-                    <div className="bg-white h-[3px]" aria-hidden="true" />
-                    {/* Blue band — standardized height */}
-                    <div className="bg-primary py-9 md:py-10">
-                      <div className="container px-6 lg:px-8">
-                        <div className="font-serif text-[32px] md:text-[40px] lg:text-6xl" style={{ color: 'white', fontWeight: 600, textAlign: 'center', margin: 0, lineHeight: 1.2 }}>
-                          Helping an Aging Parent
-                        </div>
-                      </div>
-                    </div>
+                    <HeroBandTitle>Helping an Aging Parent</HeroBandTitle>
                   </div>
                   <div style={{ marginBottom: '40px' }} />
                 </>

@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import ProfessionalsAndServices from "@/components/ProfessionalsAndServices";
@@ -16,14 +17,7 @@ const ProfessionalsPage = () => (
             className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
             loading="eager"
           />
-          {/* Thin white gap */}
-          <div className="bg-white h-[3px]" aria-hidden="true" />
-          {/* Blue band — standardized height */}
-          <div className="bg-primary py-9 md:py-10">
-            <div style={{ color: '#ffffff', fontFamily: '"Cormorant Garamond", serif', fontWeight: 600, textAlign: 'center', lineHeight: 1.2, fontSize: 'clamp(32px, 5vw, 60px)', opacity: 1, margin: 0 }}>
-              Professionals &amp; Services
-            </div>
-          </div>
+          <HeroBandTitle>Professionals &amp; Services</HeroBandTitle>
         </div>
       </section>
 
