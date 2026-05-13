@@ -1,4 +1,3 @@
-
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import { realEstateAgentSchema, organizationSchema } from "@/lib/schema";
