@@ -16,12 +16,8 @@ const WhenAMoveIsComing = () => (
   >
     <SubH2>The Window Before the Crisis</SubH2>
     <P>
-      Not every family is caught completely off guard. Sometimes the signs are there for months — a parent who is increasingly forgetful, a home that's becoming too much to manage, a health scare that made everyone aware of how quickly things could change.
+      Sometimes the signs are there for months — a parent struggling at home, a recent health scare, a sense that things are shifting. This in-between period is an opportunity, not a crisis. Used well, it's the difference between a calm transition and a chaotic one.
     </P>
-    <P>
-      This in-between period — when a move feels likely but hasn't been forced yet — is actually an opportunity. It's a window of time that, used well, can mean the difference between a calm, organized transition and a chaotic one.
-    </P>
-    <P>Here's how to use it.</P>
 
     <Divider />
 

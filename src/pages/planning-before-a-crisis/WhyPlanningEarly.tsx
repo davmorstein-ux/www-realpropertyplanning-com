@@ -17,12 +17,8 @@ const WhyPlanningEarly = () => (
   >
     <SubH2>The Moment Nobody Expects</SubH2>
     <P>
-      Most families don't sit down and plan for the moment an elderly parent can no longer live alone, or the moment they're gone. It's not indifference — it's that the conversation feels heavy, and there's always something more pressing going on.
+      Most families don't plan for the moment a parent can no longer live alone — the conversation feels too heavy. But families who've been through it will tell you the hardest part wasn't the grief; it was making major decisions about property, money, and care while in the middle of it. A little planning, done quietly and early, changes all of that.
     </P>
-    <P>
-      But the families who have been through it will tell you: the hardest part wasn't the grief, or even the logistics. It was making enormous decisions — about property, money, and care — while also grieving, while also disagreeing with siblings, while also trying to hold everything together.
-    </P>
-    <P>A little planning, done quietly and early, changes all of that.</P>
 
     <Divider />
 

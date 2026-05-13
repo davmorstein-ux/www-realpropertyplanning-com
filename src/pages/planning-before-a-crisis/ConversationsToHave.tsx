@@ -17,13 +17,7 @@ const ConversationsToHave = () => (
   >
     <SubH2>Why These Conversations Get Avoided</SubH2>
     <P>
-      Nobody wants to sit down with their parents and talk about what happens when they can't live alone anymore, or what they want done with the house after they're gone. It feels morbid. It feels presumptuous. It feels like inviting something bad to happen.
-    </P>
-    <P>
-      But here's what families who've been through a crisis almost universally say: <em>I wish we had talked about this sooner.</em> Not because they could have prevented what happened — but because knowing what their loved one actually wanted would have made everything that followed so much cleaner, calmer, and kinder.
-    </P>
-    <P>
-      These conversations aren't about planning for death. They're about honoring the wishes of someone while they can still tell you what those wishes are.
+      These conversations feel uncomfortable to start. But families who've been through a crisis almost universally say they wish they'd talked sooner. Asking now is how you honor someone's wishes while they can still tell you what those wishes are.
     </P>
 
     <Divider />

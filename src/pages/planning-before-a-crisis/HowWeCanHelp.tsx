@@ -16,9 +16,8 @@ const HowWeCanHelp = () => (
   >
     <SubH2>What This Hub Is For</SubH2>
     <P>
-      Navigating a senior housing transition or estate property situation means dealing with real estate, legal, financial, and care decisions — often all at once, often under pressure. Most families aren't sure who to call first, or how the pieces fit together.
+      Senior housing transitions and estate property situations involve real estate, legal, financial, and care decisions all at once. Most families aren't sure who to call first or how the pieces fit together. Real Property Planning is a resource hub for:
     </P>
-    <P>Real Property Planning exists to help with exactly that. This site is a resource for:</P>
     <UL>
       <li><strong>Seniors</strong> thinking through their own next chapter — whether that's staying put, downsizing, or planning for the future</li>
       <li><strong>Adult children</strong> helping aging parents prepare, transition, or manage property after a passing</li>

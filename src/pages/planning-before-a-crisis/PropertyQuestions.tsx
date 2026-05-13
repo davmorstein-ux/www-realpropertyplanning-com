@@ -16,9 +16,8 @@ const PropertyQuestions = () => (
   >
     <SubH2>Why Property Deserves Its Own Conversation</SubH2>
     <P>
-      In estate and senior planning conversations, property often gets treated as an afterthought — something to "deal with later." But for most Washington State families, the family home is the single largest financial asset involved in any transition. It deserves thoughtful attention, not last-minute scrambling.
+      In estate and senior planning, property often gets treated as something to deal with later. But for most Washington families, the home is the single largest asset in any transition. These are the questions worth thinking through early.
     </P>
-    <P>These are the questions families and professionals consistently wish had been addressed earlier.</P>
 
     <Divider />
 
