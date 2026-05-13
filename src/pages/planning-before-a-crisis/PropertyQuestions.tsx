@@ -11,7 +11,7 @@ const PropertyQuestions = () => (
     seoDescription="What is the home worth? What condition is it in? Who inherits it — and what happens if they disagree? The property questions families wish they'd thought through earlier."
     canonicalPath="/planning-before-a-crisis/property-questions"
     breadcrumbName="Property Questions"
-    bandTitle="THE  PROPERTY  QUESTIONS  TO  THINK T HROUGH"
+    bandTitle="THE  PROPERTY  QUESTIONS  TO  THINK  THROUGH"
     disclaimer="The information on this page is for general guidance only and does not constitute legal, tax, or financial advice. Please consult qualified professionals for your specific situation."
   >
     <SubH2>Why Property Deserves Its Own Conversation</SubH2>
