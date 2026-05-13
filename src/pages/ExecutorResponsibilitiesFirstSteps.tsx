@@ -86,9 +86,6 @@ const ExecutorResponsibilitiesFirstSteps = () => {
               <p className="text-gold font-bold tracking-[0.25em] uppercase text-sm md:text-[15px] mb-4">
                 Topics to Explore
               </p>
-              <h2 className="font-serif text-[28px] md:text-[40px] lg:text-[44px] font-semibold text-navy leading-tight">
-                Six topics worth understanding as an executor or trustee
-              </h2>
             </div>
 
             <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
@@ -96,7 +93,7 @@ const ExecutorResponsibilitiesFirstSteps = () => {
                 <Link
                   key={t.title}
                   to={t.href}
-                  className="card-3d-blue block h-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+                  className="card-3d-blue block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
                   aria-label={t.title}
                 >
                   <div className="card-3d-blue__inner h-full relative">
