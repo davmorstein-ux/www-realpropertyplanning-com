@@ -38,7 +38,7 @@ const HeroBandTitle = ({
     opacity: 1,
     margin: 0,
     textTransform: "uppercase" as const,
-    wordSpacing: "1em",
+    wordSpacing: "normal",
   };
 
   const titleEl = (
