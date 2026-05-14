@@ -57,12 +57,12 @@ const FloatingHomeButton = () => {
           src={steeringWheel}
           alt=""
           aria-hidden="true"
-          width={52}
-          height={52}
+          width={64}
+          height={64}
           className="steering-wheel-img"
-          style={{ width: 52, height: 52, display: "block", objectFit: "contain", background: "transparent" }}
+          style={{ width: 64, height: 64, display: "block", objectFit: "contain", background: "transparent", flexShrink: 0 }}
         />
-        <span>Home</span>
+        <span style={{ flex: 1, textAlign: "center" }}>Home</span>
       </Link>
     </>
   );
