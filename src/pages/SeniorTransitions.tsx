@@ -21,6 +21,7 @@ import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import seniorTransitionsHero from "@/assets/senior-transitions-hero.png";
 import DirectAnswerBlock from "@/components/DirectAnswerBlock";
+import HeroBandTitle from "@/components/HeroBandTitle";
 
 const transitionSituations = [
   "A parent moving to assisted living, memory care, or an independent senior community",
@@ -86,62 +87,35 @@ const SeniorTransitions = () => {
       <Header />
       <main id="main-content">
 
-      {/* Hero image + brand band */}
-      <section className="bg-transparent" style={{ lineHeight: 0 }}>
+      {/* Hero image + brand band — matches site-wide HeroBandTitle pattern */}
+      <section className="w-full overflow-hidden" style={{ lineHeight: 0 }}>
         <img
           src={seniorTransitionsHero}
           alt="Senior couple in front of their longtime Washington home with a Real Property Planning For Sale sign"
-          className="block w-full"
-          style={{
-            height: "400px",
-            objectFit: "cover",
-            objectPosition: "center",
-          }}
+          className="w-full h-auto object-cover"
+          style={{ display: "block" }}
           loading="eager"
+          fetchPriority="high"
         />
-        <div style={{ height: "4px", backgroundColor: "#ffffff" }} aria-hidden="true" />
-        <div
-          style={{
-            backgroundColor: "#1B3A6B",
-            height: "60px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <h2
-            style={{
-              color: "#FFFFFF",
-              fontFamily: '"DM Sans", system-ui, sans-serif',
-              fontSize: "19px",
-              fontWeight: 600,
-              letterSpacing: "0.05em",
-              margin: 0,
-              lineHeight: 1,
-              textAlign: "center",
-            }}
-          >
-            Selling A Senior's Home
-          </h2>
-        </div>
+        <HeroBandTitle as="h2">Selling A Senior's Home</HeroBandTitle>
       </section>
 
-      {/* Hero */}
-      <section className="bg-primary pt-12 pb-12 md:pt-16 md:pb-14">
+      {/* Page intro */}
+      <section className="bg-background pt-12 pb-12 md:pt-16 md:pb-14">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <img src={seniorHomeSalesIcon} alt="" aria-hidden="true" className="mx-auto max-w-[18rem] w-full h-auto object-contain mb-4" loading="lazy" />
-            <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6 mt-4">
+            <h1 className="font-serif text-4xl md:text-5xl text-foreground font-semibold leading-tight mb-6 mt-4">
               Selling a Senior's Longtime Home in Washington State
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/90 leading-relaxed mb-10 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10 max-w-2xl mx-auto">
               Patient, respectful coordination — at your family's pace, not a sales calendar.
             </p>
             <div className="flex flex-col items-center gap-4 mb-10 mx-auto">
-              <p className="text-primary-foreground text-lg leading-relaxed text-center">
+              <p className="text-foreground text-lg leading-relaxed text-center">
                 Real Property Planning works around the care plan — not the other way around.
               </p>
-              <p className="text-primary-foreground text-lg leading-relaxed text-center">
+              <p className="text-foreground text-lg leading-relaxed text-center">
                 Coordinating with families, care teams, attorneys, and advisors throughout Puget Sound.
               </p>
             </div>
@@ -153,7 +127,7 @@ const SeniorTransitions = () => {
                 </Button>
               </Link>
               <Link to="/guides/how-to-move-elderly-parents">
-                <Button size="lg" variant="outline3d" className="border-gold/50 bg-transparent text-gold hover:bg-gold hover:text-foreground focus-visible:ring-gold w-full sm:w-auto">
+                <Button size="lg" variant="outline3d" className="border-gold/50 bg-transparent text-foreground hover:bg-gold hover:text-foreground focus-visible:ring-gold w-full sm:w-auto">
                   Read: Moving Elderly Parents
                 </Button>
               </Link>
