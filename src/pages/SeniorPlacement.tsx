@@ -117,20 +117,6 @@ const SeniorPlacement = () => {
           </div>
         </section>
 
-        {/* Intro */}
-        <section className="py-12 md:py-16 bg-background">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-4">
-                Understanding Your Options
-              </h2>
-              <p className="text-foreground text-base md:text-lg leading-relaxed">
-                Every senior's situation is different. Use this as a starting point to understand what type of care or housing may be the right fit.
-              </p>
-            </div>
-          </div>
-        </section>
-
         {/* Housing Options */}
         <section className="py-12 md:py-16 bg-secondary">
           <div className="container px-6 lg:px-8">
@@ -149,15 +135,7 @@ const SeniorPlacement = () => {
                     <div className="card-3d-blue__inner h-full relative">
                       <div className="card-3d-blue__face h-full">
                         <div className="flex h-full flex-col">
-                          <div className="relative w-full overflow-hidden bg-transparent flex items-center justify-center" style={{ aspectRatio: "500 / 312" }}>
-                            <img
-                              src={opt.image}
-                              alt={opt.alt}
-                              className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
-                              loading="lazy"
-                            />
-                          </div>
-                          <div className="relative flex flex-1 flex-col items-center text-center overflow-hidden" style={{ padding: "16px" }}>
+                          <div className="relative flex flex-1 flex-col items-center text-center overflow-hidden" style={{ padding: "24px" }}>
                             <h3 className="font-serif text-[22px] md:text-[24px] font-semibold text-navy leading-snug mb-3 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0">
                               {opt.title}
                             </h3>
