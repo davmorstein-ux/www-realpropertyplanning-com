@@ -32,7 +32,7 @@ const FloatingNavButtons = () => {
     };
   }, [pathname]);
 
-  if (pathname === "/") return null;
+  
 
   const labelStyle: React.CSSProperties = {
     fontWeight: 700,
