@@ -8,12 +8,6 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import iconLegalAuthority from "@/assets/icons/legal-authority-3d.webp";
-import iconMultipleDecisionMakers from "@/assets/icons/multiple-decision-makers-3d.webp";
-import iconPropertyCondition from "@/assets/icons/property-condition-3d.webp";
-import iconHonestPricing from "@/assets/icons/honest-pricing-3d.webp";
-import iconEmotionalComplexity from "@/assets/icons/emotional-complexity-3d.webp";
-import iconPreparationStrategy from "@/assets/icons/preparation-strategy-3d.webp";
 import iconClientStories from "@/assets/icons/client-stories-3d.webp";
 import iconCommonQuestions from "@/assets/icons/common-questions-3d.webp";
 import iconHowProcessWorks from "@/assets/icons/how-the-process-works-3d.webp";
@@ -22,34 +16,52 @@ import iconHowProcessWorks from "@/assets/icons/how-the-process-works-3d.webp";
 
 const whatMakesDifferentTiles = [
   {
-    icon: iconLegalAuthority,
-    label: "Legal Authority",
-    text: "Court requirements may dictate when and how a sale can occur.",
+    image: "/tiles/set2/the-probate-process.webp",
+    alt: "Legal authority in probate property sales",
+    title: "Legal Authority",
+    description: "Court requirements may dictate when and how a sale can occur.",
+    cta: "Learn More",
+    href: "/terminology",
   },
   {
-    icon: iconMultipleDecisionMakers,
-    label: "Multiple Decision-Makers",
-    text: "Executors, co-heirs, attorneys, and trustees must coordinate.",
+    image: "/tiles/set2/executors.webp",
+    alt: "Multiple decision-makers in estate sales",
+    title: "Multiple Decision-Makers",
+    description: "Executors, co-heirs, attorneys, and trustees must coordinate.",
+    cta: "Learn More",
+    href: "/executors",
   },
   {
-    icon: iconPropertyCondition,
-    label: "Property Condition",
-    text: "Deferred maintenance, belongings, and vacancy are common.",
+    image: "/tiles/set2/probate-estate-sales.webp",
+    alt: "Estate property condition assessment",
+    title: "Property Condition",
+    description: "Deferred maintenance, belongings, and vacancy are common.",
+    cta: "Learn More",
+    href: "/how-the-process-works",
   },
   {
-    icon: iconHonestPricing,
-    label: "Honest Pricing",
-    text: "Value must reflect actual condition — not automated estimates.",
+    image: "/tiles/set1/real-estate-appraisers.webp",
+    alt: "Honest pricing for estate property",
+    title: "Honest Pricing",
+    description: "Value must reflect actual condition — not automated estimates.",
+    cta: "Learn More",
+    href: "/why-valuation-matters",
   },
   {
-    icon: iconEmotionalComplexity,
-    label: "Emotional Complexity",
-    text: "Family dynamics can slow communication and decisions.",
+    image: "/tiles/set2/trustees.webp",
+    alt: "Emotional complexity in family estate decisions",
+    title: "Emotional Complexity",
+    description: "Family dynamics can slow communication and decisions.",
+    cta: "Learn More",
+    href: "/client-stories",
   },
   {
-    icon: iconPreparationStrategy,
-    label: "Preparation Strategy",
-    text: "As-is vs. repairs has a direct impact on fiduciary defensibility.",
+    image: "/tiles/set3/home-values-pricing.webp",
+    alt: "Preparation strategy for estate property sales",
+    title: "Preparation Strategy",
+    description: "As-is vs. repairs has a direct impact on fiduciary defensibility.",
+    cta: "Learn More",
+    href: "/how-the-process-works",
   },
 ];
 
@@ -199,26 +211,71 @@ const ProbateEstateSales = () => {
                 Estate property sales are genuinely different from standard real estate transactions — and treating them
                 like ordinary listings is where families and executors most often run into trouble.
               </p>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                {whatMakesDifferentTiles.map((tile, i) => (
-                  <div key={i} className="card-3d-blue cursor-default">
-                    <div className="card-3d-blue__inner">
-                      <div className="card-3d-blue__face p-6 flex flex-col items-start">
-                        <img
-                          src={tile.icon}
-                          alt=""
-                          aria-hidden="true"
-                          loading="lazy"
-                        width="96"
-                        height="96"
-                        className="mb-4 shrink-0"
-                        style={{ width: 96, height: 96, objectFit: "contain" }}
-                      />
-                      <h3 className="font-serif text-base text-foreground font-semibold mb-2">{tile.label}</h3>
-                        <p className="text-muted-foreground text-[15px] leading-relaxed">{tile.text}</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
+                {whatMakesDifferentTiles.map((s) => (
+                  <Link
+                    key={s.title}
+                    to={s.href}
+                    aria-label={`${s.title} — ${s.description} — ${s.cta}`}
+                    className="card-3d-blue group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+                  >
+                    <div className="card-3d-blue__inner h-full relative">
+                      <div className="card-3d-blue__face h-full">
+                        <div className="flex h-full flex-col">
+                          <div className="relative w-full overflow-hidden bg-transparent flex items-center justify-center" style={{ aspectRatio: "500 / 312" }}>
+                            <img
+                              src={s.image}
+                              alt={s.alt}
+                              className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
+                              loading="lazy"
+                            />
+                          </div>
+                          <div className="relative flex flex-1 flex-col items-center text-center overflow-hidden" style={{ padding: "16px" }}>
+                            <h3 className="font-serif text-[22px] md:text-[24px] font-semibold text-navy leading-snug mb-3 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0">
+                              {s.title}
+                            </h3>
+                            <p className="text-foreground text-[14px] leading-relaxed mb-6 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0">
+                              {s.description}
+                            </p>
+                            <span className="gold-cta mt-auto transition-opacity duration-200 group-hover:opacity-0" style={{ padding: "10px 16px" }}>
+                              {s.cta}
+                              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                                <polyline points="9 18 15 12 9 6" />
+                              </svg>
+                            </span>
+                            <div
+                              aria-hidden="true"
+                              className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100"
+                              style={{
+                                background: "rgba(10, 20, 46, 0.97)",
+                                zIndex: 10,
+                                display: "flex",
+                                flexDirection: "column",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                textAlign: "center",
+                                padding: "1.25rem 1.5rem",
+                                transition: "opacity 0.28s ease 0.1s",
+                              }}
+                            >
+                              <h3 className="font-serif text-white text-[24px] md:text-[26px] font-bold leading-snug mb-3">
+                                {s.title}
+                              </h3>
+                              <span
+                                className="inline-flex items-center gap-2 text-[16px] font-bold tracking-wide"
+                                style={{ color: "#C9A84C", fontFamily: "'DM Sans', sans-serif" }}
+                              >
+                                {s.cta}
+                                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                                  <polyline points="9 18 15 12 9 6" />
+                                </svg>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 ))}
               </div>
             </div>
