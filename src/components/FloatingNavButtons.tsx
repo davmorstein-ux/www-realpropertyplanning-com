@@ -78,10 +78,10 @@ const FloatingNavButtons = () => {
           border-radius: 0 50px 50px 0;
         }
         .gear-nav-oval:has(.gear-half-left:hover) .gear-shifter-img {
-          transform: rotate(-22deg);
+          transform: translate(-50%, -50%) rotate(-22deg);
         }
         .gear-nav-oval:has(.gear-half-right:hover) .gear-shifter-img {
-          transform: rotate(22deg);
+          transform: translate(-50%, -50%) rotate(22deg);
         }
       `}</style>
       <div
