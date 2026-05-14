@@ -1,12 +1,35 @@
+import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import gearShifter from "@/assets/gear-shifter.png";
 
 /**
- * Sticky Reverse / Forward navigation oval, positioned directly below the
- * floating Home button. Hidden on the homepage.
+ * Sticky Reverse / Forward navigation oval, centered horizontally beneath
+ * the floating Home button. Hidden on the homepage.
  */
 const FloatingNavButtons = () => {
   const { pathname } = useLocation();
+  const ref = useRef<HTMLDivElement>(null);
+  const [leftPx, setLeftPx] = useState<number>(24);
+
+  useEffect(() => {
+    const update = () => {
+      const home = document.querySelector(".home-button") as HTMLElement | null;
+      const self = ref.current;
+      if (!home || !self) return;
+      const homeRect = home.getBoundingClientRect();
+      const homeCenter = homeRect.left + homeRect.width / 2;
+      const selfWidth = self.offsetWidth;
+      setLeftPx(Math.max(8, homeCenter - selfWidth / 2));
+    };
+    update();
+    window.addEventListener("resize", update);
+    const id = window.setTimeout(update, 50);
+    return () => {
+      window.removeEventListener("resize", update);
+      window.clearTimeout(id);
+    };
+  }, [pathname]);
+
   if (pathname === "/") return null;
 
   const labelStyle: React.CSSProperties = {
@@ -26,32 +49,24 @@ const FloatingNavButtons = () => {
   return (
     <>
       <style>{`
-        @keyframes shift-left {
-          0%   { transform: rotate(0deg); }
-          40%  { transform: rotate(-20deg); }
-          100% { transform: rotate(0deg); }
-        }
-        @keyframes shift-right {
-          0%   { transform: rotate(0deg); }
-          40%  { transform: rotate(20deg); }
-          100% { transform: rotate(0deg); }
-        }
         .gear-shifter-img {
           transform-origin: bottom center;
-          background: transparent;
+          transition: transform 0.3s ease-in-out;
         }
-        .reverse-label:hover ~ .gear-shifter-img {
-          animation: shift-left 0.4s ease-in-out;
+        .gear-nav-oval:has(.reverse-label:hover) .gear-shifter-img {
+          transform: rotate(-22deg);
         }
-        .forward-label:hover ~ .gear-shifter-img {
-          animation: shift-right 0.4s ease-in-out;
+        .gear-nav-oval:has(.forward-label:hover) .gear-shifter-img {
+          transform: rotate(22deg);
         }
       `}</style>
       <div
+        ref={ref}
+        className="gear-nav-oval"
         style={{
           position: "fixed",
           bottom: 24 + 64 + 12,
-          left: 24,
+          left: leftPx,
           zIndex: 999,
           display: "inline-flex",
           alignItems: "center",
@@ -70,7 +85,7 @@ const FloatingNavButtons = () => {
           onClick={() => window.history.back()}
           style={labelStyle}
         >
-          Reverse
+          R
         </button>
         <img
           src={gearShifter}
@@ -92,7 +107,7 @@ const FloatingNavButtons = () => {
           onClick={() => window.history.forward()}
           style={labelStyle}
         >
-          Forward
+          F
         </button>
       </div>
     </>
