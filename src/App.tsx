@@ -17,6 +17,12 @@ const ClientStories = lazy(() => import("./pages/ClientStories"));
 const SeniorTransitions = lazy(() => import("./pages/SeniorTransitions"));
 const ChoiceFlowPage = lazy(() => import("./components/ChoiceFlowPage"));
 const EstateProbateInheritedProperty = lazy(() => import("./pages/EstateProbateInheritedProperty"));
+const EPIPFirstSteps = lazy(() => import("./pages/estate-probate-inherited-property/FirstSteps"));
+const EPIPProbateAuthority = lazy(() => import("./pages/estate-probate-inherited-property/ProbateAndLegalAuthority"));
+const EPIPPropertyValue = lazy(() => import("./pages/estate-probate-inherited-property/PropertyValue"));
+const EPIPWhatToDo = lazy(() => import("./pages/estate-probate-inherited-property/WhatToDoWithTheProperty"));
+const EPIPPreparing = lazy(() => import("./pages/estate-probate-inherited-property/PreparingTheProperty"));
+const EPIPProfessionalTeam = lazy(() => import("./pages/estate-probate-inherited-property/ProfessionalTeam"));
 const WhatShouldWeDoFirst = lazy(() => import("./pages/WhatShouldWeDoFirst"));
 const WhatToDoWithTheHouse = lazy(() => import("./pages/WhatToDoWithTheHouse"));
 const UnderstandingHousingCareOptions = lazy(() => import("./pages/UnderstandingHousingCareOptions"));
@@ -188,6 +194,12 @@ const App = () => (
           <Route path="/helping-an-aging-parent" element={<ChoiceFlowPage />} />
           <Route path="/helping-an-aging-parent/*" element={<ChoiceFlowPage />} />
           <Route path="/estate-probate-inherited-property" element={<EstateProbateInheritedProperty />} />
+          <Route path="/estate-probate-inherited-property/first-steps" element={<EPIPFirstSteps />} />
+          <Route path="/estate-probate-inherited-property/probate-and-legal-authority" element={<EPIPProbateAuthority />} />
+          <Route path="/estate-probate-inherited-property/property-value" element={<EPIPPropertyValue />} />
+          <Route path="/estate-probate-inherited-property/what-to-do-with-the-property" element={<EPIPWhatToDo />} />
+          <Route path="/estate-probate-inherited-property/preparing-the-property" element={<EPIPPreparing />} />
+          <Route path="/estate-probate-inherited-property/professional-team" element={<EPIPProfessionalTeam />} />
           <Route path="/what-should-we-do-first" element={<WhatShouldWeDoFirst />} />
           <Route path="/what-to-do-with-the-house" element={<WhatToDoWithTheHouse />} />
           <Route path="/understanding-housing-care-options" element={<UnderstandingHousingCareOptions />} />
