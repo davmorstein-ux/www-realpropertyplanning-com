@@ -21,7 +21,7 @@ const FloatingHomeButton = () => {
         display: "inline-flex",
         alignItems: "center",
         gap: 10,
-        padding: "10px 16px",
+        padding: "14px 20px",
         background: "#FFF8EC",
         border: "2px solid #8B0000",
         borderRadius: 50,
@@ -37,9 +37,9 @@ const FloatingHomeButton = () => {
         src={steeringWheel}
         alt=""
         aria-hidden="true"
-        width={40}
-        height={40}
-        style={{ width: 40, height: 40, display: "block", objectFit: "contain" }}
+        width={52}
+        height={52}
+        style={{ width: 52, height: 52, display: "block", objectFit: "contain" }}
       />
       <span>Home</span>
     </Link>
