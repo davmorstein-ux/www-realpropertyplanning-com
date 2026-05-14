@@ -37,7 +37,7 @@ const HeroBandTitle = ({
     fontSize: "clamp(18px, 2.6vw, 32px)",
     opacity: 1,
     margin: 0,
-    textTransform: "uppercase" as const,
+    textTransform: "capitalize" as const,
     wordSpacing: "normal",
   };
 
