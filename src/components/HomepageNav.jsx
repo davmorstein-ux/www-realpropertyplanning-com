@@ -23,7 +23,7 @@ const sections = [
 
 const HomepageNav = () => {
   return (
-    <section className="py-14 md:py-16 bg-cream">
+    <section className="pt-10 md:pt-12 pb-14 md:pb-16 bg-cream">
       <div className="container px-5 md:px-8">
         <div className="max-w-3xl mx-auto text-center mb-10 md:mb-12">
           <h2 className="font-serif text-[32px] md:text-[40px] font-bold text-navy leading-tight">
