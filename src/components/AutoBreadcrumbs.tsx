@@ -12,7 +12,7 @@ const AutoBreadcrumbs = () => {
       aria-label="Back to homepage"
       className="inline-flex items-center font-bold bg-cream text-navy"
       style={{
-        padding: "16px 28px",
+        padding: "14px 22px",
         fontSize: "18px",
         border: "2px solid #8B0000",
         borderRadius: "50px",

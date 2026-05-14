@@ -491,13 +491,13 @@ const HomepageHero = () => {
       </section>
 
       {/* ===== Intro ===== */}
-      <section style={{ background: "#F5F0E6", padding: isMobile ? "32px 20px" : "48px 24px" }}>
+      <section style={{ background: "#F5F0E6", padding: isMobile ? "24px 20px 20px" : "32px 24px 24px" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto", textAlign: "center" }}>
           <p
             style={{
               fontFamily: "'DM Sans', system-ui, sans-serif",
               color: "#1E3A5F",
-              fontSize: isMobile ? "20px" : "22px",
+              fontSize: "24px",
               fontWeight: 500,
               lineHeight: 1.7,
               margin: "0 0 8px 0",
@@ -509,7 +509,7 @@ const HomepageHero = () => {
             style={{
               fontFamily: "'DM Sans', system-ui, sans-serif",
               color: "#1E3A5F",
-              fontSize: isMobile ? "20px" : "22px",
+              fontSize: "24px",
               fontWeight: 500,
               lineHeight: 1.7,
               margin: 0,
