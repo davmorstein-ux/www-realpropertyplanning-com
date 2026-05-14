@@ -94,7 +94,7 @@ const HomepageHero = () => {
       link.id = id;
       link.rel = "stylesheet";
       link.href =
-        "https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=DM+Sans:wght@400;600;700&display=swap";
+        "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap";
       document.head.appendChild(link);
     }
     const onScroll = () => setScrolled(window.scrollY > 60);
