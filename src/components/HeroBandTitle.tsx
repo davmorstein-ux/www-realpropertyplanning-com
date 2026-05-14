@@ -30,7 +30,7 @@ const HeroBandTitle = ({
 }: HeroBandTitleProps) => {
   const titleStyle = {
     color: "#ffffff",
-    fontFamily: '"Cormorant Garamond", serif',
+    fontFamily: '"DM Sans", serif',
     fontWeight: 600,
     textAlign: "center" as const,
     lineHeight: 1.2,

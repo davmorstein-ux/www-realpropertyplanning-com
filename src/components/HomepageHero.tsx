@@ -94,7 +94,7 @@ const HomepageHero = () => {
       link.id = id;
       link.rel = "stylesheet";
       link.href =
-        "https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=DM+Sans:wght@400;600;700&display=swap";
+        "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap";
       document.head.appendChild(link);
     }
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -104,7 +104,7 @@ const HomepageHero = () => {
   }, []);
 
   const fontBody = { fontFamily: "'DM Sans', system-ui, sans-serif" };
-  const fontHead = { fontFamily: "'Barlow Condensed', 'DM Sans', sans-serif" };
+  const fontHead = { fontFamily: "'DM Sans', 'DM Sans', sans-serif" };
 
   return (
     <div style={{ ...fontBody, background: "#FFFFFF", color: "#1E3A5F", paddingTop: isMobile ? 70 : 120 }}>

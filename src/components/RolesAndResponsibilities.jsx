@@ -17,31 +17,31 @@ const RolesAndResponsibilities = () => {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap');
-        .r2-section { font-family: 'Montserrat', sans-serif !important; padding: 0 40px 64px; }
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+        .r2-section { font-family: 'DM Sans', sans-serif !important; padding: 0 40px 64px; }
         .r2-heading { text-align: center; margin-bottom: 40px; padding-top: 48px; }
-        .r2-eyebrow { font-family: 'Montserrat', sans-serif !important; font-size: 13px !important; font-weight: 700 !important; letter-spacing: 0.18em; text-transform: uppercase; color: #b89a5a; display: block; margin-bottom: 10px; }
-        .r2-h2 { font-family: 'Cormorant Garamond', serif !important; font-size: 40px !important; font-weight: 700 !important; color: #12243F; line-height: 1.15; margin: 0; }
+        .r2-eyebrow { font-family: 'DM Sans', sans-serif !important; font-size: 13px !important; font-weight: 700 !important; letter-spacing: 0.18em; text-transform: uppercase; color: #b89a5a; display: block; margin-bottom: 10px; }
+        .r2-h2 { font-family: 'DM Sans', serif !important; font-size: 40px !important; font-weight: 700 !important; color: #12243F; line-height: 1.15; margin: 0; }
         .r2-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1300px; margin: 0 auto 20px; }
         .r2-card { display: flex; flex-direction: column; width: 100%; height: 380px !important; min-height: 380px !important; max-height: 380px !important; background: #FDFAF5; border-radius: 5px; border: 1px solid rgba(184,154,90,0.40); box-shadow: 0 8px 24px rgba(18,36,63,0.15); overflow: hidden; position: relative; transition: box-shadow 0.4s ease, transform 0.4s ease; text-decoration: none; cursor: pointer; }
         .r2-card:hover { box-shadow: 0 16px 40px rgba(18,36,63,0.25) !important; transform: translateY(-6px); }
         .r2-img { display: block !important; width: 100% !important; height: 215px !important; min-height: 215px !important; max-height: 215px !important; object-fit: contain !important; object-position: center center !important; flex-shrink: 0 !important; background: #FDFAF5; }
         .r2-body { flex: 1; padding: 12px 10px 0; overflow: hidden; position: relative; }
-        .r2-pill { display: block !important; font-family: 'Montserrat', sans-serif !important; font-size: 13px !important; font-weight: 700 !important; letter-spacing: 0.18em; text-transform: uppercase; color: #b89a5a !important; margin-bottom: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; transition: opacity 0.15s ease; }
-        .r2-title { font-family: 'Cormorant Garamond', serif !important; font-weight: 700 !important; font-size: 26px !important; color: #12243F !important; line-height: 1.15; transition: opacity 0.15s ease; }
+        .r2-pill { display: block !important; font-family: 'DM Sans', sans-serif !important; font-size: 13px !important; font-weight: 700 !important; letter-spacing: 0.18em; text-transform: uppercase; color: #b89a5a !important; margin-bottom: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; transition: opacity 0.15s ease; }
+        .r2-title { font-family: 'DM Sans', serif !important; font-weight: 700 !important; font-size: 26px !important; color: #12243F !important; line-height: 1.15; transition: opacity 0.15s ease; }
         .r2-card:hover .r2-pill, .r2-card:hover .r2-title { opacity: 0; }
         .r2-hover { position: absolute; inset: 0; background: rgba(10,20,46,0.97); display: flex; align-items: center; justify-content: center; padding: 14px; opacity: 0; transition: opacity 0.28s ease 0.1s; z-index: 30; }
         .r2-card:hover .r2-hover { opacity: 1; }
-        .r2-tagline { font-family: 'Montserrat', sans-serif !important; font-weight: 600 !important; font-size: 14px !important; color: #FFF !important; text-align: center; line-height: 1.5; }
+        .r2-tagline { font-family: 'DM Sans', sans-serif !important; font-weight: 600 !important; font-size: 14px !important; color: #FFF !important; text-align: center; line-height: 1.5; }
         .r2-footer { height: 52px !important; flex-shrink: 0 !important; display: flex; align-items: center; padding: 0 12px; border-top: 1.5px solid rgba(184,154,90,0.28); background: #FDFAF5; gap: 8px; justify-content: space-between; }
-        .r2-label { font-family: 'Montserrat', sans-serif !important; font-size: 13px !important; font-weight: 700 !important; letter-spacing: 0.04em; text-transform: uppercase; color: #1a3a6b !important; line-height: 1.4; flex: 1; }
+        .r2-label { font-family: 'DM Sans', sans-serif !important; font-size: 13px !important; font-weight: 700 !important; letter-spacing: 0.04em; text-transform: uppercase; color: #1a3a6b !important; line-height: 1.4; flex: 1; }
         .r2-arrow { margin-left: auto; width: 28px; height: 28px; border: 1.5px solid #1a3a6b; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: background 0.25s; flex-shrink: 0; }
         .r2-card:hover .r2-arrow { background: #1a3a6b; }
         .r2-arrow svg { width: 11px; height: 11px; stroke: #1a3a6b; fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; transition: stroke 0.25s; }
         .r2-card:hover .r2-arrow svg { stroke: #fff; }
         .r2-bar { max-width: 1300px; margin: 36px auto 0; background: #1a3a6b; border-radius: 8px; padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-        .r2-bar-text { font-family: 'Montserrat', sans-serif !important; font-size: 14px !important; color: #c8d5e8; line-height: 1.6; }
-        .r2-bar-btn { font-family: 'Montserrat', sans-serif !important; font-size: 13px !important; font-weight: 700 !important; letter-spacing: 0.08em; background: #b89a5a; color: #fff; border: none; border-radius: 4px; padding: 12px 24px; cursor: pointer; white-space: nowrap; }
+        .r2-bar-text { font-family: 'DM Sans', sans-serif !important; font-size: 14px !important; color: #c8d5e8; line-height: 1.6; }
+        .r2-bar-btn { font-family: 'DM Sans', sans-serif !important; font-size: 13px !important; font-weight: 700 !important; letter-spacing: 0.08em; background: #b89a5a; color: #fff; border: none; border-radius: 4px; padding: 12px 24px; cursor: pointer; white-space: nowrap; }
       `}</style>
       <div className="r2-section">
         <div className="r2-heading">
