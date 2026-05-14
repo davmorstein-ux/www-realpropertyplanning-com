@@ -311,57 +311,6 @@ const UnderstandingHousingCareOptions = () => {
           </div>
         </section>
 
-        {/* SIMPLE NEXT STEPS */}
-        <section className="py-10 lg:py-14 bg-cream">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto">
-              <div className="text-center mb-7">
-                <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">
-                  Simple Next Steps
-                </p>
-                <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold">
-                  A Calm, Clear Action Plan
-                </h2>
-              </div>
-              <ol className="space-y-4">
-                {nextSteps.map((step, i) => (
-                  <li
-                    key={step}
-                    className="flex items-center gap-5 bg-white border border-gold/25 rounded-2xl p-5 shadow-[0_4px_14px_-8px_rgba(27,43,75,0.2)]"
-                  >
-                    <span className="shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-gold to-[hsl(var(--gold-dark))] text-white font-serif text-2xl font-bold flex items-center justify-center">
-                      {i + 1}
-                    </span>
-                    <span className="text-navy font-semibold text-lg md:text-xl leading-snug">
-                      {step}
-                    </span>
-                  </li>
-                ))}
-              </ol>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA */}
-        <section className="py-10 lg:py-14 bg-primary">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-4">
-                Want to talk it through first?
-              </h2>
-              <p className="text-primary-foreground/85 text-lg leading-relaxed mb-7">
-                A calm, no-pressure conversation can often clarify the very next step.
-              </p>
-              <Link to="/contact">
-                <Button variant="gold" size="lg" className="px-8 h-[56px] text-base rounded-lg">
-                  <img src={iconPhone} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain" loading="lazy" />
-                  Start the Conversation
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </section>
-
         <DisclaimerSection />
       </main>
       <Footer />
