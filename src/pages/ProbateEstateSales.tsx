@@ -8,12 +8,6 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import iconLegalAuthority from "@/assets/icons/legal-authority-3d.webp";
-import iconMultipleDecisionMakers from "@/assets/icons/multiple-decision-makers-3d.webp";
-import iconPropertyCondition from "@/assets/icons/property-condition-3d.webp";
-import iconHonestPricing from "@/assets/icons/honest-pricing-3d.webp";
-import iconEmotionalComplexity from "@/assets/icons/emotional-complexity-3d.webp";
-import iconPreparationStrategy from "@/assets/icons/preparation-strategy-3d.webp";
 import iconClientStories from "@/assets/icons/client-stories-3d.webp";
 import iconCommonQuestions from "@/assets/icons/common-questions-3d.webp";
 import iconHowProcessWorks from "@/assets/icons/how-the-process-works-3d.webp";
@@ -22,34 +16,52 @@ import iconHowProcessWorks from "@/assets/icons/how-the-process-works-3d.webp";
 
 const whatMakesDifferentTiles = [
   {
-    icon: iconLegalAuthority,
-    label: "Legal Authority",
-    text: "Court requirements may dictate when and how a sale can occur.",
+    image: "/tiles/set2/the-probate-process.webp",
+    alt: "Legal authority in probate property sales",
+    title: "Legal Authority",
+    description: "Court requirements may dictate when and how a sale can occur.",
+    cta: "Learn More",
+    href: "/terminology",
   },
   {
-    icon: iconMultipleDecisionMakers,
-    label: "Multiple Decision-Makers",
-    text: "Executors, co-heirs, attorneys, and trustees must coordinate.",
+    image: "/tiles/set2/executors.webp",
+    alt: "Multiple decision-makers in estate sales",
+    title: "Multiple Decision-Makers",
+    description: "Executors, co-heirs, attorneys, and trustees must coordinate.",
+    cta: "Learn More",
+    href: "/executors",
   },
   {
-    icon: iconPropertyCondition,
-    label: "Property Condition",
-    text: "Deferred maintenance, belongings, and vacancy are common.",
+    image: "/tiles/set2/probate-estate-sales.webp",
+    alt: "Estate property condition assessment",
+    title: "Property Condition",
+    description: "Deferred maintenance, belongings, and vacancy are common.",
+    cta: "Learn More",
+    href: "/how-the-process-works",
   },
   {
-    icon: iconHonestPricing,
-    label: "Honest Pricing",
-    text: "Value must reflect actual condition — not automated estimates.",
+    image: "/tiles/set1/real-estate-appraisers.webp",
+    alt: "Honest pricing for estate property",
+    title: "Honest Pricing",
+    description: "Value must reflect actual condition — not automated estimates.",
+    cta: "Learn More",
+    href: "/why-valuation-matters",
   },
   {
-    icon: iconEmotionalComplexity,
-    label: "Emotional Complexity",
-    text: "Family dynamics can slow communication and decisions.",
+    image: "/tiles/set2/trustees.webp",
+    alt: "Emotional complexity in family estate decisions",
+    title: "Emotional Complexity",
+    description: "Family dynamics can slow communication and decisions.",
+    cta: "Learn More",
+    href: "/client-stories",
   },
   {
-    icon: iconPreparationStrategy,
-    label: "Preparation Strategy",
-    text: "As-is vs. repairs has a direct impact on fiduciary defensibility.",
+    image: "/tiles/set3/home-values-pricing.webp",
+    alt: "Preparation strategy for estate property sales",
+    title: "Preparation Strategy",
+    description: "As-is vs. repairs has a direct impact on fiduciary defensibility.",
+    cta: "Learn More",
+    href: "/how-the-process-works",
   },
 ];
 
