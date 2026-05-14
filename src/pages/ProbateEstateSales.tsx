@@ -222,14 +222,6 @@ const ProbateEstateSales = () => {
                     <div className="card-3d-blue__inner h-full relative">
                       <div className="card-3d-blue__face h-full">
                         <div className="flex h-full flex-col">
-                          <div className="relative w-full overflow-hidden bg-transparent flex items-center justify-center" style={{ aspectRatio: "500 / 312" }}>
-                            <img
-                              src={s.image}
-                              alt={s.alt}
-                              className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
-                              loading="lazy"
-                            />
-                          </div>
                           <div className="relative flex flex-1 flex-col items-center text-center overflow-hidden" style={{ padding: "16px" }}>
                             <h3 className="font-serif text-[22px] md:text-[24px] font-semibold text-navy leading-snug mb-3 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0">
                               {s.title}
