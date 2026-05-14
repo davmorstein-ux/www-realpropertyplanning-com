@@ -2,11 +2,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
-import PageFAQ from "@/components/PageFAQ";
 import DisclaimerSection from "@/components/DisclaimerSection";
-import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight, Compass, HeartHandshake, CheckCircle2 } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { articleSchema } from "@/lib/schema";
 
 import iconHeartHands from "@/assets/icons/senior-care-heart-hands-icon-washington.webp";
@@ -14,10 +12,7 @@ import iconAssisted from "@/assets/icons/senior-assisted-living-icon-washington.
 import iconHome from "@/assets/icons/probate-property-home-icon-washington.webp";
 import iconExecutor from "@/assets/icons/probate-executors-services-icon-washington.webp";
 import iconDocument from "@/assets/icons/probate-document-icon-washington.webp";
-import iconBookOpen from "@/assets/icons/probate-guidance-book-open-icon-washington.webp";
 import iconArrow from "@/assets/icons/property-guidance-arrow-icon-washington.webp";
-import iconPhone from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
-import JourneyOrientation from "@/components/JourneyOrientation";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import heroImage from "@/assets/understanding-housing-care-options-hero-washington.webp";
 
