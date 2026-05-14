@@ -17,12 +17,16 @@ import iconHelpAtHome from "@/assets/icons/senior-placement-advisor-icon-washing
 import iconHousingOptions from "@/assets/icons/senior-adult-family-home-3d-washington.webp";
 import iconHealthCrisis from "@/assets/icons/senior-nursing-care-icon-washington.webp";
 import iconFinancesLegal from "@/assets/icons/estate-financial-planning-icon-washington.webp";
+import housingOptionsHero from "@/assets/housing_options_hero.png";
 
 export interface FlowNode {
   path: string;          // full path e.g. "/helping-an-aging-parent/exploring-care-options"
   label: string;         // card label / page heading
   icon: LucideIcon;
   image?: string;        // optional richer 3D WebP icon (preferred when present)
+  heroImage?: string;    // optional full-width hero image for this page
+  heroAlt?: string;
+  heroBandTitle?: string;
   subtext?: string;      // one-line context shown on the page
   content?: {
     intro: string;
