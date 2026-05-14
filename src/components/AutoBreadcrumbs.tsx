@@ -10,14 +10,12 @@ const AutoBreadcrumbs = () => {
     <Link
       to="/"
       aria-label="Back to homepage"
-      className="fixed bg-navy text-white font-bold rounded-md shadow-lg hover:bg-navy/90"
+      className="inline-flex items-center font-bold bg-cream text-navy"
       style={{
-        bottom: "24px",
-        left: "24px",
-        zIndex: 999,
         padding: "16px 28px",
         fontSize: "18px",
         border: "2px solid #8B0000",
+        borderRadius: "50px",
       }}
     >
       ‹ Home
