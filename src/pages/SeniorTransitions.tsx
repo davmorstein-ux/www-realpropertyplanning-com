@@ -197,7 +197,7 @@ const SeniorTransitions = () => {
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
               Not Sure Where to Start?
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+            <p className="text-foreground text-lg leading-[1.7] mb-8">
               Most families don't know which professional they need first. That's okay. Real Property Planning helps you figure out the right sequence and connects you with trusted professionals throughout the Puget Sound area.
             </p>
             <Link to="/contact">
@@ -233,7 +233,7 @@ const SeniorTransitions = () => {
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
               When Do Families Reach Out About Senior Home Sales?
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+            <p className="text-foreground text-lg leading-[1.7] mb-8">
               There is no single moment that brings a family to this conversation. Some reach out after a health event changes everything overnight. Others have been watching a parent slow down for years and finally feel it's time to act. Real Property Planning works with families across King County, Snohomish County, Pierce County, Kitsap County, and throughout Washington State — in situations including:
             </p>
             <ul className="space-y-4">
@@ -256,7 +256,7 @@ const SeniorTransitions = () => {
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
               What Do Families Need Most During a Senior Home Sale?
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+            <p className="text-foreground text-lg leading-[1.7] mb-8">
               Most families navigating a senior home sale have never done this before. They're often managing a parent's emotions alongside their own, coordinating with siblings who may not agree, and trying to understand a real estate process they're unfamiliar with — all at the same time. What they consistently say they needed most:
             </p>
             <ul className="space-y-4">
@@ -278,17 +278,17 @@ const SeniorTransitions = () => {
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
               Why Selling a Senior's Home Is Different From a Typical Home Sale
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+            <p className="text-foreground text-lg leading-[1.7] mb-6">
               A senior housing transition isn't a standard real estate transaction — and treating it like one is where many families run into problems.
             </p>
-            <p className="text-muted-foreground leading-relaxed mb-6">
+            <p className="text-foreground text-base leading-[1.7] mb-6">
               The home may have decades of deferred maintenance. The seller may be emotionally attached in ways that make pricing conversations difficult. Family members may disagree about timing or repairs. There may be a care team, an attorney, and a financial planner all involved — each with their own timeline and priorities. And the senior themselves may still be living in the home during the sale process.
             </p>
-            <p className="text-muted-foreground leading-relaxed mb-6">
+            <p className="text-foreground text-base leading-[1.7] mb-6">
               Real Property Planning's dual background as a licensed real estate broker and a Washington State{" "}
               <Link to="/real-estate-appraiser" className="text-accent hover:text-gold underline underline-offset-4">Certified Residential Appraiser</Link> means our team approaches every senior transition sale differently than a typical listing agent. Our team can assess the home's true condition and value before any pricing conversation begins — which means families get honest guidance from the start, not a number that sounds good but leads to price reductions later.
             </p>
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-foreground text-base leading-[1.7]">
               His affiliation with the{" "}
               <a href="https://www.aginglifecare.org/" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-gold underline underline-offset-4">Aging Life Care Association</a> and the{" "}
               <a href="https://www.naosa.org/" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-gold underline underline-offset-4">National Association of Senior Advocates</a> reflects a commitment to this work that goes beyond real estate. The goal isn't just to sell a house. It's to make one of life's most significant transitions as manageable as possible for everyone involved.
@@ -305,14 +305,14 @@ const SeniorTransitions = () => {
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
               Coordinating With Family, Care Professionals &amp; Trusted Advisors
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+            <p className="text-foreground text-lg leading-[1.7] mb-8">
               Senior transitions rarely involve just one person. Real Property Planning works collaboratively with everyone involved to keep the real estate process aligned with the broader plan:
             </p>
             <div className="space-y-6">
               {coordinationPartners.map((partner, index) => (
                 <div key={index} className="bg-card border border-border rounded-xl p-6">
                   <h3 className="font-serif text-lg text-foreground font-semibold mb-2">{partner.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{partner.description}</p>
+                  <p className="text-foreground text-base leading-[1.7]">{partner.description}</p>
                 </div>
               ))}
             </div>
@@ -364,7 +364,7 @@ const SeniorTransitions = () => {
                   <AccordionTrigger className="text-left font-serif text-foreground hover:text-gold hover:no-underline px-6 py-5" style={{ fontSize: '20px', fontWeight: '700' }}>
                     {item.q}
                   </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-5 pt-0 text-muted-foreground leading-relaxed">
+                  <AccordionContent className="px-6 pb-5 pt-0 text-foreground text-base leading-[1.7]">
                     {item.a}
                   </AccordionContent>
                 </AccordionItem>
