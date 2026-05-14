@@ -17,6 +17,10 @@ import iconHelpAtHome from "@/assets/icons/senior-placement-advisor-icon-washing
 import iconHousingOptions from "@/assets/icons/senior-adult-family-home-3d-washington.webp";
 import iconHealthCrisis from "@/assets/icons/senior-nursing-care-icon-washington.webp";
 import iconFinancesLegal from "@/assets/icons/estate-financial-planning-icon-washington.webp";
+import iconTypesOfHousing from "@/assets/icons/senior-living-placement-icon-washington.webp";
+import iconComparingCosts from "@/assets/icons/paying-for-senior-living-icon-washington.webp";
+import iconEligibility from "@/assets/icons/executors-clipboard-checklist-icon-washington.webp";
+import iconConversation from "@/assets/icons/real-estate-consultation-chat-icon-washington.webp";
 import housingOptionsHero from "@/assets/housing_options_hero.png";
 
 export interface FlowNode {
@@ -187,6 +191,7 @@ export const AGING_PARENT_ROOT: FlowNode = {
           path: "/helping-an-aging-parent/exploring-care-options/types-of-housing",
           label: "What types of senior housing exist?",
           icon: Building2,
+          image: iconTypesOfHousing,
           heroImage: housingOptionsHero,
           heroAlt: "Types of senior housing — Real Property Planning",
           heroBandTitle: "What types of senior housing exist?",
@@ -206,6 +211,7 @@ export const AGING_PARENT_ROOT: FlowNode = {
           path: "/helping-an-aging-parent/exploring-care-options/comparing-costs",
           label: "How do I compare costs?",
           icon: DollarSign,
+          image: iconComparingCosts,
           heroImage: housingOptionsHero,
           heroAlt: "Comparing senior care costs — Real Property Planning",
           heroBandTitle: "How do I compare costs?",
@@ -223,6 +229,7 @@ export const AGING_PARENT_ROOT: FlowNode = {
           path: "/helping-an-aging-parent/exploring-care-options/eligibility",
           label: "What does my parent qualify for?",
           icon: ClipboardCheck,
+          image: iconEligibility,
           heroImage: housingOptionsHero,
           heroAlt: "Senior care eligibility — Real Property Planning",
           heroBandTitle: "What does my parent qualify for?",
@@ -241,6 +248,7 @@ export const AGING_PARENT_ROOT: FlowNode = {
           path: "/helping-an-aging-parent/exploring-care-options/having-the-conversation",
           label: "How do I have this conversation with my parent?",
           icon: MessageCircle,
+          image: iconConversation,
           heroImage: housingOptionsHero,
           heroAlt: "Having the conversation with an aging parent — Real Property Planning",
           heroBandTitle: "How do I have this conversation with my parent?",
