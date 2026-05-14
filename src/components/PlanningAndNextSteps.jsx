@@ -1,7 +1,7 @@
 import React from 'react';
 
 const styles = `
-  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=DM Sans:wght@400;500;600;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
   .p3wrap * { box-sizing: border-box; margin: 0; padding: 0; }
   .p3section { font-family: 'DM Sans', sans-serif; padding: 0 40px 64px; }
   .p3grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1300px; margin: 0 auto 20px; }

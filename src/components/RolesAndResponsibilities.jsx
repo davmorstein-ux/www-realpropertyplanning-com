@@ -17,7 +17,7 @@ const RolesAndResponsibilities = () => {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=DM Sans:wght@400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
         .r2-section { font-family: 'DM Sans', sans-serif !important; padding: 0 40px 64px; }
         .r2-heading { text-align: center; margin-bottom: 40px; padding-top: 48px; }
         .r2-eyebrow { font-family: 'DM Sans', sans-serif !important; font-size: 13px !important; font-weight: 700 !important; letter-spacing: 0.18em; text-transform: uppercase; color: #b89a5a; display: block; margin-bottom: 10px; }
