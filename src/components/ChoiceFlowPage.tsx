@@ -38,17 +38,17 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
         <section className="pt-0 pb-10 lg:pt-0 lg:pb-16 bg-cream">
           <div className="container px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
-              {/* Hero image — root page only */}
-              {isRoot && (
+              {/* Hero image — root page or any node with explicit heroImage */}
+              {(isRoot || node.heroImage) && (
                 <>
                   <div style={{ width: '100vw', position: 'relative', left: '50%', transform: 'translateX(-50%)', lineHeight: 0 }}>
                     <img
-                      src={agingParentHero}
-                      alt="Helping an aging parent — Real Property Planning"
+                      src={node.heroImage || agingParentHero}
+                      alt={node.heroAlt || "Helping an aging parent — Real Property Planning"}
                       className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
                       loading="eager"
                     />
-                    <HeroBandTitle>Helping an Aging Parent</HeroBandTitle>
+                    <HeroBandTitle>{node.heroBandTitle || (isRoot ? "Helping an Aging Parent" : node.label)}</HeroBandTitle>
                   </div>
                   <div style={{ marginBottom: '40px' }} />
                 </>
