@@ -13,32 +13,44 @@ const housingOptions = [
   {
     title: "Independent Living",
     href: "/senior-living/independent-living",
-    body: "For seniors who are largely self-sufficient but want community, convenience, and freedom from home maintenance. No medical care provided on-site.",
+    image: "/tiles/set3/senior-living-options.webp",
+    alt: "Independent living communities Washington State",
+    body: "Community living for active, self-sufficient seniors who want convenience and connection without home upkeep.",
   },
   {
     title: "Assisted Living",
     href: "/senior-living/assisted-living",
-    body: "For seniors who need help with daily activities such as bathing, dressing, medication, and meals. Staff available around the clock.\n\nHundreds of licensed communities across Washington State.",
+    image: "/tiles/set1/senior-living-advisors.webp",
+    alt: "Assisted living communities Washington State",
+    body: "For seniors who need daily support with meals, medication, and personal care.",
   },
   {
     title: "Memory Care",
     href: "/senior-living/memory-care",
-    body: "Specialized care for seniors living with Alzheimer's or other forms of dementia. Secure environments, structured routines, and trained staff.",
+    image: "/tiles/set3/medicare-providers.webp",
+    alt: "Memory care for Alzheimer's and dementia Washington State",
+    body: "Specialized care for seniors living with Alzheimer's, dementia, or cognitive decline.",
   },
   {
     title: "Adult Family Homes",
     href: "/senior-living/adult-family-homes",
-    body: "A residential home — typically 2 to 6 residents — licensed by Washington State to provide personal care. Often more affordable and intimate than larger facilities. Common throughout King, Snohomish, Pierce, and Kitsap Counties.",
+    image: "/tiles/set3/senior-home-sales.webp",
+    alt: "Adult family homes Washington State",
+    body: "Small, licensed residential homes offering personalized care in an intimate setting.",
   },
   {
     title: "Skilled Nursing Care",
     href: "/senior-living/skilled-nursing",
-    body: "For seniors requiring 24-hour medical care and supervision. Usually short-term after hospitalization, though some seniors transition to long-term care.",
+    image: "/tiles/set3/paying-for-senior-living.webp",
+    alt: "Skilled nursing care Washington State",
+    body: "24-hour medical care and supervision, typically following a hospitalization.",
   },
   {
     title: "Aging in Place",
     href: "/senior-living/aging-in-place",
-    body: "For seniors who wish to remain in their own home with the support of in-home caregivers, safety modifications, meal delivery, and other services. Often the first step before a larger transition.",
+    image: "/tiles/set1/senior-move-managers.webp",
+    alt: "Aging in place with in-home care Washington State",
+    body: "Remaining at home with the support of in-home caregivers and home-based services.",
   },
 ];
 
@@ -131,14 +143,65 @@ const SeniorPlacement = () => {
                   <Link
                     key={opt.title}
                     to={opt.href}
-                    className="card-3d p-6 bg-card flex flex-col hover:-translate-y-1 transition-transform"
+                    aria-label={`${opt.title} — ${opt.body} — Learn More`}
+                    className="card-3d-blue group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
                   >
-                    <h3 className="font-serif text-xl text-red-800 font-bold mb-3 text-center min-h-14 flex items-start justify-center">
-                      {opt.title}
-                    </h3>
-                    <p className="text-foreground/85 text-base leading-relaxed whitespace-pre-line">
-                      {opt.body}
-                    </p>
+                    <div className="card-3d-blue__inner h-full relative">
+                      <div className="card-3d-blue__face h-full">
+                        <div className="flex h-full flex-col">
+                          <div className="relative w-full overflow-hidden bg-transparent flex items-center justify-center" style={{ aspectRatio: "500 / 312" }}>
+                            <img
+                              src={opt.image}
+                              alt={opt.alt}
+                              className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
+                              loading="lazy"
+                            />
+                          </div>
+                          <div className="relative flex flex-1 flex-col items-center text-center overflow-hidden" style={{ padding: "16px" }}>
+                            <h3 className="font-serif text-[22px] md:text-[24px] font-semibold text-navy leading-snug mb-3 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0">
+                              {opt.title}
+                            </h3>
+                            <p className="text-foreground text-[14px] leading-relaxed mb-6 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0">
+                              {opt.body}
+                            </p>
+                            <span className="gold-cta mt-auto transition-opacity duration-200 group-hover:opacity-0" style={{ padding: "10px 16px" }}>
+                              Learn More
+                              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                                <polyline points="9 18 15 12 9 6" />
+                              </svg>
+                            </span>
+                            <div
+                              aria-hidden="true"
+                              className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100"
+                              style={{
+                                background: "rgba(10, 20, 46, 0.97)",
+                                zIndex: 10,
+                                display: "flex",
+                                flexDirection: "column",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                textAlign: "center",
+                                padding: "1.25rem 1.5rem",
+                                transition: "opacity 0.28s ease 0.1s",
+                              }}
+                            >
+                              <h3 className="font-serif text-white text-[24px] md:text-[26px] font-bold leading-snug mb-3">
+                                {opt.title}
+                              </h3>
+                              <span
+                                className="inline-flex items-center gap-2 text-[16px] font-bold tracking-wide"
+                                style={{ color: "#C9A84C", fontFamily: "'DM Sans', sans-serif" }}
+                              >
+                                Learn More
+                                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                                  <polyline points="9 18 15 12 9 6" />
+                                </svg>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </Link>
                 ))}
               </div>
