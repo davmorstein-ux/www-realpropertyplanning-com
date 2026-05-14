@@ -111,6 +111,9 @@ const AssistedLivingCommunities = lazy(() => import("./pages/senior-living/Assis
 const MemoryCare = lazy(() => import("./pages/senior-living/MemoryCare"));
 const NursingAndSkilledCare = lazy(() => import("./pages/senior-living/NursingAndSkilledCare"));
 const IndependentLiving = lazy(() => import("./pages/senior-living/IndependentLiving"));
+const AssistedLiving = lazy(() => import("./pages/senior-living/AssistedLiving"));
+const SkilledNursing = lazy(() => import("./pages/senior-living/SkilledNursing"));
+const AgingInPlace = lazy(() => import("./pages/senior-living/AgingInPlace"));
 const PowerOfAttorneys = lazy(() => import("./pages/senior-living/PowerOfAttorneys"));
 const HowProbateRealEstateWorks = lazy(() => import("./pages/guides/HowProbateRealEstateWorks"));
 const WhatExecutorsShouldDo = lazy(() => import("./pages/guides/WhatExecutorsShouldDo"));
@@ -356,6 +359,9 @@ const App = () => (
           <Route path="/senior-living/memory-care" element={<MemoryCare />} />
           <Route path="/senior-living/nursing-and-skilled-care" element={<NursingAndSkilledCare />} />
           <Route path="/senior-living/independent-living" element={<IndependentLiving />} />
+          <Route path="/senior-living/assisted-living" element={<AssistedLiving />} />
+          <Route path="/senior-living/skilled-nursing" element={<SkilledNursing />} />
+          <Route path="/senior-living/aging-in-place" element={<AgingInPlace />} />
           <Route path="/senior-living/power-of-attorneys" element={<PowerOfAttorneys />} />
 
           {/* ─── Lending ──────────────────────────────────────────── */}

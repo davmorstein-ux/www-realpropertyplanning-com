@@ -12,23 +12,33 @@ import housingOptionsHero from "@/assets/housing_options_hero.png";
 const housingOptions = [
   {
     title: "Independent Living",
+    href: "/senior-living/independent-living",
     body: "For seniors who are largely self-sufficient but want community, convenience, and freedom from home maintenance. No medical care provided on-site.",
   },
   {
     title: "Assisted Living",
+    href: "/senior-living/assisted-living",
     body: "For seniors who need help with daily activities such as bathing, dressing, medication, and meals. Staff available around the clock.\n\nHundreds of licensed communities across Washington State.",
   },
   {
     title: "Memory Care",
+    href: "/senior-living/memory-care",
     body: "Specialized care for seniors living with Alzheimer's or other forms of dementia. Secure environments, structured routines, and trained staff.",
   },
   {
-    title: "Adult Family Home",
+    title: "Adult Family Homes",
+    href: "/senior-living/adult-family-homes",
     body: "A residential home — typically 2 to 6 residents — licensed by Washington State to provide personal care. Often more affordable and intimate than larger facilities. Common throughout King, Snohomish, Pierce, and Kitsap Counties.",
   },
   {
-    title: "Skilled Nursing Facility",
+    title: "Skilled Nursing Care",
+    href: "/senior-living/skilled-nursing",
     body: "For seniors requiring 24-hour medical care and supervision. Usually short-term after hospitalization, though some seniors transition to long-term care.",
+  },
+  {
+    title: "Aging in Place",
+    href: "/senior-living/aging-in-place",
+    body: "For seniors who wish to remain in their own home with the support of in-home caregivers, safety modifications, meal delivery, and other services. Often the first step before a larger transition.",
   },
 ];
 
@@ -118,14 +128,18 @@ const SeniorPlacement = () => {
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {housingOptions.map((opt) => (
-                  <div key={opt.title} className="card-3d p-6 bg-card flex flex-col">
+                  <Link
+                    key={opt.title}
+                    to={opt.href}
+                    className="card-3d p-6 bg-card flex flex-col hover:-translate-y-1 transition-transform"
+                  >
                     <h3 className="font-serif text-xl text-red-800 font-bold mb-3 text-center min-h-14 flex items-start justify-center">
                       {opt.title}
                     </h3>
                     <p className="text-foreground/85 text-base leading-relaxed whitespace-pre-line">
                       {opt.body}
                     </p>
-                  </div>
+                  </Link>
                 ))}
               </div>
             </div>
