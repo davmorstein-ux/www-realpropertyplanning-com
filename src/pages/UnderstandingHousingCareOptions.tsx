@@ -197,52 +197,15 @@ const UnderstandingHousingCareOptions = () => {
         <HeroBandTitle>UNDERSTANDING&nbsp;&nbsp;HOUSING&nbsp;&nbsp;AND&nbsp;&nbsp;CARE&nbsp;&nbsp;OPTIONS</HeroBandTitle>
 
         {/* INTRO */}
-        <section className="bg-background pt-10 pb-8 lg:pt-14 lg:pb-10">
+        <section className="bg-background pt-10 pb-6 lg:pt-14 lg:pb-8">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
-              <p className="text-gold font-bold tracking-[0.2em] uppercase mb-4 text-sm">
-                Guided Roadmap
-              </p>
-              <p className="text-lg md:text-xl text-foreground leading-relaxed mb-7">
-                A guided roadmap for families and seniors exploring assisted living,
-                adult family homes, memory care, independent living, caregiving
-                support, and other important housing decisions.
-              </p>
-              <a href="#pathways">
-                <Button variant="gold" size="lg" className="px-8 h-[56px] text-base rounded-lg">
-                  <Compass className="w-5 h-5 mr-2" aria-hidden="true" />
-                  Start Here
-                </Button>
-              </a>
-            </div>
-          </div>
-        </section>
-
-        <JourneyOrientation
-          tone="caregiving"
-          items={[
-            "You are comparing assisted living, memory care, or in-home support",
-            "A parent's needs are changing",
-            "You are unsure what level of care is appropriate",
-            "You want to understand costs and tradeoffs",
-            "You need help knowing what questions to ask"
-          ]}
-        />
-
-        {/* REASSURANCE */}
-        <section className="py-10 lg:py-12 bg-cream">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center">
-              <HeartHandshake className="w-10 h-10 text-gold mx-auto mb-5" aria-hidden="true" />
-              <h2 className="font-serif text-2xl md:text-3xl text-navy font-semibold mb-4">
-                Many Families Feel Overwhelmed at First
+              <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold mb-4">
+                What Type of Support Are You Looking For?
               </h2>
-              <p className="text-navy text-lg md:text-xl leading-relaxed">
-                Families often begin this process unsure what type of care or housing
-                may be appropriate. Many people do not know the differences between
-                the available options, what level of support may be needed, or what
-                questions they should ask first. This guide is designed to help
-                simplify the process step-by-step.
+              <p className="text-lg md:text-xl text-foreground leading-relaxed">
+                Every family's situation is different. Use the options below to find
+                the information most relevant to where you are right now.
               </p>
             </div>
           </div>
