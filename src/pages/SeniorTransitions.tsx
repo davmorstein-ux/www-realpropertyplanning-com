@@ -136,20 +136,104 @@ const SeniorTransitions = () => {
         </div>
       </section>
 
-      <DirectAnswerBlock
-        question="How does Real Property Planning support senior housing transitions?"
-        answer="Real Property Planning provides step-by-step guidance for seniors and families navigating the sale of a longtime home — whether the next step is assisted living, a memory care community, a smaller residence, or a move closer to family. As both a licensed real estate broker and a Washington State Certified Residential Appraiser, Real Property Planning brings something most agents can't offer: an honest, valuation-based understanding of what the home is actually worth in its current condition — not an inflated number designed to win a listing."
-        supportBullets={[
-          "Patient, respectful coordination that honors the emotional weight of the transition",
-          "Condition-based pricing based on actual condition — not automated estimates or pressure to list quickly",
-          "Practical help with cleanout coordination, repairs, staging, and sale readiness",
-          "Clear communication with adult children, out-of-state family members, care teams, and attorneys",
-          "Referral connections to trusted senior move managers, care advisors, and estate professionals throughout the Puget Sound area",
-        ]}
-        supportSteps={[
-          { label: "Your Timeline", desc: "The process is built around your family's timeline, not a sales calendar. From initial conversation through closing, Real Property Planning coordinates preparation, pricing, and the sale itself — keeping every family member and professional advisor informed at every step." },
-        ]}
-      />
+      {/* What Goes Into a Senior Transition */}
+      <section className="py-16 lg:py-20 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
+              What Goes Into a Senior Transition?
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              When a senior leaves a longtime home — whether moving to assisted living, a memory care community, a smaller residence, or closer to family — it rarely involves just real estate. It's a coordinated process that touches nearly every part of a family's life. Real Property Planning connects families and professionals to the right people for each step.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Who Helps With a Senior Transition */}
+      <section className="py-16 lg:py-20 bg-secondary">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-10 text-center">
+              Who Helps With a Senior Transition?
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {[
+                {
+                  title: "Senior Move Managers",
+                  description: "Specialists who handle the physical side of a move — sorting, packing, coordinating movers, and setting up the new home. They work at the family's pace and are trained to handle the emotional weight of leaving a longtime residence.",
+                  linkText: "Find a Senior Move Manager",
+                  href: "/senior-move-managers",
+                },
+                {
+                  title: "Senior Living Advisors",
+                  description: "Professionals who help families evaluate and choose the right next home — whether that's independent living, assisted living, memory care, or in-home support. They know local communities, availability, and costs.",
+                  linkText: "Find a Senior Living Advisor",
+                  href: "/senior-placement",
+                },
+                {
+                  title: "Estate Sale & Liquidation Services",
+                  description: "When a home contains decades of belongings, estate sale professionals help families sort, value, and sell or donate items — clearing the home efficiently and respectfully before it goes on the market.",
+                  linkText: "Learn more",
+                  href: "/estate-liquidation",
+                },
+                {
+                  title: "Real Estate Broker (Probate & Senior Transition Specialist)",
+                  description: "A broker experienced in senior transitions understands condition-based pricing, family dynamics, and the need for patience. Real Property Planning connects families with brokers who specialize in this work throughout Washington State.",
+                  linkText: "Learn more",
+                  href: "/realtor",
+                },
+                {
+                  title: "Certified Residential Appraiser",
+                  description: "An independent appraisal gives families an honest, defensible value for the home — separate from any listing pressure. Useful for estate planning, trust administration, or simply knowing where you stand before making decisions.",
+                  linkText: "Learn more",
+                  href: "/real-estate-appraiser",
+                },
+                {
+                  title: "Estate Attorneys",
+                  description: "Many senior transitions intersect with trust administration, power of attorney, or estate planning. An attorney ensures the legal side of the transition is handled properly alongside the real estate process.",
+                  linkText: "Find an Estate Attorney",
+                  href: "/for-attorneys",
+                },
+                {
+                  title: "Financial Advisors & CPAs",
+                  description: "Selling a longtime home has tax implications — capital gains, stepped-up basis, trust distributions. A financial planner or CPA helps families understand the financial picture before and after the sale.",
+                  linkText: "Find a Financial Advisor or CPA",
+                  href: "/for-financial-planners",
+                },
+              ].map((card) => (
+                <div key={card.title} className="bg-card border border-border rounded-xl p-6 flex flex-col">
+                  <h3 className="font-serif text-xl text-foreground font-semibold mb-3">{card.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed mb-4 flex-1">{card.description}</p>
+                  <Link to={card.href} className="text-accent hover:text-gold font-semibold underline underline-offset-4">
+                    {card.linkText} →
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Not Sure Where to Start */}
+      <section className="py-16 lg:py-20 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
+              Not Sure Where to Start?
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              Most families don't know which professional they need first. That's okay. Real Property Planning helps you figure out the right sequence and connects you with trusted professionals throughout the Puget Sound area.
+            </p>
+            <Link to="/contact">
+              <Button variant="gold" size="lg">
+                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy" />
+                Start a Conversation
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
 
       <TrustStrip />
 
