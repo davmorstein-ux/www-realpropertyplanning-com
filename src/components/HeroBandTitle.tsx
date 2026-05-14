@@ -1,4 +1,5 @@
 import { ElementType, ReactNode } from "react";
+import AutoBreadcrumbs from "@/components/AutoBreadcrumbs";
 
 interface HeroBandTitleProps {
   children: ReactNode;
