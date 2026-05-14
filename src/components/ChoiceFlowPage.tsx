@@ -38,17 +38,17 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
         <section className="pt-0 pb-10 lg:pt-0 lg:pb-16 bg-cream">
           <div className="container px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
-              {/* Hero image — root page only */}
-              {isRoot && (
+              {/* Hero image — root page or any node with explicit heroImage */}
+              {(isRoot || node.heroImage) && (
                 <>
                   <div style={{ width: '100vw', position: 'relative', left: '50%', transform: 'translateX(-50%)', lineHeight: 0 }}>
                     <img
-                      src={agingParentHero}
-                      alt="Helping an aging parent — Real Property Planning"
+                      src={node.heroImage || agingParentHero}
+                      alt={node.heroAlt || "Helping an aging parent — Real Property Planning"}
                       className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
                       loading="eager"
                     />
-                    <HeroBandTitle>Helping an Aging Parent</HeroBandTitle>
+                    <HeroBandTitle>{node.heroBandTitle || (isRoot ? "Helping an Aging Parent" : node.label)}</HeroBandTitle>
                   </div>
                   <div style={{ marginBottom: '40px' }} />
                 </>
@@ -56,13 +56,13 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
 
               {/* Heading */}
               <header className="mb-10 text-center">
-                {!isRoot && (
+                {!isRoot && !node.heroImage && (
                   <h1 className="font-serif text-3xl md:text-5xl text-navy font-semibold leading-tight mb-4">
                     {node.label}
                   </h1>
                 )}
-                {isRoot && (
-                  <h1 className="sr-only">Helping an Aging Parent</h1>
+                {(isRoot || node.heroImage) && (
+                  <h1 className="sr-only">{node.heroBandTitle || node.label}</h1>
                 )}
                 {node.subtext && (
                   <p className="text-navy/80 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
