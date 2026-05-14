@@ -18,6 +18,8 @@ import iconBookOpen from "@/assets/icons/probate-guidance-book-open-icon-washing
 import iconArrow from "@/assets/icons/property-guidance-arrow-icon-washington.webp";
 import iconPhone from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import JourneyOrientation from "@/components/JourneyOrientation";
+import wtdwHeroImage from "@/assets/what-to-do-with-the-house-hero-washington.webp";
+import HeroBandTitle from "@/components/HeroBandTitle";
 
 interface Pathway {
   letter: string;
@@ -192,6 +194,18 @@ const DateOfDeathValuationPropertyAppraisals = () => {
       <BreadcrumbSchema items={[{ name: "Date-of-Death Valuation & Property Appraisals", url: "/date-of-death-valuation-property-appraisals" }]} />
       <Header />
       <main id="main-content">
+        {/* WTDW Shared Hero */}
+        <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
+          <div style={{ lineHeight: 0 }}>
+            <img
+              src={wtdwHeroImage}
+              alt="Quiet Washington street with craftsman homes"
+              className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
+              loading="eager"
+            />
+            <HeroBandTitle as="div">Date Of Death Valuation</HeroBandTitle>
+          </div>
+        </section>
         {/* HERO */}
         <section className="bg-primary pt-12 pb-10 lg:pt-20 lg:pb-14">
           <div className="container px-6 lg:px-8">

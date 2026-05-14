@@ -10,6 +10,8 @@ import davidSteinPhoto from "@/assets/providers/realtor-david-stein-headshot-sea
 import steinAppraisalLogo from "@/assets/stein-appraisal-appraiser-logo-washington.webp";
 import ehoLogo from "@/assets/providers/equal-housing-opportunity-logo-washington.webp";
 import iconAppraiser from "@/assets/icons/real-estate-appraiser-icon-washington.webp";
+import wtdwHeroImage from "@/assets/what-to-do-with-the-house-hero-washington.webp";
+import HeroBandTitle from "@/components/HeroBandTitle";
 
 const RealEstateAppraiser = () => (
   <>
@@ -26,6 +28,18 @@ const RealEstateAppraiser = () => (
     />
     <Header />
     <main id="main-content">
+        {/* WTDW Shared Hero */}
+        <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
+          <div style={{ lineHeight: 0 }}>
+            <img
+              src={wtdwHeroImage}
+              alt="Quiet Washington street with craftsman homes"
+              className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
+              loading="eager"
+            />
+            <HeroBandTitle as="div">Appraisal Or Valuation</HeroBandTitle>
+          </div>
+        </section>
       {/* Hero */}
       <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
         <div className="container px-6 lg:px-8">
