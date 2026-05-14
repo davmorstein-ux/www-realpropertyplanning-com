@@ -1,20 +1,13 @@
 import Header from "@/components/Header";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
-import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
 import GoldCheckItem from "@/components/GoldCheckItem";
 import { Button } from "@/components/ui/button";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
-import seniorHousingComparison from "@/assets/senior-housing-comparison.webp";
-import seniorPlacementIcon from "@/assets/senior-housing-placement-icon-washington.webp";
+import housingOptionsHero from "@/assets/housing_options_hero.png";
 
 const housingOptions = [
   {
@@ -72,29 +65,6 @@ const team = [
   },
 ];
 
-const faqs = [
-  {
-    q: "How do we know which type of senior housing is right for our parent?",
-    a: "A placement advisor can assess your parent's current needs and match them to the right level of care. Real Property Planning can connect you with trusted advisors in your area.",
-  },
-  {
-    q: "How much does senior placement cost in Washington State?",
-    a: "Placement advisor services are typically free to families — advisors are compensated by the communities they place residents into. Care costs vary: adult family homes often range from $3,500–$6,000 per month, assisted living from $4,000–$8,000, and memory care from $5,000–$10,000 or more.",
-  },
-  {
-    q: "Do we have to sell the house to pay for care?",
-    a: "Not always — but for many families the home is the primary asset available to fund care. An elder law attorney and financial planner can help evaluate all options including bridge loans and Medicaid planning.",
-  },
-  {
-    q: "Can Real Property Planning start working on the home before placement is finalized?",
-    a: "Yes. David can assess the home, develop a pricing strategy, and begin coordinating preparation before the senior has moved — so the home is ready to list the moment the family is ready.",
-  },
-  {
-    q: "How far in advance should we start planning?",
-    a: "As early as possible. Even if a move is 6–12 months away, starting the real estate conversation early prevents rushed decisions and protects the estate's financial outcome.",
-  },
-];
-
 const SeniorPlacement = () => {
   return (
     <>
@@ -112,78 +82,43 @@ const SeniorPlacement = () => {
       />
       <Header />
       <main id="main-content">
-        {/* Hero */}
-        <section className="pt-3 md:pt-4 pb-14 md:pb-16 bg-primary">
+        {/* Hero stack */}
+        <section className="pt-0 pb-0 bg-transparent">
+          <div style={{ lineHeight: 0 }}>
+            <img
+              src={housingOptionsHero}
+              alt="Senior placement and housing options in Washington State"
+              className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
+              loading="eager"
+            />
+            <HeroBandTitle>Senior Placement &amp; Housing Options</HeroBandTitle>
+          </div>
+        </section>
+
+        {/* Intro */}
+        <section className="py-12 md:py-16 bg-background">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
-              <img src={seniorPlacementIcon} alt="" aria-hidden="true" className="mx-auto max-w-[18rem] w-full h-auto object-contain mb-4" loading="lazy" />
-              <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl text-primary-foreground font-semibold mb-6 leading-tight">
-                Senior Placement in Washington State
-              </h1>
-              <p className="text-primary-foreground/90 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl mx-auto">
-                Helping families find the right housing — and handle the home that comes with it.
-              </p>
-              <p className="text-primary-foreground text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
-                Real Property Planning connects trusted senior placement advisors with real estate expertise — so both decisions get handled.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/contact">
-                  <Button variant="navy3d" size="lg" className="px-8 py-4 h-auto !border-2 !border-gold w-full sm:w-auto">
-                    Contact
-                  </Button>
-                </Link>
-                <a href="tel:2069003015">
-                  <Button variant="navy3d" size="lg" className="px-8 py-4 h-auto !border-2 !border-gold w-full sm:w-auto">
-                    Call (206) 900-3015
-                  </Button>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Section 1: What Is Senior Placement */}
-        <section className="py-16 md:py-20 bg-background">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto">
-              <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-6">
-                What Is Senior Placement?
+              <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-4">
+                Understanding Your Options
               </h2>
-              <p className="text-foreground text-base md:text-lg leading-relaxed mb-5">
-                Senior placement is the process of identifying and moving an older adult into the right housing option for their current level of care — whether that is independent living, assisted living, memory care, or an adult family home.
-              </p>
               <p className="text-foreground text-base md:text-lg leading-relaxed">
-                A senior placement advisor assesses the senior's physical, cognitive, and emotional needs, then matches them to communities or homes that fit. Real Property Planning works directly alongside placement advisors to make sure the real estate side — the home being left behind — is handled with the same care.
+                Every senior's situation is different. Use this as a starting point to understand what type of care or housing may be the right fit.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Senior Housing Comparison Chart */}
-        <section>
-          <div className="w-full">
-            <img
-              src={seniorHousingComparison}
-              alt="Senior Housing Options Side by Side comparison chart — Independent Living, Assisted Living, Memory Care, and Adult Family Home in Washington State"
-              style={{ maxWidth: '720px', width: '100%', margin: '2rem auto', display: 'block' }}
-              loading="lazy"
-            />
-          </div>
-        </section>
-
-        {/* Section 2: Housing Options */}
-        <section className="py-16 md:py-20 bg-secondary">
+        {/* Housing Options */}
+        <section className="py-12 md:py-16 bg-secondary">
           <div className="container px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
               <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-10 text-center">
                 Housing Options Explained
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {housingOptions.map((opt) => (
-                  <div
-                    key={opt.title}
-                    className="card-3d p-6 bg-card flex flex-col"
-                  >
+                  <div key={opt.title} className="card-3d p-6 bg-card flex flex-col">
                     <h3 className="font-serif text-xl text-red-800 font-bold mb-3 text-center min-h-14 flex items-start justify-center">
                       {opt.title}
                     </h3>
@@ -197,44 +132,24 @@ const SeniorPlacement = () => {
           </div>
         </section>
 
-        {/* Section 3: Signs */}
-        <section className="py-16 md:py-20 bg-background">
+        {/* Signs */}
+        <section className="py-12 md:py-16 bg-background">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
               <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-8">
                 Signs It May Be Time to Make a Move
               </h2>
-              <ul className="space-y-4 mb-8">
+              <ul className="space-y-4">
                 {signs.map((sign) => (
                   <GoldCheckItem key={sign}>{sign}</GoldCheckItem>
                 ))}
               </ul>
-              <p className="italic text-foreground/85 text-base md:text-lg leading-relaxed border-l-4 border-gold pl-5">
-                If two or more of these describe your situation, a conversation with a placement advisor and a real estate professional is a practical next step — not a commitment.
-              </p>
             </div>
           </div>
         </section>
 
-        {/* Section 4: How They Work Together */}
-        <section className="py-16 md:py-20 bg-secondary">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto">
-              <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-6">
-                How Senior Placement and Real Estate Work Together
-              </h2>
-              <p className="text-foreground text-base md:text-lg leading-relaxed mb-5">
-                The cost of senior care — which can range from $3,000 to $10,000 or more per month in Washington State — is often funded in whole or in part by proceeds from selling the family home. That means the timing of the home sale directly affects when and where a senior can move.
-              </p>
-              <p className="text-foreground text-base md:text-lg leading-relaxed">
-                Real Property Planning coordinates the real estate side of this transition with the care side — working alongside placement advisors, care managers, attorneys, and financial planners to make sure the home sells at the right time, for the right price, without disrupting the senior's move into their new setting. For families ready to take the next step, <Link to="/sell-house-fund-senior-living" className="text-primary font-semibold underline underline-offset-2 hover:text-primary/80">learn how to sell a parent's house to fund senior living</Link>.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Section 5: Who Is Involved */}
-        <section className="py-16 md:py-20 bg-background">
+        {/* Who Is Involved */}
+        <section className="py-12 md:py-16 bg-secondary">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
               <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-8">
@@ -254,80 +169,15 @@ const SeniorPlacement = () => {
           </div>
         </section>
 
-        {/* Section 6: Serving Families */}
-        <section className="py-16 md:py-20 bg-secondary">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto">
-              <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-6">
-                Serving Families Throughout Washington State
-              </h2>
-              <p className="text-foreground text-base md:text-lg leading-relaxed mb-5">
-                Real Property Planning supports senior placement transitions throughout King County, Snohomish County, Pierce County, and Kitsap County — including Seattle, Bellevue, Kirkland, Redmond, Everett, Edmonds, Tacoma, Puyallup, Bremerton, and Silverdale.
-              </p>
-              <p className="text-foreground text-base md:text-lg leading-relaxed">
-                For families coordinating from out of state, the entire process can be managed remotely — with regular updates, photo documentation, and digital signing at every step.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Section 7: FAQ */}
-        <section className="py-16 md:py-20 bg-background">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto">
-              <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-8">
-                Frequently Asked Questions
-              </h2>
-              <Accordion type="single" collapsible className="w-full">
-                {faqs.map((faq, idx) => (
-                  <AccordionItem key={idx} value={`item-${idx}`}>
-                    <AccordionTrigger className="text-left font-serif text-foreground hover:text-gold hover:no-underline px-6 py-5" style={{ fontSize: '20px', fontWeight: '700' }}>
-                      {faq.q}
-                    </AccordionTrigger>
-                    <AccordionContent className="text-foreground/85 text-base md:text-lg leading-relaxed">
-                      {faq.a}
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
-            </div>
-          </div>
-        </section>
-
-        {/* Section 8: Affiliations */}
-        <section className="py-16 md:py-20 bg-secondary">
+        {/* Closing CTA */}
+        <section className="py-12 md:py-16 bg-background">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-10">
-                Professional Affiliations
-              </h2>
-              <AffiliationBadgeGrid />
-            </div>
-          </div>
-        </section>
-
-        {/* Final CTA */}
-        <section className="py-16 md:py-20 bg-primary">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-5">
-                Ready to Talk?
-              </h2>
-              <p className="text-primary-foreground/90 text-base md:text-lg leading-relaxed mb-8">
-                Most families start with a single question. Our team is happy to hear it — no pressure, no obligation.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="tel:2069003015">
-                  <Button variant="navy3d" size="lg" className="px-8 py-4 h-auto !border-2 !border-gold w-full sm:w-auto">
-                    Call (206) 900-3015
-                  </Button>
-                </a>
-                <Link to="/contact">
-                  <Button variant="navy3d" size="lg" className="px-8 py-4 h-auto !border-2 !border-gold w-full sm:w-auto">
-                    Send a Message
-                  </Button>
-                </Link>
-              </div>
+              <Link to="/contact">
+                <Button variant="navy3d" size="lg" className="px-8 py-4 h-auto !border-2 !border-gold">
+                  Start a Conversation
+                </Button>
+              </Link>
             </div>
           </div>
         </section>
