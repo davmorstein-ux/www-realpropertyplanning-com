@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import HeroBandTitle from "@/components/HeroBandTitle";
-import heroImage from "@/assets/managing-estate-probate-inherited-property-hero-washington.webp";
+import heroImage from "@/assets/what-to-do-with-the-house-hero-washington.webp";
 import { articleSchema } from "@/lib/schema";
 
 const tiles = [
@@ -79,7 +79,7 @@ const EstateProbateInheritedProperty = () => {
           />
         </section>
 
-        <HeroBandTitle>A LOVED ONE RECENTLY PASSED AWAY</HeroBandTitle>
+        <HeroBandTitle>Keep The Home</HeroBandTitle>
 
         {/* TOPICS TO EXPLORE */}
         <section className="py-14 md:py-20 bg-cream">

@@ -14,6 +14,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import wtdwHeroImage from "@/assets/what-to-do-with-the-house-hero-washington.webp";
+import HeroBandTitle from "@/components/HeroBandTitle";
 
 const payOff = [
   {
@@ -155,6 +157,18 @@ const RepairsBeforeSellingProbateHomeWashington = () => (
     />
     <Header />
     <main id="main-content">
+        {/* WTDW Shared Hero */}
+        <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
+          <div style={{ lineHeight: 0 }}>
+            <img
+              src={wtdwHeroImage}
+              alt="Quiet Washington street with craftsman homes"
+              className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
+              loading="eager"
+            />
+            <HeroBandTitle as="div">Clean Out Or Repair</HeroBandTitle>
+          </div>
+        </section>
       {/* Hero */}
       <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-16">
         <div className="container px-6 lg:px-8">

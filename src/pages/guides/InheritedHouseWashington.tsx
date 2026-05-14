@@ -15,6 +15,8 @@ import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import ListenButton from "@/components/ListenButton";
 import heroIcon from "@/assets/icons/probate-guidance-book-open-icon-washington.webp";
+import wtdwHeroImage from "@/assets/what-to-do-with-the-house-hero-washington.webp";
+import HeroBandTitle from "@/components/HeroBandTitle";
 
 const options = [
   { title: "Sell the Property", text: "The most common choice. Selling converts the property into liquid assets that can be distributed among beneficiaries, used to settle estate debts, or reinvested. The sale can happen immediately, after preparation, or after a holding period depending on circumstances." },
@@ -64,6 +66,18 @@ const InheritedHouseWashington = () => (
     ]} />
     <Header />
     <main id="main-content">
+        {/* WTDW Shared Hero */}
+        <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
+          <div style={{ lineHeight: 0 }}>
+            <img
+              src={wtdwHeroImage}
+              alt="Quiet Washington street with craftsman homes"
+              className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
+              loading="eager"
+            />
+            <HeroBandTitle as="div">Sell The Home</HeroBandTitle>
+          </div>
+        </section>
 
     <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
       <div className="container px-6 lg:px-8">
