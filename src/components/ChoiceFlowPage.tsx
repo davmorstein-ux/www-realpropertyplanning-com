@@ -54,16 +54,6 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
                 </>
               )}
 
-              {/* Breadcrumb / back link */}
-              <nav aria-label="Breadcrumb" className="mb-8">
-                <Link
-                  to="/"
-                  className="text-base font-bold text-[#8B0000] hover:underline"
-                >
-                  ‹ Home
-                </Link>
-              </nav>
-
               {/* Heading */}
               <header className="mb-10 text-center">
                 {!isRoot && (
