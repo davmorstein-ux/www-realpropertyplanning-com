@@ -101,13 +101,13 @@ const SeniorTransitions = () => {
       </section>
 
       {/* What Goes Into a Senior Transition */}
-      <section className="py-16 lg:py-20 bg-background">
+      <section className="py-20 lg:py-28 bg-background border-b border-border">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
               What Goes Into a Senior Transition?
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed">
+            <p className="text-foreground text-lg leading-[1.7]">
               When a senior leaves a longtime home — whether moving to assisted living, a memory care community, a smaller residence, or closer to family — it rarely involves just real estate. It's a coordinated process that touches nearly every part of a family's life. Real Property Planning connects families and professionals to the right people for each step.
             </p>
           </div>
@@ -115,13 +115,16 @@ const SeniorTransitions = () => {
       </section>
 
       {/* Who Helps With a Senior Transition */}
-      <section className="py-16 lg:py-20 bg-secondary">
+      <section className="py-20 lg:py-28 bg-secondary">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="font-serif text-3xl text-foreground font-semibold mb-10 text-center">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-4 text-center">
               Who Helps With a Senior Transition?
             </h2>
-            <div className="grid md:grid-cols-2 gap-6">
+            <p className="text-foreground text-base leading-[1.7] text-center mb-10">
+              Tap any role below to learn more about what they do and how they fit into a senior transition.
+            </p>
+            <Accordion type="single" collapsible defaultValue="item-0" className="space-y-3">
               {[
                 {
                   title: "Senior Move Managers",
@@ -165,16 +168,24 @@ const SeniorTransitions = () => {
                   linkText: "Find a Financial Advisor or CPA",
                   href: "/for-financial-planners",
                 },
-              ].map((card) => (
-                <div key={card.title} className="bg-card border border-border rounded-xl p-6 flex flex-col">
-                  <h3 className="font-serif text-xl text-foreground font-semibold mb-3">{card.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed mb-4 flex-1">{card.description}</p>
-                  <Link to={card.href} className="text-accent hover:text-gold font-semibold underline underline-offset-4">
-                    {card.linkText} →
-                  </Link>
-                </div>
+              ].map((card, idx) => (
+                <AccordionItem
+                  key={card.title}
+                  value={`item-${idx}`}
+                  className="bg-card border border-border rounded-xl px-6"
+                >
+                  <AccordionTrigger className="font-serif text-xl text-foreground font-semibold hover:no-underline text-left">
+                    {card.title}
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <p className="text-foreground text-base leading-[1.7] mb-4">{card.description}</p>
+                    <Link to={card.href} className="text-accent hover:text-gold font-semibold underline underline-offset-4 inline-block">
+                      {card.linkText} →
+                    </Link>
+                  </AccordionContent>
+                </AccordionItem>
               ))}
-            </div>
+            </Accordion>
           </div>
         </div>
       </section>
