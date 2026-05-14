@@ -270,54 +270,6 @@ const UnderstandingHousingCareOptions = () => {
           </div>
         </section>
 
-        {/* FAQ */}
-        <PageFAQ
-          faqs={faqs}
-          heading="Questions Families Often Ask"
-          eyebrow="Common Questions"
-          id="understanding-housing-care-options"
-        />
-
-        {/* WHAT TO CONSIDER */}
-        <section className="py-10 lg:py-14 bg-background">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-7">
-                <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">
-                  Educational Compass
-                </p>
-                <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold mb-3">
-                  Many People Do Not Know What Questions to Ask
-                </h2>
-                <p className="text-navy text-lg leading-relaxed max-w-2xl mx-auto">
-                  Most families don't initially know what level of care is appropriate,
-                  what warning signs to look for, how housing decisions affect property
-                  decisions, how finances and legal planning may connect, or which
-                  professionals may help guide the process.
-                </p>
-              </div>
-              <div className="bg-white border-2 border-gold/25 rounded-2xl p-6 md:p-8 shadow-[0_8px_24px_-12px_rgba(27,43,75,0.18)]">
-                <p className="text-navy font-serif text-xl md:text-2xl font-semibold mb-5">
-                  Families Often Need to Consider:
-                </p>
-                <ul className="grid sm:grid-cols-2 gap-3">
-                  {considerations.map((item) => (
-                    <li
-                      key={item}
-                      className="flex items-center gap-3 bg-cream border border-gold/20 rounded-xl px-4 py-3 min-h-[60px]"
-                    >
-                      <CheckCircle2 className="w-6 h-6 text-gold shrink-0" aria-hidden="true" />
-                      <span className="text-navy font-semibold text-base md:text-lg">
-                        {item}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* CONTINUE YOUR JOURNEY */}
         <section className="py-10 lg:py-14 bg-secondary">
           <div className="container px-6 lg:px-8">
