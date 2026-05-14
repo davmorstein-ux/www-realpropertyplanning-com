@@ -7,19 +7,21 @@ const AutoBreadcrumbs = () => {
   if (pathname === "/" || pathname === "") return null;
 
   return (
-    <nav
-      aria-label="Breadcrumb"
-      className="bg-cream border-b border-border/40"
+    <Link
+      to="/"
+      aria-label="Back to homepage"
+      className="fixed bg-navy text-white font-bold rounded-md shadow-lg hover:bg-navy/90"
+      style={{
+        bottom: "24px",
+        left: "24px",
+        zIndex: 999,
+        padding: "16px 28px",
+        fontSize: "18px",
+        border: "2px solid #8B0000",
+      }}
     >
-      <div className="container px-5 md:px-8 py-3 md:py-4">
-        <Link
-          to="/"
-          className="text-base font-bold text-[#8B0000] hover:underline"
-        >
-          ‹ Home
-        </Link>
-      </div>
-    </nav>
+      ‹ Home
+    </Link>
   );
 };
 
