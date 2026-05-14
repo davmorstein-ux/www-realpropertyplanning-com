@@ -53,11 +53,6 @@ const HeroBandTitle = ({
       <div className="bg-primary py-9 md:py-10">
         {titleEl}
       </div>
-      <div className="bg-cream">
-        <div className="container px-5 md:px-8">
-          <AutoBreadcrumbs />
-        </div>
-      </div>
     </>
   );
 };

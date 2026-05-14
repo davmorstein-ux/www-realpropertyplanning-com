@@ -10,7 +10,7 @@ import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
 import { Link, useNavigate } from "react-router-dom";
 import { useRef } from "react";
-import AutoBreadcrumbs from "@/components/AutoBreadcrumbs";
+import { useRef } from "react";
 
 const COUNTY_ORDER = [
   { slug: "king-county",      path: "/king-county",      name: "King County" },

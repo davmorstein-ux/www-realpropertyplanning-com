@@ -112,12 +112,6 @@ const ProfessionPageTemplate = ({
         </div>
       </section>
 
-      <div className="bg-cream">
-        <div className="container px-6 lg:px-8">
-          <AutoBreadcrumbs />
-        </div>
-      </div>
-
       {/* SECTION 2: What This Professional Does */}
       <section className="py-16 lg:py-24 bg-background">
         <div className="container px-6 lg:px-8">
