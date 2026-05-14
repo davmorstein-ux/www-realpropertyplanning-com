@@ -1,5 +1,4 @@
 import Header from "@/components/Header";
-import AutoBreadcrumbs from "@/components/AutoBreadcrumbs";
 import Footer from "@/components/Footer";
 import DirectAnswerBlock from "@/components/DirectAnswerBlock";
 import { counties } from "@/lib/service-areas-data";

@@ -4,7 +4,6 @@ import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
-import AutoBreadcrumbs from "@/components/AutoBreadcrumbs";
 import { Button } from "@/components/ui/button";
 import {
   Accordion,
