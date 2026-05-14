@@ -79,30 +79,6 @@ const InheritedHouseWashington = () => (
           </div>
         </section>
 
-    <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl" id="inherited-house-hero">
-          <div className="mb-5">
-            <ListenButton targetId="inherited-house-hero" />
-          </div>
-            <div className="flex justify-center mb-1.5 md:mb-2">
-              <img src={heroIcon} alt="" aria-hidden="true" className="block w-full max-w-[15rem] h-auto object-contain" loading="lazy" />
-            </div>
-
-          <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">Educational Guide</p>
-          <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
-            What to Do With an Inherited House in Washington State
-          </h1>
-          <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
-            Written for individuals and families who have just inherited a house in Washington State and need to understand their options. Inheriting a house brings both opportunity and responsibility. Whether the property came to you through a will, trust, or joint ownership, you face important decisions about what to do next — and the choices you make early can significantly affect your financial outcome and family relationships.
-          </p>
-          <p className="text-lg text-primary-foreground/70 leading-relaxed">
-            This guide walks through your main options, the factors that should inform your decision, and when professional guidance can make a meaningful difference.
-          </p>
-        </div>
-      </div>
-    </section>
-
     <TrustStrip />
 
     <section className="py-16 lg:py-24 bg-background">
