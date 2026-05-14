@@ -5,6 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
+import FloatingHomeButton from "./components/FloatingHomeButton";
 
 
 // Homepage stays eager — fastest possible first paint, no Suspense flash on "/"
@@ -178,6 +179,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
+        <FloatingHomeButton />
         
 
         <Suspense fallback={<RouteFallback />}>
