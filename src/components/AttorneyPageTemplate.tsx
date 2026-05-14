@@ -75,12 +75,6 @@ const AttorneyPageTemplate = ({
         </div>
       </section>
 
-      <div className="bg-cream">
-        <div className="container px-6 lg:px-8">
-          <AutoBreadcrumbs />
-        </div>
-      </div>
-
       {/* Intro */}
       <section className="py-16 lg:py-20 bg-secondary">
         <div className="container px-6 lg:px-8">

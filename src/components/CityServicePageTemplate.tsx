@@ -66,12 +66,6 @@ const CityServicePageTemplate = ({ city, service }: CityServicePageTemplateProps
         </div>
       </section>
 
-      <div className="bg-cream">
-        <div className="container px-6 lg:px-8">
-          <AutoBreadcrumbs />
-        </div>
-      </div>
-
       <TrustStrip />
 
       {/* How We Help — compact bullets */}

@@ -59,12 +59,6 @@ const ServicePageTemplate = ({ service, introText, situations, benefits }: Servi
         </div>
       </section>
 
-      <div className="bg-cream">
-        <div className="container px-6 lg:px-8">
-          <AutoBreadcrumbs />
-        </div>
-      </div>
-
       <TrustStrip />
 
       {/* Key Benefits — compact bullets */}
