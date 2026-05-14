@@ -2,22 +2,16 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
-import PageFAQ from "@/components/PageFAQ";
-import DisclaimerSection from "@/components/DisclaimerSection";
-import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight, Compass, HeartHandshake, CheckCircle2, AlertTriangle } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { articleSchema } from "@/lib/schema";
 
 import iconHome from "@/assets/icons/probate-property-home-icon-washington.webp";
 import iconDocument from "@/assets/icons/probate-document-icon-washington.webp";
 import iconExecutor from "@/assets/icons/probate-executors-services-icon-washington.webp";
 import iconHeartHands from "@/assets/icons/senior-care-heart-hands-icon-washington.webp";
-import iconAssisted from "@/assets/icons/senior-assisted-living-icon-washington.webp";
 import iconBookOpen from "@/assets/icons/probate-guidance-book-open-icon-washington.webp";
 import iconArrow from "@/assets/icons/property-guidance-arrow-icon-washington.webp";
-import iconPhone from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
-import JourneyOrientation from "@/components/JourneyOrientation";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import heroImage from "@/assets/what-to-do-with-the-house-hero-washington.webp";
 
@@ -80,90 +74,12 @@ const decisions: Decision[] = [
   },
 ];
 
-const faqs = [
-  {
-    question: "Who has authority to decide what happens to the house?",
-    answer:
-      "Authority depends on how title is held and the stage of any estate process. A surviving spouse, trustee, personal representative, or court-appointed executor may have authority. A qualified attorney can help clarify who can act, when, and on what terms.",
-  },
-  {
-    question: "Should we get the home valued before making decisions?",
-    answer:
-      "In most situations, yes. Families often consult a qualified real estate professional or appraiser to understand current value, condition, and a realistic price range. Knowing the numbers makes every other decision easier.",
-  },
-  {
-    question: "Is it better to sell the home as-is or make repairs?",
-    answer:
-      "The right answer depends on condition, market, timing, and family resources. Some homes sell well as-is; others benefit from light updates. A walk-through with an experienced agent can help compare options before spending money.",
-  },
-  {
-    question: "What if family members disagree?",
-    answer:
-      "Disagreements are common. Neutral information — a written valuation, a clear timeline, or a calm professional conversation — usually helps. When needed, an attorney can clarify legal rights and decision-making authority.",
-  },
-  {
-    question: "What if someone is living in the home?",
-    answer:
-      "Occupancy adds legal, emotional, and practical considerations. Families often consult an attorney before asking anyone to move, and explore options that respect both the resident and the estate's needs.",
-  },
-  {
-    question: "Should we clean everything out before speaking with professionals?",
-    answer:
-      "Usually not. Important documents, valuables, or items with sentimental or estate value can be lost. Many professionals recommend pausing, documenting what's there, and getting guidance before a major cleanout.",
-  },
-  {
-    question: "What carrying costs should we consider?",
-    answer:
-      "Mortgage, insurance, utilities, property taxes, HOA dues, maintenance, and security all continue while a home sits. These costs add up and often influence timing decisions.",
-  },
-  {
-    question: "What tax or estate issues might matter?",
-    answer:
-      "Stepped-up basis, capital gains, estate tax thresholds, and trust or probate rules can all affect outcomes. A qualified CPA or tax attorney can help clarify what applies to your specific situation.",
-  },
-  {
-    question: "What professionals should be involved before deciding?",
-    answer:
-      "Most families benefit from a small team: an attorney (probate, estate, or elder law), a real estate professional familiar with transitions, and often a CPA. Additional support may include an appraiser, move manager, or estate liquidator.",
-  },
-];
-
-const mistakes = [
-  "Making decisions before understanding authority",
-  "Guessing the home's value",
-  "Spending too much on repairs without guidance",
-  "Emptying the home too quickly without documenting items",
-  "Letting family conflict delay important steps",
-  "Ignoring carrying costs",
-  "Forgetting insurance, security, and maintenance",
-  "Waiting too long to involve professionals",
-];
-
-const checklist = [
-  "Confirm who has authority to make decisions",
-  "Understand the property's current condition",
-  "Estimate value before and after repairs",
-  "Review carrying costs",
-  "Discuss family goals and concerns",
-  "Consider tax, legal, and estate issues",
-  "Understand timing needs",
-  "Build the right professional team",
-];
-
 const continueJourney = [
   { href: "/date-of-death-valuation-property-appraisals", title: "Date-of-Death Valuation", description: "Learn when an estate valuation or appraisal may be needed.", icon: iconDocument },
   { href: "/preparing-home-for-sale-during-transition", title: "Preparing a Home for Sale", description: "Practical guidance for repairs, cleanout, and readiness.", icon: iconHome },
   { href: "/selling-an-inherited-home", title: "Selling an Inherited Home", description: "How estate sales differ from ordinary listings.", icon: iconExecutor },
   { href: "/downsizing-preparing-for-transition", title: "Downsizing & Preparing for a Transition", description: "A calm, practical roadmap for organizing and moving.", icon: iconHeartHands },
   { href: "/building-your-trusted-professional-team", title: "Building Your Trusted Professional Team", description: "Meet the coordinated team supporting Washington families.", icon: iconBookOpen },
-];
-
-const nextSteps = [
-  "Understand who has authority to make decisions",
-  "Learn the home's approximate value and condition",
-  "Compare selling, keeping, renting, or transferring",
-  "Consider legal, tax, family, and timing issues",
-  "Build the right team before making major decisions",
 ];
 
 const jsonLd = articleSchema({
@@ -200,40 +116,15 @@ const WhatToDoWithTheHouse = () => {
           </div>
         </section>
 
-        <section className="bg-background pt-10 pb-8 lg:pt-14 lg:pb-10">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center">
-              <p className="text-gold font-bold tracking-[0.2em] uppercase mb-4 text-sm">
-                Decision Roadmap
-              </p>
-              <p className="text-lg md:text-xl text-foreground leading-relaxed mb-7">
-                A guided roadmap for families, seniors, executors, trustees, and heirs
-                facing important decisions about a home during a senior transition,
-                estate matter, probate situation, or inherited property process.
-              </p>
-              <a href="#decisions">
-                <Button variant="gold" size="lg" className="px-8 h-[56px] text-base rounded-lg">
-                  <Compass className="w-5 h-5 mr-2" aria-hidden="true" />
-                  Start Here
-                </Button>
-              </a>
-            </div>
-          </div>
-        </section>
-
         {/* DECISIONS */}
         <section id="decisions" className="py-10 lg:py-14 bg-secondary scroll-mt-20">
           <div className="container px-6 lg:px-8">
             <div className="max-w-4xl mx-auto mb-7 text-center">
-              <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">
-                Choose a Decision
-              </p>
               <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold mb-3">
                 What Decision Are You Facing?
               </h2>
               <p className="text-navy text-lg leading-relaxed max-w-2xl mx-auto">
-                Pick the question closest to where you are. Each opens a calm,
-                guided overview.
+                Choose the option closest to your situation for a calm, practical overview.
               </p>
             </div>
 
@@ -280,95 +171,15 @@ const WhatToDoWithTheHouse = () => {
           </div>
         </section>
 
-        {/* FAQ */}
-        <PageFAQ
-          faqs={faqs}
-          heading="Questions Families Often Do Not Know to Ask"
-          eyebrow="Common Questions"
-          id="what-to-do-with-the-house"
-        />
-
-        {/* MISTAKES */}
-        <section className="py-10 lg:py-14 bg-background">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-5xl mx-auto">
-              <div className="text-center mb-7">
-                <AlertTriangle className="w-10 h-10 text-gold mx-auto mb-4" aria-hidden="true" />
-                <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">
-                  Avoid These
-                </p>
-                <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold mb-3">
-                  Common Mistakes to Avoid
-                </h2>
-                <p className="text-navy text-lg leading-relaxed max-w-2xl mx-auto">
-                  Knowing what to watch for helps families protect time, money, and
-                  relationships.
-                </p>
-              </div>
-              <div className="grid sm:grid-cols-2 gap-4">
-                {mistakes.map((m) => (
-                  <div
-                    key={m}
-                    className="flex items-start gap-3 bg-white border-2 border-gold/25 rounded-2xl p-5 shadow-[0_6px_18px_-10px_rgba(27,43,75,0.2)]"
-                  >
-                    <AlertTriangle className="w-6 h-6 text-gold shrink-0 mt-0.5" aria-hidden="true" />
-                    <span className="text-navy font-semibold text-base md:text-lg leading-snug">
-                      {m}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CHECKLIST */}
-        <section className="py-10 lg:py-14 bg-secondary">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-7">
-                <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">
-                  Decision Checklist
-                </p>
-                <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold mb-3">
-                  Before Deciding What To Do With the House
-                </h2>
-              </div>
-              <div className="bg-white border-2 border-gold/25 rounded-2xl p-6 md:p-8 shadow-[0_8px_24px_-12px_rgba(27,43,75,0.18)]">
-                <ul className="grid sm:grid-cols-2 gap-3">
-                  {checklist.map((item) => (
-                    <li
-                      key={item}
-                      className="flex items-center gap-3 bg-cream border border-gold/20 rounded-xl px-4 py-3 min-h-[60px]"
-                    >
-                      <CheckCircle2 className="w-6 h-6 text-gold shrink-0" aria-hidden="true" />
-                      <span className="text-navy font-semibold text-base md:text-lg">
-                        {item}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* CONTINUE YOUR JOURNEY */}
         <section className="py-10 lg:py-14 bg-background">
           <div className="container px-6 lg:px-8">
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-7">
                 <img src={iconArrow} alt="" aria-hidden="true" className="w-12 h-12 object-contain mx-auto mb-4" loading="lazy" />
-                <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">
-                  Keep Going
-                </p>
                 <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold mb-3">
                   Continue Your Journey
                 </h2>
-                <p className="text-navy text-lg leading-relaxed max-w-2xl mx-auto">
-                  People making decisions about a home often need help understanding
-                  these next steps.
-                </p>
               </div>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
                 {continueJourney.map((c) => (
@@ -393,59 +204,6 @@ const WhatToDoWithTheHouse = () => {
             </div>
           </div>
         </section>
-
-        {/* SIMPLE NEXT STEPS */}
-        <section className="py-10 lg:py-14 bg-cream">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto">
-              <div className="text-center mb-7">
-                <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">
-                  Simple Next Steps
-                </p>
-                <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold">
-                  A Calm, Clear Action Plan
-                </h2>
-              </div>
-              <ol className="space-y-4">
-                {nextSteps.map((step, i) => (
-                  <li
-                    key={step}
-                    className="flex items-center gap-5 bg-white border border-gold/25 rounded-2xl p-5 shadow-[0_4px_14px_-8px_rgba(27,43,75,0.2)]"
-                  >
-                    <span className="shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-gold to-[hsl(var(--gold-dark))] text-white font-serif text-2xl font-bold flex items-center justify-center">
-                      {i + 1}
-                    </span>
-                    <span className="text-navy font-semibold text-lg md:text-xl leading-snug">
-                      {step}
-                    </span>
-                  </li>
-                ))}
-              </ol>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA */}
-        <section className="py-10 lg:py-14 bg-primary">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-4">
-                Want to talk it through first?
-              </h2>
-              <p className="text-primary-foreground/85 text-lg leading-relaxed mb-7">
-                A calm, no-pressure conversation can often clarify the very next step.
-              </p>
-              <Link to="/contact">
-                <Button variant="gold" size="lg" className="px-8 h-[56px] text-base rounded-lg">
-                  <img src={iconPhone} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain" loading="lazy" />
-                  Start the Conversation
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        <DisclaimerSection />
       </main>
       <Footer />
     </div>
