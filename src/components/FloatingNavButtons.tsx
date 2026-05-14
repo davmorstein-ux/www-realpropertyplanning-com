@@ -49,6 +49,7 @@ const FloatingNavButtons = () => {
       <style>{`
         .gear-shifter-img {
           transform-origin: bottom center;
+          transform: translate(-50%, -50%) rotate(0deg);
           transition: transform 0.3s ease-in-out;
           pointer-events: none;
         }
@@ -125,7 +126,6 @@ const FloatingNavButtons = () => {
             position: "absolute",
             top: "50%",
             left: "50%",
-            transform: "translate(-50%, -50%)",
             height: 56,
             width: "auto",
             display: "block",
