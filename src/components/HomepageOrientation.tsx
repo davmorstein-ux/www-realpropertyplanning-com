@@ -3,7 +3,7 @@ const HomepageOrientation = () => {
     <section className="py-8 md:py-10 lg:py-12 bg-cream">
       <div className="container px-5 md:px-8">
         <div className="max-w-[820px] mx-auto text-center">
-          <h2 className="font-serif text-[32px] md:text-[40px] lg:text-[44px] font-semibold text-red-900 leading-tight mb-3 md:mb-4">
+          <h2 className="font-serif text-[48px] md:text-[56px] lg:text-[60px] font-semibold text-red-900 leading-tight mb-3 md:mb-4">
             Welcome to Real Property Planning
           </h2>
           <p className="font-sans text-[12px] md:text-[13px] font-bold tracking-[0.18em] uppercase text-[hsl(var(--gold-dark))] mb-4 md:mb-5">
