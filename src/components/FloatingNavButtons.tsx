@@ -4,12 +4,14 @@ import gearShifter from "@/assets/gear-shifter.png";
 
 /**
  * Sticky Reverse / Forward navigation oval, centered horizontally beneath
- * the floating Home button. Hidden on the homepage.
+ * the floating Home button. Hidden on the homepage. Each half of the oval
+ * acts as a large hover/click target for back / forward.
  */
 const FloatingNavButtons = () => {
   const { pathname } = useLocation();
   const ref = useRef<HTMLDivElement>(null);
   const [leftPx, setLeftPx] = useState<number>(24);
+  const [bottomPx, setBottomPx] = useState<number>(24 + 96 + 8);
 
   useEffect(() => {
     const update = () => {
@@ -20,6 +22,7 @@ const FloatingNavButtons = () => {
       const homeCenter = homeRect.left + homeRect.width / 2;
       const selfWidth = self.offsetWidth;
       setLeftPx(Math.max(8, homeCenter - selfWidth / 2));
+      setBottomPx(24 + homeRect.height + 8);
     };
     update();
     window.addEventListener("resize", update);
@@ -37,13 +40,8 @@ const FloatingNavButtons = () => {
     fontSize: 18,
     lineHeight: 1,
     color: "#1B2B4B",
-    cursor: "pointer",
-    textDecoration: "none",
     userSelect: "none",
-    background: "transparent",
-    border: "none",
-    padding: 0,
-    fontFamily: "inherit",
+    pointerEvents: "none",
   };
 
   return (
@@ -52,12 +50,38 @@ const FloatingNavButtons = () => {
         .gear-shifter-img {
           transform-origin: bottom center;
           transition: transform 0.3s ease-in-out;
+          pointer-events: none;
         }
-        .gear-nav-oval:has(.reverse-label:hover) .gear-shifter-img {
-          transform: rotate(-22deg);
+        .gear-half {
+          position: absolute;
+          top: 0;
+          height: 100%;
+          width: 50%;
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          background: transparent;
+          border: none;
+          padding: 0;
+          z-index: 2;
         }
-        .gear-nav-oval:has(.forward-label:hover) .gear-shifter-img {
-          transform: rotate(22deg);
+        .gear-half-left {
+          left: 0;
+          justify-content: flex-start;
+          padding-left: 18px;
+          border-radius: 50px 0 0 50px;
+        }
+        .gear-half-right {
+          right: 0;
+          justify-content: flex-end;
+          padding-right: 18px;
+          border-radius: 0 50px 50px 0;
+        }
+        .gear-nav-oval:has(.gear-half-left:hover) .gear-shifter-img {
+          transform: translate(-50%, -50%) rotate(-22deg);
+        }
+        .gear-nav-oval:has(.gear-half-right:hover) .gear-shifter-img {
+          transform: translate(-50%, -50%) rotate(22deg);
         }
       `}</style>
       <div
@@ -65,13 +89,11 @@ const FloatingNavButtons = () => {
         className="gear-nav-oval"
         style={{
           position: "fixed",
-          bottom: 24 + 64 + 12,
+          bottom: bottomPx,
           left: leftPx,
           zIndex: 999,
-          display: "inline-flex",
-          alignItems: "center",
-          gap: 14,
-          padding: "6px 18px",
+          width: 120,
+          height: 68,
           background: "#FFF8EC",
           border: "2px solid #8B0000",
           borderRadius: 50,
@@ -80,12 +102,19 @@ const FloatingNavButtons = () => {
       >
         <button
           type="button"
-          className="reverse-label"
+          className="gear-half gear-half-left"
           aria-label="Go back"
           onClick={() => window.history.back()}
-          style={labelStyle}
         >
-          R
+          <span style={labelStyle}>R</span>
+        </button>
+        <button
+          type="button"
+          className="gear-half gear-half-right"
+          aria-label="Go forward"
+          onClick={() => window.history.forward()}
+        >
+          <span style={labelStyle}>F</span>
         </button>
         <img
           src={gearShifter}
@@ -93,22 +122,17 @@ const FloatingNavButtons = () => {
           aria-hidden="true"
           className="gear-shifter-img"
           style={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
             height: 56,
             width: "auto",
             display: "block",
             objectFit: "contain",
-            flexShrink: 0,
+            zIndex: 3,
           }}
         />
-        <button
-          type="button"
-          className="forward-label"
-          aria-label="Go forward"
-          onClick={() => window.history.forward()}
-          style={labelStyle}
-        >
-          F
-        </button>
       </div>
     </>
   );
