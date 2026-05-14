@@ -11,7 +11,6 @@ const FloatingNavButtons = () => {
   const { pathname } = useLocation();
   const ref = useRef<HTMLDivElement>(null);
   const [leftPx, setLeftPx] = useState<number>(24);
-  const [bottomPx, setBottomPx] = useState<number>(24 + 96 + 8);
 
   useEffect(() => {
     const update = () => {
@@ -22,7 +21,6 @@ const FloatingNavButtons = () => {
       const homeCenter = homeRect.left + homeRect.width / 2;
       const selfWidth = self.offsetWidth;
       setLeftPx(Math.max(8, homeCenter - selfWidth / 2));
-      setBottomPx(24 + homeRect.height + 8);
     };
     update();
     window.addEventListener("resize", update);
@@ -90,7 +88,7 @@ const FloatingNavButtons = () => {
         className="gear-nav-oval"
         style={{
           position: "fixed",
-          bottom: bottomPx,
+          bottom: 24,
           left: leftPx,
           zIndex: 999,
           width: 120,

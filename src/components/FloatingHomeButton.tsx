@@ -34,7 +34,7 @@ const FloatingHomeButton = () => {
         className="home-button"
         style={{
           position: "fixed",
-          bottom: 24,
+          bottom: 24 + 68 + 8,
           left: 24,
           zIndex: 999,
           display: "inline-flex",
