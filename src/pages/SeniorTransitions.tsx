@@ -91,14 +91,19 @@ const SeniorTransitions = () => {
         <img
           src={seniorTransitionsHero}
           alt="Senior couple in front of their longtime Washington home with a Real Property Planning For Sale sign"
-          className="block w-full h-auto"
+          className="block w-full"
+          style={{
+            height: "400px",
+            objectFit: "cover",
+            objectPosition: "center",
+          }}
           loading="eager"
         />
         <div style={{ height: "4px", backgroundColor: "#ffffff" }} aria-hidden="true" />
         <div
           style={{
             backgroundColor: "#1B3A6B",
-            height: "52px",
+            height: "60px",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -122,7 +127,7 @@ const SeniorTransitions = () => {
       </section>
 
       {/* Hero */}
-      <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
+      <section className="bg-primary pt-12 pb-12 md:pt-16 md:pb-14">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <img src={seniorHomeSalesIcon} alt="" aria-hidden="true" className="mx-auto max-w-[18rem] w-full h-auto object-contain mb-4" loading="lazy" />
