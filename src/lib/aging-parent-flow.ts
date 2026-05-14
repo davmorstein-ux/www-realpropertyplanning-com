@@ -17,6 +17,10 @@ import iconHelpAtHome from "@/assets/icons/senior-placement-advisor-icon-washing
 import iconHousingOptions from "@/assets/icons/senior-adult-family-home-3d-washington.webp";
 import iconHealthCrisis from "@/assets/icons/senior-nursing-care-icon-washington.webp";
 import iconFinancesLegal from "@/assets/icons/estate-financial-planning-icon-washington.webp";
+import iconTypesOfHousing from "@/assets/icons/senior-living-placement-icon-washington.webp";
+import iconComparingCosts from "@/assets/icons/paying-for-senior-living-icon-washington.webp";
+import iconEligibility from "@/assets/icons/executors-clipboard-checklist-icon-washington.webp";
+import iconConversation from "@/assets/icons/real-estate-consultation-chat-icon-washington.webp";
 import housingOptionsHero from "@/assets/housing_options_hero.png";
 
 export interface FlowNode {
