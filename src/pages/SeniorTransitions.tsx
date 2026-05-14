@@ -19,6 +19,7 @@ import heart3d from "@/assets/senior-care-heart-icon-washington.webp";
 import seniorHomeSalesIcon from "@/assets/icons/senior-home-sales-for-sale-icon-washington.webp";
 import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
+import seniorTransitionsHero from "@/assets/senior-transitions-hero.png";
 import DirectAnswerBlock from "@/components/DirectAnswerBlock";
 
 const transitionSituations = [
@@ -84,6 +85,41 @@ const SeniorTransitions = () => {
       <BreadcrumbSchema items={[{ name: "Senior Transitions", url: "/senior-transitions" }]} />
       <Header />
       <main id="main-content">
+
+      {/* Hero image + brand band */}
+      <section className="bg-transparent" style={{ lineHeight: 0 }}>
+        <img
+          src={seniorTransitionsHero}
+          alt="Senior couple in front of their longtime Washington home with a Real Property Planning For Sale sign"
+          className="block w-full h-auto"
+          loading="eager"
+        />
+        <div style={{ height: "4px", backgroundColor: "#ffffff" }} aria-hidden="true" />
+        <div
+          style={{
+            backgroundColor: "#1B3A6B",
+            height: "52px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <h2
+            style={{
+              color: "#FFFFFF",
+              fontFamily: '"DM Sans", system-ui, sans-serif',
+              fontSize: "19px",
+              fontWeight: 600,
+              letterSpacing: "0.05em",
+              margin: 0,
+              lineHeight: 1,
+              textAlign: "center",
+            }}
+          >
+            Selling A Senior's Home
+          </h2>
+        </div>
+      </section>
 
       {/* Hero */}
       <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
