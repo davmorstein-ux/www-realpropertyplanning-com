@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss";
 
-/* Import Cormorant Garamond via index.css; serif mapped here */
+/* Import DM Sans via index.css; serif mapped here */
 
 export default {
   darkMode: ["class"],
@@ -81,8 +81,8 @@ export default {
         },
       },
       fontFamily: {
-        serif: ["Cormorant Garamond", "Playfair Display", "Georgia", "serif"],
-        sans: ["Inter", "system-ui", "-apple-system", "sans-serif"],
+        serif: ["DM Sans", "DM Sans", "Georgia", "serif"],
+        sans: ["DM Sans", "system-ui", "-apple-system", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",

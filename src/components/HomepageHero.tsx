@@ -104,7 +104,7 @@ const HomepageHero = () => {
   }, []);
 
   const fontBody = { fontFamily: "'DM Sans', system-ui, sans-serif" };
-  const fontHead = { fontFamily: "'Barlow Condensed', 'DM Sans', sans-serif" };
+  const fontHead = { fontFamily: "'DM Sans', 'DM Sans', sans-serif" };
 
   return (
     <div style={{ ...fontBody, background: "#FFFFFF", color: "#1E3A5F", paddingTop: isMobile ? 70 : 120 }}>

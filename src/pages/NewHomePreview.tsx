@@ -39,7 +39,7 @@ export default function NewHomePreview() {
   }, []);
 
   const fontBody = { fontFamily: "'DM Sans', system-ui, sans-serif" };
-  const fontHead = { fontFamily: "'Barlow Condensed', 'DM Sans', sans-serif" };
+  const fontHead = { fontFamily: "'DM Sans', 'DM Sans', sans-serif" };
 
   return (
     <div style={{ ...fontBody, background: "#0b1220", color: "#fff", minHeight: "100vh" }}>

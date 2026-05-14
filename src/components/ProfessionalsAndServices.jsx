@@ -1,9 +1,9 @@
 import React from 'react';
 
 const styles = `
-  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=DM Sans:wght@400;500;600;700&display=swap');
   .p1wrap * { box-sizing: border-box; margin: 0; padding: 0; }
-  .p1section { font-family: 'Montserrat', sans-serif; padding: 0 40px 64px; }
+  .p1section { font-family: 'DM Sans', sans-serif; padding: 0 40px 64px; }
   .p1grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1300px; margin: 0 auto 20px; }
   .p1tile { width: 100%; cursor: pointer; text-decoration: none; display: block; }
   .p1card { width: 100%; height: 380px; background: #FFFFFF; border-radius: 16px; border: 2px solid #C9A84C; box-shadow: 0 2px 4px rgba(0,0,0,0.06), 0 8px 16px rgba(0,0,0,0.08), 0 16px 32px rgba(0,0,0,0.06), inset 0 0 0 1px rgba(201,168,76,0.35); display: flex; flex-direction: column; position: relative; transition: all 0.3s ease; overflow: hidden; }
@@ -13,11 +13,11 @@ const styles = `
   .p1img { display: block; width: 100%; height: 220px; object-fit: contain; object-position: top center; }
   .p1body { flex: 1; padding: 12px 10px 0; overflow: hidden; position: relative; }
   .p1pill { display: block; font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: #b89a5a; margin-bottom: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; transition: opacity .15s ease; }
-  .p1title { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 22px; color: #12243F; line-height: 1.15; transition: opacity .15s ease; }
+  .p1title { font-family: 'DM Sans', serif; font-weight: 700; font-size: 22px; color: #12243F; line-height: 1.15; transition: opacity .15s ease; }
   .p1tile:hover .p1pill, .p1tile:hover .p1title { opacity: 0; }
   .p1hover { position: absolute; inset: 0; background: rgba(10,20,46,.97); display: flex; align-items: center; justify-content: center; padding: 14px; opacity: 0; transition: opacity .28s ease .1s; z-index: 30; }
   .p1tile:hover .p1hover { opacity: 1; }
-  .p1tagline { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 14px; color: #FFF; text-align: center; line-height: 1.5; }
+  .p1tagline { font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 14px; color: #FFF; text-align: center; line-height: 1.5; }
   .p1footer { height: 52px; flex-shrink: 0; display: flex; align-items: center; padding: 0 12px; border-top: 1.5px solid rgba(201,168,76,0.35); background: #FFFFFF; gap: 8px; justify-content: space-between; }
   .p1label { font-size: 10px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: #1a3a6b; line-height: 1.4; flex: 1; }
   .p1arrow { margin-left: auto; width: 28px; height: 28px; border: 1.5px solid #1a3a6b; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: background .25s; flex-shrink: 0; }
@@ -26,11 +26,11 @@ const styles = `
   .p1tile:hover .p1arrow svg { stroke: #fff; }
   .p1bar { max-width: 1300px; margin: 36px auto 0; background: #1a3a6b; border-radius: 8px; padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
   .p1bar-text { font-size: 14px; color: #c8d5e8; line-height: 1.6; }
-  .p1bar-btn { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: .08em; background: #b89a5a; color: #fff; border: none; border-radius: 4px; padding: 12px 24px; cursor: pointer; white-space: nowrap; transition: background .2s; }
+  .p1bar-btn { font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: .08em; background: #b89a5a; color: #fff; border: none; border-radius: 4px; padding: 12px 24px; cursor: pointer; white-space: nowrap; transition: background .2s; }
   .p1bar-btn:hover { background: #d4b87a; }
   .p1heading { text-align: center; margin-bottom: 40px; padding-top: 48px; }
-  .p1eyebrow { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: #b89a5a; display: block; margin-bottom: 10px; }
-  .p1h2 { font-family: 'Cormorant Garamond', serif; font-size: 40px; font-weight: 700; color: #12243F; line-height: 1.15; margin: 0; }
+  .p1eyebrow { font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: #b89a5a; display: block; margin-bottom: 10px; }
+  .p1h2 { font-family: 'DM Sans', serif; font-size: 40px; font-weight: 700; color: #12243F; line-height: 1.15; margin: 0; }
 `;
 
 
