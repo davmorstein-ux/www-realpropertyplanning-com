@@ -75,85 +75,11 @@ const pathways: Pathway[] = [
   },
 ];
 
-const faqs = [
-  {
-    question: "How do we know what level of care may be appropriate?",
-    answer:
-      "Most families start by observing daily activities — bathing, eating, medication, mobility, and memory. A care manager, nurse, or physician can help assess the level of support that may be appropriate.",
-  },
-  {
-    question: "What are the differences between assisted living and adult family homes?",
-    answer:
-      "Assisted living communities are typically larger, with 30+ residents and structured amenities. Adult family homes are smaller — often 4 to 6 residents in a residential home — and may provide more personalized attention.",
-  },
-  {
-    question: "When is memory care typically considered?",
-    answer:
-      "Memory care is often considered when a person experiences progressive cognitive decline, wandering, safety concerns, or care needs that exceed what assisted living can safely provide.",
-  },
-  {
-    question: "Can a parent remain safely at home?",
-    answer:
-      "Many seniors can remain at home with the right combination of in-home caregivers, home modifications, and family support. A safety assessment can help determine what may be needed.",
-  },
-  {
-    question: "How do families usually begin this process?",
-    answer:
-      "Most families begin with a conversation, then consult a senior housing advisor, care manager, or trusted professional. Touring a few communities or homes is often a helpful early step.",
-  },
-  {
-    question: "What costs should families prepare for?",
-    answer:
-      "Costs vary widely by setting, location, and care level. Families often consult a financial planner or elder law attorney to understand options including private pay, long-term care insurance, VA benefits, and Medicaid.",
-  },
-  {
-    question: "What if a parent resists change?",
-    answer:
-      "Resistance is common and usually about loss of control, not the option itself. Slowing down, listening, and including the senior in tours and decisions often eases the transition.",
-  },
-  {
-    question: "What professionals can help guide these decisions?",
-    answer:
-      "A senior housing advisor, geriatric care manager, elder law attorney, financial planner, and a real estate professional familiar with senior transitions can each play an important role.",
-  },
-  {
-    question: "What happens to the home during a transition?",
-    answer:
-      "Families typically choose to sell, rent, keep, or transfer the home. Timing and approach often depend on care costs, family goals, and tax or estate considerations.",
-  },
-  {
-    question: "How quickly do families usually need to make decisions?",
-    answer:
-      "Sometimes urgently — after a hospital stay or safety event. Other times slowly, over months or years. Either way, having information ready helps families act calmly when the moment arrives.",
-  },
-];
-
-const considerations = [
-  "Safety concerns",
-  "Daily support needs",
-  "Mobility and medical considerations",
-  "Social isolation",
-  "Cognitive changes",
-  "Family caregiver burnout",
-  "Financial planning",
-  "Legal authority and planning",
-  "Future housing transitions",
-  "Property and downsizing decisions",
-];
-
 const continueJourney = [
   { href: "/understanding-senior-transitions", title: "Understanding Senior Transitions", description: "An overview of the most common life-stage moves.", icon: iconHeartHands },
   { href: "/aging-in-place-staying-home-safely", title: "Aging in Place & Staying at Home Safely", description: "Plan ahead for safety, support, and independence at home.", icon: iconHome },
   { href: "/estate-planning-powers-of-attorney", title: "Estate Planning & Powers of Attorney", description: "Understand the legal documents most families need.", icon: iconDocument },
   { href: "/what-to-do-with-the-house", title: "What To Do With the House", description: "A guided decision roadmap for the home.", icon: iconExecutor },
-];
-
-const nextSteps = [
-  "Understand the senior's current needs and concerns",
-  "Learn the differences between available housing and care options",
-  "Consider safety, finances, caregiving, and long-term planning",
-  "Build a trusted support team",
-  "Make informed decisions at a manageable pace",
 ];
 
 const jsonLd = articleSchema({
