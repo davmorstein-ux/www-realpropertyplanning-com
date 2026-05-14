@@ -100,42 +100,6 @@ const SeniorTransitions = () => {
         <HeroBandTitle as="h2">Selling A Senior's Home</HeroBandTitle>
       </section>
 
-      {/* Page intro */}
-      <section className="bg-background pt-12 pb-12 md:pt-16 md:pb-14">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <img src={seniorHomeSalesIcon} alt="" aria-hidden="true" className="mx-auto max-w-[18rem] w-full h-auto object-contain mb-4" loading="lazy" />
-            <h1 className="font-serif text-4xl md:text-5xl text-foreground font-semibold leading-tight mb-6 mt-4">
-              Selling a Senior's Longtime Home in Washington State
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10 max-w-2xl mx-auto">
-              Patient, respectful coordination — at your family's pace, not a sales calendar.
-            </p>
-            <div className="flex flex-col items-center gap-4 mb-10 mx-auto">
-              <p className="text-foreground text-lg leading-relaxed text-center">
-                Real Property Planning works around the care plan — not the other way around.
-              </p>
-              <p className="text-foreground text-lg leading-relaxed text-center">
-                Coordinating with families, care teams, attorneys, and advisors throughout Puget Sound.
-              </p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact">
-                <Button variant="gold" size="lg" className="w-full sm:w-auto">
-                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy" />
-                  Start a Family Conversation
-                </Button>
-              </Link>
-              <Link to="/guides/how-to-move-elderly-parents">
-                <Button size="lg" variant="outline3d" className="border-gold/50 bg-transparent text-foreground hover:bg-gold hover:text-foreground focus-visible:ring-gold w-full sm:w-auto">
-                  Read: Moving Elderly Parents
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* What Goes Into a Senior Transition */}
       <section className="py-16 lg:py-20 bg-background">
         <div className="container px-6 lg:px-8">
