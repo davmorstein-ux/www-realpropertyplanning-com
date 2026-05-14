@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import AutoBreadcrumbs from "@/components/AutoBreadcrumbs";
 
 
 /**
