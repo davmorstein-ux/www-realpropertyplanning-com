@@ -510,7 +510,6 @@ const Header = () => {
 
       {/* Spacer to preserve layout below the fixed header (prevents CLS). */}
       <div style={{ height: isMobile ? 64 : 140 }} aria-hidden="true" />
-      <AutoBreadcrumbs />
     </>
   );
 };
