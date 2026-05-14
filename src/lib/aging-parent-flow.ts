@@ -187,6 +187,9 @@ export const AGING_PARENT_ROOT: FlowNode = {
           path: "/helping-an-aging-parent/exploring-care-options/types-of-housing",
           label: "What types of senior housing exist?",
           icon: Building2,
+          heroImage: housingOptionsHero,
+          heroAlt: "Types of senior housing — Real Property Planning",
+          heroBandTitle: "What types of senior housing exist?",
           content: {
             intro: "The senior housing landscape can feel overwhelming — the terminology alone is confusing. Here's a plain-language overview of the main options available in Washington State.",
             sections: [
@@ -203,6 +206,9 @@ export const AGING_PARENT_ROOT: FlowNode = {
           path: "/helping-an-aging-parent/exploring-care-options/comparing-costs",
           label: "How do I compare costs?",
           icon: DollarSign,
+          heroImage: housingOptionsHero,
+          heroAlt: "Comparing senior care costs — Real Property Planning",
+          heroBandTitle: "How do I compare costs?",
           content: {
             intro: "Senior care costs vary widely — by type of care, by location, and by what's included in the base price. Understanding what you're actually comparing is the first step.",
             sections: [
@@ -217,6 +223,9 @@ export const AGING_PARENT_ROOT: FlowNode = {
           path: "/helping-an-aging-parent/exploring-care-options/eligibility",
           label: "What does my parent qualify for?",
           icon: ClipboardCheck,
+          heroImage: housingOptionsHero,
+          heroAlt: "Senior care eligibility — Real Property Planning",
+          heroBandTitle: "What does my parent qualify for?",
           content: {
             intro: "Eligibility for care programs depends on two things: medical need and financial situation. Understanding both helps you know which doors are open.",
             sections: [
@@ -232,6 +241,9 @@ export const AGING_PARENT_ROOT: FlowNode = {
           path: "/helping-an-aging-parent/exploring-care-options/having-the-conversation",
           label: "How do I have this conversation with my parent?",
           icon: MessageCircle,
+          heroImage: housingOptionsHero,
+          heroAlt: "Having the conversation with an aging parent — Real Property Planning",
+          heroBandTitle: "How do I have this conversation with my parent?",
           content: {
             intro: "This is the question most families ask — and avoid. The conversation about care and housing is hard because it touches on independence, mortality, and family dynamics all at once. But it's one of the most important conversations you can have.",
             sections: [
