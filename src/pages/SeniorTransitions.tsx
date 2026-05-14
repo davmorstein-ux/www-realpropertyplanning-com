@@ -1,4 +1,4 @@
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+// accordion removed — replaced with static card grid
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
@@ -64,14 +64,11 @@ const SeniorTransitions = () => {
       {/* Who Helps With a Senior Transition */}
       <section className="py-20 lg:py-28 bg-secondary">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="font-serif text-3xl text-foreground font-semibold mb-4 text-center">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-10 text-center">
               Who Helps With a Senior Transition?
             </h2>
-            <p className="text-foreground text-base leading-[1.7] text-center mb-10">
-              Tap any role below to learn more about what they do and how they fit into a senior transition.
-            </p>
-            <Accordion type="single" collapsible defaultValue="item-0" className="space-y-3">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
               {[
                 {
                   title: "Senior Move Managers",
@@ -86,53 +83,58 @@ const SeniorTransitions = () => {
                   href: "/senior-placement",
                 },
                 {
-                  title: "Estate Sale & Liquidation Services",
+                  title: "Estate Sale & Liquidation",
                   description: "When a home contains decades of belongings, estate sale professionals help families sort, value, and sell or donate items — clearing the home efficiently and respectfully before it goes on the market.",
                   linkText: "Learn more",
                   href: "/estate-liquidation",
                 },
                 {
-                  title: "Real Estate Broker (Probate & Senior Transition Specialist)",
+                  title: "Real Estate Broker",
                   description: "A broker experienced in senior transitions understands condition-based pricing, family dynamics, and the need for patience. Real Property Planning connects families with brokers who specialize in this work throughout Washington State.",
                   linkText: "Learn more",
                   href: "/realtor",
                 },
                 {
-                  title: "Certified Residential Appraiser",
-                  description: "An independent appraisal gives families an honest, defensible value for the home — separate from any listing pressure. Useful for estate planning, trust administration, or simply knowing where you stand before making decisions.",
+                  title: "Certified Appraiser",
+                  description: "An independent appraisal gives families an honest, defensible value for the home — useful for estate planning, trust administration, or simply knowing where you stand before making decisions.",
                   linkText: "Learn more",
                   href: "/real-estate-appraiser",
                 },
                 {
                   title: "Estate Attorneys",
                   description: "Many senior transitions intersect with trust administration, power of attorney, or estate planning. An attorney ensures the legal side of the transition is handled properly alongside the real estate process.",
-                  linkText: "Find an Estate Attorney",
+                  linkText: "Learn more",
                   href: "/for-attorneys",
                 },
                 {
                   title: "Financial Advisors & CPAs",
                   description: "Selling a longtime home has tax implications — capital gains, stepped-up basis, trust distributions. A financial planner or CPA helps families understand the financial picture before and after the sale.",
-                  linkText: "Find a Financial Advisor or CPA",
+                  linkText: "Learn more",
                   href: "/for-financial-planners",
                 },
-              ].map((card, idx) => (
-                <AccordionItem
-                  key={card.title}
-                  value={`item-${idx}`}
-                  className="bg-card border border-border rounded-xl px-6"
-                >
-                  <AccordionTrigger className="font-serif text-xl text-foreground font-semibold hover:no-underline text-left">
-                    {card.title}
-                  </AccordionTrigger>
-                  <AccordionContent>
-                    <p className="text-foreground text-base leading-[1.7] mb-4">{card.description}</p>
-                    <Link to={card.href} className="text-accent hover:text-gold font-semibold underline underline-offset-4 inline-block">
+              ].map((card, idx, arr) => {
+                const isLastOdd = arr.length % 2 === 1 && idx === arr.length - 1;
+                return (
+                  <div
+                    key={card.title}
+                    className={`bg-card border border-border rounded-lg shadow-sm p-7 flex flex-col h-full ${isLastOdd ? "md:col-span-2 md:max-w-[calc(50%-12px)] md:mx-auto md:w-full" : ""}`}
+                  >
+                    <h3 className="font-serif text-[18px] text-navy font-bold mb-3 leading-snug">
+                      {card.title}
+                    </h3>
+                    <p className="text-foreground text-base leading-[1.6] mb-5">
+                      {card.description}
+                    </p>
+                    <Link
+                      to={card.href}
+                      className="mt-auto text-accent hover:text-gold font-semibold underline underline-offset-4"
+                    >
                       {card.linkText} →
                     </Link>
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
