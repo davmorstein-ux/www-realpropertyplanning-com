@@ -1,72 +1,15 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import SEOHead from "@/components/SEOHead";
-import BreadcrumbSchema from "@/components/BreadcrumbSchema";
-import CTASection from "@/components/CTASection";
-import RelatedServices from "@/components/RelatedServices";
-import DisclaimerSection from "@/components/DisclaimerSection";
-import { Link } from "react-router-dom";
-import memoryCareHeroIcon from "@/assets/icons/senior-memory-care-hero-washington.webp";
+import HousingOptionDetail from "@/components/HousingOptionDetail";
 
 const MemoryCare = () => (
-  <>
-    <SEOHead
-      title="Memory Care | Senior Living | Real Property Planning"
-      description="Learn about memory care programs designed for individuals living with Alzheimer's or dementia throughout Washington State."
-      canonical="https://realpropertyplanning.com/senior-living/memory-care"
-    />
-    <BreadcrumbSchema
-      items={[
-        { name: "Home", url: "https://realpropertyplanning.com" },
-        { name: "Senior Living & Relocation", url: "https://realpropertyplanning.com/senior-living-and-relocation" },
-        { name: "Memory Care", url: "https://realpropertyplanning.com/senior-living/memory-care" },
-      ]}
-    />
-    <Header />
-    <main id="main-content">
-      <section className="bg-primary pt-3 md:pt-4 pb-5 md:pb-7">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="mb-3 md:mb-4">
-              <img
-                src={memoryCareHeroIcon}
-                alt="Memory Care"
-                className="block max-w-[15rem] h-auto mx-auto"
-               loading="lazy"/>
-            </div>
-            <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-base">Senior Living</p>
-            <h1 className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground leading-tight mb-4">Memory Care</h1>
-            <p className="text-primary-foreground/80 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-              Specialized programs designed for individuals living with Alzheimer's or other forms of dementia, with structured routines and secure environments.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-14 md:py-20 bg-background">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <div className="bg-secondary border border-border rounded-xl px-6 py-8 md:px-8 text-center">
-              <p className="text-muted-foreground text-base leading-relaxed">
-                This page is being developed with detailed information about memory care options throughout Washington State. Check back soon, or{" "}
-                <Link to="/contact" className="text-accent hover:text-gold underline underline-offset-4">Contact us</Link> for guidance.
-              </p>
-            </div>
-            <div className="mt-8 text-center">
-              <Link to="/senior-living-and-relocation" className="text-accent hover:text-gold underline underline-offset-4 text-base font-medium">
-                ← Back to Senior Living & Relocation
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <CTASection />
-      <RelatedServices currentPath="/senior-living/memory-care" />
-      <DisclaimerSection />
-    </main>
-    <Footer />
-  </>
+  <HousingOptionDetail
+    title="Memory Care"
+    slug="memory-care"
+    metaDescription="Memory Care communities in Washington State for seniors with Alzheimer's, dementia, or cognitive decline — secure environments and specially trained staff."
+    whatItIs="Specialized care communities designed for seniors living with Alzheimer's disease, dementia, or other forms of cognitive decline. Secure environments, structured routines, and staff trained in dementia care."
+    bestFor="Seniors with moderate to advanced cognitive impairment who need a safe, structured environment."
+    typicalCosts="$5,000–$10,000/month in Washington State. Usually private pay."
+    whatsIncluded="Secure setting, specialized programming, 24-hour supervision, personal care, and meals."
+  />
 );
 
 export default MemoryCare;
