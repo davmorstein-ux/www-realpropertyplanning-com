@@ -6,7 +6,6 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import CTASection from "@/components/CTASection";
-import AutoBreadcrumbs from "@/components/AutoBreadcrumbs";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
@@ -75,12 +74,6 @@ const AttorneyPageTemplate = ({
           </div>
         </div>
       </section>
-
-      <div className="bg-cream">
-        <div className="container px-6 lg:px-8">
-          <AutoBreadcrumbs />
-        </div>
-      </div>
 
       {/* Intro */}
       <section className="py-16 lg:py-20 bg-secondary">

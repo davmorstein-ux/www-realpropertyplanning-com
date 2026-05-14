@@ -4,7 +4,6 @@ import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
-import AutoBreadcrumbs from "@/components/AutoBreadcrumbs";
 import { Button } from "@/components/ui/button";
 import {
   Accordion,
@@ -112,12 +111,6 @@ const ProfessionPageTemplate = ({
           </div>
         </div>
       </section>
-
-      <div className="bg-cream">
-        <div className="container px-6 lg:px-8">
-          <AutoBreadcrumbs />
-        </div>
-      </div>
 
       {/* SECTION 2: What This Professional Does */}
       <section className="py-16 lg:py-24 bg-background">

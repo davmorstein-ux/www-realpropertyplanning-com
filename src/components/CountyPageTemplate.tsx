@@ -10,7 +10,6 @@ import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
 import { Link, useNavigate } from "react-router-dom";
 import { useRef } from "react";
-import AutoBreadcrumbs from "@/components/AutoBreadcrumbs";
 
 const COUNTY_ORDER = [
   { slug: "king-county",      path: "/king-county",      name: "King County" },
@@ -440,12 +439,6 @@ const CountyPageTemplate = ({
           </div>
         )}
       </section>
-
-      <div className="bg-cream">
-        <div className="container px-6 lg:px-8">
-          <AutoBreadcrumbs />
-        </div>
-      </div>
 
       {localInsight && (
         <section className="py-14 lg:py-18 bg-background">

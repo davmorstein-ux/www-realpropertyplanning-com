@@ -1,5 +1,4 @@
 import Header from "@/components/Header";
-import AutoBreadcrumbs from "@/components/AutoBreadcrumbs";
 import Footer from "@/components/Footer";
 import DirectAnswerBlock from "@/components/DirectAnswerBlock";
 import { counties } from "@/lib/service-areas-data";
@@ -106,12 +105,6 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
           </div>
         </div>
       </section>
-
-      <div className="bg-cream">
-        <div className="container px-6 lg:px-8">
-          <AutoBreadcrumbs />
-        </div>
-      </div>
 
       <DirectAnswerBlock
         question={city.aeoQuestion || `How do probate and estate property sales work in ${city.name}?`}
