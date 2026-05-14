@@ -38,9 +38,11 @@ const FloatingHomeButton = () => {
           left: 24,
           zIndex: 999,
           display: "inline-flex",
+          flexDirection: "column",
           alignItems: "center",
-          gap: 6,
-          padding: "6px 14px",
+          justifyContent: "center",
+          gap: 4,
+          padding: "8px 12px",
           background: "#FFF8EC",
           border: "2px solid #8B0000",
           borderRadius: 50,
@@ -61,7 +63,7 @@ const FloatingHomeButton = () => {
           className="steering-wheel-img"
           style={{ width: 64, height: 64, display: "block", objectFit: "contain", background: "transparent", flexShrink: 0 }}
         />
-        <span style={{ flex: 1, textAlign: "center" }}>Home</span>
+        <span style={{ textAlign: "center" }}>Home</span>
       </Link>
     </>
   );
