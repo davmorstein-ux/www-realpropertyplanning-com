@@ -106,6 +106,12 @@ const CityPageTemplate = ({ city }: CityPageTemplateProps) => {
         </div>
       </section>
 
+      <div className="bg-cream">
+        <div className="container px-6 lg:px-8">
+          <AutoBreadcrumbs />
+        </div>
+      </div>
+
       <DirectAnswerBlock
         question={city.aeoQuestion || `How do probate and estate property sales work in ${city.name}?`}
         answer={city.aeoAnswer || `Real Property Planning provides hands-on guidance for executors, trustees, attorneys, and families selling property in ${city.name}. Each property is carefully evaluated, and the full sale process is coordinated with licensed broker and certified appraiser expertise.`}
