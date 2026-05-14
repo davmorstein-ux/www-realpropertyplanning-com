@@ -57,27 +57,12 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
 
               {/* Breadcrumb / back link */}
               <nav aria-label="Breadcrumb" className="mb-8">
-                {isRoot ? (
-                  <Link
-                    to="/"
-                    className="inline-flex items-center gap-2 text-navy/70 hover:text-navy text-base font-semibold"
-                  >
-                    <ChevronLeft className="w-4 h-4" aria-hidden="true" />
-                    Home
-                  </Link>
-                ) : (
-                  <ol className="flex flex-wrap items-center gap-x-2 gap-y-1 text-base text-navy/70">
-                    {trail.slice(0, -1).map((crumb, i) => (
-                      <li key={crumb.path} className="flex items-center gap-2">
-                        <Link to={crumb.path} className="hover:text-navy font-semibold">
-                          {i === 0 ? "Helping an Aging Parent" : crumb.label}
-                        </Link>
-                        <span aria-hidden="true" className="text-navy/40">/</span>
-                      </li>
-                    ))}
-                    <li className="text-navy font-semibold">{node.label}</li>
-                  </ol>
-                )}
+                <Link
+                  to="/"
+                  className="text-base font-bold text-[#8B0000] hover:underline"
+                >
+                  ‹ Home
+                </Link>
               </nav>
 
               {/* Heading */}
