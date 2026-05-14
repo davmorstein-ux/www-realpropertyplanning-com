@@ -217,7 +217,7 @@ const SeniorTransitions = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-4xl mx-auto flex flex-col items-center gap-6 sm:gap-8">
             <AffiliationBadgeGrid />
-            <p className="text-muted-foreground text-base leading-relaxed text-center max-w-3xl">
+            <p className="text-foreground text-base leading-[1.7] text-center max-w-3xl">
               Real Property Planning is a Corporate Partner of the{" "}
               <a href="https://www.aginglifecare.org/" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-gold underline underline-offset-4">Aging Life Care Association</a>, a recognized member of the{" "}
               <a href="https://www.naosa.org/" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-gold underline underline-offset-4">National Association of Senior Advocates</a> and Advisors, and a member of the National Association of Estate Planners &amp; Councils.
@@ -240,7 +240,7 @@ const SeniorTransitions = () => {
               {transitionSituations.map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
-                  <span className="text-muted-foreground">{item}</span>
+                  <span className="text-foreground">{item}</span>
                 </li>
               ))}
             </ul>
@@ -316,7 +316,7 @@ const SeniorTransitions = () => {
                 </div>
               ))}
             </div>
-            <p className="text-muted-foreground mt-8 leading-relaxed">
+            <p className="text-foreground mt-8 text-base leading-[1.7]">
               Attorneys and financial planners who work with senior clients can learn more about our <Link to="/for-attorneys" className="text-accent hover:text-gold underline underline-offset-4">referral approach for legal professionals</Link> or the <Link to="/how-the-process-works" className="text-accent hover:text-gold underline underline-offset-4">step-by-step sale process</Link>.
             </p>
           </div>
