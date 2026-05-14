@@ -21,6 +21,7 @@ import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import seniorTransitionsHero from "@/assets/senior-transitions-hero.png";
 import DirectAnswerBlock from "@/components/DirectAnswerBlock";
+import HeroBandTitle from "@/components/HeroBandTitle";
 
 const transitionSituations = [
   "A parent moving to assisted living, memory care, or an independent senior community",
