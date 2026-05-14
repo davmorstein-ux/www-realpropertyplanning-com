@@ -112,6 +112,12 @@ const SeniorTransitions = () => {
                   linkText: "Find a Benefits Advisor",
                   href: "/medicare-providers",
                 },
+                {
+                  title: "Financial Advisors & CPAs",
+                  description: "Selling a longtime home has tax implications — capital gains, stepped-up basis, trust distributions. A financial planner or CPA helps families understand the financial picture before and after the sale.",
+                  linkText: "Learn more",
+                  href: "/for-financial-planners",
+                },
               ].map((card, idx, arr) => {
                 const isLastOdd = arr.length % 2 === 1 && idx === arr.length - 1;
                 return (
