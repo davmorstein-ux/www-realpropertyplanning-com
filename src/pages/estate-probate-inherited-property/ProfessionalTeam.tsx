@@ -1,7 +1,67 @@
+import { Link } from "react-router-dom";
 import EstateSubPageLayout, { SubH2, P, Divider } from "@/components/EstateSubPageLayout";
 
 const DISCLAIMER =
   "The information on this page is for general guidance only and does not constitute legal, tax, or financial advice. Please consult licensed professionals for guidance specific to your situation.";
+
+type Pro = {
+  name: string;
+  role: string;
+  icon: string;
+  href: string;
+  blurb: string;
+};
+
+const professionals: Pro[] = [
+  {
+    name: "Probate Attorney",
+    role: "Legal Authority & Court Process",
+    icon: "⚖️",
+    href: "/for-probate-attorneys",
+    blurb:
+      "Files the will, opens probate, guides the executor through deadlines, and closes the estate.",
+  },
+  {
+    name: "CPA or Tax Professional",
+    role: "Estate & Final Tax Returns",
+    icon: "📊",
+    href: "/for-cpas",
+    blurb:
+      "Files final personal and estate income tax returns and advises on Washington and federal estate tax.",
+  },
+  {
+    name: "Certified Residential Appraiser",
+    role: "Date-of-Death Valuation",
+    icon: "🏷️",
+    href: "/real-estate-appraiser",
+    blurb:
+      "Establishes fair market value as of date of death — required for taxes, basis, and probate inventory.",
+  },
+  {
+    name: "Real Estate Broker",
+    role: "Estate Sale Specialist",
+    icon: "🏡",
+    href: "/realtor",
+    blurb:
+      "Advises on condition, lists and markets the property, and coordinates an estate-aware closing.",
+  },
+  {
+    name: "Estate Liquidator",
+    role: "Personal Property & Cleanout",
+    icon: "📦",
+    href: "/estate-liquidation",
+    blurb:
+      "Manages the cleanout and sale of furniture, household items, and other belongings.",
+  },
+  {
+    name: "Senior Move Manager",
+    role: "Transition & Relocation Support",
+    icon: "🚚",
+    href: "/senior-move-managers",
+    blurb:
+      "Coordinates packing, moving, and setup when a surviving family member relocates.",
+  },
+];
 
 const ProfessionalTeam = () => (
   <EstateSubPageLayout
@@ -30,58 +90,54 @@ const ProfessionalTeam = () => (
 
     <Divider />
 
-    <SubH2>Probate Attorney</SubH2>
-    <P>
-      <strong>What they do:</strong> File the will with the court, open the probate estate, guide the executor through legal requirements and deadlines, handle creditor notifications, prepare accountings, and close the estate. For contested situations, they represent the executor.
-    </P>
-    <P><strong>When to engage:</strong> Within the first two weeks after the death — before any major decisions are made.</P>
-    <P><strong>What to look for:</strong> Experience with Washington State probate, and familiarity with the county where the estate is being administered.</P>
-
-    <Divider />
-
-    <SubH2>CPA or Tax Professional</SubH2>
-    <P>
-      <strong>What they do:</strong> File the deceased's final personal income tax return, file any required estate income tax returns, advise on Washington State and federal estate tax exposure, and help heirs understand the tax implications of what they inherit.
-    </P>
-    <P><strong>When to engage:</strong> Early in the process — estate tax deadlines are strict and some decisions need to be made before assets are distributed.</P>
-    <P><strong>What to look for:</strong> Experience with estate and trust taxation specifically, not just personal tax returns.</P>
-
-    <Divider />
-
-    <SubH2>Certified Residential Appraiser</SubH2>
-    <P>
-      <strong>What they do:</strong> Establish the fair market value of real property as of the date of death. This valuation is used for estate tax filings, stepped-up basis calculations, equitable distribution among heirs, and probate court inventory requirements.
-    </P>
-    <P><strong>When to engage:</strong> Within the first 30–60 days after the death, before any decisions are made about the property.</P>
-    <P>
-      <strong>Why it matters:</strong> An online estimate is not acceptable for legal or tax purposes. Only a certified appraiser's report meets the standard required by courts, the IRS, and Washington State tax authorities.
-    </P>
-
-    <Divider />
-
-    <SubH2>Real Estate Broker — Estate Specialist</SubH2>
-    <P>
-      <strong>What they do:</strong> Advise on property condition and preparation, provide a market analysis, list and market the property, negotiate offers, and coordinate closing. Estate sales have unique dynamics — multiple decision-makers, emotional complexity, occupied or cluttered properties, and timelines driven by legal proceedings rather than market conditions.
-    </P>
-    <P><strong>When to engage:</strong> Once the decision to sell has been made — or earlier, for an honest assessment of condition and likely value before that decision is finalized.</P>
-    <P><strong>What to look for:</strong> Experience specifically with estate and senior transition sales, not just standard residential transactions.</P>
-
-    <Divider />
-
-    <SubH2>Estate Liquidator</SubH2>
-    <P>
-      <strong>What they do:</strong> Manage the cleanout and sale of personal property — furniture, household items, collectibles, and other belongings — through an estate sale, online auction, or direct purchase.
-    </P>
-    <P><strong>When to engage:</strong> Before the property is listed for sale, and after family members have taken items of personal significance.</P>
-    <P><strong>What to look for:</strong> Licensed, bonded professionals with verifiable references and transparent fee structures.</P>
-
-    <Divider />
-
-    <SubH2>Senior Move Manager</SubH2>
-    <P>
-      <strong>What they do:</strong> Coordinate the physical transition of a surviving senior — packing, moving, and setting up a new home — with sensitivity to the emotional and logistical complexity of a major life change.
-    </P>
-    <P><strong>When to engage:</strong> When a surviving spouse or family member is transitioning out of the family home to a new living situation.</P>
+    {/* Professional team tiles — break out of the 3xl article width for a 3-col grid */}
+    <div className="not-prose -mx-4 md:-mx-16 lg:-mx-32">
+      <div
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        style={{ fontFamily: "'DM Sans', system-ui, sans-serif" }}
+      >
+        {professionals.map((p) => (
+          <Link
+            key={p.name}
+            to={p.href}
+            aria-label={`${p.name} — ${p.role}`}
+            className="group block bg-white rounded-xl p-6 no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 transition-transform duration-300 ease-out hover:-translate-y-1"
+            style={{
+              boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
+              fontFamily: "'DM Sans', system-ui, sans-serif",
+            }}
+          >
+            <div className="flex flex-col h-full">
+              <div className="text-3xl mb-3" aria-hidden="true">
+                {p.icon}
+              </div>
+              <h3
+                className="text-navy font-bold text-[20px] leading-snug mb-1 transition-colors duration-300 group-hover:text-gold"
+                style={{ fontFamily: "'DM Sans', system-ui, sans-serif" }}
+              >
+                {p.name}
+              </h3>
+              <p
+                className="text-muted-foreground text-[14px] font-medium uppercase tracking-wider mb-3"
+                style={{ fontFamily: "'DM Sans', system-ui, sans-serif" }}
+              >
+                {p.role}
+              </p>
+              <p
+                className="text-foreground text-[15px] leading-relaxed"
+                style={{ fontFamily: "'DM Sans', system-ui, sans-serif" }}
+              >
+                {p.blurb}
+              </p>
+              <span className="mt-4 inline-flex items-center gap-1 text-gold font-semibold text-sm transition-colors duration-300 group-hover:text-[hsl(var(--gold-dark))]">
+                Learn more
+                <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1">→</span>
+              </span>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </div>
 
     <Divider />
 
