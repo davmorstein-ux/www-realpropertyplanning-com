@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
-import gearShifter from "@/assets/gear-shifter.png";
+import gearBase from "@/assets/gear_shifter_base.png";
+import gearTop from "@/assets/gear_shifter_top.png";
 
 /**
  * Sticky Reverse / Forward navigation oval, centered horizontally beneath
@@ -45,11 +46,36 @@ const FloatingNavButtons = () => {
   return (
     <>
       <style>{`
-        .gear-shifter-img {
+        .gear-container {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          pointer-events: none;
+          z-index: 1;
+        }
+        .gear-top {
+          position: relative;
+          height: 34px;
+          width: auto;
+          display: block;
           transform-origin: bottom center;
-          transform: translate(-50%, -50%) rotate(0deg);
           transition: transform 0.3s ease-in-out;
           pointer-events: none;
+          z-index: 2;
+          margin-bottom: -2px;
+        }
+        .gear-base {
+          position: relative;
+          height: 28px;
+          width: auto;
+          display: block;
+          pointer-events: none;
+          z-index: 1;
+          flex-shrink: 0;
         }
         .gear-half {
           position: absolute;
@@ -62,7 +88,7 @@ const FloatingNavButtons = () => {
           background: transparent;
           border: none;
           padding: 0;
-          z-index: 2;
+          z-index: 3;
         }
         .gear-half-left {
           left: 0;
@@ -76,11 +102,11 @@ const FloatingNavButtons = () => {
           padding-right: 18px;
           border-radius: 0 50px 50px 0;
         }
-        .gear-nav-oval:has(.gear-half-left:hover) .gear-shifter-img {
-          transform: translate(-50%, -50%) rotate(-22deg);
+        .gear-half-left:hover ~ .gear-container .gear-top {
+          transform: rotate(-22deg);
         }
-        .gear-nav-oval:has(.gear-half-right:hover) .gear-shifter-img {
-          transform: translate(-50%, -50%) rotate(22deg);
+        .gear-half-right:hover ~ .gear-container .gear-top {
+          transform: rotate(22deg);
         }
       `}</style>
       <div
@@ -115,22 +141,10 @@ const FloatingNavButtons = () => {
         >
           <span style={labelStyle}>F</span>
         </button>
-        <img
-          src={gearShifter}
-          alt=""
-          aria-hidden="true"
-          className="gear-shifter-img"
-          style={{
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            height: 56,
-            width: "auto",
-            display: "block",
-            objectFit: "contain",
-            zIndex: 3,
-          }}
-        />
+        <div className="gear-container">
+          <img src={gearTop} alt="" aria-hidden="true" className="gear-top" />
+          <img src={gearBase} alt="" aria-hidden="true" className="gear-base" />
+        </div>
       </div>
     </>
   );
