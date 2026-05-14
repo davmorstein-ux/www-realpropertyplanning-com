@@ -107,10 +107,10 @@ const SeniorTransitions = () => {
                   href: "/for-attorneys",
                 },
                 {
-                  title: "Financial Advisors & CPAs",
-                  description: "Selling a longtime home has tax implications — capital gains, stepped-up basis, trust distributions. A financial planner or CPA helps families understand the financial picture before and after the sale.",
-                  linkText: "Learn more",
-                  href: "/for-financial-planners",
+                  title: "Medicare & Benefits Advisors",
+                  description: "Understanding Medicare, Medicaid, and other senior benefits is critical when a housing transition affects care funding. A benefits advisor helps families navigate coverage options, eligibility rules, and the financial impact of a move on existing or pending benefits.",
+                  linkText: "Find a Benefits Advisor",
+                  href: "/medicare-providers",
                 },
               ].map((card, idx, arr) => {
                 const isLastOdd = arr.length % 2 === 1 && idx === arr.length - 1;
