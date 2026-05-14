@@ -1,70 +1,17 @@
-import GoldCheck3D from "@/components/GoldCheck3D";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import { articleSchema } from "@/lib/schema";
-import TrustStrip from "@/components/TrustStrip";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
-import RelatedServices from "@/components/RelatedServices";
-import PageFAQ from "@/components/PageFAQ";
-import MidPageCTA from "@/components/MidPageCTA";
-import ProofCallout from "@/components/ProofCallout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
-import people3d from "@/assets/real-estate-agent-team-icon-washington.webp";
-import heart3d from "@/assets/senior-care-heart-icon-washington.webp";
-import seniorHomeSalesIcon from "@/assets/icons/senior-home-sales-for-sale-icon-washington.webp";
-import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import seniorTransitionsHero from "@/assets/senior-transitions-hero.png";
 
 import HeroBandTitle from "@/components/HeroBandTitle";
-
-const transitionSituations = [
-  "A parent moving to assisted living, memory care, or an independent senior community",
-  "Downsizing from a longtime family home to something more manageable",
-  "Selling after a health event, hospitalization, or change in care needs",
-  "A planned transition the family has been preparing for over months or years",
-  "Managing a sale while simultaneously coordinating with care professionals, attorneys, and financial advisors",
-  "Out-of-state family members who need a trusted local professional to handle the property",
-];
-
-const whatFamiliesNeed = [
-  "A patient, respectful approach — someone who understands that this home holds 30 or 40 years of a family's life",
-  "Honest guidance on timing — when to list, what to fix, and what to leave alone",
-  "Realistic market insight — what the home is worth in its actual condition, without inflated projections",
-  "Practical coordination — help connecting the right people: move managers, cleanout crews, contractors, attorneys",
-  "Clear communication — regular updates in plain language, so no one feels left out or surprised",
-  "No pressure — a professional who moves at the family's pace, not a commission deadline",
-];
-
-const coordinationPartners = [
-  {
-    title: "Family Members",
-    description: "Adult children, spouses, and extended family members are almost always involved — and they don't always agree. Some family members want to sell quickly; others want to hold on. Some are local; others are managing everything from another state. Real Property Planning works with all of them, providing consistent communication and clear guidance that keeps the process moving without pressure.",
-  },
-  {
-    title: "Care Professionals",
-    description: (
-      <>
-        Senior move managers, care coordinators, social workers, and placement specialists are often working alongside families during a transition. Real Property Planning coordinates with the care team to make sure the real estate timeline fits the broader plan — not the other way around. Real Property Planning has established relationships with senior move professionals in the Puget Sound area, including{" "}
-        <a href="https://hbmovemanagement.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-gold underline underline-offset-4">HB Move Management</a>, a division of Hansen Bros. Moving &amp; Storage, one of the most experienced senior moving services in Western Washington.
-      </>
-    ),
-  },
-  {
-    title: "Trusted Advisors",
-    description: (
-      <>
-        Attorneys, financial planners, CPAs, and fiduciaries need the real estate side of a senior transition handled with accuracy and professionalism. A background as a{" "}
-        <Link to="/real-estate-appraiser" className="text-accent hover:text-gold underline underline-offset-4">certified appraiser</Link> means advisors receive reliable valuation guidance — not listing estimates — which matters for financial planning, Medicaid planning, and estate documentation purposes.
-      </>
-    ),
-  },
-];
 
 const jsonLd = articleSchema({
   headline: "Senior Housing Transitions in Washington State",
