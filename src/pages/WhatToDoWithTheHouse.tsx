@@ -133,22 +133,22 @@ const WhatToDoWithTheHouse = () => {
                 <Link
                   key={d.letter}
                   to={d.href}
-                  className="group flex flex-col bg-white rounded-xl p-6 md:p-8 shadow-[0_4px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_12px_28px_-8px_rgba(27,43,75,0.22)] hover:-translate-y-1 transition-all duration-300 ease-out font-sans"
+                  className="group flex flex-col bg-white border-2 border-gold/60 hover:border-[hsl(var(--gold-dark))] rounded-2xl p-6 md:p-8 shadow-[0_4px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_12px_28px_-8px_rgba(27,43,75,0.22)] hover:-translate-y-1 transition-all duration-300 ease-out font-sans text-left"
                 >
                   <img
                     src={d.icon}
                     alt=""
                     aria-hidden="true"
-                    className="w-14 h-14 md:w-16 md:h-16 object-contain mb-4"
+                    className="w-10 h-10 object-contain mb-3 self-start"
                     loading="lazy"
                   />
-                  <h3 className="font-sans text-xl md:text-2xl text-navy font-bold mb-3 group-hover:text-[hsl(var(--gold-dark))] transition-colors">
+                  <h3 className="font-sans text-xl md:text-2xl text-navy font-bold mb-3 text-left">
                     {d.title}
                   </h3>
-                  <p className="font-sans text-navy text-base leading-relaxed font-normal mb-5 flex-1">
+                  <p className="font-sans text-navy text-base leading-relaxed font-normal mb-5 flex-1 text-left">
                     {d.description}
                   </p>
-                  <span className="inline-flex items-center gap-2 text-gold font-bold text-sm mt-auto">
+                  <span className="inline-flex items-center gap-2 text-gold font-bold text-sm mt-auto self-start">
                     Learn More <ArrowRight className="w-4 h-4" aria-hidden="true" />
                   </span>
                 </Link>
