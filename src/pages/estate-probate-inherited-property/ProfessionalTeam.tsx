@@ -1,66 +1,26 @@
-import { Link } from "react-router-dom";
 import EstateSubPageLayout, { SubH2, P, Divider } from "@/components/EstateSubPageLayout";
+import ProfessionalNetworkCard from "@/components/ProfessionalNetworkCard";
+import { professionalNetworkCategories } from "@/components/professional-network-tiles-data";
 
 const DISCLAIMER =
   "The information on this page is for general guidance only and does not constitute legal, tax, or financial advice. Please consult licensed professionals for guidance specific to your situation.";
 
-type Pro = {
-  name: string;
-  role: string;
-  icon: string;
-  href: string;
-  blurb: string;
+// Pull the same tile images already used on the homepage / professional network.
+const findTile = (title: string) => {
+  for (const cat of professionalNetworkCategories) {
+    const t = cat.tiles.find((x) => x.title === title);
+    if (t) return t;
+  }
+  throw new Error(`Tile not found: ${title}`);
 };
 
-const professionals: Pro[] = [
-  {
-    name: "Probate Attorney",
-    role: "Legal Authority & Court Process",
-    icon: "⚖️",
-    href: "/for-probate-attorneys",
-    blurb:
-      "Files the will, opens probate, guides the executor through deadlines, and closes the estate.",
-  },
-  {
-    name: "CPA or Tax Professional",
-    role: "Estate & Final Tax Returns",
-    icon: "📊",
-    href: "/for-cpas",
-    blurb:
-      "Files final personal and estate income tax returns and advises on Washington and federal estate tax.",
-  },
-  {
-    name: "Certified Residential Appraiser",
-    role: "Date-of-Death Valuation",
-    icon: "🏷️",
-    href: "/real-estate-appraiser",
-    blurb:
-      "Establishes fair market value as of date of death — required for taxes, basis, and probate inventory.",
-  },
-  {
-    name: "Real Estate Broker",
-    role: "Estate Sale Specialist",
-    icon: "🏡",
-    href: "/realtor",
-    blurb:
-      "Advises on condition, lists and markets the property, and coordinates an estate-aware closing.",
-  },
-  {
-    name: "Estate Liquidator",
-    role: "Personal Property & Cleanout",
-    icon: "📦",
-    href: "/estate-liquidation",
-    blurb:
-      "Manages the cleanout and sale of furniture, household items, and other belongings.",
-  },
-  {
-    name: "Senior Move Manager",
-    role: "Transition & Relocation Support",
-    icon: "🚚",
-    href: "/senior-move-managers",
-    blurb:
-      "Coordinates packing, moving, and setup when a surviving family member relocates.",
-  },
+const teamTiles = [
+  { ...findTile("Real Estate Brokers"), title: "Real Estate Broker" },
+  { ...findTile("Real Estate Appraisers"), title: "Certified Residential Appraiser" },
+  { ...findTile("Elder Law Attorneys"), title: "Elder Law Attorney" },
+  { ...findTile("Senior Move Managers"), title: "Senior Move Manager" },
+  { ...findTile("Financial Planners"), title: "Financial Planner or CPA" },
+  { ...findTile("Senior Living Advisors"), title: "Senior Living Advisor" },
 ];
 
 const ProfessionalTeam = () => (
