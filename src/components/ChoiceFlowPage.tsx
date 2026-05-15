@@ -61,7 +61,7 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
                     {node.label}
                   </h1>
                 )}
-                {(isRoot || node.heroImage) && (
+                {(isRoot || node.heroImage || node.heroBandTitle) && (
                   <h1 className="sr-only">{node.heroBandTitle || node.label}</h1>
                 )}
                 {node.subtext && (
