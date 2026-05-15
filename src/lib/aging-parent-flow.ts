@@ -273,6 +273,7 @@ export const AGING_PARENT_ROOT: FlowNode = {
       label: "There's been a health crisis or emergency",
       icon: Activity,
       image: iconHealthCrisis,
+      heroBandTitle: "Health Crisis or Emergency",
       subtext: "What do you need help with right now?",
       children: [
         {
