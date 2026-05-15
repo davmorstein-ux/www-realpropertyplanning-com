@@ -19,7 +19,7 @@ import iconArrow from "@/assets/icons/property-guidance-arrow-icon-washington.we
 import iconPhone from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import JourneyOrientation from "@/components/JourneyOrientation";
 import ProfessionalNetworkGrid from "@/components/ProfessionalNetworkGrid";
-import wtdwHeroImage from "@/assets/what-to-do-with-the-house-hero-washington.webp";
+import wtdwHeroImage from "@/assets/building-trusted-professional-team-hero.png";
 import HeroBandTitle from "@/components/HeroBandTitle";
 
 interface Pathway {
