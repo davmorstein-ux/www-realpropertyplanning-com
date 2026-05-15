@@ -125,8 +125,7 @@ const UnderstandingHousingCareOptions = () => {
                 What Type of Support Are You Looking For?
               </h2>
               <p className="text-lg md:text-xl text-foreground leading-relaxed">
-                Every family's situation is different. Use the options below to find
-                the information most relevant to where you are right now.
+                {" "}
               </p>
             </div>
           </div>
