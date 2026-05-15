@@ -344,6 +344,7 @@ export const AGING_PARENT_ROOT: FlowNode = {
       label: "My parent's finances and legal documents need attention",
       icon: Scale,
       image: iconFinancesLegal,
+      heroBandTitle: "Finances & Legal Documents",
       subtext: "What would you like to address first?",
       children: [
         {
