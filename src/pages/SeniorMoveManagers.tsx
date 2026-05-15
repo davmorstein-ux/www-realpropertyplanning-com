@@ -18,6 +18,8 @@ import iconMail3d from "@/assets/icons/real-estate-email-envelope-3d-icon-washin
 import iconGlobe3d from "@/assets/icons/real-estate-website-globe-3d-icon-washington.webp";
 import { Icon3DFamily, Icon3DHome, Icon3DHeart } from "@/components/icons/Icon3D";
 import GinnysGirlsCard from "@/components/GinnysGirlsCard";
+import HeroBandTitle from "@/components/HeroBandTitle";
+import seniorMoveManagersHero from "@/assets/senior-move-managers-hero.png";
 
 const realEstateSideItems = [
   {
