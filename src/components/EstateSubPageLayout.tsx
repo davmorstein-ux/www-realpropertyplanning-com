@@ -15,6 +15,8 @@ interface EstateSubPageLayoutProps {
   bandTitle: string;
   children: ReactNode;
   disclaimer: string;
+  heroImageOverride?: string;
+  heroAltOverride?: string;
 }
 
 const EstateSubPageLayout = ({
@@ -25,6 +27,8 @@ const EstateSubPageLayout = ({
   bandTitle,
   children,
   disclaimer,
+  heroImageOverride,
+  heroAltOverride,
 }: EstateSubPageLayoutProps) => {
   return (
     <div className="min-h-screen bg-background">
@@ -43,8 +47,8 @@ const EstateSubPageLayout = ({
       <main id="main-content">
         <section className="bg-white">
           <img
-            src={heroImage}
-            alt="Managing an estate, probate, or inherited property in Washington State"
+            src={heroImageOverride ?? heroImage}
+            alt={heroAltOverride ?? "Managing an estate, probate, or inherited property in Washington State"}
             className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
             loading="eager"
           />
