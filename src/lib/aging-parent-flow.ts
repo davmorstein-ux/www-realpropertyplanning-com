@@ -51,6 +51,7 @@ export const AGING_PARENT_ROOT: FlowNode = {
       label: "My parent is still living independently",
       icon: Home,
       image: iconLivingIndependently,
+      heroBandTitle: "Living Independently",
       subtext: "What would you like to plan for next?",
       children: [
         {
@@ -117,6 +118,7 @@ export const AGING_PARENT_ROOT: FlowNode = {
       label: "My parent needs more help at home",
       icon: HandHelping,
       image: iconHelpAtHome,
+      heroBandTitle: "More Help at Home",
       subtext: "What kind of support are you looking into?",
       children: [
         {
@@ -182,8 +184,6 @@ export const AGING_PARENT_ROOT: FlowNode = {
       label: "We're exploring care or housing options",
       icon: Building2,
       image: iconHousingOptions,
-      heroImage: housingOptionsHero,
-      heroAlt: "Exploring care and housing options — Real Property Planning",
       heroBandTitle: "Exploring Care & Housing Options",
       subtext: "What are you trying to figure out?",
       children: [
@@ -271,6 +271,7 @@ export const AGING_PARENT_ROOT: FlowNode = {
       label: "There's been a health crisis or emergency",
       icon: Activity,
       image: iconHealthCrisis,
+      heroBandTitle: "Health Crisis or Emergency",
       subtext: "What do you need help with right now?",
       children: [
         {
@@ -341,6 +342,7 @@ export const AGING_PARENT_ROOT: FlowNode = {
       label: "My parent's finances and legal documents need attention",
       icon: Scale,
       image: iconFinancesLegal,
+      heroBandTitle: "Finances & Legal Documents",
       subtext: "What would you like to address first?",
       children: [
         {
