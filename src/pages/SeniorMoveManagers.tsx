@@ -56,39 +56,16 @@ const SeniorMoveManagers = () => (
     <Header />
     <main id="main-content">
       {/* Hero */}
-      <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="flex justify-center mb-1.5 md:mb-2">
-              <img
-                src={iconSeniorMoves}
-                alt="Senior move management and downsizing coordination in Washington State"
-                className="block w-full max-w-[15rem] h-auto object-contain"
-                loading="lazy"
-              />
-            </div>
-            <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">Senior Transitions</p>
-            <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-primary-foreground leading-tight mb-4">
-              Senior Move Managers
-            </h1>
-            <p className="text-white opacity-100 font-semibold text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-3">
-              Practical, compassionate help for older adults and families preparing to downsize, organize, pack,
-              relocate, or settle into a new home.
-            </p>
-            <Link to="/contact">
-              <Button variant="gold" size="lg" className="px-7 py-4 h-auto rounded-lg">
-                <img
-                  src={iconPhone3d}
-                  alt=""
-                  aria-hidden="true"
-                  className="w-5 h-5 mr-2 object-contain shrink-0"
-                  loading="lazy"
-                />
-                Request a Consultation
-              </Button>
-            </Link>
-          </div>
-        </div>
+      <section className="w-full overflow-hidden" style={{ lineHeight: 0 }}>
+        <img
+          src={seniorMoveManagersHero}
+          alt="Senior move managers loading a moving truck outside a Washington State home"
+          className="w-full h-auto object-cover"
+          style={{ display: "block" }}
+          loading="eager"
+          fetchPriority="high"
+        />
+        <HeroBandTitle as="h1">Senior Move Managers</HeroBandTitle>
       </section>
 
       {/* SECTION 1: Helping Families */}
