@@ -39,7 +39,7 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
           <div className="container px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
               {/* Hero image — root page or any node with explicit heroImage */}
-              {(isRoot || node.heroImage) && (
+              {(isRoot || node.heroImage || node.heroBandTitle) && (
                 <>
                   <div style={{ width: '100vw', position: 'relative', left: '50%', transform: 'translateX(-50%)', lineHeight: 0 }}>
                     <img
