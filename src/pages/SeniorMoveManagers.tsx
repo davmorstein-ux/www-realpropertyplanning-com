@@ -77,15 +77,8 @@ const SeniorMoveManagers = () => (
             </h2>
             <div className="text-muted-foreground text-base md:text-lg leading-relaxed space-y-4">
               <p>
-                When an aging parent can no longer safely or comfortably remain in the home they have lived in for
-                decades, families are often thrust into an unfamiliar and emotionally charged situation — all while
-                trying to care for someone they love. Questions come fast. Should we sell the house? What is it worth?
-                How do we coordinate the move with finding a new place? How do we do all of this without overwhelming
-                Mom or Dad?
-              </p>
-              <p>
-                Real Property Planning exists to help families answer those questions with calm, experienced guidance —
-                and to handle the real estate side of the transition so families can focus on what matters most.
+                Senior move managers coordinate every aspect of a late-life move, reducing stress and ensuring a safe,
+                smooth transition.
               </p>
             </div>
           </div>
