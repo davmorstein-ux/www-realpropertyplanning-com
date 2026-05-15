@@ -1,66 +1,26 @@
-import { Link } from "react-router-dom";
 import EstateSubPageLayout, { SubH2, P, Divider } from "@/components/EstateSubPageLayout";
+import ProfessionalNetworkCard from "@/components/ProfessionalNetworkCard";
+import { professionalNetworkCategories } from "@/components/professional-network-tiles-data";
 
 const DISCLAIMER =
   "The information on this page is for general guidance only and does not constitute legal, tax, or financial advice. Please consult licensed professionals for guidance specific to your situation.";
 
-type Pro = {
-  name: string;
-  role: string;
-  icon: string;
-  href: string;
-  blurb: string;
+// Pull the same tile images already used on the homepage / professional network.
+const findTile = (title: string) => {
+  for (const cat of professionalNetworkCategories) {
+    const t = cat.tiles.find((x) => x.title === title);
+    if (t) return t;
+  }
+  throw new Error(`Tile not found: ${title}`);
 };
 
-const professionals: Pro[] = [
-  {
-    name: "Probate Attorney",
-    role: "Legal Authority & Court Process",
-    icon: "⚖️",
-    href: "/for-probate-attorneys",
-    blurb:
-      "Files the will, opens probate, guides the executor through deadlines, and closes the estate.",
-  },
-  {
-    name: "CPA or Tax Professional",
-    role: "Estate & Final Tax Returns",
-    icon: "📊",
-    href: "/for-cpas",
-    blurb:
-      "Files final personal and estate income tax returns and advises on Washington and federal estate tax.",
-  },
-  {
-    name: "Certified Residential Appraiser",
-    role: "Date-of-Death Valuation",
-    icon: "🏷️",
-    href: "/real-estate-appraiser",
-    blurb:
-      "Establishes fair market value as of date of death — required for taxes, basis, and probate inventory.",
-  },
-  {
-    name: "Real Estate Broker",
-    role: "Estate Sale Specialist",
-    icon: "🏡",
-    href: "/realtor",
-    blurb:
-      "Advises on condition, lists and markets the property, and coordinates an estate-aware closing.",
-  },
-  {
-    name: "Estate Liquidator",
-    role: "Personal Property & Cleanout",
-    icon: "📦",
-    href: "/estate-liquidation",
-    blurb:
-      "Manages the cleanout and sale of furniture, household items, and other belongings.",
-  },
-  {
-    name: "Senior Move Manager",
-    role: "Transition & Relocation Support",
-    icon: "🚚",
-    href: "/senior-move-managers",
-    blurb:
-      "Coordinates packing, moving, and setup when a surviving family member relocates.",
-  },
+const teamTiles = [
+  { ...findTile("Real Estate Brokers"), title: "Real Estate Broker" },
+  { ...findTile("Real Estate Appraisers"), title: "Certified Residential Appraiser" },
+  { ...findTile("Elder Law Attorneys"), title: "Elder Law Attorney" },
+  { ...findTile("Senior Move Managers"), title: "Senior Move Manager" },
+  { ...findTile("Financial Planners"), title: "Financial Planner or CPA" },
+  { ...findTile("Senior Living Advisors"), title: "Senior Living Advisor" },
 ];
 
 const ProfessionalTeam = () => (
@@ -90,51 +50,11 @@ const ProfessionalTeam = () => (
 
     <Divider />
 
-    {/* Professional team tiles — break out of the 3xl article width for a 3-col grid */}
+    {/* Professional team tiles — same premium card used on the homepage / professional network */}
     <div className="not-prose -mx-4 md:-mx-16 lg:-mx-32">
-      <div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-        style={{ fontFamily: "'DM Sans', system-ui, sans-serif" }}
-      >
-        {professionals.map((p) => (
-          <Link
-            key={p.name}
-            to={p.href}
-            aria-label={`${p.name} — ${p.role}`}
-            className="group block bg-white rounded-xl p-6 no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 transition-transform duration-300 ease-out hover:-translate-y-1"
-            style={{
-              boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
-              fontFamily: "'DM Sans', system-ui, sans-serif",
-            }}
-          >
-            <div className="flex flex-col h-full">
-              <div className="text-3xl mb-3" aria-hidden="true">
-                {p.icon}
-              </div>
-              <h3
-                className="text-navy font-bold text-[20px] leading-snug mb-1 transition-colors duration-300 group-hover:text-gold"
-                style={{ fontFamily: "'DM Sans', system-ui, sans-serif" }}
-              >
-                {p.name}
-              </h3>
-              <p
-                className="text-muted-foreground text-[14px] font-medium uppercase tracking-wider mb-3"
-                style={{ fontFamily: "'DM Sans', system-ui, sans-serif" }}
-              >
-                {p.role}
-              </p>
-              <p
-                className="text-foreground text-[15px] leading-relaxed"
-                style={{ fontFamily: "'DM Sans', system-ui, sans-serif" }}
-              >
-                {p.blurb}
-              </p>
-              <span className="mt-4 inline-flex items-center gap-1 text-gold font-semibold text-sm transition-colors duration-300 group-hover:text-[hsl(var(--gold-dark))]">
-                Learn more
-                <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1">→</span>
-              </span>
-            </div>
-          </Link>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+        {teamTiles.map((tile) => (
+          <ProfessionalNetworkCard key={tile.title} tile={tile} />
         ))}
       </div>
     </div>
