@@ -184,8 +184,6 @@ export const AGING_PARENT_ROOT: FlowNode = {
       label: "We're exploring care or housing options",
       icon: Building2,
       image: iconHousingOptions,
-      heroImage: housingOptionsHero,
-      heroAlt: "Exploring care and housing options — Real Property Planning",
       heroBandTitle: "Exploring Care & Housing Options",
       subtext: "What are you trying to figure out?",
       children: [
