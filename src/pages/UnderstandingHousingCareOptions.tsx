@@ -137,14 +137,13 @@ const UnderstandingHousingCareOptions = () => {
           <div className="container px-6 lg:px-8">
             <div className="max-w-4xl mx-auto mb-7 text-center">
               <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">
-                Choose a Pathway
+                {" "}
               </p>
               <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold mb-3">
-                What Type of Support Are You Exploring?
+                {" "}
               </h2>
               <p className="text-navy text-lg leading-relaxed max-w-2xl mx-auto">
-                Pick the option closest to your situation. Each opens a calm,
-                educational overview.
+                {" "}
               </p>
             </div>
 
