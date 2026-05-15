@@ -118,6 +118,7 @@ export const AGING_PARENT_ROOT: FlowNode = {
       label: "My parent needs more help at home",
       icon: HandHelping,
       image: iconHelpAtHome,
+      heroBandTitle: "More Help at Home",
       subtext: "What kind of support are you looking into?",
       children: [
         {
