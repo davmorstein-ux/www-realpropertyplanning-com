@@ -79,7 +79,7 @@ const EstateProbateInheritedProperty = () => {
           />
         </section>
 
-        <HeroBandTitle>A Loved One Has Recently Passed Away</HeroBandTitle>
+        <HeroBandTitle>Estate, Probate & Inherited Property</HeroBandTitle>
 
         {/* TOPICS TO EXPLORE */}
         <section className="py-14 md:py-20 bg-cream">
