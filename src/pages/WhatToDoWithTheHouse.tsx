@@ -128,43 +128,29 @@ const WhatToDoWithTheHouse = () => {
               </p>
             </div>
 
-            <div className="max-w-5xl mx-auto space-y-4">
+            <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
               {decisions.map((d) => (
                 <Link
                   key={d.letter}
                   to={d.href}
-                  className="group block bg-white border-2 border-gold/25 rounded-2xl shadow-[0_8px_24px_-12px_rgba(27,43,75,0.18)] hover:border-gold/55 hover:-translate-y-0.5 hover:shadow-[0_12px_28px_-12px_rgba(27,43,75,0.28)] transition-all overflow-hidden"
+                  className="group flex flex-col bg-white rounded-xl p-6 md:p-8 shadow-[0_4px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_12px_28px_-8px_rgba(27,43,75,0.22)] hover:-translate-y-1 transition-all duration-300 ease-out font-sans"
                 >
-                  <div className="flex flex-col md:flex-row items-stretch">
-                    <div className="md:w-44 bg-gradient-to-br from-navy to-[hsl(var(--navy-dark))] text-cream p-5 md:p-6 flex md:flex-col items-center md:items-start gap-4 md:gap-2">
-                      <span className="font-serif text-5xl text-gold font-bold leading-none">
-                        {d.letter}
-                      </span>
-                      <span className="text-cream uppercase tracking-widest text-xs font-bold">
-                        Decision {d.letter}
-                      </span>
-                    </div>
-                    <div className="flex-1 p-5 md:p-6 flex items-center gap-5">
-                      <img
-                        src={d.icon}
-                        alt=""
-                        aria-hidden="true"
-                        className="w-14 h-14 md:w-16 md:h-16 object-contain shrink-0 hidden sm:block"
-                        loading="lazy"
-                      />
-                      <div className="flex-1">
-                        <h3 className="font-serif text-xl md:text-2xl text-navy font-semibold mb-2 group-hover:text-[hsl(var(--gold-dark))] transition-colors">
-                          {d.title}
-                        </h3>
-                        <p className="text-navy text-base md:text-lg leading-relaxed mb-2">
-                          {d.description}
-                        </p>
-                        <span className="inline-flex items-center gap-2 text-gold font-bold text-sm">
-                          Learn More <ArrowRight className="w-4 h-4" aria-hidden="true" />
-                        </span>
-                      </div>
-                    </div>
-                  </div>
+                  <img
+                    src={d.icon}
+                    alt=""
+                    aria-hidden="true"
+                    className="w-14 h-14 md:w-16 md:h-16 object-contain mb-4"
+                    loading="lazy"
+                  />
+                  <h3 className="font-sans text-xl md:text-2xl text-navy font-bold mb-3 group-hover:text-[hsl(var(--gold-dark))] transition-colors">
+                    {d.title}
+                  </h3>
+                  <p className="font-sans text-navy text-base leading-relaxed font-normal mb-5 flex-1">
+                    {d.description}
+                  </p>
+                  <span className="inline-flex items-center gap-2 text-gold font-bold text-sm mt-auto">
+                    Learn More <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                  </span>
                 </Link>
               ))}
             </div>
