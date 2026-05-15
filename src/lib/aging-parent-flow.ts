@@ -51,6 +51,7 @@ export const AGING_PARENT_ROOT: FlowNode = {
       label: "My parent is still living independently",
       icon: Home,
       image: iconLivingIndependently,
+      heroBandTitle: "Living Independently",
       subtext: "What would you like to plan for next?",
       children: [
         {
