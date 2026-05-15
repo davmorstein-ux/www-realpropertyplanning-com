@@ -1,6 +1,7 @@
 import EstateSubPageLayout, { SubH2, P, Divider } from "@/components/EstateSubPageLayout";
 import ProfessionalNetworkCard from "@/components/ProfessionalNetworkCard";
 import { professionalNetworkCategories } from "@/components/professional-network-tiles-data";
+import professionalTeamHero from "@/assets/professional-team-hero.png";
 
 const DISCLAIMER =
   "The information on this page is for general guidance only and does not constitute legal, tax, or financial advice. Please consult licensed professionals for guidance specific to your situation.";
@@ -31,6 +32,8 @@ const ProfessionalTeam = () => (
     breadcrumbName="Building Your Professional Team"
     bandTitle="BUILDING YOUR PROFESSIONAL TEAM"
     disclaimer={DISCLAIMER}
+    heroImageOverride={professionalTeamHero}
+    heroAltOverride="Coordinated professional team supporting estate, probate, and senior transitions in Washington State"
   >
     <SubH2>The Right Team Makes Everything Easier.</SubH2>
     <P>
