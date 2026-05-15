@@ -128,14 +128,14 @@ const WhatToDoWithTheHouse = () => {
               </p>
             </div>
 
-            <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div className="max-w-5xl mx-auto grid sm:grid-cols-2 gap-5">
               {decisions.map((d) => (
                 <Link
                   key={d.letter}
                   to={d.href}
                   className="group bg-white border-2 border-gold/25 rounded-2xl p-6 shadow-[0_6px_18px_-10px_rgba(27,43,75,0.2)] hover:border-gold/50 hover:-translate-y-1 hover:shadow-[0_12px_28px_-12px_rgba(27,43,75,0.28)] transition-all flex flex-col no-underline"
                 >
-                  
+                  <img src={d.icon} alt="" aria-hidden="true" className="w-12 h-12 object-contain mb-4" loading="lazy" />
                   <h3 className="font-serif text-xl text-navy font-semibold mb-2 no-underline group-hover:text-[hsl(var(--gold-dark))] transition-colors">
                     {d.title}
                   </h3>
@@ -168,7 +168,7 @@ const WhatToDoWithTheHouse = () => {
                     to={c.href}
                     className="group bg-white border-2 border-gold/25 rounded-2xl p-6 shadow-[0_6px_18px_-10px_rgba(27,43,75,0.2)] hover:border-gold/50 hover:-translate-y-1 hover:shadow-[0_12px_28px_-12px_rgba(27,43,75,0.28)] transition-all flex flex-col no-underline"
                   >
-                    
+                    <img src={c.icon} alt="" aria-hidden="true" className="w-12 h-12 object-contain mb-4" loading="lazy" />
                     <h3 className="font-serif text-xl text-navy font-semibold mb-2 no-underline group-hover:text-[hsl(var(--gold-dark))] transition-colors">
                       {c.title}
                     </h3>
