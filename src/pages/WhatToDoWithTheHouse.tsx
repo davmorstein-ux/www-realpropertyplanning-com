@@ -166,16 +166,16 @@ const WhatToDoWithTheHouse = () => {
                   <Link
                     key={c.href + c.title}
                     to={c.href}
-                    className="group bg-white border-2 border-gold/60 hover:border-[hsl(var(--gold-dark))] rounded-2xl p-6 shadow-[0_4px_12px_rgba(0,0,0,0.08)] hover:-translate-y-1 hover:shadow-[0_12px_28px_-8px_rgba(27,43,75,0.22)] transition-all duration-300 ease-out flex flex-col text-left"
+                    className="group bg-white border-2 border-gold/25 rounded-2xl p-6 shadow-[0_6px_18px_-10px_rgba(27,43,75,0.2)] hover:border-gold/50 hover:-translate-y-1 hover:shadow-[0_12px_28px_-12px_rgba(27,43,75,0.28)] transition-all flex flex-col no-underline"
                   >
-                    <img src={c.icon} alt="" aria-hidden="true" className="w-10 h-10 object-contain mb-3 self-start" loading="lazy" />
-                    <h3 className="font-sans text-xl text-navy font-bold mb-2 text-left">
+                    <img src={c.icon} alt="" aria-hidden="true" className="w-12 h-12 object-contain mb-4" loading="lazy" />
+                    <h3 className="font-serif text-xl text-navy font-semibold mb-2 no-underline group-hover:text-[hsl(var(--gold-dark))] transition-colors">
                       {c.title}
                     </h3>
-                    <p className="font-sans text-navy text-base leading-relaxed mb-4 flex-1 text-left">
+                    <p className="text-navy text-base leading-relaxed mb-4 flex-1 no-underline">
                       {c.description}
                     </p>
-                    <span className="inline-flex items-center gap-2 text-gold font-bold text-sm self-start">
+                    <span className="inline-flex items-center gap-2 text-gold font-bold text-sm">
                       Continue <ArrowRight className="w-4 h-4" aria-hidden="true" />
                     </span>
                   </Link>
