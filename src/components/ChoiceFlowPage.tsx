@@ -56,7 +56,7 @@ const ChoiceFlowPage = ({ lookup = AGING_PARENT_LOOKUP }: { lookup?: typeof AGIN
 
               {/* Heading */}
               <header className="mb-10 text-center">
-                {!isRoot && !node.heroImage && (
+                {!isRoot && !node.heroImage && !node.heroBandTitle && (
                   <h1 className="font-serif text-3xl md:text-5xl text-navy font-semibold leading-tight mb-4">
                     {node.label}
                   </h1>
