@@ -90,7 +90,7 @@ const SeniorMoveManagers = () => (
         <div className="container px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground text-center mb-8">
-              Who We Help
+              Who Senior Move Managers Work With:
             </h2>
             <div className="grid gap-6 sm:grid-cols-3">
               <div className="bg-background border border-border rounded-xl p-5 sm:p-6 shadow-sm text-center flex flex-col">
