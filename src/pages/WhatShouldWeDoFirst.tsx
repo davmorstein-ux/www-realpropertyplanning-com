@@ -197,39 +197,39 @@ const WhatShouldWeDoFirst = () => {
               </p>
             </div>
 
-            <div className="max-w-5xl mx-auto space-y-4">
+            <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
               {pathways.map((p) => (
                 <Link
                   key={p.href + p.letter}
                   to={p.href}
-                  className="group block bg-white border-2 border-gold/25 rounded-2xl shadow-[0_8px_24px_-12px_rgba(27,43,75,0.18)] hover:border-gold/55 hover:-translate-y-0.5 hover:shadow-[0_12px_28px_-12px_rgba(27,43,75,0.28)] transition-all overflow-hidden"
+                  aria-label={`${p.title} — ${p.description} — Learn More`}
+                  className="card-3d-blue group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
                 >
-                  <div className="flex flex-col md:flex-row items-stretch">
-                    <div className="md:w-44 bg-gradient-to-br from-navy to-[hsl(var(--navy-dark))] text-cream p-5 md:p-6 flex md:flex-col items-center md:items-start gap-4 md:gap-2">
-                      <span className="font-serif text-5xl text-gold font-bold leading-none">
-                        {p.letter}
-                      </span>
-                      <span className="text-cream uppercase tracking-widest text-xs font-bold">
-                        Pathway {p.letter}
-                      </span>
-                    </div>
-                    <div className="flex-1 p-5 md:p-6 flex items-center gap-5">
-                      <img
-                        src={p.icon}
-                        alt=""
-                        aria-hidden="true"
-                        className="w-14 h-14 md:w-16 md:h-16 object-contain shrink-0 hidden sm:block"
-                        loading="lazy"
-                      />
-                      <div className="flex-1">
-                        <h3 className="font-serif text-xl md:text-2xl text-navy font-semibold mb-2 group-hover:text-[hsl(var(--gold-dark))] transition-colors">
-                          {p.title}
-                        </h3>
-                        <p className="text-navy text-base md:text-lg leading-relaxed">
-                          {p.description}
-                        </p>
+                  <div className="card-3d-blue__inner h-full relative">
+                    <div className="card-3d-blue__face h-full">
+                      <div className="flex h-full flex-col">
+                        <div className="relative flex flex-1 flex-col items-center text-center" style={{ padding: "20px" }}>
+                          <img
+                            src={p.icon}
+                            alt=""
+                            aria-hidden="true"
+                            className="w-14 h-14 md:w-16 md:h-16 object-contain mb-3"
+                            loading="lazy"
+                          />
+                          <h3 className="font-serif text-[22px] md:text-[24px] font-semibold text-navy leading-snug mb-3">
+                            {p.title}
+                          </h3>
+                          <p className="text-foreground mb-6 !text-[16px] !leading-[1.6]">
+                            {p.description}
+                          </p>
+                          <span className="gold-cta mt-auto" style={{ padding: "10px 16px" }}>
+                            Learn More
+                            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                              <polyline points="9 18 15 12 9 6" />
+                            </svg>
+                          </span>
+                        </div>
                       </div>
-                      <ArrowRight className="w-6 h-6 text-gold shrink-0" aria-hidden="true" />
                     </div>
                   </div>
                 </Link>
