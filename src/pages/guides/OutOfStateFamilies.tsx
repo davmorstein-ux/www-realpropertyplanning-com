@@ -3,58 +3,68 @@ import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import { articleSchema } from "@/lib/schema";
-import TrustStrip from "@/components/TrustStrip";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
-import RelatedServices from "@/components/RelatedServices";
-import NextStepBlock from "@/components/NextStepBlock";
-import PageFAQ from "@/components/PageFAQ";
-import MidPageCTA from "@/components/MidPageCTA";
-import ProofCallout from "@/components/ProofCallout";
-import GoldCheck3D from "@/components/GoldCheck3D";
+import PremiumTile from "@/components/PremiumTile";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import heroIcon from "@/assets/icons/probate-guidance-book-open-icon-washington.webp";
 
-const challenges = [
-  "Coordinating property access, vendor appointments, and inspections from a different time zone",
-  "Making decisions about a property you may not have visited recently or ever seen in its current condition",
-  "Managing cleanout of decades of personal belongings without being there to sort through them",
-  "Communicating with attorneys, co-executors, beneficiaries, and vendors across distances",
-  "Understanding the local market, neighborhood dynamics, and realistic buyer expectations",
-  "Handling unexpected property issues — plumbing failures, security concerns, weather damage — from a distance",
+const needs = [
+  "Someone local to visit the property, document its condition, and provide an honest assessment",
+  "A certified appraiser to establish value for estate, trust, or tax purposes",
+  "A real estate broker experienced in estate and inherited property sales in Washington State",
+  "An estate cleanout or senior move manager to handle belongings without the family needing to travel",
+  "An elder law attorney or probate attorney familiar with Washington State law",
+  "Clear, regular communication so out-of-state family members stay informed at every step",
 ];
 
-const howWeHelp = [
-  "Visit the property, take detailed photos and video, and provide an honest assessment of condition and value",
-  "Coordinate cleanout crews, repair vendors, landscapers, and staging teams on your behalf",
-  "Provide regular photo updates and status reports so you always know what is happening",
-  "Manage the listing, marketing, showings, and negotiations without requiring you to travel",
-  "Communicate with your attorney, CPA, and other stakeholders to keep everyone aligned",
-  "Handle inspection responses, appraisal coordination, and closing logistics remotely",
-];
-
-const faqs = [
-  { question: "Do I need to fly to Washington to sell the property?", answer: "In most cases, no. Our team handles property access, vendor coordination, preparation, marketing, and the sale process on your behalf. Many clients manage the entire process remotely through phone calls, email updates, and photo reports. If you do visit, our team can maximize that visit to cover key decisions efficiently." },
-  { question: "How are documents signed when the family is not in Washington?", answer: "Washington allows remote notarization and electronic signatures for most real estate transactions. The professionals in this network work with title companies experienced in remote closings to ensure the paperwork process is smooth and convenient regardless of your location." },
-  { question: "What if I need someone to manage the property before it is ready to sell?", answer: "Our team can coordinate ongoing property management needs during the estate administration period — including securing the property, maintaining insurance, managing utilities, and addressing maintenance issues as they arise." },
-  { question: "Can our team help me find local attorneys or other professionals?", answer: "Yes. Our team maintains professional relationships with probate attorneys, CPAs, senior move managers, and other service providers throughout Washington State. We can provide referrals when clients need local professional support." },
+const cards = [
+  {
+    title: "Real Estate Broker",
+    description: "A broker experienced in estate and inherited property handles listing, showings, negotiations, and closing — keeping out-of-state family informed throughout without requiring travel.",
+    href: "/realtor",
+  },
+  {
+    title: "Certified Residential Appraiser",
+    description: "An independent appraisal establishes a defensible property value for estate, probate, or tax purposes — completed locally without the family needing to be present.",
+    href: "/real-estate-appraiser",
+  },
+  {
+    title: "Estate Cleanout & Move Management",
+    description: "Professionals who sort, pack, donate, and remove belongings from the property — coordinating the full cleanout so the home is ready for sale.",
+    href: "/senior-move-managers",
+  },
+  {
+    title: "Probate & Estate Attorney",
+    description: "Washington State probate and estate attorneys who can advise on legal authority, title issues, and the requirements for selling inherited or estate property.",
+    href: "/for-attorneys",
+  },
+  {
+    title: "Estate Sale & Liquidation",
+    description: "When a home contains decades of belongings, estate sale professionals handle valuation, sale, and removal — often generating proceeds that offset preparation costs.",
+    href: "/estate-liquidation",
+  },
+  {
+    title: "Financial Advisors & CPAs",
+    description: "Selling an inherited property has tax implications. A CPA or financial advisor helps out-of-state families understand capital gains, stepped-up basis, and distribution planning.",
+    href: "/for-cpas",
+  },
 ];
 
 const jsonLd = articleSchema({
-  headline: "How Out-of-State Families Can Manage a Washington Property Sale",
-  description: "Practical guidance for remote executors, trustees, and family members managing the sale of inherited or estate property in Washington State from a distance.",
+  headline: "Out-of-State Families: Washington State Property Resources",
+  description: "A referral hub connecting out-of-state families with trusted Washington State professionals for estate, probate, and inherited property situations.",
   url: "/guides/out-of-state-families",
   datePublished: "2026-03-27",
-  dateModified: "2026-03-27",
-  about: ["Out-of-state executor", "Remote property management", "Washington property sale", "Estate coordination", "Inherited property"],
+  dateModified: "2026-05-16",
+  about: ["Out-of-state executor", "Remote property management", "Washington property", "Estate coordination", "Inherited property"],
 });
 
 const OutOfStateFamilies = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
-      title="How Out-of-State Families Can Manage a Washington Property Sale | Real Property Planning"
-      description="Practical guidance for remote executors, trustees, heirs, and families managing the sale of inherited or estate property in Washington State from out of state."
+      title="Out-of-State Families | Washington State Property Resources"
+      description="A referral hub connecting out-of-state families with trusted Washington State professionals for estate, probate, and inherited property situations."
       jsonLd={jsonLd}
     />
     <BreadcrumbSchema items={[
@@ -64,148 +74,94 @@ const OutOfStateFamilies = () => (
     <Header />
     <main id="main-content">
 
-    <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl">
+      <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl">
             <div className="flex justify-center mb-1.5 md:mb-2">
               <img src={heroIcon} alt="" aria-hidden="true" className="block w-full max-w-[15rem] h-auto object-contain" loading="lazy" />
             </div>
-
-          <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">Educational Guide</p>
-          <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
-            How Out-of-State Families Can Manage a Washington Property Sale
-          </h1>
-          <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
-            Written for out-of-state executors, trustees, and heirs responsible for a Washington State estate property they cannot manage in person. If you have been named executor, trustee, or heir for an estate that includes property in Washington State — but you live somewhere else — you face a unique set of challenges. The property may need assessment, preparation, and sale, and you need someone on the ground you can trust to handle it.
-          </p>
-          <p className="text-lg text-primary-foreground/70 leading-relaxed">
-            Real Property Planning regularly works with out-of-state clients who need experienced, reliable local coordination for estate and inherited property throughout Washington State.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <TrustStrip />
-
-    <section className="py-16 lg:py-24 bg-background">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">What Makes Remote Property Sales Challenging?</h2>
-          <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-            Managing a property sale from a distance introduces challenges that local sellers do not face:
-          </p>
-          <ul className="space-y-4">
-            {challenges.map((item, i) => (
-              <li key={i} className="flex items-start gap-3">
-                <div className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
-                <span className="text-muted-foreground leading-relaxed">{item}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section className="py-16 lg:py-24 bg-secondary">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">How Our Team Provides Boots-on-the-Ground Support</h2>
-          <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-            Our team serves as your local point of contact throughout the entire process — from first property visit through closing day:
-          </p>
-          <ul className="space-y-4">
-            {howWeHelp.map((item, i) => (
-              <li key={i} className="flex items-start gap-3">
-                <GoldCheck3D size={20} className="mt-0.5" />
-                <span className="text-foreground leading-relaxed">{item}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    {/* Proof callout */}
-    <section className="py-10 bg-background">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
-          <ProofCallout
-            quote="Our team guided our family through a very difficult time with professionalism and genuine compassion. The team's valuation perspective and market knowledge were incredibly helpful."
-            attribution="Estate Attorney, Seattle"
-            context="Out-of-state estate coordination"
-            variant="accent"
-          />
-        </div>
-      </div>
-    </section>
-
-    <MidPageCTA
-      heading="Managing a Property From Out of State?"
-      body="Our team provides hands-on local coordination so you can manage the sale from wherever you are — with confidence and clear communication."
-      buttonText="Schedule a Conversation"
-      microcopy="No pressure. Just practical guidance for your situation."
-    />
-
-    <section className="py-16 lg:py-24 bg-background">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">What Should You Do First?</h2>
-          <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-            If you are an out-of-state executor, trustee, or family member responsible for Washington property, the best first step is a phone conversation. Our team can learn about your situation, answer initial questions, and outline what needs to happen — often before you need to make any firm decisions.
-          </p>
-          <p className="text-muted-foreground leading-relaxed mb-6">
-            From there, our team visits the property, provides a detailed condition report with photos, and develops a realistic plan for preparation and sale. You stay informed at every step without needing to manage the details yourself.
-          </p>
-          <p className="text-muted-foreground leading-relaxed">
-            Learn more about the full <Link to="/how-the-process-works" className="text-accent hover:text-gold underline underline-offset-4">sale process from consultation to closing</Link>, or explore guidance specifically for <Link to="/executors" className="text-accent hover:text-gold underline underline-offset-4">executors and personal representatives</Link>.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section className="py-12 bg-secondary">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
-          <p className="text-sm font-semibold text-muted-foreground mb-3">Related Resources</p>
-          <div className="flex flex-wrap gap-3">
-            <Link to="/executors" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Executors</Link>
-            <span className="text-muted-foreground/40">·</span>
-            <Link to="/guides/what-executors-should-do" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">What Executors Should Do First</Link>
-            <span className="text-muted-foreground/40">·</span>
-            <Link to="/guides/inherited-house-washington" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">What to Do With an Inherited House</Link>
-            <span className="text-muted-foreground/40">·</span>
-            <Link to="/guides/how-probate-real-estate-works" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">How Probate Sales Work</Link>
-            <span className="text-muted-foreground/40">·</span>
-            <Link to="/how-the-process-works" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">How the Process Works</Link>
+            <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
+              Out-of-State Families
+            </h1>
+            <p className="text-xl text-primary-foreground/80 leading-relaxed">
+              Connecting families managing Washington State property from a distance with the right local professionals.
+            </p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <PageFAQ faqs={faqs} heading="Out-of-State Property FAQs" />
-
-    <NextStepBlock
-      heading="Continue Learning"
-      steps={[
-        { title: "What Executors Should Do First", description: "A practical guide to the first 30 days of managing estate property.", href: "/guides/what-executors-should-do" },
-        { title: "How Probate Real Estate Works", description: "Understand the legal process and key decisions for selling property through probate.", href: "/guides/how-probate-real-estate-works" },
-        { title: "Appraisal vs. CMA: Which Do You Need?", description: "When a formal appraisal is required versus a comparative market analysis.", href: "/guides/appraisal-vs-cma" },
-      ]}
-    />
-
-    <RelatedServices currentPath="/guides/out-of-state-families" />
-
-    <section className="py-20 lg:py-28 bg-primary">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">Need Local Help With a Washington Property?</h2>
-          <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">Our team provides hands-on local coordination and clear communication — no matter where you are.</p>
-          <Link to="/contact"><Button variant="gold" size="lg"><img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy"/>Schedule a Conversation</Button></Link>
+      {/* Intro */}
+      <section className="py-16 lg:py-20 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <p className="text-foreground text-lg leading-relaxed">
+              Managing a Washington State property from another state is one of the most common situations families face during an estate or senior transition. Distance makes every step harder — coordinating access, assessing condition, managing vendors, and staying informed. This page connects out-of-state families with the right local professionals for each part of the process.
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <DisclaimerSection />
+      {/* What Out-of-State Families Typically Need */}
+      <section className="py-16 lg:py-20 bg-secondary">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-8">
+              What Out-of-State Families Typically Need
+            </h2>
+            <ul className="space-y-4">
+              {needs.map((item, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
+                  <span className="text-foreground text-lg leading-relaxed">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Who Can Help */}
+      <section className="py-16 lg:py-24 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-10 text-center">
+              Who Can Help
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {cards.map((card) => (
+                <PremiumTile
+                  key={card.title}
+                  to={card.href}
+                  title={card.title}
+                  description={card.description}
+                  cta="Learn More"
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Closing CTA */}
+      <section className="py-20 lg:py-28 bg-primary">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
+              Not Sure Where to Start?
+            </h2>
+            <p className="text-primary-foreground/80 text-lg leading-relaxed mb-8">
+              Most out-of-state families don't know which professional they need first. Real Property Planning can help identify the right sequence and connect you with trusted professionals throughout Washington State.
+            </p>
+            <Link to="/contact">
+              <Button variant="gold" size="lg">
+                Start a Conversation →
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <DisclaimerSection />
     </main>
     <Footer />
   </div>
