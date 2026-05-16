@@ -42,6 +42,11 @@ const HeroBandTitle = ({
     wordSpacing: "normal",
   };
 
+  useEffect(() => {
+    if (bare) return;
+    return scheduleHeroAutoScroll();
+  }, [bare]);
+
   const titleEl = (
     <Tag className={`hero-band-title ${className}`.trim()} style={titleStyle}>
       {children}
@@ -53,7 +58,7 @@ const HeroBandTitle = ({
   return (
     <>
       <div className="bg-white h-[3px]" aria-hidden="true" />
-      <div className="bg-primary py-9 md:py-10">
+      <div className="bg-primary py-9 md:py-10" data-hero-band>
         {titleEl}
       </div>
     </>
