@@ -114,23 +114,23 @@ const WhyValuationMatters = () => {
             <Accordion type="single" collapsible className="bg-card border border-border rounded-2xl shadow-sm">
               <AccordionItem value="quick-answer" className="border-0">
                 <AccordionTrigger className="px-6 md:px-8 py-5 hover:no-underline">
-                  <span className="text-left font-serif text-lg md:text-xl text-foreground font-semibold">
+                  <span className="text-left font-serif text-foreground font-semibold" style={{ fontSize: '17px', lineHeight: 1.6 }}>
                     Why does property valuation matter?
                   </span>
                 </AccordionTrigger>
                 <AccordionContent className="px-6 md:px-8 pb-6">
-                  <p className="text-gold font-bold tracking-[0.15em] uppercase text-xs mb-2">Quick Answer</p>
-                  <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
+                  <p className="text-gold font-bold tracking-[0.15em] uppercase mb-2" style={{ fontSize: '12px' }}>Quick Answer</p>
+                  <p className="text-muted-foreground" style={{ fontSize: '16px', lineHeight: 1.6 }}>
                     Accurate valuation helps prevent two costly estate-property mistakes: pricing too high, which can create carrying costs and lost buyer interest, or pricing too low, which can leave significant value behind. Real Property Planning connects executors, attorneys, and trustees with valuation-informed guidance and qualified professionals who can help support defensible pricing decisions based on property condition, market context, and estate objectives.
                   </p>
                   <div className="mt-5 pt-5 border-t border-border space-y-4">
                     <div>
-                      <p className="text-foreground text-sm font-semibold mb-1">Why can't I just use an online estimate?</p>
-                      <p className="text-muted-foreground text-sm leading-relaxed">Automated tools miss deferred maintenance, condition issues, and estate-specific factors that significantly affect what buyers will actually pay.</p>
+                      <p className="text-foreground font-semibold mb-1" style={{ fontSize: '16px', lineHeight: 1.6, fontWeight: 600 }}>Why can't I just use an online estimate?</p>
+                      <p className="text-muted-foreground" style={{ fontSize: '16px', lineHeight: 1.6 }}>Automated tools miss deferred maintenance, condition issues, and estate-specific factors that significantly affect what buyers will actually pay.</p>
                     </div>
                     <div>
-                      <p className="text-foreground text-sm font-semibold mb-1">Who benefits from valuation expertise?</p>
-                      <p className="text-muted-foreground text-sm leading-relaxed">Executors, trustees, and attorneys who need defensible pricing — especially in multi-heir situations or court-supervised sales.</p>
+                      <p className="text-foreground font-semibold mb-1" style={{ fontSize: '16px', lineHeight: 1.6, fontWeight: 600 }}>Who benefits from valuation expertise?</p>
+                      <p className="text-muted-foreground" style={{ fontSize: '16px', lineHeight: 1.6 }}>Executors, trustees, and attorneys who need defensible pricing — especially in multi-heir situations or court-supervised sales.</p>
                     </div>
                   </div>
                 </AccordionContent>
@@ -153,7 +153,7 @@ const WhyValuationMatters = () => {
               {whyMatters.map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <GoldCheck3D size={20} className="mt-0.5" />
-                  <span className="text-foreground">{item}</span>
+                  <span className="text-foreground" style={{ fontSize: '16px', lineHeight: 1.6 }}>{item}</span>
                 </li>
               ))}
             </ul>
@@ -176,7 +176,7 @@ const WhyValuationMatters = () => {
               {pricingMistakes.map((mistake, index) => (
                 <div key={index} className="bg-card border border-border rounded-xl p-4">
                   <h3 className="font-serif text-base text-foreground font-semibold mb-1.5">{mistake.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{mistake.consequence}</p>
+                  <p className="text-muted-foreground" style={{ fontSize: '16px', lineHeight: 1.6 }}>{mistake.consequence}</p>
                 </div>
               ))}
             </div>
@@ -195,11 +195,11 @@ const WhyValuationMatters = () => {
               {situations.map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
-                  <span className="text-muted-foreground">{item}</span>
+                  <span className="text-muted-foreground" style={{ fontSize: '16px', lineHeight: 1.6 }}>{item}</span>
                 </li>
               ))}
             </ul>
-            <p className="text-muted-foreground mt-6 leading-relaxed">
+            <p className="text-muted-foreground mt-6" style={{ fontSize: '16px', lineHeight: 1.6 }}>
               Real Property Planning connects executors, trustees, and attorneys with qualified professionals throughout Washington State.
             </p>
           </div>
