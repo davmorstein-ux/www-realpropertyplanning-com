@@ -195,11 +195,11 @@ const WhyValuationMatters = () => {
               {situations.map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
-                  <span className="text-muted-foreground" style={{ fontSize: '16px', lineHeight: 1.6 }}>{item}</span>
+                  <span className="text-muted-foreground !text-[16px] !leading-[1.6]">{item}</span>
                 </li>
               ))}
             </ul>
-            <p className="text-muted-foreground mt-6" style={{ fontSize: '16px', lineHeight: 1.6 }}>
+            <p className="text-muted-foreground mt-6 !text-[16px] !leading-[1.6]">
               Real Property Planning connects executors, trustees, and attorneys with qualified professionals throughout Washington State.
             </p>
           </div>
