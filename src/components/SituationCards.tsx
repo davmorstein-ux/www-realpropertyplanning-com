@@ -27,6 +27,14 @@ const situations = [
     href: "/executor-responsibilities-first-steps",
   },
   {
+    image: "/tiles/journey/property-valuation.png",
+    alt: "Property valuation and appraisal Washington State",
+    title: "I Need a Property Valuation",
+    description: "Understanding what a property is worth before making any decisions about selling, keeping, or transferring.",
+    cta: "Get a Valuation",
+    href: "/property-valuation",
+  },
+  {
     image: "/tiles/journey/housing-care-options.webp",
     alt: "Senior living and care options Washington State",
     title: "Exploring Housing & Care Options",
@@ -50,6 +58,14 @@ const situations = [
     cta: "Explore Options",
     href: "/what-to-do-with-the-house",
   },
+  {
+    image: "/tiles/journey/out-of-state-families.png",
+    alt: "Out-of-state families managing Washington State property remotely",
+    title: "Out-of-State Families",
+    description: "Managing a Washington State property remotely — coordinating care, sale, and decisions from a distance.",
+    cta: "Learn More",
+    href: "/out-of-state-families",
+  },
 ];
 
 const SituationCards = () => {
@@ -62,7 +78,7 @@ const SituationCards = () => {
           </h2>
         </div>
 
-        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 items-stretch">
           {situations.map((s) => (
             <Link
               key={s.href}
