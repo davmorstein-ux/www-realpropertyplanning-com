@@ -493,18 +493,18 @@ const HomepageHero = () => {
       {/* ===== Intro ===== */}
       <section style={{ background: "#F5F0E6", padding: isMobile ? "24px 20px 20px" : "32px 24px 24px" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto", textAlign: "center" }}>
-          <p
+          <h2
             style={{
               fontFamily: "'DM Sans', system-ui, sans-serif",
               color: "#1E3A5F",
-              fontSize: "24px",
-              fontWeight: 500,
-              lineHeight: 1.7,
-              margin: "0 0 8px 0",
+              fontSize: isMobile ? "28px" : "36px",
+              fontWeight: 700,
+              lineHeight: 1.3,
+              margin: "0 0 12px 0",
             }}
           >
-            For seniors, families, and estate professionals in Washington State
-          </p>
+            A Free Resource — Not a Sales Pitch
+          </h2>
           <p
             style={{
               fontFamily: "'DM Sans', system-ui, sans-serif",
@@ -515,7 +515,7 @@ const HomepageHero = () => {
               margin: 0,
             }}
           >
-            Housing transitions · Inherited property · Probate · Estate planning
+            Real Property Planning is a free educational hub for seniors, families, and the professionals who support them. Start by choosing the situation that best describes yours.
           </p>
         </div>
       </section>
