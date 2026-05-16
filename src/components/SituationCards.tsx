@@ -58,6 +58,14 @@ const situations = [
     cta: "Explore Options",
     href: "/what-to-do-with-the-house",
   },
+  {
+    image: "/tiles/journey/out-of-state-families.png",
+    alt: "Out-of-state families managing Washington State property remotely",
+    title: "Out-of-State Families",
+    description: "Managing a Washington State property remotely — coordinating care, sale, and decisions from a distance.",
+    cta: "Learn More",
+    href: "/out-of-state-families",
+  },
 ];
 
 const SituationCards = () => {
