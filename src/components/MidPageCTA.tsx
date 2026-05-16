@@ -55,7 +55,7 @@ const MidPageCTA = ({
           </Link>
           {microcopy && (
             <p
-              className={`text-sm mt-4 ${
+              className={`text-[16px] leading-[1.6] mt-4 ${
                 isDark ? "text-primary-foreground/50" : "text-muted-foreground/70"
               }`}
             >
