@@ -93,6 +93,33 @@ const WhyValuationMatters = () => {
       <BreadcrumbSchema items={[{ name: "Why Valuation Matters", url: "/why-valuation-matters" }]} />
       <Header />
       <main id="main-content">
+      <style>{`
+        #valuation-quick-answer-accordion [data-valuation-trigger],
+        #valuation-quick-answer-accordion [data-valuation-trigger] span {
+          font-size: 18px !important;
+          font-weight: 600 !important;
+          line-height: 1.5 !important;
+        }
+
+        #valuation-quick-answer-accordion [data-valuation-label] {
+          font-size: 13px !important;
+        }
+
+        #valuation-quick-answer-accordion [data-valuation-main-answer] {
+          font-size: 16px !important;
+          line-height: 1.7 !important;
+        }
+
+        #valuation-quick-answer-accordion [data-valuation-sub-question] {
+          font-size: 16px !important;
+          font-weight: 600 !important;
+        }
+
+        #valuation-quick-answer-accordion [data-valuation-sub-answer] {
+          font-size: 16px !important;
+          line-height: 1.7 !important;
+        }
+      `}</style>
 
       {/* HERO */}
       <section className="w-full overflow-hidden" style={{ lineHeight: 0 }}>
@@ -111,26 +138,26 @@ const WhyValuationMatters = () => {
       <section className="py-10 lg:py-14 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <Accordion type="single" collapsible className="bg-card border border-border rounded-2xl shadow-sm">
+            <Accordion id="valuation-quick-answer-accordion" type="single" collapsible className="bg-card border border-border rounded-2xl shadow-sm">
               <AccordionItem value="quick-answer" className="border-0">
-                <AccordionTrigger className="px-6 md:px-8 py-5 hover:no-underline [&]:!text-[18px] [&]:!font-bold">
-                  <span className="text-left font-serif text-foreground !text-[18px] !font-bold !leading-[1.6]">
+                <AccordionTrigger data-valuation-trigger className="px-6 md:px-8 py-5 hover:no-underline [&]:!text-[18px] [&]:!font-semibold">
+                  <span className="text-left font-serif text-foreground !text-[18px] !font-semibold !leading-[1.5]">
                     Why does property valuation matter?
                   </span>
                 </AccordionTrigger>
                 <AccordionContent className="px-6 md:px-8 pb-6 !text-[16px] !leading-[1.6]">
-                  <p className="text-gold font-bold tracking-[0.15em] uppercase mb-2 !text-[12px]">Quick Answer</p>
-                  <p className="text-muted-foreground !text-[16px] !leading-[1.6]">
+                  <p data-valuation-label className="text-gold font-bold tracking-[0.15em] uppercase mb-2 !text-[13px]">Quick Answer</p>
+                  <p data-valuation-main-answer className="text-muted-foreground !text-[16px] !leading-[1.7]">
                     Accurate valuation helps prevent two costly estate-property mistakes: pricing too high, which can create carrying costs and lost buyer interest, or pricing too low, which can leave significant value behind. Real Property Planning connects executors, attorneys, and trustees with valuation-informed guidance and qualified professionals who can help support defensible pricing decisions based on property condition, market context, and estate objectives.
                   </p>
                   <div className="mt-5 pt-5 border-t border-border space-y-4">
                     <div>
-                      <p className="text-foreground mb-1 !text-[16px] !leading-[1.6] !font-semibold">Why can't I just use an online estimate?</p>
-                      <p className="text-muted-foreground !text-[16px] !leading-[1.6]">Automated tools miss deferred maintenance, condition issues, and estate-specific factors that significantly affect what buyers will actually pay.</p>
+                      <p data-valuation-sub-question className="text-foreground mb-1 !text-[16px] !leading-[1.6] !font-semibold">Why can't I just use an online estimate?</p>
+                      <p data-valuation-sub-answer className="text-muted-foreground !text-[16px] !leading-[1.7]">Automated tools miss deferred maintenance, condition issues, and estate-specific factors that significantly affect what buyers will actually pay.</p>
                     </div>
                     <div>
-                      <p className="text-foreground mb-1 !text-[16px] !leading-[1.6] !font-semibold">Who benefits from valuation expertise?</p>
-                      <p className="text-muted-foreground !text-[16px] !leading-[1.6]">Executors, trustees, and attorneys who need defensible pricing — especially in multi-heir situations or court-supervised sales.</p>
+                      <p data-valuation-sub-question className="text-foreground mb-1 !text-[16px] !leading-[1.6] !font-semibold">Who benefits from valuation expertise?</p>
+                      <p data-valuation-sub-answer className="text-muted-foreground !text-[16px] !leading-[1.7]">Executors, trustees, and attorneys who need defensible pricing — especially in multi-heir situations or court-supervised sales.</p>
                     </div>
                   </div>
                 </AccordionContent>
