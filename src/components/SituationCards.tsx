@@ -32,7 +32,7 @@ const situations = [
     title: "I Need a Property Valuation",
     description: "Understanding what a property is worth before making any decisions about selling, keeping, or transferring.",
     cta: "Get a Valuation",
-    href: "/property-valuation",
+    href: "https://realpropertyplanning.com/why-valuation-matters",
   },
   {
     image: "/tiles/journey/housing-care-options.webp",

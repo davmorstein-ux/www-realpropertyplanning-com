@@ -232,7 +232,7 @@ const App = () => (
           <Route path="/selling-an-inherited-home" element={<SellingAnInheritedHome />} />
           <Route path="/aging-in-place-staying-home-safely" element={<AgingInPlaceStayingHomeSafely />} />
           <Route path="/date-of-death-valuation-property-appraisals" element={<DateOfDeathValuationPropertyAppraisals />} />
-          <Route path="/property-valuation" element={<Navigate to="/date-of-death-valuation-property-appraisals" replace />} />
+          
           <Route path="/out-of-state-families" element={<Navigate to="/guides/out-of-state-families" replace />} />
           <Route path="/senior-placement" element={<SeniorPlacement />} />
           <Route path="/sell-house-fund-senior-living" element={<SellHouseFundSeniorLiving />} />
