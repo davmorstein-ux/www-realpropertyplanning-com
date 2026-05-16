@@ -309,11 +309,11 @@ const RelatedServices = ({ currentPath, links: linksOverride, heading: headingOv
                           <h3 className="mb-3 font-serif text-xl font-extrabold leading-snug text-foreground transition-colors duration-300 group-hover:text-accent sm:text-[1.38rem]" style={{ textShadow: "0 1px 4px hsla(220, 30%, 15%, 0.25)" }}>
                             {link.label}
                           </h3>
-                          <p className="text-sm leading-relaxed text-muted-foreground">
+                          <p className="text-[16px] leading-[1.6] text-muted-foreground">
                             {link.description}
                           </p>
                         </div>
-                        <div className="mt-5 flex items-center gap-1.5 text-sm font-medium text-primary/75 transition-colors duration-300 group-hover:text-accent">
+                        <div className="mt-5 flex items-center gap-1.5 text-[16px] leading-[1.6] font-medium text-primary/75 transition-colors duration-300 group-hover:text-accent">
                           <span>Learn more</span>
                           <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1">→</span>
                         </div>
