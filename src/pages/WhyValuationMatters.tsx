@@ -217,28 +217,6 @@ const WhyValuationMatters = () => {
 
       <RelatedServices currentPath="/why-valuation-matters" />
 
-      {/* Bottom CTA */}
-      <section className="py-20 lg:py-28 bg-primary">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
-              Need experienced pricing guidance for an estate, inherited, or trust-owned property?
-            </h2>
-            <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
-              Real Property Planning provides honest, market-grounded assessments that help clients and fiduciaries make confident pricing decisions.
-            </p>
-            <div className="flex justify-center">
-              <Link to="/contact">
- <Button variant="gold" size="lg"className="hover:-light">
-                  <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy"/>
-                  Discuss a Property
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <DisclaimerSection />
       </main>
       <Footer />
