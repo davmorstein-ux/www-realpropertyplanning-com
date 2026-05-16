@@ -153,7 +153,7 @@ const WhyValuationMatters = () => {
               {whyMatters.map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <GoldCheck3D size={20} className="mt-0.5" />
-                  <span className="text-foreground" style={{ fontSize: '16px', lineHeight: 1.6 }}>{item}</span>
+                  <span className="text-foreground !text-[16px] !leading-[1.6]">{item}</span>
                 </li>
               ))}
             </ul>
