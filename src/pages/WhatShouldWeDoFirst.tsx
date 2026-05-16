@@ -174,8 +174,8 @@ const WhatShouldWeDoFirst = () => {
               fetchPriority="high"
             />
           </div>
-          <HeroBandTitle as="p">
-            A starting point for senior housing transitions, care and probate decisions
+          <HeroBandTitle as="h1">
+            What Should We Do First?
           </HeroBandTitle>
         </section>
 
