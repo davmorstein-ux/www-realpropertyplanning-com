@@ -183,46 +183,6 @@ const WhyValuationMatters = () => {
         </div>
       </section>
 
-      {/* How the Dual Credential Works — Accordion */}
-      <section className="py-16 lg:py-20 bg-background">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-              How Does the Dual Credential Work in Practice?
-            </h2>
-            <Accordion type="single" collapsible className="space-y-3">
-              <AccordionItem value="cma" className="bg-card border border-border rounded-2xl overflow-hidden data-[state=open]:border-gold/25 transition-colors">
-                <AccordionTrigger className="text-left font-serif text-foreground hover:text-gold hover:no-underline px-6 py-5" style={{ fontSize: '20px', fontWeight: '700' }}>
-                  How is Real Property Planning's pricing different from a standard agent's CMA?
-                </AccordionTrigger>
-                <AccordionContent className="px-6 pb-5 pt-0 text-muted-foreground leading-relaxed">
-                  Most agents base pricing on comparable sales of similar homes in typical condition. Estate properties often have original kitchens, aging systems, and deferred maintenance that standard comparables don't account for. Real Property Planning evaluates properties the way a lender's appraiser would — assessing functional utility, physical depreciation, and effective age alongside location.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="anticipate" className="bg-card border border-border rounded-2xl overflow-hidden data-[state=open]:border-gold/25 transition-colors">
-                <AccordionTrigger className="text-left font-serif text-foreground hover:text-gold hover:no-underline px-6 py-5" style={{ fontSize: '20px', fontWeight: '700' }}>
-                  How does this prevent surprises during the sale?
-                </AccordionTrigger>
-                <AccordionContent className="px-6 pb-5 pt-0 text-muted-foreground leading-relaxed">
-                  Our team anticipates appraisal challenges before they derail a deal, prices properties to attract serious buyers while protecting estate value, and advises families on which repairs will actually move the needle. The result is fewer surprises, faster closings, and pricing decisions that hold up under scrutiny.
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonial */}
-      <section className="py-14 lg:py-16 bg-secondary">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <p className="text-foreground text-lg italic leading-relaxed mb-4">
-              "The dual background in brokerage and appraisal gave us confidence that the property was priced correctly. He made a complicated situation feel manageable."
-            </p>
-            <p className="text-muted-foreground text-[15px] font-medium">— Professional Referral · Probate property sale coordination</p>
-          </div>
-        </div>
-      </section>
 
       <MidPageCTA
         heading="Need Help Pricing an Estate or Inherited Property?"
