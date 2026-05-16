@@ -209,13 +209,6 @@ const WhatShouldWeDoFirst = () => {
                     <div className="card-3d-blue__face h-full">
                       <div className="flex h-full flex-col">
                         <div className="relative flex flex-1 flex-col items-center text-center" style={{ padding: "20px" }}>
-                          <img
-                            src={p.icon}
-                            alt=""
-                            aria-hidden="true"
-                            className="w-14 h-14 md:w-16 md:h-16 object-contain mb-3"
-                            loading="lazy"
-                          />
                           <h3 className="font-serif text-[22px] md:text-[24px] font-semibold text-navy leading-snug mb-3">
                             {p.title}
                           </h3>
