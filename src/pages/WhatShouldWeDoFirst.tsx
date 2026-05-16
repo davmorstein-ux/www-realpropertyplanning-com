@@ -187,10 +187,10 @@ const WhatShouldWeDoFirst = () => {
           <div className="container px-6 lg:px-8">
             <div className="max-w-4xl mx-auto mb-7 text-center">
               <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">
-                Choose Your Path
+                {"\u200B"}
               </p>
-              <h2 className="font-serif text-3xl md:text-4xl text-navy font-semibold mb-3">
-                What Best Describes Your Situation?
+              <h2 className="font-serif text-3xl text-navy font-semibold mb-3 md:text-2xl">
+                Choose the Topic That Best Describes Your Situation?
               </h2>
               <p className="text-navy text-lg leading-relaxed max-w-2xl mx-auto">
                 {"\u200B"}
