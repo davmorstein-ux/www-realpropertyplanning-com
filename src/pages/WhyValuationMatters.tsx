@@ -176,7 +176,7 @@ const WhyValuationMatters = () => {
               {pricingMistakes.map((mistake, index) => (
                 <div key={index} className="bg-card border border-border rounded-xl p-4">
                   <h3 className="font-serif text-base text-foreground font-semibold mb-1.5">{mistake.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{mistake.consequence}</p>
+                  <p className="text-muted-foreground" style={{ fontSize: '16px', lineHeight: 1.6 }}>{mistake.consequence}</p>
                 </div>
               ))}
             </div>
