@@ -497,25 +497,25 @@ const HomepageHero = () => {
             style={{
               fontFamily: "'DM Sans', system-ui, sans-serif",
               color: "#1E3A5F",
-              fontSize: isMobile ? "28px" : "36px",
+              fontSize: "18px",
               fontWeight: 700,
               lineHeight: 1.3,
               margin: "0 0 12px 0",
             }}
           >
-            A Free Resource — Not a Sales Pitch
+            A Free Resource For Seniors, Families & Professionals
           </h2>
           <p
             style={{
               fontFamily: "'DM Sans', system-ui, sans-serif",
               color: "#1E3A5F",
-              fontSize: "24px",
-              fontWeight: 500,
+              fontSize: "18px",
+              fontWeight: 700,
               lineHeight: 1.7,
               margin: 0,
             }}
           >
-            Real Property Planning is a free educational hub for seniors, families, and the professionals who support them. Start by choosing the situation that best describes yours.
+            Start by choosing the situation that best describes yours.
           </p>
         </div>
       </section>
