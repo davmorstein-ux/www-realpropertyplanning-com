@@ -193,7 +193,7 @@ const WhatShouldWeDoFirst = () => {
                 What Best Describes Your Situation?
               </h2>
               <p className="text-navy text-lg leading-relaxed max-w-2xl mx-auto">
-                Pick the closest match. Each pathway opens a calm, guided roadmap.
+                {"\u200B"}
               </p>
             </div>
 
