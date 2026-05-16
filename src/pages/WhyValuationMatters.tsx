@@ -107,26 +107,49 @@ const WhyValuationMatters = () => {
         <HeroBandTitle>Pricing &amp; Valuation Expertise</HeroBandTitle>
       </section>
 
-      <DirectAnswerBlock
-        question="Why does property valuation matter in estate and probate sales?"
-        answer="Accurate valuation helps prevent two costly estate-property mistakes: pricing too high, which can create carrying costs and lost buyer interest, or pricing too low, which can leave significant value behind. Real Property Planning connects executors, attorneys, and trustees with valuation-informed guidance and qualified professionals who can help support defensible pricing decisions based on property condition, market context, and estate objectives."
-        supportFaqs={[
-          { question: "Why can't I just use an online estimate?", answer: "Automated tools miss deferred maintenance, condition issues, and estate-specific factors that significantly affect what buyers will actually pay." },
-          { question: "Who benefits from valuation expertise?", answer: "Executors, trustees, and attorneys who need defensible pricing — especially in multi-heir situations or court-supervised sales." },
-        ]}
-      />
+      {/* Quick Answer accordion */}
+      <section className="py-10 lg:py-14 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <Accordion type="single" collapsible className="bg-card border border-border rounded-2xl shadow-sm">
+              <AccordionItem value="quick-answer" className="border-0">
+                <AccordionTrigger className="px-6 md:px-8 py-5 hover:no-underline">
+                  <span className="text-left font-serif text-lg md:text-xl text-foreground font-semibold">
+                    Why does property valuation matter?
+                  </span>
+                </AccordionTrigger>
+                <AccordionContent className="px-6 md:px-8 pb-6">
+                  <p className="text-gold font-bold tracking-[0.15em] uppercase text-xs mb-2">Quick Answer</p>
+                  <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
+                    Accurate valuation helps prevent two costly estate-property mistakes: pricing too high, which can create carrying costs and lost buyer interest, or pricing too low, which can leave significant value behind. Real Property Planning connects executors, attorneys, and trustees with valuation-informed guidance and qualified professionals who can help support defensible pricing decisions based on property condition, market context, and estate objectives.
+                  </p>
+                  <div className="mt-5 pt-5 border-t border-border space-y-4">
+                    <div>
+                      <p className="text-foreground text-sm font-semibold mb-1">Why can't I just use an online estimate?</p>
+                      <p className="text-muted-foreground text-sm leading-relaxed">Automated tools miss deferred maintenance, condition issues, and estate-specific factors that significantly affect what buyers will actually pay.</p>
+                    </div>
+                    <div>
+                      <p className="text-foreground text-sm font-semibold mb-1">Who benefits from valuation expertise?</p>
+                      <p className="text-muted-foreground text-sm leading-relaxed">Executors, trustees, and attorneys who need defensible pricing — especially in multi-heir situations or court-supervised sales.</p>
+                    </div>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
+        </div>
+      </section>
 
       <TrustStrip />
 
       {/* Why Accurate Value Guidance Matters */}
-      <section className="py-20 lg:py-28 bg-background">
+      <section className="py-12 lg:py-16 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <img src={scale3d} alt="" aria-hidden="true" className="w-10 h-10 object-contain mb-6"  loading="lazy"/>
-            <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-5">
               Why Does Accurate Value Guidance Matter in Estate Sales?
             </h2>
-            <ul className="space-y-4">
+            <ul className="space-y-2.5">
               {whyMatters.map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <GoldCheck3D size={20} className="mt-0.5" />
@@ -139,21 +162,21 @@ const WhyValuationMatters = () => {
       </section>
 
       {/* What Can Go Wrong */}
-      <section className="py-20 lg:py-28 bg-secondary">
+      <section className="py-12 lg:py-16 bg-secondary">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <img src={warning3d} alt="" aria-hidden="true" className="w-10 h-10 object-contain mb-6"  loading="lazy"/>
-            <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
+          <div className="max-w-5xl mx-auto">
+            <img src={warning3d} alt="" aria-hidden="true" className="w-10 h-10 object-contain mb-5" loading="lazy"/>
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-3">
               What Happens When Estate Property Pricing Goes Wrong?
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
               Pricing mistakes in estate situations create consequences that go beyond just dollars:
             </p>
-            <div className="space-y-5">
+            <div className="grid sm:grid-cols-2 gap-4">
               {pricingMistakes.map((mistake, index) => (
-                <div key={index} className="bg-card border border-border rounded-xl p-6">
-                  <h3 className="font-serif text-lg text-foreground font-semibold mb-2">{mistake.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{mistake.consequence}</p>
+                <div key={index} className="bg-card border border-border rounded-xl p-4">
+                  <h3 className="font-serif text-base text-foreground font-semibold mb-1.5">{mistake.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{mistake.consequence}</p>
                 </div>
               ))}
             </div>
@@ -162,13 +185,13 @@ const WhyValuationMatters = () => {
       </section>
 
       {/* Situations Where Valuation Is Critical */}
-      <section className="py-20 lg:py-28 bg-background">
+      <section className="py-12 lg:py-16 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-5">
               When Does Valuation Expertise Become Critical?
             </h2>
-            <ul className="space-y-4">
+            <ul className="space-y-3">
               {situations.map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
@@ -176,13 +199,23 @@ const WhyValuationMatters = () => {
                 </li>
               ))}
             </ul>
-            <p className="text-muted-foreground mt-8 leading-relaxed">
-              Executors and trustees can learn more about <Link to="/executors" className="text-accent hover:text-gold underline underline-offset-4">how our team supports the sale process</Link>. Attorneys may also find value in the <Link to="/for-attorneys" className="text-accent hover:text-gold underline underline-offset-4">attorney referral resources</Link>.
+            <p className="text-muted-foreground mt-6 leading-relaxed">
+              Real Property Planning connects executors, trustees, and attorneys with qualified professionals throughout Washington State.
             </p>
           </div>
         </div>
       </section>
 
+      <PageFAQ faqs={faqs} heading="Valuation & Pricing FAQs" />
+
+      <RelatedServices
+        currentPath="/why-valuation-matters"
+        links={["probateSales", "seniorTransitions", "executors"]}
+        heading="Related Resources"
+        intro=""
+      />
+
+      <DisclaimerSection />
 
       <MidPageCTA
         heading="Need Help Pricing an Estate or Inherited Property?"
@@ -191,33 +224,6 @@ const WhyValuationMatters = () => {
         microcopy="No pressure. Just honest, market-grounded guidance."
       />
 
-      <PageFAQ faqs={faqs} heading="Valuation & Pricing FAQs" />
-
-      {/* Related Resources */}
-      <section className="py-12 bg-background">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <p className="text-sm font-semibold text-muted-foreground mb-3">Related Resources</p>
-            <div className="flex flex-wrap gap-3">
-              <Link to="/probate-estate-sales" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Probate & Estate Sales</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/executors" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Executors</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/for-attorneys" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Attorneys</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/how-the-process-works" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">How the Process Works</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/senior-transitions" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Senior Transitions</Link>
-              <span className="text-muted-foreground/40">·</span>
-              <Link to="/faq" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">All FAQs</Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <RelatedServices currentPath="/why-valuation-matters" />
-
-      <DisclaimerSection />
       </main>
       <Footer />
     </div>
