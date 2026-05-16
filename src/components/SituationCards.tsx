@@ -27,6 +27,14 @@ const situations = [
     href: "/executor-responsibilities-first-steps",
   },
   {
+    image: "/tiles/journey/property-valuation.png",
+    alt: "Property valuation and appraisal Washington State",
+    title: "I Need a Property Valuation",
+    description: "Understanding what a property is worth before making any decisions about selling, keeping, or transferring.",
+    cta: "Get a Valuation",
+    href: "/property-valuation",
+  },
+  {
     image: "/tiles/journey/housing-care-options.webp",
     alt: "Senior living and care options Washington State",
     title: "Exploring Housing & Care Options",
