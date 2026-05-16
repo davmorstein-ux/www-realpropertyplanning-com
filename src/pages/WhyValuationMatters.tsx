@@ -116,7 +116,7 @@ const WhyValuationMatters = () => {
         }
 
         #valuation-quick-answer-accordion [data-valuation-sub-answer] {
-          font-size: 16px !important;
+          font-size: 1rem !important;
           line-height: 1.7 !important;
         }
       `}</style>
