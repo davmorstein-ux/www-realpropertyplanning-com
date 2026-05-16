@@ -45,7 +45,7 @@ export function scheduleHeroAutoScroll() {
       const bandTop = band.getBoundingClientRect().top + window.scrollY;
       const targetScrollY = Math.max(0, bandTop - headerHeight);
 
-      slowScrollTo(targetScrollY, 3000);
+      slowScrollTo(targetScrollY, 5000);
     }, 5000);
   };
 
