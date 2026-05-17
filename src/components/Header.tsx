@@ -267,7 +267,7 @@ const Header = () => {
               justifyContent: "space-between",
               alignItems: "center",
               width: "100%",
-              gap: 12,
+              gap: 14,
             }}
           >
             {NAV.map((item) => {
@@ -277,7 +277,7 @@ const Header = () => {
                 ...fontBody,
                 color: "rgba(255,255,255,0.92)",
                 textDecoration: "none",
-                fontSize: 15,
+                fontSize: 16,
                 fontWeight: 700 as const,
                 letterSpacing: "0.08em",
                 textTransform: "uppercase" as const,
