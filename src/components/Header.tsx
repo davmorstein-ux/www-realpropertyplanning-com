@@ -12,7 +12,7 @@ type NavChild = { label: string; href: string };
 type NavItem = { label: string; href: string; children?: NavChild[] };
 
 const NAV: NavItem[] = [
-  { label: "Home", href: "/" },
+  
   {
     label: "Start Here",
     href: "/what-should-we-do-first",
