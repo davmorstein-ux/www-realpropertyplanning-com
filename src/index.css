@@ -1986,3 +1986,40 @@ img, svg, hr {
   50% { opacity: 1; transform: translateZ(0) scale(1.1); }
   100% { opacity: 0.5; transform: translateZ(0) scale(1); }
 }
+
+/* === /terminology page typography + accordion overrides === */
+.terminology-page {
+  font-size: 16px;
+  line-height: 1.7;
+}
+.terminology-page p {
+  font-size: 16px;
+  line-height: 1.7;
+}
+.terminology-page strong,
+.terminology-page b {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+/* Transparent expanded accordion content area (panel only, not the header) */
+.terminology-page [data-radix-accordion-content] {
+  background-color: transparent !important;
+  background: none !important;
+}
+
+/* Slow, smooth accordion open/close on the terminology page */
+@keyframes terminology-accordion-down {
+  from { height: 0; opacity: 0; }
+  to   { height: var(--radix-accordion-content-height); opacity: 1; }
+}
+@keyframes terminology-accordion-up {
+  from { height: var(--radix-accordion-content-height); opacity: 1; }
+  to   { height: 0; opacity: 0; }
+}
+.terminology-page [data-radix-accordion-content][data-state="open"] {
+  animation: terminology-accordion-down 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+.terminology-page [data-radix-accordion-content][data-state="closed"] {
+  animation: terminology-accordion-up 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
