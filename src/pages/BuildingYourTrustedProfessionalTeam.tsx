@@ -9,6 +9,7 @@ import { ArrowRight } from "lucide-react";
 import { articleSchema } from "@/lib/schema";
 import wtdwHeroImage from "@/assets/building-trusted-professional-team-hero.png";
 import HeroBandTitle from "@/components/HeroBandTitle";
+import PremiumInfoCard from "@/components/PremiumInfoCard";
 
 type Card = { title: string; description: string; href: string };
 
