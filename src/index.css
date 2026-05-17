@@ -2041,3 +2041,14 @@ img, svg, hr {
 [data-radix-accordion-content][data-state='closed'] {
   animation: accordionUp 3.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
+
+.header-logo {
+  transition: filter 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.header-logo:hover {
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6))
+          drop-shadow(0 0 16px rgba(255, 255, 255, 0.3));
+  transform: scale(1.05);
+}
