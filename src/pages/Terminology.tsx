@@ -122,7 +122,7 @@ const glossaryData: GlossaryCategory[] = [
 
 const Terminology = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background terminology-page">
       <SEOHead
         title="Wills, Probate & Real Property Glossary | Real Property Planning"
         description="A clear glossary of wills, probate, inheritance, and real property terms to help attorneys, executors, trustees, and families understand the process of managing and selling estate-related real estate."
