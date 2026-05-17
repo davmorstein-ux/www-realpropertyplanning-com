@@ -8,7 +8,7 @@ type Msg = { role: "user" | "assistant"; content: string };
 const OPENING: Msg = {
   role: "assistant",
   content:
-    "Hi! We're here to help answer your questions and drive you to the page you are looking for.",
+    "Hi there! We're here to help answer your questions and drive you to the right page.",
 };
 
 const LIMIT_MSG: Msg = {
@@ -331,7 +331,6 @@ const ChatAssistant = () => {
               <img src={chatAvatar} alt="" aria-hidden="true" />
               <div className="rpp-chat-header-text">
                 <h3>Ask Us Anything</h3>
-                <p>We're here to help</p>
               </div>
               <button
                 type="button"
