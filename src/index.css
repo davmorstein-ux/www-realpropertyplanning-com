@@ -2052,3 +2052,11 @@ img, svg, hr {
           drop-shadow(0 0 16px rgba(255, 255, 255, 0.3));
   transform: scale(1.05);
 }
+
+/* Premium cards: no underlines on any text within gold-bordered card links */
+a[class*="border-gold"],
+a[class*="border-gold"] *,
+a.card-3d-blue,
+a.card-3d-blue * {
+  text-decoration: none !important;
+}
