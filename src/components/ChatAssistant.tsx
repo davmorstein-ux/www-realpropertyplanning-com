@@ -103,11 +103,17 @@ const ChatAssistant = () => {
           0%, 100% { transform: scale(1); opacity: 1; }
           50% { transform: scale(1.25); opacity: 0.7; }
         }
-        .rpp-chat-fab {
+        .rpp-chat-anchor {
           position: fixed;
           left: 72px;
           top: calc(50% + 42px);
-          transform: translate(-50%, 0);
+          width: 110px;
+          height: 110px;
+          transform: translateX(-50%);
+          z-index: 1000;
+        }
+        .rpp-chat-fab {
+          position: relative;
           width: 110px;
           height: 110px;
           border-radius: 50%;
@@ -116,12 +122,11 @@ const ChatAssistant = () => {
           padding: 0;
           cursor: pointer;
           box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-          z-index: 1000;
           overflow: visible;
           transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
         }
         .rpp-chat-fab:hover {
-          transform: translate(-50%, 0) scale(1.05);
+          transform: scale(1.05);
           box-shadow: 0 8px 28px rgba(201,168,76,0.45);
           filter: drop-shadow(0 0 10px rgba(201,168,76,0.5));
         }
@@ -145,11 +150,13 @@ const ChatAssistant = () => {
           animation: rpp-pulse 1.8s ease-in-out infinite;
         }
         .rpp-chat-panel {
-          position: fixed;
-          right: 24px;
-          bottom: 110px;
+          position: absolute;
+          top: calc(100% + 8px);
+          left: 50%;
+          transform: translateX(-50%);
           width: 380px;
           height: 520px;
+          max-width: calc(100vw - 16px);
           background: #fff;
           border-radius: 16px;
           box-shadow: 0 20px 60px rgba(0,0,0,0.3);
@@ -160,8 +167,8 @@ const ChatAssistant = () => {
           animation: rpp-slide-up 0.25s ease-out;
         }
         @keyframes rpp-slide-up {
-          from { transform: translateY(20px); opacity: 0; }
-          to { transform: translateY(0); opacity: 1; }
+          from { transform: translateX(-50%) translateY(20px); opacity: 0; }
+          to { transform: translateX(-50%) translateY(0); opacity: 1; }
         }
         .rpp-chat-header {
           position: relative;
