@@ -39,31 +39,21 @@ const property: Card[] = [
   { title: "Probate & Estate Sales", description: "Specialized real estate guidance for court-supervised and estate property sales.", href: "/probate-estate-sales" },
 ];
 
-const CardItem = ({ c }: { c: Card }) => (
-  <Link
-    to={c.href}
-    className="group flex flex-col bg-white border-2 border-gold/40 rounded-2xl p-6 shadow-[0_6px_18px_-10px_rgba(27,43,75,0.2)] hover:border-gold hover:-translate-y-1 hover:shadow-[0_12px_28px_-12px_rgba(27,43,75,0.28)] transition-all"
-  >
-    <h3 className="font-serif text-xl text-navy font-bold mb-3 leading-tight group-hover:text-[hsl(var(--gold-dark))] transition-colors">
-      {c.title}
-    </h3>
-    <p className="text-navy/85 text-base leading-relaxed mb-5 flex-1">
-      {c.description}
-    </p>
-    <span className="inline-flex items-center justify-center gap-2 self-start bg-gold hover:bg-[hsl(var(--gold-dark))] text-white font-bold text-sm px-4 py-2 rounded-lg transition-colors">
-      Learn More <ArrowRight className="w-4 h-4" aria-hidden="true" />
-    </span>
-  </Link>
-);
-
 const Section = ({ heading, cards }: { heading: string; cards: Card[] }) => (
   <section className="py-10 lg:py-12">
     <div className="container px-6 lg:px-8">
       <h2 className="font-serif text-2xl md:text-3xl text-navy font-semibold mb-7">
         {heading}
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-        {cards.map((c) => <CardItem key={c.title + c.href} c={c} />)}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 items-stretch">
+        {cards.map((c) => (
+          <PremiumInfoCard
+            key={c.title + c.href}
+            title={c.title}
+            description={c.description}
+            href={c.href}
+          />
+        ))}
       </div>
     </div>
   </section>
