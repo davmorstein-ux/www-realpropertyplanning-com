@@ -106,37 +106,54 @@ const ChatAssistant = () => {
         }
         .rpp-chat-anchor {
           position: fixed;
-          left: 72px;
-          top: calc(50% + 42px);
-          width: 110px;
-          height: 110px;
+          left: 80px;
+          top: calc(50% + 55px);
+          width: 135px;
+          height: 135px;
           transform: translateX(-50%);
           z-index: 1000;
         }
         .rpp-chat-fab {
           position: relative;
-          width: 110px;
-          height: 110px;
+          width: 135px;
+          height: 135px;
           border-radius: 50%;
-          border: 3px solid #C9A84C;
-          background: #fff;
+          border: none;
+          background: transparent;
           padding: 0;
           cursor: pointer;
-          box-shadow: 0 6px 20px rgba(0,0,0,0.25);
           overflow: visible;
-          transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+          transition: transform 0.3s ease, filter 0.3s ease;
         }
         .rpp-chat-fab:hover {
           transform: scale(1.05);
-          box-shadow: 0 8px 28px rgba(201,168,76,0.45);
-          filter: drop-shadow(0 0 10px rgba(201,168,76,0.5));
+          filter: drop-shadow(0 0 12px rgba(201,168,76,0.55));
         }
-        .rpp-chat-fab img {
+        .rpp-chat-couple-layer {
+          position: absolute;
+          inset: 0;
           width: 100%;
           height: 100%;
           border-radius: 50%;
           object-fit: cover;
           display: block;
+        }
+        .rpp-chat-tire-layer {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          display: block;
+          pointer-events: none;
+          transform-origin: center center;
+        }
+        @keyframes tire-spin {
+          from { transform: rotate(0deg); }
+          to   { transform: rotate(360deg); }
+        }
+        .rpp-chat-fab:hover .rpp-chat-tire-layer {
+          animation: tire-spin 1.2s ease-in-out forwards;
         }
         .rpp-chat-fab::after {
           content: "";
