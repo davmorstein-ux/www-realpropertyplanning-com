@@ -70,13 +70,8 @@ const situations = [
 
 const SituationCards = () => {
   return (
-    <section className="py-14 md:py-20 bg-cream">
+    <section className="pb-14 md:pb-20 bg-cream" style={{ paddingTop: "24px" }}>
       <div className="container px-5 md:px-8">
-        <div className="max-w-3xl mx-auto text-center mb-10 md:mb-14">
-          <h2 className="font-serif text-[32px] md:text-[44px] lg:text-[52px] font-semibold text-navy leading-tight">
-            ​
-          </h2>
-        </div>
 
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 items-stretch">
           {situations.map((s) => (
@@ -98,7 +93,7 @@ const SituationCards = () => {
                       />
                     </div>
                     <div className="relative flex flex-1 flex-col items-center text-center overflow-hidden" style={{ padding: "16px" }}>
-                      <h3 className="font-serif text-[22px] md:text-[24px] font-semibold text-navy leading-snug mb-3 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0">
+                      <h3 className="font-serif text-[22px] md:text-[24px] font-semibold text-navy leading-snug mb-3 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0" style={{ minHeight: "4.5rem" }}>
                         {s.title}
                       </h3>
                       <p className="text-foreground text-[14px] leading-relaxed mb-6 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0">
