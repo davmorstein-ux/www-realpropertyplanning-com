@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { X, Send } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
-import chatAvatar from "@/assets/chat-avatar.png";
+import chatCouple from "@/assets/chat-couple.png";
+import chatTire from "@/assets/chat-tire.png";
 
 type Msg = { role: "user" | "assistant"; content: string };
 
