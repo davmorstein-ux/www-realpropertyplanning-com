@@ -408,7 +408,7 @@ const ProbateEstateSales = () => {
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl text-[hsl(0_70%_30%)] font-semibold mb-8 text-center font-sans">Explore Further</h2>
               <div className="grid md:grid-cols-3 gap-5 items-stretch">
-                <Link to="/client-stories" className="card-3d-blue group block h-full">
+                <Link to="/client-stories" className="card-3d-blue group block h-full no-underline">
                   <div className="card-3d-blue__inner h-full">
                     <div className="card-3d-blue__face p-6 flex flex-col h-full">
                       <img
@@ -433,7 +433,7 @@ const ProbateEstateSales = () => {
                     </div>
                   </div>
                 </Link>
-                <Link to="/faq" className="card-3d-blue group block h-full">
+                <Link to="/faq" className="card-3d-blue group block h-full no-underline">
                   <div className="card-3d-blue__inner h-full">
                     <div className="card-3d-blue__face p-6 flex flex-col h-full">
                       <img
@@ -458,7 +458,7 @@ const ProbateEstateSales = () => {
                     </div>
                   </div>
                 </Link>
-                <Link to="/how-the-process-works" className="card-3d-blue group block h-full">
+                <Link to="/how-the-process-works" className="card-3d-blue group block h-full no-underline">
                   <div className="card-3d-blue__inner h-full">
                     <div className="card-3d-blue__face p-6 flex flex-col h-full">
                       <img
