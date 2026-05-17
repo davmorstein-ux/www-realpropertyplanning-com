@@ -1,38 +1,14 @@
-import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import gearBase from "@/assets/gear_shifter_base.png";
 import gearTop from "@/assets/gear_shifter_top.png";
 
 /**
- * Sticky Reverse / Forward navigation oval, centered horizontally beneath
- * the floating Home button. Hidden on the homepage. Each half of the oval
+ * Sticky Reverse / Forward navigation oval, positioned middle-left of the
+ * viewport directly below the floating Home button. Each half of the oval
  * acts as a large hover/click target for back / forward.
  */
 const FloatingNavButtons = () => {
-  const { pathname } = useLocation();
-  const ref = useRef<HTMLDivElement>(null);
-  const [leftPx, setLeftPx] = useState<number>(24);
-
-  useEffect(() => {
-    const update = () => {
-      const home = document.querySelector(".home-button") as HTMLElement | null;
-      const self = ref.current;
-      if (!home || !self) return;
-      const homeRect = home.getBoundingClientRect();
-      const homeCenter = homeRect.left + homeRect.width / 2;
-      const selfWidth = self.offsetWidth;
-      setLeftPx(Math.max(8, homeCenter - selfWidth / 2));
-    };
-    update();
-    window.addEventListener("resize", update);
-    const id = window.setTimeout(update, 50);
-    return () => {
-      window.removeEventListener("resize", update);
-      window.clearTimeout(id);
-    };
-  }, [pathname]);
-
-  
+  useLocation();
 
   const labelStyle: React.CSSProperties = {
     fontWeight: 700,
@@ -46,6 +22,19 @@ const FloatingNavButtons = () => {
   return (
     <>
       <style>{`
+        .gear-nav-oval {
+          position: fixed;
+          left: 12px;
+          top: 50%;
+          transform: translateY(-50%);
+          z-index: 1000;
+          width: 120px;
+          height: 68px;
+          background: #FFF8EC;
+          border: 2px solid #8B0000;
+          border-radius: 50px;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
         .gear-container {
           position: absolute;
           top: 50%;
@@ -108,23 +97,26 @@ const FloatingNavButtons = () => {
         .gear-half-right:hover ~ .gear-container .gear-top {
           transform: rotate(22deg);
         }
+        @media (max-width: 767px) {
+          .gear-nav-oval {
+            width: 96px;
+            height: 54px;
+          }
+          .gear-top {
+            height: 27px;
+          }
+          .gear-base {
+            height: 22px;
+          }
+          .gear-half-left {
+            padding-left: 14px;
+          }
+          .gear-half-right {
+            padding-right: 14px;
+          }
+        }
       `}</style>
-      <div
-        ref={ref}
-        className="gear-nav-oval"
-        style={{
-          position: "fixed",
-          bottom: 24,
-          left: leftPx,
-          zIndex: 999,
-          width: 120,
-          height: 68,
-          background: "#FFF8EC",
-          border: "2px solid #8B0000",
-          borderRadius: 50,
-          boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
-        }}
-      >
+      <div className="gear-nav-oval">
         <button
           type="button"
           className="gear-half gear-half-left"
