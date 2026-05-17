@@ -138,6 +138,15 @@ const Terminology = () => {
       <BreadcrumbSchema items={[{ name: "Terminology", url: "/terminology" }]} />
       <Header />
       <main id="main-content">
+        <section className="bg-transparent" style={{ lineHeight: 0 }}>
+          <img
+            src={terminologyHero}
+            alt="Probate and estate terminology guide for Washington State"
+            className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
+            loading="eager"
+          />
+          <HeroBandTitle>Probate &amp; Estate Terminology</HeroBandTitle>
+        </section>
 
       {/* Hero */}
       <section className="bg-primary pt-16 pb-12 md:pt-32 md:pb-20 lg:pb-24">
