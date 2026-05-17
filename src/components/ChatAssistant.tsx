@@ -108,10 +108,10 @@ const ChatAssistant = () => {
           left: 72px;
           top: calc(50% + 42px);
           transform: translate(-50%, 0);
-          width: 70px;
-          height: 70px;
+          width: 110px;
+          height: 110px;
           border-radius: 50%;
-          border: 2px solid #C9A84C;
+          border: 3px solid #C9A84C;
           background: #fff;
           padding: 0;
           cursor: pointer;
@@ -135,10 +135,10 @@ const ChatAssistant = () => {
         .rpp-chat-fab::after {
           content: "";
           position: absolute;
-          top: 2px;
-          right: 2px;
-          width: 14px;
-          height: 14px;
+          top: 4px;
+          right: 4px;
+          width: 22px;
+          height: 22px;
           border-radius: 50%;
           background: #C9A84C;
           border: 2px solid #fff;
