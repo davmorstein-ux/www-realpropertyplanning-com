@@ -24,9 +24,9 @@ const FloatingNavButtons = () => {
       <style>{`
         .gear-nav-oval {
           position: fixed;
-          left: 12px;
+          left: 72px;
           top: 50%;
-          transform: translateY(-50%);
+          transform: translate(-50%, -50%);
           z-index: 1000;
           width: 120px;
           height: 68px;
