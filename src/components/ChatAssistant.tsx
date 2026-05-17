@@ -178,10 +178,12 @@ const ChatAssistant = () => {
           display: flex;
           align-items: center;
           gap: 12px;
+          overflow: visible;
           z-index: 1;
         }
         .rpp-chat-header::before,
-        .rpp-chat-header::after { display: none !important; content: none !important; }
+        .rpp-chat-header::after { display: none !important; content: none !important; background: none !important; }
+        .rpp-chat-header > * { position: relative; z-index: 10; }
         .rpp-chat-header img {
           width: 40px;
           height: 40px;
@@ -189,10 +191,9 @@ const ChatAssistant = () => {
           object-fit: cover;
           border: 1.5px solid #C9A84C;
           flex-shrink: 0;
-          position: relative;
           z-index: 1;
         }
-        .rpp-chat-header-text { flex: 1; min-width: 0; position: relative; z-index: 2; }
+        .rpp-chat-header-text { flex: 1; min-width: 0; z-index: 10; }
         .rpp-chat-header-text h3 {
           margin: 0;
           font-size: 18px;
@@ -204,8 +205,9 @@ const ChatAssistant = () => {
         .rpp-chat-header-text p {
           margin: 3px 0 0;
           font-size: 13px;
-          color: #ffffff;
-          opacity: 0.8;
+          color: rgba(255,255,255,0.85);
+          position: relative;
+          z-index: 10;
         }
         .rpp-chat-close {
           background: transparent;
