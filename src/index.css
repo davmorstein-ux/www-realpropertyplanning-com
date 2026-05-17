@@ -2008,18 +2008,19 @@ img, svg, hr {
   background: none !important;
 }
 
-/* Slow, smooth accordion open/close on the terminology page */
-@keyframes terminology-accordion-down {
-  from { height: 0; opacity: 0; }
-  to   { height: var(--radix-accordion-content-height); opacity: 1; }
+@keyframes slideDown {
+  from { max-height: 0; opacity: 0; }
+  to { max-height: 2000px; opacity: 1; }
 }
-@keyframes terminology-accordion-up {
-  from { height: var(--radix-accordion-content-height); opacity: 1; }
-  to   { height: 0; opacity: 0; }
+@keyframes slideUp {
+  from { max-height: 2000px; opacity: 1; }
+  to { max-height: 0; opacity: 0; }
 }
-.terminology-page [data-radix-accordion-content][data-state="open"] {
-  animation: terminology-accordion-down 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
+[data-state='open'].accordion-content,
+[data-state='open'] .accordion-content {
+  animation: slideDown 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.terminology-page [data-radix-accordion-content][data-state="closed"] {
-  animation: terminology-accordion-up 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
+[data-state='closed'].accordion-content,
+[data-state='closed'] .accordion-content {
+  animation: slideUp 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }

@@ -167,10 +167,10 @@ const Terminology = () => {
                     <div className="space-y-5">
                       {category.terms.map((item, termIndex) => (
                         <div key={termIndex}>
-                          <h4 className="font-sans text-foreground" style={{ fontSize: '17px', fontWeight: 700, lineHeight: 1.5, marginBottom: '6px' }}>
+                          <h4 style={{ fontSize: '17px', fontWeight: 700, lineHeight: 1.5, marginBottom: '6px' }}>
                             {item.term}
                           </h4>
-                          <p className="text-muted-foreground" style={{ fontSize: '16px', fontWeight: 400, lineHeight: 1.7, marginBottom: '20px' }}>
+                          <p style={{ fontSize: '16px', lineHeight: 1.7, marginBottom: '20px' }}>
                             {item.definition}
                           </p>
                         </div>
