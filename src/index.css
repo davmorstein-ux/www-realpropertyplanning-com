@@ -2106,4 +2106,3 @@ section h3.mb-10, section h3.mb-12, section h3.mb-14, section h3.mb-16 {
 hr { margin-top: 1.5rem !important; margin-bottom: 1.5rem !important; }
 
 /* Maintain a minimum of 16px section padding so nothing feels cramped */
-section { padding-top: max(1rem, var(--section-pt, 0px)); padding-bottom: max(1rem, var(--section-pb, 0px)); }
