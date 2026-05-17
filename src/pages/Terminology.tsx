@@ -154,13 +154,13 @@ const Terminology = () => {
           <div className="max-w-3xl mx-auto text-center">
             <img src={iconProbateTerms} alt="Probate and estate real estate terminology guide for Washington State" className="mx-auto max-w-[15rem] w-full h-auto object-contain mb-1.5"  loading="lazy"/>
             <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
-              Probate Real Estate Resource
+              ​
             </p>
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
-              Wills, Probate, and Real Property Glossary
+              ​
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed">
-              Understanding wills, probate, inheritance, and real property terms can make an important difference when attorneys, executors, trustees, personal representatives, and families are making decisions about a home or other real estate. This glossary is designed to explain common probate and property-related terms in clear language so visitors can better understand the process of managing, transferring, preparing, and selling real property after a death or major life transition.
+              ​
             </p>
           </div>
         </div>
