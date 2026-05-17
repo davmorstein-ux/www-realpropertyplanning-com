@@ -148,23 +148,6 @@ const Terminology = () => {
           <HeroBandTitle>Probate &amp; Estate Terminology</HeroBandTitle>
         </section>
 
-      {/* Hero */}
-      <section className="bg-primary pt-16 pb-12 md:pt-32 md:pb-20 lg:pb-24">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <img src={iconProbateTerms} alt="Probate and estate real estate terminology guide for Washington State" className="mx-auto max-w-[15rem] w-full h-auto object-contain mb-1.5"  loading="lazy"/>
-            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
-              ​
-            </p>
-            <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
-              ​
-            </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed">
-              ​
-            </p>
-          </div>
-        </div>
-      </section>
 
       {/* Glossary Accordion Section */}
       <section className="pt-14 pb-16 md:pt-[72px] md:pb-20 lg:pt-24 lg:pb-[104px] bg-secondary">
