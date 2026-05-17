@@ -287,17 +287,17 @@ const ProbateEstateSales = () => {
                   {
                     hour: 1,
                     title: "Before Legal Authority Is Granted",
-                    desc: "We can assess the property and help you plan before legal authority is formally granted.",
+                    desc: "A property can be assessed and a plan developed before legal authority is formally granted — so families and executors are prepared when the time comes.",
                   },
                   {
                     hour: 2,
                     title: "During Active Probate",
-                    desc: "Once authority is established, we coordinate preparation, pricing, and listing — in step with the legal proceedings.",
+                    desc: "Once authority is established, preparation, pricing, and listing can proceed in step with the legal proceedings — coordinated with the estate's attorney and other professionals.",
                   },
                   {
                     hour: 3,
                     title: "Post-Probate or Trust Distribution",
-                    desc: "We manage preparation, marketing, negotiation, and closing — evaluating every repair for return on investment.",
+                    desc: "After probate closes or a trust distribution is planned, the property can move toward preparation, marketing, and sale — with every repair decision evaluated for return on investment.",
                   },
                 ].map(({ hour, title, desc }) => {
                   const angle = hour * 30; // degrees from 12
