@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import HeroBandTitle from "@/components/HeroBandTitle";
 
 /**
  * Homepage hero — floating island header + full-viewport Pine Ridge photo + trust bar.
@@ -472,23 +473,7 @@ const HomepageHero = () => {
       </section>
 
       {/* ===== Trust Bar ===== */}
-      <section className="bg-navy" style={{ background: "#1a2f4e", padding: isMobile ? "20px 20px" : "36px 24px" }}>
-        <div style={{ maxWidth: 1280, margin: "0 auto", textAlign: "center" }}>
-          <p
-            style={{
-              fontFamily: "'DM Sans', system-ui, sans-serif",
-              color: "#C9A84C",
-              fontSize: isMobile ? "28px" : "40px",
-              fontWeight: 700,
-              letterSpacing: "0.2em",
-              textTransform: "uppercase" as const,
-              margin: 0,
-            }}
-          >
-            WELCOME  TO  REAL  PROPERTY  PLANNING
-          </p>
-        </div>
-      </section>
+      <HeroBandTitle as="h2">Welcome to Real Property Planning</HeroBandTitle>
 
       {/* ===== Intro ===== */}
       <section style={{ background: "#F5F0E6", padding: isMobile ? "24px 20px 20px" : "32px 24px 24px" }}>
