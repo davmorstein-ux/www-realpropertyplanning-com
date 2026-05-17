@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import FloatingHomeButton from "./components/FloatingHomeButton";
 import FloatingNavButtons from "./components/FloatingNavButtons";
+import ChatAssistant from "./components/ChatAssistant";
 
 
 // Homepage stays eager — fastest possible first paint, no Suspense flash on "/"
@@ -185,6 +186,7 @@ const App = () => (
         <ScrollToTop />
         <FloatingHomeButton />
         <FloatingNavButtons />
+        <ChatAssistant />
         
 
         <Suspense fallback={<RouteFallback />}>
