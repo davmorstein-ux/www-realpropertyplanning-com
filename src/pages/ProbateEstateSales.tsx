@@ -406,7 +406,7 @@ const ProbateEstateSales = () => {
         <section className="py-16 lg:py-20 bg-background">
           <div className="container px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl text-foreground font-semibold mb-8 text-center font-sans">Explore Further</h2>
+              <h2 className="text-3xl text-[hsl(0_70%_30%)] font-semibold mb-8 text-center font-sans">Explore Further</h2>
               <div className="grid md:grid-cols-3 gap-5 items-stretch">
                 <Link to="/client-stories" className="card-3d-blue group block h-full">
                   <div className="card-3d-blue__inner h-full">
