@@ -288,13 +288,10 @@ const ChatAssistant = () => {
         .rpp-chat-send:disabled { opacity: 0.5; cursor: not-allowed; }
         @media (max-width: 480px) {
           .rpp-chat-panel {
-            right: 8px;
-            left: 8px;
-            width: auto;
-            bottom: 100px;
+            width: calc(100vw - 16px);
             height: 70vh;
           }
-          .rpp-chat-fab { left: 72px; top: calc(50% + 35px); right: auto; bottom: auto; }
+          .rpp-chat-anchor { left: 72px; top: calc(50% + 35px); }
         }
       `}</style>
 
