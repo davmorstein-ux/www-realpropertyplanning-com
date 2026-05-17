@@ -105,8 +105,9 @@ const ChatAssistant = () => {
         }
         .rpp-chat-fab {
           position: fixed;
-          right: 24px;
-          bottom: 24px;
+          left: 72px;
+          top: calc(50% + 42px);
+          transform: translate(-50%, 0);
           width: 70px;
           height: 70px;
           border-radius: 50%;
@@ -120,7 +121,7 @@ const ChatAssistant = () => {
           transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
         }
         .rpp-chat-fab:hover {
-          transform: scale(1.05);
+          transform: translate(-50%, 0) scale(1.05);
           box-shadow: 0 8px 28px rgba(201,168,76,0.45);
           filter: drop-shadow(0 0 10px rgba(201,168,76,0.5));
         }
@@ -276,7 +277,7 @@ const ChatAssistant = () => {
             bottom: 100px;
             height: 70vh;
           }
-          .rpp-chat-fab { right: 16px; bottom: 16px; }
+          .rpp-chat-fab { left: 72px; top: calc(50% + 35px); right: auto; bottom: auto; }
         }
       `}</style>
 
