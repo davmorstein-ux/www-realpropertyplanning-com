@@ -2060,3 +2060,50 @@ a.card-3d-blue,
 a.card-3d-blue * {
   text-decoration: none !important;
 }
+
+/* ===================================================================
+   Global spacing reduction — site-wide vertical rhythm tightening
+   Reduces excessive whitespace between sections for easier scrolling.
+   =================================================================== */
+.py-20 { padding-top: 2.5rem !important; padding-bottom: 2.5rem !important; }
+.py-16 { padding-top: 2rem !important;   padding-bottom: 2rem !important; }
+.py-14 { padding-top: 1.75rem !important; padding-bottom: 1.75rem !important; }
+.pt-20 { padding-top: 2.5rem !important; }
+.pb-20 { padding-bottom: 2.5rem !important; }
+.pt-16 { padding-top: 2rem !important; }
+.pb-16 { padding-bottom: 2rem !important; }
+.pt-14 { padding-top: 1.75rem !important; }
+.pb-14 { padding-bottom: 1.75rem !important; }
+
+.my-20 { margin-top: 2.5rem !important; margin-bottom: 2.5rem !important; }
+.my-16 { margin-top: 2rem !important;   margin-bottom: 2rem !important; }
+.my-14 { margin-top: 1.75rem !important; margin-bottom: 1.75rem !important; }
+.my-10 { margin-top: 1.25rem !important; margin-bottom: 1.25rem !important; }
+
+.mb-20 { margin-bottom: 2.5rem !important; }
+.mb-16 { margin-bottom: 2rem !important; }
+.mb-14 { margin-bottom: 1.5rem !important; }
+.mb-10 { margin-bottom: 1.25rem !important; }
+
+.mt-20 { margin-top: 2.5rem !important; }
+.mt-16 { margin-top: 2rem !important; }
+.mt-14 { margin-top: 1.5rem !important; }
+.mt-10 { margin-top: 1.25rem !important; }
+
+/* Card grid row gaps — cap at 24px */
+.gap-y-16, .gap-y-14, .gap-y-12, .gap-y-10 { row-gap: 1.5rem !important; }
+.gap-16 { gap: 1.5rem !important; }
+.gap-14 { gap: 1.5rem !important; }
+.gap-12 { gap: 1.5rem !important; }
+
+/* Section headings — tighten margins below */
+section h2.mb-10, section h2.mb-12, section h2.mb-14, section h2.mb-16,
+section h3.mb-10, section h3.mb-12, section h3.mb-14, section h3.mb-16 {
+  margin-bottom: 1rem !important;
+}
+
+/* Divider/separator empty space — cap to 24px */
+hr { margin-top: 1.5rem !important; margin-bottom: 1.5rem !important; }
+
+/* Maintain a minimum of 16px section padding so nothing feels cramped */
+section { padding-top: max(1rem, var(--section-pt, 0px)); padding-bottom: max(1rem, var(--section-pb, 0px)); }
