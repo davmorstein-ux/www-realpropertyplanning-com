@@ -103,27 +103,7 @@ const BuildingYourTrustedProfessionalTeam = () => {
           </div>
         </section>
 
-        <section className="bg-primary pt-12 pb-10 lg:pt-16 lg:pb-12">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl">
-              <p className="text-gold font-bold tracking-[0.2em] uppercase mb-4 text-sm">
-                Professionals, Fiduciaries & Support Resources
-              </p>
-              <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.75rem] text-primary-foreground font-semibold leading-tight mb-5">
-                Building Your Trusted Professional Team
-              </h1>
-              <p className="text-lg md:text-xl text-primary-foreground/85 leading-relaxed mb-7 max-w-2xl">
-                A curated directory of legal, financial, senior housing, and property professionals serving families throughout Washington State.
-              </p>
-              <a href="#legal-professionals">
-                <Button variant="gold" size="lg" className="px-8 h-[56px] text-base rounded-lg">
-                  <Compass className="w-5 h-5 mr-2" aria-hidden="true" />
-                  Browse Professionals
-                </Button>
-              </a>
-            </div>
-          </div>
-        </section>
+        <h1 className="sr-only">Building Your Trusted Professional Team</h1>
 
         <div id="legal-professionals" className="scroll-mt-20 bg-background">
           <Section heading="Legal Professionals" cards={legal} />
