@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import steeringWheel from "@/assets/steering-wheel-transparent.png";
 
 /**
- * Fixed bottom-left floating Home button.
+ * Fixed middle-left floating Home button, stacked above the gear shifter.
  * Hidden on the homepage ("/").
  */
 const FloatingHomeButton = () => {
@@ -27,33 +27,48 @@ const FloatingHomeButton = () => {
           transform-origin: center center;
           background: transparent;
         }
+        .home-button {
+          position: fixed;
+          left: 12px;
+          top: calc(50% - 42px);
+          transform: translateY(-100%);
+          z-index: 1000;
+          display: inline-flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 4px;
+          padding: 8px 12px;
+          background: #FFF8EC;
+          border: 2px solid #8B0000;
+          border-radius: 50px;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+          text-decoration: none;
+          color: #1B2B4B;
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 1;
+        }
+        .home-button .steering-wheel-img {
+          width: 64px;
+          height: 64px;
+          display: block;
+          object-fit: contain;
+          flex-shrink: 0;
+        }
+        @media (max-width: 767px) {
+          .home-button {
+            padding: 6px 10px;
+            font-size: 14px;
+            top: calc(50% - 34px);
+          }
+          .home-button .steering-wheel-img {
+            width: 51px;
+            height: 51px;
+          }
+        }
       `}</style>
-      <Link
-        to="/"
-        aria-label="Home"
-        className="home-button"
-        style={{
-          position: "fixed",
-          bottom: 24 + 68 + 8,
-          left: 24,
-          zIndex: 999,
-          display: "inline-flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          gap: 4,
-          padding: "8px 12px",
-          background: "#FFF8EC",
-          border: "2px solid #8B0000",
-          borderRadius: 50,
-          boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
-          textDecoration: "none",
-          color: "#1B2B4B",
-          fontWeight: 700,
-          fontSize: 18,
-          lineHeight: 1,
-        }}
-      >
+      <Link to="/" aria-label="Home" className="home-button">
         <img
           src={steeringWheel}
           alt=""
@@ -61,7 +76,6 @@ const FloatingHomeButton = () => {
           width={64}
           height={64}
           className="steering-wheel-img"
-          style={{ width: 64, height: 64, display: "block", objectFit: "contain", background: "transparent", flexShrink: 0 }}
         />
         <span style={{ textAlign: "center" }}>Home</span>
       </Link>
