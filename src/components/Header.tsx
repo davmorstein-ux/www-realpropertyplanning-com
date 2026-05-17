@@ -150,7 +150,7 @@ const Header = () => {
         {isMobile ? (
           /* ── Mobile header layout ── */
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8 }}>
-            <Link to="/" style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
+            <Link to="/" className="header-logo" style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
               <img
                 src="/rpp-logo-v4.webp"
                 alt="Real Property Planning"
@@ -226,7 +226,7 @@ const Header = () => {
               gap: 16,
             }}
           >
-            <Link to="/" style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
+            <Link to="/" className="header-logo" style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
               <img
                 src="/rpp-logo-v4.webp"
                 alt="Real Property Planning"
