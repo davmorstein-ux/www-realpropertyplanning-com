@@ -108,9 +108,7 @@ const ProbateEstateSales = () => {
                 Probate Property vs. Inherited Property   What's the Difference?
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-                This distinction matters more than most people realize. Understanding which situation you're in
-                determines your legal authority, your timeline, and your options before you can take any action on the
-                property.
+                ​
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 items-stretch">
                 {[
