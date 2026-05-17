@@ -52,7 +52,7 @@ const HomepageNav = () => {
                       />
                     </div>
                     <div className="relative flex flex-1 flex-col items-center text-center overflow-hidden" style={{ padding: "16px" }}>
-                      <h3 className="font-serif text-[22px] md:text-[24px] font-semibold text-navy leading-snug mb-3 transition-opacity duration-200 group-hover:opacity-0">
+                      <h3 className="font-serif text-[22px] md:text-[24px] font-semibold text-navy leading-snug mb-3 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0" style={{ minHeight: "4rem" }}>
                         {s.title}
                       </h3>
                       <p className="text-foreground text-[14px] leading-relaxed mb-6 transition-opacity duration-200 group-hover:opacity-0">
