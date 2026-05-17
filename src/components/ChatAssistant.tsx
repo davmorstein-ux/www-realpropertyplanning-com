@@ -277,7 +277,7 @@ const ChatAssistant = () => {
             bottom: 100px;
             height: 70vh;
           }
-          .rpp-chat-fab { right: 16px; bottom: 16px; }
+          .rpp-chat-fab { left: 72px; top: calc(50% + 35px); right: auto; bottom: auto; }
         }
       `}</style>
 
