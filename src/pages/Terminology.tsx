@@ -187,38 +187,6 @@ const Terminology = () => {
                 This glossary is provided for general informational purposes only and is not legal advice. Probate, inheritance, trust, and real-property laws vary by state and by the facts of each estate. Anyone dealing with a will, probate matter, inherited property, or trust-owned real estate should consult a qualified attorney, tax professional, or other appropriate advisor for advice specific to their situation.
               </p>
             </div>
-
-            {/* CTA Block */}
-            <div className="mt-16 bg-card border border-border rounded-2xl px-7 py-9 md:px-10 md:py-11 text-center">
-              <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-4">
-                Need Guidance With Inherited Property or a Probate Home Sale?
-              </h2>
-              <p className="text-muted-foreground leading-relaxed text-base md:text-lg max-w-3xl mx-auto mb-8">
-                If you are navigating the sale of inherited property, a probate home, trust-owned real estate, or a property transition involving an executor, trustee, attorney, or family estate, experienced guidance can help bring clarity, order, and confidence to the process.
-              </p>
-              <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4">
-                <Link to="/contact" className="w-full sm:w-auto">
-                  <Button
-                    variant="navy3d"
-                    size="lg"
-                    className="bg-primary hover:bg-primary text-white font-semibold text-base px-7 py-4 h-auto rounded-lg w-full sm:w-auto inline-flex items-center justify-center"
-                  >
-                    <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy"/>
-                    Request a Confidential Consultation
-                  </Button>
-                </Link>
-                <Link to="/contact" className="w-full sm:w-auto">
-                  <Button
-                    size="lg"
-                    variant="outline3d"
-                    className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold text-base px-7 py-4 h-auto rounded-lg w-full sm:w-auto inline-flex items-center justify-center"
-                  >
-                    <MessageSquare className="w-4 h-4 mr-2" />
-                    Discuss a Probate Property
-                  </Button>
-                </Link>
-              </div>
-            </div>
           </div>
         </div>
       </section>
