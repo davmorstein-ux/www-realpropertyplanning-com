@@ -105,8 +105,9 @@ const ChatAssistant = () => {
         }
         .rpp-chat-fab {
           position: fixed;
-          right: 24px;
-          bottom: 24px;
+          left: 72px;
+          top: calc(50% + 42px);
+          transform: translate(-50%, 0);
           width: 70px;
           height: 70px;
           border-radius: 50%;
