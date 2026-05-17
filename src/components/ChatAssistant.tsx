@@ -103,11 +103,17 @@ const ChatAssistant = () => {
           0%, 100% { transform: scale(1); opacity: 1; }
           50% { transform: scale(1.25); opacity: 0.7; }
         }
-        .rpp-chat-fab {
+        .rpp-chat-anchor {
           position: fixed;
           left: 72px;
           top: calc(50% + 42px);
-          transform: translate(-50%, 0);
+          width: 110px;
+          height: 110px;
+          transform: translateX(-50%);
+          z-index: 1000;
+        }
+        .rpp-chat-fab {
+          position: relative;
           width: 110px;
           height: 110px;
           border-radius: 50%;
@@ -116,12 +122,11 @@ const ChatAssistant = () => {
           padding: 0;
           cursor: pointer;
           box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-          z-index: 1000;
           overflow: visible;
           transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
         }
         .rpp-chat-fab:hover {
-          transform: translate(-50%, 0) scale(1.05);
+          transform: scale(1.05);
           box-shadow: 0 8px 28px rgba(201,168,76,0.45);
           filter: drop-shadow(0 0 10px rgba(201,168,76,0.5));
         }
@@ -145,11 +150,13 @@ const ChatAssistant = () => {
           animation: rpp-pulse 1.8s ease-in-out infinite;
         }
         .rpp-chat-panel {
-          position: fixed;
-          right: 24px;
-          bottom: 110px;
+          position: absolute;
+          top: calc(100% + 8px);
+          left: 50%;
+          transform: translateX(-50%);
           width: 380px;
           height: 520px;
+          max-width: calc(100vw - 16px);
           background: #fff;
           border-radius: 16px;
           box-shadow: 0 20px 60px rgba(0,0,0,0.3);
@@ -160,8 +167,8 @@ const ChatAssistant = () => {
           animation: rpp-slide-up 0.25s ease-out;
         }
         @keyframes rpp-slide-up {
-          from { transform: translateY(20px); opacity: 0; }
-          to { transform: translateY(0); opacity: 1; }
+          from { transform: translateX(-50%) translateY(20px); opacity: 0; }
+          to { transform: translateX(-50%) translateY(0); opacity: 1; }
         }
         .rpp-chat-header {
           position: relative;
@@ -171,10 +178,12 @@ const ChatAssistant = () => {
           display: flex;
           align-items: center;
           gap: 12px;
+          overflow: visible;
           z-index: 1;
         }
         .rpp-chat-header::before,
-        .rpp-chat-header::after { display: none !important; content: none !important; }
+        .rpp-chat-header::after { display: none !important; content: none !important; background: none !important; }
+        .rpp-chat-header > * { position: relative; z-index: 10; }
         .rpp-chat-header img {
           width: 40px;
           height: 40px;
@@ -182,10 +191,9 @@ const ChatAssistant = () => {
           object-fit: cover;
           border: 1.5px solid #C9A84C;
           flex-shrink: 0;
-          position: relative;
           z-index: 1;
         }
-        .rpp-chat-header-text { flex: 1; min-width: 0; position: relative; z-index: 2; }
+        .rpp-chat-header-text { flex: 1; min-width: 0; z-index: 10; }
         .rpp-chat-header-text h3 {
           margin: 0;
           font-size: 18px;
@@ -195,10 +203,14 @@ const ChatAssistant = () => {
           opacity: 1;
         }
         .rpp-chat-header-text p {
-          margin: 3px 0 0;
-          font-size: 13px;
-          color: #ffffff;
-          opacity: 0.8;
+          margin: 3px 0 0 !important;
+          font-size: 14px !important;
+          line-height: 1.3 !important;
+          color: rgba(255,255,255,0.85) !important;
+          opacity: 1 !important;
+          position: relative;
+          z-index: 10;
+          background: transparent !important;
         }
         .rpp-chat-close {
           background: transparent;
@@ -281,82 +293,96 @@ const ChatAssistant = () => {
         .rpp-chat-send:disabled { opacity: 0.5; cursor: not-allowed; }
         @media (max-width: 480px) {
           .rpp-chat-panel {
-            right: 8px;
-            left: 8px;
-            width: auto;
-            bottom: 100px;
+            width: calc(100vw - 16px);
             height: 70vh;
           }
-          .rpp-chat-fab { left: 72px; top: calc(50% + 35px); right: auto; bottom: auto; }
+          .rpp-chat-anchor { left: 72px; top: calc(50% + 35px); }
         }
       `}</style>
 
-      {open && (
-        <div className="rpp-chat-panel" role="dialog" aria-label="Chat assistant">
-          <div className="rpp-chat-header">
-            <img src={chatAvatar} alt="" aria-hidden="true" />
-            <div className="rpp-chat-header-text">
-              <h3>Ask Us Anything</h3>
-              <p>We're here to help</p>
-            </div>
-            <button
-              type="button"
-              className="rpp-chat-close"
-              aria-label="Close chat"
-              onClick={() => setOpen(false)}
-            >
-              <X size={20} />
-            </button>
-          </div>
+      <div className="rpp-chat-anchor">
+        <button
+          type="button"
+          className="rpp-chat-fab"
+          aria-label={open ? "Close chat assistant" : "Open chat assistant"}
+          onClick={() => setOpen((v) => !v)}
+        >
+          <img src={chatAvatar} alt="Chat with us" />
+        </button>
 
-          <div className="rpp-chat-messages" ref={scrollRef}>
-            {messages.map((m, i) => (
-              <div key={i} className={`rpp-chat-bubble ${m.role}`}>
-                {m.role === "assistant" ? linkify(m.content) : m.content}
-              </div>
-            ))}
-            {loading && <div className="rpp-chat-typing">Typing…</div>}
-          </div>
-
-          <form
-            className="rpp-chat-input-bar"
-            onSubmit={(e) => {
-              e.preventDefault();
-              send();
+        {open && (
+          <div
+            className="rpp-chat-panel"
+            role="dialog"
+            aria-label="Chat assistant"
+            ref={(el) => {
+              if (!el) return;
+              // Clamp within viewport: if panel overflows the left edge, shift right.
+              el.style.marginLeft = "0px";
+              const rect = el.getBoundingClientRect();
+              if (rect.left < 8) {
+                el.style.marginLeft = `${Math.max(0, 8 - rect.left)}px`;
+              } else if (rect.right > window.innerWidth - 8) {
+                el.style.marginLeft = `${Math.min(0, window.innerWidth - 8 - rect.right)}px`;
+              }
             }}
           >
-            <input
-              ref={inputRef}
-              type="text"
-              className="rpp-chat-input"
-              placeholder={
-                limitReached ? "Session ended — call (206) 900-3015" : "Type your message…"
-              }
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              disabled={loading || limitReached}
-              maxLength={500}
-            />
-            <button
-              type="submit"
-              className="rpp-chat-send"
-              aria-label="Send message"
-              disabled={loading || limitReached || !input.trim()}
-            >
-              <Send size={18} />
-            </button>
-          </form>
-        </div>
-      )}
+            <div className="rpp-chat-header">
+              <img src={chatAvatar} alt="" aria-hidden="true" />
+              <div className="rpp-chat-header-text">
+                <h3>Ask Us Anything</h3>
+                <p>We're here to help</p>
+              </div>
+              <button
+                type="button"
+                className="rpp-chat-close"
+                aria-label="Close chat"
+                onClick={() => setOpen(false)}
+              >
+                <X size={20} />
+              </button>
+            </div>
 
-      <button
-        type="button"
-        className="rpp-chat-fab"
-        aria-label={open ? "Close chat assistant" : "Open chat assistant"}
-        onClick={() => setOpen((v) => !v)}
-      >
-        <img src={chatAvatar} alt="Chat with us" />
-      </button>
+            <div className="rpp-chat-messages" ref={scrollRef}>
+              {messages.map((m, i) => (
+                <div key={i} className={`rpp-chat-bubble ${m.role}`}>
+                  {m.role === "assistant" ? linkify(m.content) : m.content}
+                </div>
+              ))}
+              {loading && <div className="rpp-chat-typing">Typing…</div>}
+            </div>
+
+            <form
+              className="rpp-chat-input-bar"
+              onSubmit={(e) => {
+                e.preventDefault();
+                send();
+              }}
+            >
+              <input
+                ref={inputRef}
+                type="text"
+                className="rpp-chat-input"
+                placeholder={
+                  limitReached ? "Session ended — call (206) 900-3015" : "Type your message…"
+                }
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                disabled={loading || limitReached}
+                maxLength={500}
+              />
+              <button
+                type="submit"
+                className="rpp-chat-send"
+                aria-label="Send message"
+                disabled={loading || limitReached || !input.trim()}
+              >
+                <Send size={18} />
+              </button>
+            </form>
+          </div>
+        )}
+      </div>
     </>
   );
 };
