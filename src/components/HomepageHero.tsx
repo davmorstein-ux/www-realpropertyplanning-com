@@ -221,7 +221,7 @@ const HomepageHero = () => {
                   color: "#1E3A5F",
                   textDecoration: "none",
                   fontSize: "14px",
-                  fontWeight: 600 as const,
+                  fontWeight: 700 as const,
                   letterSpacing: "0.5px",
                   textTransform: "uppercase" as const,
                   lineHeight: 1,
