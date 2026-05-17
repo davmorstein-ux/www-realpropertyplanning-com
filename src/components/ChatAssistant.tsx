@@ -203,11 +203,14 @@ const ChatAssistant = () => {
           opacity: 1;
         }
         .rpp-chat-header-text p {
-          margin: 3px 0 0;
-          font-size: 13px;
-          color: rgba(255,255,255,0.85);
+          margin: 3px 0 0 !important;
+          font-size: 14px !important;
+          line-height: 1.3 !important;
+          color: rgba(255,255,255,0.85) !important;
+          opacity: 1 !important;
           position: relative;
           z-index: 10;
+          background: transparent !important;
         }
         .rpp-chat-close {
           background: transparent;
