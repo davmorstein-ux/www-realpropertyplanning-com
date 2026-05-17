@@ -9,6 +9,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import iconClientStories from "@/assets/icons/client-stories-3d.webp";
+import iconTerminology from "@/assets/icons/probate-property-sales-alt-icon-washington.webp";
 import iconCommonQuestions from "@/assets/icons/common-questions-3d.webp";
 import iconHowProcessWorks from "@/assets/icons/how-the-process-works-3d.webp";
 
@@ -408,11 +409,11 @@ const ProbateEstateSales = () => {
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl text-[hsl(0_70%_30%)] font-semibold mb-8 text-center font-sans">Explore Further</h2>
               <div className="grid md:grid-cols-3 gap-5 items-stretch">
-                <Link to="/client-stories" className="card-3d-blue group block h-full no-underline">
+                <Link to="/terminology" className="card-3d-blue group block h-full no-underline">
                   <div className="card-3d-blue__inner h-full">
                     <div className="card-3d-blue__face p-6 flex flex-col h-full">
                       <img
-                        src={iconClientStories}
+                        src={iconTerminology}
                         alt=""
                         aria-hidden="true"
                         loading="lazy"
@@ -422,13 +423,13 @@ const ProbateEstateSales = () => {
                         style={{ width: 80, height: 80, objectFit: "contain" }}
                       />
                       <h3 className="font-serif text-lg text-foreground font-semibold mb-2 group-hover:text-gold transition-colors">
-                        Client Stories
+                        Probate Terminology
                       </h3>
                       <p className="text-muted-foreground text-[15px] leading-relaxed mb-4">
-                        See how we've helped executors, families, and trustees navigate real situations.
+                        Unfamiliar with terms like Letters Testamentary, Personal Representative, or Intestate? This plain-language glossary explains the most common probate terms.
                       </p>
                       <span className="mt-auto text-accent group-hover:text-gold text-sm font-medium transition-colors inline-flex items-center gap-1">
-                        View stories <ArrowRight className="w-3.5 h-3.5" />
+                        View the Glossary <ArrowRight className="w-3.5 h-3.5" />
                       </span>
                     </div>
                   </div>
