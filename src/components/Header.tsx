@@ -136,7 +136,7 @@ const Header = () => {
           width: "100%",
           zIndex: 50,
           borderRadius: 0,
-          padding: "14px 48px 0",
+          padding: "20px 48px 8px",
           marginBottom: 0,
           backgroundColor: scrolled ? "rgba(8, 13, 25, 0.95)" : "rgba(8, 13, 25, 0.75)",
           backdropFilter: scrolled ? "blur(10px)" : "blur(10px)",
@@ -261,7 +261,7 @@ const Header = () => {
             ref={dropdownRef}
             aria-label="Main navigation"
             style={{
-              marginTop: 10,
+              marginTop: 14,
               display: "flex",
               flexWrap: "nowrap",
               justifyContent: "space-between",
