@@ -29,9 +29,9 @@ const FloatingHomeButton = () => {
         }
         .home-button {
           position: fixed;
-          left: 12px;
+          left: 72px;
           top: calc(50% - 42px);
-          transform: translateY(-100%);
+          transform: translate(-50%, -100%);
           z-index: 1000;
           display: inline-flex;
           flex-direction: column;
