@@ -8,7 +8,7 @@ type Msg = { role: "user" | "assistant"; content: string };
 const OPENING: Msg = {
   role: "assistant",
   content:
-    "Hi there! I'm here to help you find what you need. Just tell me what's going on and I'll point you in the right direction — no pressure at all.",
+    "Hi! We're here to help answer your questions and drive you to the page you are looking for.",
 };
 
 const LIMIT_MSG: Msg = {
@@ -164,31 +164,41 @@ const ChatAssistant = () => {
           to { transform: translateY(0); opacity: 1; }
         }
         .rpp-chat-header {
+          position: relative;
           background: #1B3A6B;
           color: #fff;
           padding: 14px 16px;
           display: flex;
           align-items: center;
           gap: 12px;
+          z-index: 1;
         }
+        .rpp-chat-header::before,
+        .rpp-chat-header::after { display: none !important; content: none !important; }
         .rpp-chat-header img {
           width: 40px;
           height: 40px;
           border-radius: 50%;
           object-fit: cover;
           border: 1.5px solid #C9A84C;
+          flex-shrink: 0;
+          position: relative;
+          z-index: 1;
         }
-        .rpp-chat-header-text { flex: 1; min-width: 0; }
+        .rpp-chat-header-text { flex: 1; min-width: 0; position: relative; z-index: 2; }
         .rpp-chat-header-text h3 {
           margin: 0;
-          font-size: 16px;
+          font-size: 18px;
           font-weight: 700;
           line-height: 1.2;
+          color: #ffffff;
+          opacity: 1;
         }
         .rpp-chat-header-text p {
-          margin: 2px 0 0;
-          font-size: 12px;
-          color: #d6dceb;
+          margin: 3px 0 0;
+          font-size: 13px;
+          color: #ffffff;
+          opacity: 0.8;
         }
         .rpp-chat-close {
           background: transparent;
