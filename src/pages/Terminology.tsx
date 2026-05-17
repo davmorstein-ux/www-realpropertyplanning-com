@@ -152,12 +152,7 @@ const Terminology = () => {
       {/* Glossary Accordion Section */}
       <section className="pt-14 pb-16 md:pt-[72px] md:pb-20 lg:pt-24 lg:pb-[104px] bg-secondary">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-[1100px] mx-auto terminology-accordion">
-            <style>{`
-              .terminology-accordion .accordion-header-text { font-size: 19px !important; font-weight: 700 !important; }
-              .terminology-accordion .accordion-term { font-size: 17px !important; font-weight: 700 !important; line-height: 1.5 !important; }
-              .terminology-accordion .accordion-definition { font-size: 16px !important; font-weight: 400 !important; line-height: 1.7 !important; margin-bottom: 20px !important; }
-            `}</style>
+          <div className="max-w-[1100px] mx-auto">
             <Accordion type="single" collapsible className="space-y-3.5">
               {glossaryData.map((category, catIndex) => (
                 <AccordionItem
@@ -166,16 +161,16 @@ const Terminology = () => {
                   className="bg-card border border-border rounded-2xl overflow-hidden data-[state=open]:border-gold/25 transition-colors duration-200"
                 >
                   <AccordionTrigger className="text-left font-serif text-foreground hover:text-gold hover:no-underline px-6 py-5">
-                    <h3 className="pr-4 accordion-header-text">{category.title}</h3>
+                    <h3 className="pr-4" style={{ fontSize: '19px', fontWeight: 700 }}>{category.title}</h3>
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-6 md:px-6 md:pb-6 pt-0">
                     <div className="space-y-5">
                       {category.terms.map((item, termIndex) => (
                         <div key={termIndex}>
-                          <h4 className="font-sans text-foreground mb-1.5 accordion-term">
+                          <h4 className="font-sans text-foreground" style={{ fontSize: '17px', fontWeight: 700, lineHeight: 1.5, marginBottom: '6px' }}>
                             {item.term}
                           </h4>
-                          <p className="text-muted-foreground accordion-definition">
+                          <p className="text-muted-foreground" style={{ fontSize: '16px', fontWeight: 400, lineHeight: 1.7, marginBottom: '20px' }}>
                             {item.definition}
                           </p>
                         </div>
