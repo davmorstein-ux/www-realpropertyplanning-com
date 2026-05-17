@@ -15,6 +15,8 @@ import {
 } from "@/components/ui/accordion";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconProbateTerms from "@/assets/icons/probate-property-sales-alt-icon-washington.webp";
+import HeroBandTitle from "@/components/HeroBandTitle";
+import terminologyHero from "@/assets/terminology-hero.webp";
 
 interface GlossaryTerm {
   term: string;
