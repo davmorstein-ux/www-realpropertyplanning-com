@@ -1,5 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import steeringWheelImg from "@/assets/steering-wheel-transparent.png";
+import gearStickImg from "@/assets/gear_stick_only.png";
+import gearBootImg from "@/assets/gear_boot_only.png";
+import coupleChatImg from "@/assets/chat-couple.png";
 
 /**
  * MGFloatingNav v3
@@ -14,10 +18,10 @@ import { useNavigate } from "react-router-dom";
  *   coupleImage → couple photo PNG
  */
 export default function MGFloatingNav({
-  homeImage   = "/images/steering-wheel.png",
-  stickImage  = "/images/gear_stick_only.png",
-  bootImage   = "/images/gear_boot_only.png",
-  coupleImage = "/images/couple-photo.png",
+  homeImage   = steeringWheelImg,
+  stickImage  = gearStickImg,
+  bootImage   = gearBootImg,
+  coupleImage = coupleChatImg,
   onBack      = () => window.history.back(),
   onForward   = () => window.history.forward(),
   onChat      = () => {},
