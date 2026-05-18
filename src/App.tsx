@@ -5,7 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
-import MGDashboardBar from "./components/MGDashboardBar";
+import MGFloatingNav from "./components/MGFloatingNav";
 
 
 // Homepage stays eager — fastest possible first paint, no Suspense flash on "/"
