@@ -98,22 +98,6 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Hero */}
-      <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
-              ​
-            </p>
-            <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-[22px]">
-              ​
-            </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed">
-              ​
-            </p>
-          </div>
-        </div>
-      </section>
 
       <TrustStrip />
 
