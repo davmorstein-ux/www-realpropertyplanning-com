@@ -87,8 +87,8 @@ export default function MGFloatingNav({
   // ── Steering wheel button ────────────────────────────────────
   const homeBtnStyle = {
     position:        "relative",
-    width:           "92px",
-    height:          "92px",
+    width:           "116px",
+    height:          "116px",
     borderRadius:    "50%",
     backgroundColor: "#f0ebe0",
     opacity:         1,
@@ -106,8 +106,8 @@ export default function MGFloatingNav({
   };
 
   const wheelImgStyle = {
-    width:      "58px",
-    height:     "58px",
+    width:      "72px",
+    height:     "72px",
     objectFit:  "contain",
     display:    "block",
     animation:  wheelDir === "hovering" ? "wheelWiggle 0.4s ease-in-out infinite" : "none",
@@ -115,7 +115,7 @@ export default function MGFloatingNav({
   };
 
   const homeLabelStyle = {
-    fontSize:    "13px",
+    fontSize:    "15px",
     fontWeight:  "800",
     color:       "#1e3355",
     marginTop:   "2px",
@@ -128,9 +128,9 @@ export default function MGFloatingNav({
   // ── Gear oval container ──────────────────────────────────────
   const gearOvalStyle = {
     position:        "relative",
-    width:           "124px",
-    height:          "108px",
-    borderRadius:    "62px 62px 40px 40px",
+    width:           "130px",
+    height:          "116px",
+    borderRadius:    "90px 90px 40px 40px",
     backgroundColor: "#f0ebe0",
     opacity:         1,
     border:          "2.5px solid #7a1a1a",
@@ -175,8 +175,8 @@ export default function MGFloatingNav({
     left:            "50%",
     transform:       `translateX(-50%) ${stickRotation}`,
     transformOrigin: "bottom center",
-    width:           "32px",
-    height:          "54px",
+    width:           "36px",
+    height:          "62px",
     objectFit:       "contain",
     objectPosition:  "bottom center",
     display:         "block",
@@ -186,7 +186,7 @@ export default function MGFloatingNav({
 
   // R label
   const rLabelStyle = {
-    fontSize:   "19px",
+    fontSize:   "22px",
     fontWeight: "900",
     color:      gearDir === "R" ? "#7a1a1a" : "#1e3355",
     lineHeight: 1,
@@ -199,7 +199,7 @@ export default function MGFloatingNav({
 
   // F label
   const fLabelStyle = {
-    fontSize:   "19px",
+    fontSize:   "22px",
     fontWeight: "900",
     color:      gearDir === "F" ? "#7a1a1a" : "#1e3355",
     lineHeight: 1,
@@ -224,10 +224,10 @@ export default function MGFloatingNav({
   // ── Chat button ──────────────────────────────────────────────
   const chatBtnStyle = {
     position:        "relative",
-    width:           "92px",
-    height:          "92px",
-    minWidth:        "92px",
-    minHeight:       "92px",
+    width:           "116px",
+    height:          "116px",
+    minWidth:        "116px",
+    minHeight:       "116px",
     borderRadius:    "50%",
     backgroundColor: "#1e3355",
     opacity:         1,
