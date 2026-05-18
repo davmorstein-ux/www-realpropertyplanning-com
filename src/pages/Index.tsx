@@ -117,6 +117,10 @@ const Index = () => {
       {/* 1. HERO — short, calm, clear */}
       <HomepageHero />
 
+      {/* 1b. FUNNEL — Who Are You Here For? */}
+      <HomepageFunnel />
+
+
       {/* 2. SITUATION-BASED GUIDANCE — Where Are You In The Process? */}
       <SituationCards />
 
