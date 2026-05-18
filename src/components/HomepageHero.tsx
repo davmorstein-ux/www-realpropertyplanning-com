@@ -473,8 +473,6 @@ const HomepageHero = () => {
         />
       </section>
 
-      {/* ===== Trust Bar ===== */}
-      <HeroBandTitle as="h2">Washington's Free Hub for Probate, Estate &amp; Senior Transition Real Estate</HeroBandTitle>
 
       {/* ===== Intro ===== */}
       <section style={{ background: "#F5F0E6", padding: isMobile ? "24px 20px 20px" : "32px 24px 24px" }}>
@@ -489,7 +487,7 @@ const HomepageHero = () => {
               margin: "0 0 12px 0",
             }}
           >
-            A Free Resource For Seniors, Families & Professionals
+            A Free Resource For Seniors, Families &amp; Professionals in Washington State
           </h2>
           <p
             style={{
