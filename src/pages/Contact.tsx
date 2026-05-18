@@ -103,13 +103,13 @@ const Contact = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
-              Get in Touch
+              ​
             </p>
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-[22px]">
-              Get in Touch
+              ​
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed">
-              Whether you're an executor, an attorney, or a family member navigating a property situation — a short conversation can bring real clarity.
+              ​
             </p>
           </div>
         </div>
