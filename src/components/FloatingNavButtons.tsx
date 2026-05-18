@@ -97,23 +97,21 @@ const FloatingNavButtons = () => {
         .gear-half-right:hover ~ .gear-container .gear-top {
           transform: rotate(22deg);
         }
-        @media (max-width: 767px) {
+        @media (min-width: 640px) and (max-width: 1023px) {
+          .gear-nav-oval { width: 102px; height: 58px; }
+          .gear-top { height: 29px; }
+          .gear-base { height: 24px; }
+        }
+        @media (max-width: 639px) {
           .gear-nav-oval {
-            width: 96px;
-            height: 54px;
+            width: 84px;
+            height: 48px;
+            left: 52px;
           }
-          .gear-top {
-            height: 27px;
-          }
-          .gear-base {
-            height: 22px;
-          }
-          .gear-half-left {
-            padding-left: 14px;
-          }
-          .gear-half-right {
-            padding-right: 14px;
-          }
+          .gear-top { height: 24px; }
+          .gear-base { height: 20px; }
+          .gear-half-left { padding-left: 12px; }
+          .gear-half-right { padding-right: 12px; }
         }
       `}</style>
       <div className="gear-nav-oval">
