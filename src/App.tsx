@@ -182,9 +182,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
-        <FloatingHomeButton />
-        <FloatingNavButtons />
-        <ChatAssistant />
+        <MGDashboardBar />
         
 
         <Suspense fallback={<RouteFallback />}>
