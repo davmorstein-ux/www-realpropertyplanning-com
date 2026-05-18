@@ -362,7 +362,7 @@ export default function MGFloatingNav({
         aria-label="Open chat"
         title="Chat with us"
       >
-        <span style={chatLabelStyle}>Chat With Us</span>
+        <span style={chatLabelStyle}><span style={chatLabelArrowStyle} aria-hidden="true" />Chat With Us</span>
         <img src={coupleImage} alt="Chat with us" style={{ ...chatImgStyle, overflow: "hidden" }} />
       </button>
 
