@@ -98,8 +98,8 @@ export default function MGFloatingNav({
   };
 
   const gearImgStyle = {
-    width: "34px",
-    height: "50px",
+    width: "30px",
+    height: "64px",
     objectFit: "contain",
     display: "block",
     flexShrink: 0,
