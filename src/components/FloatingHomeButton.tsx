@@ -6,8 +6,9 @@ import steeringWheel from "@/assets/steering-wheel-transparent.png";
  * Hidden on the homepage ("/").
  */
 const FloatingHomeButton = () => {
-  const { pathname } = useLocation();
-  if (pathname === "/") return null;
+  useLocation();
+
+
 
   return (
     <>
