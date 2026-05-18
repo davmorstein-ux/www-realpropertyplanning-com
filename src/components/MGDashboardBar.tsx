@@ -51,12 +51,15 @@ const MGDashboardBar = () => {
           z-index: 1000;
           display: flex;
           align-items: center;
-          gap: 14px;
-          padding: 10px 18px;
-          background: linear-gradient(180deg, #243758 0%, #14223d 100%);
+          gap: 16px;
+          padding: 12px 22px;
+          background-color: #1B2B4B;
+          background-image: none;
+          opacity: 1;
           border: 1px solid rgba(201,168,76,0.45);
           border-radius: 999px;
           box-shadow: 0 14px 36px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.08);
+          overflow: visible;
           transition: opacity 0.25s ease, transform 0.25s ease;
         }
         .mg-dashboard[data-hidden="true"] {
@@ -76,38 +79,59 @@ const MGDashboardBar = () => {
           bottom: auto !important;
           transform: none !important;
           margin: 0 !important;
+          overflow: visible !important;
         }
 
-        /* Scale down the buttons so they fit comfortably in the bar. */
+        /* Equal-size, fully-visible buttons. Steering wheel sets the target height (~92px). */
         .mg-dashboard .home-button {
-          padding: 4px 10px !important;
+          padding: 6px 14px !important;
           font-size: 13px !important;
+          min-height: 92px !important;
+          justify-content: center !important;
+          background: #FFF8EC !important;
         }
         .mg-dashboard .home-button .steering-wheel-img {
-          width: 48px !important;
-          height: 48px !important;
-        }
-        .mg-dashboard .gear-nav-oval {
-          width: 102px !important;
+          width: 56px !important;
           height: 56px !important;
         }
-        .mg-dashboard .gear-top { height: 28px !important; }
-        .mg-dashboard .gear-base { height: 22px !important; }
+        .mg-dashboard .gear-nav-oval {
+          width: 130px !important;
+          height: 92px !important;
+          background: #FFF8EC !important;
+        }
+        .mg-dashboard .gear-top { height: 36px !important; }
+        .mg-dashboard .gear-base { height: 28px !important; }
+
+        /* R / F labels — solid navy, high z-index so they sit above the gear graphic. */
+        .mg-dashboard .gear-half {
+          z-index: 5 !important;
+        }
+        .mg-dashboard .gear-half span {
+          position: relative !important;
+          z-index: 10 !important;
+          color: #1B2B4B !important;
+          font-weight: 800 !important;
+          font-size: 20px !important;
+          line-height: 1 !important;
+          text-shadow: 0 1px 0 #FFF8EC;
+        }
+        .mg-dashboard .gear-container { z-index: 2 !important; }
 
         .mg-dashboard .rpp-chat-anchor {
-          width: 66px !important;
-          height: 66px !important;
+          width: 92px !important;
+          height: 92px !important;
         }
         .mg-dashboard .rpp-chat-fab {
-          width: 66px !important;
-          height: 66px !important;
+          width: 92px !important;
+          height: 92px !important;
         }
         .mg-dashboard .rpp-chat-fab::after {
-          width: 14px !important;
-          height: 14px !important;
-          top: 2px !important;
-          right: 2px !important;
+          width: 16px !important;
+          height: 16px !important;
+          top: 3px !important;
+          right: 3px !important;
         }
+
 
         /* Chat panel must open upward (it's anchored to the bottom bar). */
         .mg-dashboard .rpp-chat-panel {
