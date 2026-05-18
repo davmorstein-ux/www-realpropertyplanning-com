@@ -106,7 +106,7 @@ const ChatAssistant = () => {
         }
         .rpp-chat-anchor {
           position: fixed;
-          left: 80px;
+          left: 72px;
           top: calc(50% + 55px);
           width: 135px;
           height: 135px;
