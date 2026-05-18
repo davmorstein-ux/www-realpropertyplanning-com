@@ -85,6 +85,19 @@ const Contact = () => {
       <Header />
       <main id="main-content">
 
+      {/* Hero image + navy band */}
+      <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
+        <div style={{ lineHeight: 0 }}>
+          <img
+            src={contactHero}
+            alt="Seniors enjoying coffee at a waterfront café in Washington State — Real Property Planning contact"
+            className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
+            loading="eager"
+          />
+          <HeroBandTitle>Let's Connect</HeroBandTitle>
+        </div>
+      </section>
+
       {/* Hero */}
       <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
         <div className="container px-6 lg:px-8">
