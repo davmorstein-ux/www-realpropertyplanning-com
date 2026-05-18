@@ -160,7 +160,7 @@ export default function MGFloatingNav({
     bottom:          0,
     left:            "50%",
     transform:       `translateX(-50%) ${stickRotation}`,
-    transformOrigin: "bottom center",
+    transformOrigin: "50% 100%",
     width:           "36px",
     height:          "64px",
     objectFit:       "contain",
