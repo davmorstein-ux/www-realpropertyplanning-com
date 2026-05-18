@@ -131,6 +131,10 @@ const Index = () => {
       {/* 4. BROADER CATEGORY ORIENTATION — secondary navigation pathways */}
       <HomepageNav />
 
+      {/* 5. TESTIMONIALS — social proof above the footer */}
+      <HomepageTestimonials />
+
+
 
 
       </main>
