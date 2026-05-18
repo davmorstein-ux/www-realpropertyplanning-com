@@ -481,25 +481,27 @@ const HomepageHero = () => {
             style={{
               fontFamily: "'DM Sans', system-ui, sans-serif",
               color: "#1E3A5F",
-              fontSize: "18px",
-              fontWeight: 700,
-              lineHeight: 1.3,
+              fontSize: isMobile ? "22px" : "28px",
+              fontWeight: 800,
+              lineHeight: 1.25,
               margin: "0 0 12px 0",
+              textAlign: "center",
             }}
           >
-            A Free Resource For Seniors, Families &amp; Professionals in Washington State
+            Probate Sales · Estate Sales · Senior Transitions
           </h2>
           <p
             style={{
               fontFamily: "'DM Sans', system-ui, sans-serif",
-              color: "#1E3A5F",
-              fontSize: "18px",
-              fontWeight: 700,
-              lineHeight: 1.7,
+              color: "#6B7280",
+              fontSize: isMobile ? "15px" : "17px",
+              fontWeight: 500,
+              lineHeight: 1.6,
               margin: 0,
+              textAlign: "center",
             }}
           >
-            Start by choosing the situation that best describes yours.
+            A free guide and referral hub for families and professionals in Washington State
           </p>
         </div>
       </section>

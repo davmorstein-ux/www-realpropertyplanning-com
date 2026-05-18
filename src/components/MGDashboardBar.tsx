@@ -49,6 +49,7 @@ const MGDashboardBar = () => {
           left: 50%;
           transform: translateX(-50%);
           z-index: 9999;
+          isolation: isolate;
           display: flex;
           align-items: center;
           gap: 16px;
@@ -59,6 +60,7 @@ const MGDashboardBar = () => {
           backdrop-filter: none !important;
           -webkit-backdrop-filter: none !important;
           opacity: 1 !important;
+          mix-blend-mode: normal !important;
           border: 1px solid #C9A84C;
           border-radius: 999px;
           box-shadow: 0 14px 36px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.08);
@@ -68,6 +70,7 @@ const MGDashboardBar = () => {
         .mg-dashboard * {
           backdrop-filter: none !important;
           -webkit-backdrop-filter: none !important;
+          mix-blend-mode: normal !important;
         }
         .mg-dashboard[data-hidden="true"] {
           opacity: 0;
@@ -104,7 +107,11 @@ const MGDashboardBar = () => {
         .mg-dashboard .gear-nav-oval {
           width: 130px !important;
           height: 92px !important;
-          background: #FFF8EC !important;
+          background-color: #f5f0e8 !important;
+          background: #f5f0e8 !important;
+          background-image: none !important;
+          opacity: 1 !important;
+          mix-blend-mode: normal !important;
         }
         .mg-dashboard .gear-top { height: 36px !important; }
         .mg-dashboard .gear-base { height: 28px !important; }
