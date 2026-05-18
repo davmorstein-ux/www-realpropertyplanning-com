@@ -20,6 +20,7 @@ import iconExecutor from "@/assets/icons/probate-executors-services-icon-washing
 import iconArrow from "@/assets/icons/property-guidance-arrow-icon-washington.webp";
 import iconPhone from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import JourneyOrientation from "@/components/JourneyOrientation";
+import SituationCards from "@/components/SituationCards";
 
 interface Pathway {
   letter: string;
@@ -230,6 +231,9 @@ const WhatShouldWeDoFirst = () => {
             </div>
           </div>
         </section>
+        {/* Situation cards — full journey grid */}
+        <SituationCards />
+
 
         {/* FAQ */}
         <PageFAQ

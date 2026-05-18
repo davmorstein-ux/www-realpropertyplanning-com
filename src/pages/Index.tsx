@@ -7,9 +7,6 @@ import { Link } from "react-router-dom";
 import HomepageHero from "@/components/HomepageHero";
 import HomepageFunnel from "@/components/HomepageFunnel";
 import HomepageTestimonials from "@/components/HomepageTestimonials";
-import HomepageFAQ from "@/components/HomepageFAQ";
-import SituationCards from "@/components/SituationCards";
-import HomepageNav from "@/components/HomepageNav";
 
 
 const jsonLd = [realEstateAgentSchema, organizationSchema];
@@ -121,18 +118,18 @@ const Index = () => {
       {/* 1b. FUNNEL — Who Are You Here For? */}
       <HomepageFunnel />
 
-
-      {/* 2. SITUATION-BASED GUIDANCE — Where Are You In The Process? */}
-      <SituationCards />
-
-      {/* 3. FAQ — supports immediate questions before broader pathways */}
-      <HomepageFAQ />
-
-      {/* 4. BROADER CATEGORY ORIENTATION — secondary navigation pathways */}
-      <HomepageNav />
-
-      {/* 5. TESTIMONIALS — social proof above the footer */}
+      {/* TESTIMONIALS — social proof above the footer */}
       <HomepageTestimonials />
+
+      {/* SEO description — visible to crawlers, visually subtle for users */}
+      <section aria-label="Site description" className="bg-cream">
+        <div className="container px-6 lg:px-8 py-6">
+          <p className="text-center text-sm text-[#4B5563] max-w-4xl mx-auto leading-relaxed">
+            Real Property Planning is Washington State's free hub for probate real estate, estate sales, inherited property, and senior housing transitions. Serving Seattle, Bellevue, Kirkland, Tacoma, Everett, and communities throughout Western Washington and the Puget Sound region.
+          </p>
+        </div>
+      </section>
+
 
 
 
