@@ -94,8 +94,8 @@ export default function MGFloatingNav({
     height:     "46px",
     objectFit:  "contain",
     display:    "block",
-    transition: "transform 0.25s ease",
-    transform:  wheelRotation,
+    transform:  "rotate(0deg)",
+    animation:  wheelDir !== "none" ? "mgWheelWiggle 0.35s ease-in-out infinite" : "none",
   };
 
   const homeLabelStyle = {
@@ -160,7 +160,7 @@ export default function MGFloatingNav({
     bottom:          0,
     left:            "50%",
     transform:       `translateX(-50%) ${stickRotation}`,
-    transformOrigin: "bottom center",
+    transformOrigin: "50% 100%",
     width:           "36px",
     height:          "64px",
     objectFit:       "contain",
@@ -241,6 +241,7 @@ export default function MGFloatingNav({
   // ────────────────────────────────────────────────────────────
   return (
     <nav style={barStyle} aria-label="Quick navigation">
+      <style>{`@keyframes mgWheelWiggle { 0% { transform: rotate(0deg); } 25% { transform: rotate(-25deg); } 75% { transform: rotate(25deg); } 100% { transform: rotate(0deg); } }`}</style>
 
       {/* ── 1. Steering Wheel — Home ── */}
       <button
