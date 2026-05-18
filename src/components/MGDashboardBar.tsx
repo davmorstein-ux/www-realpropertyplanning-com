@@ -178,14 +178,16 @@ const MGDashboardBar = () => {
             gap: 10px;
             padding: 8px 14px;
           }
-          .mg-dashboard .home-button { padding: 3px 8px !important; font-size: 11px !important; }
-          .mg-dashboard .home-button .steering-wheel-img { width: 40px !important; height: 40px !important; }
-          .mg-dashboard .gear-nav-oval { width: 86px !important; height: 48px !important; }
-          .mg-dashboard .gear-top { height: 24px !important; }
-          .mg-dashboard .gear-base { height: 19px !important; }
-          .mg-dashboard .rpp-chat-anchor { width: 56px !important; height: 56px !important; }
-          .mg-dashboard .rpp-chat-fab { width: 56px !important; height: 56px !important; }
+          .mg-dashboard .home-button { padding: 4px 10px !important; font-size: 11px !important; min-height: 74px !important; }
+          .mg-dashboard .home-button .steering-wheel-img { width: 44px !important; height: 44px !important; }
+          .mg-dashboard .gear-nav-oval { width: 104px !important; height: 74px !important; }
+          .mg-dashboard .gear-top { height: 28px !important; }
+          .mg-dashboard .gear-base { height: 22px !important; }
+          .mg-dashboard .gear-half span { font-size: 17px !important; }
+          .mg-dashboard .rpp-chat-anchor { width: 74px !important; height: 74px !important; }
+          .mg-dashboard .rpp-chat-fab { width: 74px !important; height: 74px !important; }
         }
+
       `}</style>
 
       <div
