@@ -107,7 +107,11 @@ const MGDashboardBar = () => {
         .mg-dashboard .gear-nav-oval {
           width: 130px !important;
           height: 92px !important;
-          background: #FFF8EC !important;
+          background-color: #f5f0e8 !important;
+          background: #f5f0e8 !important;
+          background-image: none !important;
+          opacity: 1 !important;
+          mix-blend-mode: normal !important;
         }
         .mg-dashboard .gear-top { height: 36px !important; }
         .mg-dashboard .gear-base { height: 28px !important; }
