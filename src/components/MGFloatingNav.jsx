@@ -1,9 +1,12 @@
 import { useNavigate } from "react-router-dom";
+import steeringWheelImg from "@/assets/steering-wheel-transparent.png";
+import gearShifterImg from "@/assets/gear_shifter_top.png";
+import coupleChatImg from "@/assets/chat-couple.png";
 
 export default function MGFloatingNav({
-  homeImage = "/images/steering-wheel.png",
-  gearImage = "/images/gear-shifter.png",
-  coupleImage = "/images/couple-photo.png",
+  homeImage = steeringWheelImg,
+  gearImage = gearShifterImg,
+  coupleImage = coupleChatImg,
   onBack = () => window.history.back(),
   onForward = () => window.history.forward(),
   onChat = () => {},
