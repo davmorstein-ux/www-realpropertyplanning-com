@@ -2194,3 +2194,10 @@ hr { margin-top: 1.5rem !important; margin-bottom: 1.5rem !important; }
   }
 }
 
+
+/* Homepage floating cream nav island — tablet: -1 step font + tighter padding */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .hp-floating-nav-island { gap: 16px !important; padding: 0 18px !important; min-height: 44px !important; }
+  .hp-floating-nav-island a,
+  .hp-floating-nav-island button { font-size: 13px !important; letter-spacing: 0.02em !important; }
+}
