@@ -20,6 +20,8 @@ import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washingto
 
 import iconEmail3d from "@/assets/icons/real-estate-email-contact-icon-washington.webp";
 import mappin3d from "@/assets/real-estate-service-areas-mappin-washington.webp";
+import contactHero from "@/assets/contact-hero-soundview-coffee.png";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import { useState } from "react";
 import expRealtyLogo from "@/assets/exp-realty-real-estate-logo-washington.webp";
 import { useToast } from "@/hooks/use-toast";
