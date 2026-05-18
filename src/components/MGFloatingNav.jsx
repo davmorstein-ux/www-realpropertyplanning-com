@@ -152,6 +152,7 @@ export default function MGFloatingNav({
     height:     "72px",
     flexShrink: 0,
     overflow:   "visible",
+    marginTop:  "12px",
   };
 
   // Boot — absolutely positioned at bottom, NEVER transforms
