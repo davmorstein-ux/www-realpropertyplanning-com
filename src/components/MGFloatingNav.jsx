@@ -26,18 +26,29 @@ export default function MGFloatingNav({
 }) {
   const navigate = useNavigate();
 
-  // Steering wheel: 'none' | 'left' | 'right'
+  // Inject wiggle keyframe once into the document
+  if (typeof document !== "undefined" && !document.getElementById("mg-nav-styles")) {
+    const style = document.createElement("style");
+    style.id = "mg-nav-styles";
+    style.textContent = `
+      @keyframes wheelWiggle {
+        0%   { transform: rotate(0deg); }
+        20%  { transform: rotate(-28deg); }
+        50%  { transform: rotate(28deg); }
+        80%  { transform: rotate(-18deg); }
+        100% { transform: rotate(0deg); }
+      }
+    `;
+    document.head.appendChild(style);
+  }
+
+  // Steering wheel: 'none' | 'hovering'
   const [wheelDir, setWheelDir] = useState("none");
 
   // Gear shifter: 'none' | 'R' | 'F'
   const [gearDir, setGearDir] = useState("none");
 
-  // ── Wheel rotation ──────────────────────────────────────────
-  const wheelRotation =
-    wheelDir === "left"  ? "rotate(-25deg)" :
-    wheelDir === "right" ? "rotate(25deg)"  : "rotate(0deg)";
-
-  // ── Stick tilt (boot stays fixed) ───────────────────────────
+  // ── Stick tilt (single image, deep pivot keeps boot planted) ─
   const stickRotation =
     gearDir === "R" ? "rotate(-22deg)" :
     gearDir === "F" ? "rotate(22deg)"  : "rotate(0deg)";
@@ -94,8 +105,8 @@ export default function MGFloatingNav({
     height:     "46px",
     objectFit:  "contain",
     display:    "block",
+    animation:  wheelDir === "hovering" ? "wheelWiggle 0.4s ease-in-out infinite" : "none",
     transform:  "rotate(0deg)",
-    animation:  wheelDir !== "none" ? "mgWheelWiggle 0.35s ease-in-out infinite" : "none",
   };
 
   const homeLabelStyle = {
@@ -129,7 +140,7 @@ export default function MGFloatingNav({
     WebkitBackdropFilter: "none",
   };
 
-  // The shifter image stack (stick on top of boot)
+  // The shifter container — sized to show the full image
   const shifterStackStyle = {
     position:   "relative",
     width:      "36px",
@@ -138,36 +149,23 @@ export default function MGFloatingNav({
     overflow:   "visible",
   };
 
-  // Boot — bottom portion of image, clipped, NEVER moves
-  const bootStyle = {
-    position:       "absolute",
-    bottom:         0,
-    left:           "50%",
-    transform:      "translateX(-50%)",
-    width:          "36px",
-    height:         "64px",
-    objectFit:      "contain",
-    objectPosition: "bottom center",
-    display:        "block",
-    // Show only bottom 45% of image (the boot + base)
-    clipPath:       "inset(55% 0 0 0)",
-    zIndex:         1,
-  };
-
-  // Stick + knob — top portion, tilts on hover
+  // Single shifter image — rotates as one piece.
+  // transformOrigin is set to the CENTER-BOTTOM of the boot area
+  // (roughly 85% down the image height), so the base stays planted
+  // and only the knob + stick visibly tilts.
   const stickStyle = {
     position:        "absolute",
     bottom:          0,
     left:            "50%",
+    // Center horizontally first, then apply tilt
     transform:       `translateX(-50%) ${stickRotation}`,
-    transformOrigin: "50% 100%",
+    // Pivot at the center of the boot base — 50% across, ~88% down
+    transformOrigin: "50% 88%",
     width:           "36px",
     height:          "64px",
     objectFit:       "contain",
-    objectPosition:  "bottom center",
+    objectPosition:  "center bottom",
     display:         "block",
-    // Show only top 55% of image (knob + stick)
-    clipPath:        "inset(0 0 45% 0)",
     transition:      "transform 0.2s ease",
     zIndex:          2,
   };
@@ -241,13 +239,12 @@ export default function MGFloatingNav({
   // ────────────────────────────────────────────────────────────
   return (
     <nav style={barStyle} aria-label="Quick navigation">
-      <style>{`@keyframes mgWheelWiggle { 0% { transform: rotate(0deg); } 25% { transform: rotate(-25deg); } 75% { transform: rotate(25deg); } 100% { transform: rotate(0deg); } }`}</style>
 
       {/* ── 1. Steering Wheel — Home ── */}
       <button
         style={homeBtnStyle}
         onClick={() => navigate("/")}
-        onMouseEnter={() => setWheelDir("left")}
+        onMouseEnter={() => setWheelDir("hovering")}
         onMouseLeave={() => setWheelDir("none")}
         aria-label="Go to Home"
         title="Home"
@@ -271,16 +268,8 @@ export default function MGFloatingNav({
           R
         </span>
 
-        {/* Gear shifter image stack */}
+        {/* Gear shifter — single image, pivots deep in boot so base stays planted */}
         <div style={shifterStackStyle}>
-          {/* Boot — stationary */}
-          <img
-            src={gearImage}
-            alt=""
-            aria-hidden="true"
-            style={bootStyle}
-          />
-          {/* Stick + knob — tilts */}
           <img
             src={gearImage}
             alt="Gear shifter"
