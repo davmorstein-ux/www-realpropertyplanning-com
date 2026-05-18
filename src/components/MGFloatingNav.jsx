@@ -50,6 +50,9 @@ export default function MGFloatingNav({
   // Gear shifter: 'none' | 'R' | 'F'
   const [gearDir, setGearDir] = useState("none");
 
+  // Chat button hover
+  const [chatHovered, setChatHovered] = useState(false);
+
   // ── Stick tilt (single image, deep pivot keeps boot planted) ─
   const stickRotation =
     gearDir === "R" ? "rotate(-22deg)" :
@@ -220,8 +223,11 @@ export default function MGFloatingNav({
 
   // ── Chat button ──────────────────────────────────────────────
   const chatBtnStyle = {
+    position:        "relative",
     width:           "76px",
     height:          "76px",
+    minWidth:        "76px",
+    minHeight:       "76px",
     borderRadius:    "50%",
     backgroundColor: "#1e3355",
     opacity:         1,
@@ -232,9 +238,25 @@ export default function MGFloatingNav({
     cursor:          "pointer",
     flexShrink:      0,
     padding:         0,
-    overflow:        "hidden",
+    overflow:        "visible",
     boxSizing:       "border-box",
-    transition:      "box-shadow 0.15s ease",
+    transform:       chatHovered ? "scale(1.18)" : "scale(1)",
+    transition:      "transform 0.2s ease, box-shadow 0.15s ease",
+  };
+
+  const chatLabelStyle = {
+    position:      "absolute",
+    bottom:        "calc(100% + 8px)",
+    left:          "50%",
+    transform:     "translateX(-50%)",
+    fontSize:      "12px",
+    color:         "#ffffff",
+    whiteSpace:    "nowrap",
+    pointerEvents: "none",
+    opacity:       chatHovered ? 1 : 0,
+    transition:    "opacity 0.2s ease",
+    userSelect:    "none",
+    fontWeight:    600,
   };
 
   const chatImgStyle = {
@@ -320,11 +342,15 @@ export default function MGFloatingNav({
       <button
         style={chatBtnStyle}
         onClick={onChat}
+        onMouseEnter={() => setChatHovered(true)}
+        onMouseLeave={() => setChatHovered(false)}
         aria-label="Open chat"
         title="Chat with us"
       >
-        <img src={coupleImage} alt="Chat with us" style={chatImgStyle} />
+        <span style={chatLabelStyle}>Chat With Us</span>
+        <img src={coupleImage} alt="Chat with us" style={{ ...chatImgStyle, overflow: "hidden" }} />
       </button>
+
 
     </nav>
   );
