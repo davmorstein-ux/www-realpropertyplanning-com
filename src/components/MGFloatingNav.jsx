@@ -73,8 +73,8 @@ export default function MGFloatingNav({
     display:         "flex",
     alignItems:      "center",
     justifyContent:  "center",
-    gap:             "10px",
-    padding:         "10px 20px",
+    gap:             "12px",
+    padding:         "12px 24px",
     borderRadius:    "999px",
     boxShadow:       "0 6px 28px rgba(0,0,0,0.6)",
     isolation:       "isolate",
@@ -87,8 +87,8 @@ export default function MGFloatingNav({
   // ── Steering wheel button ────────────────────────────────────
   const homeBtnStyle = {
     position:        "relative",
-    width:           "76px",
-    height:          "76px",
+    width:           "92px",
+    height:          "92px",
     borderRadius:    "50%",
     backgroundColor: "#f0ebe0",
     opacity:         1,
@@ -106,8 +106,8 @@ export default function MGFloatingNav({
   };
 
   const wheelImgStyle = {
-    width:      "46px",
-    height:     "46px",
+    width:      "58px",
+    height:     "58px",
     objectFit:  "contain",
     display:    "block",
     animation:  wheelDir === "hovering" ? "wheelWiggle 0.4s ease-in-out infinite" : "none",
@@ -115,7 +115,7 @@ export default function MGFloatingNav({
   };
 
   const homeLabelStyle = {
-    fontSize:    "11px",
+    fontSize:    "13px",
     fontWeight:  "800",
     color:       "#1e3355",
     marginTop:   "2px",
@@ -128,8 +128,8 @@ export default function MGFloatingNav({
   // ── Gear oval container ──────────────────────────────────────
   const gearOvalStyle = {
     position:        "relative",
-    width:           "104px",
-    height:          "80px",
+    width:           "124px",
+    height:          "96px",
     borderRadius:    "40px",
     backgroundColor: "#f0ebe0",
     opacity:         1,
@@ -159,9 +159,9 @@ export default function MGFloatingNav({
     position:       "absolute",
     bottom:         0,
     left:           "50%",
-    transform:      "translateX(-50%)",  // only centering, never changes
-    width:          "44px",
-    height:         "32px",
+    transform:      "translateX(-50%)",
+    width:          "54px",
+    height:         "40px",
     objectFit:      "contain",
     objectPosition: "bottom center",
     display:        "block",
@@ -171,12 +171,12 @@ export default function MGFloatingNav({
   // Stick — positioned so its bottom aligns with boot top, rotates from bottom
   const stickImgStyle = {
     position:        "absolute",
-    bottom:          "28px",             // sits just above the boot
+    bottom:          "34px",
     left:            "50%",
     transform:       `translateX(-50%) ${stickRotation}`,
-    transformOrigin: "bottom center",    // pivot at base of stick
-    width:           "26px",
-    height:          "44px",
+    transformOrigin: "bottom center",
+    width:           "32px",
+    height:          "54px",
     objectFit:       "contain",
     objectPosition:  "bottom center",
     display:         "block",
@@ -186,7 +186,7 @@ export default function MGFloatingNav({
 
   // R label
   const rLabelStyle = {
-    fontSize:   "16px",
+    fontSize:   "19px",
     fontWeight: "900",
     color:      gearDir === "R" ? "#7a1a1a" : "#1e3355",
     lineHeight: 1,
@@ -199,7 +199,7 @@ export default function MGFloatingNav({
 
   // F label
   const fLabelStyle = {
-    fontSize:   "16px",
+    fontSize:   "19px",
     fontWeight: "900",
     color:      gearDir === "F" ? "#7a1a1a" : "#1e3355",
     lineHeight: 1,
@@ -224,10 +224,10 @@ export default function MGFloatingNav({
   // ── Chat button ──────────────────────────────────────────────
   const chatBtnStyle = {
     position:        "relative",
-    width:           "76px",
-    height:          "76px",
-    minWidth:        "76px",
-    minHeight:       "76px",
+    width:           "92px",
+    height:          "92px",
+    minWidth:        "92px",
+    minHeight:       "92px",
     borderRadius:    "50%",
     backgroundColor: "#1e3355",
     opacity:         1,
@@ -245,18 +245,33 @@ export default function MGFloatingNav({
   };
 
   const chatLabelStyle = {
-    position:      "absolute",
-    bottom:        "calc(100% + 8px)",
-    left:          "50%",
-    transform:     "translateX(-50%)",
-    fontSize:      "12px",
-    color:         "#ffffff",
-    whiteSpace:    "nowrap",
-    pointerEvents: "none",
-    opacity:       chatHovered ? 1 : 0,
-    transition:    "opacity 0.2s ease",
-    userSelect:    "none",
-    fontWeight:    600,
+    position:        "absolute",
+    right:           "-110px",
+    top:             "50%",
+    transform:       "translateY(-50%)",
+    backgroundColor: "#1e3355",
+    borderRadius:    "6px",
+    padding:         "5px 10px",
+    fontSize:        "15px",
+    fontWeight:      700,
+    color:           "#ffffff",
+    whiteSpace:      "nowrap",
+    pointerEvents:   "none",
+    opacity:         chatHovered ? 1 : 0,
+    transition:      "opacity 0.2s ease",
+    userSelect:      "none",
+  };
+
+  const chatLabelArrowStyle = {
+    position:    "absolute",
+    left:        "-6px",
+    top:         "50%",
+    transform:   "translateY(-50%)",
+    width:       0,
+    height:      0,
+    borderTop:    "6px solid transparent",
+    borderBottom: "6px solid transparent",
+    borderRight:  "6px solid #1e3355",
   };
 
   const chatImgStyle = {
@@ -347,7 +362,7 @@ export default function MGFloatingNav({
         aria-label="Open chat"
         title="Chat with us"
       >
-        <span style={chatLabelStyle}>Chat With Us</span>
+        <span style={chatLabelStyle}><span style={chatLabelArrowStyle} aria-hidden="true" />Chat With Us</span>
         <img src={coupleImage} alt="Chat with us" style={{ ...chatImgStyle, overflow: "hidden" }} />
       </button>
 
