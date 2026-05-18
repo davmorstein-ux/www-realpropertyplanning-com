@@ -48,19 +48,26 @@ const MGDashboardBar = () => {
           bottom: 18px;
           left: 50%;
           transform: translateX(-50%);
-          z-index: 1000;
+          z-index: 9999;
           display: flex;
           align-items: center;
           gap: 16px;
           padding: 12px 22px;
-          background-color: #1B2B4B;
-          background-image: none;
-          opacity: 1;
-          border: 1px solid rgba(201,168,76,0.45);
+          background-color: #1a2f4e !important;
+          background: #1a2f4e !important;
+          background-image: none !important;
+          backdrop-filter: none !important;
+          -webkit-backdrop-filter: none !important;
+          opacity: 1 !important;
+          border: 1px solid #C9A84C;
           border-radius: 999px;
-          box-shadow: 0 14px 36px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.08);
+          box-shadow: 0 14px 36px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.08);
           overflow: visible;
           transition: opacity 0.25s ease, transform 0.25s ease;
+        }
+        .mg-dashboard * {
+          backdrop-filter: none !important;
+          -webkit-backdrop-filter: none !important;
         }
         .mg-dashboard[data-hidden="true"] {
           opacity: 0;

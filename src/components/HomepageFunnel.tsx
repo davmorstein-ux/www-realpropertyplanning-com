@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Home, Scale, Handshake, ArrowRight } from "lucide-react";
+import { Home, Scale, Handshake } from "lucide-react";
 
 const cards = [
   {
@@ -26,28 +26,35 @@ const cards = [
 ];
 
 const HomepageFunnel = () => (
-  <section className="bg-cream py-12 md:py-16 lg:py-20">
+  <section className="bg-secondary py-12 md:py-16 lg:py-20">
     <div className="container px-6 lg:px-8">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-stretch">
         {cards.map(({ Icon, label, description, cta, href }) => (
           <Link
             key={label}
             to={href}
-            aria-label={label}
-            className="group flex h-full flex-col items-center text-center rounded-2xl bg-white border-2 border-gold p-8 lg:p-10 shadow-[0_12px_32px_-18px_hsl(var(--navy)/0.55)] hover:border-gold hover:shadow-[0_22px_46px_-22px_hsl(var(--navy)/0.7)] hover:-translate-y-1 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 no-underline"
-            style={{ textDecoration: "none" }}
+            aria-label={`${label} — ${description} — ${cta}`}
+            className="card-3d-blue group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
           >
-            <Icon className="w-12 h-12 text-navy mb-5" strokeWidth={1.75} aria-hidden="true" />
-            <h3 className="font-serif text-2xl lg:text-3xl text-navy font-bold mb-3 leading-tight group-hover:text-[hsl(var(--gold-dark))] transition-colors">
-              {label}
-            </h3>
-            <p className="text-[#374151] mb-7 flex-1" style={{ fontSize: "17px", lineHeight: 1.6 }}>
-              {description}
-            </p>
-            <span className="mt-auto inline-flex items-center justify-center gap-2 bg-gold hover:bg-[hsl(var(--gold-dark))] text-navy font-bold text-base px-6 py-3 rounded-lg transition-colors no-underline">
-              {cta}
-              <ArrowRight className="w-4 h-4" aria-hidden="true" />
-            </span>
+            <div className="card-3d-blue__inner h-full relative">
+              <div className="card-3d-blue__face h-full">
+                <div className="flex h-full flex-col items-center text-center" style={{ padding: "28px 20px" }}>
+                  <Icon className="text-navy mb-4" style={{ width: 56, height: 56 }} strokeWidth={2.25} aria-hidden="true" />
+                  <h3 className="font-serif text-[22px] md:text-[24px] font-semibold text-navy leading-snug mb-3">
+                    {label}
+                  </h3>
+                  <p className="text-foreground text-[15px] leading-relaxed mb-6">
+                    {description}
+                  </p>
+                  <span className="gold-cta mt-auto" style={{ padding: "10px 18px" }}>
+                    {cta}
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </div>
           </Link>
         ))}
       </div>
