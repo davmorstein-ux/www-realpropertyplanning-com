@@ -314,7 +314,7 @@ const ChatAssistant = () => {
           .rpp-chat-fab { width: 115px; height: 115px; }
         }
         @media (max-width: 639px) {
-          .rpp-chat-anchor { width: 95px; height: 95px; left: 60px; top: calc(50% + 30px); }
+          .rpp-chat-anchor { width: 95px; height: 95px; left: 52px; top: calc(50% + 30px); }
           .rpp-chat-fab { width: 95px; height: 95px; }
           .rpp-chat-fab::after { width: 16px; height: 16px; top: 2px; right: 2px; }
           .rpp-chat-panel {
