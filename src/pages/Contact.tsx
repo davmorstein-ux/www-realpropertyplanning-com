@@ -20,6 +20,8 @@ import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washingto
 
 import iconEmail3d from "@/assets/icons/real-estate-email-contact-icon-washington.webp";
 import mappin3d from "@/assets/real-estate-service-areas-mappin-washington.webp";
+import contactHero from "@/assets/contact-hero-soundview-coffee.png";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import { useState } from "react";
 import expRealtyLogo from "@/assets/exp-realty-real-estate-logo-washington.webp";
 import { useToast } from "@/hooks/use-toast";
@@ -82,6 +84,19 @@ const Contact = () => {
       <BreadcrumbSchema items={[{ name: "Contact", url: "/contact" }]} />
       <Header />
       <main id="main-content">
+
+      {/* Hero image + navy band */}
+      <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
+        <div style={{ lineHeight: 0 }}>
+          <img
+            src={contactHero}
+            alt="Seniors enjoying coffee at a waterfront café in Washington State — Real Property Planning contact"
+            className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
+            loading="eager"
+          />
+          <HeroBandTitle>Let's Connect</HeroBandTitle>
+        </div>
+      </section>
 
       {/* Hero */}
       <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
