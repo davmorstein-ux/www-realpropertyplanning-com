@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 import HomepageHero from "@/components/HomepageHero";
 import HomepageFunnel from "@/components/HomepageFunnel";
+import HomepageTestimonials from "@/components/HomepageTestimonials";
 import HomepageFAQ from "@/components/HomepageFAQ";
 import SituationCards from "@/components/SituationCards";
 import HomepageNav from "@/components/HomepageNav";
@@ -129,6 +130,10 @@ const Index = () => {
 
       {/* 4. BROADER CATEGORY ORIENTATION — secondary navigation pathways */}
       <HomepageNav />
+
+      {/* 5. TESTIMONIALS — social proof above the footer */}
+      <HomepageTestimonials />
+
 
 
 
