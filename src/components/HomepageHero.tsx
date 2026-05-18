@@ -487,7 +487,7 @@ const HomepageHero = () => {
               margin: "0 0 12px 0",
             }}
           >
-            A Free Resource For Seniors, Families & Professionals
+            A Free Resource For Seniors, Families &amp; Professionals in Washington State
           </h2>
           <p
             style={{
