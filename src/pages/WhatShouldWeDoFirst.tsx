@@ -231,6 +231,9 @@ const WhatShouldWeDoFirst = () => {
             </div>
           </div>
         </section>
+        {/* Situation cards — full journey grid */}
+        <SituationCards />
+
 
         {/* FAQ */}
         <PageFAQ
