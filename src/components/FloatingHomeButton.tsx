@@ -56,15 +56,24 @@ const FloatingHomeButton = () => {
           object-fit: contain;
           flex-shrink: 0;
         }
-        @media (max-width: 767px) {
+        @media (min-width: 640px) and (max-width: 1023px) {
           .home-button {
-            padding: 6px 10px;
-            font-size: 14px;
-            top: calc(50% - 34px);
+            padding: 7px 11px;
+            font-size: 16px;
+            top: calc(50% - 38px);
+          }
+          .home-button .steering-wheel-img { width: 54px; height: 54px; }
+        }
+        @media (max-width: 639px) {
+          .home-button {
+            left: 52px;
+            padding: 5px 8px;
+            font-size: 12px;
+            top: calc(50% - 26px);
           }
           .home-button .steering-wheel-img {
-            width: 51px;
-            height: 51px;
+            width: 45px;
+            height: 45px;
           }
         }
       `}</style>
