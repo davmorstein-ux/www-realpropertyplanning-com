@@ -1,34 +1,20 @@
 import { useEffect, useRef, useState } from "react";
-import FloatingHomeButton from "./FloatingHomeButton";
-import FloatingNavButtons from "./FloatingNavButtons";
+import { Link } from "react-router-dom";
+import steeringWheel from "@/assets/steering-wheel-transparent.png";
+import gearBase from "@/assets/gear_shifter_base.png";
+import gearTop from "@/assets/gear_shifter_top.png";
 import ChatAssistant from "./ChatAssistant";
 
 /**
- * MG-themed dashboard bar — a pill-shaped navy container fixed to the bottom
- * center of the viewport that hosts the three sticky nav buttons:
- *   Steering wheel (Home) · Gear shifter (Back/Forward) · Wheel/tire (Chat)
- * Renders on every page. Auto-hides when the footer scrolls into view.
+ * MG-themed dashboard bar — fixed bottom-center pill containing three sticky
+ * navigation controls: Home (steering wheel), Back/Forward (gear shifter),
+ * Chat (couple photo). Rebuilt from scratch with fully opaque backgrounds and
+ * no transparency / no backdrop-filter / no overflow clipping.
  */
 const MGDashboardBar = () => {
-  const [showTip, setShowTip] = useState(false);
   const [footerVisible, setFooterVisible] = useState(false);
   const barRef = useRef<HTMLDivElement>(null);
 
-  // First-visit tooltip
-  useEffect(() => {
-    try {
-      if (!localStorage.getItem("mg-dashboard-tip-seen")) {
-        setShowTip(true);
-        localStorage.setItem("mg-dashboard-tip-seen", "1");
-        const t = setTimeout(() => setShowTip(false), 3000);
-        return () => clearTimeout(t);
-      }
-    } catch {
-      /* ignore */
-    }
-  }, []);
-
-  // Hide when footer scrolls into view so bar never overlaps the footer
   useEffect(() => {
     const footer = document.querySelector("footer");
     if (!footer) return;
@@ -43,177 +29,227 @@ const MGDashboardBar = () => {
   return (
     <>
       <style>{`
-        .mg-dashboard {
+        .mgbar {
           position: fixed;
-          bottom: 18px;
+          bottom: 24px;
           left: 50%;
           transform: translateX(-50%);
           z-index: 9999;
-          isolation: isolate;
           display: flex;
           align-items: center;
-          gap: 16px;
-          padding: 12px 22px;
-          background-color: #1a2f4e !important;
-          background: #1a2f4e !important;
-          background-image: none !important;
-          backdrop-filter: none !important;
-          -webkit-backdrop-filter: none !important;
-          opacity: 1 !important;
-          mix-blend-mode: normal !important;
-          border: 1px solid #C9A84C;
-          border-radius: 999px;
-          box-shadow: 0 14px 36px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.08);
-          overflow: visible;
-          transition: opacity 0.25s ease, transform 0.25s ease;
+          gap: 12px;
+          padding: 10px 20px;
+          background-color: #1e3a5f;
+          background-image: none;
+          border-radius: 60px;
+          box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+          opacity: 1;
+          isolation: isolate;
         }
-        .mg-dashboard * {
-          backdrop-filter: none !important;
-          -webkit-backdrop-filter: none !important;
-          mix-blend-mode: normal !important;
-        }
-        .mg-dashboard[data-hidden="true"] {
+        .mgbar[data-hidden="true"] {
           opacity: 0;
           pointer-events: none;
           transform: translateX(-50%) translateY(20px);
         }
-
-        /* Override each child's fixed positioning so they sit inline inside the bar. */
-        .mg-dashboard .home-button,
-        .mg-dashboard .gear-nav-oval,
-        .mg-dashboard .rpp-chat-anchor {
-          position: static !important;
-          top: auto !important;
-          left: auto !important;
-          right: auto !important;
-          bottom: auto !important;
-          transform: none !important;
-          margin: 0 !important;
-          overflow: visible !important;
-        }
-
-        /* Equal-size, fully-visible buttons. Steering wheel sets the target height (~92px). */
-        .mg-dashboard .home-button {
-          padding: 6px 14px !important;
-          font-size: 13px !important;
-          min-height: 92px !important;
-          justify-content: center !important;
-          background: #FFF8EC !important;
-        }
-        .mg-dashboard .home-button .steering-wheel-img {
-          width: 56px !important;
-          height: 56px !important;
-        }
-        .mg-dashboard .gear-nav-oval {
-          width: 130px !important;
-          height: 92px !important;
-          background-color: #f5f0e8 !important;
-          background: #f5f0e8 !important;
-          background-image: none !important;
-          opacity: 1 !important;
+        .mgbar, .mgbar * {
+          backdrop-filter: none !important;
+          -webkit-backdrop-filter: none !important;
           mix-blend-mode: normal !important;
         }
-        .mg-dashboard .gear-top { height: 36px !important; }
-        .mg-dashboard .gear-base { height: 28px !important; }
 
-        /* R / F labels — solid navy, high z-index so they sit above the gear graphic. */
-        .mg-dashboard .gear-half {
-          z-index: 5 !important;
+        /* ---- Home (steering wheel) ---- */
+        .mgbar-home {
+          width: 72px;
+          height: 72px;
+          border-radius: 50%;
+          background-color: #f5f0e8;
+          background-image: none;
+          border: 2px solid #8b1a1a;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 1px;
+          text-decoration: none;
+          color: #1B2B4B;
+          padding: 6px 0 6px;
+          box-sizing: border-box;
+          flex-shrink: 0;
+          overflow: visible;
         }
-        .mg-dashboard .gear-half span {
-          position: relative !important;
-          z-index: 10 !important;
-          color: #1B2B4B !important;
-          font-weight: 800 !important;
-          font-size: 20px !important;
-          line-height: 1 !important;
-          text-shadow: 0 1px 0 #FFF8EC;
+        .mgbar-home img {
+          width: 42px;
+          height: 42px;
+          object-fit: contain;
+          display: block;
+          background: transparent;
         }
-        .mg-dashboard .gear-container { z-index: 2 !important; }
+        .mgbar-home span {
+          font-size: 11px;
+          font-weight: 800;
+          line-height: 1;
+          color: #1B2B4B;
+          letter-spacing: 0.02em;
+        }
 
-        .mg-dashboard .rpp-chat-anchor {
-          width: 92px !important;
-          height: 92px !important;
+        /* ---- Gear shifter (R / F) ---- */
+        .mgbar-gear {
+          position: relative;
+          width: 96px;
+          height: 72px;
+          border-radius: 36px;
+          background-color: #f5f0e8;
+          background-image: none;
+          border: 2px solid #8b1a1a;
+          flex-shrink: 0;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 10px;
         }
-        .mg-dashboard .rpp-chat-fab {
-          width: 92px !important;
-          height: 92px !important;
+        .mgbar-gear-half {
+          position: relative;
+          z-index: 3;
+          background: transparent;
+          border: none;
+          padding: 0;
+          cursor: pointer;
+          color: #1B2B4B;
+          font-weight: 900;
+          font-size: 14px;
+          line-height: 1;
+          font-family: inherit;
         }
-        .mg-dashboard .rpp-chat-fab::after {
-          width: 16px !important;
-          height: 16px !important;
-          top: 3px !important;
-          right: 3px !important;
+        .mgbar-gear-graphic {
+          position: absolute;
+          inset: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          pointer-events: none;
+          z-index: 1;
+        }
+        .mgbar-gear-graphic img.top {
+          height: 30px;
+          width: auto;
+          display: block;
+          margin-bottom: -2px;
+          transform-origin: bottom center;
+          transition: transform 0.25s ease;
+        }
+        .mgbar-gear-graphic img.base {
+          height: 22px;
+          width: auto;
+          display: block;
+        }
+        .mgbar-gear:hover .mgbar-gear-graphic img.top {
+          transform: rotate(8deg);
         }
 
-
-        /* Chat panel must open upward (it's anchored to the bottom bar). */
-        .mg-dashboard .rpp-chat-panel {
+        /* ---- Chat (couple photo) ---- */
+        .mgbar-chat {
+          width: 72px;
+          height: 72px;
+          border-radius: 50%;
+          border: 3px solid #8b1a1a;
+          overflow: hidden;
+          flex-shrink: 0;
+          position: relative;
+          background-color: #f5f0e8;
+          isolation: isolate;
+        }
+        /* Override ChatAssistant's fixed positioning so it sits inside the bar */
+        .mgbar-chat .rpp-chat-anchor {
+          position: absolute !important;
+          inset: 0 !important;
+          left: 0 !important;
+          top: 0 !important;
+          width: 100% !important;
+          height: 100% !important;
+          transform: none !important;
+        }
+        .mgbar-chat .rpp-chat-fab {
+          width: 100% !important;
+          height: 100% !important;
+          border-radius: 50% !important;
+          overflow: hidden !important;
+        }
+        .mgbar-chat .rpp-chat-fab::after {
+          width: 14px !important;
+          height: 14px !important;
+          top: 2px !important;
+          right: 2px !important;
+        }
+        .mgbar-chat .rpp-chat-couple-layer,
+        .mgbar-chat .rpp-chat-tire-layer {
+          width: 100% !important;
+          height: 100% !important;
+          object-fit: cover !important;
+        }
+        .mgbar-chat .rpp-chat-panel {
           top: auto !important;
           bottom: calc(100% + 12px) !important;
         }
 
-        /* Tooltip */
-        .mg-dashboard-tip {
-          position: absolute;
-          bottom: calc(100% + 10px);
-          left: 38px;
-          transform: translateX(-50%);
-          background: #1B2B4B;
-          color: #fff;
-          padding: 8px 14px;
-          border-radius: 8px;
-          font-size: 13px;
-          font-weight: 600;
-          white-space: nowrap;
-          box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-          animation: mg-tip-fade 3s ease forwards;
-          pointer-events: none;
-        }
-        .mg-dashboard-tip::after {
-          content: "";
-          position: absolute;
-          top: 100%;
-          left: 50%;
-          transform: translateX(-50%);
-          border: 6px solid transparent;
-          border-top-color: #1B2B4B;
-        }
-        @keyframes mg-tip-fade {
-          0%   { opacity: 0; transform: translateX(-50%) translateY(4px); }
-          15%  { opacity: 1; transform: translateX(-50%) translateY(0); }
-          80%  { opacity: 1; }
-          100% { opacity: 0; transform: translateX(-50%) translateY(-4px); }
-        }
-
         @media (max-width: 639px) {
-          .mg-dashboard {
+          .mgbar {
             bottom: 12px;
-            gap: 10px;
             padding: 8px 14px;
+            gap: 10px;
           }
-          .mg-dashboard .home-button { padding: 4px 10px !important; font-size: 11px !important; min-height: 74px !important; }
-          .mg-dashboard .home-button .steering-wheel-img { width: 44px !important; height: 44px !important; }
-          .mg-dashboard .gear-nav-oval { width: 104px !important; height: 74px !important; }
-          .mg-dashboard .gear-top { height: 28px !important; }
-          .mg-dashboard .gear-base { height: 22px !important; }
-          .mg-dashboard .gear-half span { font-size: 17px !important; }
-          .mg-dashboard .rpp-chat-anchor { width: 74px !important; height: 74px !important; }
-          .mg-dashboard .rpp-chat-fab { width: 74px !important; height: 74px !important; }
+          .mgbar-home { width: 60px; height: 60px; }
+          .mgbar-home img { width: 34px; height: 34px; }
+          .mgbar-home span { font-size: 10px; }
+          .mgbar-gear { width: 82px; height: 60px; }
+          .mgbar-gear-graphic img.top { height: 24px; }
+          .mgbar-gear-graphic img.base { height: 18px; }
+          .mgbar-gear-half { font-size: 12px; }
+          .mgbar-chat { width: 60px; height: 60px; }
         }
-
       `}</style>
 
       <div
         ref={barRef}
-        className="mg-dashboard"
+        className="mgbar"
         data-hidden={footerVisible ? "true" : "false"}
         aria-label="Navigation dashboard"
       >
-        {showTip && <div className="mg-dashboard-tip">Tap to navigate</div>}
-        <FloatingHomeButton />
-        <FloatingNavButtons />
-        <ChatAssistant />
+        {/* Home */}
+        <Link to="/" className="mgbar-home" aria-label="Home">
+          <img src={steeringWheel} alt="" aria-hidden="true" />
+          <span>Home</span>
+        </Link>
+
+        {/* Gear shifter — R / F */}
+        <div className="mgbar-gear">
+          <button
+            type="button"
+            className="mgbar-gear-half"
+            aria-label="Go back"
+            onClick={() => window.history.back()}
+          >
+            R
+          </button>
+          <div className="mgbar-gear-graphic">
+            <img src={gearTop} alt="" aria-hidden="true" className="top" />
+            <img src={gearBase} alt="" aria-hidden="true" className="base" />
+          </div>
+          <button
+            type="button"
+            className="mgbar-gear-half"
+            aria-label="Go forward"
+            onClick={() => window.history.forward()}
+          >
+            F
+          </button>
+        </div>
+
+        {/* Chat */}
+        <div className="mgbar-chat">
+          <ChatAssistant />
+        </div>
       </div>
     </>
   );
