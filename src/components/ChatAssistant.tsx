@@ -309,12 +309,31 @@ const ChatAssistant = () => {
         }
         .rpp-chat-send:hover:not(:disabled) { background: #b8962f; }
         .rpp-chat-send:disabled { opacity: 0.5; cursor: not-allowed; }
-        @media (max-width: 480px) {
+        @media (min-width: 640px) and (max-width: 1023px) {
+          .rpp-chat-anchor { width: 115px; height: 115px; }
+          .rpp-chat-fab { width: 115px; height: 115px; }
+        }
+        @media (max-width: 639px) {
+          .rpp-chat-anchor { width: 95px; height: 95px; left: 60px; top: calc(50% + 30px); }
+          .rpp-chat-fab { width: 95px; height: 95px; }
+          .rpp-chat-fab::after { width: 16px; height: 16px; top: 2px; right: 2px; }
           .rpp-chat-panel {
-            width: calc(100vw - 16px);
-            height: 70vh;
+            position: fixed;
+            top: auto;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            transform: none;
+            width: 100vw;
+            max-width: 100vw;
+            height: 90vh;
+            border-radius: 16px 16px 0 0;
+            animation: rpp-slide-up-bottom 0.25s ease-out;
           }
-          .rpp-chat-anchor { left: 72px; top: calc(50% + 35px); }
+          @keyframes rpp-slide-up-bottom {
+            from { transform: translateY(100%); opacity: 0.6; }
+            to   { transform: translateY(0); opacity: 1; }
+          }
         }
       `}</style>
 

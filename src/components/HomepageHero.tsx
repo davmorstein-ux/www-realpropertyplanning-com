@@ -194,6 +194,7 @@ const HomepageHero = () => {
           >
             <nav
               ref={dropdownRef}
+              className="hp-floating-nav-island"
               style={{
                 maxWidth: "1100px",
                 width: "100%",
