@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import steeringWheelImg from "@/assets/steering-wheel-transparent.png";
-import gearShifterImg from "@/assets/gear-shifter.png";
+import gearStickImg from "@/assets/gear_stick_only.png";
+import gearBootImg from "@/assets/gear_boot_only.png";
 import coupleChatImg from "@/assets/chat-couple.png";
 
 /**
@@ -18,7 +19,8 @@ import coupleChatImg from "@/assets/chat-couple.png";
  */
 export default function MGFloatingNav({
   homeImage   = steeringWheelImg,
-  gearImage   = gearShifterImg,
+  stickImage  = gearStickImg,
+  bootImage   = gearBootImg,
   coupleImage = coupleChatImg,
   onBack      = () => window.history.back(),
   onForward   = () => window.history.forward(),
@@ -140,31 +142,40 @@ export default function MGFloatingNav({
     WebkitBackdropFilter: "none",
   };
 
-  // The shifter container — sized to show the full image
+  // Shifter container — wide enough for boot, tall enough for full stack
   const shifterStackStyle = {
     position:   "relative",
-    width:      "36px",
-    height:     "64px",
+    width:      "44px",
+    height:     "72px",
     flexShrink: 0,
     overflow:   "visible",
   };
 
-  // Single shifter image — rotates as one piece.
-  // transformOrigin is set to the CENTER-BOTTOM of the boot area
-  // (roughly 85% down the image height), so the base stays planted
-  // and only the knob + stick visibly tilts.
-  const stickStyle = {
+  // Boot — absolutely positioned at bottom, NEVER transforms
+  const bootImgStyle = {
+    position:       "absolute",
+    bottom:         0,
+    left:           "50%",
+    transform:      "translateX(-50%)",  // only centering, never changes
+    width:          "44px",
+    height:         "32px",
+    objectFit:      "contain",
+    objectPosition: "bottom center",
+    display:        "block",
+    zIndex:         1,
+  };
+
+  // Stick — positioned so its bottom aligns with boot top, rotates from bottom
+  const stickImgStyle = {
     position:        "absolute",
-    bottom:          0,
+    bottom:          "28px",             // sits just above the boot
     left:            "50%",
-    // Center horizontally first, then apply tilt
     transform:       `translateX(-50%) ${stickRotation}`,
-    // Pivot at the center of the boot base — 50% across, ~88% down
-    transformOrigin: "50% 88%",
-    width:           "36px",
-    height:          "64px",
+    transformOrigin: "bottom center",    // pivot at base of stick
+    width:           "26px",
+    height:          "44px",
     objectFit:       "contain",
-    objectPosition:  "center bottom",
+    objectPosition:  "bottom center",
     display:         "block",
     transition:      "transform 0.2s ease",
     zIndex:          2,
@@ -268,13 +279,12 @@ export default function MGFloatingNav({
           R
         </span>
 
-        {/* Gear shifter — single image, pivots deep in boot so base stays planted */}
+        {/* Gear shifter — boot fixed, stick tilts independently */}
         <div style={shifterStackStyle}>
-          <img
-            src={gearImage}
-            alt="Gear shifter"
-            style={stickStyle}
-          />
+          {/* Boot — never moves */}
+          <img src={bootImage} alt="" aria-hidden="true" style={bootImgStyle} />
+          {/* Stick + knob — tilts on hover */}
+          <img src={stickImage} alt="Gear shifter" style={stickImgStyle} />
         </div>
 
         {/* F label */}
