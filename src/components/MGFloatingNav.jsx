@@ -1,17 +1,34 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import steeringWheelImg from "@/assets/steering-wheel-transparent.png";
-import gearShifterImg from "@/assets/gear_shifter_top.png";
+import gearTopImg from "@/assets/gear_shifter_top.png";
+import gearBaseImg from "@/assets/gear_shifter_base.png";
 import coupleChatImg from "@/assets/chat-couple.png";
 
 export default function MGFloatingNav({
   homeImage = steeringWheelImg,
-  gearImage = gearShifterImg,
+  gearTopImage = gearTopImg,
+  gearBaseImage = gearBaseImg,
   coupleImage = coupleChatImg,
-  onBack = () => window.history.back(),
-  onForward = () => window.history.forward(),
+  onBack,
+  onForward,
   onChat = () => {},
 }) {
   const navigate = useNavigate();
+  const [tilt, setTilt] = useState(0); // -1 left, 0 center, +1 right
+
+  const handleBack = () => {
+    setTilt(-1);
+    setTimeout(() => setTilt(0), 320);
+    if (onBack) onBack();
+    else window.history.back();
+  };
+  const handleForward = () => {
+    setTilt(1);
+    setTimeout(() => setTilt(0), 320);
+    if (onForward) onForward();
+    else window.history.forward();
+  };
 
   const barStyle = {
     position: "fixed",
@@ -97,12 +114,41 @@ export default function MGFloatingNav({
     flexShrink: 0,
   };
 
-  const gearImgStyle = {
-    width: "30px",
+  // Wrapper holding the two stacked layers of the shifter
+  const gearStackStyle = {
+    position: "relative",
+    width: "32px",
     height: "64px",
+    flexShrink: 0,
+  };
+
+  // Boot + base plate — stationary
+  const gearBaseStyle = {
+    position: "absolute",
+    left: "50%",
+    bottom: 0,
+    transform: "translateX(-50%)",
+    width: "32px",
+    height: "24px",
     objectFit: "contain",
     display: "block",
-    flexShrink: 0,
+    pointerEvents: "none",
+  };
+
+  // Stick + knob — tilts on click, pivots from bottom where it meets the boot
+  const tiltDeg = tilt * 22;
+  const gearTopStyle = {
+    position: "absolute",
+    left: "50%",
+    bottom: "18px",
+    width: "26px",
+    height: "46px",
+    objectFit: "contain",
+    display: "block",
+    pointerEvents: "none",
+    transformOrigin: "50% 100%",
+    transform: `translateX(-50%) rotate(${tiltDeg}deg)`,
+    transition: "transform 0.25s ease",
   };
 
   const chatBtnStyle = {
@@ -155,23 +201,28 @@ export default function MGFloatingNav({
       <div style={gearBtnStyle} aria-label="Page navigation">
         <span
           style={gearLetterStyle}
-          onClick={onBack}
+          onClick={handleBack}
           title="Go back"
           role="button"
           tabIndex={0}
-          onKeyDown={(e) => e.key === "Enter" && onBack()}
+          onKeyDown={(e) => e.key === "Enter" && handleBack()}
           aria-label="Go back"
         >
           R
         </span>
-        <img src={gearImage} alt="Gear shifter" style={gearImgStyle} />
+        <div style={gearStackStyle}>
+          {/* Boot + base plate — stationary */}
+          <img src={gearBaseImage} alt="" aria-hidden="true" style={gearBaseStyle} />
+          {/* Stick + knob — tilts */}
+          <img src={gearTopImage} alt="Gear shifter" style={gearTopStyle} />
+        </div>
         <span
           style={gearLetterStyle}
-          onClick={onForward}
+          onClick={handleForward}
           title="Go forward"
           role="button"
           tabIndex={0}
-          onKeyDown={(e) => e.key === "Enter" && onForward()}
+          onKeyDown={(e) => e.key === "Enter" && handleForward()}
           aria-label="Go forward"
         >
           F
