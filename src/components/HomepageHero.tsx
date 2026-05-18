@@ -473,8 +473,6 @@ const HomepageHero = () => {
         />
       </section>
 
-      {/* ===== Trust Bar ===== */}
-      <HeroBandTitle as="h2">Washington's Free Hub for Probate, Estate &amp; Senior Transition Real Estate</HeroBandTitle>
 
       {/* ===== Intro ===== */}
       <section style={{ background: "#F5F0E6", padding: isMobile ? "24px 20px 20px" : "32px 24px 24px" }}>
