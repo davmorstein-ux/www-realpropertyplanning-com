@@ -303,6 +303,8 @@ export default function MGFloatingNav({
         <span
           style={fLabelStyle}
           onClick={onForward}
+          onMouseEnter={() => setFHover(true)}
+          onMouseLeave={() => setFHover(false)}
           role="button"
           tabIndex={0}
           aria-label="Go forward"
