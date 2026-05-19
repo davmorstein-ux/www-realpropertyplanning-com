@@ -4,6 +4,7 @@ import steeringWheelImg from "@/assets/steering-wheel-transparent.png";
 import gearStickImg from "@/assets/gear_stick_only.png";
 import gearBootImg from "@/assets/gear_boot_only.png";
 import coupleChatImg from "@/assets/chat-couple.png";
+import ChatAssistant from "./ChatAssistant";
 
 /**
  * MGFloatingNav v3
