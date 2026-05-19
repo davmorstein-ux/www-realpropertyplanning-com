@@ -112,11 +112,13 @@ export default function MGFloatingNav({
     display:    "block",
     animation:  wheelDir === "hovering" ? "wheelWiggle 0.4s ease-in-out infinite" : "none",
     transform:  "rotate(0deg)",
+    marginTop:    "-6px",
+    marginBottom: "4px",
   };
 
   const homeLabelStyle = {
     fontSize:    "15px",
-    fontWeight:  "800",
+    fontWeight:  "900",
     color:       "#1e3355",
     marginTop:   "2px",
     letterSpacing: "0.05em",
