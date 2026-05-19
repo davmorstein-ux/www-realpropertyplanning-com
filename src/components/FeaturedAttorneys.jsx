@@ -1,92 +1,103 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const styles = `
-  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
-  .pawrap * { box-sizing: border-box; margin: 0; padding: 0; }
-  .pasection { font-family: 'DM Sans', sans-serif; padding: 0 40px 64px; }
-  .pagrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 1300px; margin: 0 auto 20px; }
-  .patile { width: 100%; cursor: pointer; text-decoration: none; display: block; }
-  .pacard { width: 100%; height: 380px; background: #FDFAF5; border-radius: 5px; border: 1px solid rgba(184,154,90,.40); box-shadow: 0 8px 24px rgba(18,36,63,.15); display: flex; flex-direction: column; position: relative; transition: box-shadow .4s ease, transform .4s ease; overflow: hidden; }
-  .patile:hover .pacard { box-shadow: 0 16px 40px rgba(18,36,63,.25); transform: translateY(-6px); }
-  .pacorner { position: absolute; width: 14px; height: 14px; pointer-events: none; z-index: 50; }
-  .pacorner.tl { top: 8px; left: 8px; border-top: 1.5px solid #b89a5a; border-left: 1.5px solid #b89a5a; }
-  .pacorner.tr { top: 8px; right: 8px; border-top: 1.5px solid #b89a5a; border-right: 1.5px solid #b89a5a; }
-  .pacorner.bl { bottom: 8px; left: 8px; border-bottom: 1.5px solid #b89a5a; border-left: 1.5px solid #b89a5a; }
-  .pacorner.br { bottom: 8px; right: 8px; border-bottom: 1.5px solid #b89a5a; border-right: 1.5px solid #b89a5a; }
-  .paimgbox { width: 100%; height: 220px; flex-shrink: 0; background: #FDFAF5; display: flex; align-items: flex-start; justify-content: center; overflow: hidden; transition: transform .4s ease; }
-  .patile:hover .paimgbox { transform: scale(1.03); }
-  .paimg { display: block; width: 100%; height: 220px; object-fit: contain; object-position: top center; }
-  .pabody { flex: 1; padding: 12px 10px 0; overflow: hidden; position: relative; }
-  .papill { display: block; font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: #b89a5a; margin-bottom: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; transition: opacity .15s ease; }
-  .patitle { font-family: 'DM Sans', serif; font-weight: 700; font-size: 22px; color: #12243F; line-height: 1.15; transition: opacity .15s ease; }
-  .patile:hover .papill, .patile:hover .patitle { opacity: 0; }
-  .pahover { position: absolute; inset: 0; background: rgba(10,20,46,.97); display: flex; align-items: center; justify-content: center; padding: 14px; opacity: 0; transition: opacity .28s ease .1s; z-index: 30; }
-  .patile:hover .pahover { opacity: 1; }
-  .patagline { font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 14px; color: #FFF; text-align: center; line-height: 1.5; }
-  .pafooter { height: 52px; flex-shrink: 0; display: flex; align-items: center; padding: 0 12px; border-top: 1.5px solid rgba(184,154,90,.28); background: #FDFAF5; border-radius: 0 0 5px 5px; gap: 8px; justify-content: space-between; }
-  .palabel { font-size: 10px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: #1a3a6b; line-height: 1.4; flex: 1; }
-  .paarrow { margin-left: auto; width: 28px; height: 28px; border: 1.5px solid #1a3a6b; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: background .25s; flex-shrink: 0; }
-  .patile:hover .paarrow { background: #1a3a6b; }
-  .paarrow svg { width: 11px; height: 11px; stroke: #1a3a6b; fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; transition: stroke .25s; }
-  .patile:hover .paarrow svg { stroke: #fff; }
-  .pabar { max-width: 1300px; margin: 36px auto 0; background: #1a3a6b; border-radius: 8px; padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-  .pabar-text { font-size: 14px; color: #c8d5e8; line-height: 1.6; }
-  .pabar-btn { font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: .08em; background: #b89a5a; color: #fff; border: none; border-radius: 4px; padding: 12px 24px; cursor: pointer; white-space: nowrap; transition: background .2s; }
-  .pabar-btn:hover { background: #d4b87a; }
-  .paheading { text-align: center; margin-bottom: 40px; padding-top: 48px; }
-  .paeyebrow { font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: #b89a5a; display: block; margin-bottom: 10px; }
-  .pah2 { font-family: 'DM Sans', serif; font-size: 40px; font-weight: 700; color: #12243F; line-height: 1.15; margin: 0; }
-`;
-
-
-const PATile = ({ pill, title, tagline, imgSrc, href }) => (
-  <a className="patile" href={href}>
-    <div className="pacard">
-      <div className="pacorner tl" /><div className="pacorner tr" />
-      <div className="pacorner bl" /><div className="pacorner br" />
-      <div className="paimgbox">
-        <img className="paimg" src={imgSrc} alt={title} loading="lazy" />
-      </div>
-      <div className="pabody">
-        <span className="papill">{pill}</span>
-        <div className="patitle">{title}</div>
-        <div className="pahover">
-          <div className="patagline">{tagline}</div>
-        </div>
-      </div>
-      <div className="pafooter">
-        <span className="palabel">Information & Featured Providers</span>
-        <div className="paarrow">
-          <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
-        </div>
-      </div>
-    </div>
-  </a>
-);
-
+const TILES = [
+  { pill: "Legal Services", title: "Divorce Attorneys", tagline: "Legal Guidance Through Divorce & Property Division", imgSrc: "/tiles/attorneys/divorce-attorneys.webp", href: "/for-attorneys" },
+  { pill: "Legal Services", title: "Elder Law Attorneys", tagline: "Protecting Seniors' Rights & Long-Term Planning", imgSrc: "/tiles/attorneys/elder-law-attorneys.webp", href: "/for-attorneys" },
+  { pill: "Legal Services", title: "Family Law Attorneys", tagline: "Compassionate Legal Support for Families in Transition", imgSrc: "/tiles/attorneys/family-law-attorneys.webp", href: "/for-attorneys" },
+  { pill: "Legal Services", title: "Probate Attorneys", tagline: "Expert Guidance Through the Probate Process", imgSrc: "/tiles/attorneys/probate-attorneys.webp", href: "/for-attorneys" },
+  { pill: "Legal Services", title: "Real Estate Attorneys", tagline: "Protecting Your Interests in Every Property Transaction", imgSrc: "/tiles/attorneys/real-estate-attorneys.webp", href: "/for-attorneys" },
+  { pill: "Legal Services", title: "Estate Planning Attorneys", tagline: "Planning Today for Peace of Mind Tomorrow", imgSrc: "/tiles/attorneys/estate-planning-attorneys.webp", href: "/for-attorneys" },
+];
 
 const FeaturedAttorneys = () => (
-  <div className="pawrap">
-    <style>{styles}</style>
-    <div className="pasection">
-      <div className="paheading">
-        <span className="paeyebrow">Washington State</span>
-        <h2 className="pah2">Featured Attorneys</h2>
-      </div>
-      <div className="pagrid">
-        <PATile pill="Legal Services" title="Divorce Attorneys" tagline="Legal Guidance Through Divorce & Property Division" imgSrc="/tiles/attorneys/divorce-attorneys.webp" href="/for-attorneys" />
-        <PATile pill="Legal Services" title="Elder Law Attorneys" tagline="Protecting Seniors' Rights & Long-Term Planning" imgSrc="/tiles/attorneys/elder-law-attorneys.webp" href="/for-attorneys" />
-        <PATile pill="Legal Services" title="Family Law Attorneys" tagline="Compassionate Legal Support for Families in Transition" imgSrc="/tiles/attorneys/family-law-attorneys.webp" href="/for-attorneys" />
-        <PATile pill="Legal Services" title="Probate Attorneys" tagline="Expert Guidance Through the Probate Process" imgSrc="/tiles/attorneys/probate-attorneys.webp" href="/for-attorneys" />
-        <PATile pill="Legal Services" title="Real Estate Attorneys" tagline="Protecting Your Interests in Every Property Transaction" imgSrc="/tiles/attorneys/real-estate-attorneys.webp" href="/for-attorneys" />
-        <PATile pill="Legal Services" title="Estate Planning Attorneys" tagline="Planning Today for Peace of Mind Tomorrow" imgSrc="/tiles/attorneys/estate-planning-attorneys.webp" href="/for-attorneys" />
-      </div>
-      <div className="pabar">
-        <div className="pabar-text"><strong>Are you an attorney serving estate, probate or senior transition clients?</strong> Join Washington State's most trusted referral network.</div>
-        <button className="pabar-btn">Get Featured →</button>
+  <section className="py-16 lg:py-20 bg-background">
+    <div className="container px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-10">
+          <span className="block mb-2 text-[13px] font-bold tracking-[0.18em] uppercase text-gold" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+            Washington State
+          </span>
+          <h2 className="text-3xl md:text-4xl font-bold text-navy font-sans" style={{ color: "#12243F" }}>
+            Featured Attorneys
+          </h2>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
+          {TILES.map((s) => (
+            <Link
+              key={s.title}
+              to={s.href}
+              aria-label={`${s.title} — ${s.tagline}`}
+              className="card-3d-blue group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+            >
+              <div className="card-3d-blue__inner h-full relative">
+                <div className="card-3d-blue__face h-full">
+                  <div className="flex h-full flex-col">
+                    <div className="relative w-full overflow-hidden bg-transparent flex items-center justify-center" style={{ aspectRatio: "500 / 312" }}>
+                      <img
+                        src={s.imgSrc}
+                        alt={s.title}
+                        className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div className="relative flex flex-1 flex-col items-center text-center overflow-hidden" style={{ padding: "16px" }}>
+                      <span
+                        className="block mb-2 text-[11px] font-bold tracking-[0.18em] uppercase transition-opacity duration-200 group-hover:opacity-0"
+                        style={{ color: "#b89a5a", fontFamily: "'DM Sans', sans-serif" }}
+                      >
+                        {s.pill}
+                      </span>
+                      <h3 className="font-serif text-[22px] md:text-[24px] font-semibold text-navy leading-snug mb-3 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0">
+                        {s.title}
+                      </h3>
+                      <span className="gold-cta mt-auto transition-opacity duration-200 group-hover:opacity-0" style={{ padding: "10px 16px" }}>
+                        Learn More
+                        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                          <polyline points="9 18 15 12 9 6" />
+                        </svg>
+                      </span>
+                      <div
+                        aria-hidden="true"
+                        className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100"
+                        style={{
+                          background: "rgba(10, 20, 46, 0.97)",
+                          zIndex: 10,
+                          display: "flex",
+                          flexDirection: "column",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          textAlign: "center",
+                          padding: "1.25rem 1.5rem",
+                          transition: "opacity 0.28s ease 0.1s",
+                        }}
+                      >
+                        <h3 className="font-serif text-white text-[20px] md:text-[22px] font-bold leading-snug mb-3">
+                          {s.title}
+                        </h3>
+                        <p className="text-white/90 text-[14px] leading-relaxed mb-3" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+                          {s.tagline}
+                        </p>
+                        <span
+                          className="inline-flex items-center gap-2 text-[15px] font-bold tracking-wide"
+                          style={{ color: "#C9A84C", fontFamily: "'DM Sans', sans-serif" }}
+                        >
+                          Learn More
+                          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                            <polyline points="9 18 15 12 9 6" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 );
 
 export default FeaturedAttorneys;
