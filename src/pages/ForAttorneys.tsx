@@ -10,6 +10,7 @@ import iconAttorneys from "@/assets/icons/probate-attorney-services-icon-washing
 import CTASection from "@/components/CTASection";
 import PageFAQ from "@/components/PageFAQ";
 import FeaturedAttorneys from "@/components/FeaturedAttorneys";
+import HeroBandTitle from "@/components/HeroBandTitle";
 
 const ForAttorneys = () => (
   <div className="min-h-screen bg-background">
@@ -20,6 +21,18 @@ const ForAttorneys = () => (
     <BreadcrumbSchema items={[{ name: "For Attorneys", url: "/for-attorneys" }]} />
     <Header />
     <main id="main-content">
+
+    {/* Hero Image */}
+    <section className="bg-white">
+      <img
+        src="/images/hero_attorneys.png"
+        alt="Real Property Planning for Washington attorneys — estate, probate, and family law referral partner"
+        className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
+        loading="eager"
+      />
+    </section>
+
+    <HeroBandTitle>For Attorneys</HeroBandTitle>
 
     {/* Hero */}
     <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
