@@ -34,21 +34,22 @@ const tiles = [
 ];
 
 const HomepageFunnel = () => (
-  <section id="guided-entry" className="bg-secondary py-20 md:py-28 lg:py-36">
+  <section id="guided-entry" className="bg-warm-bg py-20 md:py-28 lg:py-36">
     <div className="container px-6 lg:px-8">
       <div className="max-w-3xl mx-auto text-center mb-14 md:mb-20">
         <h2
-          className="font-serif font-semibold text-navy"
+          className="font-serif text-navy"
           style={{
-            fontSize: "clamp(34px, 4.2vw, 54px)",
-            lineHeight: 1.1,
-            margin: "0 0 18px 0",
-            letterSpacing: "-0.01em",
+            fontSize: "clamp(24px, 2.4vw, 32px)",
+            lineHeight: 1.3,
+            fontWeight: 500,
+            margin: "0 0 14px 0",
+            letterSpacing: "-0.005em",
           }}
         >
-          Which sounds most like your family right now?
+          Which of these best describes your situation right now?
         </h2>
-        <p className="text-foreground text-lg md:text-xl leading-relaxed">
+        <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
           Pick what feels closest to where you are &mdash; we&rsquo;ll guide you from there.
         </p>
       </div>
