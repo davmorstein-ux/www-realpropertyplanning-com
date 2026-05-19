@@ -193,7 +193,7 @@ export default function MGFloatingNav({
   const rLabelStyle = {
     fontSize:   "30px",
     fontWeight: "900",
-    color:      "#1e3355",
+    color:      rHover ? "#cc0000" : "#1e3355",
     lineHeight: 1,
     userSelect: "none",
     width:      "28px",
@@ -206,7 +206,7 @@ export default function MGFloatingNav({
   const fLabelStyle = {
     fontSize:   "30px",
     fontWeight: "900",
-    color:      "#1e3355",
+    color:      fHover ? "#00cc00" : "#1e3355",
     lineHeight: 1,
     userSelect: "none",
     width:      "28px",
