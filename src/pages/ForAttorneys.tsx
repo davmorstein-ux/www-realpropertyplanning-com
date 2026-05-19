@@ -32,42 +32,7 @@ const ForAttorneys = () => (
       />
     </section>
 
-    <HeroBandTitle>For Attorneys</HeroBandTitle>
-
-    {/* Hero */}
-    <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center">
-          <div className="flex justify-center mb-1.5 md:mb-2">
-            <img src={iconAttorneys} alt="Real estate support for probate estate and family law attorneys Washington State" className="block w-full max-w-[15rem] h-auto object-contain" loading="lazy"/>
-          </div>
-          <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">
-            {"\u200B"}
-          </p>
-          <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-primary-foreground leading-tight mb-4">
-            {"\u200B"}
-          </h1>
-          <p className="text-primary-foreground text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-6">
-            {"\u200B"}
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link to="/contact">
-              <Button variant="gold" size="lg" className="px-7 py-4 h-auto rounded-lg">
-                <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy"/>
-                Share Your Situation
-              </Button>
-            </Link>
-            <Button
-              size="lg"
-              className="px-7 py-4 h-auto rounded-lg bg-[hsl(215,60%,38%)] text-white hover:bg-[hsl(215,60%,32%)]"
-              onClick={() => document.getElementById('areas-of-collaboration')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Attorney Options
-            </Button>
-          </div>
-        </div>
-      </div>
-    </section>
+    <HeroBandTitle>Attorneys</HeroBandTitle>
 
     {/* Attorney Specialty Tiles */}
     <FeaturedAttorneys />
