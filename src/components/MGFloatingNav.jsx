@@ -1,370 +1,246 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 import steeringWheelImg from "@/assets/steering-wheel-transparent.png";
 import gearStickImg from "@/assets/gear_stick_only.png";
 import gearBootImg from "@/assets/gear_boot_only.png";
 import coupleChatImg from "@/assets/chat-couple.png";
-import ChatAssistant from "./ChatAssistant";
 
-/**
- * MGFloatingNav v3
- * - Steering wheel spins left/right on hover
- * - Gear stick tilts L/R on R/F hover zones (50/50 split)
- * - Boot stays stationary at all times
- * - All backgrounds fully opaque — no transparency
- *
- * Replace these image paths with actual asset paths in your project:
- *   homeImage   → steering wheel PNG
- *   gearImage   → full gear shifter PNG (will be clipped into stick + boot)
- *   coupleImage → couple photo PNG
- */
-export default function MGFloatingNav({
-  homeImage   = steeringWheelImg,
-  stickImage  = gearStickImg,
-  bootImage   = gearBootImg,
+const MGFloatingNav = ({
+  homeImage = steeringWheelImg,
+  stickImage = gearStickImg,
+  bootImage = gearBootImg,
   coupleImage = coupleChatImg,
-  onBack      = () => window.history.back(),
-  onForward   = () => window.history.forward(),
-  onChat      = () => {},
-}) {
-  const navigate = useNavigate();
+  onHome = () => window.location.href = "/",
+  onBack = () => window.history.back(),
+  onForward = () => window.history.forward(),
+  onChat = () => window.dispatchEvent(new CustomEvent("rpp-open-chat")),
+}) => {
+  const [wheelHovered, setWheelHovered] = useState(false);
+  const [gearSide, setGearSide] = useState("none"); // 'none' | 'R' | 'F'
+  const [chatHovered, setChatHovered] = useState(false);
 
-  // Inject wiggle keyframe once into the document
-  if (typeof document !== "undefined" && !document.getElementById("mg-nav-styles")) {
+  // Wheel wiggle animation via CSS injected once
+  useEffect(() => {
     const style = document.createElement("style");
-    style.id = "mg-nav-styles";
-    style.textContent = `
+    style.innerHTML = `
       @keyframes wheelWiggle {
         0%   { transform: rotate(0deg); }
-        20%  { transform: rotate(-28deg); }
-        50%  { transform: rotate(28deg); }
-        80%  { transform: rotate(-18deg); }
+        25%  { transform: rotate(-25deg); }
+        75%  { transform: rotate(25deg); }
         100% { transform: rotate(0deg); }
       }
     `;
     document.head.appendChild(style);
-  }
+    return () => document.head.removeChild(style);
+  }, []);
 
-  // Steering wheel: 'none' | 'hovering'
-  const [wheelDir, setWheelDir] = useState("none");
-
-  // Gear shifter: 'none' | 'R' | 'F'
-  const [gearDir, setGearDir] = useState("none");
-
-  // Independent hover state for R and F labels
-  const [hoverR, setHoverR] = useState(false);
-  const [hoverF, setHoverF] = useState(false);
-
-  // ── Stick tilt (single image, deep pivot keeps boot planted) ─
-  const stickRotation =
-    gearDir === "R" ? "rotate(-22deg)" :
-    gearDir === "F" ? "rotate(22deg)"  : "rotate(0deg)";
-
-  // ────────────────────────────────────────────────────────────
-  // STYLES
-  // ────────────────────────────────────────────────────────────
-
+  /* ─── STYLES ─── */
   const barStyle = {
-    position:        "fixed",
-    bottom:          "24px",
-    left:            "50%",
-    transform:       "translateX(-50%)",
-    zIndex:          99999,
-    backgroundColor: "#1e3355",
-    opacity:         1,
-    display:         "flex",
-    alignItems:      "center",
-    justifyContent:  "center",
-    gap:             "12px",
-    padding:         "12px 24px",
-    borderRadius:    "999px",
-    boxShadow:       "0 6px 28px rgba(0,0,0,0.6)",
-    isolation:       "isolate",
-    backdropFilter:  "none",
-    WebkitBackdropFilter: "none",
-    mixBlendMode:    "normal",
-    overflow:        "visible",
+    position: "fixed",
+    bottom: "24px",
+    left: "50%",
+    transform: "translateX(-50%)",
+    zIndex: 9999,
+    backgroundColor: "#1e3a5f",
+    opacity: 1,
+    borderRadius: "80px",
+    padding: "12px 24px",
+    display: "flex",
+    alignItems: "center",
+    gap: "12px",
+    boxShadow: "0 4px 20px rgba(0,0,0,0.4)",
+    overflow: "visible",
   };
 
-  // ── Steering wheel button ────────────────────────────────────
-  const homeBtnStyle = {
-    position:        "relative",
-    width:           "116px",
-    height:          "116px",
-    borderRadius:    "50%",
-    backgroundColor: "#f0ebe0",
-    opacity:         1,
-    border:          "2.5px solid #7a1a1a",
-    display:         "flex",
-    flexDirection:   "column",
+  const circleBase = {
+    width: "116px",
+    height: "116px",
+    borderRadius: "50%",
+    backgroundColor: "#f5f0e8",
+    opacity: 1,
+    border: "3px solid #8b1a1a",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    cursor: "pointer",
+    flexShrink: 0,
+    overflow: "visible",
+    position: "relative",
+  };
 
-    alignItems:      "center",
-    justifyContent:  "center",
-    cursor:          "pointer",
-    flexShrink:      0,
-    padding:         "4px",
-    boxSizing:       "border-box",
-    overflow:        "visible",
-    transition:      "box-shadow 0.15s ease",
+  const gearCircleStyle = {
+    ...circleBase,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    paddingLeft: "8px",
+    paddingRight: "8px",
   };
 
   const wheelImgStyle = {
-    width:      "80px",
-    height:     "80px",
-    objectFit:  "contain",
-    display:    "block",
-    animation:  wheelDir === "hovering" ? "wheelWiggle 0.4s ease-in-out infinite" : "none",
-    transform:  "rotate(0deg)",
+    width: "80px",
+    height: "80px",
+    objectFit: "contain",
+    display: "block",
+    animation: wheelHovered ? "wheelWiggle 0.35s ease-in-out infinite" : "none",
+    marginBottom: "2px",
+    marginTop: "-6px",
   };
 
   const homeLabelStyle = {
-    fontSize:    "17px",
-
-    fontWeight:  "900",
-    color:       "#1e3355",
-    marginTop:   "3px",
+    fontSize: "17px",
+    fontWeight: "900",
+    color: "#1e3355",
+    marginTop: "3px",
     letterSpacing: "0.05em",
-    lineHeight:  1,
-    display:     "block",
-    userSelect:  "none",
+    lineHeight: 1,
+    display: "block",
   };
 
-  // ── Gear oval container ──────────────────────────────────────
-  const gearOvalStyle = {
-    position:        "relative",
-    width:           "116px",
-    height:          "116px",
-    borderRadius:    "50%",
-
-    backgroundColor: "#f0ebe0",
-    opacity:         1,
-    border:          "2.5px solid #7a1a1a",
-    display:         "flex",
-    alignItems:      "center",
-    justifyContent:  "space-between",
-    flexShrink:      0,
-    padding:         "0 8px",
-    boxSizing:       "border-box",
-    overflow:        "visible",
-    backdropFilter:  "none",
-    WebkitBackdropFilter: "none",
-  };
-
-  // Shifter container — wide enough for boot, tall enough for full stack
-  const shifterStackStyle = {
-    position:   "relative",
-    width:      "44px",
-    height:     "72px",
-    flexShrink: 0,
-    overflow:   "visible",
-  };
-
-  // Boot — absolutely positioned at bottom, NEVER transforms
-  const bootImgStyle = {
-    position:       "absolute",
-    bottom:         0,
-    left:           "50%",
-    transform:      "translateX(-50%)",  // only centering, never changes
-    width:          "44px",
-    height:         "32px",
-    objectFit:      "contain",
-    objectPosition: "bottom center",
-    display:        "block",
-    zIndex:         1,
-  };
-
-  // Stick — positioned so its bottom aligns with boot top, rotates from bottom
-  const stickImgStyle = {
-    position:        "absolute",
-    bottom:          "28px",             // sits just above the boot
-    left:            "50%",
-    transform:       `translateX(-50%) ${stickRotation}`,
-    transformOrigin: "bottom center",    // pivot at base of stick
-    width:           "26px",
-    height:          "44px",
-    objectFit:       "contain",
-    objectPosition:  "bottom center",
-    display:         "block",
-    transition:      "transform 0.2s ease",
-    zIndex:          2,
-  };
-
-  // R label
+  // R label — bright red on hover
   const rLabelStyle = {
-    fontSize:   "34px",
+    fontSize: "34px",
     fontWeight: "900",
-    color:      hoverR ? "#cc0000" : "#1e3355",
+    color: gearSide === "R" ? "#cc0000" : "#1e3355",
     lineHeight: 1,
     userSelect: "none",
-    width:      "28px",
-    textAlign:  "center",
+    width: "28px",
+    textAlign: "center",
     flexShrink: 0,
-    cursor:     "pointer",
+    cursor: "pointer",
     transition: "color 0.15s ease",
   };
 
-  // F label
+  // F label — bright green on hover
   const fLabelStyle = {
-    fontSize:   "34px",
+    fontSize: "34px",
     fontWeight: "900",
-    color:      hoverF ? "#00cc00" : "#1e3355",
+    color: gearSide === "F" ? "#00cc00" : "#1e3355",
     lineHeight: 1,
     userSelect: "none",
-    width:      "28px",
-    textAlign:  "center",
+    width: "28px",
+    textAlign: "center",
     flexShrink: 0,
-    cursor:     "pointer",
+    cursor: "pointer",
     transition: "color 0.15s ease",
   };
 
+  const shifterContainerStyle = {
+    position: "relative",
+    width: "40px",
+    height: "90px",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "flex-end",
+    flexShrink: 0,
+  };
 
-  // Invisible 50/50 hover zones overlaid on top of the oval
-  const hoverZoneBaseStyle = {
+  const stickStyle = {
     position: "absolute",
-    top:      0,
-    height:   "100%",
-    width:    "50%",
-    zIndex:   10,
-    cursor:   "pointer",
-    borderRadius: "40px",
+    top: 0,
+    left: "50%",
+    transform: `translateX(-50%) rotate(${gearSide === "R" ? -22 : gearSide === "F" ? 22 : 0}deg)`,
+    transformOrigin: "bottom center",
+    width: "32px",
+    height: "54px",
+    objectFit: "contain",
+    transition: "transform 0.2s ease",
+    zIndex: 2,
   };
 
-  // ── Chat button ──────────────────────────────────────────────
-  const chatBtnStyle = {
-    width:           "116px",
-    height:          "116px",
-
-    borderRadius:    "50%",
-    backgroundColor: "#1e3355",
-    opacity:         1,
-    border:          "3px solid #7a1a1a",
-    display:         "flex",
-    alignItems:      "center",
-    justifyContent:  "center",
-    cursor:          "pointer",
-    flexShrink:      0,
-    padding:         0,
-    overflow:        "visible",
-    boxSizing:       "border-box",
-    transition:      "box-shadow 0.15s ease",
+  const bootStyle = {
+    position: "absolute",
+    bottom: 0,
+    left: "50%",
+    transform: "translateX(-50%)",
+    width: "54px",
+    height: "40px",
+    objectFit: "contain",
+    zIndex: 1,
   };
 
-  const chatImgStyle = {
-    width:        "100%",
-    height:       "100%",
-    objectFit:    "cover",
+  const coupleImgStyle = {
+    width: "100%",
+    height: "100%",
     borderRadius: "50%",
-    display:      "block",
+    objectFit: "cover",
+    display: "block",
+    transform: chatHovered ? "scale(1.18)" : "scale(1)",
+    transition: "transform 0.2s ease",
   };
 
-  // ────────────────────────────────────────────────────────────
-  // RENDER
-  // ────────────────────────────────────────────────────────────
+  const chatLabelStyle = {
+    position: "absolute",
+    right: "-120px",
+    top: "50%",
+    transform: "translateY(-50%)",
+    backgroundColor: "#1e3355",
+    color: "white",
+    fontSize: "15px",
+    fontWeight: "700",
+    padding: "5px 10px",
+    borderRadius: "6px",
+    whiteSpace: "nowrap",
+    opacity: chatHovered ? 1 : 0,
+    transition: "opacity 0.2s ease",
+    pointerEvents: "none",
+  };
+
   return (
-    <nav style={barStyle} aria-label="Quick navigation">
+    <div style={barStyle}>
 
-      {/* ── 1. Steering Wheel — Home ── */}
-      <button
-        style={homeBtnStyle}
-        onClick={() => navigate("/")}
-        onMouseEnter={() => setWheelDir("hovering")}
-        onMouseLeave={() => setWheelDir("none")}
-        aria-label="Go to Home"
-        title="Home"
+      {/* Steering Wheel — Home */}
+      <div
+        style={circleBase}
+        onClick={onHome}
+        onMouseEnter={() => setWheelHovered(true)}
+        onMouseLeave={() => setWheelHovered(false)}
       >
-        <img src={homeImage} alt="Steering wheel" style={wheelImgStyle} />
+        <img src={homeImage} alt="Home" style={wheelImgStyle} />
         <span style={homeLabelStyle}>Home</span>
-      </button>
+      </div>
 
-      {/* ── 2. Gear Shifter — R (back) / F (forward) ── */}
-      <div style={gearOvalStyle} aria-label="Page navigation">
-
-        {/* R label */}
+      {/* Gear Shifter — R / F */}
+      <div style={gearCircleStyle}>
+        {/* R — left half hover zone */}
         <span
           style={rLabelStyle}
+          onMouseEnter={() => setGearSide("R")}
+          onMouseLeave={() => setGearSide("none")}
           onClick={onBack}
-          onMouseEnter={() => setHoverR(true)}
-          onMouseLeave={() => setHoverR(false)}
-          role="button"
-          tabIndex={0}
-          aria-label="Go back"
-          onKeyDown={(e) => e.key === "Enter" && onBack()}
         >
           R
         </span>
 
-        {/* Gear shifter — boot fixed, stick tilts independently */}
-        <div style={shifterStackStyle}>
-          {/* Boot — never moves */}
-          <img src={bootImage} alt="" aria-hidden="true" style={bootImgStyle} />
-          {/* Stick + knob — tilts on hover */}
-          <img src={stickImage} alt="Gear shifter" style={stickImgStyle} />
+        <div style={shifterContainerStyle}>
+          <img src={stickImage} alt="gear stick" style={stickStyle} />
+          <img src={bootImage} alt="gear boot" style={bootStyle} />
         </div>
 
-        {/* F label */}
+        {/* F — right half hover zone */}
         <span
           style={fLabelStyle}
+          onMouseEnter={() => setGearSide("F")}
+          onMouseLeave={() => setGearSide("none")}
           onClick={onForward}
-          onMouseEnter={() => setHoverF(true)}
-          onMouseLeave={() => setHoverF(false)}
-          role="button"
-          tabIndex={0}
-          aria-label="Go forward"
-          onKeyDown={(e) => e.key === "Enter" && onForward()}
         >
           F
         </span>
-
-        {/* Invisible 50/50 hover zones — left = R, right = F */}
-        <div
-          style={{ ...hoverZoneBaseStyle, left: 0 }}
-          onMouseEnter={() => setGearDir("R")}
-          onMouseLeave={() => setGearDir("none")}
-          onClick={onBack}
-          aria-hidden="true"
-        />
-        <div
-          style={{ ...hoverZoneBaseStyle, right: 0 }}
-          onMouseEnter={() => setGearDir("F")}
-          onMouseLeave={() => setGearDir("none")}
-          onClick={onForward}
-          aria-hidden="true"
-        />
       </div>
 
-      {/* ── 3. Couple Photo — Chat ── */}
-      <div style={chatBtnStyle} className="mgnav-chat-slot">
-        <style>{`
-          .mgnav-chat-slot .rpp-chat-anchor {
-            position: absolute !important;
-            inset: 0 !important;
-            left: 0 !important;
-            top: 0 !important;
-            width: 100% !important;
-            height: 100% !important;
-            transform: none !important;
-          }
-          .mgnav-chat-slot { position: relative; }
-          .mgnav-chat-slot .rpp-chat-fab {
-            width: 100% !important;
-            height: 100% !important;
-            border-radius: 50% !important;
-            overflow: visible !important;
-          }
-          .mgnav-chat-slot .rpp-chat-couple-layer,
-          .mgnav-chat-slot .rpp-chat-tire-layer {
-            width: 100% !important;
-            height: 100% !important;
-            object-fit: cover !important;
-          }
-          .mgnav-chat-slot .rpp-chat-panel {
-            top: auto !important;
-            bottom: calc(100% + 12px) !important;
-          }
-        `}</style>
-        <ChatAssistant />
+      {/* Couple Photo — Chat */}
+      <div
+        style={{ ...circleBase, overflow: "visible" }}
+        onClick={onChat}
+        onMouseEnter={() => setChatHovered(true)}
+        onMouseLeave={() => setChatHovered(false)}
+      >
+        <img src={coupleImage} alt="Chat" style={coupleImgStyle} />
+        <span style={chatLabelStyle}>Chat With Us</span>
       </div>
 
-    </nav>
+    </div>
   );
-}
+};
+
+export default MGFloatingNav;
