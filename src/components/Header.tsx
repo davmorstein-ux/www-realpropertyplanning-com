@@ -12,45 +12,9 @@ type NavChild = { label: string; href: string };
 type NavItem = { label: string; href: string; children?: NavChild[] };
 
 const NAV: NavItem[] = [
-  
-  {
-    label: "Start Here",
-    href: "/what-should-we-do-first",
-    children: [
-      { label: "What Should We Do First?", href: "/what-should-we-do-first" },
-      { label: "Helping an Aging Parent", href: "/helping-aging-parents" },
-      { label: "Estate, Probate & Inherited Property", href: "/estate-probate-inherited-property" },
-      { label: "What To Do With the House", href: "/what-to-do-with-the-house" },
-      { label: "Housing & Care Options", href: "/understanding-housing-care-options" },
-      { label: "Senior Transitions", href: "/understanding-senior-transitions" },
-      { label: "Professional Team", href: "/building-your-trusted-professional-team" },
-    ],
-  },
-  { label: "Probate & Estate", href: "/probate-estate-sales" },
-  {
-    label: "Senior Transitions",
-    href: "/senior-transitions",
-    children: [
-      { label: "Senior Transitions", href: "/senior-transitions" },
-      { label: "Downsizing", href: "/sell-house-fund-senior-living" },
-    ],
-  },
-  { label: "Property Valuation", href: "/why-valuation-matters" },
-  {
-    label: "Services",
-    href: "/services",
-    children: [
-      { label: "All Services", href: "/services" },
-      { label: "Probate Sales", href: "/probate-estate-sales" },
-      { label: "Senior & Estate Services", href: "/senior-estate-services" },
-      { label: "Senior Placement", href: "/senior-placement" },
-      { label: "For Executors", href: "/executors" },
-      { label: "How the Process Works", href: "/how-the-process-works" },
-      { label: "Professional Referral Resource", href: "/professional-referral-resource" },
-      { label: "Gray Divorce", href: "/gray-divorce" },
-    ],
-  },
+  { label: "Home", href: "/" },
   { label: "Resources", href: "/resources" },
+  { label: "Professionals", href: "/building-your-trusted-professional-team" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
