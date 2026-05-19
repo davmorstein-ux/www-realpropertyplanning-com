@@ -349,7 +349,7 @@ export default function MGFloatingNav({
             width: 100% !important;
             height: 100% !important;
             border-radius: 50% !important;
-            overflow: hidden !important;
+            overflow: visible !important;
           }
           .mgnav-chat-slot .rpp-chat-couple-layer,
           .mgnav-chat-slot .rpp-chat-tire-layer {
