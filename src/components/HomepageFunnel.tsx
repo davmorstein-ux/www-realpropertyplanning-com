@@ -30,7 +30,18 @@ const cards = [
 const HomepageFunnel = () => (
   <section className="bg-secondary py-12 md:py-16 lg:py-20">
     <div className="container px-6 lg:px-8">
+      <h2
+        className="text-center font-bold mb-10 md:mb-14"
+        style={{
+          fontFamily: "'DM Sans', sans-serif",
+          color: "#8B0000",
+          fontSize: "clamp(1.75rem, 2.5vw, 2rem)",
+        }}
+      >
+        Choose The Topic That Best Fits Your Needs
+      </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-stretch">
+
         {cards.map(({ iconSrc, iconAlt, label, description, cta, href }) => (
           <Link
             key={label}
