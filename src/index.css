@@ -133,6 +133,12 @@ body {
     text-wrap: balance;
   }
 
+  /* Sitewide breathing room: extra top padding on the first body section
+     immediately after the navy hero band (bg-primary). */
+  section.bg-primary + section {
+    padding-top: calc(48px + 4rem);
+  }
+
   /* WCAG 2.1 AA accessibility floor for older readers.
      Sitewide minimum sizes for small-text utilities and inline tiny sizes.
      Applied on all viewports; desktop overrides below scale further. */
