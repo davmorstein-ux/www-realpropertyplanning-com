@@ -2,12 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const TILES = [
-  { pill: "Legal Services", title: "Divorce Attorneys", tagline: "Legal Guidance Through Divorce & Property Division", imgSrc: "/tiles/attorneys/divorce-attorneys.webp", href: "/for-attorneys" },
-  { pill: "Legal Services", title: "Elder Law Attorneys", tagline: "Protecting Seniors' Rights & Long-Term Planning", imgSrc: "/tiles/attorneys/elder-law-attorneys.webp", href: "/for-attorneys" },
-  { pill: "Legal Services", title: "Family Law Attorneys", tagline: "Compassionate Legal Support for Families in Transition", imgSrc: "/tiles/attorneys/family-law-attorneys.webp", href: "/for-attorneys" },
-  { pill: "Legal Services", title: "Probate Attorneys", tagline: "Expert Guidance Through the Probate Process", imgSrc: "/tiles/attorneys/probate-attorneys.webp", href: "/for-attorneys" },
-  { pill: "Legal Services", title: "Real Estate Attorneys", tagline: "Protecting Your Interests in Every Property Transaction", imgSrc: "/tiles/attorneys/real-estate-attorneys.webp", href: "/for-attorneys" },
-  { pill: "Legal Services", title: "Estate Planning Attorneys", tagline: "Planning Today for Peace of Mind Tomorrow", imgSrc: "/tiles/attorneys/estate-planning-attorneys.webp", href: "/for-attorneys" },
+  { pill: "Legal Services", title: "Divorce Attorneys", tagline: "Legal Guidance Through Divorce & Property Division", imgSrc: "/tiles/attorneys/divorce-attorneys.webp", href: "/for-attorneys/divorce-attorneys" },
+  { pill: "Legal Services", title: "Elder Law Attorneys", tagline: "Protecting Seniors' Rights & Long-Term Planning", imgSrc: "/tiles/attorneys/elder-law-attorneys.webp", href: "/for-attorneys/elder-law-attorneys" },
+  { pill: "Legal Services", title: "Family Law Attorneys", tagline: "Compassionate Legal Support for Families in Transition", imgSrc: "/tiles/attorneys/family-law-attorneys.webp", href: "/for-attorneys/family-law-attorneys" },
+  { pill: "Legal Services", title: "Probate Attorneys", tagline: "Expert Guidance Through the Probate Process", imgSrc: "/tiles/attorneys/probate-attorneys.webp", href: "/for-attorneys/probate-attorneys" },
+  { pill: "Legal Services", title: "Real Estate Attorneys", tagline: "Protecting Your Interests in Every Property Transaction", imgSrc: "/tiles/attorneys/real-estate-attorneys.webp", href: "/for-attorneys/real-estate-attorneys" },
+  { pill: "Legal Services", title: "Estate Planning Attorneys", tagline: "Planning Today for Peace of Mind Tomorrow", imgSrc: "/tiles/attorneys/estate-planning-attorneys.webp", href: "/for-attorneys/estate-planning-attorneys" },
 ];
 
 const FeaturedAttorneys = () => (

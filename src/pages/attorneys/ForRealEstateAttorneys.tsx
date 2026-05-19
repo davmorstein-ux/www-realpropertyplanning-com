@@ -5,6 +5,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
+import FeaturedAttorneyPlaceholder from "@/components/FeaturedAttorneyPlaceholder";
 import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -258,6 +259,7 @@ const ForRealEstateAttorneys = () => (
       </div>
     </section>
 
+    <FeaturedAttorneyPlaceholder />
     <RelatedServices currentPath="/real-estate-attorneys" />
     <DisclaimerSection />
     </main>
