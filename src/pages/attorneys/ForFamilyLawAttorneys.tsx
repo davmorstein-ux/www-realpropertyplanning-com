@@ -78,22 +78,9 @@ const ForFamilyLawAttorneys = () => (
     <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
-          <img src={iconFamilyLaw} alt="Family law attorney property division real estate Washington State" className="mx-auto max-w-[15rem] w-full h-auto object-contain mb-1.5" loading="lazy"/>
-          <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">
-            For Family Law Attorneys
-          </p>
-          <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
-            Real Estate Support for Family Law Attorneys and Their Clients in Washington State
+          <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight">
+            Family Law Attorneys
           </h1>
-          <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-3">
-            Helping Clients Navigate Property Decisions with Clarity and Structure
-          </p>
-          <Link to="/contact">
-            <Button variant="gold" size="lg" className="px-7 py-4 h-auto rounded-lg">
-              <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0" loading="lazy"/>
-              Schedule a Conversation
-            </Button>
-          </Link>
         </div>
       </div>
     </section>
