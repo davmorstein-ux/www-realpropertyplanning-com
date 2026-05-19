@@ -34,15 +34,16 @@ const tiles = [
 ];
 
 const HomepageFunnel = () => (
-  <section id="guided-entry" className="bg-secondary py-14 md:py-20 lg:py-24">
+  <section id="guided-entry" className="bg-secondary py-20 md:py-28 lg:py-36">
     <div className="container px-6 lg:px-8">
-      <div className="max-w-3xl mx-auto text-center mb-10 md:mb-14">
+      <div className="max-w-3xl mx-auto text-center mb-14 md:mb-20">
         <h2
           className="font-serif font-semibold text-navy"
           style={{
-            fontSize: "clamp(28px, 3.4vw, 44px)",
-            lineHeight: 1.15,
-            margin: "0 0 14px 0",
+            fontSize: "clamp(34px, 4.2vw, 54px)",
+            lineHeight: 1.1,
+            margin: "0 0 18px 0",
+            letterSpacing: "-0.01em",
           }}
         >
           Where are you in the process?
@@ -52,7 +53,8 @@ const HomepageFunnel = () => (
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-stretch max-w-6xl mx-auto">
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 items-stretch max-w-6xl mx-auto">
         {tiles.map(({ iconSrc, iconAlt, title, description, cta, href }) => (
           <Link
             key={title}

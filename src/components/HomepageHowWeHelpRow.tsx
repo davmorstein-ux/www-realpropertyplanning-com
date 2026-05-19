@@ -15,14 +15,15 @@ const items = [
 ];
 
 const HomepageHowWeHelpRow = () => (
-  <section className="bg-background py-14 md:py-20">
+  <section className="bg-background py-20 md:py-28">
     <div className="container px-6 lg:px-8">
       <h2
-        className="font-serif font-semibold text-navy text-center mb-12"
-        style={{ fontSize: "clamp(26px, 3vw, 38px)", lineHeight: 1.2 }}
+        className="font-serif text-navy text-center mb-12"
+        style={{ fontSize: "clamp(20px, 2vw, 24px)", lineHeight: 1.3, fontWeight: 500, letterSpacing: "0.08em", textTransform: "uppercase" }}
       >
         How We Help
       </h2>
+
 
       <ul
         className="mx-auto grid max-w-6xl gap-x-6 gap-y-10"
