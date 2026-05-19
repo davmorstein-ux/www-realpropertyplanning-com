@@ -10,7 +10,7 @@ const cards = [
     href: "/what-should-we-do-first",
   },
   {
-    iconSrc: "/images/icon_attorneys_fiduciaries.png",
+    iconSrc: "",
     iconAlt: "Attorneys and fiduciaries — probate real estate partner",
     label: "Attorneys & Fiduciaries",
     description: "Need a trusted probate real estate partner in Washington State",
