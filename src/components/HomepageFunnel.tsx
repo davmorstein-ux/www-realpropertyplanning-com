@@ -47,10 +47,10 @@ const HomepageFunnel = () => (
             letterSpacing: "-0.005em",
           }}
         >
-          A Resource Site Focused on Probate and Estate Sale & Senior Transitions
+          A Resource Site Focused on Probate & Estate Sales, Along With Senior Transitions
         </h2>
-        <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-          Pick what feels closest to where you are &mdash; we&rsquo;ll guide you from there.
+        <p className="text-muted-foreground md:text-lg leading-relaxed text-2xl">
+          Here is where you start!
         </p>
       </div>
 
