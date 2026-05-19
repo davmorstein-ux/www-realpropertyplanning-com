@@ -128,9 +128,9 @@ export default function MGFloatingNav({
   // ── Gear oval container ──────────────────────────────────────
   const gearOvalStyle = {
     position:        "relative",
-    width:           "130px",
+    width:           "116px",
     height:          "116px",
-    borderRadius:    "40px",
+    borderRadius:    "50%",
 
     backgroundColor: "#f0ebe0",
     opacity:         1,
