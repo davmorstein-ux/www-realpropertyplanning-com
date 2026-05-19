@@ -52,8 +52,8 @@ export default function MGFloatingNav({
   const [gearDir, setGearDir] = useState("none");
 
   // Independent hover state for R and F labels
-  const [rHover, setRHover] = useState(false);
-  const [fHover, setFHover] = useState(false);
+  const [hoverR, setHoverR] = useState(false);
+  const [hoverF, setHoverF] = useState(false);
 
   // ── Stick tilt (single image, deep pivot keeps boot planted) ─
   const stickRotation =
