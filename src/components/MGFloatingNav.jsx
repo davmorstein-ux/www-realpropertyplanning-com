@@ -203,7 +203,7 @@ export default function MGFloatingNav({
 
   // F label
   const fLabelStyle = {
-    fontSize:   "22px",
+    fontSize:   "26px",
     fontWeight: "900",
 
     color:      gearDir === "F" ? "#7a1a1a" : "#1e3355",
