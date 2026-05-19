@@ -51,6 +51,10 @@ export default function MGFloatingNav({
   // Gear shifter: 'none' | 'R' | 'F'
   const [gearDir, setGearDir] = useState("none");
 
+  // Independent hover state for R and F labels
+  const [rHover, setRHover] = useState(false);
+  const [fHover, setFHover] = useState(false);
+
   // ── Stick tilt (single image, deep pivot keeps boot planted) ─
   const stickRotation =
     gearDir === "R" ? "rotate(-22deg)" :
@@ -189,7 +193,7 @@ export default function MGFloatingNav({
   const rLabelStyle = {
     fontSize:   "30px",
     fontWeight: "900",
-    color:      "#1e3355",
+    color:      rHover ? "#cc0000" : "#1e3355",
     lineHeight: 1,
     userSelect: "none",
     width:      "28px",
@@ -202,7 +206,7 @@ export default function MGFloatingNav({
   const fLabelStyle = {
     fontSize:   "30px",
     fontWeight: "900",
-    color:      "#1e3355",
+    color:      fHover ? "#00cc00" : "#1e3355",
     lineHeight: 1,
     userSelect: "none",
     width:      "28px",
@@ -277,6 +281,8 @@ export default function MGFloatingNav({
         <span
           style={rLabelStyle}
           onClick={onBack}
+          onMouseEnter={() => setRHover(true)}
+          onMouseLeave={() => setRHover(false)}
           role="button"
           tabIndex={0}
           aria-label="Go back"
@@ -297,6 +303,8 @@ export default function MGFloatingNav({
         <span
           style={fLabelStyle}
           onClick={onForward}
+          onMouseEnter={() => setFHover(true)}
+          onMouseLeave={() => setFHover(false)}
           role="button"
           tabIndex={0}
           aria-label="Go forward"
