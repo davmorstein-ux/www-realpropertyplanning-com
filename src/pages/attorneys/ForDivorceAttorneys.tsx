@@ -123,7 +123,7 @@ const ForDivorceAttorneys = () => (
             Divorce often involves some of the most significant financial and emotional decisions a person will face — and real estate is frequently at the center of those decisions. The marital home may be the largest shared asset. It may also be the most emotionally charged. When questions arise about value, timing, and how to move forward fairly, what both parties need is not another advocate — it's a neutral, experienced professional who will handle the property with objectivity and care.
           </p>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            Real Property Planning works alongside divorce attorneys throughout Washington State to provide objective valuation, structured sale management, and a consistently neutral approach that supports resolution rather than extending conflict.
+            ​
           </p>
         </div>
       </div>
