@@ -117,14 +117,15 @@ export default function MGFloatingNav({
   };
 
   const homeLabelStyle = {
-    fontSize:    "15px",
-    fontWeight:  "900",
-    color:       "#1e3355",
-    marginTop:   "2px",
+    fontSize: "16px",
+    fontWeight: "900",
+    color: "#1e3355",
+    marginTop: "3px",
     letterSpacing: "0.05em",
-    lineHeight:  1,
-    display:     "block",
-    userSelect:  "none",
+    lineHeight: 1,
+    display: "block",
+    visibility: "visible",
+    opacity: 1,
   };
 
   // ── Gear oval container ──────────────────────────────────────
@@ -189,28 +190,34 @@ export default function MGFloatingNav({
 
   // R label
   const rLabelStyle = {
-    fontSize:   "22px",
+    fontSize: "22px",
     fontWeight: "900",
-    color:      gearDir === "R" ? "#7a1a1a" : "#1e3355",
+    color: "#1e3355",
     lineHeight: 1,
     userSelect: "none",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    width: "28px",
+    textAlign: "center",
     flexShrink: 0,
-    transition: "color 0.15s ease",
-    cursor:     "pointer",
-    zIndex:     3,
+    cursor: "pointer",
   };
 
   // F label
   const fLabelStyle = {
-    fontSize:   "22px",
+    fontSize: "22px",
     fontWeight: "900",
-    color:      gearDir === "F" ? "#7a1a1a" : "#1e3355",
+    color: "#1e3355",
     lineHeight: 1,
     userSelect: "none",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    width: "28px",
+    textAlign: "center",
     flexShrink: 0,
-    transition: "color 0.15s ease",
-    cursor:     "pointer",
-    zIndex:     3,
+    cursor: "pointer",
   };
 
   // Invisible 50/50 hover zones overlaid on top of the oval
