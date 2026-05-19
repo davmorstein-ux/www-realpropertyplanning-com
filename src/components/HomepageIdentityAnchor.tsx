@@ -36,11 +36,7 @@ const HomepageIdentityAnchor = () => (
             maxWidth: 760,
           }}
         >
-          Whether you&rsquo;re an adult child trying to do the right thing for
-          a parent, an executor stepping into a role you never expected, or a
-          family member just trying to figure out what comes next &mdash;
-          you&rsquo;re in the right place. We&rsquo;ll walk you through it,
-          one step at a time.
+          ​
         </p>
       </div>
     </div>
