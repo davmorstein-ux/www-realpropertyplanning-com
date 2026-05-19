@@ -128,17 +128,18 @@ const Index = () => {
       <HomepageHowWeHelpRow />
 
       {/* 5. TRUST STRIP — affiliations, licenses, memberships */}
-      <section className="bg-cream py-12 md:py-16">
+      <section className="bg-cream py-16 md:py-24">
         <div className="container px-6 lg:px-8">
           <h2
-            className="font-serif font-semibold text-navy text-center mb-8"
-            style={{ fontSize: "clamp(22px, 2.4vw, 30px)", lineHeight: 1.2 }}
+            className="font-serif text-navy text-center mb-10"
+            style={{ fontSize: "clamp(18px, 1.8vw, 22px)", lineHeight: 1.3, fontWeight: 500, letterSpacing: "0.08em", textTransform: "uppercase" }}
           >
             Trusted Memberships &amp; Affiliations
           </h2>
           <AffiliationBadgeGrid />
         </div>
       </section>
+
 
       {/* TESTIMONIALS — social proof above the footer */}
       <HomepageTestimonials />
