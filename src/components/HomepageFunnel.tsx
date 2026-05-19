@@ -47,7 +47,7 @@ const HomepageFunnel = () => (
             letterSpacing: "-0.005em",
           }}
         >
-          Which of these best describes your situation right now?
+          A Resource Site Focused on Probate and Estate Sale & Senior Transitions
         </h2>
         <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
           Pick what feels closest to where you are &mdash; we&rsquo;ll guide you from there.

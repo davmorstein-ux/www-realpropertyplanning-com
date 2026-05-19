@@ -474,7 +474,7 @@ const HomepageHero = () => {
 
       </section>
       <HeroBandTitle>
-        Some of Life&rsquo;s Most Important Decisions Often Arrive All at Once.
+        welcome to Real Property Planning
       </HeroBandTitle>
     </div>
   );
