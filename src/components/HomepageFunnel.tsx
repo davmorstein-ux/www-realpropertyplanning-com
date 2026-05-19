@@ -45,7 +45,7 @@ const HomepageFunnel = () => (
                     src={iconSrc}
                     alt={iconAlt}
                     loading="lazy"
-                    style={{ width: "100%", maxWidth: "180px", height: "180px", objectFit: "contain", display: "block", margin: "0 auto 12px auto" }}
+                    style={{ width: "100%", maxWidth: "180px", height: "180px", objectFit: "contain", display: "block", margin: "0 auto 12px auto", background: "transparent", backgroundColor: "transparent" }}
                   />
                   <h3 className="font-serif text-[22px] md:text-[24px] font-semibold text-navy leading-snug mb-3">
                     {label}
