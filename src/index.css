@@ -129,6 +129,10 @@ body {
     -moz-osx-font-smoothing: grayscale;
   }
 
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+
   /* WCAG 2.1 AA accessibility floor for older readers.
      Sitewide minimum sizes for small-text utilities and inline tiny sizes.
      Applied on all viewports; desktop overrides below scale further. */
