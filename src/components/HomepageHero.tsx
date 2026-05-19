@@ -478,17 +478,18 @@ const HomepageHero = () => {
       <section style={{ background: "#F5F0E6", padding: isMobile ? "24px 20px 20px" : "32px 24px 24px" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto", textAlign: "center" }}>
           <h2
+            className="font-bold"
             style={{
               fontFamily: "'DM Sans', system-ui, sans-serif",
               color: "#1E3A5F",
               fontSize: isMobile ? "22px" : "28px",
-              fontWeight: 800,
+              fontWeight: 700,
               lineHeight: 1.25,
               margin: "0 0 12px 0",
               textAlign: "center",
             }}
           >
-            Probate Sales · Estate Sales · Senior Transitions
+            Welcome to Real Property Planning
           </h2>
           <p
             style={{
