@@ -4,6 +4,7 @@ import steeringWheelImg from "@/assets/steering-wheel-transparent.png";
 import gearStickImg from "@/assets/gear_stick_only.png";
 import gearBootImg from "@/assets/gear_boot_only.png";
 import coupleChatImg from "@/assets/chat-couple.png";
+import ChatAssistant from "./ChatAssistant";
 
 /**
  * MGFloatingNav v3
@@ -322,14 +323,37 @@ export default function MGFloatingNav({
       </div>
 
       {/* ── 3. Couple Photo — Chat ── */}
-      <button
-        style={chatBtnStyle}
-        onClick={onChat}
-        aria-label="Open chat"
-        title="Chat with us"
-      >
-        <img src={coupleImage} alt="Chat with us" style={chatImgStyle} />
-      </button>
+      <div style={chatBtnStyle} className="mgnav-chat-slot">
+        <style>{`
+          .mgnav-chat-slot .rpp-chat-anchor {
+            position: absolute !important;
+            inset: 0 !important;
+            left: 0 !important;
+            top: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            transform: none !important;
+          }
+          .mgnav-chat-slot { position: relative; }
+          .mgnav-chat-slot .rpp-chat-fab {
+            width: 100% !important;
+            height: 100% !important;
+            border-radius: 50% !important;
+            overflow: hidden !important;
+          }
+          .mgnav-chat-slot .rpp-chat-couple-layer,
+          .mgnav-chat-slot .rpp-chat-tire-layer {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+          }
+          .mgnav-chat-slot .rpp-chat-panel {
+            top: auto !important;
+            bottom: calc(100% + 12px) !important;
+          }
+        `}</style>
+        <ChatAssistant />
+      </div>
 
     </nav>
   );
