@@ -10,7 +10,7 @@ const cards = [
     href: "/what-should-we-do-first",
   },
   {
-    iconSrc: "/images/icon_attorneys_fiduciaries.png",
+    iconSrc: "",
     iconAlt: "Attorneys and fiduciaries — probate real estate partner",
     label: "Attorneys & Fiduciaries",
     description: "Need a trusted probate real estate partner in Washington State",
@@ -41,12 +41,14 @@ const HomepageFunnel = () => (
             <div className="card-3d-blue__inner h-full relative">
               <div className="card-3d-blue__face h-full">
                 <div className="flex h-full flex-col items-center text-center" style={{ padding: "28px 20px" }}>
-                  <img
-                    src={iconSrc}
-                    alt={iconAlt}
-                    loading="lazy"
-                    style={{ width: "100%", maxWidth: "180px", height: "180px", objectFit: "contain", display: "block", margin: "0 auto 12px auto", background: "transparent", backgroundColor: "transparent" }}
-                  />
+                  {iconSrc ? (
+                    <img
+                      src={iconSrc}
+                      alt={iconAlt}
+                      loading="lazy"
+                      style={{ width: "100%", maxWidth: "180px", height: "180px", objectFit: "contain", display: "block", margin: "0 auto 12px auto", background: "transparent", backgroundColor: "transparent" }}
+                    />
+                  ) : null}
                   <h3 className="font-serif text-[22px] md:text-[24px] font-semibold text-navy leading-snug mb-3">
                     {label}
                   </h3>
