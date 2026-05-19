@@ -133,15 +133,11 @@ body {
     text-wrap: balance;
   }
 
-  /* Sitewide breathing room around the navy hero band (bg-primary):
-     extra padding-bottom on the band, and extra padding-top on the first
-     body section that follows it. */
+  /* Sitewide breathing room inside the navy hero band (bg-primary):
+     extra top and bottom padding around its text. */
   section.bg-primary {
-    padding-bottom: calc(3.5rem + 16px);
-  }
-  section.bg-primary + section {
-    padding-top: calc(4rem + 48px);
-    margin-top: 0;
+    padding-top: calc(0.5rem + 48px);
+    padding-bottom: calc(3.5rem + 32px);
   }
 
   /* WCAG 2.1 AA accessibility floor for older readers.
