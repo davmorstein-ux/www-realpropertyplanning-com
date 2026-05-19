@@ -191,28 +191,30 @@ export default function MGFloatingNav({
 
   // R label
   const rLabelStyle = {
-    fontSize:   "30px",
+    fontSize:   "34px",
     fontWeight: "900",
-    color:      rHover ? "#cc0000" : "#1e3355",
+    color:      hoverR ? "#cc0000" : "#1e3355",
     lineHeight: 1,
     userSelect: "none",
     width:      "28px",
     textAlign:  "center",
     flexShrink: 0,
     cursor:     "pointer",
+    transition: "color 0.15s ease",
   };
 
   // F label
   const fLabelStyle = {
-    fontSize:   "30px",
+    fontSize:   "34px",
     fontWeight: "900",
-    color:      fHover ? "#00cc00" : "#1e3355",
+    color:      hoverF ? "#00cc00" : "#1e3355",
     lineHeight: 1,
     userSelect: "none",
     width:      "28px",
     textAlign:  "center",
     flexShrink: 0,
     cursor:     "pointer",
+    transition: "color 0.15s ease",
   };
 
 
