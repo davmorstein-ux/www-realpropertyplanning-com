@@ -8,6 +8,7 @@ import HomepageHero from "@/components/HomepageHero";
 import HomepageFunnel from "@/components/HomepageFunnel";
 import HomepageReassurance from "@/components/HomepageReassurance";
 import HomepageHowWeHelpRow from "@/components/HomepageHowWeHelpRow";
+import HomepageIdentityAnchor from "@/components/HomepageIdentityAnchor";
 import HomepageTestimonials from "@/components/HomepageTestimonials";
 import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
 
@@ -121,7 +122,10 @@ const Index = () => {
       {/* 2. GUIDED ENTRY — Where are you in the process? (3 tiles) */}
       <HomepageFunnel />
 
-      {/* 3. REASSURANCE — You Don't Have To Navigate This Alone */}
+      {/* 3. IDENTITY ANCHOR — what Real Property Planning is */}
+      <HomepageIdentityAnchor />
+
+      {/* 4. REASSURANCE — You Don't Have To Navigate This Alone */}
       <HomepageReassurance />
 
       {/* 4. HOW WE HELP — clean visual icon row */}
