@@ -115,11 +115,30 @@ const Index = () => {
       />
       <main id="main-content">
 
-      {/* 1. HERO — short, calm, clear */}
+      {/* 1. HERO — cinematic image with overlaid headline + CTAs */}
       <HomepageHero />
 
-      {/* 1b. FUNNEL — Who Are You Here For? */}
+      {/* 2. GUIDED ENTRY — Where are you in the process? (3 tiles) */}
       <HomepageFunnel />
+
+      {/* 3. REASSURANCE — You Don't Have To Navigate This Alone */}
+      <HomepageReassurance />
+
+      {/* 4. HOW WE HELP — clean visual icon row */}
+      <HomepageHowWeHelpRow />
+
+      {/* 5. TRUST STRIP — affiliations, licenses, memberships */}
+      <section className="bg-cream py-12 md:py-16">
+        <div className="container px-6 lg:px-8">
+          <h2
+            className="font-serif font-semibold text-navy text-center mb-8"
+            style={{ fontSize: "clamp(22px, 2.4vw, 30px)", lineHeight: 1.2 }}
+          >
+            Trusted Memberships &amp; Affiliations
+          </h2>
+          <AffiliationBadgeGrid />
+        </div>
+      </section>
 
       {/* TESTIMONIALS — social proof above the footer */}
       <HomepageTestimonials />
