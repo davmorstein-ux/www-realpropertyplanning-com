@@ -104,8 +104,8 @@ export default function MGFloatingNav({
   };
 
   const wheelImgStyle = {
-    width:      "46px",
-    height:     "46px",
+    width:      "80px",
+    height:     "80px",
     objectFit:  "contain",
     display:    "block",
     animation:  wheelDir === "hovering" ? "wheelWiggle 0.4s ease-in-out infinite" : "none",
@@ -113,7 +113,8 @@ export default function MGFloatingNav({
   };
 
   const homeLabelStyle = {
-    fontSize:    "16px",
+    fontSize:    "17px",
+
     fontWeight:  "900",
     color:       "#1e3355",
     marginTop:   "3px",
@@ -185,7 +186,8 @@ export default function MGFloatingNav({
 
   // R label
   const rLabelStyle = {
-    fontSize:   "22px",
+    fontSize:   "26px",
+
     fontWeight: "900",
 
     color:      gearDir === "R" ? "#7a1a1a" : "#1e3355",
