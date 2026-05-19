@@ -186,36 +186,30 @@ export default function MGFloatingNav({
 
   // R label
   const rLabelStyle = {
-    fontSize:   "26px",
-
+    fontSize:   "30px",
     fontWeight: "900",
-
-    color:      gearDir === "R" ? "#7a1a1a" : "#1e3355",
+    color:      "#1e3355",
     lineHeight: 1,
     userSelect: "none",
-    flexShrink: 0,
-    transition: "color 0.15s ease",
-    cursor:     "pointer",
-    zIndex:     3,
     width:      "28px",
     textAlign:  "center",
+    flexShrink: 0,
+    cursor:     "pointer",
   };
 
   // F label
   const fLabelStyle = {
-    fontSize:   "26px",
+    fontSize:   "30px",
     fontWeight: "900",
-
-    color:      gearDir === "F" ? "#7a1a1a" : "#1e3355",
+    color:      "#1e3355",
     lineHeight: 1,
     userSelect: "none",
-    flexShrink: 0,
-    transition: "color 0.15s ease",
-    cursor:     "pointer",
-    zIndex:     3,
     width:      "28px",
     textAlign:  "center",
+    flexShrink: 0,
+    cursor:     "pointer",
   };
+
 
   // Invisible 50/50 hover zones overlaid on top of the oval
   const hoverZoneBaseStyle = {
