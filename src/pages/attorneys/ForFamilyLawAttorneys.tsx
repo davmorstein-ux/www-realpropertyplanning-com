@@ -4,6 +4,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
+import FeaturedAttorneyPlaceholder from "@/components/FeaturedAttorneyPlaceholder";
 import GoldCheck3D from "@/components/GoldCheck3D";
 import PageFAQ from "@/components/PageFAQ";
 import { Button } from "@/components/ui/button";
@@ -186,6 +187,7 @@ const ForFamilyLawAttorneys = () => (
       </div>
     </section>
 
+    <FeaturedAttorneyPlaceholder />
     <RelatedServices currentPath="/for-family-law-attorneys" />
     <DisclaimerSection />
     </main>
