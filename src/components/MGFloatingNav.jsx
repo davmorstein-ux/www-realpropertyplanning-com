@@ -281,6 +281,8 @@ export default function MGFloatingNav({
         <span
           style={rLabelStyle}
           onClick={onBack}
+          onMouseEnter={() => setRHover(true)}
+          onMouseLeave={() => setRHover(false)}
           role="button"
           tabIndex={0}
           aria-label="Go back"
