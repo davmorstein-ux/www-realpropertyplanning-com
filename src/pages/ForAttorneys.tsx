@@ -42,13 +42,13 @@ const ForAttorneys = () => (
             <img src={iconAttorneys} alt="Real estate support for probate estate and family law attorneys Washington State" className="block w-full max-w-[15rem] h-auto object-contain" loading="lazy"/>
           </div>
           <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">
-            For Attorneys
+            {"\u200B"}
           </p>
           <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-primary-foreground leading-tight mb-4">
-            One Real Estate Point of Contact for Your Washington Estate &amp; Probate Files
+            {"\u200B"}
           </h1>
           <p className="text-primary-foreground text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-6">
-            This page is built for Washington estate, probate, and family law attorneys who need a reliable real estate partner for client referrals. When the property side of a matter starts pulling your time — valuation questions, sibling disputes, court-aligned timelines, out-of-state executors — Real Property Planning takes the file. You stay the legal lead; we own the real estate workstream and report back in writing.
+            {"\u200B"}
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link to="/contact">
