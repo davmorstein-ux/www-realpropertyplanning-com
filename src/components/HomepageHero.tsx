@@ -495,21 +495,6 @@ const HomepageHero = () => {
               pointerEvents: "auto",
             }}
           >
-            <p
-              style={{
-                fontFamily: "'DM Sans', system-ui, sans-serif",
-                color: "#F5F0E6",
-                fontSize: isMobile ? "13px" : "clamp(14px, 1.1vw, 17px)",
-                fontWeight: 500,
-                letterSpacing: "0.18em",
-                textTransform: "uppercase",
-                margin: "0 0 18px 0",
-                textShadow: "0 1px 6px rgba(0,0,0,0.5)",
-                opacity: 0.95,
-              }}
-            >
-              Some of life&rsquo;s most important decisions often arrive all at once.
-            </p>
             <h1
               style={{
                 fontFamily: "'Cormorant Garamond', 'DM Sans', serif",
@@ -517,12 +502,12 @@ const HomepageHero = () => {
                 fontSize: isMobile ? "28px" : "clamp(36px, 4.4vw, 60px)",
                 fontWeight: 600,
                 lineHeight: 1.15,
-                margin: "0 0 18px 0",
+                margin: "0 0 22px 0",
                 textShadow: "0 2px 12px rgba(0,0,0,0.55)",
                 letterSpacing: "-0.005em",
               }}
             >
-              Helping Families Through Life&rsquo;s Biggest Transitions
+              Some of Life&rsquo;s Most Important Decisions Often Arrive All at Once.
             </h1>
             <p
               style={{
@@ -536,7 +521,7 @@ const HomepageHero = () => {
                 textShadow: "0 1px 6px rgba(0,0,0,0.5)",
               }}
             >
-              Compassionate, step-by-step guidance for aging parents, inherited homes, and the difficult decisions in between &mdash; throughout Washington State.
+              Guidance for aging parents, inherited homes, estate matters, and difficult next steps.
             </p>
             <div
               style={{
