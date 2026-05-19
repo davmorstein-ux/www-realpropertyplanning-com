@@ -242,7 +242,7 @@ export default function MGFloatingNav({
     cursor:          "pointer",
     flexShrink:      0,
     padding:         0,
-    overflow:        "hidden",
+    overflow:        "visible",
     boxSizing:       "border-box",
     transition:      "box-shadow 0.15s ease",
   };
