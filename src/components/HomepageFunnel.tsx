@@ -46,10 +46,10 @@ const HomepageFunnel = () => (
             letterSpacing: "-0.01em",
           }}
         >
-          Where are you in the process?
+          Which sounds most like your family right now?
         </h2>
         <p className="text-foreground text-lg md:text-xl leading-relaxed">
-          Choose the path that best matches your current situation.
+          Pick what feels closest to where you are &mdash; we&rsquo;ll guide you from there.
         </p>
       </div>
 
