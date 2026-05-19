@@ -283,8 +283,8 @@ export default function MGFloatingNav({
         <span
           style={rLabelStyle}
           onClick={onBack}
-          onMouseEnter={() => setRHover(true)}
-          onMouseLeave={() => setRHover(false)}
+          onMouseEnter={() => setHoverR(true)}
+          onMouseLeave={() => setHoverR(false)}
           role="button"
           tabIndex={0}
           aria-label="Go back"
@@ -305,8 +305,8 @@ export default function MGFloatingNav({
         <span
           style={fLabelStyle}
           onClick={onForward}
-          onMouseEnter={() => setFHover(true)}
-          onMouseLeave={() => setFHover(false)}
+          onMouseEnter={() => setHoverF(true)}
+          onMouseLeave={() => setHoverF(false)}
           role="button"
           tabIndex={0}
           aria-label="Go forward"
