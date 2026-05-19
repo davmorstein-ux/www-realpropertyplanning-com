@@ -22,6 +22,18 @@ const ForAttorneys = () => (
     <Header />
     <main id="main-content">
 
+    {/* Hero Image */}
+    <section className="bg-white">
+      <img
+        src="/images/hero_attorneys.png"
+        alt="Real Property Planning for Washington attorneys — estate, probate, and family law referral partner"
+        className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
+        loading="eager"
+      />
+    </section>
+
+    <HeroBandTitle>For Attorneys</HeroBandTitle>
+
     {/* Hero */}
     <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
       <div className="container px-6 lg:px-8">
