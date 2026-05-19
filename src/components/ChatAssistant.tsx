@@ -56,6 +56,13 @@ const ChatAssistant = () => {
     if (open && !limitReached) inputRef.current?.focus();
   }, [open, limitReached]);
 
+  // Allow external triggers (e.g., floating nav couple photo) to open the chat panel.
+  useEffect(() => {
+    const handler = () => setOpen(true);
+    window.addEventListener("rpp-open-chat", handler);
+    return () => window.removeEventListener("rpp-open-chat", handler);
+  }, []);
+
   const userMessageCount = messages.filter((m) => m.role === "user").length;
 
   const send = async () => {
