@@ -51,6 +51,10 @@ export default function MGFloatingNav({
   // Gear shifter: 'none' | 'R' | 'F'
   const [gearDir, setGearDir] = useState("none");
 
+  // Independent hover state for R and F labels
+  const [rHover, setRHover] = useState(false);
+  const [fHover, setFHover] = useState(false);
+
   // ── Stick tilt (single image, deep pivot keeps boot planted) ─
   const stickRotation =
     gearDir === "R" ? "rotate(-22deg)" :
