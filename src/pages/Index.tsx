@@ -6,11 +6,8 @@ import { Link } from "react-router-dom";
 
 import HomepageHero from "@/components/HomepageHero";
 import HomepageFunnel from "@/components/HomepageFunnel";
-import HomepageReassurance from "@/components/HomepageReassurance";
-import HomepageHowWeHelpRow from "@/components/HomepageHowWeHelpRow";
-import HomepageIdentityAnchor from "@/components/HomepageIdentityAnchor";
-import HomepageTestimonials from "@/components/HomepageTestimonials";
-import AffiliationBadgeGrid from "@/components/AffiliationBadgeGrid";
+import HomepagePopularResources from "@/components/HomepagePopularResources";
+
 
 
 const jsonLd = [realEstateAgentSchema, organizationSchema];
