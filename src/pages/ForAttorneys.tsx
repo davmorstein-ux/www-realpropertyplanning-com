@@ -10,6 +10,7 @@ import iconAttorneys from "@/assets/icons/probate-attorney-services-icon-washing
 import CTASection from "@/components/CTASection";
 import PageFAQ from "@/components/PageFAQ";
 import FeaturedAttorneys from "@/components/FeaturedAttorneys";
+import HeroBandTitle from "@/components/HeroBandTitle";
 
 const ForAttorneys = () => (
   <div className="min-h-screen bg-background">
