@@ -12,7 +12,7 @@ const HomepageIdentityAnchor = () => (
             lineHeight: 1.4,
           }}
         >
-          A Trusted Guide Through Life&rsquo;s Major Transitions
+          A Trusted Guide Through Life&rsquo;s Hardest Moments
         </p>
         <h2
           className="font-serif text-navy mb-10"
@@ -23,9 +23,10 @@ const HomepageIdentityAnchor = () => (
             letterSpacing: "-0.005em",
           }}
         >
-          Real Property Planning helps seniors, families, executors, and
-          professionals navigate complex decisions involving aging, estates,
-          housing, and property transitions.
+          Real Property Planning helps families navigate some of life&rsquo;s
+          most difficult moments &mdash; caring for an aging parent, settling
+          a loved one&rsquo;s estate, and deciding what to do with the family
+          home.
         </h2>
         <p
           className="text-foreground mx-auto"
@@ -35,10 +36,11 @@ const HomepageIdentityAnchor = () => (
             maxWidth: 760,
           }}
         >
-          From helping aging parents and coordinating senior moves to probate
-          guidance and trusted professional connections, our platform was
-          designed to simplify difficult transitions with clarity and
-          compassion.
+          Whether you&rsquo;re an adult child trying to do the right thing for
+          a parent, an executor stepping into a role you never expected, or a
+          family member just trying to figure out what comes next &mdash;
+          you&rsquo;re in the right place. We&rsquo;ll walk you through it,
+          one step at a time.
         </p>
       </div>
     </div>
