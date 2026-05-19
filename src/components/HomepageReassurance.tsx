@@ -6,14 +6,14 @@ const HomepageReassurance = () => (
           className="font-serif text-navy mb-5"
           style={{ fontSize: "clamp(22px, 2.3vw, 28px)", lineHeight: 1.3, fontWeight: 500, letterSpacing: "0.01em" }}
         >
-          You Don&rsquo;t Have To Navigate This Alone
+          You Don&rsquo;t Have To Figure This Out Alone
         </h2>
         <p
           className="text-foreground"
           style={{ fontSize: "18px", lineHeight: 1.7 }}
         >
-          Real Property Planning was created to help seniors, families, and professionals navigate
-          complex transitions with trusted guidance, resources, and connections.
+          Most families come to us unsure where to start &mdash; and that&rsquo;s okay.
+          A short, honest conversation is often the calmest first step.
         </p>
       </div>
     </div>

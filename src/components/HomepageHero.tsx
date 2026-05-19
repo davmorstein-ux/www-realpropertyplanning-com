@@ -507,7 +507,7 @@ const HomepageHero = () => {
                 letterSpacing: "-0.005em",
               }}
             >
-              Guidance for Senior Transitions, Estate Matters &amp; Property Decisions
+              Helping Families Through Life&rsquo;s Biggest Transitions
             </h1>
             <p
               style={{
@@ -521,7 +521,7 @@ const HomepageHero = () => {
                 textShadow: "0 1px 6px rgba(0,0,0,0.5)",
               }}
             >
-              Helping seniors, families, executors, trustees, and professionals navigate life&rsquo;s major transitions throughout Washington State.
+              Compassionate, step-by-step guidance for aging parents, inherited homes, and the difficult decisions in between &mdash; throughout Washington State.
             </p>
             <div
               style={{

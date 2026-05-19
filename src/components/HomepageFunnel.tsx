@@ -6,29 +6,29 @@ import proIcon from "@/assets/icons/professional-network-nodes-icon-washington.w
 const tiles = [
   {
     iconSrc: seniorIcon,
-    iconAlt: "Helping aging parents — senior transitions and family guidance",
-    title: "Helping Aging Parents",
+    iconAlt: "Helping an aging parent — senior transitions and family guidance",
+    title: "Helping an Aging Parent",
     description:
-      "Support for families navigating senior transitions, care decisions, downsizing, and next steps.",
-    cta: "Begin Journey",
+      "When a parent or loved one needs more support — with care, downsizing, or figuring out where to live next.",
+    cta: "Start Here",
     href: "/helping-aging-parents",
   },
   {
     iconSrc: probateIcon,
-    iconAlt: "Estate and probate guidance — executors, trustees, inherited property",
-    title: "Estate & Probate Guidance",
+    iconAlt: "Handling an inherited home — executors and families settling an estate",
+    title: "Handling an Inherited Home",
     description:
-      "Resources and trusted connections for executors, trustees, inherited property, and estate settlement.",
-    cta: "Explore Guidance",
+      "When you've lost a loved one and now have a house, an estate, and a lot of unfamiliar decisions to work through.",
+    cta: "See Next Steps",
     href: "/estate-probate-inherited-property",
   },
   {
     iconSrc: proIcon,
-    iconAlt: "Professional resources — attorneys, fiduciaries, planners, lenders",
-    title: "Professional Resources & Referrals",
+    iconAlt: "Working with trusted professionals — attorneys, planners, and specialists",
+    title: "Working With Trusted Professionals",
     description:
-      "Connections for attorneys, fiduciaries, planners, lenders, and senior service professionals.",
-    cta: "View Resources",
+      "Meet the attorneys, planners, and specialists who can help your family move forward with confidence and clarity.",
+    cta: "Meet the Team",
     href: "/building-your-trusted-professional-team",
   },
 ];
@@ -46,10 +46,10 @@ const HomepageFunnel = () => (
             letterSpacing: "-0.01em",
           }}
         >
-          Where are you in the process?
+          Which sounds most like your family right now?
         </h2>
         <p className="text-foreground text-lg md:text-xl leading-relaxed">
-          Choose the path that best matches your current situation.
+          Pick what feels closest to where you are &mdash; we&rsquo;ll guide you from there.
         </p>
       </div>
 

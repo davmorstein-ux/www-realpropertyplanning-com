@@ -6,12 +6,12 @@ import proIcon from "@/assets/icons/professional-network-nodes-icon-washington.w
 import familyIcon from "@/assets/icons/real-estate-people-team-icon-washington.webp";
 
 const items = [
-  { icon: seniorIcon, label: "Senior transitions" },
-  { icon: probateIcon, label: "Estate & probate guidance" },
-  { icon: propertyIcon, label: "Property decisions" },
-  { icon: careIcon, label: "Care & housing resources" },
-  { icon: proIcon, label: "Trusted professionals" },
-  { icon: familyIcon, label: "Family coordination" },
+  { icon: seniorIcon, label: "Helping an aging parent" },
+  { icon: probateIcon, label: "Settling a loved one's estate" },
+  { icon: propertyIcon, label: "Deciding what to do with the house" },
+  { icon: careIcon, label: "Finding the right place to live" },
+  { icon: proIcon, label: "Trusted people to help" },
+  { icon: familyIcon, label: "Bringing the family together" },
 ];
 
 const HomepageHowWeHelpRow = () => (
