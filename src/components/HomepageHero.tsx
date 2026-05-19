@@ -471,39 +471,112 @@ const HomepageHero = () => {
             animation: "rppHeroFadeIn 1.2s ease forwards",
           }}
         />
-      </section>
 
-
-      {/* ===== Intro ===== */}
-      <section style={{ background: "#F5F0E6", padding: isMobile ? "24px 20px 20px" : "32px 24px 24px" }}>
-        <div style={{ maxWidth: 1280, margin: "0 auto", textAlign: "center" }}>
-          <h2
-            className="font-bold"
+        {/* Hero text overlay — sits over lower portion of cinematic image */}
+        <div
+          style={{
+            position: "absolute",
+            left: 0,
+            right: 0,
+            bottom: 0,
+            padding: isMobile ? "60px 20px 24px" : "140px 24px 56px",
+            background:
+              "linear-gradient(to top, rgba(0,0,0,0.62) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0) 100%)",
+            display: "flex",
+            justifyContent: "center",
+            pointerEvents: "none",
+          }}
+        >
+          <div
             style={{
-              fontFamily: "'DM Sans', system-ui, sans-serif",
-              color: "#1E3A5F",
-              fontSize: isMobile ? "22px" : "28px",
-              fontWeight: 700,
-              lineHeight: 1.25,
-              margin: "0 0 12px 0",
+              maxWidth: 1100,
+              width: "100%",
               textAlign: "center",
+              pointerEvents: "auto",
             }}
           >
-            Welcome to Real Property Planning
-          </h2>
-          <p
-            style={{
-              fontFamily: "'DM Sans', system-ui, sans-serif",
-              color: "#6B7280",
-              fontSize: isMobile ? "18px" : "20px",
-              fontWeight: 600,
-              lineHeight: 1.5,
-              margin: 0,
-              textAlign: "center",
-            }}
-          >
-            A guide and referral hub for families and professionals in Washington State
-          </p>
+            <h1
+              style={{
+                fontFamily: "'Cormorant Garamond', 'DM Sans', serif",
+                color: "#FFFFFF",
+                fontSize: isMobile ? "28px" : "clamp(36px, 4.4vw, 60px)",
+                fontWeight: 600,
+                lineHeight: 1.15,
+                margin: "0 0 18px 0",
+                textShadow: "0 2px 12px rgba(0,0,0,0.55)",
+                letterSpacing: "-0.005em",
+              }}
+            >
+              Guidance for Senior Transitions, Estate Matters &amp; Property Decisions
+            </h1>
+            <p
+              style={{
+                fontFamily: "'DM Sans', system-ui, sans-serif",
+                color: "#F5F0E6",
+                fontSize: isMobile ? "16px" : "clamp(17px, 1.5vw, 21px)",
+                fontWeight: 500,
+                lineHeight: 1.55,
+                margin: "0 auto 28px auto",
+                maxWidth: 820,
+                textShadow: "0 1px 6px rgba(0,0,0,0.5)",
+              }}
+            >
+              Helping seniors, families, executors, trustees, and professionals navigate life&rsquo;s major transitions throughout Washington State.
+            </p>
+            <div
+              style={{
+                display: "flex",
+                gap: 14,
+                justifyContent: "center",
+                flexWrap: "wrap",
+              }}
+            >
+              <a
+                href="#guided-entry"
+                style={{
+                  fontFamily: "'DM Sans', system-ui, sans-serif",
+                  background: "#C9A14A",
+                  color: "#1E3A5F",
+                  padding: isMobile ? "14px 26px" : "16px 34px",
+                  borderRadius: 8,
+                  fontWeight: 800,
+                  fontSize: isMobile ? "15px" : "17px",
+                  letterSpacing: "0.04em",
+                  textTransform: "uppercase",
+                  textDecoration: "none",
+                  boxShadow: "0 6px 20px rgba(201,161,74,0.4)",
+                  minHeight: 52,
+                  display: "inline-flex",
+                  alignItems: "center",
+                }}
+              >
+                Start Here
+              </a>
+              <Link
+                to="/resources"
+                style={{
+                  fontFamily: "'DM Sans', system-ui, sans-serif",
+                  background: "rgba(255,255,255,0.10)",
+                  color: "#FFFFFF",
+                  padding: isMobile ? "14px 26px" : "16px 34px",
+                  borderRadius: 8,
+                  fontWeight: 700,
+                  fontSize: isMobile ? "15px" : "17px",
+                  letterSpacing: "0.04em",
+                  textTransform: "uppercase",
+                  textDecoration: "none",
+                  border: "2px solid rgba(255,255,255,0.85)",
+                  backdropFilter: "blur(4px)",
+                  WebkitBackdropFilter: "blur(4px)",
+                  minHeight: 52,
+                  display: "inline-flex",
+                  alignItems: "center",
+                }}
+              >
+                Explore Resources
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </div>
