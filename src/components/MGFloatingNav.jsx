@@ -70,8 +70,8 @@ export default function MGFloatingNav({
     display:         "flex",
     alignItems:      "center",
     justifyContent:  "center",
-    gap:             "10px",
-    padding:         "10px 20px",
+    gap:             "12px",
+    padding:         "12px 24px",
     borderRadius:    "999px",
     boxShadow:       "0 6px 28px rgba(0,0,0,0.6)",
     isolation:       "isolate",
@@ -84,14 +84,15 @@ export default function MGFloatingNav({
   // ── Steering wheel button ────────────────────────────────────
   const homeBtnStyle = {
     position:        "relative",
-    width:           "76px",
-    height:          "76px",
+    width:           "116px",
+    height:          "116px",
     borderRadius:    "50%",
     backgroundColor: "#f0ebe0",
     opacity:         1,
     border:          "2.5px solid #7a1a1a",
     display:         "flex",
     flexDirection:   "column",
+
     alignItems:      "center",
     justifyContent:  "center",
     cursor:          "pointer",
@@ -125,9 +126,10 @@ export default function MGFloatingNav({
   // ── Gear oval container ──────────────────────────────────────
   const gearOvalStyle = {
     position:        "relative",
-    width:           "104px",
-    height:          "80px",
+    width:           "130px",
+    height:          "116px",
     borderRadius:    "40px",
+
     backgroundColor: "#f0ebe0",
     opacity:         1,
     border:          "2.5px solid #7a1a1a",
@@ -183,8 +185,9 @@ export default function MGFloatingNav({
 
   // R label
   const rLabelStyle = {
-    fontSize:   "24px",
+    fontSize:   "22px",
     fontWeight: "900",
+
     color:      gearDir === "R" ? "#7a1a1a" : "#1e3355",
     lineHeight: 1,
     userSelect: "none",
@@ -198,8 +201,9 @@ export default function MGFloatingNav({
 
   // F label
   const fLabelStyle = {
-    fontSize:   "24px",
+    fontSize:   "22px",
     fontWeight: "900",
+
     color:      gearDir === "F" ? "#7a1a1a" : "#1e3355",
     lineHeight: 1,
     userSelect: "none",
@@ -224,8 +228,9 @@ export default function MGFloatingNav({
 
   // ── Chat button ──────────────────────────────────────────────
   const chatBtnStyle = {
-    width:           "76px",
-    height:          "76px",
+    width:           "116px",
+    height:          "116px",
+
     borderRadius:    "50%",
     backgroundColor: "#1e3355",
     opacity:         1,
