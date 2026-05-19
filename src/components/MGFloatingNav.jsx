@@ -52,8 +52,8 @@ export default function MGFloatingNav({
   const [gearDir, setGearDir] = useState("none");
 
   // Independent hover state for R and F labels
-  const [rHover, setRHover] = useState(false);
-  const [fHover, setFHover] = useState(false);
+  const [hoverR, setHoverR] = useState(false);
+  const [hoverF, setHoverF] = useState(false);
 
   // ── Stick tilt (single image, deep pivot keeps boot planted) ─
   const stickRotation =
@@ -191,28 +191,30 @@ export default function MGFloatingNav({
 
   // R label
   const rLabelStyle = {
-    fontSize:   "30px",
+    fontSize:   "34px",
     fontWeight: "900",
-    color:      rHover ? "#cc0000" : "#1e3355",
+    color:      hoverR ? "#cc0000" : "#1e3355",
     lineHeight: 1,
     userSelect: "none",
     width:      "28px",
     textAlign:  "center",
     flexShrink: 0,
     cursor:     "pointer",
+    transition: "color 0.15s ease",
   };
 
   // F label
   const fLabelStyle = {
-    fontSize:   "30px",
+    fontSize:   "34px",
     fontWeight: "900",
-    color:      fHover ? "#00cc00" : "#1e3355",
+    color:      hoverF ? "#00cc00" : "#1e3355",
     lineHeight: 1,
     userSelect: "none",
     width:      "28px",
     textAlign:  "center",
     flexShrink: 0,
     cursor:     "pointer",
+    transition: "color 0.15s ease",
   };
 
 
@@ -281,8 +283,8 @@ export default function MGFloatingNav({
         <span
           style={rLabelStyle}
           onClick={onBack}
-          onMouseEnter={() => setRHover(true)}
-          onMouseLeave={() => setRHover(false)}
+          onMouseEnter={() => setHoverR(true)}
+          onMouseLeave={() => setHoverR(false)}
           role="button"
           tabIndex={0}
           aria-label="Go back"
@@ -303,8 +305,8 @@ export default function MGFloatingNav({
         <span
           style={fLabelStyle}
           onClick={onForward}
-          onMouseEnter={() => setFHover(true)}
-          onMouseLeave={() => setFHover(false)}
+          onMouseEnter={() => setHoverF(true)}
+          onMouseLeave={() => setHoverF(false)}
           role="button"
           tabIndex={0}
           aria-label="Go forward"
