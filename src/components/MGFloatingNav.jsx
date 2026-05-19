@@ -117,14 +117,15 @@ export default function MGFloatingNav({
   };
 
   const homeLabelStyle = {
-    fontSize:    "15px",
-    fontWeight:  "900",
-    color:       "#1e3355",
-    marginTop:   "2px",
+    fontSize: "16px",
+    fontWeight: "900",
+    color: "#1e3355",
+    marginTop: "3px",
     letterSpacing: "0.05em",
-    lineHeight:  1,
-    display:     "block",
-    userSelect:  "none",
+    lineHeight: 1,
+    display: "block",
+    visibility: "visible",
+    opacity: 1,
   };
 
   // ── Gear oval container ──────────────────────────────────────
