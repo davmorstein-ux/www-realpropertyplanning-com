@@ -501,7 +501,7 @@ const HomepageHero = () => {
               textAlign: "center",
             }}
           >
-            A free guide and referral hub for families and professionals in Washington State
+            A guide and referral hub for families and professionals in Washington State
           </p>
         </div>
       </section>
