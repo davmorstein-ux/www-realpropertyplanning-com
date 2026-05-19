@@ -19,9 +19,9 @@ const cards = [
   },
   {
     iconSrc: "/images/icon_service_providers.png",
-    iconAlt: "Service providers — join our network of vetted professionals",
-    label: "Service Providers",
-    description: "Join our network of vetted professionals serving seniors and estates",
+    iconAlt: "Join the Network — join our network of vetted professionals",
+    label: "Join the Network",
+    description: "Join the Real Property Planning network of professionals and service providers",
     cta: "Get Connected",
     href: "/join-the-network",
   },
