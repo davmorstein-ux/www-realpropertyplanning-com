@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const cards = [
   {
-    iconSrc: "",
+    iconSrc: "/images/icon_seniors_families.png",
     iconAlt: "Seniors and families — inherited home and senior housing transitions",
     label: "Seniors & Families",
     description: "Navigating an inherited home, estate sale, or senior housing transition",
