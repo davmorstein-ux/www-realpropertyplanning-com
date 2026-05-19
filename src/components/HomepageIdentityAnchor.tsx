@@ -12,7 +12,7 @@ const HomepageIdentityAnchor = () => (
             lineHeight: 1.4,
           }}
         >
-          A Trusted Guide Through Life&rsquo;s Hardest Moments
+          ​
         </p>
         <h2
           className="font-serif text-navy mb-10"
@@ -23,10 +23,7 @@ const HomepageIdentityAnchor = () => (
             letterSpacing: "-0.005em",
           }}
         >
-          Real Property Planning helps families navigate some of life&rsquo;s
-          most difficult moments &mdash; caring for an aging parent, settling
-          a loved one&rsquo;s estate, and deciding what to do with the family
-          home.
+          ​
         </h2>
         <p
           className="text-foreground mx-auto"
