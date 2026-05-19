@@ -113,37 +113,14 @@ const Index = () => {
       />
       <main id="main-content">
 
-      {/* 1. HERO — cinematic image with overlaid headline + CTAs */}
+      {/* 1. HERO — cinematic image with overlaid headline */}
       <HomepageHero />
 
-      {/* 2. GUIDED ENTRY — Where are you in the process? (3 tiles) */}
+      {/* 2. GUIDED ENTRY — 4 audience tiles */}
       <HomepageFunnel />
 
-      {/* 3. IDENTITY ANCHOR — what Real Property Planning is */}
-      <HomepageIdentityAnchor />
-
-      {/* 4. REASSURANCE — You Don't Have To Navigate This Alone */}
-      <HomepageReassurance />
-
-      {/* 4. HOW WE HELP — clean visual icon row */}
-      <HomepageHowWeHelpRow />
-
-      {/* 5. TRUST STRIP — affiliations, licenses, memberships */}
-      <section className="bg-cream py-16 md:py-24">
-        <div className="container px-6 lg:px-8">
-          <h2
-            className="font-serif text-navy text-center mb-10"
-            style={{ fontSize: "clamp(18px, 1.8vw, 22px)", lineHeight: 1.3, fontWeight: 500, letterSpacing: "0.08em", textTransform: "uppercase" }}
-          >
-            Trusted Memberships &amp; Affiliations
-          </h2>
-          <AffiliationBadgeGrid />
-        </div>
-      </section>
-
-
-      {/* TESTIMONIALS — social proof above the footer */}
-      <HomepageTestimonials />
+      {/* 3. POPULAR RESOURCES — compact link grid */}
+      <HomepagePopularResources />
 
       {/* SEO description — visible to crawlers, visually subtle for users */}
       <section aria-label="Site description" className="bg-cream">
@@ -153,6 +130,7 @@ const Index = () => {
           </p>
         </div>
       </section>
+
 
 
 
