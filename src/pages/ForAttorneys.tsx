@@ -22,17 +22,18 @@ const ForAttorneys = () => (
     <Header />
     <main id="main-content">
 
-    {/* Hero Image */}
-    <section className="bg-white">
-      <img
-        src="/images/hero_attorneys.png"
-        alt="Real Property Planning for Washington attorneys — estate, probate, and family law referral partner"
-        className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
-        loading="eager"
-      />
+    {/* Hero image + navy band */}
+    <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
+      <div style={{ lineHeight: 0 }}>
+        <img
+          src="/images/hero_attorneys.png"
+          alt="Real Property Planning for Washington attorneys — estate, probate, and family law referral partner"
+          className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
+          loading="eager"
+        />
+        <HeroBandTitle>Attorneys</HeroBandTitle>
+      </div>
     </section>
-
-    <HeroBandTitle>Attorneys</HeroBandTitle>
 
     {/* Attorney Specialty Tiles */}
     <FeaturedAttorneys />
