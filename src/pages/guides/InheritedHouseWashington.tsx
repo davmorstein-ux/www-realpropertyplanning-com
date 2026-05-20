@@ -101,10 +101,10 @@ const InheritedHouseWashington = () => (
       </section>
 
       <MidPageCTA
-        heading="Not Sure What to Do With an Inherited Property?"
-        body="Our team provides a no-pressure consultation to assess the property, explain your options, and help you develop a practical plan."
+        heading="​"
+        body="​"
         buttonText="Schedule a Consultation"
-        microcopy="No pressure. Just practical guidance for your situation."
+        microcopy="​"
       />
 
       <PageFAQ faqs={faqs} heading="Inherited Property FAQs" />
