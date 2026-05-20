@@ -60,6 +60,9 @@ const ForElderLawAttorneys = lazy(() => import("./pages/attorneys/ForElderLawAtt
 const ForFamilyLawAttorneys = lazy(() => import("./pages/attorneys/ForFamilyLawAttorneys"));
 const ForDivorceAttorneys = lazy(() => import("./pages/attorneys/ForDivorceAttorneys"));
 const ForRealEstateAttorneys = lazy(() => import("./pages/attorneys/ForRealEstateAttorneys"));
+const AttorneysForElderLawAttorneys = lazy(() => import("./pages/attorneys/AttorneysForElderLawAttorneys"));
+const AttorneysForRealEstateAttorney = lazy(() => import("./pages/attorneys/AttorneysForRealEstateAttorney"));
+const AttorneysForFamilyLawAttorneys = lazy(() => import("./pages/attorneys/AttorneysForFamilyLawAttorneys"));
 const HowTheProcessWorks = lazy(() => import("./pages/HowTheProcessWorks"));
 const WhyValuationMatters = lazy(() => import("./pages/WhyValuationMatters"));
 const Executors = lazy(() => import("./pages/Executors"));
@@ -268,6 +271,9 @@ const App = () => (
           <Route path="/for-family-law-attorneys" element={<ForFamilyLawAttorneys />} />
           <Route path="/for-divorce-attorneys" element={<ForDivorceAttorneys />} />
           <Route path="/real-estate-attorneys" element={<ForRealEstateAttorneys />} />
+          <Route path="/attorneys/for-elder-law-attorneys" element={<AttorneysForElderLawAttorneys />} />
+          <Route path="/attorneys/for-real-estate-attorney" element={<AttorneysForRealEstateAttorney />} />
+          <Route path="/attorneys/for-family-law-attorneys" element={<AttorneysForFamilyLawAttorneys />} />
           <Route path="/for-attorneys/probate-attorneys" element={<ForProbateAttorneys />} />
           <Route path="/for-attorneys/estate-planning-attorneys" element={<ForEstatePlanningAttorneys />} />
           <Route path="/for-attorneys/elder-law-attorneys" element={<ForElderLawAttorneys />} />
