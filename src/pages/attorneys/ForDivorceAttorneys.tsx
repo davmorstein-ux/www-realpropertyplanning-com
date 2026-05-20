@@ -39,12 +39,12 @@ const ForDivorceAttorneys = () => (
 
       <p
         style={{
-          fontSize: "22px",
+          fontSize: "32px",
           fontWeight: 700,
           lineHeight: 1.8,
-          maxWidth: "800px",
+          maxWidth: "850px",
           margin: "40px auto",
-          textAlign: "center",
+          textAlign: "left",
         }}
       >
         A divorce attorney helps individuals and couples navigate the legal process of ending a marriage. They handle asset division, spousal support, parenting plans, and court filings. When the family home or other real property is involved, a divorce attorney works to ensure it is fairly addressed as part of the overall settlement.
