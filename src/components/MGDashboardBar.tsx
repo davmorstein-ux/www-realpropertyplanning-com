@@ -38,7 +38,7 @@ const MGDashboardBar = () => {
           display: flex;
           align-items: center;
           gap: 12px;
-          padding: 10px 20px;
+          padding: 10px 8px;
           background-color: #1e3a5f;
           background-image: none;
           border-radius: 60px;
