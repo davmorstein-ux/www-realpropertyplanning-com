@@ -53,10 +53,10 @@ const HomepageFunnel = () => (
             letterSpacing: "-0.005em",
           }}
         >
-          You're in the Right Place
+          Your Resource For Estate & Probate Properties, Along With Senior Transitions
         </h2>
-        <p className="text-foreground leading-relaxed" style={{ fontSize: "20px" }}>
-          Whether you're planning ahead, helping a loved one, or settling an estate — we'll guide you from here.
+        <p className="text-foreground leading-relaxed text-2xl font-bold" style={{ fontSize: "20px" }}>
+          Select the box below that best describes your situation:
         </p>
       </div>
 
