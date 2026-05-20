@@ -60,7 +60,8 @@ const HeroBandTitle = ({
   if (bare) return titleEl;
 
   return (
-    <>
+      <div className={`bg-primary ${compact ? "py-3" : "py-9 md:py-10"}`} data-hero-band>
+
       <div className="bg-white h-[3px]" aria-hidden="true" />
       <div className="bg-primary py-9 md:py-10" data-hero-band>
         {titleEl}
