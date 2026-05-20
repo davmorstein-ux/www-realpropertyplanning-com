@@ -32,7 +32,7 @@ const tiles = [
   {
     imgSrc: tileProfessionals,
     imgAlt: "Man at a laptop browsing trusted professional resources",
-    title: "Find Professionals",
+    title: "I Need a Professional",
     description: "Connect with vetted attorneys, CPAs, lenders, and senior specialists.",
     cta: "Meet the Team",
     href: "/building-your-trusted-professional-team",
