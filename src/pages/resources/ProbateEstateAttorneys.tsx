@@ -11,7 +11,6 @@ import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washingto
 import iconEmail3d from "@/assets/icons/real-estate-email-envelope-3d-icon-washington.webp";
 import iconMapPin3d from "@/assets/icons/real-estate-location-pin-3d-icon-washington.webp";
 import iconGlobe3d from "@/assets/icons/real-estate-website-globe-3d-icon-washington.webp";
-import placeholderImg from "@/assets/placeholder.svg";
 
 const ProbateEstateAttorneys = () => (
   <>
