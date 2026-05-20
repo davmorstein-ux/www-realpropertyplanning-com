@@ -78,97 +78,54 @@ const HowProbateRealEstateWorks = () => (
     </section>
 
 
-    <TrustStrip />
-
-    {/* Your Probate Real Estate Broker & Agent */}
+    {/* Key Topics — 2x2 tile grid */}
     <section className="py-16 lg:py-20 bg-background">
       <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-            Your Probate Real Estate Broker &amp; Agent in Washington State
-          </h2>
-          <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-            When families, executors, and attorneys across the Puget Sound region search for a probate real estate broker and agent, they consistently find — and rely on — Real Property Planning.
-          </p>
-          <p className="text-muted-foreground leading-relaxed mb-5">
-            David is a Washington State Licensed Real Estate Broker and a Washington State Certified Residential Appraiser with over 20 years of combined experience in both disciplines. That dual credential is rare in the probate real estate space, and it matters: the same professional who prices your estate property for the court file is the one who lists and sells it — with no gap between valuation and market strategy.
-          </p>
-          <p className="text-muted-foreground leading-relaxed mb-6">
-            David specializes exclusively in probate real estate sales, inherited property, estate sales, and senior housing transitions throughout King, Snohomish, Pierce, and Kitsap Counties.
-          </p>
-          <h3 className="font-serif text-xl text-foreground font-semibold mb-3">​</h3>
-          <ul className="space-y-3 mb-6">
-            {[
-              "​",
-              "​",
-              "​",
-            ].map((item, idx) => (
-              <li key={idx} className="flex items-start gap-3">
-                <div className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
-                <span className="text-muted-foreground leading-relaxed">{item}</span>
-              </li>
-            ))}
-          </ul>
-          <p className="text-muted-foreground leading-relaxed">
-            ​
-          </p>
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+          {[
+            {
+              title: "What Is Probate Real Estate?",
+              description:
+                "When someone passes away owning property, that property often must pass through probate before it can be sold. Probate is the court-supervised process of settling an estate.",
+            },
+            {
+              title: "Who Has Authority to Sell?",
+              description:
+                "The personal representative (executor) named in the will — or appointed by the court — has legal authority to sell estate property, documented through letters testamentary.",
+            },
+            {
+              title: "Why Timing Matters",
+              description:
+                "Probate properties sit vacant while legal authority is established, accumulating costs. Coordinating the real estate timeline with the legal process is critical to protecting the estate.",
+            },
+            {
+              title: "Why Use a Specialist?",
+              description:
+                "Probate sales require pricing expertise, court-defensible valuations, and coordination with attorneys. A broker who specializes in probate handles all of this in one place.",
+            },
+          ].map((tile) => (
+            <div key={tile.title} className="card-3d-blue h-full">
+              <div className="card-3d-blue__inner h-full">
+                <div className="card-3d-blue__face h-full">
+                  <div className="flex h-full flex-col px-6 pb-6 pt-8 sm:px-7 sm:pb-7 sm:pt-9">
+                    <h3
+                      className="mb-3 font-serif text-xl sm:text-[1.38rem] font-extrabold leading-snug text-foreground"
+                      style={{ textShadow: "0 1px 4px hsla(220, 30%, 15%, 0.25)" }}
+                    >
+                      {tile.title}
+                    </h3>
+                    <p className="text-[15px] leading-relaxed text-muted-foreground">
+                      {tile.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
 
-    {/* What Is Probate Real Estate */}
-    <section className="py-16 lg:py-24 bg-background">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">What Is Probate Real Estate?</h2>
-          <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-            Probate real estate refers to property that is part of a deceased person's estate and must be sold through the probate process. In Washington State, probate is the court-supervised process of settling an estate — including distributing assets, paying debts, and transferring or selling property.
-          </p>
-          <p className="text-muted-foreground leading-relaxed mb-6">
-            Not all inherited property goes through probate. Property held in a trust, joint tenancy, or with a transfer-on-death deed may pass outside of probate entirely. Understanding the distinction matters because it affects who has authority to sell, what documentation is required, and how the sale process unfolds.
-          </p>
-          <p className="text-muted-foreground leading-relaxed">
-            When property does go through probate, the personal representative (executor) typically needs court-issued letters testamentary or letters of administration before the sale can proceed. The executor has a fiduciary duty to act in the best interest of the estate — which means achieving a fair price and managing the property responsibly during the process.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    {/* Who Has Authority */}
-    <section className="py-16 lg:py-24 bg-secondary">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">Who Has Authority to Sell Probate Property in Washington?</h2>
-          <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-            In Washington, the personal representative named in the will — or appointed by the court if there is no will — generally has authority to sell real property as part of estate administration. This authority is documented through letters testamentary (when there is a will) or letters of administration (when there is not).
-          </p>
-          <p className="text-muted-foreground leading-relaxed mb-6">
-            Washington is a non-supervised probate state, meaning that in many cases the personal representative can sell real property without specific court approval of the sale price or terms. However, the will itself or court order may impose additional requirements. The estate attorney is the right person to clarify what authority exists and what approvals may be needed.
-          </p>
-          <p className="text-muted-foreground leading-relaxed">
-            Even before formal authority is granted, a broker experienced in probate can visit the property, assess its condition, begin planning preparation, and develop a pricing strategy — so the sale process can begin quickly once legal authority is in place.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    {/* Timing and Coordination */}
-    <section className="py-16 lg:py-24 bg-background">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">Why Do Timing and Coordination Matter So Much?</h2>
-          <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-            Probate properties face unique timing pressures. While legal authority is being established, the property may be sitting vacant — accumulating carrying costs including mortgage payments, property taxes, insurance, utilities, and HOA dues. Deferred maintenance can worsen during this period, and security risks increase for unoccupied homes.
-          </p>
-          <p className="text-muted-foreground leading-relaxed mb-6">
-            Coordinating the real estate timeline with the legal process is one of the most important aspects of a successful probate sale. The executor, attorney, and broker need to work together to align property preparation with legal milestones — so the home reaches the market at the right time, in the right condition, at the right price.
-          </p>
-          <p className="text-muted-foreground leading-relaxed">
-            Real Property Planning regularly coordinates with estate attorneys throughout Washington State to ensure the real estate process supports — rather than conflicts with — the overall estate administration timeline.
-          </p>
-        </div>
-      </div>
-    </section>
 
     <MidPageCTA
       heading="Navigating a Probate Property Situation?"
