@@ -1,37 +1,37 @@
 import { Link } from "react-router-dom";
-import seniorIcon from "@/assets/icons/senior-care-heart-hands-icon-washington.webp";
-import probateIcon from "@/assets/icons/probate-property-home-icon-washington.webp";
-import proIcon from "@/assets/icons/professional-network-nodes-icon-washington.webp";
-import planningIcon from "@/assets/icons/estate-wills-planning-icon-washington.webp";
+import tilePlanning from "@/assets/tiles/tile-planning-ahead.png";
+import tileHelping from "@/assets/tiles/tile-helping-loved-one.png";
+import tileEstate from "@/assets/tiles/tile-handling-estate.png";
+import tileProfessionals from "@/assets/tiles/tile-find-professionals.png";
 
 const tiles = [
   {
-    iconSrc: planningIcon,
-    iconAlt: "Planning ahead — prepare before a crisis",
+    imgSrc: tilePlanning,
+    imgAlt: "Older couple reviewing an estate plan together at home",
     title: "Planning Ahead",
     description: "Prepare your family and your property — before a crisis arrives.",
     cta: "Start Planning",
     href: "/planning-before-a-crisis",
   },
   {
-    iconSrc: seniorIcon,
-    iconAlt: "Helping a loved one — senior transitions and family guidance",
+    imgSrc: tileHelping,
+    imgAlt: "Adult daughter hugging her senior mother on a couch",
     title: "Helping a Loved One",
     description: "Support an aging parent with care, housing, and next-step decisions.",
     cta: "See How",
     href: "/helping-aging-parents",
   },
   {
-    iconSrc: probateIcon,
-    iconAlt: "Handling an estate — executors and inherited property",
+    imgSrc: tileEstate,
+    imgAlt: "Family reviewing an estate property plan with documents",
     title: "Handling an Estate",
     description: "Guidance for executors and families managing an inherited home.",
     cta: "Get Steps",
     href: "/estate-probate-inherited-property",
   },
   {
-    iconSrc: proIcon,
-    iconAlt: "Find professionals — attorneys, CPAs, lenders, and specialists",
+    imgSrc: tileProfessionals,
+    imgAlt: "Man at a laptop browsing trusted professional resources",
     title: "Find Professionals",
     description: "Connect with vetted attorneys, CPAs, lenders, and senior specialists.",
     cta: "Meet the Team",
@@ -61,7 +61,7 @@ const HomepageFunnel = () => (
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-7 items-stretch max-w-6xl mx-auto">
-        {tiles.map(({ iconSrc, iconAlt, title, description, cta, href }) => (
+        {tiles.map(({ imgSrc, imgAlt, title, description, cta, href }) => (
           <Link
             key={title}
             to={href}
@@ -69,50 +69,49 @@ const HomepageFunnel = () => (
             className="card-3d-blue group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
           >
             <div className="card-3d-blue__inner h-full">
-              <div className="card-3d-blue__face h-full">
-                <div
-                  className="flex h-full flex-col items-center text-center"
-                  style={{ padding: "28px 20px 26px" }}
-                >
+              <div className="card-3d-blue__face h-full" style={{ padding: 0, overflow: "hidden" }}>
+                <div className="flex h-full flex-col">
                   <img
-                    src={iconSrc}
-                    alt={iconAlt}
+                    src={imgSrc}
+                    alt={imgAlt}
                     loading="lazy"
                     style={{
-                      width: "100%",
-                      maxWidth: "120px",
-                      height: "120px",
-                      objectFit: "contain",
                       display: "block",
-                      margin: "0 auto 16px",
-                      background: "transparent",
+                      width: "100%",
+                      height: "auto",
+                      margin: 0,
                     }}
                   />
-                  <h3 className="font-serif font-semibold text-navy mb-3" style={{ fontSize: "22px", lineHeight: 1.2 }}>
-                    {title}
-                  </h3>
-                  <p className="text-foreground mb-6" style={{ fontSize: "16px", lineHeight: 1.55 }}>
-                    {description}
-                  </p>
-                  <span
-                    className="gold-cta mt-auto"
-                    style={{ padding: "12px 20px", fontSize: "15px", minHeight: 52 }}
+                  <div
+                    className="flex flex-1 flex-col items-center text-center"
+                    style={{ padding: "24px 20px 26px" }}
                   >
-                    {cta}
-                    <svg
-                      viewBox="0 0 24 24"
-                      width="14"
-                      height="14"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.4"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      aria-hidden="true"
+                    <h3 className="font-serif font-semibold text-navy mb-3" style={{ fontSize: "22px", lineHeight: 1.2 }}>
+                      {title}
+                    </h3>
+                    <p className="text-foreground mb-6" style={{ fontSize: "16px", lineHeight: 1.55 }}>
+                      {description}
+                    </p>
+                    <span
+                      className="gold-cta mt-auto"
+                      style={{ padding: "12px 20px", fontSize: "15px", minHeight: 52 }}
                     >
-                      <polyline points="9 18 15 12 9 6" />
-                    </svg>
-                  </span>
+                      {cta}
+                      <svg
+                        viewBox="0 0 24 24"
+                        width="14"
+                        height="14"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.4"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        aria-hidden="true"
+                      >
+                        <polyline points="9 18 15 12 9 6" />
+                      </svg>
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
