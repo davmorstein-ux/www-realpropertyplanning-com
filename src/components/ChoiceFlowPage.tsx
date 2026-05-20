@@ -167,7 +167,7 @@ const ContentBlock = ({ content }: { content: NonNullable<FlowNode["content"]> }
     <div className="bg-gold/10 border border-gold/30 rounded-xl p-6 mt-8">
       <p className="text-navy/80 text-base leading-relaxed">{content.closing}</p>
       <a href="/contact" className="inline-block mt-4 px-6 py-3 bg-navy text-white font-semibold rounded-lg hover:bg-navy/90 transition-colors">
-        Connect With Our Team
+        Connect With a Professional
       </a>
     </div>
   </div>
