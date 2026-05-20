@@ -17,6 +17,10 @@ import iconHome from "@/assets/icons/probate-property-home-icon-washington.webp"
 import iconExecutor from "@/assets/icons/probate-executors-services-icon-washington.webp";
 import iconArrow from "@/assets/icons/property-guidance-arrow-icon-washington.webp";
 import iconPhone from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
+import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
+import iconEmail3d from "@/assets/icons/real-estate-email-envelope-3d-icon-washington.webp";
+import iconMapPin3d from "@/assets/icons/real-estate-location-pin-3d-icon-washington.webp";
+import iconGlobe3d from "@/assets/icons/real-estate-website-globe-3d-icon-washington.webp";
 import JourneyOrientation from "@/components/JourneyOrientation";
 
 interface Pathway {
