@@ -209,7 +209,7 @@ const EstatePlanningPowersOfAttorney = () => {
               loading="eager"
             />
           </div>
-          <HeroBandTitle>Estate Planning Attorney</HeroBandTitle>
+          <HeroBandTitle compact>Estate Planning Attorney</HeroBandTitle>
         </section>
 
         {/* FEATURED PROVIDER */}

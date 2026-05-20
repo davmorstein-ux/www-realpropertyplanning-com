@@ -6,6 +6,8 @@ interface HeroBandTitleProps {
   as?: ElementType;
   /** Render only the title element (skip the white spacer + bg-primary band wrapper). */
   bare?: boolean;
+  /** Use tighter vertical padding in the navy band. */
+  compact?: boolean;
   className?: string;
 }
 
@@ -27,8 +29,10 @@ const HeroBandTitle = ({
   children,
   as: Tag = "h1",
   bare = false,
+  compact = false,
   className = "",
 }: HeroBandTitleProps) => {
+
   const titleStyle = {
     color: "#ffffff",
     fontFamily: '"DM Sans", serif',
@@ -58,7 +62,7 @@ const HeroBandTitle = ({
   return (
     <>
       <div className="bg-white h-[3px]" aria-hidden="true" />
-      <div className="bg-primary py-9 md:py-10" data-hero-band>
+      <div className={`bg-primary ${compact ? "py-3" : "py-9 md:py-10"}`} data-hero-band>
         {titleEl}
       </div>
     </>

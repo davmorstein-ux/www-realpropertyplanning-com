@@ -38,7 +38,7 @@ const ProbateEstateAttorneys = () => (
             loading="eager"
           />
         </div>
-        <HeroBandTitle>Probate Attorney</HeroBandTitle>
+        <HeroBandTitle compact>Probate Attorney</HeroBandTitle>
       </section>
 
       {/* Featured Provider */}
