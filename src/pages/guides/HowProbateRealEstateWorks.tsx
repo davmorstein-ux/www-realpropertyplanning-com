@@ -127,12 +127,6 @@ const HowProbateRealEstateWorks = () => (
     </section>
 
 
-    <MidPageCTA
-      heading="​"
-      body="​"
-      buttonText="Schedule a Consultation"
-      microcopy="​"
-    />
 
 
     <PageFAQ faqs={faqs} heading="Probate Real Estate FAQs" />
