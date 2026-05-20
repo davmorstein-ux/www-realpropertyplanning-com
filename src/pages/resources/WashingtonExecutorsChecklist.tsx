@@ -8,7 +8,9 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { FileText, ArrowRight, AlertCircle } from "lucide-react";
 import GoldCheck3D from "@/components/GoldCheck3D";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import heroIcon from "@/assets/icons/probate-estate-resources-icon-washington.webp";
+import washingtonExecutorsHero from "@/assets/washington-executors-hero.png";
 
 const steps = [
   {
