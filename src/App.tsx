@@ -167,6 +167,7 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 const Roles = lazy(() => import("./pages/Roles"));
 const Planning = lazy(() => import("./pages/Planning"));
 const ProfessionalsPage = lazy(() => import("./pages/ProfessionalsPage"));
+const Sitemap = lazy(() => import("./pages/Sitemap"));
 
 const queryClient = new QueryClient();
 
@@ -405,6 +406,7 @@ const App = () => (
           <Route path="/faq" element={<FAQ />} />
           <Route path="/terminology" element={<Terminology />} />
           <Route path="/testimonials" element={<Testimonials />} />
+          <Route path="/sitemap" element={<Sitemap />} />
 
           {/* ══════════════════════════════════════════════════════════
               REDIRECTS — Phase 2a SEO consolidation
