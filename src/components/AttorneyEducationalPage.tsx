@@ -46,10 +46,10 @@ const AttorneyEducationalPage = (p: AttorneyEducationalPageProps) => (
 
       <FeaturedProviderPlaceholder heading={p.featuredHeading} altLabel={p.altLabel} />
 
-      <section className="py-14 md:py-20 bg-secondary">
+      <section className="py-20 md:py-28 bg-secondary">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <p className="text-foreground text-lg leading-relaxed">
+          <div className="max-w-[800px] mx-auto">
+            <p className="text-foreground text-[20px] leading-[1.8] font-normal">
               {p.roleDescription}
             </p>
           </div>

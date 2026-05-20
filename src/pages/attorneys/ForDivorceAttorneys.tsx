@@ -38,10 +38,10 @@ const ForDivorceAttorneys = () => (
       <DominikMusafiaCard />
 
       {/* Role description */}
-      <section className="py-14 md:py-20 bg-secondary">
+      <section className="py-20 md:py-28 bg-secondary">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <p className="text-foreground text-lg leading-relaxed">
+          <div className="max-w-[800px] mx-auto">
+            <p className="text-foreground text-[20px] leading-[1.8] font-normal">
               A divorce attorney helps individuals and couples navigate the legal process of ending a marriage. They handle asset division, spousal support, parenting plans, and court filings. When the family home or other real property is involved, a divorce attorney works to ensure it is fairly addressed as part of the overall settlement.
             </p>
           </div>
