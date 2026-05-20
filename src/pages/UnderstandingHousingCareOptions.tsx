@@ -149,22 +149,13 @@ const UnderstandingHousingCareOptions = () => {
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
               {pathways.map((p) => (
-                <Link
+                <PremiumTile
                   key={p.letter}
                   to={p.href}
-                  className="group bg-white border-2 border-gold/25 rounded-2xl p-6 shadow-[0_6px_18px_-10px_rgba(27,43,75,0.2)] hover:border-gold/50 hover:-translate-y-1 hover:shadow-[0_12px_28px_-12px_rgba(27,43,75,0.28)] transition-all flex flex-col no-underline"
-                >
-                  
-                  <h3 className="font-serif text-xl text-navy font-semibold mb-2 no-underline group-hover:text-[hsl(var(--gold-dark))] transition-colors">
-                    {p.title}
-                  </h3>
-                  <p className="text-navy text-base leading-relaxed mb-4 flex-1 no-underline">
-                    {p.description}
-                  </p>
-                  <span className="inline-flex items-center gap-2 text-gold font-bold text-sm">
-                    Learn More <ArrowRight className="w-4 h-4" aria-hidden="true" />
-                  </span>
-                </Link>
+                  title={p.title}
+                  description={p.description}
+                  cta="Learn More"
+                />
               ))}
             </div>
           </div>
