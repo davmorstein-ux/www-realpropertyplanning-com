@@ -6,8 +6,9 @@ interface HeroBandTitleProps {
   as?: ElementType;
   /** Render only the title element (skip the white spacer + bg-primary band wrapper). */
   bare?: boolean;
+  /** Use tighter vertical padding in the navy band. */
+  compact?: boolean;
   className?: string;
-}
 
 /**
  * Global standardized hero blue band title.
