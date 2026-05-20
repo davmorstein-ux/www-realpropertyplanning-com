@@ -24,7 +24,7 @@ const PacificCounty = () => (
       },
       {
         question: "How does coastal exposure affect estate property values in Pacific County?",
-        answer: "Coastal exposure creates specific condition issues — moisture intrusion, weathering, salt air corrosion, and deferred maintenance on decks, roofing, and exterior finishes — that affect both value and buyer expectations. Our team's condition-based valuation approach accounts for these factors specifically, ensuring estate properties are priced based on their actual condition rather than coastal location alone.",
+        answer: "Coastal exposure creates specific condition issues — moisture intrusion, weathering, salt air corrosion, and deferred maintenance on decks, roofing, and exterior finishes — that affect both value and buyer expectations. David Stein's condition-based valuation approach accounts for these factors specifically, ensuring estate properties are priced based on their actual condition rather than coastal location alone.",
       },
     ]}
     localExpertiseHeading="Pacific County's Real Estate Market — What Estate Sellers Need to Know"
@@ -35,7 +35,7 @@ const PacificCounty = () => (
     communitiesIntro="Real Property Planning serves families, executors, and professionals throughout Pacific County, including:"
     closingCtaBody={[
       "Whether you're managing an inherited beach cottage on the Long Beach Peninsula, a home in Raymond, or rural acreage near Naselle, a conversation can help bring clarity to what comes next.",
-      "Our team provides the condition-based, locally informed guidance that Pacific County's coastal and rural property landscape requires.",
+      "David Stein provides the condition-based, locally informed guidance that Pacific County's coastal and rural property landscape requires.",
     ]}
     countySpecificFaqs={[
       {
@@ -44,15 +44,15 @@ const PacificCounty = () => (
       },
       {
         question: "How is a Long Beach Peninsula vacation property valued as part of an estate?",
-        answer: "Long Beach Peninsula vacation properties are valued based on location within the peninsula, proximity to the ocean or bay, lot size, condition, and rental history if applicable. Automated estimates are frequently unreliable for these properties. Our team's certified appraisal background provides the hands-on, property-specific evaluation that coastal vacation estate properties require.",
+        answer: "Long Beach Peninsula vacation properties are valued based on location within the peninsula, proximity to the ocean or bay, lot size, condition, and rental history if applicable. Automated estimates are frequently unreliable for these properties. David Stein's certified appraisal background provides the hands-on, property-specific evaluation that coastal vacation estate properties require.",
       },
       {
         question: "Can Real Property Planning manage a Pacific County estate sale for families in Seattle or out of state?",
-        answer: "Yes — and this is the most common situation we handle in Pacific County, where many properties are owned by families based hours away. Our team handles property assessment, vendor coordination, preparation, showings, and closing locally — with regular updates so families don't need to make repeated trips to the south coast.",
+        answer: "Yes — and this is the most common situation we handle in Pacific County, where many properties are owned by families based hours away. David Stein handles property assessment, vendor coordination, preparation, showings, and closing locally — with regular updates so families don't need to make repeated trips to the south coast.",
       },
       {
         question: "What should executors know about selling property in Raymond or South Bend?",
-        answer: "Raymond and South Bend have a more limited buyer pool than the Long Beach Peninsula, and estate properties here need to be priced realistically for local demand rather than coastal lifestyle premiums. Honest condition assessment and practical preparation are especially important in these communities, where overpricing leads to extended market time and eventual price reductions. Our team provides the straightforward guidance that serves these markets best.",
+        answer: "Raymond and South Bend have a more limited buyer pool than the Long Beach Peninsula, and estate properties here need to be priced realistically for local demand rather than coastal lifestyle premiums. Honest condition assessment and practical preparation are especially important in these communities, where overpricing leads to extended market time and eventual price reductions. David Stein provides the straightforward guidance that serves these markets best.",
       },
     ]}
   />

@@ -17,34 +17,34 @@ import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washingto
 
 const faqs = [
   {
-    question: "Can our team help if I live outside Spokane?",
+    question: "Can David Stein help if I live outside Spokane?",
     answer:
-      "Yes. Our team regularly works with executors, trustees, and family members who live outside the Spokane area — whether across the state, across the country, or internationally. He coordinates property access, vendor management, preparation, and the sale process so you don't need to make unnecessary trips.",
+      "Yes. David Stein regularly works with executors, trustees, and family members who live outside the Spokane area — whether across the state, across the country, or internationally. He coordinates property access, vendor management, preparation, and the sale process so you don't need to make unnecessary trips.",
   },
   {
     question: "What should an executor do first with a Spokane inherited property?",
     answer:
-      "Secure the property, confirm your legal authority to act, and get an honest assessment of its condition and market value. Our team can walk through the property on your behalf, identify issues that affect value, and help you understand your options before you commit to anything.",
+      "Secure the property, confirm your legal authority to act, and get an honest assessment of its condition and market value. David Stein can walk through the property on your behalf, identify issues that affect value, and help you understand your options before you commit to anything.",
   },
   {
     question: "How does our team's appraisal background help with Spokane properties?",
     answer:
-      "As both a licensed Washington State real estate broker and a state-certified residential appraiser, Our team provides pricing grounded in actual condition assessment and local market data — not automated estimates. This dual perspective is especially valuable when families are making decisions from a distance and need confidence in the numbers.",
+      "As both a licensed Washington State real estate broker and a state-certified residential appraiser, David Stein provides pricing grounded in actual condition assessment and local market data — not automated estimates. This dual perspective is especially valuable when families are making decisions from a distance and need confidence in the numbers.",
   },
   {
     question: "How long does it take to sell an inherited home in Spokane?",
     answer:
-      "Timelines depend on the probate or trust administration process, property condition, and market conditions. Once the property is ready and authority is established, well-priced Spokane homes typically sell within a few weeks. Our team helps set realistic expectations and builds a timeline around your specific situation.",
+      "Timelines depend on the probate or trust administration process, property condition, and market conditions. Once the property is ready and authority is established, well-priced Spokane homes typically sell within a few weeks. David Stein helps set realistic expectations and builds a timeline around your specific situation.",
   },
   {
     question: "Should I fix up an inherited property in Spokane before selling?",
     answer:
-      "It depends on the home's condition, your budget, and your timeline. Our team evaluates which improvements are likely to increase the sale price enough to justify the cost — and which ones aren't worth the investment. When you're managing from a distance, this kind of honest guidance saves time and money.",
+      "It depends on the home's condition, your budget, and your timeline. David Stein evaluates which improvements are likely to increase the sale price enough to justify the cost — and which ones aren't worth the investment. When you're managing from a distance, this kind of honest guidance saves time and money.",
   },
   {
-    question: "How does our team coordinate the process for remote families?",
+    question: "How does David Stein coordinate the process for remote families?",
     answer:
-      "Our team serves as your local point of coordination. He manages property access, works with cleanout crews, contractors, and preparation vendors, communicates with attorneys and other parties, and provides clear updates throughout — so you always know where things stand without needing to be there in person.",
+      "David Stein serves as your local point of coordination. He manages property access, works with cleanout crews, contractors, and preparation vendors, communicates with attorneys and other parties, and provides clear updates throughout — so you always know where things stand without needing to be there in person.",
   },
 ];
 
@@ -181,7 +181,7 @@ const SpokaneProbateEstate = () => {
       {/* Mid-page CTA */}
       <MidPageCTA
         heading="Managing a Spokane Property From a Distance?"
-        body="Our team provides confidential consultations for executors, trustees, and families dealing with inherited or estate property in Spokane — even when you're managing from outside the area."
+        body="David Stein provides confidential consultations for executors, trustees, and families dealing with inherited or estate property in Spokane — even when you're managing from outside the area."
         buttonText="Schedule a Consultation"
         microcopy="No pressure. Just practical guidance for your situation."
       />
@@ -197,7 +197,7 @@ const SpokaneProbateEstate = () => {
               One of the most common challenges with Spokane estate properties is distance. The executor, trustee, or primary decision-maker often lives in Western Washington, out of state, or even overseas. Managing vendors, accessing the property, and making informed decisions from afar is stressful — especially when you're also managing grief or family dynamics.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              Our team serves as your boots-on-the-ground coordinator. He manages property access, works with cleanout crews, contractors, and preparation vendors, communicates with attorneys and other parties, and provides clear, consistent updates — so you always know where things stand without needing to be there in person.
+              David Stein serves as your boots-on-the-ground coordinator. He manages property access, works with cleanout crews, contractors, and preparation vendors, communicates with attorneys and other parties, and provides clear, consistent updates — so you always know where things stand without needing to be there in person.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
               The goal is simple: minimize your travel, reduce your stress, and give you confidence that the process is moving forward thoughtfully and professionally.

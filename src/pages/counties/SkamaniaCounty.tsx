@@ -20,7 +20,7 @@ const SkamaniaCounty = () => (
     aeoSupportFaqs={[
       {
         question: "How does the Columbia River Gorge National Scenic Area designation affect property values in Skamania County?",
-        answer: "The Gorge's National Scenic Area designation restricts certain types of development and land use throughout much of Skamania County. This affects both what can be done with a property and how it is valued — buyers who understand the Gorge lifestyle accept and often appreciate these restrictions, while those unfamiliar with them may be surprised. Our team accounts for these land use considerations in valuation and buyer education.",
+        answer: "The Gorge's National Scenic Area designation restricts certain types of development and land use throughout much of Skamania County. This affects both what can be done with a property and how it is valued — buyers who understand the Gorge lifestyle accept and often appreciate these restrictions, while those unfamiliar with them may be surprised. David Stein accounts for these land use considerations in valuation and buyer education.",
       },
       {
         question: "What types of estate properties are most common in Skamania County?",
@@ -35,7 +35,7 @@ const SkamaniaCounty = () => (
     communitiesIntro="Real Property Planning serves families, executors, and professionals throughout Skamania County, including:"
     closingCtaBody={[
       "Whether you're managing an inherited home in Stevenson, a riverfront cabin near Carson, or rural acreage in the Columbia River Gorge, a conversation can help bring clarity to what comes next.",
-      "Our team provides the locally informed, condition-based guidance that Skamania County's distinctive Gorge market requires.",
+      "David Stein provides the locally informed, condition-based guidance that Skamania County's distinctive Gorge market requires.",
     ]}
     countySpecificFaqs={[
       {
@@ -44,15 +44,15 @@ const SkamaniaCounty = () => (
       },
       {
         question: "How is a Columbia River view or riverfront property valued in a Skamania County estate?",
-        answer: "River views and Columbia River access carry real premiums in Skamania County — but those premiums vary significantly based on the quality of the view, the type of access, bank height, and proximity to communities and amenities. Automated estimates are especially unreliable for these properties. Our team's certified appraisal background provides the hands-on, property-specific evaluation that Gorge waterfront and view properties require.",
+        answer: "River views and Columbia River access carry real premiums in Skamania County — but those premiums vary significantly based on the quality of the view, the type of access, bank height, and proximity to communities and amenities. Automated estimates are especially unreliable for these properties. David Stein's certified appraisal background provides the hands-on, property-specific evaluation that Gorge waterfront and view properties require.",
       },
       {
         question: "Can Real Property Planning manage a Skamania County estate sale for families in Portland or Seattle?",
-        answer: "Yes — and this is the most common situation in Skamania County, where many property owners have family based in the Portland metro area, Vancouver, or the Seattle region. Our team handles property assessment, vendor coordination, preparation, showings, and closing locally — with regular updates so families don't need to make repeated trips to the Gorge.",
+        answer: "Yes — and this is the most common situation in Skamania County, where many property owners have family based in the Portland metro area, Vancouver, or the Seattle region. David Stein handles property assessment, vendor coordination, preparation, showings, and closing locally — with regular updates so families don't need to make repeated trips to the Gorge.",
       },
       {
         question: "What should I know about land use restrictions when selling estate property in Skamania County?",
-        answer: "The Columbia River Gorge National Scenic Area designation affects a significant portion of Skamania County, creating land use restrictions that buyers need to understand and that affect how properties can be developed or modified. Our team's familiarity with Gorge-area real estate helps executors and families communicate these considerations clearly to prospective buyers and price properties appropriately given the regulatory context.",
+        answer: "The Columbia River Gorge National Scenic Area designation affects a significant portion of Skamania County, creating land use restrictions that buyers need to understand and that affect how properties can be developed or modified. David Stein's familiarity with Gorge-area real estate helps executors and families communicate these considerations clearly to prospective buyers and price properties appropriately given the regulatory context.",
       },
     ]}
   />

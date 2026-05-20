@@ -18,32 +18,32 @@ const faqs = [
   {
     question: "How does selling an inherited home work in Tacoma?",
     answer:
-      "Selling an inherited home in Tacoma typically requires confirming legal authority (through probate or trust administration), evaluating the property's condition, and developing a realistic pricing and preparation strategy. Our team coordinates the entire process — from initial assessment through closing — keeping all parties informed and the timeline on track.",
+      "Selling an inherited home in Tacoma typically requires confirming legal authority (through probate or trust administration), evaluating the property's condition, and developing a realistic pricing and preparation strategy. David Stein coordinates the entire process — from initial assessment through closing — keeping all parties informed and the timeline on track.",
   },
   {
     question: "What should a Tacoma executor do first with an inherited property?",
     answer:
-      "Secure the property, confirm your legal authority, and get an honest assessment of its condition and value. Many Tacoma inherited homes have years of deferred maintenance. Our team can walk through the property, identify issues that affect value, and help you understand your options before committing to any course of action.",
+      "Secure the property, confirm your legal authority, and get an honest assessment of its condition and value. Many Tacoma inherited homes have years of deferred maintenance. David Stein can walk through the property, identify issues that affect value, and help you understand your options before committing to any course of action.",
   },
   {
     question: "How does Real Property Planning's appraisal background help with Tacoma properties?",
     answer:
-      "As both a licensed Washington State real estate broker and a state-certified residential appraiser, Our team provides pricing grounded in actual condition assessment and neighborhood-level market data — not automated estimates. This is especially valuable in Tacoma, where property values can vary significantly from one neighborhood to the next.",
+      "As both a licensed Washington State real estate broker and a state-certified residential appraiser, David Stein provides pricing grounded in actual condition assessment and neighborhood-level market data — not automated estimates. This is especially valuable in Tacoma, where property values can vary significantly from one neighborhood to the next.",
   },
   {
-    question: "Can our team help if I live out of state but the property is in Tacoma?",
+    question: "Can David Stein help if I live out of state but the property is in Tacoma?",
     answer:
-      "Yes. Our team regularly works with out-of-state executors and family members managing Tacoma properties remotely. He coordinates property access, vendor management, preparation, and the sale process — keeping you informed at every step so you don't need to make unnecessary trips.",
+      "Yes. David Stein regularly works with out-of-state executors and family members managing Tacoma properties remotely. He coordinates property access, vendor management, preparation, and the sale process — keeping you informed at every step so you don't need to make unnecessary trips.",
   },
   {
     question: "Should I fix up an inherited home in Tacoma before selling?",
     answer:
-      "It depends on the home's condition, your budget, and your timeline. Our team uses our appraisal background to evaluate which improvements are likely to increase the sale price enough to justify the cost — and which ones aren't worth the investment. Sometimes selling as-is is the right call; other times, targeted preparation makes a meaningful difference.",
+      "It depends on the home's condition, your budget, and your timeline. David Stein uses our appraisal background to evaluate which improvements are likely to increase the sale price enough to justify the cost — and which ones aren't worth the investment. Sometimes selling as-is is the right call; other times, targeted preparation makes a meaningful difference.",
   },
   {
     question: "How long does it take to sell an estate property in Tacoma?",
     answer:
-      "Timelines vary based on the probate or trust administration process, property condition, and current market conditions. Once the property is ready and authority is established, well-priced Tacoma homes typically sell within a few weeks. Our team helps set realistic expectations and builds a timeline around your specific situation.",
+      "Timelines vary based on the probate or trust administration process, property condition, and current market conditions. Once the property is ready and authority is established, well-priced Tacoma homes typically sell within a few weeks. David Stein helps set realistic expectations and builds a timeline around your specific situation.",
   },
 ];
 
@@ -171,7 +171,7 @@ const TacomaProbateEstate = () => {
       {/* Mid-page CTA */}
       <MidPageCTA
         heading="Have a Property Situation in Tacoma?"
-        body="Our team provides confidential consultations for executors, trustees, and families dealing with inherited or estate property in Tacoma and throughout Pierce County."
+        body="David Stein provides confidential consultations for executors, trustees, and families dealing with inherited or estate property in Tacoma and throughout Pierce County."
         buttonText="Schedule a Consultation"
         microcopy="No pressure. Just practical guidance for your situation."
       />
@@ -187,7 +187,7 @@ const TacomaProbateEstate = () => {
               Many families managing Tacoma estate property live elsewhere — across the state, across the country, or even internationally. Coordinating vendors, accessing the property, understanding local conditions, and managing a sale remotely adds significant stress during an already difficult time.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              Our team serves as a local point of coordination. He manages property access, works with cleanout crews, contractors, and preparation vendors, communicates with attorneys and other parties, and keeps you informed throughout the process — reducing unnecessary travel and giving you confidence that nothing is falling through the cracks.
+              David Stein serves as a local point of coordination. He manages property access, works with cleanout crews, contractors, and preparation vendors, communicates with attorneys and other parties, and keeps you informed throughout the process — reducing unnecessary travel and giving you confidence that nothing is falling through the cracks.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
               Whether you're managing from Portland, Phoenix, or across the country, our team's goal is to make the process as clear and manageable as possible from wherever you are.

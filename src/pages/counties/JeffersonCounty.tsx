@@ -24,18 +24,18 @@ const JeffersonCounty = () => (
       },
       {
         question: "How does Sequim's retirement community character affect estate sales there?",
-        answer: "Sequim has attracted retirees for decades, which means many estate sales involve properties that were purpose-selected for retirement living — single-story homes, accessible layouts, low-maintenance lots, and proximity to amenities. This creates a specific buyer pool of active retirees and families relocating parents, which our team accounts for in pricing strategy and marketing approach.",
+        answer: "Sequim has attracted retirees for decades, which means many estate sales involve properties that were purpose-selected for retirement living — single-story homes, accessible layouts, low-maintenance lots, and proximity to amenities. This creates a specific buyer pool of active retirees and families relocating parents, which David Stein accounts for in pricing strategy and marketing approach.",
       },
     ]}
     localExpertiseHeading="Jefferson County's Market — What Estate Sellers Need to Know"
     localExpertiseBody={[
       "Jefferson County's communities function as distinct markets despite sharing a county. Port Townsend's Victorian waterfront and historic district create a buyer pool drawn to architectural character, walkability, and arts community identity. Sequim's retirement appeal and 'banana belt' microclimate attract a different buyer entirely — one prioritizing sunshine, accessibility, and proximity to medical services. The rural Hood Canal communities of Brinnon and Quilcene serve buyers seeking privacy, outdoor recreation access, and properties with land.",
-      "For estate and inherited properties, this community diversity means that pricing and preparation strategy must be calibrated to the specific location — not to Jefferson County as a whole. A Port Townsend Victorian and a Sequim retirement rambler and a Quilcene acreage property require entirely different approaches. Our team's appraisal background and Olympic Peninsula market knowledge ensure each property is evaluated on its own terms.",
+      "For estate and inherited properties, this community diversity means that pricing and preparation strategy must be calibrated to the specific location — not to Jefferson County as a whole. A Port Townsend Victorian and a Sequim retirement rambler and a Quilcene acreage property require entirely different approaches. David Stein's appraisal background and Olympic Peninsula market knowledge ensure each property is evaluated on its own terms.",
     ]}
     communitiesIntro="Real Property Planning serves families, executors, and professionals throughout Jefferson County, including:"
     closingCtaBody={[
       "Whether you're managing an inherited Victorian in Port Townsend, a retirement-era home in Sequim, or rural acreage along the Hood Canal, a conversation can help bring clarity to what comes next.",
-      "Our team provides the locally informed guidance that Jefferson County's distinctive communities and property types require.",
+      "David Stein provides the locally informed guidance that Jefferson County's distinctive communities and property types require.",
     ]}
     countySpecificFaqs={[
       {
@@ -44,15 +44,15 @@ const JeffersonCounty = () => (
       },
       {
         question: "How is a historic Port Townsend home valued as part of an estate?",
-        answer: "Port Townsend's Victorian homes are among the most architecturally significant in Washington State — and their value reflects both the historic character and the specific condition of each property. Restoration work, period-appropriate features, and proximity to the historic district all affect value in ways that automated tools miss. Our team's appraisal background provides the property-specific analysis these distinctive homes require.",
+        answer: "Port Townsend's Victorian homes are among the most architecturally significant in Washington State — and their value reflects both the historic character and the specific condition of each property. Restoration work, period-appropriate features, and proximity to the historic district all affect value in ways that automated tools miss. David Stein's appraisal background provides the property-specific analysis these distinctive homes require.",
       },
       {
         question: "Can Real Property Planning manage a Jefferson County estate sale for out-of-area heirs?",
-        answer: "Yes — and this is especially common in Jefferson County, where many property owners relocated from Western Washington or out of state for retirement. Our team handles property assessment, vendor coordination, preparation, showings, and offer review locally — keeping out-of-area families informed with regular updates. Travel to Jefferson County is rarely required.",
+        answer: "Yes — and this is especially common in Jefferson County, where many property owners relocated from Western Washington or out of state for retirement. David Stein handles property assessment, vendor coordination, preparation, showings, and offer review locally — keeping out-of-area families informed with regular updates. Travel to Jefferson County is rarely required.",
       },
       {
         question: "What should executors know about selling rural acreage or Hood Canal property in Jefferson County?",
-        answer: "Rural properties in Jefferson County — acreage along the Hood Canal, properties near Quilcene and Brinnon, and Olympic Peninsula foothills parcels — require valuation that accounts for land features, access, well and septic systems, and a buyer pool that differs significantly from suburban markets. Our team's certified appraisal background is particularly valuable for these property types, where limited comparable sales make professional evaluation essential.",
+        answer: "Rural properties in Jefferson County — acreage along the Hood Canal, properties near Quilcene and Brinnon, and Olympic Peninsula foothills parcels — require valuation that accounts for land features, access, well and septic systems, and a buyer pool that differs significantly from suburban markets. David Stein's certified appraisal background is particularly valuable for these property types, where limited comparable sales make professional evaluation essential.",
       },
     ]}
   />

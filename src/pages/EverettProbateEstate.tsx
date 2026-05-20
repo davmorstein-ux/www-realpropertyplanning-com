@@ -18,32 +18,32 @@ const faqs = [
   {
     question: "What should I do first with an inherited home in Everett?",
     answer:
-      "Secure the property, confirm your legal authority to act, and get an honest assessment of its condition and value. Many Everett inherited homes have years of deferred maintenance. Our team can walk through the property, identify issues that affect value, and help you understand your options before you commit to anything.",
+      "Secure the property, confirm your legal authority to act, and get an honest assessment of its condition and value. Many Everett inherited homes have years of deferred maintenance. David Stein can walk through the property, identify issues that affect value, and help you understand your options before you commit to anything.",
   },
   {
-    question: "How does our team help with homes that need a lot of work?",
+    question: "How does David Stein help with homes that need a lot of work?",
     answer:
-      "Our team uses our appraisal background to evaluate which repairs and improvements are likely to increase the sale price enough to justify the cost — and which ones aren't worth the investment. Sometimes selling as-is is the right call; other times, targeted preparation makes a meaningful difference. The key is making that decision based on data, not guesswork.",
+      "David Stein uses our appraisal background to evaluate which repairs and improvements are likely to increase the sale price enough to justify the cost — and which ones aren't worth the investment. Sometimes selling as-is is the right call; other times, targeted preparation makes a meaningful difference. The key is making that decision based on data, not guesswork.",
   },
   {
     question: "How does our team's dual expertise benefit Everett sellers?",
     answer:
-      "As both a licensed Washington State real estate broker and a state-certified residential appraiser, Our team provides pricing grounded in actual condition assessment and neighborhood-level market data. This dual perspective is especially valuable with older Everett homes where condition, location, and lot characteristics can significantly affect value.",
+      "As both a licensed Washington State real estate broker and a state-certified residential appraiser, David Stein provides pricing grounded in actual condition assessment and neighborhood-level market data. This dual perspective is especially valuable with older Everett homes where condition, location, and lot characteristics can significantly affect value.",
   },
   {
     question: "What if family members disagree about what to do with the property?",
     answer:
-      "This is common. Our team provides objective, data-driven information — condition assessment, realistic pricing, and a clear explanation of options — so families can make decisions based on facts rather than assumptions. Having a neutral, professional perspective often helps move conversations forward.",
+      "This is common. David Stein provides objective, data-driven information — condition assessment, realistic pricing, and a clear explanation of options — so families can make decisions based on facts rather than assumptions. Having a neutral, professional perspective often helps move conversations forward.",
   },
   {
-    question: "Can our team help if I don't live in the Everett area?",
+    question: "Can David Stein help if I don't live in the Everett area?",
     answer:
-      "Yes. Our team regularly works with executors and family members managing Everett properties from outside the area. He coordinates property access, vendor management, preparation, and the sale process — keeping you informed at every step so you don't need to make unnecessary trips.",
+      "Yes. David Stein regularly works with executors and family members managing Everett properties from outside the area. He coordinates property access, vendor management, preparation, and the sale process — keeping you informed at every step so you don't need to make unnecessary trips.",
   },
   {
     question: "How long does it take to sell an inherited home in Everett?",
     answer:
-      "Timelines depend on the probate or trust process, property condition, and how much preparation is needed. Once the property is ready and authority is established, well-priced Everett homes typically sell within a few weeks. Our team helps set realistic expectations and builds a timeline around your specific situation.",
+      "Timelines depend on the probate or trust process, property condition, and how much preparation is needed. Once the property is ready and authority is established, well-priced Everett homes typically sell within a few weeks. David Stein helps set realistic expectations and builds a timeline around your specific situation.",
   },
 ];
 
@@ -171,7 +171,7 @@ const EverettProbateEstate = () => {
       {/* Mid-page CTA */}
       <MidPageCTA
         heading="Dealing With an Inherited Home in Everett?"
-        body="Our team provides confidential consultations for executors, trustees, and families handling inherited or estate property in Everett and throughout Snohomish County."
+        body="David Stein provides confidential consultations for executors, trustees, and families handling inherited or estate property in Everett and throughout Snohomish County."
         buttonText="Schedule a Consultation"
         microcopy="No pressure. Just practical guidance for your situation."
       />
@@ -187,10 +187,10 @@ const EverettProbateEstate = () => {
               Inherited property decisions are rarely simple — especially when multiple family members are involved. Siblings may have different memories of the home, different financial situations, and different ideas about what should happen next. These conversations can be emotional, and they benefit from objective, data-driven information.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              Our team provides a clear, professional perspective: an honest assessment of the property's condition, realistic pricing based on local market data, and a straightforward explanation of the options. This kind of neutral, fact-based guidance often helps families move past uncertainty and toward a decision everyone can understand.
+              David Stein provides a clear, professional perspective: an honest assessment of the property's condition, realistic pricing based on local market data, and a straightforward explanation of the options. This kind of neutral, fact-based guidance often helps families move past uncertainty and toward a decision everyone can understand.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Whether family members are local, scattered across the state, or across the country, our team keeps everyone informed with consistent communication throughout the process.
+              Whether family members are local, scattered across the state, or across the country, David Stein keeps everyone informed with consistent communication throughout the process.
             </p>
           </div>
         </div>

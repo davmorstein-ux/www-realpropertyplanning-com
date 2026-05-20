@@ -16,7 +16,7 @@ const whyReferCards = [
   },
   {
     heading: "Experienced With Sensitive Transitions",
-    text: "Probate, inherited property, trust sales, and estate-related transitions often require discretion, patience, and a measured approach. Our team helps clients move forward with clarity and professionalism.",
+    text: "Probate, inherited property, trust sales, and estate-related transitions often require discretion, patience, and a measured approach. David Stein helps clients move forward with clarity and professionalism.",
   },
   {
     heading: "Reliable Communication",
@@ -118,7 +118,7 @@ const AttorneyReferral = () => {
               Attorneys, fiduciaries, trustees, personal representatives, executors, and family decision-makers often need more than a traditional real estate broker when a property is connected to probate, trust administration, inherited ownership, or estate settlement. Real Property Planning is a licensed real estate broker in the State of Washington and a Washington state certified real estate appraiser with Attorneys, fiduciaries, trustees, personal representatives, executors, and family decision-makers often need more than a traditional real estate broker when a property is connected to probate, trust administration, inherited ownership, or estate settlement. Real Property Planning is a licensed real estate broker in the State of Washington and a Washington state certified real estate appraiser with over 20 years of experience helping clients make informed decisions about important property transitions throughout Washington State.
             </p>
             <p className="text-lg text-primary-foreground/70 leading-relaxed mb-[30px]">
-              Our work is focused on inherited homes, probate property, trust-owned real estate, estate-related sales, and situations where valuation insight, local market knowledge, communication, and practical coordination matter. Our team works alongside attorneys and related professionals as a real estate resource to help clients move forward with greater clarity, stronger preparation, and a more organized sale strategy.
+              Our work is focused on inherited homes, probate property, trust-owned real estate, estate-related sales, and situations where valuation insight, local market knowledge, communication, and practical coordination matter. David Stein works alongside attorneys and related professionals as a real estate resource to help clients move forward with greater clarity, stronger preparation, and a more organized sale strategy.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Link to="/contact">
@@ -177,7 +177,7 @@ const AttorneyReferral = () => {
         </div>
       </section>
 
-      {/* Section 3: How our team Works */}
+      {/* Section 3: How David Stein Works */}
       <section className="pt-12 pb-12 md:pt-16 md:pb-16 lg:pt-[84px] lg:pb-[84px] bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-[1140px] mx-auto">
@@ -237,7 +237,7 @@ const AttorneyReferral = () => {
         </div>
       </section>
 
-      {/* Section 5: What Makes our team Different */}
+      {/* Section 5: What Makes David Stein Different */}
       <section className="pt-12 pb-12 md:pt-16 md:pb-16 lg:pt-[84px] lg:pb-[84px] bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-[1140px] mx-auto">

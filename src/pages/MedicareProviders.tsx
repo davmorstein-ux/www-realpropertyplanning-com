@@ -226,7 +226,7 @@ const MedicareProviders = () => (
             <p className="text-foreground text-lg leading-relaxed mb-6">
               During these transitions, families are often juggling multiple responsibilities at once — coordinating with
               attorneys, managing property, supporting aging parents, and navigating unfamiliar systems. Having a trusted
-              Medicare specialist on your team means one less thing to worry about, and one more area where you can feel
+              Medicare specialist on yDavid Stein means one less thing to worry about, and one more area where you can feel
               confident the right decisions are being made.
             </p>
             <p className="text-foreground text-lg leading-relaxed">

@@ -16,9 +16,9 @@ import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washingto
 
 const faqs = [
   {
-    question: "Can our team help with an inherited property in Bellingham if I live out of the area?",
+    question: "Can David Stein help with an inherited property in Bellingham if I live out of the area?",
     answer:
-      "Yes. Our team regularly works with families managing Bellingham properties from Seattle, out of state, or farther. He coordinates property access, vendor management, preparation, and the sale process — keeping you informed without requiring unnecessary trips.",
+      "Yes. David Stein regularly works with families managing Bellingham properties from Seattle, out of state, or farther. He coordinates property access, vendor management, preparation, and the sale process — keeping you informed without requiring unnecessary trips.",
   },
   {
     question: "What makes Bellingham's real estate market different from the rest of Washington?",
@@ -28,22 +28,22 @@ const faqs = [
   {
     question: "How does our team's appraisal background help with Bellingham properties?",
     answer:
-      "As both a licensed Washington State real estate broker and a state-certified residential appraiser, Our team provides pricing grounded in actual condition assessment and local market data. This is especially important in Bellingham, where unique property types and location-specific factors can significantly affect value.",
+      "As both a licensed Washington State real estate broker and a state-certified residential appraiser, David Stein provides pricing grounded in actual condition assessment and local market data. This is especially important in Bellingham, where unique property types and location-specific factors can significantly affect value.",
   },
   {
     question: "Should I prepare an inherited Bellingham home before selling?",
     answer:
-      "It depends on the property's condition, your timeline, and your goals. Our team evaluates which improvements are likely to return more than they cost — and which aren't worth the investment. For families managing from a distance, this honest assessment saves both time and money.",
+      "It depends on the property's condition, your timeline, and your goals. David Stein evaluates which improvements are likely to return more than they cost — and which aren't worth the investment. For families managing from a distance, this honest assessment saves both time and money.",
   },
   {
     question: "How long does it typically take to sell an estate property in Bellingham?",
     answer:
-      "Timelines depend on the probate or trust process, property condition, and seasonal market factors. Once the property is ready and legal authority is established, well-priced Bellingham homes generally sell within a reasonable timeframe. Our team helps set realistic expectations based on your specific situation.",
+      "Timelines depend on the probate or trust process, property condition, and seasonal market factors. Once the property is ready and legal authority is established, well-priced Bellingham homes generally sell within a reasonable timeframe. David Stein helps set realistic expectations based on your specific situation.",
   },
   {
     question: "What if the inherited property is a second home or vacation property?",
     answer:
-      "Second homes and vacation properties are common in the Bellingham area. These properties may have deferred maintenance, shared ownership, or unique characteristics that affect pricing. Our team assesses the property's condition and market positioning to develop a strategy that accounts for these factors.",
+      "Second homes and vacation properties are common in the Bellingham area. These properties may have deferred maintenance, shared ownership, or unique characteristics that affect pricing. David Stein assesses the property's condition and market positioning to develop a strategy that accounts for these factors.",
   },
 ];
 
@@ -170,7 +170,7 @@ const BellinghamProbateEstate = () => {
       {/* Mid-page CTA */}
       <MidPageCTA
         heading="Handling a Bellingham Property From a Distance?"
-        body="Our team provides confidential consultations for executors, trustees, and families dealing with inherited or estate property in Bellingham and Whatcom County — whether you're local or managing from out of the area."
+        body="David Stein provides confidential consultations for executors, trustees, and families dealing with inherited or estate property in Bellingham and Whatcom County — whether you're local or managing from out of the area."
         buttonText="Schedule a Consultation"
         microcopy="No pressure. Just practical guidance for your situation."
       />
@@ -186,10 +186,10 @@ const BellinghamProbateEstate = () => {
               A significant number of Bellingham estate properties belong to families who don't live nearby. The owner may have retired here, used the property as a vacation home, or held it for decades before passing it to the next generation. In any case, the family handling the property now often faces the same challenge: making sound decisions about a home they can't easily visit.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              Our team serves as your local point of coordination — visiting the property, assessing its condition, managing cleanout crews and contractors, and communicating with attorneys and family members. The goal is to reduce the logistical burden so you can make informed decisions without unnecessary stress or travel.
+              David Stein serves as your local point of coordination — visiting the property, assessing its condition, managing cleanout crews and contractors, and communicating with attorneys and family members. The goal is to reduce the logistical burden so you can make informed decisions without unnecessary stress or travel.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              For second homes and vacation properties, there are often additional considerations — seasonal access, shared ownership, deferred maintenance, or unique features that affect marketability. Our team evaluates these factors honestly and builds a strategy around the property's actual condition and positioning.
+              For second homes and vacation properties, there are often additional considerations — seasonal access, shared ownership, deferred maintenance, or unique features that affect marketability. David Stein evaluates these factors honestly and builds a strategy around the property's actual condition and positioning.
             </p>
           </div>
         </div>

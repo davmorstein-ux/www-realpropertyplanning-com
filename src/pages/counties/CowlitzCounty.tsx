@@ -24,18 +24,18 @@ const CowlitzCounty = () => (
       },
       {
         question: "How does Real Property Planning handle estate sales when heirs live out of state?",
-        answer: "This is one of the most common situations we handle in Cowlitz County. Our team manages the entire process locally — property walk-throughs, vendor coordination, cleanout, photography, showings, and offer review — with regular written and photo updates to keep out-of-state heirs informed at every step.",
+        answer: "This is one of the most common situations we handle in Cowlitz County. David Stein manages the entire process locally — property walk-throughs, vendor coordination, cleanout, photography, showings, and offer review — with regular written and photo updates to keep out-of-state heirs informed at every step.",
       },
     ]}
     localExpertiseHeading="Cowlitz County's Real Estate Market — What Estate Sellers Need to Know"
     localExpertiseBody={[
       "Cowlitz County's real estate market reflects its character: working-class roots, strong community ties, and properties that often carry decades of history. Longview and Kelso make up the urban core, with a buyer pool that values affordability and practicality. Rural properties — especially those along the Toutle River, near Silver Lake, or in the foothills — attract buyers seeking land, privacy, and outdoor access.",
-      "For estate properties, condition matters enormously. Homes that have been lived in for 30 or 40 years require honest, condition-adjusted pricing and a preparation plan that matches what local buyers actually expect. Overpricing or underpreparing a Cowlitz County estate home can mean months on market and eventual price reductions. Our team's appraisal background ensures that every property is priced on its actual condition and neighborhood — not on wishful thinking.",
+      "For estate properties, condition matters enormously. Homes that have been lived in for 30 or 40 years require honest, condition-adjusted pricing and a preparation plan that matches what local buyers actually expect. Overpricing or underpreparing a Cowlitz County estate home can mean months on market and eventual price reductions. David Stein's appraisal background ensures that every property is priced on its actual condition and neighborhood — not on wishful thinking.",
     ]}
     communitiesIntro="Real Property Planning serves families, executors, and professionals throughout Cowlitz County, including:"
     closingCtaBody={[
       "Whether you're managing an inherited property in Longview or navigating a rural estate near Castle Rock, a short conversation can bring clarity to what comes next.",
-      "Our team serves Cowlitz County families and professionals with the same care and expertise we bring to every engagement across Western Washington.",
+      "David Stein serves Cowlitz County families and professionals with the same care and expertise we bring to every engagement across Western Washington.",
     ]}
     countySpecificFaqs={[
       {
@@ -48,7 +48,7 @@ const CowlitzCounty = () => (
       },
       {
         question: "How long does it typically take to sell an estate property in Cowlitz County?",
-        answer: "Timeline varies by property type, condition, and preparation. A well-prepared home in Longview or Kelso can move in a few weeks in active market conditions. Rural properties or homes needing significant cleanout and preparation may take longer. Our team provides honest timeline expectations from the first conversation — not projections designed to win a listing.",
+        answer: "Timeline varies by property type, condition, and preparation. A well-prepared home in Longview or Kelso can move in a few weeks in active market conditions. Rural properties or homes needing significant cleanout and preparation may take longer. David Stein provides honest timeline expectations from the first conversation — not projections designed to win a listing.",
       },
       {
         question: "Can Real Property Planning coordinate cleanout and repairs for a Cowlitz County estate property?",

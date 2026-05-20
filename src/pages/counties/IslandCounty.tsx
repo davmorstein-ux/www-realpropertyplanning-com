@@ -24,7 +24,7 @@ const IslandCounty = () => (
       },
       {
         question: "How are waterfront properties on the islands valued for estate purposes?",
-        answer: "Waterfront properties on Whidbey and Camano Islands vary significantly based on bank height, beach access, views, bulkhead condition, and community character. Automated estimates are especially unreliable for island waterfront. Our team's certified appraisal background provides the hands-on, property-specific evaluation these properties require.",
+        answer: "Waterfront properties on Whidbey and Camano Islands vary significantly based on bank height, beach access, views, bulkhead condition, and community character. Automated estimates are especially unreliable for island waterfront. David Stein's certified appraisal background provides the hands-on, property-specific evaluation these properties require.",
       },
     ]}
     localExpertiseHeading="Island County's Real Estate Market — What Estate Sellers Need to Know"
@@ -35,7 +35,7 @@ const IslandCounty = () => (
     communitiesIntro="Real Property Planning serves families, executors, and professionals throughout Island County, including:"
     closingCtaBody={[
       "Whether you're managing an inherited property in Oak Harbor, coordinating a senior transition from a Langley cottage, or navigating estate property on Camano Island, a short conversation can bring clarity to what comes next.",
-      "Our team coordinates the full process locally — so families managing from the mainland or out of state don't have to figure it out on their own.",
+      "David Stein coordinates the full process locally — so families managing from the mainland or out of state don't have to figure it out on their own.",
     ]}
     countySpecificFaqs={[
       {
@@ -44,15 +44,15 @@ const IslandCounty = () => (
       },
       {
         question: "How does Naval Air Station Whidbey Island affect real estate in Oak Harbor?",
-        answer: "NAS Whidbey Island is the dominant economic force in Oak Harbor, creating a military-influenced buyer pool with specific characteristics — VA loan eligibility, PCS-related relocation timelines, and familiarity with the base lifestyle. Estate properties in Oak Harbor often attract military buyers, which affects marketing strategy, financing considerations, and realistic pricing. Our team accounts for these dynamics specifically.",
+        answer: "NAS Whidbey Island is the dominant economic force in Oak Harbor, creating a military-influenced buyer pool with specific characteristics — VA loan eligibility, PCS-related relocation timelines, and familiarity with the base lifestyle. Estate properties in Oak Harbor often attract military buyers, which affects marketing strategy, financing considerations, and realistic pricing. David Stein accounts for these dynamics specifically.",
       },
       {
         question: "Can Real Property Planning coordinate an island estate sale for out-of-state heirs?",
-        answer: "Yes — this is one of the most common situations we handle in Island County. Managing an estate property on Whidbey or Camano Island from the mainland or out of state requires someone on the ground who can handle property access, vendor coordination, ferry logistics, and regular updates. Our team manages all of this so heirs rarely need to be present on the island for any step of the process.",
+        answer: "Yes — this is one of the most common situations we handle in Island County. Managing an estate property on Whidbey or Camano Island from the mainland or out of state requires someone on the ground who can handle property access, vendor coordination, ferry logistics, and regular updates. David Stein manages all of this so heirs rarely need to be present on the island for any step of the process.",
       },
       {
         question: "How is a waterfront estate property on Whidbey or Camano Island priced?",
-        answer: "Waterfront pricing on the islands depends on specific factors that vary property by property — bank height and beach access, bulkhead condition, view orientation, community character, and proximity to amenities. Comparable sales from other parts of Puget Sound often don't apply. Our team's certified appraisal background ensures island waterfront properties are priced based on their actual characteristics, not borrowed comparables.",
+        answer: "Waterfront pricing on the islands depends on specific factors that vary property by property — bank height and beach access, bulkhead condition, view orientation, community character, and proximity to amenities. Comparable sales from other parts of Puget Sound often don't apply. David Stein's certified appraisal background ensures island waterfront properties are priced based on their actual characteristics, not borrowed comparables.",
       },
     ]}
   />

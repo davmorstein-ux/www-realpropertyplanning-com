@@ -24,7 +24,7 @@ const SanJuanCounty = () => (
       },
       {
         question: "How are San Juan Islands properties valued for estate purposes?",
-        answer: "San Juan Islands properties are among the most difficult in Washington State to value with automated tools. Waterfront access, ferry proximity, view quality, island character, and the limited number of comparable sales all affect value in ways that require hands-on, island-specific evaluation. Our team's certified appraisal background provides the property-specific analysis these distinctive properties require.",
+        answer: "San Juan Islands properties are among the most difficult in Washington State to value with automated tools. Waterfront access, ferry proximity, view quality, island character, and the limited number of comparable sales all affect value in ways that require hands-on, island-specific evaluation. David Stein's certified appraisal background provides the property-specific analysis these distinctive properties require.",
       },
     ]}
     localExpertiseHeading="San Juan County's Real Estate Market — What Estate Sellers Need to Know"
@@ -35,7 +35,7 @@ const SanJuanCounty = () => (
     communitiesIntro="Real Property Planning serves families, executors, and professionals throughout San Juan County, including:"
     closingCtaBody={[
       "Whether you're managing an inherited property on San Juan Island, Orcas Island, Lopez Island, or one of the smaller islands in the archipelago, a conversation can help bring clarity to what comes next.",
-      "Our team coordinates the full process — including the island logistics that make San Juan County estate sales uniquely complex — so families managing from the mainland don't have to figure it out alone.",
+      "David Stein coordinates the full process — including the island logistics that make San Juan County estate sales uniquely complex — so families managing from the mainland don't have to figure it out alone.",
     ]}
     countySpecificFaqs={[
       {
@@ -48,7 +48,7 @@ const SanJuanCounty = () => (
       },
       {
         question: "Can Real Property Planning manage a San Juan County estate sale for mainland families?",
-        answer: "Yes — and mainland coordination is the norm for San Juan County estate sales, not the exception. Most island property owners have family based in King, Snohomish, or Pierce County, or out of state. Our team handles everything on the island — property assessment, vendor coordination, preparation, showings, and closing — with regular updates so families rarely need to take the ferry for any step of the process.",
+        answer: "Yes — and mainland coordination is the norm for San Juan County estate sales, not the exception. Most island property owners have family based in King, Snohomish, or Pierce County, or out of state. David Stein handles everything on the island — property assessment, vendor coordination, preparation, showings, and closing — with regular updates so families rarely need to take the ferry for any step of the process.",
       },
       {
         question: "Are there different considerations for estate properties on Orcas Island versus San Juan Island?",

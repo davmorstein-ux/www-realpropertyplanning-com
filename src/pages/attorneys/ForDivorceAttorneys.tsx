@@ -27,23 +27,23 @@ const services = [
     title: "Objective, Defensible Valuation",
     description: (
       <>
-        Our team's <Link to="/real-estate-appraiser" className="text-accent hover:text-gold underline underline-offset-4">certified appraisal</Link> background produces a condition-adjusted, methodology-based market analysis — not a listing pitch. When both parties are working from the same objective foundation, valuation disputes resolve more efficiently. This analysis can also serve as a useful reference point in settlement negotiations.
+        David Stein's <Link to="/real-estate-appraiser" className="text-accent hover:text-gold underline underline-offset-4">certified appraisal</Link> background produces a condition-adjusted, methodology-based market analysis — not a listing pitch. When both parties are working from the same objective foundation, valuation disputes resolve more efficiently. This analysis can also serve as a useful reference point in settlement negotiations.
       </>
     ),
   },
   {
     title: "Neutral Representation",
-    description: "Our team does not represent either party's interests — our team represents the property and the process. Our role is to handle the sale fairly, transparently, and professionally, with consistent communication to both parties (or through their attorneys) and no advocacy for either side.",
+    description: "David Stein does not represent either party's interests — David Stein represents the property and the process. Our role is to handle the sale fairly, transparently, and professionally, with consistent communication to both parties (or through their attorneys) and no advocacy for either side.",
   },
   {
     title: "Structured, Organized Sale Process",
-    description: "Our team manages preparation, listing, marketing, showings, negotiation, and closing — providing both parties with regular updates in a format that is factual, clear, and professionally neutral. Neither party has to wonder what is happening or rely on the other for information.",
+    description: "David Stein manages preparation, listing, marketing, showings, negotiation, and closing — providing both parties with regular updates in a format that is factual, clear, and professionally neutral. Neither party has to wonder what is happening or rely on the other for information.",
   },
   {
     title: "Market Expertise for the Puget Sound Region",
     description: (
       <>
-        Our team brings deep knowledge of real estate conditions throughout{" "}
+        David Stein brings deep knowledge of real estate conditions throughout{" "}
         <Link to="/counties" className="text-accent hover:text-gold underline underline-offset-4">King County, Snohomish County, Pierce County, and Kitsap County</Link>{" "}
         — ensuring that pricing decisions reflect actual market conditions in the specific neighborhood, not generalized estimates.
       </>
@@ -54,15 +54,15 @@ const services = [
 const faqs = [
   {
     question: "How does Real Property Planning maintain neutrality when working with divorcing parties?",
-    answer: "Our team's role is defined from the beginning as neutral coordinator — our obligation is to the property transaction, not to either party. Communication protocols are established upfront: updates can be sent simultaneously to both parties, routed through respective counsel, or structured in whatever way the attorneys prefer. Pricing and preparation decisions are based on market data, not either party's preference.",
+    answer: "David Stein's role is defined from the beginning as neutral coordinator — our obligation is to the property transaction, not to either party. Communication protocols are established upfront: updates can be sent simultaneously to both parties, routed through respective counsel, or structured in whatever way the attorneys prefer. Pricing and preparation decisions are based on market data, not either party's preference.",
   },
   {
     question: "What if one party is living in the home during the sale?",
-    answer: "This is one of the most common and most delicate situations in divorce real estate. Our team has worked with this dynamic regularly and approaches it with clear protocols: scheduled showings with appropriate notice, professional staging guidance that respects the occupant's daily life, and consistent communication that keeps both parties informed without requiring them to interact directly.",
+    answer: "This is one of the most common and most delicate situations in divorce real estate. David Stein has worked with this dynamic regularly and approaches it with clear protocols: scheduled showings with appropriate notice, professional staging guidance that respects the occupant's daily life, and consistent communication that keeps both parties informed without requiring them to interact directly.",
   },
   {
     question: "Can the home be sold before the divorce is finalized?",
-    answer: "In many cases, yes — though it depends on court orders and the specifics of the legal proceedings. Our team coordinates with both attorneys to ensure the real estate process aligns with the legal timeline and any court-imposed requirements.",
+    answer: "In many cases, yes — though it depends on court orders and the specifics of the legal proceedings. David Stein coordinates with both attorneys to ensure the real estate process aligns with the legal timeline and any court-imposed requirements.",
   },
 ];
 

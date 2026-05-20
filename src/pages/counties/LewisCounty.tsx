@@ -24,7 +24,7 @@ const LewisCounty = () => (
       },
       {
         question: "How does Real Property Planning handle rural Lewis County properties with acreage or outbuildings?",
-        answer: "Rural properties with acreage, barns, shops, or agricultural features require hands-on evaluation that automated tools cannot provide. Our team's certified appraisal background is particularly valuable for these property types, where land characteristics, outbuilding condition, and access all affect value in ways that standard residential comparisons miss.",
+        answer: "Rural properties with acreage, barns, shops, or agricultural features require hands-on evaluation that automated tools cannot provide. David Stein's certified appraisal background is particularly valuable for these property types, where land characteristics, outbuilding condition, and access all affect value in ways that standard residential comparisons miss.",
       },
     ]}
     localExpertiseHeading="Lewis County's Real Estate Market — What Estate Sellers Need to Know"
@@ -35,7 +35,7 @@ const LewisCounty = () => (
     communitiesIntro="Real Property Planning serves families, executors, and professionals throughout Lewis County, including:"
     closingCtaBody={[
       "Whether you're managing an inherited home in Centralia, rural acreage near Toledo, or a foothills property near Morton, a conversation can help bring clarity to what comes next.",
-      "Our team provides the locally informed, condition-based guidance that Lewis County's varied property types require.",
+      "David Stein provides the locally informed, condition-based guidance that Lewis County's varied property types require.",
     ]}
     countySpecificFaqs={[
       {
@@ -44,15 +44,15 @@ const LewisCounty = () => (
       },
       {
         question: "How are agricultural or acreage properties valued in a Lewis County estate?",
-        answer: "Agricultural and acreage properties in Lewis County require valuation that accounts for land quality, outbuildings, irrigation or water rights, access, and the specific buyer pool for that type of property in that area. Our team's certified appraisal background provides the property-specific analysis these situations require — not a desktop estimate derived from residential comparables that don't apply.",
+        answer: "Agricultural and acreage properties in Lewis County require valuation that accounts for land quality, outbuildings, irrigation or water rights, access, and the specific buyer pool for that type of property in that area. David Stein's certified appraisal background provides the property-specific analysis these situations require — not a desktop estimate derived from residential comparables that don't apply.",
       },
       {
         question: "Can Real Property Planning coordinate a Lewis County estate sale for out-of-area heirs?",
-        answer: "Yes — and this is especially common in Lewis County, where many property owners have family living in the Seattle metro area or out of state. Our team handles property assessment, vendor coordination, preparation, showings, and offer review locally — with regular updates so families don't need to travel to Lewis County to manage the process.",
+        answer: "Yes — and this is especially common in Lewis County, where many property owners have family living in the Seattle metro area or out of state. David Stein handles property assessment, vendor coordination, preparation, showings, and offer review locally — with regular updates so families don't need to travel to Lewis County to manage the process.",
       },
       {
         question: "What should executors know about selling property in Lewis County's smaller communities?",
-        answer: "In smaller Lewis County communities — Pe Ell, Vader, Randle, Packwood — the buyer pool is limited and comparable sales may be sparse. This makes professional, on-the-ground valuation especially important and makes realistic pricing expectations critical from the start. Our team's experience with rural and small-community markets helps executors understand what their property will realistically attract and at what price.",
+        answer: "In smaller Lewis County communities — Pe Ell, Vader, Randle, Packwood — the buyer pool is limited and comparable sales may be sparse. This makes professional, on-the-ground valuation especially important and makes realistic pricing expectations critical from the start. David Stein's experience with rural and small-community markets helps executors understand what their property will realistically attract and at what price.",
       },
     ]}
   />
