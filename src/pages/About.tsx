@@ -310,7 +310,7 @@ const About = () => {
         <section className="py-12 bg-cream">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
-              <h2 className="font-serif text-3xl text-foreground font-semibold mb-8">Credentials &amp; Affiliations</h2>
+              <h2 className="font-serif text-3xl text-foreground font-semibold mb-8">​</h2>
 
               <div className="space-y-10">
                 {/* Licenses */}
@@ -348,7 +348,7 @@ const About = () => {
                   <ul className="space-y-3">
                     {[
                       <>
-                        Corporate Partner,{" "}
+                        ​{" "}
                         <a
                           href="https://www.aginglifecare.org/"
                           target="_blank"

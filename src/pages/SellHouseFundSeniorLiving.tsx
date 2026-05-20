@@ -251,7 +251,7 @@ const SellHouseFundSeniorLiving = () => {
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="font-serif text-3xl md:text-4xl text-foreground font-semibold mb-10">
-                Professional Affiliations
+                ​
               </h2>
               <AffiliationBadgeGrid />
             </div>
