@@ -91,6 +91,18 @@ const WashingtonExecutorsChecklist = () => {
       <Header />
 
       <main id="main-content">
+        {/* Shared Hero (image + navy band) */}
+        <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
+          <div style={{ lineHeight: 0 }}>
+            <img
+              src={washingtonExecutorsHero}
+              alt="Senior couple driving a red convertible toward a highway sign reading 10 Steps for Executors with Seattle skyline and Mount Rainier in the distance"
+              className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
+              loading="eager"
+            />
+            <HeroBandTitle as="div">10 Steps Every Executor Should Know</HeroBandTitle>
+          </div>
+        </section>
         {/* Hero */}
         <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
           <div className="container px-6 lg:px-8">
