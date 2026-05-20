@@ -1728,11 +1728,14 @@ p.hero-band-title,
 h1.hero-band-title,
 h2.hero-band-title,
 h3.hero-band-title {
-  font-size: 24px !important;
-  font-weight: 700 !important;
-  text-align: center !important;
+  font-family: "DM Sans", serif !important;
+  font-weight: 600 !important;
   color: #ffffff !important;
+  text-align: center !important;
+  line-height: 1.2 !important;
+  font-size: clamp(22px, 3.6vw, 44px) !important;
   margin: 0 !important;
+  opacity: 1 !important;
 }
 [data-hero-band] {
   padding: 12px 24px !important;
@@ -2149,8 +2152,11 @@ hr { margin-top: 1.5rem !important; margin-bottom: 1.5rem !important; }
     object-fit: cover !important;
     object-position: center !important;
   }
+  /* 4. Blue band hero title — reduce 2 steps */
   .hero-band-title {
-    font-size: 24px !important;
+    font-size: clamp(15px, 4.5vw, 20px) !important;
+    line-height: 1.25 !important;
+    padding: 0 12px;
   }
 
 
