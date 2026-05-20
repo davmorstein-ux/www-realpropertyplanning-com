@@ -39,22 +39,21 @@ const AttorneyEducationalPage = (p: AttorneyEducationalPageProps) => (
         { name: "For Attorneys", url: "/for-attorneys" },
         { name: p.title, url: p.path },
       ]}
-    />
-    <Header />
-    <main id="main-content">
       {p.heroImage && (
-        <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
-          <div style={{ lineHeight: 0 }}>
+        <section className="w-full bg-secondary" style={{ marginTop: 0, paddingTop: 0 }}>
+          <div className="container px-6 lg:px-8 py-10 md:py-14 flex justify-center">
             <img
               src={p.heroImage}
               alt={p.heroImageAlt || ""}
-              className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
+              className="max-w-full h-auto max-h-[420px] object-contain"
               loading="eager"
             />
-            <HeroBandTitle>{p.title}</HeroBandTitle>
           </div>
+          <HeroBandTitle>{p.title}</HeroBandTitle>
         </section>
       )}
+      {!p.heroImage && <HeroBandTitle>{p.title}</HeroBandTitle>}
+
       {!p.heroImage && <HeroBandTitle>{p.title}</HeroBandTitle>}
 
       <FeaturedProviderPlaceholder heading={p.featuredHeading} altLabel={p.altLabel} />
