@@ -15,6 +15,8 @@ import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import heroIcon from "@/assets/probate-real-estate-sales-washington-guide.webp";
 import probateTimeline from "@/assets/probate-timeline.webp";
+import probateRealEstateHero from "@/assets/probate-real-estate-hero.png";
+import HeroBandTitle from "@/components/HeroBandTitle";
 
 const faqs = [
   {
@@ -62,25 +64,16 @@ const HowProbateRealEstateWorks = () => (
     <Header />
     <main id="main-content">
 
-    {/* Hero */}
-    <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl">
-            <div className="flex justify-center mb-1.5 md:mb-2">
-              <img src={heroIcon} alt="Probate real estate sales guide — house, gavel, last will and testament, and petition for probate" className="block w-full max-w-[20rem] h-auto object-contain" loading="lazy" />
-            </div>
-
-          <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3.5 text-base">Educational Guide</p>
-          <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
-            How Probate Real Estate Sales Work in Washington State
-          </h1>
-          <p className="text-xl text-primary-foreground/80 leading-relaxed mb-4">
-            Written for executors, attorneys, and families who need a clear walkthrough of how a probate property sale works in Washington State. Selling property through probate in Washington involves legal authority, court oversight, property preparation, and careful pricing. This guide explains the process step by step — so executors, attorneys, and families know what to expect and how to avoid common pitfalls.
-          </p>
-          <p className="text-lg text-primary-foreground/70 leading-relaxed">
-            Whether you are a first-time executor or an attorney referring a client, understanding the probate real estate process helps you make better decisions and protect the estate's interests.
-          </p>
-        </div>
+    {/* Shared Hero (image + navy band) */}
+    <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
+      <div style={{ lineHeight: 0 }}>
+        <img
+          src={probateRealEstateHero}
+          alt="The Probate Shop — vintage MG service garage with executor, family, and classic red convertible representing probate real estate guidance"
+          className="w-full h-auto object-cover object-center block"
+          loading="eager"
+        />
+        <HeroBandTitle as="div">How Probate Real Estate Works</HeroBandTitle>
       </div>
     </section>
 
