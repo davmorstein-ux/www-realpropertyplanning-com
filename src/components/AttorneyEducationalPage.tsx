@@ -7,6 +7,7 @@ import GoldCheck3D from "@/components/GoldCheck3D";
 import PageFAQ from "@/components/PageFAQ";
 import FeaturedProviderPlaceholder from "@/components/FeaturedProviderPlaceholder";
 import SiteDisclaimerBlock from "@/components/SiteDisclaimerBlock";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
@@ -45,16 +46,14 @@ const AttorneyEducationalPage = (p: AttorneyEducationalPageProps) => (
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             {p.heroImage && (
-              <div className="flex justify-center mb-1.5 md:mb-2">
+              <div className="flex justify-center">
                 <img src={p.heroImage} alt={p.heroImageAlt || ""} className="block w-full max-w-[20rem] h-auto object-contain" loading="lazy" />
               </div>
             )}
-            <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight">
-              {p.title}
-            </h1>
           </div>
         </div>
       </section>
+      <HeroBandTitle>{p.title}</HeroBandTitle>
 
       <FeaturedProviderPlaceholder heading={p.featuredHeading} altLabel={p.altLabel} />
 

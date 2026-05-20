@@ -23,6 +23,7 @@ import iconMapPin3d from "@/assets/icons/real-estate-location-pin-3d-icon-washin
 import iconGlobe3d from "@/assets/icons/real-estate-website-globe-3d-icon-washington.webp";
 import heroImage from "@/assets/estate-planning-attorney-hero.png";
 import JourneyOrientation from "@/components/JourneyOrientation";
+import HeroBandTitle from "@/components/HeroBandTitle";
 
 interface Pathway {
   letter: string;
@@ -201,32 +202,12 @@ const EstatePlanningPowersOfAttorney = () => {
         {/* HERO */}
         <section className="bg-primary pt-12 pb-10 lg:pt-20 lg:pb-14">
           <div className="container px-6 lg:px-8">
-            <div className="grid lg:grid-cols-[1fr_auto] gap-8 lg:gap-12 items-center">
-              <div className="max-w-3xl">
-                <p className="text-gold font-bold tracking-[0.2em] uppercase mb-4 text-sm">
-                  Guided Roadmap
-                </p>
-                <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.75rem] text-primary-foreground font-semibold leading-tight mb-5">
-                  Estate Planning & Powers of Attorney
-                </h1>
-                <p className="text-lg md:text-xl text-primary-foreground/85 leading-relaxed mb-7 max-w-2xl">
-                  A guided roadmap for families and seniors exploring legal planning,
-                  decision-making authority, future caregiving concerns, housing
-                  transitions, and important property-related decisions.
-                </p>
-                <a href="#pathways">
-                  <Button variant="gold" size="lg" className="px-8 h-[56px] text-base rounded-lg">
-                    <Compass className="w-5 h-5 mr-2" aria-hidden="true" />
-                    Start Here
-                  </Button>
-                </a>
-              </div>
-              <div className="flex justify-center lg:justify-end">
-                <img src={heroImage} alt="Estate planning attorney at desk reviewing estate plan documents" className="block w-full max-w-[22rem] h-auto object-contain" loading="lazy" />
-              </div>
+            <div className="flex justify-center">
+              <img src={heroImage} alt="Estate planning attorney at desk reviewing estate plan documents" className="block w-full max-w-[22rem] h-auto object-contain" loading="lazy" />
             </div>
           </div>
         </section>
+        <HeroBandTitle>Estate Planning Attorney</HeroBandTitle>
 
         {/* FEATURED PROVIDER */}
         <section className="py-16 lg:py-20 bg-background">
