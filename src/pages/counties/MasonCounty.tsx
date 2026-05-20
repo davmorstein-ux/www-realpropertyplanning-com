@@ -20,7 +20,7 @@ const MasonCounty = () => (
     aeoSupportFaqs={[
       {
         question: "How are Hood Canal waterfront properties valued for estate purposes?",
-        answer: "Hood Canal waterfront properties are among the most distinctive in Washington State — and among the most difficult to value with automated tools. Bank height, tideland ownership, oyster lease rights, bulkhead condition, view orientation, and community character all affect value in ways that require hands-on evaluation. Our team's certified appraisal background provides the property-specific analysis these unique properties require.",
+        answer: "Hood Canal waterfront properties are among the most distinctive in Washington State — and among the most difficult to value with automated tools. Bank height, tideland ownership, oyster lease rights, bulkhead condition, view orientation, and community character all affect value in ways that require hands-on evaluation. David Stein's certified appraisal background provides the property-specific analysis these unique properties require.",
       },
       {
         question: "What types of estate properties are most common in Mason County?",
@@ -35,7 +35,7 @@ const MasonCounty = () => (
     communitiesIntro="Real Property Planning serves families, executors, and professionals throughout Mason County, including:"
     closingCtaBody={[
       "Whether you're managing a Hood Canal waterfront property, rural acreage near Matlock, or a longtime family home in Shelton, a conversation can help bring clarity to what comes next.",
-      "Our team provides the condition-based, locally informed guidance that Mason County's distinctive property landscape requires.",
+      "David Stein provides the condition-based, locally informed guidance that Mason County's distinctive property landscape requires.",
     ]}
     countySpecificFaqs={[
       {
@@ -44,15 +44,15 @@ const MasonCounty = () => (
       },
       {
         question: "How does tideland ownership or oyster lease rights affect Hood Canal property values?",
-        answer: "Tideland ownership and oyster lease rights can add meaningful value to Hood Canal waterfront properties — but they also add complexity to the sale process, including title considerations and buyer education. Our team's appraisal background and familiarity with Hood Canal waterfront transactions help executors and families understand how these features affect value and what buyers will need to know.",
+        answer: "Tideland ownership and oyster lease rights can add meaningful value to Hood Canal waterfront properties — but they also add complexity to the sale process, including title considerations and buyer education. David Stein's appraisal background and familiarity with Hood Canal waterfront transactions help executors and families understand how these features affect value and what buyers will need to know.",
       },
       {
         question: "Can Real Property Planning manage a Mason County estate sale for families in the Seattle area?",
-        answer: "Yes — this is one of the most common situations we handle in Mason County. Many Hood Canal and Mason County properties are owned by families based in King, Pierce, or Snohomish County. Our team handles the full process locally — property assessment, vendor coordination, preparation, showings, and closing — with regular updates so families don't need to make repeated trips to the peninsula.",
+        answer: "Yes — this is one of the most common situations we handle in Mason County. Many Hood Canal and Mason County properties are owned by families based in King, Pierce, or Snohomish County. David Stein handles the full process locally — property assessment, vendor coordination, preparation, showings, and closing — with regular updates so families don't need to make repeated trips to the peninsula.",
       },
       {
         question: "What should I know about selling a rural Mason County property as part of an estate?",
-        answer: "Rural properties in Mason County — forested acreage, properties with well and septic systems, parcels with limited road access — require valuation that accounts for land characteristics, system condition, and a buyer pool that differs significantly from suburban markets. Our team's certified appraisal credentials provide the property-specific analysis these rural estate situations require.",
+        answer: "Rural properties in Mason County — forested acreage, properties with well and septic systems, parcels with limited road access — require valuation that accounts for land characteristics, system condition, and a buyer pool that differs significantly from suburban markets. David Stein's certified appraisal credentials provide the property-specific analysis these rural estate situations require.",
       },
     ]}
   />

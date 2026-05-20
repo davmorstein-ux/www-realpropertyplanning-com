@@ -88,16 +88,16 @@ const ProfessionalNetwork = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="text-gold font-bold tracking-widest uppercase mb-4 text-base">
-              Professional Network
+              Independent Professionals
             </p>
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
-              Professional Network & Trusted Resources
+              Independent Professionals & Trusted Resources
             </h1>
             <p className="text-xl text-primary-foreground/80 leading-relaxed">
-              Real Property Planning works collaboratively with a network of
-              experienced professionals who help families navigate major life
-              transitions, estate matters, senior care decisions, and housing
-              changes throughout Washington State.
+              Real Property Planning is an independent educational hub that helps Washington families and the professionals who serve them learn about probate, estate transitions, senior housing, and related topics — and find independent professionals who may help.
+            </p>
+            <p className="text-base text-primary-foreground/70 leading-relaxed mt-4">
+              The professionals referenced here are independent and are not employees, partners, or affiliates of Real Property Planning. This directory is provided for educational and informational purposes only.
             </p>
           </div>
         </div>
@@ -108,21 +108,13 @@ const ProfessionalNetwork = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-              A Collaborative Professional Network
+              An Educational Hub for Coordinated Decisions
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Many of the situations involving real estate transitions for older
-              adults, families, and estates require the coordination of several
-              professionals. These may include attorneys, Aging Life Care
-              professionals, financial advisors, senior move managers, estate
-              sale companies, and others who each play an important role in
-              helping families move forward with clarity and confidence.
+              Many situations involving real estate transitions for older adults, families, and estates require coordination among several independent professionals. These may include attorneys, Aging Life Care professionals, financial advisors, senior move managers, estate sale companies, and others — each playing an important role in helping families move forward with clarity and confidence.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Real Property Planning regularly works alongside professionals who
-              specialize in these areas. While each situation is unique, a
-              coordinated approach often makes the process smoother and less
-              stressful for everyone involved.
+              Real Property Planning is an independent educational hub that helps families understand these moving parts and find independent professionals who may help. Each professional referenced operates independently and is not an employee, partner, or affiliate of Real Property Planning.
             </p>
           </div>
         </div>
@@ -132,9 +124,12 @@ const ProfessionalNetwork = () => {
       <section className="py-20 lg:py-28 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="font-serif text-3xl text-foreground font-semibold mb-12 text-center">
-              Professionals Who Support These Transitions
+            <h2 className="font-serif text-3xl text-foreground font-semibold mb-3 text-center">
+              Independent Professionals Who Support These Transitions
             </h2>
+            <p className="text-muted-foreground text-base leading-relaxed text-center max-w-3xl mx-auto mb-10">
+              The professionals listed here are independent and are not employees, partners, or affiliates of Real Property Planning. This directory is provided for educational and informational purposes only.
+            </p>
             <div className="grid md:grid-cols-2 gap-6">
               {professionalCategories.map((category, index) => (
                 <div
@@ -159,15 +154,10 @@ const ProfessionalNetwork = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl text-foreground font-semibold mb-6">
-              Supporting Clients Through Important Transitions
+              Helping Families Navigate Important Transitions
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              When real estate becomes part of a larger transition — whether that
-              involves probate, trust administration, downsizing, or moving into
-              a care setting — communication between professionals can make a
-              significant difference. Real Property Planning works to ensure that
-              the real estate portion of the process aligns smoothly with the
-              broader goals of the family and the professionals advising them.
+              When real estate becomes part of a larger transition — whether that involves probate, trust administration, downsizing, or moving into a care setting — clear information and coordination among independent professionals can make a significant difference. Real Property Planning provides educational resources and helps connect families with independent professionals who may assist.
             </p>
           </div>
         </div>

@@ -18,32 +18,32 @@ const faqs = [
   {
     question: "How does selling an inherited home in Olympia work?",
     answer:
-      "Selling inherited property in Olympia typically requires legal authority through probate or trust administration before the home can be listed. Our team coordinates with the estate attorney, trustee, or personal representative to assess the property, develop a defensible pricing strategy, manage preparation, and guide the sale — keeping all parties informed throughout.",
+      "Selling inherited property in Olympia typically requires legal authority through probate or trust administration before the home can be listed. David Stein coordinates with the estate attorney, trustee, or personal representative to assess the property, develop a defensible pricing strategy, manage preparation, and guide the sale — keeping all parties informed throughout.",
   },
   {
     question: "What should I do first with an inherited Olympia property?",
     answer:
-      "Secure the property, review the legal authority with the estate attorney, and get a realistic assessment of the home's condition and current market value. Our team can evaluate the property, identify factors that affect value, and help you understand your options before committing to a course of action.",
+      "Secure the property, review the legal authority with the estate attorney, and get a realistic assessment of the home's condition and current market value. David Stein can evaluate the property, identify factors that affect value, and help you understand your options before committing to a course of action.",
   },
   {
     question: "How does Real Property Planning's appraisal background benefit Olympia property sales?",
     answer:
-      "As both a licensed Washington State real estate broker and a state-certified residential appraiser, Our team provides pricing strategy grounded in actual condition assessment and neighborhood-level market analysis. In Olympia, where many estate properties reflect decades of ownership, this dual perspective helps families avoid pricing mistakes tied to deferred maintenance or outdated improvements.",
+      "As both a licensed Washington State real estate broker and a state-certified residential appraiser, David Stein provides pricing strategy grounded in actual condition assessment and neighborhood-level market analysis. In Olympia, where many estate properties reflect decades of ownership, this dual perspective helps families avoid pricing mistakes tied to deferred maintenance or outdated improvements.",
   },
   {
-    question: "Can our team help with a property transition tied to retirement or senior living?",
+    question: "Can David Stein help with a property transition tied to retirement or senior living?",
     answer:
-      "Yes. Many Olympia families reach out when a parent or loved one is transitioning into retirement, assisted living, or long-term care. Our team helps coordinate the timing of the property sale with the transition, working with families and professionals to keep the process organized and manageable.",
+      "Yes. Many Olympia families reach out when a parent or loved one is transitioning into retirement, assisted living, or long-term care. David Stein helps coordinate the timing of the property sale with the transition, working with families and professionals to keep the process organized and manageable.",
   },
   {
     question: "What if the property has been in the family for a long time and needs work?",
     answer:
-      "Long-held properties often have deferred maintenance, outdated systems, or accumulated personal belongings. Our team evaluates what preparation is worth doing — and what isn't — based on the likely return, the timeline, and the family's goals. Not every home needs extensive renovation before sale.",
+      "Long-held properties often have deferred maintenance, outdated systems, or accumulated personal belongings. David Stein evaluates what preparation is worth doing — and what isn't — based on the likely return, the timeline, and the family's goals. Not every home needs extensive renovation before sale.",
   },
   {
     question: "How long does it take to sell an estate property in Olympia?",
     answer:
-      "Timelines depend on the legal process, property condition, and preparation needs. Our team helps set realistic expectations and builds a plan around your specific situation — including any coordination needed with family members, care transitions, or legal timelines.",
+      "Timelines depend on the legal process, property condition, and preparation needs. David Stein helps set realistic expectations and builds a plan around your specific situation — including any coordination needed with family members, care transitions, or legal timelines.",
   },
 ];
 
@@ -171,7 +171,7 @@ const OlympiaProbateEstate = () => {
       {/* Mid-page CTA */}
       <MidPageCTA
         heading="Have a Property Situation in Olympia?"
-        body="Our team provides confidential consultations for families, executors, and professionals handling estate or inherited property in Olympia and throughout Thurston County."
+        body="David Stein provides confidential consultations for families, executors, and professionals handling estate or inherited property in Olympia and throughout Thurston County."
         buttonText="Schedule a Consultation"
         microcopy="No pressure. Just practical guidance for your situation."
       />
@@ -187,7 +187,7 @@ const OlympiaProbateEstate = () => {
               Many Olympia families reach out when a parent or loved one is moving into retirement, downsizing, or transitioning into assisted living or long-term care. These moments are deeply personal, and the property decisions that accompany them deserve a calm, patient approach.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              Our team works with families to coordinate timing, simplify decision-making, and keep the process manageable. He communicates clearly with all family members and professionals involved — reducing confusion and helping everyone stay aligned.
+              David Stein works with families to coordinate timing, simplify decision-making, and keep the process manageable. He communicates clearly with all family members and professionals involved — reducing confusion and helping everyone stay aligned.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
               Whether the timeline is flexible or driven by a care transition, having a steady, experienced resource who understands both the property and the emotional weight of the process can make a meaningful difference.

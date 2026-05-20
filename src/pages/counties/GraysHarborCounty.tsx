@@ -24,18 +24,18 @@ const GraysHarborCounty = () => (
       },
       {
         question: "Are coastal properties in Grays Harbor County harder to sell as estate properties?",
-        answer: "Coastal properties like those in Ocean Shores and Westport have a distinct buyer pool — often second-home buyers or retirees — and their own set of considerations around flood zones, HOA rules, seasonal demand, and condition. Our team's appraisal background ensures these properties are priced accurately for their specific location and condition, not based on inland comparables.",
+        answer: "Coastal properties like those in Ocean Shores and Westport have a distinct buyer pool — often second-home buyers or retirees — and their own set of considerations around flood zones, HOA rules, seasonal demand, and condition. David Stein's appraisal background ensures these properties are priced accurately for their specific location and condition, not based on inland comparables.",
       },
     ]}
     localExpertiseHeading="Grays Harbor County's Market — What Estate Sellers Need to Know"
     localExpertiseBody={[
       "Grays Harbor County's real estate market is defined by its geography. Aberdeen and Hoquiam represent the county's urban core, with a practical, value-oriented buyer pool and a stock of older homes that often carry significant deferred maintenance. Ocean Shores and Westport attract a completely different buyer — one looking for coastal lifestyle, recreation, and seasonal retreat.",
-      "For estate properties, this diversity means that a one-size-fits-all approach simply doesn't work. A Hoquiam craftsman bungalow and an Ocean Shores beach cottage require entirely different marketing strategies, pricing methodologies, and preparation plans. Our team brings the local knowledge and valuation expertise to get each property positioned correctly from the start.",
+      "For estate properties, this diversity means that a one-size-fits-all approach simply doesn't work. A Hoquiam craftsman bungalow and an Ocean Shores beach cottage require entirely different marketing strategies, pricing methodologies, and preparation plans. David Stein brings the local knowledge and valuation expertise to get each property positioned correctly from the start.",
     ]}
     communitiesIntro="Real Property Planning serves families, executors, and professionals throughout Grays Harbor County, including:"
     closingCtaBody={[
       "Whether you're managing an inherited home in Aberdeen or a coastal property in Ocean Shores, this resource can help you understand your options and take the right next step.",
-      "Our team brings the same careful, coordinated approach to Grays Harbor County that we bring to every engagement across Western Washington.",
+      "David Stein brings the same careful, coordinated approach to Grays Harbor County that we bring to every engagement across Western Washington.",
     ]}
     countySpecificFaqs={[
       {
@@ -48,11 +48,11 @@ const GraysHarborCounty = () => (
       },
       {
         question: "Can you handle a Grays Harbor County estate sale if all heirs live outside Washington?",
-        answer: "Yes — out-of-state heirs are one of the most common situations we work with. Our team handles everything locally: the property walk-through, vendor coordination, cleanout, photography, showings, and offer review. We keep heirs informed with regular updates and make digital document signing available so travel to Grays Harbor County is rarely required.",
+        answer: "Yes — out-of-state heirs are one of the most common situations we work with. David Stein handles everything locally: the property walk-through, vendor coordination, cleanout, photography, showings, and offer review. We keep heirs informed with regular updates and make digital document signing available so travel to Grays Harbor County is rarely required.",
       },
       {
         question: "What should I know about selling an Ocean Shores or Westport property as part of an estate?",
-        answer: "Coastal properties in Ocean Shores and Westport have unique considerations: HOA rules and fees, flood zone designations, seasonal buyer demand, and a market that can move differently than inland communities. Pricing these properties requires understanding the coastal market specifically — not applying inland comparables. Our team has the valuation background to get it right.",
+        answer: "Coastal properties in Ocean Shores and Westport have unique considerations: HOA rules and fees, flood zone designations, seasonal buyer demand, and a market that can move differently than inland communities. Pricing these properties requires understanding the coastal market specifically — not applying inland comparables. David Stein has the valuation background to get it right.",
       },
     ]}
   />

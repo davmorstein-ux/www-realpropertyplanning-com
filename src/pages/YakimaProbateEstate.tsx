@@ -16,34 +16,34 @@ import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washingto
 
 const faqs = [
   {
-    question: "Can our team help with an inherited property in Yakima?",
+    question: "Can David Stein help with an inherited property in Yakima?",
     answer:
-      "Yes. Our team works with executors, trustees, and families handling inherited and estate property throughout Washington State, including Yakima and the surrounding area. He coordinates the process remotely when needed and provides on-the-ground support for property assessment and preparation.",
+      "Yes. David Stein works with executors, trustees, and families handling inherited and estate property throughout Washington State, including Yakima and the surrounding area. He coordinates the process remotely when needed and provides on-the-ground support for property assessment and preparation.",
   },
   {
     question: "What should I do first with an inherited house in Yakima?",
     answer:
-      "Secure the property, confirm your legal authority to act, and get an honest assessment of the home's condition and realistic market value. Our team can walk through the property, identify what affects value, and help you understand your options before making any commitments.",
+      "Secure the property, confirm your legal authority to act, and get an honest assessment of the home's condition and realistic market value. David Stein can walk through the property, identify what affects value, and help you understand your options before making any commitments.",
   },
   {
-    question: "How does our team's appraisal background help with Yakima properties?",
+    question: "How does David Stein's appraisal background help with Yakima properties?",
     answer:
-      "As both a licensed Washington State real estate broker and a state-certified residential appraiser, Our team provides pricing grounded in actual condition assessment and local comparable data — not automated estimates. In Yakima, where property values are sensitive to condition and neighborhood, this dual perspective prevents costly pricing mistakes.",
+      "As both a licensed Washington State real estate broker and a state-certified residential appraiser, David Stein provides pricing grounded in actual condition assessment and local comparable data — not automated estimates. In Yakima, where property values are sensitive to condition and neighborhood, this dual perspective prevents costly pricing mistakes.",
   },
   {
     question: "Should I fix up the house before selling?",
     answer:
-      "Not necessarily. Our team evaluates which repairs or improvements are likely to return more than they cost — and which ones aren't worth the investment. Many Yakima inherited homes benefit more from honest pricing and targeted preparation than from expensive renovations.",
+      "Not necessarily. David Stein evaluates which repairs or improvements are likely to return more than they cost — and which ones aren't worth the investment. Many Yakima inherited homes benefit more from honest pricing and targeted preparation than from expensive renovations.",
   },
   {
     question: "What if family members disagree about what to do with the property?",
     answer:
-      "This is common. Our team provides objective, valuation-based information that helps families make decisions grounded in facts rather than assumptions. Having clear data about the property's condition, realistic value, and available options often helps move conversations forward.",
+      "This is common. David Stein provides objective, valuation-based information that helps families make decisions grounded in facts rather than assumptions. Having clear data about the property's condition, realistic value, and available options often helps move conversations forward.",
   },
   {
     question: "How long does it take to sell an inherited home in Yakima?",
     answer:
-      "Timelines depend on the probate or trust process, property condition, and market conditions. Once the property is ready and authority is established, well-priced Yakima homes typically sell within a reasonable timeframe. Our team helps set realistic expectations and builds a timeline around your situation.",
+      "Timelines depend on the probate or trust process, property condition, and market conditions. Once the property is ready and authority is established, well-priced Yakima homes typically sell within a reasonable timeframe. David Stein helps set realistic expectations and builds a timeline around your situation.",
   },
 ];
 
@@ -170,7 +170,7 @@ const YakimaProbateEstate = () => {
       {/* Mid-page CTA */}
       <MidPageCTA
         heading="Have Questions About a Yakima Property?"
-        body="Our team provides confidential consultations for executors, trustees, and families dealing with inherited or estate property in Yakima and surrounding areas. Whether you're local or managing from out of the area, a short conversation can help clarify your options."
+        body="David Stein provides confidential consultations for executors, trustees, and families dealing with inherited or estate property in Yakima and surrounding areas. Whether you're local or managing from out of the area, a short conversation can help clarify your options."
         buttonText="Schedule a Consultation"
         microcopy="No pressure. Just practical guidance for your situation."
       />
@@ -186,7 +186,7 @@ const YakimaProbateEstate = () => {
               Inherited property decisions in Yakima often involve multiple family members — sometimes with different priorities, different levels of involvement, and different ideas about what to do next. One person wants to sell quickly. Another wants to renovate. A third isn't sure the timing is right.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              Our team provides objective, data-driven information that gives everyone a common set of facts to work from. When family members can see the property's actual condition, understand the realistic market value, and review the available options together, conversations tend to move forward more productively.
+              David Stein provides objective, data-driven information that gives everyone a common set of facts to work from. When family members can see the property's actual condition, understand the realistic market value, and review the available options together, conversations tend to move forward more productively.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
               The role isn't to push a particular outcome — it's to provide the clarity that allows families to make decisions they feel good about, together.

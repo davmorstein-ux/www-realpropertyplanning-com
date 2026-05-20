@@ -17,27 +17,27 @@ import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washingto
 const faqs = [
   {
     question: "What should I do first with an inherited home in Kennewick?",
-    answer: "Secure the property, confirm your legal authority to act, and get an honest assessment of its condition and market value. Our team can walk through the home, identify what affects value, and help you understand your options before you commit to anything.",
+    answer: "Secure the property, confirm your legal authority to act, and get an honest assessment of its condition and market value. David Stein can walk through the home, identify what affects value, and help you understand your options before you commit to anything.",
   },
   {
-    question: "How does our team's appraisal background help in Kennewick?",
-    answer: "As both a licensed Washington State real estate broker and a state-certified residential appraiser, Our team provides pricing based on actual property condition and local comparable data — not automated estimates. In Kennewick, where condition varies widely and pricing is sensitive, this dual perspective prevents costly mistakes.",
+    question: "How does David Stein's appraisal background help in Kennewick?",
+    answer: "As both a licensed Washington State real estate broker and a state-certified residential appraiser, David Stein provides pricing based on actual property condition and local comparable data — not automated estimates. In Kennewick, where condition varies widely and pricing is sensitive, this dual perspective prevents costly mistakes.",
   },
   {
     question: "Should I renovate a Kennewick inherited home before selling?",
-    answer: "Not always. Our team evaluates which improvements are likely to return more than they cost — and which aren't worth the investment. Many Kennewick inherited homes benefit more from targeted preparation and honest pricing than from expensive renovations.",
+    answer: "Not always. David Stein evaluates which improvements are likely to return more than they cost — and which aren't worth the investment. Many Kennewick inherited homes benefit more from targeted preparation and honest pricing than from expensive renovations.",
   },
   {
     question: "What if family members disagree about selling?",
-    answer: "This is common. Our team provides objective, condition-based information — realistic market value, preparation costs, and available options — so every family member is working from the same set of facts. That clarity often helps move conversations forward.",
+    answer: "This is common. David Stein provides objective, condition-based information — realistic market value, preparation costs, and available options — so every family member is working from the same set of facts. That clarity often helps move conversations forward.",
   },
   {
-    question: "Can our team help if I don't live in Kennewick?",
-    answer: "Yes. Our team regularly works with executors and family members who live outside the Tri-Cities. He coordinates property access, vendor management, and the sale process so you can make informed decisions without unnecessary travel.",
+    question: "Can David Stein help if I don't live in Kennewick?",
+    answer: "Yes. David Stein regularly works with executors and family members who live outside the Tri-Cities. He coordinates property access, vendor management, and the sale process so you can make informed decisions without unnecessary travel.",
   },
   {
     question: "How long does it take to sell an inherited home in Kennewick?",
-    answer: "Timelines depend on the probate or trust process, property condition, and market conditions. Once the home is ready and legal authority is established, well-priced Kennewick properties generally sell within a reasonable timeframe. Our team helps set realistic expectations from the start.",
+    answer: "Timelines depend on the probate or trust process, property condition, and market conditions. Once the home is ready and legal authority is established, well-priced Kennewick properties generally sell within a reasonable timeframe. David Stein helps set realistic expectations from the start.",
   },
 ];
 
@@ -140,7 +140,7 @@ const KennewickProbateEstate = () => {
         </div>
       </section>
 
-      <MidPageCTA heading="Questions About a Kennewick Property?" body="Our team provides confidential consultations for executors, trustees, and families handling inherited or estate property in Kennewick and the Tri-Cities area." buttonText="Schedule a Consultation" microcopy="No pressure. Just practical guidance for your situation." />
+      <MidPageCTA heading="Questions About a Kennewick Property?" body="David Stein provides confidential consultations for executors, trustees, and families handling inherited or estate property in Kennewick and the Tri-Cities area." buttonText="Schedule a Consultation" microcopy="No pressure. Just practical guidance for your situation." />
 
       <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
@@ -150,10 +150,10 @@ const KennewickProbateEstate = () => {
               When multiple family members are involved in an inherited property decision, things can stall. One person wants to move quickly. Another wants to wait. A third isn't sure what the house needs or what it's worth. Without a clear framework, these conversations can go in circles.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              Our team provides objective, condition-based information that gives everyone a common starting point — what the property looks like today, what it's realistically worth, what preparation makes sense, and what the timeline looks like. That shared understanding often helps families move forward together.
+              David Stein provides objective, condition-based information that gives everyone a common starting point — what the property looks like today, what it's realistically worth, what preparation makes sense, and what the timeline looks like. That shared understanding often helps families move forward together.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              From there, our team manages the practical steps — coordinating cleanout crews, overseeing targeted repairs, and handling the logistics of getting the property ready and sold — so the family can focus on the decisions that matter most.
+              From there, David Stein manages the practical steps — coordinating cleanout crews, overseeing targeted repairs, and handling the logistics of getting the property ready and sold — so the family can focus on the decisions that matter most.
             </p>
           </div>
         </div>

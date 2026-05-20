@@ -24,7 +24,7 @@ const WahkiakumCounty = () => (
       },
       {
         question: "How are properties valued in a county with very limited comparable sales?",
-        answer: "Limited comparable sales are the defining valuation challenge in Wahkiakum County. When few properties have sold recently — and when the ones that have may be quite different from the subject property — professional judgment, condition-based analysis, and understanding of the local buyer pool become especially important. Our team's certified appraisal background provides the analytical framework for pricing Wahkiakum County properties accurately despite sparse comparable data.",
+        answer: "Limited comparable sales are the defining valuation challenge in Wahkiakum County. When few properties have sold recently — and when the ones that have may be quite different from the subject property — professional judgment, condition-based analysis, and understanding of the local buyer pool become especially important. David Stein's certified appraisal background provides the analytical framework for pricing Wahkiakum County properties accurately despite sparse comparable data.",
       },
     ]}
     localExpertiseHeading="Wahkiakum County's Real Estate Market — What Estate Sellers Need to Know"
@@ -35,7 +35,7 @@ const WahkiakumCounty = () => (
     communitiesIntro="Real Property Planning serves families, executors, and professionals throughout Wahkiakum County, including:"
     closingCtaBody={[
       "Whether you're managing an inherited home in Cathlamet, a farm on Puget Island, or a river-view property near Skamokawa, a conversation can help bring clarity to what comes next.",
-      "Our team brings genuine engagement and locally informed guidance to Washington's most rural county — because every estate situation deserves to be taken seriously, regardless of the county's size.",
+      "David Stein brings genuine engagement and locally informed guidance to Washington's most rural county — because every estate situation deserves to be taken seriously, regardless of the county's size.",
     ]}
     countySpecificFaqs={[
       {
@@ -44,15 +44,15 @@ const WahkiakumCounty = () => (
       },
       {
         question: "How is a Puget Island farm or agricultural property valued in an estate?",
-        answer: "Puget Island agricultural properties require valuation that accounts for farmland quality, drainage, outbuildings, ferry-dependent access, and a buyer pool that is specifically interested in island farming and rural Columbia River living. These are not properties that standard residential comparable analysis handles well. Our team's certified appraisal background and willingness to engage with unique property types provide the evaluation these situations require.",
+        answer: "Puget Island agricultural properties require valuation that accounts for farmland quality, drainage, outbuildings, ferry-dependent access, and a buyer pool that is specifically interested in island farming and rural Columbia River living. These are not properties that standard residential comparable analysis handles well. David Stein's certified appraisal background and willingness to engage with unique property types provide the evaluation these situations require.",
       },
       {
         question: "Can Real Property Planning coordinate a Wahkiakum County estate sale for out-of-area families?",
-        answer: "Yes — and given the county's remoteness, out-of-area coordination is nearly universal for Wahkiakum County estate sales. Our team handles property assessment, vendor coordination, preparation, showings, and closing locally — with regular updates so families based in Portland, Seattle, or out of state can manage the process without repeated trips to the Columbia River delta.",
+        answer: "Yes — and given the county's remoteness, out-of-area coordination is nearly universal for Wahkiakum County estate sales. David Stein handles property assessment, vendor coordination, preparation, showings, and closing locally — with regular updates so families based in Portland, Seattle, or out of state can manage the process without repeated trips to the Columbia River delta.",
       },
       {
         question: "What makes Wahkiakum County different from other rural Washington counties for estate sales?",
-        answer: "Scale and specificity. Wahkiakum County is Washington's smallest county by population, which means the buyer pool for any given property is genuinely small — and getting the pricing and presentation right matters more, not less, than in larger markets. There is very little room for error when the pool of motivated buyers is limited. Our team's approach — honest condition assessment, realistic pricing, and targeted marketing to the buyers most likely to value what the property offers — is especially well suited to Wahkiakum County's distinctive market.",
+        answer: "Scale and specificity. Wahkiakum County is Washington's smallest county by population, which means the buyer pool for any given property is genuinely small — and getting the pricing and presentation right matters more, not less, than in larger markets. There is very little room for error when the pool of motivated buyers is limited. David Stein's approach — honest condition assessment, realistic pricing, and targeted marketing to the buyers most likely to value what the property offers — is especially well suited to Wahkiakum County's distinctive market.",
       },
     ]}
   />

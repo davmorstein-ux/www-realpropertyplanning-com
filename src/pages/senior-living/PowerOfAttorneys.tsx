@@ -354,7 +354,7 @@ const PowerOfAttorneys = () => {
                   If you're helping a loved one who can no longer manage their property, you're not alone. Many families face this situation — and having the right guidance makes it less stressful.
                 </p>
                 <p className="text-muted-foreground text-[15px] leading-relaxed">
-                  I'll help you understand the process, coordinate with your team, and take care of the property details so you can focus on what matters most.
+                  I'll help you understand the process, coordinate with yDavid Stein, and take care of the property details so you can focus on what matters most.
                 </p>
               </div>
               <div className="card-3d px-6 py-8">

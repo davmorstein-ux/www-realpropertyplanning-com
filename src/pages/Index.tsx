@@ -77,7 +77,7 @@ const homepageFaqJsonLd = `{
       "name": "Can Real Property Planning help out-of-state executors?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes — this is one of the most common situations we work with. Our team manages the full property process locally, including assessment, cleanout coordination, repairs, listing, and sale, with regular updates so out-of-state executors never need to be present for every step."
+        "text": "Yes — this is one of the most common situations we work with. David Stein manages the full property process locally, including assessment, cleanout coordination, repairs, listing, and sale, with regular updates so out-of-state executors never need to be present for every step."
       }
     },
     {

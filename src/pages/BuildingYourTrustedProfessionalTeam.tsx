@@ -58,11 +58,14 @@ const Section = ({ heading, cards }: { heading: string; cards: Card[] }) => (
   <section className="py-10 lg:py-12">
     <div className="container px-6 lg:px-8">
       <h2
-        className="font-serif text-2xl md:text-3xl font-semibold mb-7 text-center"
+        className="font-serif text-2xl md:text-3xl font-semibold mb-3 text-center"
         style={{ color: "#1B3A6B" }}
       >
         {heading}
       </h2>
+      <p className="text-muted-foreground text-base leading-relaxed text-center max-w-3xl mx-auto mb-7">
+        The professionals listed here are independent and are not employees, partners, or affiliates of Real Property Planning. This directory is provided for educational and informational purposes only.
+      </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 items-stretch">
         {cards.map((s) => (
           <Link
@@ -180,11 +183,11 @@ const BuildingYourTrustedProfessionalTeam = () => {
               className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
               loading="eager"
             />
-            <HeroBandTitle as="div">Your Professional Team</HeroBandTitle>
+            <HeroBandTitle as="div">A Guide to Independent Professionals</HeroBandTitle>
           </div>
         </section>
 
-        <h1 className="sr-only">Building Your Trusted Professional Team</h1>
+        <h1 className="sr-only">A Guide to Trusted, Independent Professionals</h1>
 
         <div id="legal-professionals" className="scroll-mt-20 bg-background">
           <Section heading="Legal Professionals" cards={legal} />
@@ -207,7 +210,7 @@ const BuildingYourTrustedProfessionalTeam = () => {
                 Not Sure Who You Need?
               </h2>
               <p className="text-primary-foreground/85 text-lg leading-relaxed mb-7">
-                Real Property Planning can help identify the right professionals for your situation and connect you with trusted resources throughout Washington State.
+                Real Property Planning can help point you toward the right kinds of independent professionals for your situation. It is an educational hub and connection point — the professionals referenced are independent and are not employees or affiliates of Real Property Planning.
               </p>
               <Link to="/contact">
                 <Button variant="gold" size="lg" className="px-8 h-[56px] text-base rounded-lg">

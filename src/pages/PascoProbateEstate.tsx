@@ -16,28 +16,28 @@ import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washingto
 
 const faqs = [
   {
-    question: "Can our team help with a property in Pasco?",
-    answer: "Yes. Our team works with executors, trustees, and families handling inherited and estate property throughout Washington State, including Pasco and the broader Tri-Cities region. He provides property assessment, pricing guidance, and coordination support whether you're local or managing from a distance.",
+    question: "Can David Stein help with a property in Pasco?",
+    answer: "Yes. David Stein works with executors, trustees, and families handling inherited and estate property throughout Washington State, including Pasco and the broader Tri-Cities region. He provides property assessment, pricing guidance, and coordination support whether you're local or managing from a distance.",
   },
   {
     question: "What if the inherited property needs significant work?",
-    answer: "Many Pasco inherited homes have deferred maintenance or condition issues. Our team assesses the property honestly and helps you understand which repairs are worth the investment and which aren't. The goal is a realistic strategy that accounts for the property's actual condition — not an idealized version of it.",
+    answer: "Many Pasco inherited homes have deferred maintenance or condition issues. David Stein assesses the property honestly and helps you understand which repairs are worth the investment and which aren't. The goal is a realistic strategy that accounts for the property's actual condition — not an idealized version of it.",
   },
   {
-    question: "How does our team price a property in varied condition?",
-    answer: "As both a licensed Washington State real estate broker and a state-certified residential appraiser, Our team evaluates the property based on its actual condition, location, and local comparable sales. This approach produces defensible pricing that reflects what the market will realistically pay — which is especially important when condition varies significantly.",
+    question: "How does David Stein price a property in varied condition?",
+    answer: "As both a licensed Washington State real estate broker and a state-certified residential appraiser, David Stein evaluates the property based on its actual condition, location, and local comparable sales. This approach produces defensible pricing that reflects what the market will realistically pay — which is especially important when condition varies significantly.",
   },
   {
     question: "What if I'm not sure whether to sell or keep the property?",
-    answer: "That's a common starting point. Our team can provide an honest assessment of the property's condition, realistic market value, and the costs associated with holding versus selling. Having clear data often makes the decision easier — whatever direction the family ultimately chooses.",
+    answer: "That's a common starting point. David Stein can provide an honest assessment of the property's condition, realistic market value, and the costs associated with holding versus selling. Having clear data often makes the decision easier — whatever direction the family ultimately chooses.",
   },
   {
-    question: "How does our team help coordinate the process?",
-    answer: "Our team manages the practical steps — property access, cleanout coordination, contractor oversight, and communication with attorneys and family members. He keeps the process organized and moving forward so you're not left figuring out logistics on your own.",
+    question: "How does David Stein help coordinate the process?",
+    answer: "David Stein manages the practical steps — property access, cleanout coordination, contractor oversight, and communication with attorneys and family members. He keeps the process organized and moving forward so you're not left figuring out logistics on your own.",
   },
   {
     question: "How long does it take to sell an inherited home in Pasco?",
-    answer: "Timelines vary based on the legal process, property condition, and preparation needs. Once the home is ready and authority is established, well-priced Pasco properties typically sell within a reasonable timeframe. Our team helps set clear expectations from the beginning.",
+    answer: "Timelines vary based on the legal process, property condition, and preparation needs. Once the home is ready and authority is established, well-priced Pasco properties typically sell within a reasonable timeframe. David Stein helps set clear expectations from the beginning.",
   },
 ];
 
@@ -140,7 +140,7 @@ const PascoProbateEstate = () => {
         </div>
       </section>
 
-      <MidPageCTA heading="Have Questions About a Pasco Property?" body="Our team provides confidential consultations for executors, trustees, and families handling inherited or estate property in Pasco and the Tri-Cities region. A short conversation can help clarify your options." buttonText="Schedule a Consultation" microcopy="No pressure. Just practical guidance for your situation." />
+      <MidPageCTA heading="Have Questions About a Pasco Property?" body="David Stein provides confidential consultations for executors, trustees, and families handling inherited or estate property in Pasco and the Tri-Cities region. A short conversation can help clarify your options." buttonText="Schedule a Consultation" microcopy="No pressure. Just practical guidance for your situation." />
 
       <section className="py-20 lg:py-28 bg-background">
         <div className="container px-6 lg:px-8">
@@ -150,7 +150,7 @@ const PascoProbateEstate = () => {
               When an inherited property needs attention — whether that's a cleanout, targeted repairs, or just an honest evaluation — someone needs to manage the details. For families who aren't local or who are managing multiple responsibilities, that coordination can feel like a full-time job on its own.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              Our team steps into that role. He manages property access, works with cleanout crews and contractors, communicates with attorneys and other professionals, and provides clear updates so the family always knows where things stand. The process stays organized and moves forward without depending on anyone making repeated trips to Pasco.
+              David Stein steps into that role. He manages property access, works with cleanout crews and contractors, communicates with attorneys and other professionals, and provides clear updates so the family always knows where things stand. The process stays organized and moves forward without depending on anyone making repeated trips to Pasco.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
               The goal is straightforward: take the logistical weight off the family so they can focus on the decisions that matter — not the day-to-day details of getting a property ready to sell.

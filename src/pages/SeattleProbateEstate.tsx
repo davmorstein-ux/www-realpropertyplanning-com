@@ -21,32 +21,32 @@ const faqs = [
   {
     question: "How does selling a home in probate work in Seattle?",
     answer:
-      "Probate property sales in Seattle require court-granted authority before listing. Our team coordinates with the estate attorney and personal representative to evaluate the property, manage preparation, develop a pricing strategy grounded in local market data, and guide the sale from start to finish — keeping all parties informed throughout.",
+      "Probate property sales in Seattle require court-granted authority before listing. David Stein coordinates with the estate attorney and personal representative to evaluate the property, manage preparation, develop a pricing strategy grounded in local market data, and guide the sale from start to finish — keeping all parties informed throughout.",
   },
   {
     question: "What should an executor do first with a Seattle property?",
     answer:
-      "Secure the property, confirm your legal authority to act, and get an honest assessment of the home's condition and market value. Our team can walk through the property, identify issues that affect value, and help you understand your options before you commit to anything.",
+      "Secure the property, confirm your legal authority to act, and get an honest assessment of the home's condition and market value. David Stein can walk through the property, identify issues that affect value, and help you understand your options before you commit to anything.",
   },
   {
     question: "How does Real Property Planning's appraisal background benefit Seattle sellers?",
     answer:
-      "As both a licensed Washington State real estate broker and a state-certified residential appraiser, Our team provides pricing strategy rooted in actual condition assessment and neighborhood-level market data — not automated estimates. This dual perspective is especially valuable in Seattle, where neighborhood pricing differences can be significant.",
+      "As both a licensed Washington State real estate broker and a state-certified residential appraiser, David Stein provides pricing strategy rooted in actual condition assessment and neighborhood-level market data — not automated estimates. This dual perspective is especially valuable in Seattle, where neighborhood pricing differences can be significant.",
   },
   {
-    question: "Can our team help if I live out of state but the property is in Seattle?",
+    question: "Can David Stein help if I live out of state but the property is in Seattle?",
     answer:
-      "Yes. Our team regularly works with out-of-state executors, trustees, and heirs managing Seattle properties remotely. He coordinates property access, vendor management, preparation, and the entire sale process — keeping you informed at every step so you don't need to make unnecessary trips.",
+      "Yes. David Stein regularly works with out-of-state executors, trustees, and heirs managing Seattle properties remotely. He coordinates property access, vendor management, preparation, and the entire sale process — keeping you informed at every step so you don't need to make unnecessary trips.",
   },
   {
     question: "What should be done before listing an inherited home in Seattle?",
     answer:
-      "It depends on the property's condition, location, and your timeline. Our team evaluates whether to sell as-is or invest in targeted preparation — using our appraisal background to determine which improvements are likely to increase the sale price enough to justify the cost and delay.",
+      "It depends on the property's condition, location, and your timeline. David Stein evaluates whether to sell as-is or invest in targeted preparation — using our appraisal background to determine which improvements are likely to increase the sale price enough to justify the cost and delay.",
   },
   {
     question: "How long does it take to sell a probate property in Seattle?",
     answer:
-      "Timelines vary depending on the probate process, property condition, and market conditions. Once the property is ready and authority is established, well-priced Seattle homes often sell within 2–4 weeks. Our team helps set realistic expectations and builds a timeline around your specific situation.",
+      "Timelines vary depending on the probate process, property condition, and market conditions. Once the property is ready and authority is established, well-priced Seattle homes often sell within 2–4 weeks. David Stein helps set realistic expectations and builds a timeline around your specific situation.",
   },
 ];
 
@@ -174,7 +174,7 @@ const SeattleProbateEstate = () => {
       {/* Mid-page CTA */}
       <MidPageCTA
         heading="Have a Property Situation in Seattle?"
-        body="Our team provides confidential consultations for executors, attorneys, trustees, and families dealing with inherited or estate property in Seattle and throughout King County."
+        body="David Stein provides confidential consultations for executors, attorneys, trustees, and families dealing with inherited or estate property in Seattle and throughout King County."
         buttonText="Schedule a Consultation"
         microcopy="No pressure. Just practical guidance for your situation."
       />
@@ -190,10 +190,10 @@ const SeattleProbateEstate = () => {
               Many executors and trustees managing Seattle property live hundreds or thousands of miles away. Coordinating vendors, accessing the property, understanding local conditions, and managing a sale remotely is stressful — especially when you're also grieving.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              Our team serves as a local point of coordination. He manages property access, works with cleanout crews, contractors, and staging vendors, communicates with attorneys and other parties, and keeps you informed throughout the process — reducing unnecessary travel and giving you confidence that nothing is falling through the cracks.
+              David Stein serves as a local point of coordination. He manages property access, works with cleanout crews, contractors, and staging vendors, communicates with attorneys and other parties, and keeps you informed throughout the process — reducing unnecessary travel and giving you confidence that nothing is falling through the cracks.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Whether you're in California, Texas, New York, or overseas, our team's goal is to make the process as clear and manageable as possible from wherever you are.
+              Whether you're in California, Texas, New York, or overseas, David Stein's goal is to make the process as clear and manageable as possible from wherever you are.
             </p>
           </div>
         </div>

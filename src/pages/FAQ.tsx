@@ -104,15 +104,15 @@ const faqs = [
   },
   {
     question: "Can an executor sell a house before probate is complete?",
-    answer: `In some cases, an executor may be able to sell before the full probate process concludes — but it depends on the estate structure, the will, and whether the court has granted authority. Our team works with estate attorneys to align the real estate timeline with legal proceedings so the sale happens at the right time.\n\n${softCta}`,
+    answer: `In some cases, an executor may be able to sell before the full probate process concludes — but it depends on the estate structure, the will, and whether the court has granted authority. David Stein works with estate attorneys to align the real estate timeline with legal proceedings so the sale happens at the right time.\n\n${softCta}`,
   },
   {
     question: "What repairs should be done before selling an estate property?",
-    answer: `It depends on the property, the budget, and the likely return. Targeted improvements like paint, flooring, and landscaping can increase value significantly. Expensive renovations rarely make financial sense for estate property. Our team evaluates each situation using our appraisal background to recommend only the improvements worth making.\n\n${softCta}`,
+    answer: `It depends on the property, the budget, and the likely return. Targeted improvements like paint, flooring, and landscaping can increase value significantly. Expensive renovations rarely make financial sense for estate property. David Stein evaluates each situation using our appraisal background to recommend only the improvements worth making.\n\n${softCta}`,
   },
   {
     question: "How do siblings decide what to do with an inherited house?",
-    answer: `Disagreements among siblings are common and understandable. Clear, objective information about the property's condition and market value helps reduce conflict. Our team provides a calm, data-driven perspective that helps families move toward a workable decision — whether that means selling, keeping, or renting the property.\n\n${softCta}`,
+    answer: `Disagreements among siblings are common and understandable. Clear, objective information about the property's condition and market value helps reduce conflict. David Stein provides a calm, data-driven perspective that helps families move toward a workable decision — whether that means selling, keeping, or renting the property.\n\n${softCta}`,
   },
   {
     question: "What should an attorney look for in a probate real estate broker?",
@@ -120,7 +120,7 @@ const faqs = [
   },
   {
     question: "How do you prepare a senior's home for sale during a move?",
-    answer: `Preparing a senior's home typically involves sorting decades of belongings, coordinating cleanout, addressing deferred maintenance, and managing the timeline alongside a care transition. Our team works with families and senior move managers to handle the real estate side with patience and practical planning.\n\n${softCta}`,
+    answer: `Preparing a senior's home typically involves sorting decades of belongings, coordinating cleanout, addressing deferred maintenance, and managing the timeline alongside a care transition. David Stein works with families and senior move managers to handle the real estate side with patience and practical planning.\n\n${softCta}`,
   },
 ];
 
@@ -239,7 +239,7 @@ const FAQ = () => {
               Have a question not listed here?
             </h2>
             <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
-              Our team welcomes confidential conversations with attorneys, executors, trustees, families, and financial professionals. A short call can often clarify your next steps.
+              David Stein welcomes confidential conversations with attorneys, executors, trustees, families, and financial professionals. A short call can often clarify your next steps.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link to="/contact">

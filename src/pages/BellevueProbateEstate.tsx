@@ -18,32 +18,32 @@ const faqs = [
   {
     question: "How does selling an inherited home in Bellevue work?",
     answer:
-      "Selling inherited property in Bellevue typically requires legal authority through probate or trust administration before the home can be listed. Our team coordinates with the estate attorney, trustee, or personal representative to assess the property, develop a defensible pricing strategy, manage preparation, and guide the sale — keeping all parties informed throughout.",
+      "Selling inherited property in Bellevue typically requires legal authority through probate or trust administration before the home can be listed. David Stein coordinates with the estate attorney, trustee, or personal representative to assess the property, develop a defensible pricing strategy, manage preparation, and guide the sale — keeping all parties informed throughout.",
   },
   {
     question: "What should a trustee do first with a Bellevue property?",
     answer:
-      "Secure the property, review the trust terms with the estate attorney, and get a realistic assessment of the home's condition and current market value. Our team can evaluate the property, identify factors that affect value, and help you understand your options before committing to a course of action.",
+      "Secure the property, review the trust terms with the estate attorney, and get a realistic assessment of the home's condition and current market value. David Stein can evaluate the property, identify factors that affect value, and help you understand your options before committing to a course of action.",
   },
   {
     question: "How does Real Property Planning's appraisal background benefit Bellevue property sales?",
     answer:
-      "As both a licensed Washington State real estate broker and a state-certified residential appraiser, Our team provides pricing strategy grounded in actual condition assessment and neighborhood-level market analysis — not automated estimates. In Bellevue's higher-value market, this dual perspective helps protect families and fiduciaries from costly pricing mistakes.",
+      "As both a licensed Washington State real estate broker and a state-certified residential appraiser, David Stein provides pricing strategy grounded in actual condition assessment and neighborhood-level market analysis — not automated estimates. In Bellevue's higher-value market, this dual perspective helps protect families and fiduciaries from costly pricing mistakes.",
   },
   {
-    question: "Can our team help if multiple beneficiaries are involved?",
+    question: "Can David Stein help if multiple beneficiaries are involved?",
     answer:
-      "Yes. Multi-party situations are common in Bellevue estate and trust sales. Our team provides clear, documented communication so all parties — whether local or out of state — have the same information. Pricing grounded in certified appraisal methodology also helps establish defensible value when consensus is needed.",
+      "Yes. Multi-party situations are common in Bellevue estate and trust sales. David Stein provides clear, documented communication so all parties — whether local or out of state — have the same information. Pricing grounded in certified appraisal methodology also helps establish defensible value when consensus is needed.",
   },
   {
     question: "What preparation is typically needed before selling a Bellevue estate property?",
     answer:
-      "It depends on the property's condition, the neighborhood, and buyer expectations. Bellevue buyers often expect well-presented homes. Our team evaluates whether targeted preparation — cleaning, repairs, or staging — is likely to increase the sale price enough to justify the cost and delay, using our appraisal background to make that assessment.",
+      "It depends on the property's condition, the neighborhood, and buyer expectations. Bellevue buyers often expect well-presented homes. David Stein evaluates whether targeted preparation — cleaning, repairs, or staging — is likely to increase the sale price enough to justify the cost and delay, using our appraisal background to make that assessment.",
   },
   {
     question: "How long does it take to sell an estate property in Bellevue?",
     answer:
-      "Timelines depend on the legal process, property condition, and preparation needs. Once the property is ready and authority is established, well-priced Bellevue homes typically sell within a few weeks. Our team helps set realistic expectations and builds a plan around your specific situation and constraints.",
+      "Timelines depend on the legal process, property condition, and preparation needs. Once the property is ready and authority is established, well-priced Bellevue homes typically sell within a few weeks. David Stein helps set realistic expectations and builds a plan around your specific situation and constraints.",
   },
 ];
 
@@ -171,7 +171,7 @@ const BellevueProbateEstate = () => {
       {/* Mid-page CTA */}
       <MidPageCTA
         heading="Have a Property Situation in Bellevue?"
-        body="Our team provides confidential consultations for executors, attorneys, trustees, and families handling inherited or trust-owned property in Bellevue and throughout King County."
+        body="David Stein provides confidential consultations for executors, attorneys, trustees, and families handling inherited or trust-owned property in Bellevue and throughout King County."
         buttonText="Schedule a Consultation"
         microcopy="No pressure. Just practical guidance for your situation."
       />
@@ -184,10 +184,10 @@ const BellevueProbateEstate = () => {
               Support for Families, Trustees, and Busy Professionals
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              Bellevue estate and trust property transitions often involve busy professionals, out-of-state beneficiaries, attorneys, and trustees who need a reliable local resource they can count on. Our team serves as a central point of coordination — managing the details so no one has to do it alone.
+              Bellevue estate and trust property transitions often involve busy professionals, out-of-state beneficiaries, attorneys, and trustees who need a reliable local resource they can count on. David Stein serves as a central point of coordination — managing the details so no one has to do it alone.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-              That means clear communication with all parties, coordinating vendors for cleanout, repairs, and staging, overseeing property preparation, and handling the process with discretion. Whether you're a trustee managing responsibilities alongside a demanding career, an attorney advising a client, or a family member navigating an emotional transition, our team keeps things organized and moving forward.
+              That means clear communication with all parties, coordinating vendors for cleanout, repairs, and staging, overseeing property preparation, and handling the process with discretion. Whether you're a trustee managing responsibilities alongside a demanding career, an attorney advising a client, or a family member navigating an emotional transition, David Stein keeps things organized and moving forward.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
               Complex situations — multiple beneficiaries, sensitive family dynamics, or properties that require significant preparation — are handled with professionalism and care.

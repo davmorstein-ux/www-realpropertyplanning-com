@@ -67,7 +67,7 @@ const Contact = () => {
 
     toast({
       title: "Thanks — Message Received",
-      description: "Our team will reach out shortly. Need to talk sooner? Call (206) 900-3015.",
+      description: "We will reach out shortly. Need to talk sooner? Call (206) 900-3015.",
     });
 
     setIsSubmitting(false);

@@ -168,6 +168,7 @@ const Roles = lazy(() => import("./pages/Roles"));
 const Planning = lazy(() => import("./pages/Planning"));
 const ProfessionalsPage = lazy(() => import("./pages/ProfessionalsPage"));
 const Sitemap = lazy(() => import("./pages/Sitemap"));
+const Disclaimer = lazy(() => import("./pages/Disclaimer"));
 
 const queryClient = new QueryClient();
 
@@ -407,6 +408,7 @@ const App = () => (
           <Route path="/terminology" element={<Terminology />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/sitemap" element={<Sitemap />} />
+          <Route path="/disclaimer" element={<Disclaimer />} />
 
           {/* ══════════════════════════════════════════════════════════
               REDIRECTS — Phase 2a SEO consolidation
