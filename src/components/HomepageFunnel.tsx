@@ -24,7 +24,7 @@ const tiles = [
   {
     imgSrc: tileEstate,
     imgAlt: "Family reviewing an estate property plan with documents",
-    title: "Handling an Estate",
+    title: "I'm Handling an Estate",
     description: "Guidance for executors and families managing an inherited home.",
     cta: "Get Steps",
     href: "/estate-probate-inherited-property",
