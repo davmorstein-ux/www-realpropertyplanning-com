@@ -41,6 +41,7 @@ const AttorneyEducationalPage = (p: AttorneyEducationalPageProps) => (
       ]}
     />
     <Header />
+    <main id="main-content">
       {p.heroImage && (
         <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
           <div style={{ lineHeight: 0 }}>
