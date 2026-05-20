@@ -18,16 +18,16 @@ import heroIcon from "@/assets/icons/probate-guidance-book-open-icon-washington.
 import wtdwHeroImage from "@/assets/what-to-do-with-the-house-hero-washington.webp";
 import HeroBandTitle from "@/components/HeroBandTitle";
 
-const options = [
-  { title: "Sell the Property", text: "The most common choice. Selling converts the property into liquid assets that can be distributed among beneficiaries, used to settle estate debts, or reinvested. The sale can happen immediately, after preparation, or after a holding period depending on circumstances." },
-  { title: "Keep the Property", text: "Some families choose to keep an inherited home — as a rental, vacation property, or future residence. This option requires understanding ongoing costs (taxes, insurance, maintenance), management responsibilities, and potential tax implications." },
-  { title: "Rent the Property", text: "Renting can provide income while the family decides on a long-term plan. However, becoming a landlord involves legal obligations, property management, and ongoing costs that should be carefully evaluated." },
-  { title: "Buy Out Other Heirs", text: "When one heir wants to keep the property and others want to sell, a buyout may be possible. This requires an accurate property valuation that all parties can agree on — an area where our team's dual broker/appraiser credentials are particularly valuable." },
+const tiles = [
+  { title: "Your Options", text: "Sell and distribute proceeds, keep it as a rental or residence, rent while deciding, or buy out other heirs. Each path has different cost, tax, and management implications." },
+  { title: "Key Factors to Consider", text: "Evaluate the property's condition and market value, the estate's timeline flexibility, ongoing carrying costs (taxes, insurance, utilities), and the financial needs of all beneficiaries." },
+  { title: "Tax Implications", text: "Inherited property typically receives a stepped-up basis, which can significantly reduce capital gains if sold. Consult a CPA early to understand your specific situation before making any decisions." },
+  { title: "Get Guidance Early", text: "Delays cost money. Carrying costs accumulate, conditions can deteriorate, and tax planning opportunities can be lost. An early no-pressure consultation helps everyone make better decisions." },
 ];
 
-const decisionFactors = [
-  "The property's current condition and market value",
-  "Whether the estate needs to be settled quickly or has flexibility",
+const _unused = [
+  "x",
+  "y",
   "The financial needs and preferences of all beneficiaries",
   "Ongoing carrying costs — taxes, insurance, utilities, maintenance",
   "Whether the property is in a strong, stable, or declining market",
