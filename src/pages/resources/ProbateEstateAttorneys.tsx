@@ -6,7 +6,7 @@ import RelatedServices from "@/components/RelatedServices";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import CTASection from "@/components/CTASection";
 import { Link } from "react-router-dom";
-import heroIcon from "@/assets/icons/probate-estate-resources-icon-washington.webp";
+import heroIcon from "@/assets/probate-attorney-hero.png";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconEmail3d from "@/assets/icons/real-estate-email-envelope-3d-icon-washington.webp";
 import iconMapPin3d from "@/assets/icons/real-estate-location-pin-3d-icon-washington.webp";
@@ -32,7 +32,7 @@ const ProbateEstateAttorneys = () => (
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <div className="flex justify-center mb-1.5 md:mb-2">
-              <img src={heroIcon} alt="" aria-hidden="true" className="block w-full max-w-[15rem] h-auto object-contain" loading="lazy" />
+              <img src={heroIcon} alt="Probate attorney at desk reviewing estate plan documents" className="block w-full max-w-[20rem] h-auto object-contain" loading="lazy" />
             </div>
 
             <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-base">Resources</p>
