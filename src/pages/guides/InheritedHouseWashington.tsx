@@ -100,12 +100,6 @@ const InheritedHouseWashington = () => (
         </div>
       </section>
 
-      <MidPageCTA
-        heading="​"
-        body="​"
-        buttonText="Schedule a Consultation"
-        microcopy="​"
-      />
 
       <PageFAQ faqs={faqs} heading="Inherited Property FAQs" />
 
