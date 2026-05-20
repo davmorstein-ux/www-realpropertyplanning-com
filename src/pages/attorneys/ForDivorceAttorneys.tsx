@@ -33,7 +33,7 @@ const services = [
   },
   {
     title: "Neutral Representation",
-    description: "David Stein does not represent either party's interests — David Stein represents the property and the process. Our role is to handle the sale fairly, transparently, and professionally, with consistent communication to both parties (or through their attorneys) and no advocacy for either side.",
+    description: "David Stein does not represent either party's interests — David Stein represents the property and the process. David Stein's role is to handle the sale fairly, transparently, and professionally, with consistent communication to both parties (or through their attorneys) and no advocacy for either side.",
   },
   {
     title: "Structured, Organized Sale Process",
@@ -54,7 +54,7 @@ const services = [
 const faqs = [
   {
     question: "How does Real Property Planning maintain neutrality when working with divorcing parties?",
-    answer: "David Stein's role is defined from the beginning as neutral coordinator — our obligation is to the property transaction, not to either party. Communication protocols are established upfront: updates can be sent simultaneously to both parties, routed through respective counsel, or structured in whatever way the attorneys prefer. Pricing and preparation decisions are based on market data, not either party's preference.",
+    answer: "David Stein's role is defined from the beginning as neutral coordinator — David Stein's obligation is to the property transaction, not to either party. Communication protocols are established upfront: updates can be sent simultaneously to both parties, routed through respective counsel, or structured in whatever way the attorneys prefer. Pricing and preparation decisions are based on market data, not either party's preference.",
   },
   {
     question: "What if one party is living in the home during the sale?",
@@ -134,9 +134,12 @@ const ForDivorceAttorneys = () => (
     <section className="py-16 lg:py-24 bg-secondary">
       <div className="container px-6 lg:px-8">
         <div className="max-w-[900px] mx-auto">
-          <h2 className="font-serif text-3xl text-foreground font-semibold mb-10">
-            How We Support Your Clients
+          <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">
+            How David Stein Supports Your Clients
           </h2>
+          <p className="text-muted-foreground text-lg leading-relaxed mb-10">
+            The following reflects services offered independently by David Stein in his capacity as a licensed real estate broker and certified residential appraiser — not services provided by Real Property Planning.
+          </p>
           <div className="grid gap-5">
             {services.map((s, i) => (
               <div key={i} className="bg-card border border-border rounded-xl px-7 py-6">
@@ -181,7 +184,29 @@ const ForDivorceAttorneys = () => (
     </section>
 
     <RelatedServices currentPath="/for-divorce-attorneys" />
-    <DisclaimerSection />
+    <section data-nosnippet="true" className="pt-8 pb-16 md:pt-12 md:pb-16 lg:pt-16 lg:pb-16 bg-secondary">
+      <div className="container px-6 lg:px-8">
+        <div className="max-w-[1060px] mx-auto">
+          <div className="bg-card border-[1.5px] border-border/80 rounded-2xl px-6 py-6 md:px-10 md:py-10"
+            style={{
+              boxShadow: '0 4px 14px -2px rgba(0,0,0,0.06), 0 2px 6px -1px rgba(0,0,0,0.04), inset 0 1px 0 0 rgba(255,255,255,0.6)',
+            }}
+          >
+            <p className="section-eyebrow">
+              Professional Disclosure
+            </p>
+            <h2 className="font-serif text-xl md:text-2xl text-foreground font-semibold mb-5">
+              Professional Disclaimer
+            </h2>
+            <div className="space-y-4 text-foreground text-[18px] md:text-[19px] leading-[1.75] font-medium">
+              <p>
+                Real Property Planning is an independent educational hub. It does not provide real estate, legal, financial, tax, or any other professional services. Professionals and companies referenced on this site are entirely independent — they are not employees, partners, or affiliates of Real Property Planning. Nothing on this site constitutes professional advice. Always consult a qualified, licensed professional for guidance specific to your situation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     </main>
     <Footer />
   </div>
