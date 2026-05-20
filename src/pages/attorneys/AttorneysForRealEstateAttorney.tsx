@@ -4,6 +4,8 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import FeaturedProviderPlaceholder from "@/components/FeaturedProviderPlaceholder";
 import SiteDisclaimerBlock from "@/components/SiteDisclaimerBlock";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import heroImage from "@/assets/real-estate-attorney-hero.png";
 
@@ -41,6 +43,12 @@ const AttorneysForRealEstateAttorney = () => (
       <p className="attorney-role-description">
         A real estate attorney handles the legal side of property transactions — reviewing contracts, resolving title issues, managing closings, and advising on ownership transfers. In estate, probate, and senior transition situations, a real estate attorney ensures that property is transferred or sold correctly under Washington State law.
       </p>
+
+      <div className="flex justify-center my-8">
+        <Link to="/professionals/attorneys">
+          <Button variant="gold" size="lg">Back to Attorneys</Button>
+        </Link>
+      </div>
 
       <SiteDisclaimerBlock />
     </main>
