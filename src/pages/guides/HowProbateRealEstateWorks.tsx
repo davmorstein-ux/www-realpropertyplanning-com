@@ -128,10 +128,10 @@ const HowProbateRealEstateWorks = () => (
 
 
     <MidPageCTA
-      heading="Navigating a Probate Property Situation?"
-      body="Our team provides a no-pressure consultation to review the property, discuss timing and legal coordination, and outline practical next steps."
+      heading="​"
+      body="​"
       buttonText="Schedule a Consultation"
-      microcopy="No pressure. Just practical guidance for your situation."
+      microcopy="​"
     />
 
 
