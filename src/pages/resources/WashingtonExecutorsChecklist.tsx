@@ -103,29 +103,6 @@ const WashingtonExecutorsChecklist = () => {
             <HeroBandTitle as="div">10 Steps Every Executor Should Know</HeroBandTitle>
           </div>
         </section>
-        {/* Hero */}
-        <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center">
-              <span className="inline-block px-5 py-1.5 rounded-full text-gold font-bold tracking-[0.18em] uppercase text-xs bg-gradient-to-b from-gold/15 to-gold/5 border border-gold/25 shadow-[0_2px_8px_rgba(201,168,76,0.12),inset_0_1px_0_rgba(255,255,255,0.1),inset_0_-1px_0_rgba(0,0,0,0.08)] mb-5">
-                &zwnj;
-              </span>
-              <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-primary-foreground leading-tight mb-5">
-                &zwnj;
-              </h1>
-              <p className="text-primary-foreground/80 text-lg md:text-xl leading-relaxed mb-4 max-w-2xl mx-auto">
-                &zwnj;
-              </p>
-            <div className="flex justify-center mb-1.5 md:mb-2">
-              <img src={heroIcon} alt="" aria-hidden="true" className="block w-full max-w-[15rem] h-auto object-contain" loading="lazy" />
-            </div>
-
-              <p className="text-gold/90 text-base italic">
-                &zwnj;
-              </p>
-            </div>
-          </div>
-        </section>
 
         {/* Intro */}
         <section className="py-14 md:py-20 bg-secondary">
