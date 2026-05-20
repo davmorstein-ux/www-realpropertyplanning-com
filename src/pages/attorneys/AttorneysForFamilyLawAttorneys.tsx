@@ -38,7 +38,7 @@ const AttorneysForFamilyLawAttorneys = () => (
         altLabel="featured family law attorney"
       />
 
-      <p className="text-3xl font-bold leading-relaxed max-w-3xl mx-auto my-10 px-6">
+      <p className="attorney-role-description">
         A family law attorney helps families navigate legal matters involving children, custody, parenting plans, guardianship, and spousal support. Their work often intersects with real estate when a family home, inherited property, or shared assets need to be addressed as part of a legal resolution.
       </p>
 

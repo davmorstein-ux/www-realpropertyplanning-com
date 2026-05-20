@@ -34,7 +34,7 @@ const EstatePlanningPowersOfAttorney = () => (
         altLabel="featured estate planning attorney"
       />
 
-      <p className="text-3xl font-bold leading-relaxed max-w-3xl mx-auto my-10 px-6">
+      <p className="attorney-role-description">
         An estate planning attorney helps individuals and families prepare for the future by drafting wills, trusts, powers of attorney, and healthcare directives. Their work ensures that your wishes are legally documented and that the right people have authority to act on your behalf if you cannot. Good estate planning can help families avoid confusion, conflict, and unnecessary probate proceedings.
       </p>
 

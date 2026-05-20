@@ -37,7 +37,7 @@ const ForDivorceAttorneys = () => (
       {/* Featured Provider */}
       <DominikMusafiaCard />
 
-      <p className="text-3xl font-bold leading-relaxed max-w-3xl mx-auto my-10 px-6">
+      <p className="attorney-role-description">
         A divorce attorney helps individuals and couples navigate the legal process of ending a marriage. They handle asset division, spousal support, parenting plans, and court filings. When the family home or other real property is involved, a divorce attorney works to ensure it is fairly addressed as part of the overall settlement.
       </p>
 
