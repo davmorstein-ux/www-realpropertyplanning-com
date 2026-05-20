@@ -1,9 +1,12 @@
 import AttorneyEducationalPage from "@/components/AttorneyEducationalPage";
+import heroImage from "@/assets/family-law-attorney-hero.png";
 
 const AttorneysForFamilyLawAttorneys = () => (
   <AttorneyEducationalPage
     title="Family Law Attorney"
-    path="/attorneys/for-family-law-attorneys"
+    title="Family Law Attorney"
+    heroImage={heroImage}
+    heroImageAlt="Family law attorney meeting with a family reviewing a parenting plan"
     seoTitle="Family Law Attorneys in Washington State | Real Property Planning"
     seoDescription="How family law attorneys help families navigate custody, parenting plans, guardianship, and spousal support — and how those matters often intersect with real estate decisions."
     featuredHeading="Featured Family Law Attorney — Coming Soon"
