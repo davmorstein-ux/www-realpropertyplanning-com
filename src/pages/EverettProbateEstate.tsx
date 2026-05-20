@@ -26,7 +26,7 @@ const faqs = [
       "David Stein uses our appraisal background to evaluate which repairs and improvements are likely to increase the sale price enough to justify the cost — and which ones aren't worth the investment. Sometimes selling as-is is the right call; other times, targeted preparation makes a meaningful difference. The key is making that decision based on data, not guesswork.",
   },
   {
-    question: "How does our team's dual expertise benefit Everett sellers?",
+    question: "How does David Stein's dual expertise benefit Everett sellers?",
     answer:
       "As both a licensed Washington State real estate broker and a state-certified residential appraiser, David Stein provides pricing grounded in actual condition assessment and neighborhood-level market data. This dual perspective is especially valuable with older Everett homes where condition, location, and lot characteristics can significantly affect value.",
   },

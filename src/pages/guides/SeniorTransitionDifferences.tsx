@@ -97,7 +97,7 @@ const SeniorTransitionDifferences = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <ProofCallout
-            quote="We appreciated our team's patience, thoughtful communication, and realistic guidance throughout the sale of our family property."
+            quote="We appreciated David Stein's patience, thoughtful communication, and realistic guidance throughout the sale of our family property."
             attribution="Family Member"
             context="Senior transition home sale"
             variant="accent"
@@ -124,7 +124,7 @@ const SeniorTransitionDifferences = () => (
             David Stein's dual credentials as a broker and certified appraiser mean the family gets accurate pricing grounded in the property's actual condition — not an inflated number designed to win the listing. Our experience with senior transitions means we know how to communicate with empathy, coordinate with care professionals, and manage the practical details so the family can focus on the people who matter most.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            Learn more about our team's approach to <Link to="/senior-transitions" className="text-accent hover:text-gold underline underline-offset-4">senior transition real estate</Link> or read about how families have described the experience on the <Link to="/testimonials" className="text-accent hover:text-gold underline underline-offset-4">testimonials page</Link>.
+            Learn more about David Stein's approach to <Link to="/senior-transitions" className="text-accent hover:text-gold underline underline-offset-4">senior transition real estate</Link> or read about how families have described the experience on the <Link to="/testimonials" className="text-accent hover:text-gold underline underline-offset-4">testimonials page</Link>.
           </p>
         </div>
       </div>

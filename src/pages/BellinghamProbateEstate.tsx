@@ -26,7 +26,7 @@ const faqs = [
       "Bellingham has a distinct local market shaped by its proximity to Western Washington University, the San Juan Islands, and the Canadian border. Property types range from historic Lettered Streets homes to rural acreage outside city limits. Pricing and buyer expectations vary significantly by neighborhood, and automated estimates often miss these differences.",
   },
   {
-    question: "How does our team's appraisal background help with Bellingham properties?",
+    question: "How does David Stein's appraisal background help with Bellingham properties?",
     answer:
       "As both a licensed Washington State real estate broker and a state-certified residential appraiser, David Stein provides pricing grounded in actual condition assessment and local market data. This is especially important in Bellingham, where unique property types and location-specific factors can significantly affect value.",
   },

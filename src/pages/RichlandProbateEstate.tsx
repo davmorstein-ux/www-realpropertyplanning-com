@@ -20,7 +20,7 @@ const faqs = [
     answer: "Richland tends to have more stable, established neighborhoods with homes that reflect long-term ownership — many tied to careers at Hanford or Pacific Northwest National Laboratory. Property conditions are often well-maintained but dated, and buyer expectations around presentation can be higher than in neighboring cities.",
   },
   {
-    question: "How does our team's appraisal background help with Richland properties?",
+    question: "How does David Stein's appraisal background help with Richland properties?",
     answer: "As both a licensed Washington State real estate broker and a state-certified residential appraiser, David Stein provides pricing grounded in actual condition assessment and local comparable data. In Richland, where homes tend to be well-built but may need cosmetic updating, this dual perspective ensures pricing reflects reality rather than outdated assumptions.",
   },
   {

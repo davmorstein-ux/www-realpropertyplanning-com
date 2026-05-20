@@ -139,7 +139,7 @@ const AppraisalVsCma = () => (
             David Stein's certified appraisal background means we evaluate properties the way a lender's appraiser would — assessing effective age, physical depreciation, functional utility, and condition adjustments that automated tools and standard agents miss. This produces more accurate pricing, fewer appraisal surprises during buyer financing, and stronger support for the executor's fiduciary obligations.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            Learn more about <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">why valuation expertise matters</Link> in estate property sales, or explore our team's <Link to="/how-the-process-works" className="text-accent hover:text-gold underline underline-offset-4">step-by-step process</Link>.
+            Learn more about <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">why valuation expertise matters</Link> in estate property sales, or explore David Stein's <Link to="/how-the-process-works" className="text-accent hover:text-gold underline underline-offset-4">step-by-step process</Link>.
           </p>
         </div>
       </div>

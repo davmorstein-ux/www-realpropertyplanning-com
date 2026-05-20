@@ -27,7 +27,7 @@ const faqs = [
       "Secure the property, confirm your legal authority to act, and get an honest assessment of its condition and market value. David Stein can walk through the property on your behalf, identify issues that affect value, and help you understand your options before you commit to anything.",
   },
   {
-    question: "How does our team's appraisal background help with Spokane properties?",
+    question: "How does David Stein's appraisal background help with Spokane properties?",
     answer:
       "As both a licensed Washington State real estate broker and a state-certified residential appraiser, David Stein provides pricing grounded in actual condition assessment and local market data — not automated estimates. This dual perspective is especially valuable when families are making decisions from a distance and need confidence in the numbers.",
   },

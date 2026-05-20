@@ -20,7 +20,7 @@ const faqs = [
     answer: "Secure the property, confirm your legal authority to act, and get an honest assessment of its condition and market value. David Stein can walk through the home, identify what affects value, and help you understand your options before you commit to anything.",
   },
   {
-    question: "How does our team's appraisal background help in Kennewick?",
+    question: "How does David Stein's appraisal background help in Kennewick?",
     answer: "As both a licensed Washington State real estate broker and a state-certified residential appraiser, David Stein provides pricing based on actual property condition and local comparable data — not automated estimates. In Kennewick, where condition varies widely and pricing is sensitive, this dual perspective prevents costly mistakes.",
   },
   {

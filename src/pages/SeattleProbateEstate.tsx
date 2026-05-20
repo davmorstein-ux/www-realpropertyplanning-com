@@ -193,7 +193,7 @@ const SeattleProbateEstate = () => {
               David Stein serves as a local point of coordination. He manages property access, works with cleanout crews, contractors, and staging vendors, communicates with attorneys and other parties, and keeps you informed throughout the process — reducing unnecessary travel and giving you confidence that nothing is falling through the cracks.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Whether you're in California, Texas, New York, or overseas, our team's goal is to make the process as clear and manageable as possible from wherever you are.
+              Whether you're in California, Texas, New York, or overseas, David Stein's goal is to make the process as clear and manageable as possible from wherever you are.
             </p>
           </div>
         </div>

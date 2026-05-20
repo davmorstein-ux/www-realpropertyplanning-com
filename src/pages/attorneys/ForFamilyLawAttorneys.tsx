@@ -40,14 +40,14 @@ const services = [
   },
   {
     title: "Calm, Consistent Communication",
-    description: "In situations where communication between parties is strained, our team's structured approach to updates — consistent, factual, and professionally neutral — reduces opportunities for misunderstanding and conflict.",
+    description: "In situations where communication between parties is strained, David Stein's structured approach to updates — consistent, factual, and professionally neutral — reduces opportunities for misunderstanding and conflict.",
   },
 ];
 
 const faqs = [
   {
     question: "Can Real Property Planning work with both parties in a family law property situation?",
-    answer: "Yes — our team's role is explicitly neutral. He provides objective market analysis and manages the sale process professionally, without advocacy for either party. Communication protocols can be structured to route through respective counsel if that is preferred.",
+    answer: "Yes — David Stein's role is explicitly neutral. He provides objective market analysis and manages the sale process professionally, without advocacy for either party. Communication protocols can be structured to route through respective counsel if that is preferred.",
   },
   {
     question: "How does valuation work when parties disagree on what the home is worth?",

@@ -26,7 +26,7 @@ const faqs = [
       "Secure the property, confirm your legal authority to act, and get an honest assessment of the home's condition and realistic market value. David Stein can walk through the property, identify what affects value, and help you understand your options before making any commitments.",
   },
   {
-    question: "How does our team's appraisal background help with Yakima properties?",
+    question: "How does David Stein's appraisal background help with Yakima properties?",
     answer:
       "As both a licensed Washington State real estate broker and a state-certified residential appraiser, David Stein provides pricing grounded in actual condition assessment and local comparable data — not automated estimates. In Yakima, where property values are sensitive to condition and neighborhood, this dual perspective prevents costly pricing mistakes.",
   },

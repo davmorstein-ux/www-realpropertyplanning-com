@@ -26,7 +26,7 @@ const faqs = [
       "This is common in the Vancouver area. David Stein works with families where some members live in Portland, others out of state, and the property is in Clark County. He coordinates communication across all parties, manages local logistics, and ensures the process moves forward smoothly regardless of where each person is located.",
   },
   {
-    question: "How does our team's appraisal background help with Vancouver properties?",
+    question: "How does David Stein's appraisal background help with Vancouver properties?",
     answer:
       "As both a licensed Washington State real estate broker and a state-certified residential appraiser, David Stein provides pricing grounded in actual condition assessment and local market data — not automated estimates. This dual perspective is especially valuable in Vancouver, where proximity to Portland creates unique pricing dynamics that require careful local analysis.",
   },
