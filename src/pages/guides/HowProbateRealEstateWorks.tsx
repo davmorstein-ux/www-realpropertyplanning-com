@@ -77,12 +77,6 @@ const HowProbateRealEstateWorks = () => (
       </div>
     </section>
 
-    {/* Probate Timeline Diagram */}
-    <section className="bg-background py-8 md:py-12">
-      <div className="w-full">
-        <img src={probateTimeline} alt="Probate real estate sale timeline — 7 steps from owner passing through distribution of proceeds in Washington State" style={{ maxWidth: '700px', width: '100%', margin: '0 auto', display: 'block' }} loading="lazy" />
-      </div>
-    </section>
 
     <TrustStrip />
 
@@ -176,38 +170,6 @@ const HowProbateRealEstateWorks = () => (
       </div>
     </section>
 
-    {/* Valuation and Pricing */}
-    <section className="py-16 lg:py-24 bg-secondary">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">How Is Probate Property Valued and Priced?</h2>
-          <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-            Pricing probate property is fundamentally different from pricing a standard home sale. Estate properties often have years of deferred maintenance, outdated kitchens and bathrooms, aging mechanical systems, and physical conditions that automated valuation tools and standard market comparisons do not account for.
-          </p>
-          <p className="text-muted-foreground leading-relaxed mb-6">
-            As both a licensed real estate broker and a Washington State certified residential appraiser, Our team evaluates probate properties with a depth of analysis that goes beyond a standard comparative market analysis. He assesses the property's effective age, functional utility, physical depreciation, and market position — then develops a pricing strategy that reflects what buyers will actually pay given the property's real condition.
-          </p>
-          <p className="text-muted-foreground leading-relaxed">
-            This matters because overpricing leads to extended market time and declining buyer interest, while underpricing can create fiduciary concerns and leave estate value on the table. Accurate, defensible pricing protects both the executor's fiduciary obligations and the estate's financial interests. Learn more about <Link to="/why-valuation-matters" className="text-accent hover:text-gold underline underline-offset-4">why valuation expertise matters in estate sales</Link>.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    {/* Proof callout */}
-    <section className="py-10 bg-background">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
-          <ProofCallout
-            quote="Our team's dual background in brokerage and appraisal gave us confidence that the property was priced correctly. He made a complicated situation feel manageable."
-            attribution="Family Member, King County"
-            context="Probate property sale"
-            variant="accent"
-          />
-        </div>
-      </div>
-    </section>
-
     <MidPageCTA
       heading="Navigating a Probate Property Situation?"
       body="Our team provides a no-pressure consultation to review the property, discuss timing and legal coordination, and outline practical next steps."
@@ -215,96 +177,6 @@ const HowProbateRealEstateWorks = () => (
       microcopy="No pressure. Just practical guidance for your situation."
     />
 
-    {/* Property Preparation */}
-    <section className="py-16 lg:py-24 bg-background">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">What Preparation Does a Probate Property Typically Need?</h2>
-          <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-            Most probate properties need some level of preparation before going to market. The extent varies widely — from basic cleaning and decluttering to substantial cleanout, repairs, landscaping, and staging.
-          </p>
-          <p className="text-muted-foreground leading-relaxed mb-6">
-            Common preparation needs include removing decades of accumulated personal property, addressing deferred maintenance issues (roof, plumbing, electrical), updating cosmetic elements that affect buyer perception, clearing landscaping, and ensuring the property is safe and presentable for showings.
-          </p>
-          <p className="text-muted-foreground leading-relaxed">
-            Our team coordinates this entire process — scheduling vendors, managing timelines, and overseeing the work so the executor does not have to be on-site or manage contractors personally. He evaluates each potential improvement through a return-on-investment lens, advising the executor on which investments are likely to increase the sale price enough to justify the cost. See the full <Link to="/how-the-process-works" className="text-accent hover:text-gold underline underline-offset-4">step-by-step sale process</Link>.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    {/* Common Delays */}
-    <section className="py-16 lg:py-24 bg-secondary">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">What Are the Most Common Delays in Probate Property Sales?</h2>
-          <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-            Understanding the common causes of delay helps executors and attorneys plan proactively:
-          </p>
-          <ul className="space-y-4 mb-6">
-            {[
-              "Waiting for legal authority (letters testamentary) before beginning any real estate work",
-              "Disagreements among heirs about pricing, timing, or whether to sell",
-              "Extensive property cleanout needs when the home contains decades of belongings",
-              "Deferred maintenance that must be assessed before pricing can be finalized",
-              "Title issues including liens, encumbrances, or unclear ownership",
-              "Insurance gaps for vacant properties during the estate administration period",
-              "Appraisal challenges when buyer financing requires the property to meet certain condition standards",
-            ].map((item, i) => (
-              <li key={i} className="flex items-start gap-3">
-                <div className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
-                <span className="text-muted-foreground leading-relaxed">{item}</span>
-              </li>
-            ))}
-          </ul>
-          <p className="text-muted-foreground leading-relaxed">
-            Many of these delays can be minimized or avoided by engaging a probate-experienced broker early in the process — even before legal authority is formally granted.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    {/* How a Broker/Appraiser Helps */}
-    <section className="py-16 lg:py-24 bg-background">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="font-serif text-3xl text-foreground font-semibold mb-4">How Does a Broker With Appraisal Credentials Help?</h2>
-          <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-            Most real estate agents handle one or two probate transactions in their career. Real Property Planning focuses its practice on probate, estate, and transition-related real estate — bringing both brokerage expertise and certified appraisal knowledge to every engagement.
-          </p>
-          <p className="text-muted-foreground leading-relaxed mb-6">
-            This dual background means the executor and attorney receive more accurate property assessments, stronger pricing strategy, better preparation guidance, and more confident decision-making support throughout the process. It also means our team can anticipate appraisal-related challenges that could derail a buyer's financing — and address them before they become problems.
-          </p>
-          <p className="text-muted-foreground leading-relaxed">
-            For <Link to="/executors" className="text-accent hover:text-gold underline underline-offset-4">executors managing estate property</Link> for the first time, this combination of expertise provides a single point of contact who can handle the real estate side completely — from initial assessment through closing. For <Link to="/for-attorneys" className="text-accent hover:text-gold underline underline-offset-4">attorneys referring clients</Link>, it means a reliable, professional partner who understands fiduciary obligations and communicates clearly.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    {/* Related Resources */}
-    <section className="py-12 bg-secondary">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
-          <p className="text-sm font-semibold text-muted-foreground mb-3">Related Resources</p>
-          <div className="flex flex-wrap gap-3">
-            <Link to="/executors" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Executors</Link>
-            <span className="text-muted-foreground/40">·</span>
-            <Link to="/probate-estate-sales" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Probate & Estate Sales</Link>
-            <span className="text-muted-foreground/40">·</span>
-            <Link to="/for-attorneys" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Attorneys</Link>
-            <span className="text-muted-foreground/40">·</span>
-            <Link to="/why-valuation-matters" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Why Valuation Matters</Link>
-            <span className="text-muted-foreground/40">·</span>
-            <Link to="/how-the-process-works" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">How the Process Works</Link>
-            <span className="text-muted-foreground/40">·</span>
-            <Link to="/guides/what-executors-should-do" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">What Executors Should Do First</Link>
-            <span className="text-muted-foreground/40">·</span>
-            <Link to="/guides/inherited-house-washington" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">What to Do With an Inherited House</Link>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <PageFAQ faqs={faqs} heading="Probate Real Estate FAQs" />
 
