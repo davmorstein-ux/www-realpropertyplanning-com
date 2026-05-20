@@ -44,15 +44,15 @@ const LeadMagnetBlock = () => {
 
             <div className="inline-flex items-center justify-center mb-4">
               <span className="inline-block px-5 py-1.5 rounded-full text-gold font-bold tracking-[0.18em] uppercase text-xs bg-gradient-to-b from-gold/15 to-gold/5 border border-gold/25 shadow-[0_2px_8px_rgba(201,168,76,0.12),inset_0_1px_0_rgba(255,255,255,0.1),inset_0_-1px_0_rgba(0,0,0,0.08)]">
-                Free Resource
+                &zwnj;
               </span>
             </div>
 
             <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-4">
-              The Washington Executor's 10‑Step Checklist for Handling Real Estate
+              &zwnj;
             </h2>
             <p className="text-primary-foreground/75 text-lg leading-relaxed mb-6 max-w-2xl mx-auto">
-              The property side of estate administration catches most people off guard. This step-by-step checklist covers the things executors, trustees, and families tell us they wish someone had explained from the beginning.
+              &zwnj;
             </p>
 
             {/* Primary CTA button */}
