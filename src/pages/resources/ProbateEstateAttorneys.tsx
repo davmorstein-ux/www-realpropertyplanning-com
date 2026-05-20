@@ -56,7 +56,7 @@ const ProbateEstateAttorneys = () => (
               <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-start sm:gap-5">
                 <div className="shrink-0">
                   <img
-                    src={placeholderImg}
+                    src="/placeholder.svg"
                     alt="Photo placeholder for featured probate attorney"
                     className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-border shadow-sm"
                     loading="lazy"
