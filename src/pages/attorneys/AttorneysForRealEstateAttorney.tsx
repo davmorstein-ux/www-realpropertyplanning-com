@@ -1,4 +1,5 @@
 import AttorneyEducationalPage from "@/components/AttorneyEducationalPage";
+import heroImage from "@/assets/real-estate-attorney-hero.png";
 
 const AttorneysForRealEstateAttorney = () => (
   <AttorneyEducationalPage

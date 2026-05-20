@@ -1,8 +1,11 @@
 import AttorneyEducationalPage from "@/components/AttorneyEducationalPage";
+import heroImage from "@/assets/elder-law-attorney-hero.png";
 
 const AttorneysForElderLawAttorneys = () => (
   <AttorneyEducationalPage
     title="Elder Law Attorney"
+    heroImage={heroImage}
+    heroImageAlt="Elder law attorney at desk reviewing estate plan documents"
     path="/attorneys/for-elder-law-attorneys"
     seoTitle="Elder Law Attorneys in Washington State | Real Property Planning"
     seoDescription="How elder law attorneys help seniors plan for incapacity, Medicaid, guardianship, and housing transitions — and how those decisions intersect with real estate."
