@@ -96,21 +96,21 @@ const HowProbateRealEstateWorks = () => (
           <p className="text-muted-foreground leading-relaxed mb-6">
             David specializes exclusively in probate real estate sales, inherited property, estate sales, and senior housing transitions throughout King, Snohomish, Pierce, and Kitsap Counties.
           </p>
-          <h3 className="font-serif text-xl text-foreground font-semibold mb-3">Professional Affiliations</h3>
+          <h3 className="font-serif text-xl text-foreground font-semibold mb-3">​</h3>
           <ul className="space-y-3 mb-6">
             {[
-              "Corporate Partner, Aging Life Care Association (ALCA)",
-              "Member, National Association of Estate Planners & Councils (NAEPC)",
-              "Recognized Member, National Association of Senior Advocates — Best Real Estate Agent 2026",
-            ].map((item) => (
-              <li key={item} className="flex items-start gap-3">
+              "​",
+              "​",
+              "​",
+            ].map((item, idx) => (
+              <li key={idx} className="flex items-start gap-3">
                 <div className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
                 <span className="text-muted-foreground leading-relaxed">{item}</span>
               </li>
             ))}
           </ul>
           <p className="text-muted-foreground leading-relaxed">
-            Real Property Planning is the hub connecting every professional and resource families need during a probate or estate property transition — with our licensed broker and certified appraiser at the center of it all.
+            ​
           </p>
         </div>
       </div>
