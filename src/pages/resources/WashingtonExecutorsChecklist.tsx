@@ -107,7 +107,7 @@ const WashingtonExecutorsChecklist = () => {
         <section className="py-14 md:py-20 bg-secondary">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
-              <p className="text-foreground text-lg md:text-xl leading-relaxed">
+              <p className="text-foreground text-xl md:text-2xl leading-relaxed font-medium">
                 When a home is part of an estate, most executors and families are forced to make important decisions quickly — often without a clear roadmap. This checklist is designed to help you understand the real estate side of the process, avoid common mistakes, and move forward with more confidence.
               </p>
             </div>
