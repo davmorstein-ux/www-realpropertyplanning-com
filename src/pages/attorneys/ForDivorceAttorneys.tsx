@@ -7,6 +7,7 @@ import RelatedServices from "@/components/RelatedServices";
 import GoldCheck3D from "@/components/GoldCheck3D";
 import PageFAQ from "@/components/PageFAQ";
 import DominikMusafiaCard from "@/components/DominikMusafiaCard";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
@@ -85,15 +86,13 @@ const ForDivorceAttorneys = () => (
     <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="flex justify-center mb-1.5 md:mb-2">
+          <div className="flex justify-center">
             <img src={divorceCircle} alt="Divorce attorney at desk reviewing divorce agreement" className="block w-full max-w-[20rem] h-auto object-contain" loading="lazy" />
           </div>
-          <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight">
-            Divorce Attorneys
-          </h1>
         </div>
       </div>
     </section>
+    <HeroBandTitle>Divorce Attorney</HeroBandTitle>
 
     {/* Opening */}
     <section className="py-16 lg:py-20 bg-secondary">

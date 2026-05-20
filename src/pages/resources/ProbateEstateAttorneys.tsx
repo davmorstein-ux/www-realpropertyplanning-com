@@ -5,6 +5,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import CTASection from "@/components/CTASection";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import { Link } from "react-router-dom";
 import heroIcon from "@/assets/probate-attorney-hero.png";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
@@ -31,15 +32,13 @@ const ProbateEstateAttorneys = () => (
       <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="flex justify-center mb-1.5 md:mb-2">
+            <div className="flex justify-center">
               <img src={heroIcon} alt="Probate attorney at desk reviewing estate plan documents" className="block w-full max-w-[20rem] h-auto object-contain" loading="lazy" />
             </div>
-
-            <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-base">Resources</p>
-            <h1 className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground leading-tight mb-4">Probate & Estate Attorneys</h1>
           </div>
         </div>
       </section>
+      <HeroBandTitle>Probate Attorney</HeroBandTitle>
 
       {/* Featured Provider */}
       <section className="py-16 lg:py-20 bg-background">
