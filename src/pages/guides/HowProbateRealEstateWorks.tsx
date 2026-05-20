@@ -178,30 +178,6 @@ const HowProbateRealEstateWorks = () => (
     />
 
 
-    {/* Related Resources */}
-    <section className="py-12 bg-secondary">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
-          <p className="text-sm font-semibold text-muted-foreground mb-3">Related Resources</p>
-          <div className="flex flex-wrap gap-3">
-            <Link to="/executors" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Executors</Link>
-            <span className="text-muted-foreground/40">·</span>
-            <Link to="/probate-estate-sales" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Probate & Estate Sales</Link>
-            <span className="text-muted-foreground/40">·</span>
-            <Link to="/for-attorneys" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">For Attorneys</Link>
-            <span className="text-muted-foreground/40">·</span>
-            <Link to="/why-valuation-matters" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Why Valuation Matters</Link>
-            <span className="text-muted-foreground/40">·</span>
-            <Link to="/how-the-process-works" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">How the Process Works</Link>
-            <span className="text-muted-foreground/40">·</span>
-            <Link to="/guides/what-executors-should-do" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">What Executors Should Do First</Link>
-            <span className="text-muted-foreground/40">·</span>
-            <Link to="/guides/inherited-house-washington" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">What to Do With an Inherited House</Link>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <PageFAQ faqs={faqs} heading="Probate Real Estate FAQs" />
 
     <NextStepBlock
