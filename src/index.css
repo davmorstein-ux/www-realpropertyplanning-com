@@ -1741,9 +1741,8 @@ h3.hero-band-title {
 /* ===========================================================
    Global accessibility font-size overrides (elderly readability)
    =========================================================== */
-body,
-p {
-  font-size: 16px !important;
+body {
+  font-size: 16px;
 }
 
 h1 {
