@@ -52,10 +52,10 @@ const AttorneyEducationalPage = (p: AttorneyEducationalPageProps) => (
               loading="eager"
             />
           </div>
-          <HeroBandTitle>{p.title}</HeroBandTitle>
+          <HeroBandTitle compact>{p.title}</HeroBandTitle>
         </section>
       )}
-      {!p.heroImage && <HeroBandTitle>{p.title}</HeroBandTitle>}
+      {!p.heroImage && <HeroBandTitle compact>{p.title}</HeroBandTitle>}
 
 
       <FeaturedProviderPlaceholder heading={p.featuredHeading} altLabel={p.altLabel} />

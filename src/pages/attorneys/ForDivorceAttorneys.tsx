@@ -92,7 +92,7 @@ const ForDivorceAttorneys = () => (
           loading="eager"
         />
       </div>
-      <HeroBandTitle>Divorce Attorney</HeroBandTitle>
+      <HeroBandTitle compact>Divorce Attorney</HeroBandTitle>
     </section>
 
     {/* Opening */}
