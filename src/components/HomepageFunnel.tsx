@@ -8,7 +8,7 @@ const tiles = [
   {
     imgSrc: tilePlanning,
     imgAlt: "Older couple reviewing an estate plan together at home",
-    title: "Planning Ahead",
+    title: "I Need a Professional",
     description: "Prepare your family and your property — before a crisis arrives.",
     cta: "Start Planning",
     href: "/planning-before-a-crisis",
