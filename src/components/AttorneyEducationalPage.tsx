@@ -13,7 +13,6 @@ export interface AttorneyEducationalPageProps {
   seoDescription: string;
   featuredHeading: string;
   altLabel: string;
-  roleDescription: string;
   heroImage?: string;
   heroImageAlt?: string;
 }
@@ -45,16 +44,6 @@ const AttorneyEducationalPage = (p: AttorneyEducationalPageProps) => (
       {!p.heroImage && <HeroBandTitle compact>{p.title}</HeroBandTitle>}
 
       <FeaturedProviderPlaceholder heading={p.featuredHeading} altLabel={p.altLabel} />
-
-      <section className="py-20 md:py-28 bg-secondary">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-[800px] mx-auto">
-            <p className="text-foreground text-[20px] leading-[1.8] font-normal">
-              {p.roleDescription}
-            </p>
-          </div>
-        </div>
-      </section>
 
       <SiteDisclaimerBlock />
     </main>
