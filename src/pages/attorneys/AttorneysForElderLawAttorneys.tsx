@@ -38,16 +38,7 @@ const AttorneysForElderLawAttorneys = () => (
         altLabel="featured elder law attorney"
       />
 
-      <p
-        style={{
-          fontSize: "32px",
-          fontWeight: 700,
-          lineHeight: 1.8,
-          maxWidth: "850px",
-          margin: "40px auto",
-          textAlign: "left",
-        }}
-      >
+      <p className="text-3xl font-bold leading-relaxed max-w-3xl mx-auto my-10 px-6">
         An elder law attorney focuses on the legal needs that arise as people age — including long-term care planning, Medicaid eligibility, guardianship, conservatorship, and incapacity planning. They help seniors and their families make important decisions about care, housing, and assets before a crisis creates pressure. When the family home is part of the picture, an elder law attorney is often the most important advisor involved.
       </p>
 
