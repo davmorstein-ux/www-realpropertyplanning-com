@@ -147,13 +147,13 @@ const HowProbateRealEstateWorks = () => (
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
-            Have a Probate Property Situation to Discuss?
+            ​
           </h2>
           <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">
-            Our team provides confidential, no-pressure consultations for executors, attorneys, trustees, and families dealing with probate property throughout Washington State.
+            ​
           </p>
           <p className="text-primary-foreground/50 text-base mb-8">
-            A short conversation to understand your situation, answer questions, and plan practical next steps.
+            ​
           </p>
           <Link to="/contact">
             <Button variant="gold" size="lg">
