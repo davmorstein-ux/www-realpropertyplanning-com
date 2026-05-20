@@ -35,15 +35,9 @@ const HeroBandTitle = ({
 
   const titleStyle = {
     color: "#ffffff",
-    fontFamily: '"DM Sans", serif',
-    fontWeight: 600,
+    fontSize: "24px",
+    fontWeight: 700,
     textAlign: "center" as const,
-    lineHeight: 1.2,
-    fontSize: "clamp(18px, 2.6vw, 32px)",
-    opacity: 1,
-    margin: 0,
-    textTransform: "capitalize" as const,
-    wordSpacing: "normal",
   };
 
   useEffect(() => {
@@ -52,7 +46,10 @@ const HeroBandTitle = ({
   }, [bare]);
 
   const titleEl = (
-    <Tag className={`hero-band-title ${className}`.trim()} style={titleStyle}>
+    <Tag
+      className={`hero-band-title ${className}`.trim()}
+      style={{ ...titleStyle, fontSize: "24px" }}
+    >
       {children}
     </Tag>
   );
@@ -62,11 +59,16 @@ const HeroBandTitle = ({
   return (
     <>
       <div className="bg-white h-[3px]" aria-hidden="true" />
-      <div className={`bg-primary ${compact ? "py-3" : "py-9 md:py-10"}`} data-hero-band>
+      <div
+        className="bg-primary"
+        style={{ padding: "12px 24px", minHeight: 0 }}
+        data-hero-band
+      >
         {titleEl}
       </div>
     </>
   );
+
 };
 
 export default HeroBandTitle;
