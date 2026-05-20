@@ -55,7 +55,7 @@ const HomepageFunnel = () => (
         >
           Your Resource For Estate & Probate Properties, Along With Senior Transitions
         </h2>
-        <p className="text-foreground leading-relaxed text-2xl font-bold" style={{ fontSize: "20px" }}>
+        <p className="text-foreground leading-relaxed text-4xl font-bold" style={{ fontSize: "36px" }}>
           Select the box below that best describes your situation:
         </p>
       </div>
