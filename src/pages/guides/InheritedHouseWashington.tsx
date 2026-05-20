@@ -69,7 +69,7 @@ const InheritedHouseWashington = () => (
             className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
             loading="eager"
           />
-          <HeroBandTitle as="div">Sell The Home</HeroBandTitle>
+          <HeroBandTitle as="div">Inherited Property</HeroBandTitle>
         </div>
       </section>
 
