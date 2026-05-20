@@ -9,6 +9,7 @@ interface HeroBandTitleProps {
   /** Use tighter vertical padding in the navy band. */
   compact?: boolean;
   className?: string;
+}
 
 /**
  * Global standardized hero blue band title.
