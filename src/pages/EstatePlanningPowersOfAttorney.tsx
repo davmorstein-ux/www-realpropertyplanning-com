@@ -34,15 +34,18 @@ const EstatePlanningPowersOfAttorney = () => (
         altLabel="featured estate planning attorney"
       />
 
-      <section className="py-20 md:py-28 bg-secondary">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-[800px] mx-auto">
-            <p className="text-foreground text-[20px] leading-[1.8] font-normal">
-              An estate planning attorney helps individuals and families prepare for the future by drafting wills, trusts, powers of attorney, and healthcare directives. Their work ensures that your wishes are legally documented and that the right people have authority to act on your behalf if you cannot. Good estate planning can help families avoid confusion, conflict, and unnecessary probate proceedings.
-            </p>
-          </div>
-        </div>
-      </section>
+      <p
+        style={{
+          fontSize: "22px",
+          fontWeight: 700,
+          lineHeight: 1.8,
+          maxWidth: "800px",
+          margin: "40px auto",
+          textAlign: "center",
+        }}
+      >
+        An estate planning attorney helps individuals and families prepare for the future by drafting wills, trusts, powers of attorney, and healthcare directives. Their work ensures that your wishes are legally documented and that the right people have authority to act on your behalf if you cannot. Good estate planning can help families avoid confusion, conflict, and unnecessary probate proceedings.
+      </p>
 
       <SiteDisclaimerBlock />
     </main>
