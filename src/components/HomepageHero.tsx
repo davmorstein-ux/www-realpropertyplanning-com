@@ -474,7 +474,7 @@ const HomepageHero = () => {
 
       </section>
       <HeroBandTitle>
-        welcome to Real Property Planning
+        Welcome to Real Property Planning
       </HeroBandTitle>
     </div>
   );
