@@ -4,6 +4,8 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import FeaturedProviderPlaceholder from "@/components/FeaturedProviderPlaceholder";
 import SiteDisclaimerBlock from "@/components/SiteDisclaimerBlock";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import heroImage from "@/assets/estate-planning-attorney-hero.png";
 
@@ -37,6 +39,12 @@ const EstatePlanningPowersOfAttorney = () => (
       <p className="attorney-role-description">
         An estate planning attorney helps individuals and families prepare for the future by drafting wills, trusts, powers of attorney, and healthcare directives. Their work ensures that your wishes are legally documented and that the right people have authority to act on your behalf if you cannot. Good estate planning can help families avoid confusion, conflict, and unnecessary probate proceedings.
       </p>
+
+      <div className="flex justify-center my-8">
+        <Link to="/professionals/attorneys">
+          <Button variant="gold" size="lg">Back to Attorneys</Button>
+        </Link>
+      </div>
 
       <SiteDisclaimerBlock />
     </main>

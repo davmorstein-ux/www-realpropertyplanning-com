@@ -4,6 +4,8 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import FeaturedProviderPlaceholder from "@/components/FeaturedProviderPlaceholder";
 import SiteDisclaimerBlock from "@/components/SiteDisclaimerBlock";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import heroImage from "@/assets/family-law-attorney-hero.png";
 
@@ -41,6 +43,12 @@ const AttorneysForFamilyLawAttorneys = () => (
       <p className="attorney-role-description">
         A family law attorney helps families navigate legal matters involving children, custody, parenting plans, guardianship, and spousal support. Their work often intersects with real estate when a family home, inherited property, or shared assets need to be addressed as part of a legal resolution.
       </p>
+
+      <div className="flex justify-center my-8">
+        <Link to="/professionals/attorneys">
+          <Button variant="gold" size="lg">Back to Attorneys</Button>
+        </Link>
+      </div>
 
       <SiteDisclaimerBlock />
     </main>

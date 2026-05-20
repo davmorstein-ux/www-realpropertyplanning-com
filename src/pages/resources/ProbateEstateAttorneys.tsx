@@ -4,6 +4,8 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import FeaturedProviderPlaceholder from "@/components/FeaturedProviderPlaceholder";
 import SiteDisclaimerBlock from "@/components/SiteDisclaimerBlock";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import heroIcon from "@/assets/probate-attorney-hero.png";
 
@@ -43,6 +45,12 @@ const ProbateEstateAttorneys = () => (
       <p className="attorney-role-description">
         A probate attorney guides families, executors, and trustees through the legal process of settling an estate after someone passes away. They handle court filings, interpret wills and trust documents, resolve disputes among heirs, and ensure the estate is administered according to Washington State law. If the estate includes real property, a probate attorney is typically one of the first professionals involved.
       </p>
+
+      <div className="flex justify-center my-8">
+        <Link to="/professionals/attorneys">
+          <Button variant="gold" size="lg">Back to Attorneys</Button>
+        </Link>
+      </div>
 
       <SiteDisclaimerBlock />
     </main>

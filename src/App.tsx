@@ -160,6 +160,7 @@ const Realtor = lazy(() => import("./pages/Realtor"));
 const RealEstateAppraiser = lazy(() => import("./pages/RealEstateAppraiser"));
 const Professionals = lazy(() => import("./pages/Professionals"));
 const ProbateAttorneys = lazy(() => import("./pages/professionals/ProbateAttorneys"));
+const AttorneysDirectory = lazy(() => import("./pages/professionals/Attorneys"));
 const SeniorHousingAdvisors = lazy(() => import("./pages/professionals/SeniorHousingAdvisors"));
 const FinancialPlanners = lazy(() => import("./pages/professionals/FinancialPlanners"));
 const EstateSale = lazy(() => import("./pages/professionals/EstateSale"));
@@ -369,6 +370,7 @@ const App = () => (
           <Route path="/roles" element={<Roles />} />
           <Route path="/planning" element={<Planning />} />
           <Route path="/professionals-services" element={<ProfessionalsPage />} />
+          <Route path="/professionals/attorneys" element={<AttorneysDirectory />} />
           <Route path="/professionals/probate-attorneys" element={<ProbateAttorneys />} />
           <Route path="/professionals/senior-housing-advisors" element={<SeniorHousingAdvisors />} />
           <Route path="/professionals/financial-planners" element={<FinancialPlanners />} />

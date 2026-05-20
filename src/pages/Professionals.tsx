@@ -19,7 +19,7 @@ const categories = [
     icon: iconAttorneys,
     title: "Probate & Estate Attorneys",
     description: "Legal guidance for executors, trustees, and families settling an estate or navigating probate court.",
-    href: "/professionals/probate-attorneys",
+    href: "/professionals/attorneys",
   },
   {
     icon: iconSeniorLiving,
