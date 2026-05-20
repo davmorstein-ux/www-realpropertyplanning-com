@@ -142,28 +142,6 @@ const HowProbateRealEstateWorks = () => (
 
     <RelatedServices currentPath="/guides/how-probate-real-estate-works" />
 
-    {/* Bottom CTA */}
-    <section className="py-20 lg:py-28 bg-primary">
-      <div className="container px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-6">
-            ​
-          </h2>
-          <p className="text-primary-foreground/70 text-lg leading-relaxed mb-4">
-            ​
-          </p>
-          <p className="text-primary-foreground/50 text-base mb-8">
-            ​
-          </p>
-          <Link to="/contact">
-            <Button variant="gold" size="lg">
-              <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 mr-2 object-contain shrink-0"  loading="lazy"/>
-              Schedule a Consultation
-            </Button>
-          </Link>
-        </div>
-      </div>
-    </section>
 
     <DisclaimerSection />
     </main>
