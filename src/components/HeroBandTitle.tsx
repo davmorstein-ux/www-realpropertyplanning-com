@@ -29,8 +29,10 @@ const HeroBandTitle = ({
   children,
   as: Tag = "h1",
   bare = false,
+  compact = false,
   className = "",
 }: HeroBandTitleProps) => {
+
   const titleStyle = {
     color: "#ffffff",
     fontFamily: '"DM Sans", serif',
