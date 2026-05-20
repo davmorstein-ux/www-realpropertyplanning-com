@@ -9,6 +9,12 @@ import { ArrowRight } from "lucide-react";
 import { articleSchema } from "@/lib/schema";
 import wtdwHeroImage from "@/assets/building-trusted-professional-team-hero.png";
 import HeroBandTitle from "@/components/HeroBandTitle";
+import probateAttorneyImg from "@/assets/legal/probate-attorney.png";
+import estatePlanningAttorneyImg from "@/assets/legal/estate-planning-attorney.png";
+import elderLawAttorneyImg from "@/assets/legal/elder-law-attorney.png";
+import realEstateAttorneyImg from "@/assets/legal/real-estate-attorney.png";
+import familyLawAttorneyImg from "@/assets/legal/family-law-attorney.png";
+import divorceAttorneyImg from "@/assets/legal/divorce-attorney.png";
 
 type Card = {
   title: string;
@@ -20,10 +26,12 @@ type Card = {
 };
 
 const legal: Card[] = [
-  { title: "Estate Planning Attorneys", description: "Powers of attorney, wills, trusts, guardianship, and future legal planning.", href: "/estate-planning-powers-of-attorney", image: "/tiles/set2/power-of-attorney.webp", alt: "Estate planning attorneys Washington State", cta: "Learn More" },
-  { title: "Probate Attorneys", description: "Estate administration, inherited property, and legal coordination after a death.", href: "/resources/probate-estate-attorneys", image: "/tiles/set1/attorneys.webp", alt: "Probate attorneys Washington State", cta: "Learn More" },
-  { title: "Elder Law Attorneys", description: "Legal guidance for aging, care planning, and senior-related decisions.", href: "/attorneys/for-elder-law-attorneys", image: "/tiles/set1/attorneys.webp", alt: "Elder law attorneys Washington State", cta: "Learn More" },
-  { title: "Real Estate Attorneys", description: "Title, property transfers, and real estate legal matters.", href: "/attorneys/for-real-estate-attorneys", image: "/tiles/set1/attorneys.webp", alt: "Real estate attorneys Washington State", cta: "Learn More" },
+  { title: "Estate Planning Attorneys", description: "Powers of attorney, wills, trusts, guardianship, and future legal planning.", href: "/estate-planning-powers-of-attorney", image: estatePlanningAttorneyImg, alt: "Estate planning attorneys Washington State", cta: "Learn More" },
+  { title: "Probate Attorneys", description: "Estate administration, inherited property, and legal coordination after a death.", href: "/resources/probate-estate-attorneys", image: probateAttorneyImg, alt: "Probate attorneys Washington State", cta: "Learn More" },
+  { title: "Elder Law Attorneys", description: "Legal guidance for aging, care planning, and senior-related decisions.", href: "/attorneys/for-elder-law-attorneys", image: elderLawAttorneyImg, alt: "Elder law attorneys Washington State", cta: "Learn More" },
+  { title: "Real Estate Attorneys", description: "Title, property transfers, and real estate legal matters.", href: "/attorneys/for-real-estate-attorneys", image: realEstateAttorneyImg, alt: "Real estate attorneys Washington State", cta: "Learn More" },
+  { title: "Family Law Attorney", description: "Custody, parenting plans, and spousal support guidance for families navigating difficult transitions.", href: "/attorneys/for-family-law-attorneys", image: familyLawAttorneyImg, alt: "Family law attorneys Washington State", cta: "Learn More" },
+  { title: "Divorce Attorney", description: "Guidance through divorce proceedings, property division, and settlement agreements.", href: "/attorneys/for-divorce-attorneys", image: divorceAttorneyImg, alt: "Divorce attorneys Washington State", cta: "Learn More" },
 ];
 
 const financial: Card[] = [
