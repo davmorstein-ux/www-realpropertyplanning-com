@@ -16,7 +16,7 @@ const tiles = [
   {
     imgSrc: tileHelping,
     imgAlt: "Adult daughter hugging her senior mother on a couch",
-    title: "Helping a Loved One",
+    title: "I need a Professional",
     description: "Support an aging parent with care, housing, and next-step decisions.",
     cta: "See How",
     href: "/helping-aging-parents",
