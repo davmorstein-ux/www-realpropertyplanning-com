@@ -188,7 +188,7 @@ const ForProfessionals = () => {
       <section className="py-12 lg:py-16 bg-cream">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h3 className="font-serif text-xl text-foreground font-semibold mb-6">Professional Memberships &amp; Affiliations</h3>
+            <h3 className="font-serif text-xl text-foreground font-semibold mb-6">​</h3>
             <AffiliationBadgeGrid />
           </div>
         </div>
