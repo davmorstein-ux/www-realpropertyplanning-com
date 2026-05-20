@@ -105,6 +105,13 @@ const Footer = () => {
           <p className="text-primary-foreground text-base leading-relaxed max-w-3xl mx-auto mb-3">
             Real Property Planning — independent hub for probate, estate, and senior transition real estate in Washington State. Real Property Planning is not a law firm or tax advisor. For legal, tax, or probate-specific advice, consult a qualified professional.
           </p>
+          <p className="text-primary-foreground text-base leading-relaxed max-w-3xl mx-auto mb-3">
+            Real Property Planning is an independent educational hub. It does not provide legal, financial, tax, real estate brokerage, medical, or other professional services through this website. Professionals and companies referenced on this site are independent and are not employees, partners, members, or affiliates of Real Property Planning. Read the full{" "}
+            <Link to="/disclaimer" className="underline underline-offset-2 hover:text-gold transition-colors">
+              disclaimer
+            </Link>
+            .
+          </p>
           <p className="text-primary-foreground text-base leading-relaxed max-w-2xl mx-auto mb-3">
             Accessibility questions or concerns:{" "}
             <a href="mailto:info@realpropertyplanning.com" className="underline underline-offset-2 hover:text-gold transition-colors">
