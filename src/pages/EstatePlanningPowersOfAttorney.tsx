@@ -200,14 +200,17 @@ const EstatePlanningPowersOfAttorney = () => {
       <Header />
       <main id="main-content">
         {/* HERO */}
-        <section className="bg-primary pt-12 pb-10 lg:pt-20 lg:pb-14">
-          <div className="container px-6 lg:px-8">
-            <div className="flex justify-center">
-              <img src={heroImage} alt="Estate planning attorney at desk reviewing estate plan documents" className="block w-full max-w-[22rem] h-auto object-contain" loading="lazy" />
-            </div>
+        <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
+          <div style={{ lineHeight: 0 }}>
+            <img
+              src={heroImage}
+              alt="Estate planning attorney at desk reviewing estate plan documents"
+              className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
+              loading="eager"
+            />
+            <HeroBandTitle>Estate Planning Attorney</HeroBandTitle>
           </div>
         </section>
-        <HeroBandTitle>Estate Planning Attorney</HeroBandTitle>
 
         {/* FEATURED PROVIDER */}
         <section className="py-16 lg:py-20 bg-background">
