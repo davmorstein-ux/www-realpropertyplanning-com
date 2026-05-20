@@ -70,5 +70,3 @@ const HeroBandTitle = ({
 };
 
 export default HeroBandTitle;
-
-export default HeroBandTitle;
