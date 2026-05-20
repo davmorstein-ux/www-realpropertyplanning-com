@@ -77,12 +77,6 @@ const HowProbateRealEstateWorks = () => (
       </div>
     </section>
 
-    {/* Probate Timeline Diagram */}
-    <section className="bg-background py-8 md:py-12">
-      <div className="w-full">
-        <img src={probateTimeline} alt="Probate real estate sale timeline — 7 steps from owner passing through distribution of proceeds in Washington State" style={{ maxWidth: '700px', width: '100%', margin: '0 auto', display: 'block' }} loading="lazy" />
-      </div>
-    </section>
 
     <TrustStrip />
 
