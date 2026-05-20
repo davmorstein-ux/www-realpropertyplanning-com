@@ -67,7 +67,7 @@ const HeroBandTitle = ({
       <div className="bg-white h-[3px]" aria-hidden="true" />
       <div
         className="bg-primary"
-        style={{ padding: "12px 24px", minHeight: 0 }}
+        style={{ padding: "8px 24px", minHeight: 0 }}
         data-hero-band
       >
         {titleEl}
