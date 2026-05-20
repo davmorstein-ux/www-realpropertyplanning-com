@@ -41,19 +41,20 @@ const AttorneyEducationalPage = (p: AttorneyEducationalPageProps) => (
       ]}
     />
     <Header />
-    <main id="main-content">
-      <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            {p.heroImage && (
-              <div className="flex justify-center">
-                <img src={p.heroImage} alt={p.heroImageAlt || ""} className="block w-full max-w-[20rem] h-auto object-contain" loading="lazy" />
-              </div>
-            )}
+      {p.heroImage && (
+        <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
+          <div style={{ lineHeight: 0 }}>
+            <img
+              src={p.heroImage}
+              alt={p.heroImageAlt || ""}
+              className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
+              loading="eager"
+            />
+            <HeroBandTitle>{p.title}</HeroBandTitle>
           </div>
-        </div>
-      </section>
-      <HeroBandTitle>{p.title}</HeroBandTitle>
+        </section>
+      )}
+      {!p.heroImage && <HeroBandTitle>{p.title}</HeroBandTitle>}
 
       <FeaturedProviderPlaceholder heading={p.featuredHeading} altLabel={p.altLabel} />
 
