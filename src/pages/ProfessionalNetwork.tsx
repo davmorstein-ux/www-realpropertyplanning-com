@@ -88,16 +88,16 @@ const ProfessionalNetwork = () => {
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="text-gold font-bold tracking-widest uppercase mb-4 text-base">
-              Professional Network
+              Independent Professionals
             </p>
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight mb-6">
-              Professional Network & Trusted Resources
+              Independent Professionals & Trusted Resources
             </h1>
             <p className="text-xl text-primary-foreground/80 leading-relaxed">
-              Real Property Planning works collaboratively with a network of
-              experienced professionals who help families navigate major life
-              transitions, estate matters, senior care decisions, and housing
-              changes throughout Washington State.
+              Real Property Planning is an independent educational hub that helps Washington families and the professionals who serve them learn about probate, estate transitions, senior housing, and related topics — and find independent professionals who may help.
+            </p>
+            <p className="text-base text-primary-foreground/70 leading-relaxed mt-4">
+              The professionals referenced here are independent and are not employees, partners, or affiliates of Real Property Planning. This directory is provided for educational and informational purposes only.
             </p>
           </div>
         </div>
