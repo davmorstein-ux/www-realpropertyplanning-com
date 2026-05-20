@@ -26,6 +26,8 @@ export interface AttorneyEducationalPageProps {
   services: { title: string; description: string }[];
   faqs: { question: string; answer: string }[];
   ctaIntro: string;
+  heroImage?: string;
+  heroImageAlt?: string;
 }
 
 const AttorneyEducationalPage = (p: AttorneyEducationalPageProps) => (
@@ -42,6 +44,11 @@ const AttorneyEducationalPage = (p: AttorneyEducationalPageProps) => (
       <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
+            {p.heroImage && (
+              <div className="flex justify-center mb-1.5 md:mb-2">
+                <img src={p.heroImage} alt={p.heroImageAlt || ""} className="block w-full max-w-[20rem] h-auto object-contain" loading="lazy" />
+              </div>
+            )}
             <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight">
               {p.title}
             </h1>
