@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconDivorce from "@/assets/icons/attorney-divorce-property-icon-washington.webp";
-import divorceCircle from "@/assets/divorce-circle-transparent.webp";
+import divorceCircle from "@/assets/divorce-attorney-hero.png";
 
 const intersections = [
   "Establishing a shared, defensible market value for the marital home",
@@ -85,6 +85,9 @@ const ForDivorceAttorneys = () => (
     <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
       <div className="container px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
+          <div className="flex justify-center mb-1.5 md:mb-2">
+            <img src={divorceCircle} alt="Divorce attorney at desk reviewing divorce agreement" className="block w-full max-w-[20rem] h-auto object-contain" loading="lazy" />
+          </div>
           <h1 className="font-serif text-4xl md:text-5xl text-primary-foreground font-semibold leading-tight">
             Divorce Attorneys
           </h1>

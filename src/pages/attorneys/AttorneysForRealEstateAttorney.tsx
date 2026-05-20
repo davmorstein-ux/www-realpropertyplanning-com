@@ -1,8 +1,11 @@
 import AttorneyEducationalPage from "@/components/AttorneyEducationalPage";
+import heroImage from "@/assets/real-estate-attorney-hero.png";
 
 const AttorneysForRealEstateAttorney = () => (
   <AttorneyEducationalPage
     title="Real Estate Attorney"
+    heroImage={heroImage}
+    heroImageAlt="Real estate attorney at desk reviewing a real estate matter"
     path="/attorneys/for-real-estate-attorney"
     seoTitle="Real Estate Attorneys in Washington State | Real Property Planning"
     seoDescription="How real estate attorneys support property transactions in probate, estate sales, inherited property transfers, and senior housing transitions in Washington State."
