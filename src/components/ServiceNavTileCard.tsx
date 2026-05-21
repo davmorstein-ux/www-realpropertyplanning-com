@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import type { ServiceTile } from "./service-nav-tiles-data";
-import tileShell from "@/assets/tile-shell-v2.svg";
+import tileShell from "@/assets/tile-shell-v3.svg";
 
 /* SEO-enriched alt text for each tile */
 const tileAltText: Record<string, string> = {
