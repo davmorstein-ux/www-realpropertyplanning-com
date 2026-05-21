@@ -83,7 +83,7 @@ const HeroSection = () => {
 
           <div className="hidden lg:flex justify-center">
             <div className="relative">
-              <div className="w-80 h-96 rounded-2xl overflow-hidden border-4 border-gold/30 shadow-2xl">
+              <div className="w-80 h-96 rounded-2xl overflow-hidden border-4 border-gold/30 shadow-sm">
                 <img
                   src={daveHeadshot}
                    alt="Real Property Planning, probate real estate specialist and certified appraiser in Western Washington"

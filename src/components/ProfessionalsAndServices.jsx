@@ -6,8 +6,8 @@ const styles = `
   .p1section { font-family: 'DM Sans', sans-serif; padding: 0 40px 64px; }
   .p1grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1300px; margin: 0 auto 20px; }
   .p1tile { width: 100%; cursor: pointer; text-decoration: none; display: block; }
-  .p1card { width: 100%; height: 380px; background: #FFFFFF; border-radius: 16px; border: 2px solid #C9A84C; box-shadow: 0 2px 4px rgba(0,0,0,0.06), 0 8px 16px rgba(0,0,0,0.08), 0 16px 32px rgba(0,0,0,0.06), inset 0 0 0 1px rgba(201,168,76,0.35); display: flex; flex-direction: column; position: relative; transition: all 0.3s ease; overflow: hidden; }
-  .p1tile:hover .p1card { box-shadow: 0 4px 8px rgba(0,0,0,0.08), 0 12px 24px rgba(0,0,0,0.10), 0 24px 48px rgba(0,0,0,0.08), inset 0 0 0 1px rgba(201,168,76,0.5); transform: translateY(-6px); }
+  .p1card { width: 100%; height: 380px; background: #FFFFFF; border-radius: 16px; border: 2px solid #C9A84C; box-shadow: 0 2px 8px rgba(0,0,0,0.08), inset 0 0 0 1px rgba(201,168,76,0.35); display: flex; flex-direction: column; position: relative; transition: all 0.3s ease; overflow: hidden; }
+  .p1tile:hover .p1card { box-shadow: 0 4px 12px rgba(0,0,0,0.10), inset 0 0 0 1px rgba(201,168,76,0.5); transform: translateY(-6px); }
   .p1imgbox { width: 100%; height: 220px; flex-shrink: 0; background: #FFFFFF; display: flex; align-items: flex-start; justify-content: center; overflow: hidden; transition: transform .4s ease; }
   .p1tile:hover .p1imgbox { transform: scale(1.03); }
   .p1img { display: block; width: 100%; height: 220px; object-fit: contain; object-position: top center; }
