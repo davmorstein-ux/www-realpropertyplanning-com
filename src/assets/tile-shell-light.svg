@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="420" viewBox="0 0 300 420" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="hsl(0, 0%, 100%)"/>
+      <stop offset="50%" stop-color="hsl(40, 25%, 97%)"/>
+      <stop offset="100%" stop-color="hsl(38, 18%, 94%)"/>
+    </linearGradient>
+    <linearGradient id="topHighlight" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="rgba(255,255,255,0)"/>
+      <stop offset="50%" stop-color="rgba(255,255,255,0.85)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </linearGradient>
+    <linearGradient id="bottomLedge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(210,200,188,0)"/>
+      <stop offset="70%" stop-color="rgba(210,200,188,0.6)"/>
+      <stop offset="100%" stop-color="rgba(200,190,178,0.8)"/>
+    </linearGradient>
+    <linearGradient id="goldBorder" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="hsl(42, 70%, 68%)"/>
+      <stop offset="50%" stop-color="hsl(38, 65%, 55%)"/>
+      <stop offset="100%" stop-color="hsl(42, 70%, 65%)"/>
+    </linearGradient>
+  </defs>
+  <!-- Gold border outer ring -->
+  <rect x="1" y="1" width="298" height="418" rx="21" ry="21"
+    fill="none"
+    stroke="url(#goldBorder)"
+    stroke-width="3"/>
+  <!-- Main card body -->
+  <rect x="4" y="4" width="292" height="412" rx="19" ry="19"
+    fill="url(#cardGrad)"/>
+  <!-- Top inner highlight line -->
+  <rect x="30" y="5" width="240" height="2" rx="1"
+    fill="url(#topHighlight)"/>
+  <!-- Bottom ledge shadow -->
+  <rect x="14" y="412" width="272" height="5" rx="2"
+    fill="url(#bottomLedge)"/>
+</svg>
