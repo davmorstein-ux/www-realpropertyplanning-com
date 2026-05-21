@@ -95,7 +95,7 @@ const ServiceNavTileCard = ({ tile, index, columns = 3 }: { tile: ServiceTile; i
         src={tileShell}
         alt=""
         aria-hidden="true"
-        className="block h-auto w-full pointer-events-none select-none drop-shadow-[0_12px_24px_hsl(220_18%_20%/0.16)]"
+        className="block h-auto w-full pointer-events-none select-none drop-shadow-[0_3px_6px_hsl(220_18%_20%/0.07)]"
         draggable={false}
        loading="lazy"/>
 
