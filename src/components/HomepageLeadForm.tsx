@@ -62,7 +62,7 @@ const HomepageLeadForm = () => {
   }
 
   return (
-    <div className="bg-card rounded-2xl p-8 md:p-10 shadow-lg">
+    <div className="bg-card rounded-2xl p-8 md:p-10 shadow-sm">
       <h3 className="font-serif text-2xl text-foreground font-semibold mb-2">
         Send a Message
       </h3>
