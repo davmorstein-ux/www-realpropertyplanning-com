@@ -102,7 +102,7 @@ const ZillowReviewsCarousel = () => {
               }`}
             >
               <div
-                className="rounded-xl border p-6 md:p-10 text-center shadow-md"
+                className="rounded-xl border p-6 md:p-10 text-center shadow-sm"
                 style={{
                   backgroundColor: "hsl(0 0% 100%)",
                   borderColor: "hsl(220 20% 88%)",
