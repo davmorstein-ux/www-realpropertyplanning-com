@@ -894,8 +894,8 @@ body {
 }
 
 .tile-hover:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+  transform: translateY(-4px);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.10));
 }
 
 @media (min-width: 640px) {

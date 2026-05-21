@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import type { ServiceTile } from "./service-nav-tiles-data";
-import tileShell from "@/assets/property-services-tile-shell-washington.webp";
+import tileShell from "@/assets/tile-shell-light.svg";
 
 /* SEO-enriched alt text for each tile */
 const tileAltText: Record<string, string> = {
@@ -95,7 +95,7 @@ const ServiceNavTileCard = ({ tile, index, columns = 3 }: { tile: ServiceTile; i
         src={tileShell}
         alt=""
         aria-hidden="true"
-        className="block h-auto w-full pointer-events-none select-none drop-shadow-[0_3px_6px_hsl(220_18%_20%/0.07)]"
+        className="block h-auto w-full pointer-events-none select-none"
         draggable={false}
        loading="lazy"/>
 
