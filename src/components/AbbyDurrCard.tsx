@@ -13,7 +13,7 @@ const AbbyDurrCard = () => (
           Featured Providers
         </p>
         <h2 className="font-serif text-3xl text-foreground font-semibold mb-8 text-center">
-          Abby Durr — Senior Living Advisor
+          ​
         </h2>
 
         <div className="bg-secondary border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 p-5 sm:p-6">
