@@ -180,7 +180,7 @@ const Header = () => {
             </div>
           </div>
         ) : (
-          /* ── Desktop header layout (unchanged) ── */
+          /* ── Desktop header layout — single row ── */
           <div
             style={{
               display: "flex",
@@ -193,11 +193,144 @@ const Header = () => {
               <img
                 src="/rpp-logo-v4.webp"
                 alt="Real Property Planning"
-                style={{ height: 64, width: "auto", maxWidth: "none", display: "block", objectFit: "contain" }}
+                style={{ height: 56, width: "auto", maxWidth: "none", display: "block", objectFit: "contain" }}
               />
             </Link>
-            
-            <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+
+            <nav
+              ref={dropdownRef}
+              aria-label="Main navigation"
+              style={{
+                display: "flex",
+                flexWrap: "nowrap",
+                justifyContent: "center",
+                alignItems: "center",
+                gap: 24,
+                flex: 1,
+              }}
+            >
+              {NAV.map((item) => {
+                const active =
+                  pathname === item.href || (item.children && item.children.some((c) => c.href === pathname));
+                const linkStyle = {
+                  ...fontBody,
+                  color: "rgba(255,255,255,0.92)",
+                  textDecoration: "none",
+                  fontSize: 15,
+                  fontWeight: 700 as const,
+                  letterSpacing: "0.08em",
+                  textTransform: "uppercase" as const,
+                  paddingBottom: 2,
+                  borderBottom: active ? "1px solid #fff" : "1px solid transparent",
+                };
+
+                if (item.children) {
+                  const isOpen = openDropdown === item.label;
+                  return (
+                    <div
+                      key={item.label}
+                      style={{ position: "relative" }}
+                      onMouseEnter={() => openMenu(item.label)}
+                      onMouseLeave={scheduleClose}
+                    >
+                      <button
+                        type="button"
+                        data-nav-button=""
+                        className="nav-link-hover"
+                        onClick={() => setOpenDropdown(isOpen ? null : item.label)}
+                        style={{
+                          ...linkStyle,
+                          background: "transparent",
+                          border: "none",
+                          borderBottom: linkStyle.borderBottom,
+                          cursor: "pointer",
+                          display: "inline-flex",
+                          alignItems: "center",
+                          gap: 6,
+                          padding: 0,
+                          paddingBottom: 2,
+                          lineHeight: "inherit",
+                          margin: 0,
+                          appearance: "none",
+                          WebkitAppearance: "none",
+                        }}
+                        aria-haspopup="true"
+                        aria-expanded={isOpen}
+                      >
+                        {item.label}
+                        <span
+                          style={{
+                            fontSize: 10,
+                            transform: isOpen ? "rotate(180deg)" : "none",
+                            transition: "transform 0.2s",
+                          }}
+                        >
+                          ▾
+                        </span>
+                      </button>
+                      {isOpen && (
+                        <div
+                          role="menu"
+                          style={{
+                            position: "absolute",
+                            top: "100%",
+                            left: "50%",
+                            transform: "translateX(-50%)",
+                            marginTop: 0,
+                            minWidth: 260,
+                            background: "rgba(8,13,25,0.97)",
+                            backdropFilter: "blur(10px)",
+                            WebkitBackdropFilter: "blur(10px)",
+                            border: "1px solid rgba(255,255,255,0.12)",
+                            borderRadius: 10,
+                            padding: "16px 8px 8px",
+                            boxShadow: "0 12px 32px rgba(0,0,0,0.4)",
+                            zIndex: 60,
+                          }}
+                        >
+                          {item.children.map((child) => {
+                            const childActive = pathname === child.href;
+                            return (
+                              <Link
+                                key={child.href}
+                                to={child.href}
+                                role="menuitem"
+                                className="nav-link-hover"
+                                onClick={() => setOpenDropdown(null)}
+                                style={{
+                                  ...fontBody,
+                                  display: "block",
+                                  padding: "10px 14px",
+                                  color: childActive ? "#fff" : "rgba(255,255,255,0.88)",
+                                  background: childActive ? "rgba(255,255,255,0.08)" : "transparent",
+                                  textDecoration: "none",
+                                  fontSize: 13,
+                                  fontWeight: 700,
+                                  letterSpacing: "0.06em",
+                                  textTransform: "uppercase",
+                                  borderRadius: 6,
+                                  whiteSpace: "nowrap",
+                                }}
+                              >
+                                {child.label}
+                              </Link>
+                            );
+                          })}
+                        </div>
+                      )}
+                    </div>
+                  );
+                }
+
+                return (
+                  <Link key={item.href} to={item.href} className="nav-link-hover" style={linkStyle}>
+                    {item.label}
+                  </Link>
+                );
+              })}
+            </nav>
+
+            <div style={{ display: "flex", alignItems: "center", gap: 12, flexShrink: 0 }}>
               <a
                 href="tel:2069003015"
                 style={{
@@ -219,144 +352,6 @@ const Header = () => {
           </div>
         )}
 
-        {!isMobile && (
-          <nav
-            ref={dropdownRef}
-            aria-label="Main navigation"
-            style={{
-              marginTop: 4,
-              display: "flex",
-              flexWrap: "nowrap",
-              justifyContent: "center",
-              alignItems: "center",
-              width: "100%",
-              gap: 24,
-            }}
-          >
-            {NAV.map((item) => {
-              const active =
-                pathname === item.href || (item.children && item.children.some((c) => c.href === pathname));
-              const linkStyle = {
-                ...fontBody,
-                color: "rgba(255,255,255,0.92)",
-                textDecoration: "none",
-                fontSize: 16,
-                fontWeight: 700 as const,
-                letterSpacing: "0.08em",
-                textTransform: "uppercase" as const,
-                paddingBottom: 4,
-                borderBottom: active ? "1px solid #fff" : "1px solid transparent",
-              };
-
-              if (item.children) {
-                const isOpen = openDropdown === item.label;
-                return (
-                  <div
-                    key={item.label}
-                    style={{ position: "relative" }}
-                    onMouseEnter={() => openMenu(item.label)}
-                    onMouseLeave={scheduleClose}
-                  >
-                    <button
-                      type="button"
-                      data-nav-button=""
-                      className="nav-link-hover"
-                      onClick={() => setOpenDropdown(isOpen ? null : item.label)}
-                      style={{
-                        ...linkStyle,
-                        background: "transparent",
-                        border: "none",
-                        borderBottom: linkStyle.borderBottom,
-                        cursor: "pointer",
-                        display: "inline-flex",
-                        alignItems: "center",
-                        alignSelf: "center",
-                        verticalAlign: "middle",
-                        gap: 6,
-                        padding: 0,
-                        paddingBottom: 4,
-                        lineHeight: "inherit",
-                        margin: 0,
-                        transform: "translateY(-4px)",
-                        appearance: "none",
-                        WebkitAppearance: "none",
-                      }}
-                      aria-haspopup="true"
-                      aria-expanded={isOpen}
-                    >
-                      {item.label}
-                      <span
-                        style={{
-                          fontSize: 10,
-                          transform: isOpen ? "rotate(180deg)" : "none",
-                          transition: "transform 0.2s",
-                        }}
-                      >
-                        ▾
-                      </span>
-                    </button>
-                    {isOpen && (
-                      <div
-                        role="menu"
-                        style={{
-                          position: "absolute",
-                          top: "100%",
-                          left: "50%",
-                          transform: "translateX(-50%)",
-                          marginTop: 0,
-                          minWidth: 260,
-                          background: "rgba(8,13,25,0.97)",
-                          backdropFilter: "blur(10px)",
-                          WebkitBackdropFilter: "blur(10px)",
-                          border: "1px solid rgba(255,255,255,0.12)",
-                          borderRadius: 10,
-                          padding: "16px 8px 8px",
-                          boxShadow: "0 12px 32px rgba(0,0,0,0.4)",
-                          zIndex: 60,
-                        }}
-                      >
-                        {item.children.map((child) => {
-                          const childActive = pathname === child.href;
-                          return (
-                            <Link
-                              key={child.href}
-                              to={child.href}
-                              role="menuitem"
-                              className="nav-link-hover"
-                              onClick={() => setOpenDropdown(null)}
-                              style={{
-                                ...fontBody,
-                                display: "block",
-                                padding: "10px 14px",
-                                color: childActive ? "#fff" : "rgba(255,255,255,0.88)",
-                                background: childActive ? "rgba(255,255,255,0.08)" : "transparent",
-                                textDecoration: "none",
-                                fontSize: 13,
-                                fontWeight: 700,
-                                letterSpacing: "0.06em",
-                                textTransform: "uppercase",
-                                borderRadius: 6,
-                                whiteSpace: "nowrap",
-                              }}
-                            >
-                              {child.label}
-                            </Link>
-                          );
-                        })}
-                      </div>
-                    )}
-                  </div>
-                );
-              }
-
-              return (
-                <Link key={item.href} to={item.href} className="nav-link-hover" style={linkStyle}>
-                  {item.label}
-                </Link>
-              );
-            })}
-          </nav>
-        )}
 
         {isMobile && menuOpen && (
           <nav
