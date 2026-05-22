@@ -153,7 +153,7 @@ const HomepageHero = () => {
                   whiteSpace: "nowrap",
                 }}
               >
-                {isMobile ? "CALL" : "CALL (206) 900-3015"}
+                {isMobile ? "CALL" : "(206) 900-3015"}
               </a>
               {isMobile && (
                 <button
