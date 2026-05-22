@@ -31,7 +31,7 @@ const AbbyDurrCard = () => (
                 <img
                   src={silverAgeLogo}
                   alt="Silver Age Senior Living Advisors logo"
-                  className="h-[64px] w-auto object-contain mx-auto sm:mx-0 block"
+                  className="h-[80px] w-auto object-contain mx-auto sm:mx-0 block"
                   loading="lazy"
                 />
               </div>
