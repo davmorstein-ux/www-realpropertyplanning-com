@@ -12,7 +12,6 @@ type NavChild = { label: string; href: string };
 type NavItem = { label: string; href: string; children?: NavChild[] };
 
 const NAV: NavItem[] = [
-  { label: "Home", href: "/" },
   { label: "Resources", href: "/resources" },
   { label: "Professionals", href: "/building-your-trusted-professional-team" },
   { label: "About", href: "/about" },
