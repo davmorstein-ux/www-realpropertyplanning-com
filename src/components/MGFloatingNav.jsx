@@ -42,18 +42,18 @@ const MGFloatingNav = ({
     zIndex: 9999,
     backgroundColor: "#1e3a5f",
     opacity: 1,
-    borderRadius: "80px",
-    padding: "12px 24px",
+    borderRadius: "60px",
+    padding: "9px 18px",
     display: "flex",
     alignItems: "center",
-    gap: "12px",
+    gap: "9px",
     boxShadow: "0 4px 20px rgba(0,0,0,0.4)",
     overflow: "visible",
   };
 
   const circleBase = {
-    width: "116px",
-    height: "116px",
+    width: "87px",
+    height: "87px",
     borderRadius: "50%",
     backgroundColor: "#f5f0e8",
     opacity: 1,
@@ -72,25 +72,25 @@ const MGFloatingNav = ({
     ...circleBase,
     flexDirection: "row",
     justifyContent: "space-between",
-    paddingLeft: "8px",
-    paddingRight: "8px",
+    paddingLeft: "6px",
+    paddingRight: "6px",
   };
 
   const wheelImgStyle = {
-    width: "80px",
-    height: "80px",
+    width: "60px",
+    height: "60px",
     objectFit: "contain",
     display: "block",
     animation: wheelHovered ? "wheelWiggle 0.35s ease-in-out infinite" : "none",
     marginBottom: "2px",
-    marginTop: "-6px",
+    marginTop: "-4px",
   };
 
   const homeLabelStyle = {
-    fontSize: "17px",
+    fontSize: "13px",
     fontWeight: "900",
     color: "#1e3355",
-    marginTop: "3px",
+    marginTop: "2px",
     letterSpacing: "0.05em",
     lineHeight: 1,
     display: "block",
@@ -98,12 +98,12 @@ const MGFloatingNav = ({
 
   // R label — bright red on hover
   const rLabelStyle = {
-    fontSize: "34px",
+    fontSize: "25px",
     fontWeight: "900",
     color: gearSide === "R" ? "#cc0000" : "#1e3355",
     lineHeight: 1,
     userSelect: "none",
-    width: "28px",
+    width: "21px",
     textAlign: "center",
     flexShrink: 0,
     cursor: "pointer",
@@ -112,12 +112,12 @@ const MGFloatingNav = ({
 
   // F label — bright green on hover
   const fLabelStyle = {
-    fontSize: "34px",
+    fontSize: "25px",
     fontWeight: "900",
     color: gearSide === "F" ? "#00cc00" : "#1e3355",
     lineHeight: 1,
     userSelect: "none",
-    width: "28px",
+    width: "21px",
     textAlign: "center",
     flexShrink: 0,
     cursor: "pointer",
@@ -126,8 +126,8 @@ const MGFloatingNav = ({
 
   const shifterContainerStyle = {
     position: "relative",
-    width: "40px",
-    height: "90px",
+    width: "30px",
+    height: "68px",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -141,8 +141,8 @@ const MGFloatingNav = ({
     left: "50%",
     transform: `translateX(-50%) rotate(${gearSide === "R" ? -22 : gearSide === "F" ? 22 : 0}deg)`,
     transformOrigin: "bottom center",
-    width: "32px",
-    height: "54px",
+    width: "24px",
+    height: "40px",
     objectFit: "contain",
     transition: "transform 0.2s ease",
     zIndex: 2,
@@ -153,8 +153,8 @@ const MGFloatingNav = ({
     bottom: 0,
     left: "50%",
     transform: "translateX(-50%)",
-    width: "54px",
-    height: "40px",
+    width: "40px",
+    height: "30px",
     objectFit: "contain",
     zIndex: 1,
   };
@@ -171,15 +171,15 @@ const MGFloatingNav = ({
 
   const chatLabelStyle = {
     position: "absolute",
-    right: "-120px",
+    right: "-90px",
     top: "50%",
     transform: "translateY(-50%)",
     backgroundColor: "#1e3355",
     color: "white",
-    fontSize: "15px",
+    fontSize: "11px",
     fontWeight: "700",
-    padding: "5px 10px",
-    borderRadius: "6px",
+    padding: "4px 8px",
+    borderRadius: "5px",
     whiteSpace: "nowrap",
     opacity: chatHovered ? 1 : 0,
     transition: "opacity 0.2s ease",
