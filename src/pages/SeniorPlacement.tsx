@@ -7,6 +7,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import GoldCheckItem from "@/components/GoldCheckItem";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import AbbyDurrCard from "@/components/AbbyDurrCard";
 import housingOptionsHero from "@/assets/housing_options_hero.png";
 
 const housingOptions = [
@@ -116,6 +117,8 @@ const SeniorPlacement = () => {
             <HeroBandTitle>Senior Placement &amp; Housing Options</HeroBandTitle>
           </div>
         </section>
+
+        <AbbyDurrCard />
 
         {/* Housing Options */}
         <section className="py-12 md:py-16 bg-secondary">
