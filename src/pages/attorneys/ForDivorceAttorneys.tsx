@@ -36,7 +36,7 @@ const ForDivorceAttorneys = () => (
         <HeroBandTitle compact>Divorce Attorney</HeroBandTitle>
       </section>
 
-      {/* Featured Provider */}
+      {/* Featured Providers */}
       <DominikMusafiaCard />
 
       <p className="attorney-role-description">

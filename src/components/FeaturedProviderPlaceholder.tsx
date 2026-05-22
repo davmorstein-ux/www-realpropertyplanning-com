@@ -13,7 +13,7 @@ const FeaturedProviderPlaceholder = ({ heading, altLabel }: Props) => (
     <div className="container px-6 lg:px-8">
       <div className="max-w-[900px] mx-auto">
         <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm text-center">
-          Featured Provider
+          Featured Providers
         </p>
         <h2 className="font-serif text-3xl text-foreground font-semibold mb-8 text-center">
           {heading}
