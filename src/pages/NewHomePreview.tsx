@@ -103,7 +103,7 @@ export default function NewHomePreview() {
                 whiteSpace: "nowrap",
               }}
             >
-              CALL (206) 900-3015
+              (206) 900-3015
             </a>
           </div>
         </div>
