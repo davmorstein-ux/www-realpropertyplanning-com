@@ -12,7 +12,6 @@ type NavChild = { label: string; href: string };
 type NavItem = { label: string; href: string; children?: NavChild[] };
 
 const NAV: NavItem[] = [
-  { label: "Home", href: "/" },
   { label: "Resources", href: "/resources" },
   { label: "Professionals", href: "/building-your-trusted-professional-team" },
   { label: "About", href: "/about" },
@@ -100,7 +99,7 @@ const Header = () => {
           width: "100%",
           zIndex: 50,
           borderRadius: 0,
-          padding: "20px 48px 8px",
+          padding: "6px 48px 4px",
           marginBottom: 0,
           backgroundColor: scrolled ? "rgba(8, 13, 25, 0.95)" : "rgba(8, 13, 25, 0.75)",
           backdropFilter: scrolled ? "blur(10px)" : "blur(10px)",
@@ -194,7 +193,7 @@ const Header = () => {
               <img
                 src="/rpp-logo-v4.webp"
                 alt="Real Property Planning"
-                style={{ height: 88, width: "auto", maxWidth: "none", display: "block", objectFit: "contain" }}
+                style={{ height: 64, width: "auto", maxWidth: "none", display: "block", objectFit: "contain" }}
               />
             </Link>
             
@@ -205,7 +204,7 @@ const Header = () => {
                   ...fontBody,
                   color: "#fff",
                   background: "#1a5fa8",
-                  padding: "10px 18px",
+                  padding: "8px 16px",
                   borderRadius: 6,
                   fontWeight: 700,
                   fontSize: 13,
@@ -225,13 +224,13 @@ const Header = () => {
             ref={dropdownRef}
             aria-label="Main navigation"
             style={{
-              marginTop: 14,
+              marginTop: 4,
               display: "flex",
               flexWrap: "nowrap",
-              justifyContent: "space-between",
+              justifyContent: "center",
               alignItems: "center",
               width: "100%",
-              gap: 14,
+              gap: 24,
             }}
           >
             {NAV.map((item) => {
