@@ -30,8 +30,8 @@ const SiteBottomNav = () => {
           bottom: 14px;
           transform: translateX(-50%);
           z-index: 9999;
-          height: 70px;
-          padding: 4px 28px;
+          height: 82px;
+          padding: 6px 28px;
           background-color: rgba(245, 241, 232, 0.92);
           backdrop-filter: blur(12px);
           -webkit-backdrop-filter: blur(12px);
