@@ -19,7 +19,7 @@ const SiteBottomNav = () => {
   const { pathname } = useLocation();
   const navigate = useNavigate();
   const [gearSide, setGearSide] = useState<"none" | "R" | "F">("none");
-  const [headlampOn, setHeadlampOn] = useState(false);
+  
 
 
   return (
@@ -102,6 +102,10 @@ const SiteBottomNav = () => {
           transition: transform 0.2s ease;
         }
         .sbn-item:hover .sbn-icon { transform: translateY(-2px) scale(1.06); }
+        .sbn-headlamp-off { display: block; height: 62px; width: auto; object-fit: contain; }
+        .sbn-headlamp-on { display: none; height: 62px; width: auto; object-fit: contain; }
+        .sbn-item:hover .sbn-headlamp-off { display: none; }
+        .sbn-item:hover .sbn-headlamp-on { display: block; }
         @keyframes sbn-needle-spin {
           0% { transform: translate(-50%, -50%) rotate(0deg); }
           100% { transform: translate(-50%, -50%) rotate(720deg); }
@@ -446,21 +450,25 @@ const SiteBottomNav = () => {
           </button>
 
           {/* 5. Contact */}
-          <img src={headlampsOn} style={{display:'none'}} aria-hidden="true" alt="" />
           <Link
             to="/contact"
             className="sbn-item"
             data-tip="Contact us"
             aria-label="Contact"
-            onMouseEnter={() => setHeadlampOn(true)}
-            onMouseLeave={() => setHeadlampOn(false)}
           >
             <div className="sbn-icon-wrap" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', overflow: 'visible' }}>
               <img
-                src={headlampOn ? headlampsOn : headlampsOff}
+                src={headlampsOff}
                 alt=""
                 aria-hidden="true"
-                style={{ height: '62px', width: 'auto', objectFit: 'contain', display: 'block', transition: 'none' }}
+                className="sbn-headlamp-off"
+                loading="eager"
+              />
+              <img
+                src={headlampsOn}
+                alt=""
+                aria-hidden="true"
+                className="sbn-headlamp-on"
                 loading="eager"
               />
             </div>
