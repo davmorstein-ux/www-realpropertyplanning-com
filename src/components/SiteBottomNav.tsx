@@ -369,7 +369,7 @@ const SiteBottomNav = () => {
 
           {/* 3. Site Map */}
           <Link to="/sitemap" className="sbn-item" data-tip="Site Map" aria-label="Site Map">
-            <div className="sbn-icon-wrap">
+            <div className="sbn-icon-wrap" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', overflow: 'visible', minWidth: '130px' }}>
               <img src={roadmapIcon} alt="" aria-hidden="true" style={{ height: '75px', width: 'auto', objectFit: 'contain' }} loading="lazy" />
             </div>
             <span className="sbn-label">SITE MAP</span>
@@ -391,7 +391,7 @@ const SiteBottomNav = () => {
 
           {/* 5. Contact */}
           <Link to="/contact" className="sbn-item" data-tip="Contact us" aria-label="Contact">
-            <div className="sbn-icon-wrap">
+            <div className="sbn-icon-wrap" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', overflow: 'visible', minWidth: '130px' }}>
               <img src={headlampIcon} alt="" aria-hidden="true" style={{ height: '75px', width: 'auto', objectFit: 'contain' }} loading="lazy" />
             </div>
             <span className="sbn-label">CONTACT</span>
