@@ -221,14 +221,13 @@ const SiteBottomNav = () => {
 
         @media (max-width: 639px) {
           .sbn-bar {
-            height: 82px;
-            padding: 6px 10px;
+            padding: 12px 10px 8px;
             bottom: 8px;
             border-radius: 9999px;
             width: calc(100vw - 12px);
           }
           .sbn-inner { gap: 0; }
-          .sbn-label { font-size: 10px; letter-spacing: 0.06em; }
+          .sbn-label { font-size: 9px !important; letter-spacing: 0.08em; }
         }
       `}</style>
 
