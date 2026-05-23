@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import steeringWheel from "@/assets/steering-wheel-transparent.png";
-import gearBase from "@/assets/gear_shifter_base.png";
-import gearTop from "@/assets/gear_shifter_top.png";
-import compassIcon from "@/assets/nav-compass-transparent.png";
-import roadmapIcon from "@/assets/nav-roadmap-transparent.png";
-import headlampIcon from "@/assets/nav-headlamp-transparent.png";
-import speedometerIcon from "@/assets/nav-speedometer-transparent.png";
+import steeringWheel from "@/assets/nav/steering-wheel.webp";
+import gearBase from "@/assets/nav/gear-boot.webp";
+import gearTop from "@/assets/nav/gear-knob.webp";
+import compassIcon from "@/assets/nav/compass.webp";
+import roadmapIcon from "@/assets/nav/map.webp";
+import waypointIcon from "@/assets/nav/waypoint.webp";
+import headlampIcon from "@/assets/nav/headlamps.webp";
+import speedometerIcon from "@/assets/nav/speedometer.webp";
 
 /**
  * Sticky bottom navigation bar shown on every page.
@@ -98,6 +99,12 @@ const SiteBottomNav = () => {
       tooltip: "Resources",
       img: roadmapIcon,
       to: "/resources",
+      custom: (
+        <div className="sbn-map">
+          <img src={roadmapIcon} alt="" aria-hidden="true" className="sbn-map-base" />
+          <img src={waypointIcon} alt="" aria-hidden="true" className="sbn-map-pin" />
+        </div>
+      ),
     },
     {
       key: "search",
@@ -233,6 +240,28 @@ const SiteBottomNav = () => {
           line-height: 1;
         }
         .sbn-gear-half:hover { color: #ffd98a; }
+        .sbn-map {
+          position: relative;
+          width: 50px;
+          height: 50px;
+        }
+        .sbn-map-base {
+          width: 50px;
+          height: 50px;
+          object-fit: contain;
+          display: block;
+        }
+        .sbn-map-pin {
+          position: absolute;
+          top: -4px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 22px;
+          height: 22px;
+          object-fit: contain;
+          filter: drop-shadow(0 2px 3px rgba(0,0,0,0.4));
+        }
+        .sbn-item:hover .sbn-map-pin { transform: translateX(-50%) translateY(-2px); transition: transform 0.2s ease; }
         .sbn-gear-graphic {
           position: relative;
           width: 40px;
