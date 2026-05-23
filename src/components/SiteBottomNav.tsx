@@ -143,7 +143,7 @@ const SiteBottomNav = () => {
           0% { transform: translateX(-50%) translateY(0px); }
           40% { transform: translateX(-50%) translateY(6px); }
           70% { transform: translateX(-50%) translateY(-3px); }
-          100% { transform: translateX(-50%) translateY(1.  0px); }
+          100% { transform: translateX(-50%) translateY(0px); }
         }
         .sbn-map-wrap { position: relative; display: inline-block; }
         .sbn-waypoint {
