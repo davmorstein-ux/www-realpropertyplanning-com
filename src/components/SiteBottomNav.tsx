@@ -88,22 +88,22 @@ const SiteBottomNav = () => {
         }
         .sbn-icon-tall {
           width: auto !important;
-          height: 75px !important;
+          height: 52px !important;
           object-fit: contain !important;
           display: block !important;
           background: transparent !important;
         }
         .sbn-icon {
-          width: 55px !important;
-          height: 55px !important;
+          width: 48px !important;
+          height: 48px !important;
           object-fit: contain;
           display: block;
           background: transparent;
           transition: transform 0.2s ease;
         }
         .sbn-item:hover .sbn-icon { transform: translateY(-2px) scale(1.06); }
-        .sbn-headlamp-off { display: block; height: 62px; width: auto; object-fit: contain; }
-        .sbn-headlamp-on { display: none; height: 62px; width: auto; object-fit: contain; }
+        .sbn-headlamp-off { display: block; height: 52px; width: auto; object-fit: contain; }
+        .sbn-headlamp-on { display: none; height: 52px; width: auto; object-fit: contain; }
         .sbn-item:hover .sbn-headlamp-off { display: none; }
         .sbn-item:hover .sbn-headlamp-on { display: block; }
         @keyframes sbn-needle-spin {
