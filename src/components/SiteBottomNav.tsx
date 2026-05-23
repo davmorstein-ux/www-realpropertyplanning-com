@@ -33,15 +33,15 @@ const SiteBottomNav = () => {
           z-index: 9999;
           padding-top: 2px !important;
           padding-bottom: 2px !important;
-          padding-left: 20px !important;
-          padding-right: 20px !important;
+          padding-left: 8px !important;
+          padding-right: 8px !important;
           height: 78px !important;
           overflow: hidden !important;
           background-color: rgba(245, 241, 232, 0.92);
           backdrop-filter: blur(12px);
           -webkit-backdrop-filter: blur(12px);
           border: 2px solid #CA0600;
-          border-radius: 40px;
+          border-radius: 9999px 9999px 0px 0px;
           box-shadow: 0 10px 30px rgba(0,0,0,0.18);
           display: flex;
           align-items: center;
@@ -52,8 +52,8 @@ const SiteBottomNav = () => {
           max-width: 95% !important;
           align-self: center !important;
           box-sizing: border-box !important;
-          padding-left: 20px !important;
-          padding-right: 20px !important;
+          padding-left: 8px !important;
+          padding-right: 8px !important;
         }
         .sbn-inner {
           width: 100%;
