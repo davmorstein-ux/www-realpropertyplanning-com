@@ -1,6 +1,22 @@
+import { Link } from "react-router-dom";
 import ProfessionPageTemplate from "@/components/ProfessionPageTemplate";
+import TiffanyLaneCard from "@/components/TiffanyLaneCard";
+import { Button } from "@/components/ui/button";
 
 const FinancialPlanners = () => {
+  const featured = (
+    <div>
+      <div className="-mt-12 lg:-mt-16">
+        <TiffanyLaneCard />
+      </div>
+      <div className="text-center -mt-8">
+        <Link to="/for-financial-planners">
+          <Button variant="gold" size="lg">Learn More</Button>
+        </Link>
+      </div>
+    </div>
+  );
+
   return (
     <ProfessionPageTemplate
       title="Financial Planners & Advisors"
@@ -39,6 +55,7 @@ const FinancialPlanners = () => {
         { title: "Care Managers & Social Workers", href: "/professionals/care-managers" },
       ]}
       professionLabel="financial planner or advisor"
+      featuredOverride={featured}
     />
   );
 };
