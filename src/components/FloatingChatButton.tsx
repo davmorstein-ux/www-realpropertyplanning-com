@@ -17,8 +17,8 @@ const FloatingChatButton = () => {
           position: fixed;
           bottom: 20px;
           right: 20px;
-          width: 80px;
-          height: 80px;
+          width: 105px;
+          height: 105px;
           z-index: 10000;
           background: transparent;
           border: 0;
