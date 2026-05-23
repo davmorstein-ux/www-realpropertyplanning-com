@@ -81,7 +81,7 @@ const SiteBottomNav = () => {
         .sbn-item:hover { color: #C9A84C; }
         .sbn-icon-wrap {
           width: 55px !important;
-          height: 55px !important;
+          height: 70px !important;
           position: relative;
           display: flex;
           align-items: center;
@@ -104,9 +104,12 @@ const SiteBottomNav = () => {
         }
         .sbn-item:hover .sbn-icon { transform: translateY(-2px) scale(1.06); }
         .sbn-label {
-          display: block !important;
-          margin-top: 4px !important;
-          padding-top: 1px !important;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+          height: 20px !important;
+          margin-top: 0 !important;
+          padding-top: 0 !important;
           font-weight: 800 !important;
           font-size: 12px !important;
           text-align: center !important;
@@ -191,7 +194,7 @@ const SiteBottomNav = () => {
         /* Chat — circular couple photo with tire ring snug around it */
         .sbn-chat-outer {
           width: 55px !important;
-          height: 55px !important;
+          height: 70px !important;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -278,7 +281,8 @@ const SiteBottomNav = () => {
             role="group"
             aria-label="Back or forward"
           >
-            <div className="sbn-icon-wrap" style={{ marginTop: '-8px' }}>
+            <div className="sbn-icon-wrap">
+
               <div
                 style={{
                   position: "relative",
@@ -394,7 +398,7 @@ const SiteBottomNav = () => {
             data-tip="Search the site"
             aria-label="Search"
           >
-            <div className="sbn-icon-wrap" style={{ marginTop: '-8px' }}>
+            <div className="sbn-icon-wrap">
               <img src={compassIcon} alt="" aria-hidden="true" loading="lazy" style={{ height: '62px', width: 'auto', objectFit: 'contain', display: 'block', transform: 'rotate(35deg)', transition: 'transform 0.2s ease' }} />
             </div>
             <span className="sbn-label">SEARCH</span>
