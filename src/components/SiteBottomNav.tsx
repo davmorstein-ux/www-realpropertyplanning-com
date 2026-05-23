@@ -5,7 +5,7 @@ import gearStickImg from "@/assets/gear_stick_only.png";
 import gearBootImg from "@/assets/gear_boot_only.png";
 import compassIcon from "@/assets/nav/compass_final.png";
 import compassNeedle from "@/assets/nav/compass_needle_final.png";
-import waypointPin from "@/assets/nav/waypoint.webp";
+import waypointPin from "@/assets/nav/waypoint_final.png";
 import roadmapIcon from "@/assets/nav/map_final.png";
 import headlampIcon from "@/assets/nav/headlamps_final.png";
 import headlampsOn from "@/assets/nav/headlamps_on_final.png";
