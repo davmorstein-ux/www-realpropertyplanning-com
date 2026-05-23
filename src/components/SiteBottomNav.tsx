@@ -47,7 +47,7 @@ const SiteBottomNav = () => {
           display: grid;
           grid-template-columns: repeat(6, 1fr);
           gap: 4px;
-          align-items: end;
+          align-items: center;
           justify-items: center;
         }
         .sbn-item {
@@ -68,8 +68,8 @@ const SiteBottomNav = () => {
         }
         .sbn-item:hover { color: #C9A84C; }
         .sbn-icon-wrap {
-          width: 70px;
-          height: 70px;
+          width: 90px;
+          height: 90px;
           position: relative;
           display: flex;
           align-items: center;
