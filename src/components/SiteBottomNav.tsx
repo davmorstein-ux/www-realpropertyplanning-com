@@ -31,8 +31,8 @@ const SiteBottomNav = () => {
           bottom: 14px;
           transform: translateX(-50%);
           z-index: 9999;
-          padding-top: 8px !important;
-          padding-bottom: 8px !important;
+          padding-top: 12px !important;
+          padding-bottom: 4px !important;
           padding-left: 8px !important;
           padding-right: 8px !important;
           height: 78px !important;
@@ -376,7 +376,7 @@ const SiteBottomNav = () => {
                   aria-hidden="true"
                   style={{
                     position: "absolute",
-                    top: 2,
+                    top: 6,
                     left: "50%",
                     transform: `translateX(-50%) rotate(${
                       gearSide === "R" ? -22 : gearSide === "F" ? 22 : 0
