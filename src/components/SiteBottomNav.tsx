@@ -389,7 +389,7 @@ const SiteBottomNav = () => {
               <img src={chatCouple} alt="" aria-hidden="true" className="sbn-chat-couple" />
               <img src={chatTire} alt="" aria-hidden="true" className="sbn-chat-tire" />
             </div>
-            <span className="sbn-label">​</span>
+            <span className="sbn-label">CHAT</span>
           </button>
         </div>
         {/* Suppress unused warning */}
