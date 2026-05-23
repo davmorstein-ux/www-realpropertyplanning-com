@@ -391,7 +391,7 @@ const SiteBottomNav = () => {
             data-tip="Search the site"
             aria-label="Search"
           >
-            <div className="sbn-icon-wrap" style={{ marginTop: '6px' }}>
+            <div className="sbn-icon-wrap" style={{ marginTop: '-8px' }}>
               <img src={compassIcon} alt="" aria-hidden="true" loading="lazy" style={{ height: '62px', width: 'auto', objectFit: 'contain', display: 'block', transform: 'rotate(35deg)', transition: 'transform 0.2s ease' }} />
             </div>
             <span className="sbn-label">SEARCH</span>
