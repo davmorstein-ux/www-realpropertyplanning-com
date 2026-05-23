@@ -376,8 +376,8 @@ const SiteBottomNav = () => {
 
           {/* 3. Site Map */}
           <Link to="/sitemap" className="sbn-item" data-tip="Site Map" aria-label="Site Map">
-            <div className="sbn-icon-wrap" style={{ width: 90, height: 90 }}>
-              <img src={roadmapIcon} alt="" aria-hidden="true" className="sbn-icon" loading="lazy" style={{ width: 90, height: 90 }} />
+            <div className="sbn-icon-wrap sbn-wrap-tall">
+              <img src={roadmapIcon} alt="" aria-hidden="true" className="sbn-icon sbn-icon-tall" loading="lazy" />
             </div>
             <span className="sbn-label">SITE MAP</span>
           </Link>
