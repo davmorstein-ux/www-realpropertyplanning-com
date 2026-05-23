@@ -352,7 +352,7 @@ const SiteBottomNav = () => {
             <div className="sbn-icon-wrap" style={{ width: 90, height: 90 }}>
               <img src={roadmapIcon} alt="" aria-hidden="true" className="sbn-icon" loading="lazy" style={{ width: 90, height: 90 }} />
             </div>
-            <span className="sbn-label">​</span>
+            <span className="sbn-label">SITE MAP</span>
           </Link>
 
           {/* 4. Search */}
