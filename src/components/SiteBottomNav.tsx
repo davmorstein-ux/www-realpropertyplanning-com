@@ -4,6 +4,7 @@ import steeringWheel from "@/assets/steering-wheel-transparent.png";
 import gearStickImg from "@/assets/gear_stick_only.png";
 import gearBootImg from "@/assets/gear_boot_only.png";
 import compassIcon from "@/assets/nav/compass_final.png";
+import compassNeedle from "@/assets/nav/compass_needle_final.png";
 import roadmapIcon from "@/assets/nav/map_final.png";
 import headlampIcon from "@/assets/nav/headlamps_final.png";
 import chatCouple from "@/assets/chat-couple.png";
@@ -101,6 +102,23 @@ const SiteBottomNav = () => {
           transition: transform 0.2s ease;
         }
         .sbn-item:hover .sbn-icon { transform: translateY(-2px) scale(1.06); }
+        @keyframes sbn-needle-spin {
+          0% { transform: translate(-50%, -50%) rotate(0deg); }
+          100% { transform: translate(-50%, -50%) rotate(720deg); }
+        }
+        .sbn-compass-wrap { position: relative; display: inline-block; }
+        .sbn-compass-needle {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 50%;
+          height: auto;
+          transform: translate(-50%, -50%) rotate(0deg);
+          pointer-events: none;
+        }
+        .sbn-item:hover .sbn-compass-needle {
+          animation: sbn-needle-spin 0.8s ease-out;
+        }
         .sbn-label {
           display: flex !important;
           align-items: center !important;
@@ -397,7 +415,10 @@ const SiteBottomNav = () => {
             aria-label="Search"
           >
             <div className="sbn-icon-wrap">
-              <img src={compassIcon} alt="" aria-hidden="true" loading="lazy" style={{ height: '62px', width: 'auto', objectFit: 'contain', display: 'block', transform: 'rotate(35deg)', transition: 'transform 0.2s ease' }} />
+              <span className="sbn-compass-wrap">
+                <img src={compassIcon} alt="" aria-hidden="true" loading="lazy" style={{ height: '62px', width: 'auto', objectFit: 'contain', display: 'block', transform: 'rotate(35deg)', transition: 'transform 0.2s ease' }} />
+                <img src={compassNeedle} alt="" aria-hidden="true" loading="lazy" className="sbn-compass-needle" />
+              </span>
             </div>
             <span className="sbn-label">SEARCH</span>
           </button>
