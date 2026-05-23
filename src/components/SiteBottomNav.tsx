@@ -69,16 +69,16 @@ const SiteBottomNav = () => {
         }
         .sbn-item:hover { color: #C9A84C; }
         .sbn-icon-wrap {
-          width: 80px;
-          height: 80px;
+          width: 90px;
+          height: 90px;
           position: relative;
           display: flex;
           align-items: center;
           justify-content: center;
         }
         .sbn-icon {
-          width: 80px;
-          height: 80px;
+          width: 90px;
+          height: 90px;
           object-fit: contain;
           display: block;
           background: transparent;
@@ -254,8 +254,8 @@ const SiteBottomNav = () => {
               className="sbn-icon-wrap"
               style={{
                 position: "relative",
-                width: 30,
-                height: 54,
+                width: 22.5,
+                height: 40.5,
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
@@ -275,8 +275,8 @@ const SiteBottomNav = () => {
                     gearSide === "R" ? -22 : gearSide === "F" ? 22 : 0
                   }deg)`,
                   transformOrigin: "bottom center",
-                  width: 19,
-                  height: 32,
+                  width: 14.25,
+                  height: 24,
                   objectFit: "contain",
                   transition: "transform 0.2s ease",
                   zIndex: 2,
@@ -292,8 +292,8 @@ const SiteBottomNav = () => {
                   bottom: 0,
                   left: "50%",
                   transform: "translateX(-50%)",
-                  width: 32,
-                  height: 24,
+                  width: 24,
+                  height: 18,
                   objectFit: "contain",
                   zIndex: 1,
                   pointerEvents: "none",
@@ -312,8 +312,8 @@ const SiteBottomNav = () => {
                 style={{
                   position: "absolute",
                   top: 0,
-                  left: "-22px",
-                  width: "calc(50% + 22px)",
+                  left: "-16.5px",
+                  width: "calc(50% + 16.5px)",
                   height: "100%",
                   background: "transparent",
                   border: 0,
@@ -334,8 +334,8 @@ const SiteBottomNav = () => {
                 style={{
                   position: "absolute",
                   top: 0,
-                  right: "-22px",
-                  width: "calc(50% + 22px)",
+                  right: "-16.5px",
+                  width: "calc(50% + 16.5px)",
                   height: "100%",
                   background: "transparent",
                   border: 0,
