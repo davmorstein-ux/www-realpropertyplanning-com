@@ -445,7 +445,10 @@ const SiteBottomNav = () => {
           {/* 5. Contact */}
           <Link to="/contact" className="sbn-item" data-tip="Contact us" aria-label="Contact">
             <div className="sbn-icon-wrap" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', overflow: 'visible' }}>
-              <img src={headlampIcon} alt="" aria-hidden="true" className="sbn-headlamp" style={{ height: '62px', width: 'auto', objectFit: 'contain' }} loading="lazy" />
+              <span className="sbn-headlamp-wrap">
+                <img src={headlampIcon} alt="" aria-hidden="true" className="sbn-headlamp" style={{ height: '62px', width: 'auto', objectFit: 'contain', display: 'block' }} loading="lazy" />
+                <span className="sbn-headlamp-beams" aria-hidden="true" />
+              </span>
             </div>
             <span className="sbn-label">CONTACT</span>
           </Link>
