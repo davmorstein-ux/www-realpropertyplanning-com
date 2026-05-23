@@ -238,7 +238,7 @@ const SiteBottomNav = () => {
             <div className="sbn-icon-wrap">
               <img src={steeringWheel} alt="" aria-hidden="true" className="sbn-wheel" loading="lazy" />
             </div>
-            <span className="sbn-label">​</span>
+            <span className="sbn-label">HOME</span>
           </Link>
 
           {/* 2. Back / Forward gear shifter — exact stacking from MGFloatingNav */}
