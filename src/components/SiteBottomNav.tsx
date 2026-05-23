@@ -172,22 +172,22 @@ const SiteBottomNav = () => {
 
         /* Chat — circular couple photo with tire ring snug around it */
         .sbn-chat-outer {
-          width: 90px;
-          height: 90px;
+          width: 55px !important;
+          height: 55px !important;
           display: flex;
           align-items: center;
           justify-content: center;
         }
         .sbn-chat-wrap {
           position: relative;
-          width: 70px;
-          height: 70px;
+          width: 55px !important;
+          height: 55px !important;
         }
         .sbn-chat-couple {
           position: absolute;
-          inset: 9px;
-          width: calc(100% - 18px);
-          height: calc(100% - 18px);
+          inset: 7px;
+          width: calc(100% - 14px);
+          height: calc(100% - 14px);
           border-radius: 50%;
           object-fit: cover;
           display: block;
@@ -212,8 +212,8 @@ const SiteBottomNav = () => {
 
         /* Home steering wheel — exact wheelImgStyle from MGFloatingNav */
         .sbn-wheel {
-          width: 70px !important;
-          height: 70px !important;
+          width: 55px !important;
+          height: 55px !important;
           object-fit: contain;
           display: block;
           margin-top: 0;
