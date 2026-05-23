@@ -1,7 +1,8 @@
+import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import steeringWheel from "@/assets/nav/steering-wheel.webp";
-import gearBoot from "@/assets/nav/gear-boot.webp";
-import gearKnob from "@/assets/nav/gear-knob.webp";
+import gearStickImg from "@/assets/gear_stick_only.png";
+import gearBootImg from "@/assets/gear_boot_only.png";
 import compassIcon from "@/assets/nav/compass.webp";
 import roadmapIcon from "@/assets/nav/map-clean.png";
 import headlampIcon from "@/assets/nav/headlamps-clean.png";
@@ -10,11 +11,11 @@ import chatTire from "@/assets/chat-tire.png";
 
 /**
  * Sticky bottom navigation bar shown on every page.
- * Six vintage-car-themed icons, all sized 56x56, evenly spaced.
  */
 const SiteBottomNav = () => {
   const { pathname } = useLocation();
   const navigate = useNavigate();
+  const [gearSide, setGearSide] = useState<"none" | "R" | "F">("none");
 
   const openChat = () => {
     window.dispatchEvent(new Event("rpp-open-chat"));
@@ -85,7 +86,7 @@ const SiteBottomNav = () => {
         }
         .sbn-item:hover .sbn-icon { transform: translateY(-2px) scale(1.06); }
         .sbn-label {
-          font-size: 10px;
+          font-size: 9px !important;
           font-weight: 700;
           letter-spacing: 0.08em;
           text-transform: uppercase;
@@ -221,31 +222,110 @@ const SiteBottomNav = () => {
             <span className="sbn-label">Home</span>
           </Link>
 
-          {/* 2. Back / Forward gear shifter */}
+          {/* 2. Back / Forward gear shifter — exact stacking from MGFloatingNav */}
           <div
             className="sbn-item"
             data-tip="Back / Forward"
             role="group"
             aria-label="Back or forward"
           >
-            <div className="sbn-gear-wrap sbn-icon-wrap">
-              <img src={gearBoot} alt="" aria-hidden="true" className="sbn-gear-boot" />
-              <img src={gearKnob} alt="" aria-hidden="true" className="sbn-gear-knob" />
+            <div
+              className="sbn-icon-wrap"
+              style={{
+                position: "relative",
+                width: 30,
+                height: 68,
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "flex-end",
+                flexShrink: 0,
+              }}
+            >
+              <img
+                src={gearStickImg}
+                alt=""
+                aria-hidden="true"
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: "50%",
+                  transform: `translateX(-50%) rotate(${
+                    gearSide === "R" ? -22 : gearSide === "F" ? 22 : 0
+                  }deg)`,
+                  transformOrigin: "bottom center",
+                  width: 24,
+                  height: 40,
+                  objectFit: "contain",
+                  transition: "transform 0.2s ease",
+                  zIndex: 2,
+                  pointerEvents: "none",
+                }}
+              />
+              <img
+                src={gearBootImg}
+                alt=""
+                aria-hidden="true"
+                style={{
+                  position: "absolute",
+                  bottom: 0,
+                  left: "50%",
+                  transform: "translateX(-50%)",
+                  width: 40,
+                  height: 30,
+                  objectFit: "contain",
+                  zIndex: 1,
+                  pointerEvents: "none",
+                }}
+              />
               <button
                 type="button"
                 className="sbn-gear-half left"
                 aria-label="Go back"
+                onMouseEnter={() => setGearSide("R")}
+                onMouseLeave={() => setGearSide("none")}
+                onFocus={() => setGearSide("R")}
+                onBlur={() => setGearSide("none")}
                 onClick={() => window.history.back()}
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: "-22px",
+                  width: "calc(50% + 22px)",
+                  height: "100%",
+                  background: "transparent",
+                  border: 0,
+                  cursor: "pointer",
+                  zIndex: 3,
+                  padding: 0,
+                }}
               />
               <button
                 type="button"
                 className="sbn-gear-half right"
                 aria-label="Go forward"
+                onMouseEnter={() => setGearSide("F")}
+                onMouseLeave={() => setGearSide("none")}
+                onFocus={() => setGearSide("F")}
+                onBlur={() => setGearSide("none")}
                 onClick={() => window.history.forward()}
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  right: "-22px",
+                  width: "calc(50% + 22px)",
+                  height: "100%",
+                  background: "transparent",
+                  border: 0,
+                  cursor: "pointer",
+                  zIndex: 3,
+                  padding: 0,
+                }}
               />
             </div>
             <span className="sbn-label">&lt; Back / Forward &gt;</span>
           </div>
+
 
           {/* 3. Site Map */}
           <Link to="/sitemap" className="sbn-item" data-tip="Site Map" aria-label="Site Map">
