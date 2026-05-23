@@ -201,12 +201,12 @@ const SiteBottomNav = () => {
 
         /* Home steering wheel — exact wheelImgStyle from MGFloatingNav */
         .sbn-wheel {
-          width: 60px !important;
-          height: 60px !important;
+          width: 70px !important;
+          height: 70px !important;
           object-fit: contain;
           display: block;
-          margin-top: -4px;
-          margin-bottom: 2px;
+          margin-top: 0;
+          margin-bottom: 0;
           background: transparent;
         }
         @keyframes wheelWiggle {
