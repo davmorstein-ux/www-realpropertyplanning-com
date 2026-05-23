@@ -30,7 +30,12 @@ const SiteBottomNav = () => {
           bottom: 14px;
           transform: translateX(-50%);
           z-index: 9999;
-          padding: 4px 28px 4px;
+          padding-top: 2px !important;
+          padding-bottom: 2px !important;
+          padding-left: 28px;
+          padding-right: 28px;
+          height: 90px !important;
+          overflow: hidden !important;
           background-color: rgba(245, 241, 232, 0.92);
           backdrop-filter: blur(12px);
           -webkit-backdrop-filter: blur(12px);
@@ -68,16 +73,16 @@ const SiteBottomNav = () => {
         }
         .sbn-item:hover { color: #C9A84C; }
         .sbn-icon-wrap {
-          width: 90px;
-          height: 90px;
+          width: 55px !important;
+          height: 55px !important;
           position: relative;
           display: flex;
           align-items: center;
           justify-content: center;
         }
         .sbn-icon {
-          width: 70px;
-          height: 70px;
+          width: 55px !important;
+          height: 55px !important;
           object-fit: contain;
           display: block;
           background: transparent;
@@ -85,8 +90,8 @@ const SiteBottomNav = () => {
         }
         .sbn-item:hover .sbn-icon { transform: translateY(-2px) scale(1.06); }
         .sbn-label {
-          font-size: 9px !important;
-          font-weight: 700;
+          font-size: 10px !important;
+          font-weight: bold !important;
           letter-spacing: 0.08em;
           text-transform: uppercase;
           color: #1B2B4B;
@@ -167,22 +172,22 @@ const SiteBottomNav = () => {
 
         /* Chat — circular couple photo with tire ring snug around it */
         .sbn-chat-outer {
-          width: 90px;
-          height: 90px;
+          width: 55px !important;
+          height: 55px !important;
           display: flex;
           align-items: center;
           justify-content: center;
         }
         .sbn-chat-wrap {
           position: relative;
-          width: 70px;
-          height: 70px;
+          width: 55px !important;
+          height: 55px !important;
         }
         .sbn-chat-couple {
           position: absolute;
-          inset: 9px;
-          width: calc(100% - 18px);
-          height: calc(100% - 18px);
+          inset: 7px;
+          width: calc(100% - 14px);
+          height: calc(100% - 14px);
           border-radius: 50%;
           object-fit: cover;
           display: block;
@@ -207,8 +212,8 @@ const SiteBottomNav = () => {
 
         /* Home steering wheel — exact wheelImgStyle from MGFloatingNav */
         .sbn-wheel {
-          width: 70px !important;
-          height: 70px !important;
+          width: 55px !important;
+          height: 55px !important;
           object-fit: contain;
           display: block;
           margin-top: 0;
@@ -259,8 +264,8 @@ const SiteBottomNav = () => {
               <div
                 style={{
                   position: "relative",
-                  width: 70,
-                  height: 70,
+                  width: 55,
+                  height: 55,
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
