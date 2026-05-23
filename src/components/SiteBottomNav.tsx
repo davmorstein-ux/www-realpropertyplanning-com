@@ -232,16 +232,16 @@ const SiteBottomNav = () => {
 
         /* Chat — circular couple photo with tire ring snug around it */
         .sbn-chat-outer {
-          width: 55px !important;
-          height: 65px !important;
+          width: 41px !important;
+          height: 49px !important;
           display: flex;
           align-items: center;
           justify-content: center;
         }
         .sbn-chat-wrap {
           position: relative;
-          width: 58px !important;
-          height: 58px !important;
+          width: 44px !important;
+          height: 44px !important;
         }
         .sbn-chat-couple {
           position: absolute;
