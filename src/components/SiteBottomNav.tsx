@@ -194,7 +194,7 @@ const SiteBottomNav = () => {
         /* Chat — circular couple photo with tire ring snug around it */
         .sbn-chat-outer {
           width: 55px !important;
-          height: 55px !important;
+          height: 70px !important;
           display: flex;
           align-items: center;
           justify-content: center;
