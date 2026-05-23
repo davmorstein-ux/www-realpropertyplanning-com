@@ -272,8 +272,8 @@ const SiteBottomNav = () => {
 
         /* Home steering wheel — exact wheelImgStyle from MGFloatingNav */
         .sbn-wheel {
-          width: 58px !important;
-          height: 58px !important;
+          width: 42px !important;
+          height: 42px !important;
           object-fit: contain;
           display: block;
           margin-top: 0;
