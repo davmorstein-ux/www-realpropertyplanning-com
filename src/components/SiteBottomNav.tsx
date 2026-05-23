@@ -56,11 +56,9 @@ const SiteBottomNav = () => {
         }
         .sbn-inner {
           width: 100%;
-          display: grid;
-          grid-template-columns: repeat(6, 1fr);
-          gap: 0;
+          display: flex !important;
+          justify-content: space-evenly !important;
           align-items: center;
-          justify-items: center;
         }
         .sbn-item {
           position: relative;
