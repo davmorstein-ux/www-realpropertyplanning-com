@@ -32,8 +32,8 @@ const SiteBottomNav = () => {
           z-index: 9999;
           padding-top: 2px !important;
           padding-bottom: 2px !important;
-          padding-left: 8px !important;
-          padding-right: 8px !important;
+          padding-left: 6px !important;
+          padding-right: 6px !important;
           height: 80px !important;
           overflow: hidden !important;
           background-color: rgba(245, 241, 232, 0.92);
@@ -45,7 +45,7 @@ const SiteBottomNav = () => {
           display: flex;
           align-items: center;
           justify-content: center;
-          width: 95vw !important;
+          width: fit-content !important;
           margin: 0 auto !important;
         }
         .sbn-inner {
@@ -268,7 +268,7 @@ const SiteBottomNav = () => {
             role="group"
             aria-label="Back or forward"
           >
-            <div className="sbn-icon-wrap" style={{ marginBottom: '12px' }}>
+            <div className="sbn-icon-wrap">
               <div
                 style={{
                   position: "relative",
@@ -384,7 +384,7 @@ const SiteBottomNav = () => {
             data-tip="Search the site"
             aria-label="Search"
           >
-            <div className="sbn-icon-wrap" style={{ marginBottom: '12px' }}>
+            <div className="sbn-icon-wrap" style={{ marginTop: '6px' }}>
               <img src={compassIcon} alt="" aria-hidden="true" loading="lazy" style={{ height: '62px', width: 'auto', objectFit: 'contain', display: 'block', transform: 'rotate(35deg)', transition: 'transform 0.2s ease' }} />
             </div>
             <span className="sbn-label">SEARCH</span>
