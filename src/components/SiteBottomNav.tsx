@@ -5,6 +5,7 @@ import gearStickImg from "@/assets/gear_stick_only.png";
 import gearBootImg from "@/assets/gear_boot_only.png";
 import compassIcon from "@/assets/nav/compass_final.png";
 import compassNeedle from "@/assets/nav/compass_needle_final.png";
+import waypointPin from "@/assets/nav/waypoint_final.png";
 import roadmapIcon from "@/assets/nav/map_final.png";
 import headlampIcon from "@/assets/nav/headlamps_final.png";
 import chatCouple from "@/assets/chat-couple.png";
@@ -137,6 +138,30 @@ const SiteBottomNav = () => {
         }
         .sbn-item:hover .sbn-compass-needle {
           animation: sbn-needle-spin 0.8s ease-out;
+        }
+        @keyframes waypointBounce {
+          0% { transform: translateX(-50%) translateY(0px); }
+          40% { transform: translateX(-50%) translateY(6px); }
+          70% { transform: translateX(-50%) translateY(-3px); }
+          100% { transform: translateX(-50%) translateY(0px); }
+        }
+        .sbn-map-wrap { position: relative; display: inline-block; }
+        .sbn-waypoint {
+          position: absolute;
+          left: 50%;
+          top: 2px;
+          height: 22px;
+          width: auto;
+          opacity: 0;
+          pointer-events: none;
+          z-index: 10;
+          transition: opacity 0.3s ease;
+          filter: drop-shadow(0 0 6px rgba(255,180,0,0.9));
+          transform: translateX(-50%);
+        }
+        .sbn-item:hover .sbn-waypoint {
+          opacity: 1;
+          animation: waypointBounce 0.6s ease forwards;
         }
         .sbn-label {
           display: flex !important;
@@ -420,7 +445,10 @@ const SiteBottomNav = () => {
           {/* 3. Site Map */}
           <Link to="/sitemap" className="sbn-item" data-tip="Site Map" aria-label="Site Map">
             <div className="sbn-icon-wrap" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', overflow: 'visible', marginRight: '8px' }}>
-              <img src={roadmapIcon} alt="" aria-hidden="true" style={{ height: '68px', width: 'auto', objectFit: 'contain' }} loading="lazy" />
+              <span className="sbn-map-wrap">
+                <img src={roadmapIcon} alt="" aria-hidden="true" style={{ height: '68px', width: 'auto', objectFit: 'contain' }} loading="lazy" />
+                <img src={waypointPin} alt="" aria-hidden="true" className="sbn-waypoint" loading="lazy" />
+              </span>
             </div>
             <span className="sbn-label">SITE MAP</span>
           </Link>
