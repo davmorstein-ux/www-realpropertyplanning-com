@@ -3,9 +3,9 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import steeringWheel from "@/assets/steering-wheel-transparent.png";
 import gearStickImg from "@/assets/gear_stick_only.png";
 import gearBootImg from "@/assets/gear_boot_only.png";
-import compassIcon from "@/assets/nav/compass_cropped.png";
-import roadmapIcon from "@/assets/nav/map_cropped.png";
-import headlampIcon from "@/assets/nav/headlamps_cropped.png";
+import compassIcon from "@/assets/nav/compass_final.png";
+import roadmapIcon from "@/assets/nav/map_final.png";
+import headlampIcon from "@/assets/nav/headlamps_final.png";
 import chatCouple from "@/assets/chat-couple.png";
 import chatTire from "@/assets/chat-tire.png";
 
