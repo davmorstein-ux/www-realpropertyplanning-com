@@ -264,8 +264,8 @@ const SiteBottomNav = () => {
               <div
                 style={{
                   position: "relative",
-                  width: 70,
-                  height: 70,
+                  width: 55,
+                  height: 55,
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
