@@ -446,21 +446,25 @@ const SiteBottomNav = () => {
           </button>
 
           {/* 5. Contact */}
-          <img src={headlampsOn} style={{display:'none'}} aria-hidden="true" alt="" />
           <Link
             to="/contact"
             className="sbn-item"
             data-tip="Contact us"
             aria-label="Contact"
-            onMouseEnter={() => setHeadlampOn(true)}
-            onMouseLeave={() => setHeadlampOn(false)}
           >
             <div className="sbn-icon-wrap" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', overflow: 'visible' }}>
               <img
-                src={headlampOn ? headlampsOn : headlampsOff}
+                src={headlampsOff}
                 alt=""
                 aria-hidden="true"
-                style={{ height: '62px', width: 'auto', objectFit: 'contain', display: 'block', transition: 'none' }}
+                className="sbn-headlamp-off"
+                loading="eager"
+              />
+              <img
+                src={headlampsOn}
+                alt=""
+                aria-hidden="true"
+                className="sbn-headlamp-on"
                 loading="eager"
               />
             </div>
