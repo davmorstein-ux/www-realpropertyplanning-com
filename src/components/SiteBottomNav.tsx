@@ -477,7 +477,7 @@ const SiteBottomNav = () => {
                 src={headlampOn ? headlampsOn : headlampsOff}
                 alt=""
                 aria-hidden="true"
-                style={{ height: '58px', width: 'auto', objectFit: 'contain', display: 'block' }}
+                style={{ height: '58px', width: '90px', objectFit: 'contain', display: 'block' }}
                 loading="lazy"
               />
             </div>
