@@ -1,7 +1,6 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import steeringWheel from "@/assets/nav/steering-wheel.webp";
 import gearKnob from "@/assets/nav/gear-knob.webp";
-import gearKnob from "@/assets/nav/gear-knob.webp";
 import compassIcon from "@/assets/nav/compass.webp";
 import roadmapIcon from "@/assets/nav/map-clean.png";
 import headlampIcon from "@/assets/nav/headlamps-clean.png";
