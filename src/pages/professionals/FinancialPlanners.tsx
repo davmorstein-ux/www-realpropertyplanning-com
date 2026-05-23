@@ -55,6 +55,7 @@ const FinancialPlanners = () => {
         { title: "Care Managers & Social Workers", href: "/professionals/care-managers" },
       ]}
       professionLabel="financial planner or advisor"
+      featuredOverride={featured}
     />
   );
 };
