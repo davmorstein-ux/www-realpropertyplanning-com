@@ -33,9 +33,9 @@ const SiteBottomNav = () => {
           z-index: 9999;
           padding-top: 2px !important;
           padding-bottom: 2px !important;
-          padding-left: 6px !important;
-          padding-right: 6px !important;
-          height: 95px !important;
+          padding-left: 20px !important;
+          padding-right: 20px !important;
+          height: 78px !important;
           overflow: hidden !important;
           background-color: rgba(245, 241, 232, 0.92);
           backdrop-filter: blur(12px);
@@ -52,8 +52,8 @@ const SiteBottomNav = () => {
           max-width: 95% !important;
           align-self: center !important;
           box-sizing: border-box !important;
-          padding-left: 8px !important;
-          padding-right: 8px !important;
+          padding-left: 20px !important;
+          padding-right: 20px !important;
         }
         .sbn-inner {
           width: 100%;
