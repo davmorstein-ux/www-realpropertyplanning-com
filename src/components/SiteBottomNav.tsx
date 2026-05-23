@@ -99,6 +99,15 @@ const SiteBottomNav = () => {
       tooltip: "Resources",
       img: roadmapIcon,
       to: "/resources",
+      custom: (
+        <img
+          src={roadmapIcon}
+          alt=""
+          aria-hidden="true"
+          className="sbn-icon sbn-icon-wide"
+          loading="lazy"
+        />
+      ),
     },
     {
       key: "search",
