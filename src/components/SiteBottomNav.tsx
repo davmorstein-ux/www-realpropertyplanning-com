@@ -30,7 +30,7 @@ const SiteBottomNav = () => {
           bottom: 14px;
           transform: translateX(-50%);
           z-index: 9999;
-          padding: 12px 28px 8px;
+          padding: 6px 28px 8px;
           background-color: rgba(245, 241, 232, 0.92);
           backdrop-filter: blur(12px);
           -webkit-backdrop-filter: blur(12px);
@@ -47,7 +47,7 @@ const SiteBottomNav = () => {
           display: grid;
           grid-template-columns: repeat(6, 1fr);
           gap: 4px;
-          align-items: center;
+          align-items: end;
           justify-items: center;
         }
         .sbn-item {
@@ -221,7 +221,7 @@ const SiteBottomNav = () => {
 
         @media (max-width: 639px) {
           .sbn-bar {
-            padding: 12px 10px 8px;
+            padding: 6px 10px 8px;
             bottom: 8px;
             border-radius: 9999px;
             width: calc(100vw - 12px);
