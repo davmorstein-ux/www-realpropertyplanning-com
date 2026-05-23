@@ -275,7 +275,7 @@ const SiteBottomNav = () => {
             role="group"
             aria-label="Back or forward"
           >
-            <div className="sbn-icon-wrap">
+            <div className="sbn-icon-wrap" style={{ marginTop: '-8px' }}>
               <div
                 style={{
                   position: "relative",
