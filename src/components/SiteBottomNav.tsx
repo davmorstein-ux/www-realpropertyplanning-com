@@ -87,6 +87,13 @@ const SiteBottomNav = () => {
           align-items: center !important;
           justify-content: center !important;
         }
+        .sbn-icon-tall {
+          width: auto !important;
+          height: 75px !important;
+          object-fit: contain !important;
+          display: block !important;
+          background: transparent !important;
+        }
         .sbn-icon {
           width: 55px !important;
           height: 55px !important;
