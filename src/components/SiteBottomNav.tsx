@@ -35,7 +35,7 @@ const SiteBottomNav = () => {
           padding-bottom: 4px !important;
           padding-left: 8px !important;
           padding-right: 8px !important;
-          height: 78px !important;
+          height: 110px !important;
           overflow: hidden !important;
           background-color: rgba(245, 241, 232, 0.92);
           backdrop-filter: blur(12px);
