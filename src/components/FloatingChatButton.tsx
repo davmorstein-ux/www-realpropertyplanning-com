@@ -17,8 +17,8 @@ const FloatingChatButton = () => {
           position: fixed;
           bottom: 20px;
           right: 20px;
-          width: 80px;
-          height: 80px;
+          width: 105px;
+          height: 105px;
           z-index: 10000;
           background: transparent;
           border: 0;
@@ -52,6 +52,25 @@ const FloatingChatButton = () => {
         .fcb-btn:hover .fcb-tire {
           animation: fcb-tire-spin 1.4s linear infinite;
         }
+        .fcb-label {
+          position: absolute;
+          right: 110%;
+          top: 50%;
+          transform: translateY(-50%);
+          background: #1B2B4B;
+          color: #fff;
+          font-size: 14px;
+          font-weight: bold;
+          padding: 6px 12px;
+          border-radius: 20px;
+          white-space: nowrap;
+          opacity: 0;
+          transition: opacity 0.2s ease;
+          pointer-events: none;
+        }
+        .fcb-btn:hover .fcb-label {
+          opacity: 1;
+        }
         @keyframes fcb-tire-spin {
           from { transform: rotate(0deg); }
           to   { transform: rotate(360deg); }
@@ -66,6 +85,7 @@ const FloatingChatButton = () => {
         <div className="fcb-wrap">
           <img src={chatCouple} alt="" aria-hidden="true" className="fcb-couple" />
           <img src={chatTire} alt="" aria-hidden="true" className="fcb-tire" />
+          <span className="fcb-label">Let's Chat!</span>
         </div>
       </button>
     </>
