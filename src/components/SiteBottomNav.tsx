@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import steeringWheel from "@/assets/nav/steering-wheel.webp";
+import steeringWheel from "@/assets/steering-wheel-transparent.png";
 import gearStickImg from "@/assets/gear_stick_only.png";
 import gearBootImg from "@/assets/gear_boot_only.png";
 import compassIcon from "@/assets/nav/compass.webp";
@@ -199,6 +199,27 @@ const SiteBottomNav = () => {
           to   { transform: rotate(360deg); }
         }
 
+        /* Home steering wheel — exact wheelImgStyle from MGFloatingNav */
+        .sbn-wheel {
+          width: 60px !important;
+          height: 60px !important;
+          object-fit: contain;
+          display: block;
+          margin-top: -4px;
+          margin-bottom: 2px;
+          background: transparent;
+        }
+        @keyframes wheelWiggle {
+          0%   { transform: rotate(0deg); }
+          25%  { transform: rotate(-15deg); }
+          75%  { transform: rotate(15deg); }
+          100% { transform: rotate(0deg); }
+        }
+        .sbn-item:hover .sbn-wheel {
+          animation: wheelWiggle 0.35s ease-in-out infinite;
+          transform: none;
+        }
+
         @media (max-width: 639px) {
           .sbn-bar {
             height: 70px;
@@ -217,7 +238,7 @@ const SiteBottomNav = () => {
           {/* 1. Home */}
           <Link to="/" className="sbn-item" data-tip="Home" aria-label="Home">
             <div className="sbn-icon-wrap">
-              <img src={steeringWheel} alt="" aria-hidden="true" className="sbn-icon" loading="lazy" />
+              <img src={steeringWheel} alt="" aria-hidden="true" className="sbn-wheel" loading="lazy" />
             </div>
             <span className="sbn-label">Home</span>
           </Link>
