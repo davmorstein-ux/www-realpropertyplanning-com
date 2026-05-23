@@ -104,15 +104,17 @@ const SiteBottomNav = () => {
         }
         .sbn-item:hover .sbn-icon { transform: translateY(-2px) scale(1.06); }
         .sbn-label {
-          font-size: 10px !important;
+          display: block !important;
+          margin-top: 4px !important;
+          padding-top: 0px !important;
           font-weight: bold !important;
+          font-size: 9px !important;
+          text-align: center !important;
           letter-spacing: 0.08em;
           text-transform: uppercase;
           color: #1B2B4B;
-          text-align: center;
           white-space: nowrap;
           font-family: 'Inter', 'DM Sans', system-ui, sans-serif;
-          margin-top: 4px !important;
         }
         .sbn-item:hover .sbn-label { color: #1B2B4B; }
 
