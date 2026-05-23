@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import DisclaimerSection from "@/components/DisclaimerSection";
 import SEOHead from "@/components/SEOHead";
 import { realEstateAgentSchema } from "@/lib/schema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
@@ -17,41 +16,17 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
-
 import iconEmail3d from "@/assets/icons/real-estate-email-contact-icon-washington.webp";
 import mappin3d from "@/assets/real-estate-service-areas-mappin-washington.webp";
 import contactHero from "@/assets/contact-hero-soundview-coffee.png";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import { useState } from "react";
-import expRealtyLogo from "@/assets/exp-realty-real-estate-logo-washington.webp";
 import { useToast } from "@/hooks/use-toast";
 
 const roleOptions = [
-  "Individual",
-  "Personal Representative",
-  "Attorney",
-  "Tax Attorney",
-  "Financial Planner",
-  "CPA",
-  "Power of Attorney",
-  "Executor",
-  "Trustee",
-  "Fiduciary",
   "Family Member",
-  "Senior Homeowner",
-  "Adult Child Assisting Parent",
-  "Other",
-];
-
-const situationOptions = [
-  "Probate Property",
-  "Estate Property Sale",
-  "Trust Property",
-  "Inherited Home",
-  "Senior Downsizing",
-  "Assisted Living Transition",
-  "Property Valuation Guidance",
-  "Property Preparation",
+  "Elder Individual",
+  "Professional",
   "Other",
 ];
 
@@ -77,8 +52,8 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Contact Real Property Planning | Probate & Estate Real Estate in Washington State"
-        description="Ready to talk through your situation? Reach out to Real Property Planning for calm, knowledgeable guidance on probate, inherited property, or senior housing transitions. Call (206) 900-3015."
+        title="Get Connected | Real Property Planning — Washington State Resource Hub"
+        description="Real Property Planning is a free resource hub connecting elderly individuals, families, and professionals across Washington State. Reach out with questions or to join our network."
         jsonLd={realEstateAgentSchema}
       />
       <BreadcrumbSchema items={[{ name: "Contact", url: "/contact" }]} />
@@ -94,10 +69,9 @@ const Contact = () => {
             className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
             loading="eager"
           />
-          <HeroBandTitle>Let's Connect</HeroBandTitle>
+          <HeroBandTitle>Get Connected</HeroBandTitle>
         </div>
       </section>
-
 
       <TrustStrip />
 
@@ -107,11 +81,18 @@ const Contact = () => {
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Contact Info */}
             <div>
+              <p className="font-serif text-2xl text-foreground mb-4 leading-snug">
+                Real Property Planning is a free resource hub connecting elderly individuals, their families, and professionals across Washington State.
+              </p>
+              <p className="text-muted-foreground text-[15px] leading-relaxed mb-8">
+                Whether you are navigating probate, an inherited property, a senior housing transition, or simply looking for trusted professionals — we are here to help point you in the right direction. Use this page to reach out with questions, suggest a resource, or inquire about joining our professional network.
+              </p>
+
               <div className="space-y-5 mb-8">
                 <div>
                   <p className="mb-1 font-medium text-foreground">Phone</p>
                   <a href="tel:2069003015" className="inline-flex items-center text-muted-foreground transition-colors hover:text-gold">
-                    <img src={iconPhone3d} alt="" aria-hidden="true" className="mr-2 w-5 h-5 shrink-0 object-contain"  loading="lazy"/>
+                    <img src={iconPhone3d} alt="" aria-hidden="true" className="mr-2 w-5 h-5 shrink-0 object-contain" loading="lazy" />
                     <span>(206) 900-3015</span>
                   </a>
                 </div>
@@ -119,7 +100,7 @@ const Contact = () => {
                 <div>
                   <p className="mb-1 font-medium text-foreground">Email</p>
                   <a href="mailto:info@realpropertyplanning.com" className="inline-flex items-center text-muted-foreground transition-colors hover:text-gold">
-                    <img src={iconEmail3d} alt="" aria-hidden="true" className="mr-2 w-5 h-5 shrink-0 object-contain"  loading="lazy"/>
+                    <img src={iconEmail3d} alt="" aria-hidden="true" className="mr-2 w-5 h-5 shrink-0 object-contain" loading="lazy" />
                     <span>info@realpropertyplanning.com</span>
                   </a>
                 </div>
@@ -127,31 +108,9 @@ const Contact = () => {
                 <div>
                   <p className="mb-1 font-medium text-foreground">Service Areas</p>
                   <p className="inline-flex items-center text-muted-foreground">
-                    <img src={mappin3d} alt="" aria-hidden="true" className="mr-2 w-5 h-5 shrink-0 object-contain"  loading="lazy"/>
+                    <img src={mappin3d} alt="" aria-hidden="true" className="mr-2 w-5 h-5 shrink-0 object-contain" loading="lazy" />
                     <span>Throughout Washington State, with a strong focus in Western WA &amp; Puget Sound</span>
                   </p>
-                </div>
-              </div>
-
-              <p className="text-muted-foreground text-[15px] leading-relaxed mb-4">
-                Real Property Planning works with attorneys, executors, fiduciaries, and families across Washington State.
-              </p>
-              <p className="text-muted-foreground text-[15px] leading-relaxed mb-8">
-                Through our eXp Realty network, Real Property Planning can connect you with a trusted broker anywhere in the country.
-              </p>
-
-              {/* Brokerage Info */}
-              <div className="pt-8 border-t border-border">
-                <div className="space-y-2 text-[15px] text-muted-foreground">
-                  <p className="font-medium text-foreground">Real Property Planning</p>
-                  <p>Real Property Planning — Washington State Licensed Real Estate Broker</p>
-                  <p>Washington State Certified Residential Appraiser — Stein Appraisal</p>
-                  <p>Real estate licenses are held under eXp Realty</p>
-                  <p>Mailing Address: PO Box 1462, Woodinville, WA 98072</p>
-                  <p>Office Address: 1455 NW Leary Way, Seattle, WA 98107</p>
-                </div>
-                <div className="mt-4 flex flex-col items-center md:items-start">
-                  <img src={expRealtyLogo} alt="Real estate licenses are held under eXp Realty." className="w-[70px] h-auto opacity-70" loading="lazy" />
                 </div>
               </div>
             </div>
@@ -163,7 +122,7 @@ const Contact = () => {
                   Send a Message
                 </h2>
                 <p className="text-muted-foreground mb-6 text-[15px] leading-relaxed">
-                  A brief description of your situation is a great place to start.
+                  Tell us a little about how we can help.
                 </p>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -171,25 +130,25 @@ const Contact = () => {
 
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <Label htmlFor="name">Full Name *</Label>
+                      <Label htmlFor="name">Name *</Label>
                       <Input id="name" name="name" required aria-required="true" autoComplete="name" placeholder="Your full name" />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="email">Email Address *</Label>
+                      <Label htmlFor="email">Email *</Label>
                       <Input id="email" name="email" type="email" required aria-required="true" autoComplete="email" placeholder="your@email.com" />
                     </div>
                   </div>
 
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <Label htmlFor="phone">Phone Number</Label>
+                      <Label htmlFor="phone">Phone (optional)</Label>
                       <Input id="phone" name="phone" type="tel" autoComplete="tel" placeholder="(555) 123-4567" />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="role">Your Role *</Label>
+                      <Label htmlFor="role">I am a *</Label>
                       <Select name="role" required>
                         <SelectTrigger>
-                          <SelectValue placeholder="Select your role" />
+                          <SelectValue placeholder="Select one" />
                         </SelectTrigger>
                         <SelectContent>
                           {roleOptions.map((role) => (
@@ -202,68 +161,15 @@ const Contact = () => {
                     </div>
                   </div>
 
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <Label htmlFor="address">Property Address</Label>
-                      <Input id="address" name="address" autoComplete="street-address" placeholder="123 Main St, City, State" />
-                    </div>
-                  </div>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <Label htmlFor="zip">Zip Code</Label>
-                      <Input id="zip" name="zip" autoComplete="postal-code" placeholder="98101" />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="situation">Type of Situation *</Label>
-                      <Select name="situation" required>
-                        <SelectTrigger>
-                          <SelectValue placeholder="Select situation type" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          {situationOptions.map((situation) => (
-                            <SelectItem key={situation} value={situation.toLowerCase().replace(/\s+/g, "-")}>
-                              {situation}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
-                    </div>
-                  </div>
-
                   <div className="space-y-2">
-                    <Label htmlFor="found_via">How did you find this site?</Label>
-                    <Select name="found_via">
-                      <SelectTrigger>
-                        <SelectValue placeholder="Select one (optional)" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="Google Search">Google Search</SelectItem>
-                        <SelectItem value="Referral">Referral</SelectItem>
-                        <SelectItem value="Zillow">Zillow</SelectItem>
-                        <SelectItem value="Attorney / Professional">Attorney / Professional</SelectItem>
-                        <SelectItem value="Direct / Typed URL">Direct / Typed URL</SelectItem>
-                        <SelectItem value="Other">Other</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="message">Message</Label>
+                    <Label htmlFor="message">Message *</Label>
                     <Textarea
                       id="message"
                       name="message"
-                      rows={5}
-                      placeholder="Please share any additional details about your situation..."
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="notes">Anything you'd like me to know?</Label>
-                    <Textarea
-                      id="notes"
-                      name="notes"
-                      rows={2}
-                      placeholder="Situation, timing, questions..."
+                      rows={6}
+                      required
+                      aria-required="true"
+                      placeholder="Share your question, suggest a resource, or ask about joining our professional network..."
                     />
                   </div>
 
@@ -277,7 +183,7 @@ const Contact = () => {
                       {isSubmitting ? "Sending..." : "Send My Message"}
                     </Button>
                     <div role="status" aria-live="polite">
-                      <p className="text-muted-foreground/70 text-[15px] mt-4">
+                      <p className="text-muted-foreground text-[15px] mt-4">
                         We respond personally to every inquiry.
                       </p>
                     </div>
@@ -289,7 +195,6 @@ const Contact = () => {
         </div>
       </section>
 
-      <DisclaimerSection />
       </main>
       <Footer />
     </div>
