@@ -9,8 +9,6 @@ import waypointPin from "@/assets/nav/waypoint_final.png";
 import roadmapIcon from "@/assets/nav/map_final.png";
 import headlampsOff from "@/assets/nav/headlamps_off_final.png";
 import headlampsOn from "@/assets/nav/headlamps_on_final.png";
-import chatCouple from "@/assets/chat-couple.png";
-import chatTire from "@/assets/chat-tire.png";
 
 /**
  * Sticky bottom navigation bar shown on every page.
@@ -20,9 +18,6 @@ const SiteBottomNav = () => {
   const navigate = useNavigate();
   const [gearSide, setGearSide] = useState<"none" | "R" | "F">("none");
 
-  const openChat = () => {
-    window.dispatchEvent(new Event("rpp-open-chat"));
-  };
 
   return (
     <>
@@ -478,22 +473,6 @@ const SiteBottomNav = () => {
             <span className="sbn-label">CONTACT</span>
           </Link>
 
-          {/* 6. Chat */}
-          <button
-            type="button"
-            onClick={openChat}
-            className="sbn-item"
-            data-tip="Chat with us"
-            aria-label="Open chat"
-          >
-            <div className="sbn-chat-outer">
-              <div className="sbn-chat-wrap">
-                <img src={chatCouple} alt="" aria-hidden="true" className="sbn-chat-couple" />
-                <img src={chatTire} alt="" aria-hidden="true" className="sbn-chat-tire" />
-              </div>
-            </div>
-            <span className="sbn-label">CHAT</span>
-          </button>
         </div>
         {/* Suppress unused warning */}
         <span hidden>{pathname}</span>
