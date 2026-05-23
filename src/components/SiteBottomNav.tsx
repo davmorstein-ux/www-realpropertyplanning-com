@@ -5,7 +5,7 @@ import gearStickImg from "@/assets/gear_stick_only.png";
 import gearBootImg from "@/assets/gear_boot_only.png";
 import compassIcon from "@/assets/nav/compass_final.png";
 import compassNeedle from "@/assets/nav/compass_needle_final.png";
-import waypointPin from "@/assets/nav/waypoint_final.png";
+import waypointPin from "@/assets/nav/waypoint_new.png";
 import roadmapIcon from "@/assets/nav/map_final.png";
 // @ts-expect-error - vite cache-bust query
 import headlampsOff from "@/assets/nav/headlamps_off_final.png?v=3";
@@ -138,14 +138,13 @@ const SiteBottomNav = () => {
         .sbn-waypoint {
           position: absolute;
           left: 50%;
-          top: 4px;
-          height: 20px;
+          top: 30%;
+          height: 14px;
           width: auto;
           opacity: 0;
           pointer-events: none;
           z-index: 10;
           transition: none;
-          filter: drop-shadow(0 0 6px rgba(255,180,0,0.9));
           transform: translateX(-50%) scale(0.1);
           transform-origin: bottom center;
         }
