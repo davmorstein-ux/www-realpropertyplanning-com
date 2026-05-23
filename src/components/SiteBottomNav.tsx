@@ -47,6 +47,12 @@ const SiteBottomNav = () => {
           justify-content: center;
           width: fit-content !important;
           margin: 0 auto !important;
+          min-width: unset !important;
+          max-width: 95% !important;
+          align-self: center !important;
+          box-sizing: border-box !important;
+          padding-left: 8px !important;
+          padding-right: 8px !important;
         }
         .sbn-inner {
           width: 100%;
