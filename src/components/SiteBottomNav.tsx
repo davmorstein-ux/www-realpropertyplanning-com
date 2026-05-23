@@ -1,5 +1,6 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import steeringWheel from "@/assets/nav/steering-wheel.webp";
+import gearBoot from "@/assets/nav/gear-boot.webp";
 import gearKnob from "@/assets/nav/gear-knob.webp";
 import compassIcon from "@/assets/nav/compass.webp";
 import roadmapIcon from "@/assets/nav/map-clean.png";
@@ -84,7 +85,7 @@ const SiteBottomNav = () => {
         }
         .sbn-item:hover .sbn-icon { transform: translateY(-2px) scale(1.06); }
         .sbn-label {
-          font-size: 12px;
+          font-size: 10px;
           font-weight: 700;
           letter-spacing: 0.08em;
           text-transform: uppercase;
@@ -121,20 +122,34 @@ const SiteBottomNav = () => {
           transform: translateX(-50%) translateY(0);
         }
 
-        /* Gear shifter — single knob image, click halves trigger back/forward */
+        /* Gear shifter — boot stationary base, knob & shaft centered on top */
         .sbn-gear-wrap {
           position: relative;
           width: 48px;
           height: 48px;
         }
-        .sbn-gear-knob {
+        .sbn-gear-boot {
           position: absolute;
-          inset: 0;
-          width: 100%;
-          height: 100%;
+          left: 50%;
+          bottom: 0;
+          transform: translateX(-50%);
+          width: 48px;
+          height: 30px;
           object-fit: contain;
+          object-position: bottom center;
           pointer-events: none;
           z-index: 1;
+        }
+        .sbn-gear-knob {
+          position: absolute;
+          left: 50%;
+          bottom: 18px;
+          transform: translateX(-50%);
+          width: 26px;
+          height: 26px;
+          object-fit: contain;
+          pointer-events: none;
+          z-index: 2;
         }
         .sbn-gear-half {
           position: absolute;
@@ -214,6 +229,7 @@ const SiteBottomNav = () => {
             aria-label="Back or forward"
           >
             <div className="sbn-gear-wrap sbn-icon-wrap">
+              <img src={gearBoot} alt="" aria-hidden="true" className="sbn-gear-boot" />
               <img src={gearKnob} alt="" aria-hidden="true" className="sbn-gear-knob" />
               <button
                 type="button"
