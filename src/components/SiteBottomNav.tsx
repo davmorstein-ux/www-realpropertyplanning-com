@@ -221,7 +221,7 @@ const SiteBottomNav = () => {
 
         @media (max-width: 639px) {
           .sbn-bar {
-            padding: 12px 10px 8px;
+            padding: 6px 10px 8px;
             bottom: 8px;
             border-radius: 9999px;
             width: calc(100vw - 12px);
