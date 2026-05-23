@@ -17,6 +17,7 @@ const SiteBottomNav = () => {
   const { pathname } = useLocation();
   const navigate = useNavigate();
   const [gearSide, setGearSide] = useState<"none" | "R" | "F">("none");
+  const [headlampOn, setHeadlampOn] = useState(false);
 
 
   return (
@@ -463,12 +464,22 @@ const SiteBottomNav = () => {
           </button>
 
           {/* 5. Contact */}
-          <Link to="/contact" className="sbn-item" data-tip="Contact us" aria-label="Contact">
+          <Link
+            to="/contact"
+            className="sbn-item"
+            data-tip="Contact us"
+            aria-label="Contact"
+            onMouseEnter={() => setHeadlampOn(true)}
+            onMouseLeave={() => setHeadlampOn(false)}
+          >
             <div className="sbn-icon-wrap" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', overflow: 'visible' }}>
-              <span className="sbn-headlamp-wrap">
-                <img src={headlampsOff} alt="" aria-hidden="true" className="sbn-headlamp-off" loading="lazy" />
-                <img src={headlampsOn} alt="" aria-hidden="true" className="sbn-headlamp-on" loading="lazy" />
-              </span>
+              <img
+                src={headlampOn ? headlampsOn : headlampsOff}
+                alt=""
+                aria-hidden="true"
+                style={{ height: '58px', width: 'auto', objectFit: 'contain', display: 'block' }}
+                loading="lazy"
+              />
             </div>
             <span className="sbn-label">CONTACT</span>
           </Link>
