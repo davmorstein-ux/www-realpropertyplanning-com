@@ -384,7 +384,7 @@ const SiteBottomNav = () => {
             aria-label="Search"
           >
             <div className="sbn-icon-wrap">
-              <img src={compassIcon} alt="" aria-hidden="true" loading="lazy" style={{ height: '70px', width: 'auto', objectFit: 'contain', display: 'block', transform: 'rotate(20deg)', transition: 'transform 0.2s ease' }} />
+              <img src={compassIcon} alt="" aria-hidden="true" loading="lazy" style={{ height: '62px', width: 'auto', objectFit: 'contain', display: 'block', transform: 'rotate(35deg)', transition: 'transform 0.2s ease' }} />
             </div>
             <span className="sbn-label">SEARCH</span>
           </button>
