@@ -8,9 +8,9 @@ import compassNeedle from "@/assets/nav/compass_needle_final.png";
 import waypointPin from "@/assets/nav/waypoint_new.png";
 import roadmapIcon from "@/assets/nav/map_final.png";
 // @ts-expect-error - vite cache-bust query
-import headlampsOff from "@/assets/nav/headlamps_off_final.png?v=3";
+import headlampsOff from "@/assets/nav/headlamps_off_final.png?v=4";
 // @ts-expect-error - vite cache-bust query
-import headlampsOn from "@/assets/nav/headlamps_on_final.png?v=3";
+import headlampsOn from "@/assets/nav/headlamps_on_final.png?v=4";
 
 /**
  * Sticky bottom navigation bar shown on every page.
@@ -474,7 +474,7 @@ const SiteBottomNav = () => {
                 src={headlampOn ? headlampsOn : headlampsOff}
                 alt=""
                 aria-hidden="true"
-                style={{ height: '58px', width: '90px', objectFit: 'contain', display: 'block' }}
+                style={{ height: '62px', width: 'auto', objectFit: 'contain', display: 'block' }}
                 loading="lazy"
               />
             </div>
