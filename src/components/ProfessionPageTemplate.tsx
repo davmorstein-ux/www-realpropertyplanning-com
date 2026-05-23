@@ -68,6 +68,7 @@ const ProfessionPageTemplate = ({
   helpHeadline,
   helpRows,
   professionals = [],
+  featuredOverride,
   faqs,
   relatedProfessions,
   professionLabel,
