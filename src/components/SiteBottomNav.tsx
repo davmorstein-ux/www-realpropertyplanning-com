@@ -478,7 +478,7 @@ const SiteBottomNav = () => {
           >
             <div className="sbn-icon-wrap">
               <span className="sbn-compass-wrap">
-                <img src={compassIcon} alt="" aria-hidden="true" loading="lazy" style={{ height: '62px', width: 'auto', objectFit: 'contain', display: 'block', transform: 'rotate(35deg)', transition: 'transform 0.2s ease' }} />
+                <img src={compassIcon} alt="" aria-hidden="true" loading="lazy" style={{ height: '36px', width: 'auto', objectFit: 'contain', display: 'block', transform: 'rotate(35deg)', transition: 'transform 0.2s ease' }} />
                 <img src={compassNeedle} alt="" aria-hidden="true" loading="lazy" className="sbn-compass-needle" />
               </span>
             </div>
