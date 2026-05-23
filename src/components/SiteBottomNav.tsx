@@ -109,6 +109,18 @@ const SiteBottomNav = () => {
         .sbn-item:hover .sbn-headlamp {
           filter: brightness(1.5) drop-shadow(0 0 10px rgba(255, 240, 150, 0.95)) drop-shadow(0 0 20px rgba(255, 220, 100, 0.7));
         }
+        .sbn-headlamp-wrap { position: relative; display: inline-block; }
+        .sbn-headlamp-beams {
+          position: absolute;
+          inset: 0;
+          opacity: 0;
+          pointer-events: none;
+          transition: opacity 0.3s ease;
+          background:
+            radial-gradient(circle at 30% 45%, rgba(255,240,100,0.85) 0%, rgba(255,200,0,0.4) 40%, transparent 70%),
+            radial-gradient(circle at 65% 45%, rgba(255,240,100,0.85) 0%, rgba(255,200,0,0.4) 40%, transparent 70%);
+        }
+        .sbn-item:hover .sbn-headlamp-beams { opacity: 1; }
         @keyframes sbn-needle-spin {
           0% { transform: translate(-50%, -50%) rotate(0deg); }
           100% { transform: translate(-50%, -50%) rotate(720deg); }
