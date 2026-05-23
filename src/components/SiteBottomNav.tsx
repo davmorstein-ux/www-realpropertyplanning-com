@@ -461,6 +461,7 @@ const SiteBottomNav = () => {
           </button>
 
           {/* 5. Contact */}
+          <img src={headlampsOn} style={{display:'none'}} aria-hidden="true" alt="" />
           <Link
             to="/contact"
             className="sbn-item"
@@ -475,7 +476,7 @@ const SiteBottomNav = () => {
                 alt=""
                 aria-hidden="true"
                 style={{ height: '62px', width: 'auto', objectFit: 'contain', display: 'block' }}
-                loading="lazy"
+                loading="eager"
               />
             </div>
             <span className="sbn-label">CONTACT</span>
