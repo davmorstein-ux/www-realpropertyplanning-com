@@ -112,6 +112,7 @@ const SiteBottomNav = () => {
           text-align: center;
           white-space: nowrap;
           font-family: 'Inter', 'DM Sans', system-ui, sans-serif;
+          margin-top: 4px !important;
         }
         .sbn-item:hover .sbn-label { color: #1B2B4B; }
 
