@@ -104,9 +104,12 @@ const SiteBottomNav = () => {
         }
         .sbn-item:hover .sbn-icon { transform: translateY(-2px) scale(1.06); }
         .sbn-label {
-          display: block !important;
-          margin-top: 4px !important;
-          padding-top: 1px !important;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+          height: 20px !important;
+          margin-top: 0 !important;
+          padding-top: 0 !important;
           font-weight: 800 !important;
           font-size: 12px !important;
           text-align: center !important;
