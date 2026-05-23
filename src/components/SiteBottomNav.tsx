@@ -139,7 +139,7 @@ const SiteBottomNav = () => {
           position: absolute;
           left: 50%;
           top: 30%;
-          height: 14px;
+          height: 7px;
           width: auto;
           opacity: 0;
           pointer-events: none;
@@ -150,7 +150,7 @@ const SiteBottomNav = () => {
         }
         .sbn-item:hover .sbn-waypoint {
           opacity: 1;
-          transform: translateX(-50%) scale(1);
+          transform: translateX(-50%) scale(2);
           transition: opacity 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
         .sbn-label {
