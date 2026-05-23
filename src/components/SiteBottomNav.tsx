@@ -80,13 +80,6 @@ const SiteBottomNav = () => {
           align-items: center;
           justify-content: center;
         }
-        .sbn-wrap-tall {
-          width: auto !important;
-          height: 75px !important;
-          display: flex !important;
-          align-items: center !important;
-          justify-content: center !important;
-        }
         .sbn-icon-tall {
           width: auto !important;
           height: 75px !important;
