@@ -7,8 +7,8 @@ import compassIcon from "@/assets/nav/compass_final.png";
 import compassNeedle from "@/assets/nav/compass_needle_final.png";
 import waypointPin from "@/assets/nav/waypoint_final.png";
 import roadmapIcon from "@/assets/nav/map_final.png";
-import headlampsOff from "@/assets/nav/headlamps_off_final.png";
-import headlampsOn from "@/assets/nav/headlamps_on_final.png";
+import headlampsOff from "@/assets/nav/headlamps_off_final.png?v=3";
+import headlampsOn from "@/assets/nav/headlamps_on_final.png?v=3";
 
 /**
  * Sticky bottom navigation bar shown on every page.
