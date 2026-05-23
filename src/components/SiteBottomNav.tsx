@@ -19,7 +19,7 @@ const SiteBottomNav = () => {
   const { pathname } = useLocation();
   const navigate = useNavigate();
   const [gearSide, setGearSide] = useState<"none" | "R" | "F">("none");
-  const [headlampOn, setHeadlampOn] = useState(false);
+  
 
 
   return (
