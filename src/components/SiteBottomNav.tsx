@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import steeringWheel from "@/assets/steering-wheel-transparent.png";
-import gearBase from "@/assets/gear_shifter_base.png";
-import gearTop from "@/assets/gear_shifter_top.png";
-import compassIcon from "@/assets/nav-compass-transparent.png";
-import roadmapIcon from "@/assets/nav-roadmap-transparent.png";
-import headlampIcon from "@/assets/nav-headlamp-transparent.png";
-import speedometerIcon from "@/assets/nav-speedometer-transparent.png";
+import steeringWheel from "@/assets/nav/steering-wheel.webp";
+import gearBase from "@/assets/nav/gear-boot.webp";
+import gearTop from "@/assets/nav/gear-knob.webp";
+import compassIcon from "@/assets/nav/compass.webp";
+import roadmapIcon from "@/assets/nav/map.webp";
+import waypointIcon from "@/assets/nav/waypoint.webp";
+import headlampIcon from "@/assets/nav/headlamps.webp";
+import speedometerIcon from "@/assets/nav/speedometer.webp";
 
 /**
  * Sticky bottom navigation bar shown on every page.
