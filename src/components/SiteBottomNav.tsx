@@ -48,7 +48,7 @@ const SiteBottomNav = () => {
           display: grid;
           grid-template-columns: repeat(6, 1fr);
           gap: 4px;
-          align-items: end;
+          align-items: center;
           justify-items: center;
         }
         .sbn-item {
@@ -56,7 +56,7 @@ const SiteBottomNav = () => {
           display: flex;
           flex-direction: column;
           align-items: center;
-          justify-content: flex-end;
+          justify-content: center;
           gap: 2px;
           background: transparent;
           border: 0;
@@ -69,16 +69,16 @@ const SiteBottomNav = () => {
         }
         .sbn-item:hover { color: #C9A84C; }
         .sbn-icon-wrap {
-          width: 72px;
-          height: 72px;
+          width: 80px;
+          height: 80px;
           position: relative;
           display: flex;
           align-items: center;
           justify-content: center;
         }
         .sbn-icon {
-          width: 72px;
-          height: 72px;
+          width: 80px;
+          height: 80px;
           object-fit: contain;
           display: block;
           background: transparent;
