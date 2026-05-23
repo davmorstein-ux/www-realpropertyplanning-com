@@ -132,29 +132,25 @@ const SiteBottomNav = () => {
         .sbn-item:hover .sbn-compass-needle {
           animation: sbn-needle-spin 0.8s ease-out;
         }
-        @keyframes waypointBounce {
-          0% { transform: translateX(-50%) translateY(0px); }
-          40% { transform: translateX(-50%) translateY(6px); }
-          70% { transform: translateX(-50%) translateY(-3px); }
-          100% { transform: translateX(-50%) translateY(0px); }
-        }
         .sbn-map-wrap { position: relative; display: inline-block; }
         .sbn-waypoint {
           position: absolute;
           left: 50%;
-          top: 2px;
-          height: 22px;
+          top: 4px;
+          height: 20px;
           width: auto;
           opacity: 0;
           pointer-events: none;
           z-index: 10;
-          transition: opacity 0.3s ease;
+          transition: none;
           filter: drop-shadow(0 0 6px rgba(255,180,0,0.9));
-          transform: translateX(-50%);
+          transform: translateX(-50%) scale(0.1);
+          transform-origin: bottom center;
         }
         .sbn-item:hover .sbn-waypoint {
           opacity: 1;
-          animation: waypointBounce 0.6s ease forwards;
+          transform: translateX(-50%) scale(1);
+          transition: opacity 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
         .sbn-label {
           display: flex !important;
