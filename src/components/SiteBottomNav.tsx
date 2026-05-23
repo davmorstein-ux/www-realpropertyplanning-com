@@ -229,6 +229,7 @@ const SiteBottomNav = () => {
             aria-label="Back or forward"
           >
             <div className="sbn-gear-wrap sbn-icon-wrap">
+              <img src={gearBoot} alt="" aria-hidden="true" className="sbn-gear-boot" />
               <img src={gearKnob} alt="" aria-hidden="true" className="sbn-gear-knob" />
               <button
                 type="button"
