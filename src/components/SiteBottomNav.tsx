@@ -1,7 +1,8 @@
+import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import steeringWheel from "@/assets/nav/steering-wheel.webp";
-import gearBoot from "@/assets/nav/gear-boot.webp";
-import gearKnob from "@/assets/nav/gear-knob.webp";
+import gearStickImg from "@/assets/gear_stick_only.png";
+import gearBootImg from "@/assets/gear_boot_only.png";
 import compassIcon from "@/assets/nav/compass.webp";
 import roadmapIcon from "@/assets/nav/map-clean.png";
 import headlampIcon from "@/assets/nav/headlamps-clean.png";
@@ -10,11 +11,11 @@ import chatTire from "@/assets/chat-tire.png";
 
 /**
  * Sticky bottom navigation bar shown on every page.
- * Six vintage-car-themed icons, all sized 56x56, evenly spaced.
  */
 const SiteBottomNav = () => {
   const { pathname } = useLocation();
   const navigate = useNavigate();
+  const [gearSide, setGearSide] = useState<"none" | "R" | "F">("none");
 
   const openChat = () => {
     window.dispatchEvent(new Event("rpp-open-chat"));
