@@ -106,11 +106,12 @@ const SiteBottomNav = () => {
         .sbn-label {
           display: block !important;
           margin-top: 4px !important;
-          padding-top: 0px !important;
-          font-weight: bold !important;
-          font-size: 9px !important;
+          padding-top: 1px !important;
+          font-weight: 800 !important;
+          font-size: 12px !important;
           text-align: center !important;
-          letter-spacing: 0.08em;
+          line-height: 1 !important;
+          letter-spacing: 1px;
           text-transform: uppercase;
           color: #1B2B4B;
           white-space: nowrap;
