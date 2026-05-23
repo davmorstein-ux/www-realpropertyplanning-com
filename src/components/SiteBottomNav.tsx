@@ -79,8 +79,8 @@ const SiteBottomNav = () => {
         }
         .sbn-item:hover { color: #C9A84C; }
         .sbn-icon-wrap {
-          width: 60px !important;
-          height: 65px !important;
+          width: 45px !important;
+          height: 49px !important;
           position: relative;
           display: flex;
           align-items: center;
