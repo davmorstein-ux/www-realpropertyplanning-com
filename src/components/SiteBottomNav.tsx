@@ -33,9 +33,9 @@ const SiteBottomNav = () => {
           z-index: 9999;
           padding-top: 2px !important;
           padding-bottom: 2px !important;
-          padding-left: 6px !important;
-          padding-right: 6px !important;
-          height: 95px !important;
+          padding-left: 20px !important;
+          padding-right: 20px !important;
+          height: 78px !important;
           overflow: hidden !important;
           background-color: rgba(245, 241, 232, 0.92);
           backdrop-filter: blur(12px);
@@ -52,8 +52,8 @@ const SiteBottomNav = () => {
           max-width: 95% !important;
           align-self: center !important;
           box-sizing: border-box !important;
-          padding-left: 8px !important;
-          padding-right: 8px !important;
+          padding-left: 20px !important;
+          padding-right: 20px !important;
         }
         .sbn-inner {
           width: 100%;
@@ -88,22 +88,22 @@ const SiteBottomNav = () => {
         }
         .sbn-icon-tall {
           width: auto !important;
-          height: 75px !important;
+          height: 52px !important;
           object-fit: contain !important;
           display: block !important;
           background: transparent !important;
         }
         .sbn-icon {
-          width: 55px !important;
-          height: 55px !important;
+          width: 48px !important;
+          height: 48px !important;
           object-fit: contain;
           display: block;
           background: transparent;
           transition: transform 0.2s ease;
         }
         .sbn-item:hover .sbn-icon { transform: translateY(-2px) scale(1.06); }
-        .sbn-headlamp-off { display: block; height: 62px; width: auto; object-fit: contain; }
-        .sbn-headlamp-on { display: none; height: 62px; width: auto; object-fit: contain; }
+        .sbn-headlamp-off { display: block; height: 52px; width: auto; object-fit: contain; }
+        .sbn-headlamp-on { display: none; height: 52px; width: auto; object-fit: contain; }
         .sbn-item:hover .sbn-headlamp-off { display: none; }
         .sbn-item:hover .sbn-headlamp-on { display: block; }
         @keyframes sbn-needle-spin {
@@ -150,7 +150,7 @@ const SiteBottomNav = () => {
           margin-top: 0 !important;
           padding-top: 0 !important;
           font-weight: 800 !important;
-          font-size: 11px !important;
+          font-size: 9px !important;
           text-align: center !important;
           line-height: 1 !important;
           letter-spacing: 1px;
