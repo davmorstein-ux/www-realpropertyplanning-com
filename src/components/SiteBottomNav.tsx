@@ -1,6 +1,5 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import steeringWheel from "@/assets/nav/steering-wheel.webp";
-import gearBoot from "@/assets/nav/gear-boot.webp";
 import gearKnob from "@/assets/nav/gear-knob.webp";
 import compassIcon from "@/assets/nav/compass.webp";
 import roadmapIcon from "@/assets/nav/map-clean.png";
@@ -29,8 +28,8 @@ const SiteBottomNav = () => {
           bottom: 14px;
           transform: translateX(-50%);
           z-index: 9999;
-          height: 108px;
-          padding: 10px 28px;
+          height: 70px;
+          padding: 4px 28px;
           background-color: rgba(245, 241, 232, 0.92);
           backdrop-filter: blur(12px);
           -webkit-backdrop-filter: blur(12px);
@@ -56,10 +55,10 @@ const SiteBottomNav = () => {
           flex-direction: column;
           align-items: center;
           justify-content: flex-end;
-          gap: 8px;
+          gap: 2px;
           background: transparent;
           border: 0;
-          padding: 2px 4px;
+          padding: 0 4px;
           cursor: pointer;
           text-decoration: none;
           color: #1B2B4B;
@@ -68,16 +67,16 @@ const SiteBottomNav = () => {
         }
         .sbn-item:hover { color: #C9A84C; }
         .sbn-icon-wrap {
-          width: 56px;
-          height: 56px;
+          width: 48px;
+          height: 48px;
           position: relative;
           display: flex;
           align-items: center;
           justify-content: center;
         }
         .sbn-icon {
-          width: 56px;
-          height: 56px;
+          width: 48px;
+          height: 48px;
           object-fit: contain;
           display: block;
           background: transparent;
@@ -122,34 +121,20 @@ const SiteBottomNav = () => {
           transform: translateX(-50%) translateY(0);
         }
 
-        /* Gear shifter — boot stationary at bottom, knob centered directly on top */
+        /* Gear shifter — single knob image, click halves trigger back/forward */
         .sbn-gear-wrap {
           position: relative;
-          width: 56px;
-          height: 56px;
-        }
-        .sbn-gear-boot {
-          position: absolute;
-          left: 50%;
-          bottom: 0;
-          transform: translateX(-50%);
-          width: 56px;
-          height: 36px;
-          object-fit: contain;
-          object-position: bottom center;
-          pointer-events: none;
-          z-index: 1;
+          width: 48px;
+          height: 48px;
         }
         .sbn-gear-knob {
           position: absolute;
-          left: 50%;
-          bottom: 22px;
-          transform: translateX(-50%);
-          width: 30px;
-          height: 30px;
+          inset: 0;
+          width: 100%;
+          height: 100%;
           object-fit: contain;
           pointer-events: none;
-          z-index: 2;
+          z-index: 1;
         }
         .sbn-gear-half {
           position: absolute;
@@ -168,8 +153,8 @@ const SiteBottomNav = () => {
         /* Chat — circular couple photo with tire ring snug around it */
         .sbn-chat-wrap {
           position: relative;
-          width: 56px;
-          height: 56px;
+          width: 48px;
+          height: 48px;
         }
         .sbn-chat-couple {
           position: absolute;
@@ -200,10 +185,10 @@ const SiteBottomNav = () => {
 
         @media (max-width: 639px) {
           .sbn-bar {
-            height: 102px;
-            padding: 8px 12px;
+            height: 70px;
+            padding: 4px 10px;
             bottom: 8px;
-            border-radius: 28px;
+            border-radius: 9999px;
             width: calc(100vw - 12px);
           }
           .sbn-inner { gap: 0; }
@@ -229,7 +214,6 @@ const SiteBottomNav = () => {
             aria-label="Back or forward"
           >
             <div className="sbn-gear-wrap sbn-icon-wrap">
-              <img src={gearBoot} alt="" aria-hidden="true" className="sbn-gear-boot" />
               <img src={gearKnob} alt="" aria-hidden="true" className="sbn-gear-knob" />
               <button
                 type="button"
