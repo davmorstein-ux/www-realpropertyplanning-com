@@ -366,7 +366,7 @@ const SiteBottomNav = () => {
             <div className="sbn-icon-wrap">
               <img src={compassIcon} alt="" aria-hidden="true" className="sbn-icon" loading="lazy" />
             </div>
-            <span className="sbn-label">​</span>
+            <span className="sbn-label">SEARCH</span>
           </button>
 
           {/* 5. Contact */}
