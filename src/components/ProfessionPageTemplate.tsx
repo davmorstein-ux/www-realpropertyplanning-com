@@ -47,6 +47,7 @@ interface ProfessionPageTemplateProps {
   helpHeadline: string;
   helpRows: HelpRow[];
   professionals?: Professional[];
+  featuredOverride?: React.ReactNode;
   faqs: FAQItem[];
   relatedProfessions: RelatedProfession[];
   professionLabel: string;
