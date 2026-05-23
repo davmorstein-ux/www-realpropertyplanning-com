@@ -112,6 +112,7 @@ const SiteBottomNav = () => {
           text-align: center;
           white-space: nowrap;
           font-family: 'Inter', 'DM Sans', system-ui, sans-serif;
+          margin-top: 4px !important;
         }
         .sbn-item:hover .sbn-label { color: #1B2B4B; }
 
@@ -274,7 +275,7 @@ const SiteBottomNav = () => {
             role="group"
             aria-label="Back or forward"
           >
-            <div className="sbn-icon-wrap">
+            <div className="sbn-icon-wrap" style={{ marginTop: '-8px' }}>
               <div
                 style={{
                   position: "relative",
@@ -390,7 +391,7 @@ const SiteBottomNav = () => {
             data-tip="Search the site"
             aria-label="Search"
           >
-            <div className="sbn-icon-wrap" style={{ marginTop: '6px' }}>
+            <div className="sbn-icon-wrap" style={{ marginTop: '-8px' }}>
               <img src={compassIcon} alt="" aria-hidden="true" loading="lazy" style={{ height: '62px', width: 'auto', objectFit: 'contain', display: 'block', transform: 'rotate(35deg)', transition: 'transform 0.2s ease' }} />
             </div>
             <span className="sbn-label">SEARCH</span>
