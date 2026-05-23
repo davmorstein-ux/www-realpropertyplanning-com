@@ -281,8 +281,8 @@ const SiteBottomNav = () => {
                     aria-hidden="true"
                     className="sbn-icon"
                     loading="lazy"
-                    width={50}
-                    height={50}
+                    width={56}
+                    height={56}
                   />
                 )}
                 <span className="sbn-label">{item.label}</span>
