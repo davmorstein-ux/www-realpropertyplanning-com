@@ -255,7 +255,7 @@ const SiteBottomNav = () => {
               style={{
                 position: "relative",
                 width: 30,
-                height: 68,
+                height: 54,
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
@@ -275,8 +275,8 @@ const SiteBottomNav = () => {
                     gearSide === "R" ? -22 : gearSide === "F" ? 22 : 0
                   }deg)`,
                   transformOrigin: "bottom center",
-                  width: 24,
-                  height: 40,
+                  width: 19,
+                  height: 32,
                   objectFit: "contain",
                   transition: "transform 0.2s ease",
                   zIndex: 2,
@@ -292,13 +292,14 @@ const SiteBottomNav = () => {
                   bottom: 0,
                   left: "50%",
                   transform: "translateX(-50%)",
-                  width: 40,
-                  height: 30,
+                  width: 32,
+                  height: 24,
                   objectFit: "contain",
                   zIndex: 1,
                   pointerEvents: "none",
                 }}
               />
+
               <button
                 type="button"
                 className="sbn-gear-half left"
