@@ -334,6 +334,42 @@ const SiteBottomNav = () => {
                   flexShrink: 0,
                 }}
               >
+                <span
+                  aria-hidden="true"
+                  style={{
+                    position: "absolute",
+                    left: 0,
+                    top: "50%",
+                    transform: "translateY(-50%)",
+                    fontSize: 16,
+                    fontWeight: 800,
+                    color: gearSide === "R" ? "#CC0000" : "#1B2B4B",
+                    transition: "none",
+                    zIndex: 4,
+                    pointerEvents: "none",
+                    lineHeight: 1,
+                  }}
+                >
+                  &lt;
+                </span>
+                <span
+                  aria-hidden="true"
+                  style={{
+                    position: "absolute",
+                    right: 0,
+                    top: "50%",
+                    transform: "translateY(-50%)",
+                    fontSize: 16,
+                    fontWeight: 800,
+                    color: gearSide === "F" ? "#22AA44" : "#1B2B4B",
+                    transition: "none",
+                    zIndex: 4,
+                    pointerEvents: "none",
+                    lineHeight: 1,
+                  }}
+                >
+                  &gt;
+                </span>
                 <img
                   src={gearStickImg}
                   alt=""
