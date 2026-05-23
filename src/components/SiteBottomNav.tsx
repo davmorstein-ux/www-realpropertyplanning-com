@@ -7,7 +7,7 @@ import compassIcon from "@/assets/nav/compass_final.png";
 import compassNeedle from "@/assets/nav/compass_needle_final.png";
 import waypointPin from "@/assets/nav/waypoint_final.png";
 import roadmapIcon from "@/assets/nav/map_final.png";
-import headlampIcon from "@/assets/nav/headlamps_final.png";
+import headlampsOff from "@/assets/nav/headlamps_off_final.png";
 import headlampsOn from "@/assets/nav/headlamps_on_final.png";
 import chatCouple from "@/assets/chat-couple.png";
 import chatTire from "@/assets/chat-tire.png";
@@ -104,20 +104,20 @@ const SiteBottomNav = () => {
           transition: transform 0.2s ease;
         }
         .sbn-item:hover .sbn-icon { transform: translateY(-2px) scale(1.06); }
-        .sbn-headlamp-wrap { position: relative; display: inline-block; }
-        .sbn-headlamp { transition: opacity 0.3s ease; opacity: 1; }
-        .sbn-headlamp-on {
+        .sbn-headlamp-wrap { position: relative; display: inline-block; width: auto; height: 58px; }
+        .sbn-headlamp-off, .sbn-headlamp-on {
           position: absolute;
           top: 0;
           left: 0;
-          width: 100%;
-          height: 100%;
-          opacity: 0;
+          height: 58px;
+          width: auto;
+          object-fit: contain;
           pointer-events: none;
           transition: opacity 0.3s ease;
-          object-fit: contain;
         }
-        .sbn-item:hover .sbn-headlamp { opacity: 0; }
+        .sbn-headlamp-off { opacity: 1; }
+        .sbn-headlamp-on { opacity: 0; }
+        .sbn-item:hover .sbn-headlamp-off { opacity: 0; }
         .sbn-item:hover .sbn-headlamp-on { opacity: 1; }
         @keyframes sbn-needle-spin {
           0% { transform: translate(-50%, -50%) rotate(0deg); }
@@ -471,7 +471,7 @@ const SiteBottomNav = () => {
           <Link to="/contact" className="sbn-item" data-tip="Contact us" aria-label="Contact">
             <div className="sbn-icon-wrap" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', overflow: 'visible' }}>
               <span className="sbn-headlamp-wrap">
-                <img src={headlampIcon} alt="" aria-hidden="true" className="sbn-headlamp" style={{ height: '62px', width: 'auto', objectFit: 'contain', display: 'block' }} loading="lazy" />
+                <img src={headlampsOff} alt="" aria-hidden="true" className="sbn-headlamp-off" loading="lazy" />
                 <img src={headlampsOn} alt="" aria-hidden="true" className="sbn-headlamp-on" loading="lazy" />
               </span>
             </div>
