@@ -99,15 +99,6 @@ const SiteBottomNav = () => {
       tooltip: "Resources",
       img: roadmapIcon,
       to: "/resources",
-      custom: (
-        <img
-          src={roadmapIcon}
-          alt=""
-          aria-hidden="true"
-          className="sbn-icon sbn-icon-wide"
-          loading="lazy"
-        />
-      ),
     },
     {
       key: "search",
@@ -134,8 +125,8 @@ const SiteBottomNav = () => {
           right: 0;
           bottom: 0;
           z-index: 9999;
-          height: 88px;
-          padding: 8px 16px env(safe-area-inset-bottom);
+          height: 100px;
+          padding: 10px 16px env(safe-area-inset-bottom);
           background-color: rgba(8, 13, 25, 0.78);
           backdrop-filter: blur(12px);
           -webkit-backdrop-filter: blur(12px);
@@ -160,7 +151,7 @@ const SiteBottomNav = () => {
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          gap: 4px;
+          gap: 6px;
           background: transparent;
           border: 0;
           padding: 4px 2px;
@@ -172,15 +163,14 @@ const SiteBottomNav = () => {
         }
         .sbn-item:hover { color: #ffd98a; }
         .sbn-icon {
-          width: 50px;
-          height: 50px;
+          width: 56px;
+          height: 56px;
           object-fit: contain;
           display: block;
           background: transparent;
           transition: transform 0.2s ease;
         }
         .sbn-item:hover .sbn-icon { transform: translateY(-2px) scale(1.06); }
-        .sbn-icon-wide { width: 72px; height: 50px; }
         .sbn-label {
           font-size: 12px;
           font-weight: 700;
@@ -225,9 +215,8 @@ const SiteBottomNav = () => {
           display: flex;
           align-items: center;
           justify-content: center;
-          gap: 4px;
-          width: 92px;
-          height: 50px;
+          gap: 2px;
+          height: 56px;
         }
         .sbn-gear-half {
           position: relative;
@@ -236,40 +225,18 @@ const SiteBottomNav = () => {
           border: 0;
           color: #fff;
           font-weight: 900;
-          font-size: 14px;
+          font-size: 13px;
           cursor: pointer;
-          width: 18px;
+          width: 14px;
           text-align: center;
           font-family: inherit;
           line-height: 1;
         }
         .sbn-gear-half:hover { color: #ffd98a; }
-        .sbn-map {
-          position: relative;
-          width: 50px;
-          height: 50px;
-        }
-        .sbn-map-base {
-          width: 50px;
-          height: 50px;
-          object-fit: contain;
-          display: block;
-        }
-        .sbn-map-pin {
-          position: absolute;
-          top: -4px;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 22px;
-          height: 22px;
-          object-fit: contain;
-          filter: drop-shadow(0 2px 3px rgba(0,0,0,0.4));
-        }
-        .sbn-item:hover .sbn-map-pin { transform: translateX(-50%) translateY(-2px); transition: transform 0.2s ease; }
         .sbn-gear-graphic {
           position: relative;
-          width: 40px;
-          height: 50px;
+          width: 56px;
+          height: 56px;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -282,25 +249,21 @@ const SiteBottomNav = () => {
           left: 50%;
           transform-origin: bottom center;
           transform: translateX(-50%);
-          width: 22px;
+          width: 26px;
           height: auto;
           transition: transform 0.2s ease;
         }
         .sbn-gear-base {
-          width: 38px;
+          width: 44px;
           height: auto;
           margin-top: auto;
         }
 
         @media (max-width: 639px) {
-          .sbn-bar { height: 80px; padding: 6px 8px env(safe-area-inset-bottom); }
+          .sbn-bar { height: 96px; padding: 8px 8px env(safe-area-inset-bottom); }
           .sbn-inner { gap: 0; }
-          .sbn-icon { width: 38px; height: 38px; }
-          .sbn-icon-wide { width: 56px; height: 38px; }
           .sbn-label { font-size: 10px; }
-          .sbn-gear { width: 72px; height: 40px; }
-          .sbn-gear-base { width: 30px; }
-          .sbn-gear-top { width: 18px; }
+          .sbn-gear-half { width: 12px; font-size: 12px; }
         }
       `}</style>
 
@@ -318,8 +281,8 @@ const SiteBottomNav = () => {
                     aria-hidden="true"
                     className="sbn-icon"
                     loading="lazy"
-                    width={50}
-                    height={50}
+                    width={56}
+                    height={56}
                   />
                 )}
                 <span className="sbn-label">{item.label}</span>
