@@ -32,8 +32,8 @@ const SiteBottomNav = () => {
           z-index: 9999;
           padding-top: 2px !important;
           padding-bottom: 2px !important;
-          padding-left: 28px;
-          padding-right: 28px;
+          padding-left: 8px !important;
+          padding-right: 8px !important;
           height: 80px !important;
           overflow: hidden !important;
           background-color: rgba(245, 241, 232, 0.92);
@@ -51,7 +51,7 @@ const SiteBottomNav = () => {
           width: 100%;
           display: grid;
           grid-template-columns: repeat(6, 1fr);
-          gap: 4px;
+          gap: 0;
           align-items: center;
           justify-items: center;
         }
