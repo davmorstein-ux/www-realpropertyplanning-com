@@ -102,8 +102,8 @@ const SiteBottomNav = () => {
           transition: transform 0.2s ease;
         }
         .sbn-item:hover .sbn-icon { transform: translateY(-2px) scale(1.06); }
-        .sbn-headlamp-off { display: block; height: 52px; width: auto; object-fit: contain; }
-        .sbn-headlamp-on { display: none; height: 52px; width: auto; object-fit: contain; }
+        .sbn-headlamp-off { display: block; height: 39px; width: auto; object-fit: contain; }
+        .sbn-headlamp-on { display: none; height: 39px; width: auto; object-fit: contain; }
         .sbn-item:hover .sbn-headlamp-off { display: none; }
         .sbn-item:hover .sbn-headlamp-on { display: block; }
         @keyframes sbn-needle-spin {
