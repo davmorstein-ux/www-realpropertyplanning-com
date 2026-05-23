@@ -122,20 +122,34 @@ const SiteBottomNav = () => {
           transform: translateX(-50%) translateY(0);
         }
 
-        /* Gear shifter — single knob image, click halves trigger back/forward */
+        /* Gear shifter — boot stationary base, knob & shaft centered on top */
         .sbn-gear-wrap {
           position: relative;
           width: 48px;
           height: 48px;
         }
-        .sbn-gear-knob {
+        .sbn-gear-boot {
           position: absolute;
-          inset: 0;
-          width: 100%;
-          height: 100%;
+          left: 50%;
+          bottom: 0;
+          transform: translateX(-50%);
+          width: 48px;
+          height: 30px;
           object-fit: contain;
+          object-position: bottom center;
           pointer-events: none;
           z-index: 1;
+        }
+        .sbn-gear-knob {
+          position: absolute;
+          left: 50%;
+          bottom: 18px;
+          transform: translateX(-50%);
+          width: 26px;
+          height: 26px;
+          object-fit: contain;
+          pointer-events: none;
+          z-index: 2;
         }
         .sbn-gear-half {
           position: absolute;
