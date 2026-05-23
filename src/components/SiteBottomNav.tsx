@@ -25,24 +25,25 @@ const SiteBottomNav = () => {
       <style>{`
         .sbn-bar {
           position: fixed;
-          left: 0;
-          right: 0;
-          bottom: 0;
+          left: 50%;
+          bottom: 14px;
+          transform: translateX(-50%);
           z-index: 9999;
-          height: 100px;
-          padding: 10px 16px env(safe-area-inset-bottom);
-          background-color: rgba(8, 13, 25, 0.78);
+          height: 108px;
+          padding: 10px 28px;
+          background-color: rgba(245, 241, 232, 0.92);
           backdrop-filter: blur(12px);
           -webkit-backdrop-filter: blur(12px);
-          border-top: 1px solid rgba(255,255,255,0.10);
-          box-shadow: 0 -6px 24px rgba(0,0,0,0.25);
+          border: 1px solid rgba(27, 43, 75, 0.10);
+          border-radius: 9999px;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.18);
           display: flex;
           align-items: center;
           justify-content: center;
+          width: min(960px, calc(100vw - 24px));
         }
         .sbn-inner {
           width: 100%;
-          max-width: 920px;
           display: grid;
           grid-template-columns: repeat(6, 1fr);
           gap: 4px;
@@ -55,17 +56,17 @@ const SiteBottomNav = () => {
           flex-direction: column;
           align-items: center;
           justify-content: flex-end;
-          gap: 6px;
+          gap: 8px;
           background: transparent;
           border: 0;
-          padding: 4px 2px;
+          padding: 2px 4px;
           cursor: pointer;
           text-decoration: none;
-          color: #fff;
-          font-family: 'DM Sans', system-ui, sans-serif;
+          color: #1B2B4B;
+          font-family: 'Inter', 'DM Sans', system-ui, sans-serif;
           line-height: 1;
         }
-        .sbn-item:hover { color: #ffd98a; }
+        .sbn-item:hover { color: #C9A84C; }
         .sbn-icon-wrap {
           width: 56px;
           height: 56px;
@@ -86,12 +87,14 @@ const SiteBottomNav = () => {
         .sbn-label {
           font-size: 12px;
           font-weight: 700;
-          letter-spacing: 0.04em;
-          color: #fff;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          color: #1B2B4B;
           text-align: center;
           white-space: nowrap;
+          font-family: 'Inter', 'DM Sans', system-ui, sans-serif;
         }
-        .sbn-item:hover .sbn-label { color: #ffd98a; }
+        .sbn-item:hover .sbn-label { color: #1B2B4B; }
 
         /* Tooltip */
         .sbn-item[data-tip]::after {
@@ -119,7 +122,7 @@ const SiteBottomNav = () => {
           transform: translateX(-50%) translateY(0);
         }
 
-        /* Gear shifter composite — single visual icon, click halves trigger back/forward */
+        /* Gear shifter — boot stationary at bottom, knob centered directly on top */
         .sbn-gear-wrap {
           position: relative;
           width: 56px;
@@ -130,18 +133,21 @@ const SiteBottomNav = () => {
           left: 50%;
           bottom: 0;
           transform: translateX(-50%);
-          width: 44px;
-          height: auto;
+          width: 56px;
+          height: 36px;
+          object-fit: contain;
+          object-position: bottom center;
           pointer-events: none;
           z-index: 1;
         }
         .sbn-gear-knob {
           position: absolute;
           left: 50%;
-          top: 0;
+          bottom: 22px;
           transform: translateX(-50%);
-          width: 28px;
-          height: auto;
+          width: 30px;
+          height: 30px;
+          object-fit: contain;
           pointer-events: none;
           z-index: 2;
         }
@@ -159,26 +165,32 @@ const SiteBottomNav = () => {
         .sbn-gear-half.left { left: 0; }
         .sbn-gear-half.right { right: 0; }
 
-        /* Chat icon with spinning tire on hover */
-        .sbn-chat-couple {
+        /* Chat — circular couple photo with tire ring snug around it */
+        .sbn-chat-wrap {
+          position: relative;
           width: 56px;
           height: 56px;
+        }
+        .sbn-chat-couple {
+          position: absolute;
+          inset: 6px;
+          width: calc(100% - 12px);
+          height: calc(100% - 12px);
           border-radius: 50%;
           object-fit: cover;
           display: block;
+          z-index: 1;
         }
         .sbn-chat-tire {
           position: absolute;
-          inset: -4px;
-          width: calc(100% + 8px);
-          height: calc(100% + 8px);
+          inset: 0;
+          width: 100%;
+          height: 100%;
           object-fit: contain;
           pointer-events: none;
-          opacity: 0;
-          transition: opacity 0.2s ease;
+          z-index: 2;
         }
         .sbn-item:hover .sbn-chat-tire {
-          opacity: 1;
           animation: sbn-tire-spin 1.4s linear infinite;
         }
         @keyframes sbn-tire-spin {
@@ -187,9 +199,15 @@ const SiteBottomNav = () => {
         }
 
         @media (max-width: 639px) {
-          .sbn-bar { height: 96px; padding: 8px 6px env(safe-area-inset-bottom); }
-          .sbn-inner { gap: 0; max-width: 100%; }
-          .sbn-label { font-size: 11px; }
+          .sbn-bar {
+            height: 102px;
+            padding: 8px 12px;
+            bottom: 8px;
+            border-radius: 28px;
+            width: calc(100vw - 12px);
+          }
+          .sbn-inner { gap: 0; }
+          .sbn-label { font-size: 10px; letter-spacing: 0.06em; }
         }
       `}</style>
 
@@ -267,7 +285,7 @@ const SiteBottomNav = () => {
             data-tip="Chat with us"
             aria-label="Open chat"
           >
-            <div className="sbn-icon-wrap">
+            <div className="sbn-chat-wrap">
               <img src={chatCouple} alt="" aria-hidden="true" className="sbn-chat-couple" />
               <img src={chatTire} alt="" aria-hidden="true" className="sbn-chat-tire" />
             </div>

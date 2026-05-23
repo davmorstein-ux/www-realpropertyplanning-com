@@ -10,13 +10,13 @@ body {
   overflow-x: hidden;
 }
 
-/* Reserve space at the bottom of every page for the fixed SiteBottomNav (110px desktop, 106px mobile) */
+/* Reserve space at the bottom of every page for the floating SiteBottomNav pill */
 body {
-  padding-bottom: calc(110px + env(safe-area-inset-bottom));
+  padding-bottom: calc(140px + env(safe-area-inset-bottom));
 }
 @media (max-width: 639px) {
   body {
-    padding-bottom: calc(106px + env(safe-area-inset-bottom));
+    padding-bottom: calc(126px + env(safe-area-inset-bottom));
   }
 }
 
