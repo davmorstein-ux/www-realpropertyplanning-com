@@ -150,7 +150,7 @@ const SiteBottomNav = () => {
           margin-top: 0 !important;
           padding-top: 0 !important;
           font-weight: 800 !important;
-          font-size: 11px !important;
+          font-size: 9px !important;
           text-align: center !important;
           line-height: 1 !important;
           letter-spacing: 1px;
