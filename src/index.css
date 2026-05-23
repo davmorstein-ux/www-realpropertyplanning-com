@@ -10,6 +10,16 @@ body {
   overflow-x: hidden;
 }
 
+/* Reserve space at the bottom of every page for the fixed SiteBottomNav (88px desktop, 80px mobile) */
+body {
+  padding-bottom: calc(88px + env(safe-area-inset-bottom));
+}
+@media (max-width: 639px) {
+  body {
+    padding-bottom: calc(80px + env(safe-area-inset-bottom));
+  }
+}
+
 @layer base {
   :root {
     /* Premium Estate Advisory Palette */

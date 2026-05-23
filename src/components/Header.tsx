@@ -12,10 +12,10 @@ type NavChild = { label: string; href: string };
 type NavItem = { label: string; href: string; children?: NavChild[] };
 
 const NAV: NavItem[] = [
-  { label: "Resources", href: "/resources" },
-  { label: "Professionals", href: "/building-your-trusted-professional-team" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
+  { label: "Probate & Estate", href: "/probate-estate-sales" },
+  { label: "Senior Transitions", href: "/senior-transitions" },
+  { label: "Property Valuation", href: "/date-of-death-valuation-property-appraisals" },
+  { label: "Services & Resources", href: "/resources" },
 ];
 
 const fontBody = { fontFamily: "'DM Sans', system-ui, sans-serif" };
