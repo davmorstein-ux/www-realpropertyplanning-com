@@ -30,8 +30,7 @@ const SiteBottomNav = () => {
           bottom: 14px;
           transform: translateX(-50%);
           z-index: 9999;
-          height: 82px;
-          padding: 6px 28px;
+          padding: 12px 28px 8px;
           background-color: rgba(245, 241, 232, 0.92);
           backdrop-filter: blur(12px);
           -webkit-backdrop-filter: blur(12px);
@@ -222,14 +221,13 @@ const SiteBottomNav = () => {
 
         @media (max-width: 639px) {
           .sbn-bar {
-            height: 82px;
-            padding: 6px 10px;
+            padding: 12px 10px 8px;
             bottom: 8px;
             border-radius: 9999px;
             width: calc(100vw - 12px);
           }
           .sbn-inner { gap: 0; }
-          .sbn-label { font-size: 10px; letter-spacing: 0.06em; }
+          .sbn-label { font-size: 9px !important; letter-spacing: 0.08em; }
         }
       `}</style>
 
@@ -240,7 +238,7 @@ const SiteBottomNav = () => {
             <div className="sbn-icon-wrap">
               <img src={steeringWheel} alt="" aria-hidden="true" className="sbn-wheel" loading="lazy" />
             </div>
-            <span className="sbn-label">​</span>
+            <span className="sbn-label">HOME</span>
           </Link>
 
           {/* 2. Back / Forward gear shifter — exact stacking from MGFloatingNav */}
@@ -345,7 +343,7 @@ const SiteBottomNav = () => {
                 }}
               />
             </div>
-            <span className="sbn-label">​</span>
+            <span className="sbn-label">BACK / FORWARD</span>
           </div>
 
 
@@ -354,7 +352,7 @@ const SiteBottomNav = () => {
             <div className="sbn-icon-wrap" style={{ width: 90, height: 90 }}>
               <img src={roadmapIcon} alt="" aria-hidden="true" className="sbn-icon" loading="lazy" style={{ width: 90, height: 90 }} />
             </div>
-            <span className="sbn-label">​</span>
+            <span className="sbn-label">SITE MAP</span>
           </Link>
 
           {/* 4. Search */}
@@ -368,7 +366,7 @@ const SiteBottomNav = () => {
             <div className="sbn-icon-wrap">
               <img src={compassIcon} alt="" aria-hidden="true" className="sbn-icon" loading="lazy" />
             </div>
-            <span className="sbn-label">​</span>
+            <span className="sbn-label">SEARCH</span>
           </button>
 
           {/* 5. Contact */}
@@ -376,7 +374,7 @@ const SiteBottomNav = () => {
             <div className="sbn-icon-wrap" style={{ width: 90, height: 90 }}>
               <img src={headlampIcon} alt="" aria-hidden="true" className="sbn-icon" loading="lazy" style={{ width: 90, height: 90 }} />
             </div>
-            <span className="sbn-label">​</span>
+            <span className="sbn-label">CONTACT</span>
           </Link>
 
           {/* 6. Chat */}
@@ -391,7 +389,7 @@ const SiteBottomNav = () => {
               <img src={chatCouple} alt="" aria-hidden="true" className="sbn-chat-couple" />
               <img src={chatTire} alt="" aria-hidden="true" className="sbn-chat-tire" />
             </div>
-            <span className="sbn-label">​</span>
+            <span className="sbn-label">CHAT</span>
           </button>
         </div>
         {/* Suppress unused warning */}
