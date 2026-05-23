@@ -99,7 +99,7 @@ const SiteBottomNav = () => {
           transition: transform 0.2s ease;
         }
         .sbn-item:hover .sbn-icon { transform: translateY(-2px) scale(1.06); }
-        .sbn-headlamp-wrap { position: relative; display: inline-block; width: auto; height: 58px; }
+        .sbn-headlamp-wrap { position: relative !important; display: inline-block; width: 90px !important; height: 58px !important; }
         .sbn-headlamp-off, .sbn-headlamp-on {
           position: absolute;
           top: 0;
