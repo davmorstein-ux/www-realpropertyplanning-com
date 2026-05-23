@@ -41,7 +41,7 @@ const SiteBottomNav = () => {
           backdrop-filter: blur(12px);
           -webkit-backdrop-filter: blur(12px);
           border: 2px solid #CA0600;
-          border-radius: 9999px;
+          border-radius: 40px;
           box-shadow: 0 10px 30px rgba(0,0,0,0.18);
           display: flex;
           align-items: center;
