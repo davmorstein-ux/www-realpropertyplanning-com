@@ -169,14 +169,14 @@ const SiteBottomNav = () => {
         /* Chat — circular couple photo with tire ring snug around it */
         .sbn-chat-wrap {
           position: relative;
-          width: 48px;
-          height: 48px;
+          width: 70px;
+          height: 70px;
         }
         .sbn-chat-couple {
           position: absolute;
-          inset: 6px;
-          width: calc(100% - 12px);
-          height: calc(100% - 12px);
+          inset: 9px;
+          width: calc(100% - 18px);
+          height: calc(100% - 18px);
           border-radius: 50%;
           object-fit: cover;
           display: block;
