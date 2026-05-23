@@ -285,7 +285,7 @@ const SiteBottomNav = () => {
             data-tip="Chat with us"
             aria-label="Open chat"
           >
-            <div className="sbn-icon-wrap">
+            <div className="sbn-chat-wrap">
               <img src={chatCouple} alt="" aria-hidden="true" className="sbn-chat-couple" />
               <img src={chatTire} alt="" aria-hidden="true" className="sbn-chat-tire" />
             </div>
