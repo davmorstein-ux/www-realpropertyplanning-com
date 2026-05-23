@@ -240,6 +240,28 @@ const SiteBottomNav = () => {
           line-height: 1;
         }
         .sbn-gear-half:hover { color: #ffd98a; }
+        .sbn-map {
+          position: relative;
+          width: 50px;
+          height: 50px;
+        }
+        .sbn-map-base {
+          width: 50px;
+          height: 50px;
+          object-fit: contain;
+          display: block;
+        }
+        .sbn-map-pin {
+          position: absolute;
+          top: -4px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 22px;
+          height: 22px;
+          object-fit: contain;
+          filter: drop-shadow(0 2px 3px rgba(0,0,0,0.4));
+        }
+        .sbn-item:hover .sbn-map-pin { transform: translateX(-50%) translateY(-2px); transition: transform 0.2s ease; }
         .sbn-gear-graphic {
           position: relative;
           width: 40px;
