@@ -343,7 +343,7 @@ const SiteBottomNav = () => {
                 }}
               />
             </div>
-            <span className="sbn-label">​</span>
+            <span className="sbn-label">BACK / FORWARD</span>
           </div>
 
 
