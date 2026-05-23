@@ -35,7 +35,7 @@ const SiteBottomNav = () => {
           padding-bottom: 2px !important;
           padding-left: 6px !important;
           padding-right: 6px !important;
-          height: 85px !important;
+          height: 64px !important;
           overflow: hidden !important;
           background-color: rgba(245, 241, 232, 0.92);
           backdrop-filter: blur(12px);
@@ -79,8 +79,8 @@ const SiteBottomNav = () => {
         }
         .sbn-item:hover { color: #C9A84C; }
         .sbn-icon-wrap {
-          width: 60px !important;
-          height: 65px !important;
+          width: 45px !important;
+          height: 49px !important;
           position: relative;
           display: flex;
           align-items: center;
@@ -102,8 +102,8 @@ const SiteBottomNav = () => {
           transition: transform 0.2s ease;
         }
         .sbn-item:hover .sbn-icon { transform: translateY(-2px) scale(1.06); }
-        .sbn-headlamp-off { display: block; height: 52px; width: auto; object-fit: contain; }
-        .sbn-headlamp-on { display: none; height: 52px; width: auto; object-fit: contain; }
+        .sbn-headlamp-off { display: block; height: 39px; width: auto; object-fit: contain; }
+        .sbn-headlamp-on { display: none; height: 39px; width: auto; object-fit: contain; }
         .sbn-item:hover .sbn-headlamp-off { display: none; }
         .sbn-item:hover .sbn-headlamp-on { display: block; }
         @keyframes sbn-needle-spin {
@@ -150,7 +150,7 @@ const SiteBottomNav = () => {
           margin-top: 0 !important;
           padding-top: 0 !important;
           font-weight: 800 !important;
-          font-size: 9px !important;
+          font-size: 8px !important;
           text-align: center !important;
           line-height: 1 !important;
           letter-spacing: 1px;
@@ -232,16 +232,16 @@ const SiteBottomNav = () => {
 
         /* Chat — circular couple photo with tire ring snug around it */
         .sbn-chat-outer {
-          width: 55px !important;
-          height: 65px !important;
+          width: 41px !important;
+          height: 49px !important;
           display: flex;
           align-items: center;
           justify-content: center;
         }
         .sbn-chat-wrap {
           position: relative;
-          width: 58px !important;
-          height: 58px !important;
+          width: 44px !important;
+          height: 44px !important;
         }
         .sbn-chat-couple {
           position: absolute;
@@ -272,8 +272,8 @@ const SiteBottomNav = () => {
 
         /* Home steering wheel — exact wheelImgStyle from MGFloatingNav */
         .sbn-wheel {
-          width: 58px !important;
-          height: 58px !important;
+          width: 42px !important;
+          height: 42px !important;
           object-fit: contain;
           display: block;
           margin-top: 0;
@@ -325,8 +325,8 @@ const SiteBottomNav = () => {
               <div
                 style={{
                   position: "relative",
-                  width: 60,
-                  height: 65,
+                  width: 42,
+                  height: 42,
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
@@ -382,8 +382,8 @@ const SiteBottomNav = () => {
                       gearSide === "R" ? -22 : gearSide === "F" ? 22 : 0
                     }deg)`,
                     transformOrigin: "bottom center",
-                    width: 20,
-                    height: 29,
+                    width: 15,
+                    height: 22,
                     objectFit: "contain",
                     transition: "transform 0.2s ease",
                     zIndex: 2,
@@ -399,8 +399,8 @@ const SiteBottomNav = () => {
                     bottom: 2,
                     left: "50%",
                     transform: "translateX(-50%)",
-                    width: 36,
-                    height: 28,
+                    width: 27,
+                    height: 21,
                     objectFit: "contain",
                     zIndex: 1,
                     pointerEvents: "none",
@@ -461,7 +461,7 @@ const SiteBottomNav = () => {
           <Link to="/sitemap" className="sbn-item" data-tip="Site Map" aria-label="Site Map">
             <div className="sbn-icon-wrap" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', overflow: 'visible', marginRight: '8px' }}>
               <span className="sbn-map-wrap">
-                <img src={roadmapIcon} alt="" aria-hidden="true" style={{ height: '68px', width: 'auto', objectFit: 'contain' }} loading="lazy" />
+                <img src={roadmapIcon} alt="" aria-hidden="true" style={{ height: '39px', width: 'auto', objectFit: 'contain' }} loading="lazy" />
                 <img src={waypointPin} alt="" aria-hidden="true" className="sbn-waypoint" loading="lazy" />
               </span>
             </div>
@@ -478,7 +478,7 @@ const SiteBottomNav = () => {
           >
             <div className="sbn-icon-wrap">
               <span className="sbn-compass-wrap">
-                <img src={compassIcon} alt="" aria-hidden="true" loading="lazy" style={{ height: '62px', width: 'auto', objectFit: 'contain', display: 'block', transform: 'rotate(35deg)', transition: 'transform 0.2s ease' }} />
+                <img src={compassIcon} alt="" aria-hidden="true" loading="lazy" style={{ height: '36px', width: 'auto', objectFit: 'contain', display: 'block', transform: 'rotate(35deg)', transition: 'transform 0.2s ease' }} />
                 <img src={compassNeedle} alt="" aria-hidden="true" loading="lazy" className="sbn-compass-needle" />
               </span>
             </div>
