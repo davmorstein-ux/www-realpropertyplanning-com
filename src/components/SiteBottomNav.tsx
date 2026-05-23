@@ -240,7 +240,7 @@ const SiteBottomNav = () => {
             <div className="sbn-icon-wrap">
               <img src={steeringWheel} alt="" aria-hidden="true" className="sbn-wheel" loading="lazy" />
             </div>
-            <span className="sbn-label">Home</span>
+            <span className="sbn-label">​</span>
           </Link>
 
           {/* 2. Back / Forward gear shifter — exact stacking from MGFloatingNav */}
@@ -345,7 +345,7 @@ const SiteBottomNav = () => {
                 }}
               />
             </div>
-            <span className="sbn-label">&lt; Back / Forward &gt;</span>
+            <span className="sbn-label">​</span>
           </div>
 
 
@@ -354,7 +354,7 @@ const SiteBottomNav = () => {
             <div className="sbn-icon-wrap">
               <img src={roadmapIcon} alt="" aria-hidden="true" className="sbn-icon" loading="lazy" />
             </div>
-            <span className="sbn-label">Site Map</span>
+            <span className="sbn-label">​</span>
           </Link>
 
           {/* 4. Search */}
@@ -368,7 +368,7 @@ const SiteBottomNav = () => {
             <div className="sbn-icon-wrap">
               <img src={compassIcon} alt="" aria-hidden="true" className="sbn-icon" loading="lazy" />
             </div>
-            <span className="sbn-label">Search</span>
+            <span className="sbn-label">​</span>
           </button>
 
           {/* 5. Contact */}
@@ -376,7 +376,7 @@ const SiteBottomNav = () => {
             <div className="sbn-icon-wrap">
               <img src={headlampIcon} alt="" aria-hidden="true" className="sbn-icon" loading="lazy" />
             </div>
-            <span className="sbn-label">Contact</span>
+            <span className="sbn-label">​</span>
           </Link>
 
           {/* 6. Chat */}
@@ -391,7 +391,7 @@ const SiteBottomNav = () => {
               <img src={chatCouple} alt="" aria-hidden="true" className="sbn-chat-couple" />
               <img src={chatTire} alt="" aria-hidden="true" className="sbn-chat-tire" />
             </div>
-            <span className="sbn-label">Chat</span>
+            <span className="sbn-label">​</span>
           </button>
         </div>
         {/* Suppress unused warning */}
