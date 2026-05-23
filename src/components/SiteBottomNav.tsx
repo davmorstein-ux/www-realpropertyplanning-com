@@ -102,6 +102,13 @@ const SiteBottomNav = () => {
           transition: transform 0.2s ease;
         }
         .sbn-item:hover .sbn-icon { transform: translateY(-2px) scale(1.06); }
+        .sbn-headlamp {
+          filter: brightness(1);
+          transition: filter 0.3s ease;
+        }
+        .sbn-item:hover .sbn-headlamp {
+          filter: brightness(1.5) drop-shadow(0 0 10px rgba(255, 240, 150, 0.95)) drop-shadow(0 0 20px rgba(255, 220, 100, 0.7));
+        }
         @keyframes sbn-needle-spin {
           0% { transform: translate(-50%, -50%) rotate(0deg); }
           100% { transform: translate(-50%, -50%) rotate(720deg); }
