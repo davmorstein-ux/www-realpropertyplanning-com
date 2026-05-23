@@ -6,7 +6,7 @@ import gearTop from "@/assets/nav/gear-knob.webp";
 import compassIcon from "@/assets/nav/compass.webp";
 import roadmapIcon from "@/assets/nav/map.png";
 import waypointIcon from "@/assets/nav/waypoint.webp";
-import headlampIcon from "@/assets/nav/headlamps.png";
+import headlampIcon from "@/assets/nav/headlamps.webp";
 import speedometerIcon from "@/assets/nav/speedometer.webp";
 
 /**
@@ -99,6 +99,15 @@ const SiteBottomNav = () => {
       tooltip: "Resources",
       img: roadmapIcon,
       to: "/resources",
+      custom: (
+        <img
+          src={roadmapIcon}
+          alt=""
+          aria-hidden="true"
+          className="sbn-icon sbn-icon-wide"
+          loading="lazy"
+        />
+      ),
     },
     {
       key: "search",
@@ -171,6 +180,7 @@ const SiteBottomNav = () => {
           transition: transform 0.2s ease;
         }
         .sbn-item:hover .sbn-icon { transform: translateY(-2px) scale(1.06); }
+        .sbn-icon-wide { width: 72px; height: 50px; }
         .sbn-label {
           font-size: 12px;
           font-weight: 700;
@@ -286,6 +296,7 @@ const SiteBottomNav = () => {
           .sbn-bar { height: 80px; padding: 6px 8px env(safe-area-inset-bottom); }
           .sbn-inner { gap: 0; }
           .sbn-icon { width: 38px; height: 38px; }
+          .sbn-icon-wide { width: 56px; height: 38px; }
           .sbn-label { font-size: 10px; }
           .sbn-gear { width: 72px; height: 40px; }
           .sbn-gear-base { width: 30px; }
