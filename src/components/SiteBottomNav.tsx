@@ -285,8 +285,8 @@ const SiteBottomNav = () => {
                       gearSide === "R" ? -22 : gearSide === "F" ? 22 : 0
                     }deg)`,
                     transformOrigin: "bottom center",
-                    width: 25,
-                    height: 42,
+                    width: 17,
+                    height: 28,
                     objectFit: "contain",
                     transition: "transform 0.2s ease",
                     zIndex: 2,
