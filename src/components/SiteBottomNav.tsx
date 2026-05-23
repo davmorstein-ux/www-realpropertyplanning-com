@@ -30,7 +30,7 @@ const SiteBottomNav = () => {
           bottom: 14px;
           transform: translateX(-50%);
           z-index: 9999;
-          padding: 4px 28px 8px;
+          padding: 4px 28px 4px;
           background-color: rgba(245, 241, 232, 0.92);
           backdrop-filter: blur(12px);
           -webkit-backdrop-filter: blur(12px);
@@ -228,7 +228,7 @@ const SiteBottomNav = () => {
 
         @media (max-width: 639px) {
           .sbn-bar {
-            padding: 6px 10px 8px;
+            padding: 4px 10px 4px;
             bottom: 8px;
             border-radius: 9999px;
             width: calc(100vw - 12px);
