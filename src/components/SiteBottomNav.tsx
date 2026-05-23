@@ -47,7 +47,7 @@ const SiteBottomNav = () => {
           display: grid;
           grid-template-columns: repeat(6, 1fr);
           gap: 4px;
-          align-items: center;
+          align-items: end;
           justify-items: center;
         }
         .sbn-item {
