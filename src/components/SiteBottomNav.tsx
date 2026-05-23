@@ -30,7 +30,7 @@ const SiteBottomNav = () => {
           bottom: 14px;
           transform: translateX(-50%);
           z-index: 9999;
-          padding: 6px 28px 8px;
+          padding: 4px 28px 8px;
           background-color: rgba(245, 241, 232, 0.92);
           backdrop-filter: blur(12px);
           -webkit-backdrop-filter: blur(12px);
@@ -47,7 +47,7 @@ const SiteBottomNav = () => {
           display: grid;
           grid-template-columns: repeat(6, 1fr);
           gap: 4px;
-          align-items: end;
+          align-items: center;
           justify-items: center;
         }
         .sbn-item {
@@ -68,8 +68,8 @@ const SiteBottomNav = () => {
         }
         .sbn-item:hover { color: #C9A84C; }
         .sbn-icon-wrap {
-          width: 70px;
-          height: 70px;
+          width: 90px;
+          height: 90px;
           position: relative;
           display: flex;
           align-items: center;
@@ -166,6 +166,13 @@ const SiteBottomNav = () => {
         .sbn-gear-half.right { right: 0; }
 
         /* Chat — circular couple photo with tire ring snug around it */
+        .sbn-chat-outer {
+          width: 90px;
+          height: 90px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
         .sbn-chat-wrap {
           position: relative;
           width: 70px;
@@ -248,102 +255,103 @@ const SiteBottomNav = () => {
             role="group"
             aria-label="Back or forward"
           >
-            <div
-              className="sbn-icon-wrap"
-              style={{
-                position: "relative",
-                width: 70,
-                height: 70,
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "flex-end",
-                flexShrink: 0,
-              }}
-            >
-              <img
-                src={gearStickImg}
-                alt=""
-                aria-hidden="true"
+            <div className="sbn-icon-wrap">
+              <div
                 style={{
-                  position: "absolute",
-                  top: 0,
-                  left: "50%",
-                  transform: `translateX(-50%) rotate(${
-                    gearSide === "R" ? -22 : gearSide === "F" ? 22 : 0
-                  }deg)`,
-                  transformOrigin: "bottom center",
-                  width: 25,
-                  height: 42,
-                  objectFit: "contain",
-                  transition: "transform 0.2s ease",
-                  zIndex: 2,
-                  pointerEvents: "none",
+                  position: "relative",
+                  width: 70,
+                  height: 70,
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "flex-end",
+                  flexShrink: 0,
                 }}
-              />
-              <img
-                src={gearBootImg}
-                alt=""
-                aria-hidden="true"
-                style={{
-                  position: "absolute",
-                  bottom: 0,
-                  left: "50%",
-                  transform: "translateX(-50%)",
-                  width: 42,
-                  height: 31,
-                  objectFit: "contain",
-                  zIndex: 1,
-                  pointerEvents: "none",
-                }}
-              />
+              >
+                <img
+                  src={gearStickImg}
+                  alt=""
+                  aria-hidden="true"
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: "50%",
+                    transform: `translateX(-50%) rotate(${
+                      gearSide === "R" ? -22 : gearSide === "F" ? 22 : 0
+                    }deg)`,
+                    transformOrigin: "bottom center",
+                    width: 25,
+                    height: 42,
+                    objectFit: "contain",
+                    transition: "transform 0.2s ease",
+                    zIndex: 2,
+                    pointerEvents: "none",
+                  }}
+                />
+                <img
+                  src={gearBootImg}
+                  alt=""
+                  aria-hidden="true"
+                  style={{
+                    position: "absolute",
+                    bottom: 0,
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                    width: 42,
+                    height: 31,
+                    objectFit: "contain",
+                    zIndex: 1,
+                    pointerEvents: "none",
+                  }}
+                />
 
-              <button
-                type="button"
-                className="sbn-gear-half left"
-                aria-label="Go back"
-                onMouseEnter={() => setGearSide("R")}
-                onMouseLeave={() => setGearSide("none")}
-                onFocus={() => setGearSide("R")}
-                onBlur={() => setGearSide("none")}
-                onClick={() => window.history.back()}
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  width: "50%",
-                  height: "100%",
-                  background: "transparent",
-                  border: 0,
-                  cursor: "pointer",
-                  zIndex: 3,
-                  padding: 0,
-                }}
-              />
-              <button
-                type="button"
-                className="sbn-gear-half right"
-                aria-label="Go forward"
-                onMouseEnter={() => setGearSide("F")}
-                onMouseLeave={() => setGearSide("none")}
-                onFocus={() => setGearSide("F")}
-                onBlur={() => setGearSide("none")}
-                onClick={() => window.history.forward()}
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  right: 0,
-                  width: "50%",
-                  height: "100%",
-                  background: "transparent",
-                  border: 0,
-                  cursor: "pointer",
-                  zIndex: 3,
-                  padding: 0,
-                }}
-              />
+                <button
+                  type="button"
+                  className="sbn-gear-half left"
+                  aria-label="Go back"
+                  onMouseEnter={() => setGearSide("R")}
+                  onMouseLeave={() => setGearSide("none")}
+                  onFocus={() => setGearSide("R")}
+                  onBlur={() => setGearSide("none")}
+                  onClick={() => window.history.back()}
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "50%",
+                    height: "100%",
+                    background: "transparent",
+                    border: 0,
+                    cursor: "pointer",
+                    zIndex: 3,
+                    padding: 0,
+                  }}
+                />
+                <button
+                  type="button"
+                  className="sbn-gear-half right"
+                  aria-label="Go forward"
+                  onMouseEnter={() => setGearSide("F")}
+                  onMouseLeave={() => setGearSide("none")}
+                  onFocus={() => setGearSide("F")}
+                  onBlur={() => setGearSide("none")}
+                  onClick={() => window.history.forward()}
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    right: 0,
+                    width: "50%",
+                    height: "100%",
+                    background: "transparent",
+                    border: 0,
+                    cursor: "pointer",
+                    zIndex: 3,
+                    padding: 0,
+                  }}
+                />
+              </div>
             </div>
-            <span className="sbn-label">BACK / FORWARD</span>
+            <span className="sbn-label">&lt; PAGE &gt;</span>
           </div>
 
 
@@ -385,9 +393,11 @@ const SiteBottomNav = () => {
             data-tip="Chat with us"
             aria-label="Open chat"
           >
-            <div className="sbn-chat-wrap">
-              <img src={chatCouple} alt="" aria-hidden="true" className="sbn-chat-couple" />
-              <img src={chatTire} alt="" aria-hidden="true" className="sbn-chat-tire" />
+            <div className="sbn-chat-outer">
+              <div className="sbn-chat-wrap">
+                <img src={chatCouple} alt="" aria-hidden="true" className="sbn-chat-couple" />
+                <img src={chatTire} alt="" aria-hidden="true" className="sbn-chat-tire" />
+              </div>
             </div>
             <span className="sbn-label">CHAT</span>
           </button>
