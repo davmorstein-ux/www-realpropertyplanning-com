@@ -142,7 +142,10 @@ const ProfessionPageTemplate = ({
             <h2 className="font-serif text-[1.75rem] text-foreground font-semibold mb-10">
               Featured Professionals
             </h2>
-            {displayProfessionals.length > 0 && (
+            {featuredOverride ? (
+              featuredOverride
+            ) : (
+              displayProfessionals.length > 0 && (
               <div className="grid md:grid-cols-2 gap-6">
                 {displayProfessionals.map((pro, idx) => (
                   <div
@@ -213,10 +216,12 @@ const ProfessionPageTemplate = ({
                   </div>
                 ))}
               </div>
+              )
             )}
           </div>
         </div>
       </section>
+
 
       {/* SECTION 4: FAQ */}
       <section className="py-16 lg:py-24 bg-background">
