@@ -80,6 +80,20 @@ const SiteBottomNav = () => {
           align-items: center;
           justify-content: center;
         }
+        .sbn-wrap-tall {
+          width: auto !important;
+          height: 75px !important;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+        }
+        .sbn-icon-tall {
+          width: auto !important;
+          height: 75px !important;
+          object-fit: contain !important;
+          display: block !important;
+          background: transparent !important;
+        }
         .sbn-icon {
           width: 55px !important;
           height: 55px !important;
@@ -362,8 +376,8 @@ const SiteBottomNav = () => {
 
           {/* 3. Site Map */}
           <Link to="/sitemap" className="sbn-item" data-tip="Site Map" aria-label="Site Map">
-            <div className="sbn-icon-wrap" style={{ width: 90, height: 90 }}>
-              <img src={roadmapIcon} alt="" aria-hidden="true" className="sbn-icon" loading="lazy" style={{ width: 90, height: 90 }} />
+            <div className="sbn-icon-wrap sbn-wrap-tall">
+              <img src={roadmapIcon} alt="" aria-hidden="true" className="sbn-icon sbn-icon-tall" loading="lazy" />
             </div>
             <span className="sbn-label">SITE MAP</span>
           </Link>
@@ -384,8 +398,8 @@ const SiteBottomNav = () => {
 
           {/* 5. Contact */}
           <Link to="/contact" className="sbn-item" data-tip="Contact us" aria-label="Contact">
-            <div className="sbn-icon-wrap" style={{ width: 90, height: 90 }}>
-              <img src={headlampIcon} alt="" aria-hidden="true" className="sbn-icon" loading="lazy" style={{ width: 90, height: 90 }} />
+            <div className="sbn-icon-wrap sbn-wrap-tall">
+              <img src={headlampIcon} alt="" aria-hidden="true" className="sbn-icon sbn-icon-tall" loading="lazy" />
             </div>
             <span className="sbn-label">CONTACT</span>
           </Link>
