@@ -34,7 +34,7 @@ const SiteBottomNav = () => {
           padding-bottom: 2px !important;
           padding-left: 6px !important;
           padding-right: 6px !important;
-          height: 80px !important;
+          height: 95px !important;
           overflow: hidden !important;
           background-color: rgba(245, 241, 232, 0.92);
           backdrop-filter: blur(12px);
@@ -78,8 +78,8 @@ const SiteBottomNav = () => {
         }
         .sbn-item:hover { color: #C9A84C; }
         .sbn-icon-wrap {
-          width: 55px !important;
-          height: 70px !important;
+          width: 60px !important;
+          height: 65px !important;
           position: relative;
           display: flex;
           align-items: center;
@@ -105,11 +105,11 @@ const SiteBottomNav = () => {
           display: flex !important;
           align-items: center !important;
           justify-content: center !important;
-          height: 20px !important;
+          height: 16px !important;
           margin-top: 0 !important;
           padding-top: 0 !important;
           font-weight: 800 !important;
-          font-size: 12px !important;
+          font-size: 11px !important;
           text-align: center !important;
           line-height: 1 !important;
           letter-spacing: 1px;
@@ -192,15 +192,15 @@ const SiteBottomNav = () => {
         /* Chat — circular couple photo with tire ring snug around it */
         .sbn-chat-outer {
           width: 55px !important;
-          height: 70px !important;
+          height: 65px !important;
           display: flex;
           align-items: center;
           justify-content: center;
         }
         .sbn-chat-wrap {
           position: relative;
-          width: 55px !important;
-          height: 55px !important;
+          width: 58px !important;
+          height: 58px !important;
         }
         .sbn-chat-couple {
           position: absolute;
@@ -231,8 +231,8 @@ const SiteBottomNav = () => {
 
         /* Home steering wheel — exact wheelImgStyle from MGFloatingNav */
         .sbn-wheel {
-          width: 55px !important;
-          height: 55px !important;
+          width: 58px !important;
+          height: 58px !important;
           object-fit: contain;
           display: block;
           margin-top: 0;
@@ -284,8 +284,8 @@ const SiteBottomNav = () => {
               <div
                 style={{
                   position: "relative",
-                  width: 55,
-                  height: 55,
+                  width: 60,
+                  height: 65,
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
@@ -299,14 +299,14 @@ const SiteBottomNav = () => {
                   aria-hidden="true"
                   style={{
                     position: "absolute",
-                    top: 6,
+                    top: 2,
                     left: "50%",
                     transform: `translateX(-50%) rotate(${
                       gearSide === "R" ? -22 : gearSide === "F" ? 22 : 0
                     }deg)`,
                     transformOrigin: "bottom center",
-                    width: 17,
-                    height: 28,
+                    width: 20,
+                    height: 36,
                     objectFit: "contain",
                     transition: "transform 0.2s ease",
                     zIndex: 2,
@@ -319,11 +319,11 @@ const SiteBottomNav = () => {
                   aria-hidden="true"
                   style={{
                     position: "absolute",
-                    bottom: 0,
+                    bottom: 2,
                     left: "50%",
                     transform: "translateX(-50%)",
-                    width: 28,
-                    height: 21,
+                    width: 36,
+                    height: 28,
                     objectFit: "contain",
                     zIndex: 1,
                     pointerEvents: "none",
@@ -383,7 +383,7 @@ const SiteBottomNav = () => {
           {/* 3. Site Map */}
           <Link to="/sitemap" className="sbn-item" data-tip="Site Map" aria-label="Site Map">
             <div className="sbn-icon-wrap" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', overflow: 'visible' }}>
-              <img src={roadmapIcon} alt="" aria-hidden="true" style={{ height: '58px', width: 'auto', objectFit: 'contain' }} loading="lazy" />
+              <img src={roadmapIcon} alt="" aria-hidden="true" style={{ height: '62px', width: 'auto', objectFit: 'contain' }} loading="lazy" />
             </div>
             <span className="sbn-label">SITE MAP</span>
           </Link>
@@ -405,7 +405,7 @@ const SiteBottomNav = () => {
           {/* 5. Contact */}
           <Link to="/contact" className="sbn-item" data-tip="Contact us" aria-label="Contact">
             <div className="sbn-icon-wrap" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', overflow: 'visible' }}>
-              <img src={headlampIcon} alt="" aria-hidden="true" style={{ height: '58px', width: 'auto', objectFit: 'contain' }} loading="lazy" />
+              <img src={headlampIcon} alt="" aria-hidden="true" style={{ height: '62px', width: 'auto', objectFit: 'contain' }} loading="lazy" />
             </div>
             <span className="sbn-label">CONTACT</span>
           </Link>
