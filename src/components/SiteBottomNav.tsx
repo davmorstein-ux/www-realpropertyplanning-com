@@ -30,8 +30,8 @@ const SiteBottomNav = () => {
           bottom: 14px;
           transform: translateX(-50%);
           z-index: 9999;
-          height: 70px;
-          padding: 4px 28px;
+          height: 82px;
+          padding: 6px 28px;
           background-color: rgba(245, 241, 232, 0.92);
           backdrop-filter: blur(12px);
           -webkit-backdrop-filter: blur(12px);
@@ -69,16 +69,16 @@ const SiteBottomNav = () => {
         }
         .sbn-item:hover { color: #C9A84C; }
         .sbn-icon-wrap {
-          width: 90px;
-          height: 90px;
+          width: 70px;
+          height: 70px;
           position: relative;
           display: flex;
           align-items: center;
           justify-content: center;
         }
         .sbn-icon {
-          width: 90px;
-          height: 90px;
+          width: 70px;
+          height: 70px;
           object-fit: contain;
           display: block;
           background: transparent;
@@ -169,14 +169,14 @@ const SiteBottomNav = () => {
         /* Chat — circular couple photo with tire ring snug around it */
         .sbn-chat-wrap {
           position: relative;
-          width: 48px;
-          height: 48px;
+          width: 70px;
+          height: 70px;
         }
         .sbn-chat-couple {
           position: absolute;
-          inset: 6px;
-          width: calc(100% - 12px);
-          height: calc(100% - 12px);
+          inset: 9px;
+          width: calc(100% - 18px);
+          height: calc(100% - 18px);
           border-radius: 50%;
           object-fit: cover;
           display: block;
@@ -201,12 +201,12 @@ const SiteBottomNav = () => {
 
         /* Home steering wheel — exact wheelImgStyle from MGFloatingNav */
         .sbn-wheel {
-          width: 60px !important;
-          height: 60px !important;
+          width: 70px !important;
+          height: 70px !important;
           object-fit: contain;
           display: block;
-          margin-top: -4px;
-          margin-bottom: 2px;
+          margin-top: 0;
+          margin-bottom: 0;
           background: transparent;
         }
         @keyframes wheelWiggle {
@@ -222,8 +222,8 @@ const SiteBottomNav = () => {
 
         @media (max-width: 639px) {
           .sbn-bar {
-            height: 70px;
-            padding: 4px 10px;
+            height: 82px;
+            padding: 6px 10px;
             bottom: 8px;
             border-radius: 9999px;
             width: calc(100vw - 12px);
@@ -254,8 +254,8 @@ const SiteBottomNav = () => {
               className="sbn-icon-wrap"
               style={{
                 position: "relative",
-                width: 22.5,
-                height: 40.5,
+                width: 70,
+                height: 70,
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
@@ -275,8 +275,8 @@ const SiteBottomNav = () => {
                     gearSide === "R" ? -22 : gearSide === "F" ? 22 : 0
                   }deg)`,
                   transformOrigin: "bottom center",
-                  width: 14.25,
-                  height: 24,
+                  width: 25,
+                  height: 42,
                   objectFit: "contain",
                   transition: "transform 0.2s ease",
                   zIndex: 2,
@@ -292,8 +292,8 @@ const SiteBottomNav = () => {
                   bottom: 0,
                   left: "50%",
                   transform: "translateX(-50%)",
-                  width: 24,
-                  height: 18,
+                  width: 42,
+                  height: 31,
                   objectFit: "contain",
                   zIndex: 1,
                   pointerEvents: "none",
@@ -312,8 +312,8 @@ const SiteBottomNav = () => {
                 style={{
                   position: "absolute",
                   top: 0,
-                  left: "-16.5px",
-                  width: "calc(50% + 16.5px)",
+                  left: 0,
+                  width: "50%",
                   height: "100%",
                   background: "transparent",
                   border: 0,
@@ -334,8 +334,8 @@ const SiteBottomNav = () => {
                 style={{
                   position: "absolute",
                   top: 0,
-                  right: "-16.5px",
-                  width: "calc(50% + 16.5px)",
+                  right: 0,
+                  width: "50%",
                   height: "100%",
                   background: "transparent",
                   border: 0,
