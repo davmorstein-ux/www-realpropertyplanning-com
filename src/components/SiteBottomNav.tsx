@@ -6,7 +6,7 @@ import gearTop from "@/assets/nav/gear-knob.webp";
 import compassIcon from "@/assets/nav/compass.webp";
 import roadmapIcon from "@/assets/nav/map.png";
 import waypointIcon from "@/assets/nav/waypoint.webp";
-import headlampIcon from "@/assets/nav/headlamps.png";
+import headlampIcon from "@/assets/nav/headlamps.webp";
 import speedometerIcon from "@/assets/nav/speedometer.webp";
 
 /**
