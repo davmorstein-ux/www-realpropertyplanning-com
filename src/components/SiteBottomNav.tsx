@@ -102,21 +102,6 @@ const SiteBottomNav = () => {
           transition: transform 0.2s ease;
         }
         .sbn-item:hover .sbn-icon { transform: translateY(-2px) scale(1.06); }
-        .sbn-headlamp-wrap { position: relative; width: 90px; height: 58px; display: inline-block; }
-        .sbn-headlamp-off, .sbn-headlamp-on {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          object-fit: contain;
-          pointer-events: none;
-          transition: opacity 0.3s ease;
-        }
-        .sbn-headlamp-off { opacity: 1; }
-        .sbn-headlamp-on { opacity: 0; }
-        .sbn-item:hover .sbn-headlamp-off { opacity: 0; }
-        .sbn-item:hover .sbn-headlamp-on { opacity: 1; }
         @keyframes sbn-needle-spin {
           0% { transform: translate(-50%, -50%) rotate(0deg); }
           100% { transform: translate(-50%, -50%) rotate(720deg); }
@@ -475,7 +460,7 @@ const SiteBottomNav = () => {
                 src={headlampOn ? headlampsOn : headlampsOff}
                 alt=""
                 aria-hidden="true"
-                style={{ height: '62px', width: 'auto', objectFit: 'contain', display: 'block' }}
+                style={{ height: '62px', width: 'auto', objectFit: 'contain', display: 'block', transition: 'none' }}
                 loading="eager"
               />
             </div>
