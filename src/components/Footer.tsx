@@ -10,10 +10,35 @@ import iconPin3d from "@/assets/icons/real-estate-location-pin-3d-icon-washingto
 
 const Footer = () => {
   return (
-    <footer data-nosnippet="true" className="bg-navy-dark py-14 md:py-16">
+    <footer data-nosnippet="true" className="rpp-footer bg-navy-dark py-14 md:py-16">
+      <style>{`
+        .rpp-footer, .rpp-footer p, .rpp-footer a, .rpp-footer li, .rpp-footer span, .rpp-footer ul {
+          font-size: 12px !important;
+          line-height: 1.6 !important;
+        }
+        .rpp-footer h1, .rpp-footer h2, .rpp-footer h3, .rpp-footer h4 {
+          font-size: 13px !important;
+          font-weight: 700 !important;
+          line-height: 1.6 !important;
+        }
+        .rpp-footer li { margin-bottom: 4px !important; padding-top: 0 !important; padding-bottom: 0 !important; }
+        .rpp-footer ul { margin-top: 0 !important; }
+        .rpp-footer .rpp-footer-email { word-break: break-all !important; }
+        @media (min-width: 768px) {
+          .rpp-footer-cols {
+            display: flex !important;
+            flex-direction: row !important;
+            justify-content: space-evenly !important;
+            align-items: flex-start !important;
+            gap: 2rem !important;
+          }
+          .rpp-footer-cols > * { flex: 0 1 auto !important; min-width: 0 !important; max-width: 100% !important; }
+        }
+      `}</style>
       <div className="container px-6 lg:px-10">
         {/* Compact link grid — wider Guided Journeys column so links never clip */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10 mb-12 text-left">
+        <div className="rpp-footer-cols grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10 mb-12 text-left">
+
           {/* Brand & NAP — 3/12 */}
           <div className="lg:col-span-3">
             <Link to="/" className="block mb-2.5">
@@ -34,9 +59,10 @@ const Footer = () => {
               <li>
                 <a href="mailto:info@realpropertyplanning.com" className="text-primary-foreground hover:text-gold transition-colors flex items-center gap-3.5 break-all leading-tight">
                   <img src={iconEmail3d} alt="" aria-hidden="true" className="w-[28px] h-[28px] object-contain shrink-0" loading="lazy" />
-                  <span>info@realpropertyplanning.com</span>
+                  <span className="rpp-footer-email">info@realpropertyplanning.com</span>
                 </a>
               </li>
+
               <li className="text-primary-foreground flex items-start gap-3.5 leading-snug">
                 <img src={iconPin3d} alt="" aria-hidden="true" className="w-[28px] h-[28px] object-contain mt-0.5 shrink-0" loading="lazy" />
                 <span>PO Box 1462, Woodinville, WA 98072</span>
