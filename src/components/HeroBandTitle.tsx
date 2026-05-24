@@ -56,13 +56,14 @@ const HeroBandTitle = ({
     color: "#FFFFFF",
     fontFamily: '"Cormorant Garamond", "DM Sans", serif',
     fontWeight: 300,
-    fontSize: "2rem",
-    letterSpacing: "0.08em",
+    fontSize: "1.75rem",
+    letterSpacing: "0.12em",
     textShadow: "0 1px 4px rgba(0,0,0,0.4)",
     lineHeight: 1.2,
     opacity: 1,
     margin: 0,
     wordSpacing: "normal",
+    textAlign: "center" as const,
   };
 
   useEffect(() => {
