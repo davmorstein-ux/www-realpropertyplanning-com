@@ -97,18 +97,18 @@ const Sitemap = () => {
       />
       <Header />
       <main id="main-content">
-        <section className="bg-primary text-primary-foreground py-16 lg:py-20">
+        <section className="relative z-10 bg-primary text-primary-foreground py-16 lg:py-20">
           <div className="container px-6 lg:px-8">
             <div className="max-w-4xl">
               <p className="text-gold uppercase tracking-widest text-sm font-semibold mb-4">
                 Reference
               </p>
-              <h1 className="font-serif text-4xl md:text-5xl font-semibold mb-4">Site Map</h1>
-              <p className="text-primary-foreground text-lg max-w-2xl leading-relaxed">
+              <h1 className="font-serif font-semibold mb-4" style={{ fontSize: "28px" }}>Site Map</h1>
+              <p className="text-primary-foreground max-w-2xl leading-relaxed" style={{ fontSize: "13px" }}>
                 Every page on the site, organized by URL hierarchy. Each entry shows the page path
                 and lists the internal links contained on that page.
               </p>
-              <p className="text-primary-foreground/80 text-sm mt-4">
+              <p className="text-primary-foreground/80 mt-4" style={{ fontSize: "13px" }}>
                 {totalPages} pages · {SITEMAP_REDIRECTS.length} legacy redirects
               </p>
             </div>
@@ -118,11 +118,11 @@ const Sitemap = () => {
         <section className="py-16 lg:py-20 bg-background">
           <div className="container px-6 lg:px-8">
             <div className="max-w-5xl">
-              <div className="mb-10">
-                <Link to="/" className="font-mono text-[15px] text-primary hover:text-gold font-semibold">
+              <div className="mb-10" style={{ lineHeight: 1.4 }}>
+                <Link to="/" className="font-mono text-primary hover:text-gold font-semibold" style={{ fontSize: "12px" }}>
                   /
                 </Link>
-                <span className="ml-3 text-muted-foreground text-sm">(Homepage)</span>
+                <span className="ml-3 text-muted-foreground" style={{ fontSize: "13px" }}>(Homepage)</span>
               </div>
 
               {topChildren.map((node) => (
@@ -138,12 +138,12 @@ const Sitemap = () => {
                 <h2 className="font-serif text-2xl text-primary font-semibold mb-4">
                   Legacy Redirects
                 </h2>
-                <p className="text-muted-foreground mb-6">
+                <p className="text-muted-foreground mb-6" style={{ fontSize: "13px" }}>
                   Older URLs that automatically forward to their current canonical page.
                 </p>
                 <div className="grid gap-1">
                   {SITEMAP_REDIRECTS.map((r) => (
-                    <div key={r.from} className="font-mono text-[13px] py-1 flex flex-wrap gap-2 items-center">
+                    <div key={r.from} className="font-mono py-1 flex flex-wrap gap-2 items-center" style={{ fontSize: "11px", lineHeight: 1.4 }}>
                       <span className="text-muted-foreground">{r.from}</span>
                       <span className="text-gold">→</span>
                       <Link to={r.to} className="text-primary hover:text-gold">
@@ -156,6 +156,7 @@ const Sitemap = () => {
             </div>
           </div>
         </section>
+
       </main>
       <Footer />
     </div>
