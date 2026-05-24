@@ -69,23 +69,6 @@ const FloatingChatButton = () => {
             filter: drop-shadow(0 0 0 rgba(0,0,0,0));
           }
         }
-        .fcb-text-label {
-          position: fixed;
-          bottom: 128px;
-          right: 20px;
-          width: 105px;
-          z-index: 10000;
-          pointer-events: none;
-          text-align: center;
-          font-family: 'Inter', 'DM Sans', system-ui, sans-serif;
-          font-weight: 800;
-          font-size: 8px !important;
-          line-height: 1;
-          letter-spacing: 1px;
-          text-transform: uppercase;
-          color: #CA0600;
-          white-space: nowrap;
-        }
         @media (max-width: 639px) {
           .fcb-btn { bottom: 110px !important; }
           .fcb-text-label { bottom: 218px !important; font-size: 9px !important; }
