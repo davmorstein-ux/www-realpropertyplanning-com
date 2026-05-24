@@ -204,8 +204,9 @@ const Header = () => {
               aria-label="Main navigation"
               style={{
                 display: "flex",
+                flexDirection: "row",
                 flexWrap: "nowrap",
-                justifyContent: "center",
+                justifyContent: "space-evenly",
                 alignItems: "center",
                 gap: 16,
                 flex: 1,
