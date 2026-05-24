@@ -1728,6 +1728,23 @@ h3.hero-band-title {
   min-height: 0 !important;
 }
 
+/* Sitewide: compact gap between hero image/band and the first content section below */
+main > section:has(> [data-hero-band]) + section,
+main > section:has(> div > [data-hero-band]) + section,
+main > section:has(> [data-hero-band]) + div,
+main > section:has(> div > [data-hero-band]) + div {
+  padding-top: 24px !important;
+  margin-top: 0 !important;
+}
+@media (min-width: 768px) {
+  main > section:has(> [data-hero-band]) + section,
+  main > section:has(> div > [data-hero-band]) + section,
+  main > section:has(> [data-hero-band]) + div,
+  main > section:has(> div > [data-hero-band]) + div {
+    padding-top: 32px !important;
+  }
+}
+
 
 /* ===========================================================
    Global accessibility font-size overrides (elderly readability)
