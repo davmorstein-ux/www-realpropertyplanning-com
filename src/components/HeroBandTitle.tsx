@@ -55,8 +55,8 @@ const HeroBandTitle = ({
   const titleStyle = {
     color: "#FFFFFF",
     fontFamily: '"Cormorant Garamond", "DM Sans", serif',
-    fontWeight: 400,
-    fontSize: "1.4rem",
+    fontWeight: 500,
+    fontSize: "1.15rem",
     letterSpacing: "0.1em",
     lineHeight: 1.2,
     opacity: 1,
@@ -90,7 +90,8 @@ const HeroBandTitle = ({
         style={{
           background:
             "linear-gradient(to right, #FFFFFF 0%, #1B3A6B 20%, #1B3A6B 80%, #FFFFFF 100%)",
-          padding: compact ? "10px 16px" : "14px 16px",
+          height: "42px",
+          padding: "0 16px",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
