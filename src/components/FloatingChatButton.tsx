@@ -1,4 +1,3 @@
-import { useEffect, useRef, useState } from "react";
 import chatCouple from "@/assets/chat-couple.png";
 import chatTire from "@/assets/chat-tire.png";
 
@@ -7,42 +6,9 @@ import chatTire from "@/assets/chat-tire.png";
  * Reuses the sbn-chat-wrap visual structure from the bottom nav.
  */
 const FloatingChatButton = () => {
-  const [autoAnimate, setAutoAnimate] = useState(false);
-  const [isHovering, setIsHovering] = useState(false);
-  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
-  const labelTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-
   const openChat = () => {
     window.dispatchEvent(new Event("rpp-open-chat"));
   };
-
-  useEffect(() => {
-    const clearTimers = () => {
-      if (intervalRef.current) clearInterval(intervalRef.current);
-      if (labelTimeoutRef.current) clearTimeout(labelTimeoutRef.current);
-      intervalRef.current = null;
-      labelTimeoutRef.current = null;
-    };
-
-    // If user is hovering, pause the auto cycle and reset state.
-    if (isHovering) {
-      clearTimers();
-      setAutoAnimate(false);
-      return;
-    }
-
-    const trigger = () => {
-      setAutoAnimate(true);
-      // Spin lasts 1.5s, label remains visible 2s, then fade out and restart.
-      labelTimeoutRef.current = setTimeout(() => {
-        setAutoAnimate(false);
-      }, 2000);
-    };
-
-    intervalRef.current = setInterval(trigger, 15000);
-
-    return clearTimers;
-  }, [isHovering]);
 
   return (
     <>
@@ -86,40 +52,36 @@ const FloatingChatButton = () => {
         .fcb-btn:hover .fcb-tire {
           animation: fcb-tire-spin 1.4s linear infinite;
         }
-        .fcb-btn.fcb-auto .fcb-tire {
-          animation: fcb-tire-spin 1.5s linear 1;
-        }
-        .fcb-label {
-          position: absolute;
-          right: 110%;
-          top: 50%;
-          transform: translateY(-50%);
-          background: #1B2B4B;
-          color: #fff;
-          font-size: 14px;
-          font-weight: bold;
-          padding: 6px 12px;
-          border-radius: 20px;
-          white-space: nowrap;
-          opacity: 0;
-          transition: opacity 0.2s ease;
-          pointer-events: none;
-        }
-        .fcb-btn:hover .fcb-label,
-        .fcb-btn.fcb-auto .fcb-label {
-          opacity: 1;
-        }
         @keyframes fcb-tire-spin {
           from { transform: rotate(0deg); }
           to   { transform: rotate(360deg); }
+        }
+        .fcb-text-label {
+          position: fixed;
+          bottom: 128px;
+          right: 20px;
+          width: 105px;
+          z-index: 10000;
+          pointer-events: none;
+          text-align: center;
+          font-family: 'Inter', 'DM Sans', system-ui, sans-serif;
+          font-weight: 800;
+          font-size: 8px;
+          line-height: 1;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          color: #CA0600;
+          white-space: nowrap;
+        }
+        @media (max-width: 639px) {
+          .fcb-btn { bottom: 110px !important; }
+          .fcb-text-label { bottom: 218px !important; }
         }
       `}</style>
       <button
         type="button"
         onClick={openChat}
-        onMouseEnter={() => setIsHovering(true)}
-        onMouseLeave={() => setIsHovering(false)}
-        className={`fcb-btn ${autoAnimate && !isHovering ? "fcb-auto" : ""}`.trim()}
+        className="fcb-btn"
         aria-label="Open chat"
       >
         <div className="fcb-wrap">
@@ -127,6 +89,7 @@ const FloatingChatButton = () => {
           <img src={chatTire} alt="" aria-hidden="true" className="fcb-tire" />
         </div>
       </button>
+      <span className="fcb-text-label" aria-hidden="true">Click to Chat</span>
     </>
   );
 };
