@@ -51,8 +51,8 @@ const LetsChatBubble = () => {
       aria-label="Dismiss Let's Chat prompt"
       style={{
         position: "fixed",
-        bottom: 128,
-        right: 132,
+        bottom: 95,
+        right: 90,
         width: 92,
         height: 66,
         zIndex: 10001,
@@ -74,8 +74,8 @@ const LetsChatBubble = () => {
       <span
         style={{
           position: "absolute",
-          top: "40%",
-          left: "50%",
+          top: "36%",
+          left: "40%",
           transform: "translate(-50%, -50%)",
           color: "#1B2B4B",
           fontWeight: 800,
