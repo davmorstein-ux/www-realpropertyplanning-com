@@ -12,32 +12,45 @@ interface HeroBandTitleProps {
 }
 
 // Sitewide hero-band title casing rule:
-// Title Case every word, EXCEPT 'and', 'to', 'a' which always stay lowercase.
-// Acronyms in this set are preserved fully uppercase.
-const KEEP_LOWER = new Set(["and", "to", "a"]);
+// Title Case every word, EXCEPT 'to', 'a', 'an' which stay lowercase —
+// unless the word is the first word of the title (always capitalized).
+// Acronyms in KEEP_UPPER are preserved fully uppercase.
+const KEEP_LOWER = new Set(["to", "a", "an"]);
 const KEEP_UPPER = new Set(["CPA", "CPAS", "POA", "FAQ", "WA"]);
 
-const titleCase = (input: string): string =>
-  input
-    .split(/(\s+)/)
+const capitalizeWord = (part: string): string => {
+  const lowered = part.toLowerCase();
+  const idx = lowered.search(/[a-z]/);
+  if (idx === -1) return part;
+  return (
+    lowered.slice(0, idx) +
+    lowered.charAt(idx).toUpperCase() +
+    lowered.slice(idx + 1)
+  );
+};
+
+const titleCase = (input: string): string => {
+  const parts = input.split(/(\s+)/);
+  let firstWordSeen = false;
+  return parts
     .map((part) => {
       if (!part || /^\s+$/.test(part)) return part;
       const upper = part.toUpperCase();
-      if (KEEP_UPPER.has(upper)) return upper;
+      if (KEEP_UPPER.has(upper)) {
+        firstWordSeen = true;
+        return upper;
+      }
       const lower = part.toLowerCase();
+      if (!firstWordSeen) {
+        firstWordSeen = true;
+        return capitalizeWord(part);
+      }
       if (KEEP_LOWER.has(lower)) return lower;
-      // Capitalize the first alphabetic character; lowercase the rest.
-      // Preserves leading punctuation like quotes.
-      const lowered = part.toLowerCase();
-      const idx = lowered.search(/[a-z]/);
-      if (idx === -1) return part;
-      return (
-        lowered.slice(0, idx) +
-        lowered.charAt(idx).toUpperCase() +
-        lowered.slice(idx + 1)
-      );
+      return capitalizeWord(part);
     })
     .join("");
+};
+
 
 const transformChildren = (children: ReactNode): ReactNode =>
   Children.map(children, (child) =>
