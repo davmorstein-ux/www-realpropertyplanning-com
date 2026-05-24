@@ -207,7 +207,7 @@ const Header = () => {
                 flexWrap: "nowrap",
                 justifyContent: "center",
                 alignItems: "center",
-                gap: 24,
+                gap: 16,
                 flex: 1,
               }}
             >
