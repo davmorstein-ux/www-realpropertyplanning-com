@@ -439,7 +439,6 @@ const Header = () => {
                                 fontSize: 13,
                                 fontWeight: 700,
                                 letterSpacing: "0.05em",
-                                textTransform: "uppercase",
                                 padding: "10px 10px",
                                 borderRadius: 6,
                                 background: childActive ? "rgba(255,255,255,0.08)" : "transparent",
