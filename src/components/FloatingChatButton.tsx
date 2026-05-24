@@ -84,7 +84,7 @@ const FloatingChatButton = () => {
           <img src={chatTire} alt="" aria-hidden="true" className="fcb-tire" />
         </div>
       </button>
-      <span className="fcb-text-label" aria-hidden="true">Chat Here!</span>
+      
     </>
   );
 };
