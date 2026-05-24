@@ -194,7 +194,6 @@ const App = () => (
         <ScrollToTop />
         <SiteBottomNav />
         <FloatingChatButton />
-        <LetsChatBubble />
 
 
         {/* ChatAssistant: panel triggered by nav's couple photo via 'rpp-open-chat' event.
