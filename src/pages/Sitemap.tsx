@@ -40,28 +40,31 @@ const TreeRow = ({ node, depth }: { node: TreeNode; depth: number }) => {
     <div>
       <div
         className="py-2 border-l-2 border-gold/20 pl-4"
-        style={{ marginLeft: `${depth * 1.25}rem` }}
+        style={{ marginLeft: `${depth * 1.25}rem`, lineHeight: 1.4 }}
       >
         <div className="flex flex-wrap items-baseline gap-x-3">
           {hasPage ? (
             <Link
               to={node.fullPath}
-              className="font-mono text-[15px] text-primary hover:text-gold transition-colors font-semibold"
+              className="font-mono text-primary hover:text-gold transition-colors font-semibold"
+              style={{ fontSize: "12px", lineHeight: 1.4 }}
             >
               {node.fullPath}
             </Link>
           ) : (
-            <span className="font-mono text-[15px] text-muted-foreground">{node.fullPath}/</span>
+            <span className="font-mono text-muted-foreground" style={{ fontSize: "12px", lineHeight: 1.4 }}>
+              {node.fullPath}/
+            </span>
           )}
         </div>
         {hasPage && node.page!.links.length > 0 && (
-          <div className="mt-1 ml-1 text-[14px] text-muted-foreground leading-relaxed">
-            <span className="text-gold uppercase tracking-wide text-[11px] font-semibold mr-2">
+          <div className="mt-1 ml-1 text-muted-foreground" style={{ fontSize: "11px", lineHeight: 1.4 }}>
+            <span className="text-gold uppercase tracking-wide font-semibold mr-2" style={{ fontSize: "11px" }}>
               Links to:
             </span>
             {node.page!.links.map((l, i) => (
               <span key={l}>
-                <Link to={l} className="font-mono hover:text-gold transition-colors">
+                <Link to={l} className="font-mono hover:text-gold transition-colors" style={{ fontSize: "11px" }}>
                   {l}
                 </Link>
                 {i < node.page!.links.length - 1 && <span className="text-muted-foreground/40"> · </span>}
@@ -76,6 +79,7 @@ const TreeRow = ({ node, depth }: { node: TreeNode; depth: number }) => {
     </div>
   );
 };
+
 
 const Sitemap = () => {
   const tree = useMemo(() => buildTree(SITEMAP_PAGES), []);
