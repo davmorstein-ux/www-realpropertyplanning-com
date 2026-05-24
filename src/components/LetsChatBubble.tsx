@@ -8,12 +8,10 @@ const LetsChatBubble = () => {
   useEffect(() => {
     let hideTimer: ReturnType<typeof setTimeout>;
     let growTimer: ReturnType<typeof setTimeout>;
+    let nextTimer: ReturnType<typeof setTimeout>;
 
-    const show = () => {
-      setVisible(true);
-      setScaled(false);
-      growTimer = setTimeout(() => setScaled(true), 20);
-      hideTimer = setTimeout(() => hide(), 4000);
+    const scheduleNext = () => {
+      nextTimer = setTimeout(show, 30000);
     };
 
     const hide = () => {
@@ -23,10 +21,12 @@ const LetsChatBubble = () => {
       scheduleNext();
     };
 
-    let nextTimer: ReturnType<typeof setTimeout>;
-    const scheduleNext = () => {
-      nextTimer = setTimeout(show, 30000);
-    };
+    function show() {
+      setVisible(true);
+      setScaled(false);
+      growTimer = setTimeout(() => setScaled(true), 20);
+      hideTimer = setTimeout(() => hide(), 1500);
+    }
 
     const dismiss = () => hide();
     window.addEventListener("rpp-open-chat", dismiss);
@@ -51,8 +51,8 @@ const LetsChatBubble = () => {
       aria-label="Dismiss Let's Chat prompt"
       style={{
         position: "fixed",
-        bottom: 95,
-        right: 90,
+        bottom: 90,
+        right: 20,
         width: 92,
         height: 66,
         zIndex: 10001,
@@ -90,22 +90,27 @@ const LetsChatBubble = () => {
       </div>
       <span
         style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          textAlign: "center",
+          width: "100%",
+          height: "100%",
           position: "absolute",
-          top: "38%",
-          left: "42%",
-          transform: "translate(-50%, -50%)",
+          top: 0,
+          left: 0,
+          padding: 0,
+          margin: 0,
           color: "#1B2B4B",
           fontWeight: 800,
           fontSize: 13,
           lineHeight: 1.1,
-          textAlign: "center",
-          whiteSpace: "nowrap",
           fontFamily: "Inter, sans-serif",
         }}
       >
-        Let's
-        <br />
-        Chat!
+        <span>Let's</span>
+        <span>Chat!</span>
       </span>
     </button>
   );
