@@ -298,7 +298,7 @@ const SiteBottomNav = () => {
             border-radius: 20px 20px 0px 0px;
             width: calc(100vw - 12px);
           }
-          .sbn-inner { gap: 0; }
+          .sbn-inner { gap: 0; padding-top: 8px; }
           .sbn-label { font-size: 9px !important; letter-spacing: 0.08em; }
           .fcb-btn { bottom: 110px !important; }
         }
