@@ -92,11 +92,11 @@ const HeroBandTitle = ({
         height: "140px",
         pointerEvents: "none",
         background:
-          "linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.55) 100%)",
+          "linear-gradient(to bottom, rgba(0,0,0,1.0065) 0%, rgba(0,0,0,0.65) 100%)",
         zIndex: 2,
       }}
     >
-      <div style={{ position: "absolute", bottom: "24px", left: "40px", pointerEvents: "auto" }}>
+      <div style={{ position: "absolute", bottom: "24px", left: "50%", transform: "translateX(-50%)", pointerEvents: "auto" }}>
         {titleEl}
       </div>
     </div>
