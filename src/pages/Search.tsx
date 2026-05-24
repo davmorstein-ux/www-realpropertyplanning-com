@@ -68,6 +68,14 @@ const Search = () => {
       <Header />
       <main id="main-content" className="pt-24 md:pt-28 pb-20">
         <div className="container px-6 lg:px-8">
+          <div className="max-w-[1100px] mx-auto mb-10 md:mb-14">
+            <img
+              src={searchHero}
+              alt="Senior couple driving a classic red convertible into Search City at night"
+              className="w-full h-auto rounded-2xl shadow-lg"
+              loading="eager"
+            />
+          </div>
           <div className="max-w-[760px] mx-auto">
             {/* Search bar */}
             <div className="relative mb-12 md:mb-16">
