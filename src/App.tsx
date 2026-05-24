@@ -420,6 +420,7 @@ const App = () => (
           <Route path="/terminology" element={<Terminology />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/sitemap" element={<Sitemap />} />
+          <Route path="/search" element={<Search />} />
           <Route path="/disclaimer" element={<Disclaimer />} />
 
           {/* ══════════════════════════════════════════════════════════
