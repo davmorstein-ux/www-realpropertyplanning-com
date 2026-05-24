@@ -173,6 +173,7 @@ const Roles = lazy(() => import("./pages/Roles"));
 const Planning = lazy(() => import("./pages/Planning"));
 const ProfessionalsPage = lazy(() => import("./pages/ProfessionalsPage"));
 const Sitemap = lazy(() => import("./pages/Sitemap"));
+const Search = lazy(() => import("./pages/Search"));
 const Disclaimer = lazy(() => import("./pages/Disclaimer"));
 
 const queryClient = new QueryClient();
@@ -419,6 +420,7 @@ const App = () => (
           <Route path="/terminology" element={<Terminology />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/sitemap" element={<Sitemap />} />
+          <Route path="/search" element={<Search />} />
           <Route path="/disclaimer" element={<Disclaimer />} />
 
           {/* ══════════════════════════════════════════════════════════
