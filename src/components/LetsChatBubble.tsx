@@ -52,9 +52,9 @@ const LetsChatBubble = () => {
       style={{
         position: "fixed",
         bottom: 128,
-        right: 10,
-        width: 128,
-        height: 92,
+        right: 132,
+        width: 92,
+        height: 66,
         zIndex: 10001,
         background: "transparent",
         border: 0,
@@ -74,7 +74,7 @@ const LetsChatBubble = () => {
       <span
         style={{
           position: "absolute",
-          top: "32%",
+          top: "40%",
           left: "50%",
           transform: "translate(-50%, -50%)",
           color: "#1B2B4B",
