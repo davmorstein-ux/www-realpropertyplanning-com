@@ -3,13 +3,41 @@ import bubble from "@/assets/thought_bubble_transparent.png";
 
 const LetsChatBubble = () => {
   const [visible, setVisible] = useState(false);
+  const [scaled, setScaled] = useState(false);
 
   useEffect(() => {
-    const t = setTimeout(() => setVisible(true), 2500);
-    const dismiss = () => setVisible(false);
+    let hideTimer: ReturnType<typeof setTimeout>;
+    let growTimer: ReturnType<typeof setTimeout>;
+
+    const show = () => {
+      setVisible(true);
+      setScaled(false);
+      growTimer = setTimeout(() => setScaled(true), 20);
+      hideTimer = setTimeout(() => hide(), 4000);
+    };
+
+    const hide = () => {
+      clearTimeout(hideTimer);
+      setScaled(false);
+      setVisible(false);
+      scheduleNext();
+    };
+
+    let nextTimer: ReturnType<typeof setTimeout>;
+    const scheduleNext = () => {
+      nextTimer = setTimeout(show, 30000);
+    };
+
+    const dismiss = () => hide();
     window.addEventListener("rpp-open-chat", dismiss);
+
+    const initial = setTimeout(show, 2500);
+
     return () => {
-      clearTimeout(t);
+      clearTimeout(initial);
+      clearTimeout(hideTimer);
+      clearTimeout(growTimer);
+      clearTimeout(nextTimer);
       window.removeEventListener("rpp-open-chat", dismiss);
     };
   }, []);
@@ -23,7 +51,7 @@ const LetsChatBubble = () => {
       aria-label="Dismiss Let's Chat prompt"
       style={{
         position: "fixed",
-        bottom: 115,
+        bottom: 160,
         right: 80,
         width: 160,
         height: 115,
@@ -32,6 +60,9 @@ const LetsChatBubble = () => {
         border: 0,
         padding: 0,
         cursor: "pointer",
+        transform: scaled ? "scale(1)" : "scale(0)",
+        transformOrigin: "bottom right",
+        transition: "transform 0.5s ease-out",
       }}
     >
       <img
@@ -43,18 +74,22 @@ const LetsChatBubble = () => {
       <span
         style={{
           position: "absolute",
-          top: "38%",
+          top: "34%",
           left: "50%",
           transform: "translate(-50%, -50%)",
           color: "#ffffff",
           fontWeight: 800,
-          fontSize: 20,
+          fontSize: 15,
+          lineHeight: 1.1,
+          textAlign: "center",
           whiteSpace: "nowrap",
           textShadow: "0 1px 2px rgba(0,0,0,0.25)",
           fontFamily: "Inter, sans-serif",
         }}
       >
-        Let's Chat!
+        Let's
+        <br />
+        Chat!
       </span>
     </button>
   );
