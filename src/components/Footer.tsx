@@ -59,9 +59,10 @@ const Footer = () => {
               <li>
                 <a href="mailto:info@realpropertyplanning.com" className="text-primary-foreground hover:text-gold transition-colors flex items-center gap-3.5 break-all leading-tight">
                   <img src={iconEmail3d} alt="" aria-hidden="true" className="w-[28px] h-[28px] object-contain shrink-0" loading="lazy" />
-                  <span>info@realpropertyplanning.com</span>
+                  <span className="rpp-footer-email">info@realpropertyplanning.com</span>
                 </a>
               </li>
+
               <li className="text-primary-foreground flex items-start gap-3.5 leading-snug">
                 <img src={iconPin3d} alt="" aria-hidden="true" className="w-[28px] h-[28px] object-contain mt-0.5 shrink-0" loading="lazy" />
                 <span>PO Box 1462, Woodinville, WA 98072</span>
