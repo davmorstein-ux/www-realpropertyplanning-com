@@ -43,7 +43,7 @@ const Search = () => {
           </div>
         </section>
 
-        <div className="container px-6 lg:px-8 pt-12 md:pt-16 pb-20">
+        <div className="container px-6 lg:px-8 pt-6 pb-20">
           <div className="max-w-[900px] mx-auto">
             <h1
               className="text-center mb-10 md:mb-14"
