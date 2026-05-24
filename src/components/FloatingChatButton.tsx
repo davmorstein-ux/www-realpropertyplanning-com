@@ -49,12 +49,32 @@ const FloatingChatButton = () => {
           pointer-events: none;
           z-index: 2;
         }
-        .fcb-btn:hover .fcb-tire {
-          animation: fcb-tire-spin 1.4s linear infinite;
+        .fcb-tire {
+          animation: fcb-tire-spin 9s linear infinite;
         }
         @keyframes fcb-tire-spin {
           from { transform: rotate(0deg); }
           to   { transform: rotate(360deg); }
+        }
+        .fcb-btn {
+          animation: fcb-pulse-glow 2.5s ease-in-out infinite;
+        }
+        @keyframes fcb-pulse-glow {
+          5% {
+            transform: scale(1);
+            filter: drop-shadow(0 0 0 rgba(0,0,0,1));
+          }
+          50% {
+            transform: scale(1.03);
+            filter: drop-shadow(0 6px 20px rgba(0,0,0,0.25));
+          }
+          100% {
+            transform: scale(1);
+            filter: drop-shadow(0 0 0 rgba(0,0,1));
+          }
+        }
+        .fcb-wrap {
+          animation: fcb-pulse-glow 2.5s ease-in-out infinite;
         }
         .fcb-text-label {
           position: fixed;
