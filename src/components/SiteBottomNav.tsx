@@ -298,8 +298,9 @@ const SiteBottomNav = () => {
             border-radius: 20px 20px 0px 0px;
             width: calc(100vw - 12px);
           }
-          .sbn-inner { gap: 0; padding-top: 0px; }
+          .sbn-inner { gap: 0; padding-top: 0px; justify-content: space-evenly !important; }
           .sbn-icon-wrap { margin-top: 6px; margin-bottom: 4px; }
+          .sbn-site-map-icon { margin-top: 4px; }
           .sbn-label { margin-top: -8px !important; font-size: 9px !important; letter-spacing: 0.08em; }
           .fcb-btn { bottom: 110px !important; }
         }
@@ -461,7 +462,7 @@ const SiteBottomNav = () => {
 
           {/* 3. Site Map */}
           <Link to="/sitemap" className="sbn-item" data-tip="Site Map" aria-label="Site Map">
-            <div className="sbn-icon-wrap" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', overflow: 'visible', marginRight: '8px' }}>
+            <div className="sbn-icon-wrap sbn-site-map-icon" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', overflow: 'visible', marginRight: '8px' }}>
               <span className="sbn-map-wrap">
                 <img src={roadmapIcon} alt="" aria-hidden="true" style={{ height: '39px', width: 'auto', objectFit: 'contain' }} loading="lazy" />
                 <img src={waypointPin} alt="" aria-hidden="true" className="sbn-waypoint" loading="lazy" />
