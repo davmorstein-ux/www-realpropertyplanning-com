@@ -66,7 +66,7 @@ const Contact = () => {
           <img
             src={contactHero}
             alt="Seniors enjoying coffee at a waterfront café in Washington State — Real Property Planning contact"
-            className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover object-center block"
+            className="w-full h-auto block"
             loading="eager"
           />
           <HeroBandTitle>Get Connected</HeroBandTitle>
