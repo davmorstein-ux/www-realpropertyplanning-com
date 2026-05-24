@@ -380,7 +380,7 @@ const SiteBottomNav = () => {
                   aria-hidden="true"
                   style={{
                     position: "absolute",
-                    top: 6,
+                    top: 0,
                     left: "50%",
                     transform: `translateX(-50%) rotate(${
                       gearSide === "R" ? -22 : gearSide === "F" ? 22 : 0
