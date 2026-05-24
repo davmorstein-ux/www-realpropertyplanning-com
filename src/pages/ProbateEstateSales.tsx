@@ -104,7 +104,7 @@ const ProbateEstateSales = () => {
         {/* SECTION 2 — Probate vs. Inherited (two tiles, no accordions) */}
         <section className="py-16 lg:py-20 bg-background">
           <div className="container px-6 lg:px-8">
-            <div className="max-w-md mx-auto">
+            <div className="max-w-2xl mx-auto">
               <h2 className="text-3xl text-[hsl(0_70%_30%)] font-semibold mb-4 font-sans text-center">
                 Probate Property vs. Inherited Property
                 <br />
@@ -149,11 +149,11 @@ const ProbateEstateSales = () => {
                               loading="lazy"
                             />
                           </div>
-                          <div className="relative flex flex-1 flex-col items-center text-center overflow-hidden" style={{ padding: "10px" }}>
-                            <h3 className="font-serif text-[15px] md:text-[17px] font-semibold text-navy leading-snug mb-2 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0">
+                          <div className="relative flex flex-1 flex-col items-center text-center overflow-hidden" style={{ padding: "8px 10px" }}>
+                            <h3 className="font-serif text-[15px] md:text-[17px] font-semibold text-navy mb-1 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0" style={{ lineHeight: 1.3 }}>
                               {s.title}
                             </h3>
-                            <p className="text-foreground text-[11px] leading-relaxed mb-3 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0">
+                            <p className="text-foreground text-[11px] mb-1.5 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0" style={{ lineHeight: 1.3 }}>
                               {s.description}
                             </p>
                             <span className="gold-cta mt-auto transition-opacity duration-200 group-hover:opacity-0" style={{ padding: "6px 12px" }}>
