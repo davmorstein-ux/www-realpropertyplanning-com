@@ -85,7 +85,7 @@ const SiteBottomNav = () => {
           display: flex;
           align-items: center;
           justify-content: center;
-          margin-top: 4px;
+          
         }
         .sbn-icon-tall {
           width: auto !important;
