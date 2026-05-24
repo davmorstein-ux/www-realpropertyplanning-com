@@ -56,13 +56,14 @@ const HeroBandTitle = ({
     color: "#FFFFFF",
     fontFamily: '"Cormorant Garamond", "DM Sans", serif',
     fontWeight: 300,
-    fontSize: "2rem",
-    letterSpacing: "0.08em",
+    fontSize: "1.75rem",
+    letterSpacing: "0.12em",
     textShadow: "0 1px 4px rgba(0,0,0,0.4)",
     lineHeight: 1.2,
     opacity: 1,
     margin: 0,
     wordSpacing: "normal",
+    textAlign: "center" as const,
   };
 
   useEffect(() => {
@@ -91,11 +92,11 @@ const HeroBandTitle = ({
         height: "140px",
         pointerEvents: "none",
         background:
-          "linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.55) 100%)",
+          "linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%)",
         zIndex: 2,
       }}
     >
-      <div style={{ position: "absolute", bottom: "24px", left: "40px", pointerEvents: "auto" }}>
+      <div style={{ position: "absolute", bottom: "24px", left: "50%", transform: "translateX(-50%)", pointerEvents: "auto" }}>
         {titleEl}
       </div>
     </div>
