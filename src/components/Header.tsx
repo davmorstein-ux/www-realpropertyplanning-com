@@ -218,10 +218,9 @@ const Header = () => {
                   ...fontBody,
                   color: "rgba(255,255,255,0.92)",
                   textDecoration: "none",
-                  fontSize: 15,
+                  fontSize: 13,
                   fontWeight: 700 as const,
-                  letterSpacing: "0.08em",
-                  textTransform: "uppercase" as const,
+                  letterSpacing: "0.06em",
                   paddingBottom: 2,
                   borderBottom: active ? "1px solid #fff" : "1px solid transparent",
                 };
