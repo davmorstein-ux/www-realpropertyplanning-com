@@ -65,17 +65,34 @@ const LetsChatBubble = () => {
         transition: "transform 1.1s ease-out",
       }}
     >
-      <img
-        src={bubble}
-        alt=""
-        aria-hidden="true"
-        style={{ width: "100%", height: "100%", display: "block", objectFit: "contain" }}
-      />
+      <div
+        style={{
+          overflow: "hidden",
+          width: "100%",
+          height: "100%",
+          position: "relative",
+        }}
+      >
+        <img
+          src={bubble}
+          alt=""
+          aria-hidden="true"
+          style={{
+            position: "absolute",
+            top: 8,
+            left: 8,
+            width: "calc(100% + 16px)",
+            height: "calc(100% + 16px)",
+            display: "block",
+            objectFit: "contain",
+          }}
+        />
+      </div>
       <span
         style={{
           position: "absolute",
-          top: "36%",
-          left: "40%",
+          top: "38%",
+          left: "42%",
           transform: "translate(-50%, -50%)",
           color: "#1B2B4B",
           fontWeight: 800,
