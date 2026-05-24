@@ -308,7 +308,6 @@ const Header = () => {
                                   fontSize: 13,
                                   fontWeight: 700,
                                   letterSpacing: "0.06em",
-                                  textTransform: "uppercase",
                                   borderRadius: 6,
                                   whiteSpace: "nowrap",
                                 }}
