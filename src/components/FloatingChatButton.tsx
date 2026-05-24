@@ -29,6 +29,7 @@ const FloatingChatButton = () => {
           position: relative;
           width: 100%;
           height: 100%;
+          animation: fcb-pulse-glow 2.5s ease-in-out infinite;
         }
         .fcb-couple {
           position: absolute;
@@ -42,39 +43,31 @@ const FloatingChatButton = () => {
         }
         .fcb-tire {
           position: absolute;
-          inset: 0;
+          inset: 1;
           width: 100%;
           height: 100%;
           object-fit: contain;
           pointer-events: none;
           z-index: 2;
-        }
-        .fcb-tire {
           animation: fcb-tire-spin 9s linear infinite;
         }
         @keyframes fcb-tire-spin {
           from { transform: rotate(0deg); }
           to   { transform: rotate(360deg); }
         }
-        .fcb-btn {
-          animation: fcb-pulse-glow 2.5s ease-in-out infinite;
-        }
         @keyframes fcb-pulse-glow {
-          5% {
+          0% {
             transform: scale(1);
-            filter: drop-shadow(0 0 0 rgba(0,0,0,1));
+            filter: drop-shadow(0 0 0 rgba(0,0,0,0));
           }
           50% {
-            transform: scale(1.03);
-            filter: drop-shadow(0 6px 20px rgba(0,0,0,0.25));
+            transform: scale(1.05);
+            filter: drop-shadow(0 6px 20px rgba(0,0,0,0.22));
           }
           100% {
             transform: scale(1);
-            filter: drop-shadow(0 0 0 rgba(0,0,1));
+            filter: drop-shadow(0 0 0 rgba(0,0,0,0));
           }
-        }
-        .fcb-wrap {
-          animation: fcb-pulse-glow 2.5s ease-in-out infinite;
         }
         .fcb-text-label {
           position: fixed;
