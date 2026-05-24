@@ -15,7 +15,9 @@ const NAV: NavItem[] = [
   { label: "Probate & Estate", href: "/probate-estate-sales" },
   { label: "Senior Transitions", href: "/senior-transitions" },
   { label: "Property Valuation", href: "/date-of-death-valuation-property-appraisals" },
-  { label: "Services & Resources", href: "/resources" },
+  { label: "Services", href: "/services" },
+  { label: "Resources", href: "/resources" },
+  { label: "About", href: "/about" },
 ];
 
 const fontBody = { fontFamily: "'DM Sans', system-ui, sans-serif" };
