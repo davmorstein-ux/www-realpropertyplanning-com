@@ -15,7 +15,9 @@ const NAV: NavItem[] = [
   { label: "Probate & Estate", href: "/probate-estate-sales" },
   { label: "Senior Transitions", href: "/senior-transitions" },
   { label: "Property Valuation", href: "/date-of-death-valuation-property-appraisals" },
-  { label: "Services & Resources", href: "/resources" },
+  { label: "Services", href: "/services" },
+  { label: "Resources", href: "/resources" },
+  { label: "About", href: "/about" },
 ];
 
 const fontBody = { fontFamily: "'DM Sans', system-ui, sans-serif" };
@@ -205,7 +207,7 @@ const Header = () => {
                 flexWrap: "nowrap",
                 justifyContent: "center",
                 alignItems: "center",
-                gap: 24,
+                gap: 16,
                 flex: 1,
               }}
             >
@@ -216,10 +218,9 @@ const Header = () => {
                   ...fontBody,
                   color: "rgba(255,255,255,0.92)",
                   textDecoration: "none",
-                  fontSize: 15,
+                  fontSize: 13,
                   fontWeight: 700 as const,
-                  letterSpacing: "0.08em",
-                  textTransform: "uppercase" as const,
+                  letterSpacing: "0.06em",
                   paddingBottom: 2,
                   borderBottom: active ? "1px solid #fff" : "1px solid transparent",
                 };
@@ -307,7 +308,6 @@ const Header = () => {
                                   fontSize: 13,
                                   fontWeight: 700,
                                   letterSpacing: "0.06em",
-                                  textTransform: "uppercase",
                                   borderRadius: 6,
                                   whiteSpace: "nowrap",
                                 }}
@@ -377,7 +377,6 @@ const Header = () => {
                 fontSize: 15,
                 fontWeight: 700 as const,
                 letterSpacing: "0.06em",
-                textTransform: "uppercase" as const,
                 padding: "12px 10px",
                 borderRadius: 6,
                 background: active ? "rgba(255,255,255,0.08)" : "transparent",
@@ -440,7 +439,6 @@ const Header = () => {
                                 fontSize: 13,
                                 fontWeight: 700,
                                 letterSpacing: "0.05em",
-                                textTransform: "uppercase",
                                 padding: "10px 10px",
                                 borderRadius: 6,
                                 background: childActive ? "rgba(255,255,255,0.08)" : "transparent",
