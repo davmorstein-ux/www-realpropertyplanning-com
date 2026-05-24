@@ -66,7 +66,7 @@ const FloatingChatButton = () => {
           text-align: center;
           font-family: 'Inter', 'DM Sans', system-ui, sans-serif;
           font-weight: 800;
-          font-size: 8px;
+          font-size: 8px !important;
           line-height: 1;
           letter-spacing: 1px;
           text-transform: uppercase;
@@ -75,7 +75,7 @@ const FloatingChatButton = () => {
         }
         @media (max-width: 639px) {
           .fcb-btn { bottom: 110px !important; }
-          .fcb-text-label { bottom: 218px !important; }
+          .fcb-text-label { bottom: 218px !important; font-size: 9px !important; }
         }
       `}</style>
       <button
@@ -89,7 +89,7 @@ const FloatingChatButton = () => {
           <img src={chatTire} alt="" aria-hidden="true" className="fcb-tire" />
         </div>
       </button>
-      <span className="fcb-text-label" aria-hidden="true">Click to Chat</span>
+      <span className="fcb-text-label" aria-hidden="true">Chat Here!</span>
     </>
   );
 };
