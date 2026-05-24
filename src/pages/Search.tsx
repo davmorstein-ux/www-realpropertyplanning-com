@@ -67,16 +67,21 @@ const Search = () => {
         description="Find what you need on Real Property Planning. Browse categories including probate, estate sales, senior transitions, attorneys, CPAs, and more."
       />
       <Header />
-      <main id="main-content" className="pt-24 md:pt-28 pb-20">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-[1100px] mx-auto mb-10 md:mb-14">
+      <main id="main-content">
+        {/* Hero image + navy band */}
+        <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
+          <div style={{ lineHeight: 0 }}>
             <img
               src={searchHero}
               alt="Senior couple driving a classic red convertible into Search City at night"
-              className="w-full h-auto rounded-2xl shadow-lg"
+              className="w-full h-auto block"
               loading="eager"
             />
+            <HeroBandTitle>Search Page</HeroBandTitle>
           </div>
+        </section>
+
+        <div className="container px-6 lg:px-8 pt-12 md:pt-16 pb-20">
           <div className="max-w-[760px] mx-auto">
             {/* Search bar */}
             <div className="relative mb-12 md:mb-16">
