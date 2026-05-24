@@ -2226,3 +2226,70 @@ hr { margin-top: 1.5rem !important; margin-bottom: 1.5rem !important; }
   .hp-floating-nav-island a,
   .hp-floating-nav-island button { font-size: 13px !important; letter-spacing: 0.02em !important; }
 }
+
+/* ===========================================================
+   Sitewide vertical whitespace reduction
+   Caps oversized py/pt/pb/my/mt/mb Tailwind utilities so no
+   section exceeds ~32px vertical padding. Hero, fonts, and
+   layout colors are untouched.
+   =========================================================== */
+main .py-12 { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+main .py-14 { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+main .py-16 { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+main .py-20 { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+main .py-24 { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+
+main .pt-12, main .pt-14, main .pt-16, main .pt-20, main .pt-24 { padding-top: 2rem !important; }
+main .pb-12, main .pb-14, main .pb-16, main .pb-20, main .pb-24 { padding-bottom: 2rem !important; }
+
+main .my-12, main .my-14, main .my-16, main .my-20, main .my-24 { margin-top: 2rem !important; margin-bottom: 2rem !important; }
+main .mt-12, main .mt-14, main .mt-16, main .mt-20, main .mt-24 { margin-top: 2rem !important; }
+main .mb-12, main .mb-14, main .mb-16, main .mb-20, main .mb-24 { margin-bottom: 2rem !important; }
+
+/* Desktop variants — same cap */
+@media (min-width: 768px) {
+  main .md\:py-12, main .md\:py-14, main .md\:py-16, main .md\:py-20, main .md\:py-24 {
+    padding-top: 2rem !important; padding-bottom: 2rem !important;
+  }
+  main .md\:pt-12, main .md\:pt-14, main .md\:pt-16, main .md\:pt-20, main .md\:pt-24 { padding-top: 2rem !important; }
+  main .md\:pb-12, main .md\:pb-14, main .md\:pb-16, main .md\:pb-20, main .md\:pb-24 { padding-bottom: 2rem !important; }
+  main .md\:my-12, main .md\:my-14, main .md\:my-16, main .md\:my-20, main .md\:my-24 {
+    margin-top: 2rem !important; margin-bottom: 2rem !important;
+  }
+  main .md\:mt-12, main .md\:mt-14, main .md\:mt-16, main .md\:mt-20, main .md\:mt-24 { margin-top: 2rem !important; }
+  main .md\:mb-12, main .md\:mb-14, main .md\:mb-16, main .md\:mb-20, main .md\:mb-24 { margin-bottom: 2rem !important; }
+}
+@media (min-width: 1024px) {
+  main .lg\:py-12, main .lg\:py-14, main .lg\:py-16, main .lg\:py-20, main .lg\:py-24 {
+    padding-top: 2rem !important; padding-bottom: 2rem !important;
+  }
+  main .lg\:pt-12, main .lg\:pt-14, main .lg\:pt-16, main .lg\:pt-20, main .lg\:pt-24 { padding-top: 2rem !important; }
+  main .lg\:pb-12, main .lg\:pb-14, main .lg\:pb-16, main .lg\:pb-20, main .lg\:pb-24 { padding-bottom: 2rem !important; }
+}
+
+/* Tighten heading-to-text spacing where author used large mb-* on titles */
+main h1.mb-8, main h2.mb-8, main h3.mb-8,
+main h1.mb-10, main h2.mb-10, main h3.mb-10,
+main h1.mb-12, main h2.mb-12, main h3.mb-12 {
+  margin-bottom: 1rem !important;
+}
+@media (min-width: 768px) {
+  main h1.md\:mb-10, main h2.md\:mb-10, main h3.md\:mb-10,
+  main h1.md\:mb-12, main h2.md\:mb-12, main h3.md\:mb-12,
+  main h1.md\:mb-14, main h2.md\:mb-14, main h3.md\:mb-14 {
+    margin-bottom: 1.25rem !important;
+  }
+}
+
+/* Reduce gap between hero band and first content block site-wide (kept consistent with hero rule) */
+main > section:has(> [data-hero-band]) + *,
+main > section:has(> div > [data-hero-band]) + * {
+  padding-top: 1.5rem !important;
+  margin-top: 0 !important;
+}
+@media (min-width: 768px) {
+  main > section:has(> [data-hero-band]) + *,
+  main > section:has(> div > [data-hero-band]) + * {
+    padding-top: 1.5rem !important;
+  }
+}
