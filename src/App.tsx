@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import SiteBottomNav from "./components/SiteBottomNav";
 import FloatingChatButton from "./components/FloatingChatButton";
+import LetsChatBubble from "./components/LetsChatBubble";
 import ChatAssistant from "./components/ChatAssistant";
 
 
@@ -193,6 +194,8 @@ const App = () => (
         <ScrollToTop />
         <SiteBottomNav />
         <FloatingChatButton />
+        <LetsChatBubble />
+
 
         {/* ChatAssistant: panel triggered by nav's couple photo via 'rpp-open-chat' event.
             Hide its standalone FAB so only the panel surfaces. */}
