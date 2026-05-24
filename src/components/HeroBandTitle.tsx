@@ -55,10 +55,9 @@ const HeroBandTitle = ({
   const titleStyle = {
     color: "#FFFFFF",
     fontFamily: '"Cormorant Garamond", "DM Sans", serif',
-    fontWeight: 300,
-    fontSize: "1.75rem",
-    letterSpacing: "0.12em",
-    textShadow: "0 1px 4px rgba(0,0,0,0.4)",
+    fontWeight: 400,
+    fontSize: "1.4rem",
+    letterSpacing: "0.1em",
     lineHeight: 1.2,
     opacity: 1,
     margin: 0,
@@ -84,22 +83,22 @@ const HeroBandTitle = ({
   if (bare) return titleEl;
 
   return (
-    <div
-      data-hero-band
-      style={{
-        position: "relative",
-        marginTop: "-140px",
-        height: "140px",
-        pointerEvents: "none",
-        background:
-          "linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%)",
-        zIndex: 2,
-      }}
-    >
-      <div style={{ position: "absolute", bottom: "24px", left: "50%", transform: "translateX(-50%)", pointerEvents: "auto" }}>
+    <>
+      <div style={{ height: "3px", background: "#FFFFFF" }} />
+      <div
+        data-hero-band
+        style={{
+          background:
+            "linear-gradient(to right, #FFFFFF 0%, #1B3A6B 20%, #1B3A6B 80%, #FFFFFF 100%)",
+          padding: compact ? "10px 16px" : "14px 16px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
         {titleEl}
       </div>
-    </div>
+    </>
   );
 
 
