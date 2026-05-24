@@ -4,6 +4,7 @@ import { Search as SearchIcon } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import searchHero from "@/assets/search-hero.webp";
 
 interface Category {
