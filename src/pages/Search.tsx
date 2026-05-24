@@ -20,12 +20,31 @@ const CATEGORIES: Category[] = [
   { label: "For Financial Planners", href: "/for-financial-planners" },
   { label: "Real Estate Appraiser", href: "/real-estate-appraiser" },
   { label: "Estate Liquidation", href: "/estate-liquidation" },
-  { label: "Counties We Serve", href: "/counties" },
   { label: "Guides & Resources", href: "/guides-and-resources" },
   { label: "FAQ", href: "/faq" },
   { label: "How the Process Works", href: "/how-the-process-works" },
   { label: "Why Valuation Matters", href: "/why-valuation-matters" },
   { label: "Contact", href: "/contact" },
+  { label: "Aging in Place", href: "/aging-in-place-staying-home-safely" },
+  { label: "Downsizing", href: "/downsizing-preparing-for-transition" },
+  { label: "Gray Divorce", href: "/gray-divorce" },
+  { label: "Power of Attorney", href: "/power-of-attorney" },
+  { label: "Wills", href: "/wills" },
+  { label: "Date of Death Appraisals", href: "/date-of-death-valuation-property-appraisals" },
+  { label: "Selling an Inherited Home", href: "/selling-an-inherited-home" },
+  { label: "Senior Living Options", href: "/senior-living-and-relocation" },
+  { label: "Senior Placement", href: "/senior-placement" },
+  { label: "Planning Before a Crisis", href: "/planning-before-a-crisis" },
+  { label: "Helping Aging Parents", href: "/helping-an-aging-parent" },
+  { label: "Sell House to Fund Senior Living", href: "/sell-house-fund-senior-living" },
+  { label: "Reverse Mortgage", href: "/retirement-reverse-mortgage" },
+  { label: "Estate Planning", href: "/estate-planning-powers-of-attorney" },
+  { label: "For Divorce Attorneys", href: "/for-divorce-attorneys" },
+  { label: "For Elder Law Attorneys", href: "/for-elder-law-attorneys" },
+  { label: "For Probate Attorneys", href: "/for-probate-attorneys" },
+  { label: "Washington State Counties", href: "/counties" },
+  { label: "Join the Network", href: "/join-the-network" },
+  { label: "Testimonials", href: "/testimonials" },
 ];
 
 const Search = () => {
@@ -93,8 +112,8 @@ const Search = () => {
               role="list"
             >
               {filtered.map((cat) => (
-                <Link
-                  key={cat.href}
+              <Link
+                  key={cat.href + cat.label}
                   to={cat.href}
                   role="listitem"
                   className="group block"
@@ -105,6 +124,7 @@ const Search = () => {
                     padding: "16px 20px",
                     transition: "all 0.2s ease",
                     boxShadow: "0 2px 8px rgba(0,0,0,0.04)",
+                    textDecoration: "none",
                   }}
                   onMouseEnter={(e) => {
                     const el = e.currentTarget;
@@ -120,7 +140,7 @@ const Search = () => {
                   <span
                     className="block font-sans"
                     style={{
-                      fontSize: "18px",
+                      fontSize: "0.82rem",
                       fontWeight: 600,
                       color: "hsl(220 35% 18%)",
                       lineHeight: 1.4,
