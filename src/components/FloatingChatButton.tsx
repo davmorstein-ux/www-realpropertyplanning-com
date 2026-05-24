@@ -71,7 +71,6 @@ const FloatingChatButton = () => {
         }
         @media (max-width: 639px) {
           .fcb-btn { bottom: 110px !important; }
-          .fcb-text-label { bottom: 218px !important; font-size: 9px !important; }
         }
       `}</style>
       <button
