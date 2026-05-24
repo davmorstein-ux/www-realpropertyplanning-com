@@ -300,7 +300,7 @@ const SiteBottomNav = () => {
           }
           .sbn-inner { gap: 0; padding-top: 0px; justify-content: space-evenly !important; }
           .sbn-icon-wrap { margin-top: 6px; margin-bottom: 4px; }
-          .sbn-site-map-icon { margin-top: 4px; }
+          .sbn-site-map-icon { margin-top: 6px; margin-left: 8px; }
           .sbn-label { margin-top: -8px !important; font-size: 9px !important; letter-spacing: 0.08em; }
           .fcb-btn { bottom: 110px !important; }
         }
