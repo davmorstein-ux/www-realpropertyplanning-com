@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import { SITEMAP_PAGES, SITEMAP_REDIRECTS, type SitemapPage } from "@/data/sitemap-data";
+import HeroBandTitle from "@/components/HeroBandTitle";
 
 interface TreeNode {
   segment: string;
@@ -107,25 +108,17 @@ const Sitemap = () => {
       />
       <Header />
       <main id="main-content">
-
-        <section className="relative z-10 bg-primary text-primary-foreground py-16 lg:py-20">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-4xl">
-              <p className="text-white uppercase tracking-widest text-sm font-semibold mb-4">
-                Reference
-              </p>
-              <h1 className="font-serif font-semibold mb-4 text-white" style={{ fontSize: "28px" }}>Site Map</h1>
-              <p className="text-white max-w-2xl leading-relaxed" style={{ fontSize: "13px" }}>
-                Every page on the site, organized by URL hierarchy. Each entry shows the page path
-                and lists the internal links contained on that page.
-              </p>
-              <p className="text-white/90 mt-4 rpp-sitemap-counter">
-                {totalPages} pages · {SITEMAP_REDIRECTS.length} legacy redirects
-              </p>
-
-            </div>
-          </div>
+        <section className="bg-white">
+          <img
+            src="/Probate-inherited_property_carride_cropped.png"
+            alt="Site map — Real Property Planning"
+            className="w-full h-auto block"
+            loading="eager"
+          />
         </section>
+
+        <HeroBandTitle>Site Map</HeroBandTitle>
+
 
         <section className="py-16 lg:py-20 bg-background">
           <div className="container px-6 lg:px-8">
