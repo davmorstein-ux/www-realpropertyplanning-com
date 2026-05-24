@@ -463,7 +463,7 @@ const SiteBottomNav = () => {
 
           {/* 3. Site Map */}
           <Link to="/sitemap" className="sbn-item" data-tip="Site Map" aria-label="Site Map">
-            <div className="sbn-icon-wrap sbn-site-map-icon" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', overflow: 'visible', marginRight: '8px', marginLeft: '10px', marginTop: '6px' }}>
+            <div className="sbn-icon-wrap sbn-site-map-icon" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', overflow: 'visible', marginRight: '8px', marginLeft: '10px', transform: 'translateY(6px)' }}>
               <span className="sbn-map-wrap">
                 <img src={roadmapIcon} alt="" aria-hidden="true" style={{ height: '39px', width: 'auto', objectFit: 'contain' }} loading="lazy" />
                 <img src={waypointPin} alt="" aria-hidden="true" className="sbn-waypoint" loading="lazy" />
