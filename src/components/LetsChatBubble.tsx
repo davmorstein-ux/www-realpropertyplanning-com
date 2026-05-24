@@ -51,10 +51,10 @@ const LetsChatBubble = () => {
       aria-label="Dismiss Let's Chat prompt"
       style={{
         position: "fixed",
-        bottom: 160,
-        right: 80,
-        width: 160,
-        height: 115,
+        bottom: 128,
+        right: 10,
+        width: 128,
+        height: 92,
         zIndex: 10001,
         background: "transparent",
         border: 0,
@@ -62,7 +62,7 @@ const LetsChatBubble = () => {
         cursor: "pointer",
         transform: scaled ? "scale(1)" : "scale(0)",
         transformOrigin: "bottom right",
-        transition: "transform 0.5s ease-out",
+        transition: "transform 1.1s ease-out",
       }}
     >
       <img
@@ -74,16 +74,15 @@ const LetsChatBubble = () => {
       <span
         style={{
           position: "absolute",
-          top: "34%",
+          top: "32%",
           left: "50%",
           transform: "translate(-50%, -50%)",
-          color: "#ffffff",
+          color: "#1B2B4B",
           fontWeight: 800,
-          fontSize: 15,
+          fontSize: 13,
           lineHeight: 1.1,
           textAlign: "center",
           whiteSpace: "nowrap",
-          textShadow: "0 1px 2px rgba(0,0,0,0.25)",
           fontFamily: "Inter, sans-serif",
         }}
       >
