@@ -173,21 +173,6 @@ const Contact = () => {
                     />
                   </div>
 
-                  <div>
-                    <Button
-                      type="submit"
-                      variant="navy3d"
-                      size="lg"
-                      disabled={isSubmitting}
-                    >
-                      {isSubmitting ? "Sending..." : "Send My Message"}
-                    </Button>
-                    <div role="status" aria-live="polite">
-                      <p className="text-muted-foreground text-[15px] mt-4">
-                        We respond personally to every inquiry.
-                      </p>
-                    </div>
-                  </div>
                 </form>
               </div>
             </div>
