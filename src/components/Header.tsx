@@ -204,8 +204,9 @@ const Header = () => {
               aria-label="Main navigation"
               style={{
                 display: "flex",
+                flexDirection: "row",
                 flexWrap: "nowrap",
-                justifyContent: "center",
+                justifyContent: "space-evenly",
                 alignItems: "center",
                 gap: 16,
                 flex: 1,
@@ -222,6 +223,7 @@ const Header = () => {
                   fontWeight: 700 as const,
                   letterSpacing: "0.06em",
                   paddingBottom: 2,
+                  whiteSpace: "nowrap" as const,
                   borderBottom: active ? "1px solid #fff" : "1px solid transparent",
                 };
 
