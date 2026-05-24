@@ -73,7 +73,7 @@ const SeniorMoveManagers = () => (
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground text-center mb-4">
-              Coordinating every aspect of a late-life moves
+              ​
             </h2>
             <div className="text-muted-foreground text-base md:text-lg leading-relaxed space-y-4">
               <p>
