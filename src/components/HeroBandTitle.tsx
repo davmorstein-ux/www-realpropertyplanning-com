@@ -55,8 +55,8 @@ const HeroBandTitle = ({
   const titleStyle = {
     color: "#FFFFFF",
     fontFamily: '"Cormorant Garamond", "DM Sans", serif',
-    fontWeight: 400,
-    fontSize: "1.4rem",
+    fontWeight: 500,
+    fontSize: "1.15rem",
     letterSpacing: "0.1em",
     lineHeight: 1.2,
     opacity: 1,
