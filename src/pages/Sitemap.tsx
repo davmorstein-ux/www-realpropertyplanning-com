@@ -90,13 +90,24 @@ const Sitemap = () => {
   const totalPages = SITEMAP_PAGES.filter((p) => !p.path.includes(":") && p.path !== "*").length;
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="rpp-sitemap min-h-screen bg-background">
+      <style>{`
+        .rpp-sitemap h1 { font-size: 22px !important; }
+        .rpp-sitemap h2, .rpp-sitemap h3, .rpp-sitemap h4 { font-size: 14px !important; }
+        .rpp-sitemap p { font-size: 12px !important; }
+        .rpp-sitemap .rpp-sitemap-counter { font-size: 11px !important; }
+        .rpp-sitemap main a,
+        .rpp-sitemap main .font-mono,
+        .rpp-sitemap main .font-mono span,
+        .rpp-sitemap main .font-mono a { font-size: 11px !important; }
+      `}</style>
       <SEOHead
         title="Site Map | Real Property Planning"
         description="Complete site map of Real Property Planning showing every page, its URL, and the internal links each page contains."
       />
       <Header />
       <main id="main-content">
+
         <section className="relative z-10 bg-primary text-primary-foreground py-16 lg:py-20">
           <div className="container px-6 lg:px-8">
             <div className="max-w-4xl">
