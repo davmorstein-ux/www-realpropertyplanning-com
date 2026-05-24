@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import chatCouple from "@/assets/chat-couple.png";
 import chatTire from "@/assets/chat-tire.png";
 
@@ -6,9 +7,42 @@ import chatTire from "@/assets/chat-tire.png";
  * Reuses the sbn-chat-wrap visual structure from the bottom nav.
  */
 const FloatingChatButton = () => {
+  const [autoAnimate, setAutoAnimate] = useState(false);
+  const [isHovering, setIsHovering] = useState(false);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const labelTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
   const openChat = () => {
     window.dispatchEvent(new Event("rpp-open-chat"));
   };
+
+  useEffect(() => {
+    const clearTimers = () => {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+      if (labelTimeoutRef.current) clearTimeout(labelTimeoutRef.current);
+      intervalRef.current = null;
+      labelTimeoutRef.current = null;
+    };
+
+    // If user is hovering, pause the auto cycle and reset state.
+    if (isHovering) {
+      clearTimers();
+      setAutoAnimate(false);
+      return;
+    }
+
+    const trigger = () => {
+      setAutoAnimate(true);
+      // Spin lasts 1.5s, label remains visible 2s, then fade out and restart.
+      labelTimeoutRef.current = setTimeout(() => {
+        setAutoAnimate(false);
+      }, 2000);
+    };
+
+    intervalRef.current = setInterval(trigger, 15000);
+
+    return clearTimers;
+  }, [isHovering]);
 
   return (
     <>
@@ -52,6 +86,9 @@ const FloatingChatButton = () => {
         .fcb-btn:hover .fcb-tire {
           animation: fcb-tire-spin 1.4s linear infinite;
         }
+        .fcb-btn.fcb-auto .fcb-tire {
+          animation: fcb-tire-spin 1.5s linear 1;
+        }
         .fcb-label {
           position: absolute;
           right: 110%;
@@ -68,7 +105,8 @@ const FloatingChatButton = () => {
           transition: opacity 0.2s ease;
           pointer-events: none;
         }
-        .fcb-btn:hover .fcb-label {
+        .fcb-btn:hover .fcb-label,
+        .fcb-btn.fcb-auto .fcb-label {
           opacity: 1;
         }
         @keyframes fcb-tire-spin {
@@ -79,7 +117,9 @@ const FloatingChatButton = () => {
       <button
         type="button"
         onClick={openChat}
-        className="fcb-btn"
+        onMouseEnter={() => setIsHovering(true)}
+        onMouseLeave={() => setIsHovering(false)}
+        className={`fcb-btn ${autoAnimate && !isHovering ? "fcb-auto" : ""}`.trim()}
         aria-label="Open chat"
       >
         <div className="fcb-wrap">
