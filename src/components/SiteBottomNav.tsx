@@ -295,11 +295,12 @@ const SiteBottomNav = () => {
           .sbn-bar {
             padding: 4px 10px 4px;
             bottom: 8px;
-            border-radius: 9999px;
+            border-radius: 20px 20px 0px 0px;
             width: calc(100vw - 12px);
           }
           .sbn-inner { gap: 0; }
           .sbn-label { font-size: 9px !important; letter-spacing: 0.08em; }
+          .fcb-btn { bottom: 110px !important; }
         }
       `}</style>
 
