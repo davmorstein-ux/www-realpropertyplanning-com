@@ -475,7 +475,7 @@ const SiteBottomNav = () => {
           {/* 4. Search */}
           <button
             type="button"
-            onClick={() => navigate("/sitemap")}
+            onClick={() => navigate("/search")}
             className="sbn-item"
             data-tip="Search the site"
             aria-label="Search"
