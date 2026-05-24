@@ -119,9 +119,10 @@ const Sitemap = () => {
                 Every page on the site, organized by URL hierarchy. Each entry shows the page path
                 and lists the internal links contained on that page.
               </p>
-              <p className="text-primary-foreground/80 mt-4" style={{ fontSize: "13px" }}>
+              <p className="text-primary-foreground/80 mt-4 rpp-sitemap-counter">
                 {totalPages} pages · {SITEMAP_REDIRECTS.length} legacy redirects
               </p>
+
             </div>
           </div>
         </section>
