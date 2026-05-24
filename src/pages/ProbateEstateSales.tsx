@@ -104,7 +104,7 @@ const ProbateEstateSales = () => {
         {/* SECTION 2 — Probate vs. Inherited (two tiles, no accordions) */}
         <section className="py-16 lg:py-20 bg-background">
           <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto">
+            <div className="max-w-md mx-auto">
               <h2 className="text-3xl text-[hsl(0_70%_30%)] font-semibold mb-4 font-sans text-center">
                 Probate Property vs. Inherited Property
                 <br />
@@ -113,7 +113,7 @@ const ProbateEstateSales = () => {
               <p className="text-muted-foreground text-lg leading-relaxed mb-8">
                 ​
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 items-stretch">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 items-stretch">
                 {[
                   {
                     image: "/tiles/set2/the-probate-process.webp",
@@ -149,16 +149,16 @@ const ProbateEstateSales = () => {
                               loading="lazy"
                             />
                           </div>
-                          <div className="relative flex flex-1 flex-col items-center text-center overflow-hidden" style={{ padding: "16px" }}>
-                            <h3 className="font-serif text-[22px] md:text-[24px] font-semibold text-navy leading-snug mb-3 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0">
+                          <div className="relative flex flex-1 flex-col items-center text-center overflow-hidden" style={{ padding: "10px" }}>
+                            <h3 className="font-serif text-[15px] md:text-[17px] font-semibold text-navy leading-snug mb-2 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0">
                               {s.title}
                             </h3>
-                            <p className="text-foreground text-[14px] leading-relaxed mb-6 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0">
+                            <p className="text-foreground text-[11px] leading-relaxed mb-3 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0">
                               {s.description}
                             </p>
-                            <span className="gold-cta mt-auto transition-opacity duration-200 group-hover:opacity-0" style={{ padding: "10px 16px" }}>
+                            <span className="gold-cta mt-auto transition-opacity duration-200 group-hover:opacity-0" style={{ padding: "6px 12px" }}>
                               {s.cta}
-                              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                              <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                                 <polyline points="9 18 15 12 9 6" />
                               </svg>
                             </span>
@@ -173,19 +173,19 @@ const ProbateEstateSales = () => {
                                 alignItems: "center",
                                 justifyContent: "center",
                                 textAlign: "center",
-                                padding: "1.25rem 1.5rem",
+                                padding: "0.75rem 1rem",
                                 transition: "opacity 0.28s ease 0.1s",
                               }}
                             >
-                              <h3 className="font-serif text-white text-[24px] md:text-[26px] font-bold leading-snug mb-3">
+                              <h3 className="font-serif text-white text-[17px] md:text-[19px] font-bold leading-snug mb-2">
                                 {s.title}
                               </h3>
                               <span
-                                className="inline-flex items-center gap-2 text-[16px] font-bold tracking-wide"
+                                className="inline-flex items-center gap-2 text-[13px] font-bold tracking-wide"
                                 style={{ color: "#C9A84C", fontFamily: "'DM Sans', sans-serif" }}
                               >
                                 {s.cta}
-                                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                                   <polyline points="9 18 15 12 9 6" />
                                 </svg>
                               </span>
