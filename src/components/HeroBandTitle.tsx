@@ -1,4 +1,4 @@
-import { ElementType, ReactNode, useEffect } from "react";
+import { Children, ElementType, ReactNode, useEffect } from "react";
 import { scheduleHeroAutoScroll } from "@/lib/hero-auto-scroll";
 
 interface HeroBandTitleProps {
@@ -11,20 +11,39 @@ interface HeroBandTitleProps {
   className?: string;
 }
 
-/**
- * Global standardized hero blue band title.
- *
- * Reference: "Professionals & Services" band on /professionals-services.
- * Use for every navy band title that sits directly under a hero image.
- *
- * Renders:
- *   <div className="bg-white h-[3px]" aria-hidden />
- *   <div className="bg-primary py-9 md:py-10">
- *     <Tag className="hero-band-title">{children}</Tag>
- *   </div>
- *
- * Pass `bare` if you already have the band wrapper and only need the title element.
- */
+// Sitewide hero-band title casing rule:
+// Title Case every word, EXCEPT 'and', 'to', 'a' which always stay lowercase.
+// Acronyms in this set are preserved fully uppercase.
+const KEEP_LOWER = new Set(["and", "to", "a"]);
+const KEEP_UPPER = new Set(["CPA", "CPAS", "POA", "FAQ", "WA"]);
+
+const titleCase = (input: string): string =>
+  input
+    .split(/(\s+)/)
+    .map((part) => {
+      if (!part || /^\s+$/.test(part)) return part;
+      const upper = part.toUpperCase();
+      if (KEEP_UPPER.has(upper)) return upper;
+      const lower = part.toLowerCase();
+      if (KEEP_LOWER.has(lower)) return lower;
+      // Capitalize the first alphabetic character; lowercase the rest.
+      // Preserves leading punctuation like quotes.
+      const lowered = part.toLowerCase();
+      const idx = lowered.search(/[a-z]/);
+      if (idx === -1) return part;
+      return (
+        lowered.slice(0, idx) +
+        lowered.charAt(idx).toUpperCase() +
+        lowered.slice(idx + 1)
+      );
+    })
+    .join("");
+
+const transformChildren = (children: ReactNode): ReactNode =>
+  Children.map(children, (child) =>
+    typeof child === "string" ? titleCase(child) : child,
+  );
+
 const HeroBandTitle = ({
   children,
   as: Tag = "h1",
@@ -42,7 +61,6 @@ const HeroBandTitle = ({
     fontSize: "clamp(18px, 2.6vw, 32px)",
     opacity: 1,
     margin: 0,
-    textTransform: "capitalize" as const,
     wordSpacing: "normal",
   };
 
@@ -56,9 +74,10 @@ const HeroBandTitle = ({
       className={`hero-band-title ${className}`.trim()}
       style={titleStyle}
     >
-      {children}
+      {transformChildren(children)}
     </Tag>
   );
+
 
   if (bare) return titleEl;
 
