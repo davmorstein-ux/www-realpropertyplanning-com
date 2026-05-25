@@ -411,12 +411,11 @@ const SiteBottomNav = () => {
           {/* Back arrow + Gear shifter + Forward arrow — grouped as one hover unit */}
           <div
             className="sbn-item sbn-page-group"
-            data-tip="Page Ahead and Back"
             role="group"
             aria-label="Back or forward"
-            style={{ padding: 0, margin: 0 }}
+            style={{ padding: 0, margin: 1 }}
           >
-            <div className="sbn-page-scale">
+            <div className="sbn-page-scale" data-tip="Page Ahead and Back">
               {/* Back arrow */}
               <button
                 type="button"
