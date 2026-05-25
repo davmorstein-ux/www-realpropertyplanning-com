@@ -90,7 +90,8 @@ const SiteBottomNav = () => {
           padding-left: 6px !important;
           padding-right: 6px !important;
           height: 64px !important;
-          overflow: hidden !important;
+          overflow: visible !important;
+          padding-top: 60px !important;
           background: transparent;
           border:  0;
           border-radius: 0;
@@ -141,7 +142,11 @@ const SiteBottomNav = () => {
           transform: translateY(4px);
           transform-origin: center bottom;
           transition: transform 0.2s ease-in-out;
+          overflow: visible;
         }
+        .sbn-inner { overflow: visible !important; }
+        .sbn-item { overflow: visible; }
+        .sbn-item:hover { z-index: 999; }
         .sbn-item:hover .sbn-icon-wrap {
           transform: translateY(4px) scale(1.75);
         }
