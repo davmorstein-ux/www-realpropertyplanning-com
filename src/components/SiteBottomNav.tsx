@@ -449,7 +449,7 @@ const SiteBottomNav = () => {
                 aria-label="Previous page"
                 style={{ background: "transparent", border: 0, padding: 0, margin: 0, marginRight: -12, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}
               >
-                <svg key={`l-${pulseIdx}`} className={isActive(1) ? "sbn-anim-left-blink" : ""} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ letterSpacing: 1, padding: 1 }}>
+                <svg key={`l-${pulseIdx}`} className={isActive(1) ? "sbn-anim-left-blink" : ""} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ letterSpacing: 0, padding: 1 }}>
                   <path d="M19 12H5" />
                   <path d="M12 19l-7-7 7-7" />
                 </svg>
@@ -569,7 +569,7 @@ const SiteBottomNav = () => {
                 aria-label="Next page"
                 style={{ background: "transparent", border: 0, padding: 0, margin: 0, marginLeft: -12, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}
               >
-                <svg key={`r-${pulseIdx}`} className={isActive(1) ? "sbn-anim-right-blink" : ""} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ letterSpacing: 1, padding: 1 }}>
+                <svg key={`r-${pulseIdx}`} className={isActive(1) ? "sbn-anim-right-blink" : ""} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ letterSpacing: 0, padding: 1 }}>
                   <path d="M5 12h14" />
                   <path d="M12 5l7 7-7 7" />
                 </svg>
