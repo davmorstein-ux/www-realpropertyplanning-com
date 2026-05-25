@@ -29,20 +29,15 @@ const Search = () => {
     // container uses class="gcse-search" which auto-initializes. Calling
     // render() in addition causes a duplicate search bar to appear.
 
-    const onLoad = () => tryRender();
-    window.addEventListener("load", onLoad);
-
     let attempts = 0;
     const interval = window.setInterval(() => {
       attempts++;
-      tryRender();
       if (hidePlaceholder() || attempts > 40) {
         window.clearInterval(interval);
       }
     }, 250);
 
     return () => {
-      window.removeEventListener("load", onLoad);
       window.clearInterval(interval);
     };
   }, []);
