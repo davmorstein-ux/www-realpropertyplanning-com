@@ -414,11 +414,14 @@ const SiteBottomNav = () => {
       `}</style>
 
       <div className="sbn-fade" aria-hidden="true" />
+      {tooltip && <div className="sbn-shared-tip" role="tooltip">{tooltip}</div>}
       <nav className="sbn-bar" aria-label="Site bottom navigation">
         <div className="sbn-inner">
           {/* 1. Home */}
-          <Link to="/" className="sbn-item" aria-label="Home">
-            <div className="sbn-icon-wrap" data-tip="HOME">
+          <Link to="/" className="sbn-item" aria-label="Home"
+            onMouseEnter={() => setTooltip("HOME")} onMouseLeave={() => setTooltip(null)}
+            onFocus={() => setTooltip("HOME")} onBlur={() => setTooltip(null)}>
+            <div className="sbn-icon-wrap">
               <img key={`h-${pulseIdx}`} src={steeringWheel} alt="" aria-hidden="true" className={`sbn-wheel${isActive(0) ? " sbn-anim-steer" : ""}`} loading="lazy" />
             </div>
             <span className="sbn-label">HOME</span>
