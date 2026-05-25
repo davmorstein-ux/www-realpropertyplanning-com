@@ -90,7 +90,8 @@ const SiteBottomNav = () => {
           padding-left: 6px !important;
           padding-right: 6px !important;
           height: 64px !important;
-          overflow: hidden !important;
+          overflow: visible !important;
+          padding-top: 60px !important;
           background: transparent;
           border:  0;
           border-radius: 0;
