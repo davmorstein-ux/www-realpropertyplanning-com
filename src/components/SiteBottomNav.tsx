@@ -558,10 +558,9 @@ const SiteBottomNav = () => {
             type="button"
             onClick={() => navigate("/search")}
             className="sbn-item"
-            data-tip="Search"
             aria-label="Search"
           >
-            <div className="sbn-icon-wrap">
+            <div className="sbn-icon-wrap" data-tip="Search">
               <span className="sbn-compass-wrap" style={{ display: 'inline-block' }}>
                 <img src={compassIcon} alt="" aria-hidden="true" loading="lazy" style={{ height: '42px', width: '42px', objectFit: 'contain', display: 'block', transform: 'rotate(35deg)', transition: 'transform 0.2s ease' }} />
                 <img key={`c-${pulseIdx}`} src={compassNeedle} alt="" aria-hidden="true" loading="lazy" className={`sbn-compass-needle${isActive(2) ? " sbn-anim-compass-spin" : ""}`} />
