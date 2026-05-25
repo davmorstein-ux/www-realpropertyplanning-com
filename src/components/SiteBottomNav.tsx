@@ -576,6 +576,9 @@ const SiteBottomNav = () => {
                 type="button"
                 onClick={() => window.history.forward()}
                 aria-label="Next page"
+                className="sbn-arrow-btn"
+                onMouseEnter={() => setTooltip("Page Forward")} onMouseLeave={() => setTooltip(null)}
+                onFocus={() => setTooltip("Page Forward")} onBlur={() => setTooltip(null)}
                 style={{ background: "transparent", border: 0, padding: 0, margin: 0, marginLeft: -12, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}
               >
                 <svg key={`r-${pulseIdx}`} className={isActive(1) ? "sbn-anim-right-blink" : ""} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ letterSpacing: 0, padding: 0 }}>
