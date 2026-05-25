@@ -23,38 +23,44 @@ const SiteBottomNav = () => {
   useEffect(() => {
     const timeouts: ReturnType<typeof setTimeout>[] = [];
     function blinkHeadlight() {
-      const headlightImg = document.querySelector<HTMLElement>('.headlight-icon');
-      const item = headlightImg?.closest<HTMLElement>('.sbn-item');
+      const headlightImg = document.querySelector<HTMLElement>(".headlight-icon");
+      const item = headlightImg?.closest<HTMLElement>(".sbn-item");
       if (!item) return;
-      const hoverClass = 'sbn-hover-sim';
+      const hoverClass = "sbn-hover-sim";
 
       // Blink 1 — add hover class
       item.classList.add(hoverClass);
 
-      timeouts.push(setTimeout(() => {
-        // Remove hover class
-        item.classList.remove(hoverClass);
+      timeouts.push(
+        setTimeout(() => {
+          // Remove hover class
+          item.classList.remove(hoverClass);
 
-        timeouts.push(setTimeout(() => {
-          // 250ms pause, then Blink 2 — add hover class again
-          item.classList.add(hoverClass);
+          timeouts.push(
+            setTimeout(() => {
+              // 250ms pause, then Blink 2 — add hover class again
+              item.classList.add(hoverClass);
 
-          timeouts.push(setTimeout(() => {
-            // Remove hover class
-            item.classList.remove(hoverClass);
-          }, 600));
-
-        }, 250));
-
-      }, 600));
+              timeouts.push(
+                setTimeout(() => {
+                  // Remove hover class
+                  item.classList.remove(hoverClass);
+                }, 600),
+              );
+            }, 250),
+          );
+        }, 600),
+      );
     }
 
     const runSequence = () => {
       for (let i = 0; i < 4; i++) {
-        timeouts.push(setTimeout(() => {
-          setPulseIdx(i);
-          if (i === 3) blinkHeadlight();
-        }, i * 500));
+        timeouts.push(
+          setTimeout(() => {
+            setPulseIdx(i);
+            if (i === 3) blinkHeadlight();
+          }, i * 500),
+        );
       }
       timeouts.push(setTimeout(() => setPulseIdx(-1), 4 * 500));
     };
@@ -77,7 +83,6 @@ const SiteBottomNav = () => {
     timeouts.push(setTimeout(() => setGearSide("none"), 340));
     return () => timeouts.forEach(clearTimeout);
   }, [pulseIdx]);
-
 
   // 0=HOME, 1=PAGE (gear + arrows), 2=SEARCH, 3=CONTACT
   const isActive = (i: number) => pulseIdx === i;
@@ -430,34 +435,63 @@ const SiteBottomNav = () => {
       `}</style>
 
       <div className="sbn-fade" aria-hidden="true" />
-      {tooltip && <div className="sbn-shared-tip" role="tooltip">{tooltip}</div>}
+      {tooltip && (
+        <div className="sbn-shared-tip" role="tooltip">
+          {tooltip}
+        </div>
+      )}
       <nav className="sbn-bar" aria-label="Site bottom navigation">
         <div className="sbn-inner">
           {/* 1. Home */}
-          <Link to="/" className="sbn-item" aria-label="Home"
-            onMouseEnter={() => setTooltip("Home")} onMouseLeave={() => setTooltip(null)}
-            onFocus={() => setTooltip("Home")} onBlur={() => setTooltip(null)}>
+          <Link
+            to="/"
+            className="sbn-item"
+            aria-label="Home"
+            onMouseEnter={() => setTooltip("Home")}
+            onMouseLeave={() => setTooltip(null)}
+            onFocus={() => setTooltip("Home")}
+            onBlur={() => setTooltip(null)}
+          >
             <div className="sbn-icon-wrap">
-              <img key={`h-${pulseIdx}`} src={steeringWheel} alt="" aria-hidden="true" className={`sbn-wheel${isActive(0) ? " sbn-anim-steer" : ""}`} loading="lazy" />
+              <img
+                key={`h-${pulseIdx}`}
+                src={steeringWheel}
+                alt=""
+                aria-hidden="true"
+                className={`sbn-wheel${isActive(0) ? " sbn-anim-steer" : ""}`}
+                loading="lazy"
+              />
             </div>
             <span className="sbn-label">HOME</span>
           </Link>
 
-
           {/* PAGE controls — three fully independent elements */}
-          <div style={{ display: "flex", alignItems: "flex-end", gap: 2 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 2 }}>
             {/* LEFT ARROW */}
             <div
               role="button"
               tabIndex={0}
               aria-label="Previous page"
               className="nav-arrow-left"
-              onMouseEnter={(e) => { (e.currentTarget as HTMLDivElement).style.transform = "scale(1.5)"; }}
-              onMouseLeave={(e) => { (e.currentTarget as HTMLDivElement).style.transform = "scale(1)"; }}
-              onFocus={(e) => { (e.currentTarget as HTMLDivElement).style.transform = "scale(1.5)"; }}
-              onBlur={(e) => { (e.currentTarget as HTMLDivElement).style.transform = "scale(1)"; }}
+              onMouseEnter={(e) => {
+                (e.currentTarget as HTMLDivElement).style.transform = "scale(1.5)";
+              }}
+              onMouseLeave={(e) => {
+                (e.currentTarget as HTMLDivElement).style.transform = "scale(1)";
+              }}
+              onFocus={(e) => {
+                (e.currentTarget as HTMLDivElement).style.transform = "scale(1.5)";
+              }}
+              onBlur={(e) => {
+                (e.currentTarget as HTMLDivElement).style.transform = "scale(1)";
+              }}
               onClick={() => window.history.back()}
-              onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); window.history.back(); } }}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  window.history.back();
+                }
+              }}
               style={{
                 cursor: "pointer",
                 pointerEvents: "auto",
@@ -472,7 +506,18 @@ const SiteBottomNav = () => {
                 padding: 0,
               }}
             >
-              <svg key={`l-${pulseIdx}`} className={isActive(1) ? "sbn-anim-left-blink" : ""} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <svg
+                key={`l-${pulseIdx}`}
+                className={isActive(1) ? "sbn-anim-left-blink" : ""}
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#000000"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
                 <path d="M19 12H5" />
                 <path d="M12 19l-7-7 7-7" />
               </svg>
@@ -481,8 +526,12 @@ const SiteBottomNav = () => {
             {/* GEAR SHIFTER — independent, no tooltip */}
             <div
               className="nav-gear"
-              onMouseEnter={(e) => { (e.currentTarget as HTMLDivElement).style.transform = "scale(1.5)"; }}
-              onMouseLeave={(e) => { (e.currentTarget as HTMLDivElement).style.transform = "scale(1)"; }}
+              onMouseEnter={(e) => {
+                (e.currentTarget as HTMLDivElement).style.transform = "scale(1.5)";
+              }}
+              onMouseLeave={(e) => {
+                (e.currentTarget as HTMLDivElement).style.transform = "scale(1)";
+              }}
               style={{
                 pointerEvents: "auto",
                 display: "inline-flex",
@@ -496,7 +545,18 @@ const SiteBottomNav = () => {
                 position: "relative",
               }}
             >
-              <div style={{ position: "relative", width: 42, height: 42, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "flex-end", flexShrink: 0 }}>
+              <div
+                style={{
+                  position: "relative",
+                  width: 42,
+                  height: 42,
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "flex-end",
+                  flexShrink: 0,
+                }}
+              >
                 <img
                   key={`g-${pulseIdx}`}
                   src={gearStickImg}
@@ -535,22 +595,68 @@ const SiteBottomNav = () => {
                 <button
                   type="button"
                   aria-label="Go back"
-                  onMouseEnter={() => { setGearSide("R"); setTooltip("Page Back"); }}
-                  onMouseLeave={() => { setGearSide("none"); setTooltip(null); }}
-                  onFocus={() => { setGearSide("R"); setTooltip("Page Back"); }}
-                  onBlur={() => { setGearSide("none"); setTooltip(null); }}
+                  onMouseEnter={() => {
+                    setGearSide("R");
+                    setTooltip("Page Back");
+                  }}
+                  onMouseLeave={() => {
+                    setGearSide("none");
+                    setTooltip(null);
+                  }}
+                  onFocus={() => {
+                    setGearSide("R");
+                    setTooltip("Page Back");
+                  }}
+                  onBlur={() => {
+                    setGearSide("none");
+                    setTooltip(null);
+                  }}
                   onClick={() => window.history.back()}
-                  style={{ position: "absolute", top: 0, left: 0, width: "50%", height: "100%", background: "transparent", border: 0, cursor: "pointer", zIndex: 3, padding: 0 }}
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "50%",
+                    height: "100%",
+                    background: "transparent",
+                    border: 0,
+                    cursor: "pointer",
+                    zIndex: 3,
+                    padding: 0,
+                  }}
                 />
                 <button
                   type="button"
                   aria-label="Go forward"
-                  onMouseEnter={() => { setGearSide("F"); setTooltip("Page Forward"); }}
-                  onMouseLeave={() => { setGearSide("none"); setTooltip(null); }}
-                  onFocus={() => { setGearSide("F"); setTooltip("Page Forward"); }}
-                  onBlur={() => { setGearSide("none"); setTooltip(null); }}
+                  onMouseEnter={() => {
+                    setGearSide("F");
+                    setTooltip("Page Forward");
+                  }}
+                  onMouseLeave={() => {
+                    setGearSide("none");
+                    setTooltip(null);
+                  }}
+                  onFocus={() => {
+                    setGearSide("F");
+                    setTooltip("Page Forward");
+                  }}
+                  onBlur={() => {
+                    setGearSide("none");
+                    setTooltip(null);
+                  }}
                   onClick={() => window.history.forward()}
-                  style={{ position: "absolute", top: 0, right: 0, width: "50%", height: "100%", background: "transparent", border: 0, cursor: "pointer", zIndex: 3, padding: 0 }}
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    right: 0,
+                    width: "50%",
+                    height: "100%",
+                    background: "transparent",
+                    border: 0,
+                    cursor: "pointer",
+                    zIndex: 3,
+                    padding: 0,
+                  }}
                 />
               </div>
             </div>
@@ -561,12 +667,25 @@ const SiteBottomNav = () => {
               tabIndex={0}
               aria-label="Next page"
               className="nav-arrow-right"
-              onMouseEnter={(e) => { (e.currentTarget as HTMLDivElement).style.transform = "scale(1.5)"; }}
-              onMouseLeave={(e) => { (e.currentTarget as HTMLDivElement).style.transform = "scale(1)"; }}
-              onFocus={(e) => { (e.currentTarget as HTMLDivElement).style.transform = "scale(1.5)"; }}
-              onBlur={(e) => { (e.currentTarget as HTMLDivElement).style.transform = "scale(1)"; }}
+              onMouseEnter={(e) => {
+                (e.currentTarget as HTMLDivElement).style.transform = "scale(1.5)";
+              }}
+              onMouseLeave={(e) => {
+                (e.currentTarget as HTMLDivElement).style.transform = "scale(1)";
+              }}
+              onFocus={(e) => {
+                (e.currentTarget as HTMLDivElement).style.transform = "scale(1.5)";
+              }}
+              onBlur={(e) => {
+                (e.currentTarget as HTMLDivElement).style.transform = "scale(1)";
+              }}
               onClick={() => window.history.forward()}
-              onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); window.history.forward(); } }}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  window.history.forward();
+                }
+              }}
               style={{
                 cursor: "pointer",
                 pointerEvents: "auto",
@@ -581,13 +700,23 @@ const SiteBottomNav = () => {
                 padding: 0,
               }}
             >
-              <svg key={`r-${pulseIdx}`} className={isActive(1) ? "sbn-anim-right-blink" : ""} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <svg
+                key={`r-${pulseIdx}`}
+                className={isActive(1) ? "sbn-anim-right-blink" : ""}
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#000000"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
                 <path d="M5 12h14" />
                 <path d="M12 5l7 7-7 7" />
               </svg>
             </div>
           </div>
-
 
           {/* 3. Search */}
           <button
@@ -595,14 +724,35 @@ const SiteBottomNav = () => {
             onClick={() => navigate("/search")}
             className="sbn-item"
             aria-label="Search"
-            onMouseEnter={() => setTooltip("Search")} onMouseLeave={() => setTooltip(null)}
-            onFocus={() => setTooltip("Search")} onBlur={() => setTooltip(null)}
+            onMouseEnter={() => setTooltip("Search")}
+            onMouseLeave={() => setTooltip(null)}
+            onFocus={() => setTooltip("Search")}
+            onBlur={() => setTooltip(null)}
           >
             <div className="sbn-icon-wrap">
-              <span className="sbn-compass-wrap" style={{ display: 'inline-block' }}>
-                <img src={compassIcon} alt="" aria-hidden="true" loading="lazy" style={{ height: '42px', width: '42px', objectFit: 'contain', display: 'block', transform: 'rotate(35deg)', transition: 'transform 0.2s ease' }} />
-                <img key={`c-${pulseIdx}`} src={compassNeedle} alt="" aria-hidden="true" loading="lazy" className={`sbn-compass-needle${isActive(2) ? " sbn-anim-compass-spin" : ""}`} />
-
+              <span className="sbn-compass-wrap" style={{ display: "inline-block" }}>
+                <img
+                  src={compassIcon}
+                  alt=""
+                  aria-hidden="true"
+                  loading="lazy"
+                  style={{
+                    height: "42px",
+                    width: "42px",
+                    objectFit: "contain",
+                    display: "block",
+                    transform: "rotate(35deg)",
+                    transition: "transform 0.2s ease",
+                  }}
+                />
+                <img
+                  key={`c-${pulseIdx}`}
+                  src={compassNeedle}
+                  alt=""
+                  aria-hidden="true"
+                  loading="lazy"
+                  className={`sbn-compass-needle${isActive(2) ? " sbn-anim-compass-spin" : ""}`}
+                />
               </span>
             </div>
             <span className="sbn-label">SEARCH</span>
@@ -613,10 +763,15 @@ const SiteBottomNav = () => {
             to="/contact"
             className="sbn-item"
             aria-label="Contact"
-            onMouseEnter={() => setTooltip("Contact")} onMouseLeave={() => setTooltip(null)}
-            onFocus={() => setTooltip("Contact")} onBlur={() => setTooltip(null)}
+            onMouseEnter={() => setTooltip("Contact")}
+            onMouseLeave={() => setTooltip(null)}
+            onFocus={() => setTooltip("Contact")}
+            onBlur={() => setTooltip(null)}
           >
-            <div className="sbn-icon-wrap" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', overflow: 'visible' }}>
+            <div
+              className="sbn-icon-wrap"
+              style={{ display: "flex", flexDirection: "column", alignItems: "center", overflow: "visible" }}
+            >
               <img
                 src={headlampsOff}
                 alt=""
@@ -624,17 +779,10 @@ const SiteBottomNav = () => {
                 className="sbn-headlamp-off headlight-icon"
                 loading="eager"
               />
-              <img
-                src={headlampsOn}
-                alt=""
-                aria-hidden="true"
-                className="sbn-headlamp-on"
-                loading="eager"
-              />
+              <img src={headlampsOn} alt="" aria-hidden="true" className="sbn-headlamp-on" loading="eager" />
             </div>
             <span className="sbn-label">CONTACT</span>
           </Link>
-
         </div>
         {/* Suppress unused warning */}
         <span hidden>{pathname}</span>
