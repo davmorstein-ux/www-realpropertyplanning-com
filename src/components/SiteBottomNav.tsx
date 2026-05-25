@@ -434,8 +434,10 @@ const SiteBottomNav = () => {
             role="group"
             aria-label="Back or forward"
             style={{ padding: 0, margin: 1 }}
+            onMouseEnter={() => setTooltip("Page Ahead and Back")} onMouseLeave={() => setTooltip(null)}
+            onFocus={() => setTooltip("Page Ahead and Back")} onBlur={() => setTooltip(null)}
           >
-            <div className="sbn-page-scale" data-tip="Page Ahead and Back">
+            <div className="sbn-page-scale">
               {/* Back arrow */}
               <button
                 type="button"
