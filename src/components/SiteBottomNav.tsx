@@ -469,7 +469,7 @@ const SiteBottomNav = () => {
               </button>
 
               {/* Gear shifter */}
-              <div style={{ padding: 0, margin: 0, display: "flex", flexDirection: "column", alignItems: "center" }}>
+              <div className="sbn-gear-inner" style={{ padding: 0, margin: 0, display: "flex", flexDirection: "column", alignItems: "center" }}>
 
                 <div className="sbn-icon-wrap">
 
