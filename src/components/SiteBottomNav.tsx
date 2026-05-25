@@ -409,6 +409,7 @@ const SiteBottomNav = () => {
         }
       `}</style>
 
+      <div className="sbn-fade" aria-hidden="true" />
       <nav className="sbn-bar" aria-label="Site bottom navigation">
         <div className="sbn-inner">
           {/* 1. Home */}
