@@ -25,34 +25,19 @@ const Search = () => {
       return false;
     };
 
-    const tryRender = () => {
-      const w = window as any;
-      if (w.google && w.google.search && w.google.search.cse && w.google.search.cse.element) {
-        try {
-          w.google.search.cse.element.render({
-            div: "gcse-search-container",
-            tag: "search",
-          });
-        } catch {
-          /* already rendered */
-        }
-      }
-    };
-
-    const onLoad = () => tryRender();
-    window.addEventListener("load", onLoad);
+    // Note: do NOT call google.search.cse.element.render() here — the
+    // container uses class="gcse-search" which auto-initializes. Calling
+    // render() in addition causes a duplicate search bar to appear.
 
     let attempts = 0;
     const interval = window.setInterval(() => {
       attempts++;
-      tryRender();
       if (hidePlaceholder() || attempts > 40) {
         window.clearInterval(interval);
       }
     }, 250);
 
     return () => {
-      window.removeEventListener("load", onLoad);
       window.clearInterval(interval);
     };
   }, []);
@@ -102,21 +87,36 @@ const Search = () => {
               Search Real Property Planning
             </h1>
             <div
-              id="gcse-search-container"
-              className="gcse-search"
-              style={{ minHeight: "56px", position: "relative" }}
-            />
-            <div
-              id="gcse-placeholder"
-              aria-hidden="true"
               style={{
-                marginTop: "-56px",
-                height: "56px",
-                borderRadius: "9999px",
-                background: "hsl(220 14% 93%)",
-                animation: "rpp-pulse 1.4s ease-in-out infinite",
+                maxWidth: "700px",
+                width: "100%",
+                margin: "0 auto",
+                textAlign: "center",
+                position: "relative",
               }}
-            />
+            >
+              <div
+                id="gcse-search-container"
+                className="gcse-search"
+                style={{ minHeight: "56px", width: "100%" }}
+              />
+              <div
+                id="gcse-placeholder"
+                aria-hidden="true"
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  height: "56px",
+                  borderRadius: "9999px",
+                  background: "hsl(220 14% 93%)",
+                  animation: "rpp-pulse 1.4s ease-in-out infinite",
+                  pointerEvents: "none",
+                  zIndex: 0,
+                }}
+              />
+            </div>
             <style>{`
               @keyframes rpp-pulse {
                 0%, 100% { opacity: 0.6; }
