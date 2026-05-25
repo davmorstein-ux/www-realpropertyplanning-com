@@ -22,10 +22,10 @@ const SiteBottomNav = () => {
   useEffect(() => {
     const timeouts: ReturnType<typeof setTimeout>[] = [];
     const runSequence = () => {
-      for (let i = 0; i < 6; i++) {
+      for (let i = 0; i < 4; i++) {
         timeouts.push(setTimeout(() => setPulseIdx(i), i * 500));
       }
-      timeouts.push(setTimeout(() => setPulseIdx(-1), 6 * 500));
+      timeouts.push(setTimeout(() => setPulseIdx(-1), 4 * 500));
     };
     const initial = setTimeout(runSequence, 2000);
     const interval = setInterval(runSequence, 15000);
@@ -36,20 +36,48 @@ const SiteBottomNav = () => {
     };
   }, []);
 
-  const pulseStyle = (i: number): React.CSSProperties =>
-    pulseIdx === i ? { animation: "sbn-pulse 0.5s ease-in-out" } : {};
-
-  
-
+  // 0=HOME, 1=PAGE (gear + arrows), 2=SEARCH, 3=CONTACT
+  const isActive = (i: number) => pulseIdx === i;
 
   return (
     <>
       <style>{`
-        @keyframes sbn-pulse {
-          0%   { transform: scale(1); }
-          50%  { transform: scale(1.2); }
-          100% { transform: scale(1); }
+        @keyframes sbn-steer-wiggle {
+          0%   { transform: rotate(0deg); }
+          25%  { transform: rotate(-25deg); }
+          75%  { transform: rotate(25deg); }
+          100% { transform: rotate(0deg); }
         }
+        @keyframes sbn-shift-wiggle {
+          0%   { transform: translateX(-50%) rotate(0deg); }
+          30%  { transform: translateX(-50%) rotate(-20deg); }
+          70%  { transform: translateX(-50%) rotate(20deg); }
+          100% { transform: translateX(-50%) rotate(0deg); }
+        }
+        @keyframes sbn-left-blink {
+          0%, 60%, 100% { opacity: 1; }
+          30% { opacity: 0; }
+        }
+        @keyframes sbn-right-blink {
+          0%, 40%, 100% { opacity: 1; }
+          70% { opacity: 0; }
+        }
+        @keyframes sbn-compass-spin {
+          0%   { transform: translate(-50%, -50%) rotate(0deg); }
+          100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+        @keyframes sbn-headlight-flicker {
+          0%, 50%, 100% { filter: brightness(1); }
+          25%, 75% { filter: brightness(2.5) drop-shadow(0 0 6px #fff9c4); }
+        }
+        .sbn-anim-steer { animation: sbn-steer-wiggle 0.5s ease-in-out; }
+        .sbn-anim-shift { animation: sbn-shift-wiggle 0.5s ease-in-out !important; }
+        .sbn-anim-left-blink { animation: sbn-left-blink 0.5s ease-in-out; }
+        .sbn-anim-right-blink { animation: sbn-right-blink 0.5s ease-in-out; }
+        .sbn-anim-compass-spin { animation: sbn-compass-spin 0.5s linear !important; }
+        .sbn-anim-headlight { animation: sbn-headlight-flicker 0.5s ease-in-out; }
+
+
 
         .sbn-bar {
           position: fixed;
