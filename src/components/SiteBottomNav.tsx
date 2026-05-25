@@ -452,10 +452,10 @@ const SiteBottomNav = () => {
               tabIndex={0}
               aria-label="Previous page"
               className="nav-arrow-left"
-              onMouseEnter={(e) => { setTooltip("Page Back"); (e.currentTarget as HTMLDivElement).style.transform = "scale(1.5)"; }}
-              onMouseLeave={(e) => { setTooltip(null); (e.currentTarget as HTMLDivElement).style.transform = "scale(1)"; }}
-              onFocus={(e) => { setTooltip("Page Back"); (e.currentTarget as HTMLDivElement).style.transform = "scale(1.5)"; }}
-              onBlur={(e) => { setTooltip(null); (e.currentTarget as HTMLDivElement).style.transform = "scale(1)"; }}
+              onMouseEnter={(e) => { (e.currentTarget as HTMLDivElement).style.transform = "scale(1.5)"; }}
+              onMouseLeave={(e) => { (e.currentTarget as HTMLDivElement).style.transform = "scale(1)"; }}
+              onFocus={(e) => { (e.currentTarget as HTMLDivElement).style.transform = "scale(1.5)"; }}
+              onBlur={(e) => { (e.currentTarget as HTMLDivElement).style.transform = "scale(1)"; }}
               onClick={() => window.history.back()}
               onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); window.history.back(); } }}
               style={{
