@@ -270,7 +270,7 @@ const SiteBottomNav = () => {
           font-weight: 700;
           color: #CC0000;
           text-align: center;
-          z-index: 1000;
+          z-index: 10000;
           pointer-events: none;
           white-space: nowrap;
           font-family: 'Inter', 'DM Sans', system-ui, sans-serif;
