@@ -531,7 +531,7 @@ const SiteBottomNav = () => {
             type="button"
             onClick={() => navigate("/search")}
             className="sbn-item"
-            data-tip="Search the site"
+            data-tip="Search"
             aria-label="Search"
           >
             <div className="sbn-icon-wrap">
