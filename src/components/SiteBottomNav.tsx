@@ -357,7 +357,10 @@ const SiteBottomNav = () => {
           .sbn-bar {
             padding: 4px 10px 4px;
             bottom: 8px;
-            border-radius: 20px 20px 0px 0px;
+            border-radius: 0;
+            border: 0;
+            box-shadow: none;
+            outline: none;
             width: calc(100vw - 12px);
           }
           .sbn-inner { gap: 0; padding-top: 0px; justify-content: space-evenly !important; }
