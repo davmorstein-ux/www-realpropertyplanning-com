@@ -317,6 +317,16 @@ const SiteBottomNav = () => {
             <span className="sbn-label">HOME</span>
           </Link>
 
+          {/* Back arrow */}
+          <button
+            type="button"
+            onClick={() => window.history.back()}
+            aria-label="Previous page"
+            style={{ background: "transparent", border: 0, padding: 0, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", height: 49 }}
+          >
+            <img src={arrowLeftImg} alt="" aria-hidden="true" style={{ height: 42, width: "auto", objectFit: "contain", display: "block" }} />
+          </button>
+
           {/* 2. Back / Forward gear shifter — exact stacking from MGFloatingNav */}
           <div
             className="sbn-item"
@@ -423,6 +433,16 @@ const SiteBottomNav = () => {
             </div>
             <span className="sbn-label">PAGE</span>
           </div>
+
+          {/* Forward arrow */}
+          <button
+            type="button"
+            onClick={() => window.history.forward()}
+            aria-label="Next page"
+            style={{ background: "transparent", border: 0, padding: 0, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", height: 49 }}
+          >
+            <img src={arrowRightImg} alt="" aria-hidden="true" style={{ height: 42, width: "auto", objectFit: "contain", display: "block" }} />
+          </button>
 
 
           {/* 3. Search */}
