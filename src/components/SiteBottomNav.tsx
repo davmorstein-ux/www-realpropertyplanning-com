@@ -242,12 +242,14 @@ const SiteBottomNav = () => {
         .sbn-item:hover .sbn-label { color: #1B2B4B; }
 
         /* Tooltip — plain bold red text above the icon, no box */
-        .sbn-item[data-tip]::after {
+        .sbn-icon-wrap[data-tip]::after,
+        .sbn-page-scale[data-tip]::after {
           content: attr(data-tip);
           position: absolute;
-          bottom: calc(100% + 6px);
+          bottom: 100%;
           left: 50%;
           transform: translateX(-50%);
+          margin-bottom: 6px;
           background: transparent;
           color: #CC0000;
           font-size: 0.75rem;
@@ -262,9 +264,12 @@ const SiteBottomNav = () => {
           font-family: 'Inter', 'DM Sans', system-ui, sans-serif;
           letter-spacing: 0.5px;
           text-transform: none;
+          z-index: 1000;
         }
-        .sbn-item:hover[data-tip]::after,
-        .sbn-item:focus-visible[data-tip]::after {
+        .sbn-item:hover .sbn-icon-wrap[data-tip]::after,
+        .sbn-item:focus-visible .sbn-icon-wrap[data-tip]::after,
+        .sbn-page-group:hover .sbn-page-scale[data-tip]::after,
+        .sbn-page-group:focus-visible .sbn-page-scale[data-tip]::after {
           opacity: 1;
         }
 
