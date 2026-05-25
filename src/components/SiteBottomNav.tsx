@@ -5,8 +5,6 @@ import gearStickImg from "@/assets/gear_stick_only.png";
 import gearBootImg from "@/assets/gear_boot_only.png";
 import compassIcon from "@/assets/nav/compass_final.png";
 import compassNeedle from "@/assets/nav/compass_needle_final.png";
-import waypointPin from "@/assets/nav/waypoint_new.png";
-import roadmapIcon from "@/assets/nav/map_final.png";
 // @ts-expect-error - vite cache-bust query
 import headlampsOff from "@/assets/nav/headlamps_off_final.png?v=4";
 // @ts-expect-error - vite cache-bust query
@@ -48,7 +46,7 @@ const SiteBottomNav = () => {
           justify-content: center;
           width: fit-content !important;
           margin: 0 auto !important;
-          min-width: unset !important;
+          min-width: 320px !important;
           max-width: 95% !important;
           align-self: center !important;
           box-sizing: border-box !important;
@@ -461,18 +459,7 @@ const SiteBottomNav = () => {
           </div>
 
 
-          {/* 3. Site Map */}
-          <Link to="/sitemap" className="sbn-item" data-tip="Site Map" aria-label="Site Map">
-            <div className="sbn-icon-wrap sbn-site-map-icon" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', overflow: 'visible', marginRight: '8px', marginLeft: '10px', transform: 'translateY(6px)' }}>
-              <span className="sbn-map-wrap">
-                <img src={roadmapIcon} alt="" aria-hidden="true" style={{ height: '39px', width: 'auto', objectFit: 'contain' }} loading="lazy" />
-                <img src={waypointPin} alt="" aria-hidden="true" className="sbn-waypoint" loading="lazy" />
-              </span>
-            </div>
-            <span className="sbn-label">SITE MAP</span>
-          </Link>
-
-          {/* 4. Search */}
+          {/* 3. Search */}
           <button
             type="button"
             onClick={() => navigate("/search")}
@@ -489,7 +476,7 @@ const SiteBottomNav = () => {
             <span className="sbn-label">SEARCH</span>
           </button>
 
-          {/* 5. Contact */}
+          {/* 4. Contact */}
           <Link
             to="/contact"
             className="sbn-item"
