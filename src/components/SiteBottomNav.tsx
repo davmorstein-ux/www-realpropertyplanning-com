@@ -67,8 +67,10 @@ const SiteBottomNav = () => {
           100% { transform: translate(-50%, -50%) rotate(360deg); }
         }
         @keyframes sbn-headlight-flicker {
-          0%, 50%, 100% { filter: brightness(1); }
-          25%, 75% { filter: brightness(2.5) drop-shadow(0 0 6px #fff9c4); }
+          0%, 100% { filter: brightness(1); }
+          25% { filter: brightness(1.8) drop-shadow(0 0 8px #FFA500) sepia(0.3); }
+          50% { filter: brightness(1); }
+          75% { filter: brightness(1.8) drop-shadow(0 0 8px #FFA500) sepia(0.3); }
         }
         .sbn-anim-steer { animation: sbn-steer-wiggle 0.5s ease-in-out; }
         .sbn-anim-shift { animation: sbn-shift-wiggle 0.5s ease-in-out !important; }
