@@ -414,9 +414,12 @@ const SiteBottomNav = () => {
 
 
                   <img
+                    key={`g-${pulseIdx}`}
+                    className={isActive(1) ? "sbn-anim-shift" : ""}
                     src={gearStickImg}
                     alt=""
                     aria-hidden="true"
+
                     style={{
                       position: "absolute",
                       top: 0,
@@ -506,7 +509,7 @@ const SiteBottomNav = () => {
               aria-label="Next page"
               style={{ background: "transparent", border: 0, padding: 0, margin: 0, marginLeft: -6, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}
             >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={pulseStyle(3)}>
+              <svg key={`r-${pulseIdx}`} className={isActive(1) ? "sbn-anim-right-blink" : ""} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M5 12h14" />
                 <path d="M12 5l7 7-7 7" />
               </svg>
@@ -524,9 +527,10 @@ const SiteBottomNav = () => {
             aria-label="Search"
           >
             <div className="sbn-icon-wrap">
-              <span className="sbn-compass-wrap" style={{ ...pulseStyle(4), display: 'inline-block' }}>
+              <span className="sbn-compass-wrap" style={{ display: 'inline-block' }}>
                 <img src={compassIcon} alt="" aria-hidden="true" loading="lazy" style={{ height: '42px', width: '42px', objectFit: 'contain', display: 'block', transform: 'rotate(35deg)', transition: 'transform 0.2s ease' }} />
-                <img src={compassNeedle} alt="" aria-hidden="true" loading="lazy" className="sbn-compass-needle" />
+                <img key={`c-${pulseIdx}`} src={compassNeedle} alt="" aria-hidden="true" loading="lazy" className={`sbn-compass-needle${isActive(2) ? " sbn-anim-compass-spin" : ""}`} />
+
               </span>
             </div>
             <span className="sbn-label">SEARCH</span>
@@ -539,7 +543,7 @@ const SiteBottomNav = () => {
             data-tip="Contact us"
             aria-label="Contact"
           >
-            <div className="sbn-icon-wrap" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', overflow: 'visible', ...pulseStyle(5) }}>
+            <div key={`ct-${pulseIdx}`} className={`sbn-icon-wrap${isActive(3) ? " sbn-anim-headlight" : ""}`} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', overflow: 'visible' }}>
               <img
                 src={headlampsOff}
                 alt=""
