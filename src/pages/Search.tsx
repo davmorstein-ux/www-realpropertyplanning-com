@@ -7,18 +7,53 @@ import searchHero from "@/assets/search-hero.webp";
 
 const Search = () => {
   useEffect(() => {
-    const existing = document.querySelector(
-      'script[src="https://cse.google.com/cse.js?cx=549468ba95e8c46df"]'
-    );
-    if (existing) return;
+    const SRC = "https://cse.google.com/cse.js?cx=549468ba95e8c46df";
+    const existing = document.querySelector(`script[src="${SRC}"]`);
+    if (!existing) {
+      const script = document.createElement("script");
+      script.async = true;
+      script.src = SRC;
+      document.head.appendChild(script);
+    }
 
-    const script = document.createElement("script");
-    script.async = true;
-    script.src = "https://cse.google.com/cse.js?cx=549468ba95e8c46df";
-    document.head.appendChild(script);
+    const hidePlaceholder = () => {
+      const ph = document.getElementById("gcse-placeholder");
+      if (ph && document.querySelector(".gsc-control-cse")) {
+        ph.style.display = "none";
+        return true;
+      }
+      return false;
+    };
+
+    const tryRender = () => {
+      const w = window as any;
+      if (w.google && w.google.search && w.google.search.cse && w.google.search.cse.element) {
+        try {
+          w.google.search.cse.element.render({
+            div: "gcse-search-container",
+            tag: "search",
+          });
+        } catch {
+          /* already rendered */
+        }
+      }
+    };
+
+    const onLoad = () => tryRender();
+    window.addEventListener("load", onLoad);
+
+    let attempts = 0;
+    const interval = window.setInterval(() => {
+      attempts++;
+      tryRender();
+      if (hidePlaceholder() || attempts > 40) {
+        window.clearInterval(interval);
+      }
+    }, 250);
 
     return () => {
-      // Do not remove the script on unmount so the widget survives navigation
+      window.removeEventListener("load", onLoad);
+      window.clearInterval(interval);
     };
   }, []);
 
