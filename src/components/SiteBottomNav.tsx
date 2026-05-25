@@ -466,7 +466,23 @@ const SiteBottomNav = () => {
           </Link>
 
           {/* PAGE controls — three fully independent elements */}
-          <div style={{ display: "flex", alignItems: "center", gap: 0, marginTop: "-6px" }}>
+          <div
+            onMouseEnter={(e) => {
+              (e.currentTarget as HTMLDivElement).style.transform = "scale(1.5)";
+            }}
+            onMouseLeave={(e) => {
+              (e.currentTarget as HTMLDivElement).style.transform = "scale(1)";
+            }}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: 0,
+              marginTop: "-6px",
+              transform: "scale(1)",
+              transformOrigin: "center bottom",
+              transition: "transform 0.2s ease-in-out",
+            }}
+          >
             {/* LEFT ARROW */}
             <div
               role="button"
@@ -504,6 +520,7 @@ const SiteBottomNav = () => {
                 background: "transparent",
                 border: 0,
                 padding: 0,
+                marginRight: "-18px",
               }}
             >
               <svg
@@ -656,6 +673,7 @@ const SiteBottomNav = () => {
                     cursor: "pointer",
                     zIndex: 3,
                     padding: 0,
+                    marginLeft: "-18px",
                   }}
                 />
               </div>
