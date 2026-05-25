@@ -366,7 +366,7 @@ const SiteBottomNav = () => {
           {/* 1. Home */}
           <Link to="/" className="sbn-item" data-tip="Home" aria-label="Home">
             <div className="sbn-icon-wrap">
-              <img src={steeringWheel} alt="" aria-hidden="true" className="sbn-wheel" loading="lazy" style={pulseStyle(0)} />
+              <img key={`h-${pulseIdx}`} src={steeringWheel} alt="" aria-hidden="true" className={`sbn-wheel${isActive(0) ? " sbn-anim-steer" : ""}`} loading="lazy" />
             </div>
             <span className="sbn-label">HOME</span>
           </Link>
@@ -381,7 +381,7 @@ const SiteBottomNav = () => {
               style={{ background: "transparent", border: 0, padding: 0, margin: 0, marginRight: -6, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}
 
             >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={pulseStyle(1)}>
+              <svg key={`l-${pulseIdx}`} className={isActive(1) ? "sbn-anim-left-blink" : ""} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M19 12H5" />
                 <path d="M12 19l-7-7 7-7" />
               </svg>
@@ -409,9 +409,9 @@ const SiteBottomNav = () => {
                     alignItems: "center",
                     justifyContent: "flex-end",
                     flexShrink: 0,
-                    ...pulseStyle(2),
                   }}
                 >
+
 
                   <img
                     src={gearStickImg}
