@@ -279,7 +279,7 @@ const SiteBottomNav = () => {
           bottom: 80px;
           font-size: 0.65rem;
           font-weight: 700;
-          color: #CC0000;
+          color: #000000;
           text-align: center;
           z-index: 10000;
           pointer-events: none;
