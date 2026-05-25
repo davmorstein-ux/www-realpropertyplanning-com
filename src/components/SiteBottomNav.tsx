@@ -5,8 +5,6 @@ import gearStickImg from "@/assets/gear_stick_only.png";
 import gearBootImg from "@/assets/gear_boot_only.png";
 import compassIcon from "@/assets/nav/compass_final.png";
 import compassNeedle from "@/assets/nav/compass_needle_final.png";
-import waypointPin from "@/assets/nav/waypoint_new.png";
-import roadmapIcon from "@/assets/nav/map_final.png";
 // @ts-expect-error - vite cache-bust query
 import headlampsOff from "@/assets/nav/headlamps_off_final.png?v=4";
 // @ts-expect-error - vite cache-bust query
