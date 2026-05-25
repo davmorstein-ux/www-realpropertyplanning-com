@@ -469,7 +469,7 @@ const SiteBottomNav = () => {
           {/* PAGE controls — three fully independent elements */}
           <div
             onMouseEnter={(e) => {
-              (e.currentTarget as HTMLDivElement).style.transform = "scale(1.15)";
+              (e.currentTarget as HTMLDivElement).style.transform = "scale(1.1)";
             }}
             onMouseLeave={(e) => {
               (e.currentTarget as HTMLDivElement).style.transform = "scale(1)";
@@ -693,7 +693,7 @@ const SiteBottomNav = () => {
                 (e.currentTarget as HTMLDivElement).style.transform = "scale(1)";
               }}
               onFocus={(e) => {
-                (e.currentTarget as HTMLDivElement).style.transform = "scale(1.5)";
+                (e.currentTarget as HTMLDivElement).style.transform = "scale(1)";
               }}
               onBlur={(e) => {
                 (e.currentTarget as HTMLDivElement).style.transform = "scale(1)";
@@ -717,7 +717,7 @@ const SiteBottomNav = () => {
                 background: "transparent",
                 border: 0,
                 padding: 0,
-                marginLeft: "-10px",
+                marginLeft: "-16px",
               }}
             >
               <svg
