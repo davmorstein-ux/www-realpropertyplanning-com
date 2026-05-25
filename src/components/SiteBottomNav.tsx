@@ -535,10 +535,10 @@ const SiteBottomNav = () => {
                 <button
                   type="button"
                   aria-label="Go back"
-                  onMouseEnter={() => setGearSide("R")}
-                  onMouseLeave={() => setGearSide("none")}
-                  onFocus={() => setGearSide("R")}
-                  onBlur={() => setGearSide("none")}
+                  onMouseEnter={() => { setGearSide("R"); setTooltip("Page Back"); }}
+                  onMouseLeave={() => { setGearSide("none"); setTooltip(null); }}
+                  onFocus={() => { setGearSide("R"); setTooltip("Page Back"); }}
+                  onBlur={() => { setGearSide("none"); setTooltip(null); }}
                   onClick={() => window.history.back()}
                   style={{ position: "absolute", top: 0, left: 0, width: "50%", height: "100%", background: "transparent", border: 0, cursor: "pointer", zIndex: 3, padding: 0 }}
                 />
