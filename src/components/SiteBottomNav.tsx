@@ -145,6 +145,21 @@ const SiteBottomNav = () => {
         .sbn-item:hover .sbn-icon-wrap {
           transform: translateY(4px) scale(1.75);
         }
+        /* PAGE group: scale arrows + gear together as one unit on hover */
+        .sbn-page-scale {
+          display: flex;
+          align-items: center;
+          gap: 0;
+          transform-origin: center bottom;
+          transition: transform 0.2s ease-in-out;
+        }
+        .sbn-page-group:hover .sbn-page-scale {
+          transform: scale(1.75);
+        }
+        /* Prevent the inner gear icon-wrap from double-scaling inside the group */
+        .sbn-page-group:hover .sbn-icon-wrap {
+          transform: translateY(4px);
+        }
 
         .sbn-icon-tall {
           width: auto !important;
