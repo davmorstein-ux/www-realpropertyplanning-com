@@ -399,7 +399,7 @@ const SiteBottomNav = () => {
             {/* 2. Back / Forward gear shifter — exact stacking from MGFloatingNav */}
             <div
               className="sbn-item"
-              data-tip="Back / Forward"
+              data-tip="Page Ahead and Back"
               role="group"
               aria-label="Back or forward"
               style={{ padding: 0, margin: 0 }}
