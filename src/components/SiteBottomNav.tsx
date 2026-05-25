@@ -561,10 +561,10 @@ const SiteBottomNav = () => {
               tabIndex={0}
               aria-label="Next page"
               className="nav-arrow-right"
-              onMouseEnter={(e) => { setTooltip("Page Forward"); (e.currentTarget as HTMLDivElement).style.transform = "scale(1.5)"; }}
-              onMouseLeave={(e) => { setTooltip(null); (e.currentTarget as HTMLDivElement).style.transform = "scale(1)"; }}
-              onFocus={(e) => { setTooltip("Page Forward"); (e.currentTarget as HTMLDivElement).style.transform = "scale(1.5)"; }}
-              onBlur={(e) => { setTooltip(null); (e.currentTarget as HTMLDivElement).style.transform = "scale(1)"; }}
+              onMouseEnter={(e) => { (e.currentTarget as HTMLDivElement).style.transform = "scale(1.5)"; }}
+              onMouseLeave={(e) => { (e.currentTarget as HTMLDivElement).style.transform = "scale(1)"; }}
+              onFocus={(e) => { (e.currentTarget as HTMLDivElement).style.transform = "scale(1.5)"; }}
+              onBlur={(e) => { (e.currentTarget as HTMLDivElement).style.transform = "scale(1)"; }}
               onClick={() => window.history.forward()}
               onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); window.history.forward(); } }}
               style={{
