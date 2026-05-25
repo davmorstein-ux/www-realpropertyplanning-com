@@ -140,7 +140,13 @@ const SiteBottomNav = () => {
           align-items: center;
           justify-content: center;
           transform: translateY(4px);
+          transform-origin: center bottom;
+          transition: transform 0.2s ease-in-out;
         }
+        .sbn-item:hover .sbn-icon-wrap {
+          transform: translateY(4px) scale(1.75);
+        }
+
         .sbn-icon-tall {
           width: auto !important;
           height: 52px !important;
@@ -216,31 +222,33 @@ const SiteBottomNav = () => {
         }
         .sbn-item:hover .sbn-label { color: #1B2B4B; }
 
-        /* Tooltip */
+        /* Tooltip — plain bold red text above the icon, no box */
         .sbn-item[data-tip]::after {
           content: attr(data-tip);
           position: absolute;
-          bottom: calc(100% + 8px);
+          bottom: calc(100% + 6px);
           left: 50%;
-          transform: translateX(-50%) translateY(4px);
-          background: #1B2B4B;
-          color: #fff;
-          font-size: 12px;
-          font-weight: 600;
-          padding: 6px 10px;
-          border-radius: 6px;
+          transform: translateX(-50%);
+          background: transparent;
+          color: #CC0000;
+          font-size: 0.75rem;
+          font-weight: 700;
+          padding: 0;
+          border: 0;
+          box-shadow: none;
           white-space: nowrap;
           opacity: 0;
           pointer-events: none;
-          transition: opacity 0.18s ease, transform 0.18s ease;
-          box-shadow: 0 6px 18px rgba(0,0,0,0.3);
-          max-width: 260px;
+          transition: opacity 0.2s ease-in-out;
+          font-family: 'Inter', 'DM Sans', system-ui, sans-serif;
+          letter-spacing: 0.5px;
+          text-transform: none;
         }
         .sbn-item:hover[data-tip]::after,
         .sbn-item:focus-visible[data-tip]::after {
           opacity: 1;
-          transform: translateX(-50%) translateY(0);
         }
+
 
         /* Gear shifter — boot stationary base, knob & shaft centered on top */
         .sbn-gear-wrap {
@@ -364,7 +372,7 @@ const SiteBottomNav = () => {
       <nav className="sbn-bar" aria-label="Site bottom navigation">
         <div className="sbn-inner">
           {/* 1. Home */}
-          <Link to="/" className="sbn-item" data-tip="Home" aria-label="Home">
+          <Link to="/" className="sbn-item" data-tip="HOME" aria-label="Home">
             <div className="sbn-icon-wrap">
               <img key={`h-${pulseIdx}`} src={steeringWheel} alt="" aria-hidden="true" className={`sbn-wheel${isActive(0) ? " sbn-anim-steer" : ""}`} loading="lazy" />
             </div>
@@ -391,7 +399,7 @@ const SiteBottomNav = () => {
             {/* 2. Back / Forward gear shifter — exact stacking from MGFloatingNav */}
             <div
               className="sbn-item"
-              data-tip="Back / Forward"
+              data-tip="Page Ahead and Back"
               role="group"
               aria-label="Back or forward"
               style={{ padding: 0, margin: 0 }}
@@ -523,7 +531,7 @@ const SiteBottomNav = () => {
             type="button"
             onClick={() => navigate("/search")}
             className="sbn-item"
-            data-tip="Search the site"
+            data-tip="Search"
             aria-label="Search"
           >
             <div className="sbn-icon-wrap">
@@ -540,7 +548,7 @@ const SiteBottomNav = () => {
           <Link
             to="/contact"
             className="sbn-item"
-            data-tip="Contact us"
+            data-tip="Contact"
             aria-label="Contact"
           >
             <div key={`ct-${pulseIdx}`} className={`sbn-icon-wrap${isActive(3) ? " sbn-anim-headlight" : ""}`} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', overflow: 'visible' }}>
