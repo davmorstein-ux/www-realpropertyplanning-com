@@ -285,7 +285,7 @@ const SiteBottomNav = () => {
           position: fixed;
           left: 50%;
           transform: translateX(-50%);
-          bottom: 62px;
+          bottom: 72px;
           font-size: 0.65rem;
           font-weight: 700;
           color: #000000;
