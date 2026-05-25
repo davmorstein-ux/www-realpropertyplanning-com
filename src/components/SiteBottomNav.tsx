@@ -280,7 +280,7 @@ const SiteBottomNav = () => {
           position: fixed;
           left: 50%;
           transform: translateX(-50%);
-          bottom: 80px;
+          bottom: 62px;
           font-size: 0.65rem;
           font-weight: 700;
           color: #000000;
@@ -486,7 +486,7 @@ const SiteBottomNav = () => {
               style={{
                 pointerEvents: "auto",
                 display: "inline-flex",
-                alignItems: "flex-end",
+                alignItems: "center",
                 justifyContent: "center",
                 transform: "scale(1)",
                 transformOrigin: "center bottom",
