@@ -468,7 +468,7 @@ const SiteBottomNav = () => {
           {/* PAGE controls — three fully independent elements */}
           <div
             onMouseEnter={(e) => {
-              (e.currentTarget as HTMLDivElement).style.transform = "scale(1.5)";
+              (e.currentTarget as HTMLDivElement).style.transform = "scale(1.2)";
             }}
             onMouseLeave={(e) => {
               (e.currentTarget as HTMLDivElement).style.transform = "scale(1)";
@@ -520,7 +520,7 @@ const SiteBottomNav = () => {
                 background: "transparent",
                 border: 0,
                 padding: 0,
-                marginRight: "-18px",
+                marginRight: "-10px",
               }}
             >
               <svg
