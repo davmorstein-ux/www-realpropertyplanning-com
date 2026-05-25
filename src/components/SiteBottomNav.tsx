@@ -72,9 +72,21 @@ const SiteBottomNav = () => {
         .sbn-anim-left-blink { animation: sbn-left-blink 0.5s ease-in-out; }
         .sbn-anim-right-blink { animation: sbn-right-blink 0.5s ease-in-out; }
         .sbn-anim-compass-spin { animation: sbn-needle-spin 0.8s ease-out !important; }
-        /* Headlight auto pulse — mirrors the :hover image swap exactly */
-        .sbn-icon-wrap.sbn-anim-headlight .sbn-headlamp-off { display: none; }
-        .sbn-icon-wrap.sbn-anim-headlight .sbn-headlamp-on { display: block; }
+        @keyframes headlightFlicker {
+          0%, 100% { filter: brightness(1); }
+          15% { filter: brightness(1.8) drop-shadow(0 0 8px #FFA500) sepia(0.3); }
+          30% { filter: brightness(1); }
+          50% { filter: brightness(1.8) drop-shadow(0 0 8px #FFA500) sepia(0.3); }
+          65% { filter: brightness(1); }
+          80% { filter: brightness(1.8) drop-shadow(0 0 8px #FFA500) sepia(0.3); }
+          95% { filter: brightness(1); }
+        }
+        .sbn-icon-wrap.sbn-anim-headlight .sbn-headlamp-off {
+          animation: headlightFlicker 0.5s ease-in-out;
+        }
+        .sbn-icon-wrap.sbn-anim-headlight .sbn-headlamp-on {
+          display: none;
+        }
 
 
 
@@ -155,7 +167,7 @@ const SiteBottomNav = () => {
           position: relative;
           display: flex;
           align-items: center;
-          gap: 0px;
+          gap: 0;
           transform-origin: center bottom;
           transition: transform 0.2s ease-in-out;
         }
@@ -434,9 +446,9 @@ const SiteBottomNav = () => {
                 type="button"
                 onClick={() => window.history.back()}
                 aria-label="Previous page"
-                style={{ background: "transparent", border: 0, padding: 0, margin: 0, marginRight: -8, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}
+                style={{ background: "transparent", border: 0, padding: 0, margin: 0, marginRight: -12, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}
               >
-                <svg key={`l-${pulseIdx}`} className={isActive(1) ? "sbn-anim-left-blink" : ""} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <svg key={`l-${pulseIdx}`} className={isActive(1) ? "sbn-anim-left-blink" : ""} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ letterSpacing: 1, padding: 1 }}>
                   <path d="M19 12H5" />
                   <path d="M12 19l-7-7 7-7" />
                 </svg>
@@ -554,9 +566,9 @@ const SiteBottomNav = () => {
                 type="button"
                 onClick={() => window.history.forward()}
                 aria-label="Next page"
-                style={{ background: "transparent", border: 0, padding: 0, margin: 0, marginLeft: -8, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}
+                style={{ background: "transparent", border: 0, padding: 0, margin: 0, marginLeft: -12, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}
               >
-                <svg key={`r-${pulseIdx}`} className={isActive(1) ? "sbn-anim-right-blink" : ""} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <svg key={`r-${pulseIdx}`} className={isActive(1) ? "sbn-anim-right-blink" : ""} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ letterSpacing: 1, padding: 1 }}>
                   <path d="M5 12h14" />
                   <path d="M12 5l7 7-7 7" />
                 </svg>
