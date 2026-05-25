@@ -399,8 +399,8 @@ const SiteBottomNav = () => {
         /* Bottom gradient fade — behind nav, above page content */
         .sbn-fade {
           position: fixed;
-          bottom: 4;
-          left: 4;
+          bottom: 0;
+          left: 0;
           width: 100%;
           height: 140px;
           pointer-events: none;
