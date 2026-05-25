@@ -18,6 +18,8 @@ const SiteBottomNav = () => {
   const navigate = useNavigate();
   const [gearSide, setGearSide] = useState<"none" | "R" | "F">("none");
   const [pulseIdx, setPulseIdx] = useState<number>(-1);
+  const [headlightOn, setHeadlightOn] = useState<boolean>(false);
+  const [tooltip, setTooltip] = useState<string | null>(null);
 
   useEffect(() => {
     const timeouts: ReturnType<typeof setTimeout>[] = [];
@@ -47,6 +49,21 @@ const SiteBottomNav = () => {
     return () => timeouts.forEach(clearTimeout);
   }, [pulseIdx]);
 
+  // Headlight auto-sequence: reuse the exact hover image-swap (no new
+  // keyframe), play twice consecutively, each cycle 1.2s.
+  useEffect(() => {
+    if (pulseIdx !== 3) return;
+    const timeouts: ReturnType<typeof setTimeout>[] = [];
+    setHeadlightOn(true);
+    timeouts.push(setTimeout(() => setHeadlightOn(false), 1200));
+    timeouts.push(setTimeout(() => setHeadlightOn(true), 1200));
+    timeouts.push(setTimeout(() => setHeadlightOn(false), 2400));
+    return () => {
+      timeouts.forEach(clearTimeout);
+      setHeadlightOn(false);
+    };
+  }, [pulseIdx]);
+
 
   // 0=HOME, 1=PAGE (gear + arrows), 2=SEARCH, 3=CONTACT
   const isActive = (i: number) => pulseIdx === i;
@@ -72,21 +89,9 @@ const SiteBottomNav = () => {
         .sbn-anim-left-blink { animation: sbn-left-blink 0.5s ease-in-out; }
         .sbn-anim-right-blink { animation: sbn-right-blink 0.5s ease-in-out; }
         .sbn-anim-compass-spin { animation: sbn-needle-spin 0.8s ease-out !important; }
-        @keyframes headlightFlicker {
-          0%, 100% { filter: brightness(1); }
-          15% { filter: brightness(1.8) drop-shadow(0 0 8px #FFA500) sepia(0.3); }
-          30% { filter: brightness(1); }
-          50% { filter: brightness(1.8) drop-shadow(0 0 8px #FFA500) sepia(0.3); }
-          65% { filter: brightness(1); }
-          80% { filter: brightness(1.8) drop-shadow(0 0 8px #FFA500) sepia(0.3); }
-          95% { filter: brightness(1); }
-        }
-        .sbn-icon-wrap.sbn-anim-headlight .sbn-headlamp-off {
-          animation: headlightFlicker 0.5s ease-in-out;
-        }
-        .sbn-icon-wrap.sbn-anim-headlight .sbn-headlamp-on {
-          display: none;
-        }
+        /* Headlight auto-sequence reuses the EXACT hover image-swap. No new keyframe. */
+        .sbn-icon-wrap.sbn-headlight-on .sbn-headlamp-off { display: none; }
+        .sbn-icon-wrap.sbn-headlight-on .sbn-headlamp-on { display: block; }
 
 
 
@@ -254,37 +259,23 @@ const SiteBottomNav = () => {
         }
         .sbn-item:hover .sbn-label { color: #1B2B4B; }
 
-        /* Tooltip — plain bold red text above the icon, no box */
-        .sbn-icon-wrap[data-tip]::after,
-        .sbn-page-scale[data-tip]::after {
-          content: attr(data-tip);
-          position: absolute;
-          bottom: 100%;
+        /* Shared tooltip — single fixed element centered above the nav icon group */
+        .sbn-shared-tip {
+          position: fixed;
           left: 50%;
           transform: translateX(-50%);
-          margin-bottom: 2px;
-          background: transparent;
-          color: #CC0000;
-          font-size: 0.6rem;
-          line-height: 1;
+          bottom: 80px;
+          font-size: 0.65rem;
           font-weight: 700;
-          padding: 0;
-          border: 0;
-          box-shadow: none;
-          white-space: nowrap;
-          opacity: 0;
+          color: #CC0000;
+          text-align: center;
+          z-index: 1000;
           pointer-events: none;
-          transition: opacity 0.2s ease-in-out;
+          white-space: nowrap;
           font-family: 'Inter', 'DM Sans', system-ui, sans-serif;
           letter-spacing: 0.5px;
-          text-transform: none;
-          z-index: 1000;
-        }
-        .sbn-item:hover .sbn-icon-wrap[data-tip]::after,
-        .sbn-item:focus-visible .sbn-icon-wrap[data-tip]::after,
-        .sbn-page-group:hover .sbn-page-scale[data-tip]::after,
-        .sbn-page-group:focus-visible .sbn-page-scale[data-tip]::after {
-          opacity: 1;
+          line-height: 1;
+          background: transparent;
         }
 
 
@@ -423,11 +414,14 @@ const SiteBottomNav = () => {
       `}</style>
 
       <div className="sbn-fade" aria-hidden="true" />
+      {tooltip && <div className="sbn-shared-tip" role="tooltip">{tooltip}</div>}
       <nav className="sbn-bar" aria-label="Site bottom navigation">
         <div className="sbn-inner">
           {/* 1. Home */}
-          <Link to="/" className="sbn-item" aria-label="Home">
-            <div className="sbn-icon-wrap" data-tip="HOME">
+          <Link to="/" className="sbn-item" aria-label="Home"
+            onMouseEnter={() => setTooltip("HOME")} onMouseLeave={() => setTooltip(null)}
+            onFocus={() => setTooltip("HOME")} onBlur={() => setTooltip(null)}>
+            <div className="sbn-icon-wrap">
               <img key={`h-${pulseIdx}`} src={steeringWheel} alt="" aria-hidden="true" className={`sbn-wheel${isActive(0) ? " sbn-anim-steer" : ""}`} loading="lazy" />
             </div>
             <span className="sbn-label">HOME</span>
@@ -440,8 +434,10 @@ const SiteBottomNav = () => {
             role="group"
             aria-label="Back or forward"
             style={{ padding: 0, margin: 1 }}
+            onMouseEnter={() => setTooltip("Page Ahead and Back")} onMouseLeave={() => setTooltip(null)}
+            onFocus={() => setTooltip("Page Ahead and Back")} onBlur={() => setTooltip(null)}
           >
-            <div className="sbn-page-scale" data-tip="Page Ahead and Back">
+            <div className="sbn-page-scale">
               {/* Back arrow */}
               <button
                 type="button"
@@ -585,8 +581,10 @@ const SiteBottomNav = () => {
             onClick={() => navigate("/search")}
             className="sbn-item"
             aria-label="Search"
+            onMouseEnter={() => setTooltip("Search")} onMouseLeave={() => setTooltip(null)}
+            onFocus={() => setTooltip("Search")} onBlur={() => setTooltip(null)}
           >
-            <div className="sbn-icon-wrap" data-tip="Search">
+            <div className="sbn-icon-wrap">
               <span className="sbn-compass-wrap" style={{ display: 'inline-block' }}>
                 <img src={compassIcon} alt="" aria-hidden="true" loading="lazy" style={{ height: '42px', width: '42px', objectFit: 'contain', display: 'block', transform: 'rotate(35deg)', transition: 'transform 0.2s ease' }} />
                 <img key={`c-${pulseIdx}`} src={compassNeedle} alt="" aria-hidden="true" loading="lazy" className={`sbn-compass-needle${isActive(2) ? " sbn-anim-compass-spin" : ""}`} />
@@ -601,8 +599,10 @@ const SiteBottomNav = () => {
             to="/contact"
             className="sbn-item"
             aria-label="Contact"
+            onMouseEnter={() => setTooltip("Contact")} onMouseLeave={() => setTooltip(null)}
+            onFocus={() => setTooltip("Contact")} onBlur={() => setTooltip(null)}
           >
-            <div key={`ct-${pulseIdx}`} className={`sbn-icon-wrap${isActive(3) ? " sbn-anim-headlight" : ""}`} data-tip="Contact" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', overflow: 'visible' }}>
+            <div className={`sbn-icon-wrap${headlightOn ? " sbn-headlight-on" : ""}`} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', overflow: 'visible' }}>
               <img
                 src={headlampsOff}
                 alt=""
