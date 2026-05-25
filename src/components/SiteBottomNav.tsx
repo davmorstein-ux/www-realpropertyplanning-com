@@ -152,9 +152,10 @@ const SiteBottomNav = () => {
         }
         /* PAGE group: scale arrows + gear together as one unit on hover */
         .sbn-page-scale {
+          position: relative;
           display: flex;
           align-items: center;
-          gap: 0;
+          gap: 1px;
           transform-origin: center bottom;
           transition: transform 0.2s ease-in-out;
         }
@@ -242,12 +243,14 @@ const SiteBottomNav = () => {
         .sbn-item:hover .sbn-label { color: #1B2B4B; }
 
         /* Tooltip — plain bold red text above the icon, no box */
-        .sbn-item[data-tip]::after {
+        .sbn-icon-wrap[data-tip]::after,
+        .sbn-page-scale[data-tip]::after {
           content: attr(data-tip);
           position: absolute;
-          bottom: calc(100% + 6px);
+          bottom: 100%;
           left: 50%;
           transform: translateX(-50%);
+          margin-bottom: 6px;
           background: transparent;
           color: #CC0000;
           font-size: 0.75rem;
@@ -262,9 +265,12 @@ const SiteBottomNav = () => {
           font-family: 'Inter', 'DM Sans', system-ui, sans-serif;
           letter-spacing: 0.5px;
           text-transform: none;
+          z-index: 1000;
         }
-        .sbn-item:hover[data-tip]::after,
-        .sbn-item:focus-visible[data-tip]::after {
+        .sbn-item:hover .sbn-icon-wrap[data-tip]::after,
+        .sbn-item:focus-visible .sbn-icon-wrap[data-tip]::after,
+        .sbn-page-group:hover .sbn-page-scale[data-tip]::after,
+        .sbn-page-group:focus-visible .sbn-page-scale[data-tip]::after {
           opacity: 1;
         }
 
@@ -394,8 +400,8 @@ const SiteBottomNav = () => {
       <nav className="sbn-bar" aria-label="Site bottom navigation">
         <div className="sbn-inner">
           {/* 1. Home */}
-          <Link to="/" className="sbn-item" data-tip="HOME" aria-label="Home">
-            <div className="sbn-icon-wrap">
+          <Link to="/" className="sbn-item" aria-label="Home">
+            <div className="sbn-icon-wrap" data-tip="HOME">
               <img key={`h-${pulseIdx}`} src={steeringWheel} alt="" aria-hidden="true" className={`sbn-wheel${isActive(0) ? " sbn-anim-steer" : ""}`} loading="lazy" />
             </div>
             <span className="sbn-label">HOME</span>
@@ -405,12 +411,11 @@ const SiteBottomNav = () => {
           {/* Back arrow + Gear shifter + Forward arrow — grouped as one hover unit */}
           <div
             className="sbn-item sbn-page-group"
-            data-tip="Page Ahead and Back"
             role="group"
             aria-label="Back or forward"
-            style={{ padding: 0, margin: 0 }}
+            style={{ padding: 0, margin: 1 }}
           >
-            <div className="sbn-page-scale">
+            <div className="sbn-page-scale" data-tip="Page Ahead and Back">
               {/* Back arrow */}
               <button
                 type="button"
@@ -553,10 +558,9 @@ const SiteBottomNav = () => {
             type="button"
             onClick={() => navigate("/search")}
             className="sbn-item"
-            data-tip="Search"
             aria-label="Search"
           >
-            <div className="sbn-icon-wrap">
+            <div className="sbn-icon-wrap" data-tip="Search">
               <span className="sbn-compass-wrap" style={{ display: 'inline-block' }}>
                 <img src={compassIcon} alt="" aria-hidden="true" loading="lazy" style={{ height: '42px', width: '42px', objectFit: 'contain', display: 'block', transform: 'rotate(35deg)', transition: 'transform 0.2s ease' }} />
                 <img key={`c-${pulseIdx}`} src={compassNeedle} alt="" aria-hidden="true" loading="lazy" className={`sbn-compass-needle${isActive(2) ? " sbn-anim-compass-spin" : ""}`} />
@@ -570,10 +574,9 @@ const SiteBottomNav = () => {
           <Link
             to="/contact"
             className="sbn-item"
-            data-tip="Contact"
             aria-label="Contact"
           >
-            <div key={`ct-${pulseIdx}`} className={`sbn-icon-wrap${isActive(3) ? " sbn-anim-headlight" : ""}`} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', overflow: 'visible' }}>
+            <div key={`ct-${pulseIdx}`} className={`sbn-icon-wrap${isActive(3) ? " sbn-anim-headlight" : ""}`} data-tip="Contact" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', overflow: 'visible' }}>
               <img
                 src={headlampsOff}
                 alt=""
