@@ -24,7 +24,8 @@ const SiteBottomNav = () => {
     const timeouts: ReturnType<typeof setTimeout>[] = [];
     function blinkHeadlight() {
       const headlightImg = document.querySelector<HTMLElement>(".headlight-icon");
-      const item = headlightImg?.closest<HTMLElement>(".sbn-item");
+      const item = (headlightImg?.close(e.currentTarget as HTMLDivElement).style.transform = "scale(1.5)");
+      st<HTMLElement>(".sbn-item");
       if (!item) return;
       const hoverClass = "sbn-hover-sim";
 
@@ -468,7 +469,7 @@ const SiteBottomNav = () => {
           {/* PAGE controls — three fully independent elements */}
           <div
             onMouseEnter={(e) => {
-              (e.currentTarget as HTMLDivElement).style.transform = "scale(1.2)";
+              (e.currentTarget as HTMLDivElement).style.transform = "scale(1.15)";
             }}
             onMouseLeave={(e) => {
               (e.currentTarget as HTMLDivElement).style.transform = "scale(1)";
@@ -673,7 +674,7 @@ const SiteBottomNav = () => {
                     cursor: "pointer",
                     zIndex: 3,
                     padding: 0,
-                    marginLeft: "-18px",
+                    marginLeft: "-10px",
                   }}
                 />
               </div>
