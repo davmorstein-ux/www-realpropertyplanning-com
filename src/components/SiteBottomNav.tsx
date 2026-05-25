@@ -262,10 +262,11 @@ const SiteBottomNav = () => {
           bottom: 100%;
           left: 50%;
           transform: translateX(-50%);
-          margin-bottom: 4px;
+          margin-bottom: 2px;
           background: transparent;
           color: #CC0000;
-          font-size: 0.65rem;
+          font-size: 0.6rem;
+          line-height: 1;
           font-weight: 700;
           padding: 0;
           border: 0;
