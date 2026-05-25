@@ -465,26 +465,30 @@ const SiteBottomNav = () => {
             <span className="sbn-label">HOME</span>
           </Link>
 
-          {/* PAGE controls — three fully independent elements */}
-          <div style={{ display: "flex", alignItems: "center", gap: 2, marginTop: "-6px" }}>
-            {/* LEFT ARROW */}
+          {/* PAGE controls — three elements scale together as a group */}
+          <div style={{ display: "flex", alignItems: "center", marginTop: "-6px" }}>
             <div
-              role="button"
-              tabIndex={0}
-              aria-label="Previous page"
-              className="nav-arrow-left"
               onMouseEnter={(e) => {
                 (e.currentTarget as HTMLDivElement).style.transform = "scale(1.5)";
               }}
               onMouseLeave={(e) => {
                 (e.currentTarget as HTMLDivElement).style.transform = "scale(1)";
               }}
-              onFocus={(e) => {
-                (e.currentTarget as HTMLDivElement).style.transform = "scale(1.5)";
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: -6,
+                transform: "scale(1)",
+                transformOrigin: "center bottom",
+                transition: "transform 0.2s ease-in-out",
               }}
-              onBlur={(e) => {
-                (e.currentTarget as HTMLDivElement).style.transform = "scale(1)";
-              }}
+            >
+            {/* LEFT ARROW */}
+            <div
+              role="button"
+              tabIndex={0}
+              aria-label="Previous page"
+              className="nav-arrow-left"
               onClick={() => window.history.back()}
               onKeyDown={(e) => {
                 if (e.key === "Enter" || e.key === " ") {
@@ -498,9 +502,6 @@ const SiteBottomNav = () => {
                 display: "inline-flex",
                 alignItems: "center",
                 justifyContent: "center",
-                transform: "scale(1)",
-                transformOrigin: "center bottom",
-                transition: "transform 0.2s ease-in-out",
                 background: "transparent",
                 border: 0,
                 padding: 0,
@@ -526,20 +527,11 @@ const SiteBottomNav = () => {
             {/* GEAR SHIFTER — independent, no tooltip */}
             <div
               className="nav-gear"
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLDivElement).style.transform = "scale(1.5)";
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLDivElement).style.transform = "scale(1)";
-              }}
               style={{
                 pointerEvents: "auto",
                 display: "inline-flex",
                 alignItems: "center",
                 justifyContent: "center",
-                transform: "scale(1)",
-                transformOrigin: "center bottom",
-                transition: "transform 0.2s ease-in-out",
                 width: 42,
                 height: 49,
                 position: "relative",
@@ -667,18 +659,6 @@ const SiteBottomNav = () => {
               tabIndex={0}
               aria-label="Next page"
               className="nav-arrow-right"
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLDivElement).style.transform = "scale(1.5)";
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLDivElement).style.transform = "scale(1)";
-              }}
-              onFocus={(e) => {
-                (e.currentTarget as HTMLDivElement).style.transform = "scale(1.5)";
-              }}
-              onBlur={(e) => {
-                (e.currentTarget as HTMLDivElement).style.transform = "scale(1)";
-              }}
               onClick={() => window.history.forward()}
               onKeyDown={(e) => {
                 if (e.key === "Enter" || e.key === " ") {
@@ -692,9 +672,6 @@ const SiteBottomNav = () => {
                 display: "inline-flex",
                 alignItems: "center",
                 justifyContent: "center",
-                transform: "scale(1)",
-                transformOrigin: "center bottom",
-                transition: "transform 0.2s ease-in-out",
                 background: "transparent",
                 border: 0,
                 padding: 0,
@@ -716,7 +693,9 @@ const SiteBottomNav = () => {
                 <path d="M12 5l7 7-7 7" />
               </svg>
             </div>
+            </div>
           </div>
+
 
           {/* 3. Search */}
           <button
