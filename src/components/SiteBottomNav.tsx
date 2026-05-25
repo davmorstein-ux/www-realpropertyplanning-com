@@ -452,10 +452,10 @@ const SiteBottomNav = () => {
               tabIndex={0}
               aria-label="Previous page"
               className="nav-arrow-left"
-              onMouseEnter={(e) => { setTooltip("Page Back"); (e.currentTarget as HTMLDivElement).style.transform = "scale(1.5)"; }}
-              onMouseLeave={(e) => { setTooltip(null); (e.currentTarget as HTMLDivElement).style.transform = "scale(1)"; }}
-              onFocus={(e) => { setTooltip("Page Back"); (e.currentTarget as HTMLDivElement).style.transform = "scale(1.5)"; }}
-              onBlur={(e) => { setTooltip(null); (e.currentTarget as HTMLDivElement).style.transform = "scale(1)"; }}
+              onMouseEnter={(e) => { (e.currentTarget as HTMLDivElement).style.transform = "scale(1.5)"; }}
+              onMouseLeave={(e) => { (e.currentTarget as HTMLDivElement).style.transform = "scale(1)"; }}
+              onFocus={(e) => { (e.currentTarget as HTMLDivElement).style.transform = "scale(1.5)"; }}
+              onBlur={(e) => { (e.currentTarget as HTMLDivElement).style.transform = "scale(1)"; }}
               onClick={() => window.history.back()}
               onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); window.history.back(); } }}
               style={{
@@ -535,20 +535,20 @@ const SiteBottomNav = () => {
                 <button
                   type="button"
                   aria-label="Go back"
-                  onMouseEnter={() => setGearSide("R")}
-                  onMouseLeave={() => setGearSide("none")}
-                  onFocus={() => setGearSide("R")}
-                  onBlur={() => setGearSide("none")}
+                  onMouseEnter={() => { setGearSide("R"); setTooltip("Page Back"); }}
+                  onMouseLeave={() => { setGearSide("none"); setTooltip(null); }}
+                  onFocus={() => { setGearSide("R"); setTooltip("Page Back"); }}
+                  onBlur={() => { setGearSide("none"); setTooltip(null); }}
                   onClick={() => window.history.back()}
                   style={{ position: "absolute", top: 0, left: 0, width: "50%", height: "100%", background: "transparent", border: 0, cursor: "pointer", zIndex: 3, padding: 0 }}
                 />
                 <button
                   type="button"
                   aria-label="Go forward"
-                  onMouseEnter={() => setGearSide("F")}
-                  onMouseLeave={() => setGearSide("none")}
-                  onFocus={() => setGearSide("F")}
-                  onBlur={() => setGearSide("none")}
+                  onMouseEnter={() => { setGearSide("F"); setTooltip("Page Forward"); }}
+                  onMouseLeave={() => { setGearSide("none"); setTooltip(null); }}
+                  onFocus={() => { setGearSide("F"); setTooltip("Page Forward"); }}
+                  onBlur={() => { setGearSide("none"); setTooltip(null); }}
                   onClick={() => window.history.forward()}
                   style={{ position: "absolute", top: 0, right: 0, width: "50%", height: "100%", background: "transparent", border: 0, cursor: "pointer", zIndex: 3, padding: 0 }}
                 />
@@ -561,10 +561,10 @@ const SiteBottomNav = () => {
               tabIndex={0}
               aria-label="Next page"
               className="nav-arrow-right"
-              onMouseEnter={(e) => { setTooltip("Page Forward"); (e.currentTarget as HTMLDivElement).style.transform = "scale(1.5)"; }}
-              onMouseLeave={(e) => { setTooltip(null); (e.currentTarget as HTMLDivElement).style.transform = "scale(1)"; }}
-              onFocus={(e) => { setTooltip("Page Forward"); (e.currentTarget as HTMLDivElement).style.transform = "scale(1.5)"; }}
-              onBlur={(e) => { setTooltip(null); (e.currentTarget as HTMLDivElement).style.transform = "scale(1)"; }}
+              onMouseEnter={(e) => { (e.currentTarget as HTMLDivElement).style.transform = "scale(1.5)"; }}
+              onMouseLeave={(e) => { (e.currentTarget as HTMLDivElement).style.transform = "scale(1)"; }}
+              onFocus={(e) => { (e.currentTarget as HTMLDivElement).style.transform = "scale(1.5)"; }}
+              onBlur={(e) => { (e.currentTarget as HTMLDivElement).style.transform = "scale(1)"; }}
               onClick={() => window.history.forward()}
               onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); window.history.forward(); } }}
               style={{
