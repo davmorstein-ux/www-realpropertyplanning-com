@@ -527,20 +527,11 @@ const SiteBottomNav = () => {
             {/* GEAR SHIFTER — independent, no tooltip */}
             <div
               className="nav-gear"
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLDivElement).style.transform = "scale(1.5)";
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLDivElement).style.transform = "scale(1)";
-              }}
               style={{
                 pointerEvents: "auto",
                 display: "inline-flex",
                 alignItems: "center",
                 justifyContent: "center",
-                transform: "scale(1)",
-                transformOrigin: "center bottom",
-                transition: "transform 0.2s ease-in-out",
                 width: 42,
                 height: 49,
                 position: "relative",
