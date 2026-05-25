@@ -581,8 +581,10 @@ const SiteBottomNav = () => {
             onClick={() => navigate("/search")}
             className="sbn-item"
             aria-label="Search"
+            onMouseEnter={() => setTooltip("Search")} onMouseLeave={() => setTooltip(null)}
+            onFocus={() => setTooltip("Search")} onBlur={() => setTooltip(null)}
           >
-            <div className="sbn-icon-wrap" data-tip="Search">
+            <div className="sbn-icon-wrap">
               <span className="sbn-compass-wrap" style={{ display: 'inline-block' }}>
                 <img src={compassIcon} alt="" aria-hidden="true" loading="lazy" style={{ height: '42px', width: '42px', objectFit: 'contain', display: 'block', transform: 'rotate(35deg)', transition: 'transform 0.2s ease' }} />
                 <img key={`c-${pulseIdx}`} src={compassNeedle} alt="" aria-hidden="true" loading="lazy" className={`sbn-compass-needle${isActive(2) ? " sbn-anim-compass-spin" : ""}`} />
