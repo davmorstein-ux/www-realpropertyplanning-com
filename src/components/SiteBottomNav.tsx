@@ -91,12 +91,11 @@ const SiteBottomNav = () => {
           padding-right: 6px !important;
           height: 64px !important;
           overflow: hidden !important;
-          background-color: rgba(245, 241, 232, 0.92);
-          backdrop-filter: blur(12px);
-          -webkit-backdrop-filter: blur(12px);
-          border: 2px solid #CA0600;
-          border-radius: 20px 20px 0px 0px;
-          box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+          background: transparent;
+          border:  0;
+          border-radius: 0;
+          box-shadow: none;
+          outline: none;
           display: flex;
           align-items: center;
           justify-content: center;
