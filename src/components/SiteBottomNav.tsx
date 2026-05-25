@@ -172,21 +172,30 @@ const SiteBottomNav = () => {
         .sbn-item { overflow: visible; }
         .sbn-item:hover { z-index: 999; }
         .sbn-item:hover .sbn-icon-wrap {
-          transform: translateY(4px) scale(1.75);
+          transform: translateY(4px) scale(1.5);
         }
-        /* PAGE group: scale arrows + gear together as one unit on hover */
+        /* PAGE group: each child (arrow / gear) scales independently on its own hover */
         .sbn-page-scale {
           position: relative;
           display: flex;
           align-items: center;
           gap: 0;
+        }
+        .sbn-arrow-btn {
           transform-origin: center bottom;
           transition: transform 0.2s ease-in-out;
         }
-        .sbn-page-group:hover .sbn-page-scale {
-          transform: scale(1.75);
+        .sbn-arrow-btn:hover {
+          transform: scale(1.5);
         }
-        /* Prevent the inner gear icon-wrap from double-scaling inside the group */
+        .sbn-gear-inner {
+          transform-origin: center bottom;
+          transition: transform 0.2s ease-in-out;
+        }
+        .sbn-gear-inner:hover {
+          transform: scale(1.5);
+        }
+        /* Disable the default .sbn-item:hover scale within the PAGE group — arrows and gear scale independently */
         .sbn-page-group:hover .sbn-icon-wrap {
           transform: translateY(4px);
         }
@@ -274,7 +283,7 @@ const SiteBottomNav = () => {
           bottom: 80px;
           font-size: 0.65rem;
           font-weight: 700;
-          color: #CC0000;
+          color: #000000;
           text-align: center;
           z-index: 10000;
           pointer-events: none;
@@ -441,8 +450,6 @@ const SiteBottomNav = () => {
             role="group"
             aria-label="Back or forward"
             style={{ padding: 0, margin: 1 }}
-            onMouseEnter={() => setTooltip("Page Ahead and Back")} onMouseLeave={() => setTooltip(null)}
-            onFocus={() => setTooltip("Page Ahead and Back")} onBlur={() => setTooltip(null)}
           >
             <div className="sbn-page-scale">
               {/* Back arrow */}
@@ -450,6 +457,9 @@ const SiteBottomNav = () => {
                 type="button"
                 onClick={() => window.history.back()}
                 aria-label="Previous page"
+                className="sbn-arrow-btn"
+                onMouseEnter={() => setTooltip("Page Back")} onMouseLeave={() => setTooltip(null)}
+                onFocus={() => setTooltip("Page Back")} onBlur={() => setTooltip(null)}
                 style={{ background: "transparent", border: 0, padding: 0, margin: 0, marginRight: -12, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}
               >
                 <svg key={`l-${pulseIdx}`} className={isActive(1) ? "sbn-anim-left-blink" : ""} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ letterSpacing: 0, padding: 0 }}>
@@ -459,7 +469,7 @@ const SiteBottomNav = () => {
               </button>
 
               {/* Gear shifter */}
-              <div style={{ padding: 0, margin: 0, display: "flex", flexDirection: "column", alignItems: "center" }}>
+              <div className="sbn-gear-inner" style={{ padding: 0, margin: 0, display: "flex", flexDirection: "column", alignItems: "center" }}>
 
                 <div className="sbn-icon-wrap">
 
@@ -570,6 +580,9 @@ const SiteBottomNav = () => {
                 type="button"
                 onClick={() => window.history.forward()}
                 aria-label="Next page"
+                className="sbn-arrow-btn"
+                onMouseEnter={() => setTooltip("Page Forward")} onMouseLeave={() => setTooltip(null)}
+                onFocus={() => setTooltip("Page Forward")} onBlur={() => setTooltip(null)}
                 style={{ background: "transparent", border: 0, padding: 0, margin: 0, marginLeft: -12, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}
               >
                 <svg key={`r-${pulseIdx}`} className={isActive(1) ? "sbn-anim-right-blink" : ""} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ letterSpacing: 0, padding: 0 }}>
