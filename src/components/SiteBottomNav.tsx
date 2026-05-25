@@ -444,154 +444,148 @@ const SiteBottomNav = () => {
           </Link>
 
 
-          {/* Back arrow + Gear shifter + Forward arrow — grouped as one hover unit */}
-          <div
-            className="sbn-item sbn-page-group"
-            role="group"
-            aria-label="Back or forward"
-            style={{ padding: 0, margin: 1 }}
-          >
-            <div className="sbn-page-scale">
-              {/* Back arrow */}
-              <button
-                type="button"
-                onClick={() => window.history.back()}
-                aria-label="Previous page"
-                className="sbn-arrow-btn"
-                onMouseEnter={() => setTooltip("Page Back")} onMouseLeave={() => setTooltip(null)}
-                onFocus={() => setTooltip("Page Back")} onBlur={() => setTooltip(null)}
-                style={{ background: "transparent", border: 0, padding: 0, margin: 0, marginRight: -12, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}
-              >
-                <svg key={`l-${pulseIdx}`} className={isActive(1) ? "sbn-anim-left-blink" : ""} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ letterSpacing: 0, padding: 0 }}>
-                  <path d="M19 12H5" />
-                  <path d="M12 19l-7-7 7-7" />
-                </svg>
-              </button>
-
-              {/* Gear shifter */}
-              <div className="sbn-gear-inner" style={{ padding: 0, margin: 0, display: "flex", flexDirection: "column", alignItems: "center" }}>
-
-                <div className="sbn-icon-wrap">
-
-                  <div
-                    style={{
-                      position: "relative",
-                      width: 42,
-                      height: 42,
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                      justifyContent: "flex-end",
-                      flexShrink: 0,
-                    }}
-                  >
-
-
-                    <img
-                      key={`g-${pulseIdx}`}
-                      src={gearStickImg}
-                      alt=""
-
-                      aria-hidden="true"
-
-                      style={{
-                        position: "absolute",
-                        top: 0,
-                        left: "50%",
-                        transform: `translateX(-50%) rotate(${
-                          gearSide === "R" ? -22 : gearSide === "F" ? 22 : 0
-                        }deg)`,
-                        transformOrigin: "bottom center",
-                        width: 15,
-                        height: 22,
-                        objectFit: "contain",
-                        transition: "transform 0.2s ease",
-                        zIndex: 2,
-                        pointerEvents: "none",
-                      }}
-                    />
-                    <img
-                      src={gearBootImg}
-                      alt=""
-                      aria-hidden="true"
-                      style={{
-                        position: "absolute",
-                        bottom: 2,
-                        left: "50%",
-                        transform: "translateX(-50%)",
-                        width: 27,
-                        height: 21,
-                        objectFit: "contain",
-                        zIndex: 1,
-                        pointerEvents: "none",
-                      }}
-                    />
-
-                    <button
-                      type="button"
-                      className="sbn-gear-half left"
-                      aria-label="Go back"
-                      onMouseEnter={() => setGearSide("R")}
-                      onMouseLeave={() => setGearSide("none")}
-                      onFocus={() => setGearSide("R")}
-                      onBlur={() => setGearSide("none")}
-                      onClick={() => window.history.back()}
-                      style={{
-                        position: "absolute",
-                        top: 0,
-                        left: 0,
-                        width: "50%",
-                        height: "100%",
-                        background: "transparent",
-                        border: 0,
-                        cursor: "pointer",
-                        zIndex: 3,
-                        padding: 0,
-                      }}
-                    />
-                    <button
-                      type="button"
-                      className="sbn-gear-half right"
-                      aria-label="Go forward"
-                      onMouseEnter={() => setGearSide("F")}
-                      onMouseLeave={() => setGearSide("none")}
-                      onFocus={() => setGearSide("F")}
-                      onBlur={() => setGearSide("none")}
-                      onClick={() => window.history.forward()}
-                      style={{
-                        position: "absolute",
-                        top: 0,
-                        right: 0,
-                        width: "50%",
-                        height: "100%",
-                        background: "transparent",
-                        border: 0,
-                        cursor: "pointer",
-                        zIndex: 3,
-                        padding: 0,
-                      }}
-                    />
-                  </div>
-                </div>
-              </div>
-
-              {/* Forward arrow */}
-              <button
-                type="button"
-                onClick={() => window.history.forward()}
-                aria-label="Next page"
-                className="sbn-arrow-btn"
-                onMouseEnter={() => setTooltip("Page Forward")} onMouseLeave={() => setTooltip(null)}
-                onFocus={() => setTooltip("Page Forward")} onBlur={() => setTooltip(null)}
-                style={{ background: "transparent", border: 0, padding: 0, margin: 0, marginLeft: -12, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}
-              >
-                <svg key={`r-${pulseIdx}`} className={isActive(1) ? "sbn-anim-right-blink" : ""} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ letterSpacing: 0, padding: 0 }}>
-                  <path d="M5 12h14" />
-                  <path d="M12 5l7 7-7 7" />
-                </svg>
-              </button>
+          {/* PAGE controls — three fully independent elements */}
+          <div style={{ display: "flex", alignItems: "flex-end", gap: 2 }}>
+            {/* LEFT ARROW */}
+            <div
+              role="button"
+              tabIndex={0}
+              aria-label="Previous page"
+              className="nav-arrow-left"
+              onMouseEnter={(e) => { setTooltip("Page Back"); (e.currentTarget as HTMLDivElement).style.transform = "scale(1.5)"; }}
+              onMouseLeave={(e) => { setTooltip(null); (e.currentTarget as HTMLDivElement).style.transform = "scale(1)"; }}
+              onFocus={(e) => { setTooltip("Page Back"); (e.currentTarget as HTMLDivElement).style.transform = "scale(1.5)"; }}
+              onBlur={(e) => { setTooltip(null); (e.currentTarget as HTMLDivElement).style.transform = "scale(1)"; }}
+              onClick={() => window.history.back()}
+              onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); window.history.back(); } }}
+              style={{
+                cursor: "pointer",
+                pointerEvents: "auto",
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                transform: "scale(1)",
+                transformOrigin: "center bottom",
+                transition: "transform 0.2s ease-in-out",
+                background: "transparent",
+                border: 0,
+                padding: 0,
+              }}
+            >
+              <svg key={`l-${pulseIdx}`} className={isActive(1) ? "sbn-anim-left-blink" : ""} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M19 12H5" />
+                <path d="M12 19l-7-7 7-7" />
+              </svg>
             </div>
-            <span className="sbn-label">PAGE</span>
+
+            {/* GEAR SHIFTER — independent, no tooltip */}
+            <div
+              className="nav-gear"
+              onMouseEnter={(e) => { (e.currentTarget as HTMLDivElement).style.transform = "scale(1.5)"; }}
+              onMouseLeave={(e) => { (e.currentTarget as HTMLDivElement).style.transform = "scale(1)"; }}
+              style={{
+                pointerEvents: "auto",
+                display: "inline-flex",
+                alignItems: "flex-end",
+                justifyContent: "center",
+                transform: "scale(1)",
+                transformOrigin: "center bottom",
+                transition: "transform 0.2s ease-in-out",
+                width: 42,
+                height: 49,
+                position: "relative",
+              }}
+            >
+              <div style={{ position: "relative", width: 42, height: 42 }}>
+                <img
+                  key={`g-${pulseIdx}`}
+                  src={gearStickImg}
+                  alt=""
+                  aria-hidden="true"
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: "50%",
+                    transform: `translateX(-50%) rotate(${gearSide === "R" ? -22 : gearSide === "F" ? 22 : 0}deg)`,
+                    transformOrigin: "bottom center",
+                    width: 15,
+                    height: 22,
+                    objectFit: "contain",
+                    transition: "transform 0.2s ease",
+                    zIndex: 2,
+                    pointerEvents: "none",
+                  }}
+                />
+                <img
+                  src={gearBootImg}
+                  alt=""
+                  aria-hidden="true"
+                  style={{
+                    position: "absolute",
+                    bottom: 2,
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                    width: 27,
+                    height: 21,
+                    objectFit: "contain",
+                    zIndex: 1,
+                    pointerEvents: "none",
+                  }}
+                />
+                <button
+                  type="button"
+                  aria-label="Go back"
+                  onMouseEnter={() => setGearSide("R")}
+                  onMouseLeave={() => setGearSide("none")}
+                  onFocus={() => setGearSide("R")}
+                  onBlur={() => setGearSide("none")}
+                  onClick={() => window.history.back()}
+                  style={{ position: "absolute", top: 0, left: 0, width: "50%", height: "100%", background: "transparent", border: 0, cursor: "pointer", zIndex: 3, padding: 0 }}
+                />
+                <button
+                  type="button"
+                  aria-label="Go forward"
+                  onMouseEnter={() => setGearSide("F")}
+                  onMouseLeave={() => setGearSide("none")}
+                  onFocus={() => setGearSide("F")}
+                  onBlur={() => setGearSide("none")}
+                  onClick={() => window.history.forward()}
+                  style={{ position: "absolute", top: 0, right: 0, width: "50%", height: "100%", background: "transparent", border: 0, cursor: "pointer", zIndex: 3, padding: 0 }}
+                />
+              </div>
+            </div>
+
+            {/* RIGHT ARROW */}
+            <div
+              role="button"
+              tabIndex={0}
+              aria-label="Next page"
+              className="nav-arrow-right"
+              onMouseEnter={(e) => { setTooltip("Page Forward"); (e.currentTarget as HTMLDivElement).style.transform = "scale(1.5)"; }}
+              onMouseLeave={(e) => { setTooltip(null); (e.currentTarget as HTMLDivElement).style.transform = "scale(1)"; }}
+              onFocus={(e) => { setTooltip("Page Forward"); (e.currentTarget as HTMLDivElement).style.transform = "scale(1.5)"; }}
+              onBlur={(e) => { setTooltip(null); (e.currentTarget as HTMLDivElement).style.transform = "scale(1)"; }}
+              onClick={() => window.history.forward()}
+              onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); window.history.forward(); } }}
+              style={{
+                cursor: "pointer",
+                pointerEvents: "auto",
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                transform: "scale(1)",
+                transformOrigin: "center bottom",
+                transition: "transform 0.2s ease-in-out",
+                background: "transparent",
+                border: 0,
+                padding: 0,
+              }}
+            >
+              <svg key={`r-${pulseIdx}`} className={isActive(1) ? "sbn-anim-right-blink" : ""} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M5 12h14" />
+                <path d="M12 5l7 7-7 7" />
+              </svg>
+            </div>
           </div>
 
 
