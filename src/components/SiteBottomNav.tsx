@@ -316,7 +316,7 @@ const SiteBottomNav = () => {
           </Link>
 
           {/* Back arrow + Gear shifter + Forward arrow — grouped tightly */}
-          <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 2 }}>
             {/* Back arrow */}
             <button
               type="button"
