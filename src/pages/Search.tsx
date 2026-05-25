@@ -53,8 +53,16 @@ const Search = () => {
         .gsc-branding,
         .gsc-branding-text,
         .gsc-branding-img,
-        .gsib_b {
+        .gsib_b,
+        .gsc-search-box .gsib_b,
+        .gsc-input-box .gsib_b,
+        [class*="gsc-branding"],
+        .gs-bidi-start-align.gsc-branding-text {
           display: none !important;
+          visibility: hidden !important;
+          width: 0 !important;
+          height: 0 !important;
+          overflow: hidden !important;
         }
       `}</style>
       <main id="main-content">
