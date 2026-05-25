@@ -446,8 +446,6 @@ const SiteBottomNav = () => {
             role="group"
             aria-label="Back or forward"
             style={{ padding: 0, margin: 1 }}
-            onMouseEnter={() => setTooltip("Page Ahead and Back")} onMouseLeave={() => setTooltip(null)}
-            onFocus={() => setTooltip("Page Ahead and Back")} onBlur={() => setTooltip(null)}
           >
             <div className="sbn-page-scale">
               {/* Back arrow */}
@@ -455,6 +453,9 @@ const SiteBottomNav = () => {
                 type="button"
                 onClick={() => window.history.back()}
                 aria-label="Previous page"
+                className="sbn-arrow-btn"
+                onMouseEnter={() => setTooltip("Page Back")} onMouseLeave={() => setTooltip(null)}
+                onFocus={() => setTooltip("Page Back")} onBlur={() => setTooltip(null)}
                 style={{ background: "transparent", border: 0, padding: 0, margin: 0, marginRight: -12, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}
               >
                 <svg key={`l-${pulseIdx}`} className={isActive(1) ? "sbn-anim-left-blink" : ""} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ letterSpacing: 0, padding: 0 }}>
