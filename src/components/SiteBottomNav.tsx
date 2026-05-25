@@ -574,10 +574,9 @@ const SiteBottomNav = () => {
           <Link
             to="/contact"
             className="sbn-item"
-            data-tip="Contact"
             aria-label="Contact"
           >
-            <div key={`ct-${pulseIdx}`} className={`sbn-icon-wrap${isActive(3) ? " sbn-anim-headlight" : ""}`} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', overflow: 'visible' }}>
+            <div key={`ct-${pulseIdx}`} className={`sbn-icon-wrap${isActive(3) ? " sbn-anim-headlight" : ""}`} data-tip="Contact" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', overflow: 'visible' }}>
               <img
                 src={headlampsOff}
                 alt=""
