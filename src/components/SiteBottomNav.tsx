@@ -415,9 +415,9 @@ const SiteBottomNav = () => {
 
                   <img
                     key={`g-${pulseIdx}`}
-                    className={isActive(1) ? "sbn-anim-shift" : ""}
                     src={gearStickImg}
                     alt=""
+
                     aria-hidden="true"
 
                     style={{
