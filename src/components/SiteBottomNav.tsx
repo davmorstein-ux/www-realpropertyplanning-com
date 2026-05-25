@@ -259,37 +259,23 @@ const SiteBottomNav = () => {
         }
         .sbn-item:hover .sbn-label { color: #1B2B4B; }
 
-        /* Tooltip — plain bold red text above the icon, no box */
-        .sbn-icon-wrap[data-tip]::after,
-        .sbn-page-scale[data-tip]::after {
-          content: attr(data-tip);
-          position: absolute;
-          bottom: 100%;
+        /* Shared tooltip — single fixed element centered above the nav icon group */
+        .sbn-shared-tip {
+          position: fixed;
           left: 50%;
           transform: translateX(-50%);
-          margin-bottom: 2px;
-          background: transparent;
-          color: #CC0000;
-          font-size: 0.6rem;
-          line-height: 1;
+          bottom: 80px;
+          font-size: 0.65rem;
           font-weight: 700;
-          padding: 0;
-          border: 0;
-          box-shadow: none;
-          white-space: nowrap;
-          opacity: 0;
+          color: #CC0000;
+          text-align: center;
+          z-index: 1000;
           pointer-events: none;
-          transition: opacity 0.2s ease-in-out;
+          white-space: nowrap;
           font-family: 'Inter', 'DM Sans', system-ui, sans-serif;
           letter-spacing: 0.5px;
-          text-transform: none;
-          z-index: 1000;
-        }
-        .sbn-item:hover .sbn-icon-wrap[data-tip]::after,
-        .sbn-item:focus-visible .sbn-icon-wrap[data-tip]::after,
-        .sbn-page-group:hover .sbn-page-scale[data-tip]::after,
-        .sbn-page-group:focus-visible .sbn-page-scale[data-tip]::after {
-          opacity: 1;
+          line-height: 1;
+          background: transparent;
         }
 
 
