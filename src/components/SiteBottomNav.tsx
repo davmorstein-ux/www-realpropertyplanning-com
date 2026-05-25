@@ -687,7 +687,7 @@ const SiteBottomNav = () => {
               aria-label="Next page"
               className="nav-arrow-right"
               onMouseEnter={(e) => {
-                (e.currentTarget as HTMLDivElement).style.transform = "scale(1.5)";
+                (e.currentTarget as HTMLDivElement).style.transform = "scale(1)";
               }}
               onMouseLeave={(e) => {
                 (e.currentTarget as HTMLDivElement).style.transform = "scale(1)";
@@ -717,6 +717,7 @@ const SiteBottomNav = () => {
                 background: "transparent",
                 border: 0,
                 padding: 0,
+                marginLeft: "-10px",
               }}
             >
               <svg
