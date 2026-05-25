@@ -29,6 +29,14 @@ const Search = () => {
         description="Search Real Property Planning for probate, estate sales, senior transitions, attorneys, CPAs, financial planners, and more."
       />
       <Header />
+      <style>{`
+        .gsc-branding,
+        .gsc-branding-text,
+        .gsc-branding-img,
+        .gsib_b {
+          display: none !important;
+        }
+      `}</style>
       <main id="main-content">
         {/* Hero image + navy band */}
         <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
