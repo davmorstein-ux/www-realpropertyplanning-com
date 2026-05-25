@@ -395,6 +395,18 @@ const SiteBottomNav = () => {
           .sbn-label { margin-top: -8px !important; font-size: 9px !important; letter-spacing: 0.08em; }
           .fcb-btn { bottom: 110px !important; }
         }
+
+        /* Bottom gradient fade — behind nav, above page content */
+        .sbn-fade {
+          position: fixed;
+          bottom: 4;
+          left: 4;
+          width: 100%;
+          height: 140px;
+          pointer-events: none;
+          z-index: 9998;
+          background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.92) 40%, rgba(255,255,255,1) 100%);
+        }
       `}</style>
 
       <nav className="sbn-bar" aria-label="Site bottom navigation">
