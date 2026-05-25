@@ -22,10 +22,10 @@ const SiteBottomNav = () => {
   useEffect(() => {
     const timeouts: ReturnType<typeof setTimeout>[] = [];
     const runSequence = () => {
-      for (let i = 0; i < 6; i++) {
+      for (let i = 0; i < 4; i++) {
         timeouts.push(setTimeout(() => setPulseIdx(i), i * 500));
       }
-      timeouts.push(setTimeout(() => setPulseIdx(-1), 6 * 500));
+      timeouts.push(setTimeout(() => setPulseIdx(-1), 4 * 500));
     };
     const initial = setTimeout(runSequence, 2000);
     const interval = setInterval(runSequence, 15000);
@@ -36,20 +36,48 @@ const SiteBottomNav = () => {
     };
   }, []);
 
-  const pulseStyle = (i: number): React.CSSProperties =>
-    pulseIdx === i ? { animation: "sbn-pulse 0.5s ease-in-out" } : {};
-
-  
-
+  // 0=HOME, 1=PAGE (gear + arrows), 2=SEARCH, 3=CONTACT
+  const isActive = (i: number) => pulseIdx === i;
 
   return (
     <>
       <style>{`
-        @keyframes sbn-pulse {
-          0%   { transform: scale(1); }
-          50%  { transform: scale(1.2); }
-          100% { transform: scale(1); }
+        @keyframes sbn-steer-wiggle {
+          0%   { transform: rotate(0deg); }
+          25%  { transform: rotate(-25deg); }
+          75%  { transform: rotate(25deg); }
+          100% { transform: rotate(0deg); }
         }
+        @keyframes sbn-shift-wiggle {
+          0%   { transform: translateX(-50%) rotate(0deg); }
+          30%  { transform: translateX(-50%) rotate(-20deg); }
+          70%  { transform: translateX(-50%) rotate(20deg); }
+          100% { transform: translateX(-50%) rotate(0deg); }
+        }
+        @keyframes sbn-left-blink {
+          0%, 60%, 100% { opacity: 1; }
+          30% { opacity: 0; }
+        }
+        @keyframes sbn-right-blink {
+          0%, 40%, 100% { opacity: 1; }
+          70% { opacity: 0; }
+        }
+        @keyframes sbn-compass-spin {
+          0%   { transform: translate(-50%, -50%) rotate(0deg); }
+          100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+        @keyframes sbn-headlight-flicker {
+          0%, 50%, 100% { filter: brightness(1); }
+          25%, 75% { filter: brightness(2.5) drop-shadow(0 0 6px #fff9c4); }
+        }
+        .sbn-anim-steer { animation: sbn-steer-wiggle 0.5s ease-in-out; }
+        .sbn-anim-shift { animation: sbn-shift-wiggle 0.5s ease-in-out !important; }
+        .sbn-anim-left-blink { animation: sbn-left-blink 0.5s ease-in-out; }
+        .sbn-anim-right-blink { animation: sbn-right-blink 0.5s ease-in-out; }
+        .sbn-anim-compass-spin { animation: sbn-compass-spin 0.5s linear !important; }
+        .sbn-anim-headlight { animation: sbn-headlight-flicker 0.5s ease-in-out; }
+
+
 
         .sbn-bar {
           position: fixed;
@@ -338,7 +366,7 @@ const SiteBottomNav = () => {
           {/* 1. Home */}
           <Link to="/" className="sbn-item" data-tip="Home" aria-label="Home">
             <div className="sbn-icon-wrap">
-              <img src={steeringWheel} alt="" aria-hidden="true" className="sbn-wheel" loading="lazy" style={pulseStyle(0)} />
+              <img key={`h-${pulseIdx}`} src={steeringWheel} alt="" aria-hidden="true" className={`sbn-wheel${isActive(0) ? " sbn-anim-steer" : ""}`} loading="lazy" />
             </div>
             <span className="sbn-label">HOME</span>
           </Link>
@@ -353,7 +381,7 @@ const SiteBottomNav = () => {
               style={{ background: "transparent", border: 0, padding: 0, margin: 0, marginRight: -6, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}
 
             >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={pulseStyle(1)}>
+              <svg key={`l-${pulseIdx}`} className={isActive(1) ? "sbn-anim-left-blink" : ""} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M19 12H5" />
                 <path d="M12 19l-7-7 7-7" />
               </svg>
@@ -381,14 +409,17 @@ const SiteBottomNav = () => {
                     alignItems: "center",
                     justifyContent: "flex-end",
                     flexShrink: 0,
-                    ...pulseStyle(2),
                   }}
                 >
 
+
                   <img
+                    key={`g-${pulseIdx}`}
+                    className={isActive(1) ? "sbn-anim-shift" : ""}
                     src={gearStickImg}
                     alt=""
                     aria-hidden="true"
+
                     style={{
                       position: "absolute",
                       top: 0,
@@ -478,7 +509,7 @@ const SiteBottomNav = () => {
               aria-label="Next page"
               style={{ background: "transparent", border: 0, padding: 0, margin: 0, marginLeft: -6, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}
             >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={pulseStyle(3)}>
+              <svg key={`r-${pulseIdx}`} className={isActive(1) ? "sbn-anim-right-blink" : ""} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M5 12h14" />
                 <path d="M12 5l7 7-7 7" />
               </svg>
@@ -496,9 +527,10 @@ const SiteBottomNav = () => {
             aria-label="Search"
           >
             <div className="sbn-icon-wrap">
-              <span className="sbn-compass-wrap" style={{ ...pulseStyle(4), display: 'inline-block' }}>
+              <span className="sbn-compass-wrap" style={{ display: 'inline-block' }}>
                 <img src={compassIcon} alt="" aria-hidden="true" loading="lazy" style={{ height: '42px', width: '42px', objectFit: 'contain', display: 'block', transform: 'rotate(35deg)', transition: 'transform 0.2s ease' }} />
-                <img src={compassNeedle} alt="" aria-hidden="true" loading="lazy" className="sbn-compass-needle" />
+                <img key={`c-${pulseIdx}`} src={compassNeedle} alt="" aria-hidden="true" loading="lazy" className={`sbn-compass-needle${isActive(2) ? " sbn-anim-compass-spin" : ""}`} />
+
               </span>
             </div>
             <span className="sbn-label">SEARCH</span>
@@ -511,7 +543,7 @@ const SiteBottomNav = () => {
             data-tip="Contact us"
             aria-label="Contact"
           >
-            <div className="sbn-icon-wrap" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', overflow: 'visible', ...pulseStyle(5) }}>
+            <div key={`ct-${pulseIdx}`} className={`sbn-icon-wrap${isActive(3) ? " sbn-anim-headlight" : ""}`} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', overflow: 'visible' }}>
               <img
                 src={headlampsOff}
                 alt=""
