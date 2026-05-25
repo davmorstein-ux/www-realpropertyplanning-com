@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import steeringWheel from "@/assets/steering-wheel-transparent.png";
 import gearStickImg from "@/assets/gear_stick_only.png";
@@ -17,6 +17,28 @@ const SiteBottomNav = () => {
   const { pathname } = useLocation();
   const navigate = useNavigate();
   const [gearSide, setGearSide] = useState<"none" | "R" | "F">("none");
+  const [pulseIdx, setPulseIdx] = useState<number>(-1);
+
+  useEffect(() => {
+    const timeouts: ReturnType<typeof setTimeout>[] = [];
+    const runSequence = () => {
+      for (let i = 0; i < 6; i++) {
+        timeouts.push(setTimeout(() => setPulseIdx(i), i * 500));
+      }
+      timeouts.push(setTimeout(() => setPulseIdx(-1), 6 * 500));
+    };
+    const initial = setTimeout(runSequence, 2000);
+    const interval = setInterval(runSequence, 15000);
+    return () => {
+      clearTimeout(initial);
+      clearInterval(interval);
+      timeouts.forEach(clearTimeout);
+    };
+  }, []);
+
+  const pulseStyle = (i: number): React.CSSProperties =>
+    pulseIdx === i ? { animation: "sbn-pulse 0.5s ease-in-out" } : {};
+
   
 
 
