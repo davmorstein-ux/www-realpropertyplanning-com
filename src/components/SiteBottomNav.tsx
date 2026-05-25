@@ -466,7 +466,7 @@ const SiteBottomNav = () => {
           </Link>
 
           {/* PAGE controls — three fully independent elements */}
-          <div style={{ display: "flex", alignItems: "center", gap: 2 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 2, marginTop: "-12px" }}>
             {/* LEFT ARROW */}
             <div
               role="button"
