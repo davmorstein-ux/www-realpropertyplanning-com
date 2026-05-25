@@ -9,6 +9,8 @@ import compassNeedle from "@/assets/nav/compass_needle_final.png";
 import headlampsOff from "@/assets/nav/headlamps_off_final.png?v=4";
 // @ts-expect-error - vite cache-bust query
 import headlampsOn from "@/assets/nav/headlamps_on_final.png?v=4";
+import arrowLeftImg from "@/assets/nav/arrow_left.png";
+import arrowRightImg from "@/assets/nav/arrow_right.png";
 
 /**
  * Sticky bottom navigation bar shown on every page.
@@ -315,6 +317,16 @@ const SiteBottomNav = () => {
             <span className="sbn-label">HOME</span>
           </Link>
 
+          {/* Back arrow */}
+          <button
+            type="button"
+            onClick={() => window.history.back()}
+            aria-label="Previous page"
+            style={{ background: "transparent", border: 0, padding: 0, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", height: 49 }}
+          >
+            <img src={arrowLeftImg} alt="" aria-hidden="true" style={{ height: 42, width: "auto", objectFit: "contain", display: "block" }} />
+          </button>
+
           {/* 2. Back / Forward gear shifter — exact stacking from MGFloatingNav */}
           <div
             className="sbn-item"
@@ -336,42 +348,6 @@ const SiteBottomNav = () => {
                   flexShrink: 0,
                 }}
               >
-                <span
-                  aria-hidden="true"
-                  style={{
-                    position: "absolute",
-                    left: 0,
-                    top: "50%",
-                    transform: "translateY(-50%)",
-                    fontSize: 16,
-                    fontWeight: 800,
-                    color: gearSide === "R" ? "#CC0000" : "#1B2B4B",
-                    transition: "none",
-                    zIndex: 4,
-                    pointerEvents: "none",
-                    lineHeight: 1,
-                  }}
-                >
-                  &lt;
-                </span>
-                <span
-                  aria-hidden="true"
-                  style={{
-                    position: "absolute",
-                    right: 0,
-                    top: "50%",
-                    transform: "translateY(-50%)",
-                    fontSize: 16,
-                    fontWeight: 800,
-                    color: gearSide === "F" ? "#22AA44" : "#1B2B4B",
-                    transition: "none",
-                    zIndex: 4,
-                    pointerEvents: "none",
-                    lineHeight: 1,
-                  }}
-                >
-                  &gt;
-                </span>
                 <img
                   src={gearStickImg}
                   alt=""
@@ -457,6 +433,16 @@ const SiteBottomNav = () => {
             </div>
             <span className="sbn-label">PAGE</span>
           </div>
+
+          {/* Forward arrow */}
+          <button
+            type="button"
+            onClick={() => window.history.forward()}
+            aria-label="Next page"
+            style={{ background: "transparent", border: 0, padding: 0, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", height: 49 }}
+          >
+            <img src={arrowRightImg} alt="" aria-hidden="true" style={{ height: 42, width: "auto", objectFit: "contain", display: "block" }} />
+          </button>
 
 
           {/* 3. Search */}
