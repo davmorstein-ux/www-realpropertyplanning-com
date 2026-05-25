@@ -142,7 +142,11 @@ const SiteBottomNav = () => {
           transform: translateY(4px);
           transform-origin: center bottom;
           transition: transform 0.2s ease-in-out;
+          overflow: visible;
         }
+        .sbn-inner { overflow: visible !important; }
+        .sbn-item { overflow: visible; }
+        .sbn-item:hover { z-index: 999; }
         .sbn-item:hover .sbn-icon-wrap {
           transform: translateY(4px) scale(1.75);
         }
