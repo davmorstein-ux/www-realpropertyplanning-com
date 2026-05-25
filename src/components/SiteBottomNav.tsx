@@ -89,21 +89,9 @@ const SiteBottomNav = () => {
         .sbn-anim-left-blink { animation: sbn-left-blink 0.5s ease-in-out; }
         .sbn-anim-right-blink { animation: sbn-right-blink 0.5s ease-in-out; }
         .sbn-anim-compass-spin { animation: sbn-needle-spin 0.8s ease-out !important; }
-        @keyframes headlightFlicker {
-          0%, 100% { filter: brightness(1); }
-          15% { filter: brightness(1.8) drop-shadow(0 0 8px #FFA500) sepia(0.3); }
-          30% { filter: brightness(1); }
-          50% { filter: brightness(1.8) drop-shadow(0 0 8px #FFA500) sepia(0.3); }
-          65% { filter: brightness(1); }
-          80% { filter: brightness(1.8) drop-shadow(0 0 8px #FFA500) sepia(0.3); }
-          95% { filter: brightness(1); }
-        }
-        .sbn-icon-wrap.sbn-anim-headlight .sbn-headlamp-off {
-          animation: headlightFlicker 0.5s ease-in-out;
-        }
-        .sbn-icon-wrap.sbn-anim-headlight .sbn-headlamp-on {
-          display: none;
-        }
+        /* Headlight auto-sequence reuses the EXACT hover image-swap. No new keyframe. */
+        .sbn-icon-wrap.sbn-headlight-on .sbn-headlamp-off { display: none; }
+        .sbn-icon-wrap.sbn-headlight-on .sbn-headlamp-on { display: block; }
 
 
 
