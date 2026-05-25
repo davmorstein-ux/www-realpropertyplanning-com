@@ -152,9 +152,10 @@ const SiteBottomNav = () => {
         }
         /* PAGE group: scale arrows + gear together as one unit on hover */
         .sbn-page-scale {
+          position: relative;
           display: flex;
           align-items: center;
-          gap: 0;
+          gap: 1px;
           transform-origin: center bottom;
           transition: transform 0.2s ease-in-out;
         }
