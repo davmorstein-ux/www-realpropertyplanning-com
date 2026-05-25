@@ -18,14 +18,41 @@ const SiteBottomNav = () => {
   const navigate = useNavigate();
   const [gearSide, setGearSide] = useState<"none" | "R" | "F">("none");
   const [pulseIdx, setPulseIdx] = useState<number>(-1);
-  const [headlightOn, setHeadlightOn] = useState<boolean>(false);
   const [tooltip, setTooltip] = useState<string | null>(null);
 
   useEffect(() => {
     const timeouts: ReturnType<typeof setTimeout>[] = [];
+    function blinkHeadlight() {
+      const headlight = document.querySelector<HTMLElement>('.headlight-icon');
+      if (!headlight) return;
+
+      // Blink 1 ON
+      headlight.style.filter = 'brightness(1.8) drop-shadow(0 0 8px #FFA500)';
+
+      timeouts.push(setTimeout(() => {
+        // Blink 1 OFF
+        headlight.style.filter = 'brightness(1)';
+
+        timeouts.push(setTimeout(() => {
+          // Pause 250ms then Blink 2 ON
+          headlight.style.filter = 'brightness(1.8) drop-shadow(0 0 8px #FFA500)';
+
+          timeouts.push(setTimeout(() => {
+            // Blink 2 OFF
+            headlight.style.filter = 'brightness(1)';
+          }, 600));
+
+        }, 250));
+
+      }, 600));
+    }
+
     const runSequence = () => {
       for (let i = 0; i < 4; i++) {
-        timeouts.push(setTimeout(() => setPulseIdx(i), i * 500));
+        timeouts.push(setTimeout(() => {
+          setPulseIdx(i);
+          if (i === 3) blinkHeadlight();
+        }, i * 500));
       }
       timeouts.push(setTimeout(() => setPulseIdx(-1), 4 * 500));
     };
@@ -47,22 +74,6 @@ const SiteBottomNav = () => {
     timeouts.push(setTimeout(() => setGearSide("F"), 170));
     timeouts.push(setTimeout(() => setGearSide("none"), 340));
     return () => timeouts.forEach(clearTimeout);
-  }, [pulseIdx]);
-
-  // Headlight auto-sequence: reuse the exact hover image-swap (no new
-  // keyframe). Blink twice with a visible pause between blinks.
-  // on 600ms → off 300ms → pause 250ms → on 600ms → off.
-  useEffect(() => {
-    if (pulseIdx !== 3) return;
-    const timeouts: ReturnType<typeof setTimeout>[] = [];
-    setHeadlightOn(true);
-    timeouts.push(setTimeout(() => setHeadlightOn(false), 600));
-    timeouts.push(setTimeout(() => setHeadlightOn(true), 600 + 300 + 250));
-    timeouts.push(setTimeout(() => setHeadlightOn(false), 600 + 300 + 250 + 600));
-    return () => {
-      timeouts.forEach(clearTimeout);
-      setHeadlightOn(false);
-    };
   }, [pulseIdx]);
 
 
