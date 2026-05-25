@@ -9,8 +9,6 @@ import compassNeedle from "@/assets/nav/compass_needle_final.png";
 import headlampsOff from "@/assets/nav/headlamps_off_final.png?v=4";
 // @ts-expect-error - vite cache-bust query
 import headlampsOn from "@/assets/nav/headlamps_on_final.png?v=4";
-import arrowLeftImg from "@/assets/nav/arrow_left.png";
-import arrowRightImg from "@/assets/nav/arrow_right.png";
 
 /**
  * Sticky bottom navigation bar shown on every page.
