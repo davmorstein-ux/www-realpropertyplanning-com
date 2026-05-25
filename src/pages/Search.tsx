@@ -101,7 +101,29 @@ const Search = () => {
             >
               Search Real Property Planning
             </h1>
-            <div className="gcse-search" />
+            <div
+              id="gcse-search-container"
+              className="gcse-search"
+              style={{ minHeight: "56px", position: "relative" }}
+            />
+            <div
+              id="gcse-placeholder"
+              aria-hidden="true"
+              style={{
+                marginTop: "-56px",
+                height: "56px",
+                borderRadius: "9999px",
+                background: "hsl(220 14% 93%)",
+                animation: "rpp-pulse 1.4s ease-in-out infinite",
+              }}
+            />
+            <style>{`
+              @keyframes rpp-pulse {
+                0%, 100% { opacity: 0.6; }
+                50% { opacity: 1; }
+              }
+              .gsc-control-cse { background: transparent !important; border: none !important; padding: 0 !important; }
+            `}</style>
           </div>
         </div>
       </main>
