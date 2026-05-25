@@ -54,18 +54,6 @@ const SiteBottomNav = () => {
   return (
     <>
       <style>{`
-        @keyframes sbn-steer-wiggle {
-          0%   { transform: rotate(0deg); }
-          25%  { transform: rotate(-25deg); }
-          75%  { transform: rotate(25deg); }
-          100% { transform: rotate(0deg); }
-        }
-        @keyframes sbn-shift-wiggle {
-          0%   { transform: translateX(-50%) rotate(0deg); }
-          30%  { transform: translateX(-50%) rotate(-20deg); }
-          70%  { transform: translateX(-50%) rotate(20deg); }
-          100% { transform: translateX(-50%) rotate(0deg); }
-        }
         @keyframes sbn-left-blink {
           0%, 60%, 100% { opacity: 1; }
           30% { opacity: 0; }
@@ -74,22 +62,20 @@ const SiteBottomNav = () => {
           0%, 40%, 100% { opacity: 1; }
           70% { opacity: 0; }
         }
-        @keyframes sbn-compass-spin {
-          0%   { transform: translate(-50%, -50%) rotate(0deg); }
-          100% { transform: translate(-50%, -50%) rotate(360deg); }
-        }
-        @keyframes sbn-headlight-flicker {
-          0%, 100% { filter: brightness(1); }
-          25% { filter: brightness(1.8) drop-shadow(0 0 8px #FFA500) sepia(0.3); }
-          50% { filter: brightness(1); }
-          75% { filter: brightness(1.8) drop-shadow(0 0 8px #FFA500) sepia(0.3); }
-        }
-        .sbn-anim-steer { animation: sbn-steer-wiggle 0.5s ease-in-out; }
-        .sbn-anim-shift { animation: sbn-shift-wiggle 0.5s ease-in-out !important; }
+        /* Auto-sequence reuses the EXACT hover keyframes:
+           - .sbn-anim-steer        -> wheelWiggle (same as hover on .sbn-wheel)
+           - .sbn-anim-compass-spin -> sbn-needle-spin (same as hover on .sbn-compass-needle)
+           - Headlight              -> reuses the hover image-swap below (no keyframe)
+           - Gear shifter           -> reuses the hover CSS transition via gearSide state
+           - Arrows                 -> blink keyframes (no hover counterpart) */
+        .sbn-anim-steer { animation: wheelWiggle 0.5s ease-in-out; }
         .sbn-anim-left-blink { animation: sbn-left-blink 0.5s ease-in-out; }
         .sbn-anim-right-blink { animation: sbn-right-blink 0.5s ease-in-out; }
-        .sbn-anim-compass-spin { animation: sbn-compass-spin 0.5s linear !important; }
-        .sbn-anim-headlight { animation: sbn-headlight-flicker 0.5s ease-in-out; }
+        .sbn-anim-compass-spin { animation: sbn-needle-spin 0.8s ease-out !important; }
+        /* Headlight auto pulse — mirrors the :hover image swap exactly */
+        .sbn-icon-wrap.sbn-anim-headlight .sbn-headlamp-off { display: none; }
+        .sbn-icon-wrap.sbn-anim-headlight .sbn-headlamp-on { display: block; }
+
 
 
 
