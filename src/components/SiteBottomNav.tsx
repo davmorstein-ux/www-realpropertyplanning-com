@@ -496,7 +496,7 @@ const SiteBottomNav = () => {
                 position: "relative",
               }}
             >
-              <div style={{ position: "relative", width: 42, height: 42 }}>
+              <div style={{ position: "relative", width: 42, height: 42, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "flex-end", flexShrink: 0 }}>
                 <img
                   key={`g-${pulseIdx}`}
                   src={gearStickImg}
