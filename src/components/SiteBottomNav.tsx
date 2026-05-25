@@ -23,23 +23,25 @@ const SiteBottomNav = () => {
   useEffect(() => {
     const timeouts: ReturnType<typeof setTimeout>[] = [];
     function blinkHeadlight() {
-      const headlight = document.querySelector<HTMLElement>('.headlight-icon');
-      if (!headlight) return;
+      const headlightImg = document.querySelector<HTMLElement>('.headlight-icon');
+      const item = headlightImg?.closest<HTMLElement>('.sbn-item');
+      if (!item) return;
+      const hoverClass = 'sbn-hover-sim';
 
-      // Blink 1 ON
-      headlight.style.filter = 'brightness(1.8) drop-shadow(0 0 8px #FFA500)';
+      // Blink 1 — add hover class
+      item.classList.add(hoverClass);
 
       timeouts.push(setTimeout(() => {
-        // Blink 1 OFF
-        headlight.style.filter = 'brightness(1)';
+        // Remove hover class
+        item.classList.remove(hoverClass);
 
         timeouts.push(setTimeout(() => {
-          // Pause 250ms then Blink 2 ON
-          headlight.style.filter = 'brightness(1.8) drop-shadow(0 0 8px #FFA500)';
+          // 250ms pause, then Blink 2 — add hover class again
+          item.classList.add(hoverClass);
 
           timeouts.push(setTimeout(() => {
-            // Blink 2 OFF
-            headlight.style.filter = 'brightness(1)';
+            // Remove hover class
+            item.classList.remove(hoverClass);
           }, 600));
 
         }, 250));
