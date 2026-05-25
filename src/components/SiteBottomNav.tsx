@@ -250,10 +250,10 @@ const SiteBottomNav = () => {
           bottom: 100%;
           left: 50%;
           transform: translateX(-50%);
-          margin-bottom: 6px;
+          margin-bottom: 4px;
           background: transparent;
           color: #CC0000;
-          font-size: 0.75rem;
+          font-size: 0.65rem;
           font-weight: 700;
           padding: 0;
           border: 0;
