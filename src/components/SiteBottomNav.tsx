@@ -435,8 +435,8 @@ const SiteBottomNav = () => {
         <div className="sbn-inner">
           {/* 1. Home */}
           <Link to="/" className="sbn-item" aria-label="Home"
-            onMouseEnter={() => setTooltip("HOME")} onMouseLeave={() => setTooltip(null)}
-            onFocus={() => setTooltip("HOME")} onBlur={() => setTooltip(null)}>
+            onMouseEnter={() => setTooltip("Home")} onMouseLeave={() => setTooltip(null)}
+            onFocus={() => setTooltip("Home")} onBlur={() => setTooltip(null)}>
             <div className="sbn-icon-wrap">
               <img key={`h-${pulseIdx}`} src={steeringWheel} alt="" aria-hidden="true" className={`sbn-wheel${isActive(0) ? " sbn-anim-steer" : ""}`} loading="lazy" />
             </div>
