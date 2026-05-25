@@ -316,13 +316,14 @@ const SiteBottomNav = () => {
           </Link>
 
           {/* Back arrow + Gear shifter + Forward arrow — grouped tightly */}
-          <div style={{ display: "flex", alignItems: "center", gap: 2 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 0, margin: 0, padding: 0 }}>
             {/* Back arrow */}
             <button
               type="button"
               onClick={() => window.history.back()}
               aria-label="Previous page"
-              style={{ background: "transparent", border: 0, padding: 0, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}
+              style={{ background: "transparent", border: 0, padding: 0, margin: 0, marginRight: -6, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}
+
             >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M19 12H5" />
@@ -336,7 +337,9 @@ const SiteBottomNav = () => {
               data-tip="Back / Forward"
               role="group"
               aria-label="Back or forward"
+              style={{ padding: 0, margin: 0 }}
             >
+
               <div className="sbn-icon-wrap">
 
                 <div
@@ -442,7 +445,7 @@ const SiteBottomNav = () => {
               type="button"
               onClick={() => window.history.forward()}
               aria-label="Next page"
-              style={{ background: "transparent", border: 0, padding: 0, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}
+              style={{ background: "transparent", border: 0, padding: 0, margin: 0, marginLeft: -6, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}
             >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M5 12h14" />
@@ -462,7 +465,7 @@ const SiteBottomNav = () => {
           >
             <div className="sbn-icon-wrap">
               <span className="sbn-compass-wrap">
-                <img src={compassIcon} alt="" aria-hidden="true" loading="lazy" style={{ height: '36px', width: 'auto', objectFit: 'contain', display: 'block', transform: 'rotate(35deg)', transition: 'transform 0.2s ease' }} />
+                <img src={compassIcon} alt="" aria-hidden="true" loading="lazy" style={{ height: '42px', width: '42px', objectFit: 'contain', display: 'block', transform: 'rotate(35deg)', transition: 'transform 0.2s ease' }} />
                 <img src={compassNeedle} alt="" aria-hidden="true" loading="lazy" className="sbn-compass-needle" />
               </span>
             </div>
