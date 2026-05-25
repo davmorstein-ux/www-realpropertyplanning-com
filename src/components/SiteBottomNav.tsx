@@ -24,8 +24,7 @@ const SiteBottomNav = () => {
     const timeouts: ReturnType<typeof setTimeout>[] = [];
     function blinkHeadlight() {
       const headlightImg = document.querySelector<HTMLElement>(".headlight-icon");
-      const item = (headlightImg?.close(e.currentTarget as HTMLDivElement).style.transform = "scale(1.5)");
-      st<HTMLElement>(".sbn-item");
+      const item = headlightImg?.closest<HTMLElement>(".sbn-item");
       if (!item) return;
       const hoverClass = "sbn-hover-sim";
 
