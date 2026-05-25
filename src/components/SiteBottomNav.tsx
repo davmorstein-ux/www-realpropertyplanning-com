@@ -140,7 +140,13 @@ const SiteBottomNav = () => {
           align-items: center;
           justify-content: center;
           transform: translateY(4px);
+          transform-origin: center bottom;
+          transition: transform 0.2s ease-in-out;
         }
+        .sbn-item:hover .sbn-icon-wrap {
+          transform: translateY(4px) scale(1.75);
+        }
+
         .sbn-icon-tall {
           width: auto !important;
           height: 52px !important;
