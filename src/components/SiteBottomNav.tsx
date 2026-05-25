@@ -599,8 +599,10 @@ const SiteBottomNav = () => {
             to="/contact"
             className="sbn-item"
             aria-label="Contact"
+            onMouseEnter={() => setTooltip("Contact")} onMouseLeave={() => setTooltip(null)}
+            onFocus={() => setTooltip("Contact")} onBlur={() => setTooltip(null)}
           >
-            <div key={`ct-${pulseIdx}`} className={`sbn-icon-wrap${isActive(3) ? " sbn-anim-headlight" : ""}`} data-tip="Contact" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', overflow: 'visible' }}>
+            <div className={`sbn-icon-wrap${headlightOn ? " sbn-headlight-on" : ""}`} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', overflow: 'visible' }}>
               <img
                 src={headlampsOff}
                 alt=""
