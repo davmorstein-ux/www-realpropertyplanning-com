@@ -50,14 +50,15 @@ const SiteBottomNav = () => {
   }, [pulseIdx]);
 
   // Headlight auto-sequence: reuse the exact hover image-swap (no new
-  // keyframe), play twice consecutively, each cycle 1.2s.
+  // keyframe). Blink twice with a visible pause between blinks.
+  // on 600ms → off 300ms → pause 250ms → on 600ms → off.
   useEffect(() => {
     if (pulseIdx !== 3) return;
     const timeouts: ReturnType<typeof setTimeout>[] = [];
     setHeadlightOn(true);
-    timeouts.push(setTimeout(() => setHeadlightOn(false), 1200));
-    timeouts.push(setTimeout(() => setHeadlightOn(true), 1200));
-    timeouts.push(setTimeout(() => setHeadlightOn(false), 2400));
+    timeouts.push(setTimeout(() => setHeadlightOn(false), 600));
+    timeouts.push(setTimeout(() => setHeadlightOn(true), 600 + 300 + 250));
+    timeouts.push(setTimeout(() => setHeadlightOn(false), 600 + 300 + 250 + 600));
     return () => {
       timeouts.forEach(clearTimeout);
       setHeadlightOn(false);
