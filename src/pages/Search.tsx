@@ -25,19 +25,9 @@ const Search = () => {
       return false;
     };
 
-    const tryRender = () => {
-      const w = window as any;
-      if (w.google && w.google.search && w.google.search.cse && w.google.search.cse.element) {
-        try {
-          w.google.search.cse.element.render({
-            div: "gcse-search-container",
-            tag: "search",
-          });
-        } catch {
-          /* already rendered */
-        }
-      }
-    };
+    // Note: do NOT call google.search.cse.element.render() here — the
+    // container uses class="gcse-search" which auto-initializes. Calling
+    // render() in addition causes a duplicate search bar to appear.
 
     const onLoad = () => tryRender();
     window.addEventListener("load", onLoad);
