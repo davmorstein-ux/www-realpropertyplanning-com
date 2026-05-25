@@ -101,13 +101,6 @@ const SiteBottomNav = () => {
         .sbn-anim-left-blink { animation: sbn-left-blink 0.5s ease-in-out; }
         .sbn-anim-right-blink { animation: sbn-right-blink 0.5s ease-in-out; }
         .sbn-anim-compass-spin { animation: sbn-needle-spin 0.8s ease-out !important; }
-        /* Headlight auto-sequence reuses the EXACT hover image-swap. No new keyframe. */
-        .sbn-icon-wrap.sbn-headlight-on .sbn-headlamp-off { display: none; }
-        .sbn-icon-wrap.sbn-headlight-on .sbn-headlamp-on { display: block; }
-
-
-
-
         .sbn-bar {
           position: fixed;
           left: 50%;
@@ -614,12 +607,12 @@ const SiteBottomNav = () => {
             onMouseEnter={() => setTooltip("Contact")} onMouseLeave={() => setTooltip(null)}
             onFocus={() => setTooltip("Contact")} onBlur={() => setTooltip(null)}
           >
-            <div className={`sbn-icon-wrap${headlightOn ? " sbn-headlight-on" : ""}`} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', overflow: 'visible' }}>
+            <div className="sbn-icon-wrap" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', overflow: 'visible' }}>
               <img
                 src={headlampsOff}
                 alt=""
                 aria-hidden="true"
-                className="sbn-headlamp-off"
+                className="sbn-headlamp-off headlight-icon"
                 loading="eager"
               />
               <img
