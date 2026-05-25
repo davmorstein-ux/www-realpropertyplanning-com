@@ -372,7 +372,7 @@ const SiteBottomNav = () => {
       <nav className="sbn-bar" aria-label="Site bottom navigation">
         <div className="sbn-inner">
           {/* 1. Home */}
-          <Link to="/" className="sbn-item" data-tip="Home" aria-label="Home">
+          <Link to="/" className="sbn-item" data-tip="HOME" aria-label="Home">
             <div className="sbn-icon-wrap">
               <img key={`h-${pulseIdx}`} src={steeringWheel} alt="" aria-hidden="true" className={`sbn-wheel${isActive(0) ? " sbn-anim-steer" : ""}`} loading="lazy" />
             </div>
