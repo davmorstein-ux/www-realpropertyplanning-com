@@ -545,10 +545,10 @@ const SiteBottomNav = () => {
                 <button
                   type="button"
                   aria-label="Go forward"
-                  onMouseEnter={() => setGearSide("F")}
-                  onMouseLeave={() => setGearSide("none")}
-                  onFocus={() => setGearSide("F")}
-                  onBlur={() => setGearSide("none")}
+                  onMouseEnter={() => { setGearSide("F"); setTooltip("Page Forward"); }}
+                  onMouseLeave={() => { setGearSide("none"); setTooltip(null); }}
+                  onFocus={() => { setGearSide("F"); setTooltip("Page Forward"); }}
+                  onBlur={() => { setGearSide("none"); setTooltip(null); }}
                   onClick={() => window.history.forward()}
                   style={{ position: "absolute", top: 0, right: 0, width: "50%", height: "100%", background: "transparent", border: 0, cursor: "pointer", zIndex: 3, padding: 0 }}
                 />
