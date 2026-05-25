@@ -87,21 +87,36 @@ const Search = () => {
               Search Real Property Planning
             </h1>
             <div
-              id="gcse-search-container"
-              className="gcse-search"
-              style={{ minHeight: "56px", position: "relative" }}
-            />
-            <div
-              id="gcse-placeholder"
-              aria-hidden="true"
               style={{
-                marginTop: "-56px",
-                height: "56px",
-                borderRadius: "9999px",
-                background: "hsl(220 14% 93%)",
-                animation: "rpp-pulse 1.4s ease-in-out infinite",
+                maxWidth: "700px",
+                width: "100%",
+                margin: "0 auto",
+                textAlign: "center",
+                position: "relative",
               }}
-            />
+            >
+              <div
+                id="gcse-search-container"
+                className="gcse-search"
+                style={{ minHeight: "56px", width: "100%" }}
+              />
+              <div
+                id="gcse-placeholder"
+                aria-hidden="true"
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  height: "56px",
+                  borderRadius: "9999px",
+                  background: "hsl(220 14% 93%)",
+                  animation: "rpp-pulse 1.4s ease-in-out infinite",
+                  pointerEvents: "none",
+                  zIndex: 0,
+                }}
+              />
+            </div>
             <style>{`
               @keyframes rpp-pulse {
                 0%, 100% { opacity: 0.6; }
