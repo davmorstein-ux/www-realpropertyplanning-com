@@ -338,7 +338,7 @@ const SiteBottomNav = () => {
           {/* 1. Home */}
           <Link to="/" className="sbn-item" data-tip="Home" aria-label="Home">
             <div className="sbn-icon-wrap">
-              <img src={steeringWheel} alt="" aria-hidden="true" className="sbn-wheel" loading="lazy" />
+              <img src={steeringWheel} alt="" aria-hidden="true" className="sbn-wheel" loading="lazy" style={pulseStyle(0)} />
             </div>
             <span className="sbn-label">HOME</span>
           </Link>
@@ -353,10 +353,11 @@ const SiteBottomNav = () => {
               style={{ background: "transparent", border: 0, padding: 0, margin: 0, marginRight: -6, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}
 
             >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={pulseStyle(1)}>
                 <path d="M19 12H5" />
                 <path d="M12 19l-7-7 7-7" />
               </svg>
+
             </button>
 
             {/* 2. Back / Forward gear shifter — exact stacking from MGFloatingNav */}
@@ -380,8 +381,10 @@ const SiteBottomNav = () => {
                     alignItems: "center",
                     justifyContent: "flex-end",
                     flexShrink: 0,
+                    ...pulseStyle(2),
                   }}
                 >
+
                   <img
                     src={gearStickImg}
                     alt=""
@@ -475,10 +478,11 @@ const SiteBottomNav = () => {
               aria-label="Next page"
               style={{ background: "transparent", border: 0, padding: 0, margin: 0, marginLeft: -6, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}
             >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={pulseStyle(3)}>
                 <path d="M5 12h14" />
                 <path d="M12 5l7 7-7 7" />
               </svg>
+
             </button>
           </div>
 
@@ -492,7 +496,7 @@ const SiteBottomNav = () => {
             aria-label="Search"
           >
             <div className="sbn-icon-wrap">
-              <span className="sbn-compass-wrap">
+              <span className="sbn-compass-wrap" style={{ ...pulseStyle(4), display: 'inline-block' }}>
                 <img src={compassIcon} alt="" aria-hidden="true" loading="lazy" style={{ height: '42px', width: '42px', objectFit: 'contain', display: 'block', transform: 'rotate(35deg)', transition: 'transform 0.2s ease' }} />
                 <img src={compassNeedle} alt="" aria-hidden="true" loading="lazy" className="sbn-compass-needle" />
               </span>
@@ -507,7 +511,7 @@ const SiteBottomNav = () => {
             data-tip="Contact us"
             aria-label="Contact"
           >
-            <div className="sbn-icon-wrap" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', overflow: 'visible' }}>
+            <div className="sbn-icon-wrap" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', overflow: 'visible', ...pulseStyle(5) }}>
               <img
                 src={headlampsOff}
                 alt=""
