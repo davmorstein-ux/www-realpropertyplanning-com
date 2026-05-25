@@ -155,7 +155,7 @@ const SiteBottomNav = () => {
           position: relative;
           display: flex;
           align-items: center;
-          gap: 1px;
+          gap: 0px;
           transform-origin: center bottom;
           transition: transform 0.2s ease-in-out;
         }
@@ -434,7 +434,7 @@ const SiteBottomNav = () => {
                 type="button"
                 onClick={() => window.history.back()}
                 aria-label="Previous page"
-                style={{ background: "transparent", border: 0, padding: 0, margin: 0, marginRight: -6, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}
+                style={{ background: "transparent", border: 0, padding: 0, margin: 0, marginRight: -8, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}
               >
                 <svg key={`l-${pulseIdx}`} className={isActive(1) ? "sbn-anim-left-blink" : ""} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M19 12H5" />
@@ -554,7 +554,7 @@ const SiteBottomNav = () => {
                 type="button"
                 onClick={() => window.history.forward()}
                 aria-label="Next page"
-                style={{ background: "transparent", border: 0, padding: 0, margin: 0, marginLeft: -6, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}
+                style={{ background: "transparent", border: 0, padding: 0, margin: 0, marginLeft: -8, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}
               >
                 <svg key={`r-${pulseIdx}`} className={isActive(1) ? "sbn-anim-right-blink" : ""} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M5 12h14" />
