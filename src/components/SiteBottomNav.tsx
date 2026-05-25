@@ -172,23 +172,28 @@ const SiteBottomNav = () => {
         .sbn-item { overflow: visible; }
         .sbn-item:hover { z-index: 999; }
         .sbn-item:hover .sbn-icon-wrap {
-          transform: translateY(4px) scale(1.75);
+          transform: translateY(4px) scale(1.5);
         }
-        /* PAGE group: scale arrows + gear together as one unit on hover */
+        /* PAGE group: each child (arrow / gear) scales independently on its own hover */
         .sbn-page-scale {
           position: relative;
           display: flex;
           align-items: center;
           gap: 0;
+        }
+        .sbn-arrow-btn {
           transform-origin: center bottom;
           transition: transform 0.2s ease-in-out;
         }
-        .sbn-page-group:hover .sbn-page-scale {
-          transform: scale(1.75);
+        .sbn-arrow-btn:hover {
+          transform: scale(1.5);
         }
-        /* Prevent the inner gear icon-wrap from double-scaling inside the group */
-        .sbn-page-group:hover .sbn-icon-wrap {
-          transform: translateY(4px);
+        .sbn-gear-inner {
+          transform-origin: center bottom;
+          transition: transform 0.2s ease-in-out;
+        }
+        .sbn-gear-inner:hover {
+          transform: scale(1.5);
         }
 
         .sbn-icon-tall {
