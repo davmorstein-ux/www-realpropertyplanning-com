@@ -36,6 +36,18 @@ const SiteBottomNav = () => {
     };
   }, []);
 
+  // When the gear shifter slot pulses, drive gearSide to reuse the exact
+  // same hover lean (CSS transition on the inline transform).
+  useEffect(() => {
+    if (pulseIdx !== 1) return;
+    const timeouts: ReturnType<typeof setTimeout>[] = [];
+    setGearSide("R");
+    timeouts.push(setTimeout(() => setGearSide("F"), 170));
+    timeouts.push(setTimeout(() => setGearSide("none"), 340));
+    return () => timeouts.forEach(clearTimeout);
+  }, [pulseIdx]);
+
+
   // 0=HOME, 1=PAGE (gear + arrows), 2=SEARCH, 3=CONTACT
   const isActive = (i: number) => pulseIdx === i;
 
