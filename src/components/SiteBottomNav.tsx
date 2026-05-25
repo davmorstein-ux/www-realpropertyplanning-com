@@ -18,6 +18,8 @@ const SiteBottomNav = () => {
   const navigate = useNavigate();
   const [gearSide, setGearSide] = useState<"none" | "R" | "F">("none");
   const [pulseIdx, setPulseIdx] = useState<number>(-1);
+  const [headlightOn, setHeadlightOn] = useState<boolean>(false);
+  const [tooltip, setTooltip] = useState<string | null>(null);
 
   useEffect(() => {
     const timeouts: ReturnType<typeof setTimeout>[] = [];
@@ -45,6 +47,21 @@ const SiteBottomNav = () => {
     timeouts.push(setTimeout(() => setGearSide("F"), 170));
     timeouts.push(setTimeout(() => setGearSide("none"), 340));
     return () => timeouts.forEach(clearTimeout);
+  }, [pulseIdx]);
+
+  // Headlight auto-sequence: reuse the exact hover image-swap (no new
+  // keyframe), play twice consecutively, each cycle 1.2s.
+  useEffect(() => {
+    if (pulseIdx !== 3) return;
+    const timeouts: ReturnType<typeof setTimeout>[] = [];
+    setHeadlightOn(true);
+    timeouts.push(setTimeout(() => setHeadlightOn(false), 1200));
+    timeouts.push(setTimeout(() => setHeadlightOn(true), 1200));
+    timeouts.push(setTimeout(() => setHeadlightOn(false), 2400));
+    return () => {
+      timeouts.forEach(clearTimeout);
+      setHeadlightOn(false);
+    };
   }, [pulseIdx]);
 
 
