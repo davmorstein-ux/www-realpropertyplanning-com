@@ -46,7 +46,7 @@ const SiteBottomNav = () => {
           justify-content: center;
           width: fit-content !important;
           margin: 0 auto !important;
-          min-width: unset !important;
+          min-width: 320px !important;
           max-width: 95% !important;
           align-self: center !important;
           box-sizing: border-box !important;
@@ -476,7 +476,7 @@ const SiteBottomNav = () => {
             <span className="sbn-label">SEARCH</span>
           </button>
 
-          {/* 5. Contact */}
+          {/* 4. Contact */}
           <Link
             to="/contact"
             className="sbn-item"
