@@ -259,10 +259,11 @@ const SiteChatWidget = () => {
         }
         .rpp-cw-input {
           flex: 1;
-          padding: 7px 10px;
+          padding: 0 10px;
           border: 1px solid #D1D5DB;
-          border-radius: 20px;
-          font-size: 0.8rem;
+          border-radius: 4px;
+          font-size: 0.75rem;
+          height: 32px;
           outline: none;
           background: #fff;
           font-family: inherit;
