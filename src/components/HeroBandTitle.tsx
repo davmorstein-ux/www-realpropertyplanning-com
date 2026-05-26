@@ -22,11 +22,7 @@ const capitalizeWord = (part: string): string => {
   const lowered = part.toLowerCase();
   const idx = lowered.search(/[a-z]/);
   if (idx === -1) return part;
-  return (
-    lowered.slice(0, idx) +
-    lowered.charAt(idx).toUpperCase() +
-    lowered.slice(idx + 1)
-  );
+  return lowered.slice(0, idx) + lowered.charAt(idx).toUpperCase() + lowered.slice(idx + 1);
 };
 
 const titleCase = (input: string): string => {
@@ -51,11 +47,8 @@ const titleCase = (input: string): string => {
     .join("");
 };
 
-
 const transformChildren = (children: ReactNode): ReactNode =>
-  Children.map(children, (child) =>
-    typeof child === "string" ? titleCase(child) : child,
-  );
+  Children.map(children, (child) => (typeof child === "string" ? titleCase(child) : child));
 
 const HeroBandTitle = ({
   children,
@@ -64,12 +57,11 @@ const HeroBandTitle = ({
   compact = false,
   className = "",
 }: HeroBandTitleProps) => {
-
   const titleStyle = {
     color: "#FFFFFF",
     fontFamily: '"Cormorant Garamond", "DM Sans", serif',
     fontWeight: 500,
-    fontSize: "1rem",
+    fontSize: ".85rem",
     letterSpacing: "0.1em",
     lineHeight: 1.2,
     opacity: 1,
@@ -84,14 +76,10 @@ const HeroBandTitle = ({
   }, [bare]);
 
   const titleEl = (
-    <Tag
-      className={`hero-band-title ${className}`.trim()}
-      style={titleStyle}
-    >
+    <Tag className={`hero-band-title ${className}`.trim()} style={titleStyle}>
       {transformChildren(children)}
     </Tag>
   );
-
 
   if (bare) return titleEl;
 
@@ -101,9 +89,8 @@ const HeroBandTitle = ({
       <div
         data-hero-band
         style={{
-          background:
-            "linear-gradient(to right, #FFFFFF 0%, #1B3A6B 20%, #1B3A6B 80%, #FFFFFF 100%)",
-          height: "42px",
+          background: "linear-gradient(to right, #FFFFFF 0%, #1B3A6B 20%, #1B3A6B 80%, #FFFFFF 100%)",
+          height: "46px",
           padding: "0 16px 4px 16px",
           display: "flex",
           alignItems: "center",
@@ -114,8 +101,6 @@ const HeroBandTitle = ({
       </div>
     </>
   );
-
-
 };
 
 export default HeroBandTitle;
