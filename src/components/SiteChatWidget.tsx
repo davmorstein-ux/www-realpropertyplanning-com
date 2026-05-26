@@ -3,12 +3,13 @@ import chatAvatar from "@/assets/chat-avatar.png";
 
 type Pos = { x: number; y: number };
 
-const NAVY = "#1B3A6B";
-const NAVY_DARK = "#142C52";
+const TEAL = "#0D5C63";
+const TEAL_DARK = "#094A50";
+const CREAM = "#F5F0E8";
 
 const BUTTON_SIZE = 44;
 const PANEL_W = 260;
-const PANEL_H = 360;
+const PANEL_H = 280;
 const MARGIN = 16;
 
 const SiteChatWidget = () => {
@@ -127,7 +128,7 @@ const SiteChatWidget = () => {
           width: ${BUTTON_SIZE}px;
           height: ${BUTTON_SIZE}px;
           border-radius: 50%;
-          background: ${NAVY};
+          background: ${TEAL};
           color: #fff;
           border: none;
           box-shadow: 0 2px 8px rgba(0,0,0,0.25);
@@ -140,7 +141,7 @@ const SiteChatWidget = () => {
           touch-action: none;
           user-select: none;
         }
-        .rpp-cw-btn:hover { background: ${NAVY_DARK}; }
+        .rpp-cw-btn:hover { background: ${TEAL_DARK}; }
         .rpp-cw-btn:active { cursor: grabbing; }
 
         .rpp-cw-panel {
@@ -160,7 +161,7 @@ const SiteChatWidget = () => {
 
         .rpp-cw-header {
           height: 40px;
-          background: ${NAVY};
+          background: ${TEAL};
           color: #fff;
           display: flex;
           align-items: center;
@@ -197,7 +198,7 @@ const SiteChatWidget = () => {
         .rpp-cw-messages {
           flex: 1;
           overflow-y: auto;
-          padding: 14px;
+          padding: 10px;
           background: #F5F5F5;
           display: flex;
           flex-direction: column;
@@ -224,8 +225,8 @@ const SiteChatWidget = () => {
           border-radius: 12px;
           font-size: 0.75rem;
           line-height: 1.5;
-          background: ${NAVY};
-          color: #fff;
+          background: ${CREAM};
+          color: ${TEAL};
           align-self: flex-start;
           border-bottom-left-radius: 4px;
           position: relative;
@@ -240,7 +241,7 @@ const SiteChatWidget = () => {
           background: transparent;
           border-style: solid;
           border-width: 0 6px 8px 1px;
-          border-color: transparent ${NAVY} transparent transparent;
+          border-color: transparent ${CREAM} transparent transparent;
         }
         .rpp-cw-bubble.confirm {
           background: #F1F4F9;
@@ -267,13 +268,13 @@ const SiteChatWidget = () => {
           font-family: inherit;
           color: #1B2B4B;
         }
-        .rpp-cw-input:focus { border-color: ${NAVY}; }
+        .rpp-cw-input:focus { border-color: ${TEAL}; }
         .rpp-cw-send {
           width: 36px;
           height: 36px;
           border-radius: 50%;
           border: none;
-          background: ${NAVY};
+          background: ${TEAL};
           color: #fff;
           cursor: pointer;
           display: flex;
@@ -281,7 +282,7 @@ const SiteChatWidget = () => {
           justify-content: center;
           flex-shrink: 0;
         }
-        .rpp-cw-send:hover { background: ${NAVY_DARK}; }
+        .rpp-cw-send:hover { background: ${TEAL_DARK}; }
         .rpp-cw-send:disabled { opacity: 0.5; cursor: not-allowed; }
 
         @media (max-width: 639px) {
