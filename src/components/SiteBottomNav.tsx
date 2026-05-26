@@ -189,7 +189,7 @@ const SiteBottomNav = () => {
         .sbn-item { overflow: visible; }
         .sbn-item:hover { z-index: 999; }
         .sbn-item:hover .sbn-icon-wrap {
-          transform: translateY(4px) scale(1.5);
+          transform: translateY(4px) scale(1.25);
         }
         /* PAGE group: each child (arrow / gear) scales independently on its own hover */
         .sbn-page-scale {
@@ -203,14 +203,14 @@ const SiteBottomNav = () => {
           transition: transform 0.2s ease-in-out;
         }
         .sbn-arrow-btn:hover {
-          transform: scale(1.5);
+          transform: scale(1.25);
         }
         .sbn-gear-inner {
           transform-origin: center bottom;
           transition: transform 0.2s ease-in-out;
         }
         .sbn-gear-inner:hover {
-          transform: scale(1.5);
+          transform: scale(1.25);
         }
         /* Disable the default .sbn-item:hover scale within the PAGE group — arrows and gear scale independently */
         .sbn-page-group:hover .sbn-icon-wrap {
@@ -419,7 +419,7 @@ const SiteBottomNav = () => {
         @media (max-width: 639px) {
           .sbn-bar {
             padding: 4px 10px 4px;
-            bottom: 8px;
+            bottom: 16px;
             border-radius: 0;
             border: 0;
             box-shadow: none;
