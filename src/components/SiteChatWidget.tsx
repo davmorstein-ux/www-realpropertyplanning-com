@@ -143,6 +143,19 @@ const SiteChatWidget = () => {
         }
         .rpp-cw-btn:hover { background: ${TEAL_DARK}; }
         .rpp-cw-btn:active { cursor: grabbing; }
+        @keyframes dotBounce {
+          0%, 80%, 100% { transform: translateY(0); }
+          40% { transform: translateY(-4px); }
+        }
+        .rpp-cw-dot { animation: dotBounce 1.2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+        .rpp-cw-dot.d1 { animation-delay: 0s; }
+        .rpp-cw-dot.d2 { animation-delay: 0.2s; }
+        .rpp-cw-dot.d3 { animation-delay: 0.4s; }
+        @keyframes chatPulse {
+          0%, 100% { box-shadow: 0 0 0 0 rgba(13, 92, 99, 0.5); transform: scale(1); }
+          50% { box-shadow: 0 0 0 10px rgba(13, 92, 99, 0); transform: scale(1.08); }
+        }
+        .rpp-cw-btn.chat-pulse { animation: chatPulse 1.5s ease-in-out 3; }
 
         .rpp-cw-panel {
           position: fixed;
@@ -388,8 +401,11 @@ const SiteChatWidget = () => {
         onPointerDown={startButtonDrag}
         onClick={handleButtonClick}
       >
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" fill="none"></path>
+          <circle className="rpp-cw-dot d1" cx="8" cy="11" r="1.4" fill="#fff" stroke="none" />
+          <circle className="rpp-cw-dot d2" cx="12" cy="11" r="1.4" fill="#fff" stroke="none" />
+          <circle className="rpp-cw-dot d3" cx="16" cy="11" r="1.4" fill="#fff" stroke="none" />
         </svg>
       </button>
     </>
