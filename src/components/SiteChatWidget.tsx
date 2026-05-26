@@ -197,25 +197,58 @@ const SiteChatWidget = () => {
           flex: 1;
           overflow-y: auto;
           padding: 14px;
-          background: #fff;
+          background: #F5F5F5;
           display: flex;
           flex-direction: column;
           gap: 10px;
         }
+        .rpp-cw-msg-row {
+          display: flex;
+          align-items: flex-end;
+          gap: 8px;
+        }
+        .rpp-cw-avatar {
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          background: ${NAVY};
+          color: #fff;
+          font-size: 10px;
+          font-weight: 700;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+          margin-bottom: 2px;
+        }
         .rpp-cw-bubble {
-          max-width: 85%;
+          max-width: 75%;
           padding: 10px 13px;
           border-radius: 12px;
-          font-size: 14px;
+          font-size: 0.85rem;
           line-height: 1.5;
           background: ${NAVY};
           color: #fff;
           align-self: flex-start;
           border-bottom-left-radius: 4px;
+          position: relative;
+        }
+        .rpp-cw-bubble.welcome::after {
+          content: '';
+          position: absolute;
+          bottom: -6px;
+          left: 0;
+          width: 1px;
+          height: 1px;
+          background: transparent;
+          border-style: solid;
+          border-width: 0 6px 8px 0;
+          border-color: transparent ${NAVY} transparent transparent;
         }
         .rpp-cw-bubble.confirm {
           background: #F1F4F9;
           color: #1B2B4B;
+          margin-left: 40px;
         }
 
         .rpp-cw-input-bar {
