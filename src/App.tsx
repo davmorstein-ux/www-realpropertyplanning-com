@@ -8,7 +8,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import SiteBottomNav from "./components/SiteBottomNav";
 
 
-import ChatAssistant from "./components/ChatAssistant";
+import SiteChatWidget from "./components/SiteChatWidget";
 
 
 // Homepage stays eager — fastest possible first paint, no Suspense flash on "/"
@@ -195,12 +195,7 @@ const App = () => (
         <SiteBottomNav />
 
 
-        {/* ChatAssistant: panel triggered by nav's couple photo via 'rpp-open-chat' event.
-            Hide its standalone FAB so only the panel surfaces. */}
-        <div style={{ position: "fixed", width: 0, height: 0, overflow: "visible", zIndex: 10000 }}>
-          <style>{`.rpp-chat-fab { display: none !important; } .rpp-chat-anchor { left: 50% !important; top: auto !important; bottom: 160px !important; transform: translateX(-50%) !important; width: 0 !important; height: 0 !important; } .rpp-chat-panel { top: auto !important; bottom: 0 !important; }`}</style>
-          <ChatAssistant />
-        </div>
+        <SiteChatWidget />
         
         
 
