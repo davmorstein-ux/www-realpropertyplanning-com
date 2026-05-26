@@ -58,7 +58,7 @@ const HomepageNav = () => {
                       <p className="text-foreground text-[14px] leading-relaxed mb-6 transition-opacity duration-200 group-hover:opacity-0">
                         {s.blurb}
                       </p>
-                      <span className="gold-cta mt-auto transition-opacity duration-200 group-hover:opacity-0" style={{ padding: "10px 16px" }}>
+                      <span className="gold-cta mt-auto transition-opacity duration-200 group-hover:opacity-0" style={{ padding: "8px 20px" }}>
                         Explore
                         <svg viewBox="0 0 24 24" aria-hidden="true">
                           <polyline points="9 18 15 12 9 6" />
