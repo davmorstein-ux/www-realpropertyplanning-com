@@ -155,15 +155,15 @@ const SiteChatWidget = () => {
           z-index: 99999;
           font-family: inherit;
         }
-        .rpp-cw-panel[data-min="true"] { height: 52px; }
+        .rpp-cw-panel[data-min="true"] { height: 40px; }
 
         .rpp-cw-header {
-          height: 52px;
+          height: 40px;
           background: ${NAVY};
           color: #fff;
           display: flex;
           align-items: center;
-          padding: 0 12px;
+          padding: 0 10px;
           cursor: grab;
           touch-action: none;
           user-select: none;
@@ -172,7 +172,7 @@ const SiteChatWidget = () => {
         .rpp-cw-header:active { cursor: grabbing; }
         .rpp-cw-title {
           flex: 1;
-          font-size: 15px;
+          font-size: 0.85rem;
           font-weight: 600;
           color: #fff;
           letter-spacing: 0.01em;
@@ -208,12 +208,12 @@ const SiteChatWidget = () => {
           gap: 8px;
         }
         .rpp-cw-avatar {
-          width: 32px;
-          height: 32px;
+          width: 24px;
+          height: 24px;
           border-radius: 50%;
           background: ${NAVY};
           color: #fff;
-          font-size: 10px;
+          font-size: 0.55rem;
           font-weight: 700;
           display: flex;
           align-items: center;
@@ -223,9 +223,9 @@ const SiteChatWidget = () => {
         }
         .rpp-cw-bubble {
           max-width: 75%;
-          padding: 10px 13px;
+          padding: 8px 11px;
           border-radius: 12px;
-          font-size: 0.85rem;
+          font-size: 0.75rem;
           line-height: 1.5;
           background: ${NAVY};
           color: #fff;
@@ -242,29 +242,29 @@ const SiteChatWidget = () => {
           height: 1px;
           background: transparent;
           border-style: solid;
-          border-width: 0 6px 8px 0;
+          border-width: 0 6px 8px 1px;
           border-color: transparent ${NAVY} transparent transparent;
         }
         .rpp-cw-bubble.confirm {
           background: #F1F4F9;
           color: #1B2B4B;
-          margin-left: 40px;
+          margin-left: 32px;
         }
 
         .rpp-cw-input-bar {
           display: flex;
           gap: 8px;
-          padding: 10px;
+          padding: 8px;
           background: #F4F5F7;
           border-top: 1px solid #E5E7EB;
           flex-shrink: 0;
         }
         .rpp-cw-input {
           flex: 1;
-          padding: 9px 12px;
+          padding: 7px 10px;
           border: 1px solid #D1D5DB;
           border-radius: 20px;
-          font-size: 14px;
+          font-size: 0.8rem;
           outline: none;
           background: #fff;
           font-family: inherit;
