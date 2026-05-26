@@ -57,7 +57,7 @@ const property: Card[] = [
 
 const Section = ({ heading, cards }: { heading: string; cards: Card[] }) => (
   <section className="py-10 lg:py-12">
-      <div className="mx-auto px-6 lg:px-8" style={{ maxWidth: "1400px" }}>
+      <div className="mx-auto px-6 lg:px-8" style={{ maxWidth: "1100px" }}>
       <h2
         className="font-serif text-2xl md:text-3xl font-semibold mb-3 text-center"
         style={{ color: "#1B3A6B" }}
