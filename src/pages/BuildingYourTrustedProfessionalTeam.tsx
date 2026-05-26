@@ -79,17 +79,19 @@ const Section = ({ heading, cards }: { heading: string; cards: Card[] }) => (
             <div className="tile-white__inner h-full relative">
               <div className="tile-white__face h-full">
                 <div className="flex h-full flex-col">
-                  <div
-                    className="relative w-full overflow-hidden bg-transparent flex items-center justify-center"
-                    style={{ aspectRatio: "500 / 280", padding: "0", margin: "0", display: "block", lineHeight: "0" }}
-                  >
-                    <img
-                      src={s.image}
-                      alt={s.alt}
-                      className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
-                      loading="lazy"
-                    />
-                  </div>
+                  <img
+                    src={s.image}
+                    alt={s.alt}
+                    loading="lazy"
+                    style={{
+                      width: "100%",
+                      height: "160px",
+                      objectFit: "contain",
+                      display: "block",
+                      margin: "0",
+                      padding: "0",
+                    }}
+                  />
                   <div
                     className="relative flex flex-1 flex-col items-center text-center overflow-hidden"
                     style={{ padding: "8px 16px 12px" }}
