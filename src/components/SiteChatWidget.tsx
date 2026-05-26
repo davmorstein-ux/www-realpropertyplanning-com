@@ -202,6 +202,7 @@ const SiteChatWidget = () => {
           display: flex;
           flex-direction: column;
           gap: 10px;
+          align-content: flex-start;
         }
         .rpp-cw-msg-row {
           display: flex;
@@ -209,12 +210,12 @@ const SiteChatWidget = () => {
           gap: 8px;
         }
         .rpp-cw-avatar {
-          width: 32px;
-          height: 32px;
+          width: 44px;
+          height: 44px;
           border-radius: 50%;
           object-fit: cover;
           flex-shrink: 0;
-          margin-bottom: 2px;
+          align-self: flex-start;
           display: block;
         }
         .rpp-cw-bubble {
@@ -333,7 +334,7 @@ const SiteChatWidget = () => {
                 <div className="rpp-cw-msg-row">
                   <img className="rpp-cw-avatar" src={chatAvatar} alt="Real Property Planning representative" />
                   <div className="rpp-cw-bubble welcome">
-                    Hello! How can we help you today? We respond personally to every inquiry.
+                    How can we help you?
                   </div>
                 </div>
                 {confirmation && (
