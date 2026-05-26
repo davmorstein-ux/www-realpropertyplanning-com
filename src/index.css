@@ -98,29 +98,11 @@ nav button[aria-haspopup] svg, nav [class*="dropdown"] button svg {
 }
 
 
-/* Uniform tile sizing — all tile grids site-wide */
-.card, [class*="card"], [class*="tile"], [class*="Card"], [class*="Tile"] {
-  width: 220px !important;
-  min-width: 220px !important;
-  max-width: 220px !important;
-  flex: 0 0 220px !important;
-  box-sizing: border-box !important;
-}
+/* (Removed: overly broad uniform tile sizing block — it matched every
+   class containing "card", "tile", or "grid" — including Tailwind's
+   `grid`, `card-3d`, `bg-card`, etc. — and forced the entire layout into
+   a 220px-wide no-wrap row, breaking mobile responsiveness sitewide.) */
 
-[class*="tile-container"], [class*="card-container"], [class*="CardContainer"],
-[class*="TileContainer"], [class*="grid"], [class*="Grid"] {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: stretch !important;
-  gap: 16px !important;
-  flex-wrap: nowrap !important;
-}
-
-.card img, [class*="card"] img, [class*="tile"] img {
-  width: 100% !important;
-  height: 140px !important;
-  object-fit: cover !important;
-}
 
 /* Hero blue title band — prevent descender clipping */
 [class*="hero-band"], [class*="title-band"], [class*="HeroBand"],
