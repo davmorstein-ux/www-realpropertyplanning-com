@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 
 /**
  * PremiumTile — the approved site-wide tile style.
- * Matches the "Related Resources" cards (tile-white): white face, gold trim,
+ * Matches the "Related Resources" cards (interior-tile tile-white): white face, gold trim,
  * soft multi-layer shadow, generous padding, hover lift.
  *
  * Use this component for ANY tile/card across the site to keep visuals consistent.
@@ -35,7 +35,7 @@ const PremiumTile = ({
 }: PremiumTileProps) => (
   <Link
     to={to}
-    className={`tile-white group block h-full ${minHeight} ${className}`}
+    className={`interior-tile tile-white group block h-full ${minHeight} ${className}`}
   >
     <div className="tile-white__inner h-full">
       <div className="tile-white__face h-full">

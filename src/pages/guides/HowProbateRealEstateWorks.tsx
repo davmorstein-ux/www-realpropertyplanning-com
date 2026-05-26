@@ -104,7 +104,7 @@ const HowProbateRealEstateWorks = () => (
                 "Probate sales require pricing expertise, court-defensible valuations, and coordination with attorneys. A broker who specializes in probate handles all of this in one place.",
             },
           ].map((tile) => (
-            <div key={tile.title} className="tile-white h-full">
+            <div key={tile.title} className="interior-tile tile-white h-full">
               <div className="tile-white__inner h-full">
                 <div className="tile-white__face h-full">
                   <div className="flex h-full flex-col px-6 pb-6 pt-8 sm:px-7 sm:pb-7 sm:pt-9">

@@ -182,7 +182,7 @@ const RelatedServices = ({ currentPath, links: linksOverride, heading: headingOv
     let frameId = 0;
 
     const measureSpherePositions = () => {
-      const cards = Array.from(grid.querySelectorAll<HTMLElement>(".tile-white"));
+      const cards = Array.from(grid.querySelectorAll<HTMLElement>(".interior-tile tile-white"));
 
       if (cards.length < 4) {
         setSpherePositions([]);
@@ -254,7 +254,7 @@ const RelatedServices = ({ currentPath, links: linksOverride, heading: headingOv
 
     const resizeObserver = new ResizeObserver(scheduleMeasurement);
     resizeObserver.observe(grid);
-    Array.from(grid.querySelectorAll<HTMLElement>(".tile-white")).forEach((card) => {
+    Array.from(grid.querySelectorAll<HTMLElement>(".interior-tile tile-white")).forEach((card) => {
       resizeObserver.observe(card);
     });
 
@@ -298,7 +298,7 @@ const RelatedServices = ({ currentPath, links: linksOverride, heading: headingOv
                 <Link
                   key={link.href}
                   to={link.href}
-                  className="tile-white group block h-full min-h-[252px] sm:min-h-[280px]"
+                  className="interior-tile tile-white group block h-full min-h-[252px] sm:min-h-[280px]"
                   onMouseEnter={() => setHoveredIndex(index)}
                   onMouseLeave={() => setHoveredIndex(null)}
                 >

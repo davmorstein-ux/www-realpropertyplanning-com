@@ -142,7 +142,7 @@ const SeniorLivingAndRelocation = () => {
                     <Link
                       key={option.title}
                       to={option.path}
-                      className="tile-white group block no-underline w-[200px] h-[220px] sm:w-[210px] sm:h-[220px] overflow-hidden"
+                      className="interior-tile tile-white group block no-underline w-[200px] h-[220px] sm:w-[210px] sm:h-[220px] overflow-hidden"
                     >
                       <div className="tile-white__inner h-full">
                         <div className="tile-white__face h-full flex flex-col items-center overflow-hidden">
@@ -199,7 +199,7 @@ const SeniorLivingAndRelocation = () => {
                 {supportItems.map((item) => (
                   <div
                     key={item.title}
-                    className="tile-white group block h-full min-h-[252px] sm:min-h-[280px]"
+                    className="interior-tile tile-white group block h-full min-h-[252px] sm:min-h-[280px]"
                   >
                     <div className="tile-white__inner h-full">
                       <div className="tile-white__face h-full">
