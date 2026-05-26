@@ -40,6 +40,7 @@ const PBCPropertyQuestions = lazy(() => import("./pages/planning-before-a-crisis
 const PBCWhenAMoveIsComing = lazy(() => import("./pages/planning-before-a-crisis/WhenAMoveIsComing"));
 const PBCHowWeCanHelp = lazy(() => import("./pages/planning-before-a-crisis/HowWeCanHelp"));
 const BuildingYourTrustedProfessionalTeam = lazy(() => import("./pages/BuildingYourTrustedProfessionalTeam"));
+const AgingLifeCareManagers = lazy(() => import("./pages/AgingLifeCareManagers"));
 const DownsizingPreparingForTransition = lazy(() => import("./pages/DownsizingPreparingForTransition"));
 const ExecutorResponsibilitiesFirstSteps = lazy(() => import("./pages/ExecutorResponsibilitiesFirstSteps"));
 const ERFFirst30Days = lazy(() => import("./pages/executor-responsibilities-first-steps/First30Days"));
