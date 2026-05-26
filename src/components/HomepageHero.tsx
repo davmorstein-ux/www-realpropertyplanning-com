@@ -257,12 +257,17 @@ const HomepageHero = () => {
                           cursor: "pointer",
                           display: "inline-flex",
                           alignItems: "center",
+                          height: "100%",
                           gap: 6,
-                          padding: 0,
+                          paddingLeft: 0,
+                          paddingRight: 0,
+                          paddingTop: 4,
                           paddingBottom: 4,
+                          margin: 0,
                           appearance: "none",
                           WebkitAppearance: "none",
                         }}
+
                         aria-haspopup="true"
                         aria-expanded={isOpen}
                       >
