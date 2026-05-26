@@ -212,7 +212,7 @@ const ProbateEstateSales = () => {
                 Estate property sales are genuinely different from standard real estate transactions — and treating them
                 like ordinary listings is where families and executors most often run into trouble.
               </p>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", rowGap: "16px", columnGap: "4px", width: "100%", maxWidth: "1200px", margin: "0 auto", alignItems: "stretch" }}>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, auto)", rowGap: "16px", columnGap: "8px", width: "fit-content", margin: "0 auto", alignItems: "stretch" }}>
                 {whatMakesDifferentTiles.map((s) => (
                   <Link
                     key={s.title}
