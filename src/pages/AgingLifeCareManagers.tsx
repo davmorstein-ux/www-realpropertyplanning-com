@@ -59,6 +59,11 @@ const AgingLifeCareManagers = () => {
           </div>
         </section>
 
+        <FeaturedProviderPlaceholder
+          heading="Featured Aging Life Care Manager — Coming Soon"
+          altLabel="featured aging life care manager"
+        />
+
         <DisclaimerSection />
       </main>
       <Footer />
