@@ -136,7 +136,7 @@ const ProbateEstateSales = () => {
                     key={s.href}
                     to={s.href}
                     aria-label={`${s.title} — ${s.description} — ${s.cta}`}
-                    className="tile-white group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+                    className="interior-tile tile-white group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
                   >
                     <div className="tile-white__inner h-full relative">
                       <div className="tile-white__face h-full">
@@ -218,7 +218,7 @@ const ProbateEstateSales = () => {
                     key={s.title}
                     to={s.href}
                     aria-label={`${s.title} — ${s.description} — ${s.cta}`}
-                    className="tile-white group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+                    className="interior-tile tile-white group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
                   >
                     <div className="tile-white__inner h-full relative">
                       <div className="tile-white__face h-full">
@@ -409,7 +409,7 @@ const ProbateEstateSales = () => {
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl text-[hsl(0_70%_30%)] font-semibold mb-8 text-center font-sans">Explore Further</h2>
               <div className="grid md:grid-cols-3 gap-5 items-stretch">
-                <Link to="/terminology" className="tile-white group block h-full no-underline">
+                <Link to="/terminology" className="interior-tile tile-white group block h-full no-underline">
                   <div className="tile-white__inner h-full">
                     <div className="tile-white__face p-6 flex flex-col h-full">
                       <img
@@ -434,7 +434,7 @@ const ProbateEstateSales = () => {
                     </div>
                   </div>
                 </Link>
-                <Link to="/faq" className="tile-white group block h-full no-underline">
+                <Link to="/faq" className="interior-tile tile-white group block h-full no-underline">
                   <div className="tile-white__inner h-full">
                     <div className="tile-white__face p-6 flex flex-col h-full">
                       <img
@@ -459,7 +459,7 @@ const ProbateEstateSales = () => {
                     </div>
                   </div>
                 </Link>
-                <Link to="/how-the-process-works" className="tile-white group block h-full no-underline">
+                <Link to="/how-the-process-works" className="interior-tile tile-white group block h-full no-underline">
                   <div className="tile-white__inner h-full">
                     <div className="tile-white__face p-6 flex flex-col h-full">
                       <img

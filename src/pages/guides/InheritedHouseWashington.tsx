@@ -78,7 +78,7 @@ const InheritedHouseWashington = () => (
         <div className="container px-6 lg:px-8">
           <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {tiles.map((t) => (
-              <div key={t.title} className="tile-white block h-full">
+              <div key={t.title} className="interior-tile tile-white block h-full">
                 <div className="tile-white__inner h-full">
                   <div className="tile-white__face h-full">
                     <div className="flex h-full flex-col px-6 pb-6 pt-8 sm:px-7 sm:pb-7 sm:pt-9">

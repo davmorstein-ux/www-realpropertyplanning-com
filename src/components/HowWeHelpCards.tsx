@@ -45,7 +45,7 @@ const HowWeHelpCards = () => {
         </h2>
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {cards.map((card) => (
-            <div key={card.headline} className="tile-white group block h-full">
+            <div key={card.headline} className="interior-tile tile-white group block h-full">
               <div className="tile-white__inner h-full">
                 <div className="tile-white__face h-full">
                   <div className="flex h-full flex-col px-7 pb-7 pt-8">

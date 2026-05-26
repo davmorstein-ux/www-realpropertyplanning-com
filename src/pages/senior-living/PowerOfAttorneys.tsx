@@ -29,7 +29,7 @@ const PowerOfAttorneys = () => {
     if (!grid) return;
     let frameId = 0;
     const measure = () => {
-      const cards = Array.from(grid.querySelectorAll<HTMLElement>(".tile-white"));
+      const cards = Array.from(grid.querySelectorAll<HTMLElement>(".interior-tile tile-white"));
       if (cards.length < 4) { setSpherePositions([]); return; }
       const gridRect = grid.getBoundingClientRect();
       const rows: Array<{ top: number; items: Array<{ rect: DOMRect }> }> = [];
@@ -62,7 +62,7 @@ const PowerOfAttorneys = () => {
     schedule();
     const ro = new ResizeObserver(schedule);
     ro.observe(grid);
-    Array.from(grid.querySelectorAll<HTMLElement>(".tile-white")).forEach(c => ro.observe(c));
+    Array.from(grid.querySelectorAll<HTMLElement>(".interior-tile tile-white")).forEach(c => ro.observe(c));
     window.addEventListener("resize", schedule);
     return () => { window.cancelAnimationFrame(frameId); window.removeEventListener("resize", schedule); ro.disconnect(); };
   }, []);
@@ -146,7 +146,7 @@ const PowerOfAttorneys = () => {
                 {poaTiles.map((tile, index) => (
                   <div
                     key={tile.title}
-                    className="tile-white group block h-full min-h-[252px] sm:min-h-[280px]"
+                    className="interior-tile tile-white group block h-full min-h-[252px] sm:min-h-[280px]"
                     onMouseEnter={() => setHoveredIndex(index)}
                     onMouseLeave={() => setHoveredIndex(null)}
                   >
@@ -236,7 +236,7 @@ const PowerOfAttorneys = () => {
               These situations are manageable — but only when you know what to expect. Here are the challenges families and agents encounter most often.
             </p>
             <div className="relative grid gap-3 sm:grid-cols-2">
-              <div className="tile-white group block h-full min-h-[252px] sm:min-h-[280px]">
+              <div className="interior-tile tile-white group block h-full min-h-[252px] sm:min-h-[280px]">
                 <div className="tile-white__inner h-full">
                   <div className="tile-white__face h-full">
                     <div className="flex h-full flex-col justify-between px-6 pb-6 pt-10 sm:px-7 sm:pb-7 sm:pt-11">
@@ -252,7 +252,7 @@ const PowerOfAttorneys = () => {
                   </div>
                 </div>
               </div>
-              <div className="tile-white group block h-full min-h-[252px] sm:min-h-[280px]">
+              <div className="interior-tile tile-white group block h-full min-h-[252px] sm:min-h-[280px]">
                 <div className="tile-white__inner h-full">
                   <div className="tile-white__face h-full">
                     <div className="flex h-full flex-col justify-between px-6 pb-6 pt-10 sm:px-7 sm:pb-7 sm:pt-11">
@@ -268,7 +268,7 @@ const PowerOfAttorneys = () => {
                   </div>
                 </div>
               </div>
-              <div className="tile-white group block h-full min-h-[252px] sm:min-h-[280px]">
+              <div className="interior-tile tile-white group block h-full min-h-[252px] sm:min-h-[280px]">
                 <div className="tile-white__inner h-full">
                   <div className="tile-white__face h-full">
                     <div className="flex h-full flex-col justify-between px-6 pb-6 pt-10 sm:px-7 sm:pb-7 sm:pt-11">
@@ -284,7 +284,7 @@ const PowerOfAttorneys = () => {
                   </div>
                 </div>
               </div>
-              <div className="tile-white group block h-full min-h-[252px] sm:min-h-[280px]">
+              <div className="interior-tile tile-white group block h-full min-h-[252px] sm:min-h-[280px]">
                 <div className="tile-white__inner h-full">
                   <div className="tile-white__face h-full">
                     <div className="flex h-full flex-col justify-between px-6 pb-6 pt-10 sm:px-7 sm:pb-7 sm:pt-11">

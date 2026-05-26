@@ -93,7 +93,7 @@ const ExecutorResponsibilitiesFirstSteps = () => {
                 <Link
                   key={t.title}
                   to={t.href}
-                  className="tile-white block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+                  className="interior-tile tile-white block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
                   aria-label={t.title}
                 >
                   <div className="tile-white__inner h-full relative">

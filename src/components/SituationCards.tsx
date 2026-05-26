@@ -79,7 +79,7 @@ const SituationCards = () => {
               key={s.href}
               to={s.href}
               aria-label={`${s.title} — ${s.description} — ${s.cta}`}
-              className="tile-white group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+              className="interior-tile tile-white group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
             >
               <div className="tile-white__inner h-full relative">
                 <div className="tile-white__face h-full">

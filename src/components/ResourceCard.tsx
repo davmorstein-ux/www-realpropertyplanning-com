@@ -16,7 +16,7 @@ const ResourceCard = ({
   badge,
   icon,
 }: ResourceCardProps) => (
-  <Link to={linkTo} className="tile-white group block h-full min-h-[220px]">
+  <Link to={linkTo} className="interior-tile tile-white group block h-full min-h-[220px]">
     <div className="tile-white__inner h-full">
       <div className="tile-white__face h-full">
         <div className="flex h-full flex-col justify-between px-7 pb-7 pt-8">
