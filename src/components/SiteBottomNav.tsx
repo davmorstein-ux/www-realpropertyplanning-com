@@ -58,7 +58,19 @@ const SiteBottomNav = () => {
         timeouts.push(
           setTimeout(() => {
             setPulseIdx(i);
-            if (i === 3) blinkHeadlight();
+            if (i === 3) {
+              blinkHeadlight();
+              timeouts.push(
+                setTimeout(() => {
+                  const chatBtn = document.querySelector<HTMLElement>(".rpp-cw-btn");
+                  if (!chatBtn) return;
+                  chatBtn.classList.add("chat-pulse");
+                  timeouts.push(
+                    setTimeout(() => chatBtn.classList.remove("chat-pulse"), 4500),
+                  );
+                }, 1500),
+              );
+            }
           }, i * 500),
         );
       }
