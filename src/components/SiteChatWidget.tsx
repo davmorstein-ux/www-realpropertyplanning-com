@@ -257,8 +257,10 @@ const SiteChatWidget = () => {
 
         .rpp-cw-input-bar {
           display: flex;
-          gap: 8px;
+          align-items: center;
+          gap: 6px;
           padding: 8px;
+          overflow: visible;
           background: #F4F5F7;
           border-top: 1px solid #E5E7EB;
           flex-shrink: 0;
