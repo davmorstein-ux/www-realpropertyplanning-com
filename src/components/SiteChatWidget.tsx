@@ -8,7 +8,7 @@ const TEAL_DARK = "#094A50";
 const CREAM = "#F5F0E8";
 
 const BUTTON_SIZE = 44;
-const PANEL_W = 240;
+const PANEL_W = 270;
 const PANEL_H = 260;
 const MARGIN = 16;
 
