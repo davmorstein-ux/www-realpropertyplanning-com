@@ -525,21 +525,26 @@ body {
    UNIFIED GOLD CTA BUTTON — homepage tile sections
 ═══════════════════════════════════════════════ */
 .gold-cta {
+  min-height: 0 !important;
+  height: auto !important;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  font-size: 15px !important;
+  line-height: 1.2 !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
+  box-sizing: border-box !important;
   gap: 10px !important;
   width: 100%;
   max-width: 280px;
-  min-height: 58px;
-  padding: 0 28px !important;
   border-radius: 12px;
   background: linear-gradient(180deg, hsl(var(--gold-light)) 0%, hsl(var(--gold)) 100%);
   color: hsl(var(--navy-dark)) !important;
   font-family: 'DM Sans', sans-serif !important;
-  font-size: 18px !important;
   font-weight: 700 !important;
-  line-height: 1.2 !important;
   letter-spacing: 0 !important;
   text-align: center;
   text-decoration: none !important;
@@ -2490,11 +2495,4 @@ main > section:has(> div > [data-hero-band]) + * {
   }
 }
 
-/* Global gold-cta size reduction */
-.gold-cta {
-  min-height: 40px !important;
-  padding: 0 18px !important;
-  font-size: 15px !important;
-  max-width: 220px !important;
-}
 
