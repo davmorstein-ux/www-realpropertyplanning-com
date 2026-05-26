@@ -502,16 +502,20 @@ const SiteBottomNav = () => {
               aria-label="Previous page"
               className="nav-arrow-left"
               onMouseEnter={(e) => {
-                (e.currentTarget as HTMLDivElement).style.transform = "scale(1.5)";
+                (e.currentTarget as HTMLDivElement).style.transform = "scale(1.25)";
+                setTooltip("Go Back");
               }}
               onMouseLeave={(e) => {
                 (e.currentTarget as HTMLDivElement).style.transform = "scale(1)";
+                setTooltip("");
               }}
               onFocus={(e) => {
-                (e.currentTarget as HTMLDivElement).style.transform = "scale(1.5)";
+                (e.currentTarget as HTMLDivElement).style.transform = "scale(1.25)";
+                setTooltip("Go Back");
               }}
               onBlur={(e) => {
                 (e.currentTarget as HTMLDivElement).style.transform = "scale(1)";
+                setTooltip("");
               }}
               onClick={() => window.history.back()}
               onKeyDown={(e) => {
@@ -698,16 +702,20 @@ const SiteBottomNav = () => {
               aria-label="Next page"
               className="nav-arrow-right"
               onMouseEnter={(e) => {
-                (e.currentTarget as HTMLDivElement).style.transform = "scale(1)";
+                (e.currentTarget as HTMLDivElement).style.transform = "scale(1.25)";
+                setTooltip("Go Forward");
               }}
               onMouseLeave={(e) => {
                 (e.currentTarget as HTMLDivElement).style.transform = "scale(1)";
+                setTooltip("");
               }}
               onFocus={(e) => {
-                (e.currentTarget as HTMLDivElement).style.transform = "scale(1)";
+                (e.currentTarget as HTMLDivElement).style.transform = "scale(1.25)";
+                setTooltip("Go Forward");
               }}
               onBlur={(e) => {
                 (e.currentTarget as HTMLDivElement).style.transform = "scale(1)";
+                setTooltip("");
               }}
               onClick={() => window.history.forward()}
               onKeyDown={(e) => {
