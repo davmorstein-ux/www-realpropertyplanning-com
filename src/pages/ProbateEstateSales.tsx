@@ -136,10 +136,10 @@ const ProbateEstateSales = () => {
                     key={s.href}
                     to={s.href}
                     aria-label={`${s.title} — ${s.description} — ${s.cta}`}
-                    className="card-3d-blue group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+                    className="tile-white group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
                   >
-                    <div className="card-3d-blue__inner h-full relative">
-                      <div className="card-3d-blue__face h-full">
+                    <div className="tile-white__inner h-full relative">
+                      <div className="tile-white__face h-full">
                         <div className="flex h-full flex-col">
                           <div className="relative w-full overflow-hidden bg-transparent flex items-center justify-center" style={{ aspectRatio: "500 / 312" }}>
                             <img
@@ -218,10 +218,10 @@ const ProbateEstateSales = () => {
                     key={s.title}
                     to={s.href}
                     aria-label={`${s.title} — ${s.description} — ${s.cta}`}
-                    className="card-3d-blue group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+                    className="tile-white group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
                   >
-                    <div className="card-3d-blue__inner h-full relative">
-                      <div className="card-3d-blue__face h-full">
+                    <div className="tile-white__inner h-full relative">
+                      <div className="tile-white__face h-full">
                         <div className="flex h-full flex-col">
                           <div className="relative flex flex-1 flex-col items-center text-center overflow-hidden" style={{ padding: "16px" }}>
                             <h3 className="font-serif text-[22px] md:text-[24px] font-semibold text-navy leading-snug mb-3 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0">
@@ -409,9 +409,9 @@ const ProbateEstateSales = () => {
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl text-[hsl(0_70%_30%)] font-semibold mb-8 text-center font-sans">Explore Further</h2>
               <div className="grid md:grid-cols-3 gap-5 items-stretch">
-                <Link to="/terminology" className="card-3d-blue group block h-full no-underline">
-                  <div className="card-3d-blue__inner h-full">
-                    <div className="card-3d-blue__face p-6 flex flex-col h-full">
+                <Link to="/terminology" className="tile-white group block h-full no-underline">
+                  <div className="tile-white__inner h-full">
+                    <div className="tile-white__face p-6 flex flex-col h-full">
                       <img
                         src={iconTerminology}
                         alt=""
@@ -434,9 +434,9 @@ const ProbateEstateSales = () => {
                     </div>
                   </div>
                 </Link>
-                <Link to="/faq" className="card-3d-blue group block h-full no-underline">
-                  <div className="card-3d-blue__inner h-full">
-                    <div className="card-3d-blue__face p-6 flex flex-col h-full">
+                <Link to="/faq" className="tile-white group block h-full no-underline">
+                  <div className="tile-white__inner h-full">
+                    <div className="tile-white__face p-6 flex flex-col h-full">
                       <img
                         src={iconCommonQuestions}
                         alt=""
@@ -459,9 +459,9 @@ const ProbateEstateSales = () => {
                     </div>
                   </div>
                 </Link>
-                <Link to="/how-the-process-works" className="card-3d-blue group block h-full no-underline">
-                  <div className="card-3d-blue__inner h-full">
-                    <div className="card-3d-blue__face p-6 flex flex-col h-full">
+                <Link to="/how-the-process-works" className="tile-white group block h-full no-underline">
+                  <div className="tile-white__inner h-full">
+                    <div className="tile-white__face p-6 flex flex-col h-full">
                       <img
                         src={iconHowProcessWorks}
                         alt=""

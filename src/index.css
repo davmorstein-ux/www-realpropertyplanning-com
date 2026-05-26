@@ -826,7 +826,21 @@ body {
 }
 
 /* ═══════════════════════════════════════════════
-   BLUE TRIM 3D PREMIUM KEYCAP — electric blue variant
+   TILE-WHITE — clean flat white card (replaces card-3d-blue site-wide)
+═══════════════════════════════════════════════ */
+.tile-white {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+.tile-white__inner,
+.tile-white__face {
+  /* no extra chrome — the .tile-white container provides the styling */
+}
+
+/* ═══════════════════════════════════════════════
+   BLUE TRIM 3D PREMIUM KEYCAP — electric blue variant (retained for legacy refs)
 ═══════════════════════════════════════════════ */
 .card-3d-blue {
   @apply relative cursor-pointer transition-all duration-200;

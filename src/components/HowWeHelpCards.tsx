@@ -45,9 +45,9 @@ const HowWeHelpCards = () => {
         </h2>
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {cards.map((card) => (
-            <div key={card.headline} className="card-3d-blue group block h-full">
-              <div className="card-3d-blue__inner h-full">
-                <div className="card-3d-blue__face h-full">
+            <div key={card.headline} className="tile-white group block h-full">
+              <div className="tile-white__inner h-full">
+                <div className="tile-white__face h-full">
                   <div className="flex h-full flex-col px-7 pb-7 pt-8">
                     <div className="w-full flex justify-center mb-5">
                       <img

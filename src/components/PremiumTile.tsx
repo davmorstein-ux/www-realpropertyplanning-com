@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 
 /**
  * PremiumTile — the approved site-wide tile style.
- * Matches the "Related Resources" cards (card-3d-blue): white face, gold trim,
+ * Matches the "Related Resources" cards (tile-white): white face, gold trim,
  * soft multi-layer shadow, generous padding, hover lift.
  *
  * Use this component for ANY tile/card across the site to keep visuals consistent.
@@ -35,10 +35,10 @@ const PremiumTile = ({
 }: PremiumTileProps) => (
   <Link
     to={to}
-    className={`card-3d-blue group block h-full ${minHeight} ${className}`}
+    className={`tile-white group block h-full ${minHeight} ${className}`}
   >
-    <div className="card-3d-blue__inner h-full">
-      <div className="card-3d-blue__face h-full">
+    <div className="tile-white__inner h-full">
+      <div className="tile-white__face h-full">
         <div className="flex h-full flex-col justify-between px-6 pb-6 pt-8 sm:px-7 sm:pb-7 sm:pt-9">
           <div>
             {icon && <div className="mb-4">{icon}</div>}

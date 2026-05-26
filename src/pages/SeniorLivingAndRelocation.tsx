@@ -142,10 +142,10 @@ const SeniorLivingAndRelocation = () => {
                     <Link
                       key={option.title}
                       to={option.path}
-                      className="card-3d-blue group block no-underline w-[200px] h-[220px] sm:w-[210px] sm:h-[220px] overflow-hidden"
+                      className="tile-white group block no-underline w-[200px] h-[220px] sm:w-[210px] sm:h-[220px] overflow-hidden"
                     >
-                      <div className="card-3d-blue__inner h-full">
-                        <div className="card-3d-blue__face h-full flex flex-col items-center overflow-hidden">
+                      <div className="tile-white__inner h-full">
+                        <div className="tile-white__face h-full flex flex-col items-center overflow-hidden">
                           {/* Image area — fixed height */}
                           <div className="h-28 w-full flex items-center justify-center shrink-0 pt-2">
                             {option.title === "Adult Family Homes" ? (
@@ -199,10 +199,10 @@ const SeniorLivingAndRelocation = () => {
                 {supportItems.map((item) => (
                   <div
                     key={item.title}
-                    className="card-3d-blue group block h-full min-h-[252px] sm:min-h-[280px]"
+                    className="tile-white group block h-full min-h-[252px] sm:min-h-[280px]"
                   >
-                    <div className="card-3d-blue__inner h-full">
-                      <div className="card-3d-blue__face h-full">
+                    <div className="tile-white__inner h-full">
+                      <div className="tile-white__face h-full">
                         <div className="flex h-full flex-col justify-between px-6 pb-6 pt-10 sm:px-7 sm:pb-7 sm:pt-11">
                           <div>
                             <h3 className="mb-3 font-serif text-xl font-extrabold leading-snug text-foreground sm:text-[1.38rem]" style={{ textShadow: "0 1px 4px hsla(220, 30%, 15%, 0.25)" }}>

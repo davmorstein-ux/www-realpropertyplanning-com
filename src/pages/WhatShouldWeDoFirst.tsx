@@ -204,10 +204,10 @@ const WhatShouldWeDoFirst = () => {
                   key={p.href + p.letter}
                   to={p.href}
                   aria-label={`${p.title} — ${p.description} — Learn More`}
-                  className="card-3d-blue group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+                  className="tile-white group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
                 >
-                  <div className="card-3d-blue__inner h-full relative">
-                    <div className="card-3d-blue__face h-full">
+                  <div className="tile-white__inner h-full relative">
+                    <div className="tile-white__face h-full">
                       <div className="flex h-full flex-col">
                         <div className="relative flex flex-1 flex-col items-center text-center" style={{ padding: "20px" }}>
                           <h3 className="font-serif text-[22px] md:text-[24px] font-semibold text-navy leading-snug mb-3">
