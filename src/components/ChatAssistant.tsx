@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { X, Send } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import chatCouple from "@/assets/chat-couple.png";
-import chatTire from "@/assets/chat-tire.png";
+
 
 type Msg = { role: "user" | "assistant"; content: string };
 
@@ -352,7 +352,7 @@ const ChatAssistant = () => {
           onClick={() => setOpen((v) => !v)}
         >
           <img src={chatCouple} alt="Chat with us" className="rpp-chat-couple-layer" />
-          <img src={chatTire} alt="" aria-hidden="true" className="rpp-chat-tire-layer" />
+          
         </button>
 
         {open && (
