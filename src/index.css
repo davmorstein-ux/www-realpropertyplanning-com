@@ -112,23 +112,34 @@ nav button[aria-haspopup] svg, nav [class*="dropdown"] button svg {
   -webkit-box-orient: vertical !important;
 }
 
-/* Button/pill fixes — text must never overflow */
-.card button, .card a[class*="btn"],
+/* Gold pill buttons — narrow height, full width */
+.btn-gold, [class*="gold"], [class*="Gold"],
+.card a, .card button,
 [class*="card"] button, [class*="card"] a,
-[class*="tile"] button, [class*="tile"] a {
-  width: 100% !important;
-  white-space: nowrap !important;
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
-  padding-top: 6px !important;
-  padding-bottom: 6px !important;
-  padding-left: 16px !important;
-  padding-right: 16px !important;
-  font-size: 0.85rem !important;
-  box-sizing: border-box !important;
+[class*="tile"] a, [class*="tile"] button {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  padding: 5px 12px !important;
+  font-size: 0.78rem !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  box-sizing: border-box !important;
+  height: auto !important;
+  min-height: 0 !important;
+  border-radius: 6px !important;
+}
+
+/* Hero blue title band — prevent descender clipping */
+[class*="hero-band"], [class*="title-band"], [class*="HeroBand"],
+[class*="blue-band"], [class*="BlueBand"] {
+  padding-top: 8px !important;
+  padding-bottom: 10px !important;
+  line-height: 1.4 !important;
+  overflow: visible !important;
 }
 
 @tailwind base;
