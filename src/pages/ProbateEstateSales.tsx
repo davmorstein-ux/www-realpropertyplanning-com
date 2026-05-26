@@ -113,7 +113,7 @@ const ProbateEstateSales = () => {
               <p className="text-muted-foreground text-lg leading-relaxed mb-8">
                 ​
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 items-stretch">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 items-stretch" style={{ display: "flex", justifyContent: "center", alignItems: "flex-start", gap: "24px" }}>
                 {[
                   {
                     image: "/tiles/set2/the-probate-process.webp",
