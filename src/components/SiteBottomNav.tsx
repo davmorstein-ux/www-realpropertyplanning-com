@@ -502,7 +502,7 @@ const SiteBottomNav = () => {
               aria-label="Previous page"
               className="nav-arrow-left"
               onMouseEnter={(e) => {
-                (e.currentTarget as HTMLDivElement).style.transform = "scale(1.25)";
+                (e.currentTarget as HTMLDivElement).style.transform = "scale(1)";
                 setTooltip("Go Back");
               }}
               onMouseLeave={(e) => {
@@ -510,7 +510,7 @@ const SiteBottomNav = () => {
                 setTooltip("");
               }}
               onFocus={(e) => {
-                (e.currentTarget as HTMLDivElement).style.transform = "scale(1.25)";
+                (e.currentTarget as HTMLDivElement).style.transform = "scale(1)";
                 setTooltip("Go Back");
               }}
               onBlur={(e) => {
@@ -702,7 +702,7 @@ const SiteBottomNav = () => {
               aria-label="Next page"
               className="nav-arrow-right"
               onMouseEnter={(e) => {
-                (e.currentTarget as HTMLDivElement).style.transform = "scale(1.25)";
+                (e.currentTarget as HTMLDivElement).style.transform = "scale(1)";
                 setTooltip("Go Forward");
               }}
               onMouseLeave={(e) => {
@@ -710,7 +710,7 @@ const SiteBottomNav = () => {
                 setTooltip("");
               }}
               onFocus={(e) => {
-                (e.currentTarget as HTMLDivElement).style.transform = "scale(1.25)";
+                (e.currentTarget as HTMLDivElement).style.transform = "scale(1)";
                 setTooltip("Go Forward");
               }}
               onBlur={(e) => {
