@@ -224,7 +224,7 @@ const ProbateEstateSales = () => {
                     <div className="tile-white__inner h-full relative">
                       <div className="tile-white__face h-full">
                         <div className="flex h-full flex-col">
-                          <div className="relative flex flex-1 flex-col items-center text-center overflow-hidden" style={{ padding: "16px" }}>
+                          <div className="relative flex flex-col items-center text-center overflow-hidden" style={{ padding: "16px" }}>
                             <h3 className="font-serif text-[22px] md:text-[24px] font-semibold text-navy leading-snug flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0" style={{ display: "flex", alignItems: "flex-start", marginBottom: "8px" }}>
                               {s.title}
                             </h3>
@@ -239,7 +239,7 @@ const ProbateEstateSales = () => {
                             </span>
                             <div
                               aria-hidden="true"
-                              className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100"
+                              className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                               style={{
                                 background: "rgba(10, 20, 46, 0.97)",
                                 zIndex: 10,
