@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const resources = [
   {
-    title: "Washington Executor's 10-Step Checklist",
+    title: <>Washington Executor's<br />10-Step Checklist</>,
     href: "/resources/washington-executors-10-step-checklist",
   },
   {
