@@ -233,6 +233,7 @@ const App = () => (
           <Route path="/planning-before-a-crisis/when-a-move-is-coming" element={<PBCWhenAMoveIsComing />} />
           <Route path="/planning-before-a-crisis/how-we-can-help" element={<PBCHowWeCanHelp />} />
           <Route path="/building-your-trusted-professional-team" element={<BuildingYourTrustedProfessionalTeam />} />
+          <Route path="/aging-life-care-managers" element={<AgingLifeCareManagers />} />
           <Route path="/downsizing-preparing-for-transition" element={<DownsizingPreparingForTransition />} />
           <Route path="/executor-responsibilities-first-steps" element={<ExecutorResponsibilitiesFirstSteps />} />
           <Route path="/executor-responsibilities-first-steps/first-30-days" element={<ERFFirst30Days />} />
