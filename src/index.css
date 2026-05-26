@@ -1893,7 +1893,7 @@ h3.hero-band-title {
   color: #ffffff !important;
   text-align: center !important;
   line-height: 1.2 !important;
-  font-size: clamp(14px, 2vw, 18px) !important;
+  font-size: clamp(16px, 2.4vw, 22px) !important;
   margin: 0 !important;
   opacity: 1 !important;
 }
