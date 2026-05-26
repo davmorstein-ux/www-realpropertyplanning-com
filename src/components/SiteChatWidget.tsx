@@ -222,7 +222,7 @@ const SiteChatWidget = () => {
         .rpp-cw-panel[data-min="true"] { height: 40px; min-height: 40px; }
 
         .rpp-cw-header {
-          height: 36px;
+          height: 32px;
           background: ${TEAL};
           color: #fff;
           display: flex;
