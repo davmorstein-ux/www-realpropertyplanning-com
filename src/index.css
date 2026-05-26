@@ -1893,7 +1893,7 @@ h3.hero-band-title {
   color: #ffffff !important;
   text-align: center !important;
   line-height: 1.2 !important;
-  font-size: clamp(22px, 3.6vw, 44px) !important;
+  font-size: clamp(14px, 2vw, 18px) !important;
   margin: 0 !important;
   opacity: 1 !important;
 }
@@ -2331,7 +2331,7 @@ hr { margin-top: 1.5rem !important; margin-bottom: 1.5rem !important; }
   }
   /* 4. Blue band hero title — reduce 2 steps */
   .hero-band-title {
-    font-size: clamp(15px, 4.5vw, 20px) !important;
+    font-size: clamp(12px, 3.5vw, 16px) !important;
     line-height: 1.25 !important;
     padding: 0 12px;
   }
