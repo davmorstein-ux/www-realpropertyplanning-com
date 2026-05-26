@@ -222,12 +222,12 @@ const SiteChatWidget = () => {
         .rpp-cw-panel[data-min="true"] { height: 40px; min-height: 40px; }
 
         .rpp-cw-header {
-          height: 40px;
+          height: 36px;
           background: ${TEAL};
           color: #fff;
           display: flex;
           align-items: center;
-          padding: 0 10px;
+          padding: 1px 10px;
           cursor: grab;
           touch-action: none;
           user-select: none;
@@ -236,27 +236,24 @@ const SiteChatWidget = () => {
         .rpp-cw-header:active { cursor: grabbing; }
         .rpp-cw-title {
           flex: 1;
-          font-size: 0.8rem;
+          font-size: 0.75rem;
           font-weight: 600;
           color: #fff;
           letter-spacing: 0.01em;
           white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
         }
         .rpp-cw-iconbtn {
-          width: 28px;
-          height: 28px;
           background: transparent;
           border: none;
           color: #fff;
-          font-size: 18px;
+          font-size: 0.7rem;
           line-height: 1;
           cursor: pointer;
           border-radius: 4px;
           display: flex;
           align-items: center;
           justify-content: center;
+          padding: 2px 4px;
         }
         .rpp-cw-iconbtn:hover { background: rgba(255,255,255,0.15); }
 
@@ -376,11 +373,11 @@ const SiteChatWidget = () => {
           align-items: center;
           gap: 8px;
           width: 100%;
-          padding: 8px 12px;
+          padding: 6px 10px;
           background: transparent;
           border: none;
           color: ${TEAL};
-          font-size: 0.8rem;
+          font-size: 0.75rem;
           font-family: inherit;
           cursor: pointer;
           text-align: left;
@@ -441,7 +438,7 @@ const SiteChatWidget = () => {
                     role="menuitem"
                     onClick={() => setSoundOn((v) => !v)}
                   >
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                       <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
                       <path d="M10 21a2 2 0 0 0 4 0" />
                     </svg>
@@ -453,7 +450,7 @@ const SiteChatWidget = () => {
                     role="menuitem"
                     onClick={handlePrint}
                   >
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                       <polyline points="6 9 6 2 18 2 18 9" />
                       <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
                       <rect x="6" y="14" width="12" height="8" />
