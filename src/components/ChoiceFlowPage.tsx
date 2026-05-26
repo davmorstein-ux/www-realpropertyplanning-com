@@ -103,10 +103,10 @@ const ChoiceGrid = ({ choices }: { choices: FlowNode[] }) => {
           <li key={choice.path} className="h-full">
             <Link
               to={choice.path}
-              className="card-3d-blue group block h-full min-h-[176px] sm:min-h-[192px] no-underline"
+              className="tile-white group block h-full min-h-[176px] sm:min-h-[192px] no-underline"
             >
-              <div className="card-3d-blue__inner h-full">
-                <div className="card-3d-blue__face h-full">
+              <div className="tile-white__inner h-full">
+                <div className="tile-white__face h-full">
                   <div className="flex h-full flex-col justify-between px-7 pb-7 pt-8 sm:px-8 sm:pb-8 sm:pt-9">
                     <div className="flex items-center gap-5">
                       {choice.image ? (

@@ -37,10 +37,10 @@ const HomepageNav = () => {
               key={s.title}
               href={s.href}
               aria-label={`${s.title} — ${s.blurb}`}
-              className="card-3d-blue group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+              className="tile-white group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
             >
-              <div className="card-3d-blue__inner h-full relative">
-                <div className="card-3d-blue__face h-full">
+              <div className="tile-white__inner h-full relative">
+                <div className="tile-white__face h-full">
                   <div className="flex h-full flex-col">
                     <div className="relative w-full overflow-hidden bg-transparent flex items-center justify-center" style={{ aspectRatio: "500 / 312" }}>
                       <img

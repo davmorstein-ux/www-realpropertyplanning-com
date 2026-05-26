@@ -182,7 +182,7 @@ const RelatedServices = ({ currentPath, links: linksOverride, heading: headingOv
     let frameId = 0;
 
     const measureSpherePositions = () => {
-      const cards = Array.from(grid.querySelectorAll<HTMLElement>(".card-3d-blue"));
+      const cards = Array.from(grid.querySelectorAll<HTMLElement>(".tile-white"));
 
       if (cards.length < 4) {
         setSpherePositions([]);
@@ -254,7 +254,7 @@ const RelatedServices = ({ currentPath, links: linksOverride, heading: headingOv
 
     const resizeObserver = new ResizeObserver(scheduleMeasurement);
     resizeObserver.observe(grid);
-    Array.from(grid.querySelectorAll<HTMLElement>(".card-3d-blue")).forEach((card) => {
+    Array.from(grid.querySelectorAll<HTMLElement>(".tile-white")).forEach((card) => {
       resizeObserver.observe(card);
     });
 
@@ -298,12 +298,12 @@ const RelatedServices = ({ currentPath, links: linksOverride, heading: headingOv
                 <Link
                   key={link.href}
                   to={link.href}
-                  className="card-3d-blue group block h-full min-h-[252px] sm:min-h-[280px]"
+                  className="tile-white group block h-full min-h-[252px] sm:min-h-[280px]"
                   onMouseEnter={() => setHoveredIndex(index)}
                   onMouseLeave={() => setHoveredIndex(null)}
                 >
-                  <div className="card-3d-blue__inner h-full">
-                    <div className="card-3d-blue__face h-full">
+                  <div className="tile-white__inner h-full">
+                    <div className="tile-white__face h-full">
                       <div className="flex h-full flex-col justify-between px-6 pb-6 pt-10 sm:px-7 sm:pb-7 sm:pt-11">
                         <div>
                           <h3 className="mb-3 font-serif text-xl font-extrabold leading-snug text-foreground transition-colors duration-300 group-hover:text-accent sm:text-[1.38rem]" style={{ textShadow: "0 1px 4px hsla(220, 30%, 15%, 0.25)" }}>

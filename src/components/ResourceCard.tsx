@@ -16,9 +16,9 @@ const ResourceCard = ({
   badge,
   icon,
 }: ResourceCardProps) => (
-  <Link to={linkTo} className="card-3d-blue group block h-full min-h-[220px]">
-    <div className="card-3d-blue__inner h-full">
-      <div className="card-3d-blue__face h-full">
+  <Link to={linkTo} className="tile-white group block h-full min-h-[220px]">
+    <div className="tile-white__inner h-full">
+      <div className="tile-white__face h-full">
         <div className="flex h-full flex-col justify-between px-7 pb-7 pt-8">
           <div className="flex items-start gap-4">
             <div className="flex h-12 w-12 shrink-0 items-center justify-center mt-0.5">
