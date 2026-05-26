@@ -531,7 +531,7 @@ body {
   font-size: 14px !important;
   font-weight: 700 !important;
   line-height: 1 !important;
-  display: inline-flex !important;
+  display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   gap: 8px !important;
