@@ -334,8 +334,11 @@ const SiteChatWidget = () => {
           {!minimized && (
             <>
               <div className="rpp-cw-messages">
-                <div className="rpp-cw-bubble">
-                  Hello! How can we help you today? We respond personally to every inquiry.
+                <div className="rpp-cw-msg-row">
+                  <div className="rpp-cw-avatar">RPP</div>
+                  <div className="rpp-cw-bubble welcome">
+                    Hello! How can we help you today? We respond personally to every inquiry.
+                  </div>
                 </div>
                 {confirmation && (
                   <div className="rpp-cw-bubble confirm">
