@@ -57,7 +57,7 @@ const property: Card[] = [
 
 const Section = ({ heading, cards }: { heading: string; cards: Card[] }) => (
   <section className="py-10 lg:py-12">
-      <div className="mx-auto px-1 lg:px-2" style={{ maxWidth: "1600px" }}>
+      <div className="mx-auto px-0" style={{ maxWidth: "1600px" }}>
       <h2
         className="font-serif text-2xl md:text-3xl font-semibold mb-3 text-center"
         style={{ color: "#1B3A6B" }}
@@ -67,7 +67,7 @@ const Section = ({ heading, cards }: { heading: string; cards: Card[] }) => (
       <p className="text-muted-foreground text-base leading-relaxed text-center max-w-3xl mx-auto mb-7">
         The professionals listed here are independent and are not employees, partners, or affiliates of Real Property Planning. This directory is provided for educational and informational purposes only.
       </p>
-      <div className="grid grid-cols-2 gap-x-2 gap-y-3 items-stretch justify-items-stretch">
+      <div className="grid grid-cols-3 gap-x-0 gap-y-3 items-stretch justify-items-stretch">
         {cards.map((s) => (
           <Link
             key={s.title + s.href}
@@ -94,10 +94,10 @@ const Section = ({ heading, cards }: { heading: string; cards: Card[] }) => (
                   />
                   <div
                     className="relative flex flex-1 flex-col items-center text-center overflow-hidden"
-                    style={{ padding: "8px 16px 12px" }}
+                    style={{ padding: "8px 8px 12px" }}
                   >
                     <h3
-                      className="font-serif text-[20px] md:text-[22px] font-bold leading-snug mb-3 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0 whitespace-nowrap"
+                      className="font-serif text-[17px] md:text-[19px] font-bold leading-snug mb-3 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0 whitespace-nowrap"
                       style={{ color: "#1B3A6B", textDecoration: "none" }}
                     >
                       {s.title}
