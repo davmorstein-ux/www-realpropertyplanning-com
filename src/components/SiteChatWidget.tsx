@@ -8,8 +8,8 @@ const TEAL_DARK = "#094A50";
 const CREAM = "#F5F0E8";
 
 const BUTTON_SIZE = 44;
-const PANEL_W = 260;
-const PANEL_H = 280;
+const PANEL_W = 240;
+const PANEL_H = 260;
 const MARGIN = 16;
 
 const SiteChatWidget = () => {
@@ -211,8 +211,8 @@ const SiteChatWidget = () => {
           gap: 8px;
         }
         .rpp-cw-avatar {
-          width: 44px;
-          height: 44px;
+          width: 56px;
+          height: 56px;
           border-radius: 50%;
           object-fit: cover;
           flex-shrink: 0;
@@ -335,7 +335,7 @@ const SiteChatWidget = () => {
                 <div className="rpp-cw-msg-row">
                   <img className="rpp-cw-avatar" src={chatAvatar} alt="Real Property Planning representative" />
                   <div className="rpp-cw-bubble welcome">
-                    How can we help you?
+                    How can we help you today?
                   </div>
                 </div>
                 {confirmation && (
