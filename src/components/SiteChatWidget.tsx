@@ -17,6 +17,54 @@ const SiteChatWidget = () => {
   const [minimized, setMinimized] = useState(false);
   const [input, setInput] = useState("");
   const [confirmation, setConfirmation] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [soundOn, setSoundOn] = useState(true);
+  const menuRef = useRef<HTMLDivElement | null>(null);
+  const soundOnRef = useRef(soundOn);
+  useEffect(() => { soundOnRef.current = soundOn; }, [soundOn]);
+
+  const playChime = () => {
+    try {
+      const AC: typeof AudioContext | undefined =
+        (window as any).AudioContext || (window as any).webkitAudioContext;
+      if (!AC) return;
+      const ctx = new AC();
+      const o = ctx.createOscillator();
+      const g = ctx.createGain();
+      o.type = "sine";
+      o.frequency.setValueAtTime(880, ctx.currentTime);
+      o.frequency.exponentialRampToValueAtTime(1320, ctx.currentTime + 0.18);
+      g.gain.setValueAtTime(0.0001, ctx.currentTime);
+      g.gain.exponentialRampToValueAtTime(0.18, ctx.currentTime + 0.02);
+      g.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 0.35);
+      o.connect(g); g.connect(ctx.destination);
+      o.start();
+      o.stop(ctx.currentTime + 0.4);
+      setTimeout(() => ctx.close(), 600);
+    } catch { /* ignore */ }
+  };
+
+  // Play notification chime when a new message (confirmation) appears
+  useEffect(() => {
+    if (confirmation && soundOnRef.current) playChime();
+  }, [confirmation]);
+
+  // Close dropdown on outside click
+  useEffect(() => {
+    if (!menuOpen) return;
+    const onDoc = (e: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
+        setMenuOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", onDoc);
+    return () => document.removeEventListener("mousedown", onDoc);
+  }, [menuOpen]);
+
+  const handlePrint = () => {
+    setMenuOpen(false);
+    setTimeout(() => window.print(), 50);
+  };
 
   // Button position (bottom-right by default). Stored as left/top in px.
   const [btnPos, setBtnPos] = useState<Pos>(() => ({
@@ -310,6 +358,49 @@ const SiteChatWidget = () => {
         @media (max-width: 639px) {
           .rpp-cw-panel { width: 90vw !important; }
         }
+
+        .rpp-cw-menu-wrap { position: relative; display: inline-flex; }
+        .rpp-cw-menu {
+          position: absolute;
+          top: calc(100% + 6px);
+          right: 0;
+          background: #fff;
+          border-radius: 6px;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+          min-width: 140px;
+          z-index: 1;
+          overflow: hidden;
+        }
+        .rpp-cw-menu-item {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          width: 100%;
+          padding: 8px 12px;
+          background: transparent;
+          border: none;
+          color: ${TEAL};
+          font-size: 0.8rem;
+          font-family: inherit;
+          cursor: pointer;
+          text-align: left;
+        }
+        .rpp-cw-menu-item:hover { background: ${CREAM}; }
+
+        @media print {
+          body * { visibility: hidden !important; }
+          .rpp-cw-panel, .rpp-cw-panel * { visibility: visible !important; }
+          .rpp-cw-panel {
+            position: absolute !important;
+            left: 0 !important;
+            top: 0 !important;
+            width: 100% !important;
+            height: auto !important;
+            box-shadow: none !important;
+          }
+          .rpp-cw-input-bar, .rpp-cw-iconbtn, .rpp-cw-menu { display: none !important; }
+          .rpp-cw-btn { display: none !important; }
+        }
       `}</style>
 
       {open && (
@@ -326,6 +417,52 @@ const SiteChatWidget = () => {
         >
           <div className="rpp-cw-header" onPointerDown={startPanelDrag}>
             <div className="rpp-cw-title">Real Property Planning</div>
+            <div className="rpp-cw-menu-wrap" ref={menuRef}>
+              <button
+                type="button"
+                className="rpp-cw-iconbtn"
+                aria-label="Open menu"
+                aria-haspopup="menu"
+                aria-expanded={menuOpen}
+                onPointerDown={(e) => e.stopPropagation()}
+                onClick={() => setMenuOpen((v) => !v)}
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <circle cx="12" cy="5" r="1.8" />
+                  <circle cx="12" cy="12" r="1.8" />
+                  <circle cx="12" cy="19" r="1.8" />
+                </svg>
+              </button>
+              {menuOpen && (
+                <div className="rpp-cw-menu" role="menu" onPointerDown={(e) => e.stopPropagation()}>
+                  <button
+                    type="button"
+                    className="rpp-cw-menu-item"
+                    role="menuitem"
+                    onClick={() => setSoundOn((v) => !v)}
+                  >
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
+                      <path d="M10 21a2 2 0 0 0 4 0" />
+                    </svg>
+                    {soundOn ? "Sound On" : "Sound Off"}
+                  </button>
+                  <button
+                    type="button"
+                    className="rpp-cw-menu-item"
+                    role="menuitem"
+                    onClick={handlePrint}
+                  >
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <polyline points="6 9 6 2 18 2 18 9" />
+                      <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+                      <rect x="6" y="14" width="12" height="8" />
+                    </svg>
+                    Print
+                  </button>
+                </div>
+              )}
+            </div>
             <button
               type="button"
               className="rpp-cw-iconbtn"
