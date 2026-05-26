@@ -57,7 +57,7 @@ const property: Card[] = [
 
 const Section = ({ heading, cards }: { heading: string; cards: Card[] }) => (
   <section className="py-10 lg:py-12">
-    <div className="container px-6 lg:px-8">
+      <div className="mx-auto px-6 lg:px-8" style={{ maxWidth: "1400px" }}>
       <h2
         className="font-serif text-2xl md:text-3xl font-semibold mb-3 text-center"
         style={{ color: "#1B3A6B" }}
@@ -74,7 +74,7 @@ const Section = ({ heading, cards }: { heading: string; cards: Card[] }) => (
             to={s.href}
             aria-label={`${s.title} — ${s.description} — ${s.cta}`}
             className="interior-tile tile-white group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
-            style={{ textDecoration: "none" }}
+            style={{ textDecoration: "none", maxWidth: "320px !important" }}
           >
             <div className="tile-white__inner h-full relative">
               <div className="tile-white__face h-full">
