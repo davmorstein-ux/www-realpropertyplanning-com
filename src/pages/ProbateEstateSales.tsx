@@ -27,7 +27,7 @@ const whatMakesDifferentTiles = [
   {
     image: "/tiles/set2/executors.webp",
     alt: "Multiple decision-makers in estate sales",
-    title: "Multiple Decisions",
+    title: "Decision Makers",
     description: "Executors, co-heirs, attorneys, and trustees must coordinate.",
     cta: "Learn More",
     href: "/executors",
