@@ -66,10 +66,16 @@ const HomepageFunnel = () => (
             key={title}
             to={href}
             aria-label={`${title} — ${description} — ${cta}`}
-            className="card-3d-blue group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+            className="group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+            style={{
+              background: "#ffffff",
+              borderRadius: "12px",
+              boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
+              overflow: "hidden",
+            }}
           >
-            <div className="card-3d-blue__inner h-full">
-              <div className="card-3d-blue__face h-full" style={{ padding: 0, overflow: "hidden" }}>
+            <div className="h-full">
+              <div className="h-full" style={{ padding: 0, overflow: "hidden" }}>
                 <div className="flex h-full flex-col">
                   <img
                     src={imgSrc}
