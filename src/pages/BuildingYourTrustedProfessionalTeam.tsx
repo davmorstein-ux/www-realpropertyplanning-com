@@ -95,7 +95,7 @@ const Section = ({ heading, cards }: { heading: string; cards: Card[] }) => (
                     style={{ padding: "4px 16px 12px" }}
                   >
                     <h3
-                      className="font-serif text-[20px] md:text-[22px] font-bold leading-snug mb-3 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0"
+                      className="font-serif text-[20px] md:text-[22px] font-bold leading-snug mb-3 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0 whitespace-nowrap"
                       style={{ color: "#1B3A6B", textDecoration: "none" }}
                     >
                       {s.title}
