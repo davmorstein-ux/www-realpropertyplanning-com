@@ -219,6 +219,7 @@ const ProbateEstateSales = () => {
                     to={s.href}
                     aria-label={`${s.title} — ${s.description} — ${s.cta}`}
                     className="interior-tile tile-white group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+                    style={{ width: "320px" }}
                   >
                     <div className="tile-white__inner h-full relative">
                       <div className="tile-white__face h-full">
