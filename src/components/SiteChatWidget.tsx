@@ -373,11 +373,11 @@ const SiteChatWidget = () => {
           align-items: center;
           gap: 8px;
           width: 100%;
-          padding: 8px 12px;
+          padding: 6px 10px;
           background: transparent;
           border: none;
           color: ${TEAL};
-          font-size: 0.8rem;
+          font-size: 0.75rem;
           font-family: inherit;
           cursor: pointer;
           text-align: left;
