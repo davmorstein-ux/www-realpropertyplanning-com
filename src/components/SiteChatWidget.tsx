@@ -358,6 +358,49 @@ const SiteChatWidget = () => {
         @media (max-width: 639px) {
           .rpp-cw-panel { width: 90vw !important; }
         }
+
+        .rpp-cw-menu-wrap { position: relative; display: inline-flex; }
+        .rpp-cw-menu {
+          position: absolute;
+          top: calc(100% + 6px);
+          right: 0;
+          background: #fff;
+          border-radius: 6px;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+          min-width: 140px;
+          z-index: 1;
+          overflow: hidden;
+        }
+        .rpp-cw-menu-item {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          width: 100%;
+          padding: 8px 12px;
+          background: transparent;
+          border: none;
+          color: ${TEAL};
+          font-size: 0.8rem;
+          font-family: inherit;
+          cursor: pointer;
+          text-align: left;
+        }
+        .rpp-cw-menu-item:hover { background: ${CREAM}; }
+
+        @media print {
+          body * { visibility: hidden !important; }
+          .rpp-cw-panel, .rpp-cw-panel * { visibility: visible !important; }
+          .rpp-cw-panel {
+            position: absolute !important;
+            left: 0 !important;
+            top: 0 !important;
+            width: 100% !important;
+            height: auto !important;
+            box-shadow: none !important;
+          }
+          .rpp-cw-input-bar, .rpp-cw-iconbtn, .rpp-cw-menu { display: none !important; }
+          .rpp-cw-btn { display: none !important; }
+        }
       `}</style>
 
       {open && (
