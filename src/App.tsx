@@ -40,6 +40,7 @@ const PBCPropertyQuestions = lazy(() => import("./pages/planning-before-a-crisis
 const PBCWhenAMoveIsComing = lazy(() => import("./pages/planning-before-a-crisis/WhenAMoveIsComing"));
 const PBCHowWeCanHelp = lazy(() => import("./pages/planning-before-a-crisis/HowWeCanHelp"));
 const BuildingYourTrustedProfessionalTeam = lazy(() => import("./pages/BuildingYourTrustedProfessionalTeam"));
+const AgingLifeCareManagers = lazy(() => import("./pages/AgingLifeCareManagers"));
 const DownsizingPreparingForTransition = lazy(() => import("./pages/DownsizingPreparingForTransition"));
 const ExecutorResponsibilitiesFirstSteps = lazy(() => import("./pages/ExecutorResponsibilitiesFirstSteps"));
 const ERFFirst30Days = lazy(() => import("./pages/executor-responsibilities-first-steps/First30Days"));
@@ -232,6 +233,7 @@ const App = () => (
           <Route path="/planning-before-a-crisis/when-a-move-is-coming" element={<PBCWhenAMoveIsComing />} />
           <Route path="/planning-before-a-crisis/how-we-can-help" element={<PBCHowWeCanHelp />} />
           <Route path="/building-your-trusted-professional-team" element={<BuildingYourTrustedProfessionalTeam />} />
+          <Route path="/aging-life-care-managers" element={<AgingLifeCareManagers />} />
           <Route path="/downsizing-preparing-for-transition" element={<DownsizingPreparingForTransition />} />
           <Route path="/executor-responsibilities-first-steps" element={<ExecutorResponsibilitiesFirstSteps />} />
           <Route path="/executor-responsibilities-first-steps/first-30-days" element={<ERFFirst30Days />} />
