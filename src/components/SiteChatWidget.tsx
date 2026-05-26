@@ -5,9 +5,9 @@ type Pos = { x: number; y: number };
 const NAVY = "#1B3A6B";
 const NAVY_DARK = "#142C52";
 
-const BUTTON_SIZE = 52;
-const PANEL_W = 300;
-const PANEL_H = 420;
+const BUTTON_SIZE = 44;
+const PANEL_W = 260;
+const PANEL_H = 360;
 const MARGIN = 16;
 
 const SiteChatWidget = () => {
