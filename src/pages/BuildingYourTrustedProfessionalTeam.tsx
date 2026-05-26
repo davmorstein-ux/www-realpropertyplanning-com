@@ -108,7 +108,7 @@ const Section = ({ heading, cards }: { heading: string; cards: Card[] }) => (
                     </p>
                     <span
                       className="gold-cta mt-auto transition-opacity duration-200 group-hover:opacity-0"
-                      style={{ padding: "10px 16px", textDecoration: "none" }}
+                      style={{ textDecoration: "none" }}
                     >
                       {s.cta}
                       <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">

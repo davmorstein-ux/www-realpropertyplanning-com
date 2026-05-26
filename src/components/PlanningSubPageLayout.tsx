@@ -97,7 +97,7 @@ const PlanningSubPageLayout = ({
               <Link
                 to="/contact"
                 className="gold-cta inline-flex items-center"
-                style={{ padding: "14px 28px", fontSize: "17px" }}
+                style={{ fontSize: "15px" }}
               >
                 Get in Touch
                 <svg viewBox="0 0 24 24" aria-hidden="true">
