@@ -98,7 +98,19 @@ const HomepageFunnel = () => (
                     <p className="text-foreground mb-6" style={{ fontSize: "16px", lineHeight: 1.55 }}>
                       {description}
                     </p>
-                    <span className="gold-cta mt-auto">
+                    <span
+                      className="gold-cta mt-auto"
+                      style={{
+                        display: "flex",
+                        height: "32px",
+                        padding: "0 20px",
+                        fontSize: "14px",
+                        lineHeight: "1",
+                        minHeight: "0",
+                        alignItems: "center",
+                        justifyContent: "center",
+                      }}
+                    >
                       {cta}
                       <svg
                         viewBox="0 0 24 24"
