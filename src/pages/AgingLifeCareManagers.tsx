@@ -4,6 +4,7 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import HeroBandTitle from "@/components/HeroBandTitle";
+import FeaturedProviderPlaceholder from "@/components/FeaturedProviderPlaceholder";
 import { articleSchema } from "@/lib/schema";
 import heroImage from "@/assets/building-trusted-professional-team-hero.png";
 
