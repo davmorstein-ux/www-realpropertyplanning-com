@@ -209,18 +209,13 @@ const SiteChatWidget = () => {
           gap: 8px;
         }
         .rpp-cw-avatar {
-          width: 24px;
-          height: 24px;
+          width: 32px;
+          height: 32px;
           border-radius: 50%;
-          background: ${NAVY};
-          color: #fff;
-          font-size: 0.55rem;
-          font-weight: 700;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          object-fit: cover;
           flex-shrink: 0;
           margin-bottom: 2px;
+          display: block;
         }
         .rpp-cw-bubble {
           max-width: 75%;
