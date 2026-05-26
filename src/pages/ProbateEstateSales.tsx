@@ -212,7 +212,7 @@ const ProbateEstateSales = () => {
                 Estate property sales are genuinely different from standard real estate transactions — and treating them
                 like ordinary listings is where families and executors most often run into trouble.
               </p>
-              <div className="items-stretch" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "8px", width: "100%", maxWidth: "1100px", margin: "0 auto" }}>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "8px", width: "100%", maxWidth: "1100px", margin: "0 auto", alignItems: "stretch" }}>
                 {whatMakesDifferentTiles.map((s) => (
                   <Link
                     key={s.title}
@@ -224,7 +224,7 @@ const ProbateEstateSales = () => {
                       <div className="tile-white__face h-full">
                         <div className="flex h-full flex-col">
                           <div className="relative flex flex-1 flex-col items-center text-center overflow-hidden" style={{ padding: "16px" }}>
-                            <h3 className="font-serif text-[22px] md:text-[24px] font-semibold text-navy leading-snug mb-3 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0">
+                            <h3 className="font-serif text-[22px] md:text-[24px] font-semibold text-navy leading-snug flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0" style={{ minHeight: "56px", display: "flex", alignItems: "flex-end", marginBottom: "8px" }}>
                               {s.title}
                             </h3>
                             <p className="text-foreground text-[14px] leading-relaxed mb-6 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0">
