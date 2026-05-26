@@ -556,7 +556,7 @@ const SiteBottomNav = () => {
             <div
               className="nav-gear"
               onMouseEnter={(e) => {
-                (e.currentTarget as HTMLDivElement).style.transform = "scale(1.5)";
+                (e.currentTarget as HTMLDivElement).style.transform = "scale(1.1)";
               }}
               onMouseLeave={(e) => {
                 (e.currentTarget as HTMLDivElement).style.transform = "scale(1)";
