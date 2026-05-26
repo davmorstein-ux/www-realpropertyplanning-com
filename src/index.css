@@ -123,9 +123,11 @@ nav button[aria-haspopup] svg, nav [class*="dropdown"] button svg {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  width: 100% !important;
-  min-width: 0 !important;
-  padding: 5px 12px !important;
+  min-width: fit-content !important;
+  width: 90% !important;
+  max-width: 90% !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
   font-size: 0.78rem !important;
   white-space: nowrap !important;
   overflow: hidden !important;
