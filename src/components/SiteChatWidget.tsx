@@ -17,6 +17,54 @@ const SiteChatWidget = () => {
   const [minimized, setMinimized] = useState(false);
   const [input, setInput] = useState("");
   const [confirmation, setConfirmation] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [soundOn, setSoundOn] = useState(true);
+  const menuRef = useRef<HTMLDivElement | null>(null);
+  const soundOnRef = useRef(soundOn);
+  useEffect(() => { soundOnRef.current = soundOn; }, [soundOn]);
+
+  const playChime = () => {
+    try {
+      const AC: typeof AudioContext | undefined =
+        (window as any).AudioContext || (window as any).webkitAudioContext;
+      if (!AC) return;
+      const ctx = new AC();
+      const o = ctx.createOscillator();
+      const g = ctx.createGain();
+      o.type = "sine";
+      o.frequency.setValueAtTime(880, ctx.currentTime);
+      o.frequency.exponentialRampToValueAtTime(1320, ctx.currentTime + 0.18);
+      g.gain.setValueAtTime(0.0001, ctx.currentTime);
+      g.gain.exponentialRampToValueAtTime(0.18, ctx.currentTime + 0.02);
+      g.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 0.35);
+      o.connect(g); g.connect(ctx.destination);
+      o.start();
+      o.stop(ctx.currentTime + 0.4);
+      setTimeout(() => ctx.close(), 600);
+    } catch { /* ignore */ }
+  };
+
+  // Play notification chime when a new message (confirmation) appears
+  useEffect(() => {
+    if (confirmation && soundOnRef.current) playChime();
+  }, [confirmation]);
+
+  // Close dropdown on outside click
+  useEffect(() => {
+    if (!menuOpen) return;
+    const onDoc = (e: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
+        setMenuOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", onDoc);
+    return () => document.removeEventListener("mousedown", onDoc);
+  }, [menuOpen]);
+
+  const handlePrint = () => {
+    setMenuOpen(false);
+    setTimeout(() => window.print(), 50);
+  };
 
   // Button position (bottom-right by default). Stored as left/top in px.
   const [btnPos, setBtnPos] = useState<Pos>(() => ({
