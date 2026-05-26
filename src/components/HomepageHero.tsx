@@ -226,9 +226,14 @@ const HomepageHero = () => {
                   letterSpacing: "0.03em",
                   textTransform: "uppercase" as const,
                   lineHeight: 1,
+                  display: "inline-flex" as const,
+                  alignItems: "center" as const,
+                  height: "100%",
+                  paddingTop: 4,
                   paddingBottom: 4,
                   borderBottom: active ? "2px solid #1E3A5F" : "2px solid transparent",
                 };
+
 
                 if (item.children) {
                   const isOpen = openDropdown === item.label;
