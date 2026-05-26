@@ -81,7 +81,7 @@ const Section = ({ heading, cards }: { heading: string; cards: Card[] }) => (
                 <div className="flex h-full flex-col">
                   <div
                     className="relative w-full overflow-hidden bg-transparent flex items-center justify-center"
-                    style={{ aspectRatio: "500 / 220" }}
+                    style={{ aspectRatio: "500 / 312" }}
                   >
                     <img
                       src={s.image}
