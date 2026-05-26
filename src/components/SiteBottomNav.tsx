@@ -210,7 +210,7 @@ const SiteBottomNav = () => {
           transition: transform 0.2s ease-in-out;
         }
         .sbn-gear-inner:hover {
-          transform: scale(1.25);
+          transform: scale(1.1);
         }
         /* Disable the default .sbn-item:hover scale within the PAGE group — arrows and gear scale independently */
         .sbn-page-group:hover .sbn-icon-wrap {
