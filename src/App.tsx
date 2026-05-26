@@ -6,7 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import SiteBottomNav from "./components/SiteBottomNav";
-import FloatingChatButton from "./components/FloatingChatButton";
+
 
 import ChatAssistant from "./components/ChatAssistant";
 
@@ -193,7 +193,6 @@ const App = () => (
       <BrowserRouter>
         <ScrollToTop />
         <SiteBottomNav />
-        <FloatingChatButton />
 
 
         {/* ChatAssistant: panel triggered by nav's couple photo via 'rpp-open-chat' event.
