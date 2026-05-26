@@ -22,7 +22,7 @@ const resources = [
 const HomepagePopularResources = () => (
   <section className="bg-background py-16 md:py-20">
     <div className="container px-6 lg:px-8">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <div className="text-center mb-10">
           <p
             className="text-gold mb-3"
@@ -43,12 +43,13 @@ const HomepagePopularResources = () => (
           </h2>
         </div>
 
-        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {resources.map((r) => (
             <li key={r.href}>
               <Link
                 to={r.href}
                 className="group flex items-center justify-between gap-4 rounded-lg border border-border bg-cream px-5 py-4 transition-colors hover:border-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+                style={{ minHeight: "90px", display: "flex", alignItems: "center" }}
               >
                 <span className="font-serif text-navy" style={{ fontSize: "18px", fontWeight: 500, lineHeight: 1.35 }}>
                   {r.title}
