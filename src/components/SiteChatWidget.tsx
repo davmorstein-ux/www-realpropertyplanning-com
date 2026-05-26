@@ -8,7 +8,7 @@ const TEAL_DARK = "#094A50";
 const CREAM = "#F5F0E8";
 
 const BUTTON_SIZE = 44;
-const PANEL_W = 240;
+const PANEL_W = 270;
 const PANEL_H = 260;
 const MARGIN = 16;
 
@@ -147,7 +147,8 @@ const SiteChatWidget = () => {
         .rpp-cw-panel {
           position: fixed;
           width: ${PANEL_W}px;
-          height: ${PANEL_H}px;
+          height: auto;
+          min-height: 200px;
           background: #fff;
           border-radius: 12px;
           box-shadow: 0 12px 40px rgba(0,0,0,0.22);
@@ -157,7 +158,7 @@ const SiteChatWidget = () => {
           z-index: 99999;
           font-family: inherit;
         }
-        .rpp-cw-panel[data-min="true"] { height: 40px; }
+        .rpp-cw-panel[data-min="true"] { height: 40px; min-height: 40px; }
 
         .rpp-cw-header {
           height: 40px;
@@ -174,10 +175,13 @@ const SiteChatWidget = () => {
         .rpp-cw-header:active { cursor: grabbing; }
         .rpp-cw-title {
           flex: 1;
-          font-size: 0.85rem;
+          font-size: 0.8rem;
           font-weight: 600;
           color: #fff;
           letter-spacing: 0.01em;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
         .rpp-cw-iconbtn {
           width: 28px;
@@ -197,8 +201,10 @@ const SiteChatWidget = () => {
 
         .rpp-cw-messages {
           flex: 1;
+          height: auto;
           overflow-y: auto;
           padding: 10px;
+          padding-bottom: 8px;
           background: #F5F5F5;
           display: flex;
           flex-direction: column;
@@ -251,8 +257,10 @@ const SiteChatWidget = () => {
 
         .rpp-cw-input-bar {
           display: flex;
-          gap: 8px;
+          align-items: center;
+          gap: 6px;
           padding: 8px;
+          overflow: visible;
           background: #F4F5F7;
           border-top: 1px solid #E5E7EB;
           flex-shrink: 0;
