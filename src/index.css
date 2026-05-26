@@ -100,6 +100,37 @@ nav button[aria-haspopup] svg, nav [class*="dropdown"] button svg {
   margin-top: auto !important;
 }
 
+/* Tile headings — maximum 2 lines */
+.card h2, .card h3,
+[class*="card"] h2, [class*="card"] h3,
+[class*="tile"] h2, [class*="tile"] h3 {
+  font-size: 1.1rem !important;
+  line-height: 1.2 !important;
+  overflow: hidden !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+}
+
+/* Button/pill fixes — text must never overflow */
+.card button, .card a[class*="btn"],
+[class*="card"] button, [class*="card"] a,
+[class*="tile"] button, [class*="tile"] a {
+  width: 100% !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+  font-size: 0.85rem !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
