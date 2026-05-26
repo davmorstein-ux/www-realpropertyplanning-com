@@ -207,7 +207,7 @@ const BuildingYourTrustedProfessionalTeam = () => {
 
         {/* Closing CTA */}
         <section className="py-12 lg:py-16 bg-primary">
-          <div className="container px-6 lg:px-8">
+          <div className="px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="font-serif text-3xl md:text-4xl text-primary-foreground font-semibold mb-4">
                 Not Sure Who You Need?
