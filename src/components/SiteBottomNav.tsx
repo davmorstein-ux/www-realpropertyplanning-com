@@ -479,12 +479,6 @@ const SiteBottomNav = () => {
 
           {/* PAGE controls — three fully independent elements */}
           <div
-            onMouseEnter={(e) => {
-              (e.currentTarget as HTMLDivElement).style.transform = "scale(1.1)";
-            }}
-            onMouseLeave={(e) => {
-              (e.currentTarget as HTMLDivElement).style.transform = "scale(1)";
-            }}
             style={{
               display: "flex",
               alignItems: "center",
