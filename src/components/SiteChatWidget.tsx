@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import chatAvatar from "@/assets/chat-avatar.png";
 
 type Pos = { x: number; y: number };
 
@@ -208,18 +209,13 @@ const SiteChatWidget = () => {
           gap: 8px;
         }
         .rpp-cw-avatar {
-          width: 24px;
-          height: 24px;
+          width: 32px;
+          height: 32px;
           border-radius: 50%;
-          background: ${NAVY};
-          color: #fff;
-          font-size: 0.55rem;
-          font-weight: 700;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          object-fit: cover;
           flex-shrink: 0;
           margin-bottom: 2px;
+          display: block;
         }
         .rpp-cw-bubble {
           max-width: 75%;
@@ -335,7 +331,7 @@ const SiteChatWidget = () => {
             <>
               <div className="rpp-cw-messages">
                 <div className="rpp-cw-msg-row">
-                  <div className="rpp-cw-avatar">RPP</div>
+                  <img className="rpp-cw-avatar" src={chatAvatar} alt="Real Property Planning representative" />
                   <div className="rpp-cw-bubble welcome">
                     Hello! How can we help you today? We respond personally to every inquiry.
                   </div>
