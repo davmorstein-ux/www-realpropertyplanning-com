@@ -2442,3 +2442,12 @@ main > section:has(> div > [data-hero-band]) + * {
     padding-top: 1.5rem !important;
   }
 }
+
+/* Global gold-cta size reduction */
+.gold-cta {
+  min-height: 40px !important;
+  padding: 0 18px !important;
+  font-size: 15px !important;
+  max-width: 220px !important;
+}
+
