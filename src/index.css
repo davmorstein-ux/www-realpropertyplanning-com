@@ -1,4 +1,33 @@
 /* Fonts loaded non-blocking from index.html (DM Sans + DM Sans) */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Inter:wght@400;500;600&display=swap');
+
+/* Global typography overhaul */
+h1, h2, h3, h4 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 600;
+  line-height: 1.2;
+}
+body, p, li, td, span {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 400;
+}
+body { line-height: 1.5; }
+p { line-height: 1.5; margin-bottom: 0.75rem; }
+button, .btn, a[class*="btn"] {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 600;
+}
+label, .label, .caption, small {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 500;
+}
+.card, [class*="card"], [class*="tile"] {
+  padding: 16px !important;
+}
+section, [class*="section"] {
+  padding-top: 32px !important;
+  padding-bottom: 32px !important;
+}
 
 @tailwind base;
 @tailwind components;
