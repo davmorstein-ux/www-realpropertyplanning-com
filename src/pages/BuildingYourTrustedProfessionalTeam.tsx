@@ -67,14 +67,14 @@ const Section = ({ heading, cards }: { heading: string; cards: Card[] }) => (
       <p className="text-muted-foreground text-base leading-relaxed text-center max-w-3xl mx-auto mb-7">
         The professionals listed here are independent and are not employees, partners, or affiliates of Real Property Planning. This directory is provided for educational and informational purposes only.
       </p>
-      <div className="grid grid-cols-3 gap-6 items-stretch justify-items-center">
+      <div className="grid grid-cols-3 gap-6 items-stretch justify-items-stretch">
         {cards.map((s) => (
           <Link
             key={s.title + s.href}
             to={s.href}
             aria-label={`${s.title} — ${s.description} — ${s.cta}`}
             className="interior-tile tile-white group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
-            style={{ textDecoration: "none", maxWidth: "320px !important" }}
+            style={{ textDecoration: "none", width: "100%" }}
           >
             <div className="tile-white__inner h-full relative">
               <div className="tile-white__face h-full">
