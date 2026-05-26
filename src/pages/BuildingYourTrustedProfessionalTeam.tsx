@@ -94,10 +94,10 @@ const Section = ({ heading, cards }: { heading: string; cards: Card[] }) => (
                   />
                   <div
                     className="relative flex flex-1 flex-col items-center text-center overflow-hidden"
-                    style={{ padding: "8px 16px 12px" }}
+                    style={{ padding: "8px 8px 12px" }}
                   >
                     <h3
-                      className="font-serif text-[20px] md:text-[22px] font-bold leading-snug mb-3 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0 whitespace-nowrap"
+                      className="font-serif text-[17px] md:text-[19px] font-bold leading-snug mb-3 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0 whitespace-nowrap"
                       style={{ color: "#1B3A6B", textDecoration: "none" }}
                     >
                       {s.title}
