@@ -272,8 +272,8 @@ const SiteChatWidget = () => {
         }
         .rpp-cw-input:focus { border-color: ${NAVY}; }
         .rpp-cw-send {
-          width: 38px;
-          height: 38px;
+          width: 36px;
+          height: 36px;
           border-radius: 50%;
           border: none;
           background: ${NAVY};
