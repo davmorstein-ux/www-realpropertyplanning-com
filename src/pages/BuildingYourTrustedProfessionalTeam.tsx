@@ -81,7 +81,7 @@ const Section = ({ heading, cards }: { heading: string; cards: Card[] }) => (
                 <div className="flex h-full flex-col">
                   <div
                     className="relative w-full overflow-hidden bg-transparent flex items-center justify-center"
-                    style={{ aspectRatio: "500 / 312" }}
+                    style={{ aspectRatio: "500 / 312", padding: "8px 8px 0 8px" }}
                   >
                     <img
                       src={s.image}
@@ -91,7 +91,7 @@ const Section = ({ heading, cards }: { heading: string; cards: Card[] }) => (
                     />
                   </div>
                   <div
-                    className="relative flex flex-col items-center text-center overflow-hidden"
+                    className="relative flex flex-1 flex-col items-center text-center overflow-hidden"
                     style={{ padding: "12px 16px 12px" }}
                   >
                     <h3
