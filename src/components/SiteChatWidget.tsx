@@ -222,12 +222,12 @@ const SiteChatWidget = () => {
         .rpp-cw-panel[data-min="true"] { height: 40px; min-height: 40px; }
 
         .rpp-cw-header {
-          height: 40px;
+          height: 36px;
           background: ${TEAL};
           color: #fff;
           display: flex;
           align-items: center;
-          padding: 0 10px;
+          padding: 1px 10px;
           cursor: grab;
           touch-action: none;
           user-select: none;
@@ -236,27 +236,24 @@ const SiteChatWidget = () => {
         .rpp-cw-header:active { cursor: grabbing; }
         .rpp-cw-title {
           flex: 1;
-          font-size: 0.8rem;
+          font-size: 0.75rem;
           font-weight: 600;
           color: #fff;
           letter-spacing: 0.01em;
           white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
         }
         .rpp-cw-iconbtn {
-          width: 28px;
-          height: 28px;
           background: transparent;
           border: none;
           color: #fff;
-          font-size: 18px;
+          font-size: 0.7rem;
           line-height: 1;
           cursor: pointer;
           border-radius: 4px;
           display: flex;
           align-items: center;
           justify-content: center;
+          padding: 2px 4px;
         }
         .rpp-cw-iconbtn:hover { background: rgba(255,255,255,0.15); }
 
