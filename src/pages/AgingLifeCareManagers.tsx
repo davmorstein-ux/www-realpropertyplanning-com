@@ -4,6 +4,7 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import HeroBandTitle from "@/components/HeroBandTitle";
+import FeaturedProviderPlaceholder from "@/components/FeaturedProviderPlaceholder";
 import { articleSchema } from "@/lib/schema";
 import heroImage from "@/assets/building-trusted-professional-team-hero.png";
 
@@ -57,6 +58,11 @@ const AgingLifeCareManagers = () => {
             </p>
           </div>
         </section>
+
+        <FeaturedProviderPlaceholder
+          heading="Featured Aging Life Care Manager — Coming Soon"
+          altLabel="featured aging life care manager"
+        />
 
         <DisclaimerSection />
       </main>
