@@ -57,7 +57,7 @@ const property: Card[] = [
 
 const Section = ({ heading, cards }: { heading: string; cards: Card[] }) => (
   <section className="py-10 lg:py-12">
-      <div className="mx-auto px-6 lg:px-8" style={{ maxWidth: "1400px" }}>
+      <div className="mx-auto px-3 lg:px-4" style={{ maxWidth: "1400px" }}>
       <h2
         className="font-serif text-2xl md:text-3xl font-semibold mb-3 text-center"
         style={{ color: "#1B3A6B" }}
@@ -67,7 +67,7 @@ const Section = ({ heading, cards }: { heading: string; cards: Card[] }) => (
       <p className="text-muted-foreground text-base leading-relaxed text-center max-w-3xl mx-auto mb-7">
         The professionals listed here are independent and are not employees, partners, or affiliates of Real Property Planning. This directory is provided for educational and informational purposes only.
       </p>
-      <div className="grid grid-cols-3 gap-6 items-stretch justify-items-stretch">
+      <div className="grid grid-cols-3 gap-3 items-stretch justify-items-stretch">
         {cards.map((s) => (
           <Link
             key={s.title + s.href}
