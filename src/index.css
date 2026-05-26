@@ -525,49 +525,26 @@ body {
    UNIFIED GOLD CTA BUTTON — homepage tile sections
 ═══════════════════════════════════════════════ */
 .gold-cta {
+  padding: 6px 20px !important;
   min-height: 0 !important;
   height: auto !important;
-  padding-top: 8px !important;
-  padding-bottom: 8px !important;
-  padding-left: 20px !important;
-  padding-right: 20px !important;
   font-size: 15px !important;
+  font-weight: 700 !important;
   line-height: 1.2 !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
+  gap: 8px !important;
+  width: 100% !important;
+  max-width: 280px !important;
+  border-radius: 12px !important;
   box-sizing: border-box !important;
-  gap: 10px !important;
-  width: 100%;
-  max-width: 280px;
-  border-radius: 12px;
-  background: linear-gradient(180deg, hsl(var(--gold-light)) 0%, hsl(var(--gold)) 100%);
+  background: linear-gradient(180deg, hsl(var(--gold-light)) 0%, hsl(var(--gold)) 100%) !important;
   color: hsl(var(--navy-dark)) !important;
   font-family: 'DM Sans', sans-serif !important;
-  font-weight: 700 !important;
-  letter-spacing: 0 !important;
-  text-align: center;
+  text-align: center !important;
   text-decoration: none !important;
-  white-space: nowrap;
-  box-shadow: 0 4px 12px hsl(var(--navy-dark) / 0.18);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-.gold-cta:hover,
-.gold-cta:focus-visible {
-  color: hsl(var(--navy-dark)) !important;
-  text-decoration: none !important;
-  box-shadow: 0 6px 16px hsl(var(--navy-dark) / 0.28);
-  transform: translateX(2px);
-}
-.gold-cta svg {
-  width: 20px !important;
-  height: 20px !important;
-  stroke: currentColor;
-  fill: none;
-  stroke-width: 2.4;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  flex-shrink: 0;
+  white-space: nowrap !important;
 }
 
 /* ═══════════════════════════════════════════════
@@ -885,10 +862,6 @@ body {
   flex: 1 !important;
   line-height: 1.4 !important;
   margin-bottom: 0.5rem !important;
-}
-.interior-tile .gold-cta {
-  margin-top: auto !important;
-  width: 100% !important;
 }
 
 /* ═══════════════════════════════════════════════

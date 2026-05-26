@@ -159,7 +159,7 @@ const SeniorTransitions = () => {
                           <p className="text-foreground text-[14px] leading-relaxed mb-6 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0">
                             {s.description}
                           </p>
-                          <span className="gold-cta mt-auto transition-opacity duration-200 group-hover:opacity-0" style={{ padding: "8px 20px" }}>
+                          <span className="gold-cta mt-auto transition-opacity duration-200 group-hover:opacity-0">
                             {s.cta}
                             <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                               <polyline points="9 18 15 12 9 6" />

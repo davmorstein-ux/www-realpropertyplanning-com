@@ -99,7 +99,7 @@ const SituationCards = () => {
                       <p className="text-foreground text-[14px] leading-relaxed mb-6 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0">
                         {s.description}
                       </p>
-                      <span className="gold-cta mt-auto transition-opacity duration-200 group-hover:opacity-0" style={{ padding: "8px 20px" }}>
+                      <span className="gold-cta mt-auto transition-opacity duration-200 group-hover:opacity-0">
                         {s.cta}
                         <ArrowRight aria-hidden="true" />
                       </span>
