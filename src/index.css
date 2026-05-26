@@ -2043,7 +2043,7 @@ button:not([data-nav-button]),
   .hn-sub { font-size: 18px !important; font-family: 'DM Sans', sans-serif !important; }
   .hn-h2 { font-size: 44px !important; font-family: 'DM Sans', serif !important; }
   .hn-item { font-size: 16px !important; font-family: 'DM Sans', sans-serif !important; }
-  .gold-cta { font-size: 18px !important; font-family: 'DM Sans', sans-serif !important; font-weight: 700 !important; line-height: 1.2 !important; }
+  .gold-cta { font-size: 15px !important; font-family: 'DM Sans', sans-serif !important; font-weight: 700 !important; line-height: 1.2 !important; }
   .hn-list { grid-template-columns: 1fr !important; }
 
 /* ============================================================
