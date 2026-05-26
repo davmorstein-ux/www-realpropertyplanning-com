@@ -525,12 +525,12 @@ body {
    UNIFIED GOLD CTA BUTTON — homepage tile sections
 ═══════════════════════════════════════════════ */
 .gold-cta {
-  padding: 6px 20px !important;
+  padding: 4px 20px !important;
   min-height: 0 !important;
-  height: auto !important;
-  font-size: 15px !important;
+  height: 32px !important;
+  font-size: 14px !important;
   font-weight: 700 !important;
-  line-height: 1.2 !important;
+  line-height: 1 !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
