@@ -67,7 +67,7 @@ const Section = ({ heading, cards }: { heading: string; cards: Card[] }) => (
       <p className="text-muted-foreground text-base leading-relaxed text-center max-w-3xl mx-auto mb-7">
         The professionals listed here are independent and are not employees, partners, or affiliates of Real Property Planning. This directory is provided for educational and informational purposes only.
       </p>
-      <div className="grid grid-cols-2 gap-3 items-stretch justify-items-stretch">
+      <div className="grid grid-cols-3 gap-3 items-stretch justify-items-stretch">
         {cards.map((s) => (
           <Link
             key={s.title + s.href}
