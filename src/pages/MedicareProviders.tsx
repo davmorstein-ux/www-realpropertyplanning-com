@@ -100,12 +100,6 @@ const MedicareProviders = () => (
             <p className="text-foreground font-semibold text-base md:text-lg leading-relaxed mb-6">
               {" "}
             </p>
-            <Link to="/contact">
-              <Button variant="gold" size="lg" className="px-7 py-4 h-auto rounded-lg">
-                <img src={iconPhone3d} alt="" className="w-6 h-6 mr-2" loading="lazy" />
-                Get Connected
-              </Button>
-            </Link>
           </div>
         </div>
       </section>
