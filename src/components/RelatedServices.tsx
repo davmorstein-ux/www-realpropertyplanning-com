@@ -298,24 +298,24 @@ const RelatedServices = ({ currentPath, links: linksOverride, heading: headingOv
                 <Link
                   key={link.href}
                   to={link.href}
-                  className="interior-tile tile-white group block h-full min-h-[252px] sm:min-h-[280px]"
+                  className="interior-tile tile-white group block h-full"
                   onMouseEnter={() => setHoveredIndex(index)}
                   onMouseLeave={() => setHoveredIndex(null)}
                 >
                   <div className="tile-white__inner h-full">
                     <div className="tile-white__face h-full">
-                      <div className="flex h-full flex-col justify-between px-6 pb-6 pt-10 sm:px-7 sm:pb-7 sm:pt-11">
-                        <div>
-                          <h3 className="mb-3 font-serif text-xl font-extrabold leading-snug text-foreground transition-colors duration-300 group-hover:text-accent sm:text-[1.38rem]" style={{ textShadow: "0 1px 4px hsla(220, 30%, 15%, 0.25)" }}>
-                            {link.label}
-                          </h3>
-                          <p className="text-[16px] leading-[1.6] text-muted-foreground">
-                            {link.description}
-                          </p>
-                        </div>
-                        <div className="mt-5 flex items-center gap-1.5 text-[16px] leading-[1.6] font-medium text-primary/75 transition-colors duration-300 group-hover:text-accent">
-                          <span>Learn more</span>
-                          <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1">→</span>
+                      <div className="flex h-full flex-col px-6 py-6 sm:px-7 sm:py-7">
+                        <h3 className="mb-3 font-serif text-xl font-extrabold leading-snug text-foreground transition-colors duration-300 group-hover:text-accent sm:text-[1.38rem]" style={{ textShadow: "0 1px 4px hsla(220, 30%, 15%, 0.25)" }}>
+                          {link.label}
+                        </h3>
+                        <p className="text-[16px] leading-[1.6] text-muted-foreground mb-5">
+                          {link.description}
+                        </p>
+                        <div className="mt-auto flex justify-start">
+                          <span className="gold-cta">
+                            Learn more
+                            <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1">→</span>
+                          </span>
                         </div>
                       </div>
                     </div>
