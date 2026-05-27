@@ -96,13 +96,9 @@ const FinancialPlanners = () => {
               <div className="flex justify-center mb-1.5 md:mb-2">
                 <img src={heroIcon} alt="" aria-hidden="true" className="block w-full max-w-[15rem] h-auto object-contain" loading="lazy" />
               </div>
-              <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-base">Professionals</p>
-              <h1 className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground leading-tight mb-4">
+              <h1 className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground leading-tight">
                 Financial Planners & Advisors
               </h1>
-              <p className="text-xl text-primary-foreground/70 leading-relaxed">
-                Serving families across Western Washington
-              </p>
             </div>
           </div>
         </section>
