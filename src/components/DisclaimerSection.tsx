@@ -19,7 +19,7 @@ const DisclaimerSection = () => {
                 Real Property Planning is an educational and connection hub. The site helps visitors understand important senior transition, estate, probate, and property-related decisions, and may connect visitors with appropriately licensed professionals when needed.
               </p>
               <p>
-                Real Property Planning does not provide legal, tax, accounting, financial, brokerage, or appraisal services directly. Visitors should consult qualified, appropriately licensed professionals regarding their specific situation.
+                Real Property Planning does not provide legal, tax, accounting, financial, brokerage, or appraisal services directly. Visitors should consult qualified, appropriately licensed professionals regarding their specific situation.  The professionals listed here are independent and are not employees, partners, or affiliates of Real Property Planning. This directory is provided for educational and informational purposes only.
               </p>
             </div>
           </div>
