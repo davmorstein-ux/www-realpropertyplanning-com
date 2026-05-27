@@ -4,16 +4,13 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToProfessionalsButton from "@/components/BackToProfessionalsButton";
-import CTASection from "@/components/CTASection";
-import RelatedServices from "@/components/RelatedServices";
-import { Link } from "react-router-dom";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import heroIcon from "@/assets/icons/estate-financial-planning-icon-washington.webp";
+
 import tiffanyPhoto from "@/assets/tiffany-lane-financial-planner-new-york-life-seattle.webp";
 import newYorkLifeLogo from "@/assets/new-york-life-logo.webp";
 
@@ -56,11 +53,6 @@ const faqs = [
   },
 ];
 
-const helpRows = [
-  { text: "Reviews inherited assets and helps beneficiaries understand their financial options after a loss" },
-  { text: "Advises on estate taxes, stepped-up basis, and capital gains implications when selling inherited property" },
-  { text: "Helps older adults plan financially for assisted living, long-term care costs, and housing transitions" },
-];
 
 const FinancialPlanners = () => {
   const faqSchema = {
@@ -156,19 +148,8 @@ const FinancialPlanners = () => {
           </div>
         </section>
 
-        {/* Introductory line */}
-        <section className="pb-12 md:pb-16 bg-background">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center">
-              <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                Trusted financial professionals helping seniors and families plan with confidence through every stage of life's transitions.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Explanatory content — below tiles */}
-        <section className="pb-12 md:pb-16 bg-background">
+        {/* Explanatory content */}
+        <section className="py-12 md:py-16 bg-background">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
               <p className="text-foreground text-base md:text-lg leading-relaxed mb-5">
@@ -184,29 +165,8 @@ const FinancialPlanners = () => {
           </div>
         </section>
 
-
-
-        {/* How a Financial Planner Helps Your Family */}
-        <section className="py-16 lg:py-24 bg-background">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto">
-              <h2 className="font-serif text-[1.75rem] text-foreground font-semibold mb-10">
-                How a Financial Planner Helps Your Family
-              </h2>
-              <div className="space-y-6">
-                {helpRows.map((row, i) => (
-                  <div key={i} className="flex items-start gap-4">
-                    <span className="text-gold text-2xl leading-none mt-0.5 shrink-0" aria-hidden="true">•</span>
-                    <p className="text-lg text-muted-foreground leading-relaxed">{row.text}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* FAQ */}
-        <section className="py-16 lg:py-24 bg-background">
+        <section className="py-12 md:py-16 bg-background">
           <div className="container px-6 lg:px-8">
             <div className="max-w-[900px] mx-auto">
               <h2 className="font-serif text-[1.75rem] text-foreground font-semibold mb-10">
@@ -231,78 +191,6 @@ const FinancialPlanners = () => {
             </div>
           </div>
         </section>
-
-        {/* Related Professionals */}
-        <section className="py-12 lg:py-16 bg-secondary">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto">
-              <h2 className="font-serif text-2xl text-foreground font-semibold mb-6">
-                Families Often Also Work With
-              </h2>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                <Link
-                  to="/professionals/probate-attorneys"
-                  className="bg-card rounded-xl border border-border p-5 hover:border-gold/30 transition-colors"
-                >
-                  <h3 className="font-semibold text-foreground text-lg group-hover:text-gold">
-                    Probate & Estate Attorneys
-                  </h3>
-                </Link>
-                <Link
-                  to="/professionals/care-managers"
-                  className="bg-card rounded-xl border border-border p-5 hover:border-gold/30 transition-colors"
-                >
-                  <h3 className="font-semibold text-foreground text-lg group-hover:text-gold">
-                    Care Managers & Social Workers
-                  </h3>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Footer CTA */}
-        <section className="py-14 lg:py-20 bg-cream">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-xl mx-auto text-center">
-              <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-                Not sure who you need? We're happy to help point you in the right direction.
-              </p>
-              <Link to="/contact">
-                <span className="gold-cta inline-flex items-center gap-2 text-base">
-                  Get in Touch
-                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <polyline points="9 18 15 12 9 6" />
-                  </svg>
-                </span>
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Professional Inquiry */}
-        <section className="bg-muted/50">
-          <div className="container px-6 lg:px-8">
-            <hr className="border-border" />
-            <div className="py-10 max-w-2xl mx-auto text-center">
-              <p className="text-xl text-muted-foreground mb-2">
-                Are you a financial planner or advisor serving Western Washington families?
-              </p>
-              <p className="text-base text-muted-foreground/70 mb-4">
-                If you work with families navigating estate settlement, inherited property, or senior housing transitions, we'd like to learn more about your practice.
-              </p>
-              <Link
-                to="/contact?subject=Professional+Listing+Inquiry+%E2%80%94+Financial+Planners+%26+Advisors"
-                className="text-gold text-base font-medium underline underline-offset-4 hover:text-gold-dark transition-colors"
-              >
-                Inquire about being listed →
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        <CTASection />
-        <RelatedServices currentPath="/professionals/financial-planners" />
         <BackToProfessionalsButton />
         <DisclaimerSection />
       </main>
