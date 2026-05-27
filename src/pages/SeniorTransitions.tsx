@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
-import seniorTransitionsHero from "@/assets/senior-transitions-hero.png";
+import seniorTransitionsHero from "@/assets/senior-transitions-hero.webp";
 
 import HeroBandTitle from "@/components/HeroBandTitle";
 

@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import steeringWheel from "@/assets/steering-wheel-transparent.png";
-import gearStickImg from "@/assets/gear_stick_only.png";
-import gearBootImg from "@/assets/gear_boot_only.png";
-import compassIcon from "@/assets/nav/compass_final.png";
-import compassNeedle from "@/assets/nav/compass_needle_final.png";
+import steeringWheel from "@/assets/steering-wheel-transparent.webp";
+import gearStickImg from "@/assets/gear_stick_only.webp";
+import gearBootImg from "@/assets/gear_boot_only.webp";
+import compassIcon from "@/assets/nav/compass_final.webp";
+import compassNeedle from "@/assets/nav/compass_needle_final.webp";
 // @ts-expect-error - vite cache-bust query
-import headlampsOff from "@/assets/nav/headlamps_off_final.png?v=4";
+import headlampsOff from "@/assets/nav/headlamps_off_final.webp?v=4";
 // @ts-expect-error - vite cache-bust query
-import headlampsOn from "@/assets/nav/headlamps_on_final.png?v=4";
+import headlampsOn from "@/assets/nav/headlamps_on_final.webp?v=4";
 
 /**
  * Sticky bottom navigation bar shown on every page.

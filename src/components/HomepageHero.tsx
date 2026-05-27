@@ -464,7 +464,7 @@ const HomepageHero = () => {
         }}
       >
         <img
-          src="/homepage-hero.png"
+          src="/homepage-hero.webp"
           alt="Senior couple by a red convertible on a coastal road with a SOLD Real Property Planning sign and Next Chapter moving truck"
           fetchPriority="high"
           loading="eager"

@@ -21,7 +21,7 @@ import iconTypesOfHousing from "@/assets/icons/senior-living-placement-icon-wash
 import iconComparingCosts from "@/assets/icons/paying-for-senior-living-icon-washington.webp";
 import iconEligibility from "@/assets/icons/executors-clipboard-checklist-icon-washington.webp";
 import iconConversation from "@/assets/icons/real-estate-consultation-chat-icon-washington.webp";
-import housingOptionsHero from "@/assets/housing_options_hero.png";
+import housingOptionsHero from "@/assets/housing_options_hero.webp";
 
 export interface FlowNode {
   path: string;          // full path e.g. "/helping-an-aging-parent/exploring-care-options"

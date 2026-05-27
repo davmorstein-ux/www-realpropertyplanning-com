@@ -1,5 +1,5 @@
-import abbyPhoto from "@/assets/abby-durr-silver-age-senior-living-advisor.jpg";
-import silverAgeLogo from "@/assets/silver-age-senior-living-advisors-logo.png";
+import abbyPhoto from "@/assets/abby-durr-silver-age-senior-living-advisor.webp";
+import silverAgeLogo from "@/assets/silver-age-senior-living-advisors-logo.webp";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import iconEmail3d from "@/assets/icons/real-estate-email-envelope-3d-icon-washington.webp";
 import iconMapPin3d from "@/assets/icons/real-estate-location-pin-3d-icon-washington.webp";

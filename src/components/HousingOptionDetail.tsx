@@ -6,7 +6,7 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import housingOptionsHero from "@/assets/housing_options_hero.png";
+import housingOptionsHero from "@/assets/housing_options_hero.webp";
 
 export interface HousingOptionDetailProps {
   title: string;

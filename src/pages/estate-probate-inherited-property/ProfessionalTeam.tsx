@@ -1,7 +1,7 @@
 import EstateSubPageLayout, { SubH2, P, Divider } from "@/components/EstateSubPageLayout";
 import ProfessionalNetworkCard from "@/components/ProfessionalNetworkCard";
 import { professionalNetworkCategories } from "@/components/professional-network-tiles-data";
-import professionalTeamHero from "@/assets/professional-team-hero.png";
+import professionalTeamHero from "@/assets/professional-team-hero.webp";
 
 const DISCLAIMER =
   "The information on this page is for general guidance only and does not constitute legal, tax, or financial advice. Please consult licensed professionals for guidance specific to your situation.";

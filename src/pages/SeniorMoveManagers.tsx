@@ -19,7 +19,7 @@ import iconGlobe3d from "@/assets/icons/real-estate-website-globe-3d-icon-washin
 import { Icon3DFamily, Icon3DHome, Icon3DHeart } from "@/components/icons/Icon3D";
 import GinnysGirlsCard from "@/components/GinnysGirlsCard";
 import HeroBandTitle from "@/components/HeroBandTitle";
-import seniorMoveManagersHero from "@/assets/senior-move-managers-hero.png";
+import seniorMoveManagersHero from "@/assets/senior-move-managers-hero.webp";
 
 const realEstateSideItems = [
   {

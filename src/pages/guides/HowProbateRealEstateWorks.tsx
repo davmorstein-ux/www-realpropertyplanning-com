@@ -15,7 +15,7 @@ import { Link } from "react-router-dom";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
 import heroIcon from "@/assets/probate-real-estate-sales-washington-guide.webp";
 import probateTimeline from "@/assets/probate-timeline.webp";
-import probateRealEstateHero from "@/assets/probate-real-estate-hero.png";
+import probateRealEstateHero from "@/assets/probate-real-estate-hero.webp";
 import HeroBandTitle from "@/components/HeroBandTitle";
 
 const faqs = [

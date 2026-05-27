@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import steeringWheel from "@/assets/steering-wheel-transparent.png";
-import gearBase from "@/assets/gear_shifter_base.png";
-import gearTop from "@/assets/gear_shifter_top.png";
+import steeringWheel from "@/assets/steering-wheel-transparent.webp";
+import gearBase from "@/assets/gear_shifter_base.webp";
+import gearTop from "@/assets/gear_shifter_top.webp";
 import ChatAssistant from "./ChatAssistant";
 
 /**
