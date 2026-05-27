@@ -17,7 +17,10 @@ interface Provider {
   alt?: string;
   href: string;
   specialty: string;
+  logo?: string;
+  logoAlt?: string;
 }
+
 
 const providers: Provider[] = [
   {
