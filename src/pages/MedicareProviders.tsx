@@ -26,6 +26,8 @@ interface Provider {
   alt: string;
   href: string;
   specialty: string;
+  logo?: string;
+  logoAlt?: string;
 }
 
 const providers: Provider[] = [
@@ -37,8 +39,11 @@ const providers: Provider[] = [
     alt: "Photo of Heidi Bolton, Medicare Advisor at Spears Agency",
     href: "https://spearsagencyllc.com",
     specialty: "Medicare planning and coverage guidance for individuals turning 65, retiring, or reviewing existing coverage",
+    logo: spearsLogo,
+    logoAlt: "Spears Agency logo",
   },
 ];
+
 
 const faqs = [
   {
