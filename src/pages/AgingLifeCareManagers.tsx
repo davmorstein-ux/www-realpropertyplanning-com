@@ -8,6 +8,7 @@ import HeroBandTitle from "@/components/HeroBandTitle";
 import { articleSchema } from "@/lib/schema";
 import heroImage from "@/assets/building-trusted-professional-team-hero.webp";
 import lauraSilversteinPhoto from "@/assets/providers/laura-silverstein-aging-life-care-manager-washington.webp";
+import silverSageLogo from "@/assets/providers/silver-sage-consulting-logo.png";
 
 interface Provider {
   name: string;
