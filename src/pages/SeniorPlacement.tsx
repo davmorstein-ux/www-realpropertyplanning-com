@@ -7,7 +7,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import GoldCheckItem from "@/components/GoldCheckItem";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import AbbyDurrCard from "@/components/AbbyDurrCard";
+import abbyPhoto from "@/assets/abby-durr-silver-age-senior-living-advisor.webp";
 import housingOptionsHero from "@/assets/housing_options_hero.webp";
 
 const housingOptions = [
