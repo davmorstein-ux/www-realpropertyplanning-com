@@ -15,7 +15,7 @@ import {
 import { User } from "lucide-react";
 
 interface HelpRow {
-  icon: string;
+  icon?: string;
   text: string;
 }
 
