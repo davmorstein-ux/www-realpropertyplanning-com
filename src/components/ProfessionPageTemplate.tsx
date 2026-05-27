@@ -48,6 +48,7 @@ interface ProfessionPageTemplateProps {
   helpRows: HelpRow[];
   professionals?: Professional[];
   featuredOverride?: React.ReactNode;
+  featuredFirst?: boolean;
   faqs: FAQItem[];
   relatedProfessions: RelatedProfession[];
   professionLabel: string;
