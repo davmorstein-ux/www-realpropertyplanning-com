@@ -6,7 +6,6 @@ import SiteDisclaimerBlock from "@/components/SiteDisclaimerBlock";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import HeroBandTitle from "@/components/HeroBandTitle";
-import divorceCircle from "@/assets/divorce-attorney-hero.webp";
 import dominikPhoto from "@/assets/dominik-musafia-divorce-attorney-seattle.avif";
 
 interface Attorney {
