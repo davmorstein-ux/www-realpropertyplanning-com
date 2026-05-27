@@ -10,7 +10,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import heroIcon from "@/assets/icons/estate-financial-planning-icon-washington.webp";
+
 import tiffanyPhoto from "@/assets/tiffany-lane-financial-planner-new-york-life-seattle.webp";
 import newYorkLifeLogo from "@/assets/new-york-life-logo.webp";
 
