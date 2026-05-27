@@ -55,8 +55,8 @@ const TONE_CONFIG: Record<
     // trustworthy, grounded, intelligent
     section: "py-10 lg:py-14 bg-card",
     card:
-      "flex items-start gap-4 bg-cream rounded-md border border-border px-5 py-4 md:px-6 md:py-5",
-    title: "font-serif text-[26px] md:text-[32px] lg:text-[36px] text-navy font-semibold mb-3 text-center leading-tight tracking-tight",
+      "flex items-center justify-center text-center bg-cream rounded-md border border-border px-5 py-4 md:px-6 md:py-5",
+    title: "font-serif text-[28px] md:text-[34px] lg:text-[38px] text-navy font-semibold mb-3 text-center leading-tight tracking-tight",
     defaultTitle: "This Guidance Is Right For You If…",
     leadIn: "Grounded in evidence, not estimates.",
   },
@@ -93,7 +93,7 @@ const JourneyOrientation = ({
         <div className="max-w-4xl mx-auto">
           <h2 className={cfg.title}>{heading}</h2>
           {showLeadIn && (
-            <p className="text-navy text-[18px] md:text-[19px] text-center mb-7 md:mb-9">
+            <p className={`text-navy text-center mb-7 md:mb-9 ${tone === "valuation" ? "text-[20px] md:text-[22px]" : "text-[18px] md:text-[19px]"}`}>
               {cfg.leadIn}
             </p>
           )}
@@ -101,7 +101,7 @@ const JourneyOrientation = ({
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
             {items.map((item) => (
               <li key={item} className={cfg.card}>
-                <GoldCheck3D size={26} className="mt-1" />
+                {tone !== "valuation" && <GoldCheck3D size={26} className="mt-1" />}
                 <span className="text-navy text-[18px] md:text-[20px] leading-[1.55] font-medium">
                   {item}
                 </span>

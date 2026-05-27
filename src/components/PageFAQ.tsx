@@ -16,9 +16,10 @@ interface PageFAQProps {
   heading?: string;
   eyebrow?: string;
   id?: string;
+  plain?: boolean;
 }
 
-const PageFAQ = ({ faqs, heading = "Frequently Asked Questions", eyebrow = "Common Questions", id = "default" }: PageFAQProps) => {
+const PageFAQ = ({ faqs, heading = "Frequently Asked Questions", eyebrow = "Common Questions", id = "default", plain = false }: PageFAQProps) => {
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -45,14 +46,25 @@ const PageFAQ = ({ faqs, heading = "Frequently Asked Questions", eyebrow = "Comm
           <h2 className="font-serif text-2xl md:text-3xl text-foreground font-semibold mb-10">
             {heading}
           </h2>
-          <Accordion type="single" collapsible className="space-y-3">
+          <Accordion type="single" collapsible className={plain ? "space-y-1" : "space-y-3"}>
             {faqs.map((faq, index) => (
               <AccordionItem
                 key={index}
                 value={`faq-${index}`}
-                className="bg-card border border-border rounded-2xl overflow-hidden data-[state=open]:border-gold/25 transition-colors"
+                className={
+                  plain
+                    ? "bg-transparent border-0 rounded-none shadow-none"
+                    : "bg-card border border-border rounded-2xl overflow-hidden data-[state=open]:border-gold/25 transition-colors"
+                }
               >
-                <AccordionTrigger className="text-left font-serif text-foreground hover:text-gold hover:no-underline" style={{ padding: "8px 16px", fontSize: '20px', fontWeight: '700' }}>
+                <AccordionTrigger
+                  className={
+                    plain
+                      ? "text-left font-serif text-foreground hover:text-gold hover:no-underline bg-transparent border-0 rounded-none shadow-none"
+                      : "text-left font-serif text-foreground hover:text-gold hover:no-underline"
+                  }
+                  style={{ padding: "8px 16px", fontSize: '20px', fontWeight: '700' }}
+                >
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="px-6 pb-5 pt-0 text-muted-foreground leading-relaxed">
