@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/accordion";
 import heroIcon from "@/assets/icons/estate-financial-planning-icon-washington.webp";
 import tiffanyPhoto from "@/assets/tiffany-lane-financial-planner-new-york-life-seattle.webp";
+import newYorkLifeLogo from "@/assets/new-york-life-logo.webp";
 
 const featuredProviders = [
   {
@@ -25,9 +26,12 @@ const featuredProviders = [
     photo: tiffanyPhoto,
     alt: "Photo of Tiffany Lane, Financial Professional at New York Life — Seattle General Office",
     href: "https://www.newyorklife.com/agent/tcford",
+    logo: newYorkLifeLogo,
+    logoAlt: "New York Life logo",
     external: true,
   },
 ];
+
 
 const faqs = [
   {
