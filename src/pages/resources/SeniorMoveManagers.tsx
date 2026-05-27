@@ -108,7 +108,16 @@ const SeniorMoveManagers = () => (
                         {m.name}
                       </h3>
                       <p className="text-foreground text-sm mb-1">{m.title}</p>
-                      <p className="text-foreground text-sm font-semibold mb-5">{m.company}</p>
+                      <p className="text-foreground text-sm font-semibold mb-4">{m.company}</p>
+                      {m.logo && (
+                        <img
+                          src={m.logo}
+                          alt={m.logoAlt || `${m.company} logo`}
+                          className="h-12 w-auto max-w-[180px] object-contain mb-5"
+                          loading="lazy"
+                        />
+                      )}
+
                       <span className="gold-cta mt-auto">
                         Learn More
                         <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
