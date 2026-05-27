@@ -2,6 +2,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import heidiPhoto from "@/assets/heidi-bolton-medicare-advisor-spears-agency.webp";
+import spearsLogo from "@/assets/spears-agency-logo-medicare.webp";
+
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToProfessionalsButton from "@/components/BackToProfessionalsButton";
