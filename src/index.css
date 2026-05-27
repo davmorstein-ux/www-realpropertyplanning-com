@@ -800,7 +800,7 @@ body {
 }
 .tile-white__inner,
 .tile-white__face {
-  /* no extra chrome — the .tile-white container provides the styling */
+  background: transparent !important;
 }
 
 /* ═══════════════════════════════════════════════

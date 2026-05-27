@@ -85,11 +85,12 @@ const Section = ({ heading, cards }: { heading: string; cards: Card[] }) => (
                     loading="lazy"
                     style={{
                       width: "100%",
-                      height: "160px",
-                      objectFit: "cover",
+                      height: "200px",
+                      objectFit: "contain",
                       display: "block",
                       margin: "0",
                       padding: "0",
+                      background: "transparent",
                     }}
                   />
                   <div
