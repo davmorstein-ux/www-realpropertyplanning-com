@@ -5,6 +5,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToProfessionalsButton from "@/components/BackToProfessionalsButton";
 import HeroBandTitle from "@/components/HeroBandTitle";
+import ProviderContact from "@/components/ProviderContact";
 import { articleSchema } from "@/lib/schema";
 import heroImage from "@/assets/building-trusted-professional-team-hero.webp";
 import lauraSilversteinPhoto from "@/assets/providers/laura-silverstein-aging-life-care-manager-washington.webp";
