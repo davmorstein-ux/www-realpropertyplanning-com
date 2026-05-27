@@ -6,6 +6,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import { articleSchema } from "@/lib/schema";
 import heroImage from "@/assets/building-trusted-professional-team-hero.webp";
+import lauraSilversteinPhoto from "@/assets/providers/laura-silverstein-aging-life-care-manager-washington.webp";
 
 interface Provider {
   name: string;
@@ -22,6 +23,8 @@ const providers: Provider[] = [
     name: "Laura A. Silverstein, MSW",
     title: "Aging Life Care Manager",
     company: "Silver & Sage Consulting, LLC",
+    photo: lauraSilversteinPhoto,
+    alt: "Photo of Laura A. Silverstein, MSW",
     href: "https://www.silverandsageconsulting.com",
     specialty:
       "Advocacy, assessment, care management, consultation, crisis intervention, guidance for adults with disabilities, information/referral, and placement",
