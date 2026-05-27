@@ -7,6 +7,7 @@ import spearsLogo from "@/assets/spears-agency-logo-medicare.webp";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToProfessionalsButton from "@/components/BackToProfessionalsButton";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import CTASection from "@/components/CTASection";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
