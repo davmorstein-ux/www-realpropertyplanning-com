@@ -72,21 +72,7 @@ const MortgageLenders = () => (
     <BreadcrumbSchema items={[{ name: "Mortgage Lenders", url: "/mortgage-lenders" }]} />
     <Header />
     <main id="main-content">
-      <section className="bg-primary py-12 md:py-16">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">
-              
-            </p>
-            <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-primary-foreground leading-tight mb-5">
-              Featured Mortgage Lenders
-            </h1>
-            <p className="text-base md:text-lg leading-relaxed max-w-2xl mx-auto" style={{ color: "#e5e7eb" }}>
-              
-            </p>
-          </div>
-        </div>
-      </section>
+      <HeroBandTitle>Featured Mortgage Lenders</HeroBandTitle>
 
       <section className="pt-6 md:pt-8 pb-12 md:pb-16 bg-secondary">
         <div className="container px-6 lg:px-8">
