@@ -98,8 +98,7 @@ const MedicareProviders = () => (
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-foreground font-semibold text-base md:text-lg leading-relaxed mb-6">
-              Navigating Medicare can feel overwhelming. We help seniors and families in the Greater Seattle area connect
-              with trusted Medicare specialists who can guide you through your options with clarity and care.
+              {" "}
             </p>
             <Link to="/contact">
               <Button variant="gold" size="lg" className="px-7 py-4 h-auto rounded-lg">
