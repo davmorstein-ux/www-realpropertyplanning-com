@@ -206,31 +206,6 @@ const DateOfDeathValuationPropertyAppraisals = () => {
             <HeroBandTitle as="div">Date Of Death Valuation</HeroBandTitle>
           </div>
         </section>
-        {/* HERO */}
-        <section className="bg-primary pt-12 pb-10 lg:pt-20 lg:pb-14">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl">
-              <p className="text-gold font-bold tracking-[0.2em] uppercase mb-4 text-sm">
-                Guided Roadmap
-              </p>
-              <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.75rem] text-primary-foreground font-semibold leading-tight mb-5">
-                Understanding Date-of-Death Valuation & Property Appraisals
-              </h1>
-              <p className="text-lg md:text-xl text-primary-foreground/85 leading-relaxed mb-7 max-w-2xl">
-                A guided roadmap for families, executors, trustees, heirs, and
-                professionals trying to understand property value during estate
-                settlement, probate, inherited property decisions, and major life
-                transitions.
-              </p>
-              <a href="#pathways">
-                <Button variant="gold" size="lg" className="px-8 h-[56px] text-base rounded-lg">
-                  <Compass className="w-5 h-5 mr-2" aria-hidden="true" />
-                  Start Here
-                </Button>
-              </a>
-            </div>
-          </div>
-        </section>
 
         <JourneyOrientation
           tone="valuation"
