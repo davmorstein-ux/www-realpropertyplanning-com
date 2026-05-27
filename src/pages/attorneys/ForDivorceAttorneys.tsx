@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import SiteDisclaimerBlock from "@/components/SiteDisclaimerBlock";
+import BackToProfessionalsButton from "@/components/BackToProfessionalsButton";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import HeroBandTitle from "@/components/HeroBandTitle";
@@ -102,6 +103,7 @@ const ForDivorceAttorneys = () => (
         </Link>
       </div>
 
+      <BackToProfessionalsButton />
       <SiteDisclaimerBlock />
     </main>
     <Footer />

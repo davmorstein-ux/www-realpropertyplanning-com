@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import DisclaimerSection from "@/components/DisclaimerSection";
+import BackToProfessionalsButton from "@/components/BackToProfessionalsButton";
 import danBartelPhoto from "@/assets/providers/real-estate-lenders-dan-bartel-washington.webp";
 import jeffMcGinnisPhoto from "@/assets/providers/real-estate-lenders-jeff-mcginnis-washington.webp";
 import hansWestermarkPhoto from "@/assets/providers/real-estate-lenders-hans-westermark-washington.webp";
@@ -114,6 +115,7 @@ const MortgageLenders = () => (
         </div>
       </section>
 
+      <BackToProfessionalsButton />
       <DisclaimerSection />
     </main>
     <Footer />

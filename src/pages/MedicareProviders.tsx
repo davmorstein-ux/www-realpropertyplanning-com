@@ -4,6 +4,7 @@ import SEOHead from "@/components/SEOHead";
 import heidiPhoto from "@/assets/heidi-bolton-medicare-advisor-spears-agency.webp";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import DisclaimerSection from "@/components/DisclaimerSection";
+import BackToProfessionalsButton from "@/components/BackToProfessionalsButton";
 import CTASection from "@/components/CTASection";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -259,6 +260,7 @@ const MedicareProviders = () => (
       </section>
 
       <CTASection />
+      <BackToProfessionalsButton />
       <DisclaimerSection />
     </main>
     <Footer />
