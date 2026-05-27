@@ -34,6 +34,8 @@ const lenders: Lender[] = [
     alt: "Photo of Daniel Bartel",
     href: "https://www.santadanmortgage.com",
     specialty: "Reverse mortgages and retirement planning for seniors",
+    logo: c2FinancialLogo,
+    logoAlt: "C2 Financial logo",
   },
   {
     name: "Jeff McGinnis",
@@ -43,6 +45,8 @@ const lenders: Lender[] = [
     alt: "Photo of Jeff McGinnis",
     href: "https://crosscountrymortgage.com/seattle-wa-5531/jeffrey-mcginnis/",
     specialty: "25+ years of mortgage lending experience",
+    logo: crossCountryLogo,
+    logoAlt: "CrossCountry Mortgage logo",
   },
   {
     name: "Hans Westermark",
@@ -52,7 +56,10 @@ const lenders: Lender[] = [
     alt: "Photo of Hans Westermark",
     href: "https://www.familyfirstmortgagegroup.com/loan-officer/hans-westermark",
     specialty: "Home loans, refinancing, and real estate transitions",
+    logo: familyFirstLogo,
+    logoAlt: "Family First Mortgage logo",
   },
+
 ];
 
 const MortgageLenders = () => (
