@@ -5,6 +5,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToProfessionalsButton from "@/components/BackToProfessionalsButton";
 import HeroBandTitle from "@/components/HeroBandTitle";
+import ProviderContact from "@/components/ProviderContact";
 import { articleSchema } from "@/lib/schema";
 import heroImage from "@/assets/building-trusted-professional-team-hero.webp";
 import lauraSilversteinPhoto from "@/assets/providers/laura-silverstein-aging-life-care-manager-washington.webp";
@@ -18,6 +19,8 @@ interface Provider {
   alt?: string;
   href: string;
   specialty: string;
+  phone?: string;
+  email?: string;
   logo?: string;
   logoAlt?: string;
 }
@@ -31,6 +34,8 @@ const providers: Provider[] = [
     photo: lauraSilversteinPhoto,
     alt: "Photo of Laura A. Silverstein, MSW",
     href: "https://www.silverandsageconsulting.com",
+    phone: "(206) 886-6012",
+    email: "info@silverandsageconsulting.com",
     specialty:
       "Advocacy, assessment, care management, consultation, crisis intervention, guidance for adults with disabilities, information/referral, and placement",
     logo: silverSageLogo,
@@ -111,6 +116,7 @@ const AgingLifeCareManagers = () => {
                         </h3>
                         <p className="text-foreground text-sm mb-1">{p.title}</p>
                         <p className="text-foreground text-sm font-semibold mb-3">{p.company}</p>
+                        <ProviderContact phone={p.phone} email={p.email} />
                         {p.logo && (
                           <img
                             src={p.logo}

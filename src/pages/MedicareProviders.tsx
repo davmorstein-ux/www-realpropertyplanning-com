@@ -8,6 +8,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToProfessionalsButton from "@/components/BackToProfessionalsButton";
 import HeroBandTitle from "@/components/HeroBandTitle";
+import ProviderContact from "@/components/ProviderContact";
 import CTASection from "@/components/CTASection";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -27,6 +28,8 @@ interface Provider {
   alt: string;
   href: string;
   specialty: string;
+  phone?: string;
+  email?: string;
   logo?: string;
   logoAlt?: string;
 }
@@ -39,6 +42,7 @@ const providers: Provider[] = [
     photo: heidiPhoto,
     alt: "Photo of Heidi Bolton, Medicare Advisor at Spears Agency",
     href: "https://spearsagencyllc.com",
+    phone: "(360) 837-6089",
     specialty: "Medicare planning and coverage guidance for individuals turning 65, retiring, or reviewing existing coverage",
     logo: spearsLogo,
     logoAlt: "Spears Agency logo",
@@ -132,6 +136,7 @@ const MedicareProviders = () => (
                         </h2>
                         <p className="text-foreground text-sm mb-1">{p.title}</p>
                         <p className="text-foreground text-sm font-semibold mb-3">{p.company}</p>
+                        <ProviderContact phone={p.phone} email={p.email} />
                         {p.logo && (
                           <img
                             src={p.logo}

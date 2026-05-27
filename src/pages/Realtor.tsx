@@ -4,6 +4,7 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import BackToProfessionalsButton from "@/components/BackToProfessionalsButton";
 import HeroBandTitle from "@/components/HeroBandTitle";
+import ProviderContact from "@/components/ProviderContact";
 import davidSteinPhoto from "@/assets/providers/realtor-david-stein-headshot-seattle.webp";
 import expRealtyLogo from "@/assets/providers/exp-realty-brokerage-large-logo-washington.webp";
 
@@ -17,6 +18,8 @@ const featuredBrokers = [
     photo: davidSteinPhoto,
     alt: "Photo of David Stein",
     href: "https://davestein.exprealty.com",
+    phone: "(206) 900-3015",
+    email: "dave.stein@exprealty.com",
     logo: expRealtyLogo,
     logoAlt: "eXp Realty logo",
   },
@@ -66,6 +69,7 @@ const Realtor = () => (
                       </h3>
                       <p className="text-foreground text-sm mb-1">{m.title}</p>
                       <p className="text-foreground text-sm font-semibold mb-4">{m.company}</p>
+                      <ProviderContact phone={m.phone} email={m.email} />
                       {m.logo && (
                         <img
                           src={m.logo}

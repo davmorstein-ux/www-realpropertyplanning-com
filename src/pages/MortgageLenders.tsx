@@ -5,6 +5,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToProfessionalsButton from "@/components/BackToProfessionalsButton";
 import HeroBandTitle from "@/components/HeroBandTitle";
+import ProviderContact from "@/components/ProviderContact";
 import danBartelPhoto from "@/assets/providers/real-estate-lenders-dan-bartel-washington.webp";
 import jeffMcGinnisPhoto from "@/assets/providers/real-estate-lenders-jeff-mcginnis-washington.webp";
 import hansWestermarkPhoto from "@/assets/providers/real-estate-lenders-hans-westermark-washington.webp";
@@ -21,6 +22,8 @@ interface Lender {
   alt: string;
   href: string;
   specialty: string;
+  phone?: string;
+  email?: string;
   logo?: string;
   logoAlt?: string;
 }
@@ -34,6 +37,8 @@ const lenders: Lender[] = [
     photo: danBartelPhoto,
     alt: "Photo of Daniel Bartel",
     href: "https://www.santadanmortgage.com",
+    phone: "(206) 310-5766",
+    email: "santadan@c2financial.com",
     specialty: "Reverse mortgages and retirement planning for seniors",
     logo: c2FinancialLogo,
     logoAlt: "C2 Financial logo",
@@ -45,6 +50,8 @@ const lenders: Lender[] = [
     photo: jeffMcGinnisPhoto,
     alt: "Photo of Jeff McGinnis",
     href: "https://crosscountrymortgage.com/seattle-wa-5531/jeffrey-mcginnis/",
+    phone: "(206) 283-5626",
+    email: "jejj.mcginnis@ccm.com",
     specialty: "25+ years of mortgage lending experience",
     logo: crossCountryLogo,
     logoAlt: "CrossCountry Mortgage logo",
@@ -56,6 +63,8 @@ const lenders: Lender[] = [
     photo: hansWestermarkPhoto,
     alt: "Photo of Hans Westermark",
     href: "https://www.familyfirstmortgagegroup.com/loan-officer/hans-westermark",
+    phone: "(206) 390-9915",
+    email: "Hans.Westermark@famfirstmtg.com",
     specialty: "Home loans, refinancing, and real estate transitions",
     logo: familyFirstLogo,
     logoAlt: "Family First Mortgage logo",
@@ -100,6 +109,7 @@ const MortgageLenders = () => (
                       </h2>
                       <p className="text-foreground text-sm mb-1">{l.title}</p>
                       <p className="text-foreground text-sm font-semibold mb-3">{l.company}</p>
+                      <ProviderContact phone={l.phone} email={l.email} />
                       {l.logo && (
                         <img
                           src={l.logo}

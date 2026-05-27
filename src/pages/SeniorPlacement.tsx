@@ -6,6 +6,7 @@ import BackToProfessionalsButton from "@/components/BackToProfessionalsButton";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import GoldCheckItem from "@/components/GoldCheckItem";
+import ProviderContact from "@/components/ProviderContact";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import abbyPhoto from "@/assets/abby-durr-silver-age-senior-living-advisor.webp";
@@ -145,6 +146,7 @@ const SeniorPlacement = () => {
                         </h3>
                         <p className="text-foreground text-sm mb-1">Senior Living Advisor</p>
                         <p className="text-foreground text-sm font-semibold mb-5">Silver Age Senior Living Advisors</p>
+                        <ProviderContact phone="(425) 891-7569" email="abby@silveragecare.com" />
                         <span className="gold-cta mt-auto">
                           Learn More
                           <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">

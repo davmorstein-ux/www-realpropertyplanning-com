@@ -7,6 +7,7 @@ import BackToProfessionalsButton from "@/components/BackToProfessionalsButton";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import HeroBandTitle from "@/components/HeroBandTitle";
+import ProviderContact from "@/components/ProviderContact";
 import dominikPhoto from "@/assets/dominik-musafia-divorce-attorney-seattle.avif";
 import seattleDivorceLogo from "@/assets/seattle-divorce-options-logo.avif";
 
@@ -18,6 +19,8 @@ interface Attorney {
   alt: string;
   href: string;
   specialty: string;
+  phone?: string;
+  email?: string;
   logo?: string;
   logoAlt?: string;
 }
@@ -30,6 +33,8 @@ const attorneys: Attorney[] = [
     photo: dominikPhoto,
     alt: "Photo of Dominik Musafia",
     href: "https://www.seattledivorceoptions.com",
+    phone: "(206) 860-2431",
+    email: "Dom@SeattleDivorceOptions.com",
     specialty: "Collaborative divorce and family law, with additional expertise in business and real property matters",
     logo: seattleDivorceLogo,
     logoAlt: "Seattle Divorce Options logo",
@@ -83,6 +88,7 @@ const ForDivorceAttorneys = () => (
                       </h2>
                       <p className="text-foreground text-sm mb-1">{a.title}</p>
                       <p className="text-foreground text-sm font-semibold mb-3">{a.company}</p>
+                      <ProviderContact phone={a.phone} email={a.email} />
                       {a.logo && (
                         <img
                           src={a.logo}

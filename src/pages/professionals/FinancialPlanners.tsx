@@ -5,6 +5,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToProfessionalsButton from "@/components/BackToProfessionalsButton";
 import HeroBandTitle from "@/components/HeroBandTitle";
+import ProviderContact from "@/components/ProviderContact";
 import {
   Accordion,
   AccordionContent,
@@ -24,6 +25,7 @@ const featuredProviders = [
     photo: tiffanyPhoto,
     alt: "Photo of Tiffany Lane, Financial Professional at New York Life — Seattle General Office",
     href: "https://www.newyorklife.com/agent/tcford",
+    phone: "(206) 999-2116",
     logo: newYorkLifeLogo,
     logoAlt: "New York Life logo",
     external: true,
@@ -116,6 +118,7 @@ const FinancialPlanners = () => {
                         </h3>
                         <p className="text-foreground text-sm mb-1">{p.title}</p>
                         <p className="text-foreground text-sm font-semibold mb-3">{p.company}</p>
+                        <ProviderContact phone={(p as any).phone} email={(p as any).email} />
                         {p.logo && (
                           <img
                             src={p.logo}
