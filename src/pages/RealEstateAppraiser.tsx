@@ -70,7 +70,7 @@ const RealEstateAppraiser = () => (
                         <img
                           src={m.logo}
                           alt={m.logoAlt || `${m.company} logo`}
-                          className="h-12 w-auto max-w-[180px] object-contain mb-4"
+                          className="h-24 w-auto max-w-[360px] object-contain mb-4"
                           loading="lazy"
                         />
                       )}
