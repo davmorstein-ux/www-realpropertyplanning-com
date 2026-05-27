@@ -2,138 +2,125 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
-import CTASection from "@/components/CTASection";
-import ZillowReviewsCarousel from "@/components/ZillowReviewsCarousel";
-import HowWeHelpCards from "@/components/HowWeHelpCards";
-import HomepageWarmStatement from "@/components/HomepageWarmStatement";
-import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
-import iconEmail3d from "@/assets/icons/real-estate-email-envelope-3d-icon-washington.webp";
-import iconGlobe3d from "@/assets/icons/real-estate-website-globe-3d-icon-washington.webp";
-import { Link } from "react-router-dom";
+import BackToProfessionalsButton from "@/components/BackToProfessionalsButton";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import davidSteinPhoto from "@/assets/providers/realtor-david-stein-headshot-seattle.webp";
 import expRealtyLogo from "@/assets/providers/exp-realty-brokerage-large-logo-washington.webp";
-import ehoLogo from "@/assets/providers/equal-housing-opportunity-logo-washington.webp";
-import iconRealtor from "@/assets/icons/realtor-real-estate-agent-icon-washington.webp";
+
+const featuredBrokers = [
+  {
+    name: "David Stein",
+    title: "President, Real Property Planning",
+    company: "eXp Realty",
+    specialty:
+      "Residential and investment property sales throughout the Puget Sound region, including single family homes, multi-family, condominiums, investment properties, new construction, mobile homes, houseboats, floating homes, and vacant land.",
+    photo: davidSteinPhoto,
+    alt: "Photo of David Stein",
+    href: "https://davestein.exprealty.com",
+    logo: expRealtyLogo,
+    logoAlt: "eXp Realty logo",
+  },
+];
 
 const Realtor = () => (
   <>
     <SEOHead
-      title="Realtor | Real Property Planning"
-      description="Experienced real estate guidance for seniors, families, executors, and professionals navigating important property decisions in Washington State."
+      title="Real Estate Broker | Real Property Planning"
+      description="Washington State licensed real estate broker serving the Puget Sound region — residential, multi-family, investment, and specialty properties."
       canonical="https://realpropertyplanning.com/realtor"
     />
     <BreadcrumbSchema
       items={[
         { name: "Home", url: "https://realpropertyplanning.com" },
-        { name: "Realtor", url: "https://realpropertyplanning.com/realtor" },
+        { name: "Real Estate Broker", url: "https://realpropertyplanning.com/realtor" },
       ]}
     />
     <Header />
     <main id="main-content">
-      {/* Hero */}
-      <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="flex justify-center mb-1.5 md:mb-2">
-              <img src={iconRealtor} alt="Realtor" className="block w-full max-w-[15rem] h-auto object-contain" style={{ background: "transparent" }} loading="lazy"/>
-            </div>
-            <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">Real Estate</p>
-            <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-primary-foreground leading-tight mb-4">Realtor</h1>
-            <p className="text-primary-foreground/80 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-              Experienced real estate guidance for seniors, families, executors, and professionals navigating important property decisions throughout Washington State.
-            </p>
-          </div>
-        </div>
-      </section>
+      <HeroBandTitle>Real Estate Broker</HeroBandTitle>
 
-      {/* Featured Realtor */}
-      <section className="py-10 md:py-14 bg-background">
+      {/* Featured tiles */}
+      <section className="pt-6 md:pt-8 pb-12 md:pb-16 bg-background">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground text-center mb-8">Featured Realtor</h2>
-            <div className="bg-secondary border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 p-5 sm:p-6">
-              <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-start sm:gap-5">
-                <div className="shrink-0">
-                  <img src={davidSteinPhoto} alt="David Stein — Real Estate Broker" className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-border shadow-sm"  loading="lazy"/>
-                </div>
-                <div className="flex w-full flex-col items-center sm:flex-1 sm:items-start">
-                  <a href="https://davestein.exprealty.com" target="_blank" rel="noopener noreferrer" className="inline-block">
-                    <img src={expRealtyLogo} alt="eXp Realty — David Stein's real estate license is held under eXp Realty (real estate license disclosure)" className="h-[120px] w-auto object-contain mx-auto sm:mx-0 sm:-translate-x-[10px] block"  loading="lazy"/>
-                  </a>
-                  <div className="w-full mt-1 text-center sm:text-left">
-                    <p className="text-foreground font-semibold text-base">David Stein</p>
-                    <p className="text-muted-foreground text-sm mb-0.5">President, Real Property Planning</p>
-                    <p className="text-muted-foreground text-sm mb-1.5">Independent hub for Washington State</p>
-                    <p className="text-muted-foreground text-sm leading-relaxed mb-3">
-                      With over 20 years of experience, David Stein has bought and sold single family homes, multi-family properties, condominiums, investment properties, new construction, renovations, mobile homes, manufactured homes, houseboats, floating homes, and vacant land throughout the Puget Sound region. As a broker with eXp Realty — the largest independent real estate brokerage in the world with over 83,000 agents across 28 countries — David combines deep local knowledge with a powerful nationwide network, ensuring every client receives both personal attention and broad reach.
-                    </p>
-                    <div className="text-muted-foreground text-xs leading-relaxed mb-3 space-y-0.5">
-                      <p>Washington State Licensed Real Estate Broker — David Stein's real estate license is held under eXp Realty</p>
-                      <p>Washington State Certified Residential Appraiser — Stein Appraisal</p>
-                    </div>
-                    <div className="space-y-1.5 text-sm">
-                      <div className="flex items-center gap-2 justify-center sm:justify-start">
-                        <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" />
-                        <a href="tel:+12069003015" className="text-accent hover:text-gold underline-offset-4 hover:underline">(206) 900-3015</a>
-                      </div>
-                      <div className="flex items-center gap-2 justify-center sm:justify-start">
-                        <img src={iconEmail3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" />
-                        <a href="mailto:dave.stein@exprealty.com" className="text-accent hover:text-gold underline-offset-4 hover:underline break-all">dave.stein@exprealty.com</a>
-                      </div>
-                      <div className="flex items-center gap-2 justify-center sm:justify-start">
-                        <img src={iconGlobe3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" />
-                        <a href="https://davestein.exprealty.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-gold underline-offset-4 hover:underline">davestein.exprealty.com</a>
-                      </div>
-                      <div className="flex items-center gap-2 justify-center sm:justify-start text-muted-foreground">
-                        <span className="w-4 h-4 shrink-0" aria-hidden="true" />
-                        <span>eXp Realty — 1455 NW Leary Way, Seattle, WA 98107</span>
-                      </div>
-                      <div className="flex items-center gap-2 justify-center sm:justify-start text-muted-foreground">
-                        <span className="w-4 h-4 shrink-0" aria-hidden="true" />
-                        <span>Real Estate License #113972</span>
-                      </div>
-                    </div>
-                    <div className="mt-4 pt-4 border-t border-border/50">
-                      <p className="text-foreground font-semibold text-xs uppercase tracking-widest mb-2">Proud member of the:</p>
-                      <ul className="space-y-1 text-[hsl(var(--accent))] text-sm">
-                        <li>ALCA — Aging Life Care Association</li>
-                        <li>NAOSA — National Association of Senior Advocates</li>
-                        <li>NAEPC — National Association of Estate Planners &amp; Councils</li>
-                        <li>NAR — National Association of Realtors®</li>
-                      </ul>
-                    </div>
-                    <div className="flex items-center justify-center sm:justify-start gap-4 mt-4">
-                      <img src={ehoLogo} alt="Equal Housing Opportunity" className="h-10 w-auto object-contain opacity-70"  loading="lazy"/>
+          <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
+            {featuredBrokers.map((m) => (
+              <a
+                key={m.name}
+                href={m.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${m.name}, ${m.title} at ${m.company} — Learn more`}
+                className="interior-tile tile-white group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+              >
+                <div className="tile-white__inner h-full">
+                  <div className="tile-white__face h-full">
+                    <div className="flex h-full flex-col items-center text-center p-6">
+                      <img
+                        src={m.photo}
+                        alt={m.alt}
+                        className="w-28 h-28 rounded-full object-cover border-2 border-border shadow-sm mb-4"
+                        loading="lazy"
+                      />
+                      <h3 className="font-serif text-xl text-navy font-semibold leading-snug mb-1">
+                        {m.name}
+                      </h3>
+                      <p className="text-foreground text-sm mb-1">{m.title}</p>
+                      <p className="text-foreground text-sm font-semibold mb-4">{m.company}</p>
+                      {m.logo && (
+                        <img
+                          src={m.logo}
+                          alt={m.logoAlt || `${m.company} logo`}
+                          className="h-24 w-auto max-w-[360px] object-contain mb-4"
+                          loading="lazy"
+                        />
+                      )}
+                      {m.specialty && (
+                        <p className="text-muted-foreground text-sm leading-relaxed mb-5">
+                          {m.specialty}
+                        </p>
+                      )}
+
+                      <span className="gold-cta mt-auto">
+                        Learn More
+                        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                          <polyline points="9 18 15 12 9 6" />
+                        </svg>
+                      </span>
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Explanatory content */}
+      <section className="pb-12 md:pb-16 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-5">
+              With over 20 years of experience, David Stein has bought and sold single family homes, multi-family properties, condominiums, investment properties, new construction, renovations, mobile homes, manufactured homes, houseboats, floating homes, and vacant land throughout the Puget Sound region. As a broker with eXp Realty — the largest independent real estate brokerage in the world with over 83,000 agents across 28 countries — David combines deep local knowledge with a powerful nationwide network, ensuring every client receives both personal attention and broad reach.
+            </p>
+            <div className="text-muted-foreground text-base leading-relaxed mb-5 space-y-1">
+              <p>Washington State Licensed Real Estate Broker — David Stein's real estate license is held under eXp Realty</p>
+              <p>Washington State Certified Residential Appraiser — Stein Appraisal</p>
+              <p>Real Estate License #113972</p>
+            </div>
+            <div>
+              <p className="text-foreground font-semibold mb-2">Proud Member of the:</p>
+              <ul className="text-muted-foreground text-base leading-relaxed list-disc pl-6 space-y-1">
+                <li>ALCA — Aging Life Care Association</li>
+                <li>NAOSA — National Association of Senior Advocates</li>
+                <li>NAEPC — National Association of Estate Planners &amp; Councils</li>
+                <li>NAR — National Association of Realtors®</li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Zillow Reviews */}
-      <ZillowReviewsCarousel />
-
-      {/* How We Help */}
-      <HowWeHelpCards />
-
-      {/* Warm Statement */}
-      <HomepageWarmStatement />
-
-      {/* More information link */}
-      <section className="py-6 bg-background">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <Link to="/realtor/learn-more" className="text-accent hover:text-gold underline underline-offset-4 text-base font-medium transition-colors">
-              More information about Realtors →
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <CTASection />
+      <BackToProfessionalsButton />
     </main>
     <Footer />
   </>
