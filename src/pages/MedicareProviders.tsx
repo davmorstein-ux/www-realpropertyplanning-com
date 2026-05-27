@@ -260,25 +260,6 @@ const MedicareProviders = () => (
         </div>
       </section>
 
-      {/* Featured Providers */}
-      <section className="py-14 md:py-20 bg-secondary">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">
-              Featured Medicare Providers
-            </h2>
-            <div className="bg-background border border-border rounded-lg p-10">
-              <p className="text-foreground text-lg font-semibold mb-2">
-                Trusted providers coming soon.
-              </p>
-              <p className="text-foreground text-base">
-                Check back shortly.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <CTASection />
       <DisclaimerSection />
     </main>
