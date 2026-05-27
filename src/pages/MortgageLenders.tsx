@@ -60,13 +60,13 @@ const MortgageLenders = () => (
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm">
-              Mortgage Lending
+              
             </p>
             <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-primary-foreground leading-tight mb-5">
               Featured Mortgage Lenders
             </h1>
             <p className="text-base md:text-lg leading-relaxed max-w-2xl mx-auto" style={{ color: "#e5e7eb" }}>
-              Trusted financing professionals supporting Washington families with reverse mortgages, retirement planning, and home loans.
+              
             </p>
           </div>
         </div>
@@ -76,7 +76,7 @@ const MortgageLenders = () => (
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-10">
             <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-              Trusted mortgage professionals with experience in estate, senior transition, and residential financing across Washington State.
+              
             </p>
           </div>
 

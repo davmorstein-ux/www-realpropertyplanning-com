@@ -45,7 +45,7 @@ const LendersFinancingSpecialists = () => (
             className="block w-full max-w-[15rem] h-auto mx-auto mb-3 md:mb-4"
            loading="lazy"/>
           <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">
-            Mortgage Lending
+            
           </p>
           <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-primary-foreground leading-tight mb-5">
             Supporting Clients with Financing Options and Long-Term Planning
