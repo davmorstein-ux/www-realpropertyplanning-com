@@ -35,6 +35,7 @@ const providers: Provider[] = [
       "Advocacy, assessment, care management, consultation, crisis intervention, guidance for adults with disabilities, information/referral, and placement",
     logo: silverSageLogo,
     logoAlt: "Silver & Sage Consulting logo",
+  },
 ];
 
 const jsonLd = articleSchema({
