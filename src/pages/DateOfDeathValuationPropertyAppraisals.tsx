@@ -299,8 +299,11 @@ const DateOfDeathValuationPropertyAppraisals = () => {
                     <p className="text-navy text-base leading-relaxed mb-4 flex-1 text-center">
                       {c.description}
                     </p>
-                    <span className="inline-flex items-center justify-center gap-2 text-gold font-bold text-sm">
-                      Continue <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                    <span className="gold-cta mt-auto">
+                      Continue
+                      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                        <polyline points="9 18 15 12 9 6" />
+                      </svg>
                     </span>
                   </Link>
                 ))}
