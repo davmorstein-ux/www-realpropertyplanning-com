@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
+import BackToProfessionalsButton from "@/components/BackToProfessionalsButton";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Button } from "@/components/ui/button";
@@ -326,6 +327,7 @@ const ProfessionPageTemplate = ({
         </div>
       </section>
 
+      <BackToProfessionalsButton />
       <DisclaimerSection />
       </main>
       <Footer />

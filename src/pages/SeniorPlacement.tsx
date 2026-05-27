@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import Footer from "@/components/Footer";
 import DisclaimerSection from "@/components/DisclaimerSection";
+import BackToProfessionalsButton from "@/components/BackToProfessionalsButton";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import GoldCheckItem from "@/components/GoldCheckItem";
@@ -279,6 +280,7 @@ const SeniorPlacement = () => {
           </div>
         </section>
       </main>
+      <BackToProfessionalsButton />
       <DisclaimerSection />
       <Footer />
     </>

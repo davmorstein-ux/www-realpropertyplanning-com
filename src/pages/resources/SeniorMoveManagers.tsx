@@ -4,6 +4,7 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import DisclaimerSection from "@/components/DisclaimerSection";
+import BackToProfessionalsButton from "@/components/BackToProfessionalsButton";
 import CTASection from "@/components/CTASection";
 import { Link } from "react-router-dom";
 import GinnysGirlsCard from "@/components/GinnysGirlsCard";
@@ -147,6 +148,7 @@ const SeniorMoveManagers = () => (
 
       <CTASection />
       <RelatedServices currentPath="/resources/senior-move-managers" />
+      <BackToProfessionalsButton />
       <DisclaimerSection />
     </main>
     <Footer />
