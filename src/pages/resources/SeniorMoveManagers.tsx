@@ -5,6 +5,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import RelatedServices from "@/components/RelatedServices";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToProfessionalsButton from "@/components/BackToProfessionalsButton";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import CTASection from "@/components/CTASection";
 import { Link } from "react-router-dom";
 import GinnysGirlsCard from "@/components/GinnysGirlsCard";
