@@ -7,6 +7,7 @@ import BackToProfessionalsButton from "@/components/BackToProfessionalsButton";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import HeroBandTitle from "@/components/HeroBandTitle";
+import ProviderContact from "@/components/ProviderContact";
 import dominikPhoto from "@/assets/dominik-musafia-divorce-attorney-seattle.avif";
 import seattleDivorceLogo from "@/assets/seattle-divorce-options-logo.avif";
 
