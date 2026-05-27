@@ -248,7 +248,7 @@ const DateOfDeathValuationPropertyAppraisals = () => {
                     {p.description}
                   </p>
                   <span className="gold-cta mt-auto font-bold">
-                    Learn More
+                    <strong className="date-valuation-cta-text">Learn More</strong>
                     <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                       <polyline points="9 18 15 12 9 6" />
                     </svg>
@@ -300,7 +300,7 @@ const DateOfDeathValuationPropertyAppraisals = () => {
                       {c.description}
                     </p>
                     <span className="gold-cta mt-auto font-bold">
-                      Continue
+                      <strong className="date-valuation-cta-text">Continue</strong>
                       <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                         <polyline points="9 18 15 12 9 6" />
                       </svg>
