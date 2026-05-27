@@ -22,6 +22,8 @@ interface Lender {
   alt: string;
   href: string;
   specialty: string;
+  phone?: string;
+  email?: string;
   logo?: string;
   logoAlt?: string;
 }
