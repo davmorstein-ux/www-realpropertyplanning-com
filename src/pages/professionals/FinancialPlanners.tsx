@@ -167,6 +167,25 @@ const FinancialPlanners = () => {
           </div>
         </section>
 
+        {/* Explanatory content — below tiles */}
+        <section className="pb-12 md:pb-16 bg-background">
+          <div className="container px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto">
+              <p className="text-foreground text-base md:text-lg leading-relaxed mb-5">
+                A financial planner or advisor can be an important part of the support team during major life transitions. For older adults and their families, they help clarify financial decisions related to retirement income, long-term care, housing changes, estate planning, and the costs involved in downsizing or relocation.
+              </p>
+              <p className="text-foreground text-base md:text-lg leading-relaxed mb-5">
+                Their role is to look at the bigger financial picture and help clients make informed choices that align with their goals, resources, and family circumstances. In situations involving a move, a change in living arrangement, or the administration of an estate, a financial planner or advisor can help bring structure and confidence to what may otherwise feel overwhelming.
+              </p>
+              <p className="text-foreground text-base md:text-lg leading-relaxed">
+                What makes a good financial planner or advisor especially valuable is their ability to explain options clearly and help families move forward with practical, well-informed decisions. That kind of guidance can be especially reassuring when coordinating with real estate, legal, and estate professionals.
+              </p>
+            </div>
+          </div>
+        </section>
+
+
+
         {/* How a Financial Planner Helps Your Family */}
         <section className="py-16 lg:py-24 bg-background">
           <div className="container px-6 lg:px-8">
