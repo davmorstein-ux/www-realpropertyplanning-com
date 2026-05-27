@@ -25,6 +25,7 @@ const featuredProviders = [
     photo: tiffanyPhoto,
     alt: "Photo of Tiffany Lane, Financial Professional at New York Life — Seattle General Office",
     href: "https://www.newyorklife.com/agent/tcford",
+    phone: "(206) 999-2116",
     logo: newYorkLifeLogo,
     logoAlt: "New York Life logo",
     external: true,
