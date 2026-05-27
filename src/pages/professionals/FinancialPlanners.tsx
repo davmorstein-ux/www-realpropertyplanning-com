@@ -89,19 +89,16 @@ const FinancialPlanners = () => {
       />
       <Header />
       <main id="main-content">
-        {/* Hero band */}
-        <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
+        <section className="bg-primary py-12 md:py-16">
           <div className="container px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
-              <div className="flex justify-center mb-1.5 md:mb-2">
-                <img src={heroIcon} alt="" aria-hidden="true" className="block w-full max-w-[15rem] h-auto object-contain" loading="lazy" />
-              </div>
-              <h1 className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground leading-tight">
+              <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-primary-foreground leading-tight">
                 Financial Planners & Advisors
               </h1>
             </div>
           </div>
         </section>
+
 
         {/* Featured tiles — immediately below hero band */}
         <section className="pt-6 md:pt-8 pb-12 md:pb-16 bg-background">
