@@ -70,6 +70,7 @@ const ProfessionPageTemplate = ({
   helpRows,
   professionals = [],
   featuredOverride,
+  featuredFirst = false,
   faqs,
   relatedProfessions,
   professionLabel,
