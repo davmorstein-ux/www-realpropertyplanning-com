@@ -800,7 +800,7 @@ body {
 }
 .tile-white__inner,
 .tile-white__face {
-  background: transparent !important;
+  background: #fbfaf7 !important;
 }
 
 /* ═══════════════════════════════════════════════
