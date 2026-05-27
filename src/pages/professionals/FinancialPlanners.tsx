@@ -53,11 +53,6 @@ const faqs = [
   },
 ];
 
-const helpRows = [
-  { text: "Reviews inherited assets and helps beneficiaries understand their financial options after a loss" },
-  { text: "Advises on estate taxes, stepped-up basis, and capital gains implications when selling inherited property" },
-  { text: "Helps older adults plan financially for assisted living, long-term care costs, and housing transitions" },
-];
 
 const FinancialPlanners = () => {
   const faqSchema = {
