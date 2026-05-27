@@ -8,6 +8,39 @@ import CTASection from "@/components/CTASection";
 import { Link } from "react-router-dom";
 import GinnysGirlsCard from "@/components/GinnysGirlsCard";
 import heroIcon from "@/assets/icons/senior-move-managers-hero-washington.webp";
+import ericRovnerPhoto from "@/assets/providers/senior-movers-eric-rovner-washington.webp";
+import tinaBarilPhoto from "@/assets/providers/senior-movers-tina-baril-washington.webp";
+import meriannRobertsPhoto from "@/assets/meriann-roberts-ginnys-girls-owner.webp";
+
+const featuredMovers = [
+  {
+    name: "Eric Rovner",
+    title: "Vice President of Marketing",
+    company: "HB Move Management · Hansen Bros. Moving",
+    photo: ericRovnerPhoto,
+    alt: "Photo of Eric Rovner",
+    href: "https://www.hbmovemanagement.com",
+    external: true,
+  },
+  {
+    name: "Tina Baril",
+    title: "Owner",
+    company: "Monarch Transitions · Senior Move Managers",
+    photo: tinaBarilPhoto,
+    alt: "Photo of Tina Baril",
+    href: "https://www.monarchtransitions.com",
+    external: true,
+  },
+  {
+    name: "Meriann Roberts",
+    title: "Owner",
+    company: "Ginny's Girls Estate Services",
+    photo: meriannRobertsPhoto,
+    alt: "Photo of Meriann Roberts",
+    href: "https://www.ginnysestates.com",
+    external: true,
+  },
+];
 
 const SeniorMoveManagers = () => (
   <>
@@ -52,8 +85,49 @@ const SeniorMoveManagers = () => (
             </p>
 
             <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mt-12 mb-5">
-              Recommended Professionals
+              Featured Senior Move Managers
             </h2>
+          </div>
+        </div>
+      </section>
+
+      <section className="pb-12 md:pb-16 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
+            {featuredMovers.map((m) => (
+              <a
+                key={m.name}
+                href={m.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${m.name}, ${m.title} at ${m.company} — Learn more`}
+                className="interior-tile tile-white group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+              >
+                <div className="tile-white__inner h-full">
+                  <div className="tile-white__face h-full">
+                    <div className="flex h-full flex-col items-center text-center p-6">
+                      <img
+                        src={m.photo}
+                        alt={m.alt}
+                        className="w-28 h-28 rounded-full object-cover border-2 border-border shadow-sm mb-4"
+                        loading="lazy"
+                      />
+                      <h3 className="font-serif text-xl text-navy font-semibold leading-snug mb-1">
+                        {m.name}
+                      </h3>
+                      <p className="text-foreground text-sm mb-1">{m.title}</p>
+                      <p className="text-foreground text-sm font-semibold mb-5">{m.company}</p>
+                      <span className="gold-cta mt-auto">
+                        Learn More
+                        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                          <polyline points="9 18 15 12 9 6" />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            ))}
           </div>
         </div>
       </section>
