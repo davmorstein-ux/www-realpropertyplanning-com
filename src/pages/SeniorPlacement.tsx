@@ -6,6 +6,7 @@ import BackToProfessionalsButton from "@/components/BackToProfessionalsButton";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import GoldCheckItem from "@/components/GoldCheckItem";
+import ProviderContact from "@/components/ProviderContact";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import abbyPhoto from "@/assets/abby-durr-silver-age-senior-living-advisor.webp";
