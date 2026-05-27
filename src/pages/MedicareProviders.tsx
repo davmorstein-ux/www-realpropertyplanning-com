@@ -157,74 +157,49 @@ const MedicareProviders = () => (
         </div>
       </section>
 
-      {/* Featured Providers — Spears Agency */}
-      <section className="py-14 md:py-20 bg-secondary">
+      {/* Featured Medicare Providers */}
+      <section className="py-12 md:py-16 bg-secondary">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-[900px] mx-auto">
-            <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm text-center">
-              Featured Providers
+          <div className="max-w-6xl mx-auto">
+            <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-8 text-center max-w-3xl mx-auto">
+              Trusted Medicare specialists helping seniors and families navigate coverage options with clarity and confidence across Washington State.
             </p>
-            <h2 className="font-serif text-3xl text-foreground font-semibold mb-8 text-center">
-              Spears Agency — Medicare Specialists
-            </h2>
-
-            <div className="bg-card border border-border rounded-xl overflow-hidden shadow-sm p-5 sm:p-6">
-              <div className="flex flex-col items-center gap-6 md:flex-row md:items-start md:gap-8">
-                {/* Left: logo + headshot */}
-                <div className="flex flex-col items-center shrink-0 gap-4">
-                  <img
-                    src={spearsLogo}
-                    alt="Spears Agency logo"
-                    className="w-[120px] h-auto object-contain"
-                    loading="lazy"
-                  />
-                  <img
-                    src={heidiPhoto}
-                    alt="Photo of Heidi Bolton, Medicare Advisor at Spears Agency"
-                    className="w-[150px] h-[150px] rounded-full object-cover border-2 border-border shadow-sm"
-                    loading="lazy"
-                  />
-                </div>
-
-                {/* Right: content */}
-                <div className="flex-1 text-center md:text-left">
-                  {/* Agency block */}
-                  <h3 className="font-serif text-xl font-bold text-foreground mb-2">Spears Agency</h3>
-                  <p className="text-foreground text-base leading-relaxed mb-5">
-                    The Spears Agency is located in Monroe, WA, but we are licensed and serve clients in WA, ID, AZ, OR, &amp; NV. We are recognized in the top 5% of agencies nationwide within our carrier network because we lead with education, and offer reliable coverage solutions based on client needs.
-                  </p>
-
-                  {/* Advisor block */}
-                  <h3 className="font-serif text-xl font-bold text-foreground mb-2">
-                    Heidi Bolton — Medicare Advisor, Spears Agency
-                  </h3>
-                  <p className="text-foreground text-base leading-relaxed mb-4">
-                    Heidi Bolton has an extensive background in Medicare where she specializes in helping individuals navigate Medicare with clarity and confidence — whether you're turning 65, retiring, losing employer coverage, reviewing your current plan, or just answering general questions about your coverage throughout the year. Medicare can feel overwhelming, but Heidi simplifies the process and gives you peace of mind about your decisions.
-                  </p>
-                  <p className="text-foreground text-base leading-relaxed mb-4">
-                    Heidi believes strongly in doing what's right for her clients — not what's easiest or most profitable. She takes the time to truly understand your unique situation, answer your questions, and present options that make sense for your needs and budget. Her clients are treated like family, given honest advice and year-round support.
-                  </p>
-                  <p className="text-foreground text-base leading-relaxed mb-5">
-                    Part of what makes Medicare tricky are the penalties that can happen if you don't follow Medicare's rules — rules the average person isn't aware of. This is why planning ahead matters. Heidi wants to connect with clients as they approach age 65 to make sure you're receiving accurate information and can avoid potential Medicare penalties.
-                  </p>
-
-                  {/* Contact block */}
-                  <div className="space-y-2 text-base">
-                    <div className="flex items-center gap-2 justify-center md:justify-start">
-                      <img src={iconPhone3dContact} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0" loading="lazy" />
-                      <a href="tel:+13608376089" className="text-accent hover:text-gold underline-offset-4 hover:underline font-semibold text-lg">(360) 837-6089</a>
-                    </div>
-                    <div className="flex items-center gap-2 justify-center md:justify-start">
-                      <span className="w-5 h-5 flex items-center justify-center shrink-0 text-base" aria-hidden="true">🌐</span>
-                      <a href="https://spearsagencyllc.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-gold underline-offset-4 hover:underline">spearsagencyllc.com</a>
-                    </div>
-                    <div className="flex items-start gap-2 justify-center md:justify-start">
-                      <img src={iconMapPin3dContact} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0 mt-0.5" loading="lazy" />
-                      <span className="text-foreground">14655 Fryelands Blvd SE, Ste 123, Monroe, WA 98272</span>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
+              {providers.map((p) => (
+                <a
+                  key={p.name}
+                  href={p.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`${p.name}, ${p.title} at ${p.company} — Learn more`}
+                  className="interior-tile tile-white group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+                >
+                  <div className="tile-white__inner h-full">
+                    <div className="tile-white__face h-full">
+                      <div className="flex h-full flex-col items-center text-center p-6">
+                        <img
+                          src={p.photo}
+                          alt={p.alt}
+                          className="w-28 h-28 rounded-full object-cover border-2 border-border shadow-sm mb-4"
+                          loading="lazy"
+                        />
+                        <h2 className="font-serif text-xl text-navy font-semibold leading-snug mb-1">
+                          {p.name}
+                        </h2>
+                        <p className="text-foreground text-sm mb-1">{p.title}</p>
+                        <p className="text-foreground text-sm font-semibold mb-2">{p.company}</p>
+                        <p className="text-muted-foreground text-sm italic mb-5">{p.specialty}</p>
+                        <span className="gold-cta mt-auto">
+                          Learn More
+                          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                            <polyline points="9 18 15 12 9 6" />
+                          </svg>
+                        </span>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
+                </a>
+              ))}
             </div>
           </div>
         </div>
