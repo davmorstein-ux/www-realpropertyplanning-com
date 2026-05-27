@@ -3,7 +3,6 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import DisclaimerSection from "@/components/DisclaimerSection";
-import { Link } from "react-router-dom";
 import danBartelPhoto from "@/assets/providers/real-estate-lenders-dan-bartel-washington.webp";
 import jeffMcGinnisPhoto from "@/assets/providers/real-estate-lenders-jeff-mcginnis-washington.webp";
 import hansWestermarkPhoto from "@/assets/providers/real-estate-lenders-hans-westermark-washington.webp";
@@ -14,6 +13,8 @@ interface Lender {
   company: string;
   photo: string;
   alt: string;
+  href: string;
+  specialty: string;
 }
 
 const lenders: Lender[] = [
@@ -23,6 +24,8 @@ const lenders: Lender[] = [
     company: "C2 Financial",
     photo: danBartelPhoto,
     alt: "Photo of Daniel Bartel",
+    href: "https://www.santadanmortgage.com",
+    specialty: "Reverse mortgages and retirement planning for seniors",
   },
   {
     name: "Jeff McGinnis",
@@ -30,6 +33,8 @@ const lenders: Lender[] = [
     company: "CrossCountry Mortgage",
     photo: jeffMcGinnisPhoto,
     alt: "Photo of Jeff McGinnis",
+    href: "https://crosscountrymortgage.com/seattle-wa-5531/jeffrey-mcginnis/",
+    specialty: "25+ years of mortgage lending experience",
   },
   {
     name: "Hans Westermark",
@@ -37,6 +42,8 @@ const lenders: Lender[] = [
     company: "Family First Mortgage",
     photo: hansWestermarkPhoto,
     alt: "Photo of Hans Westermark",
+    href: "https://www.familyfirstmortgagegroup.com/loan-officer/hans-westermark",
+    specialty: "Home loans, refinancing, and real estate transitions",
   },
 ];
 
@@ -67,11 +74,19 @@ const MortgageLenders = () => (
 
       <section className="py-12 md:py-16 bg-secondary">
         <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center mb-10">
+            <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
+              Trusted mortgage professionals with experience in estate, senior transition, and residential financing across Washington State.
+            </p>
+          </div>
+
           <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
             {lenders.map((l) => (
-              <Link
+              <a
                 key={l.name}
-                to="/lenders-and-financing-specialists"
+                href={l.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label={`${l.name}, ${l.title} at ${l.company} — Learn more`}
                 className="interior-tile tile-white group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
               >
@@ -88,7 +103,8 @@ const MortgageLenders = () => (
                         {l.name}
                       </h2>
                       <p className="text-foreground text-sm mb-1">{l.title}</p>
-                      <p className="text-foreground text-sm font-semibold mb-5">{l.company}</p>
+                      <p className="text-foreground text-sm font-semibold mb-2">{l.company}</p>
+                      <p className="text-muted-foreground text-sm italic mb-5">{l.specialty}</p>
                       <span className="gold-cta mt-auto">
                         Learn More
                         <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -98,17 +114,8 @@ const MortgageLenders = () => (
                     </div>
                   </div>
                 </div>
-              </Link>
+              </a>
             ))}
-          </div>
-
-          <div className="text-center mt-10">
-            <Link
-              to="/lenders-and-financing-specialists"
-              className="inline-flex items-center gap-2 text-navy font-semibold underline-offset-4 hover:underline"
-            >
-              View full lender profiles &amp; financing resources →
-            </Link>
           </div>
         </div>
       </section>
