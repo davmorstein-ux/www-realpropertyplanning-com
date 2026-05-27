@@ -118,7 +118,49 @@ const SeniorPlacement = () => {
           </div>
         </section>
 
-        <AbbyDurrCard />
+        {/* Featured Senior Living Advisor */}
+        <section className="py-12 md:py-16 bg-background">
+          <div className="container px-6 lg:px-8">
+            <div className="max-w-6xl mx-auto">
+              <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-8 text-center max-w-3xl mx-auto">
+                Trusted senior living advisor helping families navigate housing and care options throughout the Puget Sound region.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
+                <a
+                  href="https://www.silveragecare.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Abby Durr, Senior Living Advisor at Silver Age Senior Living Advisors — Learn more"
+                  className="interior-tile tile-white group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+                >
+                  <div className="tile-white__inner h-full">
+                    <div className="tile-white__face h-full">
+                      <div className="flex h-full flex-col items-center text-center p-6">
+                        <img
+                          src={abbyPhoto}
+                          alt="Photo of Abby Durr, Senior Living Advisor at Silver Age Senior Living Advisors"
+                          className="w-28 h-28 rounded-full object-cover border-2 border-border shadow-sm mb-4"
+                          loading="lazy"
+                        />
+                        <h3 className="font-serif text-xl text-navy font-semibold leading-snug mb-1">
+                          Abby Durr
+                        </h3>
+                        <p className="text-foreground text-sm mb-1">Senior Living Advisor</p>
+                        <p className="text-foreground text-sm font-semibold mb-5">Silver Age Senior Living Advisors</p>
+                        <span className="gold-cta mt-auto">
+                          Learn More
+                          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                            <polyline points="9 18 15 12 9 6" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Housing Options */}
         <section className="py-12 md:py-16 bg-secondary">
