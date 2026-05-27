@@ -71,35 +71,8 @@ const AgingLifeCareManagers = () => {
 
         <h1 className="sr-only">Aging Life Care Managers</h1>
 
-        {/* Explanatory content */}
-        <section className="pt-6 md:pt-8 pb-4 md:pb-6 bg-background">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto">
-              <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-4">
-                Aging Life Care Managers, sometimes called geriatric care managers, are experienced professionals who help older adults and their families make informed decisions during the challenges of aging. They often come from backgrounds such as social work, nursing, gerontology, counseling, psychology, or rehabilitation, and they bring both clinical insight and practical problem-solving to situations that can feel overwhelming.
-              </p>
-              <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-4">
-                Their role is to assess the whole picture, not just one problem. An Aging Life Care Manager evaluates health needs, cognition, safety, family dynamics, housing options, available resources, and personal preferences, then develops a personalized plan that supports independence, dignity, and quality of life.
-              </p>
-              <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-4">
-                They also serve as a central point of coordination and advocacy. That can include attending medical appointments, explaining care options, arranging in-home support, monitoring services, guiding housing transitions, helping families during hospitalizations or crises, and connecting clients with trusted legal, financial, and community resources.
-              </p>
-              <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-4">
-                What sets an Aging Life Care Manager apart is the combination of expertise, objectivity, and local knowledge. Rather than offering one-size-fits-all advice, they provide a holistic, client-centered approach tailored to the older adult's wishes, needs, and changing circumstances, while also giving families clear guidance and peace of mind, especially when loved ones live at a distance.
-              </p>
-              <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-4">
-                Many Aging Life Care Managers are members of the Aging Life Care Association, whose members are required to meet education, experience, and, for advanced-level membership, certification standards, and to follow a Code of Ethics and Standards of Practice. ALCA states that advanced professional members typically hold a bachelor's, master's, or doctoral degree in a related field, relevant supervised experience, and an approved certification.
-              </p>
-
-              <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mt-10 mb-5">
-                Featured Providers
-              </h2>
-            </div>
-          </div>
-        </section>
-
-        {/* Provider tiles */}
-        <section className="pb-12 md:pb-16 bg-background">
+        {/* Provider tiles — immediately below hero band */}
+        <section className="pt-6 md:pt-8 pb-12 md:pb-16 bg-background">
           <div className="container px-6 lg:px-8">
             <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
               {providers.map((p) => (
@@ -143,6 +116,32 @@ const AgingLifeCareManagers = () => {
                   </div>
                 </a>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Explanatory content — below tiles */}
+        <section className="pb-12 md:pb-16 bg-background">
+          <div className="container px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-5">
+                About Aging Life Care Managers
+              </h2>
+              <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-4">
+                Aging Life Care Managers, sometimes called geriatric care managers, are experienced professionals who help older adults and their families make informed decisions during the challenges of aging. They often come from backgrounds such as social work, nursing, gerontology, counseling, psychology, or rehabilitation, and they bring both clinical insight and practical problem-solving to situations that can feel overwhelming.
+              </p>
+              <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-4">
+                Their role is to assess the whole picture, not just one problem. An Aging Life Care Manager evaluates health needs, cognition, safety, family dynamics, housing options, available resources, and personal preferences, then develops a personalized plan that supports independence, dignity, and quality of life.
+              </p>
+              <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-4">
+                They also serve as a central point of coordination and advocacy. That can include attending medical appointments, explaining care options, arranging in-home support, monitoring services, guiding housing transitions, helping families during hospitalizations or crises, and connecting clients with trusted legal, financial, and community resources.
+              </p>
+              <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-4">
+                What sets an Aging Life Care Manager apart is the combination of expertise, objectivity, and local knowledge. Rather than offering one-size-fits-all advice, they provide a holistic, client-centered approach tailored to the older adult's wishes, needs, and changing circumstances, while also giving families clear guidance and peace of mind, especially when loved ones live at a distance.
+              </p>
+              <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-4">
+                Many Aging Life Care Managers are members of the Aging Life Care Association, whose members are required to meet education, experience, and, for advanced-level membership, certification standards, and to follow a Code of Ethics and Standards of Practice. ALCA states that advanced professional members typically hold a bachelor's, master's, or doctoral degree in a related field, relevant supervised experience, and an approved certification.
+              </p>
             </div>
           </div>
         </section>
