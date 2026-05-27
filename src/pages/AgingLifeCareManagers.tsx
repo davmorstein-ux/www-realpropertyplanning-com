@@ -32,6 +32,8 @@ const providers: Provider[] = [
     photo: lauraSilversteinPhoto,
     alt: "Photo of Laura A. Silverstein, MSW",
     href: "https://www.silverandsageconsulting.com",
+    phone: "(206) 886-6012",
+    email: "info@silverandsageconsulting.com",
     specialty:
       "Advocacy, assessment, care management, consultation, crisis intervention, guidance for adults with disabilities, information/referral, and placement",
     logo: silverSageLogo,
