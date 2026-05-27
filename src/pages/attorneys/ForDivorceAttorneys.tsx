@@ -88,6 +88,7 @@ const ForDivorceAttorneys = () => (
                       </h2>
                       <p className="text-foreground text-sm mb-1">{a.title}</p>
                       <p className="text-foreground text-sm font-semibold mb-3">{a.company}</p>
+                      <ProviderContact phone={a.phone} email={a.email} />
                       {a.logo && (
                         <img
                           src={a.logo}
