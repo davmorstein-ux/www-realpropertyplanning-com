@@ -288,15 +288,15 @@ const DateOfDeathValuationPropertyAppraisals = () => {
                   <Link
                     key={c.href + c.title}
                     to={c.href}
-                    className="group bg-white border-2 border-gold/25 rounded-2xl p-6 shadow-[0_6px_18px_-10px_rgba(27,43,75,0.2)] hover:border-gold/55 hover:-translate-y-1 hover:shadow-[0_4px_12px_-4px_rgba(27,43,75,0.14)] transition-all flex flex-col"
+                    className="group bg-white border-2 border-gold/25 rounded-2xl p-6 shadow-[0_6px_18px_-10px_rgba(27,43,75,0.2)] hover:border-gold/55 hover:-translate-y-1 hover:shadow-[0_4px_12px_-4px_rgba(27,43,75,0.14)] transition-all flex flex-col items-center justify-center text-center"
                   >
-                    <h3 className="font-serif text-xl text-navy font-semibold mb-2 group-hover:text-[hsl(var(--gold-dark))] transition-colors">
+                    <h3 className="font-serif text-xl text-navy font-semibold mb-2 text-center group-hover:text-[hsl(var(--gold-dark))] transition-colors">
                       {c.title}
                     </h3>
-                    <p className="text-navy text-base leading-relaxed mb-4 flex-1">
+                    <p className="text-navy text-base leading-relaxed mb-4 flex-1 text-center">
                       {c.description}
                     </p>
-                    <span className="inline-flex items-center gap-2 text-gold font-bold text-sm">
+                    <span className="inline-flex items-center justify-center gap-2 text-gold font-bold text-sm">
                       Continue <ArrowRight className="w-4 h-4" aria-hidden="true" />
                     </span>
                   </Link>
