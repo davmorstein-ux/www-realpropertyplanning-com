@@ -33,6 +33,8 @@ const attorneys: Attorney[] = [
     photo: dominikPhoto,
     alt: "Photo of Dominik Musafia",
     href: "https://www.seattledivorceoptions.com",
+    phone: "(206) 860-2431",
+    email: "Dom@SeattleDivorceOptions.com",
     specialty: "Collaborative divorce and family law, with additional expertise in business and real property matters",
     logo: seattleDivorceLogo,
     logoAlt: "Seattle Divorce Options logo",
