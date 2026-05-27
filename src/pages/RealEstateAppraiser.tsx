@@ -2,176 +2,117 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
-import CTASection from "@/components/CTASection";
-import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
-import iconEmail3d from "@/assets/icons/real-estate-email-envelope-3d-icon-washington.webp";
-import { Link } from "react-router-dom";
+import BackToProfessionalsButton from "@/components/BackToProfessionalsButton";
+import HeroBandTitle from "@/components/HeroBandTitle";
 import davidSteinPhoto from "@/assets/providers/realtor-david-stein-headshot-seattle.webp";
 import steinAppraisalLogo from "@/assets/stein-appraisal-appraiser-logo-washington.webp";
-import ehoLogo from "@/assets/providers/equal-housing-opportunity-logo-washington.webp";
-import iconAppraiser from "@/assets/icons/real-estate-appraiser-icon-washington.webp";
-import wtdwHeroImage from "@/assets/what-to-do-with-the-house-hero-washington.webp";
-import HeroBandTitle from "@/components/HeroBandTitle";
+
+const featuredAppraisers = [
+  {
+    name: "David Stein",
+    title: "Certified Residential Appraiser",
+    company: "Stein Appraisal",
+    specialty:
+      "Estate and date-of-death appraisals, divorce and litigation support, retrospective valuations, and residential appraisals for attorneys, executors, homeowners, and investors throughout the Puget Sound region.",
+    photo: davidSteinPhoto,
+    alt: "Photo of David Stein",
+    href: "https://realpropertyplanning.com/real-estate-appraiser",
+    logo: steinAppraisalLogo,
+    logoAlt: "Stein Appraisal logo",
+  },
+];
 
 const RealEstateAppraiser = () => (
   <>
     <SEOHead
-      title="Certified Real Estate Appraiser in Washington State"
-      description="Washington State Certified Residential Appraiser. Estate, probate, and senior transition appraisals accepted by courts, lenders, and the IRS."
+      title="Real Estate Appraisers in Washington State"
+      description="Washington State Certified Residential Appraisers. Estate, probate, and senior transition appraisals accepted by courts, lenders, and the IRS."
       canonical="https://realpropertyplanning.com/real-estate-appraiser"
     />
     <BreadcrumbSchema
       items={[
         { name: "Home", url: "https://realpropertyplanning.com" },
-        { name: "Real Estate Appraiser", url: "https://realpropertyplanning.com/real-estate-appraiser" },
+        { name: "Real Estate Appraisers", url: "https://realpropertyplanning.com/real-estate-appraiser" },
       ]}
     />
     <Header />
     <main id="main-content">
-        {/* WTDW Shared Hero */}
-        <section className="w-full overflow-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
-          <div style={{ lineHeight: 0 }}>
-            <img
-              src={wtdwHeroImage}
-              alt="Quiet Washington street with craftsman homes"
-              className="w-full h-[280px] md:h-[420px] lg:h-[520px] object-cover block"
-              loading="eager"
-            />
-            <HeroBandTitle as="div">Appraisal Or Valuation</HeroBandTitle>
-          </div>
-        </section>
-      {/* Hero */}
-      <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="flex justify-center mb-1.5 md:mb-2">
-              <img src={iconAppraiser} alt="Real Estate Appraiser" className="block w-full max-w-[15rem] h-auto object-contain"  loading="lazy"/>
-            </div>
-            <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">Valuation &amp; Appraisal</p>
-            <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-primary-foreground leading-tight mb-4">Real Estate Appraiser</h1>
-            <p className="text-primary-foreground/80 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-              Objective, defensible property valuations for families, executors, trustees, and professionals during important life transitions.
-            </p>
-            <p className="text-primary-foreground/70 text-sm md:text-base leading-relaxed max-w-2xl mx-auto mt-4">
-              Appraisal services are provided through Stein Appraisal, David Stein's independent Washington State certified residential appraisal practice.
-            </p>
-          </div>
-        </div>
-      </section>
+      <HeroBandTitle>Real Estate Appraisers</HeroBandTitle>
 
-      {/* Featured Appraiser */}
-      <section className="py-10 md:py-14 bg-background">
+      {/* Featured tiles */}
+      <section className="pt-6 md:pt-8 pb-12 md:pb-16 bg-background">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground text-center mb-8">Featured Appraiser</h2>
-            <div className="bg-secondary border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 p-5 sm:p-6">
-              <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-start sm:gap-5">
-                <div className="shrink-0">
-                  <img src={davidSteinPhoto} alt="David Stein — Certified Residential Appraiser" className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-border shadow-sm"  loading="lazy"/>
-                </div>
-                <div className="flex w-full flex-col items-center sm:flex-1 sm:items-start">
-                  <img src={steinAppraisalLogo} alt="Stein Appraisal logo" className="h-[120px] w-auto object-contain mx-auto sm:mx-0 sm:-translate-x-[4px] block"  loading="lazy"/>
-                  <div className="w-full mt-1 text-center sm:text-left">
-                    <p className="text-foreground font-semibold text-base">David Stein</p>
-                    <p className="text-muted-foreground text-sm mb-0.5">Certified Residential Appraiser</p>
-                    <p className="text-muted-foreground text-sm mb-1.5">Stein Appraisal</p>
-                    <p className="text-muted-foreground text-sm leading-relaxed mb-3">
-                      David Stein has been a Washington State Certified Residential Appraiser for over 20 years, serving the Puget Sound region with integrity and precision. He provides appraisals for attorneys, homeowners, executors, appraisal management companies, investors, and banks — including estate and date-of-death appraisals, divorce and litigation support, and retrospective valuations. Whether you need a straightforward market value opinion or a carefully documented appraisal for a complex legal matter, David brings the same calm, professional approach to every assignment.
-                    </p>
-                    <div className="text-muted-foreground text-xs leading-relaxed mb-3 space-y-0.5">
-                      <p>WA Certified Residential Appraiser — #1702080</p>
-                      <p>Real Estate Broker — License #113972</p>
-                    </div>
-                    <div className="space-y-1.5 text-sm">
-                      <div className="flex items-center gap-2 justify-center sm:justify-start">
-                        <img src={iconPhone3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" />
-                        <a href="tel:+12069003015" className="text-accent hover:text-gold underline-offset-4 hover:underline">(206) 900-3015</a>
-                      </div>
-                      <div className="flex items-center gap-2 justify-center sm:justify-start">
-                        <img src={iconEmail3d} alt="" aria-hidden="true" className="w-4 h-4 object-contain shrink-0" loading="lazy" />
-                        <a href="mailto:dave@steinappraisal.com" className="text-accent hover:text-gold underline-offset-4 hover:underline break-all">dave@steinappraisal.com</a>
-                      </div>
-                    </div>
-                    <div className="flex items-center justify-center sm:justify-start gap-4 mt-4">
-                      <img src={ehoLogo} alt="Equal Housing Opportunity" className="h-10 w-auto object-contain opacity-70"  loading="lazy"/>
+          <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
+            {featuredAppraisers.map((m) => (
+              <a
+                key={m.name}
+                href={m.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${m.name}, ${m.title} at ${m.company} — Learn more`}
+                className="interior-tile tile-white group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+              >
+                <div className="tile-white__inner h-full">
+                  <div className="tile-white__face h-full">
+                    <div className="flex h-full flex-col items-center text-center p-6">
+                      <img
+                        src={m.photo}
+                        alt={m.alt}
+                        className="w-28 h-28 rounded-full object-cover border-2 border-border shadow-sm mb-4"
+                        loading="lazy"
+                      />
+                      <h3 className="font-serif text-xl text-navy font-semibold leading-snug mb-1">
+                        {m.name}
+                      </h3>
+                      <p className="text-foreground text-sm mb-1">{m.title}</p>
+                      <p className="text-foreground text-sm font-semibold mb-4">{m.company}</p>
+                      {m.logo && (
+                        <img
+                          src={m.logo}
+                          alt={m.logoAlt || `${m.company} logo`}
+                          className="h-12 w-auto max-w-[180px] object-contain mb-4"
+                          loading="lazy"
+                        />
+                      )}
+                      {m.specialty && (
+                        <p className="text-muted-foreground text-sm leading-relaxed mb-5">
+                          {m.specialty}
+                        </p>
+                      )}
+
+                      <span className="gold-cta mt-auto">
+                        Learn More
+                        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                          <polyline points="9 18 15 12 9 6" />
+                        </svg>
+                      </span>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              </a>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Appraisal Services */}
-      <section className="py-10 md:py-14 bg-secondary">
+      {/* Explanatory content */}
+      <section className="pb-12 md:pb-16 bg-background">
         <div className="container px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground text-center mb-4">Appraisal Services We Provide</h2>
-            <p className="text-muted-foreground text-base md:text-lg leading-relaxed text-center max-w-3xl mx-auto mb-10">
-              A certified appraisal is one of the most important documents in any major property decision. Whether you are settling an estate, navigating probate, helping a parent transition out of their home, or refinancing — an accurate, defensible valuation gives you the foundation to move forward with confidence.
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-5">
+              What Real Estate Appraisers Do
+            </h2>
+            <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-4">
+              A certified real estate appraiser provides an objective, defensible opinion of a property's value, backed by formal methodology and local market data. Their reports are accepted by courts, lenders, and the IRS — and are often required in probate, estate settlement, divorce, tax appeals, and senior housing decisions.
             </p>
-            <div className="grid gap-6 sm:grid-cols-2">
-              {[
-                {
-                  title: "Residential Appraisals",
-                  text: "Whether you are buying, selling, refinancing, or simply want to know what your home is worth, a certified residential appraisal provides an accurate, lender-accepted valuation backed by local Washington State market data.",
-                },
-                {
-                  title: "Estate & Probate Appraisals",
-                  text: "When a loved one passes away, Washington State courts and the IRS often require a certified appraisal of real property to settle the estate. We provide court-acceptable appraisal reports prepared with the care and precision these situations demand — and with sensitivity to what families are going through.",
-                },
-                {
-                  title: "Senior Transition & Relocation Appraisals",
-                  text: "Families helping an aging parent leave the home they have lived in for decades need to know its fair market value before making any decisions. We work directly with families, elder law attorneys, and senior care coordinators to deliver timely, accurate appraisals that support confident next steps.",
-                },
-              ].map((card) => (
-                <div key={card.title} className="bg-background border border-border rounded-xl p-5 sm:p-6 shadow-sm">
-                  <h3 className="font-serif text-lg font-semibold text-foreground mb-2">{card.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{card.text}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Certified Appraiser */}
-      <section className="py-10 md:py-14 bg-background">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-4">Why a Certified Appraiser Makes a Difference</h2>
-            <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-              Not all property valuations carry the same weight. A certified appraisal is legally defensible, accepted by courts, lenders, and the IRS — and is often required in probate, divorce, estate settlement, tax appeals, and senior housing decisions. Real Property Planning holds both a Washington State Certified Residential Appraiser designation (WA #1702080) and a Real Estate Broker license (#113972) — a rare combination that brings deeper market insight and practical real estate experience to every valuation.
+            <p className="text-muted-foreground text-base leading-relaxed mb-4">
+              Unlike a broker's price opinion, a certified appraisal is built on structured analysis and documented evidence. For families, executors, trustees, and attorneys, that difference can be what prevents a dispute, protects a fiduciary, or keeps a transaction on track.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Serving All of Washington State */}
-      <section className="py-10 md:py-14 bg-secondary">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-4">Serving All of Washington State</h2>
-            <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-              From King County and Snohomish County to Pierce, Thurston, Whatcom, Skagit, Clark, Spokane, and every county in between — Real Property Planning provides certified appraisal services throughout Washington State. Whether your property is in a major metro area or a rural community, this resource can help.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* More information link */}
-      <section className="py-6 bg-background">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <Link to="/real-estate-appraiser/learn-more" className="text-accent hover:text-gold underline underline-offset-4 text-base font-medium transition-colors">
-              More information about Real Estate Appraisers →
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <CTASection />
+      <BackToProfessionalsButton />
     </main>
     <Footer />
   </>
