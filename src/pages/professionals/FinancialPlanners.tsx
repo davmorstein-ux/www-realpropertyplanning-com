@@ -118,7 +118,7 @@ const FinancialPlanners = () => {
                         </h3>
                         <p className="text-foreground text-sm mb-1">{p.title}</p>
                         <p className="text-foreground text-sm font-semibold mb-3">{p.company}</p>
-                        <ProviderContact phone={(p as { phone?: string; email?: string }).phone} email={(p as { phone?: string; email?: string }).email} />
+                        <ProviderContact phone={(p as any).phone} email={(p as any).email} />
                         {p.logo && (
                           <img
                             src={p.logo}
