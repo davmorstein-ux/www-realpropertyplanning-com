@@ -112,8 +112,17 @@ const MortgageLenders = () => (
                         {l.name}
                       </h2>
                       <p className="text-foreground text-sm mb-1">{l.title}</p>
-                      <p className="text-foreground text-sm font-semibold mb-2">{l.company}</p>
+                      <p className="text-foreground text-sm font-semibold mb-3">{l.company}</p>
+                      {l.logo && (
+                        <img
+                          src={l.logo}
+                          alt={l.logoAlt || `${l.company} logo`}
+                          className="h-12 w-auto max-w-[180px] object-contain mb-4"
+                          loading="lazy"
+                        />
+                      )}
                       <p className="text-muted-foreground text-sm italic mb-5">{l.specialty}</p>
+
                       <span className="gold-cta mt-auto">
                         Learn More
                         <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
