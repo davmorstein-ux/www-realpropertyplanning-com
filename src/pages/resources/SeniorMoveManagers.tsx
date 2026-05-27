@@ -71,27 +71,8 @@ const SeniorMoveManagers = () => (
         </div>
       </section>
 
-      <section className="py-14 md:py-20 bg-background">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-5">
-              What Senior Move Managers Do
-            </h2>
-            <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-4">
-              Senior move managers coordinate and manage the physical and emotional aspects of relocating seniors — whether moving to a smaller home, an assisted living community, or closer to family. They handle sorting, packing, floor-plan design, unpacking, and settling in, so families don't have to manage every detail during an already stressful time.
-            </p>
-            <p className="text-muted-foreground text-base leading-relaxed mb-4">
-              Real Property Planning works with senior move managers regularly as part of <Link to="/senior-transitions" className="text-accent hover:text-gold underline underline-offset-4">senior transition</Link> situations. When a home needs to be sold alongside a move, Real Property Planning coordinates with the move manager to align timelines, property preparation, and the sale process.
-            </p>
-
-            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mt-12 mb-5">
-              Featured Senior Move Managers
-            </h2>
-          </div>
-        </div>
-      </section>
-
-      <section className="pb-12 md:pb-16 bg-background">
+      {/* Featured tiles — immediately below hero band */}
+      <section className="pt-6 md:pt-8 pb-12 md:pb-16 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
             {featuredMovers.map((m) => (
@@ -128,6 +109,23 @@ const SeniorMoveManagers = () => (
                 </div>
               </a>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Explanatory content — below tiles */}
+      <section className="pb-12 md:pb-16 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-5">
+              What Senior Move Managers Do
+            </h2>
+            <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-4">
+              Senior move managers coordinate and manage the physical and emotional aspects of relocating seniors — whether moving to a smaller home, an assisted living community, or closer to family. They handle sorting, packing, floor-plan design, unpacking, and settling in, so families don't have to manage every detail during an already stressful time.
+            </p>
+            <p className="text-muted-foreground text-base leading-relaxed mb-4">
+              Real Property Planning works with senior move managers regularly as part of <Link to="/senior-transitions" className="text-accent hover:text-gold underline underline-offset-4">senior transition</Link> situations. When a home needs to be sold alongside a move, Real Property Planning coordinates with the move manager to align timelines, property preparation, and the sale process.
+            </p>
           </div>
         </div>
       </section>
