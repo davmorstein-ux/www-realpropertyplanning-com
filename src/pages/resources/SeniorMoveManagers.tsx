@@ -70,18 +70,7 @@ const SeniorMoveManagers = () => (
     />
     <Header />
     <main id="main-content">
-      <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
-        <div className="container px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="flex justify-center mb-1.5 md:mb-2">
-              <img src={heroIcon} alt="" aria-hidden="true" className="block w-full max-w-[15rem] h-auto object-contain" loading="lazy" />
-            </div>
-
-            <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-base">Resources</p>
-            <h1 className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground leading-tight mb-4">Senior Move Managers</h1>
-          </div>
-        </div>
-      </section>
+      <HeroBandTitle>Senior Move Managers</HeroBandTitle>
 
       {/* Featured tiles — immediately below hero band */}
       <section className="pt-6 md:pt-8 pb-12 md:pb-16 bg-background">
