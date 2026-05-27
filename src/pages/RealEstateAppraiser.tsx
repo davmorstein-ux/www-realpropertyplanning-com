@@ -69,7 +69,7 @@ const RealEstateAppraiser = () => (
                       </h3>
                       <p className="text-foreground text-sm mb-1">{m.title}</p>
                       <p className="text-foreground text-sm font-semibold mb-4">{m.company}</p>
-                      <ProviderContact phone={(m as any).phone} email={(m as any).email} />
+                      <ProviderContact phone={m.phone} email={m.email} />
                       {m.logo && (
                         <img
                           src={m.logo}
