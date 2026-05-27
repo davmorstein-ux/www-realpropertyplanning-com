@@ -1849,6 +1849,19 @@ h4 + .text-muted-foreground {
   opacity: 1 !important;
 }
 
+:where(
+    [class*="rounded-"][class*="bg-card"],
+    [class*="rounded-"][class*="bg-background"],
+    [class*="rounded-"][class*="bg-white"],
+    [data-card],
+    .card-3d
+  ):not(.premium-tile):not(.premium-shell-tile)
+  span.gold-cta {
+  font-weight: 900 !important;
+  -webkit-text-stroke: 0.18px currentColor;
+  text-shadow: 0.16px 0 currentColor, -0.16px 0 currentColor;
+}
+
 /* Preserve light text on dark/navy cards */
 :where(.card-3d-blue-skin, [class*="bg-navy"], [class*="bg-primary"]) :where(p, li, span) {
   color: #e5e7eb !important;
