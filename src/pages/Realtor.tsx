@@ -18,6 +18,8 @@ const featuredBrokers = [
     photo: davidSteinPhoto,
     alt: "Photo of David Stein",
     href: "https://davestein.exprealty.com",
+    phone: "(206) 900-3015",
+    email: "dave.stein@exprealty.com",
     logo: expRealtyLogo,
     logoAlt: "eXp Realty logo",
   },
