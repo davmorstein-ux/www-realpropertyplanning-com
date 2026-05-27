@@ -48,6 +48,7 @@ interface ProfessionPageTemplateProps {
   helpRows: HelpRow[];
   professionals?: Professional[];
   featuredOverride?: React.ReactNode;
+  featuredFirst?: boolean;
   faqs: FAQItem[];
   relatedProfessions: RelatedProfession[];
   professionLabel: string;
@@ -69,6 +70,7 @@ const ProfessionPageTemplate = ({
   helpRows,
   professionals = [],
   featuredOverride,
+  featuredFirst = false,
   faqs,
   relatedProfessions,
   professionLabel,
@@ -114,6 +116,17 @@ const ProfessionPageTemplate = ({
         </div>
       </section>
 
+      {/* SECTION: Featured Professionals (rendered here when featuredFirst) */}
+      {featuredFirst && (
+        <section className="pt-6 md:pt-8 pb-12 md:pb-16 bg-secondary">
+          <div className="container px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto">
+              {featuredOverride}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* SECTION 2: What This Professional Does */}
       <section className="py-16 lg:py-24 bg-background">
         <div className="container px-6 lg:px-8">
@@ -136,6 +149,7 @@ const ProfessionPageTemplate = ({
       </section>
 
       {/* SECTION 3: Featured Professionals */}
+      {!featuredFirst && (
       <section className="py-16 lg:py-24 bg-secondary">
         <div className="container px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
@@ -221,6 +235,7 @@ const ProfessionPageTemplate = ({
           </div>
         </div>
       </section>
+      )}
 
 
       {/* SECTION 4: FAQ */}
