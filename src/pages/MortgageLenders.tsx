@@ -20,10 +20,13 @@ interface Lender {
   alt: string;
   href: string;
   specialty: string;
+  logo?: string;
+  logoAlt?: string;
 }
 
 const lenders: Lender[] = [
   {
+
     name: "Daniel Bartel",
     title: "Retirement Mortgage Specialist · Reverse Mortgage Lender",
     company: "C2 Financial",
