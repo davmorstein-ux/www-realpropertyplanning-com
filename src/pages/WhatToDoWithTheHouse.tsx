@@ -3,7 +3,6 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
 import { articleSchema } from "@/lib/schema";
 
 import iconHome from "@/assets/icons/probate-property-home-icon-washington.webp";
