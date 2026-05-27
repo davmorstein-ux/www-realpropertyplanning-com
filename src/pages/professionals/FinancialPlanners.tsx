@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/accordion";
 import heroIcon from "@/assets/icons/estate-financial-planning-icon-washington.webp";
 import tiffanyPhoto from "@/assets/tiffany-lane-financial-planner-new-york-life-seattle.webp";
+import newYorkLifeLogo from "@/assets/new-york-life-logo.webp";
 
 const featuredProviders = [
   {
@@ -25,9 +26,12 @@ const featuredProviders = [
     photo: tiffanyPhoto,
     alt: "Photo of Tiffany Lane, Financial Professional at New York Life — Seattle General Office",
     href: "https://www.newyorklife.com/agent/tcford",
+    logo: newYorkLifeLogo,
+    logoAlt: "New York Life logo",
     external: true,
   },
 ];
+
 
 const faqs = [
   {
@@ -127,7 +131,16 @@ const FinancialPlanners = () => {
                         </h3>
                         <p className="text-foreground text-sm mb-1">{p.title}</p>
                         <p className="text-foreground text-sm font-semibold mb-3">{p.company}</p>
+                        {p.logo && (
+                          <img
+                            src={p.logo}
+                            alt={p.logoAlt || `${p.company} logo`}
+                            className="h-12 w-auto max-w-[180px] object-contain mb-4"
+                            loading="lazy"
+                          />
+                        )}
                         <p className="text-muted-foreground text-sm leading-relaxed mb-5">{p.specialty}</p>
+
                         <span className="gold-cta mt-auto">
                           Learn More
                           <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -153,6 +166,25 @@ const FinancialPlanners = () => {
             </div>
           </div>
         </section>
+
+        {/* Explanatory content — below tiles */}
+        <section className="pb-12 md:pb-16 bg-background">
+          <div className="container px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto">
+              <p className="text-foreground text-base md:text-lg leading-relaxed mb-5">
+                A financial planner or advisor can be an important part of the support team during major life transitions. For older adults and their families, they help clarify financial decisions related to retirement income, long-term care, housing changes, estate planning, and the costs involved in downsizing or relocation.
+              </p>
+              <p className="text-foreground text-base md:text-lg leading-relaxed mb-5">
+                Their role is to look at the bigger financial picture and help clients make informed choices that align with their goals, resources, and family circumstances. In situations involving a move, a change in living arrangement, or the administration of an estate, a financial planner or advisor can help bring structure and confidence to what may otherwise feel overwhelming.
+              </p>
+              <p className="text-foreground text-base md:text-lg leading-relaxed">
+                What makes a good financial planner or advisor especially valuable is their ability to explain options clearly and help families move forward with practical, well-informed decisions. That kind of guidance can be especially reassuring when coordinating with real estate, legal, and estate professionals.
+              </p>
+            </div>
+          </div>
+        </section>
+
+
 
         {/* How a Financial Planner Helps Your Family */}
         <section className="py-16 lg:py-24 bg-background">

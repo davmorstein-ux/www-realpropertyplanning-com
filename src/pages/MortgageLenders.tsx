@@ -7,6 +7,10 @@ import BackToProfessionalsButton from "@/components/BackToProfessionalsButton";
 import danBartelPhoto from "@/assets/providers/real-estate-lenders-dan-bartel-washington.webp";
 import jeffMcGinnisPhoto from "@/assets/providers/real-estate-lenders-jeff-mcginnis-washington.webp";
 import hansWestermarkPhoto from "@/assets/providers/real-estate-lenders-hans-westermark-washington.webp";
+import c2FinancialLogo from "@/assets/providers/real-estate-lenders-c2financial-logo-washington.webp";
+import crossCountryLogo from "@/assets/providers/real-estate-lenders-crosscountry-logo-washington.webp";
+import familyFirstLogo from "@/assets/providers/real-estate-lenders-family-first-mortgage-logo-washington.webp";
+
 
 interface Lender {
   name: string;
@@ -16,10 +20,13 @@ interface Lender {
   alt: string;
   href: string;
   specialty: string;
+  logo?: string;
+  logoAlt?: string;
 }
 
 const lenders: Lender[] = [
   {
+
     name: "Daniel Bartel",
     title: "Retirement Mortgage Specialist · Reverse Mortgage Lender",
     company: "C2 Financial",
@@ -27,6 +34,8 @@ const lenders: Lender[] = [
     alt: "Photo of Daniel Bartel",
     href: "https://www.santadanmortgage.com",
     specialty: "Reverse mortgages and retirement planning for seniors",
+    logo: c2FinancialLogo,
+    logoAlt: "C2 Financial logo",
   },
   {
     name: "Jeff McGinnis",
@@ -36,6 +45,8 @@ const lenders: Lender[] = [
     alt: "Photo of Jeff McGinnis",
     href: "https://crosscountrymortgage.com/seattle-wa-5531/jeffrey-mcginnis/",
     specialty: "25+ years of mortgage lending experience",
+    logo: crossCountryLogo,
+    logoAlt: "CrossCountry Mortgage logo",
   },
   {
     name: "Hans Westermark",
@@ -45,7 +56,10 @@ const lenders: Lender[] = [
     alt: "Photo of Hans Westermark",
     href: "https://www.familyfirstmortgagegroup.com/loan-officer/hans-westermark",
     specialty: "Home loans, refinancing, and real estate transitions",
+    logo: familyFirstLogo,
+    logoAlt: "Family First Mortgage logo",
   },
+
 ];
 
 const MortgageLenders = () => (
@@ -98,8 +112,17 @@ const MortgageLenders = () => (
                         {l.name}
                       </h2>
                       <p className="text-foreground text-sm mb-1">{l.title}</p>
-                      <p className="text-foreground text-sm font-semibold mb-2">{l.company}</p>
+                      <p className="text-foreground text-sm font-semibold mb-3">{l.company}</p>
+                      {l.logo && (
+                        <img
+                          src={l.logo}
+                          alt={l.logoAlt || `${l.company} logo`}
+                          className="h-12 w-auto max-w-[180px] object-contain mb-4"
+                          loading="lazy"
+                        />
+                      )}
                       <p className="text-muted-foreground text-sm italic mb-5">{l.specialty}</p>
+
                       <span className="gold-cta mt-auto">
                         Learn More
                         <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">

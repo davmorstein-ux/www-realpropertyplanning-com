@@ -12,6 +12,9 @@ import heroIcon from "@/assets/icons/senior-move-managers-hero-washington.webp";
 import ericRovnerPhoto from "@/assets/providers/senior-movers-eric-rovner-washington.webp";
 import tinaBarilPhoto from "@/assets/providers/senior-movers-tina-baril-washington.webp";
 import meriannRobertsPhoto from "@/assets/meriann-roberts-ginnys-girls-owner.webp";
+import hbLogo from "@/assets/providers/senior-movers-hbmovemanagement-logo-washington.webp";
+import monarchLogo from "@/assets/providers/senior-movers-monarch-transitions-logo-washington.webp";
+import ginnysLogo from "@/assets/ginnys-girls-estate-services-logo.webp";
 
 const featuredMovers = [
   {
@@ -21,6 +24,8 @@ const featuredMovers = [
     photo: ericRovnerPhoto,
     alt: "Photo of Eric Rovner",
     href: "https://www.hbmovemanagement.com",
+    logo: hbLogo,
+    logoAlt: "HB Move Management logo",
     external: true,
   },
   {
@@ -30,6 +35,8 @@ const featuredMovers = [
     photo: tinaBarilPhoto,
     alt: "Photo of Tina Baril",
     href: "https://www.monarchtransitions.com",
+    logo: monarchLogo,
+    logoAlt: "Monarch Transitions logo",
     external: true,
   },
   {
@@ -39,9 +46,12 @@ const featuredMovers = [
     photo: meriannRobertsPhoto,
     alt: "Photo of Meriann Roberts",
     href: "https://www.ginnysestates.com",
+    logo: ginnysLogo,
+    logoAlt: "Ginny's Girls Estate Services logo",
     external: true,
   },
 ];
+
 
 const SeniorMoveManagers = () => (
   <>
@@ -98,7 +108,16 @@ const SeniorMoveManagers = () => (
                         {m.name}
                       </h3>
                       <p className="text-foreground text-sm mb-1">{m.title}</p>
-                      <p className="text-foreground text-sm font-semibold mb-5">{m.company}</p>
+                      <p className="text-foreground text-sm font-semibold mb-4">{m.company}</p>
+                      {m.logo && (
+                        <img
+                          src={m.logo}
+                          alt={m.logoAlt || `${m.company} logo`}
+                          className="h-12 w-auto max-w-[180px] object-contain mb-5"
+                          loading="lazy"
+                        />
+                      )}
+
                       <span className="gold-cta mt-auto">
                         Learn More
                         <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
