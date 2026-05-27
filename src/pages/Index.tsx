@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import HomepageHero from "@/components/HomepageHero";
 import HomepageFunnel from "@/components/HomepageFunnel";
 import HomepagePopularResources from "@/components/HomepagePopularResources";
+import HomepageFeaturedLenders from "@/components/HomepageFeaturedLenders";
 
 
 
@@ -121,6 +122,9 @@ const Index = () => {
 
       {/* 3. POPULAR RESOURCES — compact link grid */}
       <HomepagePopularResources />
+
+      {/* 4. FEATURED MORTGAGE LENDERS */}
+      <HomepageFeaturedLenders />
 
       {/* SEO description — visible to crawlers, visually subtle for users */}
       <section aria-label="Site description" className="bg-cream">
