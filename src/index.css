@@ -792,15 +792,13 @@ body {
 /* ═══════════════════════════════════════════════
    TILE-WHITE — clean flat white card (replaces card-3d-blue site-wide)
 ═══════════════════════════════════════════════ */
-.tile-white {
-  background: #ffffff;
+.tile-white,
+.tile-white__face,
+.tile-white__inner {
+  background: #ffffff !important;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   overflow: hidden;
-}
-.tile-white__inner,
-.tile-white__face {
-  background: #fbfaf7 !important;
 }
 
 /* ═══════════════════════════════════════════════
