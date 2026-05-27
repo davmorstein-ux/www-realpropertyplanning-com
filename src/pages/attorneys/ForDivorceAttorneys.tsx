@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import dominikPhoto from "@/assets/dominik-musafia-divorce-attorney-seattle.avif";
+import seattleDivorceLogo from "@/assets/seattle-divorce-options-logo.avif";
 
 interface Attorney {
   name: string;
@@ -17,6 +18,8 @@ interface Attorney {
   alt: string;
   href: string;
   specialty: string;
+  logo?: string;
+  logoAlt?: string;
 }
 
 const attorneys: Attorney[] = [
@@ -28,8 +31,11 @@ const attorneys: Attorney[] = [
     alt: "Photo of Dominik Musafia",
     href: "https://www.seattledivorceoptions.com",
     specialty: "Collaborative divorce and family law, with additional expertise in business and real property matters",
+    logo: seattleDivorceLogo,
+    logoAlt: "Seattle Divorce Options logo",
   },
 ];
+
 
 const ForDivorceAttorneys = () => (
   <div className="min-h-screen bg-background">
