@@ -4,9 +4,6 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import BackToProfessionalsButton from "@/components/BackToProfessionalsButton";
-import CTASection from "@/components/CTASection";
-import RelatedServices from "@/components/RelatedServices";
-import { Link } from "react-router-dom";
 import {
   Accordion,
   AccordionContent,
