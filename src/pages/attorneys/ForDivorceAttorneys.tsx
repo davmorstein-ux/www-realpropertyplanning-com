@@ -46,14 +46,6 @@ const ForDivorceAttorneys = () => (
     <main id="main-content">
       {/* Hero */}
       <section className="w-full bg-secondary" style={{ marginTop: 0, paddingTop: 0 }}>
-        <div className="container px-6 lg:px-8 py-10 md:py-14 flex justify-center">
-          <img
-            src={divorceCircle}
-            alt="Divorce attorney at desk reviewing divorce agreement"
-            className="max-w-full h-auto max-h-[420px] object-contain"
-            loading="eager"
-          />
-        </div>
         <HeroBandTitle compact>Divorce Attorney</HeroBandTitle>
       </section>
 
