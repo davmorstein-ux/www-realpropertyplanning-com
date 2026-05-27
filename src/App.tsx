@@ -279,6 +279,7 @@ const App = () => (
           <Route path="/attorneys/for-elder-law-attorneys" element={<AttorneysForElderLawAttorneys />} />
           <Route path="/attorneys/for-real-estate-attorney" element={<AttorneysForRealEstateAttorney />} />
           <Route path="/attorneys/for-family-law-attorneys" element={<AttorneysForFamilyLawAttorneys />} />
+          <Route path="/attorneys/for-divorce-attorneys" element={<ForDivorceAttorneys />} />
           <Route path="/for-attorneys/probate-attorneys" element={<ForProbateAttorneys />} />
           <Route path="/for-attorneys/estate-planning-attorneys" element={<ForEstatePlanningAttorneys />} />
           <Route path="/for-attorneys/elder-law-attorneys" element={<ForElderLawAttorneys />} />
