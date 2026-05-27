@@ -258,10 +258,11 @@ const DateOfDeathValuationPropertyAppraisals = () => {
 
         {/* FAQ */}
         <PageFAQ
-          faqs={faqs}
+          faqs={[...faqs].sort((a, b) => a.question.length - b.question.length)}
           heading="Questions Families Often Ask"
           eyebrow="Common Questions"
           id="date-of-death-valuation"
+          plain
         />
 
 
