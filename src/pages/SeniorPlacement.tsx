@@ -119,12 +119,9 @@ const SeniorPlacement = () => {
         </section>
 
         {/* Featured Senior Living Advisor */}
-        <section className="py-12 md:py-16 bg-background">
+        <section className="pt-6 md:pt-8 pb-12 md:pb-16 bg-background">
           <div className="container px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
-              <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-8 text-center max-w-3xl mx-auto">
-                Trusted senior living advisor helping families navigate housing and care options throughout the Puget Sound region.
-              </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
                 <a
                   href="https://www.silveragecare.com"
