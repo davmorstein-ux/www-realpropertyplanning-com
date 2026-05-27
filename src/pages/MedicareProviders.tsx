@@ -93,14 +93,11 @@ const MedicareProviders = () => (
     <Header />
     <main id="main-content">
       {/* Hero */}
-      <section className="bg-primary pt-1.5 md:pt-2 pb-12 md:pb-14">
+      <HeroBandTitle>Medicare Providers in Washington State</HeroBandTitle>
+      <section className="py-10 md:py-12 bg-background">
         <div className="container px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <p className="text-gold font-bold tracking-[0.15em] uppercase mb-3 text-sm">Medicare Guidance</p>
-            <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-primary-foreground leading-tight mb-4">
-              Medicare Providers in Washington State
-            </h1>
-            <p className="text-primary-foreground font-semibold text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-3">
+            <p className="text-foreground font-semibold text-base md:text-lg leading-relaxed mb-6">
               Navigating Medicare can feel overwhelming. We help seniors and families in the Greater Seattle area connect
               with trusted Medicare specialists who can guide you through your options with clarity and care.
             </p>
