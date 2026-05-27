@@ -137,8 +137,8 @@ const ProfessionPageTemplate = ({
             </h2>
             <div className="space-y-6">
               {helpRows.map((row, i) => (
-                <div key={i} className="flex items-start gap-5">
-                  <span className="text-3xl shrink-0 leading-none mt-1">{row.icon}</span>
+                <div key={i} className="flex items-start gap-4">
+                  <span className="text-gold text-2xl leading-none mt-0.5 shrink-0" aria-hidden="true">•</span>
                   <p className="text-lg text-muted-foreground leading-relaxed">
                     {row.text}
                   </p>
