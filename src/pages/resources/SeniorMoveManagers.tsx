@@ -12,6 +12,9 @@ import heroIcon from "@/assets/icons/senior-move-managers-hero-washington.webp";
 import ericRovnerPhoto from "@/assets/providers/senior-movers-eric-rovner-washington.webp";
 import tinaBarilPhoto from "@/assets/providers/senior-movers-tina-baril-washington.webp";
 import meriannRobertsPhoto from "@/assets/meriann-roberts-ginnys-girls-owner.webp";
+import hbLogo from "@/assets/providers/senior-movers-hbmovemanagement-logo-washington.webp";
+import monarchLogo from "@/assets/providers/senior-movers-monarch-transitions-logo-washington.webp";
+import ginnysLogo from "@/assets/ginnys-girls-estate-services-logo.webp";
 
 const featuredMovers = [
   {
@@ -21,6 +24,8 @@ const featuredMovers = [
     photo: ericRovnerPhoto,
     alt: "Photo of Eric Rovner",
     href: "https://www.hbmovemanagement.com",
+    logo: hbLogo,
+    logoAlt: "HB Move Management logo",
     external: true,
   },
   {
@@ -30,6 +35,8 @@ const featuredMovers = [
     photo: tinaBarilPhoto,
     alt: "Photo of Tina Baril",
     href: "https://www.monarchtransitions.com",
+    logo: monarchLogo,
+    logoAlt: "Monarch Transitions logo",
     external: true,
   },
   {
@@ -39,9 +46,12 @@ const featuredMovers = [
     photo: meriannRobertsPhoto,
     alt: "Photo of Meriann Roberts",
     href: "https://www.ginnysestates.com",
+    logo: ginnysLogo,
+    logoAlt: "Ginny's Girls Estate Services logo",
     external: true,
   },
 ];
+
 
 const SeniorMoveManagers = () => (
   <>
