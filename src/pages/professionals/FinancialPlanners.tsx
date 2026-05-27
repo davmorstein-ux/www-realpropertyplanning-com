@@ -86,15 +86,7 @@ const FinancialPlanners = () => {
       />
       <Header />
       <main id="main-content">
-        <section className="bg-primary py-12 md:py-16">
-          <div className="container px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center">
-              <h1 className="font-serif text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-primary-foreground leading-tight">
-                Financial Planners & Advisors
-              </h1>
-            </div>
-          </div>
-        </section>
+        <HeroBandTitle>Financial Planners & Advisors</HeroBandTitle>
 
 
         {/* Featured tiles — immediately below hero band */}
