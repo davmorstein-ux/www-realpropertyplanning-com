@@ -79,7 +79,7 @@ const Section = ({ heading, cards }: { heading: string; cards: Card[] }) => (
             <div className="tile-white__inner h-full relative">
               <div className="tile-white__face h-full">
                 <div className="flex h-full flex-col">
-                  <div style={{ background: "#ffffff", width: "100%", lineHeight: 0 }}>
+                  <div style={{ width: "100%", lineHeight: "0" }}>
                     <img
                       src={s.image}
                       alt={s.alt}
