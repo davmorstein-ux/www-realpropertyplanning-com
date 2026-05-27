@@ -7,6 +7,10 @@ import BackToProfessionalsButton from "@/components/BackToProfessionalsButton";
 import danBartelPhoto from "@/assets/providers/real-estate-lenders-dan-bartel-washington.webp";
 import jeffMcGinnisPhoto from "@/assets/providers/real-estate-lenders-jeff-mcginnis-washington.webp";
 import hansWestermarkPhoto from "@/assets/providers/real-estate-lenders-hans-westermark-washington.webp";
+import c2FinancialLogo from "@/assets/providers/real-estate-lenders-c2financial-logo-washington.webp";
+import crossCountryLogo from "@/assets/providers/real-estate-lenders-crosscountry-logo-washington.webp";
+import familyFirstLogo from "@/assets/providers/real-estate-lenders-family-first-mortgage-logo-washington.webp";
+
 
 interface Lender {
   name: string;
