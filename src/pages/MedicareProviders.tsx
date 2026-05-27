@@ -28,6 +28,8 @@ interface Provider {
   alt: string;
   href: string;
   specialty: string;
+  phone?: string;
+  email?: string;
   logo?: string;
   logoAlt?: string;
 }
@@ -40,6 +42,7 @@ const providers: Provider[] = [
     photo: heidiPhoto,
     alt: "Photo of Heidi Bolton, Medicare Advisor at Spears Agency",
     href: "https://spearsagencyllc.com",
+    phone: "(360) 837-6089",
     specialty: "Medicare planning and coverage guidance for individuals turning 65, retiring, or reviewing existing coverage",
     logo: spearsLogo,
     logoAlt: "Spears Agency logo",
