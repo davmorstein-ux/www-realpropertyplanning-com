@@ -2,9 +2,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import heidiPhoto from "@/assets/heidi-bolton-medicare-advisor-spears-agency.webp";
-import spearsLogo from "@/assets/spears-agency-logo-medicare.webp";
-import iconPhone3dContact from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
-import iconMapPin3dContact from "@/assets/icons/real-estate-location-pin-3d-icon-washington.webp";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import CTASection from "@/components/CTASection";
@@ -17,6 +14,28 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
+
+interface Provider {
+  name: string;
+  title: string;
+  company: string;
+  photo: string;
+  alt: string;
+  href: string;
+  specialty: string;
+}
+
+const providers: Provider[] = [
+  {
+    name: "Heidi Bolton",
+    title: "Medicare Advisor",
+    company: "Spears Agency",
+    photo: heidiPhoto,
+    alt: "Photo of Heidi Bolton, Medicare Advisor at Spears Agency",
+    href: "https://spearsagencyllc.com",
+    specialty: "Medicare planning and coverage guidance for individuals turning 65, retiring, or reviewing existing coverage",
+  },
+];
 
 const faqs = [
   {
