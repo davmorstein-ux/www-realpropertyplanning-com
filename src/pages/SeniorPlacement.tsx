@@ -146,6 +146,7 @@ const SeniorPlacement = () => {
                         </h3>
                         <p className="text-foreground text-sm mb-1">Senior Living Advisor</p>
                         <p className="text-foreground text-sm font-semibold mb-5">Silver Age Senior Living Advisors</p>
+                        <ProviderContact phone="(425) 891-7569" email="abby@silveragecare.com" />
                         <span className="gold-cta mt-auto">
                           Learn More
                           <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
