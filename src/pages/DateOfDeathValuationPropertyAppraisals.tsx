@@ -234,43 +234,29 @@ const DateOfDeathValuationPropertyAppraisals = () => {
               </p>
             </div>
 
-            <div className="max-w-5xl mx-auto space-y-4">
+            <div className="max-w-6xl mx-auto" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "16px" }}>
               {pathways.map((p) => (
                 <Link
                   key={p.letter}
                   to={p.href}
-                  className="group block bg-white border-2 border-gold/25 rounded-2xl shadow-[0_2px_8px_-4px_rgba(27,43,75,0.10)] hover:border-gold/55 hover:-translate-y-0.5 hover:shadow-[0_4px_12px_-4px_rgba(27,43,75,0.14)] transition-all overflow-hidden"
+                  className="group bg-white border-2 border-gold/25 rounded-2xl p-6 shadow-[0_6px_18px_-10px_rgba(27,43,75,0.2)] hover:border-gold/55 hover:-translate-y-1 hover:shadow-[0_4px_12px_-4px_rgba(27,43,75,0.14)] transition-all flex flex-col"
                 >
-                  <div className="flex flex-col md:flex-row items-stretch">
-                    <div className="md:w-44 bg-gradient-to-br from-navy to-[hsl(var(--navy-dark))] text-cream p-5 md:p-6 flex md:flex-col items-center md:items-start gap-4 md:gap-2">
-                      <span className="font-serif text-5xl text-gold font-bold leading-none">
-                        {p.letter}
-                      </span>
-                      <span className="text-cream uppercase tracking-widest text-xs font-bold">
-                        Topic {p.letter}
-                      </span>
-                    </div>
-                    <div className="flex-1 p-5 md:p-6 flex items-center gap-5">
-                      <img
-                        src={p.icon}
-                        alt=""
-                        aria-hidden="true"
-                        className="w-14 h-14 md:w-16 md:h-16 object-contain shrink-0 hidden sm:block"
-                        loading="lazy"
-                      />
-                      <div className="flex-1">
-                        <h3 className="font-serif text-xl md:text-2xl text-navy font-semibold mb-2 group-hover:text-[hsl(var(--gold-dark))] transition-colors">
-                          {p.title}
-                        </h3>
-                        <p className="text-navy text-base md:text-lg leading-relaxed mb-2">
-                          {p.description}
-                        </p>
-                        <span className="inline-flex items-center gap-2 text-gold font-bold text-sm">
-                          Learn More <ArrowRight className="w-4 h-4" aria-hidden="true" />
-                        </span>
-                      </div>
-                    </div>
-                  </div>
+                  <img
+                    src={p.icon}
+                    alt=""
+                    aria-hidden="true"
+                    className="w-12 h-12 object-contain mb-4"
+                    loading="lazy"
+                  />
+                  <h3 className="font-serif text-xl text-navy font-semibold mb-2 group-hover:text-[hsl(var(--gold-dark))] transition-colors">
+                    {p.title}
+                  </h3>
+                  <p className="text-navy text-base leading-relaxed mb-4 flex-1">
+                    {p.description}
+                  </p>
+                  <span className="inline-flex items-center gap-2 text-gold font-bold text-sm">
+                    Learn More <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                  </span>
                 </Link>
               ))}
             </div>
@@ -303,7 +289,7 @@ const DateOfDeathValuationPropertyAppraisals = () => {
                   continue with these next steps.
                 </p>
               </div>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "16px" }}>
                 {continueJourney.map((c) => (
                   <Link
                     key={c.href + c.title}
