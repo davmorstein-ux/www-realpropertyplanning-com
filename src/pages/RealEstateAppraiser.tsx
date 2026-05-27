@@ -18,6 +18,8 @@ const featuredAppraisers = [
     photo: davidSteinPhoto,
     alt: "Photo of David Stein",
     href: "https://realpropertyplanning.com/real-estate-appraiser",
+    phone: "(206) 900-3015",
+    email: "dave@steinappraisal.com",
     logo: steinAppraisalLogo,
     logoAlt: "Stein Appraisal logo",
   },
