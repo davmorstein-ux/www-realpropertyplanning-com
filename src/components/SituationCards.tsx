@@ -27,7 +27,7 @@ const situations = [
     href: "/executor-responsibilities-first-steps",
   },
   {
-    image: "/tiles/journey/property-valuation.png",
+    image: "/tiles/journey/property-valuation.webp",
     alt: "Property valuation and appraisal Washington State",
     title: "I Need a Property Valuation",
     description: "Understanding what a property is worth before making any decisions about selling, keeping, or transferring.",
@@ -59,7 +59,7 @@ const situations = [
     href: "/what-to-do-with-the-house",
   },
   {
-    image: "/tiles/journey/out-of-state-families.png",
+    image: "/tiles/journey/out-of-state-families.webp",
     alt: "Out-of-state families managing Washington State property remotely",
     title: "Out-of-State Families",
     description: "Managing a Washington State property remotely — coordinating care, sale, and decisions from a distance.",

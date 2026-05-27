@@ -6,7 +6,7 @@ import DisclaimerSection from "@/components/DisclaimerSection";
 import HeroBandTitle from "@/components/HeroBandTitle";
 import FeaturedProviderPlaceholder from "@/components/FeaturedProviderPlaceholder";
 import { articleSchema } from "@/lib/schema";
-import heroImage from "@/assets/building-trusted-professional-team-hero.png";
+import heroImage from "@/assets/building-trusted-professional-team-hero.webp";
 
 const jsonLd = articleSchema({
   headline: "Aging Life Care Managers",

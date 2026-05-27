@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import tilePlanning from "@/assets/tiles/tile-planning-ahead.png";
-import tileHelping from "@/assets/tiles/tile-helping-loved-one.png";
-import tileEstate from "@/assets/tiles/tile-handling-estate.png";
-import tileProfessionals from "@/assets/tiles/tile-find-professionals.png";
+import tilePlanning from "@/assets/tiles/tile-planning-ahead.webp";
+import tileHelping from "@/assets/tiles/tile-helping-loved-one.webp";
+import tileEstate from "@/assets/tiles/tile-handling-estate.webp";
+import tileProfessionals from "@/assets/tiles/tile-find-professionals.webp";
 
 const tiles = [
   {

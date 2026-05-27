@@ -7,7 +7,7 @@ import SiteDisclaimerBlock from "@/components/SiteDisclaimerBlock";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import HeroBandTitle from "@/components/HeroBandTitle";
-import heroIcon from "@/assets/probate-attorney-hero.png";
+import heroIcon from "@/assets/probate-attorney-hero.webp";
 
 const ProbateEstateAttorneys = () => (
   <>

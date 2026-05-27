@@ -7,14 +7,14 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { articleSchema } from "@/lib/schema";
-import wtdwHeroImage from "@/assets/building-trusted-professional-team-hero.png";
+import wtdwHeroImage from "@/assets/building-trusted-professional-team-hero.webp";
 import HeroBandTitle from "@/components/HeroBandTitle";
-import probateAttorneyImg from "@/assets/legal/probate-attorney.png";
-import estatePlanningAttorneyImg from "@/assets/legal/estate-planning-attorney.png";
-import elderLawAttorneyImg from "@/assets/legal/elder-law-attorney.png";
-import realEstateAttorneyImg from "@/assets/legal/real-estate-attorney.png";
-import familyLawAttorneyImg from "@/assets/legal/family-law-attorney.png";
-import divorceAttorneyImg from "@/assets/legal/divorce-attorney.png";
+import probateAttorneyImg from "@/assets/legal/probate-attorney.webp";
+import estatePlanningAttorneyImg from "@/assets/legal/estate-planning-attorney.webp";
+import elderLawAttorneyImg from "@/assets/legal/elder-law-attorney.webp";
+import realEstateAttorneyImg from "@/assets/legal/real-estate-attorney.webp";
+import familyLawAttorneyImg from "@/assets/legal/family-law-attorney.webp";
+import divorceAttorneyImg from "@/assets/legal/divorce-attorney.webp";
 
 type Card = {
   title: string;

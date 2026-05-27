@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { X, Send } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
-import chatCouple from "@/assets/chat-couple.png";
+import chatCouple from "@/assets/chat-couple.webp";
 
 
 type Msg = { role: "user" | "assistant"; content: string };

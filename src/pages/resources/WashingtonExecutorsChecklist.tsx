@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import { FileText, ArrowRight, AlertCircle } from "lucide-react";
 import GoldCheck3D from "@/components/GoldCheck3D";
 import HeroBandTitle from "@/components/HeroBandTitle";
-import washingtonExecutorsHero from "@/assets/washington-executors-hero.png";
+import washingtonExecutorsHero from "@/assets/washington-executors-hero.webp";
 
 const steps = [
   {

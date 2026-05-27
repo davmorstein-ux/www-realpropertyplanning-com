@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import steeringWheelImg from "@/assets/steering-wheel-transparent.png";
-import gearStickImg from "@/assets/gear_stick_only.png";
-import gearBootImg from "@/assets/gear_boot_only.png";
-import coupleChatImg from "@/assets/chat-couple.png";
+import steeringWheelImg from "@/assets/steering-wheel-transparent.webp";
+import gearStickImg from "@/assets/gear_stick_only.webp";
+import gearBootImg from "@/assets/gear_boot_only.webp";
+import coupleChatImg from "@/assets/chat-couple.webp";
 
 const MGFloatingNav = ({
   homeImage = steeringWheelImg,

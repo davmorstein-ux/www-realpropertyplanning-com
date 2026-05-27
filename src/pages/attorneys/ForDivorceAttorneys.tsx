@@ -7,7 +7,7 @@ import SiteDisclaimerBlock from "@/components/SiteDisclaimerBlock";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import HeroBandTitle from "@/components/HeroBandTitle";
-import divorceCircle from "@/assets/divorce-attorney-hero.png";
+import divorceCircle from "@/assets/divorce-attorney-hero.webp";
 
 const ForDivorceAttorneys = () => (
   <div className="min-h-screen bg-background">

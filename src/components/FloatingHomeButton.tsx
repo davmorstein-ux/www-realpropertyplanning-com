@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import steeringWheel from "@/assets/steering-wheel-transparent.png";
+import steeringWheel from "@/assets/steering-wheel-transparent.webp";
 
 /**
  * Fixed middle-left floating Home button, stacked above the gear shifter.

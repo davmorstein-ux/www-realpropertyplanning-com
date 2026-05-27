@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import chatAvatar from "@/assets/chat-avatar.png";
+import chatAvatar from "@/assets/chat-avatar.webp";
 
 type Pos = { x: number; y: number };
 

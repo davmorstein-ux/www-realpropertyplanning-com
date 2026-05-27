@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
-import gearBase from "@/assets/gear_shifter_base.png";
-import gearTop from "@/assets/gear_shifter_top.png";
+import gearBase from "@/assets/gear_shifter_base.webp";
+import gearTop from "@/assets/gear_shifter_top.webp";
 
 /**
  * Sticky Reverse / Forward navigation oval, positioned middle-left of the
