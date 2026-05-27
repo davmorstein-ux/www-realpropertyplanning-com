@@ -6,10 +6,8 @@ import { Button } from "@/components/ui/button";
 const FinancialPlanners = () => {
   const featured = (
     <div>
-      <div className="-mt-12 lg:-mt-16">
-        <TiffanyLaneCard />
-      </div>
-      <div className="text-center -mt-8">
+      <TiffanyLaneCard />
+      <div className="text-center mt-6">
         <Link to="/for-financial-planners">
           <Button variant="gold" size="lg">Learn More</Button>
         </Link>
