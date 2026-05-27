@@ -339,7 +339,7 @@ const Header = () => {
                   ...fontBody,
                   color: "#fff",
                   background: "#1a5fa8",
-                  padding: "2px 10px",
+                  padding: "1px 8px",
                   borderRadius: 6,
                   fontWeight: 700,
                   fontSize: 13,
