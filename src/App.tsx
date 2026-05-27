@@ -111,6 +111,7 @@ const PropertyPreparationServices = lazy(() => import("./pages/resources/Propert
 const MovingRelocationServices = lazy(() => import("./pages/resources/MovingRelocationServices"));
 const WashingtonExecutorsChecklist = lazy(() => import("./pages/resources/WashingtonExecutorsChecklist"));
 const LendersFinancingSpecialists = lazy(() => import("./pages/LendersFinancingSpecialists"));
+const MortgageLenders = lazy(() => import("./pages/MortgageLenders"));
 const RetirementReverseMortgage = lazy(() => import("./pages/RetirementReverseMortgage"));
 const SeniorLivingAndRelocation = lazy(() => import("./pages/SeniorLivingAndRelocation"));
 const AdultFamilyHomes = lazy(() => import("./pages/senior-living/AdultFamilyHomes"));
@@ -394,6 +395,7 @@ const App = () => (
 
           {/* ─── Lending ──────────────────────────────────────────── */}
           <Route path="/lenders-and-financing-specialists" element={<LendersFinancingSpecialists />} />
+          <Route path="/mortgage-lenders" element={<MortgageLenders />} />
           <Route path="/retirement-reverse-mortgage" element={<RetirementReverseMortgage />} />
 
           {/* ─── Resources directory ──────────────────────────────── */}
