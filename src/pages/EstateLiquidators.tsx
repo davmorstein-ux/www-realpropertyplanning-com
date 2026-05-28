@@ -111,7 +111,6 @@ const EstateLiquidators = () => (
 
                       <div className="mt-auto w-full space-y-1.5 text-sm">
                         <div className="flex items-center gap-2 justify-center">
-                          <img src={iconPhone3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0" loading="lazy" />
                           <a
                             href={l.phoneHref}
                             onClick={stopPropagation}
@@ -121,7 +120,6 @@ const EstateLiquidators = () => (
                           </a>
                         </div>
                         <div className="flex items-center gap-2 justify-center">
-                          <img src={iconEmail3d} alt="" aria-hidden="true" className="w-5 h-5 object-contain shrink-0" loading="lazy" />
                           <a
                             href={`mailto:${l.email}`}
                             onClick={stopPropagation}
