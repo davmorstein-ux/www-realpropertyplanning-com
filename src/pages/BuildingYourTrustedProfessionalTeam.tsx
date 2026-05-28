@@ -89,7 +89,8 @@ const Section = ({ heading, cards }: { heading: string; cards: Card[] }) => (
                       style={{
                         width: "100%",
                         height: "200px",
-                        objectFit: "contain",
+                        objectFit: "cover",
+                        objectPosition: "center",
                         display: "block",
                         margin: "0",
                         padding: "0",
