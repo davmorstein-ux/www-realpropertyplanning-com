@@ -401,7 +401,7 @@ const App = () => (
 
           {/* ─── Resources directory ──────────────────────────────── */}
           <Route path="/resources" element={<Resources />} />
-          <Route path="/resources/senior-move-managers" element={<SeniorMoveManagers />} />
+          <Route path="/resources/senior-move-managers" element={<Navigate to="/senior-move-managers" replace />} />
           <Route path="/resources/estate-sale-companies" element={<EstateSaleCompanies />} />
           <Route path="/resources/probate-estate-attorneys" element={<ProbateEstateAttorneys />} />
           <Route path="/resources/cpas-financial-advisors" element={<CPAsFinancialAdvisors />} />
