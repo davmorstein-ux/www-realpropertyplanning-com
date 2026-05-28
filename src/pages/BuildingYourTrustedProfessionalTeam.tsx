@@ -15,6 +15,7 @@ import elderLawAttorneyImg from "@/assets/legal/elder-law-attorney.webp";
 import realEstateAttorneyImg from "@/assets/legal/real-estate-attorney.webp";
 import familyLawAttorneyImg from "@/assets/legal/family-law-attorney.webp";
 import divorceAttorneyImg from "@/assets/legal/divorce-attorney.webp";
+import estateLiquidatorsTile from "@/assets/estate-liquidators-tile-transparent.png";
 
 type Card = {
   title: string;
@@ -49,7 +50,7 @@ const housing: Card[] = [
 
 const property: Card[] = [
   { title: "Real Estate Brokers", description: "Probate, estate, and senior transition property sales throughout Washington State.", href: "/realtor", image: "/tiles/set1/real-estate-brokers.webp", alt: "Real estate brokers Washington State", cta: "Learn More" },
-  { title: "Estate Liquidators", description: "Companies that organize and conduct estate sales, residential clear outs, and personal property liquidation.", href: "/estate-liquidators", image: "/tiles/set2/probate-estate-sales.webp", alt: "Estate liquidators Washington State", cta: "Learn More" },
+  { title: "Estate Liquidators", description: "Companies that organize and conduct estate sales, residential clear outs, and personal property liquidation.", href: "/estate-liquidators", image: estateLiquidatorsTile, alt: "Estate liquidators Washington State — estate sales, appraisal, sorting, staging, marketing", cta: "Learn More" },
   { title: "Title & Escrow", description: "Closing coordination for estate and inherited property transactions.", href: "/title-and-escrow", image: "/tiles/set2/title-escrow.webp", alt: "Title and escrow Washington State", cta: "Learn More" },
   { title: "Probate & Estate Sales", description: "Specialized real estate guidance for court-supervised and estate property sales.", href: "/probate-estate-sales", image: "/tiles/set2/probate-estate-sales.webp", alt: "Probate and estate sales Washington State", cta: "Learn More" },
 ];

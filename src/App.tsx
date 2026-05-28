@@ -160,6 +160,7 @@ const TitleAndEscrow = lazy(() => import("./pages/TitleAndEscrow"));
 const Wills = lazy(() => import("./pages/Wills"));
 const EstateLiquidation = lazy(() => import("./pages/EstateLiquidation"));
 const EstateLiquidationLearnMore = lazy(() => import("./pages/EstateLiquidationLearnMore"));
+const EstateLiquidators = lazy(() => import("./pages/EstateLiquidators"));
 const Realtor = lazy(() => import("./pages/Realtor"));
 const RealEstateAppraiser = lazy(() => import("./pages/RealEstateAppraiser"));
 const Professionals = lazy(() => import("./pages/Professionals"));
@@ -503,7 +504,7 @@ const App = () => (
           <Route path="/real-estate-appraiser/learn-more" element={<Navigate to="/real-estate-appraiser" replace />} />
           <Route path="/senior-move-managers/learn-more" element={<Navigate to="/senior-transitions" replace />} />
           <Route path="/estate-liquidation/learn-more" element={<Navigate to="/estate-liquidation" replace />} />
-          <Route path="/estate-liquidators" element={<Navigate to="/estate-liquidation" replace />} />
+          <Route path="/estate-liquidators" element={<EstateLiquidators />} />
 
           {/* Redundant professional / referral pages → consolidated targets */}
           <Route path="/professional-referral-resource" element={<Navigate to="/join-the-network" replace />} />
