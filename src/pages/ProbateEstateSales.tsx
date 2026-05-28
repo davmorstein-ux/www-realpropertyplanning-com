@@ -409,16 +409,6 @@ const ProbateEstateSales = () => {
                 <Link to="/terminology" className="interior-tile tile-white group block h-full no-underline">
                   <div className="tile-white__inner h-full">
                     <div className="tile-white__face p-6 flex flex-col h-full">
-                      <img
-                        src={iconTerminology}
-                        alt=""
-                        aria-hidden="true"
-                        loading="lazy"
-                        width="80"
-                        height="80"
-                        className="mb-4 shrink-0"
-                        style={{ width: 80, height: 80, objectFit: "contain" }}
-                      />
                       <h3 className="font-serif text-lg text-foreground font-semibold mb-2 group-hover:text-gold transition-colors">
                         Probate Terminology
                       </h3>
@@ -434,16 +424,6 @@ const ProbateEstateSales = () => {
                 <Link to="/faq" className="interior-tile tile-white group block h-full no-underline">
                   <div className="tile-white__inner h-full">
                     <div className="tile-white__face p-6 flex flex-col h-full">
-                      <img
-                        src={iconCommonQuestions}
-                        alt=""
-                        aria-hidden="true"
-                        loading="lazy"
-                        width="80"
-                        height="80"
-                        className="mb-4 shrink-0"
-                        style={{ width: 80, height: 80, objectFit: "contain" }}
-                      />
                       <h3 className="font-serif text-lg text-foreground font-semibold mb-2 group-hover:text-gold transition-colors">
                         Common Questions
                       </h3>
@@ -459,16 +439,6 @@ const ProbateEstateSales = () => {
                 <Link to="/how-the-process-works" className="interior-tile tile-white group block h-full no-underline">
                   <div className="tile-white__inner h-full">
                     <div className="tile-white__face p-6 flex flex-col h-full">
-                      <img
-                        src={iconHowProcessWorks}
-                        alt=""
-                        aria-hidden="true"
-                        loading="lazy"
-                        width="80"
-                        height="80"
-                        className="mb-4 shrink-0"
-                        style={{ width: 80, height: 80, objectFit: "contain" }}
-                      />
                       <h3 className="font-serif text-lg text-foreground font-semibold mb-2 group-hover:text-gold transition-colors">
                         How the Process Works
                       </h3>
