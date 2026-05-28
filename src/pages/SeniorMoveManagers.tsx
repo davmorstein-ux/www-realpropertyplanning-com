@@ -134,7 +134,7 @@ const SeniorMoveManagers = () => (
                         loading="lazy"
                       />
 
-                      <div className="flex justify-center gap-5 mb-3 flex-wrap">
+                      <div className="flex justify-center gap-5 mb-3">
                         {p.contacts.map((c) => (
                           <div key={c.name} className="flex flex-col items-center">
                             <img
