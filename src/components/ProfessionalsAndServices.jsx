@@ -72,7 +72,7 @@ const ProfessionalsAndServices = () => (
         <P1Tile pill="Real Estate" title="Real Estate Appraisers" tagline="Certified Property Valuations" imgSrc="/tiles/set1/real-estate-appraisers.webp" href="/real-estate-appraiser" />
         <P1Tile pill="Financial Services" title="Financial Planners" tagline="Protecting Wealth Through Transitions" imgSrc="/tiles/set1/financial-planners.webp" href="/for-financial-planners" />
         <P1Tile pill="Lending" title="Mortgage Lenders" tagline="Financing Inherited Real Estate" imgSrc="/tiles/set1/mortgage-lenders.webp" href="/lenders-and-financing-specialists" />
-        <P1Tile pill="Senior Services" title="Senior Living Advisors" tagline="Expert Guidance for Senior Living" imgSrc="/tiles/set1/senior-living-advisors.webp" href="/senior-placement" />
+        <P1Tile pill="Senior Services" title="Senior Living Advisors" tagline="Expert Guidance for Senior Living" imgSrc="/tiles/set1/senior-living-advisors.webp" href="/senior-living-advisors" />
         <P1Tile pill="Senior Services" title="Senior Move Managers" tagline="Compassionate Moves for Seniors" imgSrc="/tiles/set1/senior-move-managers.webp" href="/senior-move-managers" />
       </div>
       <div className="p1bar">
