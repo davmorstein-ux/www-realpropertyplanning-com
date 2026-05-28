@@ -119,9 +119,7 @@ const SeniorMoveManagers = () => (
             {providers.map((p) => (
               <div
                 key={p.company}
-                className={`interior-tile tile-white block h-full ${
-                  p.contacts.length > 1 ? "interior-tile--wide" : ""
-                }`}
+                className="interior-tile interior-tile--wide tile-white block h-full"
               >
 
                 <div className="tile-white__inner h-full">
