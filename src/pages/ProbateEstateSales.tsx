@@ -7,7 +7,6 @@ import { articleSchema } from "@/lib/schema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
 
 // ── Data ──
 
