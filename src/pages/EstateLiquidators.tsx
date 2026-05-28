@@ -74,9 +74,7 @@ const EstateLiquidators = () => (
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`${l.company} — Visit website (opens in a new tab)`}
-                className={`interior-tile tile-white group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 ${
-                  l.contacts.length > 1 ? "interior-tile--wide" : ""
-                }`}
+                className="interior-tile interior-tile--wide tile-white group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
               >
 
                 <div className="tile-white__inner h-full">
