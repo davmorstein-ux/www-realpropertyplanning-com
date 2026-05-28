@@ -94,7 +94,7 @@ const FinancialPlanners = () => {
         {/* Featured tiles — immediately below hero band */}
         <section className="pt-6 md:pt-8 pb-12 md:pb-16 bg-background">
           <div className="container px-6 lg:px-8">
-            <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
+            <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
               {featuredProviders.map((p) => (
                 <a
                   key={p.name}
@@ -102,7 +102,7 @@ const FinancialPlanners = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`${p.name}, ${p.title} at ${p.company} — Learn more`}
-                  className="interior-tile tile-white group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+                  className="interior-tile interior-tile--wide tile-white group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
                 >
                   <div className="tile-white__inner h-full">
                     <div className="tile-white__face h-full">
