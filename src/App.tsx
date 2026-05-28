@@ -426,6 +426,7 @@ const App = () => (
           <Route path="/sitemap" element={<Sitemap />} />
           <Route path="/search" element={<Search />} />
           <Route path="/disclaimer" element={<Disclaimer />} />
+          <Route path="/articles/silver-tsunami" element={<SilverTsunami />} />
 
           {/* ══════════════════════════════════════════════════════════
               REDIRECTS — Phase 2a SEO consolidation
