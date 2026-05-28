@@ -119,8 +119,11 @@ const SeniorMoveManagers = () => (
             {providers.map((p) => (
               <div
                 key={p.company}
-                className="interior-tile tile-white block h-full"
+                className={`interior-tile tile-white block h-full ${
+                  p.contacts.length > 1 ? "md:col-span-2" : ""
+                }`}
               >
+
                 <div className="tile-white__inner h-full">
                   <div className="tile-white__face h-full">
                     <div className="flex h-full flex-col items-center text-center p-6">
