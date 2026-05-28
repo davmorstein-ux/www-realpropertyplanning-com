@@ -12,6 +12,11 @@ type NavChild = { label: string; href: string };
 type NavItem = { label: string; href: string; children?: NavChild[] };
 
 const NAV: NavItem[] = [
+  {
+    label: "Articles",
+    href: "/articles/silver-tsunami",
+    children: [{ label: "The Silver Tsunami", href: "/articles/silver-tsunami" }],
+  },
   { label: "Probate & Estate", href: "/probate-estate-sales" },
   { label: "Senior Transitions", href: "/senior-transitions" },
   { label: "Property Valuation", href: "/date-of-death-valuation-property-appraisals" },

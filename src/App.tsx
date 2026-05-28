@@ -179,6 +179,7 @@ const ProfessionalsPage = lazy(() => import("./pages/ProfessionalsPage"));
 const Sitemap = lazy(() => import("./pages/Sitemap"));
 const Search = lazy(() => import("./pages/Search"));
 const Disclaimer = lazy(() => import("./pages/Disclaimer"));
+const SilverTsunami = lazy(() => import("./pages/articles/SilverTsunami"));
 
 const queryClient = new QueryClient();
 
@@ -425,6 +426,7 @@ const App = () => (
           <Route path="/sitemap" element={<Sitemap />} />
           <Route path="/search" element={<Search />} />
           <Route path="/disclaimer" element={<Disclaimer />} />
+          <Route path="/articles/silver-tsunami" element={<SilverTsunami />} />
 
           {/* ══════════════════════════════════════════════════════════
               REDIRECTS — Phase 2a SEO consolidation
