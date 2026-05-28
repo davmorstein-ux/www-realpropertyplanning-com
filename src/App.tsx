@@ -53,7 +53,7 @@ const PreparingHomeForSaleDuringTransition = lazy(() => import("./pages/Preparin
 const SellingAnInheritedHome = lazy(() => import("./pages/SellingAnInheritedHome"));
 const AgingInPlaceStayingHomeSafely = lazy(() => import("./pages/AgingInPlaceStayingHomeSafely"));
 const DateOfDeathValuationPropertyAppraisals = lazy(() => import("./pages/DateOfDeathValuationPropertyAppraisals"));
-const SeniorPlacement = lazy(() => import("./pages/SeniorPlacement"));
+const SeniorLivingAdvisors = lazy(() => import("./pages/SeniorLivingAdvisors"));
 const SellHouseFundSeniorLiving = lazy(() => import("./pages/SellHouseFundSeniorLiving"));
 const ForAttorneys = lazy(() => import("./pages/ForAttorneys"));
 const ForAttorneysHowItWorks = lazy(() => import("./pages/attorneys/ForAttorneysHowItWorks"));
