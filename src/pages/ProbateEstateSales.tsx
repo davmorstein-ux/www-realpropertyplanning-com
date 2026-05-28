@@ -109,7 +109,7 @@ const ProbateEstateSales = () => {
               <p className="text-muted-foreground text-lg leading-relaxed mb-10">
                 ​
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-stretch justify-center">
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(2, auto)", columnGap: "8px", rowGap: "16px", width: "fit-content", margin: "0 auto", alignItems: "stretch" }}>
                 {[
                   {
                     image: "/tiles/set2/the-probate-process.webp",
@@ -133,6 +133,7 @@ const ProbateEstateSales = () => {
                     to={s.href}
                     aria-label={`${s.title} — ${s.description} — ${s.cta}`}
                     className="interior-tile tile-white group block h-full no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+                    style={{ width: "380px" }}
                   >
                     <div className="tile-white__inner h-full relative">
                       <div className="tile-white__face h-full">
