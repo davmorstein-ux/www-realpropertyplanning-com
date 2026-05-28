@@ -95,10 +95,13 @@ const Attorneys = () => (
                 <p className="text-muted-foreground text-lg leading-relaxed mb-6 flex-1">
                   {a.description}
                 </p>
-                <Link to={a.href}>
-                  <Button variant="gold" className="w-full">
+                <Link to={a.href} className="mt-auto no-underline">
+                  <span className="gold-cta">
                     Learn More
-                  </Button>
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                  </span>
                 </Link>
               </div>
             ))}

@@ -35,9 +35,11 @@ const PremiumInfoCard = ({
       >
         {description}
       </p>
-      <span className="mt-auto inline-flex items-center justify-center gap-2 self-start bg-gold hover:bg-[hsl(var(--gold-dark))] text-white font-bold text-sm px-5 py-2.5 rounded-lg transition-colors no-underline">
+      <span className="gold-cta mt-auto">
         {ctaLabel}
-        <ArrowRight className="w-4 h-4" aria-hidden="true" />
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <polyline points="9 18 15 12 9 6" />
+        </svg>
       </span>
     </Link>
   );

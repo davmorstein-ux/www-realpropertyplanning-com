@@ -252,9 +252,11 @@ const Counties = () => {
                   <p className="text-muted-foreground text-sm leading-relaxed mb-3">
                     {service.description}
                   </p>
-                  <span className="inline-flex items-center text-sm font-medium text-primary group-hover:text-gold transition-colors">
+                  <span className="gold-cta mt-auto">
                     Learn More
-                    <ArrowRight className="w-3.5 h-3.5 ml-1 group-hover:translate-x-1 transition-transform" />
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <polyline points="9 18 15 12 9 6" />
+                    </svg>
                   </span>
                 </Link>
               ))}
