@@ -386,6 +386,103 @@ const SeniorMoveManagers = () => (
                 </div>
               </div>
             </div>
+
+            <div className="bg-background border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 p-5 sm:p-6 mt-6">
+              <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-start sm:gap-5">
+                <div className="shrink-0 flex gap-2">
+                  <div className="flex flex-col items-center">
+                    <img
+                      src={meriannPhoto}
+                      alt="Meriann Roberts — Owner of Ginny's Girls Estate Services"
+                      className="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover border-2 border-border shadow-sm"
+                      loading="lazy"
+                    />
+                    <p className="text-foreground font-semibold text-xs mt-1.5 text-center">Meriann Roberts</p>
+                    <p className="text-muted-foreground text-xs">Owner</p>
+                  </div>
+                  <div className="flex flex-col items-center">
+                    <img
+                      src={abigailPhoto}
+                      alt="Abigail McKee — Manager at Ginny's Girls Estate Services"
+                      className="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover border-2 border-border shadow-sm"
+                      loading="lazy"
+                    />
+                    <p className="text-foreground font-semibold text-xs mt-1.5 text-center">Abigail McKee</p>
+                    <p className="text-muted-foreground text-xs">Manager</p>
+                  </div>
+                </div>
+                <div className="w-full flex flex-col items-center sm:flex-1 sm:items-start">
+                  <div className="w-full mt-1 text-center sm:text-left">
+                    <a
+                      href="https://www.ginnysestates.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block"
+                    >
+                      <img
+                        src={ginnysGirlsLogo}
+                        alt="Ginny's Girls Estate Services logo"
+                        className="h-[140px] w-auto object-contain mx-auto sm:mx-0 block mb-2"
+                        loading="lazy"
+                      />
+                    </a>
+                    <p className="text-muted-foreground text-sm mb-1.5">Ginny's Girls Estate Services</p>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-3">
+                      Senior move management, estate sales, residential clear outs, and personal property appraisals throughout North King and Snohomish Counties.
+                    </p>
+                    <div className="space-y-0.5 text-sm">
+                      <div className="flex items-center gap-2 justify-center sm:justify-start">
+                        <img
+                          src={iconCall3d}
+                          alt=""
+                          aria-hidden="true"
+                          className="w-6 h-6 object-contain shrink-0"
+                          loading="lazy"
+                        />
+                        <a
+                          href="tel:+12064660759"
+                          className="text-accent hover:text-gold underline-offset-4 hover:underline"
+                        >
+                          (206) 466-0759
+                        </a>
+                      </div>
+                      <div className="flex items-center gap-2 justify-center sm:justify-start">
+                        <img
+                          src={iconMail3d}
+                          alt=""
+                          aria-hidden="true"
+                          className="w-6 h-6 object-contain shrink-0"
+                          loading="lazy"
+                        />
+                        <a
+                          href="mailto:info@ginnysestates.com"
+                          className="text-accent hover:text-gold underline-offset-4 hover:underline break-all"
+                        >
+                          info@ginnysestates.com
+                        </a>
+                      </div>
+                      <div className="flex items-center gap-2 justify-center sm:justify-start">
+                        <img
+                          src={iconGlobe3d}
+                          alt=""
+                          aria-hidden="true"
+                          className="w-6 h-6 object-contain shrink-0"
+                          loading="lazy"
+                        />
+                        <a
+                          href="https://www.ginnysestates.com"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-accent hover:text-gold underline-offset-4 hover:underline"
+                        >
+                          www.ginnysestates.com
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
