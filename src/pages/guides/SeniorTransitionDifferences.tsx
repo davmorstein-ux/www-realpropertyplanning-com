@@ -139,7 +139,7 @@ const SeniorTransitionDifferences = () => (
             <span className="text-muted-foreground/40">·</span>
             <Link to="/how-to-move-elderly-parents" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">How to Move Elderly Parents</Link>
             <span className="text-muted-foreground/40">·</span>
-            <Link to="/resources/senior-move-managers" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Senior Move Managers</Link>
+            <Link to="/senior-move-managers" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Senior Move Managers</Link>
             <span className="text-muted-foreground/40">·</span>
             <Link to="/resources/senior-living-communities" className="text-accent hover:text-gold transition-colors underline underline-offset-4 text-sm">Senior Living Communities</Link>
             <span className="text-muted-foreground/40">·</span>

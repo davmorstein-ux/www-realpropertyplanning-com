@@ -48,7 +48,7 @@ const ALL: Record<string, RelatedLink> = {
   resEstateSale: { href: "/resources/estate-sale-companies", label: "Estate Sale Companies", description: "When a contents sale makes sense before listing the home." },
   resPrep: { href: "/resources/property-preparation-services", label: "Property Preparation Services", description: "Cleanout, repairs, and pre-list trades we coordinate with." },
   resMoving: { href: "/resources/moving-relocation-services", label: "Moving & Relocation Services", description: "Senior-friendly movers and downsizing support." },
-  resSeniorMove: { href: "/resources/senior-move-managers", label: "Senior Move Managers", description: "Specialists who plan and run a senior household move." },
+  resSeniorMove: { href: "/senior-move-managers", label: "Senior Move Managers", description: "Specialists who plan and run a senior household move." },
   resSeniorLiving: { href: "/resources/senior-living-communities", label: "Senior Living Communities", description: "Independent, assisted, memory-care, and adult-family-home options." },
   resChecklist: { href: "/resources/washington-executors-10-step-checklist", label: "Executor's 10-Step Checklist", description: "A printable starting point for new personal representatives." },
 

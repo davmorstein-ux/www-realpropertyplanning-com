@@ -56,7 +56,7 @@ const stages: Stage[] = [
       "Practical help with downsizing, moving, sorting belongings, and clearing the home.",
     items: [
       { label: "Downsizing & Move Management", href: "/senior-transitions", icon: iconMovers },
-      { label: "Senior Move Managers", href: "/resources/senior-move-managers", icon: iconPlacement },
+      { label: "Senior Move Managers", href: "/senior-move-managers", icon: iconPlacement },
       { label: "Estate Cleanout", href: "/resources/property-preparation-services", icon: iconHome },
       { label: "Estate Liquidation", href: "/estate-liquidation", icon: iconBriefcase },
     ],

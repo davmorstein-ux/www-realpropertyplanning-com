@@ -50,7 +50,7 @@ const housing: Card[] = [
 
 const property: Card[] = [
   { title: "Real Estate Brokers", description: "Probate, estate, and senior transition property sales throughout Washington State.", href: "/realtor", image: "/tiles/set1/real-estate-brokers.webp", alt: "Real estate brokers Washington State", cta: "Learn More" },
-  { title: "Senior Move Managers", description: "Estate cleanout, downsizing coordination, and home preparation.", href: "/resources/senior-move-managers", image: "/tiles/set1/senior-move-managers.webp", alt: "Senior move managers Washington State", cta: "Learn More" },
+  
   { title: "Title & Escrow", description: "Closing coordination for estate and inherited property transactions.", href: "/title-and-escrow", image: "/tiles/set2/title-escrow.webp", alt: "Title and escrow Washington State", cta: "Learn More" },
   { title: "Probate & Estate Sales", description: "Specialized real estate guidance for court-supervised and estate property sales.", href: "/probate-estate-sales", image: "/tiles/set2/probate-estate-sales.webp", alt: "Probate and estate sales Washington State", cta: "Learn More" },
 ];

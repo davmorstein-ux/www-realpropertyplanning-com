@@ -11,7 +11,7 @@ import iconResources from "@/assets/icons/probate-estate-resources-icon-washingt
 
 const categories = [
   {
-    href: "/resources/senior-move-managers",
+    href: "/senior-move-managers",
     title: "Senior Move Managers",
     description:
       "Professionals who coordinate and manage the physical and emotional aspects of relocating seniors.",

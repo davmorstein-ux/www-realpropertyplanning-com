@@ -101,7 +101,6 @@ const SanJuanCounty = lazy(() => import("./pages/counties/SanJuanCounty"));
 const SkamaniaCounty = lazy(() => import("./pages/counties/SkamaniaCounty"));
 const WahkiakumCounty = lazy(() => import("./pages/counties/WahkiakumCounty"));
 const Resources = lazy(() => import("./pages/Resources"));
-const SeniorMoveManagers = lazy(() => import("./pages/resources/SeniorMoveManagers"));
 const SeniorMoveManagersFull = lazy(() => import("./pages/SeniorMoveManagers"));
 const EstateSaleCompanies = lazy(() => import("./pages/resources/EstateSaleCompanies"));
 const ProbateEstateAttorneys = lazy(() => import("./pages/resources/ProbateEstateAttorneys"));
@@ -402,7 +401,7 @@ const App = () => (
 
           {/* ─── Resources directory ──────────────────────────────── */}
           <Route path="/resources" element={<Resources />} />
-          <Route path="/resources/senior-move-managers" element={<SeniorMoveManagers />} />
+          <Route path="/resources/senior-move-managers" element={<Navigate to="/senior-move-managers" replace />} />
           <Route path="/resources/estate-sale-companies" element={<EstateSaleCompanies />} />
           <Route path="/resources/probate-estate-attorneys" element={<ProbateEstateAttorneys />} />
           <Route path="/resources/cpas-financial-advisors" element={<CPAsFinancialAdvisors />} />
