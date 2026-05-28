@@ -96,7 +96,7 @@ const EstateLiquidators = () => (
                             <img
                               src={c.photo}
                               alt={c.alt}
-                              className="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover border-2 border-border shadow-sm"
+                              className="w-[120px] h-[120px] sm:w-[140px] sm:h-[140px] rounded-full object-cover border-2 border-border shadow-sm"
                               loading="lazy"
                             />
                             <p className="text-foreground font-semibold text-sm mt-2">{c.name}</p>
