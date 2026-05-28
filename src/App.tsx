@@ -101,7 +101,6 @@ const SanJuanCounty = lazy(() => import("./pages/counties/SanJuanCounty"));
 const SkamaniaCounty = lazy(() => import("./pages/counties/SkamaniaCounty"));
 const WahkiakumCounty = lazy(() => import("./pages/counties/WahkiakumCounty"));
 const Resources = lazy(() => import("./pages/Resources"));
-const SeniorMoveManagers = lazy(() => import("./pages/resources/SeniorMoveManagers"));
 const SeniorMoveManagersFull = lazy(() => import("./pages/SeniorMoveManagers"));
 const EstateSaleCompanies = lazy(() => import("./pages/resources/EstateSaleCompanies"));
 const ProbateEstateAttorneys = lazy(() => import("./pages/resources/ProbateEstateAttorneys"));
