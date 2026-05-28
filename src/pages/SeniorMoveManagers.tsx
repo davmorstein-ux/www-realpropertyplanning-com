@@ -13,8 +13,6 @@ import monarchLogo from "@/assets/providers/senior-movers-monarch-transitions-lo
 import meriannPhoto from "@/assets/meriann-roberts-ginnys-girls-owner.webp";
 import abigailPhoto from "@/assets/abigail-mckee-ginnys-girls-manager.webp";
 import ginnysGirlsLogo from "@/assets/ginnys-girls-estate-services-logo-v3.webp";
-import iconPhone3d from "@/assets/icons/real-estate-phone-contact-icon-washington.webp";
-import iconEmail3d from "@/assets/icons/real-estate-email-envelope-3d-icon-washington.webp";
 
 type Contact = { name: string; role?: string; photo: string; alt: string };
 
@@ -160,13 +158,6 @@ const SeniorMoveManagers = () => (
                       <div className="w-full space-y-1.5 text-sm mb-5">
                         {p.phones.map((ph) => (
                           <div key={ph.href} className="flex items-center gap-2 justify-center">
-                            <img
-                              src={iconPhone3d}
-                              alt=""
-                              aria-hidden="true"
-                              className="w-5 h-5 object-contain shrink-0"
-                              loading="lazy"
-                            />
                             <a
                               href={ph.href}
                               className="text-accent hover:text-gold underline-offset-4 hover:underline font-medium"
@@ -176,13 +167,6 @@ const SeniorMoveManagers = () => (
                           </div>
                         ))}
                         <div className="flex items-center gap-2 justify-center">
-                          <img
-                            src={iconEmail3d}
-                            alt=""
-                            aria-hidden="true"
-                            className="w-5 h-5 object-contain shrink-0"
-                            loading="lazy"
-                          />
                           <a
                             href={`mailto:${p.email}`}
                             className="text-accent hover:text-gold underline-offset-4 hover:underline break-all"
