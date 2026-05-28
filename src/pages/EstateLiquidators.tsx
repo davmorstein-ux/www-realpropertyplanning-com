@@ -59,7 +59,7 @@ const EstateLiquidators = () => (
       <section className="pt-8 md:pt-10 pb-4 bg-background">
         <div className="container px-6 lg:px-8">
           <p className="max-w-3xl mx-auto text-center text-muted-foreground text-base md:text-lg leading-relaxed">
-            Trusted estate liquidation professionals helping families manage belongings, conduct estate sales, and clear properties during life's most significant transitions.
+            {"\u200b"}
           </p>
         </div>
       </section>
