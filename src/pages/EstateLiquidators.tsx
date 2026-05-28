@@ -139,6 +139,26 @@ const EstateLiquidators = () => (
         </div>
       </section>
 
+      <section className="py-12 md:py-16 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto space-y-5 text-foreground text-base md:text-lg leading-relaxed">
+            <h2 className="font-serif text-2xl md:text-3xl text-navy font-semibold mb-2">What Estate Liquidators Do</h2>
+            <p>
+              Estate liquidators help families manage, value, and sell the personal property and household contents of a home — most often during a senior transition, after a death, or as part of an estate settlement. Their work helps families move forward without the burden of sorting through decades of accumulated belongings on their own.
+            </p>
+            <p>
+              A professional estate liquidator will typically assess the contents of a home, organize and price items, market the sale, conduct the event, and handle unsold items through donation, consignment, or disposal. Many also offer residential clear out services to leave the property empty and ready for the next step — whether that is listing for sale, transferring to an heir, or preparing for rental.
+            </p>
+            <p>
+              What makes a qualified estate liquidator especially valuable is their knowledge of fair market value for antiques, collectibles, furniture, jewelry, and household goods — combined with the logistical experience to run a well-organized sale that maximizes return for the family.
+            </p>
+            <p>
+              Many estate liquidators hold memberships in professional organizations such as the American Society of Estate Liquidators (ASEL) or carry certifications from the International Society of Appraisers (ISA), which reflect a commitment to ethical standards and professional practice.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-10 bg-background">
         <div className="container px-6 lg:px-8 flex justify-center">
           <Button asChild variant="outline" size="lg" className="h-[52px] px-6 rounded-lg">
@@ -149,6 +169,7 @@ const EstateLiquidators = () => (
           </Button>
         </div>
       </section>
+
 
       <DisclaimerSection />
     </main>
