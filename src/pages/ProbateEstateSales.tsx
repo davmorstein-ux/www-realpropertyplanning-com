@@ -8,10 +8,6 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import iconClientStories from "@/assets/icons/client-stories-3d.webp";
-import iconTerminology from "@/assets/icons/probate-property-sales-alt-icon-washington.webp";
-import iconCommonQuestions from "@/assets/icons/common-questions-3d.webp";
-import iconHowProcessWorks from "@/assets/icons/how-the-process-works-3d.webp";
 
 // ── Data ──
 
@@ -104,16 +100,16 @@ const ProbateEstateSales = () => {
         {/* SECTION 2 — Probate vs. Inherited (two tiles, no accordions) */}
         <section className="py-16 lg:py-20 bg-background">
           <div className="container px-6 lg:px-8">
-            <div className="max-w-2xl mx-auto">
+            <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl text-[hsl(0_70%_30%)] font-semibold mb-4 font-sans text-center">
                 Probate Property vs. Inherited Property
                 <br />
                 What's the Difference?
               </h2>
-              <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              <p className="text-muted-foreground text-lg leading-relaxed mb-10">
                 ​
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 items-stretch" style={{ display: "flex", justifyContent: "center", alignItems: "flex-start", gap: "24px" }}>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 items-stretch">
                 {[
                   {
                     image: "/tiles/set2/the-probate-process.webp",
@@ -141,7 +137,7 @@ const ProbateEstateSales = () => {
                     <div className="tile-white__inner h-full relative">
                       <div className="tile-white__face h-full">
                         <div className="flex h-full flex-col">
-                          <div className="relative w-full overflow-hidden bg-transparent flex items-center justify-center" style={{ aspectRatio: "500 / 312" }}>
+                          <div className="relative w-full overflow-hidden bg-transparent flex items-center justify-center" style={{ aspectRatio: "500 / 360" }}>
                             <img
                               src={s.image}
                               alt={s.alt}
@@ -149,16 +145,16 @@ const ProbateEstateSales = () => {
                               loading="lazy"
                             />
                           </div>
-                          <div className="relative flex flex-1 flex-col items-center text-center overflow-hidden" style={{ padding: "8px 10px" }}>
-                            <h3 className="font-serif text-[15px] md:text-[17px] font-semibold text-navy mb-1 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0" style={{ lineHeight: 1.3 }}>
+                          <div className="relative flex flex-1 flex-col items-center text-center overflow-hidden p-5 md:p-6">
+                            <h3 className="font-serif text-[19px] md:text-[22px] font-semibold text-navy mb-2 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0" style={{ lineHeight: 1.3 }}>
                               {s.title}
                             </h3>
-                            <p className="text-foreground text-[11px] mb-1.5 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0" style={{ lineHeight: 1.3 }}>
+                            <p className="text-foreground text-[15px] md:text-[16px] mb-3 flex items-start justify-center transition-opacity duration-200 group-hover:opacity-0" style={{ lineHeight: 1.5 }}>
                               {s.description}
                             </p>
                             <span className="gold-cta mt-auto transition-opacity duration-200 group-hover:opacity-0">
                               {s.cta}
-                              <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                                 <polyline points="9 18 15 12 9 6" />
                               </svg>
                             </span>
@@ -173,19 +169,19 @@ const ProbateEstateSales = () => {
                                 alignItems: "center",
                                 justifyContent: "center",
                                 textAlign: "center",
-                                padding: "0.75rem 1rem",
+                                padding: "1.5rem",
                                 transition: "opacity 0.28s ease 0.1s",
                               }}
                             >
-                              <h3 className="font-serif text-white text-[17px] md:text-[19px] font-bold leading-snug mb-2">
+                              <h3 className="font-serif text-white text-[22px] md:text-[24px] font-bold leading-snug mb-3">
                                 {s.title}
                               </h3>
                               <span
-                                className="inline-flex items-center gap-2 text-[13px] font-bold tracking-wide"
+                                className="inline-flex items-center gap-2 text-[15px] font-bold tracking-wide"
                                 style={{ color: "#C9A84C", fontFamily: "'DM Sans', sans-serif" }}
                               >
                                 {s.cta}
-                                <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                                   <polyline points="9 18 15 12 9 6" />
                                 </svg>
                               </span>
