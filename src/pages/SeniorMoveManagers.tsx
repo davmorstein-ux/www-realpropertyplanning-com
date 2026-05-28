@@ -120,7 +120,7 @@ const SeniorMoveManagers = () => (
               <div
                 key={p.company}
                 className={`interior-tile tile-white block h-full ${
-                  p.contacts.length > 1 ? "md:col-span-2" : ""
+                  p.contacts.length > 1 ? "md:col-span-2 interior-tile--wide" : ""
                 }`}
               >
 
