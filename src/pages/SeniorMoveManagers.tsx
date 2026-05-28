@@ -119,8 +119,11 @@ const SeniorMoveManagers = () => (
             {providers.map((p) => (
               <div
                 key={p.company}
-                className="interior-tile tile-white block h-full"
+                className={`interior-tile tile-white block h-full ${
+                  p.contacts.length > 1 ? "md:col-span-2" : ""
+                }`}
               >
+
                 <div className="tile-white__inner h-full">
                   <div className="tile-white__face h-full">
                     <div className="flex h-full flex-col items-center text-center p-6">
@@ -131,7 +134,7 @@ const SeniorMoveManagers = () => (
                         loading="lazy"
                       />
 
-                      <div className="flex justify-center gap-5 mb-3 flex-wrap">
+                      <div className="flex justify-center gap-5 mb-3">
                         {p.contacts.map((c) => (
                           <div key={c.name} className="flex flex-col items-center">
                             <img
